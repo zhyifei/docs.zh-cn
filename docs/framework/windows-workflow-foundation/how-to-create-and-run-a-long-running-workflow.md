@@ -6,127 +6,127 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320042"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a><span data-ttu-id="f3abb-102">如何：创建和运行长期运行的工作流</span><span class="sxs-lookup"><span data-stu-id="f3abb-102">How to: Create and Run a Long Running Workflow</span></span>
-<span data-ttu-id="f3abb-103">Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数据库的空闲工作流运行时的功能。</span><span class="sxs-lookup"><span data-stu-id="f3abb-103">One of the central features of Windows Workflow Foundation (WF) is the runtime’s ability to persist and unload idle workflows to a database.</span></span> <span data-ttu-id="f3abb-104">中的步骤[如何：运行工作流](how-to-run-a-workflow.md)演示工作流承载的控制台应用程序的基础知识。</span><span class="sxs-lookup"><span data-stu-id="f3abb-104">The steps in [How to: Run a Workflow](how-to-run-a-workflow.md) demonstrated the basics of workflow hosting using a console application.</span></span> <span data-ttu-id="f3abb-105">示例演示了启动工作流、工作流生命周期处理程序和恢复书签。</span><span class="sxs-lookup"><span data-stu-id="f3abb-105">Examples were shown of starting workflows, workflow lifecycle handlers, and resuming bookmarks.</span></span> <span data-ttu-id="f3abb-106">为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。</span><span class="sxs-lookup"><span data-stu-id="f3abb-106">In order to demonstrate workflow persistence effectively, a more complex workflow host is required that supports starting and resuming multiple workflow instances.</span></span> <span data-ttu-id="f3abb-107">教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。</span><span class="sxs-lookup"><span data-stu-id="f3abb-107">This step in the tutorial demonstrates how to create a Windows form host application that supports starting and resuming multiple workflow instances, workflow persistence, and provides a basis for the advanced features such as tracking and versioning that are demonstrated in subsequent tutorial steps.</span></span>  
+# <a name="how-to-create-and-run-a-long-running-workflow"></a><span data-ttu-id="9715a-102">如何：创建和运行长期运行的工作流</span><span class="sxs-lookup"><span data-stu-id="9715a-102">How to: Create and Run a Long Running Workflow</span></span>
+<span data-ttu-id="9715a-103">Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数据库的空闲工作流运行时的功能。</span><span class="sxs-lookup"><span data-stu-id="9715a-103">One of the central features of Windows Workflow Foundation (WF) is the runtime’s ability to persist and unload idle workflows to a database.</span></span> <span data-ttu-id="9715a-104">中的步骤[如何：运行工作流](how-to-run-a-workflow.md)演示工作流承载的控制台应用程序的基础知识。</span><span class="sxs-lookup"><span data-stu-id="9715a-104">The steps in [How to: Run a Workflow](how-to-run-a-workflow.md) demonstrated the basics of workflow hosting using a console application.</span></span> <span data-ttu-id="9715a-105">示例演示了启动工作流、工作流生命周期处理程序和恢复书签。</span><span class="sxs-lookup"><span data-stu-id="9715a-105">Examples were shown of starting workflows, workflow lifecycle handlers, and resuming bookmarks.</span></span> <span data-ttu-id="9715a-106">为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。</span><span class="sxs-lookup"><span data-stu-id="9715a-106">In order to demonstrate workflow persistence effectively, a more complex workflow host is required that supports starting and resuming multiple workflow instances.</span></span> <span data-ttu-id="9715a-107">教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。</span><span class="sxs-lookup"><span data-stu-id="9715a-107">This step in the tutorial demonstrates how to create a Windows form host application that supports starting and resuming multiple workflow instances, workflow persistence, and provides a basis for the advanced features such as tracking and versioning that are demonstrated in subsequent tutorial steps.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f3abb-108">此教程步骤和后续步骤使用中的所有三个工作流类型[如何：创建工作流](how-to-create-a-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="f3abb-108">This tutorial step and the subsequent steps use all three workflow types from [How to: Create a Workflow](how-to-create-a-workflow.md).</span></span> <span data-ttu-id="f3abb-109">如果未完成所有三种类型可以下载完整的版本中的步骤[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="f3abb-109">If you did not complete all three types you can download a completed version of the steps from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="9715a-108">此教程步骤和后续步骤使用中的所有三个工作流类型[如何：创建工作流](how-to-create-a-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="9715a-108">This tutorial step and the subsequent steps use all three workflow types from [How to: Create a Workflow](how-to-create-a-workflow.md).</span></span> <span data-ttu-id="9715a-109">如果未完成所有三种类型可以下载完整的版本中的步骤[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="9715a-109">If you did not complete all three types you can download a completed version of the steps from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f3abb-110">若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="f3abb-110">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="9715a-110">若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="9715a-110">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-topic"></a><span data-ttu-id="f3abb-111">在本主题中</span><span class="sxs-lookup"><span data-stu-id="f3abb-111">In this topic</span></span>  
+## <a name="in-this-topic"></a><span data-ttu-id="9715a-111">在本主题中</span><span class="sxs-lookup"><span data-stu-id="9715a-111">In this topic</span></span>  
   
--   [<span data-ttu-id="f3abb-112">创建持久性数据库</span><span class="sxs-lookup"><span data-stu-id="f3abb-112">To create the persistence database</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [<span data-ttu-id="9715a-112">若要创建持久性数据库</span><span class="sxs-lookup"><span data-stu-id="9715a-112">To create the persistence database</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [<span data-ttu-id="f3abb-113">添加对 DurableInstancing 程序集的引用</span><span class="sxs-lookup"><span data-stu-id="f3abb-113">To add the reference to the DurableInstancing assemblies</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [<span data-ttu-id="9715a-113">若要添加对 DurableInstancing 程序集的引用</span><span class="sxs-lookup"><span data-stu-id="9715a-113">To add the reference to the DurableInstancing assemblies</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [<span data-ttu-id="f3abb-114">创建工作流主机窗体</span><span class="sxs-lookup"><span data-stu-id="f3abb-114">To create the workflow host form</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [<span data-ttu-id="9715a-114">若要创建工作流主机窗体</span><span class="sxs-lookup"><span data-stu-id="9715a-114">To create the workflow host form</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [<span data-ttu-id="f3abb-115">添加窗体的属性和帮助器方法</span><span class="sxs-lookup"><span data-stu-id="f3abb-115">To add the properties and helper methods of the form</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [<span data-ttu-id="9715a-115">若要添加的属性和帮助器方法的窗体</span><span class="sxs-lookup"><span data-stu-id="9715a-115">To add the properties and helper methods of the form</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [<span data-ttu-id="f3abb-116">配置实例存储、工作流生命周期处理程序和扩展</span><span class="sxs-lookup"><span data-stu-id="f3abb-116">To configure the instance store, workflow lifecycle handlers, and extensions</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [<span data-ttu-id="9715a-116">若要配置实例存储、 工作流生命周期处理程序和扩展</span><span class="sxs-lookup"><span data-stu-id="9715a-116">To configure the instance store, workflow lifecycle handlers, and extensions</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [<span data-ttu-id="f3abb-117">支持启动和恢复多个工作流类型</span><span class="sxs-lookup"><span data-stu-id="f3abb-117">To enable starting and resuming multiple workflow types</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [<span data-ttu-id="9715a-117">若要启用启动和恢复多个工作流类型</span><span class="sxs-lookup"><span data-stu-id="9715a-117">To enable starting and resuming multiple workflow types</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [<span data-ttu-id="f3abb-118">启动新工作流</span><span class="sxs-lookup"><span data-stu-id="f3abb-118">To start a new workflow</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [<span data-ttu-id="9715a-118">若要启动新工作流</span><span class="sxs-lookup"><span data-stu-id="9715a-118">To start a new workflow</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [<span data-ttu-id="f3abb-119">恢复工作流</span><span class="sxs-lookup"><span data-stu-id="f3abb-119">To resume a workflow</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [<span data-ttu-id="9715a-119">若要恢复的工作流</span><span class="sxs-lookup"><span data-stu-id="9715a-119">To resume a workflow</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [<span data-ttu-id="f3abb-120">终止工作流</span><span class="sxs-lookup"><span data-stu-id="f3abb-120">To terminate a workflow</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [<span data-ttu-id="9715a-120">终止工作流</span><span class="sxs-lookup"><span data-stu-id="9715a-120">To terminate a workflow</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [<span data-ttu-id="f3abb-121">生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f3abb-121">To build and run the application</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="9715a-121">若要生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="9715a-121">To build and run the application</span></span>](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-### <a name="BKMK_CreatePersistenceDatabase"></a> <span data-ttu-id="f3abb-122">若要创建持久性数据库</span><span class="sxs-lookup"><span data-stu-id="f3abb-122">To create the persistence database</span></span>  
+### <a name="BKMK_CreatePersistenceDatabase"></a> <span data-ttu-id="9715a-122">若要创建持久性数据库</span><span class="sxs-lookup"><span data-stu-id="9715a-122">To create the persistence database</span></span>  
   
-1. <span data-ttu-id="f3abb-123">打开 SQL Server Management Studio 并连接到本地服务器，例如 **。 \SQLEXPRESS**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-123">Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**.</span></span> <span data-ttu-id="f3abb-124">右键单击**数据库**节点，本地服务器，然后选择**新数据库**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-124">Right-click the **Databases** node on the local server, and select **New Database**.</span></span> <span data-ttu-id="f3abb-125">新数据库命名**WF45GettingStartedTutorial**，接受所有其他值，然后选择**确定**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-125">Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.</span></span>  
+1. <span data-ttu-id="9715a-123">打开 SQL Server Management Studio 并连接到本地服务器，例如 **。 \SQLEXPRESS**。</span><span class="sxs-lookup"><span data-stu-id="9715a-123">Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**.</span></span> <span data-ttu-id="9715a-124">右键单击**数据库**节点，本地服务器，然后选择**新数据库**。</span><span class="sxs-lookup"><span data-stu-id="9715a-124">Right-click the **Databases** node on the local server, and select **New Database**.</span></span> <span data-ttu-id="9715a-125">新数据库命名**WF45GettingStartedTutorial**，接受所有其他值，然后选择**确定**。</span><span class="sxs-lookup"><span data-stu-id="9715a-125">Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="f3abb-126">请确保已**Create Database**本地服务器上创建数据库前的权限。</span><span class="sxs-lookup"><span data-stu-id="f3abb-126">Ensure that you have **Create Database** permission on the local server before creating the database.</span></span>  
+    >  <span data-ttu-id="9715a-126">请确保已**Create Database**本地服务器上创建数据库前的权限。</span><span class="sxs-lookup"><span data-stu-id="9715a-126">Ensure that you have **Create Database** permission on the local server before creating the database.</span></span>  
   
-2. <span data-ttu-id="f3abb-127">选择**开放**，**文件**从**文件**菜单。</span><span class="sxs-lookup"><span data-stu-id="f3abb-127">Choose **Open**, **File** from the **File** menu.</span></span> <span data-ttu-id="f3abb-128">浏览到以下文件夹：</span><span class="sxs-lookup"><span data-stu-id="f3abb-128">Browse to the following folder:</span></span> `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. <span data-ttu-id="9715a-127">选择**开放**，**文件**从**文件**菜单。</span><span class="sxs-lookup"><span data-stu-id="9715a-127">Choose **Open**, **File** from the **File** menu.</span></span> <span data-ttu-id="9715a-128">浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`</span><span class="sxs-lookup"><span data-stu-id="9715a-128">Browse to the following folder: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`</span></span>  
   
-     <span data-ttu-id="f3abb-129">选择以下两个文件，然后单击**打开**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-129">Select the following two files and click **Open**.</span></span>  
+     <span data-ttu-id="9715a-129">选择以下两个文件，然后单击**打开**。</span><span class="sxs-lookup"><span data-stu-id="9715a-129">Select the following two files and click **Open**.</span></span>  
   
-    -   <span data-ttu-id="f3abb-130">SqlWorkflowInstanceStoreLogic.sql</span><span class="sxs-lookup"><span data-stu-id="f3abb-130">SqlWorkflowInstanceStoreLogic.sql</span></span>  
+    -   <span data-ttu-id="9715a-130">SqlWorkflowInstanceStoreLogic.sql</span><span class="sxs-lookup"><span data-stu-id="9715a-130">SqlWorkflowInstanceStoreLogic.sql</span></span>  
   
-    -   <span data-ttu-id="f3abb-131">SqlWorkflowInstanceStoreSchema.sql</span><span class="sxs-lookup"><span data-stu-id="f3abb-131">SqlWorkflowInstanceStoreSchema.sql</span></span>  
+    -   <span data-ttu-id="9715a-131">SqlWorkflowInstanceStoreSchema.sql</span><span class="sxs-lookup"><span data-stu-id="9715a-131">SqlWorkflowInstanceStoreSchema.sql</span></span>  
   
-3. <span data-ttu-id="f3abb-132">选择**SqlWorkflowInstanceStoreSchema.sql**从**窗口**菜单。</span><span class="sxs-lookup"><span data-stu-id="f3abb-132">Choose **SqlWorkflowInstanceStoreSchema.sql** from the **Window** menu.</span></span> <span data-ttu-id="f3abb-133">絋粄**WF45GettingStartedTutorial**中选择**可用数据库**下拉列表中，选择**Execute**从**查询**菜单。</span><span class="sxs-lookup"><span data-stu-id="f3abb-133">Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.</span></span>  
+3. <span data-ttu-id="9715a-132">选择**SqlWorkflowInstanceStoreSchema.sql**从**窗口**菜单。</span><span class="sxs-lookup"><span data-stu-id="9715a-132">Choose **SqlWorkflowInstanceStoreSchema.sql** from the **Window** menu.</span></span> <span data-ttu-id="9715a-133">絋粄**WF45GettingStartedTutorial**中选择**可用数据库**下拉列表中，选择**Execute**从**查询**菜单。</span><span class="sxs-lookup"><span data-stu-id="9715a-133">Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.</span></span>  
   
-4. <span data-ttu-id="f3abb-134">选择**SqlWorkflowInstanceStoreLogic.sql**从**窗口**菜单。</span><span class="sxs-lookup"><span data-stu-id="f3abb-134">Choose **SqlWorkflowInstanceStoreLogic.sql** from the **Window** menu.</span></span> <span data-ttu-id="f3abb-135">絋粄**WF45GettingStartedTutorial**中选择**可用数据库**下拉列表中，选择**Execute**从**查询**菜单。</span><span class="sxs-lookup"><span data-stu-id="f3abb-135">Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.</span></span>  
+4. <span data-ttu-id="9715a-134">选择**SqlWorkflowInstanceStoreLogic.sql**从**窗口**菜单。</span><span class="sxs-lookup"><span data-stu-id="9715a-134">Choose **SqlWorkflowInstanceStoreLogic.sql** from the **Window** menu.</span></span> <span data-ttu-id="9715a-135">絋粄**WF45GettingStartedTutorial**中选择**可用数据库**下拉列表中，选择**Execute**从**查询**菜单。</span><span class="sxs-lookup"><span data-stu-id="9715a-135">Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.</span></span>  
   
     > [!WARNING]
-    >  <span data-ttu-id="f3abb-136">请务必按正确顺序执行前面两个步骤。</span><span class="sxs-lookup"><span data-stu-id="f3abb-136">It is important to perform the previous two steps in the correct order.</span></span> <span data-ttu-id="f3abb-137">如果不按顺序执行查询，系统会发生错误，并且持久性数据库会配置不正确。</span><span class="sxs-lookup"><span data-stu-id="f3abb-137">If the queries are executed out of order, errors occur and the persistence database is not configured correctly.</span></span>  
+    >  <span data-ttu-id="9715a-136">请务必按正确顺序执行前面两个步骤。</span><span class="sxs-lookup"><span data-stu-id="9715a-136">It is important to perform the previous two steps in the correct order.</span></span> <span data-ttu-id="9715a-137">如果不按顺序执行查询，系统会发生错误，并且持久性数据库会配置不正确。</span><span class="sxs-lookup"><span data-stu-id="9715a-137">If the queries are executed out of order, errors occur and the persistence database is not configured correctly.</span></span>  
   
-### <a name="BKMK_AddReference"></a> <span data-ttu-id="f3abb-138">若要添加对 DurableInstancing 程序集的引用</span><span class="sxs-lookup"><span data-stu-id="f3abb-138">To add the reference to the DurableInstancing assemblies</span></span>  
+### <a name="BKMK_AddReference"></a> <span data-ttu-id="9715a-138">若要添加对 DurableInstancing 程序集的引用</span><span class="sxs-lookup"><span data-stu-id="9715a-138">To add the reference to the DurableInstancing assemblies</span></span>  
   
-1. <span data-ttu-id="f3abb-139">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-139">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.</span></span>  
+1. <span data-ttu-id="9715a-139">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="9715a-139">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.</span></span>  
   
-2. <span data-ttu-id="f3abb-140">选择**程序集**从**添加引用**列表中，然后键入`DurableInstancing`到**搜索程序集**框。</span><span class="sxs-lookup"><span data-stu-id="f3abb-140">Select **Assemblies** from the **Add Reference** list, and type `DurableInstancing` into the **Search Assemblies** box.</span></span> <span data-ttu-id="f3abb-141">这将筛选程序集，使您更易于选择所需引用。</span><span class="sxs-lookup"><span data-stu-id="f3abb-141">This filters the assemblies and makes the desired references easier to select.</span></span>  
+2. <span data-ttu-id="9715a-140">选择**程序集**从**添加引用**列表中，然后键入`DurableInstancing`到**搜索程序集**框。</span><span class="sxs-lookup"><span data-stu-id="9715a-140">Select **Assemblies** from the **Add Reference** list, and type `DurableInstancing` into the **Search Assemblies** box.</span></span> <span data-ttu-id="9715a-141">这将筛选程序集，使您更易于选择所需引用。</span><span class="sxs-lookup"><span data-stu-id="9715a-141">This filters the assemblies and makes the desired references easier to select.</span></span>  
   
-3. <span data-ttu-id="f3abb-142">旁边的复选框**System.Activities.DurableInstancing**并**System.Runtime.DurableInstancing**从**搜索结果**列表，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-142">Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.</span></span>  
+3. <span data-ttu-id="9715a-142">旁边的复选框**System.Activities.DurableInstancing**并**System.Runtime.DurableInstancing**从**搜索结果**列表，然后单击**确定**。</span><span class="sxs-lookup"><span data-stu-id="9715a-142">Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.</span></span>  
   
-### <a name="BKMK_CreateForm"></a> <span data-ttu-id="f3abb-143">若要创建工作流主机窗体</span><span class="sxs-lookup"><span data-stu-id="f3abb-143">To create the workflow host form</span></span>  
+### <a name="BKMK_CreateForm"></a> <span data-ttu-id="9715a-143">若要创建工作流主机窗体</span><span class="sxs-lookup"><span data-stu-id="9715a-143">To create the workflow host form</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f3abb-144">此过程中的步骤描述了如何手动添加和配置窗体。</span><span class="sxs-lookup"><span data-stu-id="f3abb-144">The steps in this procedure describe how to add and configure the form manually.</span></span> <span data-ttu-id="f3abb-145">如果需要，您可以下载教程的解决方案文件并将完成后的窗体添加到项目。</span><span class="sxs-lookup"><span data-stu-id="f3abb-145">If desired, you can download the solution files for the tutorial and add the completed form to the project.</span></span> <span data-ttu-id="f3abb-146">若要下载教程文件，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="f3abb-146">To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span> <span data-ttu-id="f3abb-147">一旦下载文件，右键单击**NumberGuessWorkflowHost** ，然后选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-147">Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**.</span></span> <span data-ttu-id="f3abb-148">添加对的引用**System.Windows.Forms**并**System.Drawing**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-148">Add a reference to **System.Windows.Forms** and **System.Drawing**.</span></span> <span data-ttu-id="f3abb-149">如果添加新的窗体中，将自动添加这些引用**外**，**新项**菜单中，但导入窗体时必须手动添加。</span><span class="sxs-lookup"><span data-stu-id="f3abb-149">These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form.</span></span> <span data-ttu-id="f3abb-150">添加引用后，右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**现有项**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-150">Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**.</span></span> <span data-ttu-id="f3abb-151">浏览到`Form`文件夹中的项目文件，选择**WorkflowHostForm.cs** (或**WorkflowHostForm.vb**)，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-151">Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**.</span></span> <span data-ttu-id="f3abb-152">如果您选择导入窗体，则可以跳到下一节[若要添加的属性和帮助器方法的窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。</span><span class="sxs-lookup"><span data-stu-id="f3abb-152">If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).</span></span>  
+>  <span data-ttu-id="9715a-144">此过程中的步骤描述了如何手动添加和配置窗体。</span><span class="sxs-lookup"><span data-stu-id="9715a-144">The steps in this procedure describe how to add and configure the form manually.</span></span> <span data-ttu-id="9715a-145">如果需要，您可以下载教程的解决方案文件并将完成后的窗体添加到项目。</span><span class="sxs-lookup"><span data-stu-id="9715a-145">If desired, you can download the solution files for the tutorial and add the completed form to the project.</span></span> <span data-ttu-id="9715a-146">若要下载教程文件，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。</span><span class="sxs-lookup"><span data-stu-id="9715a-146">To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span> <span data-ttu-id="9715a-147">一旦下载文件，右键单击**NumberGuessWorkflowHost** ，然后选择**添加引用**。</span><span class="sxs-lookup"><span data-stu-id="9715a-147">Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**.</span></span> <span data-ttu-id="9715a-148">添加对的引用**System.Windows.Forms**并**System.Drawing**。</span><span class="sxs-lookup"><span data-stu-id="9715a-148">Add a reference to **System.Windows.Forms** and **System.Drawing**.</span></span> <span data-ttu-id="9715a-149">如果添加新的窗体中，将自动添加这些引用**外**，**新项**菜单中，但导入窗体时必须手动添加。</span><span class="sxs-lookup"><span data-stu-id="9715a-149">These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form.</span></span> <span data-ttu-id="9715a-150">添加引用后，右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**现有项**。</span><span class="sxs-lookup"><span data-stu-id="9715a-150">Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**.</span></span> <span data-ttu-id="9715a-151">浏览到`Form`文件夹中的项目文件，选择**WorkflowHostForm.cs** (或**WorkflowHostForm.vb**)，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="9715a-151">Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**.</span></span> <span data-ttu-id="9715a-152">如果您选择导入窗体，则可以跳到下一节[若要添加的属性和帮助器方法的窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。</span><span class="sxs-lookup"><span data-stu-id="9715a-152">If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).</span></span>  
   
-1. <span data-ttu-id="f3abb-153">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**新项**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-153">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **New Item**.</span></span>  
+1. <span data-ttu-id="9715a-153">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**新项**。</span><span class="sxs-lookup"><span data-stu-id="9715a-153">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **New Item**.</span></span>  
   
-2. <span data-ttu-id="f3abb-154">在中**已安装**模板列表中，选择**Windows 窗体**，类型`WorkflowHostForm`中**名称**框中，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-154">In the **Installed** templates list, choose **Windows Form**, type `WorkflowHostForm` in the **Name** box, and click **Add**.</span></span>  
+2. <span data-ttu-id="9715a-154">在中**已安装**模板列表中，选择**Windows 窗体**，类型`WorkflowHostForm`中**名称**框中，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="9715a-154">In the **Installed** templates list, choose **Windows Form**, type `WorkflowHostForm` in the **Name** box, and click **Add**.</span></span>  
   
-3. <span data-ttu-id="f3abb-155">在窗体上配置以下属性。</span><span class="sxs-lookup"><span data-stu-id="f3abb-155">Configure the following properties on the form.</span></span>  
+3. <span data-ttu-id="9715a-155">在窗体上配置以下属性。</span><span class="sxs-lookup"><span data-stu-id="9715a-155">Configure the following properties on the form.</span></span>  
   
-    |<span data-ttu-id="f3abb-156">属性</span><span class="sxs-lookup"><span data-stu-id="f3abb-156">Property</span></span>|<span data-ttu-id="f3abb-157">“值”</span><span class="sxs-lookup"><span data-stu-id="f3abb-157">Value</span></span>|  
+    |<span data-ttu-id="9715a-156">属性</span><span class="sxs-lookup"><span data-stu-id="9715a-156">Property</span></span>|<span data-ttu-id="9715a-157">“值”</span><span class="sxs-lookup"><span data-stu-id="9715a-157">Value</span></span>|  
     |--------------|-----------|  
-    |<span data-ttu-id="f3abb-158">FormBorderStyle</span><span class="sxs-lookup"><span data-stu-id="f3abb-158">FormBorderStyle</span></span>|<span data-ttu-id="f3abb-159">FixedSingle</span><span class="sxs-lookup"><span data-stu-id="f3abb-159">FixedSingle</span></span>|  
-    |<span data-ttu-id="f3abb-160">MaximizeBox</span><span class="sxs-lookup"><span data-stu-id="f3abb-160">MaximizeBox</span></span>|<span data-ttu-id="f3abb-161">False</span><span class="sxs-lookup"><span data-stu-id="f3abb-161">False</span></span>|  
-    |<span data-ttu-id="f3abb-162">大小</span><span class="sxs-lookup"><span data-stu-id="f3abb-162">Size</span></span>|<span data-ttu-id="f3abb-163">400, 420</span><span class="sxs-lookup"><span data-stu-id="f3abb-163">400, 420</span></span>|  
+    |<span data-ttu-id="9715a-158">FormBorderStyle</span><span class="sxs-lookup"><span data-stu-id="9715a-158">FormBorderStyle</span></span>|<span data-ttu-id="9715a-159">FixedSingle</span><span class="sxs-lookup"><span data-stu-id="9715a-159">FixedSingle</span></span>|  
+    |<span data-ttu-id="9715a-160">MaximizeBox</span><span class="sxs-lookup"><span data-stu-id="9715a-160">MaximizeBox</span></span>|<span data-ttu-id="9715a-161">False</span><span class="sxs-lookup"><span data-stu-id="9715a-161">False</span></span>|  
+    |<span data-ttu-id="9715a-162">大小</span><span class="sxs-lookup"><span data-stu-id="9715a-162">Size</span></span>|<span data-ttu-id="9715a-163">400, 420</span><span class="sxs-lookup"><span data-stu-id="9715a-163">400, 420</span></span>|  
   
-4. <span data-ttu-id="f3abb-164">按照指定顺序将以下控件添加到窗体，并根据指示配置这些属性。</span><span class="sxs-lookup"><span data-stu-id="f3abb-164">Add the following controls to the form in the order specified and configure the properties as directed.</span></span>  
+4. <span data-ttu-id="9715a-164">按照指定顺序将以下控件添加到窗体，并根据指示配置这些属性。</span><span class="sxs-lookup"><span data-stu-id="9715a-164">Add the following controls to the form in the order specified and configure the properties as directed.</span></span>  
   
-    |<span data-ttu-id="f3abb-165">控件</span><span class="sxs-lookup"><span data-stu-id="f3abb-165">Control</span></span>|<span data-ttu-id="f3abb-166">属性：“值”</span><span class="sxs-lookup"><span data-stu-id="f3abb-166">Property: Value</span></span>|  
+    |<span data-ttu-id="9715a-165">控件</span><span class="sxs-lookup"><span data-stu-id="9715a-165">Control</span></span>|<span data-ttu-id="9715a-166">属性：“值”</span><span class="sxs-lookup"><span data-stu-id="9715a-166">Property: Value</span></span>|  
     |-------------|---------------------|  
-    |**<span data-ttu-id="f3abb-167">Button</span><span class="sxs-lookup"><span data-stu-id="f3abb-167">Button</span></span>**|<span data-ttu-id="f3abb-168">姓名:NewGame</span><span class="sxs-lookup"><span data-stu-id="f3abb-168">Name: NewGame</span></span><br /><br /> <span data-ttu-id="f3abb-169">位置：13, 13</span><span class="sxs-lookup"><span data-stu-id="f3abb-169">Location: 13, 13</span></span><br /><br /> <span data-ttu-id="f3abb-170">字号:75, 23</span><span class="sxs-lookup"><span data-stu-id="f3abb-170">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="f3abb-171">文本：新游戏</span><span class="sxs-lookup"><span data-stu-id="f3abb-171">Text: New Game</span></span>|  
-    |**<span data-ttu-id="f3abb-172">Label</span><span class="sxs-lookup"><span data-stu-id="f3abb-172">Label</span></span>**|<span data-ttu-id="f3abb-173">位置：94, 18</span><span class="sxs-lookup"><span data-stu-id="f3abb-173">Location: 94, 18</span></span><br /><br /> <span data-ttu-id="f3abb-174">文本：猜测一个数字，从 1 到</span><span class="sxs-lookup"><span data-stu-id="f3abb-174">Text: Guess a number from 1 to</span></span>|  
-    |**<span data-ttu-id="f3abb-175">组合框</span><span class="sxs-lookup"><span data-stu-id="f3abb-175">ComboBox</span></span>**|<span data-ttu-id="f3abb-176">姓名:NumberRange</span><span class="sxs-lookup"><span data-stu-id="f3abb-176">Name: NumberRange</span></span><br /><br /> <span data-ttu-id="f3abb-177">DropDownStyle:DropDownList</span><span class="sxs-lookup"><span data-stu-id="f3abb-177">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="f3abb-178">项：10, 100, 1000</span><span class="sxs-lookup"><span data-stu-id="f3abb-178">Items: 10, 100, 1000</span></span><br /><br /> <span data-ttu-id="f3abb-179">位置：228, 12</span><span class="sxs-lookup"><span data-stu-id="f3abb-179">Location: 228, 12</span></span><br /><br /> <span data-ttu-id="f3abb-180">字号:143, 21</span><span class="sxs-lookup"><span data-stu-id="f3abb-180">Size: 143, 21</span></span>|  
-    |**<span data-ttu-id="f3abb-181">Label</span><span class="sxs-lookup"><span data-stu-id="f3abb-181">Label</span></span>**|<span data-ttu-id="f3abb-182">位置：13, 43</span><span class="sxs-lookup"><span data-stu-id="f3abb-182">Location: 13, 43</span></span><br /><br /> <span data-ttu-id="f3abb-183">文本：工作流类型</span><span class="sxs-lookup"><span data-stu-id="f3abb-183">Text: Workflow type</span></span>|  
-    |**<span data-ttu-id="f3abb-184">组合框</span><span class="sxs-lookup"><span data-stu-id="f3abb-184">ComboBox</span></span>**|<span data-ttu-id="f3abb-185">姓名:WorkflowType</span><span class="sxs-lookup"><span data-stu-id="f3abb-185">Name: WorkflowType</span></span><br /><br /> <span data-ttu-id="f3abb-186">DropDownStyle:DropDownList</span><span class="sxs-lookup"><span data-stu-id="f3abb-186">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="f3abb-187">项：StateMachineNumberGuessWorkflow，FlowchartNumberGuessWorkflow，SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="f3abb-187">Items: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow</span></span><br /><br /> <span data-ttu-id="f3abb-188">位置：94, 40</span><span class="sxs-lookup"><span data-stu-id="f3abb-188">Location: 94, 40</span></span><br /><br /> <span data-ttu-id="f3abb-189">字号:277, 21</span><span class="sxs-lookup"><span data-stu-id="f3abb-189">Size: 277, 21</span></span>|  
-    |**<span data-ttu-id="f3abb-190">Label</span><span class="sxs-lookup"><span data-stu-id="f3abb-190">Label</span></span>**|<span data-ttu-id="f3abb-191">姓名:WorkflowVersion</span><span class="sxs-lookup"><span data-stu-id="f3abb-191">Name: WorkflowVersion</span></span><br /><br /> <span data-ttu-id="f3abb-192">位置：13, 362</span><span class="sxs-lookup"><span data-stu-id="f3abb-192">Location: 13, 362</span></span><br /><br /> <span data-ttu-id="f3abb-193">文本：工作流版本</span><span class="sxs-lookup"><span data-stu-id="f3abb-193">Text: Workflow version</span></span>|  
-    |**<span data-ttu-id="f3abb-194">GroupBox</span><span class="sxs-lookup"><span data-stu-id="f3abb-194">GroupBox</span></span>**|<span data-ttu-id="f3abb-195">位置：13, 67</span><span class="sxs-lookup"><span data-stu-id="f3abb-195">Location: 13, 67</span></span><br /><br /> <span data-ttu-id="f3abb-196">字号:358, 287</span><span class="sxs-lookup"><span data-stu-id="f3abb-196">Size: 358, 287</span></span><br /><br /> <span data-ttu-id="f3abb-197">文本：游戏</span><span class="sxs-lookup"><span data-stu-id="f3abb-197">Text: Game</span></span>|  
+    |<span data-ttu-id="9715a-167">**Button**</span><span class="sxs-lookup"><span data-stu-id="9715a-167">**Button**</span></span>|<span data-ttu-id="9715a-168">姓名:NewGame</span><span class="sxs-lookup"><span data-stu-id="9715a-168">Name: NewGame</span></span><br /><br /> <span data-ttu-id="9715a-169">位置：13, 13</span><span class="sxs-lookup"><span data-stu-id="9715a-169">Location: 13, 13</span></span><br /><br /> <span data-ttu-id="9715a-170">字号:75, 23</span><span class="sxs-lookup"><span data-stu-id="9715a-170">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="9715a-171">文本：新游戏</span><span class="sxs-lookup"><span data-stu-id="9715a-171">Text: New Game</span></span>|  
+    |<span data-ttu-id="9715a-172">**标签**</span><span class="sxs-lookup"><span data-stu-id="9715a-172">**Label**</span></span>|<span data-ttu-id="9715a-173">位置：94, 18</span><span class="sxs-lookup"><span data-stu-id="9715a-173">Location: 94, 18</span></span><br /><br /> <span data-ttu-id="9715a-174">文本：猜测一个数字，从 1 到</span><span class="sxs-lookup"><span data-stu-id="9715a-174">Text: Guess a number from 1 to</span></span>|  
+    |<span data-ttu-id="9715a-175">**组合框**</span><span class="sxs-lookup"><span data-stu-id="9715a-175">**ComboBox**</span></span>|<span data-ttu-id="9715a-176">姓名:NumberRange</span><span class="sxs-lookup"><span data-stu-id="9715a-176">Name: NumberRange</span></span><br /><br /> <span data-ttu-id="9715a-177">DropDownStyle:DropDownList</span><span class="sxs-lookup"><span data-stu-id="9715a-177">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="9715a-178">项：10, 100, 1000</span><span class="sxs-lookup"><span data-stu-id="9715a-178">Items: 10, 100, 1000</span></span><br /><br /> <span data-ttu-id="9715a-179">位置：228, 12</span><span class="sxs-lookup"><span data-stu-id="9715a-179">Location: 228, 12</span></span><br /><br /> <span data-ttu-id="9715a-180">字号:143, 21</span><span class="sxs-lookup"><span data-stu-id="9715a-180">Size: 143, 21</span></span>|  
+    |<span data-ttu-id="9715a-181">**标签**</span><span class="sxs-lookup"><span data-stu-id="9715a-181">**Label**</span></span>|<span data-ttu-id="9715a-182">位置：13, 43</span><span class="sxs-lookup"><span data-stu-id="9715a-182">Location: 13, 43</span></span><br /><br /> <span data-ttu-id="9715a-183">文本：工作流类型</span><span class="sxs-lookup"><span data-stu-id="9715a-183">Text: Workflow type</span></span>|  
+    |<span data-ttu-id="9715a-184">**组合框**</span><span class="sxs-lookup"><span data-stu-id="9715a-184">**ComboBox**</span></span>|<span data-ttu-id="9715a-185">姓名:WorkflowType</span><span class="sxs-lookup"><span data-stu-id="9715a-185">Name: WorkflowType</span></span><br /><br /> <span data-ttu-id="9715a-186">DropDownStyle:DropDownList</span><span class="sxs-lookup"><span data-stu-id="9715a-186">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="9715a-187">项：StateMachineNumberGuessWorkflow，FlowchartNumberGuessWorkflow，SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="9715a-187">Items: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow</span></span><br /><br /> <span data-ttu-id="9715a-188">位置：94, 40</span><span class="sxs-lookup"><span data-stu-id="9715a-188">Location: 94, 40</span></span><br /><br /> <span data-ttu-id="9715a-189">字号:277, 21</span><span class="sxs-lookup"><span data-stu-id="9715a-189">Size: 277, 21</span></span>|  
+    |<span data-ttu-id="9715a-190">**标签**</span><span class="sxs-lookup"><span data-stu-id="9715a-190">**Label**</span></span>|<span data-ttu-id="9715a-191">姓名:WorkflowVersion</span><span class="sxs-lookup"><span data-stu-id="9715a-191">Name: WorkflowVersion</span></span><br /><br /> <span data-ttu-id="9715a-192">位置：13, 362</span><span class="sxs-lookup"><span data-stu-id="9715a-192">Location: 13, 362</span></span><br /><br /> <span data-ttu-id="9715a-193">文本：工作流版本</span><span class="sxs-lookup"><span data-stu-id="9715a-193">Text: Workflow version</span></span>|  
+    |<span data-ttu-id="9715a-194">**GroupBox**</span><span class="sxs-lookup"><span data-stu-id="9715a-194">**GroupBox**</span></span>|<span data-ttu-id="9715a-195">位置：13, 67</span><span class="sxs-lookup"><span data-stu-id="9715a-195">Location: 13, 67</span></span><br /><br /> <span data-ttu-id="9715a-196">字号:358, 287</span><span class="sxs-lookup"><span data-stu-id="9715a-196">Size: 358, 287</span></span><br /><br /> <span data-ttu-id="9715a-197">文本：游戏</span><span class="sxs-lookup"><span data-stu-id="9715a-197">Text: Game</span></span>|  
   
     > [!NOTE]
-    >  <span data-ttu-id="f3abb-198">在添加以下控件时，请将其放入 GroupBox。</span><span class="sxs-lookup"><span data-stu-id="f3abb-198">When adding the following controls, put them into the GroupBox.</span></span>  
+    >  <span data-ttu-id="9715a-198">在添加以下控件时，请将其放入 GroupBox。</span><span class="sxs-lookup"><span data-stu-id="9715a-198">When adding the following controls, put them into the GroupBox.</span></span>  
   
-    |<span data-ttu-id="f3abb-199">控件</span><span class="sxs-lookup"><span data-stu-id="f3abb-199">Control</span></span>|<span data-ttu-id="f3abb-200">属性：“值”</span><span class="sxs-lookup"><span data-stu-id="f3abb-200">Property: Value</span></span>|  
+    |<span data-ttu-id="9715a-199">控件</span><span class="sxs-lookup"><span data-stu-id="9715a-199">Control</span></span>|<span data-ttu-id="9715a-200">属性：“值”</span><span class="sxs-lookup"><span data-stu-id="9715a-200">Property: Value</span></span>|  
     |-------------|---------------------|  
-    |**<span data-ttu-id="f3abb-201">Label</span><span class="sxs-lookup"><span data-stu-id="f3abb-201">Label</span></span>**|<span data-ttu-id="f3abb-202">位置：7, 20</span><span class="sxs-lookup"><span data-stu-id="f3abb-202">Location: 7, 20</span></span><br /><br /> <span data-ttu-id="f3abb-203">文本：工作流实例 ID</span><span class="sxs-lookup"><span data-stu-id="f3abb-203">Text: Workflow Instance Id</span></span>|  
-    |**<span data-ttu-id="f3abb-204">组合框</span><span class="sxs-lookup"><span data-stu-id="f3abb-204">ComboBox</span></span>**|<span data-ttu-id="f3abb-205">姓名:InstanceId</span><span class="sxs-lookup"><span data-stu-id="f3abb-205">Name: InstanceId</span></span><br /><br /> <span data-ttu-id="f3abb-206">DropDownStyle:DropDownList</span><span class="sxs-lookup"><span data-stu-id="f3abb-206">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="f3abb-207">位置：121, 17</span><span class="sxs-lookup"><span data-stu-id="f3abb-207">Location: 121, 17</span></span><br /><br /> <span data-ttu-id="f3abb-208">字号:227, 21</span><span class="sxs-lookup"><span data-stu-id="f3abb-208">Size: 227, 21</span></span>|  
-    |**<span data-ttu-id="f3abb-209">Label</span><span class="sxs-lookup"><span data-stu-id="f3abb-209">Label</span></span>**|<span data-ttu-id="f3abb-210">位置：7, 47</span><span class="sxs-lookup"><span data-stu-id="f3abb-210">Location: 7, 47</span></span><br /><br /> <span data-ttu-id="f3abb-211">文本：猜测</span><span class="sxs-lookup"><span data-stu-id="f3abb-211">Text: Guess</span></span>|  
-    |**<span data-ttu-id="f3abb-212">文本框</span><span class="sxs-lookup"><span data-stu-id="f3abb-212">TextBox</span></span>**|<span data-ttu-id="f3abb-213">姓名:猜测</span><span class="sxs-lookup"><span data-stu-id="f3abb-213">Name: Guess</span></span><br /><br /> <span data-ttu-id="f3abb-214">位置：50, 44</span><span class="sxs-lookup"><span data-stu-id="f3abb-214">Location: 50, 44</span></span><br /><br /> <span data-ttu-id="f3abb-215">字号:65, 20</span><span class="sxs-lookup"><span data-stu-id="f3abb-215">Size: 65, 20</span></span>|  
-    |**<span data-ttu-id="f3abb-216">Button</span><span class="sxs-lookup"><span data-stu-id="f3abb-216">Button</span></span>**|<span data-ttu-id="f3abb-217">姓名:EnterGuess</span><span class="sxs-lookup"><span data-stu-id="f3abb-217">Name: EnterGuess</span></span><br /><br /> <span data-ttu-id="f3abb-218">位置：121, 42</span><span class="sxs-lookup"><span data-stu-id="f3abb-218">Location: 121, 42</span></span><br /><br /> <span data-ttu-id="f3abb-219">字号:75, 23</span><span class="sxs-lookup"><span data-stu-id="f3abb-219">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="f3abb-220">文本：输入猜测</span><span class="sxs-lookup"><span data-stu-id="f3abb-220">Text: Enter Guess</span></span>|  
-    |**<span data-ttu-id="f3abb-221">Button</span><span class="sxs-lookup"><span data-stu-id="f3abb-221">Button</span></span>**|<span data-ttu-id="f3abb-222">姓名:QuitGame</span><span class="sxs-lookup"><span data-stu-id="f3abb-222">Name: QuitGame</span></span><br /><br /> <span data-ttu-id="f3abb-223">位置：274, 42</span><span class="sxs-lookup"><span data-stu-id="f3abb-223">Location: 274, 42</span></span><br /><br /> <span data-ttu-id="f3abb-224">字号:75, 23</span><span class="sxs-lookup"><span data-stu-id="f3abb-224">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="f3abb-225">文本：退出</span><span class="sxs-lookup"><span data-stu-id="f3abb-225">Text: Quit</span></span>|  
-    |**<span data-ttu-id="f3abb-226">文本框</span><span class="sxs-lookup"><span data-stu-id="f3abb-226">TextBox</span></span>**|<span data-ttu-id="f3abb-227">姓名:WorkflowStatus</span><span class="sxs-lookup"><span data-stu-id="f3abb-227">Name: WorkflowStatus</span></span><br /><br /> <span data-ttu-id="f3abb-228">位置：10, 73</span><span class="sxs-lookup"><span data-stu-id="f3abb-228">Location: 10, 73</span></span><br /><br /> <span data-ttu-id="f3abb-229">多行：True</span><span class="sxs-lookup"><span data-stu-id="f3abb-229">Multiline: True</span></span><br /><br /> <span data-ttu-id="f3abb-230">只读：True</span><span class="sxs-lookup"><span data-stu-id="f3abb-230">ReadOnly: True</span></span><br /><br /> <span data-ttu-id="f3abb-231">滚动条：垂直</span><span class="sxs-lookup"><span data-stu-id="f3abb-231">ScrollBars: Vertical</span></span><br /><br /> <span data-ttu-id="f3abb-232">字号:338, 208</span><span class="sxs-lookup"><span data-stu-id="f3abb-232">Size: 338, 208</span></span>|  
+    |<span data-ttu-id="9715a-201">**标签**</span><span class="sxs-lookup"><span data-stu-id="9715a-201">**Label**</span></span>|<span data-ttu-id="9715a-202">位置：7, 20</span><span class="sxs-lookup"><span data-stu-id="9715a-202">Location: 7, 20</span></span><br /><br /> <span data-ttu-id="9715a-203">文本：工作流实例 ID</span><span class="sxs-lookup"><span data-stu-id="9715a-203">Text: Workflow Instance Id</span></span>|  
+    |<span data-ttu-id="9715a-204">**组合框**</span><span class="sxs-lookup"><span data-stu-id="9715a-204">**ComboBox**</span></span>|<span data-ttu-id="9715a-205">姓名:InstanceId</span><span class="sxs-lookup"><span data-stu-id="9715a-205">Name: InstanceId</span></span><br /><br /> <span data-ttu-id="9715a-206">DropDownStyle:DropDownList</span><span class="sxs-lookup"><span data-stu-id="9715a-206">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="9715a-207">位置：121, 17</span><span class="sxs-lookup"><span data-stu-id="9715a-207">Location: 121, 17</span></span><br /><br /> <span data-ttu-id="9715a-208">字号:227, 21</span><span class="sxs-lookup"><span data-stu-id="9715a-208">Size: 227, 21</span></span>|  
+    |<span data-ttu-id="9715a-209">**标签**</span><span class="sxs-lookup"><span data-stu-id="9715a-209">**Label**</span></span>|<span data-ttu-id="9715a-210">位置：7, 47</span><span class="sxs-lookup"><span data-stu-id="9715a-210">Location: 7, 47</span></span><br /><br /> <span data-ttu-id="9715a-211">文本：猜测</span><span class="sxs-lookup"><span data-stu-id="9715a-211">Text: Guess</span></span>|  
+    |<span data-ttu-id="9715a-212">**文本框**</span><span class="sxs-lookup"><span data-stu-id="9715a-212">**TextBox**</span></span>|<span data-ttu-id="9715a-213">姓名:猜测</span><span class="sxs-lookup"><span data-stu-id="9715a-213">Name: Guess</span></span><br /><br /> <span data-ttu-id="9715a-214">位置：50, 44</span><span class="sxs-lookup"><span data-stu-id="9715a-214">Location: 50, 44</span></span><br /><br /> <span data-ttu-id="9715a-215">字号:65, 20</span><span class="sxs-lookup"><span data-stu-id="9715a-215">Size: 65, 20</span></span>|  
+    |<span data-ttu-id="9715a-216">**Button**</span><span class="sxs-lookup"><span data-stu-id="9715a-216">**Button**</span></span>|<span data-ttu-id="9715a-217">姓名:EnterGuess</span><span class="sxs-lookup"><span data-stu-id="9715a-217">Name: EnterGuess</span></span><br /><br /> <span data-ttu-id="9715a-218">位置：121, 42</span><span class="sxs-lookup"><span data-stu-id="9715a-218">Location: 121, 42</span></span><br /><br /> <span data-ttu-id="9715a-219">字号:75, 23</span><span class="sxs-lookup"><span data-stu-id="9715a-219">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="9715a-220">文本：输入猜测</span><span class="sxs-lookup"><span data-stu-id="9715a-220">Text: Enter Guess</span></span>|  
+    |<span data-ttu-id="9715a-221">**Button**</span><span class="sxs-lookup"><span data-stu-id="9715a-221">**Button**</span></span>|<span data-ttu-id="9715a-222">姓名:QuitGame</span><span class="sxs-lookup"><span data-stu-id="9715a-222">Name: QuitGame</span></span><br /><br /> <span data-ttu-id="9715a-223">位置：274, 42</span><span class="sxs-lookup"><span data-stu-id="9715a-223">Location: 274, 42</span></span><br /><br /> <span data-ttu-id="9715a-224">字号:75, 23</span><span class="sxs-lookup"><span data-stu-id="9715a-224">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="9715a-225">文本：退出</span><span class="sxs-lookup"><span data-stu-id="9715a-225">Text: Quit</span></span>|  
+    |<span data-ttu-id="9715a-226">**文本框**</span><span class="sxs-lookup"><span data-stu-id="9715a-226">**TextBox**</span></span>|<span data-ttu-id="9715a-227">姓名:WorkflowStatus</span><span class="sxs-lookup"><span data-stu-id="9715a-227">Name: WorkflowStatus</span></span><br /><br /> <span data-ttu-id="9715a-228">位置：10, 73</span><span class="sxs-lookup"><span data-stu-id="9715a-228">Location: 10, 73</span></span><br /><br /> <span data-ttu-id="9715a-229">多行：True</span><span class="sxs-lookup"><span data-stu-id="9715a-229">Multiline: True</span></span><br /><br /> <span data-ttu-id="9715a-230">只读：True</span><span class="sxs-lookup"><span data-stu-id="9715a-230">ReadOnly: True</span></span><br /><br /> <span data-ttu-id="9715a-231">滚动条：垂直</span><span class="sxs-lookup"><span data-stu-id="9715a-231">ScrollBars: Vertical</span></span><br /><br /> <span data-ttu-id="9715a-232">字号:338, 208</span><span class="sxs-lookup"><span data-stu-id="9715a-232">Size: 338, 208</span></span>|  
   
-5. <span data-ttu-id="f3abb-233">设置**AcceptButton**到窗体的属性**EnterGuess**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-233">Set the **AcceptButton** property of the form to **EnterGuess**.</span></span>  
+5. <span data-ttu-id="9715a-233">设置**AcceptButton**到窗体的属性**EnterGuess**。</span><span class="sxs-lookup"><span data-stu-id="9715a-233">Set the **AcceptButton** property of the form to **EnterGuess**.</span></span>  
   
- <span data-ttu-id="f3abb-234">以下示例展示了完成的窗体。</span><span class="sxs-lookup"><span data-stu-id="f3abb-234">The following example illustrates the completed form.</span></span>  
+ <span data-ttu-id="9715a-234">以下示例展示了完成的窗体。</span><span class="sxs-lookup"><span data-stu-id="9715a-234">The following example illustrates the completed form.</span></span>  
   
- <span data-ttu-id="f3abb-235">![WF45 入门教程工作流主机窗体](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span><span class="sxs-lookup"><span data-stu-id="f3abb-235">![WF45 Getting Started Tutorial Workflow Host Form](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span></span>  
+ <span data-ttu-id="9715a-235">![WF45 入门教程工作流主机窗体](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span><span class="sxs-lookup"><span data-stu-id="9715a-235">![WF45 Getting Started Tutorial Workflow Host Form](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span></span>  
   
-### <a name="BKMK_AddHelperMethods"></a> <span data-ttu-id="f3abb-236">若要添加的属性和帮助器方法的窗体</span><span class="sxs-lookup"><span data-stu-id="f3abb-236">To add the properties and helper methods of the form</span></span>  
- <span data-ttu-id="f3abb-237">本节的步骤将属性和帮助器添加至窗体类，此窗体类将配置窗体的 UI，以支持运行和恢复数字猜测工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-237">The steps in this section add properties and helper methods to the form class that configure the UI of the form to support running and resuming number guess workflows.</span></span>  
+### <a name="BKMK_AddHelperMethods"></a> <span data-ttu-id="9715a-236">若要添加的属性和帮助器方法的窗体</span><span class="sxs-lookup"><span data-stu-id="9715a-236">To add the properties and helper methods of the form</span></span>  
+ <span data-ttu-id="9715a-237">本节的步骤将属性和帮助器添加至窗体类，此窗体类将配置窗体的 UI，以支持运行和恢复数字猜测工作流。</span><span class="sxs-lookup"><span data-stu-id="9715a-237">The steps in this section add properties and helper methods to the form class that configure the UI of the form to support running and resuming number guess workflows.</span></span>  
   
-1. <span data-ttu-id="f3abb-238">右键单击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-238">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
+1. <span data-ttu-id="9715a-238">右键单击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**查看代码**。</span><span class="sxs-lookup"><span data-stu-id="9715a-238">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
-2. <span data-ttu-id="f3abb-239">在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。</span><span class="sxs-lookup"><span data-stu-id="f3abb-239">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
+2. <span data-ttu-id="9715a-239">在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。</span><span class="sxs-lookup"><span data-stu-id="9715a-239">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Windows.Forms  
@@ -144,7 +144,7 @@ ms.locfileid: "59320042"
     using System.IO;  
     ```  
   
-3. <span data-ttu-id="f3abb-240">添加到以下成员声明**WorkflowHostForm**类。</span><span class="sxs-lookup"><span data-stu-id="f3abb-240">Add the following member declarations to the **WorkflowHostForm** class.</span></span>  
+3. <span data-ttu-id="9715a-240">添加到以下成员声明**WorkflowHostForm**类。</span><span class="sxs-lookup"><span data-stu-id="9715a-240">Add the following member declarations to the **WorkflowHostForm** class.</span></span>  
   
     ```vb  
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"  
@@ -159,9 +159,9 @@ ms.locfileid: "59320042"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="f3abb-241">如果您的连接字符串不同，请更新 `connectionString` 引用数据库。</span><span class="sxs-lookup"><span data-stu-id="f3abb-241">If your connection string is different, update `connectionString` to refer to your database.</span></span>  
+    >  <span data-ttu-id="9715a-241">如果您的连接字符串不同，请更新 `connectionString` 引用数据库。</span><span class="sxs-lookup"><span data-stu-id="9715a-241">If your connection string is different, update `connectionString` to refer to your database.</span></span>  
   
-4. <span data-ttu-id="f3abb-242">将 `WorkflowInstanceId` 属性添加到 `WorkflowFormHost` 类中。</span><span class="sxs-lookup"><span data-stu-id="f3abb-242">Add a `WorkflowInstanceId` property to the `WorkflowFormHost` class.</span></span>  
+4. <span data-ttu-id="9715a-242">将 `WorkflowInstanceId` 属性添加到 `WorkflowFormHost` 类中。</span><span class="sxs-lookup"><span data-stu-id="9715a-242">Add a `WorkflowInstanceId` property to the `WorkflowFormHost` class.</span></span>  
   
     ```vb  
     Public ReadOnly Property WorkflowInstanceId() As Guid  
@@ -185,9 +185,9 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-     <span data-ttu-id="f3abb-243">`InstanceId`组合框显示的持久化工作流实例 id 的列表和`WorkflowInstanceId`属性返回当前所选的工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-243">The `InstanceId` combo box displays a list of persisted workflow instance ids, and the `WorkflowInstanceId` property returns the currently selected workflow.</span></span>  
+     <span data-ttu-id="9715a-243">`InstanceId`组合框显示的持久化工作流实例 id 的列表和`WorkflowInstanceId`属性返回当前所选的工作流。</span><span class="sxs-lookup"><span data-stu-id="9715a-243">The `InstanceId` combo box displays a list of persisted workflow instance ids, and the `WorkflowInstanceId` property returns the currently selected workflow.</span></span>  
   
-5. <span data-ttu-id="f3abb-244">为窗体 `Load` 事件添加处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-244">Add a handler for the form `Load` event.</span></span> <span data-ttu-id="f3abb-245">若要添加处理程序，请切换到**设计视图**窗体中，单击**事件**顶部的图标**属性**窗口中，然后双击**负载**.</span><span class="sxs-lookup"><span data-stu-id="f3abb-245">To add the handler, switch to **Design View** for the form, click the **Events** icon at the top of the **Properties** window, and double-click **Load**.</span></span>  
+5. <span data-ttu-id="9715a-244">为窗体 `Load` 事件添加处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-244">Add a handler for the form `Load` event.</span></span> <span data-ttu-id="9715a-245">若要添加处理程序，请切换到**设计视图**窗体中，单击**事件**顶部的图标**属性**窗口中，然后双击**负载**.</span><span class="sxs-lookup"><span data-stu-id="9715a-245">To add the handler, switch to **Design View** for the form, click the **Events** icon at the top of the **Properties** window, and double-click **Load**.</span></span>  
   
     ```vb  
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load  
@@ -202,7 +202,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-6. <span data-ttu-id="f3abb-246">将下列代码添加到 `WorkflowHostForm_Load`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-246">Add the following code to `WorkflowHostForm_Load`.</span></span>  
+6. <span data-ttu-id="9715a-246">将下列代码添加到 `WorkflowHostForm_Load`。</span><span class="sxs-lookup"><span data-stu-id="9715a-246">Add the following code to `WorkflowHostForm_Load`.</span></span>  
   
     ```vb  
     'Initialize the store and configure it so that it can be used for  
@@ -230,9 +230,9 @@ ms.locfileid: "59320042"
     ListPersistedWorkflows();  
     ```  
   
-     <span data-ttu-id="f3abb-247">窗体加载时，将配置 `SqlWorkflowInstanceStore`，范围和工作流类型组合框将设置为默认值，持久性工作流实例将添加到 `InstanceId` 组合框。</span><span class="sxs-lookup"><span data-stu-id="f3abb-247">When the form loads, the `SqlWorkflowInstanceStore` is configured, the range and workflow type combo boxes are set to default values, and the persisted workflow instances are added to the `InstanceId` combo box.</span></span>  
+     <span data-ttu-id="9715a-247">窗体加载时，将配置 `SqlWorkflowInstanceStore`，范围和工作流类型组合框将设置为默认值，持久性工作流实例将添加到 `InstanceId` 组合框。</span><span class="sxs-lookup"><span data-stu-id="9715a-247">When the form loads, the `SqlWorkflowInstanceStore` is configured, the range and workflow type combo boxes are set to default values, and the persisted workflow instances are added to the `InstanceId` combo box.</span></span>  
   
-7. <span data-ttu-id="f3abb-248">为 `SelectedIndexChanged` 添加 `InstanceId` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-248">Add a `SelectedIndexChanged` handler for `InstanceId`.</span></span> <span data-ttu-id="f3abb-249">若要添加处理程序，请切换到**设计视图**窗体中，选择`InstanceId`组合框中，单击**事件**顶部的图标**属性**窗口中，并双击**SelectedIndexChanged**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-249">To add the handler, switch to **Design View** for the form, select the `InstanceId` combo box, click the **Events** icon at the top of the **Properties** window, and double-click **SelectedIndexChanged**.</span></span>  
+7. <span data-ttu-id="9715a-248">为 `SelectedIndexChanged` 添加 `InstanceId` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-248">Add a `SelectedIndexChanged` handler for `InstanceId`.</span></span> <span data-ttu-id="9715a-249">若要添加处理程序，请切换到**设计视图**窗体中，选择`InstanceId`组合框中，单击**事件**顶部的图标**属性**窗口中，并双击**SelectedIndexChanged**。</span><span class="sxs-lookup"><span data-stu-id="9715a-249">To add the handler, switch to **Design View** for the form, select the `InstanceId` combo box, click the **Events** icon at the top of the **Properties** window, and double-click **SelectedIndexChanged**.</span></span>  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -247,7 +247,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-8. <span data-ttu-id="f3abb-250">将下列代码添加到 `InstanceId_SelectedIndexChanged`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-250">Add the following code to `InstanceId_SelectedIndexChanged`.</span></span> <span data-ttu-id="f3abb-251">只要用户使用组合框选择一个工作流，此处理程序就会更新状态窗口。</span><span class="sxs-lookup"><span data-stu-id="f3abb-251">Whenever the user selects a workflow by using the combo box this handler updates the status window.</span></span>  
+8. <span data-ttu-id="9715a-250">将下列代码添加到 `InstanceId_SelectedIndexChanged`。</span><span class="sxs-lookup"><span data-stu-id="9715a-250">Add the following code to `InstanceId_SelectedIndexChanged`.</span></span> <span data-ttu-id="9715a-251">只要用户使用组合框选择一个工作流，此处理程序就会更新状态窗口。</span><span class="sxs-lookup"><span data-stu-id="9715a-251">Whenever the user selects a workflow by using the combo box this handler updates the status window.</span></span>  
   
     ```vb  
     If InstanceId.SelectedIndex = -1 Then  
@@ -297,7 +297,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-9. <span data-ttu-id="f3abb-252">将下面的 `ListPersistedWorkflows` 方法添加到窗体类中。</span><span class="sxs-lookup"><span data-stu-id="f3abb-252">Add the following `ListPersistedWorkflows` method to the form class.</span></span>  
+9. <span data-ttu-id="9715a-252">将下面的 `ListPersistedWorkflows` 方法添加到窗体类中。</span><span class="sxs-lookup"><span data-stu-id="9715a-252">Add the following `ListPersistedWorkflows` method to the form class.</span></span>  
   
     ```vb  
     Private Sub ListPersistedWorkflows()  
@@ -341,9 +341,9 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-     `ListPersistedWorkflows` <span data-ttu-id="f3abb-253">查询实例存储中的持久化工作流实例，并将添加到的实例 id`cboInstanceId`组合框。</span><span class="sxs-lookup"><span data-stu-id="f3abb-253">queries the instance store for persisted workflow instances, and adds the instance ids to the `cboInstanceId` combo box.</span></span>  
+     <span data-ttu-id="9715a-253">`ListPersistedWorkflows` 查询持久性工作流实例的实例存储，并将实例 ID 添加到 `cboInstanceId` 组合框。</span><span class="sxs-lookup"><span data-stu-id="9715a-253">`ListPersistedWorkflows` queries the instance store for persisted workflow instances, and adds the instance ids to the `cboInstanceId` combo box.</span></span>  
   
-10. <span data-ttu-id="f3abb-254">将下面的 `UpdateStatus` 方法和对应的委托添加到窗体类中。</span><span class="sxs-lookup"><span data-stu-id="f3abb-254">Add the following `UpdateStatus` method and corresponding delegate to the form class.</span></span> <span data-ttu-id="f3abb-255">此方法使用当前正在运行的工作流的状态来更新窗体上的状态窗口。</span><span class="sxs-lookup"><span data-stu-id="f3abb-255">This method updates the status window on the form with the status of the currently running workflow.</span></span>  
+10. <span data-ttu-id="9715a-254">将下面的 `UpdateStatus` 方法和对应的委托添加到窗体类中。</span><span class="sxs-lookup"><span data-stu-id="9715a-254">Add the following `UpdateStatus` method and corresponding delegate to the form class.</span></span> <span data-ttu-id="9715a-255">此方法使用当前正在运行的工作流的状态来更新窗体上的状态窗口。</span><span class="sxs-lookup"><span data-stu-id="9715a-255">This method updates the status window on the form with the status of the currently running workflow.</span></span>  
   
     ```vb  
     Private Delegate Sub UpdateStatusDelegate(msg As String)  
@@ -390,7 +390,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-11. <span data-ttu-id="f3abb-256">将下面的 `GameOver` 方法和对应的委托添加到窗体类中。</span><span class="sxs-lookup"><span data-stu-id="f3abb-256">Add the following `GameOver` method and corresponding delegate to the form class.</span></span> <span data-ttu-id="f3abb-257">工作流完成后，此方法更新窗体用户界面通过删除已完成的工作流的实例 id 从**InstanceId**组合框。</span><span class="sxs-lookup"><span data-stu-id="f3abb-257">When a workflow completes, this method updates the form UI by removing the instance id of the completed workflow from the **InstanceId** combo box.</span></span>  
+11. <span data-ttu-id="9715a-256">将下面的 `GameOver` 方法和对应的委托添加到窗体类中。</span><span class="sxs-lookup"><span data-stu-id="9715a-256">Add the following `GameOver` method and corresponding delegate to the form class.</span></span> <span data-ttu-id="9715a-257">工作流完成后，此方法更新窗体用户界面通过删除已完成的工作流的实例 id 从**InstanceId**组合框。</span><span class="sxs-lookup"><span data-stu-id="9715a-257">When a workflow completes, this method updates the form UI by removing the instance id of the completed workflow from the **InstanceId** combo box.</span></span>  
   
     ```vb  
     Private Delegate Sub GameOverDelegate()  
@@ -422,9 +422,9 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-### <a name="BKMK_ConfigureWorkflowApplication"></a> <span data-ttu-id="f3abb-258">若要配置实例存储、 工作流生命周期处理程序和扩展</span><span class="sxs-lookup"><span data-stu-id="f3abb-258">To configure the instance store, workflow lifecycle handlers, and extensions</span></span>  
+### <a name="BKMK_ConfigureWorkflowApplication"></a> <span data-ttu-id="9715a-258">若要配置实例存储、 工作流生命周期处理程序和扩展</span><span class="sxs-lookup"><span data-stu-id="9715a-258">To configure the instance store, workflow lifecycle handlers, and extensions</span></span>  
   
-1. <span data-ttu-id="f3abb-259">向窗体类添加 `ConfigureWorkflowApplication` 方法。</span><span class="sxs-lookup"><span data-stu-id="f3abb-259">Add a `ConfigureWorkflowApplication` method to the form class.</span></span>  
+1. <span data-ttu-id="9715a-259">向窗体类添加 `ConfigureWorkflowApplication` 方法。</span><span class="sxs-lookup"><span data-stu-id="9715a-259">Add a `ConfigureWorkflowApplication` method to the form class.</span></span>  
   
     ```vb  
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)  
@@ -438,9 +438,9 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-     <span data-ttu-id="f3abb-260">此方法配置 `WorkflowApplication`、添加所需扩展并添加工作流生命周期事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-260">This method configures the `WorkflowApplication`, adds the desired extensions, and adds handlers for the workflow lifecycle events.</span></span>  
+     <span data-ttu-id="9715a-260">此方法配置 `WorkflowApplication`、添加所需扩展并添加工作流生命周期事件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-260">This method configures the `WorkflowApplication`, adds the desired extensions, and adds handlers for the workflow lifecycle events.</span></span>  
   
-2. <span data-ttu-id="f3abb-261">在 `ConfigureWorkflowApplication` 中，指定 `SqlWorkflowInstanceStore` 的 `WorkflowApplication`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-261">In `ConfigureWorkflowApplication`, specify the `SqlWorkflowInstanceStore` for the `WorkflowApplication`.</span></span>  
+2. <span data-ttu-id="9715a-261">在 `ConfigureWorkflowApplication` 中，指定 `SqlWorkflowInstanceStore` 的 `WorkflowApplication`。</span><span class="sxs-lookup"><span data-stu-id="9715a-261">In `ConfigureWorkflowApplication`, specify the `SqlWorkflowInstanceStore` for the `WorkflowApplication`.</span></span>  
   
     ```vb  
     'Configure the persistence store.  
@@ -452,7 +452,7 @@ ms.locfileid: "59320042"
     wfApp.InstanceStore = store;  
     ```  
   
-3. <span data-ttu-id="f3abb-262">接下来，创建一个 `StringWriter` 实例，并将它添加到 `Extensions` 的 `WorkflowApplication` 集合中。</span><span class="sxs-lookup"><span data-stu-id="f3abb-262">Next, create a `StringWriter` instance and add it to the `Extensions` collection of the `WorkflowApplication`.</span></span> <span data-ttu-id="f3abb-263">当`StringWriter`添加到扩展它会捕获所有`WriteLine`活动输出。</span><span class="sxs-lookup"><span data-stu-id="f3abb-263">When a `StringWriter` is added to the extensions it captures all `WriteLine` activity output.</span></span> <span data-ttu-id="f3abb-264">当工作流进入空闲状态时，`WriteLine` 输出可从 `StringWriter` 提取并显示在窗体上。</span><span class="sxs-lookup"><span data-stu-id="f3abb-264">When the workflow becomes idle, the `WriteLine` output can be extracted from the `StringWriter` and displayed on the form.</span></span>  
+3. <span data-ttu-id="9715a-262">接下来，创建一个 `StringWriter` 实例，并将它添加到 `Extensions` 的 `WorkflowApplication` 集合中。</span><span class="sxs-lookup"><span data-stu-id="9715a-262">Next, create a `StringWriter` instance and add it to the `Extensions` collection of the `WorkflowApplication`.</span></span> <span data-ttu-id="9715a-263">当`StringWriter`添加到扩展它会捕获所有`WriteLine`活动输出。</span><span class="sxs-lookup"><span data-stu-id="9715a-263">When a `StringWriter` is added to the extensions it captures all `WriteLine` activity output.</span></span> <span data-ttu-id="9715a-264">当工作流进入空闲状态时，`WriteLine` 输出可从 `StringWriter` 提取并显示在窗体上。</span><span class="sxs-lookup"><span data-stu-id="9715a-264">When the workflow becomes idle, the `WriteLine` output can be extracted from the `StringWriter` and displayed on the form.</span></span>  
   
     ```vb  
     'Add a StringWriter to the extensions. This captures the output  
@@ -468,7 +468,7 @@ ms.locfileid: "59320042"
     wfApp.Extensions.Add(sw);  
     ```  
   
-4. <span data-ttu-id="f3abb-265">为 `Completed` 事件添加以下处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-265">Add the following handler for the `Completed` event.</span></span> <span data-ttu-id="f3abb-266">在工作流成功完成时，执行猜测数字的轮数会显示到状态窗口。</span><span class="sxs-lookup"><span data-stu-id="f3abb-266">When a workflow successfully completes, the number of turns taken to guess the number is displayed to the status window.</span></span> <span data-ttu-id="f3abb-267">如果工作流终止，系统会显示导致终止的异常信息。</span><span class="sxs-lookup"><span data-stu-id="f3abb-267">If the workflow terminates, the exception information that caused the termination is displayed.</span></span> <span data-ttu-id="f3abb-268">在处理程序结尾处调用了 `GameOver` 方法，该方法从工作流列表中删除已完成的工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-268">At the end of the handler the `GameOver` method is called, which removes the completed workflow from the workflow list.</span></span>  
+4. <span data-ttu-id="9715a-265">为 `Completed` 事件添加以下处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-265">Add the following handler for the `Completed` event.</span></span> <span data-ttu-id="9715a-266">在工作流成功完成时，执行猜测数字的轮数会显示到状态窗口。</span><span class="sxs-lookup"><span data-stu-id="9715a-266">When a workflow successfully completes, the number of turns taken to guess the number is displayed to the status window.</span></span> <span data-ttu-id="9715a-267">如果工作流终止，系统会显示导致终止的异常信息。</span><span class="sxs-lookup"><span data-stu-id="9715a-267">If the workflow terminates, the exception information that caused the termination is displayed.</span></span> <span data-ttu-id="9715a-268">在处理程序结尾处调用了 `GameOver` 方法，该方法从工作流列表中删除已完成的工作流。</span><span class="sxs-lookup"><span data-stu-id="9715a-268">At the end of the handler the `GameOver` method is called, which removes the completed workflow from the workflow list.</span></span>  
   
     ```vb  
     wfApp.Completed = _  
@@ -509,7 +509,7 @@ ms.locfileid: "59320042"
     };  
     ```  
   
-5. <span data-ttu-id="f3abb-269">添加以下 `Aborted` 和 `OnUnhandledException` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-269">Add the following `Aborted` and `OnUnhandledException` handlers.</span></span> <span data-ttu-id="f3abb-270">`GameOver` 方法不从 `Aborted` 处理程序中调用，因为在工作流实例中止时，它并未终止，且以后可能恢复实例。</span><span class="sxs-lookup"><span data-stu-id="f3abb-270">The `GameOver` method is not called from the `Aborted` handler because when a workflow instance is aborted, it does not terminate, and it is possible to resume the instance at a later time.</span></span>  
+5. <span data-ttu-id="9715a-269">添加以下 `Aborted` 和 `OnUnhandledException` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-269">Add the following `Aborted` and `OnUnhandledException` handlers.</span></span> <span data-ttu-id="9715a-270">`GameOver` 方法不从 `Aborted` 处理程序中调用，因为在工作流实例中止时，它并未终止，且以后可能恢复实例。</span><span class="sxs-lookup"><span data-stu-id="9715a-270">The `GameOver` method is not called from the `Aborted` handler because when a workflow instance is aborted, it does not terminate, and it is possible to resume the instance at a later time.</span></span>  
   
     ```vb  
     wfApp.Aborted = _  
@@ -547,7 +547,7 @@ ms.locfileid: "59320042"
     };  
     ```  
   
-6. <span data-ttu-id="f3abb-271">添加以下 `PersistableIdle` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-271">Add the following `PersistableIdle` handler.</span></span> <span data-ttu-id="f3abb-272">此处理程序检索添加的 `StringWriter` 扩展，提取 `WriteLine` 活动的输出，并将它显示在状态窗口中。</span><span class="sxs-lookup"><span data-stu-id="f3abb-272">This handler retrieves the `StringWriter` extension that was added, extracts the output from the `WriteLine` activities, and displays it in the status window.</span></span>  
+6. <span data-ttu-id="9715a-271">添加以下 `PersistableIdle` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-271">Add the following `PersistableIdle` handler.</span></span> <span data-ttu-id="9715a-272">此处理程序检索添加的 `StringWriter` 扩展，提取 `WriteLine` 活动的输出，并将它显示在状态窗口中。</span><span class="sxs-lookup"><span data-stu-id="9715a-272">This handler retrieves the `StringWriter` extension that was added, extracts the output from the `WriteLine` activities, and displays it in the status window.</span></span>  
   
     ```vb  
     wfApp.PersistableIdle = _  
@@ -574,9 +574,9 @@ ms.locfileid: "59320042"
     };  
     ```  
   
-     <span data-ttu-id="f3abb-273"><xref:System.Activities.PersistableIdleAction> 枚举有三个值：<xref:System.Activities.PersistableIdleAction.None>、 <xref:System.Activities.PersistableIdleAction.Persist> 和 <xref:System.Activities.PersistableIdleAction.Unload>。</span><span class="sxs-lookup"><span data-stu-id="f3abb-273">The <xref:System.Activities.PersistableIdleAction> enumeration has three values: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist>, and <xref:System.Activities.PersistableIdleAction.Unload>.</span></span> <xref:System.Activities.PersistableIdleAction.Persist> <span data-ttu-id="f3abb-274">会导致工作流持久保存，但它不会导致工作流卸载。</span><span class="sxs-lookup"><span data-stu-id="f3abb-274">causes the workflow to persist but it does not cause the workflow to unload.</span></span> <xref:System.Activities.PersistableIdleAction.Unload> <span data-ttu-id="f3abb-275">导致持久保存并卸载工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-275">causes the workflow to persist and be unloaded.</span></span>  
+     <span data-ttu-id="9715a-273"><xref:System.Activities.PersistableIdleAction> 枚举有三个值：<xref:System.Activities.PersistableIdleAction.None>、 <xref:System.Activities.PersistableIdleAction.Persist> 和 <xref:System.Activities.PersistableIdleAction.Unload>。</span><span class="sxs-lookup"><span data-stu-id="9715a-273">The <xref:System.Activities.PersistableIdleAction> enumeration has three values: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist>, and <xref:System.Activities.PersistableIdleAction.Unload>.</span></span> <span data-ttu-id="9715a-274"><xref:System.Activities.PersistableIdleAction.Persist> 会导致工作流持久保存，但不会导致工作流卸载。</span><span class="sxs-lookup"><span data-stu-id="9715a-274"><xref:System.Activities.PersistableIdleAction.Persist> causes the workflow to persist but it does not cause the workflow to unload.</span></span> <span data-ttu-id="9715a-275"><xref:System.Activities.PersistableIdleAction.Unload> 会导致工作流持久保存并卸载。</span><span class="sxs-lookup"><span data-stu-id="9715a-275"><xref:System.Activities.PersistableIdleAction.Unload> causes the workflow to persist and be unloaded.</span></span>  
   
-     <span data-ttu-id="f3abb-276">以下示例是完成的 `ConfigureWorkflowApplication` 方法。</span><span class="sxs-lookup"><span data-stu-id="f3abb-276">The following example is the completed `ConfigureWorkflowApplication` method.</span></span>  
+     <span data-ttu-id="9715a-276">以下示例是完成的 `ConfigureWorkflowApplication` 方法。</span><span class="sxs-lookup"><span data-stu-id="9715a-276">The following example is the completed `ConfigureWorkflowApplication` method.</span></span>  
   
     ```vb  
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)  
@@ -691,12 +691,12 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-### <a name="BKMK_WorkflowVersionMap"></a> <span data-ttu-id="f3abb-277">若要启用启动和恢复多个工作流类型</span><span class="sxs-lookup"><span data-stu-id="f3abb-277">To enable starting and resuming multiple workflow types</span></span>  
- <span data-ttu-id="f3abb-278">要恢复工作流实例，主机必须提供工作流定义。</span><span class="sxs-lookup"><span data-stu-id="f3abb-278">In order to resume a workflow instance, the host has to provide the workflow definition.</span></span> <span data-ttu-id="f3abb-279">在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。</span><span class="sxs-lookup"><span data-stu-id="f3abb-279">In this tutorial there are three workflow types, and subsequent tutorial steps introduce multiple versions of these types.</span></span> `WorkflowIdentity` <span data-ttu-id="f3abb-280">提供要将标识信息与持久化工作流实例相关联的主机应用程序的方法。</span><span class="sxs-lookup"><span data-stu-id="f3abb-280">provides a way for a host application to associate identifying information with a persisted workflow instance.</span></span> <span data-ttu-id="f3abb-281">本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="f3abb-281">The steps in this section demonstrate how to create a utility class to assist with mapping the workflow identity from a persisted workflow instance to the corresponding workflow definition.</span></span> <span data-ttu-id="f3abb-282">有关详细信息`WorkflowIdentity`和版本控制，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="f3abb-282">For more information about `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](using-workflowidentity-and-versioning.md).</span></span>  
+### <a name="BKMK_WorkflowVersionMap"></a> <span data-ttu-id="9715a-277">若要启用启动和恢复多个工作流类型</span><span class="sxs-lookup"><span data-stu-id="9715a-277">To enable starting and resuming multiple workflow types</span></span>  
+ <span data-ttu-id="9715a-278">要恢复工作流实例，主机必须提供工作流定义。</span><span class="sxs-lookup"><span data-stu-id="9715a-278">In order to resume a workflow instance, the host has to provide the workflow definition.</span></span> <span data-ttu-id="9715a-279">在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。</span><span class="sxs-lookup"><span data-stu-id="9715a-279">In this tutorial there are three workflow types, and subsequent tutorial steps introduce multiple versions of these types.</span></span> <span data-ttu-id="9715a-280">主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。</span><span class="sxs-lookup"><span data-stu-id="9715a-280">`WorkflowIdentity` provides a way for a host application to associate identifying information with a persisted workflow instance.</span></span> <span data-ttu-id="9715a-281">本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="9715a-281">The steps in this section demonstrate how to create a utility class to assist with mapping the workflow identity from a persisted workflow instance to the corresponding workflow definition.</span></span> <span data-ttu-id="9715a-282">有关详细信息`WorkflowIdentity`和版本控制，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。</span><span class="sxs-lookup"><span data-stu-id="9715a-282">For more information about `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](using-workflowidentity-and-versioning.md).</span></span>  
   
-1. <span data-ttu-id="f3abb-283">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**类**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-283">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="f3abb-284">类型`WorkflowVersionMap`成**名称**框，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-284">Type `WorkflowVersionMap` into the **Name** box and click **Add**.</span></span>  
+1. <span data-ttu-id="9715a-283">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**类**。</span><span class="sxs-lookup"><span data-stu-id="9715a-283">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="9715a-284">类型`WorkflowVersionMap`成**名称**框，然后单击**添加**。</span><span class="sxs-lookup"><span data-stu-id="9715a-284">Type `WorkflowVersionMap` into the **Name** box and click **Add**.</span></span>  
   
-2. <span data-ttu-id="f3abb-285">在包含其他 `using` 或 `Imports` 语句的文件的顶部添加以下 `using` 或 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="f3abb-285">Add the following `using` or `Imports` statements at the top of the file with the other `using` or `Imports` statements.</span></span>  
+2. <span data-ttu-id="9715a-285">在包含其他 `using` 或 `Imports` 语句的文件的顶部添加以下 `using` 或 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="9715a-285">Add the following `using` or `Imports` statements at the top of the file with the other `using` or `Imports` statements.</span></span>  
   
     ```vb  
     Imports NumberGuessWorkflowActivities  
@@ -708,7 +708,7 @@ ms.locfileid: "59320042"
     using System.Activities;  
     ```  
   
-3. <span data-ttu-id="f3abb-286">使用以下声明替换 `WorkflowVersionMap` 类声明。</span><span class="sxs-lookup"><span data-stu-id="f3abb-286">Replace the `WorkflowVersionMap` class declaration with the following declaration.</span></span>  
+3. <span data-ttu-id="9715a-286">使用以下声明替换 `WorkflowVersionMap` 类声明。</span><span class="sxs-lookup"><span data-stu-id="9715a-286">Replace the `WorkflowVersionMap` class declaration with the following declaration.</span></span>  
   
     ```vb  
     Public Module WorkflowVersionMap  
@@ -806,11 +806,11 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-     `WorkflowVersionMap` <span data-ttu-id="f3abb-287">包含本教程中，将映射到三个工作流定义的三个工作流标识，启动和恢复工作流时以下各节中使用。</span><span class="sxs-lookup"><span data-stu-id="f3abb-287">contains three workflow identities that map to the three workflow definitions from this tutorial and is used in the following sections when workflows are started and resumed.</span></span>  
+     <span data-ttu-id="9715a-287">`WorkflowVersionMap` 包含与此教程中的三个工作流定义对应的三个工作流标识，并在以下各节中工作流启动和恢复时使用。</span><span class="sxs-lookup"><span data-stu-id="9715a-287">`WorkflowVersionMap` contains three workflow identities that map to the three workflow definitions from this tutorial and is used in the following sections when workflows are started and resumed.</span></span>  
   
-### <a name="BKMK_StartWorkflow"></a> <span data-ttu-id="f3abb-288">若要启动新工作流</span><span class="sxs-lookup"><span data-stu-id="f3abb-288">To start a new workflow</span></span>  
+### <a name="BKMK_StartWorkflow"></a> <span data-ttu-id="9715a-288">若要启动新工作流</span><span class="sxs-lookup"><span data-stu-id="9715a-288">To start a new workflow</span></span>  
   
-1. <span data-ttu-id="f3abb-289">为 `Click` 添加 `NewGame` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-289">Add a `Click` handler for `NewGame`.</span></span> <span data-ttu-id="f3abb-290">若要添加处理程序，请切换到**设计视图**的窗体，然后双击`NewGame`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-290">To add the handler, switch to **Design View** for the form, and double-click `NewGame`.</span></span> <span data-ttu-id="f3abb-291">此时将添加 `NewGame_Click` 处理程序，视图将切换为窗体的代码视图。</span><span class="sxs-lookup"><span data-stu-id="f3abb-291">A `NewGame_Click` handler is added and the view switches to code view for the form.</span></span> <span data-ttu-id="f3abb-292">每当用户单击此按钮时，就会启动新工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-292">Whenever the user clicks this button a new workflow is started.</span></span>  
+1. <span data-ttu-id="9715a-289">为 `Click` 添加 `NewGame` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-289">Add a `Click` handler for `NewGame`.</span></span> <span data-ttu-id="9715a-290">若要添加处理程序，请切换到**设计视图**的窗体，然后双击`NewGame`。</span><span class="sxs-lookup"><span data-stu-id="9715a-290">To add the handler, switch to **Design View** for the form, and double-click `NewGame`.</span></span> <span data-ttu-id="9715a-291">此时将添加 `NewGame_Click` 处理程序，视图将切换为窗体的代码视图。</span><span class="sxs-lookup"><span data-stu-id="9715a-291">A `NewGame_Click` handler is added and the view switches to code view for the form.</span></span> <span data-ttu-id="9715a-292">每当用户单击此按钮时，就会启动新工作流。</span><span class="sxs-lookup"><span data-stu-id="9715a-292">Whenever the user clicks this button a new workflow is started.</span></span>  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -825,7 +825,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-2. <span data-ttu-id="f3abb-293">将以下代码添加到 click 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-293">Add the following code to the click handler.</span></span> <span data-ttu-id="f3abb-294">此代码创建工作流输入自变量的字典，以变量名称作为键。</span><span class="sxs-lookup"><span data-stu-id="f3abb-294">This code creates a dictionary of input arguments for the workflow, keyed by argument name.</span></span> <span data-ttu-id="f3abb-295">此字典有一个条目，其中包含从范围组合框检索到的随机生成的数字范围。</span><span class="sxs-lookup"><span data-stu-id="f3abb-295">This dictionary has one entry that contains the range of the randomly generated number retrieved from the range combo box.</span></span>  
+2. <span data-ttu-id="9715a-293">将以下代码添加到 click 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-293">Add the following code to the click handler.</span></span> <span data-ttu-id="9715a-294">此代码创建工作流输入自变量的字典，以变量名称作为键。</span><span class="sxs-lookup"><span data-stu-id="9715a-294">This code creates a dictionary of input arguments for the workflow, keyed by argument name.</span></span> <span data-ttu-id="9715a-295">此字典有一个条目，其中包含从范围组合框检索到的随机生成的数字范围。</span><span class="sxs-lookup"><span data-stu-id="9715a-295">This dictionary has one entry that contains the range of the randomly generated number retrieved from the range combo box.</span></span>  
   
     ```vb  
     Dim inputs As New Dictionary(Of String, Object)()  
@@ -837,7 +837,7 @@ ms.locfileid: "59320042"
     inputs.Add("MaxNumber", Convert.ToInt32(NumberRange.SelectedItem));  
     ```  
   
-3. <span data-ttu-id="f3abb-296">接下来，添加以下用于启动工作流的代码。</span><span class="sxs-lookup"><span data-stu-id="f3abb-296">Next, add the following code that starts the workflow.</span></span> <span data-ttu-id="f3abb-297">对应于所选工作流类型的 `WorkflowIdentity` 和工作流定义通过 `WorkflowVersionMap` 帮助器类进行检索。</span><span class="sxs-lookup"><span data-stu-id="f3abb-297">The `WorkflowIdentity` and workflow definition corresponding to the type of workflow selected are retrieved using the `WorkflowVersionMap` helper class.</span></span> <span data-ttu-id="f3abb-298">接下来，将使用工作流定义、`WorkflowApplication` 和输入变量字典创建新的 `WorkflowIdentity` 实例。</span><span class="sxs-lookup"><span data-stu-id="f3abb-298">Next, a new `WorkflowApplication` instance is created using the workflow definition, `WorkflowIdentity`, and dictionary of input arguments.</span></span>  
+3. <span data-ttu-id="9715a-296">接下来，添加以下用于启动工作流的代码。</span><span class="sxs-lookup"><span data-stu-id="9715a-296">Next, add the following code that starts the workflow.</span></span> <span data-ttu-id="9715a-297">对应于所选工作流类型的 `WorkflowIdentity` 和工作流定义通过 `WorkflowVersionMap` 帮助器类进行检索。</span><span class="sxs-lookup"><span data-stu-id="9715a-297">The `WorkflowIdentity` and workflow definition corresponding to the type of workflow selected are retrieved using the `WorkflowVersionMap` helper class.</span></span> <span data-ttu-id="9715a-298">接下来，将使用工作流定义、`WorkflowApplication` 和输入变量字典创建新的 `WorkflowIdentity` 实例。</span><span class="sxs-lookup"><span data-stu-id="9715a-298">Next, a new `WorkflowApplication` instance is created using the workflow definition, `WorkflowIdentity`, and dictionary of input arguments.</span></span>  
   
     ```vb  
     Dim identity As WorkflowIdentity = Nothing  
@@ -879,7 +879,7 @@ ms.locfileid: "59320042"
     WorkflowApplication wfApp = new WorkflowApplication(wf, inputs, identity);  
     ```  
   
-4. <span data-ttu-id="f3abb-299">接下来，添加以下代码，此代码将工作流添加到工作流列表中，并在窗体上显示工作流的版本信息。</span><span class="sxs-lookup"><span data-stu-id="f3abb-299">Next, add the following code which adds the workflow to the workflow list and displays the workflow's version information on the form.</span></span>  
+4. <span data-ttu-id="9715a-299">接下来，添加以下代码，此代码将工作流添加到工作流列表中，并在窗体上显示工作流的版本信息。</span><span class="sxs-lookup"><span data-stu-id="9715a-299">Next, add the following code which adds the workflow to the workflow list and displays the workflow's version information on the form.</span></span>  
   
     ```vb  
     'Add the workflow to the list and display the version information.  
@@ -897,7 +897,7 @@ ms.locfileid: "59320042"
     WorkflowStarting = false;  
     ```  
   
-5. <span data-ttu-id="f3abb-300">调用 `ConfigureWorkflowApplication` 为此 `WorkflowApplication` 实例配置实例存储、扩展以及工作流生命周期处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-300">Call `ConfigureWorkflowApplication` to configure the instance store, extensions, and workflow lifecycle handlers for this `WorkflowApplication` instance.</span></span>  
+5. <span data-ttu-id="9715a-300">调用 `ConfigureWorkflowApplication` 为此 `WorkflowApplication` 实例配置实例存储、扩展以及工作流生命周期处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-300">Call `ConfigureWorkflowApplication` to configure the instance store, extensions, and workflow lifecycle handlers for this `WorkflowApplication` instance.</span></span>  
   
     ```vb  
     'Configure the instance store, extensions, and   
@@ -911,7 +911,7 @@ ms.locfileid: "59320042"
     ConfigureWorkflowApplication(wfApp);  
     ```  
   
-6. <span data-ttu-id="f3abb-301">最后，调用 `Run`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-301">Finally, call `Run`.</span></span>  
+6. <span data-ttu-id="9715a-301">最后，调用 `Run`。</span><span class="sxs-lookup"><span data-stu-id="9715a-301">Finally, call `Run`.</span></span>  
   
     ```vb  
     'Start the workflow.  
@@ -923,7 +923,7 @@ ms.locfileid: "59320042"
     wfApp.Run();  
     ```  
   
-     <span data-ttu-id="f3abb-302">以下示例是完成的 `NewGame_Click` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-302">The following example is the completed `NewGame_Click` handler.</span></span>  
+     <span data-ttu-id="9715a-302">以下示例是完成的 `NewGame_Click` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-302">The following example is the completed `NewGame_Click` handler.</span></span>  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -1003,9 +1003,9 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-### <a name="BKMK_ResumeWorkflow"></a> <span data-ttu-id="f3abb-303">若要恢复的工作流</span><span class="sxs-lookup"><span data-stu-id="f3abb-303">To resume a workflow</span></span>  
+### <a name="BKMK_ResumeWorkflow"></a> <span data-ttu-id="9715a-303">若要恢复的工作流</span><span class="sxs-lookup"><span data-stu-id="9715a-303">To resume a workflow</span></span>  
   
-1. <span data-ttu-id="f3abb-304">为 `Click` 添加 `EnterGuess` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-304">Add a `Click` handler for `EnterGuess`.</span></span> <span data-ttu-id="f3abb-305">若要添加处理程序，请切换到**设计视图**的窗体，然后双击`EnterGuess`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-305">To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`.</span></span> <span data-ttu-id="f3abb-306">每当用户单击此按钮时，就会恢复工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-306">Whenever the user clicks this button a workflow is resumed.</span></span>  
+1. <span data-ttu-id="9715a-304">为 `Click` 添加 `EnterGuess` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-304">Add a `Click` handler for `EnterGuess`.</span></span> <span data-ttu-id="9715a-305">若要添加处理程序，请切换到**设计视图**的窗体，然后双击`EnterGuess`。</span><span class="sxs-lookup"><span data-stu-id="9715a-305">To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`.</span></span> <span data-ttu-id="9715a-306">每当用户单击此按钮时，就会恢复工作流。</span><span class="sxs-lookup"><span data-stu-id="9715a-306">Whenever the user clicks this button a workflow is resumed.</span></span>  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1020,7 +1020,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-2. <span data-ttu-id="f3abb-307">添加以下代码，以确保在工作流列表中选择了一个工作流，且用户的猜测有效。</span><span class="sxs-lookup"><span data-stu-id="f3abb-307">Add the following code to ensure that a workflow is selected in the workflow list, and that the user's guess is valid.</span></span>  
+2. <span data-ttu-id="9715a-307">添加以下代码，以确保在工作流列表中选择了一个工作流，且用户的猜测有效。</span><span class="sxs-lookup"><span data-stu-id="9715a-307">Add the following code to ensure that a workflow is selected in the workflow list, and that the user's guess is valid.</span></span>  
   
     ```vb  
     If WorkflowInstanceId = Guid.Empty Then  
@@ -1054,7 +1054,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-3. <span data-ttu-id="f3abb-308">接下来，检索持久化工作流实例的 `WorkflowApplicationInstance`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-308">Next, retrieve the `WorkflowApplicationInstance` of the persisted workflow instance.</span></span> <span data-ttu-id="f3abb-309">`WorkflowApplicationInstance` 表示尚未与工作流定义关联的持久化工作流实例。</span><span class="sxs-lookup"><span data-stu-id="f3abb-309">A `WorkflowApplicationInstance` represents a persisted workflow instance that has not yet been associated with a workflow definition.</span></span> <span data-ttu-id="f3abb-310">`DefinitionIdentity` 的 `WorkflowApplicationInstance` 包含持久化工作流实例的 `WorkflowIdentity`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-310">The `DefinitionIdentity` of the `WorkflowApplicationInstance` contains the `WorkflowIdentity` of the persisted workflow instance.</span></span> <span data-ttu-id="f3abb-311">本教程中使用 `WorkflowVersionMap` 实用工具类，将 `WorkflowIdentity` 映射到正确的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="f3abb-311">In this tutorial, the `WorkflowVersionMap` utility class is used to map the `WorkflowIdentity` to the correct workflow definition.</span></span> <span data-ttu-id="f3abb-312">检索工作流定义后，即使用正确的工作流定义创建 `WorkflowApplication`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-312">Once the workflow definition is retrieved, a `WorkflowApplication` is created, using the correct workflow definition.</span></span>  
+3. <span data-ttu-id="9715a-308">接下来，检索持久化工作流实例的 `WorkflowApplicationInstance`。</span><span class="sxs-lookup"><span data-stu-id="9715a-308">Next, retrieve the `WorkflowApplicationInstance` of the persisted workflow instance.</span></span> <span data-ttu-id="9715a-309">`WorkflowApplicationInstance` 表示尚未与工作流定义关联的持久化工作流实例。</span><span class="sxs-lookup"><span data-stu-id="9715a-309">A `WorkflowApplicationInstance` represents a persisted workflow instance that has not yet been associated with a workflow definition.</span></span> <span data-ttu-id="9715a-310">`DefinitionIdentity` 的 `WorkflowApplicationInstance` 包含持久化工作流实例的 `WorkflowIdentity`。</span><span class="sxs-lookup"><span data-stu-id="9715a-310">The `DefinitionIdentity` of the `WorkflowApplicationInstance` contains the `WorkflowIdentity` of the persisted workflow instance.</span></span> <span data-ttu-id="9715a-311">本教程中使用 `WorkflowVersionMap` 实用工具类，将 `WorkflowIdentity` 映射到正确的工作流定义。</span><span class="sxs-lookup"><span data-stu-id="9715a-311">In this tutorial, the `WorkflowVersionMap` utility class is used to map the `WorkflowIdentity` to the correct workflow definition.</span></span> <span data-ttu-id="9715a-312">检索工作流定义后，即使用正确的工作流定义创建 `WorkflowApplication`。</span><span class="sxs-lookup"><span data-stu-id="9715a-312">Once the workflow definition is retrieved, a `WorkflowApplication` is created, using the correct workflow definition.</span></span>  
   
     ```vb  
     Dim instance As WorkflowApplicationInstance = _  
@@ -1084,7 +1084,7 @@ ms.locfileid: "59320042"
         new WorkflowApplication(wf, instance.DefinitionIdentity);  
     ```  
   
-4. <span data-ttu-id="f3abb-313">创建 `WorkflowApplication` 后，请调用 `ConfigureWorkflowApplication` 以配置实例存储、工作流生命周期处理程序以及扩展。</span><span class="sxs-lookup"><span data-stu-id="f3abb-313">Once the `WorkflowApplication` is created, configure the instance store, workflow lifecycle handlers, and extensions by calling `ConfigureWorkflowApplication`.</span></span> <span data-ttu-id="f3abb-314">每次创建新 `WorkflowApplication` 时都必须执行这些步骤，并且必须在将工作流实例加载到 `WorkflowApplication` 中之前完成。</span><span class="sxs-lookup"><span data-stu-id="f3abb-314">These steps must be done every time a new `WorkflowApplication` is created, and they must be done before the workflow instance is loaded into the `WorkflowApplication`.</span></span> <span data-ttu-id="f3abb-315">在加载工作流后，此工作流通过用户的猜测恢复执行。</span><span class="sxs-lookup"><span data-stu-id="f3abb-315">After the workflow is loaded, it is resumed with the user's guess.</span></span>  
+4. <span data-ttu-id="9715a-313">创建 `WorkflowApplication` 后，请调用 `ConfigureWorkflowApplication` 以配置实例存储、工作流生命周期处理程序以及扩展。</span><span class="sxs-lookup"><span data-stu-id="9715a-313">Once the `WorkflowApplication` is created, configure the instance store, workflow lifecycle handlers, and extensions by calling `ConfigureWorkflowApplication`.</span></span> <span data-ttu-id="9715a-314">每次创建新 `WorkflowApplication` 时都必须执行这些步骤，并且必须在将工作流实例加载到 `WorkflowApplication` 中之前完成。</span><span class="sxs-lookup"><span data-stu-id="9715a-314">These steps must be done every time a new `WorkflowApplication` is created, and they must be done before the workflow instance is loaded into the `WorkflowApplication`.</span></span> <span data-ttu-id="9715a-315">在加载工作流后，此工作流通过用户的猜测恢复执行。</span><span class="sxs-lookup"><span data-stu-id="9715a-315">After the workflow is loaded, it is resumed with the user's guess.</span></span>  
   
     ```vb  
     'Configure the extensions and lifecycle handlers.  
@@ -1112,7 +1112,7 @@ ms.locfileid: "59320042"
     wfApp.ResumeBookmark("EnterGuess", guess);  
     ```  
   
-5. <span data-ttu-id="f3abb-316">最后，清除猜测文本框，并使窗体准备接受其他猜测。</span><span class="sxs-lookup"><span data-stu-id="f3abb-316">Finally, clear the guess textbox and prepare the form to accept another guess.</span></span>  
+5. <span data-ttu-id="9715a-316">最后，清除猜测文本框，并使窗体准备接受其他猜测。</span><span class="sxs-lookup"><span data-stu-id="9715a-316">Finally, clear the guess textbox and prepare the form to accept another guess.</span></span>  
   
     ```vb  
     'Clear the Guess textbox.  
@@ -1126,7 +1126,7 @@ ms.locfileid: "59320042"
     Guess.Focus();  
     ```  
   
-     <span data-ttu-id="f3abb-317">以下示例是完成的 `EnterGuess_Click` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-317">The following example is the completed `EnterGuess_Click` handler.</span></span>  
+     <span data-ttu-id="9715a-317">以下示例是完成的 `EnterGuess_Click` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-317">The following example is the completed `EnterGuess_Click` handler.</span></span>  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1219,9 +1219,9 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-### <a name="BKMK_TerminateWorkflow"></a> <span data-ttu-id="f3abb-318">终止工作流</span><span class="sxs-lookup"><span data-stu-id="f3abb-318">To terminate a workflow</span></span>  
+### <a name="BKMK_TerminateWorkflow"></a> <span data-ttu-id="9715a-318">终止工作流</span><span class="sxs-lookup"><span data-stu-id="9715a-318">To terminate a workflow</span></span>  
   
-1. <span data-ttu-id="f3abb-319">为 `Click` 添加 `QuitGame` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-319">Add a `Click` handler for `QuitGame`.</span></span> <span data-ttu-id="f3abb-320">若要添加处理程序，请切换到**设计视图**的窗体，然后双击`QuitGame`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-320">To add the handler, switch to **Design View** for the form, and double-click `QuitGame`.</span></span> <span data-ttu-id="f3abb-321">每当用户单击此按钮，即终止当前选择的工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-321">Whenever the user clicks this button the currently selected workflow is terminated.</span></span>  
+1. <span data-ttu-id="9715a-319">为 `Click` 添加 `QuitGame` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-319">Add a `Click` handler for `QuitGame`.</span></span> <span data-ttu-id="9715a-320">若要添加处理程序，请切换到**设计视图**的窗体，然后双击`QuitGame`。</span><span class="sxs-lookup"><span data-stu-id="9715a-320">To add the handler, switch to **Design View** for the form, and double-click `QuitGame`.</span></span> <span data-ttu-id="9715a-321">每当用户单击此按钮，即终止当前选择的工作流。</span><span class="sxs-lookup"><span data-stu-id="9715a-321">Whenever the user clicks this button the currently selected workflow is terminated.</span></span>  
   
     ```vb  
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click  
@@ -1236,7 +1236,7 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-2. <span data-ttu-id="f3abb-322">将以下代码添加到 `QuitGame_Click` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-322">Add the following code to the `QuitGame_Click` handler.</span></span> <span data-ttu-id="f3abb-323">此代码首先进行检查，以确保在工作流列表中选择了一个工作流。</span><span class="sxs-lookup"><span data-stu-id="f3abb-323">This code first checks to ensure that a workflow is selected in the workflow list.</span></span> <span data-ttu-id="f3abb-324">然后，它将该持久化实例加载到 `WorkflowApplicationInstance` 中，使用 `DefinitionIdentity` 确定正确的工作流定义，然后初始化 `WorkflowApplication`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-324">Then it loads the persisted instance into a `WorkflowApplicationInstance`, uses the `DefinitionIdentity` to determine the correct workflow definition, and then initializes the `WorkflowApplication`.</span></span> <span data-ttu-id="f3abb-325">接下来，通过调用 `ConfigureWorkflowApplication` 来配置扩展和工作流生命周期处理程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-325">Next the extensions and workflow lifecycle handlers are configured with a call to `ConfigureWorkflowApplication`.</span></span> <span data-ttu-id="f3abb-326">`WorkflowApplication` 配置好后，将加载它，然后调用 `Terminate`。</span><span class="sxs-lookup"><span data-stu-id="f3abb-326">Once the `WorkflowApplication` is configured, it is loaded, and then `Terminate` is called.</span></span>  
+2. <span data-ttu-id="9715a-322">将以下代码添加到 `QuitGame_Click` 处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-322">Add the following code to the `QuitGame_Click` handler.</span></span> <span data-ttu-id="9715a-323">此代码首先进行检查，以确保在工作流列表中选择了一个工作流。</span><span class="sxs-lookup"><span data-stu-id="9715a-323">This code first checks to ensure that a workflow is selected in the workflow list.</span></span> <span data-ttu-id="9715a-324">然后，它将该持久化实例加载到 `WorkflowApplicationInstance` 中，使用 `DefinitionIdentity` 确定正确的工作流定义，然后初始化 `WorkflowApplication`。</span><span class="sxs-lookup"><span data-stu-id="9715a-324">Then it loads the persisted instance into a `WorkflowApplicationInstance`, uses the `DefinitionIdentity` to determine the correct workflow definition, and then initializes the `WorkflowApplication`.</span></span> <span data-ttu-id="9715a-325">接下来，通过调用 `ConfigureWorkflowApplication` 来配置扩展和工作流生命周期处理程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-325">Next the extensions and workflow lifecycle handlers are configured with a call to `ConfigureWorkflowApplication`.</span></span> <span data-ttu-id="9715a-326">`WorkflowApplication` 配置好后，将加载它，然后调用 `Terminate`。</span><span class="sxs-lookup"><span data-stu-id="9715a-326">Once the `WorkflowApplication` is configured, it is loaded, and then `Terminate` is called.</span></span>  
   
     ```vb  
     If WorkflowInstanceId = Guid.Empty Then  
@@ -1293,11 +1293,11 @@ ms.locfileid: "59320042"
     wfApp.Terminate("User resigns.");  
     ```  
   
-### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="f3abb-327">生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f3abb-327">To build and run the application</span></span>  
+### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="9715a-327">生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="9715a-327">To build and run the application</span></span>  
   
-1. <span data-ttu-id="f3abb-328">双击**Program.cs** (或**Module1.vb**) 中**解决方案资源管理器**以显示其代码。</span><span class="sxs-lookup"><span data-stu-id="f3abb-328">Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.</span></span>  
+1. <span data-ttu-id="9715a-328">双击**Program.cs** (或**Module1.vb**) 中**解决方案资源管理器**以显示其代码。</span><span class="sxs-lookup"><span data-stu-id="9715a-328">Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.</span></span>  
   
-2. <span data-ttu-id="f3abb-329">在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。</span><span class="sxs-lookup"><span data-stu-id="f3abb-329">Add the following `using` (or `Imports`) statement at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
+2. <span data-ttu-id="9715a-329">在包含其他 `using`（或 `Imports`）语句的文件的顶部添加以下 `using`（或 `Imports`）语句。</span><span class="sxs-lookup"><span data-stu-id="9715a-329">Add the following `using` (or `Imports`) statement at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Windows.Forms  
@@ -1307,7 +1307,7 @@ ms.locfileid: "59320042"
     using System.Windows.Forms;  
     ```  
   
-3. <span data-ttu-id="f3abb-330">删除或注释掉现有的工作流承载代码从[如何：运行工作流](how-to-run-a-workflow.md)，并替换为以下代码。</span><span class="sxs-lookup"><span data-stu-id="f3abb-330">Remove or comment out the existing workflow hosting code from [How to: Run a Workflow](how-to-run-a-workflow.md), and replace it with the following code.</span></span>  
+3. <span data-ttu-id="9715a-330">删除或注释掉现有的工作流承载代码从[如何：运行工作流](how-to-run-a-workflow.md)，并替换为以下代码。</span><span class="sxs-lookup"><span data-stu-id="9715a-330">Remove or comment out the existing workflow hosting code from [How to: Run a Workflow](how-to-run-a-workflow.md), and replace it with the following code.</span></span>  
   
     ```vb  
     Sub Main()  
@@ -1324,14 +1324,14 @@ ms.locfileid: "59320042"
     }  
     ```  
   
-4. <span data-ttu-id="f3abb-331">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-331">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Properties**.</span></span> <span data-ttu-id="f3abb-332">在中**应用程序**选项卡上，指定**Windows 应用程序**有关**输出类型**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-332">In the **Application** tab, specify **Windows Application** for the **Output type**.</span></span> <span data-ttu-id="f3abb-333">此步骤是可选的，但如果不执行此步骤，则除了窗体之外还会显示控制台窗口。</span><span class="sxs-lookup"><span data-stu-id="f3abb-333">This step is optional, but if it is not followed the console window is displayed in addition to the form.</span></span>  
+4. <span data-ttu-id="9715a-331">右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="9715a-331">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Properties**.</span></span> <span data-ttu-id="9715a-332">在中**应用程序**选项卡上，指定**Windows 应用程序**有关**输出类型**。</span><span class="sxs-lookup"><span data-stu-id="9715a-332">In the **Application** tab, specify **Windows Application** for the **Output type**.</span></span> <span data-ttu-id="9715a-333">此步骤是可选的，但如果不执行此步骤，则除了窗体之外还会显示控制台窗口。</span><span class="sxs-lookup"><span data-stu-id="9715a-333">This step is optional, but if it is not followed the console window is displayed in addition to the form.</span></span>  
   
-5. <span data-ttu-id="f3abb-334">按 Ctrl+Shift+B 生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-334">Press Ctrl+Shift+B to build the application.</span></span>  
+5. <span data-ttu-id="9715a-334">按 Ctrl+Shift+B 生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-334">Press Ctrl+Shift+B to build the application.</span></span>  
   
-6. <span data-ttu-id="f3abb-335">絋粄**NumberGuessWorkflowHost**是设置为启动应用程序，然后按 Ctrl + F5 启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="f3abb-335">Ensure that **NumberGuessWorkflowHost** is set as the startup application, and press Ctrl+F5 to start the application.</span></span>  
+6. <span data-ttu-id="9715a-335">絋粄**NumberGuessWorkflowHost**是设置为启动应用程序，然后按 Ctrl + F5 启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="9715a-335">Ensure that **NumberGuessWorkflowHost** is set as the startup application, and press Ctrl+F5 to start the application.</span></span>  
   
-7. <span data-ttu-id="f3abb-336">选择一个范围的猜测和类型的工作流开始，然后单击**新游戏**。</span><span class="sxs-lookup"><span data-stu-id="f3abb-336">Select a range for the guessing game and the type of workflow to start, and click **New Game**.</span></span> <span data-ttu-id="f3abb-337">输入在猜测**猜测**框，然后单击**转**提交该值。</span><span class="sxs-lookup"><span data-stu-id="f3abb-337">Enter a guess in the **Guess** box and click **Go** to submit your guess.</span></span> <span data-ttu-id="f3abb-338">请注意，`WriteLine` 活动的输出将显示在窗体上。</span><span class="sxs-lookup"><span data-stu-id="f3abb-338">Note that the output from the `WriteLine` activities is displayed on the form.</span></span>  
+7. <span data-ttu-id="9715a-336">选择一个范围的猜测和类型的工作流开始，然后单击**新游戏**。</span><span class="sxs-lookup"><span data-stu-id="9715a-336">Select a range for the guessing game and the type of workflow to start, and click **New Game**.</span></span> <span data-ttu-id="9715a-337">输入在猜测**猜测**框，然后单击**转**提交该值。</span><span class="sxs-lookup"><span data-stu-id="9715a-337">Enter a guess in the **Guess** box and click **Go** to submit your guess.</span></span> <span data-ttu-id="9715a-338">请注意，`WriteLine` 活动的输出将显示在窗体上。</span><span class="sxs-lookup"><span data-stu-id="9715a-338">Note that the output from the `WriteLine` activities is displayed on the form.</span></span>  
   
-8. <span data-ttu-id="f3abb-339">开始使用不同的工作流类型和数字范围的多个工作流，输入一些猜测值，并通过从选择的工作流之间进行切换**工作流实例 Id**列表。</span><span class="sxs-lookup"><span data-stu-id="f3abb-339">Start several workflows using different workflow types and number ranges, enter some guesses, and switch between the workflows by selecting from the **Workflow Instance Id** list.</span></span>  
+8. <span data-ttu-id="9715a-339">开始使用不同的工作流类型和数字范围的多个工作流，输入一些猜测值，并通过从选择的工作流之间进行切换**工作流实例 Id**列表。</span><span class="sxs-lookup"><span data-stu-id="9715a-339">Start several workflows using different workflow types and number ranges, enter some guesses, and switch between the workflows by selecting from the **Workflow Instance Id** list.</span></span>  
   
-     <span data-ttu-id="f3abb-340">请注意，当切换到新工作流时，状态窗口中不会显示以前的猜测值和工作流进度。</span><span class="sxs-lookup"><span data-stu-id="f3abb-340">Note that when you switch to a new workflow, the previous guesses and progress of the workflow are not displayed in the status window.</span></span> <span data-ttu-id="f3abb-341">状态不可用的原因是未将它捕获并保存在任何位置。</span><span class="sxs-lookup"><span data-stu-id="f3abb-341">The reason the status is not available is because it is not captured and saved anywhere.</span></span> <span data-ttu-id="f3abb-342">本教程中，在下一步[如何：创建自定义跟踪参与者](how-to-create-a-custom-tracking-participant.md)，创建一个自定义跟踪参与者，它将保存此信息。</span><span class="sxs-lookup"><span data-stu-id="f3abb-342">In the next step of the tutorial, [How to: Create a Custom Tracking Participant](how-to-create-a-custom-tracking-participant.md), you create a custom tracking participant that saves this information.</span></span>
+     <span data-ttu-id="9715a-340">请注意，当切换到新工作流时，状态窗口中不会显示以前的猜测值和工作流进度。</span><span class="sxs-lookup"><span data-stu-id="9715a-340">Note that when you switch to a new workflow, the previous guesses and progress of the workflow are not displayed in the status window.</span></span> <span data-ttu-id="9715a-341">状态不可用的原因是未将它捕获并保存在任何位置。</span><span class="sxs-lookup"><span data-stu-id="9715a-341">The reason the status is not available is because it is not captured and saved anywhere.</span></span> <span data-ttu-id="9715a-342">本教程中，在下一步[如何：创建自定义跟踪参与者](how-to-create-a-custom-tracking-participant.md)，创建一个自定义跟踪参与者，它将保存此信息。</span><span class="sxs-lookup"><span data-stu-id="9715a-342">In the next step of the tutorial, [How to: Create a Custom Tracking Participant](how-to-create-a-custom-tracking-participant.md), you create a custom tracking participant that saves this information.</span></span>
