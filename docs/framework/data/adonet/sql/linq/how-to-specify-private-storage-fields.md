@@ -3,24 +3,24 @@ title: 如何：指定专用存储字段
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
 ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302447"
 ---
-# <a name="how-to-specify-private-storage-fields"></a><span data-ttu-id="3c99d-102">如何：指定专用存储字段</span><span class="sxs-lookup"><span data-stu-id="3c99d-102">How to: Specify Private Storage Fields</span></span>
-<span data-ttu-id="3c99d-103">使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>属性上的<xref:System.Data.Linq.Mapping.DataAttribute>属性来指定基础存储字段的名称。</span><span class="sxs-lookup"><span data-stu-id="3c99d-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> property on the <xref:System.Data.Linq.Mapping.DataAttribute> attribute to designate the name of an underlying storage field.</span></span>  
+# <a name="how-to-specify-private-storage-fields"></a><span data-ttu-id="23fa7-102">如何：指定专用存储字段</span><span class="sxs-lookup"><span data-stu-id="23fa7-102">How to: Specify Private Storage Fields</span></span>
+<span data-ttu-id="23fa7-103">使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>属性上的<xref:System.Data.Linq.Mapping.DataAttribute>属性来指定基础存储字段的名称。</span><span class="sxs-lookup"><span data-stu-id="23fa7-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> property on the <xref:System.Data.Linq.Mapping.DataAttribute> attribute to designate the name of an underlying storage field.</span></span>  
   
- <span data-ttu-id="3c99d-104">有关代码示例，请参见<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>。</span><span class="sxs-lookup"><span data-stu-id="3c99d-104">For code examples, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.</span></span>  
+ <span data-ttu-id="23fa7-104">有关代码示例，请参见<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>。</span><span class="sxs-lookup"><span data-stu-id="23fa7-104">For code examples, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.</span></span>  
   
-### <a name="to-specify-the-name-of-an-underlying-storage-field"></a><span data-ttu-id="3c99d-105">指定基础存储字段的名称</span><span class="sxs-lookup"><span data-stu-id="3c99d-105">To specify the name of an underlying storage field</span></span>  
+### <a name="to-specify-the-name-of-an-underlying-storage-field"></a><span data-ttu-id="23fa7-105">指定基础存储字段的名称</span><span class="sxs-lookup"><span data-stu-id="23fa7-105">To specify the name of an underlying storage field</span></span>  
   
-1. <span data-ttu-id="3c99d-106">将 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 属性 (Property) 添加到 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="3c99d-106">Add the <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
+1. <span data-ttu-id="23fa7-106">将 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 属性 (Property) 添加到 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="23fa7-106">Add the <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
   
-2. <span data-ttu-id="3c99d-107">指定字段的名称作为 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="3c99d-107">Assign the name of the field as the value of the <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> property.</span></span>  
+2. <span data-ttu-id="23fa7-107">指定字段的名称作为 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="23fa7-107">Assign the name of the field as the value of the <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c99d-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="3c99d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23fa7-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="23fa7-108">See also</span></span>
 
-- [<span data-ttu-id="3c99d-109">LINQ to SQL 对象模型</span><span class="sxs-lookup"><span data-stu-id="3c99d-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [<span data-ttu-id="3c99d-110">如何：通过使用代码编辑器自定义实体类</span><span class="sxs-lookup"><span data-stu-id="3c99d-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [<span data-ttu-id="23fa7-109">LINQ to SQL 对象模型</span><span class="sxs-lookup"><span data-stu-id="23fa7-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [<span data-ttu-id="23fa7-110">如何：通过使用代码编辑器自定义实体类</span><span class="sxs-lookup"><span data-stu-id="23fa7-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
