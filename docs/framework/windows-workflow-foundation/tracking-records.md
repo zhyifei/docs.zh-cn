@@ -3,10 +3,10 @@ title: 跟踪记录
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298352"
 ---
 # <a name="tracking-records"></a>跟踪记录
@@ -50,11 +50,11 @@ ms.locfileid: "59298352"
   
  例如，可能存在一个简单的 <xref:System.Activities.Statements.Sequence> 活动，该活动包含 <xref:System.Activities.Statements.WriteLine> 操作且按以下顺序发出跟踪记录：  
   
-1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 指示正在启动工作流。  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 指示工作流正在启动。  
   
-2. <xref:System.Activities.Tracking.ActivityScheduledRecord> 指示已安排活动。 在本例中，该活动为 <xref:System.Activities.Statements.Sequence> 活动。  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> 指示已安排某个活动。 在本例中，该活动为 <xref:System.Activities.Statements.Sequence> 活动。  
   
-3. <xref:System.Activities.Tracking.ActivityScheduledRecord> 表示<xref:System.Activities.Statements.WriteLine>活动。  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> 表示 <xref:System.Activities.Statements.WriteLine> 活动。  
   
 4. 存在两个 <xref:System.Activities.Tracking.ActivityStateRecord> 记录，表示正在完成两个活动。  
   

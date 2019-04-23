@@ -10,10 +10,10 @@ helpviewer_keywords:
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298313"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
@@ -211,5 +211,5 @@ ms.locfileid: "59298313"
   
 ## <a name="see-also"></a>请参阅
 
-- [WPF 的全球化](globalization-for-wpf.md)
+- [WPF 全球化](globalization-for-wpf.md)
 - [使用自动布局概述](use-automatic-layout-overview.md)

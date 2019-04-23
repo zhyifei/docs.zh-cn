@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296207"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控件体系结构
@@ -64,7 +64,7 @@ ms.locfileid: "59296207"
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
- <xref:System.Windows.Forms.ContextMenuStrip> 替换<xref:System.Windows.Forms.ContextMenu>。 你可以将关联<xref:System.Windows.Forms.ContextMenuStrip>使用任何控制和鼠标右键单击将自动显示上下文菜单 （或快捷菜单）。 可以显示<xref:System.Windows.Forms.ContextMenuStrip>以编程方式使用<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>方法。 <xref:System.Windows.Forms.ContextMenuStrip> 支持可取消<xref:System.Windows.Forms.ToolStripDropDown.Opening>和<xref:System.Windows.Forms.ToolStripDropDown.Closing>事件以处理动态填充并多次单击方案。 <xref:System.Windows.Forms.ContextMenuStrip> 支持图像、 菜单项复选状态、 文本、 访问密钥、 快捷方式和级联菜单。  
+ <xref:System.Windows.Forms.ContextMenuStrip> 替代 <xref:System.Windows.Forms.ContextMenu>。 你可以将关联<xref:System.Windows.Forms.ContextMenuStrip>使用任何控制和鼠标右键单击将自动显示上下文菜单 （或快捷菜单）。 可以显示<xref:System.Windows.Forms.ContextMenuStrip>以编程方式使用<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>方法。 <xref:System.Windows.Forms.ContextMenuStrip> 支持可取消<xref:System.Windows.Forms.ToolStripDropDown.Opening>和<xref:System.Windows.Forms.ToolStripDropDown.Closing>事件以处理动态填充并多次单击方案。 <xref:System.Windows.Forms.ContextMenuStrip> 支持图像、 菜单项复选状态、 文本、 访问密钥、 快捷方式和级联菜单。  
   
  以下各项专门用于两个无缝<xref:System.Windows.Forms.ToolStripSystemRenderer>和<xref:System.Windows.Forms.ToolStripProfessionalRenderer>在所有方向。 这些信息可默认情况下在设计时<xref:System.Windows.Forms.ContextMenuStrip>控件：  
   

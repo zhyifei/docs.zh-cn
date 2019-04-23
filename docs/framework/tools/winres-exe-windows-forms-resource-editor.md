@@ -14,10 +14,10 @@ ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296649"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
@@ -145,5 +145,5 @@ Winres.exe 具有下列特性和功能：
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
 - [工具](../../../docs/framework/tools/index.md)
-- [桌面应用程序中的资源](../../../docs/framework/resources/index.md)
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)
 - [全球化和本地化](../../../docs/standard/globalization-localization/index.md)

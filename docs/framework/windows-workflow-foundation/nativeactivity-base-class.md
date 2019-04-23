@@ -3,10 +3,10 @@ title: NativeActivity 基类
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296584"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基类
@@ -18,7 +18,7 @@ ms.locfileid: "59296584"
 
 -   获取并设置自变量和变量。
 
--   安排子活动与 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+-   使用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> 安排子活动。
 
 -   使用 <xref:System.Activities.NativeActivityContext.Abort%2A> 中止活动执行。
 

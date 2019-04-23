@@ -18,10 +18,10 @@ ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218065"
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
@@ -65,5 +65,5 @@ ms.locfileid: "59218065"
 ## <a name="see-also"></a>请参阅
 
 - [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)
-- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
 - [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)

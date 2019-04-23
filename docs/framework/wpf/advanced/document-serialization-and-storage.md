@@ -7,10 +7,10 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295895"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
@@ -39,7 +39,7 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
     -   对自定义运行时设置和选项的用户界面支持。  
   
 ### <a name="xps-print-path"></a>XPS 打印路径  
- Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径还提供了一个可扩展机制，用于编写通过打印输出的文档。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可作为这两个文档文件格式和的本机打印后台打印格式是[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档可以直接发送到[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](printing-overview.md)。  
+ Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径还提供了一个可扩展机制，用于编写通过打印输出的文档。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以作为文档文件格式，也可以作为 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档可直接发送到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](printing-overview.md)。  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>插件序列化程序  
@@ -48,7 +48,7 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
  插件序列化程序对应用程序开发人员很有帮助：它向新的存储设计和文件格式提供扩展性，而无需在生成时对每种潜在的格式进行直接编码。  插件序列化程序还通过为自定义或专有文件格式提供部署、安装和更新系统可访问插件的标准方法，使第三方开发人员受益匪浅。  
   
 ### <a name="using-a-plug-in-serializer"></a>使用插件序列化程序  
- 插件序列化程序易于使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>类枚举<xref:System.Windows.Documents.Serialization.SerializerDescriptor>对象对每个插件已安装的系统上。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>属性筛选基于当前的配置已安装的插件，并验证是否可以加载和应用程序使用序列化程序。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>还提供其他属性，如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，应用程序可以用来提示用户选择可用的输出格式的序列化程序。  默认插件序列化程序[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]随.NET Framework 一起提供，会始终进行枚举。  在用户选择输出格式后<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用于创建<xref:System.Windows.Documents.Serialization.SerializerWriter>为特定的格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter><xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然后可以调用方法以将数据存储到的文档流输出。  
+ 插件序列化程序易于使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>类枚举<xref:System.Windows.Documents.Serialization.SerializerDescriptor>对象对每个插件已安装的系统上。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>属性筛选基于当前的配置已安装的插件，并验证是否可以加载和应用程序使用序列化程序。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>还提供其他属性，如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，应用程序可以用来提示用户选择可用的输出格式的序列化程序。  默认插件序列化程序[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]随.NET Framework 一起提供，会始终进行枚举。  在用户选择输出格式后<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用于创建<xref:System.Windows.Documents.Serialization.SerializerWriter>为特定的格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然后可以调用方法以将数据存储到的文档流输出。  
   
  下面的示例演示使用的应用程序<xref:System.Windows.Documents.Serialization.SerializerProvider>"PlugInFileFilter"属性中的方法。  PlugInFileFilter 枚举已安装的插件，并生成一个筛选器字符串，使用可用的文件的选项<xref:Microsoft.Win32.SaveFileDialog>。  
   

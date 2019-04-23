@@ -5,21 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607993"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296961"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>如何：将用户信息分配给组连接
 
-  
  以下示例演示如何将用户信息分配给组连接，其假定应用程序在调用此部分的代码之前设置了变量“UserName”、“SecurelyStoredPassword”和“域”，且“UserName”唯一。  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>将用户信息分配给组连接  
   
-1.  创建连接组名称。  
+1. 创建连接组名称。  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -33,7 +32,7 @@ ms.locfileid: "54607993"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  为特定的 URL 创建请求。 例如，以下代码为 URL `http://www.contoso.com.` 创建请求  
+2. 为特定的 URL 创建请求。 例如，以下代码为 URL `http://www.contoso.com.` 创建请求  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -43,7 +42,7 @@ ms.locfileid: "54607993"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  为 Web 请求设置凭据和连接组名称，并调用 GetResponse 以检索 WebResponse 对象。  
+3. 为 Web 请求设置凭据和连接组名称，并调用 GetResponse 以检索 WebResponse 对象。  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -59,7 +58,7 @@ ms.locfileid: "54607993"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  使用 WebRespose 对象后关闭响应流。  
+4. 使用 WebRespose 对象后关闭响应流。  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [管理连接](../../../docs/framework/network-programming/managing-connections.md)
 - [连接分组](../../../docs/framework/network-programming/connection-grouping.md)

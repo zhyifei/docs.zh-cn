@@ -3,10 +3,10 @@ title: 在托管应用程序中承载
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218792"
 ---
 # <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
@@ -26,5 +26,5 @@ Windows Communication Foundation (WCF) 服务可以承载于任何[!INCLUDE[dnpr
   
 ## <a name="see-also"></a>请参阅
 
-- [承载服务](../../../../docs/framework/wcf/hosting-services.md)
+- [托管服务](../../../../docs/framework/wcf/hosting-services.md)
 - [入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)

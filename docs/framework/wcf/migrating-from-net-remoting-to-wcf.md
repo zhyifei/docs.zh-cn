@@ -3,10 +3,10 @@ title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296194"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
@@ -105,7 +105,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
 -   [使用配置文件配置服务](configuring-services-using-configuration-files.md)  
   
--   [承载服务](hosting-services.md)  
+-   [托管服务](hosting-services.md)  
   
 ### <a name="client-implementation-comparison"></a>客户端实现比较  
   
@@ -297,7 +297,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **创建数据协定。** 定义将在服务器和客户端之间进行交换的数据类型，并将其标记为 [DataContract] 属性。 标记允许客户端利用 [DataMember] 使用的所有字段和属性。  
   
--   **创建错误协定（可选）。** 遇到错误时，请创建将在服务器和客户端之间进行交换的类型。 将这些类型标记为 [DataContract] 和 [DataMember] 以使其可序列化。 对于标记为 [OperationContract] 的所有服务操作，还可将其标记为 [FaultContract]，以指示它们可能会返回哪些错误。  
+-   **创建错误协定 （可选）。** 遇到错误时，请创建将在服务器和客户端之间进行交换的类型。 将这些类型标记为 [DataContract] 和 [DataMember] 以使其可序列化。 对于标记为 [OperationContract] 的所有服务操作，还可将其标记为 [FaultContract]，以指示它们可能会返回哪些错误。  
   
 -   **配置和承载服务。** 完成创建服务协定后，下一步则是配置一个绑定以公开终结点中的服务。 有关详细信息，请参阅[终结点：地址、 绑定和协定](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
   

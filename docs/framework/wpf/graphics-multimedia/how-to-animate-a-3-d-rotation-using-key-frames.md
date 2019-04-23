@@ -7,10 +7,10 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
 ms.openlocfilehash: e72ec94f830f0f5001a77e7492aa1326a47b309d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297988"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>如何：使用关键帧对三维旋转进行动画处理
@@ -27,9 +27,9 @@ ms.locfileid: "59297988"
   
 ## <a name="see-also"></a>请参阅
 
-- [三维图形概述](3-d-graphics-overview.md)
+- [3D 图形概述](3-d-graphics-overview.md)
 - [关键帧动画概述](key-frame-animations-overview.md)
-- [使用情节提要对三维旋转进行动画处理](how-to-animate-a-3-d-rotation-using-storyboards.md)
-- [使用 Rotation3DAnimation 对三维旋转进行动画处理](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [使用四元数对三维旋转进行动画处理](how-to-animate-a-3-d-rotation-using-quaternions.md)
-- [使用关键帧对三维旋转进行动画处理 (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)
+- [使用情节提要为 3D 旋转设置动画效果](how-to-animate-a-3-d-rotation-using-storyboards.md)
+- [使用 Rotation3DAnimation 为 3D 旋转设置动画效果](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [使用四元数为 3D 旋转设置动画效果](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [使用关键帧为 3D 旋转设置动画效果 (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)

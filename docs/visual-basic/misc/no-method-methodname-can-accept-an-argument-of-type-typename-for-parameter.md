@@ -3,10 +3,10 @@ title: 没有方法<methodname>可接受类型的自变量<typename>的参数<pa
 ms.date: 07/20/2015
 ms.assetid: 175c01dc-279c-4996-8501-d19a6671fdeb
 ms.openlocfilehash: 4f782e612a66fd7e387166347e5c2478b7a816cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294946"
 ---
 # <a name="no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter-parametername"></a>没有方法\<m h o d > 可以接受类型的自变量\<类型名称 > 参数\<参数名 >
@@ -20,4 +20,4 @@ ms.locfileid: "59294946"
   
 ## <a name="see-also"></a>请参阅
 
-- [按值和按引用传递参数](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [按值和按引用传递自变量](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296233"
 ---
 # <a name="extension-methods-visual-basic"></a>扩展方法 (Visual Basic)
@@ -180,8 +180,8 @@ End Module
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
 - [Module 语句](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [过程形参和实参](./procedure-parameters-and-arguments.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [可选参数](./optional-parameters.md)
 - [参数数组](./parameter-arrays.md)
-- [特性概述](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Visual Basic 中的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [属性概述](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -1,7 +1,7 @@
 ---
 title: <AppContextSwitchOverrides> 元素
 ms.custom: updateeachrelease
-ms.date: 03/07/2019
+ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136456"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978245"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -98,6 +98,7 @@ ms.locfileid: "59136456"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控件是否的值[CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)属性是[IntPtr](xref:System.IntPtr)表示一个窗口的内存位置处理，或者是否窗口句柄 (HWND)。 有关详细信息，请参阅[缓解：Cspparameters.parentwindowhandle 分配 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedCMS 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedXML 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|控制是否使用托管加密类在 FIPS 模式，则会引发<xref:System.Security.Cryptography.CryptographicException>(`true`) 或依赖于系统库的实现 (`false`)。|.NET Framework 4.8|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|确定是否`TransportWithMessageCredential`安全模式允许带未签名的消息"to"标头。 这是选择的开关。 有关详细信息，请参阅[.NET Framework 4.6.1 中的运行时更改](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|控件是否<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>构造函数将引发<xref:System.ArgumentException>的元素之一是如果`null`。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|确定是否尝试使用 X509 证书与 CSG 密钥存储提供程序引发异常。 有关详细信息，请参阅[WCF 传输安全性支持使用 CNG 存储的证书](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)。|.NET Framework 4.6.1|
@@ -109,6 +110,7 @@ ms.locfileid: "59136456"
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|控制 WCF 是否使用 SHA1 或 SHA256 哈希生成随机名称的命名管道。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|控制是否引发[NullReferenceException](xref:System.NullReferenceException)异常消息为 null 时。|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|控制是否将在服务启动时引发的异常传播到调用方的<xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>方法。|.NET Framework 4.7.1|
+|`Switch.System.Threading.UseNetCoreTimer`|控件是否<xref:System.Threading.Timer>实例充分利用高缩放性环境的性能改进。 如果`true`，启用的性能改进; 如果`false`（默认值），它们被禁用。|.NET Framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|确定是否某些有时会被解码的百分比编码字符现在始终保持编码状态。 如果`true`，它们是已解码; 否则为`false`。|.NET Framework 4.7.2|
 |`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|确定的在 Uri 中的 Unicode 双向字符的处理。 `true` 若要从 Uri; 将它们抽出`false`保留并将百分比编码它们。|.NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |确定是否 Windows Presentation Foundation 应用旧算法 (`true`) 或使用新的算法 (`false`) 中分配到空间\*的列。 有关详细信息，请参阅[缓解：网格控件的空间分配到星型列](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)。 |.NET Framework 4.7 |

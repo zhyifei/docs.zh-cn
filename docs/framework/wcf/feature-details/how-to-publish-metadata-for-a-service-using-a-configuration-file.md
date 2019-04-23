@@ -3,10 +3,10 @@ title: 如何：使用配置文件发布服务的元数据
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295531"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>如何：使用配置文件发布服务的元数据
@@ -98,7 +98,7 @@ namespace Metadata.Samples
 
 3. 向 `<behavior>``<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。  
 
-4. 向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。 将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。 `httpGetEnabled` 允许服务发出的 HTTP GET 请求的元数据请求做出响应。 `policyVersion` 指示服务来生成元数据时符合 Ws-policy 1.5。  
+4. 向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。 将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。 `httpGetEnabled` 可让服务响应 HTTP GET 请求发出的元数据请求。 `policyVersion` 通知服务在生成元数据时应符合 WS-Policy 1.5。  
 
 5. 将 `behaviorConfiguration` 特性添加到 `<service>` 元素，并指定在步骤 1 中添加的 `name` 元素的 `<behavior>` 特性，如下面的代码示例所示。  
   
@@ -140,13 +140,13 @@ namespace Metadata.Samples
   
 7. 对于上一步中添加的元数据终结点，将 `binding` 特性设置为下列值之一：  
   
-    -   `mexHttpBinding` 对于 HTTP 发布。  
+    -   `mexHttpBinding`（对于 HTTP 发布）。  
   
-    -   `mexHttpsBinding` 对于 HTTPS 发布。  
+    -   `mexHttpsBinding`（对于 HTTPS 发布）。  
   
-    -   `mexNamedPipeBinding` 对于命名管道发布。  
+    -   `mexNamedPipeBinding`（对于命名管道发布）。  
   
-    -   `mexTcpBinding` 对于 TCP 发布。  
+    -   `mexTcpBinding`（对于 TCP 发布）。  
   
 8. 对于上一步中添加的元数据终结点，将地址设置为等于：  
   
@@ -256,8 +256,8 @@ namespace Metadata.Samples
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [如何：在托管应用程序中承载 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：承载于托管应用程序的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自承载](../../../../docs/framework/wcf/samples/self-host.md)
 - [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [如何：使用代码发布服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [如何：发布使用代码为服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298469"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 入门
@@ -106,18 +106,18 @@ ms.locfileid: "59298469"
   
  要了解处理在检测应用的过程中发生的异常和其他问题的特定实例，请参阅：  
   
--   [示例:处理绑定数据时出现的异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [示例：绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [示例:动态编程疑难解答](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [示例：故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [.NET 本机应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [.NET Native 应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET Native 安装和配置](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [.NET native 安装和配置](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [利用反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
-- [序列化和元数据](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [依赖反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [Serialization and Metadata（序列化和元数据）](../../../docs/framework/net-native/serialization-and-metadata.md)
 - [将 Windows 应用商店应用迁移到 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

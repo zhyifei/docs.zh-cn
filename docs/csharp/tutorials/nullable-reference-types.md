@@ -3,12 +3,12 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846579"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296142"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
@@ -24,7 +24,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="prerequisites"></a>系统必备
 
-需要将计算机设置为运行 .NET Core，包括 C# 8.0 beta 编译器。 [Visual Studio 2019 预览版 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) 或 [.NET Core 3.0 预览版 3](https://dotnet.microsoft.com/download/dotnet-core/3.0) 随附 C# 8 beta 版编译器。
+需要将计算机设置为运行 .NET Core，包括 C# 8.0 beta 编译器。 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新 [.NET Core 3.0 预览版](https://dotnet.microsoft.com/download/dotnet-core/3.0)随附 C# 8 beta 版本编译器。
 
 本教程假设你熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -45,7 +45,6 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 > [!NOTE]
 > 当 C# 8 发布时（不处于预览模式），新项目模板将添加 `NullableContextOptions` 元素。 在此之前，需要手动添加它。
-
 
 ### <a name="design-the-types-for-the-application"></a>设计应用程序的类型
 

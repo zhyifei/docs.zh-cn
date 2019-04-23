@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296116"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
@@ -272,7 +272,7 @@ ms.locfileid: "59296116"
   
 -   关闭主应用程序窗口和<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnMainWindowClose>。  
   
--   <xref:System.Windows.Application.Shutdown%2A> 调用。  
+-   调用 <xref:System.Windows.Application.Shutdown%2A>。  
   
 > [!NOTE]
 >  窗口在关闭后无法重新打开。  
@@ -293,7 +293,7 @@ ms.locfileid: "59296116"
   
  此外可以指定的初始位置<xref:System.Windows.Window>第一次出现时通过设置<xref:System.Windows.Window.WindowStartupLocation%2A>具有以下项之一属性<xref:System.Windows.WindowStartupLocation>枚举值：  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> （默认）  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认值）  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ ms.locfileid: "59296116"
   
  如果想要的宽度和窗口的高度以适应窗口大小的大小的内容，则可以使用<xref:System.Windows.Window.SizeToContent%2A>属性，它具有以下值：  
   
--   <xref:System.Windows.SizeToContent.Manual>. 不起作用（默认值）。  
+-   <xref:System.Windows.SizeToContent.Manual>。 不起作用（默认值）。  
   
--   <xref:System.Windows.SizeToContent.Width>. 适应内容宽度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
+-   <xref:System.Windows.SizeToContent.Width>。 适应内容宽度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
   
--   <xref:System.Windows.SizeToContent.Height>. 适应内容高度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>到内容的高度。  
+-   <xref:System.Windows.SizeToContent.Height>。 适应内容高度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>到内容的高度。  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. 适应内容宽度和高度，具有相同的效果与设置这两<xref:System.Windows.FrameworkElement.MinHeight%2A>并<xref:System.Windows.FrameworkElement.MaxHeight%2A>的内容和设置这两个高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>。 适应内容宽度和高度，具有相同的效果与设置这两<xref:System.Windows.FrameworkElement.MinHeight%2A>并<xref:System.Windows.FrameworkElement.MaxHeight%2A>的内容和设置这两个高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
   
  以下示例显示了一个窗口，它在第一次显示时即自动调整垂直方向和水平方向上的大小以适应内容。  
   
@@ -381,7 +381,7 @@ ms.locfileid: "59296116"
   
  可以通过设置配置窗口的状态及其<xref:System.Windows.Window.WindowState%2A>属性，它可以具有下列任一<xref:System.Windows.WindowState>枚举值：  
   
--   <xref:System.Windows.WindowState.Normal> （默认）  
+-   <xref:System.Windows.WindowState.Normal>（默认值）  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59296116"
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> （默认）  
+-   <xref:System.Windows.ResizeMode.CanResize>（默认值）  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "59296116"
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> （默认）  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认值）  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   

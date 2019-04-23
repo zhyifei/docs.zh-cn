@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829366"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298391"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>演练：筛选 My.Application.Log 输出 (Visual Basic)
 本演练演示如何更改对 `My.Application.Log` 对象的默认日志筛选，以控制哪些信息可从 `Log` 对象传递到侦听器以及哪些信息可由侦听器编写。 生成应用程序后仍可以更改日志记录行为，因为配置信息存储在应用程序的配置文件中。  
@@ -21,17 +21,17 @@ ms.locfileid: "58829366"
   
 #### <a name="to-build-the-sample-application"></a>生成示例应用程序  
   
-1.  打开一个新的 Visual Basic Windows 应用程序项目。  
+1. 打开一个新的 Visual Basic Windows 应用程序项目。  
   
-2.  向 Form1 添加一个名为 Button1 的按钮。  
+2. 向 Form1 添加一个名为 Button1 的按钮。  
   
-3.  在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件处理程序中，添加以下代码：  
+3. 在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件处理程序中，添加以下代码：  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  在调试器中运行该应用程序。  
+4. 在调试器中运行该应用程序。  
   
-5.  按“Button1”。  
+5. 按“Button1”。  
   
      应用程序将向应用程序的调试输出和日志文件中写入以下信息。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "58829366"
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  关闭该应用程序。  
+6. 关闭该应用程序。  
   
      有关如何查看应用程序的调试输出窗口的信息，请参阅[输出窗口](/visualstudio/ide/reference/output-window)。 有关应用程序的日志文件的位置的信息，请参阅[演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "58829366"
   
 #### <a name="to-log-only-activity-tracing-events"></a>仅记录活动跟踪事件  
   
-1.  在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
   
      或  
   
@@ -83,15 +83,15 @@ ms.locfileid: "58829366"
   
     3.  单击 **添加**。  
   
-2.  找到 `<switches>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。  
+2. 找到 `<switches>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。  
   
-3.  找到将 `DefaultSwitch` 添加到开关集合的元素。 此元素应与下面的元素类似：  
+3. 找到将 `DefaultSwitch` 添加到开关集合的元素。 此元素应与下面的元素类似：  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  将 `value` 属性的值更改为“ActivityTracing”。  
+4. 将 `value` 属性的值更改为“ActivityTracing”。  
   
-5.  app.config 文件的内容应类似于下面的 XML：  
+5. app.config 文件的内容应类似于下面的 XML：  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ ms.locfileid: "58829366"
     </configuration>  
     ```  
   
-6.  在调试器中运行该应用程序。  
+6. 在调试器中运行该应用程序。  
   
-7.  按“Button1”。  
+7. 按“Button1”。  
   
      应用程序将向应用程序的调试输出和日志文件中写入以下信息：  
   
@@ -130,7 +130,7 @@ ms.locfileid: "58829366"
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  关闭该应用程序。  
+8. 关闭该应用程序。  
   
 9. 将 `value` 属性的值改回“信息”。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "58829366"
   
 #### <a name="to-log-only-activity-tracing-events"></a>仅记录活动跟踪事件  
   
-1.  在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
   
      或  
   
@@ -158,11 +158,11 @@ ms.locfileid: "58829366"
   
     3.  单击 **添加**。  
   
-2.  在“解决方案资源管理器”中右键单击 app.config。 选择“打开”。  
+2. 在“解决方案资源管理器”中右键单击 app.config。 选择“打开”。  
   
-3.  找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。  
+3. 找到 `<listeners>` 部分，该部分位于 `name` 属性为“DefaultSource”的 `<source>` 部分中，后者位于 `<sources>` 部分中。 `<sources>` 部分位于 `<system.diagnostics>` 部分中，后者位于顶级 `<configuration>` 部分中。  
   
-4.  将此元素添加到 `<listeners>` 部分：  
+4. 将此元素添加到 `<listeners>` 部分：  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ ms.locfileid: "58829366"
     <add name="NewDefault"/>  
     ```  
   
-5.  找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
+5. 找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
   
-6.  将此元素添加到该 `<sharedListeners>` 部分：  
+6. 将此元素添加到该 `<sharedListeners>` 部分：  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ ms.locfileid: "58829366"
   
      <xref:System.Diagnostics.EventTypeFilter> 筛选器将其中一个 <xref:System.Diagnostics.SourceLevels> 枚举值用作其 `initializeData` 属性。  
   
-7.  app.config 文件的内容应类似于下面的 XML：  
+7. app.config 文件的内容应类似于下面的 XML：  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ ms.locfileid: "58829366"
     </configuration>  
     ```  
   
-8.  在调试器中运行该应用程序。  
+8. 在调试器中运行该应用程序。  
   
 9. 按“Button1”。  
   

@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298573"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试执行有条件编译
@@ -75,14 +75,14 @@ ms.locfileid: "59298573"
   
     |语言|语句|结果|  
     |--------------|---------------|------------|  
-    |**Visual Basic**|**#CONST TRACE = true**|启用跟踪|  
-    ||**#CONST TRACE = false**|禁用跟踪|  
-    ||**#CONST DEBUG = true**|启用调试|  
-    ||**#CONST DEBUG = false**|禁用调试|  
-    |**C#**|**#define TRACE**|启用跟踪|  
-    ||**#undef TRACE**|禁用跟踪|  
-    ||**#define DEBUG**|启用调试|  
-    ||**#undef DEBUG**|禁用调试|  
+    |**Visual Basic**|#CONST TRACE = true|启用跟踪|  
+    ||#CONST TRACE = false|禁用跟踪|  
+    ||#CONST DEBUG = true|启用调试|  
+    ||#CONST DEBUG = false|禁用调试|  
+    |**C#**|#define TRACE|启用跟踪|  
+    ||#undef TRACE|禁用跟踪|  
+    ||#define DEBUG|启用调试|  
+    ||#undef DEBUG|禁用调试|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>禁用跟踪或调试  
   
@@ -98,9 +98,9 @@ ms.locfileid: "59298573"
 ## <a name="see-also"></a>请参阅
 
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [如何：设置 Visual Studio 命令行的环境变量](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [如何：调用命令行编译器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

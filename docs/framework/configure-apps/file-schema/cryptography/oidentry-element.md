@@ -9,10 +9,10 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219338"
 ---
 # <a name="oidentry-element"></a>\<oidEntry > 元素
@@ -81,7 +81,7 @@ ms.locfileid: "59219338"
 ## <a name="see-also"></a>请参阅
 
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

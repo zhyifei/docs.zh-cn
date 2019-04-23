@@ -3,17 +3,17 @@ title: 如何：指定通道安全凭据
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297975"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>如何：指定通道安全凭据
 Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序可以调用 WCF 服务。 大多数 WCF 服务需要客户端指定要用于身份验证和授权的凭据。 在从 WCF 客户端调用 WCF 服务，可以指定这些凭据，在托管代码或应用程序配置文件中。 在 COM 应用程序中调用 WCF 服务，可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>接口指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是一个基于 IDispatch 的接口，则不会获得 IntelliSense 功能在 Visual Studio 环境中。  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是一种基于 IDispatch 的接口，在 Visual Studio 环境中使用它将无法获取 IntelliSense 功能。  
   
  本文将使用 WCF 服务中定义[消息安全示例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序可以
   
 7. 运行 Visual Basic 应用程序并验证结果。  
   
-     Visual Basic 应用程序将显示一个消息框，其中包含调用 Add(3, 4) 的结果。 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 或<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>也可用来代替<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29>设置客户端证书：  
+     Visual Basic 应用程序将显示一个消息框，其中包含调用 Add(3, 4) 的结果。 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 或 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> 也可以用于代替 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 设置客户端证书：  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -134,7 +134,7 @@ Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序可以
 ## <a name="see-also"></a>请参阅
 
 - [联合](../../../../docs/framework/wcf/feature-details/federation.md)
-- [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [如何：联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [消息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

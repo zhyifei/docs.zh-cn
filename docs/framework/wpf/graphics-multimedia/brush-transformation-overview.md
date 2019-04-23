@@ -10,10 +10,10 @@ helpviewer_keywords:
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
 ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298326"
 ---
 # <a name="brush-transformation-overview"></a>Brush 变换概述
@@ -104,5 +104,5 @@ Brush 类提供两个转换属性：<xref:System.Windows.Media.Brush.Transform%2
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Brush>
 - [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)
-- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
-- [变换概述](transforms-overview.md)
+- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [转换概述](transforms-overview.md)
