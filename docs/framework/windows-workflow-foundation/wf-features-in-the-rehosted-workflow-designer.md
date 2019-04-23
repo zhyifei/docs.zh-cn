@@ -3,10 +3,10 @@ title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324157"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
@@ -130,7 +130,7 @@ ms.locfileid: "59324157"
   
 3. 设计器支持共享触发器转换创建  
   
-4. 活动用于创建状态机工作流，包括： <xref:System.Activities.Statements.StateMachine>， <xref:System.Activities.Statements.State>，和 <xref:System.Activities.Statements.Transition>  
+4. 用于创建状态机工作流的活动，包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>  
   
  以下屏幕截图显示完成的状态机工作流从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)。  
   

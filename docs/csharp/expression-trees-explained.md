@@ -3,16 +3,16 @@ title: 表达式树说明
 description: 了解有关表达式树的信息，及其它们在转换外部执行的算法与在执行代码前检查代码方面的用处。
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481426"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613416"
 ---
 # <a name="expression-trees-explained"></a>表达式树说明
 
-[上一步 -- 概述](expression-trees.md)
+[上一步 - 概述](expression-trees.md)
 
 表达式树是定义代码的数据结构。 它们基于编译器用于分析代码和生成已编译输出的相同结构。 读完本教程后，你会注意到表达式树和 Roslyn API 中用于生成[分析器和 CodeFixes](https://github.com/dotnet/roslyn-analyzers) 的类型之间存在很多相似之处。
 （分析器和 CodeFixes 是 NuGet 包，用于对代码执行静态分析，并可为开发人员建议可能的修补程序。）两者概念相似，且最终结果是一种数据结构，该结构允许以有意义的方式对源代码进行检查。 但是，表达式树基于一组与 Roslyn API 完全不同的类和 API。
@@ -23,6 +23,7 @@ ms.locfileid: "59481426"
 ```csharp
 var sum = 1 + 2;
 ```
+
 如果要将其作为一个表达式树进行分析，则该树包含多个节点。
 最外面的节点是具有赋值 (`var sum = 1 + 2;`) 的变量声明语句，该节点包含若干子节点：变量声明、赋值运算符和一个表示等于号右侧的表达式。 该表达式被进一步细分为表示加法运算、该加法左操作数和右操作数的表达式。
 
@@ -68,4 +69,4 @@ var finalAnswer = this.SecretSauceFunction(
 
 不能执行的操作是修改表达式树。  表达式树是不可变的数据结构。 如果想要改变（更改）表达式树，则必须创建基于原始树副本但包含所需更改的新树。
 
-[下一步 -- 框架类型支持表达式树](expression-classes.md)
+[下一步 - 框架类型支持表达式树](expression-classes.md)

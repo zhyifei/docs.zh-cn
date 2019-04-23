@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325054"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
@@ -32,15 +32,15 @@ ms.locfileid: "59325054"
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
  绑定中的信息可能十分复杂，而且某些设置可能与其他设置不兼容。 出于此原因，WCF 包含一组系统提供的绑定。 这些绑定旨在满足大多数应用程序需求。 下面的类表示系统提供的绑定的一些示例：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>:符合 WS 的 HTTP 协议绑定，适用于连接到 Web 服务的基本配置文件规范 (例如，ASP.NET Web 服务基于服务）。  
+-   <xref:System.ServiceModel.BasicHttpBinding>：符合 WS 的 HTTP 协议绑定，适用于连接到 Web 服务的基本配置文件规范 (例如，ASP.NET Web 服务基于服务）。  
   
--   <xref:System.ServiceModel.WSHttpBinding>:可互操作绑定，适用于连接到终结点符合 WS-* 协议。  
+-   <xref:System.ServiceModel.WSHttpBinding>：可互操作绑定，适用于连接到终结点符合 WS-* 协议。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>:使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]连接到同一台计算机上其他 WCF 终结点。  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]连接到同一台计算机上其他 WCF 终结点。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>:使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]来创建与其他 WCF 终结点的已排队的消息连接。  
+-   <xref:System.ServiceModel.NetMsmqBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]来创建与其他 WCF 终结点的已排队的消息连接。  
 
-- <xref:System.ServiceModel.NetTcpBinding>:此绑定提供了更高的性能比 HTTP 绑定，特别适用于本地网络。
+- <xref:System.ServiceModel.NetTcpBinding>：此绑定提供了更高的性能比 HTTP 绑定，特别适用于本地网络。
   
  有关完整列表，包含的所有提供 WCF 绑定的描述，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   

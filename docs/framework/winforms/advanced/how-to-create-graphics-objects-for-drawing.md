@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324196"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>如何：创建用于绘制的 Graphics 对象
@@ -165,14 +165,14 @@ ms.locfileid: "59324196"
   
     |若要呈现|查看|  
     |---------------|---------|  
-    |直线|[如何：在 Windows 窗体上绘制直线](how-to-draw-a-line-on-a-windows-form.md)|  
-    |形状|[如何：绘制轮廓形状](how-to-draw-an-outlined-shape.md)|  
+    |直线|[如何：Windows 窗体上绘制线条](how-to-draw-a-line-on-a-windows-form.md)|  
+    |形状|[如何：绘制空心的形状](how-to-draw-an-outlined-shape.md)|  
     |Text|[如何：在 Windows 窗体上绘制文本](how-to-draw-text-on-a-windows-form.md)|  
-    |图像|[如何：使用 GDI+ 呈现图像](how-to-render-images-with-gdi.md)|  
+    |图像|[如何：使用 GDI + 呈现图像](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>请参阅
 
 - [图形编程入门](getting-started-with-graphics-programming.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
-- [直线、曲线和图形](lines-curves-and-shapes.md)
-- [如何：使用 GDI+ 呈现图像](how-to-render-images-with-gdi.md)
+- [直线、曲线和形状](lines-curves-and-shapes.md)
+- [如何：使用 GDI + 呈现图像](how-to-render-images-with-gdi.md)

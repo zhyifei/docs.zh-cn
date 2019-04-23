@@ -3,10 +3,10 @@ title: 处理异步应用程序 (Visual Basic 中) 中的重新进入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324781"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用程序 (Visual Basic 中) 中的重新进入
@@ -20,11 +20,11 @@ ms.locfileid: "59324781"
   
     -   [禁用“开始”按钮](#BKMK_DisableTheStartButton)  
   
-    -   [取消和重新启动操作](#BKMK_CancelAndRestart)  
+    -   [取消和重启操作](#BKMK_CancelAndRestart)  
   
     -   [运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)  
   
--   [检查并运行此示例应用程序](#BKMD_SettingUpTheExample)  
+-   [检查并运行示例应用](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
@@ -93,7 +93,7 @@ TOTAL bytes returned:  890591
   
      在操作运行期间禁用“开始”按钮，以便用户无法中断它。  
   
--   [取消和重新启动操作](#BKMK_CancelAndRestart)  
+-   [取消和重启操作](#BKMK_CancelAndRestart)  
   
      当用户再次选择“开始”按钮时取消仍在运行的任何操作，然后让最近请求的操作继续运行。  
   
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync 方法  
  此示例将 `AccessTheWebAsync` 拆分为两个方法。 第一个方法 `AccessTheWebAsync` 会为组启动所有下载任务并设置 `pendingWork` 以控制显示进程。 该方法使用语言集成查询（LINQ 查询）和 <xref:System.Linq.Enumerable.ToArray%2A> 同时启动所有下载任务。  
   
- `AccessTheWebAsync` 然后，调用`FinishOneGroupAsync`要等待的每个下载完成并显示其长度。  
+ `AccessTheWebAsync` 随后调用 `FinishOneGroupAsync` 以等待每个下载完成并显示其长度。  
   
- `FinishOneGroupAsync` 返回一个任务分配给`pendingWork`在`AccessTheWebAsync`。 该值会在任务完成之前阻止另一个操作进行中断。  
+ `FinishOneGroupAsync` 会返回在 `AccessTheWebAsync` 中分配给 `pendingWork` 的任务。 该值会在任务完成之前阻止另一个操作进行中断。  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
