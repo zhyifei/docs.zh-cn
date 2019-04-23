@@ -3,10 +3,10 @@ title: 版本 3.5 中的套接字性能增强
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333283"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>版本 3.5 中的套接字性能增强

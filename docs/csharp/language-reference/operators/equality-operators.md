@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 98b96f5b4c6d6ea70687a97c849e89573c67c37e
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545886"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59334154"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -68,7 +68,7 @@ ms.locfileid: "58545886"
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义的类型可以[重载](../keywords/operator.md) `==` 和 `!=` 运算符。 如果某类型重载这两个运算符之一，它还必须重载另一个运算符。
+用户定义类型可以[重载](../keywords/operator.md) `==` 和 `!=` 运算符。 如果某类型重载这两个运算符之一，它还必须重载另一个运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

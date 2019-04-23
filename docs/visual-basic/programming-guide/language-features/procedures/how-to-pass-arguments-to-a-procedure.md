@@ -12,10 +12,10 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333900"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：将参数传递给过程 (Visual Basic)
@@ -49,11 +49,11 @@ ms.locfileid: "59333900"
 
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)
-- [Property 过程](./property-procedures.md)
+- [属性过程](./property-procedures.md)
 - [运算符过程](./operator-procedures.md)
 - [如何：为过程定义参数](./how-to-define-a-parameter-for-a-procedure.md)
-- [按值和按引用传递参数](./passing-arguments-by-value-and-by-reference.md)
+- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
 - [递归过程](./recursive-procedures.md)
 - [过程重载](./procedure-overloading.md)
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [面向对象编程 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)

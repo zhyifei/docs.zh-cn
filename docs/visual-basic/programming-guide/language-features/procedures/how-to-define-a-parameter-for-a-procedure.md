@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333829"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定义参数的过程 (Visual Basic)
@@ -58,8 +58,8 @@ ms.locfileid: "59333829"
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)
 - [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
-- [按值和按引用传递参数](./passing-arguments-by-value-and-by-reference.md)
+- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
 - [递归过程](./recursive-procedures.md)
 - [过程重载](./procedure-overloading.md)
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [面向对象编程 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)

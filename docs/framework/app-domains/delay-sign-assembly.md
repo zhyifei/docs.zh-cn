@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a833bb0f412407d1f18793c356d4c207716eb101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632616"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59334050"
 ---
 # <a name="delay-signing-an-assembly"></a>延迟为程序集签名
 组织可以使用严密保护的密钥对，开发人员无法每天对其进行访问。 通常情况下公钥可用，但私钥的访问权限仅限于少数几个人。 开发使用强名称的程序集时，每个引用强名称目标程序集的程序集都包含用于向目标程序集赋予强名称的公钥的标记。 这要求公钥在开发过程中可用。  
@@ -28,9 +28,9 @@ ms.locfileid: "54632616"
   
  以下步骤概述了延迟程序集签名的过程：  
   
-1.  从将执行最终签名的组织处获取密钥对的公钥部分。 此密钥通常是 .snk 文件，可以通过使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建。  
+1. 从将执行最终签名的组织处获取密钥对的公钥部分。 此密钥通常是 .snk 文件，可以通过使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建。  
   
-2.  使用 <xref:System.Reflection> 中的两个自定义属性对程序集的源代码进行注释：  
+2. 使用 <xref:System.Reflection> 中的两个自定义属性对程序集的源代码进行注释：  
   
     -   <xref:System.Reflection.AssemblyKeyFileAttribute>，将包含公钥的文件名作为参数传递给其构造函数。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "54632616"
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
          [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-3.  编译器将公钥插入程序集清单，并在 PE 文件中保留用于完整的强名称签名的空间。 生成程序集后，必须存储真正的公钥，这样引用此程序集的其他程序集才能获取该密钥，并将其存储在自己的程序集引用中。  
+3. 编译器将公钥插入程序集清单，并在 PE 文件中保留用于完整的强名称签名的空间。 生成程序集后，必须存储真正的公钥，这样引用此程序集的其他程序集才能获取该密钥，并将其存储在自己的程序集引用中。  
   
-4.  程序集没有有效的强名称签名，因此必须关闭对此签名的验证。 可配合使用强名称工具和 –Vr 选项来实现此操作。  
+4. 程序集没有有效的强名称签名，因此必须关闭对此签名的验证。 可配合使用强名称工具和 –Vr 选项来实现此操作。  
   
      以下示例关闭了对名为 `myAssembly.dll` 的程序集的验证。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54632616"
     > [!NOTE]
     >  如果在 64 位电脑上使用 Visual Studio 进行开发时使用延迟签名，并且编译“任何 CPU”的程序集，可能需要两次应用 -Vr 选项。 （在 Visual Studio 中，“任何 CPU”是平台目标生成属性的一个值；从命令行中编译时，它是默认值。）若要在命令行或文件资源管理器中运行应用程序，请使用 64 位版本的 [Sn.exe（强签名工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)对程序集应用 -Vr 选项。 若要在设计时将程序集加载到 Visual Studio（例如，如果程序集包含应用程序中其他程序集使用的组件），请使用 32 位版本的强名称工具。 这是因为从命令行中运行程序集时，实时 (JIT) 编译器会将程序集编译为 64 位本机代码，而将程序集加载到设计时环境时，会将其编译为 32 位本机代码。  
   
-5.  之后（通常在传送前）再通过强名称工具使用 –R 选项，将程序集提交到组织的签名机构以执行实际的强名称签名。  
+5. 之后（通常在传送前）再通过强名称工具使用 –R 选项，将程序集提交到组织的签名机构以执行实际的强名称签名。  
   
      下面的示例使用 `sgKey.snk` 密钥对为程序集 `myAssembly.dll` 签署了强名称。  
   
@@ -73,6 +73,7 @@ ms.locfileid: "54632616"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)
 - [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)

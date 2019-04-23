@@ -11,31 +11,31 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f24d3e456285efe694e598aa3d435fc15341283
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221051"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333296"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定义和执行动态方法
 以下过程介绍如何定义和执行简单的动态方法和绑定到类实例的动态方法。 有关动态方法的更多信息，请参阅 <xref:System.Reflection.Emit.DynamicMethod> 类和[反射发出动态方法应用场景](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>定义和执行动态方法  
   
-1.  声明用于执行方法的委托类型。 考虑使用泛型委托，将需要声明的委托类型数降到最低。 以下代码声明两种可用于 `SquareIt` 方法的委托类型，其中一个是泛型。  
+1. 声明用于执行方法的委托类型。 考虑使用泛型委托，将需要声明的委托类型数降到最低。 以下代码声明两种可用于 `SquareIt` 方法的委托类型，其中一个是泛型。  
   
      [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]
      [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]
      [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
   
-2.  创建用于为动态方法指定参数类型的数组。 在此示例中，唯一的参数为 `int`（在 Visual Basic 中为 `Integer`），所以数组只有一个元素。  
+2. 创建用于为动态方法指定参数类型的数组。 在此示例中，唯一的参数为 `int`（在 Visual Basic 中为 `Integer`），所以数组只有一个元素。  
   
      [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]
      [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
      [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
-3.  创建 <xref:System.Reflection.Emit.DynamicMethod>。 在此示例中，该方法命名为 `SquareIt`。  
+3. 创建 <xref:System.Reflection.Emit.DynamicMethod>。 在此示例中，该方法命名为 `SquareIt`。  
   
     > [!NOTE]
     >  不需要为动态方法命名，并且不能通过名称调用它们。 多个动态方法可以具有相同的名称。 但是，名称将在调用堆栈中显示并且可用于调试。  
@@ -46,7 +46,7 @@ ms.locfileid: "56221051"
      [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]
      [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
   
-4.  发出方法主体。 在此示例中，使用 <xref:System.Reflection.Emit.ILGenerator> 对象发出 Microsoft 中间语言 (MSIL)。 也可以结合使用 <xref:System.Reflection.Emit.DynamicILInfo> 对象与非托管代码生成器，发出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主体。  
+4. 发出方法主体。 在此示例中，使用 <xref:System.Reflection.Emit.ILGenerator> 对象发出 Microsoft 中间语言 (MSIL)。 也可以结合使用 <xref:System.Reflection.Emit.DynamicILInfo> 对象与非托管代码生成器，发出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主体。  
   
      此示例中的 MSIL 将该参数（一个 `int`）加载到堆栈上，将其转换为 `long`，复制 `long`，然后将这两个数字相乘。 这会将平方结果保留在堆栈中，方法只需返回即可。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56221051"
      [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]
      [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
   
-5.  通过调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法创建表示动态方法的委托（在步骤 1 中声明）的实例。 创建委托即完成该方法，任何更改方法的进一步尝试（例如，添加更多 MSIL）都将被忽略。 以下代码使用泛型委托创建委托并调用它。  
+5. 通过调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法创建表示动态方法的委托（在步骤 1 中声明）的实例。 创建委托即完成该方法，任何更改方法的进一步尝试（例如，添加更多 MSIL）都将被忽略。 以下代码使用泛型委托创建委托并调用它。  
   
      [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]
      [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]
@@ -62,25 +62,25 @@ ms.locfileid: "56221051"
   
 ### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>定义和执行绑定到对象的动态方法  
   
-1.  声明用于执行方法的委托类型。 考虑使用泛型委托，将需要声明的委托类型数降到最低。 以下代码声明一个泛型委托类型，可使用该类型执行任何具有一个参数和一个返回值的方法，如果委托绑定到对象，则该类型也可以执行具有两个参数和一个返回值的方法。  
+1. 声明用于执行方法的委托类型。 考虑使用泛型委托，将需要声明的委托类型数降到最低。 以下代码声明一个泛型委托类型，可使用该类型执行任何具有一个参数和一个返回值的方法，如果委托绑定到对象，则该类型也可以执行具有两个参数和一个返回值的方法。  
   
      [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]
      [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]
      [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
   
-2.  创建用于为动态方法指定参数类型的数组。 如果表示方法的委托要绑定到对象，则第一个参数必须与委托绑定到的类型相匹配。 在此示例中，存在两个参数，分别属于 `Example` 和 `int`（在 Visual Basic 中为 `Integer`）类型。  
+2. 创建用于为动态方法指定参数类型的数组。 如果表示方法的委托要绑定到对象，则第一个参数必须与委托绑定到的类型相匹配。 在此示例中，存在两个参数，分别属于 `Example` 和 `int`（在 Visual Basic 中为 `Integer`）类型。  
   
      [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]
      [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
      [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
-3.  创建 <xref:System.Reflection.Emit.DynamicMethod>。 在此示例中，方法没有名称。 返回值的类型指定为 `int`（在 Visual Basic 中为 `Integer`）。 该方法可以访问 `Example` 类的私有成员和受保护成员。  
+3. 创建 <xref:System.Reflection.Emit.DynamicMethod>。 在此示例中，方法没有名称。 返回值的类型指定为 `int`（在 Visual Basic 中为 `Integer`）。 该方法可以访问 `Example` 类的私有成员和受保护成员。  
   
      [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
      [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
      [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
   
-4.  发出方法主体。 在此示例中，使用 <xref:System.Reflection.Emit.ILGenerator> 对象发出 Microsoft 中间语言 (MSIL)。 也可以结合使用 <xref:System.Reflection.Emit.DynamicILInfo> 对象与非托管代码生成器，发出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主体。  
+4. 发出方法主体。 在此示例中，使用 <xref:System.Reflection.Emit.ILGenerator> 对象发出 Microsoft 中间语言 (MSIL)。 也可以结合使用 <xref:System.Reflection.Emit.DynamicILInfo> 对象与非托管代码生成器，发出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主体。  
   
      此示例中的 MSIL 加载第一个参数（一个 `Example` 类的实例），然后使用该参数加载类型 `int` 的专用实例字段的值。 然后加载第二个参数，并将两个数相乘。 如果结果大于 `int`，将截断该值且丢弃最高有效位。 该方法返回，返回值保留在堆栈中。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "56221051"
      [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]
      [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
   
-5.  通过调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> 方法重载创建表示动态方法的委托（在步骤 1 中声明）的实例。 创建委托即完成该方法，任何更改方法的进一步尝试（例如，添加更多 MSIL）都将被忽略。  
+5. 通过调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> 方法重载创建表示动态方法的委托（在步骤 1 中声明）的实例。 创建委托即完成该方法，任何更改方法的进一步尝试（例如，添加更多 MSIL）都将被忽略。  
   
     > [!NOTE]
     >  可以多次调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，创建绑定到目标类型的其他实例的委托。  
@@ -123,6 +123,7 @@ ms.locfileid: "56221051"
 -   使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [使用反射发出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [反射发出动态方法应用场景](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

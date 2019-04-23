@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590470"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59334167"
 ---
 # <a name="bool-c-reference"></a>bool（C# 参考）
 
 `bool` 关键字是 <xref:System.Boolean?displayProperty=nameWithType> 的别名。 它用于声明变量来存储布尔值：[true](true-literal.md) 和 [false](false-literal.md)。
 
 > [!NOTE]
-> 如果需要一个也可以有 `null` 值的布尔型变量，请使用 `bool?`。 有关详细信息，请参阅[使用可以为空的类型](../../programming-guide/nullable-types/using-nullable-types.md)一文的 [bool? 类型](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type)部分。
+> 如需支持三值逻辑（例如，在使用支持三值布尔类型的数据库时），请使用 `bool?` 类型。 对于 `bool?` 操作数，预定义的 `&` 和 `|` 运算符支持三值逻辑。 有关详细信息，请参阅[布尔逻辑运算符](../operators/boolean-logical-operators.md)一文的[可以为 null 的布尔逻辑运算符](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)部分。
 
 ## <a name="literals"></a>文本
 
