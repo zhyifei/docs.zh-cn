@@ -18,49 +18,49 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80559ef685a2dbf48d65e0d81432a5edbd5528bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072865"
 ---
-# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="05f7d-102">ICLRDebugging::CanUnloadNow 方法</span><span class="sxs-lookup"><span data-stu-id="05f7d-102">ICLRDebugging::CanUnloadNow Method</span></span>
-<span data-ttu-id="05f7d-103">确定是否通过提供的库[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)接口仍在使用或可被卸载。</span><span class="sxs-lookup"><span data-stu-id="05f7d-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
+# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="7dbab-102">ICLRDebugging::CanUnloadNow 方法</span><span class="sxs-lookup"><span data-stu-id="7dbab-102">ICLRDebugging::CanUnloadNow Method</span></span>
+<span data-ttu-id="7dbab-103">确定是否通过提供的库[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)接口仍在使用或可被卸载。</span><span class="sxs-lookup"><span data-stu-id="7dbab-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05f7d-104">语法</span><span class="sxs-lookup"><span data-stu-id="05f7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7dbab-104">语法</span><span class="sxs-lookup"><span data-stu-id="7dbab-104">Syntax</span></span>  
   
 ```  
 HRESULT CanUnloadNow(HMODULE hModule);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="05f7d-105">参数</span><span class="sxs-lookup"><span data-stu-id="05f7d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7dbab-105">参数</span><span class="sxs-lookup"><span data-stu-id="7dbab-105">Parameters</span></span>  
  `hmodule`  
- <span data-ttu-id="05f7d-106">[in]目标进程中的模块基址。</span><span class="sxs-lookup"><span data-stu-id="05f7d-106">[in] The base address of a module in the target process.</span></span>  
+ <span data-ttu-id="7dbab-106">[in]目标进程中的模块基址。</span><span class="sxs-lookup"><span data-stu-id="7dbab-106">[in] The base address of a module in the target process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="05f7d-107">返回值</span><span class="sxs-lookup"><span data-stu-id="05f7d-107">Return Value</span></span>  
- <span data-ttu-id="05f7d-108">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="05f7d-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7dbab-107">返回值</span><span class="sxs-lookup"><span data-stu-id="7dbab-107">Return Value</span></span>  
+ <span data-ttu-id="7dbab-108">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="7dbab-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="05f7d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="05f7d-109">HRESULT</span></span>|<span data-ttu-id="05f7d-110">描述</span><span class="sxs-lookup"><span data-stu-id="05f7d-110">Description</span></span>|  
+|<span data-ttu-id="7dbab-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7dbab-109">HRESULT</span></span>|<span data-ttu-id="7dbab-110">描述</span><span class="sxs-lookup"><span data-stu-id="7dbab-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="05f7d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="05f7d-111">S_OK</span></span>|<span data-ttu-id="05f7d-112">引用的模块`hmodule`，可以卸载。</span><span class="sxs-lookup"><span data-stu-id="05f7d-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
-|<span data-ttu-id="05f7d-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="05f7d-113">S_FALSE</span></span>|<span data-ttu-id="05f7d-114">引用的模块`hmodule`仍在使用。</span><span class="sxs-lookup"><span data-stu-id="05f7d-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
-|<span data-ttu-id="05f7d-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="05f7d-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="05f7d-116">所指示的模块不是 CLR 模块。</span><span class="sxs-lookup"><span data-stu-id="05f7d-116">The indicated module is not a CLR module.</span></span>|  
+|<span data-ttu-id="7dbab-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="7dbab-111">S_OK</span></span>|<span data-ttu-id="7dbab-112">引用的模块`hmodule`，可以卸载。</span><span class="sxs-lookup"><span data-stu-id="7dbab-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
+|<span data-ttu-id="7dbab-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="7dbab-113">S_FALSE</span></span>|<span data-ttu-id="7dbab-114">引用的模块`hmodule`仍在使用。</span><span class="sxs-lookup"><span data-stu-id="7dbab-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
+|<span data-ttu-id="7dbab-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="7dbab-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="7dbab-116">所指示的模块不是 CLR 模块。</span><span class="sxs-lookup"><span data-stu-id="7dbab-116">The indicated module is not a CLR module.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="05f7d-117">Exceptions</span><span class="sxs-lookup"><span data-stu-id="05f7d-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="7dbab-117">Exceptions</span><span class="sxs-lookup"><span data-stu-id="7dbab-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05f7d-118">备注</span><span class="sxs-lookup"><span data-stu-id="05f7d-118">Remarks</span></span>  
- <span data-ttu-id="05f7d-119">此方法检查是否所有的实例`ICorDebug*`已发布接口，且没有线程当前处于调用[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="05f7d-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7dbab-118">备注</span><span class="sxs-lookup"><span data-stu-id="7dbab-118">Remarks</span></span>  
+ <span data-ttu-id="7dbab-119">此方法检查是否所有的实例`ICorDebug*`已发布接口，且没有线程当前处于调用[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="7dbab-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05f7d-120">要求</span><span class="sxs-lookup"><span data-stu-id="05f7d-120">Requirements</span></span>  
- <span data-ttu-id="05f7d-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05f7d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7dbab-120">要求</span><span class="sxs-lookup"><span data-stu-id="7dbab-120">Requirements</span></span>  
+ <span data-ttu-id="7dbab-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7dbab-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05f7d-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05f7d-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7dbab-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7dbab-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="05f7d-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05f7d-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7dbab-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7dbab-123">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="05f7d-124">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="05f7d-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="7dbab-124">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7dbab-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05f7d-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="05f7d-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7dbab-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="7dbab-125">See also</span></span>
 
-- [<span data-ttu-id="05f7d-126">调试接口</span><span class="sxs-lookup"><span data-stu-id="05f7d-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="05f7d-127">调试</span><span class="sxs-lookup"><span data-stu-id="05f7d-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="7dbab-126">调试接口</span><span class="sxs-lookup"><span data-stu-id="7dbab-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="7dbab-127">调试</span><span class="sxs-lookup"><span data-stu-id="7dbab-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

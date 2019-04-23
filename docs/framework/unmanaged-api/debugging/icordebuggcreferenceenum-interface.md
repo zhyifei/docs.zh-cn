@@ -17,43 +17,43 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080821"
 ---
-# <a name="icordebuggcreferenceenum-interface"></a><span data-ttu-id="353bf-102">ICorDebugGCReferenceEnum 接口</span><span class="sxs-lookup"><span data-stu-id="353bf-102">ICorDebugGCReferenceEnum Interface</span></span>
-<span data-ttu-id="353bf-103">提供针对将进行垃圾回收的对象的枚举器。</span><span class="sxs-lookup"><span data-stu-id="353bf-103">Provides an enumerator for objects that will be garbage-collected.</span></span>  
+# <a name="icordebuggcreferenceenum-interface"></a><span data-ttu-id="9e772-102">ICorDebugGCReferenceEnum 接口</span><span class="sxs-lookup"><span data-stu-id="9e772-102">ICorDebugGCReferenceEnum Interface</span></span>
+<span data-ttu-id="9e772-103">提供针对将进行垃圾回收的对象的枚举器。</span><span class="sxs-lookup"><span data-stu-id="9e772-103">Provides an enumerator for objects that will be garbage-collected.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="353bf-104">方法</span><span class="sxs-lookup"><span data-stu-id="353bf-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9e772-104">方法</span><span class="sxs-lookup"><span data-stu-id="9e772-104">Methods</span></span>  
   
-|<span data-ttu-id="353bf-105">方法</span><span class="sxs-lookup"><span data-stu-id="353bf-105">Method</span></span>|<span data-ttu-id="353bf-106">描述</span><span class="sxs-lookup"><span data-stu-id="353bf-106">Description</span></span>|  
+|<span data-ttu-id="9e772-105">方法</span><span class="sxs-lookup"><span data-stu-id="9e772-105">Method</span></span>|<span data-ttu-id="9e772-106">描述</span><span class="sxs-lookup"><span data-stu-id="9e772-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="353bf-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="353bf-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|<span data-ttu-id="353bf-108">获取指定的数目的[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)包含将进行垃圾回收的对象的信息的实例。</span><span class="sxs-lookup"><span data-stu-id="353bf-108">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>|  
+|[<span data-ttu-id="9e772-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="9e772-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|<span data-ttu-id="9e772-108">获取指定的数目的[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)包含将进行垃圾回收的对象的信息的实例。</span><span class="sxs-lookup"><span data-stu-id="9e772-108">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="353bf-109">备注</span><span class="sxs-lookup"><span data-stu-id="353bf-109">Remarks</span></span>  
- <span data-ttu-id="353bf-110">`ICorDebugGCReferenceEnum`接口实现"ICorDebugEnum"接口。</span><span class="sxs-lookup"><span data-stu-id="353bf-110">The `ICorDebugGCReferenceEnum` interface implements the "ICorDebugEnum" interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e772-109">备注</span><span class="sxs-lookup"><span data-stu-id="9e772-109">Remarks</span></span>  
+ <span data-ttu-id="9e772-110">`ICorDebugGCReferenceEnum`接口实现"ICorDebugEnum"接口。</span><span class="sxs-lookup"><span data-stu-id="9e772-110">The `ICorDebugGCReferenceEnum` interface implements the "ICorDebugEnum" interface.</span></span>  
   
- <span data-ttu-id="353bf-111">`ICorDebugGCReferenceEnum`实例中填入[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)实例通过调用[ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="353bf-111">An `ICorDebugGCReferenceEnum` instance is populated with [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances by calling the [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) method.</span></span> <span data-ttu-id="353bf-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)对象可以通过调用枚举[ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="353bf-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects can be enumerated by calling the [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) method.</span></span>  
+ <span data-ttu-id="9e772-111">`ICorDebugGCReferenceEnum`实例中填入[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)实例通过调用[ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="9e772-111">An `ICorDebugGCReferenceEnum` instance is populated with [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances by calling the [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) method.</span></span> <span data-ttu-id="9e772-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)对象可以通过调用枚举[ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="9e772-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects can be enumerated by calling the [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) method.</span></span>  
   
- <span data-ttu-id="353bf-113">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)由该方法填充集合中的对象表示三种类型的对象：</span><span class="sxs-lookup"><span data-stu-id="353bf-113">The [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects in the collection populated by this method represent three kinds of objects:</span></span>  
+ <span data-ttu-id="9e772-113">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)由该方法填充集合中的对象表示三种类型的对象：</span><span class="sxs-lookup"><span data-stu-id="9e772-113">The [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects in the collection populated by this method represent three kinds of objects:</span></span>  
   
--   <span data-ttu-id="353bf-114">从所有托管堆栈的对象。</span><span class="sxs-lookup"><span data-stu-id="353bf-114">Objects from all managed stacks.</span></span> <span data-ttu-id="353bf-115">这包括实时引用中托管的代码，以及由公共语言运行时创建的对象。</span><span class="sxs-lookup"><span data-stu-id="353bf-115">This includes live references in managed code as well as objects created by the common language runtime.</span></span>  
+-   <span data-ttu-id="9e772-114">从所有托管堆栈的对象。</span><span class="sxs-lookup"><span data-stu-id="9e772-114">Objects from all managed stacks.</span></span> <span data-ttu-id="9e772-115">这包括实时引用中托管的代码，以及由公共语言运行时创建的对象。</span><span class="sxs-lookup"><span data-stu-id="9e772-115">This includes live references in managed code as well as objects created by the common language runtime.</span></span>  
   
--   <span data-ttu-id="353bf-116">来自句柄表的对象。</span><span class="sxs-lookup"><span data-stu-id="353bf-116">Objects from the handle table.</span></span> <span data-ttu-id="353bf-117">这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。</span><span class="sxs-lookup"><span data-stu-id="353bf-117">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
+-   <span data-ttu-id="9e772-116">来自句柄表的对象。</span><span class="sxs-lookup"><span data-stu-id="9e772-116">Objects from the handle table.</span></span> <span data-ttu-id="9e772-117">这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。</span><span class="sxs-lookup"><span data-stu-id="9e772-117">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
   
--   <span data-ttu-id="353bf-118">来自终结器队列的对象。</span><span class="sxs-lookup"><span data-stu-id="353bf-118">Objects from the finalizer queue.</span></span> <span data-ttu-id="353bf-119">终结器队列根对象，直到运行终结器。</span><span class="sxs-lookup"><span data-stu-id="353bf-119">The finalizer queue roots objects until the finalizer has run.</span></span>  
+-   <span data-ttu-id="9e772-118">来自终结器队列的对象。</span><span class="sxs-lookup"><span data-stu-id="9e772-118">Objects from the finalizer queue.</span></span> <span data-ttu-id="9e772-119">终结器队列根对象，直到运行终结器。</span><span class="sxs-lookup"><span data-stu-id="9e772-119">The finalizer queue roots objects until the finalizer has run.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="353bf-120">要求</span><span class="sxs-lookup"><span data-stu-id="353bf-120">Requirements</span></span>  
- <span data-ttu-id="353bf-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="353bf-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e772-120">要求</span><span class="sxs-lookup"><span data-stu-id="9e772-120">Requirements</span></span>  
+ <span data-ttu-id="9e772-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e772-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="353bf-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="353bf-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9e772-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e772-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="353bf-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="353bf-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9e772-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e772-123">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="353bf-124">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="353bf-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="9e772-124">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e772-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="353bf-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="353bf-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e772-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e772-125">See also</span></span>
 
-- [<span data-ttu-id="353bf-126">调试接口</span><span class="sxs-lookup"><span data-stu-id="353bf-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9e772-126">调试接口</span><span class="sxs-lookup"><span data-stu-id="9e772-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

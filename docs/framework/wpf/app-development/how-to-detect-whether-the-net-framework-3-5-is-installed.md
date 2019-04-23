@@ -8,23 +8,23 @@ helpviewer_keywords:
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
 ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074633"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="0b3e6-102">如何：检测是否安装了 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="0b3e6-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
-<span data-ttu-id="0b3e6-103">管理员可部署的系统上的 Windows Presentation Foundation (WPF) 应用程序之前[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，它们必须先确认[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]运行时已存在。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], they must first confirm that the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime is present.</span></span> <span data-ttu-id="0b3e6-104">本主题提供了编写的脚本在 HTML/JavaScript，管理员可以用于确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]系统上存在。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="880fb-102">如何：检测是否安装了 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="880fb-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
+<span data-ttu-id="880fb-103">管理员可部署的系统上的 Windows Presentation Foundation (WPF) 应用程序之前[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，它们必须先确认[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]运行时已存在。</span><span class="sxs-lookup"><span data-stu-id="880fb-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], they must first confirm that the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime is present.</span></span> <span data-ttu-id="880fb-104">本主题提供了编写的脚本在 HTML/JavaScript，管理员可以用于确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]系统上存在。</span><span class="sxs-lookup"><span data-stu-id="880fb-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0b3e6-105">有关更多详细信息上安装、 部署和检测[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，请参阅[安装面向开发人员的.NET Framework](../../install/guide-for-developers.md)。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
+>  <span data-ttu-id="880fb-105">有关更多详细信息上安装、 部署和检测[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，请参阅[安装面向开发人员的.NET Framework](../../install/guide-for-developers.md)。</span><span class="sxs-lookup"><span data-stu-id="880fb-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0b3e6-106">示例</span><span class="sxs-lookup"><span data-stu-id="0b3e6-106">Example</span></span>  
- <span data-ttu-id="0b3e6-107">当[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]是安装，MSI 向".NET CLR"和版本号的 UserAgent 字符串。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="0b3e6-108">下面的示例演示一个简单的 HTML 页面中嵌入的脚本。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="0b3e6-109">脚本搜索用户代理字符串以确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]安装，并在搜索结果中显示的状态消息。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-109">The script searches the UserAgent string to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="example"></a><span data-ttu-id="880fb-106">示例</span><span class="sxs-lookup"><span data-stu-id="880fb-106">Example</span></span>  
+ <span data-ttu-id="880fb-107">当[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]是安装，MSI 向".NET CLR"和版本号的 UserAgent 字符串。</span><span class="sxs-lookup"><span data-stu-id="880fb-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="880fb-108">下面的示例演示一个简单的 HTML 页面中嵌入的脚本。</span><span class="sxs-lookup"><span data-stu-id="880fb-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="880fb-109">脚本搜索用户代理字符串以确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]安装，并在搜索结果中显示的状态消息。</span><span class="sxs-lookup"><span data-stu-id="880fb-109">The script searches the UserAgent string to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0b3e6-110">此脚本旨在为 Internet 资源管理器。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="0b3e6-111">其他浏览器可能不包括用户代理字符串中的.NET CLR 的信息。</span><span class="sxs-lookup"><span data-stu-id="0b3e6-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
+>  <span data-ttu-id="880fb-110">此脚本旨在为 Internet 资源管理器。</span><span class="sxs-lookup"><span data-stu-id="880fb-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="880fb-111">其他浏览器可能不包括用户代理字符串中的.NET CLR 的信息。</span><span class="sxs-lookup"><span data-stu-id="880fb-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
   
 ```  
 <HTML>  
@@ -116,18 +116,18 @@ ms.locfileid: "59074633"
 </HTML>  
 ```  
   
- <span data-ttu-id="0b3e6-112">如果为".NET CLR"版本搜索成功，将显示以下类型的状态消息：</span><span class="sxs-lookup"><span data-stu-id="0b3e6-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="880fb-112">如果为".NET CLR"版本搜索成功，将显示以下类型的状态消息：</span><span class="sxs-lookup"><span data-stu-id="880fb-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- <span data-ttu-id="0b3e6-113">否则，将显示以下类型的状态消息：</span><span class="sxs-lookup"><span data-stu-id="0b3e6-113">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="880fb-113">否则，将显示以下类型的状态消息：</span><span class="sxs-lookup"><span data-stu-id="880fb-113">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a><span data-ttu-id="0b3e6-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="0b3e6-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="880fb-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="880fb-114">See also</span></span>
 
-- [<span data-ttu-id="0b3e6-115">检测是否安装了 .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="0b3e6-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="880fb-115">检测是否安装了 .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="880fb-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)

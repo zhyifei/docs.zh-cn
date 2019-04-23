@@ -17,33 +17,33 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05287d3674e55a87cfe359fc08f74fa46000d79f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075842"
 ---
-# <a name="iclrvalidator-interface"></a><span data-ttu-id="302a0-102">ICLRValidator 接口</span><span class="sxs-lookup"><span data-stu-id="302a0-102">ICLRValidator Interface</span></span>
-<span data-ttu-id="302a0-103">提供用于验证可移植可执行 (PE) 映像和报告验证错误的方法。</span><span class="sxs-lookup"><span data-stu-id="302a0-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
+# <a name="iclrvalidator-interface"></a><span data-ttu-id="8f4d4-102">ICLRValidator 接口</span><span class="sxs-lookup"><span data-stu-id="8f4d4-102">ICLRValidator Interface</span></span>
+<span data-ttu-id="8f4d4-103">提供用于验证可移植可执行 (PE) 映像和报告验证错误的方法。</span><span class="sxs-lookup"><span data-stu-id="8f4d4-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="302a0-104">方法</span><span class="sxs-lookup"><span data-stu-id="302a0-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8f4d4-104">方法</span><span class="sxs-lookup"><span data-stu-id="8f4d4-104">Methods</span></span>  
   
-|<span data-ttu-id="302a0-105">方法</span><span class="sxs-lookup"><span data-stu-id="302a0-105">Method</span></span>|<span data-ttu-id="302a0-106">描述</span><span class="sxs-lookup"><span data-stu-id="302a0-106">Description</span></span>|  
+|<span data-ttu-id="8f4d4-105">方法</span><span class="sxs-lookup"><span data-stu-id="8f4d4-105">Method</span></span>|<span data-ttu-id="8f4d4-106">描述</span><span class="sxs-lookup"><span data-stu-id="8f4d4-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="302a0-107">FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="302a0-107">FormatEventInfo Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|<span data-ttu-id="302a0-108">获取有关指定的验证错误的详细的消息。</span><span class="sxs-lookup"><span data-stu-id="302a0-108">Gets a detailed message about the specified validation error.</span></span>|  
-|[<span data-ttu-id="302a0-109">Validate 方法</span><span class="sxs-lookup"><span data-stu-id="302a0-109">Validate Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|<span data-ttu-id="302a0-110">验证的可移植可执行文件或指定文件中的 Microsoft 中间语言 (MSIL)。</span><span class="sxs-lookup"><span data-stu-id="302a0-110">Validates the portable executable or Microsoft intermediate language (MSIL) in the specified file.</span></span>|  
+|[<span data-ttu-id="8f4d4-107">FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="8f4d4-107">FormatEventInfo Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|<span data-ttu-id="8f4d4-108">获取有关指定的验证错误的详细的消息。</span><span class="sxs-lookup"><span data-stu-id="8f4d4-108">Gets a detailed message about the specified validation error.</span></span>|  
+|[<span data-ttu-id="8f4d4-109">Validate 方法</span><span class="sxs-lookup"><span data-stu-id="8f4d4-109">Validate Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|<span data-ttu-id="8f4d4-110">验证的可移植可执行文件或指定文件中的 Microsoft 中间语言 (MSIL)。</span><span class="sxs-lookup"><span data-stu-id="8f4d4-110">Validates the portable executable or Microsoft intermediate language (MSIL) in the specified file.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="302a0-111">要求</span><span class="sxs-lookup"><span data-stu-id="302a0-111">Requirements</span></span>  
- <span data-ttu-id="302a0-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="302a0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f4d4-111">要求</span><span class="sxs-lookup"><span data-stu-id="8f4d4-111">Requirements</span></span>  
+ <span data-ttu-id="8f4d4-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8f4d4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="302a0-113">**标头：** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="302a0-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="8f4d4-113">**标头：** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="8f4d4-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="302a0-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="302a0-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8f4d4-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="8f4d4-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="302a0-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="302a0-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="8f4d4-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f4d4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="302a0-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="302a0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f4d4-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="8f4d4-116">See also</span></span>
 
-- [<span data-ttu-id="302a0-117">ICLRErrorReportingManager 接口</span><span class="sxs-lookup"><span data-stu-id="302a0-117">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="302a0-118">承载接口</span><span class="sxs-lookup"><span data-stu-id="302a0-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="302a0-119">CLRRuntimeHost 组件类</span><span class="sxs-lookup"><span data-stu-id="302a0-119">CLRRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+- [<span data-ttu-id="8f4d4-117">ICLRErrorReportingManager 接口</span><span class="sxs-lookup"><span data-stu-id="8f4d4-117">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="8f4d4-118">承载接口</span><span class="sxs-lookup"><span data-stu-id="8f4d4-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="8f4d4-119">CLRRuntimeHost 组件类</span><span class="sxs-lookup"><span data-stu-id="8f4d4-119">CLRRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
