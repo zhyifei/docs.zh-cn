@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: c93c00ca939bcb6c3c7feea4e6b6234f738298dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ef334f6d200e75f29e22a9586f4538309797942
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605527"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095979"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 语句（C# 参考）
 
@@ -62,7 +62,6 @@ fixed (byte* ps = srcarray, pd = dstarray)
     ps++; // invalid: cannot modify ps, as it is declared in the fixed statement.
 }
 ```
-
 
 在不安全模式中，可以在堆栈上分配内存，在这种情况下，内存不受垃圾回收的约束，因此不需要固定。 有关详细信息，请参阅 [stackalloc](stackalloc.md)。
 

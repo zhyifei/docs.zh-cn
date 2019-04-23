@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
 ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096246"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
@@ -38,7 +38,7 @@ ms.locfileid: "59096246"
   
 |特性|描述|  
 |---------------|-----------------|  
-|action|一个字符串，指定发生未经处理的异常时所采取的操作。 此属性是类型的 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>|  
+|action|一个字符串，指定发生未经处理的异常时所采取的操作。 此特性的类型为 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096044"
 ---
 # <a name="understanding-protection-level"></a>了解保护级别
@@ -28,11 +28,11 @@ ms.locfileid: "59096044"
   
 -   消息的任何部分都存在三种基本保护级别。 属性（无论它出现在哪里）设置为 <xref:System.Net.Security.ProtectionLevel> 枚举值之一。 按升序的保护顺序，它们包括：  
   
-    -   `None`.  
+    -   `None`。  
   
-    -   `Sign`. 受保护的部分进行数字签名。 这样做可以保证检测到对受保护的消息部分进行的任何篡改。  
+    -   `Sign`。 受保护的部分进行数字签名。 这样做可以保证检测到对受保护的消息部分进行的任何篡改。  
   
-    -   `EncryptAndSign`. 签名前会对消息部分进行加密，以确保其保密性。  
+    -   `EncryptAndSign`。 签名前会对消息部分进行加密，以确保其保密性。  
   
 -   您可以设置仅对保护要求*应用程序数据*借助此功能。 例如，WS-Addressing 标头是基础结构数据，因此不受 `ProtectionLevel` 影响。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "59096044"
 - <xref:System.ServiceModel.MessageHeaderAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
-- [保证服务的安全](../../../docs/framework/wcf/securing-services.md)
+- [保护服务](../../../docs/framework/wcf/securing-services.md)
 - [如何：设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [在协定和服务中指定和处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [使用消息约定](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [在协定和服务中指定并处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [使用消息协定](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

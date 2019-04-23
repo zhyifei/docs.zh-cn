@@ -3,10 +3,10 @@ title: 安全会话
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
 ms.openlocfilehash: 8f5cf9a965951bcc1049c2e96ae6cfa80b0113ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084945"
 ---
 # <a name="secure-sessions"></a>安全会话
@@ -21,8 +21,8 @@ Windows Communication Foundation (WCF) 的一项功能是保证按发送的顺�
 |-|-|  
 |[安全对话和安全会话](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)|安全对话和安全会话是同义词。 本主题解释安全对话的工作方式以及使用该模式的时机和原因。|  
 |[如何：创建安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)|演练创建安全会话的基本操作。|  
-|[如何：为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|演练创建能够保持状态以及与客户端之间会话的网络场的步骤。|  
-|[安全会话的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)|描述安全会话的特殊注意事项。|  
+|[如何：创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|演练创建能够保持状态以及与客户端之间会话的网络场的步骤。|  
+|[安全会话的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)|描述安全会话的特殊注意事项。|  
   
 ## <a name="reference"></a>参考  
  <xref:System.ServiceModel>  
@@ -36,6 +36,6 @@ Windows Communication Foundation (WCF) 的一项功能是保证按发送的顺�
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：启用消息重放检测](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)
-- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [如何：启用消息重播检测](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)
+- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [如何：创建要求会话的服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

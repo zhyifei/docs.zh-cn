@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
 ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091403"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 标记扩展
@@ -60,7 +60,7 @@ ms.locfileid: "59091403"
   
  `DynamicResource` 可以在对象元素语法中使用。 在这种情况下，指定的值<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>属性是必需的。  
   
- `DynamicResource` 此外可以在详细特性用法中，指定使用<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>属性作为属性 = 值对：  
+ `DynamicResource` 还可以在详细特性用法中使用，以便将 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 属性指定为一个 property=value 对：  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  

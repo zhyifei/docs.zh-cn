@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088829"
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
@@ -67,7 +67,7 @@ ms.locfileid: "59088829"
 >  machine.config 文件还包含 connectionStrings 节，此节包含 Visual Studio 使用的连接字符串。 当按提供程序名称从 Windows 应用程序中的 app.config 文件检索连接字符串时，首先加载 machine.config 中的连接字符串，然后加载 app.config 中的项。在 connectionStrings 元素删除所有继承自内存中数据结构的引用后将立即添加 clear ，以便只考虑在本地 app.config 文件中指定的连接字符串。  
   
 ### <a name="working-with-the-configuration-classes"></a>使用配置类  
- 从 .NET Framework 2.0 开始，当使用本地计算机上的配置文件时，将使用 <xref:System.Configuration.ConfigurationManager>，从而替换已不推荐使用的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 用于使用 ASP.NET 配置文件。 该管理器可以使用 Web 服务器上的配置文件，并允许以编程方式访问配置文件节（如 system.web）。  
+ 从 .NET Framework 2.0 开始，当使用本地计算机上的配置文件时，将使用 <xref:System.Configuration.ConfigurationManager>，从而替换已不推荐使用的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 与 ASP.NET 配置文件一起使用。 该管理器可以使用 Web 服务器上的配置文件，并允许以编程方式访问配置文件节（如 system.web）。  
   
 > [!NOTE]
 >  在运行时访问配置文件需要对调用方授予权限，根据应用程序类型、配置文件和位置确定所需的权限。 有关详细信息，请参阅[使用配置类](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))和 <xref:System.Web.Configuration.WebConfigurationManager>（对于 ASP.NET 应用程序），以及 <xref:System.Configuration.ConfigurationManager>（对于 Windows 应用程序）。  
@@ -174,6 +174,6 @@ ms.locfileid: "59088829"
 - [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [使用配置类](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [配置应用](../../../../docs/framework/configure-apps/index.md)
+- [配置应用程序](../../../../docs/framework/configure-apps/index.md)
 - [ASP.NET 网站管理](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

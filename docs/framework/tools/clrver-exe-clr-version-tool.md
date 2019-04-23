@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5543e49ea44c20a536a7097277b246d4041522a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28ac90eadcc7a13fe946aabf17973ebc602c9d4a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735420"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59084591"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe（CLR 版本工具）
 CLR 版本工具 (Clrver.exe) 报告计算机上的公共语言运行时 (CLR) 的所有已安装版本。  
@@ -57,5 +57,6 @@ clrver [option]
  `Clrver -all`  
   
 ## <a name="see-also"></a>请参阅
+
 - [工具](../../../docs/framework/tools/index.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

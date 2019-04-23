@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13640e508dafe28b53f4254656afe744b90a2eb2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491472"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59092261"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe（独立存储工具）
 独立存储工具列出或移除当前用户的所有现有存储。  
@@ -61,6 +61,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  实际上，是否为用户启用漫游并不会影响 Storeadm.exe 的管理。 在不使用任何选项的情况下运行此工具会向本地存储应用所有操作。 在使用 /roaming 选项的情况下运行此工具会将所有操作应用于可漫游的存储。 在使用 /machine 选项的情况下运行此工具会将所有操作应用于计算机存储。  
   
 ## <a name="see-also"></a>请参阅
+
 - [工具](../../../docs/framework/tools/index.md)
 - [独立存储](../../../docs/standard/io/isolated-storage.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

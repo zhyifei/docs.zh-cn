@@ -3,10 +3,10 @@ title: 安全 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089856"
 ---
 # <a name="security-overview"></a>安全性概述
@@ -41,7 +41,7 @@ ms.locfileid: "59089856"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[保证应用程序的安全](/visualstudio/ide/securing-applications)|包含一般安全性主题的链接， 还包含保护分布式应用程序、Web 应用程序、移动应用程序和桌面应用程序的主题的链接。|  
+|[保护应用程序](/visualstudio/ide/securing-applications)|包含一般安全性主题的链接， 还包含保护分布式应用程序、Web 应用程序、移动应用程序和桌面应用程序的主题的链接。|  
   
 ## <a name="code-access-security-cas"></a>代码访问安全性 (CAS)  
  代码访问安全性 (CAS) 是帮助限制代码对受保护资源和操作的访问权限的一种机制。 在 .NET Framework 中，CAS 执行下列功能：  
@@ -106,4 +106,4 @@ ms.locfileid: "59089856"
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [.NET 中的安全性](../../../standard/security/index.md)
 - [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

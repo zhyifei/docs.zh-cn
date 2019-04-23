@@ -3,10 +3,10 @@ title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
 ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094497"
 ---
 # <a name="facet"></a>facet
@@ -22,8 +22,8 @@ ms.locfileid: "59094497"
 |`Collation`|指定在对属性值执行比较和排序操作时要使用的排序序列。|`String`|  
 |`ConcurrencyMode`|表示应使用属性的值来进行开放式并发检查。|所有基元类型属性|  
 |`Default`|如果在安装时未提供值，则指定属性的默认值。|所有基元类型属性|  
-|`FixedLength`|指定属性值的长度是否可变。|`Binary`, `String`|  
-|`MaxLength`|指定属性值的最大长度。|`Binary`, `String`|  
+|`FixedLength`|指定属性值的长度是否可变。|`Binary`， `String`|  
+|`MaxLength`|指定属性值的最大长度。|`Binary`， `String`|  
 |`Nullable`|指定属性是否可以具有 null 值。|所有基元类型属性|  
 |`Precision`|对于类型 `Decimal` 的属性，指定属性值可以具有的位数。 对于类型 `Time`、`DateTime` 和 `DateTimeOffset` 的属性，指定属性值的秒的小数部分的位数。|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
 |`Scale`|指定属性值小数点右侧的位数。|十进制|  

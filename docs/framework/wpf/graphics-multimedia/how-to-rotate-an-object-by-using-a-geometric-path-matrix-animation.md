@@ -10,10 +10,10 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
 ms.openlocfilehash: 8f1b0ac42ea7509f8bc22b0bd2f50e2f96b5bee5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087880"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>如何：使用几何路径旋转对象（矩阵动画）
@@ -34,5 +34,5 @@ ms.locfileid: "59087880"
 ## <a name="see-also"></a>请参阅
 
 - [动画概述](animation-overview.md)
-- [路径动画帮助主题](path-animation-how-to-topics.md)
+- [路径动画操作说明主题](path-animation-how-to-topics.md)
 - [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)

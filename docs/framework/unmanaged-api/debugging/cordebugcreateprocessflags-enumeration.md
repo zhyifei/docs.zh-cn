@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83cee30ed9831accb96de17768f63e7f401908f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae3ba480e208762f5a80f9f1b78dd008f02b6df4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495940"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59089368"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags 枚举
 提供了更多调试选项，可在调用[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。  
@@ -50,4 +50,5 @@ typedef enum CorDebugCreateProcessFlags {
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

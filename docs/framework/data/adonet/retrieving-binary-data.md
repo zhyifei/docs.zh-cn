@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085969"
 ---
 # <a name="retrieving-binary-data"></a>检索二进制数据
@@ -156,4 +156,4 @@ connection.Close();
 ## <a name="see-also"></a>请参阅
 
 - [SQL Server 二进制和大值数据](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

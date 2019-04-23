@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086359"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 控件概述（Windows 窗体）
@@ -27,5 +27,5 @@ Windows 窗体<xref:System.Windows.Forms.Panel>控件用于提供可识别分组
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox 控件](groupbox-control-windows-forms.md)
-- [如何：通过使用设计器使用 Windows 窗体 Panel 控件对控件进行分组](group-controls-with-wf-panel-control-using-the-designer.md)
-- [如何：使用设计器设置 Windows 窗体面板的背景](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+- [如何：与使用设计器在 Windows 窗体面板控件的组控件](group-controls-with-wf-panel-control-using-the-designer.md)
+- [如何：设置使用设计器的 Windows 窗体面板的背景](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

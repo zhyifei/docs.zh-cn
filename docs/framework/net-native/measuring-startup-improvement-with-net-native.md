@@ -5,14 +5,14 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1484d50df51ea85a94da0aad1ebaab54b80a6ecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088283"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>使用 .NET Native 衡量启动改善
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 可显著提高应用程序的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] 显著地缩短了应用的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  
   
  为方便性能调查，.NET Framework 和 Windows 使用一个名为 Windows 事件跟踪 (ETW) 的事件框架，它允许你的应用在事件发生时通知工具。 然后你可以使用一个名为 PerfView 的工具查看和分析 ETW 事件。 该主题解释了如何：  
   
@@ -23,7 +23,7 @@ ms.locfileid: "59088283"
 -   使用 PerfView 来显示这些事件。  
   
 ## <a name="using-eventsource-to-emit-events"></a>使用 EventSource 来发出事件  
- <xref:System.Diagnostics.Tracing.EventSource> 提供用于创建自定义事件提供程序的基类。 通常，你可以创建 <xref:System.Diagnostics.Tracing.EventSource> 的一个子类并使用你自己的事件方法环绕 `Write*` 方法。 一个单独模式通常用于每个 <xref:System.Diagnostics.Tracing.EventSource>。  
+ <xref:System.Diagnostics.Tracing.EventSource> 提供了一个基类，从该基类可以创建自定义事件提供程序。 通常，你可以创建 <xref:System.Diagnostics.Tracing.EventSource> 的一个子类并使用你自己的事件方法环绕 `Write*` 方法。 一个单独模式通常用于每个 <xref:System.Diagnostics.Tracing.EventSource>。  
   
  例如，以下实例中的类可以用来衡量两个性能特征：  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  选中左窗格中列出的所有事件 (Ctrl-A) 并选择“Enter”键。 现在你能够查看每个事件的时间戳了。 这些时间戳是从跟踪开始算起的，所以你必须用进程的开始时间减去每个事件的时间，才能确定启动花费的时间。 如果你使用“Ctrl+单击”选中了两个时间戳，你会在页面底部看到在状态栏中显示的他们之间的区别。 这使得要在显示中查看任何两个事件之间的时间间隔变得简单（包括进程开始）。 你可以打开快捷菜单试图并在一些有用的选项中进行选择，比如导出到 CSV 文件或打开 Microsoft Excel 保存或处理这些数据。  
   
- 通过使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链在你的原始应用和构建的版本上重复这一步骤，你可以比较二者在性能上的差异。   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用通常比非-更快地启动[!INCLUDE[net_native](../../../includes/net-native-md.md)]应用。 如果你有兴趣更深入了解，PerfView 也可以识别你的应用代码中花费时间最多的部分。 有关详细信息，请观看 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)或读取 [Vance Morrison 的博客文章](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)。  
+ 通过使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链在你的原始应用和构建的版本上重复这一步骤，你可以比较二者在性能上的差异。   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用通常启动的速度比非-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用要快。 如果你有兴趣更深入了解，PerfView 也可以识别你的应用代码中花费时间最多的部分。 有关详细信息，请观看 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)或读取 [Vance Morrison 的博客文章](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)。  
   
 ## <a name="see-also"></a>请参阅
 

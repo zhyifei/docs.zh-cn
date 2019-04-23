@@ -1,5 +1,5 @@
 ---
-title: <remove> WebRequestModules （网络设置） 的
+title: webRequestModules 的 <remove> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 ms.openlocfilehash: c57e2849d608b1706c41beca91ff8026ebd9ca45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085390"
 ---
 # <a name="remove-element-for-webrequestmodules-network-settings"></a>\<删除 > webRequestModules （网络设置） 的
@@ -38,7 +38,7 @@ ms.locfileid: "59085390"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`prefix`|此 Web 请求模块处理的请求 URI 前缀。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "59085390"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定模块用于从网络主机请求信息。|  
   

@@ -3,12 +3,12 @@ title: 委托的常见模式
 description: 了解在代码中使用委托避免组件间强耦合的常见模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827015"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095693"
 ---
 # <a name="common-patterns-for-delegates"></a>委托的常见模式
 
@@ -70,7 +70,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 使用在核心框架中定义的委托类型，用户可更轻松地使用委托。 无需定义新类型，而且使用你库的开发者不需要学习新的专用委托类型。
 
-使用的接口尽可能小且灵活：若要创建新的输出记录器，必须创建一个方法。 该方法可以是静态方法或实例方法。 它可能具有任何访问权限。
+使用尽可能少的灵活接口：若要新建输出记录器，必须创建一种方法。 该方法可以是静态方法或实例方法。 它可能具有任何访问权限。
 
 ## <a name="formatting-output"></a>设置输出格式
 
@@ -98,7 +98,6 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 下面是基于文件的记录器：
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 创建此类后，可将它进行实例化，然后它会将 LogMessage 方法附加到记录器组件中：
 
@@ -154,4 +153,4 @@ public static void LogMessage(string msg)
 
 记录器类可在不引入重大更改的情况下进行任何数量的增强或更改。 与类相似，无法在没有重大更改的风险下修改公共 API。 但是，因为仅通过委托进行记录器和输出引擎之间的耦合，因此不涉及其他类型（如接口或基类）。 耦合度越小越好。
 
-[下一篇](events-overview.md)
+[下一页](events-overview.md)

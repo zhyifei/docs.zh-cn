@@ -3,10 +3,10 @@ title: 配置应用程序
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
 ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087165"
 ---
 # <a name="configuring-your-application"></a>配置应用程序
@@ -14,7 +14,7 @@ Windows Communication Foundation (WCF) 使用.NET 配置系统，并且允许您
   
  定义的 WCF 配置设置位于`<system.serviceModel>`节组。 有关如何配置 WCF 服务的详细信息，请参阅以下主题：  
   
--   [正在配置服务](../../../../docs/framework/wcf/configuring-services.md)  
+-   [配置服务](../../../../docs/framework/wcf/configuring-services.md)  
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
@@ -32,5 +32,5 @@ Windows Communication Foundation (WCF) 使用.NET 配置系统，并且允许您
 ## <a name="see-also"></a>请参阅
 
 - [配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [正在配置服务](../../../../docs/framework/wcf/configuring-services.md)
+- [配置服务](../../../../docs/framework/wcf/configuring-services.md)
 - [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

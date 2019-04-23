@@ -3,14 +3,14 @@ title: WF 中的流程图活动
 ms.date: 03/30/2017
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
 ms.openlocfilehash: e311c97a35acd8bc973b2833f1de1bc017682d64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084136"
 ---
 # <a name="flowchart-activities-in-wf"></a>WF 中的流程图活动
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供用于控制执行和分支流程图中的几个系统提供的活动。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供多个系统提供的活动，用于控制流程图中的执行和分支。  
   
 |||  
 |-|-|  

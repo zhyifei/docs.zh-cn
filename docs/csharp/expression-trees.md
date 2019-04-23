@@ -3,12 +3,12 @@ title: 表达式树
 description: 介绍 .NET Core 中的表达式树，以及如何用它们将代码表示为可以检查、修改和执行的结构。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125832"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59096610"
 ---
 # <a name="expression-trees"></a>表达式树
 
@@ -51,4 +51,3 @@ ms.locfileid: "58125832"
 7. [总结](expression-trees-summary.md)
 
     查看表达式树上的信息。
-    

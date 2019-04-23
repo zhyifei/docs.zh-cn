@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097403"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>获取 DbProviderFactory
@@ -42,7 +42,7 @@ ms.locfileid: "59097403"
 |列序号|列名称|示例输出|描述|  
 |--------------------|-----------------|--------------------|-----------------|  
 |0|**名称**|SqlClient Data Provider|数据提供程序的可读名称|  
-|1|**描述**|.Net Framework Data Provider for SqlServer|数据提供程序的可读说明|  
+|1|**说明**|.Net Framework Data Provider for SqlServer|数据提供程序的可读说明|  
 |2|**InvariantName**|System.Data.SqlClient|数据提供程序的名称，可用于以编程方式引用该数据提供程序|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|工厂类的完全限定名称，其中包含实例化对象所需的足够信息|  
   

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092183"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 帮助主题
@@ -19,7 +19,7 @@ ms.locfileid: "59092183"
   
 ## <a name="in-this-section"></a>本节内容  
  [从 RichTextBox 提取文本内容](how-to-extract-the-text-content-from-a-richtextbox.md)  
- [以编程方式更改 RichTextBox 中的选定内容](change-selection-in-a-richtextbox-programmatically.md)  
+ [以编程方式在 RichTextBox 中更改选定内容](change-selection-in-a-richtextbox-programmatically.md)  
  [保存、加载和打印 RichTextBox 内容](how-to-save-load-and-print-richtextbox-content.md)  
  [在 RichTextBox 中确定自定义上下文菜单的位置](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   

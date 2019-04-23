@@ -3,10 +3,10 @@ title: 连接字符串语法
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084946"
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
@@ -43,7 +43,7 @@ ms.locfileid: "59084946"
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` 引发异常时用于`OleDb`提供程序。  
+>  `Integrated Security=true` 用于 `OleDb` 提供程序时会引发异常。  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient 连接字符串  
 <xref:System.Data.SqlClient.SqlConnection> 连接字符串的语法记录在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 属性中。 您可以使用 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 属性来获取或设置 SQL Server 数据库的连接字符串。 如果您需要连接到早期版本的 SQL Server，则必须使用适用于 OleDb 的 .NET Framework 数据提供程序 (<xref:System.Data.OleDb>)。 大多数连接字符串关键字还会在 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 中映射为属性。  
@@ -111,9 +111,9 @@ Data Source=MySqlServer\MSSQL1;"
   
 |“强制协议加密”客户端设置|“信任服务器证书”客户端设置|“密加/使用数据加密”连接字符串/属性|“信任服务器证书”连接字符串/特性|结果|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
-|否|不可用|否（默认值）|忽略|不加密。|  
-|否|不可用|是|否（默认值）|只有在具有可验证的服务器证书的情况下才能进行加密，否则连接尝试将失败。|  
-|否|不可用|是|是|加密始终会发生，但可以使用自签名的服务器证书。|  
+|否|不适用|否（默认值）|忽略|不加密。|  
+|否|不适用|是|否（默认值）|只有在具有可验证的服务器证书的情况下才能进行加密，否则连接尝试将失败。|  
+|否|不适用|是|是|加密始终会发生，但可以使用自签名的服务器证书。|  
 |是|否|忽略|忽略|加密时发生才可验证的服务器证书;否则，连接尝试失败。|  
 |是|是|否（默认值）|忽略|加密始终会发生，但可以使用自签名的服务器证书。|  
 |是|是|是|否（默认值）|加密时发生才可验证的服务器证书;否则，连接尝试失败。|  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  它是可以提供连接信息**OleDbConnection**在通用数据链接 (UDL) 文件中; 但是您应避免这样做。 UDL 文件未加密，会以明文形式公开连接字符串信息。 因为 UDL 文件对您的应用程序来说是一个基于文件的外部资源，所以无法使用 .NET Framework 保护该文件。 不支持 UDL 文件**SqlClient**。  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>使用 DataDirectory 连接到 Access/Jet  
- `DataDirectory` 不是专用于`SqlClient`。 它还可以用于 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> .NET 数据提供程序。 下面的 <xref:System.Data.OleDb.OleDbConnection> 字符串示例演示连接到应用程序 app_data 文件夹中的 Northwind.mdb 所需的语法。 系统数据库 (System.mdw) 也存储在该位置。  
+ `DataDirectory` 不是 `SqlClient` 独占的。 它还可以用于 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> .NET 数据提供程序。 下面的 <xref:System.Data.OleDb.OleDbConnection> 字符串示例演示连接到应用程序 app_data 文件夹中的 Northwind.mdb 所需的语法。 系统数据库 (System.mdw) 也存储在该位置。  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -198,4 +198,4 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
 
 - [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)
 - [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

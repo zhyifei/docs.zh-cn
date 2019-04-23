@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089407"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>如何：使用 CompositionTarget 按每帧间隔呈现
@@ -43,4 +43,4 @@ ms.locfileid: "59089407"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Media.CompositionTarget>
-- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

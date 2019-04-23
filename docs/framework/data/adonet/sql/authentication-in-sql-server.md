@@ -3,10 +3,10 @@ title: SQL Server 中的身份验证
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084032"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
@@ -76,7 +76,7 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
   
 |资源|描述|  
 |--------------|-----------------|  
-|[   联机丛书中的 Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述登录和其他 SQL Server 中的安全主体。|  
+|[主体](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述登录和其他 SQL Server 中的安全主体。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -84,4 +84,4 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 - [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

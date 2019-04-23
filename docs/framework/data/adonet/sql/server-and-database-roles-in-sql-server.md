@@ -3,10 +3,10 @@ title: SQL Server 中的服务器和数据库角色
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087971"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的服务器和数据库角色
@@ -16,7 +16,7 @@ ms.locfileid: "59087971"
  固定服务器角色具有一组固定的权限，并且适用于整个服务器范围。 它们专门用于管理 SQL Server，且不能更改分配给它们的权限。 可以在数据库中不存在用户帐户的情况下向固定服务器角色分配登录。  
   
 > [!IMPORTANT]
->  `sysadmin` 固定服务器角色包含所有其他角色并且具有无限范围。 请不要将这些主体添加到此角色，除非它们是高度信任的。 `sysadmin` 角色成员具有对所有服务器数据库和资源的不可撤消管理权限。  
+>  `sysadmin` 固定服务器角色包含所有其他角色并且具有无限范围。 请不要将这些主体添加到此角色，除非它们是高度信任的。 `sysadmin` 角色成员对所有服务器数据库和资源有不可撤消的管理特权。  
   
  将用户添加到固定服务器角色时，请仔细选择。 例如，`bulkadmin` 角色允许用户将任意本地文件的内容插入表中，这样可能会损坏数据的完整性。 固定的服务器角色和权限的完整列表，请参阅 SQL Server 联机丛书。  
   
@@ -27,8 +27,8 @@ ms.locfileid: "59087971"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[   联机丛书中的 Server-Level Roles](/sql/relational-databases/security/authentication-access/server-level-roles)|介绍了固定的服务器角色和 SQL Server 中与之关联的权限。|  
-|[   联机丛书中的 Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles)|描述固定数据库角色及与其关联的权限|  
+|[服务器级别角色](/sql/relational-databases/security/authentication-access/server-level-roles)|介绍了固定的服务器角色和 SQL Server 中与之关联的权限。|  
+|[数据库级别角色](/sql/relational-databases/security/authentication-access/database-level-roles)|描述固定数据库角色及与其关联的权限|  
   
 ## <a name="database-roles-and-users"></a>数据库角色和用户  
  要使用数据库对象，必须将登录映射到数据库用户帐户。 这样就可以将数据库用户添加到数据库角色，从而继承与这些角色关联的任何权限集。 可以授予所有权限。  
@@ -59,7 +59,7 @@ ms.locfileid: "59087971"
 |资源|描述|  
 |--------------|-----------------|  
 |[数据库引擎权限入门](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含指向描述主体、角色、凭据、安全对象和权限的主题的链接。|  
-|[   联机丛书中的 Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
+|[主体](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
   
 ## <a name="see-also"></a>请参阅
 
@@ -68,4 +68,4 @@ ms.locfileid: "59087971"
 - [SQL Server 中的身份验证](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server 中的授权和权限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
