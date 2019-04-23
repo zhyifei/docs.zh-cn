@@ -18,21 +18,21 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 499ba1887846cc670dc763ec998ef335c17a9ae5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125991"
 ---
-# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="8b690-102">ICatalogServices::NotAutodone 方法</span><span class="sxs-lookup"><span data-stu-id="8b690-102">ICatalogServices::NotAutodone Method</span></span>
-<span data-ttu-id="8b690-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="8b690-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="87a25-102">ICatalogServices::NotAutodone 方法</span><span class="sxs-lookup"><span data-stu-id="87a25-102">ICatalogServices::NotAutodone Method</span></span>
+<span data-ttu-id="87a25-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="87a25-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b690-104">语法</span><span class="sxs-lookup"><span data-stu-id="8b690-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87a25-104">语法</span><span class="sxs-lookup"><span data-stu-id="87a25-104">Syntax</span></span>  
   
 ```  
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8b690-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="8b690-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87a25-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="87a25-105">See also</span></span>
 
-- [<span data-ttu-id="8b690-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="8b690-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="87a25-106">承载接口</span><span class="sxs-lookup"><span data-stu-id="87a25-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

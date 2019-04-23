@@ -14,35 +14,35 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
 ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126108"
 ---
-# <a name="how-to-define-an-operator-visual-basic"></a><span data-ttu-id="52910-102">如何：定义运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52910-102">How to: Define an Operator (Visual Basic)</span></span>
-<span data-ttu-id="52910-103">如果已定义的类或结构，可以定义标准运算符的行为 (如`*`， `<>`，或`And`) 当一个或两个操作数是类或结构的类型。</span><span class="sxs-lookup"><span data-stu-id="52910-103">If you have defined a class or structure, you can define the behavior of a standard operator (such as `*`, `<>`, or `And`) when one or both of the operands is of the type of your class or structure.</span></span>  
+# <a name="how-to-define-an-operator-visual-basic"></a><span data-ttu-id="129cc-102">如何：定义运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="129cc-102">How to: Define an Operator (Visual Basic)</span></span>
+<span data-ttu-id="129cc-103">如果已定义的类或结构，可以定义标准运算符的行为 (如`*`， `<>`，或`And`) 当一个或两个操作数是类或结构的类型。</span><span class="sxs-lookup"><span data-stu-id="129cc-103">If you have defined a class or structure, you can define the behavior of a standard operator (such as `*`, `<>`, or `And`) when one or both of the operands is of the type of your class or structure.</span></span>  
   
- <span data-ttu-id="52910-104">标准运算符定义为类或结构中的运算符过程。</span><span class="sxs-lookup"><span data-stu-id="52910-104">Define the standard operator as an operator procedure within the class or structure.</span></span> <span data-ttu-id="52910-105">所有运算符过程都必须都是`Public` `Shared`。</span><span class="sxs-lookup"><span data-stu-id="52910-105">All operator procedures must be `Public` `Shared`.</span></span>  
+ <span data-ttu-id="129cc-104">标准运算符定义为类或结构中的运算符过程。</span><span class="sxs-lookup"><span data-stu-id="129cc-104">Define the standard operator as an operator procedure within the class or structure.</span></span> <span data-ttu-id="129cc-105">所有运算符过程都必须都是`Public` `Shared`。</span><span class="sxs-lookup"><span data-stu-id="129cc-105">All operator procedures must be `Public` `Shared`.</span></span>  
   
- <span data-ttu-id="52910-106">在类或结构上定义一个运算符也称为*重载*运算符。</span><span class="sxs-lookup"><span data-stu-id="52910-106">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
+ <span data-ttu-id="129cc-106">在类或结构上定义一个运算符也称为*重载*运算符。</span><span class="sxs-lookup"><span data-stu-id="129cc-106">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="52910-107">示例</span><span class="sxs-lookup"><span data-stu-id="52910-107">Example</span></span>  
- <span data-ttu-id="52910-108">下面的示例定义`+`调用的运算符为结构`height`。</span><span class="sxs-lookup"><span data-stu-id="52910-108">The following example defines the `+` operator for a structure called `height`.</span></span> <span data-ttu-id="52910-109">该结构的高度以英尺、 英寸为单位。</span><span class="sxs-lookup"><span data-stu-id="52910-109">The structure uses heights measured in feet and inches.</span></span> <span data-ttu-id="52910-110">一个*英寸*2.54 厘米和一个*foot*为 12 英寸。</span><span class="sxs-lookup"><span data-stu-id="52910-110">One *inch* is 2.54 centimeters, and one *foot* is 12 inches.</span></span> <span data-ttu-id="52910-111">若要确保规范化的值 (英寸 < 12.0)，该构造函数执行*取模*12 的运算。</span><span class="sxs-lookup"><span data-stu-id="52910-111">To ensure normalized values (inches < 12.0), the constructor performs *modulo* 12 arithmetic.</span></span> <span data-ttu-id="52910-112">`+`运算符使用构造函数生成规范化的值。</span><span class="sxs-lookup"><span data-stu-id="52910-112">The `+` operator uses the constructor to generate normalized values.</span></span>  
+## <a name="example"></a><span data-ttu-id="129cc-107">示例</span><span class="sxs-lookup"><span data-stu-id="129cc-107">Example</span></span>  
+ <span data-ttu-id="129cc-108">下面的示例定义`+`调用的运算符为结构`height`。</span><span class="sxs-lookup"><span data-stu-id="129cc-108">The following example defines the `+` operator for a structure called `height`.</span></span> <span data-ttu-id="129cc-109">该结构的高度以英尺、 英寸为单位。</span><span class="sxs-lookup"><span data-stu-id="129cc-109">The structure uses heights measured in feet and inches.</span></span> <span data-ttu-id="129cc-110">一个*英寸*2.54 厘米和一个*foot*为 12 英寸。</span><span class="sxs-lookup"><span data-stu-id="129cc-110">One *inch* is 2.54 centimeters, and one *foot* is 12 inches.</span></span> <span data-ttu-id="129cc-111">若要确保规范化的值 (英寸 < 12.0)，该构造函数执行*取模*12 的运算。</span><span class="sxs-lookup"><span data-stu-id="129cc-111">To ensure normalized values (inches < 12.0), the constructor performs *modulo* 12 arithmetic.</span></span> <span data-ttu-id="129cc-112">`+`运算符使用构造函数生成规范化的值。</span><span class="sxs-lookup"><span data-stu-id="129cc-112">The `+` operator uses the constructor to generate normalized values.</span></span>  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
- <span data-ttu-id="52910-113">可以测试结构`height`用下面的代码。</span><span class="sxs-lookup"><span data-stu-id="52910-113">You can test the structure `height` with the following code.</span></span>  
+ <span data-ttu-id="129cc-113">可以测试结构`height`用下面的代码。</span><span class="sxs-lookup"><span data-stu-id="129cc-113">You can test the structure `height` with the following code.</span></span>  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 
-## <a name="see-also"></a><span data-ttu-id="52910-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="52910-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="129cc-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="129cc-114">See also</span></span>
 
-- [<span data-ttu-id="52910-115">运算符过程</span><span class="sxs-lookup"><span data-stu-id="52910-115">Operator Procedures</span></span>](./operator-procedures.md)
-- [<span data-ttu-id="52910-116">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="52910-116">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)
-- [<span data-ttu-id="52910-117">如何：调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="52910-117">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
-- [<span data-ttu-id="52910-118">如何：使用定义运算符的类</span><span class="sxs-lookup"><span data-stu-id="52910-118">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
-- [<span data-ttu-id="52910-119">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="52910-119">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [<span data-ttu-id="52910-120">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="52910-120">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [<span data-ttu-id="52910-121">如何：声明结构</span><span class="sxs-lookup"><span data-stu-id="52910-121">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [<span data-ttu-id="52910-122">Mod 运算符</span><span class="sxs-lookup"><span data-stu-id="52910-122">Mod Operator</span></span>](../../../../visual-basic/language-reference/operators/mod-operator.md)
+- [<span data-ttu-id="129cc-115">运算符过程</span><span class="sxs-lookup"><span data-stu-id="129cc-115">Operator Procedures</span></span>](./operator-procedures.md)
+- [<span data-ttu-id="129cc-116">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="129cc-116">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)
+- [<span data-ttu-id="129cc-117">如何：调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="129cc-117">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
+- [<span data-ttu-id="129cc-118">如何：使用定义运算符的类</span><span class="sxs-lookup"><span data-stu-id="129cc-118">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
+- [<span data-ttu-id="129cc-119">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="129cc-119">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [<span data-ttu-id="129cc-120">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="129cc-120">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="129cc-121">如何：声明结构</span><span class="sxs-lookup"><span data-stu-id="129cc-121">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="129cc-122">Mod 运算符</span><span class="sxs-lookup"><span data-stu-id="129cc-122">Mod Operator</span></span>](../../../../visual-basic/language-reference/operators/mod-operator.md)

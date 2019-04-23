@@ -17,34 +17,34 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 014e5c9951091046ae07374794743e82affcd5ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122260"
 ---
-# <a name="ihostcontrol-interface"></a><span data-ttu-id="1df94-102">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="1df94-102">IHostControl Interface</span></span>
-<span data-ttu-id="1df94-103">提供用于配置加载的程序集，以及用于确定主机支持的托管接口的方法。</span><span class="sxs-lookup"><span data-stu-id="1df94-103">Provides methods for configuring the loading of assemblies, and for determining which hosting interfaces the host supports.</span></span>  
+# <a name="ihostcontrol-interface"></a><span data-ttu-id="4d517-102">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="4d517-102">IHostControl Interface</span></span>
+<span data-ttu-id="4d517-103">提供用于配置加载的程序集，以及用于确定主机支持的托管接口的方法。</span><span class="sxs-lookup"><span data-stu-id="4d517-103">Provides methods for configuring the loading of assemblies, and for determining which hosting interfaces the host supports.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1df94-104">方法</span><span class="sxs-lookup"><span data-stu-id="1df94-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4d517-104">方法</span><span class="sxs-lookup"><span data-stu-id="4d517-104">Methods</span></span>  
   
-|<span data-ttu-id="1df94-105">方法</span><span class="sxs-lookup"><span data-stu-id="1df94-105">Method</span></span>|<span data-ttu-id="1df94-106">描述</span><span class="sxs-lookup"><span data-stu-id="1df94-106">Description</span></span>|  
+|<span data-ttu-id="4d517-105">方法</span><span class="sxs-lookup"><span data-stu-id="4d517-105">Method</span></span>|<span data-ttu-id="4d517-106">描述</span><span class="sxs-lookup"><span data-stu-id="4d517-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1df94-107">GetHostManager 方法</span><span class="sxs-lookup"><span data-stu-id="1df94-107">GetHostManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-gethostmanager-method.md)|<span data-ttu-id="1df94-108">获取具有指定的接口指针接口的主机的实现`IID`。</span><span class="sxs-lookup"><span data-stu-id="1df94-108">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>|  
-|[<span data-ttu-id="1df94-109">SetAppDomainManager 方法</span><span class="sxs-lookup"><span data-stu-id="1df94-109">SetAppDomainManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)|<span data-ttu-id="1df94-110">通知主机应用程序域已创建。</span><span class="sxs-lookup"><span data-stu-id="1df94-110">Notifies the host that an application domain has been created.</span></span>|  
+|[<span data-ttu-id="4d517-107">GetHostManager 方法</span><span class="sxs-lookup"><span data-stu-id="4d517-107">GetHostManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-gethostmanager-method.md)|<span data-ttu-id="4d517-108">获取具有指定的接口指针接口的主机的实现`IID`。</span><span class="sxs-lookup"><span data-stu-id="4d517-108">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>|  
+|[<span data-ttu-id="4d517-109">SetAppDomainManager 方法</span><span class="sxs-lookup"><span data-stu-id="4d517-109">SetAppDomainManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)|<span data-ttu-id="4d517-110">通知主机应用程序域已创建。</span><span class="sxs-lookup"><span data-stu-id="4d517-110">Notifies the host that an application domain has been created.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1df94-111">要求</span><span class="sxs-lookup"><span data-stu-id="1df94-111">Requirements</span></span>  
- <span data-ttu-id="1df94-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1df94-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d517-111">要求</span><span class="sxs-lookup"><span data-stu-id="4d517-111">Requirements</span></span>  
+ <span data-ttu-id="4d517-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4d517-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1df94-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1df94-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4d517-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4d517-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1df94-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="1df94-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4d517-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4d517-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="1df94-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="1df94-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="4d517-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d517-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1df94-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="1df94-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d517-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d517-116">See also</span></span>
 
 - <xref:System.AppDomainManager>
-- [<span data-ttu-id="1df94-117">ICLRRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="1df94-117">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [<span data-ttu-id="1df94-118">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="1df94-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="1df94-119">承载接口</span><span class="sxs-lookup"><span data-stu-id="1df94-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="4d517-117">ICLRRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="4d517-117">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="4d517-118">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="4d517-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="4d517-119">承载接口</span><span class="sxs-lookup"><span data-stu-id="4d517-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

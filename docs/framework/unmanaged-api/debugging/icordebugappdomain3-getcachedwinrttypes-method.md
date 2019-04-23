@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73a08e83d67c973294938a030b95b906aec6be6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126602"
 ---
-# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="8cf89-102">ICorDebugAppDomain3::GetCachedWinRTTypes 方法</span><span class="sxs-lookup"><span data-stu-id="8cf89-102">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
-<span data-ttu-id="8cf89-103">获取所有缓存的枚举器[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。</span><span class="sxs-lookup"><span data-stu-id="8cf89-103">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>  
+# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="e7039-102">ICorDebugAppDomain3::GetCachedWinRTTypes 方法</span><span class="sxs-lookup"><span data-stu-id="e7039-102">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
+<span data-ttu-id="e7039-103">获取所有缓存的枚举器[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。</span><span class="sxs-lookup"><span data-stu-id="e7039-103">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8cf89-104">语法</span><span class="sxs-lookup"><span data-stu-id="8cf89-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7039-104">语法</span><span class="sxs-lookup"><span data-stu-id="e7039-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachedWinRTTypes (   
@@ -35,19 +35,19 @@ HRESULT GetCachedWinRTTypes (
 ;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8cf89-105">参数</span><span class="sxs-lookup"><span data-stu-id="8cf89-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e7039-105">参数</span><span class="sxs-lookup"><span data-stu-id="e7039-105">Parameters</span></span>  
  `ppGuidToTypeEnum`  
- <span data-ttu-id="8cf89-106">[out]一个指向[ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)接口对象的可枚举的托管的表示形式[!INCLUDE[wrt](../../../../includes/wrt-md.md)]应用程序域中当前加载的类型。</span><span class="sxs-lookup"><span data-stu-id="8cf89-106">[out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.</span></span>  
+ <span data-ttu-id="e7039-106">[out]一个指向[ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)接口对象的可枚举的托管的表示形式[!INCLUDE[wrt](../../../../includes/wrt-md.md)]应用程序域中当前加载的类型。</span><span class="sxs-lookup"><span data-stu-id="e7039-106">[out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8cf89-107">要求</span><span class="sxs-lookup"><span data-stu-id="8cf89-107">Requirements</span></span>  
- **<span data-ttu-id="8cf89-108">平台：</span><span class="sxs-lookup"><span data-stu-id="8cf89-108">Platforms:</span></span>** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+## <a name="requirements"></a><span data-ttu-id="e7039-107">要求</span><span class="sxs-lookup"><span data-stu-id="e7039-107">Requirements</span></span>  
+ <span data-ttu-id="e7039-108">**平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7039-108">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
   
- <span data-ttu-id="8cf89-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8cf89-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e7039-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7039-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8cf89-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8cf89-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e7039-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7039-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="8cf89-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="8cf89-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="e7039-111">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7039-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cf89-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="8cf89-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7039-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e7039-112">See also</span></span>
 
-- [<span data-ttu-id="8cf89-113">ICorDebugAppDomain3 接口</span><span class="sxs-lookup"><span data-stu-id="8cf89-113">ICorDebugAppDomain3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [<span data-ttu-id="e7039-113">ICorDebugAppDomain3 接口</span><span class="sxs-lookup"><span data-stu-id="e7039-113">ICorDebugAppDomain3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

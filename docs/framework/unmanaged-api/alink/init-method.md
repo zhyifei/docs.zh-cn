@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 60602462376543fe934bb3c58bc4988fa8ab34bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119361"
 ---
-# <a name="init-method"></a><span data-ttu-id="afd64-102">Init 方法</span><span class="sxs-lookup"><span data-stu-id="afd64-102">Init Method</span></span>
-<span data-ttu-id="afd64-103">准备实现的对象[IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)供使用。</span><span class="sxs-lookup"><span data-stu-id="afd64-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
+# <a name="init-method"></a><span data-ttu-id="7b419-102">Init 方法</span><span class="sxs-lookup"><span data-stu-id="7b419-102">Init Method</span></span>
+<span data-ttu-id="7b419-103">准备实现的对象[IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)供使用。</span><span class="sxs-lookup"><span data-stu-id="7b419-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afd64-104">语法</span><span class="sxs-lookup"><span data-stu-id="afd64-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b419-104">语法</span><span class="sxs-lookup"><span data-stu-id="7b419-104">Syntax</span></span>  
   
 ```  
 HRESULT Init(  
@@ -35,21 +35,21 @@ HRESULT Init(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="afd64-105">参数</span><span class="sxs-lookup"><span data-stu-id="afd64-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7b419-105">参数</span><span class="sxs-lookup"><span data-stu-id="7b419-105">Parameters</span></span>  
  `pDispenser`  
- <span data-ttu-id="afd64-106">[IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)指向元数据分配器。</span><span class="sxs-lookup"><span data-stu-id="afd64-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
+ <span data-ttu-id="7b419-106">[IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)指向元数据分配器。</span><span class="sxs-lookup"><span data-stu-id="7b419-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
   
  `pErrorHandler`  
- <span data-ttu-id="afd64-107">[IMetaDataError 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)对可选错误处理接口的指针。</span><span class="sxs-lookup"><span data-stu-id="afd64-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
+ <span data-ttu-id="7b419-107">[IMetaDataError 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)对可选错误处理接口的指针。</span><span class="sxs-lookup"><span data-stu-id="7b419-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="afd64-108">返回值</span><span class="sxs-lookup"><span data-stu-id="afd64-108">Return Value</span></span>  
- <span data-ttu-id="afd64-109">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="afd64-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7b419-108">返回值</span><span class="sxs-lookup"><span data-stu-id="7b419-108">Return Value</span></span>  
+ <span data-ttu-id="7b419-109">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="7b419-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="afd64-110">要求</span><span class="sxs-lookup"><span data-stu-id="afd64-110">Requirements</span></span>  
- <span data-ttu-id="afd64-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="afd64-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b419-110">要求</span><span class="sxs-lookup"><span data-stu-id="7b419-110">Requirements</span></span>  
+ <span data-ttu-id="7b419-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="7b419-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="afd64-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="afd64-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b419-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="7b419-112">See also</span></span>
 
-- [<span data-ttu-id="afd64-113">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="afd64-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="afd64-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="afd64-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="afd64-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="afd64-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="7b419-113">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="7b419-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="7b419-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="7b419-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="7b419-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="7b419-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
