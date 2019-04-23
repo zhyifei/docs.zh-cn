@@ -14,31 +14,31 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
 ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094939"
 ---
-# <a name="how-to-print-with-a-webbrowser-control"></a><span data-ttu-id="2c1ed-102">如何：使用 WebBrowser 控件打印</span><span class="sxs-lookup"><span data-stu-id="2c1ed-102">How to: Print with a WebBrowser Control</span></span>
-<span data-ttu-id="2c1ed-103">下面的代码示例演示如何使用<xref:System.Windows.Forms.WebBrowser>控件才能进行打印但不显示该网页。</span><span class="sxs-lookup"><span data-stu-id="2c1ed-103">The following code example demonstrates how use the <xref:System.Windows.Forms.WebBrowser> control to print a Web page without displaying it.</span></span>  
+# <a name="how-to-print-with-a-webbrowser-control"></a><span data-ttu-id="a2a3b-102">如何：使用 WebBrowser 控件打印</span><span class="sxs-lookup"><span data-stu-id="a2a3b-102">How to: Print with a WebBrowser Control</span></span>
+<span data-ttu-id="a2a3b-103">下面的代码示例演示如何使用<xref:System.Windows.Forms.WebBrowser>控件才能进行打印但不显示该网页。</span><span class="sxs-lookup"><span data-stu-id="a2a3b-103">The following code example demonstrates how use the <xref:System.Windows.Forms.WebBrowser> control to print a Web page without displaying it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2c1ed-104">示例</span><span class="sxs-lookup"><span data-stu-id="2c1ed-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a2a3b-104">示例</span><span class="sxs-lookup"><span data-stu-id="a2a3b-104">Example</span></span>  
  [!code-csharp[WebBrowserMisc#10](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
  [!code-vb[WebBrowserMisc#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#10)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2c1ed-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="2c1ed-105">Compiling the Code</span></span>  
- <span data-ttu-id="2c1ed-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="2c1ed-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a2a3b-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="a2a3b-105">Compiling the Code</span></span>  
+ <span data-ttu-id="a2a3b-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a2a3b-106">This example requires:</span></span>  
   
--   <span data-ttu-id="2c1ed-107">对 `System` 和 `System.Windows.Forms` 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="2c1ed-107">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+-   <span data-ttu-id="a2a3b-107">对 `System` 和 `System.Windows.Forms` 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="a2a3b-107">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c1ed-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="2c1ed-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2a3b-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="a2a3b-108">See also</span></span>
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Print%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [<span data-ttu-id="2c1ed-109">如何：使用 WebBrowser 控件导航到 URL</span><span class="sxs-lookup"><span data-stu-id="2c1ed-109">How to: Navigate to a URL with the WebBrowser Control</span></span>](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [<span data-ttu-id="2c1ed-110">如何：向 Windows 窗体应用程序添加 Web 浏览器功能</span><span class="sxs-lookup"><span data-stu-id="2c1ed-110">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [<span data-ttu-id="2c1ed-111">如何：在 Windows 窗体应用程序中创建 HTML 文档查看器</span><span class="sxs-lookup"><span data-stu-id="2c1ed-111">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [<span data-ttu-id="2c1ed-112">WebBrowser 控件概述</span><span class="sxs-lookup"><span data-stu-id="2c1ed-112">WebBrowser Control Overview</span></span>](webbrowser-control-overview.md)
-- [<span data-ttu-id="2c1ed-113">WebBrowser 安全</span><span class="sxs-lookup"><span data-stu-id="2c1ed-113">WebBrowser Security</span></span>](webbrowser-security.md)
+- [<span data-ttu-id="a2a3b-109">如何：导航到使用 WebBrowser 控件的 URL</span><span class="sxs-lookup"><span data-stu-id="a2a3b-109">How to: Navigate to a URL with the WebBrowser Control</span></span>](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [<span data-ttu-id="a2a3b-110">如何：将 Web 浏览器功能添加到 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a2a3b-110">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [<span data-ttu-id="a2a3b-111">如何：在 Windows 窗体应用程序中创建 HTML 文档查看器</span><span class="sxs-lookup"><span data-stu-id="a2a3b-111">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [<span data-ttu-id="a2a3b-112">WebBrowser 控件概述</span><span class="sxs-lookup"><span data-stu-id="a2a3b-112">WebBrowser Control Overview</span></span>](webbrowser-control-overview.md)
+- [<span data-ttu-id="a2a3b-113">WebBrowser 安全</span><span class="sxs-lookup"><span data-stu-id="a2a3b-113">WebBrowser Security</span></span>](webbrowser-security.md)

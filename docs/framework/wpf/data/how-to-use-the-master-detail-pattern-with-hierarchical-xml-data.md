@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
 ms.openlocfilehash: ba6c932f519ffa5c3c70ecb21eb9b5d08c40fb28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086255"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a><span data-ttu-id="893a6-102">如何：将主-详细模式与分层 XML 数据结合使用</span><span class="sxs-lookup"><span data-stu-id="893a6-102">How to: Use the Master-Detail Pattern with Hierarchical XML Data</span></span>
-<span data-ttu-id="893a6-103">此示例演示如何使用 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据实现主 - 从方案。</span><span class="sxs-lookup"><span data-stu-id="893a6-103">This example shows how to implement the master-detail scenario with [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span>  
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a><span data-ttu-id="9bafe-102">如何：将主-详细模式与分层 XML 数据结合使用</span><span class="sxs-lookup"><span data-stu-id="9bafe-102">How to: Use the Master-Detail Pattern with Hierarchical XML Data</span></span>
+<span data-ttu-id="9bafe-103">此示例演示如何使用 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据实现主 - 从方案。</span><span class="sxs-lookup"><span data-stu-id="9bafe-103">This example shows how to implement the master-detail scenario with [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="893a6-104">示例</span><span class="sxs-lookup"><span data-stu-id="893a6-104">Example</span></span>  
- <span data-ttu-id="893a6-105">此示例是[对分层数据使用主-从模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)中讨论的示例的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="893a6-105">This example is the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data version of the example discussed in [Use the Master-Detail Pattern with Hierarchical Data](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span></span> <span data-ttu-id="893a6-106">在此示例中，数据来自文件 `League.xml`。</span><span class="sxs-lookup"><span data-stu-id="893a6-106">In this example, the data is from the file `League.xml`.</span></span> <span data-ttu-id="893a6-107">请注意第三个 <xref:System.Windows.Controls.ListBox> 控件如何通过绑定到 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 属性来跟踪第二个 <xref:System.Windows.Controls.ListBox> 中的选择变化。</span><span class="sxs-lookup"><span data-stu-id="893a6-107">Note how the third <xref:System.Windows.Controls.ListBox> control tracks selection changes in the second <xref:System.Windows.Controls.ListBox> by binding to its <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="9bafe-104">示例</span><span class="sxs-lookup"><span data-stu-id="9bafe-104">Example</span></span>  
+ <span data-ttu-id="9bafe-105">此示例是[对分层数据使用主-从模式](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)中讨论的示例的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="9bafe-105">This example is the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data version of the example discussed in [Use the Master-Detail Pattern with Hierarchical Data](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span></span> <span data-ttu-id="9bafe-106">在此示例中，数据来自文件 `League.xml`。</span><span class="sxs-lookup"><span data-stu-id="9bafe-106">In this example, the data is from the file `League.xml`.</span></span> <span data-ttu-id="9bafe-107">请注意第三个 <xref:System.Windows.Controls.ListBox> 控件如何通过绑定到 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 属性来跟踪第二个 <xref:System.Windows.Controls.ListBox> 中的选择变化。</span><span class="sxs-lookup"><span data-stu-id="9bafe-107">Note how the third <xref:System.Windows.Controls.ListBox> control tracks selection changes in the second <xref:System.Windows.Controls.ListBox> by binding to its <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property.</span></span>  
   
  [!code-xaml[MasterDetailXml#HowTo1](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
 [!code-xaml[MasterDetailXml#HowTo2](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
   
-## <a name="see-also"></a><span data-ttu-id="893a6-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="893a6-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bafe-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="9bafe-108">See also</span></span>
 
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [<span data-ttu-id="893a6-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="893a6-109">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="9bafe-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="9bafe-109">How-to Topics</span></span>](data-binding-how-to-topics.md)
