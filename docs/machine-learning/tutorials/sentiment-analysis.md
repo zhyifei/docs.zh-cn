@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303110"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612090"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -33,7 +33,7 @@ ms.locfileid: "59303110"
 
 ## <a name="sentiment-analysis-sample-overview"></a>情绪分析示例概述
 
-该示例是使用 ML.NET 定型模型的控制台应用，以将情绪分类和预测为正面或负面。 Yelp 情绪数据集来自加利福尼亚大学欧文分校 (UCI)，它分为训练数据集和测试数据集。 示例还使用测试数据集评估模型用于质量分析。 
+该示例是使用 ML.NET 定型模型的控制台应用，以将情绪分类和预测为正面或负面。 Yelp 情绪数据集来自加利福尼亚大学欧文分校 (UCI)，它分为训练数据集和测试数据集。 示例还使用测试数据集评估模型用于质量分析。
 
 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
 
@@ -53,11 +53,11 @@ ms.locfileid: "59303110"
 2. **准备数据**
    * **加载数据**
    * **提取功能（转换数据）**
-3. **生成和定型** 
+3. **生成并定型**
    * **定型模型**
    * **评估模型**
 4. **部署模型**
-   * **使用模型进行预测**
+   * **使用模型来预测**
 
 ### <a name="understand-the-problem"></a>了解问题
 
@@ -96,7 +96,7 @@ ms.locfileid: "59303110"
 * 二元：A 或 B。
 * 多类：可以通过使用单个模型来预测多个类别。
 
-由于需要将网站评论分为正面或负面，因此使用二元分类算法。 
+由于需要将网站评论分为正面或负面，因此使用二元分类算法。
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>加载数据
 
-由于先前创建的 `SentimentData` 数据模型类型与数据集架构匹配，因此可使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的 `MLContext.Data.LoadFromTextFile` 包装器，将初始化、映射和数据集加载合并到一行代码中。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 
+由于先前创建的 `SentimentData` 数据模型类型与数据集架构匹配，因此可使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的 `MLContext.Data.LoadFromTextFile` 包装器，将初始化、映射和数据集加载合并到一行代码中。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。
 
- 作为 `Transforms` 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
+作为 `Transforms` 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
 在 ML.NET 中，数据类似于 SQL 视图。 它是异源数据，会延迟计算并进行架构化。 该对象是管道的第一部分，并加载数据。 对于本教程，它会加载具有注释和相应正面或负面情绪的数据集。 这用于创建模型并对其进行定型。
 
- 将以下代码添加为 `LoadData` 方法的首行：
+将以下代码添加为 `LoadData` 方法的首行：
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>拆分数据集以进行模型训练和测试
 
-接下来，需要使用训练数据集来训练型模型，也需要使用测试数据集来评估模型。 使用包装 <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> 的 `MLContext.BinaryClassification.TrainTestSplit` 将已加载的数据集拆分为训练数据集和测试数据集，并将它们返回到 <xref:Microsoft.ML.TrainCatalogBase.TrainTestData> 内。 可以使用 `testFraction` 参数指定测试集的部分数据。 默认为 10%，但在本例中使用 20% 的数据，通过更多数据进行评估。  
+接下来，需要使用训练数据集来训练型模型，也需要使用测试数据集来评估模型。 使用包装 <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> 的 `MLContext.BinaryClassification.TrainTestSplit` 将已加载的数据集拆分为训练数据集和测试数据集，并将它们返回到 <xref:Microsoft.ML.TrainCatalogBase.TrainTestData> 内。 可以使用 `testFraction` 参数指定测试集的部分数据。 默认为 10%，但在本例中使用 20% 的数据，通过更多数据进行评估。
 
 要将加载的数据拆分为所需的数据集，请添加以下代码作为 `LoadData` 方法中的下一行：
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-请注意，传递到 Train 方法的两个参数；`MLContext` 用于上下文 (`mlContext`)，`IDataView` 用于训练数据集 (`splitTrainSet`)。 
+请注意，传递到 Train 方法的两个参数；`MLContext` 用于上下文 (`mlContext`)，`IDataView` 用于训练数据集 (`splitTrainSet`)。
 
 ## <a name="extract-and-transform-the-data"></a>提取和转换数据
 
@@ -353,7 +354,7 @@ private static void UseModelWithSingleItem(MLContext mlContext, ITransformer mod
 虽然 `model` 是对多行数据进行操作的 `transformer`，但是一个非常常见的生产场景是，需要对单个示例进行预测。 <xref:Microsoft.ML.PredictionEngine%602> 是从 `CreatePredictionEngine` 方法返回的包装器。 让我们添加以下代码来创建 `PredictionEngine`，作为 `Predict` 方法中的第一行：
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 通过创建一个 `SentimentData` 实例，在 `Predict` 方法中添加一个注释来测试定型模型的预测：
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-祝贺你！ 现在，你已成功生成用于分类和预测消息情绪的机器学习模型。 
+祝贺你！ 现在，你已成功生成用于分类和预测消息情绪的机器学习模型。
 
 生成成功的模型是一个迭代过程。 由于本教程使用小型数据集来提供快速模型训练，因此该模型的初始质量较低。 如果对模型质量不满意，可以通过尝试提供更大的训练数据集，或通过为每种算法选择具有不同超参数的不同训练算法来改进它。
 
@@ -459,6 +460,7 @@ Press any key to continue . . .
 ## <a name="next-steps"></a>后续步骤
 
 在本教程中，你将了解：
+
 > [!div class="checklist"]
 > * 了解问题
 > * 选择适当的机器学习算法
@@ -470,5 +472,6 @@ Press any key to continue . . .
 > * 使用加载模型部署和预测
 
 进入下一教程了解详细信息
+
 > [!div class="nextstepaction"]
 > [问题分类](github-issue-classification.md)

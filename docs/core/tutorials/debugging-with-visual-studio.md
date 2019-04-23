@@ -3,12 +3,12 @@ title: 使用 Visual Studio 2017 调试 Hello World .NET Core 应用程序
 description: 了解如何使用 Visual Studio 2017 调试用 C# 或 Visual Basic 编写的 Hello World 应用程序。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463418"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610712"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 调试 C# 或Visual Basic .NET Core Hello World 应用程序
 
@@ -154,6 +154,7 @@ ms.locfileid: "58463418"
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![在执行语句后返回值 true 的即时窗口 - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. 选择工具栏上的“继续”按钮，继续执行程序。

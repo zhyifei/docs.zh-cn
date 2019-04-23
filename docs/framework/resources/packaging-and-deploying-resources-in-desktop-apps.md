@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357854"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611388"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>打包和部署 .NET 应用中的资源
 
@@ -226,6 +226,7 @@ vbc Example1.vb
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>建议的打包替代项
 
 由于时间或预算约束，可能无法为应用程序支持的每个子区域性均创建一组资源。 但可以为所有相关子区域性可用的父区域性创建单个附属程序集。 例如，可以提供单个英语附属程序集 (en)，请求特定于区域的英语资源的用户将检索该程序集，并且为请求特定于区域的德语资源的用户创建单个德语附属程序集 (de)。 例如，对德国德语 (de-DE)、奥地利德语 (de-AT) 和瑞士德语 (de-CH) 的请求均会回退到德语附属程序集 (de)。 默认资源是最终回退资源，因而应是大多数应用程序用户将请求的资源，因此应仔细选择这些资源。 此方法可部署区域性特定性较低，但可显著减少应用程序本地化成本的资源。
