@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 2。
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545554"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427274"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-可以使用以下包含 switch 表达式的方法将 `Rainbow` 值转换为其 RGB 值：
+如果应用定义了通过 `R`、`G` 和 `B` 组件构造而成的 `RGBColor` 类型，可使用以下包含 switch 表达式的方法，将 `Rainbow` 转换为 RGB 值：
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 在前面的示例中，当到达方法的右括号时，将对该文件进行处理。 这是声明 `file` 的范围的末尾。 前面的代码相当于下面使用经典 [using 语句](../language-reference/keywords/using-statement.md)语句的代码：
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

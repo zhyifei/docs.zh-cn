@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 36f7687f42c6e0d6f865a025f09c4ead6f79960c
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481400"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
@@ -30,7 +30,7 @@ ms.locfileid: "59481400"
 
 - [WIF 功能](../../../docs/framework/security/wif-features.md)
 
-  - [适用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+  - [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
 
   - [WIF 会话管理](../../../docs/framework/security/wif-session-management.md)
 
@@ -40,31 +40,31 @@ ms.locfileid: "59481400"
 
   - [WSTrustChannelFactory 和 WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)
 
-- [WIF 帮助主题索引](../../../docs/framework/security/wif-how-tos-index.md)
+- [WIF 用法主题索引](../../../docs/framework/security/wif-how-tos-index.md)
 
-  - [如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
+  - [如何：生成声明感知 ASP.NET MVC Web 应用程序使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
 
-  - [如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+  - [如何：生成声明感知 ASP.NET Web 窗体应用程序使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
 
-  - [如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
+  - [如何：生成声明感知 ASP.NET 应用程序使用基于窗体的身份验证](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
 
-  - [如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
+  - [如何：生成声明感知 ASP.NET 应用程序使用 Windows 身份验证](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
 
   - [如何：使用 WIF 跟踪调试声明感知应用程序和服务](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
 
-  - [如何：使用 WIF 显示登录状态](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
+  - [如何：显示签名中使用 WIF 的状态](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
 
   - [如何：启用令牌重播检测](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
 
   - [如何：启用 WIF 跟踪](../../../docs/framework/security/how-to-enable-wif-tracing.md)
 
-  - [如何：为 WCF Web 服务应用程序启用 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
+  - [如何：WCF Web 服务应用程序启用 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
 
   - [如何：转换传入声明](../../../docs/framework/security/how-to-transform-incoming-claims.md)
 
-- [WIF 准则](../../../docs/framework/security/wif-guidelines.md)
+- [WIF 指南](../../../docs/framework/security/wif-guidelines.md)
 
-  - [使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+  - [使用 WIF 3.5 至 WIF 4.5 生成的应用程序的迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 
   - [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
 

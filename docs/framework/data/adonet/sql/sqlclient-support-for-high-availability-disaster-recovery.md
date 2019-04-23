@@ -3,10 +3,10 @@ title: SqlClient 对高可用性的支持，灾难恢复
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307585"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
@@ -63,7 +63,7 @@ ms.locfileid: "59307585"
   
 2. 如果应用程序使用 `ApplicationIntent=ReadWrite`（将在下文讨论），并且辅助副本位置配置为只读访问。  
   
- <xref:System.Data.SqlClient.SqlDependency> 只读的辅助副本上不支持。  
+ 在只读辅助副本上不支持 <xref:System.Data.SqlClient.SqlDependency>。  
   
  如果主副本配置为拒绝只读工作负荷并且连接字符串包含 `ApplicationIntent=ReadOnly`，连接将失败。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59307585"
   
  `ApplicationIntent` 关键字不适用于旧的只读数据库。  
   
- 数据库可以允许或不允许针对的 AlwaysOn 数据库上的读工作负荷。 (这通过`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`和`SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]语句。)  
+ 数据库可以允许或不允许针对的 AlwaysOn 数据库上的读工作负荷。 （使用 `ALLOW_CONNECTIONS` 和 `PRIMARY_ROLE``SECONDARY_ROLE` 语句的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 子句可做到这点。）  
   
  `ApplicationIntent` 关键字用于启用只读路由。  
   
@@ -99,4 +99,4 @@ ms.locfileid: "59307585"
 ## <a name="see-also"></a>请参阅
 
 - [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

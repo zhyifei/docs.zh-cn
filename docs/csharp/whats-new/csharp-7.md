@@ -3,36 +3,36 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654180"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59481296"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
 C# 7.0 向 C# 语言添加了许多新功能：
 * [`out` 变量](#out-variables)
-    - 可以将 `out` 值内联作为参数声明到使用这些参数的方法中。
+  - 可以将 `out` 值内联作为参数声明到使用这些参数的方法中。
 * [元组](#tuples)
-    - 可以创建包含多个公共字段的轻量级未命名类型。 编译器和 IDE 工具可理解这些类型的语义。
+  - 可以创建包含多个公共字段的轻量级未命名类型。 编译器和 IDE 工具可理解这些类型的语义。
 * [弃元](#discards)
-    - 弃元是指在不关心所赋予的值时，赋值中使用的临时只写变量。 在对元组和用户定义类型进行解构，以及在使用 `out` 参数调用方法时，它们的作用最大。
+  - 弃元是指在不关心所赋予的值时，赋值中使用的临时只写变量。 在对元组和用户定义类型进行解构，以及在使用 `out` 参数调用方法时，它们的作用最大。
 * [模式匹配](#pattern-matching)
-    - 可以基于任意类型和这些类型的成员的值创建分支逻辑。
+  - 可以基于任意类型和这些类型的成员的值创建分支逻辑。
 * [`ref` 局部变量和返回结果](#ref-locals-and-returns)
-    - 方法局部参数和返回值可以是对其他存储的引用。
+  - 方法局部参数和返回值可以是对其他存储的引用。
 * [本地函数](#local-functions)
-    - 可以将函数嵌套在其他函数内，以限制其范围和可见性。
+  - 可以将函数嵌套在其他函数内，以限制其范围和可见性。
 * [更多的 expression-bodied 成员](#more-expression-bodied-members)
-    - 可使用表达式创作的成员列表有所增长。
+  - 可使用表达式创作的成员列表有所增长。
 * [`throw` 表达式](#throw-expressions)
-    - 可以在之前因为 `throw` 是语句而不被允许的代码构造中引发异常。 
+  - 可以在之前因为 `throw` 是语句而不被允许的代码构造中引发异常。
 * [通用的异步返回类型](#generalized-async-return-types)
-    - 使用 `async` 修饰符声明的方法可以返回除 `Task` 和 `Task<T>` 以外的其他类型。
+  - 使用 `async` 修饰符声明的方法可以返回除 `Task` 和 `Task<T>` 以外的其他类型。
 * [数字文本语法改进](#numeric-literal-syntax-improvements)
-    - 新令牌可提高数值常量的可读性。
+  - 新令牌可提高数值常量的可读性。
 
 本文的其余部分概述了每个功能。 你将了解每项功能背后的原理。 将了解语法。 可以在这些功能的[交互式探索](../tutorials/exploration/csharp-7.yml)中探索这些功能。
 
@@ -46,10 +46,10 @@ C# 7.0 向 C# 语言添加了许多新功能：
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* 代码更易于阅读。 
-    - 在使用 out 变量的地方声明 out 变量，而不是在上面的另一行。
+* 代码更易于阅读。
+  - 在使用 out 变量的地方声明 out 变量，而不是在上面的另一行。
 * 无需分配初始值。
-    - 通过在方法调用中使用 `out` 变量的位置声明该变量，使得在分配它之前不可能意外使用它。
+  - 通过在方法调用中使用 `out` 变量的位置声明该变量，使得在分配它之前不可能意外使用它。
 
 ## <a name="tuples"></a>元组
 
@@ -77,7 +77,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 还可以为 .NET 中的任何类型提供类似的析构。 编写 `Deconstruct` 方法，用作类的成员。 `Deconstruct` 方法为你要提取的每个属性提供一组 `out` 参数。 考虑提供析构函数方法的此 `Point` 类，该方法提取 `X` 和 `Y` 坐标：
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
- 
+
 可以通过向元组分配 `Point` 来提取各个字段：
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
@@ -103,7 +103,8 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 ## <a name="pattern-matching"></a>模式匹配
 
-模式匹配是一种可让你对除对象类型以外的属性实现方法分派的功能。 你可能已经熟悉基于对象类型的方法分派。 在面向对象的编程中，虚拟和重写方法提供语言语法来实现基于对象类型的方法分派。 基类和派生类提供不同的实现。 模式匹配表达式扩展了这一概念，以便你可以通过继承层次结构为不相关的类型和数据元素轻松实现类似的分派模式。 
+模式匹配是一种可让你对除对象类型以外的属性实现方法分派的功能。 你可能已经熟悉基于对象类型的方法分派。 在面向对象的编程中，虚拟和重写方法提供语言语法来实现基于对象类型的方法分派。 基类和派生类提供不同的实现。
+模式匹配表达式扩展了这一概念，以便你可以通过继承层次结构为不相关的类型和数据元素轻松实现类似的分派模式。
 
 模式匹配支持 `is` 表达式和 `switch` 表达式。 每个表达式都允许检查对象及其属性以确定该对象是否满足所寻求的模式。 使用 `when` 关键字来指定模式的其他规则。
 
@@ -133,7 +134,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
     {
         switch (i)
         {
-            case 0: 
+            case 0:
                 break;
             case IEnumerable<int> childSequence:
             {
@@ -141,10 +142,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
                     sum += (item > 0) ? item : 0;
                 break;
             }
-            case int n when n > 0: 
-                sum += n; 
+            case int n when n > 0:
+                sum += n;
                 break;
-            null:
+            case null:
                 throw new NullReferenceException("Null found in sequence");
             default:
                 throw new InvalidOperationException("Unrecognized type");
@@ -154,7 +155,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` 是常见的常量模式。 
+- `case 0:` 是常见的常量模式。
 - `case IEnumerable<int> childSequence:` 是一种类型模式。
 - `case int n when n > 0:` 是具有附加 `when` 条件的类型模式。
 - `case null:` 是 null 模式。
@@ -170,20 +171,20 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 可以将返回值声明为 `ref` 并在矩阵中修改该值，如以下代码所示：
 
-[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
 C# 语言还有多个规则，可保护你免于误用 `ref` 局部变量和返回结果：
 
 * 必须将 `ref` 关键字添加到方法签名和方法中的所有 `return` 语句中。
-    - 这清楚地表明，该方法在整个方法中通过引用返回。
+  - 这清楚地表明，该方法在整个方法中通过引用返回。
 * 可以将 `ref return` 分配给值变量或 `ref` 变量。
-    - 调用方控制是否复制返回值。 在分配返回值时省略 `ref` 修饰符表示调用方需要该值的副本，而不是对存储的引用。
+  - 调用方控制是否复制返回值。 在分配返回值时省略 `ref` 修饰符表示调用方需要该值的副本，而不是对存储的引用。
 * 不可向 `ref` 本地变量赋予标准方法返回值。
-    - 因为那将禁止类似 `ref int i = sequence.Count();` 这样的语句
+  - 因为那将禁止类似 `ref int i = sequence.Count();` 这样的语句
 * 不能将 `ref` 返回给其生存期不超出方法执行的变量。
-    - 这意味着不可返回对本地变量或对类似作用域变量的引用。
+  - 这意味着不可返回对本地变量或对类似作用域变量的引用。
 * `ref` 局部变量和返回结果不可用于异步方法。
-    - 编译器无法知道异步方法返回时，引用的变量是否已设置为其最终值。
+  - 编译器无法知道异步方法返回时，引用的变量是否已设置为其最终值。
 
 添加 ref 局部变量和 ref 返回结果可通过避免复制值或多次执行取消引用操作，允许更为高效的算法。
 
@@ -221,7 +222,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 ## <a name="throw-expressions"></a>引发表达式
 
-在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 为了可以编写任何这些构造，C# 7.0 引入了引发表达式。 
+在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 为了可以编写任何这些构造，C# 7.0 引入了引发表达式。
 
 这使得编写更多基于表达式的代码变得更容易。 不需要其他语句来进行错误检查。
 
@@ -229,7 +230,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 从异步方法返回 `Task` 对象可能在某些路径中导致性能瓶颈。 `Task` 是引用类型，因此使用它意味着分配对象。 如果使用 `async` 修饰符声明的方法返回缓存结果或以同步方式完成，那么额外的分配在代码的性能关键部分可能要耗费相当长的时间。 如果这些分配发生在紧凑循环中，则成本会变高。
 
-新语言功能意味着异步方法返回类型不限于 `Task`、`Task<T>` 和 `void`。 返回类型必须仍满足异步模式，这意味着 `GetAwaiter` 方法必须是可访问的。 作为一个具体示例，已将 `ValueTask` 类型添加到 .NET framework 中，以使用这一新语言功能： 
+新语言功能意味着异步方法返回类型不限于 `Task`、`Task<T>` 和 `void`。 返回类型必须仍满足异步模式，这意味着 `GetAwaiter` 方法必须是可访问的。 作为一个具体示例，已将 `ValueTask` 类型添加到 .NET framework 中，以使用这一新语言功能：
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

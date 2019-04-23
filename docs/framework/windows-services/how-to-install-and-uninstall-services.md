@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826249"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308466"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>如何：安装和卸载 Windows 服务
 如果正使用 .NET Framework 开发 Windows 服务，可以使用 [InstallUtil.exe](../tools/installutil-exe-installer-tool.md) 的命令行实用工具快速安装服务应用。 想要发布用户可以安装和卸载的 Windows 服务的开发者，应使用 InstallShield。 有关详细信息，请参阅[创建安装程序包（Windows 客户端）](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)。
@@ -34,13 +34,13 @@ ms.locfileid: "55826249"
   
 ### <a name="install-your-service-manually"></a>手动安装服务  
   
-1.  从“开始”菜单中选择“Visual Studio \<版本>”目录，然后选择“VS \<版本>开发人员命令提示”。
+1. 从“开始”菜单中选择“Visual Studio \<版本>”目录，然后选择“VS \<版本>开发人员命令提示”。
   
      出现“Visual Studio 开发人员命令提示”。 
   
-2.  访问你的项目的已编译可执行文件所在的目录。  
+2. 访问你的项目的已编译可执行文件所在的目录。  
   
-3.  将项目的可执行文件作为参数，通过命令提示运行 InstallUtil.exe：  
+3. 将项目的可执行文件作为参数，通过命令提示运行 InstallUtil.exe：  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ ms.locfileid: "55826249"
   
      出现“Visual Studio 开发人员命令提示”。  
   
-2.  将项目的输出作为参数，通过命令提示运行 InstallUtil.exe：  
+2. 将项目的输出作为参数，通过命令提示运行 InstallUtil.exe：  
   
     ```console  
     installutil /u <yourproject>.exe  
@@ -67,6 +67,7 @@ ms.locfileid: "55826249"
 3. 删除服务的可执行文件后，该服务可能仍然会出现在注册表中。 如果发生这种情况下，请使用命令 [sc delete](/windows-server/administration/windows-commands/sc-delete) 从注册表中删除服务的条目。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 服务应用程序简介](../windows-services/introduction-to-windows-service-applications.md)
 - [如何：创建 Windows 服务](../windows-services/how-to-create-windows-services.md)
 - [如何：将安装程序添加到服务应用程序](../windows-services/how-to-add-installers-to-your-service-application.md)

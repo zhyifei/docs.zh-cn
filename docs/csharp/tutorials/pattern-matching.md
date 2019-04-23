@@ -3,12 +3,12 @@ title: 使用模式匹配功能来扩展数据类型
 description: 本高级教程展示了如何使用模式匹配技术，通过单独创建的数据和算法来创建功能。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308596"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教程：使用模式匹配功能来扩展数据类型
 
@@ -23,7 +23,7 @@ C# 7 引入了基本模式匹配功能。 C# 8 通过新增表达式和模式，
 
 ## <a name="prerequisites"></a>系统必备
 
-需要将计算机设置为运行 .NET Core（包括 C# 8.0 预览版编译器）。 最新的 [Visual Studio 2019 预览版](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview)或最新的 [.NET Core 3.0 预览版](https://dotnet.microsoft.com/download/dotnet-core/3.0)随附 C# 8 预览版编译器。
+需要将计算机设置为运行 .NET Core（包括 C# 8.0 预览版编译器）。 最新 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新 [.NET Core 3.0 预览版](https://dotnet.microsoft.com/download/dotnet-core/3.0)随附 C# 8 预览版编译器。
 
 本教程假设你熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 

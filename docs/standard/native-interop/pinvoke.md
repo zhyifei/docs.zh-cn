@@ -4,12 +4,12 @@ description: 了解如何在 .NET 中通过 P/Invoke 调用本机函数。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409232"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517858"
 ---
 # <a name="platform-invoke-pinvoke"></a>平台调用 (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 上述示例非常简单，但确实演示了从托管代码调用非托管函数所需执行的操作。 让我们逐步分析该示例：
 
 *   第 1 行显示 `System.Runtime.InteropServices` 命名空间（用于保存全部所需项）的 using 语句。
-*   第 7 行引入 `DllImport` 属性。 此特性至关重要，因为它告诉运行时要加载非托管 DLL。 传入的字符串是目标函数所在的 DLL。
+*   第 7 行引入 `DllImport` 属性。 此特性至关重要，因为它告诉运行时要加载非托管 DLL。 传入的字符串是目标函数所在的 DLL。 此外，它还指定哪些[字符集](./charset.md)用于封送字符串。 最后，它指定此函数调用 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)，且运行时应捕获相应错误代码，以便用户能够通过 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> 检索它。
 *   第 8 行显示了 P/Invoke 的关键作用。 它定义了一个托管方法，该方法的签名与非托管方法**完全相同**。 可以看到，声明中包含一个新关键字 `extern`，告诉运行时这是一个外部方法。调用该方法时，运行时应在 `DllImport` 特性中指定的 DLL 内查找该方法。
 
 该示例的剩余部分无非就是调用该方法，就像调用其他任何托管方法一样。
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 上面两个示例都依赖于参数，在这两种情况下，参数是作为托管类型提供的。 运行时将采取“适当的措施”，在另一个平台上将这些代码处理成等效的代码。 [类型封送](type-marshalling.md)页介绍了如何将类型封送到本机代码。
-
 
 ## <a name="more-resources"></a>更多资源
 

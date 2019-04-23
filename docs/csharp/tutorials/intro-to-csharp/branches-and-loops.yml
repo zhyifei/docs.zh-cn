@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 列表集合
-  ms.openlocfilehash: 49fec69db0d3ae08b4f4904838be8bd5a2df3b10
-  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+  ms.openlocfilehash: 62cc52e22406c6c19dad6cc800078e0d8f34f0d6
+  ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/04/2019
-  ms.locfileid: "58921060"
+  ms.lasthandoff: 04/18/2019
+  ms.locfileid: "59427521"
 items:
 - durationInMinutes: 1
   content: >
@@ -69,7 +69,7 @@ items:
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 让 if 和 else 完美配合
   durationInMinutes: 10
-  content: "\n若要执行 true 和 false 分支中的不同代码，请创建在条件为 false 时执行的 `else` 分支。 试运行以下代码：\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n只有当条件的测试结果为 `false` 时，才执行 `else` 关键字后面的语句。 将 `if`、`else` 与布尔条件相结合，可以实现所需的一切目标。\n\n> [!IMPORTANT]\n> `if` 和 `else` 语句下的缩进是为了方便读者阅读。\n> C# 语言忽略缩进或空格。\n> `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本教程中的所有示例都遵循了常见做法，根据语句的控制流缩进代码行。\n\n由于缩进会被忽略，因此需要使用 `{` 和 `}`，指明要在根据条件决定是否执行的代码块中添加多个语句。 C# 程序员通常会对所有 `if` 和 `else` 子句使用这些大括号。 以下示例与刚刚创建的示例相同。 试运行看看。\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 在本教程的其余部分中，代码示例全都遵循公认做法，添加了大括号。\n\n可以测试更复杂的条件：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not greater than the second\");\n}\n```\n\n`&&` 表示“且”。 也就是说，两个条件必须都为 true，才能执行 true 分支中的语句。  这些示例还表明，可以在每个条件分支中添加多个语句，前提是将它们用 `{` 和 `}` 括住。\n\n还可以使用 `||` 表示“或”：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not greater than the second\");\n}\n```\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
+  content: "\n若要执行 true 和 false 分支中的不同代码，请创建在条件为 false 时执行的 `else` 分支。 试运行以下代码：\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n只有当条件的测试结果为 `false` 时，才执行 `else` 关键字后面的语句。 将 `if`、`else` 与布尔条件相结合，可以实现所需的一切目标。\n\n> [!IMPORTANT]\n> `if` 和 `else` 语句下的缩进是为了方便读者阅读。\n> C# 语言忽略缩进或空格。\n> `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本教程中的所有示例都遵循了常见做法，根据语句的控制流缩进代码行。\n\n由于缩进会被忽略，因此需要使用 `{` 和 `}`，指明要在根据条件决定是否执行的代码块中添加多个语句。 C# 程序员通常会对所有 `if` 和 `else` 子句使用这些大括号。 以下示例与刚刚创建的示例相同。 试运行看看。\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 在本教程的其余部分中，代码示例全都遵循公认做法，添加了大括号。\n\n可以测试更复杂的条件：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n`==` 符号执行相等测试。 使用 `==` 将相等测试与赋值测试区分开来，如在 `a = 5` 中所见。\n\n`&&` 表示“且”。 也就是说，两个条件必须都为 true，才能执行 true 分支中的语句。  这些示例还表明，可以在每个条件分支中添加多个语句，前提是将它们用 `{` 和 `}` 括住。\n\n还可以使用 `||` 表示“或”：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n修改 `a`、`b` 和 `c` 的值，并在 `&&` 和 `||` 之间切换浏览。 你将进一步了解 `&&` 和 `||` 运算符的工作原理。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - title: 使用循环重复执行运算
   durationInMinutes: 6
   content: >

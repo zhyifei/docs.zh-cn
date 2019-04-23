@@ -3,10 +3,10 @@ title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
 ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481114"
 ---
 # <a name="custombinding"></a>\<customBinding>
@@ -193,7 +193,7 @@ ms.locfileid: "59481114"
 |[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|对自定义绑定指定双向消息处理。 它与本身不允许进行双工通信的传输（例如，HTTP）一起使用。 与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。<br /><br /> 客户端必须公开一个地址，以便服务进行联系和建立连接。 此客户端地址由 `ClientBaseAddress` 属性提供。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定对等名称解析协议 (PNRP) 对等名称解析程序。 此元素的类型为 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|
 |[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS-ReliableMessaging 的设置。 如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。 此元素的类型为 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。|
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 流绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|
 |[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定绑定支持事务流以及 `transactionProtocol` 属性将要使用的协议。 此元素的类型为 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|
 |[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自定义绑定的流安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|

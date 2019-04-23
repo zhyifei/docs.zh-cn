@@ -4,10 +4,10 @@ description: 了解如何执行特定任务，以帮助自定义创建 AI 解决
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427545"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 机器学习操作指南 - ML.NET
@@ -18,9 +18,9 @@ ms.locfileid: "59427545"
 
 * [从 CSV 文件中加载包含多个列的数据，以便进行机器学习处理。](load-data-from-mult-column-csv-ml-net.md)
 
-* [从多个文件加载数据以便进行机器学习处理。](load-data-from-multiple-files-ml-net.md)
+* [从多个文件加载数据用于机器学习处理。](load-data-from-multiple-files-ml-net.md)
 
-* [从文本文件加载数据以便进行机器学习处理。](load-data-from-text-file-ml-net.md)
+* [从文本文件加载数据用于机器学习处理。](load-data-from-text-file-ml-net.md)
 
 ### <a name="prepare-the-data"></a>准备数据
 
@@ -32,7 +32,7 @@ ms.locfileid: "59427545"
 
 * [使用交叉验证来定型机器学习模型。](train-cross-validation-ml-net.md)
 
-* [使用 ML.NET 定型回归模型以预测某个值。](train-regression-model-ml-net.md)
+* [使用 ML.NET 定型回归模型来预测某个值。](train-regression-model-ml-net.md)
 
 ### <a name="evaluate-the-model-quality"></a>评估模型质量
 
@@ -54,10 +54,10 @@ ms.locfileid: "59427545"
 
 * [在 ML.NET 管道处理期间检查中间数据值。](inspect-intermediate-data-ml-net.md)
 
-* [在应用中操作定型的机器学习模型。](consuming-model-ml-net.md)
+* [在应用程序中操作定型的机器学习模型。](consuming-model-ml-net.md)
 
 * [使用 PredictionFunction 一次执行一个预测。](single-predict-model-ml-net.md)
 
 ## <a name="probabilistic-infernet"></a>概率 (Infer.NET)
 
-* [使用 Infer.NET 和概率性编程创建游戏匹配列表应用。](matchup-app-infer-net.md)
+* [使用 Infer.NET 和概率性编程创建游戏匹配列表。](matchup-app-infer-net.md)

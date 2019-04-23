@@ -3,12 +3,12 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443246"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427287"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可为空引用类型迁移现有代码
 
@@ -24,7 +24,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="prerequisites"></a>系统必备
 
-需要将计算机设置为运行 .NET Core，包括 C# 8.0 beta 编译器。 C# 8 beta 编译器可用于 [Visual Studio 2019 预览版 2 或更高版本](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) 或 [.NET Core 3.0 预览版 2](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
+需要将计算机设置为运行 .NET Core，包括 C# 8.0 beta 编译器。 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新 [.NET Core 3.0 预览版](https://dotnet.microsoft.com/download/dotnet-core/3.0)随附 C# 8 beta 版本编译器。
 
 本教程假设你熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -81,7 +81,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-前面的代码块中有相当多的内容。 此应用程序使用 [AutoMapper](http://automapper.org/) NuGet 包从 `ISyndicationItem` 中构造新闻项。 你会发现，在这一条语句中构造了新闻故事项，并设置了属性。 这意味着 `NewsStoryViewModel` 的设计表明这些属性绝不应该有 `null` 值。 这些属性应是不可为空引用类型。 这样可以充分表达原始设计意图。 实际上，任何 `NewsStoryViewModel` 都是用非 Null 值正确实例化的。 这使得以下初始化代码成为一个有效的修复程序：
+前面的代码块中有相当多的内容。 此应用程序使用 [AutoMapper](https://automapper.org/) NuGet 包从 `ISyndicationItem` 中构造新闻项。 你会发现，在这一条语句中构造了新闻故事项，并设置了属性。 这意味着 `NewsStoryViewModel` 的设计表明这些属性绝不应该有 `null` 值。 这些属性应是不可为空引用类型。 这样可以充分表达原始设计意图。 实际上，任何 `NewsStoryViewModel` 都是用非 Null 值正确实例化的。 这使得以下初始化代码成为一个有效的修复程序：
 
 ```csharp
 public class NewsStoryViewModel

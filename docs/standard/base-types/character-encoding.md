@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649396"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59346101"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 字符是可以许多不同的方式表示的抽象实体。 字符编码是用代表字符的某个值与受支持的字符集中的每个字符配对的系统。 例如，莫尔斯电码就是一种用点线模式与罗马字母表中的每个字符（适合通过电报线路进行传输）进行配对的字符编码。 计算机的字符编码将代表字符的数字值与受支持的字符集中的每个字符配对。 一种字符编码有两个不同组件：  
@@ -141,7 +141,7 @@ ms.locfileid: "54649396"
   
 <a name="BestFit"></a>   
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback  
- 当一个字符在目标编码中不具有准确匹配时，编码器可以尝试将其映射到类似的字符。 （最佳回退主要是编码问题而非解码问题。 很少有代码页包含无法成功映射到 Unicode 的字符。）最佳回退是代码页的默认设置，此双字节字符集编码由 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 和 <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 重载检索。  
+ 当一个字符在目标编码中不具有准确匹配时，编码器可以尝试将其映射到类似的字符。 （最佳回退主要是编码问题而非解码问题。 很少有代码页包含无法成功映射到 Unicode 的字符。）最佳回退是代码页的默认设置，以及 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 和 <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 重载检索的双字节字符集编码。  
   
 > [!NOTE]
 >  从理论上讲，.NET 中的 Unicode 编码类（<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>）支持所有字符集中的每个字符，因此可用于消除最佳匹配回退问题。  
@@ -215,11 +215,11 @@ ms.locfileid: "54649396"
   
  此外，通过执行以下步骤，可以实现使用最佳回退、替换回退或异常回退的自定义解决方案：  
   
-1.  从 <xref:System.Text.EncoderFallback> 派生一个类用于编码操作，并从 <xref:System.Text.DecoderFallback> 派生一个类用于解码操作。  
+1. 从 <xref:System.Text.EncoderFallback> 派生一个类用于编码操作，并从 <xref:System.Text.DecoderFallback> 派生一个类用于解码操作。  
   
-2.  从 <xref:System.Text.EncoderFallbackBuffer> 派生一个类用于编码操作，并从 <xref:System.Text.DecoderFallbackBuffer> 派生一个类用于解码操作。  
+2. 从 <xref:System.Text.EncoderFallbackBuffer> 派生一个类用于编码操作，并从 <xref:System.Text.DecoderFallbackBuffer> 派生一个类用于解码操作。  
   
-3.  有关异常回退，如果预定义的 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 类不能满足你的需求，则从异常对象中派生一个类，如 <xref:System.Exception> 或 <xref:System.ArgumentException>。  
+3. 有关异常回退，如果预定义的 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 类不能满足你的需求，则从异常对象中派生一个类，如 <xref:System.Exception> 或 <xref:System.ArgumentException>。  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>从 EncoderFallback 或 DecoderFallback 中派生  
  若要实现自定义的回退解决方案，必须创建一个继承自 <xref:System.Text.EncoderFallback> 的类用于编码操作，以及一个继承自 <xref:System.Text.DecoderFallback> 的类用于解码操作。 这些类的实例传递给 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 方法，并作为编码类和回退实现之间的媒介。  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344866"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自定义复合设计器 — 工作流项演示器
@@ -32,15 +32,15 @@ ms.locfileid: "59344866"
 ## <a name="sample-highlights"></a>示例重点
  此示例的代码演示了以下内容：
 
--   活动设计器旨在为试验：  `Parallel`
+-   构建的设计器所针对的活动：`Parallel`
 
 -   使用 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 创建自定义活动设计器。 需要指出的一些事项：
 
-    -   请注意，应使用 WPF 数据绑定来绑定到 `ModelItem.Branches`。 `ModelItem` 该属性位于`WorkflowElementDesigner`，是指基础对象在使用设计器，在这种情况下，我们`Parallel`。
+    -   请注意，应使用 WPF 数据绑定来绑定到 `ModelItem.Branches`。 `ModelItem` 是 `WorkflowElementDesigner` 的属性，它引用设计器所用于的基础对象，在此例中为 `Parallel`。
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> 可用于在集合中的各个项之间显示一个可视对象。
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是可用于确定集合中项的布局的模板。 在此例中，使用水平堆叠面板。
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是一个模板，可用于确定集合中的项的布局。 在此例中，使用水平堆叠面板。
 
  下面的示例代码演示了此过程。
 

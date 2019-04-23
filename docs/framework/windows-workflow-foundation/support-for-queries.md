@@ -3,10 +3,10 @@ title: 查询支持
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307946"
 ---
 # <a name="support-for-queries"></a>查询支持
@@ -20,7 +20,7 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
   
 -   **服务名称。** 服务的名称。  
   
--   **服务命名空间。** 服务使用的命名空间的名称。  
+-   **服务 Namespace。** 服务使用的命名空间的名称。  
   
 -   **当前计算机。**  
   

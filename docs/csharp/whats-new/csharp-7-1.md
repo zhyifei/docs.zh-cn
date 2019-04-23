@@ -1,13 +1,13 @@
 ---
 title: C# 7.1 中的新增功能
 description: C# 7.1 中的新增功能概述。
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728649"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480958"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -23,13 +23,14 @@ C# 7.1 增加了[语言版本选择](../language-reference/configure-language-ve
   - 在可以推断目标类型的情况下，可在默认值表达式中使用默认文本表达式。
 * [推断元组元素名称](#inferred-tuple-element-names)
   - 在许多情况下，可通过元组初始化来推断元组元素的名称。
+* [泛型类型参数的模式匹配](#pattern-matching-on-generic-type-parameters)
+  - 可以对类型为泛型类型参数的变量使用模式匹配表达式。
 
 最后，编译器有 `/refout` 和 `/refonly` 两个选项，可用于控制[引用程序集生成](#reference-assembly-generation)。
 
-若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择该版本。
+若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择版本。
 
 ## <a name="async-main"></a>异步 `main` 方法
-
 
 *异步 Main* 方法使你能够在 `Main` 方法中使用 `await` 关键字。
 在过去，需要编写：
@@ -54,7 +55,6 @@ static async Task<int> Main()
 
 如果程序不返回退出代码，可以声明返回 <xref:System.Threading.Tasks.Task> 的 `Main` 方法:
 
-
 ```csharp
 static async Task Main()
 {
@@ -62,7 +62,7 @@ static async Task Main()
 }
 ```
 
-你可以在编程指南的[异步 Main 方法](../programming-guide/main-and-command-args/index.md)主题中阅读更多详细信息。
+如需了解更多详情，可以阅读编程指南中的[异步 Main](../programming-guide/main-and-command-args/index.md) 一文。
 
 ## <a name="default-literal-expressions"></a>默认文本表达式
 
@@ -79,8 +79,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-你可以通过 C# 编程指南的[默认值表达式](../programming-guide/statements-expressions-operators/default-value-expressions.md) 主题了解有关此增强功能的详细信息。
-
+若要详细了解此增强功能，可以参阅 C# 编程指南中的[默认值表达式](../programming-guide/statements-expressions-operators/default-value-expressions.md)一文。
 
 此增强功能也会更改某些[default 关键字](../language-reference/keywords/default.md) 的分析规则。
 
@@ -102,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-可以在[元组](../tuples.md)主题中了解有关此功能的详细信息。
+若要详细了解此功能，可以参阅[元组](../tuples.md)一文。
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>泛型类型参数的模式匹配
+
+自 C# 7.1 起，`is` 和 `switch` 类型模式的模式表达式的类型可能为泛型类型参数。 这可能在检查 `struct` 或 `class` 类型且要避免装箱时最有用。
 
 ## <a name="reference-assembly-generation"></a>引用程序集生成
 
 有两个新的编译器选项会生成“仅引用”程序集：[/refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [/refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
-链接的主题详细介绍了这些选项和引用程序集。
+链接的文章详细介绍了这些选项和引用程序集。

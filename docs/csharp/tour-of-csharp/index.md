@@ -4,10 +4,10 @@ description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481088"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 语言介绍
@@ -75,4 +75,4 @@ Hello, World
   * 使用***特性***，程序可以指定关于类型、成员和其他实体的附加声明性信息。
 
 > [!div class="step-by-step"]
-> [下一步](program-structure.md)
+> [下一页](program-structure.md)
