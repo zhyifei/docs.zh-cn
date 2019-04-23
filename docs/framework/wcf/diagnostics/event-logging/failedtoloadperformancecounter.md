@@ -3,23 +3,23 @@ title: FailedToLoadPerformanceCounter
 ms.date: 03/30/2017
 ms.assetid: bb333946-738e-4937-808e-5b6c0ac44e1b
 ms.openlocfilehash: 92d35c339b8caf7146474792e0db5f5258b6385b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196432"
 ---
-# <a name="failedtoloadperformancecounter"></a><span data-ttu-id="c1045-102">FailedToLoadPerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="c1045-102">FailedToLoadPerformanceCounter</span></span>
-<span data-ttu-id="c1045-103">ID:118</span><span class="sxs-lookup"><span data-stu-id="c1045-103">Id: 118</span></span>  
+# <a name="failedtoloadperformancecounter"></a><span data-ttu-id="35897-102">FailedToLoadPerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="35897-102">FailedToLoadPerformanceCounter</span></span>
+<span data-ttu-id="35897-103">ID:118</span><span class="sxs-lookup"><span data-stu-id="35897-103">Id: 118</span></span>  
   
- <span data-ttu-id="c1045-104">严重性：Error</span><span class="sxs-lookup"><span data-stu-id="c1045-104">Severity: Error</span></span>  
+ <span data-ttu-id="35897-104">严重性：Error</span><span class="sxs-lookup"><span data-stu-id="35897-104">Severity: Error</span></span>  
   
- <span data-ttu-id="c1045-105">类别：ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c1045-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="35897-105">类别：ServiceModel</span><span class="sxs-lookup"><span data-stu-id="35897-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c1045-106">描述</span><span class="sxs-lookup"><span data-stu-id="c1045-106">Description</span></span>  
- <span data-ttu-id="c1045-107">此事件指示未加载性能计数器。</span><span class="sxs-lookup"><span data-stu-id="c1045-107">This event indicates that a performance counter was not loaded.</span></span> <span data-ttu-id="c1045-108">该事件列出了类别名称、计数器名称、实例名称、异常、进程名称和进程 ID。</span><span class="sxs-lookup"><span data-stu-id="c1045-108">The event lists the category name, counter name, instance name, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="35897-106">描述</span><span class="sxs-lookup"><span data-stu-id="35897-106">Description</span></span>  
+ <span data-ttu-id="35897-107">此事件指示未加载性能计数器。</span><span class="sxs-lookup"><span data-stu-id="35897-107">This event indicates that a performance counter was not loaded.</span></span> <span data-ttu-id="35897-108">该事件列出了类别名称、计数器名称、实例名称、异常、进程名称和进程 ID。</span><span class="sxs-lookup"><span data-stu-id="35897-108">The event lists the category name, counter name, instance name, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1045-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="c1045-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35897-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="35897-109">See also</span></span>
 
-- [<span data-ttu-id="c1045-110">事件日志记录</span><span class="sxs-lookup"><span data-stu-id="c1045-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="c1045-111">事件常规参考</span><span class="sxs-lookup"><span data-stu-id="c1045-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="35897-110">事件日志记录</span><span class="sxs-lookup"><span data-stu-id="35897-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="35897-111">事件常规参考</span><span class="sxs-lookup"><span data-stu-id="35897-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
