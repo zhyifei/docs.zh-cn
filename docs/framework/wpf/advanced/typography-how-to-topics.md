@@ -7,24 +7,24 @@ helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
 ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209731"
 ---
 # <a name="typography-how-to-topics"></a>版式帮助主题
 在本部分中的主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]丰富应用程序中的文本表示的支持。  
   
 ## <a name="in-this-section"></a>本节内容  
- [创建文本修饰](how-to-create-a-text-decoration.md)  
+ [创建文本效果](how-to-create-a-text-decoration.md)  
  [指定是否为超链接添加下划线](how-to-specify-whether-a-hyperlink-is-underlined.md)  
  [向文本应用转换](how-to-apply-transforms-to-text.md)  
  [向文本应用动画](how-to-apply-animations-to-text.md)  
  [创建有阴影的文本](how-to-create-text-with-a-shadow.md)  
  [创建空心文本](how-to-create-outlined-text.md)  
- [向控件的背景绘制文本](how-to-draw-text-to-a-control-background.md)  
- [向视觉对象绘制文本](how-to-draw-text-to-a-visual.md)  
+ [在控件背景上绘制文本](how-to-draw-text-to-a-control-background.md)  
+ [在视觉对象中绘制文本](how-to-draw-text-to-a-visual.md)  
  [在 XAML 中使用特殊字符](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>请参阅

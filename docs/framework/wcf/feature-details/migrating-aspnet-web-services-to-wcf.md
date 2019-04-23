@@ -3,10 +3,10 @@ title: 将 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211083"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>将 ASP.NET Web 服务迁移到 WCF
@@ -37,8 +37,8 @@ ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提
   
 ## <a name="see-also"></a>请参阅
 
-- [Windows Communication Foundation 使用展望：轻松实现未来的迁移](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Windows Communication Foundation 使用展望：轻松实现未来的集成](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+- [预期采用 Windows Communication Foundation:使未来迁移轻而易举](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [预期采用 Windows Communication Foundation:便于以后集成](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
 - [采用 Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
 - [基于目标和使用的标准比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
 - [从开发的角度比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

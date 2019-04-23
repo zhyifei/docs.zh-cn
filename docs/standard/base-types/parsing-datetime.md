@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560810"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59208119"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>分析 .NET 中的日期和时间字符串
 
@@ -32,7 +32,6 @@ ms.locfileid: "54560810"
 1. 可以指定如何以日期和时间格式设置文本表示方法中缺少的组成部分。
 
 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.TryParse%2A> 方法可转换日期和时间的多个常见表示方法。 <xref:System.DateTime.ParseExact%2A> 和 <xref:System.DateTime.TryParseExact%2A> 方法可转换符合日期和时间格式字符串指定的模式的字符串表示形式。 （如需详细信息，请参阅有关[标准日期和时间格式字符串](standard-date-and-time-format-strings.md)和[自定义日期和时间格式字符串](custom-date-and-time-format-strings.md)的文章。）
-
 
 当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象提供对如何将文本解释为日期和时间的更好的控制。 <xref:System.Globalization.DateTimeFormatInfo> 的属性描述了日期和时间分隔符，以及月、日、年代的名称，还有“AM”和“PM”标志的格式。 当前线程区域性提供了表示当前区域性的 <xref:System.Globalization.DateTimeFormatInfo>。 如果你希望使用特定区域性或自定义设置，请指定分析方法的 <xref:System.IFormatProvider> 参数。 对于 <xref:System.IFormatProvider> 参数，应指定表示区域性的 <xref:System.Globalization.CultureInfo> 对象，或指定 <xref:System.Globalization.DateTimeFormatInfo> 对象。
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
 ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200514"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>如何：根据已绑定项的列表生成值
@@ -31,7 +31,7 @@ ms.locfileid: "59200514"
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` 实现<xref:System.Windows.Data.IMultiValueConverter>接口。 `NameConverter` 从个别绑定获取值并将它们存储在值对象数组。 依据的顺序<xref:System.Windows.Data.Binding>元素出现在<xref:System.Windows.Data.MultiBinding>元素是在其中这些值存储在数组中的顺序。 值<xref:System.Windows.Data.MultiBinding.ConverterParameter%2A>属性引用的参数自变量的<xref:System.Windows.Data.MultiBinding.Converter%2A>方法，后者将执行一个开关参数以确定如何设置名称格式。  
+ `NameConverter` 实现 <xref:System.Windows.Data.IMultiValueConverter> 接口。 `NameConverter` 从个别绑定获取值并将其存储在值对象数组中。 依据的顺序<xref:System.Windows.Data.Binding>元素出现在<xref:System.Windows.Data.MultiBinding>元素是在其中这些值存储在数组中的顺序。 值<xref:System.Windows.Data.MultiBinding.ConverterParameter%2A>属性引用的参数自变量的<xref:System.Windows.Data.MultiBinding.Converter%2A>方法，后者将执行一个开关参数以确定如何设置名称格式。  
   
 ## <a name="see-also"></a>请参阅
 

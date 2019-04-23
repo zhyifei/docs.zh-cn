@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211421"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox 帮助主题
@@ -21,7 +21,7 @@ ms.locfileid: "59211421"
  [创建多行 TextBox 控件](how-to-create-a-multiline-textbox-control.md)  
  [检测 TextBox 中的文本何时更改](how-to-detect-when-text-in-a-textbox-has-changed.md)  
  [在 TextBox 控件中启用制表符](how-to-enable-tab-characters-in-a-textbox-control.md)  
- [从 TextBox 获取文本行集合](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [从 TextBox 获取一系列文本行](how-to-get-a-collection-of-lines-from-a-textbox.md)  
  [将 TextBox 控件设为只读](how-to-make-a-textbox-control-read-only.md)  
  [将光标置于 TextBox 控件中文本的开头或结尾](position-the-cursor-at-the-beginning-or-end-of-text.md)  
  [检索选定文本内容](how-to-retrieve-a-text-selection.md)  

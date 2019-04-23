@@ -3,10 +3,10 @@ title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
 ms.openlocfilehash: fece74e76f879eff51f154eab8c8edea2c27119e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180123"
 ---
 # <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity>
@@ -61,9 +61,9 @@ ms.locfileid: "59180123"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输方式](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [绑定](../../../../../docs/framework/wcf/bindings.md)
 - [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [传输安全](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [传输安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)

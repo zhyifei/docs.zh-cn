@@ -3,10 +3,10 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209107"
 ---
 # <a name="hosting"></a>宿主
@@ -15,10 +15,10 @@ ms.locfileid: "59209107"
  值得注意的是，从不受信任的主机运行服务或任何扩展会危害安全。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  介绍如何在 Windows Communication Foundation (WCF) 服务托管在 Internet 信息服务或[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)。  
   
- [在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
+ [在 Windows Process Activation Service 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
  介绍如何通过 Windows 进程激活服务承载 WCF 服务。  
   
  [在 Windows 服务应用程序中承载](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
@@ -35,5 +35,5 @@ ms.locfileid: "59209107"
   
 ## <a name="see-also"></a>请参阅
 
-- [承载服务](../../../../docs/framework/wcf/hosting-services.md)
+- [托管服务](../../../../docs/framework/wcf/hosting-services.md)
 - [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

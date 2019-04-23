@@ -10,10 +10,10 @@ ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a9b8357be5b9f49569114cbc1c2942eea03696eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180175"
 ---
 # <a name="assembly-placement"></a>程序集位置
@@ -24,6 +24,6 @@ ms.locfileid: "59180175"
 ## <a name="see-also"></a>请参阅
 
 - [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [配置应用](../../../docs/framework/configure-apps/index.md)
+- [配置应用程序](../../../docs/framework/configure-apps/index.md)
 - [与非托管代码进行交互操作](../../../docs/framework/interop/index.md)
-- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）

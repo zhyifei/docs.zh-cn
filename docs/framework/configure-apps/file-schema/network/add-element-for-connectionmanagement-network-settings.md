@@ -1,5 +1,5 @@
 ---
-title: <add> ConnectionManagement （网络设置） 的元素
+title: connectionManagement 的 <add> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204245"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<添加 > connectionManagement （网络设置） 的元素
@@ -39,7 +39,7 @@ ms.locfileid: "59204245"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`address`|描述 IP 地址或 DNS 名称的字符串。|  
 |`maxconnection`|允许连接至服务器的最大连接数。 如果未提供，则默认为 2。|  
@@ -49,7 +49,7 @@ ms.locfileid: "59204245"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211655"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>实现 UI 自动化 ExpandCollapse 控件模式
@@ -32,7 +32,7 @@ ms.locfileid: "59211655"
   
 -   将某个控件的 <xref:System.Windows.Automation.ExpandCollapseState> 设置为 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>后，该控件的所有 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能当前都处于非活动状态，通过该控件模式可以获取的唯一信息就是 <xref:System.Windows.Automation.ExpandCollapseState>。 如果以后添加任何子对象，则 <xref:System.Windows.Automation.ExpandCollapseState> 会发生更改，同时 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能将被激活。  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> 指; 仅直接子对象的可见性它不引用所有后代对象的可见性。  
+-   <xref:System.Windows.Automation.ExpandCollapseState> 仅表示直接子对象的可见性，而不表示所有后代对象的可见性。  
   
 -   展开和折叠功能是特定于控件的。 下面是该行为的示例。  
   

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
 ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207521"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、绑定和协定
@@ -78,10 +78,10 @@ ms.locfileid: "59207521"
  [协定](../../../../docs/framework/wcf/feature-details/contracts.md)  
  描述协定如何定义服务的方法。  
   
- [如何：在配置中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [如何：在配置中创建的服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  描述如何在配置中创建服务终结点。  
   
- [如何：在代码中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [如何：在代码中创建的服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  描述如何在代码中创建服务终结点。  
   
  [如何：使用 Svcutil.exe 验证已编译的服务代码](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
@@ -89,5 +89,5 @@ ms.locfileid: "59207521"
   
 ## <a name="see-also"></a>请参阅
 
-- [正在配置服务](../../../../docs/framework/wcf/configuring-services.md)
+- [配置服务](../../../../docs/framework/wcf/configuring-services.md)
 - [扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)

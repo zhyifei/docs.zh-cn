@@ -3,10 +3,10 @@ title: ADO.NET 技术选项和准则
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212526"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技术选项和准则
@@ -37,10 +37,10 @@ ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对
  LINQ to SQL 是一种对象关系映射 (OR/M) 实现，它使您能够使用 .NET Framework 类为 SQL Server 数据建模。 LINQ to SQL 允许您使用 LINQ 来查询数据库，以及在数据库中更新、插入和删除数据。 LINQ to SQL 支持事务、视图和存储过程，因此可以方便地将数据验证和业务逻辑规则集成到数据模型中。 您可以使用对象关系设计器（O/R 设计器），为基于数据库中对象的实体类和关联建模。 有关详细信息，请参阅 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 ## <a name="wcf-data-services"></a>WCF 数据服务  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 部署数据服务在 Web 上或在 intranet 上。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。 有关详细信息，请参阅 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可在 Web 或 Intranet 上部署数据服务。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。 有关详细信息，请参阅 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
 ## <a name="see-also"></a>请参阅
 
 - [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET 新增功能](../../../../docs/framework/data/adonet/whats-new.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

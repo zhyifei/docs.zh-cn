@@ -3,10 +3,10 @@ title: 了解 HTTP 身份验证
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206390"
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 身份验证
@@ -37,6 +37,6 @@ ms.locfileid: "59206390"
   
 ## <a name="see-also"></a>请参阅
 
-- [传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [将模拟用于传输安全](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [传输安全性概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
+- [将模拟用于传输安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

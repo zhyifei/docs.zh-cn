@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466942"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200358"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>什么是 ML.NET？应该如何理解机器学习基础知识？
 
@@ -24,7 +24,6 @@ ML.NET 是一个免费的开源跨平台机器学习框架，可用于生成自�
 机器学习是一种允许计算机使用现有数据预测未来行为、结果和趋势的数据科学方法。 使用机器学习，计算机可以在未显式编程的情况下进行学习。
 
 机器学习的预测可以使得应用和设备更智能。 在线购物时，机器学习基于历史购买推荐你可能喜欢的其他产品。 刷信用卡时，机器学习将事务与事务数据库进行比较，帮助检测欺诈行为。 当机器人吸尘器清理房间时，机器学习帮助其决定工作是否完成。
-
 
 ## <a name="short-videos-on-data-science"></a>数据科学的简短视频 
 

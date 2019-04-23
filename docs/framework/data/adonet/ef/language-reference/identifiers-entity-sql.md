@@ -3,10 +3,10 @@ title: 标识符 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204895"
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
@@ -86,7 +86,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>作用域规则  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定义确定特定变量何时可见查询语言中的作用域规则。 一些表达式或语句引入了新名称。 作用域规则确定在何处可以使用这些名称，与另一声明同名的新声明何时或在何处可以隐藏其前置任务。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定义作用域规则，用来确定查询语言中的特定变量何时可见。 一些表达式或语句引入了新名称。 作用域规则确定在何处可以使用这些名称，与另一声明同名的新声明何时或在何处可以隐藏其前置任务。  
   
  在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询中定义了名称，即是在作用域内定义了名称。 作用域包括查询的整个区域。 在作用域内定义的名称对该作用域的所有表达式或名称引用都可见。 作用域内定义的名称不能在作用域开始之前和结束之后进行引用。  
   
@@ -114,7 +114,7 @@ SELECT 1 AS X, 2 AS X …
 -   SELECT 表达式内的子句计算顺序确定名称引入作用域的顺序。 计算的顺序首先是 FROM 子句，其次是 WHERE 子句、GROUP BY 子句、HAVING 子句、SELECT 子句，最后是 ORDER BY 子句。  
   
 ### <a name="aggregate-handling"></a>聚合处理  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持两种形式的聚合： 基于集合的聚合和基于组的聚合。 基于集合的聚合是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的首选构造，支持基于组的聚合则是为了实现 SQL 兼容性。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持两种形式的聚合：基于集合的聚合和基于组的聚合。 基于集合的聚合是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的首选构造，支持基于组的聚合则是为了实现 SQL 兼容性。  
   
  在解析聚合时，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 首先尝试将它视为基于集合的聚合。 如果失败，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将聚合输入转换为对嵌套聚合的引用，并尝试解析这个新的表达式，如下面的示例所示。  
   
@@ -123,5 +123,5 @@ SELECT 1 AS X, 2 AS X …
 ## <a name="see-also"></a>请参阅
 
 - [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [输入字符集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

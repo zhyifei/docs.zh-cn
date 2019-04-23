@@ -3,17 +3,17 @@ title: DiscoveryClient 和 DynamicEndpoint
 ms.date: 03/30/2017
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
 ms.openlocfilehash: 1f3e9a25e82c4515ee649736ed162ab858aa6ff7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59205025"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient 和 DynamicEndpoint
-<xref:System.ServiceModel.Discovery.DiscoveryClient> 和<xref:System.ServiceModel.Discovery.DynamicEndpoint>是在客户端用来搜索服务的两个类。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 提供了具有匹配特定的服务列表的条件设置并允许您连接到服务。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 执行的操作相同，此外，自动连接到找到的服务之一。 可以将任何终结点转换为 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，也可以在配置中添加搜索条件，这样，如果您需要在解决方案中执行发现操作，但不希望修改客户端逻辑，则 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 会非常有用 – 此时您只需修改终结点。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 另一方面可以用来更好地控制搜索操作。 下面对每个类的用途和优势加以详细说明。  
+<xref:System.ServiceModel.Discovery.DiscoveryClient> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是客户端上用来搜索服务的两个类。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 为您提供与一组特定条件相匹配的服务列表，并允许您连接到这些服务。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 执行相同的操作，另外会自动连接到所发现的服务之一。 可以将任何终结点转换为 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，也可以在配置中添加搜索条件，这样，如果您需要在解决方案中执行发现操作，但不希望修改客户端逻辑，则 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 会非常有用 – 此时您只需修改终结点。 另一方面，<xref:System.ServiceModel.Discovery.DiscoveryClient> 可用于对您的搜索操作获得更精细的控制。 下面对每个类的用途和优势加以详细说明。  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
- <xref:System.ServiceModel.Discovery.DiscoveryClient> 定义同步和异步 Find 方法以及 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> 和 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> 事件。  它还定义了同步和异步 Resolve 方法以及 <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveCompleted> 事件。 使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 或 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 方法可以搜索服务。 这两个方法都接受 <xref:System.ServiceModel.Discovery.FindCriteria> 实例，该实例可用于指定协定类型名称、作用域、最大请求结果数和作用域匹配规则。 调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> 方法时，可以使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> 和 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 事件。 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> 每当激发<xref:System.ServiceModel.Discovery.DiscoveryClient>接收来自服务的响应。 可使用该事件来显示指示查找操作进度的进度栏。 它还可用来在接收到查找响应时对这些响应进行操作。 查找操作完成时激发 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> 事件。 如果已接收到最大响应数或 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 已结束，则可能发生此情况。 查找操作完成时，将在 <xref:System.ServiceModel.Discovery.FindResponse> 实例中返回结果。 <xref:System.ServiceModel.Discovery.FindResponse> 包含 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 的集合，该集合包含地址、协定类型名称、扩展、侦听 URI 和匹配的服务的作用域。 然后，您可以使用这些信息连接到匹配的服务并调用其中一个服务。 下面的示例演示如何调用 System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria) 方法并使用返回的元数据调用找到的服务。 使用的好处是<xref:System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria)>是可以缓存已找到并在以后使用这些终结点的列表。 通过此缓存，您可以构建自定义逻辑来处理各种失败情况。  
+ <xref:System.ServiceModel.Discovery.DiscoveryClient> 定义同步和异步 Find 方法以及 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> 和 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> 事件。  它还定义了同步和异步 Resolve 方法以及 <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveCompleted> 事件。 使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 或 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 方法可以搜索服务。 这两个方法都接受 <xref:System.ServiceModel.Discovery.FindCriteria> 实例，该实例可用于指定协定类型名称、作用域、最大请求结果数和作用域匹配规则。 调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> 方法时，可以使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> 和 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 事件。 只要 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged> 从服务中收到响应，就会激发 <xref:System.ServiceModel.Discovery.DiscoveryClient>。 可使用该事件来显示指示查找操作进度的进度栏。 它还可用来在接收到查找响应时对这些响应进行操作。 查找操作完成时激发 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted> 事件。 如果已接收到最大响应数或 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 已结束，则可能发生此情况。 查找操作完成时，将在 <xref:System.ServiceModel.Discovery.FindResponse> 实例中返回结果。 <xref:System.ServiceModel.Discovery.FindResponse> 包含 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 的集合，该集合包含地址、协定类型名称、扩展、侦听 URI 和匹配的服务的作用域。 然后，您可以使用这些信息连接到匹配的服务并调用其中一个服务。 下面的示例演示如何调用 System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria) 方法并使用返回的元数据调用找到的服务。 使用的好处是<xref:System.ServiceModel.Discovery.DiscoveryClient.Find(System.ServiceModel.Discovery.FindCriteria)>是可以缓存已找到并在以后使用这些终结点的列表。 通过此缓存，您可以构建自定义逻辑来处理各种失败情况。  
   
 ```  
 DiscoveryClient dc = new DiscoveryClient(new UdpDiscoveryEndpoint());  
@@ -108,4 +108,4 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 ## <a name="see-also"></a>请参阅
 
 - [通过范围进行发现](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)

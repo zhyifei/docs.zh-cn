@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212422"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概述
@@ -29,7 +29,7 @@ ms.locfileid: "59212422"
   
 <a name="scrollviewer_physical_vs_logical"></a>   
 ## <a name="physical-vs-logical-scrolling"></a>物理滚动与逻辑滚动  
- 物理滚动用于按预设的物理增量（通常按以像素为单位声明的值）滚动内容。 逻辑滚动用于滚动到逻辑树中的下一项。 物理滚动是大多数的默认滚动行为<xref:System.Windows.Controls.Panel>元素。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持两种类型的滚动。  
+ 物理滚动用于按预设的物理增量（通常按以像素为单位声明的值）滚动内容。 逻辑滚动用于滚动到逻辑树中的下一项。 物理滚动是大多数的默认滚动行为<xref:System.Windows.Controls.Panel>元素。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 同时支持这两种类型的滚动。  
   
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo 接口  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>接口表示的主滚动区域内<xref:System.Windows.Controls.ScrollViewer>或派生的控件。 该接口定义的滚动属性和方法，可由实现<xref:System.Windows.Controls.Panel>需要按逻辑单元，而不按物理增量滚动元素。 实例转换<xref:System.Windows.Controls.Primitives.IScrollInfo>到派生<xref:System.Windows.Controls.Panel>，然后使用其滚动方法提供了一种滚动到下一个逻辑单位子集合，而不是按像素增量有效方式。 默认情况下，<xref:System.Windows.Controls.ScrollViewer>控件支持按物理单位滚动。  
@@ -68,4 +68,4 @@ ms.locfileid: "59212422"
 - [如何：创建滚动查看器](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [WPF 中的文档](../advanced/documents-in-wpf.md)
 - [ScrollBar 样式和模板](scrollbar-styles-and-templates.md)
-- [Controls](../advanced/optimizing-performance-controls.md)
+- [控件](../advanced/optimizing-performance-controls.md)

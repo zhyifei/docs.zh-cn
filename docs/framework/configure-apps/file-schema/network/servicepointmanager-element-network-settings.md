@@ -1,5 +1,5 @@
 ---
-title: <servicePointManager> 元素 （网络设置）
+title: <servicePointManager> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202204"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素 （网络设置）
@@ -42,7 +42,7 @@ ms.locfileid: "59202204"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|指定系统是否应验证对证书的名称与之前使用的证书匹配服务器主机名。 默认值为 `true`。|  
 |`checkCertificateRevocationList`|指定是否应检查系统，然后再使用该证书是否已吊销证书。 默认值为 `false`。|  
@@ -57,7 +57,7 @@ ms.locfileid: "59202204"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
