@@ -8,35 +8,35 @@ helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
 ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317696"
 ---
-# <a name="how-to-allow-metadata-requests-while-authorizing"></a><span data-ttu-id="cf355-102">如何：授权时允许元数据请求</span><span class="sxs-lookup"><span data-stu-id="cf355-102">How To: Allow Metadata Requests While Authorizing</span></span>
-<span data-ttu-id="cf355-103">自定义授权时，可能有必要允许处理对元数据的请求。</span><span class="sxs-lookup"><span data-stu-id="cf355-103">During custom authorization, it may be necessary to allow a request for metadata to be processed.</span></span> <span data-ttu-id="cf355-104">以下主题将演练验证此类请求的步骤。</span><span class="sxs-lookup"><span data-stu-id="cf355-104">The following topic walks through the steps to validate such a request.</span></span>  
+# <a name="how-to-allow-metadata-requests-while-authorizing"></a><span data-ttu-id="0a999-102">如何：授权时允许元数据请求</span><span class="sxs-lookup"><span data-stu-id="0a999-102">How To: Allow Metadata Requests While Authorizing</span></span>
+<span data-ttu-id="0a999-103">自定义授权时，可能有必要允许处理对元数据的请求。</span><span class="sxs-lookup"><span data-stu-id="0a999-103">During custom authorization, it may be necessary to allow a request for metadata to be processed.</span></span> <span data-ttu-id="0a999-104">以下主题将演练验证此类请求的步骤。</span><span class="sxs-lookup"><span data-stu-id="0a999-104">The following topic walks through the steps to validate such a request.</span></span>  
   
- <span data-ttu-id="cf355-105">有关 Windows Communication Foundation (WCF) 授权的详细信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="cf355-105">For more information about Windows Communication Foundation (WCF) authorization, see [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).</span></span>  
+ <span data-ttu-id="0a999-105">有关 Windows Communication Foundation (WCF) 授权的详细信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。</span><span class="sxs-lookup"><span data-stu-id="0a999-105">For more information about Windows Communication Foundation (WCF) authorization, see [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).</span></span>  
   
-### <a name="to-allow-metadata-requests-during-authorization"></a><span data-ttu-id="cf355-106">授权时允许元数据请求</span><span class="sxs-lookup"><span data-stu-id="cf355-106">To allow metadata requests during authorization</span></span>  
+### <a name="to-allow-metadata-requests-during-authorization"></a><span data-ttu-id="0a999-106">授权时允许元数据请求</span><span class="sxs-lookup"><span data-stu-id="0a999-106">To allow metadata requests during authorization</span></span>  
   
-1. <span data-ttu-id="cf355-107">创建 <xref:System.ServiceModel.ServiceAuthorizationManager> 类的扩展。</span><span class="sxs-lookup"><span data-stu-id="cf355-107">Create an extension of the <xref:System.ServiceModel.ServiceAuthorizationManager> class.</span></span>  
+1. <span data-ttu-id="0a999-107">创建 <xref:System.ServiceModel.ServiceAuthorizationManager> 类的扩展。</span><span class="sxs-lookup"><span data-stu-id="0a999-107">Create an extension of the <xref:System.ServiceModel.ServiceAuthorizationManager> class.</span></span>  
   
-2. <span data-ttu-id="cf355-108">重写 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="cf355-108">Override the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method.</span></span> <span data-ttu-id="cf355-109">取决于是否允许授权，该方法返回 `true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="cf355-109">The method returns `true` or `false` depending on whether authorization is allowed.</span></span> <span data-ttu-id="cf355-110">有关当前过程的信息，请参见作为参数传递给该方法的 <xref:System.ServiceModel.OperationContext>。</span><span class="sxs-lookup"><span data-stu-id="cf355-110">Information about the current procedure is found in the <xref:System.ServiceModel.OperationContext> passed as a parameter to the method.</span></span>  
+2. <span data-ttu-id="0a999-108">重写 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="0a999-108">Override the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method.</span></span> <span data-ttu-id="0a999-109">取决于是否允许授权，该方法返回 `true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="0a999-109">The method returns `true` or `false` depending on whether authorization is allowed.</span></span> <span data-ttu-id="0a999-110">有关当前过程的信息，请参见作为参数传递给该方法的 <xref:System.ServiceModel.OperationContext>。</span><span class="sxs-lookup"><span data-stu-id="0a999-110">Information about the current procedure is found in the <xref:System.ServiceModel.OperationContext> passed as a parameter to the method.</span></span>  
   
-3. <span data-ttu-id="cf355-111">重写时，检查协定名称、命名空间和操作，如在以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="cf355-111">In the override, check the contract name, namespace, and the action as shown in the following example.</span></span> <span data-ttu-id="cf355-112">如果条件有效，然后返回</span><span class="sxs-lookup"><span data-stu-id="cf355-112">If the conditions are valid, then return</span></span> `true.`  
+3. <span data-ttu-id="0a999-111">重写时，检查协定名称、命名空间和操作，如在以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="0a999-111">In the override, check the contract name, namespace, and the action as shown in the following example.</span></span> <span data-ttu-id="0a999-112">如果条件无效，则将返回 `true.`。</span><span class="sxs-lookup"><span data-stu-id="0a999-112">If the conditions are valid, then return `true.`</span></span>  
   
-4. <span data-ttu-id="cf355-113">使用扩展点利用类。</span><span class="sxs-lookup"><span data-stu-id="cf355-113">Use the extensibility point to employ the class.</span></span> <span data-ttu-id="cf355-114">有关详细信息，请参阅[如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。</span><span class="sxs-lookup"><span data-stu-id="cf355-114">For more information, see [How to: Create a Custom Authorization Manager for a Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).</span></span>  
+4. <span data-ttu-id="0a999-113">使用扩展点利用类。</span><span class="sxs-lookup"><span data-stu-id="0a999-113">Use the extensibility point to employ the class.</span></span> <span data-ttu-id="0a999-114">有关详细信息，请参阅[如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。</span><span class="sxs-lookup"><span data-stu-id="0a999-114">For more information, see [How to: Create a Custom Authorization Manager for a Service](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cf355-115">示例</span><span class="sxs-lookup"><span data-stu-id="cf355-115">Example</span></span>  
- <span data-ttu-id="cf355-116">下面的示例演示对 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法的重写。</span><span class="sxs-lookup"><span data-stu-id="cf355-116">The following example shows an override of the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="0a999-115">示例</span><span class="sxs-lookup"><span data-stu-id="0a999-115">Example</span></span>  
+ <span data-ttu-id="0a999-116">下面的示例演示对 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法的重写。</span><span class="sxs-lookup"><span data-stu-id="0a999-116">The following example shows an override of the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method.</span></span>  
   
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="cf355-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="cf355-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a999-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="0a999-117">See also</span></span>
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [<span data-ttu-id="cf355-118">授权</span><span class="sxs-lookup"><span data-stu-id="cf355-118">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [<span data-ttu-id="cf355-119">使用标识模型管理声明和授权</span><span class="sxs-lookup"><span data-stu-id="cf355-119">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [<span data-ttu-id="0a999-118">授权</span><span class="sxs-lookup"><span data-stu-id="0a999-118">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [<span data-ttu-id="0a999-119">使用标识模型管理声明和授权</span><span class="sxs-lookup"><span data-stu-id="0a999-119">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

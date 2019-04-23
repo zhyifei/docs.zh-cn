@@ -9,29 +9,29 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
 ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312574"
 ---
-# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="7da75-102">如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序</span><span class="sxs-lookup"><span data-stu-id="7da75-102">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="7da75-103">Windows 窗体控件不排序操作时它们是数据绑定。</span><span class="sxs-lookup"><span data-stu-id="7da75-103">Windows Forms controls do not sort when they are data-bound.</span></span> <span data-ttu-id="7da75-104">若要显示已排序的数据，请使用支持排序的数据源，然后对其进行排序的数据源。</span><span class="sxs-lookup"><span data-stu-id="7da75-104">To display sorted data, use a data source that supports sorting and then have the data source sort it.</span></span> <span data-ttu-id="7da75-105">支持排序的数据源是数据的视图，数据查看管理器，并已排序数组。</span><span class="sxs-lookup"><span data-stu-id="7da75-105">Data sources that support sorting are data views, data view managers, and sorted arrays.</span></span>  
+# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="dc4a5-102">如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序</span><span class="sxs-lookup"><span data-stu-id="dc4a5-102">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="dc4a5-103">Windows 窗体控件不排序操作时它们是数据绑定。</span><span class="sxs-lookup"><span data-stu-id="dc4a5-103">Windows Forms controls do not sort when they are data-bound.</span></span> <span data-ttu-id="dc4a5-104">若要显示已排序的数据，请使用支持排序的数据源，然后对其进行排序的数据源。</span><span class="sxs-lookup"><span data-stu-id="dc4a5-104">To display sorted data, use a data source that supports sorting and then have the data source sort it.</span></span> <span data-ttu-id="dc4a5-105">支持排序的数据源是数据的视图，数据查看管理器，并已排序数组。</span><span class="sxs-lookup"><span data-stu-id="dc4a5-105">Data sources that support sorting are data views, data view managers, and sorted arrays.</span></span>  
   
- <span data-ttu-id="7da75-106">如果控件不是数据绑定，您可以对其进行排序。</span><span class="sxs-lookup"><span data-stu-id="7da75-106">If the control is not data-bound, you can sort it.</span></span>  
+ <span data-ttu-id="dc4a5-106">如果控件不是数据绑定，您可以对其进行排序。</span><span class="sxs-lookup"><span data-stu-id="dc4a5-106">If the control is not data-bound, you can sort it.</span></span>  
   
-### <a name="to-sort-the-list"></a><span data-ttu-id="7da75-107">若要对列表进行排序</span><span class="sxs-lookup"><span data-stu-id="7da75-107">To sort the list</span></span>  
+### <a name="to-sort-the-list"></a><span data-ttu-id="dc4a5-107">若要对列表进行排序</span><span class="sxs-lookup"><span data-stu-id="dc4a5-107">To sort the list</span></span>  
   
-1. <span data-ttu-id="7da75-108">将 `Sorted` 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="7da75-108">Set the `Sorted` property to `true`.</span></span>  
+1. <span data-ttu-id="dc4a5-108">将 `Sorted` 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="dc4a5-108">Set the `Sorted` property to `true`.</span></span>  
   
-     <span data-ttu-id="7da75-109">此设置按排序顺序重新定位所有现有列表项。</span><span class="sxs-lookup"><span data-stu-id="7da75-109">This setting repositions all existing list items in sorted order.</span></span>  
+     <span data-ttu-id="dc4a5-109">此设置按排序顺序重新定位所有现有列表项。</span><span class="sxs-lookup"><span data-stu-id="dc4a5-109">This setting repositions all existing list items in sorted order.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7da75-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="7da75-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc4a5-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="dc4a5-110">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="7da75-111">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="7da75-111">Windows Forms Data Binding</span></span>](../windows-forms-data-binding.md)
-- [<span data-ttu-id="7da75-112">如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项</span><span class="sxs-lookup"><span data-stu-id="7da75-112">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](add-and-remove-items-from-a-wf-combobox.md)
-- [<span data-ttu-id="7da75-113">何时使用 Windows 窗体 ComboBox 而非 ListBox</span><span class="sxs-lookup"><span data-stu-id="7da75-113">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [<span data-ttu-id="7da75-114">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="7da75-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="dc4a5-111">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="dc4a5-111">Windows Forms Data Binding</span></span>](../windows-forms-data-binding.md)
+- [<span data-ttu-id="dc4a5-112">如何：添加和删除项从 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件</span><span class="sxs-lookup"><span data-stu-id="dc4a5-112">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](add-and-remove-items-from-a-wf-combobox.md)
+- [<span data-ttu-id="dc4a5-113">何时使用 Windows 窗体 ComboBox 而非 ListBox</span><span class="sxs-lookup"><span data-stu-id="dc4a5-113">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [<span data-ttu-id="dc4a5-114">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="dc4a5-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)

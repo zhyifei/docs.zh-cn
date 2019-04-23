@@ -3,31 +3,31 @@ title: 如何：确定文件是否为程序集 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
 ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316058"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a><span data-ttu-id="9f51f-102">如何：确定文件是否为程序集 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f51f-102">How to: Determine If a File Is an Assembly (Visual Basic)</span></span>
-<span data-ttu-id="9f51f-103">当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。</span><span class="sxs-lookup"><span data-stu-id="9f51f-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="9f51f-104">有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../framework/app-domains/assembly-manifest.md)。</span><span class="sxs-lookup"><span data-stu-id="9f51f-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../framework/app-domains/assembly-manifest.md).</span></span>  
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a><span data-ttu-id="64028-102">如何：确定文件是否为程序集 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64028-102">How to: Determine If a File Is an Assembly (Visual Basic)</span></span>
+<span data-ttu-id="64028-103">当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。</span><span class="sxs-lookup"><span data-stu-id="64028-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="64028-104">有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../framework/app-domains/assembly-manifest.md)。</span><span class="sxs-lookup"><span data-stu-id="64028-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](../../../../framework/app-domains/assembly-manifest.md).</span></span>  
   
-## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="9f51f-105">如何手动确定文件是否为程序集</span><span class="sxs-lookup"><span data-stu-id="9f51f-105">How to manually determine if a file is an assembly</span></span>  
+## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="64028-105">如何手动确定文件是否为程序集</span><span class="sxs-lookup"><span data-stu-id="64028-105">How to manually determine if a file is an assembly</span></span>  
   
-1. <span data-ttu-id="9f51f-106">启动 [Ildasm.exe（IL 反汇编程序）](../../../../framework/tools/ildasm-exe-il-disassembler.md)。</span><span class="sxs-lookup"><span data-stu-id="9f51f-106">Start the [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
+1. <span data-ttu-id="64028-106">启动 [Ildasm.exe（IL 反汇编程序）](../../../../framework/tools/ildasm-exe-il-disassembler.md)。</span><span class="sxs-lookup"><span data-stu-id="64028-106">Start the [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
   
-2. <span data-ttu-id="9f51f-107">加载要测试的文件。</span><span class="sxs-lookup"><span data-stu-id="9f51f-107">Load the file you wish to test.</span></span>  
+2. <span data-ttu-id="64028-107">加载要测试的文件。</span><span class="sxs-lookup"><span data-stu-id="64028-107">Load the file you wish to test.</span></span>  
   
-3. <span data-ttu-id="9f51f-108">如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。</span><span class="sxs-lookup"><span data-stu-id="9f51f-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="9f51f-109">有关详细信息，请参阅主题[如何：查看程序集内容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。</span><span class="sxs-lookup"><span data-stu-id="9f51f-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
+3. <span data-ttu-id="64028-108">如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。</span><span class="sxs-lookup"><span data-stu-id="64028-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="64028-109">有关详细信息，请参阅主题[如何：查看程序集内容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。</span><span class="sxs-lookup"><span data-stu-id="64028-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
   
-## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="9f51f-110">如何以编程方式确定文件是否为程序集</span><span class="sxs-lookup"><span data-stu-id="9f51f-110">How to programmatically determine if a file is an assembly</span></span>  
+## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="64028-110">如何以编程方式确定文件是否为程序集</span><span class="sxs-lookup"><span data-stu-id="64028-110">How to programmatically determine if a file is an assembly</span></span>  
   
-1. <span data-ttu-id="9f51f-111">调用 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，传递要测试的文件的完整文件路径和名称。</span><span class="sxs-lookup"><span data-stu-id="9f51f-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
+1. <span data-ttu-id="64028-111">调用 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，传递要测试的文件的完整文件路径和名称。</span><span class="sxs-lookup"><span data-stu-id="64028-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
   
-2. <span data-ttu-id="9f51f-112">如果引发 <xref:System.BadImageFormatException> 异常，则该文件不是程序集。</span><span class="sxs-lookup"><span data-stu-id="9f51f-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
+2. <span data-ttu-id="64028-112">如果引发 <xref:System.BadImageFormatException> 异常，则该文件不是程序集。</span><span class="sxs-lookup"><span data-stu-id="64028-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9f51f-113">示例</span><span class="sxs-lookup"><span data-stu-id="9f51f-113">Example</span></span>  
- <span data-ttu-id="9f51f-114">此示例测试 DLL 以查看其是否为程序集。</span><span class="sxs-lookup"><span data-stu-id="9f51f-114">This example tests a DLL to see if it is an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="64028-113">示例</span><span class="sxs-lookup"><span data-stu-id="64028-113">Example</span></span>  
+ <span data-ttu-id="64028-114">此示例测试 DLL 以查看其是否为程序集。</span><span class="sxs-lookup"><span data-stu-id="64028-114">This example tests a DLL to see if it is an assembly.</span></span>  
   
 ```vb  
 Module Module1  
@@ -50,10 +50,10 @@ End Module
 '        Yes, the file is an Assembly.  
 ```
   
- <span data-ttu-id="9f51f-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法加载测试文件，然后在读取信息之后释放它。</span><span class="sxs-lookup"><span data-stu-id="9f51f-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
+ <span data-ttu-id="64028-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法加载测试文件，然后在读取信息之后释放它。</span><span class="sxs-lookup"><span data-stu-id="64028-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f51f-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="9f51f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64028-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="64028-116">See also</span></span>
 
 - <xref:System.Reflection.AssemblyName>
-- [<span data-ttu-id="9f51f-117">编程概念</span><span class="sxs-lookup"><span data-stu-id="9f51f-117">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
-- [<span data-ttu-id="9f51f-118">程序集和全局程序集缓存 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f51f-118">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](index.md)
+- [<span data-ttu-id="64028-117">编程概念</span><span class="sxs-lookup"><span data-stu-id="64028-117">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="64028-118">程序集和全局程序集缓存 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64028-118">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](index.md)
