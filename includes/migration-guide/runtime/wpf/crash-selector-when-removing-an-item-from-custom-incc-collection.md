@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a573a78109036b87201b53f72aa8dba6755e7a21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236579"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803316"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>从自定义 INCC 集合删除项时选择器出现故障
 

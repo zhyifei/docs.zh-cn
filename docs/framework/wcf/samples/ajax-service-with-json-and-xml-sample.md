@@ -3,10 +3,10 @@ title: 具有 JSON 和 XML 的 AJAX 服务示例
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
 ms.openlocfilehash: a93e7bdf8cda88a1e86b59e5c3d37f049bdfcf28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304787"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>具有 JSON 和 XML 的 AJAX 服务示例
@@ -19,7 +19,7 @@ ms.locfileid: "59304787"
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
   
-为了启用非 ASP.NET AJAX 客户端，请在 .svc 文件中使用 <xref:System.ServiceModel.Activation.WebServiceHostFactory>（而不是 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>）。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 添加<xref:System.ServiceModel.Description.WebHttpEndpoint>到服务的标准终结点。 相对于.svc 文件中; 的空地址处配置的终结点这意味着该服务的地址是`http://localhost/ServiceModelSamples/service.svc`，除了操作名以外没有其他后缀。  
+为了启用非 ASP.NET AJAX 客户端，请在 .svc 文件中使用 <xref:System.ServiceModel.Activation.WebServiceHostFactory>（而不是 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>）。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 将 <xref:System.ServiceModel.Description.WebHttpEndpoint> 标准终结点添加到服务中。 相对于.svc 文件中; 的空地址处配置的终结点这意味着该服务的地址是`http://localhost/ServiceModelSamples/service.svc`，除了操作名以外没有其他后缀。  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  

@@ -3,10 +3,10 @@ title: 病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305021"
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
@@ -19,13 +19,13 @@ ms.locfileid: "59305021"
 ## <a name="handling-poison-messages"></a>处理病毒消息  
  在 WCF 中，病毒消息处理提供了用于接收应用程序处理消息无法调度到应用程序或那些虽然调度到应用程序，但其失败由于特定于应用程序要处理的消息的机制原因。 病毒消息处理是由每个可用排队绑定中的下列属性配置的：  
   
--   `ReceiveRetryCount`. 一个整数值，指示将某个消息从应用程序队列传递到应用程序的最大重试次数。 默认值为 5。 对于立即重试就可以修复问题（如数据库出现临时死锁）的情况，这个数值已足够了。  
+-   `ReceiveRetryCount`。 一个整数值，指示将某个消息从应用程序队列传递到应用程序的最大重试次数。 默认值为 5。 对于立即重试就可以修复问题（如数据库出现临时死锁）的情况，这个数值已足够了。  
   
--   `MaxRetryCycles`. 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，消息尝试最多 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 `MaxRetryCycles` 上，将忽略[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+-   `MaxRetryCycles`。 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，消息尝试最多 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 对于 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，将忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   `RetryCycleDelay`. 重试周期之间的时间延迟。 默认值为 30 分钟。 `MaxRetryCycles` 和`RetryCycleDelay`共同提供了一种机制来解决周期性延迟之后重试可修复该问题。 例如，这种机制可以处理 SQL Server 挂起的事务提交中锁定的行集。  
+-   `RetryCycleDelay`。 重试周期之间的时间延迟。 默认值为 30 分钟。 `MaxRetryCycles` 和 `RetryCycleDelay` 共同提供一个机制，用于解决周期性延迟之后重试可修复问题的问题。 例如，这种机制可以处理 SQL Server 挂起的事务提交中锁定的行集。  
   
--   `ReceiveErrorHandling`. 一个枚举，指示对在已尝试过最大重试次数后仍无法传递的消息所采取的操作。 可能的值包括“错误”、“删除”、“拒绝”和“移动”。 默认选项为“错误”。  
+-   `ReceiveErrorHandling`。 一个枚举，指示对在已尝试过最大重试次数后仍无法传递的消息所采取的操作。 可能的值包括“错误”、“删除”、“拒绝”和“移动”。 默认选项为“错误”。  
   
 -   错误。 此选项会向导致 `ServiceHost` 出现错误的侦听器发送一个错误。 必须利用其他一些外部机制将该消息从应用程序中移除，应用程序才能继续处理队列中的消息。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "59305021"
   
  WCF 提供了两个标准排队的绑定：  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. 一个[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]适合于执行基于队列的通信与其他 WCF 终结点的绑定。  
+-   <xref:System.ServiceModel.NetMsmqBinding>。 一个[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]适合于执行基于队列的通信与其他 WCF 终结点的绑定。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 这种绑定适用于与现有消息队列应用程序之间的通信。  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 这种绑定适用于与现有消息队列应用程序之间的通信。  
   
 > [!NOTE]
 >  您可以更改基于您的 WCF 服务的要求这些绑定中的属性。 对于接收应用程序来说，整个病毒消息处理机制都是本地的。 处理过程对于发送应用程序是不可见的，除非接收应用程序最终停止接收并将否定确认发送回发送方。 这种情况下，该消息会移动到发送方的死信队列中。  
@@ -92,7 +92,7 @@ ms.locfileid: "59305021"
  如果某条消息变为病毒消息，并且是某个批处理的一部分，则整个批处理将回滚，通道会返回到一次读取一条消息的状态。 有关批处理的详细信息，请参阅[在事务中的批处理消息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>对病毒队列中的消息进行病毒消息处理  
- 只要有消息放入病毒消息队列中，病毒消息处理就不会结束。 还必须读取和处理病毒消息队列中的消息。 当从最终病毒子队列读取消息时，可以使用病毒消息处理设置的子集。 适用的设置有 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以将 `ReceiveErrorHandling` 设置为“删除”、“拒绝”或“错误”。 `MaxRetryCycles` 将被忽略，如果将引发异常`ReceiveErrorHandling`设置为移动。  
+ 只要有消息放入病毒消息队列中，病毒消息处理就不会结束。 还必须读取和处理病毒消息队列中的消息。 当从最终病毒子队列读取消息时，可以使用病毒消息处理设置的子集。 适用的设置有 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以将 `ReceiveErrorHandling` 设置为“删除”、“拒绝”或“错误”。 如果 `MaxRetryCycles` 设置为“移动”，`ReceiveErrorHandling` 将被忽略并引发异常。  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003 和 Windows XP 之间的差异  
  如上所述，并非所有病毒消息处理设置均适用于 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 下面列出了 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的消息队列在病毒消息处理方面的主要差异：  
@@ -107,4 +107,4 @@ ms.locfileid: "59305021"
 
 - [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [在协定和服务中指定和处理错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [在协定和服务中指定并处理错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

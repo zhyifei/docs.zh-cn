@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191881"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306297"
 ---
 # <a name="xslt-parameters"></a>XSLT 参数
 使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 参数添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 此时，限定名和命名空间 URI 与参数对象关联。  
   
 ### <a name="to-use-an-xslt-parameter"></a>使用 XSLT 参数  
   
-1.  创建 <xref:System.Xml.Xsl.XsltArgumentList> 对象并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法添加参数。  
+1. 创建 <xref:System.Xml.Xsl.XsltArgumentList> 对象并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法添加参数。  
   
-2.  从样式表调用参数。  
+2. 从样式表调用参数。  
   
-3.  将 <xref:System.Xml.Xsl.XsltArgumentList> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
+3. 将 <xref:System.Xml.Xsl.XsltArgumentList> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="parameter-types"></a>参数类型  
  参数对象应对应于某种 W3C 类型。 下表显示了相应的 W3C 类型、等效的 Microsoft .NET 类（类型），以及 W3C 类型是 XPath 类型还是 XSLT 类型。  
@@ -58,7 +58,7 @@ ms.locfileid: "44191881"
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>输出  
+### <a name="output"></a>Output  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

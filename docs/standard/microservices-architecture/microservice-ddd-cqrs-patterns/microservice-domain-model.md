@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465888"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613052"
 ---
 # <a name="design-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -58,13 +58,13 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 #### <a name="additional-resources"></a>其他资源
 
 - **DevIQ.Domain Entity** \（域实体）
-  [https://deviq.com/entity/](https://deviq.com/entity/)
+  <https://deviq.com/entity/>
 
 - **Martin Fowler。The Domain Model** \（域模型）
-  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
+  <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler。The Anemic Domain Model** \（贫乏域模型）
-  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>值对象模式
 
@@ -83,16 +83,16 @@ EF Core 2.0 包含[实体](https://devblogs.microsoft.com/dotnet/announcing-enti
 #### <a name="additional-resources"></a>其他资源
 
 - **Martin Fowler。Value Object pattern** \（值对象模式）
-  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
+  <https://martinfowler.com/bliki/ValueObject.html>
 
 - Value Object \（值对象）
-  [https://deviq.com/value-object/](https://deviq.com/value-object/)
+  <https://deviq.com/value-object/>
 
 - Value Objects in Test-Driven Development \（测试驱动开发中的值对象）
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>聚合模式
 
@@ -145,13 +145,13 @@ public class Order : Entity, IAggregateRoot
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak。DDD Tactical Design Patterns** \（DDD 战术设计模式）
-  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
 - **Chris Richardson.Developing Transactional Microservices Using Aggregates** \（使用聚合开发事务微服务）
-  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ.The Aggregate pattern** \（聚合模式）
-  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
+  <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
 >[上一页](ddd-oriented-microservice.md)

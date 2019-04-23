@@ -2,12 +2,12 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: 57f7c61d8e4de2a63708ef6d4437ca53de854af9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: 1ba562ba6542e6ab0d62f1f8348434ae4f4c9b13
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116857"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305177"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 取消引用一个引用值，并生成该取消引用的结果。  
@@ -31,9 +31,9 @@ SELECT DEREF ( o.expression ) from Table as o;
 ## <a name="example"></a>示例  
  下面的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 DEREF 运算符取消引用一个引用值，并生成该取消引用的结果。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  按照中的过程[如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. 按照中的过程[如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
-2.  将以下查询作为参数传递给 ExecutePrimitiveTypeQuery 方法：  
+2. 将以下查询作为参数传递给 ExecutePrimitiveTypeQuery 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#DEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#deref)]  
   

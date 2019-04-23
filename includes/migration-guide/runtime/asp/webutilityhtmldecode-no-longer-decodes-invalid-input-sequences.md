@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: dfc1a0d05142861ff1c1b7391126d86e09fa71c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235165"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803382"
 ---
 ### <a name="webutilityhtmldecode-no-longer-decodes-invalid-input-sequences"></a>WebUtility.HtmlDecode 不再对无效的输入序列进行解码
 

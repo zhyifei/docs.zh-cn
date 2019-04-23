@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8332aca6e72346c92e80ce28979b83eec496b0e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235193"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803330"
 ---
 ### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>右键单击 WPF DataGrid 行标题更改 DataGrid 选择
 

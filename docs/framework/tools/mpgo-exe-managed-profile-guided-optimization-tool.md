@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496815"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306331"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
@@ -79,23 +79,23 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>使用 Mpgo.exe  
   
-1.  使用安装了 Visual Studio Ultimate 2012 和你的应用程序的计算机。  
+1. 使用安装了 Visual Studio Ultimate 2012 和你的应用程序的计算机。  
   
-2.  以管理员身份用必需的参数运行 Mpgo.exe。  有关示例命令，请参见下一节。  
+2. 以管理员身份用必需的参数运行 Mpgo.exe。  有关示例命令，请参见下一节。  
   
      优化的中间语言 (IL) 程序集是在由 `–OutDir` 参数指定的文件夹（在此示例中，这是 `C:\Optimized` 文件夹）中创建的。  
   
-3.  将用于 Ngen.exe 的 IL 程序集替换为包含 `–OutDir` 指定的目录中的配置文件信息的新 IL 程序集。  
+3. 将用于 Ngen.exe 的 IL 程序集替换为包含 `–OutDir` 指定的目录中的配置文件信息的新 IL 程序集。  
   
-4.  应用程序安装程序（使用 Mpgo.exe 提供的映像）将安装优化的本机映像。  
+4. 应用程序安装程序（使用 Mpgo.exe 提供的映像）将安装优化的本机映像。  
   
 ## <a name="suggested-workflow"></a>建议的工作流  
   
-1.  通过将 Mpgo.exe 与 `–Scenario` 参数结合使用来创建一组优化的 IL 程序集。  
+1. 通过将 Mpgo.exe 与 `–Scenario` 参数结合使用来创建一组优化的 IL 程序集。  
   
-2.  将优化的 IL 程序集签入到源代码管理中。  
+2. 将优化的 IL 程序集签入到源代码管理中。  
   
-3.  在生成过程中，使用 `–Import` 参数调用 Mpgo.exe 作为一个后期生成步骤来生成优化的 IL 映像以传递到 Ngen.exe。  
+3. 在生成过程中，使用 `–Import` 参数调用 Mpgo.exe 作为一个后期生成步骤来生成优化的 IL 映像以传递到 Ngen.exe。  
   
  此过程确保所有程序集具有优化数据。 如果更频繁地签入更新的优化程序集（步骤 1 和 2），则性能数字在整个产品开发中将更一致。  
   
@@ -127,6 +127,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943)（提高桌面应用程序的启动性能）

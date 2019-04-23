@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 05116d80fcd6b75f366a2542ad2eadd5f434991c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236123"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803322"
 ---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>改进了 Net.Tcp 证书身份验证的 WCF 链信任证书验证
 

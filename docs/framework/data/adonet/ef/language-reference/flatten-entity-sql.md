@@ -3,10 +3,10 @@ title: FLATTEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
 ms.openlocfilehash: 4f9a6315fc9cc2f295c21cc5fb7e1007e47796b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304566"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN (Entity SQL)
@@ -23,7 +23,7 @@ FLATTEN ( collection )
  任何有效的表达式，该表达式返回一个由值集合组成的集合以平展为单个集合。  
   
 ## <a name="remarks"></a>备注  
- `FLATTEN` 是的一个[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符都是从左到右进行求值。 请参阅[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)有关优先级信息[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符。  
+ `FLATTEN` 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符之一。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符都是从左到右进行求值。 请参阅[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)有关优先级信息[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符。  
   
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 `FLATTEN` 运算符以将一个由多个集合组成的集合转换为一个平展集合。 若要编译并运行此查询，请执行下列步骤：  

@@ -3,16 +3,16 @@ title: Iterators
 description: 了解如何使用内置 C# 迭代器以及如何创建自己的自定义迭代器方法。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155215"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613429"
 ---
 # <a name="iterators"></a>Iterators
 
-编写的几乎每个程序都需要循环访问集合。 因此需要编写代码来检查集合中的每一项。 
+编写的几乎每个程序都需要循环访问集合。 因此需要编写代码来检查集合中的每一项。
 
 还需创建迭代器方法，这些方法可为该类的元素生成迭代器。 这些方法可用于：
 
@@ -28,7 +28,7 @@ C# 语言提供了适用于这两种方案的功能。 本文概述了这些功�
 ## <a name="iterating-with-foreach"></a>使用 foreach 执行循环访问
 
 枚举集合非常简单：使用 `foreach` 关键字枚举集合，从而为集合中的每个元素执行一次嵌入语句：
- 
+
 ```csharp
 foreach (var item in collection)
 {
@@ -42,7 +42,7 @@ foreach (var item in collection)
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>使用迭代器方法的枚举源
 
-借助 C# 语言的另一个强大功能，能够生成创建枚举源的方法。 这些方法称为“迭代器方法”。 迭代器方法用于定义请求时如何在序列中生成对象。 使用 `yield return` 上下文关键字定义迭代器方法。 
+借助 C# 语言的另一个强大功能，能够生成创建枚举源的方法。 这些方法称为“迭代器方法”。 迭代器方法用于定义请求时如何在序列中生成对象。 使用 `yield return` 上下文关键字定义迭代器方法。
 
 可编写此方法以生成从 0 到 9 的整数序列：
 
@@ -82,9 +82,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-    
+
     index = 100;
     while (index++ < 110)
         yield return index;
@@ -113,12 +113,12 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
-    // generates a compile time error: 
+
+    // generates a compile time error:
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
-    return items;  
+    return items;
 }
 ```
 
@@ -132,15 +132,15 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
+
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
     foreach (var item in items)
         yield return item;
 }
 ```
- 
+
 有时，正确的做法是将迭代器方法拆分成 2 个不同的方法。 一个使用 `return`，另一个使用 `yield return`。 考虑这样一种情况：需要基于布尔参数返回一个空集合，或者返回前 5 个奇数。 可编写类似以下 2 种方法的方法：
 
 ```csharp
@@ -160,12 +160,12 @@ private IEnumerable<int> IteratorMethod()
             yield return index;
 }
 ```
- 
+
 看看上面的方法。 第 1 个方法使用标准 `return` 语句返回空集合，或返回第 2 个方法创建的迭代器。 第 2 个方法使用 `yield return` 语句创建请求的序列。
 
 ## <a name="deeper-dive-into-foreach"></a>深入了解 `foreach`
 
-`foreach` 语句可扩展为使用 `IEnumerable<T>` 和 `IEnumerator<T>` 接口的标准用语，以便循环访问集合中的所有元素。 还可最大限度减少开发人员因未正确管理资源所造成的错误。 
+`foreach` 语句可扩展为使用 `IEnumerable<T>` 和 `IEnumerator<T>` 接口的标准用语，以便循环访问集合中的所有元素。 还可最大限度减少开发人员因未正确管理资源所造成的错误。
 
 编译器将第 1 个示例中显示的 `foreach` 循环转换为类似于此构造的内容：
 
@@ -198,14 +198,14 @@ while (enumerator.MoveNext())
 ```csharp
 {
     var enumerator = collection.GetEnumerator();
-    try 
+    try
     {
         while (enumerator.MoveNext())
         {
             var item = enumerator.Current;
             Console.WriteLine(item.ToString());
         }
-    } finally 
+    } finally
     {
         // dispose of enumerator.
     }
@@ -215,26 +215,27 @@ while (enumerator.MoveNext())
 枚举器的释放方式取决于 `enumerator` 类型的特征。 一般情况下，`finally` 子句扩展为：
 
 ```csharp
-finally 
+finally
 {
    (enumerator as IDisposable)?.Dispose();
-} 
+}
 ```
 
 但是，如果 `enumerator` 的类型为已密封类型，并且不存在从类型 `enumerator` 到 `IDisposable` 的隐式转换，则 `finally` 子句扩展为一个空白块：
+
 ```csharp
-finally 
+finally
 {
-} 
+}
 ```
 
 如果存在从类型 `enumerator` 到 `IDisposable` 的隐式转换，并且 `enumerator` 是不可为 null 的值类型，则 `finally` 子句扩展为：
 
 ```csharp
-finally 
+finally
 {
    ((IDisposable)enumerator).Dispose();
-} 
+}
 ```
 
-幸运地是，无需记住所有这些细节。 `foreach` 语句会为你处理所有这些细微差别。 编译器会为所有这些构造生成正确的代码。 
+幸运地是，无需记住所有这些细节。 `foreach` 语句会为你处理所有这些细微差别。 编译器会为所有这些构造生成正确的代码。

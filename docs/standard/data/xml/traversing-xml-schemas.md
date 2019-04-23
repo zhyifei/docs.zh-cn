@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646628"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305034"
 ---
 # <a name="traversing-xml-schemas"></a>遍历 XML 架构
 使用架构对象模型 (SOM) API 遍历 XML 架构，可以访问 SOM 中存储的元素、属性和类型。 遍历加载到 SOM 的 XML 架构也是使用 SOM API 编辑 XML 架构的第一步。  
@@ -43,19 +43,19 @@ ms.locfileid: "54646628"
   
  示例通过下列步骤遍历客户架构。  
   
-1.  将客户架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
+1. 将客户架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
   
-2.  通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
+2. 通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
   
-3.  在将每个元素的名称写入控制台的后架构编译 <xref:System.Xml.Schema.XmlSchemaElement> 集合的 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>。  
+3. 在将每个元素的名称写入控制台的后架构编译 <xref:System.Xml.Schema.XmlSchemaElement> 集合的 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>。  
   
-4.  使用 `Customer` 类获取 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素的复杂类型。  
+4. 使用 `Customer` 类获取 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素的复杂类型。  
   
-5.  如果复杂类型具有任何属性，请获取 <xref:System.Collections.IDictionaryEnumerator> 以循环访问每个 <xref:System.Xml.Schema.XmlSchemaAttribute> 并将其名称写入控制台。  
+5. 如果复杂类型具有任何属性，请获取 <xref:System.Collections.IDictionaryEnumerator> 以循环访问每个 <xref:System.Xml.Schema.XmlSchemaAttribute> 并将其名称写入控制台。  
   
-6.  使用 <xref:System.Xml.Schema.XmlSchemaSequence> 类获取复杂类型的序列粒子。  
+6. 使用 <xref:System.Xml.Schema.XmlSchemaSequence> 类获取复杂类型的序列粒子。  
   
-7.  在将每个子元素的名称写入控制台的 <xref:System.Xml.Schema.XmlSchemaElement> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>。  
+7. 在将每个子元素的名称写入控制台的 <xref:System.Xml.Schema.XmlSchemaElement> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>。  
   
  以下是完整的代码示例。  
   

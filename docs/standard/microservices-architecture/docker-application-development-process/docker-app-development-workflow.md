@@ -4,12 +4,12 @@ description: 了解用于开发基于 Docker 的应用程序的工作流的详�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921086"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613364"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 
@@ -31,7 +31,7 @@ ms.locfileid: "58921086"
 
 ![Docker 应用的开发流程：1 - 编写应用代码，2 - 编写 Dockerfile/s，3 - 创建在 Dockerfile/s 上定义的映像，4 -（可选）在 docker-compose.yml 文件中编写服务，5 - 运行容器或 docker-compose 应用，6 - 测试应用或微服务，7 - 推送到存储库并重复操作。 ](./media/image1.png)
 
-**图 5-1.** 开发 Docker 容器化应用的分步工作流
+**图 5-1**。 开发 Docker 容器化应用的分步工作流
 
 本部分详细介绍了整个流程，并着重通过 Visual Studio 环境解释了每个主要步骤。
 
@@ -51,7 +51,7 @@ ms.locfileid: "58921086"
 
 首先，请务必按以下说明所述安装适用于 Windows 的 [Docker 社区版 (CE)](https://docs.docker.com/docker-for-windows/)：
 
-[适用于 Windows 的 Docker CE 入门](https://docs.docker.com/docker-for-windows/)
+[Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/)（适用于 Windows 的 Docker CE 入门）
 
 此外，需要安装了“.NET Core 跨平台开发”工作负载的 Visual Studio 2017 版本 15.7 或更高版本，如图 5-2 所示。
 
@@ -64,10 +64,10 @@ ms.locfileid: "58921086"
 ### <a name="additional-resources"></a>其他资源
 
 - 适用于 Windows 的 Docker CE 入门 \
-  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
+  <https://docs.docker.com/docker-for-windows/>
 
 - Visual Studio 2017 \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 - 编写 Dockerfile](./media/image4.png)
 
@@ -122,7 +122,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **生成开发人员自己的映像**。 请查看官方 Docker 文档。
-  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
+  <https://docs.docker.com/engine/tutorials/dockerimages/>
 
 - 保持 .NET 容器映像的最新状态 \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
@@ -193,26 +193,26 @@ Dockerfile 类似于批处理脚本。 类似于在必须从命令行设置计�
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 以下为每一行的详细信息：
 
-1.  使用“小型”仅运行时基础映像开始一个阶段，将其称为“基础”，以供参考。
-2.  在映像中创建 /app 目录。
-3.  公开端口 80。
+1. 使用“小型”仅运行时基础映像开始一个阶段，将其称为“基础”，以供参考。
+2. 在映像中创建 /app 目录。
+3. 公开端口 80。
 <!-- skip -->
-5.  使用“大型”映像开始用于生成/发布的新阶段，将其称为“生成”，以供参考。
-6.  在映像中创建目录 /src。
-7.  在第 16 行，复制引用的项目 .csproj 文件，以便之后能够还原包。
+5. 使用“大型”映像开始用于生成/发布的新阶段，将其称为“生成”，以供参考。
+6. 在映像中创建目录 /src。
+7. 在第 16 行，复制引用的项目 .csproj 文件，以便之后能够还原包。
 <!-- skip -->
 17. 还原 Catalog.API 项目和引用项目的包。
 18. 将解决方案的所有目录树（.dockerignore 文件中包含的文件/目录除外）复制到映像中的 /src 目录。
@@ -290,10 +290,10 @@ RUN dotnet restore
 ### <a name="additional-resources"></a>其他资源
 
 - 多体系结构 .NET Core 映像。
-  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
+  <https://github.com/dotnet/announcements/issues/14>
 
 - **创建基础映像**。 请查看官方 Docker 文档。
-  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3 - 创建在 Dockerfile 中定义的映像](./media/image7.png)
 
@@ -303,7 +303,7 @@ RUN dotnet restore
 
 请注意，Visual Studio 中会自动生成 Docker 映像。 以下步骤仅适用于编辑器/CLI 工作流，下文清楚解释了各步骤的工作原理。
 
-开发人员发布完整功能或更改源代码管理系统（例如 GitHub）之前，需在本地进行开发和测试。 这意味着开发人员需要创建 Docker 映像并向本地 Docker 主机（Windows 或 Linux VM）部署容器，并运行、测试和调试这些本地容器。
+你作为开发人员在推送完整功能或更改源代码管理系统（例如 GitHub）前，需要在本地进行开发和测试。 这意味着开发人员需要创建 Docker 映像并向本地 Docker 主机（Windows 或 Linux VM）部署容器，并运行、测试和调试这些本地容器。
 
 若要使用 Docker CLI 和 Dockerfile 在本地环境中创建自定义映像，可使用 docker build 命令，如图 5-5 所示。
 
@@ -321,7 +321,7 @@ RUN dotnet restore
 
 ![docker 映像命令中列出的映像的屏幕视图](./media/image9.png)
 
-**图 5-6.** 使用 docker images 命令查看现有映像
+**如 5-6**。 使用 docker images 命令查看现有映像
 
 ### <a name="creating-docker-images-with-visual-studio"></a>使用 Visual Studio 创建 Docker 映像
 
@@ -485,7 +485,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 ### <a name="additional-resources"></a>其他资源
 
 - 将 ASP.NET 容器部署到远程 Docker 主机 \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>有关使用业务流程协调程序进行测试和部署的注意事项
 
@@ -522,10 +522,10 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 ### <a name="additional-resources"></a>其他资源
 
 - 在本地 Docker 容器中调试应用 \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
-- **Steve Lasker。 使用 Docker 生成、调试、部署 ASP.NET Core 应用。** 视频。 \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+- **Steve Lasker。Build, Debug, Deploy ASP.NET Core Apps with Docker**（使用 Docker 生成、调试、部署 ASP.NET Core 应用）。 视频。 \
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>使用 Visual Studio 可简化开发容器的工作流
 
@@ -540,7 +540,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 ### <a name="additional-resources"></a>其他资源
 
 - 使用 Visual Studio 2017 进行 Steve Lasker .NET docker 开发 \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>在 DockerFile 中使用 PowerShell 命令来设置 Windows 容器 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>其他资源
 
 - **aspnet-docker/Dockerfile。** 在 dockerfiles 中运行以包含 Windows 功能的 Powershell 命令示例。
-  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
 >[上一页](index.md)

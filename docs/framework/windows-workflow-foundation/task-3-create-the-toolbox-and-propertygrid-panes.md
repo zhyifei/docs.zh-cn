@@ -3,10 +3,10 @@ title: 任务 3：创建工具箱窗格和属性网格窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
 ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305997"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>任务 3：创建工具箱窗格和属性网格窗格
@@ -214,6 +214,6 @@ namespace HostingApplication
   
 ## <a name="see-also"></a>请参阅
 
-- [重新承载工作流设计器](rehosting-the-workflow-designer.md)
-- [任务 1：创建一个新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
-- [任务 2：承载工作流设计器](task-2-host-the-workflow-designer.md)
+- [重新托管工作流设计器](rehosting-the-workflow-designer.md)
+- [任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
+- [任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)

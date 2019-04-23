@@ -3,11 +3,11 @@ title: 使用自定义活动
 ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
 ms.openlocfilehash: 47ddd42168445aa23eaaded6fd19ffe4698e4117
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309610"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973351"
 ---
 # <a name="using-a-custom-activity"></a>使用自定义活动
 派生自 <xref:System.Activities.Activity> 或其子类的活动可以组合到更大的工作流中，或以代码直接创建。 此主题说明如何使用工作流中以代码或通过设计器创建的自定义活动。  

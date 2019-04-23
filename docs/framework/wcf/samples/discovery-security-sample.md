@@ -3,11 +3,11 @@ title: 发现安全示例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318398"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973437"
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 本示例支持[2005 Discovery 规范](https://go.microsoft.com/fwlink/?LinkId=177912)并[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  

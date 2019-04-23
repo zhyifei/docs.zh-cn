@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729231"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306542"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>如何：映射 HRESULT 和异常
 COM 方法通过返回 HRESULT 来报告错误；NET 方法通过引发异常来报告错误。 运行时处理这两者之间的转换。 NET Framework 中的每个异常类都将映射到 HRESULT。  
@@ -31,7 +31,7 @@ COM 方法通过返回 HRESULT 来报告错误；NET 方法通过引发异常来
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>创建新的异常类并将其映射到 HRESULT  
   
-1.  使用以下代码创建名为 `NoAccessException` 的新的异常类，并将其映射到 HRESULT `E_ACCESSDENIED`。  
+1. 使用以下代码创建名为 `NoAccessException` 的新的异常类，并将其映射到 HRESULT `E_ACCESSDENIED`。  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -143,5 +143,6 @@ CMyClass::MethodThatThrows
  异常字段，如 Message、Source 和 StackTrace，不可用于 StackOverflowException。  
   
 ## <a name="see-also"></a>请参阅
+
 - [高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [异常](../../standard/exceptions/index.md)

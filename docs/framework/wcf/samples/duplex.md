@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
 ms.openlocfilehash: 1dedc6d771e75acd0d657bb5430c178428c0f0ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312678"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976698"
 ---
 # <a name="duplex"></a>双工
 “双工”示例演示如何定义和实现双工协定。 当客户端与服务建立会话并为服务提供可用来将消息发送回客户端的通道时，就会发生双工通信。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 双工协定以一对接口形式定义：一个从客户端到服务的主接口和一个从服务到客户端的回调接口。 在本示例中，`ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算结果。 服务在 `ICalculatorDuplexCallback` 接口上返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。  

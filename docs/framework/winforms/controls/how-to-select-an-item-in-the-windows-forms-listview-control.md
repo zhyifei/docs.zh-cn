@@ -11,11 +11,11 @@ helpviewer_keywords:
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
 ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143177"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977608"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>如何：选择 Windows 窗体 ListView 控件中的项
 此示例演示如何以编程方式在 Windows 窗体中选择一项<xref:System.Windows.Forms.ListView>控件。 以编程方式选择某个项不会自动更改焦点<xref:System.Windows.Forms.ListView>控件。 出于此原因，你通常还需要设置的项，因为聚焦时选择某一项。  

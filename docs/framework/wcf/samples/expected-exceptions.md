@@ -3,11 +3,11 @@ title: 预期异常
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
 ms.openlocfilehash: 3add9faa9a07249639c1ff3e83469d0634008472
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317085"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770069"
 ---
 # <a name="expected-exceptions"></a>预期异常
 此示例演示如何在使用类型化客户端时捕获预期异常。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  

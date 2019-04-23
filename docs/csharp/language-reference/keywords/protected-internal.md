@@ -3,12 +3,12 @@ title: protected internal - C# 参考
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 09685e38e879de787b0f6bab8c189a8815433904
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 090baae7fe0e49289059e060d5dcba7b037ae47a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238645"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613299"
 ---
 # <a name="protected-internal-c-reference"></a>受保护的内部成员（C# 参考）
 
@@ -55,6 +55,7 @@ class DerivedClass : BaseClass
     }
 }
 ```
+
 此示例包含两个文件，即 `Assembly1.cs` 和 `Assembly2.cs`。
 第一个文件包含公共基类 `BaseClass` 和另一个类 `TestAccess`。 `BaseClass` 拥有受保护的内部成员 `myValue`，由 `TestAccess` 类型访问。
 在第二个文件中，如果尝试通过 `BaseClass` 的实例访问 `myValue` ，会生成错误，但如果尝试通过一个派生类的实例来访问此成员，`DerivedClass` 会成功。
