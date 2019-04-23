@@ -3,16 +3,16 @@ title: .NET 机器学习教程 - ML.NET
 description: 浏览以下 ML.NET 教程，了解如何生成自定义 AI 解决方案并将其集成到 .NET 应用程序。
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 1f3824e409c21514bfb0c5743c6d9f36419ecb06
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427543"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980390"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>.NET 机器学习教程 - ML.NET
 
-学习以下教程，可以了解如何使用 [ML.NET](../index.md) 生成自定义机器学习解决方案并将其集成到 .NET 应用程序：
+学习以下教程，可以了解如何使用 [ML.NET](../index.yml) 生成自定义机器学习解决方案并将其集成到 .NET 应用程序：
 
 - [情绪分析](sentiment-analysis.md)：演示如何使用 ML.NET 应用二元分类任务。
 - [GitHub 问题分类](github-issue-classification.md)：演示如何使用 ML.NET 应用多类分类任务。

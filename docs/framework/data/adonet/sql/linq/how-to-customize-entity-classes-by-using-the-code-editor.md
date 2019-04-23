@@ -3,10 +3,10 @@ title: 如何：通过使用代码编辑器自定义实体类
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
 ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155163"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>如何：通过使用代码编辑器自定义实体类
@@ -19,10 +19,10 @@ ms.locfileid: "59155163"
  [如何：指定数据库名称](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>。  
   
- [如何：将表表示为类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
+ [如何：表表示为类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.TableAttribute>。  
   
- [如何：将列表示为类成员](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
+ [如何：列表示为类成员](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
  [如何：表示主键](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
@@ -31,10 +31,10 @@ ms.locfileid: "59155163"
  [如何：映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
  提供使用 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性的示例。  
   
- [如何：将列表示为数据库生成的](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [如何：列表示为数据库生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>。  
   
- [如何：将列表示为时间戳列或版本列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [如何：表示为时间戳列或版本列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>。  
   
  [如何：指定数据库数据类型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "59155163"
  [如何：指定专用存储字段](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>。  
   
- [如何：将列表示为允许 Null 值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [如何：列表示为允许 Null 值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>。  
   
  [如何：映射继承层次结构](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  

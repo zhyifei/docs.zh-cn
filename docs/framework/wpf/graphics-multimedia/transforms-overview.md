@@ -13,10 +13,10 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162191"
 ---
 # <a name="transforms-overview"></a>变换概述
@@ -58,7 +58,7 @@ ms.locfileid: "59162191"
   
 |类|描述|示例|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|分组多个<xref:System.Windows.Media.TransformGroup>到单个对象<xref:System.Windows.Media.Transform>，你可以然后应用它来转换属性。|[向一个对象应用多个转换](how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.TransformGroup>|分组多个<xref:System.Windows.Media.TransformGroup>到单个对象<xref:System.Windows.Media.Transform>，你可以然后应用它来转换属性。|[将多个转换应用到对象](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|创建自定义的转换不提供由其他的<xref:System.Windows.Media.Transform>类。 当你使用<xref:System.Windows.Media.MatrixTransform>，直接操作矩阵。|[使用 MatrixTransform 创建自定义转换](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  Windows Presentation Foundation (WPF) 还提供了[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]转换。 有关更多信息，请参见 <xref:System.Windows.Media.Media3D.Transform3D> 类。  
@@ -69,10 +69,10 @@ ms.locfileid: "59162191"
   
 |类型|转换属性|  
 |----------|-------------------------------|  
-|<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>, <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
+|<xref:System.Windows.Media.Brush>|<xref:System.Windows.Media.Brush.Transform%2A>， <xref:System.Windows.Media.Brush.RelativeTransform%2A>|  
 |<xref:System.Windows.Media.ContainerVisual>|<xref:System.Windows.Media.ContainerVisual.Transform%2A>|  
 |<xref:System.Windows.Media.DrawingGroup>|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|  
-|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.UIElement.RenderTransform%2A>, <xref:System.Windows.FrameworkElement.LayoutTransform%2A>|  
+|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.UIElement.RenderTransform%2A>， <xref:System.Windows.FrameworkElement.LayoutTransform%2A>|  
 |<xref:System.Windows.Media.Geometry>|<xref:System.Windows.Media.Geometry.Transform%2A>|  
 |<xref:System.Windows.Media.TextEffect>|<xref:System.Windows.Media.TextEffect.Transform%2A>|  
 |<xref:System.Windows.UIElement>|<xref:System.Windows.UIElement.RenderTransform%2A>|  
@@ -153,4 +153,4 @@ ms.locfileid: "59162191"
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
 - [帮助主题](transformations-how-to-topics.md)
-- [2d 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164432"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定义与 .NET Framework XAML 服务一起使用的自定义类型
@@ -70,7 +70,7 @@ ms.locfileid: "59164432"
 #### <a name="the-getpropertyname-accessor"></a>GetPropertyName 访问器  
  `Get` PropertyName 访问器的签名必须是：  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ `public static object Get` PropertyName `(object` `target` `)`  
   
 -   `target` 对象在实现中可以指定为更具体的类型。 可以使用此范围限定在可附加成员; 的使用情况你预期的作用域之外的使用情况将引发无效强制转换异常，然后显示 XAML 分析错误的。 参数名称`target`不是必需的但名为`target`大多数实现约定。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59164432"
 #### <a name="the-setpropertyname-accessor"></a>SetPropertyName 访问器  
  为集签名*PropertyName*访问器必须是：  
   
- `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` PropertyName `(object`  `target` `, object`  `value` `)`  
   
 -   `target`上一节中所述，可以在实现中，使用相同的逻辑和后果更具体的类型为指定对象。  
   

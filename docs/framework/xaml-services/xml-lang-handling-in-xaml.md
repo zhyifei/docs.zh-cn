@@ -8,10 +8,10 @@ helpviewer_keywords:
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
 ms.openlocfilehash: 6495e980beea8731c47a774589919f160b4551ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163561"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中 xml:lang 的处理
@@ -45,4 +45,4 @@ ms.locfileid: "59163561"
   
 ## <a name="see-also"></a>请参阅
 
-- [WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)
+- [WPF 全球化](../wpf/advanced/globalization-for-wpf.md)

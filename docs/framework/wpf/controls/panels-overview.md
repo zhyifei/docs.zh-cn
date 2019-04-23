@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157867"
 ---
 # <a name="panels-overview"></a>面板概述
@@ -81,7 +81,7 @@ ms.locfileid: "59157867"
   
  每个派生<xref:System.Windows.Controls.Panel>元素以不同方式处理大小调整约束。 了解如何<xref:System.Windows.Controls.Panel>中水平或垂直方向的句柄约束可以使布局更可预测。  
   
-|**面板名称**|**x 维度**|**y 维度**|  
+|**Panel 名称**|**x 维度**|**y 维度**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|按内容约束|按内容约束|  
 |<xref:System.Windows.Controls.DockPanel>|约束|约束|  
@@ -242,7 +242,7 @@ ms.locfileid: "59157867"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>本地化/全球化支持  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在创建可本地化的支持功能可帮助许多[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多种有助于创建可本地化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  
   
  所有面板元素本身都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态地重排内容基于用户的区域设置或语言设置。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "59157867"
 - [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [布局](../advanced/layout.md)
 - [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [Alignment、Margin 和 Padding 概述](../advanced/alignment-margins-and-padding-overview.md)
+- [对齐、边距和填充概述](../advanced/alignment-margins-and-padding-overview.md)
 - [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [附加属性概述](../advanced/attached-properties-overview.md)
 - [使用自动布局概述](../advanced/use-automatic-layout-overview.md)

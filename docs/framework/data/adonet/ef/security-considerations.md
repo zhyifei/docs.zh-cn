@@ -3,10 +3,10 @@ title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161353"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
@@ -65,13 +65,13 @@ ms.locfileid: "59161353"
 #### <a name="run-applications-with-the-minimum-permissions"></a>以最低权限运行应用程序。  
  如果允许托管应用程序以完全信任权限运行，则 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 不限制该应用程序对计算机的访问。 这会在应用程序中造成安全漏洞而威胁整个系统。 若要使用 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 中的代码访问安全机制和其他安全机制，应使用部分信任权限运行应用程序，且使用应用程序实现其功能所需的最小权限集。 下面的代码访问权限是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序所需的最小权限：  
   
--   <xref:System.Security.Permissions.FileIOPermission>:<xref:System.Security.Permissions.FileIOPermissionAccess.Write>以打开指定的元数据文件或<xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery>要搜索的元数据文件的目录。  
+-   <xref:System.Security.Permissions.FileIOPermission>：使用 <xref:System.Security.Permissions.FileIOPermissionAccess.Write> 打开指定的元数据文件，或者使用 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> 在目录中搜索元数据文件。  
   
--   <xref:System.Security.Permissions.ReflectionPermission>:<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>支持 LINQ to Entities 查询。  
+-   <xref:System.Security.Permissions.ReflectionPermission>：使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 支持 LINQ to Entities 查询。  
   
--   <xref:System.Transactions.DistributedTransactionPermission>:<xref:System.Security.Permissions.PermissionState.Unrestricted>中登记<xref:System.Transactions><xref:System.Transactions.Transaction>。  
+-   <xref:System.Transactions.DistributedTransactionPermission>：使用 <xref:System.Security.Permissions.PermissionState.Unrestricted> 在 <xref:System.Transactions><xref:System.Transactions.Transaction> 中登记。  
   
--   <xref:System.Security.Permissions.SecurityPermission>:<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>若要通过使用异常进行序列化<xref:System.Runtime.Serialization.ISerializable>接口。  
+-   <xref:System.Security.Permissions.SecurityPermission>：使用 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 以通过 <xref:System.Runtime.Serialization.ISerializable> 接口对异常进行序列化。  
   
 -   打开数据库连接和执行针对数据库中，命令如权限<xref:System.Data.SqlClient.SqlClientPermission>为 SQL Server 数据库。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "59161353"
   
      SQL 注入式攻击在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中的实施方法是向查询谓词和参数名称中使用的值提供恶意输入。 若要避免 SQL 注入风险，切勿组合用户输入与 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文本。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询接受参数接受文本的任何位置。 应使用参数化查询，而不是将来自外部代理的文本直接注入查询。 此外应考虑使用[查询生成器方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))安全地构造 Entity SQL。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询可在任何接受文本的位置接受参数。 应使用参数化查询，而不是将来自外部代理的文本直接注入查询。 此外应考虑使用[查询生成器方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))安全地构造 Entity SQL。  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 注入式攻击：  
   
@@ -150,7 +150,7 @@ ms.locfileid: "59161353"
  尽管根目录运算符 (`~`) 和 `DataDirectory` 替代字符串解析到的值应在应用程序运行时保持不变，但 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 并不限制主机修改这些值。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>部署前检查路径长度。  
- 部署[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序之前，应确保根目录运算符 (~) 和 `DataDirectory` 替代字符串的值没有超出操作系统中路径长度的限制。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 数据提供程序不保证路径长度是在有效范围内。  
+ 部署[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序之前，应确保根目录运算符 (~) 和 `DataDirectory` 替代字符串的值没有超出操作系统中路径长度的限制。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 数据提供程序不保证路径长度在有效范围内。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>有关 ADO.NET 元数据的安全注意事项  
  生成和处理模型和映射文件时应考虑下列安全注意事项。  

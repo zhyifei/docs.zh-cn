@@ -3,11 +3,11 @@ title: 如何：错误处理
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334986"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979389"
 ---
 # <a name="how-to-error-handling"></a>如何：错误处理
 本主题概述了创建采用错误处理的路由配置所需要的基本步骤。 在本示例中，消息路由到目标终结点。 如果消息因网络或通信相关故障 (<xref:System.ServiceModel.CommunicationException>) 而无法传递，则会将消息重新发送到备用终结点。  

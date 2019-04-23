@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159518"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>反射提供程序（WCF 数据服务）
-除通过实体框架公开数据模型中的数据以外，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还可以公开未在基于实体的模型中严格定义的数据。 反射提供程序公开类中的数据，这些类返回实现 <xref:System.Linq.IQueryable%601> 接口的类型。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用反射推断这些类的数据模型，并且可以对资源的基于地址的查询转换为语言集成查询 (LINQ) 的基于查询针对已公开<xref:System.Linq.IQueryable%601>类型。  
+除通过实体框架公开数据模型中的数据以外，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 还可以公开未在基于实体的模型中严格定义的数据。 反射提供程序公开类中的数据，这些类返回实现 <xref:System.Linq.IQueryable%601> 接口的类型。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用反射推断这些类的数据模型，并且可以将针对资源的基于地址的查询转换为针对已公开 <xref:System.Linq.IQueryable%601> 类型的基于语言集成查询 (LINQ) 的查询。  
   
 > [!NOTE]
 >  可使用 <xref:System.Linq.Queryable.AsQueryable%2A> 方法从实现 <xref:System.Linq.IQueryable%601> 接口的任何类返回 <xref:System.Collections.Generic.IEnumerable%601> 接口。 这允许将大多数泛型集合类型用作数据服务的数据源。  
@@ -89,7 +89,7 @@ ms.locfileid: "59159518"
 |<xref:System.Data.Services.IUpdatable.SetValue%2A>|提供设置资源的属性值的功能。|  
   
 ## <a name="handling-concurrency"></a>处理并发  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持开放式并发模型，使您能够定义并发标记的实体。 这样一个包含一个或多个实体属性的并发标记由数据服务用来确定，正在请求、更新或删除的数据中是否发生了更改。 如果从请求的 eTag 中获取的标记值与实体的当前值不相同，则数据服务将引发异常。 将 <xref:System.Data.Services.ETagAttribute> 应用于某个实体类型可在反射提供程序中定义并发标记。 并发标记不能包含键属性或导航属性。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持开放式并发模型，使您能够为实体定义并发标记。 这样一个包含一个或多个实体属性的并发标记由数据服务用来确定，正在请求、更新或删除的数据中是否发生了更改。 如果从请求的 eTag 中获取的标记值与实体的当前值不相同，则数据服务将引发异常。 将 <xref:System.Data.Services.ETagAttribute> 应用于某个实体类型可在反射提供程序中定义并发标记。 并发标记不能包含键属性或导航属性。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>配合使用 LINQ to SQL 和反射提供程序  
  由于默认情况下在本机支持实体框架，因此在结合使用关系数据和 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 时推荐使用此数据提供程序。 但是，可以使用反射提供程序来配合使用 LINQ to SQL 类和数据服务。 <xref:System.Data.Linq.Table%601>结果集由方法都返回<xref:System.Data.Linq.DataContext>生成的 LINQ to SQL 对象关系设计器 （O/R 设计器） 实现<xref:System.Linq.IQueryable%601>接口。 这样，反射提供程序便可以通过使用生成的 LINQ to SQL 类从 SQL Server 访问这些方法和返回实体数据。 但是，由于 LINQ to SQL 不会实现 <xref:System.Data.Services.IUpdatable> 接口，因此需要添加一个可扩展现有 <xref:System.Data.Linq.DataContext> 分部类的分部类才能添加 <xref:System.Data.Services.IUpdatable> 实现。 有关详细信息，请参阅[如何：创建使用 LINQ to SQL 数据源的数据服务](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)。  

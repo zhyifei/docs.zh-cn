@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165342"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 组件体系结构
@@ -149,7 +149,7 @@ ms.locfileid: "59165342"
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
+-   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
@@ -177,4 +177,4 @@ ms.locfileid: "59165342"
 - [Windows 窗体数据绑定](../windows-forms-data-binding.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
 - [如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [如何：使用 BindingSource 在 Windows 窗体控件中反映数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

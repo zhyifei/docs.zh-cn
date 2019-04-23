@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157665"
 ---
 # <a name="securing-services"></a>保证服务的安全
@@ -111,9 +111,9 @@ Windows Communication Foundation (WCF) 服务的安全性包括两个主要要�
 - [安全性](../../../docs/framework/wcf/feature-details/security.md)
 - [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [如何：设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [如何：使用 Windows 凭据保护服务的安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [如何：设置安全模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [如何：使用 Windows 凭据保护服务](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [如何：将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [如何：指定客户端凭据类型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
 - [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [如何：在服务上模拟客户端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [如何：检查安全性上下文](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+- [如何：模拟服务上的客户端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [如何：检查安全上下文](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

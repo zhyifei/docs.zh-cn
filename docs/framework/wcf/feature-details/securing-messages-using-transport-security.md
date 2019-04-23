@@ -3,10 +3,10 @@ title: 使用传输安全保护消息
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160883"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
@@ -50,7 +50,7 @@ ms.locfileid: "59160883"
  启用传输安全时，默认的设置为 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows 域身份验证模式  
- 如果选择使用 Windows 安全，则需要 Active Directory 集成。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认传输安全模式。 当此设置时，WCF 通道将 Windows SID 附加到 MSMQ 消息，并使用从 Active Directory 获取其内部证书。 MSMQ 将此内部证书用于保护消息。 接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。 如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
+ 如果选择使用 Windows 安全，则需要 Active Directory 集成。 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 是默认的传输安全模式。 当此设置时，WCF 通道将 Windows SID 附加到 MSMQ 消息，并使用从 Active Directory 获取其内部证书。 MSMQ 将此内部证书用于保护消息。 接收队列管理器使用 Active Directory 来搜索并查找匹配的证书，以便对客户端进行身份验证，并检查 SID 是否还与客户端的 SID 匹配。 如果证书（在 `WindowsDomain` 身份验证模式下在内部生成或在 `Certificate` 身份验证模式下在外部生成）附加到消息中，则即使目标队列未标记为要求身份验证，也将执行此身份验证步骤。  
   
 > [!NOTE]
 >  创建队列时，您可以将队列标记为已进行身份验证的队列，以指示队列要求对向队列发送消息的客户端进行身份验证。 这可以确保队列中不接受未经身份验证的消息。  

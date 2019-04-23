@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
 ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169008"
 ---
 # <a name="sort-elements-in-a-sequence"></a>在序列中对元素进行排序
 使用 <xref:System.Linq.Enumerable.OrderBy%2A> 运算符可按一个或多个键对序列进行排序。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设计为支持按简单的基元类型，如排序`string`， `int`，依次类推。 它不支持对复杂的多值类（如匿名类型）进行排序。 它也不支持 `byte` 数据类型。  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 设计为支持按简单的基元类型（如 `string`、`int` 等）进行排序。 它不支持对复杂的多值类（如匿名类型）进行排序。 它也不支持 `byte` 数据类型。  
   
 ## <a name="example"></a>示例  
  下面的示例按雇佣日期对 `Employees` 进行排序。  

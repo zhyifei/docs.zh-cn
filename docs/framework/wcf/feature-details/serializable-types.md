@@ -3,10 +3,10 @@ title: 可序列化类型
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160844"
 ---
 # <a name="serializable-types"></a>可序列化类型
@@ -27,7 +27,7 @@ ms.locfileid: "59160844"
   
 -   只读字段、没有 `get` 或 `set` 方法的属性以及具有内部或私有 `set` 或 `get` 方法的属性不会进行序列化。 此类属性会被忽略，但不会引发异常（get-only 集合的情况除外）。  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 属性 (如`XmlElement`， `XmlAttribute`， `XmlIgnore`， `XmlInclude`，等等) 将被忽略。  
+-   会忽略 <xref:System.Xml.Serialization.XmlSerializer> 属性（如 `XmlElement`、`XmlAttribute`、`XmlIgnore`、`XmlInclude` 等）。  
   
 -   如果未将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于某个给定类型，则序列化程序会忽略该类型中应用了 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性的所有成员。  
   

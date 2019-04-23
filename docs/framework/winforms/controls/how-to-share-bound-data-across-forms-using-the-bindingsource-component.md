@@ -11,10 +11,10 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154864"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>如何：使用 BindingSource 组件跨窗体共享绑定数据
@@ -40,4 +40,4 @@ ms.locfileid: "59154864"
 
 - [BindingSource 组件](bindingsource-component.md)
 - [Windows 窗体数据绑定](../windows-forms-data-binding.md)
-- [如何：处理因数据绑定而发生的错误和异常](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [如何：处理错误和因数据绑定而发生的异常](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
