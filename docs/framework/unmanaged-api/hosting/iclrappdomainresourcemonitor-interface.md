@@ -17,25 +17,25 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15bdbc001838e3d13a9789c8f54daa80f3b6ef9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219819"
 ---
-# <a name="iclrappdomainresourcemonitor-interface"></a><span data-ttu-id="320d1-102">ICLRAppDomainResourceMonitor 接口</span><span class="sxs-lookup"><span data-stu-id="320d1-102">ICLRAppDomainResourceMonitor Interface</span></span>
-<span data-ttu-id="320d1-103">提供检查应用程序域的内存和 CPU 使用情况的方法。</span><span class="sxs-lookup"><span data-stu-id="320d1-103">Provides methods that inspect an application domain's memory and CPU usage.</span></span>  
+# <a name="iclrappdomainresourcemonitor-interface"></a><span data-ttu-id="986e1-102">ICLRAppDomainResourceMonitor 接口</span><span class="sxs-lookup"><span data-stu-id="986e1-102">ICLRAppDomainResourceMonitor Interface</span></span>
+<span data-ttu-id="986e1-103">提供检查应用程序域的内存和 CPU 使用情况的方法。</span><span class="sxs-lookup"><span data-stu-id="986e1-103">Provides methods that inspect an application domain's memory and CPU usage.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="320d1-104">方法</span><span class="sxs-lookup"><span data-stu-id="320d1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="986e1-104">方法</span><span class="sxs-lookup"><span data-stu-id="986e1-104">Methods</span></span>  
   
-|<span data-ttu-id="320d1-105">方法</span><span class="sxs-lookup"><span data-stu-id="320d1-105">Method</span></span>|<span data-ttu-id="320d1-106">描述</span><span class="sxs-lookup"><span data-stu-id="320d1-106">Description</span></span>|  
+|<span data-ttu-id="986e1-105">方法</span><span class="sxs-lookup"><span data-stu-id="986e1-105">Method</span></span>|<span data-ttu-id="986e1-106">描述</span><span class="sxs-lookup"><span data-stu-id="986e1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="320d1-107">GetCurrentAllocated 方法</span><span class="sxs-lookup"><span data-stu-id="320d1-107">GetCurrentAllocated Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|<span data-ttu-id="320d1-108">获取用字节表示，因为它创建的而无需减去已进行垃圾回收的内存进行的应用程序域的所有内存分配的总大小。</span><span class="sxs-lookup"><span data-stu-id="320d1-108">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>|  
-|[<span data-ttu-id="320d1-109">GetCurrentSurvived 方法</span><span class="sxs-lookup"><span data-stu-id="320d1-109">GetCurrentSurvived Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|<span data-ttu-id="320d1-110">获取上次的完整、 阻碍性垃圾回收后保留下来并由当前的应用程序域引用的字节数。</span><span class="sxs-lookup"><span data-stu-id="320d1-110">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>|  
-|[<span data-ttu-id="320d1-111">GetCurrentCpuTime 方法</span><span class="sxs-lookup"><span data-stu-id="320d1-111">GetCurrentCpuTime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|<span data-ttu-id="320d1-112">获取在当前的应用程序域中执行，原因是已创建的应用程序域时使用的所有线程的总处理器时间。</span><span class="sxs-lookup"><span data-stu-id="320d1-112">Gets the total processor time that has been used by all threads while executing in the current application domain, since the application domain was created.</span></span>|  
+|[<span data-ttu-id="986e1-107">GetCurrentAllocated 方法</span><span class="sxs-lookup"><span data-stu-id="986e1-107">GetCurrentAllocated Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|<span data-ttu-id="986e1-108">获取用字节表示，因为它创建的而无需减去已进行垃圾回收的内存进行的应用程序域的所有内存分配的总大小。</span><span class="sxs-lookup"><span data-stu-id="986e1-108">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>|  
+|[<span data-ttu-id="986e1-109">GetCurrentSurvived 方法</span><span class="sxs-lookup"><span data-stu-id="986e1-109">GetCurrentSurvived Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|<span data-ttu-id="986e1-110">获取上次的完整、 阻碍性垃圾回收后保留下来并由当前的应用程序域引用的字节数。</span><span class="sxs-lookup"><span data-stu-id="986e1-110">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>|  
+|[<span data-ttu-id="986e1-111">GetCurrentCpuTime 方法</span><span class="sxs-lookup"><span data-stu-id="986e1-111">GetCurrentCpuTime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|<span data-ttu-id="986e1-112">获取在当前的应用程序域中执行，原因是已创建的应用程序域时使用的所有线程的总处理器时间。</span><span class="sxs-lookup"><span data-stu-id="986e1-112">Gets the total processor time that has been used by all threads while executing in the current application domain, since the application domain was created.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="320d1-113">备注</span><span class="sxs-lookup"><span data-stu-id="320d1-113">Remarks</span></span>  
- <span data-ttu-id="320d1-114">`ICLRAppDomainResourceMonitor`接口提供的功能，类似于以下的托管属性：</span><span class="sxs-lookup"><span data-stu-id="320d1-114">The `ICLRAppDomainResourceMonitor` interface provides functionality that is similar to the following managed properties:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="986e1-113">备注</span><span class="sxs-lookup"><span data-stu-id="986e1-113">Remarks</span></span>  
+ <span data-ttu-id="986e1-114">`ICLRAppDomainResourceMonitor`接口提供的功能，类似于以下的托管属性：</span><span class="sxs-lookup"><span data-stu-id="986e1-114">The `ICLRAppDomainResourceMonitor` interface provides functionality that is similar to the following managed properties:</span></span>  
   
 -   <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
   
@@ -47,18 +47,18 @@ ms.locfileid: "59219819"
   
 -   <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
-## <a name="requirements"></a><span data-ttu-id="320d1-115">要求</span><span class="sxs-lookup"><span data-stu-id="320d1-115">Requirements</span></span>  
- <span data-ttu-id="320d1-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="320d1-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="986e1-115">要求</span><span class="sxs-lookup"><span data-stu-id="986e1-115">Requirements</span></span>  
+ <span data-ttu-id="986e1-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="986e1-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="320d1-117">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="320d1-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="986e1-117">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="986e1-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="320d1-118">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="320d1-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="986e1-118">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="986e1-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="320d1-119">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="320d1-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="986e1-119">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="986e1-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="320d1-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="320d1-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="986e1-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="986e1-120">See also</span></span>
 
-- [<span data-ttu-id="320d1-121">\<appDomainResourceMonitoring > 元素</span><span class="sxs-lookup"><span data-stu-id="320d1-121">\<appDomainResourceMonitoring> Element</span></span>](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [<span data-ttu-id="320d1-122">应用程序域资源监控</span><span class="sxs-lookup"><span data-stu-id="320d1-122">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
-- [<span data-ttu-id="320d1-123">承载接口</span><span class="sxs-lookup"><span data-stu-id="320d1-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="320d1-124">宿主</span><span class="sxs-lookup"><span data-stu-id="320d1-124">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="986e1-121">\<appDomainResourceMonitoring > 元素</span><span class="sxs-lookup"><span data-stu-id="986e1-121">\<appDomainResourceMonitoring> Element</span></span>](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [<span data-ttu-id="986e1-122">应用程序域资源监视</span><span class="sxs-lookup"><span data-stu-id="986e1-122">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [<span data-ttu-id="986e1-123">承载接口</span><span class="sxs-lookup"><span data-stu-id="986e1-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="986e1-124">承载</span><span class="sxs-lookup"><span data-stu-id="986e1-124">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

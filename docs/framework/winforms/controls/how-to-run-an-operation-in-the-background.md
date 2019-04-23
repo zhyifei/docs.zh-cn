@@ -14,35 +14,35 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
 ms.openlocfilehash: 5ccbb6e4c09f5417f6c2766824ec7ed9722eed52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217986"
 ---
-# <a name="how-to-run-an-operation-in-the-background"></a><span data-ttu-id="a8efb-102">如何：在后台运行操作</span><span class="sxs-lookup"><span data-stu-id="a8efb-102">How to: Run an Operation in the Background</span></span>
-<span data-ttu-id="a8efb-103">如果某项操作需要很长时间才能完成，而你不希望造成用户界面的延迟，则可以使用 <xref:System.ComponentModel.BackgroundWorker> 类在另一个线程上运行此操作。</span><span class="sxs-lookup"><span data-stu-id="a8efb-103">If you have an operation that will take a long time to complete, and you do not want to cause delays in your user interface, you can use the <xref:System.ComponentModel.BackgroundWorker> class to run the operation on another thread.</span></span>  
+# <a name="how-to-run-an-operation-in-the-background"></a><span data-ttu-id="c06a9-102">如何：在后台运行操作</span><span class="sxs-lookup"><span data-stu-id="c06a9-102">How to: Run an Operation in the Background</span></span>
+<span data-ttu-id="c06a9-103">如果某项操作需要很长时间才能完成，而你不希望造成用户界面的延迟，则可以使用 <xref:System.ComponentModel.BackgroundWorker> 类在另一个线程上运行此操作。</span><span class="sxs-lookup"><span data-stu-id="c06a9-103">If you have an operation that will take a long time to complete, and you do not want to cause delays in your user interface, you can use the <xref:System.ComponentModel.BackgroundWorker> class to run the operation on another thread.</span></span>  
   
- <span data-ttu-id="a8efb-104">以下代码示例显示如何在后台运行耗时的操作。</span><span class="sxs-lookup"><span data-stu-id="a8efb-104">The following code example shows how to run a time-consuming operation in the background.</span></span> <span data-ttu-id="a8efb-105">此窗体具有“启动”和“取消”按钮。</span><span class="sxs-lookup"><span data-stu-id="a8efb-105">The form has **Start** and **Cancel** buttons.</span></span> <span data-ttu-id="a8efb-106">单击“启动”按钮运行异步操作。</span><span class="sxs-lookup"><span data-stu-id="a8efb-106">Click the **Start** button to run an asynchronous operation.</span></span> <span data-ttu-id="a8efb-107">单击“取消”按钮停止运行异步操作。</span><span class="sxs-lookup"><span data-stu-id="a8efb-107">Click the **Cancel** button to stop a running asynchronous operation.</span></span> <span data-ttu-id="a8efb-108">每个操作的结果显示在 <xref:System.Windows.Forms.MessageBox> 中。</span><span class="sxs-lookup"><span data-stu-id="a8efb-108">The outcome of each operation is displayed in a <xref:System.Windows.Forms.MessageBox>.</span></span>  
+ <span data-ttu-id="c06a9-104">以下代码示例显示如何在后台运行耗时的操作。</span><span class="sxs-lookup"><span data-stu-id="c06a9-104">The following code example shows how to run a time-consuming operation in the background.</span></span> <span data-ttu-id="c06a9-105">此窗体具有“启动”和“取消”按钮。</span><span class="sxs-lookup"><span data-stu-id="c06a9-105">The form has **Start** and **Cancel** buttons.</span></span> <span data-ttu-id="c06a9-106">单击“启动”按钮运行异步操作。</span><span class="sxs-lookup"><span data-stu-id="c06a9-106">Click the **Start** button to run an asynchronous operation.</span></span> <span data-ttu-id="c06a9-107">单击“取消”按钮停止运行异步操作。</span><span class="sxs-lookup"><span data-stu-id="c06a9-107">Click the **Cancel** button to stop a running asynchronous operation.</span></span> <span data-ttu-id="c06a9-108">每个操作的结果显示在 <xref:System.Windows.Forms.MessageBox> 中。</span><span class="sxs-lookup"><span data-stu-id="c06a9-108">The outcome of each operation is displayed in a <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- <span data-ttu-id="a8efb-109">Visual Studio 中对此任务提供广泛支持。</span><span class="sxs-lookup"><span data-stu-id="a8efb-109">There is extensive support for this task in Visual Studio.</span></span>  
+ <span data-ttu-id="c06a9-109">Visual Studio 中对此任务提供广泛支持。</span><span class="sxs-lookup"><span data-stu-id="c06a9-109">There is extensive support for this task in Visual Studio.</span></span>  
   
- <span data-ttu-id="a8efb-110">另请参阅[演练：在后台运行操作](walkthrough-running-an-operation-in-the-background.md)。</span><span class="sxs-lookup"><span data-stu-id="a8efb-110">Also see [Walkthrough: Running an Operation in the Background](walkthrough-running-an-operation-in-the-background.md).</span></span>  
+ <span data-ttu-id="c06a9-110">另请参阅[演练：在后台运行操作](walkthrough-running-an-operation-in-the-background.md)。</span><span class="sxs-lookup"><span data-stu-id="c06a9-110">Also see [Walkthrough: Running an Operation in the Background](walkthrough-running-an-operation-in-the-background.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a8efb-111">示例</span><span class="sxs-lookup"><span data-stu-id="a8efb-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c06a9-111">示例</span><span class="sxs-lookup"><span data-stu-id="c06a9-111">Example</span></span>  
  [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a8efb-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="a8efb-112">Compiling the Code</span></span>  
- <span data-ttu-id="a8efb-113">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a8efb-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c06a9-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="c06a9-112">Compiling the Code</span></span>  
+ <span data-ttu-id="c06a9-113">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="c06a9-113">This example requires:</span></span>  
   
--   <span data-ttu-id="a8efb-114">对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="a8efb-114">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="c06a9-114">对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="c06a9-114">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="a8efb-115">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="a8efb-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="a8efb-116">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="a8efb-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="c06a9-115">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="c06a9-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="c06a9-116">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="c06a9-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8efb-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="a8efb-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c06a9-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="c06a9-117">See also</span></span>
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [<span data-ttu-id="a8efb-118">如何：实现使用后台操作的窗体</span><span class="sxs-lookup"><span data-stu-id="a8efb-118">How to: Implement a Form That Uses a Background Operation</span></span>](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [<span data-ttu-id="a8efb-119">BackgroundWorker 组件</span><span class="sxs-lookup"><span data-stu-id="a8efb-119">BackgroundWorker Component</span></span>](backgroundworker-component.md)
+- [<span data-ttu-id="c06a9-118">如何：实现使用后台操作的窗体</span><span class="sxs-lookup"><span data-stu-id="c06a9-118">How to: Implement a Form That Uses a Background Operation</span></span>](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [<span data-ttu-id="c06a9-119">BackgroundWorker 组件</span><span class="sxs-lookup"><span data-stu-id="c06a9-119">BackgroundWorker Component</span></span>](backgroundworker-component.md)

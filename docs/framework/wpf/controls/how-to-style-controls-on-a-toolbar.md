@@ -7,16 +7,16 @@ helpviewer_keywords:
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
 ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217778"
 ---
-# <a name="how-to-style-controls-on-a-toolbar"></a><span data-ttu-id="4e257-102">如何：设置 ToolBar 上控件的样式</span><span class="sxs-lookup"><span data-stu-id="4e257-102">How to: Style Controls on a ToolBar</span></span>
-<span data-ttu-id="4e257-103"><xref:System.Windows.Controls.ToolBar>定义<xref:System.Windows.ResourceKey>对象来指定中的控件的样式<xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="4e257-103">The <xref:System.Windows.Controls.ToolBar> defines <xref:System.Windows.ResourceKey> objects to specify the style of controls within the <xref:System.Windows.Controls.ToolBar>.</span></span>  <span data-ttu-id="4e257-104">若要设置样式中的控件<xref:System.Windows.Controls.ToolBar>，将`x:key`到样式属性<xref:System.Windows.ResourceKey>中定义<xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="4e257-104">To style a control in a <xref:System.Windows.Controls.ToolBar>, set the `x:key` attribute of the style to a <xref:System.Windows.ResourceKey> defined in <xref:System.Windows.Controls.ToolBar>.</span></span>  
+# <a name="how-to-style-controls-on-a-toolbar"></a><span data-ttu-id="cefd7-102">如何：设置 ToolBar 上控件的样式</span><span class="sxs-lookup"><span data-stu-id="cefd7-102">How to: Style Controls on a ToolBar</span></span>
+<span data-ttu-id="cefd7-103"><xref:System.Windows.Controls.ToolBar>定义<xref:System.Windows.ResourceKey>对象来指定中的控件的样式<xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="cefd7-103">The <xref:System.Windows.Controls.ToolBar> defines <xref:System.Windows.ResourceKey> objects to specify the style of controls within the <xref:System.Windows.Controls.ToolBar>.</span></span>  <span data-ttu-id="cefd7-104">若要设置样式中的控件<xref:System.Windows.Controls.ToolBar>，将`x:key`到样式属性<xref:System.Windows.ResourceKey>中定义<xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="cefd7-104">To style a control in a <xref:System.Windows.Controls.ToolBar>, set the `x:key` attribute of the style to a <xref:System.Windows.ResourceKey> defined in <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
- <span data-ttu-id="4e257-105"><xref:System.Windows.Controls.ToolBar>定义了以下<xref:System.Windows.ResourceKey>对象：</span><span class="sxs-lookup"><span data-stu-id="4e257-105">The <xref:System.Windows.Controls.ToolBar> defines the following <xref:System.Windows.ResourceKey> objects:</span></span>  
+ <span data-ttu-id="cefd7-105"><xref:System.Windows.Controls.ToolBar>定义了以下<xref:System.Windows.ResourceKey>对象：</span><span class="sxs-lookup"><span data-stu-id="cefd7-105">The <xref:System.Windows.Controls.ToolBar> defines the following <xref:System.Windows.ResourceKey> objects:</span></span>  
   
 -   <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
@@ -34,12 +34,12 @@ ms.locfileid: "59217778"
   
 -   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
-## <a name="example"></a><span data-ttu-id="4e257-106">示例</span><span class="sxs-lookup"><span data-stu-id="4e257-106">Example</span></span>  
- <span data-ttu-id="4e257-107">下面的示例定义内的控件的样式<xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="4e257-107">The following example defines styles for the controls within a <xref:System.Windows.Controls.ToolBar>.</span></span>  
+## <a name="example"></a><span data-ttu-id="cefd7-106">示例</span><span class="sxs-lookup"><span data-stu-id="cefd7-106">Example</span></span>  
+ <span data-ttu-id="cefd7-107">下面的示例定义内的控件的样式<xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="cefd7-107">The following example defines styles for the controls within a <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
  [!code-xaml[ToolBar_snip#ToolBarAllStyles](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  
 [!code-xaml[ToolBar_snip#ToolBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
   
-## <a name="see-also"></a><span data-ttu-id="4e257-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e257-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cefd7-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="cefd7-108">See also</span></span>
 
-- [<span data-ttu-id="4e257-109">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="4e257-109">Styling and Templating</span></span>](styling-and-templating.md)
+- [<span data-ttu-id="cefd7-109">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="cefd7-109">Styling and Templating</span></span>](styling-and-templating.md)

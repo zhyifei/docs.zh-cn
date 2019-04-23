@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218246"
 ---
-# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="a5d1b-102">EmitInternalExportedTypes 方法</span><span class="sxs-lookup"><span data-stu-id="a5d1b-102">EmitInternalExportedTypes Method</span></span>
-<span data-ttu-id="a5d1b-103">发出类型添加到程序集。</span><span class="sxs-lookup"><span data-stu-id="a5d1b-103">Emits types added to the assembly.</span></span> <span data-ttu-id="a5d1b-104">调用此方法后添加内部类型已知。</span><span class="sxs-lookup"><span data-stu-id="a5d1b-104">Call this method after known internal types have been added.</span></span>  
+# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="81f1a-102">EmitInternalExportedTypes 方法</span><span class="sxs-lookup"><span data-stu-id="81f1a-102">EmitInternalExportedTypes Method</span></span>
+<span data-ttu-id="81f1a-103">发出类型添加到程序集。</span><span class="sxs-lookup"><span data-stu-id="81f1a-103">Emits types added to the assembly.</span></span> <span data-ttu-id="81f1a-104">调用此方法后添加内部类型已知。</span><span class="sxs-lookup"><span data-stu-id="81f1a-104">Call this method after known internal types have been added.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5d1b-105">语法</span><span class="sxs-lookup"><span data-stu-id="a5d1b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81f1a-105">语法</span><span class="sxs-lookup"><span data-stu-id="81f1a-105">Syntax</span></span>  
   
 ```  
 HRESULT EmitInternalExportedTypes(  
@@ -35,18 +35,18 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a5d1b-106">参数</span><span class="sxs-lookup"><span data-stu-id="a5d1b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81f1a-106">参数</span><span class="sxs-lookup"><span data-stu-id="81f1a-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="a5d1b-107">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="a5d1b-107">ID of assembly.</span></span>  
+ <span data-ttu-id="81f1a-107">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="81f1a-107">ID of assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a5d1b-108">返回值</span><span class="sxs-lookup"><span data-stu-id="a5d1b-108">Return Value</span></span>  
- <span data-ttu-id="a5d1b-109">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="a5d1b-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="81f1a-108">返回值</span><span class="sxs-lookup"><span data-stu-id="81f1a-108">Return Value</span></span>  
+ <span data-ttu-id="81f1a-109">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="81f1a-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5d1b-110">要求</span><span class="sxs-lookup"><span data-stu-id="a5d1b-110">Requirements</span></span>  
- <span data-ttu-id="a5d1b-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="a5d1b-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81f1a-110">要求</span><span class="sxs-lookup"><span data-stu-id="81f1a-110">Requirements</span></span>  
+ <span data-ttu-id="81f1a-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="81f1a-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5d1b-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a5d1b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81f1a-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="81f1a-112">See also</span></span>
 
-- [<span data-ttu-id="a5d1b-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="a5d1b-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="a5d1b-114">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="a5d1b-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="a5d1b-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="a5d1b-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="81f1a-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="81f1a-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="81f1a-114">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="81f1a-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="81f1a-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="81f1a-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
