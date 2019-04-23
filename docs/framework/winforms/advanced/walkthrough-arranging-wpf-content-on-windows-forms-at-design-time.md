@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327303"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时在 Windows 窗体上排列 WPF 内容
@@ -151,9 +151,9 @@ ms.locfileid: "59327303"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [如何：在 TableLayoutPanel 控件中锚定和停靠子控件](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [如何：在设计时将控件与窗体边缘对齐](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [演练：使用对齐线在 Windows 窗体上排列控件](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：将控件与窗体边缘对齐在设计时](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [演练：使用对齐线的 Windows 窗体上排列控件](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控件](using-wpf-controls.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

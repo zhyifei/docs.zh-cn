@@ -3,10 +3,10 @@ title: 使用服务跟踪查看器查看相关跟踪和进行故障诊断
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
 ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329045"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服务跟踪查看器查看相关跟踪和进行故障诊断
@@ -45,7 +45,7 @@ ms.locfileid: "59329045"
   
 -   `<SubType>` （跟踪级别）。  
   
--   `<TimeCreated>`.  
+-   `<TimeCreated>`。  
   
 -   `<Source>` （跟踪源名称）。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59329045"
   
 -   `<Execution>` (进程和线程 id)。  
   
--   `<Computer>`.  
+-   `<Computer>`。  
   
 -   `<ExtendedData>`其中包括`<Action>`，`<MessageID>`和`<ActivityId>`发送一条消息时消息标头中设置。  
   

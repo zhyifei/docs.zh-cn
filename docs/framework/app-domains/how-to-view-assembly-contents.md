@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72778f769c2c3f030de0cd31d087e0a90ba6f508
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675031"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59330072"
 ---
 # <a name="how-to-view-assembly-contents"></a>如何：查看程序集内容
 可使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)查看文件中的 Microsoft 中间语言 (MSIL) 信息。 如果要检查的文件是程序集，此信息可包括程序集的属性以及对其他模块和程序集的引用。 此信息有助于确定文件是程序集还是程序集的一部分，以及文件是否具有对其他模块或程序集的引用。  
   
 ### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>使用 Ildasm.exe 显示程序集的内容  
   
-1.  在命令提示符处键入 ildasm \<assembly name>。 例如，以下命令反汇编 `Hello.exe` 程序集。  
+1. 在命令提示符处键入 ildasm \<assembly name>。 例如，以下命令反汇编 `Hello.exe` 程序集。  
   
     ```  
     ildasm Hello.exe  
@@ -36,7 +36,7 @@ ms.locfileid: "55675031"
   
 ### <a name="to-view-assembly-manifest-information"></a>查看程序集清单信息  
   
-1.  在“MSIL 反汇编程序”窗口双击“清单”图标。  
+1. 在“MSIL 反汇编程序”窗口双击“清单”图标。  
   
 ## <a name="example"></a>示例  
  下例以基本的“Hello, World”程序开始。 编译该程序后，使用 Ildasm.exe 反汇编 Hello.exe 程序集并查看程序集清单。  
@@ -74,7 +74,7 @@ ms.locfileid: "55675031"
   
  下表描述了本例所使用 Hello.exe 程序集的程序集清单中的各项指令。  
   
-|指令|说明​​|  
+|指令|说明|  
 |---------------|-----------------|  
 |.assembly extern \< assembly name >|指定包含当前模块所引用项目的另一程序集（在此示例中为 `mscorlib`）。|  
 |.publickeytoken \< token >|指定引用程序集的实际密钥的标记。|  
@@ -89,6 +89,7 @@ ms.locfileid: "55675031"
  根据程序集的内容，程序集清单可包含许多不同的指令。 有关程序集清单中指令的详尽列表，请参阅 ECMA 文档，特别是“Partition II:Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III:CIL Instruction Set”（第 3 部分：CIL 指令集）。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [应用程序域和程序集](application-domains.md#application-domains-and-assemblies)
 - [应用程序域和程序集用法主题](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

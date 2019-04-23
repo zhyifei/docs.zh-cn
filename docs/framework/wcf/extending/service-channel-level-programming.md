@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329125"
 ---
 # <a name="service-channel-level-programming"></a>服务通道级编程
@@ -36,7 +36,7 @@ ms.locfileid: "59329125"
 #### <a name="building-a-channellistener"></a>生成 ChannelListener  
  在创建绑定后，我们调用 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> 来生成通道侦听器，其中类型参数就是要创建的通道形状。 在此示例中使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，这是因为我们希望以请求/答复消息交换模式侦听传入的消息。  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> 用于接收请求消息并发送回答复消息。 调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 会返回一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，可以用于接收请求消息以及发回答复消息。  
+ <xref:System.ServiceModel.Channels.IReplyChannel> 用于接收请求消息，并发回答复消息。 调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 会返回一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，可以用于接收请求消息以及发回答复消息。  
   
  当创建侦听器时，我们传递发生侦听的网络地址，在此示例中为 `http://localhost:8080/channelapp`。 通常，每个传输通道支持一个或可能多个地址方案，例如，HTTP 传输对 http 和 https 方案均予以支持。  
   

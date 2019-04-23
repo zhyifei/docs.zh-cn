@@ -10,10 +10,10 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327849"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 元素的布局注意事项
@@ -40,7 +40,7 @@ ms.locfileid: "59327849"
   
 -   某些情况下，不能调整 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件的大小，或者大小只能调整为特定尺寸。 例如， [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>控件支持仅的单一高度由控件的字体大小定义。 在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其中元素可以垂直拉伸，托管的动态布局<xref:System.Windows.Forms.ComboBox>控件不会按预期方式拉伸。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件不能旋转或倾斜。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素将引发<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果应用倾斜或旋转转换。 如果不处理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，<xref:System.InvalidOperationException>引发。  
+-   不能旋转或扭曲 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素将引发<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果应用倾斜或旋转转换。 如果不处理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，<xref:System.InvalidOperationException>引发。  
   
 -   大多数情况下，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件不支持按比例缩放。 尽管该控件的整体尺寸将会缩放，但其子控件和组件元素可能不会按预期调整大小。 此限制取决于每个 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件支持缩放的程度。 此外，不能缩放[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]缩小到 0 像素的大小的控件。  
   

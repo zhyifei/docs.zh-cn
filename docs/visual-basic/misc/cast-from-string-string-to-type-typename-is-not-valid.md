@@ -5,10 +5,10 @@ f1_keywords:
 - vbrInvalidCast_FromStringTo
 ms.assetid: a7382c0a-e8a4-4125-9690-db3fa030a06a
 ms.openlocfilehash: 6ce6f9a6f29b29ba3404ffee61f4baf962bba316
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331086"
 ---
 # <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>从字符串转换&quot;\<字符串 >&quot;键入\<类型名称 > 无效
@@ -20,4 +20,4 @@ ms.locfileid: "59331086"
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 中的类型转换](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [在 Visual Basic 中的类型转换](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

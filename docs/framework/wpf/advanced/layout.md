@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330488"
 ---
 # <a name="layout"></a>布局
@@ -33,7 +33,7 @@ ms.locfileid: "59330488"
   
 -   [子像素渲染和布局舍入](#LayoutSystem_LayoutRounding)  
   
--   [下一步](#LayoutSystem_whatsnext)  
+-   [后续步骤](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>元素边界框  
@@ -153,5 +153,5 @@ ms.locfileid: "59330488"
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [面板概述](../controls/panels-overview.md)
-- [Alignment、Margin 和 Padding 概述](alignment-margins-and-padding-overview.md)
+- [对齐、边距和填充概述](alignment-margins-and-padding-overview.md)
 - [布局和示例](optimizing-performance-layout-and-design.md)

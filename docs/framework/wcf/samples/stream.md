@@ -3,10 +3,10 @@ title: 流
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330215"
 ---
 # <a name="stream"></a>流
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- `GetStream` 操作接收一些输入数据作为经过缓冲的字符串，并返回经过流处理的 `Stream`。 相反，`UploadStream` 接收一个经过流处理的 `Stream`，并返回一个经过缓冲的 `bool`。 `EchoStream` 采用并返回`Stream`和是操作的示例的输入和输出消息都流式的。 最后，`GetReversedStream` 将不接收输入，并返回一个 `Stream`（已经过流处理）。  
+ `GetStream` 操作接收一些输入数据作为经过缓冲的字符串，并返回经过流处理的 `Stream`。 相反，`UploadStream` 接收一个经过流处理的 `Stream`，并返回一个经过缓冲的 `bool`。 `EchoStream` 是输入消息和输出消息都经过流处理的操作的示例，它接收和返回 `Stream`。 最后，`GetReversedStream` 将不接收输入，并返回一个 `Stream`（已经过流处理）。  
   
 ## <a name="enabling-streamed-transfers"></a>启用流传输  
  按照上面的说明定义操作协定将在编程模型级别提供流处理。 如果仅限于此，则传输仍将缓冲整个消息内容。 若要启用传输流，请在传输的绑定元素上选择传输模式。 该绑定元素具有一个 `TransferMode` 属性，该属性可以设置为 `Buffered`、`Streamed`、`StreamedRequest` 或 `StreamedResponse`。 将传输模式设置为 `Streamed` 将在两个方向上启用流通信。 将传输模式设置为 `StreamedRequest` 或 `StreamedResponse` 将分别只在请求或响应中启用流通信。  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>处理经过流处理的数据  
  `GetStream`、`UploadStream` 和 `EchoStream` 操作都可以处理直接从文件发送数据或将接收的数据直接保存到文件的情况。 但是，在某些情况下，需要发送或接收大量数据，并对正在发送或接收的数据块执行某种处理。 解决类似方案的一种方法是编写一个自定义流（一个派生自 <xref:System.IO.Stream> 的类）来处理读取或写入的数据。 `GetReversedStream` 操作和 `ReverseStream` 类就是类似方法的一个示例。  
   
- `GetReversedStream` 创建并返回的新实例`ReverseStream`。 当系统从该 `ReverseStream` 对象中进行读取时，会发生实际的处理。 `ReverseStream.Read` 实现从基础文件中读取字节块区，反转字节，然后返回经过反转的字节。 这不会反转整个文件内容，而是一次仅反转一个字节块区。 下面的示例演示在流中读取或写入内容时如何进行流处理。  
+ `GetReversedStream` 创建并返回 `ReverseStream` 的新实例。 当系统从该 `ReverseStream` 对象中进行读取时，会发生实际的处理。 `ReverseStream.Read` 实现从基础文件中读取字节块区，反转字节，然后返回经过反转的字节。 这不会反转整个文件内容，而是一次仅反转一个字节块区。 下面的示例演示在流中读取或写入内容时如何进行流处理。  
   
 ```csharp
 class ReverseStream : Stream  

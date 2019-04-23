@@ -3,10 +3,10 @@ title: 自定义查找条件
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332529"
 ---
 # <a name="custom-find-criteria"></a>自定义查找条件
@@ -45,7 +45,7 @@ ms.locfileid: "59332529"
   
      此自定义逻辑遍历服务具有的每个终结点上的所有范围。 如果有任何终结点的范围与客户端提供的任何范围匹配，则发现服务会将该终结点添加到发送回客户端的响应中。  
   
-3. **CustomDiscoveryExtension.cs**:实现发现服务的最后一步是连接此实现的自定义发现服务到服务主机。 此处使用的帮助程序类是 `CustomDiscoveryExtension` 类。 此类扩展 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 类。 用户必须重写 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在这种情况中，方法返回之前创建的自定义发现服务的实例。 `PublishedEndpoints` 是<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，其中包含所有应用程序终结点添加到<xref:System.ServiceModel.ServiceHost>。 自定义发现服务用此填充其内部列表。 用户也可以添加其他终结点元数据。  
+3. **CustomDiscoveryExtension.cs**:实现发现服务的最后一步是连接此实现的自定义发现服务到服务主机。 此处使用的帮助程序类是 `CustomDiscoveryExtension` 类。 此类扩展 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 类。 用户必须重写 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在这种情况中，方法返回之前创建的自定义发现服务的实例。 `PublishedEndpoints` 是 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，它包含要添加到 <xref:System.ServiceModel.ServiceHost> 的所有应用程序终结点。 自定义发现服务用此填充其内部列表。 用户也可以添加其他终结点元数据。  
   
  最后，打开 Program.cs。 请注意，<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 和 `CustomDiscoveryExtension` 都添加到主机中。 在此操作完成，并且主机具有可用于接收发现消息的终结点后，应用程序便可以使用自定义发现服务。  
   

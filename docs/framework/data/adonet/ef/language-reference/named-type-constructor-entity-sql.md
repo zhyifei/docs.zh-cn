@@ -3,10 +3,10 @@ title: 命名类型构造函数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
 ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329461"
 ---
 # <a name="named-type-constructor-entity-sql"></a>命名类型构造函数 (Entity SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "59329461"
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- 下面的示例演示如何初始化为 null 的复杂类型的属性：`MyModel.ZipCode(‘98118’, null)`  
+ 下面的示例演示如何将复杂类型的属性初始化为 null：`MyModel.ZipCode(‘98118’, null)`  
   
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用命名类型构造函数创建概念模型类型的实例。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332139"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
@@ -35,7 +35,7 @@ ms.locfileid: "59332139"
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>理解 ANSI_NULLS 选项  
- <xref:System.Data.SqlTypes> SQL Server 中设置 ANSI_NULLS 选项时，提供了相同的语义。 所有算术运算符 (+、-，*、 /、 %)，按位运算符 (~，&、 &#124;)，和大多数函数都返回 null，如果任何操作数或参数为 null，但该属性除外`IsNull`。  
+ <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 所有算术运算符 (+、-，*、 /、 %)，按位运算符 (~，&、 &#124;)，和大多数函数都返回 null，如果任何操作数或参数为 null，但该属性除外`IsNull`。  
   
  ANSI SQL-92 标准不支持*columnName* = NULL 在 WHERE 子句中。 在 SQL Server 中，ANSI_NULLS 选项既控制数据库中的默认可空性，也控制对空值的比较计算。 如果启用 ANSI_NULLS（这是默认设置），则在测试空值时在表达式中必须使用 IS NULL 运算符。 例如，在 ANSI_NULLS 为 on 时，以下比较始终生成 unknown：  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  `Nullable<T>` 中当前不支持 <xref:System.Nullable> 或 `DataSet` 结构。  
   
 ### <a name="multiple-column-row-assignment"></a>多列（行）赋值  
- `DataTable.Add``DataTable.LoadDataRow`，或接受其他 Api <xref:System.Data.DataRow.ItemArray%2A> ，获取映射到行，则将映射到 DataColumn 的默认值 ' null'。 如果数组中的对象包含 `DbNull.Value` 或其强类型对应项，则上述规则同样适用。  
+ `DataTable.Add`、`DataTable.LoadDataRow` 或其他接受 <xref:System.Data.DataRow.ItemArray%2A>（映射到行）的 API 会将“null”映射到 DataColumn 的默认值。 如果数组中的对象包含 `DbNull.Value` 或其强类型对应项，则上述规则同样适用。  
   
  此外，下面的规则适用于 `DataRow.["columnName"]` null 赋值的实例：  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>将空值与 SqlTypes 和 CLR 类型进行比较  
- 比较 null 值时，必须了解 `Equals` 方法在 <xref:System.Data.SqlTypes> 中计算 null 值的方式与处理 CLR 类型的方式之间的差别。 所有<xref:System.Data.SqlTypes>`Equals`方法都使用数据库语义计算 null 值： 如果一个或两个值为 null，则比较结果为 null。 另一方面，如果两个 `Equals` 都为 null，则对其使用 CLR <xref:System.Data.SqlTypes> 方法将生成 true。 这反映了使用实例方法（如 CLR `String.Equals` 方法）和使用静态/共享方法 `SqlString.Equals` 之间的差别。  
+ 比较 null 值时，必须了解 `Equals` 方法在 <xref:System.Data.SqlTypes> 中计算 null 值的方式与处理 CLR 类型的方式之间的差别。 所有 <xref:System.Data.SqlTypes>`Equals` 方法都使用数据库语义计算 null 值：如果其中任何一个值为空或两个值都为空，则比较结果将为空。 另一方面，如果两个 `Equals` 都为 null，则对其使用 CLR <xref:System.Data.SqlTypes> 方法将生成 true。 这反映了使用实例方法（如 CLR `String.Equals` 方法）和使用静态/共享方法 `SqlString.Equals` 之间的差别。  
   
  下面的示例演示为 `SqlString.Equals` 方法和 `String.Equals` 方法传递一对 null 值，然后传递一对空字符串时，这两种方法生成的结果之间存在的差异。  
   
@@ -144,4 +144,4 @@ String.Equals instance method:
 ## <a name="see-also"></a>请参阅
 
 - [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

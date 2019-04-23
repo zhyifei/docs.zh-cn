@@ -12,10 +12,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331333"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>如何：更改 Windows 窗体 TabControl 的外观
@@ -69,6 +69,6 @@ ms.locfileid: "59331333"
 
 - [TabControl 控件](tabcontrol-control-windows-forms.md)
 - [TabControl 控件概述](tabcontrol-control-overview-windows-forms.md)
-- [如何：将控件添加到选项卡页](how-to-add-a-control-to-a-tab-page.md)
+- [如何：向选项卡页添加控件](how-to-add-a-control-to-a-tab-page.md)
 - [如何：禁用选项卡页](how-to-disable-tab-pages.md)
-- [如何：使用 Windows 窗体 TabControl 添加和移除选项卡](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [如何：添加和删除使用 Windows 窗体 TabControl 的选项卡](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

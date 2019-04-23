@@ -1,5 +1,5 @@
 ---
-title: '无法链接到资源文件<filename>: <error message>'
+title: 无法链接到资源文件“<filename>”：<error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30144
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
 ms.openlocfilehash: cae65e1637c29ecfdec07d6a5df27e71b6460c01
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327810"
 ---
 # <a name="unable-to-link-to-resource-file-filename-error-message"></a>无法链接到资源文件\<文件名 >:\<错误消息 >
@@ -28,4 +28,4 @@ Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成
 ## <a name="see-also"></a>请参阅
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/talk-to-us)

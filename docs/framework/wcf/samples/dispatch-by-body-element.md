@@ -3,10 +3,10 @@ title: 按正文元素调度
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
 ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330189"
 ---
 # <a name="dispatch-by-body-element"></a>按正文元素调度
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 实现都是生成的接口上只有一个方法因为非常简单： <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>。 此方法的任务是检查传入消息并返回一个字符串，该字符串为当前终结点服务协定上的方法的名称。  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 实现的生成非常简单，因为在接口上只有一个方法：<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>。 此方法的任务是检查传入消息并返回一个字符串，该字符串为当前终结点服务协定上的方法的名称。  
   
  在此示例中，操作选择器使用 <xref:System.Xml.XmlDictionaryReader> 获取传入消息正文的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>。 此方法已经将读取器定位在消息正文的第一个子级上，因此完全可以获取当前元素的名称和命名空间 URI 并将它们结合成 `XmlQualifiedName`，然后用它来从操作选择器保存的字典中查找相应的操作。  
   

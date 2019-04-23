@@ -5,10 +5,10 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331801"
 ---
 # <a name="securing-clients"></a>保证客户端的安全
@@ -80,13 +80,13 @@ ms.locfileid: "59331801"
   
 |ClientCredential 属性|描述|说明|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|返回 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|表示客户端提供的 X.509 证书，客户端使用该证书向服务器证明自己的身份。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|返回 <xref:System.ServiceModel.Security.HttpDigestClientCredential>|表示 HTTP 摘要式凭据。 该凭据是用户名和密码的哈希。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|返回 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|表示由安全令牌服务颁发的一个自定义安全令牌，通常用在联合方案中。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|返回 <xref:System.ServiceModel.Security.PeerCredential>|表示一个用于参与 Windows 域上的对等网格的对等凭据。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|返回 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|表示服务在带外协商中提供的 X.509 证书。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|返回 <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|表示一个用户名和密码对。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|返回 <xref:System.ServiceModel.Security.WindowsClientCredential>|表示 Windows 客户端凭据（Kerberos 凭据）。 该类的属性是只读的。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|返回一个 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|表示客户端提供的 X.509 证书，客户端使用该证书向服务器证明自己的身份。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|返回一个 <xref:System.ServiceModel.Security.HttpDigestClientCredential>|表示 HTTP 摘要式凭据。 该凭据是用户名和密码的哈希。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|返回一个 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|表示由安全令牌服务颁发的一个自定义安全令牌，通常用在联合方案中。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|返回一个 <xref:System.ServiceModel.Security.PeerCredential>|表示一个用于参与 Windows 域上的对等网格的对等凭据。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|返回一个 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|表示服务在带外协商中提供的 X.509 证书。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|返回一个 <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|表示一个用户名和密码对。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|返回一个 <xref:System.ServiceModel.Security.WindowsClientCredential>|表示 Windows 客户端凭据（Kerberos 凭据）。 该类的属性是只读的。|  
   
 #### <a name="setting-a-clientcredentials-value-in-configuration"></a>设置\<clientCredentials > 配置中的值  
  凭据值指定为的子元素使用的终结点行为[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)元素。 所使用的元素取决于客户端凭据类型。 例如，下面的示例演示设置 X.509 证书使用的配置 <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。  
@@ -129,7 +129,7 @@ ms.locfileid: "59331801"
  有关设置客户端凭据的详细信息，请参阅[如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
->  `ClientCredentialType` 将忽略`SecurityMode`设置为`"TransportWithMessageCredential",`如下面的示例配置中所示。  
+>  当 `ClientCredentialType` 设置为 `SecurityMode` 时，`"TransportWithMessageCredential",` 将被忽略，如下面的示例配置所示。  
   
 ```xml  
 <wsHttpBinding>  
@@ -153,7 +153,7 @@ ms.locfileid: "59331801"
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
 - [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
 - [配置编辑器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [保证服务的安全](../../../docs/framework/wcf/securing-services.md)
+- [保护服务](../../../docs/framework/wcf/securing-services.md)
 - [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
 - [如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

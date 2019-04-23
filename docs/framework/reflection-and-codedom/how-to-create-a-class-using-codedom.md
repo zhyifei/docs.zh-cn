@@ -14,10 +14,10 @@ ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333166"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 创建类
@@ -120,5 +120,5 @@ The object:
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 CodeDom](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
-- [在 CodeDOM 图中生成和编译源代码](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+- [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
+- [从 CodeDOM 图生成和编译源代码](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

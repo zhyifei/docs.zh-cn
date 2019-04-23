@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332555"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>如何：使用独立的 X.509 证书进行签名和加密
@@ -23,13 +23,13 @@ ms.locfileid: "59332555"
   
  下图演示所用的主类、它们从其继承的类（由向上箭头指示）以及某些方法和属性的返回类型。  
   
--   `MyClientCredentials` 是的自定义实现<xref:System.ServiceModel.Description.ClientCredentials>。  
+-   `MyClientCredentials` 是 <xref:System.ServiceModel.Description.ClientCredentials> 的自定义实现。  
   
     -   图中显示的其属性都返回 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 的实例。  
   
     -   其方法 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 返回 `MyClientCredentialsSecurityTokenManager` 的实例。  
   
--   `MyClientCredentialsSecurityTokenManager` 是的自定义实现<xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>。  
+-   `MyClientCredentialsSecurityTokenManager` 是 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的自定义实现。  
   
     -   其方法 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 返回 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> 的实例。  
   

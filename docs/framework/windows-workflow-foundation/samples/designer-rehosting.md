@@ -3,10 +3,10 @@ title: 重新承载设计器
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328161"
 ---
 # <a name="designer-rehosting"></a>重新承载设计器
@@ -40,7 +40,7 @@ ms.locfileid: "59328161"
 </Grid>  
 ```  
   
- 接下来，此示例创建设计器，并将其主 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 与用户界面中适当的容器相关联。 以下示例中有几行额外的代码需要解释一下。 需要调用 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 来为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 附带的活动关联默认的活动设计器。 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 调用以传递要编辑的 WF 项。 最后，将 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>（主画布）和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>（属性网格）放置在用户界面的图面上。  
+ 接下来，此示例创建设计器，并将其主 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 与用户界面中适当的容器相关联。 以下示例中有几行额外的代码需要解释一下。 需要调用 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 来为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 附带的活动关联默认的活动设计器。 调用 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 传入要编辑的 WF 项。 最后，将 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>（主画布）和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>（属性网格）放置在用户界面的图面上。  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  

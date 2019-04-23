@@ -6,10 +6,10 @@ helpviewer_keywords:
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
 ms.openlocfilehash: a4f74e48cfdd5c0bc0f745d0f32eb39442f5bd83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333322"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>如何：组相关的常量值组合在一起 (Visual Basic)
@@ -28,8 +28,8 @@ ms.locfileid: "59333322"
 ## <a name="see-also"></a>请参阅
 
 - [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [如何：引用枚举成员](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [如何：为枚举成员，请参阅](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [何时使用枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [常量概述](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [常数和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
+- [常量和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)

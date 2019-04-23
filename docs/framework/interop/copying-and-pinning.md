@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219615"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59326276"
 ---
 # <a name="copying-and-pinning"></a>复制和锁定
 封送数据时，互操作封送拆收器可以复制或锁定正在封送的数据。 复制数据会将数据副本放置从一个内存位置放到另一个内存位置。 下图显示从托管内存向非托管内存复制值类型和复制按引用传递的类型之间的差异。  
   
- ![按值和按引用传递的值类型](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-按值和按引用传递的值类型  
+ ![展示如何复制值和引用类型的图。](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- 按值传递的方法参数作为堆栈上的值封送到非托管代码。 直接进行复制。 按引用传递的参数作为堆栈上的指针传递。 引用类型也按值和按引用传递。 如下图所示，复制或锁定按值传递的引用类型。  
+ 按值传递的方法参数作为堆栈上的值封送到非托管代码。 直接进行复制。 按引用传递的参数作为堆栈上的指针传递。 引用类型也按值和按引用传递。 如下图所示，按值传递的引用类型被复制或锁定： 
   
- ![COM 互操作](./media/interopmarshalpin.gif "interopmarshalpin")  
-按值和按引用传递的引用类型  
+ ![展示按值和按引用传递的引用类型的图。](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  锁定操作将数据暂时锁定在其当前内存位置，从而阻止公共语言运行时的垃圾回收器将其重定位。 封送拆收器锁定数据可减小复制的开销并提高性能。 数据的类型确定在封送处理过程中是复制数据，还是锁定数据。  在封送 <xref:System.String> 等对象的过程中自动执行锁定操作；然而，也可使用 <xref:System.Runtime.InteropServices.GCHandle> 类手动锁定内存。  
   
@@ -78,6 +76,7 @@ ms.locfileid: "56219615"
  按值传递 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 时，封送拆收器将对 StringBuilder 的内部缓冲区的引用直接传递给调用方。 调用方和被调用方必须就缓冲区大小达成一致。 调用方负责创建具有足够长度的 StringBuilder。 被调用方必须采取必要措施确保不溢出缓冲区。 对于默认将按值传递的引用类型作为 In 参数传递的规则，StringBuilder 是一个例外。 它始终作为 In/Out 传递。  
   
 ## <a name="see-also"></a>请参阅
+
 - [默认封送处理行为](default-marshaling-behavior.md)
 - [方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [互操作封送处理](interop-marshaling.md)
