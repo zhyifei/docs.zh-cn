@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315135"
 ---
 # <a name="how-to-create-an-activity"></a>如何：创建活动
@@ -46,7 +46,7 @@ ms.locfileid: "59315135"
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > `ReadInt` 活动派生自 <xref:System.Activities.NativeActivity%601> 而不是 <xref:System.Activities.CodeActivity>，这是默认的代码活动模板。 <xref:System.Activities.CodeActivity%601> 如果活动提供了通过公开的单个结果，可以使用<xref:System.Activities.Activity%601.Result%2A>参数，但<xref:System.Activities.CodeActivity%601>不支持使用书签，因此<xref:System.Activities.NativeActivity%601>使用。
+    > `ReadInt` 活动派生自 <xref:System.Activities.NativeActivity%601> 而不是 <xref:System.Activities.CodeActivity>，这是默认的代码活动模板。 如果活动提供单个结果，可以使用 <xref:System.Activities.CodeActivity%601>，它是通过 <xref:System.Activities.Activity%601.Result%2A> 自变量公开的，但是 <xref:System.Activities.CodeActivity%601> 不支持使用书签，因此使用 <xref:System.Activities.NativeActivity%601>。
 
 ## <a name="create-the-prompt-activity"></a>创建 Prompt 活动
 
@@ -109,4 +109,4 @@ ms.locfileid: "59315135"
 - [设计和实现自定义活动](designing-and-implementing-custom-activities.md)
 - [入门教程](getting-started-tutorial.md)
 - [如何：创建工作流](how-to-create-a-workflow.md)
-- [在自定义设计器中使用 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [在自定义活动设计器中使用 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

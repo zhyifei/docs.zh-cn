@@ -1,5 +1,5 @@
 ---
-title: '无法嵌入资源文件<filename>: <error message>'
+title: 无法嵌入资源文件“<filename>”：<error message>
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30143
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
 ms.openlocfilehash: c2aab9db8a74665748fba92821fcdfa97a1cec6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315486"
 ---
 # <a name="unable-to-embed-resource-file-filename-error-message"></a>无法嵌入资源文件\<文件名 >:\<错误消息 >
@@ -28,4 +28,4 @@ Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成
 ## <a name="see-also"></a>请参阅
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/talk-to-us)

@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318775"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类
@@ -54,11 +54,11 @@ ms.locfileid: "59318775"
 2. **准备数据**
    * **加载数据**
    * **提取功能（转换数据）**
-3. **生成和定型** 
+3. **生成并定型** 
    * **定型模型**
    * **评估模型**
 4. **部署模型**
-   * **使用模型进行预测**
+   * **使用模型来预测**
 
 ### <a name="understand-the-problem"></a>了解问题
 
@@ -203,8 +203,8 @@ ms.locfileid: "59318775"
 
 * 第一列 `ID`（GitHub 问题 ID）
 * 第二列 `Area`（定型预测）
-* 第三列 `Title`（GitHub 问题标题）是用于预测以下值的第一个[特征](../resources/glossary.md##feature)： `Area`
-* 第四列 `Description` 是用于预测以下值的第二个特征： `Area`
+* 第三列 `Title`（GitHub 问题标题）是用于预测 `Area` 的第一个[特征](../resources/glossary.md##feature)
+* 第四列 `Description` 是用于预测 `Area` 的第二个特征
 
 要初始化并加载 `_trainingDataView` 全局变量以将其用于管道，请在 `mlContext` 初始化后添加以下代码：
 

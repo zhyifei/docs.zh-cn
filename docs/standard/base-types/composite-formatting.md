@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517677"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314004"
 ---
 # <a name="composite-formatting"></a>复合格式设置
 
@@ -100,15 +100,15 @@ ms.locfileid: "54517677"
   
  解释转义大括号的方式会导致意外的结果。 例如，假设格式项为“{{{0:D}}}”，旨在显示左大括号、采用十进制数格式的数值和右大括号。 但是，实际是按照以下方式解释该格式项：  
   
-1.  前两个左大括号 ("{{") 被转义，生成一个左大括号。  
+1. 前两个左大括号 ("{{") 被转义，生成一个左大括号。  
   
-2.  之后的三个字符 ("{0:") 被解释为格式项的开始。  
+2. 之后的三个字符 ("{0:") 被解释为格式项的开始。  
   
-3.  下一个字符 ("D") 将被解释为 Decimal 标准数值格式说明符，但后面的两个转义大括号 ("}}") 生成单个大括号。 由于得到的字符串 ("D}") 不是标准数值格式说明符号，所以得到的字符串会被解释为用于显示字符串“D}”的自定义格式字符串。  
+3. 下一个字符 ("D") 将被解释为 Decimal 标准数值格式说明符，但后面的两个转义大括号 ("}}") 生成单个大括号。 由于得到的字符串 ("D}") 不是标准数值格式说明符号，所以得到的字符串会被解释为用于显示字符串“D}”的自定义格式字符串。  
   
-4.  最后一个大括号 ("}") 被解释为格式项的结束。  
+4. 最后一个大括号 ("}") 被解释为格式项的结束。  
   
-5.  显示的最终结果是字符串“{D}”。 不会显示本来要设置格式的数值。  
+5. 显示的最终结果是字符串“{D}”。 不会显示本来要设置格式的数值。  
   
  在编写代码时，避免错误解释转义大括号和格式项的一种方法是单独设置大括号和格式项的格式。 也就是说，在第一个格式设置操作中显示文本左大括号，在下一操作中显示格式项的结果，然后在最后一个操作中显示文本右大括号。 下面的示例阐释了这种方法。  
   
@@ -116,15 +116,15 @@ ms.locfileid: "54517677"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>处理顺序  
- 如果对复合格式设置方法的调用包括其值不为 <xref:System.IFormatProvider> 的 `null` 自变量，则运行时会调用其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法来请求 <xref:System.ICustomFormatter> 实现。 如果此方法能够返回 <xref:System.ICustomFormatter> 实现，那么它将在复合格式方法调用期间缓存。
+ 如果对复合格式设置方法的调用包括其值不为 <xref:System.IFormatProvider> 的 `null` 参数，则运行时会调用其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法来请求 <xref:System.ICustomFormatter> 实现。 如果此方法能够返回 <xref:System.ICustomFormatter> 实现，那么它将在复合格式方法调用期间缓存。
   
  如下所示，将参数列表中与格式项对应的每个值转换为字符串：  
   
-1.  如果要设置格式的值为 `null`，则将返回空字符串 <xref:System.String.Empty?displayProperty=nameWithType>。  
+1. 如果要设置格式的值为 `null`，则将返回空字符串 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
-2.  如果 <xref:System.ICustomFormatter> 实现可用，则运行时将调用其 <xref:System.ICustomFormatter.Format%2A> 方法。 它向方法传递格式项的 formatString 值（若有）或 `null`（若无）以及 <xref:System.IFormatProvider> 实现。 如果对 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法的调用返回 `null`，则继续执行下一步骤，将返回 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 调用的结果。
+2. 如果 <xref:System.ICustomFormatter> 实现可用，则运行时将调用其 <xref:System.ICustomFormatter.Format%2A> 方法。 它向方法传递格式项的 formatString 值（若有）或 `null`（若无）以及 <xref:System.IFormatProvider> 实现。 如果对 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法的调用返回 `null`，则继续执行下一步骤，将返回 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 调用的结果。
   
-3.  如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 formatString 值，则向方法传递该值；如果不存在该值，则传递 `null`。 按如下方式确定 <xref:System.IFormatProvider> 自变量：  
+3. 如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 formatString 值，则向方法传递该值；如果不存在该值，则传递 `null`。 按如下方式确定 <xref:System.IFormatProvider> 自变量：  
   
     -   对于数值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.NumberFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.NumberFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "54517677"
   
     -   对于其他类型的对象，如果调用带 <xref:System.IFormatProvider> 参数的复合格式设置方法，它的值会直接传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。 否则，`null` 传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  
   
-4.  调用类型的无参数的 `ToString` 方法（该方法将重写 <xref:System.Object.ToString?displayProperty=nameWithType> 或继承其基类的行为）。 在这种情况下，如果格式项中存在 formatString 组件指定的格式字符串，则将忽略该字符串。  
+4. 调用类型的无参数的 `ToString` 方法（该方法将重写 <xref:System.Object.ToString?displayProperty=nameWithType> 或继承其基类的行为）。 在这种情况下，如果格式项中存在 formatString 组件指定的格式字符串，则将忽略该字符串。  
   
  前面的步骤执行完毕之后应用对齐。  
   

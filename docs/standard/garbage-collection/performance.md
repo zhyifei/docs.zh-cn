@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397973"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310559"
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 <a name="top"></a> 本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。  
@@ -84,7 +84,7 @@ ms.locfileid: "47397973"
 -   [垃圾回收期间的 CPU 使用率太高](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>问题：引发了内存不足异常  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>问题：抛出内存不足异常  
  对于引发的托管 <xref:System.OutOfMemoryException>，存在以下两种合理的情况：  
   
 -   虚拟内存不足。  
@@ -176,7 +176,7 @@ ms.locfileid: "47397973"
  第 0 代可能在 64 位系统上有更多的对象，尤其是当使用服务器垃圾回收而不是工作站垃圾回收时。 这是因为触发 0 代垃圾回收的阈值在这些环境中更高，且 0 代回收可以变得更大。 触发垃圾回收之前，当应用程序分配更多的内存时，性能将会提高。  
   
 <a name="Issue_HighCPU"></a>   
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>问题：垃圾回收过程中，CPU 使用率太高  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>问题：垃圾回收期间的 CPU 使用率太高  
  在垃圾回收期间，CPU 的使用率会很高。 如果在垃圾回收中花费大量的处理时间，则回收的数量将过于频繁或回收的持续时间将过长。 托管堆上增加的对象分配率将导致垃圾回收更频繁地发生。 减少分配速率可减少垃圾回收的频率。  
   
  可以通过使用 `Allocated Bytes/second` 性能计数器来监视分配速率。 有关详细信息，请参阅 [.NET Framework 中的性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
@@ -278,7 +278,7 @@ ms.locfileid: "47397973"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>若要确定是否已托管内存不足异常  
   
-1.  在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入打印异常 (**pe**) 命令：  
+1. 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入打印异常 (**pe**) 命令：  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397973"
     StackTrace (generated):  
     ```  
   
-2.  如果输出没有指定异常，则必须确定内存不足异常来自哪个线程。 在调试器中键入以下命令，以显示所有带调用堆栈的线程：  
+2. 如果输出没有指定异常，则必须确定内存不足异常来自哪个线程。 在调试器中键入以下命令，以显示所有带调用堆栈的线程：  
   
      **~\*kb**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397973"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  可以使用以下命令来转储嵌套的异常。  
+3. 可以使用以下命令来转储嵌套的异常。  
   
      **!pe -nested**  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397973"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>若要确定是否有足够的物理内存  
   
-1.  则启动 Windows 任务管理器。  
+1. 则启动 Windows 任务管理器。  
   
-2.  在“性能”选项卡上，查看已提交的值。 （在 Windows 7 中，查看“系统组”中的“提交 (KB)”。）  
+2. 在“性能”选项卡上，查看已提交的值。 （在 Windows 7 中，查看“系统组”中的“提交 (KB)”。）  
   
      如果“总数”接近“限值”，则物理内存将不足。  
   
@@ -494,13 +494,13 @@ ms.locfileid: "47397973"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>若要确定是否存在等待被终结的对象  
   
-1.  在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
+1. 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
   
      **!finalizequeue**  
   
      查看已准备好进行终结的对象的数目。 如果数目很多，则必须检查这些终结器完全没有进展或进展速度不够快的原因。  
   
-2.  若要获取线程的输出，请键入以下命令：  
+2. 若要获取线程的输出，请键入以下命令：  
   
      **threads -special**  
   

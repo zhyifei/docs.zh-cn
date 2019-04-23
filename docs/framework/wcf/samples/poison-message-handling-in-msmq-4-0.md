@@ -3,10 +3,10 @@ title: MSMQ 4.0 中的病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316461"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
@@ -23,7 +23,7 @@ ms.locfileid: "59316461"
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 病毒处理示例
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，MSMQ 提供一个病毒子队列功能，可以用来存储病毒消息。 本示例演示使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 处理病毒消息的最佳做法。
 
- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的病毒消息检测非常完善。 有 3 属性可帮助检测。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是重新从队列中读取给定消息并将其调度到应用程序中以进行处理的次数。 当由于某一消息无法调度到应用程序或应用程序在服务操作中回滚事务，该消息返回到队列中时，即会从队列中重新读取该消息。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是该消息移到重试队列的次数。 当达到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 时，即会将该消息移动到重试队列。 属性 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 是将消息从重试队列移回到主队列之前的时间延迟。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 重置为 0。 再次尝试消息。 如果读取消息的所有尝试都失败，则会将该消息标记为已中毒。
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的病毒消息检测非常完善。 有 3 属性可帮助检测。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是重新从队列中读取给定消息并将其调度到应用程序中以进行处理的次数。 当由于某一消息无法调度到应用程序或应用程序在服务操作中回滚事务，该消息返回到队列中时，即会从队列中重新读取该消息。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是将消息移动到重试队列的次数。 当达到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 时，即会将该消息移动到重试队列。 属性 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 是将消息从重试队列移回到主队列之前的时间延迟。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 重置为 0。 再次尝试消息。 如果读取消息的所有尝试都失败，则会将该消息标记为已中毒。
 
  一旦将消息标记为已中毒，则将按照 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 枚举中的设置来处理该消息。 迭代可能的值：
 
@@ -35,7 +35,7 @@ ms.locfileid: "59316461"
 
 -   拒绝：若要拒绝的消息，将消息发送回发送方的死信队列。 此值仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
 
- 示例演示了如何使用 `Move` 处理病毒消息。 `Move` 使消息移动到病毒子队列。
+ 示例演示了如何使用 `Move` 处理病毒消息。 `Move` 可使消息移动到病毒子队列中。
 
  服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。
 

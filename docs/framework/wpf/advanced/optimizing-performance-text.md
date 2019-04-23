@@ -12,14 +12,14 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
 ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317197"
 ---
 # <a name="optimizing-performance-text"></a>优化性能：Text
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括对演示通过使用功能丰富的文本内容的支持[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]控件。 通常可以将文本呈现分为三层：  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持通过使用功能丰富的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控件实现的文本内容演示。 通常可以将文本呈现分为三层：  
   
 1. 使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>直接对象。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59317197"
   
     -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作为设备打印机语言。  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
   
     -   以前的打印机驱动程序，从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 应用程序输出为固定格式。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59317197"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument、TextBlock 和 Label 控件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括用于在屏幕上绘制文本的多个控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument 对性能的影响比 TextBlock 或 Label 大  
  一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 <xref:System.Windows.Documents.FlowDocument>元素是支持丰富的内容，演示的可重流动文档的容器，因此，具有比使用较好的性能效果<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.Label>控件。  
@@ -97,7 +97,7 @@ ms.locfileid: "59317197"
   
  下表演示显示 1000 个成本<xref:System.Windows.Controls.TextBlock>对象，无需显式<xref:System.Windows.Documents.Run>。  
   
-|**TextBlock 类型**|**创建时间 （毫秒）**|**呈现时间 （毫秒）**|  
+|**TextBlock 类型**|**创建时间 (ms)**|**呈现时间 (ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |运行设置文本属性|146|540|  
 |TextBlock 设置文本属性|43|453|  
@@ -107,7 +107,7 @@ ms.locfileid: "59317197"
   
  此问题的解决方法很简单。 如果<xref:System.Windows.Controls.Label>未设置为自定义<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>值，替换<xref:System.Windows.Controls.Label>与<xref:System.Windows.Controls.TextBlock>和数据绑定其<xref:System.Windows.Controls.TextBlock.Text%2A>属性设置为源字符串。  
   
-|**数据绑定属性**|**更新时间 （毫秒）**|  
+|**数据绑定属性**|**更新时间 (ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -142,14 +142,14 @@ ms.locfileid: "59317197"
   
  下表演示显示 1000 个的性能成本<xref:System.Windows.Documents.Hyperlink>元素使用和不使用下划线。  
   
-|**超链接**|**创建时间 （毫秒）**|**呈现时间 （毫秒）**|  
+|**超链接**|**创建时间 (ms)**|**呈现时间 (ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |使用下划线|289|1130|  
 |不使用下划线|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>文本格式设置功能  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了丰富文本格式设置服务，如自动断字。 这些服务可能会影响应用程序性能，应仅在需要时使用。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供丰富的文本格式设置服务，如自动断字。 这些服务可能会影响应用程序性能，应仅在需要时使用。  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>避免不必要地使用断字  
  自动断字功能查找连字符断点的行文本，并允许添加中断位置中线条<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。 默认禁用这些对象中的自动断字功能。 通过将该对象的 IsHyphenationEnabled 属性设置为 `true`，可以启用此功能。 但是，启用此功能会导致 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 启动 [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] 互操作性，这可能会影响应用程序的性能。 除非需要，否则不建议使用自动断字功能。  
@@ -166,7 +166,7 @@ ms.locfileid: "59317197"
 - [规划应用程序性能](planning-for-application-performance.md)
 - [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
 - [布局和示例](optimizing-performance-layout-and-design.md)
-- [二维图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
 - [对象行为](optimizing-performance-object-behavior.md)
 - [应用程序资源](optimizing-performance-application-resources.md)
 - [数据绑定](optimizing-performance-data-binding.md)

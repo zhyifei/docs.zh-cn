@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
 ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313472"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>此 Sub New 的第一个语句必须是对 MyBase.New 或 MyClass.New 的显式调用，因为\<constructorname > 在基类的\<a m e >' 的 '\<derivedclassname > 标记为已过时:\<错误消息 >'
@@ -31,4 +31,4 @@ ms.locfileid: "59313472"
   
 ## <a name="see-also"></a>请参阅
 
-- [特性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)

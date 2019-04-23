@@ -3,10 +3,10 @@ title: 基本序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315005"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技术示例
@@ -72,11 +72,11 @@ ms.locfileid: "59315005"
   
 -   流 I/O  
   
-    -   <xref:System.IO.Stream> 用于序列化和反序列化。 此示例中使用的特定流类型是 <xref:System.IO.FileStream> 类型。 然而，序列化可以用于从 <xref:System.IO.Stream> 派生的任何类型。  
+    -   <xref:System.IO.Stream> 可用于序列化和反序列化。 此示例中使用的特定流类型是 <xref:System.IO.FileStream> 类型。 然而，序列化可以用于从 <xref:System.IO.Stream> 派生的任何类型。  
   
-    -   <xref:System.IO.File> 用于创建<xref:System.IO.FileStream>对象，用于读取和创建磁盘上的文件。  
+    -   <xref:System.IO.File> 可用于创建 <xref:System.IO.FileStream> 对象，以便在磁盘上读取和创建文件。  
   
-    -   <xref:System.IO.FileStream> 用于序列化和反序列化链接的列表。  
+    -   <xref:System.IO.FileStream> 可用于对链接列表进行序列化和反序列化。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 822ad0fc7a0a765fbf8664522a2e23f7aca4ea16
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311092"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教程：使用 ML.NET 创建影片推荐系统
 
@@ -33,6 +33,7 @@ ms.locfileid: "58921255"
 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 存储库中找到本教程的源代码。
 
 ## <a name="machine-learning-workflow"></a>机器学习工作流
+
 你将使用以下步骤完成任务，以及任何其他 ML.NET 任务：
 
 1. [加载数据](#load-your-data)
@@ -42,7 +43,7 @@ ms.locfileid: "58921255"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
+* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>选择适当的机器学习任务
 
@@ -62,19 +63,19 @@ ms.locfileid: "58921255"
 
     在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择该包，然后选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对“Microsoft.ML.Recommender”重复这些步骤。
 
-  > [!NOTE]
-  > 本教程使用“Microsoft.ML v0.11.0”和“Microsoft.ML.Recommender v0.11.0”。
-    
+    > [!NOTE]
+    > 本教程使用“Microsoft.ML v0.11.0”和“Microsoft.ML.Recommender v0.11.0”。
+
 4. 在 Program.cs 文件的顶部添加以下 `using` 语句：
-    
+
     [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>下载数据
 
 1. 下载两个数据集并将其保存到先前创建的“数据”文件夹中：
 
-*   右键单击 [recommended-ratings-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv)，然后选择“将链接(或目标)另存为...”
-*   右键单击 [recommendation-ratings-test.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv)，然后选择“将链接(或目标)另存为...”
+   * 右键单击 [recommended-ratings-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv)，然后选择“将链接(或目标)另存为...”
+   * 右键单击 [recommendation-ratings-test.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv)，然后选择“将链接(或目标)另存为...”
 
      确保将 .csv 文件保存到“数据”文件夹，或者将其保存到其他位置后，将 .csv 文件移动到“数据”文件夹\*\*。
 
@@ -149,10 +150,10 @@ using Microsoft.ML.Data;
 执行所有 ML.NET 操作都是从 [MLContext 类](xref:Microsoft.ML.MLContext)开始，初始化 `mlContext` 可创建一个新的 ML.NET 环境，可在模型创建工作流对象之间共享该环境。 从概念上讲，它与实体框架中的 `DBContext` 类似。
 
 在 `Main()` 之后，创建一个名为 `LoadData()` 的方法：
+
 ```csharp
 public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 {
-
 
 }
 ```
@@ -164,14 +165,13 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
-ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.Data.DataView.IDataView)。 `IDataView` 是用于描述表格数据（数字和文本）的一种灵活且有效的方法。 可从文本文件或实时（例如，SQL 数据库或日志文件）将数据加载到 `IDataView` 对象。
+ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `IDataView` 是用于描述表格数据（数字和文本）的一种灵活且有效的方法。 可从文本文件或实时（例如，SQL 数据库或日志文件）将数据加载到 `IDataView` 对象。
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) 用于定义数据架构并读取文件。 它使用数据路径变量并返回 `IDataView`。 在这种情况下，需提供 `Test` 和 `Train` 文件的路径，并指示文本文件头（以便正确使用列名称）和逗号字符数据分隔符（默认分隔符是制表符）。
 
 在 `Main()` 方法中添加以下两个代码行，以调用 `LoadData()` 方法并返回 `Train` 和 `Test` 数据：
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
-
 
 ## <a name="build-and-train-your-model"></a>生成并训练模型
 
@@ -190,13 +190,14 @@ ML.NET 中包含三个主要概念：[数据](../basic-concepts-model-training-i
 使用以下步骤生成 `Estimator`：
 
 使用下面的代码紧随 `LoadData()` 方法后创建 `BuildAndTrainModel()` 方法：
+
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView trainingDataView)
 {
 
-
 }
 ```
+
 > [!NOTE]
 > 除非在以下步骤中添加返回语句，否则使用此方法将出错。
 
@@ -211,7 +212,6 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |
 | 1 | 6 | 4 | userKey1 | movieKey3 |
-
 
 选择机器学习算法并将其添加到数据转换定义中，方法是在 `BuildAndTrainModel()` 中添加以下代码作为下一代码行：
 
@@ -234,7 +234,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 [!code-csharp[FitModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.Data.DataView.IDataView,Microsoft.Data.DataView.IDataView%29) 方法使用提供的训练数据集训练模型。 从技术上讲，该方法通过转换数据并应用训练来执行 `Estimator` 定义，然后返回经过训练的模型，即 `Transformer`。
+[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法使用提供的训练数据集训练模型。 从技术上讲，该方法通过转换数据并应用训练来执行 `Estimator` 定义，然后返回经过训练的模型，即 `Transformer`。
 
 将以下内容添加为 `Main()` 方法中的下一代码行，以调用 `BuildAndTrainModel()` 方法并返回经过训练的模型：
 
@@ -245,10 +245,10 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 训练模型后，使用测试数据评估模型的执行情况。 
 
 使用下面的代码紧随 `BuildAndTrainModel()` 方法后创建 `EvaluateModel()` 方法：
+
 ```csharp
 public static void EvaluateModel(MLContext mlContext, IDataView testDataView, ITransformer model)
 {
-
 
 }
 ```
@@ -304,9 +304,11 @@ RSquared: 0.412556298844873
 
 在此输出中，有 20 次迭代。 在每次迭代中，误差测量值均会减小并逐渐趋于最小值 0。
 
-`root of mean squared error`（RMS 或 RMSE）经常用于测量模型预测的值与测试数据集中观察到的值之间的差异。 从技术上讲，它是误差的平方的平均值的平方根。 通常会希望你的 RMSE 分数尽可能接近 1。
+`root of mean squared error`（RMS 或 RMSE）用于度量模型预测的值与测试数据集观察到的值之间的差异。 从技术上讲，它是误差的平方的平均值的平方根。 指标越低，模型就越好。
 
-`R Squared` 是模型解释的预测值中的变化百分比。 它是 0 到 1 之间的值，值越接近 0，模型越好。
+`R Squared` 指明数据与模型的适应程度。 范围从 0 到 1。 值 0 表示数据是随机的，否则就无法适应模型。 值 1 表示模型与数据完全匹配。 通常会希望 `R Squared` 分数尽可能接近 1。
+
+生成成功的模型是一个迭代过程。 由于本教程使用小型数据集来提供快速模型训练，因此该模型的初始质量较低。 如果对模型质量不满意，可以通过尝试提供更大的训练数据集，或通过为每种算法选择具有不同超参数的不同训练算法来改进它。 有关详细信息，请查看下面的[改进模型](#improve-your-model)部分。
 
 ## <a name="use-your-model"></a>使用模型
 
@@ -316,7 +318,6 @@ RSquared: 0.412556298844873
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
-
 
 }
 ```
@@ -351,13 +352,14 @@ Movie 10 is recommended for user 6
 ```
 
 ### <a name="save-your-model"></a>保存模型
+
 若要使用模型在最终用户应用程序中进行预测，必须先保存模型。
 
 使用下面的代码紧随 `UseModelForSinglePrediction()` 方法后创建 `SaveModel()` 方法：
+
 ```csharp
 public static void SaveModel(MLContext mlContext, ITransformer model)
 {
-
 
 }
 ```
@@ -373,6 +375,7 @@ public static void SaveModel(MLContext mlContext, ITransformer model)
 [!code-csharp[SaveModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
 ### <a name="use-your-saved-model"></a>使用保存的模型
+
 保存经过训练的模型后，可以在不同环境中使用模型（请参阅[“操作指南”](../how-to-guides/consuming-model-ml-net.md)，了解如何在应用程序中操作经过训练的机器学习模型）。
 
 ## <a name="results"></a>结果
@@ -416,7 +419,7 @@ Movie 10 is recommended for user 6
 
 有几种方法可以提升模型的性能，以便可以获得更准确的预测。
 
-### <a name="data"></a>数据 
+### <a name="data"></a>数据
 
 可添加更多训练数据，并在其中包括针对每个用户和影片 ID 的足够样本，以帮助提升推荐模型的质量。
 
@@ -450,6 +453,7 @@ var options = new MatrixFactorizationTrainer.Options
 ```
 
 ### <a name="other-recommendation-algorithms"></a>其他推荐算法
+
 具有协作筛选的矩阵分解算法只是用于执行影片推荐的一种方法。 在许多情况下，可能没有可用的评分数据，并且只有用户可以获得影片历史记录。 在其他情况下，你可能不仅仅拥有用户的评分数据。
 
 | 算法       | 方案           | 示例  |
@@ -458,12 +462,15 @@ var options = new MatrixFactorizationTrainer.Options
 | 场感知分解机 | 当拥有的特征不止 userId、productId 和评分（例如产品描述或产品价格）时，可使用此选项进行建议。 此方法也使用协作筛选法。 | [>试试看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>新用户方案
+
 协作筛选中的一个常见问题是“冷开始问题”，即有一个新用户，没有用于进行推理的任何旧数据。 该问题通常可通过要求新用户创建个人资料来解决，例如，对他们过去看过的影片评分。 虽然此方法会给用户带来一些负担，但它可为没有评分历史记录的新用户提供一些开始数据。
 
 ## <a name="resources"></a>资源
+
 本教程中使用的数据源自 [MovieLens 数据集](http://files.grouplens.org/datasets/movielens/)。
 
 ## <a name="next-steps"></a>后续步骤
+
 在本教程中，你将了解：
 
 > [!div class="checklist"]

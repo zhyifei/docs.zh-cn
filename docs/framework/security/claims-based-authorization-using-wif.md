@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312171"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 的基于声明的授权
@@ -60,4 +60,4 @@ ms.locfileid: "59312171"
   
 5. 如果结果为 true，则授予访问权；如果结果为 false，则拒绝访问。 例如，规则可能是年龄为 21 岁或以上且居住在华盛顿州的用户。  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> 可用于具体化基于声明的应用程序中的授权决策逻辑。 ClaimsAuthorizationManager 是作为 .NET 4.5 的一部分附带的 WIF 组件。 ClaimsAuthorizationManager 允许您拦截传入请求，并实现选定的任何逻辑以根据传入声明做出授权决策。 在需要更改授权逻辑时，这变得非常重要。 在这种情况下，使用 ClaimsAuthorizationManager 将不会影响应用程序的完整性，从而降低了更改导致应用程序错误的可能性。 若要了解有关如何使用 ClaimsAuthorizationManager 实现基于声明的访问控制的详细信息，请参阅[How To:实现声明授权在声明感知 ASP.NET 应用程序应用程序使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247446)。
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> 有助于在应用程序中具体化基于声明的授权的决策逻辑。 ClaimsAuthorizationManager 是作为 .NET 4.5 的一部分附带的 WIF 组件。 ClaimsAuthorizationManager 允许您拦截传入请求，并实现选定的任何逻辑以根据传入声明做出授权决策。 在需要更改授权逻辑时，这变得非常重要。 在这种情况下，使用 ClaimsAuthorizationManager 将不会影响应用程序的完整性，从而降低了更改导致应用程序错误的可能性。 若要了解有关如何使用 ClaimsAuthorizationManager 实现基于声明的访问控制的详细信息，请参阅[How To:实现声明授权在声明感知 ASP.NET 应用程序应用程序使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247446)。

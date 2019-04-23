@@ -3,10 +3,10 @@ title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
 ms.openlocfilehash: 72d96c5f24fcedf870370de3792680831145a454
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311131"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "59311131"
  指定对 EXISTS 的结果取反。  
   
 ## <a name="return-value"></a>返回值  
- `true` 如果集合不为空，则为否则为`false`。  
+ 如果集合不为空，则为 `true`；否则为 `false`。  
   
 ## <a name="remarks"></a>备注  
  EXISTS 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符之一。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符都是从左到右进行求值。 有关优先级信息[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符，请参阅[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)。  

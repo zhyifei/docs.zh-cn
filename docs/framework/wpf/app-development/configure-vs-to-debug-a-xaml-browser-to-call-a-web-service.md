@@ -9,10 +9,10 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
 ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314368"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>如何：将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务
@@ -46,7 +46,7 @@ ms.locfileid: "59314368"
 
 3. 在中**启动选项**部分中，添加以下命令行参数**命令行参数**文本框中：
 
-     `-debugSecurityZoneURL`  *URL*
+     `-debugSecurityZoneURL` URL
 
      *URL*值 **-debugSecurityZoneURL**参数是[!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)]你想要模拟不会成为您的应用程序源站点的位置。
 

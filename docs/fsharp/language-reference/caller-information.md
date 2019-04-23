@@ -3,10 +3,10 @@ title: 调用方信息
 description: 介绍如何使用调用方信息参数特性从一种方法获取调用方信息。
 ms.date: 04/25/2017
 ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316149"
 ---
 # <a name="caller-information"></a>调用方信息
@@ -70,6 +70,6 @@ type Tracer() =
 
 ## <a name="see-also"></a>请参阅
 
-- [特性](attributes.md)
+- [属性](attributes.md)
 - [命名的参数](parameters-and-arguments.md#named-arguments)
 - [可选参数](parameters-and-arguments.md#optional-parameters)

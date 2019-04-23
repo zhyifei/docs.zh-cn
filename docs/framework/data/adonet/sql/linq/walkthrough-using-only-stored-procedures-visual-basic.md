@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314823"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>演练：仅使用存储过程 (Visual Basic)
@@ -105,7 +105,7 @@ ms.locfileid: "59314823"
   
 1. 在中**解决方案资源管理器**，右键单击**Form1.vb**，然后单击**查看代码**。  
   
-     `Class Form1` 将显示在代码编辑器。  
+     `Class Form1` 将显示在代码编辑器中。  
   
 2. 在 `Form1` 代码块中键入如下代码：  
   

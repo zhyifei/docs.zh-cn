@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318424"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)
@@ -17,7 +17,7 @@ ms.locfileid: "59318424"
   
  即使要序列化代理对象来代替 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 实体，仍然必须在数据访问层 (DAL) 上构造一个实体，并将其附加到新的 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>，以便将数据提交给数据库。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是完全不关心实体的序列化。 有关如何使用详细信息[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 SQLMetal 工具生成通过使用 Windows Communication Foundation (WCF) 是可序列化的类，请参阅[如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 完全不关心实体的序列化方式。 有关如何使用详细信息[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 SQLMetal 工具生成通过使用 Windows Communication Foundation (WCF) 是可序列化的类，请参阅[如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
   
 > [!NOTE]
 >  仅对新实体或反序列化后的实体调用 `Attach` 方法。 将实体与其原始数据上下文分离的唯一方式是将其序列化。 如果试图将未分离的实体附加到新的数据上下文，并且该实体仍然具有来自其以前的数据上下文的延迟加载程序，则 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会引发异常。 如果一个实体具有来自两个不同数据上下文的延迟加载程序，则在对该实体执行插入、更新和删除操作时，可能产生意外的结果。 有关延迟加载程序的详细信息，请参阅[推迟加载与即时加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
@@ -208,7 +208,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>更新数据  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在这些方案中涉及开放式并发支持更新：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持以下这些涉及开放式并发的方案中的更新：  
   
 -   基于时间戳或 RowVersion 号的开放式并发。  
   

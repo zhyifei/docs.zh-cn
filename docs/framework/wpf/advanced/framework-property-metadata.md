@@ -6,10 +6,10 @@ helpviewer_keywords:
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
 ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314693"
 ---
 # <a name="framework-property-metadata"></a>框架属性元数据
@@ -27,7 +27,7 @@ ms.locfileid: "59314693"
   
 -   报告影响元素的父元素的布局属性 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>， <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 下面是一些示例，默认情况下设置了这些标志<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>和<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>。  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 默认情况下，依赖属性不会继承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 允许继承纳入可视化树中，这是某些控件复合方案所需的路径。  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 默认情况下，依赖属性不会继承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 允许继承纳入可视化树中，这是某些控件复合方案所需的路径。  
   
     > [!NOTE]
     >  属性值上下文中的术语“继承”指特定于依赖属性的情况；它意味着由于存在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统的 WPF 框架级功能，子元素可以从父元素继承实际的依赖属性值。 它与通过派生类型的托管代码类型和成员继承没有直接关系。 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。  
@@ -73,6 +73,6 @@ ms.locfileid: "59314693"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [依赖项属性元数据](dependency-property-metadata.md)
+- [依赖属性元数据](dependency-property-metadata.md)
 - [依赖项属性概述](dependency-properties-overview.md)
-- [自定义依赖项属性](custom-dependency-properties.md)
+- [自定义依赖属性](custom-dependency-properties.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409440"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315759"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  如果接口不是来自已知对象，则封送拆收器执行以下操作：  
   
-1.  封送拆收器向对象查询 IProvideClassInfo2 接口。 封送拆收器使用从 IProvideClassInfo2.GetGUID 返回的 CLSID（如果已提供）来识别提供接口的组件类。 如果以前注册过程序集，通过 CLSID，封送拆收器可以从注册表定位包装。  
+1. 封送拆收器向对象查询 IProvideClassInfo2 接口。 封送拆收器使用从 IProvideClassInfo2.GetGUID 返回的 CLSID（如果已提供）来识别提供接口的组件类。 如果以前注册过程序集，通过 CLSID，封送拆收器可以从注册表定位包装。  
   
-2.  封送拆收器向接口查询 IProvideClassInfo 接口。 封送拆收器使用从 IProvideClassInfo.GetClassinfo 返回 的 ITypeInfo（如果已提供）来确定公开该接口的类的 CLSID。 封送拆收器可以使用 CLSID 定位包装的元数据。  
+2. 封送拆收器向接口查询 IProvideClassInfo 接口。 封送拆收器使用从 IProvideClassInfo.GetClassinfo 返回 的 ITypeInfo（如果已提供）来确定公开该接口的类的 CLSID。 封送拆收器可以使用 CLSID 定位包装的元数据。  
   
-3.  如果封送拆收器仍不能识别类，则使用名为 System.__ComObject 的泛型包装类包装接口。  
+3. 如果封送拆收器仍不能识别类，则使用名为 System.__ComObject 的泛型包装类包装接口。  
   
 ## <a name="default-marshaling-for-delegates"></a>委托的默认封送处理  
  托管委托基于后述调用机制封送为 COM 接口或函数指针：  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
 - [复制和锁定](copying-and-pinning.md)
 - [数组的默认封送处理](default-marshaling-for-arrays.md)

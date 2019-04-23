@@ -8,10 +8,10 @@ helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
 ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317696"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>如何：授权时允许元数据请求
@@ -25,7 +25,7 @@ ms.locfileid: "59317696"
   
 2. 重写 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。 取决于是否允许授权，该方法返回 `true` 或 `false`。 有关当前过程的信息，请参见作为参数传递给该方法的 <xref:System.ServiceModel.OperationContext>。  
   
-3. 重写时，检查协定名称、命名空间和操作，如在以下示例所示。 如果条件有效，然后返回 `true.`  
+3. 重写时，检查协定名称、命名空间和操作，如在以下示例所示。 如果条件无效，则将返回 `true.`。  
   
 4. 使用扩展点利用类。 有关详细信息，请参阅[如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。  
   

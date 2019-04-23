@@ -11,16 +11,16 @@ helpviewer_keywords:
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
 ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312236"
 ---
 # <a name="overload-resolution-visual-basic"></a>重载决策 (Visual Basic)
 当 Visual Basic 编译器遇到多个重载版本中定义的过程调用时，编译器必须确定哪个重载来调用。 做到这一点，请执行以下步骤：  
   
-1. **可访问性。** 它消除了一种访问级别，以防止调用代码中调用它的任何重载。  
+1. **辅助功能。** 它消除了一种访问级别，以防止调用代码中调用它的任何重载。  
   
 2. **参数数目。** 它消除了定义不同数量的参数提供的调用中的任何重载。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "59312236"
 - [过程重载](./procedure-overloading.md)
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)
-- [如何：调用重载过程](./how-to-call-an-overloaded-procedure.md)
+- [如何：调用重载的过程](./how-to-call-an-overloaded-procedure.md)
 - [如何：重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [如何：重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [如何：重载的参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [重载过程注意事项](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [扩展方法](./extension-methods.md)

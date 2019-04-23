@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221142"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315538"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反射发出定义泛型类型
 此主题说明如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。  
@@ -27,25 +27,25 @@ ms.locfileid: "56221142"
   
 ### <a name="to-define-a-generic-type"></a>定义泛型类型  
   
-1.  定义名为 `GenericEmitExample1` 的动态程序集。 在此示例中，执行了程序集并将其保存到磁盘中，所以指定了 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。  
+1. 定义名为 `GenericEmitExample1` 的动态程序集。 在此示例中，执行了程序集并将其保存到磁盘中，所以指定了 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>。  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  定义动态模块。 程序集由可执行模块组成。 对于单模块程序集，模块名称与程序集名称相同，文件名为模块名称加上扩展名。  
+2. 定义动态模块。 程序集由可执行模块组成。 对于单模块程序集，模块名称与程序集名称相同，文件名为模块名称加上扩展名。  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  定义类。 在此示例中，类命名为 `Sample`。  
+3. 定义类。 在此示例中，类命名为 `Sample`。  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  通过将包含参数名称的字符串数组传递给 <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> 方法来定义 `Sample` 的泛型类型参数。 这将使该类成为泛型类型。 返回值是表示类型参数的 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 对象数组，可用于发出的代码。  
+4. 通过将包含参数名称的字符串数组传递给 <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> 方法来定义 `Sample` 的泛型类型参数。 这将使该类成为泛型类型。 返回值是表示类型参数的 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 对象数组，可用于发出的代码。  
   
      在以下代码中，`Sample` 将成为具有类型参数 `TFirst` 和 `TSecond` 的泛型类型。 为了使代码更易于阅读，每个 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 都将放置在与类型参数同名的变量中。  
   
@@ -53,25 +53,25 @@ ms.locfileid: "56221142"
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  向类型参数添加特殊约束。 在此示例中，类型参数 `TFirst` 被限制为具有无参数构造函数的类型以及引用类型。  
+5. 向类型参数添加特殊约束。 在此示例中，类型参数 `TFirst` 被限制为具有无参数构造函数的类型以及引用类型。  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  可以选择向类型参数添加类约束和接口约束。 在此示例中，类型参数 `TFirst` 被限制为从 `baseType` 变量包含的 <xref:System.Type> 对象所表示的基类中派生的类型，以及实现接口类型包含在变量 `interfaceA` 和 `interfaceB` 中的接口的类型。 有关这些变量的声明和分配，请参阅代码示例。  
+6. 可以选择向类型参数添加类约束和接口约束。 在此示例中，类型参数 `TFirst` 被限制为从 `baseType` 变量包含的 <xref:System.Type> 对象所表示的基类中派生的类型，以及实现接口类型包含在变量 `interfaceA` 和 `interfaceB` 中的接口的类型。 有关这些变量的声明和分配，请参阅代码示例。  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  定义字段。 在此示例中，该字段的类型由类型参数 `TFirst` 指定。 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 派生自 <xref:System.Type>，因此可在任何能够使用类型的位置使用泛型类型参数。  
+7. 定义字段。 在此示例中，该字段的类型由类型参数 `TFirst` 指定。 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 派生自 <xref:System.Type>，因此可在任何能够使用类型的位置使用泛型类型参数。  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  定义使用泛型类型的类型参数的方法。 请注意，此类方法不是泛型方法，除非它们具有自己的类型参数列表。 以下代码定义一个 `static` 方法（在 Visual Basic 中为 `Shared`），该方法接收一个 `TFirst` 数组并返回包含该数组所有元素的 `List<TFirst>`（在 Visual Basic 中为 `List(Of TFirst)`）。 若要定义此方法，需要通过调用泛型类型定义 `List<T>` 上的 <xref:System.Type.MakeGenericType%2A> 来创建类型 `List<TFirst>`。 （使用 `typeof` 运算符（在 Visual Basic 中为 `GetType`）获取泛型类型定义时，将忽略 `T`。）通过使用 <xref:System.Type.MakeArrayType%2A> 方法创建参数类型。  
+8. 定义使用泛型类型的类型参数的方法。 请注意，此类方法不是泛型方法，除非它们具有自己的类型参数列表。 以下代码定义一个 `static` 方法（在 Visual Basic 中为 `Shared`），该方法接收一个 `TFirst` 数组并返回包含该数组所有元素的 `List<TFirst>`（在 Visual Basic 中为 `List(Of TFirst)`）。 若要定义此方法，需要通过调用泛型类型定义 `List<T>` 上的 <xref:System.Type.MakeGenericType%2A> 来创建类型 `List<TFirst>`。 （使用 `typeof` 运算符（在 Visual Basic 中为 `GetType`）获取泛型类型定义时，将忽略 `T`。）通过使用 <xref:System.Type.MakeArrayType%2A> 方法创建参数类型。  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -136,6 +136,7 @@ ms.locfileid: "56221142"
 -   使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [使用反射发出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [反射发出动态程序集应用场景](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

@@ -2,12 +2,12 @@
 title: 证书选择和验证
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666642"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318346"
 ---
 # <a name="certificate-selection-and-validation"></a>证书选择和验证
 <xref:System.Net> 类支持多种针对安全套接字层 (SSL) 连接选择和验证 <xref:System.Security.Cryptography.X509Certificates> 的方法。 客户端可以选择一个或多个证书对服务器自身的客户端进行身份验证。 服务器可以要求客户端证书具有一个或多个用于身份验证的特定属性。  
@@ -29,11 +29,11 @@ ms.locfileid: "54666642"
 ## <a name="client-certificate-selection"></a>客户端证书选择  
  NET Framework 按以下方式选择将提供给服务器的客户端证书：  
   
-1.  如果之前已向服务器提供客户端证书，首次提供时，证书将被缓存，并且重复用于后续客户端证书请求。  
+1. 如果之前已向服务器提供客户端证书，首次提供时，证书将被缓存，并且重复用于后续客户端证书请求。  
   
-2.  如果存在委托，请始终使用委托的结果作为客户端证书的选择。 若可能，请尝试使用已缓存的证书，但如果委托已返回 NULL，且证书集合不为空，请勿使用已缓存的匿名凭据。  
+2. 如果存在委托，请始终使用委托的结果作为客户端证书的选择。 若可能，请尝试使用已缓存的证书，但如果委托已返回 NULL，且证书集合不为空，请勿使用已缓存的匿名凭据。  
   
-3.  如果这是对客户端证书的第一次质询，Framework 将枚举与连接关联的 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类对象中的证书，查找由服务器提供的证书颁布者列表与客户端证书颁布者名称之间的匹配。 匹配的第一个证书将被发送到服务器。 如果没有证书匹配或证书集合为空，则向服务器发送匿名凭据。  
+3. 如果这是对客户端证书的第一次质询，Framework 将枚举与连接关联的 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 或 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类对象中的证书，查找由服务器提供的证书颁布者列表与客户端证书颁布者名称之间的匹配。 匹配的第一个证书将被发送到服务器。 如果没有证书匹配或证书集合为空，则向服务器发送匿名凭据。  
   
 ## <a name="tools-for-certificate-configuration"></a>证书配置工具  
  许多工具都可用于配置客户端和服务器证书。  
@@ -53,5 +53,6 @@ HttpCfg.exe 工具可用于配置 <xref:System.Net.HttpListener> 类的服务器
  除了这些工具， <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类还提供从文件系统加载证书的方法。  
   
 ## <a name="see-also"></a>请参阅
+
 - [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)

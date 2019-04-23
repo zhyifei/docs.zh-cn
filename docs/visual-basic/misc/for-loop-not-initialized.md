@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID92
 ms.assetid: 7f5b8b87-1a28-474d-8639-9de97922ceab
 ms.openlocfilehash: 225a363e5e5578160acc5aa45e978a0339b546c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313202"
 ---
 # <a name="for-loop-not-initialized-visual-basic"></a>未初始化 For 循环 (Visual Basic)
@@ -21,4 +21,4 @@ ms.locfileid: "59313202"
 ## <a name="see-also"></a>请参阅
 
 - [For Each...Next 语句](../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [如何：标签语句](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
+- [如何：标记语句](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)

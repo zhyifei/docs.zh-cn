@@ -12,10 +12,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
 ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310273"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows 窗体 RichTextBox 控件启用拖放操作
@@ -167,6 +167,6 @@ ms.locfileid: "59310273"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [如何：在应用程序之间执行拖放操作](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [如何：执行应用程序之间的拖放操作](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox 控件](richtextbox-control-windows-forms.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

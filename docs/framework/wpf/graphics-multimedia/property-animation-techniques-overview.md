@@ -10,10 +10,10 @@ helpviewer_keywords:
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
 ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317904"
 ---
 # <a name="property-animation-techniques-overview"></a>属性动画技术概述
@@ -34,7 +34,7 @@ ms.locfileid: "59317904"
 |情节提要动画|每个实例<xref:System.Windows.Style>， <xref:System.Windows.Controls.ControlTemplate>， <xref:System.Windows.DataTemplate>|是|是|  
 |本地动画|基于实例|否|否|  
 |时钟动画|基于实例|否|是|  
-|基于帧的动画|基于实例|否|不可用|  
+|基于帧的动画|基于实例|否|不适用|  
   
 <a name="storyboard_animations"></a>   
 ## <a name="storyboard-animations"></a>情节提要动画  
