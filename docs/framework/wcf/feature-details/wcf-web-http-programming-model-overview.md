@@ -3,10 +3,10 @@ title: WCF Web HTTP 编程模型概述
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199578"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) WEB HTTP 编程模型提供了构建使�
   
  WCF WEB HTTP 编程模型扩展 WCF 以覆盖 Web 样式方案，包括 WEB HTTP 服务、 AJAX 和 JSON 服务以及联合 (ATOM/RSS) 源的市场宣传。 有关 AJAX 和 JSON 服务的详细信息，请参阅[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 有关联合的详细信息，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
- 对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 默认情况下支持哪些类型的详细信息请参阅**UriTemplate 查询字符串参数和 Url**下面一节。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参见 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ 对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 默认情况下支持哪些类型的详细信息请参阅**UriTemplate 查询字符串参数和 Url**下面一节。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
 >  使用 WCF WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP，因此不能使用由 WCF 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 有关 WCF 安全性的详细信息，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -43,15 +43,15 @@ Windows Communication Foundation (WCF) WEB HTTP 编程模型提供了构建使�
   
  在此模板中，大括号表示法 ("{segment}") 指示变量段而不是文本值。  
   
- .NET Framework 提供了一个 API 来处理名为 <xref:System.UriTemplate> 的 URI 模板。 `UriTemplates` 允许你执行以下操作：  
+ .NET Framework 提供了一个 API 来处理名为 <xref:System.UriTemplate> 的 URI 模板。 `UriTemplates` 允许执行下列操作：  
   
 -   您可以调用一个`Bind`方法的参数，以生成一系列*完全封闭的 URI*匹配的模板。 这意味着，URI 模板中的所有变量均由实际值替换。  
   
 -   可以使用候选 URI 调用 `Match`()，此时会使用模板将候选 URI 的各个组成部分分解开来，并会返回一个字典，其中包含根据模板中的变量标记的 URI 的不同部分。  
   
--   `Bind`（) 和`Match`（） 互为逆方法，以便你可以调用`Match`( `Bind`(x)) 并返回具有相同的环境开始使用。  
+-   `Bind`() 和 `Match`() 互为逆方法，因此可以调用 `Match`( `Bind`( x ) ) 并返回到开始时的相同环境。  
   
- 在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。 <xref:System.UriTemplateTable> 表示一组 URI 模板，并选择最匹配给定一组模板和候选 URI。 这不隶属于任何特定网络堆栈 （WCF） 使您可以在任何需要的地方使用它。  
+ 在很多时候（尤其是在服务器需要基于 URI 将请求调度到某个服务操作时），对于那些可以单独对包含的每个模板进行寻址的数据结构，您需要一直跟踪其中的一组 <xref:System.UriTemplate> 对象。 <xref:System.UriTemplateTable> 表示一组 URI 模板，并在给定的一组模板和候选 URI 中选择最匹配的项。 这不隶属于任何特定网络堆栈 （WCF） 使您可以在任何需要的地方使用它。  
   
  WCF 服务模型使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 将服务操作与由 <xref:System.UriTemplate> 描述的一组 URI 相关联。 通过使用 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，将服务操作与 <xref:System.ServiceModel.Web.WebInvokeAttribute> 相关联。 有关详细信息<xref:System.UriTemplate>并<xref:System.UriTemplateTable>，请参阅[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> 默认为 POST，但也可以使用它的其他谓词过。  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> 的默认值为 POST，但也可以将其用于其他谓词。  
   
 ```  
 [ServiceContract]  
@@ -135,7 +135,7 @@ interface ICustomer
   
  这意味着 WCF WEB HTTP 编程模型可以处理任何类型的数据，但你可能会对编程<xref:System.IO.Stream>。  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 提供对 JSON 数据 (AJAX) 和联合源 （包括 ATOM 和 RSS） 支持。 有关这些功能的详细信息，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)并[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 支持 JSON 数据 (AJAX) 和联合源（包括 ATOM 和 RSS）。 有关这些功能的详细信息，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)并[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 编程模型和安全  
  因为 WCF WEB HTTP 编程模型不支持 WS-* 协议的 WCF WEB HTTP 服务安全的唯一方法是使用 SSL 通过 HTTPS 公开服务。 有关设置 SSL 的详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[如何在 IIS 中实现 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  

@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195522"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 中的新增功能
@@ -58,7 +58,7 @@ Windows Identity Foundation (WIF) 的首个版本是作为单独的下载文件�
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [使用 WIF 3.5 至 WIF 4.5 生成的应用程序的迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 - [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
 - [WIF API 参考](../../../docs/framework/security/wif-api-reference.md)
 - [WIF 配置参考](../../../docs/framework/security/wif-configuration-reference.md)

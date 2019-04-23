@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
 ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199526"
 ---
 # <a name="data-contract-serializer"></a>数据协定序列化程序
@@ -39,5 +39,5 @@ Windows Communication Foundation (WCF) 基础结构使用<xref:System.Runtime.Se
   
 ## <a name="see-also"></a>请参阅
 
-- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

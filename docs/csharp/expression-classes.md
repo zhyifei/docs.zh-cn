@@ -3,12 +3,12 @@ title: 支持表达式树的框架类型
 description: 了解支持表达式树的框架类型、创建表达式树和使用表达式树 API 的方法。
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972554"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59198460"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>支持表达式树的框架类型
 
@@ -18,7 +18,7 @@ ms.locfileid: "45972554"
 可以在 <xref:System.Linq.Expressions> 查看完整列表。
 让我们来了解一下 framework 类的设计方式，而不是逐一查看完整列表。
 
-在语言设计中，表达式是可计算并返回值的代码主体。 表达式可能非常简单：常数表达式 `1` 返回常数值 1。 也可能较复杂：表达式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` 返回二次方程的一个根（若方程有解）。  
+在语言设计中，表达式是可计算并返回值的代码主体。 表达式可能非常简单：常数表达式 `1` 返回常数值 1。 它们可能更复杂：表达式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` 返回二次方程的一个根（若方程有解）。  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>这一切都始于 System.Linq.Expression
 
@@ -65,4 +65,3 @@ var addition = Expression.Add(one, two);
 如果查看这三个部分的每个部分，可以发现更多内容。 通过使用这三个步骤中的任意一个步骤，你一定会发现所需的内容。
  
  [下一步 - 执行表达式树](expression-trees-execution.md)
- 

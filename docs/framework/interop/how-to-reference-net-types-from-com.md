@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5151d89feccbe68daa5a8de4aa3b75a42511899
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220265"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59198395"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>如何：从 COM 引用 .NET 类型
 从客户端和服务器代码的角度看，COM 和 .NET Framework 之间的区别在很大程度上是不可见的。 Microsoft Visual Basic 客户端可在对象浏览器中查看 .NET 对象，这将公开对象方法和语法、属性和字段，正如任何其他 COM 对象那样。  
@@ -44,6 +44,7 @@ ms.locfileid: "56220265"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
 - [向 COM 注册程序集](registering-assemblies-with-com.md)
 - [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))

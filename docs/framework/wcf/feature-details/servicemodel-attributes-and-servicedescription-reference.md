@@ -3,10 +3,10 @@ title: ServiceModel 属性和 ServiceDescription 引用
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195340"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性和 ServiceDescription 引用
@@ -31,7 +31,7 @@ ms.locfileid: "59195340"
   
 |ServiceContractAttribute 属性|受影响的说明树值|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A><xref:System.ServiceModel.Description.MessageDescription>添加到所有操作<xref:System.ServiceModel.Description.OperationDescription.Messages%2A>。|  
+|CallbackContract|添加到所有操作 <xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A> 的 <xref:System.ServiceModel.Description.MessageDescription>, <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>。|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 和可能的子保护级别。 有关保护级别层次结构的详细信息，请参阅[了解保护级别](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
@@ -42,18 +42,18 @@ ms.locfileid: "59195340"
   
 |OperationContractAttribute 值|受影响的说明树值|  
 |--------------------------------------|-------------------------------------|  
-|操作|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 为输出消息或输入的消息，取决于协定/回调协定。|  
-|AsyncPattern|如果为 true，<xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A>和 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|映射到单个<xref:System.ServiceModel.Description.MessageDescription>中 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
+|操作|用于输出消息或输入消息的 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>，具体取决于协定/回调协定。|  
+|AsyncPattern|如果为 True，则执行 <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> 和 <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
+|IsOneWay|映射到 <xref:System.ServiceModel.Description.MessageDescription> 中的单个 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |名称|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 和可能的子保护级别。 有关保护级别层次结构的详细信息，请参阅[了解保护级别](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
-|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 为输出消息或输入的消息，取决于协定/回调协定。|  
+|ReplyAction|用于输出消息或输入消息的 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>，具体取决于协定/回调协定。|  
   
 |FaultContractAttribute 值|受影响的说明树值|  
 |----------------------------------|-------------------------------------|  
-|操作|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> 取决于协定/回调协定。|  
+|操作|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>，它取决于协定/回调协定。|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
 |名称|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |命名空间|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
@@ -80,19 +80,19 @@ ms.locfileid: "59195340"
   
 |MessageHeaderAttribute 值|受影响的说明树值|  
 |----------------------------------|-------------------------------------|  
-|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 中相应标头的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 中相应标头的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中相应标头的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中相应标头的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中相应标头的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 中相应标头的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 中的相应标头 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 中的相应标头 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的相应标头 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中的相应标头 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中的相应标头 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 中的相应标头 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute 值|受影响的说明树值|  
 |--------------------------------------|-------------------------------------|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中相应部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中相应部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|顺序|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中相应部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中相应部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的相应部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中的相应部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|顺序|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中的相应部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中的相应部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute 值|受影响的说明树值|  
 |---------------------------------------|-------------------------------------|  
@@ -109,7 +109,7 @@ ms.locfileid: "59195340"
   
 |MessageParameterAttribute 值|受影响的说明树值|  
 |-------------------------------------|-------------------------------------|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中相应部分的 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的相应部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  有关如何将说明树值转换为元数据的详细信息，请参阅[ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195639"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows 窗体和非托管应用程序概述
@@ -57,7 +57,7 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
   
 ## <a name="see-also"></a>请参阅
 
-- [Windows 窗体和非托管应用程序](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 互操作性示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
@@ -65,5 +65,5 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
 - [向 COM 公开 .NET Framework 组件](../../interop/exposing-dotnet-components-to-com.md)
 - [将 COM 的程序集打包](../../interop/packaging-an-assembly-for-com.md)
 - [向 COM 注册程序集](../../interop/registering-assemblies-with-com.md)
-- [如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)
-- [如何：通过在每个 Windows 窗体各自的线程上显示此 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)
+- [如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

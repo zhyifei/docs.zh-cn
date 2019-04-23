@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195054"
 ---
 # <a name="sending-and-receiving-faults"></a>发送和接收错误
@@ -51,15 +51,15 @@ SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> 如果操作超过了指定的超时期限，则会引发对象。  
+ 当某个操作超过指定的超时期限时，引发 <xref:System.TimeoutException> 对象。  
   
- <xref:System.ServiceModel.CommunicationException> 某些服务或客户端上的可恢复的通信错误条件时引发的对象。  
+ 当服务或客户端上存在某些可恢复的通信错误条件时，引发 <xref:System.ServiceModel.CommunicationException> 对象。  
   
  <xref:System.ServiceModel.CommunicationException> 类具有两个重要的派生类型：<xref:System.ServiceModel.FaultException> 和泛型 <xref:System.ServiceModel.FaultException%601> 类型。  
   
- <xref:System.ServiceModel.FaultException> 当侦听器接收不期望或未在操作协定; 中指定的错误时引发异常这通常发生时正在调试应用程序和服务都有<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>属性设置为`true`。  
+ 当侦听器接收到操作协定中未预料到或未指定的错误时，引发 <xref:System.ServiceModel.FaultException> 异常；这通常在对应用程序进行调试并且服务的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 属性设置为 `true` 时发生。  
   
- <xref:System.ServiceModel.FaultException%601> 在双向操作响应中收到操作协定中指定的错误时在客户端上引发异常 (即，具有的方法<xref:System.ServiceModel.OperationContractAttribute>属性与<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>设置为`false`)。  
+ 如果在对双向操作（即，一个具有 <xref:System.ServiceModel.FaultException%601> 属性并将其 <xref:System.ServiceModel.OperationContractAttribute> 设置为 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 的方法）进行响应时接收到操作协定中指定的错误，则会在客户端上引发 `false` 异常。  
   
 > [!NOTE]
 >  当 WCF 服务具有<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>或<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>属性设置为`true`客户端会看到的未声明<xref:System.ServiceModel.FaultException%601>类型的<xref:System.ServiceModel.ExceptionDetail>。 客户端可以捕捉这一特定错误，也可以在 <xref:System.ServiceModel.FaultException> 的 catch 块中处理该错误。  
@@ -110,4 +110,4 @@ SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [预期异常](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [使用“关闭”和“中止”发布 WCF 客户端资源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [使用关闭和中止发布 WCF 客户端资源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

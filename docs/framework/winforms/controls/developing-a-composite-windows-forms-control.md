@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
 ms.openlocfilehash: bfbb9091d40652bdd1ae277f3a77feefbccbf080
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196458"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>开发复合 Windows 窗体控件
@@ -19,11 +19,11 @@ ms.locfileid: "59196458"
   
  Visual Studio 中的 Windows 窗体设计器为编写用户控件提供丰富的设计时支持。  
   
--   [如何：在“选择工具箱项”对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+-   [如何：中显示控件选择工具箱项对话框](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [演练：序列化标准类型使用 DesignerSerializationVisibilityAttribute 集合](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [演练：使用 Visual C# 从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+-   [演练：从视觉对象的 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
 -   [如何：为控件提供工具箱位图](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
@@ -35,21 +35,21 @@ ms.locfileid: "59196458"
   
 -   [如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [如何：在设计时将控件与窗体边缘对齐](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+-   [如何：将控件与窗体边缘对齐在设计时](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
 -   [如何：从 UserControl 类继承](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [如何：创作 Windows 窗体的控件](how-to-author-controls-for-windows-forms.md)  
+-   [如何：Windows 窗体的作者控件](how-to-author-controls-for-windows-forms.md)  
   
 -   [如何：创作复合控件](how-to-author-composite-controls.md)  
   
--   [演练：使用 Visual Basic 创作复合控件](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+-   [演练：创作复合控件使用 Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [演练：使用 Visual C# 创作复合控件](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+-   [演练：创作复合控件通过视觉对象C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [演练：使用 Visual Basic 从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+-   [演练：从使用 Visual Basic 的 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)  
+-   [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)  
   
 -   [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   

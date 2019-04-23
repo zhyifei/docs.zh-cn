@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197381"
 ---
 # <a name="graphics-rendering-tiers"></a>图形呈现层
@@ -56,7 +56,7 @@ ms.locfileid: "59197381"
   
 |功能|层 1|层 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|必须高于或等于 9.0。|必须高于或等于 9.0。|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本|必须高于或等于 9.0。|必须高于或等于 9.0。|  
 |视频 RAM|必须大于或等于 60 MB。|必须大于或等于 120 MB。|  
 |像素着色器|版本级别必须高于或等于 2.0。|版本级别必须高于或等于 2.0。|  
 |顶点着色器|没有要求。|版本级别必须高于或等于 2.0。|  
@@ -68,10 +68,10 @@ ms.locfileid: "59197381"
 |-------------|-----------|  
 |2D 呈现|支持大多数 2D 呈现。|  
 |3D 光栅化|支持大多数 3D 光栅化。|  
-|3D 各向异性筛选|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 尝试使用各向异性筛选呈现 3D 内容时。 各向异性筛选是指改善离相机较远且与相机角度较大的图面上纹理的图像质量。|  
-|3D MIP 映射|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 尝试呈现 3D 内容时使用 MIP 映射。 MIP 映射可改进纹理呈现的质量，当纹理占用较小的视野<xref:System.Windows.Controls.Viewport3D>。|  
+|3D 各向异性筛选|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在呈现 3D 内容时尝试使用各向异性筛选。 各向异性筛选是指改善离相机较远且与相机角度较大的图面上纹理的图像质量。|  
+|3D MIP 映射|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在呈现 3D 内容时尝试使用 MIP 映射。 MIP 映射可改进纹理呈现的质量，当纹理占用较小的视野<xref:System.Windows.Controls.Viewport3D>。|  
 |径向渐变|虽然支持，但应避免使用<xref:System.Windows.Media.RadialGradientBrush>大型对象。|  
-|3D 光照计算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 执行每个顶点的光照，这意味着，必须在每个材料应用于网格的每个顶点计算光照强度。|  
+|3D 光照计算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 执行每个顶点的光照，这意味着必须在应用于网格的每个材料的每个顶点计算光照强度。|  
 |文本呈现|子像素字体呈现使用图形硬件上可用的像素着色器。|  
   
  以下功能仅对呈现层 2 采用硬件加速：  
@@ -96,7 +96,7 @@ ms.locfileid: "59197381"
  以下资源可帮助你分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的性能特征。  
   
 ### <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供四个注册表设置用于控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了 4 个注册表设置来控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈现：  
   
 |设置|描述|  
 |-------------|-----------------|  
@@ -108,7 +108,7 @@ ms.locfileid: "59197381"
  知道如何引用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 注册表设置的任何外部配置实用工具都可以访问这些设置。 还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。 有关详细信息，请参阅[图形呈现注册表设置](../graphics-multimedia/graphics-rendering-registry-settings.md)。  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF 性能分析工具  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一套性能分析工具，可用于分析你的应用程序的运行时行为并确定可以应用的性能优化的类型。 下表列出了 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 工具中包括的性能分析工具，WPF 性能套件：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一套性能分析工具，此工具可帮助分析应用程序的运行时行为，并确定可应用的性能优化类型。 下表列出了 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 工具中包括的性能分析工具，WPF 性能套件：  
   
 |Tool|描述|  
 |----------|-----------------|  
