@@ -1,14 +1,14 @@
 ---
-title: <TypeParameter> 元素 (.NET Native)
+title: <TypeParameter>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110209"
 ---
 # <a name="typeparameter-element-net-native"></a>\<类型参数 > 元素 (.NET Native)
@@ -53,13 +53,13 @@ ms.locfileid: "59110209"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*parameter_name*|类型 <xref:System.Type> 的参数名称。 例如，对于方法签名 `Type.GetInterfaceMap(Type interfaceType)`，`Name` 特性的值为“接口类型”。|  
+|parameter_name|类型 <xref:System.Type> 的参数名称。 例如，对于方法签名 `Type.GetInterfaceMap(Type interfaceType)`，`Name` 特性的值为“接口类型”。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -68,7 +68,7 @@ ms.locfileid: "59110209"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
   
 ## <a name="remarks"></a>备注  
  `<TypeParameter>` 元素与 [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md) 元素相似，不同之处在于前者只能应用于类型 <xref:System.Type> 的参数。 它将策略应用到任何在运行时间由 `Name` 特性指定的以类型参数为代表的类型。  
@@ -96,7 +96,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
 ## <a name="see-also"></a>请参阅
 
-- [\<方法 > 元素](../../../docs/framework/net-native/method-element-net-native.md)
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

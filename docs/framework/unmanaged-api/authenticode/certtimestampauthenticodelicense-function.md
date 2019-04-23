@@ -11,10 +11,10 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111717"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 函数
@@ -44,7 +44,7 @@ HRESULT CertTimestampAuthenticodeLicense (
  时间戳签名实际上是一条 PKCS #7 SignedData 消息，其内容是许可证签名中 SignatureValue 的二进制格式。 基本上，它充当许可证的副署。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果函数成功。 否则，返回错误代码。  
+ 如果此函数成功，则返回 `S_OK`。 否则，返回错误代码。  
   
 ## <a name="see-also"></a>请参阅
 

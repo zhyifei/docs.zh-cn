@@ -6,10 +6,10 @@ helpviewer_keywords:
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
 ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107999"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>如何：枚举视觉对象的绘图内容
@@ -29,4 +29,4 @@ ms.locfileid: "59107999"
 - <xref:System.Windows.Media.DrawingGroup>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - [Drawing 对象概述](drawing-objects-overview.md)
-- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

@@ -1,19 +1,19 @@
 ---
 title: ref 关键字 - C# 参考
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726645"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59116251"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -24,10 +24,9 @@ ms.locfileid: "54726645"
 - 在成员正文中，指示引用返回值是否作为调用方欲修改的引用被存储在本地，或在一般情况下，局部变量按引用访问另一个值。 有关详细信息，请参阅 [Ref 局部变量](#ref-locals)。
 - 在 `struct` 声明中声明 `ref struct` 或 `ref readonly struct`。 有关详细信息，请参阅 [ref 结构类型](#ref-struct-types)。
 
-
 ## <a name="passing-an-argument-by-reference"></a>按引用传递参数
 
-在方法的参数列表中使用 `ref` 关键字时，它指示参数按引用传递，而非按值传递。 按引用传递的效果是，对所调用方法中参数进行的任何更改都反映在调用方法中。 例如，如果调用方传递本地变量表达式或数组元素访问表达式，所调用方法会替换 ref 参数引用的对象，然后，当该方法返回时，调用方的本地变量或数组元素将开始引用新对象。
+在方法的参数列表中使用 `ref` 关键字时，它指示参数按引用传递，而非按值传递。 `ref` 关键字让形参成为实参的别名，这必须是变量。 换而言之，对形参执行的任何操作都是对实参执行的。 例如，如果调用方传递本地变量表达式或数组元素访问表达式，所调用方法会替换 ref 参数引用的对象，然后，当该方法返回时，调用方的本地变量或数组元素将开始引用新对象。
 
 > [!NOTE]
 > 不要混淆通过引用传递的概念与引用类型的概念。 这两种概念是不同的。 无论方法参数是值类型还是引用类型，均可由 `ref` 修改。 当通过引用传递时，不会对值类型装箱。  

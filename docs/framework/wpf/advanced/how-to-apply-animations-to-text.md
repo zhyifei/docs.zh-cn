@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463119"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59108207"
 ---
 # <a name="how-to-apply-animations-to-text"></a>如何：向文本应用动画
 动画可以更改应用程序中文本的显示和外观。 以下示例使用不同类型的动画来影响中文本的显示<xref:System.Windows.Controls.TextBlock>控件。  
@@ -37,4 +37,5 @@ ms.locfileid: "58463119"
  [!code-xaml[TextAnimationSample#TextAnimationSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [动画概述](../graphics-multimedia/animation-overview.md)

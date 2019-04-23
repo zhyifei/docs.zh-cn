@@ -3,10 +3,10 @@ title: LINQ to Entities 查询中的标准查询运算符
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118139"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查询中的标准查询运算符
@@ -69,7 +69,7 @@ ms.locfileid: "59118139"
 ## <a name="type-methods"></a>类型方法  
  同时支持实体框架的上下文中处理类型转换和测试的两个 LINQ 方法。 这意味着仅支持的类型为映射到相应的实体框架类型的类型。 有关这些类型的列表，请参阅[概念模型类型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。 类型方法有 `Convert` 和 `OfType`。  
   
- `OfType` 支持对实体类型。 `Convert` 支持对概念模型基元类型。  还支持 C# 的 `is` 和 `as` 方法。  
+ 对于实体类型支持 `OfType`。 对概念模型基元类型支持 `Convert`。  还支持 C# 的 `is` 和 `as` 方法。  
   
 ## <a name="paging-methods"></a>分页方法  
  分页操作从序列中返回单个元素或多个元素。 支持的分页方法为`First`， `FirstOrDefault`， `Single`， `SingleOrDefault`， `Skip`，并`Take`。  

@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
 ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110261"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 发布 .NET Core Hello World 应用程序
@@ -32,11 +32,11 @@ ms.locfileid: "59110261"
 
 1. 导航到已发布的应用程序，它位于应用程序项目目录的 `bin\release\PublishOutput` 子目录中。 如下图所示，已发布的输出包括以下四个文件：
 
-      * *HelloWorld.deps.json*
+      * HelloWorld.deps.json
 
          应用程序的运行时依赖项文件。 它定义了运行应用程序所需的 .NET Core 组件和库（包括包含该应用程序的动态链接库）。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
  
-      * *HelloWorld.dll*
+      * HelloWorld.dll
 
          包含应用程序的文件。 它是一个动态链接库，可通过在控制台窗口中输入 `dotnet HelloWorld.dll` 命令来执行。 
 
@@ -44,7 +44,7 @@ ms.locfileid: "59110261"
 
          包含调试符号的文件。 尽管应在需要调试应用程序的已发布版本时保存此文件，但无需将此文件与应用程序一起部署。
 
-      * *HelloWorld.runtimeconfig.json*
+      * HelloWorld.runtimeconfig.json
 
          应用程序的运行时配置文件。 它标识用于运行应用程序的 .NET Core 版本。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。  
 

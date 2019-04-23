@@ -3,10 +3,10 @@ title: 序列运算符
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113680"
 ---
 # <a name="sequence-operators"></a>序列运算符
@@ -43,7 +43,7 @@ ms.locfileid: "59113680"
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>与 .NET 的差异  
- 除 `Average` 外，所有受支持的序列运算符在公共语言运行库 (CLR) 中均按预期方式工作。 `Average` 返回类型与求平均值运算，类型相同的值而在 CLR 中`Average`始终返回<xref:System.Double>或<xref:System.Decimal>。 如果源自变量被显式强制转换为 double/decimal，或者选择器强制转换为 double/decimal，则产生的 SQL 也将进行这种转换，因而结果将同预期的一样。  
+ 除 `Average` 外，所有受支持的序列运算符在公共语言运行库 (CLR) 中均按预期方式工作。 `Average` 返回的值的类型与执行求平均值运算的类型相同，而在 CLR 中，`Average` 则始终返回 <xref:System.Double> 或 <xref:System.Decimal>。 如果源自变量被显式强制转换为 double/decimal，或者选择器强制转换为 double/decimal，则产生的 SQL 也将进行这种转换，因而结果将同预期的一样。  
   
 ## <a name="see-also"></a>请参阅
 

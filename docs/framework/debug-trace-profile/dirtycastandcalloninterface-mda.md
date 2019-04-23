@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a1d8aa391b546d02c813e1f719601b9bff198be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5a28820479ca15ad72475ae9a7754bbbf99ce5c5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657228"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59108584"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
 当尝试通过 vtable 对已标记为仅后期绑定的类接口进行早期绑定调用时，则会激活 `dirtyCastAndCallOnInterface` 托管调试助手 (MDA)。  
@@ -36,7 +36,7 @@ ms.locfileid: "54657228"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。 它仅报告对后期绑定接口的早期绑定调用的数据。  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  按早期绑定访问的方法的名称或字段的名称。  
   
 ## <a name="configuration"></a>配置  
@@ -50,5 +50,6 @@ ms.locfileid: "54657228"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

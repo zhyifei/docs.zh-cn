@@ -7,10 +7,10 @@ ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113771"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全和公共只读数组字段
@@ -27,4 +27,4 @@ ms.locfileid: "59113771"
   
 ## <a name="see-also"></a>请参阅
 
-- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

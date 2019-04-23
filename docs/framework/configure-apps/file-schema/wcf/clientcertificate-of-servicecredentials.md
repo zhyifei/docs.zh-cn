@@ -2,12 +2,12 @@
 title: <clientCertificate> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: aceb30b6354bac5c327a5f4367344e5c9608b689
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286892"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59107975"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate> of \<serviceCredentials>
 定义一个用于在双工通信模式中对从服务发送到客户端的消息进行签名和加密的 X.509 证书。  
@@ -54,6 +54,7 @@ ms.locfileid: "55286892"
  在此元素中设置的证书用于仅针对配置有 `MutualCertificateDuplex` 消息安全身份验证模式的绑定加密发送到客户端的消息。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>

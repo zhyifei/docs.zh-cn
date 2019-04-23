@@ -3,10 +3,10 @@ title: 通道工厂和缓存
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106452"
 ---
 # <a name="channel-factory-and-caching"></a>通道工厂和缓存
@@ -25,7 +25,7 @@ WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> �
 > [!TIP]
 >  当直接使用 <xref:System.ServiceModel.ChannelFactory%601> 类时，您可以直接控制通道工厂创建。  
   
- 使用生成的 WCF 客户端代理[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)派生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 定义一个静态<xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>属性，用于定义通道工厂缓存行为。 为特定类型设定缓存设置。 例如，设置`ClientBase<ITest>.CacheSettings`到一个如下定义的值会影响仅那些代理 /clientbase 类型的`ITest`。 特定 <xref:System.ServiceModel.ClientBase%601> 的缓存设置在创建第一个代理/ClientBase 实例后就不可改变。  
+ 使用生成的 WCF 客户端代理[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)派生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 定义一个静态 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 属性，该属性定义通道工厂缓存行为。 为特定类型设定缓存设置。 例如，设置`ClientBase<ITest>.CacheSettings`到一个如下定义的值会影响仅那些代理 /clientbase 类型的`ITest`。 特定 <xref:System.ServiceModel.ClientBase%601> 的缓存设置在创建第一个代理/ClientBase 实例后就不可改变。  
   
 ## <a name="specifying-caching-behavior"></a>指定缓存行为  
  缓存行为通过将 <xref:System.ServiceModel.ClientBase%601.CacheSetting> 属性设置为下列值之一指定。  
@@ -117,4 +117,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 - [生成客户端](../../../../docs/framework/wcf/building-clients.md)
 - [客户端](../../../../docs/framework/wcf/feature-details/clients.md)
 - [使用 WCF 客户端访问服务](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [如何：考虑使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
