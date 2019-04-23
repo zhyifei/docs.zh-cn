@@ -12,10 +12,10 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097972"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
@@ -52,5 +52,5 @@ ms.locfileid: "59097972"
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [类接口简介](com-callable-wrapper.md#introducing-the-class-interface)
-- [应用互操作特性](../../../docs/framework/interop/applying-interop-attributes.md)
+- [应用互操作属性](../../../docs/framework/interop/applying-interop-attributes.md)
 - [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

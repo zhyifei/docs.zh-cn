@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103436"
 ---
 # <a name="double-buffered-graphics"></a>双缓冲图形
@@ -38,6 +38,6 @@ ms.locfileid: "59103436"
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
 - [如何：手动呈现缓冲的图形](how-to-manually-render-buffered-graphics.md)
-- [如何：通过对窗体和控件使用双缓冲来减少图形闪烁](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [如何：减少对窗体和控件使用双缓冲图形闪烁](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
 - [如何：手动管理缓冲的图形](how-to-manually-manage-buffered-graphics.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

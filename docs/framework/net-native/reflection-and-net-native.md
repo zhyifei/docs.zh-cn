@@ -5,10 +5,10 @@ ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105843"
 ---
 # <a name="reflection-and-net-native"></a>反射和 .NET Native
@@ -27,13 +27,13 @@ ms.locfileid: "59105843"
   
  以下主题提供了你需要在自己的应用中支持反射和序列化的概念和引用文档：  
   
--   [利用反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+-   [依赖反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
 -   [反射 API 引用](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 .NET Native 编译引用](../../../docs/framework/net-native/index.md)
+- [使用 .NET Native 编译应用程序](../../../docs/framework/net-native/index.md)
 - [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)

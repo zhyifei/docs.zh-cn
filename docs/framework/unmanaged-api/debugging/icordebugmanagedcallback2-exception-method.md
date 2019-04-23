@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103342"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 方法
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  特定帧和偏移量由`dwEventType`参数，如下所示：  
   
-|值 `dwEventType`|值 `pFrame`|值 `nOffset`|  
+|`dwEventType` 的值|`pFrame` 的值|`nOffset` 的值|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|引发了异常帧。|在帧中的指令指针。|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|引发的异常点最接近的用户代码帧。|在帧中的指令指针。|  
@@ -80,7 +80,7 @@ HRESULT Exception (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

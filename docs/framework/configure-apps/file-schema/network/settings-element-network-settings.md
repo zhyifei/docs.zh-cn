@@ -1,5 +1,5 @@
 ---
-title: <settings> 元素 （网络设置）
+title: <settings> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096922"
 ---
 # <a name="settings-element-network-settings"></a>\<设置 > 元素 （网络设置）
@@ -51,7 +51,7 @@ ms.locfileid: "59096922"
 |[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|启用 Internet 协议版本 6 (IPv6) 支持。|  
 |[\<performanceCounter > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|启用的网络性能计数器。|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|配置连接到网络资源。|  
-|[套接字](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定套接字操作是否使用完成端口。|  
+|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|指定套接字操作是否使用完成端口。|  
 |[\<webProxyScript > 元素 （网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|配置用于发现 Web 代理脚本的特征。|  
   
 ### <a name="parent-elements"></a>父元素  

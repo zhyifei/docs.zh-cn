@@ -3,10 +3,10 @@ title: 诊断事务应用程序
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101707"
 ---
 # <a name="diagnosing-transactional-applications"></a>诊断事务应用程序
@@ -95,7 +95,7 @@ ms.locfileid: "59101707"
   
      WS-AtomicTransaction 跟踪可以通过启用[WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。 这种跟踪有助于详细了解系统中事务和参与者的状态。 若还要启用内部服务模块跟踪，可以将 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 注册表项设置为 <xref:System.Diagnostics.SourceLevels> 枚举的一个有效值。 可以启用消息日志记录与其他 WCF 应用程序相同的方式。  
   
--   `System.Transactions` Tracing — 跟踪  
+-   `System.Transactions` 跟踪  
   
      使用 OleTransactions 协议时，无法跟踪协议消息。 通过 <xref:System.Transactions> 基础结构提供的跟踪支持（它使用 OleTransactions），用户可以查看事务上发生的事件。 若要为 <xref:System.Transactions> 应用程序启用跟踪，请在 `App.config` 配置文件中包含以下代码。  
   

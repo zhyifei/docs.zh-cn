@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102734"
 ---
 # <a name="designing-service-contracts"></a>设计服务协定
@@ -275,8 +275,8 @@ End Interface
 - [如何：创建单向协定](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
 - [如何：创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [在服务协定中指定数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [在协定和服务中指定和处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [在协定和服务中指定并处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [使用会话](../../../docs/framework/wcf/using-sessions.md)
 - [同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [可靠服务](../../../docs/framework/wcf/reliable-services.md)
+- [Reliable Services](../../../docs/framework/wcf/reliable-services.md)
 - [服务和事务](../../../docs/framework/wcf/services-and-transactions.md)

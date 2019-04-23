@@ -5,10 +5,10 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101285"
 ---
 # <a name="auditing-security-events"></a>审核安全事件
@@ -32,7 +32,7 @@ ms.locfileid: "59101285"
   
  写入 Security 日志要求具有 `SeAuditPrivilege`。 默认情况下，只有“本地系统”和“网络服务”帐户具有此特权。 管理 Security 日志功能 `read` 和 `delete` 要求具有 `SeSecurityPrivilege`。 默认情况下，只有管理员具有此特权。  
   
- 与此相反，经过身份验证的用户可以读取和写入应用程序日志。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 默认情况下，审核写入到应用程序日志的事件。 该日志还包含对所有通过身份验证的用户可见的个人信息。  
+ 与此相反，经过身份验证的用户可以读取和写入应用程序日志。 默认情况下，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 将审核事件写入到应用程序日志。 该日志还包含对所有通过身份验证的用户可见的个人信息。  
   
 ## <a name="suppressing-audit-failures"></a>禁止显示审核失败  
  审核过程中的另一个选择为是否禁止显示任何审核失败。 默认情况下，审核失败不会影响应用程序。 但是，如若需要，可将此选项设置为 `false`，这将导致引发异常。  

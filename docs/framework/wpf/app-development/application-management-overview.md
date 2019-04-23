@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100075"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
@@ -105,7 +105,7 @@ ms.locfileid: "59100075"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>获取当前应用程序  
- 因为的功能<xref:System.Windows.Application>类共享跨应用程序，可以只有一个实例<xref:System.Windows.Application>每个类<xref:System.AppDomain>。 若要强制执行此操作，请<xref:System.Windows.Application>类作为一个单独的类实现 (请参阅[中实现单一实例C# ](https://go.microsoft.com/fwlink/?LinkId=100567))，它创建其自身的单个实例，并提供了共享访问与它通信`static`<xref:System.Windows.Application.Current%2A>属性。  
+ 因为的功能<xref:System.Windows.Application>类共享跨应用程序，可以只有一个实例<xref:System.Windows.Application>每个类<xref:System.AppDomain>。 若要强制执行此操作，请<xref:System.Windows.Application>类作为一个单独的类实现 (请参阅[C# 中实现单一实例](https://go.microsoft.com/fwlink/?LinkId=100567))，它创建其自身的单个实例，并提供了共享访问与它通信`static` <xref:System.Windows.Application.Current%2A>属性。  
   
  下面的代码演示如何获取对的引用<xref:System.Windows.Application>对象当前<xref:System.AppDomain>。  
   
@@ -357,9 +357,9 @@ ms.locfileid: "59100075"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Application>
-- [WPF Windows 概述](wpf-windows-overview.md)
+- [WPF 窗口概述](wpf-windows-overview.md)
 - [导航概述](navigation-overview.md)
 - [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)
-- [应用程序模型：帮助主题](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [应用程序模型：操作指南主题](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [应用程序开发](index.md)

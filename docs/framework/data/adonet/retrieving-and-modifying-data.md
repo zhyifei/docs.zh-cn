@@ -3,10 +3,10 @@ title: 在 ADO.NET 中检索和修改数据
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097612"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
@@ -25,7 +25,7 @@ ms.locfileid: "59097612"
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  包含说明如何创建命令和命令生成器、配置参数以及如何执行命令来检索和修改数据的主题。  
   
- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  包含说明 DataReader、DataAdapter、参数、处理 DataAdapter 事件和执行批操作的主题。  
   
  [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
@@ -35,7 +35,7 @@ ms.locfileid: "59097612"
  提供的映射生成的值示例**标识**或为 SQL Server 表中的列**自动编号**字段在 Microsoft Access 表中，向表中插入行的列。 讨论在 `DataTable` 中合并标识值。  
   
  [检索二进制数据](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- 说明如何使用 `CommandBehavior` 检索二进制数据或大数据结构。`SequentialAccess` 若要修改的默认行为`DataReader`。  
+ 介绍了如何检索二进制数据或使用的大型数据结构`CommandBehavior`。`SequentialAccess` 若要修改的默认行为`DataReader`。  
   
  [使用存储过程修改数据](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  说明如何使用存储过程的输入参数和输出参数在数据库中插入行，同时返回新标识值。  
@@ -64,4 +64,4 @@ ms.locfileid: "59097612"
 - [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

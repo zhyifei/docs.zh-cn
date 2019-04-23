@@ -8,10 +8,10 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097520"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定终结点地址
@@ -85,4 +85,4 @@ ms.locfileid: "59097520"
 - <xref:System.ServiceModel.EndpointAddress>
 - [服务标识和身份验证](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [宿主](../../../docs/framework/wcf/feature-details/hosting.md)
+- [承载](../../../docs/framework/wcf/feature-details/hosting.md)
