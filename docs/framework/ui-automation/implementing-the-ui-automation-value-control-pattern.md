@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174949"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>实现 UI 自动化 Value 控件模式
@@ -36,7 +36,7 @@ ms.locfileid: "59174949"
   
 -   <xref:System.Windows.Automation.Provider.IValueProvider> 不支持检索格式设置信息或子字符串值。 在这些情况下，请实现 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> 必须由控件如实现**颜色选取器**选择控件[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]（如下所示），它支持颜色值 （例如，"黄色"） 与等效的内部之间的字符串映射[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]结构。  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> 必须由诸如 **中的“颜色选取器”**[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 选择控件（如下所示）之类的控件实现，该控件支持颜色值（例如，“黄色”）与等效的内部 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 结构之间的字符串映射。  
   
  ![突出显示黄色的颜色选取器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  

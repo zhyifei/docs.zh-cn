@@ -3,10 +3,10 @@ title: 活动
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170204"
 ---
 # <a name="activity"></a>活动
@@ -38,9 +38,9 @@ ms.locfileid: "59170204"
 ## <a name="defining-the-scope-of-an-activity"></a>定义活动范围  
  活动是在设计时定义的，并且表示一个逻辑工作单元。 所发出的具有相同活动标识符的跟踪直接相关，它们都属于同一个活动。 因为一个活动可能跨越终结点边界（请求），所以为活动定义两个范围。  
   
--   `Global` 作用域，每个应用程序。 在此范围中，活动由其 128 位全局唯一活动标识符 gAId 进行标识。 gAid 是跨越终结点传播的内容。  
+-   `Global` 范围，限于每个应用程序。 在此范围中，活动由其 128 位全局唯一活动标识符 gAId 进行标识。 gAid 是跨越终结点传播的内容。  
   
--   `Local` 作用域，每个终结点。 在此范围中，活动由它的 gAId 以及发出活动跟踪的跟踪源名称和进程 ID 标识。这三部分内容构成了本地活动 ID，即 lAId。 lAId 用于定义活动的（本地）边界。  
+-   以终结点为边界的 `Local` 范围。 在此范围中，活动由它的 gAId 以及发出活动跟踪的跟踪源名称和进程 ID 标识。这三部分内容构成了本地活动 ID，即 lAId。 lAId 用于定义活动的（本地）边界。  
   
 ## <a name="trace-schema"></a>跟踪架构  
  可以使用任何架构以及跨 Microsoft 平台发出跟踪。 "e2e"（表示"端到端"） 是常用的架构。 此架构包含一个 128 位标识符 (gAId)、跟踪源名称和进程 ID。 在托管代码中，<xref:System.Diagnostics.XmlWriterTraceListener> 可在 E2E 架构中发出跟踪。  
@@ -100,7 +100,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="see-also"></a>请参阅
 
 - [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [使用服务跟踪查看器查看相关跟踪和进行故障诊断](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

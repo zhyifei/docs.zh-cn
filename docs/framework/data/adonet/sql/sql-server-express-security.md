@@ -3,10 +3,10 @@ title: SQL Server Express 安全性
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
 ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174546"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
@@ -31,7 +31,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) 基于 Microsoft SQL S
   
 |||  
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition Books Online（Microsoft SQL Server 2005 Express Edition 联机丛书）](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文档。|  
+|[Microsoft SQL Server 2005 Express Edition 联机丛书](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文档。|  
 |[非管理员的用户实例](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))SQL Server 联机丛书中|说明如何创建和部署用户实例。|  
 |[SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|说明 ADO.NET 应用程序中的用户实例功能。 提供有关如何启用用户实例、使用 <xref:System.Data.SqlClient.SqlConnection> 连接到用户实例、用户实例生存期和用户实例方案的信息。|  
   
@@ -39,4 +39,4 @@ Microsoft SQL Server Express Edition (SQL Server Express) 基于 Microsoft SQL S
 
 - [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

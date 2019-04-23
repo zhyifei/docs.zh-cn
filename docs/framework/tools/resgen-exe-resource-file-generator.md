@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b134b4c875a2360712d14bc0b6c11ad0e13a89e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477474"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59178875"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe（资源文件生成器）
 资源文件生成器 (Resgen.exe) 将文本（.txt 或 .restext）文件和基于 XML 的资源格式 (.resx) 文件转换为公共语言运行时二进制 (.resources) 文件，后者可嵌入到运行时二进制可执行文件或附属程序集中。 （请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。）  
@@ -330,6 +330,7 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [工具](../../../docs/framework/tools/index.md)
 - [桌面应用中的资源](../../../docs/framework/resources/index.md)
 - [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)

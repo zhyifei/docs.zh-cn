@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
 ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173285"
 ---
 # <a name="the-load-method"></a>加载方法
@@ -21,7 +21,7 @@ ms.locfileid: "59173285"
 |LoadOption 值|描述|  
 |----------------------|-----------------|  
 |**OverwriteRow**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**原始**并**当前**每个值列将替换为传入行中的值和**RowState**属性设置为**Unchanged**。<br /><br /> 中不存在的数据源中的行**DataTable**与添加**RowState**的值**Unchanged**。<br /><br /> 此选项的作用是刷新的内容**DataTable** ，使其匹配数据源的内容。|  
-|**PreserveCurrentValues（默认值）**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**原始**值设置为的内容的传入行，以及**当前**值未发生更改。<br /><br /> 如果**RowState**是**Added**或**Modified**，将其设置为**Modified**。<br /><br /> 如果**RowState**已**Deleted**，它将保持**Deleted**。<br /><br /> 中不存在的数据源中的行**DataTable**添加，并且**RowState**设置为**Unchanged**。|  
+|**PreserveCurrentValues （默认值）**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**原始**值设置为的内容的传入行，以及**当前**值未发生更改。<br /><br /> 如果**RowState**是**Added**或**Modified**，将其设置为**Modified**。<br /><br /> 如果**RowState**已**Deleted**，它将保持**Deleted**。<br /><br /> 中不存在的数据源中的行**DataTable**添加，并且**RowState**设置为**Unchanged**。|  
 |**UpdateCurrentValues**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**当前**值复制到**原始**值，并**当前**值然后将设置为传入行的内容。<br /><br /> 如果**RowState**中**DataTable**已**Added**，则**RowState**保持**Added**。 行标记为**Modified**或**Deleted**，则**RowState**是**Modified**。<br /><br /> 中不存在的数据源中的行**DataTable**添加，并且**RowState**设置为**Added**。|  
   
  下面的示例使用**负载**方法来显示中的员工的生日列表**Northwind**数据库。  
@@ -71,4 +71,4 @@ End Sub
 ## <a name="see-also"></a>请参阅
 
 - [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

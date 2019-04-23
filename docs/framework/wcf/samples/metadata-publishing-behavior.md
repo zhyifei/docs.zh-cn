@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
 ms.openlocfilehash: 20922636f140e0ac9faff55bf94c0b2633a8070d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309324"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773917"
 ---
 # <a name="metadata-publishing-behavior"></a>元数据发布行为
 “元数据发布行为”示例演示如何控制服务的元数据发布功能。 若要防止无意中泄漏可能敏感的服务元数据，Windows Communication Foundation (WCF) 服务的默认配置，请禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。  

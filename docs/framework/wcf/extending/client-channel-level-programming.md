@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
 ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324120"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772578"
 ---
 # <a name="client-channel-level-programming"></a>客户端通道级编程
 本主题介绍如何编写 Windows Communication Foundation (WCF) 客户端应用程序而无需使用<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>类和其关联的对象模型。  

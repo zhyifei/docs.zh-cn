@@ -16,10 +16,10 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
 ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170991"
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>如何：在 Windows 窗体上绘制实心椭圆
@@ -40,5 +40,5 @@ ms.locfileid: "59170991"
 
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
 - [图形编程入门](getting-started-with-graphics-programming.md)
-- [Alpha 混合线条和填充](alpha-blending-lines-and-fills.md)
+- [alpha 值混合处理直线和填充](alpha-blending-lines-and-fills.md)
 - [使用画笔填充形状](using-a-brush-to-fill-shapes.md)

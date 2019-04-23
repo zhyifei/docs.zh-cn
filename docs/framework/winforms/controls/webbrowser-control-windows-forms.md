@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
 ms.openlocfilehash: 34194bf707cd309768b00fd903d1f46aff7dd170
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174819"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 控件（Windows 窗体）
@@ -23,26 +23,26 @@ Windows 窗体`WebBrowser`控件承载 Web 页，并提供 Web 浏览到你的�
  [WebBrowser 安全](webbrowser-security.md)  
  介绍与控件相关的安全问题。  
   
- [如何：使用 WebBrowser 控件导航到 URL](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [如何：导航到使用 WebBrowser 控件的 URL](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  演示如何使用控件导航到特定的 URL。  
   
  [如何：使用 WebBrowser 控件打印](how-to-print-with-a-webbrowser-control.md)  
  演示如何打印网页而不会显示它。  
   
- [如何：向 Windows 窗体应用程序添加 Web 浏览器功能](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [如何：将 Web 浏览器功能添加到 Windows 窗体应用程序](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  介绍如何初始化用作 Web 浏览器控件。  
   
  [如何：在 Windows 窗体应用程序中创建 HTML 文档查看器](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  介绍如何初始化用作 HTML 查看器控件。  
   
- [如何：在 DHTML 代码和客户端应用程序代码之间实现双向通信](implement-two-way-com-between-dhtml-and-client.md)  
+ [如何：DHTML 代码和客户端应用程序代码之间实现双向通信](implement-two-way-com-between-dhtml-and-client.md)  
  介绍如何设置你的应用程序代码和 DHTML 之间由控件托管的 Web 页面中的双向通信。  
   
  [使用托管 HTML 文档对象模型](using-the-managed-html-document-object-model.md)  
  提供一些主题，介绍如何操作，或创建托管的 HTML 页面<xref:System.Windows.Forms.WebBrowser>控件。  
   
 ## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.WebBrowser> class  
+ <xref:System.Windows.Forms.WebBrowser> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  

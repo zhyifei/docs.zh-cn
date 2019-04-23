@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 ms.openlocfilehash: 7811efd680bbeb299a4e37b74768f7462b808e9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178498"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI 自动化对 List 控件类型的支持
@@ -81,13 +81,13 @@ ms.locfileid: "59178498"
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|视情况而定|如果容器中的项可滚动，则实现此控件模式。|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|视情况而定|当网格导航需要在项上以逐个项的方式可用，则实现此模式。|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|视情况而定|如果该控件可以支持容器中的项的多个视图，则实现此控件模式。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|`ITableProvider` 永远不会对列表控件类型支持。 如果控件应该支持此控件模式，该该控件应基于的数据网格控件类型。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|List 控件类型从不支持`ITableProvider` 。 如果控件应该支持此控件模式，该该控件应基于的数据网格控件类型。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有文本控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event|支持/值|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|说明|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|视情况而定|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|视情况而定|None|  

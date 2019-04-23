@@ -10,10 +10,10 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173090"
 ---
 # <a name="use-the-automationid-property"></a>使用 AutomationID 属性
@@ -22,16 +22,16 @@ ms.locfileid: "59173090"
   
  本主题包含一些方案和代码示例，这些方案和代码示例演示如何以及在何时能够使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中找到元素。  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 唯一标识 UI 自动化元素从其同级。 有关与控件标识相关的属性标识符的详细信息，请参阅 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 唯一地将 UI 自动化元素从其同级中标识出来。 有关与控件标识相关的属性标识符的详细信息，请参阅 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不能保证整个树; 唯一的标识它通常需要容器和范围信息才有用。 例如，一个应用程序可能包含具有多个顶级菜单项的菜单控件，而这些顶级菜单项又具有多个子菜单项。 这些二级菜单项通过常规架构（如“Item1”、“Item2”，依此类推）进行标识，允许对顶级菜单项中的子菜单项使用重复的标识符。  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保证标识在整个树中的唯一性；它通常需要容器和范围信息才有用。 例如，一个应用程序可能包含具有多个顶级菜单项的菜单控件，而这些顶级菜单项又具有多个子菜单项。 这些二级菜单项通过常规架构（如“Item1”、“Item2”，依此类推）进行标识，允许对顶级菜单项中的子菜单项使用重复的标识符。  
   
 ## <a name="scenarios"></a>方案  
  已确定有三个主要的 UI 自动化客户端应用程序方案需要使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 才能在搜索元素时获得准确一致的结果。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 支持除顶级应用程序窗口，UI 自动化元素派生的控件视图中的所有 UI 自动化元素的[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]控件不具有一个 ID 或 X:uid 和 UI 自动化元素派生自[!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]控件没有控件 id。  
+>  控件视图中（除顶级应用程序窗口外）的所有 UI 自动化元素、派生自没有 ID 或 x:Uid 的<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 控件的 UI 自动化元素以及派生自没有控件 ID 的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控件的 UI 自动化元素都支持 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 。  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>使用唯一且可发现的 AutomationID 在 UI 自动化树中查找特定元素  
   

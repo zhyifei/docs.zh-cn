@@ -5,10 +5,10 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175911"
 ---
 # <a name="wcf-syndication"></a>WCF 联合
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 提供了支持用于轻松处理 Atom、
  [如何：创建基本 Atom 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
  演示如何创建可使基本 ATOM 源可用的服务。  
   
- [如何：作为 Atom 和 RSS 公开源](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ [如何：公开源作为 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
  演示如何创建可将同一个源用于 ATOM 和 RSS 的服务。  
   
  [联合扩展性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  

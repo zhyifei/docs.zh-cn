@@ -3,10 +3,10 @@ title: 用于实体框架的 EntityClient 提供程序
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
 ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169671"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>用于实体框架的 EntityClient 提供程序
@@ -52,15 +52,15 @@ cmd.CommandText = @"SELECT VALUE p
   
  [如何：执行返回复杂类型的查询](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [如何：执行返回嵌套集合的查询](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [如何：执行返回嵌套的集合的查询](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [如何：使用 EntityCommand 执行参数化实体 SQL 查询](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [如何：执行参数化的 Entity SQL 查询使用 EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [如何：使用 EntityCommand 执行参数化存储过程](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [如何：执行参数化存储的过程使用 EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
  [如何：执行多态查询](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [如何：使用导航运算符导航关系](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [如何：使用导航关系导航运算符](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>请参阅
 

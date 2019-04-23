@@ -3,11 +3,11 @@ title: 对等名称和 PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173103"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772903"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>对等名称和 PNRP ID
 对等名称代表通信的终结点，可以是计算机、用户、组、服务或者任何与对等有关的、可以解析为 IPv6 地址的事物。 对等名称解析协议 (PNRP) 将统计学上唯一的对等名称用于创建标识云成员的 PNRP ID。  

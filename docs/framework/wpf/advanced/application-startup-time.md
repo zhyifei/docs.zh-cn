@@ -9,10 +9,10 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173025"
 ---
 # <a name="application-startup-time"></a>应用程序启动时间
@@ -130,4 +130,4 @@ ms.locfileid: "59173025"
 - <xref:System.Resources.ResourceManager>
 - [向 WPF 应用程序添加初始屏幕](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe（本机映像生成器）](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence > 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence> 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

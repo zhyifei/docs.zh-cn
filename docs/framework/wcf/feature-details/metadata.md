@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174013"
 ---
 # <a name="metadata"></a>元数据
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  描述使用服务元数据的不同方式。  
   
- [元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  描述在处理服务元数据时的一些重要安全注意事项。  
   
 ## <a name="see-also"></a>请参阅

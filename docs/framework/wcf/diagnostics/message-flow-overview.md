@@ -3,11 +3,11 @@ title: 消息流概述
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312639"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772656"
 ---
 # <a name="message-flow-overview"></a>消息流概述
 在包含相互连接的服务的分布式系统中，必须确定服务之间的因果关系。 了解作为请求流的一部分的各种组件对于支持关键方案（如运行状况监视、疑难解答和根本原因分析）非常重要。 为了在各种服务之间启用跟踪相关性，我们通过以下功能在 .NET Framework 4 中添加了相关支持：

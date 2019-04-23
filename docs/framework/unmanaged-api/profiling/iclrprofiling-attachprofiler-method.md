@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e3898fb836409df3b685d985d0d72ab63230a93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174169"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
@@ -88,11 +88,11 @@ HRESULT AttachProfiler(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)

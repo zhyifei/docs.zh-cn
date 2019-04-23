@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
 ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172895"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChange 和 RejectChange
@@ -62,4 +62,4 @@ workTable.AcceptChanges();
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

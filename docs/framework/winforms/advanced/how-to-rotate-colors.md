@@ -9,10 +9,10 @@ helpviewer_keywords:
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
 ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175534"
 ---
 # <a name="how-to-rotate-colors"></a>如何：旋转颜色
@@ -45,7 +45,7 @@ ms.locfileid: "59175534"
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 替换为`RotationInput.bmp`与图像文件名称和你的系统上有效的路径。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 替换为`RotationInput.bmp`与图像文件名称和你的系统上有效的路径。  
   
 ## <a name="see-also"></a>请参阅
 

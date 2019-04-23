@@ -3,11 +3,11 @@ title: 实例编码选项
 ms.date: 03/30/2017
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
 ms.openlocfilehash: c4de7c45d899f45a7b5b71d563257d9accb8fdbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315616"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773839"
 ---
 # <a name="instance-encoding-option"></a>实例编码选项
 **实例编码选项**SQL 工作流实例存储的属性，可以指定 SQL 持久性提供程序是否应压缩使用 GZip 算法之前保存的工作流实例状态信息到持久性数据库的信息。 此属性的允许的值包括：GZip 和 None。 默认值为 None。 以下列表对这两个选项进行了说明。  

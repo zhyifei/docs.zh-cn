@@ -3,11 +3,11 @@ title: 确定服务操作持续时间
 ms.date: 03/30/2017
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
 ms.openlocfilehash: fd7dec5784f50a0613b574822a31202a859b34c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299028"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772762"
 ---
 # <a name="determining-service-operation-duration"></a>确定服务操作持续时间
 如果 Windows Communication Foundation (WCF) 应用程序中启用了分析跟踪，则可轻松地通过检查事件日志确定服务操作的执行持续时间。  本主题演示如何确定完成服务操作所需的时间量。  

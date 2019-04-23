@@ -3,10 +3,10 @@ title: 查询计划缓存 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178173"
 ---
 # <a name="query-plan-caching-entity-sql"></a>查询计划缓存 (Entity SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "59178173"
   
 -   查询文本应该具有常量模式，最好是常量字符串或资源。  
   
--   <xref:System.Data.EntityClient.EntityParameter> 或<xref:System.Data.Objects.ObjectParameter>只要必须传递一个用户提供的值应使用。  
+-   每当必须传递用户提供的值时，都应该使用 <xref:System.Data.EntityClient.EntityParameter> 或 <xref:System.Data.Objects.ObjectParameter>。  
   
  应该避免以下查询模式，这种模式不必要地消耗查询计划缓存中的存储槽：  
   
@@ -50,4 +50,4 @@ ms.locfileid: "59178173"
   
 ## <a name="see-also"></a>请参阅
 
-- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

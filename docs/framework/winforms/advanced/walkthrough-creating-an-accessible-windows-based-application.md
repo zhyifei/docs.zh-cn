@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
 ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336650"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773358"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建基于 Windows 的可访问应用程序
 创建具有辅助功能的应用程序具有重要的商业意义。 很多政府都有针对软件购买的辅助功能法规。 Certified for Windows 徽标包括辅助功能需求。 据估计，仅美国就有 3 千万居民（其中很多为潜在客户）受到软件辅助功能的影响。  

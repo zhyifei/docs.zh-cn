@@ -6,10 +6,10 @@ ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171166"
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
@@ -39,7 +39,7 @@ ms.locfileid: "59171166"
   
  .NET Framework 中的 XML 类具有以下优点：  
   
--   **工作效率。** 通过 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)，能够更轻松地使用 XML 编程，并且能够得到与 SQL 类似的查询体验。  
+-   **高效率。** 通过 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)，能够更轻松地使用 XML 编程，并且能够得到与 SQL 类似的查询体验。  
   
 -   **扩展性。** .NET Framework 中的 XML 类可使用抽象基类和虚拟方法进行扩展。 例如，您可以创建 <xref:System.Xml.XmlUrlResolver> 类的一个派生类，用以将缓存流存储到本地磁盘。  
   

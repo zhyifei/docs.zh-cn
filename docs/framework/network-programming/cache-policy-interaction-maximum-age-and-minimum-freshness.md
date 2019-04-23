@@ -11,10 +11,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 ms.openlocfilehash: 93136d4c87463db7128a68957b243c1ef13a90eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174052"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>缓存策略交互 — 最长使用期限和最低新鲜度
@@ -34,5 +34,5 @@ ms.locfileid: "59174052"
 - [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
 - [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
 - [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [配置网络应用程序中的缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [缓存策略交互 — 最长使用期限和最长过期时间](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
+- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [缓存策略交互 — 最长使用时间和最长过期时间](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)

@@ -3,11 +3,11 @@ title: 在绑定上配置超时值
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
 ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339757"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773241"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>在绑定上配置超时值
 WCF 绑定中提供了很多超时设置。 正确设置这些超时设置不仅可以提高您服务的性能，而且对发挥您服务的可用性和安全性起到重要作用。 WCF 绑定中提供了下列超时：  
