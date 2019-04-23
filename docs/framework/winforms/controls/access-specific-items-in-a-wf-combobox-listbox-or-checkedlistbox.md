@@ -14,18 +14,18 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
 ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324521"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="42dfe-102">如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中访问特定项</span><span class="sxs-lookup"><span data-stu-id="42dfe-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="42dfe-103">访问 Windows 窗体组合框、 列表框中或选中的列表框中的特定项是不可或缺的任务。</span><span class="sxs-lookup"><span data-stu-id="42dfe-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="42dfe-104">这样，您可以以编程方式确定在列表中，任何给定位置处的内容。</span><span class="sxs-lookup"><span data-stu-id="42dfe-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="95dc8-102">如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中访问特定项</span><span class="sxs-lookup"><span data-stu-id="95dc8-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="95dc8-103">访问 Windows 窗体组合框、 列表框中或选中的列表框中的特定项是不可或缺的任务。</span><span class="sxs-lookup"><span data-stu-id="95dc8-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="95dc8-104">这样，您可以以编程方式确定在列表中，任何给定位置处的内容。</span><span class="sxs-lookup"><span data-stu-id="95dc8-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="42dfe-105">若要访问特定项</span><span class="sxs-lookup"><span data-stu-id="42dfe-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="95dc8-105">若要访问特定项</span><span class="sxs-lookup"><span data-stu-id="95dc8-105">To access a specific item</span></span>  
   
-1. <span data-ttu-id="42dfe-106">查询`Items`集合使用的特定项的索引：</span><span class="sxs-lookup"><span data-stu-id="42dfe-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1. <span data-ttu-id="95dc8-106">查询`Items`集合使用的特定项的索引：</span><span class="sxs-lookup"><span data-stu-id="95dc8-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,9 +51,9 @@ ms.locfileid: "59324521"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="42dfe-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="42dfe-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95dc8-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="95dc8-107">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="42dfe-108">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="42dfe-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="95dc8-108">用于列出选项的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="95dc8-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
