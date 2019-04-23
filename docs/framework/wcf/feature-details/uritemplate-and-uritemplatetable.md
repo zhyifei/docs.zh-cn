@@ -3,10 +3,10 @@ title: UriTemplate 和 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130242"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 和 UriTemplateTable
@@ -27,18 +27,18 @@ Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局�
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> 是包装 URI 模板的类。 其构造函数接受一个定义模板的字符串参数。 此字符串包含具有下节所述格式的模板。 <xref:System.UriTemplate> 类提供一些方法，用于将传入的 URI 与模板进行匹配，根据模板生成 URI，检索在模板中使用的变量名集合，确定两个模板是否等效，返回模板的字符串。  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> 使用基址和一个候选 URI 和 URI 与模板匹配的尝试。 如果匹配成功，则返回一个 <xref:System.UriTemplateMatch> 实例。 <xref:System.UriTemplateMatch> 对象包含一个基准 URI、候选 URI、查询参数的名称/值集合、相对路径段数组、匹配变量的名称/值集合、用于执行匹配操作的 <xref:System.UriTemplate> 实例、包含候选 URI 中任意不匹配部分的字符串（在模板有通配符时使用），以及一个与模板关联的对象。  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> 接受一个基址和一个候选 URI，并尝试将该 URI 与模板进行匹配。 如果匹配成功，则返回一个 <xref:System.UriTemplateMatch> 实例。 <xref:System.UriTemplateMatch> 对象包含一个基准 URI、候选 URI、查询参数的名称/值集合、相对路径段数组、匹配变量的名称/值集合、用于执行匹配操作的 <xref:System.UriTemplate> 实例、包含候选 URI 中任意不匹配部分的字符串（在模板有通配符时使用），以及一个与模板关联的对象。  
   
 > [!NOTE]
 >  将候选 URI 与模板进行匹配时，<xref:System.UriTemplate> 类将忽略方案和端口号。  
   
- 从模板生成 URI 的方法有两个，即 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 和 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>。 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 接受一个基址和参数的名称/值集合。 模板绑定后，这些参数将替换变量。 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> 接受名称/值对，并从左向右替换它们。  
+ 从模板生成 URI 的方法有两个，即 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 和 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>。 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 接受一个基址和一个参数的名称/值集合。 模板绑定后，这些参数将替换变量。 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> 接受名称/值对，并从左向右替换他们。  
   
  <xref:System.UriTemplate.ToString> 返回模板字符串。  
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> 属性包含变量名称的集合，这些变量就是模板字符串的路径段中所使用的变量。  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 采用<xref:System.UriTemplate>作为参数并返回一个布尔值，指定两个模板是否等效。 有关详细信息，请参阅本主题后面的模板等效性部分。  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 接受一个 <xref:System.UriTemplate> 作为参数，并返回一个布尔值，该值指定两个模板是否等效。 有关详细信息，请参阅本主题后面的模板等效性部分。  
   
  <xref:System.UriTemplate> 旨在处理符合 HTTP URI 语法的任意 URI 方案。 下面这些示例都是支持的 URI 方案。  
   

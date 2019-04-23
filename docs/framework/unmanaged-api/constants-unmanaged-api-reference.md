@@ -9,10 +9,10 @@ ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133947"
 ---
 # <a name="constants-unmanaged-api-reference"></a>常量（非托管 API 参考）
@@ -24,7 +24,7 @@ ms.locfileid: "59133947"
 |符号|描述|  
 |------------|-----------------|  
 |CorSym_LanguageType_C|指示 C 语言。|  
-|CorSym_LanguageType_CPlusPlus|指示 c + + 语言。|  
+|CorSym_LanguageType_CPlusPlus|指示C++语言。|  
 |CorSym_LanguageType_CSharp|指示C#语言。|  
 |CorSym_LanguageType_Basic|指示基本语言。|  
 |CorSym_LanguageType_Java|指示的 Java 语言。|  
@@ -33,7 +33,7 @@ ms.locfileid: "59133947"
 |CorSym_LanguageType_ILAssembly|表示 Microsoft 中间语言 (MSIL) 程序集代码。|  
 |CorSym_LanguageType_JScript|表示 JScript 语言。|  
 |CorSym_LanguageType_SMC|指示的 SMC 语言。|  
-|CorSym_LanguageType_MCPlusPlus|指示启用.NET framework 的 c + + 语言。|  
+|CorSym_LanguageType_MCPlusPlus|指示C++启用.NET Framework 的语言。|  
   
 ## <a name="language-vendor-constants"></a>语言供应商常量  
  下表显示语言供应商常量，表示标识编程语言供应商的 Guid。  

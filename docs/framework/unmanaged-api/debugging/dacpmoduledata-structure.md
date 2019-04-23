@@ -16,10 +16,10 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131997"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData 结构
@@ -57,7 +57,7 @@ struct DacpModuleData
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
 **标头：** None  
 **库：** None  
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 

@@ -3,10 +3,10 @@ title: 如何：创建工作流
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: 4b24e57cce4d42645fc1750ac932e5f24cf24913
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134792"
 ---
 # <a name="how-to-create-a-workflow"></a>如何：创建工作流
@@ -22,7 +22,7 @@ ms.locfileid: "59134792"
  [如何：创建顺序工作流](how-to-create-a-sequential-workflow.md)  
  介绍如何使用 <xref:System.Activities.Statements.Sequence> 活动创建顺序工作流。  
   
- [如何：创建 Flowchart 工作流](how-to-create-a-flowchart-workflow.md)  
+ [如何：创建一个流程图工作流](how-to-create-a-flowchart-workflow.md)  
  介绍如何使用 <xref:System.Activities.Statements.Flowchart> 活动创建流程图工作流。  
   
  [如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)  

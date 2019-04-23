@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
 ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132088"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary 标记扩展
@@ -49,9 +49,9 @@ ms.locfileid: "59132088"
   
  特性语法是最常用于该标记扩展的语法。 在 `ThemeDictionary` 标识符字符串之后提供的字符串标记被指定为基础 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 扩展类的 <xref:System.Windows.ThemeDictionaryExtension> 值。  
   
- `ThemeDictionary` 此外可能在对象元素语法中使用。 在这种情况下，指定的值<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>属性是必需的。  
+ `ThemeDictionary` 还可以在对象元素语法中使用。 在这种情况下，指定的值<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>属性是必需的。  
   
- `ThemeDictionary` 此外可以在详细特性用法中，指定使用<xref:System.Windows.Markup.StaticExtension.Member%2A>属性作为属性 = 值对：  
+ `ThemeDictionary` 还可以在详细特性用法中使用，以便将 <xref:System.Windows.Markup.StaticExtension.Member%2A> 属性指定为一个 property=value 对：  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
 ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140863"
 ---
 # <a name="transformations-how-to-topics"></a>变换帮助主题
@@ -21,8 +21,8 @@ ms.locfileid: "59140863"
   
 ## <a name="in-this-section"></a>本节内容  
  [在事件发生时向元素应用转换](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [向一个对象应用多个转换](how-to-apply-multiple-transforms-to-an-object.md)  
- [使元素就地旋转](how-to-make-an-element-spin-in-place.md)  
+ [将多个转换应用到对象](how-to-apply-multiple-transforms-to-an-object.md)  
+ [让元素原地旋转](how-to-make-an-element-spin-in-place.md)  
  [旋转对象](how-to-rotate-an-object.md)  
  [缩放元素](how-to-scale-an-element.md)  
  [倾斜元素](how-to-skew-an-element.md)  
@@ -34,5 +34,5 @@ ms.locfileid: "59140863"
 
 - <xref:System.Windows.Media.Transform>
 - [图形和多媒体](index.md)
-- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
 - [布局](../advanced/layout.md)

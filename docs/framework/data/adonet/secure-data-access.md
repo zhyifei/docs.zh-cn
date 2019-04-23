@@ -3,10 +3,10 @@ title: 安全数据访问
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137249"
 ---
 # <a name="secure-data-access"></a>安全数据访问
@@ -56,7 +56,7 @@ ms.locfileid: "59137249"
 |资源|描述|  
 |--------------|-----------------|  
 |[异常处理基础知识](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|描述 try/catch/finally 结构化异常处理的基本形式。|  
-|[异常的最佳做法](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|描述处理异常的最佳做法。|  
+|[与异常有关的最佳做法](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|描述处理异常的最佳做法。|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>保护 Microsoft Access 和 Excel 数据源  
  当具有最少的安全要求或没有安全要求时，Microsoft Access 和 Microsoft Excel 可充当 ADO.NET 应用程序的数据存储区。 其安全功能作为一种阻止手段固然有效，但其作用仅限于阻止不了解情况的用户乱摸乱动而已。 Access 和 Excel 的物理数据文件位于文件系统上，并且注定可供所有用户访问。 这使得这些文件易受到攻击，从而导致文件失窃或数据丢失，因为他人可轻松复制或更改这些文件。 如果需要强有力的安全措施，请使用 SQL Server 或其他基于服务器的数据库，这样便无法从文件系统读取物理数据文件。  
@@ -65,9 +65,9 @@ ms.locfileid: "59137249"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[Security Considerations and Guidance for Access 2007（Access 2007 安全注意事项和指南）](https://go.microsoft.com/fwlink/?LinkId=98354)|描述 Access 2007 的安全技术，如加密文件、管理密码、将数据库转换为新的 ACCDB 和 ACCDE 格式以及使用其他安全选项。|  
-|[Understanding the Role of Workgroup Information Files in Access Security（理解工作组信息文件在 Access 安全中的角色）](https://support.microsoft.com/kb/305542)|说明工作组信息文件在 Access 2003 安全性中的作用和关系。|  
-|[Frequently Asked Questions About Microsoft Access Security for Microsoft Access versions 2.0 through 2000（有关 Microsoft Access 2.0 至 2000 版的 Microsoft Access 安全性常见问题）](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access 可下载版本的安全性常见问题。|  
+|[安全注意事项和 Access 2007 中的指南](https://go.microsoft.com/fwlink/?LinkId=98354)|描述 Access 2007 的安全技术，如加密文件、管理密码、将数据库转换为新的 ACCDB 和 ACCDE 格式以及使用其他安全选项。|  
+|[访问安全性理解工作组信息文件的角色](https://support.microsoft.com/kb/305542)|说明工作组信息文件在 Access 2003 安全性中的作用和关系。|  
+|[经常询问的问题的 Microsoft Access 安全性的 Microsoft Access 2.0 至 2000年版](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access 可下载版本的安全性常见问题。|  
 ## <a name="enterprise-services"></a>企业服务  
  COM+ 包含其自己的安全模型，该模型依赖于 Windows NT 帐户和进程/线程模拟。 <xref:System.EnterpriseServices> 命名空间提供的包装允许 .NET 应用程序通过 <xref:System.EnterpriseServices.ServicedComponent> 类来集成托管代码与 COM+ 安全服务。  
   
@@ -94,4 +94,4 @@ ms.locfileid: "59137249"
 - [有关数据访问策略建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
