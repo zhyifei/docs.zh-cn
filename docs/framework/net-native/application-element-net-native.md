@@ -1,14 +1,14 @@
 ---
-title: <Application> 元素 (.NET Native)
+title: <Application>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228297"
 ---
 # <a name="application-element-net-native"></a>\<应用程序 > 元素 (.NET Native)
@@ -54,27 +54,27 @@ ms.locfileid: "59228297"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该策略的设置将应用到该应用中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该策略的设置将应用到该应用中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<程序集 >](../../../docs/framework/net-native/assembly-element-net-native.md)|将策略应用到特定程序集中的所有类型。|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|将策略应用到特定命名空间中的所有类型。|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|将策略应用到特定程序集中的所有类型。|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|将策略应用到特定命名空间中的所有类型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将策略应用到一个特定类型，例如一个类或结构。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将策略应用到一个构造泛型类型。 例如，一个 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 元素可用于为一个 `List<String>` 类型定义策略。|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|将策略应用到一个特定类型上的方法。|  
-|[\<方法实例化 >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|将策略应用到一个构造泛型方法。|  
-|[\<属性 >](../../../docs/framework/net-native/property-element-net-native.md)|将策略应用到一个特定类型上的属性。|  
-|[\<字段 >](../../../docs/framework/net-native/field-element-net-native.md)|将策略应用到一个特定类型上的字段。|  
-|[\<事件 >](../../../docs/framework/net-native/event-element-net-native.md)|将策略应用到一个特定类型上的事件。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将策略应用到一个特定类型上的方法。|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|将策略应用到一个构造泛型方法。|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|将策略应用到一个特定类型上的属性。|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|将策略应用到一个特定类型上的字段。|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|将策略应用到一个特定类型上的事件。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<指令 >](../../../docs/framework/net-native/directives-element-net-native.md)|运行时指令文件的根元素。|  
+|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|运行时指令文件的根元素。|  
   
 ## <a name="remarks"></a>备注  
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 元素可以包含零个或一个 `<Application>` 元素。 单独一个反射指令文件中出现的多个 `<Application>` 元素不受支持。  
@@ -87,7 +87,7 @@ ms.locfileid: "59228297"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<Library> 元素](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Directives> 元素](../../../docs/framework/net-native/directives-element-net-native.md)
+- [\<库 > 元素](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

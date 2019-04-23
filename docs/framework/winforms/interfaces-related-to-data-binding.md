@@ -13,10 +13,10 @@ helpviewer_keywords:
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
 ms.openlocfilehash: ffda85b2704212ea5323117447e0cfe17ffb33db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226948"
 ---
 # <a name="interfaces-related-to-data-binding"></a>与数据绑定相关的接口
@@ -28,14 +28,14 @@ ms.locfileid: "59226948"
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>要由数据源作者实现的接口  
  下列接口设计为由 Windows 窗体控件使用：  
   
--   <xref:System.Collections.IList> interface  
+-   <xref:System.Collections.IList> 接口  
   
      实现的类<xref:System.Collections.IList>接口可能<xref:System.Array>， <xref:System.Collections.ArrayList>，或<xref:System.Collections.CollectionBase>。 这些是类型的项的索引的列表<xref:System.Object>。 这些列表必须包含同源类型，因为索引中的第一项确定类型。 <xref:System.Collections.IList> 将可用于仅在运行时绑定。  
   
     > [!NOTE]
     >  如果你想要用 Windows 窗体中创建的绑定的业务对象的列表，则应考虑使用<xref:System.ComponentModel.BindingList%601>。 <xref:System.ComponentModel.BindingList%601>是可扩展的类实现双向 Windows 窗体数据绑定所需的主要接口。  
   
--   <xref:System.ComponentModel.IBindingList> interface  
+-   <xref:System.ComponentModel.IBindingList> 接口  
   
      实现的类<xref:System.ComponentModel.IBindingList>接口提供了高得多的数据绑定功能。 此实现在列表项更改时（例如，客户列表中的第三项更改了 Address 字段）和列表本身更改时（例如，列表中项的数量增加或减少）都提供基本的排序功能和更改通知。 如果计划将多个控件绑定到同一个数据，但是希望将在其中某个控件中进行的数据更改传播到其他绑定控件，更改通知就非常重要。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "59226948"
     > [!NOTE]
     >  <xref:System.ComponentModel.BindingList%601>提供的泛型实现<xref:System.ComponentModel.IBindingList>接口。  
   
--   <xref:System.ComponentModel.IBindingListView> interface  
+-   <xref:System.ComponentModel.IBindingListView> 接口  
   
      实现的类<xref:System.ComponentModel.IBindingListView>接口提供的实现的所有功能<xref:System.ComponentModel.IBindingList>以及为筛选和高级排序功能。 此实现使用属性描述符-方向对提供基于字符串的筛选和多列排序能力。  
   
--   <xref:System.ComponentModel.IEditableObject> interface  
+-   <xref:System.ComponentModel.IEditableObject> 接口  
   
      实现的类<xref:System.ComponentModel.IEditableObject>接口允许对象以控制何时进行永久更改对该对象。 此实现可为你提供<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>， <xref:System.ComponentModel.IEditableObject.EndEdit%2A>，和<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>方法，以便你能够回滚对对象所做的更改。 下面是简要解释的正常运行<xref:System.ComponentModel.IEditableObject.BeginEdit%2A>， <xref:System.ComponentModel.IEditableObject.EndEdit%2A>，和<xref:System.ComponentModel.IEditableObject.CancelEdit%2A>方法以及它们如何协同工作以启用对数据所做的更改可能回滚中工作：  
   
@@ -65,11 +65,11 @@ ms.locfileid: "59226948"
   
      这种事务性概念的数据功能由<xref:System.Windows.Forms.DataGridView>控件。  
   
--   <xref:System.ComponentModel.ICancelAddNew> interface  
+-   <xref:System.ComponentModel.ICancelAddNew> 接口  
   
      实现的类<xref:System.ComponentModel.ICancelAddNew>接口实现了通常<xref:System.ComponentModel.IBindingList>接口，并允许回滚对数据源所做的补充<xref:System.ComponentModel.IBindingList.AddNew%2A>方法。 如果你的数据源实现<xref:System.ComponentModel.IBindingList>接口，您还应当让其实现<xref:System.ComponentModel.ICancelAddNew>接口。  
   
--   <xref:System.ComponentModel.IDataErrorInfo> interface  
+-   <xref:System.ComponentModel.IDataErrorInfo> 接口  
   
      实现的类<xref:System.ComponentModel.IDataErrorInfo>接口允许对象提供自定义错误信息向绑定控件：  
   
@@ -77,39 +77,39 @@ ms.locfileid: "59226948"
   
     -   <xref:System.ComponentModel.IDataErrorInfo.Item%2A>属性返回带有特定的错误消息的字符串列 (例如，"中的值`State`列无效，")。  
   
--   <xref:System.Collections.IEnumerable> interface  
+-   <xref:System.Collections.IEnumerable> 接口  
   
      实现的类<xref:System.Collections.IEnumerable>接口通常由[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。 此接口的 Windows 窗体支持才可通过<xref:System.Windows.Forms.BindingSource>组件。  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource>组件将复制所有<xref:System.Collections.IEnumerable>出于绑定目的一个单独的列表项。  
   
--   <xref:System.ComponentModel.ITypedList> interface  
+-   <xref:System.ComponentModel.ITypedList> 接口  
   
      实现的集合类<xref:System.ComponentModel.ITypedList>接口提供了控制顺序和向绑定控件公开的属性集的能力。  
   
     > [!NOTE]
     >  当您实现<xref:System.ComponentModel.ITypedList.GetItemProperties%2A>方法，和<xref:System.ComponentModel.PropertyDescriptor>数组不为 null，数组中的最后一项将描述是另一个列表项的列表属性的属性描述符。  
   
--   <xref:System.ComponentModel.ICustomTypeDescriptor> interface  
+-   <xref:System.ComponentModel.ICustomTypeDescriptor> 接口  
   
      实现的类<xref:System.ComponentModel.ICustomTypeDescriptor>接口提供了有关其自身的动态信息。 此接口是类似于<xref:System.ComponentModel.ITypedList>，但用于对象而非列表。 此接口由<xref:System.Data.DataRowView>基础行的架构。 简单实现<xref:System.ComponentModel.ICustomTypeDescriptor>提供的<xref:System.ComponentModel.CustomTypeDescriptor>类。  
   
     > [!NOTE]
     >  若要支持设计时绑定到类型实现<xref:System.ComponentModel.ICustomTypeDescriptor>，该类型还必须实现<xref:System.ComponentModel.IComponent>并且存在于窗体上的实例。  
   
--   <xref:System.ComponentModel.IListSource> interface  
+-   <xref:System.ComponentModel.IListSource> 接口  
   
      实现的类<xref:System.ComponentModel.IListSource>接口使非列表对象上的基于列表的绑定。 <xref:System.ComponentModel.IListSource.GetList%2A>方法<xref:System.ComponentModel.IListSource>用于从不继承的对象返回可绑定列表<xref:System.Collections.IList>。 <xref:System.ComponentModel.IListSource> 由<xref:System.Data.DataSet>类。  
   
--   <xref:System.ComponentModel.IRaiseItemChangedEvents> interface  
+-   <xref:System.ComponentModel.IRaiseItemChangedEvents> 接口  
   
      实现的类<xref:System.ComponentModel.IRaiseItemChangedEvents>接口是可绑定的列表，还实现<xref:System.ComponentModel.IBindingList>接口。 此接口用于指示类型是否引发<xref:System.ComponentModel.IBindingList.ListChanged>类型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>通过其<xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A>属性。  
   
     > [!NOTE]
     >  应实现<xref:System.ComponentModel.IRaiseItemChangedEvents>如果您的数据源提供的属性来列出事件转换前面所述，并与之交互<xref:System.Windows.Forms.BindingSource>组件。 否则为<xref:System.Windows.Forms.BindingSource>也将执行属性来列出事件转换导致性能下降。  
   
--   <xref:System.ComponentModel.ISupportInitialize> interface  
+-   <xref:System.ComponentModel.ISupportInitialize> 接口  
   
      实现的组件<xref:System.ComponentModel.ISupportInitialize>接口可利用批处理优化来设置属性并初始化共存属性。 <xref:System.ComponentModel.ISupportInitialize>包含两个方法：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "59226948"
   
     -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 通知对象初始化已完成。  
   
--   <xref:System.ComponentModel.ISupportInitializeNotification> interface  
+-   <xref:System.ComponentModel.ISupportInitializeNotification> 接口  
   
      实现的组件<xref:System.ComponentModel.ISupportInitializeNotification>接口还实现<xref:System.ComponentModel.ISupportInitialize>接口。 此接口，可以通知其他<xref:System.ComponentModel.ISupportInitialize>组件初始化已完成。 <xref:System.ComponentModel.ISupportInitializeNotification>接口包含两个成员：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "59226948"
   
     -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> 发生时<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>调用。  
   
--   <xref:System.ComponentModel.INotifyPropertyChanged> interface  
+-   <xref:System.ComponentModel.INotifyPropertyChanged> 接口  
   
      实现此接口的类是一个在其任何属性值更改时都会引发事件的类型。 此接口旨在替换控件的每个属性都有一个更改事件这种模式。 在中使用时<xref:System.ComponentModel.BindingList%601>，业务对象应当实现<xref:System.ComponentModel.INotifyPropertyChanged>接口，BindingList\`1 会将转换<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>事件<xref:System.ComponentModel.BindingList%601.ListChanged>类型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>。  
   
@@ -135,14 +135,14 @@ ms.locfileid: "59226948"
 ### <a name="interfaces-for-implementation-by-component-authors"></a>要由组件作者实现的接口  
  下列接口设计为由 Windows 窗体数据绑定引擎使用：  
   
--   <xref:System.Windows.Forms.IBindableComponent> interface  
+-   <xref:System.Windows.Forms.IBindableComponent> 接口  
   
      实现此接口的类是支持数据绑定的非控件组件。 此类返回的数据绑定和绑定上下文的通过组件<xref:System.Windows.Forms.IBindableComponent.DataBindings%2A>和<xref:System.Windows.Forms.IBindableComponent.BindingContext%2A>此接口的属性。  
   
     > [!NOTE]
     >  如果你的组件继承自<xref:System.Windows.Forms.Control>，不需要实现<xref:System.Windows.Forms.IBindableComponent>接口。  
   
--   <xref:System.Windows.Forms.ICurrencyManagerProvider> interface  
+-   <xref:System.Windows.Forms.ICurrencyManagerProvider> 接口  
   
      实现的类<xref:System.Windows.Forms.ICurrencyManagerProvider>接口是提供其自己的组件<xref:System.Windows.Forms.CurrencyManager>来管理与此特定组件关联的绑定。 自定义权<xref:System.Windows.Forms.CurrencyManager>提供的<xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>属性。  
   
@@ -152,5 +152,5 @@ ms.locfileid: "59226948"
 ## <a name="see-also"></a>请参阅
 
 - [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)
-- [如何：在 Windows 窗体上创建简单绑定控件](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [如何：创建 Windows 窗体上的简单绑定控件](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows 窗体数据绑定](windows-forms-data-binding.md)

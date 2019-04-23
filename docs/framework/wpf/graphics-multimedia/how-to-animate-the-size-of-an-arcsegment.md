@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
 ms.openlocfilehash: de36010e44c2f926b5839f4ec120f90c288f7501
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227764"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>如何：对 ArcSegment 的大小进行动画处理
@@ -34,4 +34,4 @@ ms.locfileid: "59227764"
 - [动画概述](animation-overview.md)
 - [Geometry 概述](geometry-overview.md)
 - [几何图形帮助主题](geometries-how-to-topics.md)
-- [动画和计时帮助主题](animation-and-timing-how-to-topics.md)
+- [动画和计时操作指南主题](animation-and-timing-how-to-topics.md)

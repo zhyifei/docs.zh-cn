@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228583"
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
@@ -52,7 +52,7 @@ ms.locfileid: "59228583"
   
  通常情况下，公共类型是从架构生成的，具有私有字段和匹配的公共数据成员属性。 若要生成内部类型，则将 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 属性设置为 `true`。  
   
- 下面的示例演示转换为内部的架构类时<xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>属性设置为 `true.`  
+ 下面的示例演示在将 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 属性设置为 `true.` 时转换为内部类的架构。  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -185,8 +185,8 @@ ms.locfileid: "59228583"
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - <xref:System.Runtime.Serialization.ImportOptions>
-- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
 - [架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
 - [从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
-- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
