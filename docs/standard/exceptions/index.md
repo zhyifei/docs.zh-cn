@@ -14,11 +14,11 @@ ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945426"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
@@ -48,7 +48,7 @@ ms.locfileid: "55758426"
 
 下表列出了一些常见的异常，以及会引发这些异常的原因的示例。
 
-| 异常类型 | 说明​​ | 示例 |
+| 异常类型 | 说明 | 示例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | 所有异常的基类。 | 无（使用此异常的派生类）。 |
 | <xref:System.IndexOutOfRangeException> | 仅当错误地对数组进行索引时，才由运行时引发。 | 在数组的有效范围外对数组进行索引： <br /> `arr[arr.Length+1]` |

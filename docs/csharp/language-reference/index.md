@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
 ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662187"
 ---
 # <a name="c-reference"></a>C# 参考
 此部分收录了有关 C# 关键字、运算符、特殊字符、预处理器指令、编译器选项以及编译器错误与警告的参考资料。  

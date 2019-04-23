@@ -4,8 +4,13 @@ description: 了解如何从源代码生成 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650877"
 ---
-
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 
 能从 .NET Core 的源代码生成它在多个方面都体现出其重要性：能更轻松地将 .NET Core 移植到新平台；可实现对产品做出贡献和修复；并支持创建自定义版本的 .NET。

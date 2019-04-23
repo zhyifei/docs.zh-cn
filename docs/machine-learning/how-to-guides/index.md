@@ -4,11 +4,11 @@ description: 了解如何执行特定任务，以帮助自定义创建 AI 解决
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650396"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 机器学习操作指南 - ML.NET
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d4f22aa41eb7aeffd655d980cb8418649462273e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757737"
+---
 ## <a name="introduction"></a>介绍
 重定目标更改影响重新编译为定位不同 .NET Framework 的应用程序。 它们包括：
 

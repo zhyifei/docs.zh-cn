@@ -5,11 +5,11 @@ ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941609"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode（非托管 API 参考）
 支持验证码 XrML 许可证创建和验证模块。  
