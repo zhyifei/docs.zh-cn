@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
 ms.openlocfilehash: 94789bcc007056a26d206903dc554ffe35999823
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322324"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>如何：使用导航运算符导航关系
@@ -33,4 +33,4 @@ ms.locfileid: "59322324"
 ## <a name="see-also"></a>请参阅
 
 - [用于实体框架的 EntityClient 提供程序](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
-- [Entity SQL 语言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [实体 SQL 语言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

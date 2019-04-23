@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
 ms.openlocfilehash: a428f54c3834ccdf6a0c7a5bfce8307172724524
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322883"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>如何：执行返回复杂类型的查询
@@ -26,7 +26,7 @@ ms.locfileid: "59322883"
   
 3. 双击要显示在模型的.edmx 文件[模型浏览器窗口](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100))在实体设计器。 在实体设计器图面中，选择`Email`并`Phone`的属性`Contact`实体类型，然后右键单击并选择**重构为新的复杂类型**。  
   
-4. 新的复杂类型与所选`Email`并`Phone`属性添加到**模型浏览器**。 复杂类型具有默认名称： 重命名类型为`EmailPhone`中**属性**窗口。 此外，新的 `ComplexProperty` 属性将添加到 `Contact` 实体类型。 重命名的属性 `EmailPhoneComplexType.`  
+4. 新的复杂类型与所选`Email`并`Phone`属性添加到**模型浏览器**。 复杂类型具有默认名称： 重命名类型为`EmailPhone`中**属性**窗口。 此外，新的 `ComplexProperty` 属性将添加到 `Contact` 实体类型。 将该属性重命名为 `EmailPhoneComplexType.`。  
   
      有关创建和修改复杂类型的使用实体数据模型向导的信息，请参阅[如何：现有属性重构为复杂类型属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100))和[如何：创建和修改复杂类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
   

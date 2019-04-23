@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323143"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用绑定配置服务和客户端
@@ -29,13 +29,13 @@ ms.locfileid: "59323143"
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
  WCF 包含一组旨在满足大多数应用程序的要求和方案的系统提供绑定。 下面的类表示系统提供的绑定的一些示例：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>:符合 WS 的 HTTP 协议绑定，适用于连接到 Web 服务的基本配置文件 1.1 规范 (例如，ASP.NET Web 服务 [ASMX]-基于服务)。  
+-   <xref:System.ServiceModel.BasicHttpBinding>：符合 WS 的 HTTP 协议绑定，适用于连接到 Web 服务的基本配置文件 1.1 规范 (例如，ASP.NET Web 服务 [ASMX]-基于服务)。  
   
--   <xref:System.ServiceModel.WSHttpBinding>:HTTP 协议绑定，适用于连接到终结点符合 Web 服务规范协议。  
+-   <xref:System.ServiceModel.WSHttpBinding>：HTTP 协议绑定，适用于连接到终结点符合 Web 服务规范协议。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>:使用.NET 二进制编码和组帧技术一起使用命名管道传输 Windows 连接到同一台计算机上其他 WCF 终结点。  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>：使用.NET 二进制编码和组帧技术一起使用命名管道传输 Windows 连接到同一台计算机上其他 WCF 终结点。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>:使用.NET 二进制编码和组帧技术与消息队列 (也称为 MSMQ) 一起使用来创建与其他 WCF 终结点的排队的消息连接。  
+-   <xref:System.ServiceModel.NetMsmqBinding>：使用.NET 二进制编码和组帧技术与消息队列 (也称为 MSMQ) 一起使用来创建与其他 WCF 终结点的排队的消息连接。  
   
  有关说明，使用系统提供的绑定的完整列表，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   

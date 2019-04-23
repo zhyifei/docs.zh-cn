@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309480"
 ---
 # <a name="com-callable-wrapper"></a>COM 可调用包装
 
@@ -27,7 +27,7 @@ COM 客户端调用 .NET 对象时，公共语言运行时将创建托管对象�
 
 无论请求其服务的 COM 客户端数量是多少，该运行时都只为托管对象创建恰好一个 CCW。 如下图所示，多个 COM 客户端可以保持对公开 INew 接口的 CCW 的引用。 反之，CCW 保持对实现该接口的托管对象的单一引用，并被垃圾回收。 COM 和 .NET 客户端可以同时对同一托管对象发出请求。
 
-![COM 可调用包装器](./media/ccw.gif "ccw") 通过 COM 可调用包装器访问 .NET 对象
+![多个 COM 客户端保留对公开 INew 的 CCW 的引用。](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 COM 可调用包装器对在 .NET Framework 内运行的其它类不可见。 它们的主要目的是封送托管和非托管代码之间的调用；但是，CCW 还托管它们包装的托管对象的对象标识和对象生存期。
 
@@ -43,9 +43,9 @@ COM 可调用包装器对在 .NET Framework 内运行的其它类不可见。 �
 
 CCW 公开所有公共的 COM 可见接口和数据类型，并以与 COM 对基于接口的交互的强制一致的方式向 COM 客户端返回值。 对于 COM 客户端而言，调用 .NET Framework 对象上的方法与调用 COM 对象上的方法相同。
 
-若要创建这一无缝的方法，CCW 生成传统 COM 接口，如 IUnknown 和 IDispatch。 如下图所示，CCW 保持对其包装的 .NET 对象的单一引用。 COM 客户端和 .NET 对象通过代理和 CCW 的存根构造进行相互交互。
+若要创建这一无缝的方法，CCW 生成传统 COM 接口，如 IUnknown 和 IDispatch。 如下图所示，CCW 保持对其包装的 .NET 对象的单一引用。 COM 客户端和 .NET 对象都通过代理和 CCW 的存根构造进行相互交互。
 
-![COM 接口](./media/ccwwithinterfaces.gif "ccwwithinterfaces") COM 接口和 COM 可调用包装器
+![展示 CCW 如何生成 COM 接口的图。](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 除公开由托管环境中的类显式实现的接口外，.NET Framework 代表对象提供对下表中列出的 COM 接口的实现。 .NET 类可以通过提供其自身对这些接口的实现而替代默认行为。 但是，运行时始终提供 IUnknown 和 IDispatch 接口的实现。
 
@@ -200,4 +200,4 @@ public class LoanApp
 - [COM 包装](com-wrappers.md)
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
 - [为互操作限定 .NET 类型](qualifying-net-types-for-interoperation.md)
-- [运行时可调用包装器](runtime-callable-wrapper.md)
+- [运行时可调用包装](runtime-callable-wrapper.md)

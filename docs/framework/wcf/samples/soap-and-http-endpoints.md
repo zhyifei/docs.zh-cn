@@ -3,11 +3,11 @@ title: SOAP 和 HTTP 终结点
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307439"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768912"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 和 HTTP 终结点
 此示例演示如何实现基于 RPC 的服务并将其公开 SOAP 格式和"Plain Old XML"(POX) 格式使用 WCF Web 编程模型中。 请参阅[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例服务的 HTTP 绑定有关的详细信息。 本示例重点介绍有关使用不同绑定通过 SOAP 和 HTTP 公开相同服务的详细信息。  

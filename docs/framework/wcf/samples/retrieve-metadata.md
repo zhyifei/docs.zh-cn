@@ -3,11 +3,11 @@ title: 检索元数据
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
 ms.openlocfilehash: 48cac2b4b5a625546ab0c8ac9662fde01c7074b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329669"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768730"
 ---
 # <a name="retrieve-metadata"></a>检索元数据
 本示例演示如何实现一个客户端，它能从服务中动态检索元数据以选择用来通信的终结点。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服务已进行修改以公开两个终结点，一个终结点位于基址并使用`basicHttpBinding`绑定和安全的终结点位于 {*baseaddress*} /secure 并使用`wsHttpBinding`绑定。 不必使用终结点地址和绑定配置客户端，客户端可以使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类动态检索服务的元数据，然后使用 <xref:System.ServiceModel.Description.ServiceEndpointCollection> 类以 <xref:System.ServiceModel.Description.WsdlImporter> 的形式导入元数据。  

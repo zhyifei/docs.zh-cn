@@ -3,10 +3,10 @@ title: 工作流跟踪
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321661"
 ---
 # <a name="workflow-tracing"></a>工作流跟踪
@@ -23,7 +23,7 @@ ms.locfileid: "59321661"
   
 4. 默认跟踪分析缓冲区大小仅为 4 KB；建议将此大小增大到 32 KB。 为此，请执行下列步骤。  
   
-    1.  在当前框架目录 (例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中执行以下命令： `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  在当前框架目录（例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203）中执行以下命令：`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  更改\<bufferSize > 为 32 Windows.ApplicationServer.Applications.man 文件中的值。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59321661"
                   </channel>  
         ```  
   
-    3.  在当前框架目录 (例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中执行以下命令： `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  在当前框架目录（例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203）中执行以下命令：`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  如果使用.NET Framework 4 Client Profile，必须先从.NET Framework 4 目录运行以下命令来注册 ETW 清单： `ServiceModelReg.exe –i –c:etw`  
