@@ -5,10 +5,10 @@ helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
 ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072540"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>数据协定序列化程序支持的类型
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) 使用<xref:System.Runtime.Serialization.
   
 -   使用 <xref:System.SerializableAttribute> 属性标记的类型。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基类库中包含的许多类型都属于此类别。 <xref:System.Runtime.Serialization.DataContractSerializer> 完全支持由 .NET Framework 远程处理、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>使用的此序列化编程模型，包括支持 <xref:System.Runtime.Serialization.ISerializable> 接口。  
   
--   表示原始 XML 的类型或表示 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 关系数据的类型。 支持 <xref:System.Xml.XmlElement> 和 <xref:System.Xml.XmlNode> 类型的数组作为一种直接表示 XML 的方式。 另外，支持实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型，包括相关的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 类型。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable>类型和<xref:System.Data.DataSet>类型 （以及其类型化的派生类） 都实现<xref:System.Xml.Serialization.IXmlSerializable>接口，并因此可归入此类别。 有关详细信息，请参阅[XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
+-   表示原始 XML 的类型或表示 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 关系数据的类型。 支持 <xref:System.Xml.XmlElement> 和 <xref:System.Xml.XmlNode> 类型的数组作为一种直接表示 XML 的方式。 另外，支持实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型，包括相关的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 类型。 支持 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 类型和 <xref:System.Data.DataSet> 类型（以及其类型化的派生类）都实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，因此可归入此类别。 有关详细信息，请参阅[XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>在部分信任模式中使用某些类型的限制  
  以下是在部分信任模式方案中使用某些类型时的限制列表：  

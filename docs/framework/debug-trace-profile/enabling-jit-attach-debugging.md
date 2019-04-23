@@ -8,10 +8,10 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078779"
 ---
 # <a name="enabling-jit-attach-debugging"></a>启用 JIT 附加调试
@@ -21,7 +21,7 @@ JIT 附加调试是用于描述如何在发生错误时将调试器附加到进�
   
 -   未经处理的异常（在本机代码和托管代码中）。  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或[RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107)函数 （Windows 7 系列）。  
+-   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 函数（Windows 7 系列）。  
   
 -   运行时灾难性错误。  
   
@@ -38,4 +38,4 @@ JIT 附加调试是用于描述如何在发生错误时将调试器附加到进�
 ## <a name="see-also"></a>请参阅
 
 - [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)
-- [令映像更易于调试](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [使映像更易于调试](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
 ms.openlocfilehash: 541467b0f1285d372e5f6d502d9d8f28c8c6333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083122"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 控件概述（Windows 窗体）
@@ -27,5 +27,5 @@ Windows 窗体<xref:System.Windows.Forms.LinkLabel>让您可以将 Web 样式的
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Label 控件概述](label-control-overview-windows-forms.md)
-- [如何：使用 Windows 窗体 LinkLabel 控件链接到对象或 Web 页面](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [如何：链接到的对象或网页上使用 Windows 窗体 LinkLabel 控件](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [如何：更改 Windows 窗体 LinkLabel 控件的外观](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

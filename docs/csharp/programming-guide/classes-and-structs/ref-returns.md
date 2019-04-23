@@ -4,12 +4,12 @@ description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514409"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59081825"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -59,7 +59,6 @@ public ref Person GetContactInformation(string fname, string lname)
 - 如果以引用方式返回它，就是返回对相同变量所取的别名。
 - 如果以引用方式将它传递到另一个方法，就是传递对它取别名的变量的引用。
 - 如果返回[引用本地](#ref-locals)别名，就是返回相同变量的新别名。
-
 
 ## <a name="ref-locals"></a>ref 局部变量
 

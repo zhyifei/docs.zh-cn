@@ -3,10 +3,10 @@ title: 使用跟踪来排除应用程序故障
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
 ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072748"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>使用跟踪来排除应用程序故障
@@ -16,7 +16,7 @@ ms.locfileid: "59072748"
  [跟踪和消息日志记录的推荐设置](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
  描述生产和调试环境的建议设置。  
   
- [使用服务跟踪查看器查看相关跟踪和进行故障诊断](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  描述如何使用服务跟踪查看器工具来查看、关联和分析跟踪数据。  
   
  [重要跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  

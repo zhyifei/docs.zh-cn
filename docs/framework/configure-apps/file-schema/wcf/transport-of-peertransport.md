@@ -3,10 +3,10 @@ title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
 ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075998"
 ---
 # <a name="transport-of-peertransport"></a>\<传输 > 的\<peerTransport >
@@ -51,7 +51,7 @@ ms.locfileid: "59075998"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定义对等传输的安全设置。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定义对等传输的安全设置。|  
   
 ## <a name="remarks"></a>备注  
  仅当设置此元素的 mode 属性[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)设置为`Transport`或`TransportWithMessageCredential`。  
@@ -62,9 +62,9 @@ ms.locfileid: "59075998"
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [传输安全](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [传输安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输方式](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [绑定](../../../../../docs/framework/wcf/bindings.md)
 - [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)

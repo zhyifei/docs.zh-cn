@@ -7,10 +7,10 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: 5ea30c2e9593f289c91a47cc082becf47dedc450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072775"
 ---
 # <a name="federation-and-issued-tokens"></a>联合令牌与颁发的令牌
@@ -26,7 +26,7 @@ ms.locfileid: "59072775"
  [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  介绍使用 WCF 创建联合客户端的基础知识。  
   
- [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  描述创建联合服务的步骤。  
   
  [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "59072775"
  [如何：配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  描述如何创建安全令牌的本地颁发机构。  
   
- [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [如何：禁用安全会话在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  描述如何在 `WSFederationHttpBinding` 上禁用安全会话。 在创建要求每个客户端都有一个会话的网络场时，有必要禁用安全会话。  
   
 ## <a name="reference"></a>参考  

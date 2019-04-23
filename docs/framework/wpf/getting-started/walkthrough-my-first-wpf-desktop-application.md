@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055243"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>演练：我的第一个 WPF 桌面应用程序
@@ -375,17 +375,17 @@ ms.locfileid: "59055243"
 
     此 XAML 将添加以下样式：
 
-    - `headerTextStyle`:设置页标题的格式<xref:System.Windows.Controls.Label>。
+    - `headerTextStyle`：设置页标题的格式<xref:System.Windows.Controls.Label>。
 
-    - `labelStyle`:若要设置格式<xref:System.Windows.Controls.Label>控件。
+    - `labelStyle`：若要设置格式<xref:System.Windows.Controls.Label>控件。
 
-    - `columnHeaderStyle`:若要设置格式<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
+    - `columnHeaderStyle`：若要设置格式<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
 
-    - `listHeaderStyle`:若要设置列表标头的格式<xref:System.Windows.Controls.Border>控件。
+    - `listHeaderStyle`：若要设置列表标头的格式<xref:System.Windows.Controls.Border>控件。
 
-    - `listHeaderTextStyle`:若要设置列表标头的格式<xref:System.Windows.Controls.Label>。
+    - `listHeaderTextStyle`：若要设置列表标头的格式<xref:System.Windows.Controls.Label>。
 
-    - `buttonStyle`:若要设置格式<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
+    - `buttonStyle`：若要设置格式<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
 
     请注意，这些样式是资源和子级的<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>属性元素。 在此位置中，这些样式将应用到应用程序中的所有元素。 在.NET Framework 应用程序中使用的资源的示例，请参阅[使用应用程序资源](../advanced/how-to-use-application-resources.md)。
 
@@ -480,7 +480,7 @@ ms.locfileid: "59055243"
 > [!NOTE]
 > 此示例演示了 WPF 的特定功能并不遵循所有最佳实践等安全、 本地化和可访问性。 WPF 和.NET Framework 应用程序开发最佳做法的全面介绍，请参阅以下主题：
 >
-> - [可访问性](../../ui-automation/accessibility-best-practices.md)
+> - [辅助功能](../../ui-automation/accessibility-best-practices.md)
 >
 > - [安全性](../security-wpf.md)
 >
@@ -500,7 +500,7 @@ ms.locfileid: "59055243"
 有关创建应用程序的详细信息，请参阅以下主题：
 
 - [应用程序开发](../app-development/index.md)
-- [Controls](../controls/index.md)
+- [控件](../controls/index.md)
 - [数据绑定概述](../data/data-binding-overview.md)
 - [图形和多媒体](../graphics-multimedia/index.md)
 - [WPF 中的文档](../advanced/documents-in-wpf.md)

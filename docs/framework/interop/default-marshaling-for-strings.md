@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 47543056eaa538b008db3332dda776c0f300108d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409310"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59078460"
 ---
 # <a name="default-marshaling-for-strings"></a>字符串的默认封送处理
 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 类均具有类似的封送处理行为。  
@@ -264,6 +264,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [默认封送处理行为](default-marshaling-behavior.md)
 - [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
 - [方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

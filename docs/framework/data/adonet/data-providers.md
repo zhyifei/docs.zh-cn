@@ -6,21 +6,21 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074022"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序用于连接到数据库、执行命令和检索结果。 这些结果将被直接处理，放置在 <xref:System.Data.DataSet> 中以便根据需要向用户公开、与多个源中的数据组合，或在层之间进行远程处理。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序是轻量，创建一个最小层之间的数据源和代码，而无需牺牲功能提高性能。  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序用于连接到数据库、执行命令和检索结果。 这些结果将被直接处理，放置在 <xref:System.Data.DataSet> 中以便根据需要向用户公开、与多个源中的数据组合，或在层之间进行远程处理。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序是轻量的，它在数据源和代码之间创建最小的分层，并在不降低功能性的情况下提高性能。  
   
  下表列出了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中所包含的数据提供程序。  
   
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据访问接口|描述|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序|描述|  
 |-------------------------------------------------------------------------------|-----------------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 SQL Server 的数据提供程序|提供 Microsoft SQL Server 的数据访问。 使用 <xref:System.Data.SqlClient> 命名空间。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 OLE DB 的数据提供程序|提供对使用 OLE DB 公开的数据源中数据的访问。 使用 <xref:System.Data.OleDb> 命名空间。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server 的数据提供程序|提供 Microsoft SQL Server 的数据访问。 使用 <xref:System.Data.SqlClient> 命名空间。|  
+|用于 OLE DB 的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序|提供对使用 OLE DB 公开的数据源中数据的访问。 使用 <xref:System.Data.OleDb> 命名空间。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 ODBC 的数据提供程序|提供对使用 ODBC 公开的数据源中数据的访问。 使用 <xref:System.Data.Odbc> 命名空间。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 Oracle 的数据提供程序|适用于 Oracle 数据源。 用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序支持 Oracle 客户端软件 8.1.7 和更高版本，并使用 <xref:System.Data.OracleClient> 命名空间。|  
 |EntityClient 提供程序|提供对实体数据模型 (EDM) 应用程序的数据访问。 使用 <xref:System.Data.EntityClient> 命名空间。|  
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  用于 OLE DB 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序不与用于 ODBC 的 OLE DB 访问接口 (MSDASQL) 一起使用。 若要使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]访问 ODBC 数据源，请使用用于 ODBC 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 OLE DB 类的数据提供程序位于<xref:System.Data.OleDb>命名空间。 下面的代码示例演示如何将 `System.Data.OleDb` 命名空间包括在您的应用程序中。  
+ 用于 OLE DB 类的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序位于 <xref:System.Data.OleDb> 命名空间中。 下面的代码示例演示如何将 `System.Data.OleDb` 命名空间包括在您的应用程序中。  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC for Oracle|  
 |Microsoft Access 驱动程序 (*.mdb)|  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对于 ODBC 类的数据提供程序位于<xref:System.Data.Odbc>命名空间。  
+ 用于 ODBC 类的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序位于 <xref:System.Data.Odbc> 命名空间中。  
   
  下面的代码示例演示如何将 `System.Data.Odbc` 命名空间包括在您的应用程序中。  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序要求系统上安装有 Oracle 客户端软件（8.1.7 版或更高版本），才能连接到 Oracle 数据源。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 Oracle 类的数据提供程序位于<xref:System.Data.OracleClient>命名空间，并包含在`System.Data.OracleClient.dll`程序集。 当编译使用该数据提供程序的应用程序时，必须同时引用 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
+ 用于 Oracle 类的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序位于 <xref:System.Data.OracleClient> 命名空间中，并包含在 `System.Data.OracleClient.dll` 程序集中。 当编译使用该数据提供程序的应用程序时，必须同时引用 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
   
  下面的代码示例演示如何将 `System.Data.OracleClient` 命名空间包括在您的应用程序中。  
   
@@ -149,8 +149,8 @@ using System.Data.OracleClient;
   
 |提供程序|说明|  
 |--------------|-----------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 SQL Server 的数据提供程序|建议使用 Microsoft SQL Server 的中间层应用程序。<br /><br /> 建议使用 Microsoft 数据库引擎 (MSDE) 或 SQL Server 的单层应用程序。<br /><br /> 建议为 SQL Server (SQLOLEDB) 与 OLE DB 访问接口使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]OLE DB 数据提供程序。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 OLE DB 的数据提供程序|对于 SQL Server，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]而不是此提供程序建议使用 SQL Server 的数据提供程序。<br /><br /> 建议用于使用 Microsoft Access 数据库的单层应用程序。 不建议将 Access 数据库用于中间层应用程序。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server 的数据提供程序|建议使用 Microsoft SQL Server 的中间层应用程序。<br /><br /> 建议使用 Microsoft 数据库引擎 (MSDE) 或 SQL Server 的单层应用程序。<br /><br /> 建议为 SQL Server (SQLOLEDB) 与 OLE DB 访问接口使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]OLE DB 数据提供程序。|  
+|用于 OLE DB 的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序|对于 SQL Server，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]而不是此提供程序建议使用 SQL Server 的数据提供程序。<br /><br /> 建议用于使用 Microsoft Access 数据库的单层应用程序。 不建议将 Access 数据库用于中间层应用程序。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 ODBC 的数据提供程序|建议用于使用 ODBC 数据源的中间层应用程序和单层应用程序。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 Oracle 的数据提供程序|建议用于使用 Oracle 数据源的中间层应用程序和单层应用程序。|  
   
@@ -161,4 +161,4 @@ using System.Data.OracleClient;
 
 - [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

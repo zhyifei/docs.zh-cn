@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
 ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072022"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>如何：在 Windows 窗体上绘制实心矩形
@@ -39,5 +39,5 @@ ms.locfileid: "59072022"
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [图形编程入门](getting-started-with-graphics-programming.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
-- [使用钢笔绘制线条和形状](using-a-pen-to-draw-lines-and-shapes.md)
-- [GDI+ 中的画笔和实心形状](brushes-and-filled-shapes-in-gdi.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [GDI+ 中的画笔和填充形状](brushes-and-filled-shapes-in-gdi.md)

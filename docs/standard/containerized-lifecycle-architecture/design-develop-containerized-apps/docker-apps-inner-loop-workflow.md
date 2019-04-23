@@ -5,10 +5,10 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920904"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
@@ -216,7 +216,7 @@ Redis 服务使用[最新的公共 redis 映像](https://hub.docker.com/_/redis/
 
 如果您的应用程序具有单个容器，只需通过将其部署到 Docker 主机 （VM 或物理服务器） 运行。 但是，如果您的应用程序由多个服务组成，则需要*compose 它*、 过。 让我们查看不同的选项。
 
-***选项 A：运行单个容器或服务***
+***选项 a:运行单个容器或服务***
 
 可以通过使用 docker 运行命令，如下所示运行 Docker 映像：
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 为此特定部署中，我们将重定向请求发送到端口 80 到内部端口 5000。 现在该应用程序侦听的外部端口 80 主机级别。
 
-***选项 B：编写和运行多容器应用程序***
+***选项 b:编写和运行多容器应用程序***
 
 在大多数企业方案中，将多个服务组成的 Docker 应用程序。 对于这些情况下，可以运行`docker-compose up`命令 (图 4-27)，将使用可能在之前创建的 docker-compose.yml 文件。 运行此命令将部署及其相关容器的所有组合应用程序。
 

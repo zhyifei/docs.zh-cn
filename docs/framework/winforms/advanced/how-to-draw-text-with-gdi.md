@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
 ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073320"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>如何：用 GDI 绘制文本
@@ -34,7 +34,7 @@ ms.locfileid: "59073320"
  有关获取详细信息<xref:System.Drawing.Graphics>，请参阅[如何：创建用于绘制图形对象](how-to-create-graphics-objects-for-drawing.md)。 有关构造的详细信息<xref:System.Drawing.Font>，请参阅[如何：构造字体系列和字体](how-to-construct-font-families-and-fonts.md)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的代码示例设计为使用 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 前面的代码示例设计为使用 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
 

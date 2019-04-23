@@ -11,10 +11,10 @@ ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078937"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危险权限和策略管理
@@ -40,4 +40,4 @@ ms.locfileid: "59078937"
   
 ## <a name="see-also"></a>请参阅
 
-- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

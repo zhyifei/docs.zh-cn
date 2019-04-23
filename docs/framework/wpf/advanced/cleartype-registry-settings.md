@@ -6,18 +6,18 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079989"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 注册表设置
-本主题提供的概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]使用的注册表设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
+本主题提供的概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]由注册表设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技术概述  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文本呈现给显示设备使用的应用程序[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]特征可以提供增强的阅读体验。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 一种软件技术开发的[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]，可提高现有 Lcd （液晶显示），如笔记本电脑屏幕、 Pocket PC 屏幕和平板显示器上的文本的可读性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 工作时访问 LCD 屏幕的每个像素中的各个垂直色条元素。 有关详细信息[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，请参阅[ClearType 概述](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文本呈现给显示设备使用的应用程序[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]特征可以提供增强的阅读体验。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 是一种由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 开发的软件技术，可提高现有 LCD（液晶显示器，如笔记本电脑屏幕、Pocket PC 屏幕和平板显示器）上文本的可读性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 在工作时访问 LCD 屏幕中每个像素的各个垂直色条元素。 有关详细信息[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，请参阅[ClearType 概述](cleartype-overview.md)。  
   
  使用呈现的文本[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]可能会在不同的显示设备上查看时明显不同。 例如，少数监视器实现色条元素按蓝色、 绿色、 红色顺序而不是更常见的红色、 绿色、 蓝色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 顺序。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "59079989"
   
 |设置|描述|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level|描述级别的[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]色彩清晰度。|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 级别|描述级别的[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]色彩清晰度。|  
 |伽马级别|描述显示设备的像素颜色组件的级别。|  
 |像素结构|描述显示设备的像素排列。|  
 |文本对比度级别|描述显示文本的对比度级别。|  
@@ -82,7 +82,7 @@ ms.locfileid: "59079989"
   
 |类型|“值”|描述|  
 |----------|-----------|-----------------|  
-|平面|0|显示设备没有像素结构。 这意味着每种颜色的光源均匀分布在像素区域上，称为灰度呈现。 这是标准显示设备的工作方式。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 永远不会应用于呈现的文本。|  
+|平面|0|显示设备没有像素结构。 这意味着每种颜色的光源均匀分布在像素区域上，称为灰度呈现。 这是标准显示设备的工作方式。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 从不应用于呈现的文本。|  
 |RGB|1|显示设备的像素由三种色条按以下顺序构成：红色、绿色和蓝色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 应用于呈现的文本。|  
 |BGR|2|显示设备的像素由三种色条按以下顺序构成：蓝色、绿色和红色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 应用于呈现的文本。 注意该顺序与 RGB 类型相反。|  
   

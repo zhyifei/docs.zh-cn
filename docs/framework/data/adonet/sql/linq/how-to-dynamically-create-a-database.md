@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072384"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>如何：动态创建数据库
@@ -23,7 +23,7 @@ ms.locfileid: "59072384"
   
 -   您正在生成需要用本地数据库来保存其脱机状态的客户端应用程序。  
   
- 您还可以通过使用 .mdf 文件或只使用目录名（取决于您的连接字符串），将 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法与 SQL Server 一起使用。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用连接字符串来定义要创建的数据库并且数据库将在哪台服务器上创建。  
+ 您还可以通过使用 .mdf 文件或只使用目录名（取决于您的连接字符串），将 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法与 SQL Server 一起使用。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用连接字符串来定义要创建的数据库和作为数据库创建位置的服务器。  
   
 > [!NOTE]
 >  请尽可能使用 Windows 集成安全性连接到数据库，以便连接字符串不需要密码。  

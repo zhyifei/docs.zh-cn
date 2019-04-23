@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
 ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078493"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>用直线和曲线抗锯齿
@@ -47,5 +47,5 @@ ms.locfileid: "59078493"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
-- [直线、曲线和图形](lines-curves-and-shapes.md)
+- [直线、曲线和形状](lines-curves-and-shapes.md)
 - [如何：对文本使用抗锯齿效果](how-to-use-antialiasing-with-text.md)

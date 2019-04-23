@@ -3,10 +3,10 @@ title: 支持和不支持的 LINQ 方法 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077064"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支持和不支持的 LINQ 方法 (LINQ to Entities)
@@ -150,7 +150,7 @@ ms.locfileid: "59077064"
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|对 EDM 基元类型支持|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
-|<xref:System.Linq.Queryable.OfType%2A>|支持 <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
+|<xref:System.Linq.Queryable.OfType%2A>|对 <xref:System.Data.Metadata.Edm.EntityType> 支持|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>分页方法  
  有些 LINQ 分页方法在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中不受支持。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的分页方法。  

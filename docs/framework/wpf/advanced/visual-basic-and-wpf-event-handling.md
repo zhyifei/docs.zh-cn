@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
 ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078013"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件处理
@@ -27,11 +27,11 @@ ms.locfileid: "59078013"
  如果要将处理程序附加到实例成员表中用于定义要处理的事件的实例，可使用 `Handles` 附加路由事件的处理程序。 对于路由事件，具有附加的处理程序`Handles`一样作为附加的处理程序遵循相同的路由规则[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性，或使用的通用签名<xref:System.Windows.UIElement.AddHandler%2A>。 这意味着，如果事件已标记为已处理 (<xref:System.Windows.RoutedEventArgs.Handled%2A>在事件数据中的属性是`True`)，然后使用附加处理程序`Handles`不调用以响应该事件实例。 可通过路由中另一个元素上的实例处理程序，或通过在路由中当前元素或更早元素上进行类处理，将事件标记为已处理。 对于可支持成对的隧道事件/冒泡事件的输入事件，隧道路由可能已将事件对标记为已处理。 有关路由事件的详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
   
 ## <a name="limitations-of-handles-for-adding-handlers"></a>添加处理程序时的“Handles”限制  
- `Handles` 不能引用附加事件的处理程序。 必须对该附加事件使用 `add` 访问方法，或使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 typename.eventname 事件特性。 有关详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
+ `Handles` 无法引用附加事件的处理程序。 必须对该附加事件使用 `add` 访问方法，或使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 typename.eventname 事件特性。 有关详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
   
  对于路由事件，只能使用 `Handles` 为实例成员表中存在该事件的实例分配处理程序。 但是，对于一般的路由事件，父元素可以是来自子元素的事件的侦听器，即使该父元素的成员表中没有此事件也是如此。 在特性语法中，这可以通过 typename.membername 特性形式来指定，此形式限定哪种类型实际定义要处理的事件。 例如，父`Page`(不带`Click`事件定义的) 可以通过将分配该窗体中的属性处理程序侦听按钮单击事件`Button.Click`。 但 `Handles` 不支持 typename.membername 形式，因为它必须支持与该形式冲突的 Instance.Event 形式。 有关详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
   
- `Handles` 无法附加针对标记为已处理的事件调用的处理程序。 相反，必须使用代码，并调用`handledEventsToo`重载<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>。  
+ `Handles` 无法附加针对标记为已处理的事件而调用的处理程序。 相反，必须使用代码，并调用`handledEventsToo`重载<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>。  
   
 > [!NOTE]
 >  不要使用`Handles`Visual Basic 代码时在 XAML 中指定相同的事件的事件处理程序中的语法。 在这种情况下，将调用事件处理程序两次。  

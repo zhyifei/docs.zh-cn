@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
 ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072670"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>如何：通过在每个 Windows 窗体各自的线程上显示此 Windows 窗体来支持 COM 互操作
@@ -50,5 +50,5 @@ ms.locfileid: "59072670"
 - [向 COM 公开 .NET Framework 组件](../../interop/exposing-dotnet-components-to-com.md)
 - [将 COM 的程序集打包](../../interop/packaging-an-assembly-for-com.md)
 - [向 COM 注册程序集](../../interop/registering-assemblies-with-com.md)
-- [如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)
+- [如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Windows 窗体和非托管应用程序概述](windows-forms-and-unmanaged-applications-overview.md)

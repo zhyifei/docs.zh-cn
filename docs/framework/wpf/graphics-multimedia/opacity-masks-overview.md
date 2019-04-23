@@ -7,10 +7,10 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080080"
 ---
 # <a name="opacity-masks-overview"></a>不透明蒙板概述
@@ -43,14 +43,14 @@ ms.locfileid: "59080080"
      ![具有 LinearGradientBrush 不透明蒙版的对象](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush 不透明蒙板示例  
   
--   <xref:System.Windows.Media.ImageBrush>:用于创建纹理和软或撕裂边缘效果。  
+-   <xref:System.Windows.Media.ImageBrush>：用于创建纹理和软或撕裂边缘效果。  
   
      下图显示了<xref:System.Windows.Media.ImageBrush>用作不透明蒙板。  
   
      ![具有 ImageBrush 不透明蒙版的对象](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush 不透明蒙板示例  
   
--   <xref:System.Windows.Media.DrawingBrush>:用于从形状、 图像和渐变的模式创建复杂的不透明蒙板。  
+-   <xref:System.Windows.Media.DrawingBrush>：用于从形状、 图像和渐变的模式创建复杂的不透明蒙板。  
   
      下图显示了<xref:System.Windows.Media.DrawingBrush>用作不透明蒙板。  
   
@@ -73,7 +73,7 @@ DrawingBrush 不透明蒙板示例
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>在“XAML”中指定颜色不透明度  
- 在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定个别颜色的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法使用以下语法：  
+ 在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定个别颜色的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法使用下面语法：  
   
  `#` **aa** *rrggbb*  
   
@@ -117,5 +117,5 @@ DrawingBrush 不透明蒙板示例
   
 ## <a name="see-also"></a>请参阅
 
-- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
 - [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)

@@ -5,10 +5,10 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
 ms.openlocfilehash: 14a0fb7cd9ecb8dfd5369da6f6bd5b47b4aea37a
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921294"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>使用 .NET 容器时定位的操作系统
@@ -23,7 +23,7 @@ ms.locfileid: "58921294"
 
 ![部署旧的 .NET Framework 应用程序时，必须以与旧应用程序和 IIS 兼容且具有更大映像的 Windows Server Core 为目标。 部署 .NET Core 应用程序时，可以针对已经过云优化、使用 Kestrel、更小且启动速度更快的 Windows Nano Server。 还可以面向 Linux，支持 Debian、Alpine 和其他操作系统。 也使用 Kestrel、更小且启动速度更快。](./media/image1.png)
 
-**图 3-1.** 根据 .NET framework 确定要面向的操作系统
+**图 3-1。** 根据 .NET framework 确定要面向的操作系统
 
 如果想使用不同的 Linux 发行版本或要使用 Microsoft 不支持的映像版本，还可以创建自己的 Docker 映像。 例如，可以使用 ASP.NET Core 创建一个在传统 .NET Framework 和 Windows Server Core 上运行的映像，但这不是常见的 Docker 方案。
 

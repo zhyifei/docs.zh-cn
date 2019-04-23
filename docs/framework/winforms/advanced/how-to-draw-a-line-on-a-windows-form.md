@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
 ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074440"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>如何：在 Windows 窗体上绘制直线
@@ -27,7 +27,7 @@ ms.locfileid: "59074440"
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="robust-programming"></a>可靠编程  
  应始终调用<xref:System.IDisposable.Dispose%2A>占用系统资源，如任何对象<xref:System.Drawing.Pen>对象。  
@@ -37,5 +37,5 @@ ms.locfileid: "59074440"
 - <xref:System.Drawing.Graphics.DrawLine%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [图形编程入门](getting-started-with-graphics-programming.md)
-- [使用钢笔绘制线条和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

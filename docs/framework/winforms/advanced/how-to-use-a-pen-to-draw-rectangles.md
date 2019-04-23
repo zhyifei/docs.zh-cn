@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
 ms.openlocfilehash: 0e51a1e3a2d14754147dbd36f170127a7e978acd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074607"
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>如何：使用钢笔绘制矩形
@@ -31,8 +31,8 @@ ms.locfileid: "59074607"
  [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="see-also"></a>请参阅
 
-- [使用钢笔绘制线条和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)

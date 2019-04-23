@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-ms.openlocfilehash: 70a40ea79a7f8993005607b0dd5a05f43597b003
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714014"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59075413"
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 类提供一个可通过编程方式控制的 HTTP 协议侦听器。 侦听器在 <xref:System.Net.HttpListener> 对象的生存期内处于活动状态，在你的应用程序中运行。  
@@ -18,6 +18,7 @@ ms.locfileid: "54714014"
  <xref:System.Net.HttpListener> 类在 HTTP.sys 的基础上构建，后者是为 Windows 处理所有 HTTP 流量的内核模式侦听器。 HTTP.sys 提供连接管理、带宽限制以及 Web 服务器日志记录。 使用 `HttpCfg.exe` 工具可添加 SSL 证书。 有关详细信息，请参阅[服务器](https://go.microsoft.com/fwlink/?LinkID=178285)文档中的 [HttpCfg.exe](https://go.microsoft.com/fwlink/?LinkID=178284) 工具相关文档。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>

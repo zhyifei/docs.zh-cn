@@ -11,10 +11,10 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
 ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078572"
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>如何：从 Windows 窗体播放资源中嵌入的声音
@@ -37,4 +37,4 @@ ms.locfileid: "59078572"
 
 - <xref:System.Media.SoundPlayer>
 - [如何：从 Windows 窗体播放声音](how-to-play-a-sound-from-a-windows-form.md)
-- [如何：在 Windows 窗体上循环播放声音](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [如何：循环上的 Windows 窗体播放声音](how-to-loop-a-sound-playing-on-a-windows-form.md)

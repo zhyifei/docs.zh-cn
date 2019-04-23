@@ -14,10 +14,10 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073593"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在运行时 （Windows 窗体） 设置图片
@@ -103,5 +103,5 @@ ms.locfileid: "59073593"
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [PictureBox 控件概述](picturebox-control-overview-windows-forms.md)
 - [如何：使用设计器加载图片](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [如何：在运行时修改图片的大小或位置](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [如何：在运行时修改的大小或位置的图片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox 控件](picturebox-control-windows-forms.md)

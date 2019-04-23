@@ -5,10 +5,10 @@ author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
 ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921281"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
@@ -53,21 +53,21 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="understand-runtime-version-number-changes"></a>了解运行时版本号更改
 
-`MAJOR` 在出现以下情况时递增：
+`MAJOR` 在下列情况时递增：
 
 * 产品或新产品方向发生重大更改。
 * 发生了中断性变更。 接受中断性变更存在较大障碍。
 * 旧版本不再受支持。
 * 采用了现有依赖项的较新 `MAJOR` 版本。
 
-`MINOR` 在出现以下情况时递增：
+`MINOR` 在下列情况时递增：
 
 * 添加了公共 API 外围应用。
 * 添加了新行为。
 * 采用了现有依赖项的较新 `MINOR` 版本。
 * 引入了新依赖项。
 
-`PATCH` 在出现以下情况时递增：
+`PATCH` 在下列情况时递增：
 
 * 进行了 Bug 修复。
 * 添加了对较新平台的支持。

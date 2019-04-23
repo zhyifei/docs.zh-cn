@@ -3,10 +3,10 @@ title: <transport> 的 <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
 ms.openlocfilehash: 3126618eca6e8317968c6eb568a04615ec8de884
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073441"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<传输 > 的\<msmqIntegrationBinding >
@@ -49,7 +49,7 @@ msmqIntegrationBinding
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定义 MSMQ 绑定的安全设置。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定义 MSMQ 绑定的安全设置。|  
   
 ## <a name="remarks"></a>备注  
  此元素包装消息队列集成传输的安全设置。 消息队列集成传输和排队传输的设置是相同的。 使用此元素可以设置身份验证模式、加密算法、安全哈希算法和保护级别。  

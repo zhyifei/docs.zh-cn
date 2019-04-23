@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055308"
 ---
 # <a name="working-with-calendars"></a>使用日历
@@ -30,33 +30,33 @@ ms.locfileid: "59055308"
 
 在.NET 中的所有日历都派生<xref:System.Globalization.Calendar?displayProperty=nameWithType>类，该类提供了基本日历实现。 从 <xref:System.Globalization.Calendar> 类继承的类之一是 <xref:System.Globalization.EastAsianLunisolarCalendar> 类，该类是所有阴阳历的基类。 .NET 包括以下日历实现：
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>表示中国阴阳历。
+* <xref:System.Globalization.ChineseLunisolarCalendar>，表示中国阴阳历。
 
-* <xref:System.Globalization.GregorianCalendar>表示公历。 此日历进一步细分为 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 枚举定义的子类型（如阿拉伯和中东法国）。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 属性指定公历的子类型。
+* <xref:System.Globalization.GregorianCalendar>，表示公历。 此日历进一步细分为 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 枚举定义的子类型（如阿拉伯和中东法国）。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 属性指定公历的子类型。
 
-* <xref:System.Globalization.HebrewCalendar>表示希伯来历。
+* <xref:System.Globalization.HebrewCalendar>，表示希伯来历。
 
-* <xref:System.Globalization.HijriCalendar>表示回历。
+* <xref:System.Globalization.HijriCalendar>，表示回历。
 
-* <xref:System.Globalization.JapaneseCalendar>表示日本历。
+* <xref:System.Globalization.JapaneseCalendar>，表示日本历。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>表示日本阴阳历。
+* <xref:System.Globalization.JapaneseLunisolarCalendar>，表示日本阴阳历。
 
-* <xref:System.Globalization.JulianCalendar>表示罗马儒略历。
+* <xref:System.Globalization.JulianCalendar>，表示罗马儒略历。
 
-* <xref:System.Globalization.KoreanCalendar>表示朝鲜历。
+* <xref:System.Globalization.KoreanCalendar>，表示朝鲜历。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>表示朝鲜阴阳历。
+* <xref:System.Globalization.KoreanLunisolarCalendar>，表示朝鲜阴阳历。
 
-* <xref:System.Globalization.PersianCalendar>表示波斯历。
+* <xref:System.Globalization.PersianCalendar>，表示波斯历。
 
-* <xref:System.Globalization.TaiwanCalendar>表示台湾历。
+* <xref:System.Globalization.TaiwanCalendar>，表示台湾历。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>表示台湾阴阳历。
+* <xref:System.Globalization.TaiwanLunisolarCalendar>，表示台湾阴阳历。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>表示泰国佛历。
+* <xref:System.Globalization.ThaiBuddhistCalendar>，表示泰国佛历。
 
-* <xref:System.Globalization.UmAlQuraCalendar>表示古兰经历。
+* <xref:System.Globalization.UmAlQuraCalendar>，表示古兰经历。
 
 可通过以下两种方法之一来使用日历：
 
@@ -245,7 +245,7 @@ ms.locfileid: "59055308"
    |键 | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
    |名称 | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
    |类型 | REG_SZ |
-   |值 | 1 |
+   |“值” | 1 |
 
 启用严格范围检查，与前面的示例将引发<xref:System.ArgumentOutOfRangeException>并显示以下输出：
 
@@ -320,7 +320,7 @@ Parameter name: year
    |键 | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
    |名称 | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
    |类型 | REG_SZ |
-   |值 | 1 |
+   |“值” | 1 |
 
 在格式设置操作禁用元年支持，与上面的示例显示以下输出：
 
@@ -358,10 +358,10 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |键 | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
    |名称 | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
    |类型 | REG_SZ |
-   |值 | 1 | 
+   |“值” | 1 | 
 
 ## <a name="see-also"></a>请参阅
 
 - [如何：用非公历日历显示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [示例:日历周范围实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [示例：日历周范围实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
 - [日历类](xref:System.Globalization.Calendar)

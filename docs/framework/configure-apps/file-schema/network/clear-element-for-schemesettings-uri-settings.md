@@ -1,12 +1,12 @@
 ---
-title: <clear> SchemeSettings （Uri 设置） 的
+title: schemeSettings 的 <clear> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082680"
 ---
 # <a name="clear-element-for-schemesettings-uri-settings"></a>\<清除 > schemeSettings （Uri 设置） 的
@@ -36,7 +36,7 @@ ms.locfileid: "59082680"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<schemeSettings > 元素 （Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何分析特定方案的 <xref:System.Uri>。|  
+|[\<schemeSettings> 元素（Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何分析特定方案的 <xref:System.Uri>。|  
   
 ## <a name="remarks"></a>备注  
  默认情况下，<xref:System.Uri?displayProperty=nameWithType>类取消转义百分号编码执行路径压缩前的路径分隔符。 此操作实施为针对攻击，如以下一种安全机制：  

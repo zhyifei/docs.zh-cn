@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074971"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>如何：设置钢笔的宽度和对齐方式
@@ -59,5 +59,5 @@ ms.locfileid: "59074971"
   
 ## <a name="see-also"></a>请参阅
 
-- [使用钢笔绘制线条和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

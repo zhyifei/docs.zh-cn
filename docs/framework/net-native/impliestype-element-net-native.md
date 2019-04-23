@@ -1,14 +1,14 @@
 ---
-title: <ImpliesType> 元素 (.NET Native)
+title: <ImpliesType>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080873"
 ---
 # <a name="impliestype-element-net-native"></a>\<暗示类型 > 元素 (.NET Native)
@@ -53,13 +53,13 @@ ms.locfileid: "59080873"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*类型_名称*|类型名称。 如果此 `<ImpliesType>` 元素代表的类型同其包含的 `<Type>` 元素位于相同的命名空间，type_name 可能会包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|  
+|type_name|类型名称。 如果此 `<ImpliesType>` 元素代表的类型同其包含的 `<Type>` 元素位于相同的命名空间，type_name 可能会包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -70,7 +70,7 @@ ms.locfileid: "59080873"
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到一个方法。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到一个方法。|  
   
 ## <a name="remarks"></a>备注  
  该 `<ImpliesType>` 元素主要是供库使用的。 它讨论的是以下情景：  
@@ -112,6 +112,6 @@ ms.locfileid: "59080873"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

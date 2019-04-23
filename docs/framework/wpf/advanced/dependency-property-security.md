@@ -11,10 +11,10 @@ helpviewer_keywords:
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
 ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077467"
 ---
 # <a name="dependency-property-security"></a>依赖项属性的安全性
@@ -40,4 +40,4 @@ ms.locfileid: "59077467"
   
 ## <a name="see-also"></a>请参阅
 
-- [自定义依赖项属性](custom-dependency-properties.md)
+- [自定义依赖属性](custom-dependency-properties.md)

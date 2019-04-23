@@ -3,10 +3,10 @@ title: 导入声明：Open 关键字
 description: 了解如何F#导入声明和如何指定模块或命名空间可以不使用完全限定的名称引用其中的元素。
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59054996"
 ---
 # <a name="import-declarations-the-open-keyword"></a>导入声明：`open`关键字
@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>备注
 
-使用完全限定的命名空间或模块路径来引用代码每次都可以创建很难编写、 读取和维护的代码。 相反，可以使用`open`关键字常用模块和命名空间，以便在引用该模块或命名空间的成员时，您可以使用名称的缩写形式而不是完全限定名称。 此关键字是类似于`using`关键字在 C# 中， `using namespace` Visual c + +，和`Imports`在 Visual Basic 中。
+使用完全限定的命名空间或模块路径来引用代码每次都可以创建很难编写、 读取和维护的代码。 相反，可以使用`open`关键字常用模块和命名空间，以便在引用该模块或命名空间的成员时，您可以使用名称的缩写形式而不是完全限定名称。 此关键字是类似于`using`中的关键字C#，`using namespace`视觉对象中C++，和`Imports`在 Visual Basic 中。
 
 模块或命名空间提供必须在同一项目中或在引用的项目或程序集中。 如果不是这样，可以添加到项目中，引用或使用`-reference`命令`-`行选项 (或其缩写， `-r`)。 有关详细信息，请参阅[编译器选项](compiler-options.md)。
 

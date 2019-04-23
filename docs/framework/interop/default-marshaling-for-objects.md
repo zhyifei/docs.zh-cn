@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409271"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59076155"
 ---
 # <a name="default-marshaling-for-objects"></a>对象的默认封送处理
 可将类型化为 <xref:System.Object?displayProperty=nameWithType> 的参数和字段作为下列任一类型向非托管代码公开：  
@@ -314,6 +314,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |变体 v (VT_BYREF | VT_)|Ref 对象 o|仅类型未发生更改时。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [默认封送处理行为](default-marshaling-behavior.md)
 - [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
 - [方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

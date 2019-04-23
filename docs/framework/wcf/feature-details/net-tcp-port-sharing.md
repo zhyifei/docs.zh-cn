@@ -6,10 +6,10 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073684"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 端口共享
@@ -51,6 +51,6 @@ Windows Communication Foundation (WCF) 提供高性能通信的新的基于 TCP 
 ## <a name="see-also"></a>请参阅
 
 - [配置 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
-- [宿主](../../../../docs/framework/wcf/feature-details/hosting.md)
+- [承载](../../../../docs/framework/wcf/feature-details/hosting.md)
 - [如何：配置 WCF 服务以使用端口共享](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
 - [如何：启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
