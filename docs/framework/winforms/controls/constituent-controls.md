@@ -10,10 +10,10 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224866"
 ---
 # <a name="constituent-controls"></a>构成控件
@@ -47,6 +47,6 @@ System.Windows.Forms.PaintEventArgs e)
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [用户描述的控件](user-drawn-controls.md)
-- [如何：创建用于绘制的 Graphics 对象](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [用户绘制的控件](user-drawn-controls.md)
+- [如何：创建用于绘制图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [各种自定义控件](varieties-of-custom-controls.md)

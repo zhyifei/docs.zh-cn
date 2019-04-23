@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224918"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 的标记扩展概述
@@ -25,19 +25,19 @@ ms.locfileid: "59224918"
 >  `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如，用于各种特定框架的 Visual Studio 项目和页面模板启动使用这一个 XAML 文件`x:`映射。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` 提供<xref:System.Type>为命名类型的对象。 此功能最常在使用基础 CLR 类型和类型派生作为分组名字对象或标识符的延迟机制中使用。 WPF 样式和模板以及其 `TargetType` 属性的用法是一个具体示例。 有关详细信息，请参阅 [x:Type Markup Extension](x-type-markup-extension.md)。  
+ `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此功能最常在使用基础 CLR 类型和类型派生作为分组名字对象或标识符的延迟机制中使用。 WPF 样式和模板以及其 `TargetType` 属性的用法是一个具体示例。 有关详细信息，请参阅 [x:Type Markup Extension](x-type-markup-extension.md)。  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` 生成从值类型代码实体，它们不直接是属性的值的类型，但可以计算为该类型的静态值。 这可用于将已存在的值指定为类型定义中的已知常量。 有关详细信息，请参阅 [x:Static Markup Extension](x-static-markup-extension.md)。  
+ `x:Static` 从值-类型代码实体生成静态值，它们不直接是属性值的类型，但可以计算为该类型。 这可用于将已存在的值指定为类型定义中的已知常量。 有关详细信息，请参阅 [x:Static Markup Extension](x-static-markup-extension.md)。  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` 指定`null`作为 XAML 成员的值。 根据特定类型的设计或更大框架概念， `null` 并不总是属性的默认值，或是空字符串特性的隐式值。 有关详细信息，请参阅 [x:Null Markup Extension](x-null-markup-extension.md)。  
+ `x:Null` 指定 `null` 作为 XAML 成员的值。 根据特定类型的设计或更大框架概念， `null` 并不总是属性的默认值，或是空字符串特性的隐式值。 有关详细信息，请参阅 [x:Null Markup Extension](x-null-markup-extension.md)。  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` 支持在特意不使用由基元素和控件模型提供的集合支持的情况下的 XAML 语法中常规数组的创建。 有关更多信息，请参见 [x:Array Markup Extension](x-array-markup-extension.md)。 具体而言，在 XAML 2009 中，数组是作为语言基元而不是作为扩展进行访问。 有关更多信息，请参见 [XAML 2009 Language Features](xaml-2009-language-features.md)。  
+ `x:Array` 支持采用 XAML 语法创建常规数组，以防出现故意不使用由基元素和控件模型提供的集合支持的情况。 有关更多信息，请参见 [x:Array Markup Extension](x-array-markup-extension.md)。 具体而言，在 XAML 2009 中，数组是作为语言基元而不是作为扩展进行访问。 有关更多信息，请参见 [XAML 2009 Language Features](xaml-2009-language-features.md)。  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` 属于 XAML 2009 (原始 (2006) 语言集的扩展）。 `x:Reference` 表示对对象图中的另一个现有对象的引用。 该对象由其 `x:Name`进行标识。 有关详细信息，请参阅 [x:Reference Markup Extension](x-reference-markup-extension.md)。  
+ `x:Reference` 属于 XAML 2009（原始 (2006) 语言集的扩展）。 `x:Reference` 表示对对象图中另一个现有对象的引用。 该对象由其 `x:Name`进行标识。 有关详细信息，请参阅 [x:Reference Markup Extension](x-reference-markup-extension.md)。  
   
 ### <a name="other-x-constructs"></a>其他 x:构造  
  还有其他用于支持 XAML 语言功能的 `x:` 构造，不过这些构造并不作为标记扩展而实现。 有关详细信息，请参阅[XAML Namespace （x:）语言功能](xaml-namespace-x-language-features.md)。  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>自定义标记扩展的归因  
  若要支持设计环境和特定 XAML 对象编写器方案，应将标记扩展支持类型归于多个 CLR 特性。 这些特性报告预期标记扩展用法。  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 报表<xref:System.Type>对象的信息键入<xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A>返回。 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 通过其纯签名返回 <xref:System.Object>。 但各种使用者可能需要更精确的返回类型信息。 这包括：  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 为 <xref:System.Type> 返回的对象类型报告 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 信息。 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 通过其纯签名返回 <xref:System.Object>。 但各种使用者可能需要更精确的返回类型信息。 这包括：  
   
 -   设计器和 IDE，可能能够为标记扩展用法提供可识别类型的支持。  
   
@@ -138,11 +138,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  如果标记扩展用法使用位置参数，则它会表示为具有初始化值的起始对象。 作为大致的文本表示形式，节点流类似于下面这样：  
   
- `StartObject` (<xref:System.Xaml.XamlType>是标记扩展的定义类型，不是它的返回类型)  
+ `StartObject` （<xref:System.Xaml.XamlType> 是标记扩展的定义类型，而不是其返回类型）  
   
- `StartMember` (的名称<xref:System.Xaml.XamlMember>是`_InitializationText`)  
+ `StartMember` （ <xref:System.Xaml.XamlMember> 的名称是 `_InitializationText`)  
   
- `Value` （值为包括中间分隔符字符串作为位置自变量）  
+ `Value` （值是字符串形式的位置参数，包括中间分隔符）  
   
  `EndMember`  
   

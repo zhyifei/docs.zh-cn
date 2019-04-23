@@ -8,27 +8,27 @@ helpviewer_keywords:
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
 ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226425"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>关键帧动画帮助主题
 在本部分中的主题演示如何使用关键帧动画进行动画处理超过两个属性值和控制内插。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用关键帧对对象进行动画处理](how-to-animate-an-object-by-using-key-frames.md)  
- [使用关键帧对布尔值进行动画处理](how-to-animate-a-boolean-by-using-key-frames.md)  
- [使用关键帧对双精度值进行动画处理](how-to-animate-a-double-by-using-key-frames.md)  
- [使用关键帧对矩阵进行动画处理](how-to-animate-a-matrix-by-using-key-frames.md)  
- [使用关键帧对点进行动画处理](how-to-animate-a-point-by-using-key-frames.md)  
- [使用关键帧对矩形几何形状进行动画处理](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [使用关键帧对字符串进行动画处理](how-to-animate-a-string-by-using-key-frames.md)  
- [使用关键帧对颜色进行动画处理](how-to-animate-color-by-using-key-frames.md)  
- [使用关键帧对大小变化进行动画处理](how-to-animate-size-changes-by-using-key-frames.md)  
- [使用关键帧对边框的粗细进行动画处理](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [控制关键帧动画的计时](how-to-control-key-frame-animation-timing.md)  
+ [使用关键帧为对象设置动画效果](how-to-animate-an-object-by-using-key-frames.md)  
+ [使用关键帧为布尔值设置动画效果](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [使用关键帧为双精度值设置动画效果](how-to-animate-a-double-by-using-key-frames.md)  
+ [使用关键帧为矩阵设置动画效果](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [使用关键帧为点设置动画效果](how-to-animate-a-point-by-using-key-frames.md)  
+ [使用关键帧为矩形几何形状设置动画效果](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [使用关键帧为字符串设置动画效果](how-to-animate-a-string-by-using-key-frames.md)  
+ [使用关键帧为颜色设置动画效果](how-to-animate-color-by-using-key-frames.md)  
+ [使用关键帧为大小变化设置动画效果](how-to-animate-size-changes-by-using-key-frames.md)  
+ [使用关键帧为边框粗细设置动画效果](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [控制关键帧动画计时](how-to-control-key-frame-animation-timing.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  

@@ -2,12 +2,12 @@
 title: 选择 C# 语言版本 - C# 指南
 description: 配置编译器以使用特定的编译器版本执行语法验证
 ms.date: 02/28/2019
-ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212022"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770875"
 ---
 # <a name="select-the-c-language-version"></a>选择 C# 语言版本
 
@@ -80,7 +80,7 @@ Visual Studio 可帮助你确定需要的语言版本。 如果你使用的语�
 
 ## <a name="configure-multiple-projects"></a>配置多个项目
 
-可以创建包含 `<LangVersion>` 元素的 Directory.build.props 文件来配置多个目录。 通常是在解决方案目录中完成这件事。 将以下内容添加到解决方案目录中的 Directory.build.props 文件：
+可以创建包含 `<LangVersion>` 元素的 Directory.Build.props 文件来配置多个目录。 通常是在解决方案目录中完成这件事。 将以下内容添加到解决方案目录中的 Directory.Build.props 文件：
 
 ```xml
 <Project>

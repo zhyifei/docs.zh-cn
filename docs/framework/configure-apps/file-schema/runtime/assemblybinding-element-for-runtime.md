@@ -1,5 +1,5 @@
 ---
-title: <assemblyBinding> 元素 <runtime>
+title: <runtime> 的 <assemblyBinding> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -11,10 +11,10 @@ ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225243"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > 元素\<运行库 >
@@ -47,7 +47,7 @@ ms.locfileid: "59225243"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|封装程序集的绑定策略和程序集位置。 使用一个 **\<dependentAssembly >** 标记每个程序集。|  
-|[\<探测 >](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|指定加载程序集时公共语言运行时搜索的子目录。|  
+|[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|指定加载程序集时公共语言运行时搜索的子目录。|  
 |[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|指定运行时是否使用发布者策略。|  
 |[\<qualifyAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|指定使用部分名称时应动态加载的程序集全名。|  
   

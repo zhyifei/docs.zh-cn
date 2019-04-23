@@ -3,11 +3,11 @@ title: 使用 Activity 类的工作流活动创作
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
 ms.openlocfilehash: 1bec10b6ae9fb43319cfb6acbf59133e1acca09c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322311"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770760"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>使用 Activity 类的工作流活动创作
 若要创建使用 Windows Workflow Foundation (WF) 中的活动的最基本方法[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]是创建继承的类<xref:System.Activities.Activity>，创建功能通过组装自定义活动或活动从[内置活动库](net-framework-4-5-built-in-activity-library.md)。 本主题演示如何创建向控制台写入两个消息的活动。
