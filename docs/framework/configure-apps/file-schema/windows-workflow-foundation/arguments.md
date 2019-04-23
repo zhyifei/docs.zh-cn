@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
 ms.openlocfilehash: 2b0d982997ab590ce7f0fc4c482b1ddfa6bc758f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152797"
 ---
 # <a name="arguments"></a>\<自变量 >
@@ -50,7 +50,7 @@ ms.locfileid: "59152797"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<自变量 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|与活动状态查询相关联的参数。|  
+|[\<argument>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|与活动状态查询相关联的参数。|  
   
 ### <a name="parent-elements"></a>父元素  
   

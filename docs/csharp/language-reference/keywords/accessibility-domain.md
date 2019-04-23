@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141747"
 ---
 # <a name="accessibility-domain-c-reference"></a>可访问域（C# 参考）
@@ -32,9 +32,9 @@ ms.locfileid: "59141747"
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 - [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)
 - [可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [可访问性级别的使用限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [对使用可访问性级别的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [专用](../../../csharp/language-reference/keywords/private.md)
+- [受保护](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)

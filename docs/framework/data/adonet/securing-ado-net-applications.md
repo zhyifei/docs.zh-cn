@@ -3,10 +3,10 @@ title: 保证 ADO.NET 应用程序的安全
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149378"
 ---
 # <a name="securing-adonet-applications"></a>保证 ADO.NET 应用程序的安全
@@ -48,10 +48,10 @@ ms.locfileid: "59149378"
  [创建安全应用程序的资源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  提供用于创建安全应用程序的主题的链接。  
   
- [安全参考书目](/visualstudio/ide/security-bibliography)  
+ [安全性参考书目](/visualstudio/ide/security-bibliography)  
  提供联机和印刷资料中提供的外部资源的链接。  
   
 ## <a name="see-also"></a>请参阅
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

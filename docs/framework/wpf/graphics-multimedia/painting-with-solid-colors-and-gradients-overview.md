@@ -10,10 +10,10 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148299"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用纯色和渐变进行绘制概述
@@ -146,7 +146,7 @@ ms.locfileid: "59148299"
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>在“XAML”中指定颜色不透明度  
- 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定个别颜色的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法使用以下语法：  
+ 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，使用 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法指定个别颜色的不透明度。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 十六进制表示法使用下面语法：  
   
  `#` **aa** *rrggbb*  
   
@@ -172,6 +172,6 @@ ms.locfileid: "59148299"
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
-- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
-- [Brush 变换概述](brush-transformation-overview.md)
+- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [画笔转换概述](brush-transformation-overview.md)
 - [图形呈现层](../advanced/graphics-rendering-tiers.md)

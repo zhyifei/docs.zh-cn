@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147103"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用配置文件配置应用
@@ -101,7 +101,7 @@ ms.locfileid: "59147103"
 -   用户策略配置文件：%USERPROFILE%\Application data\Microsoft\CLR security config\vxx.xx\Security.config  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：使用 DEVPATH 查找程序集](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [如何：通过使用 devpath 查找程序集查找程序集](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  描述如何指示运行时在搜索程序集时使用 DEVPATH 环境变量。  
   
  [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -113,7 +113,7 @@ ms.locfileid: "59147103"
  [配置加密类](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  描述如何将算法名称映射到加密类，以及如何将对象标识符映射到加密算法。  
   
- [如何：创建发行者策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [如何：创建发布服务器策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  描述应当在何时以及如何添加发行者策略文件，以指定程序集重定向和基本代码设置。  
   
  [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
@@ -127,4 +127,4 @@ ms.locfileid: "59147103"
 - [ASP.NET 网站管理](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe（代码访问安全策略工具）](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）

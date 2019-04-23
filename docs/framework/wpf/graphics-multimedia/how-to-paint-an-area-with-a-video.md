@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151172"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>如何：使用视频绘制区域
@@ -40,6 +40,6 @@ ms.locfileid: "59151172"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Media.VisualBrush>
-- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
 - [TileBrush 概述](tilebrush-overview.md)
 - [多媒体概述](multimedia-overview.md)

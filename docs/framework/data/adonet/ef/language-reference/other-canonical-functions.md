@@ -3,14 +3,14 @@ title: 其他规范函数
 ms.date: 03/30/2017
 ms.assetid: 729bd47b-8e41-494c-a9a9-dcabf8b74312
 ms.openlocfilehash: 05eea547b8c1ad4adf39faa5def5f25c9d45d767
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146362"
 ---
 # <a name="other-canonical-functions"></a>其他规范函数
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含未归类为按位、 聚合、 数学规范函数日期/时间或字符串。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中提供了不属于按位、聚合、数学、日期/时间和字符串类别的其他规范函数。  
   
  下表显示其他 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 规范函数。  
   

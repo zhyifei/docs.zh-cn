@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558908"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59143645"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
 向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持后向兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。  
@@ -66,6 +66,7 @@ ms.locfileid: "54558908"
  如果找不到解决问题的适当方法，请记住，.NET Framework 4.5（或其中一个单点版本）是与版本 1.1、2.0 和 3.5 并行运行的，并且是取代版本 4 的就地更新。 对于以版本 1.1、2.0 和 3.5 为目标的应用程序，你可以在目标计算机上安装适当的 .NET Framework 版本以在其最佳环境中运行该应用程序。 有关并行执行的详细信息，请参阅[并行执行](../../../docs/framework/deployment/side-by-side-execution.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [新增功能](../../../docs/framework/whats-new/index.md)
 - [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
 - [应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)

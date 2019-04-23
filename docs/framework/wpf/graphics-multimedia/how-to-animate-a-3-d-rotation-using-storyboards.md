@@ -7,10 +7,10 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with Storyboards
 ms.assetid: 1020e44e-e21e-49a8-be53-53cbc1910e83
 ms.openlocfilehash: 03b01205f1a31426a01b09533b350682c384df4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146193"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a>如何：使用情节提要对三维旋转进行动画处理
@@ -21,7 +21,7 @@ ms.locfileid: "59146193"
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 Rotation3DAnimation 对三维旋转进行动画处理](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [使用关键帧对三维旋转进行动画处理 (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)
-- [三维图形概述](3-d-graphics-overview.md)
+- [使用 Rotation3DAnimation 为 3D 旋转设置动画效果](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [使用关键帧为 3D 旋转设置动画效果 (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)
+- [3D 图形概述](3-d-graphics-overview.md)
 - [演示图板概述](storyboards-overview.md)

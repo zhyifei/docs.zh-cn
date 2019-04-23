@@ -5,10 +5,10 @@ helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
 ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150444"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>为 Windows Communication Foundation 服务配置绑定
@@ -58,7 +58,7 @@ ms.locfileid: "59150444"
 </service>  
 ```  
   
- 在本示例中，`name` 属性表示使用该配置的服务类型。 当您用 `HelloWorld` 协定通过代码中创建服务时，它将以示例配置中定义的所有终结点进行初始化。 如果此程序集实现只有一个服务协定，`name`属性可以省略，因为服务使用唯一可用的类型。 该属性采用的格式必须为一个字符串 `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ 在本示例中，`name` 属性表示使用该配置的服务类型。 当您用 `HelloWorld` 协定通过代码中创建服务时，它将以示例配置中定义的所有终结点进行初始化。 如果此程序集实现只有一个服务协定，`name`属性可以省略，因为服务使用唯一可用的类型。 该属性采用字符串，该字符串必须遵循以下格式：`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  `address` 属性指定其他终结点用于与该服务通信的 URI。 该 URI 可以是绝对路径，也可以是相对路径。 如果提供的是相对地址，则需要主机提供适合于绑定中所使用的传输方案的基址。 如果未配置地址，则假定基址为该终结点的地址。  
   

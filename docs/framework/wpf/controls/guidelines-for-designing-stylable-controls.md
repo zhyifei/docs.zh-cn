@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148156"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>可样式化控件的设计准则
@@ -42,11 +42,11 @@ ms.locfileid: "59148156"
   
     -   最大限度地减少协定。  
   
-    -   围绕如下预期进行设计：在设计时（即，在使用设计工具时），控件模板通常处于不完整状态。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 因此，控件必须要生成这种状态可能是有效的假定条件下，不提供"正在撰写"状态的基础结构。  
+    -   围绕如下预期进行设计：在设计时（即，在使用设计工具时），控件模板通常处于不完整状态。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不提供“正在撰写”状态的基础结构，因此，控件必须围绕这样的状态可能有效这一预期来生成。  
   
     -   在没有遵循模板协定的任何方面时，不引发异常。 按照这一原则，当面板的子级太多或太少时，面板不应引发异常。  
   
--   **外围功能分解成模板帮助程序元素。** 每个控件都应当将重点放在其核心功能和真正的价值主张上，而且每个控件都应当由控件的常见用法定义。 为此，请使用模板中的撰写和帮助程序元素实现外围行为和可视化（即，那些不构成控件核心功能的行为和可视化）。 帮助程序元素分为三类：  
+-   **将外围功能分解成模板帮助程序元素。** 每个控件都应当将重点放在其核心功能和真正的价值主张上，而且每个控件都应当由控件的常见用法定义。 为此，请使用模板中的撰写和帮助程序元素实现外围行为和可视化（即，那些不构成控件核心功能的行为和可视化）。 帮助程序元素分为三类：  
   
     -   **独立**帮助程序类型是以“匿名方式”用在模板中的可重用的公共控件或基元，这意味着帮助程序元素和带样式的控件无法互相识别。 在技术上，任何元素都可以是匿名类型，但是在此上下文中，该术语描述了那些封装专用功能以实现目标方案的类型。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59148156"
   
 -   **使用 Name 属性标记模板中的元素**。 如果控件需要在样式中查找某个元素才能以编程方式访问它，则该控件应当使用 `Name` 属性和 `FindName` 范例来进行查找。 控件不应在未找到所需元素时引发异常，而是应在不提示的情况下禁用需要该元素的功能。  
   
--   **使用最佳做法来表示控件状态和样式中的行为。** 下面按顺序列出了用来表示样式中的控件状态更改和行为的最佳做法。 应使用列表上的第一项来实现你的方案。  
+-   **使用最佳做法来表示样式中的控件状态和行为。** 下面按顺序列出了用来表示样式中的控件状态更改和行为的最佳做法。 应使用列表上的第一项来实现你的方案。  
   
     1.  属性绑定。 示例： 绑定之间<xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "59148156"
   
 -   **慎用样式触发器（与模板触发器相对）**。 影响模板中元素上的属性的触发器必须在模板中声明。 影响控件上的属性的触发器（没有 `TargetName`）可以在样式中声明，除非你知道更改模板还可能会损坏触发器。  
   
--   **在与现有的样式设置模式保持一致。** 一个问题常常有多种解决办法。 注意尽可能与现有的控件样式设置模式保持一致。 这一点尤其重要的控件的派生自同一基类型 (例如， <xref:System.Windows.Controls.ContentControl>， <xref:System.Windows.Controls.ItemsControl>， <xref:System.Windows.Controls.Primitives.RangeBase>，依此类推)。  
+-   **与现有的样式设置模式保持一致。** 一个问题常常有多种解决办法。 注意尽可能与现有的控件样式设置模式保持一致。 这一点尤其重要的控件的派生自同一基类型 (例如， <xref:System.Windows.Controls.ContentControl>， <xref:System.Windows.Controls.ItemsControl>， <xref:System.Windows.Controls.Primitives.RangeBase>，依此类推)。  
   
--   **在不重新模板化的情况下公开属性来启用常见自定义项方案**。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支持可插入/可自定义的部件，因此控件用户留下的自定义的只有两个方法： 直接设置属性或者使用样式设置属性。 请记住，比较合适的做法是，设置数量有限的属性，使其面向极其常见的高优先级自定义项方案，否则的话，这些方案需要重新模板化。 下面是有关何时以及如何启用自定义项方案的最佳方法：  
+-   **在不重新模板化的情况下公开属性来启用常见自定义项方案**。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不支持可插入/可自定义的部件，因此控件用户只能使用两种自定义方法：直接设置属性或者使用样式设置属性。 请记住，比较合适的做法是，设置数量有限的属性，使其面向极其常见的高优先级自定义项方案，否则的话，这些方案需要重新模板化。 下面是有关何时以及如何启用自定义项方案的最佳方法：  
   
     -   极其常见的自定义项应当作为属性在控件上公开并由模板使用。  
   

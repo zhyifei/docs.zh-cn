@@ -3,10 +3,10 @@ title: SQL-CLR 类型映射
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152485"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
@@ -26,7 +26,7 @@ ms.locfileid: "59152485"
   
 -   [数值映射](#NumericMapping)  
   
--   [文本和 XML 映射](#TextMapping)  
+-   [文本和 XML 的映射](#TextMapping)  
   
 -   [日期和时间映射](#DateMapping)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "59152485"
   
  下一个表显示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法使用的默认类型映射，以定义创建何种 SQL 列来映射到对象模型或外部映射文件中定义的 CLR 类型。  
   
-|CLR 类型|使用默认 SQL Server 类型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 类型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 使用的默认 SQL Server 类型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,12 +142,12 @@ ms.locfileid: "59152485"
   
  下一个表显示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法使用的默认类型映射，以定义创建何种 SQL 列来映射到对象模型或外部映射文件中定义的 CLR 类型。  
   
-|CLR 类型|使用默认 SQL Server 类型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 类型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 使用的默认 SQL Server 类型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
-|自定义类型实现`Parse()`和 `ToString()`|`NVARCHAR(MAX)`|  
+|实现 `Parse()` 和 `ToString()` 的自定义类型|`NVARCHAR(MAX)`|  
   
  有许多其他可以选择的基于文本的映射和 XML 映射，但是某些映射在转换到数据库或从数据库中转换时，可能会导致溢出或数据丢失异常。 有关详细信息，请参阅[类型映射运行时行为矩阵](#BehaviorMatrix)。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "59152485"
   
  下一个表显示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法使用的默认类型映射，以定义创建何种 SQL 列来映射到对象模型或外部映射文件中定义的 CLR 类型。  
   
-|CLR 类型|使用默认 SQL Server 类型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 类型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 使用的默认 SQL Server 类型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ ms.locfileid: "59152485"
 ### <a name="systemdatetime"></a>System.Datetime  
  CLR <xref:System.DateTime?displayProperty=nameWithType> 类型的范围和精度大于 SQL Server `DATETIME` 类型，这是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法的默认类型映射。 要避免与 `DATETIME` 范围之外的日期相关的异常，请使用 `DATETIME2`（从 Microsoft SQL Server 2008 开始可用）。 `DATETIME2` 可以与匹配的范围和精度的 clr <xref:System.DateTime?displayProperty=nameWithType>。  
   
- SQL Server 日期不具有 <xref:System.TimeZone>（CLR 中得到充分支持的一种功能）的概念。 <xref:System.TimeZone> 值保存到数据库而不是如<xref:System.TimeZone>转换，而不考虑原始<xref:System.DateTimeKind>信息。 从数据库中检索到 <xref:System.DateTime> 值时，它们的值按原样加载到 <xref:System.DateTime> 为 <xref:System.DateTimeKind> 的 <xref:System.DateTimeKind.Unspecified> 中。 有关详细信息支持<xref:System.DateTime?displayProperty=nameWithType>方法，请参阅[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)。  
+ SQL Server 日期不具有 <xref:System.TimeZone>（CLR 中得到充分支持的一种功能）的概念。 无论原始 <xref:System.TimeZone> 信息如何，<xref:System.TimeZone> 值均不进行 <xref:System.DateTimeKind> 转换，按原样保存到数据库中。 从数据库中检索到 <xref:System.DateTime> 值时，它们的值按原样加载到 <xref:System.DateTime> 为 <xref:System.DateTimeKind> 的 <xref:System.DateTimeKind.Unspecified> 中。 有关详细信息支持<xref:System.DateTime?displayProperty=nameWithType>方法，请参阅[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)。  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 和 .NET Framework 3.5 SP1 允许您将 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 类型映射到 SQL Server `TIME` 类型。 但是，CLR <xref:System.TimeSpan?displayProperty=nameWithType> 支持的范围和 SQL Server `TIME` 类型支持的范围之间存在很大的差异。 SQL `TIME` 的映射值小于 0 或大于 23:59:59.9999999 小时将导致溢出异常。 有关详细信息，请参阅[System.TimeSpan 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)。  
@@ -221,7 +221,7 @@ ms.locfileid: "59152485"
   
  下一个表显示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法使用的默认类型映射，以定义创建何种 SQL 列来映射到对象模型或外部映射文件中定义的 CLR 类型。  
   
-|CLR 类型|使用默认 SQL Server 类型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 类型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 使用的默认 SQL Server 类型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ ms.locfileid: "59152485"
   
  下一个表显示 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法使用的默认类型映射，以定义创建何种 SQL 列来映射到对象模型或外部映射文件中定义的 CLR 类型。  
   
-|CLR 类型|使用默认 SQL Server 类型 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 类型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 使用的默认 SQL Server 类型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
 ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146765"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用视觉样式呈现控件
@@ -56,7 +56,7 @@ ms.locfileid: "59146765"
   
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间的主要类为 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是一个基础类，用于标识视觉样式支持的任何控件或用户界面元素。 除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身， <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含许多 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 嵌套类，这些类具有为视觉样式支持的控件、控件部件或其他 UI 元素的状态返回 `static` 的 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 属性。  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供的绘制和获取有关每个信息的方法<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>操作系统当前视觉样式定义。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装视觉样式 (UxTheme) API 从 Windows Platform SDK 的 Windows Shell 部分的功能。 有关详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供一些方法，这些方法可以绘制和获取由操作系统当前视觉样式定义的每个 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的信息。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装来自 Windows Platform SDK 的 Windows Shell 部分的视觉样式 (UxTheme) API 的功能。 有关详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
   
  有关使用详细信息<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>并<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，请参阅[如何：呈现的视觉样式元素](how-to-render-a-visual-style-element.md)。  
   

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148091"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
@@ -41,13 +41,13 @@ ms.locfileid: "59148091"
 ## <a name="xaml-defined-markup-extensions"></a>XAML 定义的标记扩展  
  存在这么几种标记扩展，它们并非特定于 XAML 的 WPF 实现，而是语言形式的 XAML 的内部函数或功能的实现。 这些标记扩展在 System.Xaml 程序集中作为常规 .NET Framework XAML 服务的一部分而实现，并且位于 XAML 语言 XAML 命名空间内。 就常见标记用法而言，这些标记扩展通常可由用法中的 `x:` 前缀标识。 <xref:System.Windows.Markup.MarkupExtension>基类 （也在 System.Xaml 中定义） 提供了所有标记扩展应都使用以支持在 XAML 读取器和 XAML 编写器，包括 WPF XAML 中的模式。  
   
--   `x:Type` 提供<xref:System.Type>为命名类型的对象。 此扩展最常用于样式和模板。 有关详细信息，请参阅 [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)。  
+-   `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此扩展最常用于样式和模板。 有关详细信息，请参阅 [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)。  
   
 -   `x:Static` 生成静态值。 这些值来自于值类型代码实体，它们不直接是目标属性值的类型，但可以计算为该类型。 有关详细信息，请参阅 [x:Static 标记扩展](../../xaml-services/x-static-markup-extension.md)。  
   
--   `x:Null` 指定`null`作为一个属性的值且可用于特性或属性元素值。 有关详细信息，请参阅 [x:Null 标记扩展](../../xaml-services/x-null-markup-extension.md)。  
+-   `x:Null` 将 `null` 指定为属性的值，可用于特性或属性元素值。 有关详细信息，请参阅 [x:Null 标记扩展](../../xaml-services/x-null-markup-extension.md)。  
   
--   `x:Array` XAML 语法，其中的集合支持提供的 WPF 基元素且在特意不使用控件模型的用例中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。  
+-   在特意不使用 WPF 基元素和控件模型提供的集合支持的情况下，`x:Array` 为 XAML 语法中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。  
   
 > [!NOTE]
 >  `x:` 前缀在 XAML 文件或生成的根元素中用于 XAML 语言内部函数的典型 XAML 命名空间映射。 例如，WPF 应用程序的 Visual Studio 模板启动使用这一个 XAML 文件`x:`映射。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但本文档将采用默认的 `x:` 映射，并通过它来标识属于 XAML 语言的 XAML 命名空间已定义部分的那些实体，这与 WPF 默认命名空间或与特定框架不相关的其他 XAML 命名空间相反。  
@@ -56,19 +56,19 @@ ms.locfileid: "59148091"
 ## <a name="wpf-specific-markup-extensions"></a>特定于 WPF 的标记扩展  
  WPF 编程中最常用的标记扩展是支持资源引用的标记扩展（`StaticResource` 和 `DynamicResource`），和支持数据绑定的标记扩展 (`Binding`)。  
   
--   `StaticResource` 通过替换已定义资源的值的属性提供值。 `StaticResource` 计算最终在 XAML 加载时进行，并且在运行时没有访问对象图的权限。 有关详细信息，请访问 [StaticResource 标记扩展](staticresource-markup-extension.md)。  
+-   `StaticResource` 通过替换已定义资源的值来为属性提供值。 `StaticResource` 计算最终在 XAML 加载时进行，并且在运行时没有访问对象图的权限。 有关详细信息，请访问 [StaticResource 标记扩展](staticresource-markup-extension.md)。  
   
--   `DynamicResource` 通过延迟将对资源的运行时引用值的属性提供值。 动态资源引用强制在每次访问此类资源时都进行新查找，且在运行时有权访问对象图。 为了获取此访问权限，WPF 属性系统中的依赖项属性和计算出的表达式支持 `DynamicResource` 概念。 因此，只能对依赖项属性目标使用 `DynamicResource`。 有关详细信息，请参阅 [DynamicResource 标记扩展](dynamicresource-markup-extension.md)。  
+-   `DynamicResource` 通过将值推迟为对资源的运行时引用来为属性提供值。 动态资源引用强制在每次访问此类资源时都进行新查找，且在运行时有权访问对象图。 为了获取此访问权限，WPF 属性系统中的依赖项属性和计算出的表达式支持 `DynamicResource` 概念。 因此，只能对依赖项属性目标使用 `DynamicResource`。 有关详细信息，请参阅 [DynamicResource 标记扩展](dynamicresource-markup-extension.md)。  
   
--   `Binding` 提供了数据绑定使用在运行时应用于父对象的数据上下文的属性的值。 此标记扩展相对复杂，因为它会启用大量内联语法来指定数据绑定。 有关详细信息，请参阅 [Binding 标记扩展](binding-markup-extension.md)。  
+-   `Binding` 使用在运行时应用于父对象的数据上下文来为属性提供数据绑定值。 此标记扩展相对复杂，因为它会启用大量内联语法来指定数据绑定。 有关详细信息，请参阅 [Binding 标记扩展](binding-markup-extension.md)。  
   
 -   `RelativeSource` 提供源信息<xref:System.Windows.Data.Binding>，可以定位在运行时对象树中的若干可能关系。 对于在多用途模板中创建的绑定，或在未充分了解周围的对象树的情况下以代码创建的绑定，此标记扩展为其提供专用源。 有关详细信息，请参阅 [RelativeSource 标记扩展](relativesource-markupextension.md)。  
   
--   `TemplateBinding` 使控件模板以使用来自将使用该模板类的对象模型定义属性的模板化属性的值。 换言之，模板定义中的属性可访问仅在应用了模板之后才存在的上下文。 有关详细信息，请参阅 [TemplateBinding 标记扩展](templatebinding-markup-extension.md)。 有关 `TemplateBinding` 的实际使用的详细信息，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
+-   `TemplateBinding` 使控件模板能够使用模板化属性的值，这些属性来自于将使用该模板的类的对象模型定义属性。 换言之，模板定义中的属性可访问仅在应用了模板之后才存在的上下文。 有关详细信息，请参阅 [TemplateBinding 标记扩展](templatebinding-markup-extension.md)。 有关 `TemplateBinding` 的实际使用的详细信息，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 -   `ColorConvertedBitmap` 支持相对高级的映像方案。 有关详细信息，请参阅 [ColorConvertedBitmap 标记扩展](colorconvertedbitmap-markup-extension.md)。  
   
--   `ComponentResourceKey` 和`ThemeDictionary`特别是对于资源和与自定义控件打包在一起的主题支持资源查找的方面。 有关详细信息，请参阅 [ComponentResourceKey 标记扩展](componentresourcekey-markup-extension.md)、[ThemeDictionary 标记扩展](themedictionary-markup-extension.md)或[控件创作概述](../controls/control-authoring-overview.md)。  
+-   `ComponentResourceKey` 和 `ThemeDictionary` 支持资源查找的各个方面，特别是支持查找与自定义控件一起打包的资源和主题。 有关详细信息，请参阅 [ComponentResourceKey 标记扩展](componentresourcekey-markup-extension.md)、[ThemeDictionary 标记扩展](themedictionary-markup-extension.md)或[控件创作概述](../controls/control-authoring-overview.md)。  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*Extension 类  
@@ -119,7 +119,7 @@ ms.locfileid: "59148091"
 ## <a name="see-also"></a>请参阅
 
 - [XAML 概述 (WPF)](xaml-overview-wpf.md)
-- [XAML 命名空间 (x:)语言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace （x:）语言功能](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 扩展](wpf-xaml-extensions.md)
 - [StaticResource 标记扩展](staticresource-markup-extension.md)
 - [绑定标记扩展](binding-markup-extension.md)

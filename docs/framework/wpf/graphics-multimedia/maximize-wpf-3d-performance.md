@@ -5,10 +5,10 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
 ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147519"
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大程度地提高 WPF 三维性能
@@ -43,7 +43,7 @@ ms.locfileid: "59147519"
 |<xref:System.Windows.Media.Brush>|使用<xref:System.Windows.Media.ImageBrush>而不是<xref:System.Windows.Media.VisualBrush>或<xref:System.Windows.Media.DrawingBrush>时画笔的内容将不会更改。  2D 内容可以转换为<xref:System.Windows.Controls.Image>通过<xref:System.Windows.Media.Imaging.RenderTargetBitmap>，然后再在<xref:System.Windows.Media.ImageBrush>。|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>|不要使用<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>除非确实需要查看的背面，否则你<xref:System.Windows.Media.Media3D.GeometryModel3D>。|  
 |<xref:System.Windows.Media.Media3D.Light>|浅速度 （最快到速度最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
-|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|尝试使网格大小小于这些限制：<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>:20001<xref:System.Windows.Media.Media3D.Point3D>实例<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>:60,003<xref:System.Int32>实例|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|尝试使网格大小小于这些限制：<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>：20001<xref:System.Windows.Media.Media3D.Point3D>实例<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>：60,003<xref:System.Int32>实例|  
 |<xref:System.Windows.Media.Media3D.Material>|材料的速度 （最快到速度最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
 |<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 不一致的方式不参与 （黑色的环境画笔、 透明画笔等） 不可见的画笔。  请考虑您的场景中省略这些画笔。|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|每个<xref:System.Windows.Media.Media3D.Material>在<xref:System.Windows.Media.Media3D.MaterialGroup>会导致另一个呈现处理过程，因此包含多个材料，甚至简单的材料，可以极大地提高了对您的 GPU 的填充要求。  中的材料的数量降至最低你<xref:System.Windows.Media.Media3D.MaterialGroup>。|  
@@ -61,4 +61,4 @@ ms.locfileid: "59147519"
   
 ## <a name="see-also"></a>请参阅
 
-- [三维图形概述](3-d-graphics-overview.md)
+- [3D 图形概述](3-d-graphics-overview.md)

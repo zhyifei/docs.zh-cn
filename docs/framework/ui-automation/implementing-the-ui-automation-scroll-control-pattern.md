@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154526"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>实现 UI 自动化 Scroll 控件模式
@@ -36,11 +36,11 @@ ms.locfileid: "59154526"
   
 -   当以百分比度量滚动时，与滚动刻度相关的所有值或量必须规范化为 0 到 100 的范围。  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 并<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>独立于<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>。  
+-   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 和 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 独立于 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>。  
   
 -   如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` 则 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 应设置为 100%，且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 应设置为 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 类似，如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 则 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 应设置为 100%，且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 应设置为 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 这允许使用这些属性值中的 UI 自动化客户端<xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A>方法，同时避免[争用条件](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723)方向客户端不感兴趣滚动被激活。  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 是特定于区域设置的。 设置 HorizontalScrollPercent = 100.0 时，则对于英语等从左到右阅读的语言，必须将控件的滚动位置设置为等于其最右位置。 而对于阿拉伯语等从右到左阅读的语言，设置 HorizontalScrollPercent = 100.0 时必须将滚动位置设置为最左位置。  
+-   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 是特定于区域设置。 设置 HorizontalScrollPercent = 100.0 时，则对于英语等从左到右阅读的语言，必须将控件的滚动位置设置为等于其最右位置。 而对于阿拉伯语等从右到左阅读的语言，设置 HorizontalScrollPercent = 100.0 时必须将滚动位置设置为最左位置。  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider 必需的成员  
@@ -65,9 +65,9 @@ ms.locfileid: "59154526"
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 如果控件支持则会引发此异常<xref:System.Windows.Automation.ScrollAmount.SmallIncrement>值仅对水平或垂直滚动，但<xref:System.Windows.Automation.ScrollAmount.LargeIncrement>中传递值。|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 不能转换为双精度的值传递中时，会引发此异常。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 会引发此异常中传入大于 100 或小于 0 的值 (等效于-1 除外， <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>)。|  
+|<xref:System.ArgumentException>|如果控件仅对于水平或垂直滚动支持<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 值，而传入了 <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> 值，则 <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> 将引发此异常。|  
+|<xref:System.ArgumentException>|当传入值无法转换为双精度时，<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 会引发此异常。|  
+|<xref:System.ArgumentOutOfRangeException>|当传入大于 100 或小于 0 的值（-1 除外，因为它等效于<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> ）时， <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>会引发此异常。|  
 |<xref:System.InvalidOperationException>|当尝试在不支持的方向进行滚动时， <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 和 <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 都引发此异常。|  
   
 ## <a name="see-also"></a>请参阅

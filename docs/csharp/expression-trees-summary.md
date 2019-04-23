@@ -3,12 +3,12 @@ title: 表达式树摘要
 description: 总结如何使用表达式树创建将代码解释为数据并基于该代码生成新功能的动态程序。
 ms.date: 06/20/2016
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: e0d46aa67b61fd4e1d2bcc20b4a567524bb00301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213505"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59148624"
 ---
 # <a name="expression-trees-summary"></a>表达式树摘要
 
@@ -25,4 +25,3 @@ ms.locfileid: "33213505"
 存在一些不好翻译成表达式树的较新的 C# 语言元素。 表达式树不能包含 `await` 表达式或 `async` lambda 表达式。 C# 6 发行中添加的许多功能不会完全按照表达式树中所编写的那样显示。 较新的功能可能会显示在表达式树中等效、早期的语法中。 这可能不像你想象的那样有局限性。 实际上，这意味着在引入新语言功能时，解释表达式树的代码将仍可能照常运行。
 
 即使具有这些限制，通过表达式树，仍可创建依赖于解释和修改表示为数据结构的代码的动态算法。 它是一种功能强大的工具，作为 .NET 生态系统的一种功能，它可使丰富的库（如实体框架）完成其所执行的操作。
-
