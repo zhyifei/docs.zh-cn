@@ -9,26 +9,26 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
 ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299132"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="69709-102">如何：加速访问具有长限定路径 (Visual Basic 中) 的对象</span><span class="sxs-lookup"><span data-stu-id="69709-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
-<span data-ttu-id="69709-103">如果经常访问的对象需要多个方法和属性的限定路径，可以通过不重复限定路径来加快你的代码。</span><span class="sxs-lookup"><span data-stu-id="69709-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="2d289-102">如何：加速访问具有长限定路径 (Visual Basic 中) 的对象</span><span class="sxs-lookup"><span data-stu-id="2d289-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
+<span data-ttu-id="2d289-103">如果经常访问的对象需要多个方法和属性的限定路径，可以通过不重复限定路径来加快你的代码。</span><span class="sxs-lookup"><span data-stu-id="2d289-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  
   
- <span data-ttu-id="69709-104">有两种方法可以避免重复限定路径。</span><span class="sxs-lookup"><span data-stu-id="69709-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="69709-105">可以将对象分配给一个变量，也可以使用它在`With`...`End With`块。</span><span class="sxs-lookup"><span data-stu-id="69709-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>  
+ <span data-ttu-id="2d289-104">有两种方法可以避免重复限定路径。</span><span class="sxs-lookup"><span data-stu-id="2d289-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="2d289-105">可以将对象分配给一个变量，也可以使用它在`With`...`End With`块。</span><span class="sxs-lookup"><span data-stu-id="2d289-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="69709-106">若要加速访问很大程度限定对象将其分配给一个变量</span><span class="sxs-lookup"><span data-stu-id="69709-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="2d289-106">若要加速访问很大程度限定对象将其分配给一个变量</span><span class="sxs-lookup"><span data-stu-id="2d289-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>  
   
-1. <span data-ttu-id="69709-107">声明要经常访问的对象类型的变量。</span><span class="sxs-lookup"><span data-stu-id="69709-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="69709-108">在声明的初始化部分中指定的限定路径。</span><span class="sxs-lookup"><span data-stu-id="69709-108">Specify the qualification path in the initialization part of the declaration.</span></span>  
+1. <span data-ttu-id="2d289-107">声明要经常访问的对象类型的变量。</span><span class="sxs-lookup"><span data-stu-id="2d289-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="2d289-108">在声明的初始化部分中指定的限定路径。</span><span class="sxs-lookup"><span data-stu-id="2d289-108">Specify the qualification path in the initialization part of the declaration.</span></span>  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2. <span data-ttu-id="69709-109">使用变量来访问该对象的成员。</span><span class="sxs-lookup"><span data-stu-id="69709-109">Use the variable to access the object's members.</span></span>  
+2. <span data-ttu-id="2d289-109">使用变量来访问该对象的成员。</span><span class="sxs-lookup"><span data-stu-id="2d289-109">Use the variable to access the object's members.</span></span>  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -36,15 +36,15 @@ ms.locfileid: "59299132"
     ctrlActv.Show()  
     ```  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="69709-110">若要加速访问很大程度限定对象通过使用 With...End With 块</span><span class="sxs-lookup"><span data-stu-id="69709-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="2d289-110">若要加速访问很大程度限定对象通过使用 With...End With 块</span><span class="sxs-lookup"><span data-stu-id="2d289-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>  
   
-1. <span data-ttu-id="69709-111">将限定路径放在`With`语句。</span><span class="sxs-lookup"><span data-stu-id="69709-111">Put the qualification path in a `With` statement.</span></span>  
+1. <span data-ttu-id="2d289-111">将限定路径放在`With`语句。</span><span class="sxs-lookup"><span data-stu-id="2d289-111">Put the qualification path in a `With` statement.</span></span>  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2. <span data-ttu-id="69709-112">访问内部对象的成员`With`阻止，之前`End With`语句。</span><span class="sxs-lookup"><span data-stu-id="69709-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>  
+2. <span data-ttu-id="2d289-112">访问内部对象的成员`With`阻止，之前`End With`语句。</span><span class="sxs-lookup"><span data-stu-id="2d289-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>  
   
     ```  
         .Text = "Test"  
@@ -53,7 +53,7 @@ ms.locfileid: "59299132"
     End With  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="69709-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="69709-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d289-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="2d289-113">See also</span></span>
 
-- [<span data-ttu-id="69709-114">对象变量</span><span class="sxs-lookup"><span data-stu-id="69709-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="69709-115">With...End With 语句</span><span class="sxs-lookup"><span data-stu-id="69709-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [<span data-ttu-id="2d289-114">对象变量</span><span class="sxs-lookup"><span data-stu-id="2d289-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="2d289-115">With...End With 语句</span><span class="sxs-lookup"><span data-stu-id="2d289-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

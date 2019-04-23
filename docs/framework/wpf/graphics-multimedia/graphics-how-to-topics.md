@@ -9,24 +9,24 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230650"
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="e5088-102">图形帮助主题</span><span class="sxs-lookup"><span data-stu-id="e5088-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="e5088-103">以下主题演示如何使用的图形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e5088-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="39d53-102">图形帮助主题</span><span class="sxs-lookup"><span data-stu-id="39d53-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="39d53-103">以下主题演示如何使用的图形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="39d53-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e5088-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e5088-104">In This Section</span></span>  
- [<span data-ttu-id="e5088-105">对矩形进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e5088-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="e5088-106">使用 PointAnimation 针对对象位置进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e5088-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="e5088-107">转换点和矢量</span><span class="sxs-lookup"><span data-stu-id="e5088-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="e5088-108">将玻璃框扩展到 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="e5088-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="e5088-109">如何：通过缓存元素来改善呈现性能</span><span class="sxs-lookup"><span data-stu-id="e5088-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="e5088-110">如何：使用缓存的元素作为画笔</span><span class="sxs-lookup"><span data-stu-id="e5088-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="39d53-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="39d53-104">In This Section</span></span>  
+ [<span data-ttu-id="39d53-105">为矩形设置动画效果</span><span class="sxs-lookup"><span data-stu-id="39d53-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="39d53-106">使用 PointAnimation 为对象位置设置动画效果</span><span class="sxs-lookup"><span data-stu-id="39d53-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="39d53-107">转换点和矢量</span><span class="sxs-lookup"><span data-stu-id="39d53-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="39d53-108">将玻璃框扩展到 WPF 应用程序中</span><span class="sxs-lookup"><span data-stu-id="39d53-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="39d53-109">如何：改善呈现性能，通过缓存元素</span><span class="sxs-lookup"><span data-stu-id="39d53-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="39d53-110">如何：缓存的元素用作画笔</span><span class="sxs-lookup"><span data-stu-id="39d53-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e5088-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5088-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39d53-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="39d53-111">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
@@ -35,5 +35,5 @@ ms.locfileid: "59230650"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="e5088-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="e5088-112">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="e5088-113">WPF 图形呈现疑难解答</span><span class="sxs-lookup"><span data-stu-id="e5088-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="39d53-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="39d53-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="39d53-113">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="39d53-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
