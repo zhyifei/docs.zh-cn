@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 15b42bb72975fad4c1830a961f83d9e3065d055b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187455"
 ---
-# <a name="isymunmanageddocumentgeturl-method"></a><span data-ttu-id="7cbba-102">ISymUnmanagedDocument::GetURL 方法</span><span class="sxs-lookup"><span data-stu-id="7cbba-102">ISymUnmanagedDocument::GetURL Method</span></span>
-<span data-ttu-id="7cbba-103">返回此文档的统一资源定位符 (URL)。</span><span class="sxs-lookup"><span data-stu-id="7cbba-103">Returns the uniform resource locator (URL) for this document.</span></span>  
+# <a name="isymunmanageddocumentgeturl-method"></a><span data-ttu-id="348ff-102">ISymUnmanagedDocument::GetURL 方法</span><span class="sxs-lookup"><span data-stu-id="348ff-102">ISymUnmanagedDocument::GetURL Method</span></span>
+<span data-ttu-id="348ff-103">返回此文档的统一资源定位符 (URL)。</span><span class="sxs-lookup"><span data-stu-id="348ff-103">Returns the uniform resource locator (URL) for this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7cbba-104">语法</span><span class="sxs-lookup"><span data-stu-id="7cbba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="348ff-104">语法</span><span class="sxs-lookup"><span data-stu-id="348ff-104">Syntax</span></span>  
   
 ```  
 HRESULT GetURL(  
@@ -36,19 +36,19 @@ HRESULT GetURL(
     [out, size_is(cchUrl), length_is(*pcchUrl)] WCHAR szUrl[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7cbba-105">参数</span><span class="sxs-lookup"><span data-stu-id="7cbba-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="348ff-105">参数</span><span class="sxs-lookup"><span data-stu-id="348ff-105">Parameters</span></span>  
  `cchUrl`  
- <span data-ttu-id="7cbba-106">[in]大小，以字符为单位的`szURL`缓冲区。</span><span class="sxs-lookup"><span data-stu-id="7cbba-106">[in] The size, in characters, of the `szURL` buffer.</span></span>  
+ <span data-ttu-id="348ff-106">[in]大小，以字符为单位的`szURL`缓冲区。</span><span class="sxs-lookup"><span data-stu-id="348ff-106">[in] The size, in characters, of the `szURL` buffer.</span></span>  
   
  `pcchUrl`  
- <span data-ttu-id="7cbba-107">[out]指向一个变量来接收 URL，包括 null 终止的大小的指针。</span><span class="sxs-lookup"><span data-stu-id="7cbba-107">[out] A pointer to a variable that receives the size of the URL, including the null termination.</span></span>  
+ <span data-ttu-id="348ff-107">[out]指向一个变量来接收 URL，包括 null 终止的大小的指针。</span><span class="sxs-lookup"><span data-stu-id="348ff-107">[out] A pointer to a variable that receives the size of the URL, including the null termination.</span></span>  
   
  `szUrl`  
- <span data-ttu-id="7cbba-108">[out]包含 URL 的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="7cbba-108">[out] The buffer containing the URL.</span></span>  
+ <span data-ttu-id="348ff-108">[out]包含 URL 的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="348ff-108">[out] The buffer containing the URL.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7cbba-109">返回值</span><span class="sxs-lookup"><span data-stu-id="7cbba-109">Return Value</span></span>  
- <span data-ttu-id="7cbba-110">如果方法成功，则为 S_OK否则为错误代码。</span><span class="sxs-lookup"><span data-stu-id="7cbba-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="348ff-109">返回值</span><span class="sxs-lookup"><span data-stu-id="348ff-109">Return Value</span></span>  
+ <span data-ttu-id="348ff-110">如果方法成功，则为 S_OK否则为错误代码。</span><span class="sxs-lookup"><span data-stu-id="348ff-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7cbba-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="7cbba-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="348ff-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="348ff-111">See also</span></span>
 
-- [<span data-ttu-id="7cbba-112">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="7cbba-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="348ff-112">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="348ff-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

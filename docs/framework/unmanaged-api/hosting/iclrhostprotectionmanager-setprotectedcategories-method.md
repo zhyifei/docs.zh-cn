@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63b6e85b6abe20e9e1f0b00648a06a31735e63c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183620"
 ---
-# <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a><span data-ttu-id="c10a8-102">ICLRHostProtectionManager::SetProtectedCategories 方法</span><span class="sxs-lookup"><span data-stu-id="c10a8-102">ICLRHostProtectionManager::SetProtectedCategories Method</span></span>
-<span data-ttu-id="c10a8-103">指定的类别的托管的类型和成员应禁止在部分受信任的代码中运行。</span><span class="sxs-lookup"><span data-stu-id="c10a8-103">Specifies which categories of managed types and members should be blocked from running in partially trusted code.</span></span>  
+# <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a><span data-ttu-id="8f2e4-102">ICLRHostProtectionManager::SetProtectedCategories 方法</span><span class="sxs-lookup"><span data-stu-id="8f2e4-102">ICLRHostProtectionManager::SetProtectedCategories Method</span></span>
+<span data-ttu-id="8f2e4-103">指定的类别的托管的类型和成员应禁止在部分受信任的代码中运行。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-103">Specifies which categories of managed types and members should be blocked from running in partially trusted code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c10a8-104">语法</span><span class="sxs-lookup"><span data-stu-id="c10a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f2e4-104">语法</span><span class="sxs-lookup"><span data-stu-id="8f2e4-104">Syntax</span></span>  
   
 ```  
 HRESULT SetProtectedCategories (  
@@ -35,37 +35,37 @@ HRESULT SetProtectedCategories (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c10a8-105">参数</span><span class="sxs-lookup"><span data-stu-id="c10a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f2e4-105">参数</span><span class="sxs-lookup"><span data-stu-id="8f2e4-105">Parameters</span></span>  
  `categories`  
- <span data-ttu-id="c10a8-106">[in]组合[EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)值，指示哪些类别的托管的类型和成员应禁止在部分受信任的代码中运行。</span><span class="sxs-lookup"><span data-stu-id="c10a8-106">[in] A combination of [EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md) values, indicating which categories of managed types and members should be blocked from running in partially trusted code.</span></span>  
+ <span data-ttu-id="8f2e4-106">[in]组合[EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)值，指示哪些类别的托管的类型和成员应禁止在部分受信任的代码中运行。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-106">[in] A combination of [EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md) values, indicating which categories of managed types and members should be blocked from running in partially trusted code.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c10a8-107">返回值</span><span class="sxs-lookup"><span data-stu-id="c10a8-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8f2e4-107">返回值</span><span class="sxs-lookup"><span data-stu-id="8f2e4-107">Return Value</span></span>  
   
-|<span data-ttu-id="c10a8-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c10a8-108">HRESULT</span></span>|<span data-ttu-id="c10a8-109">描述</span><span class="sxs-lookup"><span data-stu-id="c10a8-109">Description</span></span>|  
+|<span data-ttu-id="8f2e4-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8f2e4-108">HRESULT</span></span>|<span data-ttu-id="8f2e4-109">描述</span><span class="sxs-lookup"><span data-stu-id="8f2e4-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c10a8-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="c10a8-110">S_OK</span></span>|`SetProtectedCategories` <span data-ttu-id="c10a8-111">已成功返回。</span><span class="sxs-lookup"><span data-stu-id="c10a8-111">returned successfully.</span></span>|  
-|<span data-ttu-id="c10a8-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c10a8-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c10a8-113">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="c10a8-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c10a8-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c10a8-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c10a8-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="c10a8-115">The call timed out.</span></span>|  
-|<span data-ttu-id="c10a8-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c10a8-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c10a8-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="c10a8-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c10a8-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c10a8-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c10a8-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="c10a8-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c10a8-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c10a8-120">E_FAIL</span></span>|<span data-ttu-id="c10a8-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="c10a8-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c10a8-122">方法返回 E_FAIL 后，CLR 不再在进程中使用。</span><span class="sxs-lookup"><span data-stu-id="c10a8-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c10a8-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="c10a8-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="8f2e4-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="8f2e4-110">S_OK</span></span>|<span data-ttu-id="8f2e4-111">`SetProtectedCategories` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-111">`SetProtectedCategories` returned successfully.</span></span>|  
+|<span data-ttu-id="8f2e4-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8f2e4-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8f2e4-113">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="8f2e4-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8f2e4-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8f2e4-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-115">The call timed out.</span></span>|  
+|<span data-ttu-id="8f2e4-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8f2e4-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8f2e4-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="8f2e4-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8f2e4-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8f2e4-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="8f2e4-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8f2e4-120">E_FAIL</span></span>|<span data-ttu-id="8f2e4-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8f2e4-122">方法返回 E_FAIL 后，CLR 不再在进程中使用。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8f2e4-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c10a8-124">备注</span><span class="sxs-lookup"><span data-stu-id="c10a8-124">Remarks</span></span>  
- <span data-ttu-id="c10a8-125">每个`EApiCategories`值指的托管的类型和成员的列表。</span><span class="sxs-lookup"><span data-stu-id="c10a8-125">Each `EApiCategories` value refers to a list of managed types and members.</span></span> <span data-ttu-id="c10a8-126">`EApiCategories`枚举和`SetProtectedCategories`方法并直接关系到托管<xref:System.Security.Permissions.HostProtectionAttribute>类，该类用于将标记公开功能与通过所述的类别相对应的托管的类型和成员`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="c10a8-126">The `EApiCategories` enumeration and the `SetProtectedCategories` method are directly related to the managed <xref:System.Security.Permissions.HostProtectionAttribute> class, which is used to mark managed types and members that expose capabilities corresponding to the categories described by `EApiCategories`.</span></span> <span data-ttu-id="c10a8-127">有关详细信息，请参阅<xref:System.Security.Permissions.HostProtectionAttribute>并<xref:System.Security.Permissions.HostProtectionResource>枚举，它直接对应于`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="c10a8-127">For more information, see <xref:System.Security.Permissions.HostProtectionAttribute> and the <xref:System.Security.Permissions.HostProtectionResource> enumeration, which directly corresponds to `EApiCategories`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8f2e4-124">备注</span><span class="sxs-lookup"><span data-stu-id="8f2e4-124">Remarks</span></span>  
+ <span data-ttu-id="8f2e4-125">每个`EApiCategories`值指的托管的类型和成员的列表。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-125">Each `EApiCategories` value refers to a list of managed types and members.</span></span> <span data-ttu-id="8f2e4-126">`EApiCategories`枚举和`SetProtectedCategories`方法并直接关系到托管<xref:System.Security.Permissions.HostProtectionAttribute>类，该类用于将标记公开功能与通过所述的类别相对应的托管的类型和成员`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-126">The `EApiCategories` enumeration and the `SetProtectedCategories` method are directly related to the managed <xref:System.Security.Permissions.HostProtectionAttribute> class, which is used to mark managed types and members that expose capabilities corresponding to the categories described by `EApiCategories`.</span></span> <span data-ttu-id="8f2e4-127">有关详细信息，请参阅<xref:System.Security.Permissions.HostProtectionAttribute>并<xref:System.Security.Permissions.HostProtectionResource>枚举，它直接对应于`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-127">For more information, see <xref:System.Security.Permissions.HostProtectionAttribute> and the <xref:System.Security.Permissions.HostProtectionResource> enumeration, which directly corresponds to `EApiCategories`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c10a8-128">要求</span><span class="sxs-lookup"><span data-stu-id="c10a8-128">Requirements</span></span>  
- <span data-ttu-id="c10a8-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c10a8-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f2e4-128">要求</span><span class="sxs-lookup"><span data-stu-id="8f2e4-128">Requirements</span></span>  
+ <span data-ttu-id="8f2e4-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8f2e4-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c10a8-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c10a8-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8f2e4-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8f2e4-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c10a8-131">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c10a8-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8f2e4-131">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="8f2e4-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="c10a8-132">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="c10a8-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="8f2e4-132">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f2e4-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c10a8-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="c10a8-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f2e4-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="8f2e4-133">See also</span></span>
 
 - <xref:System.Security.Permissions.HostProtectionAttribute>
 - <xref:System.Security.Permissions.HostProtectionResource>
-- [<span data-ttu-id="c10a8-134">EApiCategories 枚举</span><span class="sxs-lookup"><span data-stu-id="c10a8-134">EApiCategories Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
-- [<span data-ttu-id="c10a8-135">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="c10a8-135">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="c10a8-136">ICLRHostProtectionManager 接口</span><span class="sxs-lookup"><span data-stu-id="c10a8-136">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [<span data-ttu-id="8f2e4-134">EApiCategories 枚举</span><span class="sxs-lookup"><span data-stu-id="8f2e4-134">EApiCategories Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
+- [<span data-ttu-id="8f2e4-135">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="8f2e4-135">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="8f2e4-136">ICLRHostProtectionManager 接口</span><span class="sxs-lookup"><span data-stu-id="8f2e4-136">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)

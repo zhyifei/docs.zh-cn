@@ -3,23 +3,23 @@ title: Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 ms.date: 03/30/2017
 ms.assetid: e5b820ae-504d-405a-926a-9effa41d2369
 ms.openlocfilehash: 0c9e79709f5929e1fa123a8d1695ca720046e9e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190868"
 ---
-# <a name="microsofttransactionstransactionbridgereplaymessageretry"></a><span data-ttu-id="114b9-102">Microsoft.Transactions.TransactionBridge.ReplayMessageRetry</span><span class="sxs-lookup"><span data-stu-id="114b9-102">Microsoft.Transactions.TransactionBridge.ReplayMessageRetry</span></span>
-<span data-ttu-id="114b9-103">已向无响应的协调程序发送重播消息重试。</span><span class="sxs-lookup"><span data-stu-id="114b9-103">A replay message retry was sent to an unresponsive coordinator.</span></span>  
+# <a name="microsofttransactionstransactionbridgereplaymessageretry"></a><span data-ttu-id="be96d-102">Microsoft.Transactions.TransactionBridge.ReplayMessageRetry</span><span class="sxs-lookup"><span data-stu-id="be96d-102">Microsoft.Transactions.TransactionBridge.ReplayMessageRetry</span></span>
+<span data-ttu-id="be96d-103">已向无响应的协调程序发送重播消息重试。</span><span class="sxs-lookup"><span data-stu-id="be96d-103">A replay message retry was sent to an unresponsive coordinator.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="114b9-104">描述</span><span class="sxs-lookup"><span data-stu-id="114b9-104">Description</span></span>  
- <span data-ttu-id="114b9-105">如果本地事务管理器因未在给定的时间内收到响应而需要向上级协调程序重新发送重播消息，则进行跟踪。</span><span class="sxs-lookup"><span data-stu-id="114b9-105">Traced if the local Transaction Manager needed to resend a Replay message to a superior coordinator because it did not receive a response in a given amount of time.</span></span>  
+## <a name="description"></a><span data-ttu-id="be96d-104">描述</span><span class="sxs-lookup"><span data-stu-id="be96d-104">Description</span></span>  
+ <span data-ttu-id="be96d-105">如果本地事务管理器因未在给定的时间内收到响应而需要向上级协调程序重新发送重播消息，则进行跟踪。</span><span class="sxs-lookup"><span data-stu-id="be96d-105">Traced if the local Transaction Manager needed to resend a Replay message to a superior coordinator because it did not receive a response in a given amount of time.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="114b9-106">疑难解答</span><span class="sxs-lookup"><span data-stu-id="114b9-106">Troubleshooting</span></span>  
- <span data-ttu-id="114b9-107">调查导致响应未及时传送的潜在网络或产品问题。</span><span class="sxs-lookup"><span data-stu-id="114b9-107">Investigate potential network or product issues that prevent the response from being delivered on time.</span></span>  <span data-ttu-id="114b9-108">如果看到很多这样的消息，可能表明基础结构有问题或响应时间异常长。</span><span class="sxs-lookup"><span data-stu-id="114b9-108">If many of these messages are seen, it can indicate infrastructure problems or abnormally long response times.</span></span> <span data-ttu-id="114b9-109">这两种问题都会明显降低系统中事务的吞吐量。</span><span class="sxs-lookup"><span data-stu-id="114b9-109">Both issues will drastically reduce the throughput of transactions within the system.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="be96d-106">疑难解答</span><span class="sxs-lookup"><span data-stu-id="be96d-106">Troubleshooting</span></span>  
+ <span data-ttu-id="be96d-107">调查导致响应未及时传送的潜在网络或产品问题。</span><span class="sxs-lookup"><span data-stu-id="be96d-107">Investigate potential network or product issues that prevent the response from being delivered on time.</span></span>  <span data-ttu-id="be96d-108">如果看到很多这样的消息，可能表明基础结构有问题或响应时间异常长。</span><span class="sxs-lookup"><span data-stu-id="be96d-108">If many of these messages are seen, it can indicate infrastructure problems or abnormally long response times.</span></span> <span data-ttu-id="be96d-109">这两种问题都会明显降低系统中事务的吞吐量。</span><span class="sxs-lookup"><span data-stu-id="be96d-109">Both issues will drastically reduce the throughput of transactions within the system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="114b9-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="114b9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be96d-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="be96d-110">See also</span></span>
 
-- [<span data-ttu-id="114b9-111">跟踪</span><span class="sxs-lookup"><span data-stu-id="114b9-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="114b9-112">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="114b9-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="114b9-113">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="114b9-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="be96d-111">跟踪</span><span class="sxs-lookup"><span data-stu-id="be96d-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="be96d-112">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="be96d-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="be96d-113">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="be96d-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

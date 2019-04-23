@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b617e29e2df22b59114c8b978daa645de1cc6176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186714"
 ---
-# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="3743a-102">IMetaDataAssemblyEmit::DefineManifestResource 方法</span><span class="sxs-lookup"><span data-stu-id="3743a-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
-<span data-ttu-id="3743a-103">创建包含指定清单资源的元数据的 `ManifestResource` 结构，并返回关联的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="3743a-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="cd781-102">IMetaDataAssemblyEmit::DefineManifestResource 方法</span><span class="sxs-lookup"><span data-stu-id="cd781-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
+<span data-ttu-id="cd781-103">创建包含指定清单资源的元数据的 `ManifestResource` 结构，并返回关联的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="cd781-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3743a-104">语法</span><span class="sxs-lookup"><span data-stu-id="3743a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd781-104">语法</span><span class="sxs-lookup"><span data-stu-id="cd781-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineManifestResource (  
@@ -39,34 +39,34 @@ HRESULT DefineManifestResource (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3743a-105">参数</span><span class="sxs-lookup"><span data-stu-id="3743a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cd781-105">参数</span><span class="sxs-lookup"><span data-stu-id="cd781-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="3743a-106">[in]资源的名称。</span><span class="sxs-lookup"><span data-stu-id="3743a-106">[in] The name of the resource.</span></span>  
+ <span data-ttu-id="cd781-106">[in]资源的名称。</span><span class="sxs-lookup"><span data-stu-id="cd781-106">[in] The name of the resource.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="3743a-107">[in]类型的元数据令牌`mdtFile`或`mdtAssemblyRef`，它映射到资源提供程序。</span><span class="sxs-lookup"><span data-stu-id="3743a-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="3743a-108">NULL 值指示在其中嵌入的元数据文件为资源提供程序。</span><span class="sxs-lookup"><span data-stu-id="3743a-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
+ <span data-ttu-id="cd781-107">[in]类型的元数据令牌`mdtFile`或`mdtAssemblyRef`，它映射到资源提供程序。</span><span class="sxs-lookup"><span data-stu-id="cd781-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="cd781-108">NULL 值指示在其中嵌入的元数据文件为资源提供程序。</span><span class="sxs-lookup"><span data-stu-id="cd781-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="3743a-109">[in]到文件中资源的开头的偏移量。</span><span class="sxs-lookup"><span data-stu-id="3743a-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="3743a-110">对于独立文件中的资源，这将始终为零。</span><span class="sxs-lookup"><span data-stu-id="3743a-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="3743a-111">如果 PE （可移植可执行文件） 文件中嵌入资源，这是资源 BLOB，cor.h 标头文件中指定的位置开始的偏移量。</span><span class="sxs-lookup"><span data-stu-id="3743a-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
+ <span data-ttu-id="cd781-109">[in]到文件中资源的开头的偏移量。</span><span class="sxs-lookup"><span data-stu-id="cd781-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="cd781-110">对于独立文件中的资源，这将始终为零。</span><span class="sxs-lookup"><span data-stu-id="cd781-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="cd781-111">如果 PE （可移植可执行文件） 文件中嵌入资源，这是资源 BLOB，cor.h 标头文件中指定的位置开始的偏移量。</span><span class="sxs-lookup"><span data-stu-id="cd781-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="3743a-112">[in]指定资源定义的属性设置的标志值的按位组合。</span><span class="sxs-lookup"><span data-stu-id="3743a-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
+ <span data-ttu-id="cd781-112">[in]指定资源定义的属性设置的标志值的按位组合。</span><span class="sxs-lookup"><span data-stu-id="cd781-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
   
  `pmdmr`  
- <span data-ttu-id="3743a-113">[out]指向返回的元数据标记的指针。</span><span class="sxs-lookup"><span data-stu-id="3743a-113">[out] A pointer to the returned metadata token.</span></span>  
+ <span data-ttu-id="cd781-113">[out]指向返回的元数据标记的指针。</span><span class="sxs-lookup"><span data-stu-id="cd781-113">[out] A pointer to the returned metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3743a-114">备注</span><span class="sxs-lookup"><span data-stu-id="3743a-114">Remarks</span></span>  
- <span data-ttu-id="3743a-115">一个`ManifestResource`必须为每个程序集的文件中实现每个资源定义元数据结构。</span><span class="sxs-lookup"><span data-stu-id="3743a-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd781-114">备注</span><span class="sxs-lookup"><span data-stu-id="cd781-114">Remarks</span></span>  
+ <span data-ttu-id="cd781-115">一个`ManifestResource`必须为每个程序集的文件中实现每个资源定义元数据结构。</span><span class="sxs-lookup"><span data-stu-id="cd781-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3743a-116">要求</span><span class="sxs-lookup"><span data-stu-id="3743a-116">Requirements</span></span>  
- <span data-ttu-id="3743a-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3743a-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd781-116">要求</span><span class="sxs-lookup"><span data-stu-id="cd781-116">Requirements</span></span>  
+ <span data-ttu-id="cd781-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd781-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3743a-118">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3743a-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cd781-118">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cd781-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3743a-119">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="3743a-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="cd781-119">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="cd781-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="3743a-120">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="3743a-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="cd781-120">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd781-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3743a-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="3743a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd781-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="cd781-121">See also</span></span>
 
-- [<span data-ttu-id="3743a-122">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="3743a-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="cd781-122">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="cd781-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

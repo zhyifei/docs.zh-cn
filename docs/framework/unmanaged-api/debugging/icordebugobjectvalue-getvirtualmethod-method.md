@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 612d09c8303f7216e4f384668bee755ac375f6ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189341"
 ---
-# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="59699-102">ICorDebugObjectValue::GetVirtualMethod 方法</span><span class="sxs-lookup"><span data-stu-id="59699-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
-`GetVirtualMethod` <span data-ttu-id="59699-103">此版本的.NET Framework 中未实现。</span><span class="sxs-lookup"><span data-stu-id="59699-103">is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="62b5a-102">ICorDebugObjectValue::GetVirtualMethod 方法</span><span class="sxs-lookup"><span data-stu-id="62b5a-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
+<span data-ttu-id="62b5a-103">`GetVirtualMethod` 此版本的.NET Framework 中未实现。</span><span class="sxs-lookup"><span data-stu-id="62b5a-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59699-104">语法</span><span class="sxs-lookup"><span data-stu-id="59699-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62b5a-104">语法</span><span class="sxs-lookup"><span data-stu-id="62b5a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethod (  
@@ -36,7 +36,7 @@ HRESULT GetVirtualMethod (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="59699-105">要求</span><span class="sxs-lookup"><span data-stu-id="59699-105">Requirements</span></span>  
- <span data-ttu-id="59699-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="59699-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62b5a-105">要求</span><span class="sxs-lookup"><span data-stu-id="62b5a-105">Requirements</span></span>  
+ <span data-ttu-id="62b5a-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="62b5a-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59699-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="59699-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62b5a-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="62b5a-107">See also</span></span>
