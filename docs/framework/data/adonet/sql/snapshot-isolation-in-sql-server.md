@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
 ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215932"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔离
@@ -144,5 +144,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
 ## <a name="see-also"></a>请参阅
 
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
 - [事务锁定和行版本控制指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

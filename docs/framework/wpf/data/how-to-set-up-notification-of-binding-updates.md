@@ -7,17 +7,17 @@ helpviewer_keywords:
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
 ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213957"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>如何：设置绑定更新的通知
 本示例演示如何设置在绑定的绑定目标（目标）或绑定源（源）属性更新时收到通知。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引发数据更新事件每次指出已更新绑定源或目标。 从内部来看，此事件用于通知用户界面 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 执行更新，因为绑定数据已更改。 注意，要确保这些事件起作用，并确保单向或双向绑定正常工作，需要使用 <xref:System.ComponentModel.INotifyPropertyChanged> 接口实现数据类。 有关详细信息，请参阅[实现属性更改通知](how-to-implement-property-change-notification.md)。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 在每次更新绑定源或目标时都会引发数据更新事件。 从内部来看，此事件用于通知用户界面 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 执行更新，因为绑定数据已更改。 注意，要确保这些事件起作用，并确保单向或双向绑定正常工作，需要使用 <xref:System.ComponentModel.INotifyPropertyChanged> 接口实现数据类。 有关详细信息，请参阅[实现属性更改通知](how-to-implement-property-change-notification.md)。  
   
  将绑定中的 <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> 或 <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> 属性（或两者）设置为 `true`。 提供的用于侦听此事件的处理程序必须直接附加到希望收到更改通知的元素，但如果希望在上下文中的任何内容发生变化时得到通知，则必须附加到整个数据上下文。  
   

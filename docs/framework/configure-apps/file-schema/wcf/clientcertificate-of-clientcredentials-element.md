@@ -3,10 +3,10 @@ title: <clientCertificate> <clientCredentials>元素
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
 ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216452"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > 的\<clientCredentials > 元素
@@ -62,6 +62,6 @@ ms.locfileid: "59216452"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [如何：指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [保证客户端的安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

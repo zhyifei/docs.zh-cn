@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
 ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217427"
 ---
 # <a name="getting-started-tutorial"></a>入门教程
@@ -25,13 +25,13 @@ ms.locfileid: "59217427"
  [如何：运行工作流](how-to-run-a-workflow.md)  
  介绍如何从宿主环境调用工作流、如何将数据传入和传出工作流以及如何继续书签。  
   
- [如何：创建和运行长期运行的工作流](how-to-create-and-run-a-long-running-workflow.md)  
+ [如何：创建和运行长时间运行工作流](how-to-create-and-run-a-long-running-workflow.md)  
  介绍如何向工作流应用程序添加持久性。  
   
  [如何：创建自定义跟踪参与者](how-to-create-a-custom-tracking-participant.md)  
  介绍如何创建自定义跟踪参与者和跟踪配置文件。  
   
- [如何：并行承载多个版本的工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  介绍如何使用 `WorkflowIdentity` 并行承载工作流的多个版本。  
   
  [如何：更新正在运行的工作流实例的定义](how-to-update-the-definition-of-a-running-workflow-instance.md)  

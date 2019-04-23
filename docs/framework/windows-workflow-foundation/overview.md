@@ -3,10 +3,10 @@ title: Windows 工作流概述
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217596"
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
@@ -33,7 +33,7 @@ ms.locfileid: "59217596"
   
  ![图，显示工作流组件如何交互。](./media/overview/workflow-component-interatction.gif)  
   
- 在上图中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 类的 <xref:System.Activities.WorkflowInvoker> 方法用于调用多个工作流实例。 <xref:System.Activities.WorkflowInvoker> 用于不需要由主机; 管理的轻型工作流需要由宿主管理的工作流 (如<xref:System.Activities.Bookmark>恢复) 必须使用执行<xref:System.Activities.WorkflowApplication.Run%2A>相反。 无需等待一个工作流实例完成即可调用下一个工作流实例；运行时引擎支持同时运行多个工作流实例。  调用的工作流如下：  
+ 在上图中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 类的 <xref:System.Activities.WorkflowInvoker> 方法用于调用多个工作流实例。 <xref:System.Activities.WorkflowInvoker> 用于不需要由宿主管理的轻型工作流；需要由宿主管理的工作流（如 <xref:System.Activities.Bookmark> 恢复）必须改用 <xref:System.Activities.WorkflowApplication.Run%2A> 来执行。 无需等待一个工作流实例完成即可调用下一个工作流实例；运行时引擎支持同时运行多个工作流实例。  调用的工作流如下：  
   
 -   一个包含 <xref:System.Activities.Statements.Sequence> 子活动的 <xref:System.Activities.Statements.WriteLine> 活动。 父活动的 <xref:System.Activities.Variable> 绑定到子活动的 <xref:System.Activities.InArgument>。 在变量、 参数以及绑定的详细信息，请参阅[变量和自变量](variables-and-arguments.md)。  
   
@@ -43,4 +43,4 @@ ms.locfileid: "59217596"
   
 ## <a name="see-also"></a>请参阅
 
-- [BizTalk Server 2006 还是 WF？ 为你的项目选择正确的工作流工具](https://go.microsoft.com/fwlink/?LinkId=154901)
+- [BizTalk Server 2006 还是 WF？为你的项目选择正确的工作流工具](https://go.microsoft.com/fwlink/?LinkId=154901)

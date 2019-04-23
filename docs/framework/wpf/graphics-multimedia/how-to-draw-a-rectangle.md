@@ -7,10 +7,10 @@ helpviewer_keywords:
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
 ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217349"
 ---
 # <a name="how-to-draw-a-rectangle"></a>如何：绘制矩形
@@ -33,5 +33,5 @@ ms.locfileid: "59217349"
 
 - <xref:System.Windows.Shapes.Rectangle>
 - [形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [WPF 中的形状和基本图形概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
 - [表概述](../advanced/table-overview.md)
