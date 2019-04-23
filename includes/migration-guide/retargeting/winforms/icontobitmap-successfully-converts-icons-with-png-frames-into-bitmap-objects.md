@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234349"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803302"
 ---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap 成功将带 PNG 帧的图标转换为位图对象
 
