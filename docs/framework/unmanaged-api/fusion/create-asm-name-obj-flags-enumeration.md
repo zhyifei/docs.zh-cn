@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aebc6dfe4830e6477cda8fd279b8ef2a8040895c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149664"
 ---
-# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="f73dc-102">CREATE_ASM_NAME_OBJ_FLAGS 枚举</span><span class="sxs-lookup"><span data-stu-id="f73dc-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
-<span data-ttu-id="f73dc-103">指定的特性[IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)对象时通过构造[CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="f73dc-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
+# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="7e938-102">CREATE_ASM_NAME_OBJ_FLAGS 枚举</span><span class="sxs-lookup"><span data-stu-id="7e938-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
+<span data-ttu-id="7e938-103">指定的特性[IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)对象时通过构造[CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="7e938-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f73dc-104">语法</span><span class="sxs-lookup"><span data-stu-id="f73dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e938-104">语法</span><span class="sxs-lookup"><span data-stu-id="7e938-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -40,24 +40,24 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f73dc-105">成员</span><span class="sxs-lookup"><span data-stu-id="f73dc-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7e938-105">成员</span><span class="sxs-lookup"><span data-stu-id="7e938-105">Members</span></span>  
   
-|<span data-ttu-id="f73dc-106">成员</span><span class="sxs-lookup"><span data-stu-id="f73dc-106">Member</span></span>|<span data-ttu-id="f73dc-107">描述</span><span class="sxs-lookup"><span data-stu-id="f73dc-107">Description</span></span>|  
+|<span data-ttu-id="7e938-106">成员</span><span class="sxs-lookup"><span data-stu-id="7e938-106">Member</span></span>|<span data-ttu-id="7e938-107">描述</span><span class="sxs-lookup"><span data-stu-id="7e938-107">Description</span></span>|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="f73dc-108">指示传递的参数是文本标识。</span><span class="sxs-lookup"><span data-stu-id="f73dc-108">Indicates that the parameter passed is a textual identity.</span></span>|  
-|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="f73dc-109">设置了几个默认值。</span><span class="sxs-lookup"><span data-stu-id="f73dc-109">Sets a few default values.</span></span>|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="f73dc-110">验证友元程序集的规则 （仅限名称和公钥）。</span><span class="sxs-lookup"><span data-stu-id="f73dc-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="f73dc-111">此成员是仅供内部使用。</span><span class="sxs-lookup"><span data-stu-id="f73dc-111">This member is for internal use only.</span></span>|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="f73dc-112">组合`CANOF_PARSE_DISPLAY_NAME`和`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`标志。</span><span class="sxs-lookup"><span data-stu-id="f73dc-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="f73dc-113">此成员是仅供内部使用。</span><span class="sxs-lookup"><span data-stu-id="f73dc-113">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="7e938-108">指示传递的参数是文本标识。</span><span class="sxs-lookup"><span data-stu-id="7e938-108">Indicates that the parameter passed is a textual identity.</span></span>|  
+|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="7e938-109">设置了几个默认值。</span><span class="sxs-lookup"><span data-stu-id="7e938-109">Sets a few default values.</span></span>|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="7e938-110">验证友元程序集的规则 （仅限名称和公钥）。</span><span class="sxs-lookup"><span data-stu-id="7e938-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="7e938-111">此成员是仅供内部使用。</span><span class="sxs-lookup"><span data-stu-id="7e938-111">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="7e938-112">组合`CANOF_PARSE_DISPLAY_NAME`和`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`标志。</span><span class="sxs-lookup"><span data-stu-id="7e938-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="7e938-113">此成员是仅供内部使用。</span><span class="sxs-lookup"><span data-stu-id="7e938-113">This member is for internal use only.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f73dc-114">要求</span><span class="sxs-lookup"><span data-stu-id="f73dc-114">Requirements</span></span>  
- <span data-ttu-id="f73dc-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f73dc-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e938-114">要求</span><span class="sxs-lookup"><span data-stu-id="7e938-114">Requirements</span></span>  
+ <span data-ttu-id="7e938-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7e938-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f73dc-116">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f73dc-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7e938-116">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7e938-116">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="f73dc-117">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="f73dc-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="7e938-117">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e938-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f73dc-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="f73dc-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e938-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="7e938-118">See also</span></span>
 
-- [<span data-ttu-id="f73dc-119">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="f73dc-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="f73dc-120">CreateAssemblyNameObject 函数</span><span class="sxs-lookup"><span data-stu-id="f73dc-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [<span data-ttu-id="f73dc-121">合成枚举</span><span class="sxs-lookup"><span data-stu-id="f73dc-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="7e938-119">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="7e938-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="7e938-120">CreateAssemblyNameObject 函数</span><span class="sxs-lookup"><span data-stu-id="7e938-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
+- [<span data-ttu-id="7e938-121">合成枚举</span><span class="sxs-lookup"><span data-stu-id="7e938-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

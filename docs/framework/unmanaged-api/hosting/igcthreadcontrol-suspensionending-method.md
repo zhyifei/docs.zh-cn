@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 90b0cba50129bc728089e41ece5a30697cfc3bc5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144412"
 ---
-# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="d470e-102">IGCThreadControl::SuspensionEnding 方法</span><span class="sxs-lookup"><span data-stu-id="d470e-102">IGCThreadControl::SuspensionEnding Method</span></span>
-<span data-ttu-id="d470e-103">通知主机运行时垃圾回收或其他挂起之后恢复线程。</span><span class="sxs-lookup"><span data-stu-id="d470e-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
+# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="970b0-102">IGCThreadControl::SuspensionEnding 方法</span><span class="sxs-lookup"><span data-stu-id="970b0-102">IGCThreadControl::SuspensionEnding Method</span></span>
+<span data-ttu-id="970b0-103">通知主机运行时垃圾回收或其他挂起之后恢复线程。</span><span class="sxs-lookup"><span data-stu-id="970b0-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d470e-104">语法</span><span class="sxs-lookup"><span data-stu-id="d470e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="970b0-104">语法</span><span class="sxs-lookup"><span data-stu-id="970b0-104">Syntax</span></span>  
   
 ```  
 HRESULT SuspensionEnding (  
@@ -35,22 +35,22 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d470e-105">参数</span><span class="sxs-lookup"><span data-stu-id="d470e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="970b0-105">参数</span><span class="sxs-lookup"><span data-stu-id="970b0-105">Parameters</span></span>  
  `Generation`  
- <span data-ttu-id="d470e-106">[in]对其执行垃圾回收生成。</span><span class="sxs-lookup"><span data-stu-id="d470e-106">[in] The generation on which a garbage collection has been performed.</span></span>  
+ <span data-ttu-id="970b0-106">[in]对其执行垃圾回收生成。</span><span class="sxs-lookup"><span data-stu-id="970b0-106">[in] The generation on which a garbage collection has been performed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d470e-107">备注</span><span class="sxs-lookup"><span data-stu-id="d470e-107">Remarks</span></span>  
- <span data-ttu-id="d470e-108">不重新计划在任何线程`SuspensionEnding`回调。</span><span class="sxs-lookup"><span data-stu-id="d470e-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="970b0-107">备注</span><span class="sxs-lookup"><span data-stu-id="970b0-107">Remarks</span></span>  
+ <span data-ttu-id="970b0-108">不重新计划在任何线程`SuspensionEnding`回调。</span><span class="sxs-lookup"><span data-stu-id="970b0-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d470e-109">要求</span><span class="sxs-lookup"><span data-stu-id="d470e-109">Requirements</span></span>  
- <span data-ttu-id="d470e-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d470e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="970b0-109">要求</span><span class="sxs-lookup"><span data-stu-id="970b0-109">Requirements</span></span>  
+ <span data-ttu-id="970b0-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="970b0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d470e-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d470e-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="970b0-111">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="970b0-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d470e-112">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="d470e-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="970b0-112">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="970b0-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="d470e-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d470e-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="970b0-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="970b0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d470e-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="d470e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="970b0-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="970b0-114">See also</span></span>
 
-- [<span data-ttu-id="d470e-115">IGCThreadControl 接口</span><span class="sxs-lookup"><span data-stu-id="d470e-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+- [<span data-ttu-id="970b0-115">IGCThreadControl 接口</span><span class="sxs-lookup"><span data-stu-id="970b0-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

@@ -18,36 +18,36 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 07e2ebe8afe6002dee6c45f56fa1f11a4083d6bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145595"
 ---
-# <a name="icorprofilercallbackruntimesuspendfinished-method"></a><span data-ttu-id="8e6c7-102">ICorProfilerCallback::RuntimeSuspendFinished 方法</span><span class="sxs-lookup"><span data-stu-id="8e6c7-102">ICorProfilerCallback::RuntimeSuspendFinished Method</span></span>
-<span data-ttu-id="8e6c7-103">通知探查器运行时已完成的运行时的所有线程挂起。</span><span class="sxs-lookup"><span data-stu-id="8e6c7-103">Notifies the profiler that the runtime has completed suspension of all runtime threads.</span></span>  
+# <a name="icorprofilercallbackruntimesuspendfinished-method"></a><span data-ttu-id="2332f-102">ICorProfilerCallback::RuntimeSuspendFinished 方法</span><span class="sxs-lookup"><span data-stu-id="2332f-102">ICorProfilerCallback::RuntimeSuspendFinished Method</span></span>
+<span data-ttu-id="2332f-103">通知探查器运行时已完成的运行时的所有线程挂起。</span><span class="sxs-lookup"><span data-stu-id="2332f-103">Notifies the profiler that the runtime has completed suspension of all runtime threads.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e6c7-104">语法</span><span class="sxs-lookup"><span data-stu-id="8e6c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2332f-104">语法</span><span class="sxs-lookup"><span data-stu-id="2332f-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeSuspendFinished();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="8e6c7-105">备注</span><span class="sxs-lookup"><span data-stu-id="8e6c7-105">Remarks</span></span>  
- <span data-ttu-id="8e6c7-106">允许非托管代码中的所有运行时线程继续运行，直到它们尝试重新输入运行时。</span><span class="sxs-lookup"><span data-stu-id="8e6c7-106">All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime.</span></span> <span data-ttu-id="8e6c7-107">此时，它们还会挂起，直到运行时恢复。</span><span class="sxs-lookup"><span data-stu-id="8e6c7-107">At that point they will also be suspended until the runtime resumes.</span></span> <span data-ttu-id="8e6c7-108">这也适用于输入运行时的新线程。</span><span class="sxs-lookup"><span data-stu-id="8e6c7-108">This also applies to new threads that enter the runtime.</span></span> <span data-ttu-id="8e6c7-109">在运行时中的所有线程都都立即挂起; 如果他们都已在可中断代码中，或系统都将要求其到达不可中断的代码时挂起。</span><span class="sxs-lookup"><span data-stu-id="8e6c7-109">All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2332f-105">备注</span><span class="sxs-lookup"><span data-stu-id="2332f-105">Remarks</span></span>  
+ <span data-ttu-id="2332f-106">允许非托管代码中的所有运行时线程继续运行，直到它们尝试重新输入运行时。</span><span class="sxs-lookup"><span data-stu-id="2332f-106">All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime.</span></span> <span data-ttu-id="2332f-107">此时，它们还会挂起，直到运行时恢复。</span><span class="sxs-lookup"><span data-stu-id="2332f-107">At that point they will also be suspended until the runtime resumes.</span></span> <span data-ttu-id="2332f-108">这也适用于输入运行时的新线程。</span><span class="sxs-lookup"><span data-stu-id="2332f-108">This also applies to new threads that enter the runtime.</span></span> <span data-ttu-id="2332f-109">在运行时中的所有线程都都立即挂起; 如果他们都已在可中断代码中，或系统都将要求其到达不可中断的代码时挂起。</span><span class="sxs-lookup"><span data-stu-id="2332f-109">All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.</span></span>  
   
- <span data-ttu-id="8e6c7-110">`RuntimeSuspendFinished`回调可以保证在相同的线程上发生[icorprofilercallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)回调。</span><span class="sxs-lookup"><span data-stu-id="8e6c7-110">The `RuntimeSuspendFinished` callback is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span>  
+ <span data-ttu-id="2332f-110">`RuntimeSuspendFinished`回调可以保证在相同的线程上发生[icorprofilercallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)回调。</span><span class="sxs-lookup"><span data-stu-id="2332f-110">The `RuntimeSuspendFinished` callback is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8e6c7-111">要求</span><span class="sxs-lookup"><span data-stu-id="8e6c7-111">Requirements</span></span>  
- <span data-ttu-id="8e6c7-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8e6c7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2332f-111">要求</span><span class="sxs-lookup"><span data-stu-id="2332f-111">Requirements</span></span>  
+ <span data-ttu-id="2332f-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2332f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8e6c7-113">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8e6c7-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2332f-113">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2332f-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8e6c7-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e6c7-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2332f-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2332f-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="8e6c7-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="8e6c7-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="2332f-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2332f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e6c7-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="8e6c7-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2332f-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="2332f-116">See also</span></span>
 
-- [<span data-ttu-id="8e6c7-117">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="8e6c7-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="8e6c7-118">RuntimeSuspendAborted 方法</span><span class="sxs-lookup"><span data-stu-id="8e6c7-118">RuntimeSuspendAborted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)
+- [<span data-ttu-id="2332f-117">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="2332f-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="2332f-118">RuntimeSuspendAborted 方法</span><span class="sxs-lookup"><span data-stu-id="2332f-118">RuntimeSuspendAborted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)

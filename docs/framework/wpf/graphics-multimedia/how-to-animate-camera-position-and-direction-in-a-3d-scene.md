@@ -10,21 +10,21 @@ helpviewer_keywords:
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
 ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145998"
 ---
-# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a><span data-ttu-id="b0b8e-102">如何：在三维场景中对照相机位置和方向进行动画处理</span><span class="sxs-lookup"><span data-stu-id="b0b8e-102">How to: Animate Camera Position and Direction in a 3D Scene</span></span>
-<span data-ttu-id="b0b8e-103">下面的示例演示如何将照相机位置进行动画处理和对三维场景中指向的方向进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="b0b8e-103">The following example shows how to animate the position of a camera and animate the direction it is pointing in a 3D scene.</span></span> <span data-ttu-id="b0b8e-104">这是通过使用<xref:System.Windows.Media.Animation.Point3DAnimation>并<xref:System.Windows.Media.Animation.Vector3DAnimation>进行动画处理<xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A>并<xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A>分别的属性<xref:System.Windows.Media.Media3D.PerspectiveCamera>。</span><span class="sxs-lookup"><span data-stu-id="b0b8e-104">This is done by using <xref:System.Windows.Media.Animation.Point3DAnimation> and <xref:System.Windows.Media.Animation.Vector3DAnimation> to animate the <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> and <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> properties respectively of the <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="b0b8e-105">可能使用如下的动画可以更改的事件响应场景旁观者的视图。</span><span class="sxs-lookup"><span data-stu-id="b0b8e-105">You might use an animation like this to change the onlooker's view of a scene in response to an event.</span></span>  
+# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a><span data-ttu-id="dbf48-102">如何：在三维场景中对照相机位置和方向进行动画处理</span><span class="sxs-lookup"><span data-stu-id="dbf48-102">How to: Animate Camera Position and Direction in a 3D Scene</span></span>
+<span data-ttu-id="dbf48-103">下面的示例演示如何将照相机位置进行动画处理和对三维场景中指向的方向进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="dbf48-103">The following example shows how to animate the position of a camera and animate the direction it is pointing in a 3D scene.</span></span> <span data-ttu-id="dbf48-104">这是通过使用<xref:System.Windows.Media.Animation.Point3DAnimation>并<xref:System.Windows.Media.Animation.Vector3DAnimation>进行动画处理<xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A>并<xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A>分别的属性<xref:System.Windows.Media.Media3D.PerspectiveCamera>。</span><span class="sxs-lookup"><span data-stu-id="dbf48-104">This is done by using <xref:System.Windows.Media.Animation.Point3DAnimation> and <xref:System.Windows.Media.Animation.Vector3DAnimation> to animate the <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> and <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> properties respectively of the <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="dbf48-105">可能使用如下的动画可以更改的事件响应场景旁观者的视图。</span><span class="sxs-lookup"><span data-stu-id="dbf48-105">You might use an animation like this to change the onlooker's view of a scene in response to an event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0b8e-106">示例</span><span class="sxs-lookup"><span data-stu-id="b0b8e-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="dbf48-106">示例</span><span class="sxs-lookup"><span data-stu-id="dbf48-106">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationExample.xaml#pointvector3danimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="b0b8e-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="b0b8e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbf48-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="dbf48-107">See also</span></span>
 
 - <xref:System.Windows.Media.Animation.Vector3DAnimation>
 - <xref:System.Windows.Media.Animation.Point3DAnimation>
-- [<span data-ttu-id="b0b8e-108">使用关键帧对照相机位置和方向进行动画处理</span><span class="sxs-lookup"><span data-stu-id="b0b8e-108">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)
-- [<span data-ttu-id="b0b8e-109">三维图形概述</span><span class="sxs-lookup"><span data-stu-id="b0b8e-109">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="dbf48-108">使用关键帧为照相机位置和方向设置动画效果</span><span class="sxs-lookup"><span data-stu-id="dbf48-108">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)
+- [<span data-ttu-id="dbf48-109">3D 图形概述</span><span class="sxs-lookup"><span data-stu-id="dbf48-109">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)

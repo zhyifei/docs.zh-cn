@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d204ec29304fe0c4596950cd17c48d0c1d2ac616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152615"
 ---
-# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="6bb93-102">IMetaDataDispenserEx::FindAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="6bb93-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
-<span data-ttu-id="6bb93-103">未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="6bb93-103">This method is not implemented.</span></span> <span data-ttu-id="6bb93-104">如果调用，则返回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="6bb93-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="796a3-102">IMetaDataDispenserEx::FindAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="796a3-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
+<span data-ttu-id="796a3-103">未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="796a3-103">This method is not implemented.</span></span> <span data-ttu-id="796a3-104">如果调用，则返回 E_NOTIMPL。</span><span class="sxs-lookup"><span data-stu-id="796a3-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6bb93-105">语法</span><span class="sxs-lookup"><span data-stu-id="6bb93-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="796a3-105">语法</span><span class="sxs-lookup"><span data-stu-id="796a3-105">Syntax</span></span>  
   
 ```  
 HRESULT FindAssembly(  
@@ -41,38 +41,38 @@ HRESULT FindAssembly(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6bb93-106">参数</span><span class="sxs-lookup"><span data-stu-id="6bb93-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="796a3-106">参数</span><span class="sxs-lookup"><span data-stu-id="796a3-106">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="6bb93-107">[in]不使用。</span><span class="sxs-lookup"><span data-stu-id="6bb93-107">[in] Not used.</span></span>  
+ <span data-ttu-id="796a3-107">[in]不使用。</span><span class="sxs-lookup"><span data-stu-id="796a3-107">[in] Not used.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="6bb93-108">[in]不使用。</span><span class="sxs-lookup"><span data-stu-id="6bb93-108">[in] Not used.</span></span>  
+ <span data-ttu-id="796a3-108">[in]不使用。</span><span class="sxs-lookup"><span data-stu-id="796a3-108">[in] Not used.</span></span>  
   
  `szGlobalBin`  
- <span data-ttu-id="6bb93-109">[in]不使用。</span><span class="sxs-lookup"><span data-stu-id="6bb93-109">[in] Not used.</span></span>  
+ <span data-ttu-id="796a3-109">[in]不使用。</span><span class="sxs-lookup"><span data-stu-id="796a3-109">[in] Not used.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="6bb93-110">[in]要找的程序集。</span><span class="sxs-lookup"><span data-stu-id="6bb93-110">[in] The assembly to be found.</span></span>  
+ <span data-ttu-id="796a3-110">[in]要找的程序集。</span><span class="sxs-lookup"><span data-stu-id="796a3-110">[in] The assembly to be found.</span></span>  
   
  `szName`  
- <span data-ttu-id="6bb93-111">[out]程序集的简单名称。</span><span class="sxs-lookup"><span data-stu-id="6bb93-111">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="796a3-111">[out]程序集的简单名称。</span><span class="sxs-lookup"><span data-stu-id="796a3-111">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="6bb93-112">[in]大小，以字节为单位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="6bb93-112">[in] The size, in bytes, of `szName`.</span></span>  
+ <span data-ttu-id="796a3-112">[in]大小，以字节为单位的`szName`。</span><span class="sxs-lookup"><span data-stu-id="796a3-112">[in] The size, in bytes, of `szName`.</span></span>  
   
  `pcName`  
- <span data-ttu-id="6bb93-113">[out]中实际返回的字符数`szName`。</span><span class="sxs-lookup"><span data-stu-id="6bb93-113">[out] The number of characters actually returned in `szName`.</span></span>  
+ <span data-ttu-id="796a3-113">[out]中实际返回的字符数`szName`。</span><span class="sxs-lookup"><span data-stu-id="796a3-113">[out] The number of characters actually returned in `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6bb93-114">要求</span><span class="sxs-lookup"><span data-stu-id="6bb93-114">Requirements</span></span>  
- <span data-ttu-id="6bb93-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6bb93-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="796a3-114">要求</span><span class="sxs-lookup"><span data-stu-id="796a3-114">Requirements</span></span>  
+ <span data-ttu-id="796a3-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="796a3-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6bb93-116">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6bb93-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="796a3-116">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="796a3-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6bb93-117">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="6bb93-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="796a3-117">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="796a3-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="6bb93-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="6bb93-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="796a3-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="796a3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6bb93-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="6bb93-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="796a3-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="796a3-119">See also</span></span>
 
-- [<span data-ttu-id="6bb93-120">IMetaDataDispenserEx 接口</span><span class="sxs-lookup"><span data-stu-id="6bb93-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="6bb93-121">IMetaDataDispenser 接口</span><span class="sxs-lookup"><span data-stu-id="6bb93-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="796a3-120">IMetaDataDispenserEx 接口</span><span class="sxs-lookup"><span data-stu-id="796a3-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="796a3-121">IMetaDataDispenser 接口</span><span class="sxs-lookup"><span data-stu-id="796a3-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

@@ -18,32 +18,32 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cfd466f48a55f8b8905f6c76cf876fb8a32d4a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151393"
 ---
-# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="670ba-102">ISymUnmanagedMethod::GetNamespace 方法</span><span class="sxs-lookup"><span data-stu-id="670ba-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
-<span data-ttu-id="670ba-103">获取在其中定义此方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="670ba-103">Gets the namespace within which this method is defined.</span></span>  
+# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="f1719-102">ISymUnmanagedMethod::GetNamespace 方法</span><span class="sxs-lookup"><span data-stu-id="f1719-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
+<span data-ttu-id="f1719-103">获取在其中定义此方法的命名空间。</span><span class="sxs-lookup"><span data-stu-id="f1719-103">Gets the namespace within which this method is defined.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="670ba-104">语法</span><span class="sxs-lookup"><span data-stu-id="670ba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1719-104">语法</span><span class="sxs-lookup"><span data-stu-id="f1719-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespace(  
    [out] ISymUnmanagedNamespace  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="670ba-105">参数</span><span class="sxs-lookup"><span data-stu-id="670ba-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1719-105">参数</span><span class="sxs-lookup"><span data-stu-id="f1719-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="670ba-106">[out]一个指针，它设置为返回[ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="670ba-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
+ <span data-ttu-id="f1719-106">[out]一个指针，它设置为返回[ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="f1719-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="670ba-107">返回值</span><span class="sxs-lookup"><span data-stu-id="670ba-107">Return Value</span></span>  
- <span data-ttu-id="670ba-108">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="670ba-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f1719-107">返回值</span><span class="sxs-lookup"><span data-stu-id="f1719-107">Return Value</span></span>  
+ <span data-ttu-id="f1719-108">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="f1719-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="670ba-109">要求</span><span class="sxs-lookup"><span data-stu-id="670ba-109">Requirements</span></span>  
- <span data-ttu-id="670ba-110">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="670ba-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1719-109">要求</span><span class="sxs-lookup"><span data-stu-id="f1719-109">Requirements</span></span>  
+ <span data-ttu-id="f1719-110">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f1719-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="670ba-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="670ba-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1719-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="f1719-111">See also</span></span>
 
-- [<span data-ttu-id="670ba-112">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="670ba-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="f1719-112">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="f1719-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
