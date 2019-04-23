@@ -8,22 +8,22 @@ ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7876e21286ee16f16fa51939b09ffd0583b134d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132608"
 ---
-# <a name="deploying-net-framework-applications"></a><span data-ttu-id="9dad3-102">部署 .NET Framework 应用程序</span><span class="sxs-lookup"><span data-stu-id="9dad3-102">Deploying .NET Framework Applications</span></span>
-<span data-ttu-id="9dad3-103">本部分 .NET Framework 文档提供了用于部署 .NET Framework 应用程序的基本信息，其中包括用于加载程序集、解析程序集引用和通过本机映像生成改善应用程序性能的指导原则。</span><span class="sxs-lookup"><span data-stu-id="9dad3-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  
+# <a name="deploying-net-framework-applications"></a><span data-ttu-id="f5c86-102">部署 .NET Framework 应用程序</span><span class="sxs-lookup"><span data-stu-id="f5c86-102">Deploying .NET Framework Applications</span></span>
+<span data-ttu-id="f5c86-103">本部分 .NET Framework 文档提供了用于部署 .NET Framework 应用程序的基本信息，其中包括用于加载程序集、解析程序集引用和通过本机映像生成改善应用程序性能的指导原则。</span><span class="sxs-lookup"><span data-stu-id="f5c86-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9dad3-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="9dad3-104">In This Section</span></span>  
- [<span data-ttu-id="9dad3-105">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="9dad3-105">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- <span data-ttu-id="9dad3-106">描述公共语言运行时如何查找并绑定到构成应用程序的程序集。</span><span class="sxs-lookup"><span data-stu-id="9dad3-106">Describes how the common language runtime locates and binds to the assemblies that make up your application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f5c86-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="f5c86-104">In This Section</span></span>  
+ [<span data-ttu-id="f5c86-105">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="f5c86-105">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ <span data-ttu-id="f5c86-106">描述公共语言运行时如何查找并绑定到构成应用程序的程序集。</span><span class="sxs-lookup"><span data-stu-id="f5c86-106">Describes how the common language runtime locates and binds to the assemblies that make up your application.</span></span>  
   
- [<span data-ttu-id="9dad3-107">适用于程序集加载的最佳做法</span><span class="sxs-lookup"><span data-stu-id="9dad3-107">Best Practices for Assembly Loading</span></span>](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- <span data-ttu-id="9dad3-108">讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。</span><span class="sxs-lookup"><span data-stu-id="9dad3-108">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>  
+ [<span data-ttu-id="f5c86-107">适用于程序集加载的最佳做法</span><span class="sxs-lookup"><span data-stu-id="f5c86-107">Best Practices for Assembly Loading</span></span>](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ <span data-ttu-id="f5c86-108">讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。</span><span class="sxs-lookup"><span data-stu-id="f5c86-108">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9dad3-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="9dad3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5c86-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="f5c86-109">See also</span></span>
 
-- [<span data-ttu-id="9dad3-110">开发指南</span><span class="sxs-lookup"><span data-stu-id="9dad3-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
+- [<span data-ttu-id="f5c86-110">开发指南</span><span class="sxs-lookup"><span data-stu-id="f5c86-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)

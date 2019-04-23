@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37815d8aead1ec89826c13db6f012f2cd17bc792
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132439"
 ---
-# <a name="icordebugmanagedcallbackexitthread-method"></a><span data-ttu-id="5c563-102">ICorDebugManagedCallback::ExitThread 方法</span><span class="sxs-lookup"><span data-stu-id="5c563-102">ICorDebugManagedCallback::ExitThread Method</span></span>
-<span data-ttu-id="5c563-103">通知调试器执行托管的代码的线程已退出。</span><span class="sxs-lookup"><span data-stu-id="5c563-103">Notifies the debugger that a thread that was executing managed code has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitthread-method"></a><span data-ttu-id="74c62-102">ICorDebugManagedCallback::ExitThread 方法</span><span class="sxs-lookup"><span data-stu-id="74c62-102">ICorDebugManagedCallback::ExitThread Method</span></span>
+<span data-ttu-id="74c62-103">通知调试器执行托管的代码的线程已退出。</span><span class="sxs-lookup"><span data-stu-id="74c62-103">Notifies the debugger that a thread that was executing managed code has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c563-104">语法</span><span class="sxs-lookup"><span data-stu-id="5c563-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="74c62-104">语法</span><span class="sxs-lookup"><span data-stu-id="74c62-104">Syntax</span></span>  
   
 ```  
 HRESULT ExitThread (  
@@ -36,25 +36,25 @@ HRESULT ExitThread (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5c563-105">参数</span><span class="sxs-lookup"><span data-stu-id="5c563-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="74c62-105">参数</span><span class="sxs-lookup"><span data-stu-id="74c62-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="5c563-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含托管的线程的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="5c563-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread.</span></span>  
+ <span data-ttu-id="74c62-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含托管的线程的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="74c62-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread.</span></span>  
   
  `thread`  
- <span data-ttu-id="5c563-107">[in]指向表示托管的线程的 ICorDebugThread 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="5c563-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="74c62-107">[in]指向表示托管的线程的 ICorDebugThread 对象的指针。</span><span class="sxs-lookup"><span data-stu-id="74c62-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5c563-108">备注</span><span class="sxs-lookup"><span data-stu-id="5c563-108">Remarks</span></span>  
- <span data-ttu-id="5c563-109">一次`ExitThread`触发回调，该线程将不再显示在线程枚举中。</span><span class="sxs-lookup"><span data-stu-id="5c563-109">Once the `ExitThread` callback is fired, the thread will no longer appear in thread enumerations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="74c62-108">备注</span><span class="sxs-lookup"><span data-stu-id="74c62-108">Remarks</span></span>  
+ <span data-ttu-id="74c62-109">一次`ExitThread`触发回调，该线程将不再显示在线程枚举中。</span><span class="sxs-lookup"><span data-stu-id="74c62-109">Once the `ExitThread` callback is fired, the thread will no longer appear in thread enumerations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5c563-110">要求</span><span class="sxs-lookup"><span data-stu-id="5c563-110">Requirements</span></span>  
- <span data-ttu-id="5c563-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5c563-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="74c62-110">要求</span><span class="sxs-lookup"><span data-stu-id="74c62-110">Requirements</span></span>  
+ <span data-ttu-id="74c62-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="74c62-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c563-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5c563-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="74c62-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="74c62-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5c563-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c563-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="74c62-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="74c62-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="5c563-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5c563-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="74c62-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74c62-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c563-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="5c563-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74c62-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="74c62-115">See also</span></span>
 
-- [<span data-ttu-id="5c563-116">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="5c563-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="74c62-116">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="74c62-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

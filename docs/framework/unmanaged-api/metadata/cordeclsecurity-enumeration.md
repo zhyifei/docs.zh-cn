@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5409d1b89ba3e50c4ae17ed5aa6bf063cf6c93cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136963"
 ---
-# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="aed4e-102">CorDeclSecurity 枚举</span><span class="sxs-lookup"><span data-stu-id="aed4e-102">CorDeclSecurity Enumeration</span></span>
-<span data-ttu-id="aed4e-103">指定可以使用声明性安全执行的安全操作。</span><span class="sxs-lookup"><span data-stu-id="aed4e-103">Specifies the security actions that can be performed using declarative security.</span></span>  
+# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="db408-102">CorDeclSecurity 枚举</span><span class="sxs-lookup"><span data-stu-id="db408-102">CorDeclSecurity Enumeration</span></span>
+<span data-ttu-id="db408-103">指定可以使用声明性安全执行的安全操作。</span><span class="sxs-lookup"><span data-stu-id="db408-103">Specifies the security actions that can be performed using declarative security.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aed4e-104">语法</span><span class="sxs-lookup"><span data-stu-id="aed4e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db408-104">语法</span><span class="sxs-lookup"><span data-stu-id="db408-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDeclSecurity {  
@@ -56,39 +56,39 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="aed4e-105">成员</span><span class="sxs-lookup"><span data-stu-id="aed4e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="db408-105">成员</span><span class="sxs-lookup"><span data-stu-id="db408-105">Members</span></span>  
   
-|<span data-ttu-id="aed4e-106">成员</span><span class="sxs-lookup"><span data-stu-id="aed4e-106">Member</span></span>|<span data-ttu-id="aed4e-107">描述</span><span class="sxs-lookup"><span data-stu-id="aed4e-107">Description</span></span>|  
+|<span data-ttu-id="db408-106">成员</span><span class="sxs-lookup"><span data-stu-id="db408-106">Member</span></span>|<span data-ttu-id="db408-107">描述</span><span class="sxs-lookup"><span data-stu-id="db408-107">Description</span></span>|  
 |------------|-----------------|  
-|`dclActionMask`|<span data-ttu-id="aed4e-108">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-108">Reserved.</span></span>|  
-|`dclActionNil`|<span data-ttu-id="aed4e-109">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-109">Reserved.</span></span>|  
-|`dclRequest`|<span data-ttu-id="aed4e-110">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-110">Reserved.</span></span>|  
-|`dclDemand`|<span data-ttu-id="aed4e-111">要求调用堆栈中的所有高级调用方已被授予当前权限对象所指定的权限。</span><span class="sxs-lookup"><span data-stu-id="aed4e-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
-|`dclAssert`|<span data-ttu-id="aed4e-112">调用代码可以访问当前权限对象所标识的资源，即使堆栈中的高级调用方不具备访问该资源的权限</span><span class="sxs-lookup"><span data-stu-id="aed4e-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
-|`dclDeny`|<span data-ttu-id="aed4e-113">即使它们已被授予权限来访问它，将向调用方，拒绝访问当前权限对象指定的资源的能力。</span><span class="sxs-lookup"><span data-stu-id="aed4e-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
-|`dclPermitOnly`|<span data-ttu-id="aed4e-114">仅可以访问此权限对象所指定的资源，即使代码已被授予访问其他资源的权限。</span><span class="sxs-lookup"><span data-stu-id="aed4e-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
-|`dclLinktimeCheck`|<span data-ttu-id="aed4e-115">需要已被授予指定的权限在给定时间内直接调用方。</span><span class="sxs-lookup"><span data-stu-id="aed4e-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
-|`dclInheritanceCheck`|<span data-ttu-id="aed4e-116">需要已被授予指定的权限派生的类继承另一个类或重写方法。</span><span class="sxs-lookup"><span data-stu-id="aed4e-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
-|`dclRequestMinimum`|<span data-ttu-id="aed4e-117">调用方可以请求的代码运行所需的最小权限。</span><span class="sxs-lookup"><span data-stu-id="aed4e-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="aed4e-118">此操作仅可以在程序集的作用域内使用。</span><span class="sxs-lookup"><span data-stu-id="aed4e-118">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestOptional`|<span data-ttu-id="aed4e-119">调用方可以请求是可选的 （无需运行） 的其他权限。</span><span class="sxs-lookup"><span data-stu-id="aed4e-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="aed4e-120">此请求隐式拒绝所有未明确请求的其他权限。</span><span class="sxs-lookup"><span data-stu-id="aed4e-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="aed4e-121">此操作仅可以在程序集的作用域内使用。</span><span class="sxs-lookup"><span data-stu-id="aed4e-121">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestRefuse`|<span data-ttu-id="aed4e-122">将不授予调用方的请求可能被误用的权限。</span><span class="sxs-lookup"><span data-stu-id="aed4e-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="aed4e-123">此操作仅可以在程序集的作用域内使用。</span><span class="sxs-lookup"><span data-stu-id="aed4e-123">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclPrejitGrant`|<span data-ttu-id="aed4e-124">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-124">Reserved.</span></span>|  
-|`dclPrejitDenied`|<span data-ttu-id="aed4e-125">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-125">Reserved.</span></span>|  
-|`dclNonCasDemand`|<span data-ttu-id="aed4e-126">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-126">Reserved.</span></span>|  
-|`dclNonCasLinkDemand`|<span data-ttu-id="aed4e-127">要求直接调用方已被授予指定的权限。</span><span class="sxs-lookup"><span data-stu-id="aed4e-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
-|`dclNonCasInheritance`|<span data-ttu-id="aed4e-128">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-128">Reserved.</span></span>|  
-|`dclLinkDemandChoice`|<span data-ttu-id="aed4e-129">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-129">Reserved.</span></span>|  
-|`dclInheritanceDemandChoice`|<span data-ttu-id="aed4e-130">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-130">Reserved.</span></span>|  
-|`dclDemandChoice`|<span data-ttu-id="aed4e-131">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-131">Reserved.</span></span>|  
-|`dclMaximumValue`|<span data-ttu-id="aed4e-132">保留。</span><span class="sxs-lookup"><span data-stu-id="aed4e-132">Reserved.</span></span>|  
+|`dclActionMask`|<span data-ttu-id="db408-108">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-108">Reserved.</span></span>|  
+|`dclActionNil`|<span data-ttu-id="db408-109">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-109">Reserved.</span></span>|  
+|`dclRequest`|<span data-ttu-id="db408-110">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-110">Reserved.</span></span>|  
+|`dclDemand`|<span data-ttu-id="db408-111">要求调用堆栈中的所有高级调用方已被授予当前权限对象所指定的权限。</span><span class="sxs-lookup"><span data-stu-id="db408-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
+|`dclAssert`|<span data-ttu-id="db408-112">调用代码可以访问当前权限对象所标识的资源，即使堆栈中的高级调用方不具备访问该资源的权限</span><span class="sxs-lookup"><span data-stu-id="db408-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
+|`dclDeny`|<span data-ttu-id="db408-113">即使它们已被授予权限来访问它，将向调用方，拒绝访问当前权限对象指定的资源的能力。</span><span class="sxs-lookup"><span data-stu-id="db408-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
+|`dclPermitOnly`|<span data-ttu-id="db408-114">仅可以访问此权限对象所指定的资源，即使代码已被授予访问其他资源的权限。</span><span class="sxs-lookup"><span data-stu-id="db408-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
+|`dclLinktimeCheck`|<span data-ttu-id="db408-115">需要已被授予指定的权限在给定时间内直接调用方。</span><span class="sxs-lookup"><span data-stu-id="db408-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
+|`dclInheritanceCheck`|<span data-ttu-id="db408-116">需要已被授予指定的权限派生的类继承另一个类或重写方法。</span><span class="sxs-lookup"><span data-stu-id="db408-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
+|`dclRequestMinimum`|<span data-ttu-id="db408-117">调用方可以请求的代码运行所需的最小权限。</span><span class="sxs-lookup"><span data-stu-id="db408-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="db408-118">此操作仅可以在程序集的作用域内使用。</span><span class="sxs-lookup"><span data-stu-id="db408-118">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestOptional`|<span data-ttu-id="db408-119">调用方可以请求是可选的 （无需运行） 的其他权限。</span><span class="sxs-lookup"><span data-stu-id="db408-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="db408-120">此请求隐式拒绝所有未明确请求的其他权限。</span><span class="sxs-lookup"><span data-stu-id="db408-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="db408-121">此操作仅可以在程序集的作用域内使用。</span><span class="sxs-lookup"><span data-stu-id="db408-121">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestRefuse`|<span data-ttu-id="db408-122">将不授予调用方的请求可能被误用的权限。</span><span class="sxs-lookup"><span data-stu-id="db408-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="db408-123">此操作仅可以在程序集的作用域内使用。</span><span class="sxs-lookup"><span data-stu-id="db408-123">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclPrejitGrant`|<span data-ttu-id="db408-124">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-124">Reserved.</span></span>|  
+|`dclPrejitDenied`|<span data-ttu-id="db408-125">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-125">Reserved.</span></span>|  
+|`dclNonCasDemand`|<span data-ttu-id="db408-126">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-126">Reserved.</span></span>|  
+|`dclNonCasLinkDemand`|<span data-ttu-id="db408-127">要求直接调用方已被授予指定的权限。</span><span class="sxs-lookup"><span data-stu-id="db408-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
+|`dclNonCasInheritance`|<span data-ttu-id="db408-128">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-128">Reserved.</span></span>|  
+|`dclLinkDemandChoice`|<span data-ttu-id="db408-129">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-129">Reserved.</span></span>|  
+|`dclInheritanceDemandChoice`|<span data-ttu-id="db408-130">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-130">Reserved.</span></span>|  
+|`dclDemandChoice`|<span data-ttu-id="db408-131">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-131">Reserved.</span></span>|  
+|`dclMaximumValue`|<span data-ttu-id="db408-132">保留。</span><span class="sxs-lookup"><span data-stu-id="db408-132">Reserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="aed4e-133">要求</span><span class="sxs-lookup"><span data-stu-id="aed4e-133">Requirements</span></span>  
- <span data-ttu-id="aed4e-134">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aed4e-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db408-133">要求</span><span class="sxs-lookup"><span data-stu-id="db408-133">Requirements</span></span>  
+ <span data-ttu-id="db408-134">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="db408-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aed4e-135">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="aed4e-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="db408-135">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="db408-135">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="aed4e-136">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="aed4e-136">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="db408-136">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db408-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aed4e-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="aed4e-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db408-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="db408-137">See also</span></span>
 
-- [<span data-ttu-id="aed4e-138">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="aed4e-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="db408-138">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="db408-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

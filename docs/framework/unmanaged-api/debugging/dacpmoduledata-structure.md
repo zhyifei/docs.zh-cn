@@ -16,19 +16,19 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131997"
 ---
-# <a name="dacpmoduledata-structure"></a><span data-ttu-id="be9d8-102">DacpModuleData 结构</span><span class="sxs-lookup"><span data-stu-id="be9d8-102">DacpModuleData Structure</span></span>
+# <a name="dacpmoduledata-structure"></a><span data-ttu-id="c6666-102">DacpModuleData 结构</span><span class="sxs-lookup"><span data-stu-id="c6666-102">DacpModuleData Structure</span></span>
 
-<span data-ttu-id="be9d8-103">定义模块的运行时信息的传输缓冲区。</span><span class="sxs-lookup"><span data-stu-id="be9d8-103">Defines a transport buffer for a module's runtime information.</span></span>
+<span data-ttu-id="c6666-103">定义模块的运行时信息的传输缓冲区。</span><span class="sxs-lookup"><span data-stu-id="c6666-103">Defines a transport buffer for a module's runtime information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="be9d8-104">语法</span><span class="sxs-lookup"><span data-stu-id="be9d8-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="c6666-104">语法</span><span class="sxs-lookup"><span data-stu-id="c6666-104">Syntax</span></span>
 
 ```
 struct DacpModuleData
@@ -40,26 +40,26 @@ struct DacpModuleData
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="be9d8-105">成员</span><span class="sxs-lookup"><span data-stu-id="be9d8-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="c6666-105">成员</span><span class="sxs-lookup"><span data-stu-id="c6666-105">Members</span></span>
 
-| <span data-ttu-id="be9d8-106">成员</span><span class="sxs-lookup"><span data-stu-id="be9d8-106">Member</span></span>    | <span data-ttu-id="be9d8-107">描述</span><span class="sxs-lookup"><span data-stu-id="be9d8-107">Description</span></span>                                                             |
+| <span data-ttu-id="c6666-106">成员</span><span class="sxs-lookup"><span data-stu-id="c6666-106">Member</span></span>    | <span data-ttu-id="c6666-107">描述</span><span class="sxs-lookup"><span data-stu-id="c6666-107">Description</span></span>                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | <span data-ttu-id="be9d8-108">模块对象的地址。</span><span class="sxs-lookup"><span data-stu-id="be9d8-108">Address of the module object.</span></span>                                           |
-| `File`    | <span data-ttu-id="be9d8-109">指向可移植可执行 (PE) 文件的指针。</span><span class="sxs-lookup"><span data-stu-id="be9d8-109">A pointer to the portable executable (PE) file.</span></span>                       |
-| `ilBase`  | <span data-ttu-id="be9d8-110">地址加载映像的基。</span><span class="sxs-lookup"><span data-stu-id="be9d8-110">The address of the loaded image's base.</span></span>                                 |
-| `payLoad` | <span data-ttu-id="be9d8-111">运行时使用的其他模块信息有效负载缓冲区。</span><span class="sxs-lookup"><span data-stu-id="be9d8-111">A payload buffer for additional module information used by the runtime.</span></span> |
+| `Address` | <span data-ttu-id="c6666-108">模块对象的地址。</span><span class="sxs-lookup"><span data-stu-id="c6666-108">Address of the module object.</span></span>                                           |
+| `File`    | <span data-ttu-id="c6666-109">指向可移植可执行 (PE) 文件的指针。</span><span class="sxs-lookup"><span data-stu-id="c6666-109">A pointer to the portable executable (PE) file.</span></span>                       |
+| `ilBase`  | <span data-ttu-id="c6666-110">地址加载映像的基。</span><span class="sxs-lookup"><span data-stu-id="c6666-110">The address of the loaded image's base.</span></span>                                 |
+| `payLoad` | <span data-ttu-id="c6666-111">运行时使用的其他模块信息有效负载缓冲区。</span><span class="sxs-lookup"><span data-stu-id="c6666-111">A payload buffer for additional module information used by the runtime.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="be9d8-112">备注</span><span class="sxs-lookup"><span data-stu-id="be9d8-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c6666-112">备注</span><span class="sxs-lookup"><span data-stu-id="c6666-112">Remarks</span></span>
 
-<span data-ttu-id="be9d8-113">此结构存在于运行时内，不通过任何标头或库文件公开。</span><span class="sxs-lookup"><span data-stu-id="be9d8-113">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="be9d8-114">若要使用它，如上所示定义的结构。</span><span class="sxs-lookup"><span data-stu-id="be9d8-114">To use it, define the structure as specified above.</span></span>
+<span data-ttu-id="c6666-113">此结构存在于运行时内，不通过任何标头或库文件公开。</span><span class="sxs-lookup"><span data-stu-id="c6666-113">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="c6666-114">若要使用它，如上所示定义的结构。</span><span class="sxs-lookup"><span data-stu-id="c6666-114">To use it, define the structure as specified above.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="be9d8-115">要求</span><span class="sxs-lookup"><span data-stu-id="be9d8-115">Requirements</span></span>
-<span data-ttu-id="be9d8-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="be9d8-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="be9d8-117">**标头：** None</span><span class="sxs-lookup"><span data-stu-id="be9d8-117">**Header:** None</span></span>  
-<span data-ttu-id="be9d8-118">**库：** None</span><span class="sxs-lookup"><span data-stu-id="be9d8-118">**Library:** None</span></span>  
-**<span data-ttu-id="be9d8-119">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="be9d8-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+## <a name="requirements"></a><span data-ttu-id="c6666-115">要求</span><span class="sxs-lookup"><span data-stu-id="c6666-115">Requirements</span></span>
+<span data-ttu-id="c6666-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c6666-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="c6666-117">**标头：** None</span><span class="sxs-lookup"><span data-stu-id="c6666-117">**Header:** None</span></span>  
+<span data-ttu-id="c6666-118">**库：** None</span><span class="sxs-lookup"><span data-stu-id="c6666-118">**Library:** None</span></span>  
+<span data-ttu-id="c6666-119">**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="c6666-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="be9d8-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="be9d8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6666-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="c6666-120">See also</span></span>
 
-- [<span data-ttu-id="be9d8-121">调试</span><span class="sxs-lookup"><span data-stu-id="be9d8-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="be9d8-122">调试结构</span><span class="sxs-lookup"><span data-stu-id="be9d8-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="c6666-121">调试</span><span class="sxs-lookup"><span data-stu-id="c6666-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="c6666-122">调试结构</span><span class="sxs-lookup"><span data-stu-id="c6666-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
