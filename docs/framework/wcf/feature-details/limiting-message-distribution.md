@@ -3,10 +3,10 @@ title: 限制消息分布
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130216"
 ---
 # <a name="limiting-message-distribution"></a>限制消息分布
@@ -20,9 +20,9 @@ ms.locfileid: "59130216"
 -   有关代码段和相关的信息，请参阅[对等通道博客](https://go.microsoft.com/fwlink/?LinkID=114531)。  
   
 ## <a name="message-propagation-filter"></a>消息传播筛选器  
- `MessagePropagationFilter` 可用于消息洪泛，尤其是在内容的消息或其他特定方案确定传播时的自定义控件。 筛选器为通过节点的每个消息做出传播决定。 对于您的节点收到的产生自网格中其他位置的消息，以及您的应用程序创建的消息，就是这样做出决定的。 筛选器可以访问消息及其来源，因此可以基于可用的完整信息做出有关转发或丢弃消息的决定。  
+ `MessagePropagationFilter` 可以用于消息洪泛的自定义控制，尤其是在消息内容或其他特定方案确定传播时。 筛选器为通过节点的每个消息做出传播决定。 对于您的节点收到的产生自网格中其他位置的消息，以及您的应用程序创建的消息，就是这样做出决定的。 筛选器可以访问消息及其来源，因此可以基于可用的完整信息做出有关转发或丢弃消息的决定。  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> 是具有单个函数的抽象基类<xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>。 方法调用的第一个参数传入消息的完整副本。 对消息所做的任何更改都不会影响实际的消息。 方法调用的最后一个自变量标识消息的源（`PeerMessageOrigination.Local` 或 `PeerMessageOrigination.Remote`）。 此方法的具体实现必须从 <xref:System.ServiceModel.PeerMessagePropagation> 枚举返回一个常量，以表示消息是要转发给本地应用程序 (`Local`)、转发给远程客户端 (`Remote`)、同时转发给本地应用程序和远程客户端 (`LocalAndRemote`)，还是均不转发 (`None`)。 可以通过访问对应的 `PeerNode` 对象，并在 `PeerNode.MessagePropagationFilter` 属性中指定所派生传播筛选器类的实例，来应用此筛选器。 请确保在打开对等通道之前附加传播筛选器。  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> 是具有单个函数 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> 的抽象基类。 方法调用的第一个参数传入消息的完整副本。 对消息所做的任何更改都不会影响实际的消息。 方法调用的最后一个自变量标识消息的源（`PeerMessageOrigination.Local` 或 `PeerMessageOrigination.Remote`）。 此方法的具体实现必须从 <xref:System.ServiceModel.PeerMessagePropagation> 枚举返回一个常量，以表示消息是要转发给本地应用程序 (`Local`)、转发给远程客户端 (`Remote`)、同时转发给本地应用程序和远程客户端 (`LocalAndRemote`)，还是均不转发 (`None`)。 可以通过访问对应的 `PeerNode` 对象，并在 `PeerNode.MessagePropagationFilter` 属性中指定所派生传播筛选器类的实例，来应用此筛选器。 请确保在打开对等通道之前附加传播筛选器。  
   
 -   有关代码段和相关的信息，请参阅[对等通道博客](https://go.microsoft.com/fwlink/?LinkID=114532)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59130216"
   
  对这些问题的回答将帮助您确定是使用跃点计数、消息传播筛选器、本地筛选器还是直接连接。 请考虑以下通用准则：  
   
--   **谁**  
+-   **Who**  
   
     -   *单个节点*:本地筛选器或直接连接。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "59130216"
   
     -   *复杂的网格子集*:MessagePropagationFilter.  
   
--   **发送频率**  
+-   **何种频率**  
   
     -   *非常频繁*:直接连接、 PeerHopCount 或 MessagePropagationFilter。  
   
     -   *偶尔*:本地筛选器。  
   
--   **所用带宽**  
+-   **带宽使用**  
   
     -   *高*:直接连接，次选 MessagePropagationFilter 或本地筛选器。  
   

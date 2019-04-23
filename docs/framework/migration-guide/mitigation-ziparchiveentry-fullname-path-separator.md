@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81da6f785394312dea92fffdbb00ce9d13f1bd6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba871215f33e4d3b50054e9ceaa92be090d0143
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555643"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59125102"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>缓解：ZipArchiveEntry.FullName 路径分隔符
 自定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 的应用起，<xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> 属性中使用的路径分隔符已从旧版 .NET Framework 中使用的反斜杠 ("\\") 更改为正斜杠 ("/")。   <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> 对象是通过调用 <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> 方法的重载之一进行创建。  
@@ -45,5 +45,6 @@ ms.locfileid: "54555643"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
 - [4.6.1 中的应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)

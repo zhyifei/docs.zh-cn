@@ -3,10 +3,10 @@ title: 按位规范函数
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
 ms.openlocfilehash: 67d78e8d31f0bc3564a0a111b9bc71cbd0e14f5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127788"
 ---
 # <a name="bitwise-canonical-functions"></a>按位规范函数
@@ -17,10 +17,10 @@ ms.locfileid: "59127788"
   
 |函数|描述|  
 |--------------|-----------------|  
-|`BitWiseAnd (` `value1` `,`  `value2` `)`|按照 `value1` 和 `value2` 的类型返回 `value1` 和 `value2` 的位与结果。<br /><br /> **自变量**<br /><br /> 一个`Byte`， `Int16`， `Int32`，和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns 1.`<br /><br /> `BitWiseAnd(1,3)`|  
-|`BitWiseNot (` `value` `)`|返回 `value` 的位求反结果。<br /><br /> **自变量**<br /><br /> 一个`Byte`， `Int16`， `Int32`，和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
-|`BitWiseOr (` `value1` `,`  `value2` `)`|按照 `value1` 和 `value2` 的类型返回 `value1` 和 `value2` 的位或结果。<br /><br /> **自变量**<br /><br /> 一个`Byte`， `Int16`，`Int32`和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
-|`BitWiseXor (` `value1` `,`  `value2` `)`|按照 `value1` 和 `value2` 的类型返回 `value1` 和 `value2` 位异或结果。<br /><br /> **自变量**<br /><br /> 一个`Byte`， `Int16`，`Int32`和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
+|`BitWiseAnd (` `value1` `,`  `value2` `)`|按照 `value1` 和 `value2` 的类型返回 `value1` 和 `value2` 的位与结果。<br /><br /> **参数**<br /><br /> 一个`Byte`， `Int16`， `Int32`，和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns 1.`<br /><br /> `BitWiseAnd(1,3)`|  
+|`BitWiseNot (` `value` `)`|返回 `value` 的位求反结果。<br /><br /> **参数**<br /><br /> 一个`Byte`， `Int16`， `Int32`，和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
+|`BitWiseOr (` `value1` `,`  `value2` `)`|按照 `value1` 和 `value2` 的类型返回 `value1` 和 `value2` 的位或结果。<br /><br /> **参数**<br /><br /> 一个`Byte`， `Int16`，`Int32`和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
+|`BitWiseXor (` `value1` `,`  `value2` `)`|按照 `value1` 和 `value2` 的类型返回 `value1` 和 `value2` 位异或结果。<br /><br /> **参数**<br /><br /> 一个`Byte`， `Int16`，`Int32`和`Int64`。<br /><br /> **示例**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
   
 ## <a name="see-also"></a>请参阅
 

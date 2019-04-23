@@ -9,10 +9,10 @@ ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32e74a76b6b1bedee4efc5715d0710c8efce2455
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120752"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
@@ -103,7 +103,7 @@ ms.locfileid: "59120752"
  [StrongNameTokenFromPublicKey 函数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  获取表示公钥的令牌。 从 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 开始，该函数已弃用。  
   
- [PublicKeyBlob 结构](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [PublicKeyBlob Strong Naming](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  表示二进制格式的公钥/私钥对中的公钥。  
   
 ## <a name="see-also"></a>请参阅

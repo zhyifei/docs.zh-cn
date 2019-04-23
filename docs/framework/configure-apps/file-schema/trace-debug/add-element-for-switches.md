@@ -1,5 +1,5 @@
 ---
-title: <add> 元素 <switches>
+title: <switches> 的 <add> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120089"
 ---
 # <a name="add-element-for-switches"></a>\<添加 > 元素\<开关 >

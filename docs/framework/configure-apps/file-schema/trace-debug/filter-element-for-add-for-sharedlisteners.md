@@ -11,10 +11,10 @@ helpviewer_keywords:
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120739"
 ---
 # <a name="filter-element-for-add-for-sharedlisteners"></a>\<筛选器 > 元素\<添加 > 为\<sharedListeners >
@@ -40,7 +40,7 @@ ms.locfileid: "59120739"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**类型**|必需的特性。<br /><br /> 指定筛选器的类型。 可以使用仅该类型的完整名称 (格式为<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性)，也可以使用完全限定的类型名称包括程序集信息 (格式为<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>属性)。 有关创建完全限定的类型名称的信息，请参阅[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|**type**|必需的特性。<br /><br /> 指定筛选器的类型。 可以使用仅该类型的完整名称 (格式为<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性)，也可以使用完全限定的类型名称包括程序集信息 (格式为<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>属性)。 有关创建完全限定的类型名称的信息，请参阅[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |**initializeData**|可选特性。<br /><br /> 传递给构造函数为指定类的字符串。|  
   
 ### <a name="child-elements"></a>子元素  

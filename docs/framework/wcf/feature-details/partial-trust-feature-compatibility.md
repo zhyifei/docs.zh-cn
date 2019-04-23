@@ -3,10 +3,10 @@ title: 部分信任功能兼容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124561"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能兼容性
@@ -28,7 +28,7 @@ ms.locfileid: "59124561"
   
 -   在使用 `[ServiceKnownType]` 属性时，指定的方法必须为 `public`方法。  
   
--   `[MessageContract]` 类和其成员可以是`public`。 如果 `[MessageContract]` 类是在应用程序程序集中定义的，则该类可以为 `internal` 类并拥有 `internal` 成员。  
+-   `[MessageContract]` 类及其成员可以为 `public`。 如果 `[MessageContract]` 类是在应用程序程序集中定义的，则该类可以为 `internal` 类并拥有 `internal` 成员。  
   
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
  在部分信任环境中完全支持 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WebHttpBinding> 。 仅对传输安全模式支持 <xref:System.ServiceModel.WSHttpBinding> 。  
@@ -119,7 +119,7 @@ ms.locfileid: "59124561"
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims><xref:System.IdentityModel.Policy>， <xref:System.IdentityModel.Selectors>，和<xref:System.IdentityModel.Tokens>。  
+-   <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>和 <xref:System.IdentityModel.Tokens>。  
   
  不支持下面的跟踪源：  
   
@@ -166,4 +166,4 @@ ms.locfileid: "59124561"
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [支持的部署方案](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [部分信任最佳实践](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

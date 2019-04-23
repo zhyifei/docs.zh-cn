@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978327"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59128383"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -425,7 +425,6 @@ public void ConfigureServices(IServiceCollection services)
 #### <a name="custom-security"></a>自定义安全
 
 要特别注意加密、用户成员身份或令牌生成系统的“自己回滚”实现。 有许多商业和开源替代方案可供使用，几乎可以肯定，它们比自定义实现更具安全性。
-
 
 > ### <a name="references--security"></a>参考 - 安全
 >

@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122572"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
@@ -74,7 +74,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_POINTER|`pDataTarget` 是`null`。|  
+|E_POINTER|`pDataTarget` 为 `null`。|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回调返回错误或未提供有效的句柄。|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 未实现此版本的运行时所需的数据目标接口。|  
 |CORDBG_E_NOT_CLR|所指示的模块不是 CLR 模块。 不能检测到的 CLR 模块，因为内存损坏、 不可用，该模块或 CLR 版本晚于填充程序版本时，也会返回此 HRESULT。|  
@@ -94,7 +94,7 @@ HRESULT OpenVirtualProcess(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

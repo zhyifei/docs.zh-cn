@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120719"
 ---
 # <a name="securing-services-and-clients"></a>保护服务和客户端的安全
@@ -18,10 +18,10 @@ ms.locfileid: "59120719"
  [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  用于保护消息安全的编程模型概述。  
   
- [传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [传输安全性概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  如何通过传输层保护消息安全概述。  
   
- [消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [消息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  总结了使用 Windows Communication Foundation (WCF) 中的消息级安全性的原因。  
   
  [安全会话](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  

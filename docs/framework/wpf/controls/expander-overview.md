@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130398"
 ---
 # <a name="expander-overview"></a>Expander 概述
@@ -42,7 +42,7 @@ ms.locfileid: "59130398"
 ## <a name="creating-scrollable-content"></a>创建可滚动内容  
  如果内容对于内容区域的大小太大，您可以封装的内容<xref:System.Windows.Controls.Expander>在<xref:System.Windows.Controls.ScrollViewer>为了提供可滚动内容。 <xref:System.Windows.Controls.Expander>控件不会自动提供滚动功能。 如下图所示<xref:System.Windows.Controls.Expander>控件，其中包含<xref:System.Windows.Controls.ScrollViewer>控件。  
   
- **ScrollViewer 中的 expander**  
+ **ScrollViewer 中的 Expander**  
   
  ![显示带有 ScrollBar 的 expander 的屏幕截图。](./media/expander-overview/expander-scrollbar-control.jpg)  
   

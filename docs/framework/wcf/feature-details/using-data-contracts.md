@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129930"
 ---
 # <a name="using-data-contracts"></a>使用数据协定
@@ -76,7 +76,7 @@ ms.locfileid: "59129930"
 - [数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)
 - [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [数据协定版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [版本容错序列化回调](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [数据成员默认值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
 - [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

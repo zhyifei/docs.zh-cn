@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127382"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 联合对象模型如何映射到 Atom 和 RSS
@@ -403,4 +403,4 @@ ms.locfileid: "59127382"
 - [联合体系结构](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
 - [如何：创建基本 RSS 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
 - [如何：创建基本 Atom 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [如何：作为 Atom 和 RSS 公开源](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [如何：公开源作为 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

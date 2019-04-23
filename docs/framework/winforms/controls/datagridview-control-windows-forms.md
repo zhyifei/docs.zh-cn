@@ -14,10 +14,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
 ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124314"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控件（Windows 窗体）
@@ -37,10 +37,10 @@ ms.locfileid: "59124314"
  [Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)  
  描述 Windows 窗体 `DataGridView` 控件中用于显示数据和允许用户修改或添加数据的列类型。  
   
- [Windows 窗体 DataGridView 控件中的基本列、行和单元格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供一些主题，描述常用的单元格、行和列属性。  
   
- [Windows 窗体 DataGridView 控件中的基本格式设置和样式设置](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的基本格式和样式设置](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，描述如何修改该控件的基本外观和单元数据的显示格式。  
   
  [在 Windows 窗体 DataGridView 控件中显示数据](displaying-data-in-the-windows-forms-datagridview-control.md)  
@@ -49,13 +49,13 @@ ms.locfileid: "59124314"
  [调整 Windows 窗体 DataGridView 控件中列和行的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，描述可如何自动调整行和列的大小，以便适应单元格内容，或适应该控件的可用宽度。  
   
- [在 Windows 窗体 DataGridView 控件中对数据进行排序](sorting-data-in-the-windows-forms-datagridview-control.md)  
+ [在 Windows 窗体 DataGridView 控件中进行数据排序](sorting-data-in-the-windows-forms-datagridview-control.md)  
  提供介绍控件中的排序功能的主题。  
   
  [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍如何改变用户添加和修改控件中数据的方式。  
   
- [Windows 窗体 DataGridView 控件的选项和剪贴板使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [将选择模式和剪贴板与 Windows 窗体 DataGridView 控件结合使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍控件中的单元格、行和列选择功能。  
   
  [使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "59124314"
  [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍自定义绘制 `DataGridView` 单元格和行，以及创建派生的单元、列和行类型。  
   
- [Windows 窗体 DataGridView 控件中的性能优化](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的性能调整](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍如何在使用大量数据时，有效地使用控件以避免性能问题。  
   
  [Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  

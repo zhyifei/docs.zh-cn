@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121974"
 ---
 # <a name="using-message-contracts"></a>使用消息约定
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> 允许您指定 WrapperName 和 WrapperNamespace 特性，这些特性控制 SOAP 消息的正文中包装元素的名称。 默认情况下，消息协定类型的名称用于包装，而在其中定义消息协定的命名空间 `http://tempuri.org/` 用作默认的命名空间。  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> 消息协定中忽略了属性。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，可以将其放在使用所述消息协定的操作上。  
+>  消息协定中会忽略 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，可以将其放在使用所述消息协定的操作上。  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>控制标头和正文部分的名称和命名空间  
  在消息协定的 SOAP 表示形式中，每个标头和正文部分都映射为一个具有名称和命名空间的 XML 元素。  
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 标头属性  
  SOAP 标准定义了下列可存在于标头上的属性：  
   
--   `Actor/Role` (`Actor`在 SOAP 1.1， `Role` SOAP 1.2 中)  
+-   `Actor/Role`（在 SOAP 1.1 中为 `Actor`，在 SOAP 1.2 中为 `Role`）  
   
 -   `MustUnderstand`  
   

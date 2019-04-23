@@ -3,10 +3,10 @@ title: 从 XML 架构派生数据集关系结构 (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
 ms.openlocfilehash: 549579fca0179994191987097c12b6085ee91756
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119686"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>从 XML 架构派生数据集关系结构 (XSD)
@@ -83,7 +83,7 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>本节内容  
- [将关键 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [将 XML 架构 (XSD) 约束映射到数据集约束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  描述用于创建唯一约束和外键约束中的 XML 架构元素`DataSet`。  
   
  [从 XML 架构生成数据集关系 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
@@ -98,4 +98,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

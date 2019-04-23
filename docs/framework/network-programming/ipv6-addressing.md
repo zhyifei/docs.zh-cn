@@ -27,10 +27,10 @@ helpviewer_keywords:
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121948"
 ---
 # <a name="ipv6-addressing"></a>IPv6 寻址
@@ -52,7 +52,7 @@ ms.locfileid: "59121948"
   
  以下是具有 64 位前缀的地址示例。  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`。  
   
  本示例中的前缀是 `3FFE:FFFF:0:CD30`。 此地址也可以采用压缩形式编写为 `3FFE:FFFF:0:CD30::/64`。  
   

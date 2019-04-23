@@ -9,10 +9,10 @@ helpviewer_keywords:
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
 ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129579"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>如何：沿着路径针对对象进行动画处理（点动画）
@@ -34,4 +34,4 @@ ms.locfileid: "59129579"
 
 - [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [动画概述](animation-overview.md)
-- [路径动画帮助主题](path-animation-how-to-topics.md)
+- [路径动画操作说明主题](path-animation-how-to-topics.md)
