@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427313"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
@@ -162,9 +162,9 @@ x = x op y
 以下列表按优先级从高到低的顺序对逻辑运算符进行排序：
 
 - 逻辑非运算符 `!`
-- 逻辑 AND 运算符 `&`
+- 逻辑与运算符 `&`
 - 逻辑异或运算符 `^`
-- 逻辑 OR 运算符 `|`
+- 逻辑或运算符 `|`
 - 条件逻辑与运算符 `&&`
 - 条件逻辑或运算符 `||`
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313263"
 ---
 # <a name="how-to-create-windows-services"></a>如何：创建 Windows 服务
@@ -45,11 +45,11 @@ ms.locfileid: "59313263"
   
     |Property|设置|  
     |--------------|-------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` 用于指明服务将接受停止运行的请求；`false` 用于阻止停止服务。|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` 用于指明服务要在所在计算机关机时接受通知，从而能够调用 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 过程。|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` 用于指明服务将接受暂停或恢复运行的请求；`false` 用于阻止暂停和恢复服务。|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` 用于指明服务可处理计算机电源状态更改通知；`false` 用于阻止向服务通知这些更改。|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` 用于在服务执行操作时向应用事件日志写入信息条目；`false` 用于禁用此功能。 有关详细信息，请参阅[如何：记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)。 **注意：** 默认情况下，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 `true`。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` 表示服务将接受请求停止运行；`false` 将阻止服务被停止。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` 表示当服务所在的计算机关机时服务需要接受通知，启用它来调用 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 过程。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` 表示服务将接受请求暂停或恢复运行；`false` 将阻止服务被暂停或恢复。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` 表示服务可处理计算机电源状态更改的通知；`false` 将阻止向服务通知这些更改。|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` 将在你的服务执行操作时向应用程序事件日志写入信息条目；`false` 将禁用该功能。 有关详细信息，请参阅[如何：记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)。 **注意：** 默认情况下，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 `true`。|  
   
     > [!NOTE]
     >  当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 或 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 设置为 `false` 时，“服务控制管理器”将禁用相应的菜单选项来停止、暂停或继续该服务。  
@@ -76,4 +76,4 @@ ms.locfileid: "59313263"
 - [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)
 - [如何：为服务指定安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
 - [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [演练：在组件设计器中创建 Windows 服务应用](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

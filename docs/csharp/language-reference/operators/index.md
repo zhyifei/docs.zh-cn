@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672285"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977374"
 ---
 # <a name="c-operators"></a>C# 运算符
 
@@ -77,7 +77,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-)：逻辑取反。
 
-[~x](bitwise-complement-operator.md)：按位求补。
+[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)：按位求补。
 
 [++x](arithmetic-operators.md#increment-operator-)：前缀递增。 先用加 1（通常加整数 1）后的 x 值更新存储位置，然后返回 x 值。
 
@@ -90,6 +90,10 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 [&x](and-operator.md)：地址。
 
 [*x](multiplication-operator.md)：取消引用。
+
+[true 运算符](../keywords/true-false-operators.md) - 返回 [bool](../keywords/bool.md) 值 `true` 以指明操作数一定为 true。
+
+[false 运算符](../keywords/true-false-operators.md) - 返回 [bool](../keywords/bool.md) 值 `true` 以指明操作数一定为 false。
 
 ## <a name="multiplicative-operators"></a>乘法运算符
 
@@ -113,9 +117,9 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 这些运算符的优先级比下一章节高，比上一章节低。
 
-[x <\<  y](left-shift-operator.md)：左移位，右侧用 0 填充。
+[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-)：左移位，右侧用 0 填充。
 
-[x >> y](right-shift-operator.md)：右移位。 如果左操作数是 `int` 或 `long`，则左位数补符号位。 如果左操作数是 `uint` 或 `ulong`，则左位数补零。
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-)：右移位。 如果左操作数是 `int` 或 `long`，则左位数补符号位。 如果左操作数是 `uint` 或 `ulong`，则左位数补零。
 
 ## <a name="relational-and-type-testing-operators"></a>关系和类型测试运算符
 
@@ -145,27 +149,19 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 此运算符的优先级比下一章节高，比上一章节低。
 
-[x & y](and-operator.md)：逻辑或位 AND。 通常可以将此运算符与整数类型和 `enum` 类型一起使用。
+`x & y` - `bool` 操作数的[逻辑与](boolean-logical-operators.md#logical-and-operator-)或整型类型操作数的[位逻辑与](bitwise-and-shift-operators.md#logical-and-operator-)。
 
 ## <a name="logical-xor-operator"></a>辑 XOR 运算
 
 此运算符的优先级比下一章节高，比上一章节低。
 
-[x ^ y](xor-operator.md)：逻辑或位 XOR。 通常可以将此运算符与整数类型和 `enum` 类型一起使用。
+`x ^ y` - `bool` 操作数的[逻辑异或](boolean-logical-operators.md#logical-exclusive-or-operator-)或整型类型操作数的[位逻辑异或](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
 
 ## <a name="logical-or-operator"></a>逻辑 OR 运算符
 
 此运算符的优先级比下一章节高，比上一章节低。
 
-[x &#124; y](or-operator.md)：逻辑或位 OR。 通常可以将此运算符与整数类型和 `enum` 类型一起使用。
-
-## <a name="true-operator"></a>True 运算符
-
-[True](../keywords/true-false-operators.md) 运算符返回 [bool](../keywords/bool.md) 值 `true`，以指明操作数一定为 true。 
-
-## <a name="false-operator"></a>False 运算符
-
-[False](../keywords/true-false-operators.md) 运算符返回 [bool](../keywords/bool.md) 值 `true`，以指明操作数一定为 false。 
+`x | y` - `bool` 操作数的[逻辑或](boolean-logical-operators.md#logical-or-operator-)或整型类型操作数的[位逻辑或](bitwise-and-shift-operators.md#logical-or-operator-)。
 
 ## <a name="conditional-and-operator"></a>条件 AND 运算符
 
@@ -199,23 +195,23 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 [x += y](addition-assignment-operator.md)：递增。 `x` 值加 `y` 值，结果存储在 `x` 中，并返回新值。 如果 `x` 指定 `event`，则 `y` 必须是 C# 作为事件处理程序添加的相应函数。
 
-[x -= y](subtraction-assignment-operator.md)：递减。 `x` 值减 `y` 值，结果存储在 `x` 中，并返回新值。 如果 `x` 指定 `event`，则 `y` 必须是 C# 作为事件处理程序删除的相应函数
+[x -= y](subtraction-assignment-operator.md)：递减。 `x` 值减 `y` 值，结果存储在 `x` 中，并返回新值。 如果 `x` 指定 `event`，则 `y` 必须是 C# 作为事件处理程序删除的相应函数。
 
-[x *= y](multiplication-assignment-operator.md)：乘法赋值。 `x` 值乘以 `y` 值，结果存储在 `x` 中，并返回新值。
+[x *= y](arithmetic-operators.md#compound-assignment)：乘法赋值。 `x` 值乘以 `y` 值，结果存储在 `x` 中，并返回新值。
 
 [x /= y](arithmetic-operators.md#compound-assignment)：除法赋值。 `x` 值除以 `y` 值，结果存储在 `x` 中，并返回新值。
 
 [x %= y](arithmetic-operators.md#compound-assignment)：余数赋值。 `x` 值除以 `y` 值，余数存储在 `x` 中，并返回新值。
 
-[x &= y](and-assignment-operator.md)：AND 赋值。 `y` 值和 `x` 值相与，结果存储在 `x` 中，并返回新值。
+[x &= y](boolean-logical-operators.md#compound-assignment)：AND 赋值。 `y` 值和 `x` 值相与，结果存储在 `x` 中，并返回新值。
 
-[x &#124;= y](or-assignment-operator.md)：OR 赋值。 `y` 值和 `x` 值相或，结果存储在 `x` 中，并返回新值。
+[x &#124;= y](boolean-logical-operators.md#compound-assignment)：OR 赋值。 `y` 值和 `x` 值相或，结果存储在 `x` 中，并返回新值。
 
-[x ^= y](xor-assignment-operator.md)：XOR 赋值。 `y` 值和 `x` 值相异或，结果存储在 `x` 中，并返回新值。
+[x ^= y](boolean-logical-operators.md#compound-assignment)：XOR 赋值。 `y` 值和 `x` 值相异或，结果存储在 `x` 中，并返回新值。
 
-[x <<= y](left-shift-assignment-operator.md)：左移赋值。 将 `x` 值向左移动 `y` 位，结果存储在 `x` 中，并返回新值。
+[x <<= y](bitwise-and-shift-operators.md#compound-assignment)：左移赋值。 将 `x` 值向左移动 `y` 位，结果存储在 `x` 中，并返回新值。
 
-[x >>= y](right-shift-assignment-operator.md)：右移赋值。 将 `x` 值向右移动 `y` 位，结果存储在 `x` 中，并返回新值。
+[x >>= y](bitwise-and-shift-operators.md#compound-assignment)：右移赋值。 将 `x` 值向右移动 `y` 位，结果存储在 `x` 中，并返回新值。
 
 [=>](lambda-operator.md)：lambda 声明。
 

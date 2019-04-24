@@ -13,10 +13,10 @@ ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191882"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
@@ -69,11 +69,11 @@ sn [-quiet][option [parameter(s)]]
 |-v assembly|验证 assembly 中的强名称，其中 assembly 是包含程序集清单的文件的名称。|  
 |-vf assembly|验证 assembly 中的强名称。 与 -v 选项不同，-vf 会强制实施验证，即使已使用 -Vr 选项禁用了验证也是如此。|  
 |-Vk regfile.reg assembly [userlist] [infile]|创建一个注册项 (.reg) 文件，你可以使用它注册要跳过验证的指定程序集。 应用于 -Vr 选项的程序集命名规则也应用于 -Vk。 有关 userlist 和 infile 选项的信息，请参阅 -Vr 选项。|  
-|**-Vl**|列出此计算机上的强名称验证的当前设置。|  
+|-Vl|列出此计算机上的强名称验证的当前设置。|  
 |-Vr assembly [userlist] [infile]|注册要跳过验证的 assembly。 或者，还可以指定应跳过验证的用户名的逗号分隔的列表。 如果指定 infile，则验证仍会启用，但在验证操作中将使用 infile 中的公钥。 可以以 \*, strongname 的形式指定 assembly，以注册所有具有指定强名称的程序集。 对于 strongname，指定表示标记形式的公钥的十六进制数字的字符串。 参见 -t 和 -T 选项以显示公钥标记。 注意：仅在开发期间使用此选项。 将程序集添加到跳过验证列表会产生安全漏洞。 如果将某程序集添加到跳过验证列表中，则恶意程序集可以使用该程序集的完全指定程序集名称来隐藏身份，完全指定程序集名称由程序集名称、版本、区域性和公钥标记组成。 这使恶意程序集也可以跳过验证。|  
 |||  
 |-Vu assembly|注销要跳过验证的 assembly。 应用于 -Vr 的相同程序集命名规则也应用于 -Vu。|  
-|**-Vx**|移除所有验证跳过项。|  
+|-Vx|移除所有验证跳过项。|  
 |**-?**|显示该工具的命令语法和选项。|  
   
 > [!NOTE]
