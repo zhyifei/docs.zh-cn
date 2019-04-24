@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309480"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613247"
 ---
 # <a name="com-callable-wrapper"></a>COM 可调用包装
 
@@ -182,7 +182,7 @@ public class LoanApp
 
 双重接口通过 COM 客户端启用对接口成员的早期绑定和后期绑定。 在设计时和测试期间，将类接口设置为双重可能会非常有用。 对于永远不会被修改的托管类（及其基类），此选项也是可接受的。 在所有其它情况下，请避免将类接口设置为双重。
 
-自动生成的双重接口可能适合少数情况；但是，更多情况下，它将造成与版本相关的复杂性。 例如，使用派生类的类接口的 COM 客户端可以通过对基类的更改轻松中断。 当第三方提供基类时，类接口的布局将不受你的控制。 进一步来说，与仅支持调度的接口不同，双重接口 (ClassInterfaceType.AutoDual)提供对导出的类型库中的类接口的说明。 此类说明会促使后期绑定的客户端在运行时缓存 DispId。
+自动生成的双重接口可能适合少数情况；但是，更多情况下，它将造成与版本相关的复杂性。 例如，使用派生类的类接口的 COM 客户端可以通过对基类的更改轻松中断。 当第三方提供基类时，类接口的布局将不受你的控制。 进一步来说，与仅支持调度的接口不同，双重接口 (ClassInterfaceType.AutoDual)提供对导出的类型库中的类接口的说明。 此类说明会促使后期绑定的客户端在编译时缓存 DispId。
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>确保所有 COM 事件通知都是后期绑定的。
 
@@ -200,4 +200,4 @@ public class LoanApp
 - [COM 包装](com-wrappers.md)
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
 - [为互操作限定 .NET 类型](qualifying-net-types-for-interoperation.md)
-- [运行时可调用包装](runtime-callable-wrapper.md)
+- [运行时可调用包装器](runtime-callable-wrapper.md)

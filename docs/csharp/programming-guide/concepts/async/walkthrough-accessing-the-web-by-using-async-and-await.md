@@ -3,10 +3,10 @@ title: 演练：使用 async 和 await 访问 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306724"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>演练：使用 async 和 await 访问 Web (C#)
@@ -108,13 +108,13 @@ ms.locfileid: "59306724"
 
 3. 该同步解决方案的代码包含以下四个方法：
 
-    -   `SumPageSizes`：从 `SetUpURLList` 获取网页 URL 列表，并随后调用 `GetURLContents` 和 `DisplayResults` 来处理每个 URL。
+    -   `SumPageSizes`，从 `SetUpURLList` 获取网页 URL 列表并随后调用 `GetURLContents` 和 `DisplayResults` 以处理每个 URL。
 
-    -   `SetUpURLList`：生成并返回 Web 地址列表。
+    -   `SetUpURLList`，生成并返回 Web 地址列表。
 
-    -   `GetURLContents`：下载每个网站的内容，并将内容作为字节数组返回。
+    -   `GetURLContents`，下载每个网站的内容并将内容作为字节数组返回。
 
-    -   `DisplayResults`：显示每个 URL 的字节数组中的字节数。
+    -   `DisplayResults`，显示每个 URL 的字节数组中的字节数。
 
     复制以下四个方法，然后将它们粘贴在 MainWindow.xaml.cs 中的 `startButton_Click` 事件处理程序下：
 

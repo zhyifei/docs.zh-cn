@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480828"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672454"
 ---
 # <a name="is-c-reference"></a>is（C# 参考）
 
@@ -144,7 +144,7 @@ ms.locfileid: "59480828"
  
 ### <a name="var" />var 模式</a>
 
-对于非 null 表达式，与 var 模式的模式匹配始终成功；如果 expr 为 `null`，`is` 表达式为 `false`。 expr 的非 null 值始终分配给与 expr 的运行时类型相同的本地变量。  语法为：
+`var` 模式对于任何类型或值均为 catch-all。 expr 值始终分配给与 expr 的编译时类型相同的本地变量。 `is` 表达式的结果始终为 `true`。 语法为：
 
 ```csharp 
    expr is var varname

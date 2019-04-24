@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311092"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612272"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教程：使用 ML.NET 创建影片推荐系统
 
@@ -161,7 +161,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 > [!NOTE]
 > 除非在以下步骤中添加返回语句，否则使用此方法将出错。
 
-初始化数据路径变量、从 *.csv 文件加载数据以及将 `Train` 和 `Test` 数据作为 `IDataView` 对象返回，方法是在 `LoadData()` 中添加以下代码作为下一代码行：
+初始化数据路径变量、从 \*.csv 文件加载数据以及将 `Train` 和 `Test` 数据作为 `IDataView` 对象返回，方法是在 `LoadData()` 中添加以下代码作为下一代码行：
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 > 除非在以下步骤中添加返回语句，否则使用此方法将出错。
 
 通过将以下代码添加到 `BuildAndTrainModel()` 来定义数据转换：
-   
+
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 由于 `userId` 和 `movieId` 代表用户和影片标题，而不是实际值，因此使用 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 方法将每个 `userId` 和每个 `movieId` 转换为数字键类型 `Feature` 列（推荐算法接受的格式）并将它们添加为新的数据集列：
@@ -217,7 +217,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) 就是推荐训练算法。  当你掌握用户过去如何评价产品的数据时，通常建议使用[矩阵分解](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))方法，本教程中的数据集就是这种情况。 当你有不同的数据时，还可使用其他推荐算法（请参阅下面的[其他推荐算法](#other-recommendation-algorithms)部分以了解更多信息）。 
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) 就是推荐训练算法。  当你掌握用户过去如何评价产品的数据时，通常建议使用[矩阵分解](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))方法，本教程中的数据集就是这种情况。 当你有不同的数据时，还可使用其他推荐算法（请参阅下面的[其他推荐算法](#other-recommendation-algorithms)部分以了解更多信息）。
 
 在本例中，`Matrix Factorization` 算法使用了一种称为“协作筛选”的方法，该方法假设如果用户 1 在某个问题上与用户 2 有相同的观点，那么用户 1 更有可能与用户 2 在另一个问题上有相同的看法。
 
@@ -242,7 +242,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 ## <a name="evaluate-your-model"></a>评估模型
 
-训练模型后，使用测试数据评估模型的执行情况。 
+训练模型后，使用测试数据评估模型的执行情况。
 
 使用下面的代码紧随 `BuildAndTrainModel()` 方法后创建 `EvaluateModel()` 方法：
 
@@ -253,8 +253,7 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-将以下代码添加到 `EvaluateModel()` 以转换 `Test` 数据：
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+将以下代码添加到 `EvaluateModel()`，转换 `Test` 数据：[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法对测试数据集的多个提供的输入行进行预测。
 
@@ -315,6 +314,7 @@ RSquared: 0.412556298844873
 现在，你可以使用经过训练的模型对新数据进行预测。
 
 使用下面的代码紧随 `EvaluateModel()` 方法后创建 `UseModelForSinglePrediction()` 方法：
+
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
@@ -427,9 +427,9 @@ Movie 10 is recommended for user 6
 
 ### <a name="features"></a>功能
 
-在本教程中，只使用数据集提供的三个 `Features`（`user id``movie id` 和 `rating`）。 
+在本教程中，只使用数据集提供的三个 `Features`（`user id``movie id` 和 `rating`）。
 
-虽然这是一个良好的开端，但实际上你可能希望添加其他属性或 `Features`（例如，年龄、性别、地理位置等），如果它们包含在数据集中。 添加更相关的 `Features` 有助于提升推荐模型的性能。 
+虽然这是一个良好的开端，但实际上你可能希望添加其他属性或 `Features`（例如，年龄、性别、地理位置等），如果它们包含在数据集中。 添加更相关的 `Features` 有助于提升推荐模型的性能。
 
 如果你不确定哪个 `Features` 可能与机器学习任务最相关，还可以使用 ML.NET 提供的特征贡献计算 (FCC) 和[特征排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)来发现最有影响力的 `Features`。
 
@@ -445,7 +445,7 @@ Movie 10 is recommended for user 6
 var options = new MatrixFactorizationTrainer.Options
 {
     MatrixColumnIndexColumnName = "userIdEncoded",
-    MatrixRowIndexColumnName = "movieIdEncoded", 
+    MatrixRowIndexColumnName = "movieIdEncoded",
     LabelColumnName = "Label",
     NumberOfIterations = 20,
     ApproximationRank = 100
@@ -458,8 +458,8 @@ var options = new MatrixFactorizationTrainer.Options
 
 | 算法       | 方案           | 示例  |
 | ------------- |:-------------:| -----:|
-| 一类矩阵分解 | 当只有 userId 和 movieId 时使用此选项。 这种推荐方式基于共同购买方案或经常一起购买的产品，这意味着它将根据自己的采购订单历史记录向客户推荐一组产品。 | [>试试看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| 场感知分解机 | 当拥有的特征不止 userId、productId 和评分（例如产品描述或产品价格）时，可使用此选项进行建议。 此方法也使用协作筛选法。 | [>试试看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| 一类矩阵分解 | 当只有 userId 和 movieId 时使用此选项。 这种推荐方式基于共同购买方案或经常一起购买的产品，这意味着它将根据自己的采购订单历史记录向客户推荐一组产品。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| 场感知分解机 | 当拥有的特征不止 userId、productId 和评分（例如产品描述或产品价格）时，可使用此选项进行建议。 此方法也使用协作筛选法。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>新用户方案
 
