@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296519"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>演练：使用 WindowsFormsHost 元素映射属性
@@ -160,4 +160,4 @@ ms.locfileid: "59296519"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [演练：在 WPF 中承载 Windows 窗体控件](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [演练：承载在 WPF 中的 Windows 窗体控件](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228193"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字符实体和 XAML
@@ -67,4 +67,4 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
 - [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [标记扩展和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName 语法](xamlname-grammar.md)
-- [XAML 中的空白处理](whitespace-processing-in-xaml.md)
+- [在 XAML 中处理空白](whitespace-processing-in-xaml.md)

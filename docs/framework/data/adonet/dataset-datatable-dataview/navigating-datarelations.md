@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204154"
 ---
 # <a name="navigating-datarelations"></a>导航 DataRelation
@@ -52,4 +52,4 @@ Customer ID: NORTS
 ## <a name="see-also"></a>请参阅
 
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

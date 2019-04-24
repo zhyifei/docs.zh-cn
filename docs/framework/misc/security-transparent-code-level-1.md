@@ -12,10 +12,10 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161065"
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明代码，级别 1
@@ -30,7 +30,7 @@ ms.locfileid: "59161065"
   
 -   [1 级透明度模型](#the_level_1_transparency_model)  
   
--   [透明度特性](#transparency_attributes)  
+-   [透明性属性](#transparency_attributes)  
   
 -   [安全透明度示例](#security_transparency_examples)  
   
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>请参阅
 
-- [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [安全性更改](../../../docs/framework/security/security-changes.md)
+- [安全透明代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [安全更改](../../../docs/framework/security/security-changes.md)

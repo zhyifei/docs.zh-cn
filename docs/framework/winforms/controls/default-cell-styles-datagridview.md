@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333608"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式
@@ -68,6 +68,6 @@ ms.locfileid: "59333608"
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [如何：使用设计器设置 Windows 窗体 DataGridView 控件的交替行样式](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [如何：设置为使用设计器在 Windows 窗体 DataGridView 控件中交替行样式](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)

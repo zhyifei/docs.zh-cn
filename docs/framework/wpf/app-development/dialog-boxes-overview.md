@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177406"
 ---
 # <a name="dialog-boxes-overview"></a>对话框概述
@@ -63,7 +63,7 @@ ms.locfileid: "59177406"
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>通用对话框  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 实现各种可重用的对话框所共有的所有应用程序，包括用于打开文件、 保存文件，然后打印对话框。 这些对话框由操作系统实现，因此可以在运行于该操作系统上的所有应用程序之间共享，这对用户体验的一致性很有帮助；当用户熟悉一个应用程序中操作系统所提供的对话框时，他们就无需再去了解如何在其他应用程序中使用该对话框。 因为这些对话框可供所有应用程序，因为它们可帮助提供一致的用户体验，因此它们被称为*公共对话框*。  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 实现所有应用程序（包括用于打开文件、保存文件和打印的对话框）共用的各种可重用的对话框。 这些对话框由操作系统实现，因此可以在运行于该操作系统上的所有应用程序之间共享，这对用户体验的一致性很有帮助；当用户熟悉一个应用程序中操作系统所提供的对话框时，他们就无需再去了解如何在其他应用程序中使用该对话框。 因为这些对话框可供所有应用程序，因为它们可帮助提供一致的用户体验，因此它们被称为*公共对话框*。  
   
  Windows Presentation Foundation (WPF) 封装用于打开文件、 保存文件，并打印通用对话框和将其公开为托管的类以便您可以在独立应用程序中使用。 本主题提供每个通用对话框的简要概述。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "59177406"
   
  ![无效左边的距值四周的红色边框边距对话框。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不限制用户对无效控件，直到它们已输入有效的数据。 这对于对话框来说很好，无论数据是否有效用户都应该可以自由导航到对话框中的控件。 但是，这意味着用户可以输入无效数据并按**确定**按钮。 出于此原因，代码还需要验证所有控件在对话框中，当**确定**通过处理按下按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不会在用户输入有效数据之前限制其对无效控件的访问。 这对于对话框来说很好，无论数据是否有效用户都应该可以自由导航到对话框中的控件。 但是，这意味着用户可以输入无效数据并按**确定**按钮。 出于此原因，代码还需要验证所有控件在对话框中，当**确定**通过处理按下按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  

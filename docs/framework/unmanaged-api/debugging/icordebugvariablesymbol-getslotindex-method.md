@@ -5,10 +5,10 @@ ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: affe67006c9e37d55b0f9d107c92441da44c9ab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138783"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex 方法
@@ -27,7 +27,7 @@ HRESULT GetSlotIndex(
  [out] 指向本地变量的槽索引的指针。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果成功。 `E_FAIL` 如果变量是函数的参数。  
+ `S_OK` 如果成功。 如果变量是一个函数自变量，则为 `E_FAIL`。  
   
 ## <a name="remarks"></a>备注  
  本地变量的托管槽索引可用于检索变量的元数据信息  
@@ -42,7 +42,7 @@ HRESULT GetSlotIndex(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

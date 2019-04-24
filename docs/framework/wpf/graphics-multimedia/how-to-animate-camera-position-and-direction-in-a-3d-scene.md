@@ -10,10 +10,10 @@ helpviewer_keywords:
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
 ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145998"
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>如何：在三维场景中对照相机位置和方向进行动画处理
@@ -26,5 +26,5 @@ ms.locfileid: "59145998"
 
 - <xref:System.Windows.Media.Animation.Vector3DAnimation>
 - <xref:System.Windows.Media.Animation.Point3DAnimation>
-- [使用关键帧对照相机位置和方向进行动画处理](how-to-animate-camera-position-and-direction-using-key-frames.md)
-- [三维图形概述](3-d-graphics-overview.md)
+- [使用关键帧为照相机位置和方向设置动画效果](how-to-animate-camera-position-and-direction-using-key-frames.md)
+- [3D 图形概述](3-d-graphics-overview.md)

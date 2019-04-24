@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148078"
 ---
 # <a name="transport-security-with-windows-authentication"></a>通过 Windows 身份验证确保的传输安全
@@ -120,5 +120,5 @@ ms.locfileid: "59148078"
 ## <a name="see-also"></a>请参阅
 
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [如何：使用 Windows 凭据保护服务的安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [如何：使用 Windows 凭据保护服务](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

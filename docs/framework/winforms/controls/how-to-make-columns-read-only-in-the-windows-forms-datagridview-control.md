@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
 ms.openlocfilehash: 2a4ca0a718373c56f77e8f3c45a9d6ee6d76a081
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171920"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>如何：将 Windows 窗体 DataGridView 控件中的列设为只读
@@ -39,5 +39,5 @@ ms.locfileid: "59171920"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
-- [Windows 窗体 DataGridView 控件中的基本列、行和单元格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [如何：防止在 Windows 窗体 DataGridView 控件中添加和删除行](prevent-row-addition-and-deletion-datagridview.md)
+- [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [如何：防止添加和 Windows 窗体 DataGridView 控件中的删除行](prevent-row-addition-and-deletion-datagridview.md)

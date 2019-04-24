@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
 ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217414"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控件技术摘要（Windows 窗体）
@@ -53,7 +53,7 @@ ms.locfileid: "59217414"
 |---------------------|-------------------------------------------------|  
 |数据绑定|<xref:System.Windows.Forms.BindingSource>|  
 |数据演示文稿|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> 派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> 派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView> 扩展性|<xref:System.Windows.Forms.DataGridViewCell> 派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 派生类<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|<xref:System.Windows.Forms.DataGridView> 可扩展性|<xref:System.Windows.Forms.DataGridViewCell> 派生类<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 派生类<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>新增功能  
  <xref:System.Windows.Forms.DataGridView>控件旨在作为完整的解决方案，用于显示与 Windows 窗体的表格数据。 应考虑使用<xref:System.Windows.Forms.DataGridView>控件，然后再其他解决方案，如<xref:System.Windows.Forms.DataGrid>，当您正在创作新的应用程序。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  

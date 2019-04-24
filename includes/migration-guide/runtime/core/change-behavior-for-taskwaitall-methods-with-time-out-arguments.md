@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 94fad6fe910da6c528c5e13f529a6db274e07d5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235195"
+---
 ### <a name="change-in-behavior-for-taskwaitall-methods-with-time-out-arguments"></a>带有超时自变量的 Task.WaitAll 方法的行为更改
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
-

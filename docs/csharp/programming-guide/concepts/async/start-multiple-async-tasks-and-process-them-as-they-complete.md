@@ -2,12 +2,12 @@
 title: 在异步任务完成时对其进行处理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152353"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59304852"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
 
@@ -20,22 +20,22 @@ ms.locfileid: "53152353"
 
 ## <a name="download-an-example-solution"></a>下载示例解决方案
 
-若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序），然后遵循以下步骤。
+若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。
 
 > [!TIP]
 > 如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.cs 文件。
 
-1.  从 .zip 文件中提取已下载的文件，然后启动 Visual Studio。
+1. 从 .zip 文件中提取已下载的文件，然后启动 Visual Studio。
 
-2.  在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”。
+2. 在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”。
 
-3.  在“打开项目”对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。
+3. 在“打开项目”对话框中，打开保存已下载的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。
 
-4.  在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。
+4. 在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。
 
-5.  选择 F5 键以运行此程序（或按 Ctrl+F5 键以运行此程序，而不对其进行调试）。
+5. 选择 F5 键以运行此程序（或按 Ctrl+F5 键以运行此程序，而不对其进行调试）。
 
-6.  多次运行此项目以验证并不总是以相同顺序显示已下载的长度。
+6. 多次运行此项目以验证并不总是以相同顺序显示已下载的长度。
 
 ## <a name="create-the-program-yourself"></a>自行创建程序
 
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 下列代码是示例的 MainWindow.xaml.cs 文件的完整文本。 对添加到此示例的元素进行了星号标记。 另请注意，必须为 <xref:System.Net.Http> 添加引用。
 
-可以从 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
+可以从 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
 
 ```csharp
 using System;

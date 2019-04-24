@@ -5,10 +5,10 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175274"
 ---
 # <a name="event-logging-in-wcf"></a>WCF 中的事件日志记录
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部�
   
 -   共享的侦听器：WCF TCP 端口共享服务记录的事件时未能启动。  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]:记录事件时该服务无法启动。  
+-   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]：记录事件时该服务无法启动。  
   
 -   严重和错误事件，如启动故障或崩溃  
   

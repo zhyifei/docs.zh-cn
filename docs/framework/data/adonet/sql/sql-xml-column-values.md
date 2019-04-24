@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: 803357f9ae97eee2cbbf5e777dbc1210ded26ab2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149703"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列值
@@ -28,4 +28,4 @@ SQL Server 支持`xml`数据类型和开发人员可以检索包括此类型使�
 
 - <xref:System.Data.SqlTypes.SqlXml>
 - [SQL Server 中的 XML 数据](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

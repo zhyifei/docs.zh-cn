@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163132"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
@@ -79,9 +79,9 @@ ms.locfileid: "59163132"
   
 -   位于 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 结构上的公共成员不受支持。 这些受到支持的类型仅用于 LINQ、表达式树和静态数组初始化。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和<xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType>在基类中包含隐藏的成员，因此可能会重写而无需显式重写。 这也适用于其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法。  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 在基类中包含隐藏成员，因此可能会在没有显示重写的情况下遭到重写。 这也适用于其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法。  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和<xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType>尝试创建特定组合 （例如，byref 阵列） 时不会发生故障。  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 在你试图创建特定组合（例如，ByRef 数组）时不会发生故障。  
   
 -   你无法使用反射来调用具有指针参数的成员。  
   
@@ -145,15 +145,15 @@ ms.locfileid: "59163132"
   
  **委托**  
   
- `Delegate.BeginInvoke` 和`Delegate.EndInvoke`不受支持。  
+ `Delegate.BeginInvoke` 和 `Delegate.EndInvoke` 不受支持。  
   
- **各种 API**  
+ **其他 API**  
   
 -   [TypeInfo.GUID](xref:System.Type.GUID)属性，则会引发<xref:System.PlatformNotSupportedException>异常如果<xref:System.Runtime.InteropServices.GuidAttribute>特性未应用于类型。 GUID 主要用于 COM 支持。  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法会正确解析包含在.NET Native 的短日期的字符串。 然而，它不会继续兼容 Microsoft 知识库文章 [KB2803771](https://support.microsoft.com/kb/2803771) 和 [KB2803755](https://support.microsoft.com/kb/2803755)中描述的日期和时间解析的变更。  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is corre正确舍入中.NET Native。 在某些版本的 CLR 中，结果字符串会缩短，而不是舍入。  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 正确舍入中.NET Native。 在某些版本的 CLR 中，结果字符串会缩短，而不是舍入。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient 差异  
@@ -215,7 +215,7 @@ ms.locfileid: "59163132"
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 受支持，但在某些情况下，例如，当与使用会引发异常[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)或 byref 变量。  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 受支持，但在某些情况下会引发异常，如与 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 或 byref 变量一起使用时。  
   
  已弃用的 Api [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)支持包括：  
   
@@ -574,11 +574,11 @@ ms.locfileid: "59163132"
   
      类型 `InnerType` 对序列程序而言是未知的，因为基类的成员在序列化期间无法遍历。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 并<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>无法序列化的类或结构实现<xref:System.Collections.Generic.IEnumerable%601>接口。 例如，以下类无法序列化或反序列化：  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 无法序列化实施 <xref:System.Collections.Generic.IEnumerable%601> 接口的类或结构。 例如，以下类无法序列化或反序列化：  
 
--   <xref:System.Xml.Serialization.XmlSerializer> 无法序列化以下对象值，因为它不知道要进行序列化的对象的确切类型：  
+-   <xref:System.Xml.Serialization.XmlSerializer> 无法序列化以下对象值，因为它不知道将序列化的对象的类型：  
 
--   <xref:System.Xml.Serialization.XmlSerializer> 无法序列化或反序列化的序列化的对象类型是否为<xref:System.Xml.XmlQualifiedName>。  
+-   如果将序列化的对象的类型是<xref:System.Xml.Serialization.XmlSerializer> ，则 <xref:System.Xml.XmlQualifiedName>无法序列化或反序列化。  
   
 -   所有序列程序（<xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>和 <xref:System.Xml.Serialization.XmlSerializer>）都无法为 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 类型或包含 <xref:System.Xml.Linq.XElement>的类型生成序列代码。 它们会显示生成时间错误。  
   
@@ -606,7 +606,7 @@ ms.locfileid: "59163132"
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 无法为包含具有以下属性的任何方法的类型生成代码：  
+-   <xref:System.Xml.Serialization.XmlSerializer> 无法为具有以下任意特性的方法的类型生成代码：  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -616,7 +616,7 @@ ms.locfileid: "59163132"
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 不兼容<xref:System.Xml.Serialization.IXmlSerializable>自定义序列化接口。 如果你的类实施此接口， <xref:System.Xml.Serialization.XmlSerializer> 会考虑普通旧 CLR 对象 (POCO) 类型并仅对其公共属性进行序列化。  
+-   <xref:System.Xml.Serialization.XmlSerializer> 不兼容 <xref:System.Xml.Serialization.IXmlSerializable> 自定义序列化接口。 如果你的类实施此接口， <xref:System.Xml.Serialization.XmlSerializer> 会考虑普通旧 CLR 对象 (POCO) 类型并仅对其公共属性进行序列化。  
   
 -   序列化纯<xref:System.Exception>对象不太适合<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
 
@@ -649,6 +649,6 @@ ms.locfileid: "59163132"
 ## <a name="see-also"></a>请参阅
 
 - [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET For Windows Store 应用程序概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [.NET for Windows Store 应用概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

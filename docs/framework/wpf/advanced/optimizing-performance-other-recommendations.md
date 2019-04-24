@@ -12,10 +12,10 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224281"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>优化性能：其他建议
@@ -77,9 +77,9 @@ ms.locfileid: "59224281"
 - [规划应用程序性能](planning-for-application-performance.md)
 - [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
 - [布局和示例](optimizing-performance-layout-and-design.md)
-- [二维图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
 - [对象行为](optimizing-performance-object-behavior.md)
 - [应用程序资源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文本](optimizing-performance-text.md)
 - [数据绑定](optimizing-performance-data-binding.md)
 - [动画提示和技巧](../graphics-multimedia/animation-tips-and-tricks.md)

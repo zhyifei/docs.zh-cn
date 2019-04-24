@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210199"
 ---
 # <a name="planning-for-application-performance"></a>规划应用程序性能
@@ -37,9 +37,9 @@ ms.locfileid: "59210199"
 - [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
 - [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
 - [布局和示例](optimizing-performance-layout-and-design.md)
-- [二维图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
 - [对象行为](optimizing-performance-object-behavior.md)
 - [应用程序资源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文本](optimizing-performance-text.md)
 - [数据绑定](optimizing-performance-data-binding.md)
 - [其他性能建议](optimizing-performance-other-recommendations.md)

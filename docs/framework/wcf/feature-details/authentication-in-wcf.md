@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
 ms.openlocfilehash: ebff66e185bdca75a0150b22a16392bfd08892d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165453"
 ---
 # <a name="authentication-in-wcf"></a>WCF 中的身份验证
@@ -25,7 +25,7 @@ ms.locfileid: "59165453"
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  作为额外的保护措施，客户端可以进行身份验证服务通过指定期望*标识*的服务。 如果期望的标识与服务返回的标识不匹配，则身份验证失败。  
   
- [安全协商和超时](../../../../docs/framework/wcf/feature-details/security-negotiation-and-timeouts.md)  
+ [安全性协商和超时](../../../../docs/framework/wcf/feature-details/security-negotiation-and-timeouts.md)  
  说明如何使用 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> 类的 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> 属性。  
   
  [调试 Windows 身份验证错误](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  

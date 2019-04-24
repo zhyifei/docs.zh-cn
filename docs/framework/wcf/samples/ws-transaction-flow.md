@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296090"
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   第二个 `Subtract` 请求在用 `TransactionScopeOption.Suppress` 选项声明的新事务范围内执行。 这会禁止客户端的初始外层事务，请求不会将事务流动到服务。 此方法允许客户端显式放弃和防止将事务流动到服务（不需要流动时）。 服务的操作发生在新的未连接的事务范围内。  
   
--   `Multiply`请求不会将事务流动到服务因为客户端生成的定义`ICalculator`接口包含<xref:System.ServiceModel.TransactionFlowAttribute>设置为<xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`。  
+-   `Multiply` 请求不会将事务流动到服务，因为客户端的生成的 `ICalculator` 接口定义包括设置为 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
   
 -   `Divide` 请求不会将事务流动到服务，因为客户端的 `ICalculator` 接口生成的定义再次没有包括 `TransactionFlowAttribute`。 服务的操作再次发生在另一个新的未连接的事务范围内。  
   
@@ -225,7 +225,7 @@ Press <ENTER> to terminate the service.
   
 1. 若要生成 C# 或 Visual Basic.NET 版本的解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. 确保已安装 SQL Server Express Edition 或 SQL Server，并确保已在服务的应用程序配置文件中正确设置连接字符串。 若要运行该示例不使用数据库的情况下，设置`usingSql`到服务的应用程序配置文件中的值 `false`  
+2. 确保已安装 SQL Server Express Edition 或 SQL Server，并确保已在服务的应用程序配置文件中正确设置连接字符串。 若要在不使用数据库的情况下运行示例，请将服务的应用程序配置文件中的 `usingSql` 值设置为 `false`  
   
 3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   

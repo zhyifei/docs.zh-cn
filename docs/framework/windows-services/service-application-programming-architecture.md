@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714875"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59216385"
 ---
 # <a name="service-application-programming-architecture"></a>服务应用程序编程体系结构
 Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 类继承的类。 可以替代此类中的方法并为其定义功能，以确定服务的行为方式。  
@@ -67,5 +67,6 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
  还可以使用名为 <xref:System.ServiceProcess.ServiceController> 的组件与现有服务进行通信并控制其行为。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)

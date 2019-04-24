@@ -3,10 +3,10 @@ title: 招聘流程
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313146"
 ---
 # <a name="hiring-process"></a>招聘流程
@@ -18,7 +18,7 @@ ms.locfileid: "59313146"
   
  此示例演示 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的以下功能：  
   
--   <xref:System.Activities.Statements.Flowchart> 和<xref:System.Activities.Statements.Sequence>建模业务流程的工作流。  
+-   用于对业务流程进行建模的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流。  
   
 -   工作流服务。  
   
@@ -121,10 +121,10 @@ ms.locfileid: "59313146"
 |活动的构成|此过程定义使用 <xref:System.Activities.Activity> 的自由构成。 流程图包含若干个顺序活动和并行活动，而这些活动同时又包含其他活动，等待。|HiringRequestService|  
 |并行活动|-   <xref:System.Activities.Statements.ParallelForEach%601> 用于在 CEO 和 HR 经理的收件箱中注册以并行 （正在等待两名 HR 经理的审批步骤）。<br />-   <xref:System.Activities.Statements.Parallel> 用于执行一些清理任务中的完成和已拒绝步骤|HiringRequestService|  
 |模型取消|此流程图使用 <xref:System.Activities.Statements.CancellationScope> 创建取消行为（在此情况下它执行一些清理操作）。|HiringRequestService|  
-|客户持久性参与者|`HiringRequestPersistenceParticipant` 将数据从工作流变量保存到 Contoso HR 数据库中存储的表。|HiringRequestService|  
-|工作流服务|`ResumeRequestService` 使用工作流服务实现。 工作流定义和服务信息包含在 ResumeRequestService.xamlx 中。 此服务配置为使用持久性和跟踪。|ResumeRequestService|  
-|持久性计时器|`ResumeRequestService` 使用持久性计时器定义招聘启事的持续时间 （一旦超时到期，关闭招聘启事）。|ResumeRequestService|  
-|事务|<xref:System.Activities.Statements.TransactionScope> 用于确保执行中的多个活动的数据的一致性 （时接收新简历时）。|ResumeRequestService|  
+|客户持久性参与者|`HiringRequestPersistenceParticipant` 将工作流变量中的数据保存到 Contoso HR 数据库中存储的某个表中。|HiringRequestService|  
+|工作流服务|使用工作流服务实现 `ResumeRequestService`。 工作流定义和服务信息包含在 ResumeRequestService.xamlx 中。 此服务配置为使用持久性和跟踪。|ResumeRequestService|  
+|持久性计时器|`ResumeRequestService` 使用持久性计时器定义招聘启事的持续时间（一旦超时到期，将关闭招聘启事）。|ResumeRequestService|  
+|事务|<xref:System.Activities.Statements.TransactionScope> 用于确保数据在若干个活动的执行期间（接收新简历时）保持一致。|ResumeRequestService|  
 |事务|自定义持久性参与者 (`HiringRequestPersistenceParticipant`) 和自定义跟踪参与者 (`HistoryFileTrackingParticipant`) 使用相同的事务。|HiringRequestService|  
 |在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 应用程序中使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。|从两个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序访问工作流。|InternalClient / CareersWebSite|  
   

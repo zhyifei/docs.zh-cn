@@ -1,19 +1,19 @@
 ---
 title: is - C# 参考
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977041"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480828"
 ---
 # <a name="is-c-reference"></a>is（C# 参考）
 
@@ -47,11 +47,11 @@ ms.locfileid: "56977041"
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-如果已知表达式始终为 `true` 或 `false`，则 `is` 关键字会生成编译时警告。 它只考虑引用转换、装箱转换和取消装箱转换；不考虑用户定义的转换或由类型的[隐式](implicit.md)和[显式](explicit.md)运算符定义的转换。 下例生成警告，因为转换结果在编译时就已知。 请注意，`is` 表达式从 `int` 到 `long` 和 `double` 的转换会返回 false，因为这些转换由[隐式](implicit.md)运算符处理。
+如果已知表达式始终为 `true` 或 `false`，则 `is` 关键字会生成编译时警告。 它只考虑引用转换、装箱转换和取消装箱转换；不考虑用户定义的转换或由类型的[隐式](implicit.md)和[显式](explicit.md)运算符定义的转换。 下面的示例生成警告，因为转换结果在编译时就已知。 用于从 `int` 转换到 `long` 和 `double` 的 `is` 表达式返回 false，因为这些转换由[隐式](implicit.md)运算符处理。
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` 可以是返回值的任何表达式，匿名方法和 Lambda 表达式除外。 下例使用 `is` 来计算方法调用的返回值。   
+`expr` 不得为匿名方法或 Lambda 表达式。 它可以是其他任何返回值的表达式。 下例使用 `is` 来计算方法调用的返回值。   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 从 C# 7.0 开始，可以使用[类型模式](#type)的模式匹配来编写代码，代码使用 `is` 语句更为简洁。
@@ -66,7 +66,7 @@ ms.locfileid: "56977041"
 
 - [var 模式](#var)，始终成功的匹配，可将表达式的值绑定到新局部变量。 
 
-### <a name="type" />类型模式</a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />类型模式
 
 使用类型模式执行模式匹配时，`is` 会测试表达式是否可转换为指定类型，如果可以，则将其转换为该类型的一个变量。 它是 `is` 语句的直接扩展，可执行简单的类型计算和转换。 `is` 类型模式的一般形式为：
 
@@ -85,6 +85,8 @@ ms.locfileid: "56977041"
 - *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型是其声明中定义的变量类型。 变量的运行时类型是分配给该变量的实例类型。
 
 - *expr* 是实现 *type* 接口的类型的一个实例。
+
+自 C# 7.1 起，expr 可能有泛型类型参数及其约束定义的编译时类型。 
 
 如果 expr 为 `true`，且 `is` 与 `if` 语句一起使用，则会分配 varname，并且其仅在 `if` 语句中具有局部范围。
 
@@ -106,7 +108,7 @@ ms.locfileid: "56977041"
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />常量模式
 
-使用常量模式执行模式匹配时，`is` 会测试表达式结果是否等于指定常量。 在 C# 6 和更低版本中，[switch](switch.md) 语句支持常量模式。 从 C# 7.0 开始，`is` 语句也支持常量模式。 语法为：
+使用常量模式执行模式匹配时，`is` 会测试表达式结果是否等于指定常量。 在 C# 6 和更低版本中，[switch](switch.md) 语句支持常量模式。 自 C# 7.0 起，`is` 语句也支持它。 语法为：
 
 ```csharp
    expr is constant
@@ -142,17 +144,15 @@ ms.locfileid: "56977041"
  
 ### <a name="var" />var 模式</a>
 
-具有 var 模式的模式匹配始终成功。 语法为
+对于非 null 表达式，与 var 模式的模式匹配始终成功；如果 expr 为 `null`，`is` 表达式为 `false`。 expr 的非 null 值始终分配给与 expr 的运行时类型相同的本地变量。  语法为：
 
 ```csharp 
    expr is var varname
 ```
 
-其中，*expr* 的值始终分配给名为 *varname* 的局部变量。 *varname* 是一个与 *expr* 具有相同类型的静态变量。 下例使用 var 模式向名为 `obj` 的变量分配表达式。 然后，显示 `obj` 的值和类型。
+下例使用 var 模式向名为 `obj` 的变量分配表达式。 然后，显示 `obj` 的值和类型。
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-请注意，如果 *expr* 为 `null`，则 `is` 表达式仍为 true 并向 *varname* 分配 `null`。 
 
 ## <a name="c-language-specification"></a>C# 语言规范
   

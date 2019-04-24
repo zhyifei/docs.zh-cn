@@ -14,10 +14,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316617"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：更改过程自变量 (Visual Basic 中) 的值
@@ -80,12 +80,12 @@ ms.locfileid: "59316617"
 ## <a name="see-also"></a>请参阅
 
 - [过程](./index.md)
-- [过程形参和实参](./procedure-parameters-and-arguments.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
-- [按值和按引用传递参数](./passing-arguments-by-value-and-by-reference.md)
-- [可修改和不可修改参数之间的差异](./differences-between-modifiable-and-nonmodifiable-arguments.md)
-- [通过值传递参数和通过引用传递参数之间的差异](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [如何：防止过程参数的值被更改](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [如何：强制通过值传递参数](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [按位置和按名称传递参数](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
+- [可修改和不可修改自变量之间的差异](./differences-between-modifiable-and-nonmodifiable-arguments.md)
+- [通过值传递自变量和通过引用传递自变量之间的差异](./differences-between-passing-an-argument-by-value-and-by-reference.md)
+- [如何：防止过程自变量的值更改](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [如何：强制通过值传递自变量](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [按位置和按名称传递自变量](./passing-arguments-by-position-and-by-name.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

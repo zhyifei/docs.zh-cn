@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554551"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59141253"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -73,7 +73,7 @@ ms.locfileid: "54554551"
   
 -   **方案 3：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序，并将其与 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起运行。  
   
-     已安装的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
+     已安装的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]  
   
      要执行的操作：在应用程序目录的应用程序配置文件中，使用 `<startup>` 元素并将其 `useLegacyV2RuntimeActivationPolicy` 属性设置为 `true`，另外还使用 `<supportedRuntime>` 元素进行如下设置：  
   
@@ -174,5 +174,6 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

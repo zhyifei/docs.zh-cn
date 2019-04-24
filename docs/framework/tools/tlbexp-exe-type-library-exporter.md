@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 805d35ddb74fca847d47298cf283913031af67c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482829"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59109417"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
@@ -130,6 +130,7 @@ tlbexp Sample.dll
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [工具](../../../docs/framework/tools/index.md)
 - [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)

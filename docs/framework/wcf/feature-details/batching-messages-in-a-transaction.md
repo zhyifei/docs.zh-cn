@@ -5,10 +5,10 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310520"
 ---
 # <a name="batching-messages-in-a-transaction"></a>在事务中对消息进行批处理
@@ -20,11 +20,11 @@ ms.locfileid: "59310520"
 ## <a name="committing-a-transaction"></a>提交事务  
  根据以下因素提交批处理事务：  
   
--   `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行为的一个属性。 此属性确定放入批处理中的消息的最大数量。 一旦达到此数量，批处理便会被提交。 该值并不是一个严格的限制，在接收到这一数量的消息之前也可以提交批处理。  
+-   `MaxBatchSize`。 <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行为的一个属性。 此属性确定放入批处理中的消息的最大数量。 一旦达到此数量，批处理便会被提交。 该值并不是一个严格的限制，在接收到这一数量的消息之前也可以提交批处理。  
   
--   `Transaction Timeout`. 当事务的超时时间已经过去 80% 之后，系统会提交批处理，并且创建一个新的批处理。 这表示如果为事务完成所分配的时间只剩下 20% 或更少，系统便会提交批处理。  
+-   `Transaction Timeout`。 当事务的超时时间已经过去 80% 之后，系统会提交批处理，并且创建一个新的批处理。 这表示如果为事务完成所分配的时间只剩下 20% 或更少，系统便会提交批处理。  
   
--   `TransactionScopeRequired`. 当处理一批消息，如果 WCF 发现一个带有`TransactionScopeRequired`  =  `false`，它提交该批处理并重新打开新的批处理的第一个消息的接收`TransactionScopeRequired`  =  `true`和`TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`。 当处理一批消息，如果 WCF 发现一个带有`TransactionScopeRequired`  =  `false`，它提交该批处理并重新打开新的批处理的第一个消息的接收`TransactionScopeRequired`  =  `true`和`TransactionAutoComplete` = `true`.  
   
 -   如果队列中不再有其他消息，则即使尚未达到 `MaxBatchSize` 或事务的超时时间尚未过去 80%，系统也会提交当前的批处理。  
   

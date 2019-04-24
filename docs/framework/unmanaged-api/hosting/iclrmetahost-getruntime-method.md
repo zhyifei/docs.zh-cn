@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b71d0f29d770b2722b0dfaabc8b9667e524c99e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207599"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime 方法
@@ -58,7 +58,7 @@ HRESULT GetRuntime (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_POINTER|`pwzVersion` 或`ppRuntime`为 null。|  
+|E_POINTER|`pwzVersion` 或 `ppRuntime` 为 null。|  
   
 ## <a name="remarks"></a>备注  
  此方法始终与交互旧式界面如[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)如不推荐使用的接口和旧版函数`CorBindTo*`函数 (请参阅[不推荐使用 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)托管 API 在.NET Framework 2.0 中)。 即，使用传统的 API 加载的运行时是可见新的 API，并使用新的 API 加载的运行时对传统的 API 可见。  
@@ -70,12 +70,12 @@ HRESULT GetRuntime (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [ICLRMetaHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [弃用的 CLR 承载接口和 Coclass](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)
-- [CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
+- [弃用的 CLR 承接接口和组件类](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)
+- [CLR Hosting 接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
 - [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
-- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

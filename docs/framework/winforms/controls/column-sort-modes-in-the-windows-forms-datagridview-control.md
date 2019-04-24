@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
 ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106661"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列排序模式
@@ -66,6 +66,6 @@ ms.locfileid: "59106661"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [在 Windows 窗体 DataGridView 控件中对数据进行排序](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [如何：设置 Windows 窗体 DataGridView 控件中列的排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [如何：在 Windows 窗体 DataGridView 控件中自定义排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中进行数据排序](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件中的列排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [如何：自定义 Windows 窗体 DataGridView 控件中的排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

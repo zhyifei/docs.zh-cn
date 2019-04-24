@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335467"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>如何：调用不返回值 (Visual Basic 中) 的过程
@@ -34,8 +34,8 @@ ms.locfileid: "59335467"
 - <xref:System.ArgumentException>
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)
-- [过程形参和实参](./procedure-parameters-and-arguments.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [如何：创建过程](./how-to-create-a-procedure.md)
-- [如何：调用返回值的过程](./how-to-call-a-procedure-that-returns-a-value.md)
+- [如何：调用返回的值的过程](./how-to-call-a-procedure-that-returns-a-value.md)
 - [如何：在 Visual Basic 中调用事件处理程序](./how-to-call-an-event-handler.md)

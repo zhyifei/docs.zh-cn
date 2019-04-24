@@ -25,10 +25,10 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175783"
 ---
 # <a name="object-lifetime-events"></a>对象生存期事件
@@ -40,7 +40,7 @@ ms.locfileid: "59175783"
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>对象生存期事件  
- Microsoft.NET Framework 托管代码中的所有对象都经过一组类似的生命周期、 创建、 使用和销毁的阶段。 许多对象还包括生命终止阶段，该阶段属于销毁阶段的一部分。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对象，多个专门的视觉对象的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]标识为元素，还具有一组常见对象生命周期的各个阶段。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 编程和应用程序模型将这些阶段作为一系列事件公开。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有四种与生存期事件有关的主要类型对象 - 即常规元素、窗口元素、导航宿主和应用程序对象。 窗口和导航宿主也都属于视觉对象（元素）这个较大的组。 本主题首先介绍所有元素的通用生存期事件，然后介绍应用于应用程序定义、窗口或导航宿主的更具针对性的生存期事件。  
+ Microsoft.NET Framework 托管代码中的所有对象都经过一组类似的生命周期、 创建、 使用和销毁的阶段。 许多对象还包括生命终止阶段，该阶段属于销毁阶段的一部分。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 对象（更明确的说，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 标识为元素的视觉对象）还具有对象生命的一系列常见阶段。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 编程和应用程序模型将这些阶段作为一系列事件公开。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有四种与生存期事件有关的主要类型对象 - 即常规元素、窗口元素、导航宿主和应用程序对象。 窗口和导航宿主也都属于视觉对象（元素）这个较大的组。 本主题首先介绍所有元素的通用生存期事件，然后介绍应用于应用程序定义、窗口或导航宿主的更具针对性的生存期事件。  
   
 <a name="common_events"></a>   
 ## <a name="common-lifetime-events-for-elements"></a>元素通用生存期事件  
@@ -66,9 +66,9 @@ ms.locfileid: "59175783"
 ## <a name="lifetime-events-application-model-elements"></a>生存期事件应用程序模型元素  
  构建在通用生存期事件的元素是以下应用程序模型元素： <xref:System.Windows.Application>， <xref:System.Windows.Window>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>。 这些与特定用途相关的额外事件扩充了常见的生存期事件。 将在以下位置详细介绍这些内容：  
   
--   <xref:System.Windows.Application>:[应用程序管理概述](../app-development/application-management-overview.md)。  
+-   <xref:System.Windows.Application>：[应用程序管理概述](../app-development/application-management-overview.md)。  
   
--   <xref:System.Windows.Window>:[WPF Windows 概述](../app-development/wpf-windows-overview.md)。  
+-   <xref:System.Windows.Window>：[WPF Windows 概述](../app-development/wpf-windows-overview.md)。  
   
 -   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[导航概述](../app-development/navigation-overview.md)。  
   

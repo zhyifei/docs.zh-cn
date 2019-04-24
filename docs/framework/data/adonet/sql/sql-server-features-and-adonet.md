@@ -3,10 +3,10 @@ title: SQL Server 功能和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294894"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
@@ -16,13 +16,13 @@ ms.locfileid: "59294894"
   
  **SQL Server 联机丛书**  
   
-1. [Development (Database Engine)（开发 [数据库引擎]）](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [开发 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>本节内容  
  [枚举 SQL Server 的实例 (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  描述如何枚举 SQL Server 的活动实例。  
   
- [用于 SQL Server 的提供程序统计信息](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ [SQL Server 的提供程序统计信息](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  描述对获取 SQL Server 运行时统计信息的支持。  
   
  [SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "59294894"
  [SQL Server 中的快照隔离](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  描述对快照隔离的支持，该行版本机制旨在减少事务应用程序中的阻碍。  
   
- [SqlClient 对高可用性的支持，灾难恢复](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [SqlClient 对高可用性和灾难恢复的支持](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  描述高可用性、灾难恢复 (AlwaysOn) 可用性组的 SqlClient 支持。  
   
  [SqlClient 对 LocalDB 的支持](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
@@ -52,4 +52,4 @@ ms.locfileid: "59294894"
 - [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

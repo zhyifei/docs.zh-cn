@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182294"
 ---
 # <a name="lazy-initialization"></a>迟缓初始化
@@ -23,7 +23,7 @@ ms.locfileid: "59182294"
   
 -   对象创建成本高，且希望将其创建推迟到其他高成本操作完成后。 例如，假定程序在启动时加载多个对象实例，但是只需立即加载其中一部分。 可以通过推迟初始化不需要的对象，直到创建所需对象，提升程序的启动性能。  
   
- 虽然可以编写自己的代码来执行迟缓初始化，但我们建议使用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 和及其相关的类型还支持线程安全，并提供一致的异常传播策略。  
+ 虽然可以编写自己的代码来执行迟缓初始化，但我们建议使用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 及其相关的类型还支持线程安全并提供一致的异常传播策略。  
   
  下表列出了 .NET Framework 版本 4 提供的在不同方案中启用迟缓初始化的类型。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "59182294"
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|否|否|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|是|是|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
 |Lazy(T)(LazyThreadSafetyMode)|用户指定|否|否|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|用户指定|是|如果用户指定 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 则为 no；否则为 yes。|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "59182294"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> 包装其对象的方法与大致相同<xref:System.Lazy%601>，存在以下主要差别：  
+ <xref:System.Threading.ThreadLocal%601> 包装其对象的方式与 <xref:System.Lazy%601> 非常相似，但存在以下主要区别：  
   
 -   每个线程都通过使用其自己的专有数据来初始化线程本地变量，这些数据不能从其他线程访问。  
   
@@ -157,4 +157,4 @@ ms.locfileid: "59182294"
 - [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)
 - [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)
 - [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [如何：执行对象的延迟初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [如何：执行对象的迟缓初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

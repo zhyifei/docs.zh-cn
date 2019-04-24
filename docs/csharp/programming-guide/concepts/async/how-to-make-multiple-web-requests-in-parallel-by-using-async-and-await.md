@@ -2,12 +2,12 @@
 title: 如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: c8f1c9a134af2139f3dd0d76614b1f719b4d453c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547639"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335415"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)
 在 async 方法中，任务在创建后即启动。 在任务完成前处理无法继续的方法中将 [await](../../../../csharp/language-reference/keywords/await.md) 运算符应用于任务。 通常任务被创建后即等待，如下面的示例所示。  
@@ -43,7 +43,7 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>设置项目  
   
-1.  若要设置 WPF 应用程序，请完成以下步骤。 可以在[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中找到有关这些步骤的详细说明。  
+1. 若要设置 WPF 应用程序，请完成以下步骤。 可以在[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中找到有关这些步骤的详细说明。  
   
     -   创建包含一个文本框和一个按钮的 WPF 应用程序。 将按钮命名为 `startButton`，将文本框命名为 `resultsTextBox`。  
   
@@ -53,9 +53,9 @@ var result = await myTask;
   
 ### <a name="to-add-the-code"></a>添加代码  
   
-1.  在设计窗口的 MainWindow.xaml 中，双击按钮以在 MainWindow.xaml.cs 中创建 `startButton_Click` 事件处理程序。  
+1. 在设计窗口的 MainWindow.xaml 中，双击按钮以在 MainWindow.xaml.cs 中创建 `startButton_Click` 事件处理程序。  
   
-2.  复制以下代码并粘贴到 MainWindow.xaml.cs 中的 `startButton_Click` 的正文中。  
+2. 复制以下代码并粘贴到 MainWindow.xaml.cs 中的 `startButton_Click` 的正文中。  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -65,7 +65,7 @@ var result = await myTask;
   
      此代码调用异步方法 `CreateMultipleTasksAsync`，此方法驱动应用程序。  
   
-3.  向项目中添加以下支持方法：  
+3. 向项目中添加以下支持方法：  
   
     -   `ProcessURLAsync` 使用 <xref:System.Net.Http.HttpClient> 方法将网站内容下载为字节数组。 支持方法 `ProcessURLAsync` 随后显示并返回数组的长度。  
   
@@ -93,7 +93,7 @@ var result = await myTask;
     }  
     ```  
   
-4.  最后，定义方法 `CreateMultipleTasksAsync`，用于执行以下步骤。  
+4. 最后，定义方法 `CreateMultipleTasksAsync`，用于执行以下步骤。  
   
     -   该方法声明 `HttpClient` 对象，这需要你访问 `ProcessURLAsync` 中的 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法。  
   
@@ -134,7 +134,7 @@ var result = await myTask;
     }  
     ```  
   
-5.  按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
+5. 按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
   
      多次运行此程序以确认三个任务并不总是以相同的顺序完成，并且完成的顺序不一定是创建和等待任务的顺序。  
   

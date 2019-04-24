@@ -3,10 +3,10 @@ title: 通过范围进行发现的示例
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328083"
 ---
 # <a name="discovery-with-scopes-sample"></a>通过范围进行发现的示例
@@ -20,7 +20,7 @@ ms.locfileid: "59328083"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1. 此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。 使用提升的特权执行下面的命令应添加相应的 ACL。 可能需要使用你的域和用户名替换以下自变量，如果未按是运行该命令： `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用您的域和用户名替换以下参数：`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. 生成解决方案。  
   

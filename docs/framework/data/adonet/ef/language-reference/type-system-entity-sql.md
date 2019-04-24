@@ -3,16 +3,16 @@ title: 类型系统 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134558"
 ---
 # <a name="type-system-entity-sql"></a>类型系统 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持多种类型：  
   
--   基元 （简单） 类型如`Int32`和 `String.`  
+-   基元（简单）类型，如 `Int32` 和 `String.`。  
   
 -   在架构中定义的名义类型，如 <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.ComplexType> 和 <xref:System.Data.Metadata.Edm.RelationshipType>。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "59134558"
 ## <a name="references"></a>参考资料  
  引用是指向特定实体集中的特定实体的逻辑指针。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持使用以下运算符进行构造、 解构和导航的：  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持使用以下运算符对引用进行构造、解构和导航：  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
@@ -50,7 +50,7 @@ from (select ref(o) as r from LOB.Orders as o) as o2
   
 ## <a name="see-also"></a>请参阅
 
-- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)
 - [CSDL、SSDL 和 MSL 规范](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

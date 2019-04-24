@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412326"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59168163"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在托管代码中创建原型
 本主题介绍了如何访问非托管函数，并介绍了在托管代码中批注方法定义的若干属性字段。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
@@ -235,6 +235,7 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)
 - [指定入口点](specifying-an-entry-point.md)
 - [指定字符集](specifying-a-character-set.md)

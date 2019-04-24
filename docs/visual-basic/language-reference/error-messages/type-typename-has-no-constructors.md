@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
 ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311638"
 ---
 # <a name="type-typename-has-no-constructors"></a>类型\<类型名称 > 没有构造函数
@@ -32,4 +32,4 @@ ms.locfileid: "59311638"
 ## <a name="see-also"></a>请参阅
 
 - [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/talk-to-us)

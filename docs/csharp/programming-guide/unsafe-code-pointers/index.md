@@ -1,16 +1,22 @@
 ---
-title: '不安全代码和指针 - C# 编程指南'
+title: 不安全代码和指针 - C# 编程指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'security [C#], type safety'
-  - 'C# language, unsafe code'
-  - 'type safety [C#]'
-  - 'unsafe keyword [C#]'
-  - 'unsafe code [C#]'
-  - 'C# language, pointers'
-  - 'pointers [C#], about pointers'
+- security [C#], type safety
+- C# language, unsafe code
+- type safety [C#]
+- unsafe keyword [C#]
+- unsafe code [C#]
+- C# language, pointers
+- pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
+ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678077"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>不安全代码和指针（C# 编程指南）
 为了保持类型安全性，默认情况下，C# 不支持指针算法。 但是，通过使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 关键字，可以定义可在其中使用指针的不安全上下文。 有关指针的详细信息，请参阅主题[指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。  

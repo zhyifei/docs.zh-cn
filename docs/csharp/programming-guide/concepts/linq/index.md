@@ -3,11 +3,11 @@ title: 语言集成查询 (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701900"
 ---
 # <a name="language-integrated-query-linq"></a>语言集成查询 (LINQ)
 

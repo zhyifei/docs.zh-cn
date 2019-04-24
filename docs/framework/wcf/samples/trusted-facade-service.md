@@ -3,11 +3,11 @@ title: 受信任的外观服务
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346153"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768184"
 ---
 # <a name="trusted-facade-service"></a>受信任的外观服务
 此方案示例演示如何流动到另一个使用 Windows Communication Foundation (WCF) 调用方的标识信息从一个服务的安全基础结构。  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155995"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 标记扩展
@@ -34,7 +34,7 @@ ms.locfileid: "59155995"
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 在资源库语法中设置的属性。|  
+|`propertyName`|在资源库语法中设置的属性的 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>。|  
 |`sourceProperty`|另一个在要模板化的类型上存在的依赖项属性，由其 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 来指定。<br /><br /> - 或 -<br /><br /> 由要模板化的目标类型之外的类型所定义的“dotted-down”属性名称。 这实际上是 <xref:System.Windows.PropertyPath>。 请参阅[PropertyPath XAML 语法](propertypath-xaml-syntax.md)。|  
   
 ## <a name="remarks"></a>备注  
@@ -46,9 +46,9 @@ ms.locfileid: "59155995"
   
  特性语法是最常用于该标记扩展的语法。 在 `TemplateBinding` 标识符字符串之后提供的字符串标记被指定为基础 <xref:System.Windows.TemplateBindingExtension.Property%2A> 扩展类的 <xref:System.Windows.TemplateBindingExtension> 值。  
   
- 对象元素语法也可行，但因为没有实际的应用，所以未进行演示。 `TemplateBinding` 用于填充 setter 中的值，使用计算表达式，并使用对象元素语法`TemplateBinding`以填充`<Setter.Property>`属性元素语法就不必太复杂。  
+ 对象元素语法也可行，但因为没有实际的应用，所以未进行演示。 `TemplateBinding` 用于使用计算的表达式来填充资源库内的值，因此使用 `TemplateBinding` 的对象元素语法来填充 `<Setter.Property>` 属性元素语法就会变得繁冗而多余。  
   
- `TemplateBinding` 此外可以在详细特性用法中，指定使用<xref:System.Windows.TemplateBindingExtension.Property%2A>属性作为属性 = 值对：  
+ `TemplateBinding` 还可以在详细特性用法中使用，以便将 <xref:System.Windows.TemplateBindingExtension.Property%2A> 属性指定为一个 property=value 对：  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -67,5 +67,5 @@ ms.locfileid: "59155995"
 - [样式设置和模板化](../controls/styling-and-templating.md)
 - [XAML 概述 (WPF)](xaml-overview-wpf.md)
 - [标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [RelativeSource MarkupExtension](relativesource-markupextension.md)
+- [RelativeSource 标记扩展](relativesource-markupextension.md)
 - [绑定标记扩展](binding-markup-extension.md)

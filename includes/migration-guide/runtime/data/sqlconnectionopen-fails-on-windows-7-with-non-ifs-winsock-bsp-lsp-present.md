@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 65d9edc1e7377a86f8185ebf28bb5bee3a3f887d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59235156"
+---
 ### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open 在存在非 IFS Winsock BSP 或 LSP 的 Windows 7 中会失败
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
-

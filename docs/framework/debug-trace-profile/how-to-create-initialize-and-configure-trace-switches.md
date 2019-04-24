@@ -14,10 +14,10 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325704"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、初始化和配置跟踪开关
@@ -77,7 +77,7 @@ ms.locfileid: "59325704"
   
     -   **Visual Basic：** 在中**添加新项**对话框框中，选择**应用程序配置文件**。  
   
-         创建并打开应用程序配置文件。 这是一个其根元素为 XML 文档 `<configuration>.`  
+         创建并打开应用程序配置文件。 这是一个根元素为 `<configuration>.` 的 XML 文档  
   
     -   **Visual C#:** 在中**添加新项**对话框框中，选择**XML 文件**。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
   
@@ -128,6 +128,6 @@ ms.locfileid: "59325704"
 ## <a name="see-also"></a>请参阅
 
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [跟踪和调试设置架构](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

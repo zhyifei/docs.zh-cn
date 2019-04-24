@@ -10,10 +10,10 @@ helpviewer_keywords:
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140213"
 ---
 # <a name="geometries"></a>几何图形
@@ -28,6 +28,6 @@ ms.locfileid: "59140213"
 
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF 中的形状和基本图形概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
 - [图形和多媒体](index.md)

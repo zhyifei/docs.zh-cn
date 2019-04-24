@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479150"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59185570"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
@@ -210,5 +210,6 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [工具](../../../docs/framework/tools/index.md)
 - [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

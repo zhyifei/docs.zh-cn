@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
 ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110788"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 对象模型
@@ -69,7 +69,7 @@ ms.locfileid: "59110788"
   
  通过调用映射的过程返回的结果集为强类型化的集合。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 存储的过程和函数映射到方法通过使用<xref:System.Data.Linq.Mapping.FunctionAttribute>和<xref:System.Data.Linq.Mapping.ParameterAttribute>属性。 表示存储过程的方法与表示用户定义的函数的方法通过 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 属性加以区分。 如果此属性设置为 `false`（默认值），则此方法表示存储过程。 如果它设置为 `true`，则此方法表示数据库函数。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性将存储过程和函数映射到方法。 表示存储过程的方法与表示用户定义的函数的方法通过 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 属性加以区分。 如果此属性设置为 `false`（默认值），则此方法表示存储过程。 如果它设置为 `true`，则此方法表示数据库函数。  
   
 > [!NOTE]
 >  如果使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建映射到存储的过程和用户定义函数的方法。  

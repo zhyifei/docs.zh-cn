@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654349"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328304"
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
 内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，可以使用托管代码访问内存映射文件，就像本机 Windows 函数访问内存映射文件（如[管理内存映射文件](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))所述）一样。  
@@ -96,29 +96,29 @@ ms.locfileid: "58654349"
   
  下面的示例包含三个独立进程（控制台应用），以将布尔值写入内存映射文件。 各操作按下面的顺序发生：  
   
-1.  `Process A` 创建内存映射文件，并向其中写入值。  
+1. `Process A` 创建内存映射文件，并向其中写入值。  
   
-2.  `Process B` 打开内存映射文件，并向其中写入值。  
+2. `Process B` 打开内存映射文件，并向其中写入值。  
   
-3.  `Process C` 打开内存映射文件，并向其中写入值。  
+3. `Process C` 打开内存映射文件，并向其中写入值。  
   
-4.  `Process A` 读取并显示内存映射文件中的值。  
+4. `Process A` 读取并显示内存映射文件中的值。  
   
-5.  在 `Process A` 处理完内存映射文件后，此文件立即被垃圾回收器回收。  
+5. 在 `Process A` 处理完内存映射文件后，此文件立即被垃圾回收器回收。  
   
  若要运行此示例，请按照以下步骤操作：  
   
-1.  编译应用并打开三个命令提示符窗口。  
+1. 编译应用并打开三个命令提示符窗口。  
   
-2.  在第一个命令提示符窗口中，运行 `Process A`。  
+2. 在第一个命令提示符窗口中，运行 `Process A`。  
   
-3.  在第二个命令提示符窗口中，运行 `Process B`。  
+3. 在第二个命令提示符窗口中，运行 `Process B`。  
   
-4.  返回到 `Process A`，再按 Enter。  
+4. 返回到 `Process A`，再按 Enter。  
   
-5.  在第三个命令提示符窗口中，运行 `Process C`。  
+5. 在第三个命令提示符窗口中，运行 `Process C`。  
   
-6.  返回到 `Process A`，再按 Enter。  
+6. 返回到 `Process A`，再按 Enter。  
   
  `Process A` 的输出如下所示：  
   

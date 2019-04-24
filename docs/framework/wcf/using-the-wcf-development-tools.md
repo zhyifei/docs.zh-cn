@@ -3,10 +3,10 @@ title: 使用 WCF 开发工具
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144633"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 开发工具
@@ -27,7 +27,7 @@ ms.locfileid: "59144633"
   
  WCF 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，您可以输入任意类型的参数，将该服务，以及查看发回响应服务输入提交。 它提供了完美的服务测试体验与 WCF 服务自动主机结合使用时。  
   
- [从 XML 生成数据类型类](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [通过 XML 生成数据类型类](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  可将存储在剪贴板中的 XML 数据粘贴到代码页中。 数据中定义的类将被转换为代码类型。  
   

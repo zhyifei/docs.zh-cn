@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115727"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>如何：在 Windows 窗体中使用对齐线和网格排列控件
@@ -37,11 +37,11 @@ ms.locfileid: "59115727"
   
 ## <a name="see-also"></a>请参阅
 
-- [“选项”对话框 ->“Windows 窗体设计器”->“常规”](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [演练：使用对齐线在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [通常，Windows 窗体设计器选项对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [演练：使用对齐线的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Windows 窗体控件](index.md)
 - [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
-- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)
-- [标记单个 Windows 窗体控件并提供它们的快捷方式](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
-- [根据功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)

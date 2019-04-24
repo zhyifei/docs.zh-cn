@@ -3,10 +3,10 @@ title: 单向
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320986"
 ---
 # <a name="one-way"></a>单向
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP 从定义上讲是一个请求/响应协议；当发出请求时，即返回响应。 即使对于通过 HTTP 公开的单向服务操作，也是如此。 当调用操作时，服务在执行服务操作之前返回 HTTP 状态码 202。 此状态码表示请求已被接受进行处理，但处理尚未完成。 调用操作的客户端在从服务收到 202 响应之前处于阻止状态。 当使用绑定（配置为使用会话）发送多个单向消息时，这可能会产生某些意外行为。 此示例中使用的 `wsHttpBinding` 绑定配置为默认使用会话来建立安全上下文。 默认情况下，会话中的消息一定会按照它们的发送顺序到达。 因此，当发送会话中的第二个消息时，在处理完第一个消息之前不会处理第二个消息。 这样的结果是，在处理完上一个消息之前，客户端不会收到消息的 202 响应。 因此，客户端似乎是阻止了每个后续的操作调用。 为了避免此行为，此示例对运行库进行了配置，以便将消息并发调度给不同的实例进行处理。 本示例将 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 设置为 `PerCall`，以使每条消息可以由不同的实例来处理。 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 设置为`Multiple`以允许多个线程同时调度消息。  
+>  HTTP 从定义上讲是一个请求/响应协议；当发出请求时，即返回响应。 即使对于通过 HTTP 公开的单向服务操作，也是如此。 当调用操作时，服务在执行服务操作之前返回 HTTP 状态码 202。 此状态码表示请求已被接受进行处理，但处理尚未完成。 调用操作的客户端在从服务收到 202 响应之前处于阻止状态。 当使用绑定（配置为使用会话）发送多个单向消息时，这可能会产生某些意外行为。 此示例中使用的 `wsHttpBinding` 绑定配置为默认使用会话来建立安全上下文。 默认情况下，会话中的消息一定会按照它们的发送顺序到达。 因此，当发送会话中的第二个消息时，在处理完第一个消息之前不会处理第二个消息。 这样的结果是，在处理完上一个消息之前，客户端不会收到消息的 202 响应。 因此，客户端似乎是阻止了每个后续的操作调用。 为了避免此行为，此示例对运行库进行了配置，以便将消息并发调度给不同的实例进行处理。 本示例将 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 设置为 `PerCall`，以使每条消息可以由不同的实例来处理。 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 设置为 `Multiple`，以允许多个线程同时调度消息。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   

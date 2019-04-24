@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
 ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297962"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>如何：使用代码发布服务的元数据
@@ -43,7 +43,7 @@ ms.locfileid: "59297962"
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4. 设置<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>属性 `true.`  
+4. 将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true.`  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
@@ -88,8 +88,8 @@ ms.locfileid: "59297962"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在托管应用程序中承载 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：承载于托管应用程序的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自承载](../../../../docs/framework/wcf/samples/self-host.md)
 - [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [如何：使用配置文件发布服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [如何：发布使用配置文件服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

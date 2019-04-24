@@ -3,10 +3,10 @@ title: 疑难解答
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105477"
 ---
 # <a name="troubleshooting"></a>疑难解答
@@ -15,7 +15,7 @@ ms.locfileid: "59105477"
  在解决其他问题[Frequently Asked Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)。  
   
 ## <a name="unsupported-standard-query-operators"></a>不支持的标准查询运算符  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持所有标准查询运算符方法 (例如， <xref:System.Linq.Enumerable.ElementAt%2A>)。 因此，编译后的项目仍然可能产生运行时错误。 有关详细信息，请参阅[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持某些标准查询运算符方法（例如，<xref:System.Linq.Enumerable.ElementAt%2A>）。 因此，编译后的项目仍然可能产生运行时错误。 有关详细信息，请参阅[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
   
 ## <a name="memory-issues"></a>内存问题  
  如果查询涉及到内存中集合和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>，该查询可能在内存中，具体取决于指定这两个集合的顺序执行。 如果该查询必须在内存中执行，则需要检索数据库表中的数据。  
@@ -29,7 +29,7 @@ ms.locfileid: "59105477"
  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]会在项目的 `app.config` 文件中创建一个连接字符串。 在类库项目中，不使用 `app.config` 文件。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用在设计时文件中提供的连接字符串。 更改 `app.config` 中的值不会更改应用程序连接到的数据库。  
   
 ## <a name="cascade-delete"></a>级联删除  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持或无法识别级联删除操作。 如果要在表中删除一个具有约束的行，必须执行以下操作之一：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持且无法识别级联删除操作。 如果要在表中删除一个具有约束的行，必须执行以下操作之一：  
   
 -   在数据库的外键约束中设置 `ON DELETE CASCADE` 规则。  
   

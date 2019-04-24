@@ -12,10 +12,10 @@ helpviewer_keywords:
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
 ms.openlocfilehash: d5d4dae55fc9f0613ab6535b2fe57e262d0ef141
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314017"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>如何：向 ListView 控件添加搜索功能
@@ -54,4 +54,4 @@ ms.locfileid: "59314017"
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
 - [ListView 控件](listview-control-windows-forms.md)
 - [ListView 控件概述](listview-control-overview-windows-forms.md)
-- [如何：使用 Windows 窗体 ListView 控件添加和移除项](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：添加和删除使用 Windows 窗体 ListView 控件的项](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

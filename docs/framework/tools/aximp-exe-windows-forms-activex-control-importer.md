@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b7a2725b340c4ecb43861e1b8855fcae425a4b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521876"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59119192"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
 ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义转换为 Windows 窗体控件。  
@@ -80,5 +80,6 @@ aximp c:\systemroot\system32\msdxm.ocx
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [工具](../../../docs/framework/tools/index.md)
 - [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

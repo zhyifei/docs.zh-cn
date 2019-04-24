@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309675"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>如何：在 IIS 中承载 WCF 服务
@@ -66,7 +66,7 @@ ms.locfileid: "59309675"
   
      此示例显式指定配置文件中的终结点。 如果您不希望向服务添加任何终结点，则运行时为您添加默认终结点。 有关默认终结点、 绑定和行为，请参阅详细信息[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)并[WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-11. 若要确保正确承载该服务，请打开 Internet Explorer 并浏览到服务的 URL 的实例： `http://localhost/IISHostedCalc/Service.svc`  
+11. 为了确保正确承载该服务，请打开 Internet Explorer 的实例，导航到该服务的 URL：`http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>示例  
  下面是 IIS 承载的计算器服务的代码的完整列表。  
@@ -77,8 +77,8 @@ ms.locfileid: "59309675"
   
 ## <a name="see-also"></a>请参阅
 
-- [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [承载服务](../../../../docs/framework/wcf/hosting-services.md)
+- [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [托管服务](../../../../docs/framework/wcf/hosting-services.md)
 - [WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [安全性](../../../../docs/framework/wcf/feature-details/security.md)
 - [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537967"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59327758"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>如何：从特定日期中提取星期几
 利用 .NET Framework，可以很容易地确定某个特定日期是星期几，以及显示某个特定日期的本地化星期几名称。 指示与特定日期相对应的星期几的枚举值可以从 <xref:System.DateTime.DayOfWeek%2A> 或 <xref:System.DateTimeOffset.DayOfWeek%2A> 属性中获取。 与此不同的是，检索星期几名称是一项格式化操作，可通过调用格式化方法来执行，例如日期和时间值的 `ToString` 方法或 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法。 本主题演示如何执行这些格式化操作。  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>从特定日期中提取指示星期几的数字  
   
-1.  如果要使用日期的字符串表示形式，请使用静态 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法将其转换为 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
+1. 如果要使用日期的字符串表示形式，请使用静态 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法将其转换为 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
-2.  使用 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> 属性检索指示星期几的 <xref:System.DayOfWeek> 值。  
+2. 使用 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> 属性检索指示星期几的 <xref:System.DayOfWeek> 值。  
   
-3.  如有必要，可将 <xref:System.DayOfWeek> 值强制转换（在 C# 中）或转换（在 Visual Basic 中）为整数。  
+3. 如有必要，可将 <xref:System.DayOfWeek> 值强制转换（在 C# 中）或转换（在 Visual Basic 中）为整数。  
   
  下面的示例将显示一个整数，用于表示特定日期的星期几。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54537967"
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>从特定日期中提取缩写的星期几名称  
   
-1.  如果要使用日期的字符串表示形式，请使用静态 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法将其转换为 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
+1. 如果要使用日期的字符串表示形式，请使用静态 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法将其转换为 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
-2.  你可以提取当前区域性或特定区域性的缩写的星期几名称：  
+2. 你可以提取当前区域性或特定区域性的缩写的星期几名称：  
   
     1.  若要提取当前区域性的缩写的星期几名称，请调用日期和时间值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 实例方法，并以 `format` 参数的形式传递字符串“ddd”。 下面的示例演示 <xref:System.DateTime.ToString%28System.String%29> 方法的调用。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "54537967"
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>从特定日期中提取完整的星期几名称  
   
-1.  如果要使用日期的字符串表示形式，请使用静态 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法将其转换为 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
+1. 如果要使用日期的字符串表示形式，请使用静态 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法将其转换为 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
-2.  你可以提取当前区域性或特定区域性的完整的星期几名称：  
+2. 你可以提取当前区域性或特定区域性的完整的星期几名称：  
   
     1.  若要提取当前区域性的缩写的星期几名称，请调用日期和时间值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 实例方法，并以 `format` 参数的形式传递字符串“dddd”。 下面的示例演示 <xref:System.DateTime.ToString%28System.String%29> 方法的调用。  
   

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202009"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>如何：创建显示进度的 Windows 窗体控件
@@ -28,9 +28,9 @@ ms.locfileid: "59202009"
   
 -   重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法以提供绘制控件的逻辑。  
   
--   计算可用于绘制控件使用的区域及其<xref:System.Windows.Forms.Control.ClientRectangle%2A>属性。 `FlashTrackBar` 此其`OptimizedInvalidate`方法。  
+-   计算可用于绘制控件使用的区域及其<xref:System.Windows.Forms.Control.ClientRectangle%2A>属性。 `FlashTrackBar` 在 `OptimizedInvalidate` 方法中执行此操作。  
   
--   在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。 `FlashTrackBar` 定义`ShouldSerializeStartColor`并`ShouldSerializeEndColor`方法用于序列化其`StartColor`和`EndColor`属性。  
+-   在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。 `FlashTrackBar` 定义用于序列化其 `StartColor` 和 `EndColor` 属性的 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法。  
   
  下表显示了由 `FlashTrackBar` 定义的自定义属性。  
   

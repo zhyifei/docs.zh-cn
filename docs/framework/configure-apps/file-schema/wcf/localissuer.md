@@ -3,10 +3,10 @@ title: <localIssuer>
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
 ms.openlocfilehash: 9a51387cd75d57a6828ecde1dcd788b056f7e27a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122871"
 ---
 # <a name="localissuer"></a>\<localIssuer>
@@ -88,6 +88,6 @@ endpointBehaviors 部分
 - [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [保证客户端的安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
 - [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

@@ -3,14 +3,14 @@ title: 乐观并发：概述
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106543"
 ---
 # <a name="optimistic-concurrency-overview"></a>乐观并发：概述
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持乐观并发控制。 下表描述了条款适用于中涉及开放式并发[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档：  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持开放式并发控制。 下表描述了条款适用于中涉及开放式并发[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档：  
   
 |术语|描述|  
 |-----------|-----------------|  
@@ -18,7 +18,7 @@ ms.locfileid: "59106543"
 |并发冲突|两个或更多用户同时尝试向一行的一列或多列提交冲突值的情形。|  
 |并发控制|用于解决并发冲突的技术。|  
 |开放式并发控制|先调查其他事务是否已更改了行中的值，再允许提交更改的技术。<br /><br /> 与之相反*悲观并发控制*，这将锁定要避免发生并发冲突的记录。<br /><br /> *乐观*控件之所以称作，因为它考虑到一个事务干扰另一个不太可能发生的可能性。|  
-|冲突解决|通过重新查询数据库刷新出现冲突的项，然后协调差异的过程。<br /><br /> 刷新对象时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 更改跟踪器会保留以下数据：<br /><br /> -值最初从数据库获取并用于更新检查。<br />的后续查询中新数据库值。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 然后确定对象是否发生冲突 （即，是否一个或多个其成员值已更改）。 如果此对象发生冲突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 下一步会确定它的哪些成员发生冲突。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 发现的任何成员冲突都会添加到冲突列表中。|  
+|冲突解决|通过重新查询数据库刷新出现冲突的项，然后协调差异的过程。<br /><br /> 刷新对象时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 更改跟踪器会保留以下数据：<br /><br /> -值最初从数据库获取并用于更新检查。<br />的后续查询中新数据库值。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 随后会确定相应对象是否发生冲突（即它的一个或多个成员值是否已发生更改）。 如果此对象发生冲突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 下一步会确定它的哪些成员发生冲突。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 发现的任何成员冲突都会添加到冲突列表中。|  
   
  在中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型*开放式并发冲突*两个以下条件成立时发生：  
   

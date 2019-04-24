@@ -3,10 +3,10 @@ title: 选择凭据类型
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167838"
 ---
 # <a name="selecting-a-credential-type"></a>选择凭据类型
@@ -114,4 +114,4 @@ ms.locfileid: "59167838"
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+- [HTTP 传输安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

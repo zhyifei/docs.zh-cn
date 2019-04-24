@@ -3,10 +3,10 @@ title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313510"
 ---
 # <a name="diffgrams"></a>DiffGrams
@@ -85,9 +85,9 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 |----------------|-----------------|  
 |**id**|用于中的元素配对 **\<diffgr： 之前 >** 并 **\<diffgr:errors >** 块中的元素**\<*****DataInstance*** **>** 块。 使用值**diffgr: id**批注位于窗体 *[TableName] [RowIdentifier]*。 例如：`<Customers diffgr:id="Customers1">`。|  
 |**parentId**|标识中的哪个元素**\<** ***DataInstance*** **>** 块是当前元素的父元素。 使用值**diffgr: parentid**批注位于窗体 *[TableName] [RowIdentifier]*。 例如：`<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|中的行标识**\<** ***DataInstance*** **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **inserted**<br /> 标识**Added**行。<br /><br /> **modified**<br /> 标识**Modified**包含行**原始**中的行版本 **\<diffgr： 之前 >** 块。 请注意， **Deleted**行将包含**原始**中的行版本 **\<diffgr： 之前 >** 块，但将存在中没有带批注的元素**\<**  ***DataInstance*** **>** 块。|  
+|**hasChanges**|中的行标识**\<** ***DataInstance*** **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **inserted**<br /> 标识**Added**行。<br /><br /> **修改**<br /> 标识**Modified**包含行**原始**中的行版本 **\<diffgr： 之前 >** 块。 请注意， **Deleted**行将包含**原始**中的行版本 **\<diffgr： 之前 >** 块，但将存在中没有带批注的元素**\<**  ***DataInstance*** **>** 块。|  
 |**hasErrors**|中的行标识**\<** ***DataInstance*** **>** 块**RowError**。 错误元素放置在 **\<diffgr:errors >** 块。|  
-|**Error**|包含的文本**RowError**中的特定元素的 **\<diffgr:errors >** 块。|  
+|**错误**|包含的文本**RowError**中的特定元素的 **\<diffgr:errors >** 块。|  
   
  当以 DiffGram 格式读写 <xref:System.Data.DataSet> 的内容时，还包含附加的批注。 下表描述了命名空间中定义这些其他批注**urn： 架构-microsoft-com:xml-msdata**。  
   
@@ -135,6 +135,6 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 
 - [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [写入数据集内容作为 XML 数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [以 XML 数据的形式编写数据集内容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335317"
 ---
 # <a name="message-security-user-name"></a>用户名消息安全
@@ -222,7 +222,7 @@ Press <ENTER> to terminate client.
   
 5. 在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
   
-6. 编辑 Web.config 以反映新证书中的名称 （在 serviceCertificate 元素的 findValue 属性） 与计算机的名称的完全限定域名相同`.`  
+6. 编辑 Web.config 以反映新的证书名称（在 serviceCertificate 元素的 findValue 属性中），该名称与计算机的完全限定域名相同`.`。  
   
 7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   

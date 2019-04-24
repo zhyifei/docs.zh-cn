@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699842"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295752"
 ---
 # <a name="automatic-proxy-detection"></a>自动代理检测
 自动代理检测是一个进程，系统使用该进程来标识 Web 代理服务器，并用于代表客户端发送请求。 此功能也称为 Web 代理自动发现 (WPAD)。 启用自动代理检测后，系统会尝试查找代理配置脚本，该脚本负责返回一组可用于请求的代理。 如果找到了代理配置脚本，则会在针对使用 <xref:System.Net.WebProxy> 实例的请求获取代理信息、请求流或响应时，在本地计算机上下载、编译并运行该脚本。  
@@ -31,13 +31,13 @@ ms.locfileid: "54699842"
   
  启用自动代理检测后，<xref:System.Net.WebProxy> 类会尝试按如下方式找到代理配置脚本：  
   
-1.  WinINet `InternetQueryOption` 函数用于查找 Internet Explorer 最近检测到的代理配置脚本。  
+1. WinINet `InternetQueryOption` 函数用于查找 Internet Explorer 最近检测到的代理配置脚本。  
   
-2.  如果找不到该脚本，<xref:System.Net.WebProxy> 类将使用动态主机配置协议 (DHCP) 查找该脚本。 DHCP 服务器可以采用脚本的位置（主机名）或脚本的完整 URL 进行响应。  
+2. 如果找不到该脚本，<xref:System.Net.WebProxy> 类将使用动态主机配置协议 (DHCP) 查找该脚本。 DHCP 服务器可以采用脚本的位置（主机名）或脚本的完整 URL 进行响应。  
   
-3.  如果 DHCP 未标识 WPAD 主机，则查询 DNS 以找到 WPAD 作为其名称或别名的主机。  
+3. 如果 DHCP 未标识 WPAD 主机，则查询 DNS 以找到 WPAD 作为其名称或别名的主机。  
   
-4.  如果未标识该主机，并且代理配置脚本的位置由 Internet Explorer LAN 设置或配置文件指定，则使用此位置。  
+4. 如果未标识该主机，并且代理配置脚本的位置由 Internet Explorer LAN 设置或配置文件指定，则使用此位置。  
   
 > [!NOTE]
 >  作为 NT 服务或 ASP.NET 的一部分运行的应用程序使用调用用户的 Internet Explorer 代理服务器设置（如果可用）。 这些设置可能并非对所有服务应用程序都可用。  
@@ -68,6 +68,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  没有代理的请求将使用应用程序域的默认代理（通过 <xref:System.Net.WebRequest.DefaultWebProxy%2A> 属性提供）。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
 - [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

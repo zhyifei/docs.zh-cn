@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c790bf2721f09b263494e845356ef6b6712f99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: 09079c8847b7cb995d97a4577d03982602bbadfa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177133"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979168"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 方法
 到任何主机可用于配置公共语言运行时 (CLR) 管理器类型的实例获取的接口指针。  
@@ -52,7 +52,7 @@ HRESULT GetCLRManager (
   
 -   IID_ICLRPolicyManager:指定的`ppObject`的类型将为[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)。  
   
--   IID_ICLRTaskManager: speciries，`ppObject`的类型将为[ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)。  
+-   IID_ICLRTaskManager:指定的`ppObject`的类型将为[ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)。  
   
  `ppObject`  
  [out]请求管理器中或为空，如果请求无效的管理器类型的接口指针。  
@@ -76,7 +76,7 @@ HRESULT GetCLRManager (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

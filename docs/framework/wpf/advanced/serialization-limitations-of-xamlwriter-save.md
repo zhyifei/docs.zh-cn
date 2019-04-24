@@ -7,10 +7,10 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113277"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save 的序列化限制
@@ -30,7 +30,7 @@ ms.locfileid: "59113277"
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>不保留事件处理  
- 当对通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 添加的事件处理程序进行序列化后，不会保留这些事件处理程序。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 无需代码隐藏 （且还不相关的 X:code 机制） 无法序列化运行时过程逻辑。 因为序列化是自包含的且限于逻辑树，所以不存在用于存储事件处理程序的设施。 因此，会从输出 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中删除事件处理程序特性（特性本身和用于命名处理程序的字符串值）。  
+ 当对通过 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 添加的事件处理程序进行序列化后，不会保留这些事件处理程序。 不具有代码隐藏功能（并且也不具有相关的 x:Code 机制）的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 无法对运行时过程逻辑进行序列化。 因为序列化是自包含的且限于逻辑树，所以不存在用于存储事件处理程序的设施。 因此，会从输出 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中删除事件处理程序特性（特性本身和用于命名处理程序的字符串值）。  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>XAMLWriter.Save 实用方案  

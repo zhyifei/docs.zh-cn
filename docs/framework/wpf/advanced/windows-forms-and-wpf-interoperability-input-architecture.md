@@ -14,10 +14,10 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335714"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows 窗体和 WPF 互操作性输入体系结构
@@ -134,6 +134,6 @@ ms.locfileid: "59335714"
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [演练：在 WPF 中托管 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [演练：在 Windows 窗体中承载 WPF 复合控件](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [演练：承载在 WPF 中的 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：承载 WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)

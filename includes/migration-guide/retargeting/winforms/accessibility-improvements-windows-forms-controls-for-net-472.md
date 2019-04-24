@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5194df21e086291611dc32ee03fd928d89df3d6c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: ad29d522451649aae09786a90088f0a5d33c3ad8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760771"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59233920"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>适用于 .NET 4.7.2 的 Windows 窗体控件中的辅助功能改进
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760771"
 |范围|主要|
 |Version|4.7.2|
 |类型|重定目标|
-

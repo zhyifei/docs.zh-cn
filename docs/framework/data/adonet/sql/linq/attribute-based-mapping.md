@@ -3,10 +3,10 @@ title: 基于特性的映射
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223558"
 ---
 # <a name="attribute-based-mapping"></a>基于特性的映射
@@ -26,12 +26,12 @@ ms.locfileid: "59223558"
   
 |属性|类型|默认|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|查看 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|与其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性一起使用，用于指定数据库的名称。|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|请参见<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|与其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性一起使用，用于指定数据库的名称。|  
   
  有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 属性  
- 使用此属性可将类指定为与数据库表或视图关联的实体类。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将类视为持久性类具有此特性的类。 下表介绍了 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 属性。  
+ 使用此属性可将类指定为与数据库表或视图关联的实体类。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将具有此属性的类视为持久性类。 下表介绍了 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 属性。  
   
 |属性|类型|默认|描述|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "59223558"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|指示列包含 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 继承层次结构的鉴别器值。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|指定此类成员表示作为表主键或表主键一部分的列。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|将成员的列类型标识为数据库时间戳或版本号。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`除非<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>是`true`成员|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何实现开放式并发冲突的检测。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|除非对某个成员而言 `Always` 为 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>，否则为 `true`|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何实现开放式并发冲突的检测。|  
   
  有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
@@ -144,4 +144,4 @@ ms.locfileid: "59223558"
   
 ## <a name="see-also"></a>请参阅
 
-- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

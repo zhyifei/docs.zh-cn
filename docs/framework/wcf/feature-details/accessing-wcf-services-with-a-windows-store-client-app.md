@@ -3,10 +3,10 @@ title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
 ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294855"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
@@ -178,7 +178,7 @@ void async SomeMethod()
 
 - [Windows 应用商店应用日志中的 WCF](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
 - [WCF Windows 应用商店客户端与安全性](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [Windows 应用商店应用与跨计算机调用](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [从 Windows 应用商店应用调用 Azure 中部署的 WCF 服务](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Windows 应用商店应用和跨计算机调用](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [调用基于 Windows 应用商店应用程序在 Azure 中部署的 WCF 服务](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [绑定](../../../../docs/framework/wcf/bindings.md)

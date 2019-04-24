@@ -3,11 +3,11 @@ title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
 ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174923"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769341"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions>
 此节在计算机或应用程序配置文件的扩展节中注册新的标准终结点。 您可以向此集合添加标准终结点，具体方法为：使用 `add` 关键字，然后将元素的 `type` 特性设置为终结点类型，并将 `name` 特性设置为标准终结点的名称。  

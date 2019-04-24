@@ -1,5 +1,5 @@
 ---
-title: <remove> ConnectionManagement （网络设置） 的元素
+title: connectionManagement 的 <remove> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158855"
 ---
 # <a name="remove-element-for-connectionmanagement-network-settings"></a>\<删除 > connectionManagement （网络设置） 的元素
@@ -38,7 +38,7 @@ ms.locfileid: "59158855"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`address`|IP 地址或 DNS 名称。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "59158855"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   

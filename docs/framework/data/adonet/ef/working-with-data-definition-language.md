@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
 ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313237"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769575"
 ---
 # <a name="working-with-data-definition-language"></a>使用数据定义语言
 从开始[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]版本 4 中，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持数据定义语言 (DDL)。 这样，您将能够基于连接字符串和存储元数据 (SSDL) 模型创建或删除数据库实例。  

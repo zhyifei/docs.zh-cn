@@ -1,14 +1,14 @@
 ---
-title: <Assembly> 元素 (.NET Native)
+title: <Assembly>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137847"
 ---
 # <a name="assembly-element-net-native"></a>\<程序集 > 元素 (.NET Native)
@@ -53,19 +53,19 @@ ms.locfileid: "59137847"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*assembly_name*|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。<br /><br /> 你也可以指定文本字符串 `*Application*`，从而将策略应用到你的程序包中的所有程序集，而不管这些程序集是否已加载。 `*Application*` 永远不会将策略应用到.NET Framework 程序集。|  
+|assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。<br /><br /> 你也可以指定文本字符串 `*Application*`，从而将策略应用到你的程序包中的所有程序集，而不管这些程序集是否已加载。 `*Application*` 从不会将策略应用到 .NET Framework 程序集。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该设置将应用这个策略类型到该程序集中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用这个策略类型到该程序集中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|将反射策略应用到一个子命名空间中的所有类型。|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|将反射策略应用到一个子命名空间中的所有类型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将反射策略应用到一个类型。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一个构造泛型类型。|  
   
@@ -94,5 +94,5 @@ ms.locfileid: "59137847"
 ## <a name="see-also"></a>请参阅
 
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

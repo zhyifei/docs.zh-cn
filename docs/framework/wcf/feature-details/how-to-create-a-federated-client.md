@@ -9,10 +9,10 @@ helpviewer_keywords:
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
 ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303383"
 ---
 # <a name="how-to-create-a-federated-client"></a>如何：创建联合客户端
@@ -163,9 +163,9 @@ ms.locfileid: "59303383"
 ## <a name="see-also"></a>请参阅
 
 - [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [如何：禁用安全会话在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [如何：联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [如何：配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164731"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>数据集和 XmlDataDocument 同步
@@ -90,7 +90,7 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
  同步时**数据集**与**XmlDataDocument**，结果可能会有具体取决于是否您<xref:System.Data.DataRelation>嵌套对象。 有关详细信息，请参阅[嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [将数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [将数据集与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  演示同步强类型化**数据集**，最小架构后，使用**XmlDataDocument**。  
   
  [对数据集执行 XPath 查询](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
@@ -114,4 +114,4 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
   
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

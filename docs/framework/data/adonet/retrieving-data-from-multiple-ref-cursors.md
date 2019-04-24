@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 361e9bd4-447d-44b7-8629-3c11f1a7ffbb
 ms.openlocfilehash: a3e2298341d5ea938e0d13df09d3428837f53cec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218637"
 ---
 # <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a>使用 OracleDataReader 从多个 REF CURSOR 中检索数据
@@ -52,5 +52,5 @@ End Sub
   
 ## <a name="see-also"></a>请参阅
 
-- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
 ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150938"
 ---
 # <a name="datatable-edits"></a>数据表编辑
@@ -93,4 +93,4 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRowVersion>
 - [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [处理数据表事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

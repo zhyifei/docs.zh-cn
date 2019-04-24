@@ -3,12 +3,12 @@ title: 分支和循环 - C# 教程简介
 description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920943"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427248"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
@@ -88,34 +88,38 @@ else
 
 ```csharp
 int c = 4;
-if ((a + b + c > 10) && (a > b))
+if ((a + b + c > 10) && (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("And the first number is greater than the second");
+    Console.WriteLine("And the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("Or the first number is not greater than the second");
+    Console.WriteLine("Or the first number is not equal to the second");
 }
 ```
+
+`==` 符号执行相等测试。 使用 `==` 将相等测试与赋值测试区分开来，如在 `a = 5` 中所见。
 
 `&&` 表示“且”。 也就是说，两个条件必须都为 true，才能执行 true 分支中的语句。  这些示例还表明，可以在每个条件分支中添加多个语句，前提是将它们用 `{` 和 `}` 括住。
 
 还可以使用 `||` 表示“或”。 在当前已编写的代码之后添加以下代码：
 
 ```csharp
-if ((a + b + c > 10) || (a > b))
+if ((a + b + c > 10) || (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("Or the first number is greater than the second");
+    Console.WriteLine("Or the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("And the first number is not greater than the second");
+    Console.WriteLine("And the first number is not equal to the second");
 }
 ```
+
+修改 `a`、`b` 和 `c` 的值，并在 `&&` 和 `||` 之间切换浏览。 你将进一步了解 `&&` 和 `||` 运算符的工作原理。
 
 你已完成第一步。 开始进入下一部分前，先将当前代码移到单独的方法中。 这样一来，可以更轻松地开始处理新示例。 将 `Main` 方法重命名为 `ExploreIf`，并编写调用 `ExploreIf` 的新 `Main` 方法。 完成后，代码应如下所示：
 

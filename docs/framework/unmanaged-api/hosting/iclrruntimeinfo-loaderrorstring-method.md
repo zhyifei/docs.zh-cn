@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b485811b0e7d2f657ff2d2c1d7a2aa135e48a335
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154682"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString 方法
@@ -72,10 +72,10 @@ HRESULT LoadErrorString(
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

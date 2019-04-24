@@ -7,17 +7,17 @@ helpviewer_keywords:
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
 ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222054"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>如何：绑定两个控件的属性
 此示例演示如何使用 <xref:System.Windows.Data.Binding.ElementName%2A> 属性将一个实例化控件的属性绑定到另一个。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何将绑定<xref:System.Windows.Controls.Panel.Background%2A>的属性<xref:System.Windows.Controls.Canvas>到<xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>。<xref:System.Windows.Controls.ContentControl.Content%2A> 属性的<xref:System.Windows.Controls.ComboBox>:  
+ 下面的示例演示如何将 <xref:System.Windows.Controls.Canvas> 的 <xref:System.Windows.Controls.Panel.Background%2A> 属性绑定到<xref:System.Windows.Controls.ComboBox> 的 <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> 属性： 属性的<xref:System.Windows.Controls.ComboBox>:  
   
  [!code-xaml[BindDptoDp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindDPtoDP/CS/Window1.xaml#1)]  
   

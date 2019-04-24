@@ -1,5 +1,5 @@
 ---
-title: <socket> 元素 （网络设置）
+title: <socket> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160155"
 ---
 # <a name="socket-element-network-settings"></a>\<套接字 > 元素 （网络设置）
@@ -38,7 +38,7 @@ ms.locfileid: "59160155"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|指示是否套接字应始终使用完成端口的接受方法调用。 默认值为 `false`。|  
 |`alwaysUseCompletionPortsForConnect`|指示是否套接字应始终使用完成端口的连接方法调用。 默认值为 `false`。|  
@@ -49,9 +49,9 @@ ms.locfileid: "59160155"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
  `alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 特性用于指定 <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace 中的类在使用完全端口时的默认行为。 对于高性能服务器应用程序建议使用完成端口。  
@@ -72,7 +72,7 @@ ms.locfileid: "59160155"
   
  可能的值`ipProtectionLevel`属性设置中指定的已定义的保护级别与对应<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>枚举，如下所示：  
   
-|**特性值**|**描述**|  
+|**属性值**|**说明**|  
 |-|-|  
 |EdgeRestricted|IP 保护级别是边缘受限。 用于在 Internet 上运行的应用程序将使用此值。 此设置不允许使用 Windows Teredo 实现的网络地址转换 (NAT) 遍历。 这些应用程序可能会绕过 IPv4 防火墙，因此必须针对开放端口的 Internet 攻击保护应用程序。 在 Windows Server 2003 和 Windows XP 上，针对套接字的 IP 保护级别的默认值是边缘受限。|  
 |受限制|IP 保护级别是受限制。 未实现 Internet 方案的 intranet 应用程序将使用此值。 通常，这些应用程序不是测试或强化了抵御 Internet 样式的攻击。 此设置将限制到仅链接-本地接收的流量。|  

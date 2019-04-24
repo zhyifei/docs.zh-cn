@@ -3,10 +3,10 @@ title: <issuedTokenAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
 ms.openlocfilehash: d093b45269b230b4ff074d07a66290ab09592f60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178563"
 ---
 # <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication> of \<serviceCredentials>
@@ -99,4 +99,4 @@ ms.locfileid: "59178563"
 - <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [如何：在联合身份验证服务上配置凭据](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [如何：联合身份验证服务上配置凭据](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

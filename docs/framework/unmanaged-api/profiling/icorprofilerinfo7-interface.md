@@ -5,10 +5,10 @@ ms.assetid: cf37c462-73c5-412a-a7f8-bb26ca746313
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8586031c5bcb0303a64b67ee601fe41b81ee3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134839"
 ---
 # <a name="icorprofilerinfo7-interface"></a>ICorProfilerInfo7 接口
@@ -29,8 +29,8 @@ ms.locfileid: "59134839"
   
  **标头：** CorProf.idl, CorProf.h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

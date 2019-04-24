@@ -3,10 +3,10 @@ title: SQL Server 数据类型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326302"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
@@ -20,13 +20,13 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
   
  **SQL Server 联机丛书**  
   
-1. [数据类型（数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [数据类型 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>本节内容  
  [SqlTypes 和数据集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  说明对 `SqlTypes` 中 `DataSet` 的类型支持。  
   
- [处理 Null 值](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [处理 NULL 值](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  演示如何使用空值和三值逻辑。  
   
  [比较 GUID 和 uniqueidentifier 值](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
@@ -60,4 +60,4 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
 - [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [表值参数](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
 - [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

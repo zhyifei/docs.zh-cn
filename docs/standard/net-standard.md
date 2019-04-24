@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970878"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335012"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -113,7 +113,7 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard 库和 Visual Studio
 
-要在 Visual Studio 中生成 .NET Standard 库，请确保 Windows 上已安装 [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或更高版本，或 macOS 上已安装 [Visual Studio for Mac 版本 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) 或更高版本。
+要在 Visual Studio 中生成 .NET Standard 库，请确保 Windows 上已安装 [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 或更高版本，或 macOS 上已安装 [Visual Studio for Mac 版本 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或更高版本。
 
 如果项目中只需使用 .NET Standard 2.0 库，也可在 Visual Studio 2015 中执行此操作。 但是需要安装 NuGet client 3.6 或更高版本。 可从 [NuGet 下载](https://www.nuget.org/downloads)页面下载适用于 Visual Studio 2015 的 NuGet 客户端。
 

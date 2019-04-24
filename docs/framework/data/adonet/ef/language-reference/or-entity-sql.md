@@ -3,10 +3,10 @@ title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
 ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297793"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  返回 `Boolean`的任何有效表达式。  
   
 ## <a name="return-value"></a>返回值  
- `true` 当条件之一时`true`; 否则为`false`。  
+ 当任何一个条件为`true` 时，为 `true`；否则为 `false`。  
   
 ## <a name="remarks"></a>备注  
  OR 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 逻辑运算符。 它用于组合两个条件。 在一个语句中使用多个逻辑运算符时，首先计算 AND 运算符，然后计算 OR 运算符。 不过，使用括号可以更改求值的顺序。  

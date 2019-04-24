@@ -1,4 +1,12 @@
-### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Enumerable.Empty&lt;TResult&gt; 始终返回缓存的实例
+---
+ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803379"
+---
+### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult> 始终返回缓存实例
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |版本|4.5|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
-

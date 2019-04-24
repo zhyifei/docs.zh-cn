@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122910"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
@@ -47,7 +47,7 @@ ms.locfileid: "59122910"
 <Binding Path="[key]" .../>  
 ```  
   
- `key` 必须是字典或哈希表的类型化的索引或数组的整数索引。 此外，键值必须是可直接绑定到所应用属性的类型。 例如，包含字符串键和字符串值的哈希表可用于这种方式将绑定到文本<xref:System.Windows.Controls.TextBox>。 或者，如果键指向集合或子索引，则可使用此语法绑定到目标集合属性。 否则，需要通过 `<Binding Path="[key].propertyName" .../>` 等语法来引用特定属性。  
+ `key` 必须是字典或哈希表的类型化索引，或者是数组的整数索引。 此外，键值必须是可直接绑定到所应用属性的类型。 例如，包含字符串键和字符串值的哈希表可用于这种方式将绑定到文本<xref:System.Windows.Controls.TextBox>。 或者，如果键指向集合或子索引，则可使用此语法绑定到目标集合属性。 否则，需要通过 `<Binding Path="[key].propertyName" .../>` 等语法来引用特定属性。  
   
  如有必要，可以指定索引的类型。 有关此方面的索引的属性路径的详细信息，请参阅<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59122910"
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- 括号指示此属性在<xref:System.Windows.PropertyPath>应使用部分限定构造。 它可以使用 XML 命名空间来查找具有适当映射的类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器有权访问，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。  `propertyName` 必须解析为存在的属性的名称`ownerType`。 此语法一般用于以下任一情况：  
+ 括号指示此属性在<xref:System.Windows.PropertyPath>应使用部分限定构造。 它可以使用 XML 命名空间来查找具有适当映射的类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器有权访问，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。  `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 此语法一般用于以下任一情况：  
   
 -   路径是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的样式或模板（该样式或模板没有指定的目标类型）中指定的。 除此之外，限定用法一般无效，因为在非样式、非模板情况下，属性存在于实例中，而不是类型中。  
   
@@ -165,7 +165,7 @@ or
   
  `propertyName` 必须是一个属性，它可以是<xref:System.Windows.Freezable>值类型或基元，存在于指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
   
- `propertyName2` 必须是对象，它的值存在的依赖属性的名称`propertyName`。 换而言之，`propertyName2`作为依赖属性的类型上必须存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
+ `propertyName2` 必须为依赖属性的名称，该属性存在于作为 `propertyName` 值的对象中。 换而言之，`propertyName2`作为依赖属性的类型上必须存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
   
  因为应用了样式和模板，所以间接设定动画的目标是必要的。 为了设定动画的目标，您需要<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>上的目标对象，并且名称由[X:name](../../xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。 （如果模板和样式与应用程序标记共享命名范围，则名称不唯一。 样式和模板的确在实例之间共享，并将保留重复名称。）因此，如果要进行动画处理的元素的各个属性来自样式或模板，则需要从不是来自样式模板的命名元素实例开始，然后将样式或模板可视化树设定为目标，以到达要进行动画处理的属性。  
   
@@ -178,7 +178,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- 括号指示此属性在<xref:System.Windows.PropertyPath>应使用部分限定构造。 可以使用 XML 命名空间来查找类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器有权访问，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。 `propertyName` 必须解析为存在的属性的名称`ownerType`。 为指定的属性`propertyName`必须是<xref:System.Windows.DependencyProperty>。 （所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖属性，因此该问题仅与自定义附加属性相关。）  
+ 括号指示此属性在<xref:System.Windows.PropertyPath>应使用部分限定构造。 可以使用 XML 命名空间来查找类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器有权访问，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。 `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 为指定的属性`propertyName`必须是<xref:System.Windows.DependencyProperty>。 （所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加属性都实现为依赖属性，因此该问题仅与自定义附加属性相关。）  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>索引器  

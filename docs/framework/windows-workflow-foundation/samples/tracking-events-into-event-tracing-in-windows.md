@@ -3,10 +3,10 @@ title: 在 Windows 事件跟踪中跟踪事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
 ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300640"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件跟踪中跟踪事件
@@ -20,7 +20,7 @@ ms.locfileid: "59300640"
 |组件|描述|
 |---------------|-----------------|
 |跟踪运行时|提供基础结构以发出跟踪记录。|
-|跟踪参与者|访问跟踪记录。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 附随的跟踪参与者将作为事件跟踪 Windows (ETW) 事件的跟踪记录写入。|
+|跟踪参与者|访问跟踪记录。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 附带了一个跟踪参与者，它作为 Windows 跟踪记录 (ETW) 事件写入跟踪记录。|
 |跟踪配置文件|筛选机制，允许跟踪参与者订阅从工作流实例发出的跟踪记录的子集。|
 
  下表详细介绍工作流运行时发出的跟踪记录。

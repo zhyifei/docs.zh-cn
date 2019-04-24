@@ -12,10 +12,10 @@ helpviewer_keywords:
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
 ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303981"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>如何：触发工具栏按钮的菜单事件
@@ -138,5 +138,5 @@ ms.locfileid: "59303981"
 
 - <xref:System.Windows.Forms.ToolBar>
 - [如何：向 ToolBar 控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)
-- [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：定义的工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
 - [ToolBar 控件](toolbar-control-windows-forms.md)

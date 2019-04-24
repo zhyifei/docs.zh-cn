@@ -13,10 +13,10 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304800"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
@@ -165,7 +165,7 @@ ms.locfileid: "59304800"
  下面几个小节将详细介绍这些任务。  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>配置用于 ClickOnce 部署的管道和外接程序  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 下载到和从安全文件夹中运行[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署缓存。 为了使 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 能够承载外接程序，还必须将管道和外接程序程序集下载到该安全文件夹。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 这在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中最容易实现，但为使 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 检测到管道程序集，管道和外接程序程序集需要位于宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹中。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 将下载到 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 部署缓存中的安全文件夹并从该文件夹运行。 为了使 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 能够承载外接程序，还必须将管道和外接程序程序集下载到该安全文件夹。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 这在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中最容易实现，但为使 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 检测到管道程序集，管道和外接程序程序集需要位于宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹中。  
   
  因此，第一步是通过设置每个管道程序集和外接程序程序集项目的生成输出，向 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹生成管道和外接程序程序集。 下表显示管道程序集项目和外接程序程序集项目的生成输出路径，这些路径位于与宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目相同的解决方案和根文件夹中。  
   
@@ -285,6 +285,6 @@ ms.locfileid: "59304800"
 - <xref:System.LoaderOptimizationAttribute>
 - [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [应用程序域](../../app-domains/application-domains.md)
-- [.NET Framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [.NET framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [帮助主题](how-to-topics.md)

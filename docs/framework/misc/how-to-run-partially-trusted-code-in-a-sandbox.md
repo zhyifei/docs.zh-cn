@@ -11,10 +11,10 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316526"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：运行沙盒中部分受信任的代码
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 方法返回 `Internet` 权限集或 `LocalIntranet` 权限集，具体取决于证据中的区域。 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 构造标识权限的一些作为引用传递的证据对象。  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 方法返回 `Internet` 权限集或 `LocalIntranet` 权限集，具体取决于证据中的区域。 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 还为一些作为引用传递的证据对象构造标识权限。  
   
 2. 为包含调用不受信任的代码的宿主类（在此示例中，命名为 `Sandboxer`）的程序集签名。 将用于对程序集签名的 <xref:System.Security.Policy.StrongName> 添加到 <xref:System.AppDomain.CreateDomain%2A> 调用的 `fullTrustAssemblies` 参数的 <xref:System.Security.Policy.StrongName> 数组中。 主机类必须作为完全受信任的类运行，以启用部分信任代码的执行或为部分信任应用程序提供服务。 这就是读取程序集的 <xref:System.Security.Policy.StrongName> 的方式：  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> 用于在部分受信任的程序集中获取方法的句柄。 该句柄可以用于以安全的方式、使用最小权限来执行代码。  
+     <xref:System.Reflection> 用于获取部分受信任的程序集中的方法的句柄。 该句柄可以用于以安全的方式、使用最小权限来执行代码。  
   
      在前面的代码中，请在打印 <xref:System.Security.SecurityException> 之前备注完全信任权限的 <xref:System.Security.PermissionSet.Assert%2A>。  
   
@@ -275,4 +275,4 @@ class Sandboxer : MarshalByRefObject
   
 ## <a name="see-also"></a>请参阅
 
-- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

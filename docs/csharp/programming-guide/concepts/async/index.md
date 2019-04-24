@@ -3,11 +3,11 @@ title: C# 中的异步编程
 description: 对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述
 ms.date: 03/18/2019
 ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668674"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>C\# 中基于任务的异步编程模型
 

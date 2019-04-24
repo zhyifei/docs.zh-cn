@@ -8,10 +8,10 @@ helpviewer_keywords:
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
 ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334349"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>如何：使用设计器设置 Windows 窗体面板的背景
@@ -42,4 +42,4 @@ Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Panel 控件](panel-control-windows-forms.md)
 - [Panel 控件概述](panel-control-overview-windows-forms.md)
-- [如何：通过使用设计器使用 Windows 窗体 Panel 控件对控件进行分组](group-controls-with-wf-panel-control-using-the-designer.md)
+- [如何：与使用设计器在 Windows 窗体面板控件的组控件](group-controls-with-wf-panel-control-using-the-designer.md)

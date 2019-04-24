@@ -5,11 +5,11 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950847"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -41,7 +41,7 @@ ms.locfileid: "59330813"
 
 ### <a name="samples"></a>示例
 
-**[Iterators](../csharp/iterators.md)**
+**[迭代器](../csharp/iterators.md)**
 
 本示例演示用于创建和使用 C# 迭代器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/iterators)。
 
@@ -79,7 +79,7 @@ ms.locfileid: "59330813"
 
 本教程演示许多 LINQ 功能和支持 LINQ 的语言元素。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)。
 
-**[借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core](../core/tutorials/using-on-mac-vs.md)**
+**[借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
 
 本教程演示了如何使用 Visual Studio for Mac 生成简单的 .NET Core 控制台应用。
 

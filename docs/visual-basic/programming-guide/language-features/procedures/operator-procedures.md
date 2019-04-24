@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175014"
 ---
 # <a name="operator-procedures-visual-basic"></a>运算符过程 (Visual Basic)
@@ -66,7 +66,7 @@ ms.locfileid: "59175014"
   
  隐式调用运算符过程的语法如下所示：  
   
- `Dim testStruct As`  *结构名称*  
+ `Dim testStruct As`  *structurename*  
   
  `Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`  
   
@@ -84,8 +84,8 @@ ms.locfileid: "59175014"
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)
-- [Property 过程](./property-procedures.md)
-- [过程形参和实参](./procedure-parameters-and-arguments.md)
+- [属性过程](./property-procedures.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [如何：定义运算符](./how-to-define-an-operator.md)
 - [如何：定义转换运算符](./how-to-define-a-conversion-operator.md)

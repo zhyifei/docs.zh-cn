@@ -11,21 +11,21 @@ helpviewer_keywords:
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
 ms.openlocfilehash: 981fecf33b60c76ecab760185db7dab4bbb254d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165199"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>如何：将命令挂钩到支持命令的控件
 以下示例显示如何将 <xref:System.Windows.Input.RoutedCommand> 挂钩到含对该命令的内置支持的 <xref:System.Windows.Controls.Control>。  有关将命令挂钩到多个源的完整示例，请参阅[创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)示例。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供应用程序程序员经常遇到的常见命令的库。  构成命令库的类为：<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands> 和 <xref:System.Windows.Documents.EditingCommands>。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了应用程序程序员经常遇到的常见命令库。  构成命令库的类为：<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands> 和 <xref:System.Windows.Documents.EditingCommands>。  
   
  构成这些类的静态 <xref:System.Windows.Input.RoutedCommand> 对象不提供命令逻辑。  命令的逻辑通过 <xref:System.Windows.Input.CommandBinding> 与命令相关联。  某些控件的部分命令具有内置的 CommandBindings。  这种机制可使命令的语义保持不变，而实际实现可以更改。  例如，<xref:System.Windows.Controls.TextBox> 对 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 命令的处理方式与专门支持图像的控件对其的处理方式不同，后者的基本思路是通过粘贴让内容保持不变。  命令无法提供命令逻辑，但是控件或应用程序必须提供命令逻辑。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的许多控件都为命令库中的某些命令提供内置支持。  <xref:System.Windows.Controls.TextBox>例如，如支持的许多应用程序编辑命令<xref:System.Windows.Input.ApplicationCommands.Paste%2A>， <xref:System.Windows.Input.ApplicationCommands.Copy%2A>， <xref:System.Windows.Input.ApplicationCommands.Cut%2A>， <xref:System.Windows.Input.ApplicationCommands.Redo%2A>，和<xref:System.Windows.Input.ApplicationCommands.Undo%2A>。  应用程序开发人员不必执行任何特殊操作即可使命令适用于这些控件。  如果命令执行时，<xref:System.Windows.Controls.TextBox> 是命令目标，它将使用内置于控件中的 <xref:System.Windows.Input.CommandBinding> 处理该命令。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的许多控件都为命令库中的某些命令提供内置支持。  例如，<xref:System.Windows.Controls.TextBox> 支持许多应用程序编辑命令，例如 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>、<xref:System.Windows.Input.ApplicationCommands.Copy%2A>、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.ApplicationCommands.Redo%2A> 和 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>。  应用程序开发人员不必执行任何特殊操作即可使命令适用于这些控件。  如果命令执行时，<xref:System.Windows.Controls.TextBox> 是命令目标，它将使用内置于控件中的 <xref:System.Windows.Input.CommandBinding> 处理该命令。  
   
  以下说明如何将 <xref:System.Windows.Controls.MenuItem> 用作 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 命令的命令源，其中 <xref:System.Windows.Controls.TextBox> 是命令的目标。  定义 <xref:System.Windows.Controls.TextBox> 如何执行粘贴的所有逻辑都已内置到 <xref:System.Windows.Controls.TextBox> 控件中。  
   

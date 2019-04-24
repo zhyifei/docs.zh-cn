@@ -2,12 +2,12 @@
 title: 命令目录树的形状
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378543"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980078"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令目录树的形状
 
@@ -25,14 +25,13 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
 
 DBQueryCommandTree.Query 属性是用于描述查询逻辑的表达式树的根。 DBQueryCommandTree.Parameters 属性包含查询中使用的参数的列表。 表达式树由 DbExpression 对象组成。
 
-DbExpression 对象表示某个计算。 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了用于编写查询表达式的多种表达式，包括常量、变量、函数、构造函数和标准关系运算符（例如筛选和联接）。 每个 DbExpression 对象都有一个 ResultType 属性，表示由该表达式生成的结果的类型。 此类型表示为 TypeUsage。
+DbExpression 对象表示某个计算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了用于编写查询表达式的多种表达式，包括常量、变量、函数、构造函数和标准关系运算符（例如筛选和联接）。 每个 DbExpression 对象都有一个 ResultType 属性，表示由该表达式生成的结果的类型。 此类型表示为 TypeUsage。
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>输出查询命令目录树的形状
 
 输出查询命令目录树紧密表示关系 (SQL) 查询，并遵循比应用于查询命令目录树的规则更严格的规则。 它们通常包含易于转换为 SQL 的构造。
 
-输入命令目录树是针对概念模型表示的，此模型支持导航属性、实体间的关联以及继承。 输出命令目录树是针对存储模型表示的。 输入命令目录树允许您投影嵌套集合，而输出命令目录树不允许您这样做。
+输入命令目录树是针对概念模型表示的，此模型支持导航属性、实体间的关联以及继承。 输出命令目录树是针对存储模型表示的。 输入命令目录树允许你投影嵌套集合，而输出命令目录树不允许你这样做。
 
 输出查询命令目录树是使用 DbExpression 对象的子集生成的，并且对该子集中的一些表达式的使用会受到限制。
 
@@ -86,9 +85,9 @@ DbNewInstanceExpression 只能在以下两种情况下出现：
 
 - 作为 DbProjectExpression 的 Projection 属性。  在此情况下，以下限制将适用：
 
-    - 结果类型必须是行类型。
+  - 结果类型必须是行类型。
 
-    - 它包含的每个参数都是一个生成带基元类型的结果的表达式。 通常，每个参数都是一个标量表达式（如 DbVariableReferenceExpression 上的 PropertyExpression）、一个函数调用或一个 DbVariableReferenceExpression 上的 DbPropertyExpression 或函数调用的算术计算。 然而，表示标量子查询的的表达式也可以在 DbNewInstanceExpression 的参数列表中出现。 一个表示标量子查询表达式是一个表示返回一个行和一个列包含 DbElementExpression 对象根的基元类型的子查询的表达式树
+  - 它包含的每个参数都是一个生成带基元类型的结果的表达式。 通常，每个参数都是一个标量表达式（如 DbVariableReferenceExpression 上的 PropertyExpression）、一个函数调用或一个 DbVariableReferenceExpression 上的 DbPropertyExpression 或函数调用的算术计算。 然而，表示标量子查询的的表达式也可以在 DbNewInstanceExpression 的参数列表中出现。 一个表示标量子查询表达式是一个表示返回一个行和一个列包含 DbElementExpression 对象根的基元类型的子查询的表达式树
 
 - 与集合返回类型一起使用，在此情况下，它定义一个作为自变量提供的表达式的新集合。
 

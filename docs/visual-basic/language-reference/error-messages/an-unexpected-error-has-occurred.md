@@ -5,10 +5,10 @@ f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313601"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>发生错误，因为无法获得单个实例启动所需的操作系统资源
@@ -32,6 +32,6 @@ ms.locfileid: "59313601"
   
 ## <a name="see-also"></a>请参阅
 
-- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [“项目设计器”->“应用程序”页 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [调试器基础知识](/visualstudio/debugger/debugger-basics)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [与我们交流](/visualstudio/ide/talk-to-us)

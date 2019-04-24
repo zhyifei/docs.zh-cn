@@ -12,10 +12,10 @@ helpviewer_keywords:
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
 ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219806"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>依赖项属性回调和验证
@@ -81,5 +81,5 @@ ms.locfileid: "59219806"
 ## <a name="see-also"></a>请参阅
 
 - [依赖项属性概述](dependency-properties-overview.md)
-- [依赖项属性元数据](dependency-property-metadata.md)
-- [自定义依赖项属性](custom-dependency-properties.md)
+- [依赖属性元数据](dependency-property-metadata.md)
+- [自定义依赖属性](custom-dependency-properties.md)

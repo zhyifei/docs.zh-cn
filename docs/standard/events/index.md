@@ -17,11 +17,11 @@ ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770404"
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 
@@ -61,9 +61,7 @@ ms.locfileid: "58348799"
 
 与事件相关的数据可以通过事件数据类提供。 .NET 提供了许多事件数据类，用户可以在自己的应用程序中使用它们。 例如，<xref:System.IO.Ports.SerialDataReceivedEventArgs> 类是 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> 事件的事件数据类。 .NET 遵循所有事件数据类以 `EventArgs` 结尾的命名模式。 您通过查看事件的委托来确定哪个事件数据类与事件相关联。 例如，<xref:System.IO.Ports.SerialDataReceivedEventHandler> 委托包含 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 类作为它的一个参数。  
   
-
-  <xref:System.EventArgs> 类是所有事件数据类的基类型。 当一个事件没有任何与其相关联的数据时，您也会用到 <xref:System.EventArgs> 类。 当您创建一个事件仅用来通知其他类出问题了，不需要传递任何数据时，请包括 <xref:System.EventArgs> 类作为委托中的第二个参数。 当没有数据提供时，您可以传递 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 
-  <xref:System.EventHandler> 委托包括 <xref:System.EventArgs> 类作为一个参数。  
+<xref:System.EventArgs> 类是所有事件数据类的基类型。 当一个事件没有任何与其相关联的数据时，您也会用到 <xref:System.EventArgs> 类。 当您创建一个事件仅用来通知其他类出问题了，不需要传递任何数据时，请包括 <xref:System.EventArgs> 类作为委托中的第二个参数。 当没有数据提供时，您可以传递 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 <xref:System.EventHandler> 委托包括 <xref:System.EventArgs> 类作为一个参数。  
   
 当您想创建一个自定义的事件数据类时，请创建一个派生自 <xref:System.EventArgs> 的类，然后提供所需的所有成员，来传递与该事件相关的数据。 通常，应使用与 .NET 相同的命名模式，并且事件数据类名称应以 `EventArgs` 结尾。  
   

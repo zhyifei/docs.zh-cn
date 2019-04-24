@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
 ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339926"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>如何：手动呈现缓冲的图形
@@ -49,5 +49,5 @@ ms.locfileid: "59339926"
 
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
-- [双缓冲图形](double-buffered-graphics.md)
+- [双缓冲的图形](double-buffered-graphics.md)
 - [如何：手动管理缓冲的图形](how-to-manually-manage-buffered-graphics.md)

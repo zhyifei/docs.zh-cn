@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689203"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59145114"
 ---
 # <a name="dynamically-loading-and-using-types"></a>动态加载和使用类型
 反射提供语言编译器（如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript）为实现隐式后期绑定所使用的基础结构。 声明与唯一指定的类型相对应，绑定是查找声明（即实现）的过程。 运行时（而非编译时）发生此进程就称为后期绑定。 使用 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 能够在代码中使用隐式后期绑定；Visual Basic 编译器会调用一种帮助程序方法，该方法使用反射来获取对象类型。 传递给帮助程序方法的参数会导致在运行时调用相应方法。 这些参数是在其上调用方法的实例（对象）、被调用方法的名称（字符串）和传递给被调用方法的参数（对象数组）。  
@@ -100,6 +100,7 @@ End Module
  <xref:System.Type> 类具有 Get 方法，该方法使用联编程序类型的参数来解析对特定成员的引用。 <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>、<xref:System.Type.GetMethod%2A?displayProperty=nameWithType> 和 <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> 通过提供成员的签名信息来搜索当前类型的特定成员。 回调 <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> 以选择适当方法的给定签名信息。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

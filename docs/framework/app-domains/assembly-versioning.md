@@ -11,10 +11,10 @@ ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305190"
 ---
 # <a name="assembly-versioning"></a>程序集版本控制
@@ -72,6 +72,6 @@ ms.locfileid: "59305190"
 ## <a name="see-also"></a>请参阅
 
 - [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [配置应用](../../../docs/framework/configure-apps/index.md)
+- [配置应用程序](../../../docs/framework/configure-apps/index.md)
 - [设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)
-- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）

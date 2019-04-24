@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219416"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控件概述（Windows 窗体）
@@ -46,8 +46,8 @@ Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个�
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性|确定在从左边缘或上边缘到可移动拆分条的像素的距离。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 属性|确定的最小距离，以像素为单位，用户可以移动拆分器。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 属性|确定的粗细，以像素为单位的拆分器。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Event — 事件|当拆分器移动时发生。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Event — 事件|当拆分器移动时发生。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|当拆分器移动时发生。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|当拆分器移动时发生。|  
   
 ## <a name="see-also"></a>请参阅
 

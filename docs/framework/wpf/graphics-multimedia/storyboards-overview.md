@@ -10,10 +10,10 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124834"
 ---
 # <a name="storyboards-overview"></a>演示图板概述
@@ -225,17 +225,17 @@ ms.locfileid: "59124834"
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>在 XAML 中以交互方式控制情节提要  
  若要在启动情节提要[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，则使用<xref:System.Windows.Media.Animation.BeginStoryboard>触发操作。 <xref:System.Windows.Media.Animation.BeginStoryboard> 将动画分发到的对象和属性，它们进行动画处理，并启动情节提要。 (有关此过程的详细信息，请参阅[动画和计时系统概述](animation-and-timing-system-overview.md)。)如果您为提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，您使它可控制情节提要。 然后，可以在情节提要启动后以交互方式对它进行控制。 下面列出了可与事件触发器一起使用来控制情节提要的可控制情节提要操作。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>:暂停情节提要。  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>：暂停情节提要。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>:恢复暂停的情节提要。  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>：恢复暂停的情节提要。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>:更改情节提要的速度。  
+-   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：更改情节提要的速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>:如果有，请转到其填充期，末尾情节提要。  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有，请转到其填充期，末尾情节提要。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>:停止情节提要。  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>：停止情节提要。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>:删除情节提要。  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>：删除情节提要。  
   
  在下面的示例中，使用可控制的情节提要操作来以交互方式控制情节提要。  
   

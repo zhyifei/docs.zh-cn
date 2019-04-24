@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352810"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978921"
 ---
 # <a name="data-binding"></a>数据绑定
 
@@ -42,9 +42,9 @@ ms.locfileid: "57352810"
 
 - 数据源为 <xref:System.Linq.IQueryable%601>。 存在两种情况：
 
-    - 如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 从 <xref:System.Data.Linq.Table%601> 中找到基础 <xref:System.Linq.IQueryable%601>，则源允许进行编辑，这种情形与第一项中的情形相同。
+  - 如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 从 <xref:System.Data.Linq.Table%601> 中找到基础 <xref:System.Linq.IQueryable%601>，则源允许进行编辑，这种情形与第一项中的情形相同。
 
-    - 如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基础<xref:System.Data.Linq.Table%601>，源不允许进行编辑 (例如， `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 浏览相应的查询以填充泛型`SortableBindingList`，这是一个简单<xref:System.ComponentModel.BindingList%601>，实现根据给定属性对 T 实体进行排序的功能。
+  - 如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基础<xref:System.Data.Linq.Table%601>，源不允许进行编辑 (例如， `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 浏览相应的查询以填充泛型`SortableBindingList`，这是一个简单<xref:System.ComponentModel.BindingList%601>，实现根据给定属性对 T 实体进行排序的功能。
 
 ## <a name="specialized-collections"></a>专用集合
 
@@ -66,8 +66,7 @@ ms.locfileid: "57352810"
 
 ## <a name="binding-to-entitysets"></a>绑定到 EntitySet
 
-绑定到 `EntitySet` 是一种特殊情况，因为 `EntitySet` 已经是实现 <xref:System.ComponentModel.IBindingList> 的集合。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 增加了排序和取消 (<xref:System.ComponentModel.ICancelAddNew>) 支持。 
-  `EntitySet` 类使用内部列表来存储实体。 此列表是一个基于泛型数组（泛型 `ItemList` 类）的底层集合。
+绑定到 `EntitySet` 是一种特殊情况，因为 `EntitySet` 已经是实现 <xref:System.ComponentModel.IBindingList> 的集合。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 增加了排序和取消 (<xref:System.ComponentModel.ICancelAddNew>) 支持。 `EntitySet` 类使用内部列表来存储实体。 此列表是一个基于泛型数组（泛型 `ItemList` 类）的底层集合。
 
 ### <a name="adding-a-sorting-feature"></a>添加排序功能
 
@@ -109,7 +108,7 @@ ms.locfileid: "57352810"
 
 ## <a name="troubleshooting"></a>疑难解答
 
-本部分提出几点可能有助于您解决 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 数据绑定应用程序难题的事项。
+本部分提出几点可能有助于你解决 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 数据绑定应用程序难题的事项。
 
 - 您必须使用属性；仅使用字段是不够的。 Windows 窗体需要这种用法。
 

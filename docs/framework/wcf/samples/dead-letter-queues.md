@@ -3,10 +3,10 @@ title: 死信队列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334089"
 ---
 # <a name="dead-letter-queues"></a>死信队列
@@ -24,13 +24,13 @@ ms.locfileid: "59334089"
 
  `NetMsmqBinding` 绑定中的死信队列用下面的属性表示：
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 属性表示客户端所需的死信队列的类型。 此枚举具有下列值：
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 属性表示客户端需要的死信队列。 此枚举具有下列值：
 
--   `None`:没有死信队列是所需的客户端。
+-   `None`：没有死信队列是所需的客户端。
 
--   `System`:系统死信队列用于存储死消息。 系统死信队列由计算机上运行的所有应用程序共享。
+-   `System`：系统死信队列用于存储死消息。 系统死信队列由计算机上运行的所有应用程序共享。
 
--   `Custom`:使用指定的自定义死信队列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>属性用于存储死消息。 此功能仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用。 当应用程序必须使用自己的死信队列而不与同一计算机上运行的其他应用程序共享该死信队列时使用此功能。
+-   `Custom`：使用指定的自定义死信队列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>属性用于存储死消息。 此功能仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用。 当应用程序必须使用自己的死信队列而不与同一计算机上运行的其他应用程序共享该死信队列时使用此功能。
 
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 属性表示要用作死信队列的特定队列。 此属性仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
 

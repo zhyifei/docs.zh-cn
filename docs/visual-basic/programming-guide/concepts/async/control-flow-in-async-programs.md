@@ -3,10 +3,10 @@ title: 异步程序 (Visual Basic 中) 中的控制流
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300926"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>异步程序 (Visual Basic 中) 中的控制流
@@ -19,9 +19,9 @@ ms.locfileid: "59300926"
   
  下面的示例使用异步方法以字符串的形式下载指定网站的内容，并显示该字符串的长度。 此示例包含以下两种方法。  
   
--   `startButton_Click`它调用`AccessTheWebAsync`并显示结果。  
+-   `startButton_Click`，它调用 `AccessTheWebAsync` 并显示结果。  
   
--   `AccessTheWebAsync`它以字符串形式的网站内容下载，并返回字符串的长度。 `AccessTheWebAsync` 使用异步<xref:System.Net.Http.HttpClient>方法， <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>，以下载内容。  
+-   `AccessTheWebAsync`，它以字符串的形式下载网站的内容，并返回该字符串的长度。 `AccessTheWebAsync` 使用异步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 来下载内容。  
   
  编号的显示行显示在整个程序的策略点处，以帮助你了解程序的运行方式和说明被标记的每个点处发生的情况。 显示行标记为“1”到“6”。 该标签表示程序到达这些代码行的顺序。  
   
@@ -287,7 +287,7 @@ Dim urlContents As String = Await getStringTask
  Await 表达式将暂停 `AccessTheWebAsync`，直到返回 `client.GetStringAsync`。 同时，控件返回至 `AccessTheWebAsync` 的调用方 `startButton_Click`。  
   
 > [!NOTE]
->  通常情况下，应立即等待对异步方法的调用。 例如，以下赋值可以替换前面的代码中创建，然后等待`getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
+>  通常情况下，应立即等待对异步方法的调用。 例如，以下赋值可以替换前面创建的代码，然后等待 `getStringTask`：`Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
 >   
 >  在本主题中，稍后将应用 await 运算符，以容纳通过程序标记控制流的输出行。  
   
@@ -334,7 +334,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![步骤 5](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")  
   
- `AccessTheWebAsync` 运行直到完成，且控件返回到`startButton_Click`，它正在等待完成。  
+ `AccessTheWebAsync` 将一直运行直到完成，且控制将返回到 `startButton_Click`，它正在等待完成。  
   
 ### <a name="step-six"></a>步骤 6  
  当 `AccessTheWebAsync` 指示它已完成时，处理可以继续通过 `startButton_Async` 中的 await 语句。 事实上，该程序没有更多可执行的操作。  
@@ -363,4 +363,4 @@ Dim contentLength As Integer = Await getLengthTask
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [异步示例：异步程序中的控制流（C# 和 Visual Basic）](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [异步示例：异步程序中的控制流 (C#和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879031"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318372"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>如何：定义和使用自定义数值格式提供程序
 借助 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以全面控制数值的字符串表示形式。 它支持用于自定义数值格式的以下功能：  
@@ -37,9 +37,9 @@ ms.locfileid: "43879031"
   
 ### <a name="to-define-a-custom-format-provider"></a>定义自定义格式提供程序  
   
-1.  定义实现 <xref:System.IFormatProvider> 和 <xref:System.ICustomFormatter> 接口的类。  
+1. 定义实现 <xref:System.IFormatProvider> 和 <xref:System.ICustomFormatter> 接口的类。  
   
-2.  实现 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法。 <xref:System.IFormatProvider.GetFormat%2A> 是格式设置方法（如 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法）调用的回调方法，用于检索实际负责执行自定义格式设置的对象。 <xref:System.IFormatProvider.GetFormat%2A> 的典型实现执行以下操作：  
+2. 实现 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法。 <xref:System.IFormatProvider.GetFormat%2A> 是格式设置方法（如 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法）调用的回调方法，用于检索实际负责执行自定义格式设置的对象。 <xref:System.IFormatProvider.GetFormat%2A> 的典型实现执行以下操作：  
   
     1.  确定以方法参数形式传递的 <xref:System.Type> 对象是否表示 <xref:System.ICustomFormatter> 接口。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879031"
   
     3.  如果参数不表示 <xref:System.ICustomFormatter> 接口，<xref:System.IFormatProvider.GetFormat%2A> 返回的是 `null`。  
   
-3.  实现 <xref:System.ICustomFormatter.Format%2A> 方法。 此方法由 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法调用，负责返回数字的字符串表示形式。 实现方法通常涉及以下步骤：  
+3. 实现 <xref:System.ICustomFormatter.Format%2A> 方法。 此方法由 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法调用，负责返回数字的字符串表示形式。 实现方法通常涉及以下步骤：  
   
     1.  （可选）通过检查 `provider` 参数，确保此方法旨在以合法方式提供格式设置服务。 对于实现 <xref:System.IFormatProvider> 和 <xref:System.ICustomFormatter> 的格式设置对象，这涉及测试 `provider` 参数是否与当前格式设置对象相等。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879031"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>使用自定义数字格式设置对象  
   
-1.  创建自定义格式设置类的新实例。  
+1. 创建自定义格式设置类的新实例。  
   
-2.  调用 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 格式设置方法，同时向它传递自定义格式设置对象、格式设置说明符（或 <xref:System.String.Empty?displayProperty=nameWithType>，如果未使用说明符的话），以及要设置格式的数值。  
+2. 调用 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 格式设置方法，同时向它传递自定义格式设置对象、格式设置说明符（或 <xref:System.String.Empty?displayProperty=nameWithType>，如果未使用说明符的话），以及要设置格式的数值。  
   
 ## <a name="example"></a>示例  
  下面的示例定义了一个名为 `TelephoneFormatter` 的自定义数值格式提供程序，该提供程序将代表美国电话号码的数字转化为它的 NANP 或 E.123 格式。 该方法处理两个格式说明符“N”（输出 NANP 格式）和“I”（输出国际 E.123 格式）。  

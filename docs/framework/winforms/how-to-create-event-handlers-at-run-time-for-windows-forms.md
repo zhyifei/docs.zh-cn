@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
 ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343255"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>如何：在运行时为 Windows 窗体创建事件处理程序
@@ -76,4 +76,4 @@ ms.locfileid: "59343255"
 
 - [在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)
 - [事件处理程序概述](event-handlers-overview-windows-forms.md)
-- [有关 Visual Basic 中继承的事件处理程序的疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic 中继承的事件处理程序疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

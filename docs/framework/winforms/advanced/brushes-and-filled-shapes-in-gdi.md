@@ -14,10 +14,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115305"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的画笔和实心形状
@@ -82,6 +82,6 @@ ms.locfileid: "59115305"
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
-- [直线、曲线和图形](lines-curves-and-shapes.md)
-- [如何：在 Windows 窗体上绘制实心矩形](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [如何：在 Windows 窗体上绘制实心椭圆](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [直线、曲线和形状](lines-curves-and-shapes.md)
+- [如何：Windows 窗体上绘制实心的矩形](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [如何：Windows 窗体上绘制实心的椭圆](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

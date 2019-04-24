@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312561"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
@@ -152,6 +152,6 @@ ms.locfileid: "59312561"
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [应用程序设置概述](application-settings-overview.md)
-- [自定义控件的应用程序设置](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)
 - [应用程序设置架构](../../configure-apps/file-schema/application-settings-schema.md)

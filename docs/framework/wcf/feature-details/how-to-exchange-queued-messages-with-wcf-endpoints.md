@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342968"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>如何：使用 WCF 终结点交换排队消息
@@ -78,10 +78,10 @@ ms.locfileid: "59342968"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.NetMsmqBinding>
-- [已经过事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
+- [已进行事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [安装“消息队列 (MSMQ)”](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

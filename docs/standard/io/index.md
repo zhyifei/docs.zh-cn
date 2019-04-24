@@ -13,11 +13,11 @@ ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947116"
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 
@@ -51,8 +51,7 @@ ms.locfileid: "56836326"
 
 ## <a name="streams"></a>流
 
-抽象基类 <xref:System.IO.Stream> 支持读取和写入字节。 所有表示流的类都继承自 <xref:System.IO.Stream> 类。 
-  <xref:System.IO.Stream> 类及其派生类提供数据源和存储库的常见视图，使程序员不必了解操作系统和基础设备的具体细节。
+抽象基类 <xref:System.IO.Stream> 支持读取和写入字节。 所有表示流的类都继承自 <xref:System.IO.Stream> 类。 <xref:System.IO.Stream> 类及其派生类提供数据源和存储库的常见视图，使程序员不必了解操作系统和基础设备的具体细节。
 
 流涉及三个基本操作：
 
@@ -84,8 +83,7 @@ ms.locfileid: "56836326"
 
 ## <a name="readers-and-writers"></a>读取器和编写器
 
-
-  <xref:System.IO?displayProperty=nameWithType> 命名空间还提供用于在流中读取和写入已编码字符的类型。 通常，流用于字节输入和输出。 读取器和编写器类型处理编码字符与字节之间的来回转换，以便流可以完成操作。 每个读取器和编写器类都与流关联，可以通过类的 `BaseStream` 属性进行检索。
+<xref:System.IO?displayProperty=nameWithType> 命名空间还提供用于在流中读取和写入已编码字符的类型。 通常，流用于字节输入和输出。 读取器和编写器类型处理编码字符与字节之间的来回转换，以便流可以完成操作。 每个读取器和编写器类都与流关联，可以通过类的 `BaseStream` 属性进行检索。
 
 下面是一些常用的读取器和编写器类：
 
@@ -109,8 +107,7 @@ ms.locfileid: "56836326"
 
 ## <a name="compression"></a>压缩
 
-压缩是指减小文件大小以便存储的过程。 解压缩是提取压缩文件的内容以使这些内容采用可用格式的过程。 
-  <xref:System.IO.Compression?displayProperty=nameWithType> 命名空间包含用于对文件和流进行压缩或解压缩的类型。
+压缩是指减小文件大小以便存储的过程。 解压缩是提取压缩文件的内容以使这些内容采用可用格式的过程。 <xref:System.IO.Compression?displayProperty=nameWithType> 命名空间包含用于对文件和流进行压缩或解压缩的类型。
 
 在对文件和流进行压缩和解压缩时，经常使用以下类：
 

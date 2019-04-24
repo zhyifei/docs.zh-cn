@@ -3,10 +3,10 @@ title: 使用 Async 和 Await 的异步编程 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 8593275371fcd97db2357211c3e221839b878527
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324716"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 的异步编程 (Visual Basic)
@@ -23,9 +23,9 @@ ms.locfileid: "59324716"
   
 |应用程序区域|包含异步方法的受支持的 API|  
 |----------------------|------------------------------------------------|  
-|Web 访问 |<xref:System.Net.Http.HttpClient>, <xref:Windows.Web.Syndication.SyndicationClient>|  
+|Web 访问 |<xref:System.Net.Http.HttpClient>， <xref:Windows.Web.Syndication.SyndicationClient>|  
 |使用文件|<xref:Windows.Storage.StorageFile>, <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|  
-|使用图像|<xref:Windows.Media.Capture.MediaCapture>中， <xref:Windows.Graphics.Imaging.BitmapEncoder>中， <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
+|使用图像|<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF 编程|[同步和异步操作](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)|  
 |||  
   
@@ -87,9 +87,9 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   返回类型为下列类型之一：  
   
-    -   <xref:System.Threading.Tasks.Task%601> 如果你的方法有操作数含有 TResult 类型的 return 语句。  
+    -   如果你的方法有操作数为 TResult 类型的返回语句，则为 <xref:System.Threading.Tasks.Task%601>。  
   
-    -   <xref:System.Threading.Tasks.Task> 如果你的方法没有返回语句或具有没有操作数的 return 语句。  
+    -   如果你的方法没有返回语句或具有没有操作数的返回语句，则为 <xref:System.Threading.Tasks.Task>。  
   
     -   [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)：如果要编写异步事件处理程序。  
   
@@ -110,19 +110,19 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 1. 事件处理程序调用并等待 `AccessTheWebAsync` 异步方法。  
   
-2. `AccessTheWebAsync` 创建<xref:System.Net.Http.HttpClient>实例并调用<xref:System.Net.Http.HttpClient.GetStringAsync%2A>异步方法以字符串形式的网站内容下载。  
+2. `AccessTheWebAsync` 可创建 <xref:System.Net.Http.HttpClient> 实例并调用 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 异步方法以下载网站内容作为字符串。  
   
 3. `GetStringAsync` 中发生了某种情况，该情况挂起了它的进程。 可能必须等待网站下载或一些其他阻止活动。 为避免阻止资源，`GetStringAsync` 会将控制权出让给其调用方 `AccessTheWebAsync`。  
   
-     `GetStringAsync` 返回<xref:System.Threading.Tasks.Task%601>其中 TResult 为字符串，并`AccessTheWebAsync`将为任务分配`getStringTask`变量。 该任务表示调用 `GetStringAsync` 的正在进行的进程，其中承诺当工作完成时产生实际字符串值。  
+     `GetStringAsync` 返回 <xref:System.Threading.Tasks.Task%601>，其中 TResult 为字符串，并且 `AccessTheWebAsync` 将任务分配给 `getStringTask` 变量。 该任务表示调用 `GetStringAsync` 的正在进行的进程，其中承诺当工作完成时产生实际字符串值。  
   
 4. 由于尚未等待 `getStringTask`，因此，`AccessTheWebAsync` 可以继续执行不依赖于 `GetStringAsync` 得出的最终结果的其他工作。 该任务由对同步方法 `DoIndependentWork` 的调用表示。  
   
-5. `DoIndependentWork` 已完成其工作并返回其调用方的同步方法。  
+5. `DoIndependentWork` 是完成其工作并返回其调用方的同步方法。  
   
-6. `AccessTheWebAsync` 已用完工作可以不从结果`getStringTask`。 `AccessTheWebAsync` 下一步需要计算并返回已下载的字符串，但该方法的长度不能计算该值，直到该方法具有的字符串。  
+6. `AccessTheWebAsync` 已运行完毕，可以不受 `getStringTask` 的结果影响。 接下来，`AccessTheWebAsync` 需要计算并返回已下载的字符串的长度，但该方法只有在获得字符串的情况下才能计算该值。  
   
-     因此，`AccessTheWebAsync` 使用一个 await 运算符来挂起其进度，并把控制权交给调用 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 返回`Task<int>`(`Task(Of Integer)`在 Visual Basic 中) 向调用方。 该任务表示对产生下载字符串长度的整数结果的一个承诺。  
+     因此，`AccessTheWebAsync` 使用一个 await 运算符来挂起其进度，并把控制权交给调用 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 将 `Task<int>`（Visual Basic 中的 `Task(Of Integer)`）返回给调用方。 该任务表示对产生下载字符串长度的整数结果的一个承诺。  
   
     > [!NOTE]
     >  如果 `GetStringAsync`（因此 `getStringTask`）在 `AccessTheWebAsync` 等待前完成，则控件会保留在 `AccessTheWebAsync` 中。 如果异步调用过程 (`AccessTheWebAsync`) 已完成，并且 AccessTheWebSync 不必等待最终结果，则挂起然后返回到 `getStringTask` 将造成成本浪费。  
@@ -160,7 +160,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  异步方法通常包含 `Await` 运算符的一个或多个实例，但缺少 `Await` 表达式也不会导致生成编译器错误。 如果异步方法未使用 `Await` 运算符标记暂停点，那么异步方法会作为同步方法执行，即使有 `Async` 修饰符，也不例外。 编译器将为此类方法发布一个警告。  
   
- `Async` 和`Await`都是上下文关键字。 有关更多信息和示例，请参见以下主题：  
+ `Async` 和 `Await` 都是上下文关键字。 有关更多信息和示例，请参见以下主题：  
   
 -   [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -217,9 +217,9 @@ Await Task_MethodAsync()
   
  Windows 运行时编程的异步 API 的返回类型如下（类似于任务）：  
   
--   <xref:Windows.Foundation.IAsyncOperation%601>它对应于 <xref:System.Threading.Tasks.Task%601>  
+-   <xref:Windows.Foundation.IAsyncOperation%601>（对应于 <xref:System.Threading.Tasks.Task%601>）  
   
--   <xref:Windows.Foundation.IAsyncAction>它对应于 <xref:System.Threading.Tasks.Task>  
+-   <xref:Windows.Foundation.IAsyncAction>（对应于 <xref:System.Threading.Tasks.Task>）  
   
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
@@ -236,18 +236,18 @@ Await Task_MethodAsync()
   
 |标题|说明|示例|  
 |-----------|-----------------|------------|  
-|[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|演示如何将一个同步 WPF 解决方案转换成一个异步 WPF 解决方案。 应用程序下载一系列网站。|[异步示例：访问 Web 演练](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
+|[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|演示如何将一个同步 WPF 解决方案转换成一个异步 WPF 解决方案。 应用程序下载一系列网站。|[异步示例：“访问 Web”演练](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
 |[如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|将 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 添加到上一个演练。 使用 `WhenAll` 同时启动所有下载。||  
-|[如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|演示如何同时开始几个任务。|[异步示例：并行发起多个 Web 请求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
+|[如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|演示如何同时开始几个任务。|[异步示例：并行发出多个 Web 请求](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
 |[异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|描述异步方法可返回的类型，并解释每种类型适用于的情况。||  
-|[异步程序 (Visual Basic 中) 中的控制流](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|通过异步程序中的一系列 await 表达式来详细跟踪控制流。|[异步示例：异步程序中的控制流](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
+|[异步程序中的控制流 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|通过异步程序中的一系列 await 表达式来详细跟踪控制流。|[异步示例：异步程序中的控制流](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
 |[微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|演示如何将以下功能添加到异步解决方案：<br /><br /> -   [取消一个异步任务或一组任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [在一段时间后取消异步任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [在完成一个异步任务后取消剩余任务 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [启动多个异步任务并在其完成时进行处理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
-|[处理异步应用程序 (Visual Basic 中) 中的重新进入](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|演示如何处理有效的异步操作在运行时重启的情况。||  
-|[WhenAny:综合运用 .NET Framework 和 Windows 运行时](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.Tasks.Task.WhenAny%2A> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：桥接.NET 和 Windows 运行时 （AsTask 和 WhenAny）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
-|异步取消：综合运用 .NET Framework 和 Windows 运行时|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.CancellationTokenSource> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：桥接.NET 和 Windows 运行时 （AsTask 和取消）](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
-|[使用异步进行文件访问 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|列出并演示使用 async 和 await 访问文件的好处。||  
+|[在异步应用程序中处理重入 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|演示如何处理有效的异步操作在运行时重启的情况。||  
+|[WhenAny：综合运用 .NET Framework 和 Windows 运行时](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.Tasks.Task.WhenAny%2A> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：综合运用 .NET 和 Windows 运行时（AsTask 和 WhenAny）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
+|异步取消：综合运用 .NET Framework 和 Windows 运行时|展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.CancellationTokenSource> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。|[异步示例：综合运用 .NET 和 Windows 运行时（AsTask 和 Cancellation）](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
+|[使用 Async 进行文件访问 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|列出并演示使用 async 和 await 访问文件的好处。||  
 |[基于任务的异步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中异步的新模式。 该模式基于 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类型。||  
-|[第 9 频道上的异步视频](https://channel9.msdn.com/search?term=async+&type=All)|提供指向有关异步编程的各种视频的链接。||  
+|[Channel 9 上的异步相关视频](https://channel9.msdn.com/search?term=async+&type=All)|提供指向有关异步编程的各种视频的链接。||  
   
 ## <a name="BKMK_CompleteExample"></a>完整示例  
  下面的代码来自于本主题介绍的 Windows Presentation Foundation (WPF) 应用程序的 MainWindow.xaml.vb 文件。 可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)下载此示例。  

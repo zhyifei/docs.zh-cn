@@ -16,10 +16,10 @@ helpviewer_keywords:
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
 ms.openlocfilehash: 9b29c738a953bb6260357b1b67cc46a97eeb4369
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313625"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>如何：计数、 求和或通过使用 LINQ (Visual Basic 中) 的平均数据
@@ -83,5 +83,5 @@ ms.locfileid: "59313625"
 - [查询](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
 - [Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)

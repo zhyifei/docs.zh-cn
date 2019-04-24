@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625609"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345399"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>如何：通过使用程序集执行 XSLT 转换
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
@@ -132,7 +132,7 @@ XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可�
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>编译启用脚本的样式表。  
   
-1.  从命令行执行下面的命令可创建两个名为 `Transform.dll` 和 `Transform_Script1.dll` 的程序集（这是默认行为。 除非另行指定，否则类和程序集的名称默认为主样式表的名称）：  
+1. 从命令行执行下面的命令可创建两个名为 `Transform.dll` 和 `Transform_Script1.dll` 的程序集（这是默认行为。 除非另行指定，否则类和程序集的名称默认为主样式表的名称）：  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>编译代码时以引用形式包含已编译的程序集。  
   
-1.  通过在解决方案资源管理器中或从命令行添加引用，可以在 Visual Studio 中包括程序集。  
+1. 通过在解决方案资源管理器中或从命令行添加引用，可以在 Visual Studio 中包括程序集。  
   
-2.  对于 C# 的命令行，使用下面的命令：  
+2. 对于 C# 的命令行，使用下面的命令：  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  对于 Visual Basic 的命令行，使用下面的命令：  
+3. 对于 Visual Basic 的命令行，使用下面的命令：  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>在代码中使用已编译的程序集。  
   
-1.  下面的示例演示如何通过使用已编译的样式表执行 XSLT 转换。  
+1. 下面的示例演示如何通过使用已编译的样式表执行 XSLT 转换。  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  

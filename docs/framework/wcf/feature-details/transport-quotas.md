@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299301"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773256"
 ---
 # <a name="transport-quotas"></a>传输配额
 传输配额是一种策略机制，用于决定连接何时正在占用过多资源。 配额是一种硬性限制，它在超出配额值时立即禁止使用其他资源。 传输配额可防止恶意或无意的拒绝服务攻击。  

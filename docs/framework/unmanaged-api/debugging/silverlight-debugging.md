@@ -8,10 +8,10 @@ ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113693"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 调试
@@ -56,7 +56,7 @@ ms.locfileid: "59113693"
   
 ## <a name="see-also"></a>请参阅
 
-- [调试 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
+- [调试组件类](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
 - [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

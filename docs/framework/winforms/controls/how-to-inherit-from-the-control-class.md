@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314212"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>如何：从 Control 类继承
@@ -48,6 +48,6 @@ ms.locfileid: "59314212"
 - [各种自定义控件](varieties-of-custom-controls.md)
 - [如何：从 UserControl 类继承](how-to-inherit-from-the-usercontrol-class.md)
 - [如何：从现有 Windows 窗体控件继承](how-to-inherit-from-existing-windows-forms-controls.md)
-- [如何：创作 Windows 窗体的控件](how-to-author-controls-for-windows-forms.md)
-- [有关 Visual Basic 中继承的事件处理程序的疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [如何：Windows 窗体的作者控件](how-to-author-controls-for-windows-forms.md)
+- [Visual Basic 中继承的事件处理程序疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)

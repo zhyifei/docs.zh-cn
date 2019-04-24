@@ -1,19 +1,19 @@
 ---
-title: <Uri> 元素 （Uri 设置）
+title: <Uri> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212136"
 ---
 # <a name="uri-element-uri-settings"></a>\<Uri > 元素 （Uri 设置）
 包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。  
   
 ## <a name="schema-hierarchy"></a>架构层次结构  
- [\<配置 > 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59212136"
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[idn](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|指定是否对域名应用国际化域名 (IDN) 分析。|  
 |[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否对应用国际资源标识符 (IRI) 分析<xref:System.Uri>，以及是否应该应用 IRI 分析规则。|  
@@ -40,9 +40,9 @@ ms.locfileid: "59212136"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
-|[配置](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
   
 ## <a name="remarks"></a>备注  
  `uri`元素包含的成员设置<xref:System.Uri>类中的类使用<xref:System.Net>命名空间。 设置配置为 IRI 和 IDN 的支持。  

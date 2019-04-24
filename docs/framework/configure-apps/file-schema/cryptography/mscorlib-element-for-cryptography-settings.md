@@ -1,5 +1,5 @@
 ---
-title: <mscorlib> 加密设置的元素
+title: Cryptography 设置的 <mscorlib> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165147"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 加密设置的元素
@@ -73,6 +73,6 @@ ms.locfileid: "59165147"
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

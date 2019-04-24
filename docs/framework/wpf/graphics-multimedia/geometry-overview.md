@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179993"
 ---
 # <a name="geometry-overview"></a>Geometry 概述
@@ -221,9 +221,9 @@ ms.locfileid: "59179993"
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
-- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [路径标记语法](path-markup-syntax.md)
 - [帮助主题](geometries-how-to-topics.md)
 - [动画概述](animation-overview.md)
-- [WPF 中的形状和基本图形概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Drawing 对象概述](drawing-objects-overview.md)

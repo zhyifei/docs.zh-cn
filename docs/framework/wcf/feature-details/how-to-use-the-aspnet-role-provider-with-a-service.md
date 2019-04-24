@@ -3,10 +3,10 @@ title: 如何：将 ASP.NET 角色提供程序与服务一起使用
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
 ms.openlocfilehash: 8f3fadc60645ef81d2683c63fda0ddd5bf24c982
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301134"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>如何：将 ASP.NET 角色提供程序与服务一起使用

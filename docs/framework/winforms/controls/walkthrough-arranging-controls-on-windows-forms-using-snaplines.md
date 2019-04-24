@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343033"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
@@ -242,7 +242,7 @@ ms.locfileid: "59343033"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](windows-forms-controls-padding-autosize.md)
-- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)
+- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)

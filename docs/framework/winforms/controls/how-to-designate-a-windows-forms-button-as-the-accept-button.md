@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
 ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309818"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>如何：将 Windows 窗体按钮指定为“接受”按钮
@@ -53,7 +53,7 @@ ms.locfileid: "59309818"
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button 控件概述](button-control-overview-windows-forms.md)
-- [选择 Windows 窗体 Button 控件的方法](ways-to-select-a-windows-forms-button-control.md)
-- [如何：响应 Windows 窗体按钮的单击](how-to-respond-to-windows-forms-button-clicks.md)
-- [如何：将 Windows 窗体按钮指定为“取消”按钮](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
+- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：将 Windows 窗体按钮指定为取消按钮](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
 - [Button 控件](button-control-windows-forms.md)

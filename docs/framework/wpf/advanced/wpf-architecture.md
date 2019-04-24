@@ -17,10 +17,10 @@ helpviewer_keywords:
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
 ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199422"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
@@ -30,7 +30,7 @@ ms.locfileid: "59199422"
 ## <a name="systemobject"></a>System.Object  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要编程模型通过托管代码公开。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的早期设计阶段，曾有过大量关于如何界定系统的托管组件和非托管组件的争论。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 提供一系列的功能，可以提高开发效率和可靠性（包括内存管理、错误处理和通用类型系统等），但这是需要付出代价的。  
   
- 下图说明了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要组件。 关系图的红色部分（PresentationFramework、PresentationCore 和 milcore）是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要代码部分。 在这些组件中，只有一个是非托管组件 - milcore。 milcore 是以非托管代码编写的，目的是实现与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的紧密集成。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有显示均通过 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎完成，因此硬件和软件呈现都很高效。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 此外需要对内存和执行进行精细控制。 milcore 中的组合引擎受性能影响极大，需要放弃 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 的许多优点来提高性能。  
+ 下图说明了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要组件。 关系图的红色部分（PresentationFramework、PresentationCore 和 milcore）是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要代码部分。 在这些组件中，只有一个是非托管组件 - milcore。 milcore 是以非托管代码编写的，目的是实现与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的紧密集成。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有显示均通过 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎完成，因此硬件和软件呈现都很高效。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还要求对内存和执行进行精细控制。 milcore 中的组合引擎受性能影响极大，需要放弃 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 的许多优点来提高性能。  
   
  ![WPF 在 .NET Framework 中的位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "59199422"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- 中的大多数对象[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]派生自<xref:System.Windows.Threading.DispatcherObject>，后者提供的基本构造来处理并发和线程处理。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 基于调度程序实现的消息传送系统。 其工作方式与常见的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 消息泵非常类似；事实上，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 调度程序使用 User32 消息执行跨线程调用。  
+ 中的大多数对象[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]派生自<xref:System.Windows.Threading.DispatcherObject>，后者提供的基本构造来处理并发和线程处理。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 基于调度程序实现的消息系统。 其工作方式与常见的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 消息泵非常类似；事实上，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 调度程序使用 User32 消息执行跨线程调用。  
   
  要讨论 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的并发，首先必须真正理解两个核心概念 - 调度程序和线程关联。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59199422"
   
  属性系统还提供属性值的稀疏存储。 因为对象可能有数十个（如果达不到上百个）属性，并且大部分值处于其默认状态（被继承、由样式设置等），所以并非对象的每个实例都需要具有在其上定义的每个属性的完全权重。  
   
- 属性系统的最后一个新功能是附加属性的概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素是基于组合和组件重用的原则。 它通常是这种情况，某些包含元素 (如<xref:System.Windows.Controls.Grid>布局元素) 需要在子元素来控制其行为 （如行/列信息中） 上的其他数据。 任何对象都可以为任何其他对象提供属性定义，而不是将所有这些属性与每个元素相关联。 这与 JavaScript 中的“expando”功能相似。  
+ 属性系统的最后一个新功能是附加属性的概念。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素是基于组合和组件重用的原则生成的。 它通常是这种情况，某些包含元素 (如<xref:System.Windows.Controls.Grid>布局元素) 需要在子元素来控制其行为 （如行/列信息中） 上的其他数据。 任何对象都可以为任何其他对象提供属性定义，而不是将所有这些属性与每个元素相关联。 这与 JavaScript 中的“expando”功能相似。  
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
@@ -66,7 +66,7 @@ ms.locfileid: "59199422"
   
  <xref:System.Windows.Media.Visual> 是真正的入口点[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]复合系统。 <xref:System.Windows.Media.Visual> 是托管这两个子系统之间的连接点[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和非托管的 milcore。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过遍历由 milcore 管理的非托管的数据结构来显示数据。 这些结构（称为组合节点）代表层次结构显示树，其中每个节点都有呈现指令。 只能通过消息传递协议来访问此树（如下图右侧所示）。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 通过遍历由 milcore 管理的非托管数据结构来显示数据。 这些结构（称为组合节点）代表层次结构显示树，其中每个节点都有呈现指令。 只能通过消息传递协议来访问此树（如下图右侧所示）。  
   
  编程时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，创建<xref:System.Windows.Media.Visual>元素和派生的类型，它们在内部与此消息传递协议通过此组合树进行通信。 每个<xref:System.Windows.Media.Visual>在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可能会创建一个、 none、 或多个组合节点。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "59199422"
   
  在 User32 和 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 中，系统在一个即时模式剪裁系统上工作。 当需要绘制一个组件时，系统会建立一个剪裁边界，在此边界外，不允许组件接触像素，然后会要求组件在该框中绘制像素。 此系统在内存受限的系统上工作良好，因为当某些内容更改时，只需处理受影响的组件即可 - 不会由两个组件同时处理一个像素的颜色。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用"绘画器的算法"绘制模型。 要求每个组件从显示内容的背面绘制到正面，而不是剪裁每个组件。 这允许每个组件在先前组件的显示内容上绘制。 此模型的优点是可以生成部分透明的复杂形状。 通过使用当今的新式图形硬件，此模型的速度相对较快（创建 User32/ [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 时则不然）。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用“绘画器的算法”绘制模型。 要求每个组件从显示内容的背面绘制到正面，而不是剪裁每个组件。 这允许每个组件在先前组件的显示内容上绘制。 此模型的优点是可以生成部分透明的复杂形状。 通过使用当今的新式图形硬件，此模型的速度相对较快（创建 User32/ [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 时则不然）。  
   
  如上所述，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的一个核心原理是转移到一个更具声明性且“以属性为中心”的编程模型。 在可视化系统中，这体现在有意思的几个方面。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "59199422"
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
  <xref:System.Windows.UIElement> 定义核心子系统，包括布局、 输入和事件。  
   
- 布局是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的核心概念。 在许多系统中，可能有一组固定的布局模型（HTML 支持三种布局模型：流、绝对和表），也可能没有布局模型（User32 实际仅支持绝对定位）。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 开始使用开发人员和设计人员需要一个灵活的可扩展布局模型，它可能由属性值，而不是命令性逻辑驱动的假设。 在<xref:System.Windows.UIElement>级别，引入布局的基本协定-阶段使用的模型的两阶段<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>传递。  
+ 布局是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的核心概念。 在许多系统中，可能有一组固定的布局模型（HTML 支持三种布局模型：流、绝对和表），也可能没有布局模型（User32 实际仅支持绝对定位）。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 先假设开发人员和设计人员需要灵活的可扩展布局模型，该模型可能是由属性值而不是命令性逻辑驱动的。 在<xref:System.Windows.UIElement>级别，引入布局的基本协定-阶段使用的模型的两阶段<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>传递。  
   
  <xref:System.Windows.UIElement.Measure%2A> 允许组件确定所要采取的大小。 这是从单独阶段<xref:System.Windows.UIElement.Arrange%2A>因为有很多情况下，父元素会要求子测量若干次以确定其最佳位置和大小。 父元素要求子元素测量这一事实体现了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的另一关键原则 - 调整内容大小。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有控件支持调整到内容自然大小的功能。 这使本地化更加容易，并可实现调整内容大小时进行动态元素布局。 <xref:System.Windows.UIElement.Arrange%2A>阶段允许父元素定位并确定每个子级的最终大小。  
   
  很多时间通常会花费谈论的输出一端[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]–<xref:System.Windows.Media.Visual>和相关对象。 然而，在输入端也有许多创新。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 输入模型中的最基本更改也许是一致模型，借助此模型可通过系统对输入事件进行路由。  
   
- 输入是作为内核模式设备驱动程序上的信号发出的，并通过涉及 Windows 内核和 User32 的复杂过程路由到正确的进程和线程。 与输入相对应的 User32 消息路由到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 后，转换为 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 原始输入消息，并发送到调度程序。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 允许原始输入事件转换为多个实际事件，从而实现了类似"MouseEnter"保证传递系统的一个低级别实现的功能。  
+ 输入是作为内核模式设备驱动程序上的信号发出的，并通过涉及 Windows 内核和 User32 的复杂过程路由到正确的进程和线程。 与输入相对应的 User32 消息路由到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 后，转换为 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 原始输入消息，并发送到调度程序。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 允许将原始输入事件转换为多个实际事件，在保证传递到位的情况下在低系统级别实现类似“MouseEnter”的功能。  
   
  每个输入事件至少会转换为两个事件 -“预览”事件和实际事件。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有事件都具有通过元素树路由的概念。 事件被称为"浮升"如果用户从目标树中向上遍历到根目录，并从根开始并遍历到目标被称为"隧道"。 输入预览事件隧道，使树中的任何元素都有机会筛选事件或对事件采取操作。 然后，常规（非预览）事件将从目标向上浮升到根。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "59199422"
   
  最重要的两点，<xref:System.Windows.FrameworkElement>引入了将数据绑定和样式。  
   
- 曾经使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 创建应用程序 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的用户应当对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的数据绑定子系统较为熟悉。 在上述每个系统中，可通过一种简单的方式来表达希望将给定元素中的一个或多个属性绑定到一个数据片段。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 具有完全支持属性绑定、 转换和列表绑定。  
+ 曾经使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 创建应用程序 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的用户应当对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的数据绑定子系统较为熟悉。 在上述每个系统中，可通过一种简单的方式来表达希望将给定元素中的一个或多个属性绑定到一个数据片段。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 完全支持属性绑定、转换和列表绑定。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中数据绑定的最值得关注的功能之一是引入了数据模板。 利用数据模板，可以通过声明方式指定某个数据片断的可视化方式。 无需创建可绑定到数据的自定义用户界面，而是转而让数据来确定要创建的显示内容。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "59199422"
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>总结  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 旨在允许您创建动态的数据驱动的演示系统。 系统的每一部分均可通过驱动行为的属性集来创建对象。 数据绑定是系统的基础部分，在每一层中均进行了集成。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可创建动态的数据驱动的演示系统。 系统的每一部分均可通过驱动行为的属性集来创建对象。 数据绑定是系统的基础部分，在每一层中均进行了集成。  
   
  传统的应用程序创建一个显示内容，然后绑定到某些数据。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，控件的所有内容、显示内容的所有方面都是由某种类型的数据绑定生成的。 通过在按钮内部创建复合控件并将其显示内容绑定到按钮的内容属性，会显示按钮中的文本。  
   

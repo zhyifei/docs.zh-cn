@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295414"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>如何：创建自定义授权策略
@@ -79,5 +79,5 @@ ms.locfileid: "59295414"
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [如何：为服务创建自定义授权管理器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)

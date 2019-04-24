@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
 ms.openlocfilehash: 606231449263f1c26596ca8606a88053c6aded8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138120"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>如何：检测到并解决冲突的提交
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 用于检测和解决冲突而引发的多个用户更改到的数据库提供了许多资源。 有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了许多资源，用于检测和解决因多个用户更改数据库而产生的冲突。 有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示`try` / `catch`可捕获<xref:System.Data.Linq.ChangeConflictException>异常。 每个冲突的实体和成员信息会显示在控制台窗口中。  

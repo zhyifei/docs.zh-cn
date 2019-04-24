@@ -3,11 +3,11 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205246"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767562"
 ---
 # <a name="extensions"></a>\<扩展 >
 此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。 下面是使用此配置元素的示例。  

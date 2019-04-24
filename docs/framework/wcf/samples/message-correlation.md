@@ -3,10 +3,10 @@ title: 消息相关性
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333270"
 ---
 # <a name="message-correlation"></a>消息相关性
@@ -315,4 +315,4 @@ static void DisplayOrderStatus()
 ## <a name="see-also"></a>请参阅
 
 - [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [消息队列（可能为英文网页）](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)

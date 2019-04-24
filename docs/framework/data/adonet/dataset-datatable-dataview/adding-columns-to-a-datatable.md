@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
 ms.openlocfilehash: 2e7008f6693d7d76520a7ff6ae9172e28e4990c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207001"
 ---
 # <a name="adding-columns-to-a-datatable"></a>向数据表添加列
@@ -49,7 +49,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
 > [!CAUTION]
 >  如果列名称未提供某一列，该列会得到递增的默认名称的列*N，* 从"Column1"开始，当它添加到**DataColumnCollection**。 我们建议你避免的命名约定"列*N*"时提供列名称，因为提供的名称与现有的默认列名称中可能会发生冲突**DataColumnCollection**。 如果提供的名称已经存在，将引发异常。  
   
- 如果将 <xref:System.Xml.Linq.XElement> 用作 <xref:System.Data.DataColumn.DataType%2A> 中的 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataTable>，则在读入数据时，XML 序列化将不起作用。 例如，如果通过使用 <xref:System.Xml.XmlDocument> 方法来写出 `DataTable.WriteXml`，则在序列化为 XML 时，<xref:System.Xml.Linq.XElement> 中会出现一个额外的父节点。 若要解决此问题，请使用 <xref:System.Data.SqlTypes.SqlXml> 类型来代替 <xref:System.Xml.Linq.XElement>。 `ReadXml` 并`WriteXml`均能正确使用<xref:System.Data.SqlTypes.SqlXml>。  
+ 如果将 <xref:System.Xml.Linq.XElement> 用作 <xref:System.Data.DataColumn.DataType%2A> 中的 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataTable>，则在读入数据时，XML 序列化将不起作用。 例如，如果通过使用 <xref:System.Xml.XmlDocument> 方法来写出 `DataTable.WriteXml`，则在序列化为 XML 时，<xref:System.Xml.Linq.XElement> 中会出现一个额外的父节点。 若要解决此问题，请使用 <xref:System.Data.SqlTypes.SqlXml> 类型来代替 <xref:System.Xml.Linq.XElement>。 `ReadXml` 和 `WriteXml` 对 <xref:System.Data.SqlTypes.SqlXml> 均能正确使用。  
   
 ## <a name="see-also"></a>请参阅
 
@@ -57,5 +57,5 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
 - [数据表架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141552"
 ---
 # <a name="optimizing-wpf-application-performance"></a>优化 WPF 应用程序性能
@@ -27,17 +27,17 @@ ms.locfileid: "59141552"
   
  [布局和示例](optimizing-performance-layout-and-design.md)  
   
- [二维图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)  
+ [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)  
   
  [对象行为](optimizing-performance-object-behavior.md)  
   
  [应用程序资源](optimizing-performance-application-resources.md)  
   
- [Text](optimizing-performance-text.md)  
+ [文本](optimizing-performance-text.md)  
   
  [数据绑定](optimizing-performance-data-binding.md)  
   
- [Controls](optimizing-performance-controls.md)  
+ [控件](optimizing-performance-controls.md)  
   
  [其他性能建议](optimizing-performance-other-recommendations.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59141552"
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
 - [图形呈现层](graphics-rendering-tiers.md)
-- [WPF 图形呈现疑难解答](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现概述](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [布局](layout.md)
 - [WPF 中的树](trees-in-wpf.md)
 - [Drawing 对象概述](../graphics-multimedia/drawing-objects-overview.md)
@@ -62,4 +62,4 @@ ms.locfileid: "59141552"
 - [数据绑定概述](../data/data-binding-overview.md)
 - [导航概述](../app-development/navigation-overview.md)
 - [动画提示和技巧](../graphics-multimedia/animation-tips-and-tricks.md)
-- [演练：在 WPF 应用程序中缓存应用程序数据](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [演练：缓存在 WPF 应用程序的应用程序数据](walkthrough-caching-application-data-in-a-wpf-application.md)

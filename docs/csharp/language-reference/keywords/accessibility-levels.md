@@ -7,10 +7,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: da49c6f0b44ab0eefbd338963a744a11502f75da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130463"
 ---
 # <a name="accessibility-levels-c-reference"></a>可访问性级别（C# 参考）
@@ -54,10 +54,10 @@ ms.locfileid: "59130463"
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 - [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [可访问性域](../../../csharp/language-reference/keywords/accessibility-domain.md)
-- [可访问性级别的使用限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [可访问域](../../../csharp/language-reference/keywords/accessibility-domain.md)
+- [对使用可访问性级别的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [专用](../../../csharp/language-reference/keywords/private.md)
+- [受保护](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)

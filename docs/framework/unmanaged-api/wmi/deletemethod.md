@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9eb96a75686a14182b9526a0832223c2b9abfc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136911"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod 函数
@@ -70,8 +70,8 @@ HRESULT Delete (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器（非托管 API 参考）](index.md)
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

@@ -3,10 +3,10 @@ title: 如何：编写 ServiceContractGenerator 的扩展
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
 ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340615"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>如何：编写 ServiceContractGenerator 的扩展
@@ -96,7 +96,7 @@ ms.locfileid: "59340615"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 为实现的给定协定上每个协定行为自动调用<xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 然后，此方法可以修改传入的 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>。 在此示例中，添加了注释。  
+7. 会为实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 的给定协定上的每个协定行为自动调用 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 然后，此方法可以修改传入的 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>。 在此示例中，添加了注释。  
   
 ## <a name="see-also"></a>请参阅
 

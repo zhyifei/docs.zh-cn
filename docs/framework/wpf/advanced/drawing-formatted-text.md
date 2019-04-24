@@ -11,10 +11,10 @@ helpviewer_keywords:
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
 ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129085"
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
@@ -29,7 +29,7 @@ ms.locfileid: "59129085"
 >  对于从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 迁移的开发人员，[Win32 迁移](#win32_migration)一节中的表列出了 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 标志和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的近似等效项。  
   
 ### <a name="reasons-for-using-formatted-text"></a>使用格式化文本的原因  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括用于在屏幕上绘制文本的多个控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 有关详细信息，请参阅 [WPF 中的文档](documents-in-wpf.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 有关详细信息，请参阅 [WPF 中的文档](documents-in-wpf.md)。  
   
  <xref:System.Windows.Media.FormattedText>对象提供更大的文本格式设置功能比[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]文本控件，并可用于在你想要将文本用作装饰元素的情况下。 有关详细信息，请参阅下一节[将格式化文本转换为几何图形](#converting_formatted_text)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "59129085"
 |DrawText 标志|WPF 等效项|说明|  
 |-------------------|--------------------|-----------|  
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>属性计算相应[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText y 位置。|  
-|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>和<xref:System.Windows.Media.FormattedText.Width%2A>属性计算输出矩形。|  
+|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>， <xref:System.Windows.Media.FormattedText.Width%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>和<xref:System.Windows.Media.FormattedText.Width%2A>属性计算输出矩形。|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用<xref:System.Windows.Media.FormattedText.TextAlignment%2A>属性值设置为<xref:System.Windows.TextAlignment.Center>。|  
 |DT_EDITCONTROL|None|不要求。 间距宽度和最后一行的呈现与框架编辑控件中的相同。|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用<xref:System.Windows.Media.FormattedText.Trimming%2A>属性的值<xref:System.Windows.TextTrimming.CharacterEllipsis>。<br /><br /> 使用<xref:System.Windows.TextTrimming.WordEllipsis>若要获取[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DT_END_ELLIPSIS 与 DT_WORD_ELIPSIS 尾部省略号 — 在这种情况下，省略号字符仅出现在单个行上无法容纳的词语。|  

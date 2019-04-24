@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
 ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339146"
 ---
 # <a name="local-transactions"></a>本地事务
@@ -52,4 +52,4 @@ ms.locfileid: "59339146"
 - [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [分布式事务](../../../../docs/framework/data/adonet/distributed-transactions.md)
 - [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295765"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
@@ -64,11 +64,11 @@ ms.locfileid: "59295765"
   
 -   [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 -   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
   
@@ -94,6 +94,6 @@ ms.locfileid: "59295765"
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 中的 Main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [在 Visual Basic 中的主要过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic 限制](../../../visual-basic/programming-guide/program-structure/limitations.md)

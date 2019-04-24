@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300952"
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
@@ -101,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>标记编译 - 第 2 次传递  
- 并非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面都会在标记编译的第 1 次传递过程中完成编译。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 包含本地定义类型引用 （引用同一项目中的其他位置的代码中定义的类型） 的文件不受此时编译。 这是因为这些本地定义的类型仅存在于源中，并且尚未编译。 分析器会采用试探法来确定文件是否已编译，而这一操作会涉及在标记文件中查找 `x:Name` 之类的项。 如果找到此类实例，标记文件的编译将会推迟，直至代码文件完成编译；在代码文件完成编译后，标记文件会在第二次标记编译传递期间得到处理。  
+ 并非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面都会在标记编译的第 1 次传递过程中完成编译。 包含本地定义类型引用（引用同一项目中其他位置的代码所定义的类型）的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件就不会在此期间进行编译。 这是因为这些本地定义的类型仅存在于源中，并且尚未编译。 分析器会采用试探法来确定文件是否已编译，而这一操作会涉及在标记文件中查找 `x:Name` 之类的项。 如果找到此类实例，标记文件的编译将会推迟，直至代码文件完成编译；在代码文件完成编译后，标记文件会在第二次标记编译传递期间得到处理。  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>文件分类  

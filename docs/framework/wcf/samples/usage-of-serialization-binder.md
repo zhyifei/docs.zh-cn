@@ -3,17 +3,17 @@ title: 序列化联编程序的用法
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
 ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329838"
 ---
 # <a name="usage-of-serialization-binder"></a>序列化联编程序的用法
 此示例演示如何使用 <xref:System.Runtime.Serialization.SerializationBinder> 在序列化泛型类型时更改其版本。  
   
 ## <a name="demonstrates"></a>演示  
- <xref:System.Runtime.Serialization.SerializationBinder>, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+ <xref:System.Runtime.Serialization.SerializationBinder>， <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
   
 ## <a name="discussion"></a>讨论  
  此示例演示两个面向不同 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本的实体如何使用二进制格式化程序和序列化联编程序进行通信。  

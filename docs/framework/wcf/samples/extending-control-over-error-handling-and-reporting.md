@@ -3,10 +3,10 @@ title: 扩展对错误处理和错误报告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303201"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>扩展对错误处理和错误报告的控制
@@ -19,7 +19,7 @@ ms.locfileid: "59303201"
   
  在此示例中，`CalculatorErrorHandler` 类型实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口。 在  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 方法，`CalculatorErrorHandler`错误的日志写入 c:\logs 中的 Error.txt 文本文件。 请注意，该示例记录错误而不会取消错误，并允许错误报告回客户端。  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 方法中，`CalculatorErrorHandler` 将错误日志写入 c:\logs 中的 Error.txt 文本文件中。 请注意，该示例记录错误而不会取消错误，并允许错误报告回客户端。  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  

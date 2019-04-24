@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 ms.openlocfilehash: cafd8685f34537f8efb372967dc45682afbe8fa0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306373"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>演练：从使用 Visual c# Windows 窗体控件继承\#
@@ -143,5 +143,5 @@ ms.locfileid: "59306373"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在“选择工具箱项”对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [演练：使用 Visual C# 创作复合控件](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [如何：中显示控件选择工具箱项对话框](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [演练：创作复合控件通过视觉对象C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

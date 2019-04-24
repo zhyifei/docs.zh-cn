@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610803"
+---
 # <a name="contributing"></a>参与
 
 感谢你对参与 .NET 文档的关注！
@@ -24,7 +32,7 @@
 
 需要对 [Git 和 GitHub.com](https://guides.github.com/activities/hello-world/) 有基本的理解。
 
-**步骤 1：** 对于小更改，可跳过这一步。 如果有意编写新内容或彻底修改现有内容，请打开[问题](https://github.com/dotnet/docs/issues)，描述要执行的操作。
+**步骤 1：** 对于较小的更改，请跳过此步骤（例如，如果你正在更正一个拼写错误，或者立即打开一个拉取请求来处理在文档中发现的问题）。 如果有意编写新内容或彻底修改现有内容，请打开[问题](https://github.com/dotnet/docs/issues)，描述要执行的操作。
 “文档”文件夹中的内容划分为在目录 (TOC) 中反应的不同部分。 定义主题在 TOC 中的位置。 获取对建议的反馈。
 
 或

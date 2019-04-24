@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362790"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612806"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 生成 C# Hello World 应用程序
 
@@ -29,7 +29,7 @@ ms.locfileid: "54362790"
 1. 启动 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”*对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“HelloWorld”。 选择“确定”按钮。
 
    ![选择了“控制台应用”的“新建项目”对话框](./media/with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio 使用模板创建项目。 C# .NET Core 控制台应用程序模板会自动定义类 `Program` 和一个需要将 <xref:System.String> 数组用作自变量的方法 `Main`。 `Main` 是应用程序入口点，同时也是在应用程序启动时由运行时自动调用的方法。 *args* 数组中包含在应用程序启动时提供的所有命令行自变量。
 
    ![Visual Studio 和新建的 HelloWorld 项目](./media/with-visual-studio/visual-studio-main-window.png)
@@ -42,6 +42,7 @@ ms.locfileid: "54362790"
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
+
    此代码会提示用户按任意键，然后在用户按键前暂停程序。
 
 1. 在菜单栏中，选择“生成” > “生成解决方案”。 这会将程序编译成一种中间语言 (IL)，然后由实时 (JIT) 编译器转换成二进制代码。

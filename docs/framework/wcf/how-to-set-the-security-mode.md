@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339380"
 ---
 # <a name="how-to-set-the-security-mode"></a>如何：设置安全模式
@@ -116,11 +116,11 @@ Windows Communication Foundation (WCF) 安全有三种常见的安全模式的�
 ## <a name="see-also"></a>请参阅
 
 - [如何：使用 SSL 证书配置端口](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [如何：使用传输安全和消息凭据](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)
-- [消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [如何：使用传输安全性和消息凭据](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [传输安全性](../../../docs/framework/wcf/feature-details/transport-security.md)
+- [消息安全性](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)
-- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

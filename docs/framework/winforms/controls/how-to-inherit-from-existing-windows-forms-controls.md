@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300523"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>如何：从现有 Windows 窗体控件继承
@@ -88,7 +88,7 @@ ms.locfileid: "59300523"
 - [各种自定义控件](varieties-of-custom-controls.md)
 - [如何：从 Control 类继承](how-to-inherit-from-the-control-class.md)
 - [如何：从 UserControl 类继承](how-to-inherit-from-the-usercontrol-class.md)
-- [如何：创作 Windows 窗体的控件](how-to-author-controls-for-windows-forms.md)
-- [有关 Visual Basic 中继承的事件处理程序的疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [演练：使用 Visual Basic 从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [演练：使用 Visual C# 从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [如何：Windows 窗体的作者控件](how-to-author-controls-for-windows-forms.md)
+- [Visual Basic 中继承的事件处理程序疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [演练：从使用 Visual Basic 的 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [演练：从视觉对象的 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
 ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161327"
 ---
 # <a name="datepicker"></a>DatePicker
@@ -26,5 +26,5 @@ DatePicker 控件
   
 ## <a name="see-also"></a>请参阅
 
-- [Controls](index.md)
+- [控件](index.md)
 - [样式设置和模板化](styling-and-templating.md)

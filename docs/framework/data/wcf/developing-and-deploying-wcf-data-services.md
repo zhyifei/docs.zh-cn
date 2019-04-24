@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481374"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
@@ -128,5 +128,5 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 Visual St
 ## <a name="see-also"></a>请参阅
 
 - [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
-- [WCF 数据服务的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [定义 WCF 数据服务](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [确保 WCF Data Services 的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

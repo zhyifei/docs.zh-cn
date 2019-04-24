@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 92137e1a5b0923bc34745513715934c483616700
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179837"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 方法
@@ -58,7 +58,7 @@ HRESULT RequestRevert (
 |S_OK|尝试还原所有请求；但是，必须检查返回的状态数组，确定成功还原了哪些函数。|  
 |CORPROF_E_CALLBACK4_REQUIRED|探查器必须实现[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)接口必须支持此调用。|  
 |CORPROF_E_REJIT_NOT_ENABLED|尚未启用 JIT 重新编译。 必须使用启用 JIT 重新编译在初始化期间[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法以设置`COR_PRF_ENABLE_REJIT`标志。|  
-|E_INVALIDARG|`cFunctions` 为 0，或`moduleIds`或`methodIds`是`NULL`。|  
+|E_INVALIDARG|`cFunctions` 为 0，或者 `moduleIds` 或 `methodIds` 为 `NULL`。|  
 |E_OUTOFMEMORY|CLR 无法完成请求，因为它已耗尽内存。|  
   
 ## <a name="status-hresults"></a>状态 HRESULTS  
@@ -82,10 +82,10 @@ HRESULT RequestRevert (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [ICorProfilerInfo4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)

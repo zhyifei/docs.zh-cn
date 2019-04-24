@@ -9,10 +9,10 @@ helpviewer_keywords:
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
 ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306984"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>如何：配置本地颁发者
@@ -27,7 +27,7 @@ ms.locfileid: "59306984"
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>在代码中配置本地颁发者  
   
-1. 创建类型的变量 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1. 创建一个类型为 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 的变量  
   
 2. 将该变量设置为从 <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> 类的 `ClientCredentials` 属性返回的实例。 该实例由客户端的 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 属性（继承自 <xref:System.ServiceModel.ClientBase%601>）或 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 的 <xref:System.ServiceModel.ChannelFactory> 属性返回：  
   
@@ -76,6 +76,6 @@ ms.locfileid: "59306984"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [如何：联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

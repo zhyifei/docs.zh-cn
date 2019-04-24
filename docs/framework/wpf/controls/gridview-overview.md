@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201294"
 ---
 # <a name="gridview-overview"></a>GridView 概述
@@ -73,13 +73,13 @@ ms.locfileid: "59201294"
   
  以下列表更详细地讨论使用的功能<xref:System.Windows.Controls.GridView>进行用户交互：  
   
--   **通过使用拖放方法对列重新排序。**  
+-   **使用拖放方法对列重新排序。**  
   
      用户可以对中的列重新排序<xref:System.Windows.Controls.GridView>由列标题上时按鼠标左键，然后将该列拖动到新位置。 当用户拖动列标题时，将显示标题的浮动版本以及显示列的插入位置的黑色实线。  
   
      如果你想要修改的浮动版本的标头的默认样式，指定<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.GridViewColumnHeader>，它是键入触发时<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>属性设置为<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>。 有关详细信息，请参阅[为拖动的 GridView 列标题创建样式](how-to-create-a-style-for-a-dragged-gridview-column-header.md)。  
   
--   **将列调整为其内容。**  
+-   **根据列的内容重设其大小。**  
   
      用户可双击列标题右侧的手柄来根据列的内容重设其大小。  
   
@@ -132,5 +132,5 @@ ms.locfileid: "59201294"
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
 - [ListView 概述](listview-overview.md)
-- [在标题获得单击时对 GridView 列进行排序](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [在单击标题时对 GridView 列进行排序](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
 - [帮助主题](listview-how-to-topics.md)

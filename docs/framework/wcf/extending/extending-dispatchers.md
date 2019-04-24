@@ -5,10 +5,10 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335025"
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
@@ -84,17 +84,17 @@ ms.locfileid: "59335025"
   
 4. 与安全相关的组件可使用以下属性：  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指示写入审核事件的位置。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 可指示写入审核事件的位置。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 控制服务是否尝试使用传入消息所提供的凭据进行模拟。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 可控制服务是否尝试使用传入消息所提供的凭据进行模拟。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 控制是否将成功的消息身份验证事件写入指定的事件日志<xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 可控制是否将成功消息身份验证事件写入由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指定的事件日志。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 控件如何<xref:System.Threading.Thread.CurrentPrincipal%2A>属性设置。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 可控制如何设置 <xref:System.Threading.Thread.CurrentPrincipal%2A> 属性。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 指定如何执行授权事件的审核。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 可指定如何执行授权事件的审核。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 指定是否取消显示记录过程中出现的非关键异常。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 可指定是否要取消显示记录过程中出现的非关键异常。  
   
  通常，服务行为（可实现 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 的对象）、协定行为（可实现 <xref:System.ServiceModel.Description.IServiceBehavior> 的对象）或终结点行为（可实现 <xref:System.ServiceModel.Description.IContractBehavior> 的对象）会将自定义扩展对象分配给 <xref:System.ServiceModel.Description.IEndpointBehavior> 属性或将其插入集合。 然后，以编程方式或通过实现自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 对象来将安装行为对象添加到相应的行为集合中，这样便能使用应用程序配置文件插入该行为。  
   
@@ -133,4 +133,4 @@ ms.locfileid: "59335025"
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
 - [如何：检查和修改服务上的消息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
 - [如何：检查或修改参数](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [如何：在企业中锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [如何：在企业中的锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

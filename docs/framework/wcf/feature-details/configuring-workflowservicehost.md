@@ -3,10 +3,10 @@ title: 配置 WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
 ms.openlocfilehash: dcfc22c1c0084761039a876eec7bf00cf78b51a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201229"
 ---
 # <a name="configuring-workflowservicehost"></a>配置 WorkflowServiceHost
@@ -22,7 +22,7 @@ ms.locfileid: "59201229"
  [如何：使用 WorkflowServiceHost 配置空闲行为](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)  
  说明如何使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 配置工作流服务的空闲行为。  
   
- [如何：使用 WorkflowServiceHost 配置工作流未经处理的异常行为](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [如何：配置工作流未经处理的异常行为使用 WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
  说明如何使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 配置工作流服务的未经处理的异常行为。  
   
 ## <a name="see-also"></a>请参阅

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210683"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>如何：使用复合模式控制 alpha 值混合处理
@@ -54,9 +54,9 @@ ms.locfileid: "59210683"
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [Alpha 混合线条和填充](alpha-blending-lines-and-fills.md)
+- [alpha 值混合处理直线和填充](alpha-blending-lines-and-fills.md)

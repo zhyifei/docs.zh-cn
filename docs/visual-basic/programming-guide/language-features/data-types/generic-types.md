@@ -37,10 +37,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301225"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型类型 (Visual Basic)
@@ -91,7 +91,7 @@ ms.locfileid: "59301225"
   
 -   **类型安全。** 泛型类型强制实施编译时类型检查。 而基于 `Object` 的类型可接受任何数据类型，因此，你必须编写代码以检查是否可接受某种输入数据类型。 通过泛型类型，编译器可以在运行时之前捕获类型的不匹配。  
   
--   **性能。** 泛型类型无需对数据进行 *装箱* 和 *un装箱* 操作，原因是每种泛型类型均专用于一种数据类型。 而基于 `Object` 的操作必须将输入数据类型进行装箱，以将它们转换为 `Object` ，而且还将对预定输出的数据进行取消装箱操作。 装箱和取消装箱操作会降低性能。  
+-   **性能。** 泛型类型无需对数据进行 *装箱* 和 *取消装箱* 操作，原因是每种泛型类型均专用于一种数据类型。 而基于 `Object` 的操作必须将输入数据类型进行装箱，以将它们转换为 `Object` ，而且还将对预定输出的数据进行取消装箱操作。 装箱和取消装箱操作会降低性能。  
   
      此外，还要对基于 `Object` 的类型进行晚期绑定，这意味着需要编写额外的代码才能在运行时访问它们的成员。 这同样会降低性能。  
   
@@ -150,12 +150,12 @@ ms.locfileid: "59301225"
 
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [协变和逆变](../../concepts/covariance-contravariance/index.md)
-- [Iterators](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [迭代器](../../../../visual-basic/programming-guide/concepts/iterators.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296597"
 ---
 # <a name="concurrency"></a>并发
@@ -22,11 +22,11 @@ ms.locfileid: "59296597"
   
  有三种可用的并发模式：  
   
--   `Single`:每个服务实例一次处理一条消息。 这是默认的并发模式。  
+-   `Single`：每个服务实例一次处理一条消息。 这是默认的并发模式。  
   
--   `Multiple`:每个服务实例同时处理多条消息。 若要使用此并发模式，服务实现必须是线程安全的。  
+-   `Multiple`：每个服务实例同时处理多条消息。 若要使用此并发模式，服务实现必须是线程安全的。  
   
--   `Reentrant`:每个服务实例一次处理一个消息，但接受可重入调用。 仅当服务对外调用时才会接受这些调用。在演示了重入[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)示例。  
+-   `Reentrant`：每个服务实例一次处理一个消息，但接受可重入调用。 仅当服务对外调用时才会接受这些调用。在演示了重入[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)示例。  
   
  并发的使用与实例化模式有关。 在 <xref:System.ServiceModel.InstanceContextMode.PerCall> 实例化过程中，与并发没有关系，因为每个消息都由一个新服务实例处理。 在 <xref:System.ServiceModel.InstanceContextMode.Single> 实例化过程中，与 <xref:System.ServiceModel.ConcurrencyMode.Single> 或 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 并发有关，具体取决于单个实例是依次还是同时处理消息。 在 <xref:System.ServiceModel.InstanceContextMode.PerSession> 实例化过程中，可能与任何并发模式有关。  
   

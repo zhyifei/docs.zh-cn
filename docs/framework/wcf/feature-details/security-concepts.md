@@ -3,17 +3,17 @@ title: 安全性概念
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 ms.openlocfilehash: d23ef86c2ccf315300a9290c3055388469df2e0a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135143"
 ---
 # <a name="security-concepts"></a>安全性概念
 本部分简要介绍 Windows Communication Foundation (WCF) 安全相关的概念。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WCF 中使用的安全概念](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
+ [WCF 中使用的安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  对安全性实现中使用的概念的高度概括。  
   
  [分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  

@@ -3,10 +3,10 @@ title: WCF 指令语法
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 ms.openlocfilehash: 65c972067d5c2869a9dd130d285566db81dbc0d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183347"
 ---
 # <a name="wcf-directive-syntax"></a>WCF 指令语法
@@ -17,14 +17,14 @@ ms.locfileid: "59183347"
  定义 .svc 编译器使用的特定于页的属性。 只能包含在 .svc 文件中。  
   
 ## <a name="related-sections"></a>相关章节  
- [如何：在 IIS 中承载 WCF 服务](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [如何：承载在 IIS 中的 WCF 服务](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  描述在 Internet Information Services (IIS) 中承载服务时如何使用 @ServiceHost 指令  
   
- [如何：在 WAS 中承载 WCF 服务](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
+ [如何：承载在 WAS 中的 WCF 服务](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
  描述在 Windows Process Activation Service (WAS) 中承载服务时如何使用 @ServiceHost 指令  
   
 ## <a name="see-also"></a>请参阅
 
-- [宿主](../../../../../docs/framework/wcf/feature-details/hosting.md)
-- [在 Internet 信息服务中承载](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [在 Windows 进程激活服务中承载](../../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
+- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [在 Internet Information Services 中承载](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [在 Windows Process Activation Service 中承载](../../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)

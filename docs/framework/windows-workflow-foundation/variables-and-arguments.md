@@ -3,10 +3,10 @@ title: 变量和自变量
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320738"
 ---
 # <a name="variables-and-arguments"></a>变量和自变量
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. 调用 <xref:System.Activities.InOutArgument%601.Set%2A> 时，运行时将立即设置值。  
   
-3. 可根据需要指定自变量的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是一个从零开始的值，指定在其中计算参数的顺序。 默认情况下，自变量的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此自变量指定一个计算顺序。 Windows Workflow Foundation 的计算结果的参数和指定的计算顺序按升序排列。 注意：未指定计算顺序的参数将先于指定计算顺序的参数计算。  
+3. 可根据需要指定自变量的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定自变量计算顺序的从零开始的值。 默认情况下，自变量的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此自变量指定一个计算顺序。 Windows Workflow Foundation 的计算结果的参数和指定的计算顺序按升序排列。 注意：未指定计算顺序的参数将先于指定计算顺序的参数计算。  
   
  活动作者可使用强类型机制来公开该活动的自变量。 实现方法是声明 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 和 <xref:System.Activities.InOutArgument%601> 类型的属性。 这允许活动作者建立有关流入流出活动的数据的特定协定。  
   
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  返回单个值的活动可从 <xref:System.Activities.Activity%601>、<xref:System.Activities.NativeActivity%601> 或 <xref:System.Activities.CodeActivity%601> 派生。 这些活动拥有定义完善的名为 <xref:System.Activities.OutArgument%601> 的 <xref:System.Activities.Activity%601.Result%2A>，它包含活动的返回值。  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>在工作流中使用变量和自变量  
- 以下示例演示如何在工作流中使用变量和自变量。 该工作流是一个声明三个变量：`var1`、`var2` 和 `var3` 的序列。 该工作流中的第一个活动是 `Assign` 活动，它将变量 `var1` 的值赋给变量 `var2`。 接下来是 `WriteLine` 活动，该活动打印 `var2` 变量的值。 之后是另一个 `Assign` 活动，该活动将变量 `var2` 的值赋给变量 `var3`。 最后是另一个 `WriteLine` 活动，该活动打印 `var3` 变量的值。 第一个 `Assign` 活动使用 `InArgument<string>` 和 `OutArgument<string>` 对象，显式表示对活动自变量的绑定。 `InArgument<string>` 用于<xref:System.Activities.Statements.Assign.Value%2A>因为值流入<xref:System.Activities.Statements.Assign%601>活动通过其<xref:System.Activities.Statements.Assign.Value%2A>参数，和`OutArgument<string>`用于<xref:System.Activities.Statements.Assign.To%2A>因为值流出而赋<xref:System.Activities.Statements.Assign.To%2A>参数到变量。 第二个 `Assign` 活动完成相同的操作，它采用更加紧凑的语法，通过使用隐式强制转换而达到相同目的。 `WriteLine` 活动也使用紧凑语法。  
+ 以下示例演示如何在工作流中使用变量和自变量。 该工作流是一个声明三个变量：`var1`、`var2` 和 `var3` 的序列。 该工作流中的第一个活动是 `Assign` 活动，它将变量 `var1` 的值赋给变量 `var2`。 接下来是 `WriteLine` 活动，该活动打印 `var2` 变量的值。 之后是另一个 `Assign` 活动，该活动将变量 `var2` 的值赋给变量 `var3`。 最后是另一个 `WriteLine` 活动，该活动打印 `var3` 变量的值。 第一个 `Assign` 活动使用 `InArgument<string>` 和 `OutArgument<string>` 对象，显式表示对活动自变量的绑定。 将 `InArgument<string>` 用于 <xref:System.Activities.Statements.Assign.Value%2A> 是因为值通过其 <xref:System.Activities.Statements.Assign%601> 自变量流入 <xref:System.Activities.Statements.Assign.Value%2A> 活动，而将 `OutArgument<string>` 用于 <xref:System.Activities.Statements.Assign.To%2A> 是因为值从 <xref:System.Activities.Statements.Assign.To%2A> 自变量流出而赋给变量。 第二个 `Assign` 活动完成相同的操作，它采用更加紧凑的语法，通过使用隐式强制转换而达到相同目的。 `WriteLine` 活动也使用紧凑语法。  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  

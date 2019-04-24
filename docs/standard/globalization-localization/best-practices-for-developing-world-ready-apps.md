@@ -11,10 +11,10 @@ ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310533"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>开发全球通用应用程序的最佳做法
@@ -104,4 +104,4 @@ ms.locfileid: "59310533"
 ## <a name="see-also"></a>请参阅
 
 - [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
-- [桌面应用程序中的资源](../../../docs/framework/resources/index.md)
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)

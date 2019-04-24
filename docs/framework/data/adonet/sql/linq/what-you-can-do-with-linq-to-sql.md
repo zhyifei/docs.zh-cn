@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231573"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>使用 LINQ to SQL 可执行的操作
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持您作为 SQL 开发人员所期望的所有关键功能。 您可以查询表中的信息、在表中插入信息以及更新和删除表中的信息。  
   
 ## <a name="selecting"></a>选择  
- 通过在您自己的编程语言中编写*查询，然后执行此查询以检索结果，即可以实现选择（投影*[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ）。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自行将转换为使用者熟悉的必要 SQL 操作的所有必要操作。 有关详细信息，请参阅 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
+ 通过在您自己的编程语言中编写*查询，然后执行此查询以检索结果，即可以实现选择（投影*[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ）。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自行将所有必要操作转换为您所熟悉的必要 SQL 操作。 有关详细信息，请参阅 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
   
  在下面的示例中，检索来自伦敦的客户的公司名称并将其显示在控制台窗口中。  
   

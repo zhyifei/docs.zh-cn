@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153590"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>使用 DataAdapter 更新数据源
@@ -46,7 +46,7 @@ ms.locfileid: "59153590"
   
  以处理调用时可能发生的异常`Update`方法中，可以使用`RowUpdated`事件发生时对行更新错误响应 (请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md))，也可以设置`DataAdapter.ContinueUpdateOnError`到`true`之前调用`Update`，并响应中存储的错误信息`RowError`属性的特定行更新完成后 (请参阅[行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md))。  
   
- **请注意**调用`AcceptChanges`上`DataSet`， `DataTable`，或`DataRow`将导致所有`Original`值`DataRow`以使用覆盖`Current`值`DataRow`。 如果修改了唯一标识该行的字段值，则在调用 `AcceptChanges` 后，`Original` 值将不再匹配数据源中的值。 `AcceptChanges` 自动的每行调用的 Update 方法的调用过程`DataAdapter`。 在调用 Update 方法期间，通过先将 `AcceptChangesDuringUpdate` 的 `DataAdapter` 属性设置为 false，或为 `RowUpdated` 事件创建一个事件处理程序并将 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 设置为 <xref:System.Data.UpdateStatus.SkipCurrentRow>，可以保留原始值。 有关详细信息，请参阅[合并数据集内容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)并[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ **请注意**调用`AcceptChanges`上`DataSet`， `DataTable`，或`DataRow`将导致所有`Original`值`DataRow`以使用覆盖`Current`值`DataRow`。 如果修改了唯一标识该行的字段值，则在调用 `AcceptChanges` 后，`Original` 值将不再匹配数据源中的值。 在调用 `AcceptChanges` 的 Update 方法期间会对每一行自动调用 `DataAdapter`。 在调用 Update 方法期间，通过先将 `AcceptChangesDuringUpdate` 的 `DataAdapter` 属性设置为 false，或为 `RowUpdated` 事件创建一个事件处理程序并将 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 设置为 <xref:System.Data.UpdateStatus.SkipCurrentRow>，可以保留原始值。 有关详细信息，请参阅[合并数据集内容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)并[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何通过显式设置执行对已修改的行更新`UpdateCommand`的`DataAdapter`并调用其`Update`方法。 请注意，在 UPDATE 语句的 WHERE 子句中指定的参数设置为使用 `Original` 的 `SourceColumn` 值。 这一点很重要，因为 `Current` 值可能已被修改，可能会不匹配数据源中的值。 `Original` 值是用于从数据源填充 `DataTable` 的值。  
@@ -370,9 +370,9 @@ class Program {
   
 ## <a name="see-also"></a>请参阅
 
-- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [行状态和行版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChange 和 RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [AcceptChanges 和 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
 - [合并数据集内容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
 - [检索标识或自动编号值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

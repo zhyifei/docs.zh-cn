@@ -9,10 +9,10 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
 ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224905"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>如何：通过直线、曲线和形状创建图形
@@ -37,5 +37,5 @@ ms.locfileid: "59224905"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
-- [构造并绘制轨迹](constructing-and-drawing-paths.md)
-- [使用钢笔绘制线条和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [构造并绘制路径](constructing-and-drawing-paths.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
 ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132634"
 ---
 # <a name="how-to-translate-image-colors"></a>如何：转换图像颜色
@@ -46,7 +46,7 @@ ms.locfileid: "59132634"
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 替换为`ColorBars.bmp`与图像文件名称和在您的系统都有效的路径。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 替换为`ColorBars.bmp`与图像文件名称和在您的系统都有效的路径。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,16 +3,16 @@ title: 非泛型 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303539"
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 在其工具箱中随附的一组控制流活动，包括<xref:System.Activities.Statements.ForEach%601>，它允许遍历<xref:System.Collections.Generic.IEnumerable%601>集合。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的工具箱中附带了一组控制流活动，其中包括可用来循环访问 <xref:System.Activities.Statements.ForEach%601> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。  
   
- <xref:System.Activities.Statements.ForEach%601> 需要其<xref:System.Activities.Statements.ForEach%601.Values%2A>属性的类型为<xref:System.Collections.Generic.IEnumerable%601>。 这将阻止用户循环访问实现 <xref:System.Collections.Generic.IEnumerable%601> 接口（例如，<xref:System.Collections.ArrayList>）的数据结构。 非泛型版本的 <xref:System.Activities.Statements.ForEach%601> 没有这一需求，不过与此对应的代价是，需要更复杂的运行时来确保集合中的值类型的兼容性。  
+ <xref:System.Activities.Statements.ForEach%601> 要求其 <xref:System.Activities.Statements.ForEach%601.Values%2A> 属性为 <xref:System.Collections.Generic.IEnumerable%601> 类型。 这将阻止用户循环访问实现 <xref:System.Collections.Generic.IEnumerable%601> 接口（例如，<xref:System.Collections.ArrayList>）的数据结构。 非泛型版本的 <xref:System.Activities.Statements.ForEach%601> 没有这一需求，不过与此对应的代价是，需要更复杂的运行时来确保集合中的值类型的兼容性。  
   
  此示例演示如何实现非泛型的 <xref:System.Activities.Statements.ForEach%601> 活动及其设计器。 此活动可用于循环访问 <xref:System.Collections.ArrayList>。  
   
@@ -69,7 +69,7 @@ Activity sampleUsage =
   
 |条件|消息|严重性|异常类型|  
 |---------------|-------------|--------------|--------------------|  
-|值是 `null`|未提供必需活动自变量“Values”的值。|Error|<xref:System.InvalidOperationException>|  
+|Values 为 `null`|未提供必需活动自变量“Values”的值。|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEachT 设计器  
  此示例的活动设计器的外观与为内置 <xref:System.Activities.Statements.ForEach%601> 活动提供的设计器的外观相似。 在设计器将显示在工具箱中**示例**，**非泛型活动**类别。 名为设计器**ForEachWithBodyFactory**在工具箱中，因为该活动公开<xref:System.Activities.Presentation.IActivityTemplateFactory>在工具箱中，这将创建该活动使用正确配置<xref:System.Activities.ActivityAction>。  

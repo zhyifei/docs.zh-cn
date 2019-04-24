@@ -3,12 +3,12 @@ title: 教程：编写第一个分析器和代码修补程序
 description: 本教程提供了有关使用 .NET 编译器 SDK (Roslyn API) 生成分析器和代码修补程序的分步说明。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677160"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427495"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教程：编写第一个分析器和代码修补程序
 
@@ -254,7 +254,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 ![可以发出 const 警告](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
-现在已经有了很大的进展。 可以进行 `const` 操作的声明下具有波浪线。 但仍有工作要做。 如果将 `const` 添加到依次以 `i`、`j` 和 `k` 开头的声明，该过程会很有效。 但是，如果以从 `k` 开始的不同顺序添加 `const` 修饰符，分析器将创建错误：`k` 不能声明为 `const`，除非 `i` 和 `j` 均已进行 `const` 处理。 必须执行详细分析，以确保处理可以声明和初始化变量的不同方式。
+现在已经有了很大的进展。 可以进行 `const` 操作的声明下具有波浪线。 但仍有工作要做。 如果将 `const` 添加到依次以 `i`、`j` 和 `k` 开头的声明，该过程会很有效。 不过，如果以从 `k` 开始的不同顺序添加 `const` 修饰符，分析器会生成错误：`k` 无法声明为 `const`，除非 `i` 和 `j` 均已进行 `const` 处理。 必须执行详细分析，以确保处理可以声明和初始化变量的不同方式。
 
 ## <a name="build-data-driven-tests"></a>构建数据驱动测试
 

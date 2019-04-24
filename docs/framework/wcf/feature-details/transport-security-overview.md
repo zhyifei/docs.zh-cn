@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105269"
 ---
 # <a name="transport-security-overview"></a>传输安全概述
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) 中的传输安全机制取决于绑定�
 >  使用 SSL 安全时使用.NET Framework 3.5 及更高版本的 WCF 客户端在其证书存储中使用这两个中间证书和 SSL 协商，以在服务上执行证书链验证期间收到的中间证书证书。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
   
 > [!WARNING]
->  在使用传输安全时，可能会覆盖 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性。 若要避免这种情况的发生集<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>到<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是一个服务行为，可以设置对服务说明。  
+>  在使用传输安全时，可能会覆盖 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性。 若要避免这种情况的发生集<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>到<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可对服务说明设置的服务行为。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 类不提供安全性。 此绑定旨在提供与不实现安全机制的 Web 服务提供程序的互操作性。 但可以通过将 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 属性设置为 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外的值来启用安全。 若要启用传输安全，请将该属性设置为 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  

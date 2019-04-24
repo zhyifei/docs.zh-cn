@@ -3,10 +3,10 @@ title: 类型化数据集
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098645"
 ---
 # <a name="typed-datasets"></a>类型化数据集
@@ -20,10 +20,10 @@ ms.locfileid: "59098645"
  [生成强类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  介绍如何创建和使用强类型化**数据集**。  
   
- [为类型化的数据集进行批注](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ [为类型化的数据集进行注释](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  描述如何批注 XML 架构定义语言 (XSD) 架构用于生成强类型化**数据集**，以便**数据集**元素友好的名称，而无需更改基础架构。  
   
 ## <a name="see-also"></a>请参阅
 
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

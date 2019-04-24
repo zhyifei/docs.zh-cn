@@ -3,10 +3,10 @@ title: 在 LINQ to Entities 查询中调用函数
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
 ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312080"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>在 LINQ to Entities 查询中调用函数
@@ -33,7 +33,7 @@ ms.locfileid: "59312080"
   
  [如何：在查询中调用模型定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
   
- [如何：调用模型定义的函数作为对象方法](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
+ [如何：作为对象方法调用模型定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
 ms.openlocfilehash: 55716a9955d12ef3a926efe352a0078044de9990
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326796"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
@@ -199,4 +199,4 @@ ms.locfileid: "59326796"
 ## <a name="see-also"></a>请参阅
 
 - [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
-- [代码安全维护指南](../../../standard/security/secure-coding-guidelines.md)
+- [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

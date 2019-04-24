@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219316"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59169021"
 ---
 # <a name="registering-assemblies-with-com"></a>向 COM 注册程序集
 可运行名为[程序集注册工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 的命令行工具注册或取消注册与 COM 一起使用的程序集。 Regasm.exe 将关于类的信息添加到系统注册表，因此 COM 客户端可以透明地使用 .NET Framework 类。 <xref:System.Runtime.InteropServices.RegistrationServices> 类提供等效功能。  
   
  托管组件从 COM 客户端激活前必须在 Windows 注册表中注册。 下表显示 Regasm.exe 通常添加到 Windows 注册表的项。 （000000 表示实际的 GUID 值。）  
   
-|GUID|说明​​|注册表项|  
+|GUID|说明|注册表项|  
 |----------|-----------------|------------------|  
 |CLSID|类标识符|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
 |IID|接口标识符|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
@@ -44,6 +44,7 @@ ms.locfileid: "56219316"
  关于 `InprocServer32` 子项, 出现在传统 COM 类型库中的对 Mscoree.dll 的引用表示公共语言运行时创建托管对象。  
   
 ## <a name="see-also"></a>请参阅
+
 - [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
 - [如何：从 COM 引用 .NET 类型](how-to-reference-net-types-from-com.md)
 - [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))

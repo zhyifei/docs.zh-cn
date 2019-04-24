@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
 ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149625"
 ---
 # <a name="generating-strongly-typed-datasets"></a>生成强类型化数据集
@@ -100,4 +100,4 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 - <xref:System.Data.DataSet>
 - [类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

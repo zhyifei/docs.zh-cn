@@ -7,10 +7,10 @@ helpviewer_keywords:
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
 ms.openlocfilehash: 932eb0af6afbe958695d5c084d2cb0c0bc188830
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176613"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>实现 UI 自动化 GridItem 控件模式
@@ -29,7 +29,7 @@ ms.locfileid: "59176613"
   
 -   合并的单元格将根据 UI 自动化提供程序定义的其基本定位单元格来报告其 <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> 和 <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> 属性。 通常，它将是最左上方的行或列。  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供如合并或拆分单元格网格的活动操作。  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> 不对网格进行实时操作，如合并或拆分单元格。  
   
 -   通常，可以使用键盘遍历实现 <xref:System.Windows.Automation.Provider.IGridItemProvider> 的控件（即 UI 自动化客户端可以移动到相邻的控件）。  
   

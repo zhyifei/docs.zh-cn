@@ -3,10 +3,10 @@ title: 使用 DependentTransaction 管理并发
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216296"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>使用 DependentTransaction 管理并发
@@ -19,7 +19,7 @@ ms.locfileid: "59216296"
   
 -   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 创建出，或直到阻止父事务超时父事务的提交过程的依赖事务<xref:System.Transactions.DependentTransaction.Complete%2A>上指示完成的所有依赖项调用。 当客户端希望在依赖事务完成后再提交父事务时，这一点十分有用。 如果父事务的工作比该依赖事务早完成，并在此时对该依赖事务调用了 <xref:System.Transactions.CommittableTransaction.Commit%2A>，则提交进程会被阻止（在该状态下可在依赖事务上执行其他工作并可创建新登记），直到所有依赖事务都调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 为止。 只要所有依赖事务完成了工作并调用了 <xref:System.Transactions.DependentTransaction.Complete%2A>，就会立即启动事务的提交进程。  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>但是，创建一个自动中止的依赖事务<xref:System.Transactions.CommittableTransaction.Commit%2A>之前对父事务上调用<xref:System.Transactions.DependentTransaction.Complete%2A>调用。 在这种情况下，在该依赖事务中执行的所有工作在一个事务生存期内都保持不变，并且根本无法只提交其中的一部分。  
+-   另一方面，在调用 <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete> 之前对父事务调用 <xref:System.Transactions.CommittableTransaction.Commit%2A> 时，<xref:System.Transactions.DependentTransaction.Complete%2A> 会创建一个自动中止的依赖事务。 在这种情况下，在该依赖事务中执行的所有工作在一个事务生存期内都保持不变，并且根本无法只提交其中的一部分。  
   
  当应用程序完成在该依赖事务上的工作时，必须调用一次 <xref:System.Transactions.DependentTransaction.Complete%2A> 方法；否则，会引发 <xref:System.InvalidOperationException>。 在执行此调用之后，不能在事务上尝试任何附加工作，否则就会引发异常。  
   

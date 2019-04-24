@@ -9,11 +9,11 @@ ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672934"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>承载（非托管 API 参考）
 利用承载 API，非托管主机能够将公共语言运行时 (CLR) 集成到其应用程序中。  

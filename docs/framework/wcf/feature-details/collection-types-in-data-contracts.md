@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106738"
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
@@ -273,8 +273,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |非泛型或封闭式泛型（任意多个参数）|非泛型|`MyType : IList`<br /><br /> 或<br /><br /> `MyType<T> : IList`<br /><br /> 其中 T= `int`|`Object` 的封闭式泛型（例如， `IList<object>`）|  
 |非泛型或封闭式泛型（可以有任意多个参数，而且这些参数不是必须与集合类型匹配）|封闭式泛型|`MyType : IList<string>`<br /><br /> 或<br /><br /> `MyType<T> : IList<string>` 其中 T=`int`|封闭式泛型（例如 `IList<string>`）|  
-|可以有任意多个参数的封闭式泛型|使用该类型的任何一个参数的开放式泛型|`MyType<T,U,V> : IList<U>`<br /><br /> where T=`int`, U=`string`, V=`bool`|封闭式泛型（例如 `IList<string>`）|  
-|具有一个参数的开放式泛型|使用该类型的参数的开放式泛型|`MyType<T> : IList<T>`T 是开放式|开放式泛型（例如 `IList<T>`）|  
+|可以有任意多个参数的封闭式泛型|使用该类型的任何一个参数的开放式泛型|`MyType<T,U,V> : IList<U>`<br /><br /> 其中 T=`int`，U=`string`，V=`bool`|封闭式泛型（例如 `IList<string>`）|  
+|具有一个参数的开放式泛型|使用该类型的参数的开放式泛型|`MyType<T> : IList<T>`，T 是开放式的|开放式泛型（例如 `IList<T>`）|  
   
  如果类型实现多个列表集合接口，则下列限制适用：  
   
@@ -287,10 +287,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |引用类型|引用类型所实现的接口|示例|类型被视为|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非泛型或封闭式泛型（任意多个参数）|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封闭式泛型 `IDictionary<object,object>`|  
-|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>关闭|`MyType<T> : IDictionary<string, bool>` 其中 T=`int`|封闭式泛型（例如 `IDIctionary<string,bool>`）|  
-|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType<T,U,V> : IDictionary<string,V>` where T=`int`, U=`float`,V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 其中 Z=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
-|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键和值均是开放式的，且每个都使用类型的一个参数|`MyType<T,U,V> : IDictionary<V,U>` where T=`int`, U=`bool`, V=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
-|开放式泛型（两个参数）|开放式泛型 <xref:System.Collections.Generic.IDictionary%602>，按显示顺序使用类型的两个泛型参数|`MyType<K,V> : IDictionary<K,V>`K 和 V 均是开放式|开放式泛型（例如 `IDictionary<K,V>`）|  
+|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>，封闭式|`MyType<T> : IDictionary<string, bool>` 其中 T=`int`|封闭式泛型（例如 `IDIctionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType<T,U,V> : IDictionary<string,V>` ，其中 T=`int`，U=`float`，V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ，其中 Z=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键和值均是开放式的，且每个都使用类型的一个参数|`MyType<T,U,V> : IDictionary<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
+|开放式泛型（两个参数）|开放式泛型 <xref:System.Collections.Generic.IDictionary%602>，按显示顺序使用类型的两个泛型参数|`MyType<K,V> : IDictionary<K,V>`，K 和 V 均是开放式的|开放式泛型（例如 `IDictionary<K,V>`）|  
   
  如果类型同时实现 <xref:System.Collections.IDictionary> 和泛型 <xref:System.Collections.Generic.IDictionary%602>，则只将考虑泛型 <xref:System.Collections.Generic.IDictionary%602> 。  
   
@@ -321,13 +321,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |集合类型实现|序列化时调用的方法|反序列化时调用的方法|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|泛型 <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|泛型 Add|  
-|<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
+|泛型 <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`， `get_Values`|泛型 Add|  
+|<xref:System.Collections.IDictionary>|`get_Keys`， `get_Values`|`Add`|  
 |泛型 <xref:System.Collections.Generic.IList%601>|泛型 <xref:System.Collections.Generic.IList%601> 索引器|泛型 Add|  
 |泛型 <xref:System.Collections.Generic.ICollection%601>|枚举器|泛型 Add|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> 索引器|`Add`|  
 |泛型 <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|一个称为 `Add` 的非静态方法，它采用一个相应类型（泛型参数的类型或者它的某个基类型）的参数。 必须存在这样的方法，序列化程序才能在序列化和反序列化期间，都将集合类型视为集合。|  
-|<xref:System.Collections.IEnumerable> (并因此<xref:System.Collections.ICollection>，从中派生)|`GetEnumerator`|一个名为 `Add` 的非静态方法，它采用一个 `Object`类型的参数。 必须存在这样的方法，序列化程序才能在序列化和反序列化期间，都将集合类型视为集合。|  
+|<xref:System.Collections.IEnumerable> （因此也包括派生自它的 <xref:System.Collections.ICollection>）|`GetEnumerator`|一个名为 `Add` 的非静态方法，它采用一个 `Object`类型的参数。 必须存在这样的方法，序列化程序才能在序列化和反序列化期间，都将集合类型视为集合。|  
   
  上表按优先级从高到低的顺序列出集合接口。 现举例说明这样列出的含义：如果一个类型同时实现 <xref:System.Collections.IList> 和泛型 <xref:System.Collections.Generic.IEnumerable%601>，则集合将按照 <xref:System.Collections.IList> 规则进行序列化和反序列化：  
   

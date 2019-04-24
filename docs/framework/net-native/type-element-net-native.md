@@ -1,14 +1,14 @@
 ---
-title: <Type> 元素 (.NET Native)
+title: <Type>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162693"
 ---
 # <a name="type-element-net-native"></a>\<类型 > 元素 (.NET Native)
@@ -53,27 +53,27 @@ ms.locfileid: "59162693"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*类型_名称*|类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素或另一个 `<Type>` 元素的子元素，type_name 可能包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|  
+|type_name|类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素或另一个 `<Type>` 元素的子元素，type_name 可能包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
 |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|如果包含类型是一个特性，为该特性所应用到的代码元素定义一个运行时策略。|  
-|[\<事件 >](../../../docs/framework/net-native/event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|  
-|[\<字段 >](../../../docs/framework/net-native/field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|  
 |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|将策略应用到一个泛型类型的参数类型。|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|如果该策略已应用到以包含 `<Type>` 元素为代表的类型，将该策略应用到一个类型。|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到属于这种类型的一个方法。|  
-|[\<方法实例化 >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|将反射策略应用到属于这种类型的一个构造泛型方法。|  
-|[\<属性 >](../../../docs/framework/net-native/property-element-net-native.md)|将反射策略应用到属于这种类型的一个属性。|  
-|[\<子类型 >](../../../docs/framework/net-native/subtypes-element-net-native.md)|将运行时策略应用到从包含类型继承的所有类。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将反射策略应用到属于这种类型的一个方法。|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|将反射策略应用到属于这种类型的一个构造泛型方法。|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|将反射策略应用到属于这种类型的一个属性。|  
+|[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|将运行时策略应用到从包含类型继承的所有类。|  
 |`<Type>`|将反射策略应用到一个嵌套类型。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一个构造泛型类型。|  
   
@@ -82,9 +82,9 @@ ms.locfileid: "59162693"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|  
-|[\<程序集 >](../../../docs/framework/net-native/assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|将反射策略应用到命名空间中的所有类型。|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|将反射策略应用到命名空间中的所有类型。|  
 |`<Type>`|将反射策略应用到一种类型及其所有成员。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
   
@@ -133,6 +133,6 @@ ms.locfileid: "59162693"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

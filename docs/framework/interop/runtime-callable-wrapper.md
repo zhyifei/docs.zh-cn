@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654128"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210124"
 ---
 # <a name="runtime-callable-wrapper"></a>运行时可调用包装
 公共语言运行时通过名为运行时可调用包装 (RCW) 的代理公开 COM 对象。 尽管 RCW 似乎是 .NET 客户端的普通对象，但它的主要功能是封送处理 .NET 客户端和 COM 对象之间的调用。  
@@ -25,8 +25,7 @@ ms.locfileid: "58654128"
 下图显示了通过运行时可调用包装器访问 COM 对象的过程：
 
  ![通过 RCW 访问 COM 对象的过程。](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  借助从类型库派生而来的元数据，运行时创建正在调用的 COM 对象及其包装。 每个 RCW 都在其包装的 COM 对象上维护一个接口指针的缓存，并且当不再需要 RCW 时释放 COM 对象上的引用。 运行时在 RCW 上执行垃圾回收。  
   
  在其他活动中，RCW 代表包装的对象封送托管代码和非托管代码间的数据。 具体而言，每当在客户端和服务器之间传递数据的不同表示形式时，RCW 都向方法自变量和方法返回值提供封送处理。  
@@ -60,6 +59,7 @@ ms.locfileid: "58654128"
 |**IEnumVARIANT**|使支持枚举的 COM 类型可被视为集合。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [COM 包装](com-wrappers.md)
 - [COM 可调用包装器](com-callable-wrapper.md)
 - [有关从类型库转换到程序集的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

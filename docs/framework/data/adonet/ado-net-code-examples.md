@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180721"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 代码示例
@@ -29,7 +29,7 @@ ms.locfileid: "59180721"
 
   - [LINQ to Entities](#linq-to-entities)
 
-  - [类型化 ObjectQuery](#typed-objectquery)
+  - [类型化的 ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 
@@ -348,6 +348,6 @@ End Class
 - [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [创建数据应用程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [查询实体数据模型（实体框架任务）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [查询实体数据模型 （实体框架任务）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
 - [如何：执行返回匿名类型对象的查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
 ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143268"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>如何：控制文本框文本更新源的时间
 本主题介绍如何使用 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 属性控制绑定源更新的时机。 本主题使用 <xref:System.Windows.Controls.TextBox> 控件作为示例。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Controls.TextBox><xref:System.Windows.Controls.TextBox.Text%2A> 属性具有默认值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>的值<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。 这意味着应用程序是否已<xref:System.Windows.Controls.TextBox>与数据绑定<xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A> 属性中，您将键入的文本<xref:System.Windows.Controls.TextBox>不会更新源之前<xref:System.Windows.Controls.TextBox>失去焦点 (例如，当单击离开<xref:System.Windows.Controls.TextBox>)。  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 属性具有默认值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>的值<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。 这意味着应用程序是否已<xref:System.Windows.Controls.TextBox>与数据绑定<xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A> 属性中，您将键入的文本<xref:System.Windows.Controls.TextBox>不会更新源之前<xref:System.Windows.Controls.TextBox>失去焦点 (例如，当单击离开<xref:System.Windows.Controls.TextBox>)。  
   
  如果希望源在键入时更新，请将绑定的 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 设置为 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>。 在下面的示例中，突出显示的代码行表明 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.TextBlock> 的 `Text` 属性绑定到相同的源属性。 <xref:System.Windows.Controls.TextBox> 绑定的 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 属性设置为 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>。  
   

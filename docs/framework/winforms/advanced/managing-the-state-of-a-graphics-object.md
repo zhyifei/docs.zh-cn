@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
 ms.openlocfilehash: 8fc92bf84def50bed54a054ae634a8a08c8835c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212448"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>管理 Graphics 对象的状态
@@ -153,4 +153,4 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
-- [使用嵌套的 Graphics 容器](using-nested-graphics-containers.md)
+- [使用嵌套的图形容器](using-nested-graphics-containers.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce15e0535bbd6bc67054c651a518f11cf9dd2ae1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b633239be85a66c5bba54132c3732357967eb177
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410350"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59182931"
 ---
 # <a name="com-wrappers"></a>COM 包装
 COM 在以下几个重要方面与 .NET Framework 对象模型存在差别：  
@@ -34,6 +34,7 @@ COM 在以下几个重要方面与 .NET Framework 对象模型存在差别：
  大多数情况下，运行时生成的标准 RCW 或 CCW 都可为跨 COM 和.NET Framework 之间边界的调用提供充分的封送处理。 使用自定义属性，可以选择性地调整运行时表示托管和非托管代码的方式。  
   
 ## <a name="see-also"></a>请参阅
+
 - [高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [运行时可调用包装器](runtime-callable-wrapper.md)
 - [COM 可调用包装器](com-callable-wrapper.md)

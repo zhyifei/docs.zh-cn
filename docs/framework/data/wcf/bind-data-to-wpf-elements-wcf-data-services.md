@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
 ms.openlocfilehash: 1deb5bcc29e43720929951764d1fcfeee8e89f8c
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517390"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773956"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>如何：将数据绑定到 Windows Presentation Foundation 元素 （WCF 数据服务）
 与[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将 Windows Presentation Foundation (WPF) 元素绑定等<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ComboBox>的实例<xref:System.Data.Services.Client.DataServiceCollection%601>，用于处理由要保持的控件引发的事件<xref:System.Data.Services.Client.DataServiceContext>与更改保持同步对控件中的数据。 有关详细信息，请参阅[数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  

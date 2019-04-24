@@ -11,17 +11,17 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332674"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
 >  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 允许用户更改[!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]设置因此，大多数[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]屏幕上的元素显示得更大。 虽然 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中之前就已提供了此项功能，但在早期版本中，必须由应用程序实现缩放。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面窗口管理器为所有不会处理其自身缩放的应用程序执行默认缩放。 UI 自动化客户端应用程序必须考虑到此功能。  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 让用户能够更改 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 设置，以便屏幕上的大多数 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素显示得更大。 虽然 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中之前就已提供了此项功能，但在早期版本中，必须由应用程序实现缩放。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面窗口管理器为所有不会处理其自身缩放的应用程序执行默认缩放。 UI 自动化客户端应用程序必须考虑到此功能。  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Windows Vista 中的缩放  
@@ -77,4 +77,4 @@ ms.locfileid: "59332674"
   
 ## <a name="see-also"></a>请参阅
 
-- [荧光笔示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)
+- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

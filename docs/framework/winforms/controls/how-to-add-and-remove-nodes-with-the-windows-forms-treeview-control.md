@@ -12,10 +12,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
 ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326887"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>如何：添加和删除 Windows 窗体 TreeView 控件中的节点
@@ -77,4 +77,4 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件将存储中的顶级节
 - [如何：设置 Windows 窗体 TreeView 控件的图标](how-to-set-icons-for-the-windows-forms-treeview-control.md)
 - [如何：循环访问 Windows 窗体 TreeView 控件的所有节点](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
 - [如何：确定被单击的 TreeView 节点](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)

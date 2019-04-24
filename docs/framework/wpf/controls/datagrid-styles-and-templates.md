@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
 ms.openlocfilehash: dacc1222958ab05971c9681d33a0c431b72d0531
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218447"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 样式和模板
@@ -173,7 +173,7 @@ ms.locfileid: "59218447"
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Control 样式和模板](control-styles-and-templates.md)
+- [控件样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](styling-and-templating.md)
 - [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

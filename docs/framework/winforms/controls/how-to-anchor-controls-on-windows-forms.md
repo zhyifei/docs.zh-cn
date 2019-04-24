@@ -13,10 +13,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329773"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>如何：在 Windows 窗体上锚定控件
@@ -56,9 +56,9 @@ ms.locfileid: "59329773"
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件](index.md)
-- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
 - [AutoSize 属性概述](autosize-property-overview.md)
 - [如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)
-- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](windows-forms-controls-padding-autosize.md)
+- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)

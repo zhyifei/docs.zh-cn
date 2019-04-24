@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57846280"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612675"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 生成 Visual Basic Hello World 应用程序
 
@@ -31,7 +31,7 @@ ms.locfileid: "57846280"
 1. 启动 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”*对话框中，依次选择“Visual Basic”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“HelloWorld”。 选择“确定”按钮。
 
    ![选择了“控制台应用”的“新建项目”对话框](./media/vb-with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio 使用模板创建项目。 Visual Basic .NET Core 控制台应用程序模板自动定义类 `Program`，其中包含一个需要将 <xref:System.String> 数组用作参数的方法 `Main`。 `Main` 是应用程序入口点，同时也是在应用程序启动时由运行时自动调用的方法。 *args* 数组中包含在应用程序启动时提供的所有命令行自变量。
 
    ![Visual Studio 和新建的 HelloWorld 项目](./media/vb-with-visual-studio/visual-studio-main-window.png)
@@ -44,6 +44,7 @@ ms.locfileid: "57846280"
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
+
    此代码会提示用户按任意键，然后在用户按键前暂停程序。
 
 1. 在菜单栏中，选择“生成” > “生成解决方案”。 这会将程序编译成一种中间语言 (IL)，然后由实时 (JIT) 编译器转换成二进制代码。

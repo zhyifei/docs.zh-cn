@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
 ms.openlocfilehash: 3a610f86e15aadcbbc1ebb62d445c2d677f6f4bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131490"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>UI 自动化对 Pane 控件类型的支持
@@ -65,7 +65,7 @@ ms.locfileid: "59131490"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有窗格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event|支持/值|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|说明|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Never|None|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Never|None|  
@@ -89,7 +89,7 @@ ms.locfileid: "59131490"
   
  ![具有两个窗格的小程序窗口的屏幕截图](../../../docs/framework/ui-automation/media/uiauto-pane.GIF "uiauto_pane")  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-内容视图|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>Pane</li><li>树（Scroll 模式）<br /><br /> <ul><li>TreeItem</li><li>Pane</li><li>编辑（Scroll 模式）</li></ul></li></ul>|窗格<br />树 （Scroll 模式）<br />-TreeItem<br />-   …Pane<br />-编辑<br />-（滚动模式）|  
   

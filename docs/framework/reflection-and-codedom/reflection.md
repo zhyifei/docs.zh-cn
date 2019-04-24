@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221232"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59101570"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反射
 <xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和[值类型](../../csharp/language-reference/keywords/value-types.md)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
@@ -71,7 +71,7 @@ ms.locfileid: "56221232"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明​​|  
+|Title|说明|  
 |-----------|-----------------|  
 |[查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|介绍 <xref:System.Type> 类，并提供演示如何使用具有几个反射类的 <xref:System.Type> 来获取有关构造函数、方法、字段、属性和事件的信息的代码示例。|  
 |[反射类型和泛型类型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|说明反射如何处理泛型类型和泛型方法的类型参数和类型自变量。|  
@@ -89,4 +89,3 @@ ms.locfileid: "56221232"
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
-  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204193"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用图像、图形和视觉对象进行绘制
@@ -144,6 +144,6 @@ ms.locfileid: "59204193"
 - [图像处理概述](imaging-overview.md)
 - [Drawing 对象概述](drawing-objects-overview.md)
 - [不透明蒙板概述](opacity-masks-overview.md)
-- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
 - [ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)

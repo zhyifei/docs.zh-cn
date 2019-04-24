@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
 ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183776"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>支持辅助功能准则的 Windows 窗体控件上的属性
@@ -32,4 +32,4 @@ ms.locfileid: "59183776"
   
 ## <a name="see-also"></a>请参阅
 
-- [演练：创建基于 Windows 的可访问应用程序](walkthrough-creating-an-accessible-windows-based-application.md)
+- [演练：创建可访问的基于 Windows 的应用程序](walkthrough-creating-an-accessible-windows-based-application.md)

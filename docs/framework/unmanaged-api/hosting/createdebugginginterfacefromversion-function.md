@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e518834e018f0532f769c984befe7378a93b3f53
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 60d1c49e8762d00e3e154c598c2542c4a76b9b28
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491277"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59107492"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 函数
 创建[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)对象根据指定的版本信息。  
@@ -70,4 +70,5 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: d40b0ffbe514429ed24eaa5d0c2ce2d52c80d37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608948"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299119"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：为应用程序设置默认基于时间的缓存策略
 默认基于时间的缓存策略允许应用程序将标头定义的缓存行为与缓存资源和 RFC 2616 的第 13 和 14 节（可在 [工程任务组 (IETF)](https://www.ietf.org/) 中找到）中定义的缓存行为一起发送。 这是适用于大多数应用程序的缓存行为。  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>为应用程序设置默认自动策略  
   
-1.  创建默认基于时间的策略对象。  
+1. 创建默认基于时间的策略对象。  
   
-2.  将策略对象设置为应用程序域的默认对象。  
+2. 将策略对象设置为应用程序域的默认对象。  
   
 ## <a name="example"></a>示例  
  此部分中的两个示例生成相同的策略。  
@@ -63,6 +63,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
 - [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)

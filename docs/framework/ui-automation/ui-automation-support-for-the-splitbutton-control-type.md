@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
 ms.openlocfilehash: 0c133704dda03f722aa1231b1eaf15e714082789
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206949"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>UI 自动化对 SplitButton 控件类型的支持
@@ -62,7 +62,7 @@ ms.locfileid: "59206949"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有拆分按钮控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event|支持|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|必需|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|None|  
@@ -80,7 +80,7 @@ ms.locfileid: "59206949"
   
  与数据网格控件和拆分按钮控件相关的 UI 自动化树的控件视图和内容视图如下所示。 每个自动化元素的控件模式均显示在括号中。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-内容视图|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>SplitButton“名称”（Invoke、ExpandCollapse）</li><li>按钮“更多选项”（Invoke）<br /><br /> <ul><li>菜单</li><li>MenuItem</li><li>…</li></ul></li></ul>|<ul><li>SplitButton“名称”（Invoke、ExpandCollapse）</li><li>按钮“更多选项”（Invoke）<br /><br /> <ul><li>菜单</li><li>MenuItem</li><li>…</li></ul></li></ul>|  
   

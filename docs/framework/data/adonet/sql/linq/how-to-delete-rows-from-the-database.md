@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
 ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331671"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>如何：从数据库中删除行
 可以通过删除相应删除数据库中的行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象从其与表相关的集合。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会将更改为相应的 SQL 转换`DELETE`命令。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持或无法识别级联删除操作。 如果要在对行有约束的表中删除行，则必须完成以下任务之一：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持且无法识别级联删除操作。 如果要在对行有约束的表中删除行，则必须完成以下任务之一：  
   
 -   在数据库的外键约束中设置 `ON DELETE CASCADE` 规则。  
   

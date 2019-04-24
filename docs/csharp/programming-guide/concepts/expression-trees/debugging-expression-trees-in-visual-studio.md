@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中调试表达式树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 308b377af00a3d12523f8f8d469c50808f216030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95a01a98e771e04afd296428ed56e9518bad9ac2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632148"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59330398"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>在 Visual Studio 中调试表达式树 (C#)
 可以在调试应用程序时分析表达式树的结构和内容。 若要快速了解表达式树结构，可以使用 `DebugView` 属性，该属性仅在调试模式下可用。 有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)。  
@@ -16,11 +16,11 @@ ms.locfileid: "54632148"
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>打开表达式树的可视化工具  
   
-1.  单击“数据提示”、“监视”窗口、“自动”或“局部变量”窗口中表达式树的 `DebugView` 属性旁边显示的放大镜图标。  
+1. 单击“数据提示”、“监视”窗口、“自动”或“局部变量”窗口中表达式树的 `DebugView` 属性旁边显示的放大镜图标。  
   
      将会显示可视化工具列表。  
   
-2.  单击要使用的可视化工具。  
+2. 单击要使用的可视化工具。  
   
  每个表达式类型如以下各节所述显示在可视化工具中。  
   

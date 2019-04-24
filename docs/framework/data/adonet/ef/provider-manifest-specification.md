@@ -3,10 +3,10 @@ title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169905"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
@@ -266,7 +266,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |NiladicFunction|Boolean|否|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
 |ParameterType<br /><br /> 语义|ParameterSemantics|否|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **Parameters 节点**  
+ **参数节点**  
   
  每个函数都具有包含一个或多个 Parameter 节点的集合。  
   

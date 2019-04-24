@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
 ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156502"
 ---
 # <a name="configuring-wcf-services"></a>配置 WCF 服务
@@ -30,10 +30,10 @@ ms.locfileid: "59156502"
  [终结点](../../../docs/framework/wcf/endpoints.md)  
  通过与 WCF 服务的所有通信都进行*终结点*的服务。 终结点包含协定、在绑定中指定的配置信息，以及指示查找服务或获取该服务相关信息的位置的地址。  
   
- [保证服务的安全](../../../docs/framework/wcf/securing-services.md)  
+ [保护服务](../../../docs/framework/wcf/securing-services.md)  
  使用 WCF 和现有安全机制，可以实现保密性、 完整性、 身份验证和授权到任何服务。 还可以审核安全成功和安全失败。  
   
- [创建 WS-I 基本配置文件 1.1 可互操作服务](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
+ [创建 WS-I 基本配置文件 1.1 交互服务](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  WS-I 基本配置文件 1.1 规范中概述了部署服务的需求，该服务可与其他任何平台或操作系统上的服务和客户端进行互操作。  
   
 ## <a name="reference"></a>参考  
@@ -48,16 +48,16 @@ ms.locfileid: "59156502"
   
  [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
- [承载服务](../../../docs/framework/wcf/hosting-services.md)  
+ [托管服务](../../../docs/framework/wcf/hosting-services.md)  
   
  [生成客户端](../../../docs/framework/wcf/building-clients.md)  
   
- [扩展性介绍](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ [扩展性简介](../../../docs/framework/wcf/introduction-to-extensibility.md)  
   
  [管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)  
   
 ## <a name="see-also"></a>请参阅
 
 - [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [概念概述](../../../docs/framework/wcf/conceptual-overview.md)
+- [概念性概述](../../../docs/framework/wcf/conceptual-overview.md)
 - [WCF 功能详细信息](../../../docs/framework/wcf/feature-details/index.md)

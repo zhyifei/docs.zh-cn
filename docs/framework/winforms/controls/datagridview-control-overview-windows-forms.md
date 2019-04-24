@@ -20,10 +20,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112874"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 控件概述（Windows 窗体）
@@ -59,7 +59,7 @@ ms.locfileid: "59112874"
  [DataGridView 控件体系结构](datagridview-control-architecture-windows-forms.md)  
  介绍的体系结构<xref:System.Windows.Forms.DataGridView>控件，解释了其类型层次结构和继承结构。  
   
- [DataGridView 控件方案](datagridview-control-scenarios-windows-forms.md)  
+ [DataGridView 控件应用场景](datagridview-control-scenarios-windows-forms.md)  
  介绍在其中的最常见方案<xref:System.Windows.Forms.DataGridView>使用控件。  
   
  [DataGridView 控件代码目录](datagridview-control-code-directory-windows-forms.md)  
@@ -75,7 +75,7 @@ ms.locfileid: "59112874"
  [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍自定义绘制 <xref:System.Windows.Forms.DataGridView> 单元格和行，以及创建派生的单元、列和行类型。  
   
- [Windows 窗体 DataGridView 控件中的性能优化](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows 窗体 DataGridView 控件中的性能调整](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍如何在使用大量数据时，有效地使用控件以避免性能问题。  
   
 ## <a name="see-also"></a>请参阅

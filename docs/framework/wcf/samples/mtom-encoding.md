@@ -3,11 +3,11 @@ title: MTOM 编码
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
 ms.openlocfilehash: abca7810e9d414808ddc195b95de05922edb6238
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323130"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767742"
 ---
 # <a name="mtom-encoding"></a>MTOM 编码
 此示例演示如何将消息传输优化机制 (MTOM) 消息编码与 WSHttpBinding 一起使用。 MTOM 是一种机制，用来以原始字节形式传输包含 SOAP 消息的较大二进制附件，从而使所传输的消息较小。  

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332113"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面
@@ -46,7 +46,7 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
     1.  将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-    2.  设置<xref:System.Windows.Forms.TreeView.ImageList%2A>属性 `imagelist1.`  
+    2.  将 <xref:System.Windows.Forms.TreeView.ImageList%2A> 属性设置为 `imagelist1.`  
   
 7. 添加<xref:System.Windows.Forms.ListView>名为控件`listView1`窗体，并将其置于的右侧<xref:System.Windows.Forms.SplitContainer>控件。 在属性窗口中`listview1`执行以下操作：  
   
@@ -56,7 +56,7 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
     3.  通过单击省略号打开 ColumnHeader 集合编辑器 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>属性 **。** 添加三个列，并设置其<xref:System.Windows.Forms.ColumnHeader.Text%2A>属性设置为`Name`， `Type`，和`Last Modified`分别。 单击“确定”关闭对话框。  
   
-    4.  设置<xref:System.Windows.Forms.ListView.SmallImageList%2A>属性 `imageList1.`  
+    4.  将 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 属性设置为 `imageList1.`  
   
 8. 实现代码来填充<xref:System.Windows.Forms.TreeView>节点和子节点。 添加到此代码`Form1`类。  
   
@@ -94,7 +94,7 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
 ## <a name="next-steps"></a>后续步骤  
  此应用程序提供的一种方法可以使用示例<xref:System.Windows.Forms.TreeView>和<xref:System.Windows.Forms.ListView>一起控制。 有关这些控件的详细信息，请参阅以下主题：  
   
--   [如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
 -   [如何：向 ListView 控件添加搜索功能](how-to-add-search-capabilities-to-a-listview-control.md)  
   
@@ -105,6 +105,6 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [ListView 控件](listview-control-windows-forms.md)
-- [如何：添加和删除 Windows 窗体 TreeView 控件中的节点](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [如何：使用 Windows 窗体 ListView 控件添加和移除项](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [如何：向 Windows 窗体 ListView 控件中添加列](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [如何：添加和删除节点使用 Windows 窗体 TreeView 控件](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [如何：添加和删除使用 Windows 窗体 ListView 控件的项](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：将列添加到 Windows 窗体 ListView 控件](how-to-add-columns-to-the-windows-forms-listview-control.md)

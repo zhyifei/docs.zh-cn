@@ -3,10 +3,10 @@ title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
 ms.openlocfilehash: dc1af462222920c7b3c6b66c3822e7b2b326b244
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169814"
 ---
 # <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
@@ -70,7 +70,7 @@ ms.locfileid: "59169814"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|定义绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|定义绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>。|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  

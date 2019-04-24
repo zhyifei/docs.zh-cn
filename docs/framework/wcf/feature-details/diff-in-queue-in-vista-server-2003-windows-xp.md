@@ -5,10 +5,10 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115981"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异
@@ -19,7 +19,7 @@ ms.locfileid: "59115981"
   
  通常，共享一个队列管理器的所有排队应用程序存在一个系统范围的死信队列。 使用每个应用程序的死信队列，共享一个队列管理器的各排队应用程序之间可以更好地隔离，方法是允许这些应用程序指定它们自己的应用程序特定的死信队列。 与其他应用程序共享一个死信队列的应用程序必须浏览该队列，以查找对其适用的消息。 对于应用程序特定的死信队列，应用程序可以确保其死信队列中的所有消息都对其适用。  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] 提供有关特定于应用程序的死信队列。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中未提供应用程序特定的死信队列，因而应用程序必须使用系统范围的死信队列。  
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] 用于应用程序特定的死信队列。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中未提供应用程序特定的死信队列，因而应用程序必须使用系统范围的死信队列。  
   
 ## <a name="poison-message-handling"></a>病毒消息处理  
  “病毒消息”是一类已超出向接收应用程序尝试进行传送的最大次数的消息。 当从事务性队列中读取消息的应用程序因出错而无法立即处理消息时，可能会引出现这种情况。 如果应用程序中止从中接收排队消息的事务，则它会将该消息返回到队列。 然后，应用程序尝试在新的事务中再次检索该消息。 如果引起错误的问题未得到纠正，则接收应用程序可能会停留在接收和中止同一条消息的循环中，直到超出最大传送尝试次数并生成病毒消息。  
@@ -38,4 +38,4 @@ ms.locfileid: "59115981"
 ## <a name="see-also"></a>请参阅
 
 - [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

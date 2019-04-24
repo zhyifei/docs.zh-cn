@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203634"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210224"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 迁移问题
 
@@ -85,7 +85,6 @@ ms.locfileid: "57203634"
 | ------- | ------------------------ | ------------------- |
 | **夏时制** | 为了与系统时钟保持一致，时间属性（如 <xref:System.TimeZoneInfo.Local> 和 <xref:System.DateTime.Now>）现在使用操作系统规则而非其他 .NET Framework 数据进行夏时制操作。 | 无。 |
 | **字符串格式设置** | 为了支持区分区域性的格式设置，<xref:System.TimeSpan> 结构包含了 `ToString`、`Parse` 和 `TryParse` 方法的新重载，以及新的 `ParseExact` 和 `TryParseExact` 方法。 | 无。 |
-
 
 ### <a name="globalization"></a>全球化
 

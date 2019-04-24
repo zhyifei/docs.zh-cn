@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338093"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：使用自定义组件自动填充工具箱
@@ -95,7 +95,7 @@ ms.locfileid: "59338093"
   
 ## <a name="see-also"></a>请参阅
 
-- [“选项”对话框 ->“Windows 窗体设计器”->“常规”](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [通常，Windows 窗体设计器选项对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [如何：操作工具箱选项卡](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
-- [选择工具箱项对话框 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
-- [将控件放在 Windows 窗体上](putting-controls-on-windows-forms.md)
+- [“选择工具箱项”对话框 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
+- [将控件置于 Windows 窗体上](putting-controls-on-windows-forms.md)

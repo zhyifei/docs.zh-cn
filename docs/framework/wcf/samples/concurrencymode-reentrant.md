@@ -3,11 +3,11 @@ title: 可重入的 ConcurrencyMode
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
 ms.openlocfilehash: 2170b029f1cb4a85a1b2688fc1143ffcd1682fe6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299814"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769680"
 ---
 # <a name="concurrencymode-reentrant"></a>可重入的 ConcurrencyMode
 本示例演示对服务实现使用 ConcurrencyMode.Reentrant 的必要性和含义。 ConcurrencyMode.Reentrant 暗示服务（或回调）只在给定时间处理一个消息（类似于 `ConcurencyMode.Single`）。 若要确保线程安全，Windows Communication Foundation (WCF) 锁定`InstanceContext`处理一条消息，以便可以处理任何其他消息。 在处于可重入模式的情况下，`InstanceContext` 将仅在服务进行传出调用之前解除锁定，从而允许后续调用（可按示例中的演示重入），并在下次进入服务时被锁定。 为了演示此行为，示例演示了客户端和服务如何使用双工协定相互发送消息。  

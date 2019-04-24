@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321468"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全和消息凭据
@@ -162,6 +162,6 @@ ms.locfileid: "59321468"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：设置安全模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [保证服务的安全](../../../../docs/framework/wcf/securing-services.md)
+- [如何：将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [保护服务](../../../../docs/framework/wcf/securing-services.md)
 - [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

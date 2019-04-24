@@ -3,10 +3,10 @@ title: 任务 2：承载工作流设计器
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299262"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
@@ -123,6 +123,6 @@ ms.locfileid: "59299262"
   
 ## <a name="see-also"></a>请参阅
 
-- [重新承载工作流设计器](rehosting-the-workflow-designer.md)
-- [任务 1：创建一个新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
-- [任务 3：创建工具箱窗格和属性网格窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [重新托管工作流设计器](rehosting-the-workflow-designer.md)
+- [任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
+- [任务 3:创建工具箱和属性网格窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)

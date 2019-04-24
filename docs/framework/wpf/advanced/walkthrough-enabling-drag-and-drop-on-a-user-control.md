@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321674"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：在用户控件上启用拖放功能
@@ -114,7 +114,7 @@ ms.locfileid: "59321674"
 
     -   调用静态<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>方法启动拖放操作。 传递到以下三个参数<xref:System.Windows.DragDrop.DoDragDrop%2A>方法：
 
-        -   `dragSource` -对此控件的引用。
+        -   `dragSource` – 对此控件的引用。
 
         -   `data` –<xref:System.Windows.DataObject>前面的代码中创建。
 

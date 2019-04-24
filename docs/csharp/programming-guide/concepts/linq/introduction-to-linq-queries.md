@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 1f15867c76a3498ac49df0bff6a7953f668b1a6f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4432270c8a1a9ad499f833bf8201ed3155bd7ce2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462885"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333699"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查询简介 (C#)
 *查询*是一种从数据源检索数据的表达式。 查询通常用专门的查询语言来表示。 随着时间的推移，人们已经为各种数据源开发了不同的语言；例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们必须支持的每种数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 通过提供一种跨各种数据源和数据格式使用数据的一致模型，简化了这一情况。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，始终会用到对象。 可以使用相同的基本编码模式来查询和转换 XML 文档、SQL 数据库、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 数据集、.NET 集合中的数据以及对其有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序可用的任何其他格式的数据。  
@@ -20,11 +20,11 @@ ms.locfileid: "58462885"
 ## <a name="three-parts-of-a-query-operation"></a>查询操作的三个部分  
  所有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询操作都由以下三个不同的操作组成：  
   
-1.  获取数据源。  
+1. 获取数据源。  
   
-2.  创建查询。  
+2. 创建查询。  
   
-3.  执行查询。  
+3. 执行查询。  
   
  下面的示例演示如何用源代码表示查询操作的三个部分。 为方便起见，此示例将一个整数数组用作数据源；但其中涉及的概念同样适用于其他数据源。 本主题的其余部分也会引用此示例。  
   

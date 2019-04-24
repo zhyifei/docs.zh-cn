@@ -13,10 +13,10 @@ helpviewer_keywords:
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
 ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300978"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>如何：使用 Windows 窗体 TextBox 控件创建密码文本框
@@ -77,7 +77,7 @@ ms.locfileid: "59300978"
 - [TextBox 控件概述](textbox-control-overview-windows-forms.md)
 - [如何：控制 Windows 窗体 TextBox 控件中的插入点](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
 - [如何：创建只读文本框](how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：在字符串中添加引号](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在字符串中放置引号](how-to-put-quotation-marks-in-a-string-windows-forms.md)
 - [如何：在 Windows 窗体 TextBox 控件中选择文本](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [如何：在 Windows 窗体 TextBox 控件中查看多个行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [如何：查看 Windows 窗体 TextBox 控件中的多个行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 控件](textbox-control-windows-forms.md)

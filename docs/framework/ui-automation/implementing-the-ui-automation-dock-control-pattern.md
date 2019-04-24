@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190510"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>实现 UI 自动化 Dock 控件模式
@@ -28,7 +28,7 @@ Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.R
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Dock 控件模式时，请注意以下准则和约定：  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> 不公开停靠容器的任何属性或停靠在停靠容器内当前控件旁边的任何的控件属性。  
+-   <xref:System.Windows.Automation.Provider.IDockProvider> 不公开停靠容器的任何属性，或者停靠在停靠容器内当前控件旁边的控件的任何属性。  
   
 -   控件根据其当前的 z 顺序彼此相对停靠；控件的 z 顺序位置越高，则其距停靠容器的指定边缘就越远。  
   

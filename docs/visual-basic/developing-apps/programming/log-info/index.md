@@ -10,11 +10,11 @@ helpviewer_keywords:
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
 ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052503"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>记录来自应用程序的信息 (Visual Basic)
 本节包含的主题介绍如何使用 `My.Application.Log` 或 `My.Log` 对象记录来自应用程序的信息，以及如何扩展应用程序的日志记录功能。  

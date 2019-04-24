@@ -9,10 +9,10 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201359"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>如何：使用 AnimationClock 对属性进行动画处理
@@ -39,5 +39,5 @@ ms.locfileid: "59201359"
 ## <a name="see-also"></a>请参阅
 
 - [使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)
-- [在不使用情节提要的情况下对属性进行动画处理](how-to-animate-a-property-without-using-a-storyboard.md)
+- [在不使用情节提要的情况下为属性设置动画效果](how-to-animate-a-property-without-using-a-storyboard.md)
 - [属性动画技术概述](property-animation-techniques-overview.md)

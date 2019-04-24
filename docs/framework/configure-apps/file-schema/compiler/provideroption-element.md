@@ -9,10 +9,10 @@ helpviewer_keywords:
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
 ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229779"
 ---
 # <a name="provideroption-element"></a>\<providerOption > 元素
@@ -50,10 +50,10 @@ ms.locfileid: "59229779"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<配置 > 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行库和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
+|[\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行库和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |[\<system.codedom > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
 |[\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|编译器配置元素; 容器包含零个或多`<compiler>`元素。|  
-|[\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定语言提供程序的编译器配置属性。|  
+|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定语言提供程序的编译器配置属性。|  
   
 ## <a name="remarks"></a>备注  
  在.NET Framework 版本 3.5 中，代码文档对象模型 (CodeDOM) 的代码提供程序可以支持特定于提供程序的选项通过使用`<providerOption>`元素。  
@@ -96,4 +96,4 @@ ms.locfileid: "59229779"
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
 - [指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [compilation 的 compilers 的 compiler 元素（ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [（ASP.NET 设置架构） compilation 的 compilers 的 compiler 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

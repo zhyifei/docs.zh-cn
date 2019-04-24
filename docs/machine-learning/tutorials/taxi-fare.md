@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 49770672ebcff98d8779a888372b5c9f40a55b1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295973"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611804"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测费用
 
@@ -148,7 +148,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>加载和转换数据
 
-使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的 `MLContext.Data.LoadFromTextFile` 包装器加载数据。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 
+使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的 `MLContext.Data.LoadFromTextFile` 包装器加载数据。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。
 
 作为 `Transforms` 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
@@ -231,6 +231,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 }
 ```
+
 `Evaluate` 方法执行以下任务：
 
 * 加载测试数据集。
@@ -302,12 +303,12 @@ private static void TestSinglePrediction(MLContext mlContext)
 虽然 `model` 是对多行数据进行操作的 `transformer`，但是一个非常常见的生产场景是，需要对单个示例进行预测。 <xref:Microsoft.ML.PredictionEngine%602> 是从 `CreatePredictionEngine` 方法返回的包装器。 让我们添加以下代码来创建 `PredictionEngine`，作为 `TestSinglePrediction` 方法中的下一行：
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
-  
+
 本教程使用此类中的一个测试行程。 稍后可以添加其他方案，以尝试使用此模型。 通过创建一个 `TaxiTrip` 实例，在 `TestSinglePrediction` 方法中添加一个行程来测试定型模型的成本预测：
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- 我们可以使用它根据出租车行程数据的单个实例来预测费用。 要获得预测，请对数据使用 <xref:Microsoft.ML.PredictionEngine%602.Predict%2A>。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
+我们可以使用它根据出租车行程数据的单个实例来预测费用。 要获得预测，请对数据使用 <xref:Microsoft.ML.PredictionEngine%602.Predict%2A>。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
@@ -322,6 +323,7 @@ private static void TestSinglePrediction(MLContext mlContext)
 ## <a name="next-steps"></a>后续步骤
 
 在本教程中，你将了解：
+
 > [!div class="checklist"]
 > * 了解问题
 > * 选择适当的机器学习任务
@@ -334,5 +336,6 @@ private static void TestSinglePrediction(MLContext mlContext)
 > * 使用预测模型
 
 进入下一教程了解详细信息。
+
 > [!div class="nextstepaction"]
 > [Iris 聚类分析](iris-clustering.md)

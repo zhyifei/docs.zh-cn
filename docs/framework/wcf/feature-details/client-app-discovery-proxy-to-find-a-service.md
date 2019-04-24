@@ -3,10 +3,10 @@ title: 如何：实现使用发现代理查找服务的客户端应用程序
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320988"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>如何：实现使用发现代理查找服务的客户端应用程序
@@ -283,6 +283,6 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>请参阅
 
-- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [如何：实现向发现代理注册的可发现的服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [如何：实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

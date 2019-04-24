@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317254"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>如何：在 Windows 窗体上停靠控件
@@ -39,11 +39,11 @@ ms.locfileid: "59317254"
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件](index.md)
-- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)
-- [标记单个 Windows 窗体控件并提供它们的快捷方式](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
-- [根据功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
-- [如何：在 FlowLayoutPanel 控件中锚定和停靠子控件](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [如何：在 TableLayoutPanel 控件中锚定和停靠子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
+- [如何：锚定和停靠子控件在 FlowLayoutPanel 控件中](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize 属性概述](autosize-property-overview.md)
-- [如何：在 Windows 窗体上锚定控件](how-to-anchor-controls-on-windows-forms.md)
+- [如何：在 Windows 窗体上定位控件](how-to-anchor-controls-on-windows-forms.md)

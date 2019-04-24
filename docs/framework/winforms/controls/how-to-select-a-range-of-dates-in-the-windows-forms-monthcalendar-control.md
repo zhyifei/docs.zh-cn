@@ -12,10 +12,10 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
 ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332230"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围
@@ -78,5 +78,5 @@ Windows 窗体的一个重要功能<xref:System.Windows.Forms.MonthCalendar>控�
 
 - [MonthCalendar 控件](monthcalendar-control-windows-forms.md)
 - [如何：更改 Windows 窗体 MonthCalendar 控件的外观](how-to-change-monthcalendar-control-appearance.md)
-- [如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示特定日期](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [如何：特定以粗体的显示日期与 Windows 窗体 MonthCalendar 控件](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
 - [如何：在 Windows 窗体 MonthCalendar 控件中显示多个月份](display-more-than-one-month-wf-monthcalendar-control.md)

@@ -3,10 +3,10 @@ title: 事务和并发性
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174689"
 ---
 # <a name="transactions-and-concurrency"></a>事务和并发性
@@ -39,6 +39,6 @@ ms.locfileid: "59174689"
 - [事务基础知识](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
 - [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
 ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188261"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>如何：绘制不透明和半透明的线条
@@ -33,10 +33,10 @@ ms.locfileid: "59188261"
  ![图显示了不透明和半透明的输出](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
 
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="see-also"></a>请参阅
 
-- [Alpha 混合线条和填充](alpha-blending-lines-and-fills.md)
+- [alpha 值混合处理直线和填充](alpha-blending-lines-and-fills.md)
 - [如何：使控件拥有透明背景](../controls/how-to-give-your-control-a-transparent-background.md)
 - [如何：用不透明和半透明的画笔绘制](how-to-draw-with-opaque-and-semitransparent-brushes.md)

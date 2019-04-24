@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307738"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：在 Windows 窗体上对齐多个控件
@@ -32,10 +32,10 @@ ms.locfileid: "59307738"
 
 - [Windows 窗体控件](index.md)
 - [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
-- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
-- [根据功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
-- [演练：使用对齐线在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [如何：将现有的控件重新分配给不同的父控件](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
+- [演练：使用对齐线的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [如何：重新分配给另一个父现有控件](how-to-reassign-existing-controls-to-a-different-parent.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846462"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313367"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 .NET Framework 是独立于语言的。 这意味着，作为开发人员，您可以使用面向 .NET Framework 的多种语言（例如，C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 以及 Windows PowerShell）之一进行开发。 您可以访问针对 .NET Framework 开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果您是组件开发人员，无论组件采用哪种语言，均可由任何 .NET Framework 应用程序访问。  
@@ -517,13 +517,13 @@ ms.locfileid: "57846462"
   
  创建符合 CLS 的组件：  
   
-1.  使用 <xref:System.CLSCompliantAttribute> 将程序集标记为符合 CLS。  
+1. 使用 <xref:System.CLSCompliantAttribute> 将程序集标记为符合 CLS。  
   
-2.  将程序集中不符合 CLS 的所有公开的类型标记为不符合标准。  
+2. 将程序集中不符合 CLS 的所有公开的类型标记为不符合标准。  
   
-3.  将符合 CLS 的类型中的所有公开的成员标记为不符合标准。  
+3. 将符合 CLS 的类型中的所有公开的成员标记为不符合标准。  
   
-4.  为不符合 CLS 的成员提供符合 CLS 的替代项。  
+4. 为不符合 CLS 的成员提供符合 CLS 的替代项。  
   
  如果已成功标记所有不符合标准的类型和成员，您的编译器不会发出任何不符合警告。 但是，您应指出哪些成员不符合 CLS 并在产品文档中列出其不符合 CLS 的替代项。  
   

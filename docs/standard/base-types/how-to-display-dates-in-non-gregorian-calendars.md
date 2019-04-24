@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079449"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313302"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：用非公历日历显示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型使用公历作为默认日历。 这意味着，调用日期和时间值的 `ToString` 方法会用公历日历显示该日期和时间的字符串表示形式，即使该日期和时间是使用其他日历创建的。 下面的示例对此进行了展示，虽然使用两种不同的方式创建采用波斯历的日期和时间值，但在调用 <xref:System.DateTime.ToString%2A> 方法时仍采用公历显示这些日期和时间值。 此示例对于用特定日历显示日期，反映了两种常用但不正确的方法。  
@@ -30,26 +30,26 @@ ms.locfileid: "44079449"
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>针对区域性默认日历显示日期  
   
-1.  实例化从 <xref:System.Globalization.Calendar> 类派生的日历对象，表示要使用的日历。  
+1. 实例化从 <xref:System.Globalization.Calendar> 类派生的日历对象，表示要使用的日历。  
   
-2.  实例化 <xref:System.Globalization.CultureInfo> 对象，表示用于显示日期的区域性格式设置。  
+2. 实例化 <xref:System.Globalization.CultureInfo> 对象，表示用于显示日期的区域性格式设置。  
   
-3.  调用 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法，以确定日历对象是否为 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 属性返回的数组成员。 这表明日历可用作 <xref:System.Globalization.CultureInfo> 对象的默认日历。 如果它不是数组的成员，请按照“用任何日历显示日期”部分中的说明执行。  
+3. 调用 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法，以确定日历对象是否为 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 属性返回的数组成员。 这表明日历可用作 <xref:System.Globalization.CultureInfo> 对象的默认日历。 如果它不是数组的成员，请按照“用任何日历显示日期”部分中的说明执行。  
   
-4.  将日历对象分配到 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象的 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> 属性。  
+4. 将日历对象分配到 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象的 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> 属性。  
   
     > [!NOTE]
     >  <xref:System.Globalization.CultureInfo> 类还包含 <xref:System.Globalization.CultureInfo.Calendar%2A> 属性。 不过，它是只读常量，并不会为了反映分配到 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> 属性的新默认日历而发生变化。  
   
-5.  调用 <xref:System.DateTime.ToString%2A> 或 <xref:System.DateTime.ToString%2A> 方法，并将它传递到在上一步中修改其默认日历的 <xref:System.Globalization.CultureInfo> 对象。  
+5. 调用 <xref:System.DateTime.ToString%2A> 或 <xref:System.DateTime.ToString%2A> 方法，并将它传递到在上一步中修改其默认日历的 <xref:System.Globalization.CultureInfo> 对象。  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>用任何日历显示日期  
   
-1.  实例化从 <xref:System.Globalization.Calendar> 类派生的日历对象，表示要使用的日历。  
+1. 实例化从 <xref:System.Globalization.Calendar> 类派生的日历对象，表示要使用的日历。  
   
-2.  确定应在日期和时间值的字符串表示形式中出现的日期和时间元素。  
+2. 确定应在日期和时间值的字符串表示形式中出现的日期和时间元素。  
   
-3.  对于要显示的每个日期和时间元素，调用日历对象的 `Get`... 方法。 有以下方法可用：  
+3. 对于要显示的每个日期和时间元素，调用日历对象的 `Get`... 方法。 有以下方法可用：  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A>：采用适当日历显示年份。  
   

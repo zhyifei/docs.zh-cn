@@ -3,10 +3,10 @@ title: 如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服�
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303916"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
@@ -51,7 +51,7 @@ ms.locfileid: "59303916"
        }  
     ```  
   
-     请注意，第二个到最后一行代码： `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     请注意代码的倒数第二行：`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      这会设置内容类型标头`"image/jpeg"`。 虽然此示例演示如何返回 .jpg 文件，但可以对其进行修改，以任意格式返回所需的任意类型的数据。 该操作必须检索或生成数据，然后将它写入流。  
   

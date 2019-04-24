@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
 ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115071"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之间共享消息循环
@@ -66,5 +66,5 @@ ms.locfileid: "59115071"
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)
-- [线程处理模型](threading-model.md)
+- [线程模型](threading-model.md)
 - [输入概述](input-overview.md)

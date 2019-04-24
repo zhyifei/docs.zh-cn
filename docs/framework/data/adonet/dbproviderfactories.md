@@ -3,10 +3,10 @@ title: DbProviderFactories
 ms.date: 03/30/2017
 ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
 ms.openlocfilehash: 2376cf39228cb5e8208112333ba06bb80070de84
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208808"
 ---
 # <a name="dbproviderfactories"></a>DbProviderFactories
@@ -30,4 +30,4 @@ ms.locfileid: "59208808"
 ## <a name="see-also"></a>请参阅
 
 - [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

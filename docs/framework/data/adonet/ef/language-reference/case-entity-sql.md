@@ -3,10 +3,10 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334882"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
@@ -29,13 +29,13 @@ END
  一个占位符，表明可以使用多个 WHEN `Boolean_expression` THEN `result_expression` 子句。  
   
  THEN `result_expression`  
- 作为在 `Boolean_expression` 的计算结果为 `true`时返回的表达式。 `result expression` 为任何有效表达式。  
+ 作为在 `Boolean_expression` 的计算结果为 `true`时返回的表达式。 `result expression` 是任何有效的表达式。  
   
  ELSE `else_result_expression`  
- 比较运算的结果都不为 `true`时返回的表达式。 如果忽略此参数且比较运算计算的结果不为 `true`，CASE 将返回空值。 `else_result_expression` 为任何有效表达式。 `else_result_expression` 及任何 `result_expression` 的数据类型必须相同或必须是隐式转换的数据类型。  
+ 比较运算的结果都不为 `true`时返回的表达式。 如果忽略此参数且比较运算计算的结果不为 `true`，CASE 将返回空值。 `else_result_expression` 是任何有效的表达式。 `else_result_expression` 及任何 `result_expression` 的数据类型必须相同或必须是隐式转换的数据类型。  
   
  WHEN `Boolean_expression`  
- 使用 CASE 搜索格式时所计算的 `Boolean` 表达式。 `Boolean_expression` 任何有效`Boolean`表达式。  
+ 使用 CASE 搜索格式时所计算的 `Boolean` 表达式。 `Boolean_expression` 是任何有效的 `Boolean` 表达式。  
   
 ## <a name="return-value"></a>返回值  
  从 `result_expression` 和可选 `else_result_expression`的类型集中返回优先级最高的类型。  
@@ -59,5 +59,5 @@ END
 ## <a name="see-also"></a>请参阅
 
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
+- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

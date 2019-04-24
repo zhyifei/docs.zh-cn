@@ -3,11 +3,11 @@ title: XMLSerializer 错误
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
 ms.openlocfilehash: a64a28e7a0105f5133ba2b0cd3abf72d97d5a3e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298001"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773203"
 ---
 # <a name="xmlserializer-faults"></a>XMLSerializer 错误
 <xref:System.Xml.Serialization.XmlSerializer> 错误协定示例演示如何使用 <xref:System.Xml.Serialization.XmlSerializer> 将错误信息从服务传达到客户端。 示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并且一些附加代码添加到服务，以便将内部异常转换为错误。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  

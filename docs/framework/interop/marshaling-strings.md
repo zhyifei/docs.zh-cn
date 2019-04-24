@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218562"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59223025"
 ---
 # <a name="marshaling-strings"></a>封送处理字符串
 平台调用复制字符串参数，根据需要将其从 .NET Framework 格式 (Unicode) 转换为非托管格式 (ANSI)。 由于托管的字符串不可变，在函数返回时，平台调用并不将它们从非托管内存复制回托管内存。  
   
  下表列出了字符串的封送处理选项，描述了它们的用法，并提供了指向相应 .NET Framework 示例的链接。  
   
-|String|说明​​|示例|  
+|String|说明|示例|  
 |------------|-----------------|------------|  
 |按值。|将字符串作为 In 参数传递。|[MsgBox](msgbox-sample.md)|  
 |作为结果。|从非托管代码返回字符串。|[字符串](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
@@ -39,6 +39,7 @@ ms.locfileid: "56218562"
 |作为包含字符串的结构数组按值。|创建包含字符串的结构数组，且该数组是按值传递的。|[数组](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>请参阅
+
 - [用平台调用封送数据](marshaling-data-with-platform-invoke.md)
 - [封送类、结构和联合](marshaling-classes-structures-and-unions.md)
 - [封送处理不同类型的数组](marshaling-different-types-of-arrays.md)

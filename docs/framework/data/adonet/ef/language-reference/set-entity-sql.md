@@ -3,10 +3,10 @@ title: SET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 28b4deac-c7e4-4f09-b428-4d352ef2dc94
 ms.openlocfilehash: 4e2a387cf400a881dfd91c61b36ee3ce0f5a4431
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309428"
 ---
 # <a name="set-entity-sql"></a>SET (Entity SQL)
@@ -29,7 +29,7 @@ SET ( expression )
 SELECT VALUE DISTINCT c FROM c  
 ```  
   
- `SET` 是的一个[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符都是从左到右进行求值。 请参阅[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)有关优先级信息[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符。  
+ `SET` 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符之一。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集运算符都是从左到右进行求值。 请参阅[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)有关优先级信息[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集运算符。  
   
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 SET 表达式将一个对象集合转换为一个集。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  

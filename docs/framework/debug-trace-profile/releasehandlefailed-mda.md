@@ -13,10 +13,10 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217869"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
@@ -28,7 +28,7 @@ ms.locfileid: "59217869"
 ## <a name="cause"></a>原因  
  如果用户创建派生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 的类，则他们必须提供 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法的实现；因此，这些情况是特定于单个资源的。 但是，需求如下所示：  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> 和<xref:System.Runtime.InteropServices.CriticalHandle>类型表示重要进程资源的包装。 随着时间的推移，内存泄漏会使该过程不可用。  
+-   <xref:System.Runtime.InteropServices.SafeHandle> 和 <xref:System.Runtime.InteropServices.CriticalHandle> 类型表示重要进程资源的包装。 随着时间的推移，内存泄漏会使该过程不可用。  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法必须成功执行其功能。 一旦进程获取此类资源，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 就是唯一将其释放的方法。 因此，失败意味着资源泄漏。  
   

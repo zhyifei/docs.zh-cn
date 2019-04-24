@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325509"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 对象概述
@@ -235,10 +235,10 @@ DrawingGroup 操作的顺序
 
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
-- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
 - [Geometry 概述](geometry-overview.md)
-- [WPF 中的形状和基本图形概述](shapes-and-basic-drawing-in-wpf-overview.md)
-- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
 - [Freezable 对象概述](../advanced/freezable-objects-overview.md)
 - [帮助主题](drawings-how-to-topics.md)

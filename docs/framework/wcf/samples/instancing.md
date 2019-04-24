@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311430"
 ---
 # <a name="instancing"></a>实例化
@@ -22,11 +22,11 @@ ms.locfileid: "59311430"
   
  可以使用下列实例化模式：  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>:为每个客户端请求创建新的服务实例。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>：为每个客户端请求创建新的服务实例。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>:为每个新的客户端会话创建和维护 （需要支持会话的绑定） 该会话的生存期内的新实例。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>：为每个新的客户端会话创建和维护 （需要支持会话的绑定） 该会话的生存期内的新实例。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>:服务类的单个实例处理的应用程序的生存期的所有客户端请求。  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>：服务类的单个实例处理的应用程序的生存期的所有客户端请求。  
   
  服务类使用以下代码示例中显示的 `[ServiceBehavior(InstanceContextMode=<setting>)]` 属性来指定实例化行为。 通过更改注释掉的行，可以观察每个实例模式的行为。 更改实例化模式之后要记着重新生成服务。 没有要在客户端上指定的实例化相关设置。  
   

@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9f8c3e4f-e2e3-4402-9760-03bf918ece7b
 ms.openlocfilehash: 539ce0ba72ae7a8d568cdea3a1a3aab3eec1001b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220729"
 ---
 # <a name="activitystatequery"></a>\<activityStateQuery>
@@ -58,7 +58,7 @@ ms.locfileid: "59220729"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<自变量 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|与此活动查询关联的自变量的集合。|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|与此活动查询关联的自变量的集合。|  
 |[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|一个配置元素集合，这些元素包含应为其发出跟踪记录的已订阅活动的状态。|  
 |[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|与此活动查询关联的变量的集合。|  
   

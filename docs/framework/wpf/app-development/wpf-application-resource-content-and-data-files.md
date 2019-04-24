@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211916"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件

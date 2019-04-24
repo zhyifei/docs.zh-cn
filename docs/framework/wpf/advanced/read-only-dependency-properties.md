@@ -6,10 +6,10 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162418"
 ---
 # <a name="read-only-dependency-properties"></a>只读依赖项属性
@@ -44,5 +44,5 @@ ms.locfileid: "59162418"
 ## <a name="see-also"></a>请参阅
 
 - [依赖项属性概述](dependency-properties-overview.md)
-- [自定义依赖项属性](custom-dependency-properties.md)
+- [自定义依赖属性](custom-dependency-properties.md)
 - [样式设置和模板化](../controls/styling-and-templating.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517833"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59294414"
 ---
 # <a name="if-else-c-reference"></a>if-else（C# 参考）
 
@@ -82,7 +82,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-正如 else 块或 then 块中的语句可以是任何有效的语句一样，你可以将任何有效的布尔表达式用于此条件。 可以使用诸如 [&&](../operators/conditional-and-operator.md)、[&](../operators/and-operator.md)、[&#124;&#124;](../operators/conditional-or-operator.md)、[&#124;](../operators/or-operator.md) 和 [!](../operators/logical-negation-operator.md) 之类 的逻辑运算符来创建符合条件。 下面的代码演示了示例。
+正如 else 块或 then 块中的语句可以是任何有效的语句一样，你可以将任何有效的布尔表达式用于此条件。 可使用 `!`、`&&`、`||`、`&`、`|` 和 `^` 等[逻辑运算符](../operators/boolean-logical-operators.md)来创建复合条件。 下面的代码演示了示例。
 
 ```csharp
 // NOT

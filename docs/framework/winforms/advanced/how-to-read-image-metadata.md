@@ -9,10 +9,10 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173610"
 ---
 # <a name="how-to-read-image-metadata"></a>如何：读取图像元数据
@@ -40,7 +40,7 @@ ms.locfileid: "59173610"
   
 |数字值|描述|  
 |-------------------|-----------------|  
-|1|包含当前请求的 URL 的 `Byte`|  
+|1|一个 `Byte`|  
 |2|一个数组`Byte`对象编码为 ASCII|  
 |3|16 位整数|  
 |4|一个 32 位整数|  

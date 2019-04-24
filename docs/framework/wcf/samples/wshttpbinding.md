@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
 ms.openlocfilehash: d8453d85afb92c69bdf3066ccb8b31e26a34c6d5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336858"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768080"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 此示例演示如何实现典型的服务和典型的客户端使用 Windows Communication Foundation (WCF)。 此示例由客户端控制台程序 (client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，此接口公开数学运算（加、减、乘和除）。 客户端向给定的数学运算发出同步请求，服务使用结果进行回复。 客户端活动显示在控制台窗口中。  

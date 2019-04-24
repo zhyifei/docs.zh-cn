@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307517"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>如何：保护元数据终结点
@@ -99,5 +99,5 @@ ms.locfileid: "59307517"
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
 - [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

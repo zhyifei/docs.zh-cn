@@ -18,10 +18,10 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314303"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>如何：使用 Windows 窗体 Label 控件创建访问键
@@ -65,6 +65,6 @@ Windows 窗体<xref:System.Windows.Forms.Label>控件可用于定义其他控件
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：调整 Windows 窗体标签控件大小以适应其内容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [如何：调整 Windows 窗体标签控件以适应其内容的大小](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label 控件概述](label-control-overview-windows-forms.md)
 - [Label 控件](label-control-windows-forms.md)

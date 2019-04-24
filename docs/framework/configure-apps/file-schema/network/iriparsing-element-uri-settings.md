@@ -1,19 +1,19 @@
 ---
-title: <iriParsing> 元素 （Uri 设置）
+title: <iriParsing> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299665"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > 元素 （Uri 设置）
 指定是否对 <xref:System.Uri> 应用国际资源标识符 (IRI) 分析以及是否应该应用 IRI 分析规则。  
   
 ## <a name="schema-hierarchy"></a>架构层次结构  
- [\<配置 > 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<Uri > 元素 （Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59299665"
   
 ### <a name="attributes"></a>特性  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否启用 IRI 分析。 默认值为 `false`。|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59299665"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   

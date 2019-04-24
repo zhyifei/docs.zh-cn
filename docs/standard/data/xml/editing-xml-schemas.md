@@ -10,10 +10,10 @@ ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308713"
 ---
 # <a name="editing-xml-schemas"></a>编辑 XML 架构
@@ -138,7 +138,7 @@ ms.locfileid: "59308713"
 ## <a name="see-also"></a>请参阅
 
 - [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [读写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)

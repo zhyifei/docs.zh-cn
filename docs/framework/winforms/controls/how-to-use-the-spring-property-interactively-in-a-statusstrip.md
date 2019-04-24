@@ -10,20 +10,18 @@ helpviewer_keywords:
 - status bars [Windows Forms], examples
 - Spring property [Windows Forms]
 ms.assetid: 18bde842-a93c-48dd-9db3-15738a1775ce
-ms.openlocfilehash: 13a9809507f30f70d751d24ec68de1e5a62011cd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7d79a885f49168c3883259826e7b8ae62eec1dab
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714835"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59108167"
 ---
 # <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>如何：在 StatusStrip 中以交互方式使用 Spring 属性
-可以使用 <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性来定位 <xref:System.Windows.Forms.StatusStrip> 控件中的 <xref:System.Windows.Forms.ToolStripStatusLabel> 控件。 
-  <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性确定 <xref:System.Windows.Forms.ToolStripStatusLabel> 控件是否自动填充 <xref:System.Windows.Forms.StatusStrip> 控件中的可用空间。  
+可以使用 <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性来定位 <xref:System.Windows.Forms.StatusStrip> 控件中的 <xref:System.Windows.Forms.ToolStripStatusLabel> 控件。 <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性确定 <xref:System.Windows.Forms.ToolStripStatusLabel> 控件是否自动填充 <xref:System.Windows.Forms.StatusStrip> 控件中的可用空间。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示了如何使用 <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性定位 <xref:System.Windows.Forms.StatusStrip> 控件中的 <xref:System.Windows.Forms.ToolStripStatusLabel> 控件。 
-  <xref:System.Windows.Forms.ToolStripItem.Click> 事件处理程序执行异或 (XOR) 运算，以便切换 <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性的值。  
+ 下面的代码示例演示了如何使用 <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性定位 <xref:System.Windows.Forms.StatusStrip> 控件中的 <xref:System.Windows.Forms.ToolStripStatusLabel> 控件。 <xref:System.Windows.Forms.ToolStripItem.Click> 事件处理程序执行异或 (XOR) 运算，以便切换 <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> 属性的值。  
   
  若要使用此代码示例，编译并运行该应用程序，然后单击**中间 （弹簧）** 上<xref:System.Windows.Forms.StatusStrip>控制切换的值<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>属性。  
   
@@ -40,6 +38,7 @@ ms.locfileid: "57714835"
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - <xref:System.Windows.Forms.StatusStrip>
 - <xref:System.Windows.Forms.ToolStrip>

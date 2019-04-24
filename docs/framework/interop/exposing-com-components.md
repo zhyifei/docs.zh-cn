@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6987dea6f122819b9f1c0d334440d87545368942
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220098"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59320907"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>向 .NET Framework 公开 COM 组件
 本部分概述向托管代码公开现有 COM 组件所需的步骤。 有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))。
@@ -22,23 +22,24 @@ ms.locfileid: "56220098"
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>向 .NET Framework 公开 COM 组件  
   
-1.  [将类型库当作程序集导入](importing-a-type-library-as-an-assembly.md)。  
+1. [将类型库当作程序集导入](importing-a-type-library-as-an-assembly.md)。  
   
      公共语言运行时需要包括 COM 类型在内的所有类型的元数据。 有多种方法来获取包含 COM 类型（作为元数据导入）的程序集。  
   
-2.  [在托管代码中使用 COM 类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
+2. [在托管代码中使用 COM 类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
   
      可检查 COM 类型、激活实例，并采用在任何托管类型上进行调用的方式在 COM 对象上调用方法。  
   
-3.  [编译互操作项目](compiling-an-interop-project.md)。  
+3. [编译互操作项目](compiling-an-interop-project.md)。  
   
      [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 为符合公共语言规范 (CLS) 的多种语言提供编译器，包括 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++。  
   
-4.  [部署互操作应用程序](deploying-an-interop-application.md)。  
+4. [部署互操作应用程序](deploying-an-interop-application.md)。  
   
      最好将互操作应用程序部署为全局程序集缓存中具有[强名称](../app-domains/strong-named-assemblies.md)的签名程序集。  
   
 ## <a name="see-also"></a>请参阅
+
 - [与非托管代码交互操作](index.md)
 - [互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM 互操作示例：.NET 客户端和 COM 服务器](com-interop-sample-net-client-and-com-server.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
 ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311898"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>如何：设置状态栏面板的大小
@@ -69,6 +69,6 @@ ms.locfileid: "59311898"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [演练：在运行时更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)
-- [如何：确定 Windows 窗体 StatusBar 控件中被单击的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [演练：在运行时的更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 控件概述](statusbar-control-overview-windows-forms.md)

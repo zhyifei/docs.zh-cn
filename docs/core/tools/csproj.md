@@ -2,12 +2,12 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 04/08/2019
-ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517325"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611089"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -325,8 +325,10 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 确定用于已打包的包的输出路径。 默认值为 `$(OutputPath)`。
 
 ### <a name="includesymbols"></a>IncludeSymbols
+此布尔值指示在打包项目时，包是否应创建一个附加的符号包。 符号包的格式由 `SymbolPackageFormat` 属性控制。
 
-此布尔值指示在打包项目时，包是否应创建一个附加的符号包。 此包将具有 *.symbols.nupkg* 扩展名，并将 PDB 文件连同 DLL 和其他输出文件一并复制。
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+指定符号包的格式。 如果为“symbols.nupkg”，将使用包含 PDB、DLL 和其他输出文件的 .symbols.nupkg 扩展创建旧符号包。 如果为“snupkg”，将创建包含可移植 PDB 的 snupkg 符号包。 默认值为“symbols.nupkg”。
 
 ### <a name="includesource"></a>IncludeSource
 

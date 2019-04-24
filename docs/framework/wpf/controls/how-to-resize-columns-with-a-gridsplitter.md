@@ -7,17 +7,17 @@ helpviewer_keywords:
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
 ms.openlocfilehash: f743e9ccf8a984a646a4b8f05ee99162e5bc73ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210433"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>如何：使用 GridSplitter 重设列大小
 此示例演示如何创建垂直<xref:System.Windows.Controls.GridSplitter>若要重新分发中的两个列之间的间距<xref:System.Windows.Controls.Grid>而无需更改的维度<xref:System.Windows.Controls.Grid>。  
   
 ## <a name="example"></a>示例  
- **如何创建 GridSplitter 覆盖列边缘**  
+ **如何创建覆盖列边缘的 GridSplitter**  
   
  若要指定<xref:System.Windows.Controls.GridSplitter>中的相邻列的大小进行调整<xref:System.Windows.Controls.Grid>，将<xref:System.Windows.Controls.Grid.Column%2A>附加属性设置为要重设大小的列之一。 如果你<xref:System.Windows.Controls.Grid>具有多个行，设置<xref:System.Windows.Controls.Grid.RowSpan%2A>附加属性设置为行数。 然后设置<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性设置为<xref:System.Windows.HorizontalAlignment.Left>或<xref:System.Windows.HorizontalAlignment.Right>（设置的对齐方式取决于你想要调整大小的两个列）。 最后，设置<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性设置为<xref:System.Windows.VerticalAlignment.Stretch>。  
   

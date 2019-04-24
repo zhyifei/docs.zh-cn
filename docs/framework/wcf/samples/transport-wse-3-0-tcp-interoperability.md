@@ -3,10 +3,10 @@ title: 传输：WSE 3.0 TCP 互操作性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324209"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
@@ -23,7 +23,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
 5. 添加一个用来向通道堆栈中添加自定义传输的绑定元素。 有关详细信息，请参阅 [添加绑定元素]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>创建 IDuplexSessionChannel  
- 编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自<xref:System.ServiceModel.Channels.ChannelBase>。 发送消息的逻辑包含两个主要部分：（1） 将消息编码为字节，和 (2) 这些字节进行组帧并将它们发送在网络上。  
+ 编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自 <xref:System.ServiceModel.Channels.ChannelBase>。 发送消息的逻辑包含两个主要部分：（1） 将消息编码为字节，和 (2) 这些字节进行组帧并将它们发送在网络上。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -31,13 +31,13 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
   
  另外，设置了一个锁，以保证在调用 Send() 时可以按顺序保留 IDuplexSessionChannel，以便对基础套接字的调用能够正确地同步。  
   
- `WseTcpDuplexSessionChannel` 使用<xref:System.ServiceModel.Channels.MessageEncoder>转换<xref:System.ServiceModel.Channels.Message>到和从 byte []。 由于 `WseTcpDuplexSessionChannel` 为传输，因此它还负责应用通道所配置的远程地址。 `EncodeMessage` 封装此转换的逻辑。  
+ `WseTcpDuplexSessionChannel` 使用 <xref:System.ServiceModel.Channels.MessageEncoder> 在 <xref:System.ServiceModel.Channels.Message> 和 byte[] 之间相互转换。 由于 `WseTcpDuplexSessionChannel` 为传输，因此它还负责应用通道所配置的远程地址。 `EncodeMessage` 封装此转换的逻辑。  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- 一旦将 <xref:System.ServiceModel.Channels.Message> 编码为字节，就必须通过线路传输它。 这要求系统定义消息边界。 WSE 3.0 使用的版本[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)作为其框架协议。 `WriteData` 封装框架逻辑以便将 byte [] 包装到一组 DIME 记录。  
+ 一旦将 <xref:System.ServiceModel.Channels.Message> 编码为字节，就必须通过线路传输它。 这要求系统定义消息边界。 WSE 3.0 使用的版本[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)作为其框架协议。 `WriteData` 封装框架逻辑以便将 byte[] 包装到一组 DIME 记录中。  
   
  用来接收消息的逻辑与组帧逻辑非常相似。 其复杂性主要在于，处理读取套接字时所返回的字节数比已请求的更少这一情况。 若要接收消息，`WseTcpDuplexSessionChannel` 读取网络中的字节，对 DIME 组帧进行解码，然后使用 <xref:System.ServiceModel.Channels.MessageEncoder> 将 byte[] 转换为 <xref:System.ServiceModel.Channels.Message>。  
   

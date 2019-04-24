@@ -3,10 +3,10 @@ title: <transport> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188794"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<transport> of \<netHttpBinding>
@@ -80,7 +80,7 @@ ms.locfileid: "59188794"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|定义的安全功能[ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|定义的安全功能[ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)。|  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何对基本绑定使用 SSL 传输安全。 默认情况下，基本绑定支持 HTTP 通信。  

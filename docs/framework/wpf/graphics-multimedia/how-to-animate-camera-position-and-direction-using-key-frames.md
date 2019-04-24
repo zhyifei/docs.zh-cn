@@ -10,10 +10,10 @@ helpviewer_keywords:
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
 ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346075"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>如何：使用关键帧对照相机位置和方向进行动画处理
@@ -30,5 +30,5 @@ ms.locfileid: "59346075"
   
 ## <a name="see-also"></a>请参阅
 
-- [在三维场景中对照相机位置和方向进行动画处理](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [三维图形概述](3-d-graphics-overview.md)
+- [在 3D 场景中为照相机位置和方向设置动画效果](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
+- [3D 图形概述](3-d-graphics-overview.md)

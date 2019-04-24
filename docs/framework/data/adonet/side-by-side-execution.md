@@ -3,10 +3,10 @@ title: ADO.NET 中的并行执行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136755"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的并行执行
@@ -15,7 +15,7 @@ ms.locfileid: "59136755"
  使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的某个版本编译的应用程序可以在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的其他版本上运行。 不过，建议您为安装的每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本都编译一个相应版本的应用程序，并单独运行这些应用程序。 在任一方案中，您都应该知道各版本之间 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的更改，这些更改可能影响应用程序的向前或向后兼容性。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>向前兼容性和向后兼容性  
- 向前兼容性表示应用程序可以使用较早版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 进行编译，但是仍可以在较高版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上成功运行。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 为编写的代码[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.1 版是与更高版本向前兼容。  
+ 向前兼容性表示应用程序可以使用较早版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 进行编译，但是仍可以在较高版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上成功运行。 为 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 1.1 版编写的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 代码与更高版本向前兼容。  
   
  向后兼容性表示应用程序为较高版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 编译，但可以继续在较早版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上运行而不丧失任何功能。 当然，这不包括新版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中引入的功能。  
   
@@ -68,4 +68,4 @@ SET NOCOUNT OFF;
 
 - [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

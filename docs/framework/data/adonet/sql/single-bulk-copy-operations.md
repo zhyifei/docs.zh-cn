@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
 ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323364"
 ---
 # <a name="single-bulk-copy-operations"></a>单个批量复制操作
@@ -81,5 +81,5 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>请参阅
 
-- [SQL Server 中的批量复制操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server 中的大容量复制操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

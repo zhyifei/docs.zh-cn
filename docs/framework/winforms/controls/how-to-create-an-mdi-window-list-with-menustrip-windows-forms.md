@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299639"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>如何：使用 （Windows 窗体） MenuStrip 创建 MDI 窗口列表
@@ -30,11 +30,11 @@ ms.locfileid: "59299639"
   
 4. 将子菜单项添加到 `&File` 菜单项，并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&Open`。  
   
-5. 设置<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的属性<xref:System.Windows.Forms.MenuStrip>到`&Window`<xref:System.Windows.Forms.ToolStripMenuItem>。  
+5. 设置<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的属性<xref:System.Windows.Forms.MenuStrip>到`&Window` <xref:System.Windows.Forms.ToolStripMenuItem>。  
   
 6. 向项目添加窗体并将所需的控件添加到它，例如另一个<xref:System.Windows.Forms.MenuStrip>。  
   
-7. 创建事件处理程序<xref:System.Windows.Forms.Control.Click>事件的`&New`<xref:System.Windows.Forms.ToolStripMenuItem>。  
+7. 为 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件创建一个事件处理程序。  
   
 8. 事件处理程序中插入类似于以下内容，以创建和显示的新实例的代码`Form2`作为的 MDI 子级`Form1`。  
   

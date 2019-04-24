@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
 ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305307"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>如何：将对象声明使用对象初始值设定项 (Visual Basic)
@@ -62,6 +62,6 @@ ms.locfileid: "59305307"
 ## <a name="see-also"></a>请参阅
 
 - [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [如何：创建项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [如何：创建的项的列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
 - [对象初始值设定项：命名和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

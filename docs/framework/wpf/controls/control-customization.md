@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
 ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135377"
 ---
 # <a name="control-customization"></a>控件自定义
@@ -19,9 +19,9 @@ ms.locfileid: "59135377"
   
 ## <a name="in-this-section"></a>本节内容  
  [控件创作概述](control-authoring-overview.md)  
- [可样式化控件的设计准则](guidelines-for-designing-stylable-controls.md)  
+ [可设置样式的控件的设计指南](guidelines-for-designing-stylable-controls.md)  
  [装饰器](adorners.md)  
- [Control 样式和模板](control-styles-and-templates.md)  
+ [控件样式和模板](control-styles-and-templates.md)  
  [WPF 自定义控件的 UI 自动化](ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>请参阅

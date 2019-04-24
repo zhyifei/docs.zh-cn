@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092639"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59339419"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建并使用动态对象（C# 和 Visual Basic）
 
@@ -44,30 +44,30 @@ ms.locfileid: "56092639"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>创建自定义动态类  
   
-1.  启动 Visual Studio。  
+1. 启动 Visual Studio。  
   
-2.  在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。  
+2. 在 **“文件”** 菜单上指向 **“新建”** ，然后单击 **“项目”**。  
   
-3.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicSample`，然后单击“确定”。 新项目创建完成。  
+3. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicSample`，然后单击“确定”。 新项目创建完成。  
   
-4.  右键单击 DynamicSample 项目，指向“添加”，然后单击“类”。 在“名称”框中，键入 `ReadOnlyFile`，然后单击“确定”。 这将添加一个包含 ReadOnlyFile 类的新文件。  
+4. 右键单击 DynamicSample 项目，指向“添加”，然后单击“类”。 在“名称”框中，键入 `ReadOnlyFile`，然后单击“确定”。 这将添加一个包含 ReadOnlyFile 类的新文件。  
   
-5.  在 ReadOnlyFile.cs 或 ReadOnlyFile.vb 文件的顶部，添加以下代码以导入 <xref:System.IO?displayProperty=nameWithType> 和 <xref:System.Dynamic?displayProperty=nameWithType> 命名空间。  
+5. 在 ReadOnlyFile.cs 或 ReadOnlyFile.vb 文件的顶部，添加以下代码以导入 <xref:System.IO?displayProperty=nameWithType> 和 <xref:System.Dynamic?displayProperty=nameWithType> 命名空间。  
 
     [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
     [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
 
-6.  自定义动态对象使用一个枚举来确定搜索条件。 在类语句的前面，添加以下枚举定义。  
+6. 自定义动态对象使用一个枚举来确定搜索条件。 在类语句的前面，添加以下枚举定义。  
   
     [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
     [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
-7.  更新类语句以继承 `DynamicObject` 类，如以下代码示例所示。  
+7. 更新类语句以继承 `DynamicObject` 类，如以下代码示例所示。  
   
     [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
     [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-8.  将以下代码添加到 `ReadOnlyFile` 类，定义一个用于文件路径的私有字段，并定义 `ReadOnlyFile` 类的构造函数。  
+8. 将以下代码添加到 `ReadOnlyFile` 类，定义一个用于文件路径的私有字段，并定义 `ReadOnlyFile` 类的构造函数。  
   
     [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
     [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
@@ -93,9 +93,9 @@ ms.locfileid: "56092639"
   
 #### <a name="to-create-a-sample-text-file"></a>创建示例文本文件  
   
-1.  右键单击 DynamicSample 项目，指向“添加”，然后单击“新建项”。 在“已安装的模板”窗格中，选择“常规”，然后选择“文本文件”模板。 在“名称”框中保留默认名称 TextFile1.txt，然后单击“添加”。 这会将一个新的文本文件添加到项目中。  
+1. 右键单击 DynamicSample 项目，指向“添加”，然后单击“新建项”。 在“已安装的模板”窗格中，选择“常规”，然后选择“文本文件”模板。 在“名称”框中保留默认名称 TextFile1.txt，然后单击“添加”。 这会将一个新的文本文件添加到项目中。  
   
-2.  将以下文本复制到 TextFile1.txt 文件。  
+2. 将以下文本复制到 TextFile1.txt 文件。  
   
     ```  
     List of customers and suppliers  
@@ -112,18 +112,18 @@ ms.locfileid: "56092639"
     Customer: Koch, Paul  
     ```  
   
-3.  保存并关闭文件。  
+3. 保存并关闭文件。  
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>创建一个使用自定义动态对象的示例应用程序  
   
-1.  在“解决方案资源管理器”中，双击 Module1.vb 文件（如果使用的是 Visual Basic）或 Program.cs 文件（如果使用的是 Visual C#）。  
+1. 在“解决方案资源管理器”中，双击 Module1.vb 文件（如果使用的是 Visual Basic）或 Program.cs 文件（如果使用的是 Visual C#）。  
   
-2.  将以下代码添加到 Main 过程，为 TextFile1.txt 文件创建一个 `ReadOnlyFile` 类的实例。 代码将使用晚期绑定来调用动态成员，并检索包含字符串“Customer”的文本行。  
+2. 将以下代码添加到 Main 过程，为 TextFile1.txt 文件创建一个 `ReadOnlyFile` 类的实例。 代码将使用晚期绑定来调用动态成员，并检索包含字符串“Customer”的文本行。  
   
      [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
      [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
-3.  保存文件，然后按 Ctrl+F5 生成并运行应用程序。  
+3. 保存文件，然后按 Ctrl+F5 生成并运行应用程序。  
   
 ## <a name="calling-a-dynamic-language-library"></a>调用动态语言库  
 
@@ -131,27 +131,27 @@ ms.locfileid: "56092639"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>创建自定义动态类
   
-1.  在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。  
+1. 在 Visual Studio 中的“文件”菜单上，指向“新建”，然后单击“项目”。  
   
-2.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicIronPythonSample`，然后单击“确定”。 新项目创建完成。  
+2. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“控制台应用程序”。 在“名称”框中，键入 `DynamicIronPythonSample`，然后单击“确定”。 新项目创建完成。  
   
-3.  如果使用的是 Visual Basic，请右击 DynamicIronPythonSample 项目，然后单击“属性”。 单击“引用”选项卡。单击“添加”按钮。 如果使用的是 Visual C#，请在“解决方案资源管理器”中，右键单击“引用”文件夹，然后单击“添加引用”。  
+3. 如果使用的是 Visual Basic，请右击 DynamicIronPythonSample 项目，然后单击“属性”。 单击“引用”选项卡。单击“添加”按钮。 如果使用的是 Visual C#，请在“解决方案资源管理器”中，右键单击“引用”文件夹，然后单击“添加引用”。  
   
-4.  在“浏览”选项卡上，浏览到安装 IronPython 库的文件夹。 例如，C:\Program Files\IronPython 2.6 for .NET 4.0。 选择“IronPython.dll”、“IronPython.Modules.dll”、“Microsoft.Scripting.dll”和“Microsoft.Dynamic.dll”库。 单击 **“确定”**。  
+4. 在“浏览”选项卡上，浏览到安装 IronPython 库的文件夹。 例如，C:\Program Files\IronPython 2.6 for .NET 4.0。 选择“IronPython.dll”、“IronPython.Modules.dll”、“Microsoft.Scripting.dll”和“Microsoft.Dynamic.dll”库。 单击 **“确定”**。  
   
-5.  如果使用的是 Visual Basic，请编辑 Module1.vb 文件。 如果使用的是 Visual C#，请编辑 Program.cs 文件。  
+5. 如果使用的是 Visual Basic，请编辑 Module1.vb 文件。 如果使用的是 Visual C#，请编辑 Program.cs 文件。  
   
-6.  在文件的顶部，添加以下代码以从 IronPython 库导入 `Microsoft.Scripting.Hosting` 和 `IronPython.Hosting` 命名空间。  
+6. 在文件的顶部，添加以下代码以从 IronPython 库导入 `Microsoft.Scripting.Hosting` 和 `IronPython.Hosting` 命名空间。  
   
     [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
     [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
-7.  在 Main 方法中，添加以下代码以创建用于托管 IronPython 库的新 `Microsoft.Scripting.Hosting.ScriptRuntime` 对象。 `ScriptRuntime` 对象加载 IronPython 库模块 random.py。  
+7. 在 Main 方法中，添加以下代码以创建用于托管 IronPython 库的新 `Microsoft.Scripting.Hosting.ScriptRuntime` 对象。 `ScriptRuntime` 对象加载 IronPython 库模块 random.py。  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
      [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
-8.  在用于加载 random.py 模块的代码之后，添加以下代码以创建一个整数数组。 数组传递给 random.py 模块的 `shuffle` 方法，该方法对数组中的值进行随机排序。  
+8. 在用于加载 random.py 模块的代码之后，添加以下代码以创建一个整数数组。 数组传递给 random.py 模块的 `shuffle` 方法，该方法对数组中的值进行随机排序。  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
      [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]

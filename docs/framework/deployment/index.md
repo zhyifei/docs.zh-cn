@@ -12,11 +12,11 @@ ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771850"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 
@@ -42,7 +42,7 @@ ms.locfileid: "59481322"
 
     - [显示 UI](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default)
 
-  - [在 .NET Framework 4.5 安装期间减少系统重启次数](../../../docs/framework/deployment/reducing-system-restarts.md)
+  - [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)
 
   - [安装和卸载 .NET Framework 受阻疑难解答](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 
@@ -64,7 +64,7 @@ ms.locfileid: "59481322"
 
   - [管理员指南](../../../docs/framework/deployment/guide-for-administrators.md)
 
-**维护**
+**服务**
 
 - 有关一般信息，请参阅 [.NET Framework 博客](https://go.microsoft.com/fwlink/p/?LinkId=254977)
 
@@ -164,7 +164,7 @@ ms.locfileid: "59481322"
 |-----------|-----------------|
 |[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。|
 |[适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。|
-|[在 .NET Framework 4.5 安装期间减少系统重新启动](../../../docs/framework/deployment/reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|
+|[在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|
 |[面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)|说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。|
 |[面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)|说明开发人员如何在其计算机的应用程序中安装 .NET Framework。|
 |[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)|讨论 Visual Studio 中的部署选项，包括使用 ClickOnce 和 Windows Installer 技术发布应用程序的说明。|

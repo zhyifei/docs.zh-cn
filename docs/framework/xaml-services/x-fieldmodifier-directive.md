@@ -7,10 +7,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144542"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指令
@@ -55,5 +55,5 @@ ms.locfileid: "59144542"
 - [XAML 及 WPF 的自定义类](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [WPF 中的代码隐藏和 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name 指令](x-name-directive.md)
-- [生成 WPF 应用程序 (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [Building a WPF Application (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)（生成 WPF 应用程序 (WPF)）
 - [x:ClassModifier 指令](x-classmodifier-directive.md)

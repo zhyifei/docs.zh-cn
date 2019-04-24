@@ -6,11 +6,11 @@ ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027168"
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 .NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。 通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。  
@@ -39,7 +39,7 @@ ms.locfileid: "59171166"
   
  .NET Framework 中的 XML 类具有以下优点：  
   
--   **工作效率。** 通过 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)，能够更轻松地使用 XML 编程，并且能够得到与 SQL 类似的查询体验。  
+-   **高效率。** 通过 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)，能够更轻松地使用 XML 编程，并且能够得到与 SQL 类似的查询体验。  
   
 -   **扩展性。** .NET Framework 中的 XML 类可使用抽象基类和虚拟方法进行扩展。 例如，您可以创建 <xref:System.Xml.XmlUrlResolver> 类的一个派生类，用以将缓存流存储到本地磁盘。  
   

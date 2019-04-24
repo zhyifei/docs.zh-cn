@@ -5,10 +5,10 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228870"
 ---
 # <a name="denial-of-service"></a>拒绝服务
@@ -28,13 +28,13 @@ ms.locfileid: "59228870"
   
  缓解：使用以下属性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>类：  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>： 控制最大数量的有时限`SecurityContextToken`之后服务器所缓存的 s`SPNego`或`SSL`协商。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制在 `SecurityContextToken` 或 `SPNego` 协商之后服务器所缓存的有时限的 `SSL` 的最大数目。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>： 控制的生存期`SecurityContextTokens`，之后服务器所颁发`SPNego`或`SSL`协商。 在此时间期限内，服务器将缓存 `SecurityContextToken`。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制在 `SecurityContextTokens` 或 `SPNego` 协商之后服务器所颁发的 `SSL` 的生存期。 在此时间期限内，服务器将缓存 `SecurityContextToken`。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>： 控制在服务器上，但为其处理任何应用程序消息建立的安全对话的最大数目。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在服务器上建立但尚未针为其处理任何应用程序消息的安全对话的最大数目。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>： 控制服务使安全对话保持活动状态而不会从该会话的客户端收到的应用程序消息的最大时间。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服务使安全对话保持活动状态（而不接收来自对话客户端的应用程序消息）的最长时间。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 或双向自定义绑定要求客户端身份验证  
  默认情况下，<xref:System.ServiceModel.WSDualHttpBinding> 会启用安全性。 但是，如果通过将 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 属性设置为 <xref:System.ServiceModel.MessageCredentialType.None> 而禁用客户端身份验证，则恶意用户可能会致使针对第三个服务进行拒绝服务攻击。 发生此问题的原因在于，恶意客户端可能会指示服务向第三个服务发送消息流。  
@@ -82,9 +82,9 @@ ms.locfileid: "59228870"
 ## <a name="see-also"></a>请参阅
 
 - [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

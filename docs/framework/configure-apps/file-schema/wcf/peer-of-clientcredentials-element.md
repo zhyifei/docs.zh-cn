@@ -2,12 +2,12 @@
 title: <peer> <clientCredentials>元素
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 8bdb52ccaaa8b41b3321447d2d68f9021a093481
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.openlocfilehash: 7074ee992755557d7e5503035c89bdbefd678792
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758347"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59107232"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<对等方 > 的\<clientCredentials > 元素
 指定在向对等客户端进行身份验证时使用的凭据。  
@@ -53,6 +53,7 @@ ms.locfileid: "55758347"
  此配置元素指定对等节点用于向网格中的其他节点证明它自己的身份的凭据，以及对等节点用于验证其他对等节点的身份的身份验证设置。 有关详细信息，请参阅[对等通道消息身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))并[保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>

@@ -4,12 +4,12 @@ description: 了解实现运行状况监视的一种方法。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 90beb8073cd169b0a68dc0025d8cd815ccb5a308
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: deebcf6771d24be34050dd7fdfb807a681ebce1f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464003"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672199"
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -269,23 +269,20 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 监视的最后一部分是对事件流进行可视化、报告服务性能、以及在检测到问题时发出警报。 可以使用不同的解决方案来进行这方面的监视。
 
-可以使用显示服务状态的简单自定义应用程序，例如介绍 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 时显示的自定义页。 或者，可以使用更高级的工具（如 Azure Application Insights）来根据事件流发出警报。
+可以使用显示服务状态的简单自定义应用程序，例如介绍 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 时显示的自定义页。 或者，可以使用更高级的工具（如 [Azure Monitor](https://azure.microsoft.com/services/monitor/)）基于事件流发出警报。
 
 最后，如果要存储所有事件流，可以使用 Microsoft Power BI 或其他解决方案（如 Kibana 或 Splunk）来可视化数据。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **适用于 ASP.NET Core 的 HealthChecks 和 HealthChecks UI**
-    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+- **适用于 ASP.NET Core 的 HealthChecks 和 HealthChecks UI** \
+  <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
--   **Service Fabric 运行状况监视简介**
-    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
+- **Service Fabric 运行状况监视简介** \
+  [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
-    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
-
--   **Microsoft Operations Management Suite**
-    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+- **Azure Monitor**
+  <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
 >[上一页](implement-circuit-breaker-pattern.md)

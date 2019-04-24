@@ -12,10 +12,10 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 ms.assetid: 9004e72f-fdec-4264-a37d-2c99764efc13
 ms.openlocfilehash: e5ba42c2ff86f46e2722d0f4455c10ab7b85af1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204648"
 ---
 # <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>如何：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误
@@ -41,7 +41,7 @@ ms.locfileid: "59204648"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [演练：Windows 窗体 DataGridView 控件中的数据输入时发生的错误处理](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)
 - [演练：验证 Windows 窗体 DataGridView 控件中的数据](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [保护连接信息](../../data/adonet/protecting-connection-information.md)

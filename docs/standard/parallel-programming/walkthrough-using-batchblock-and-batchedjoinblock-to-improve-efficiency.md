@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222088"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302968"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率
 TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> 类，以便可以接收和缓冲一个或多个源的数据，再将缓冲的数据作为一个集合传播出去。 如果从一个或多个源收集数据，再批处理多个数据元素，就会发现这种批处理机制非常有用。 例如，假设应用使用数据流将记录插入数据库。 如果同时插入多项，而不是顺序一次插入一个，此操作可能会更高效。 本文档介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类，提高此类数据库插入操作的效率。 它还介绍了如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 类，捕获程序从数据库读取数据时的结果和发生的任何异常。
@@ -25,9 +25,9 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 
 ## <a name="prerequisites"></a>系统必备  
   
-1.  开始本演练前，请先阅读[数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文档中的“联接块”部分。  
+1. 开始本演练前，请先阅读[数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文档中的“联接块”部分。  
   
-2.  确保计算机上有 Northwind 数据库的副本 Northwind.sdf。 此文件通常位于 %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ 文件夹中。  
+2. 确保计算机上有 Northwind 数据库的副本 Northwind.sdf。 此文件通常位于 %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ 文件夹中。  
   
     > [!IMPORTANT]
     >  在一些版本的 Windows 中，如果以非管理员模式运行 Visual Studio，便无法连接到 Northwind.sdf。 若要连接到 Northwind.sdf，请在“以管理员身份运行”模式下启动 Visual Studio 或 Visual Studio 开发人员命令提示。  
@@ -52,16 +52,16 @@ TPL 数据流库提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?disp
 ## <a name="creating-the-console-application"></a>创建控制台应用  
   
 <a name="consoleApp"></a>   
-1.  在 Visual Studio 中，创建 Visual C# 或 Visual Basic“控制台应用程序”项目。 在本文档中，该项目名为 `DataflowBatchDatabase`。  
+1. 在 Visual Studio 中，创建 Visual C# 或 Visual Basic“控制台应用程序”项目。 在本文档中，该项目名为 `DataflowBatchDatabase`。  
   
-2.  在项目中，添加对 System.Data.SqlServerCe.dll 和 System.Threading.Tasks.Dataflow.dll 的引用。  
+2. 在项目中，添加对 System.Data.SqlServerCe.dll 和 System.Threading.Tasks.Dataflow.dll 的引用。  
   
-3.  确保 Form1.cs（对于 Visual Basic，则为 Form1.vb）包含以下 `using`（Visual Basic 中为 `Imports`）语句。  
+3. 确保 Form1.cs（对于 Visual Basic，则为 Form1.vb）包含以下 `using`（Visual Basic 中为 `Imports`）语句。  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  
   
-4.  将以下数据成员添加到 `Program` 类。  
+4. 将以下数据成员添加到 `Program` 类。  
   
      [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
      [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]  

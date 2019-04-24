@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191321"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知问题和注意事项
@@ -19,13 +19,13 @@ ms.locfileid: "59191321"
   
 -   [排序信息丢失](#OrderingInfoLost)  
   
--   [不支持无符号整数](#UnsignedIntsUnsupported)  
+-   [不支持无符号的整数](#UnsignedIntsUnsupported)  
   
 -   [类型转换错误](#TypeConversionErrors)  
   
 -   [不支持引用非标量变量](#RefNonScalarClosures)  
   
--   [使用 SQL Server 2000，嵌套查询可能会失败](#NestedQueriesSQL2000)  
+-   [嵌套的查询可能会因 SQL Server 2000](#NestedQueriesSQL2000)  
   
 -   [投影到匿名类型](#ProjectToAnonymousType)  
   

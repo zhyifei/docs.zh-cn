@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
 ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097221"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据
@@ -36,15 +36,15 @@ ms.locfileid: "59097221"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性使用 XmlNode.SelectNodes 方法处理。 可以修改 **XPath** 查询以获取不同的结果。 以下是前一示例中被绑定 <xref:System.Windows.Controls.ListBox> 的 <xref:System.Windows.Data.Binding.XPath%2A> 查询的一些示例：  
   
--   `XPath="Book[1]"` 将返回第一个 book 元素 ("XML in Action")。 请注意，**XPath** 索引从 1 而不是从 0 开始。  
+-   `XPath="Book[1]"` 将返回第一个 Book 元素（“XML in Action”）。 请注意，**XPath** 索引从 1 而不是从 0 开始。  
   
--   `XPath="Book[@*]"` 将返回带有任意属性的所有 book 元素。  
+-   `XPath="Book[@*]"` 将返回带有任意属性的所有 Book 元素。  
   
--   `XPath="Book[last()-1]"` 将返回第二个到最后一个 book 元素 ("Introducing Microsoft.NET")。  
+-   `XPath="Book[last()-1]"` 将返回倒数第二个 Book 元素（“Introducing Microsoft .NET”）。  
   
--   `XPath="*[position()>3]"` 将返回所有除前 3 个 book 元素。  
+-   `XPath="*[position()>3]"` 将返回除前 3 个元素之外的所有 Book 元素。  
   
- 运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 的列表。 <xref:System.Xml.XmlNode> 是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象，这意味着可以使用<xref:System.Windows.Data.Binding.Path%2A>要绑定到属性[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]属性。 再以上述示例为例。 如果该示例的其余部分保持不变，而你将 <xref:System.Windows.Controls.TextBlock> 绑定更改为如下所示，则会在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。 在此情况下，所有返回节点的名称为“*Book*”。  
+ 运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 的列表。 <xref:System.Xml.XmlNode> 是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象，这意味着你可以使用 <xref:System.Windows.Data.Binding.Path%2A> 属性来绑定到[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]属性。 再以上述示例为例。 如果该示例的其余部分保持不变，而你将 <xref:System.Windows.Controls.TextBlock> 绑定更改为如下所示，则会在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。 在此情况下，所有返回节点的名称为“*Book*”。  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

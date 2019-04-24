@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496828"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59216336"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据的文件。 尽管 .NET Framework 程序集和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件。 将 .NET Framework 模块转换为 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件的过程称为*导出*。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
@@ -51,6 +51,7 @@ winmdexp [options] winmdmodule
  当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件时，.NET Framework 将提供支持，使得利用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132)接口构造的类型。  
   
 ## <a name="see-also"></a>请参阅
+
 - [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [用 C# 和 Visual Basic 创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe 错误消息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)

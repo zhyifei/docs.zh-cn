@@ -11,10 +11,10 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227751"
 ---
 # <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9 接口
@@ -33,11 +33,11 @@ ms.locfileid: "59227751"
   
  **标头：** CorProf.idl, CorProf.h  
   
-**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
 ## <a name="see-also"></a>请参阅
 
-- [分析接口](profiling-interfaces.md)
+- [Profiling 接口](profiling-interfaces.md)
 - [ICorProfilerCallback8 接口](icorprofilercallback9-interface.md)
 - [ICorProfilerCallback8.DynamicMethodJITCompilationStarted 方法](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8.DynamicMethodJITCompilationFinished 方法](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

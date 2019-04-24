@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980708"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59332204"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  若要在命令提示符下编译并运行该应用程序，请按照下列步骤操作：  
   
-1.  将以下代码粘贴到任何文本编辑器中，然后将该文件保存为名为 `Factorial.cs` 的文本文件。  
+1. 将以下代码粘贴到任何文本编辑器中，然后将该文件保存为名为 `Factorial.cs` 的文本文件。  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  从“开始”屏幕或“开始”菜单中，打开 Visual Studio“开发人员命令提示”窗口，然后导航到包含刚刚创建的文件的文件夹。  
+2. 从“开始”屏幕或“开始”菜单中，打开 Visual Studio“开发人员命令提示”窗口，然后导航到包含刚刚创建的文件的文件夹。  
   
-3.  输入以下命令以编译应用程序。  
+3. 输入以下命令以编译应用程序。  
   
      `csc Factorial.cs`  
   
      如果应用程序不存在编译错误，则会创建名为 `Factorial.exe` 的可执行文件。  
   
-4.  输入以下命令以计算 3 的阶乘：  
+4. 输入以下命令以计算 3 的阶乘：  
   
      `Factorial 3`  
   
-5.  该命令将生成以下输出：`The factorial of 3 is 6.`  
+5. 该命令将生成以下输出：`The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。  

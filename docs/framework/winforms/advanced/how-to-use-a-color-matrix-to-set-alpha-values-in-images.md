@@ -11,10 +11,10 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
 ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199539"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>如何：使用颜色矩阵设置图像中的 Alpha 值
@@ -33,9 +33,9 @@ ms.locfileid: "59199539"
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
-- [Alpha 混合线条和填充](alpha-blending-lines-and-fills.md)
+- [alpha 值混合处理直线和填充](alpha-blending-lines-and-fills.md)

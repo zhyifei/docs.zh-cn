@@ -1,17 +1,19 @@
 ---
 title: 泛型接口中的变体 (C#)
-ms.date: 07/20/2015
+ms.date: 04/10/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ffe437fc88722b9f38aa2fde6cdd87ed2e2060be
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469543"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59480776"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型接口中的变体 (C#)
 
-.NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。 下面的接口现在是变体：
+.NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。 
+
+自 .NET Framework 4 起，以下接口是变体：
 
 - <xref:System.Collections.Generic.IEnumerable%601>（T 是协变）
 
@@ -27,6 +29,12 @@ ms.locfileid: "57469543"
 
 - <xref:System.IComparable%601>（T 是逆变）
 
+自 .NET Framework 4.5 起，以下接口是变体：
+
+- <xref:System.Collections.Generic.IReadOnlyList%601>（T 是逆变）
+
+- <xref:System.Collections.Generic.IReadOnlyCollection%601>（T 是逆变）
+
 协变允许方法具有的返回类型比接口的泛型类型参数定义的返回类型的派生程度更大。 若要演示协变功能，请考虑以下泛型接口：`IEnumerable<Object>` 和 `IEnumerable<String>`。 `IEnumerable<String>` 接口不继承 `IEnumerable<Object>` 接口。 但是，`String` 类型会继承 `Object` 类型，在某些情况下，建议为这些接口互相指派彼此的对象。 下面的代码示例对此进行了演示。
 
 ```csharp
@@ -34,7 +42,7 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-在 .NET Framework 早期版本中，在 `Option Strict On` 条件下，此代码会导致 C# 中出现编译错误。 但现在可使用 `strings` 代替 `objects`，如上例所示，因为 <xref:System.Collections.Generic.IEnumerable%601> 接口是协变接口。
+在旧版 .NET Framework 中，此代码会导致 C# 中出现编译错误；如果启用 `Option Strict` 条件，则会导致在 Visual Basic 中出现编译错误。 但现在可使用 `strings` 代替 `objects`，如上例所示，因为 <xref:System.Collections.Generic.IEnumerable%601> 接口是协变接口。
 
 逆变允许方法具有的实参类型比接口的泛型形参定义的类型的派生程度更小。 若要演示逆变，假设已创建了 `BaseComparer` 类来比较 `BaseClass` 类的实例。 `BaseComparer` 类实现 `IEqualityComparer<BaseClass>` 接口。 因为 <xref:System.Collections.Generic.IEqualityComparer%601> 接口现在是逆变接口，因此可使用 `BaseComparer` 比较继承 `BaseClass` 类的类的实例。 下面的代码示例对此进行了演示。
 

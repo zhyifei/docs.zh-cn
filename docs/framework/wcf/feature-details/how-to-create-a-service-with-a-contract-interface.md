@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
 ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298534"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772890"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>如何：使用协定接口创建服务
 若要创建 Windows Communication Foundation (WCF) 协定的首选的方法是使用接口。 此协定指定访问服务提供的操作所必需的消息的集合和结构。 此接口通过将 <xref:System.ServiceModel.ServiceContractAttribute> 类应用到该接口并将 <xref:System.ServiceModel.OperationContractAttribute> 类应用到要公开的方法来定义输入和输出类型。  

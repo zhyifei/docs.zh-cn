@@ -13,10 +13,10 @@ helpviewer_keywords:
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
 ms.openlocfilehash: 58ee58577b9ff71112103abb4d33c8b85d3c806f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481348"
 ---
 # <a name="graphics-and-multimedia"></a>图形和多媒体
@@ -59,7 +59,7 @@ WPF 引入了对高质量 2-D 图形的支持。 功能包括画笔、几何、�
 
 ### <a name="2-d-shapes"></a>二维形状
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一个常用、 矢量绘制的库[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]形状，如矩形和椭圆下, 图显示了。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供常用矢量绘制的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 形状库，如下图中所示的矩形和椭圆形。
 
 ![关系图显示椭圆和矩形。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>二维效果
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的库[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]类可用于创建各种效果。 借助 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 呈现功能，可以绘制具有渐变、位图、绘图和视频的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，并且可以使用旋转、缩放和倾斜来操作它们。 下图演提供了可使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 画笔实现的许多效果的示例。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 类的库，可用于创建各种效果。 借助 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 呈现功能，可以绘制具有渐变、位图、绘图和视频的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，并且可以使用旋转、缩放和倾斜来操作它们。 下图演提供了可使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 画笔实现的许多效果的示例。
 
 ![图中显示不同的 WPF 画笔和绘制元素。](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>三维呈现
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了一套[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]呈现功能与集成的功能[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]中的图形支持[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]为了使您可以创建更精彩的布局， [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，和数据可视化。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持将 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 图像呈现到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 形状的表面，下图演示了此功能。
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一组 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 呈现功能，这些功能与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 图形支持集成，以便创建更精彩的布局、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和数据可视化。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持将 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 图像呈现到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 形状的表面，下图演示了此功能。
 
 ![显示具有不同的纹理的三维形状的示例的屏幕截图。](./media/index/visual-three-dimensional-shape.png)
 
@@ -166,10 +166,10 @@ End Class
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
-- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF 中的形状和基本图形概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
 - [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)
-- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
-- [动画和计时帮助主题](animation-and-timing-how-to-topics.md)
-- [三维图形概述](3-d-graphics-overview.md)
+- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [动画和计时操作指南主题](animation-and-timing-how-to-topics.md)
+- [3D 图形概述](3-d-graphics-overview.md)
 - [多媒体概述](multimedia-overview.md)

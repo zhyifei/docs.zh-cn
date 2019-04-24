@@ -8,10 +8,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
 ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333881"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>如何：调用过程返回值 (Visual Basic)
@@ -47,8 +47,8 @@ ms.locfileid: "59333881"
 ## <a name="see-also"></a>请参阅
 
 - [Function 过程](./function-procedures.md)
-- [过程形参和实参](./procedure-parameters-and-arguments.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [如何：创建返回值的过程](./how-to-create-a-procedure-that-returns-a-value.md)
+- [如何：创建一个过程，返回一个值](./how-to-create-a-procedure-that-returns-a-value.md)
 - [如何：从过程返回值](./how-to-return-a-value-from-a-procedure.md)
 - [如何：调用不返回值的过程](./how-to-call-a-procedure-that-does-not-return-a-value.md)

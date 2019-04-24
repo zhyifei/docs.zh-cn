@@ -10,21 +10,24 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125016"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977270"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>如何：创建线性渐变
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了水平、 垂直，和对角线线性渐变。 默认情况下，线性渐变中的颜色均匀地变化。 以便以非均匀方式将颜色更改，但是，可以自定义线性渐变。  
+GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，线性渐变中的颜色均匀地变化。 以便以非均匀方式将颜色更改，但是，可以自定义线性渐变。  
+
+> [!NOTE]
+> 这篇文章中的示例是从控件的调用的方法，<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
+
+下面的示例填充直线、 椭圆和水平线性渐变画笔的矩形。  
   
- 下面的示例填充直线、 椭圆和水平线性渐变画笔的矩形。  
+<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>构造函数接收四个参数： 两个点和两种颜色。 第一个点 （0，10） 程序与第一种颜色 （红色），并且第二个点 （200，10） 与第二种颜色 （蓝色） 相关联。 如您所料的从绘制的线条 （0，10） 到 （200，10） 由红色变为蓝色逐渐更改。  
   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>构造函数接收四个参数： 两个点和两种颜色。 第一个点 （0，10） 程序与第一种颜色 （红色），并且第二个点 （200，10） 与第二种颜色 （蓝色） 相关联。 如您所料的从绘制的线条 （0，10） 到 （200，10） 由红色变为蓝色逐渐更改。  
-  
- 中的点 （50，10） 和 （200，10） 10 秒并不重要。 重要的是，两个点的第二个坐标相同 — 连接二者的线是水平。 椭圆和矩形也逐渐更改由红色变为蓝色因为是由从 0 到 200 的水平坐标。  
+ 中的点 （0，10） 和 （200，10） 10 秒并不重要。 重要的是，两个点的第二个坐标相同 — 连接二者的线是水平。 椭圆和矩形也逐渐更改由红色变为蓝色因为是由从 0 到 200 的水平坐标。  
   
  下图显示线条、 椭圆和矩形。 请注意，图的颜色渐变本身可根据重复的水平坐标增加到 200 以上。  
   
@@ -39,7 +42,7 @@ ms.locfileid: "59125016"
   
  在前面的示例中，颜色组件以线性方式更改为 0 的水平坐标从移动到 200 的水平坐标。 例如，其第一个坐标是 0 到 200 之间的中间位置的点将有一个介于 0 和 255 之间的中间位置的蓝色组件。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以调整一种颜色在某条边的渐变的其他不同的方式。 假设你想要创建从黑色更改为根据下表的红色渐变画笔。  
+ GDI +，可调整一种颜色在某条边的渐变的其他不同的方式。 假设你想要创建从黑色更改为根据下表的红色渐变画笔。  
   
 |水平坐标|RGB 组件|  
 |---------------------------|--------------------|  
@@ -49,12 +52,12 @@ ms.locfileid: "59125016"
   
  请注意，红色组件以半强度时，水平坐标是只有 20%的从 0 到 200 的方法。  
   
- 下面的示例设置<xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A>属性的<xref:System.Drawing.Drawing2D.LinearGradientBrush>将三个相对亮度与三个相对位置相关联的对象。 如前面的表中所示相对强度是 0.5 的与 0.2 的相对位置相关联。 该代码填充椭圆和矩形使用渐变画笔。  
+ 下面的示例设置<xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A?displayProperty=nameWithType>将三个相对亮度与三个相对位置相关联的属性。 如前面的表中所示相对强度是 0.5 的与 0.2 的相对位置相关联。 该代码填充椭圆和矩形使用渐变画笔。  
   
  下图显示得到的椭圆和矩形。  
   
  ![线性渐变](./media/cslineargradient2.png "cslineargradient2")  
-  
+
 ### <a name="to-customize-linear-gradients"></a>若要自定义线性渐变  
   
 -   将不透明的黑色和不透明红色分别作为第三个和第四个参数传递。  

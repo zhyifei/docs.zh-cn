@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
 ms.openlocfilehash: 54782c4e0460ba1ba9b8a870b8f60f08a76340b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125167"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows 窗体 Timer 组件的 Interval 属性的限制

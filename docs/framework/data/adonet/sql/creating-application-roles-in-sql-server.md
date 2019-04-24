@@ -3,10 +3,10 @@ title: 在 SQL Server 中创建应用程序角色
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
 ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100363"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中创建应用程序角色
@@ -56,11 +56,11 @@ ms.locfileid: "59100363"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[Application Roles](/sql/relational-databases/security/authentication-access/application-roles)|描述如何在 SQL Server 2008 中创建和使用应用程序角色。|  
+|[应用程序角色](/sql/relational-databases/security/authentication-access/application-roles)|描述如何在 SQL Server 2008 中创建和使用应用程序角色。|  
   
 ## <a name="see-also"></a>请参阅
 
 - [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

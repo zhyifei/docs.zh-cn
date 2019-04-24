@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307452"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
@@ -86,7 +86,7 @@ ms.locfileid: "59307452"
   
  **移位运算符**  
   
-|Expression|说明|  
+|表达式|说明|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
@@ -109,7 +109,7 @@ ms.locfileid: "59307452"
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|等于|  
 |x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不等于|  
   
- **逻辑、条件和 null 运算符**  
+ **逻辑、条件和 Null 运算符**  
   
 |类别|表达式|说明|  
 |--------------|----------------|-----------------|  

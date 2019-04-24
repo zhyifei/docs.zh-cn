@@ -3,10 +3,10 @@ title: 数据类型和函数
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151939"
 ---
 # <a name="data-types-and-functions"></a>数据类型和函数
@@ -17,7 +17,7 @@ ms.locfileid: "59151939"
 |主题|描述|  
 |-----------|-----------------|  
 |[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|提供 CLR 类型和 SQL Server 类型之间的详细映射矩阵。|  
-|[基本数据类型](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
+|[Visual Basic 数据类型](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
 |[Boolean 数据类型](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
 |[Null 语义](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|提供指向讨论 null 和可以为 null 问题的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主题的链接。|  
 |[数值和比较运算符](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|总结与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 之间的行为差异。|  
@@ -34,4 +34,4 @@ ms.locfileid: "59151939"
 ## <a name="see-also"></a>请参阅
 
 - [SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
-- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

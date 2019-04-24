@@ -3,10 +3,10 @@ title: 在代码中配置 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225698"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
@@ -103,6 +103,6 @@ public class Service1 : IService1
 - [配置和元数据支持](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [配置](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
 - [如何：在配置中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [如何：在配置中创建服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [如何：使用配置文件发布服务的元数据](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [如何：在配置中创建的服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [如何：发布使用配置文件服务的元数据](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [如何：在配置中指定客户端绑定](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

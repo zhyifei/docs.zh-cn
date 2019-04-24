@@ -21,10 +21,10 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113719"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送类、结构和联合
@@ -100,7 +100,7 @@ typedef struct _MYARRAYSTRUCT
   
 -   `MyPerson` 仅包含字符串成员。 [CharSet](specifying-a-character-set.md) 字段在传递到非托管函数时将字符串设置为 ANSI 格式。  
   
--   `MyPerson2` 在 `MyPerson` 结构中包含 IntPtr 。 IntPtr 类型替换指向非托管结构的原始指针，因为 .NET Framework 应用程序不使用指针，除非代码被标记为“不安全”。  
+-   `MyPerson2` 将 IntPtr 包含到 `MyPerson` 结构中。 IntPtr 类型替换指向非托管结构的原始指针，因为 .NET Framework 应用程序不使用指针，除非代码被标记为“不安全”。  
   
 -   `MyPerson3` 将 `MyPerson` 作为嵌入结构包含在内。 嵌入其他结构的结构可通过将嵌入结构的元素直接放入主结构中来进行平展，还可以保留为嵌入结构，如本示例中操作所示。  
   
@@ -202,7 +202,7 @@ union MYUNION2
   
  `MyUnion2_1` 和 `MyUnion2_2` 分别包含值类型（整数）和字符串。 在托管代码中，值类型和引用类型不允许重叠。 此示例使用方法重载以使调用方在调用同一个非托管函数时能够使用这两种类型。 `MyUnion2_1` 的布局是显式的且具有准确的偏移值。 与此相反，`MyUnion2_2` 的布局是按顺序的，因为不允许引用类型使用显式布局。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr，它用于标识在联合的非托管表示形式中出现的定长内联字符数组。  
   
- `LibWrap` 类包含 `TestUnion` 和 `TestUnion2` 方法的原型。 `TestUnion2` 已重载以将 `MyUnion2_1` 或 `MyUnion2_2` 声明为参数。  
+ `LibWrap` 类包含 `TestUnion` 和 `TestUnion2` 方法的原型。 已重载 `TestUnion2` 以将 `MyUnion2_1` 或 `MyUnion2_2` 声明为参数。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -264,17 +264,17 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- `MyStruct` 类包含 ANSI 字符的字符串对象。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 字段指定 ANSI 格式。 `MyUnsafeStruct`是一种包含 <xref:System.IntPtr> 类型（而非字符串）的结构。  
+ `MyStruct` 类包含 ANSI 字符的字符串对象。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 字段指定 ANSI 格式。 `MyUnsafeStruct` 是一种包含 <xref:System.IntPtr> 类型（而非字符串）的结构。  
   
  `LibWrap` 类包含已重载 `TestOutArrayOfStructs` 原型方法。 如果方法将指针声明为参数，则应使用 `unsafe` 关键字标记类。 因为 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 无法使用不安全代码，所以已重载方法、不安全修饰符和 `MyUnsafeStruct` 结构不是必需的。  
   
  `App` 类实现 `UsingMarshaling` 方法，此方法执行传递数组所需的全部任务。 使用 `out`（Visual Basic 中的 `ByRef`）关键字标记数组，以指示数据从被调用方传递至调用方。 实现使用以下 <xref:System.Runtime.InteropServices.Marshal> 类方法：  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> 用于将数据从非托管缓冲区封送到托管对象。  
+-   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A>，用于将数据从非托管缓冲区封送到托管对象。  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> 用于释放为结构中的字符串保留的内存。  
+-   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A>用于释放为结构中的字符串保留的内存。  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> 用于释放为数组保留的内存。  
+-   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>用于释放为数组保留的内存。  
   
  正如上文所述，C# 允许不安全代码而 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 不允许。 在 C# 示例中，`UsingUnsafePointer` 是一种替代性方法实现，使用指针（而非 <xref:System.Runtime.InteropServices.Marshal> 类）传递会包含 `MyUnsafeStruct` 结构的数组。  
   

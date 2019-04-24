@@ -3,10 +3,10 @@ title: SQL Server 中的应用程序安全性方案
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130136"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的应用程序安全性方案
@@ -61,4 +61,4 @@ ms.locfileid: "59130136"
 - [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

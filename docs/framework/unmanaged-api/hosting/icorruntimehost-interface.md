@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184777"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 接口
@@ -64,8 +64,8 @@ ms.locfileid: "59184777"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.AppDomain>
-- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [运行时宿主](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
+- [运行时主机](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [CorRuntimeHost 组件类](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

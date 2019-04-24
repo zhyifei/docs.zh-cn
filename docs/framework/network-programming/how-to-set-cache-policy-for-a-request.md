@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563556"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59226568"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>如何：为请求设置缓存策略
 以下示例演示如何为请求设置缓存策略。 该示例输入是一个 URI，如 `http://www.contoso.com/`。  
@@ -106,6 +106,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
 - [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)

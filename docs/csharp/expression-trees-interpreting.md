@@ -3,12 +3,12 @@ title: 解释表达式
 description: 了解如何编写代码来检查表达式树的结构。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201971"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59211239"
 ---
 # <a name="interpreting-expressions"></a>解释表达式
 
@@ -355,7 +355,6 @@ Expression<Func<int, int>> factorial = (n) =>
 
 此代码表示数学*阶乘*函数的一个可能的实现。 编写此代码的方式强调了通过将 lambda 表达式分配到表达式来生成表达式树的两个限制。 首先，lambda 语句是不允许的。 这意味着无法使用循环、块、if / else 语句和 C# 中常用的其他控件结构。 我只能使用表达式。 其次，不能以递归方式调用同一表达式。
 如果该表达式已是一个委托，则可以通过递归方式进行调用，但不能在其表达式树的形式中调用它。 在有关[生成表达式树](expression-trees-building.md)的部分中将介绍克服这些限制的技巧。
-
 
 在此表达式中，将遇到所有这些类型的节点：
 1. Equal（二进制表达式）

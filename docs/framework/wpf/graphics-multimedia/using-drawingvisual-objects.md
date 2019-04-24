@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121714"
 ---
 # <a name="using-drawingvisual-objects"></a>使用 DrawingVisual 对象
@@ -51,9 +51,9 @@ ms.locfileid: "59121714"
   
  下表介绍了必须重写的两个成员：  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>:返回子元素的集合中的指定索引处的子级。  
+-   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>：返回子元素的集合中的指定索引处的子级。  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>:获取此元素内可视子元素的数目。  
+-   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>：获取此元素内可视子元素的数目。  
   
  在以下示例中，重写为两个<xref:System.Windows.FrameworkElement>成员实现。  
   
@@ -73,5 +73,5 @@ ms.locfileid: "59121714"
 
 - <xref:System.Windows.Media.DrawingVisual>
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
-- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
 - [可视化层中的命中测试](hit-testing-in-the-visual-layer.md)

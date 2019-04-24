@@ -3,10 +3,10 @@ title: 具有 Web 服务的 LINQ to SQL N 层
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107401"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>具有 Web 服务的 LINQ to SQL N 层
@@ -30,7 +30,7 @@ ms.locfileid: "59107401"
  在插入数据时，表示层可以构造一个新的对象并将其发送到中间层，或是使中间层基于其提供的值来构造对象。 通常，在 n 层应用程序中检索和插入数据与 2 层应用程序中的过程并无显著差异。 有关详细信息，请参阅[查询数据库](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)并[进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)。  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>跟踪更新和删除的更改  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持基于时间戳 （也称为 Rowversion） 和原始值的开放式并发。 如果数据库表具有时间戳，则更新和删除几乎不需要在中间层或表示层上进行额外工作。 但是，如果必须使用原始值进行开放式并发检查，则表示层在其进行更新时负责跟踪这些值并将这些值发送回去。 这是因为在表示层上对实体所做的更改不会在中间层上进行跟踪。 实际上，实体的原始检索以及对其所进行的最终更新通常由 <xref:System.Data.Linq.DataContext> 的两个完全独立的实例执行。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持基于时间戳（也称为 RowVersion）和基于原始值的开放式并发。 如果数据库表具有时间戳，则更新和删除几乎不需要在中间层或表示层上进行额外工作。 但是，如果必须使用原始值进行开放式并发检查，则表示层在其进行更新时负责跟踪这些值并将这些值发送回去。 这是因为在表示层上对实体所做的更改不会在中间层上进行跟踪。 实际上，实体的原始检索以及对其所进行的最终更新通常由 <xref:System.Data.Linq.DataContext> 的两个完全独立的实例执行。  
   
  表示层进行的更改越多，跟踪这些更改以及将这些更改打包发送回中间层的过程就越复杂。 传达更改的机制的实现完全由应用程序负责。 唯一的要求是必须为 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供进行开放式并发检查所必需的那些原始值。  
   

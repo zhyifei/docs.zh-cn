@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308648"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672285"
 ---
 # <a name="c-operators"></a>C# 运算符
 
@@ -158,6 +158,14 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 此运算符的优先级比下一章节高，比上一章节低。
 
 [x &#124; y](or-operator.md)：逻辑或位 OR。 通常可以将此运算符与整数类型和 `enum` 类型一起使用。
+
+## <a name="true-operator"></a>True 运算符
+
+[True](../keywords/true-false-operators.md) 运算符返回 [bool](../keywords/bool.md) 值 `true`，以指明操作数一定为 true。 
+
+## <a name="false-operator"></a>False 运算符
+
+[False](../keywords/true-false-operators.md) 运算符返回 [bool](../keywords/bool.md) 值 `true`，以指明操作数一定为 false。 
 
 ## <a name="conditional-and-operator"></a>条件 AND 运算符
 

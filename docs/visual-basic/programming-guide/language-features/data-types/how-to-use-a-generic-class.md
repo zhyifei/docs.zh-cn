@@ -22,10 +22,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 ms.openlocfilehash: c7fb4c95b6ef09508df57b3a0c08a651b122e251
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302383"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>如何：使用泛型类 (Visual Basic)
@@ -52,5 +52,5 @@ ms.locfileid: "59302383"
 - [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [如何：定义一个类，可对不同的数据类型提供相同的功能](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [Iterators](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [如何：定义可对不同数据类型提供相同功能的类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [迭代器](../../../../visual-basic/programming-guide/concepts/iterators.md)

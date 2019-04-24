@@ -3,10 +3,10 @@ title: 实体框架数据提供程序
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
 ms.openlocfilehash: 897afcd606a9b9b6c3b316d03dd5cb8e2adedbc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141994"
 ---
 # <a name="entity-framework-data-providers"></a>实体框架数据提供程序
@@ -23,7 +23,7 @@ ms.locfileid: "59141994"
  [实体框架 (SQL Server Compact)](https://go.microsoft.com/fwlink/?LinkId=135638)  
  介绍提供程序限制以及如何将[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于 SQL Server Compact 数据库。  
   
- [用于实体框架的第三方提供程序](https://go.microsoft.com/fwlink/?LinkId=143699)  
+ [实体框架的第三方提供程序](https://go.microsoft.com/fwlink/?LinkId=143699)  
  当前可用于实体框架的第三方数据提供程序的列表。  
   
 ## <a name="see-also"></a>请参阅

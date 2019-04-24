@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
 ms.openlocfilehash: 1b41699d8da1c99705f6796105dab6f3ab1d727d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341629"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>如何：将 MenuStrip 插入 MDI 下拉菜单 （Windows 窗体）
@@ -27,15 +27,15 @@ ms.locfileid: "59341629"
   
 2. 将 <xref:System.Windows.Forms.MenuStrip> 添加到 `Form1` 并将 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 属性设置为 `true`。  
   
-3. 添加到顶级菜单项`Form1`<xref:System.Windows.Forms.MenuStrip>并设置其<xref:System.Windows.Forms.Control.Text%2A>属性设置为`&File`。  
+3. 将顶级菜单项添加到 `Form1`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.Control.Text%2A> 属性设置为 `&File`。  
   
 4. 添加到的三个子菜单项`&File`菜单项并设置其<xref:System.Windows.Forms.ToolStripItem.Text%2A>属性设置为`&Open`， `&Import from`，和`E&xit`。  
   
 5. 添加到的两个子菜单项`&Import from`子菜单项并设置其<xref:System.Windows.Forms.ToolStripItem.Text%2A>属性设置为`&Word`和`&Excel`。  
   
-6. 向项目添加窗体中，添加<xref:System.Windows.Forms.MenuStrip>到的窗体，并设置<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>的属性`Form2`<xref:System.Windows.Forms.MenuStrip>到`true`。  
+6. 将窗体添加到项目，将 <xref:System.Windows.Forms.MenuStrip> 添加该窗体，并将 `Form2`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 属性设置为 `true`。  
   
-7. 添加到顶级菜单项`Form2`<xref:System.Windows.Forms.MenuStrip>并设置其<xref:System.Windows.Forms.ToolStripItem.Text%2A>属性设置为`&File`。  
+7. 将顶级菜单项添加到 `Form2`<xref:System.Windows.Forms.MenuStrip> 并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&File`。  
   
 8. 添加到的子菜单项`&File`菜单`Form2`按以下顺序： <xref:System.Windows.Forms.ToolStripSeparator>， `&Save`， `Save and &Close`，，另一个<xref:System.Windows.Forms.ToolStripSeparator>。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59341629"
     |保存并关闭|Insert|4|  
     |Separator|Insert|5|  
   
-10. 创建事件处理程序<xref:System.Windows.Forms.Control.Click>事件的`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>。  
+10. 为 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件创建一个事件处理程序。  
   
 11. 在事件处理程序内，插入类似于以下示例代码的代码，从而将 `Form2` 的新实例创建和显示为 `Form1` 的 MDI 子级。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59341629"
     }  
     ```  
   
-12. 将代码置于类似于下面的代码示例中`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>注册事件处理程序。  
+12. 将类似于以下示例代码的代码放在 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 中以注册事件处理程序。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  

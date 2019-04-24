@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111470"
 ---
 # <a name="metadata-architecture-overview"></a>元数据体系结构概述
@@ -95,5 +95,5 @@ Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索
 - [发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
 - [检索元数据](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
 - [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

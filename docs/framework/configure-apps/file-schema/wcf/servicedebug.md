@@ -3,10 +3,10 @@ title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
 ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142839"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
@@ -74,6 +74,6 @@ ms.locfileid: "59142839"
 
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
-- [在协定和服务中指定和处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [处理异常和错误](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [服务调试行为](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

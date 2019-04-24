@@ -3,10 +3,10 @@ title: <add> <scopedCertificates>元素
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
 ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119673"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<添加 > 的\<scopedCertificates > 元素
@@ -116,5 +116,5 @@ endpointBehaviors 部分
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
 - [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [保证客户端的安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

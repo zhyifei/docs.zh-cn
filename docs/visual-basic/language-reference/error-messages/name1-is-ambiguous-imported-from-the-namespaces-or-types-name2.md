@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339055"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 > 不明确，从命名空间或类型的导入\<name2 >
@@ -28,5 +28,5 @@ ms.locfileid: "59339055"
 ## <a name="see-also"></a>请参阅
 
 - [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)

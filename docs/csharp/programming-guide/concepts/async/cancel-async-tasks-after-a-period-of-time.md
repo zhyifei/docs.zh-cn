@@ -2,12 +2,12 @@
 title: 在一段时间后取消异步任务 (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 48d3d41e8c4e2d696065c11245279e49142afa07
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64a2a81e5de17594a84782f6474033d04662d8ea
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125764"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318385"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>在一段时间后取消异步任务 (C#)
 
@@ -20,19 +20,19 @@ ms.locfileid: "53125764"
 
 ## <a name="download-the-example"></a>下载示例
 
-若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序），然后遵循以下步骤。
+若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。
 
-1.  解压缩下载的文件，然后启动 Visual Studio。
+1. 解压缩下载的文件，然后启动 Visual Studio。
 
-2.  在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”。
+2. 在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”。
 
-3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。
+3. 在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningCS 的解决方案 (.sln) 文件。
 
-4.  在“解决方案资源管理器”中，打开“CancelAfterTime”项目的快捷菜单，然后选择“设为启动项目”。
+4. 在“解决方案资源管理器”中，打开“CancelAfterTime”项目的快捷菜单，然后选择“设为启动项目”。
 
-5.  按 F5 键运行此项目。 （或者，按 Ctrl +F5 运行该项目，无需调试）。
+5. 按 F5 键运行此项目。 （或者，按 Ctrl +F5 运行该项目，无需调试）。
 
-6.  多次运行程序以验证输出是否显示所有网站的输出、不显示网站的输出或显示某些网站的输出。
+6. 多次运行程序以验证输出是否显示所有网站的输出、不显示网站的输出或显示某些网站的输出。
 
 如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.cs 文件。
 
@@ -92,7 +92,7 @@ Downloads canceled.
 
 请注意，必须为 <xref:System.Net.Http> 添加引用。
 
-可以从 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
+可以从 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。
 
 ```csharp
 using System;

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734511"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59307712"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：将托管代码 DCOM 迁移到 WCF
 Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。 本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>步骤 3：配置并启动 WCF 服务  
  若要承载这些服务，将需要添加以下内容到服务器的配置文件 (web.config) 中。  
   
-1.  添加描述会话对象终结点的 `<client>` 节。  在此方案中，服务器还充当客户端，并必须配置为启用此功能。  
+1. 添加描述会话对象终结点的 `<client>` 节。  在此方案中，服务器还充当客户端，并必须配置为启用此功能。  
   
-2.  在 `<services>` 节中，声明工厂和会话对象的服务终结点。  这使客户端可与服务终结点通信，可获取 <xref:System.ServiceModel.EndpointAddress10> 并可创建会话通道。  
+2. 在 `<services>` 节中，声明工厂和会话对象的服务终结点。  这使客户端可与服务终结点通信，可获取 <xref:System.ServiceModel.EndpointAddress10> 并可创建会话通道。  
   
  以下是使用这些设置的配置文件示例：  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  若要调用此服务，请将代码添加到客户端，以执行以下操作：  
   
-1.  创建 `ISessionBoundFactory` 服务通道。  
+1. 创建 `ISessionBoundFactory` 服务通道。  
   
-2.  使用此通道调用 `ISessionBoundFactory` 服务并获取 <xref:System.ServiceModel.EndpointAddress10> 对象。  
+2. 使用此通道调用 `ISessionBoundFactory` 服务并获取 <xref:System.ServiceModel.EndpointAddress10> 对象。  
   
-3.  使用 <xref:System.ServiceModel.EndpointAddress10> 创建通道，以获取会话对象。  
+3. 使用 <xref:System.ServiceModel.EndpointAddress10> 创建通道，以获取会话对象。  
   
-4.  调用 `SetCurrentValue` 和 `GetCurrentValue` 方法，演示它与跨多个调用的对象实例相同。  
+4. 调用 `SetCurrentValue` 和 `GetCurrentValue` 方法，演示它与跨多个调用的对象实例相同。  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [生成客户端](../../../docs/framework/wcf/building-clients.md)

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162255"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 类和基本的 XAML 读取或写入
-<xref:System.Xaml.XamlServices> 提供可用于解决不需要对 XAML 节点流中，特定访问权限的 XAML 方案的.NET Framework XAML 服务的类或从这些节点获取的 XAML 类型系统信息。 <xref:System.Xaml.XamlServices> API 可总结如下所示：`Load`或`Parse`以支持 XAML 加载路径`Save`以支持 XAML 保存路径，并`Transform`提供联接加载路径的技术，并保存路径。 `Transform` 可用于从一个 XAML 架构更改到另一个。 本主题总结了每个 API 分类，并介绍了特定方法重载之间的差异。  
+<xref:System.Xaml.XamlServices> 是由 .NET Framework XAML 服务提供的一个类，可用于解决无需对 XAML 节点流的特定访问权限的 XAML 方案，或从这些节点获取的 XAML 类型系统信息。 <xref:System.Xaml.XamlServices> API 可总结如下： `Load` 或 `Parse` 用以支持 XAML 加载路径， `Save` 用以支持 XAML 保存路径，以及 `Transform` ，用以提供联接加载路径和保存的技术。 `Transform` 可用于从一个 XAML 架构更改为另一个。 本主题总结了每个 API 分类，并介绍了特定方法重载之间的差异。  
   
 <a name="load"></a>   
 ## <a name="load"></a>Load  
@@ -23,7 +23,7 @@ ms.locfileid: "59162255"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> 具有类似的方案。 如果你让用户选择要加载文件，此重载可能会很有用，因为 <xref:System.IO.Stream> 是其他可以访问文件系统的 <xref:System.IO> API 的常见输出。 或者，你可以通过异步下载或其他也提供流的网络技术来访问 XAML 源。 （从流或用户选择的源进行加载可能出现安全问题。 有关详细信息，请参阅 [XAML Security Considerations](xaml-security-considerations.md)。）  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 和<xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29>依赖于读取器的格式从早期版本的.NET Framework 的重载。 若要使用这些重载，你应该已经创建了读取器实例并使用其 `Create` API 来加载相关形式 （文本或 XML）的 XAML。 如果你已经在其他读取器中移动了记录指针或对它们执行了其他操作，这就不重要了。 <xref:System.Xaml.XamlServices.Load%2A> 的负载路径逻辑始终处理整个根下的 XAML 输入。 这些重载的方案可能包括以下内容：  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 和 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 是重载，依赖于上一版本的 .NET Framework 的格式的读取器。 若要使用这些重载，你应该已经创建了读取器实例并使用其 `Create` API 来加载相关形式 （文本或 XML）的 XAML。 如果你已经在其他读取器中移动了记录指针或对它们执行了其他操作，这就不重要了。 <xref:System.Xaml.XamlServices.Load%2A> 的负载路径逻辑始终处理整个根下的 XAML 输入。 这些重载的方案可能包括以下内容：  
   
 -   设计图面，其中你从现有的特定于 XML 的文本编辑器提供简单的 XAML 编辑功能。  
   
@@ -43,10 +43,10 @@ ms.locfileid: "59162255"
   
 <a name="parse"></a>   
 ## <a name="parse"></a>Parse  
- <xref:System.Xaml.XamlServices.Parse%2A> 类似于`Load`因为它是加载路径 XAML 输入创建 XAML 节点流的 API。 但是，在这种情况下，XAML 输入直接作为一个字符串提供，其中包含所有要加载的 XAML。 <xref:System.Xaml.XamlServices.Parse%2A> 是一种轻量级方法与框架方案相比适合应用程序方案。 有关详细信息，请参阅 <xref:System.Xaml.XamlServices.Parse%2A>。 <xref:System.Xaml.XamlServices.Parse%2A> 是实际上只是包装<xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29>涉及调用<xref:System.IO.StringReader>在内部。  
+ <xref:System.Xaml.XamlServices.Parse%2A> 就像 `Load` ，因为它是从 XAML 输入创建 XAML 节点流的负载路径 API。 但是，在这种情况下，XAML 输入直接作为一个字符串提供，其中包含所有要加载的 XAML。 <xref:System.Xaml.XamlServices.Parse%2A> 是一种轻量级方法，与框架方案相比更适合应用程序方案。 有关详细信息，请参阅 <xref:System.Xaml.XamlServices.Parse%2A>。 <xref:System.Xaml.XamlServices.Parse%2A> 实际上只是一个包装的 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 调用，内部涉及到 <xref:System.IO.StringReader> 。  
   
 <a name="save"></a>   
-## <a name="save"></a>保存  
+## <a name="save"></a>Save  
  各种 <xref:System.Xaml.XamlServices.Save%2A> 重载实现保存路径。 所有 <xref:System.Xaml.XamlServices.Save%2A> 方法都采用对象图作为输入，并生成流、文件或 <xref:System.Xml.XmlWriter>/<xref:System.IO.TextWriter> 实例形式的输出。  
   
  输入对象预期为某些对象表示形式的根对象。 这可能是业务对象的单个根、UI 方案中页的对象树的根、设计工具的工作编辑界面或适用于方案的其他根对象概念。  
@@ -57,7 +57,7 @@ ms.locfileid: "59162255"
   
 <a name="transform"></a>   
 ## <a name="transform"></a>Transform  
- <xref:System.Xaml.XamlServices.Transform%2A> 转换或变换 XAML 通过链接一个加载路径或保存路径作为单个操作。 可以将不同的架构上下文或不同的后备类型系统用于 <xref:System.Xaml.XamlReader> 和 <xref:System.Xaml.XamlWriter>，这会影响如何转换产生的 XAML。 这非常适合广泛的转换操作。  
+ 通过链接一个加载路径或保存路径作为单个操作，<xref:System.Xaml.XamlServices.Transform%2A> 会转换或变换 XAML。 可以将不同的架构上下文或不同的后备类型系统用于 <xref:System.Xaml.XamlReader> 和 <xref:System.Xaml.XamlWriter>，这会影响如何转换产生的 XAML。 这非常适合广泛的转换操作。  
   
  对于依赖于检查 XAML 节点流中每个节点的操作，通常不使用 <xref:System.Xaml.XamlServices.Transform%2A>。 相反，你需要定义自己的加载路径-保存路径操作系列并插入自己的逻辑。 在其中一个路径，在你自己的节点循环中使用 XAML 读取器/XAML 编写器对。 例如，使用 <xref:System.Xaml.XamlXmlReader> 加载初始 XAML 并使用连续的 <xref:System.Xaml.XamlXmlReader.Read%2A> 调用单步执行节点。 在 XAML 节点流级别操作现在可以调整各个节点（类型、成员、其他节点）以应用转换，或将节点保持原样。 然后开始将节点发送到 `Write` 的相关 <xref:System.Xaml.XamlObjectWriter> API 并写出对象。 有关更多信息，请参见 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)。  
   

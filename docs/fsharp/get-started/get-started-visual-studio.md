@@ -3,10 +3,10 @@ title: 开始使用F#在 Visual Studio 中
 description: 了解如何使用F#使用 Visual Studio。
 ms.date: 07/03/2018
 ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331905"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>开始使用F#在 Visual Studio 中
@@ -63,7 +63,7 @@ val square: x:int -> int
 
 ## <a name="see-also"></a>请参阅
 
-- [F# 概览](../tour.md)
+- [F# 教程](../tour.md)
 - [F#语言参考](../language-reference/index.md)
 - [类型推理](../language-reference/type-inference.md)
 - [符号和运算符参考](../language-reference/symbol-and-operator-reference/index.md)

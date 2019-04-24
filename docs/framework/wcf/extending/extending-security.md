@@ -5,10 +5,10 @@ helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 ms.openlocfilehash: 95dacf3ef975be1ddd56db747936cca35db50625
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099633"
 ---
 # <a name="extending-security"></a>扩展安全性
@@ -34,7 +34,7 @@ ms.locfileid: "59099633"
  [如何：使用独立的 X.509 证书进行签名和加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  通常使用单个证书对消息进行签名和加密。 本主题说明如何按照要求使用两个证书。  
   
- [如何：更改 X.509 证书私钥的加密提供程序](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [如何：更改 X.509 证书的私钥的加密提供程序](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将提供程序集成到 Windows Communication Foundation (WCF) 框架。  
   
 ## <a name="reference"></a>参考  

@@ -1,14 +1,14 @@
 ---
-title: <Field> 元素 (.NET Native)
+title: <Field>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c58be27334bcb862367464475a4eade5e01bdbb2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221608"
 ---
 # <a name="field-element-net-native"></a>\<字段 > 元素 (.NET Native)
@@ -39,13 +39,13 @@ ms.locfileid: "59221608"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*方法_名称*|字段名。 该字段的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。|  
+|method_name|字段名。 该字段的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该设置将应用到这个字段的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这个字段的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -63,5 +63,5 @@ ms.locfileid: "59221608"
 ## <a name="see-also"></a>请参阅
 
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

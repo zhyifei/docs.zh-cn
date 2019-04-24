@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
 ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310247"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 6. RP 从安全令牌中提取客户端声明并做出授权决策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>将联合身份验证模块与 ASP.NET 搭配使用  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是一个 HTTP 模块，允许您添加到联合身份验证[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序。 联合身份验证将身份验证逻辑交由 STS 处理，让你可以集中注意力编写业务逻辑。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是一个可以将联合身份验证添加到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序的 HTTP 模块。 联合身份验证将身份验证逻辑交由 STS 处理，让你可以集中注意力编写业务逻辑。  
   
  可以配置 WS-FAM 来指定未经身份验证的请求应重定向到的 STS。 使用 WIF，可采用两种方式对用户进行身份验证：  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
  ![显示使用控件登录的 SAM 时序图](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>事件  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule><xref:System.IdentityModel.Services.SessionAuthenticationModule>，以及它们的父类<xref:System.IdentityModel.Services.HttpModuleBase>，处理 HTTP 请求的各个阶段引发事件。 可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序的 `global.asax` 文件中处理这些事件。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和它们的父类 <xref:System.IdentityModel.Services.HttpModuleBase> 在处理 HTTP 请求的各个阶段引发事件。 可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序的 `global.asax` 文件中处理这些事件。  
   
 -   ASP.NET 基础结构调用模块的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法来初始化模块。  
   

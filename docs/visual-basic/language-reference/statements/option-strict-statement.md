@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355124"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310182"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 隐式数据类型将转换限制为仅进行扩大转换，不允许后期绑定，并禁止隐式键入会导致`Object`类型。  
@@ -109,9 +109,9 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>若要在 IDE 中设置 Option Strict  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
+1. 在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
-2.  上**编译**选项卡上，设置中的值**Option Strict**框。  
+2. 上**编译**选项卡上，设置中的值**Option Strict**框。  
   
 ### <a name="conditions"></a> 若要在 IDE 中设置警告配置  
  当你使用[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`语句中，你可以生成错误的条件的其他控制。 **警告配置**一部分**编译页**具有对应于三个条件会导致编译时错误的设置时`Option Strict`上。 这些设置如下：  

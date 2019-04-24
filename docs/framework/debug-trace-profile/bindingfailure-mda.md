@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480945"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
@@ -52,7 +52,7 @@ ms.locfileid: "59480945"
 
 - 根据上述所确定事项解决失败原因。 可能的解决方案选项如下：
 
-  - 在全局程序集缓存中安装请求的程序集，并调用  <xref:System.Reflection.Assembly.Load%2A> 以按标识加载程序集的方法。
+  - 在全局程序集缓存中安装请求的程序集，并调用  <xref:System.Reflection.Assembly.Load%2A> 方法以按标识加载程序集。
 
   - 将请求的程序集复制到应用程序目录中，并调用 <xref:System.Reflection.Assembly.Load%2A> 方法以按标识加载程序集。
 

@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216465"
 ---
 # <a name="net-performance-tips"></a>.NET 性能提示
@@ -36,9 +36,9 @@ ms.locfileid: "59216465"
   
 -   [垃圾回收器基础知识和性能提示](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [性能提示和技巧在.NET 应用程序](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [.NET 应用程序的性能提示和技巧](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani 性能问题的见解](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani 关于性能问题的见解](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Vance Morrison 的博客](https://blogs.msdn.microsoft.com/vancem/)
   

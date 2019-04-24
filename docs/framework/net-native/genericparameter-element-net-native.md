@@ -1,14 +1,14 @@
 ---
-title: <GenericParameter> 元素 (.NET Native)
+title: <GenericParameter>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111652"
 ---
 # <a name="genericparameter-element-net-native"></a>\<泛型参数 > 元素 (.NET Native)
@@ -53,13 +53,13 @@ ms.locfileid: "59111652"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*泛型_参数_名称*|必需的特性。 泛型类型参数的名称。 例如，对于泛型委托 <xref:System.Func%603>，“TResult”的一个 generic_parameter_name 值将运行时策略应用到该委托的返回值。|  
+|generic_parameter_name|必需的特性。 泛型类型参数的名称。 例如，对于泛型委托 <xref:System.Func%603>，“TResult”的一个 generic_parameter_name 值将运行时策略应用到该委托的返回值。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -68,7 +68,7 @@ ms.locfileid: "59111652"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将运行时反射策略应用到一个特定类型，例如一个类或结构。|  
   
 ## <a name="remarks"></a>备注  
@@ -88,8 +88,8 @@ ms.locfileid: "59111652"
   
 ## <a name="see-also"></a>请参阅
 
-- [\<方法 > 元素](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

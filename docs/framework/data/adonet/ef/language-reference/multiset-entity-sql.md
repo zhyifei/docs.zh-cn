@@ -3,10 +3,10 @@ title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
 ms.openlocfilehash: 44e411b8ae2f43bf3a729ac091ffd1eb4c462c63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303032"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
@@ -28,7 +28,7 @@ or
  MULTISET 类型的集合\<T >。  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了三种构造函数： 行构造函数、 对象构造函数和多集 （或集合） 构造函数。 有关详细信息，请参阅[构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了三种构造函数：行构造函数、对象构造函数和多集（或集合）构造函数。 有关详细信息，请参阅[构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
   
  多集构造函数根据值列表创建多集的实例。 该构造函数中的所有值都必须具有兼容类型。  
   

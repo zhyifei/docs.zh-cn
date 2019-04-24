@@ -1,19 +1,19 @@
 ---
-title: <idn> 元素 （Uri 设置）
+title: <idn> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321746"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 元素 （Uri 设置）
 指定是否对域名应用国际化域名 (IDN) 分析。  
   
 ## <a name="schema-hierarchy"></a>架构层次结构  
- [\<配置 > 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<Uri > 元素 （Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59321746"
   
 ### <a name="attributes"></a>特性  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |`enabled`|指定对域名应用国际化域名 (IDN) 分析的默认值为 none。|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59321746"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   

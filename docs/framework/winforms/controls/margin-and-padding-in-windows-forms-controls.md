@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
 ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094043"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768665"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows 窗体控件中的边距和填充
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间给你提供许多布局功能来实现此目的。 其中两个最重要的功能是 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 属性。  

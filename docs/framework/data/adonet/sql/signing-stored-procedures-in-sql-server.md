@@ -3,10 +3,10 @@ title: 在 SQL Server 中对存储过程签名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313913"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中对存储过程签名
@@ -63,4 +63,4 @@ ms.locfileid: "59313913"
 - [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
 - [在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
 - [使用存储过程修改数据](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

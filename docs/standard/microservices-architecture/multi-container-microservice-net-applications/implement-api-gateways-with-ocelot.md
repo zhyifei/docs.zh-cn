@@ -4,12 +4,12 @@ description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5d4f2a3b2551f8da83359b26578d45559721f7df
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464536"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613715"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
@@ -85,6 +85,7 @@ public async Task<IActionResult> GetItemById(int id)
     return NotFound();
 }
 ```
+
 HTTP 请求将最终运行访问微服务数据库的那种 C# 代码以及任何其他必需的操作。
 
 对于微服务 URL，当容器部署在本地开发电脑（本地 Docker 主机）中时，每个微服务的容器始终有一个内部端口（通常是端口 80），在其 dockerfile 中指定，如以下 dockerfile 中所示：
@@ -564,16 +565,16 @@ Ocelot 的 ReRoute 层中的授权。  Ocelot 支持在进行身份验证后评�
 使用 Ocelot API 网关时，还有其他重要的功能等待你来研究和使用，如以下链接所述。
 
 - 客户端中集成 Ocelot 与 Consul 或 Eureka 的服务发现 \
-  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
 - API 网关层中的缓存 \
-  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
 - API 网关层中的日志记录 \
-  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
 - API 网关层中的服务质量（重试次数和断路器） \
-  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
 - 速率限制 \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )

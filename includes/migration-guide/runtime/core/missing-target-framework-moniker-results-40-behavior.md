@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 29b8feb7959c718391b963c8402b97351b93fa49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235213"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803292"
 ---
 ### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>在 4.0 行为中缺少了目标框架名字对象结果
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018742"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337274"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 .NET Framework 随时间推移而变化。 每个新版本都添加了提供新功能的新类型和类型成员。 现有类型和成员也会随着时间推移而变化。 例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由更方便或功能更全面的方法所取代。  
@@ -42,9 +42,9 @@ ms.locfileid: "58018742"
   
  可以选择不针对更高版本的 .NET Framework 重新编译现有代码。 相反，可以指定针对其运行现有已编译代码的 .NET Framework 版本。 例如，假设有一个名为 app1.exe 并且针对 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 进行了编译的应用程序，但是希望针对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 运行该应用程序。 这需要执行以下步骤：  
   
-1.  为主可执行文件创建一个配置文件并将它命名为 *appName*.exe.config，其中 *appName* 是应用程序可执行文件的名称。 对于我们示例中名为 app1.exe 的应用程序，会创建一个名为 app1.exe.config 的配置文件。  
+1. 为主可执行文件创建一个配置文件并将它命名为 *appName*.exe.config，其中 *appName* 是应用程序可执行文件的名称。 对于我们示例中名为 app1.exe 的应用程序，会创建一个名为 app1.exe.config 的配置文件。  
   
-2.  向该配置文件添加以下内容：  
+2. 向该配置文件添加以下内容：  
   
     ```xml  
     <configuration>  
@@ -82,4 +82,5 @@ ms.locfileid: "58018742"
  [.NET Framework 2.0 过时列表](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>请参阅
+
 - [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

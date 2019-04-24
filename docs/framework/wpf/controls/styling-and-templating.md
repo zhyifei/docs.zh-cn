@@ -16,14 +16,14 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132285"
 ---
 # <a name="styling-and-templating"></a>样式设置和模板化
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 样式和模板化是指一套功能 （样式、 模板、 触发器和情节提要），以允许开发人员和设计人员可以创建极具视觉表现力的效果，以创建一致的外观对其产品。 尽管开发者和/或设计者可以逐个应用程序地广泛自定义外观，但为了实现应用程序内部和之间的外观维护和共享，需要一个强大的样式设置和模板化模型。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了该模型。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 样式设置和模板化是指一套功能（样式、模板、触发器和情节提要），可使开发者和设计者创建极具视觉表现力的效果，并为其产品创建一致的外观。 尽管开发者和/或设计者可以逐个应用程序地广泛自定义外观，但为了实现应用程序内部和之间的外观维护和共享，需要一个强大的样式设置和模板化模型。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供该模型。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 样式设置模型的另一项功能是将演示与逻辑分离。 这意味着，设计者可以仅使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理应用程序外观，与此同时开发者使用 C# 或 Visual Basic 处理编程逻辑。  
   

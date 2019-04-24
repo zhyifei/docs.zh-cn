@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
 ms.openlocfilehash: 506257c13bbaada98dffa9d3a15c834037c1d971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155228"
 ---
 # <a name="getting-started"></a>入门
@@ -33,5 +33,5 @@ ms.locfileid: "59155228"
 
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [LINQ 简介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
-- [(Visual Basic 中) 的 LINQ 简介](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [LINQ 简介 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

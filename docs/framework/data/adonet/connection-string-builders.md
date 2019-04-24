@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
 ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226880"
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
@@ -83,4 +83,4 @@ initial catalog="AdventureWorks;NewValue=Bad"
 
 - [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)
 - [隐私和数据安全性](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

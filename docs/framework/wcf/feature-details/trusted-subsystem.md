@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319360"
 ---
 # <a name="trusted-subsystem"></a>受信任的子系统
@@ -38,7 +38,7 @@ ms.locfileid: "59319360"
 |完整性|是|  
 |保密性|是|  
 |传输|客户端和受信任子系统服务之间采用 HTTP。<br /><br /> 受信任子系统服务和资源（后端服务）之间采用 NET.TCP。|  
-|绑定|<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|绑定|<xref:System.ServiceModel.WSHttpBinding> 并<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>资源（后端服务）  
   

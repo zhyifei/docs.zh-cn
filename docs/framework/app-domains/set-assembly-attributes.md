@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712595"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59186558"
 ---
 # <a name="setting-assembly-attributes"></a>设置程序集特性
 程序集特性是提供程序集相关信息的值。 特性分为以下几组信息：  
@@ -37,7 +37,7 @@ ms.locfileid: "54712595"
   
 |程序集标识特性|说明|  
 |---------------------------------|-----------------|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|表示程序集所支持的区域性的枚举字段。 程序集还可以指定区域性独立性，表示它包含默认区域性的资源。 **注意：** 运行时将未将区域性特性设置为 null 的任何程序集都视为附属程序集。 此类程序集需遵循附属程序集绑定规则。 有关更多信息，请参阅 [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|表示程序集所支持的区域性的枚举字段。 程序集还可以指定区域性独立性，表示它包含默认区域性的资源。 **注意：** 运行时将任何没有将区域性属性设置为 null 的程序集视为附属程序集。 此类程序集需遵循附属程序集绑定规则。 有关更多信息，请参阅 [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|设置程序集特性（例如是否可以并行运行程序集）的值。|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|以 *主版本*.*次版本*.*内部版本*.*修订版本* 为格式的数值（例如 2.4.0.0）。 公共语言运行时使用此值在强名称程序集中执行绑定操作。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 特性不适用于程序集，则 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性使用由 <xref:System.Reflection.AssemblyVersionAttribute> 特性指定的版本号。|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54712595"
 |<xref:System.Reflection.AssemblyCompanyAttribute>|指定公司名称的字符串值。|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|指定版权信息的字符串值。|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|指定 Win32 文件版本号的字符串值。 通常默认为程序集版本。|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|指定公共语言运行时未使用的版本信息（例如完整的产品版本号）的字符串值。 **注意：** 如果将此特性应用于程序集，可在运行时通过使用 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 属性获得其指定的字符串。 此字符串还用于 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性所提供的路径和注册表项。|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|指定公共语言运行时未使用的版本信息（例如完整的产品版本号）的字符串值。 **注意：** 如果将此属性应用于程序集，可以在运行时使用 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 属性获取它指定的字符串。 此字符串还用于 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 属性所提供的路径和注册表项。|  
 |<xref:System.Reflection.AssemblyProductAttribute>|指定产品信息的字符串值。|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|指定商标信息的字符串值。|  
   
@@ -87,5 +87,6 @@ ms.locfileid: "54712595"
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)
 - [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)

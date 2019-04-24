@@ -10,10 +10,10 @@ helpviewer_keywords:
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
 ms.openlocfilehash: 0e78ed960904baaead8e8d23b51c97cf2edfd4ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189622"
 ---
 # <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>如何：配置 ContextMenuStrip 选中边距和图像边距
@@ -39,4 +39,4 @@ ms.locfileid: "59189622"
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
 - [ToolStrip 控件](toolstrip-control-windows-forms.md)
-- [如何：启用 ContextMenuStrip 控件中的选中边距和图像边距](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [如何：启用选中边距和 ContextMenuStrip 控件中的图像边距](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

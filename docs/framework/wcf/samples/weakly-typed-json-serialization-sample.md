@@ -3,10 +3,10 @@ title: 弱类型 JSON 序列化示例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303682"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱类型 JSON 序列化示例
@@ -58,7 +58,7 @@ ms.locfileid: "59303682"
   
  这可能会很麻烦，尤其是客户端必须处理多种 JSON 对象时。  
   
- 此示例提供的 `JsonObject` 类型引入了以弱类型表示的反序列化的 JSON 对象。 `JsonObject` 依赖于 JSON 对象之间的自然映射和[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]字典和 JSON 阵列之间的映射和[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]数组。 下面的代码演示 `JsonObject` 类型。  
+ 此示例提供的 `JsonObject` 类型引入了以弱类型表示的反序列化的 JSON 对象。 `JsonObject` 依赖于 JSON 对象与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 字典之间的自然映射和 JSON 数组与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数组之间的映射。 下面的代码演示 `JsonObject` 类型。  
   
 ```  
 // Instantiation of JsonObject json omitted  

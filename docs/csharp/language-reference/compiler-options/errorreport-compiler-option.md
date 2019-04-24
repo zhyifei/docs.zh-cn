@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638465"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345087"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport（C# 编译器选项）
 此选项提供向 Microsoft 报告 C# 内部编译错误的简便方法。  
@@ -51,13 +51,13 @@ ms.locfileid: "54638465"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1. 打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2.  单击“生成”属性页。  
+2. 单击“生成”属性页。  
   
-3.  单击 **“高级”** 按钮。  
+3. 单击 **“高级”** 按钮。  
   
-4.  修改“内部编译器错误报告”属性。  
+4. 修改“内部编译器错误报告”属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。  
   

@@ -3,16 +3,16 @@ title: SQL Server 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172765"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本节描述适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 特定的功能和行为。  
   
- <xref:System.Data.SqlClient> 提供的 SQL Server，封装特定于数据库的协议版本的访问权限。 该数据提供程序设计的功能与 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的功能类似。 <xref:System.Data.SqlClient> 包括一个表格格式数据流 (TDS) 分析器以直接与 SQL Server 进行通信。  
+ <xref:System.Data.SqlClient> 提供了对 SQL Server 各版本的访问，而 SQL Server 封装了数据库特定协议。 该数据提供程序设计的功能与 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的功能类似。 <xref:System.Data.SqlClient> 包括一个表格格式数据流 (TDS) 分析器以直接与 SQL Server 进行通信。  
   
 > [!NOTE]
 >  要使用 SQL Server .NET Framework 数据提供程序，应用程序必须引用 <xref:System.Data.SqlClient> 命名空间。  
@@ -46,4 +46,4 @@ ms.locfileid: "59172765"
 - [ADO.NET 中的数据类型映射](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102344"
 ---
 # <a name="graphics"></a>图形
@@ -37,6 +37,6 @@ ms.locfileid: "59102344"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [图形和多媒体](index.md)
-- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
 ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161026"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI 自动化对 DataGrid 控件类型的支持
@@ -27,7 +27,7 @@ ms.locfileid: "59161026"
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
  下表描述了与数据网格控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图，以及每个视图中可包含的内容。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-内容视图|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |DataGrid<br /><br /> <ul><li>标头（0 个、1 个 或 2 个）<br /><br /> <ul><li>HeaderItem（列数或行数）</li></ul></li><li>DataItem（0 个或更多；可采用层次结构的形式构成）</li></ul>|DataGrid<br /><br /> -DataItem (0 或更多; 可以采用层次结构)|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59161026"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有数据网格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event|支持|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|None|  
@@ -98,7 +98,7 @@ ms.locfileid: "59161026"
   
  下面显示了与 List View 控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图和内容视图。 每个自动化元素的控件模式均显示在括号中。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树-内容视图|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 控件视图|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树 - 内容视图|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>DataGrid（Table、Grid、Selection）</li><li>Header<br /><br /> <ul><li>HeaderItem“名称”(Invoke)</li><li>HeaderItem“修改日期” (Invoke)</li><li>HeaderItem“大小” (Invoke)</li></ul></li><li>组"Contoso"(TableItem、 GridItem、 SelectionItem、 表 *、 网格\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid（Table、Grid、Selection）</li><li>组"Contoso"(TableItem、 GridItem、 SelectionItem、 表 *、 网格\*)<br /><br /> <ul><li>DataItem"Accounts Receivable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li><li>DataItem"Accounts Payable.doc"(SelectionItem、 调用 TableItem\*，GridItem\*)</li></ul></li></ul>|  
   

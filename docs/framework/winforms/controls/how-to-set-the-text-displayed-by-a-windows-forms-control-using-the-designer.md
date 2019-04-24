@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
 ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337950"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体控件显示的文本
@@ -27,6 +27,6 @@ Windows 窗体控件通常显示与该控件的主要功能相关的一些文本
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [如何：设置显示的文本的 Windows 窗体控件](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [使用字体和文本](../advanced/using-fonts-and-text.md)
-- [标记单个 Windows 窗体控件并提供它们的快捷方式](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

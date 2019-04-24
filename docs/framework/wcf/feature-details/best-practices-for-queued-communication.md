@@ -6,10 +6,10 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230091"
 ---
 # <a name="best-practices-for-queued-communication"></a>排队通信的最佳做法
@@ -41,7 +41,7 @@ ms.locfileid: "59230091"
 ### <a name="use-of-poison-message-handling"></a>病毒消息处理的使用  
  通过病毒消息处理，可从消息处理失败的状态下恢复。  
   
- 在使用病毒消息处理功能时，请确保将 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 属性设置为适当的值。 将该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Drop> 表示数据丢失。 另一方面，如果该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>，服务主机一旦检测到病毒消息，则被视为出现了错误。 使用 MSMQ 3.0 时，最好使用 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 来避免数据丢失并移出病毒消息。 使用 MSMQ 4.0 时，建议使用 <xref:System.ServiceModel.ReceiveErrorHandling.Move>。 <xref:System.ServiceModel.ReceiveErrorHandling.Move> 将病毒的消息从队列中移除，以便服务可以继续处理新消息。 这样，病毒消息服务就可以单独处理病毒消息。  
+ 在使用病毒消息处理功能时，请确保将 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 属性设置为适当的值。 将该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Drop> 表示数据丢失。 另一方面，如果该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>，服务主机一旦检测到病毒消息，则被视为出现了错误。 使用 MSMQ 3.0 时，最好使用 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 来避免数据丢失并移出病毒消息。 使用 MSMQ 4.0 时，建议使用 <xref:System.ServiceModel.ReceiveErrorHandling.Move>。 <xref:System.ServiceModel.ReceiveErrorHandling.Move> 将病毒消息移出队列，以便服务可以继续处理新消息。 这样，病毒消息服务就可以单独处理病毒消息。  
   
  有关详细信息，请参阅[病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
@@ -85,12 +85,12 @@ ms.locfileid: "59230091"
 
 - [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [在会话中对排队消息进行分组](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
 - [在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
 - [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
 - [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
+- [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [使用消息安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
 - [排队消息处理疑难解答](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

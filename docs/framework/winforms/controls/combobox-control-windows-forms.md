@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227103"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 控件（Windows 窗体）
@@ -24,11 +24,11 @@ Windows 窗体`ComboBox`控件用于显示下拉组合框中的数据。 默认�
  [ComboBox 控件概述](combobox-control-overview-windows-forms.md)  
  说明此控件的本质及其主要功能和属性。  
   
- [如何：在 ComboBox 控件中创建大小可变的文本](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [如何：在组合框控件中创建大小可变的文本](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  演示自定义绘图中的文本`ComboBox`控件。  
   
 ## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.ComboBox> class  
+ <xref:System.Windows.Forms.ComboBox> 类  
  对此类进行描述，并提供指向其所有成员的链接。  
   
 ## <a name="related-sections"></a>相关章节  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341044"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun 对象和 Glyphs 元素简介
@@ -29,7 +29,7 @@ ms.locfileid: "59341044"
   
     -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作为设备打印机语言。  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
   
     -   以前的打印机驱动程序，从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 应用程序输出为固定格式。  
   
@@ -97,4 +97,4 @@ ms.locfileid: "59341044"
 
 - [WPF 中的版式](typography-in-wpf.md)
 - [WPF 中的文档](documents-in-wpf.md)
-- [Text](optimizing-performance-text.md)
+- [文本](optimizing-performance-text.md)

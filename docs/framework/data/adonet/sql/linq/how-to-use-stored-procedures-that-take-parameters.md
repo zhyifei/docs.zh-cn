@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181761"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>如何：使用采用参数的存储过程
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 映射输出参数，以引用参数，并为值类型声明为可以为 null 的参数。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将输出参数映射到引用参数，并且对于值类型，它将参数声明为可以为 null。  
   
  有关如何使用输入的参数中返回的行集的查询的示例，请参阅[如何：返回行集](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)。  
   
@@ -44,4 +44,4 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 - [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [使用可以为 null 的类型](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [可以为 Null 的值类型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [可以为 null 的值类型](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

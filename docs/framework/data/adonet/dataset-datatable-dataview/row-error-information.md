@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
 ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152719"
 ---
 # <a name="row-error-information"></a>行错误信息
@@ -83,4 +83,4 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

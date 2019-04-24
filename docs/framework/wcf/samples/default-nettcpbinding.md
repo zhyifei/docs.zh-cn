@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
 ms.openlocfilehash: 6a546a982b7c000e7fb5304daf7eac95d6da7e92
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313679"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768953"
 ---
 # <a name="default-nettcpbinding"></a>默认 NetTcpBinding
 本示例演示 <xref:System.ServiceModel.NetTcpBinding> 绑定的用法。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在本示例中，服务是自承载服务。 客户端和服务都是控制台应用程序。  

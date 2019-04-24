@@ -13,10 +13,10 @@ ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324768"
 ---
 # <a name="how-to-implement-a-provider"></a>如何：实现提供程序
@@ -63,6 +63,6 @@ ms.locfileid: "59324768"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IObservable%601>
-- [观察者设计模式](../../../docs/standard/events/observer-design-pattern.md)
+- [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)
 - [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [观察程序设计模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [监视程序设计模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)

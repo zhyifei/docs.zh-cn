@@ -10,11 +10,11 @@ helpviewer_keywords:
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
 ms.openlocfilehash: 0c9c1c787138595f725316a580acda9c5d4d43a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61676074"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>处理驱动器、目录和文件 (Visual Basic)
 可以通过 Visual Basic 使用 `My.Computer.FileSystem` 对象处理驱动器、文件夹和文件，这样可以提高性能，并且与诸如 `FileOpen` 和 `Write` 函数（尽管它们仍可用）的传统方法相比更易于使用。 以下各节详细地讨论了这些方法。  

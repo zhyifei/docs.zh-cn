@@ -3,11 +3,11 @@ title: 如何：对工作流和工作流服务启用持久性
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
 ms.openlocfilehash: 6a2a8d73298e14f92f376b97b9637db91532e937
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340147"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772679"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>如何：对工作流和工作流服务启用持久性
 本主题说明如何对工作流和工作流服务启用持久性。  

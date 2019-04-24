@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338067"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>演练：简单对象模型和查询 (Visual Basic)
@@ -91,7 +91,7 @@ ms.locfileid: "59338067"
   
 -   您要指定 `CustomerID` 属性表示数据库中的主键列。  
   
--   您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以然后存储和检索值直接，而不是使用可能包含业务逻辑的公共访问器。  
+-   您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 然后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就可以直接存储和检索值，而不用使用可能包含业务逻辑的公共访问器。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>表示两个数据库列的特性  
   

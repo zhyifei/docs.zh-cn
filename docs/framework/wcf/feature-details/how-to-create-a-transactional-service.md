@@ -3,11 +3,11 @@ title: 如何：创建事务性服务
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
 ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329487"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769653"
 ---
 # <a name="how-to-create-a-transactional-service"></a>如何：创建事务性服务
 本示例演示创建事务性服务和使用客户端启动的事务协调服务操作的各个方面。  

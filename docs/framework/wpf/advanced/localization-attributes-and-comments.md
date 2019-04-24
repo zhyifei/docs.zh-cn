@@ -6,14 +6,14 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301849"
 ---
 # <a name="localization-attributes-and-comments"></a>本地化特性和注释
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释内部是属性，[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]源代码，提供的开发人员能够提供本地化规则和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释包含两个集的信息： 可本地化性特性和任意形式的本地化注释。 可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。 任意形式的注释是应用程序作者希望包含的任何信息。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用于提供本地化规则和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释包含两组信息：可本地化特性和任意形式的本地化注释。 可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。 任意形式的注释是应用程序作者希望包含的任何信息。  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>本地化注释  
@@ -23,7 +23,7 @@ ms.locfileid: "59301849"
   
 2. 在生成过程中，可以在 .proj 文件中指定是将任意形式的本地化注释留在程序集内、去掉部分注释还是去掉所有注释。 去掉的注释放在一个单独的文件中。 可以使用 `LocalizationDirectivesToLocFile` 标记指定你的选项，例如：  
   
-     `<LocalizationDirectivesToLocFile>` *值* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` 值 `</LocalizationDirectivesToLocFile>`  
   
 3. 可以分配的值包括：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "59301849"
   
 ## <a name="see-also"></a>请参阅
 
-- [WPF 的全球化](globalization-for-wpf.md)
+- [WPF 全球化](globalization-for-wpf.md)
 - [使用自动布局创建按钮](how-to-use-automatic-layout-to-create-a-button.md)
 - [使用网格进行自动布局](how-to-use-a-grid-for-automatic-layout.md)
 - [对应用程序进行本地化](how-to-localize-an-application.md)

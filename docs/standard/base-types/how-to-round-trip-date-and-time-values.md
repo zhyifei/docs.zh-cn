@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628183"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59340602"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>如何：往返行程日期和时间值
 在许多应用程序中，日期和时间值旨在明确标识单个时间点。 本主题介绍了如何保存和还原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值以及包含时区信息的日期和时间值，以便还原后的值与保存的值标识的时间相同。  
   
 ### <a name="to-round-trip-a-datetime-value"></a>往返 DateTime 值  
   
-1.  通过调用包含 "o" 格式说明符的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，将 <xref:System.DateTime> 值转换为字符串表示形式。  
+1. 通过调用包含 "o" 格式说明符的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，将 <xref:System.DateTime> 值转换为字符串表示形式。  
   
-2.  将 <xref:System.DateTime> 值的字符串表示形式保存到文件中，或跨进程、应用域或计算机边界传递它。  
+2. 将 <xref:System.DateTime> 值的字符串表示形式保存到文件中，或跨进程、应用域或计算机边界传递它。  
   
-3.  检索表示 <xref:System.DateTime> 值的字符串。  
+3. 检索表示 <xref:System.DateTime> 值的字符串。  
   
-4.  调用 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 `styles` 参数值的形式传递 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。  
+4. 调用 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 `styles` 参数值的形式传递 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。  
   
  下面的示例展示了如何往返 <xref:System.DateTime> 值。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "54628183"
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>往返 DateTimeOffset 值  
   
-1.  通过调用包含 "o" 格式说明符的 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法，将 <xref:System.DateTimeOffset> 值转换为字符串表示形式。  
+1. 通过调用包含 "o" 格式说明符的 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法，将 <xref:System.DateTimeOffset> 值转换为字符串表示形式。  
   
-2.  将 <xref:System.DateTimeOffset> 值的字符串表示形式保存到文件中，或跨进程、应用域或计算机边界传递它。  
+2. 将 <xref:System.DateTimeOffset> 值的字符串表示形式保存到文件中，或跨进程、应用域或计算机边界传递它。  
   
-3.  检索表示 <xref:System.DateTimeOffset> 值的字符串。  
+3. 检索表示 <xref:System.DateTimeOffset> 值的字符串。  
   
-4.  调用 <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 `styles` 参数值的形式传递 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。  
+4. 调用 <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 方法，并以 `styles` 参数值的形式传递 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。  
   
  下面的示例展示了如何往返 <xref:System.DateTimeOffset> 值。  
   
@@ -60,18 +60,18 @@ ms.locfileid: "54628183"
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>往返包含时区信息的日期和时间值的具体步骤  
   
-1.  定义包含两个字段的类或结构。 第一个字段是 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 对象，第二个字段是 <xref:System.TimeZoneInfo> 对象。 下面的示例展示了这种类型的简单版本。  
+1. 定义包含两个字段的类或结构。 第一个字段是 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 对象，第二个字段是 <xref:System.TimeZoneInfo> 对象。 下面的示例展示了这种类型的简单版本。  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  使用 <xref:System.SerializableAttribute> 属性标记类。  
+2. 使用 <xref:System.SerializableAttribute> 属性标记类。  
   
-3.  使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> 方法串行化对象。  
+3. 使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> 方法串行化对象。  
   
-4.  使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> 方法还原对象。  
+4. 使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> 方法还原对象。  
   
-5.  将反串行化的对象强制转换（在 C# 中）或转换（在 Visual Basic 中）为相应类型的对象。  
+5. 将反串行化的对象强制转换（在 C# 中）或转换（在 Visual Basic 中）为相应类型的对象。  
   
  下面的示例展示了如何往返同时存储日期和时间及时区信息的对象。  
   

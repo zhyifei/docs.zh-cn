@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 34d9e1a3747ecf3dffc925d7883599b773dd51f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117425"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure 方法
@@ -60,16 +60,16 @@ HRESULT SetActionOnFailure (
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|X|X||||不可用||  
-|eThrowException|X|X||||不可用||  
-|`eAbortThread`|X|X||||不可用|X|  
-|`eRudeAbortThread`|X|X||||不可用|X|  
-|`eUnloadAppDomain`|X|X||X||不可用|X|  
-|`eRudeUnloadAppDomain`|X|X||X|X|不可用|X|  
-|`eExitProcess`|X|X||X|X|不可用|X|  
-|eFastExitProcess|X|X||X|X|不可用||  
-|`eRudeExitProcess`|X|X|X|X|X|不可用||  
-|`eDisableRuntime`|X|X|X|X|X|不可用||  
+|`eNoAction`|X|X||||不适用||  
+|eThrowException|X|X||||不适用||  
+|`eAbortThread`|X|X||||不适用|X|  
+|`eRudeAbortThread`|X|X||||不适用|X|  
+|`eUnloadAppDomain`|X|X||X||不适用|X|  
+|`eRudeUnloadAppDomain`|X|X||X|X|不适用|X|  
+|`eExitProcess`|X|X||X|X|不适用|X|  
+|eFastExitProcess|X|X||X|X|不适用||  
+|`eRudeExitProcess`|X|X|X|X|X|不适用||  
+|`eDisableRuntime`|X|X|X|X|X|不适用||  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -78,7 +78,7 @@ HRESULT SetActionOnFailure (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

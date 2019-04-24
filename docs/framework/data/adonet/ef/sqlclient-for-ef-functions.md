@@ -3,10 +3,10 @@ title: 用于实体框架函数的 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
 ms.openlocfilehash: 54072576b73b933277d33839fdbb575d420f2286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117770"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>用于实体框架函数的 SqlClient
@@ -32,4 +32,4 @@ ms.locfileid: "59117770"
 ## <a name="see-also"></a>请参阅
 
 - [实体 SQL 引用](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

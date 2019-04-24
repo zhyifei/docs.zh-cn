@@ -6,10 +6,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
 ms.openlocfilehash: a95086645771de61cfc859e34b225992bc16eac9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103924"
 ---
 # <a name="overview-of-graphics"></a>图形概述
@@ -28,7 +28,7 @@ ms.locfileid: "59103924"
   
 -   <xref:System.Drawing.Printing>  
   
- 使用图形设备接口，如[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，可以在屏幕或打印机上显示信息，而无需顾虑特定显示设备的详细信息。 程序员调用由 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 类提供的方法。 这些方法，反过来，对特定的设备驱动程序进行适当的调用。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 隔离应用程序从图形硬件。 它是这种隔离使程序员能够创建独立于设备的应用程序。  
+ 使用图形设备接口，如[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，可以在屏幕或打印机上显示信息，而无需顾虑特定显示设备的详细信息。 程序员调用由 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 类提供的方法。 这些方法，反过来，对特定的设备驱动程序进行适当的调用。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使应用程序与图形硬件隔离。 它是这种隔离使程序员能够创建独立于设备的应用程序。  
   
 ## <a name="see-also"></a>请参阅
 

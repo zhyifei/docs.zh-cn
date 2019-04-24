@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
 ms.openlocfilehash: 392855e3db2ea10c90784a6f9003805b79db74a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230572"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>将数据表添加到数据集中
@@ -35,4 +35,4 @@ ADO.NET 使您能够创建 <xref:System.Data.DataTable> 对象并将其添加到
 ## <a name="see-also"></a>请参阅
 
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

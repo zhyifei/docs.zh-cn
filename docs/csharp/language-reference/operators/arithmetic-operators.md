@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633798"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59301121"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -239,7 +239,7 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
-用户定义类型可以[重载](../keywords/operator.md)一元（`++`、`--`、`+` 和 `-`）和二元（`*`、`/`、`%``+` 和 `-`）算术运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
+用户定义类型可以[重载](../keywords/operator.md)一元（`++`、`--`、`+` 和 `-`）和二元（`*`、`/`、`%`、`+` 和 `-`）算术运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

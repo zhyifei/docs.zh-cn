@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
 ms.openlocfilehash: 1ef3f77e551affaa7e61d2aabf95f10c29275417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111301"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>如何：使用 PointAnimation 针对对象位置进行动画处理
@@ -32,5 +32,5 @@ ms.locfileid: "59111301"
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [动画概述](animation-overview.md)
 - [图形和多媒体](index.md)
-- [图形帮助主题](graphics-how-to-topics.md)
-- [动画和计时帮助主题](animation-and-timing-how-to-topics.md)
+- [图形操作指南主题](graphics-how-to-topics.md)
+- [动画和计时操作指南主题](animation-and-timing-how-to-topics.md)

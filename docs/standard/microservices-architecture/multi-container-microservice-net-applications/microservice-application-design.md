@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 160eba2c7249793592caf13622b01c597d7feec7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674388"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613858"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -92,7 +92,7 @@ ms.locfileid: "57674388"
 ### <a name="additional-resources"></a>其他资源
 
 - **eShopOnContainers GitHub 存储库。参考应用程序的源代码**\
-    [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
+    <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>基于微服务的解决方案的优点
 

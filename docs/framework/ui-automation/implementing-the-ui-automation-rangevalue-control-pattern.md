@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175782"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>实现 UI 自动化 RangeValue 控件模式
@@ -53,7 +53,7 @@ ms.locfileid: "59175782"
   
 |异常类型|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> 一个值，可以是与名为大于<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>或小于<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>。|  
+|<xref:System.ArgumentOutOfRangeException>|使用一个大于<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> 或小于 <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> 的值调用 <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>。|  
   
 ## <a name="see-also"></a>请参阅
 

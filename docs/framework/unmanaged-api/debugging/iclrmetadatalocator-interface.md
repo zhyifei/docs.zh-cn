@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123768"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator 接口
@@ -30,7 +30,7 @@ ms.locfileid: "59123768"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetMetaData 方法](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|从目标进程中检索的图像的元数据。|  
+|[GetMetadata 方法](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|从目标进程中检索的图像的元数据。|  
   
 ## <a name="remarks"></a>备注  
  API 客户端（即调试器）必须针对特定的目标进程实现此接口。 例如，实时进程的实现将不同的内存转储。  
@@ -42,7 +42,7 @@ ms.locfileid: "59123768"
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

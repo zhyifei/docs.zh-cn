@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
 ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188443"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>在 GDI+ 中绘制、定位和克隆图像
@@ -54,5 +54,5 @@ ms.locfileid: "59188443"
 ## <a name="see-also"></a>请参阅
 
 - [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
-- [如何：创建用于绘制的 Graphics 对象](how-to-create-graphics-objects-for-drawing.md)
+- [如何：创建用于绘制图形对象](how-to-create-graphics-objects-for-drawing.md)
 - [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

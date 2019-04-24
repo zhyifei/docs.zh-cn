@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
 ms.openlocfilehash: eed16f6231717119b30003451cef5eb54016678c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318307"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772591"
 ---
 # <a name="message-security-windows"></a>Windows 消息安全
 本示例演示如何将 <xref:System.ServiceModel.WSHttpBinding> 绑定配置为使用具有 Windows 身份验证的消息级安全性。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此示例中，服务由 Internet 信息服务 (IIS) 承载，客户端是一个控制台应用程序 (.exe)。  

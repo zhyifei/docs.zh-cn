@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494351"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336832"
 ---
 # <a name="how-to-start-services"></a>如何：启动服务
 安装服务后，必须启动它。 开始调用服务类上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法通常定义服务将执行的有用工作。 服务启动后，在手动暂停或停止它前，该服务将保持活动状态。  
@@ -27,11 +27,11 @@ ms.locfileid: "54494351"
   
 ### <a name="to-specify-how-a-service-should-start"></a>指定服务的启动方式  
   
-1.  在创建服务后为其添加必要的安装程序。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+1. 在创建服务后为其添加必要的安装程序。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-2.  在设计器中，单击正在使用的服务的服务安装程序。  
+2. 在设计器中，单击正在使用的服务的服务安装程序。  
   
-3.  在“属性”窗口中，将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为以下之一：  
+3. 在“属性”窗口中，将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为以下之一：  
   
     |安装服务|设置此值|  
     |----------------------------------|--------------------|  
@@ -48,15 +48,15 @@ ms.locfileid: "54494351"
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>从“服务器资源管理器”手动启动服务  
   
-1.  在“服务器资源管理器”中，添加所需的服务器（如果尚未列出）。 有关详细信息，请参阅“如何：访问和初始化服务器资源管理器/数据库资源管理器。  
+1. 在“服务器资源管理器”中，添加所需的服务器（如果尚未列出）。 有关详细信息，请参阅“操作说明：访问和初始化服务器资源管理器/数据库资源管理器。  
   
-2.  展开“服务”节点，然后找到要启动的服务。  
+2. 展开“服务”节点，然后找到要启动的服务。  
   
-3.  右键单击该服务的名称，然后单击“启动”。  
+3. 右键单击该服务的名称，然后单击“启动”。  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>从“服务控制管理器”手动启动服务  
   
-1.  执行以下操作之一，打开“服务控制管理器”：  
+1. 执行以下操作之一，打开“服务控制管理器”：  
   
     -   在 Windows XP 和 2000 Professional 中，右键单击桌面上的“我的电脑”，然后单击“管理”。 在出现的对话框中，展开“服务和应用程序”节点。  
   
@@ -69,15 +69,16 @@ ms.locfileid: "54494351"
   
      现在应该可看到在窗口的“服务”部分列出的服务。  
   
-2.  从列表中选择你的服务，右键单击该服务，然后单击“启动”。  
+2. 从列表中选择你的服务，右键单击该服务，然后单击“启动”。  
   
 ### <a name="to-manually-start-a-service-from-code"></a>从代码手动启动服务  
   
-1.  创建 <xref:System.ServiceProcess.ServiceController> 类的实例，并将其配置为与要管理的服务进行交互。  
+1. 创建 <xref:System.ServiceProcess.ServiceController> 类的实例，并将其配置为与要管理的服务进行交互。  
   
-2.  调用 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法以启动该服务。  
+2. 调用 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法以启动该服务。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

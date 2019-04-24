@@ -9,10 +9,10 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305945"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：使用 DataGrid 控件实现验证
@@ -93,7 +93,7 @@ ms.locfileid: "59305945"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Controls.DataGrid>
-- [DataGrid](datagrid.md)
+- [数据网格](datagrid.md)
 - [数据绑定](../data/data-binding-wpf.md)
 - [实现绑定验证](../data/how-to-implement-binding-validation.md)
 - [在自定义对象上实现验证逻辑](../data/how-to-implement-validation-logic-on-custom-objects.md)

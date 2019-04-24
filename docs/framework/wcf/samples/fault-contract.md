@@ -3,10 +3,10 @@ title: 错误协定
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 21c4894b3927b6fdcf9aff16ea07020eeb073977
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317124"
 ---
 # <a name="fault-contract"></a>错误协定
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- 默认情况下，不可预期的异常的详细信息不发送到客户端，以防止服务实现的详细信息泄露出服务的安全边界。 `FaultContract` 提供了一种方法来描述协定中的错误和标记某些类型的异常为适合传输到客户端。 `FaultException<T>` 提供用于将错误发送给使用者的运行时机制。  
+ 默认情况下，不可预期的异常的详细信息不发送到客户端，以防止服务实现的详细信息泄露出服务的安全边界。 `FaultContract` 提供一种方法来描述协定中的故障并将某些类型的异常标记为适合传输到客户端。 `FaultException<T>` 提供了用于向使用者发送故障的运行时机制。  
   
  但是，在调试时查看服务失败的内部详细信息很有用。 若要关闭上述安全行为，您可以指示在发送到客户端的错误中必须包括服务器上每个未处理的异常的详细信息。 这是通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> 设置为 `true` 来完成的。 你可以在代码中或在配置中设置它，如下面的示例所示。  
   

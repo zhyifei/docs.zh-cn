@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321544"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>如何：使用 WIF 跟踪调试声明感知应用程序和服务
@@ -108,4 +108,4 @@ ms.locfileid: "59321544"
   
 ## <a name="related-items"></a>相关项  
   
--   [使用服务跟踪查看器查看相关跟踪和进行故障诊断](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+-   [使用服务跟踪查看器查看相关跟踪和进行故障排除](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

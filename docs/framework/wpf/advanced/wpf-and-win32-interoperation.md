@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314407"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互操作
-本主题概述如何互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用于创建应用程序的丰富环境。 但是，如果对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码投入很大，重复使用部分此代码可能更有效。  
+本主题概述如何互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，如果对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码投入很大，重复使用部分此代码可能更有效。  
 
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>WPF 和 Win32 互操作基础知识  
@@ -29,7 +29,7 @@ ms.locfileid: "59314407"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 互操作项目  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2s托管的代码中，但大多数现有[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程序编写的非托管[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]。en无法从真正的非托管程序调用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。n但是，通过使用 [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] 编译器的 `/clr` 选项，可创建托管与非托管混合的程序，在此程序中可无缝混合托管和非托管 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 调用。  
+ 虽然 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 为托管代码，但大多数现有 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程序是以非托管 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 编写而成。  无法从真正的非托管程序调用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 但是，通过使用 [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] 编译器的 `/clr` 选项，可创建托管与非托管混合的程序，在此程序中可无缝混合托管和非托管 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 调用。  
   
  存在的一个项目级问题是无法将 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件编译到 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 项目中。  可通过一些项目分离技术对此进行弥补。  
   
@@ -159,5 +159,5 @@ ms.locfileid: "59314407"
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [演练：在 WPF 中承载 Win32 控件](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [演练：在 Win32 中承载 WPF 内容](walkthrough-hosting-wpf-content-in-win32.md)
+- [演练：中承载 Win32 控件在 WPF 中](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [演练：Win32 中承载 WPF 内容](walkthrough-hosting-wpf-content-in-win32.md)

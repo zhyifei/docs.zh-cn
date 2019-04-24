@@ -8,11 +8,11 @@ ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7fad67c1a3c53cd83dec6bfa161333b5e20ab4c4
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644665"
 ---
 # <a name="thread-safe-collections"></a>线程安全集合
 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 引入了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间，其中包含多个线程安全且可缩放的集合类。 多个线程可以安全高效地从这些集合添加或删除项，而无需在用户代码中进行其他同步。 编写新代码时，只要将多个线程同时写入到集合时，就使用并发集合类。 如果仅从共享集合进行读取，则可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的类。 建议不要使用 1.0 集合类，除非需要定位 .NET Framework 1.1 或更低版本运行时。  

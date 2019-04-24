@@ -17,14 +17,14 @@ ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338574"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：将 TraceSource 和筛选器与跟踪侦听器一起使用
-.NET Framework 版本 2.0 的新功能之一是增强型的跟踪系统。 基本前提不变：跟踪消息通过交换机发送到侦听器，侦听器将数据报告给相关联的输出介质。 2.0 版的主要区别是，可以通过 <xref:System.Diagnostics.TraceSource> 类的实例启动跟踪。 <xref:System.Diagnostics.TraceSource> 旨在充当增强型的跟踪系统，可用来代替较旧的静态方法<xref:System.Diagnostics.Trace>和<xref:System.Diagnostics.Debug>跟踪类。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类仍存在，但建议使用 <xref:System.Diagnostics.TraceSource> 类进行跟踪。  
+.NET Framework 版本 2.0 的新功能之一是增强型的跟踪系统。 基本前提不变：跟踪消息通过交换机发送到侦听器，侦听器将数据报告给相关联的输出介质。 2.0 版的主要区别是，可以通过 <xref:System.Diagnostics.TraceSource> 类的实例启动跟踪。 <xref:System.Diagnostics.TraceSource> 用作增强型跟踪系统，并可用来代替较旧的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 跟踪类的静态方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类仍存在，但建议使用 <xref:System.Diagnostics.TraceSource> 类进行跟踪。  
   
  本主题描述如何将 <xref:System.Diagnostics.TraceSource> 与应用程序配置文件结合使用。  可在不使用配置文件的情况下使用 <xref:System.Diagnostics.TraceSource> 进行跟踪，但是不建议这样做。 无需配置文件的跟踪信息，请参阅[如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)。  
   

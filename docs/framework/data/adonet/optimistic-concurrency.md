@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
 ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126212"
 ---
 # <a name="optimistic-concurrency"></a>开放式并发
@@ -212,4 +212,4 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 - [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
 - [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

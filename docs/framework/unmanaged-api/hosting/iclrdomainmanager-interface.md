@@ -15,10 +15,10 @@ ms.assetid: f08b2390-d872-4521-a815-e9c237c4c45d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce53149b92ca40ad50ecbefaf4701940e8567ae5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103917"
 ---
 # <a name="iclrdomainmanager-interface"></a>ICLRDomainManager 接口
@@ -41,9 +41,9 @@ ms.locfileid: "59103917"
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

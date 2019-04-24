@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344918"
 ---
 # <a name="xaml-resources"></a>XAML 资源
@@ -128,7 +128,7 @@ ms.locfileid: "59344918"
   
 -   要设置的属性必须是属性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 属性必须为后盾<xref:System.Windows.DependencyProperty>。  
   
--   引用的是内的某个值<xref:System.Windows.Style><xref:System.Windows.Setter>。  
+-   中的值是引用<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
   
 -   要设置的属性必须是属性上<xref:System.Windows.Freezable>提供的值作为<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>属性，或<xref:System.Windows.Setter>值。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59344918"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 该样式实际上有一个键： 隐式键`typeof(`<xref:System.Windows.Controls.Button>`)`。 在标记中，可以指定<xref:System.Windows.Style.TargetType%2A>直接作为类型名称 (或者可以根据需要使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 若要返回<xref:System.Type>。  
+ 该样式实际上有一个键： 隐式键`typeof(` <xref:System.Windows.Controls.Button> `)`。 在标记中，可以指定<xref:System.Windows.Style.TargetType%2A>直接作为类型名称 (或者可以根据需要使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 若要返回<xref:System.Type>。  
   
  通过使用的默认主题样式机制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，为运行时样式的应用样式<xref:System.Windows.Controls.Button>页上，即使<xref:System.Windows.Controls.Button>本身不会尝试指定其<xref:System.Windows.FrameworkElement.Style%2A>属性或特定资源引用的样式。 比主题字典样式，使用相同键的主题字典样式位于查找序列中先前找到的页中定义的样式。 您可能只需指定`<Button>Hello</Button>`页上，使用定义的样式中的任意位置<xref:System.Windows.Style.TargetType%2A>的`Button`会应用于该按钮。 如果需要，可以仍显式键使用类型值与相同的样式<xref:System.Windows.Style.TargetType%2A>、 清楚起见，在您的标记，但这是可选的。  
   

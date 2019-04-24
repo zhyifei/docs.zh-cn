@@ -5,29 +5,29 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: e4b77bf0a44ce58db632e0c58982dba7178f9272
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203423"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303331"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：实现和调用自定义扩展方法（C# 编程指南）
 本主题将介绍如何为任意 .NET 类型实现自定义扩展方法。 客户端代码可以通过以下方法使用扩展方法，添加包含这些扩展方法的 DLL 的引用，以及添加 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令，该指令指定在其中定义扩展方法的命名空间。  
   
 ## <a name="to-define-and-call-the-extension-method"></a>定义和调用扩展方法  
   
-1.  定义包含扩展方法的静态[类](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
+1. 定义包含扩展方法的静态[类](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
      此类必须对客户端代码可见。 有关可访问性规则的详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
-2.  将扩展方法实现为静态方法，并且使其可见性至少与所在类的可见性相同。  
+2. 将扩展方法实现为静态方法，并且使其可见性至少与所在类的可见性相同。  
   
-3.  此方法的第一个参数指定方法所操作的类型；此参数前面必须加上 [this](../../../csharp/language-reference/keywords/this.md) 修饰符。  
+3. 此方法的第一个参数指定方法所操作的类型；此参数前面必须加上 [this](../../../csharp/language-reference/keywords/this.md) 修饰符。  
   
-4.  在调用代码中，添加 `using` 指令，用于指定包含扩展方法类的[命名空间](../../../csharp/language-reference/keywords/namespace.md)。  
+4. 在调用代码中，添加 `using` 指令，用于指定包含扩展方法类的[命名空间](../../../csharp/language-reference/keywords/namespace.md)。  
   
-5.  和调用类型的实例方法那样调用这些方法。  
+5. 和调用类型的实例方法那样调用这些方法。  
   
      请注意，第一个参数并不是由调用代码指定，因为它表示要在其上应用运算符的类型，并且编译器已经知道对象的类型。 你只需通过 `n` 提供形参 2 的实参。  
   

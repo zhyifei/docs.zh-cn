@@ -3,10 +3,10 @@ title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
 ms.openlocfilehash: 6ae4712fb280418ad8cf17cd68a7bbcd9cf3b8a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335649"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
@@ -26,7 +26,7 @@ CreateRef(entityset_identifier, row_typed_expression)
  对应于实体类型的键属性的行类型化表达式。  
   
 ## <a name="remarks"></a>备注  
- `row_typed_expression` 必须在结构上等效的实体的键类型。 即，其字段的数目和类型以及顺序必须与实体键相同。  
+ `row_typed_expression` 必须在结构上等效于实体的键类型。 即，其字段的数目和类型以及顺序必须与实体键相同。  
   
  在下面的示例中，Orders 和 BadOrders 都是类型 Order 的实体集，而假定 Id 为 Order 的单个键属性。 该示例演示如何生成对 BadOrders 中的实体的引用。 请注意，该引用可以是无关联引用。  即，该引用可以不真正标识特定实体。 在这种情况下，对该引用的 `DEREF` 操作会返回 Null。  
   

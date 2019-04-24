@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345425"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 
@@ -110,7 +110,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
 [!code-vb[Formatting.DateAndTime.Custom#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#1)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ddSpecifier"></a>“dd”自定义格式说明符
 
@@ -121,7 +121,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
 [!code-vb[Formatting.DateAndTime.Custom#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="dddSpecifier"></a>“ddd”自定义格式说明符
 
@@ -132,7 +132,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
 [!code-vb[Formatting.DateAndTime.Custom#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ddddSpecifier"></a>“dddd”自定义格式说明符
 
@@ -143,7 +143,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
 [!code-vb[Formatting.DateAndTime.Custom#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="fSpecifier"></a>“f”自定义格式说明符
 
@@ -158,7 +158,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
 [!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ffSpecifier"></a>“ff”自定义格式说明符
 
@@ -169,7 +169,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
 [!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="fffSpecifier"></a>“fff”自定义格式说明符
 
@@ -180,7 +180,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
 [!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ffffSpecifier"></a>“ffff”自定义格式说明符
 
@@ -188,7 +188,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 版和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="fffffSpecifier"></a>“fffff”自定义格式说明符
 
@@ -196,7 +196,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的十万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ffffffSpecifier"></a>“ffffff”自定义格式说明符
 
@@ -204,7 +204,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的百万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="fffffffSpecifier"></a>“fffffff”自定义格式说明符
 
@@ -212,7 +212,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的千万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="F_Specifier"></a>“F”自定义格式说明符
 
@@ -227,7 +227,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
 [!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="FF_Specifier"></a>“FF”自定义格式说明符
 
@@ -238,7 +238,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
 [!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="FFF_Specifier"></a>“FFF”自定义格式说明符
 
@@ -249,7 +249,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
 [!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="FFFF_Specifier"></a>“FFFF”自定义格式说明符
 
@@ -257,7 +257,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="FFFFF_Specifier"></a>“FFFFF”自定义格式说明符
 
@@ -265,7 +265,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的十万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="FFFFFF_Specifier"></a>“FFFFFF”自定义格式说明符
 
@@ -273,7 +273,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的百万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="FFFFFFF_Specifier"></a>“FFFFFFF”自定义格式说明符
 
@@ -281,7 +281,7 @@ ms.locfileid: "58838568"
 
 尽管可以显示时间值的秒部分的千万分之几秒，但是该值可能并没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 和更高版本以及 Windows Vista 操作系统上，时钟的分辨率大约为 10-15 毫秒。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="gSpecifier"></a>“g”或“gg”自定义格式说明符
 
@@ -294,7 +294,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#6](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
 [!code-vb[Formatting.DateAndTime.Custom#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#6)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="hSpecifier"></a>“h”自定义格式说明符
 
@@ -307,7 +307,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
 [!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="hhSpecifier"></a>“hh”自定义格式说明符
 
@@ -318,7 +318,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
 [!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="H_Specifier"></a>“H”自定义格式说明符
 
@@ -331,7 +331,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#9](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
 [!code-vb[Formatting.DateAndTime.Custom#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#9)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="HH_Specifier"></a>“HH”自定义格式说明符
 
@@ -342,7 +342,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#10](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
 [!code-vb[Formatting.DateAndTime.Custom#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#10)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="KSpecifier"></a>“K”自定义格式说明符
 
@@ -363,7 +363,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#12](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#12)]
 [!code-vb[Formatting.DateAndTime.Custom#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#12)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="mSpecifier"></a>“m”自定义格式说明符
 
@@ -376,7 +376,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
 [!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="mmSpecifier"></a>“mm”自定义格式说明符
 
@@ -387,7 +387,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
 [!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="M_Specifier"></a>“M”自定义格式说明符
 
@@ -400,7 +400,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[返回表首](#table) 
+[返回到表](#table) 
 
 ## <a name="MM_Specifier"></a>“MM”自定义格式说明符
 
@@ -411,7 +411,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
 [!code-vb[Formatting.DateAndTime.Custom#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="MMM_Specifier"></a>“MMM”自定义格式说明符
 
@@ -422,7 +422,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
 [!code-vb[Formatting.DateAndTime.Custom#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="MMMM_Specifier"></a>“MMMM”自定义格式说明符
 
@@ -433,7 +433,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
 [!code-vb[Formatting.DateAndTime.Custom#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="sSpecifier"></a>“s”自定义格式说明符
 
@@ -446,7 +446,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
 [!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ssSpecifier"></a>“ss”自定义格式说明符
 
@@ -457,7 +457,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
 [!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="tSpecifier"></a>“t”自定义格式说明符
 
@@ -470,7 +470,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
 [!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ttSpecifier"></a>“tt”自定义格式说明符
 
@@ -483,7 +483,7 @@ ms.locfileid: "58838568"
 [!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
 [!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="ySpecifier"></a>“y”自定义格式说明符
 
@@ -496,7 +496,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="yySpecifier"></a>“yy”自定义格式说明符
 
@@ -512,7 +512,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="yyySpecifier"></a>“yyy”自定义格式说明符
 
@@ -526,7 +526,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="yyyySpecifier"></a>“yyyy”自定义格式说明符
 
@@ -540,7 +540,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="yyyyySpecifier"></a>“yyyyy”自定义格式说明符
 
@@ -553,7 +553,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="zSpecifier"></a>“z”自定义格式说明符
 
@@ -570,7 +570,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#14](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
 [!code-vb[Formatting.DateAndTime.Custom#14](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="zzSpecifier"></a>“zz”自定义格式说明符
 
@@ -585,7 +585,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#14](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
 [!code-vb[Formatting.DateAndTime.Custom#14](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="zzzSpecifier"></a>“zzz”自定义格式说明符
 
@@ -600,7 +600,7 @@ ms.locfileid: "58838568"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#14](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
 [!code-vb[Formatting.DateAndTime.Custom#14](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="timeSeparator"></a>“:”自定义格式说明符
 “:”自定义格式说明符表示时间分隔符，它用于区分小时、分钟和秒。 相应的本地化时间分隔符通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 属性进行检索。
@@ -610,7 +610,7 @@ ms.locfileid: "58838568"
 
 如果使用“:”格式说明符而没有其他自定义格式说明符，则将该说明符解释为标准日期和时间格式说明符，并引发 <xref:System.FormatException>。 有关使用单个格式说明符的更多信息，请参阅本文后面的[使用单个自定义格式说明符](#UsingSingleSpecifiers)。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="dateSeparator"></a>“/”自定义格式说明符
 
@@ -621,7 +621,7 @@ ms.locfileid: "58838568"
 
 如果使用“/”格式说明符而没有其他自定义格式说明符，则将该说明符解释为标准日期和时间格式说明符，并引发 <xref:System.FormatException>。 有关使用单个格式说明符的更多信息，请参阅本文后面的[使用单个自定义格式说明符](#UsingSingleSpecifiers)。
 
-[返回表首](#table)
+[返回到表](#table)
 
 ## <a name="Literals"></a>字符文本
 
@@ -632,7 +632,7 @@ ms.locfileid: "58838568"
 |F|H|K|M|d|
 |f|g|h|m|秒|
 |T|y|z|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 所有其他字符始终解释为字符文本，在格式设置操作中，将按原样包含在结果字符串中。  在分析操作中，这些字符必须与输入字符串中的字符完全匹配；比较时区分大小写。
 

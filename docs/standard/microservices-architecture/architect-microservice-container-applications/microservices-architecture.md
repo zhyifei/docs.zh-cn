@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6a3262c65fb221f3b9e058a581b5dc6bfed92076
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 10d00ddc6255e6897bed3e826becff9aa8397e4e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465186"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611896"
 ---
 # <a name="microservices-architecture"></a>微服务体系结构
 
@@ -46,19 +46,19 @@ ms.locfileid: "58465186"
 ## <a name="additional-resources"></a>其他资源
 
 - **Mark Russinovich。微服务：云推动的应用程序革命 \**
-  [https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+  <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
 - **Martin Fowler。Microservices** \（微服务）
-  [https://www.martinfowler.com/articles/microservices.html](https://www.martinfowler.com/articles/microservices.html)
+  <https://www.martinfowler.com/articles/microservices.html>
 
 - **Martin Fowler。Microservice Prerequisites** \（微服务先决条件）
-  [https://martinfowler.com/bliki/MicroservicePrerequisites.html](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
 - **Jimmy Nilsson。Chunk Cloud Computing** \（区块云计算）
-  [https://www.infoq.com/articles/CCC-Jimmy-Nilsson](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+  <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
 - **Cesar de la Torre。Containerized Docker Application Lifecycle with Microsoft Platform and Tools**（使用 Microsoft 平台和工具的容器化 Docker 应用程序生命周期）（可下载的电子书）\
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
 >[上一页](service-oriented-architecture.md)

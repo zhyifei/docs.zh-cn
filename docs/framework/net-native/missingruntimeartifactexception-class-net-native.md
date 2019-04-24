@@ -5,14 +5,14 @@ ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ba528f8545f0781f15e4479cbef0b80feeab46d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116839"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>缺少运行时间项目异常类 (.NET Native)
-**仅适用于 Windows 10、[!INCLUDE[net_native](../../../includes/net-native-md.md)] 的用于 Windows 应用的 .NET**  
+**适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
   
  当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。  
   
@@ -82,5 +82,5 @@ ms.locfileid: "59116839"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

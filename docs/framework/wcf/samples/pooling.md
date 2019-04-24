@@ -3,10 +3,10 @@ title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
 ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307205"
 ---
 # <a name="pooling"></a>Pooling
@@ -24,11 +24,11 @@ ms.locfileid: "59307205"
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
  在 WCF 中，调度程序创建服务类使用的实例<xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>，它可以实现<xref:System.ServiceModel.Dispatcher.IInstanceProvider>接口。 此接口有三个方法：  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>:当消息到达调度程序调用<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>方法来创建服务类来处理该消息的实例。 调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall>，则创建一个新的服务类实例来处理到达的每个消息，因此每当消息到达时，都将调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>。  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>：当消息到达调度程序调用<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>方法来创建服务类来处理该消息的实例。 调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall>，则创建一个新的服务类实例来处理到达的每个消息，因此每当消息到达时，都将调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>:但这没有 Message 自变量时调用，这与在前面的方法完全相同。  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>：但这没有 Message 自变量时调用，这与在前面的方法完全相同。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>:当服务实例的生存期过后，调度程序调用<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>方法。 与 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法相同，调用此方法的频率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性确定的。  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>：当服务实例的生存期过后，调度程序调用<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>方法。 与 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法相同，调用此方法的频率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性确定的。  
   
 ## <a name="the-object-pool"></a>对象池  
  自定义 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 实现为服务提供所需的对象池语义。 因此，此示例有一个为池提供 `ObjectPoolingInstanceProvider` 自定义实现的 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 类型。 当 `Dispatcher` 调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法时，自定义实现将在内存池中寻找现有对象，而不是创建新的实例。 如果找到一个对象，则返回该对象。 否则，将创建新对象。 下面的示例代码演示了 `GetInstance` 的实现。  
@@ -103,9 +103,9 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  接口 <xref:System.ServiceModel.Description.IServiceBehavior> 包含三个方法 -- <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法用于确保该行为可以应用于服务。 在本示例中，此实现确保不使用 <xref:System.ServiceModel.InstanceContextMode.Single> 配置服务。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法用于配置服务的绑定。 它不是本方案所必需的。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 用于配置服务的调度程序。 通过 WCF 来调用此方法时<xref:System.ServiceModel.ServiceHost>正在初始化。 下列参数将传递到此方法：  
   
--   `Description`:此自变量提供整个服务的服务说明。 它可用于检查有关服务的终结点、协定、绑定和其他数据的说明数据。  
+-   `Description`：此自变量提供整个服务的服务说明。 它可用于检查有关服务的终结点、协定、绑定和其他数据的说明数据。  
   
--   `ServiceHostBase`:此自变量提供<xref:System.ServiceModel.ServiceHostBase>，当前正在初始化。  
+-   `ServiceHostBase`：此自变量提供<xref:System.ServiceModel.ServiceHostBase>，当前正在初始化。  
   
  在自定义 <xref:System.ServiceModel.Description.IServiceBehavior> 实现中，会实例化一个新的 `ObjectPoolingInstanceProvider` 实例，并将该实例分配到 ServiceHostBase 的每个 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 的 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 属性。  
   

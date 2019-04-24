@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321025"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>演练：创作复合控件使用 Visual c#\#
@@ -30,7 +30,7 @@ ms.locfileid: "59321025"
   
 2. 从 Visual C# 项目的列表中选择**Windows 窗体控件库**项目模板中，键入`ctlClockLib`中**名称**框中，然后依次**确定**。  
   
-     默认情况下，项目名称 `ctlClockLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集提供名为的组件`ctlClock`，可以指定您`ctlClock`组件使用 `ctlClockLib.ctlClock.`  
+     默认情况下，项目名称 `ctlClockLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ctlClock` 的组件，则可以使用 `ctlClockLib.ctlClock.` 指定 `ctlClock` 组件  
   
 3. 在解决方案资源管理器中，右键单击“UserControl1.cs”，然后单击“重命名”。 将文件名更改为 `ctlClock.cs`。 当系统询问是否重命名对代码元素“UserControl1”的所有引用时，单击“是”按钮。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59321025"
     |属性|更改为|  
     |--------------|---------------|  
     |**名称**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**文本**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -248,7 +248,7 @@ ms.locfileid: "59321025"
     |属性|设置|  
     |--------------|-------------|  
     |**名称**|`lblAlarm`|  
-    |**Text**|**警报 ！**|  
+    |**文本**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**可见**|`false`|  
   
@@ -317,10 +317,10 @@ ms.locfileid: "59321025"
   
 2. 将按钮添加到控件。 按如下方式设置该按钮的属性。  
   
-    |属性|“值”|  
+    |属性|值|  
     |--------------|-----------|  
     |**名称**|`btnAlarmOff`|  
-    |**Text**|**禁用警报**|  
+    |**文本**|**禁用警报**|  
   
 3. 在设计器中，双击“btnAlarmOff”控件。  
   
@@ -367,7 +367,7 @@ ms.locfileid: "59321025"
   
     |控件|属性|“值”|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
+    |`label1`|**文本**|`(blank space)`|  
     ||**名称**|`lblTest`|  
     |`dateTimePicker1`|**名称**|`dtpTest`|  
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -407,5 +407,5 @@ ms.locfileid: "59321025"
 ## <a name="see-also"></a>请参阅
 
 - [各种自定义控件](varieties-of-custom-controls.md)
-- [如何：在“选择工具箱项”对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [演练：使用 Visual C# 从 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [如何：中显示控件选择工具箱项对话框](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [演练：从视觉对象的 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

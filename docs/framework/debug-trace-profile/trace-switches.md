@@ -15,10 +15,10 @@ ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132660"
 ---
 # <a name="trace-switches"></a>跟踪开关
@@ -86,5 +86,5 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="see-also"></a>请参阅
 
 - [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

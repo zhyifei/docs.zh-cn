@@ -3,11 +3,11 @@ title: 使用 IPv6 和 Teredo 的 NAT 遍历
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170752"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768171"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 遍历
 增强了功能：为网络地址转换 (NAT) 遍历提供支持。 这些更改旨在用于 IPv6 和 Teredo，但也同样适用于其他 IP 隧道技术。 这些增强功能会影响 <xref:System.Net> 和相关命名空间中的类。  

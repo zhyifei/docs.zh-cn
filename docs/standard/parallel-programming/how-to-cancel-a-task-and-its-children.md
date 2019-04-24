@@ -11,10 +11,10 @@ ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324469"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>如何：取消任务及其子级
@@ -45,5 +45,5 @@ ms.locfileid: "59324469"
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
-- [已附加和已分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
+- [附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
 - [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

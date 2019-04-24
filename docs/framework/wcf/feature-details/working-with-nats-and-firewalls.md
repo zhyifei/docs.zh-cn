@@ -6,10 +6,10 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296337"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 和防火墙
@@ -32,7 +32,7 @@ ms.locfileid: "59296337"
  家庭用户防火墙的常见配置是禁止传入连接，除非以前与该计算机之间建立过传出连接。 企业用户防火墙的常见配置是在所有端口上禁止传入连接，除非该连接来自专门标识的组。 这方面的一个示例是这样一个防火墙，它在除端口 80 和 443 以外的所有端口上禁止连接，以便提供 HTTP 和 HTTPS 服务。 家庭和企业用户都存在托管防火墙，它允许计算机上受信任的用户或进程更改防火墙配置。 对于没有用于控制网络使用的公司策略的家庭用户而言，托管防火墙更为常见。  
   
 ## <a name="using-teredo"></a>使用 Teredo  
- Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 WCF 中的 teredo 支持要求在操作系统中启用 IPv6 和 Teredo 支持。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更高版本操作系统支持 Teredo。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 和更高版本操作系统支持 IPv6 默认情况下，并仅需要用户启用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]要求用户在启用 IPv6 和 Teredo。 有关详细信息，请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=87571)。  
+ Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 WCF 中的 teredo 支持要求在操作系统中启用 IPv6 和 Teredo 支持。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更高版本的操作系统支持 Teredo。 默认情况下，[!INCLUDE[wv](../../../../includes/wv-md.md)] 和更高版本的操作系统支持 IPv6，只要求用户启用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 要求用户同时启用 IPv6 和 Teredo。 有关详细信息，请参阅[Teredo 概述](https://go.microsoft.com/fwlink/?LinkId=87571)。  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>选择传输协议和消息交换模式  
  选择传输协议和 MEP 的过程分为三步：  

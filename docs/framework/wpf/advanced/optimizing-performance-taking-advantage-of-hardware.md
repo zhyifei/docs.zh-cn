@@ -10,10 +10,10 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163171"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>优化性能：利用硬件
@@ -59,9 +59,9 @@ ms.locfileid: "59163171"
 - [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
 - [规划应用程序性能](planning-for-application-performance.md)
 - [布局和示例](optimizing-performance-layout-and-design.md)
-- [二维图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
 - [对象行为](optimizing-performance-object-behavior.md)
 - [应用程序资源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文本](optimizing-performance-text.md)
 - [数据绑定](optimizing-performance-data-binding.md)
 - [其他性能建议](optimizing-performance-other-recommendations.md)

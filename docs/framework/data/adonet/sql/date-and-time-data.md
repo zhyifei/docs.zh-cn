@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344165"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
@@ -21,7 +21,7 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
   
  **SQL Server 联机丛书**  
   
-1. [Using Date and Time Data（使用日期和时间数据）](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [使用日期和时间数据](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 中引入的日期/时间数据类型  
  下表描述了新的日期和时间数据类型。  
@@ -99,7 +99,7 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
 >  小于 0 或大于等于 24 小时的时间值将引发 <xref:System.ArgumentException>。  
   
 ### <a name="creating-parameters"></a>创建参数  
- 您可以创建<xref:System.Data.SqlClient.SqlParameter>对象使用其构造函数，或将其添加到<xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>集合通过调用`Add`方法的<xref:System.Data.SqlClient.SqlParameterCollection>。 `Add` 方法将采用构造函数自变量或现有的参数对象用作输入。  
+ 可以通过以下方法来创建 <xref:System.Data.SqlClient.SqlParameter> 对象：使用相应的构造函数；或者通过调用 <xref:System.Data.SqlClient.SqlCommand> 的 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 方法将其添加到 `Add`<xref:System.Data.SqlClient.SqlParameterCollection> 集合。 `Add` 方法将采用构造函数自变量或现有的参数对象用作输入。  
   
  本主题中的以下各部分提供了如何指定日期和时间参数的示例。 使用参数的其他示例，请参阅[配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)并[DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)。  
   
@@ -235,13 +235,13 @@ command.Parameters.AddWithValue( _
   
 |主题|描述|  
 |-----------|-----------------|  
-|[Date and Time Data Types and Functions (Transact-SQL)（日期和时间数据类型和函数 (Transact-SQL)）](https://go.microsoft.com/fwlink/?LinkId=98360)|概述所有 Transact-SQL 日期和时间数据类型和函数。|  
-|[Using Date and Time Data（使用日期和时间数据）](https://go.microsoft.com/fwlink/?LinkId=98361)|提供有关日期和时间数据类型和函数的信息及相应的用法示例。|  
-|[Data Types (Transact-SQL)（数据类型 (Transact-SQL)）](https://go.microsoft.com/fwlink/?LinkId=98362)|介绍 SQL Server 2008 中的系统数据类型。|  
+|[日期和时间数据类型及函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|概述所有 Transact-SQL 日期和时间数据类型和函数。|  
+|[使用日期和时间数据](https://go.microsoft.com/fwlink/?LinkId=98361)|提供有关日期和时间数据类型和函数的信息及相应的用法示例。|  
+|[数据类型 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|介绍 SQL Server 2008 中的系统数据类型。|  
   
 ## <a name="see-also"></a>请参阅
 
 - [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

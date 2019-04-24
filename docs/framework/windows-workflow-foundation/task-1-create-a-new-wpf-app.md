@@ -3,10 +3,10 @@ title: 任务 1：创建一个新的 Windows Presentation Foundation 应用程�
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320374"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>任务 1：创建一个新的 Windows Presentation Foundation 应用程序
@@ -44,5 +44,5 @@ ms.locfileid: "59320374"
   
 ## <a name="see-also"></a>请参阅
 
-- [重新承载工作流设计器](rehosting-the-workflow-designer.md)
-- [任务 2：承载工作流设计器](task-2-host-the-workflow-designer.md)
+- [重新托管工作流设计器](rehosting-the-workflow-designer.md)
+- [任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)

@@ -3,10 +3,10 @@ title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
 ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191739"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
@@ -58,7 +58,7 @@ ms.locfileid: "59191739"
   
  可以使用 `writeEncoding` 属性通过写字符编码来配置绑定元素。 所提供的 <xref:System.Text.Encoding> 值指定 JSON 与文本 XML 情况的编写行为。 在读取时，将理解任何有效的消息编码与文本编码。  
   
- `maxReadPoolSize` 和`maxWritePoolSize`还可用于设置读取器和编写器，并将其分别分配的最大数目。 默认情况下，将分配 64 个读取器和 16 个编写器。  
+ 属性 `maxReadPoolSize` 与 `maxWritePoolSize` 也可以分别用来设置要分配的读取器和编写器最大数目。 默认情况下，将分配 64 个读取器和 16 个编写器。  
   
  此外可使用设置的默认复杂性约束[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))元素以防止某种类型的拒绝服务 (DOS) 攻击攻击该试图利用消息复杂性来占用终结点处理资源。  
   

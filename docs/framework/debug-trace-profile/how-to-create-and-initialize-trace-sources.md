@@ -12,14 +12,14 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339432"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>如何：创建和初始化跟踪源
-<xref:System.Diagnostics.TraceSource> 类由应用程序用来生成可与应用程序相关联的跟踪。 <xref:System.Diagnostics.TraceSource> 提供使你能够轻松地跟踪事件，跟踪数据和发出信息跟踪的跟踪方法。 你可以使用或不使用配置文件来创建和初始化 <xref:System.Diagnostics.TraceSource> 的跟踪输出。 本主题提供这两种选项的说明。 但是，建议你使用配置文件，以便于重新配置在运行时由跟踪源生成的跟踪。  
+<xref:System.Diagnostics.TraceSource> 类由应用程序用来生成可与应用程序相关联的跟踪。 <xref:System.Diagnostics.TraceSource> 提供了一些跟踪方法，利用这些跟踪方法，你可以方便地跟踪事件，跟踪数据和发出信息跟踪。 你可以使用或不使用配置文件来创建和初始化 <xref:System.Diagnostics.TraceSource> 的跟踪输出。 本主题提供这两种选项的说明。 但是，建议你使用配置文件，以便于重新配置在运行时由跟踪源生成的跟踪。  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>使用配置文件创建和初始化跟踪源  
   

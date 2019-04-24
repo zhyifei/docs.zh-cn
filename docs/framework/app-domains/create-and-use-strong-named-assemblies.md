@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee49009915273cc1e16917805f1801268ca0d26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198886"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59300692"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 
@@ -34,17 +34,17 @@ ms.locfileid: "47198886"
 
 下面的方案概述了对具有强名称的程序集进行签名以及稍后使用该名称对其进行引用的过程。
 
-1.  使用以下方法之一创建具有强名称的程序集 A：
+1. 使用以下方法之一创建具有强名称的程序集 A：
 
     -   使用支持创建强名称的开发环境，如 Visual Studio。
 
     -   使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建加密密钥对，并使用命令行编译器或[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将密钥对分配到程序集。 Windows 软件开发工具包 (SDK) 同时提供 Sn.exe 和 Al.exe。
 
-2.  开发环境或工具对包含具有开发人员私钥的程序集清单的文件的哈希进行签名。 此数字签名存储在包含程序集 A 的清单的可移植可执行 (PE) 文件中。
+2. 开发环境或工具对包含具有开发人员私钥的程序集清单的文件的哈希进行签名。 此数字签名存储在包含程序集 A 的清单的可移植可执行 (PE) 文件中。
 
-3.  程序集 B 是程序集 A 的一个使用者。程序集 B 清单的引用部分包含表示程序集 A 公钥的标记。 标记是完整公钥的一部分，并且使用它而不是密钥本身以节省空间。
+3. 程序集 B 是程序集 A 的一个使用者。程序集 B 清单的引用部分包含表示程序集 A 公钥的标记。 标记是完整公钥的一部分，并且使用它而不是密钥本身以节省空间。
 
-4.  当程序集放置在全局程序集缓存中时，公共语言运行时验证强名称签名。 在运行时按强名称绑定时，公共语言运行时会将存储在程序集 B 的清单中的密钥与为程序集 A 生成强名称的密钥进行比较。如果 .NET Framework 安全检查通过且绑定成功，程序集 B 就可保证程序集 A 的位未被篡改，且这些位确实来自程序集 A 的开发人员。
+4. 当程序集放置在全局程序集缓存中时，公共语言运行时验证强名称签名。 在运行时按强名称绑定时，公共语言运行时会将存储在程序集 B 的清单中的密钥与为程序集 A 生成强名称的密钥进行比较。如果 .NET Framework 安全检查通过且绑定成功，程序集 B 就可保证程序集 A 的位未被篡改，且这些位确实来自程序集 A 的开发人员。
 
 > [!NOTE]
 > 此方案不解决信任问题。 除强名称外，程序集可携带完整的 Microsoft Authenticode 签名。 Authenticode 签名包括建立信任的证书。 请务必注意强名称不要求代码以这种方式进行签名。 强名称仅提供唯一的标识。
@@ -63,11 +63,11 @@ ms.locfileid: "47198886"
 
 -   签名没有延迟。
 
-可为单个应用程序或计算机禁用此功能。 请参阅[如何：禁用强名称跳过功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。
+可为单个应用程序或计算机禁用此功能。 请参阅[如何：禁用强名称绕过功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明|
 |-----------|-----------------|
 |[如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|描述如何创建加密密钥对以对程序集进行签名。|
 |[如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|介绍如何创建具有强名称的程序集。|

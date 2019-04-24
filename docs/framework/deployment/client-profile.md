@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06db09ac66164886b1dc99a37129201543c5ce4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514317"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59126745"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile 是 .NET Framework 的子集，它随 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 及早期版本一起提供并针对客户端应用程序进行了优化。 .NET Framework 是适用于 Windows、Windows Phone 和 Microsoft Azure 的开发平台，它提供了托管应用执行环境和 .NET Framework 类库。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和早期版本提供了两个部署选项：完整的 .NET Framework 和 Client Profile。 Client Profile 启用了比完整的 .NET Framework 更快的部署和更小的应用安装包。  
@@ -28,6 +28,7 @@ ms.locfileid: "54514317"
  在安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 时，.NET Framework 4 Client Profile 将更新到完整版本的 .NET Framework。 若要了解如何安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio 多目标概述](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework 目标错误疑难解答](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)

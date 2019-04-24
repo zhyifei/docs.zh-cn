@@ -12,10 +12,10 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170692"
 ---
 # <a name="varieties-of-custom-controls"></a>各种自定义控件
@@ -109,7 +109,7 @@ ms.locfileid: "59170692"
 ## <a name="see-also"></a>请参阅
 
 - [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
-- [如何：开发简单的 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)
+- [如何：开发的简单 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)
 - [开发复合 Windows 窗体控件](developing-a-composite-windows-forms-control.md)
 - [扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

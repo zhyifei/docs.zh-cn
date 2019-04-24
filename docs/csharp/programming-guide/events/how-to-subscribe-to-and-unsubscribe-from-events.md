@@ -8,10 +8,10 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306594"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：订阅和取消订阅事件（C# 编程指南）
@@ -102,7 +102,7 @@ ms.locfileid: "59306594"
 ## <a name="see-also"></a>请参阅
 
 - [事件](../../../csharp/programming-guide/events/index.md)
-- [Event — 事件](../../../csharp/language-reference/keywords/event.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
 - [如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-= 运算符（C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+= 运算符](../../../csharp/language-reference/operators/addition-assignment-operator.md)

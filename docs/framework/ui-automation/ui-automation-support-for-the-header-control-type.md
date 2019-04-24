@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
 ms.openlocfilehash: 8a7fe7fb8ec3e4b33ff4814859afe7d1d8de9c60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160116"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>UI 自动化对 Header 控件类型的支持
@@ -46,7 +46,7 @@ ms.locfileid: "59160116"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|请参阅注释。|如果存在边界矩形，则受支持。 如果边界矩形中存在无法单击的点，而你要执行专门的命中测试，则重写并提供可单击的点。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|如果存在超过一个行标头或超过一个列标头，则该标头控件需要一个名称。 此名称标识标头内的信息。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|标头控件不具有静态标签。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`。|标头控件不具有静态标签。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Header|此值对于所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“标头”|此值对于所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|水平|此属性的值公开标头控件的位置 - 无论它是一个行标头或是一个列标头。|  
@@ -65,7 +65,7 @@ ms.locfileid: "59160116"
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有标头控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event|支持|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 属性更改事件。|必需|None|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> 属性更改事件。|必需|None|  

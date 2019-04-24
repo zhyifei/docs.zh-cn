@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658242"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306646"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可以为 null 的类型（C# 编程指南）
 
@@ -66,6 +66,9 @@ ms.locfileid: "54658242"
 可为 null 的类型还可使用预定义的一元运算符和二元运算符以及任何用于值类型的用户定义的运算符。 如果一个或两个操作数为 null，则这些运算符将生成一个 null 值；否则，运算符使用所包含的值来计算结果。 例如:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> 对于 `bool?` 类型，预定义的 `&` 和 `|` 运算符不遵循此部分中描述的规则：即使其中一个操作数为 null，运算符计算结果也可以不为 null。 有关详细信息，请参阅[布尔逻辑运算符](../../language-reference/operators/boolean-logical-operators.md)一文的[可以为 null 的布尔逻辑运算符](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators)部分。
   
 对于关系运算符（`<`、`>`、`<=`、`>=`），如果一个或两个操作数为 null，则结果为 `false`。 请勿作出如下假定：由于某个特定的比较（例如 `<=`）返回 `false`，则相反的比较 (`>`) 返回 `true`。 以下示例显示 10
 
@@ -75,6 +78,8 @@ ms.locfileid: "54658242"
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 以上示例还表明，对两个均为 null 的可以为 null 的类型进行相等比较，其计算结果为 `true`。
+
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[提升运算符](~/_csharplang/spec/expressions.md#lifted-operators)部分。
 
 ## <a name="boxing-and-unboxing"></a>装箱和取消装箱
 
@@ -87,29 +92,6 @@ ms.locfileid: "54658242"
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>bool? 类型
-
-可以为空的类型 `bool?` 可包含三个不同的值：[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md) 和 [null](../../language-reference/keywords/null.md)。 `bool?` 类型类似于在 SQL 中使用的布尔变量类型。 为确保 `&` 和 `|` 运算符产生的结果与 SQL 中具有三个值的布尔值类型一致，在此提供以下预定义运算符：
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-由下表定义这些运算符的语义：  
-  
-|x|y|x 和 y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|False|false|true|  
-|true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
-|null|true|null|true|  
-|null|False|False|null|  
-|null|null|null|null|  
-
-请注意，这两个运算符不遵循[运算符](#operators)部分中描述的规则：即使其中一个操作数为 null，运算符求值的结果也可以为非 null。
-  
 ## <a name="see-also"></a>请参阅
 
 - [可以为 null 的类型](index.md)

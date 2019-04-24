@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154409"
 ---
 # <a name="controls"></a>Controls
@@ -106,5 +106,5 @@ ms.locfileid: "59154409"
 - [数据绑定概述](../data/data-binding-overview.md)
 - [输入](../advanced/input-wpf.md)
 - [启用命令](../advanced/how-to-enable-a-command.md)
-- [演练：创建自定义的动画按钮](walkthroughs-create-a-custom-animated-button.md)
+- [演练：创建自定义的动画的按钮](walkthroughs-create-a-custom-animated-button.md)
 - [控件自定义](control-customization.md)

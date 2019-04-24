@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675908"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306529"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ）的开发人员提供了相关信息。
@@ -117,23 +117,23 @@ ms.locfileid: "58675908"
 
  在 Visual Studio 中，若要选择 ClickOnce 部署并添加对 .NET Framework 的依赖项：
 
-1.  打开要发布的应用项目。
+1. 打开要发布的应用项目。
 
-2.  在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择 **“属性”**。
+2. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择 **“属性”**。
 
-3.  选择 **“发布”** 窗格。
+3. 选择 **“发布”** 窗格。
 
-4.  选择 **“系统必备”** 按钮。
+4. 选择 **“系统必备”** 按钮。
 
-5.  在 **“系统必备”** 对话框中，确保选中 **“创建用于安装系统必备组件的安装程序”** 复选框。
+5. 在 **“系统必备”** 对话框中，确保选中 **“创建用于安装系统必备组件的安装程序”** 复选框。
 
-6.  在必备组件列表中，找到并选择已用于生成项目的.NET Framework 版本。
+6. 在必备组件列表中，找到并选择已用于生成项目的.NET Framework 版本。
 
-7.  选择一个选项以指定必备组件的源位置，然后选择 **“确定”**。
+7. 选择一个选项以指定必备组件的源位置，然后选择 **“确定”**。
 
      如果你提供 .NET Framework 下载位置的 URL，则可以指定 Microsoft 下载中心网站或你自己的网站。 如果要将可再发行组件包放置在自己的服务器上，则它必须为脱机安装程序，而不是 Web 安装程序。 你只能链接到 Microsoft 下载中心上的 Web 安装程序。 该 URL 还可以指定一个用于分发你的应用的磁盘。
 
-8.  在 **“属性页”** 对话框中，选择 **“确定”**。
+8. 在 **“属性页”** 对话框中，选择 **“确定”**。
 
 <a name="installaware"></a> 
 ### <a name="installaware-deployment"></a>InstallAware 部署
@@ -142,19 +142,19 @@ InstallAware 从单个源生成 Windows 应用 (APPX)、Windows Installer (MSI)�
 ### <a name="installshield-deployment"></a>InstallShield 部署
  在 Visual Studio 中，若要选择 InstallShield 部署并添加对 .NET Framework 的依赖项：
 
-1.  在 Visual Studio 菜单栏上，依次选择 **“文件”**、 **“新建”** 和 **“项目”**。
+1. 在 Visual Studio 菜单栏上，依次选择 **“文件”**、 **“新建”** 和 **“项目”**。
 
-2.  在 **“新建项目”** 对话框的左窗格中，依次选择 **“其他项目类型”**、 **“安装和部署”**、 **“InstallShield LE”**。
+2. 在 **“新建项目”** 对话框的左窗格中，依次选择 **“其他项目类型”**、 **“安装和部署”**、 **“InstallShield LE”**。
 
-3.  在 **“名称”** 框中，键入你的项目名称，然后选择 **“确定”**。
+3. 在 **“名称”** 框中，键入你的项目名称，然后选择 **“确定”**。
 
-4.  如果你是首次创建安装和部署项目，请选择“转到 InstallShield”或“启用 InstallShield Limited Edition”，以下载你的 Microsoft Visual Studio 版本对应的 InstallShield Limited Edition。 重新启动 Visual Studio。
+4. 如果你是首次创建安装和部署项目，请选择“转到 InstallShield”或“启用 InstallShield Limited Edition”，以下载你的 Microsoft Visual Studio 版本对应的 InstallShield Limited Edition。 重新启动 Visual Studio。
 
-5.  转到 **“项目助手”** 向导，选择 **“应用程序文件”** 以添加项目输出。 你可以使用此向导配置其他项目特性。
+5. 转到 **“项目助手”** 向导，选择 **“应用程序文件”** 以添加项目输出。 你可以使用此向导配置其他项目特性。
 
-6.  转到 **“安装要求”** ，选择要安装的操作系统和 .NET Framework 的版本。
+6. 转到 **“安装要求”** ，选择要安装的操作系统和 .NET Framework 的版本。
 
-7.  打开安装项目的快捷菜单，然后选择 **“生成”**。
+7. 打开安装项目的快捷菜单，然后选择 **“生成”**。
  
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) 部署
@@ -403,6 +403,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 |3082|西班牙语 - 西班牙（现代排序）|es|
 
 ## <a name="see-also"></a>请参阅
+
 - [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)
 - [系统要求](../../../docs/framework/get-started/system-requirements.md)
 - [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)

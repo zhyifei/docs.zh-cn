@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129111"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 控件概述（Windows 窗体）
@@ -30,7 +30,7 @@ Windows 窗体<xref:System.Windows.Forms.RadioButton>控件向用户显示的一
 - [Panel 控件概述](panel-control-overview-windows-forms.md)
 - [GroupBox 控件概述](groupbox-control-overview-windows-forms.md)
 - [CheckBox 控件概述](checkbox-control-overview-windows-forms.md)
-- [如何：创建 Windows 窗体控件的访问键](how-to-create-access-keys-for-windows-forms-controls.md)
-- [如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [如何：按功能分组 Windows 窗体 RadioButton 控件](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [如何：为 Windows 窗体控件创建访问密钥](how-to-create-access-keys-for-windows-forms-controls.md)
+- [如何：设置显示的文本的 Windows 窗体控件](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [如何：函数为一组 Windows 窗体 RadioButton 控件](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton 控件](radiobutton-control-windows-forms.md)

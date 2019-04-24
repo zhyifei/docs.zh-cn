@@ -4,12 +4,12 @@ description: 发现用于安排微服务和多容器应用程序以便实现高�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6fa25c1d35e276473f4fcac344efbc5cafbc4b3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1452f25f96a5e277d8cfcd53f03e90675e9f9372
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465433"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613260"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -148,13 +148,13 @@ Azure Dev Spaces 提供了空间这一概念，允许你在相对隔离的环境
 ## <a name="additional-resources"></a>其他资源
 
 - **Azure Kubernetes 服务 (AKS) 入门** \
-  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
-  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
 - **Kubernetes** 官方网站。 \
-  [https://kubernetes.io/](https://kubernetes.io/)
+  <https://kubernetes.io/>
 
 >[!div class="step-by-step"]
 >[上一页](resilient-high-availability-microservices.md)

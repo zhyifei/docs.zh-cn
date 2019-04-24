@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317098"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大值 (max) 数据
@@ -33,7 +33,7 @@ ms.locfileid: "59317098"
 -   大型 `varchar` 列不能用作分区键列。  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>在 Transact-SQL 中使用大值类型  
- Transact-SQL `OPENROWSET` 函数是一个用于连接和访问远程数据的一次性方法。 它包含从 OLE DB 数据源访问远程数据所需的所有连接信息。 `OPENROWSET` 可以引用一个查询的 FROM 子句中像表名称。 根据 OLE DB 提供程序的功能，它还可作为 INSERT、UPDATE 或 DELETE 语句的目标表被引用。  
+ Transact-SQL `OPENROWSET` 函数是一个用于连接和访问远程数据的一次性方法。 它包含从 OLE DB 数据源访问远程数据所需的所有连接信息。 可以在某一查询的 FROM 子句中像表名称一样引用 `OPENROWSET`。 根据 OLE DB 提供程序的功能，它还可作为 INSERT、UPDATE 或 DELETE 语句的目标表被引用。  
   
  `OPENROWSET` 功能包含 `BULK` 行集提供程序，通过此提供程序，您可以直接从文件读取数据而不必将数据加载到目标表 这使您可以在简单的 INSERT SELECT 语句中使用 `OPENROWSET`。  
   
@@ -254,4 +254,4 @@ WHERE   DocumentID=@DocumentID
 - [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: 在工作流中使用协定
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150054"
 ---
 # <a name="using-contracts-in-workflow"></a>在工作流中使用协定

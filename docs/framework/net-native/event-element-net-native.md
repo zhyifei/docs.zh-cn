@@ -1,14 +1,14 @@
 ---
-title: <Event> 元素 (.NET Native)
+title: <Event>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89e8ddf9ea72db63c72bfb5393709b4c20de2a14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162990"
 ---
 # <a name="event-element-net-native"></a>\<事件 > 元素 (.NET Native)
@@ -37,13 +37,13 @@ ms.locfileid: "59162990"
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*方法_名称*|事件名称。 该事件的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。|  
+|method_name|事件名称。 该事件的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
 |“值”|描述|  
 |-----------|-----------------|  
-|*策略_设置*|该设置将应用到这个事件的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|policy_setting|该设置将应用到这个事件的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -60,6 +60,6 @@ ms.locfileid: "59162990"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

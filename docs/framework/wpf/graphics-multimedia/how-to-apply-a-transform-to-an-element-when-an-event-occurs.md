@@ -12,10 +12,10 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126433"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>如何：在事件发生时向元素应用转换
@@ -39,6 +39,6 @@ ms.locfileid: "59126433"
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
-- [变换概述](transforms-overview.md)
+- [转换概述](transforms-overview.md)
 - [帮助主题](transformations-how-to-topics.md)
 - [路由事件概述](../advanced/routed-events-overview.md)

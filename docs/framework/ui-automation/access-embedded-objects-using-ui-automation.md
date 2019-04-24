@@ -10,10 +10,10 @@ helpviewer_keywords:
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 ms.openlocfilehash: 07223b9e48905b0952e37a6acdb703f584d166d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131243"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>使用 UI 自动化访问嵌入式对象
@@ -47,7 +47,7 @@ ms.locfileid: "59131243"
  下面的代码示例演示如何从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本提供程序内的嵌入对象中获取文本范围。 检索的文本范围是一个空范围， 其中起始端点紧跟在“… ocean.”后的空格之后，结束端点位于表示嵌入超链接的结束“.”之前（如简介中提供的图像所示）。 即使这是一个空范围，也不会被视作退化的范围，因为它有非零跨度。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> 可以检索基于文本的嵌入的对象如超链接;但是，辅助<xref:System.Windows.Automation.TextPattern>必须获取从嵌入的对象来公开其完整功能。  
+>  <xref:System.Windows.Automation.TextPattern> 可以检索基于文本的嵌入对象（如超链接）；但是，将需要从嵌入对象中获取第二个 <xref:System.Windows.Automation.TextPattern> 才能公开其完整功能。  
   
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  

@@ -3,10 +3,10 @@ title: <serviceCertificate> <clientCredentials>元素
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
 ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145335"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > 的\<clientCredentials > 元素
@@ -37,7 +37,7 @@ ms.locfileid: "59145335"
 |-------------|-----------------|  
 |[\<defaultCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|指定在服务或 STS 未通过协商协议提供证书时要使用的 X.509 证书。|  
 |[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。|  
-|[\<身份验证 >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|指定客户端使用的服务证书的身份验证行为。|  
+|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|指定客户端使用的服务证书的身份验证行为。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -59,6 +59,6 @@ ms.locfileid: "59145335"
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [保证客户端的安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

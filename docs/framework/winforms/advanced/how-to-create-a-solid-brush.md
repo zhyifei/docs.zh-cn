@@ -11,10 +11,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
 ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213436"
 ---
 # <a name="how-to-create-a-solid-brush"></a>如何：创建实心画笔
@@ -33,5 +33,5 @@ ms.locfileid: "59213436"
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [图形编程入门](getting-started-with-graphics-programming.md)
-- [GDI+ 中的画笔和实心形状](brushes-and-filled-shapes-in-gdi.md)
+- [GDI+ 中的画笔和填充形状](brushes-and-filled-shapes-in-gdi.md)
 - [使用画笔填充形状](using-a-brush-to-fill-shapes.md)

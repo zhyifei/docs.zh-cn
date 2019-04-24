@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105842"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件的选项和剪贴板使用
@@ -26,7 +26,7 @@ ms.locfileid: "59105842"
  [如何：设置 Windows 窗体 DataGridView 控件的选择模式](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
  介绍如何配置用于单行选择的控件，当用户单击一个单元格。  
   
- [如何：获取 Windows 窗体 DataGridView 控件中选定的单元格、行和列](selected-cells-rows-and-columns-datagridview.md)  
+ [如何：Windows 窗体 DataGridView 控件中获取选定的单元格、 行和列](selected-cells-rows-and-columns-datagridview.md)  
  介绍如何处理与所选的单元格、 行和列集合。  
   
  [如何：使用户能够将多个单元格从 Windows 窗体 DataGridView 控件复制到剪贴板](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  

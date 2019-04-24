@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297772"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
@@ -263,9 +263,9 @@ ms.locfileid: "59297772"
 
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [从 DataAdapter 填充数据集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
 - [使用 DataAdapter 更新数据源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
 - [Web 服务描述语言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

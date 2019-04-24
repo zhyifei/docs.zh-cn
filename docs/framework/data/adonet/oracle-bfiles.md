@@ -3,10 +3,10 @@ title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304462"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
@@ -89,4 +89,4 @@ public class Sample
 ## <a name="see-also"></a>请参阅
 
 - [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343332"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>如何：声明枚举 (Visual Basic)
@@ -45,10 +45,10 @@ ms.locfileid: "59343332"
 ## <a name="see-also"></a>请参阅
 
 - [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [如何：引用枚举成员](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [如何：为枚举成员，请参阅](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [如何：循环访问在 Visual Basic 中枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [如何：确定与枚举值关联的字符串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [何时使用枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [常量概述](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [常数和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
+- [常量和文本数据类型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)

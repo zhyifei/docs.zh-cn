@@ -5,10 +5,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130255"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控件体系结构（Windows 窗体）
@@ -140,4 +140,4 @@ ms.locfileid: "59130255"
 
 - [DataGridView 控件概述](datagridview-control-overview-windows-forms.md)
 - [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)
-- [在 Windows 窗体 DataGridView 控件中使用新记录行](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中对新记录使用行](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

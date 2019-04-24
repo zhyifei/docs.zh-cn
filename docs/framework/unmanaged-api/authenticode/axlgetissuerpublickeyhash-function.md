@@ -11,10 +11,10 @@ ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 448712561f1531a055ac141db9825581525c779c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106699"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 函数
@@ -37,7 +37,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
  [out] 指向 WCHAR * 的指针，用于接收十六进制编码的公钥标记。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK` 如果函数成功;否则为`S_FALSE`。  
+ 如果函数成功，则为 `S_OK`；否则为 `S_FALSE`。  
   
 ## <a name="see-also"></a>请参阅
 

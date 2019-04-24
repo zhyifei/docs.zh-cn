@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148754"
 ---
 # <a name="namespace-c-reference"></a>命名空间（C# 参考）
@@ -30,13 +30,13 @@ ms.locfileid: "59148754"
 
 - [class](class.md)
 
-- [interface](interface.md)
+- [接口](interface.md)
 
 - [struct](struct.md)
 
 - [enum](enum.md)
 
-- [委托](delegate.md)
+- [delegate](delegate.md)
 
 无论是否在 C# 源文件中显式声明命名空间，编译器都会添加一个默认命名空间。 此未命名的命名空间（有时被称为全局命名空间）存在于每个文件中。 全局命名空间中的任何标识符都可用于已命名的命名空间。
 

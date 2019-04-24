@@ -5,10 +5,10 @@ helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
 ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321026"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>如何：使用用户名和密码进行身份验证
@@ -92,6 +92,6 @@ ms.locfileid: "59321026"
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [通过基本身份验证确保的传输安全](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
+- [使用基本身份验证的传输安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
 - [分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116358"
 ---
 # <a name="ui-automation-properties-for-clients"></a>客户端的 UI 自动化属性
@@ -106,5 +106,5 @@ ms.locfileid: "59116358"
 ## <a name="see-also"></a>请参阅
 
 - [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [服务器端 UI 自动化提供程序的实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

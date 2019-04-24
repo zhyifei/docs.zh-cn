@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890548"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613442"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -93,6 +93,7 @@ ms.locfileid: "58890548"
 1. 若要添加一个新类，请右键单击 VSCode Explorer 并选择“新文件”。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
 2. 将文件命名为 `MyClass.cs`。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
 3. 添加下面的代码，以创建第一个类。 确保包括正确的命名空间，以便可以从 `Program.cs` 文件引用它。
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. 保存更改并再次运行程序。 新消息应显示追加的字符串。
+
 ```console
 > dotnet run
 Hello World! Happy coding!

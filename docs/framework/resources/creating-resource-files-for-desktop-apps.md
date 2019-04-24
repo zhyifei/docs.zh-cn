@@ -13,10 +13,10 @@ ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313653"
 ---
 # <a name="create-resource-files-for-net-apps"></a>为 .NET 应用创建资源文件
@@ -207,5 +207,5 @@ csc greeting.cs -resource:GreetingResources.resources
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Resources>
-- [桌面应用程序中的资源](../../../docs/framework/resources/index.md)
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)
 - [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
 ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191258"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768327"
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer 控件概述
 一个<xref:System.Windows.Forms.ToolStripContainer>面板上其左侧、 右侧、 顶部和底部均带有用于定位和漂浮<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控件。 如果将多个 <xref:System.Windows.Forms.ToolStrip> 控件放置在 <xref:System.Windows.Forms.ToolStripContainer> 左侧或右侧，它们会垂直堆叠。 如果将其放置在 <xref:System.Windows.Forms.ToolStripContainer> 顶部或底部，则水平堆叠。 可使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel> 将传统控件放置在窗体上。  

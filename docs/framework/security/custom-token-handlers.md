@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312106"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975671"
 ---
 # <a name="custom-token-handlers"></a>自定义令牌处理程序
 本主题讨论 WIF 中的令牌处理程序，以及如何使用它们处理令牌。 还介绍为 WIF 中默认不支持的令牌类型创建自定义令牌处理程序所需的内容。  

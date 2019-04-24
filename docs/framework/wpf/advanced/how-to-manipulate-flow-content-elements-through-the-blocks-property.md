@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
 ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150132"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>如何：通过 Blocks 属性操作流内容元素
@@ -69,5 +69,5 @@ ms.locfileid: "59150132"
 - <xref:System.Windows.Documents.ListItemCollection>
 - [流文档概述](flow-document-overview.md)
 - [通过 RowGroups 属性操作表的行组](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [通过 Columns 属性操作表的列](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [通过 Columns 属性控制表列](how-to-manipulate-table-columns-through-the-columns-property.md)
 - [通过 RowGroups 属性操作表的行组](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

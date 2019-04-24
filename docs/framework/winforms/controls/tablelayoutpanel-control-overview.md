@@ -12,10 +12,10 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
 ms.openlocfilehash: 65daba0ce1a6f1c37fb257c1029396577821aad9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295362"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>TableLayoutPanel 控件概述
@@ -33,18 +33,18 @@ ms.locfileid: "59295362"
   
  可以通过设置子控件上的 `ColumnSpan` 或 `RowSpan` 属性来合并 <xref:System.Windows.Forms.TableLayoutPanel> 控件中的单元格。  
   
-1. [如何：在 TableLayoutPanel 控件中对齐和拉伸控件](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [如何：对齐和拉伸控件在 TableLayoutPanel 控件中](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [如何：在 TableLayoutPanel 控件中跨行和跨列](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [如何：TableLayoutPanel 控件中 s p a n 行和列](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [如何：在 TableLayoutPanel 控件中编辑行和列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [如何：编辑 TableLayoutPanel 控件中的行和列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutSettings>
-- [如何：设计非常适合本地化的 Windows 窗体布局](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [如何：创建可重设大小的 Windows 窗体以供输入数据](how-to-create-a-resizable-windows-form-for-data-entry.md)
-- [TableLayoutPanel 控件的最佳做法](best-practices-for-the-tablelayoutpanel-control.md)
+- [如何：设计很好地响应本地化 Windows 窗体布局](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [如何：创建用于数据输入的大小可调的 Windows 窗体](how-to-create-a-resizable-windows-form-for-data-entry.md)
+- [有关 TableLayoutPanel 控件的最佳做法](best-practices-for-the-tablelayoutpanel-control.md)
