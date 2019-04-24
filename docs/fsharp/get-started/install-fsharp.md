@@ -31,7 +31,6 @@ ms.locfileid: "59331970"
 
 您必须先[安装 git](https://git-scm.com/download)且适用于你的路径以使用项目模板。 你可以通过在命令提示符键入`git --version`，然后按**Enter**验证是否已正确安装。
 
-
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com)用于 [F# 交互式](../tutorials/fsharp-interactive/index.md)支持。 在 macOS 上安装 Mono 的最简单方法是通过 Homebrew 进行安装。 只需在你的终端中键入以下内容：
@@ -41,7 +40,6 @@ brew install mono
 ```
 
 此外安装[.NET Core SDK](https://www.microsoft.com/net/download)。
-
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -53,7 +51,6 @@ sudo apt-get install mono-complete fsharp
 ```
 
 此外安装[.NET Core SDK](https://www.microsoft.com/net/download)。
-
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
