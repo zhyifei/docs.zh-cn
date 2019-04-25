@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872841"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -62,7 +62,7 @@ Managed Extensibility Framework 即 MEF 是用于创建轻量、可扩展应用�
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator：示例应用程序
+## <a name="simplecalculator-an-example-application"></a>简单计算器：一个示例应用程序
 
 查看 MEF 能做什么最简单的方法就是构建一个简单的 MEF 应用程序。 在此示例中，你构建了一个叫作简单计算器的非常简单的计算器。 简单计算器旨在创建一个接受形式为“5+3”或“6-2”的基础运算命令然后返回正确答案的控制台应用程序。 使用 MEF，能够添加新的操作人员而无须更改应用程序代码。
 

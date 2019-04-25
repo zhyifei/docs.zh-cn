@@ -29,11 +29,11 @@ ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683296"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -71,7 +71,7 @@ ms.locfileid: "48584138"
 ### <a name="generics-terminology"></a>泛型术语  
  介绍 .NET 中的泛型需要用到以下术语：  
   
--   *泛型类型定义* 是用作模板的类、结构或接口声明，带有可包含或使用的类型的占位符。 例如，<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类可以包含两种类型：密钥和值。 由于泛型类型定义只是一个模板，所以你无法创建作为泛型类型定义的类、结构或接口的实例。  
+-   *泛型类型定义* 是用作模板的类、结构或接口声明，带有可包含或使用的类型的占位符。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类可以包含两种类型：密钥和值。 由于泛型类型定义只是一个模板，所以你无法创建作为泛型类型定义的类、结构或接口的实例。  
   
 -   *泛型类型参数*（或*类型参数*）是泛型类型或方法定义中的占位符。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型类型具有两个类型形参 `TKey` 和 `TValue`，它们分别代表密钥和值的类型。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48584138"
   
 -   泛型委托可以在无需创建多个委托类的情况下进行类型安全的回调。 例如， <xref:System.Predicate%601> 泛型委托允许你创建一种为特定类型实现你自己的搜索标准的方法并将你的方法与 <xref:System.Array> 类型比如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>方法一起使用。  
   
--   泛型简化动态生成的代码。 使用具有动态生成的代码的泛型时，无需生成类型。 这会增加方案数量，在这些方案中你可以使用轻量动态方法而非生成整个程序集。 有关详细信息，请参阅[如何：定义和执行动态方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)和 <xref:System.Reflection.Emit.DynamicMethod>。  
+-   泛型简化动态生成的代码。 使用具有动态生成的代码的泛型时，无需生成类型。 这会增加方案数量，在这些方案中你可以使用轻量动态方法而非生成整个程序集。 有关详细信息，请参阅[如何：定义和执行动态方法 ](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 和 <xref:System.Reflection.Emit.DynamicMethod>。  
   
  以下是泛型的一些局限：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48584138"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[.NET 中的泛型集合](../../../docs/standard/generics/collections.md)|介绍了 .NET 中的泛型集合类和其他泛型类型。|  
 |[用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|描述用于转换、搜索谓词以及要对数组或集合中的元素执行的操作的泛型委托。|  
@@ -169,7 +169,7 @@ ms.locfileid: "48584138"
 |[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)|描述泛型类型实参中的协变和逆变。|  
 |[常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)|总结了 .NET 中集合类型（包括泛型类型）的特征和使用方案。|  
 |[何时使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述用于确定何时使用泛型集合类型的一般规则。|  
-|[如何：使用 Reflection Emit 定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|解释如何生成包括泛型类型和方法的动态程序集。|  
+|[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|解释如何生成包括泛型类型和方法的动态程序集。|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|为 Visual Basic 用户描述泛型功能，包括有关使用和定义泛型类型的帮助主题。|  
 |[泛型介绍](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|为 C# 用户概述定义和使用泛型类型。|  
 |[Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)|为 C++ 用户描述泛型功能，包括泛型和模板之间的差异。|  

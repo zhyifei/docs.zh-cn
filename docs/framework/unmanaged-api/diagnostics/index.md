@@ -9,21 +9,21 @@ ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599296"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>诊断符号存储区（非托管 API 参考）
-诊断符号存储区 API 允许编译器生成由调试器使用的符号信息。  
+诊断符号存储区 API 允许编译器生成符号信息以供调试器使用。  
   
 ## <a name="in-this-section"></a>本节内容  
  [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- 描述诊断符号存储区 API 使用的非托管的接口。  
+ 描述诊断符号存储区 API 使用的非托管接口。  
   
  [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
- 描述诊断符号存储区 API 使用的非托管的枚举。  
+ 描述诊断符号存储区 API 使用的非托管枚举。  
   
  [诊断符号存储区结构](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
- 描述诊断符号存储区 API 使用的非托管的结构。
+ 描述诊断符号存储区 API 使用的非托管结构。
