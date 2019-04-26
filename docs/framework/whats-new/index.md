@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 中的新增功能
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -10,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914821"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
 本文总结了以下版本的 .NET Framework 中的主要新功能和改进：
 
+- [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
 - [.NET Framework 4.7](#v47)
@@ -36,40 +37,173 @@ ms.locfileid: "59613754"
 > [!NOTE]
 > .NET Framework 团队还发布 NuGet 带外功能以扩展平台支持并引入新功能，如不可变集合和启用了 SIMD 的矢量类型。 有关详细信息，请参阅[其他类库和 API](../additional-apis/index.md) 以及 [.NET Framework 和带外版本](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 请参阅 .NET Framework 的 [NuGet 包的完整列表](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或订阅[我们的源](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
 
+<a name="v48" />
+
+## <a name="introducing-net-framework-48"></a>.NET Framework 4.8 简介
+
+.NET Framework 4.8 在 .NET Framework 4.x 早期版本的基础之上构建而成，新增了许多修补程序和功能，同时很好地保持了产品的稳定性。
+
+### <a name="downloading-and-installing-net-framework-48"></a>下载和安装 .NET Framework 4.8
+
+可以从下列位置下载 .NET Framework 4.8：
+
+- [.NET Framework 4.8 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=2085155)
+
+- [NET Framework 4.8 脱机安装程序](https://go.microsoft.com/fwlink/?linkid=2088631)
+
+可以在 Windows 10、Windows 8.1、Windows 7 SP1 和对应的服务器平台（版本不低于 Windows Server 2008 R2 SP1）上安装 .NET Framework 4.8。 可以使用 Web 安装程序或脱机安装程序来安装 .NET Framework 4.8。 适用于大多数用户的建议方法是使用 Web 安装程序。
+
+可以通过安装 [.NET Framework 4.8 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=2085167)，在 Visual Studio 2012 或更高版本中定位 .NET Framework 4.8。
+
+### <a name="whats-new-in-net-framework-48"></a>.NET Framework 4.8 中的新增功能
+
+.NET Framework 4.8 在以下几个领域引入了新功能：
+
+- [基类](#core48)
+- [Windows Communication Foundation (WCF)](#wcf48)
+- [Windows Presentation Foundation (WPF)](#wpf48)
+- [公共语言运行时](#clr48)
+
+改进了辅助功能，使应用程序能为辅助技术的用户提供最佳体验，这仍是 .NET Framework 4.8 的重点。 有关 .NET Framework 4.8 中辅助功能改进的信息，请参阅 [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)。
+
+<a name="core48" />
+
+#### <a name="base-classes"></a>基类
+
+**减少 FIPS 对加密的影响**。 在 .NET framework 的早期版本中，当在“FIPS 模式”下配置系统加密库时，<xref:System.Security.Cryptography.SHA256Managed> 等托管加密提供程序类会引发 <xref:System.Security.Cryptography.CryptographicException>。 引发这些异常的原因是加密提供程序类的托管版本尚未进行 FIPS（联邦信息处理标准）140-2 认证，这与系统加密库不同。 由于几个开发人员使其开发计算机处于 FIPS 模式，因此通常会在生产系统中引发异常。
+
+默认情况下，在面向 .NET Framework 4.8 的应用程序中，以下托管加密类在这种情况下不再引发 <xref:System.Security.Cryptography.CryptographicException>：
+
+- <xref:System.Security.Cryptography.MD5Cng>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RIPEMD160Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>
+
+相反，这些类会将加密操作重定向到系统加密库。 此更改可有效地删除开发人员环境和生产环境之间可能令人混淆的差异，并使本机组件和托管组件采用相同的加密策略运行。 依赖于这些异常的应用程序可以通过将 AppContext 开关 `Switch.System.Security.Cryptography.UseLegacyFipsThrow` 设置为 `true` 来还原以前的行为。 有关详细信息，请参阅[托管加密类不会在 FIPS 模式下引发 CryptographyException](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode)。
+
+**使用 ZLib 的更新版本**
+
+从 .NET Framework 4.5 开始，clrcompression.dll 程序集使用 [ZLib](https://www.zlib.net)（即，数据压缩的本机外部库），以便提供 deflate 算法实现。 在 .NET Framework 4.8 中，clrcompression.dll 更新为使用 ZLib 版本 1.2.11，其中包括几个主要的改进和修补程序。
+
+<a name="wcf48" />
+
+#### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+
+**ServiceHealthBehavior 简介**
+
+运行状况终结点由业务流程工具广泛使用以基于其运行状况状态来管理服务。 运行状况检查还可由监视工具使用以跟踪并提供有关服务的可用性和性能的通知。
+
+ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:System.ServiceModel.Description.IServiceBehavior>。  添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 集合后，服务行为会执行以下操作：
+
+- 返回带有 HTTP 响应代码的服务运行状况状态。 可以在查询字符串中指定 HTTP/GET 运行状况探测请求的 HTTP 状态代码。
+
+- 发布有关服务运行状况的信息。 服务特定的详细信息，包括可以使用带有 `?health` 查询字符串的 HTTP/GET 请求显示的服务状态、限制计数和容量。 对行为不正常的 WCF 服务进行故障排除时，可以轻松访问此类信息则很重要。
+
+可通过两种方式公开运行状况终结点并发布 WCF 服务运行状况信息：
+
+- 通过代码。 例如:
+
+  ```csharp
+  ServiceHost host = new ServiceHost(typeof(Service1),
+                     new Uri("http://contoso:81/Service1"));
+  ServiceHealthBehavior healthBehavior =
+      host.Description.Behaviors.Find<ServiceHealthBehavior>();
+  if (healthBehavior == null)
+  {
+     healthBehavior = new ServiceHealthBehavior();
+  }
+   host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+- 通过使用配置文件。 例如:
+
+  ```xml
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="DefaultBehavior">
+        <serviceHealth httpsGetEnabled="true"/>
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+  ```
+
+可以使用查询参数（例如，`OnServiceFailure`、`OnDispatcherFailure`、`OnListenerFailure`、`OnThrottlePercentExceeded`）查询服务的运行状况状态，并且可以为每个查询参数指定 HTTP 响应代码。 如果省略了查询参数的 HTTP 响应代码，则默认使用 503 HTTP 响应代码。 例如:
+
+- OnServiceFailure：`https://contoso:81/Service1?health&OnServiceFailure=450`
+
+  当 [ServiceHost.State](xref:System.ServiceModel.Channels.CommunicationObject.State) 大于 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> 时，将返回 450 HTTP 响应状态代码。
+查询参数和示例：
+
+- OnDispatcherFailure：`https://contoso:81/Service1?health&OnDispatcherFailure=455`
+
+  当任意通道调度程序的状态大于 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> 时，将返回 455 HTTP 响应状态代码。
+
+- OnListenerFailure：`https://contoso:81/Service1?health&OnListenerFailure=465`
+
+  当任意通道侦听器的状态大于 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> 时，将返回 465 HTTP 响应状态代码。
+
+- OnThrottlePercentExceeded：`https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
+
+  指定触发响应及其 HTTP 响应代码 {200 – 599} 的百分比 {1 – 100}。 在此示例中：
+
+    - 如果百分比大于 95，则返回 500 HTTP 响应代码。
+
+    - 如果百分比介于 70 和 95 之间，则返回 350。
+
+    - 否则将返回 200。
+
+服务运行状况状态可以通过指定查询字符串（如 `https://contoso:81/Service1?health`）以 HTML 格式显示，或通过指定查询字符串（如 `https://contoso:81/Service1?health&Xml`）以 XML 格式显示。 查询字符串（如 `https://contoso:81/Service1?health&NoContent`）返回空 HTML 页。
+
+<a name="wpf48" />
+
+#### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+**高 DPI 增强功能**
+
+在 .NET Framework 4.8 中，WPF 添加了对按监视器 V2 DPI 感知和混合模式 DPI 缩放的支持。 有关高 DPI 开发的其他信息，请参阅[在 Windows 上开发高 DPI 桌面应用程序](/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
+
+.NET framework 4.8 改进了对支持混合模式 DPI 缩放的平台上的高 DPI WPF 应用程序中的寄宿 HWND 和 Windows 窗体互操作的支持（从 Windows 10 2018 年 4 月更新开始）。 通过调用 [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) 和 [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext) 将寄宿 HWND 或 Windows 窗体控件创建为混合模式 DPI 缩放窗口时，它们可以托管在按监视器 V2 WPF 应用程序中，并且相应地调整大小和缩放。 此类托管内容不以本机 DPI 呈现；相反，操作系统将托管内容缩放到合适大小。 对按监视器 v2 DPI 感知模式的支持还允许 WPF 控件托管（即，设置为父级）在高 DPI 应用程序的本机窗口中。
+
+若要启用对混合模式高 DPI 缩放的支持，可以设置以下 [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 切换应用程序配置文件：
+
+```xml
+<runtime>
+   <AppContextSwitchOverrides value = "Switch.System.Windows.DoNotScaleForDpiChanges=false; Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater=false"/>
+</runtime>
+```
+
+<a name="clr48" />
+
+#### <a name="common-language-runtime"></a>公共语言运行时
+
+.NET Framework 4.8 中的运行时包含以下更改和改进：
+
+**JIT 编译器的改进**。 .NET Framework 4.8 中的实时 (JIT) 编译器基于 .NET Core 2.1 中的 JIT 编译器。 对 .NET Core 2.1 JIT 编译器所做的多个优化和所有 bug 修复都包含在 .NET Framework 4.8 JIT 编译器中。
+
+**NGEN 改进**。 运行时改进了[本机映像生成器](../tools/ngen-exe-native-image-generator.md) (NGEN) 映像的内存管理，以便从 NGEN 映像映射的数据不驻留在内存中。 这将缩减可受到攻击的外围应用，攻击方法为试图通过修改将执行的内存来执行任意代码。
+
+**所有程序集的反恶意软件扫描**。 在 .NET Framework 的早期版本中，运行时使用 Windows Defender 或第三方反恶意软件扫描从磁盘加载的所有程序集。 但是，从其他源加载的程序集（例如，通过 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 方法）不会进行扫描，并且可能包含未检测到的恶意软件。 从 Windows 10 上运行的 .NET Framework 4.8 开始，运行时通过实现[反恶意软件扫描界面 (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) 的反恶意软件解决方案来触发扫描。
+
 <a name="v472" />
 
-## <a name="introducing-the-net-framework-472"></a>.NET Framework 4.7.2 简介
-
-.NET Framework 4.7.2 在 .NET Framework 4.x 早期版本的基础之上构建而成，新增了许多修补程序和功能，同时很好地保持了产品的稳定性。
-
-### <a name="downloading-and-installing-the-net-framework-472"></a>下载和安装 .NET Framework 4.7.2
-
-可以从下列位置下载 .NET Framework 4.7.2：
-
-- [.NET Framework 4.7.2 Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)
-
-- [NET Framework 4.7.2 脱机安装程序](https://go.microsoft.com/fwlink/?LinkId=863265)
-
-可以在 Windows 10、Windows 8.1、Windows 7 SP1 和对应的服务器平台（版本不低于 Windows Server 2008 R2 SP1）上安装 .NET Framework 4.7.2。 可以使用 Web 安装程序或脱机安装程序来安装 .NET Framework 4.7.2。 适用于大多数用户的建议方法是使用 Web 安装程序。
-
-可以通过安装 [.NET Framework 4.7.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=874338)，在 Visual Studio 2012 或更高版本中定位 .NET Framework 4.7.2。
-
-### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2 中的新增功能
+## <a name="whats-new-in-net-framework-472"></a>.NET Framework 4.7.2 中的新增功能
 
 .NET Framework 4.7.2 在以下几个领域新增了功能：
 
-- [核心](#core-472)
+- [基类](#core-472)
 - [ASP.NET 2.0](#asp-net472)
 - [网络连接](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
 
-.NET Framework 4.7.2 持续关注的重点是辅助功能的改进，使应用程序能为辅助技术的用户提供最佳体验。 有关 .NET Framework 4.7.2 中辅助功能改进的信息，请参阅 [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)。
+.NET Framework 4.7.2 持续关注的重点是辅助功能的改进，使应用程序能为使用辅助技术的用户提供最佳体验。 有关 .NET Framework 4.7.2 中辅助功能改进的信息，请参阅 [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)。
 
 <a name="core-472" />
 
-#### <a name="core"></a>核心
+#### <a name="base-classes"></a>基类
 
 .NET Framework 4.7.2 提供大量的加密增强功能、对 ZIP 存档更好的解压缩支持以及额外的集合 API。
 
@@ -199,7 +333,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **DeflateStream 中的解压缩更改**
 
-从 .NET Framework 4.7.2 开始，<xref:System.IO.Compression.DeflateStream> 类中的解压缩操作的实现变为默认使用本机 Windows API。 这样通常能大大地提高性能。
+从 .NET Framework 4.7.2 开始，<xref:System.IO.Compression.DeflateStream> 类中的解压缩操作的实现变为默认使用本机 Windows API。 通常情况下，这能大大地提高性能。
 
 对于面向 .NET Framework 4.7.2 的应用程序，默认启用通过使用 Windows API 进行解压缩的支持。 对于面向旧版 .NET Framework 但在 .NET Framework 4.7.2 下运行的应用程序，可以将以下 [AppContext 开关](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)添加到应用程序配置文件，从而选择启用此行为：
 
@@ -433,20 +567,20 @@ Windows 窗体的 HDPI 感知应用程序、Windows Presentation Foundation (WPF
 
 <a name="v471" />
 
-## <a name="whats-new-in-the-net-framework-471"></a>.NET Framework 4.7.1 中的新增功能
+## <a name="whats-new-in-net-framework-471"></a>.NET Framework 4.7.1 中的新增功能
 
 .NET Framework 4.7.1 在以下几个领域新增了功能：
 
-- [核心](#core471)
+- [基类](#core471)
 - [公共语言运行时 (CLR)](#clr)
 - [网络连接](#net471)
 - [ASP.NET 2.0](#asp-net471)
 
-此外，.NET Framework 4.7.1 的重点是改进了辅助功能，使应用程序能为辅助技术的用户提供最佳体验。 有关 .NET Framework 4.7.1 中辅助功能改进的信息，请参阅 [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)。
+此外，.NET Framework 4.7.1 的重点是改进了辅助功能，使应用程序能为使用辅助技术的用户提供最佳体验。 有关 .NET Framework 4.7.1 中辅助功能改进的信息，请参阅 [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)。
 
 <a name="core471" />
 
-#### <a name="core"></a>核心
+#### <a name="base-classes"></a>基类
 
 **支持 .NET Standard 2.0**
 
@@ -516,11 +650,11 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 
 <a name="v47" />
 
-## <a name="whats-new-in-the-net-framework-47"></a>.NET Framework 4.7 中的新增功能
+## <a name="whats-new-in-net-framework-47"></a>.NET Framework 4.7 中的新增功能
 
 .NET Framework 4.7 在以下几个领域新增了功能：
 
-- [核心](#Core47)
+- [基类](#Core47)
 - [网络连接](#net47)
 - [ASP.NET 2.0](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
@@ -531,7 +665,7 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 
 <a name="Core47" />
 
-#### <a name="core"></a>核心
+#### <a name="base-classes"></a>基类
 
 .NET Framework 4.7 通过 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 改进了序列化：
 
@@ -626,7 +760,7 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 <a name="v462" />
 
-## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2 中的新增功能
+## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2 中的新增功能
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包括以下几个方面的新功能：
 
@@ -650,7 +784,7 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 - [调试改进](#Debug462)
 
-有关添加到 .NET Framework 4.6.2 的新 API 的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 API 更改](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 有关 .NET Framework 4.6.2 中功能改进和 bug 修复的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 更改列表](https://go.microsoft.com/fwlink/?LinkId=708778)。  有关其他信息，请参阅 .NET 博客中的 [Announcing .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)（宣布 .NET Framework 4.6.2）。
+有关 .NET Framework 4.6.2 中新增 API 的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 API 更改](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 有关 .NET Framework 4.6.2 中功能改进和 bug 修复的列表，请参阅 GitHub 上的 [.NET Framework 4.6.2 更改列表](https://go.microsoft.com/fwlink/?LinkId=708778)。  有关其他信息，请参阅 .NET 博客中的 [Announcing .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)（宣布 .NET Framework 4.6.2）。
 
 <a name="ASPNET462" />
 
@@ -1087,7 +1221,7 @@ Windows 现在提供将现有 Windows 桌面应用（包括 WPF 和 Windows 窗�
 
 <a name="v461" />
 
-## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1 中的新变化
+## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1 中的新增功能
 
 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包括以下几个方面的新功能：
 
@@ -1582,7 +1716,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 <a name="v452" />
 
-## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2 中的新增功能
+## <a name="whats-new-in-net-framework-452"></a>.NET Framework 4.5.2 中的新增功能
 
 - **ASP.NET 应用的新 API。** 新的 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> 和 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> 方法使你可以在响应刷新到客户端应用时检查并修改响应标头和状态代码。 考虑使用这些方法，而不是 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 和 <xref:System.Web.HttpApplication.PreSendRequestContent> 事件；它们更为高效可靠。
 
@@ -1653,7 +1787,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 <a name="v451" />
 
-## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1 中的新增功能
+## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1 中的新增功能
 
 **2014 年 4 月版更新**：
 
@@ -1673,7 +1807,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 - [.NET Framework 引用源](https://referencesource.microsoft.com/)提供新的浏览体验和增强功能。 现在可以联机浏览 .NET Framework 源代码，[下载引用](https://referencesource.microsoft.com/download.html)以供脱机查看，并在调试时逐步执行源（包括修补程序和更新）。 有关详细信息，请参阅日志 [.NET 引用源的全新外观](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)。
 
-.NET Framework 4.5.1 中的核心新功能和增强包括：
+.NET Framework 4.5.1 基类中的新增功能和增强包括：
 
 - 程序集的自动绑定重定向。 自 Visual Studio 2013 起，在编译面向 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的应用时，如果应用或其组件引用同一程序集的多个版本，那么绑定重定向可能会被添加到应用配置文件中。 你也可以对面向 .NET framework 的早期版本的项目启用此功能。 有关详细信息，请参阅[如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
 
@@ -1715,9 +1849,9 @@ Windows 窗体的改进包括：
 
 <a name="v45" />
 
-## <a name="whats-new-in-the-net-framework-45"></a>.NET Framework 4.5 中的新增功能
+## <a name="whats-new-in-net-framework-45"></a>.NET Framework 4.5 中的新增功能
 
-### <a name="core-new-features-and-improvements"></a>核心新功能和改进
+### <a name="base-classes"></a>基类
 
 - 能够在部署期间通过检测并关闭 .NET Framework 4 应用程序来减少系统重启。 请参阅[在 .NET Framework 4.5 安装期间减少系统重新启动](../deployment/reducing-system-restarts.md)。
 
