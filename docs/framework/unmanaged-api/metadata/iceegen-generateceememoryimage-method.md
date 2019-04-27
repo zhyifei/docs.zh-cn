@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8136ccc2306894f2a2cfc0203460cb62c0bbec73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905380"
 ---
-# <a name="iceegengenerateceememoryimage-method"></a><span data-ttu-id="10f16-102">ICeeGen::GenerateCeeMemoryImage 方法</span><span class="sxs-lookup"><span data-stu-id="10f16-102">ICeeGen::GenerateCeeMemoryImage Method</span></span>
-<span data-ttu-id="10f16-103">在基本代码的内存中生成的映像。</span><span class="sxs-lookup"><span data-stu-id="10f16-103">Generates an image in memory for the code base.</span></span>  
+# <a name="iceegengenerateceememoryimage-method"></a><span data-ttu-id="21d3b-102">ICeeGen::GenerateCeeMemoryImage 方法</span><span class="sxs-lookup"><span data-stu-id="21d3b-102">ICeeGen::GenerateCeeMemoryImage Method</span></span>
+<span data-ttu-id="21d3b-103">在基本代码的内存中生成的映像。</span><span class="sxs-lookup"><span data-stu-id="21d3b-103">Generates an image in memory for the code base.</span></span>  
   
- <span data-ttu-id="10f16-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="10f16-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="21d3b-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="21d3b-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10f16-105">语法</span><span class="sxs-lookup"><span data-stu-id="10f16-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21d3b-105">语法</span><span class="sxs-lookup"><span data-stu-id="21d3b-105">Syntax</span></span>  
   
 ```  
 HRESULT GenerateCeeMemoryImage (  
@@ -37,19 +37,19 @@ HRESULT GenerateCeeMemoryImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="10f16-106">参数</span><span class="sxs-lookup"><span data-stu-id="10f16-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="21d3b-106">参数</span><span class="sxs-lookup"><span data-stu-id="21d3b-106">Parameters</span></span>  
  `ppImage`  
- <span data-ttu-id="10f16-107">[out]指向所生成的图像的指针。</span><span class="sxs-lookup"><span data-stu-id="10f16-107">[out] A pointer to the generated image.</span></span>  
+ <span data-ttu-id="21d3b-107">[out]指向所生成的图像的指针。</span><span class="sxs-lookup"><span data-stu-id="21d3b-107">[out] A pointer to the generated image.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10f16-108">要求</span><span class="sxs-lookup"><span data-stu-id="10f16-108">Requirements</span></span>  
- <span data-ttu-id="10f16-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="10f16-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21d3b-108">要求</span><span class="sxs-lookup"><span data-stu-id="21d3b-108">Requirements</span></span>  
+ <span data-ttu-id="21d3b-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="21d3b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10f16-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="10f16-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="21d3b-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="21d3b-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="10f16-111">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="10f16-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="21d3b-111">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="21d3b-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="10f16-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10f16-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="21d3b-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21d3b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10f16-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="10f16-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21d3b-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="21d3b-113">See also</span></span>
 
-- [<span data-ttu-id="10f16-114">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="10f16-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="21d3b-114">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="21d3b-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
