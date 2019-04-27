@@ -3,11 +3,11 @@ title: 参考
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
 ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877131"
 ---
 # <a name="reference"></a>参考
 本节提供针对 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 开发人员的参考信息。  
@@ -40,8 +40,8 @@ ms.locfileid: "56093354"
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  提供访问 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主题的门户。  
   
- [语言集成查询 (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- [语言集成查询 (LINQ) 的 Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [语言集成查询 (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [语言集成查询 (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供了适用于门户[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]主题。  
   
  [LinqDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  

@@ -3,11 +3,11 @@ title: 联合扩展性
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915559"
 ---
 # <a name="syndication-extensibility"></a>联合扩展性
 联合 API 是专为提供不限制格式的编程模型而设计的，该编程模型允许将联合内容以各种格式写入到网络中。 抽象数据模型由以下类组成：  

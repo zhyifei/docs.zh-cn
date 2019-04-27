@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
 ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913405"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>如何：从 Windows 窗体播放声音
 本示例在运行时播放给定路径中的声音。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863683"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：声明具有混合的访问级别 (Visual Basic 中) 的属性
 如果你想`Get`并`Set`要具有不同的访问级别的属性的过程，您可以使用中的限制性更弱级别`Property`语句，并在限制性更强的级别`Get`或`Set`语句。 当你想要能够获取属性的值的代码的某些部分和某些其他部分的代码要能够更改的值时，可以在属性上使用混合的访问级别。  

@@ -3,11 +3,11 @@ title: 循环：for...in 表达式
 description: 请参阅如何F#数据类型...在表达式中循环构造用于循环访问的可枚举集合中的模式匹配。
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024438"
 ---
 # <a name="loops-forin-expression"></a>循环：for...in 表达式
 
@@ -28,11 +28,11 @@ for pattern in enumerable-expression do
 
 当使用表示范围`..`运算符，可以使用以下语法。
 
-*启动*... *完成*
+*启动*... *finish*
 
 此外可以使用一种包括名为增量*跳过*，如下面的代码。
 
-*启动*... *跳过*... *完成*
+*启动*... *skip* .. *finish*
 
 时使用整数范围和简单的计数器变量作为一种模式，典型的行为是计数器变量递增 1 上的每个迭代，但如果该范围包含跳过值，此计数器递增的 skip 值改为。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
 ms.openlocfilehash: 541467b0f1285d372e5f6d502d9d8f28c8c6333e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012953"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.LinkLabel>让您可以将 Web 样式的链接添加到 Windows 窗体应用程序。 可以使用<xref:System.Windows.Forms.LinkLabel>包括可以使用的内容控件<xref:System.Windows.Forms.Label>控制; 还可以设置为文件、 文件夹或 Web 页的链接的文本的一部分。  

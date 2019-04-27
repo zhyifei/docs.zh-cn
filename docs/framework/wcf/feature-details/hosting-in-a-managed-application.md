@@ -3,11 +3,11 @@ title: 在托管应用程序中承载
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855824"
 ---
 # <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
 Windows Communication Foundation (WCF) 服务可以承载于任何[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，它也是最不可靠宿主选项，因为托管应用程序不提供的高级宿主和管理功能，如 Internet 信息服务 (IIS) 和 Windows 服务在 WCF 中，其他托管选项。  

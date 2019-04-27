@@ -3,11 +3,11 @@ title: 列表
 description: 了解如何F#列出了相同类型的元素的有序的、 不可变序列。
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904119"
 ---
 # <a name="lists"></a>列表
 
@@ -58,7 +58,7 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 
 中列出了F#将作为单独链接的列表，这意味着，访问列表头的操作是 o （1），并且元素访问复杂度为 O (*n*)。
 
-## <a name="properties"></a>Properties
+## <a name="properties"></a>属性
 
 列表类型支持以下属性：
 
@@ -89,7 +89,7 @@ F# 中的列表是一个有序的、不可变的同类型元素系列。 若要�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13071.fs)]
 
-上面的代码非常适用于小型列表，但对于大型列表，它可能会溢出堆栈。 以下代码通过使用累加器参数（一种用于处理递归函数的标准技术）对该代码进行了改进。 使用累加器参数会使函数进行尾递归，这将节省堆栈空间。
+上面的代码非常适用于小型列表，但对于大型列表，它可能会溢出堆栈。 以下代码通过使用累加器自变量（一种用于处理递归函数的标准技术）对该代码进行了改进。 使用累加器参数会使函数进行尾递归，这将节省堆栈空间。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13072.fs)]
 
@@ -404,7 +404,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 下面的代码示例演示如何将[List.fold](https://msdn.microsoft.com/library/c272779e-bae7-4983-8d7f-16b345bb33a0)以执行各种操作。
 
-将遍历列表；累加器 `acc` 是一个在计算过程中不断传递的值。 第一个参数采用累加器和列表元素，并返回针对列表元素的计算的中间结果。 第二个参数为累加器的初始值。
+将遍历列表；累加器 `acc` 是一个在计算过程中不断传递的值。 第一个参数采用累加器和列表元素，并返回针对列表元素的计算的中间结果。 第二个自变量为累加器的初始值。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet27.fs)]
 
@@ -424,13 +424,13 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet30.fs)]
 
-以下示例将返回到银行帐户示例。 这次，添加一个新的交易类型：利息计算。 期末余额现在取决于事务顺序。
+以下示例将返回到银行帐户示例。 这次，添加一个新的事务类型：利息计算。 期末余额现在取决于交易顺序。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
 
 该函数[List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b)有点像`List.fold`和`List.scan`，只不过不是传递单独累加器，`List.reduce`会将采用两个参数的元素类型而不是一个函数只是一，这些参数的另一个将用作累加器，这意味着它将存储中间计算结果。 `List.reduce` 首先对前两个列表元素执行操作，然后将操作的结果和下一个元素一起使用。 由于不存在具有自己的类型的单独累加器，因此只可以在累加器和元素类型的类型相同时，使用 `List.reduce` 代替 `List.fold`。 以下代码演示了 `List.reduce` 的用法。 如果提供的列表中不包含任何元素，则 `List.reduce` 将引发异常。
 
-在以下代码中，对 lambda 表达式的第一个调用提供了参数 2 和 4，并返回 6；下一个调用提供了参数 6 和 10，因此结果为 16。
+在以下代码中，对 lambda 表达式的第一个调用提供了自变量 2 和 4，并返回 6；下一个调用提供了自变量 6 和 10，因此结果为 16。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet33.fs)]
 

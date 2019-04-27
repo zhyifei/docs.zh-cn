@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
 ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863618"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>如何：强制自变量传递的值 (Visual Basic)
 过程声明确定的传递机制。 如果声明的参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 希望按引用传递相应的参数。 这将允许过程来更改调用代码中的参数的基础编程元素的值。 如果你想要防止此类更改基础元素，则可以重写`ByRef`传递机制在过程调用将参数名称括在括号中。 这些括号是除了括号之外的参数列表的调用中。  

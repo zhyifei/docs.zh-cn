@@ -1,17 +1,17 @@
 ---
-title: 基于容器的新式应用程序的道路
+title: 基于容器的新式应用程序之路
 description: 了解 Docker、 容器和微服务体系结构不是一个通用的解决方案。 在此可以找到将帮助您确定一些引用。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922611"
 ---
-# <a name="road-to-modern-applications-based-on-containers"></a>基于容器的新式应用程序的道路
+# <a name="road-to-modern-applications-based-on-containers"></a>基于容器的新式应用程序之路
 
 由于你计划在开发新应用程序或在进行评估的使用 Docker、 容器和微服务之类的新方法，在你的公司的影响，可能正在阅读这本书。
 

@@ -5,11 +5,11 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867090"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 .NET 本机提供应用在 Windows 应用商店中或开发人员的计算机上的静态的编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同，.NET Native 尝试保持与兼容性[.NET for Windows Store 应用](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)。 大多数情况下，用于.NET for Windows Store 应用的内容也适用于.NET Native。  然而，在某些情况下，你可能会遇到行为变更。 本文档介绍了以下几个方面之间的标准.NET for Windows Store 应用和.NET Native 的这些差异：  

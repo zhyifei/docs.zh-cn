@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800121"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows 窗体中的用户输入验证
 当用户输入到你的应用程序数据时，你可以验证数据有效，然后再在应用程序将使用它。 可能需要某些文本字段不为零长度、 字段将格式化为电话号码或其他类型的格式正确的数据，或字符串不包含任何不安全字符无法用于危及安全的数据库。 Windows 窗体提供了几种方法，以验证你的应用程序中的输入。  

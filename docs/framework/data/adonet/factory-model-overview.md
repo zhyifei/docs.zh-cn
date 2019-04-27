@@ -3,11 +3,11 @@ title: 工厂模型概述
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
 ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879094"
 ---
 # <a name="factory-model-overview"></a>工厂模型概述
 ADO.NET 2.0 在 <xref:System.Data.Common> 命名空间中引入了新基类。 基类为抽象类，这意味着它们不能直接实例化。 这些基类包括 <xref:System.Data.Common.DbConnection>、<xref:System.Data.Common.DbCommand> 和 <xref:System.Data.Common.DbDataAdapter>，它们由 .NET Framework 数据提供程序（如 <xref:System.Data.SqlClient> 和 <xref:System.Data.OleDb>）共享。 添加基类简化了向 .NET Framework 数据提供程序添加功能的过程，不再需要创建新接口。  

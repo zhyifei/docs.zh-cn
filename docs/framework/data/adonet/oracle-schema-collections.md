@@ -3,17 +3,17 @@ title: Oracle 架构集合
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878470"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 架构集合
 
 除了通用架构集合之外，Microsoft Oracle .NET Framework 数据提供程序还支持下列特定的架构集合：
 
-- Columns
+- 列
 
 - 索引
 
@@ -27,9 +27,9 @@ ms.locfileid: "57371640"
 
 - 表
 
-- Users
+- 用户
 
-- 视图
+- Views
 
 - 函数
 
@@ -37,7 +37,7 @@ ms.locfileid: "57371640"
 
 - PackageBodies
 
-- 参数
+- 自变量
 
 - UniqueKeys
 
@@ -49,18 +49,18 @@ ms.locfileid: "57371640"
 
 - ProcedureParameters
 
-## <a name="columns"></a>Columns
+## <a name="columns"></a>列
 
 |列名|数据类型|描述|
 |----------------|--------------|-----------------|
 |OWNER|String|表、视图或群集的所有者。|
 |TABLE_NAME|String|表、视图或群集的名称。|
 |COLUMN_NAME|String|列名称。|
-|ID|Decimal|列在创建时的序列号。|
+|Id|十进制|列在创建时的序列号。|
 |DATATYPE|String|列的数据类型。|
-|LENGTH|Decimal|列的长度（字节数）。|
-|PRECISION|Decimal|对于 NUMBER 数据类型为十进制精度；对于 FLOAT 数据类型为二进制精度；对于所有其他数据类型为 null。|
-|SCALE|Decimal|数字中小数点右侧的位数。|
+|LENGTH|十进制|列的长度（字节数）。|
+|PRECISION|十进制|对于 NUMBER 数据类型为十进制精度；对于 FLOAT 数据类型为二进制精度；对于所有其他数据类型为 null。|
+|SCALE|十进制|数字中小数点右侧的位数。|
 |NULLABLE|String|指定列是否允许 NULL。 如果列上存在 NOT NULL 约束，或列属于 PRIMARY KEY，值为 N。|
 
 ## <a name="indexes"></a>索引
@@ -75,30 +75,30 @@ ms.locfileid: "57371640"
 |TABLE_TYPE|String|索引对象的类型（例如 TABLE、CLUSTER）。|
 |UNIQUENESS|String|索引是 UNIQUE 还是 NONUNIQUE。|
 |COMPRESSION|String|索引是 ENABLED 还是 DISABLED。|
-|PREFIX_LENGTH|Decimal|压缩键的前缀中的列数。|
+|PREFIX_LENGTH|十进制|压缩键的前缀中的列数。|
 |TABLESPACE_NAME|String|包含索引的表空间的名称。|
-|INI_TRANS|Decimal|初始事务数。|
-|MAX_TRANS|Decimal|最大事务数。|
-|INITIAL_EXTENT|Decimal|初始范围的大小。|
-|NEXT_EXTENT|Decimal|辅助范围的大小。|
-|MIN_EXTENTS|Decimal|段中允许的最小范围数。|
-|MAX_EXTENTS|Decimal|段中允许的最大范围数。|
-|PCT_INCREASE|Decimal|范围大小增加的百分比。|
-|PCT_THRESHOLD|Decimal|每个索引条目允许的块空间的阈值百分比。|
-|INCLUDE_COLUMN|Decimal|要加入通过索引组织的表的主键（非溢出）索引中的最后一列的列 ID。 此列映射到 *_TAB_COLUMNS 数据字典视图的 COLUMN_ID 列。|
-|FREELISTS|Decimal|为此段分配的进程空闲列表数。|
-|FREELIST_GROUPS|Decimal|为此段分配的空闲列表组数。|
-|PCT_FREE|Decimal|块中可用空间的最小百分比。|
+|INI_TRANS|十进制|初始事务数。|
+|MAX_TRANS|十进制|最大事务数。|
+|INITIAL_EXTENT|十进制|初始范围的大小。|
+|NEXT_EXTENT|十进制|辅助范围的大小。|
+|MIN_EXTENTS|十进制|段中允许的最小范围数。|
+|MAX_EXTENTS|十进制|段中允许的最大范围数。|
+|PCT_INCREASE|十进制|范围大小增加的百分比。|
+|PCT_THRESHOLD|十进制|每个索引条目允许的块空间的阈值百分比。|
+|INCLUDE_COLUMN|十进制|要加入通过索引组织的表的主键（非溢出）索引中的最后一列的列 ID。 此列映射到 *_TAB_COLUMNS 数据字典视图的 COLUMN_ID 列。|
+|FREELISTS|十进制|为此段分配的进程空闲列表数。|
+|FREELIST_GROUPS|十进制|为此段分配的空闲列表组数。|
+|PCT_FREE|十进制|块中可用空间的最小百分比。|
 |LOGGING|String|日志信息。|
-|BLEVEL|Decimal|B* 树级别：从根块到叶块的索引深度。 如果深度为 0，指示根块到叶块相同。|
-|LEAF_BLOCKS|Decimal|索引中的叶块数。|
-|DISTINCT_KEYS|Decimal|不同的索引值数。 对于强制使用 UNIQUE 和 PRIMARY KEY 约束的索引，此值与表中的行数相同 (USER_TABLES.NUM_ROWS)。|
-|AVG_LEAF_BLOCKS_PER_KEY|Decimal|平均叶块数，索引中的每个不同值舍入到最接近的整数。 对于强制使用 UNIQUE 和 PRIMARY KEY 约束的索引，此值始终为 1。|
-|AVG_DATA_BLOCKS_PER_KEY|Decimal|表中通过索引中舍入到最接近整数的不同值指向的平均数据块数。 此统计信息是包含的行中包含索引列的给定值的平均数据块数。|
-|CLUSTERING_FACTOR|Decimal|根据索引值指示表中行的排序数量。|
-|STATUS|String|非分区索引是 VALID 还是 UNUSABLE。|
-|NUM_ROWS|Decimal|索引中的行数。|
-|SAMPLE_SIZE|Decimal|用于分析索引的示例的大小。|
+|BLEVEL|十进制|B* 树级别：从根块到叶块的索引深度。 如果深度为 0，指示根块到叶块相同。|
+|LEAF_BLOCKS|十进制|索引中的叶块数。|
+|DISTINCT_KEYS|十进制|不同的索引值数。 对于强制使用 UNIQUE 和 PRIMARY KEY 约束的索引，此值与表中的行数相同 (USER_TABLES.NUM_ROWS)。|
+|AVG_LEAF_BLOCKS_PER_KEY|十进制|平均叶块数，索引中的每个不同值舍入到最接近的整数。 对于强制使用 UNIQUE 和 PRIMARY KEY 约束的索引，此值始终为 1。|
+|AVG_DATA_BLOCKS_PER_KEY|十进制|表中通过索引中舍入到最接近整数的不同值指向的平均数据块数。 此统计信息是包含的行中包含索引列的给定值的平均数据块数。|
+|CLUSTERING_FACTOR|十进制|根据索引值指示表中行的排序数量。|
+|状态|String|非分区索引是 VALID 还是 UNUSABLE。|
+|NUM_ROWS|十进制|索引中的行数。|
+|SAMPLE_SIZE|十进制|用于分析索引的示例的大小。|
 |LAST_ANALYZED|DateTime|最近分析此索引的日期。|
 |DEGREE|String|每个实例用于扫描索引的线程数。|
 |INSTANCES|String|在其上扫描索引的实例数。|
@@ -109,7 +109,7 @@ ms.locfileid: "57371640"
 |BUFFER_POOL|String|用于索引块的默认缓冲区池的名称。|
 |USER_STATS|String|统计信息是否已由用户直接输入。|
 |DURATION|String|指示临时表的持续时间：1) SYS$ SESSION: 2) SYS$ TRANSACTION 会话的持续时间内保留行： 之后提交，3) Null 表示永久表删除行。|
-|PCT_DIRECT_ACCESS|Decimal|对于通过索引组织的表上的辅助索引，为具有 VALID 猜测的行的百分比。|
+|PCT_DIRECT_ACCESS|十进制|对于通过索引组织的表上的辅助索引，为具有 VALID 猜测的行的百分比。|
 |ITYP_OWNER|String|对于域索引，为索引类型的所有者。|
 |ITYP_NAME|String|对于域索引，为索引类型的名称。|
 |PARAMETERS|String|对于域索引，为参数字符串。|
@@ -128,9 +128,9 @@ ms.locfileid: "57371640"
 |TABLE_OWNER|String|表或群集的所有者。|
 |TABLE_NAME|String|表或群集的名称。|
 |COLUMN_NAME|String|对象类型列的列名或属性。|
-|COLUMN_POSITION|Decimal|列或属性在索引中的位置。|
-|COLUMN_LENGTH|Decimal|列的索引长度。|
-|CHAR_LENGTH|Decimal|列的最大代码点长度。|
+|COLUMN_POSITION|十进制|列或属性在索引中的位置。|
+|COLUMN_LENGTH|十进制|列的索引长度。|
+|CHAR_LENGTH|十进制|列的最大代码点长度。|
 |DESCEND|String|列是否按照降序进行排序。|
 
 ## <a name="procedures"></a>过程
@@ -140,11 +140,11 @@ ms.locfileid: "57371640"
 |OWNER|String|对象的所有者。|
 |OBJECT_NAME|String|对象的名称。|
 |SUBOBJECT_NAME|String|子对象（例如分区）的名称。|
-|OBJECT_ID|Decimal|对象的字典对象编号。|
-|DATA_OBJECT_ID|Decimal|包含对象的段的字典对象编号。|
+|OBJECT_ID|十进制|对象的字典对象编号。|
+|DATA_OBJECT_ID|十进制|包含对象的段的字典对象编号。|
 |LAST_DDL_TIME|DateTime|上次通过 DDL 命令修改对象（包括授予和吊销）的时间戳。|
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|
-|STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|
+|状态|String|对象的状态（VALID、INVALID 或 N/A）。|
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|
 |GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|
@@ -156,13 +156,13 @@ ms.locfileid: "57371640"
 |----------------|--------------|-----------------|
 |SEQUENCE_OWNER|String|序列所有者的名称。|
 |SEQUENCE_NAME|String|序列名称。|
-|MIN_VALUE|Decimal|序列的最小值。|
-|MAX_VALUE|Decimal|序列的最大值。|
-|INCREMENT_BY|Decimal|序列递增的值。|
+|MIN_VALUE|十进制|序列的最小值。|
+|MAX_VALUE|十进制|序列的最大值。|
+|INCREMENT_BY|十进制|序列递增的值。|
 |CYCLE_FLAG|String|在达到限制时序列是否环绕。|
 |ORDER_FLAG|String|序列号是否按顺序生成。|
-|CACHE_SIZE|Decimal|要缓存的序列号数。|
-|LAST_NUMBER|Decimal|写入磁盘的上一个序列号。 如果序列使用缓存，写入磁盘的序列号是上一个放入序列缓存的序列号。 此序列号很可能大于上一个使用的序列号。|
+|CACHE_SIZE|十进制|要缓存的序列号数。|
+|LAST_NUMBER|十进制|写入磁盘的上一个序列号。 如果序列使用缓存，写入磁盘的序列号是上一个放入序列缓存的序列号。 此序列号很可能大于上一个使用的序列号。|
 
 ## <a name="synonyms"></a>Synonyms
 
@@ -182,25 +182,25 @@ ms.locfileid: "57371640"
 |TABLE_NAME|String|表的名称。|
 |TYPE|String|表的类型。|
 
-## <a name="users"></a>Users
+## <a name="users"></a>用户
 
 |列名|数据类型|描述|
 |----------------|--------------|-----------------|
 |NAME|String|用户的名称。|
-|ID|Decimal|用户的 ID 号。|
+|Id|十进制|用户的 ID 号。|
 |CREATEDATE|DateTime|用户的创建日期。|
 
-## <a name="views"></a>视图
+## <a name="views"></a>Views
 
 |列名|数据类型|描述|
 |----------------|--------------|-----------------|
 |OWNER|String|视图的所有者。|
 |VIEW_NAME|String|视图的名称。|
-|TEXT_LENGTH|Decimal|视图文本的长度。|
+|TEXT_LENGTH|十进制|视图文本的长度。|
 |TEXT|String|视图文本。|
-|TYPE_TEXT_LENGTH|Decimal|类型化视图的类型子句的长度。|
+|TYPE_TEXT_LENGTH|十进制|类型化视图的类型子句的长度。|
 |TYPE_TEXT|String|类型化视图的类型子句。|
-|OID_TEXT_LENGTH|Decimal|类型化视图的 WITH OID 子句的长度。|
+|OID_TEXT_LENGTH|十进制|类型化视图的 WITH OID 子句的长度。|
 |OID_TEXT|String|类型化视图的 WITH OID 子句。|
 |VIEW_TYPE_OWNER|String|视图类型的所有者（如果视图是类型化视图）。|
 |VIEW_TYPE|String|视图类型（如果视图是类型化视图）。|
@@ -213,13 +213,13 @@ ms.locfileid: "57371640"
 |OWNER|String|对象的所有者。|
 |OBJECT_NAME|String|对象的名称。|
 |SUBOBJECT_NAME|String|子对象（例如分区）的名称。|
-|OBJECT_ID|Decimal|对象的字典对象编号。|
-|DATA_OBJECT_ID|Decimal|包含对象的段的字典对象编号。|
+|OBJECT_ID|十进制|对象的字典对象编号。|
+|DATA_OBJECT_ID|十进制|包含对象的段的字典对象编号。|
 |OBJECT_TYPE|String|对象的类型。|
 |CREATED|DateTime|创建对象的日期。|
 |LAST_DDL_TIME|DateTime|上次通过 DDL 命令修改对象（包括授予和吊销）的时间戳。|
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|
-|STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|
+|状态|String|对象的状态（VALID、INVALID 或 N/A）。|
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|
 |GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|
@@ -231,11 +231,11 @@ ms.locfileid: "57371640"
 |OWNER|String|对象的所有者。|
 |OBJECT_NAME|String|对象的名称。|
 |SUBOBJECT_NAME|String|子对象（例如分区）的名称。|
-|OBJECT_ID|Decimal|对象的字典对象编号。|
-|DATA_OBJECT_ID|Decimal|包含对象的段的字典对象编号。|
+|OBJECT_ID|十进制|对象的字典对象编号。|
+|DATA_OBJECT_ID|十进制|包含对象的段的字典对象编号。|
 |LAST_DDL_TIME|DateTime|上次通过 DDL 命令修改对象（包括授予和吊销）的时间戳。|
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|
-|STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|
+|状态|String|对象的状态（VALID、INVALID 或 N/A）。|
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|
 |GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|
@@ -248,32 +248,32 @@ ms.locfileid: "57371640"
 |OWNER|String|对象的所有者。|
 |OBJECT_NAME|String|对象的名称。|
 |SUBOBJECT_NAME|String|子对象（例如分区）的名称。|
-|OBJECT_ID|Decimal|对象的字典对象编号。|
-|DATA_OBJECT_ID|Decimal|包含对象的段的字典对象编号。|
+|OBJECT_ID|十进制|对象的字典对象编号。|
+|DATA_OBJECT_ID|十进制|包含对象的段的字典对象编号。|
 |LAST_DDL_TIME|DateTime|上次通过 DDL 命令修改对象（包括授予和吊销）的时间戳。|
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|
-|STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|
+|状态|String|对象的状态（VALID、INVALID 或 N/A）。|
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|
 |GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|
 |CREATED|DateTime|创建对象的日期。|
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 |列名|数据类型|描述|
 |----------------|--------------|-----------------|
 |OWNER|String|对象所有者的名称。|
 |PACKAGE_NAME|String|包名称。|
 |OBJECT_NAME|String|过程或函数的名称。|
-|ARGUMENT_NAME|String|参数的名称。|
-|POSITION|Decimal|在参数列表中的位置，对于函数返回值为 NULL。|
-|SEQUENCE|Decimal|参数序列，包括所有嵌套级别。|
-|DEFAULT_VALUE|String|参数的默认值。|
-|DEFAULT_LENGTH|Decimal|参数的默认值的长度。|
-|IN_OUT|String|参数方向（IN、OUT 或 IN/OUT）。|
-|DATA_LENGTH|Decimal|列的长度（字节数）。|
-|DATA_PRECISION|Decimal|十进制位 (NUMBER) 或二进制位 (FLOAT) 的长度。|
-|DATA_SCALE|Decimal|数字中小数点右侧的位数。|
+|ARGUMENT_NAME|String|自变量的名称。|
+|POSITION|十进制|在自变量列表中的位置，对于函数返回值为 NULL。|
+|SEQUENCE|十进制|参数序列，包括所有嵌套级别。|
+|DEFAULT_VALUE|String|自变量的默认值。|
+|DEFAULT_LENGTH|十进制|自变量的默认值的长度。|
+|IN_OUT|String|自变量方向（IN、OUT 或 IN/OUT）。|
+|DATA_LENGTH|十进制|列的长度（字节数）。|
+|DATA_PRECISION|十进制|十进制位 (NUMBER) 或二进制位 (FLOAT) 的长度。|
+|DATA_SCALE|十进制|数字中小数点右侧的位数。|
 |DATA_TYPE|String|参数的数据类型。|
 
 ## <a name="uniquekeys"></a>UniqueKeys
@@ -287,7 +287,7 @@ ms.locfileid: "57371640"
 |R_OWNER|String|在引用约束中引用的表的所有者。|
 |R_CONSTRAINT_NAME|String|所引用表的唯一约束定义的名称。|
 |DELETE_RULE|String|删除引用约束的规则（CASCADE 或 NO ACTION）。|
-|STATUS|String|约束的强制执行状态（ENABLED 或 DISABLED）。|
+|状态|String|约束的强制执行状态（ENABLED 或 DISABLED）。|
 |DEFERRABLE|String|约束是否可以推迟。|
 |VALIDATED|String|所有数据是否均遵循该约束（VALIDATED 或 NOT VALIDATED）。|
 |GENERATED|String|约束名称是由用户还是由系统生成。|
@@ -308,7 +308,7 @@ ms.locfileid: "57371640"
 |R_OWNER|String|在引用约束中引用的表的所有者。|
 |R_CONSTRAINT_NAME|String|所引用表的唯一约束定义的名称。|
 |DELETE_RULE|String|删除引用约束的规则（CASCADE 或 NO ACTION）。|
-|STATUS|String|约束的强制执行状态（ENABLED 或 DISABLED）。|
+|状态|String|约束的强制执行状态（ENABLED 或 DISABLED）。|
 |DEFERRABLE|String|约束是否可以推迟。|
 |VALIDATED|String|所有数据是否均遵循该约束（VALIDATED 或 NOT VALIDATED）。|
 |GENERATED|String|约束名称是由用户还是由系统生成。|
@@ -332,7 +332,7 @@ ms.locfileid: "57371640"
 |R_OWNER|String|在引用约束中引用的表的所有者。|
 |R_CONSTRAINT_NAME|String|所引用表的唯一约束定义的名称。|
 |DELETE_RULE|String|删除引用约束的规则（CASCADE 或 NO ACTION）。|
-|STATUS|String|约束的强制执行状态（ENABLED 或 DISABLED）。|
+|状态|String|约束的强制执行状态（ENABLED 或 DISABLED）。|
 |VALIDATED|String|所有数据是否均遵循该约束（VALIDATED 或 NOT VALIDATED）。|
 |GENERATED|String|约束名称是由用户还是由系统生成。|
 |RELY|String|启用的约束强制执行还是非强制执行。|
@@ -348,7 +348,7 @@ ms.locfileid: "57371640"
 |CONSTRAINT_NAME|String|约束定义的名称。|
 |TABLE_NAME|String|具有约束定义的表的名称。|
 |COLUMN_NAME|String|约束定义中指定的对象类型列的列或属性的名称。|
-|POSITION|Decimal|对象定义中列或属性的原始位置。|
+|POSITION|十进制|对象定义中列或属性的原始位置。|
 
 ## <a name="procedureparameters"></a>ProcedureParameters
 
@@ -357,27 +357,27 @@ ms.locfileid: "57371640"
 |OWNER|String|对象的所有者。|
 |OBJECT_NAME|String|过程或函数的名称。|
 |PACKAGE_NAME|String|过程或函数的名称。|
-|OBJECT_ID|Decimal|对象的对象编号。|
+|OBJECT_ID|十进制|对象的对象编号。|
 |OVERLOAD|String|重载唯一标识符。|
-|ARGUMENT_NAME|String|参数的名称。|
-|POSITION|Decimal|在参数列表中的位置，对于函数返回值为 null。|
-|SEQUENCE|Decimal|参数序列，包括所有嵌套级别。|
-|DATA_LEVEL|Decimal|复合类型的参数的嵌套深度。|
+|ARGUMENT_NAME|String|自变量的名称。|
+|POSITION|十进制|在自变量列表中的位置，对于函数返回值为 null。|
+|SEQUENCE|十进制|参数序列，包括所有嵌套级别。|
+|DATA_LEVEL|十进制|复合类型的参数的嵌套深度。|
 |DATA_TYPE|String|参数的数据类型。|
-|DEFAULT_VALUE|String|参数的默认值。|
-|DEFAULT_LENGTH|Decimal|参数的默认值的长度。|
-|IN_OUT|String|参数方向（IN、OUT 或 IN/OUT）。|
-|DATA_LENGTH|Decimal|列的长度（字节数）。|
-|DATA_PRECISION|Decimal|十进制位 (NUMBER) 或二进制位 (FLOAT) 的长度。|
-|DATA_SCALE|Decimal|数字中小数点右侧的位数。|
-|RADIX|Decimal|数字的参数基数。|
-|CHARACTER_SET_NAME|String|参数的字符集名称。|
+|DEFAULT_VALUE|String|自变量的默认值。|
+|DEFAULT_LENGTH|十进制|参数的默认值的长度。|
+|IN_OUT|String|自变量方向（IN、OUT 或 IN/OUT）。|
+|DATA_LENGTH|十进制|列的长度（字节数）。|
+|DATA_PRECISION|十进制|十进制位 (NUMBER) 或二进制位 (FLOAT) 的长度。|
+|DATA_SCALE|十进制|数字中小数点右侧的位数。|
+|RADIX|十进制|数字的参数基数。|
+|CHARACTER_SET_NAME|String|自变量的字符集名称。|
 |TYPE_OWNER|String|参数类型的所有者。|
 |TYPE_NAME|String|参数类型的名称。 如果类型是包局部类型（即在包指定中声明），此列将显示包的名称。|
 |TYPE_SUBNAME|String|只与包局部类型有关。 显示在 TYPE_NAME 列中标识的包中声明的类型名称。|
 |TYPE_LINK|String|只有 TYPE_NAME 列中标识的包是远程包时，才与包局部类型有关。 此列显示用于引用远程包的数据库链接。|
 |PLS_TYPE|String|对于数值参数，为参数的 PL/SQL 类型的名称。 否则为 Null。|
-|CHAR_LENGTH|Decimal|字符串数据类型的字符限制。|
+|CHAR_LENGTH|十进制|字符串数据类型的字符限制。|
 |CHAR_USED|String|指示字节限制 (B) 或字符限制 (C) 是否正式用于字符串。|
 
 ## <a name="see-also"></a>请参阅

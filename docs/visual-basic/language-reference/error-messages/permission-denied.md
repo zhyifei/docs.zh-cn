@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
 ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920830"
 ---
 # <a name="permission-denied-visual-basic"></a>权限被拒绝 (Visual Basic)
 尝试写入受写保护的磁盘或访问锁定的文件。  

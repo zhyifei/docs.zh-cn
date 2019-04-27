@@ -7,11 +7,11 @@ helpviewer_keywords:
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
 ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926940"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>使用画笔填充形状
 一个[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<xref:System.Drawing.Brush>对象用于填充一个闭合的形状的内部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 定义多种填充样式： 纯色、 阴影图案、 图像纹理和颜色渐变。  

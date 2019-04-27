@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
 ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911061"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>如何：更改 ListView 中列的水平对齐方式
 默认情况下，在每个列的内容<xref:System.Windows.Controls.ListViewItem>是左对齐。 可以通过提供更改每个列的对齐方式<xref:System.Windows.DataTemplate>并设置<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性中的元素上<xref:System.Windows.DataTemplate>。 本主题介绍如何<xref:System.Windows.Controls.ListView>将其内容默认情况下和如何更改某一列中的对齐方式对齐<xref:System.Windows.Controls.ListView>。  

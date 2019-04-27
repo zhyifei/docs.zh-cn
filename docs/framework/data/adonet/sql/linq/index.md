@@ -3,11 +3,11 @@ title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
 ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902598"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 3.5 版的一个组件，提供了用于将关系数据作为对象管理的运行时基础结构。  
@@ -38,7 +38,7 @@ ms.locfileid: "56092223"
  [语言集成查询 (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  中的 LINQ 技术概述了C#。
  
- [语言集成查询 (LINQ) 的 Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [语言集成查询 (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供了在 Visual Basic 中的 LINQ 技术的概述。
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
 ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910580"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>如何：在 Grid 之间共享重设大小属性
 此示例演示如何共享列的大小调整数据和行之间<xref:System.Windows.Controls.Grid>元素，以使大小调整保持一致。  

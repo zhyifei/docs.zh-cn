@@ -3,11 +3,11 @@ title: LINQ to SQL 中的代码生成
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
 ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903274"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的代码生成
 可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。 在任一情况下，端到端代码生成都分成三个阶段：  

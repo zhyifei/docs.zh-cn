@@ -3,11 +3,11 @@ title: 联接操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834363"
 ---
 # <a name="join-operations-visual-basic"></a>联接操作 (Visual Basic)
 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
@@ -18,7 +18,7 @@ ms.locfileid: "58411143"
   
  下图显示了一个概念性视图，其中包含两个集合以及这两个集合中的包含在内部联接或左外部联接中的元素。  
   
- ![显示内部的两个重叠圆圈&#47;外部。](./media/join-operations/join-method-overlapping-circles.png)  
+ ![显示内部/外部的两个重叠圆圈。](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>方法  
   

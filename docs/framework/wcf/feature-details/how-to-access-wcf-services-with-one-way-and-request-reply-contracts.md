@@ -3,11 +3,11 @@ title: 如何：访问 WCF 服务使用单向和请求-答复协定
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
 ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855109"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>如何：访问 WCF 服务使用单向和请求-答复协定
 下面的过程介绍如何访问 Windows Communication Foundation (WCF) 服务，它定义一个单向协定和请求-答复协定和不使用双工通信模式。  

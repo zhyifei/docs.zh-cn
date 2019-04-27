@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
 ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907226"
 ---
 # <a name="character-data-types-visual-basic"></a>字符数据类型 (Visual Basic)
 Visual Basic 提供了一些*字符数据类型*来处理可打印和可显示的字符。 尽管它们都处理 Unicode 字符`Char`包含一个字符，而`String`包含字符数量不确定。  

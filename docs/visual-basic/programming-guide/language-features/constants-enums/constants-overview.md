@@ -5,11 +5,11 @@ helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
 ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907083"
 ---
 # <a name="constants-overview-visual-basic"></a>常量概述 (Visual Basic)
 常量是有意义的名称采用的数字或字符串不会更改的位置。 常量存储值，如名称所示，将保持不变的应用程序执行中。 可以极大地提高代码的可读性并使其更易于维护使用常量。 包含的值会重新出现的代码中使用它们，或这取决于一些很难记住或没有任何明显的意义的数字。  

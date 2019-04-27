@@ -3,11 +3,11 @@ title: 实体键
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
 ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879174"
 ---
 # <a name="entity-key"></a>实体键
 *实体键*是[属性](../../../../docs/framework/data/adonet/property.md)或一组的属性[实体类型](../../../../docs/framework/data/adonet/entity-type.md)，用于确定标识。 构成实体键的属性是在设计时选择的。 实体键属性的值必须唯一标识实体类型实例中的[实体集](../../../../docs/framework/data/adonet/entity-set.md)在运行时。 在选择构成实体键的属性时应确保实例在实体集中的唯一性。  

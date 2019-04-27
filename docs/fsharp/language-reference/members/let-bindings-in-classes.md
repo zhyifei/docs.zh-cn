@@ -3,11 +3,11 @@ title: 类中的 let 绑定
 description: 了解如何定义私有字段和私有函数为F#类使用 let 中的类定义的绑定。
 ms.date: 05/16/2016
 ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903757"
 ---
 # <a name="let-bindings-in-classes"></a>类中的 let 绑定
 
@@ -53,4 +53,4 @@ ms.locfileid: "53611121"
 
 - [成员](index.md)
 - [类中的 `do` 绑定](do-bindings-in-classes.md)
-- [`let` 绑定](../functions/let-bindings.md)
+- [`let` Bindings](../functions/let-bindings.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864697"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>如何：匹配字符串与模式 (Visual Basic)
 如果想要找出的表达式[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)满足一种模式，则可以使用[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。  

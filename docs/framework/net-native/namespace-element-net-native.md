@@ -5,11 +5,11 @@ ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866907"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > 元素 (.NET Native)
 将运行时反射策略应用到一个指定的命名空间中的所有类型。  

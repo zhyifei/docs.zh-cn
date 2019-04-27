@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 ms.openlocfilehash: e69cd500c50e9d76824d0e438a1af86f3a722c52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857683"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 绑定
 Windows Communication Foundation (WCF) 将如何与其他软件的通信方式编写的应用程序软件。 使用绑定指定客户端与服务彼此通信所需的传输、编码和协议详细信息。 WCF 使用绑定来生成的终结点的基础网络表示，因此必须进行通信双方达成大多数绑定详细信息。 完成此任务的最简单方法是让服务的客户端使用该服务的终结点所使用的相同绑定。 有关如何执行此操作的详细信息，请参阅[到配置服务和客户端使用的绑定](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) 将如何与其他软件的通信方式�
   
  WCF 提供了包含常见选择的绑定元素的绑定。 这些绑定可以与其默认设置一起使用，您也可以根据用户需求修改这些默认值。 这些系统提供的绑定具有一些属性，可以通过这些属性直接控制绑定元素及其设置。 通过为绑定的每个版本提供其自己的名称，还可以轻松地并行使用该绑定的多个版本。 有关详细信息，请参阅[Configuring System-Provided 绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)。  
   
- 如果需要的绑定元素集合不是由系统提供的这些绑定之一提供，则可以创建由所需绑定元素的集合组成的自定义绑定。 这些自定义绑定易于创建且不需要新类，但是，它们不提供用于控制绑定元素或其设置的属性。 你可以访问这些绑定元素并通过包含它们的集合修改其设置。 有关详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 如果需要的绑定元素集合不是由系统提供的这些绑定之一提供，则可以创建由所需绑定元素的集合组成的自定义绑定。 这些自定义绑定易于创建且不需要新类，但是，它们不提供用于控制绑定元素或其设置的属性。 您可以访问这些绑定元素并通过包含它们的集合修改其设置。 有关详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [配置系统提供的绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  

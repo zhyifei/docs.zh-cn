@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
 ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880056"
 ---
 # <a name="finding-rows"></a>查找行
 可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，根据排序关键字值搜索行。 中的值以搜索是否区分大小写**查找**并**FindRows**方法由**CaseSensitive**属性的基础<xref:System.Data.DataTable>。 搜索值必须完全匹配现有排序关键字值才能返回结果。  

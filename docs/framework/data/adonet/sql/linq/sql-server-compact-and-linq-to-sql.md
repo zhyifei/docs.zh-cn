@@ -3,11 +3,11 @@ title: SQL Server Compact 与 LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
 ms.openlocfilehash: db3f7aef082d965dc27b69f5a966ff038c0ffac0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917847"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact 与 LINQ to SQL
 SQL Server Compact 是与 Visual Studio 一起安装的默认数据库。 有关详细信息，请参阅[使用 SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))。  

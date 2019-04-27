@@ -1,17 +1,17 @@
 ---
-title: 何时将 Windows 容器部署到 Azure Vm （IaaS 云）
+title: 何时将 Windows 容器部署到 Azure VM（IaaS 云）
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |何时将 Windows 容器部署到 Azure Vm （IaaS 云）
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 51217e2c94fd9727c8f7907e791cdebaec98f14f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011952"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>何时将 Windows 容器部署到 Azure Vm （IaaS 云）
+# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>何时将 Windows 容器部署到 Azure VM（IaaS 云）
 
 如果你的组织使用 Azure 虚拟机，即使您还在使用 Windows 容器，您依然是使用 IaaS 时的处理。 这意味着该处理基础结构操作、 VM OS 修补程序和基础结构的复杂性的高度可缩放的应用程序需要将部署到负载平衡基础结构中的多个 Vm。 在 Azure VM 中使用 Windows 容器的主要方案是：
 

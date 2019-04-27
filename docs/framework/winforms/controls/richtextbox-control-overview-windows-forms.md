@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902494"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件用于显示、 输入和操作带有格式的文本。 <xref:System.Windows.Forms.RichTextBox>控件的功能无所不包<xref:System.Windows.Forms.TextBox>控件的作用，但它还可以显示字体、 颜色和链接; 从文件; 加载文本和嵌入的图像并查找指定的字符。 <xref:System.Windows.Forms.RichTextBox>控件通常用于提供文本操作和显示功能，类似于 Microsoft Word 等文字处理应用程序。 像<xref:System.Windows.Forms.TextBox>控件，<xref:System.Windows.Forms.RichTextBox>控件可以显示滚动条; 但不同于<xref:System.Windows.Forms.TextBox>控件，其默认设置将显示水平和垂直滚动条，根据需要并包含额外的滚动条设置。  

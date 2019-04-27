@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863696"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定义参数的过程 (Visual Basic)
 一个*参数*允许调用代码将调用它时，将值传递给过程。 声明过程每个参数相同的方式声明变量，指定其名称和数据类型。 您还指定的传递机制，以及该参数是否可选。  

@@ -1,30 +1,20 @@
 ---
 title: 1450 - WfMessageSent
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1acc8b92-a76d-479b-a6fe-328affff5f3d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f87f3fec79a5453c9482878980d9f8ee260dc13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d5ba6e1ec1b39b8d864e5f24b086120892c1ee8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924250"
 ---
 # <a name="1450---wfmessagesent"></a>1450 - WfMessageSent
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|1450|  
+|Id|1450|  
 |关键字|WFServices|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
@@ -39,4 +29,4 @@ ms.lasthandoff: 12/22/2017
   
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|应用程序域|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

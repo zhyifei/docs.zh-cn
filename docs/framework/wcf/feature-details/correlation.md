@@ -3,11 +3,11 @@ title: 相关性
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
 ms.openlocfilehash: 4c5dc97cfe37b7720c8b0769ca9e49b25c3af908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857241"
 ---
 # <a name="correlation"></a>相关性
 当工作流服务应用程序与其他服务通信时，将这些服务之间的消息调度到适当的工作流实例非常重要。 相关性提供了此调度机制。 本节中的主题概述了相关性以及如何在不同工作流服务方案中使用相关性。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
 ms.openlocfilehash: 0e9acf4b3e71295655c15ae9b1c80852c9aca8df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803566"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>派生类无法引发基类事件
 只能从声明它的声明空间，可以引发一个事件。 因此，一个类无法引发从任何其他类，甚至从其派生的其中一个事件。  

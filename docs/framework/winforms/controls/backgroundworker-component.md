@@ -12,11 +12,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: bef7b0ab-ce57-475a-a2d6-fb8a702a9417
 ms.openlocfilehash: 0baf54d27cf33eef7e4df7019ee98b42eba40205
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011796"
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker 组件
 `BackgroundWorker`组件使您的窗体或控件以异步方式运行操作。  

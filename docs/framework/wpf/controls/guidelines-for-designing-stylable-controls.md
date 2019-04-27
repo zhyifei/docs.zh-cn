@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009963"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>可样式化控件的设计准则
 本文档概述在设计可方便地样式化和模板化的控件时需要考虑的一组最佳做法。 在为内置的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件集处理主题控件样式时，我们通过大量试验和错误总结出了这组最佳做法。 我们已经认识到，成功的样式设置不只是设计完善的对象模型的功能，也是样式本身的功能。 本文档面向控件作者，而不是样式作者。  

@@ -3,11 +3,11 @@ title: 实体数据模型关键概念
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
 ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879265"
 ---
 # <a name="entity-data-model-key-concepts"></a>实体数据模型关键概念
 实体数据模型 (EDM) 使用三个关键概念来描述数据结构：*实体类型*，*关联类型*，并*属性*。 在任何 EDM 实现中，这些都是描述数据结构的最重要概念。  

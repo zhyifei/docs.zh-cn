@@ -3,11 +3,11 @@ title: 索引属性
 description: 了解如何在中的索引属性F#，这允许对有序数据的类似数组的访问。
 ms.date: 10/17/2018
 ms.openlocfilehash: bc330641c451973ddefa0a34fe6e757a808f6cb7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903820"
 ---
 # <a name="indexed-properties"></a>索引属性
 
@@ -50,7 +50,7 @@ member self-identifier.Index
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```console
 ONE two three four five six seven eight nine ten

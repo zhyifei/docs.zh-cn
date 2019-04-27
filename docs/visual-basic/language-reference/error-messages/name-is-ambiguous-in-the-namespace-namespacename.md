@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
 ms.openlocfilehash: 24cb5f893bcfef375b10233b83d2b350c30983e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920869"
 ---
 # <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<名称 > 在命名空间中不明确\<命名空间名称 >
 你提供的名称不明确，因此与另一个名称冲突。 Visual Basic 编译器不具有任何冲突解决规则;你必须自己区分名称。  

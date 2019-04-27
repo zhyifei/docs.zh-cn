@@ -3,11 +3,11 @@ title: 循环：for...to 表达式
 description: 请参阅如何F#数据类型...为表达式用于在循环中循环访问一系列循环变量的值。
 ms.date: 05/16/2016
 ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904028"
 ---
 # <a name="loops-forto-expression"></a>循环：for...to 表达式
 

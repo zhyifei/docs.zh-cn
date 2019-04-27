@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
 ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864657"
 ---
 # <a name="boolean-expressions-visual-basic"></a>布尔表达式 (Visual Basic)
 一个*布尔表达式*是表达式的计算结果为值[布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean` 表达式可以采用多种形式。 简单的方法是直接的值的比较`Boolean`变量`Boolean`文本，如下面的示例中所示。  

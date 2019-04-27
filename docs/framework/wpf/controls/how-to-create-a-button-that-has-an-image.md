@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
 ms.openlocfilehash: 5be928ac75ad727feabcde07ac0c6dc76ed130e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910944"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>如何：创建包含图像的按钮
 此示例演示如何上包含一个图像<xref:System.Windows.Controls.Button>。  

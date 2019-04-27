@@ -9,11 +9,11 @@ helpviewer_keywords:
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
 ms.openlocfilehash: 83643d8acea706bad439683702e4228d240b97bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911360"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView 列标题的样式和模板概述
 此概述讨论了用于自定义中的列标题的属性的优先级顺序<xref:System.Windows.Controls.GridView>视图模式<xref:System.Windows.Controls.ListView>控件。  

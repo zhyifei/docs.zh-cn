@@ -1,17 +1,17 @@
 ---
-title: 生成可复原的准备好使用云服务。 包含在云中的暂时性故障
-description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |生成可复原的准备好使用云服务。 包含在云中的暂时性故障
+title: 生成可复原的准备好使用云服务。 在云中处理暂时性故障
+description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |生成可复原的准备好使用云服务。 在云中处理暂时性故障
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811823"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>生成可复原的准备好使用云服务：包含在云中的暂时性故障
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>生成适用于云的可复原服务：在云中处理暂时性故障
 
 恢复能力是指从故障中恢复并继续工作的能力。 复原能力不是有关避免故障发生，但接受这一事实，将出现故障，并可避免停机或数据丢失的方式对其然后作出响应。 恢复的目标是使应用程序在发生故障后回到完全正常运行的状态。
 

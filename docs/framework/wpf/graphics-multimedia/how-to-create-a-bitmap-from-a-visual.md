@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
 ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910255"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>如何：从 Visual 创建位图
 此示例演示如何创建从位图<xref:System.Windows.Media.Visual>。 一个<xref:System.Windows.Media.DrawingVisual>呈现与<xref:System.Windows.Media.FormattedText>。 <xref:System.Windows.Media.Visual>将呈现到<xref:System.Windows.Media.Imaging.RenderTargetBitmap>创建给定文本的位图。  

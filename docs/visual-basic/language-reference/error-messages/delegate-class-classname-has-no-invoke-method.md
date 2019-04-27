@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
 ms.openlocfilehash: 3fe164d868ee7bde0e687e1d592f4d5a17565aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803631"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>委托类的\<类名 > 有没有 Invoke 方法，所以此类型的表达式不能作为方法调用的目标
 调用`Invoke`通过委托失败，因为`Invoke`上委托类未实现。  

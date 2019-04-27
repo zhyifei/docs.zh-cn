@@ -1,30 +1,20 @@
 ---
 title: 1013 - CompleteExecuteActivityWorkItem
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 31fc57b3-ef2f-48f0-a5de-b4e2c5c9ded7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0dc72081d2e9b89a9979651bb02b6c06448e30e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c1ff62bb4143bb798ea7adb7c3fee539ef68bc37
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925185"
 ---
 # <a name="1013---completeexecuteactivityworkitem"></a>1013 - CompleteExecuteActivityWorkItem
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|1013|  
+|Id|1013|  
 |关键字|WFRuntime|  
 |级别|详细|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
@@ -39,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
-|Activity|xs:string|活动的类型名称。|  
+|活动|xs:string|活动的类型名称。|  
 |DisplayName|xs:string|活动的显示名称。|  
 |InstanceId|xs:string|活动的实例 ID。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|应用程序域|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858450"
 ---
 # <a name="endpoint-creation-overview"></a>终结点创建概述
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点向客户端访问 WCF 服务提供的功能。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  

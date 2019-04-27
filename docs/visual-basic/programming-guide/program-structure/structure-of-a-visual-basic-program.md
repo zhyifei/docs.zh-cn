@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839393"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
 从标准构建基块是构建 Visual Basic 程序。 一个*解决方案*由一个或多个项目组成。 一个*项目*又可以包含一个或多个程序集。 每个*程序集*从一个或多个源代码文件编译。 一个*源文件*提供定义和实现的类、 结构、 模块和接口，它们最终包含了所有代码。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875961"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在单阶段和多阶段中提交事务
 事务中所使用的每个资源都由资源管理器 (RM) 进行管理，而资源管理器的操作则由事务管理器 (TM) 进行协调。 [将资源登记为参与者在事务中](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)主题将讨论如何在事务中登记一个资源 （或多个资源）。 本主题讨论如何在已登记的资源之间协调事务提交。  

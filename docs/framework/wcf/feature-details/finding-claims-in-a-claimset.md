@@ -9,11 +9,11 @@ helpviewer_keywords:
 - claims [WCF]
 ms.assetid: a76ce107-aeb3-47d0-bfa9-134c53664e20
 ms.openlocfilehash: 42e6ee682220913f872da337eb41f6c290082988
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856412"
 ---
 # <a name="finding-claims-in-a-claimset"></a>在 ClaimSet 中查找声明
 在使用基于声明的授权时，一项常见任务就是检查 <xref:System.IdentityModel.Claims.ClaimSet> 的内容以查找特定类型的声明。 若要检查 <xref:System.IdentityModel.Claims.ClaimSet> 以查找是否存在特定声明，请使用 <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A> 方法。 相对于直接在 <xref:System.IdentityModel.Claims.ClaimSet> 上循环，该方法可以提供更好的性能。 下面的示例演示此用法。 请注意，`claimType` 和 `claimRight` 参数可以为 `null`。 在此例中，这些参数将与所有声明类型以及声明权限相匹配。  

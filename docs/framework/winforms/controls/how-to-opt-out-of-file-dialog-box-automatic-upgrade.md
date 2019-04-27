@@ -9,11 +9,11 @@ helpviewer_keywords:
 - AutoUpgradeEnabled property
 ms.assetid: 522e482e-cc01-48b1-8d59-9617dc2c4ac1
 ms.openlocfilehash: a4be35617e8be1c6c83ac6f2d06e03b6cbb2977f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913636"
 ---
 # <a name="how-to-opt-out-of-file-dialog-box-automatic-upgrade"></a>如何：取消文件对话框自动升级
 当<xref:System.Windows.Forms.OpenFileDialog>和<xref:System.Windows.Forms.SaveFileDialog>在应用程序中使用类，其外观和行为取决于 Windows 运行应用程序的版本。 应用程序在创建时[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]或之前显示在[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]，<xref:System.Windows.Forms.OpenFileDialog>和<xref:System.Windows.Forms.SaveFileDialog>自动显示与[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]外观和行为。 在中启动[!INCLUDE[net_v30_short](../../../../includes/net-v30-short-md.md)]，可以选择退出自动升级，以显示<xref:System.Windows.Forms.OpenFileDialog>并<xref:System.Windows.Forms.SaveFileDialog>与[!INCLUDE[winxp](../../../../includes/winxp-md.md)]-风格的外观和行为。  

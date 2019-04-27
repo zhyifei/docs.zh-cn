@@ -10,11 +10,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
 ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864398"
 ---
 # <a name="function-procedures-visual-basic"></a>Function 过程 (Visual Basic)
 一个`Function`过程是 Visual Basic 语句括在一系列`Function`和`End Function`语句。 `Function`过程执行一项任务，再将控制权返回到调用代码。 当它返回控制时，它还向调用代码返回一个值。  

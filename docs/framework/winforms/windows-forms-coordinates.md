@@ -11,8 +11,8 @@ ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800147"
 ---
 # <a name="windows-forms-coordinates"></a>Windows 窗体坐标
 Windows 窗体坐标系统取决于设备坐标，并在 Windows 窗体中绘制时的度量值的基本单位是将设备单位 （通常情况下，像素）。 在屏幕上的点的 x 坐标和 y 坐标对所述增加到右侧和 y 坐标增加从上到下的 x 坐标。 原点，相对于屏幕的位置不定，具体取决于是否要指定屏幕或客户端坐标。  

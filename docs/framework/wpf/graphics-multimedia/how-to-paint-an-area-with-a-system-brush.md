@@ -7,11 +7,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
 ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921714"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>如何：使用系统画笔绘制区域
 <xref:System.Windows.SystemColors>类提供了访问系统画笔和颜色，如<xref:System.Windows.SystemColors.ControlBrush%2A>， <xref:System.Windows.SystemColors.ControlBrushKey%2A>，和<xref:System.Windows.SystemColors.DesktopBrush%2A>。 系统画笔是<xref:System.Windows.Media.SolidColorBrush>对象，它使用指定的系统颜色绘制区域。 系统画笔总是生成纯色填充，它不能用于创建渐变。  

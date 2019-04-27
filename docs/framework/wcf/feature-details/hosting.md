@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855837"
 ---
 # <a name="hosting"></a>宿主
 本节中的主题介绍服务承载。 通过 Internet 信息服务 (IIS)、 Windows 进程激活服务 (WAS)、 Windows Server AppFabric、 Windows 服务或托管的应用程序可以承载服务，此选项通常称为*自我托管*。  

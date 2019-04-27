@@ -3,11 +3,11 @@ title: 类
 description: 了解如何F#类是表示可以具有属性、 方法和事件的对象的类型。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870287"
 ---
 # <a name="classes"></a>类
 
@@ -71,7 +71,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="self-identifiers"></a>自我标识符
 
-一个*自我标识符*是表示当前实例的名称。 自我标识符类似于`this`C# 或 c + + 中的关键字或`Me`在 Visual Basic 中。 您可以在两种不同的方式，具体取决于是否想要在作用域为整个类定义或只是单个方法中的自助标识符定义自我标识符。
+一个*自我标识符*是表示当前实例的名称。 自我标识符类似于`this`中的关键字C#或C++或`Me`在 Visual Basic 中。 您可以在两种不同的方式，具体取决于是否想要在作用域为整个类定义或只是单个方法中的自助标识符定义自我标识符。
 
 若要定义整个类自我标识符，请使用`as`构造函数参数的右括号后的关键字列表，并指定标识符名称。
 

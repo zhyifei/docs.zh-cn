@@ -3,11 +3,11 @@ title: 如何：根据属性 (XPATH-LINQ to XML) 进行筛选 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
 ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855481"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>如何：根据属性 (XPATH-LINQ to XML) 进行筛选 (Visual Basic)
 本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。  

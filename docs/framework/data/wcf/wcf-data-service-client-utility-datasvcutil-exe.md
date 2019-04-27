@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875324"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF 数据服务客户端实用工具 (DataSvcUtil.exe)
 
@@ -38,7 +38,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |选项|描述|
 |------------|-----------------|
 |`/dataservicecollection`|指定还生成了将对象绑定到控件所需的代码。|
-|`/help`<br /><br /> - 或 -<br /><br /> `/?`|显示该工具的命令语法和选项。|
+|`/help`<br /><br /> 或<br /><br /> `/?`|显示该工具的命令语法和选项。|
 |`/in:` *\<file>*|指定 .csdl 或 .edmx 文件或该文件所在的目录。|
 |`/language:`[VB&#124;CSharp]|指定生成的源代码文件的语言。 默认语言为 C#。|
 |`/nologo`|禁止显示版权信息。|

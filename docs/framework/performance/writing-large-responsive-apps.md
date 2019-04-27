@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861226"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。 
@@ -125,7 +125,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- 枚举类型上另一种常见的装箱源是 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 方法。 传递到 <xref:System.Enum.HasFlag%28System.Enum%29> 的参数必须进行装箱。 大多数情况下，将对 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 的调用替换为按位测试更简单并且无需分配。 
+ 枚举类型上另一种常见的装箱源是 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 方法。 传递到 <xref:System.Enum.HasFlag%28System.Enum%29> 的自变量必须进行装箱。 大多数情况下，将对 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 的调用替换为按位测试更简单并且无需分配。 
   
  请记住第一个性能事实（即，切勿过早优化），不要以这种方式开始重写你所有的代码。 请留意这些装箱成本，但仅在分析完应用并找到热点后才更改你的代码。 
   
@@ -161,9 +161,9 @@ public void WriteFormattedDocComment(string text)
     else { /* ... */ }  
 ```  
   
- 你可以看到此代码执行了很多字符串操作。 该代码使用库方法将行拆分为单独的字符串，以修整空格、检查参数 `text` 是否为 XML 文档注释，并且从行提取子字符串。 
+ 你可以看到此代码执行了很多字符串操作。 该代码使用库方法将行拆分为单独的字符串，以修整空格、检查自变量 `text` 是否为 XML 文档注释，并且从行提取子字符串。 
   
- 在 `WriteFormattedDocComment` 中的第一行上，`text.Split` 调用将分配一个新的三元素数组作为每次调用的参数。 每次编译器都必须发出代码以分配此数组。 那是因为编译器不知道 <xref:System.String.Split%2A> 是否将数组存储在了一个该数组可能已由其他代码修改的位置，这样将影响后续对 `WriteFormattedDocComment` 的调用。 对 <xref:System.String.Split%2A> 的调用还会为 `text` 中的每一行分配一个字符串，并分配其他内存以执行操作。 
+ 在 `WriteFormattedDocComment` 中的第一行上，`text.Split` 调用将分配一个新的三元素数组作为每次调用的自变量。 每次编译器都必须发出代码以分配此数组。 那是因为编译器不知道 <xref:System.String.Split%2A> 是否将数组存储在了一个该数组可能已由其他代码修改的位置，这样将影响后续对 `WriteFormattedDocComment` 的调用。 对 <xref:System.String.Split%2A> 的调用还会为 `text` 中的每一行分配一个字符串，并分配其他内存以执行操作。 
   
  `WriteFormattedDocComment` 具有对 <xref:System.String.TrimStart%2A> 方法的三个调用。 其中两个调用在复制工作和分配的内循环中。 更糟的是，在没有实参的情况下调用 <xref:System.String.TrimStart%2A> 方法，除了分配字符串结果外，还将分配一个空数组（用于 `params` 形参）。 
   
@@ -324,7 +324,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  这两个 `new` 分配（一个用于环境类，另一个用于委托）现在是显式的。 
   
- 现在查看对 `FirstOrDefault` 的调用。 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 类型上的此扩展方法也会导致分配。 因为 `FirstOrDefault` 采用 <xref:System.Collections.Generic.IEnumerable%601> 对象作为它的第一个参数，你可以将调用扩展到以下代码（略微简化以便讨论）：  
+ 现在查看对 `FirstOrDefault` 的调用。 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 类型上的此扩展方法也会导致分配。 因为 `FirstOrDefault` 采用 <xref:System.Collections.Generic.IEnumerable%601> 对象作为它的第一个自变量，你可以将调用展开到以下代码（略微简化以便讨论）：  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ... 
@@ -340,7 +340,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  `symbols` 变量具有类型 <xref:System.Collections.Generic.List%601>。 <xref:System.Collections.Generic.List%601> 集合类型实现 <xref:System.Collections.Generic.IEnumerable%601> 并且巧妙地定义了一个 <xref:System.Collections.Generic.IEnumerator%601> 使用 <xref:System.Collections.Generic.List%601> 实现的枚举器（`struct` 接口）。 使用结构而不是类意味着你通常避免任何堆分配，而后者可能会影响垃圾回收性能。 枚举器通常与语言的 `foreach` 循环结合使用，该循环使用枚举器结构，因为它是在调用堆栈上返回的。 递增调用堆栈指针从而为对象腾出空间，不会像堆分配那样影响 GC。 
   
- 对于扩展的 `FirstOrDefault` 调用，代码需要在一个 `GetEnumerator()` 上调用 <xref:System.Collections.Generic.IEnumerable%601>。 将 `symbols` 分配到类型 `enumerable` 的 `IEnumerable<Symbol>` 变量失去了实际对象是一个 <xref:System.Collections.Generic.List%601> 的信息。 这意味着当代码使用 `enumerable.GetEnumerator()` 提取枚举器时，.NET Framework 必须装箱返回的结构以将其分配到 `enumerator` 变量。 
+ 对于展开的 `FirstOrDefault` 调用，代码需要在一个 `GetEnumerator()` 上调用 <xref:System.Collections.Generic.IEnumerable%601>。 将 `symbols` 分配到类型 `enumerable` 的 `IEnumerable<Symbol>` 变量失去了实际对象是一个 <xref:System.Collections.Generic.List%601> 的信息。 这意味着当代码使用 `enumerable.GetEnumerator()` 提取枚举器时，.NET Framework 必须装箱返回的结构以将其分配到 `enumerator` 变量。 
   
  **示例 5 的修复**  
   
@@ -408,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- 你看到使用缓存的新代码具有一个命名为 `SyntaxTree` 的 `cachedResult` 字段。 当此字段是 null 时，`GetSyntaxTreeAsync()` 奏效并且将结果保存在缓存中。 `GetSyntaxTreeAsync()` 返回 `SyntaxTree` 对象。 问题在于当你具有一个类型为 `async` 的 `Task<SyntaxTree>` 函数时，并且你返回类型为 `SyntaxTree` 的值，编译器发出代码来分配保存结果的任务（通过使用 `Task<SyntaxTree>.FromResult()`）。 任务标记为已完成，并且结果立即可用。 在新编译器的代码中，已经完成的 <xref:System.Threading.Tasks.Task> 对象频繁地发生，以至于修复这些分配显著地提高了响应能力。 
+ 你看到使用缓存的新代码具有一个命名为 `SyntaxTree` 的 `cachedResult` 字段。 当此字段是 null 时，`GetSyntaxTreeAsync()` 奏效并且将结果保存在缓存中。 `GetSyntaxTreeAsync()` 返回`SyntaxTree`对象。 问题在于当你具有一个类型为 `async` 的 `Task<SyntaxTree>` 函数时，并且你返回类型为 `SyntaxTree` 的值，编译器发出代码来分配保存结果的任务（通过使用 `Task<SyntaxTree>.FromResult()`）。 任务标记为已完成，并且结果立即可用。 在新编译器的代码中，已经完成的 <xref:System.Threading.Tasks.Task> 对象频繁地发生，以至于修复这些分配显著地提高了响应能力。 
   
  **示例 6 的修复**  
   
@@ -445,7 +445,7 @@ class Compilation { /*...*/
   
  **类与结构**  
   
- 在某种程度上，类和结构为优化你的应用提供了一个经典的空间/时间权衡。 即使类不具有字段，它们也会在 x86 计算机上产生 12 个字节的开销，但是你可以通过便宜的方法绕过它们，因为只需要一个指针来引用类的实例。 如果不对结构进行装箱，它们不会产生任何堆分配，但是当你将大型结构作为函数参数或返回值传递时，CPU 需要一定时间来以原子方式复制结构的所有数据成员。 注意对返回结构的属性的重复调用，并且将属性的值缓存在一个局部变量中，以避免过度的数据复制。 
+ 在某种程度上，类和结构为优化你的应用提供了一个经典的空间/时间权衡。 即使类不具有字段，它们也会在 x86 计算机上产生 12 个字节的开销，但是你可以通过便宜的方法绕过它们，因为只需要一个指针来引用类的实例。 如果不对结构进行装箱，它们不会产生任何堆分配，但是当你将大型结构作为函数自变量或返回值传递时，CPU 需要一定时间来以原子方式复制结构的所有数据成员。 注意对返回结构的属性的重复调用，并且将属性的值缓存在一个局部变量中，以避免过度的数据复制。 
   
  **缓存**  
   

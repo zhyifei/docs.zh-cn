@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905913"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 结构
 包含有关所引用的程序集，包括其版本和其级别的支持的区域设置、 处理器和操作系统信息。  

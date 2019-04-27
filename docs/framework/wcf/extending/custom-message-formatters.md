@@ -3,11 +3,11 @@ title: 自定义消息格式化程序
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857969"
 ---
 # <a name="custom-message-formatters"></a>自定义消息格式化程序
 消息内容通常为 XML 格式，该格式通常不便于在应用程序中使用。 应用程序操作对象，并且获取和设置其属性。 Windows Communication Foundation (WCF) 使用*数据协定*转换<xref:System.ServiceModel.Channels.Message>轻松地处理应用程序的对象的对象。 我们将这些过程称为序列化和反序列化。 请注意，这些词同样用于描述传输层对消息连网格式所进行的序列化和反序列化，这是一个不相关的过程。  

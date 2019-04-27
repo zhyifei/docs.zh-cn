@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
 ms.openlocfilehash: 15390fb506fe9bca10f6917f5b26451a5569bece
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921116"
 ---
 # <a name="leading--or--can-only-appear-inside-a-with-statement"></a>前导“.”或“!”只能出现在“With”语句内
 句点 （.） 或感叹号 （！） 不深入了解`With`块内不使用左侧的表达式。 成员访问 (`.`) 和字典成员访问 (`!`) 需要一个表达式，指定包含该成员的元素。 这必须紧靠左侧的访问器或作为目标的`With`块，其中包含成员访问。  

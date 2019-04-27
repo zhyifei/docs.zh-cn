@@ -3,13 +3,13 @@ title: F# 概览
 description: 通过示例来介绍 F# 语言中的一些主要特性。
 ms.date: 11/06/2018
 ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901717"
 ---
-# <a name="tour-of-f"></a>F\# 概览
+# <a name="tour-of-f"></a>F 教程\#
 
 了解 F# 语言的最好方式就是阅读和编写 F# 代码。 本文将介绍 F# 语言的一些关键特性，并提供一些可以在计算机上执行的代码片段。 若要了解如何设置开发环境，请查看[入门](tutorials/getting-started/index.md)。
 

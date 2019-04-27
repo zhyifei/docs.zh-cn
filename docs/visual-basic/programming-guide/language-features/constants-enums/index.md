@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907291"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic 中的常量和枚举
 常量是使用有意义的名称代替不会发生更改的值的方法。 顾名思义，常量存储在应用程序的执行过程中保持不变的值。 可以使用常量提供有意义的名称（而非数字），提高代码的可读性。  

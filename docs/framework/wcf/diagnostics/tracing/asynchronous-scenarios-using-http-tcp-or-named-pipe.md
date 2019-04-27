@@ -3,10 +3,11 @@ title: 使用 HTTP、TCP 或命名管道的异步方案
 ms.date: 03/30/2017
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
 ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998219"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>使用 HTTP、TCP 或命名管道的异步方案
 本主题描述不同异步请求/答复方案的活动和传输，这些异步方案包含使用 HTTP、TCP 或命名管道的多线程请求。  
@@ -23,27 +24,27 @@ ms.lasthandoff: 05/04/2018
 #### <a name="propagation-is-enabled-on-both-sides-using-http"></a>在使用 HTTP 的两端启用传播  
  ![异步方案](../../../../../docs/framework/wcf/diagnostics/tracing/media/asyn1.gif "Asyn1")  
   
- 图 1。 异步客户端且不执行回调， `propagateActivity` = `true`两端，HTTP  
+ 图 1。 异步客户端且不执行回调， `propagateActivity` = `true`双方，HTTP  
   
  如果`propagateActivity` = `true`，ProcessMessage 指示要传送到哪个 ProcessAction 活动。  
   
  对于基于 HTTP 的方案，ReceiveBytes 将在发送的第一条消息中调用，并在请求的生存期内存在。  
   
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>在使用 HTTP 的任意一端上禁用传播  
- 如果`propagateActivity` = `false`任意一侧，ProcessMessage 不指示要传送到哪个 ProcessAction 活动。 因此，将调用一个具有新 ID 的新临时 ProcessAction 活动。 当异步响应与 ServiceModel 代码中的请求匹配时，可从本地上下文中检索活动 ID。 可以传送到具有该 ID 的实际 ProcessAction 活动。  
+ 如果`propagateActivity` = `false`任意一侧，ProcessMessage 不会指示要传送到哪个 ProcessAction 活动。 因此，将调用一个具有新 ID 的新临时 ProcessAction 活动。 当异步响应与 ServiceModel 代码中的请求匹配时，可从本地上下文中检索活动 ID。 可以传送到具有该 ID 的实际 ProcessAction 活动。  
   
  ![使用 HTTP 的异步方案&#47;TCP&#47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
- 图 2. 异步客户端且不执行回调， `propagateActivity` = `false`在任意一侧，HTTP  
+ 图 2. 异步客户端且不执行回调， `propagateActivity` = `false`任意一端使用 HTTP  
   
  对于基于 HTTP 的方案，ReceiveBytes 将在发送的第一条消息中调用，并在请求的生存期内存在。  
   
- 在异步客户端上创建处理操作活动时`propagateActivity` = `false`在调用方或被调用方，和响应消息不包含 Action 标头。  
+ 在异步客户端上创建 Processaction 活动时`propagateActivity` = `false`在调用方或被调用方，并当响应消息不包含 Action 标头。  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>在使用 TCP 或命名管道的两端启用传播  
  ![使用 HTTP 的异步方案&#47;TCP&#47;命名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
- 图 3. 异步客户端且不执行回调， `propagateActivity` = `true`双方命名管道 /TCP  
+ 图 3. 异步客户端且不执行回调， `propagateActivity` = `true`两端使用命名管道 /TCP  
   
  对于命名管道或基于 TCP 的方案，ReceiveBytes 在客户端打开时进行调用，并在连接的生存期内存在。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
 #### <a name="propagation-is-disabled-on-either-sides-using-tcp-or-named-pipe"></a>在使用 TCP 或命名管道的任意一端上禁用传播  
  对于命名管道或基于 TCP 的方案，ReceiveBytes 在客户端打开时进行调用，并在连接的生存期内存在。  
   
- 与图 2，类似如果`propagateActivity` = `false`任意一侧，ProcessMessage 不指示要传送到哪个 ProcessAction 活动。 因此，将调用一个具有新 ID 的新临时 ProcessAction 活动。 当异步响应与 ServiceModel 代码中的请求匹配时，可从本地上下文中检索活动 ID。 可以传送到具有该 ID 的实际 ProcessAction 活动。  
+ 类似于 Fig.2，如果`propagateActivity` = `false`任意一侧，ProcessMessage 不会指示要传送到哪个 ProcessAction 活动。 因此，将调用一个具有新 ID 的新临时 ProcessAction 活动。 当异步响应与 ServiceModel 代码中的请求匹配时，可从本地上下文中检索活动 ID。 可以传送到具有该 ID 的实际 ProcessAction 活动。  
   
  ![使用 HTTP 的异步方案&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
@@ -61,9 +62,9 @@ ms.lasthandoff: 05/04/2018
 ### <a name="asynchronous-client-with-callback"></a>执行回调的异步客户端  
  此方案将为回调和 `endCall` 添加活动 G 和 A’ 和它们的传入/传出。  
   
- 本节仅演示了如何使用 HTTP 与`propragateActivity` = `true`。 但是，其他活动和传送也适用于其他情况下 (即， `propagateActivity` = `false`，使用 TCP 或命名管道)。  
+ 本节仅演示了如何使用具有 HTTP `propragateActivity` = `true`。 但是，其他活动和传送也适用于其他情况下 (即`propagateActivity` = `false`，使用 TCP 或命名管道)。  
   
- 当客户端调用用户代码通知结果已准备就绪时，回调将创建新的活动 (G)。 然后，用户代码在回调过程中（如图 5 所示）或回调过程之外（如图 6 所示）调用 `endCall`。 因为它不知道哪个用户活动`endCall`中调用的此活动标记为`A’`。 A’ 可能与 A 相同，也可能不同。  
+ 当客户端调用用户代码通知结果已准备就绪时，回调将创建新的活动 (G)。 然后，用户代码在回调过程中（如图 5 所示）或回调过程之外（如图 6 所示）调用 `endCall`。 因为它不知道哪个用户活动`endCall`被调用，此活动标记为`A’`。 A’ 可能与 A 相同，也可能不同。  
   
  ![异步方案](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")  
   

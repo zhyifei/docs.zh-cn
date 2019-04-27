@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
 ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857228"
 ---
 # <a name="data-contract-equivalence"></a>数据协定等效性
 对于客户端要将某种类型的数据成功发送到服务，或者服务要将数据成功发送到客户端的情况，接收端上并不一定必须存在此发送数据类型。 唯一的需求是两种类型的数据协定应该等效。 (有时，严格等效性不是必需的如中所述[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  

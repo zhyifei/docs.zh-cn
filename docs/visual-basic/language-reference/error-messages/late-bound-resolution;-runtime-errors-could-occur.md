@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
 ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921142"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>后期绑定解决方案；可能会发生运行时错误
 一个对象分配给声明为变量[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)。  

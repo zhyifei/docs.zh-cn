@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869662"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中，基于分类实施数据类型。 Visual Basic 数据类型可以根据特定类型的变量存储其自己的数据或指向的数据分类。 如果将存储其自己的数据很*值类型*; 如果它包含一个指针，它是的内存中的其他位置的数据*引用类型*。  

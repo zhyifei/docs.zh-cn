@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
 ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909163"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控件允许用户从日期或时间的列表中选择单个项。 当用于表示日期，它将显示在两个部分： 一下拉列表中的文本，并单击列表旁的向下箭头上时，将显示一个网格形式表示的日期。 网格看起来像<xref:System.Windows.Forms.MonthCalendar>控件，可用于选择多个日期。 有关详细信息<xref:System.Windows.Forms.MonthCalendar>控件，请参阅[MonthCalendar 控件概述](monthcalendar-control-overview-windows-forms.md)。  

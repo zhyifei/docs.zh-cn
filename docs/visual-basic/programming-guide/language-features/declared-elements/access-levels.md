@@ -15,11 +15,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
 ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828095"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的访问级别
 *访问级别*已声明元素的是能够对其进行访问的程度，哪些代码，即有权读取或写入到它。 这确定不仅元素本身; 的声明方式，还通过元素的容器的访问级别。 无法访问包含元素的代码无法访问任何其包含的元素，甚至包括那些声明为`Public`。 例如，`Public`变量中`Private`结构可以从访问，在类中包含的结构，但不能从该类的外部。  

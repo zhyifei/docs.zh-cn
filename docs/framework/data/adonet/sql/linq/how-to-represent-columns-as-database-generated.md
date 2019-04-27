@@ -3,11 +3,11 @@ title: 如何：将列表示为数据库生成的
 ms.date: 03/30/2017
 ms.assetid: 6524b8a6-e5d2-4a3b-8e08-beafc4a84fd2
 ms.openlocfilehash: 2803697c668a8e1dbbeb426ea41b64878f70c145
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903482"
 ---
 # <a name="how-to-represent-columns-as-database-generated"></a>如何：将列表示为数据库生成的
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>属性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>属性可指定字段或属性表示数据库生成的列。  

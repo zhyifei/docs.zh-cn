@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
 ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907317"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>字符串和其他类型之间的转换 (Visual Basic)
 可以将转换一个数字`Boolean`，或日期/时间值到`String`。 您还可以将按反向执行转换 — 从为数字、 字符串值`Boolean`，或`Date`— 该字符串的内容可以被解释为有效的目标数据类型的值。 如果它们不能但将发生运行时错误。  

@@ -9,11 +9,11 @@ ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921779"
 ---
 # <a name="wpf-community-feedback"></a>WPF 社区反馈
 
@@ -51,7 +51,7 @@ Microsoft 公开各种社区资源以便于你了解、 讨论并提供在 Windo
 
 描述问题和如何尝试完成本指南。 如有可能，请包含支持的代码段或可能的最简单示例以演示问题。 所有这些详细信息都将有助于增加快速解答问题的机会。
 
-## <a name="visual-studio-developer-community"></a>Visual Studio 开发者社区
+## <a name="visual-studio-developer-community"></a>Visual Studio 开发人员社区
 
 有时，问题可能会难以解决或无法解决。 出现这些情况是因为技术中有 Bug、将技术应用到特定方案存在困难或缺少对特定方案的支持。 此信息很重要给 Microsoft，并可以通过提供[Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)站点。
 

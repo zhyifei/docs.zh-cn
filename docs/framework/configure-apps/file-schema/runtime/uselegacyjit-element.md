@@ -5,13 +5,13 @@ ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673883"
 ---
-# <a name="uselegacyjit-element"></a>\<useLegacyJit > 元素
+# <a name="uselegacyjit-element"></a>\<useLegacyJit> 元素
 
 确定公共语言运行时是否使用实时编译的旧版 64 位 JIT 编译器。  
   
@@ -39,14 +39,14 @@ ms.locfileid: "55278754"
   
 ### <a name="enabled-attribute"></a>已启用的属性  
   
-| “值” | 描述                                                                                                         |  
+| “值” | Description                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | 公共语言运行时使用新的 64 位 JIT 编译器包含在.NET Framework 4.6 和更高版本。 |  
 | 1     | 公共语言运行时使用较旧的 64 位 JIT 编译器。                                                     |  
   
 ### <a name="child-elements"></a>子元素
 
-无
+None
   
 ### <a name="parent-elements"></a>父元素  
   

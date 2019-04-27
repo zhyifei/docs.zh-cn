@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
 ms.openlocfilehash: 405a82c625853d242ca68088ffdf81b6bcd7c518
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922208"
 ---
 # <a name="multiple-bulk-copy-operations"></a>多个批量复制操作
 可以使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类的单个实例执行多次批量复制操作。 如果复制 （例如，目标表的名称） 之间更改的操作参数，则必须更新其任何后续调用到任一**WriteToServer**方法，如以下示例所示。 除非显式更改，否则，所有属性值都将与给定实例的上一次批量复制操作相同。  

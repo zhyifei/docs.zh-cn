@@ -3,11 +3,11 @@ title: 如何：将列表示为允许 Null 值
 ms.date: 03/30/2017
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
 ms.openlocfilehash: ef8fa87963b91ef7140fbaefb657fc7904604b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902910"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>如何：将列表示为允许 Null 值
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>属性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>属性指定关联的数据库列可以保存 null 值。  

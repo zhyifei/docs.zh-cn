@@ -3,11 +3,11 @@ title: 如何：指定专用存储字段
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
 ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902715"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>如何：指定专用存储字段
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>属性上的<xref:System.Data.Linq.Mapping.DataAttribute>属性来指定基础存储字段的名称。  

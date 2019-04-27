@@ -22,11 +22,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
 ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801889"
 ---
 # <a name="derived-math-functions-visual-basic"></a>派生的数学函数 (Visual Basic)
 下表显示了可以派生自的内部函数的数学函数的非内部函数的数学函数<xref:System.Math?displayProperty=nameWithType>对象。 可以通过添加访问内部函数的数学函数`Imports System.Math`到文件或项目。  

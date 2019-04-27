@@ -3,11 +3,11 @@ title: 使用异步进行文件访问 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
 ms.openlocfilehash: 0b2b95f1e4f9bc120acdad606b0f15503285057a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829525"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>使用异步进行文件访问 (Visual Basic)
 可以使用异步功能来访问文件。 通过使用异步功能，你可以调用异步方法而无需使用回调，也不需要跨多个方法或 Lambda 表达式来拆分代码。 若要使同步代码异步，只需调用异步方法而非同步方法，并向代码中添加几个关键字。  

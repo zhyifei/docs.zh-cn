@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
 ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902689"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>如何：将更改提交到数据库
 无论您对对象做了多少项更改，都只是在更改内存中的副本。 您并未对数据库中的实际数据做任何更改。 直到您对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 显式调用 <xref:System.Data.Linq.DataContext>，您所做的更改才会传输到服务器。  

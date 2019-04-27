@@ -5,11 +5,11 @@ f1_keywords:
 - vbrLateboundCallToInheritedComClass
 ms.assetid: 7bc16e84-8d29-4f8e-bc4f-002c65c71099
 ms.openlocfilehash: fa4574df47c6609eda4a1d3841147618f47c85d0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58041627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922338"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>不能以后期绑定方式调用从 COM 类派生的托管类。
 尝试对从 COM 类派生的托管类进行后期绑定调用，但不支持这种调用。  

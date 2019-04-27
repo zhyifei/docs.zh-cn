@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
 ms.openlocfilehash: 7c7f1fef5d1fa575cd6d3bfdb7e6cbbea79ade28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878802"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>泛型字段和 SetField 方法 (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供扩展方法<xref:System.Data.DataRow>用于访问列值的类：<xref:System.Data.DataRowExtensions.Field%2A>方法和<xref:System.Data.DataRowExtensions.SetField%2A>方法。 这些方法使开发人员能够更轻松地访问列值，特别是 Null 值。 <xref:System.Data.DataSet> 使用 <xref:System.DBNull.Value> 来表示 Null 值，而 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 使用 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 中引入的可以为 null 的类型支持。 使用 <xref:System.Data.DataRow> 中预先存在的列访问器需要将返回对象强制转换成相应的类型。 如果 <xref:System.Data.DataRow> 中的特定字段可以为 null，则必须显示检查 Null 值，因为返回 <xref:System.DBNull.Value> 并隐式地将其强制转换为另一种类型会引发 <xref:System.InvalidCastException>。 在下面的示例中，如果不使用 <xref:System.Data.DataRow.IsNull%2A> 方法检查 Null 值，则在索引器返回 <xref:System.DBNull.Value> 并试图将其强制转换为 <xref:System.String> 的情况下会引发异常。  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830162"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>已声明元素的特性 (Visual Basic)
 一个*特征*的已声明的元素是代码与它的交互方式会影响该元素的一个方面。 每个已声明的元素具有一个或多个与之关联的以下特征：  

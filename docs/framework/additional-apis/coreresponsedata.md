@@ -11,15 +11,15 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675411"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData 类
 
-`CoreResponseData`类表示的 HTTP 标头和响应正文的分析。
+`CoreResponseData`类表示分析 HTTP 标头和响应正文。
 
 ## <a name="syntax"></a>语法
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> 此 API 是内部，方法，但并不是在代码中直接使用。 相反，应使用<xref:System.Diagnostics.DiagnosticSource>连接网络的代码。 请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
+> 内部，此 API，但并不在代码中直接使用。 相反，应使用<xref:System.Diagnostics.DiagnosticSource>挂接网络代码。 请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
 > 
-> Microsoft 不支持在生产应用程序在任何情况下使用此类。
+> 在生产应用程序在任何情况下，Microsoft 不支持此类使用。
 
 ## <a name="requirements"></a>要求
 
-**Namespace:** <xref:System.Net>
+**Namespace**：<xref:System.Net>
 
-**程序集：** 系统 （在 System.dll)
+**程序集：**（在 System.dll) 的系统
 
 **.NET framework 版本：** 自 2.0 之后可用。

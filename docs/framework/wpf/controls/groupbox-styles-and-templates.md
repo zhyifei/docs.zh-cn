@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
 ms.openlocfilehash: 5ef8e4b44bc2b6072fa730f33c10191b64954f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911256"
 ---
 # <a name="groupbox-styles-and-templates"></a>GroupBox 样式和模板
 <a name="introduction"></a> 本主题介绍的样式和模板的<xref:System.Windows.Controls.GroupBox>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  

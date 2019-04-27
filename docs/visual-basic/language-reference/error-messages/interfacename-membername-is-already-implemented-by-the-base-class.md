@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
 ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921324"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>\<interfacename >。\<成员名称 > 已经由基类的实现\<a m e >。 重新实现\<类型 > 假定
 属性、 过程或派生类中的事件使用`Implements`子句，用于指定已在基类中实现的接口成员。  

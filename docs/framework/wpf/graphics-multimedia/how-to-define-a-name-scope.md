@@ -10,11 +10,11 @@ helpviewer_keywords:
 - animation [WPF], Storyboards [WPF], in procedural code
 ms.assetid: 4f361925-6a08-40dc-8231-a61111c6b28b
 ms.openlocfilehash: a03f477dd31909e8cb9dde9cd29da6f38d665758
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904145"
 ---
 # <a name="how-to-define-a-name-scope"></a>如何：定义名称范围
 若要使用进行动画处理<xref:System.Windows.Media.Animation.Storyboard>在代码中，必须创建<xref:System.Windows.NameScope>并注册到拥有该名称范围的元素的目标对象名称。 在以下示例中，<xref:System.Windows.NameScope>为创建`myMainPanel`。 两个按钮`button1`和`button2`，添加到面板，并注册其名称。 多个动画和<xref:System.Windows.Media.Animation.Storyboard>创建。 情节提要的<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法用于启动动画。  

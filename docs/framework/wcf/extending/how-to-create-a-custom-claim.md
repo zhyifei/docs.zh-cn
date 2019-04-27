@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
 ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857774"
 ---
 # <a name="how-to-create-a-custom-claim"></a>如何：创建自定义声明
 标识模型基础结构在 Windows Communication Foundation (WCF) 提供内置的声明类型和帮助器函数具有权限的一组用于创建<xref:System.IdentityModel.Claims.Claim>具有这些类型和权限的实例。 这些内置的声明用于 WCF 支持的客户端凭据类型中找到默认情况下的模型信息。 在许多情况下，这些内置的声明足够满足需要，然而一些应用程序可能需要自定义声明。 声明由声明类型、要应用该声明的资源和在该资源上断言的权限组成。 本主题描述如何创建自定义声明。  

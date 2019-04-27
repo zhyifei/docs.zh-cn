@@ -3,11 +3,11 @@ title: 自定义筛选器
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
 ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857215"
 ---
 # <a name="custom-filters"></a>自定义筛选器
 借助自定义筛选器，您可以定义无法通过系统提供的消息筛选器实现的匹配逻辑。 例如，您可以创建这样的自定义筛选器：该筛选器散列特定的消息元素，然后检查元素值以确定该筛选器应返回 true 还是 false。  
@@ -39,7 +39,7 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
->  在实际实现中，Match 方法包含将检查消息，以确定应返回了此消息筛选器的逻辑**true**或**false**。  
+>  在实际实现中，Match 方法包含将检查消息，以确定是否应返回此消息筛选器的逻辑 **，则返回 true**或**false**。  
   
 ### <a name="performance"></a>性能  
  实现自定义筛选器时，应考虑筛选器完成消息评估所需要的最长时间，这十分重要。 由于某个消息可能需通过多个筛选器进行评估才能找到匹配项，因此应确保客户端请求在评估完所有筛选器之前不会超时，这十分重要。 因此，自定义筛选器只应包含评估消息的内容或特性所需的代码，以便确定消息是否匹配筛选条件。  
@@ -55,7 +55,7 @@ public class MyMessageFilter: MessageFilter
  在生产环境中使用自定义筛选器之前，应运行性能测试以确定筛选器评估消息所花费的平均时间长度。 与筛选器表中使用的其他筛选器的平均处理时间相结合，您便可精确确定客户端应用程序应指定的最大超时值。  
   
 ## <a name="usage"></a>用法  
- 若要对路由服务使用你自定义筛选器，你必须将其添加到筛选器表通过指定类型的新筛选器条目"自定义，"消息筛选器的完全限定的类型名称和你的程序集的名称。  与其他 MessageFilter 一样，您可以指定将传递到自定义筛选器的构造函数中的字符串 filterData。  
+ 若要对路由服务使用自定义筛选器，您必须将其添加到筛选器表通过指定新筛选器条目类型的"自定义，"消息筛选器的完全限定的类型名称和您的程序集的名称。  与其他 MessageFilter 一样，您可以指定将传递到自定义筛选器的构造函数中的字符串 filterData。  
   
  下面的示例演示如何对路由服务使用自定义筛选器：  
   

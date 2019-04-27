@@ -3,11 +3,11 @@ title: 上下文连接
 ms.date: 03/30/2017
 ms.assetid: e443ca86-9243-4234-a822-ed10a53a9de0
 ms.openlocfilehash: 83e9f4a9672d2703514c0a86ad8d41b968c255fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915221"
 ---
 # <a name="the-context-connection"></a>上下文连接
 内部数据访问出现问题相当普遍。 也就是说，您想要访问的服务器正是正在执行公共语言运行库 (CLR) 存储过程或函数的服务器。 一个选择是使用 <xref:System.Data.SqlClient.SqlConnection> 创建一个连接，指定指向本地服务器的连接字符串，然后打开该连接。 这要求指定用于登录的凭据。 此连接位于与存储过程或函数不同的数据库会话中，它可以具有不同的 `SET` 选项，位于不同的事务中，并且看不到你的临时表等。 如果你的托管存储过程或函数代码正在 SQL Server 进程中执行，原因可能是某人连接到了该服务器并且执行了 SQL 语句以调用它。 你可能希望存储过程或函数在该连接的上下文中与其事务、`SET` 选项等一起执行。 这称作上下文连接。  

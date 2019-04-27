@@ -5,14 +5,14 @@ helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
 ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923183"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 终结点
-与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点提供客户端访问 WCF 服务提供的功能。  
+与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点向客户端访问 WCF 服务提供的功能。  
   
  有关如何创建一个终结点的概述，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 每个终结点包含：  
   
@@ -37,10 +37,10 @@ ms.locfileid: "33803389"
  [指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  描述如何与 WCF 服务的通信发生通过终结点。  
   
- [如何：在配置中创建服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [如何：在配置中创建的服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  演示如何在配置中创建服务终结点。  
   
- [如何：在代码中创建服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [如何：在代码中创建的服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  演示如何在代码中创建服务终结点。  
   
  [发布元数据终结点](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  

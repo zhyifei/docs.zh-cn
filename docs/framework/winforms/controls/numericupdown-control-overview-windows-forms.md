@@ -9,11 +9,11 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61805750"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown 控件概述（Windows 窗体）
 <xref:System.Windows.Forms.NumericUpDown>控件看起来像一对用户可以单击来调整值的箭头和文本框中的组合。 该控件显示并从固定数字值选项列表中设置的单个数值。 用户可以增加和减少数，通过单击向上和向下箭头，通过按向上和向下箭头键，或通过在控件的文本框部分中键入一个数字。 单击向上箭头键移动到最大值; 数单击向下箭头键移动到最小值数。  

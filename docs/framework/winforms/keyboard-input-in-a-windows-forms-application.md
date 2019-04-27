@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
 ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800828"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows 窗体应用程序中的键盘输入
 Windows 窗体包括了可用于响应特定的按键，然后还提供了方法来截获、 修改和使用应用程序窗体中，在按键和控制级别的标准键盘事件。  

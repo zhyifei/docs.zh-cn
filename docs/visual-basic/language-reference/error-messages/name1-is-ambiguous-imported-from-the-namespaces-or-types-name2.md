@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918341"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 > 不明确，从命名空间或类型的导入\<name2 >
 你提供的名称不明确，因此与另一个名称冲突。 Visual Basic 编译器不具有任何冲突解决规则;你必须自己区分名称。  

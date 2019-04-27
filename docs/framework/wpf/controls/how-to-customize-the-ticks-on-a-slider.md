@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 3b32bbedb5f654ce75e90a827eb0c4dba1d4d345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910684"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>如何：自定义滑块上的刻度
 此示例演示如何创建<xref:System.Windows.Controls.Slider>带有刻度的控件。  

@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868753"
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

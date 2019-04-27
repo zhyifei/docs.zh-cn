@@ -1,18 +1,18 @@
 ---
-title: 如何：重写编码的 SOAP XML 序列化
+title: 如何：替代编码的 SOAP XML 序列化
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
 ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922585"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>如何：重写编码的 SOAP XML 序列化
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>如何：替代编码的 SOAP XML 序列化
 
 将对象的 XML 序列化重写为 SOAP 消息的过程类似于重写标准 XML 序列化的过程。 有关重写标准 XML 序列化的信息，请参阅[如何：指定 XML Stream 的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 

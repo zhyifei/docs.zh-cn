@@ -5,11 +5,11 @@ helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
 ms.openlocfilehash: 29fb4c9498fe163c36e71680242d3ef8cf98c089
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001268"
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>如何：创建多行 TextBox 控件
 此示例演示如何使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]来定义<xref:System.Windows.Controls.TextBox>将自动扩展以容纳多行文本的控件。  

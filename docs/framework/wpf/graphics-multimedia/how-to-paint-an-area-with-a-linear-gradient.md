@@ -1,5 +1,5 @@
 ---
-title: 如何：绘制带有线性渐变的区域
+title: 如何：使用线性渐变绘制区域
 ms.date: 03/30/2017
 helpviewer_keywords:
 - linear gradients [WPF], painting with
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
 ms.openlocfilehash: c48ff13811d784ecc7042b73b964a9e6f2d42a34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921876"
 ---
-# <a name="how-to-paint-an-area-with-a-linear-gradient"></a>如何：绘制带有线性渐变的区域
+# <a name="how-to-paint-an-area-with-a-linear-gradient"></a>如何：使用线性渐变绘制区域
 此示例演示如何使用<xref:System.Windows.Media.LinearGradientBrush>类来绘制带有线性渐变的区域。 在以下示例中，<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>用黄色从过渡到红色变为蓝色变为浅绿色对角线方向线性渐变绘制。  
   
 ## <a name="example"></a>示例  

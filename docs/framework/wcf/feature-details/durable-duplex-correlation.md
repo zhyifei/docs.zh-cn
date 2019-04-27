@@ -3,11 +3,11 @@ title: 持久双工相关
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856590"
 ---
 # <a name="durable-duplex-correlation"></a>持久双工相关
 当工作流服务要求向初始调用方发送回调时，持久双工相关性（也称为回调相关性）非常有用。 与 WCF 双工不同的是，该回调可以在将来的任何时间发生，并且不会绑定到同一通道或通道生存期；唯一要求是，调用方应具有一个用于侦听回调消息的活动终结点。 这样，这两个工作流服务便可在长期运行的对话中进行通信。 本主题概述了持久双工相关性。  
@@ -16,7 +16,7 @@ ms.locfileid: "48850793"
  若要使用持久双工相关性，这两个服务必须使用启用了上下文且支持双向操作的绑定，如 <xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.WSHttpContextBinding>。 调用服务使用所需绑定向其客户端 <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> 注册 <xref:System.ServiceModel.Endpoint>。 接收服务将接收初始调用中的上述数据，然后在回调调用服务的 <xref:System.ServiceModel.Endpoint> 活动中对自己的 <xref:System.ServiceModel.Activities.Send> 使用此数据。 在本示例中，这两个服务互相通信。 第一个服务对第二个服务调用某个方法，然后等待答复。 第二个服务知晓回调方法的名称，但在设计时，实现该方法的服务的终结点是未知的。  
   
 > [!NOTE]
-> 仅当终结点的 <xref:System.ServiceModel.Channels.AddressingVersion> 配置有 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> 时，才能使用持久双工。 如果不是，则<xref:System.InvalidOperationException>将引发异常并显示以下消息:"消息包含带有终结点引用的回调上下文标头[AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing)。 一致的 AddressingVersion 配置有 'WSAddressing10' 时，可以只传输回调上下文。
+> 仅当终结点的 <xref:System.ServiceModel.Channels.AddressingVersion> 配置有 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> 时，才能使用持久双工。 如果不是，则<xref:System.InvalidOperationException>将引发异常并显示以下消息："消息包含带有终结点引用的回调上下文标头[AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing)。 一致的 AddressingVersion 配置有 'WSAddressing10' 时，可以只传输回调上下文。
   
  在下面的示例中，使用 <xref:System.ServiceModel.Endpoint> 承载工作流服务，该服务将创建回调 <xref:System.ServiceModel.WSHttpContextBinding>。  
   

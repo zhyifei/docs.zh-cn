@@ -3,11 +3,11 @@ title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
 ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879055"
 ---
 # <a name="facet"></a>facet
 一个*方面*用于添加对基元类型属性定义的详细信息。 一个[属性](../../../../docs/framework/data/adonet/property.md)定义包含有关属性类型的信息，但通常需要更多详细信息。 例如，概念模型中的实体类型可能有一个类型为 `String` 的属性，其值不能设置为 null。 通过方面可以指定这种详细程度。  

@@ -3,11 +3,11 @@ title: 类中的 do 绑定
 description: 了解如何使用F#do 中的类定义，当构造对象或首次使用该类型时将执行操作的绑定。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904582"
 ---
 # <a name="do-bindings-in-classes"></a>类中的 do 绑定
 
@@ -50,4 +50,4 @@ Initializing object 1 2 2 4 8 16
 - [类](../classes.md)
 - [构造函数](constructors.md)
 - [类中的 `let` 绑定](let-bindings-in-classes.md)
-- [`do` 绑定](../functions/do-Bindings.md)
+- [`do` Bindings](../functions/do-Bindings.md)

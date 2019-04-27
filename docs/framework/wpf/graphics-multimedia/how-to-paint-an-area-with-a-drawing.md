@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
 ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010058"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>如何：使用图形绘制区域
 本示例演示如何使用 Drawing 绘制一个区域。 若要绘制使用图形绘制区域，请使用<xref:System.Windows.Media.DrawingBrush>和一个或多个<xref:System.Windows.Media.Drawing>对象。   下面的示例使用<xref:System.Windows.Media.DrawingBrush>若要使用两个椭圆组成的 drawing 对象绘制对象。  

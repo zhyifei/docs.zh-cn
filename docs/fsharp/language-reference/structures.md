@@ -3,11 +3,11 @@ title: 结构
 description: 了解如何F#结构，紧凑对象类型通常比用于具有少量数据且行为简单类型的类更有效。
 ms.date: 05/16/2016
 ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925874"
 ---
 # <a name="structures"></a>结构
 
@@ -50,7 +50,7 @@ type [accessibility-modifier] type-name =
 
 ## <a name="byreflike-structs"></a>ByRefLike 结构
 
-您可以定义自己的结构，可以遵循`byref`-如语义： 请参阅[Byref](byrefs.md)有关详细信息。 这通过<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>属性：
+您可以定义自己的结构，可以遵循`byref`-如语义： 请参阅[Byref](byrefs.md)有关详细信息。 此操作通过 <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> 属性实现：
 
 ```fsharp
 open System

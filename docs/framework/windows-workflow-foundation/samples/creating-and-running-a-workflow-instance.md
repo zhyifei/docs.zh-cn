@@ -3,11 +3,11 @@ title: 创建和运行工作流实例
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: f2bdfce0b311da6dd20aac5e0fe4f5fbcd14f68a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005298"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>创建和运行工作流实例
 此示例演示如何运行工作流实例。 它演示如何以同步方式和异步方式执行这一操作。  

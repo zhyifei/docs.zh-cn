@@ -5,11 +5,11 @@ helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
 ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911074"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>如何：将 TreeView 绑定到深度无法确定的数据
 可能存在你想要将绑定<xref:System.Windows.Controls.TreeView>与数据源不知道其深度。  这可能的数据时递归性质，例如文件系统，其中的文件夹可以包含文件夹或公司的组织结构，其中员工具有作为直接下属的其他员工。  

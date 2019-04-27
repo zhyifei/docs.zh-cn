@@ -3,11 +3,11 @@ title: CLR 用户定义的函数
 ms.date: 03/30/2017
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
 ms.openlocfilehash: 5cf7f4b9a0bd0c97b237d85dc99b28f0a89cf00a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878171"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 用户定义的函数
 用户定义函数是可以使用参数、执行计算或其他操作并返回结果的例程。 您可以使用任何 Microsoft .NET Framework 编程语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）编写用户定义函数。  

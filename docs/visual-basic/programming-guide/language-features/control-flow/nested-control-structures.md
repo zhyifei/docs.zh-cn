@@ -11,11 +11,11 @@ helpviewer_keywords:
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
 ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907982"
 ---
 # <a name="nested-control-structures-visual-basic"></a>嵌套的控件结构 (Visual Basic)
 您可以控制将语句放在其他控制语句，例如`If...Then...Else`块内`For...Next`循环。 控制语句放在另一个控制语句称为*嵌套*。  

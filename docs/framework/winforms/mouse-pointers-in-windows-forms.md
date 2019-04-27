@@ -10,11 +10,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
 ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800768"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows 窗体中的鼠标指针
 鼠标*指针*，这有时称为游标，是用户输入使用鼠标在屏幕指定的焦点位置的位图。 本主题概述了在 Windows 窗体中鼠标指针，并介绍了一些方法来修改和控制鼠标指针。  

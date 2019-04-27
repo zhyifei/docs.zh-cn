@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
 ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858372"
 ---
 # <a name="bindings-and-binding-elements"></a>绑定和绑定元素
 绑定是特殊的配置元素，名为的集合*绑定元素*、 其计算由服务运行时每当客户端或服务终结点构造。 绑定内绑定元素的类型和顺序确定了终结点的通道堆栈中协议和传输通道的选择和堆叠顺序。  

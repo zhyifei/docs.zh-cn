@@ -3,11 +3,11 @@ title: Boolean 数据类型
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 ms.openlocfilehash: 2535d72a89691466b977e1d4c460ff73e3b93dc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877391"
 ---
 # <a name="boolean-data-types"></a>Boolean 数据类型
 布尔运算符在公共语言运行库 (CLR) 中按预期方式工作，但其短路行为不会进行转换。 例如，Visual Basic `AndAlso` 运算符在行为上类似于 `And` 运算符。 C# `&&` 运算符在行为上类似于 `&` 运算符。  

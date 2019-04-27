@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
 ms.openlocfilehash: 0be7dcbefb23d2f2b283ac498f3b0ea43278f2d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875833"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>如何：加载分页结果 （WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 允许数据服务限制单个响应源中返回的实体数。 在此情况下，源中的最后一项包含指向下一页数据的链接。 通过调用执行 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> 时返回的 <xref:System.Data.Services.Client.QueryOperationResponse%601> 的 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法可以获取下一页数据的 URI。 然后，可以使用此对象所表示的 URI 加载下一页结果。 有关详细信息，请参阅[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。  

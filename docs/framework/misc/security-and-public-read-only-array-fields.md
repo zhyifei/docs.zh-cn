@@ -7,11 +7,11 @@ ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869741"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全和公共只读数组字段
 切勿使用托管库的只读公共数组字段来定义边界行为或应用程序的安全性，因为可以修改公共的只读数组字段。  

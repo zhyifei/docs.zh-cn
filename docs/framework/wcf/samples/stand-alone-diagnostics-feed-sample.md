@@ -3,11 +3,11 @@ title: 独立诊断源示例
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
 ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007813"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>独立诊断源示例
 此示例演示如何创建 RSS/Atom 联合使用 Windows Communication Foundation (WCF) 源。 它是一个基本的"Hello World"程序显示的对象模型的基础知识以及如何将其设置 Windows Communication Foundation (WCF) 服务。  

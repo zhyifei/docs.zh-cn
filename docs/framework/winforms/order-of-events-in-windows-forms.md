@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
 ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800762"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows 窗体中的事件顺序
 对于依次处理其中每个事件的开发人员，Windows 窗体应用程序中引发事件的顺序非常具有吸引力。 当出现需要谨慎处理事件的情况时（例如，在重绘窗体的某些部件时），有必要了解运行时引发事件的确切顺序。 本主题提供了应用程序和控件的生存期中几个重要阶段中的事件顺序的详细信息。 有关鼠标输入事件的顺序的特定详细信息，请参阅[Windows 窗体中的鼠标事件](mouse-events-in-windows-forms.md)。 在 Windows 窗体中的事件的概述，请参阅[事件概述](events-overview-windows-forms.md)。 有关事件处理程序的构成的详细信息，请参阅[事件处理程序概述](event-handlers-overview-windows-forms.md)。  

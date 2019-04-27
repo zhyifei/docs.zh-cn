@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857527"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>如何：配置 WCF 服务以与 ASP.NET Web 服务客户端进行互操作
 若要配置 Windows Communication Foundation (WCF) 服务终结点为可与互操作[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服务客户端，请使用<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>类型与服务终结点的绑定类型。  

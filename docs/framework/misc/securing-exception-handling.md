@@ -12,11 +12,11 @@ ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868793"
 ---
 # <a name="securing-exception-handling"></a>保护异常处理
 视觉对象中C++和 Visual Basic 中之前, 运行的筛选器表达式进一步在堆栈中向上**最后**语句。 **捕获**与关联的块之后运行该筛选器**最后**语句。 有关详细信息，请参阅[使用用户筛选异常](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本部分中检查此顺序的安全隐患。 请考虑下面的伪代码示例说明了哪些筛选器语句中的顺序，并**最后**运行的语句。  

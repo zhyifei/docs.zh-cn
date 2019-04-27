@@ -7,11 +7,11 @@ helpviewer_keywords:
 - geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
 ms.openlocfilehash: c5ebe87abd4c2cf70f8fa17f1fcc773293f3ad27
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910077"
 ---
 # <a name="how-to-create-a-combined-geometry"></a>如何：创建组合的几何图形
 此示例演示如何合并几何图形。 若要组合两个几何图形，使用<xref:System.Windows.Media.CombinedGeometry>对象。 设置其<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>具有两个几何图形以组合和设置的属性<xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A>属性，用于确定如何将一起组合几何图形，到`Union`， `Intersect`， `Exclude`，或者`Xor`.  

@@ -1,5 +1,5 @@
 ---
-title: 如何：将时区保存到嵌入的资源
+title: 如何：将时区保存到嵌入的资源中
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912699"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>如何：将时区保存到嵌入的资源
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>如何：将时区保存到嵌入的资源中
 
 时区感知应用程序通常需要某个特定时区存在。 但是，因为单个可用性<xref:System.TimeZoneInfo>对象取决于存储在本地系统注册表中的信息，即使通常可用的时区可能不存在。 此外，有关自定义时区的信息通过使用实例化<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法不会存储在注册表中其他时区信息。 若要确保这些时间区域可在需要时，可以通过序列化，将其保存，并更高版本进行反序列化这些还原它们。
 

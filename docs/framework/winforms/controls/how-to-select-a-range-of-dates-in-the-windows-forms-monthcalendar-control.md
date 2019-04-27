@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
 ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013304"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围
 Windows 窗体的一个重要功能<xref:System.Windows.Forms.MonthCalendar>控件是用户可以选择日期范围内的。 此功能是对的日期选择功能的改进<xref:System.Windows.Forms.DateTimePicker>控件，仅使用户能够选择单个日期/时间值。 可以设置的日期范围或获取由用户设置使用的属性的选择范围<xref:System.Windows.Forms.MonthCalendar>控件。 下面的代码示例演示如何设置选择范围。  

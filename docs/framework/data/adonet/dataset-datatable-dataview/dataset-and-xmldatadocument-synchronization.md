@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879809"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>数据集和 XmlDataDocument 同步
 ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。 若要实现分层数据访问，可以使用 .NET Framework 中的可用 XML 类。 以前，数据的这两种表示形式是单独使用的。 但是，.NET Framework 可以实时、 同步访问通过对数据的关系和层次结构表示**数据集**对象和<xref:System.Xml.XmlDataDocument>对象，分别。  

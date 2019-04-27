@@ -1,17 +1,17 @@
 ---
-title: 在生产环境中运行组合和基于微服务的应用程序
+title: 在生产环境中运行基于微服务的组合应用程序
 description: 了解在生产环境中运行基于容器的应用程序的关键组件
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921584"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行组合和基于微服务的应用程序
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行基于微服务的组合应用程序
 
 由多个微服务构成的应用程序需要将部署到业务流程协调程序群集为了简化部署的复杂性和使其可行从 IT 角度来看。 而无需与业务流程协调程序的群集，很难部署和横向扩展的复杂微服务应用程序。
 
