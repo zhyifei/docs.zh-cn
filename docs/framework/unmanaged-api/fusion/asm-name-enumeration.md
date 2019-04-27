@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b37e9c2874448b5fff82f6a37f6ca850875f2b04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914571"
 ---
-# <a name="asmname-enumeration"></a><span data-ttu-id="5db5c-102">ASM_NAME 枚举</span><span class="sxs-lookup"><span data-stu-id="5db5c-102">ASM_NAME Enumeration</span></span>
-<span data-ttu-id="5db5c-103">指示版本、 生成、 区域性、 签名和等等的程序集将检索到或通过设置其属性[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)方法。</span><span class="sxs-lookup"><span data-stu-id="5db5c-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  
+# <a name="asmname-enumeration"></a><span data-ttu-id="e9abb-102">ASM_NAME 枚举</span><span class="sxs-lookup"><span data-stu-id="e9abb-102">ASM_NAME Enumeration</span></span>
+<span data-ttu-id="e9abb-103">指示版本、 生成、 区域性、 签名和等等的程序集将检索到或通过设置其属性[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)方法。</span><span class="sxs-lookup"><span data-stu-id="e9abb-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5db5c-104">语法</span><span class="sxs-lookup"><span data-stu-id="5db5c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9abb-104">语法</span><span class="sxs-lookup"><span data-stu-id="e9abb-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -64,16 +64,16 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5db5c-105">要求</span><span class="sxs-lookup"><span data-stu-id="5db5c-105">Requirements</span></span>  
- <span data-ttu-id="5db5c-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5db5c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e9abb-105">要求</span><span class="sxs-lookup"><span data-stu-id="e9abb-105">Requirements</span></span>  
+ <span data-ttu-id="e9abb-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9abb-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5db5c-107">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5db5c-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e9abb-107">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e9abb-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="5db5c-108">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="5db5c-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e9abb-108">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e9abb-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5db5c-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5db5c-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e9abb-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9abb-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5db5c-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="5db5c-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9abb-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9abb-110">See also</span></span>
 
-- [<span data-ttu-id="5db5c-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="5db5c-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="5db5c-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="5db5c-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="e9abb-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="e9abb-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="e9abb-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="e9abb-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

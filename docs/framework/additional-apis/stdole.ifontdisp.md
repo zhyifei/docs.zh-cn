@@ -10,13 +10,13 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 82d487b599401188f42d6a4dc6856030d5a2eef6
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58635495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675255"
 ---
-# <a name="ipicturefont-interface"></a><span data-ttu-id="4ee03-102">IPictureFont 接口</span><span class="sxs-lookup"><span data-stu-id="4ee03-102">IPictureFont Interface</span></span>
+# <a name="ipicturefont-interface"></a><span data-ttu-id="3ef20-102">IPictureFont 接口</span><span class="sxs-lookup"><span data-stu-id="3ef20-102">IPictureFont Interface</span></span>
 
 ```csharp
 [GuidAttribute("BEF6E003-A874-101A-8BBA-00AA00300CAB")]
@@ -24,8 +24,8 @@ ms.locfileid: "58635495"
 public interface IFontDisp
 ```
 
-## <a name="requirements"></a><span data-ttu-id="4ee03-103">要求</span><span class="sxs-lookup"><span data-stu-id="4ee03-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3ef20-103">要求</span><span class="sxs-lookup"><span data-stu-id="3ef20-103">Requirements</span></span>
 
-<span data-ttu-id="4ee03-104">**Namespace**：`stdole`</span><span class="sxs-lookup"><span data-stu-id="4ee03-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="3ef20-104">**Namespace**：`stdole`</span><span class="sxs-lookup"><span data-stu-id="3ef20-104">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="4ee03-105">**程序集：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="4ee03-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="3ef20-105">**程序集：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="3ef20-105">**Assembly:** stdole (in stdole.dll)</span></span>

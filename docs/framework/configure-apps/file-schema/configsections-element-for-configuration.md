@@ -1,5 +1,5 @@
 ---
-title: <configSections> 的 <configuration> 元素
+title: <configuration> 的 <configSections> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections
@@ -10,45 +10,45 @@ ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: dc2bb949c7db4f70c20c3c0b687cacafed8696df
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674789"
 ---
-# <a name="configsections-element-for-configuration"></a><span data-ttu-id="8350f-102">\<configSections > 元素\<配置 ></span><span class="sxs-lookup"><span data-stu-id="8350f-102">\<configSections> element for \<configuration></span></span>
+# <a name="configsections-element-for-configuration"></a><span data-ttu-id="51b58-102">\<configSections > 元素\<配置 ></span><span class="sxs-lookup"><span data-stu-id="51b58-102">\<configSections> element for \<configuration></span></span>
 
-<span data-ttu-id="8350f-103">包含配置节和命名空间声明。</span><span class="sxs-lookup"><span data-stu-id="8350f-103">Contains configuration section and namespace declarations.</span></span>
+<span data-ttu-id="51b58-103">包含配置节和命名空间声明。</span><span class="sxs-lookup"><span data-stu-id="51b58-103">Contains configuration section and namespace declarations.</span></span>
 
-<span data-ttu-id="8350f-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="8350f-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="8350f-105">&nbsp;&nbsp;**\<configSections>**</span><span class="sxs-lookup"><span data-stu-id="8350f-105">&nbsp;&nbsp;**\<configSections>**</span></span>
+<span data-ttu-id="51b58-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="51b58-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="51b58-105">&nbsp;&nbsp;**\<configSections>**</span><span class="sxs-lookup"><span data-stu-id="51b58-105">&nbsp;&nbsp;**\<configSections>**</span></span>
 
-## <a name="attributes"></a><span data-ttu-id="8350f-106">特性</span><span class="sxs-lookup"><span data-stu-id="8350f-106">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="51b58-106">特性</span><span class="sxs-lookup"><span data-stu-id="51b58-106">Attributes</span></span>
 
-<span data-ttu-id="8350f-107">无</span><span class="sxs-lookup"><span data-stu-id="8350f-107">None</span></span>
+<span data-ttu-id="51b58-107">None</span><span class="sxs-lookup"><span data-stu-id="51b58-107">None</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="8350f-108">父元素</span><span class="sxs-lookup"><span data-stu-id="8350f-108">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="51b58-108">父元素</span><span class="sxs-lookup"><span data-stu-id="51b58-108">Parent element</span></span>
 
-|     | <span data-ttu-id="8350f-109">描述</span><span class="sxs-lookup"><span data-stu-id="8350f-109">Description</span></span> |
+|     | <span data-ttu-id="51b58-109">描述</span><span class="sxs-lookup"><span data-stu-id="51b58-109">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="8350f-110">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="8350f-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="8350f-111">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="8350f-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="51b58-110">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="51b58-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="51b58-111">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="51b58-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="8350f-112">子元素</span><span class="sxs-lookup"><span data-stu-id="8350f-112">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="51b58-112">子元素</span><span class="sxs-lookup"><span data-stu-id="51b58-112">Child elements</span></span>
 
-|     | <span data-ttu-id="8350f-113">描述</span><span class="sxs-lookup"><span data-stu-id="8350f-113">Description</span></span> |
+|     | <span data-ttu-id="51b58-113">描述</span><span class="sxs-lookup"><span data-stu-id="51b58-113">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="8350f-114">**\<section>**</span><span class="sxs-lookup"><span data-stu-id="8350f-114">**\<section>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="8350f-115">包含配置部分声明。</span><span class="sxs-lookup"><span data-stu-id="8350f-115">Contains a configuration section declaration.</span></span> |
-| [<span data-ttu-id="8350f-116">**\<sectionGroup>**</span><span class="sxs-lookup"><span data-stu-id="8350f-116">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="8350f-117">定义配置节的命名空间。</span><span class="sxs-lookup"><span data-stu-id="8350f-117">Defines a namespace for configuration sections.</span></span> |
-| [<span data-ttu-id="8350f-118">**\<remove>**</span><span class="sxs-lookup"><span data-stu-id="8350f-118">**\<remove>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="8350f-119">删除预定义的节或节组。</span><span class="sxs-lookup"><span data-stu-id="8350f-119">Removes a predefined section or section group.</span></span> |
-| [<span data-ttu-id="8350f-120">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="8350f-120">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="8350f-121">清除所有以前定义的节和节组。</span><span class="sxs-lookup"><span data-stu-id="8350f-121">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="51b58-114">**\<section>**</span><span class="sxs-lookup"><span data-stu-id="51b58-114">**\<section>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="51b58-115">包含配置部分声明。</span><span class="sxs-lookup"><span data-stu-id="51b58-115">Contains a configuration section declaration.</span></span> |
+| [<span data-ttu-id="51b58-116">**\<sectionGroup>**</span><span class="sxs-lookup"><span data-stu-id="51b58-116">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="51b58-117">定义配置节的命名空间。</span><span class="sxs-lookup"><span data-stu-id="51b58-117">Defines a namespace for configuration sections.</span></span> |
+| [<span data-ttu-id="51b58-118">**\<remove>**</span><span class="sxs-lookup"><span data-stu-id="51b58-118">**\<remove>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="51b58-119">删除预定义的节或节组。</span><span class="sxs-lookup"><span data-stu-id="51b58-119">Removes a predefined section or section group.</span></span> |
+| [<span data-ttu-id="51b58-120">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="51b58-120">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="51b58-121">清除所有以前定义的节和节组。</span><span class="sxs-lookup"><span data-stu-id="51b58-121">Clears all previously defined sections and section groups.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="8350f-122">备注</span><span class="sxs-lookup"><span data-stu-id="8350f-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="51b58-122">备注</span><span class="sxs-lookup"><span data-stu-id="51b58-122">Remarks</span></span>
 
-<span data-ttu-id="8350f-123">如果此元素是在配置文件中，它必须是第一个子元素**\<配置 >** 元素。</span><span class="sxs-lookup"><span data-stu-id="8350f-123">If this element is in a configuration file, it must be the first child element of the **\<configuration>** element.</span></span>
+<span data-ttu-id="51b58-123">如果此元素是在配置文件中，它必须是第一个子元素**\<配置 >** 元素。</span><span class="sxs-lookup"><span data-stu-id="51b58-123">If this element is in a configuration file, it must be the first child element of the **\<configuration>** element.</span></span>
 
-## <a name="example"></a><span data-ttu-id="8350f-124">示例</span><span class="sxs-lookup"><span data-stu-id="8350f-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="51b58-124">示例</span><span class="sxs-lookup"><span data-stu-id="51b58-124">Example</span></span>
 
-<span data-ttu-id="8350f-125">下面的示例演示如何定义配置节和定义该部分的设置：</span><span class="sxs-lookup"><span data-stu-id="8350f-125">The following example shows how to define a configuration section and define settings for that section:</span></span>
+<span data-ttu-id="51b58-125">下面的示例演示如何定义配置节和定义该部分的设置：</span><span class="sxs-lookup"><span data-stu-id="51b58-125">The following example shows how to define a configuration section and define settings for that section:</span></span>
 
 ```xml
 <configuration>
@@ -62,10 +62,10 @@ ms.locfileid: "55266762"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="8350f-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="8350f-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="51b58-126">配置文件</span><span class="sxs-lookup"><span data-stu-id="51b58-126">Configuration file</span></span>
 
-<span data-ttu-id="8350f-127">在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。</span><span class="sxs-lookup"><span data-stu-id="8350f-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="51b58-127">在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。</span><span class="sxs-lookup"><span data-stu-id="51b58-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8350f-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="8350f-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51b58-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="51b58-128">See also</span></span>
 
-- [<span data-ttu-id="8350f-129">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="8350f-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="51b58-129">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="51b58-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

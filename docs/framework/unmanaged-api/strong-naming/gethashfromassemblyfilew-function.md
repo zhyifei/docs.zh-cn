@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a88adec508d80a40ec044e5011d3115e197e334
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000540"
 ---
-# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="4846e-102">GetHashFromAssemblyFileW 函数</span><span class="sxs-lookup"><span data-stu-id="4846e-102">GetHashFromAssemblyFileW Function</span></span>
-<span data-ttu-id="4846e-103">使用指定的哈希算法获取指定程序集文件的哈希。</span><span class="sxs-lookup"><span data-stu-id="4846e-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="4846e-104">程序集文件的路径必须指定为 Unicode 字符串。</span><span class="sxs-lookup"><span data-stu-id="4846e-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
+# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="5a4d7-102">GetHashFromAssemblyFileW 函数</span><span class="sxs-lookup"><span data-stu-id="5a4d7-102">GetHashFromAssemblyFileW Function</span></span>
+<span data-ttu-id="5a4d7-103">使用指定的哈希算法获取指定程序集文件的哈希。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="5a4d7-104">程序集文件的路径必须指定为 Unicode 字符串。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
   
- <span data-ttu-id="4846e-105">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="4846e-105">This function has been deprecated.</span></span> <span data-ttu-id="4846e-106">使用[iclrstrongname:: Gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="4846e-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
+ <span data-ttu-id="5a4d7-105">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-105">This function has been deprecated.</span></span> <span data-ttu-id="5a4d7-106">使用[iclrstrongname:: Gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4846e-107">语法</span><span class="sxs-lookup"><span data-stu-id="4846e-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a4d7-107">语法</span><span class="sxs-lookup"><span data-stu-id="5a4d7-107">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFileW (  
@@ -40,33 +40,33 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4846e-108">参数</span><span class="sxs-lookup"><span data-stu-id="4846e-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5a4d7-108">参数</span><span class="sxs-lookup"><span data-stu-id="5a4d7-108">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="4846e-109">[in]要进行哈希处理的文件路径。</span><span class="sxs-lookup"><span data-stu-id="4846e-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="4846e-110">此参数必须是 Unicode 字符串。</span><span class="sxs-lookup"><span data-stu-id="4846e-110">This parameter must be a Unicode string.</span></span>  
+ <span data-ttu-id="5a4d7-109">[in]要进行哈希处理的文件路径。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="5a4d7-110">此参数必须是 Unicode 字符串。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-110">This parameter must be a Unicode string.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="4846e-111">[in、 out]一个常量，它指定哈希算法。</span><span class="sxs-lookup"><span data-stu-id="4846e-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="4846e-112">使用默认哈希算法为零。</span><span class="sxs-lookup"><span data-stu-id="4846e-112">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="5a4d7-111">[in、 out]一个常量，它指定哈希算法。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="5a4d7-112">使用默认哈希算法为零。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-112">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="4846e-113">[out]返回的哈希缓冲区中。</span><span class="sxs-lookup"><span data-stu-id="4846e-113">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="5a4d7-113">[out]返回的哈希缓冲区中。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-113">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="4846e-114">[in]请求的最大大小的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="4846e-114">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="5a4d7-114">[in]请求的最大大小的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-114">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="4846e-115">[out]返回的大小，以字节为单位， `pbHash`。</span><span class="sxs-lookup"><span data-stu-id="4846e-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="5a4d7-115">[out]返回的大小，以字节为单位， `pbHash`。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4846e-116">要求</span><span class="sxs-lookup"><span data-stu-id="4846e-116">Requirements</span></span>  
- <span data-ttu-id="4846e-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4846e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a4d7-116">要求</span><span class="sxs-lookup"><span data-stu-id="5a4d7-116">Requirements</span></span>  
+ <span data-ttu-id="5a4d7-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a4d7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4846e-118">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="4846e-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="5a4d7-118">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="5a4d7-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="4846e-119">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4846e-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5a4d7-119">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="5a4d7-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4846e-120">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4846e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5a4d7-120">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a4d7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4846e-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="4846e-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a4d7-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="5a4d7-121">See also</span></span>
 
-- [<span data-ttu-id="4846e-122">GetHashFromAssemblyFileW 方法</span><span class="sxs-lookup"><span data-stu-id="4846e-122">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [<span data-ttu-id="4846e-123">GetHashFromAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="4846e-123">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [<span data-ttu-id="4846e-124">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="4846e-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="5a4d7-122">GetHashFromAssemblyFileW 方法</span><span class="sxs-lookup"><span data-stu-id="5a4d7-122">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="5a4d7-123">GetHashFromAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="5a4d7-123">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="5a4d7-124">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="5a4d7-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

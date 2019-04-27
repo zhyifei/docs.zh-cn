@@ -7,22 +7,22 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
 ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926403"
 ---
-# <a name="base-elements"></a><span data-ttu-id="d7dd6-102">基元素</span><span class="sxs-lookup"><span data-stu-id="d7dd6-102">Base Elements</span></span>
-<span data-ttu-id="d7dd6-103">四个关键类<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-实现的大部分可用在 WPF 编程中的常见元素功能。</span><span class="sxs-lookup"><span data-stu-id="d7dd6-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="d7dd6-104">这四个类作为基元素类引用到此 SDK 中。</span><span class="sxs-lookup"><span data-stu-id="d7dd6-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
+# <a name="base-elements"></a><span data-ttu-id="682be-102">基元素</span><span class="sxs-lookup"><span data-stu-id="682be-102">Base Elements</span></span>
+<span data-ttu-id="682be-103">四个关键类<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-实现的大部分可用在 WPF 编程中的常见元素功能。</span><span class="sxs-lookup"><span data-stu-id="682be-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="682be-104">这四个类作为基元素类引用到此 SDK 中。</span><span class="sxs-lookup"><span data-stu-id="682be-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d7dd6-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="d7dd6-105">In This Section</span></span>  
- [<span data-ttu-id="d7dd6-106">基元素概述</span><span class="sxs-lookup"><span data-stu-id="d7dd6-106">Base Elements Overview</span></span>](base-elements-overview.md)  
- [<span data-ttu-id="d7dd6-107">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="d7dd6-107">Freezable Objects Overview</span></span>](freezable-objects-overview.md)  
- [<span data-ttu-id="d7dd6-108">对齐、边距和填充概述</span><span class="sxs-lookup"><span data-stu-id="d7dd6-108">Alignment, Margins, and Padding Overview</span></span>](alignment-margins-and-padding-overview.md)  
- [<span data-ttu-id="d7dd6-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="d7dd6-109">How-to Topics</span></span>](base-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="682be-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="682be-105">In This Section</span></span>  
+ [<span data-ttu-id="682be-106">基元素概述</span><span class="sxs-lookup"><span data-stu-id="682be-106">Base Elements Overview</span></span>](base-elements-overview.md)  
+ [<span data-ttu-id="682be-107">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="682be-107">Freezable Objects Overview</span></span>](freezable-objects-overview.md)  
+ [<span data-ttu-id="682be-108">对齐、边距和填充概述</span><span class="sxs-lookup"><span data-stu-id="682be-108">Alignment, Margins, and Padding Overview</span></span>](alignment-margins-and-padding-overview.md)  
+ [<span data-ttu-id="682be-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="682be-109">How-to Topics</span></span>](base-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d7dd6-110">参考</span><span class="sxs-lookup"><span data-stu-id="d7dd6-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="682be-110">参考</span><span class="sxs-lookup"><span data-stu-id="682be-110">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -31,13 +31,13 @@ ms.locfileid: "57359609"
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="d7dd6-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="d7dd6-111">Related Sections</span></span>  
- [<span data-ttu-id="d7dd6-112">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="d7dd6-112">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="d7dd6-113">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="d7dd6-113">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="d7dd6-114">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="d7dd6-114">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="d7dd6-115">属性</span><span class="sxs-lookup"><span data-stu-id="d7dd6-115">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="d7dd6-116">事件</span><span class="sxs-lookup"><span data-stu-id="d7dd6-116">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="d7dd6-117">输入</span><span class="sxs-lookup"><span data-stu-id="d7dd6-117">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="d7dd6-118">资源</span><span class="sxs-lookup"><span data-stu-id="d7dd6-118">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="d7dd6-119">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="d7dd6-119">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-  [<span data-ttu-id="d7dd6-120">线程模型</span><span class="sxs-lookup"><span data-stu-id="d7dd6-120">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="682be-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="682be-111">Related Sections</span></span>  
+ [<span data-ttu-id="682be-112">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="682be-112">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="682be-113">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="682be-113">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="682be-114">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="682be-114">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="682be-115">属性</span><span class="sxs-lookup"><span data-stu-id="682be-115">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="682be-116">事件</span><span class="sxs-lookup"><span data-stu-id="682be-116">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="682be-117">输入</span><span class="sxs-lookup"><span data-stu-id="682be-117">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="682be-118">资源</span><span class="sxs-lookup"><span data-stu-id="682be-118">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="682be-119">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="682be-119">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="682be-120">线程模型</span><span class="sxs-lookup"><span data-stu-id="682be-120">Threading Model</span></span>](threading-model.md)

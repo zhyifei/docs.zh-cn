@@ -17,24 +17,24 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ba81c208c4b49342c6a055e09ba898871db1851
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922130"
 ---
-# <a name="isymunmanagedsourceservermodule-interface"></a><span data-ttu-id="8f703-102">ISymUnmanagedSourceServerModule 接口</span><span class="sxs-lookup"><span data-stu-id="8f703-102">ISymUnmanagedSourceServerModule Interface</span></span>
-<span data-ttu-id="8f703-103">提供源服务器数据的模块。</span><span class="sxs-lookup"><span data-stu-id="8f703-103">Provides source server data for a module.</span></span> <span data-ttu-id="8f703-104">通过调用来获取此接口`QueryInterface`上实现的对象[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="8f703-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedsourceservermodule-interface"></a><span data-ttu-id="054f8-102">ISymUnmanagedSourceServerModule 接口</span><span class="sxs-lookup"><span data-stu-id="054f8-102">ISymUnmanagedSourceServerModule Interface</span></span>
+<span data-ttu-id="054f8-103">提供源服务器数据的模块。</span><span class="sxs-lookup"><span data-stu-id="054f8-103">Provides source server data for a module.</span></span> <span data-ttu-id="054f8-104">通过调用来获取此接口`QueryInterface`上实现的对象[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="054f8-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8f703-105">方法</span><span class="sxs-lookup"><span data-stu-id="8f703-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="054f8-105">方法</span><span class="sxs-lookup"><span data-stu-id="054f8-105">Methods</span></span>  
   
-|<span data-ttu-id="8f703-106">方法</span><span class="sxs-lookup"><span data-stu-id="8f703-106">Method</span></span>|<span data-ttu-id="8f703-107">描述</span><span class="sxs-lookup"><span data-stu-id="8f703-107">Description</span></span>|  
+|<span data-ttu-id="054f8-106">方法</span><span class="sxs-lookup"><span data-stu-id="054f8-106">Method</span></span>|<span data-ttu-id="054f8-107">描述</span><span class="sxs-lookup"><span data-stu-id="054f8-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8f703-108">GetSourceServerData 方法</span><span class="sxs-lookup"><span data-stu-id="8f703-108">GetSourceServerData Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|<span data-ttu-id="8f703-109">返回该模块的源服务器数据。</span><span class="sxs-lookup"><span data-stu-id="8f703-109">Returns the source server data for the module.</span></span>|  
+|[<span data-ttu-id="054f8-108">GetSourceServerData 方法</span><span class="sxs-lookup"><span data-stu-id="054f8-108">GetSourceServerData Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|<span data-ttu-id="054f8-109">返回该模块的源服务器数据。</span><span class="sxs-lookup"><span data-stu-id="054f8-109">Returns the source server data for the module.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8f703-110">要求</span><span class="sxs-lookup"><span data-stu-id="8f703-110">Requirements</span></span>  
- <span data-ttu-id="8f703-111">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8f703-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="054f8-110">要求</span><span class="sxs-lookup"><span data-stu-id="054f8-110">Requirements</span></span>  
+ <span data-ttu-id="054f8-111">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="054f8-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8f703-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="8f703-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="054f8-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="054f8-112">See also</span></span>
 
-- [<span data-ttu-id="8f703-113">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="8f703-113">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="054f8-113">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="054f8-113">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

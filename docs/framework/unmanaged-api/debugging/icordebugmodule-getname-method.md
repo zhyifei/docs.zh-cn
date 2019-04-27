@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988010"
 ---
-# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="5bb0e-102">ICorDebugModule::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="5bb0e-102">ICorDebugModule::GetName Method</span></span>
-<span data-ttu-id="5bb0e-103">获取模块的文件名。</span><span class="sxs-lookup"><span data-stu-id="5bb0e-103">Gets the file name of the module.</span></span>  
+# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="aaef9-102">ICorDebugModule::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="aaef9-102">ICorDebugModule::GetName Method</span></span>
+<span data-ttu-id="aaef9-103">获取模块的文件名。</span><span class="sxs-lookup"><span data-stu-id="aaef9-103">Gets the file name of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5bb0e-104">语法</span><span class="sxs-lookup"><span data-stu-id="5bb0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aaef9-104">语法</span><span class="sxs-lookup"><span data-stu-id="aaef9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,26 +37,26 @@ HRESULT GetName(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5bb0e-105">参数</span><span class="sxs-lookup"><span data-stu-id="5bb0e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aaef9-105">参数</span><span class="sxs-lookup"><span data-stu-id="aaef9-105">Parameters</span></span>  
  `cchname`  
- <span data-ttu-id="5bb0e-106">[in] `szName` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="5bb0e-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="aaef9-106">[in] `szName` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="aaef9-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="5bb0e-107">[in]指向返回的名称的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="5bb0e-107">[in] A pointer to the length of the returned name.</span></span>  
+ <span data-ttu-id="aaef9-107">[in]指向返回的名称的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="aaef9-107">[in] A pointer to the length of the returned name.</span></span>  
   
  `szName`  
- <span data-ttu-id="5bb0e-108">[out]将存储返回的名称数组。</span><span class="sxs-lookup"><span data-stu-id="5bb0e-108">[out] An array that stores the returned name.</span></span>  
+ <span data-ttu-id="aaef9-108">[out]将存储返回的名称数组。</span><span class="sxs-lookup"><span data-stu-id="aaef9-108">[out] An array that stores the returned name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5bb0e-109">备注</span><span class="sxs-lookup"><span data-stu-id="5bb0e-109">Remarks</span></span>  
- <span data-ttu-id="5bb0e-110">`GetName`方法返回 S_OK HRESULT，如果模块的文件名称与磁盘上的名称相匹配。</span><span class="sxs-lookup"><span data-stu-id="5bb0e-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="5bb0e-111">`GetName` 如果名称为虚构，例如用于动态或内存中的模块，则返回 S_FALSE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="5bb0e-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aaef9-109">备注</span><span class="sxs-lookup"><span data-stu-id="aaef9-109">Remarks</span></span>  
+ <span data-ttu-id="aaef9-110">`GetName`方法返回 S_OK HRESULT，如果模块的文件名称与磁盘上的名称相匹配。</span><span class="sxs-lookup"><span data-stu-id="aaef9-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="aaef9-111">`GetName` 如果名称为虚构，例如用于动态或内存中的模块，则返回 S_FALSE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="aaef9-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5bb0e-112">要求</span><span class="sxs-lookup"><span data-stu-id="5bb0e-112">Requirements</span></span>  
- <span data-ttu-id="5bb0e-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5bb0e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aaef9-112">要求</span><span class="sxs-lookup"><span data-stu-id="aaef9-112">Requirements</span></span>  
+ <span data-ttu-id="aaef9-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aaef9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5bb0e-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5bb0e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="aaef9-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aaef9-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5bb0e-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5bb0e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aaef9-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aaef9-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5bb0e-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bb0e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="aaef9-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aaef9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bb0e-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="5bb0e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aaef9-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="aaef9-117">See also</span></span>

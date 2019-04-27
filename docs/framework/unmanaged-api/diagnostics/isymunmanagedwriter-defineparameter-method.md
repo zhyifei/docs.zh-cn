@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0fb35f5d7fec0c79a31cd8d7b77cf2b1c043f60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986071"
 ---
-# <a name="isymunmanagedwriterdefineparameter-method"></a><span data-ttu-id="1fef6-102">ISymUnmanagedWriter::DefineParameter 方法</span><span class="sxs-lookup"><span data-stu-id="1fef6-102">ISymUnmanagedWriter::DefineParameter Method</span></span>
-<span data-ttu-id="1fef6-103">当前方法中定义的单个参数。</span><span class="sxs-lookup"><span data-stu-id="1fef6-103">Defines a single parameter in the current method.</span></span> <span data-ttu-id="1fef6-104">从参数的位置 （序列） 的方法签名中获取参数类型。</span><span class="sxs-lookup"><span data-stu-id="1fef6-104">The parameter type is taken from the parameter's position (sequence) within the method's signature.</span></span>  
+# <a name="isymunmanagedwriterdefineparameter-method"></a><span data-ttu-id="45165-102">ISymUnmanagedWriter::DefineParameter 方法</span><span class="sxs-lookup"><span data-stu-id="45165-102">ISymUnmanagedWriter::DefineParameter Method</span></span>
+<span data-ttu-id="45165-103">当前方法中定义的单个参数。</span><span class="sxs-lookup"><span data-stu-id="45165-103">Defines a single parameter in the current method.</span></span> <span data-ttu-id="45165-104">从参数的位置 （序列） 的方法签名中获取参数类型。</span><span class="sxs-lookup"><span data-stu-id="45165-104">The parameter type is taken from the parameter's position (sequence) within the method's signature.</span></span>  
   
- <span data-ttu-id="1fef6-105">如果给定方法的元数据中定义参数，则无需再次使用此方法定义。</span><span class="sxs-lookup"><span data-stu-id="1fef6-105">If parameters are defined in the metadata for a given method, you do not have to define them again by using this method.</span></span> <span data-ttu-id="1fef6-106">符号读取器必须检查符号存储区之前检查参数的普通元数据。</span><span class="sxs-lookup"><span data-stu-id="1fef6-106">The symbol readers must check the normal metadata for the parameters before checking the symbol store.</span></span>  
+ <span data-ttu-id="45165-105">如果给定方法的元数据中定义参数，则无需再次使用此方法定义。</span><span class="sxs-lookup"><span data-stu-id="45165-105">If parameters are defined in the metadata for a given method, you do not have to define them again by using this method.</span></span> <span data-ttu-id="45165-106">符号读取器必须检查符号存储区之前检查参数的普通元数据。</span><span class="sxs-lookup"><span data-stu-id="45165-106">The symbol readers must check the normal metadata for the parameters before checking the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1fef6-107">语法</span><span class="sxs-lookup"><span data-stu-id="1fef6-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="45165-107">语法</span><span class="sxs-lookup"><span data-stu-id="45165-107">Syntax</span></span>  
   
 ```  
 HRESULT DefineParameter(  
@@ -42,34 +42,34 @@ HRESULT DefineParameter(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1fef6-108">参数</span><span class="sxs-lookup"><span data-stu-id="1fef6-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="45165-108">参数</span><span class="sxs-lookup"><span data-stu-id="45165-108">Parameters</span></span>  
  `name`  
- <span data-ttu-id="1fef6-109">[in]参数名称。</span><span class="sxs-lookup"><span data-stu-id="1fef6-109">[in] The parameter name.</span></span>  
+ <span data-ttu-id="45165-109">[in]参数名称。</span><span class="sxs-lookup"><span data-stu-id="45165-109">[in] The parameter name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="1fef6-110">[in]参数属性。</span><span class="sxs-lookup"><span data-stu-id="1fef6-110">[in] The parameter attributes.</span></span>  
+ <span data-ttu-id="45165-110">[in]参数属性。</span><span class="sxs-lookup"><span data-stu-id="45165-110">[in] The parameter attributes.</span></span>  
   
  `sequence`  
- <span data-ttu-id="1fef6-111">[in]参数签名。</span><span class="sxs-lookup"><span data-stu-id="1fef6-111">[in] The parameter signature.</span></span>  
+ <span data-ttu-id="45165-111">[in]参数签名。</span><span class="sxs-lookup"><span data-stu-id="45165-111">[in] The parameter signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="1fef6-112">[in]地址类型。</span><span class="sxs-lookup"><span data-stu-id="1fef6-112">[in] The address type.</span></span>  
+ <span data-ttu-id="45165-112">[in]地址类型。</span><span class="sxs-lookup"><span data-stu-id="45165-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="1fef6-113">[in]参数规格的第一个地址。</span><span class="sxs-lookup"><span data-stu-id="1fef6-113">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="45165-113">[in]参数规格的第一个地址。</span><span class="sxs-lookup"><span data-stu-id="45165-113">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="1fef6-114">[in]参数规格的第二个地址。</span><span class="sxs-lookup"><span data-stu-id="1fef6-114">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="45165-114">[in]参数规格的第二个地址。</span><span class="sxs-lookup"><span data-stu-id="45165-114">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="1fef6-115">[in]参数规格的第三个地址。</span><span class="sxs-lookup"><span data-stu-id="1fef6-115">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="45165-115">[in]参数规格的第三个地址。</span><span class="sxs-lookup"><span data-stu-id="45165-115">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1fef6-116">返回值</span><span class="sxs-lookup"><span data-stu-id="1fef6-116">Return Value</span></span>  
- <span data-ttu-id="1fef6-117">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="1fef6-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="45165-116">返回值</span><span class="sxs-lookup"><span data-stu-id="45165-116">Return Value</span></span>  
+ <span data-ttu-id="45165-117">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="45165-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1fef6-118">要求</span><span class="sxs-lookup"><span data-stu-id="1fef6-118">Requirements</span></span>  
- <span data-ttu-id="1fef6-119">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1fef6-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="45165-118">要求</span><span class="sxs-lookup"><span data-stu-id="45165-118">Requirements</span></span>  
+ <span data-ttu-id="45165-119">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="45165-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1fef6-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="1fef6-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="45165-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="45165-120">See also</span></span>
 
-- [<span data-ttu-id="1fef6-121">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="1fef6-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="45165-121">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="45165-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
