@@ -9,11 +9,11 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010106"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>如何：沿着路径针对对象进行动画处理（双精度动画）
 此示例演示如何使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>类来沿着由定义的路径移动对象<xref:System.Windows.Media.PathGeometry>。  

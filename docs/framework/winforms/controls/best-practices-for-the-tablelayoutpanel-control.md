@@ -15,11 +15,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
 ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011721"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 控件的最佳做法
 <xref:System.Windows.Forms.TableLayoutPanel>控件提供了强大的布局功能，应在 Windows 窗体上使用之前仔细考虑。  

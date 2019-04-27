@@ -1,17 +1,17 @@
 ---
-title: 实现现代化，使用 CI/CD 管道和 DevOps 工具在云中的应用的生命周期
+title: 通过云中的 CI/CD 管道和 DevOps 工具保持对应用的生命周期进行现代化
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |实现现代化，使用 CI/CD 管道和 DevOps 工具在云中的应用的生命周期
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012162"
 ---
-# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>实现现代化，使用 CI/CD 管道和 DevOps 工具在云中的应用的生命周期
+# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>通过云中的 CI/CD 管道和 DevOps 工具保持对应用的生命周期进行现代化
 
 如今的企业需要进行创新速度很快在 marketplace 中具竞争力。 交付高质量的现代应用程序需要 DevOps 工具和流程来实现此常量的创新周期至关重要的。 使用合适的 DevOps 工具，开发人员可以简化持续部署，并更快地获取用户的手中的创新型应用程序。
 
