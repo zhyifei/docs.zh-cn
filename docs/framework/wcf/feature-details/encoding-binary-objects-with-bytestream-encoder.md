@@ -3,17 +3,17 @@ title: 使用字节流编码器编码二进制对象
 ms.date: 03/30/2017
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
 ms.openlocfilehash: 9619fdf6979833c30159e1ea02b3f8d6b98a6629
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856500"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>使用字节流编码器编码二进制对象
-使用配置发送和接收原始二进制数据与 Windows Communication Foundation (WCF) <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>。  
+使用配置发送和接收原始二进制数据使用 Windows Communication Foundation (WCF) <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>。  
   
 ## <a name="byte-stream-message-encoder-architecture"></a>字节流消息编码器体系结构  
- WCF 使用二进制消息编码器有没有功能可用于处理、 验证或标识消息中的基础二进制数据。 数据包会编码为 XML 进行发送、接收和解码。 编码器在数据传递到传输之后但在消息发送到消息队列之前处理数据。 在功能上，二进制编码器将消息数据包装在 `<binary>` 元素中进行发送，并在收到消息之后删除元素。  
+ WCF 使用二进制消息编码器有没有工具可用于处理、 验证或标识消息中的基础二进制数据。 数据包会编码为 XML 进行发送、接收和解码。 编码器在数据传递到传输之后但在消息发送到消息队列之前处理数据。 在功能上，二进制编码器将消息数据包装在 `<binary>` 元素中进行发送，并在收到消息之后删除元素。  
   
 ## <a name="using-the-byte-stream-message-encoder"></a>使用字节流消息编码器  
  下面的示例演示实现字节流消息编码器的服务协定。  

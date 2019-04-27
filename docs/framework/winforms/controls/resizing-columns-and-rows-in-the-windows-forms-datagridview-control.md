@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903183"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>调整 Windows 窗体 DataGridView 控件中列和行的大小
 `DataGridView`控件提供了许多选项用于自定义其列和行的大小调整行为。 通常情况下，`DataGridView`单元格不调整大小基于其内容。 相反，它们会剪辑任何大于该单元格的显示值。 如果内容可以显示为一个字符串，该单元格工具提示中显示它。  
