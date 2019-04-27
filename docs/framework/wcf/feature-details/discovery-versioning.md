@@ -3,11 +3,11 @@ title: 发现版本控制
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
 ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856643"
 ---
 # <a name="discovery-versioning"></a>发现版本控制
 本主题简要概述了一些新增发现功能的实现， 还概述了如何选择要使用的发现版本。  

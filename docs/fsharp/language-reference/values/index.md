@@ -3,11 +3,11 @@ title: 值
 description: 了解如何在值F#是具有特定类型的数量。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5c1d4f1e59cbf092911d99a725654042bf3383b1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902182"
 ---
 # <a name="values"></a>值
 
@@ -43,7 +43,7 @@ F# 不是纯粹的函数语言，但它完全支持函数编程。 使用不可�
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-----|-----------|
 |[let 绑定](../functions/let-bindings.md)|提供有关使用信息`let`关键字将绑定到值和函数的名称。|
 |[函数](../functions/index.md)|提供 F# 中函数的概述。|

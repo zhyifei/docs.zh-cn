@@ -9,11 +9,11 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672596"
 ---
 # <a name="how-to-read-image-metadata"></a>如何：读取图像元数据
 某些图像文件包含元数据可以读取来确定映像的功能。 例如，数字照片中可能包含您可以读取以确定品牌和型号的照相机用于捕获映像的元数据。 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，可以读取现有的元数据，并还可以将新的元数据写入图像文件。  

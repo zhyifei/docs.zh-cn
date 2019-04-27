@@ -3,11 +3,11 @@ title: F#编码约定
 description: 了解一般指导原则和习惯用语，编写时F#代码。
 ms.date: 05/14/2018
 ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902130"
 ---
 # <a name="f-coding-conventions"></a>F#编码约定
 

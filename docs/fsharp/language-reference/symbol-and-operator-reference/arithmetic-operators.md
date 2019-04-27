@@ -3,11 +3,11 @@ title: 算术运算符
 description: 了解有关中可用的算术运算符F#编程语言。
 ms.date: 04/04/2018
 ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925848"
 ---
 # <a name="arithmetic-operators"></a>算术运算符
 
@@ -17,7 +17,7 @@ ms.locfileid: "53614579"
 
 下表总结了可用于未装箱的整型和浮点类型的二进制算术运算符。
 
-|二元运算符|备注|
+|二元运算符|说明|
 |---------------|-----|
 |`+` (此外，加上)|未选中状态。 数字加在一起时的可能的溢出条件和的总和超出了类型支持的最大绝对值。|
 |`-` (减法、 减号)|未选中状态。 可能的下溢条件时减去无符号的类型，或太小，无法由类型表示浮点值时。|

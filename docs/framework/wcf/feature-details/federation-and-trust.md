@@ -5,11 +5,11 @@ helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
 ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856565"
 ---
 # <a name="federation-and-trust"></a>联合与信任
 本主题介绍与联合应用程序、 信任边界和配置，并使用已颁发的令牌中 Windows Communication Foundation (WCF) 的各个方面。  
