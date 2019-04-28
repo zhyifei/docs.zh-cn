@@ -17,33 +17,33 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697675"
 ---
-# <a name="iassemblycache-interface"></a><span data-ttu-id="d6542-102">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="d6542-102">IAssemblyCache Interface</span></span>
-<span data-ttu-id="d6542-103">合成技术表示全局程序集缓存中的供使用。</span><span class="sxs-lookup"><span data-stu-id="d6542-103">Represents the global assembly cache for use by the fusion technology.</span></span>  
+# <a name="iassemblycache-interface"></a><span data-ttu-id="0a0fd-102">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="0a0fd-102">IAssemblyCache Interface</span></span>
+<span data-ttu-id="0a0fd-103">合成技术表示全局程序集缓存中的供使用。</span><span class="sxs-lookup"><span data-stu-id="0a0fd-103">Represents the global assembly cache for use by the fusion technology.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d6542-104">方法</span><span class="sxs-lookup"><span data-stu-id="d6542-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0a0fd-104">方法</span><span class="sxs-lookup"><span data-stu-id="0a0fd-104">Methods</span></span>  
   
-|<span data-ttu-id="d6542-105">方法</span><span class="sxs-lookup"><span data-stu-id="d6542-105">Method</span></span>|<span data-ttu-id="d6542-106">描述</span><span class="sxs-lookup"><span data-stu-id="d6542-106">Description</span></span>|  
+|<span data-ttu-id="0a0fd-105">方法</span><span class="sxs-lookup"><span data-stu-id="0a0fd-105">Method</span></span>|<span data-ttu-id="0a0fd-106">描述</span><span class="sxs-lookup"><span data-stu-id="0a0fd-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d6542-107">CreateAssemblyCacheItem 方法</span><span class="sxs-lookup"><span data-stu-id="d6542-107">CreateAssemblyCacheItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|<span data-ttu-id="d6542-108">获取一个新的引用[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="d6542-108">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span></span>|  
-|[<span data-ttu-id="d6542-109">CreateAssemblyScavenger 方法</span><span class="sxs-lookup"><span data-stu-id="d6542-109">CreateAssemblyScavenger Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|<span data-ttu-id="d6542-110">合成技术，保留供内部使用。</span><span class="sxs-lookup"><span data-stu-id="d6542-110">Reserved for internal use by the fusion technology.</span></span>|  
-|[<span data-ttu-id="d6542-111">InstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="d6542-111">InstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|<span data-ttu-id="d6542-112">将指定的程序集安装在全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="d6542-112">Installs the specified assembly in the global assembly cache.</span></span>|  
-|[<span data-ttu-id="d6542-113">QueryAssemblyInfo 方法</span><span class="sxs-lookup"><span data-stu-id="d6542-113">QueryAssemblyInfo Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|<span data-ttu-id="d6542-114">获取有关指定的程序集的请求的数据。</span><span class="sxs-lookup"><span data-stu-id="d6542-114">Gets the requested data about the specified assembly.</span></span>|  
-|[<span data-ttu-id="d6542-115">UninstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="d6542-115">UninstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|<span data-ttu-id="d6542-116">从全局程序集缓存中卸载指定的程序集。</span><span class="sxs-lookup"><span data-stu-id="d6542-116">Uninstalls the specified assembly from the global assembly cache.</span></span>|  
+|[<span data-ttu-id="0a0fd-107">CreateAssemblyCacheItem 方法</span><span class="sxs-lookup"><span data-stu-id="0a0fd-107">CreateAssemblyCacheItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|<span data-ttu-id="0a0fd-108">获取一个新的引用[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="0a0fd-108">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span></span>|  
+|[<span data-ttu-id="0a0fd-109">CreateAssemblyScavenger 方法</span><span class="sxs-lookup"><span data-stu-id="0a0fd-109">CreateAssemblyScavenger Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|<span data-ttu-id="0a0fd-110">合成技术，保留供内部使用。</span><span class="sxs-lookup"><span data-stu-id="0a0fd-110">Reserved for internal use by the fusion technology.</span></span>|  
+|[<span data-ttu-id="0a0fd-111">InstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="0a0fd-111">InstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|<span data-ttu-id="0a0fd-112">将指定的程序集安装在全局程序集缓存。</span><span class="sxs-lookup"><span data-stu-id="0a0fd-112">Installs the specified assembly in the global assembly cache.</span></span>|  
+|[<span data-ttu-id="0a0fd-113">QueryAssemblyInfo 方法</span><span class="sxs-lookup"><span data-stu-id="0a0fd-113">QueryAssemblyInfo Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|<span data-ttu-id="0a0fd-114">获取有关指定的程序集的请求的数据。</span><span class="sxs-lookup"><span data-stu-id="0a0fd-114">Gets the requested data about the specified assembly.</span></span>|  
+|[<span data-ttu-id="0a0fd-115">UninstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="0a0fd-115">UninstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|<span data-ttu-id="0a0fd-116">从全局程序集缓存中卸载指定的程序集。</span><span class="sxs-lookup"><span data-stu-id="0a0fd-116">Uninstalls the specified assembly from the global assembly cache.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d6542-117">要求</span><span class="sxs-lookup"><span data-stu-id="d6542-117">Requirements</span></span>  
- <span data-ttu-id="d6542-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d6542-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a0fd-117">要求</span><span class="sxs-lookup"><span data-stu-id="0a0fd-117">Requirements</span></span>  
+ <span data-ttu-id="0a0fd-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0a0fd-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d6542-119">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="d6542-119">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="0a0fd-119">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="0a0fd-119">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="d6542-120">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6542-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0a0fd-120">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a0fd-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6542-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="d6542-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a0fd-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="0a0fd-121">See also</span></span>
 
-- [<span data-ttu-id="d6542-122">合成接口</span><span class="sxs-lookup"><span data-stu-id="d6542-122">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="d6542-123">全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="d6542-123">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="0a0fd-122">合成接口</span><span class="sxs-lookup"><span data-stu-id="0a0fd-122">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="0a0fd-123">全局程序集缓存</span><span class="sxs-lookup"><span data-stu-id="0a0fd-123">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)

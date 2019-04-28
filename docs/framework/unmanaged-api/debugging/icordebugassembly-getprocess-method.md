@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aeadcbd8f2d09320645c36fdc771cfb2cb976036
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645524"
 ---
-# <a name="icordebugassemblygetprocess-method"></a><span data-ttu-id="c32bc-102">ICorDebugAssembly::GetProcess 方法</span><span class="sxs-lookup"><span data-stu-id="c32bc-102">ICorDebugAssembly::GetProcess Method</span></span>
-<span data-ttu-id="c32bc-103">获取在其中运行此 icor 调试程序集实例的进程的接口指针。</span><span class="sxs-lookup"><span data-stu-id="c32bc-103">Gets an interface pointer to the process in which this ICorDebugAssembly instance is running.</span></span>  
+# <a name="icordebugassemblygetprocess-method"></a><span data-ttu-id="4d92b-102">ICorDebugAssembly::GetProcess 方法</span><span class="sxs-lookup"><span data-stu-id="4d92b-102">ICorDebugAssembly::GetProcess Method</span></span>
+<span data-ttu-id="4d92b-103">获取在其中运行此 icor 调试程序集实例的进程的接口指针。</span><span class="sxs-lookup"><span data-stu-id="4d92b-103">Gets an interface pointer to the process in which this ICorDebugAssembly instance is running.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c32bc-104">语法</span><span class="sxs-lookup"><span data-stu-id="c32bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d92b-104">语法</span><span class="sxs-lookup"><span data-stu-id="4d92b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcess (  
@@ -35,15 +35,15 @@ HRESULT GetProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c32bc-105">参数</span><span class="sxs-lookup"><span data-stu-id="c32bc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d92b-105">参数</span><span class="sxs-lookup"><span data-stu-id="4d92b-105">Parameters</span></span>  
  `ppProcess`  
- <span data-ttu-id="c32bc-106">[out]指向表示流程 ICorDebugProcess 接口的指针。</span><span class="sxs-lookup"><span data-stu-id="c32bc-106">[out] A pointer to an ICorDebugProcess interface that represents the process.</span></span>  
+ <span data-ttu-id="4d92b-106">[out]指向表示流程 ICorDebugProcess 接口的指针。</span><span class="sxs-lookup"><span data-stu-id="4d92b-106">[out] A pointer to an ICorDebugProcess interface that represents the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c32bc-107">要求</span><span class="sxs-lookup"><span data-stu-id="c32bc-107">Requirements</span></span>  
- <span data-ttu-id="c32bc-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c32bc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d92b-107">要求</span><span class="sxs-lookup"><span data-stu-id="4d92b-107">Requirements</span></span>  
+ <span data-ttu-id="4d92b-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4d92b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c32bc-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c32bc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4d92b-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d92b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c32bc-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c32bc-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4d92b-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d92b-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c32bc-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c32bc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4d92b-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d92b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -3,82 +3,82 @@ title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
 ms.openlocfilehash: 993c07b824d30c89773c5cfea90c7c194c6b3869
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760410"
 ---
-# <a name="navigate-entity-sql"></a><span data-ttu-id="eafdf-102">NAVIGATE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="eafdf-102">NAVIGATE (Entity SQL)</span></span>
+# <a name="navigate-entity-sql"></a><span data-ttu-id="2adbd-102">NAVIGATE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="2adbd-102">NAVIGATE (Entity SQL)</span></span>
 
-<span data-ttu-id="eafdf-103">导航实体之间建立的关系。</span><span class="sxs-lookup"><span data-stu-id="eafdf-103">Navigates over the relationship established between entities.</span></span>
+<span data-ttu-id="2adbd-103">导航实体之间建立的关系。</span><span class="sxs-lookup"><span data-stu-id="2adbd-103">Navigates over the relationship established between entities.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="eafdf-104">语法</span><span class="sxs-lookup"><span data-stu-id="eafdf-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2adbd-104">语法</span><span class="sxs-lookup"><span data-stu-id="2adbd-104">Syntax</span></span>
 
 ```
 navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 ```
 
-## <a name="arguments"></a><span data-ttu-id="eafdf-105">自变量</span><span class="sxs-lookup"><span data-stu-id="eafdf-105">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="2adbd-105">自变量</span><span class="sxs-lookup"><span data-stu-id="2adbd-105">Arguments</span></span>
 
-<span data-ttu-id="eafdf-106">`instance-expression` 实体的实例。</span><span class="sxs-lookup"><span data-stu-id="eafdf-106">`instance-expression` An instance of an entity.</span></span>
+<span data-ttu-id="2adbd-106">`instance-expression` 实体的实例。</span><span class="sxs-lookup"><span data-stu-id="2adbd-106">`instance-expression` An instance of an entity.</span></span>
 
-<span data-ttu-id="eafdf-107">`relationship-type` 从概念架构定义语言 (CSDL) 文件的关系类型名称。</span><span class="sxs-lookup"><span data-stu-id="eafdf-107">`relationship-type` The type name of the relationship, from the conceptual schema definition language (CSDL) file.</span></span> <span data-ttu-id="eafdf-108">`relationship-type`是作为限定\<命名空间 >。\<关系类型名称 >。</span><span class="sxs-lookup"><span data-stu-id="eafdf-108">The `relationship-type` is qualified as \<namespace>.\<relationship type name>.</span></span>
+<span data-ttu-id="2adbd-107">`relationship-type` 从概念架构定义语言 (CSDL) 文件的关系类型名称。</span><span class="sxs-lookup"><span data-stu-id="2adbd-107">`relationship-type` The type name of the relationship, from the conceptual schema definition language (CSDL) file.</span></span> <span data-ttu-id="2adbd-108">`relationship-type`是作为限定\<命名空间 >。\<关系类型名称 >。</span><span class="sxs-lookup"><span data-stu-id="2adbd-108">The `relationship-type` is qualified as \<namespace>.\<relationship type name>.</span></span>
 
-<span data-ttu-id="eafdf-109">`to` 关系的结束。</span><span class="sxs-lookup"><span data-stu-id="eafdf-109">`to` The end of the relationship.</span></span>
+<span data-ttu-id="2adbd-109">`to` 关系的结束。</span><span class="sxs-lookup"><span data-stu-id="2adbd-109">`to` The end of the relationship.</span></span>
 
-<span data-ttu-id="eafdf-110">`from` 关系的起始处。</span><span class="sxs-lookup"><span data-stu-id="eafdf-110">`from` The beginning of the relationship.</span></span>
+<span data-ttu-id="2adbd-110">`from` 关系的起始处。</span><span class="sxs-lookup"><span data-stu-id="2adbd-110">`from` The beginning of the relationship.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="eafdf-111">返回值</span><span class="sxs-lookup"><span data-stu-id="eafdf-111">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="2adbd-111">返回值</span><span class="sxs-lookup"><span data-stu-id="2adbd-111">Return Value</span></span>
 
-<span data-ttu-id="eafdf-112">如果结束端的基数为 1，返回值将为 `Ref<T>`。</span><span class="sxs-lookup"><span data-stu-id="eafdf-112">If the cardinality of the to end is 1, the return value will be `Ref<T>`.</span></span> <span data-ttu-id="eafdf-113">如果结束端的基数为 n，返回值将为 `Collection<Ref<T>>`。</span><span class="sxs-lookup"><span data-stu-id="eafdf-113">If the cardinality of the to end is n, the return value will be `Collection<Ref<T>>`.</span></span>
+<span data-ttu-id="2adbd-112">如果结束端的基数为 1，返回值将为 `Ref<T>`。</span><span class="sxs-lookup"><span data-stu-id="2adbd-112">If the cardinality of the to end is 1, the return value will be `Ref<T>`.</span></span> <span data-ttu-id="2adbd-113">如果结束端的基数为 n，返回值将为 `Collection<Ref<T>>`。</span><span class="sxs-lookup"><span data-stu-id="2adbd-113">If the cardinality of the to end is n, the return value will be `Collection<Ref<T>>`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="eafdf-114">备注</span><span class="sxs-lookup"><span data-stu-id="eafdf-114">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2adbd-114">备注</span><span class="sxs-lookup"><span data-stu-id="2adbd-114">Remarks</span></span>
 
-<span data-ttu-id="eafdf-115">关系是 [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM) 中的一类构造。</span><span class="sxs-lookup"><span data-stu-id="eafdf-115">Relationships are first-class constructs in the [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM).</span></span> <span data-ttu-id="eafdf-116">可以在两个或更多实体类型之间建立关系，用户可以通过关系从一端（实体）导航到另一端。</span><span class="sxs-lookup"><span data-stu-id="eafdf-116">Relationships can be established between two or more entity types, and users can navigate over the relationship from one end (entity) to another.</span></span> <span data-ttu-id="eafdf-117">当关系中的名称解析没有歧义时，`from` 和 `to` 为有条件可选。</span><span class="sxs-lookup"><span data-stu-id="eafdf-117">`from` and `to` are conditionally optional when there is no ambiguity in name resolution within the relationship.</span></span>
+<span data-ttu-id="2adbd-115">关系是 [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM) 中的一类构造。</span><span class="sxs-lookup"><span data-stu-id="2adbd-115">Relationships are first-class constructs in the [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM).</span></span> <span data-ttu-id="2adbd-116">可以在两个或更多实体类型之间建立关系，用户可以通过关系从一端（实体）导航到另一端。</span><span class="sxs-lookup"><span data-stu-id="2adbd-116">Relationships can be established between two or more entity types, and users can navigate over the relationship from one end (entity) to another.</span></span> <span data-ttu-id="2adbd-117">当关系中的名称解析没有歧义时，`from` 和 `to` 为有条件可选。</span><span class="sxs-lookup"><span data-stu-id="2adbd-117">`from` and `to` are conditionally optional when there is no ambiguity in name resolution within the relationship.</span></span>
 
-<span data-ttu-id="eafdf-118">NAVIGATE 在 O 和 C 空间中有效。</span><span class="sxs-lookup"><span data-stu-id="eafdf-118">NAVIGATE is valid in O and C space.</span></span>
+<span data-ttu-id="2adbd-118">NAVIGATE 在 O 和 C 空间中有效。</span><span class="sxs-lookup"><span data-stu-id="2adbd-118">NAVIGATE is valid in O and C space.</span></span>
 
-<span data-ttu-id="eafdf-119">导航构造的常规形式如下：</span><span class="sxs-lookup"><span data-stu-id="eafdf-119">The general form of a navigation construct is the following:</span></span>
+<span data-ttu-id="2adbd-119">导航构造的常规形式如下：</span><span class="sxs-lookup"><span data-stu-id="2adbd-119">The general form of a navigation construct is the following:</span></span>
 
-<span data-ttu-id="eafdf-120">navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span><span class="sxs-lookup"><span data-stu-id="eafdf-120">navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span></span>
+<span data-ttu-id="2adbd-120">navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span><span class="sxs-lookup"><span data-stu-id="2adbd-120">navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )</span></span>
 
-<span data-ttu-id="eafdf-121">例如：</span><span class="sxs-lookup"><span data-stu-id="eafdf-121">For example:</span></span>
+<span data-ttu-id="2adbd-121">例如：</span><span class="sxs-lookup"><span data-stu-id="2adbd-121">For example:</span></span>
 
 ```sql
 Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-<span data-ttu-id="eafdf-122">其中 OrderCustomer 为 `relationship`，Customer 和 Order 为关系的 `to-end` （客户）和 `from-end` （订单）。</span><span class="sxs-lookup"><span data-stu-id="eafdf-122">Where OrderCustomer is the `relationship`, and Customer and Order are the `to-end` (customer) and `from-end` (order) of the relationship.</span></span> <span data-ttu-id="eafdf-123">如果 ordercustomer 为 n:1 关系，则导航表达式的结果类型是 Ref\<客户 >。</span><span class="sxs-lookup"><span data-stu-id="eafdf-123">If OrderCustomer was a n:1 relationship, then the result type of the navigate expression is Ref\<Customer>.</span></span>
+<span data-ttu-id="2adbd-122">其中 OrderCustomer 为 `relationship`，Customer 和 Order 为关系的 `to-end` （客户）和 `from-end` （订单）。</span><span class="sxs-lookup"><span data-stu-id="2adbd-122">Where OrderCustomer is the `relationship`, and Customer and Order are the `to-end` (customer) and `from-end` (order) of the relationship.</span></span> <span data-ttu-id="2adbd-123">如果 ordercustomer 为 n:1 关系，则导航表达式的结果类型是 Ref\<客户 >。</span><span class="sxs-lookup"><span data-stu-id="2adbd-123">If OrderCustomer was a n:1 relationship, then the result type of the navigate expression is Ref\<Customer>.</span></span>
 
-<span data-ttu-id="eafdf-124">此表达式的简单形式如下：</span><span class="sxs-lookup"><span data-stu-id="eafdf-124">The simpler form of this expression is the following:</span></span>
+<span data-ttu-id="2adbd-124">此表达式的简单形式如下：</span><span class="sxs-lookup"><span data-stu-id="2adbd-124">The simpler form of this expression is the following:</span></span>
 
 ```sql
 Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-<span data-ttu-id="eafdf-125">同样，在以下形式的查询中，导航表达式将生成一组 < Ref\<顺序 >>。</span><span class="sxs-lookup"><span data-stu-id="eafdf-125">Similarly, in a query of the following form, The navigate expression would produce a Collection<Ref\<Order>>.</span></span>
+<span data-ttu-id="2adbd-125">同样，在以下形式的查询中，导航表达式将生成一组 < Ref\<顺序 >>。</span><span class="sxs-lookup"><span data-stu-id="2adbd-125">Similarly, in a query of the following form, The navigate expression would produce a Collection<Ref\<Order>>.</span></span>
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)
 From LOB.Customers as c
 ```
 
-<span data-ttu-id="eafdf-126">实例表达式必须为 entity/ref 类型。</span><span class="sxs-lookup"><span data-stu-id="eafdf-126">The instance-expression must be an entity/ref type.</span></span>
+<span data-ttu-id="2adbd-126">实例表达式必须为 entity/ref 类型。</span><span class="sxs-lookup"><span data-stu-id="2adbd-126">The instance-expression must be an entity/ref type.</span></span>
 
-## <a name="example"></a><span data-ttu-id="eafdf-127">示例</span><span class="sxs-lookup"><span data-stu-id="eafdf-127">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2adbd-127">示例</span><span class="sxs-lookup"><span data-stu-id="2adbd-127">Example</span></span>
 
-<span data-ttu-id="eafdf-128">下面的 Entity SQL 查询使用 NAVIGATE 运算符来导航建立在 Address 和 SalesOrderHeader 实体类型之间的关系。</span><span class="sxs-lookup"><span data-stu-id="eafdf-128">The following Entity SQL query uses the NAVIGATE operator to navigate over the relationship established between Address and SalesOrderHeader entity types.</span></span> <span data-ttu-id="eafdf-129">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="eafdf-129">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="eafdf-130">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="eafdf-130">To compile and run this query, follow these steps:</span></span>
+<span data-ttu-id="2adbd-128">下面的 Entity SQL 查询使用 NAVIGATE 运算符来导航建立在 Address 和 SalesOrderHeader 实体类型之间的关系。</span><span class="sxs-lookup"><span data-stu-id="2adbd-128">The following Entity SQL query uses the NAVIGATE operator to navigate over the relationship established between Address and SalesOrderHeader entity types.</span></span> <span data-ttu-id="2adbd-129">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="2adbd-129">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="2adbd-130">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="2adbd-130">To compile and run this query, follow these steps:</span></span>
 
-1. <span data-ttu-id="eafdf-131">按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="eafdf-131">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>
+1. <span data-ttu-id="2adbd-131">按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="2adbd-131">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>
 
-2. <span data-ttu-id="eafdf-132">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="eafdf-132">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>
+2. <span data-ttu-id="2adbd-132">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="2adbd-132">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>
 
  [!code-csharp[DP EntityServices Concepts 2#NAVIGATE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#navigate)]
 
-## <a name="see-also"></a><span data-ttu-id="eafdf-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="eafdf-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2adbd-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="2adbd-133">See also</span></span>
 
-- [<span data-ttu-id="eafdf-134">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="eafdf-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="eafdf-135">如何：导航与关系导航运算符</span><span class="sxs-lookup"><span data-stu-id="eafdf-135">How to: Navigate Relationships with Navigate Operator</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
+- [<span data-ttu-id="2adbd-134">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="2adbd-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="2adbd-135">如何：导航与关系导航运算符</span><span class="sxs-lookup"><span data-stu-id="2adbd-135">How to: Navigate Relationships with Navigate Operator</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
