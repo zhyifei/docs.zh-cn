@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
 ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607561"
 ---
 # <a name="row-error-information"></a>行错误信息
 为了避免在编辑 <xref:System.Data.DataTable> 中的值时对行错误做出响应，可以将错误信息添加到该行，供以后使用。 因此，<xref:System.Data.DataRow> 对象在每行上提供 <xref:System.Data.DataRow.RowError%2A> 属性。 将数据添加到**RowError**的属性**DataRow**设置<xref:System.Data.DataRow.HasErrors%2A>属性的**DataRow**到**true**。 如果**DataRow**属于**DataTable**，并**DataRow.HasErrors**是**true**，则**DataTable.HasErrors**属性也是**true**。 这也适用于**数据集**所属**DataTable**所属。 当测试是否有错误，您可以检查**HasErrors**属性来确定是否已添加任何行错误信息。 如果**HasErrors**是**true**，可以使用<xref:System.Data.DataTable.GetErrors%2A>方法**DataTable**返回和检查仅有错误的行，如下面的示例中所示。  

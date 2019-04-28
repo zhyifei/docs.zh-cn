@@ -8,11 +8,11 @@ helpviewer_keywords:
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
 ms.openlocfilehash: a7b70669131ae35135088418e4b33b3ae289d322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761749"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 文本概述 (Visual Basic)
 *XML 文本*允许您将 XML 直接并入您的 Visual Basic 代码。 使用 XML 文本语法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象，它是类似于 XML 1.0 语法。 这使得更轻松地以编程方式创建 XML 元素和文档，因为你的代码具有相同的结构与最终的 XML。  

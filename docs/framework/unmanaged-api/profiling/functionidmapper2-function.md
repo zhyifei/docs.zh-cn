@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1a236dcae29d00afe3b72dce8f81d657fb4fac28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598917"
 ---
 # <a name="functionidmapper2-function"></a>FunctionIDMapper2 函数
 通知探查器函数的给定的标识符可能被重新映射到要在中使用的备用 ID [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)， [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)，和[FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)，或[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)， [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)，并且[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)该函数的回调。 `FunctionIDMapper2` 此外还要使探查器指示它是否想要接收该函数的回调。  

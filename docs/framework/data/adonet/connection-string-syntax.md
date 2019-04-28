@@ -3,11 +3,11 @@ title: 连接字符串语法
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608016"
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 每个 .NET Framework 数据提供程序都有一个继承自 `Connection` 的 <xref:System.Data.Common.DbConnection> 对象，以及一个提供程序特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 属性。 每个提供程序的特定连接字符串语法记录在其 `ConnectionString` 属性中。 下表列出了 .NET Framework 中包含的四个数据提供程序。  
@@ -22,13 +22,13 @@ ms.locfileid: "59084946"
 ## <a name="connection-string-builders"></a>连接字符串生成器  
  ADO.NET 2.0 为 .NET Framework 数据提供程序引入了以下连接字符串生成器。  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  连接字符串生成器使你可以在运行时构造具有有效语法的连接字符串，从而不必在代码中手动串联连接字符串值。 有关详细信息，请参阅[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
 

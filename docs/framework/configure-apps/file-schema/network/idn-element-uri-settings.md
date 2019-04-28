@@ -3,11 +3,11 @@ title: <idn> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705097"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 元素 （Uri 设置）
 指定是否对域名应用国际化域名 (IDN) 分析。  
@@ -60,15 +60,15 @@ ms.locfileid: "59321746"
   
  有三个可能的 IDN 值具体取决于使用的 DNS 服务器：  
   
--   启用 idn = All  
+- 启用 idn = All  
   
      此值会将任何 Unicode 域名转换为 Punycode 等效项 （IDN 名称）。  
   
--   启用 idn = AllExceptIntranet  
+- 启用 idn = AllExceptIntranet  
   
      此值会将不在使用 Punycode 等效项 （IDN 名称） 在本地 Intranet 上的所有 Unicode 域名都转换。 在这种情况下若要处理本地 Intranet 上的国际化名称，用于 Intranet 的 DNS 服务器应该支持 Unicode 名称解析。  
   
--   启用 idn = 无  
+- 启用 idn = 无  
   
      此值不会将转换为使用 Punycode 任何 Unicode 域名。 这是默认值是与.NET Framework 2.0 行为一致。  
   

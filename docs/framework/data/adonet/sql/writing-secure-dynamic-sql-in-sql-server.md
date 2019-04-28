@@ -3,11 +3,11 @@ title: 在 SQL Server 中编写安全的动态 SQL
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757711"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中编写安全的动态 SQL
 SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过程。 如果输入的语句没有经过验证直接传递到服务器，并且应用程序不慎执行了注入的代码，这种攻击有可能损坏或毁坏数据。  
@@ -21,34 +21,34 @@ SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过�
   
  下面是几条有帮助的准则：  
   
--   切勿直接从用户输入生成 Transact-SQL 语句，应使用存储过程来验证用户输入。  
+- 切勿直接从用户输入生成 Transact-SQL 语句，应使用存储过程来验证用户输入。  
   
--   通过测试类型、长度、格式和范围来验证用户输入。 使用 Transact-SQL QUOTENAME() 函数转义系统名称，或使用 REPLACE() 函数转义字符串中的任何字符。  
+- 通过测试类型、长度、格式和范围来验证用户输入。 使用 Transact-SQL QUOTENAME() 函数转义系统名称，或使用 REPLACE() 函数转义字符串中的任何字符。  
   
--   在您的应用程序的每个层中实现多层验证。  
+- 在您的应用程序的每个层中实现多层验证。  
   
--   测试输入内容的大小和数据类型并实施适当的限制。 这有助于防止故意的缓冲区溢出。  
+- 测试输入内容的大小和数据类型并实施适当的限制。 这有助于防止故意的缓冲区溢出。  
   
--   测试字符串变量的内容，并只接受预期值。 拒绝包含二进制数据、转义序列和注释字符的输入。  
+- 测试字符串变量的内容，并只接受预期值。 拒绝包含二进制数据、转义序列和注释字符的输入。  
   
--   如果使用 XML 文档，则在输入时对照其架构验证所有数据。  
+- 如果使用 XML 文档，则在输入时对照其架构验证所有数据。  
   
--   在多层环境中，在允许数据进入受信任区域之前所有数据都应该进行验证。  
+- 在多层环境中，在允许数据进入受信任区域之前所有数据都应该进行验证。  
   
--   在可以构造文件名的字段中不要接受以下字符串：AUX、CLOCK$、COM1 至 COM8、CON、CONFIG$、LPT1 至 LPT8、NUL 和 PRN。  
+- 在可以构造文件名的字段中不要接受以下字符串：AUX、CLOCK$、COM1 至 COM8、CON、CONFIG$、LPT1 至 LPT8、NUL 和 PRN。  
   
--   使用带有存储过程和命令的 <xref:System.Data.SqlClient.SqlParameter> 对象以提供类型检查和长度验证。  
+- 使用带有存储过程和命令的 <xref:System.Data.SqlClient.SqlParameter> 对象以提供类型检查和长度验证。  
   
--   在客户端代码中使用 <xref:System.Text.RegularExpressions.Regex> 表达式以筛选无效字符。  
+- 在客户端代码中使用 <xref:System.Text.RegularExpressions.Regex> 表达式以筛选无效字符。  
   
 ## <a name="dynamic-sql-strategies"></a>动态 SQL 策略  
  在过程代码中动态执行已创建的 SQL 语句会中断所属权链，使 SQL Server 按照由动态 SQL 访问的对象检查调用方的权限。  
   
  SQL Server 提供了使用存储过程和可执行动态 SQL 的用户定义函数来授予用户对数据的访问权限的方法。  
   
--   如[在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)中所述，将模拟用于 Transact-SQL EXECUTE AS 子句。  
+- 如[在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)中所述，将模拟用于 Transact-SQL EXECUTE AS 子句。  
   
--   使用证书对存储过程签名，如[在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)中所述。  
+- 使用证书对存储过程签名，如[在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)中所述。  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 子句用 EXECUTE AS 子句中指定的用户的权限替换调用方的权限。 嵌套的存储过程或触发器在代理用户的安全上下文下执行。 这可能会中断依赖于行级安全性或要求审核的应用程序。 某些可返回用户标识的函数会返回 EXECUTE AS 子句中指定的用户的标识，而不是原始调用方的标识。 只有在执行该过程或发出 REVERT 语句后，执行上下文才会恢复到原始调用方。  

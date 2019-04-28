@@ -8,11 +8,11 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
 ms.openlocfilehash: 4e9b42738ff661425b05a63f2a5e5790c5cbd84b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699445"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>演练：在 WPF 中承载 Windows 窗体控件
 
@@ -34,9 +34,9 @@ ms.locfileid: "59311911"
 
 2. 添加对下列程序集的引用。
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
-    -   System.Windows.Forms
+    - System.Windows.Forms
 
 3. 打开 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。
 

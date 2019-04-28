@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765682"
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]将数据作为源公开。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持的数据馈送的 Atom 和 JavaScript 对象表示法 (JSON) 格式。 当使用 Atom 馈送，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供序列化数据，如实体和关系，可以在 HTTP 消息的正文中包含 XML 格式的标准方法。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -83,12 +83,12 @@ ms.locfileid: "59517312"
 ## <a name="feed-customization-considerations"></a>源自定义注意事项  
  定义自定义源映射时，应考虑下列事项。  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端会将映射的元素的源中为空时它们只包含空白。 因此，映射只能包含空白的元素不具有相同的空白区域的客户端上具体化。 若要保留在客户端上此空白区域，必须设置的值`KeepInContext`到`true`源的映射特性中。  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端会将映射的元素的源中为空时它们只包含空白。 因此，映射只能包含空白的元素不具有相同的空白区域的客户端上具体化。 若要保留在客户端上此空白区域，必须设置的值`KeepInContext`到`true`源的映射特性中。  
   
 ## <a name="versioning-requirements"></a>版本控制要求  
  源自定义具有以下 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议版本控制要求：  
   
--   源自定义要求客户端和数据服务都支持 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议的 2.0 版本以及更高版本。  
+- 源自定义要求客户端和数据服务都支持 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议的 2.0 版本以及更高版本。  
   
  有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
 ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663370"
 ---
 # <a name="numeric-data-types-visual-basic"></a>数值型数据类型 (Visual Basic)
 Visual Basic 提供若干*数值数据类型*来处理各种表示形式中的数字。 *整型*类型表示仅整数 （正数、 负数和零），并*nonintegral*类型具有整数和小数部分表示的数字。  

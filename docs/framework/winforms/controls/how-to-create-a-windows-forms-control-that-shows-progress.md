@@ -11,26 +11,26 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746682"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>如何：创建显示进度的 Windows 窗体控件
 以下代码示例显示了一个名为 `FlashTrackBar` 的自定义控件，可用于向用户显示应用程序的级别或进度。 它使用渐变来直观地表示进度。  
   
  `FlashTrackBar` 控件阐释了以下概念：  
   
--   定义自定义属性。  
+- 定义自定义属性。  
   
--   定义自定义事件。 （`FlashTrackBar` 定义 `ValueChanged` 事件。）  
+- 定义自定义事件。 （`FlashTrackBar` 定义 `ValueChanged` 事件。）  
   
--   重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法以提供绘制控件的逻辑。  
+- 重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法以提供绘制控件的逻辑。  
   
--   计算可用于绘制控件使用的区域及其<xref:System.Windows.Forms.Control.ClientRectangle%2A>属性。 `FlashTrackBar` 在 `OptimizedInvalidate` 方法中执行此操作。  
+- 计算可用于绘制控件使用的区域及其<xref:System.Windows.Forms.Control.ClientRectangle%2A>属性。 `FlashTrackBar` 在 `OptimizedInvalidate` 方法中执行此操作。  
   
--   在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。 `FlashTrackBar` 定义用于序列化其 `StartColor` 和 `EndColor` 属性的 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法。  
+- 在 Windows 窗体设计器中更改属性时，实现其序列化或持久性。 `FlashTrackBar` 定义用于序列化其 `StartColor` 和 `EndColor` 属性的 `ShouldSerializeStartColor` 和 `ShouldSerializeEndColor` 方法。  
   
  下表显示了由 `FlashTrackBar` 定义的自定义属性。  
   
@@ -59,23 +59,23 @@ ms.locfileid: "59202009"
   
  若要处理相应*EventName*事件`FlashTrackBar`重写它所继承的以下方法<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnPaint%2A>  
+- <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
   
--   <xref:System.Windows.Forms.Control.OnResize%2A>  
+- <xref:System.Windows.Forms.Control.OnResize%2A>  
   
  若要处理相应的 property-changed 事件`FlashTrackBar`重写它所继承的以下方法<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>示例  
  `FlashTrackBar` 控件定义了两个 UI 类型编辑器（`FlashTrackBarValueEditor` 和 `FlashTrackBarDarkenByEditor`），它们显示在以下代码列表中。 `HostApp` 类在 Windows 窗体上使用 `FlashTrackBar` 控件。  

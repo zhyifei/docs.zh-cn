@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7966cfb6e775bee567221eef2a5d99b90399f322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697909"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord 方法
 由公共语言运行时 (CLR) 数据访问服务调用，以检索与目标进程关联的异常记录。 例如，对于转储目标，这将是等效于通过传入异常记录`ExceptionParam`自变量[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows 调试帮助库 (DbgHelp) 中的函数。  

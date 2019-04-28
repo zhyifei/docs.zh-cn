@@ -9,11 +9,11 @@ ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da059e1be7c685eba7792045abf4ffa691525d2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701471"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.caching > 元素 （缓存设置）
 通过配置文件中的 <xref:System.Runtime.Caching.ObjectCache> 条目为默认内存中的 `memoryCache` 实现提供配置。  

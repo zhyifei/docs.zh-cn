@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69090618501abe7530ac7a04ae89a6bd3582e029
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700119"
 ---
 # <a name="icorthreadpoolcorcreatetimer-method"></a>ICorThreadpool::CorCreateTimer 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  

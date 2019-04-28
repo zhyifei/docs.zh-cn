@@ -9,11 +9,11 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701367"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<添加 > 元素\<sharedListeners >
 将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners` 是侦听器的集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，在侦听器`sharedListeners`集合未按放置`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  

@@ -3,11 +3,11 @@ title: 时保留空白 Serializing2
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
 ms.openlocfilehash: a8903268f5ae1c2bc6c71a0998ba7d932f01e0ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666113"
 ---
 # <a name="preserving-white-space-while-serializing"></a>在序列化时保留空白
 本主题描述在序列化 XML 树时如何控制空白。  
@@ -19,13 +19,13 @@ ms.locfileid: "58814466"
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>用于序列化 XML 树的方法的空白行为  
  <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中的以下方法用于序列化 XML 树。 可以将 XML 树序列化为文件、<xref:System.IO.TextReader> 或 <xref:System.Xml.XmlReader>。 `ToString` 方法序列化为字符串。  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
+- [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
--   [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
+- [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
  如果方法不接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么该方法将格式化（缩进）序列化的 XML。 在这种情况下，将丢弃 XML 树中所有无意义的空白。  
   

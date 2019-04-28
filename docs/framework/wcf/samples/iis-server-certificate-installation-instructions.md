@@ -3,11 +3,11 @@ title: Internet Information Services (IIS) 服务器证书安装说明
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
 ms.openlocfilehash: 8d0b80930424f0d8529f2b035a8e1167f361f99a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752474"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Internet Information Services (IIS) 服务器证书安装说明
 若要运行可与 Internet 信息服务 (IIS) 安全通信的示例，您必须创建和安装服务器证书。  
@@ -72,9 +72,9 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 ## <a name="removing-certificates"></a>移除证书  
   
--   按照前面的指引使用 Internet Information Services 管理器，但要移除（而不是添加）证书或绑定。  
+- 按照前面的指引使用 Internet Information Services 管理器，但要移除（而不是添加）证书或绑定。  
   
--   使用以下命令移除计算机证书。  
+- 使用以下命令移除计算机证书。  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:443  

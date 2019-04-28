@@ -7,11 +7,11 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
 ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703357"
 ---
 # <a name="fonts-wpf"></a>字体 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包括对文本使用的丰富的演示支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体。 一个示例包[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体随[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]。  

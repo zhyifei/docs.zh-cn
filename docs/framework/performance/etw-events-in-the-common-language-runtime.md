@@ -9,11 +9,11 @@ ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723181"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>公共语言运行时中的 ETW 事件
 公共语言运行时 (CLR) 通过大量的调试和分析事件，提供有用的 Windows 事件跟踪 (ETW) 诊断信息。 CLR ETW 事件利用 Windows ETW 跟踪系统来扩充公共语言运行时所提供的现有分析和调试支持。  

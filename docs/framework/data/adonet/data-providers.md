@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607526"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序用于连接到数据库、执行命令和检索结果。 这些结果将被直接处理，放置在 <xref:System.Data.DataSet> 中以便根据需要向用户公开、与多个源中的数据组合，或在层之间进行远程处理。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序是轻量的，它在数据源和代码之间创建最小的分层，并在不降低功能性的情况下提高性能。  

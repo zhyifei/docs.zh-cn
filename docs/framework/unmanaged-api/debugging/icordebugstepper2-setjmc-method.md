@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 129bf04a097b2019b080f813bf049d41b501f8fd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663864"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC 方法
 设置一个值，指定是否有此 ICorDebugStepper 步骤只能通过由应用程序的开发人员编写的代码。 此过程也称为认为只我的代码 (JMC) 调试。  

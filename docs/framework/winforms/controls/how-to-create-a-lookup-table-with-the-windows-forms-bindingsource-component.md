@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747052"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件创建查找表
 查找表是一种数据表，其中有一列显示另一个相关表的记录数据。 在以下过程中，<xref:System.Windows.Forms.ComboBox> 控件可用于显示具有从父表到子表的外键关系的字段。  
@@ -37,13 +37,13 @@ ms.locfileid: "59321895"
   
  在 [ComboBox 控件](combobox-control-windows-forms.md)控件上设置了 4 种重要属性来创建查找表。  
   
--   <xref:System.Windows.Forms.ComboBox.DataSource%2A> 属性包含查找表的名称。  
+- <xref:System.Windows.Forms.ComboBox.DataSource%2A> 属性包含查找表的名称。  
   
--   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> 属性包含查找表中要作为控件文本（客户名称）显示的数据列。  
+- <xref:System.Windows.Forms.ListControl.DisplayMember%2A> 属性包含查找表中要作为控件文本（客户名称）显示的数据列。  
   
--   <xref:System.Windows.Forms.ListControl.ValueMember%2A> 属性包含查找表中具有存储信息（父表中的 ID 号）的数据列。  
+- <xref:System.Windows.Forms.ListControl.ValueMember%2A> 属性包含查找表中具有存储信息（父表中的 ID 号）的数据列。  
   
--   <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 属性根据 <xref:System.Windows.Forms.ListControl.ValueMember%2A> 为子表提供查找值。  
+- <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 属性根据 <xref:System.Windows.Forms.ListControl.ValueMember%2A> 为子表提供查找值。  
   
  下面的过程显示了如何将窗体布局设置为一个查找表，并将数据绑定到它上面的控件。 为了成功完成这些过程，必须像上面提到的一样有一个带有存在外键关系的父表和子表的数据源。  
   
@@ -65,21 +65,21 @@ ms.locfileid: "59321895"
   
 3. 单击“数据源”下拉框旁边的箭头。 如果以前已经为项目或窗体配置了数据源，将显示该数据源；否则，完成以下步骤（此示例使用 Northwind 示例数据库中的 Customers 表和 Orders 表，并在括号中引用它们）。  
   
-    1.  单击“添加项目数据源”以连接到数据并创建一个数据源。  
+    1. 单击“添加项目数据源”以连接到数据并创建一个数据源。  
   
-    2.  在“数据源配置向导”欢迎页上，单击“下一步”。  
+    2. 在“数据源配置向导”欢迎页上，单击“下一步”。  
   
-    3.  在“选择数据源类型”页面上选择“数据库”。  
+    3. 在“选择数据源类型”页面上选择“数据库”。  
   
-    4.  从“选择你的数据连接”页面上的可用连接列表中选择一个数据连接。 如果所需的数据连接不可用，则选择“新建连接”以创建一个新的数据连接。  
+    4. 从“选择你的数据连接”页面上的可用连接列表中选择一个数据连接。 如果所需的数据连接不可用，则选择“新建连接”以创建一个新的数据连接。  
   
-    5.  单击“是，保存连接”，将连接字符串保存到应用程序配置文件中。  
+    5. 单击“是，保存连接”，将连接字符串保存到应用程序配置文件中。  
   
-    6.  选择要放置到应用程序中的数据库对象。 在这种情况下，选择具有外键关系的一个父表和一个子表（例如 Customers 和 Orders）。  
+    6. 选择要放置到应用程序中的数据库对象。 在这种情况下，选择具有外键关系的一个父表和一个子表（例如 Customers 和 Orders）。  
   
-    7.  如果愿意，可以替换默认的数据集名称。  
+    7. 如果愿意，可以替换默认的数据集名称。  
   
-    8.  单击 **“完成”**。  
+    8. 单击 **“完成”**。  
   
 4. 在“显示成员”下拉框中，选择将在组合框中显示的列名（例如，ContactName）。  
   

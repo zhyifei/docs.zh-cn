@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88d563918709a6cf31d9c14a52bbd461ae004420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698299"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext 方法
 获取目标进程中的给定线程的当前执行上下文。 由公共语言运行时数据访问服务调用此方法。  

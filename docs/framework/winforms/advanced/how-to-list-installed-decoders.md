@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723038"
 ---
 # <a name="how-to-list-installed-decoders"></a>如何：列出已安装的解码器
 你可能要列出可用的计算机上的图像解码器，以确定你的应用程序是否可以读取特定图像文件格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>类提供了<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>静态方法，以便你可以确定哪个图像解码器可供使用。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 返回一个数组<xref:System.Drawing.Imaging.ImageCodecInfo>对象。  
@@ -27,9 +27,9 @@ ms.locfileid: "59079405"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   Windows 窗体应用程序。  
+- Windows 窗体应用程序。  
   
--   一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+- 一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
 

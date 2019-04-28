@@ -3,11 +3,11 @@ title: 工作流托管选项
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
 ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670206"
 ---
 # <a name="workflow-hosting-options"></a>工作流托管选项
 大多数 Windows Workflow Foundation (WF) 示例使用控制台应用程序中承载的工作流，但这不是实际的工作流的实际方案。 实际业务应用程序中的工作流将会承载在恒定进程中 — 或是由开发人员编写的 Windows 服务，或是诸如 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之类的服务器应用程序。 这些方法之间的区别如下。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607006"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>写入数据集内容作为 XML 数据
 在 ADO.NET 中可以编写 <xref:System.Data.DataSet> 的 XML 表示形式（包含或不包含其架构）。 如果架构信息以内联形式包含在 XML 表示形式中，则使用 XML 架构定义语言 (XSD) 来编写。 架构包含 <xref:System.Data.DataSet> 的表定义以及关系和约束定义。  

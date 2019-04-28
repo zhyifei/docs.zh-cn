@@ -1,14 +1,14 @@
 ---
-title: 工作流的 <system.serviceModel>
+title: < system.serviceModel > 的工作流
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 ms.openlocfilehash: 005a274df9e9ab99227a3748b7a25c9d465d020f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768857"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > 的工作流
 此配置节包含所有工作流配置元素。  
@@ -95,7 +95,7 @@ ms.locfileid: "55271119"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- 无  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   

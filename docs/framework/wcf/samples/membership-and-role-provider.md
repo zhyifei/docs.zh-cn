@@ -3,11 +3,11 @@ title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756112"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
 此“成员资格和角色提供程序”示例演示服务如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格和角色提供程序来对客户端进行身份验证和授权。  
@@ -19,15 +19,15 @@ ms.locfileid: "59768158"
   
  此示例演示：  
   
--   客户端如何使用用户名和密码组合进行身份验证。  
+- 客户端如何使用用户名和密码组合进行身份验证。  
   
--   服务器如何根据 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序来验证客户端凭据。  
+- 服务器如何根据 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序来验证客户端凭据。  
   
--   如何使用服务器的 X.509 证书对该服务器进行身份验证。  
+- 如何使用服务器的 X.509 证书对该服务器进行身份验证。  
   
--   服务器如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序将经过身份验证的客户端映射到角色。  
+- 服务器如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序将经过身份验证的客户端映射到角色。  
   
--   服务器如何使用 `PrincipalPermissionAttribute` 控制对服务公开的某些方法的访问。  
+- 服务器如何使用 `PrincipalPermissionAttribute` 控制对服务公开的某些方法的访问。  
   
  成员资格和角色提供程序配置为使用 SQL Server 支持的存储。 连接字符串和各个选项在服务配置文件中指定。 成员资格提供程序命名为 `SqlMembershipProvider`，而角色提供程序命名为 `SqlRoleProvider`。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "59768158"
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
--   运行完示例后运行示例文件夹中的 Cleanup.bat。  
+- 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
 >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
@@ -174,7 +174,7 @@ ms.locfileid: "59768158"
   
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。  
   
--   创建服务器证书。  
+- 创建服务器证书。  
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 %SERVER_NAME% 变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 在该批处理文件中，此名称默认为 localhost。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "59768158"
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   将服务器证书安装到客户端的受信任证书存储区中。  
+- 将服务器证书安装到客户端的受信任证书存储区中。  
   
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
   

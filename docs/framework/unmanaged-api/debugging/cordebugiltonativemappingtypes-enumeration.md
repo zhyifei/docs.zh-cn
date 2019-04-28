@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f62707fb1e52a96cf3f131e9c11fee82ab03f4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651761"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 枚举
 指示本机指令，COR_DEBUG_IL_TO_NATIVE_MAP 结构的实例所表示的特定范围是否与特殊的代码区域相符。  

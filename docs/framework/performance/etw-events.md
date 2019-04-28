@@ -8,11 +8,11 @@ ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723597"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 Windows 事件跟踪 (ETW) 是 Windows 操作系统提供的高性能、低开销的可缩放跟踪系统。 它可补充 .NET Framework 所提供的分析和调试支持，可用于排除各种问题。  

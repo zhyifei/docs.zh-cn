@@ -15,26 +15,26 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759880"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体
 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间支持多文档界面 (MDI) 应用程序，而 <xref:System.Windows.Forms.MenuStrip> 控件支持菜单合并。 MDI 窗体还可支持 <xref:System.Windows.Forms.ToolStrip> 控件。  
   
  本演练演示如何使用<xref:System.Windows.Forms.ToolStripPanel>具有的 MDI 窗体的控件。 此窗体还支持菜单与子菜单合并。 在本演练阐释了以下任务：  
   
--   创建一个 Windows 窗体项目。  
+- 创建一个 Windows 窗体项目。  
   
--   正在创建你的窗体的主菜单。 在菜单的实际名称将有所不同。  
+- 正在创建你的窗体的主菜单。 在菜单的实际名称将有所不同。  
   
--   添加<xref:System.Windows.Forms.ToolStripPanel>控制对**工具箱**。  
+- 添加<xref:System.Windows.Forms.ToolStripPanel>控制对**工具箱**。  
   
--   创建子窗体。  
+- 创建子窗体。  
   
--   排列<xref:System.Windows.Forms.ToolStripPanel>按 z 顺序的控件。  
+- 排列<xref:System.Windows.Forms.ToolStripPanel>按 z 顺序的控件。  
   
  完成，你将拥有支持菜单合并功能和可移动的 MDI 窗体<xref:System.Windows.Forms.ToolStrip>控件。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59319061"
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
--   若要能够创建和安装 Visual Studio 的计算机上运行 Windows 窗体应用程序项目的足够权限。  
+- 若要能够创建和安装 Visual Studio 的计算机上运行 Windows 窗体应用程序项目的足够权限。  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
@@ -198,11 +198,11 @@ ms.locfileid: "59319061"
 ## <a name="next-steps"></a>后续步骤  
  在本演练中，您创建了一个 MDI 父窗体<xref:System.Windows.Forms.ToolStrip>控件和菜单合并。 可以使用<xref:System.Windows.Forms.ToolStrip>实现多种其他用途的控件的系列：  
   
--   创建与控件的快捷菜单<xref:System.Windows.Forms.ContextMenuStrip>。 有关详细信息，请参阅[ContextMenu 组件概述](contextmenu-component-overview-windows-forms.md)。  
+- 创建与控件的快捷菜单<xref:System.Windows.Forms.ContextMenuStrip>。 有关详细信息，请参阅[ContextMenu 组件概述](contextmenu-component-overview-windows-forms.md)。  
   
--   创建一个自动填充的标准菜单的窗体。 有关详细信息，请参见[演练：向窗体提供标准菜单项](walkthrough-providing-standard-menu-items-to-a-form.md)。  
+- 创建一个自动填充的标准菜单的窗体。 有关详细信息，请参见[演练：向窗体提供标准菜单项](walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   提供你<xref:System.Windows.Forms.ToolStrip>控件专业的外观。 有关详细信息，请参阅[如何：设置 ToolStrip 呈现程序](how-to-set-the-toolstrip-renderer-for-an-application.md)。  
+- 提供你<xref:System.Windows.Forms.ToolStrip>控件专业的外观。 有关详细信息，请参阅[如何：设置 ToolStrip 呈现程序](how-to-set-the-toolstrip-renderer-for-an-application.md)。  
   
 ## <a name="see-also"></a>请参阅
 

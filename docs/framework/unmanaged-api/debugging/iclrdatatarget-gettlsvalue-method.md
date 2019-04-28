@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21fa9a17067f754fe9b13c4d32193856a57750ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698130"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue 方法
 获取一个值从线程本地存储 (TLS) 的目标进程中指定的线程。 由公共语言运行时 (CLR) 数据访问服务调用此方法。  

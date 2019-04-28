@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669311"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows 窗体中额外的安全注意事项
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全设置可能导致应用程序在部分信任环境中运行与在本地计算机上运行有所不同。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制对关键本地资源的访问，如文件系统、网络和非托管 API 等。 安全设置会影响 Microsoft Windows API 或其他无法验证由安全系统的 Api 调用的能力。 安全性还会影响应用程序的其他方面，包括文件和数据访问以及打印。 有关在部分信任环境中访问文件和数据的详细信息，请参阅 [Windows 窗体中更加安全的文件和数据访问](more-secure-file-and-data-access-in-windows-forms.md)。 有关在部分信任环境中进行打印的详细信息，请参阅 [Windows 窗体中更加安全的打印](more-secure-printing-in-windows-forms.md)。  

@@ -3,22 +3,22 @@ title: Entity Type — 实体类型
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667168"
 ---
 # <a name="entity-type"></a>Entity Type — 实体类型
 *实体类型*是用于描述实体数据模型 (EDM) 使用的数据结构的基本构建块。 在概念模型中，实体类型表示顶级概念（例如客户或订单）的结构。 实体类型是实体类型实例的模板。 每个模板都包含以下信息：  
   
--   唯一名称。 （必选。）  
+- 唯一名称。 （必选。）  
   
--   [实体键](../../../../docs/framework/data/adonet/entity-key.md)由一个或多个属性定义。 （必选。）  
+- [实体键](../../../../docs/framework/data/adonet/entity-key.md)由一个或多个属性定义。 （必选。）  
   
--   数据中的窗体[属性](../../../../docs/framework/data/adonet/property.md)。 （可选）。  
+- 数据中的窗体[属性](../../../../docs/framework/data/adonet/property.md)。 （可选）。  
   
--   [导航属性](../../../../docs/framework/data/adonet/navigation-property.md)，用于从一个导航[最终](../../../../docs/framework/data/adonet/association-end.md)的[关联](../../../../docs/framework/data/adonet/association-type.md)到另一端。 （可选）  
+- [导航属性](../../../../docs/framework/data/adonet/navigation-property.md)，用于从一个导航[最终](../../../../docs/framework/data/adonet/association-end.md)的[关联](../../../../docs/framework/data/adonet/association-type.md)到另一端。 （可选）  
   
  在应用程序中，实体类型的实例表示一个特定对象（例如特定客户或订单）。 实体类型的每个实例必须具有一个唯一[实体键](../../../../docs/framework/data/adonet/entity-key.md)内[实体集](../../../../docs/framework/data/adonet/entity-set.md)。  
   

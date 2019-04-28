@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 309c31dacd801f1c46a2d37932124638bc157cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749041"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 方法
 提供有关平台，包括处理器体系结构和操作系统，目标进程正在其运行的信息。  
@@ -44,9 +44,9 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  此方法必须成功完成。 如果失败，目标平台是不可用。 该方法可能会出于以下原因失败：  
   
--   目标进行模拟的平台是不可用。  
+- 目标进行模拟的平台是不可用。  
   
--   目标平台上的实际硬件是不可用。  
+- 目标平台上的实际硬件是不可用。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

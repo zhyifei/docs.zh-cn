@@ -3,11 +3,11 @@ title: 独立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
 ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747584"
 ---
 # <a name="stand-alone-json-serialization"></a>独立 JSON 序列化
 JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行的 JavaScript 代码而设计的一种数据格式。 它是 ASP.NET AJAX 服务创建 Windows Communication Foundation (WCF) 中使用的默认数据格式。  
@@ -42,20 +42,20 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 ### <a name="enumerations-and-json"></a>枚举和 JSON  
  在 JSON 中，枚举成员值被作为数字处理，这与数据协定中处理枚举成员值的方式不同。在数据协定中，枚举成员值被视为成员名称。 有关数据协定处理方式的详细信息，请参阅[中的数据协定的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
--   例如，如果存在 `public enum Color {red, green, blue, yellow, pink}`，则序列化 `yellow` 将生成数字 3，而不是字符串“yellow”。  
+- 例如，如果存在 `public enum Color {red, green, blue, yellow, pink}`，则序列化 `yellow` 将生成数字 3，而不是字符串“yellow”。  
   
--   所有 `enum` 成员都是可序列化的。 如果使用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 和 <xref:System.NonSerializedAttribute> 属性，则忽略它们。  
+- 所有 `enum` 成员都是可序列化的。 如果使用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 和 <xref:System.NonSerializedAttribute> 属性，则忽略它们。  
   
--   可以反序列化不存在的 `enum` 值。例如，可以将值 87 反序列化为上面的颜色枚举，尽管并未定义相应的颜色名称。  
+- 可以反序列化不存在的 `enum` 值。例如，可以将值 87 反序列化为上面的颜色枚举，尽管并未定义相应的颜色名称。  
   
--   标志 `enum` 并不特殊，其处理方式与任何其他 `enum` 相同。  
+- 标志 `enum` 并不特殊，其处理方式与任何其他 `enum` 相同。  
   
 ### <a name="datestimes-and-json"></a>日期/时间和 JSON  
  JSON 格式不直接支持日期和时间。 但是，由于这些类型十分常用，因此 ASP.NET AJAX 对它们提供了特殊的支持。 使用 ASP.NET AJAX 代理时，.NET 中的 <xref:System.DateTime> 类型与 JavaScript 中的 `DateTime` 类型完全对应。  
   
--   当不使用 ASP.NET 时，<xref:System.DateTime> 类型在 JSON 中将表示为一个具有特殊格式的字符串。本主题的“高级信息”一节中对这种特殊格式进行了描述。  
+- 当不使用 ASP.NET 时，<xref:System.DateTime> 类型在 JSON 中将表示为一个具有特殊格式的字符串。本主题的“高级信息”一节中对这种特殊格式进行了描述。  
   
--   <xref:System.DateTimeOffset> 在 JSON 中以复杂类型表示：{"DateTime":dateTime,"OffsetMinutes":offsetMinutes}。 `offsetMinutes` 成员是与相关事件所在位置关联的本地时间与格林威治标准时间 (GMT)（现在也称为协调世界时 (UTC)）之间的偏移量。 `dateTime` 成员表示发生相关事件时的时间实例（同样，当使用 ASP.NET AJAX 时，它将变为 JavaScript 中的 `DateTime`；不使用 ASP.NET AJAX 时，它将变为字符串）。 `dateTime` 成员始终用 GMT 格式进行序列化。 因此，如果描述纽约时间凌晨 3:00，`dateTime` 的时间部分将是上午 8:00，而 `offsetMinutes` 是 300（从 GMT 中减去 300 分钟或 5 个小时）。  
+- <xref:System.DateTimeOffset> 在 JSON 中以复杂类型表示：{"DateTime":dateTime,"OffsetMinutes":offsetMinutes}。 `offsetMinutes` 成员是与相关事件所在位置关联的本地时间与格林威治标准时间 (GMT)（现在也称为协调世界时 (UTC)）之间的偏移量。 `dateTime` 成员表示发生相关事件时的时间实例（同样，当使用 ASP.NET AJAX 时，它将变为 JavaScript 中的 `DateTime`；不使用 ASP.NET AJAX 时，它将变为字符串）。 `dateTime` 成员始终用 GMT 格式进行序列化。 因此，如果描述纽约时间凌晨 3:00，`dateTime` 的时间部分将是上午 8:00，而 `offsetMinutes` 是 300（从 GMT 中减去 300 分钟或 5 个小时）。  
   
     > [!NOTE]
     >  在将 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 对象序列化为 JSON 时，它们保留的信息精度仅为毫秒。 在序列化期间，次于毫秒的值（微秒/毫微秒）将丢失。  
@@ -63,28 +63,28 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 ### <a name="xml-types-and-json"></a>XML 类型和 JSON  
  XML 类型成为 JSON 字符串。  
   
--   例如，如果 XElement 类型的数据成员"q"包含\<abc / >，JSON 是 {"q":"\<abc / >"}。  
+- 例如，如果 XElement 类型的数据成员"q"包含\<abc / >，JSON 是 {"q":"\<abc / >"}。  
   
--   有一些特殊的规则来指定如何包装 XML。有关更多信息，请参见本主题后面的“高级信息”一节。  
+- 有一些特殊的规则来指定如何包装 XML。有关更多信息，请参见本主题后面的“高级信息”一节。  
   
--   使用 ASP.NET AJAX 时，如果不希望使用 JavaScript 中的字符串，而是想改用 XML DOM，请在 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> 上将 <xref:System.ServiceModel.Web.WebGetAttribute> 属性设置为 XML，或者在 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 上将 <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性设置为 XML。  
+- 使用 ASP.NET AJAX 时，如果不希望使用 JavaScript 中的字符串，而是想改用 XML DOM，请在 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> 上将 <xref:System.ServiceModel.Web.WebGetAttribute> 属性设置为 XML，或者在 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 上将 <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性设置为 XML。  
   
 ### <a name="collections-dictionaries-and-arrays"></a>集合、字典和数组  
  在 JSON 中，所有的集合、字典和数组都表示为数组。  
   
--   在 JSON 表示中，忽略使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 的任何自定义。  
+- 在 JSON 表示中，忽略使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 的任何自定义。  
   
--   词典不能直接用于 JSON。 字典\<字符串、 对象 > 所期望的与其他 JSON 技术可能不在 WCF 中相同的方式支持。 例如，在字典中，如果“abc”映射到“xyz”，且“def”映射到 42，则 JSON 表示形式不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
+- 词典不能直接用于 JSON。 字典\<字符串、 对象 > 所期望的与其他 JSON 技术可能不在 WCF 中相同的方式支持。 例如，在字典中，如果“abc”映射到“xyz”，且“def”映射到 42，则 JSON 表示形式不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
   
--   如果想要直接使用 JSON（动态访问键和值，而不预定义严格的协定），您有下面几个选择：  
+- 如果想要直接使用 JSON（动态访问键和值，而不预定义严格的协定），您有下面几个选择：  
   
-    -   请考虑使用[弱类型 JSON 序列化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)示例。  
+    - 请考虑使用[弱类型 JSON 序列化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)示例。  
   
-    -   请考虑使用 <xref:System.Runtime.Serialization.ISerializable> 接口和反序列化构造函数。这两个机制允许分别访问序列化和反序列化时的 JSON 键/值对，但不能用于部分受信任的方案。  
+    - 请考虑使用 <xref:System.Runtime.Serialization.ISerializable> 接口和反序列化构造函数。这两个机制允许分别访问序列化和反序列化时的 JSON 键/值对，但不能用于部分受信任的方案。  
   
-    -   请考虑使用[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)而不是使用序列化程序。  
+    - 请考虑使用[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)而不是使用序列化程序。  
   
-    -   *多态性*序列化的上下文中是指序列化派生的类型应是其基类型的能力。 在以多态形式使用集合时（例如，在将集合分配给 <xref:System.Object> 时），有一些 JSON 特定的特殊规则。 有关此问题的更多详细讨论，请参见本主题后面的“高级信息”一节。  
+    - *多态性*序列化的上下文中是指序列化派生的类型应是其基类型的能力。 在以多态形式使用集合时（例如，在将集合分配给 <xref:System.Object> 时），有一些 JSON 特定的特殊规则。 有关此问题的更多详细讨论，请参见本主题后面的“高级信息”一节。  
   
 ## <a name="additional-details"></a>其他详细信息  
   
@@ -124,9 +124,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="supported-and-unsupported-iserializable-types"></a>受支持和不受支持的 ISerializable 类型  
  通常情况下，序列化/反序列化 JSON 时完全支持实现 <xref:System.Runtime.Serialization.ISerializable> 接口的类型。 但是，其中有些类型（包括一些 .NET Framework 类型）采用特殊的实现方式，以致以下 JSON 特定的序列化方面会导致它们不能正确地反序列化：  
   
--   使用 <xref:System.Runtime.Serialization.ISerializable> 时，各个数据成员的类型始终无法提前预知。 这将导致与将类型反序列化为对象时类似的多态情况。 正如前文所述，这在 JSON 中可能会导致类型信息丢失。 例如，如果某类型在其 `enum` 实现中序列化一个 <xref:System.Runtime.Serialization.ISerializable>，则当其尝试直接反序列化回 `enum`（未执行正确的强制转换）时将失败。这是因为，`enum` 使用 JSON 中的数字进行序列化，而 JSON 数字却反序列化为内置的 .NET 数值类型（Int32、Decimal 或 Double）。 因此，数字用于 `enum` 值的事实将丢失。  
+- 使用 <xref:System.Runtime.Serialization.ISerializable> 时，各个数据成员的类型始终无法提前预知。 这将导致与将类型反序列化为对象时类似的多态情况。 正如前文所述，这在 JSON 中可能会导致类型信息丢失。 例如，如果某类型在其 `enum` 实现中序列化一个 <xref:System.Runtime.Serialization.ISerializable>，则当其尝试直接反序列化回 `enum`（未执行正确的强制转换）时将失败。这是因为，`enum` 使用 JSON 中的数字进行序列化，而 JSON 数字却反序列化为内置的 .NET 数值类型（Int32、Decimal 或 Double）。 因此，数字用于 `enum` 值的事实将丢失。  
   
--   在反序列化构造函数中依赖特定的反序列化顺序的 <xref:System.Runtime.Serialization.ISerializable> 类型可能也无法反序列化某些 JSON 数据，因为大多数 JSON 序列化程序并不能保证遵循任何特定的顺序。  
+- 在反序列化构造函数中依赖特定的反序列化顺序的 <xref:System.Runtime.Serialization.ISerializable> 类型可能也无法反序列化某些 JSON 数据，因为大多数 JSON 序列化程序并不能保证遵循任何特定的顺序。  
   
 #### <a name="factory-types"></a>工厂类型  
  虽然 JSON 中通常支持 <xref:System.Runtime.Serialization.IObjectReference> 接口，但它不支持需要“工厂类型”功能（从 <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29> 中返回与实现接口的类型不同的类型实例）的任何类型。  
@@ -204,11 +204,11 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="when-are-type-hints-emitted"></a>发出类型提示的时机  
  类型提示可能会显著增大消息的大小（缓解此问题的一种方式是尽量使用较短的数据协定命名空间）。 因此，在确定是否发出类型提示时，应循序下列规则：  
   
--   使用 ASP.NET AJAX 时，始终都应尽可能多地发出类型提示，即使不存在基分配/派生分配（例如，将 Circle 分配给 Circle）也不例外。 （这是完全实现从弱类型的 JSON 环境调入强类型的 .NET 环境，又不造成大量信息丢失所必需的。）  
+- 使用 ASP.NET AJAX 时，始终都应尽可能多地发出类型提示，即使不存在基分配/派生分配（例如，将 Circle 分配给 Circle）也不例外。 （这是完全实现从弱类型的 JSON 环境调入强类型的 .NET 环境，又不造成大量信息丢失所必需的。）  
   
--   如果在未与 ASP.NET 集成的情况下使用 AJAX 服务，则只有当存在基分配/派生分配时才应发出类型提示，即在将 Circle 分配给 Shape 或 <xref:System.Object> 而不是分配给 Circle 时发出。 这不仅满足了正确实现 JavaScript 客户端所需的信息，而且在最大程度上减少了这些信息，从而提高了性能。但是，如果客户端的设计有误，则无法防止类型信息丢失。 如果要避免处理此客户端问题，请同时避免服务器上的基分配/派生分配。  
+- 如果在未与 ASP.NET 集成的情况下使用 AJAX 服务，则只有当存在基分配/派生分配时才应发出类型提示，即在将 Circle 分配给 Shape 或 <xref:System.Object> 而不是分配给 Circle 时发出。 这不仅满足了正确实现 JavaScript 客户端所需的信息，而且在最大程度上减少了这些信息，从而提高了性能。但是，如果客户端的设计有误，则无法防止类型信息丢失。 如果要避免处理此客户端问题，请同时避免服务器上的基分配/派生分配。  
   
--   使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类型时，`alwaysEmitTypeInformation` 构造函数参数允许您在前面两种模式之间进行选择，其默认值为“`false`”（仅在需要时才发出类型提示）。  
+- 使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类型时，`alwaysEmitTypeInformation` 构造函数参数允许您在前面两种模式之间进行选择，其默认值为“`false`”（仅在需要时才发出类型提示）。  
   
 #### <a name="duplicate-data-member-names"></a>重复的数据成员名称  
  派生类型信息和基类型信息共同存在于同一个 JSON 对象中，且可以按任意顺序出现。 例如，`Shape`可能出现，如下所示。  
@@ -226,7 +226,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  如果基`Shape`还包含一个名为的数据成员类型"`radius`"，这会导致冲突发生在两个序列化 （因为 JSON 对象不能具有重复的键名称） 和反序列化 （因为它是不清楚是否"radius"指`Shape.radius`或`Circle.radius`)。 因此，虽然一般不建议在数据协定类中使用“属性隐藏”概念（基类和派生类中的数据成员同名），但 JSON 中实际上禁止这种情况。  
   
 #### <a name="polymorphism-and-ixmlserializable-types"></a>多态性和 IXmlSerializable 类型  
- 根据常规数据协定规则，只要满足已知类型要求，就可以用多态形式将 <xref:System.Xml.Serialization.IXmlSerializable> 类型正常分配给彼此。 但是，如果用序列化 <xref:System.Xml.Serialization.IXmlSerializable> 类型代替序列化 <xref:System.Object>，则会像 JSON 字符串那样导致类型信息丢失。  
+ 根据常规数据协定规则，只要满足已知类型需求，就可以用多态形式将 <xref:System.Xml.Serialization.IXmlSerializable> 类型正常分配给彼此。 但是，如果用序列化 <xref:System.Xml.Serialization.IXmlSerializable> 类型代替序列化 <xref:System.Object>，则会像 JSON 字符串那样导致类型信息丢失。  
   
 #### <a name="polymorphism-and-certain-interface-types"></a>多态性和某些接口类型  
  在需要非 <xref:System.Xml.Serialization.IXmlSerializable> 的非集合类型（<xref:System.Xml.Serialization.IXmlSerializable> 除外）时，禁止序列化集合类型或实现 <xref:System.Object> 的类型。 例如，自定义接口称为`IMyInterface`并键入`MyType`这两者均实现<xref:System.Collections.Generic.IEnumerable%601>类型的`int`和`IMyInterface`。 禁止返回`MyType`从其返回类型是的操作`IMyInterface`。 这是因为`MyType`必须序列化为 JSON 数组和需要类型提示，并如之前所述，则不能包含类型提示仅具有复杂类型数组。  
@@ -245,9 +245,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  当反序列化回 <xref:System.Object> 时：  
   
--   `Shape` 必须是已知类型列表中。 无<xref:System.Collections.Generic.List%601>类型的`Shape`到已知类型中不起作用。 请注意，无需添加`Shape`到已知类型在序列化这种情况下-这自动完成。  
+- `Shape` 必须是已知类型列表中。 无<xref:System.Collections.Generic.List%601>类型的`Shape`到已知类型中不起作用。 请注意，无需添加`Shape`到已知类型在序列化这种情况下-这自动完成。  
   
--   集合反序列化为<xref:System.Array>类型的<xref:System.Object>，其中包含`Shape`实例。  
+- 集合反序列化为<xref:System.Array>类型的<xref:System.Object>，其中包含`Shape`实例。  
   
 #### <a name="derived-collections-assigned-to-base-collections"></a>分配给基集合的派生集合  
  将派生集合分配给基集合时，通常会将该集合作为基类型的集合进行序列化。 但是，如果派生集合的项类型不能分配给基集合的项类型，则会引发异常。  

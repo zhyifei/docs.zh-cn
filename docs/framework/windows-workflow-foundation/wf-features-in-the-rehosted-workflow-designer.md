@@ -3,11 +3,11 @@ title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669752"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，包括多个工作流设计器体验的增强功能。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。

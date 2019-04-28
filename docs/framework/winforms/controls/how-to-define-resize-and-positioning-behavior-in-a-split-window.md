@@ -10,11 +10,11 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
 ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757620"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>如何：定义拆分窗口中的大小调整和定位行为
 面板的<xref:System.Windows.Forms.SplitContainer>控件有助于使自身也要调整其大小和由用户操作。 但是，将有的时间时要以编程方式控制拆分器 — 其中其定位和可以移动的程度。  

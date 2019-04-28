@@ -16,11 +16,11 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754527"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>如何：向应用程序代码添加跟踪语句
 最常用于跟踪的方法是用于输出写入侦听器的方法：**编写**， **WriteIf**， **WriteLine**， **WriteLineIf**，**断言**，并**失败**。 这些方法可以分为两类：**编写**， **WriteLine**，和**失败**所有无条件地发出输出，而**WriteIf**， **WriteLineIf**，以及**断言**测试 Boolean 条件并写入或不写入基于条件的值。 WriteIf 和 WriteLineIf 在条件为 `true` 时发出输出，而 Assert 在条件为 `false` 时发出输出。  

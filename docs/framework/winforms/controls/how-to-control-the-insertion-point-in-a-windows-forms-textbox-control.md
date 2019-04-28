@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746623"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>如何：控制 Windows 窗体 TextBox 控件中的插入点
 在 Windows 窗体时<xref:System.Windows.Forms.TextBox>控件首先获得焦点时，文本框中的默认值插入操作是左侧的任何现有文本。 用户可以移动插入点使用键盘或鼠标。 如果在文本框中丢失，并重新获得焦点，插入点将用户任何位置上一次放置它。  
@@ -59,7 +59,7 @@ ms.locfileid: "59341317"
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>若要使文本框插入点在新的窗体上的默认情况下可见  
   
--   设置<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.Control.TabIndex%2A>属性设置为`0`。  
+- 设置<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.Control.TabIndex%2A>属性设置为`0`。  
   
 ## <a name="see-also"></a>请参阅
 

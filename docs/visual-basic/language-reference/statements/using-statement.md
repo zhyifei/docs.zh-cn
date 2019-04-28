@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698650"
 ---
 # <a name="using-statement-visual-basic"></a>Using 语句 (Visual Basic)
 声明的开头`Using`阻止并根据需要获取块控制的系统资源。  
@@ -61,11 +61,11 @@ End Using
   
  一个`Using`块都有三个部分： 获取、 使用情况和可供使用。  
   
--   *获取*意味着创建变量并将其初始化，以便向系统资源，请参阅。 `Using`语句可以获取一个或多个资源，也可以在进入块之前获取恰好一个资源，其提供给`Using`语句。 如果你提供`resourceexpression`，必须在将控制权传递给之前获取资源`Using`语句。  
+- *获取*意味着创建变量并将其初始化，以便向系统资源，请参阅。 `Using`语句可以获取一个或多个资源，也可以在进入块之前获取恰好一个资源，其提供给`Using`语句。 如果你提供`resourceexpression`，必须在将控制权传递给之前获取资源`Using`语句。  
   
--   *使用情况*意味着访问资源并使用它们执行操作。 之间的语句`Using`和`End Using`表示资源的使用。  
+- *使用情况*意味着访问资源并使用它们执行操作。 之间的语句`Using`和`End Using`表示资源的使用。  
   
--   *处置*方法调用<xref:System.IDisposable.Dispose%2A>方法中的对象上`resourcename`。 这允许要明确终止其资源的对象。 `End Using`语句释放的资源下`Using`块的控件。  
+- *处置*方法调用<xref:System.IDisposable.Dispose%2A>方法中的对象上`resourcename`。 这允许要明确终止其资源的对象。 `End Using`语句释放的资源下`Using`块的控件。  
   
 ## <a name="behavior"></a>行为  
  一个`Using`块的行为类似于`Try`...`Finally`中的构造`Try`块使用的资源和`Finally`块释放它们。 正因为如此，`Using`块可保证可供使用的资源，不管您如何退出块。 即使发生未经处理的异常，也是如此除<xref:System.StackOverflowException>。  

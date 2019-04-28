@@ -3,11 +3,11 @@ title: 默认 XAML 架构上下文和 WPF XAML 架构上下文
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
 ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689393"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>默认 XAML 架构上下文和 WPF XAML 架构上下文
 XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写的行为，包括如何类型映射解析时，如何将加载程序集、 如何某些读取器和编写器的对象交互的方式的概念实体设置被解释。 本主题介绍.NET Framework XAML 服务和基于 CLR 类型系统的关联的默认 XAML 架构上下文的功能。 本主题还介绍用于 WPF 的 XAML 架构上下文。  
@@ -50,11 +50,11 @@ XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写
   
 2. 否则，以下方法之一将基于 CLR <xref:System.Reflection.Assembly> API 用于加载程序集：  
   
-    -   如果名称限定的映射中，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
+    - 如果名称限定的映射中，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
   
-    -   如果在上一步失败，请使用短名称 （和公钥标记如果存在） 来调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+    - 如果在上一步失败，请使用短名称 （和公钥标记如果存在） 来调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
-    -   如果名称非限定的映射中，调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
+    - 如果名称非限定的映射中，调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
  `XamlBuildTask` 用于 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation。  
@@ -82,11 +82,11 @@ XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写
   
 2. 否则，以下方法之一用于加载程序集：  
   
-    -   调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
+    - 调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
   
-    -   如果短名称和公钥标记的组合匹配 BAML 从中加载的程序集，使用该程序集。  
+    - 如果短名称和公钥标记的组合匹配 BAML 从中加载的程序集，使用该程序集。  
   
-    -   使用短名称和公钥标记调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+    - 使用短名称和公钥标记调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>请参阅
 

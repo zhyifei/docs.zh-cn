@@ -9,11 +9,11 @@ ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698520"
 ---
 # <a name="debugging-global-static-functions"></a>调试全局静态函数
 本节介绍了调试 API 使用的非托管全局静态函数。  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0109b25b1cdc42204fc4873577e495641c4ec4fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761567"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 接口
 表示一种方法内的词法范围。 此接口扩展[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)接口使用的范围内获取有关定义的常量的信息的方法。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
 ms.openlocfilehash: ce297cb6d183bc63c8b276e30100aa4e864cd90d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722947"
 ---
 # <a name="how-to-list-installed-encoders"></a>如何：列出已安装的编码器
 你可能要列出可用的计算机上的图像编码器，以确定是否可以将你的应用程序保存到特定的图像文件格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>类提供了<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>静态方法，以便你可以确定哪个图像编码器可供使用。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> 返回一个数组<xref:System.Drawing.Imaging.ImageCodecInfo>对象。  
@@ -27,9 +27,9 @@ ms.locfileid: "59078806"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   Windows 窗体应用程序。  
+- Windows 窗体应用程序。  
   
--   一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+- 一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
 

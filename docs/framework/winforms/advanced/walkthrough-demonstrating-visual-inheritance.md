@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747505"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 通过 Visual 继承，可以查看基本表单上的控件和添加新控件。 在本演练中，你将创建基窗体，并将其编译到类库。 将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。 在本演练中，你将学会如何执行以下任务：  
   
--   创建包含基窗体的类库项目。  
+- 创建包含基窗体的类库项目。  
   
--   添加具有可修改基窗体的派生类的属性的按钮。  
+- 添加具有可修改基窗体的派生类的属性的按钮。  
   
--   添加基窗体的继承者无法修改的按钮。  
+- 添加基窗体的继承者无法修改的按钮。  
   
--   创建包含从 `BaseForm` 继承的窗体的项目。  
+- 创建包含从 `BaseForm` 继承的窗体的项目。  
   
  最后，本演练将显示继承的窗体上私有控件和受保护控件之间的差异。  
   
@@ -76,11 +76,11 @@ ms.locfileid: "59307589"
   
 3. 在“属性”窗口中，设置按钮的下列属性：  
   
-    -   设置**文本**属性设置为**Say Hello**。  
+    - 设置**文本**属性设置为**Say Hello**。  
   
-    -   设置 **（名称）** 属性设置为**btnProtected**。  
+    - 设置 **（名称）** 属性设置为**btnProtected**。  
   
-    -   设置**修饰符**属性设置为**受保护**。 这使得继承的窗体**Form1**若要修改的属性**btnProtected**。  
+    - 设置**修饰符**属性设置为**受保护**。 这使得继承的窗体**Form1**若要修改的属性**btnProtected**。  
   
 4. 双击**Say Hello**按钮添加事件处理程序**单击**事件。  
   
@@ -100,11 +100,11 @@ ms.locfileid: "59307589"
   
 2. 按如下方式添加第二个按钮并设置其属性：  
   
-    -   设置**文本**属性设置为**Say Goodbye**。  
+    - 设置**文本**属性设置为**Say Goodbye**。  
   
-    -   设置 **（名称）** 属性设置为**btnPrivate**。  
+    - 设置 **（名称）** 属性设置为**btnPrivate**。  
   
-    -   设置**修饰符**属性设置为**专用**。 这使得继承的窗体**Form1**若要修改的属性**btnPrivate**。  
+    - 设置**修饰符**属性设置为**专用**。 这使得继承的窗体**Form1**若要修改的属性**btnPrivate**。  
   
 3. 双击**Say Goodbye**按钮添加事件处理程序**单击**事件。 将以下代码行放入事件过程：  
   
@@ -148,9 +148,9 @@ ms.locfileid: "59307589"
   
 8. 如果使用的 Visual C#:  
   
-    1.  在中**解决方案资源管理器**，右键单击**Form1**中**InheritanceTest**项目，然后选择**删除**。 在显示的消息框，单击**确定**以确认删除。  
+    1. 在中**解决方案资源管理器**，右键单击**Form1**中**InheritanceTest**项目，然后选择**删除**。 在显示的消息框，单击**确定**以确认删除。  
   
-    2.  打开 Program.cs 文件并将 `Application.Run(new Form1());` 行更改为 `Application.Run(new Form2());`。  
+    2. 打开 Program.cs 文件并将 `Application.Run(new Form1());` 行更改为 `Application.Run(new Form2());`。  
   
 9. 在中**解决方案资源管理器**，右键单击**InheritanceTest**项目，然后选择**设为启动项目**。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 7315c6d8-f452-4fb2-a0c1-76ab0593c146
 ms.openlocfilehash: 233b17de17b7f50547b2f4fbf6a543d7258183cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765903"
 ---
 # <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>如何：创建数据服务使用反射提供程序 （WCF 数据服务）
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以定义基于任意类的数据模型，前提是这些类作为实现 <xref:System.Linq.IQueryable%601> 接口的对象公开。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  

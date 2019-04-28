@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74cb2c7d1f79d23e1331cc7192ba2d6acfd9835c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761645"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 函数
 初始化传输管理器以连接到进程和运行时枚举的远程目标。  
@@ -45,7 +45,7 @@ HRESULT InitDbgTransportManager ();
  其他故障。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces.h  
   

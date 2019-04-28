@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7199fbc0c8760354269a50b647952729860c805b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697545"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly 方法
 将指定的程序集安装在全局程序集缓存。  
@@ -41,9 +41,9 @@ HRESULT InstallAssembly (
  `dwFlags`  
  [in]包括的标志。 支持以下值：  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
  [in]要安装的程序集清单的路径。  

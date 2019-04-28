@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
 ms.openlocfilehash: 70378b57c6d3af5a98e0ba9c6e3aebc319561b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665736"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止过程自变量的值发生更改 (Visual Basic)
 如果一个过程声明为参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 使过程代码中调用代码参数的基础的编程元素直接引用。 这将允许更改调用代码中的实参的值的过程。 在某些情况下调用的代码可能想要防止此类更改。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 ms.openlocfilehash: 8770a8761af4b55394d9280b21d2a6a5b71b6ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594213"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>如何：通过使用 LINQ (Visual Basic 中) 来修改数据库中的数据
 语言集成查询 (LINQ) 查询轻松访问数据库的信息和修改数据库中的值。  

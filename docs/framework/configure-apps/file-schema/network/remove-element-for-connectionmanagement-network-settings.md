@@ -11,11 +11,11 @@ helpviewer_keywords:
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705189"
 ---
 # <a name="remove-element-for-connectionmanagement-network-settings"></a>\<删除 > connectionManagement （网络设置） 的元素
 从连接管理列表中删除 IP 地址或 DNS 名称。  

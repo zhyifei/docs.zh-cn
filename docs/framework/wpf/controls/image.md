@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
 ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696311"
 ---
 # <a name="image"></a>图像
 <xref:System.Windows.Controls.Image>元素用于显示中的位图图像[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  

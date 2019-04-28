@@ -3,11 +3,11 @@ title: <security> 的 <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 ms.openlocfilehash: acb4d04663d841a9b494153caa180855959c145e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670503"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<安全 > 的\<netMsmqBinding >
 定义 MSMQ 绑定的安全设置。 它指定是否启用传输或 SOAP 安全；如果启用，还指定所使用的身份验证模式和保护级别。  

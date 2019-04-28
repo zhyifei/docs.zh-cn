@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
 ms.openlocfilehash: 981fecf33b60c76ecab760185db7dab4bbb254d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757243"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>如何：将命令挂钩到支持命令的控件
 以下示例显示如何将 <xref:System.Windows.Input.RoutedCommand> 挂钩到含对该命令的内置支持的 <xref:System.Windows.Controls.Control>。  有关将命令挂钩到多个源的完整示例，请参阅[创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)示例。  

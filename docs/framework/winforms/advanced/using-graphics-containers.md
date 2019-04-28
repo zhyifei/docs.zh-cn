@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
 ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766150"
 ---
 # <a name="using-graphics-containers"></a>使用图形容器
 一个<xref:System.Drawing.Graphics>对象提供的方法，如<xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawImage%2A>，和<xref:System.Drawing.Graphics.DrawString%2A>用于显示矢量图像、 光栅图像和文本。 一个<xref:System.Drawing.Graphics>对象还具有影响的质量和方向绘制的项的多个属性。 例如，平滑的模式属性确定是否抗锯齿应用于直线和曲线和世界变换属性影响的位置和旋转绘制的项。  

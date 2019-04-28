@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
 ms.openlocfilehash: 8403f9d9be88f34e473fd3512f5499193245d227
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607044"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>写入数据集架构信息作为 XSD
 您可以用 XML 架构定义语言 (XSD) 架构的形式来编写 <xref:System.Data.DataSet> 的架构，以便在 XML 文档中传输包含或不包含相关数据的架构。 XML 架构可以写入文件、 流， <xref:System.Xml.XmlWriter>，或字符串，它可用于生成强类型化**数据集**。 有关详细信息强类型化**数据集**对象，请参阅[类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  

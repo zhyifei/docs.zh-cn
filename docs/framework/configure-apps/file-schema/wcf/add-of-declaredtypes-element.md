@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
 ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701107"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<添加 > 的\<declaredTypes > 元素
 添加在反序列化过程中由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的类型。 每个声明类型都包含一些将作为声明类型的字段或属性返回的已知类型。  

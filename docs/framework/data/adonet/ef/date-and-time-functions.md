@@ -3,11 +3,11 @@ title: 日期和时间函数
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
 ms.openlocfilehash: 8d5bbb9577e8016d6d5f2d0bef1932f6321a1e02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606649"
 ---
 # <a name="date-and-time-functions"></a>日期和时间函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了日期和时间函数，这些函数针对 `System.DateTime` 输入值执行运算并返回 `string`、数值或 `System.DateTime` 值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。 下表显示 SqlClient 日期和时间函数。  

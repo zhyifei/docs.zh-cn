@@ -3,11 +3,11 @@ title: 调用方信息
 description: 介绍如何使用调用方信息参数特性从一种方法获取调用方信息。
 ms.date: 04/25/2017
 ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703161"
 ---
 # <a name="caller-information"></a>调用方信息
 
