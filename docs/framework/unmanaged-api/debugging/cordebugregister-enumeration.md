@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599313"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 枚举
 指定与给定处理器体系结构关联的寄存器。  
@@ -194,9 +194,9 @@ typedef enum CorDebugRegister {
 ## <a name="remarks"></a>备注  
  IA-64 处理器上共有 128 种通用数据寄存器和 128 种浮点数据寄存器，但只提供了值 `REGISTER_IA64_R0` 和 `REGISTER_IA64_F0`。 可按如下方式确定其他值：  
   
--   将寄存器号与 `REGISTER_IA64_R0` 相加，获得值 `REGISTER_IA64_R1` 到 `REGISTER_IA64_R127`（对应于 IA-64 处理器上的 #1 数据寄存器到 #127 数据寄存器）。  
+- 将寄存器号与 `REGISTER_IA64_R0` 相加，获得值 `REGISTER_IA64_R1` 到 `REGISTER_IA64_R127`（对应于 IA-64 处理器上的 #1 数据寄存器到 #127 数据寄存器）。  
   
--   将寄存器号与 `REGISTER_IA64_F0` 相加，获得值 `REGISTER_IA64_F1` 到 `REGISTER_IA64_F127`（对应于 IA-64 处理器上的 #1 FP 数据寄存器到 #127 FP 数据寄存器）。  
+- 将寄存器号与 `REGISTER_IA64_F0` 相加，获得值 `REGISTER_IA64_F1` 到 `REGISTER_IA64_F127`（对应于 IA-64 处理器上的 #1 FP 数据寄存器到 #127 FP 数据寄存器）。  
   
  例如，如果需要指定 IA-64 处理器上的 #83 数据寄存器，请使用 `REGISTER_IA64_R0` + 83。  
   

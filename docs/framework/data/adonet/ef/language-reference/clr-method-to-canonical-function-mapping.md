@@ -3,11 +3,11 @@ title: CLR 方法至规范函数映射
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605712"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR 方法至规范函数映射
 
@@ -38,9 +38,9 @@ ms.locfileid: "57378747"
 
 ## <a name="systemstring-method-instance-mapping"></a>System.String 方法（实例）映射
 
-|System.String 方法（实例）|规范函数|备注|
+|System.String 方法（实例）|规范函数|说明|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果 `value` 不是常量，则它映射到 IndexOf(`this`, `value`) > 0|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果`value`不是常量，则它映射到 IndexOf (`this`， `value`) > 0|
 |Boolean EndsWith(String `value`)|`this` 像`'` % `value`|如果 `value` 不是常量，则它映射到 Right(`this`, length(`value`)) = `value`。|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|如果 `value` 不是常量，则它映射到 IndexOf(`this`, `value`) = 1。|
 |长度|Length(`this`)||
@@ -60,17 +60,17 @@ ms.locfileid: "57378747"
 
 ## <a name="systemdatetime-method-static-mapping"></a>System.DateTime 方法（静态）映射
 
-|System.DateTime 方法（静态）|规范函数|备注|
+|System.DateTime 方法（静态）|规范函数|说明|
 |---------------------------------------|------------------------|-----------|
 |Boolean Equals(DateTime `t1`, DateTime `t2`)|= 运算符||
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= 运算符||
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 运算符||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= 运算符||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = 运算符||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 运算符||
 |布尔 op_LessThan (DateTime `t1`，DateTime `t2`)|< 运算符||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= 运算符||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = 运算符||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal`Interval`作为 DateInterval， \_<br /><br /> ByVal `DateValue` datetime 类型， \_<br /><br /> 可选 ByVal`FirstDayOfWeekValue`作为 FirstDayOfWeek = VbSunday， \_<br /><br /> 可选 ByVal`FirstWeekOfYearValue`作为 FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||有关详细信息，请参见“DatePart 函数”部分。|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
@@ -97,7 +97,7 @@ ms.locfileid: "57378747"
 
 针对列出的属性上 `get` 方法显示的映射。
 
-|System.DateTimeOffset 方法（实例）|规范函数|备注|
+|System.DateTimeOffset 方法（实例）|规范函数|说明|
 |-----------------------------------------------|------------------------|-----------|
 |天|Day(`this`)|对 SQL Server 2005 不支持。|
 |小时|Hour(`this`)|对 SQL Server 2005 不支持。|
@@ -114,7 +114,7 @@ ms.locfileid: "57378747"
 
 针对列出的属性上 `get` 方法显示的映射。
 
-|System.DateTimeOffset       |规范函数|备注|
+|System.DateTimeOffset       |规范函数|说明|
 |---------------------------------------------|------------------------|-----------|
 |System.DateTimeOffset.Now()|CurrentDateTimeOffset()|对 SQL Server 2005 不支持。|
 
@@ -122,7 +122,7 @@ ms.locfileid: "57378747"
 
 针对列出的属性上 `get` 方法显示的映射。
 
-|System.TimeSpan 方法（实例）|规范函数|备注|
+|System.TimeSpan 方法（实例）|规范函数|说明|
 |-----------------------------------------|------------------------|-----------|
 |小时|Hour(`this`)|对 SQL Server 2005 不支持。|
 |毫秒|Millisecond(`this`)|对 SQL Server 2005 不支持。|

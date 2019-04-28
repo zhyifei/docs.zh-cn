@@ -3,11 +3,11 @@ title: 如何：创建模型及映射文件嵌入资源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
 ms.openlocfilehash: eae3681664ab1fd095487a7b7ed395302faf2588
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607435"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>如何：创建模型及映射文件嵌入资源
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ，你可以为应用程序的嵌入资源部署模型和映射文件。 包含嵌入模型和映射文件的程序集必须加载到实体连接所在的应用程序域中。 有关详细信息，请参阅[连接字符串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 默认情况下，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]工具嵌入模型和映射文件。 手动定义模型和映射文件时，请使用下面的过程以确保文件作为嵌入资源与[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序一起部署。  
@@ -25,11 +25,11 @@ ms.locfileid: "59329526"
   
 4. 在中**解决方案资源管理器**，双击 App.config 文件，然后修改`Metadata`中的参数`connectionString`属性基于以下格式之一：  
   
-    -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
+    - `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   
-    -   `Metadata=` `res://*/<resourceName>;`  
+    - `Metadata=` `res://*/<resourceName>;`  
   
-    -   `Metadata=res://*;`  
+    - `Metadata=res://*;`  
   
      有关详细信息，请参阅[连接字符串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。  
   

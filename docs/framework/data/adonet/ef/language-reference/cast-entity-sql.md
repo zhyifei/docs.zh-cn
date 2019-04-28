@@ -3,11 +3,11 @@ title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
 ms.openlocfilehash: 51de041a4b06d5da31071ea2b3cb31c86feff137
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606123"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 将一种数据类型的表达式转换为另一种数据类型的表达式。  
@@ -39,11 +39,11 @@ CAST( e as T )
   
  精度和标量方面的值可以选择在强制转换为 `Edm.Decimal`时提供。 如果未显式提供，则精度和标量的默认值分别为 18 和 0。 具体而言， `Decimal`支持以下重载：  
   
--   `CAST( d as Edm.Decimal );`  
+- `CAST( d as Edm.Decimal );`  
   
--   `CAST( d as Edm.Decimal(precision) );`  
+- `CAST( d as Edm.Decimal(precision) );`  
   
--   `CAST( d as Edm.Decimal(precision, scale) );`  
+- `CAST( d as Edm.Decimal(precision, scale) );`  
   
  使用强制转换表达式视为显式转换。 显式转换可能截断数据或丧失精度。  
   

@@ -3,24 +3,24 @@ title: 如何：使用 EdmGen.exe 生成模型和映射文件
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605979"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>如何：使用 EdmGen.exe 生成模型和映射文件
 本主题描述如何使用 EDM 生成器 (EdmGen.exe) 工具生成以下文件（基于 School 数据库）：  
   
--   概念模型（.csdl 文件）。  
+- 概念模型（.csdl 文件）。  
   
--   存储模型（.ssdl 文件）。  
+- 存储模型（.ssdl 文件）。  
   
--   概念模型与存储模型之间的映射（.msl 文件）。  
+- 概念模型与存储模型之间的映射（.msl 文件）。  
   
--   使用 Visual Basic 或 C# 的对象层代码。  
+- 使用 Visual Basic 或 C# 的对象层代码。  
   
--   视图文件。  
+- 视图文件。  
   
  EdmGen.exe 工具使用 /mode:FullGeneration 生成上面列出的文件。 有关 EdmGen.exe 命令的详细信息，请参阅[EDM 生成器 (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)。  
   

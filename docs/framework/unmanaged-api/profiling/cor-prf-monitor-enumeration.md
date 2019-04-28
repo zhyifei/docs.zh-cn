@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599047"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 枚举
 包含用于指定探查器希望订阅的行为、功能或事件的值。  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>成员  
  下列部分列出`COR_PRF_MONITOR`按类别的枚举成员。 类别包括：  
   
--   [设置任何标志](#None)  
+- [设置任何标志](#None)  
   
--   [回调标志](#Callback)  
+- [回调标志](#Callback)  
   
--   [功能启用标志](#Feature)  
+- [功能启用标志](#Feature)  
   
--   [配置标志](#Config)  
+- [配置标志](#Config)  
   
--   [复合标志](#Composite)  
+- [复合标志](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>设置任何标志  

@@ -3,24 +3,24 @@ title: 联合体系结构
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
 ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596357"
 ---
 # <a name="architecture-of-syndication"></a>联合体系结构
 联合 API 是专为提供不限制格式编程模型而设计的，该编程模型允许将各种格式的联合内容写入网络中。 抽象数据模型由以下类组成：  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  这些类严格地映射到 Atom 1.0 规范中定义的构造，但有一些名称会不相同。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59075907"
   
 ## <a name="extensibility"></a>扩展性  
   
--   联合协议的一个主要功能是扩展性。 Atom 1.0 和 RSS 2.0 都允许您向联合源中添加规范中没有定义的属性和元素。 WCF 联合编程模型提供使用自定义属性和扩展的两种方法： 派生新类和松散类型访问。 有关详细信息，请参阅[联合扩展性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
+- 联合协议的一个主要功能是扩展性。 Atom 1.0 和 RSS 2.0 都允许您向联合源中添加规范中没有定义的属性和元素。 WCF 联合编程模型提供使用自定义属性和扩展的两种方法： 派生新类和松散类型访问。 有关详细信息，请参阅[联合扩展性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,11 +3,11 @@ title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607721"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
@@ -25,15 +25,15 @@ ms.locfileid: "59073801"
   
  下面是一些可能导致输出查询中出现 CROSS APPLY 和/或 OUTER APPLY 运算符的典型情况：  
   
--   带分页的相关子查询。  
+- 带分页的相关子查询。  
   
--   相关子查询或导航所生成的集合上的 `AnyElement`。  
+- 相关子查询或导航所生成的集合上的 `AnyElement`。  
   
--   使用接受元素选择器的分组方法的 LINQ 查询。  
+- 使用接受元素选择器的分组方法的 LINQ 查询。  
   
--   显式指定了 CROSS APPLY 或 OUTER APPLY 的查询  
+- 显式指定了 CROSS APPLY 或 OUTER APPLY 的查询  
   
--   在 REF 构造上具有 DEREF 构造的查询。  
+- 在 REF 构造上具有 DEREF 构造的查询。  
   
 ## <a name="skip-operator"></a>SKIP 运算符  
  如果使用的是 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，则对非键列同时使用 SKIP 和 ORDER BY 可能会返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是由于 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]对 SKIP 的解释方式造成的。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  

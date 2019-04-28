@@ -3,11 +3,11 @@ title: 处理异步应用程序 (Visual Basic 中) 中的重新进入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593939"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用程序 (Visual Basic 中) 中的重新进入
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。  

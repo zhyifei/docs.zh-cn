@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607422"
 ---
 # <a name="sorting-and-filtering-data"></a>对数据进行排序和筛选
 <xref:System.Data.DataView> 为在 <xref:System.Data.DataTable> 中对数据排序和筛选提供了多种方法：  
   
--   可以使用 <xref:System.Data.DataView.Sort%2A> 属性指定单个或多个列排序顺序并包含 ASC（升序）和 DESC（降序）参数。  
+- 可以使用 <xref:System.Data.DataView.Sort%2A> 属性指定单个或多个列排序顺序并包含 ASC（升序）和 DESC（降序）参数。  
   
--   可以使用 <xref:System.Data.DataView.ApplyDefaultSort%2A> 属性自动以升序创建基于表的一个或多个主键列的排序顺序。 <xref:System.Data.DataView.ApplyDefaultSort%2A> 时，才适用**排序**属性为 null 引用或空字符串，并且表已定义主键时。  
+- 可以使用 <xref:System.Data.DataView.ApplyDefaultSort%2A> 属性自动以升序创建基于表的一个或多个主键列的排序顺序。 <xref:System.Data.DataView.ApplyDefaultSort%2A> 时，才适用**排序**属性为 null 引用或空字符串，并且表已定义主键时。  
   
--   可以使用 <xref:System.Data.DataView.RowFilter%2A> 属性根据行的列值来指定行的子集。 有关有效表达式的详细信息**RowFilter**属性，请参阅的参考信息<xref:System.Data.DataColumn.Expression%2A>属性的<xref:System.Data.DataColumn>类。  
+- 可以使用 <xref:System.Data.DataView.RowFilter%2A> 属性根据行的列值来指定行的子集。 有关有效表达式的详细信息**RowFilter**属性，请参阅的参考信息<xref:System.Data.DataColumn.Expression%2A>属性的<xref:System.Data.DataColumn>类。  
   
      如果你想要返回的数据，而不是提供数据的子集的动态视图的特定查询的结果，请使用<xref:System.Data.DataView.Find%2A>或<xref:System.Data.DataView.FindRows%2A>方法的**DataView**以获得最佳性能而不是设置**RowFilter**属性。 设置**RowFilter**属性会重新生成索引的数据，将添加到你的应用程序的开销并降低性能。 **RowFilter**属性最适合用于数据绑定应用程序中其中绑定的控件显示筛选的结果。 **查找**并**FindRows**方法利用当前的索引而无需重新生成索引。 有关详细信息**查找**并**FindRows**方法，请参阅[查找行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)。  
   
--   可以使用 <xref:System.Data.DataView.RowStateFilter%2A> 属性指定要查看的行版本。 **DataView**隐式地管理要公开具体取决于哪个行版本**RowState**基础行。 例如，如果**RowStateFilter**设置为**DataViewRowState.Deleted**，则**DataView**公开**原始**行版本所有**Deleted**行，因为没有任何**当前**行版本。 您可以确定某行的行版本通过使用公开**RowVersion**的属性**DataRowView**。  
+- 可以使用 <xref:System.Data.DataView.RowStateFilter%2A> 属性指定要查看的行版本。 **DataView**隐式地管理要公开具体取决于哪个行版本**RowState**基础行。 例如，如果**RowStateFilter**设置为**DataViewRowState.Deleted**，则**DataView**公开**原始**行版本所有**Deleted**行，因为没有任何**当前**行版本。 您可以确定某行的行版本通过使用公开**RowVersion**的属性**DataRowView**。  
   
      下表显示的选项**DataViewRowState**。  
   

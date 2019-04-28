@@ -5,18 +5,18 @@ ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599465"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 如果你的应用会序列化和反序列化对象，你可能需要将条目添加到运行时指令 (.rd.xml) 文件以确保必要的元数据在运行时间存在。 有两类序列化序列化程序，并且每一类要求在你的运行时指令文件中进行不同处理：  
   
--   基于反射的第三方序列化程序。 这些程序要求修改你的运行时指令文件，我们会在后面一部分对其进行讨论。  
+- 基于反射的第三方序列化程序。 这些程序要求修改你的运行时指令文件，我们会在后面一部分对其进行讨论。  
   
--   在 .NET Framework 类库中找到的非基于反射的序列化程序。 这些程序可能要求修改运行时指令文件，我们会在 [Microsoft 序列化程序](#Microsoft)部分对其进行讨论。  
+- 在 .NET Framework 类库中找到的非基于反射的序列化程序。 这些程序可能要求修改运行时指令文件，我们会在 [Microsoft 序列化程序](#Microsoft)部分对其进行讨论。  
   
 <a name="ThirdParty"></a>   
 ## <a name="third-party-serializers"></a>第三方序列化程序  

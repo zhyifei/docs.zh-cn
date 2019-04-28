@@ -3,11 +3,11 @@ title: 开发和部署注意事项
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
 ms.openlocfilehash: d0402fde61b1bfcdee6e0e8e435d35e59ad76b6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606636"
 ---
 # <a name="development-and-deployment-considerations"></a>开发和部署注意事项
 本节中的主题介绍在开发或部署基于 ADO.NET 实体框架的应用程序时要注意的问题。  

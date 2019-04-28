@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607488"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>将数据集和 XmlDataDocument 同步
 本节演示订单处理过程中的一个步骤，该步骤使用与 <xref:System.Data.DataSet> 同步的强类型 <xref:System.Xml.XmlDataDocument>。 下面的示例创建**数据集**具有最小化架构相匹配仅源 XML 文档的一部分。 这些示例使用**XmlDataDocument**以保留源 XML 文档的保真度启用**数据集**要用来公开 XML 文档的一个子集。  

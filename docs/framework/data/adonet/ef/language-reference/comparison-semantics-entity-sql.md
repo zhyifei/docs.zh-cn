@@ -3,11 +3,11 @@ title: 比较语义 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605959"
 ---
 # <a name="comparison-semantics-entity-sql"></a>比较语义 (Entity SQL)
 执行下列任一 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 运算符时都涉及类型实例的比较：  
@@ -15,53 +15,53 @@ ms.locfileid: "59083330"
 ## <a name="explicit-comparison"></a>显式比较  
  相等运算：  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  排序运算：  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  判断是否可为 Null 的运算：  
   
--   IS NULL  
+- IS NULL  
   
--   IS NOT NULL  
+- IS NOT NULL  
   
 ## <a name="explicit-distinction"></a>显式区别  
  相等区别：  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  排序区别：  
   
--   ORDER BY  
+- ORDER BY  
   
 ## <a name="implicit-distinction"></a>隐式区别  
  集运算和谓词（相等）：  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  项谓词（相等）：  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>支持的组合  
  下表说明了每种类型的比较运算符的所有受支持的组合：  

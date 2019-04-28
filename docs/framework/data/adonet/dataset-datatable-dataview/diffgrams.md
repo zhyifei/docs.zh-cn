@@ -3,11 +3,11 @@ title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607808"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <xref:System.Data.DataSet> 使用 DiffGram 格式来加载和保持其内容，并将其内容序列化，以便通过网络连接来进行传输。 当<xref:System.Data.DataSet>编写为 DiffGram，若要精确地重新创建内容，但不架构的所有必要信息 DiffGram 填充它<xref:System.Data.DataSet>，包括从这两个列的值**原始**并**当前**行版本、 行错误信息以及行顺序。  

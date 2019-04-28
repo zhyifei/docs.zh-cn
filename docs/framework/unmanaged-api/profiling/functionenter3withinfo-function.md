@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16e086f54865307e116a9e522b2fbadee8502249
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598943"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函数
 通知探查器正在将控件传递给函数，并提供句柄，可传递给[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数参数。  
@@ -48,9 +48,9 @@ void __stdcall FunctionEnter3WithInfo(
   
  调用此函数之前，执行引擎不会保存任何寄存器。  
   
--   在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
+- 在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
   
--   退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
+- 退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
   
  实现`FunctionEnter3WithInfo`不应阻止，因为它会延迟垃圾回收。 实现不应尝试的垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。 如果尝试在垃圾回收，则运行时将阻止直到`FunctionEnter3WithInfo`返回。  
   

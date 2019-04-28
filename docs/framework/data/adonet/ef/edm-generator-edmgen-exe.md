@@ -3,11 +3,11 @@ title: EDM 生成器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607666"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 
@@ -35,11 +35,11 @@ EdmGen /mode:choice [options]
 
 |模式|描述|
 |----------|-----------------|
-|`/mode:ValidateArtifacts`|验证 .csdl、.ssdl 和 .msl 文件并显示所有错误或警告。<br /><br /> 此选项需要至少一个 `/inssdl` 或 `/incsdl` 参数。 如果指定 `/inmsl`，则还需要 `/inssdl` 和 `/incsdl` 参数。|
+|`/mode:ValidateArtifacts`|验证 .csdl、.ssdl 和 .msl 文件并显示所有错误或警告。<br /><br /> 此选项需要至少一个 `/inssdl` 或 `/incsdl` 自变量。 如果指定 `/inmsl`，则还需要 `/inssdl` 和 `/incsdl` 自变量。|
 |`/mode:FullGeneration`|使用 `/connectionstring` 选项中指定的数据库连接信息，生成 .csdl、.ssdl、.msl、对象层和视图文件。<br /><br /> 此选项需要一个 `/connectionstring` 参数以及一个 `/project` 参数或 `/outssdl`、`/outcsdl`、`/outmsdl`、`/outobjectlayer`、`/outviews`、`/namespace` 和 `/entitycontainer` 参数。|
 |`/mode:FromSSDLGeneration`|根据指定的 .ssdl 文件生成 .csdl 和 .msl 文件、源代码和视图。<br /><br /> 此选项需要 `/inssdl` 参数，以及 `/project` 参数或 `/outcsdl`、`/outmsl`、`/outobjectlayer`、`/outviews`、`/namespace,` 和 `/entitycontainer` 参数。|
 |`/mode:EntityClassGeneration`|创建包含根据 .csdl 文件生成的类的源代码文件。<br /><br /> 此选项需要 `/incsdl` 参数，以及 `/project` 参数或 `/outobjectlayer` 参数。 `/language` 参数是可选的。|
-|`/mode:ViewGeneration`|创建包含根据 .csdl、.ssdl 和 .msl 文件生成的视图的源代码文件。<br /><br /> 此选项需要 `/inssdl`、`/incsdl`、`/inmsl,`，以及 `/project` 或 `/outviews` 参数。 `/language` 参数是可选的。|
+|`/mode:ViewGeneration`|创建包含根据 .csdl、.ssdl 和 .msl 文件生成的视图的源代码文件。<br /><br /> 此选项需要 `/inssdl`、`/incsdl`、`/inmsl,`，以及 `/project` 或 `/outviews` 自变量。 `/language` 参数是可选的。|
 
 ## <a name="options"></a>选项
 
@@ -48,9 +48,9 @@ EdmGen /mode:choice [options]
 |`/p[roject]:`\<string>|指定要使用的项目名称。 该项目名称用作命名空间设置、模型和映射文件的名称、对象源文件的名称以及视图生成源文件的名称的默认值。 实体容器名称设置为\<项目 > 上下文。|
 |`/prov[ider]:`\<string>|生成存储模型 (.ssdl) 文件要使用的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 数据提供程序的名称。 默认提供程序是[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]SQL Server 的数据提供程序 (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|
 |`/c[onnectionstring]:`\<连接字符串 >|指定用于连接数据源的字符串。|
-|`/incsdl:`\<file>|指定 .csdl 文件或 .csdl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .csdl 文件。 当概念模型跨多个文件拆分时，对于生成类 (`/mode:EntityClassGeneration`) 或视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|
+|`/incsdl:`\<file>|指定 .csdl 文件或 .csdl 文件所在的目录。 此自变量可多次指定，这样可以指定多个目录或 .csdl 文件。 当概念模型跨多个文件拆分时，对于生成类 (`/mode:EntityClassGeneration`) 或视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|
 |`/refcsdl:`\<file>|指定用于解析源 .csdl 文件中的任何引用的其他 .csdl 文件。 （源 .csdl 文件是 `/incsdl` 选项指定的文件）。 `/refcsdl` 文件包含源 .csdl 文件所依赖的类型。 此自变量可多次指定。|
-|`/inmsl:`\<file>|指定 .msl 文件或 .msl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .msl 文件。 当概念模型跨多个文件拆分时，对于生成视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|
+|`/inmsl:`\<file>|指定 .msl 文件或 .msl 文件所在的目录。 此自变量可多次指定，这样可以指定多个目录或 .msl 文件。 当概念模型跨多个文件拆分时，对于生成视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|
 |`/inssdl:`\<file>|指定 .ssdl 文件或 .ssdl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .ssdl 文件。 如果希望验证多个模型 (`(/mode:ValidateArtifacts)`)，这样做很有用。|
 |`/outcsdl:`\<file>|指定将创建的 .csdl 文件的名称。|
 |`/outmsl:`\<file>|指定将创建的 .msl 文件的名称。|

@@ -3,11 +3,11 @@ title: 入门（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 4735a220-3301-4ec4-8833-7209abb7208f
 ms.openlocfilehash: cfdb8db749313b93efb4ecbf095997645738d11e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606677"
 ---
 # <a name="getting-started-entity-framework"></a>入门（实体框架）
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持以数据为中心的应用程序和服务，并提供一个平台用于对可提高到概念级别从逻辑关系级别抽象级别的数据进行编程。 通过使开发人员可以在更高的抽象级别上使用数据，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 支持独立于任何特定数据存储引擎或关系架构的代码。 有关详细信息，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)。  

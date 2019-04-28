@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607925"
 ---
 # <a name="merging-dataset-contents"></a>合并数据集内容
 
@@ -64,7 +64,7 @@ ms.locfileid: "57356853"
 
 ## <a name="constraints"></a>约束
 
-使用 `Merge` 方法时，所有新数据都添加到现有 `DataSet` 之前不会检查约束。 添加了数据后，会对 `DataSet` 中的当前值实施约束。 您必须确保您的代码可以处理可能因约束冲突而引发的任何异常。
+使用 `Merge` 方法时，所有新数据都添加到现有 `DataSet` 之前不会检查约束。 添加了数据后，会对 `DataSet` 中的当前值实施约束。 你必须确保你的代码可以处理可能因约束冲突而引发的任何异常。
 
 设想有这样一种情况：`DataSet` 中的某一现有行是主键值为 1 的 `Unchanged`。 在与 `Modified` 主键值为 2 且 `Original` 主键值为 1 的 `Current` 传入行进行合并期间，由于 `Original` 主键值不同，现有行和传入行将被视为不匹配。 不过，完成合并和检查完约束后，将会引发一个异常，因为 `Current` 主键值违反了主键列的唯一约束。
 
