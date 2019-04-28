@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649993"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态。 请考虑向调用结果应用“Await”运算符。  
@@ -29,7 +29,7 @@ ms.locfileid: "59304222"
   
 ### <a name="to-address-this-warning"></a>解决此警告  
   
--   只有当您确定不需要等待异步调用完成并且调用的方法不会引发任何异常时，才应考虑禁止显示警告。 在此情况下，可以通过将调用的任务结果分配给变量来禁止显示警告。  
+- 只有当您确定不需要等待异步调用完成并且调用的方法不会引发任何异常时，才应考虑禁止显示警告。 在此情况下，可以通过将调用的任务结果分配给变量来禁止显示警告。  
   
      下面的示例演示如何生成警告，如何禁止显示警告以及如何等待调用。  
   

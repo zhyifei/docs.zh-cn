@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638176"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>声明上下文和默认访问级别 (Visual Basic)
 本主题介绍的 Visual Basic 的类型在声明中的其他类型，以及什么及其访问级别默认为如果未指定。  
@@ -24,11 +24,11 @@ ms.locfileid: "58821694"
   
  声明上下文的级别如下所示：  
   
--   *Namespace 级别*— 在源文件或命名空间，但不是在类、 结构、 模块或接口  
+- *Namespace 级别*— 在源文件或命名空间，但不是在类、 结构、 模块或接口  
   
--   *模块级别*— 在类、 结构、 模块或接口，但不是在过程或块  
+- *模块级别*— 在类、 结构、 模块或接口，但不是在过程或块  
   
--   *过程级*— 在过程或块 (如`If`或`For`)  
+- *过程级*— 在过程或块 (如`If`或`For`)  
   
  下表显示了各种声明的编程元素，具体取决于其声明上下文的默认访问级别。  
   

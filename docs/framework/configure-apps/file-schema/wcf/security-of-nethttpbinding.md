@@ -3,11 +3,11 @@ title: <security> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
 ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670555"
 ---
 # <a name="security-of-nethttpbinding"></a>\<安全 > 的\<netHttpBinding >
 
@@ -43,9 +43,9 @@ ms.locfileid: "55283956"
 
 ## <a name="mode-attribute"></a>mode 属性
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
-|无|的在传输过程中不是安全消息数。|
+|None|的在传输过程中不是安全消息数。|
 |传输|使用 HTTPS 传输提供安全性。 用 HTTPS 保证 SOAP 消息的安全。 使用服务的 X.509 证书向客户端对服务进行身份验证。 使用所提供的 ClientCredentialType 对客户端进行身份验证。|
 |消息|使用 SOAP 消息安全提供安全性。 默认情况下，将对正文进行加密和签名。 对于此绑定，系统要求向带外客户端提供服务器证书。 此绑定仅有的有效 `ClientCredentialType` 为 `Certificate`。|
 |TransportWithMessageCredential|完整性、保密性和服务器身份验证由传输安全来提供。 客户端身份验证采用 SOAP 消息安全方式提供。 如果要使用用户名/密码对用户进行身份验证，并且存在用于保护消息传输的现有 HTTP 部署，则适用此模式。|

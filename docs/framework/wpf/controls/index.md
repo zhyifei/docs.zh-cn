@@ -2,17 +2,11 @@
 title: Controls
 ms.date: 03/30/2017
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- controls [WPF], about WPF controls
+  - 'controls [WPF], about WPF controls'
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154409"
 ---
 # <a name="controls"></a>Controls
 <a name="introduction"></a>
@@ -33,11 +27,11 @@ ms.locfileid: "59154409"
 ## <a name="changing-the-appearance-of-a-control"></a>更改控件的外观  
  更改控件的外观以适应应用程序的外观，这是很常见的操作。 可以根据要达到的效果，通过执行以下操作之一来更改控件的外观：  
   
--   更改控件的属性值。  
+- 更改控件的属性值。  
   
--   创建<xref:System.Windows.Style>控件。  
+- 创建<xref:System.Windows.Style>控件。  
   
--   创建一个新<xref:System.Windows.Controls.ControlTemplate>控件。  
+- 创建一个新<xref:System.Windows.Controls.ControlTemplate>控件。  
   
 ### <a name="changing-a-controls-property-value"></a>更改控件的属性值  
  许多控件具有属性，可用于更改控件的显示方式，如<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>。 可以在这种设置的值属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和代码。 下面的示例设置<xref:System.Windows.Controls.Control.Background%2A>， <xref:System.Windows.Controls.Control.FontSize%2A>，并<xref:System.Windows.Controls.Control.FontWeight%2A>上的属性<xref:System.Windows.Controls.Button>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
@@ -87,13 +81,13 @@ ms.locfileid: "59154409"
 ## <a name="rich-content-in-controls"></a>控件中的丰富内容  
  继承的大多数类<xref:System.Windows.Controls.Control>类具有包含丰富内容的能力。 例如，<xref:System.Windows.Controls.Label>可以包含任意对象，一个字符串，例如<xref:System.Windows.Controls.Image>，或<xref:System.Windows.Controls.Panel>。  以下类支持丰富的内容，充当用于在控件中的大部分的基类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
--   <xref:System.Windows.Controls.ContentControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.Button>，和<xref:System.Windows.Controls.ToolTip>。  
+- <xref:System.Windows.Controls.ContentControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.Button>，和<xref:System.Windows.Controls.ToolTip>。  
   
--   <xref:System.Windows.Controls.ItemsControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.ListBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.Primitives.StatusBar>。  
+- <xref:System.Windows.Controls.ItemsControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.ListBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.Primitives.StatusBar>。  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.TabItem>， <xref:System.Windows.Controls.GroupBox>，和<xref:System.Windows.Controls.Expander>。  
+- <xref:System.Windows.Controls.HeaderedContentControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.TabItem>， <xref:System.Windows.Controls.GroupBox>，和<xref:System.Windows.Controls.Expander>。  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TreeViewItem>，和<xref:System.Windows.Controls.ToolBar>。  
+- <xref:System.Windows.Controls.HeaderedItemsControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TreeViewItem>，和<xref:System.Windows.Controls.ToolBar>。  
 
  有关这些基类的类的详细信息，请参阅[WPF 内容模型](wpf-content-model.md)。  
   

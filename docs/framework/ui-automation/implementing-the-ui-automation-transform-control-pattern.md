@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 ms.openlocfilehash: d038991da4048e3279ae974cbf4d3e53691349af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645768"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>实现 UI 自动化 Transform 控件模式
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59088545"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Transform 控件模式时，请注意以下准则和约定：  
   
--   对此控件模式的支持并不限于桌面上的对象。 如果子级可以移动、调整大小或在容器的边界内自由地旋转，则此控件模式还必须受到容器对象子级的支持。  
+- 对此控件模式的支持并不限于桌面上的对象。 如果子级可以移动、调整大小或在容器的边界内自由地旋转，则此控件模式还必须受到容器对象子级的支持。  
   
--   如果移动、旋转对象或调整其大小使得屏幕位置完全处于其容器的坐标之外（例如，当顶层窗口移动到屏幕之外或子对象移动到容器的视区边界之外时），结果导致键盘或鼠标无法访问，则不能如此操作。 在这些情况下，对象被放在尽可能靠近所请求的屏幕坐标位置，而顶部或左侧坐标被覆盖以位于容器边界内。  
+- 如果移动、旋转对象或调整其大小使得屏幕位置完全处于其容器的坐标之外（例如，当顶层窗口移动到屏幕之外或子对象移动到容器的视区边界之外时），结果导致键盘或鼠标无法访问，则不能如此操作。 在这些情况下，对象被放在尽可能靠近所请求的屏幕坐标位置，而顶部或左侧坐标被覆盖以位于容器边界内。  
   
--   对于多监视器系统，如果一个对象被移动、调整大小或旋转导致完全位于组合桌面屏幕坐标外，则该对象被放置在尽可能靠近所请求坐标的主监视器中。  
+- 对于多监视器系统，如果一个对象被移动、调整大小或旋转导致完全位于组合桌面屏幕坐标外，则该对象被放置在尽可能靠近所请求坐标的主监视器中。  
   
--   所有参数和属性值都是绝对和独立于区域设置的。  
+- 所有参数和属性值都是绝对和独立于区域设置的。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider 必需的成员  

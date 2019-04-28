@@ -3045,11 +3045,11 @@ f1_keywords:
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58022969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594771"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>很抱歉，我们没有关于此 Visual Basic 错误的具体信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759916"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供许多布局工具来实现此目的。 一个最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -23,27 +23,27 @@ ms.locfileid: "59343033"
   
  本演练涉及以下任务：  
   
--   创建 Windows 窗体项目  
+- 创建 Windows 窗体项目  
   
--   间距和对齐控件使用对齐线  
+- 间距和对齐控件使用对齐线  
   
--   向窗体和容器的边缘对齐  
+- 向窗体和容器的边缘对齐  
   
--   对齐到分组后的控件  
+- 对齐到分组后的控件  
   
--   使用对齐线将控件的大纲显示其大小  
+- 使用对齐线将控件的大纲显示其大小  
   
--   从工具箱拖动控件时使用对齐线  
+- 从工具箱拖动控件时使用对齐线  
   
--   调整控件使用对齐线的大小  
+- 调整控件使用对齐线的大小  
   
--   对齐到控件的文本标签  
+- 对齐到控件的文本标签  
   
--   使用对齐线和键盘导航  
+- 使用对齐线和键盘导航  
   
--   对齐线和布局面板  
+- 对齐线和布局面板  
   
--   禁用对齐线  
+- 禁用对齐线  
   
  完成后，必须了解所发挥的对齐线功能布局作用。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "59343033"
   
 #### <a name="to-selectively-disable-snaplines"></a>若要有选择性地禁用对齐线  
   
--   按 ALT 键和而移动一个窗体控件。  
+- 按 ALT 键和而移动一个窗体控件。  
   
      请注意，没有对齐线显示该控件不会按任何可能的对齐位置。  
   
@@ -233,9 +233,9 @@ ms.locfileid: "59343033"
 ## <a name="next-steps"></a>后续步骤  
  对齐线提供了直观的窗体上的控件对齐方式。 有关进一步探索的建议包括：  
   
--   请尝试嵌套<xref:System.Windows.Forms.GroupBox>在另一个控件<xref:System.Windows.Forms.GroupBox>控件。 位置<xref:System.Windows.Forms.Button>内的子控件<xref:System.Windows.Forms.GroupBox>控件，并在父级内的另一个<xref:System.Windows.Forms.GroupBox>控件。 移动<xref:System.Windows.Forms.Button>控件即可看到如何对齐线跨容器边界。  
+- 请尝试嵌套<xref:System.Windows.Forms.GroupBox>在另一个控件<xref:System.Windows.Forms.GroupBox>控件。 位置<xref:System.Windows.Forms.Button>内的子控件<xref:System.Windows.Forms.GroupBox>控件，并在父级内的另一个<xref:System.Windows.Forms.GroupBox>控件。 移动<xref:System.Windows.Forms.Button>控件即可看到如何对齐线跨容器边界。  
   
--   创建的列<xref:System.Windows.Forms.TextBox>控件与相应的列的<xref:System.Windows.Forms.Label>控件。 设置的值<xref:System.Windows.Forms.Label>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`true`。 使用对齐线将移动<xref:System.Windows.Forms.Label>控制使其显示的文本与中的文本对齐<xref:System.Windows.Forms.TextBox>控件。  
+- 创建的列<xref:System.Windows.Forms.TextBox>控件与相应的列的<xref:System.Windows.Forms.Label>控件。 设置的值<xref:System.Windows.Forms.Label>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`true`。 使用对齐线将移动<xref:System.Windows.Forms.Label>控制使其显示的文本与中的文本对齐<xref:System.Windows.Forms.TextBox>控件。  
   
  有关 Windows 用户界面设计的信息，请参阅此书*Microsoft Windows 用户体验、 用户界面开发人员和设计人员的官方指南*Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1).  
   

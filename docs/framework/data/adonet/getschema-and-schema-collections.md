@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
 ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667038"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 和架构集合
 **连接**中每个.NET Framework 托管提供程序实现的类**GetSchema**方法用于检索有关当前连接的数据库的架构信息和从返回的架构信息**GetSchema**方法适用于以下形式的<xref:System.Data.DataTable>。 **GetSchema**方法是重载的方法，提供可选参数来指定架构集合返回，并限制返回的信息量。  

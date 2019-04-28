@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
 ms.openlocfilehash: fe248c6fcb9db80b0ab8f62cc78a480e70803633
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756034"
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
 匿名消息安全的示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 服务器身份验证证书。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。
@@ -148,7 +148,7 @@ Press <ENTER> to terminate client.
 
  下面提供了有关此批处理文件的不同部分的简要概述：
 
--   创建服务器证书。
+- 创建服务器证书。
 
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。
 
@@ -164,7 +164,7 @@ Press <ENTER> to terminate client.
 
      %SERVER_NAME% 变量指定服务器名称。 该证书存储在 LocalMachine 存储区中。 如果用服务参数（如 `setup.bat service`）运行 setup 批处理文件，则 %SERVER_NAME% 包含计算机的完全限定域名。 否则，它默认为 localhost。
 
--   将服务器证书安装到客户端的受信任证书存储区中。
+- 将服务器证书安装到客户端的受信任证书存储区中。
 
      以下行将服务器证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
@@ -172,7 +172,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   授予对证书私钥的权限。
+- 授予对证书私钥的权限。
 
      Setup.bat 批处理文件中的以下行可以让 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 辅助进程帐户访问 LocalMachine 存储区中存储的服务器证书。
 
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
--   运行完示例后运行示例文件夹中的 Cleanup.bat。  
+- 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
 >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

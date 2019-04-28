@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665788"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 表达式 (Visual Basic)
 一个*lambda 表达式*是函数或子例程没有可用于任何委托是有效的名称。 Lambda 表达式可以是函数或子例程，并且可以是单行或多行。 可以将值从当前作用域传递到 lambda 表达式中。  
@@ -43,27 +43,27 @@ ms.locfileid: "58832107"
 ## <a name="lambda-expression-syntax"></a>Lambda 表达式语法  
  Lambda 表达式的语法类似于标准函数或子例程。 差异如下所示：  
   
--   Lambda 表达式没有名称。  
+- Lambda 表达式没有名称。  
   
--   Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
+- Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
   
--   单行 lambda 函数不使用`As`子句指定返回类型。 相反，从 lambda 表达式的主体的计算结果为的值推断类型。 例如，如果 lambda 表达式的正文`cust.City = "London"`，其返回类型是`Boolean`。  
+- 单行 lambda 函数不使用`As`子句指定返回类型。 相反，从 lambda 表达式的主体的计算结果为的值推断类型。 例如，如果 lambda 表达式的正文`cust.City = "London"`，其返回类型是`Boolean`。  
   
--   在多行 lambda 函数中，您也可以指定返回类型通过使用`As`子句，或忽略`As`子句，以便推断返回类型。 当`As`子句省略对于多行 lambda 函数、 返回类型被推断为从所有的基准类型`Return`中多行 lambda 函数的语句。 *基准类型*是所有其他类型可以扩大到的唯一类型。 如果无法确定此唯一类型，基准类型是数组中的所有其他类型可以缩小到的唯一类型。 如果无法确定为这两种唯一类型之一，则基准类型是 `Object`。 在这种情况下，如果`Option Strict`设置为`On`，会发生编译器错误。  
+- 在多行 lambda 函数中，您也可以指定返回类型通过使用`As`子句，或忽略`As`子句，以便推断返回类型。 当`As`子句省略对于多行 lambda 函数、 返回类型被推断为从所有的基准类型`Return`中多行 lambda 函数的语句。 *基准类型*是所有其他类型可以扩大到的唯一类型。 如果无法确定此唯一类型，基准类型是数组中的所有其他类型可以缩小到的唯一类型。 如果无法确定为这两种唯一类型之一，则基准类型是 `Object`。 在这种情况下，如果`Option Strict`设置为`On`，会发生编译器错误。  
   
      例如，如果表达式提供给`Return`语句包含类型的值`Integer`， `Long`，和`Double`，生成的数组类型是`Double`。 这两`Integer`并`Long`扩大到`Double`和仅`Double`。 因此， `Double` 是基准类型。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
--   单行函数的主体必须是返回一个值，而不是语句表达式。 没有任何`Return`单行函数的语句。 单行函数返回的值是表达式的函数的正文中的值。  
+- 单行函数的主体必须是返回一个值，而不是语句表达式。 没有任何`Return`单行函数的语句。 单行函数返回的值是表达式的函数的正文中的值。  
   
--   单行子例程的主体必须是单行语句。  
+- 单行子例程的主体必须是单行语句。  
   
--   不包括的单行函数和子例程`End Function`或`End Sub`语句。  
+- 不包括的单行函数和子例程`End Function`或`End Sub`语句。  
   
--   可以通过使用指定的 lambda 表达式参数的数据类型`As`关键字或该参数的数据类型可以推断出。 必须必须推断数据类型或全部指定或者所有参数。  
+- 可以通过使用指定的 lambda 表达式参数的数据类型`As`关键字或该参数的数据类型可以推断出。 必须必须推断数据类型或全部指定或者所有参数。  
   
--   `Optional` 和`Paramarray`不允许使用参数。  
+- `Optional` 和`Paramarray`不允许使用参数。  
   
--   不允许使用泛型参数。  
+- 不允许使用泛型参数。  
   
 ## <a name="async-lambdas"></a>异步 lambda  
  您可以轻松创建的包含异步处理通过使用 lambda 表达式和语句[异步](../../../../visual-basic/language-reference/modifiers/async.md)并[Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)关键字。 例如，下面的 Windows 窗体示例包含一个调用和等待异步方法 `ExampleMethodAsync`的事件处理程序。  
@@ -118,15 +118,15 @@ End Class
   
  下面的示例演示了广泛的嵌套的 lambda 表达式的访问权限。 从执行返回的 lambda 表达式时`Main`作为`aDel`，它将访问这些元素：  
   
--   在其中定义类的字段： `aField`  
+- 在其中定义类的字段： `aField`  
   
--   在其中定义类的一个属性： `aProp`  
+- 在其中定义类的一个属性： `aProp`  
   
--   方法的参数`functionWithNestedLambda`，在其中定义： `level1`  
+- 方法的参数`functionWithNestedLambda`，在其中定义： `level1`  
   
--   局部变量的`functionWithNestedLambda`: `localVar`  
+- 局部变量的`functionWithNestedLambda`: `localVar`  
   
--   在其中嵌套 lambda 表达式的参数： `level2`  
+- 在其中嵌套 lambda 表达式的参数： `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>示例  
   
--   下面的示例定义返回的 lambda 表达式`True`如果可以为 null 的参数分配的值，并`False`如果其值为`Nothing`。  
+- 下面的示例定义返回的 lambda 表达式`True`如果可以为 null 的参数分配的值，并`False`如果其值为`Nothing`。  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   下面的示例定义返回数组中的最后一个元素索引的 lambda 表达式。  
+- 下面的示例定义返回数组中的最后一个元素索引的 lambda 表达式。  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

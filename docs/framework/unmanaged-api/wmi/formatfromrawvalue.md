@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609043"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函数
 如果格式转换是基于时间的，则将一个或两个原始性能数据值转换为指定格式。 
@@ -49,7 +49,7 @@ int FormatFromRawValue (
 `dwFormat`\
 [in]若要将原始性能数据转换为的格式。 它可以是下列值之一：
 
-|返回的常量  |值  |描述 |
+|返回的常量  |“值”  |描述 |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 返回作为双精度浮点值的计算的值。 | 
 | `PDH_FMT_LARGE` | 0x00000400 | 以 64 位整数形式返回计算的值。 |
@@ -77,7 +77,7 @@ int FormatFromRawValue (
 
 此函数返回以下值：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | 函数调用是成功的。 |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 必需的参数已丢失或不正确。 | 

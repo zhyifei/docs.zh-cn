@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669196"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互操作
 可以在 Windows Presentation Foundation (WPF) 应用程序中包含 Direct3D9 内容。 本主题介绍如何创建 Direct3D9 内容，以便它有效地与 WPF 互操作。  
@@ -32,9 +32,9 @@ ms.locfileid: "59307725"
   
  通过调用以下方法之一创建一个设备。  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  在 Windows Vista 或更高版本操作系统上，使用`Direct3DCreate9Ex`与配置为使用 Windows 显示驱动程序模型 (WDDM) 显示的方法。 使用`Direct3DCreate9`任何其他平台上的方法。  
   
@@ -97,11 +97,11 @@ ms.locfileid: "59307725"
   
  有三种方法可以处理调整大小。  
   
--   参与布局系统时，并创建新的图面大小发生更改。 不要创建太多应用层，因为可能会用完可用抵或视频内存碎片。  
+- 参与布局系统时，并创建新的图面大小发生更改。 不要创建太多应用层，因为可能会用完可用抵或视频内存碎片。  
   
--   等待，直到固定时间内创建新的图面从未发生调整大小事件。  
+- 等待，直到固定时间内创建新的图面从未发生调整大小事件。  
   
--   创建<xref:System.Windows.Threading.DispatcherTimer>，用于检查每秒钟多次容器维度。  
+- 创建<xref:System.Windows.Threading.DispatcherTimer>，用于检查每秒钟多次容器维度。  
   
 ## <a name="multi-monitor-optimization"></a>多监视器优化  
  呈现系统移动时，可能导致性能显著降低<xref:System.Windows.Interop.D3DImage>到另一个监视器。  
@@ -132,11 +132,11 @@ ms.locfileid: "59307725"
 ## <a name="wpf-software-rendering"></a>WPF 软件呈现  
  在以下情况下的软件中的 UI 线程中的 WPF 呈现以同步方式。  
   
--   打印  
+- 打印  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  当发生以下情况之一时，呈现系统调用<xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A>方法将复制到软件的硬件缓冲区。 默认实现将调用`GetRenderTargetData`方法与您的图面。 因为此调用发生在锁定/解锁模式之外，则可能会失败。 在这种情况下，`CopyBackBuffer`方法将返回`null`和不显示任何图像。  
   

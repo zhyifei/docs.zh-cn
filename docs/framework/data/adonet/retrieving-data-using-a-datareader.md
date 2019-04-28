@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664254"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>使用 DataReader 检索数据
 若要检索的数据使用**DataReader**，创建的实例**命令**对象，并创建**DataReader**通过调用**Command.ExecuteReader**从数据源中检索行。 **DataReader**提供未缓冲的数据流使过程逻辑可以有效地按顺序处理数据源的结果的数据。 **DataReader**时要检索的数据量大，因为这些数据不在内存中缓存是一个不错的选择。

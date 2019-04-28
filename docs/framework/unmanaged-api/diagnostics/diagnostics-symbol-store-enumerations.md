@@ -10,11 +10,11 @@ ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756177"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>诊断符号存储区枚举
 本主题描述诊断符号存储区 API 使用的非托管的枚举。  
@@ -24,7 +24,7 @@ ms.locfileid: "33427289"
  指示内存地址的类型。  
   
  [CorSymSearchPolicyAttributes 枚举](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- 指定要执行搜索的符号读取器时使用的策略。  
+ 指定要执行的符号读取器的搜索时使用的策略。  
   
  [CorSymVarFlag 枚举](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
  指示变量是否由编译器生成。  

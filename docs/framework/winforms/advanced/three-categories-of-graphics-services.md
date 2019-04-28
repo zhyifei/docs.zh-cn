@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651514"
 ---
 # <a name="three-categories-of-graphics-services"></a>图形服务的三个类别
 在 Windows 窗体中的图形产品/服务划分为以下三个大类：  
   
--   二维 (2-d) 矢量图形  
+- 二维 (2-d) 矢量图形  
   
--   图像处理  
+- 图像处理  
   
--   版式  
+- 版式  
   
 ## <a name="2-d-vector-graphics"></a>二维矢量图形  
  二维矢量图形是基元;如直线、 曲线和图形;由组点坐标系统上指定的。 例如，由其两个终结点，指定一条直线和矩形指定点使其左上角和一对数字使其宽度和高度的位置。 指定简单路径是由直线连接的点数组。 贝塞尔样条是指定由四个控制点的复杂的曲线。  

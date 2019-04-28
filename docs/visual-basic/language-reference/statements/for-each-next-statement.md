@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638072"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 语句 (Visual Basic)
 集合中每个元素重复一组语句。  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` 通常在某些条件的评估后使用，因为在`If`...`Then`...`Else`结构。 您可能想要使用`Exit For`满足以下条件：  
   
--   继续循环访问是不必要或不可能。 这可能引起错误的值或终止请求。  
+- 继续循环访问是不必要或不可能。 这可能引起错误的值或终止请求。  
   
--   在捕获到异常`Try`...`Catch`...`Finally`.可以使用`Exit For`末尾的`Finally`块。  
+- 在捕获到异常`Try`...`Catch`...`Finally`.可以使用`Exit For`末尾的`Finally`块。  
   
--   存在无限循环，这是一个循环，无法运行大型或甚至无限数量的次数。 如果检测到此类情况，可以使用`Exit For`来退出循环。 有关详细信息，请参阅[执行操作...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
+- 存在无限循环，这是一个循环，无法运行大型或甚至无限数量的次数。 如果检测到此类情况，可以使用`Exit For`来退出循环。 有关详细信息，请参阅[执行操作...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
   
 ## <a name="iterators"></a>Iterators  
  您使用*迭代器*若要对集合执行自定义迭代。 一个迭代器，可以是函数或`Get`访问器。 它使用`Yield`语句返回一次的集合的每个元素。  

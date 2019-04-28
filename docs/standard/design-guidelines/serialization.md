@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
 ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650149"
 ---
 # <a name="serialization"></a>序列化
 序列化是将对象转换为可以轻松地保持或传输的格式的过程。 例如，可以将对象序列化，使用 HTTP 在 Internet 上传输它，并在目标计算机上对其进行反序列化。  

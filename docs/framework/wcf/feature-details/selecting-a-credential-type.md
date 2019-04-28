@@ -3,11 +3,11 @@ title: 选择凭据类型
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748795"
 ---
 # <a name="selecting-a-credential-type"></a>选择凭据类型
 *凭据*是 Windows Communication Foundation (WCF) 使用建立声明的标识或功能的数据。 例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。 在 WCF 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。 本主题讨论凭据、 如何在 WCF 中，使用它们以及如何选择正确的凭据为应用程序。  
@@ -85,9 +85,9 @@ ms.locfileid: "59167838"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>如何使用客户端凭据对服务的客户端进行身份验证  
  使用 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 属性或 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 属性提供与服务进行通信所需的客户端凭据信息。 安全通道使用此信息对服务的客户端进行身份验证。 身份验证可通过以下两种模式之一来实现：  
   
--   使用 WCF 客户端实例建立安全上下文发送第一条消息之前，客户端凭据使用一次。 然后，所有的应用程序消息都通过安全上下文受到保护。  
+- 使用 WCF 客户端实例建立安全上下文发送第一条消息之前，客户端凭据使用一次。 然后，所有的应用程序消息都通过安全上下文受到保护。  
   
--   客户端凭据用于对发送到服务的每个应用程序消息进行身份验证。 在这种情况下，未在客户端和服务之间建立上下文。  
+- 客户端凭据用于对发送到服务的每个应用程序消息进行身份验证。 在这种情况下，未在客户端和服务之间建立上下文。  
   
 ### <a name="established-identities-cannot-be-changed"></a>已建立的标识无法更改  
  使用第一种方法时，已建立的上下文将与客户端标识永久关联。 也就是说，一旦建立了安全上下文，就无法更改与客户端相关联的标识。  
@@ -108,7 +108,6 @@ ms.locfileid: "59167838"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

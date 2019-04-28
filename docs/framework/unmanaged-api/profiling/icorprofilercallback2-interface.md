@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638399"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 接口
 提供了公共语言运行时 (CLR) 用于探查器已订阅的事件发生时通知代码探查器的方法。 `ICorProfilerCallback2`接口是的扩展[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)接口。 也就是说，它提供了.NET Framework 2.0 版中引入的新回调。  

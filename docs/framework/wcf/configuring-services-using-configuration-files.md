@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608551"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation (WCF) 服务使你能够灵活提供终结点，并设计时在部署时而非在服务行为数据。 本主题概述了当前可用的主要技术。  
@@ -74,24 +74,24 @@ ms.locfileid: "59132569"
 ### <a name="the-service-element"></a>\<服务 > 元素  
  每个服务都具有以下属性：  
   
--   `name`。 指定提供服务协定的实现的类型。 这是完全限定名称，其中包含命名空间、句点和类型名称。 例如， `"MyNameSpace.myServiceType"`。  
+- `name`。 指定提供服务协定的实现的类型。 这是完全限定名称，其中包含命名空间、句点和类型名称。 例如， `"MyNameSpace.myServiceType"`。  
   
--   `behaviorConfiguration`。 指定一个在 `behavior` 元素中找到的 `behaviors` 元素的名称。 指定的行为控制操作，例如服务是否允许模拟。 如果它的值是空的，或者未提供任何 `behaviorConfiguration` ，则向服务中添加默认服务行为集。  
+- `behaviorConfiguration`。 指定一个在 `behavior` 元素中找到的 `behaviors` 元素的名称。 指定的行为控制操作，例如服务是否允许模拟。 如果它的值是空的，或者未提供任何 `behaviorConfiguration` ，则向服务中添加默认服务行为集。  
   
--   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<终结点 > 元素  
  每个终结点都需要以下属性表示的地址、绑定和协定：  
   
--   `address`。 指定服务的统一资源标识符 (URI)，它可以是一个绝对地址，或是一个相对于服务基址给定的地址。 如果设置为空字符串，则指示在创建服务的 <xref:System.ServiceModel.ServiceHost> 时，终结点在指定的基址上可用。  
+- `address`。 指定服务的统一资源标识符 (URI)，它可以是一个绝对地址，或是一个相对于服务基址给定的地址。 如果设置为空字符串，则指示在创建服务的 <xref:System.ServiceModel.ServiceHost> 时，终结点在指定的基址上可用。  
   
--   `binding`。 通常，指定一个类似 <xref:System.ServiceModel.WSHttpBinding>的系统提供的绑定，但也可以指定一个用户定义的绑定。 指定的绑定确定传输协议类型、安全和使用的编码，以及是否支持或启用可靠会话、事务或流。  
+- `binding`。 通常，指定一个类似 <xref:System.ServiceModel.WSHttpBinding>的系统提供的绑定，但也可以指定一个用户定义的绑定。 指定的绑定确定传输协议类型、安全和使用的编码，以及是否支持或启用可靠会话、事务或流。  
   
--   `bindingConfiguration`。 如果必须修改绑定的默认值，则可通过在 `binding` 元素中配置相应的 `bindings` 元素来执行此操作。 此属性应赋予与用于更改默认值的 `name` 元素的 `binding` 属性相同的值。 如果未提供任何名称，或者在绑定中未指定任何 `bindingConfiguration` ，则在终结点中使用绑定类型的默认绑定。  
+- `bindingConfiguration`。 如果必须修改绑定的默认值，则可通过在 `binding` 元素中配置相应的 `bindings` 元素来执行此操作。 此属性应赋予与用于更改默认值的 `name` 元素的 `binding` 属性相同的值。 如果未提供任何名称，或者在绑定中未指定任何 `bindingConfiguration` ，则在终结点中使用绑定类型的默认绑定。  
   
--   `contract`。 指定定义协定的接口。 这是在由 `name` 元素的 `service` 属性指定的公共语言运行库 (CLR) 类型中实现的接口。  
+- `contract`。 指定定义协定的接口。 这是在由 `name` 元素的 `service` 属性指定的公共语言运行库 (CLR) 类型中实现的接口。  
   
--   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<绑定 > 元素  
  `bindings` 元素包含可由任何服务中定义的任何终结点使用的所有绑定的规范。  

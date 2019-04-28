@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610005"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>实现 UI 自动化 ExpandCollapse 控件模式
 > [!NOTE]
@@ -25,24 +25,24 @@ ms.locfileid: "59211655"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 ExpandCollapse 控件模式时，请注意以下准则和约定：  
   
--   聚合控件（通过一些子对象生成，这些子对象提供具有展开/折叠功能的 UI）必须支持 <xref:System.Windows.Automation.ExpandCollapsePattern> 控件模式，而它们的子元素不必支持。 例如，组合框控件是由列表框、按钮和编辑控件组合而成的，但它是唯一一个必须支持 <xref:System.Windows.Automation.ExpandCollapsePattern>的父组合框。  
+- 聚合控件（通过一些子对象生成，这些子对象提供具有展开/折叠功能的 UI）必须支持 <xref:System.Windows.Automation.ExpandCollapsePattern> 控件模式，而它们的子元素不必支持。 例如，组合框控件是由列表框、按钮和编辑控件组合而成的，但它是唯一一个必须支持 <xref:System.Windows.Automation.ExpandCollapsePattern>的父组合框。  
   
     > [!NOTE]
     >  菜单控件是一个例外，它是对各个 MenuItem 对象的聚合。 MenuItem 对象可以支持 <xref:System.Windows.Automation.ExpandCollapsePattern> 控件模式，但是父 Menu 控件无法支持。 Tree 和 Tree Item 控件也存在类似的例外。  
   
--   将某个控件的 <xref:System.Windows.Automation.ExpandCollapseState> 设置为 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>后，该控件的所有 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能当前都处于非活动状态，通过该控件模式可以获取的唯一信息就是 <xref:System.Windows.Automation.ExpandCollapseState>。 如果以后添加任何子对象，则 <xref:System.Windows.Automation.ExpandCollapseState> 会发生更改，同时 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能将被激活。  
+- 将某个控件的 <xref:System.Windows.Automation.ExpandCollapseState> 设置为 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>后，该控件的所有 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能当前都处于非活动状态，通过该控件模式可以获取的唯一信息就是 <xref:System.Windows.Automation.ExpandCollapseState>。 如果以后添加任何子对象，则 <xref:System.Windows.Automation.ExpandCollapseState> 会发生更改，同时 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能将被激活。  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> 仅表示直接子对象的可见性，而不表示所有后代对象的可见性。  
+- <xref:System.Windows.Automation.ExpandCollapseState> 仅表示直接子对象的可见性，而不表示所有后代对象的可见性。  
   
--   展开和折叠功能是特定于控件的。 下面是该行为的示例。  
+- 展开和折叠功能是特定于控件的。 下面是该行为的示例。  
   
-    -   Office Personal Menu 可以是具有三种状态（<xref:System.Windows.Automation.ExpandCollapseState.Expanded>、 <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> 和 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>）的 MenuItem，该 MenuItem 中的控件指定在调用 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 时要采用的状态。  
+    - Office Personal Menu 可以是具有三种状态（<xref:System.Windows.Automation.ExpandCollapseState.Expanded>、 <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> 和 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>）的 MenuItem，该 MenuItem 中的控件指定在调用 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 时要采用的状态。  
   
-    -   对 TreeItem 调用 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 可能会显示所有后代，也可能仅显示直接子级。  
+    - 对 TreeItem 调用 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 可能会显示所有后代，也可能仅显示直接子级。  
   
-    -   如果对某个控件调用 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 以保持该控件的后代的状态，则应当发送可见性更改事件，而不是状态更改事件。如果折叠父控件无法保持该控件的后代的状态，则该控件可能会销毁所有不再可见的后代并引发一个销毁事件，也可能会更改每个后代的 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> 并引发一个可见性更改事件。  
+    - 如果对某个控件调用 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 以保持该控件的后代的状态，则应当发送可见性更改事件，而不是状态更改事件。如果折叠父控件无法保持该控件的后代的状态，则该控件可能会销毁所有不再可见的后代并引发一个销毁事件，也可能会更改每个后代的 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> 并引发一个可见性更改事件。  
   
--   为保证导航操作，最好让对象保留在具有相应可见性状态的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中，而不管其父级的 <xref:System.Windows.Automation.ExpandCollapseState>如何。 如果后代是按需生成的，那么，仅当它们在首次显示之后或者可见时，才能出现在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中。  
+- 为保证导航操作，最好让对象保留在具有相应可见性状态的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中，而不管其父级的 <xref:System.Windows.Automation.ExpandCollapseState>如何。 如果后代是按需生成的，那么，仅当它们在首次显示之后或者可见时，才能出现在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>IExpandCollapseProvider 必需的成员  

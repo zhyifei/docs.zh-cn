@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669326"
 ---
 # <a name="workflow-persistence"></a>工作流持久性
 工作流持久性是指独立于进程或计算机信息持续捕获工作流实例的状态。 其目的在于：在发生系统故障时为工作流实例提供一个已知恢复点，通过卸载当前未主动执行工作的工作流实例来节省内存，或者将工作流实例状态从服务器场中的一个节点移至另一个节点。  
@@ -27,30 +27,30 @@ ms.locfileid: "57715537"
 ## <a name="implicit-persistence-points"></a>隐式持久点  
  以下列表包含当实例存储与工作流关联时持久化工作流所依据的条件的示例。  
   
--   当**TransactionScope**活动完成或**TransactedReceiveScope**活动完成。  
+- 当**TransactionScope**活动完成或**TransactedReceiveScope**活动完成。  
   
--   当工作流实例变为空闲状态并**WorkflowIdleBehavior**对工作流主机设置。 发生这种情况，例如，当使用消息传递活动或**延迟**活动。  
+- 当工作流实例变为空闲状态并**WorkflowIdleBehavior**对工作流主机设置。 发生这种情况，例如，当使用消息传递活动或**延迟**活动。  
   
--   当 WorkflowApplication 变为空闲状态并**PersistableIdle**应用程序的属性设置为**PersistableIdleAction.Persist**。  
+- 当 WorkflowApplication 变为空闲状态并**PersistableIdle**应用程序的属性设置为**PersistableIdleAction.Persist**。  
   
--   当指示主机应用程序保存或卸载工作流实例时。  
+- 当指示主机应用程序保存或卸载工作流实例时。  
   
--   当中止工作流实例或工作流实例结束时。  
+- 当中止工作流实例或工作流实例结束时。  
   
--   当**Persist**活动执行。  
+- 当**Persist**活动执行。  
   
--   当使用 Windows Workflow Foundation 的早期版本开发的工作流实例在可互操作执行过程中遇到持久点时。  
+- 当使用 Windows Workflow Foundation 的早期版本开发的工作流实例在可互操作执行过程中遇到持久点时。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [SQL 工作流实例存储](sql-workflow-instance-store.md)  
+- [SQL 工作流实例存储](sql-workflow-instance-store.md)  
   
--   [实例存储](instance-stores.md)  
+- [实例存储](instance-stores.md)  
   
--   [暂留参与者](persistence-participants.md)  
+- [暂留参与者](persistence-participants.md)  
   
--   [暂留最佳做法](persistence-best-practices.md)  
+- [暂留最佳做法](persistence-best-practices.md)  
   
--   [非暂留工作流实例](non-persisted-workflow-instances.md)  
+- [非暂留工作流实例](non-persisted-workflow-instances.md)  
   
--   [暂停和继续工作流](pausing-and-resuming-a-workflow.md)
+- [暂停和继续工作流](pausing-and-resuming-a-workflow.md)

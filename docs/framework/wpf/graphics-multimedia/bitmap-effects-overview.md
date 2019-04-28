@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752745"
 ---
 # <a name="bitmap-effects-overview"></a>位图效果概述
 位图效果，设计人员和开发人员应用到视觉效果呈现 Windows Presentation Foundation (WPF) 内容。 例如，位图效果，您可以轻松地将应用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果到图像或按钮。  
@@ -23,15 +23,15 @@ ms.locfileid: "59166889"
   
  作为一种特殊情况，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，可以将效果设置为属性上实时<xref:System.Windows.Media.Visual>对象，如<xref:System.Windows.Controls.Button>或<xref:System.Windows.Controls.TextBox>。 像素处理在运行时应用并呈现。 在这种情况下，在呈现时<xref:System.Windows.Media.Visual>自动转换为其<xref:System.Windows.Media.Imaging.BitmapSource>等效和作为输入发送给<xref:System.Windows.Media.Effects.BitmapEffect>。 输出将替换<xref:System.Windows.Media.Visual>对象的默认呈现行为。 这就是为什么<xref:System.Windows.Media.Effects.BitmapEffect>对象强制视觉对象在软件中呈现仅即视觉对象上的没有硬件加速，应用效果时。  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect> 模拟显示聚焦不准的对象。  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> 模拟显示聚焦不准的对象。  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> 创建一个对象周围的颜色的。  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> 创建一个对象周围的颜色的。  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 创建对象后的阴影。  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 创建对象后的阴影。  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect> 创建凹凸效果，根据指定的曲线图像表面。  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> 创建凹凸效果，根据指定的曲线图像表面。  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> 创建的凹凸贴图<xref:System.Windows.Media.Visual>以便从人工光源的深度和纹理效果。  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> 创建的凹凸贴图<xref:System.Windows.Media.Visual>以便从人工光源的深度和纹理效果。  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 位图效果在软件模式下呈现。 应用效果的任何对象也都将以软件形式呈现。 在大型视觉对象上使用位图效果或对位图效果的属性进行动画处理时，性能的下降幅度最大。 这并不表示完全不应该以这种方式使用位图效果，而是应谨慎使用，并进行全面测试以确保用户得到预期的体验。  

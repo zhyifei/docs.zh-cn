@@ -3,11 +3,11 @@ title: 纯功能转换 (Visual Basic) 简介
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
 ms.openlocfilehash: 32cd588d527dbc3e995ea8629f024498c80cba2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614396"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>纯功能转换 (Visual Basic) 简介
 本节介绍函数转换，包括基本概念和支持的语言构造。 本节对面向对象的编程方法与函数转换编程方法进行了对比，并针对如何转换到后者提供了一些建议。 尽管可以在很多编程方案中都使用函数转换，但此处使用 XML 转换作为具体示例。  

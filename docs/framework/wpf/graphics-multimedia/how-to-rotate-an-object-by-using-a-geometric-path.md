@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
 ms.openlocfilehash: 3e35169da7297ec62e0114ab21f4ba81c0a656ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651241"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>如何：使用几何路径旋转对象
 此示例演示如何旋转 （转动） 的对象沿几何路径定义的<xref:System.Windows.Media.PathGeometry>对象。  
@@ -21,9 +21,9 @@ ms.locfileid: "59229207"
 ## <a name="example"></a>示例  
  下面的示例使用三个<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>对象沿几何路径移动一个矩形。  
   
--   第一个<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>之间进行动画处理<xref:System.Windows.Media.RotateTransform>应用于矩形。 该动画会生成角度值。 它使矩形沿着路径的轮廓旋转（转动）。  
+- 第一个<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>之间进行动画处理<xref:System.Windows.Media.RotateTransform>应用于矩形。 该动画会生成角度值。 它使矩形沿着路径的轮廓旋转（转动）。  
   
--   其他两个对象进行动画处理<xref:System.Windows.Media.TranslateTransform.X%2A>并<xref:System.Windows.Media.TranslateTransform.Y%2A>的值<xref:System.Windows.Media.TranslateTransform>应用于矩形。 它们使矩形沿路径水平和垂直移动。  
+- 其他两个对象进行动画处理<xref:System.Windows.Media.TranslateTransform.X%2A>并<xref:System.Windows.Media.TranslateTransform.Y%2A>的值<xref:System.Windows.Media.TranslateTransform>应用于矩形。 它们使矩形沿路径水平和垂直移动。  
   
  [!code-xaml[PathAnimationGallery_snippet#RotateAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/rotateanimationusingpathexample.xaml#rotateanimationusingpathwholepage)]  
   

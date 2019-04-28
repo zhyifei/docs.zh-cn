@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
 ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615020"
 ---
 # <a name="initialization-expressions"></a>初始化表达式
 初始化表达式用于初始化新的对象。 大多数初始化表达式都受到支持，其中包括大多数新的 C# 3.0 和 Visual Basic 9.0 初始化表达式。 LINQ to Entities 查询可以初始化并返回以下类型：  
   
--   在概念模型中定义的零个或多个类型化实体对象的集合或复杂类型的投影。  
+- 在概念模型中定义的零个或多个类型化实体对象的集合或复杂类型的投影。  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]支持的 CLR 类型。  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]支持的 CLR 类型。  
   
--   内联集合。  
+- 内联集合。  
   
--   匿名类型。  
+- 匿名类型。  
   
  下面的示例中以查询表达式语法演示了匿名类型初始化：  
   

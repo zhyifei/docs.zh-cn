@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640503"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows 窗体中的自动缩放
 
 借助自动缩放功能，在某台计算机上以某种显示分辨率或系统字体设计的窗体及其控件可以在其他计算机上以不同的显示分辨率或系统字体适当显示。 它确保窗体及其控件将以智能方式调整大小，以便与本机 Windows 以及用户和其他开发人员的计算机上的其他应用程序保持一致。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 支持自动缩放和视觉样式，这使 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序可以在与每个用户的计算机上的本机 Windows 应用程序比较时保持一致的外观和感觉。
 
-大多数情况下，自动缩放可在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 及更高版本中按预期方式工作。 但是，字体方案更改可能会产生问题。 有关如何解决此问题的示例，请参阅[如何： 响应 Windows 窗体应用程序中的字体方案更改](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
+大多数情况下，自动缩放可在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 及更高版本中按预期方式工作。 但是，字体方案更改可能会产生问题。 有关如何解决此问题的示例，请参阅[如何：响应 Windows 窗体应用程序中的字体方案更改](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
 
 ## <a name="need-for-automatic-scaling"></a>自动缩放的必要性
 

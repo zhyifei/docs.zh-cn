@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abeb731ecd66e4412f904b085abcfc7b5b3a3c4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665034"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen 方法
 创建新的公钥/私钥对，以便强名称使用。  
@@ -45,9 +45,9 @@ HRESULT StrongNameKeyGen (
  `dwFlags`  
  [in]一个值，指定是否保留注册密钥。 支持以下值：  
   
--   0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
+- 0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
   
--   0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
+- 0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
   
  `ppbKeyBlob`  
  [out]返回的公共/专用密钥对。  

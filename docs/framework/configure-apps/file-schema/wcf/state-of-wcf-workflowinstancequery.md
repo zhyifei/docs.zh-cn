@@ -3,11 +3,11 @@ title: <state> WCF <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
 ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757958"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<状态 > 的 WCF， \<workflowInstanceQuery >
 表示创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。  
@@ -78,11 +78,11 @@ ms.locfileid: "55270838"
 |Idle|工作流实例处于空闲状态。|  
 |Persisted|工作流实例已保留。|  
 |Resumed|工作流实例已恢复。|  
-|Started|工作流实例已启动。|  
+|已开始|工作流实例已启动。|  
 |UnhandledException|工作流实例遇到了未经处理的异常。|  
-|Unloaded|工作流实例已卸载。|  
+|已卸载|工作流实例已卸载。|  
 |Canceled|工作流实例已取消。|  
-|挂起|工作流实例处于挂起状态。|  
+|挂起的|工作流实例处于挂起状态。|  
 |Terminated|工作流实例已终止。|  
 |Unsuspended|工作流实例已取消挂起。|  
   

@@ -3,26 +3,26 @@ title: 安全协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748572"
 ---
 # <a name="security-protocols-version-10"></a>安全协议版本 1.0
 Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。 本部分介绍 Windows Communication Foundation (WCF) 1.0 版细节 (在中实现<xref:System.ServiceModel.Channels.SecurityBindingElement>) 以下 Web 服务安全协议。  
   
-|规范/文档|Link|  
+|规范/文档|链接|  
 |-|-|  
-|WSS：SOAP 消息安全 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
-|WSS：用户名令牌配置文件 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS：X509 令牌配置文件 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
-|WSS：SAML 1.1 令牌配置文件 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
-|WSS：SOAP 消息安全 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS:SOAP 消息安全 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS:用户名令牌配置文件 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS:X509 令牌配置文件 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS:SAML 1.1 令牌配置文件 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS:SOAP 消息安全 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
 |WSS 用户名令牌配置文件 1.1|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|WSS：X.509 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
-|WSS：Kerberos 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
-|WSS：SAML 1.1 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WSS:X.509 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS:Kerberos 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS:SAML 1.1 令牌配置文件 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
 |WS-Secure 对话|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
 |WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |应用说明：<br /><br /> 将 WS-Trust 用于 TLS 握手|即将发布|  
@@ -32,11 +32,11 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
  WCF，版本 1，提供了可用作 Web 服务安全配置的基础的 17 身份验证模式。 每一种模式都针对一组常用部署需求进行了优化，如：  
   
--   用于对客户端和服务进行身份验证的凭据。  
+- 用于对客户端和服务进行身份验证的凭据。  
   
--   消息或传输安全保护机制。  
+- 消息或传输安全保护机制。  
   
--   消息交换模式。  
+- 消息交换模式。  
   
 |身份验证模式|客户端身份验证|服务器身份验证|模式|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -45,7 +45,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 |KerberosOverTransport|Windows|X509|传输|  
 |IssuedTokenOverTransport|联合|X509|传输|  
 |SspiNegotiatedOverTransport|协商的 Windows Sspi|协商的 Windows Sspi|传输|  
-|AnonymousForCertificate|无|X509|消息|  
+|AnonymousForCertificate|None|X509|消息|  
 |UserNameForCertificate|用户名/密码|X509|消息|  
 |MutualCertificate|X509|X509|消息|  
 |MutualCertificateDuplex|X509|X509|消息|  
@@ -53,7 +53,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 |Kerberos|Windows|Windows|消息|  
 |IssuedToken|联合|联合|消息|  
 |SspiNegotiated|协商的 Windows Sspi|协商的 Windows Sspi|消息|  
-|AnonymousForSslNegotiated|无|X509、TLS-Nego|消息|  
+|AnonymousForSslNegotiated|None|X509、TLS-Nego|消息|  
 |UserNameForSslNegotiated|用户名/密码|X509、TLS-Nego|消息|  
 |MutualSslNegotiated|X509|X509、TLS-Nego|消息|  
 |IssuedTokenForSslNegotiated|联合|X509、TLS-Nego|消息|  
@@ -116,7 +116,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
  R1204 如果使用 X509TokenProfile1.1，则对 X509 安全令牌的外部引用应该使用 WS-Security 1.1 引入的指纹。  
   
- WCF 支持 X509IssuerSerial。 但也有 x509issuerserial 的互操作性问题： WCF 使用字符串来比较 X509IssuerSerial 的两个值。 因此如果一个对组件的使用者名称重新排序，并将对证书的引用发送到 WCF 服务，它可能会找到。  
+ WCF 支持 X509IssuerSerial。 但是有 x509issuerserial 的互操作性问题：WCF 使用字符串来比较 X509IssuerSerial 的两个值。 因此如果一个对组件的使用者名称重新排序，并将对证书的引用发送到 WCF 服务，它可能会找到。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 令牌  
  WCF 支持 KerberosTokenProfile1.1 用于 Windows 身份验证具有以下约束：  
@@ -142,7 +142,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 ### <a name="23-signature-protection"></a>2.3 签名保护  
  在使用“签名前加密”时，建议保护签名以防止对加密内容或签名密钥进行猜测的蛮力攻击（尤其是在自定义令牌与弱密钥材料一起使用时）。  
   
-### <a name="24-algorithm-suite"></a>2.4 算法套件  
+### <a name="24-algorithm-suite"></a>2.4 算法组  
  WCF 支持 Security Policy 1.1 中列出的所有算法套件。  
   
 ### <a name="25-key-derivation"></a>2.5 密钥派生  
@@ -157,7 +157,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
 |||  
 |-|-|  
 |Strict|根据“使用前先声明”的一般原则，各项按照 Security Policy 第 7.7.1 节中所述的编号布局规则添加到安全标头中。|  
-|Lax|各项以任何符合“WSS: SOAP 消息安全”的顺序添加到安全标头中。|  
+|Lax|项添加到安全头中任何符合 WSS 的顺序：SOAP 消息安全。|  
 |LaxTimestampFirst|与 Lax 相同，只是安全标头中的第一项必须为 wsse:Timestamp|  
 |LaxTimestampLast|与 lax 相同，只是安全标头中的最后一项必须为 wsse:Timestamp|  
   
@@ -179,7 +179,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
  安全标头布局：Strict  
   
- 算法组：Basic256  
+ 算法套件：Basic256  
   
 #### <a name="611-usernameovertransport"></a>6.1.1 UsernameOverTransport  
  在此身份验证模式下，客户端使用“用户名令牌”进行身份验证，该令牌作为签名支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。 在传输层，服务是用 X.509 证书进行身份验证的。 所用绑定为传输绑定。  
@@ -640,7 +640,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 ### <a name="62-using-x509-certificates-for-service-authentication"></a>6.2 将 X.509 证书用于服务身份验证  
- 本节介绍以下身份验证模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。  
+ 本部分介绍以下身份验证模式：MutualCertificate WSS1.0、 CertificateDuplex、 MutualCertificate WSS1.1、 AnonymousForCertificate、 UserNameForCertificate 和 IssuedTokenForCertificate。  
   
 #### <a name="621-mutualcertificate-wss10"></a>6.2.1 MutualCertificate WSS1.0  
  在此身份验证模式下，客户端使用 X.509 证书进行身份验证，该证书作为发起方令牌出现在 SOAP 层上。 同样使用 X.509 证书对服务进行身份验证。  
@@ -649,7 +649,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  发起方令牌：客户端的 X.509 证书，包含模式设置为 …/IncludeToken/AlwaysToRecipient  
   
- 接收方令牌：服务器的 X.509 证书，包含模式设置为 …/IncludeToken/Never  
+ 接收方令牌：服务器的 X.509 证书，包含模式设置.../IncludeToken/Never  
   
  令牌保护：False  
   
@@ -721,7 +721,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -811,9 +811,9 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  所用绑定为带有以下属性值的非对称绑定：  
   
- 发起方令牌：客户端的 X509 证书，包含模式设置为 …/IncludeToken/AlwaysToRecipient  
+ 发起方令牌：客户端的 X509 证书，包含模式设置为.../IncludeToken/AlwaysToRecipient  
   
- 接收方令牌：服务器的 X509 证书，包含模式设置为 …/IncludeToken/AlwaysToInitiator  
+ 接收方令牌：服务器的 X509 证书，包含模式设置为.../IncludeToken/AlwaysToInitiator  
   
  令牌保护：False  
   
@@ -885,7 +885,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求和响应  
   
 ```xml  
@@ -938,7 +938,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  身份验证模式 AnonymousForCertificate、UsernameForCertificate、MutualCertificate WSS11 和 IssuedTokenForCertificate 都使用具有以下属性值的类似的 sp:SymmetricBinding 实例：  
   
- 保护令牌：服务器的 X509 证书，包含模式设置为 …/IncludeToken/Never  
+ 保护令牌：服务器的 X509 证书，包含模式设置为.../IncludeToken/Never  
 令牌保护：False  
   
  整个标头和正文签名：True  
@@ -1017,7 +1017,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  请参见上面 6.2.3 中的“策略”以了解绑定详细信息  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -1138,7 +1138,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -1262,7 +1262,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -1411,7 +1411,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -1536,7 +1536,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ## <a name="63-kerberos"></a>6.3 Kerberos  
  在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。 该票证还提供服务器身份验证。 所用绑定为对称绑定，具有以下属性：  
   
- 保护令牌：Kerberos 票证，包含模式设置为 .../IncludeToken/Once  
+ 保护令牌：Kerberos 票证，包含模式设置为.../IncludeToken/Once  
 令牌保护：False  
   
  整个标头和正文签名：True  
@@ -1599,7 +1599,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -1667,7 +1667,7 @@ TBD
 #### <a name="64-issuedtoken"></a>6.4 IssuedToken  
  在此身份验证模式下，客户端不向服务进行身份验证，而是提供一个由 STS 颁发的令牌，并证明掌握了共享密钥。 服务也不向客户端进行身份验证，而是由 STS 将共享密钥作为颁发的令牌的一部分进行加密，这样，只有服务才能解密该密钥。 所用绑定为对称绑定，具有以下属性：  
   
- 保护令牌：颁发的令牌，包含模式设置为 .../IncludeToken/AlwaysToRecipient  
+ 保护令牌：颁发的令牌，包含模式设置为.../IncludeToken/AlwaysToRecipient  
 令牌保护：False  
   
  整个标头和正文签名：True  
@@ -1735,7 +1735,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -1836,7 +1836,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   
  所用绑定为对称绑定，具有以下属性：  
   
- 保护令牌：SslContextToken，包含模式设置为 .../IncludeToken/Never  
+ 保护令牌：SslContextToken，包含模式设置为.../IncludeToken/Never  
 令牌保护：False  
   
  整个标头和正文签名：True  
@@ -1908,7 +1908,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   
  请参见上面 6.5.1 中的“策略”以了解绑定详细信息。  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -2025,7 +2025,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -2154,7 +2154,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -2298,7 +2298,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -2397,7 +2397,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ### <a name="66-sspinegotiated"></a>6.6 SspiNegotiated  
  在此身份验证模式下，将使用协商协议来执行客户端和服务器身份验证。 如果可能，就使用 Kerberos，否则使用 NTLM。 所用绑定为对称绑定，具有以下属性：  
   
- 保护令牌：SpnegoContextToken，包含模式设置为 .../IncludeToken/AlwaysToRecipient  
+ 保护令牌：SpnegoContextToken，包含模式设置为.../IncludeToken/AlwaysToRecipient  
 令牌保护：False  
   
  整个标头和正文签名：True  
@@ -2459,7 +2459,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  
@@ -2669,7 +2669,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、EncryptSignature  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>安全标头示例：SignBeforeEncrypt、 EncryptSignature  
  请求  
   
 ```xml  

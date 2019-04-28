@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
 ms.openlocfilehash: bd911b1586f7f4a4816efa32480ef99ca12404f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699521"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>如何：以一致的方式引用 X.509 证书
 可以采用下列多种方式来标识证书：证书哈希、颁发者和序列号或者使用者密钥标识符 (SKI)。 SKI 为证书的使用者公钥提供唯一标识，通常用于处理 XML 数字签名。 SKI 值通常为形式的 X.509 证书的一部分*X.509 证书扩展*。 Windows Communication Foundation (WCF) 具有一个默认*引用样式*如果证书中缺少 SKI 扩展，则使用颁发者和序列号。 如果证书中包含 SKI 扩展，该默认引用样式将使用 SKI 来指向证书。 如果在应用程序开发，使用的证书不使用使用 SKI 扩展的证书的 SKI 扩展的交换机中，使用 WCF 生成消息中的引用样式也会更改。  
@@ -28,13 +28,13 @@ ms.locfileid: "59176197"
 ## <a name="compiling-the-code"></a>编译代码  
  编译该代码需要以下命名空间：  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.ServiceModel.Security.Tokens>  
+- <xref:System.ServiceModel.Security.Tokens>  
   
 ## <a name="see-also"></a>请参阅
 

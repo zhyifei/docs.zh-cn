@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696218"
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
 客户端应用程序必须创建、 配置和使用 WCF 客户端或通道对象与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供了对象和步骤中创建基本的客户端和通道对象并使用它们所涉及的概述。  
@@ -20,13 +20,13 @@ ms.locfileid: "59314875"
 ## <a name="overview"></a>概述  
  本主题描述与以下内容相关的行为和问题：  
   
--   通道和会话生存期。  
+- 通道和会话生存期。  
   
--   处理异常。  
+- 处理异常。  
   
--   了解阻塞问题。  
+- 了解阻塞问题。  
   
--   以交互方式初始化通道。  
+- 以交互方式初始化通道。  
   
 ### <a name="channel-and-session-lifetimes"></a>通道和会话生存期  
  Windows Communication Foundation (WCF) 应用程序包括两种类别的通道、 数据报和会话通道。  

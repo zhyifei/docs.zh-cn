@@ -3,11 +3,11 @@ title: 检索数据库架构信息
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
 ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664241"
 ---
 # <a name="retrieving-database-schema-information"></a>检索数据库架构信息
 从数据库获取架构信息通过架构发现过程来完成。 架构发现，应用程序可以请求托管提供程序查找并返回有关数据库架构的信息也称为*元数据*，给定数据库。 不同的数据库架构元素（例如表、列和存储过程）通过架构集合进行公开。 每个架构集合包含所使用的提供程序特定的各种架构信息。  

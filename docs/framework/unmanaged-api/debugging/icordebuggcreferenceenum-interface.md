@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651618"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum 接口
 提供针对将进行垃圾回收的对象的枚举器。  
@@ -39,11 +39,11 @@ ms.locfileid: "59080821"
   
  [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)由该方法填充集合中的对象表示三种类型的对象：  
   
--   从所有托管堆栈的对象。 这包括实时引用中托管的代码，以及由公共语言运行时创建的对象。  
+- 从所有托管堆栈的对象。 这包括实时引用中托管的代码，以及由公共语言运行时创建的对象。  
   
--   来自句柄表的对象。 这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。  
+- 来自句柄表的对象。 这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。  
   
--   来自终结器队列的对象。 终结器队列根对象，直到运行终结器。  
+- 来自终结器队列的对象。 终结器队列根对象，直到运行终结器。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

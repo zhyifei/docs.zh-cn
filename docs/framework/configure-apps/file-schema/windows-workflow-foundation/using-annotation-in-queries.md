@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 50855b30-d5fe-49a9-89d3-3f1bfd670958
 ms.openlocfilehash: fd2d98852ca44e3485ddcf4be29d505b39011698
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614422"
 ---
 # <a name="using-annotation-in-queries"></a>在查询中使用批注
 通过批注，可以使用可在生成时后配置的某个值任意标记跟踪记录。 例如，可能会在多个工作流使用"邮件服务器"来标记希望多个跟踪记录 = ="Mail Server1"。 这样便于在以后查询跟踪记录时查找带有此标记的所有记录。  

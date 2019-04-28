@@ -3,20 +3,20 @@ title: 流消息传输
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747571"
 ---
 # <a name="streaming-message-transfer"></a>流消息传输
 Windows Communication Foundation (WCF) 传输来传输消息支持两种模式：  
   
--   缓冲传输将整个消息保留在内存缓冲区中，直到传输完成。 必须完整传递缓冲的消息，接收方才能读取该消息。  
+- 缓冲传输将整个消息保留在内存缓冲区中，直到传输完成。 必须完整传递缓冲的消息，接收方才能读取该消息。  
   
--   流传输以流的形式公开消息。 接收方在消息完整传递之前即可开始处理消息。  
+- 流传输以流的形式公开消息。 接收方在消息完整传递之前即可开始处理消息。  
   
--   流传输消除了对大型内存缓冲区的要求，从而提高了服务的可伸缩性。 更改传输模式是否能够提高可伸缩性取决于所传输的消息大小。 消息大小越大，使用流传输越有利。  
+- 流传输消除了对大型内存缓冲区的要求，从而提高了服务的可伸缩性。 更改传输模式是否能够提高可伸缩性取决于所传输的消息大小。 消息大小越大，使用流传输越有利。  
   
  默认情况下，HTTP、TCP/IP 和命名管道传输协议使用缓冲传输。 本文档介绍如何将这些传输协议从缓冲传输模式切换到流传输模式以及这样做的结果。  
   

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aab42e939651d75b1933962d72ba8bec1090f52d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753454"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly 方法
 关闭该程序集文件。 在关闭所有其他文件，但在关闭的程序集文件之前，请调用此方法。 请勿对未绑定模块调用此方法。  

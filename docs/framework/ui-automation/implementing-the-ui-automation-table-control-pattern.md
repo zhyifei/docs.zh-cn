@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 ms.openlocfilehash: dc1ddfaa13b83d06b1d3211e9d21bd82bfeabc3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646007"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>实现 UI 自动化 Table 控件模式
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59144646"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Table 控件模式时，请注意以下准则和约定：  
   
--   对个别单元格的内容的访问是通过二维逻辑坐标系统或由所需的 <xref:System.Windows.Automation.Provider.IGridProvider> 的并发实现提供的数组来实现。  
+- 对个别单元格的内容的访问是通过二维逻辑坐标系统或由所需的 <xref:System.Windows.Automation.Provider.IGridProvider> 的并发实现提供的数组来实现。  
   
--   列或行标头可包含在表对象中或可以为与表对象相关联的单独标头对象。  
+- 列或行标头可包含在表对象中或可以为与表对象相关联的单独标头对象。  
   
--   列和行标头可能包含主标头以及任何支持的标头。  
+- 列和行标头可能包含主标头以及任何支持的标头。  
   
 > [!NOTE]
 >  这一概念在 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 电子表格中变得显而易见，一个用户已在表格中定义了“名字”列。 此列现在有两个标头 — 用户定义的“名字”标头和应用程序分配的该列的字母数字名称。  
   
--   请参阅[实现 UI 自动化 Grid 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)相关的网格功能。  
+- 请参阅[实现 UI 自动化 Grid 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)相关的网格功能。  
   
  ![具有复杂标题项的表。](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 具有复杂列标头的表示例  

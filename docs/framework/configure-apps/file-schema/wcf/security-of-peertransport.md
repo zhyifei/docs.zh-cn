@@ -3,11 +3,11 @@ title: <security> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670490"
 ---
 # <a name="security-of-peertransport"></a>\<安全 > 的\<peerTransport >
 包含与对等通道相关的安全设置，包括使用的身份验证类型和用于消息传输的安全性。  

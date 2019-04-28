@@ -3,11 +3,11 @@ title: 有关跟踪的安全注意事项和有用提示
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663708"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>有关跟踪的安全注意事项和有用提示
 本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。  
@@ -22,11 +22,11 @@ ms.locfileid: "59130789"
   
  下面的提示可帮助您避免意外公开跟踪文件的内容：  
   
--   确保在 WebHost 和自承载方案中都使用访问控制列表 (ACL) 对日志文件进行保护。  
+- 确保在 WebHost 和自承载方案中都使用访问控制列表 (ACL) 对日志文件进行保护。  
   
--   选择无法使用 Web 请求轻松提供的文件扩展名。 例如，.xml 文件扩展名不是一个安全的选择。 可以参考 IIS 管理指南以查看可提供的扩展名的列表。  
+- 选择无法使用 Web 请求轻松提供的文件扩展名。 例如，.xml 文件扩展名不是一个安全的选择。 可以参考 IIS 管理指南以查看可提供的扩展名的列表。  
   
--   为日志文件位置指定绝对路径，该位置应当在 WebHost vroot 公共目录之外，以防止外部方使用 Web 浏览器来访问它。  
+- 为日志文件位置指定绝对路径，该位置应当在 WebHost vroot 公共目录之外，以防止外部方使用 Web 浏览器来访问它。  
   
  默认情况下，不会在跟踪和已记录消息中记录密钥和个人身份信息 (PII)（例如用户名和密码）。 但是，计算机管理员可以使用 Machine.config 文件的 `enableLoggingKnownPII` 元素中的 `machineSettings` 属性来允许计算机上运行的应用程序记录已知的个人身份信息 (PII)，如下所示：  
   

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
 ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641382"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的笔、直线和矩形
 若要绘制的线条[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]你需要创建<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供的实际执行绘制操作的方法和<xref:System.Drawing.Pen>对象将存储属性，例如线条颜色、 宽度和样式。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
 ms.openlocfilehash: 55c2294496800fb8692d3c8215c1c13f7dac9b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746946"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>如何：创建包含 ToolStripPanel 控件的 MDI 窗体
 可以创建四面均框有 <xref:System.Windows.Forms.ToolStrip> 控件的多文档界面 (MDI) 窗体。  
@@ -35,7 +35,7 @@ ms.locfileid: "59096961"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   

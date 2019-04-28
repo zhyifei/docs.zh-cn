@@ -3,27 +3,27 @@ title: 非持久工作流实例
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644260"
 ---
 # <a name="non-persisted-workflow-instances"></a>非持久工作流实例
 在创建工作流的新实例（该实例在 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 中保留其状态）时，服务主机将在实例存储中为该服务实例创建一个项。 随后，当第一次持久化工作流实例时，<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 将存储当前实例状态。 如果工作流承载于 Windows 进程激活服务中，则服务部署数据也将在第一次持久化实例时写入实例存储中。  
   
- 只要未持久化工作流实例，它是在**非持久化**状态。 当处于此状态时，将无法在发生应用程序域回收、主机故障或计算机故障后恢复工作流实例。  
+ 只要工作流实例未保持不变，是在**非持久化**状态。 当处于此状态时，将无法在发生应用程序域回收、主机故障或计算机故障后恢复工作流实例。  
   
 ## <a name="the-non-persisted-state"></a>非持久状化态  
  尚未持久化的持久工作流实例在下列情况下将保持非持久化状态：  
   
--   在第一次持久化工作流实例之前，服务主机发生崩溃。 工作流实例将保留在实例存储中且未恢复。 如果获得关联的消息，则该工作流实例会再一次进入活动状态。  
+- 在第一次持久化工作流实例之前，服务主机发生崩溃。 工作流实例将保留在实例存储中且未恢复。 如果获得关联的消息，则该工作流实例会再一次进入活动状态。  
   
--   该工作流实例第一次持久化之前遇到异常。 将发生以下情况，具体取决于返回的 <xref:System.Activities.UnhandledExceptionAction>：  
+- 该工作流实例第一次持久化之前遇到异常。 将发生以下情况，具体取决于返回的 <xref:System.Activities.UnhandledExceptionAction>：  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> 将设置为 <xref:System.Activities.UnhandledExceptionAction.Abort>：当发生异常时，服务部署信息将写入实例存储，并从内存中卸载该工作流实例。 工作流实例将保持非持久化状态且无法重新加载。  
+    - <xref:System.Activities.UnhandledExceptionAction> 设置为<xref:System.Activities.UnhandledExceptionAction.Abort>:异常发生时，将服务部署信息写入实例存储区，和是从内存中卸载工作流实例。 工作流实例将保持非持久化状态且无法重新加载。  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> 将设置为 <xref:System.Activities.UnhandledExceptionAction.Cancel> 或 <xref:System.Activities.UnhandledExceptionAction.Terminate>：当发生异常时，服务部署信息将写入实例存储，并且活动实例状态将设置为 <xref:System.Activities.ActivityInstanceState.Closed>。  
+    - <xref:System.Activities.UnhandledExceptionAction> 设置为<xref:System.Activities.UnhandledExceptionAction.Cancel>或<xref:System.Activities.UnhandledExceptionAction.Terminate>:当发生异常，将服务部署信息写入实例存储区，且活动实例状态设置为<xref:System.Activities.ActivityInstanceState.Closed>。  
   
  若要最大程度地降低遇到已卸载非持久化工作流实例的风险，建议您在工作流生命周期的早期持久化工作流。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33516745"
   
  若要在 SQL 工作流实例存储中查找非持久化实例，可使用以下 SQL 查询：  
   
--   此查询将查找所有未持久化的实例，并返回这些实例的 ID 和创建时间（用 UTC 时间格式存储）。  
+- 此查询将查找所有未持久化的实例，并返回这些实例的 ID 和创建时间（用 UTC 时间格式存储）。  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ ms.locfileid: "33516745"
         where IsInitialized = 0  
     ```  
   
--   此查询将查找所有未持久化且未加载的实例，并返回这些实例的 ID 和创建时间（用 UTC 时间格式存储）。  
+- 此查询将查找所有未持久化且未加载的实例，并返回这些实例的 ID 和创建时间（用 UTC 时间格式存储）。  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ ms.locfileid: "33516745"
             and CurrentMachine is NULL  
     ```  
   
--   此查询将查找所有未持久化的且挂起的实例，并返回这些实例的 ID、创建时间（用 UTC 时间格式存储）、挂起原因和异常名称。  
+- 此查询将查找所有未持久化的且挂起的实例，并返回这些实例的 ID、创建时间（用 UTC 时间格式存储）、挂起原因和异常名称。  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   

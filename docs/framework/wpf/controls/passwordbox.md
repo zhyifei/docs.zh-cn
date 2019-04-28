@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], PasswordBox
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
 ms.openlocfilehash: c3f86230bd0193ea3525e88d41e8e48d2d90684a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770625"
 ---
 # <a name="passwordbox"></a>密码框
 <xref:System.Windows.Controls.PasswordBox>控件用于输入敏感或私人信息。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
 ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641280"
 ---
 # <a name="polygons-in-gdi"></a>GDI+ 中的多边形
 多边形是闭合的形状有三个或多个直条边。 例如，一个三角形是利用三边的多边形、 矩形是具有四个边的多边形和一个五边形是有五条边的多边形。 下图显示了几个多边形。  

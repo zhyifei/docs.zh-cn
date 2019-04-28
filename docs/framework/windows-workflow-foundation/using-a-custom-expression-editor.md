@@ -3,18 +3,18 @@ title: 使用自定义表达式编辑器
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669597"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自定义表达式编辑器
 可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。 在以下几种情况下，您可能需要使用自定义表达式编辑器：  
   
--   为 IntelliSense 和重新承载的工作流设计器中的其他丰富的编辑功能提供支持。 必须提供此功能，因为不能在重新承载的应用程序中使用默认 Visual Studio 表达式编辑器。  
+- 为 IntelliSense 和重新承载的工作流设计器中的其他丰富的编辑功能提供支持。 必须提供此功能，因为不能在重新承载的应用程序中使用默认 Visual Studio 表达式编辑器。  
   
--   若要简化的表达式编辑体验对于业务分析师用户，以便它们，例如，不必学习 Visual Basic 或 Visual Basic 表达式处理。  
+- 若要简化的表达式编辑体验对于业务分析师用户，以便它们，例如，不必学习 Visual Basic 或 Visual Basic 表达式处理。  
   
  实现自定义表达式编辑器需要执行以下三个基本步骤：  
   

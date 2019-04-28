@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645677"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition 方法
 获取位于给定位置，将数组视为从零开始的一维数组的元素。  
@@ -44,7 +44,7 @@ HRESULT GetElementAtPosition (
  [out]指向一个 ICorDebugValue 对象，表示元素的值的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 多维数组的布局遵循 c + + 样式的数组布局。  
+ 多维数组的布局遵循C++的数组布局样式。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

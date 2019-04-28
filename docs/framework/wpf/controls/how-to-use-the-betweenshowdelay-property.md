@@ -6,11 +6,11 @@ helpviewer_keywords:
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
 ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696049"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>如何：使用 BetweenShowDelay 属性
 此示例演示如何使用<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>时间属性，以便快速显示工具提示，且很少或没有延迟 — 当用户移动鼠标指针从一个工具提示直接到另一个。  
@@ -20,9 +20,9 @@ ms.locfileid: "59139589"
   
  在以下情况下，任一<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>适用，这将导致要等待一秒才会出现的第二个椭圆的工具提示：  
   
--   如果所用时间将移到第二个按钮是超过两秒的时间。  
+- 如果所用时间将移到第二个按钮是超过两秒的时间。  
   
--   如果工具提示的第一个椭圆的时间间隔开始时不可见。  
+- 如果工具提示的第一个椭圆的时间间隔开始时不可见。  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  

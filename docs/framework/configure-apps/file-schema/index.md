@@ -2,32 +2,27 @@
 title: .NET Framework 的配置文件架构
 ms.date: 05/01/2017
 helpviewer_keywords:
-- .NET Framework application configuration, configuration schema
-- machine configuration files
-- application configuration files, schema
-- app.config files, schema
-- schema configuration settings
-- schemas, configuration settings
-- enterprisesec.config files
-- well-formed XML
-- enterprisesec configuration files
-- security.config files
-- security [.NET Framework], configuration files
-- application development [.NET Framework], schema
-- XML tags
-- container tags
-- machine.config files
-- configuration schema [.NET Framework]
-- configuration settings [.NET Framework], applications
-- configuration file reference [.NET Framework]
+  - '.NET Framework application configuration, configuration schema'
+  - machine configuration files
+  - 'application configuration files, schema'
+  - 'app.config files, schema'
+  - schema configuration settings
+  - 'schemas, configuration settings'
+  - enterprisesec.config files
+  - well-formed XML
+  - enterprisesec configuration files
+  - security.config files
+  - 'security [.NET Framework], configuration files'
+  - 'application development [.NET Framework], schema'
+  - XML tags
+  - container tags
+  - machine.config files
+  - 'configuration schema [.NET Framework]'
+  - 'configuration settings [.NET Framework], applications'
+  - 'configuration file reference [.NET Framework]'
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674901"
 ---
+
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework 的配置文件架构
 
 配置文件是可用来更改应用设置并为其设置策略的标准 XML 文件。 .NET Framework 配置架构由一些可在配置文件中用来控制应用行为的元素组成。 本节的目录反映了架构的层次结构：启动、运行时、网络和其他配置设置类型。

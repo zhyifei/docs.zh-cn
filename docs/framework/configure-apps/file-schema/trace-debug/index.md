@@ -2,21 +2,15 @@
 title: 跟踪和调试设置架构
 ms.date: 03/30/2017
 helpviewer_keywords:
-- tracing [.NET Framework], trace and debug settings schema
-- configuration schema [.NET Framework], trace and debug settings
-- configuration settings [.NET Framework], tracing
-- schema configuration settings
-- configuration settings [.NET Framework], debugging
-- trace listeners, trace and debug settings schema
-- configuration sections [.NET Framework]
-- elements [.NET Framework], trace and debug settings
+  - 'tracing [.NET Framework], trace and debug settings schema'
+  - 'configuration schema [.NET Framework], trace and debug settings'
+  - 'configuration settings [.NET Framework], tracing'
+  - schema configuration settings
+  - 'configuration settings [.NET Framework], debugging'
+  - 'trace listeners, trace and debug settings schema'
+  - 'configuration sections [.NET Framework]'
+  - 'elements [.NET Framework], trace and debug settings'
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177432"
 ---
 # <a name="trace-and-debug-settings-schema"></a>跟踪和调试设置架构
 跟踪和调试设置指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。  

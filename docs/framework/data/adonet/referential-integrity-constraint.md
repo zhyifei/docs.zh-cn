@@ -3,24 +3,24 @@ title: 引用完整性约束
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
 ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665283"
 ---
 # <a name="referential-integrity-constraint"></a>引用完整性约束
 一个*引用完整性约束*在实体数据模型 (EDM) 是关系数据库中的引用完整性约束类似。 与数据库表中某一列 （或列） 可以引用另一个表的主键相同的方式[属性](../../../../docs/framework/data/adonet/property.md)（或属性） 的[实体类型](../../../../docs/framework/data/adonet/entity-type.md)可以引用[实体键](../../../../docs/framework/data/adonet/entity-key.md)的另一个实体类型。 引用的实体类型称为*主体端*的约束。 引用主体端的实体类型称为*依赖端*的约束。  
   
  引用完整性约束定义的一部分[关联](../../../../docs/framework/data/adonet/association-type.md)两个实体类型之间。 引用完整性约束的定义指定了以下信息：  
   
--   约束的主体端。 （一个实体类型，其实体键由依赖端引用。）  
+- 约束的主体端。 （一个实体类型，其实体键由依赖端引用。）  
   
--   主体端的实体键。  
+- 主体端的实体键。  
   
--   约束的依赖端。 （一个实体类型，它的一个或多个属性引用主体端的实体键。）  
+- 约束的依赖端。 （一个实体类型，它的一个或多个属性引用主体端的实体键。）  
   
--   依赖端的一个或多个引用属性。  
+- 依赖端的一个或多个引用属性。  
   
  EDM 中的引用完整性约束的用途是确保始终存在有效关联。 有关详细信息，请参阅[外键属性](../../../../docs/framework/data/adonet/foreign-key-property.md)。  
   

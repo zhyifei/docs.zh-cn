@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703785"
 ---
 # <a name="flow-document-overview"></a>流文档概述
 流文档旨在优化查看和可读性。 流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列内容，而不是设置为一个预定义的布局。 此外，流文档还提供一些高级文档功能，例如分页和分栏。 本主题概述了流文档及其创建方式。  
@@ -42,13 +42,13 @@ ms.locfileid: "59303487"
   
  上图中突出显示，有多个流文档中内置的功能：
   
--   搜索:允许用户执行的整个文档的全文搜索。  
+- 搜索:允许用户执行的整个文档的全文搜索。  
   
--   查看模式：用户可以选择喜欢的查看模式包括单页 （页--一次） 查看模式、 两个---a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式。  有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  
+- 查看模式：用户可以选择喜欢的查看模式包括单页 （页--一次） 查看模式、 两个---a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式。  有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  
   
--   页导航控件：如果文档的查看模式使用页面，页面导航控件包含一个按钮，用于跳转到下一页 （向下箭头） 或上一页 （向上箭头），以及当前页码和总页数的指示器。 也可使用键盘上的箭头键来实现翻页操作。  
+- 页导航控件：如果文档的查看模式使用页面，页面导航控件包含一个按钮，用于跳转到下一页 （向下箭头） 或上一页 （向上箭头），以及当前页码和总页数的指示器。 也可使用键盘上的箭头键来实现翻页操作。  
   
--   缩放：缩放控件使用户能够增加或减少的缩放级别，单击加号或减号按钮，分别。 缩放控件还包括一个用于调整缩放级别的滑块。 有关详细信息，请参阅 <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
+- 缩放：缩放控件使用户能够增加或减少的缩放级别，单击加号或减号按钮，分别。 缩放控件还包括一个用于调整缩放级别的滑块。 有关详细信息，请参阅 <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
   
  这些功能可根据用于托管流内容的控件进行修改。 下一节介绍了各种控件。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "59303487"
 ## <a name="creating-flow-content"></a>创建流内容  
  流内容可能很复杂并包含各种元素，包括文本、 图像、 表、 甚至<xref:System.Windows.UIElement>派生的类，如控件。 若要了解如何创建复杂流内容，掌握下列知识点非常关键：  
   
--   **与流相关的类**:在流内容中使用每个类都有特定用途。 此外，了解各种流类之间的层次关系有助于了解其使用方式。 例如，类派生自<xref:System.Windows.Documents.Block>类用于包含其他对象，而类派生自<xref:System.Windows.Documents.Inline>包含显示的对象。  
+- **与流相关的类**:在流内容中使用每个类都有特定用途。 此外，了解各种流类之间的层次关系有助于了解其使用方式。 例如，类派生自<xref:System.Windows.Documents.Block>类用于包含其他对象，而类派生自<xref:System.Windows.Documents.Inline>包含显示的对象。  
   
--   **内容架构**:流文档可能需要大量嵌套元素。 内容架构指定了元素之间可能存在的父/子关系。  
+- **内容架构**:流文档可能需要大量嵌套元素。 内容架构指定了元素之间可能存在的父/子关系。  
   
  以下各节详细介绍了上述每个方面。  
   
@@ -196,19 +196,19 @@ ms.locfileid: "59303487"
   
  **Figure：**  
   
--   可定位：您可以设置其水平和垂直定位点，以停放它相对于页面、 内容、 列或段落。 此外可以使用其<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>和<xref:System.Windows.Documents.Figure.VerticalOffset%2A>属性以指定任意偏移量。  
+- 可定位：您可以设置其水平和垂直定位点，以停放它相对于页面、 内容、 列或段落。 此外可以使用其<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>和<xref:System.Windows.Documents.Figure.VerticalOffset%2A>属性以指定任意偏移量。  
   
--   是到多个列可调整大小：可以设置<xref:System.Windows.Documents.Figure>高度和宽度设置为页面、 内容或列的高度或宽度的倍数。 请注意，对于页面和内容，倍数不能大于 1。 例如，可以设置的宽度<xref:System.Windows.Documents.Figure>"页面的 0.5"或"0.25 content"或"2 列"。 还可将高度和宽度设置为绝对像素值。  
+- 是到多个列可调整大小：可以设置<xref:System.Windows.Documents.Figure>高度和宽度设置为页面、 内容或列的高度或宽度的倍数。 请注意，对于页面和内容，倍数不能大于 1。 例如，可以设置的宽度<xref:System.Windows.Documents.Figure>"页面的 0.5"或"0.25 content"或"2 列"。 还可将高度和宽度设置为绝对像素值。  
   
--   不分页：如果中的内容<xref:System.Windows.Documents.Figure>不适合在<xref:System.Windows.Documents.Figure>，它会呈现能够容纳的内容和其余内容将丢失  
+- 不分页：如果中的内容<xref:System.Windows.Documents.Figure>不适合在<xref:System.Windows.Documents.Figure>，它会呈现能够容纳的内容和其余内容将丢失  
   
  **Floater：**  
   
--   无法定位，可在能够为其提供空间的任何位置呈现。 不能设置偏移量或定位点<xref:System.Windows.Documents.Floater>。  
+- 无法定位，可在能够为其提供空间的任何位置呈现。 不能设置偏移量或定位点<xref:System.Windows.Documents.Floater>。  
   
--   不能进行大小调整为多个列：默认情况下，<xref:System.Windows.Documents.Floater>在一列的大小。 它具有<xref:System.Windows.Documents.Floater.Width%2A>一列大小为可以设置为绝对像素值，但如果此值大于一个列宽忽略它并将浮动对象的属性。 您可以其大小设置为小于 1 个列宽设置正确的像素宽度，但大小不是列相关，因此"0.5 倍栏宽"不是有效的表达式<xref:System.Windows.Documents.Floater>宽度。 <xref:System.Windows.Documents.Floater> 没有高度属性，因此它无法设置高度、 其高度取决于内容  
+- 不能进行大小调整为多个列：默认情况下，<xref:System.Windows.Documents.Floater>在一列的大小。 它具有<xref:System.Windows.Documents.Floater.Width%2A>一列大小为可以设置为绝对像素值，但如果此值大于一个列宽忽略它并将浮动对象的属性。 您可以其大小设置为小于 1 个列宽设置正确的像素宽度，但大小不是列相关，因此"0.5 倍栏宽"不是有效的表达式<xref:System.Windows.Documents.Floater>宽度。 <xref:System.Windows.Documents.Floater> 没有高度属性，因此它无法设置高度、 其高度取决于内容  
   
--   <xref:System.Windows.Documents.Floater> 对此进行分页：如果指定宽度其内容扩展到多个列高度，浮标会断开，并显示下一列、 下一页等。  
+- <xref:System.Windows.Documents.Floater> 对此进行分页：如果指定宽度其内容扩展到多个列高度，浮标会断开，并显示下一列、 下一页等。  
   
  <xref:System.Windows.Documents.Figure> 是的最好的独立内容你想要控制的大小和定位，并且可以确信内容适合指定的大小。 <xref:System.Windows.Documents.Floater> 是将更多自由流动的内容流类似于主页面内容，但相分离的好时机。  
   

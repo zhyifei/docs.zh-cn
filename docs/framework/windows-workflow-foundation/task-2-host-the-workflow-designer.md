@@ -3,11 +3,11 @@ title: 任务 2：承载工作流设计器
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641552"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
 本主题介绍用于托管的实例的过程[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 应用程序中。  
@@ -42,7 +42,7 @@ ms.locfileid: "59299262"
   
 8. 在中**解决方案资源管理器**中，右击 MainWindow.xaml 并选择**查看代码**。 按照以下这些步骤修改代码：  
   
-    1.  添加下列命名空间：  
+    1. 添加下列命名空间：  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ ms.locfileid: "59299262"
         using System.ComponentModel;  
         ```  
   
-    2.  若要声明某个私有成员字段包含 <xref:System.Activities.Presentation.WorkflowDesigner> 的实例，请将下面的代码添加到 `MainWindow` 类。  
+    2. 若要声明某个私有成员字段包含 <xref:System.Activities.Presentation.WorkflowDesigner> 的实例，请将下面的代码添加到 `MainWindow` 类。  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ ms.locfileid: "59299262"
         }  
         ```  
   
-    3.  将下面的 `AddDesigner` 方法添加到 `MainWindow` 类。 此实现将创建的实例<xref:System.Activities.Presentation.WorkflowDesigner>，添加<xref:System.Activities.Statements.Sequence>活动，并将其放在中间栏中的置于 grid1**网格**。  
+    3. 将下面的 `AddDesigner` 方法添加到 `MainWindow` 类。 此实现将创建的实例<xref:System.Activities.Presentation.WorkflowDesigner>，添加<xref:System.Activities.Statements.Sequence>活动，并将其放在中间栏中的置于 grid1**网格**。  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ ms.locfileid: "59299262"
         }  
         ```  
   
-    4.  注册设计器元数据，为所有内置活动添加设计器支持。 通过此方法可以将活动从工具箱拖放到 <xref:System.Activities.Statements.Sequence> 中的原始 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 活动上。 为此，请将 `RegisterMetadata` 方法添加到 `MainWindow` 类中。  
+    4. 注册设计器元数据，为所有内置活动添加设计器支持。 通过此方法可以将活动从工具箱拖放到 <xref:System.Activities.Statements.Sequence> 中的原始 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 活动上。 为此，请将 `RegisterMetadata` 方法添加到 `MainWindow` 类中。  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ ms.locfileid: "59299262"
   
          有关注册活动设计器的详细信息，请参阅[如何：创建自定义活动设计器](how-to-create-a-custom-activity-designer.md)。  
   
-    5.  在 `MainWindow` 类构造函数中，添加对上文声明的方法的调用，以便注册设计器支持元数据，并创建 <xref:System.Activities.Presentation.WorkflowDesigner>。  
+    5. 在 `MainWindow` 类构造函数中，添加对上文声明的方法的调用，以便注册设计器支持元数据，并创建 <xref:System.Activities.Presentation.WorkflowDesigner>。  
   
         ```csharp  
         public MainWindow()  

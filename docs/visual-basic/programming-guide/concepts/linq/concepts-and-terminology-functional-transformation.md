@@ -3,11 +3,11 @@ title: 概念和术语 （功能转换） (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
 ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663474"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>概念和术语 （功能转换） (Visual Basic)
 本主题介绍纯函数转换的概念和术语。 与更加传统的命令性编程方式相比，用来转换数据的函数转换方法所生成的代码往往编程速度更快、含义更明确、更易于调试和维护。  
@@ -17,9 +17,9 @@ ms.locfileid: "58820797"
 ## <a name="what-is-pure-functional-transformation"></a>什么是纯函数转换？  
  在纯函数转换中，称为“纯函数”的一组函数定义如何将一组结构化数据从其原始格式转换为另一种格式。 “纯”表示这些函数是可组合的，这要求这些函数具有以下特点：  
   
--   独立，这样函数就可以自由排序和重新排列，而不会与程序的其他部分相互牵连和依赖。 纯转换不了解其环境，对环境也没有任何影响。 也就是说，用在转换中的函数没有负作用。  
+- 独立，这样函数就可以自由排序和重新排列，而不会与程序的其他部分相互牵连和依赖。 纯转换不了解其环境，对环境也没有任何影响。 也就是说，用在转换中的函数没有负作用。  
   
--   无状态，因而对相同输入执行相同的函数或特定的一组函数将始终产生相同的输出。 纯转换对于先前对它的使用没有记忆。  
+- 无状态，因而对相同输入执行相同的函数或特定的一组函数将始终产生相同的输出。 纯转换对于先前对它的使用没有记忆。  
   
 > [!IMPORTANT]
 >  在本教程的其余部分，术语“纯函数”用于概括表示编程方法，而不是具体的语言功能。  

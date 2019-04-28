@@ -3,11 +3,11 @@ title: 最佳做法：中介
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
 ms.openlocfilehash: 0bd553486bfb89a0ec14c42a1bb7d2ed9c4c540d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608900"
 ---
 # <a name="best-practices-intermediaries"></a>最佳做法：中介
 当调用中介时务必谨慎，以便正确地处理故障，从而确保中介上的服务端通道正确关闭。  

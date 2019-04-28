@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627973"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 函数
 获取有关公共语言运行时 (CLR) 应用程序请求的版本和目录信息。  
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  在.NET Framework 2.0 版中，可以获取有关最新安装的版本信息，通过使用`GetRequestedRuntimeInfo`方法，如下所示：  
   
--   指定`pExe`， `pwszVersion`，和`pConfigurationFile`参数为 null。  
+- 指定`pExe`， `pwszVersion`，和`pConfigurationFile`参数为 null。  
   
--   指定在 RUNTIME_INFO_UPGRADE_VERSION 标志`RUNTIME_INFO_FLAGS`枚举`runtimeInfoFlags`参数。  
+- 指定在 RUNTIME_INFO_UPGRADE_VERSION 标志`RUNTIME_INFO_FLAGS`枚举`runtimeInfoFlags`参数。  
   
  `GetRequestedRuntimeInfo`方法不在以下情况下返回的最新的 CLR 版本：  
   
--   指定正在加载特定的 CLR 版本应用程序配置文件存在。 请注意，.NET Framework 将使用配置文件，即使您指定为 null`pConfigurationFile`参数。  
+- 指定正在加载特定的 CLR 版本应用程序配置文件存在。 请注意，.NET Framework 将使用配置文件，即使您指定为 null`pConfigurationFile`参数。  
   
--   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)指定较早的 CLR 版本调用方法。  
+- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)指定较早的 CLR 版本调用方法。  
   
--   为较早的 CLR 版本编译的应用程序当前正在运行。  
+- 为较早的 CLR 版本编译的应用程序当前正在运行。  
   
  有关`runtimeInfoFlags`参数，可以指定的体系结构常量之一`RUNTIME_INFO_FLAGS`枚举一次：  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

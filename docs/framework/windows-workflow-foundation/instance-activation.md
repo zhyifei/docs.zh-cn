@@ -3,11 +3,11 @@ title: 实例激活
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641655"
 ---
 # <a name="instance-activation"></a>实例激活
 SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并检测持久性数据库中是否有可运行或可激活的工作流实例。 如果找到可运行的工作流实例，SQL 工作流实例存储将通知能够激活该实例的工作流主机。 如果实例存储找到可激活的工作流实例，它将通知用于激活工作流主机的泛型主机，而泛型主机将运行此工作流实例。 本主题的以下各节详细说明了实例激活过程。  
@@ -15,11 +15,11 @@ SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并�
 ## <a name="RunnableSection"></a> 检测和激活可运行工作流实例  
  SQL 工作流实例存储将工作流实例视为*可运行*如果实例未处于挂起的状态或已完成的状态并且满足以下条件：  
   
--   实例处于解除锁定状态，并且具有已过期的挂起计时器。  
+- 实例处于解除锁定状态，并且具有已过期的挂起计时器。  
   
--   实例上的锁已过期。  
+- 实例上的锁已过期。  
   
--   对实例进行解锁且其状态为**Executing**。  
+- 对实例进行解锁且其状态为**Executing**。  
   
  当 SQL 工作流实例存储找到可运行的实例时，将引发 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>。 此后，SqlWorkflowInstanceStore 将停止监视，直到在该存储上调用一次 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
 ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640418"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>如何：访问 Windows 窗体 DataGridViewComboBoxCell 下拉列表中的对象
 像<xref:System.Windows.Forms.ComboBox>控件，<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>类型使您能够将任意对象添加到其下拉列表。 使用此功能，可以表示下拉列表中的复杂状态，而无需将相应的对象存储在单独的集合。  
@@ -44,7 +44,7 @@ ms.locfileid: "59334271"
   
 ### <a name="to-retrieve-the-currently-selected-business-object"></a>若要检索当前所选的业务对象  
   
--   获取单元格<xref:System.Windows.Forms.DataGridViewCell.Value%2A>属性并将其转换为业务对象类型。  
+- 获取单元格<xref:System.Windows.Forms.DataGridViewCell.Value%2A>属性并将其转换为业务对象类型。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
@@ -66,7 +66,7 @@ ms.locfileid: "59334271"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System 和 System.Windows.Forms 程序集的引用。  
+- 对 System 和 System.Windows.Forms 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

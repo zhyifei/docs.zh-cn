@@ -3,11 +3,11 @@ title: 命名空间
 description: 了解如何F#命名空间，可将代码组织到相关的功能区域，通过它可以将名称附加到的程序元素分组。
 ms.date: 12/08/2018
 ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666386"
 ---
 # <a name="namespaces"></a>命名空间
 

@@ -3,11 +3,11 @@ title: 运算符重载
 description: 了解如何重载算术运算符的类或记录类型中并在全局级别的F#。
 ms.date: 05/16/2016
 ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666243"
 ---
 # <a name="operator-overloading"></a>运算符重载
 
@@ -97,7 +97,7 @@ static member (~-) (v : Vector)
 
 其他此处未列出的运算符字符的组合可以用作运算符且具有通过串联下表中的每个字符的名称组成的名称。 例如，+ ！ 将成为`op_PlusBang`。
 
-|运算符字符|name|
+|运算符字符|名称|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|

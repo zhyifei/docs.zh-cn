@@ -10,11 +10,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755943"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.RadioButton>控件向用户显示的一组两个或多个互斥选项。 尽管单选按钮和复选框似乎作用类似，但还有一项重大差异： 如果用户选择的单选按钮，不能同时选中同一个组中的其他单选按钮。 与此相反，可以选择任意数量的复选框。 定义单选按钮组将告诉用户:"这是一组选项，您可以从中选择一个且只有一个。"  

@@ -3,11 +3,11 @@ title: 如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613399"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Basic)
 使用批注可帮助进行 XML 树的转换。  
@@ -24,21 +24,21 @@ ms.locfileid: "58824866"
   
  这种方法摘要如下：  
   
--   首先，用替换元素批注树中的元素。  
+- 首先，用替换元素批注树中的元素。  
   
--   然后，循环访问整个树，创建一个新树，并用其批注替换树中的每个元素。 本示例在名为 `XForm` 的函数中实现迭代和创建新树。  
+- 然后，循环访问整个树，创建一个新树，并用其批注替换树中的每个元素。 本示例在名为 `XForm` 的函数中实现迭代和创建新树。  
   
  具体地说，此方法包括：  
   
--   执行一个或多个 LINQ to XML 查询，用这些查询返回要从一种形状转换为另一种形状的元素集。 对于查询中的每个元素，添加一个新 <xref:System.Xml.Linq.XElement> 对象作为该元素的批注。 在转换的新树中会用此新元素替换批注的元素。 这是示例中所示的唯一需要编写的代码。  
+- 执行一个或多个 LINQ to XML 查询，用这些查询返回要从一种形状转换为另一种形状的元素集。 对于查询中的每个元素，添加一个新 <xref:System.Xml.Linq.XElement> 对象作为该元素的批注。 在转换的新树中会用此新元素替换批注的元素。 这是示例中所示的唯一需要编写的代码。  
   
--   作为批注添加的新元素可以包含新的子节点，它可以形成一个具有任意形状的子树。  
+- 作为批注添加的新元素可以包含新的子节点，它可以形成一个具有任意形状的子树。  
   
--   有一条特殊规则：如果新元素的子节点位于不同的命名空间，即专门为此建立的命名空间（在本示例中，此命名空间为 `http://www.microsoft.com/LinqToXmlTransform/2007`），则不会将该子元素复制到新树。 而如果命名空间是上面提到的特殊命名空间，并且元素的本地名称为 `ApplyTransforms`，则会迭代源树中该元素的子节点并将其复制到新树（但批注的子元素本身例外，它们将根据这些规则进行转换）。  
+- 有一条特殊规则：如果新元素的子节点位于不同的命名空间，即专门为此建立的命名空间（在本示例中，此命名空间为 `http://www.microsoft.com/LinqToXmlTransform/2007`），则不会将该子元素复制到新树。 而如果命名空间是上面提到的特殊命名空间，并且元素的本地名称为 `ApplyTransforms`，则会迭代源树中该元素的子节点并将其复制到新树（但批注的子元素本身例外，它们将根据这些规则进行转换）。  
   
--   这有些类似于 XSL 中的转换规范。 用于选择一组节点的查询类似于用于模板的 XPath 表达式。 用于创建以批注形式保存的新 <xref:System.Xml.Linq.XElement> 的代码类似于 XSL 中的序列构造函数，`ApplyTransforms` 元素的功能类似于 XSL 中的 `xsl:apply-templates` 元素。  
+- 这有些类似于 XSL 中的转换规范。 用于选择一组节点的查询类似于用于模板的 XPath 表达式。 用于创建以批注形式保存的新 <xref:System.Xml.Linq.XElement> 的代码类似于 XSL 中的序列构造函数，`ApplyTransforms` 元素的功能类似于 XSL 中的 `xsl:apply-templates` 元素。  
   
--   采用此方法的优势之一是在用公式表述查询时，您始终是对未修改的源树编写查询。 您不必担心对树所做的修改如何影响要编写的查询。  
+- 采用此方法的优势之一是在用公式表述查询时，您始终是对未修改的源树编写查询。 您不必担心对树所做的修改如何影响要编写的查询。  
   
 ## <a name="transforming-a-tree"></a>转换一个树  
  下面的第一个示例将所有 `Paragraph` 节点重命名为 `para`。  
@@ -158,7 +158,7 @@ After Transform
 ## <a name="effecting-the-transform"></a>实施转换  
  小函数 `XForm` 可以从原始的、已批注的树创建新的、转换后的树。  
   
--   该函数的伪代码非常简单：  
+- 该函数的伪代码非常简单：  
   
 ```  
 The function takes an XElement as an argument and returns an XElement.   

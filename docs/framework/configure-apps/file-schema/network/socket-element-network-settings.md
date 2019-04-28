@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674384"
 ---
 # <a name="socket-element-network-settings"></a>\<套接字 > 元素 （网络设置）
 指定套接字操作是否使用完成端口。  
@@ -64,9 +64,9 @@ ms.locfileid: "59160155"
   
  这`ipProtectionLevel`属性设置会影响仅初始传入流量：  
   
--   TCP 服务器侦听的套接字上的传入连接。  
+- TCP 服务器侦听的套接字上的传入连接。  
   
--   一个接收套接字上的数据包的 UDP 应用程序。  
+- 一个接收套接字上的数据包的 UDP 应用程序。  
   
  此配置设置不会影响已建立的 TCP 连接 （流量不受限制的两个方向），并且不影响发送的 UDP 数据包的应用程序。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
 ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703643"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>在 WPF 中的墨迹入门
 
@@ -104,7 +104,7 @@ Windows Presentation Foundation (WPF) 具有墨迹功能，可以轻松地将数
 
 1. 通过右键单击添加对 PresentationCore、 PresentationFramework、 和 WindowsBase 程序集的引用**引用**中**解决方案资源管理器**，然后选择**添加引用**.
 
-   ![引用管理器显示 PresentationCore 和 PresentationFramework](./media/getting-started-with-ink/references.png)
+   ![引用管理器显示 PresentationCore 和 PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. 生成应用程序通过按**F5**。
 

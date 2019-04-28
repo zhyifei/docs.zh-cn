@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
 ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641497"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows 窗体应用程序中的网络
 .NET Framework 提供了用于显示网页，下载 Web 内容、 文件传输协议 (FTP) 站点，与之进行交互和使用 Web 服务，轻松地构建到你的应用程序的网络功能的类。 以下资源将帮助你了解.NET Framework 和如何您可以将其集成到 Windows 窗体的网络技术。  

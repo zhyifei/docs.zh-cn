@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638020"
 ---
 # <a name="get-statement"></a>Get 语句
 声明`Get`用于检索属性值的属性过程。  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>规则  
   
--   **混合的访问级别。** 如果你正在定义的读-写属性，您可以选择指定不同的访问级别为`Get`或`Set`过程，但不可同时使用两者。 如果执行此操作时，过程访问级别必须比属性的访问级别限制性更强。 例如，如果属性声明`Friend`，可以声明`Get`过程`Private`，但不是`Public`。  
+- **混合的访问级别。** 如果你正在定义的读-写属性，您可以选择指定不同的访问级别为`Get`或`Set`过程，但不可同时使用两者。 如果执行此操作时，过程访问级别必须比属性的访问级别限制性更强。 例如，如果属性声明`Friend`，可以声明`Get`过程`Private`，但不是`Public`。  
   
      如果您要定义`ReadOnly`属性，`Get`过程都表示整个属性。 不能声明不同的访问级别`Get`，因为这会设置属性的两个访问级别。  
   
--   **返回类型。** [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)可以声明其返回的值的数据类型。 `Get`过程会自动返回数据类型。 您可以指定任何数据类型或枚举、 结构、 类或接口的名称。  
+- **返回类型。** [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)可以声明其返回的值的数据类型。 `Get`过程会自动返回数据类型。 您可以指定任何数据类型或枚举、 结构、 类或接口的名称。  
   
      如果`Property`语句不指定`returntype`，该过程返回`Object`。  
   
 ## <a name="behavior"></a>行为  
   
--   **从过程中返回。** 当`Get`过程返回到调用代码，请求的属性值的语句中将继续执行。  
+- **从过程中返回。** 当`Get`过程返回到调用代码，请求的属性值的语句中将继续执行。  
   
      `Get` 属性过程可以返回值使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或者将返回值分配给属性名称。 详细信息，请参阅"返回值"中[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
      `Exit Property`和`Return`语句从属性过程会导致立即退出。 任意数量的`Exit Property`并`Return`语句可以在过程中，任何位置出现，并且可以混合`Exit Property`和`Return`语句。  
   
--   **返回值。** 若要返回的值`Get`过程中，可以将值分配给属性名称或将其包含在[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。 `Return`语句将同时分配`Get`过程返回值，并退出该过程。  
+- **返回值。** 若要返回的值`Get`过程中，可以将值分配给属性名称或将其包含在[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。 `Return`语句将同时分配`Get`过程返回值，并退出该过程。  
   
      如果您使用`Exit Property`而不将值分配到的属性名`Get`过程将返回属性的数据类型的默认值。 详细信息，请参阅"返回值"中[Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)。  
   

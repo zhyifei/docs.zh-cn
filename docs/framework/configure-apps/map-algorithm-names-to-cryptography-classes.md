@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700797"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>将算法名称映射到加密类
 有四种方法，开发人员可以创建加密对象使用[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   使用创建对象**新**运算符。  
+- 使用创建对象**新**运算符。  
   
--   创建一个对象，通过调用来实现特定加密算法**创建**的抽象类上为该算法的方法。  
+- 创建一个对象，通过调用来实现特定加密算法**创建**的抽象类上为该算法的方法。  
   
--   创建一个对象，通过调用来实现特定加密算法<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法。  
+- 创建一个对象，通过调用来实现特定加密算法<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法。  
   
--   创建一个对象，通过调用实现加密算法 （如一种对称块密码） 的类**创建**方法的抽象类上为该类型的算法 (如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
+- 创建一个对象，通过调用实现加密算法 （如一种对称块密码） 的类**创建**方法的抽象类上为该类型的算法 (如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
   
  例如，假设开发人员想要计算的一组字节的 SHA1 哈希。 <xref:System.Security.Cryptography>命名空间包含的 SHA1 算法、 一种纯托管的实现和一个包装 CryptoAPI 的两种实现。 开发人员可以选择要实例化特定 SHA1 实现 (如<xref:System.Security.Cryptography.SHA1Managed>) 通过调用**新**运算符。 但是，如果并不重要，只要类实现的 SHA1 哈希算法，公共语言运行时将加载哪些类，开发人员可以创建一个对象通过调用<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法。 此方法调用**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**，其必须返回的 SHA1 哈希算法的实现。  
   

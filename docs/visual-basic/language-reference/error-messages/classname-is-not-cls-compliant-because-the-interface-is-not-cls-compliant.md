@@ -11,8 +11,8 @@ ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649876"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<类名 > 不符合 CLS 規格因为接口\<interfacename > 其实现不符合 cls 的
 当某一类或接口派生自或实现标记为 `<CLSCompliant(True)>` 的类型时，该类或接口将被标记为 `<CLSCompliant(False)>` 。  
@@ -29,6 +29,6 @@ ms.locfileid: "59975541"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果你需要 CLS 符合性，请在不同的继承层次结构或实现方案中定义此类型。  
+- 如果你需要 CLS 符合性，请在不同的继承层次结构或实现方案中定义此类型。  
   
--   如果你要求此类型保留在其当前的继承层次结构或实现方案中，请从其定义中删除 <xref:System.CLSCompliantAttribute> ，或将其标记为 `<CLSCompliant(False)>`。  
+- 如果你要求此类型保留在其当前的继承层次结构或实现方案中，请从其定义中删除 <xref:System.CLSCompliantAttribute> ，或将其标记为 `<CLSCompliant(False)>`。  

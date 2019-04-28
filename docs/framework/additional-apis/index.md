@@ -2,21 +2,16 @@
 title: 其他类库和 API
 ms.date: 01/29/2018
 helpviewer_keywords:
-- Additional class libraries
-- Additional managed libraries
-- .NET Framework out-of-band releases
-- out-of-band releases
+  - Additional class libraries
+  - Additional managed libraries
+  - .NET Framework out-of-band releases
+  - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674407"
 ---
+
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
 .NET Framework 在不断发展。 若要改善跨平台开发，并尽早引入新功能，带外 (OOB) 发布新功能。 本主题列出了我们提供了有关文档的 OOB 项目。  

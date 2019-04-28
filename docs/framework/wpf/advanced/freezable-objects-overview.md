@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703306"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 对象概述
 本主题介绍如何有效地使用和创建<xref:System.Windows.Freezable>对象，它们提供特殊功能，可帮助提高应用程序性能。 Freezable 对象的示例包括画笔、 笔、 转换、 几何和动画。  
@@ -63,11 +63,11 @@ ms.locfileid: "59224255"
   
  Freezable**不能**被冻结，如果以下任何条件成立：  
   
--   它具有经过动画处理或数据绑定属性。  
+- 它具有经过动画处理或数据绑定属性。  
   
--   它具有由动态资源设置的属性。 (请参阅[XAML 资源](xaml-resources.md)动态资源有关的详细信息。)  
+- 它具有由动态资源设置的属性。 (请参阅[XAML 资源](xaml-resources.md)动态资源有关的详细信息。)  
   
--   它包含<xref:System.Windows.Freezable>不能冻结的子对象。  
+- 它包含<xref:System.Windows.Freezable>不能冻结的子对象。  
   
  如果这些条件都为 false，并且不打算修改<xref:System.Windows.Freezable>，则应冻结其获得前面所述的性能优势。  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>创建您自己的 Freezable 类  
  从派生的类<xref:System.Windows.Freezable>可以获得以下功能。  
   
--   特殊状态： 只读 （冻结） 和可写状态。  
+- 特殊状态： 只读 （冻结） 和可写状态。  
   
--   线程安全： 的冻结<xref:System.Windows.Freezable>可以在线程之间共享。  
+- 线程安全： 的冻结<xref:System.Windows.Freezable>可以在线程之间共享。  
   
--   详细的更改通知：与其他不同<xref:System.Windows.DependencyObject>s，对子属性值更改时 Freezable 对象提供更改通知。  
+- 详细的更改通知：与其他不同<xref:System.Windows.DependencyObject>s，对子属性值更改时 Freezable 对象提供更改通知。  
   
--   简单克隆： Freezable 类已经实现生成深层克隆的几种方法。  
+- 简单克隆： Freezable 类已经实现生成深层克隆的几种方法。  
   
  一个<xref:System.Windows.Freezable>是一种<xref:System.Windows.DependencyObject>，因此使用依赖项属性系统。 类属性不一定要依赖项属性，但使用依赖项属性可以减少需要编写，因为代码量<xref:System.Windows.Freezable>类的设计中考虑的依赖属性了。 有关依赖属性系统的详细信息，请参阅[依赖属性概述](dependency-properties-overview.md)。  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  如果您的类包含非依赖项属性数据成员，还必须重写以下方法：  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  此外必须遵守以下规则用于访问和写入不属于依赖项属性的数据成员：  
   
--   在任何开头[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]读取非依赖项属性数据成员，请调用<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
+- 在任何开头[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]读取非依赖项属性数据成员，请调用<xref:System.Windows.Freezable.ReadPreamble%2A>方法。  
   
--   在开始任何 API，它将写入非依赖项属性数据成员时，调用<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (调用后<xref:System.Windows.Freezable.WritePreamble%2A>中[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，不需要进行额外调用<xref:System.Windows.Freezable.ReadPreamble%2A>如果还读取非依赖项属性数据成员。)  
+- 在开始任何 API，它将写入非依赖项属性数据成员时，调用<xref:System.Windows.Freezable.WritePreamble%2A>方法。 (调用后<xref:System.Windows.Freezable.WritePreamble%2A>中[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，不需要进行额外调用<xref:System.Windows.Freezable.ReadPreamble%2A>如果还读取非依赖项属性数据成员。)  
   
--   调用<xref:System.Windows.Freezable.WritePostscript%2A>方法，然后再退出写入非依赖项属性数据成员的方法。  
+- 调用<xref:System.Windows.Freezable.WritePostscript%2A>方法，然后再退出写入非依赖项属性数据成员的方法。  
   
  如果您的类包含的非依赖项属性数据成员<xref:System.Windows.DependencyObject>对象，还必须调用<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>方法每次你更改其中一个其值，即使将该成员设置为`null`。  
   

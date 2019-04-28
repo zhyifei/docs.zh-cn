@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: d1d52e048ee54ce967215ad134d5bcff2983103e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758075"
 ---
 # <a name="table-valued-parameters"></a>表值参数
 表值参数提供一种将客户端应用程序中的多行数据封送到 SQL Server 的简单方式，不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 对该表变量进行操作。  
@@ -30,13 +30,13 @@ ms.locfileid: "59113615"
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在 SQL Server 的早期版本中传递多行  
  到 SQL Server 2008 引入了表值参数之前，用于将多行数据传递到存储的过程或参数化的 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
   
--   使用一系列单个参数表示多个数据列和行中的值。 使用此方法传递的数据量受所允许的参数数量的限制。 SQL Server 过程最多可以有 2100 个参数。 必须使用服务器端逻辑才能将这些单个值组合到表变量或临时表中以进行处理。  
+- 使用一系列单个参数表示多个数据列和行中的值。 使用此方法传递的数据量受所允许的参数数量的限制。 SQL Server 过程最多可以有 2100 个参数。 必须使用服务器端逻辑才能将这些单个值组合到表变量或临时表中以进行处理。  
   
--   将多个数据值捆绑到分隔字符串或 XML 文档中，然后将这些文本值传递给过程或语句。 此过程要求相应的过程或语句包括验证数据结构和取消捆绑值所需的逻辑。  
+- 将多个数据值捆绑到分隔字符串或 XML 文档中，然后将这些文本值传递给过程或语句。 此过程要求相应的过程或语句包括验证数据结构和取消捆绑值所需的逻辑。  
   
--   针对影响多个行的数据修改创建一系列的单个 SQL 语句，例如通过调用 `Update` 的 <xref:System.Data.SqlClient.SqlDataAdapter> 方法创建的内容。 可将更改单独提交给服务器，也可以将其作为组进行批处理。 不过，即使是以包含多个语句的批处理形式提交的，每个语句在服务器上还是会单独执行。  
+- 针对影响多个行的数据修改创建一系列的单个 SQL 语句，例如通过调用 `Update` 的 <xref:System.Data.SqlClient.SqlDataAdapter> 方法创建的内容。 可将更改单独提交给服务器，也可以将其作为组进行批处理。 不过，即使是以包含多个语句的批处理形式提交的，每个语句在服务器上还是会单独执行。  
   
--   使用 `bcp` 实用工具程序或 <xref:System.Data.SqlClient.SqlBulkCopy> 对象将很多行数据加载到表中。 尽管这项技术非常有效，但不支持服务器端处理，除非将数据加载到临时表或表变量中。  
+- 使用 `bcp` 实用工具程序或 <xref:System.Data.SqlClient.SqlBulkCopy> 对象将很多行数据加载到表中。 尽管这项技术非常有效，但不支持服务器端处理，除非将数据加载到临时表或表变量中。  
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
  表值参数以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 联机丛书中。  
@@ -77,13 +77,13 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>表值参数的限制  
  以下是表值参数的几个限制：  
   
--   不能将传递到表值参数[CLR 用户定义函数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)。  
+- 不能将传递到表值参数[CLR 用户定义函数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)。  
   
--   只有对表值参数进行索引才能支持 UNIQUE 或 PRIMARY KEY 约束。 SQL Server 不维护有关表值参数的统计信息。  
+- 只有对表值参数进行索引才能支持 UNIQUE 或 PRIMARY KEY 约束。 SQL Server 不维护有关表值参数的统计信息。  
   
--   在 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 代码中表值参数是只读的。 无法更新表值参数的行中的列值且无法插入或删除行。 若要修改传递给表值参数中的存储过程或参数化语句的数据，则必须将数据插入到临时表或表变量中。  
+- 在 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 代码中表值参数是只读的。 无法更新表值参数的行中的列值且无法插入或删除行。 若要修改传递给表值参数中的存储过程或参数化语句的数据，则必须将数据插入到临时表或表变量中。  
   
--   无法使用 ALTER TABLE 语句来修改表值参数的设计。  
+- 无法使用 ALTER TABLE 语句来修改表值参数的设计。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>配置 SqlParameter 示例  
  <xref:System.Data.SqlClient> 支持填充表值参数从<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>对象。 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  

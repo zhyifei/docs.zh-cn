@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
 ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607279"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>将现有约束添加到数据集
 **填充**方法**DataAdapter**填充<xref:System.Data.DataSet>只使用表中的列和行从数据源; 但是约束通常设置数据源，**填充**方法不会添加到此架构信息**数据集**默认情况下。 若要填充**数据集**与现有主键约束信息从数据源，可以通过调用**FillSchema**方法**DataAdapter**，或设置**MissingSchemaAction**的属性**DataAdapter**到**AddWithKey**之前调用**填充**。 这将确保该主键中的约束**数据集**反映数据源。 外键约束信息不包含在内，必须显式创建，如中所示[数据表约束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  

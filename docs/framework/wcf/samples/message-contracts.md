@@ -3,14 +3,14 @@ title: 消息协定
 ms.date: 03/30/2017
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
 ms.openlocfilehash: 5483c75bfe7f72b2c6155d978c006fc2050c1e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756359"
 ---
 # <a name="message-contracts"></a>消息协定
-本节包含演示消息协定中 Windows Communication Foundation (WCF) 的示例。  
+本节包含演示消息协定 Windows Communication Foundation (WCF) 中的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [默认消息协定](../../../../docs/framework/wcf/samples/default-message-contract.md)  

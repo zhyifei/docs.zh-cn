@@ -7,32 +7,32 @@ helpviewer_keywords:
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
 ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699183"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>如何：设置 ToolBar 上控件的样式
 <xref:System.Windows.Controls.ToolBar>定义<xref:System.Windows.ResourceKey>对象来指定中的控件的样式<xref:System.Windows.Controls.ToolBar>。  若要设置样式中的控件<xref:System.Windows.Controls.ToolBar>，将`x:key`到样式属性<xref:System.Windows.ResourceKey>中定义<xref:System.Windows.Controls.ToolBar>。  
   
  <xref:System.Windows.Controls.ToolBar>定义了以下<xref:System.Windows.ResourceKey>对象：  
   
--   <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.CheckBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.CheckBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.MenuStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.MenuStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.RadioButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.RadioButtonStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.SeparatorStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.SeparatorStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.TextBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.TextBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
 ## <a name="example"></a>示例  
  下面的示例定义内的控件的样式<xref:System.Windows.Controls.ToolBar>。  

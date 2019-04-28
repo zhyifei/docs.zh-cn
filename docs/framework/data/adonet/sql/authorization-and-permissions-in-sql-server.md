@@ -3,11 +3,11 @@ title: SQL Server 中的授权和权限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663955"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授权和权限
 在创建数据库对象时，必须显式授予权限以使用户可以访问它们。 每个可保护对象都具有可使用权限语句授予主体的权限。  
@@ -37,7 +37,7 @@ ms.locfileid: "59185856"
 |REVOKE|撤消权限。 这是新对象的默认状态。 从用户或角色撤消的权限仍可以从主体分配到的其他组或角色继承。|  
 |DENY|DENY 撤消一个权限，使其不能被继承。 DENY 优先于所有权限，只是 DENY 不适用于对象所有者或 `sysadmin` 的成员。 如果您针对 `public` 角色对某个对象执行 DENY 权限语句，则会拒绝该对象的所有者和 `sysadmin` 成员以外的所有用户和角色访问该对象。|  
   
--   GRANT 语句可以为能够由数据库用户继承的组或角色分配权限。 但是，DENY 语句优先于所有其他权限语句。 因此，已被拒绝某一权限的用户无法从其他角色继承该权限。  
+- GRANT 语句可以为能够由数据库用户继承的组或角色分配权限。 但是，DENY 语句优先于所有其他权限语句。 因此，已被拒绝某一权限的用户无法从其他角色继承该权限。  
   
 > [!NOTE]
 >  不能对 `sysadmin` 固定服务器角色和成员对象所有者拒绝权限。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
 ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755423"
 ---
 # <a name="property-changed-events"></a>属性更改事件
 如果您希望控件名为的属性时发送通知*PropertyName*的更改，定义一个名为*PropertyName* `Changed`和一个名为方法`On` *PropertyName* `Changed`引发事件。 在 Windows 窗体中的命名约定是追加单词*Changed*到属性的名称。 属性更改事件的关联的事件委托类型是<xref:System.EventHandler>，并且事件数据类型为<xref:System.EventArgs>。 类的基类<xref:System.Windows.Forms.Control>定义多个属性更改事件，例如<xref:System.Windows.Forms.Control.BackColorChanged>， <xref:System.Windows.Forms.Control.BackgroundImageChanged>， <xref:System.Windows.Forms.Control.FontChanged>， <xref:System.Windows.Forms.Control.LocationChanged>，等等。 有关事件的背景信息，请参阅[事件](../../../standard/events/index.md)并[Windows 窗体控件中的事件](events-in-windows-forms-controls.md)。  

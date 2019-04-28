@@ -3,11 +3,11 @@ title: 查询计划缓存 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613659"
 ---
 # <a name="query-plan-caching-entity-sql"></a>查询计划缓存 (Entity SQL)
 每当试图执行查询时，查询管道都会查找它的查询计划缓存，以便了解该查询是否已经编译且可用。 如果答案是肯定的，它将重用缓存的计划而不是生成新的计划。 如果未在查询计划缓存中找到匹配的计划，则会编译和缓存该查询。 查询由其 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 文本和参数集合（名称和类型）标识。 所有文本比较都区分大小写。  
@@ -34,19 +34,19 @@ ms.locfileid: "59178173"
   
  为了通过查询计划缓存正确匹配查询，查询应该遵守以下要求：  
   
--   查询文本应该具有常量模式，最好是常量字符串或资源。  
+- 查询文本应该具有常量模式，最好是常量字符串或资源。  
   
--   每当必须传递用户提供的值时，都应该使用 <xref:System.Data.EntityClient.EntityParameter> 或 <xref:System.Data.Objects.ObjectParameter>。  
+- 每当必须传递用户提供的值时，都应该使用 <xref:System.Data.EntityClient.EntityParameter> 或 <xref:System.Data.Objects.ObjectParameter>。  
   
  应该避免以下查询模式，这种模式不必要地消耗查询计划缓存中的存储槽：  
   
--   对文本中字母大小写的更改。  
+- 对文本中字母大小写的更改。  
   
--   对空格的更改。  
+- 对空格的更改。  
   
--   对字面值的更改。  
+- 对字面值的更改。  
   
--   对注释内部文本的更改。  
+- 对注释内部文本的更改。  
   
 ## <a name="see-also"></a>请参阅
 

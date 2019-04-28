@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
 ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651020"
 ---
 # <a name="name-name-is-not-declared"></a>名称\<名称 > 未声明
 语句引用的编程元素，但编译器找不到具有相同名称的元素。  

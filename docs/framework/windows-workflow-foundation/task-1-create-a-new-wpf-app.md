@@ -3,11 +3,11 @@ title: 任务 1：创建一个新的 Windows Presentation Foundation 应用程�
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641629"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>任务 1：创建一个新的 Windows Presentation Foundation 应用程序
 在此任务中，将使用 WPF 应用程序 Visual Studio 模板创建一个空的 Windows Presentation Foundation (WPF) 应用程序并将引用添加到相应[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程序集。  
@@ -32,11 +32,11 @@ ms.locfileid: "59320374"
   
 9. 在中**添加引用**对话框中，单击 **.NET**选项卡上，请按住 CTRL 键，选择以下程序集，然后单击**确定**:  
   
-    -   System.Activities  
+    - System.Activities  
   
-    -   System.Activities.Presentation  
+    - System.Activities.Presentation  
   
-    -   System.Activities.Core.Presentation  
+    - System.Activities.Core.Presentation  
   
 10. 单击 **“确定”**。  
   

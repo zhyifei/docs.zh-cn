@@ -3,11 +3,11 @@ title: Visual Basic 中语言集成的轴 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d450a556-a134-4261-b011-44e399660894
 ms.openlocfilehash: 0de88ad55724f71f5671a044dbadcb2f6c59e829
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663461"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Visual Basic 中语言集成的轴 (LINQ to XML)
 本部分介绍功能直接内置于 Visual Basic 语言以使其更易于访问的 XML。 许多中的 LINQ to XML 文档的示例使用这些集成的 Visual Basic 轴。  

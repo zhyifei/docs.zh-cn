@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665762"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>如何：声明并在 Visual Basic 中调用默认属性
 一个*默认属性*是一个类或结构的属性，而无需指定它可以访问你的代码。 当调用代码名称的类或结构，但未一个属性和上下文允许访问某一属性时，Visual Basic 对该类或结构的默认属性解析的访问权限，如果存在。  

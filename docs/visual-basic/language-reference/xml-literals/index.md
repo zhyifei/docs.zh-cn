@@ -2,19 +2,13 @@
 title: XML 文本 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- declaring XML literals [Visual Basic]
-- Visual Basic, XML literals
-- Visual Basic code, XML
-- XML literals [Visual Basic]
-- XML literals [Visual Basic], reference
-- literals [Visual Basic], XML
+  - 'declaring XML literals [Visual Basic]'
+  - 'Visual Basic, XML literals'
+  - 'Visual Basic code, XML'
+  - 'XML literals [Visual Basic]'
+  - 'XML literals [Visual Basic], reference'
+  - 'literals [Visual Basic], XML'
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 98f81bfb4a49bbac2a1e07533e1584d7c2b23302
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842013"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 文本 (Visual Basic)
 在本部分中的主题记录 Visual Basic 中的 XML 文本的语法。 使用 XML 文本语法，可以将 XML 直接合并到代码中。  

@@ -3,11 +3,11 @@ title: (Visual Basic 中) 的 LINQ 简介
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
 ms.openlocfilehash: 2900cade8bc4166cccb62baf4381cb926cdff5f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614528"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>(Visual Basic 中) 的 LINQ 简介
 语言集成查询 (LINQ) 是 .NET Framework 3.5 版中引入的一项创新功能，它在对象领域和数据领域之间架起了一座桥梁。  
@@ -25,13 +25,13 @@ ms.locfileid: "58822265"
 ## <a name="next-steps"></a>后续步骤  
  若要了解有关 LINQ 的更多详细信息，请先自行熟悉的入门部分中的一些基本概念[在 Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)，然后阅读你感的 LINQ 技术文档感兴趣：  
   
--   SQL Server 数据库：[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
+- SQL Server 数据库：[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
--   XML 文档：[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+- XML 文档：[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET 数据集：[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- ADO.NET 数据集：[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
--   .NET 集合、文件、字符串等：[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- .NET 集合、文件、字符串等：[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>请参阅
 

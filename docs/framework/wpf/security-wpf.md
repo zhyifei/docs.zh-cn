@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696790"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器承载的应用程序时，必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序执行无限制的权限 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**的权限集)、 是否使用 Windows Installer (.msi)、 XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任的主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -31,17 +31,17 @@ ms.locfileid: "59313562"
   
  本主题包含以下各节：  
   
--   [安全导航](#SafeTopLevelNavigation)  
+- [安全导航](#SafeTopLevelNavigation)  
   
--   [Web 浏览软件安全设置](#InternetExplorerSecuritySettings)  
+- [Web 浏览软件安全设置](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser 控件和功能控件](#webbrowser_control_and_feature_controls)  
+- [WebBrowser 控件和功能控件](#webbrowser_control_and_feature_controls)  
   
--   [对部分受信任的客户端应用程序禁用 APTCA 程序集](#APTCA)  
+- [对部分受信任的客户端应用程序禁用 APTCA 程序集](#APTCA)  
   
--   [宽松 XAML 文件的沙盒行为](#LooseContentSandboxing)  
+- [宽松 XAML 文件的沙盒行为](#LooseContentSandboxing)  
   
--   [用于开发可提高安全性的 WPF 应用程序的资源](#BestPractices)  
+- [用于开发可提高安全性的 WPF 应用程序的资源](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>安全导航  
@@ -69,19 +69,19 @@ ms.locfileid: "59313562"
   
  可以由用户导航到这些内容类型的文件，也可以通过编程方式导航到这些内容类型的文件：  
   
--   **用户导航**。 用户通过单击导航<xref:System.Windows.Documents.Hyperlink>元素。  
+- **用户导航**。 用户通过单击导航<xref:System.Windows.Documents.Hyperlink>元素。  
   
--   **编程导航**。 应用程序导航不涉及用户，例如，通过设置<xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>属性。  
+- **编程导航**。 应用程序导航不涉及用户，例如，通过设置<xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>属性。  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>浏览器导航安全性  
  浏览器导航仅在以下条件下被视为安全：  
   
--   **用户导航**。 用户通过单击导航<xref:System.Windows.Documents.Hyperlink>元素内主<xref:System.Windows.Navigation.NavigationWindow>，不能在嵌套<xref:System.Windows.Controls.Frame>。  
+- **用户导航**。 用户通过单击导航<xref:System.Windows.Documents.Hyperlink>元素内主<xref:System.Windows.Navigation.NavigationWindow>，不能在嵌套<xref:System.Windows.Controls.Frame>。  
   
--   **区域**。 要导航到的内容位于 Internet 或本地 Intranet 上。  
+- **区域**。 要导航到的内容位于 Internet 或本地 Intranet 上。  
   
--   **协议**。 正在使用的协议可以是**http**， **https**，**文件**，或者**mailto**。  
+- **协议**。 正在使用的协议可以是**http**， **https**，**文件**，或者**mailto**。  
   
  如果[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]尝试导航到内容不符合这些条件的方式<xref:System.Security.SecurityException>引发。  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313562"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 提供一种机制，可以配置允许或从要执行的功能[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]，其中包括：  
   
--   .NET framework 相关组件  
+- .NET framework 相关组件  
   
--   ActiveX 控件和插件  
+- ActiveX 控件和插件  
   
--   下载  
+- 下载  
   
--   脚本  
+- 脚本  
   
--   用户身份验证  
+- 用户身份验证  
   
  可以在这种方式保护的功能的集合配置为按每个区域**Internet**， **Intranet**，**受信任的站点**，和**受限站点**区域。 以下步骤描述如何配置安全设置：  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313562"
   
  从开始[!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]，专门为.NET Framework 的以下安全设置将包括：  
   
--   **宽松 XAML**。 控件是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以导航到并松散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]文件。 （“启用”、“禁用”和“提示”选项）。  
+- **宽松 XAML**。 控件是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以导航到并松散[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]文件。 （“启用”、“禁用”和“提示”选项）。  
   
--   **XAML 浏览器应用程序**。 控件是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以导航到并运行[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 （“启用”、“禁用”和“提示”选项）。  
+- **XAML 浏览器应用程序**。 控件是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以导航到并运行[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 （“启用”、“禁用”和“提示”选项）。  
   
  默认情况下启用这些设置所有用于**Internet**，**本地 intranet**，并**受信任的站点**区域，并禁用**受限站点**区域。  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313562"
   
  此项建立 APTCA 程序集的条目。 还必须在此项中创建值来启用或禁用程序集。 下面是该值的详细信息：  
   
--   值名称：**APTCA_FLAG**。  
+- 值名称：**APTCA_FLAG**。  
   
--   值类型：**REG_DWORD**。  
+- 值类型：**REG_DWORD**。  
   
--   值数据：**1**为禁用;**0**启用。  
+- 值数据：**1**为禁用;**0**启用。  
   
  如果必须为部分受信任的客户端应用程序禁用某程序集，可以编写一个用于创建注册表项和值的更新。  
   

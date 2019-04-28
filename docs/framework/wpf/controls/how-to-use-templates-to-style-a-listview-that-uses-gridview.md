@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
 ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699118"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>如何：使用模板来设置使用 GridView 的 ListView 的样式
 此示例演示如何使用<xref:System.Windows.DataTemplate>并<xref:System.Windows.Style>对象来指定的外观<xref:System.Windows.Controls.ListView>控件，它使用<xref:System.Windows.Controls.GridView>视图模式。  

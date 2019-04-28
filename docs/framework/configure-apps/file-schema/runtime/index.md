@@ -2,18 +2,12 @@
 title: 运行时设置架构
 ms.date: 03/30/2017
 helpviewer_keywords:
-- schema runtime settings
-- configuration schema [.NET Framework], runtime settings
-- runtime settings schema
+  - schema runtime settings
+  - 'configuration schema [.NET Framework], runtime settings'
+  - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21c24040f7d093aa72738957316a4219539510c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076934"
 ---
 # <a name="runtime-settings-schema"></a>运行时设置架构
 运行设置由公共语言运行时用于配置面向 .NET Framework 的应用程序。  

@@ -3,11 +3,11 @@ title: 创建 LINQ to DataSet 项目在 Visual Studio 中
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667037"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何：创建 LINQ to DataSet 项目在 Visual Studio 中
 
@@ -26,7 +26,7 @@ LINQ 到数据集需要两个其他引用*System.Data.dll*并*System.Data.DataSe
 
 1. 将引用添加到**System.Core**， **System.Data**，并**System.Data.DataSetExtensions**。
 
-   在中**解决方案资源管理器**，右键单击**引用**节点，然后选择**添加引用**。 在中**引用管理器**对话框中，选择**System.Core**， **System.Data**，以及**System.Data.DataSetExtensions**。 选择“确定”。
+   在中**解决方案资源管理器**，右键单击**引用**节点，然后选择**添加引用**。 在中**引用管理器**对话框中，选择**System.Core**， **System.Data**，以及**System.Data.DataSetExtensions**。 选择 **确定**。
 
 1. 添加[使用](../../../csharp/language-reference/keywords/using-directive.md)指令 (或[Imports 语句](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)在 Visual Basic 中) 的**System.Data**并**System.Linq**。
 

@@ -3,11 +3,11 @@ title: 源代码行标识符、文件标识符和路径标识符
 description: 了解如何使用内置F#标识符值使您能够访问源行号、 目录和文件名称在代码中的。
 ms.date: 05/16/2016
 ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663617"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>源代码行标识符、文件标识符和路径标识符
 

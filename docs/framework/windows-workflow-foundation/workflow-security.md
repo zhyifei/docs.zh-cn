@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
 ms.openlocfilehash: a5a8d4d0d41efb7a255080994c8e18302d302447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669233"
 ---
 # <a name="workflow-security"></a>工作流安全性
 Windows Workflow Foundation (WF) 与多个不同的技术，如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 集成。 如果操作不当，采用这些技术可能会给工作流带来安全问题。
@@ -28,21 +28,21 @@ Windows Workflow Foundation (WF) 与多个不同的技术，如 Microsoft SQL Se
 
 ## <a name="sql-server-security-concerns"></a>SQL Server 安全问题
 
--   使用大量子活动、位置、书签、宿主扩展或作用域时，或使用负载很大的书签时，可能会耗尽内存，或在持久化过程中分配过多的数据库空间。 可使用对象级和数据级的安全措施来缓解该问题。
+- 使用大量子活动、位置、书签、宿主扩展或作用域时，或使用负载很大的书签时，可能会耗尽内存，或在持久化过程中分配过多的数据库空间。 可使用对象级和数据级的安全措施来缓解该问题。
 
--   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 有关详细信息，请参阅[SQL Server 最佳实践](https://go.microsoft.com/fwlink/?LinkId=164972)。
+- 使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 有关详细信息，请参阅[SQL Server 最佳实践](https://go.microsoft.com/fwlink/?LinkId=164972)。
 
--   应为实例存储区中的敏感数据加密。 有关详细信息，请参阅[SQL 安全性加密](https://go.microsoft.com/fwlink/?LinkId=164976)。
+- 应为实例存储区中的敏感数据加密。 有关详细信息，请参阅[SQL 安全性加密](https://go.microsoft.com/fwlink/?LinkId=164976)。
 
--   因为数据库连接字符串通常包含在配置文件中，所以，Windows 级别的安全性 (ACL) 应该用于确保配置文件（通常是 Web.Config）是安全的，并且登录名和密码信息不包含在连接字符串中。 应改为在数据库和 Web 服务器之间使用 Windows 身份验证。
+- 因为数据库连接字符串通常包含在配置文件中，所以，Windows 级别的安全性 (ACL) 应该用于确保配置文件（通常是 Web.Config）是安全的，并且登录名和密码信息不包含在连接字符串中。 应改为在数据库和 Web 服务器之间使用 Windows 身份验证。
 
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的注意事项
 
--   应保护工作流中使用的 Windows Communication Foundation (WCF) 终结点。 有关详细信息，请参阅[WCF 安全性概述](https://go.microsoft.com/fwlink/?LinkID=164975)。
+- 应保护工作流中使用的 Windows Communication Foundation (WCF) 终结点。 有关详细信息，请参阅[WCF 安全性概述](https://go.microsoft.com/fwlink/?LinkID=164975)。
 
--   宿主级授权可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 来实现。 请参阅[如何：创建自定义授权管理器服务的](https://go.microsoft.com/fwlink/?LinkId=192228)有关详细信息。
+- 宿主级授权可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 来实现。 请参阅[如何：创建自定义授权管理器服务的](https://go.microsoft.com/fwlink/?LinkId=192228)有关详细信息。
 
--   也可通过访问 OperationContext 从工作流内提供传入消息的 ServiceSecurityContext。
+- 也可通过访问 OperationContext 从工作流内提供传入消息的 ServiceSecurityContext。
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
  Microsoft WF Security Pack CTP 1 是一组活动和根据其实现的第一个社区技术预览 (CTP) 版本[Windows Workflow Foundation](index.md)中[.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF4），并[Windows Identity Foundation (WIF)](../security/index.md)。  Microsoft WF Security Pack CTP 1 包含活动及其设计器，阐释如何使用工作流轻松地实现各种与安全相关的方案，包括：

@@ -12,20 +12,20 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698988"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>如何：在事件发生时向元素应用转换
 此示例演示如何将应用<xref:System.Windows.Media.ScaleTransform>事件的发生时间。 此处说明的概念与用于应用其他类型的转换的概念相同。 有关可用类型的转换的详细信息，请参阅<xref:System.Windows.Media.Transform>类或[转换概述](transforms-overview.md)。  
   
  可以通过以下两种方式之一向元素应用转换：  
   
--   如果这样做*不*希望转换影响布局，请使用<xref:System.Windows.UIElement.RenderTransform%2A>元素的属性。  
+- 如果这样做*不*希望转换影响布局，请使用<xref:System.Windows.UIElement.RenderTransform%2A>元素的属性。  
   
--   如果您希望转换影响布局，使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>元素的属性。  
+- 如果您希望转换影响布局，使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>元素的属性。  
   
  下面的示例应用<xref:System.Windows.Media.ScaleTransform>到<xref:System.Windows.UIElement.RenderTransform%2A>按钮的属性。 当鼠标在按钮上移<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>的属性<xref:System.Windows.Media.ScaleTransform>设置为`2`，这会导致该按钮会变得更大。 当鼠标离开按钮时，<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>并<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>设置为`1`，这会导致按钮返回到其原始大小。  
   

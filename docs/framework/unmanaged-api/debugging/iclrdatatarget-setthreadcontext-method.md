@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3f98ab65512a380ebd4dc0ecd50e36f94a6d6b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698026"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 方法
 目标进程中设置指定线程的当前的上下文。 由公共语言运行时 (CLR) 数据访问服务调用此方法。  

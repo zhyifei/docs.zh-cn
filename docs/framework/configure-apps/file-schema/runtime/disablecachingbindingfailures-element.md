@@ -13,11 +13,11 @@ ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704786"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 元素
 指定是否禁用缓存绑定故障的原因是通过探测找不到程序集。  
@@ -63,11 +63,11 @@ ms.locfileid: "59159271"
   
  一些绑定和加载失败不受此元素，并始终进行缓存。 这些失败原因是该程序集已找到，但无法加载。 它们将引发<xref:System.BadImageFormatException>或<xref:System.IO.FileLoadException>。 以下列表包含此类故障的一些示例。  
   
--   如果你尝试加载文件不是有效的程序集，即使错误的文件将被替换为正确的程序集加载程序集的后续尝试将失败。  
+- 如果你尝试加载文件不是有效的程序集，即使错误的文件将被替换为正确的程序集加载程序集的后续尝试将失败。  
   
--   如果尝试加载已锁定的文件系统程序集，加载程序集的后续尝试将失败，即使文件系统发布程序集。  
+- 如果尝试加载已锁定的文件系统程序集，加载程序集的后续尝试将失败，即使文件系统发布程序集。  
   
--   如果尝试加载的程序集的一个或多个版本位于探测路径中，但在它们之间的不是你请求的特定版本，加载该版本的后续尝试将失败，即使正确的版本将移到探测路径。  
+- 如果尝试加载的程序集的一个或多个版本位于探测路径中，但在它们之间的不是你请求的特定版本，加载该版本的后续尝试将失败，即使正确的版本将移到探测路径。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何禁用的原因是通过探测找不到程序集的程序集绑定故障缓存。  

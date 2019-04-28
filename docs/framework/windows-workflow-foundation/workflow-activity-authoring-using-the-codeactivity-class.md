@@ -3,11 +3,11 @@ title: 使用 CodeActivity 类的工作流活动创作
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669441"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>使用 CodeActivity 类的工作流活动创作
 从 <xref:System.Activities.CodeActivity> 继承而创建的活动可以通过重写 <xref:System.Activities.CodeActivity.Execute%2A> 方法来实现基本的命令性行为。
@@ -15,11 +15,11 @@ ms.locfileid: "59767391"
 ## <a name="using-codeactivitycontext"></a>使用 CodeActivityContext
  通过使用类型为 <xref:System.Activities.CodeActivity.Execute%2A> 的 `context` 参数的成员，可从 <xref:System.Activities.CodeActivityContext> 方法中访问工作流运行时的功能。 可通过 <xref:System.Activities.CodeActivityContext> 使用的功能如下：
 
--   获取并设置变量和自变量的值。
+- 获取并设置变量和自变量的值。
 
--   使用 <xref:System.Activities.CodeActivityContext.Track%2A> 的自定义跟踪功能。
+- 使用 <xref:System.Activities.CodeActivityContext.Track%2A> 的自定义跟踪功能。
 
--   使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 访问活动的执行属性。
+- 使用 <xref:System.Activities.CodeActivityContext.GetProperty%2A> 访问活动的执行属性。
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>创建从 CodeActivity 继承的自定义活动
 

@@ -3,11 +3,11 @@ title: 跟踪事件参考
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 ms.openlocfilehash: 5b3bba83b3c6c7ab27c9470213b7675f7e107c7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699872"
 ---
 # <a name="tracking-events-reference"></a>跟踪事件参考
 执行期间，[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的工作流在逐步经历其生存期内的各个阶段时会引发跟踪事件。 宿主可以订阅这些事件并且在生存期内使工作流的进度状态保持最新。 本节介绍引发的跟踪事件。  
@@ -77,7 +77,7 @@ ms.locfileid: "57712209"
 |[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|详细|运行时事务已完成，状态为“%1”。|WFRuntime|  
 |[1038 - EnterNoPersistBlock](1038-enternopersistblock.md)|详细|正在进入非持久块。|WFRuntime|  
 |[1039 - ExitNoPersistBlock](1039-exitnopersistblock.md)|详细|正在退出非持久块。|WFRuntime|  
-|[1040 - InArgumentBound](1040-inargumentbound.md)|详细|Activity“%2”、DisplayName“%3”、InstanceId“%4”中的 In 参数“%1”已经与值 %5 绑定。|WFActivities|  
+|[1040 - InArgumentBound](1040-inargumentbound.md)|详细|Activity“%2”、DisplayName“%3”、InstanceId“%4”中的 In 自变量“%1”已经与值 %5 绑定。|WFActivities|  
 |[1041 - WorkflowApplicationPersistableIdle](1041-workflowapplicationpersistableidle.md)|信息|WorkflowApplication Id"%1"是空闲且可持久化。  不会执行以下操作: %2。|WFRuntime|  
 |[1101 - WorkflowActivityStart](1101-workflowactivitystart.md)|信息|WorkflowInstance Id“%1”E2E 活动|WFRuntime|  
 |[1102 - WorkflowActivityStop](1102-workflowactivitystop.md)|信息|WorkflowInstance Id“%1”E2E 活动|WFRuntime|  
@@ -136,5 +136,5 @@ ms.locfileid: "57712209"
 |[39457 - TrackingRecordRaised](39457-trackingrecordraised.md)|信息|跟踪记录 %1 提升为 %2。|WFRuntime|  
 |[39458 - TrackingRecordTruncated](39458-trackingrecordtruncated.md)|警告|用提供程序 %2 向 ETW 会话写入了截断的跟踪记录 %1。 已移除了变量/批注/用户数据|WFTracking|  
 |[39459 - TrackingDataExtracted](39459-trackingdataextracted.md)|详细|正在跟踪在活动 %2 中提取的数据 %1。|WFRuntime|  
-|[39460 - TrackingValueNotSerializable](39460-trackingvaluenotserializable.md)|警告|所提取的参数/变量“%1”不可序列化。|WFTracking|  
+|[39460 - TrackingValueNotSerializable](39460-trackingvaluenotserializable.md)|警告|所提取的自变量/变量“%1”不可序列化。|WFTracking|  
 |[57398 - MaxInstancesExceeded](57398-maxinstancesexceeded.md)|警告|系统达到为限制“MaxConcurrentInstances”设置的限制值。 此限制的限制值设置为 %1。 可通过修改 serviceThrottle 元素中的特性“maxConcurrentInstances”或修改行为 ServiceThrottlingBehavior 的“MaxConcurrentInstances”属性来更改限制值。|WFServices|

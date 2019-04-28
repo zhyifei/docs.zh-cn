@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759929"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML 及 WPF 的自定义类
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 框架中实现的 XAML 支持定义任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 语言的自定义类或结构，然后使用 XAML 标记访问类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
@@ -20,19 +20,19 @@ ms.locfileid: "59122351"
 ## <a name="custom-classes-in-applications-or-assemblies"></a>应用程序或程序集中的自定义类  
  XAML 中使用的自定义类可通过两种不同的方式进行定义：在代码隐藏或其他生成主 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的代码内，或者在单独程序集中作为类（例如用作类库的可执行文件或 DLL）。 这些方法各有特定的优点和缺点。  
   
--   创建类库的优点在于可在多个不同的应用程序间共享任意此类自定义类。 通过使用单独的库，更易于控制应用程序的版本控制问题，并可简化类创建过程，在此过程中，所需的类用法是作为 XAML 页面上的根元素。  
+- 创建类库的优点在于可在多个不同的应用程序间共享任意此类自定义类。 通过使用单独的库，更易于控制应用程序的版本控制问题，并可简化类创建过程，在此过程中，所需的类用法是作为 XAML 页面上的根元素。  
   
--   在应用程序中定义自定义类的优点在于此方法相对轻量，可减少在主应用程序可执行文件外引入单独程序集时遇到的部署和测试问题。  
+- 在应用程序中定义自定义类的优点在于此方法相对轻量，可减少在主应用程序可执行文件外引入单独程序集时遇到的部署和测试问题。  
   
--   无论定义在相同还是不同的程序集中，自定义类若要在 XAML 中用作元素，都需要在 CLR 命名空间和 XML 命名空间之间进行映射。 请参阅 [WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+- 无论定义在相同还是不同的程序集中，自定义类若要在 XAML 中用作元素，都需要在 CLR 命名空间和 XML 命名空间之间进行映射。 请参阅 [WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>将自定义类用作 XAML 元素的要求  
  为能够实例化为对象元素，类必须满足以下要求：  
   
--   自定义类必须是公共的且支持默认（无参数）公共构造函数。 （有关结构注释，请参阅下节内容。）  
+- 自定义类必须是公共的且支持默认（无参数）公共构造函数。 （有关结构注释，请参阅下节内容。）  
   
--   自定义类不得为嵌套类。 嵌套类及其常规 CLR 使用语法中的“点”会干扰其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和/或 XAML 功能（例如附加属性）。  
+- 自定义类不得为嵌套类。 嵌套类及其常规 CLR 使用语法中的“点”会干扰其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和/或 XAML 功能（例如附加属性）。  
   
  除启用对象元素语法外，对象定义还会对任何其他将该对象作为值类型的公共属性启用属性元素语法。 这是因为对象现在可被实例化为对象元素，且可填充此类属性的属性元素值。  
   
@@ -75,19 +75,19 @@ ms.locfileid: "59122351"
 ## <a name="writing-collection-properties"></a>编写集合属性  
  采用集合类型的属性所具有的 XAML 语法使你可指定添加到集合的对象。 此语法具有两个重要功能。  
   
--   无需在对象元素语法中指定作为集合对象的对象。 无论何时在采用集合类型的 XAML 中指定属性，该集合类型的状态总是隐式。  
+- 无需在对象元素语法中指定作为集合对象的对象。 无论何时在采用集合类型的 XAML 中指定属性，该集合类型的状态总是隐式。  
   
--   标记中集合属性的子元素经处理后变成集合的成员。 对集合成员的代码访问通常通过列表/字典方法（例如 `Add`）或通过索引器执行。 但 XAML 语法不支持方法和索引器 (异常：XAML 2009 可以支持这些方法，但使用 XAML 2009 会限制可能的 WPF 用法;请参阅[XAML 2009 语言功能](../../xaml-services/xaml-2009-language-features.md))。 对生成元素树而言，集合显然是非常常见的要求，并且你需要某种方法来填充声明 XAML 中的这些集合。 因此，通过将集合属性的子元素添加到作为集合属性类型值的集合中来对其进行处理。  
+- 标记中集合属性的子元素经处理后变成集合的成员。 对集合成员的代码访问通常通过列表/字典方法（例如 `Add`）或通过索引器执行。 但 XAML 语法不支持方法和索引器 (异常：XAML 2009 可以支持这些方法，但使用 XAML 2009 会限制可能的 WPF 用法;请参阅[XAML 2009 语言功能](../../xaml-services/xaml-2009-language-features.md))。 对生成元素树而言，集合显然是非常常见的要求，并且你需要某种方法来填充声明 XAML 中的这些集合。 因此，通过将集合属性的子元素添加到作为集合属性类型值的集合中来对其进行处理。  
   
  .NET Framework XAML 服务实现和 WPF XAML 处理器将以下定义用于组成集合属性的项。 属性的属性类型必须实现以下项之一：  
   
--   实现<xref:System.Collections.IList>。  
+- 实现<xref:System.Collections.IList>。  
   
--   实现<xref:System.Collections.IDictionary>或泛型等效项 (<xref:System.Collections.Generic.IDictionary%602>)。  
+- 实现<xref:System.Collections.IDictionary>或泛型等效项 (<xref:System.Collections.Generic.IDictionary%602>)。  
   
--   派生自<xref:System.Array>(有关在 XAML 中数组的详细信息，请参阅[X:array 标记扩展](../../xaml-services/x-array-markup-extension.md)。)  
+- 派生自<xref:System.Array>(有关在 XAML 中数组的详细信息，请参阅[X:array 标记扩展](../../xaml-services/x-array-markup-extension.md)。)  
   
--   实现<xref:System.Windows.Markup.IAddChild>(通过定义的接口[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
+- 实现<xref:System.Windows.Markup.IAddChild>(通过定义的接口[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
   
  CLR 中这些类型每个都具有 `Add` 方法，创建对象图时，XAML 处理器使用该方法将项添加到基础集合。  
   

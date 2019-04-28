@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640229"
 ---
 # <a name="architecture-deployment-approaches"></a>体系结构部署方法
 
@@ -139,8 +139,8 @@ PaaS 的主要缺点通常是供应商绑架。 例如，某些 PaaS 提供程�
 |         |IaaS     |PaaS     |容器|无服务器|
 |---------|---------|---------|---------|----------|
 |缩放|VM       |实例 |应用      |函数  |
-|**摘要**|硬件|平台|OS 主机|运行时   |
-|**单元** |VM       |项目  |图像    |代码      |
+|**Abstracts**|硬件|Platform|OS 主机|运行时   |
+|**Unit** |VM       |项目  |图像    |代码      |
 |**生存期**|几个月|天到几个月|分钟到几天|毫秒到数分钟|
 |**责任**|应用程序、 依赖项、 运行时和操作系统|应用程序和依赖项|应用程序、 依赖项和运行时|函数
 
@@ -159,7 +159,7 @@ PaaS 的主要缺点通常是供应商绑架。 例如，某些 PaaS 提供程�
 * [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [N 层体系结构模式](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [在 Azure 上的 Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [微服务](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+* [Microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
 * [虚拟机 N 层参考体系结构](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
 * [虚拟机](https://docs.microsoft.com/azure/virtual-machines/)
 * [什么是 Docker？](../microservices-architecture/container-docker-introduction/docker-defined.md)

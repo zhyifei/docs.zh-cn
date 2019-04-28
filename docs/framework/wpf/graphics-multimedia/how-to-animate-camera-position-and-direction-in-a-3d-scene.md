@@ -10,11 +10,11 @@ helpviewer_keywords:
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
 ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651371"
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>如何：在三维场景中对照相机位置和方向进行动画处理
 下面的示例演示如何将照相机位置进行动画处理和对三维场景中指向的方向进行动画处理。 这是通过使用<xref:System.Windows.Media.Animation.Point3DAnimation>并<xref:System.Windows.Media.Animation.Vector3DAnimation>进行动画处理<xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A>并<xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A>分别的属性<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 可能使用如下的动画可以更改的事件响应场景旁观者的视图。  

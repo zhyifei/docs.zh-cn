@@ -5,24 +5,24 @@ f1_keywords:
 - vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
 ms.openlocfilehash: 5ec077be30b0afc8917d431dc9bd73c8dd41be89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649863"
 ---
 # <a name="clipboard-format-is-not-valid"></a>剪贴板格式无效
 指定的剪贴板格式，与正在执行的方法不兼容。 此错误的可能原因是：  
   
--   使用剪贴板`GetText`或`SetText`剪贴板格式以外的其他方法`vbCFText`或`vbCFLink`。  
+- 使用剪贴板`GetText`或`SetText`剪贴板格式以外的其他方法`vbCFText`或`vbCFLink`。  
   
--   使用剪贴板`GetData`或`SetData`剪贴板格式以外的其他方法`vbCFBitmap`， `vbCFDIB`，或`vbCFMetafile`。  
+- 使用剪贴板`GetData`或`SetData`剪贴板格式以外的其他方法`vbCFBitmap`， `vbCFDIB`，或`vbCFMetafile`。  
   
--   使用`GetData`或`SetData`方法的`DataObject`与已注册的格式 （HC000-& HFFFF），由 Microsoft Windows 保留的范围中的剪贴板格式时该剪贴板格式尚未注册与 Microsoft Windows.  
+- 使用`GetData`或`SetData`方法的`DataObject`与已注册的格式 （HC000-& HFFFF），由 Microsoft Windows 保留的范围中的剪贴板格式时该剪贴板格式尚未注册与 Microsoft Windows.  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   删除无效的格式，并指定一个有效。  
+- 删除无效的格式，并指定一个有效。  
   
 ## <a name="see-also"></a>请参阅
 

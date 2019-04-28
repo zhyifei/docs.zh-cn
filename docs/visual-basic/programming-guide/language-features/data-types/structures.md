@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
 ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663357"
 ---
 # <a name="structures-visual-basic"></a>结构 (Visual Basic)
 一个*结构*是用户定义类型 (UDT 支持的 Visual Basic 早期版本) 的泛化。 除了字段，结构可以公开属性、 方法和事件。 一种结构可以实现一个或多个接口，而您可以声明的每个字段的单独的访问级别。  

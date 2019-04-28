@@ -11,11 +11,11 @@ helpviewer_keywords:
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
 ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61724054"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>如何：通过避免自动缩放来改善性能
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在绘制时，这会降低性能，可能会自动缩放图像。 或者，可以控制图像缩放通过将传递到目标矩形的尺寸<xref:System.Drawing.Graphics.DrawImage%2A>方法。  

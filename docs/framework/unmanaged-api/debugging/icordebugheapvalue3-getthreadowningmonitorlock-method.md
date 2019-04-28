@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701016"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 返回拥有此对象的监视器锁的托管的线程。  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>备注  
  如果托管的线程拥有对此对象的监视器锁：  
   
--   该方法返回 S_OK。  
+- 该方法返回 S_OK。  
   
--   在线程退出之前的线程对象有效。  
+- 在线程退出之前的线程对象有效。  
   
  如果没有任何托管的线程拥有对此对象的监视器锁`ppThread`和`pAcquisitionCount`保持不变，并且该方法返回 S_FALSE。  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722999"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 控件（Windows 窗体）
 此控件组应用程序对其执行命令并使其易访问。  
@@ -55,19 +55,19 @@ ms.locfileid: "57707581"
  [如何：设置自动菜单合并为 MDI 应用程序](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  描述如何在运行时自动合并菜单项。  
   
--   [MenuStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [如何：复制 Toolstripmenuitem](how-to-copy-toolstripmenuitems.md)  
+- [如何：复制 Toolstripmenuitem](how-to-copy-toolstripmenuitems.md)  
   
--   [如何：使用设计器隐藏 Toolstripmenuitem](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [如何：使用设计器隐藏 Toolstripmenuitem](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [如何：使用设计器禁用 Toolstripmenuitem](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [如何：使用设计器禁用 Toolstripmenuitem](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [如何：移动 Toolstripmenuitem](how-to-move-toolstripmenuitems.md)  
+- [如何：移动 Toolstripmenuitem](how-to-move-toolstripmenuitems.md)  
   
--   [演练：向窗体提供标准菜单项](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [演练：向窗体提供标准菜单项](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [MenuStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.MenuStrip>  

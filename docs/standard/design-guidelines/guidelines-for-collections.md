@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: KrzysztofCwalina
 ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669039"
 ---
 # <a name="guidelines-for-collections"></a>集合准则
 可将任何专门设计用于操作一组具有一些共同特征的对象的类型视为一个集合。 这些类型几乎总适合用于实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，因此在本节中，我们只将实现其中一个或两个接口的类型视为集合。  

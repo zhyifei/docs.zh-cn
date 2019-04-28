@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
 ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767530"
 ---
 # <a name="object-identity"></a>对象标识
 运行库中的对象具有唯一标识。 引用同一对象的两个变量实际上是引用此对象的同一实例。 因为这一事实，您通过一个变量做出更改后，立即就可以通过另一个变量看到这些更改。  

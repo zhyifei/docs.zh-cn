@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609442"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 结构
 包含有关要进行垃圾回收的对象的信息。  
@@ -49,19 +49,19 @@ typedef struct _COR_GC_REFERENCE {
 ## <a name="remarks"></a>备注  
  `type`字段是[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举值，该值指示引用原来所在的位置。 特定`COR_GC_REFERENCE`值可以反映任何以下类型的托管对象：  
   
--   从所有托管堆栈的对象 (`CorGCReferenceType.CorReferenceStack`)。 这包括实时引用在托管的代码中，由公共语言运行时创建的对象。  
+- 从所有托管堆栈的对象 (`CorGCReferenceType.CorReferenceStack`)。 这包括实时引用在托管的代码中，由公共语言运行时创建的对象。  
   
--   句柄表中的对象 (`CorGCReferenceType.CorHandle*`)。 这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。  
+- 句柄表中的对象 (`CorGCReferenceType.CorHandle*`)。 这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。  
   
--   终结器队列中的对象 (`CorGCReferenceType.CorReferenceFinalizer`)。 终结器队列根对象，直到运行终结器。  
+- 终结器队列中的对象 (`CorGCReferenceType.CorReferenceFinalizer`)。 终结器队列根对象，直到运行终结器。  
   
  `extraData`字段包含额外数据，具体取决于所引用的源 （或类型）。 可能的值有：  
   
--   `DependentSource`。 如果`type`是`CorGCREferenceType.CorHandleStrongDependent`，此字段是对象保持活动状态，如果根对对象进行垃圾回收在`COR_GC_REFERENCE.Location`。  
+- `DependentSource`。 如果`type`是`CorGCREferenceType.CorHandleStrongDependent`，此字段是对象保持活动状态，如果根对对象进行垃圾回收在`COR_GC_REFERENCE.Location`。  
   
--   `RefCount`。 如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，此字段是句柄的引用计数。  
+- `RefCount`。 如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，此字段是句柄的引用计数。  
   
--   `Size`。 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，此字段是垃圾回收器为其计算对象根的对象树的最后大小。 请注意，此计算不一定是最新。  
+- `Size`。 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，此字段是垃圾回收器为其计算对象根的对象树的最后大小。 请注意，此计算不一定是最新。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

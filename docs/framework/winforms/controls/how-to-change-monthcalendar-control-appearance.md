@@ -10,18 +10,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666505"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>如何：更改 Windows 窗体 MonthCalendar 控件的外观
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>让您可以自定义在很多方面的日历的外观。 例如，可以设置配色方案，并选择要显示或隐藏周数和当前日期。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>若要更改月日历的配色方案  
   
--   设置属性，如<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>，<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>属性还为每周天数中确定的字体颜色。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性确定的日期之前和之后显示的月或几个月的颜色。  
+- 设置属性，如<xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>，<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>和<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>属性还为每周天数中确定的字体颜色。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性确定的日期之前和之后显示的月或几个月的颜色。  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -46,7 +46,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>让您可以自定义在�
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控件的底部显示当前日期  
   
--   将 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 属性设置为 `true`。 下面的示例显示和省略双击窗体之后今天的日期之间切换。  
+- 将 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 属性设置为 `true`。 下面的示例显示和省略双击窗体之后今天的日期之间切换。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>让您可以自定义在�
   
 ### <a name="to-display-week-numbers"></a>若要显示周数  
   
--   将 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 属性设置为 `true`。 在代码中或在属性窗口中，可以设置此属性。  
+- 将 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 属性设置为 `true`。 在代码中或在属性窗口中，可以设置此属性。  
   
      在左侧的一周的第一天到一个单独的列中显示周数。  
   

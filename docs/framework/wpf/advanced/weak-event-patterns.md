@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669352"
 ---
 # <a name="weak-event-patterns"></a>弱事件模式
 在应用程序，很可能附加到事件源的处理程序不会破坏与该处理程序附加到源的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引入了可用于解决此问题，请通过专用管理器类的特定事件并在该事件的侦听器上实现接口的设计模式。 这种设计模式被称为*弱事件模式*。  
@@ -40,13 +40,13 @@ ms.locfileid: "59316162"
 
  以下部分介绍如何实现弱事件模式。  出于本文的讨论，以订阅该事件具有以下特征。  
   
--   事件名称是`SomeEvent`。  
+- 事件名称是`SomeEvent`。  
   
--   引发事件`EventSource`类。  
+- 引发事件`EventSource`类。  
   
--   事件处理程序类型： `SomeEventEventHandler` (或`EventHandler<SomeEventEventArgs>`)。  
+- 事件处理程序类型： `SomeEventEventHandler` (或`EventHandler<SomeEventEventArgs>`)。  
   
--   该事件传递的类型参数`SomeEventEventArgs`到事件处理程序。  
+- 该事件传递的类型参数`SomeEventEventArgs`到事件处理程序。  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>使用现有的弱事件管理器类  
   

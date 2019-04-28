@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb5c05a88c12b5124c77b0d0a7f834b405dd289f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697415"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函数
 使非托管的宿主能够将公共语言运行时 (CLR) 加载到进程中。  
@@ -77,9 +77,9 @@ HRESULT CorBindToRuntime (
   
 2. 通过更改进程的默认模式为第 1 版兼容性模式，其中<xref:System.Security.Principal.WindowsIdentity>对象不流经异步的任何时刻，而不考虑<xref:System.Threading.ExecutionContext>当前线程上的设置。 如何更改默认模式取决于是否使用托管可执行文件或使用非托管承载接口能够将 CLR 加载：  
   
-    1.  用于托管可执行文件，必须设置`enabled`的属性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)元素`true`。  
+    1. 用于托管可执行文件，必须设置`enabled`的属性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)元素`true`。  
   
-    2.  对于非托管承载接口，将`STARTUP_LEGACY_IMPERSONATION`中的标志`flags`参数调用时`CorBindToRuntimeEx`函数。  
+    2. 对于非托管承载接口，将`STARTUP_LEGACY_IMPERSONATION`中的标志`flags`参数调用时`CorBindToRuntimeEx`函数。  
   
      第 1 版兼容性模式适用于整个过程和进程中的所有应用程序域。  
   

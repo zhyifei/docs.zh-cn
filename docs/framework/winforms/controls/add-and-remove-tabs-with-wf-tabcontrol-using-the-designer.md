@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
 ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640361"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体 TabControl 添加和移除选项卡
 在将<xref:System.Windows.Forms.TabControl>控制窗体中，它包含两个选项卡默认情况下。 可以添加或删除使用设计器的选项卡。  
@@ -25,7 +25,7 @@ ms.locfileid: "59219754"
   
 ### <a name="to-add-or-remove-a-tab-using-the-designer"></a>若要添加或删除使用设计器的选项卡  
   
--   在控件的智能标记上，单击**添加选项卡**或**删除选项卡**  
+- 在控件的智能标记上，单击**添加选项卡**或**删除选项卡**  
   
      或  
   

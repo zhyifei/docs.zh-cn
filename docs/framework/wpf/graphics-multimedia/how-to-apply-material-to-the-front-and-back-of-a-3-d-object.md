@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
 ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698950"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>如何：向三维对象的正面和背面应用 Material
 下面的示例演示如何应用<xref:System.Windows.Media.Media3D.Material>到前面和背面三维对象，并对要显示对象的两侧的对象进行动画处理。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>的属性<xref:System.Windows.Media.Media3D.GeometryModel3D>用于将应用一个红色<xref:System.Windows.Media.Brush>到对象的正面和<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>属性<xref:System.Windows.Media.Media3D.GeometryModel3D>用于将应用一个蓝色<xref:System.Windows.Media.Brush>到后端的对象。 下面的代码显示了应用到该对象的材料：  

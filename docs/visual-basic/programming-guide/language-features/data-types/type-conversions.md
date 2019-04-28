@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663279"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic 中的类型转换
 将值从一种数据类型更改为另一种类型的过程称为*转换*。 转换为*扩大*或*收缩*，取决于所涉及的类型的数据容量。 此外会缩短*隐式*或*显式*，取决于在源代码中的语法。  
@@ -30,7 +30,7 @@ ms.locfileid: "44084463"
  [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  说明了将字符串转换为数字， `Boolean`，或日期/时间值。  
   
- [如何： 将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [如何：将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  演示如何将转换`Object`变量为任何其他数据类型。  
   
  [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

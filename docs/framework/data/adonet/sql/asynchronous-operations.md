@@ -3,11 +3,11 @@ title: 异步操作
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663968"
 ---
 # <a name="asynchronous-operations"></a>异步操作
 某些数据库操作（例如命令执行）可能要花费很长时间才能完成。 在此类情况下，单线程应用程序必须阻塞其他操作，并且等待该命令完成，然后才可以继续执行它们自己的操作。 比较而言，如果能够将长时间运行的操作分配给某个后台线程，就可以允许前台线程在整个操作期间保持活动状态。 例如，在 Windows 应用程序中，通过将长时间运行的操作委托给后台线程，可允许用户界面线程在操作执行时保持响应状态。  

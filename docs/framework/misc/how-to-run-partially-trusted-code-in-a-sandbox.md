@@ -1,5 +1,5 @@
 ---
-title: 如何：运行沙盒中部分受信任的代码
+title: 如何：在沙盒中运行部分信任的代码
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752966"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：运行沙盒中部分受信任的代码
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：在沙盒中运行部分信任的代码
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  沙盒处理是在受限制的安全环境中运行代码的做法，从而限制授予代码的访问权限。 例如，如果你有来自不完全信任的源的托管库，则不应将其作为完全受信任运行。 相反，应将代码放在将权限限制为预计需要的权限（例如 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 权限）的沙盒中。  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      其他信息：  
   
-    -   这是唯一将 <xref:System.Security.PermissionSet> 作为参数的 <xref:System.AppDomain.CreateDomain%2A> 方法的重载，因而它是唯一允许以部分信任设置加载应用程序的重载。  
+    - 这是唯一将 <xref:System.Security.PermissionSet> 作为参数的 <xref:System.AppDomain.CreateDomain%2A> 方法的重载，因而它是唯一允许以部分信任设置加载应用程序的重载。  
   
-    -   `evidence` 参数不用于计算权限集；它由 .NET Framework 的其它功能用于标识。  
+    - `evidence` 参数不用于计算权限集；它由 .NET Framework 的其它功能用于标识。  
   
-    -   此重载必须设置`info` 参数的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性。  
+    - 此重载必须设置`info` 参数的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性。  
   
-    -   `fullTrustAssemblies` 参数具有 `params` 关键字，这意味着不需要创建 <xref:System.Security.Policy.StrongName> 数组。 允许将 0、1 或更多强名称作为参数传递。  
+    - `fullTrustAssemblies` 参数具有 `params` 关键字，这意味着不需要创建 <xref:System.Security.Policy.StrongName> 数组。 允许将 0、1 或更多强名称作为参数传递。  
   
-    -   要用于创建应用程序域的代码是：  
+    - 要用于创建应用程序域的代码是：  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. 将代码加载到已创建的沙盒 <xref:System.AppDomain> 中。 有两种方法可以做到这一点：  
   
-    -   调用程序集的 <xref:System.AppDomain.ExecuteAssembly%2A> 方法。  
+    - 调用程序集的 <xref:System.AppDomain.ExecuteAssembly%2A> 方法。  
   
-    -   使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法来创建派生自新的 <xref:System.AppDomain> 中的 <xref:System.MarshalByRefObject> 的类的实例。  
+    - 使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法来创建派生自新的 <xref:System.AppDomain> 中的 <xref:System.MarshalByRefObject> 的类的实例。  
   
      第二种方法非常可取，因为这样可以更轻松地将参数传递给新的 <xref:System.AppDomain> 实例。 <xref:System.Activator.CreateInstanceFrom%2A> 方法提供两大重要功能：  
   
-    -   可以使用指向不包含你的程序集的位置的基本代码。  
+    - 可以使用指向不包含你的程序集的位置的基本代码。  
   
-    -   可以在完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) 的 <xref:System.Security.CodeAccessPermission.Assert%2A> 下进行创建，这样就可以创建关键类的一个实例。 （每当你的程序集没有透明度标记并作为完全受信任的程序集加载时就会发生这种情况。）因此，必须谨慎地使用此函数只创建你信任的代码，建议在新的应用程序域中只创建完全受信任的类的实例。  
+    - 可以在完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) 的 <xref:System.Security.CodeAccessPermission.Assert%2A> 下进行创建，这样就可以创建关键类的一个实例。 （每当你的程序集没有透明度标记并作为完全受信任的程序集加载时就会发生这种情况。）因此，必须谨慎地使用此函数只创建你信任的代码，建议在新的应用程序域中只创建完全受信任的类的实例。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

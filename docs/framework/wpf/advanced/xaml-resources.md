@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757074"
 ---
 # <a name="xaml-resources"></a>XAML 资源
 资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 此外可以创建并使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](resources-and-code.md)。  
@@ -44,28 +44,28 @@ ms.locfileid: "59344918"
   
  在引用某个资源时，下列注意事项可能会对于使用静态资源引用还是使用动态资源引用产生影响：  
   
--   如何为应用程序创建资源的整体设计 (每页上，在应用程序中，在宽松[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，在资源的唯一程序集中)。  
+- 如何为应用程序创建资源的整体设计 (每页上，在应用程序中，在宽松[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，在资源的唯一程序集中)。  
   
--   应用程序的功能：实时更新资源是应用程序的要求之一吗?  
+- 应用程序的功能：实时更新资源是应用程序的要求之一吗?  
   
--   该资源引用类型的相应查找行为。  
+- 该资源引用类型的相应查找行为。  
   
--   特定的属性或资源类型，以及这些类型的本机行为。  
+- 特定的属性或资源类型，以及这些类型的本机行为。  
   
 ### <a name="static-resources"></a>静态资源  
  在以下情况下，最适合使用静态资源引用：  
   
--   所采用的应用程序设计将其所含的大多数资源都集中到了页面级或应用程序级资源字典中。 静态资源引用不会基于运行时行为（如重载页面）重新进行计算，因此可以通过以下方式在一定程度上提高性能：当资源和所采用的应用程序设计无需使用大量动态资源引用时，就避免使用。  
+- 所采用的应用程序设计将其所含的大多数资源都集中到了页面级或应用程序级资源字典中。 静态资源引用不会基于运行时行为（如重载页面）重新进行计算，因此可以通过以下方式在一定程度上提高性能：当资源和所采用的应用程序设计无需使用大量动态资源引用时，就避免使用。  
   
--   设置不在属性的值<xref:System.Windows.DependencyObject>或<xref:System.Windows.Freezable>。  
+- 设置不在属性的值<xref:System.Windows.DependencyObject>或<xref:System.Windows.Freezable>。  
   
--   正在创建的资源字典将编译成 DLL，并将打包为应用程序的一部分或在应用程序间共享。  
+- 正在创建的资源字典将编译成 DLL，并将打包为应用程序的一部分或在应用程序间共享。  
   
--   正在为自定义控件创建主题，并定义要在主题中使用的资源。 在这种情况下，通常不希望执行动态资源引用查找行为，而是希望执行静态资源引用行为，以确保查找可预测且自包含到主题中。 使用动态资源引用时，即使主题中的引用会保持未计算状态直至运行时，且主题可能会得到应用，但某个本地元素仍会重新定义主题正尝试引用的键，并且该本地元素在查找期间会排在主题前面。 如果发生这种情况，主题的行为将偏离预期方式。  
+- 正在为自定义控件创建主题，并定义要在主题中使用的资源。 在这种情况下，通常不希望执行动态资源引用查找行为，而是希望执行静态资源引用行为，以确保查找可预测且自包含到主题中。 使用动态资源引用时，即使主题中的引用会保持未计算状态直至运行时，且主题可能会得到应用，但某个本地元素仍会重新定义主题正尝试引用的键，并且该本地元素在查找期间会排在主题前面。 如果发生这种情况，主题的行为将偏离预期方式。  
   
--   正在使用资源设置大量依赖属性。 依赖属性会通过属性系统启用有效值缓存功能；因此，如果为可在加载时进行计算的依赖属性提供了值，则该依赖属性不必检查是否存在重新计算的表达式并可返回上一个有效值。 此项技术可以提高性能。  
+- 正在使用资源设置大量依赖属性。 依赖属性会通过属性系统启用有效值缓存功能；因此，如果为可在加载时进行计算的依赖属性提供了值，则该依赖属性不必检查是否存在重新计算的表达式并可返回上一个有效值。 此项技术可以提高性能。  
   
--   你想要为所有使用者更改基础资源，或者你想要使用的每个使用者维护单独的可写实例[x： 共享属性](../../xaml-services/x-shared-attribute.md)。  
+- 你想要为所有使用者更改基础资源，或者你想要使用的每个使用者维护单独的可写实例[x： 共享属性](../../xaml-services/x-shared-attribute.md)。  
   
 #### <a name="static-resource-lookup-behavior"></a>静态资源查找行为  
   
@@ -84,28 +84,28 @@ ms.locfileid: "59344918"
 ### <a name="dynamic-resources"></a>动态资源  
  在以下情况下，最适合使用动态资源：  
   
--   资源的值取决于直到运行时才能获悉的条件。 这包括系统资源或用户可设置的资源。 例如，可以创建引用系统属性的 setter 值，如公开<xref:System.Windows.SystemColors>， <xref:System.Windows.SystemFonts>，或<xref:System.Windows.SystemParameters>。 这些值是真正的动态值，因为它们最终来自用户和操作系统的运行时环境。 或许还拥有可能会发生变化的应用程序级主题，而页面级资源访问也必须捕获其中的变化。  
+- 资源的值取决于直到运行时才能获悉的条件。 这包括系统资源或用户可设置的资源。 例如，可以创建引用系统属性的 setter 值，如公开<xref:System.Windows.SystemColors>， <xref:System.Windows.SystemFonts>，或<xref:System.Windows.SystemParameters>。 这些值是真正的动态值，因为它们最终来自用户和操作系统的运行时环境。 或许还拥有可能会发生变化的应用程序级主题，而页面级资源访问也必须捕获其中的变化。  
   
--   正在为自定义控件创建或引用主题样式。  
+- 正在为自定义控件创建或引用主题样式。  
   
--   你想要调整的内容<xref:System.Windows.ResourceDictionary>应用程序生存期内。  
+- 你想要调整的内容<xref:System.Windows.ResourceDictionary>应用程序生存期内。  
   
--   拥有存在相互依赖关系且可能需要进行前向引用的复杂资源结构。 静态资源引用不支持前向引用，但动态资源引用却支持，因为该资源不需要进行计算，直到运行时，并且前向引用是不相关的概念。  
+- 拥有存在相互依赖关系且可能需要进行前向引用的复杂资源结构。 静态资源引用不支持前向引用，但动态资源引用却支持，因为该资源不需要进行计算，直到运行时，并且前向引用是不相关的概念。  
   
--   从编译或工作集的角度来看，所引用的资源特别大，而且该资源在页面加载时可能不会立即使用。 静态资源引用总是从加载[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]加载页面时; 但是，动态资源引用不实际使用之前未加载。  
+- 从编译或工作集的角度来看，所引用的资源特别大，而且该资源在页面加载时可能不会立即使用。 静态资源引用总是从加载[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]加载页面时; 但是，动态资源引用不实际使用之前未加载。  
   
--   所创建样式中的 Setter 值可能来自受主题或其他用户设置影响的其他值。  
+- 所创建样式中的 Setter 值可能来自受主题或其他用户设置影响的其他值。  
   
--   正在将资源应用于可能会在应用程序生存期内在逻辑树中重定父级的元素。 父级更改后，资源查找范围也可能会随之更改；因此，如果希望重定父级的元素的资源基于新范围重新进行计算，请始终使用动态资源引用。  
+- 正在将资源应用于可能会在应用程序生存期内在逻辑树中重定父级的元素。 父级更改后，资源查找范围也可能会随之更改；因此，如果希望重定父级的元素的资源基于新范围重新进行计算，请始终使用动态资源引用。  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>动态资源查找行为  
  动态资源引用的资源查找行为与在代码中的查找行为，如果您调用<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.SetResourceReference%2A>。  
   
 1. 查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
   
-    -   如果该元素定义<xref:System.Windows.FrameworkElement.Style%2A>属性，<xref:System.Windows.Style.Resources%2A>中的字典<xref:System.Windows.Style>检查。  
+    - 如果该元素定义<xref:System.Windows.FrameworkElement.Style%2A>属性，<xref:System.Windows.Style.Resources%2A>中的字典<xref:System.Windows.Style>检查。  
   
-    -   如果该元素定义<xref:System.Windows.Controls.Control.Template%2A>属性，<xref:System.Windows.FrameworkTemplate.Resources%2A>中的字典<xref:System.Windows.FrameworkTemplate>检查。  
+    - 如果该元素定义<xref:System.Windows.Controls.Control.Template%2A>属性，<xref:System.Windows.FrameworkTemplate.Resources%2A>中的字典<xref:System.Windows.FrameworkTemplate>检查。  
   
 2. 查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
   
@@ -117,20 +117,20 @@ ms.locfileid: "59344918"
   
  异常行为（如果有）各不相同：  
   
--   如果请求的资源的<xref:System.Windows.FrameworkElement.FindResource%2A>调用，但未找到，则引发异常。  
+- 如果请求的资源的<xref:System.Windows.FrameworkElement.FindResource%2A>调用，但未找到，则引发异常。  
   
--   如果请求的资源的<xref:System.Windows.FrameworkElement.TryFindResource%2A>调用，但未找到，会引发任何异常，但返回的值是`null`。 如果要设置的属性不接受`null`，则仍可能会引发更深的异常 （这取决于要设置的单个属性）。  
+- 如果请求的资源的<xref:System.Windows.FrameworkElement.TryFindResource%2A>调用，但未找到，会引发任何异常，但返回的值是`null`。 如果要设置的属性不接受`null`，则仍可能会引发更深的异常 （这取决于要设置的单个属性）。  
   
--   如果通过中的动态资源引用请求了资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和未找到，则行为取决于常规属性系统中，但常规行为是像在资源所在的级别发生任何属性设置操作。 例如，如果尝试使用无法计算的资源来设置个别按钮元素上的背景，则值设置操作不会产生任何结果，但是有效的值可能仍来自属性系统和值优先级中的其他参与者。 例如，背景值可能仍来自在本地定义的某个按钮样式，或来自主题样式。 对于并非由主题样式定义的属性，资源计算失败后的有效值可能来自属性元数据中的默认值。  
+- 如果通过中的动态资源引用请求了资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和未找到，则行为取决于常规属性系统中，但常规行为是像在资源所在的级别发生任何属性设置操作。 例如，如果尝试使用无法计算的资源来设置个别按钮元素上的背景，则值设置操作不会产生任何结果，但是有效的值可能仍来自属性系统和值优先级中的其他参与者。 例如，背景值可能仍来自在本地定义的某个按钮样式，或来自主题样式。 对于并非由主题样式定义的属性，资源计算失败后的有效值可能来自属性元数据中的默认值。  
   
 #### <a name="restrictions"></a>限制  
  动态资源引用存在一些重要限制。 必须至少满足以下条件之一：  
   
--   要设置的属性必须是属性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 属性必须为后盾<xref:System.Windows.DependencyProperty>。  
+- 要设置的属性必须是属性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 属性必须为后盾<xref:System.Windows.DependencyProperty>。  
   
--   中的值是引用<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
+- 中的值是引用<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
   
--   要设置的属性必须是属性上<xref:System.Windows.Freezable>提供的值作为<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>属性，或<xref:System.Windows.Setter>值。  
+- 要设置的属性必须是属性上<xref:System.Windows.Freezable>提供的值作为<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>属性，或<xref:System.Windows.Setter>值。  
   
  因为要设置的属性必须是<xref:System.Windows.DependencyProperty>或<xref:System.Windows.Freezable>属性，属性的大多数更改可以传播到 UI，因为属性更改 （更改的动态资源值） 会经由属性系统。 大多数控件都包含逻辑将强制执行控件的另一个布局，如果<xref:System.Windows.DependencyProperty>更改和属性可能会影响布局。 但是，并非所有属性都都会[DynamicResource 标记扩展](dynamicresource-markup-extension.md)作为它们的值保证提供的值中在 UI 中的实时更新的方式。 此功能可能仍会因属性、属性所属的类型，甚至因应用程序的逻辑结果而异。  
   

@@ -1,17 +1,17 @@
 ---
-title: 单一式应用程序
+title: 整体式应用程序
 description: 了解用于容器化整体式应用程序的核心概念。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644940"
 ---
-# <a name="monolithic-applications"></a>单一式应用程序
+# <a name="monolithic-applications"></a>整体式应用程序
 
 在此方案中，是生成单个和整体化 web 应用程序或服务，并将其部署为容器。 在应用程序中的结构可能不为整体化;它可能包含多个库、 组件或甚至层 （应用程序层、 域层、 数据访问层等）。 从外部看，它是单个容器，如单个进程、 单个 web 应用程序或单个服务。
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664280"
 ---
 # <a name="retrieving-binary-data"></a>检索二进制数据
 默认情况下**DataReader**作为行加载传入数据，只要整个行的数据不可用。 但是，对于二进制大对象 (BLOB) 则需要进行不同的处理，因为它们可能包含数十亿字节的数据，而单个行中无法包含如此多的数据。 **Command.ExecuteReader**方法具有需要较长的一个重载<xref:System.Data.CommandBehavior>参数来修改的默认行为**DataReader**。 可以将传递<xref:System.Data.CommandBehavior.SequentialAccess>到**ExecuteReader**方法来修改的默认行为**DataReader**以便而不是加载的数据行，它将加载数据按顺序接收。 这是加载 BLOB 或其他大数据结构的理想方案。 请注意，该行为可能会因数据源的不同而不同。 例如，从 Microsoft Access 中返回 BLOB 会将整个 BLOB 加载到内存中，而不是按照顺序在接收到数据时立即将其加载。  

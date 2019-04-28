@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6bd3326aa5807bd7f2dd882991d211cbbf873067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650814"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete 方法
 公共语言运行时 (CLR) 以指示探查器现在可以调用名为[ICorProfilerInfo3::EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)并[ICorProfilerInfo3::EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)追赶方法。  
@@ -36,9 +36,9 @@ HRESULT ProfilerAttachComplete ();
 ## <a name="remarks"></a>备注  
  `ProfilerAttachComplete`后，将发出回调[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)调用方法。 指示如下内容：  
   
--   已激活 `InitializeForAttach` 中的探测器请求的回调。  
+- 已激活 `InitializeForAttach` 中的探测器请求的回调。  
   
--   探查器现在可以对关联的 ID 执行追赶操作，而不必担心丢失通知。  
+- 探查器现在可以对关联的 ID 执行追赶操作，而不必担心丢失通知。  
   
  CLR 将忽略从此回调返回的值。  
   

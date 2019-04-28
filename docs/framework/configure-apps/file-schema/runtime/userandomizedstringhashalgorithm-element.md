@@ -11,11 +11,11 @@ ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675086"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<Userandomizedstringhashalgorithm，那么 > 元素
 确定公共语言运行时是否在计算字符串的哈希代码每个应用程序域。  

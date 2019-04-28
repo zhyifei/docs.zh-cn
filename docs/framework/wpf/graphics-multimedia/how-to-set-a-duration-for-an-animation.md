@@ -7,11 +7,11 @@ helpviewer_keywords:
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
 ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651150"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>如何：设置动画的持续时间
 一个<xref:System.Windows.Media.Animation.Timeline>表示一个时间段和段的长度由时间线的<xref:System.Windows.Duration>。 当<xref:System.Windows.Media.Animation.Timeline>到达其持续时间，就会停止播放。 如果<xref:System.Windows.Media.Animation.Timeline>具有子时间线，它们也会停止播放。 播放动画时，<xref:System.Windows.Duration>指定动画需要花多长转换从其起始值为终止值。  
