@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877742"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
 SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 新的数据类型包括单独的日期和时间类型以及具有更大范围、更高精度和更强时区感知能力的扩展数据类型。 从 .NET Framework 3.5 Service Pack (SP) 1 开始，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 完全支持 SQL Server 2008 数据库引擎的所有新功能。 您必须安装 .NET Framework 3.5 SP1（或更高版本）才能将这些新功能与 SqlClient 一起使用。  
@@ -51,13 +51,13 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
 ## <a name="datetime-data-types-and-parameters"></a>日期/时间数据类型和参数  
  <xref:System.Data.SqlDbType> 中已添加了下面的枚举，以支持新的日期和时间数据类型。  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 可以指定的数据类型<xref:System.Data.SqlClient.SqlParameter>使用前面的某个<xref:System.Data.SqlDbType>枚举。 
 
@@ -66,9 +66,9 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
 
  也可以通过将 <xref:System.Data.SqlClient.SqlParameter> 对象的 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 属性设置为特定的 `SqlParameter` 枚举值，按照通常的方式来指定 <xref:System.Data.DbType> 的类型。 <xref:System.Data.DbType> 中已添加了下面的枚举值，以支持 `datetime2` 和 `datetimeoffset` 数据类型：  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  这些新枚举补充了早期版本的 .NET Framework 中存在的 `Date`、`Time` 和 `DateTime` 枚举。  
   
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>作为文字指定日期和时间值  
  可以通过使用各种不同的文字字符串格式指定日期和时间数据类型，然后 SQL Server 在运行时执行相关计算以将这些文字字符串转换为内部的日期/时间结构。 SQL Server 可识别用单引号 (') 括起来的日期和时间数据。 下面的示例演示了一些格式：  
   
--   字母日期格式，例如 `'October 15, 2006'`。  
+- 字母日期格式，例如 `'October 15, 2006'`。  
   
--   数值日期格式，例如 `'10/15/2006'`。  
+- 数值日期格式，例如 `'10/15/2006'`。  
   
--   未分隔的字符串格式，例如 `'20061015'`。如果您使用的是 ISO 标准日期格式，则该字符串将解释为 2006 年 10 月 15 日。  
+- 未分隔的字符串格式，例如 `'20061015'`。如果您使用的是 ISO 标准日期格式，则该字符串将解释为 2006 年 10 月 15 日。  
   
 > [!NOTE]
 >  在 SQL Server 联机丛书中，您可以找到有关日期和时间数据类型的所有文字字符串格式以及其他功能的完整文档。  

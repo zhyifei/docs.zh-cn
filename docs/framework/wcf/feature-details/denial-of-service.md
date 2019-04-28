@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857085"
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -19,22 +19,22 @@ ms.locfileid: "59228870"
   
  缓解措施包括：  
   
--   从 <xref:System.Xml.NameTable> 类派生并实施最大大小配额。 （当 <xref:System.Xml.NameTable> 已满时，将无法阻止使用或切换 <xref:System.Xml.NameTable>。）  
+- 从 <xref:System.Xml.NameTable> 类派生并实施最大大小配额。 （当 <xref:System.Xml.NameTable> 已满时，将无法阻止使用或切换 <xref:System.Xml.NameTable>。）  
   
--   避免使用所提到的这些属性，而是尽可能将 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 方法与 <xref:System.Xml.XmlReader.IsStartElement%2A> 方法结合使用；这些方法不返回字符串，从而可以避免过度填充 <xref:System.Xml.NameTable> 集合的问题。  
+- 避免使用所提到的这些属性，而是尽可能将 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 方法与 <xref:System.Xml.XmlReader.IsStartElement%2A> 方法结合使用；这些方法不返回字符串，从而可以避免过度填充 <xref:System.Xml.NameTable> 集合的问题。  
   
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>恶意客户端向服务发送过多的许可证请求  
  如果恶意客户端通过过多的许可证请求来攻击某个服务，则可能会致使服务器占用过量的内存。  
   
  缓解：使用以下属性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>类：  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制在 `SecurityContextToken` 或 `SPNego` 协商之后服务器所缓存的有时限的 `SSL` 的最大数目。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制在 `SecurityContextToken` 或 `SPNego` 协商之后服务器所缓存的有时限的 `SSL` 的最大数目。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制在 `SecurityContextTokens` 或 `SPNego` 协商之后服务器所颁发的 `SSL` 的生存期。 在此时间期限内，服务器将缓存 `SecurityContextToken`。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制在 `SecurityContextTokens` 或 `SPNego` 协商之后服务器所颁发的 `SSL` 的生存期。 在此时间期限内，服务器将缓存 `SecurityContextToken`。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在服务器上建立但尚未针为其处理任何应用程序消息的安全对话的最大数目。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在服务器上建立但尚未针为其处理任何应用程序消息的安全对话的最大数目。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服务使安全对话保持活动状态（而不接收来自对话客户端的应用程序消息）的最长时间。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服务使安全对话保持活动状态（而不接收来自对话客户端的应用程序消息）的最长时间。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 或双向自定义绑定要求客户端身份验证  
  默认情况下，<xref:System.ServiceModel.WSDualHttpBinding> 会启用安全性。 但是，如果通过将 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 属性设置为 <xref:System.ServiceModel.MessageCredentialType.None> 而禁用客户端身份验证，则恶意用户可能会致使针对第三个服务进行拒绝服务攻击。 发生此问题的原因在于，恶意客户端可能会指示服务向第三个服务发送消息流。  

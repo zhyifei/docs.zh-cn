@@ -1,5 +1,5 @@
 ---
-title: 如何：将 BitmapSource 转换为索引像素格式
+title: 如何：将 BitmapSource 转换成索引的像素格式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - BitmapSource objects [WPF], converting to palettized pixel format
 ms.assetid: ccb03a83-8c72-4353-89da-48312d16548b
 ms.openlocfilehash: 69ccf82a42f6ec640106f554a10e7d2c86754220
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910008"
 ---
-# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>如何：将 BitmapSource 转换为索引像素格式
+# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>如何：将 BitmapSource 转换成索引的像素格式
 此示例演示如何将转换<xref:System.Windows.Media.Imaging.BitmapSource>为索引的像素格式。  
   
 ## <a name="example"></a>示例  

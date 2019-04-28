@@ -3,26 +3,26 @@ title: 不支持的功能
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
 ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917553"
 ---
 # <a name="unsupported-functionality"></a>不支持的功能
 在 LINQ to SQL 中，无法通过转换现有的公共语言运行库 (CLR) 和 .NET Framework 构造公开以下 SQL 功能：  
   
--   `STDDEV`  
+- `STDDEV`  
   
--   `LIKE`  
+- `LIKE`  
   
      尽管通过直接转换，不支持 `LIKE`，但是 <xref:System.Data.Linq.SqlClient.SqlMethods> 类中仍存在相似的功能。 有关详细信息，请参阅 <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>。  
   
--   `DATEDIFF`  
+- `DATEDIFF`  
   
      LINQ to SQL 具有对 `DATEDIFF` 的有限支持。 <xref:System.Data.Linq.SqlClient.SqlMethods> 类中存在相似的功能。  
   
--   `ROUND`  
+- `ROUND`  
   
      LINQ to SQL 具有对 `ROUND` 的有限支持。 有关详细信息，请参阅[System.Math 方法](system-math-methods.md)。  
   

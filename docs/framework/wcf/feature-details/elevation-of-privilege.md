@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856386"
 ---
 # <a name="elevation-of-privilege"></a>特权提升
 *特权提升*得出让攻击者授权权限超出最初授予的权限。 例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。  
@@ -25,13 +25,13 @@ ms.locfileid: "59099984"
   
  客户端和服务器，客户端的标识之间建立连接时不会更改，一种情况除外： 打开 WCF 客户端时，如果满足所有以下条件后：  
   
--   若要建立安全上下文 （使用传输安全会话或消息安全会话） 的过程被禁用 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>属性设置为`false`对于消息安全或无法建立安全的传输在传输安全情况下使用会话。 HTTPS 就是此类传输的一个示例）。  
+- 若要建立安全上下文 （使用传输安全会话或消息安全会话） 的过程被禁用 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>属性设置为`false`对于消息安全或无法建立安全的传输在传输安全情况下使用会话。 HTTPS 就是此类传输的一个示例）。  
   
--   正在使用 Windows 身份验证。  
+- 正在使用 Windows 身份验证。  
   
--   未显式设置凭据。  
+- 未显式设置凭据。  
   
--   正在模拟安全上下文下调用服务。  
+- 正在模拟安全上下文下调用服务。  
   
  如果满足这些条件，可能会更改用于进行身份验证服务的客户端的标识 （它可能不是模拟的标识，而进程标识相反） 打开 WCF 客户端后。 之所以出现此情况，是因为用于向服务验证客户端身份的 Windows 凭据是随每条消息传输的，而且用于身份验证的凭据是从当前线程的 Windows 标识获取的。 如果当前线程的 Windows 标识发生更改（例如，通过模拟其他调用方），则附加到消息、用于向服务验证客户端身份的凭据可能也发生更改。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59099984"
   
  通过使用以下方法之一创建自定义绑定时，也会出现此情况：  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  若要缓解此问题，授权策略必须检查每个授权策略的操作和过期时间。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59099984"
   
  这可能发生在以下情况下：  
   
--   客户端使用 X.509 证书对消息进行数字签名，但是不将 X.509 证书附加到消息，而是仅使用证书的主题密钥标识符来引用它。  
+- 客户端使用 X.509 证书对消息进行数字签名，但是不将 X.509 证书附加到消息，而是仅使用证书的主题密钥标识符来引用它。  
   
--   服务的计算机包含具有相同公钥的两个或多个证书，但是这些证书包含不同的信息。  
+- 服务的计算机包含具有相同公钥的两个或多个证书，但是这些证书包含不同的信息。  
   
--   服务检索一个与主题密钥标识符匹配的证书，但是该证书不是客户端打算使用的证书。 当 WCF 接收的消息和验证签名时，WCF 将非预期 X.509 证书中的信息映射到一组声明的不同且可能提升从客户端的预期。  
+- 服务检索一个与主题密钥标识符匹配的证书，但是该证书不是客户端打算使用的证书。 当 WCF 接收的消息和验证签名时，WCF 将非预期 X.509 证书中的信息映射到一组声明的不同且可能提升从客户端的预期。  
   
  若要缓解此问题，请以其他方式引用 X.509 证书，如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   

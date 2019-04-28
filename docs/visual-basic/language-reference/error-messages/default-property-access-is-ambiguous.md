@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803725"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>默认属性访问之间不明确继承的接口成员的\<defaultpropertyname > 的接口\<interfacename1 >' 和 '\<defaultpropertyname > 的接口\<interfacename2 >
 接口继承自两个接口，其中每个声明具有相同名称的默认属性。 编译器无法解析所需的访问而无需限定此默认属性。 下面的示例阐释了这一点。  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   避免继承具有相同名称的任何成员。 在前面的示例中，如果`testObj`不需要任何的成员，例如， `Iface2`，然后将其声明，如下所示：  
+- 避免继承具有相同名称的任何成员。 在前面的示例中，如果`testObj`不需要任何的成员，例如， `Iface2`，然后将其声明，如下所示：  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      或  
   
--   在类中实现继承的接口。 然后您可以实现每个具有不同名称的继承属性。 但是，仅有一种可以实现类的默认属性。 下面的示例阐释了这一点。  
+- 在类中实现继承的接口。 然后您可以实现每个具有不同名称的继承属性。 但是，仅有一种可以实现类的默认属性。 下面的示例阐释了这一点。  
   
     ```  
     Public Class useIface3  

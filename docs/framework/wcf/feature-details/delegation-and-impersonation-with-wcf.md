@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856708"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
 模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅[如何：模拟客户端在服务上的](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -37,22 +37,22 @@ ms.locfileid: "59345516"
 ### <a name="cached-token-impersonation"></a>缓存的令牌模拟  
  您可以对以下各项执行缓存的令牌模拟：  
   
--   使用 Windows 客户端凭据的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>和 <xref:System.ServiceModel.NetTcpBinding> 。  
+- 使用 Windows 客户端凭据的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>和 <xref:System.ServiceModel.NetTcpBinding> 。  
   
--   <xref:System.ServiceModel.BasicHttpBinding> 设置为 <xref:System.ServiceModel.BasicHttpSecurityMode> 凭据的 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> ，或任何其他标准绑定，其中客户端提供用户名凭据（服务可以将该凭据映射到有效的 Windows 帐户）。  
+- <xref:System.ServiceModel.BasicHttpBinding> 设置为 <xref:System.ServiceModel.BasicHttpSecurityMode> 凭据的 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> ，或任何其他标准绑定，其中客户端提供用户名凭据（服务可以将该凭据映射到有效的 Windows 帐户）。  
   
--   使用 Windows 凭据并且 <xref:System.ServiceModel.Channels.CustomBinding> 设置为 `requireCancellation` 的任何 `true`。 （此属性在以下类中可用：<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 和 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>。）如果在绑定上使用安全对话，则安全对话还必须将 `requireCancellation` 属性设置为 `true`。  
+- 使用 Windows 凭据并且 <xref:System.ServiceModel.Channels.CustomBinding> 设置为 `requireCancellation` 的任何 `true`。 （此属性在以下类中可用：<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 和 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>。）如果在绑定上使用安全对话，则安全对话还必须将 `requireCancellation` 属性设置为 `true`。  
   
--   任何 <xref:System.ServiceModel.Channels.CustomBinding> ，其中客户端提供用户名凭据。 如果在绑定中使用安全对话，则安全对话还必须将 `requireCancellation` 属性设置为 `true`。  
+- 任何 <xref:System.ServiceModel.Channels.CustomBinding> ，其中客户端提供用户名凭据。 如果在绑定中使用安全对话，则安全对话还必须将 `requireCancellation` 属性设置为 `true`。  
   
 ### <a name="s4u-based-impersonation"></a>基于 S4U 的模拟  
  您可以对以下各项执行基于 S4U 的模拟：  
   
--   使用证书客户端凭据（服务可以将该凭据映射到有效的 Windows 帐户）的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>和 <xref:System.ServiceModel.NetTcpBinding> 。  
+- 使用证书客户端凭据（服务可以将该凭据映射到有效的 Windows 帐户）的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>和 <xref:System.ServiceModel.NetTcpBinding> 。  
   
--   使用 Windows 凭据并且 <xref:System.ServiceModel.Channels.CustomBinding> 属性设置为 `requireCancellation` 的任何 `false`。  
+- 使用 Windows 凭据并且 <xref:System.ServiceModel.Channels.CustomBinding> 属性设置为 `requireCancellation` 的任何 `false`。  
   
--   使用用户名或 Windows 客户端凭据和安全对话，并且 <xref:System.ServiceModel.Channels.CustomBinding> 属性设置为 `requireCancellation` 的任何 `false`。  
+- 使用用户名或 Windows 客户端凭据和安全对话，并且 <xref:System.ServiceModel.Channels.CustomBinding> 属性设置为 `requireCancellation` 的任何 `false`。  
   
  服务可以模拟客户端的范围取决于服务帐户在尝试模拟时拥有的权限、使用的模拟类型和客户端可能允许的模拟范围。  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  有关配置受约束委托的更多详细说明，请参见 MSDN 上的以下主题：  
   
--   [Troubleshooting Kerberos Delegation（Kerberos 委托疑难解答）](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Troubleshooting Kerberos Delegation（Kerberos 委托疑难解答）](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos Protocol Transition and Constrained Delegation（Kerberos 协议传输和受约束的委托）](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Kerberos Protocol Transition and Constrained Delegation（Kerberos 协议传输和受约束的委托）](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>请参阅
 

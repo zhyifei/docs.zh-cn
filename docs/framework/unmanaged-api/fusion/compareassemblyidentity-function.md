@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914517"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函数
 比较两个程序集标识，以确定它们是否等效。  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>备注  
  `CompareAssemblyIdentity` 检查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`是等效的。 `pfEquivalent` 设置为`true`下一个或多个以下条件：  
   
--   两个程序集标识是等效的。 对于强名称程序集，等效性要求的程序集名称、 版本、 公钥标记和区域性相同。 对于简单命名程序集，等效性要求匹配的程序集名称和区域性。  
+- 两个程序集标识是等效的。 对于强名称程序集，等效性要求的程序集名称、 版本、 公钥标记和区域性相同。 对于简单命名程序集，等效性要求匹配的程序集名称和区域性。  
   
--   这两个程序集标识是指.NET Framework 运行的程序集。 这种情况返回`true`即使程序集版本编号不匹配。  
+- 这两个程序集标识是指.NET Framework 运行的程序集。 这种情况返回`true`即使程序集版本编号不匹配。  
   
--   两个程序集不是托管程序集，但`fUnified1`或`fUnified2`已设置为`true`。  
+- 两个程序集不是托管程序集，但`fUnified1`或`fUnified2`已设置为`true`。  
   
  `fUnified`标志指示版本数量的强名称程序集的所有版本号被都视为等效于强名称程序集。 例如，如果的值`pwzAssemblyIndentity1`是"MyAssembly，版本 = 3.0.0.0，区域性 = 中性，publicKeyToken =..."，和的值`fUnified1`是`true`，这表示应为 MyAssembly 从 0.0.0.0 到 3.0.0.0 版本起的所有版本视为等效。 在这种情况下，如果`pwzAssemblyIndentity2`指的是相同的程序集中`pwzAssemblyIndentity1`，只不过它具有较低的版本值`pfEquivalent`设置为`true`。 如果`pwzAssemblyIdentity2`更高版本的版本号，是指`pfEquivalent`设置为`true`仅当的值`fUnified2`是`true`。  
   

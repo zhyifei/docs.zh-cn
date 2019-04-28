@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908123"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>数组疑难解答 (Visual Basic)
 此页列出了在使用数组时可能发生的一些常见问题。  
@@ -22,7 +22,7 @@ ms.locfileid: "58833368"
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>编译错误声明和初始化数组  
  编译错误则可能会产生误解的声明、 创建和初始化数组的规则。 错误的最常见原因如下所示：  
   
--   提供[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)子句后的数组变量声明中指定维的长度。 下面的代码行显示无效的此类型声明。  
+- 提供[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)子句后的数组变量声明中指定维的长度。 下面的代码行显示无效的此类型声明。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ ms.locfileid: "58833368"
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   对多个顶级数组交错数组的指定维的长度。 以下代码行显示此类型的一个无效的声明。  
+- 对多个顶级数组交错数组的指定维的长度。 以下代码行显示此类型的一个无效的声明。  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   省略`New`关键字时指定的元素值。 以下代码行显示此类型的一个无效的声明。  
+- 省略`New`关键字时指定的元素值。 以下代码行显示此类型的一个无效的声明。  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   提供`New`子句时没有使用大括号 (`{}`)。 下面的代码行显示无效的此类型声明。  
+- 提供`New`子句时没有使用大括号 (`{}`)。 下面的代码行显示无效的此类型声明。  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

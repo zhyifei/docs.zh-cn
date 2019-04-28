@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858021"
 ---
 # <a name="data-contract-surrogates"></a>数据协定代理项
 数据协定*代理项*是基于数据协定模型的高级的功能。 在设计上，此功能用于在用户希望更改对类型进行序列化、反序列化或将其设计成元数据的方式时，进行类型自定义和替换。 在以下情况下可以使用代理项：还没有为类型指定数据协定；字段和属性 (Property) 没有用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 进行标记；用户希望动态创建架构变体。  
@@ -37,13 +37,13 @@ ms.locfileid: "59315343"
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   在序列化时，随后将使用 GetDataContractType 方法所返回的映射，通过调用 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法来将原始实例转换为代理项实例。  
+- 在序列化时，随后将使用 GetDataContractType 方法所返回的映射，通过调用 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法来将原始实例转换为代理项实例。  
   
--   在反序列化时，序列化程序将使用 GetDataContractType 方法所返回的映射来反序列化为代理项类型的实例。 序列化程序随后将通过调用 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 来将代理项实例转换为原始类型的实例。  
+- 在反序列化时，序列化程序将使用 GetDataContractType 方法所返回的映射来反序列化为代理项类型的实例。 序列化程序随后将通过调用 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 来将代理项实例转换为原始类型的实例。  
   
--   在导出时，将反射 GetDataContractType 方法所返回的代理项类型以获得要用于生成元数据的数据协定。  
+- 在导出时，将反射 GetDataContractType 方法所返回的代理项类型以获得要用于生成元数据的数据协定。  
   
--   在导入时，原始类型会更改为代理项类型，代理项类型将进行反射以获得要用于各种目的（如引用支持）的数据协定。  
+- 在导入时，原始类型会更改为代理项类型，代理项类型将进行反射以获得要用于各种目的（如引用支持）的数据协定。  
   
  <xref:System.Type> 参数是正在序列化、反序列化、导入或导出的对象的类型。 如果该类型没有由代理项处理，则 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法必须返回输入类型； 否则将返回相应的代理项类型。 如果存在多个代理项类型，则可以在该方法中定义许多映射。  
   

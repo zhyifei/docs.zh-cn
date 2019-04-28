@@ -3,18 +3,18 @@ title: 1148 - FlowchartSwitchCaseNotFound
 ms.date: 03/30/2017
 ms.assetid: 9ee7fcee-e040-4306-968e-ed840a1cb00c
 ms.openlocfilehash: 7e96b5b7652d404e6fdbe2c04c6a4069ca78f20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009911"
 ---
 # <a name="1148---flowchartswitchcasenotfound"></a>1148 - FlowchartSwitchCaseNotFound
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|1148|  
+|Id|1148|  
 |关键字|WFActivities|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
@@ -30,4 +30,4 @@ ms.locfileid: "33511954"
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
 |FlowChart|xs:string|FlowChart 的显示名称。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|应用程序域|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

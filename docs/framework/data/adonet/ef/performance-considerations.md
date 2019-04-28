@@ -3,11 +3,11 @@ title: 性能注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879393"
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
@@ -55,12 +55,12 @@ ms.locfileid: "59324040"
 #### <a name="query-complexity"></a>查询复杂性  
  在针对数据源执行的命令或返回大量数据的命令中需要大量联接的查询可能会在以下几个方面影响性能：  
   
--   看似简单的针对概念模型的查询可能导致对数据源执行更复杂的查询。 因为实体框架将针对概念模型的查询转换为针对数据源的等效查询，所以可能发生上述情况。 当概念模型中的单个实体集映射到数据源中的多个表时，或当实体之间的关系映射到联接表时，针对数据源查询执行的查询命令可能需要一个或多个联接。  
+- 看似简单的针对概念模型的查询可能导致对数据源执行更复杂的查询。 因为实体框架将针对概念模型的查询转换为针对数据源的等效查询，所以可能发生上述情况。 当概念模型中的单个实体集映射到数据源中的多个表时，或当实体之间的关系映射到联接表时，针对数据源查询执行的查询命令可能需要一个或多个联接。  
   
     > [!NOTE]
     >  使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 或 <xref:System.Data.Objects.ObjectQuery%601> 类的 <xref:System.Data.EntityClient.EntityCommand> 方法可以查看针对给定查询的数据源执行的命令。 有关详细信息，请参阅[如何：查看存储命令](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100))。  
   
--   嵌套的 Entity SQL 查询可能在服务器上创建联接，并可能返回大量的行。  
+- 嵌套的 Entity SQL 查询可能在服务器上创建联接，并可能返回大量的行。  
   
      下面是投影子句中嵌套查询的示例：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "59324040"
   
      此外，此类查询还会导致查询管道生成单个查询并在各嵌套查询间复制对象。 因此，单一列可能会复制多次。 在某些数据库（包括 SQL Server）中，这可能导致 TempDB 表增长过大，而降低服务器性能。 当执行嵌套查询时，应务必小心。  
   
--   如果客户端执行的操作所消耗的资源与结果集的大小成正比，则返回大量数据的任何查询都可能导致性能下降。 在此类情况下，应考虑限制查询返回的数据量。 有关详细信息，请参阅[如何：页查看查询结果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
+- 如果客户端执行的操作所消耗的资源与结果集的大小成正比，则返回大量数据的任何查询都可能导致性能下降。 在此类情况下，应考虑限制查询返回的数据量。 有关详细信息，请参阅[如何：页查看查询结果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
   
  实体框架自动生成的任何命令都可能比数据库开发人员显式编写的类似命令更复杂。 如果您需要对针对数据源执行的命令进行显式控制，请考虑对表值函数或存储过程定义映射。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "59324040"
 ### <a name="distributed-transactions"></a>分布式事务  
  在显式事务中执行的、需要由分布式事务处理协调器 (DTC) 管理的资源的操作与不需要 DTC 的相似操作相比，前者的成本要高得多。 在以下情况下，将需要提升到 DTC：  
   
--   具有对 SQL Server 2000 数据库执行的操作的显式事务，或始终将显式事务提升到 DTC 的其他数据源。  
+- 具有对 SQL Server 2000 数据库执行的操作的显式事务，或始终将显式事务提升到 DTC 的其他数据源。  
   
--   当连接由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理时，具有对 SQL Server 2005 执行的操作的显式事务。 因为只要在单个事务中关闭并重新打开连接，SQL Server 2005 就会提升到 DTC（这是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的默认行为），所以会发生上述情况。 当使用 SQL Server 2008 时，不会发生这种 DTC 提升的现象。 为了避免在使用 SQL Server 2005 时出现此提升，必须在事务中显式打开和关闭连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
+- 当连接由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理时，具有对 SQL Server 2005 执行的操作的显式事务。 因为只要在单个事务中关闭并重新打开连接，SQL Server 2005 就会提升到 DTC（这是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的默认行为），所以会发生上述情况。 当使用 SQL Server 2008 时，不会发生这种 DTC 提升的现象。 为了避免在使用 SQL Server 2005 时出现此提升，必须在事务中显式打开和关闭连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
  当在 <xref:System.Transactions> 事务内执行了一个或多个操作时，将使用显式事务。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
@@ -147,11 +147,11 @@ ms.locfileid: "59324040"
 ## <a name="performance-data"></a>性能数据  
  实体框架的一些性能数据上发布的下列帖子中[ADO.NET 团队博客](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [探索 ADO.NET 实体框架的第 1 部分的性能](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [探索 ADO.NET 实体框架的第 1 部分的性能](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [探索 ADO.NET 实体框架 – 第 2 部分的性能](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [探索 ADO.NET 实体框架 – 第 2 部分的性能](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET 实体框架性能比较](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET 实体框架性能比较](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857787"
 ---
 # <a name="bindings-and-security"></a>绑定与安全
 系统提供的绑定包括与 Windows Communication Foundation (WCF) 提供程序的 WCF 应用程序的快速方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
@@ -35,21 +35,21 @@ ms.locfileid: "59611897"
   
  此绑定的目的是与如下一系列现有技术一起使用：  
   
--   ASP.NET Web 服务 (ASMX) 版本 1。  
+- ASP.NET Web 服务 (ASMX) 版本 1。  
   
--   Web Service Enhancements (WSE) 应用程序。  
+- Web Service Enhancements (WSE) 应用程序。  
   
--   Web 服务互操作性中定义的基本配置文件 (WS-我) 规范 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
+- Web 服务互操作性中定义的基本配置文件 (WS-我) 规范 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
   
--   WS-I 中定义的基本安全配置文件。  
+- WS-I 中定义的基本安全配置文件。  
   
  默认情况下，此绑定是不安全的。 它的目的是与 ASMX 服务进行互操作。 启用安全性后，此绑定可以与 Internet 信息服务 (IIS) 安全机制（例如基本身份验证、摘要和 Windows 集成安全性）进行无缝的互操作。 有关详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 此绑定支持以下功能：  
   
--   HTTPS 传输安全。  
+- HTTPS 传输安全。  
   
--   HTTP 基本身份验证。  
+- HTTP 基本身份验证。  
   
--   WS-Security。  
+- WS-Security。  
   
  有关详细信息，请参阅<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>和<xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "59611897"
   
  默认情况下，此绑定实现 WS-Security 规范，并提供与实现 WS-* 规范的服务的互操作性。 它支持以下功能：  
   
--   HTTPS 传输安全。  
+- HTTPS 传输安全。  
   
--   WS-Security。  
+- WS-Security。  
   
--   使用 SOAP 消息凭据安全对调用方进行身份验证的 HTTPS 传输保护。  
+- 使用 SOAP 消息凭据安全对调用方进行身份验证的 HTTPS 传输保护。  
   
  有关详细信息，请参阅<xref:System.ServiceModel.WSHttpSecurity>， <xref:System.ServiceModel.MessageSecurityOverHttp>， <xref:System.ServiceModel.MessageCredentialType>， <xref:System.ServiceModel.SecurityMode>， <xref:System.ServiceModel.HttpTransportSecurity>， <xref:System.ServiceModel.HttpClientCredentialType>，和<xref:System.ServiceModel.HttpProxyCredentialType>。  
   
@@ -71,23 +71,23 @@ ms.locfileid: "59611897"
   
  此绑定的目的是启用双工服务应用程序。 此绑定实现了 WS-Security 规范，以便获得基于消息的传送安全。 传输安全不可用。 默认情况下，它提供下列功能：  
   
--   实现 WS-Reliable Messaging 以保证可靠性。  
+- 实现 WS-Reliable Messaging 以保证可靠性。  
   
--   实现 WS-Security 以保证传送安全和身份验证。  
+- 实现 WS-Security 以保证传送安全和身份验证。  
   
--   使用 HTTP 进行消息传递。  
+- 使用 HTTP 进行消息传递。  
   
--   使用文本/XML 消息编码。  
+- 使用文本/XML 消息编码。  
   
  使用 WS-Security（消息层安全性），可通过此绑定配置下列参数：  
   
--   用来确定加密算法的安全算法组。  
+- 用来确定加密算法的安全算法组。  
   
--   下列功能的绑定选项：  
+- 下列功能的绑定选项：  
   
-    -   提供可在客户端带外使用的服务凭据。  
+    - 提供可在客户端带外使用的服务凭据。  
   
-    -   提供从服务协商的服务凭据作为通道设置的一部分。  
+    - 提供从服务协商的服务凭据作为通道设置的一部分。  
   
  有关详细信息，请参阅 <xref:System.ServiceModel.WSDualHttpSecurity> 和 <xref:System.ServiceModel.WSDualHttpSecurityMode>。  
   
@@ -96,21 +96,21 @@ ms.locfileid: "59611897"
   
  此绑定针对计算机之间的通信进行了优化。 默认情况下，它具有以下特征：  
   
--   实现传输层安全性。  
+- 实现传输层安全性。  
   
--   利用 Windows 安全性来实现传送安全性和身份验证。  
+- 利用 Windows 安全性来实现传送安全性和身份验证。  
   
--   使用 TCP 进行传输。  
+- 使用 TCP 进行传输。  
   
--   实现二进制消息编码。  
+- 实现二进制消息编码。  
   
--   实现 WS-Reliable Messaging。  
+- 实现 WS-Reliable Messaging。  
   
  此绑定具有下列选项：  
   
--   消息层安全性（使用 WS-Security）。  
+- 消息层安全性（使用 WS-Security）。  
   
--   使用消息凭据实现传输安全性：保密性和完整性由 Transport Layer Security (TLS) over TCP 提供，授权凭据由 WS-Security 提供。  
+- 使用消息凭据实现传输安全性：保密性和完整性由 Transport Layer Security (TLS) over TCP 提供，授权凭据由 WS-Security 提供。  
   
  有关详细信息，请参阅<xref:System.ServiceModel.NetTcpSecurity>， <xref:System.ServiceModel.TcpTransportSecurity>， <xref:System.ServiceModel.TcpClientCredentialType>， <xref:System.ServiceModel.MessageSecurityOverTcp>，和<xref:System.ServiceModel.MessageCredentialType>。  
   
@@ -119,17 +119,17 @@ ms.locfileid: "59611897"
   
  此绑定针对进程之间的通信（通常在同一台计算机上）进行了优化。 默认情况下，此绑定具有以下特征：  
   
--   使用传输安全性来实现消息传输和身份验证。  
+- 使用传输安全性来实现消息传输和身份验证。  
   
--   使用命名管道进行消息传递。  
+- 使用命名管道进行消息传递。  
   
--   实现二进制消息编码。  
+- 实现二进制消息编码。  
   
--   加密和消息签名。  
+- 加密和消息签名。  
   
  此绑定具有下列选项：  
   
--   使用 Windows 安全性进行身份验证。  
+- 使用 Windows 安全性进行身份验证。  
   
  有关详细信息，请参阅<xref:System.ServiceModel.NetNamedPipeSecurity>、<xref:System.ServiceModel.NetNamedPipeSecurityMode>和<xref:System.ServiceModel.NamedPipeTransportSecurity>。  
   
@@ -140,9 +140,9 @@ ms.locfileid: "59611897"
   
  默认情况下，此绑定使用传输安全性并提供下列安全特征：  
   
--   可以禁用安全性 (None)。  
+- 可以禁用安全性 (None)。  
   
--   MSMQ 传输安全性 (Transport)。  
+- MSMQ 传输安全性 (Transport)。  
   
  有关详细信息，请参阅 <xref:System.ServiceModel.NetMsmqSecurity> 和 <xref:System.ServiceModel.NetMsmqSecurityMode>。  
   
@@ -153,15 +153,15 @@ ms.locfileid: "59611897"
   
  默认情况下，此绑定使用传输安全性并提供下列安全特征：  
   
--   可以禁用安全性 (None)。  
+- 可以禁用安全性 (None)。  
   
--   MSMQ 传输安全性 (Transport)。  
+- MSMQ 传输安全性 (Transport)。  
   
--   基于 SOAP 的消息安全性 (Message)。  
+- 基于 SOAP 的消息安全性 (Message)。  
   
--   同时启用传输安全性和消息安全性 (Both)。  
+- 同时启用传输安全性和消息安全性 (Both)。  
   
--   支持的客户端凭据类型：None、 Windows、 用户名、 证书、 IssuedToken。  
+- 支持的客户端凭据类型：None、 Windows、 用户名、 证书、 IssuedToken。  
   
  仅当安全模式设置为 <xref:System.ServiceModel.MessageCredentialType.Certificate> 或 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 时，才支持 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 凭据。  
   

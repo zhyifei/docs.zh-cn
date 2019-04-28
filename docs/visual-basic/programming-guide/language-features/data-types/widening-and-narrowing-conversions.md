@@ -20,11 +20,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827151"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>扩大转换和收缩转换 (Visual Basic)
 类型转换的一个重要考虑因素是转换的结果是否在目标数据类型的范围内。  
@@ -68,15 +68,15 @@ ms.locfileid: "58842546"
 ## <a name="narrowing-conversions"></a>收缩转换  
  标准的收缩转换如下所示：  
   
--   在前面的扩大转换的相反方向表 （不过，每个类型扩大到自身）  
+- 在前面的扩大转换的相反方向表 （不过，每个类型扩大到自身）  
   
--   在任一方向之间的转换[布尔](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)和任何数值类型  
+- 在任一方向之间的转换[布尔](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)和任何数值类型  
   
--   从任何数值类型转换为任何枚举类型 (`Enum`)  
+- 从任何数值类型转换为任何枚举类型 (`Enum`)  
   
--   在任一方向之间的转换[字符串](../../../../visual-basic/language-reference/data-types/string-data-type.md)和任何数值类型`Boolean`，或[日期](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- 在任一方向之间的转换[字符串](../../../../visual-basic/language-reference/data-types/string-data-type.md)和任何数值类型`Boolean`，或[日期](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   从数据类型或对象类型转换为其派生的类型  
+- 从数据类型或对象类型转换为其派生的类型  
   
  收缩转换执行不总是在运行时，成功和可以故障或会导致数据丢失。 如果目标数据类型不能接收要转换的值，就会出错。 例如，数值的转换导致溢出。 编译器不允许您以隐式执行收缩转换，除非[Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)设置类型检查开关`Off`。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "58842546"
 ## <a name="exceptions-during-conversion"></a>转换期间的异常  
  由于扩大转换始终成功，它们不会引发异常。 收缩转换，在故障时最常引发以下异常：  
   
--   <xref:System.InvalidCastException> -如果两个类型之间不定义任何转换  
+- <xref:System.InvalidCastException> -如果两个类型之间不定义任何转换  
   
--   <xref:System.OverflowException> -（仅限整型） 如果转换后的值的目标类型太大  
+- <xref:System.OverflowException> -（仅限整型） 如果转换后的值的目标类型太大  
   
  如果类或结构定义了[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)转换运算符到或从该类或结构，作为的`CType`可以引发任何它认为适当的任何异常。 此外，该`CType`可能会调用 Visual Basic 函数或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]又可能会引发多种异常的方法。  
   

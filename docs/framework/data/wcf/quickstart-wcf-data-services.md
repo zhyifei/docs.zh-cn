@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876195"
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入门（WCF 数据服务）
 
@@ -28,7 +28,7 @@ ms.locfileid: "43504557"
 
 - SQL Server 的实例。 这包括 SQL Server Express，它包括在默认安装的 Visual Studio 2015 中，或作为的一部分**数据存储和处理**Visual Studio 2017 中的工作负荷。
 
-- Northwind 示例数据库。 若要下载此示例数据库，请下载页[SQL Server 的示例数据库](https://go.microsoft.com/fwlink/?linkid=24758)。
+- Northwind 示例数据库。 若要下载此示例数据库，请访问 [SQL Server 的示例数据库](https://go.microsoft.com/fwlink/?linkid=24758)下载页。
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>WCF 数据服务快速入门任务
 
@@ -45,7 +45,7 @@ ms.locfileid: "43504557"
  创建 WPF 应用程序使用 OData 数据源、 数据绑定到 Windows 控件，更改在绑定控件中的数据，然后发送回数据服务所做的更改。
 
 > [!NOTE]
-> 可以从下载的快速入门完整版本的项目文件[WCF 数据服务文档示例](https://go.microsoft.com/fwlink/?LinkId=179994)页。
+> 已完成版本的快速入门中的项目文件可从 [WCF 数据服务文档示例](https://go.microsoft.com/fwlink/?LinkId=179994) 网页下载。
 
 ## <a name="next-steps"></a>后续步骤
 

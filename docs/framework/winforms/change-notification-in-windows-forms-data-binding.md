@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011874"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows 窗体数据绑定中的更改通知
 Windows 窗体数据绑定的最重要的概念之一是*更改通知*。 若要确保你的数据源和绑定的控件始终具有最新的数据，必须添加数据绑定的更改通知。 具体而言，你想要确保对其数据源，所做的更改，会通知绑定的控件和控件的绑定属性所做的更改通知数据源。  
   
  有不同类型的更改通知，具体取决于数据绑定的类型：  
   
--   简单绑定中的单个控件属性绑定到对象的单个实例。  
+- 简单绑定中的单个控件属性绑定到对象的单个实例。  
   
--   基于列表的绑定，它可以包含单个控件属性绑定到列表中的项的属性或控件属性绑定到的对象的列表。  
+- 基于列表的绑定，它可以包含单个控件属性绑定到列表中的项的属性或控件属性绑定到的对象的列表。  
   
  此外，如果要创建想要用于数据绑定的 Windows 窗体控件，则必须应用*PropertyName*模式更改为控件，以便对控件的绑定属性的更改传播到数据源。  
   

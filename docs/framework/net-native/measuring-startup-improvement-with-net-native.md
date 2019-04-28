@@ -5,31 +5,31 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1484d50df51ea85a94da0aad1ebaab54b80a6ecb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866790"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>使用 .NET Native 衡量启动改善
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 显著地缩短了应用的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  
   
  为方便性能调查，.NET Framework 和 Windows 使用一个名为 Windows 事件跟踪 (ETW) 的事件框架，它允许你的应用在事件发生时通知工具。 然后你可以使用一个名为 PerfView 的工具查看和分析 ETW 事件。 该主题解释了如何：  
   
--   使用 <xref:System.Diagnostics.Tracing.EventSource> 类来发出事件。  
+- 使用 <xref:System.Diagnostics.Tracing.EventSource> 类来发出事件。  
   
--   使用 PerfView 来收集这些事件。  
+- 使用 PerfView 来收集这些事件。  
   
--   使用 PerfView 来显示这些事件。  
+- 使用 PerfView 来显示这些事件。  
   
 ## <a name="using-eventsource-to-emit-events"></a>使用 EventSource 来发出事件  
  <xref:System.Diagnostics.Tracing.EventSource> 提供了一个基类，从该基类可以创建自定义事件提供程序。 通常，你可以创建 <xref:System.Diagnostics.Tracing.EventSource> 的一个子类并使用你自己的事件方法环绕 `Write*` 方法。 一个单独模式通常用于每个 <xref:System.Diagnostics.Tracing.EventSource>。  
   
  例如，以下实例中的类可以用来衡量两个性能特征：  
   
--   `App` 类构造函数得到调用所花时间。  
+- `App` 类构造函数得到调用所花时间。  
   
--   `MainPage` 构造函数得到调用所花时间。  
+- `MainPage` 构造函数得到调用所花时间。  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
@@ -39,13 +39,13 @@ ms.locfileid: "59088283"
   
  例如，假设你正在创建一个 RSS 阅读器。 一些记录事件的有趣的时间点是：  
   
--   当主页首次呈现时。  
+- 当主页首次呈现时。  
   
--   当旧的 RSS 故事从本地存储中遭到反序列化时。  
+- 当旧的 RSS 故事从本地存储中遭到反序列化时。  
   
--   当你的应用开始同步新故事时。  
+- 当你的应用开始同步新故事时。  
   
--   当你的应用已完成同步新故事时。  
+- 当你的应用已完成同步新故事时。  
   
  检测一个应用很简单：仅需调用位于派生类上的适当方法。 通过使用前面实例中的 `AppEventSource`，你可以按照如下所示检测一个应用：  
   
@@ -78,20 +78,20 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  在开启 PerfView 后运行你的应用。 运行你的程序时有几个需要谨记的要点：  
   
--   使用发布版本，而不是调试版本。 调试版本通常包含额外的错误检查和错误处理代码，会导致你的应用运行的速度比预期的要慢。  
+- 使用发布版本，而不是调试版本。 调试版本通常包含额外的错误检查和错误处理代码，会导致你的应用运行的速度比预期的要慢。  
   
--   运行附带调试程序的应用会影响应用性能。  
+- 运行附带调试程序的应用会影响应用性能。  
   
--   Windows 使用多种缓存策略来缩短应用启用时间。 如果你的应用目前缓存在内存中并且不需要从磁盘中加载，它的启动速度会更快。 要确保一致性，在衡量你的应用之前先将其启动和关闭数次。  
+- Windows 使用多种缓存策略来缩短应用启用时间。 如果你的应用目前缓存在内存中并且不需要从磁盘中加载，它的启动速度会更快。 要确保一致性，在衡量你的应用之前先将其启动和关闭数次。  
   
  在已运行应用以便 PerfView 可以收集发出的事件时，选择“停止收集”按钮。 通常，你应该在关闭应用之前停止收集，这样就不会收集到无关的事件。 然而，如果你正在衡量关机或暂停性能，就应该继续收集。  
   
 ## <a name="displaying-the-events"></a>正在显示事件  
  要查看已经收集到的事件，请使用 PerfView 打开所创建的 .etl 或 .etl.zip 文件并选择“事件”。 ETW 将会收集有关大量事件的信息，包括来自其他进程的事件。 要专注于你的调查，完成以下事件视图中的文本框：  
   
--   在“进程筛选器”文本框中，指定应用名称（不要包含“.exe”）。  
+- 在“进程筛选器”文本框中，指定应用名称（不要包含“.exe”）。  
   
--   在“事件类型筛选器”框中，指定 `Process/Start | MyCompany-MyApp`。 这为来自 MyCompany-MyApp 的事件和“Windows 内核/进程/开始”事件设置了一个筛选器。  
+- 在“事件类型筛选器”框中，指定 `Process/Start | MyCompany-MyApp`。 这为来自 MyCompany-MyApp 的事件和“Windows 内核/进程/开始”事件设置了一个筛选器。  
   
  选中左窗格中列出的所有事件 (Ctrl-A) 并选择“Enter”键。 现在你能够查看每个事件的时间戳了。 这些时间戳是从跟踪开始算起的，所以你必须用进程的开始时间减去每个事件的时间，才能确定启动花费的时间。 如果你使用“Ctrl+单击”选中了两个时间戳，你会在页面底部看到在状态栏中显示的他们之间的区别。 这使得要在显示中查看任何两个事件之间的时间间隔变得简单（包括进程开始）。 你可以打开快捷菜单试图并在一些有用的选项中进行选择，比如导出到 CSV 文件或打开 Microsoft Excel 保存或处理这些数据。  
   

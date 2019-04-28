@@ -3,11 +3,11 @@ title: Windows 工作流概述
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861022"
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 工作流是一组的名为的基本单元*活动*作为描述实际过程的模型存储的。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  
@@ -15,11 +15,11 @@ ms.locfileid: "59217596"
 ## <a name="workflow-run-time-engine"></a>工作流运行时引擎  
  每个正在运行的工作流实例都是由进程内运行时引擎创建和维护的，托管进程通过以下类之一与其交互：  
   
--   <xref:System.Activities.WorkflowInvoker>，它像调用方法一样调用工作流。  
+- <xref:System.Activities.WorkflowInvoker>，它像调用方法一样调用工作流。  
   
--   <xref:System.Activities.WorkflowApplication>，用于对单个工作流实例的执行进行显式控制。  
+- <xref:System.Activities.WorkflowApplication>，用于对单个工作流实例的执行进行显式控制。  
   
--   <xref:System.ServiceModel.WorkflowServiceHost>，用于多实例方案中基于消息的交互。  
+- <xref:System.ServiceModel.WorkflowServiceHost>，用于多实例方案中基于消息的交互。  
   
  上述每个类对表示为负责活动执行的 <xref:System.Activities.ActivityInstance> 的核心活动运行时进行包装。 在一个应用程序域中可以并发运行多个 <xref:System.Activities.ActivityInstance> 对象。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "59217596"
   
  在上图中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 类的 <xref:System.Activities.WorkflowInvoker> 方法用于调用多个工作流实例。 <xref:System.Activities.WorkflowInvoker> 用于不需要由宿主管理的轻型工作流；需要由宿主管理的工作流（如 <xref:System.Activities.Bookmark> 恢复）必须改用 <xref:System.Activities.WorkflowApplication.Run%2A> 来执行。 无需等待一个工作流实例完成即可调用下一个工作流实例；运行时引擎支持同时运行多个工作流实例。  调用的工作流如下：  
   
--   一个包含 <xref:System.Activities.Statements.Sequence> 子活动的 <xref:System.Activities.Statements.WriteLine> 活动。 父活动的 <xref:System.Activities.Variable> 绑定到子活动的 <xref:System.Activities.InArgument>。 在变量、 参数以及绑定的详细信息，请参阅[变量和自变量](variables-and-arguments.md)。  
+- 一个包含 <xref:System.Activities.Statements.Sequence> 子活动的 <xref:System.Activities.Statements.WriteLine> 活动。 父活动的 <xref:System.Activities.Variable> 绑定到子活动的 <xref:System.Activities.InArgument>。 在变量、 参数以及绑定的详细信息，请参阅[变量和自变量](variables-and-arguments.md)。  
   
--   一个调用 `ReadLine` 的自定义活动。 将 <xref:System.Activities.OutArgument> 活动的 `ReadLine` 返回给调用 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法。  
+- 一个调用 `ReadLine` 的自定义活动。 将 <xref:System.Activities.OutArgument> 活动的 `ReadLine` 返回给调用 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法。  
   
--   一个派生自 <xref:System.Activities.CodeActivity> 抽象类的自定义活动。 <xref:System.Activities.CodeActivity> 可以使用作为 <xref:System.Activities.CodeActivityContext> 方法的参数提供的 <xref:System.Activities.CodeActivity.Execute%2A> 访问运行时功能（如跟踪和属性）。 有关这些运行时功能的详细信息，请参阅[工作流跟踪](workflow-tracking-and-tracing.md)并[工作流执行属性](workflow-execution-properties.md)。  
+- 一个派生自 <xref:System.Activities.CodeActivity> 抽象类的自定义活动。 <xref:System.Activities.CodeActivity> 可以使用作为 <xref:System.Activities.CodeActivityContext> 方法的参数提供的 <xref:System.Activities.CodeActivity.Execute%2A> 访问运行时功能（如跟踪和属性）。 有关这些运行时功能的详细信息，请参阅[工作流跟踪](workflow-tracking-and-tracing.md)并[工作流执行属性](workflow-execution-properties.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,11 +3,11 @@ title: 自定义活动设计器
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
 ms.openlocfilehash: 982aecea27de680468fe6f574f72c459ef76b142
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913843"
 ---
 # <a name="custom-activity-designers"></a>自定义活动设计器
 本节包含使用自定义设计器在工作流设计器中进行显示的活动示例。  

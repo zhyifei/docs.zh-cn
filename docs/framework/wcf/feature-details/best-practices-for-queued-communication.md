@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858073"
 ---
 # <a name="best-practices-for-queued-communication"></a>排队通信的最佳做法
 本主题提供的排队通信 Windows Communication Foundation (WCF) 中建议的做法。 以下各节从方案角度讨论建议的做法。  
@@ -48,11 +48,11 @@ ms.locfileid: "59230091"
 ## <a name="achieving-high-throughput"></a>实现高吞吐量  
  若要在单个终结点上实现高吞吐量，请使用下面的方法：  
   
--   事务处理批处理。 事务处理批处理可确保在单个事务中能够读取多个消息。 这样可优化事务提交，从而提高整体性能。 批处理的代价在于，如果一个批次内某个消息出现错误，则整个批次都会回滚，并且这些消息必须逐个处理，直到可以再次安全地进行批处理为止。 大多数情况下，很少出现病毒消息，因此首选使用批处理来提高系统性能，尤其是具有参与事务的其他资源管理器时。 有关详细信息，请参阅[在事务中的批处理消息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)。  
+- 事务处理批处理。 事务处理批处理可确保在单个事务中能够读取多个消息。 这样可优化事务提交，从而提高整体性能。 批处理的代价在于，如果一个批次内某个消息出现错误，则整个批次都会回滚，并且这些消息必须逐个处理，直到可以再次安全地进行批处理为止。 大多数情况下，很少出现病毒消息，因此首选使用批处理来提高系统性能，尤其是具有参与事务的其他资源管理器时。 有关详细信息，请参阅[在事务中的批处理消息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)。  
   
--   并发。 并发可增加吞吐量，但并发也会影响对共享资源的争用。 有关详细信息，请参阅[并发](../../../../docs/framework/wcf/samples/concurrency.md)。  
+- 并发。 并发可增加吞吐量，但并发也会影响对共享资源的争用。 有关详细信息，请参阅[并发](../../../../docs/framework/wcf/samples/concurrency.md)。  
   
--   遏制。 要实现最佳性能，需要遏制调度程序管线中的消息数。 有关如何执行此操作的示例，请参阅[限制](../../../../docs/framework/wcf/samples/throttling.md)。  
+- 遏制。 要实现最佳性能，需要遏制调度程序管线中的消息数。 有关如何执行此操作的示例，请参阅[限制](../../../../docs/framework/wcf/samples/throttling.md)。  
   
  使用批处理时，应注意并发和遏制转换为并发批处理。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "59230091"
   
  使用 `MsmqIntegrationBinding` 时，应注意以下几点：  
   
--   WCF 消息正文不是与 MSMQ 消息正文相同。 在发送时使用的排队的绑定的 WCF 消息，WCF 消息正文位于 MSMQ 消息内。 MSMQ 基础结构并不在意这一额外信息，它只注意 MSMQ 消息。  
+- WCF 消息正文不是与 MSMQ 消息正文相同。 在发送时使用的排队的绑定的 WCF 消息，WCF 消息正文位于 MSMQ 消息内。 MSMQ 基础结构并不在意这一额外信息，它只注意 MSMQ 消息。  
   
--   `MsmqIntegrationBinding` 支持常见的序列化类型。 根据序列化类型和一般消息的正文类型，<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 采用不同的类型参数。 例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> 需要 `MsmqMessage\<byte[]>` 而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> 需要 `MsmqMessage<Stream>`。  
+- `MsmqIntegrationBinding` 支持常见的序列化类型。 根据序列化类型和一般消息的正文类型，<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 采用不同的类型参数。 例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> 需要 `MsmqMessage\<byte[]>` 而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> 需要 `MsmqMessage<Stream>`。  
   
--   使用 XML 序列化，可以指定已知的类型使用`KnownTypes`特性，可以在[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)则用于确定如何反序列化的 XML 消息的元素。  
+- 使用 XML 序列化，可以指定已知的类型使用`KnownTypes`特性，可以在[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)则用于确定如何反序列化的 XML 消息的元素。  
   
 ## <a name="see-also"></a>请参阅
 

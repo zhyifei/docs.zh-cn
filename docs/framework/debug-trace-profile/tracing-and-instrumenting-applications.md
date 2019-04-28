@@ -16,24 +16,24 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876143"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
   
  术语“检测”是指监视或测量产品的性能级别和诊断错误的功能。 在编程中，即指应用程序合并以下功能的能力：  
   
--   代码跟踪 - 接收运行时有关应用程序执行的信息性消息。  
+- 代码跟踪 - 接收运行时有关应用程序执行的信息性消息。  
   
--   调试 - 跟踪并修复开发中的应用程序的编程错误。 有关详细信息，请参阅[调试](/visualstudio/debugger/debugging-in-visual-studio)。  
+- 调试 - 跟踪并修复开发中的应用程序的编程错误。 有关详细信息，请参阅[调试](/visualstudio/debugger/debugging-in-visual-studio)。  
   
--   性能计数器 - 可用于跟踪应用程序性能的组件。 有关更多信息，请参阅[性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
+- 性能计数器 - 可用于跟踪应用程序性能的组件。 有关更多信息，请参阅[性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
   
--   事件日志 - 可用于接收和跟踪应用程序执行过程中重要事件的组件。 有关更多信息，请参见 <xref:System.Diagnostics.EventLog> 类。  
+- 事件日志 - 可用于接收和跟踪应用程序执行过程中重要事件的组件。 有关更多信息，请参见 <xref:System.Diagnostics.EventLog> 类。  
   
  通过将跟踪语句置于代码中的关键位置来检测应用程序非常适合分布式应用程序。 通过使用跟踪语句，可检测应用程序，从而在出现故障时显示相关信息并监视应用程序的运行情况。  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. 使用下面一个过程将应用程序编译为可执行代码：  
   
-    -   使用“构建”菜单以及“解决方案资源管理器”中“属性页”对话框的“调试”页。 在 Visual Studio 中编译时，请使用此选项。  
+    - 使用“构建”菜单以及“解决方案资源管理器”中“属性页”对话框的“调试”页。 在 Visual Studio 中编译时，请使用此选项。  
   
          \- 或 -  
   
-    -   对编译的命令行方法使用“跟踪”和“调试”编译器指令。 有关详细信息，请参阅[使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 从命令行进行编译时，请使用此选项。  
+    - 对编译的命令行方法使用“跟踪”和“调试”编译器指令。 有关详细信息，请参阅[使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 从命令行进行编译时，请使用此选项。  
   
 7. 如果在运行时出现问题，请打开相应的跟踪开关。 有关详细信息，请参阅[配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   

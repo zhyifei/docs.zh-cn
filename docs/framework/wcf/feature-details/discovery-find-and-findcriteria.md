@@ -3,11 +3,11 @@ title: Discovery Find 和 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856513"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Discovery Find 和 FindCriteria
 发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 有关发现消息的详细信息，请参阅[Ws-discovery 规范](https://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -20,21 +20,21 @@ ms.locfileid: "59345776"
   
  搜索条件包括：  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 可选项。 要搜索的服务的协定名称以及搜索服务时通常采用的条件。 如果指定了多个协定名称，则只有与所有协定均匹配的服务终结点才会进行答复。 请注意，在 WCF 中终结点只能支持一个协定。  
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 可选项。 要搜索的服务的协定名称以及搜索服务时通常采用的条件。 如果指定了多个协定名称，则只有与所有协定均匹配的服务终结点才会进行答复。 请注意，在 WCF 中终结点只能支持一个协定。  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 可选项。 范围表示对各服务终结点进行分类所使用的绝对 URI。 如果多个终结点公开同一协定，并且您希望采用某种方法来搜索终结点的子集，则您可能希望使用此搜索条件。 如果指定了多个范围，则只有与所有范围匹配的服务终结点才会进行答复。  
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 可选项。 范围表示对各服务终结点进行分类所使用的绝对 URI。 如果多个终结点公开同一协定，并且您希望采用某种方法来搜索终结点的子集，则您可能希望使用此搜索条件。 如果指定了多个范围，则只有与所有范围匹配的服务终结点才会进行答复。  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - 指定当对 Probe 消息中的范围和终结点中的范围进行匹配时采用的匹配算法。 支持以下五种范围匹配规则：  
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - 指定当对 Probe 消息中的范围和终结点中的范围进行匹配时采用的匹配算法。 支持以下五种范围匹配规则：  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> 执行区分大小写的基本字符串比较。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> 执行区分大小写的基本字符串比较。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 由分隔的段的匹配项"/"。 搜索`http://contoso/building1`匹配具有作用域的服务`http://contoso/building/floor1`。 请注意，它不匹配`http://contoso/building100`因为最后两个段不匹配。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 由分隔的段的匹配项"/"。 搜索`http://contoso/building1`匹配具有作用域的服务`http://contoso/building/floor1`。 请注意，它不匹配`http://contoso/building100`因为最后两个段不匹配。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> 按使用 LDAP URL 的段来匹配范围。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> 按使用 LDAP URL 的段来匹配范围。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> 通过使用 UUID 字符串来完全匹配范围。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> 通过使用 UUID 字符串来完全匹配范围。  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> 仅匹配那些未指定范围的服务。  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> 仅匹配那些未指定范围的服务。  
   
      如果未指定范围匹配规则，则使用 <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix>。  
   

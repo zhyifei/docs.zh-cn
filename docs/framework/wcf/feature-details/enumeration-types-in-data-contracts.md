@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
 ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856435"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>数据协定中的枚举类型
 枚举可以用数据协定模型来表示。 本主题演练几个介绍编程模型的示例。  
@@ -43,9 +43,9 @@ ms.locfileid: "59309636"
   
  以下为此规则的两种例外情况：  
   
--   标志枚举（本主题的后面部分将进行讨论）。  
+- 标志枚举（本主题的后面部分将进行讨论）。  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 属性设置为 `false` 的枚举数据成员（这种情况下将从序列化数据中省略值为零的枚举）。  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 属性设置为 `false` 的枚举数据成员（这种情况下将从序列化数据中省略值为零的枚举）。  
   
 ### <a name="customizing-enumeration-member-values"></a>自定义枚举成员值  
  可以通过使用 <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> 属性 (attribute) 的 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性 (property) 对作为数据协定构成部分的枚举成员值进行自定义。  

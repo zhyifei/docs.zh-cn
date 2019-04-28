@@ -3,11 +3,11 @@ title: 身份验证的扩展保护概述
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856721"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>身份验证的扩展保护概述
 身份验证的扩展保护有助于抵御中间人 (MITM) 攻击，在此类攻击中，攻击者截获客户端凭据并将它们转发给服务器。  
@@ -24,11 +24,11 @@ ms.locfileid: "59183672"
   
  服务器可以具有以下级别的保护：  
   
--   无。 不执行任何通道绑定验证。 这是所有尚未更新的服务器的行为。  
+- 无。 不执行任何通道绑定验证。 这是所有尚未更新的服务器的行为。  
   
--   部分保护。 所有已更新的客户端必须向服务器提供通道绑定信息。 尚未更新的客户端无需执行此操作。 这是一个中间选项，可以实现应用程序兼容。  
+- 部分保护。 所有已更新的客户端必须向服务器提供通道绑定信息。 尚未更新的客户端无需执行此操作。 这是一个中间选项，可以实现应用程序兼容。  
   
--   完全保护。 所有客户端都必须提供通道绑定信息。 服务器拒绝来自不提供通道绑定信息的客户端的身份验证请求。  
+- 完全保护。 所有客户端都必须提供通道绑定信息。 服务器拒绝来自不提供通道绑定信息的客户端的身份验证请求。  
   
  有关更多信息，请参见 Win7 CBT/扩展保护示例。  
   

@@ -3,11 +3,11 @@ title: 文本
 description: 了解有关在中的文本类型F#编程语言。
 ms.date: 02/08/2019
 ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904561"
 ---
 # <a name="literals"></a>文本
 
@@ -33,7 +33,7 @@ ms.locfileid: "56092158"
 |uint64|无符号的 64 位自然数|UL|`86UL`|
 |单一的 float32|32 位浮点数|F 或 f|`4.14F` 或 `4.14f`|
 |||lf|`0x00000000lf`|
-|float;双精度|64 位浮点数|无|`4.14` 或 `2.3E+32` 或 `2.3e+32`|
+|float;双精度|64 位浮点数|无|`4.14` 或`2.3E+32`或 `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|不限制为 64 位表示形式的整数|I|`9999999999999999999999999999I`|
 |decimal|表示为固定的点或有理数的小数|M 或 m|`0.7833M` 或 `0.7833m`|

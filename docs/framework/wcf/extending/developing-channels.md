@@ -3,11 +3,11 @@ title: 开发通道
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 ms.openlocfilehash: 44fb0da52c60b900c41b7b497861c12ed72d8ffc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858060"
 ---
 # <a name="developing-channels"></a>开发通道
 若要开发使用 Windows Communication Foundation (WCF) 可以使用的协议或传输通道应用程序层需要几个步骤。 本主题介绍这些步骤并为您指出特定主题以了解更多信息。 若要了解通道模型和本主题中提到的各种类型，请参阅[通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)。 有关完整的传输通道示例，请参阅[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)。  

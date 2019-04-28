@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
 ms.openlocfilehash: 7da1de98132f47740e805ed34ff3890f0ba0f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920739"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>未定义 Property Let 过程，并且 Property Get 过程未返回对象
 某些属性、 方法和操作仅适用于`Collection`对象。 指定的操作或属性是专用于集合，但该对象不是一个集合。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
 ms.openlocfilehash: 16f579a05236ba8977a071cb08068be8e98799f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921077"
 ---
 # <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<成员名称 > 不能公开类型\<类型名称 > 通过在项目外部\<containertype >'\<containertypename >
 变量、 过程参数或函数返回公开其容器外，但它被声明为不必须在容器外公开的类型。  
@@ -33,7 +33,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   更改访问级别，变量、 过程参数或函数的返回让至少作为其数据类型的访问级别限制性最高。  
+- 更改访问级别，变量、 过程参数或函数的返回让至少作为其数据类型的访问级别限制性最高。  
   
 ## <a name="see-also"></a>请参阅
 

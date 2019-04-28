@@ -3,11 +3,11 @@ title: 循环：while...do 表达式
 description: 请参阅如何...执行表达式用于在指定的测试条件为 true 时执行迭代操作 （循环）。
 ms.date: 05/16/2016
 ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904015"
 ---
 # <a name="loops-whiledo-expression"></a>循环：while...do 表达式
 

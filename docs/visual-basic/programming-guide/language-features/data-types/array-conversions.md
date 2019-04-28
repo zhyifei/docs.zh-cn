@@ -13,20 +13,20 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908019"
 ---
 # <a name="array-conversions-visual-basic"></a>数组转换 (Visual Basic)
 可以将数组类型转换为另一个数组类型，但必须满足以下条件：  
   
--   **秩相等。** 两个数组的秩必须相同，即，它们必须具有相同数量的维度。 但是，不需要的相应维度的长度相同。  
+- **秩相等。** 两个数组的秩必须相同，即，它们必须具有相同数量的维度。 但是，不需要的相应维度的长度相同。  
   
--   **元素数据类型。** 这两个数组的元素的数据类型必须是引用类型。 你不能转换`Integer`到数组`Long`数组，或者甚至到`Object`，因为涉及至少一个值类型数组。 有关更多信息，请参见 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
+- **元素数据类型。** 这两个数组的元素的数据类型必须是引用类型。 你不能转换`Integer`到数组`Long`数组，或者甚至到`Object`，因为涉及至少一个值类型数组。 有关更多信息，请参见 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
   
--   **支持。** 扩大或收缩转换时，必须是两个数组的元素类型之间可能的。 符合此要求的一个示例是之间尝试执行的转换`String`数组和数组的类派生自<xref:System.Attribute?displayProperty=nameWithType>。 这两种类型迥然不同，并且它们之间不存在任何类型的转换。  
+- **支持。** 扩大或收缩转换时，必须是两个数组的元素类型之间可能的。 符合此要求的一个示例是之间尝试执行的转换`String`数组和数组的类派生自<xref:System.Attribute?displayProperty=nameWithType>。 这两种类型迥然不同，并且它们之间不存在任何类型的转换。  
   
  一个数组类型转换为另一个是扩大转换或收缩具体取决于是否扩大或收缩的相应元素的转换。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   

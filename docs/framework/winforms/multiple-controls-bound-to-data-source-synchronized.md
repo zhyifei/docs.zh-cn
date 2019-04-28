@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800759"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：确保绑定到同一数据源的多个控件保持同步
 通常在使用 Windows 窗体中的数据绑定，多个控件绑定到同一数据源。 在某些情况下，可能需要采取额外步骤来确保控件的绑定的属性保持同步以及数据源。 这些步骤是在两种情况下需要：  
   
--   如果数据源不实现<xref:System.ComponentModel.IBindingList>，并因此生成<xref:System.ComponentModel.IBindingList.ListChanged>类型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>。  
+- 如果数据源不实现<xref:System.ComponentModel.IBindingList>，并因此生成<xref:System.ComponentModel.IBindingList.ListChanged>类型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>。  
   
--   如果数据源实现<xref:System.ComponentModel.IEditableObject>。  
+- 如果数据源实现<xref:System.ComponentModel.IEditableObject>。  
   
  在前一种情况，你可以使用<xref:System.Windows.Forms.BindingSource>将数据源绑定到控件。 在后一种情况，您使用<xref:System.Windows.Forms.BindingSource>和处理<xref:System.Windows.Forms.BindingSource.BindingComplete>事件，并调用<xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A>关联<xref:System.Windows.Forms.BindingManagerBase>。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "59170334"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   此代码示例需要  
+- 此代码示例需要  
   
--   对 <xref:System><xref:System.Windows.Forms> 和 <xref:System.Drawing> 程序集的引用。  
+- 对 <xref:System><xref:System.Windows.Forms> 和 <xref:System.Drawing> 程序集的引用。  
   
--   一个具有窗体<xref:System.Windows.Forms.Form.Load>处理事件和调用`InitializeControlsAndDataSource`从窗体的示例中的方法<xref:System.Windows.Forms.Form.Load>事件处理程序。  
+- 一个具有窗体<xref:System.Windows.Forms.Form.Load>处理事件和调用`InitializeControlsAndDataSource`从窗体的示例中的方法<xref:System.Windows.Forms.Form.Load>事件处理程序。  
   
 ## <a name="see-also"></a>请参阅
 
