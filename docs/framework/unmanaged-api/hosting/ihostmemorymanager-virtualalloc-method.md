@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5407a9d23833d73b2d6ef0038454f56f01d56867
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760202"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc 方法
 充当相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualAlloc`保留或提交的调用进程的虚拟地址空间中的页面区域。  

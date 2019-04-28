@@ -14,30 +14,30 @@ ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c201ab51c1af8a86fc1c2c4f80738007152b3bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754500"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` 托管调试助手 (MDS) 通过以下两种问题中的任何一种激活：  
   
--   尝试将已由 COM 初始化的线程的 COM 单元状态更改为不同的单元状态。  
+- 尝试将已由 COM 初始化的线程的 COM 单元状态更改为不同的单元状态。  
   
--   线程的 COM 单元状态意外更改。  
+- 线程的 COM 单元状态意外更改。  
   
 ## <a name="symptoms"></a>症状  
   
--   线程的 COM 单元状态不符合请求。 这可能造成用于已有线程模型的 COM 组件的代理不同于现有代理。 进而可能导致在通过未设置为跨单元封送的接口调用 COM 对象时，引发 <xref:System.InvalidCastException>。  
+- 线程的 COM 单元状态不符合请求。 这可能造成用于已有线程模型的 COM 组件的代理不同于现有代理。 进而可能导致在通过未设置为跨单元封送的接口调用 COM 对象时，引发 <xref:System.InvalidCastException>。  
   
--   线程的 COM 单元状态不同于预期。 这可能造成调用[运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 时，出现 <xref:System.Runtime.InteropServices.COMException>、RPC_E_WRONG_THREAD 返回 HRESULT 以及 <xref:System.InvalidCastException>。 这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。  
+- 线程的 COM 单元状态不同于预期。 这可能造成调用[运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 时，出现 <xref:System.Runtime.InteropServices.COMException>、RPC_E_WRONG_THREAD 返回 HRESULT 以及 <xref:System.InvalidCastException>。 这也可能造成部分单线程 COM 组件由多个线程同时访问，进而导致损坏或数据丢失。  
   
 ## <a name="cause"></a>原因  
   
--   该线程之前已初始化为不同的 COM 单元状态。 请注意，可显式或隐式设置线程的单元状态。 显式操作包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 通过 <xref:System.Threading.Thread.Start%2A> 方法创建的线程可隐式设置为 <xref:System.Threading.ApartmentState.MTA>，除非 <xref:System.Threading.Thread.SetApartmentState%2A> 在线程创建之前就已调用。 应用程序主线程同样可隐式初始化为 <xref:System.Threading.ApartmentState.MTA>，除非在主方法上指定了 <xref:System.STAThreadAttribute> 属性。  
+- 该线程之前已初始化为不同的 COM 单元状态。 请注意，可显式或隐式设置线程的单元状态。 显式操作包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 通过 <xref:System.Threading.Thread.Start%2A> 方法创建的线程可隐式设置为 <xref:System.Threading.ApartmentState.MTA>，除非 <xref:System.Threading.Thread.SetApartmentState%2A> 在线程创建之前就已调用。 应用程序主线程同样可隐式初始化为 <xref:System.Threading.ApartmentState.MTA>，除非在主方法上指定了 <xref:System.STAThreadAttribute> 属性。  
   
--   在线程上调用具有不同并发模型的 `CoUninitialize` 方法（或 `CoInitializeEx` 方法）。  
+- 在线程上调用具有不同并发模型的 `CoUninitialize` 方法（或 `CoInitializeEx` 方法）。  
   
 ## <a name="resolution"></a>解决方法  
  在单元状态开始执行前对其进行设置，或将 <xref:System.STAThreadAttribute> 属性或 <xref:System.MTAThreadAttribute> 属性应用到应用程序的主方法。  

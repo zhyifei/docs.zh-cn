@@ -8,11 +8,11 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
 ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665775"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>如何：创建一个属性 (Visual Basic)
 将属性定义之间`Property`语句和一个`End Property`语句。 在此定义中，定义`Get`过程中，`Set`过程中，或两者。 该属性的所有代码均位于这些过程中。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753031"
 ---
 # <a name="analytic-trace-event-reference"></a>分析跟踪事件参考
 下表定义事件级别、 标识符和与 WCF 分析跟踪关联的消息。  
@@ -126,7 +126,7 @@ ms.locfileid: "33808632"
 |[3305 - ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|信息|缓存的通道工厂数量为:“%1”。  最多可以缓存“%2”个通道工厂。|ServiceModel|  
 |[3306 - ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|信息|通道工厂在缓存中已到期，因为缓存已达到其限制“%1”。|ServiceModel|  
 |[3307 - ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|信息|使用了在缓存中找到的匹配通道工厂。|ServiceModel|  
-|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|信息|未使用缓存中的通道工厂，即禁用缓存实例。|ServiceModel|  
+|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|信息|不使用缓存中的通道工厂，即缓存实例禁用。|ServiceModel|  
 |[3309 - QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|信息|已对请求 Uri“%2”执行了使用“%1”的查询组合。|ServiceModel|  
 |[3310 - DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Error|已调度“%1”操作，但出现错误。|ServiceModel|  
 |[3311 - DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|信息|已成功调度“%1”操作。|ServiceModel|  
@@ -187,7 +187,7 @@ ms.locfileid: "33808632"
 |[3371 - MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|详细|MtomMessageEncoder 已开始对消息进行编码。|通道|  
 |[3372 - TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|详细|TextMessageEncoder 已开始编码消息。|通道|  
 |[3373 - BinaryMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3373-binarymessagedecodingstart.md)|详细|BinaryMessageEncoder 已开始解码消息。|通道|  
-|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|详细|MtomMessageEncoder 已开始解码消息。|通道|  
+|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|详细|Mtommessageencoder 已开始解码消息。|通道|  
 |[3375 - TextMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3375-textmessagedecodingstart.md)|详细|TextMessageEncoder 已开始解码消息。|通道|  
 |[3376 - HttpResponseReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3376-httpresponsereceivestart.md)|信息|Http 传输已开始接收消息。|HTTP|  
 |[3377 - SocketReadStop](../../../../../docs/framework/wcf/diagnostics/etw/3377-socketreadstop.md)|详细|SocketId：%1 从“%3”读取“%2”个字节。|TCP|  

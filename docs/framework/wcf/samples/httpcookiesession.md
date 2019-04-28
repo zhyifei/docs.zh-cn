@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752732"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道启用 WCF 客户端和 ASMX 服务之间或 Windows Communication Foundation (WCF) 服务和 ASMX 客户端之间的通信。  
   
  当客户端在基于会话的 ASMX Web 服务中调用 Web 方法时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 引擎将执行以下操作：  
   
--   生成一个唯一的 ID（会话 ID）。  
+- 生成一个唯一的 ID（会话 ID）。  
   
--   生成会话对象并将其与该唯一 ID 相关联。  
+- 生成会话对象并将其与该唯一 ID 相关联。  
   
--   将该唯一 ID 添加到 Set-Cookie HTTP 响应头中并发送给客户端。  
+- 将该唯一 ID 添加到 Set-Cookie HTTP 响应头中并发送给客户端。  
   
--   根据它发送给客户端的会话 ID 在后续调用中标识客户端。  
+- 根据它发送给客户端的会话 ID 在后续调用中标识客户端。  
   
  客户端将此会话 ID 包含在发送给服务器的后续请求中。 服务器使用来自客户端的会话 ID 为当前 HTTP 上下文加载相应的会话对象。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59772981"
 ## <a name="service-channel"></a>服务通道  
  此示例在 `HttpCookieReplySessionChannelListener` 类中提供服务通道。 此类实现 <xref:System.ServiceModel.Channels.IChannelListener> 接口，并将通道堆栈中位于较低层的 <xref:System.ServiceModel.Channels.IReplyChannel> 通道转换为 <xref:System.ServiceModel.Channels.IReplySessionChannel>。 此过程可以分为以下几部分：  
   
--   当通道侦听器打开时，它接受来自其内部侦听器的内部通道。 因为内部侦听器是一个数据报侦听器，而被接受的通道的生存期与该侦听器的生存期相分离，所以我们可以关闭内部侦听器，只保留内部通道。  
+- 当通道侦听器打开时，它接受来自其内部侦听器的内部通道。 因为内部侦听器是一个数据报侦听器，而被接受的通道的生存期与该侦听器的生存期相分离，所以我们可以关闭内部侦听器，只保留内部通道。  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ ms.locfileid: "59772981"
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   当打开进程完成后，我们设置一个消息循环，以接收来自内部通道的消息。  
+- 当打开进程完成后，我们设置一个消息循环，以接收来自内部通道的消息。  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ ms.locfileid: "59772981"
     }  
     ```  
   
--   当消息到达后，服务通道检查会话标识符并多路分解到相应的会话通道。 通道侦听器维护一个字典，该字典将会话标识符映射到会话通道实例。  
+- 当消息到达后，服务通道检查会话标识符并多路分解到相应的会话通道。 通道侦听器维护一个字典，该字典将会话标识符映射到会话通道实例。  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

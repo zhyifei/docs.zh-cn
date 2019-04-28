@@ -3,11 +3,11 @@ title: 构造类型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605818"
 ---
 # <a name="constructing-types-entity-sql"></a>构造类型 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了三种构造函数： 行构造函数、 命名的类型构造函数和集合构造函数。  
@@ -21,9 +21,9 @@ ms.locfileid: "59073775"
   
  以下规则适用于在行构造函数中指定表达式别名：  
   
--   行构造函数中的表达式不能引用同一构造函数中的其他别名。  
+- 行构造函数中的表达式不能引用同一构造函数中的其他别名。  
   
--   同一行构造函数中的两个表达式不能具有相同别名。  
+- 同一行构造函数中的两个表达式不能具有相同别名。  
   
  有关行构造函数的详细信息，请参阅[行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)。  
   

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638048"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 语句 (Visual Basic)
 将一组语句重复指定的次数。  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` 通常使用后评估某些条件 (例如，在`If`...`Then`...`Else`结构)。 您可能想要使用`Exit For`满足以下条件：  
   
--   继续循环访问是不必要或不可能。 错误的值或终止请求可能会创建这种情况。  
+- 继续循环访问是不必要或不可能。 错误的值或终止请求可能会创建这种情况。  
   
--   一个`Try`...`Catch`...`Finally`语句捕获异常。 可以使用`Exit For`末尾的`Finally`块。  
+- 一个`Try`...`Catch`...`Finally`语句捕获异常。 可以使用`Exit For`末尾的`Finally`块。  
   
--   具有无限循环，这是一个循环，无法运行大型或甚至无限数量的次数。 如果检测到此类情况，可以使用`Exit For`来退出循环。 有关详细信息，请参阅[执行操作...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
+- 具有无限循环，这是一个循环，无法运行大型或甚至无限数量的次数。 如果检测到此类情况，可以使用`Exit For`来退出循环。 有关详细信息，请参阅[执行操作...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
   
 ## <a name="technical-implementation"></a>技术实现  
  当`For`...`Next`循环开始，Visual Basic 的计算结果`start`， `end`，和`step`。 Visual Basic 仅在此时间，然后将计算这些值`start`到`counter`。 在之前的语句块将运行，Visual Basic 进行比较`counter`到`end`。 如果`counter`已经是大于`end`值 (或较小的 if`step`为负)，则`For`循环结束并将控制权传递到后面的语句`Next`语句。 否则，在运行语句块。  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  数据类型的`counter`确定的类型的迭代，它必须是以下类型之一：  
   
--   一个`Byte`， `SByte`， `UShort`， `Short`， `UInteger`， `Integer`， `ULong`， `Long`， `Decimal`， `Single`，或`Double`。  
+- 一个`Byte`， `SByte`， `UShort`， `Short`， `UInteger`， `Integer`， `ULong`， `Long`， `Decimal`， `Single`，或`Double`。  
   
--   使用声明的枚举[Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)。  
+- 使用声明的枚举[Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)。  
   
--   一个 `Object`。  
+- 一个 `Object`。  
   
--   一种类型`T`具有以下运算符，其中`B`是一种可在`Boolean`表达式。  
+- 一种类型`T`具有以下运算符，其中`B`是一种可在`Boolean`表达式。  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

@@ -11,11 +11,11 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706060"
 ---
 # <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest。\_CoreResponse 字段
 
@@ -28,14 +28,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> 此 API 不是在代码中直接使用。 相反，应使用<xref:System.Diagnostics.DiagnosticSource>连接网络的代码。 请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
+> 此 API 不应在代码中直接使用。 相反，应使用<xref:System.Diagnostics.DiagnosticSource>挂接网络代码。 请参阅[DiagnosticSource 用户指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
 > 
-> Microsoft 不支持在生产应用程序在任何情况下使用此类。
+> 在生产应用程序在任何情况下，Microsoft 不支持此类使用。
 
 ## <a name="requirements"></a>要求
 
-**Namespace:** <xref:System.Net>
+**Namespace**：<xref:System.Net>
 
-**程序集：** 系统 （在 System.dll)
+**程序集：**（在 System.dll) 的系统
 
 **.NET framework 版本：** 自 2.0 之后可用。

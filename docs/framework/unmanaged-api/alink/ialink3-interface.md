@@ -9,18 +9,18 @@ ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753655"
 ---
 # <a name="ialink3-interface"></a>IALink3 接口
-提供单一的方法， `SetManifestFile`，从中可以指定或重置链接器将创建时使用此程序集清单文件。  
+提供了一个方法， `SetManifestFile`，这样您就可以指定或重置时创建的程序集链接器将使用的清单文件。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SetManifestFile 方法](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
- 使您能够指定或重置链接器将创建时使用此程序集清单文件。  
+ 可以指定或重置链接器将创建该程序集时所使用的清单文件。  
   
 ## <a name="related-sections"></a>相关章节  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  

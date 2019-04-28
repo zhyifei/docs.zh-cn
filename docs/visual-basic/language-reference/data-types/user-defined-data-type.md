@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746708"
 ---
 # <a name="user-defined-data-type"></a>用户定义的数据类型
 在您定义的格式保存数据。 `Structure`语句定义的格式。  
@@ -50,15 +50,15 @@ ms.locfileid: "58814185"
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **内存占用情况。** 与所有复合数据类型，不能安全地通过同时添加其成员的名义存储分配计算结构的内存总消耗。 此外，不能安全地假定已在内存中存储的顺序声明的顺序相同。 如果需要控制结构的存储布局，你可以申请<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性为`Structure`语句。  
+- **内存占用情况。** 与所有复合数据类型，不能安全地通过同时添加其成员的名义存储分配计算结构的内存总消耗。 此外，不能安全地假定已在内存中存储的顺序声明的顺序相同。 如果需要控制结构的存储布局，你可以申请<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性为`Structure`语句。  
   
--   **互操作注意事项。** 如果你与不是为.NET Framework 编写的组件交互，如自动化或 COM 对象，请记住，在其他环境中的用户定义类型都不兼容使用 Visual Basic 的结构类型。  
+- **互操作注意事项。** 如果你与不是为.NET Framework 编写的组件交互，如自动化或 COM 对象，请记住，在其他环境中的用户定义类型都不兼容使用 Visual Basic 的结构类型。  
   
--   **扩大转换。** 没有自动转换到或从任何结构的数据类型。 可以使用在结构上定义转换运算符[Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)，并可以声明为每个转换运算符`Widening`或`Narrowing`。  
+- **扩大转换。** 没有自动转换到或从任何结构的数据类型。 可以使用在结构上定义转换运算符[Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)，并可以声明为每个转换运算符`Widening`或`Narrowing`。  
   
--   **类型字符。** 结构的数据类型不具有文本类型字符或标识符类型字符。  
+- **类型字符。** 结构的数据类型不具有文本类型字符或标识符类型字符。  
   
--   **Framework 类型。** .NET Framework 中没有相应类型。 从.NET Framework 类继承的所有结构<xref:System.ValueType?displayProperty=nameWithType>，但没有单个结构对应于<xref:System.ValueType?displayProperty=nameWithType>。  
+- **Framework 类型。** .NET Framework 中没有相应类型。 从.NET Framework 类继承的所有结构<xref:System.ValueType?displayProperty=nameWithType>，但没有单个结构对应于<xref:System.ValueType?displayProperty=nameWithType>。  
   
 ## <a name="example"></a>示例  
  下面的示例演示一种结构的声明的大纲。  

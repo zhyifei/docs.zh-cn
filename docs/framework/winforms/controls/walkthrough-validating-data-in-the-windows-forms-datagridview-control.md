@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
 ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759851"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>演练：验证 Windows 窗体 DataGridView 控件中的数据
 向用户显示数据条目的功能，经常需要验证你的窗体中输入的数据。 <xref:System.Windows.Forms.DataGridView>类提供了方便地在数据提交到数据存储区之前执行验证。 可以通过处理在验证数据<xref:System.Windows.Forms.DataGridView.CellValidating>事件，引发的<xref:System.Windows.Forms.DataGridView>当前单元格发生更改时。  
@@ -29,7 +29,7 @@ ms.locfileid: "59346049"
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
--   对具有 Northwind SQL Server 示例数据库的服务器的访问。  
+- 对具有 Northwind SQL Server 示例数据库的服务器的访问。  
   
 ## <a name="creating-the-form"></a>创建窗体  
   
@@ -71,22 +71,22 @@ ms.locfileid: "59346049"
   
 #### <a name="to-test-the-form"></a>若要测试窗体  
   
--   编译并运行该应用程序。  
+- 编译并运行该应用程序。  
   
      你将看到<xref:System.Windows.Forms.DataGridView>中的数据填充`Customers`表。 当双击中的单元格`CompanyName`列中，可以编辑的值。 如果你删除所有字符并按 TAB 键退出单元格，<xref:System.Windows.Forms.DataGridView>会阻止你退出。 在单元格中，键入一个非空字符串时<xref:System.Windows.Forms.DataGridView>控件，可以退出单元格。  
   
 ## <a name="next-steps"></a>后续步骤  
  此应用程序为您提供了一个基本的了解<xref:System.Windows.Forms.DataGridView>控件的功能。 你可以自定义外观和行为<xref:System.Windows.Forms.DataGridView>控制几种方式：  
   
--   更改边框和标头的样式。 有关详细信息，请参阅[如何：更改边框和网格线的样式中的 Windows 窗体 DataGridView 控件](change-the-border-and-gridline-styles-in-the-datagrid.md)。  
+- 更改边框和标头的样式。 有关详细信息，请参阅[如何：更改边框和网格线的样式中的 Windows 窗体 DataGridView 控件](change-the-border-and-gridline-styles-in-the-datagrid.md)。  
   
--   启用或限制的用户输入<xref:System.Windows.Forms.DataGridView>控件。 有关详细信息，请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件](prevent-row-addition-and-deletion-datagridview.md)，和[如何：将列设为只读、 只在 Windows 窗体 DataGridView 控件](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
+- 启用或限制的用户输入<xref:System.Windows.Forms.DataGridView>控件。 有关详细信息，请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件](prevent-row-addition-and-deletion-datagridview.md)，和[如何：将列设为只读、 只在 Windows 窗体 DataGridView 控件](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
   
--   检查用户输入与数据库相关的错误。 有关详细信息，请参见[演练：在 Windows 中的数据输入时发生的错误处理窗体 DataGridView 控件](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
+- 检查用户输入与数据库相关的错误。 有关详细信息，请参见[演练：在 Windows 中的数据输入时发生的错误处理窗体 DataGridView 控件](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
   
--   处理极大型数据集使用的虚拟模式。 有关详细信息，请参见[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](implementing-virtual-mode-wf-datagridview-control.md)。  
+- 处理极大型数据集使用的虚拟模式。 有关详细信息，请参见[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](implementing-virtual-mode-wf-datagridview-control.md)。  
   
--   自定义单元格的外观。 有关详细信息，请参阅[如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](customize-the-appearance-of-cells-in-the-datagrid.md)和[如何：在 Windows 窗体 DataGridView 控件中设置字体和颜色样式](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
+- 自定义单元格的外观。 有关详细信息，请参阅[如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](customize-the-appearance-of-cells-in-the-datagrid.md)和[如何：在 Windows 窗体 DataGridView 控件中设置字体和颜色样式](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753797"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` 托管调试助手 (MDA) 更改 <xref:System.Object> 类的行为，以便对 <xref:System.Object.GetHashCode%2A> 方法返回的哈希代码执行取模运算。 此 MDA 的模数默认为 1，这将导致 <xref:System.Object.GetHashCode%2A> 对所有对象都返回 0。  
@@ -25,13 +25,13 @@ ms.locfileid: "59170762"
 ## <a name="symptoms"></a>症状  
  在迁移到公共语言运行时 (CLR) 的新版本后，程序将不再正确执行：  
   
--   程序从 <xref:System.Collections.Hashtable> 获得错误的对象。  
+- 程序从 <xref:System.Collections.Hashtable> 获得错误的对象。  
   
--   <xref:System.Collections.Hashtable> 中的枚举顺序发生了一项变化，导致程序中断。  
+- <xref:System.Collections.Hashtable> 中的枚举顺序发生了一项变化，导致程序中断。  
   
--   以前相等的两个对象不再相等。  
+- 以前相等的两个对象不再相等。  
   
--   以前不相等的两个对象现在相等。  
+- 以前不相等的两个对象现在相等。  
   
 ## <a name="cause"></a>原因  
  由于在 <xref:System.Collections.Hashtable> 中的键的类上，<xref:System.Object.Equals%2A> 方法实现通过比较 <xref:System.Object.GetHashCode%2A> 方法调用的结果测试对象是否相等，因此程序可能从 <xref:System.Collections.Hashtable> 中得到错误的对象。 不应该使用哈希代码测试对象是否相等，因为即使两个对象各自的字段具有不同的值，它们也可能具有相同的哈希代码。 虽然在实践中很罕见，但的确可能会发生这些哈希代码冲突。 这对 <xref:System.Collections.Hashtable> 查找的影响是两个不相等的键似乎相等，并从 <xref:System.Collections.Hashtable> 返回错误的对象。 出于性能的考虑，<xref:System.Object.GetHashCode%2A> 的实现在运行时的两个版本之间可能改变，因此在一个版本中可能不会出现的冲突可能会在随后的版本中出现。 启用此 MDA 测试代码在哈希代码冲突时是否有 bug。 启用后，此 MDA 将导致 <xref:System.Object.GetHashCode%2A> 方法返回 0，造成所有哈希代码冲突。 启用此 MDA 对程序的唯一影响是程序将会运行得更慢。  

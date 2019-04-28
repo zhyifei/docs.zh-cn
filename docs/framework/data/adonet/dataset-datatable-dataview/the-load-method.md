@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
 ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607227"
 ---
 # <a name="the-load-method"></a>加载方法
 可以使用 <xref:System.Data.DataTable.Load%2A> 方法为 <xref:System.Data.DataTable> 加载数据源中行。 这是重载的方法，在最简单的形式接受一个参数， **DataReader**。 在此窗体，它只需加载**DataTable**行。 或者，您可以指定**LoadOption**参数来控制如何将数据添加到**DataTable**。  

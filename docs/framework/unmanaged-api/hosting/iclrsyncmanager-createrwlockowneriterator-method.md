@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763706"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator 方法
 公共语言运行时 (CLR) 创建主机，用于确定读取器 / 编写器锁等待的任务集的迭代器的请求。  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>备注  
  通常情况下调用主机`CreateRWLockOwnerIterator`， `DeleteRWLockOwnerIterator`，和`GetRWLockOwnerNext`期间死锁检测的方法。 主机负责确保读取器 / 编写器锁仍然有效，因为 CLR 不会尝试使读取器 / 编写器锁保持活动状态。 几种策略是可用于主机以确保锁的有效性：  
   
--   主机可以阻止读取器 / 编写器锁释放调用 (例如， [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 同时确保此块不会导致死锁。  
+- 主机可以阻止读取器 / 编写器锁释放调用 (例如， [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 同时确保此块不会导致死锁。  
   
--   主机可以阻止读取器 / 编写器锁，与关联的事件对象的等待退出同样可以确保此块不会导致死锁。  
+- 主机可以阻止读取器 / 编写器锁，与关联的事件对象的等待退出同样可以确保此块不会导致死锁。  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` 必须仅在当前正在执行非托管的代码的线程上调用。  

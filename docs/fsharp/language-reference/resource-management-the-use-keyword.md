@@ -3,11 +3,11 @@ title: 资源管理：Use 关键字
 description: 了解如何F#关键字 use 和 using 函数，可以控制的初始化和释放资源。
 ms.date: 05/16/2016
 ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770482"
 ---
 # <a name="resource-management-the-use-keyword"></a>资源管理：Use 关键字
 
@@ -25,7 +25,7 @@ ms.locfileid: "53613084"
 
 `use`关键字具有类似的窗体`let`绑定：
 
-使用*值* = *表达式*
+use *value* = *expression*
 
 它提供了相同的功能`let`绑定，但添加到调用`Dispose`值超出范围时的值。 请注意，编译器将插入 null 值，检查，因此，如果值为`null`，在调用`Dispose`未尝试。
 
@@ -40,7 +40,7 @@ ms.locfileid: "53613084"
 
 `using`函数具有以下形式：
 
-`using` (*expression1*)*函数或 lambda*
+`using` (*expression1*) *function-or-lambda*
 
 在中`using`表达式中， *expression1*创建必须释放的对象。 结果*expression1* （必须释放的对象） 将成为自变量，*值*到*函数或 lambda*，它是需要将单个的任一函数剩余值相匹配的类型参数由*expression1*，或需要一个该类型的参数的 lambda 表达式。 在函数的执行结束时，运行时调用`Dispose`，并释放资源 (除非的值为`null`，在这种情况下不尝试对 Dispose 的调用)。
 

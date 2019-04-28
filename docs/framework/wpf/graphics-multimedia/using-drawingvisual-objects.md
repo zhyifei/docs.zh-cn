@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762106"
 ---
 # <a name="using-drawingvisual-objects"></a>使用 DrawingVisual 对象
 本主题概述了如何使用<xref:System.Windows.Media.DrawingVisual>中的对象[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可视化层。  
@@ -51,9 +51,9 @@ ms.locfileid: "59121714"
   
  下表介绍了必须重写的两个成员：  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>：返回子元素的集合中的指定索引处的子级。  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>：返回子元素的集合中的指定索引处的子级。  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>：获取此元素内可视子元素的数目。  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>：获取此元素内可视子元素的数目。  
   
  在以下示例中，重写为两个<xref:System.Windows.FrameworkElement>成员实现。  
   
