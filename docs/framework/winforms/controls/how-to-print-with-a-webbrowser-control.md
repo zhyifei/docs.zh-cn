@@ -14,11 +14,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
 ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913180"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>如何：使用 WebBrowser 控件打印
 下面的代码示例演示如何使用<xref:System.Windows.Forms.WebBrowser>控件才能进行打印但不显示该网页。  
@@ -30,7 +30,7 @@ ms.locfileid: "59094939"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 `System` 和 `System.Windows.Forms` 程序集的引用。  
+- 对 `System` 和 `System.Windows.Forms` 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

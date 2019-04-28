@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904411"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304724"
   
  <xref:System.Windows.Forms.DataGrid> 的有效数据源包括：  
   
--   <xref:System.Data.DataTable> 类  
+- <xref:System.Data.DataTable> 类  
   
--   <xref:System.Data.DataView> 类  
+- <xref:System.Data.DataView> 类  
   
--   <xref:System.Data.DataSet> 类  
+- <xref:System.Data.DataSet> 类  
   
--   <xref:System.Data.DataViewManager> 类  
+- <xref:System.Data.DataViewManager> 类  
   
  如果源是一个数据集，那么该数据集可能是窗体中的某个对象或由 XML Web 服务传递到该窗体的某个对象。 可以绑定到类型化数据集，也可以绑定到非类型化数据集。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304724"
   
  如果其元素公开公共属性，则可以绑定到以下结构：  
   
--   实现 <xref:System.Collections.IList> 接口的任意组件。 这包括单维数组。  
+- 实现 <xref:System.Collections.IList> 接口的任意组件。 这包括单维数组。  
   
--   实现 <xref:System.ComponentModel.IListSource> 接口的任意组件。  
+- 实现 <xref:System.ComponentModel.IListSource> 接口的任意组件。  
   
--   实现 <xref:System.ComponentModel.IBindingList> 接口的任意组件。  
+- 实现 <xref:System.ComponentModel.IBindingList> 接口的任意组件。  
   
  有关可能数据源的详细信息，请参阅 [Windows 窗体支持的数据源](../data-sources-supported-by-windows-forms.md)。  
   

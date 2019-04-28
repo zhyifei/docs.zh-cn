@@ -3,17 +3,17 @@ title: WMI 类引用
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915650"
 ---
 # <a name="wmi-class-reference"></a>WMI 类引用
 本部分列出了由 Windows Communication Foundation (WCF) WMI 提供程序公开的所有 WMI 类。  
   
 ## <a name="accessing-wmi-instances"></a>访问 WMI 实例  
- 除 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint 外，不能直接实例化 WMI 对象引用中列出的所有类。 若要访问其他实例，则可以访问上述顶级类的属性。 例如，可以通过“终结点实例”->“绑定”->“BindingElement”访问 TransportBindingElement 实例。  
+ 除 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint 外，不能直接实例化 WMI 对象引用中列出的所有类。 若要访问其他实例，则可以访问上述顶级类的属性。 例如，可以访问 TransportBindingElement 实例从实例-> 终结点绑定-> Bindingelement。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  

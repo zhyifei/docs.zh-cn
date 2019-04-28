@@ -3,11 +3,11 @@ title: 数据库访问活动
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005202"
 ---
 # <a name="database-access-activities"></a>数据库访问活动
 数据库访问活动可用于在一个工作流内访问数据库。 这些活动可以访问数据库以检索或修改信息并使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>配置连接信息
  所有 DbActivities 共享相同的配置参数。 可以通过两种方式进行相关配置：
 
--   `ConnectionString + InvariantName`：设置 ADO.NET 提供程序固定名称和连接字符串。
+- `ConnectionString + InvariantName`：设置 ADO.NET 提供程序固定名称和连接字符串。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`：设置包含连接信息的配置节的名称。
+- `ConfigName`：设置包含连接信息的配置节的名称。
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   在活动中：
+- 在活动中：
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Setup.cmd 脚本调用 CreateDb.sql 脚本文件，该文件包含可执行下列操作的 SQL 命令：
 
--   创建一个名为 DbActivitiesSample 的数据库。
+- 创建一个名为 DbActivitiesSample 的数据库。
 
--   创建 Roles 表。
+- 创建 Roles 表。
 
--   创建 Employees 表。
+- 创建 Employees 表。
 
--   将 3 个记录插入到 Roles 表中。
+- 将 3 个记录插入到 Roles 表中。
 
--   将 12 个记录插入到 Employees 表中。
+- 将 12 个记录插入到 Employees 表中。
 
 ##### <a name="to-run-setupcmd"></a>运行 Setup.cmd
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
 ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011679"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的基本格式设置和样式设置
 `DataGridView`控件，可以轻松定义单元格的基本外观和单元格的值的显示格式。 您可以定义外观和设置的属性的各个单元格、 行和特定列中的单元格或控件中的所有单元格格式设置样式`DataGridViewCellStyle`访问通过各种对象`DataGridView`控件属性。 此外，你可以修改基于动态因素，例如单元格的值通过处理这些样式`CellFormatting`事件。  

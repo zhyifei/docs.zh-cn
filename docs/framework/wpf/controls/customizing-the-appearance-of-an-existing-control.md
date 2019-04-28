@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017812"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
 <a name="introduction"></a><xref:System.Windows.Controls.ControlTemplate> 指定视觉结构和控件的视觉行为。 可以通过向控件提供一个新的<xref:System.Windows.Controls.ControlTemplate> 对控件外观进行自定义。 创建 <xref:System.Windows.Controls.ControlTemplate> 时，仅替换现有控件的外观，而不会更改其功能。 例如，可在应用程序中将按钮设置为圆形而不是默认的方形，但按钮仍将引发 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。  
@@ -64,11 +64,11 @@ ms.locfileid: "59098957"
   
  在本示例中，可视结构包括以下部分：  
   
--   一个<xref:System.Windows.Controls.Border>名为`RootElement`可用作模板的根<xref:System.Windows.FrameworkElement>。  
+- 一个<xref:System.Windows.Controls.Border>名为`RootElement`可用作模板的根<xref:System.Windows.FrameworkElement>。  
   
--   一个<xref:System.Windows.Controls.Grid>的子`RootElement`。  
+- 一个<xref:System.Windows.Controls.Grid>的子`RootElement`。  
   
--   一个<xref:System.Windows.Controls.ContentPresenter>显示按钮的内容。 <xref:System.Windows.Controls.ContentPresenter>使任何类型的对象显示。  
+- 一个<xref:System.Windows.Controls.ContentPresenter>显示按钮的内容。 <xref:System.Windows.Controls.ContentPresenter>使任何类型的对象显示。  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59098957"
   
  <xref:System.Windows.Controls.Control>类定义控件模板必须用于在设置完成后会影响在控件上的多个属性。 如何将<xref:System.Windows.Controls.ControlTemplate>属性依赖于属性的使用。 <xref:System.Windows.Controls.ControlTemplate>必须通过以下方式之一使用属性：  
   
--   中的某个元素<xref:System.Windows.Controls.ControlTemplate>模板绑定到属性。  
+- 中的某个元素<xref:System.Windows.Controls.ControlTemplate>模板绑定到属性。  
   
--   中的元素<xref:System.Windows.Controls.ControlTemplate>从父项继承属性<xref:System.Windows.FrameworkElement>。  
+- 中的元素<xref:System.Windows.Controls.ControlTemplate>从父项继承属性<xref:System.Windows.FrameworkElement>。  
   
  下表列出了由从控件继承的可视属性<xref:System.Windows.Controls.Control>类。 它还指示控件的默认控件模板是使用继承的属性值，还是必须通过模板绑定。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "59098957"
   
  您可以指定发生平滑地通过添加转换从一个状态到另一个控制动画所需的时间量<xref:System.Windows.VisualTransition>对象添加到<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.VisualTransition>，指定一个或多项操作：  
   
--   在状态之间进行转换所需的时间。  
+- 在状态之间进行转换所需的时间。  
   
--   在转换的同时，控件外观发生的其他更改。  
+- 在转换的同时，控件外观发生的其他更改。  
   
--   哪些状态<xref:System.Windows.VisualTransition>应用于。  
+- 哪些状态<xref:System.Windows.VisualTransition>应用于。  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>指定转换的持续时间  
  您可以指定多长时间转换所需的设置<xref:System.Windows.VisualTransition.GeneratedDuration%2A>属性。 前面的示例包含<xref:System.Windows.VisualState>，它指定按钮的边框在时按下按钮时，但动画时间太长而引起注意，如果快速按下并释放按钮将变为透明。 可以使用<xref:System.Windows.VisualTransition>若要指定的时间花费在控件转换为按下状态。 以下示例指定控件需要百分之一秒进入按下状态。  
@@ -201,13 +201,13 @@ ms.locfileid: "59098957"
   
  下面的示例演示<xref:System.Windows.VisualStateGroup>为`CommonStates`。 该示例定义了<xref:System.Windows.VisualTransition>为每个按钮的下列转换。  
   
--   转换为 `Pressed` 状态。  
+- 转换为 `Pressed` 状态。  
   
--   转换为 `MouseOver` 状态。  
+- 转换为 `MouseOver` 状态。  
   
--   从 `Pressed` 状态转换为 `MouseOver` 状态。  
+- 从 `Pressed` 状态转换为 `MouseOver` 状态。  
   
--   从 `MouseOver` 状态转换为 `Normal` 状态。  
+- 从 `MouseOver` 状态转换为 `Normal` 状态。  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ ms.locfileid: "59098957"
   
  控件协定具有三个元素：  
   
--   控件逻辑使用的可视元素。  
+- 控件逻辑使用的可视元素。  
   
--   控件状态和每种状态所属的组。  
+- 控件状态和每种状态所属的组。  
   
--   以可视方式影响控件的公共属性。  
+- 以可视方式影响控件的公共属性。  
   
 ### <a name="visual-elements-in-the-control-contract"></a>控件协定中的可视元素  
  控件的逻辑与的交互有时<xref:System.Windows.FrameworkElement>所在的域<xref:System.Windows.Controls.ControlTemplate>。 例如，控件可能会处理它的其中一个元素的事件。 当控件希望查找特定<xref:System.Windows.FrameworkElement>中<xref:System.Windows.Controls.ControlTemplate>，它必须该信息传达给<xref:System.Windows.Controls.ControlTemplate>作者。 该控件使用<xref:System.Windows.TemplatePartAttribute>要传达的预期，元素和元素的名称应为类型。 <xref:System.Windows.Controls.Button>不具有<xref:System.Windows.FrameworkElement>部件在它的控件协定，但其他控件，如<xref:System.Windows.Controls.ComboBox>，执行操作。  
@@ -250,9 +250,9 @@ ms.locfileid: "59098957"
   
  创建时<xref:System.Windows.Controls.ControlTemplate>，它通常是最简单的方法开始与某个现有<xref:System.Windows.Controls.ControlTemplate>并对其进行更改。 可以执行下列任一操作，更改现有<xref:System.Windows.Controls.ControlTemplate>:  
   
--   使用设计器（例如 Expression Blend），它可以提供用于创建控件模板的图形用户界面。 有关详细信息，请参阅[设置支持模板的控件的样式](https://go.microsoft.com/fwlink/?LinkId=161153)。  
+- 使用设计器（例如 Expression Blend），它可以提供用于创建控件模板的图形用户界面。 有关详细信息，请参阅[设置支持模板的控件的样式](https://go.microsoft.com/fwlink/?LinkId=161153)。  
   
--   获取默认<xref:System.Windows.Controls.ControlTemplate>和对其进行编辑。 若要查找 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 随附的默认控件模板，请参阅[默认 WPF 主题](https://go.microsoft.com/fwlink/?LinkID=158252)。  
+- 获取默认<xref:System.Windows.Controls.ControlTemplate>和对其进行编辑。 若要查找 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 随附的默认控件模板，请参阅[默认 WPF 主题](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>完整的示例  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013005"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>标记单个 Windows 窗体控件并提供它们的快捷方式
 添加到 Windows 窗体的控件具有用于进一步专用化用户体验的属性和方法。 对于设计良好的 Windows 应用程序而言，自定义用户界面以满足用户需求至关重要。  

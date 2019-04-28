@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923274"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行为配置和扩展运行时
 行为，可以修改默认行为并添加自定义扩展插件的检查和验证服务配置或修改 Windows Communication Foundation (WCF) 客户端和服务应用程序中的运行时行为。 本主题说明行为接口、如何实现这些接口以及如何以编程方式将它们添加到服务说明（在服务应用程序中）或终结点（在客户端应用程序中）或配置文件中。 有关使用系统提供的行为的详细信息，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)并[指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
@@ -20,11 +20,11 @@ ms.locfileid: "59768187"
 ### <a name="behavior-methods"></a>行为方法  
  所有行为都具有`AddBindingParameters`方法，`ApplyDispatchBehavior`方法，`Validate`方法，和一个`ApplyClientBehavior`方法有一个例外：因为<xref:System.ServiceModel.Description.IServiceBehavior>不能执行在客户端，它不实现`ApplyClientBehavior`。  
   
--   使用 `AddBindingParameters` 方法可修改自定义对象或将自定义对象添加到集合，在构造运行时时，自定义绑定可以访问该集合以使这些对象。 例如，可能会指定影响通道生成方式的保护要求，但通道开发人员可能并不知道这些保护要求。  
+- 使用 `AddBindingParameters` 方法可修改自定义对象或将自定义对象添加到集合，在构造运行时时，自定义绑定可以访问该集合以使这些对象。 例如，可能会指定影响通道生成方式的保护要求，但通道开发人员可能并不知道这些保护要求。  
   
--   使用 `Validate` 方法可检查说明树和相应的运行时对象以确保符合某一条件集。  
+- 使用 `Validate` 方法可检查说明树和相应的运行时对象以确保符合某一条件集。  
   
--   使用 `ApplyDispatchBehavior` 和 `ApplyClientBehavior` 方法可检查说明树并在服务或客户端上修改特定范围的运行时。 也可以插入扩展对象。  
+- 使用 `ApplyDispatchBehavior` 和 `ApplyClientBehavior` 方法可检查说明树并在服务或客户端上修改特定范围的运行时。 也可以插入扩展对象。  
   
     > [!NOTE]
     >  尽管在这些方法中提供了说明树，但它仅限用于检查。 如果修改了说明树，则行为将是不确定的。  
@@ -38,13 +38,13 @@ ms.locfileid: "59768187"
   
  有四种类型的 WCF 中的行为：  
   
--   服务行为（<xref:System.ServiceModel.Description.IServiceBehavior> 类型）启用整个服务运行时（包括 <xref:System.ServiceModel.ServiceHostBase>）的自定义。  
+- 服务行为（<xref:System.ServiceModel.Description.IServiceBehavior> 类型）启用整个服务运行时（包括 <xref:System.ServiceModel.ServiceHostBase>）的自定义。  
   
--   终结点行为（<xref:System.ServiceModel.Description.IEndpointBehavior> 类型）启用服务终结点及其关联 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 对象的自定义。  
+- 终结点行为（<xref:System.ServiceModel.Description.IEndpointBehavior> 类型）启用服务终结点及其关联 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 对象的自定义。  
   
--   协定行为（<xref:System.ServiceModel.Description.IContractBehavior> 类型）分别启用客户端和服务应用程序中 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 类的自定义。  
+- 协定行为（<xref:System.ServiceModel.Description.IContractBehavior> 类型）分别启用客户端和服务应用程序中 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 类的自定义。  
   
--   操作行为（<xref:System.ServiceModel.Description.IOperationBehavior> 类型）也启用客户端和服务中 <xref:System.ServiceModel.Dispatcher.ClientOperation> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 类的自定义。  
+- 操作行为（<xref:System.ServiceModel.Description.IOperationBehavior> 类型）也启用客户端和服务中 <xref:System.ServiceModel.Dispatcher.ClientOperation> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 类的自定义。  
   
  您可以通过实现自定义属性、使用应用程序配置文件或直接将行为添加到相应说明对象上的行为集合，将这些行为添加到各个说明对象。 但在对 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ServiceHost> 调用 <xref:System.ServiceModel.ChannelFactory%601> 之前，必须将这些行为添加到服务说明或服务终结点说明对象。  
   

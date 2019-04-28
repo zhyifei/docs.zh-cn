@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918354"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>名称\<命名空间名称 > 的根命名空间\<fullnamespacename > 不符合 cls 的
 程序集标记为`<CLSCompliant(True)>`，但名称以下划线开头的根命名空间名称元素 (`_`)。  
@@ -29,9 +29,9 @@ ms.locfileid: "58841532"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果你需要 CLS 符合性，更改根命名空间名称，以便无其元素以下划线开头。  
+- 如果你需要 CLS 符合性，更改根命名空间名称，以便无其元素以下划线开头。  
   
--   如果你需要命名空间名称保持不变，然后删除<xref:System.CLSCompliantAttribute>从程序集或将其标记为`<CLSCompliant(False)>`。  
+- 如果你需要命名空间名称保持不变，然后删除<xref:System.CLSCompliantAttribute>从程序集或将其标记为`<CLSCompliant(False)>`。  
   
 ## <a name="see-also"></a>请参阅
 

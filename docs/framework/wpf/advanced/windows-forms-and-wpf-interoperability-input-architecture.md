@@ -14,22 +14,22 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007092"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows 窗体和 WPF 互操作性输入体系结构
 之间的互操作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]要求这两种技术都有相应的键盘输入的处理。 本主题介绍这些技术如何实现键盘和消息处理，以启用混合应用程序中的平滑互操作。  
   
  本主题包含以下小节：  
   
--   无模式窗体和对话框  
+- 无模式窗体和对话框  
   
--   WindowsFormsHost 键盘和消息处理  
+- WindowsFormsHost 键盘和消息处理  
   
--   ElementHost 键盘和消息处理  
+- ElementHost 键盘和消息处理  
   
 ## <a name="modeless-forms-and-dialog-boxes"></a>无模式窗体和对话框  
  调用<xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>方法<xref:System.Windows.Forms.Integration.WindowsFormsHost>以打开一个从无模式对话框窗体或对话框中的元素[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。  
@@ -39,13 +39,13 @@ ms.locfileid: "59335714"
 ## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost 键盘和消息处理  
  由托管时， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]键盘和消息处理包括下列项：  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>类获取来自[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]消息循环，由实现<xref:System.Windows.Interop.ComponentDispatcher>类。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>类获取来自[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]消息循环，由实现<xref:System.Windows.Interop.ComponentDispatcher>类。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>类创建一个代理项[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环，以确保，普通[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]键盘处理时发生。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>类创建一个代理项[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]消息循环，以确保，普通[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]键盘处理时发生。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>类实现<xref:System.Windows.Interop.IKeyboardInputSink>接口来协调与焦点管理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>类实现<xref:System.Windows.Interop.IKeyboardInputSink>接口来协调与焦点管理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>控件自行注册并启动其消息循环。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>控件自行注册并启动其消息循环。  
   
  以下部分介绍这些部分的更多详细信息中的过程。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "59335714"
 ## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost 键盘和消息处理  
  由托管时，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]键盘和消息处理包括下列项：  
   
--   <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.IKeyboardInputSink>，和<xref:System.Windows.Interop.IKeyboardInputSite>接口实现代码。  
+- <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.IKeyboardInputSink>，和<xref:System.Windows.Interop.IKeyboardInputSite>接口实现代码。  
   
--   按 tab 键和箭头键。  
+- 按 tab 键和箭头键。  
   
--   命令键和对话框键。  
+- 命令键和对话框键。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快捷键处理。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快捷键处理。  
   
  以下各节介绍了这些部分中更多详细信息。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "59335714"
   
  因为默认值<xref:System.Windows.Interop.HwndSource>的实现<xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>方法将返回`false`，使用以下逻辑 WM_CHAR 消息进行处理：  
   
--   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>方法被重写以确保所有的 WM_CHAR 消息都转发至承载的元素。  
+- <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>方法被重写以确保所有的 WM_CHAR 消息都转发至承载的元素。  
   
--   如果按下 ALT 键时，消息为 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不预处理通过此消息<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>方法被重写查询[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>已注册的快捷键。 如果找到已注册的快捷键，则<xref:System.Windows.Input.AccessKeyManager>对其进行处理。  
+- 如果按下 ALT 键时，消息为 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不预处理通过此消息<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>方法被重写查询[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>已注册的快捷键。 如果找到已注册的快捷键，则<xref:System.Windows.Input.AccessKeyManager>对其进行处理。  
   
--   如果未按下 ALT 键， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>类处理未处理的输入。 如果输入是快捷键，<xref:System.Windows.Input.AccessKeyManager>对其进行处理。 <xref:System.Windows.Input.InputManager.PostProcessInput>的未处理的 WM_CHAR 消息处理事件。  
+- 如果未按下 ALT 键， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>类处理未处理的输入。 如果输入是快捷键，<xref:System.Windows.Input.AccessKeyManager>对其进行处理。 <xref:System.Windows.Input.InputManager.PostProcessInput>的未处理的 WM_CHAR 消息处理事件。  
   
  当用户按下 ALT 键时，整个窗体上显示快捷键的可视化提示。 若要支持此行为，所有<xref:System.Windows.Forms.Integration.ElementHost>活动窗体上的控件接收 WM_SYSKEYDOWN 消息，无论哪个控件具有焦点。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
 ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910879"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>如何：创建拖动的 GridView 列标头的样式
 此示例演示如何更改外观的拖动<xref:System.Windows.Controls.GridViewColumnHeader>当用户更改的列位置。  

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
 ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906797"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>如何：确定与枚举值 (Visual Basic 中) 关联的字符串
 <xref:System.Enum.GetValues%2A>和<xref:System.Enum.GetNames%2A>方法可用于确定字符串和枚举成员与相关联的值。  
   
 ### <a name="to-determine-the-string-associated-with-an-enumeration"></a>若要确定与枚举关联的字符串  
   
--   使用<xref:System.Enum.GetNames%2A>方法来检索与枚举成员关联的字符串。 此示例中声明枚举，这`flavorEnum`，然后使用<xref:System.Enum.GetNames%2A>方法来显示与每个成员关联的字符串。  
+- 使用<xref:System.Enum.GetNames%2A>方法来检索与枚举成员关联的字符串。 此示例中声明枚举，这`flavorEnum`，然后使用<xref:System.Enum.GetNames%2A>方法来显示与每个成员关联的字符串。  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   

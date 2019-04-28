@@ -1,5 +1,5 @@
 ---
-title: 如何：枚举计算机上存在的时区
+title: 如何：枚举计算机上的时区
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908669"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>如何：枚举计算机上存在的时区
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>如何：枚举计算机上的时区
 
 若要成功使用指定的时区，需要该时区的相关信息可供系统使用。 在 Windows XP 和 Windows Vista 操作系统在注册表中存储此信息。 但是，尽管世界上存在的时区总数非常大，但注册表包含的信息只是其中的一个子集。 此外，注册表本身是一个动态结构，其内容可能发生有意或无意的更改。 因此，应用程序无法保证系统上始终存在已定义且可用的特定时区。 对于使用时区信息应用程序的许多应用程序来说，第一步是确定所需时区在本地系统上是否可用，或者向用户提供可供选择的时区列表。 这要求应用程序枚举本地系统上定义的时区。
 

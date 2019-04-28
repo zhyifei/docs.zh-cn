@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
 ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920440"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 指定一个或多个声明的编程元素中包含的任何类型包括从其声明上下文中只能从可访问。  
@@ -25,13 +25,13 @@ ms.locfileid: "58819471"
 
 ## <a name="rules"></a>规则  
 
--   **声明上下文。** 只能在模块级别使用 `Private`。 这意味着声明上下文`Private`元素必须是模块、 类或结构，并且不能为源文件、 命名空间、 接口或过程。  
+- **声明上下文。** 只能在模块级别使用 `Private`。 这意味着声明上下文`Private`元素必须是模块、 类或结构，并且不能为源文件、 命名空间、 接口或过程。  
   
 ## <a name="behavior"></a>行为  
   
--   **访问级别。** 声明上下文中的所有代码可以都访问其`Private`元素。 这包括所包含的类型，例如嵌套的类或枚举中的赋值表达式中的代码。 声明上下文以外的任何代码可以访问其`Private`元素。  
+- **访问级别。** 声明上下文中的所有代码可以都访问其`Private`元素。 这包括所包含的类型，例如嵌套的类或枚举中的赋值表达式中的代码。 声明上下文以外的任何代码可以访问其`Private`元素。  
   
--   **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Private` 修饰符可用于下面的上下文中：  
   

@@ -3,23 +3,23 @@ title: 消息安全中的活动跟踪
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912647"
 ---
 # <a name="activity-tracing-in-message-security"></a>消息安全中的活动跟踪
 本主题描述用于安全处理的活动跟踪，这些活动跟踪发生在以下三个阶段。  
   
--   协商/SCT 交换。 这可能发生在传输层（通过二进制数据交换）或消息层（通过 SOAP 消息交换）。  
+- 协商/SCT 交换。 这可能发生在传输层（通过二进制数据交换）或消息层（通过 SOAP 消息交换）。  
   
--   消息加密/解密（带有签名验证和身份验证）。 跟踪出现在环境活动（通常为“进程操作”）中。  
+- 消息加密/解密（带有签名验证和身份验证）。 跟踪出现在环境活动（通常为“进程操作”）中。  
   
--   授权和验证。 这可能在本地发生，或是在终结点之间进行通信时发生。  
+- 授权和验证。 这可能在本地发生，或是在终结点之间进行通信时发生。  
   
 ## <a name="negotiationsct-exchange"></a>协商/SCT 交换  
- 在协商/SCT 交换阶段，将在客户端上创建两种活动类型：“设置安全会话”和“关闭安全会话”。 “设置安全会话”包括对 RST/RSTR/SCT 消息交换的跟踪，而“关闭安全会话”包括对“取消”消息的跟踪。  
+ 在协商 /SCT 交换阶段，在客户端上创建两个活动类型："设置安全会话"和"关闭安全会话。" “设置安全会话”包括对 RST/RSTR/SCT 消息交换的跟踪，而“关闭安全会话”包括对“取消”消息的跟踪。  
   
  在服务器上，RST/RSTR/SCT 的每个请求/答复都出现在它自己的活动中。 如果`propagateActivity` = `true`在服务器和客户端上，在服务器上的活动具有相同的 ID，并一起出现在"设置安全会话"通过服务跟踪查看器查看时。  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904262"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>如何：更改 Windows 窗体 TabControl 的外观
 可以使用的属性来更改 Windows 窗体中的选项卡的外观<xref:System.Windows.Forms.TabControl>和<xref:System.Windows.Forms.TabPage>构成控件上的各个选项卡对象。 通过设置这些属性，可以在选项卡上显示的图像、 显示垂直而不是水平选项卡、 显示多个行的选项卡上，并启用或以编程方式禁用选项卡。  
@@ -43,7 +43,7 @@ ms.locfileid: "59331333"
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>若要排列控件的一侧的选项卡  
   
--   设置<xref:System.Windows.Forms.TabControl.Alignment%2A>的属性<xref:System.Windows.Forms.TabControl>到<xref:System.Windows.Forms.TabAlignment.Left>或<xref:System.Windows.Forms.TabAlignment.Right>。  
+- 设置<xref:System.Windows.Forms.TabControl.Alignment%2A>的属性<xref:System.Windows.Forms.TabControl>到<xref:System.Windows.Forms.TabAlignment.Left>或<xref:System.Windows.Forms.TabAlignment.Right>。  
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>若要以编程方式启用或禁用选项卡上的所有控件  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59331333"
   
 ### <a name="to-display-tabs-as-buttons"></a>若要为按钮显示的选项卡  
   
--   设置<xref:System.Windows.Forms.TabControl.Appearance%2A>的属性<xref:System.Windows.Forms.TabControl>到<xref:System.Windows.Forms.TabAppearance.Buttons>或<xref:System.Windows.Forms.TabAppearance.FlatButtons>。  
+- 设置<xref:System.Windows.Forms.TabControl.Appearance%2A>的属性<xref:System.Windows.Forms.TabControl>到<xref:System.Windows.Forms.TabAppearance.Buttons>或<xref:System.Windows.Forms.TabAppearance.FlatButtons>。  
   
 ## <a name="see-also"></a>请参阅
 

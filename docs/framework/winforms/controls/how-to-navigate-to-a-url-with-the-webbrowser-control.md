@@ -13,11 +13,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
 ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913466"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>如何：使用 WebBrowser 控件导航到 URL
 下面的代码示例演示如何导航<xref:System.Windows.Forms.WebBrowser>控件到特定的 URL。  
@@ -37,9 +37,9 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   名为 `webBrowser1` 的 <xref:System.Windows.Forms.WebBrowser> 控件。  
+- 名为 `webBrowser1` 的 <xref:System.Windows.Forms.WebBrowser> 控件。  
   
--   对 `System` 和 `System.Windows.Forms` 程序集的引用。  
+- 对 `System` 和 `System.Windows.Forms` 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

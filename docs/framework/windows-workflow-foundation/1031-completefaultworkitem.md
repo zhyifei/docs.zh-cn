@@ -3,18 +3,18 @@ title: 1031 - CompleteFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: 95f4ccb0-6be4-41f3-9330-fae43165828f
 ms.openlocfilehash: cdcbe516fc8ba7440b3d109a5e5cadc105ecee9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008793"
 ---
 # <a name="1031---completefaultworkitem"></a>1031 - CompleteFaultWorkItem
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|1031|  
+|Id|1031|  
 |关键字|WFRuntime|  
 |级别|详细|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
@@ -36,4 +36,4 @@ ms.locfileid: "33509738"
 |ExceptionActivityDisplayName|xs:string|引发了异常的活动的显示名称。|  
 |ExceptionActivityInstanceId|xs:string|引发了异常的活动的实例 ID。|  
 |例外|xs:string|异常的异常详细信息|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|应用程序域|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

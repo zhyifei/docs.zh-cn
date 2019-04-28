@@ -3,11 +3,11 @@ title: F#组件设计准则
 description: 了解以进行写入的准则F#面向消费由其他调用方的组件。
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902156"
 ---
 # <a name="f-component-design-guidelines"></a>F#组件设计准则
 
@@ -75,7 +75,7 @@ type Point =
 | 具体的类型 | PascalCase | 名词 / 形容词 | 列表中，双精度，复杂 | 具体类型是结构、 类、 枚举、 委托、 记录和联合。 尽管类型名称为 OCaml，在传统上小写F#已采用了.NET 类型的命名方案。
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
 | 联合标记     | PascalCase | 名词 | 一些，添加成功 | 不要在公共 Api 中使用前缀。 （可选） 使用的前缀时内部的例如 `type Teams = TAlpha | TBeta | TDelta.` |
-| 事件          | PascalCase | 谓词 | ValueChanged / ValueChanging |  |
+| Event          | PascalCase | 谓词 | ValueChanged / ValueChanging |  |
 | Exceptions     | PascalCase |      | WebException | 名称应以"Exception"结尾。 |
 | 字段          | PascalCase | 名词 | CurrentName  | |
 | 接口类型 |  PascalCase | 名词 / 形容词 | IDisposable | 名称应以"I"开头。 |

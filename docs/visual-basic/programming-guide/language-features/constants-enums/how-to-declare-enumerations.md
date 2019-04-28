@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907642"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>如何：声明枚举 (Visual Basic)
 创建一个枚举，其中`Enum`声明部分中的类或模块的语句。 不能声明一个方法中的枚举。 若要指定适当的访问级别，请使用`Private`， `Protected`， `Friend`，或`Public`。  
@@ -38,7 +38,7 @@ ms.locfileid: "59343332"
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>若要声明为显式类型枚举  
   
--   使用指定的枚举类型`As`子句，如下面的示例中所示。  
+- 使用指定的枚举类型`As`子句，如下面的示例中所示。  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   

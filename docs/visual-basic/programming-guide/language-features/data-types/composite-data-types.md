@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907382"
 ---
 # <a name="composite-data-types-visual-basic"></a>复合数据类型 (Visual Basic)
 除了基本数据类型 Visual Basic 提供，您可以汇集不同类型创建的项*复合数据类型*如结构、 数组和类。 从基本类型和其他复合类型，您可以构建复合数据类型。 例如，可以使用数组成员定义结构元素的数组或结构。  
@@ -36,11 +36,11 @@ ms.locfileid: "58833810"
 ## <a name="array-types"></a>数组类型  
  没有一种数据类型包含所有数组。 通过以下方法确定数组的特定实例的数据类型：  
   
--   这一事实的一个数组  
+- 这一事实的一个数组  
   
--   数组的秩 （维数）  
+- 数组的秩 （维数）  
   
--   数组的元素类型  
+- 数组的元素类型  
   
  具体而言，给定维度的长度不是实例的数据类型的一部分。 下面的示例阐释了这一点。  
   

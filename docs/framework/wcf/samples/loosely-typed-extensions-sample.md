@@ -3,11 +3,11 @@ title: 松散类型化扩展示例
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006572"
 ---
 # <a name="loosely-typed-extensions-sample"></a>松散类型化扩展示例
 联合对象模型为处理扩展数据（在联合源的 XML 表示形式中存在，但是未由 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等类显式公开的信息）提供了丰富的支持。 此示例阐释用来处理扩展数据的基本技术。  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  此文档包含扩展数据的以下部分：  
   
--   `myAttribute` 元素的 `<feed>` 属性。  
+- `myAttribute` 元素的 `<feed>` 属性。  
   
--   `<simpleString>` 元素。  
+- `<simpleString>` 元素。  
   
--   `<DataContractExtension>` 元素。  
+- `<DataContractExtension>` 元素。  
   
--   `<XmlSerializerExtension>` 元素。  
+- `<XmlSerializerExtension>` 元素。  
   
--   `<xElementExtension>` 元素。  
+- `<xElementExtension>` 元素。  
   
 ## <a name="writing-extension-data"></a>编写扩展数据  
  属性扩展是通过向 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 集合添加条目来创建的，如下面的示例代码所示。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
 ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902663"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的选择模式
 有时您希望应用程序来执行基于用户所做选择中操作<xref:System.Windows.Forms.DataGridView>控件。 具体取决于操作，你可能想要限制可使用所选内容的类型。 例如，假设你的应用程序可以打印当前所选记录的报表。 在这种情况下，可能想要配置<xref:System.Windows.Forms.DataGridView>控件，以便单击的任意位置的行始终选择整行，并且可以选择一次只有一个行。  

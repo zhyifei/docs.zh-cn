@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906485"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在一个变量 (Visual Basic 中) 中保存多个值
 声明的变量存储多个值*复合数据类型*。  
@@ -29,11 +29,11 @@ ms.locfileid: "59332256"
   
 2. 如果尚未定义的复合数据类型，定义它，以便你的变量可以使用它。  
   
-    -   定义与结构[Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
+    - 定义与结构[Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)。  
   
-    -   定义一个包含的数组[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
+    - 定义一个包含的数组[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
-    -   使用定义类[Class 语句](../../../../visual-basic/language-reference/statements/class-statement.md)。  
+    - 使用定义类[Class 语句](../../../../visual-basic/language-reference/statements/class-statement.md)。  
   
 3. 与将变量声明`Dim`语句。  
   

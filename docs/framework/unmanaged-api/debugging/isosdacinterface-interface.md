@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922143"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface 接口
 
@@ -43,8 +43,8 @@ ms.locfileid: "55827924"
 ## <a name="requirements"></a>要求
 
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无  
+**标头：** None  
+**库：** None  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>请参阅

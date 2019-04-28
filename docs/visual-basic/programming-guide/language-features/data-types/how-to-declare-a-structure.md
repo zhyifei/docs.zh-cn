@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
 ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906706"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>如何：声明结构 (Visual Basic)
 在开始使用在结构声明[Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)，并结束与`End Structure`语句。 这两个语句之间必须声明至少一个*元素*。 元素可以是任何数据类型，但至少一个必须为非共享的变量或非共享、 非自定义事件。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
 ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920492"
 ---
 # <a name="private-protected-visual-basic"></a>专用受保护 (Visual Basic)
 
@@ -40,8 +40,7 @@ ms.locfileid: "57376385"
 
 - **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
 
-
-  `Private Protected` 修饰符可用于下面的上下文中：
+`Private Protected` 修饰符可用于下面的上下文中：
 
 - [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)的嵌套类
 

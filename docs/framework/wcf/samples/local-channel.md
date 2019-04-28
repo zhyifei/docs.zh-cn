@@ -3,11 +3,11 @@ title: 本地通道
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
 ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989828"
 ---
 # <a name="local-channel"></a>本地通道
 本地通道是使用相同的应用程序域内进行通信的 Windows Communication Foundation (WCF) 传输通道。 对于客户端和服务在相同应用程序域内运行，并且必须避免典型 WCF 通道堆栈（消息的序列化和反序列化）开销的方案，这十分有用。  
@@ -18,9 +18,9 @@ ms.locfileid: "59770966"
 ## <a name="discussion"></a>讨论  
  示例由两个项目文件组成：  
   
--   **LocalChannel**:当前应用程序域中的本地通道的编程表示形式。 在此项目中，发送组件将消息放置在内存中队列中，接收组件将消息从队列中取出以进行接收。  
+- **LocalChannel**:当前应用程序域中的本地通道的编程表示形式。 在此项目中，发送组件将消息放置在内存中队列中，接收组件将消息从队列中取出以进行接收。  
   
--   **ClientAndService**:此项目承载在控制台应用程序服务，然后运行客户端相同的应用程序域中调用中的服务。  
+- **ClientAndService**:此项目承载在控制台应用程序服务，然后运行客户端相同的应用程序域中调用中的服务。  
   
  本地通道设计跳过通道堆栈和序列化过程以提高速度。 本地传输通道使用队列实现，以将服务调用从客户端传输到服务并将值返回到客户端。 示例复制对象，而不是对参数和返回值进行序列化。  
   

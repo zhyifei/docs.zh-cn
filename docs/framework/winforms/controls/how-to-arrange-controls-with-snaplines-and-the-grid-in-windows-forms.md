@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011003"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>如何：在 Windows 窗体中使用对齐线和网格排列控件
 使用 Visual Studio 的布局功能，可以精确地直接在窗体上控件的放置位置。 添加到窗体或窗体上移动的控件可以自动对齐到的行和列的 Windows 窗体设计器的网格中，或可以使用对齐线功能对齐控件。  
@@ -23,7 +23,7 @@ ms.locfileid: "59115727"
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>若要对齐到网格的所有控件  
   
--   选择**SnapToGrid**在 Windows 窗体设计器中的布局模式**选项**对话框。  
+- 选择**SnapToGrid**在 Windows 窗体设计器中的布局模式**选项**对话框。  
   
      有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))。 所有控件现在都对齐本身沿网格上的点。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "59115727"
   
 ### <a name="to-align-controls-using-snaplines"></a>若要使用对齐线对齐控件  
   
--   选择**对齐线**在 Windows 窗体设计器中的布局模式**选项**对话框。  
+- 选择**对齐线**在 Windows 窗体设计器中的布局模式**选项**对话框。  
   
      有关详细信息，请参见[演练：在 Windows 上排列控件窗体使用对齐线](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。 现在可以使用对齐线对齐并排列窗体上的控件。  
   

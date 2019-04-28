@@ -3,11 +3,11 @@ title: XElement 和 XDocument Objects2 的有效内容
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907577"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 对象的有效内容
 本主题描述可以传递给构造函数以及用于向元素和文档添加内容的方法的有效参数。  
@@ -17,35 +17,35 @@ ms.locfileid: "58828793"
   
  添加简单内容时，可以将多种类型传递给此方法。 有效类型包括：  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   实现 `Object.ToString` 的任何类型。  
+- 实现 `Object.ToString` 的任何类型。  
   
--   实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型。  
+- 实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型。  
   
  添加复杂内容时，可以将多种类型传递给此方法：  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型  
+- 实现 <xref:System.Collections.Generic.IEnumerable%601> 的任何类型  
   
  如果对象实现 <xref:System.Collections.Generic.IEnumerable%601>，则枚举对象中的集合，并添加集合中的所有项。 如果集合包含 <xref:System.Xml.Linq.XNode> 或 <xref:System.Xml.Linq.XAttribute> 对象，则单独添加集合中的每一项。 如果集合包含文本（或转换成文本的对象），则集合中的文本是串联在一起的，并作为单个文本节点添加。  
   
@@ -62,15 +62,15 @@ ms.locfileid: "58828793"
   
  文档的有效内容包括：  
   
--   零个或一个 <xref:System.Xml.Linq.XDocumentType> 对象。 文档类型必须在元素之前。  
+- 零个或一个 <xref:System.Xml.Linq.XDocumentType> 对象。 文档类型必须在元素之前。  
   
--   零个或一个元素。  
+- 零个或一个元素。  
   
--   零个或多个注释。  
+- 零个或多个注释。  
   
--   零个或多个处理指令。  
+- 零个或多个处理指令。  
   
--   零个或多个仅包含空白的文本节点。  
+- 零个或多个仅包含空白的文本节点。  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>允许添加内容的构造函数和函数  
  下面的方法允许您将子内容添加到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 中：  

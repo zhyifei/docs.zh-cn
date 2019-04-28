@@ -3,20 +3,20 @@ title: Oracle 序列
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878444"
 ---
 # <a name="oracle-sequences"></a>Oracle 序列
 用于 Oracle 的 .NET Framework 数据提供程序支持在使用 <xref:System.Data.OracleClient.OracleDataAdapter> 执行插入后检索服务器生成的 Oracle 序列键值。  
   
  SQL Server 和 Oracle 支持创建可指派为主键的自动递增列。 在向表中添加行时，服务器会生成这些值。 在 SQL Server 中，您可以设置列的标识属性；在 Oracle 中，您可以创建一个序列。 SQL Server 中自动递增列和 Oracle 中序列的区别是：  
   
--   在 SQL Server 中，将某列标记为自动递增列，SQL Server 会在您插入新行时为该列自动生成新值。  
+- 在 SQL Server 中，将某列标记为自动递增列，SQL Server 会在您插入新行时为该列自动生成新值。  
   
--   在 Oracle 中，您创建一个序列以便为表中的列生成新值，但序列和表或列之间不存在直接链接。 Oracle 序列是一个类似表或存储过程的对象。  
+- 在 Oracle 中，您创建一个序列以便为表中的列生成新值，但序列和表或列之间不存在直接链接。 Oracle 序列是一个类似表或存储过程的对象。  
   
  在 Oracle 数据库中创建序列时，您可以定义其初始值以及值之间的增量。 在提交新行之前，您也可以查询序列中的新值。 这意味着在你将新行插入数据库之前，代码可识别新行的键值。  
   

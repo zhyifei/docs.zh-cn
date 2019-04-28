@@ -9,11 +9,11 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920109"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 过程
 每个 Visual Basic 应用程序必须包含被调用的过程`Main`。 此过程可用作起始点并为应用程序的总体控制。 .NET Framework 调用你`Main`时它已加载你的应用程序并已准备好将控制传递给它的过程。 除非要创建 Windows 窗体应用程序，必须编写`Main`运行其自己的应用程序的过程。  
@@ -23,11 +23,11 @@ ms.locfileid: "58833660"
 ## <a name="requirements-for-the-main-procedure"></a>主要过程的要求  
  在运行其自身 （通常使用扩展名为.exe) 文件必须包含`Main`过程。 （例如使用扩展名为.dll) 的库不会运行其自己并不需要`Main`过程。 您可以创建不同类型的项目的要求如下所示：  
   
--   控制台应用程序可以独立运行，并且必须提供至少一个`Main`过程。 .  
+- 控制台应用程序可以独立运行，并且必须提供至少一个`Main`过程。 .  
   
--   Windows 窗体应用程序上运行其自己。 但是，Visual Basic 编译器会自动生成`Main`过程在此类应用程序，并且您无需编写一个。  
+- Windows 窗体应用程序上运行其自己。 但是，Visual Basic 编译器会自动生成`Main`过程在此类应用程序，并且您无需编写一个。  
   
--   不需要类库`Main`过程。 其中包括 Windows 控件库和 Web 控件库。 Web 应用程序部署为类库。  
+- 不需要类库`Main`过程。 其中包括 Windows 控件库和 Web 控件库。 Web 应用程序部署为类库。  
   
 ## <a name="declaring-the-main-procedure"></a>声明的主要过程  
  有四种方法来声明`Main`过程。 它可以采用自变量和其可以或不返回值。  
@@ -35,7 +35,7 @@ ms.locfileid: "58833660"
 > [!NOTE]
 >  如果声明`Main`在类中，必须使用`Shared`关键字。 在模块中，`Main`不需要为`Shared`。  
   
--   最简单方法是声明`Sub`不采用自变量或返回值的过程。  
+- 最简单方法是声明`Sub`不采用自变量或返回值的过程。  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ ms.locfileid: "58833660"
     End Module  
     ```  
   
--   `Main` 此外可以返回`Integer`值，操作系统的退出代码为使用您的计划。 其他程序可以测试此代码通过检查 Windows ERRORLEVEL 值。 若要返回的退出代码，必须声明`Main`作为`Function`而不是过程`Sub`过程。  
+- `Main` 此外可以返回`Integer`值，操作系统的退出代码为使用您的计划。 其他程序可以测试此代码通过检查 Windows ERRORLEVEL 值。 若要返回的退出代码，必须声明`Main`作为`Function`而不是过程`Sub`过程。  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ ms.locfileid: "58833660"
     End Module  
     ```  
   
--   `Main` 也可以采用`String`数组作为参数。 每个字符串数组中的包含一个用于调用程序的命令行参数。 您可以采取不同操作，具体取决于它们的值。  
+- `Main` 也可以采用`String`数组作为参数。 每个字符串数组中的包含一个用于调用程序的命令行参数。 您可以采取不同操作，具体取决于它们的值。  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ ms.locfileid: "58833660"
     End Module  
     ```  
   
--   您可以声明`Main`来检查命令行参数而不是会返回退出代码，按如下所示。  
+- 您可以声明`Main`来检查命令行参数而不是会返回退出代码，按如下所示。  
   
     ```  
     Module mainModule  

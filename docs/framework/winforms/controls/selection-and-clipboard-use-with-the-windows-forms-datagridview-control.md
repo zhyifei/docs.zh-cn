@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902247"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件的选项和剪贴板使用
 `DataGridView`控件提供了各种用于配置如何，用户可以选择单元格、 行和列的选项。 例如，你可以启用单个或多个选定内容、 选择整个行或列，当用户单击单元格或选择整个行或列仅当用户单击其标头，从而使单元格选定区域。 如果你想要为所选内容提供您自己的用户界面，可以禁用普通所选内容并以编程方式处理所有选项。 此外，可以使用户能够将选定的值复制到剪贴板。  

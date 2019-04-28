@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906994"
 ---
 # <a name="decision-structures-visual-basic"></a>决策结构 (Visual Basic)
 Visual Basic，可以测试条件，然后执行不同操作，具体取决于该测试的结果。 你可以测试条件是 true 或 false 的各种值的表达式，或生成时执行的一系列语句的各种异常。  
@@ -26,13 +26,13 @@ Visual Basic，可以测试条件，然后执行不同操作，具体取决于�
 ## <a name="ifthenelse-construction"></a>如果...然后...其他构造  
  `If...Then...Else` 构造，可以对一个或多个条件测试，并运行一个或多个语句，具体取决于每个条件。 您可以测试条件，然后按以下方式执行操作：  
   
--   如果条件为，运行一个或多个语句 `True`  
+- 如果条件为，运行一个或多个语句 `True`  
   
--   如果条件为，运行一个或多个语句 `False`  
+- 如果条件为，运行一个或多个语句 `False`  
   
--   如果条件为运行某些语句`True`和其他人是否它 `False`  
+- 如果条件为运行某些语句`True`和其他人是否它 `False`  
   
--   如果前一个条件为，测试其他条件 `False`  
+- 如果前一个条件为，测试其他条件 `False`  
   
  提供了所有这些可能性的控制结构是[如果...然后...Else 语句](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)。 如果你有一个测试和运行一个语句，可以使用单个行版本。 如果有一组更复杂的条件和操作，您可以使用多个行版本。  
   

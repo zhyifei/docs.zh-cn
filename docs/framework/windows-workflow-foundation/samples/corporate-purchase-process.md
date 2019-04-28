@@ -3,11 +3,11 @@ title: 企业采购过程
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005389"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。
@@ -16,27 +16,27 @@ ms.locfileid: "59313328"
 
 ## <a name="requirements"></a>要求
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
 
 ## <a name="demonstrates"></a>演示
 
--   自定义活动。
+- 自定义活动。
 
--   活动的构成。
+- 活动的构成。
 
--   书签。
+- 书签。
 
--   持久性。
+- 持久性。
 
--   程式化的持久性。
+- 程式化的持久性。
 
--   追踪。
+- 追踪。
 
--   跟踪。
+- 跟踪。
 
--   在不同的客户端（[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 应用程序和 WinForms 应用程序）中承载 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
+- 在不同的客户端（[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 应用程序和 WinForms 应用程序）中承载 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -52,21 +52,21 @@ ms.locfileid: "59313328"
   
 1. 公司 X 的一名员工创建了一份征求建议书 (RFP)。  
   
-    1.  该员工键入 RFP 标题和说明。  
+    1. 该员工键入 RFP 标题和说明。  
   
-    2.  该员工选择要请求其提交建议书的供应商。  
+    2. 该员工选择要请求其提交建议书的供应商。  
   
 2. 该员工提交建议书。  
   
-    1.  创建一个工作流实例。  
+    1. 创建一个工作流实例。  
   
-    2.  工作流正在等待所有供应商提交其建议书。  
+    2. 工作流正在等待所有供应商提交其建议书。  
   
 3. 在收到所有建议书后，工作流将循环访问所有收到的建议书并选择最佳建议书。  
   
-    1.  每个供应商都具有一个信誉（此示例将信誉列表存储在 VendorRepository.cs 中）。  
+    1. 每个供应商都具有一个信誉（此示例将信誉列表存储在 VendorRepository.cs 中）。  
   
-    2.  将（供应商键入的值）*（记录的供应商信誉）/100 来计算出建议书的总值。  
+    2. 将（供应商键入的值）*（记录的供应商信誉）/100 来计算出建议书的总值。  
   
 4. 原始请求方可以查看所有提交的建议书。 最佳建议书将在报告的某个特殊部分中显示。  
   
@@ -155,20 +155,20 @@ ms.locfileid: "59313328"
   
 ### <a name="web-client-options"></a>Web Client 选项  
   
--   **创建新的 RFP**:创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
+- **创建新的 RFP**:创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
   
--   **刷新**:刷新活动和在主窗口中已完成的 Rfp 的列表。  
+- **刷新**:刷新活动和在主窗口中已完成的 Rfp 的列表。  
   
--   **视图**：显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
+- **视图**：显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
--   以查看：用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。  
+- 以查看：用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。  
   
 ### <a name="winforms-client-options"></a>WinForms Client 选项  
   
--   **创建 RFP**:创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
+- **创建 RFP**:创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
   
--   **刷新**:刷新活动和在主窗口中已完成的 Rfp 的列表。  
+- **刷新**:刷新活动和在主窗口中已完成的 Rfp 的列表。  
   
--   **查看 RFP**:显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
+- **查看 RFP**:显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
--   **连接为**:用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。
+- **连接为**:用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。

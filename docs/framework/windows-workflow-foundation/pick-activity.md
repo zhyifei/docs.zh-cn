@@ -3,15 +3,14 @@ title: Pick 活动
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
 ms.openlocfilehash: b9ee6c06377760d27bc54d39c1d1f3ecf67ea0d8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909412"
 ---
 # <a name="pick-activity"></a>Pick 活动
-<xref:System.Activities.Statements.Pick> 活动简化了对一组事件触发器（后跟其相应的处理程序）的建模。  
-  <xref:System.Activities.Statements.Pick> 活动包含 <xref:System.Activities.Statements.PickBranch> 活动的集合，其中每个 <xref:System.Activities.Statements.PickBranch> 都是一个 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 活动与一个 <xref:System.Activities.Statements.PickBranch.Action%2A> 活动之间的配对。  执行时，并行执行所有分支的触发器。  在一个触发器完成之后，将执行其相应的操作，并且取消所有其他触发器。  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick> 活动的行为与 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]<xref:System.Workflow.Activities.ListenActivity> 活动类似。  
+<xref:System.Activities.Statements.Pick> 活动简化了对一组事件触发器（后跟其相应的处理程序）的建模。  <xref:System.Activities.Statements.Pick> 活动包含 <xref:System.Activities.Statements.PickBranch> 活动的集合，其中每个 <xref:System.Activities.Statements.PickBranch> 都是一个 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 活动与一个 <xref:System.Activities.Statements.PickBranch.Action%2A> 活动之间的配对。  执行时，并行执行所有分支的触发器。  在一个触发器完成之后，将执行其相应的操作，并且取消所有其他触发器。  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick> 活动的行为与 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]<xref:System.Workflow.Activities.ListenActivity> 活动类似。  
   
  来自[使用 Pick 活动](./samples/using-the-pick-activity.md) SDK 示例的以下屏幕快照显示了具有两个分支的 Pick 活动。  一个分支具有一个名为 **Read input** 的触发器，它是从命令行读取输入的自定义活动。 另一个分支具有一个 <xref:System.Activities.Statements.Delay> 活动触发器。 如果**Read input**活动收到数据之前<xref:System.Activities.Statements.Delay>活动完成<xref:System.Activities.Statements.Delay>延迟将被取消，并且将向控制台写入一条问候信息。  否则，如果 **Read input** 活动未在分配的时间内收到数据，则将取消该活动并向控制台写入一条超时消息。  这是用来向任何操作添加超时的通用模式。  
   

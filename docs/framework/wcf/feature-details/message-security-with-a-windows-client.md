@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922782"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 客户端的消息安全
 此方案显示了 Windows Communication Foundation (WCF) 客户端和服务器保护的消息安全模式。 客户端和服务使用 Windows 凭据进行身份验证。  
@@ -31,9 +31,9 @@ ms.locfileid: "59138640"
 ## <a name="service"></a>服务  
  下面的代码和配置应独立运行。 执行下列操作之一：  
   
--   使用代码（而不使用配置）创建独立服务。  
+- 使用代码（而不使用配置）创建独立服务。  
   
--   使用提供的配置创建服务，但不定义任何终结点。  
+- 使用提供的配置创建服务，但不定义任何终结点。  
   
 ### <a name="code"></a>代码  
  下面的代码演示如何创建一个使用消息安全来建立 Windows 计算机安全上下文的服务终结点。  
@@ -75,9 +75,9 @@ ms.locfileid: "59138640"
 ## <a name="client"></a>客户端  
  下面的代码和配置应独立运行。 执行下列操作之一：  
   
--   使用代码（和客户端代码）创建独立客户端。  
+- 使用代码（和客户端代码）创建独立客户端。  
   
--   创建不定义任何终结点地址的客户端。 而使用将配置名称作为自变量的客户端构造函数。 例如：  
+- 创建不定义任何终结点地址的客户端。 而使用将配置名称作为自变量的客户端构造函数。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

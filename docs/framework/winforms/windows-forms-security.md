@@ -10,11 +10,11 @@ helpviewer_keywords:
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
 ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799367"
 ---
 # <a name="windows-forms-security"></a>Windows 窗体安全
 Windows 窗体的功能是基于代码的 （安全级别设置为代码，而不考虑运行代码的用户） 的安全模型。 其中不包括任何可能已在您的计算机系统中的安全架构。 其中可能包括那些在浏览器 （如基于区域的安全在 Internet Explorer 中可用） 或操作系统 （例如基于凭据的 Windows NT 的安全性）。  

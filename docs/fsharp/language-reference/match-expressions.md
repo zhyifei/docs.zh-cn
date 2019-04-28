@@ -3,11 +3,11 @@ title: 匹配表达式
 description: 了解如何F#匹配表达式提供的表达式与一组模式的比较结果为基础的分支控制。
 ms.date: 04/19/2018
 ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903950"
 ---
 # <a name="match-expressions"></a>匹配表达式
 
