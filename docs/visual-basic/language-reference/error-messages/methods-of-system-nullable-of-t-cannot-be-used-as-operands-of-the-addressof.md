@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
 ms.openlocfilehash: 54d66a60d20a6add4c2b4a160f87b58b5a1d00e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920882"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>“System.Nullable(Of T)”的方法不能用作“AddressOf”运算符的操作数
 语句使用`AddressOf`运算符的操作数表示的过程与<xref:System.Nullable%601>结构。  
@@ -21,9 +21,9 @@ ms.locfileid: "58817248"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   中的过程名称替换`AddressOf`与操作数不是的成员一起子句<xref:System.Nullable%601>。  
+- 中的过程名称替换`AddressOf`与操作数不是的成员一起子句<xref:System.Nullable%601>。  
   
--   编写的类包装的方法，<xref:System.Nullable%601>想要使用。 在以下示例中，`NullableWrapper`类定义一个名为的新方法`GetValueOrDefault`。 因为这种新方法不属于<xref:System.Nullable%601>，它可以应用于`nullInstance`，可以为 null 的类型，以形成的参数的实例`AddressOf`。  
+- 编写的类包装的方法，<xref:System.Nullable%601>想要使用。 在以下示例中，`NullableWrapper`类定义一个名为的新方法`GetValueOrDefault`。 因为这种新方法不属于<xref:System.Nullable%601>，它可以应用于`nullInstance`，可以为 null 的类型，以形成的参数的实例`AddressOf`。  
   
 ```vb  
 Module Module1  

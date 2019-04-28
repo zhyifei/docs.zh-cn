@@ -10,11 +10,11 @@ helpviewer_keywords:
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
 ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864307"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自动实现的属性 (Visual Basic)
 *自动实现的属性*使您能够快速指定类的属性，而无需编写代码以`Get`和`Set`属性。 为自动实现的属性编写代码时，Visual Basic 编译器会自动创建私有字段以存储属性变量，并且会创建关联的 `Get` 和 `Set` 过程。  
@@ -52,13 +52,13 @@ End Class
   
  支持字段还具有下列特征：  
   
--   支持字段的访问修饰符始终是 `Private`，即使在属性本身具有不同访问级别（如 `Public`）时也是如此。  
+- 支持字段的访问修饰符始终是 `Private`，即使在属性本身具有不同访问级别（如 `Public`）时也是如此。  
   
--   如果属性标记为 `Shared`，则支持字段也进行共享。  
+- 如果属性标记为 `Shared`，则支持字段也进行共享。  
   
--   为属性指定的属性不适用于支持字段。  
+- 为属性指定的属性不适用于支持字段。  
   
--   可以从类中的代码以及从调试工具（如监视窗口）访问支持字段。 但是，支持字段不显示在 IntelliSense 文字自动完成列表中。  
+- 可以从类中的代码以及从调试工具（如监视窗口）访问支持字段。 但是，支持字段不显示在 IntelliSense 文字自动完成列表中。  
   
 ## <a name="initializing-an-auto-implemented-property"></a>初始化自动实现的属性  
  任何可以用于实例化字段的表达式对于初始化自动实现的属性都是有效的。 初始化自动实现的属性时，表达式会进行计算并传递给属性的 `Set` 过程。 下面的代码示例演示一些包含初始值的自动实现的属性。  
@@ -78,17 +78,17 @@ End Class
   
  如果要执行以下任一操作，则必须使用扩展属性定义语法：  
   
--   向属性的 `Get` 或 `Set` 过程添加代码，如用于在 `Set` 过程中验证传入值的代码。 例如，你可能要在设置属性值之前验证表示电话号码的字符串是否包含所需数量的数字。  
+- 向属性的 `Get` 或 `Set` 过程添加代码，如用于在 `Set` 过程中验证传入值的代码。 例如，你可能要在设置属性值之前验证表示电话号码的字符串是否包含所需数量的数字。  
   
--   为 `Get` 和 `Set` 过程指定不同的可访问性。 例如，你可能要使 `Set` 过程是 `Private`，要使 `Get` 过程是 `Public`。  
+- 为 `Get` 和 `Set` 过程指定不同的可访问性。 例如，你可能要使 `Set` 过程是 `Private`，要使 `Get` 过程是 `Public`。  
   
--   创建作为 `WriteOnly` 的属性。  
+- 创建作为 `WriteOnly` 的属性。  
   
--   使用参数化的属性（包括 `Default` 属性）。 必须声明扩展属性才能为属性指定参数或是为 `Set` 过程指定附加参数。  
+- 使用参数化的属性（包括 `Default` 属性）。 必须声明扩展属性才能为属性指定参数或是为 `Set` 过程指定附加参数。  
   
--   将属性置于支持字段上，或更改支持字段的访问级别。  
+- 将属性置于支持字段上，或更改支持字段的访问级别。  
   
--   为支持字段提供 XML 注释。  
+- 为支持字段提供 XML 注释。  
   
 ## <a name="expanding-an-auto-implemented-property"></a>扩展自动实现的属性  
  如果需要将自动实现的属性转换为包含 `Get` 或 `Set` 过程的展开属性，则 Visual Basic 代码编辑器可以为属性自动生成 `Get` 和 `Set` 过程以及 `End Property` 语句。 如果将光标置于后的空白行上生成的代码`Property`语句中，键入一个`G`(对于`Get`) 或`S`(为`Set`) 并按 ENTER。 在 `Property` 语句末尾按 Enter 时，Visual Basic 代码编辑器会为只读和只写属性自动生成 `Get` 或 `Set` 过程。  

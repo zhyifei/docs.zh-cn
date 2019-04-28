@@ -3,11 +3,11 @@ title: 配置和元数据支持
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
 ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858359"
 ---
 # <a name="configuration-and-metadata-support"></a>配置和元数据支持
 本主题说明如何启用配置和元数据对绑定和绑定元素的支持。  
@@ -15,13 +15,13 @@ ms.locfileid: "59769432"
 ## <a name="overview-of-configuration-and-metadata"></a>配置和元数据概述  
  本主题讨论下列任务，是可选项 1、 2 和 4 中[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)任务列表。  
   
--   启用配置文件对绑定元素的支持。  
+- 启用配置文件对绑定元素的支持。  
   
--   启用配置文件对绑定的支持。  
+- 启用配置文件对绑定的支持。  
   
--   导出绑定元素的 WSDL 和策略断言。  
+- 导出绑定元素的 WSDL 和策略断言。  
   
--   标识 WSDL 和策略断言以插入或配置你的绑定或绑定元素。  
+- 标识 WSDL 和策略断言以插入或配置你的绑定或绑定元素。  
   
  有关创建用户定义的绑定和绑定元素的信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)并[创建 BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)分别。  
   

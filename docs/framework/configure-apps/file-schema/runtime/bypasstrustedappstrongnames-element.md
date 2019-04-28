@@ -10,13 +10,13 @@ ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674202"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > 元素
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 元素
 指定是否以跳过上加载到完全信任的完全信任程序集的强名称验证<xref:System.AppDomain>。  
   
  \<configuration>  
@@ -61,16 +61,16 @@ ms.locfileid: "59179135"
   
  跳过功能适用于使用强名称进行签名及具有以下特征的任何程序集：  
   
--   完全受信任而无需<xref:System.Security.Policy.StrongName>证据 (例如，具有`MyComputer`区域证据)。  
+- 完全受信任而无需<xref:System.Security.Policy.StrongName>证据 (例如，具有`MyComputer`区域证据)。  
   
--   加载到完全受信任的 <xref:System.AppDomain>。  
+- 加载到完全受信任的 <xref:System.AppDomain>。  
   
--   加载自该 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性下的某个位置。  
+- 加载自该 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性下的某个位置。  
   
--   签名没有延迟。  
+- 签名没有延迟。  
   
 > [!NOTE]
->  如果跳过功能已禁用的计算机上的所有应用程序使用注册表项，则此配置文件设置无效。 有关详细信息，请参阅[如何：禁用强名称跳过功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
+>  如果跳过功能已禁用的计算机上的所有应用程序使用注册表项，则此配置文件设置无效。 有关详细信息，请参阅[如何：禁用强名称绕过功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何指定验证上完全信任程序集的强名称签名的行为。  

@@ -14,8 +14,8 @@ ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013356"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>如何：选择 Windows 窗体 ListView 控件中的项
 此示例演示如何以编程方式在 Windows 窗体中选择一项<xref:System.Windows.Forms.ListView>控件。 以编程方式选择某个项不会自动更改焦点<xref:System.Windows.Forms.ListView>控件。 出于此原因，你通常还需要设置的项，因为聚焦时选择某一项。  
@@ -27,9 +27,9 @@ ms.locfileid: "59977608"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   一个<xref:System.Windows.Forms.ListView>名为控件`listView1`，其中包含至少一个项。  
+- 一个<xref:System.Windows.Forms.ListView>名为控件`listView1`，其中包含至少一个项。  
   
--   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间的引用。  
+- 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间的引用。  
   
 ## <a name="see-also"></a>请参阅
 

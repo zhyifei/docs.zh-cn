@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020304"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 版本 4.5 的新增功能
 <a name="introduction"></a> 本主题包含有关新的和增强功能的信息[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]版本 4.5。  
   
  本主题包含以下各节：  
   
--   [功能区控件](#ribbon_control)  
+- [功能区控件](#ribbon_control)  
   
--   [显示大型分组数据集时增强的性能](#grouped_virtualization)  
+- [显示大型分组数据集时增强的性能](#grouped_virtualization)  
   
--   [VirtualizingPanel 的新增功能](#VirtualizingPanel)  
+- [VirtualizingPanel 的新增功能](#VirtualizingPanel)  
   
--   [绑定到静态属性](#static_properties)  
+- [绑定到静态属性](#static_properties)  
   
--   [访问非 UI 线程上的集合](#xthread_access)  
+- [访问非 UI 线程上的集合](#xthread_access)  
   
--   [同步和异步验证数据](#INotifyDataErrorInfo)  
+- [同步和异步验证数据](#INotifyDataErrorInfo)  
   
--   [自动更新数据绑定源](#delay)  
+- [自动更新数据绑定源](#delay)  
   
--   [绑定到实现 ICustomTypeProvider 的类型](#ICustomTypeProvider)  
+- [绑定到实现 ICustomTypeProvider 的类型](#ICustomTypeProvider)  
   
--   [从绑定表达式中检索数据绑定信息](#binding_state)  
+- [从绑定表达式中检索数据绑定信息](#binding_state)  
   
--   [检查有效的 DataContext 对象](#DisconnectedSource)  
+- [检查有效的 DataContext 对象](#DisconnectedSource)  
   
--   [在数据值发生更改时重新定位数据（实时数据整理）](#live_shaping)  
+- [在数据值发生更改时重新定位数据（实时数据整理）](#live_shaping)  
   
--   [对建立事件的弱引用的增强支持](#weak_event_pattern)  
+- [对建立事件的弱引用的增强支持](#weak_event_pattern)  
   
--   [用于调度程序类的新方法](#async)  
+- [用于调度程序类的新方法](#async)  
   
--   [事件的标记扩展](#events_markup_extenions)  
+- [事件的标记扩展](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>功能区控件  
@@ -64,9 +64,9 @@ ms.locfileid: "59325821"
 ## <a name="binding-to-static-properties"></a>绑定到静态属性  
  可以将静态属性用作数据绑定的源。 如果属性值更改时引发了静态事件，数据绑定引擎将会识别。  例如，如果类 `SomeClass` 定义了名为 `MyProperty` 的静态属性，则 `SomeClass` 可以定义 `MyProperty` 的值发生更改时所引发的静态事件。  静态事件可以使用以下签名之一。  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  请注意，在第一种情况下，类将公开名为的静态事件*PropertyName* `Changed`通过<xref:System.EventArgs>到事件处理程序。  在第二种情况下，该类会公开名为的静态事件`StaticPropertyChanged`通过<xref:System.ComponentModel.PropertyChangedEventArgs>到事件处理程序。 实现静态属性的类可以选择使用任一方法引发属性更改通知。  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
 ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864670"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：计算数值 (Visual Basic)
 您可以计算通过使用数值表达式的数字值。 一个*数值表达式*会包含文本、 常量和变量表示数字值的表达式并处理这些值的运算符。  
@@ -25,7 +25,7 @@ ms.locfileid: "58825743"
   
 #### <a name="to-calculate-a-numeric-value"></a>若要计算的数字值  
   
--   将一个或多个数字文本、 常量和变量组合到一个数值表达式。 下面的示例显示了一些有效的数值表达式。  
+- 将一个或多个数字文本、 常量和变量组合到一个数值表达式。 下面的示例显示了一些有效的数值表达式。  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "58825743"
   
 #### <a name="to-store-a-numeric-value"></a>若要存储的数字值  
   
--   赋值语句可用于将分配给一个变量，数值表达式所表示的值，如以下示例所示。  
+- 赋值语句可用于将分配给一个变量，数值表达式所表示的值，如以下示例所示。  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "58825743"
   
 #### <a name="to-override-normal-operator-precedence"></a>若要重写常规运算符优先级  
   
--   使用括号括住您想要首先执行的操作。 下面的示例显示了具有相同的操作数和运算符的两个不同的结果。  
+- 使用括号括住您想要首先执行的操作。 下面的示例显示了具有相同的操作数和运算符的两个不同的结果。  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

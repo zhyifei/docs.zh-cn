@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876273"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  请注意如下所示的有关连接字符串示例的内容：  
   
--   `Data Source` 关键字是指生成用户实例的 SQL Server Express 的父实例。 默认实例为 .\sqlexpress。  
+- `Data Source` 关键字是指生成用户实例的 SQL Server Express 的父实例。 默认实例为 .\sqlexpress。  
   
--   将 `Integrated Security` 设置为 `true`。 若要连接到用户实例，需要 Windows 身份验证；不支持 SQL Server 登录名。  
+- 将 `Integrated Security` 设置为 `true`。 若要连接到用户实例，需要 Windows 身份验证；不支持 SQL Server 登录名。  
   
--   `User Instance` 设置为 `true`，这样就可调用用户实例。 （默认值为 `false`。）  
+- `User Instance` 设置为 `true`，这样就可调用用户实例。 （默认值为 `false`。）  
   
--   `AttachDbFileName` 连接字符串关键字用于附加主数据库文件 (.mdf)，该文件必须包含完整路径名。 `AttachDbFileName` 还与 <xref:System.Data.SqlClient.SqlConnection> 连接字符串中的“extended properties”和“initial file name”键相对应。  
+- `AttachDbFileName` 连接字符串关键字用于附加主数据库文件 (.mdf)，该文件必须包含完整路径名。 `AttachDbFileName` 还与 <xref:System.Data.SqlClient.SqlConnection> 连接字符串中的“extended properties”和“initial file name”键相对应。  
   
--   包含在管道符号中的 `|DataDirectory|` 替代字符串是指打开连接的应用程序的数据目录，该字符串提供指示 .mdf 和 .ldf 数据库以及日志文件位置的相对路径。 如果要在其他位置查找这些文件，则必须提供这些文件的完整路径。  
+- 包含在管道符号中的 `|DataDirectory|` 替代字符串是指打开连接的应用程序的数据目录，该字符串提供指示 .mdf 和 .ldf 数据库以及日志文件位置的相对路径。 如果要在其他位置查找这些文件，则必须提供这些文件的完整路径。  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  用户实例方案包括：  
   
--   不需要共享数据的任何单用户应用程序。  
+- 不需要共享数据的任何单用户应用程序。  
   
--   ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce 部署适用于 Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md)。
+- ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce 部署适用于 Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md)。
   
--   使用 Windows 身份验证的专用 ASP.NET 宿主。 Intranet 上可以承载单个 SQL Server Express 实例。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟进行连接。 用户实例不应用于第三方或共享宿主方案中，在这样的方案中，所有应用程序将共享同一用户实例，而不再保持彼此独立。  
+- 使用 Windows 身份验证的专用 ASP.NET 宿主。 Intranet 上可以承载单个 SQL Server Express 实例。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟进行连接。 用户实例不应用于第三方或共享宿主方案中，在这样的方案中，所有应用程序将共享同一用户实例，而不再保持彼此独立。  
   
 ## <a name="see-also"></a>请参阅
 

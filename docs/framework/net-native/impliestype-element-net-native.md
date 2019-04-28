@@ -5,11 +5,11 @@ ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868623"
 ---
 # <a name="impliestype-element-net-native"></a>\<暗示类型 > 元素 (.NET Native)
 如果该策略已应用到该包含类型或方法，将该策略应用到一个类型。  
@@ -75,9 +75,9 @@ ms.locfileid: "59080873"
 ## <a name="remarks"></a>备注  
  该 `<ImpliesType>` 元素主要是供库使用的。 它讨论的是以下情景：  
   
--   如果一个例程需要反射到一个类型，它必然也要反射到另一种类型。  
+- 如果一个例程需要反射到一个类型，它必然也要反射到另一种类型。  
   
--   否则，第二种类型的暗示的实例化元数据就不可用，因为静态分析没有指示这一步骤是必须的。  
+- 否则，第二种类型的暗示的实例化元数据就不可用，因为静态分析没有指示这一步骤是必须的。  
   
  最常见的两种类型是附带共享类型参数的泛型实例化。  
   

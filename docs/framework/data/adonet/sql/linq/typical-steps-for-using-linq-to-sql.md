@@ -3,11 +3,11 @@ title: 使用 LINQ to SQL 的典型步骤
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876964"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>使用 LINQ to SQL 的典型步骤
 若要实现 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序，请按照本主题后面部分说明的步骤操作。 请注意，很多步骤是可选的。 您可以以对象模型的默认状态使用它，这种可能性很高。  
@@ -20,32 +20,32 @@ ms.locfileid: "59132842"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1.选择用于创建模型的工具。  
  有三种工具可用于创建模型。  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      此设计器提供了用于从现有数据库创建对象模型的丰富用户界面。 此工具是 Visual Studio IDE 的一部分，最适合于小型或中型数据库。  
   
--   SQLMetal 代码生成工具  
+- SQLMetal 代码生成工具  
   
      此命令行实用工具提供了与 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]略微不同的一组选项。 最好使用此工具对大型数据库进行建模。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
--   代码编辑器  
+- 代码编辑器  
   
      可以通过使用 Visual Studio 代码编辑器或其他编辑器编写你自己的代码。 我们建议，在您具有现有数据库且可以使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具时不要使用这种方法，因为这种方法容易出错。 但是，代码编辑器在改进或修改你已通过使用其他工具生成的代码方面非常有用。 有关详细信息，请参阅[如何：通过使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2.选择你要生成的代码类型。  
   
--   一个C#或 Visual Basic 源代码文件进行基于属性的映射。  
+- 一个C#或 Visual Basic 源代码文件进行基于属性的映射。  
   
      然后，在 Visual Studio 项目中将此代码文件。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   
--   用于外部映射的 XML 文件。  
+- 用于外部映射的 XML 文件。  
   
      通过使用此方法，你可以将映射元数据放在应用程序代码外部。 有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
     > [!NOTE]
     >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]不支持生成外部映射文件。 您必须使用 SQLMetal 工具来实现此功能。  
   
--   DBML 文件，你可以在生成最终代码文件之前修改此文件。  
+- DBML 文件，你可以在生成最终代码文件之前修改此文件。  
   
      这是一项高级功能。  
   
