@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877677"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>启用多个活动结果集
 多个活动结果集 (MARS) 是一项用于 SQL Server 的功能，可用来对单个连接执行多个批处理。 如果对 SQL Server 启用了 MARS，使用的每个命令对象将向该连接添加一个会话。  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  批处理执行环境包括下列组件：  
   
--   设置选项（例如 ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE）  
+- 设置选项（例如 ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE）  
   
--   安全上下文（用户/应用程序角色）  
+- 安全上下文（用户/应用程序角色）  
   
--   数据库上下文（当前数据库）  
+- 数据库上下文（当前数据库）  
   
--   执行状态变量 (例如，@@ERROR，@@ROWCOUNT，@@FETCH_STATUS @@IDENTITY)  
+- 执行状态变量 (例如，@@ERROR，@@ROWCOUNT，@@FETCH_STATUS @@IDENTITY)  
   
--   顶级临时表  
+- 顶级临时表  
   
  使用 MARS，默认的执行环境将与连接关联。 在给定连接下开始执行的每个新的批处理会接收默认环境的副本。 只要代码在给定的批处理下执行，对环境所作的所有更改将作用于特定的批处理。 执行完成后，执行设置将复制到默认环境中。 如果单个批处理发出的多个命令要在相同事务下顺序执行，语义与通过与早期客户端或服务器有关的连接公开的语义相同。  
   
