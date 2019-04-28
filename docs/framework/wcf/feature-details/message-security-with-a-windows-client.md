@@ -6,43 +6,43 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922782"
 ---
-# <a name="message-security-with-a-windows-client"></a><span data-ttu-id="72bd3-102">Windows 客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="72bd3-102">Message Security with a Windows Client</span></span>
-<span data-ttu-id="72bd3-103">此方案显示了 Windows Communication Foundation (WCF) 客户端和服务器保护的消息安全模式。</span><span class="sxs-lookup"><span data-stu-id="72bd3-103">This scenario shows a Windows Communication Foundation (WCF) client and server secured by message security mode.</span></span> <span data-ttu-id="72bd3-104">客户端和服务使用 Windows 凭据进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="72bd3-104">The client and service are authenticated using Windows credentials.</span></span>  
+# <a name="message-security-with-a-windows-client"></a><span data-ttu-id="67278-102">Windows 客户端的消息安全</span><span class="sxs-lookup"><span data-stu-id="67278-102">Message Security with a Windows Client</span></span>
+<span data-ttu-id="67278-103">此方案显示了 Windows Communication Foundation (WCF) 客户端和服务器保护的消息安全模式。</span><span class="sxs-lookup"><span data-stu-id="67278-103">This scenario shows a Windows Communication Foundation (WCF) client and server secured by message security mode.</span></span> <span data-ttu-id="67278-104">客户端和服务使用 Windows 凭据进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="67278-104">The client and service are authenticated using Windows credentials.</span></span>  
   
- <span data-ttu-id="72bd3-105">![消息安全使用 Windows 客户端](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span><span class="sxs-lookup"><span data-stu-id="72bd3-105">![Message security with a Windows client](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span></span>  
+ <span data-ttu-id="67278-105">![消息安全使用 Windows 客户端](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span><span class="sxs-lookup"><span data-stu-id="67278-105">![Message security with a Windows client](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span></span>  
   
-|<span data-ttu-id="72bd3-106">特征</span><span class="sxs-lookup"><span data-stu-id="72bd3-106">Characteristic</span></span>|<span data-ttu-id="72bd3-107">描述</span><span class="sxs-lookup"><span data-stu-id="72bd3-107">Description</span></span>|  
+|<span data-ttu-id="67278-106">特征</span><span class="sxs-lookup"><span data-stu-id="67278-106">Characteristic</span></span>|<span data-ttu-id="67278-107">描述</span><span class="sxs-lookup"><span data-stu-id="67278-107">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="72bd3-108">安全模式</span><span class="sxs-lookup"><span data-stu-id="72bd3-108">Security Mode</span></span>|<span data-ttu-id="72bd3-109">消息</span><span class="sxs-lookup"><span data-stu-id="72bd3-109">Message</span></span>|  
-|<span data-ttu-id="72bd3-110">互操作性</span><span class="sxs-lookup"><span data-stu-id="72bd3-110">Interoperability</span></span>|<span data-ttu-id="72bd3-111">WCF 仅</span><span class="sxs-lookup"><span data-stu-id="72bd3-111">WCF Only</span></span>|  
-|<span data-ttu-id="72bd3-112">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="72bd3-112">Authentication (Server)</span></span>|<span data-ttu-id="72bd3-113">服务器和客户端的相互身份验证</span><span class="sxs-lookup"><span data-stu-id="72bd3-113">Mutual authentication of the server and client</span></span>|  
-|<span data-ttu-id="72bd3-114">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="72bd3-114">Authentication (Client)</span></span>|<span data-ttu-id="72bd3-115">服务器和客户端的相互身份验证</span><span class="sxs-lookup"><span data-stu-id="72bd3-115">Mutual authentication of the server and client</span></span>|  
-|<span data-ttu-id="72bd3-116">完整性</span><span class="sxs-lookup"><span data-stu-id="72bd3-116">Integrity</span></span>|<span data-ttu-id="72bd3-117">是，使用共享安全上下文</span><span class="sxs-lookup"><span data-stu-id="72bd3-117">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="72bd3-118">保密性</span><span class="sxs-lookup"><span data-stu-id="72bd3-118">Confidentiality</span></span>|<span data-ttu-id="72bd3-119">是，使用共享安全上下文</span><span class="sxs-lookup"><span data-stu-id="72bd3-119">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="72bd3-120">传输</span><span class="sxs-lookup"><span data-stu-id="72bd3-120">Transport</span></span>|<span data-ttu-id="72bd3-121">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="72bd3-121">NET.TCP</span></span>|  
-|<span data-ttu-id="72bd3-122">绑定</span><span class="sxs-lookup"><span data-stu-id="72bd3-122">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="67278-108">安全模式</span><span class="sxs-lookup"><span data-stu-id="67278-108">Security Mode</span></span>|<span data-ttu-id="67278-109">消息</span><span class="sxs-lookup"><span data-stu-id="67278-109">Message</span></span>|  
+|<span data-ttu-id="67278-110">互操作性</span><span class="sxs-lookup"><span data-stu-id="67278-110">Interoperability</span></span>|<span data-ttu-id="67278-111">WCF 仅</span><span class="sxs-lookup"><span data-stu-id="67278-111">WCF Only</span></span>|  
+|<span data-ttu-id="67278-112">身份验证（服务器）</span><span class="sxs-lookup"><span data-stu-id="67278-112">Authentication (Server)</span></span>|<span data-ttu-id="67278-113">服务器和客户端的相互身份验证</span><span class="sxs-lookup"><span data-stu-id="67278-113">Mutual authentication of the server and client</span></span>|  
+|<span data-ttu-id="67278-114">身份验证（客户端）</span><span class="sxs-lookup"><span data-stu-id="67278-114">Authentication (Client)</span></span>|<span data-ttu-id="67278-115">服务器和客户端的相互身份验证</span><span class="sxs-lookup"><span data-stu-id="67278-115">Mutual authentication of the server and client</span></span>|  
+|<span data-ttu-id="67278-116">完整性</span><span class="sxs-lookup"><span data-stu-id="67278-116">Integrity</span></span>|<span data-ttu-id="67278-117">是，使用共享安全上下文</span><span class="sxs-lookup"><span data-stu-id="67278-117">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="67278-118">保密性</span><span class="sxs-lookup"><span data-stu-id="67278-118">Confidentiality</span></span>|<span data-ttu-id="67278-119">是，使用共享安全上下文</span><span class="sxs-lookup"><span data-stu-id="67278-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="67278-120">传输</span><span class="sxs-lookup"><span data-stu-id="67278-120">Transport</span></span>|<span data-ttu-id="67278-121">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="67278-121">NET.TCP</span></span>|  
+|<span data-ttu-id="67278-122">绑定</span><span class="sxs-lookup"><span data-stu-id="67278-122">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="72bd3-123">服务</span><span class="sxs-lookup"><span data-stu-id="72bd3-123">Service</span></span>  
- <span data-ttu-id="72bd3-124">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="72bd3-124">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="72bd3-125">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="72bd3-125">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="67278-123">服务</span><span class="sxs-lookup"><span data-stu-id="67278-123">Service</span></span>  
+ <span data-ttu-id="67278-124">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="67278-124">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="67278-125">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="67278-125">Do one of the following:</span></span>  
   
--   <span data-ttu-id="72bd3-126">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="72bd3-126">Create a stand-alone service using the code with no configuration.</span></span>  
+- <span data-ttu-id="67278-126">使用代码（而不使用配置）创建独立服务。</span><span class="sxs-lookup"><span data-stu-id="67278-126">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="72bd3-127">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="72bd3-127">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+- <span data-ttu-id="67278-127">使用提供的配置创建服务，但不定义任何终结点。</span><span class="sxs-lookup"><span data-stu-id="67278-127">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="72bd3-128">代码</span><span class="sxs-lookup"><span data-stu-id="72bd3-128">Code</span></span>  
- <span data-ttu-id="72bd3-129">下面的代码演示如何创建一个使用消息安全来建立 Windows 计算机安全上下文的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="72bd3-129">The following code shows how to create a service endpoint that uses message security to establish a secure context with a Windows machine.</span></span>  
+### <a name="code"></a><span data-ttu-id="67278-128">代码</span><span class="sxs-lookup"><span data-stu-id="67278-128">Code</span></span>  
+ <span data-ttu-id="67278-129">下面的代码演示如何创建一个使用消息安全来建立 Windows 计算机安全上下文的服务终结点。</span><span class="sxs-lookup"><span data-stu-id="67278-129">The following code shows how to create a service endpoint that uses message security to establish a secure context with a Windows machine.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a><span data-ttu-id="72bd3-130">配置</span><span class="sxs-lookup"><span data-stu-id="72bd3-130">Configuration</span></span>  
- <span data-ttu-id="72bd3-131">下面的配置可代替代码用于设置服务：</span><span class="sxs-lookup"><span data-stu-id="72bd3-131">The following configuration can be used instead of the code to set up the service:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="67278-130">配置</span><span class="sxs-lookup"><span data-stu-id="67278-130">Configuration</span></span>  
+ <span data-ttu-id="67278-131">下面的配置可代替代码用于设置服务：</span><span class="sxs-lookup"><span data-stu-id="67278-131">The following configuration can be used instead of the code to set up the service:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -72,24 +72,24 @@ ms.locfileid: "59138640"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="72bd3-132">客户端</span><span class="sxs-lookup"><span data-stu-id="72bd3-132">Client</span></span>  
- <span data-ttu-id="72bd3-133">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="72bd3-133">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="72bd3-134">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="72bd3-134">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="67278-132">客户端</span><span class="sxs-lookup"><span data-stu-id="67278-132">Client</span></span>  
+ <span data-ttu-id="67278-133">下面的代码和配置应独立运行。</span><span class="sxs-lookup"><span data-stu-id="67278-133">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="67278-134">执行下列操作之一：</span><span class="sxs-lookup"><span data-stu-id="67278-134">Do one of the following:</span></span>  
   
--   <span data-ttu-id="72bd3-135">使用代码（和客户端代码）创建独立客户端。</span><span class="sxs-lookup"><span data-stu-id="72bd3-135">Create a stand-alone client using the code (and client code).</span></span>  
+- <span data-ttu-id="67278-135">使用代码（和客户端代码）创建独立客户端。</span><span class="sxs-lookup"><span data-stu-id="67278-135">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="72bd3-136">创建不定义任何终结点地址的客户端。</span><span class="sxs-lookup"><span data-stu-id="72bd3-136">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="72bd3-137">而使用将配置名称作为自变量的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="72bd3-137">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="72bd3-138">例如：</span><span class="sxs-lookup"><span data-stu-id="72bd3-138">For example:</span></span>  
+- <span data-ttu-id="67278-136">创建不定义任何终结点地址的客户端。</span><span class="sxs-lookup"><span data-stu-id="67278-136">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="67278-137">而使用将配置名称作为自变量的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="67278-137">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="67278-138">例如：</span><span class="sxs-lookup"><span data-stu-id="67278-138">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="72bd3-139">代码</span><span class="sxs-lookup"><span data-stu-id="72bd3-139">Code</span></span>  
- <span data-ttu-id="72bd3-140">下面的代码创建客户端。</span><span class="sxs-lookup"><span data-stu-id="72bd3-140">The following code creates a client.</span></span> <span data-ttu-id="72bd3-141">绑定设置为 Message 安全模式，客户端凭据类型设置为 `Windows`。</span><span class="sxs-lookup"><span data-stu-id="72bd3-141">The binding is to Message mode security, and the client credential type is set to `Windows`.</span></span>  
+### <a name="code"></a><span data-ttu-id="67278-139">代码</span><span class="sxs-lookup"><span data-stu-id="67278-139">Code</span></span>  
+ <span data-ttu-id="67278-140">下面的代码创建客户端。</span><span class="sxs-lookup"><span data-stu-id="67278-140">The following code creates a client.</span></span> <span data-ttu-id="67278-141">绑定设置为 Message 安全模式，客户端凭据类型设置为 `Windows`。</span><span class="sxs-lookup"><span data-stu-id="67278-141">The binding is to Message mode security, and the client credential type is set to `Windows`.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a><span data-ttu-id="72bd3-142">配置</span><span class="sxs-lookup"><span data-stu-id="72bd3-142">Configuration</span></span>  
- <span data-ttu-id="72bd3-143">下面的配置用于设置客户端属性。</span><span class="sxs-lookup"><span data-stu-id="72bd3-143">The following configuration is used to set the client properties.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="67278-142">配置</span><span class="sxs-lookup"><span data-stu-id="67278-142">Configuration</span></span>  
+ <span data-ttu-id="67278-143">下面的配置用于设置客户端属性。</span><span class="sxs-lookup"><span data-stu-id="67278-143">The following configuration is used to set the client properties.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -116,7 +116,7 @@ ms.locfileid: "59138640"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72bd3-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="72bd3-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67278-144">请参阅</span><span class="sxs-lookup"><span data-stu-id="67278-144">See also</span></span>
 
-- [<span data-ttu-id="72bd3-145">安全性概述</span><span class="sxs-lookup"><span data-stu-id="72bd3-145">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="72bd3-146">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="72bd3-146">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="67278-145">安全性概述</span><span class="sxs-lookup"><span data-stu-id="67278-145">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="67278-146">Windows Server App Fabric 的安全模型</span><span class="sxs-lookup"><span data-stu-id="67278-146">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

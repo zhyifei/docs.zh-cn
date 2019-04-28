@@ -8,25 +8,25 @@ helpviewer_keywords:
 - BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
 ms.openlocfilehash: c7a3e6bcd0db268a0e0acfc74c570e26f89cff6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921064"
 ---
-# <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a><span data-ttu-id="c11a9-102">不再支持“Line”语句（Visual Basic 编译器错误）</span><span class="sxs-lookup"><span data-stu-id="c11a9-102">'Line' statements are no longer supported (Visual Basic Compiler Error)</span></span>
-<span data-ttu-id="c11a9-103">不再支持行语句。</span><span class="sxs-lookup"><span data-stu-id="c11a9-103">Line statements are no longer supported.</span></span> <span data-ttu-id="c11a9-104">文件 I/O 功能是可用作`Microsoft.VisualBasic.FileSystem.LineInput`图形功能，可作为`System.Drawing.Graphics.DrawLine`。</span><span class="sxs-lookup"><span data-stu-id="c11a9-104">File I/O functionality is available as `Microsoft.VisualBasic.FileSystem.LineInput` and graphics functionality is available as `System.Drawing.Graphics.DrawLine`.</span></span>  
+# <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a><span data-ttu-id="644cb-102">不再支持“Line”语句（Visual Basic 编译器错误）</span><span class="sxs-lookup"><span data-stu-id="644cb-102">'Line' statements are no longer supported (Visual Basic Compiler Error)</span></span>
+<span data-ttu-id="644cb-103">不再支持行语句。</span><span class="sxs-lookup"><span data-stu-id="644cb-103">Line statements are no longer supported.</span></span> <span data-ttu-id="644cb-104">文件 I/O 功能是可用作`Microsoft.VisualBasic.FileSystem.LineInput`图形功能，可作为`System.Drawing.Graphics.DrawLine`。</span><span class="sxs-lookup"><span data-stu-id="644cb-104">File I/O functionality is available as `Microsoft.VisualBasic.FileSystem.LineInput` and graphics functionality is available as `System.Drawing.Graphics.DrawLine`.</span></span>  
   
- <span data-ttu-id="c11a9-105">**错误 ID:** BC30830</span><span class="sxs-lookup"><span data-stu-id="c11a9-105">**Error ID:** BC30830</span></span>  
+ <span data-ttu-id="644cb-105">**错误 ID:** BC30830</span><span class="sxs-lookup"><span data-stu-id="644cb-105">**Error ID:** BC30830</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c11a9-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="c11a9-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="644cb-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="644cb-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="c11a9-107">如果执行文件访问，请使用`Microsoft.VisualBasic.FileSystem.LineInput`。</span><span class="sxs-lookup"><span data-stu-id="c11a9-107">If performing file access, use `Microsoft.VisualBasic.FileSystem.LineInput`.</span></span>  
+1. <span data-ttu-id="644cb-107">如果执行文件访问，请使用`Microsoft.VisualBasic.FileSystem.LineInput`。</span><span class="sxs-lookup"><span data-stu-id="644cb-107">If performing file access, use `Microsoft.VisualBasic.FileSystem.LineInput`.</span></span>  
   
-2. <span data-ttu-id="c11a9-108">如果执行图形，则请使用 `System.Drawing.Graphics.Drawline`。</span><span class="sxs-lookup"><span data-stu-id="c11a9-108">If performing graphics, use `System.Drawing.Graphics.Drawline`.</span></span>  
+2. <span data-ttu-id="644cb-108">如果执行图形，则请使用 `System.Drawing.Graphics.Drawline`。</span><span class="sxs-lookup"><span data-stu-id="644cb-108">If performing graphics, use `System.Drawing.Graphics.Drawline`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c11a9-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="c11a9-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="644cb-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="644cb-109">See also</span></span>
 
 - <xref:System.IO>
 - <xref:System.Drawing>
-- [<span data-ttu-id="c11a9-110">使用 Visual Basic 访问文件</span><span class="sxs-lookup"><span data-stu-id="c11a9-110">File Access with Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+- [<span data-ttu-id="644cb-110">使用 Visual Basic 访问文件</span><span class="sxs-lookup"><span data-stu-id="644cb-110">File Access with Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

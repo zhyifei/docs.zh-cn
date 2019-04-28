@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f3214a21dda27fda01054e96400997b15d11f71b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905419"
 ---
-# <a name="ihostfiltermarktoken-method"></a><span data-ttu-id="e46ee-102">IHostFilter::MarkToken 方法</span><span class="sxs-lookup"><span data-stu-id="e46ee-102">IHostFilter::MarkToken Method</span></span>
-<span data-ttu-id="e46ee-103">指示将处理指定的元数据令牌。</span><span class="sxs-lookup"><span data-stu-id="e46ee-103">Indicates that the specified metadata token will be processed.</span></span>  
+# <a name="ihostfiltermarktoken-method"></a><span data-ttu-id="bb861-102">IHostFilter::MarkToken 方法</span><span class="sxs-lookup"><span data-stu-id="bb861-102">IHostFilter::MarkToken Method</span></span>
+<span data-ttu-id="bb861-103">指示将处理指定的元数据令牌。</span><span class="sxs-lookup"><span data-stu-id="bb861-103">Indicates that the specified metadata token will be processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e46ee-104">语法</span><span class="sxs-lookup"><span data-stu-id="e46ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb861-104">语法</span><span class="sxs-lookup"><span data-stu-id="bb861-104">Syntax</span></span>  
   
 ```  
 HRESULT MarkToken (  
@@ -35,23 +35,23 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e46ee-105">参数</span><span class="sxs-lookup"><span data-stu-id="e46ee-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bb861-105">参数</span><span class="sxs-lookup"><span data-stu-id="bb861-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="e46ee-106">[in]要处理的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="e46ee-106">[in] The metadata token to be processed.</span></span>  
+ <span data-ttu-id="bb861-106">[in]要处理的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="bb861-106">[in] The metadata token to be processed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e46ee-107">备注</span><span class="sxs-lookup"><span data-stu-id="e46ee-107">Remarks</span></span>  
- <span data-ttu-id="e46ee-108">通常情况下，所需的令牌，如果在元数据范围内进行处理。</span><span class="sxs-lookup"><span data-stu-id="e46ee-108">Typically, you want a token to be processed if it is in the metadata scope.</span></span> <span data-ttu-id="e46ee-109">`MarkToken`方法将传递给元数据引擎通过[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="e46ee-109">The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb861-107">备注</span><span class="sxs-lookup"><span data-stu-id="bb861-107">Remarks</span></span>  
+ <span data-ttu-id="bb861-108">通常情况下，所需的令牌，如果在元数据范围内进行处理。</span><span class="sxs-lookup"><span data-stu-id="bb861-108">Typically, you want a token to be processed if it is in the metadata scope.</span></span> <span data-ttu-id="bb861-109">`MarkToken`方法将传递给元数据引擎通过[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="bb861-109">The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e46ee-110">要求</span><span class="sxs-lookup"><span data-stu-id="e46ee-110">Requirements</span></span>  
- <span data-ttu-id="e46ee-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e46ee-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb861-110">要求</span><span class="sxs-lookup"><span data-stu-id="bb861-110">Requirements</span></span>  
+ <span data-ttu-id="bb861-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bb861-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e46ee-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e46ee-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bb861-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bb861-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e46ee-113">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e46ee-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bb861-113">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="bb861-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e46ee-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e46ee-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bb861-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb861-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e46ee-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="e46ee-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb861-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="bb861-115">See also</span></span>
 
-- [<span data-ttu-id="e46ee-116">元数据接口</span><span class="sxs-lookup"><span data-stu-id="e46ee-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="e46ee-117">IHostFilter 方法</span><span class="sxs-lookup"><span data-stu-id="e46ee-117">IHostFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)
+- [<span data-ttu-id="bb861-116">元数据接口</span><span class="sxs-lookup"><span data-stu-id="bb861-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="bb861-117">IHostFilter 方法</span><span class="sxs-lookup"><span data-stu-id="bb861-117">IHostFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)
