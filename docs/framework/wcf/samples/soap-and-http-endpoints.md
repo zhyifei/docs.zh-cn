@@ -3,11 +3,11 @@ title: SOAP 和 HTTP 终结点
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007807"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 和 HTTP 终结点
 此示例演示如何实现基于 RPC 的服务并将其公开 SOAP 格式和"Plain Old XML"(POX) 格式使用 WCF Web 编程模型中。 请参阅[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例服务的 HTTP 绑定有关的详细信息。 本示例重点介绍有关使用不同绑定通过 SOAP 和 HTTP 公开相同服务的详细信息。  
@@ -22,11 +22,11 @@ ms.locfileid: "59768912"
   
  Web.config 文件配置包含 3 个终结点的 WCF 服务：  
   
--   ~/service.svc/mex 终结点，公开服务元数据供基于 SOAP 的客户端访问。  
+- ~/service.svc/mex 终结点，公开服务元数据供基于 SOAP 的客户端访问。  
   
--   ~/service.svc/http 终结点，使客户端可以使用 HTTP 绑定访问服务。  
+- ~/service.svc/http 终结点，使客户端可以使用 HTTP 绑定访问服务。  
   
--   ~/service.svc/soap 终结点，使客户端可以使用 SOAP over HTTP 绑定访问服务。  
+- ~/service.svc/soap 终结点，使客户端可以使用 SOAP over HTTP 绑定访问服务。  
   
  HTTP 终结点配置与 <`webHttp`> 标准终结点具有`helpEnabled`设置为`true`。 因此，服务在 ~/service.svc/http/help 上公开基于 XHTML 的页面，基于 HTTP 的客户端可以使用该页面访问服务。  
   

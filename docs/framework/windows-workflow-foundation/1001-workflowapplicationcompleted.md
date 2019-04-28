@@ -3,18 +3,18 @@ title: 1001 - WorkflowApplicationCompleted
 ms.date: 03/30/2017
 ms.assetid: 7a2ab59a-cf66-437a-b01e-f8f7268a3f7a
 ms.openlocfilehash: 430174b96a499fff7e0156327bb15e066ce2ca36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008637"
 ---
 # <a name="1001---workflowapplicationcompleted"></a>1001 - WorkflowApplicationCompleted
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|1001|  
+|Id|1001|  
 |关键字|WFRuntime|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
@@ -30,4 +30,4 @@ ms.locfileid: "33509790"
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|`xs:string`|工作流的实例 ID|  
-|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|应用程序域|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

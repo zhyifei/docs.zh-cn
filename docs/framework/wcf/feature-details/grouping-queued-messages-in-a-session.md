@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855915"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>在会话中对排队消息进行分组
 Windows Communication Foundation (WCF) 提供，可由单个接收应用程序组的一组相关消息一起进行处理的会话。 属于一个会话的消息必须属于同一事务。 因为所有消息都属于同一事务，所以如果有一个消息未能得到处理，整个会话都将回滚。 会话对于死信队列和病毒队列具有类似的行为。 在为会话配置的排队绑定上设置的生存时间 (TTL) 属性被应用于整个会话。 如果在 TTL 过期前仅发送了会话中的一部分消息，则会将整个会话都放到死信队列中。 与此类似，如果会话中有消息未能发送到应用程序队列中的应用程序，则会将整个会话都放到病毒队列（如果可用）中。  

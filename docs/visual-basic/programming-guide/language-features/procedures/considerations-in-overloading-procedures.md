@@ -26,11 +26,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
 ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864342"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>重载过程注意事项 (Visual Basic)
 重载的过程，您必须使用不同*签名*为每个重载版本。 这通常意味着每个版本必须指定不同的参数列表。 详细信息，请参阅"不同的签名"中[过程重载](./procedure-overloading.md)。  
@@ -50,14 +50,14 @@ ms.locfileid: "58815583"
 #### <a name="when-to-use-overloaded-versions"></a>何时使用重载的版本  
  您可以考虑在以下情况下定义一系列的重载版本：  
   
--   在过程代码中的逻辑是具体取决于是否调用代码提供的可选参数，或不明显不同。  
+- 在过程代码中的逻辑是具体取决于是否调用代码提供的可选参数，或不明显不同。  
   
--   过程代码不能可靠地测试是否调用代码已提供的可选参数。 这种情况，例如，如果没有备选的默认值对于调用的代码可能不需要提供。  
+- 过程代码不能可靠地测试是否调用代码已提供的可选参数。 这种情况，例如，如果没有备选的默认值对于调用的代码可能不需要提供。  
   
 #### <a name="when-to-use-optional-parameters"></a>何时使用可选参数  
  你可能希望在以下情况下的一个或多个可选参数：  
   
--   唯一所需的操作时调用的代码不会提供一个可选参数是将参数设置为默认值。 在这种情况下，过程代码可以降低复杂程度如果定义一个或多个与单个版本`Optional`参数。  
+- 唯一所需的操作时调用的代码不会提供一个可选参数是将参数设置为默认值。 在这种情况下，过程代码可以降低复杂程度如果定义一个或多个与单个版本`Optional`参数。  
   
  有关详细信息，请参阅[可选参数](./optional-parameters.md)。  
   
@@ -67,18 +67,18 @@ ms.locfileid: "58815583"
 #### <a name="when-to-use-overloaded-versions"></a>何时使用重载的版本  
  您可以考虑在以下情况下定义一系列的重载版本：  
   
--   您知道，调用代码永远不会将传递数超过了小的值给参数数组。  
+- 您知道，调用代码永远不会将传递数超过了小的值给参数数组。  
   
--   在过程代码中的逻辑是明显不同，具体取决于调用代码传递的多少个值。  
+- 在过程代码中的逻辑是明显不同，具体取决于调用代码传递的多少个值。  
   
--   调用代码可以通过不同的数据类型的值。  
+- 调用代码可以通过不同的数据类型的值。  
   
 #### <a name="when-to-use-a-parameter-array"></a>何时使用参数数组  
  你会更好`ParamArray`在以下情况下的参数：  
   
--   您不能预测多少个值调用代码可以将传递给参数数组，它可能是大量。  
+- 您不能预测多少个值调用代码可以将传递给参数数组，它可能是大量。  
   
--   过程逻辑本身适于循环访问所有通过调用代码，执行的每个值实质上是相同的操作的值。  
+- 过程逻辑本身适于循环访问所有通过调用代码，执行的每个值实质上是相同的操作的值。  
   
  有关详细信息，请参阅[参数数组](./parameter-arrays.md)。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "58815583"
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 参数的隐式重载  
  编译器会考虑使用为过程[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数具有无限数目的重载，不同于彼此中调用代码传递的内容到参数的数组，如下所示：  
   
--   调用代码未提供的参数的一个重载 `ParamArray`  
+- 调用代码未提供的参数的一个重载 `ParamArray`  
   
--   调用代码时提供的一维数组的一个重载`ParamArray`元素类型  
+- 调用代码时提供的一维数组的一个重载`ParamArray`元素类型  
   
--   对于每个正整数，其中一个重载的调用代码提供该数量的参数，每个时`ParamArray`元素类型  
+- 对于每个正整数，其中一个重载的调用代码提供该数量的参数，每个时`ParamArray`元素类型  
   
  下面的声明演示了这些隐式重载。  
   
@@ -115,11 +115,11 @@ ms.locfileid: "58815583"
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>作为一种替代方法重载无类型编程  
  如果你想要允许调用代码将传递给参数的不同数据类型，另一种方法是无类型编程。 可以设置类型检查开关`Off`带有[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或[/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)编译器选项。 然后无需声明参数的数据类型。 但是，这种方法具有以下缺点相比重载：  
   
--   无类型编程生成效率较低的执行代码。  
+- 无类型编程生成效率较低的执行代码。  
   
--   该过程必须测试预期将传递的每个数据类型。  
+- 该过程必须测试预期将传递的每个数据类型。  
   
--   如果调用代码传递过程不支持的数据类型，编译器不能发出错误信号。  
+- 如果调用代码传递过程不支持的数据类型，编译器不能发出错误信号。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017749"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>创建具有可自定义外观的控件
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ ms.locfileid: "59298339"
   
  本主题包含以下各节：  
   
--   [系统必备](#prerequisites)  
+- [系统必备](#prerequisites)  
   
--   [部件和状态模型](#parts_and_states_model)  
+- [部件和状态模型](#parts_and_states_model)  
   
--   [在 ControlTemplate 中定义的可视结构和控件的可视行为](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [在 ControlTemplate 中定义的可视结构和控件的可视行为](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [使用在代码中的 ControlTemplate 部件](#using_parts_of_the_controltemplate_in_code)  
+- [使用在代码中的 ControlTemplate 部件](#using_parts_of_the_controltemplate_in_code)  
   
--   [提供控件协定](#providing_the_control_contract)  
+- [提供控件协定](#providing_the_control_contract)  
   
--   [完整示例](#complete_example)  
+- [完整示例](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
@@ -60,11 +60,11 @@ ms.locfileid: "59298339"
 ## <a name="parts-and-states-model"></a>部件和状态模型  
  部件和状态模型指定如何定义可视结构和控件的可视行为。 若要遵循的部件和状态的模型，应执行以下操作：  
   
--   定义可视结构和可视行为<xref:System.Windows.Controls.ControlTemplate>的控件。  
+- 定义可视结构和可视行为<xref:System.Windows.Controls.ControlTemplate>的控件。  
   
--   控件的逻辑与控件模板部件的交互时，请遵循一些最佳实践方法。  
+- 控件的逻辑与控件模板部件的交互时，请遵循一些最佳实践方法。  
   
--   提供用于指定中应包含的内容的控件协定<xref:System.Windows.Controls.ControlTemplate>。  
+- 提供用于指定中应包含的内容的控件协定<xref:System.Windows.Controls.ControlTemplate>。  
   
  当定义可视结构和可视行为<xref:System.Windows.Controls.ControlTemplate>控件的应用程序作者可以更改的可视结构和控件的可视行为通过创建一个新<xref:System.Windows.Controls.ControlTemplate>而不是编写代码。   必须提供控件协定，以告知应用程序作者这<xref:System.Windows.FrameworkElement>应中定义的对象和状态<xref:System.Windows.Controls.ControlTemplate>。 中的部件进行交互时，应遵循一些最佳实践<xref:System.Windows.Controls.ControlTemplate>，以便您的控件正确处理不完整<xref:System.Windows.Controls.ControlTemplate>。  如果您遵循这三个原则，将能够创建应用程序作者<xref:System.Windows.Controls.ControlTemplate>控件只是因为它们轻松可以控件的附带[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  以下部分介绍每个这些建议详细信息。  
   
@@ -134,18 +134,18 @@ ms.locfileid: "59298339"
   
  <xref:System.Windows.VisualStateManager.GoToState%2A>方法执行所需启动和停止情节提要适当的逻辑。 当控件调用<xref:System.Windows.VisualStateManager.GoToState%2A>以更改其状态，<xref:System.Windows.VisualStateManager>执行以下操作：  
   
--   如果<xref:System.Windows.VisualState>控件转到具有<xref:System.Windows.Media.Animation.Storyboard>，情节提要开始。 然后，如果<xref:System.Windows.VisualState>来自该控件具有<xref:System.Windows.Media.Animation.Storyboard>，情节提要结束。  
+- 如果<xref:System.Windows.VisualState>控件转到具有<xref:System.Windows.Media.Animation.Storyboard>，情节提要开始。 然后，如果<xref:System.Windows.VisualState>来自该控件具有<xref:System.Windows.Media.Animation.Storyboard>，情节提要结束。  
   
--   如果控件已指定，则州<xref:System.Windows.VisualStateManager.GoToState%2A>不执行任何操作，并返回`true`。  
+- 如果控件已指定，则州<xref:System.Windows.VisualStateManager.GoToState%2A>不执行任何操作，并返回`true`。  
   
--   如果指定的状态中不存在<xref:System.Windows.Controls.ControlTemplate>的`control`，<xref:System.Windows.VisualStateManager.GoToState%2A>不执行任何操作，并返回`false`。  
+- 如果指定的状态中不存在<xref:System.Windows.Controls.ControlTemplate>的`control`，<xref:System.Windows.VisualStateManager.GoToState%2A>不执行任何操作，并返回`false`。  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>使用 VisualStateManager 的最佳实践  
  建议以下操作来维护控件的状态：  
   
--   使用属性来跟踪其状态。  
+- 使用属性来跟踪其状态。  
   
--   创建一个帮助器方法用于状态之间转换。  
+- 创建一个帮助器方法用于状态之间转换。  
   
  `NumericUpDown`控件使用其`Value`属性以跟踪是否正在`Positive`或`Negative`状态。  `NumericUpDown`还定义了控件`Focused`并`UnFocused`指出，哪些跟踪<xref:System.Windows.UIElement.IsFocused%2A>属性。 如果使用不自然地对应于控件的属性的状态，可以定义一个私有属性来跟踪状态。  
   
@@ -160,11 +160,11 @@ ms.locfileid: "59298339"
   
  有以下三个控件的状态可能会更改其中的典型位置：  
   
--   当<xref:System.Windows.Controls.ControlTemplate>应用于<xref:System.Windows.Controls.Control>。  
+- 当<xref:System.Windows.Controls.ControlTemplate>应用于<xref:System.Windows.Controls.Control>。  
   
--   当属性更改。  
+- 当属性更改。  
   
--   在事件发生时。  
+- 在事件发生时。  
   
  以下示例演示了更新的状态`NumericUpDown`在这些情况下的控件。  
   
@@ -189,33 +189,33 @@ ms.locfileid: "59298339"
 ## <a name="providing-the-control-contract"></a>提供控件协定  
  提供控件协定，以便<xref:System.Windows.Controls.ControlTemplate>作者会知道要放置在模板中的内容。 控件协定具有三个元素：  
   
--   控件逻辑使用的可视元素。  
+- 控件逻辑使用的可视元素。  
   
--   控件状态和每种状态所属的组。  
+- 控件状态和每种状态所属的组。  
   
--   以可视方式影响控件的公共属性。  
+- 以可视方式影响控件的公共属性。  
   
  创建一个新的某人<xref:System.Windows.Controls.ControlTemplate>需要知道什么<xref:System.Windows.FrameworkElement>控件的逻辑使用的对象类型的每个对象是和它的名称是。 一个<xref:System.Windows.Controls.ControlTemplate>作者还需要了解的控件可以在中，每个可能的状态和名称<xref:System.Windows.VisualStateGroup>状态为。  
   
  返回到`NumericUpDown`示例中，控件应当<xref:System.Windows.Controls.ControlTemplate>具有以下<xref:System.Windows.FrameworkElement>对象：  
   
--   一个<xref:System.Windows.Controls.Primitives.RepeatButton>调用`UpButton`。  
+- 一个<xref:System.Windows.Controls.Primitives.RepeatButton>调用`UpButton`。  
   
--   一个<xref:System.Windows.Controls.Primitives.RepeatButton>调用 `DownButton.`  
+- 一个<xref:System.Windows.Controls.Primitives.RepeatButton>调用 `DownButton.`  
   
  该控件可处于以下状态：  
   
--   在 `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- 在 `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   在 `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- 在 `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  若要指定的内容<xref:System.Windows.FrameworkElement>对象控件预期，则使用<xref:System.Windows.TemplatePartAttribute>，它指定的名称和预期元素的类型。  若要指定一个控件的可能状态，请使用<xref:System.Windows.TemplateVisualStateAttribute>，它指定该状态的名称和其中<xref:System.Windows.VisualStateGroup>它属于。  将放<xref:System.Windows.TemplatePartAttribute>和<xref:System.Windows.TemplateVisualStateAttribute>的类定义中的控件。  
   

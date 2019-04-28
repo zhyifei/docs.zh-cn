@@ -16,11 +16,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
 ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920745"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 指定属性或过程未实现此类中，必须重写派生类中，然后才能使用。  
@@ -30,13 +30,13 @@ ms.locfileid: "58822812"
   
 ## <a name="rules"></a>规则  
   
--   **不完整的声明。** 当指定`MustOverride`，不会不提供任何其他代码行的属性或过程，即使`End Function`， `End Property`，或`End Sub`语句。  
+- **不完整的声明。** 当指定`MustOverride`，不会不提供任何其他代码行的属性或过程，即使`End Function`， `End Property`，或`End Sub`语句。  
   
--   **组合的修饰符。** 不能指定`MustOverride`连同`NotOverridable`， `Overridable`，或`Shared`同一声明中。  
+- **组合的修饰符。** 不能指定`MustOverride`连同`NotOverridable`， `Overridable`，或`Shared`同一声明中。  
   
--   **隐藏和重写。** 隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。 有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+- **隐藏和重写。** 隐藏和重写操作都可重新定义继承的元素，但这两种方法之间又具有很大的差异。 有关详细信息，请参阅[Visual Basic 中的隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
--   **替换术语。** 除不能用作重写中的元素有时称为*纯虚拟*元素。  
+- **替换术语。** 除不能用作重写中的元素有时称为*纯虚拟*元素。  
   
  `MustOverride` 修饰符可用于下面的上下文中：  
   

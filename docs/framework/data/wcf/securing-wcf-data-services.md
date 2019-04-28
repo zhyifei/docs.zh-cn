@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875727"
 ---
 # <a name="securing-wcf-data-services"></a>WCF 数据服务的安全
 本主题介绍特定于开发、 部署和运行 WCF 数据服务和应用程序支持开放数据协议 (OData) 服务的访问权限的安全注意事项。 此外应遵循有关创建安全的.NET Framework 应用程序的建议。  
@@ -82,15 +82,15 @@ OData 基于 HTTP 协议。 在 HTTP 消息中，标头可能包含重要的用�
 ### <a name="custom-hosting-requirements"></a>自定义承载需求  
  默认情况下，WCF 数据服务创建为在 IIS 中托管的 ASP.NET 应用程序。 这样数据服务便可以利用该平台的安全行为。 您可以定义由自定义宿主承载的 WCF 数据服务。 有关详细信息，请参阅[承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。 承载数据服务的组件和平台还必须确保以下安全行为以防范对数据服务的攻击：  
   
--   限制针对所有可能操作的数据服务请求中接受的 URI 的长度。  
+- 限制针对所有可能操作的数据服务请求中接受的 URI 的长度。  
   
--   限制传入和传出 HTTP 消息的大小。  
+- 限制传入和传出 HTTP 消息的大小。  
   
--   限制任何给定时间点的未完成请求的总数。  
+- 限制任何给定时间点的未完成请求的总数。  
   
--   限制 HTTP 标头及其值的大小，并提供对数据标头的 WCF 数据服务访问权限。  
+- 限制 HTTP 标头及其值的大小，并提供对数据标头的 WCF 数据服务访问权限。  
   
--   检测和计数已知攻击，如 TCP SYN 和消息重播攻击。  
+- 检测和计数已知攻击，如 TCP SYN 和消息重播攻击。  
   
 ### <a name="values-are-not-further-encoded"></a>值不进一步编码  
  由 WCF 数据服务运行时发送给数据服务的属性值不进一步编码。 例如，当某个实体的字符串属性包含带格式的 HTML 内容时，数据服务不对标记进行 HTML 编码。 数据服务也不会在响应中对属性值进行进一步编码。 客户端库也不会执行任何其他编码。  
@@ -98,17 +98,17 @@ OData 基于 HTTP 协议。 在 HTTP 消息中，标头可能包含重要的用�
 ### <a name="considerations-for-client-applications"></a>客户端应用程序的注意事项  
  以下安全注意事项适用于使用 WCF 数据服务客户端访问 OData 服务的应用程序：  
   
--   客户端库假定用于访问数据服务的协议提供了适当安全级别。  
+- 客户端库假定用于访问数据服务的协议提供了适当安全级别。  
   
--   客户端库使用基础平台提供的传输堆栈的超时和分析选项的全部默认值。  
+- 客户端库使用基础平台提供的传输堆栈的超时和分析选项的全部默认值。  
   
--   客户端库不从应用程序配置文件中读取任何设置。  
+- 客户端库不从应用程序配置文件中读取任何设置。  
   
--   客户端库不实现任何跨域访问机制， 而是依赖于基础 HTTP 堆栈提供的机制。  
+- 客户端库不实现任何跨域访问机制， 而是依赖于基础 HTTP 堆栈提供的机制。  
   
--   客户端库没有用户界面元素，并且它从不尝试显示或呈现它所接收或发送的数据。  
+- 客户端库没有用户界面元素，并且它从不尝试显示或呈现它所接收或发送的数据。  
   
--   我们建议客户端应用程序始终对用户输入以及接受自非信任服务的数据进行验证。  
+- 我们建议客户端应用程序始终对用户输入以及接受自非信任服务的数据进行验证。  
   
 ## <a name="see-also"></a>请参阅
 

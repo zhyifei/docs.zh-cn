@@ -13,11 +13,11 @@ ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868961"
 ---
 # <a name="securing-method-access"></a>保护方法访问
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "59166174"
   
  托管代码提供几种方法来限制方法访问：  
   
--   如果可以信任类、程序集或派生类，则限制它们的可访问性的范围。 这是限制方法访问的最简单的方法。 请注意，派生类的可信度通常可低于其从中派生的类，尽管在某些情况下它们共享父类的标识。 具体而言，不推断从关键字**保护**，这不一定使用的安全上下文中。  
+- 如果可以信任类、程序集或派生类，则限制它们的可访问性的范围。 这是限制方法访问的最简单的方法。 请注意，派生类的可信度通常可低于其从中派生的类，尽管在某些情况下它们共享父类的标识。 具体而言，不推断从关键字**保护**，这不一定使用的安全上下文中。  
   
--   限制对指定的标识-从根本上讲，任何特定的调用方的方法访问[证据](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)选择 （强名称、 发布服务器、 区域等）。  
+- 限制对指定的标识-从根本上讲，任何特定的调用方的方法访问[证据](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)选择 （强名称、 发布服务器、 区域等）。  
   
--   限制对具有你选择的任何权限的调用方的方法访问。  
+- 限制对具有你选择的任何权限的调用方的方法访问。  
   
  同样，声明性安全使你可以控制类的继承。 可以使用**InheritanceDemand**来执行以下操作：  
   
--   要求派生类具有指定的标识或权限。  
+- 要求派生类具有指定的标识或权限。  
   
--   要求重写特定方法的派生类具有指定的标识或权限。  
+- 要求重写特定方法的派生类具有指定的标识或权限。  
   
  下面的示例演示如何通过要求使用特定强名称对调用方进行签名来帮助保护具有有限访问权限的公共类。 此示例使用<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>与**需**为强名称。 有关如何为程序集具有强名称签名的基于任务的信息，请参阅[创建和使用具有强名称程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
   

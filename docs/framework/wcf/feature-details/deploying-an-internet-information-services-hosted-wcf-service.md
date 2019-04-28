@@ -3,11 +3,11 @@ title: 部署承载于 Internet 信息服务中的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858309"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 
@@ -23,7 +23,7 @@ ms.locfileid: "47170173"
 
 - 配置 WCF 服务。
 
-创建 IIS 承载的 WCF 服务的详细演练，请参阅[如何： 承载在 IIS 中的 WCF 服务](how-to-host-a-wcf-service-in-iis.md)。
+创建 IIS 承载的 WCF 服务的详细演练，请参阅[如何：承载在 IIS 中的 WCF 服务](how-to-host-a-wcf-service-in-iis.md)。
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>确保已正确安装和注册 IIS、ASP.NET 和 WCF
 
@@ -35,9 +35,9 @@ ms.locfileid: "47170173"
 
 .NET Framework 的安装过程会自动注册 WCF 与 IIS 如果已在计算机上安装 IIS 的情况。 如果在.NET Framework 之后安装 IIS，则需要一个额外的步骤以将注册 IIS 和 ASP.NET 的 WCF。 根据您的操作系统，可以按如下所述执行此操作：
 
-- Windows 7 和 Windows Server 2003： 使用[ServiceModel 注册工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具向 IIS 注册 WCF。 若要使用此工具，请键入**ServiceModelReg.exe /i /x**中[Visual Studio 的开发人员命令提示](../../tools/developer-command-prompt-for-vs.md)。
+- Windows 7 和 Windows Server 2003:使用[ServiceModel 注册工具 (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具向 IIS 注册 WCF。 若要使用此工具，请键入**ServiceModelReg.exe /i /x**中[Visual Studio 的开发人员命令提示](../../tools/developer-command-prompt-for-vs.md)。
 
-- Windows 7： 最后，您必须验证 ASP.NET 配置为使用.NET Framework 4 或更高版本。 为此，可运行的 ASPNET_Regiis 工具`–i`选项。 有关详细信息，请参阅[ASP.NET IIS 注册工具](https://go.microsoft.com/fwlink/?LinkId=201186)。
+- Windows 7：最后，必须验证 ASP.NET 配置为使用.NET Framework 4 或更高版本。 为此，可运行的 ASPNET_Regiis 工具`–i`选项。 有关详细信息，请参阅[ASP.NET IIS 注册工具](https://go.microsoft.com/fwlink/?LinkId=201186)。
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>创建新的 IIS 应用程序或重新使用现有的 ASP.NET 应用程序
 

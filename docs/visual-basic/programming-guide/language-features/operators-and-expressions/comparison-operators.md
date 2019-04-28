@@ -16,11 +16,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
 ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827952"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 比较运算符比较两个表达式并返回`Boolean`值，该值表示其值的关系。 有运算符用于比较数字值、 字符串、 比较运算符和运算符用于比较的对象。 所有三种类型的运算符是此处所述。  

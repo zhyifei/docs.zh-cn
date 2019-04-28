@@ -3,11 +3,11 @@ title: 相关概述
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 ms.openlocfilehash: 7128ff531bb81fb6de526092513d5525ca138735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857318"
 ---
 # <a name="correlation-overview"></a>相关概述
 相关是指使工作流服务消息彼此相关或与应用程序实例状态相关的机制，例如，使答复与初始请求相关，或者使特定订单 ID 与订单处理工作流的保留状态相关。 本主题概述了相关。 本节中的其他主题提供了相关的各种类型的附加信息。  

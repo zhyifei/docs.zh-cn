@@ -11,11 +11,11 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010249"
 ---
 # <a name="glyphs"></a>标志符号
 标志符号是字符的要在屏幕上绘制的低级别描述。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 对于想要拦截和保留格式化后的文本的客户提供直接访问权限的标志符号。  

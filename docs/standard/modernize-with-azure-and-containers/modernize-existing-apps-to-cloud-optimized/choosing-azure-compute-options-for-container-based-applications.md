@@ -1,17 +1,17 @@
 ---
-title: 选择基于容器的应用程序的 Azure 计算平台
+title: 为基于容器的应用程序选择 Azure 计算平台
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |选择基于容器的应用程序的 Azure 计算平台
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811745"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>选择基于容器的应用程序的 Azure 计算平台
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>为基于容器的应用程序选择 Azure 计算平台
 
 阅读前面的部分后，您已经注意到，Azure 是开放的云，提供多个选项。 可以根据需要使用最合适，但是，它还会呈现为容器化应用程序应使用何种产品/技术有关的问题。
 

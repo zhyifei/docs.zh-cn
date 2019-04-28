@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5e8593adcdd7b74345f848b70a37ba6210871b8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672739"
 ---
 # <a name="itypenamebuilderaddpointer-method"></a>ITypeNameBuilder::AddPointer 方法
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  

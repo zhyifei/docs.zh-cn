@@ -9,22 +9,22 @@ helpviewer_keywords:
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
 ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012940"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>如何：指定 Windows 窗体 DataGridView 控件的编辑模式
 默认情况下，用户可以编辑的当前内容<xref:System.Windows.Forms.DataGridView>通过在其中键入内容或按 F2 的文本框单元。 这使该单元格进入编辑模式为如果满足所有以下条件：  
   
--   基础数据源支持编辑。  
+- 基础数据源支持编辑。  
   
--   <xref:System.Windows.Forms.DataGridView>启用控件。  
+- <xref:System.Windows.Forms.DataGridView>启用控件。  
   
--   <xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
   
--   `ReadOnly`单元格、 行、 列和控件的属性都设置为`false`。  
+- `ReadOnly`单元格、 行、 列和控件的属性都设置为`false`。  
   
  在编辑模式下，用户可以更改单元格的值，然后按 enter 键以提交更改或 ESC 键恢复到其原始值的单元格。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59080392"
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>若要更改 DataGridView 控件的编辑模式  
   
--   设置<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>属性设置为相应<xref:System.Windows.Forms.DataGridViewEditMode>枚举。  
+- 设置<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>属性设置为相应<xref:System.Windows.Forms.DataGridViewEditMode>枚举。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -40,9 +40,9 @@ ms.locfileid: "59080392"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
+- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
   
--   对 <xref:System> 和 <xref:System.Windows.Forms> 程序集的引用。  
+- 对 <xref:System> 和 <xref:System.Windows.Forms> 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802578"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>如何：显示 Windows 窗体的对话框
 在应用程序中显示的任何其他形式的相同方式显示一个对话框。 启动窗体应用程序运行时，会自动加载。 若要使第二个窗体或应用程序中出现的对话框中，编写代码以加载并显示它。 同样，若要使窗体或对话框消失，可编写代码以卸载或将其隐藏。  

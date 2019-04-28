@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857410"
 ---
 # <a name="configuring-system-provided-bindings"></a>配置系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定包含的元素的定义方式的 Windows Communication Foundation (WCF) 通道进行分层以提供所需的通信功能。 绑定包含三种类型的元素：  
   
--   协议通道绑定元素，用于确定要用于发送到终结点的消息的安全性、可靠性、上下文流设置或用户定义的协议。  
+- 协议通道绑定元素，用于确定要用于发送到终结点的消息的安全性、可靠性、上下文流设置或用户定义的协议。  
   
--   传输通道绑定元素，用于确定在向终结点发送消息时要使用的基础传输协议，例如 TCP 或 HTTP。  
+- 传输通道绑定元素，用于确定在向终结点发送消息时要使用的基础传输协议，例如 TCP 或 HTTP。  
   
--   消息编码绑定元素，用于确定要对发送到终结点的消息使用的网络编码，例如，文本/XML、二进制或消息传输优化机制 (MTOM)。  
+- 消息编码绑定元素，用于确定要对发送到终结点的消息使用的网络编码，例如，文本/XML、二进制或消息传输优化机制 (MTOM)。  
   
  本主题介绍了所有系统提供的 Windows Communication Foundation (WCF) 绑定。 如果这些绑定没有一个完全符合应用程序的需求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

@@ -3,11 +3,11 @@ title: 异常处理
 description: 了解中的异常处理的基础知识F#并找到异常处理的表达式和函数的链接。
 ms.date: 05/16/2016
 ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025088"
 ---
 # <a name="exception-handling"></a>异常处理
 
@@ -20,7 +20,7 @@ ms.locfileid: "53614436"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-----|-----------|
 |[异常类型](exception-types.md)|介绍如何声明异常类型。|
 |[异常：`try...with`表达式](the-try-with-expression.md)|介绍支持异常处理的语言构造。|

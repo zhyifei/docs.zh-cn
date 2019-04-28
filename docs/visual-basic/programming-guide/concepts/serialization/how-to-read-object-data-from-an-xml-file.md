@@ -3,11 +3,11 @@ title: 如何：从 XML 文件 (Visual Basic 中) 中读取对象数据
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907343"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>如何：从 XML 文件 (Visual Basic 中) 中读取对象数据
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   进行序列化的类没有公共的无参数构造函数。  
+- 进行序列化的类没有公共的无参数构造函数。  
   
--   文件中的数据不表示要进行反序列化的类中的数据。  
+- 文件中的数据不表示要进行反序列化的类中的数据。  
   
--   该文件不存在 (<xref:System.IO.IOException>)。  
+- 该文件不存在 (<xref:System.IO.IOException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  始终验证输入，并且绝不会反序列化来自不受信任源的数据。 重新创建的对象会在具有对它进行反序列化的代码的权限的本地计算机上运行。 在应用程序中使用输入的数据之前，需验证所有的输入内容。  

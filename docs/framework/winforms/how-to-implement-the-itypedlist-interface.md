@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800850"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>如何：实现 ITypedList 接口
 实现<xref:System.ComponentModel.ITypedList>接口实现的可绑定列表的架构。  
@@ -35,7 +35,7 @@ ms.locfileid: "59084904"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

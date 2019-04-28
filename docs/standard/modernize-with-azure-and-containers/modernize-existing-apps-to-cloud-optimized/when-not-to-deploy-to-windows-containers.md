@@ -5,44 +5,44 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: c5d8f50c7b9967eba0ec01c9e864a02b6a3b201a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012004"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>何时不部署到 Windows 容器
 
 Windows 容器不支持某些 Windows 技术。 在这些情况下，仍需要迁移到标准 Vm，通常使用只是 Windows 和 IIS。
 
-不支持 Windows 容器中，自 2018 年 5 月起的情况： 
+不支持 Windows 容器中，自 2018 年 5 月起的情况：
 
--   Microsoft 消息队列 (MSMQ) 目前仅提供了基于 Windows Server v1803 版本的 Windows 容器中，但不是在任何其他早期版本。 
+- Microsoft 消息队列 (MSMQ) 目前仅提供了基于 Windows Server v1803 版本的 Windows 容器中，但不是在任何其他早期版本。
 
-    -   [UserVoice 请求论坛](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
+  - [UserVoice 请求论坛](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
 
-    -   [讨论论坛](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
+  - [讨论论坛](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
 
--   在 Windows 容器中当前不支持 Microsoft 分布式事务处理协调器 (MSDTC)。
+- 在 Windows 容器中当前不支持 Microsoft 分布式事务处理协调器 (MSDTC)。
 
-    -   [GitHub 问题](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
+  - [GitHub 问题](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
 
--   Microsoft Office 目前不支持容器。
+- Microsoft Office 目前不支持容器。
 
-    -   [UserVoice 请求论坛](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
+  - [UserVoice 请求论坛](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
 
--   UI 应用程序 （使用可视用户界面的客户端应用程序） 不受支持的方案。
+- UI 应用程序 （使用可视用户界面的客户端应用程序） 不受支持的方案。
 
--   Windows 基础结构角色 (DNS、 DHCP、 DC、 NTP，打印，文件服务器，IAM 等) 不受支持的方案。
+- Windows 基础结构角色 (DNS、 DHCP、 DC、 NTP，打印，文件服务器，IAM 等) 不受支持的方案。
 
 其他不受支持的方案和来自社区的请求，请参阅 UserVoice 论坛用于 Windows 容器： <https://windowsserver.uservoice.com/forums/304624-containers>。
 
 ### <a name="additional-resources"></a>其他资源
 
--   **虚拟机和 Azure 中的容器**
+- **虚拟机和 Azure 中的容器**
 
     <https://azure.microsoft.com/overview/containers/>
 
->[!div class="step-by-step"]
->[上一页](deploy-existing-net-apps-as-windows-containers.md)
->[下一页](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+> [!div class="step-by-step"]
+> [上一页](deploy-existing-net-apps-as-windows-containers.md)
+> [下一页](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

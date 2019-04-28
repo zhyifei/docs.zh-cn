@@ -5,11 +5,11 @@ helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
 ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921935"
 ---
 # <a name="load-balancing"></a>负载平衡
 若要增加 Windows Communication Foundation (WCF) 应用程序的容量的一种方法是通过将它们部署到负载平衡服务器场中扩展它们。 WCF 应用程序可以使用标准负载均衡技术，包括如 Windows 网络负载平衡的软件负载均衡器，以及基于硬件的负载平衡设备达到负载平衡。  
@@ -82,9 +82,9 @@ ms.locfileid: "59228624"
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>WSHttp 绑定和 WSDualHttp 绑定的负载平衡  
  如果对默认的绑定配置进行一些修改，则 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 都可以使用 HTTP 负载平衡技术来实现负载平衡。  
   
--   关闭安全上下文的建立：这可以通过将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 属性设置为 `false` 来完成。 或者，如果安全会话是必需的则可以使用有状态安全会话中所述[安全会话](../../../docs/framework/wcf/feature-details/secure-sessions.md)主题。 有状态安全会话使服务保持无状态，因为安全会话的所有状态都随每个请求作为保护安全令牌的一部分进行传输。 请注意，若要启用有状态安全会话，必须使用 <xref:System.ServiceModel.Channels.CustomBinding> 或用户定义的 <xref:System.ServiceModel.Channels.Binding>，因为系统提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上并不会公开必需的配置设置。  
+- 关闭安全上下文的建立：这可以通过将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 属性设置为 `false` 来完成。 或者，如果安全会话是必需的则可以使用有状态安全会话中所述[安全会话](../../../docs/framework/wcf/feature-details/secure-sessions.md)主题。 有状态安全会话使服务保持无状态，因为安全会话的所有状态都随每个请求作为保护安全令牌的一部分进行传输。 请注意，若要启用有状态安全会话，必须使用 <xref:System.ServiceModel.Channels.CustomBinding> 或用户定义的 <xref:System.ServiceModel.Channels.Binding>，因为系统提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上并不会公开必需的配置设置。  
   
--   不要使用可靠会话。 默认情况下此功能处于关闭状态。  
+- 不要使用可靠会话。 默认情况下此功能处于关闭状态。  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>使 Net.TCP 绑定实现负载平衡  
  可以使用 IP 层负载平衡技术实现 <xref:System.ServiceModel.NetTcpBinding> 的负载平衡。 不过，默认情况下，<xref:System.ServiceModel.NetTcpBinding> 会汇集 TCP 连接以减少连接延迟。 这是一种干扰负载平衡基本机制的优化。 用于优化 <xref:System.ServiceModel.NetTcpBinding> 的主配置值是租约超时，它是连接池设置的一部分。 连接池导致客户端连接与场内特定的服务器关联。 随着这些连接的生存期的增加（一个受租约超时设置控制的因素），场内不同服务器上的负载分布会变得不平衡。 结果使平均调用时间增加。 因此，在负载平衡方案中使用 <xref:System.ServiceModel.NetTcpBinding> 时，应考虑减少由绑定使用的默认租约超时。 虽然租约超时的最佳值取决于应用程序，但 30 秒的租约超时对于负载平衡方案不失为一个合理的始点。 有关通道租约超时和其他传输配额的详细信息，请参阅[传输配额](../../../docs/framework/wcf/feature-details/transport-quotas.md)。  

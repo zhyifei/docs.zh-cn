@@ -9,11 +9,11 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801759"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>如何：实现 IListSource 接口
 实现<xref:System.ComponentModel.IListSource>接口，以创建可绑定的类未实现<xref:System.Collections.IList>而是提供了另一个位置中的列表。  
@@ -36,7 +36,7 @@ ms.locfileid: "59159778"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

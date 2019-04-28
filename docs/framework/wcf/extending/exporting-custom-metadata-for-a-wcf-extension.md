@@ -3,11 +3,11 @@ title: 导出 WCF 扩展的自定义元数据
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857956"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>导出 WCF 扩展的自定义元数据
 在 Windows Communication Foundation (WCF) 中，元数据导出是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和需求有关）。  
@@ -28,9 +28,9 @@ ms.locfileid: "59334505"
 ## <a name="exporting-custom-wsdl-elements"></a>导出自定义 WSDL 元素  
  在操作行为、协定行为、终结点行为或绑定元素（分别为 <xref:System.ServiceModel.Description.IWsdlExportExtension>、<xref:System.ServiceModel.Description.IOperationBehavior>、<xref:System.ServiceModel.Description.IContractBehavior> 或 <xref:System.ServiceModel.Description.IEndpointBehavior>）上实现 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>，并将行为或绑定元素插入正试图导出的服务的说明中。 (有关插入行为的详细信息，请参阅[配置和扩展的运行时行为带有](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md))。 为每个终结点调用 <xref:System.ServiceModel.Description.IWsdlExportExtension>，然后每个终结点首先导出协定（如果协定尚未导出）。 您可以执行以下任一导出过程，具体取决于您的需要：  
   
--   使用 <xref:System.ServiceModel.Description.WsdlContractConversionContext> 修改 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 方法中导出的元数据。  
+- 使用 <xref:System.ServiceModel.Description.WsdlContractConversionContext> 修改 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 方法中导出的元数据。  
   
--   使用 <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> 修改 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 方法导出的终结点的元数据。  
+- 使用 <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> 修改 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 方法导出的终结点的元数据。  
   
  在正在导出的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 实例中，所有 <xref:System.ServiceModel.Description.IWsdlExportExtension> 实现上都会调用 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 方法。  在正在导出的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 实例中，所有 <xref:System.ServiceModel.Description.IWsdlExportExtension> 实现上都会调用 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 方法。  
   

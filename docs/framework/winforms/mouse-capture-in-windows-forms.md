@@ -5,11 +5,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
 ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800953"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows 窗体中的鼠标捕获
 *鼠标捕获*指何时控件执行的所有鼠标输入的命令。 当控件已捕获鼠标时，它接收鼠标输入，指示在其边框内为指针。  

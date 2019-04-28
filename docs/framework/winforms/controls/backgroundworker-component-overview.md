@@ -18,26 +18,26 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011809"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 组件概述
 许多经常执行的操作可能需要很长的执行时间。 例如：  
   
--   图像下载  
+- 图像下载  
   
--   Web 服务调用  
+- Web 服务调用  
   
--   文件下载和上载（包括点对点应用程序）  
+- 文件下载和上载（包括点对点应用程序）  
   
--   复杂的本地计算  
+- 复杂的本地计算  
   
--   数据库事务  
+- 数据库事务  
   
--   本地磁盘访问（相对于内存访问来说其速度很慢）  
+- 本地磁盘访问（相对于内存访问来说其速度很慢）  
   
  类似这样的操作可能导致用户界面在操作运行时挂起。 如果你需要能进行响应的 UI，而且面临与这类操作相关的长时间延迟，<xref:System.ComponentModel.BackgroundWorker> 组件可以提供一种方便的解决方案。  
   

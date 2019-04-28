@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
 ms.openlocfilehash: b2adf4fe0d510f65db5bded715f084a4d7e016b6
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935767"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：创建数据服务使用 ADO.NET 实体框架数据源 （WCF 数据服务）
 
@@ -45,8 +45,7 @@ WCF 数据服务公开实体数据作为数据服务。 如果数据源为关系
 
 9. 单击**完成**以完成向导。
 
-     这将基于特定数据库创建默认数据模型。 
-  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]允许对数据模型进行自定义。 有关详细信息，请参阅[实体数据模型工具任务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))。
+     这将基于特定数据库创建默认数据模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]允许对数据模型进行自定义。 有关详细信息，请参阅[实体数据模型工具任务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>使用新数据模型创建数据服务
 

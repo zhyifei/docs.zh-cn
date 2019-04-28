@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922377"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>行\<数 > 无法使用当前的 FieldWidths 分析
 无法分析指定的行，因为其字段的宽度与所指定的不同。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   调整 `FieldWidths` 以便正确分析此行，或插入异常处理代码以处理此行。  
+- 调整 `FieldWidths` 以便正确分析此行，或插入异常处理代码以处理此行。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
 ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910177"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>如何：创建三维场景
 此示例演示如何创建三维对象，如下所示已旋转的纸张的平面表。 一个<xref:System.Windows.Controls.Viewport3D>以及以下组件用于创建此简单的三维场景：  
   
--   使用创建照相机<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 照相机指定可查看三维场景的哪个部分。  
+- 使用创建照相机<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 照相机指定可查看三维场景的哪个部分。  
   
--   创建一个网格，以指定的三维对象 （张纸的） 使用形状<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>属性的<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
+- 创建一个网格，以指定的三维对象 （张纸的） 使用形状<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>属性的<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
   
--   材料指定要在对象 （线性渐变在此示例中） 使用的图面上显示<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>属性的<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
+- 材料指定要在对象 （线性渐变在此示例中） 使用的图面上显示<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>属性的<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
   
--   创建光照射对象使用<xref:System.Windows.Media.Media3D.DirectionalLight>。  
+- 创建光照射对象使用<xref:System.Windows.Media.Media3D.DirectionalLight>。  
   
 ## <a name="example"></a>示例  
  下面的代码演示如何在 XAML 中创建三维场景。  
