@@ -7,11 +7,11 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746650"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows 窗体上创建 Windows 资源管理器样式的界面
 Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用户界面选择。  
@@ -29,11 +29,11 @@ Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用
   
 2. 从**工具箱**:  
   
-    1.  拖动<xref:System.Windows.Forms.SplitContainer>控件拖到窗体上的。  
+    1. 拖动<xref:System.Windows.Forms.SplitContainer>控件拖到窗体上的。  
   
-    2.  拖动<xref:System.Windows.Forms.TreeView>控制**SplitterPanel1** (的面板<xref:System.Windows.Forms.SplitContainer>控制标记**Panel1**)。  
+    2. 拖动<xref:System.Windows.Forms.TreeView>控制**SplitterPanel1** (的面板<xref:System.Windows.Forms.SplitContainer>控制标记**Panel1**)。  
   
-    3.  拖动<xref:System.Windows.Forms.ListView>控制**SplitterPanel2** (的面板<xref:System.Windows.Forms.SplitContainer>控制标记**Panel2**)。  
+    3. 拖动<xref:System.Windows.Forms.ListView>控制**SplitterPanel2** (的面板<xref:System.Windows.Forms.SplitContainer>控制标记**Panel2**)。  
   
 3. 通过按 CTRL 键并依次单击选择所有三个控件。 当选择<xref:System.Windows.Forms.SplitContainer>控件中，单击拆分条中，而不是面板。  
   

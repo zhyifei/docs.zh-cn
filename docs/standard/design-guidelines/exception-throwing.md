@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: KrzysztofCwalina
 ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669064"
 ---
 # <a name="exception-throwing"></a>引发异常
 本部分介绍的异常引发准则要求对执行失败的含义进行明确定义。 只要成员无法执行其指定操作（成员名称所体现的含义），就会导致执行失败。 例如，如果 `OpenFile` 方法无法将打开的文件句柄返回给调用方，则视为执行失败。  

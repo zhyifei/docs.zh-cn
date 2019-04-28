@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfbdbb389f9945ffeea649bcddd45bee8caf2496
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698312"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace 函数
 提供托管堆栈跟踪的文本表示形式以及 `CONTEXT` 记录的数组，其中每项对应非托管代码和托管代码之间的每个转换。  
@@ -65,17 +65,17 @@ HRESULT CALLBACK _EFN_StackTrace(
 ## <a name="remarks"></a>备注  
  `_EFN_StackTrace`结构可从 WinDbg 编程接口调用。 使用参数，如下所示：  
   
--   如果`wszTextOut`为 null，`puiTextLength`是不为 null，该函数将返回的字符串长度以`puiTextLength`。  
+- 如果`wszTextOut`为 null，`puiTextLength`是不为 null，该函数将返回的字符串长度以`puiTextLength`。  
   
--   如果`wszTextOut`是不为 null，函数将存储中的文本`wszTextOut`最多所指示的位置`puiTextLength`。 成功返回是否有足够的空间中的缓冲区，则返回 E_OUTOFMEMORY 如果缓冲区不够长。  
+- 如果`wszTextOut`是不为 null，函数将存储中的文本`wszTextOut`最多所指示的位置`puiTextLength`。 成功返回是否有足够的空间中的缓冲区，则返回 E_OUTOFMEMORY 如果缓冲区不够长。  
   
--   如果该函数的转换部分则将忽略`pTransitionContexts`和`puiTransitionContextCount`都为 null。 在这种情况下，该函数提供了只有函数名称的文本输出的调用方。  
+- 如果该函数的转换部分则将忽略`pTransitionContexts`和`puiTransitionContextCount`都为 null。 在这种情况下，该函数提供了只有函数名称的文本输出的调用方。  
   
--   如果`pTransitionContexts`为 null，`puiTransitionContextCount`是不为 null，则该函数将返回所需数量的上下文中的条目`puiTransitionContextCount`。  
+- 如果`pTransitionContexts`为 null，`puiTransitionContextCount`是不为 null，则该函数将返回所需数量的上下文中的条目`puiTransitionContextCount`。  
   
--   如果`pTransitionContexts`是不为 null，则该函数将它作为数组的长度结构`puiTransitionContextCount`。 通过给定结构大小`uiSizeOfContext`，并且必须是大小[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。  
+- 如果`pTransitionContexts`是不为 null，则该函数将它作为数组的长度结构`puiTransitionContextCount`。 通过给定结构大小`uiSizeOfContext`，并且必须是大小[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。  
   
--   `wszTextOut` 采用以下格式：  
+- `wszTextOut` 采用以下格式：  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,11 +84,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   如果以十六进制表示的偏移量为 0x0，写入没有偏移量。  
+- 如果以十六进制表示的偏移量为 0x0，写入没有偏移量。  
   
--   如果没有任何托管的代码的线程上当前上下文中，该函数将返回 SOS_E_NOMANAGEDCODE。  
+- 如果没有任何托管的代码的线程上当前上下文中，该函数将返回 SOS_E_NOMANAGEDCODE。  
   
--   `Flags`参数为 0 或 SOS_STACKTRACE_SHOWADDRESSES 若要查看每个前面的 EBP 和 ESP`module!functionname`行。 默认情况下，它为 0。  
+- `Flags`参数为 0 或 SOS_STACKTRACE_SHOWADDRESSES 若要查看每个前面的 EBP 和 ESP`module!functionname`行。 默认情况下，它为 0。  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  

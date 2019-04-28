@@ -13,11 +13,11 @@ helpviewer_keywords:
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
 ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746740"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>如何：使用 Windows 窗体 TextBox 控件创建密码文本框
 密码框是在用户键入一个字符串时显示占位符的 Windows 窗体文本框。  

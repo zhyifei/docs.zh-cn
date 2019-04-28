@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651098"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>如何：在使用情节提要对属性进行动画处理后设置此属性
 在某些情况下，它可能显示后进行动画处理，无法更改属性的值。  
@@ -30,11 +30,11 @@ ms.locfileid: "59188306"
   
  前面的代码似乎不执行任何操作： 画笔仍然保持为黄色，即的值提供的<xref:System.Windows.Media.Animation.ColorAnimation>，经过动画处理的画笔。 基础属性值 （基本值） 实际更改为蓝色。 但是，有效，或当前的值仍保持为黄色因为<xref:System.Windows.Media.Animation.ColorAnimation>仍然在重写的基础价值。 如果你想要再次变得有效的值的基础值，必须使动画不再影响该属性。 有三种方法使用演示图板动画执行此操作：  
   
--   设置动画的<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- 设置动画的<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   删除整个情节提要。  
+- 删除整个情节提要。  
   
--   删除中的各个属性的动画。  
+- 删除中的各个属性的动画。  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>将动画的 FillBehavior 属性设置为 Stop  
  通过设置<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>到<xref:System.Windows.Media.Animation.FillBehavior.Stop>，告诉动画停止到达其有效期末尾后影响其目标属性。  

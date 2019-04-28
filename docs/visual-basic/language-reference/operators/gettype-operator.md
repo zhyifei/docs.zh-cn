@@ -8,11 +8,11 @@ helpviewer_keywords:
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
 ms.openlocfilehash: 34ab192814583db5cdc0d0183c73cc22b8633e9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663604"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 运算符 (Visual Basic)
 返回<xref:System.Type>指定类型的对象。 <xref:System.Type>对象提供有关其属性、 方法和事件等类型的信息。  
@@ -32,25 +32,25 @@ GetType(typename)
 ## <a name="remarks"></a>备注  
  `GetType`运算符将返回<xref:System.Type>的指定对象的`typename`。 可以在任何已定义类型的名称将传递`typename`。 这包括：  
   
--   任何 Visual Basic 数据类型，如`Boolean`或`Date`。  
+- 任何 Visual Basic 数据类型，如`Boolean`或`Date`。  
   
--   任何.NET Framework 类、 结构、 模块或接口，如<xref:System.ArgumentException?displayProperty=nameWithType>或<xref:System.Double?displayProperty=nameWithType>。  
+- 任何.NET Framework 类、 结构、 模块或接口，如<xref:System.ArgumentException?displayProperty=nameWithType>或<xref:System.Double?displayProperty=nameWithType>。  
   
--   任何类、 结构、 模块或接口定义的应用程序。  
+- 任何类、 结构、 模块或接口定义的应用程序。  
   
--   任何由你的应用程序定义的数组。  
+- 任何由你的应用程序定义的数组。  
   
--   任何由你的应用程序定义的委托。  
+- 任何由你的应用程序定义的委托。  
   
--   任何由 Visual Basic、.NET Framework 中或你的应用程序定义的枚举。  
+- 任何由 Visual Basic、.NET Framework 中或你的应用程序定义的枚举。  
   
  如果你想要获取的对象变量的类型对象，使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>方法。  
   
  `GetType`运算符只能在以下情况下有用：  
   
--   必须在运行时访问类型的元数据。 <xref:System.Type>对象提供元数据，例如类型成员和部署信息。 您需要它，例如，在程序集上进行反射。 有关详细信息，请参阅 <xref:System.Reflection?displayProperty=nameWithType>。  
+- 必须在运行时访问类型的元数据。 <xref:System.Type>对象提供元数据，例如类型成员和部署信息。 您需要它，例如，在程序集上进行反射。 有关详细信息，请参阅 <xref:System.Reflection?displayProperty=nameWithType>。  
   
--   你想要比较两个对象引用引用相同类型的实例。 如果是这样，`GetType`返回对相同的引用<xref:System.Type>对象。  
+- 你想要比较两个对象引用引用相同类型的实例。 如果是这样，`GetType`返回对相同的引用<xref:System.Type>对象。  
   
 ## <a name="example"></a>示例  
  下面的示例演示`GetType`中使用的运算符。  

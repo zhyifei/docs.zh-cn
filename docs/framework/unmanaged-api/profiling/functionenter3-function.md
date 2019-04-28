@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598930"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 函数
 通知探查器控件传递给函数。  
@@ -43,9 +43,9 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  调用此函数之前，执行引擎不会保存任何寄存器。  
   
--   在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
+- 在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
   
--   退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
+- 退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

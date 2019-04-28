@@ -4,11 +4,11 @@ description: Azure 队列提供可靠、 异步消息传送应用程序组件之
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756372"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>开始使用 Azure 队列存储中使用 F\#
 

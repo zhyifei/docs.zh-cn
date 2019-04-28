@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 880b4cf75d518506d2bcf788ad8460274dcccefc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638203"
 ---
 # <a name="delegate-statement"></a>Delegate 语句
 用于声明委托。 委托是一个引用类型，是指`Shared`方法的类型或实例方法的对象。 任何具有匹配的参数和返回类型的过程可以用于创建此委托类的实例。 然后可以通过委托实例更高版本调用该过程。  

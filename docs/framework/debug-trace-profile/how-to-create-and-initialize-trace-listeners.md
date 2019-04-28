@@ -15,10 +15,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ea5db2ba1060479f55bbd7f67266d36085a2535f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754370"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>如何：创建和初始化跟踪侦听器
 

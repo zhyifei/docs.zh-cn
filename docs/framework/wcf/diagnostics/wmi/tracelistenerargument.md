@@ -3,11 +3,11 @@ title: TraceListenerArgument
 ms.date: 03/30/2017
 ms.assetid: b6c84090-bf96-43f4-9fb0-1ce8fd9c8efe
 ms.openlocfilehash: 58bae82a42163e2194eea468a24ec6deceef49a0
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641809"
 ---
 # <a name="tracelistenerargument"></a>TraceListenerArgument
 TraceListenerArgument  
@@ -35,7 +35,7 @@ class TraceListenerArgument
   
  参数的名称。  
   
-### <a name="value"></a>值  
+### <a name="value"></a>“值”  
  数据类型：String  
   
  访问类型：只读  

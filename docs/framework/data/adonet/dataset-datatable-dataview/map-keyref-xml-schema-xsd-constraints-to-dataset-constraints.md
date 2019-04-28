@@ -3,11 +3,11 @@ title: 将 keyref XML 架构 (XSD) 约束映射到数据集约束
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607483"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>将 keyref XML 架构 (XSD) 约束映射到数据集约束
 **Keyref**元素可用于在文档内的元素之间建立链接。 它类似于关系数据库中的外键关系。 如果指定了架构**keyref**元素，元素转换到的表中的列上的相应外键约束在架构映射过程<xref:System.Data.DataSet>。 默认情况下**keyref**元素还会生成关系，使用**ParentTable**， **ChildTable**， **ParentColumn**，和**ChildColumn**对关系指定的属性。  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  此外，**数据集**定义以下约束：  
   
--   Unique 约束**顺序**表。  
+- Unique 约束**顺序**表。  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   之间的关系**顺序**并**OrderDetail**表。 **嵌套**属性设置为**False**因为两个元素未嵌套在架构中。  
+- 之间的关系**顺序**并**OrderDetail**表。 **嵌套**属性设置为**False**因为两个元素未嵌套在架构中。  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   上的外键约束**OrderDetail**表。  
+- 上的外键约束**OrderDetail**表。  
   
     ```  
               ConstraintName: OrderNoRef  

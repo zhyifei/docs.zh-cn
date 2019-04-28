@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703525"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
 本主题列出了创建容易随时间而改变的数据协定的最佳做法。 有关数据协定的详细信息，请参阅中的主题[Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -39,9 +39,9 @@ ms.locfileid: "59334921"
   
  有时，您必须保证应用程序发送的消息严格遵从架构，但不能依赖要严格遵从架构的传入消息。 在这种情况下，存在传入消息中包含某些外来数据的危险。 外来值存储，并由 WCF 返回，并因此导致架构无效的消息发送。 若要避免此问题，应关闭往返功能。 有两种方法可以实现此目的。  
   
--   请勿在任何类型上实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。  
+- 请勿在任何类型上实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。  
   
--   对 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性 (Property) 设置为 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 的服务协定应用 `true` 属性 (Attribute)。  
+- 对 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性 (Property) 设置为 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 的服务协定应用 `true` 属性 (Attribute)。  
   
  关于往返过程的详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59334921"
   
 8. 在以后的版本中，可以添加新的数据成员。 它们应始终遵循以下规则：  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性应始终保留其默认值 `false`。  
+    1. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性应始终保留其默认值 `false`。  
   
-    2.  如果对于成员，默认值为 `null` 或零是不可接受的，则应使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 提供一个回调方法，以便在传入流中不存在该成员时提供一个合理的默认值。 回调的详细信息，请参阅[版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+    2. 如果对于成员，默认值为 `null` 或零是不可接受的，则应使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 提供一个回调方法，以便在传入流中不存在该成员时提供一个合理的默认值。 回调的详细信息，请参阅[版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
-    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>属性应该用于确保新添加的数据成员的所有现有的数据成员之后显示。 推荐的方法来执行此操作是按如下所示：没有任何数据协定的第一个版本中的数据成员应具有其`Order`属性集。 应将添加到数据协定版本 2 中的所有数据成员的 `Order` 属性设置为 2。 将添加到数据协定版本 3 中的所有数据成员的 `Order` 设置为 3，依次类推。 允许将多个数据成员集设置为同一个 `Order` 编号。  
+    3. <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>属性应该用于确保新添加的数据成员的所有现有的数据成员之后显示。 推荐的方法来执行此操作是按如下所示：没有任何数据协定的第一个版本中的数据成员应具有其`Order`属性集。 应将添加到数据协定版本 2 中的所有数据成员的 `Order` 属性设置为 2。 将添加到数据协定版本 3 中的所有数据成员的 `Order` 设置为 3，依次类推。 允许将多个数据成员集设置为同一个 `Order` 编号。  
   
 9. 在以后的版本中，不要移除数据成员，即使在以前的版本中 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性保留为其默认属性 `false`。  
   

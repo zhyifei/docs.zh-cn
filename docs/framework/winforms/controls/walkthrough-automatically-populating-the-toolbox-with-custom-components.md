@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759903"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：使用自定义组件自动填充工具箱
 如果由当前打开的解决方案中的项目定义您的组件，它们将自动显示在**工具箱**，由你需执行任何操作。 可以手动填充**工具箱**与使用自定义组件[选择工具箱项对话框 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))，但**工具箱**考虑在解决方案中的项的生成包含所有以下特征的输出结果：  
   
--   实现<xref:System.ComponentModel.IComponent>;  
+- 实现<xref:System.ComponentModel.IComponent>;  
   
--   不具有<xref:System.ComponentModel.ToolboxItemAttribute>设置为`false`;  
+- 不具有<xref:System.ComponentModel.ToolboxItemAttribute>设置为`false`;  
   
--   不具有<xref:System.ComponentModel.DesignTimeVisibleAttribute>设置为`false`。  
+- 不具有<xref:System.ComponentModel.DesignTimeVisibleAttribute>设置为`false`。  
   
 > [!NOTE]
 >  **工具箱**不遵循引用链，因此它将不显示并非由你的解决方案中的项目生成的项。  
   
  本演练演示如何自定义组件自动出现在**工具箱**生成组件后。 本演练涉及以下任务：  
   
--   创建一个 Windows 窗体项目。  
+- 创建一个 Windows 窗体项目。  
   
--   创建自定义组件。  
+- 创建自定义组件。  
   
--   创建自定义组件的实例。  
+- 创建自定义组件的实例。  
   
--   卸载并重新加载自定义组件。  
+- 卸载并重新加载自定义组件。  
   
  完成后，你将看到**工具箱**填充了已创建的组件。  
   

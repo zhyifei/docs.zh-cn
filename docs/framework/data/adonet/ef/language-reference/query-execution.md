@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
 ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614955"
 ---
 # <a name="query-execution"></a>查询执行
 在用户创建 LINQ 查询后，该查询将转换为一个命令目录树。 命令目录树是与实体框架兼容的查询表示形式。 然后，针对数据源执行该命令目录树。 在执行查询时，将计算所有查询表达式（即查询的所有组成部分），包括在结果具体化中使用的那些表达式。  
@@ -20,10 +20,10 @@ ms.locfileid: "33804815"
  当执行 LINQ to Entities 查询时，查询中的有些表达式可能在服务器上执行，而有些部分可能在客户端上本地执行。 表达式的客户端计算发生于在服务器上执行查询之前。 如果在客户端上计算表达式，则该计算的结果将替换查询中的表达式，然后在服务器上执行查询。 由于是在数据源上执行查询，因此数据源配置将覆盖客户端中指定的行为。 例如，null 值处理和数值精度取决于服务器设置。 在查询执行期间在服务器上引发的任何异常都将直接向上传递到客户端。  
  
 > [!TIP]
-> 有关方便摘要的查询运算符中表的格式，这让你快速标识运算符的执行行为，请参阅[分类的标准查询运算符按执行方式 (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)。
+> 有关方便的查询运算符以表格形式，让你快速标识操作员的执行行为，请参阅[分类的标准查询运算符按执行方式 (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)。
 
 ## <a name="deferred-query-execution"></a>延迟执行查询  
- 在返回一系列值的查询中，查询变量本身从不保存查询结果，它只存储查询命令。 查询的执行将推迟到在 `foreach` 或 `For Each` 循环中循环访问查询变量之后进行。 这称为*延迟执行*; 也就是说，查询执行发生一段时间后查询构造。 这意味着您可以根据需要频繁地执行查询。 例如，当您的数据库由其他应用程序不断更新时，此功能将会很有用。 在您的应用程序中，您可以创建查询以检索最新信息并重复执行查询，每次返回更新的信息。  
+ 在返回一系列值的查询中，查询变量本身从不保存查询结果，它只存储查询命令。 查询的执行将推迟到在 `foreach` 或 `For Each` 循环中循环访问查询变量之后进行。 这称为*延迟执行*; 也就是说，查询会执行的一段时间后，查询构造。 这意味着您可以根据需要频繁地执行查询。 例如，当您的数据库由其他应用程序不断更新时，此功能将会很有用。 在您的应用程序中，您可以创建查询以检索最新信息并重复执行查询，每次返回更新的信息。  
   
  延迟执行可使多个查询组合在一起或使查询得到扩展。 扩展查询时，将修改查询以包括新操作，最终执行将反映这些更改。 在下面的示例中，第一个查询返回所有产品。 第二个查询通过使用 `Where` 扩展第一个查询，以返回大小为“L”的所有产品：  
   
@@ -87,13 +87,13 @@ ms.locfileid: "33804815"
   
  例如，以下是一些 CLR 和 SQL Server 之间的行为差异：  
   
--   在 GUID 排序方式上，SQL Server 不同于 CLR。  
+- 在 GUID 排序方式上，SQL Server 不同于 CLR。  
   
--   在处理 SQL Server 十进制类型时，这两者在结果精度方面也存在差异。 这是因为 SQL Server 十进制类型具有固定精度要求。 例如，在客户端内存中，<xref:System.Decimal> 值 0.0、0.0 和 1.0 的平均值为 0.3333333333333333333333333333，而在存储区中则为 0.333333（基于 SQL Server 的十进制类型的默认精度）。  
+- 在处理 SQL Server 十进制类型时，这两者在结果精度方面也存在差异。 这是因为 SQL Server 十进制类型具有固定精度要求。 例如，在客户端内存中，<xref:System.Decimal> 值 0.0、0.0 和 1.0 的平均值为 0.3333333333333333333333333333，而在存储区中则为 0.333333（基于 SQL Server 的十进制类型的默认精度）。  
   
--   在处理一些字符串比较运算的方式上，SQL Server 也不同于 CLR。 在服务器上，字符串比较行为取决于排序规则设置。  
+- 在处理一些字符串比较运算的方式上，SQL Server 也不同于 CLR。 在服务器上，字符串比较行为取决于排序规则设置。  
   
--   函数或方法调用如果包含在 LINQ to Entities 查询中，则会先映射到实体框架中的规范函数，然后再转换为 Transact-SQL 并针对 SQL Server 数据库执行。 在有些情况下，这些映射函数的行为可能不同于基类库中的实现。 例如，将一个空字符串用作参数调用 <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A> 方法时，如果在 CLR 中执行，会返回 `true`；如果在 SQL Server 中执行，则会返回 `false`。 如果两个字符串只有尾随空格不同，SQL Server 认为它们相等，而 CLR 认为它们不相等，因此 <xref:System.String.EndsWith%2A> 方法也会返回不同的结果。 下面的示例对此进行演示：  
+- 函数或方法调用如果包含在 LINQ to Entities 查询中，则会先映射到实体框架中的规范函数，然后再转换为 Transact-SQL 并针对 SQL Server 数据库执行。 在有些情况下，这些映射函数的行为可能不同于基类库中的实现。 例如，将一个空字符串用作参数调用 <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A> 方法时，如果在 CLR 中执行，会返回 `true`；如果在 SQL Server 中执行，则会返回 `false`。 如果两个字符串只有尾随空格不同，SQL Server 认为它们相等，而 CLR 认为它们不相等，因此 <xref:System.String.EndsWith%2A> 方法也会返回不同的结果。 下面的示例对此进行演示：  
   
  [!code-csharp[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#canonicalfuncvsclrbasetype)]
  [!code-vb[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#canonicalfuncvsclrbasetype)]

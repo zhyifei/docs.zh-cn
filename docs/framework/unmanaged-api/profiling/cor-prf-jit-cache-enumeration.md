@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0cdbe36403f830926d611ffdc655d82ea25ddeef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599086"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 枚举
 指示缓存的函数搜索的结果。  

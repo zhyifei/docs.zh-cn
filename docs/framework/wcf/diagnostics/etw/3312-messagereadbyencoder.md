@@ -3,18 +3,18 @@ title: 3312 - MessageReadByEncoder
 ms.date: 03/30/2017
 ms.assetid: cdcc8e3d-e2aa-4c5e-a580-bdf581a66709
 ms.openlocfilehash: c68170d127dbcb914539211be9ff2417ea20517e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596683"
 ---
 # <a name="3312---messagereadbyencoder"></a>3312 - MessageReadByEncoder
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|3312|  
+|Id|3312|  
 |关键字|通道|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1eb6b870beabb71e340b0ec39c489cedb02128cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749574"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函数
 指示用户凭据是否允许访问指定[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象。 
@@ -65,7 +65,7 @@ HRESULT BlessIWbemServicesObject (
 
 此函数返回以下值中定义*WinError.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 一个或多个参数均无效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 为 `null`。 | 

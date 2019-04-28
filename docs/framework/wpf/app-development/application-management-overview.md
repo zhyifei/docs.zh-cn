@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757325"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题概述中的功能的<xref:System.Windows.Application>类用于创建和管理应用程序。  
@@ -20,17 +20,17 @@ ms.locfileid: "59100075"
 ## <a name="the-application-class"></a>Application 类  
  在 WPF 中，常见的应用程序范围的功能会封装在<xref:System.Windows.Application>类。 <xref:System.Windows.Application>类包括以下功能：  
   
--   对应用程序的生存期进行跟踪并与之进行交互。  
+- 对应用程序的生存期进行跟踪并与之进行交互。  
   
--   检索和处理命令行参数。  
+- 检索和处理命令行参数。  
   
--   检测和响应未经处理的异常。  
+- 检测和响应未经处理的异常。  
   
--   共享应用程序范围的属性和资源。  
+- 共享应用程序范围的属性和资源。  
   
--   管理独立应用程序中的窗口。  
+- 管理独立应用程序中的窗口。  
   
--   跟踪和管理导航。  
+- 跟踪和管理导航。  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>如何使用 Application 类执行常见任务  
@@ -71,7 +71,7 @@ ms.locfileid: "59100075"
   
 - 在标记中，`Application`元素必须包括`x:Class`属性。 应用程序生成时，是否存在`x:Class`文件的标记中，MSBuild 将创建`partial`类派生自<xref:System.Windows.Application>并且具有指定的名称`x:Class`属性。 这需要 XAML 架构的 XML 命名空间声明添加 (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`)。
   
--   在代码隐藏中，类必须是`partial`类指定的同名`x:Class`属性在标记中，必须派生自<xref:System.Windows.Application>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md))。  
+- 在代码隐藏中，类必须是`partial`类指定的同名`x:Class`属性在标记中，必须派生自<xref:System.Windows.Application>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md))。  
   
 > [!NOTE]
 >  创建新的 WPF 应用程序项目或使用 Visual Studio 的 WPF 浏览器应用程序项目时，应用程序定义默认情况下包括和使用标记和代码隐藏定义。  
@@ -195,17 +195,17 @@ ms.locfileid: "59100075"
 ### <a name="application-activation-and-deactivation"></a>应用程序激活和停用  
  Windows 允许用户应用程序之间切换。 最常见的方法是使用 ALT + TAB 键组合。 仅可应用程序切换为，如果具有可见<xref:System.Windows.Window>，用户可以选择。 当前所选<xref:System.Windows.Window>是*活动窗口*(也称为*前台窗口*) 是<xref:System.Windows.Window>接收用户输入。 与活动窗口的应用程序是*活动的应用程序*(或*前台应用程序*)。 应用程序会在以下情况下变为活动应用程序：  
   
--   它将启动并显示<xref:System.Windows.Window>。  
+- 它将启动并显示<xref:System.Windows.Window>。  
   
--   用户通过选择从另一个应用程序切换<xref:System.Windows.Window>应用程序中。  
+- 用户通过选择从另一个应用程序切换<xref:System.Windows.Window>应用程序中。  
   
  通过处理应用程序将变为活动状态时可以检测<xref:System.Windows.Application.Activated?displayProperty=nameWithType>事件。  
   
  同样地，应用程序会在以下情况下变为非活动状态：  
   
--   用户从当前应用程序切换到另一应用程序。  
+- 用户从当前应用程序切换到另一应用程序。  
   
--   应用程序关闭后。  
+- 应用程序关闭后。  
   
  当应用程序通过处理成为非活动状态时，可以检测到<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>事件。  
   
@@ -225,13 +225,13 @@ ms.locfileid: "59100075"
 ### <a name="application-shutdown"></a>应用程序关闭  
  应用程序的生存期会在其关闭时结束，出现这一情况可能是因为：  
   
--   用户关闭每个<xref:System.Windows.Window>。  
+- 用户关闭每个<xref:System.Windows.Window>。  
   
--   用户关闭了主<xref:System.Windows.Window>。  
+- 用户关闭了主<xref:System.Windows.Window>。  
   
--   用户通过注销或关闭来结束 Windows 会话。  
+- 用户通过注销或关闭来结束 Windows 会话。  
   
--   满足了特定于应用程序的条件。  
+- 满足了特定于应用程序的条件。  
   
  若要帮助你管理应用程序关闭<xref:System.Windows.Application>提供了<xref:System.Windows.Application.Shutdown%2A>方法，<xref:System.Windows.Application.ShutdownMode%2A>属性，和<xref:System.Windows.Application.SessionEnding>和<xref:System.Windows.Application.Exit>事件。  
   
@@ -241,11 +241,11 @@ ms.locfileid: "59100075"
 #### <a name="shutdown-mode"></a>关闭模式  
  大多数应用程序会在所有窗口都关闭后或在主窗口关闭后关闭。 但是，有时，应用程序会在何时关闭取决于特定于应用程序的其他条件。 你可以指定在其下你的应用程序会自动关机设置的条件<xref:System.Windows.Application.ShutdownMode%2A>具有以下项之一<xref:System.Windows.ShutdownMode>枚举值：  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  默认值<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnLastWindowClose>，这意味着，应用程序会自动将关闭时用户关闭应用程序中的最后一个窗口。 但是，如果主窗口关闭时，应关闭你的应用程序，WPF 会自动执行，如果您设置<xref:System.Windows.Application.ShutdownMode%2A>到<xref:System.Windows.ShutdownMode.OnMainWindowClose>。 这在下面的示例中显示。  
   
@@ -259,13 +259,13 @@ ms.locfileid: "59100075"
 #### <a name="session-ending"></a>会话结束  
  由描述的关闭条件<xref:System.Windows.Application.ShutdownMode%2A>属性是特定于应用程序。 不过，在某些情况下，应用程序可能会因外部条件而关闭。 用户通过以下操作来结束 Windows 会话时发生的最常见的外部条件：  
   
--   注销  
+- 注销  
   
--   关闭  
+- 关闭  
   
--   重新启动  
+- 重新启动  
   
--   休眠  
+- 休眠  
   
  若要检测 Windows 会话结束时，你可以处理<xref:System.Windows.Application.SessionEnding>事件，如下面的示例中所示。  
   
@@ -291,11 +291,11 @@ ms.locfileid: "59100075"
   
  <xref:System.Windows.Application.Exit> 可以处理由独立应用程序和 Xbap。 Xbap 的<xref:System.Windows.Application.Exit>时在以下情况下引发：  
   
--   XBAP 导航离开。  
+- XBAP 导航离开。  
   
--   在[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]，当关闭承载 XBAP 的选项卡。  
+- 在[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]，当关闭承载 XBAP 的选项卡。  
   
--   关闭浏览器时。  
+- 关闭浏览器时。  
   
 #### <a name="exit-code"></a>退出代码  
  在大多数情况下，应用程序由操作系统根据用户的请求来启动。 但是，应用程序也可由另一应用程序启动，以执行某项特定任务。 当被启动的应用程序关闭时，执行启动操作的应用程序可能想要了解导致被启动应用程序关闭的条件。 在这些情况下，Windows 允许应用程序在关闭会返回应用程序退出代码。 默认情况下，WPF 应用程序返回的退出代码值为 0。  
@@ -325,11 +325,11 @@ ms.locfileid: "59100075"
   
  从用户体验的角度来看，应用程序最好通过执行以下部分或全部操作来避免这种默认行为：  
   
--   显示对用户友好的信息。  
+- 显示对用户友好的信息。  
   
--   尝试让应用程序保持运行。  
+- 尝试让应用程序保持运行。  
   
--   录制详细，Windows 事件日志中的开发人员友好的异常信息。  
+- 录制详细，Windows 事件日志中的开发人员友好的异常信息。  
   
  实现此支持取决于能否检测到未经处理的异常，这是什么<xref:System.Windows.Application.DispatcherUnhandledException>为引发事件。  
   

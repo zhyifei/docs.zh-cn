@@ -8,11 +8,11 @@ ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 777d496614435106b84b47b9aa3d35d964bc3e07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704734"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 元素
 指定公共语言运行时是否允许托管的代码捕获访问冲突和其他损坏的状态异常。  
@@ -58,11 +58,11 @@ ms.locfileid: "59115097"
   
  从开始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]的托管代码不能再捕获这些类型中的异常的`catch`块。 但是，您可以覆盖此更改并维护两种方式损坏的状态异常的处理：  
   
--   设置`<legacyCorruptedStateExceptionsPolicy>`元素的`enabled`属性为`true`。 此配置设置适用，并会影响所有方法。  
+- 设置`<legacyCorruptedStateExceptionsPolicy>`元素的`enabled`属性为`true`。 此配置设置适用，并会影响所有方法。  
   
  或  
   
--   将应用<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>属性包含异常的方法为`catch`块。  
+- 将应用<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>属性包含异常的方法为`catch`块。  
   
  此配置元素是仅适用于[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]及更高版本。  
   

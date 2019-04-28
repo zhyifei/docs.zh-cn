@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607821"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>创建 DataView 对象 (LINQ to DataSet)
 在 <xref:System.Data.DataView> 上下文中创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 有两种方式。 您可以通过针对 <xref:System.Data.DataView> 的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询创建 <xref:System.Data.DataTable>，也可以从类型化或非类型化 <xref:System.Data.DataTable> 创建该对象。 在这两种情况下，您将创建<xref:System.Data.DataView>通过使用其中一个<xref:System.Data.DataTableExtensions.AsDataView%2A>; 的扩展方法<xref:System.Data.DataView>不是在可直接构造[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]上下文。  
@@ -31,19 +31,19 @@ ms.locfileid: "59121649"
   
  在用于创建 <xref:System.Data.DataView> 的查询中仅支持以下查询运算符：  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
  请注意，当<xref:System.Data.DataView>创建从[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询<xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>方法必须是在查询中调用的最后一个方法。 这一点在以下示例中，这会创建<xref:System.Data.DataView>按照欠款总额排序的联机订单的：  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757362"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：向 Windows 窗体 BindingNavigator 控件添加“加载”、“保存”和“取消”按钮
 <xref:System.Windows.Forms.BindingNavigator>控件是特殊用途<xref:System.Windows.Forms.ToolStrip>旨在用于导航和操作绑定到数据窗体上的控件的控件。  
@@ -40,15 +40,15 @@ ms.locfileid: "59304774"
   
 7. 在中**项集合编辑器**，完成下列操作：  
   
-    1.  添加<xref:System.Windows.Forms.ToolStripSeparator>和三个<xref:System.Windows.Forms.ToolStripButton>通过选择适当类型的项<xref:System.Windows.Forms.ToolStripItem>，然后单击**添加**按钮。  
+    1. 添加<xref:System.Windows.Forms.ToolStripSeparator>和三个<xref:System.Windows.Forms.ToolStripButton>通过选择适当类型的项<xref:System.Windows.Forms.ToolStripItem>，然后单击**添加**按钮。  
   
-    2.  设置<xref:System.Windows.Forms.ToolStripItem.Name%2A>到按钮的属性**LoadButton**， **SaveButton**，并且**CancelButton**分别。  
+    2. 设置<xref:System.Windows.Forms.ToolStripItem.Name%2A>到按钮的属性**LoadButton**， **SaveButton**，并且**CancelButton**分别。  
   
-    3.  设置<xref:System.Windows.Forms.ToolStripItem.Text%2A>到按钮的属性**负载**，**保存**，并且**取消**。  
+    3. 设置<xref:System.Windows.Forms.ToolStripItem.Text%2A>到按钮的属性**负载**，**保存**，并且**取消**。  
   
-    4.  设置<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>到按钮的每个属性**文本**。 或者，可以将此属性设置为**图像**或**ImageAndText**，并设置中显示的图像<xref:System.Windows.Forms.ToolStripItem.Image%2A>属性。  
+    4. 设置<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>到按钮的每个属性**文本**。 或者，可以将此属性设置为**图像**或**ImageAndText**，并设置中显示的图像<xref:System.Windows.Forms.ToolStripItem.Image%2A>属性。  
   
-    5.  单击**确定**以关闭对话框。这些按钮将添加到<xref:System.Windows.Forms.ToolStrip>。  
+    5. 单击**确定**以关闭对话框。这些按钮将添加到<xref:System.Windows.Forms.ToolStrip>。  
   
 8. 右键单击窗体，然后选择**查看代码**。  
   

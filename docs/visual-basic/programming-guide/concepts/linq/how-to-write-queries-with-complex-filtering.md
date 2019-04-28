@@ -3,11 +3,11 @@ title: 如何：使用复杂筛选 (Visual Basic) 编写查询
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
 ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614839"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>如何：使用复杂筛选 (Visual Basic) 编写查询
 有时，您需要编写使用复杂筛选器的 LINQ to XML 查询。 例如，您可能必须查找其子元素具有特定名称和值的所有元素。 本主题提供一个编写使用复杂筛选的查询的示例。  

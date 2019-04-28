@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
 ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669523"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation 中的新增功能
 中的 Windows Workflow Foundation (WF)[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]从以前的版本更改多个开发范例。 现在，工作流可以更方便地创建、执行、维护和实现许多新功能。 有关迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](migration-guidance.md)。  
@@ -24,13 +24,13 @@ ms.locfileid: "57711819"
 ## <a name="expanded-built-in-activity-library"></a>扩展的内置活动库  
  该活动库的新增功能包括：  
   
--   新增流控制活动，例如 <xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.Pick>、<xref:System.Activities.Statements.TryCatch>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.Switch%601> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
+- 新增流控制活动，例如 <xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.Pick>、<xref:System.Activities.Statements.TryCatch>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.Switch%601> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
   
--   用于操作成员数据的活动，例如 <xref:System.Activities.Statements.Assign> 和集合活动（如 <xref:System.Activities.Statements.AddToCollection%601>）。  
+- 用于操作成员数据的活动，例如 <xref:System.Activities.Statements.Assign> 和集合活动（如 <xref:System.Activities.Statements.AddToCollection%601>）。  
   
--   用于控制事务的活动，例如 <xref:System.Activities.Statements.TransactionScope> 和 <xref:System.Activities.Statements.Compensate>。  
+- 用于控制事务的活动，例如 <xref:System.Activities.Statements.TransactionScope> 和 <xref:System.Activities.Statements.Compensate>。  
   
--   新增消息传递活动，例如 <xref:System.ServiceModel.Activities.SendContent> 和 <xref:System.ServiceModel.Activities.ReceiveReply>。  
+- 新增消息传递活动，例如 <xref:System.ServiceModel.Activities.SendContent> 和 <xref:System.ServiceModel.Activities.ReceiveReply>。  
   
 ## <a name="explicit-activity-data-model"></a>显式活动数据模型  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含用于存储或移动数据的新选项。 可以使用 <xref:System.Activities.Variable> 在活动中存储数据。 当在活动中移入和移出数据时，将使用专用参数类型来确定数据的移动方向。 这些类型包括 <xref:System.Activities.InArgument>、<xref:System.Activities.InOutArgument> 和 <xref:System.Activities.OutArgument>。 有关详细信息，请参阅[Windows Workflow Foundation 数据模型](data-model.md)。  
@@ -38,21 +38,21 @@ ms.locfileid: "57711819"
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>增强的宿主、持久性和跟踪选项  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含如下持久性增强功能：  
   
--   提供了更多用于运行工作流的选项，其中包括 <xref:System.ServiceModel.Activities.WorkflowServiceHost>、<xref:System.Activities.WorkflowApplication> 和 <xref:System.Activities.WorkflowInvoker>。  
+- 提供了更多用于运行工作流的选项，其中包括 <xref:System.ServiceModel.Activities.WorkflowServiceHost>、<xref:System.Activities.WorkflowApplication> 和 <xref:System.Activities.WorkflowInvoker>。  
   
--   可以使用 <xref:System.Activities.Statements.Persist> 活动显式保存工作流状态数据。  
+- 可以使用 <xref:System.Activities.Statements.Persist> 活动显式保存工作流状态数据。  
   
--   主机可以保存 <xref:System.Activities.ActivityInstance>，而不必卸载它。  
+- 主机可以保存 <xref:System.Activities.ActivityInstance>，而不必卸载它。  
   
--   当使用无法保存的数据时，工作流可以指定非保存区域，以便推迟保存，直到退出非保存区域为止。  
+- 当使用无法保存的数据时，工作流可以指定非保存区域，以便推迟保存，直到退出非保存区域为止。  
   
--   可以使用 <xref:System.Activities.Statements.TransactionScope> 使事务流入到工作流中。  
+- 可以使用 <xref:System.Activities.Statements.TransactionScope> 使事务流入到工作流中。  
   
--   使用 <xref:System.Activities.Tracking.TrackingParticipant> 可以更方便地完成跟踪。  
+- 使用 <xref:System.Activities.Tracking.TrackingParticipant> 可以更方便地完成跟踪。  
   
--   使用 <xref:System.Activities.Tracking.EtwTrackingParticipant> 可以提供对系统事件日志的跟踪。  
+- 使用 <xref:System.Activities.Tracking.EtwTrackingParticipant> 可以提供对系统事件日志的跟踪。  
   
--   现在可以使用 <xref:System.Activities.Bookmark> 对象管理对挂起的工作流的恢复。  
+- 现在可以使用 <xref:System.Activities.Bookmark> 对象管理对挂起的工作流的恢复。  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>简化的 WF 设计器扩展体验功能  
  新 WF 设计器内置上 Windows Presentation Foundation (WPF) 和提供更简单的模型时重新承载 WF 设计器在 Visual Studio 外部使用，还提供了用于创建自定义活动设计器的简单机制。 有关详细信息，请参阅[自定义工作流设计体验](customizing-the-workflow-design-experience.md)。

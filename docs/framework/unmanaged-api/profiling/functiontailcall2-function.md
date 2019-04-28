@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 06dd3b028f4f43ca8681c80a5caa4716104068dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598800"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函数
 通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用并提供有关堆栈帧的信息。  
@@ -57,9 +57,9 @@ void __stdcall FunctionTailcall2 (
   
  调用此函数之前，执行引擎不会保存任何寄存器。  
   
--   在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
+- 在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。  
   
--   退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
+- 退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。  
   
  实现`FunctionTailcall2`不应阻止，因为它会延迟垃圾回收。 实现不应尝试垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。 如果尝试在垃圾回收，则运行时将阻止直到`FunctionTailcall2`返回。  
   

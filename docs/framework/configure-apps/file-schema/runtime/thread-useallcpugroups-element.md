@@ -5,11 +5,11 @@ ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 236953cc1a430a1dd2a2fbb633c7ef06e6ba200f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704682"
 ---
 # <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > 元素
 指定运行时是否跨所有 CPU 组分发托管的线程。  

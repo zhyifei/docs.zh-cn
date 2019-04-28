@@ -3,11 +3,11 @@ title: 当 Web 场中承载 WCF 服务时防止重放攻击
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
 ms.openlocfilehash: e27a85d42268df107b26d3bd24af15a639bb1836
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641588"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>当 Web 场中承载 WCF 服务时防止重放攻击
 当使用消息安全性时，WCF 通过从传入的消息创建 NONCE 并检查内部 `InMemoryNonceCache` 以查看是否存在生成的 NONCE，从而防止重播攻击。 如果存在，则该消息作为重播被丢弃。 当 WCF 服务承载在 Web 场中时，因为不跨 Web 场中的节点共享 `InMemoryNonceCache`，所以服务易于受重播攻击。  为了缓解这种情况，WCF 4.5 提供了一个可扩展点，使您能够通过从抽象类 <xref:System.ServiceModel.Security.NonceCache> 中派生类来实现您自己的共享 NONCE 缓存。  
