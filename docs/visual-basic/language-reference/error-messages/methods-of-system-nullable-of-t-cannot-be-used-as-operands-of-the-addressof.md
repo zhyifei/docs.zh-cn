@@ -8,22 +8,22 @@ helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
 ms.openlocfilehash: 54d66a60d20a6add4c2b4a160f87b58b5a1d00e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920882"
 ---
-# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a><span data-ttu-id="13fd7-102">“System.Nullable(Of T)”的方法不能用作“AddressOf”运算符的操作数</span><span class="sxs-lookup"><span data-stu-id="13fd7-102">Methods of 'System.Nullable(Of T)' cannot be used as operands of the 'AddressOf' operator</span></span>
-<span data-ttu-id="13fd7-103">语句使用`AddressOf`运算符的操作数表示的过程与<xref:System.Nullable%601>结构。</span><span class="sxs-lookup"><span data-stu-id="13fd7-103">A statement uses the `AddressOf` operator with an operand that represents a procedure of the <xref:System.Nullable%601> structure.</span></span>  
+# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a><span data-ttu-id="d067c-102">“System.Nullable(Of T)”的方法不能用作“AddressOf”运算符的操作数</span><span class="sxs-lookup"><span data-stu-id="d067c-102">Methods of 'System.Nullable(Of T)' cannot be used as operands of the 'AddressOf' operator</span></span>
+<span data-ttu-id="d067c-103">语句使用`AddressOf`运算符的操作数表示的过程与<xref:System.Nullable%601>结构。</span><span class="sxs-lookup"><span data-stu-id="d067c-103">A statement uses the `AddressOf` operator with an operand that represents a procedure of the <xref:System.Nullable%601> structure.</span></span>  
   
- <span data-ttu-id="13fd7-104">**错误 ID:** BC32126</span><span class="sxs-lookup"><span data-stu-id="13fd7-104">**Error ID:** BC32126</span></span>  
+ <span data-ttu-id="d067c-104">**错误 ID:** BC32126</span><span class="sxs-lookup"><span data-stu-id="d067c-104">**Error ID:** BC32126</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="13fd7-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="13fd7-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d067c-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="d067c-105">To correct this error</span></span>  
   
--   <span data-ttu-id="13fd7-106">中的过程名称替换`AddressOf`与操作数不是的成员一起子句<xref:System.Nullable%601>。</span><span class="sxs-lookup"><span data-stu-id="13fd7-106">Replace the procedure name in the `AddressOf` clause with an operand that is not a member of <xref:System.Nullable%601>.</span></span>  
+- <span data-ttu-id="d067c-106">中的过程名称替换`AddressOf`与操作数不是的成员一起子句<xref:System.Nullable%601>。</span><span class="sxs-lookup"><span data-stu-id="d067c-106">Replace the procedure name in the `AddressOf` clause with an operand that is not a member of <xref:System.Nullable%601>.</span></span>  
   
--   <span data-ttu-id="13fd7-107">编写的类包装的方法，<xref:System.Nullable%601>想要使用。</span><span class="sxs-lookup"><span data-stu-id="13fd7-107">Write a class that wraps the method of <xref:System.Nullable%601> that you want to use.</span></span> <span data-ttu-id="13fd7-108">在以下示例中，`NullableWrapper`类定义一个名为的新方法`GetValueOrDefault`。</span><span class="sxs-lookup"><span data-stu-id="13fd7-108">In the following example, the `NullableWrapper` class defines a new method named `GetValueOrDefault`.</span></span> <span data-ttu-id="13fd7-109">因为这种新方法不属于<xref:System.Nullable%601>，它可以应用于`nullInstance`，可以为 null 的类型，以形成的参数的实例`AddressOf`。</span><span class="sxs-lookup"><span data-stu-id="13fd7-109">Because this new method is not a member of <xref:System.Nullable%601>, it can be applied to `nullInstance`, an instance of a nullable type, to form an argument for `AddressOf`.</span></span>  
+- <span data-ttu-id="d067c-107">编写的类包装的方法，<xref:System.Nullable%601>想要使用。</span><span class="sxs-lookup"><span data-stu-id="d067c-107">Write a class that wraps the method of <xref:System.Nullable%601> that you want to use.</span></span> <span data-ttu-id="d067c-108">在以下示例中，`NullableWrapper`类定义一个名为的新方法`GetValueOrDefault`。</span><span class="sxs-lookup"><span data-stu-id="d067c-108">In the following example, the `NullableWrapper` class defines a new method named `GetValueOrDefault`.</span></span> <span data-ttu-id="d067c-109">因为这种新方法不属于<xref:System.Nullable%601>，它可以应用于`nullInstance`，可以为 null 的类型，以形成的参数的实例`AddressOf`。</span><span class="sxs-lookup"><span data-stu-id="d067c-109">Because this new method is not a member of <xref:System.Nullable%601>, it can be applied to `nullInstance`, an instance of a nullable type, to form an argument for `AddressOf`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -61,9 +61,9 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="13fd7-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="13fd7-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d067c-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="d067c-110">See also</span></span>
 
 - <xref:System.Nullable%601>
-- [<span data-ttu-id="13fd7-111">AddressOf 运算符</span><span class="sxs-lookup"><span data-stu-id="13fd7-111">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [<span data-ttu-id="13fd7-112">可以为 null 的值类型</span><span class="sxs-lookup"><span data-stu-id="13fd7-112">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="13fd7-113">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="13fd7-113">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="d067c-111">AddressOf 运算符</span><span class="sxs-lookup"><span data-stu-id="d067c-111">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [<span data-ttu-id="d067c-112">可以为 null 的值类型</span><span class="sxs-lookup"><span data-stu-id="d067c-112">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="d067c-113">Visual Basic 中的泛型类型</span><span class="sxs-lookup"><span data-stu-id="d067c-113">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
