@@ -11,31 +11,31 @@ ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 876f0fe3c40cb6754b4ba714833dd160dc4de3a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754396"
 ---
-# <a name="invalidgchandlecookie-mda"></a><span data-ttu-id="c5725-102">invalidGCHandleCookie MDA</span><span class="sxs-lookup"><span data-stu-id="c5725-102">invalidGCHandleCookie MDA</span></span>
-<span data-ttu-id="c5725-103">尝试将无效的 <xref:System.IntPtr> Cookie 转换为 <xref:System.Runtime.InteropServices.GCHandle> 时，将激活 `invalidGCHandleCookie` 托管调试助手（MDA）。</span><span class="sxs-lookup"><span data-stu-id="c5725-103">The `invalidGCHandleCookie` managed debugging assistant (MDA) is activated when a conversion from an invalid <xref:System.IntPtr> cookie to a <xref:System.Runtime.InteropServices.GCHandle> is attempted.</span></span>  
+# <a name="invalidgchandlecookie-mda"></a><span data-ttu-id="232b1-102">invalidGCHandleCookie MDA</span><span class="sxs-lookup"><span data-stu-id="232b1-102">invalidGCHandleCookie MDA</span></span>
+<span data-ttu-id="232b1-103">尝试将无效的 <xref:System.IntPtr> Cookie 转换为 <xref:System.Runtime.InteropServices.GCHandle> 时，将激活 `invalidGCHandleCookie` 托管调试助手（MDA）。</span><span class="sxs-lookup"><span data-stu-id="232b1-103">The `invalidGCHandleCookie` managed debugging assistant (MDA) is activated when a conversion from an invalid <xref:System.IntPtr> cookie to a <xref:System.Runtime.InteropServices.GCHandle> is attempted.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="c5725-104">症状</span><span class="sxs-lookup"><span data-stu-id="c5725-104">Symptoms</span></span>  
- <span data-ttu-id="c5725-105">尝试从 <xref:System.IntPtr> 使用或检索 <xref:System.Runtime.InteropServices.GCHandle> 时，发生未定义的行为，如访问冲突和内存损坏。</span><span class="sxs-lookup"><span data-stu-id="c5725-105">Undefined behavior such as access violations and memory corruption while attempting to use or retrieve a <xref:System.Runtime.InteropServices.GCHandle> from an <xref:System.IntPtr>.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="232b1-104">症状</span><span class="sxs-lookup"><span data-stu-id="232b1-104">Symptoms</span></span>  
+ <span data-ttu-id="232b1-105">尝试从 <xref:System.IntPtr> 使用或检索 <xref:System.Runtime.InteropServices.GCHandle> 时，发生未定义的行为，如访问冲突和内存损坏。</span><span class="sxs-lookup"><span data-stu-id="232b1-105">Undefined behavior such as access violations and memory corruption while attempting to use or retrieve a <xref:System.Runtime.InteropServices.GCHandle> from an <xref:System.IntPtr>.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="c5725-106">原因</span><span class="sxs-lookup"><span data-stu-id="c5725-106">Cause</span></span>  
- <span data-ttu-id="c5725-107">该 Cookie 可能是无效的，因为它原本不是从 <xref:System.Runtime.InteropServices.GCHandle> 创建的。它表示已被释放的 <xref:System.Runtime.InteropServices.GCHandle>，是不同应用程序域中 <xref:System.Runtime.InteropServices.GCHandle> 的 Cookie，或者作为 <xref:System.Runtime.InteropServices.GCHandle> 被封送到了本机代码、但作为 <xref:System.IntPtr> 被传回到了 CLR，在那里尝试了转换。</span><span class="sxs-lookup"><span data-stu-id="c5725-107">The cookie is probably invalid because it was not originally created from a <xref:System.Runtime.InteropServices.GCHandle>, represents a <xref:System.Runtime.InteropServices.GCHandle> that has already been freed, is a cookie to a <xref:System.Runtime.InteropServices.GCHandle> in a different application domain, or was marshaled to native code as a <xref:System.Runtime.InteropServices.GCHandle> but passed back into the CLR as an <xref:System.IntPtr>, where a cast was attempted.</span></span>  
+## <a name="cause"></a><span data-ttu-id="232b1-106">原因</span><span class="sxs-lookup"><span data-stu-id="232b1-106">Cause</span></span>  
+ <span data-ttu-id="232b1-107">该 Cookie 可能是无效的，因为它原本不是从 <xref:System.Runtime.InteropServices.GCHandle> 创建的。它表示已被释放的 <xref:System.Runtime.InteropServices.GCHandle>，是不同应用程序域中 <xref:System.Runtime.InteropServices.GCHandle> 的 Cookie，或者作为 <xref:System.Runtime.InteropServices.GCHandle> 被封送到了本机代码、但作为 <xref:System.IntPtr> 被传回到了 CLR，在那里尝试了转换。</span><span class="sxs-lookup"><span data-stu-id="232b1-107">The cookie is probably invalid because it was not originally created from a <xref:System.Runtime.InteropServices.GCHandle>, represents a <xref:System.Runtime.InteropServices.GCHandle> that has already been freed, is a cookie to a <xref:System.Runtime.InteropServices.GCHandle> in a different application domain, or was marshaled to native code as a <xref:System.Runtime.InteropServices.GCHandle> but passed back into the CLR as an <xref:System.IntPtr>, where a cast was attempted.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="c5725-108">解决方法</span><span class="sxs-lookup"><span data-stu-id="c5725-108">Resolution</span></span>  
- <span data-ttu-id="c5725-109">为 <xref:System.Runtime.InteropServices.GCHandle> 指定有效的 <xref:System.IntPtr> Cookie。</span><span class="sxs-lookup"><span data-stu-id="c5725-109">Specify a valid <xref:System.IntPtr> cookie for the <xref:System.Runtime.InteropServices.GCHandle>.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="232b1-108">解决方法</span><span class="sxs-lookup"><span data-stu-id="232b1-108">Resolution</span></span>  
+ <span data-ttu-id="232b1-109">为 <xref:System.Runtime.InteropServices.GCHandle> 指定有效的 <xref:System.IntPtr> Cookie。</span><span class="sxs-lookup"><span data-stu-id="232b1-109">Specify a valid <xref:System.IntPtr> cookie for the <xref:System.Runtime.InteropServices.GCHandle>.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="c5725-110">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="c5725-110">Effect on the Runtime</span></span>  
- <span data-ttu-id="c5725-111">此 MDA 启用后，调试程序不再能从根源追溯到对象，因为传回的 Cookie 值与 MDA 未启用时返回的值不同。</span><span class="sxs-lookup"><span data-stu-id="c5725-111">When this MDA is enabled, the debugger is no longer able to trace the roots back to their objects because the cookie values passed back are different from the ones returned when the MDA is not enabled.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="232b1-110">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="232b1-110">Effect on the Runtime</span></span>  
+ <span data-ttu-id="232b1-111">此 MDA 启用后，调试程序不再能从根源追溯到对象，因为传回的 Cookie 值与 MDA 未启用时返回的值不同。</span><span class="sxs-lookup"><span data-stu-id="232b1-111">When this MDA is enabled, the debugger is no longer able to trace the roots back to their objects because the cookie values passed back are different from the ones returned when the MDA is not enabled.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="c5725-112">Output</span><span class="sxs-lookup"><span data-stu-id="c5725-112">Output</span></span>  
- <span data-ttu-id="c5725-113">报告无效的 <xref:System.IntPtr> Cookie 值。</span><span class="sxs-lookup"><span data-stu-id="c5725-113">The invalid <xref:System.IntPtr> cookie value is reported.</span></span>  
+## <a name="output"></a><span data-ttu-id="232b1-112">Output</span><span class="sxs-lookup"><span data-stu-id="232b1-112">Output</span></span>  
+ <span data-ttu-id="232b1-113">报告无效的 <xref:System.IntPtr> Cookie 值。</span><span class="sxs-lookup"><span data-stu-id="232b1-113">The invalid <xref:System.IntPtr> cookie value is reported.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="c5725-114">配置</span><span class="sxs-lookup"><span data-stu-id="c5725-114">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="232b1-114">配置</span><span class="sxs-lookup"><span data-stu-id="232b1-114">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -45,8 +45,8 @@ ms.locfileid: "59176951"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c5725-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c5725-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="232b1-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="232b1-115">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>
-- [<span data-ttu-id="c5725-116">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="c5725-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="232b1-116">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="232b1-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
