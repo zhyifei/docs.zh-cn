@@ -3,11 +3,11 @@ title: 筛选
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856695"
 ---
 # <a name="filtering"></a>筛选
 Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选器匹配的消息以及做出操作决定。 使用筛选器，可以通过检查消息的某个部分来确定如何处理消息。 例如，查询过程可以使用 XPath 1.0 查询来检查已知标头的优先级元素，以确定是否将消息移动到队列的靠前位置。  
@@ -36,9 +36,9 @@ Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选�
 ### <a name="endpoint-address-filters"></a>终结点地址筛选器  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 基于终结点地址筛选消息和消息缓冲区（终结点地址在消息和消息缓冲区的标头集合中表示）。 消息要想通过这样的筛选器，必须满足下列条件：  
   
--   筛选器的地址统一资源标识符 (URI) 必须与消息 To 标头中的统一资源标识符相同。  
+- 筛选器的地址统一资源标识符 (URI) 必须与消息 To 标头中的统一资源标识符相同。  
   
--   筛选器地址中的每个终结点参数（`address.Headers` 集合）都必须在消息中找到一个与之匹配的标头。 消息或消息缓冲区中的额外标头可使匹配结果保持为 `true`。  
+- 筛选器地址中的每个终结点参数（`address.Headers` 集合）都必须在消息中找到一个与之匹配的标头。 消息或消息缓冲区中的额外标头可使匹配结果保持为 `true`。  
   
 ### <a name="prefix-endpoint-address-filters"></a>前缀终结点地址筛选器  
   
@@ -79,9 +79,9 @@ Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选�
 ### <a name="de-multiplexing"></a>多路分解  
  当多个终结点与同一个 `ServiceListener` 连接并散布在网络中时，若要对消息进行多路分解并了解消息是否属于某个终结点地址，唯一的方式是使用 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>，此类筛选器通过对标头中存储的信息执行查找来选择发送到已注册终结点的消息。 在这些筛选器中，只有那些通过筛选的消息才具有所有必要的标头，这些标头同时对应于：  
   
--   `EndpointAddress` 中的 URI。  
+- `EndpointAddress` 中的 URI。  
   
--   `EndpointAddress` 中的其余终结点参数（如 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中指定）。  
+- `EndpointAddress` 中的其余终结点参数（如 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中指定）。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -13,11 +13,11 @@ ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b35e6ab4de699126b4b3b5f74d7a9a8dacfa4a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874401"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 写入 <xref:System.IO.StreamWriter> 时，将激活 `streamWriterBufferedDataLost` 托管调试助手 (MDA)，但随后，在销毁 <xref:System.IO.StreamWriter> 的实例前不再调用 <xref:System.IO.StreamWriter.Flush%2A> 或 <xref:System.IO.StreamWriter.Close%2A> 方法。 启用此 MDA 时，运行时确定 <xref:System.IO.StreamWriter> 内是否仍然有任何缓冲数据。 如果缓冲数据确实存在，则将激活 MDA。 调用 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以强制运行终结器。 否则，终结器将似乎在任意时刻运行，并且在进程退出时可能根本没有运行。 在启用了此 MDA 的情况下显式运行终结器将有助于更可靠地重现此类问题。  

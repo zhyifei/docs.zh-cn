@@ -3,11 +3,11 @@ title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
 ms.openlocfilehash: 7d0afd638e9a311b69ff47b6789d5fde093945ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673519"
 ---
 # <a name="baseaddresses"></a>\<baseAddresses>
 表示一个 `baseAddress` 元素集合，这些元素是自承载环境中服务主机的基址。 如果存在基址，则可以使用相对于基址的地址配置终结点。  

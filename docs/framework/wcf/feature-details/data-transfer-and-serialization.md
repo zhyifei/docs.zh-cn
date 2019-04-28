@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856552"
 ---
 # <a name="data-transfer-and-serialization"></a>数据传输和序列化
 在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为服务或客户端的开发人员，您还必须了解 Windows Communication Foundation (WCF) 如何才能创建高效且易于维护的应用程序处理了数据和数据序列化。  

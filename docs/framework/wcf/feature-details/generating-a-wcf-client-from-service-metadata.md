@@ -3,22 +3,22 @@ title: 根据服务元数据生成 WCF 客户端
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
 ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855993"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>根据服务元数据生成 WCF 客户端
 本主题介绍如何使用 Svcutil.exe 中的各种开关，根据元数据文档生成客户端。  
   
  元数据文档可以位于持久性存储区中，也可以联机检索。 联机检索遵循 WS-MetadataExchange 协议或 Microsoft 发现 (DISCO) 协议。 Svcutil.exe 同时发出以下元数据请求以检索元数据：  
   
--   发往所提供地址的 WS-MetadataExchange (MEX) 请求。  
+- 发往所提供地址的 WS-MetadataExchange (MEX) 请求。  
   
--   发往所提供地址的 MEX 请求，并追加了 `/mex`。  
+- 发往所提供地址的 MEX 请求，并追加了 `/mex`。  
   
--   DISCO 请求 (使用[DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777)从 ASP.NET Web 服务) 针对所提供地址。  
+- DISCO 请求 (使用[DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777)从 ASP.NET Web 服务) 针对所提供地址。  
   
  Svcutil.exe 基于 Web 服务描述语言 (WSDL) 或从服务接收的策略文件生成客户端。 通过串联用户名称和生成的用户主体名称 (UPN)"\@"，然后添加完全限定域名 (FQDN)。 但是，对于在 Active Directory 注册的用户，此格式无效，该工具将生成的 UPN 导致以下错误消息进行 Kerberos 身份验证失败：**登录尝试失败。** 若要解决此问题，请手动修复该工具生成的客户端文件。  
   

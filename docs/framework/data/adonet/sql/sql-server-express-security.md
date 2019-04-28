@@ -3,11 +3,11 @@ title: SQL Server Express 安全性
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
 ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876780"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 Microsoft SQL Server Express Edition (SQL Server Express) 基于 Microsoft SQL Server，支持数据库引擎的大多数功能。 它如此设计旨在默认情况下关闭不重要的功能和网络连接。 这可减少恶意用户可以利用的攻击面。  

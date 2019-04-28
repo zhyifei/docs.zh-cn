@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
 ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906851"
 ---
 # <a name="loop-structures-visual-basic"></a>循环结构 (Visual Basic)
 Visual Basic 循环结构，可运行的代码的一个或多个行重复损坏。 您可以重复循环结构中的语句，直到条件为`True`，直到条件为`False`、 在集合中指定的次数，或者一次的每个元素。  

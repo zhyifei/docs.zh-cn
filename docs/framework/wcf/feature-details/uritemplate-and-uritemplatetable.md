@@ -3,11 +3,11 @@ title: UriTemplate 和 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918627"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 和 UriTemplateTable
 Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。 Windows Communication Foundation (WCF) 添加两个新类，以帮助开发人员控制其 Uri。 <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>构成 WCF 中基于 URI 的调度引擎的基础。 这些类还可以在其自身，从而允许开发人员充分利用模板和 URI 映射机制而无需实现 WCF 服务使用。  

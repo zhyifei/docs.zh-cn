@@ -3,11 +3,11 @@ title: 诊断事务应用程序
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856734"
 ---
 # <a name="diagnosing-transactional-applications"></a>诊断事务应用程序
 本主题介绍如何使用 Windows Communication Foundation (WCF) 管理和诊断功能来解决事务应用程序。  
@@ -87,15 +87,15 @@ ms.locfileid: "59101707"
 ## <a name="tracing"></a>跟踪  
  通过跟踪，可以监视和分析事务应用程序中的错误。 可以使用以下方式启用跟踪：  
   
--   标准 WCF 跟踪  
+- 标准 WCF 跟踪  
   
      这种类型是跟踪的跟踪任何 WCF 应用程序相同。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
   
--   WS-AtomicTransaction 跟踪  
+- WS-AtomicTransaction 跟踪  
   
      WS-AtomicTransaction 跟踪可以通过启用[WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。 这种跟踪有助于详细了解系统中事务和参与者的状态。 若还要启用内部服务模块跟踪，可以将 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 注册表项设置为 <xref:System.Diagnostics.SourceLevels> 枚举的一个有效值。 可以启用消息日志记录与其他 WCF 应用程序相同的方式。  
   
--   `System.Transactions` 跟踪  
+- `System.Transactions` 跟踪  
   
      使用 OleTransactions 协议时，无法跟踪协议消息。 通过 <xref:System.Transactions> 基础结构提供的跟踪支持（它使用 OleTransactions），用户可以查看事务上发生的事件。 若要为 <xref:System.Transactions> 应用程序启用跟踪，请在 `App.config` 配置文件中包含以下代码。  
   

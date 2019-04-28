@@ -7,11 +7,11 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804008"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>如何：使用子时间线简化动画
 此示例演示如何使用子简化动画<xref:System.Windows.Media.Animation.ParallelTimeline>对象。 一个<xref:System.Windows.Media.Animation.Storyboard>是一种<xref:System.Windows.Media.Animation.Timeline>提供它所包含的时间线目标信息。 使用<xref:System.Windows.Media.Animation.Storyboard>提供时间线目标信息，包括对象和属性信息。  

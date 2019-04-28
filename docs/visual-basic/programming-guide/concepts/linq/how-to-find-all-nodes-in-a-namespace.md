@@ -3,11 +3,11 @@ title: 如何：查找 Namespace (Visual Basic 中) 中的所有节点
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855668"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何：查找 Namespace (Visual Basic 中) 中的所有节点
 您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。  
