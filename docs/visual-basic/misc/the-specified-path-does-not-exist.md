@@ -3,21 +3,21 @@ title: 指定的路径不存在
 ms.date: 07/20/2015
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
 ms.openlocfilehash: 933f23f42cc591bbc8eccb23b0e1b2bb700dfb6a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669077"
 ---
-# <a name="the-specified-path-does-not-exist"></a><span data-ttu-id="a1100-102">指定的路径不存在</span><span class="sxs-lookup"><span data-stu-id="a1100-102">The specified path does not exist</span></span>
-<span data-ttu-id="a1100-103">指定的路径不存在，可能是由于组合字符串时发生了错误。</span><span class="sxs-lookup"><span data-stu-id="a1100-103">A specified path does not exist, perhaps due to an error combining strings.</span></span>  
+# <a name="the-specified-path-does-not-exist"></a><span data-ttu-id="209d4-102">指定的路径不存在</span><span class="sxs-lookup"><span data-stu-id="209d4-102">The specified path does not exist</span></span>
+<span data-ttu-id="209d4-103">指定的路径不存在，可能是由于组合字符串时发生了错误。</span><span class="sxs-lookup"><span data-stu-id="209d4-103">A specified path does not exist, perhaps due to an error combining strings.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a1100-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="a1100-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="209d4-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="209d4-104">To correct this error</span></span>  
   
--   <span data-ttu-id="a1100-105">请确保路径正确无误。</span><span class="sxs-lookup"><span data-stu-id="a1100-105">Make sure that the path is correct.</span></span>  
+- <span data-ttu-id="209d4-105">请确保路径正确无误。</span><span class="sxs-lookup"><span data-stu-id="209d4-105">Make sure that the path is correct.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1100-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="a1100-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="209d4-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="209d4-106">See also</span></span>
 
-- [<span data-ttu-id="a1100-107">如何：分析文件路径</span><span class="sxs-lookup"><span data-stu-id="a1100-107">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [<span data-ttu-id="a1100-108">字符串和其他类型之间的转换</span><span class="sxs-lookup"><span data-stu-id="a1100-108">Conversions Between Strings and Other Types</span></span>](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- <span data-ttu-id="a1100-109">[分析字符串 (Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms235224(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="a1100-109">[Parsing Strings in Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms235224(v=vs.100))</span></span>
+- [<span data-ttu-id="209d4-107">如何：分析文件路径</span><span class="sxs-lookup"><span data-stu-id="209d4-107">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [<span data-ttu-id="209d4-108">字符串和其他类型之间的转换</span><span class="sxs-lookup"><span data-stu-id="209d4-108">Conversions Between Strings and Other Types</span></span>](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- <span data-ttu-id="209d4-109">[分析字符串 (Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms235224(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="209d4-109">[Parsing Strings in Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms235224(v=vs.100))</span></span>

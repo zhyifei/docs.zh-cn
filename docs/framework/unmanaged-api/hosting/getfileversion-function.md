@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d25a3ccdd66ff7acb70f1f5e6c60157b53cc97c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628452"
 ---
-# <a name="getfileversion-function"></a><span data-ttu-id="ad248-102">GetFileVersion 函数</span><span class="sxs-lookup"><span data-stu-id="ad248-102">GetFileVersion Function</span></span>
-<span data-ttu-id="ad248-103">获取指定的文件，使用指定的缓冲区的公共语言运行时 (CLR) 版本信息。</span><span class="sxs-lookup"><span data-stu-id="ad248-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
+# <a name="getfileversion-function"></a><span data-ttu-id="f8cb1-102">GetFileVersion 函数</span><span class="sxs-lookup"><span data-stu-id="f8cb1-102">GetFileVersion Function</span></span>
+<span data-ttu-id="f8cb1-103">获取指定的文件，使用指定的缓冲区的公共语言运行时 (CLR) 版本信息。</span><span class="sxs-lookup"><span data-stu-id="f8cb1-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
   
- <span data-ttu-id="ad248-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="ad248-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="f8cb1-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f8cb1-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad248-105">语法</span><span class="sxs-lookup"><span data-stu-id="ad248-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8cb1-105">语法</span><span class="sxs-lookup"><span data-stu-id="f8cb1-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFileVersion (  
@@ -39,26 +39,26 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ad248-106">参数</span><span class="sxs-lookup"><span data-stu-id="ad248-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8cb1-106">参数</span><span class="sxs-lookup"><span data-stu-id="f8cb1-106">Parameters</span></span>  
  `szFilename`  
- <span data-ttu-id="ad248-107">[in]要检查的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="ad248-107">[in] The path of the file to be examined.</span></span>  
+ <span data-ttu-id="f8cb1-107">[in]要检查的文件的路径。</span><span class="sxs-lookup"><span data-stu-id="f8cb1-107">[in] The path of the file to be examined.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="ad248-108">[in、 out]有关返回的版本信息分配的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="ad248-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
+ <span data-ttu-id="f8cb1-108">[in、 out]有关返回的版本信息分配的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="f8cb1-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="ad248-109">[in]大小，以宽字符为单位的`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="ad248-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
+ <span data-ttu-id="f8cb1-109">[in]大小，以宽字符为单位的`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="f8cb1-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="ad248-110">[out]大小 （字节），则返回的`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="ad248-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
+ <span data-ttu-id="f8cb1-110">[out]大小 （字节），则返回的`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="f8cb1-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad248-111">要求</span><span class="sxs-lookup"><span data-stu-id="ad248-111">Requirements</span></span>  
- <span data-ttu-id="ad248-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ad248-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8cb1-111">要求</span><span class="sxs-lookup"><span data-stu-id="f8cb1-111">Requirements</span></span>  
+ <span data-ttu-id="f8cb1-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f8cb1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad248-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ad248-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f8cb1-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f8cb1-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ad248-114">**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad248-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="f8cb1-114">**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8cb1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad248-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="ad248-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8cb1-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8cb1-115">See also</span></span>
 
-- [<span data-ttu-id="ad248-116">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="ad248-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="f8cb1-116">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="f8cb1-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

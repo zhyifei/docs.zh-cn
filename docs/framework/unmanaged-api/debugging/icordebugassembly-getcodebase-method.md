@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645482"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="08ff7-102">ICorDebugAssembly::GetCodeBase 方法</span><span class="sxs-lookup"><span data-stu-id="08ff7-102">ICorDebugAssembly::GetCodeBase Method</span></span>
-<span data-ttu-id="08ff7-103">.NET Framework 的当前版本中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="08ff7-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="91172-102">ICorDebugAssembly::GetCodeBase 方法</span><span class="sxs-lookup"><span data-stu-id="91172-102">ICorDebugAssembly::GetCodeBase Method</span></span>
+<span data-ttu-id="91172-103">当前版本的.NET Framework 中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="91172-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08ff7-104">语法</span><span class="sxs-lookup"><span data-stu-id="08ff7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91172-104">语法</span><span class="sxs-lookup"><span data-stu-id="91172-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeBase (  

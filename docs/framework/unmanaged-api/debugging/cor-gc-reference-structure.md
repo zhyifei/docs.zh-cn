@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609442"
 ---
-# <a name="corgcreference-structure"></a><span data-ttu-id="5ff02-102">COR_GC_REFERENCE 结构</span><span class="sxs-lookup"><span data-stu-id="5ff02-102">COR_GC_REFERENCE Structure</span></span>
-<span data-ttu-id="5ff02-103">包含有关要进行垃圾回收的对象的信息。</span><span class="sxs-lookup"><span data-stu-id="5ff02-103">Contains information about an object that is to be garbage-collected.</span></span>  
+# <a name="corgcreference-structure"></a><span data-ttu-id="5085e-102">COR_GC_REFERENCE 结构</span><span class="sxs-lookup"><span data-stu-id="5085e-102">COR_GC_REFERENCE Structure</span></span>
+<span data-ttu-id="5085e-103">包含有关要进行垃圾回收的对象的信息。</span><span class="sxs-lookup"><span data-stu-id="5085e-103">Contains information about an object that is to be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ff02-104">语法</span><span class="sxs-lookup"><span data-stu-id="5ff02-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5085e-104">语法</span><span class="sxs-lookup"><span data-stu-id="5085e-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_GC_REFERENCE {  
@@ -37,42 +37,42 @@ typedef struct _COR_GC_REFERENCE {
 } COR_GC_REFERENCE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5ff02-105">成员</span><span class="sxs-lookup"><span data-stu-id="5ff02-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5085e-105">成员</span><span class="sxs-lookup"><span data-stu-id="5085e-105">Members</span></span>  
   
-|<span data-ttu-id="5ff02-106">成员</span><span class="sxs-lookup"><span data-stu-id="5ff02-106">Member</span></span>|<span data-ttu-id="5ff02-107">描述</span><span class="sxs-lookup"><span data-stu-id="5ff02-107">Description</span></span>|  
+|<span data-ttu-id="5085e-106">成员</span><span class="sxs-lookup"><span data-stu-id="5085e-106">Member</span></span>|<span data-ttu-id="5085e-107">描述</span><span class="sxs-lookup"><span data-stu-id="5085e-107">Description</span></span>|  
 |------------|-----------------|  
-|`domain`|<span data-ttu-id="5ff02-108">指向句柄或对象所属的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="5ff02-108">A pointer to the application domain to which the handle or object belongs.</span></span> <span data-ttu-id="5ff02-109">其值可能为`null`。</span><span class="sxs-lookup"><span data-stu-id="5ff02-109">Its value may be `null`.</span></span>|  
-|`location`|<span data-ttu-id="5ff02-110">ICorDebugValue 或 ICorDebugReferenceValue 接口对应于要进行垃圾回收的对象。</span><span class="sxs-lookup"><span data-stu-id="5ff02-110">Either an ICorDebugValue or an ICorDebugReferenceValue interface that corresponds to the object to be garbage-collected.</span></span>|  
-|`type`|<span data-ttu-id="5ff02-111">一个[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举值，该值指示根原来所在的位置。</span><span class="sxs-lookup"><span data-stu-id="5ff02-111">A [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeration value that indicates where the root came from.</span></span> <span data-ttu-id="5ff02-112">有关详细信息，请参阅“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="5ff02-112">For more information, see the Remarks section.</span></span>|  
-|`extraData`|<span data-ttu-id="5ff02-113">要进行垃圾回收的对象有关的其他数据。</span><span class="sxs-lookup"><span data-stu-id="5ff02-113">Additional data about the object to be garbage-collected.</span></span> <span data-ttu-id="5ff02-114">此信息取决于源的对象，由`type`字段。</span><span class="sxs-lookup"><span data-stu-id="5ff02-114">This information depends on the source of the object, as indicated by the `type` field.</span></span> <span data-ttu-id="5ff02-115">有关详细信息，请参阅“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="5ff02-115">For more information, see the Remarks section.</span></span>|  
+|`domain`|<span data-ttu-id="5085e-108">指向句柄或对象所属的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="5085e-108">A pointer to the application domain to which the handle or object belongs.</span></span> <span data-ttu-id="5085e-109">其值可能为`null`。</span><span class="sxs-lookup"><span data-stu-id="5085e-109">Its value may be `null`.</span></span>|  
+|`location`|<span data-ttu-id="5085e-110">ICorDebugValue 或 ICorDebugReferenceValue 接口对应于要进行垃圾回收的对象。</span><span class="sxs-lookup"><span data-stu-id="5085e-110">Either an ICorDebugValue or an ICorDebugReferenceValue interface that corresponds to the object to be garbage-collected.</span></span>|  
+|`type`|<span data-ttu-id="5085e-111">一个[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举值，该值指示根原来所在的位置。</span><span class="sxs-lookup"><span data-stu-id="5085e-111">A [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeration value that indicates where the root came from.</span></span> <span data-ttu-id="5085e-112">有关详细信息，请参阅“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="5085e-112">For more information, see the Remarks section.</span></span>|  
+|`extraData`|<span data-ttu-id="5085e-113">要进行垃圾回收的对象有关的其他数据。</span><span class="sxs-lookup"><span data-stu-id="5085e-113">Additional data about the object to be garbage-collected.</span></span> <span data-ttu-id="5085e-114">此信息取决于源的对象，由`type`字段。</span><span class="sxs-lookup"><span data-stu-id="5085e-114">This information depends on the source of the object, as indicated by the `type` field.</span></span> <span data-ttu-id="5085e-115">有关详细信息，请参阅“备注”部分。</span><span class="sxs-lookup"><span data-stu-id="5085e-115">For more information, see the Remarks section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5ff02-116">备注</span><span class="sxs-lookup"><span data-stu-id="5ff02-116">Remarks</span></span>  
- <span data-ttu-id="5ff02-117">`type`字段是[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举值，该值指示引用原来所在的位置。</span><span class="sxs-lookup"><span data-stu-id="5ff02-117">The `type` field is a [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeration value that indicates where the reference came from.</span></span> <span data-ttu-id="5ff02-118">特定`COR_GC_REFERENCE`值可以反映任何以下类型的托管对象：</span><span class="sxs-lookup"><span data-stu-id="5ff02-118">A particular `COR_GC_REFERENCE` value can reflect any of the following kinds of managed objects:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5085e-116">备注</span><span class="sxs-lookup"><span data-stu-id="5085e-116">Remarks</span></span>  
+ <span data-ttu-id="5085e-117">`type`字段是[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举值，该值指示引用原来所在的位置。</span><span class="sxs-lookup"><span data-stu-id="5085e-117">The `type` field is a [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeration value that indicates where the reference came from.</span></span> <span data-ttu-id="5085e-118">特定`COR_GC_REFERENCE`值可以反映任何以下类型的托管对象：</span><span class="sxs-lookup"><span data-stu-id="5085e-118">A particular `COR_GC_REFERENCE` value can reflect any of the following kinds of managed objects:</span></span>  
   
--   <span data-ttu-id="5ff02-119">从所有托管堆栈的对象 (`CorGCReferenceType.CorReferenceStack`)。</span><span class="sxs-lookup"><span data-stu-id="5ff02-119">Objects from all managed stacks (`CorGCReferenceType.CorReferenceStack`).</span></span> <span data-ttu-id="5ff02-120">这包括实时引用在托管的代码中，由公共语言运行时创建的对象。</span><span class="sxs-lookup"><span data-stu-id="5ff02-120">This includes live references in managed code, as well as objects created by the common language runtime.</span></span>  
+- <span data-ttu-id="5085e-119">从所有托管堆栈的对象 (`CorGCReferenceType.CorReferenceStack`)。</span><span class="sxs-lookup"><span data-stu-id="5085e-119">Objects from all managed stacks (`CorGCReferenceType.CorReferenceStack`).</span></span> <span data-ttu-id="5085e-120">这包括实时引用在托管的代码中，由公共语言运行时创建的对象。</span><span class="sxs-lookup"><span data-stu-id="5085e-120">This includes live references in managed code, as well as objects created by the common language runtime.</span></span>  
   
--   <span data-ttu-id="5ff02-121">句柄表中的对象 (`CorGCReferenceType.CorHandle*`)。</span><span class="sxs-lookup"><span data-stu-id="5ff02-121">Objects from the handle table (`CorGCReferenceType.CorHandle*`).</span></span> <span data-ttu-id="5ff02-122">这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。</span><span class="sxs-lookup"><span data-stu-id="5ff02-122">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
+- <span data-ttu-id="5085e-121">句柄表中的对象 (`CorGCReferenceType.CorHandle*`)。</span><span class="sxs-lookup"><span data-stu-id="5085e-121">Objects from the handle table (`CorGCReferenceType.CorHandle*`).</span></span> <span data-ttu-id="5085e-122">这包括强引用 (`HNDTYPE_STRONG`和`HNDTYPE_REFCOUNT`) 和模块中的静态变量。</span><span class="sxs-lookup"><span data-stu-id="5085e-122">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
   
--   <span data-ttu-id="5ff02-123">终结器队列中的对象 (`CorGCReferenceType.CorReferenceFinalizer`)。</span><span class="sxs-lookup"><span data-stu-id="5ff02-123">Objects from the finalizer queue (`CorGCReferenceType.CorReferenceFinalizer`).</span></span> <span data-ttu-id="5ff02-124">终结器队列根对象，直到运行终结器。</span><span class="sxs-lookup"><span data-stu-id="5ff02-124">The finalizer queue roots objects until the finalizer has run.</span></span>  
+- <span data-ttu-id="5085e-123">终结器队列中的对象 (`CorGCReferenceType.CorReferenceFinalizer`)。</span><span class="sxs-lookup"><span data-stu-id="5085e-123">Objects from the finalizer queue (`CorGCReferenceType.CorReferenceFinalizer`).</span></span> <span data-ttu-id="5085e-124">终结器队列根对象，直到运行终结器。</span><span class="sxs-lookup"><span data-stu-id="5085e-124">The finalizer queue roots objects until the finalizer has run.</span></span>  
   
- <span data-ttu-id="5ff02-125">`extraData`字段包含额外数据，具体取决于所引用的源 （或类型）。</span><span class="sxs-lookup"><span data-stu-id="5ff02-125">The `extraData` field contains extra data depending on the source (or type) of the reference.</span></span> <span data-ttu-id="5ff02-126">可能的值有：</span><span class="sxs-lookup"><span data-stu-id="5ff02-126">Possible values are:</span></span>  
+ <span data-ttu-id="5085e-125">`extraData`字段包含额外数据，具体取决于所引用的源 （或类型）。</span><span class="sxs-lookup"><span data-stu-id="5085e-125">The `extraData` field contains extra data depending on the source (or type) of the reference.</span></span> <span data-ttu-id="5085e-126">可能的值有：</span><span class="sxs-lookup"><span data-stu-id="5085e-126">Possible values are:</span></span>  
   
--   <span data-ttu-id="5ff02-127">`DependentSource`。</span><span class="sxs-lookup"><span data-stu-id="5ff02-127">`DependentSource`.</span></span> <span data-ttu-id="5ff02-128">如果`type`是`CorGCREferenceType.CorHandleStrongDependent`，此字段是对象保持活动状态，如果根对对象进行垃圾回收在`COR_GC_REFERENCE.Location`。</span><span class="sxs-lookup"><span data-stu-id="5ff02-128">If the `type` is `CorGCREferenceType.CorHandleStrongDependent`, this field is the object that, if alive, roots the object to be garbage-collected at `COR_GC_REFERENCE.Location`.</span></span>  
+- <span data-ttu-id="5085e-127">`DependentSource`。</span><span class="sxs-lookup"><span data-stu-id="5085e-127">`DependentSource`.</span></span> <span data-ttu-id="5085e-128">如果`type`是`CorGCREferenceType.CorHandleStrongDependent`，此字段是对象保持活动状态，如果根对对象进行垃圾回收在`COR_GC_REFERENCE.Location`。</span><span class="sxs-lookup"><span data-stu-id="5085e-128">If the `type` is `CorGCREferenceType.CorHandleStrongDependent`, this field is the object that, if alive, roots the object to be garbage-collected at `COR_GC_REFERENCE.Location`.</span></span>  
   
--   <span data-ttu-id="5ff02-129">`RefCount`。</span><span class="sxs-lookup"><span data-stu-id="5ff02-129">`RefCount`.</span></span> <span data-ttu-id="5ff02-130">如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，此字段是句柄的引用计数。</span><span class="sxs-lookup"><span data-stu-id="5ff02-130">If the `type` is `CorGCREferenceType.CorHandleStrongRefCount`, this field is the reference count of the handle.</span></span>  
+- <span data-ttu-id="5085e-129">`RefCount`。</span><span class="sxs-lookup"><span data-stu-id="5085e-129">`RefCount`.</span></span> <span data-ttu-id="5085e-130">如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，此字段是句柄的引用计数。</span><span class="sxs-lookup"><span data-stu-id="5085e-130">If the `type` is `CorGCREferenceType.CorHandleStrongRefCount`, this field is the reference count of the handle.</span></span>  
   
--   <span data-ttu-id="5ff02-131">`Size`。</span><span class="sxs-lookup"><span data-stu-id="5ff02-131">`Size`.</span></span> <span data-ttu-id="5ff02-132">如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，此字段是垃圾回收器为其计算对象根的对象树的最后大小。</span><span class="sxs-lookup"><span data-stu-id="5ff02-132">If the `type` is `CorGCREferenceType.CorHandleStrongSizedByref`, this field is the last size of the object tree for which the garbage collector calculated the object roots.</span></span> <span data-ttu-id="5ff02-133">请注意，此计算不一定是最新。</span><span class="sxs-lookup"><span data-stu-id="5ff02-133">Note that this calculation is not necessarily up to date.</span></span>  
+- <span data-ttu-id="5085e-131">`Size`。</span><span class="sxs-lookup"><span data-stu-id="5085e-131">`Size`.</span></span> <span data-ttu-id="5085e-132">如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，此字段是垃圾回收器为其计算对象根的对象树的最后大小。</span><span class="sxs-lookup"><span data-stu-id="5085e-132">If the `type` is `CorGCREferenceType.CorHandleStrongSizedByref`, this field is the last size of the object tree for which the garbage collector calculated the object roots.</span></span> <span data-ttu-id="5085e-133">请注意，此计算不一定是最新。</span><span class="sxs-lookup"><span data-stu-id="5085e-133">Note that this calculation is not necessarily up to date.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5ff02-134">要求</span><span class="sxs-lookup"><span data-stu-id="5ff02-134">Requirements</span></span>  
- <span data-ttu-id="5ff02-135">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5ff02-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5085e-134">要求</span><span class="sxs-lookup"><span data-stu-id="5085e-134">Requirements</span></span>  
+ <span data-ttu-id="5085e-135">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5085e-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5ff02-136">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5ff02-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5085e-136">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5085e-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5ff02-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5ff02-137">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5085e-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5085e-137">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5ff02-138">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ff02-138">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="5085e-138">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5085e-138">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ff02-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="5ff02-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5085e-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="5085e-139">See also</span></span>
 
-- [<span data-ttu-id="5ff02-140">调试结构</span><span class="sxs-lookup"><span data-stu-id="5ff02-140">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="5ff02-141">调试</span><span class="sxs-lookup"><span data-stu-id="5ff02-141">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="5085e-140">调试结构</span><span class="sxs-lookup"><span data-stu-id="5085e-140">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="5085e-141">调试</span><span class="sxs-lookup"><span data-stu-id="5085e-141">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

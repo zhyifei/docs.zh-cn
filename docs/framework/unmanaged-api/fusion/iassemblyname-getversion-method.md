@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a28cb9f1fd2e12cd750d4eeb8db6c2d7a181b414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697558"
 ---
-# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="ca582-102">IAssemblyName::GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="ca582-102">IAssemblyName::GetVersion Method</span></span>
-<span data-ttu-id="ca582-103">获取此引用的程序集的版本信息[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="ca582-103">Gets the version information for the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="e5402-102">IAssemblyName::GetVersion 方法</span><span class="sxs-lookup"><span data-stu-id="e5402-102">IAssemblyName::GetVersion Method</span></span>
+<span data-ttu-id="e5402-103">获取此引用的程序集的版本信息[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="e5402-103">Gets the version information for the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca582-104">语法</span><span class="sxs-lookup"><span data-stu-id="ca582-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5402-104">语法</span><span class="sxs-lookup"><span data-stu-id="e5402-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVersion (  
@@ -36,20 +36,20 @@ HRESULT GetVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ca582-105">参数</span><span class="sxs-lookup"><span data-stu-id="ca582-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5402-105">参数</span><span class="sxs-lookup"><span data-stu-id="e5402-105">Parameters</span></span>  
  `pdwVersionHi`  
- <span data-ttu-id="ca582-106">[out]高 32 位版本。</span><span class="sxs-lookup"><span data-stu-id="ca582-106">[out] The high 32 bits of the version.</span></span>  
+ <span data-ttu-id="e5402-106">[out]高 32 位版本。</span><span class="sxs-lookup"><span data-stu-id="e5402-106">[out] The high 32 bits of the version.</span></span>  
   
  `pdwVersionLow`  
- <span data-ttu-id="ca582-107">[out]版本的低 32 位。</span><span class="sxs-lookup"><span data-stu-id="ca582-107">[out] The low 32 bits of the version.</span></span>  
+ <span data-ttu-id="e5402-107">[out]版本的低 32 位。</span><span class="sxs-lookup"><span data-stu-id="e5402-107">[out] The low 32 bits of the version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca582-108">要求</span><span class="sxs-lookup"><span data-stu-id="ca582-108">Requirements</span></span>  
- <span data-ttu-id="ca582-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ca582-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5402-108">要求</span><span class="sxs-lookup"><span data-stu-id="e5402-108">Requirements</span></span>  
+ <span data-ttu-id="e5402-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e5402-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca582-110">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="ca582-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e5402-110">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e5402-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="ca582-111">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca582-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e5402-111">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5402-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca582-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="ca582-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5402-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5402-112">See also</span></span>
 
-- [<span data-ttu-id="ca582-113">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="ca582-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="e5402-113">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="e5402-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

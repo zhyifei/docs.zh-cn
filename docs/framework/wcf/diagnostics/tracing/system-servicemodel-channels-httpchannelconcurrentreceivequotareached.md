@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached
 ms.date: 03/30/2017
 ms.assetid: db6d8cdb-0d25-4bfb-8963-eff465733d70
 ms.openlocfilehash: d6d0a05f1ac68a939d63802dd2bc85a55de9f3a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666698"
 ---
-# <a name="systemservicemodelchannelshttpchannelconcurrentreceivequotareached"></a><span data-ttu-id="833d5-102">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span><span class="sxs-lookup"><span data-stu-id="833d5-102">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span></span>
-<span data-ttu-id="833d5-103">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span><span class="sxs-lookup"><span data-stu-id="833d5-103">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span></span>  
+# <a name="systemservicemodelchannelshttpchannelconcurrentreceivequotareached"></a><span data-ttu-id="05ba2-102">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span><span class="sxs-lookup"><span data-stu-id="05ba2-102">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span></span>
+<span data-ttu-id="05ba2-103">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span><span class="sxs-lookup"><span data-stu-id="05ba2-103">System.ServiceModel.Channels.HttpChannelConcurrentReceiveQuotaReached</span></span>  
   
-## <a name="description"></a><span data-ttu-id="833d5-104">描述</span><span class="sxs-lookup"><span data-stu-id="833d5-104">Description</span></span>  
- <span data-ttu-id="833d5-105">已到达 HTTP 并发接收配额。</span><span class="sxs-lookup"><span data-stu-id="833d5-105">The HTTP concurrent receive quota was reached.</span></span>  
+## <a name="description"></a><span data-ttu-id="05ba2-104">描述</span><span class="sxs-lookup"><span data-stu-id="05ba2-104">Description</span></span>  
+ <span data-ttu-id="05ba2-105">已到达 HTTP 并发接收配额。</span><span class="sxs-lookup"><span data-stu-id="05ba2-105">The HTTP concurrent receive quota was reached.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="833d5-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="833d5-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05ba2-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="05ba2-106">See also</span></span>
 
-- [<span data-ttu-id="833d5-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="833d5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="833d5-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="833d5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="833d5-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="833d5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="05ba2-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="05ba2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="05ba2-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="05ba2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="05ba2-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="05ba2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

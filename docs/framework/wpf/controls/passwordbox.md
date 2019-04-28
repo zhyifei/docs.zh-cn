@@ -8,17 +8,17 @@ helpviewer_keywords:
 - controls [WPF], PasswordBox
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
 ms.openlocfilehash: c3f86230bd0193ea3525e88d41e8e48d2d90684a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770625"
 ---
-# <a name="passwordbox"></a><span data-ttu-id="a4808-102">密码框</span><span class="sxs-lookup"><span data-stu-id="a4808-102">PasswordBox</span></span>
-<span data-ttu-id="a4808-103"><xref:System.Windows.Controls.PasswordBox>控件用于输入敏感或私人信息。</span><span class="sxs-lookup"><span data-stu-id="a4808-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
+# <a name="passwordbox"></a><span data-ttu-id="160b5-102">密码框</span><span class="sxs-lookup"><span data-stu-id="160b5-102">PasswordBox</span></span>
+<span data-ttu-id="160b5-103"><xref:System.Windows.Controls.PasswordBox>控件用于输入敏感或私人信息。</span><span class="sxs-lookup"><span data-stu-id="160b5-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4808-104">请参阅</span><span class="sxs-lookup"><span data-stu-id="a4808-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="160b5-104">请参阅</span><span class="sxs-lookup"><span data-stu-id="160b5-104">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
 - <xref:System.Windows.Controls.RichTextBox>
-- [<span data-ttu-id="a4808-105">控件库</span><span class="sxs-lookup"><span data-stu-id="a4808-105">Control Library</span></span>](control-library.md)
+- [<span data-ttu-id="160b5-105">控件库</span><span class="sxs-lookup"><span data-stu-id="160b5-105">Control Library</span></span>](control-library.md)

@@ -9,48 +9,48 @@ helpviewer_keywords:
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705215"
 ---
-# <a name="cryptographysettings-element"></a><span data-ttu-id="44da1-102">\<cryptographySettings > 元素</span><span class="sxs-lookup"><span data-stu-id="44da1-102">\<cryptographySettings> Element</span></span>
-<span data-ttu-id="44da1-103">包含加密设置。</span><span class="sxs-lookup"><span data-stu-id="44da1-103">Contains cryptography settings.</span></span>  
+# <a name="cryptographysettings-element"></a><span data-ttu-id="d3dbd-102">\<cryptographySettings > 元素</span><span class="sxs-lookup"><span data-stu-id="d3dbd-102">\<cryptographySettings> Element</span></span>
+<span data-ttu-id="d3dbd-103">包含加密设置。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-103">Contains cryptography settings.</span></span>  
   
- <span data-ttu-id="44da1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="44da1-104">\<configuration></span></span>  
-<span data-ttu-id="44da1-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="44da1-105">\<mscorlib></span></span>  
-<span data-ttu-id="44da1-106">\<cryptographySettings></span><span class="sxs-lookup"><span data-stu-id="44da1-106">\<cryptographySettings></span></span>  
+ <span data-ttu-id="d3dbd-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d3dbd-104">\<configuration></span></span>  
+<span data-ttu-id="d3dbd-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="d3dbd-105">\<mscorlib></span></span>  
+<span data-ttu-id="d3dbd-106">\<cryptographySettings></span><span class="sxs-lookup"><span data-stu-id="d3dbd-106">\<cryptographySettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44da1-107">语法</span><span class="sxs-lookup"><span data-stu-id="44da1-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3dbd-107">语法</span><span class="sxs-lookup"><span data-stu-id="d3dbd-107">Syntax</span></span>  
   
 ```xml  
       <cryptographySettings>   
 </cryptographySettings>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="44da1-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="44da1-108">Attributes and Elements</span></span>  
- <span data-ttu-id="44da1-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="44da1-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d3dbd-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d3dbd-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d3dbd-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="44da1-110">特性</span><span class="sxs-lookup"><span data-stu-id="44da1-110">Attributes</span></span>  
- <span data-ttu-id="44da1-111">无。</span><span class="sxs-lookup"><span data-stu-id="44da1-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d3dbd-110">特性</span><span class="sxs-lookup"><span data-stu-id="d3dbd-110">Attributes</span></span>  
+ <span data-ttu-id="d3dbd-111">无。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="44da1-112">子元素</span><span class="sxs-lookup"><span data-stu-id="44da1-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d3dbd-112">子元素</span><span class="sxs-lookup"><span data-stu-id="d3dbd-112">Child Elements</span></span>  
   
-|<span data-ttu-id="44da1-113">元素</span><span class="sxs-lookup"><span data-stu-id="44da1-113">Element</span></span>|<span data-ttu-id="44da1-114">描述</span><span class="sxs-lookup"><span data-stu-id="44da1-114">Description</span></span>|  
+|<span data-ttu-id="d3dbd-113">元素</span><span class="sxs-lookup"><span data-stu-id="d3dbd-113">Element</span></span>|<span data-ttu-id="d3dbd-114">描述</span><span class="sxs-lookup"><span data-stu-id="d3dbd-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="44da1-115">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="44da1-115">\<cryptoNameMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="44da1-116">包含类到友好名称的映射。</span><span class="sxs-lookup"><span data-stu-id="44da1-116">Contains mappings of classes to friendly names.</span></span>|  
-|[<span data-ttu-id="44da1-117">\<oidMap></span><span class="sxs-lookup"><span data-stu-id="44da1-117">\<oidMap></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="44da1-118">包含类的 ASN.1 对象标识符 (OID) 映射。</span><span class="sxs-lookup"><span data-stu-id="44da1-118">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
+|[<span data-ttu-id="d3dbd-115">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="d3dbd-115">\<cryptoNameMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|<span data-ttu-id="d3dbd-116">包含类到友好名称的映射。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-116">Contains mappings of classes to friendly names.</span></span>|  
+|[<span data-ttu-id="d3dbd-117">\<oidMap></span><span class="sxs-lookup"><span data-stu-id="d3dbd-117">\<oidMap></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|<span data-ttu-id="d3dbd-118">包含类的 ASN.1 对象标识符 (OID) 映射。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-118">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="44da1-119">父元素</span><span class="sxs-lookup"><span data-stu-id="44da1-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d3dbd-119">父元素</span><span class="sxs-lookup"><span data-stu-id="d3dbd-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="44da1-120">元素</span><span class="sxs-lookup"><span data-stu-id="44da1-120">Element</span></span>|<span data-ttu-id="44da1-121">描述</span><span class="sxs-lookup"><span data-stu-id="44da1-121">Description</span></span>|  
+|<span data-ttu-id="d3dbd-120">元素</span><span class="sxs-lookup"><span data-stu-id="d3dbd-120">Element</span></span>|<span data-ttu-id="d3dbd-121">描述</span><span class="sxs-lookup"><span data-stu-id="d3dbd-121">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="44da1-122">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="44da1-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`mscorlib`|<span data-ttu-id="44da1-123">包含`cryptographySettings`元素。</span><span class="sxs-lookup"><span data-stu-id="44da1-123">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="d3dbd-122">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`mscorlib`|<span data-ttu-id="d3dbd-123">包含`cryptographySettings`元素。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-123">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="44da1-124">示例</span><span class="sxs-lookup"><span data-stu-id="44da1-124">Example</span></span>  
- <span data-ttu-id="44da1-125">以下示例演示如何使用 **\<cryptographySettings >** 元素以包含加密名称映射和 OID 映射。</span><span class="sxs-lookup"><span data-stu-id="44da1-125">The following example shows how use the **\<cryptographySettings>** element to contain cryptography name mappings and OID mappings.</span></span> <span data-ttu-id="44da1-126">此示例将在运行时配置，以便<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>将返回`MyHashClass`对象和`MyCryptoClass`类映射到的对象标识符 1.3.36.2.1。</span><span class="sxs-lookup"><span data-stu-id="44da1-126">This example configures the runtime so that <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> returns a `MyHashClass` object and the `MyCryptoClass` class maps to the object identifier 1.3.36.2.1.</span></span>  
+## <a name="example"></a><span data-ttu-id="d3dbd-124">示例</span><span class="sxs-lookup"><span data-stu-id="d3dbd-124">Example</span></span>  
+ <span data-ttu-id="d3dbd-125">以下示例演示如何使用 **\<cryptographySettings >** 元素以包含加密名称映射和 OID 映射。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-125">The following example shows how use the **\<cryptographySettings>** element to contain cryptography name mappings and OID mappings.</span></span> <span data-ttu-id="d3dbd-126">此示例将在运行时配置，以便<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>将返回`MyHashClass`对象和`MyCryptoClass`类映射到的对象标识符 1.3.36.2.1。</span><span class="sxs-lookup"><span data-stu-id="d3dbd-126">This example configures the runtime so that <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> returns a `MyHashClass` object and the `MyCryptoClass` class maps to the object identifier 1.3.36.2.1.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,8 +76,8 @@ ms.locfileid: "59164133"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="44da1-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="44da1-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3dbd-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="d3dbd-127">See also</span></span>
 
-- [<span data-ttu-id="44da1-128">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="44da1-128">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="44da1-129">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="44da1-129">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [<span data-ttu-id="44da1-130">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="44da1-130">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="d3dbd-128">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="d3dbd-128">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="d3dbd-129">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="d3dbd-129">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [<span data-ttu-id="d3dbd-130">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="d3dbd-130">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
