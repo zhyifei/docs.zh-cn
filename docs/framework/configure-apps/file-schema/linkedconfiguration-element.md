@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674644"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 元素
 
@@ -46,7 +46,7 @@ ms.locfileid: "55284601"
 
 ## <a name="child-elements"></a>子元素
 
-无
+None
 
 ## <a name="remarks"></a>备注
 
@@ -63,7 +63,7 @@ ms.locfileid: "55284601"
 
 - 没有任何约束的每个配置文件的链接配置数量上。
 
-- 所有链接的配置文件经过合并以形成一个文件的行为类似`#include`C/c + + 中的指令。
+- 所有链接的配置文件经过合并以形成一个文件的行为类似`#include`指令在 C /C++。
 
 -  **\<LinkedConfiguration >** 元素允许仅在应用程序配置文件中; 在将被忽略*Machine.config*。
 
