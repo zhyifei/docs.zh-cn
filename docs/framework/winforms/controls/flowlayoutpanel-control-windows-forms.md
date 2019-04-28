@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
 ms.openlocfilehash: ed32d88894b2f0c4be8f1adeca8e891f3ac13810
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651475"
 ---
-# <a name="flowlayoutpanel-control-windows-forms"></a><span data-ttu-id="a39ba-102">FlowLayoutPanel 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="a39ba-102">FlowLayoutPanel Control (Windows Forms)</span></span>
-<span data-ttu-id="a39ba-103">`FlowLayoutPanel` 控件沿水平或纵排方向排列其内容。</span><span class="sxs-lookup"><span data-stu-id="a39ba-103">The `FlowLayoutPanel` control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="a39ba-104">可从一行到下一行，或从一列到下列进行内容换行。</span><span class="sxs-lookup"><span data-stu-id="a39ba-104">Its contents can be wrapped from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="a39ba-105">还可以剪切内容，而不是进行换行。</span><span class="sxs-lookup"><span data-stu-id="a39ba-105">Alternately, its contents can be clipped instead of wrapped.</span></span>  
+# <a name="flowlayoutpanel-control-windows-forms"></a><span data-ttu-id="e72fe-102">FlowLayoutPanel 控件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="e72fe-102">FlowLayoutPanel Control (Windows Forms)</span></span>
+<span data-ttu-id="e72fe-103">`FlowLayoutPanel` 控件沿水平或纵排方向排列其内容。</span><span class="sxs-lookup"><span data-stu-id="e72fe-103">The `FlowLayoutPanel` control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="e72fe-104">可从一行到下一行，或从一列到下列进行内容换行。</span><span class="sxs-lookup"><span data-stu-id="e72fe-104">Its contents can be wrapped from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="e72fe-105">还可以剪切内容，而不是进行换行。</span><span class="sxs-lookup"><span data-stu-id="e72fe-105">Alternately, its contents can be clipped instead of wrapped.</span></span>  
   
- <span data-ttu-id="a39ba-106">本节中的主题介绍可用于将 `FlowLayoutPanel` 功能构建到应用程序的概念和技术。</span><span class="sxs-lookup"><span data-stu-id="a39ba-106">The topics in this section describe the concepts and techniques that allow you to build `FlowLayoutPanel` features into your applications.</span></span>  
+ <span data-ttu-id="e72fe-106">本节中的主题介绍可用于将 `FlowLayoutPanel` 功能构建到应用程序的概念和技术。</span><span class="sxs-lookup"><span data-stu-id="e72fe-106">The topics in this section describe the concepts and techniques that allow you to build `FlowLayoutPanel` features into your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a39ba-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="a39ba-107">In This Section</span></span>  
- [<span data-ttu-id="a39ba-108">FlowLayoutPanel 控件概述</span><span class="sxs-lookup"><span data-stu-id="a39ba-108">FlowLayoutPanel Control Overview</span></span>](flowlayoutpanel-control-overview.md)  
- <span data-ttu-id="a39ba-109">介绍 `FlowLayoutPanel` 控件的一般概念，此控件使你可以创建水平或垂直分布的布局。</span><span class="sxs-lookup"><span data-stu-id="a39ba-109">Introduces the general concepts of the `FlowLayoutPanel` control, which allows you to create a layout which flows horizontally or vertically.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e72fe-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="e72fe-107">In This Section</span></span>  
+ [<span data-ttu-id="e72fe-108">FlowLayoutPanel 控件概述</span><span class="sxs-lookup"><span data-stu-id="e72fe-108">FlowLayoutPanel Control Overview</span></span>](flowlayoutpanel-control-overview.md)  
+ <span data-ttu-id="e72fe-109">介绍 `FlowLayoutPanel` 控件的一般概念，此控件使你可以创建水平或垂直分布的布局。</span><span class="sxs-lookup"><span data-stu-id="e72fe-109">Introduces the general concepts of the `FlowLayoutPanel` control, which allows you to create a layout which flows horizontally or vertically.</span></span>  
   
- [<span data-ttu-id="a39ba-110">如何：锚定和停靠子控件在 FlowLayoutPanel 控件中</span><span class="sxs-lookup"><span data-stu-id="a39ba-110">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
- <span data-ttu-id="a39ba-111">说明如何使用 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中锚定和停靠子控件。</span><span class="sxs-lookup"><span data-stu-id="a39ba-111">Explains how to use the <xref:System.Windows.Forms.Control.Anchor%2A> and <xref:System.Windows.Forms.Control.Dock%2A> properties to anchor and dock child controls in a <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
+ [<span data-ttu-id="e72fe-110">如何：锚定和停靠子控件在 FlowLayoutPanel 控件中</span><span class="sxs-lookup"><span data-stu-id="e72fe-110">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ <span data-ttu-id="e72fe-111">说明如何使用 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性在 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中锚定和停靠子控件。</span><span class="sxs-lookup"><span data-stu-id="e72fe-111">Explains how to use the <xref:System.Windows.Forms.Control.Anchor%2A> and <xref:System.Windows.Forms.Control.Dock%2A> properties to anchor and dock child controls in a <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
- <span data-ttu-id="a39ba-112">另请参阅[演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。</span><span class="sxs-lookup"><span data-stu-id="a39ba-112">Also see [Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).</span></span>  
+ <span data-ttu-id="e72fe-112">另请参阅[演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。</span><span class="sxs-lookup"><span data-stu-id="e72fe-112">Also see [Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="a39ba-113">参考</span><span class="sxs-lookup"><span data-stu-id="a39ba-113">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e72fe-113">参考</span><span class="sxs-lookup"><span data-stu-id="e72fe-113">Reference</span></span>  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- <span data-ttu-id="a39ba-114">提供关于 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的参考文档。</span><span class="sxs-lookup"><span data-stu-id="a39ba-114">Provides reference documentation for the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>
+ <span data-ttu-id="e72fe-114">提供关于 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的参考文档。</span><span class="sxs-lookup"><span data-stu-id="e72fe-114">Provides reference documentation for the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>

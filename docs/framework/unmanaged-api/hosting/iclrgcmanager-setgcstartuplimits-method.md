@@ -18,19 +18,19 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ffbe29db96cbb6162adc3b4cc77b45dcef27a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700249"
 ---
-# <a name="iclrgcmanagersetgcstartuplimits-method"></a><span data-ttu-id="cd556-102">ICLRGCManager::SetGCStartupLimits 方法</span><span class="sxs-lookup"><span data-stu-id="cd556-102">ICLRGCManager::SetGCStartupLimits Method</span></span>
-<span data-ttu-id="cd556-103">设置垃圾回收段的大小和第 0 代垃圾回收系统的最大大小。</span><span class="sxs-lookup"><span data-stu-id="cd556-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  
+# <a name="iclrgcmanagersetgcstartuplimits-method"></a><span data-ttu-id="2d491-102">ICLRGCManager::SetGCStartupLimits 方法</span><span class="sxs-lookup"><span data-stu-id="2d491-102">ICLRGCManager::SetGCStartupLimits Method</span></span>
+<span data-ttu-id="2d491-103">设置垃圾回收段的大小和第 0 代垃圾回收系统的最大大小。</span><span class="sxs-lookup"><span data-stu-id="2d491-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="cd556-104">从开始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，可以设置段大小和最大第 0 代大小值大于`DWORD`通过使用[ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="cd556-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) method.</span></span>  
+>  <span data-ttu-id="2d491-104">从开始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，可以设置段大小和最大第 0 代大小值大于`DWORD`通过使用[ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="2d491-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can set segment size and maximum generation 0 size to values greater than `DWORD` by using the [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd556-105">语法</span><span class="sxs-lookup"><span data-stu-id="cd556-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d491-105">语法</span><span class="sxs-lookup"><span data-stu-id="2d491-105">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimits (  
@@ -39,43 +39,43 @@ HRESULT SetGCStartupLimits (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cd556-106">参数</span><span class="sxs-lookup"><span data-stu-id="cd556-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2d491-106">参数</span><span class="sxs-lookup"><span data-stu-id="2d491-106">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="cd556-107">[in]垃圾回收段指定的大小。</span><span class="sxs-lookup"><span data-stu-id="cd556-107">[in] The specified size of a garbage collection segment.</span></span>  
+ <span data-ttu-id="2d491-107">[in]垃圾回收段指定的大小。</span><span class="sxs-lookup"><span data-stu-id="2d491-107">[in] The specified size of a garbage collection segment.</span></span>  
   
- <span data-ttu-id="cd556-108">最小的段大小为 4 MB。</span><span class="sxs-lookup"><span data-stu-id="cd556-108">The minimum segment size is 4 MB.</span></span> <span data-ttu-id="cd556-109">段可以增加增量为 1 MB 或更大。</span><span class="sxs-lookup"><span data-stu-id="cd556-109">Segments can be increased in increments of 1 MB or larger.</span></span>  
+ <span data-ttu-id="2d491-108">最小的段大小为 4 MB。</span><span class="sxs-lookup"><span data-stu-id="2d491-108">The minimum segment size is 4 MB.</span></span> <span data-ttu-id="2d491-109">段可以增加增量为 1 MB 或更大。</span><span class="sxs-lookup"><span data-stu-id="2d491-109">Segments can be increased in increments of 1 MB or larger.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="cd556-110">[in]第 0 代为指定的最大大小。</span><span class="sxs-lookup"><span data-stu-id="cd556-110">[in] The specified maximum size for generation 0.</span></span>  
+ <span data-ttu-id="2d491-110">[in]第 0 代为指定的最大大小。</span><span class="sxs-lookup"><span data-stu-id="2d491-110">[in] The specified maximum size for generation 0.</span></span>  
   
- <span data-ttu-id="cd556-111">最小的第 0 代大小为 64 KB。</span><span class="sxs-lookup"><span data-stu-id="cd556-111">The minimum generation 0 size is 64 KB.</span></span>  
+ <span data-ttu-id="2d491-111">最小的第 0 代大小为 64 KB。</span><span class="sxs-lookup"><span data-stu-id="2d491-111">The minimum generation 0 size is 64 KB.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cd556-112">返回值</span><span class="sxs-lookup"><span data-stu-id="cd556-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2d491-112">返回值</span><span class="sxs-lookup"><span data-stu-id="2d491-112">Return Value</span></span>  
   
-|<span data-ttu-id="cd556-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cd556-113">HRESULT</span></span>|<span data-ttu-id="cd556-114">描述</span><span class="sxs-lookup"><span data-stu-id="cd556-114">Description</span></span>|  
+|<span data-ttu-id="2d491-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2d491-113">HRESULT</span></span>|<span data-ttu-id="2d491-114">描述</span><span class="sxs-lookup"><span data-stu-id="2d491-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cd556-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="cd556-115">S_OK</span></span>|<span data-ttu-id="cd556-116">`SetGCStartupLimits` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="cd556-116">`SetGCStartupLimits` returned successfully.</span></span>|  
-|<span data-ttu-id="cd556-117">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="cd556-117">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="cd556-118">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="cd556-118">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="cd556-119">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="cd556-119">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="cd556-120">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="cd556-120">The call timed out.</span></span>|  
-|<span data-ttu-id="cd556-121">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="cd556-121">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="cd556-122">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="cd556-122">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="cd556-123">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="cd556-123">HOST_E_ABANDONED</span></span>|<span data-ttu-id="cd556-124">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="cd556-124">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="cd556-125">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="cd556-125">E_FAIL</span></span>|<span data-ttu-id="cd556-126">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="cd556-126">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="cd556-127">方法返回 E_FAIL 后，CLR 不再在进程中使用。</span><span class="sxs-lookup"><span data-stu-id="cd556-127">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="cd556-128">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="cd556-128">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="2d491-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="2d491-115">S_OK</span></span>|<span data-ttu-id="2d491-116">`SetGCStartupLimits` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="2d491-116">`SetGCStartupLimits` returned successfully.</span></span>|  
+|<span data-ttu-id="2d491-117">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2d491-117">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2d491-118">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="2d491-118">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="2d491-119">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2d491-119">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2d491-120">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="2d491-120">The call timed out.</span></span>|  
+|<span data-ttu-id="2d491-121">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2d491-121">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2d491-122">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="2d491-122">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="2d491-123">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2d491-123">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2d491-124">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="2d491-124">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="2d491-125">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2d491-125">E_FAIL</span></span>|<span data-ttu-id="2d491-126">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="2d491-126">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2d491-127">方法返回 E_FAIL 后，CLR 不再在进程中使用。</span><span class="sxs-lookup"><span data-stu-id="2d491-127">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2d491-128">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="2d491-128">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cd556-129">备注</span><span class="sxs-lookup"><span data-stu-id="cd556-129">Remarks</span></span>  
- <span data-ttu-id="cd556-130">值的`SetGCStartupLimits`集可以指定仅一次。</span><span class="sxs-lookup"><span data-stu-id="cd556-130">The values that `SetGCStartupLimits` sets can be specified only once.</span></span> <span data-ttu-id="cd556-131">更高版本调用`SetGCStartupLimits`将被忽略。</span><span class="sxs-lookup"><span data-stu-id="cd556-131">Later calls to `SetGCStartupLimits` are ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2d491-129">备注</span><span class="sxs-lookup"><span data-stu-id="2d491-129">Remarks</span></span>  
+ <span data-ttu-id="2d491-130">值的`SetGCStartupLimits`集可以指定仅一次。</span><span class="sxs-lookup"><span data-stu-id="2d491-130">The values that `SetGCStartupLimits` sets can be specified only once.</span></span> <span data-ttu-id="2d491-131">更高版本调用`SetGCStartupLimits`将被忽略。</span><span class="sxs-lookup"><span data-stu-id="2d491-131">Later calls to `SetGCStartupLimits` are ignored.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd556-132">要求</span><span class="sxs-lookup"><span data-stu-id="cd556-132">Requirements</span></span>  
- <span data-ttu-id="cd556-133">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd556-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d491-132">要求</span><span class="sxs-lookup"><span data-stu-id="2d491-132">Requirements</span></span>  
+ <span data-ttu-id="2d491-133">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2d491-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd556-134">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cd556-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2d491-134">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2d491-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cd556-135">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="cd556-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2d491-135">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2d491-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cd556-136">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd556-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2d491-136">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d491-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd556-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="cd556-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d491-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="2d491-137">See also</span></span>
 
-- [<span data-ttu-id="cd556-138">自动内存管理</span><span class="sxs-lookup"><span data-stu-id="cd556-138">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="cd556-139">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="cd556-139">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
-- [<span data-ttu-id="cd556-140">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="cd556-140">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="cd556-141">ICLRGCManager 接口</span><span class="sxs-lookup"><span data-stu-id="cd556-141">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [<span data-ttu-id="2d491-138">自动内存管理</span><span class="sxs-lookup"><span data-stu-id="2d491-138">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="2d491-139">垃圾回收</span><span class="sxs-lookup"><span data-stu-id="2d491-139">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="2d491-140">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="2d491-140">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="2d491-141">ICLRGCManager 接口</span><span class="sxs-lookup"><span data-stu-id="2d491-141">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

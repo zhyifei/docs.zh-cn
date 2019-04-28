@@ -3,16 +3,16 @@ title: <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
 ms.openlocfilehash: 2910f47b85ee67694cae0c3a725c3c7c7b3803c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701718"
 ---
-# <a name="authorizationpolicies"></a><span data-ttu-id="49e1f-101">\<authorizationPolicies></span><span class="sxs-lookup"><span data-stu-id="49e1f-101">\<authorizationPolicies></span></span>
-<span data-ttu-id="49e1f-102">本配置节包含可使用 `add` 关键字添加的授权策略类型的集合。</span><span class="sxs-lookup"><span data-stu-id="49e1f-102">This configuration section contains a collection of authorization policy types, which can be added using the `add` keyword.</span></span> <span data-ttu-id="49e1f-103">每个授权类型都包含一个所需的 `policyType` 属性，此属性是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="49e1f-103">Each authorization policy contains a single required `policyType` attribute that is a string.</span></span> <span data-ttu-id="49e1f-104">该属性指定一个授权策略，可以将一组输入声明转换为另一组声明。</span><span class="sxs-lookup"><span data-stu-id="49e1f-104">The attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims.</span></span> <span data-ttu-id="49e1f-105">可以根据该授权策略来授予或拒绝访问控制。</span><span class="sxs-lookup"><span data-stu-id="49e1f-105">Access control can be granted or denied based on that.</span></span> <span data-ttu-id="49e1f-106">授权策略的工作原理的详细信息，请参阅<xref:System.IdentityModel.Policy.IAuthorizationPolicy>并[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。</span><span class="sxs-lookup"><span data-stu-id="49e1f-106">For more information on how an authorization policy works, see <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and [Authorization Policy](../../../../../docs/framework/wcf/samples/authorization-policy.md).</span></span>  
+# <a name="authorizationpolicies"></a><span data-ttu-id="c129e-101">\<authorizationPolicies></span><span class="sxs-lookup"><span data-stu-id="c129e-101">\<authorizationPolicies></span></span>
+<span data-ttu-id="c129e-102">本配置节包含可使用 `add` 关键字添加的授权策略类型的集合。</span><span class="sxs-lookup"><span data-stu-id="c129e-102">This configuration section contains a collection of authorization policy types, which can be added using the `add` keyword.</span></span> <span data-ttu-id="c129e-103">每个授权类型都包含一个所需的 `policyType` 属性，此属性是一个字符串。</span><span class="sxs-lookup"><span data-stu-id="c129e-103">Each authorization policy contains a single required `policyType` attribute that is a string.</span></span> <span data-ttu-id="c129e-104">该属性指定一个授权策略，可以将一组输入声明转换为另一组声明。</span><span class="sxs-lookup"><span data-stu-id="c129e-104">The attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims.</span></span> <span data-ttu-id="c129e-105">可以根据该授权策略来授予或拒绝访问控制。</span><span class="sxs-lookup"><span data-stu-id="c129e-105">Access control can be granted or denied based on that.</span></span> <span data-ttu-id="c129e-106">授权策略的工作原理的详细信息，请参阅<xref:System.IdentityModel.Policy.IAuthorizationPolicy>并[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。</span><span class="sxs-lookup"><span data-stu-id="c129e-106">For more information on how an authorization policy works, see <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and [Authorization Policy](../../../../../docs/framework/wcf/samples/authorization-policy.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49e1f-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="49e1f-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c129e-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="c129e-107">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>
@@ -21,7 +21,7 @@ ms.locfileid: "59122819"
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement.AuthorizationPolicies%2A>
 - <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
-- [<span data-ttu-id="49e1f-108">授予对服务操作的权限</span><span class="sxs-lookup"><span data-stu-id="49e1f-108">Authorizing Access to Service Operations</span></span>](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [<span data-ttu-id="49e1f-109">如何：创建自定义授权管理器服务</span><span class="sxs-lookup"><span data-stu-id="49e1f-109">How to: Create a Custom Authorization Manager for a Service</span></span>](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [<span data-ttu-id="49e1f-110">\<add></span><span class="sxs-lookup"><span data-stu-id="49e1f-110">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)
-- [<span data-ttu-id="49e1f-111">授权策略</span><span class="sxs-lookup"><span data-stu-id="49e1f-111">Authorization Policy</span></span>](../../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [<span data-ttu-id="c129e-108">授予对服务操作的权限</span><span class="sxs-lookup"><span data-stu-id="c129e-108">Authorizing Access to Service Operations</span></span>](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [<span data-ttu-id="c129e-109">如何：创建自定义授权管理器服务</span><span class="sxs-lookup"><span data-stu-id="c129e-109">How to: Create a Custom Authorization Manager for a Service</span></span>](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [<span data-ttu-id="c129e-110">\<add></span><span class="sxs-lookup"><span data-stu-id="c129e-110">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)
+- [<span data-ttu-id="c129e-111">授权策略</span><span class="sxs-lookup"><span data-stu-id="c129e-111">Authorization Policy</span></span>](../../../../../docs/framework/wcf/samples/authorization-policy.md)
