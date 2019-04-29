@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0e859ba8b6ec247073b0b69b035ea4cf074ab05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939615"
 ---
-# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="55cea-102">ISymUnmanagedMethod::GetScopeFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="55cea-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
-<span data-ttu-id="55cea-103">获取包含给定的偏移量此方法中最封闭的词法范围。</span><span class="sxs-lookup"><span data-stu-id="55cea-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="55cea-104">这可用来启动本地变量的搜索。</span><span class="sxs-lookup"><span data-stu-id="55cea-104">This can be used to start local variable searches.</span></span>  
+# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="8e87a-102">ISymUnmanagedMethod::GetScopeFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="8e87a-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
+<span data-ttu-id="8e87a-103">获取包含给定的偏移量此方法中最封闭的词法范围。</span><span class="sxs-lookup"><span data-stu-id="8e87a-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="8e87a-104">这可用来启动本地变量的搜索。</span><span class="sxs-lookup"><span data-stu-id="8e87a-104">This can be used to start local variable searches.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55cea-105">语法</span><span class="sxs-lookup"><span data-stu-id="55cea-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e87a-105">语法</span><span class="sxs-lookup"><span data-stu-id="8e87a-105">Syntax</span></span>  
   
 ```  
 HRESULT GetScopeFromOffset(  
@@ -35,19 +35,19 @@ HRESULT GetScopeFromOffset(
     [out, retval] ISymUnmanagedScope**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="55cea-106">参数</span><span class="sxs-lookup"><span data-stu-id="55cea-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8e87a-106">参数</span><span class="sxs-lookup"><span data-stu-id="8e87a-106">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="55cea-107">[in]一个`ULONG`包含的偏移量。</span><span class="sxs-lookup"><span data-stu-id="55cea-107">[in] A `ULONG` that contains the offset.</span></span>  
+ <span data-ttu-id="8e87a-107">[in]一个`ULONG`包含的偏移量。</span><span class="sxs-lookup"><span data-stu-id="8e87a-107">[in] A `ULONG` that contains the offset.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="55cea-108">[out]一个指针，它设置为返回[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="55cea-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="8e87a-108">[out]一个指针，它设置为返回[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="8e87a-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="55cea-109">返回值</span><span class="sxs-lookup"><span data-stu-id="55cea-109">Return Value</span></span>  
- <span data-ttu-id="55cea-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="55cea-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8e87a-109">返回值</span><span class="sxs-lookup"><span data-stu-id="8e87a-109">Return Value</span></span>  
+ <span data-ttu-id="8e87a-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="8e87a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55cea-111">要求</span><span class="sxs-lookup"><span data-stu-id="55cea-111">Requirements</span></span>  
- <span data-ttu-id="55cea-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="55cea-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e87a-111">要求</span><span class="sxs-lookup"><span data-stu-id="8e87a-111">Requirements</span></span>  
+ <span data-ttu-id="8e87a-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8e87a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55cea-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="55cea-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e87a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="8e87a-113">See also</span></span>
 
-- [<span data-ttu-id="55cea-114">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="55cea-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="8e87a-114">ISymUnmanagedMethod 接口</span><span class="sxs-lookup"><span data-stu-id="8e87a-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

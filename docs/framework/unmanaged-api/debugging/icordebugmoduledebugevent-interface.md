@@ -5,37 +5,37 @@ ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bf1fa21872c710ebc69c45e9980aeaa577a45fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942462"
 ---
-# <a name="icordebugmoduledebugevent-interface"></a><span data-ttu-id="573f1-102">ICorDebugModuleDebugEvent 接口</span><span class="sxs-lookup"><span data-stu-id="573f1-102">ICorDebugModuleDebugEvent Interface</span></span>
-<span data-ttu-id="573f1-103">扩展了[icor 调试调试事件](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)接口以支持模块级事件。</span><span class="sxs-lookup"><span data-stu-id="573f1-103">Extends the [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interface to support module-level events.</span></span>  
+# <a name="icordebugmoduledebugevent-interface"></a><span data-ttu-id="9efec-102">ICorDebugModuleDebugEvent 接口</span><span class="sxs-lookup"><span data-stu-id="9efec-102">ICorDebugModuleDebugEvent Interface</span></span>
+<span data-ttu-id="9efec-103">扩展了[icor 调试调试事件](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)接口以支持模块级事件。</span><span class="sxs-lookup"><span data-stu-id="9efec-103">Extends the [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interface to support module-level events.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="573f1-104">方法</span><span class="sxs-lookup"><span data-stu-id="573f1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9efec-104">方法</span><span class="sxs-lookup"><span data-stu-id="9efec-104">Methods</span></span>  
   
-|<span data-ttu-id="573f1-105">方法</span><span class="sxs-lookup"><span data-stu-id="573f1-105">Method</span></span>|<span data-ttu-id="573f1-106">描述</span><span class="sxs-lookup"><span data-stu-id="573f1-106">Description</span></span>|  
+|<span data-ttu-id="9efec-105">方法</span><span class="sxs-lookup"><span data-stu-id="9efec-105">Method</span></span>|<span data-ttu-id="9efec-106">描述</span><span class="sxs-lookup"><span data-stu-id="9efec-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="573f1-107">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="573f1-107">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-getmodule-method.md)|<span data-ttu-id="573f1-108">获取刚加载或卸载的合并模块。</span><span class="sxs-lookup"><span data-stu-id="573f1-108">Gets the merged module that was just loaded or unloaded.</span></span>|  
+|[<span data-ttu-id="9efec-107">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="9efec-107">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-getmodule-method.md)|<span data-ttu-id="9efec-108">获取刚加载或卸载的合并模块。</span><span class="sxs-lookup"><span data-stu-id="9efec-108">Gets the merged module that was just loaded or unloaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="573f1-109">备注</span><span class="sxs-lookup"><span data-stu-id="573f1-109">Remarks</span></span>  
- <span data-ttu-id="573f1-110">[MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)并[MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)事件类型可实现此接口。</span><span class="sxs-lookup"><span data-stu-id="573f1-110">The [MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) and [MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) event types implement this interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9efec-109">备注</span><span class="sxs-lookup"><span data-stu-id="9efec-109">Remarks</span></span>  
+ <span data-ttu-id="9efec-110">[MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)并[MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)事件类型可实现此接口。</span><span class="sxs-lookup"><span data-stu-id="9efec-110">The [MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) and [MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) event types implement this interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="573f1-111">此接口仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="573f1-111">The interface is available with .NET Native only.</span></span> <span data-ttu-id="573f1-112">尝试调用 `QueryInterface` 来检索接口指针会为 .NET Native 外部的 ICorDebug 方案返回 `E_NOINTERFACE`。</span><span class="sxs-lookup"><span data-stu-id="573f1-112">Attempting to call `QueryInterface` to retrieve an interface pointer returns `E_NOINTERFACE` for ICorDebug scenarios outside of .NET Native.</span></span>  
+>  <span data-ttu-id="9efec-111">此接口仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="9efec-111">The interface is available with .NET Native only.</span></span> <span data-ttu-id="9efec-112">尝试调用 `QueryInterface` 来检索接口指针会为 .NET Native 外部的 ICorDebug 方案返回 `E_NOINTERFACE`。</span><span class="sxs-lookup"><span data-stu-id="9efec-112">Attempting to call `QueryInterface` to retrieve an interface pointer returns `E_NOINTERFACE` for ICorDebug scenarios outside of .NET Native.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="573f1-113">要求</span><span class="sxs-lookup"><span data-stu-id="573f1-113">Requirements</span></span>  
- <span data-ttu-id="573f1-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="573f1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9efec-113">要求</span><span class="sxs-lookup"><span data-stu-id="9efec-113">Requirements</span></span>  
+ <span data-ttu-id="9efec-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9efec-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="573f1-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="573f1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9efec-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9efec-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="573f1-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="573f1-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9efec-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9efec-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="573f1-117">**.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="573f1-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="9efec-117">**.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9efec-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="573f1-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="573f1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9efec-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="9efec-118">See also</span></span>
 
-- [<span data-ttu-id="573f1-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="573f1-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="573f1-120">调试</span><span class="sxs-lookup"><span data-stu-id="573f1-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="9efec-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="9efec-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9efec-120">调试</span><span class="sxs-lookup"><span data-stu-id="9efec-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -7,49 +7,49 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793895"
 ---
-# <a name="-moduleassemblyname"></a><span data-ttu-id="ecf6d-102">-moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="ecf6d-102">-moduleassemblyname</span></span>
-<span data-ttu-id="ecf6d-103">指定此模块所属程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-103">Specifies the name of the assembly that this module will be a part of.</span></span>  
+# <a name="-moduleassemblyname"></a><span data-ttu-id="df5ec-102">-moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="df5ec-102">-moduleassemblyname</span></span>
+<span data-ttu-id="df5ec-103">指定此模块所属程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="df5ec-103">Specifies the name of the assembly that this module will be a part of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ecf6d-104">语法</span><span class="sxs-lookup"><span data-stu-id="ecf6d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df5ec-104">语法</span><span class="sxs-lookup"><span data-stu-id="df5ec-104">Syntax</span></span>  
   
 ```  
 -moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="ecf6d-105">自变量</span><span class="sxs-lookup"><span data-stu-id="ecf6d-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="df5ec-105">自变量</span><span class="sxs-lookup"><span data-stu-id="df5ec-105">Arguments</span></span>  
   
-|<span data-ttu-id="ecf6d-106">术语</span><span class="sxs-lookup"><span data-stu-id="ecf6d-106">Term</span></span>|<span data-ttu-id="ecf6d-107">定义</span><span class="sxs-lookup"><span data-stu-id="ecf6d-107">Definition</span></span>|  
+|<span data-ttu-id="df5ec-106">术语</span><span class="sxs-lookup"><span data-stu-id="df5ec-106">Term</span></span>|<span data-ttu-id="df5ec-107">定义</span><span class="sxs-lookup"><span data-stu-id="df5ec-107">Definition</span></span>|  
 |---|---|  
-|`assembly_name`|<span data-ttu-id="ecf6d-108">此模块的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-108">The name of the assembly that this module will be a part of.</span></span>|  
+|`assembly_name`|<span data-ttu-id="df5ec-108">此模块的程序集的名称。</span><span class="sxs-lookup"><span data-stu-id="df5ec-108">The name of the assembly that this module will be a part of.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ecf6d-109">备注</span><span class="sxs-lookup"><span data-stu-id="ecf6d-109">Remarks</span></span>  
- <span data-ttu-id="ecf6d-110">编译器进程`-moduleassemblyname`选项仅当`-target:module`指定选项。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-110">The compiler processes the `-moduleassemblyname` option only if the `-target:module` option has been specified.</span></span> <span data-ttu-id="ecf6d-111">这将导致编译器创建一个模块。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-111">This causes the compiler to create a module.</span></span> <span data-ttu-id="ecf6d-112">由编译器创建的模块是仅对与指定的程序集的有效`-moduleassemblyname`选项。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-112">The module created by the compiler is valid only for the assembly specified with the `-moduleassemblyname` option.</span></span> <span data-ttu-id="ecf6d-113">如果将模块置于不同的程序集，将发生运行时错误。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-113">If you place the module in a different assembly, run-time errors will occur.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="df5ec-109">备注</span><span class="sxs-lookup"><span data-stu-id="df5ec-109">Remarks</span></span>  
+ <span data-ttu-id="df5ec-110">编译器进程`-moduleassemblyname`选项仅当`-target:module`指定选项。</span><span class="sxs-lookup"><span data-stu-id="df5ec-110">The compiler processes the `-moduleassemblyname` option only if the `-target:module` option has been specified.</span></span> <span data-ttu-id="df5ec-111">这将导致编译器创建一个模块。</span><span class="sxs-lookup"><span data-stu-id="df5ec-111">This causes the compiler to create a module.</span></span> <span data-ttu-id="df5ec-112">由编译器创建的模块是仅对与指定的程序集的有效`-moduleassemblyname`选项。</span><span class="sxs-lookup"><span data-stu-id="df5ec-112">The module created by the compiler is valid only for the assembly specified with the `-moduleassemblyname` option.</span></span> <span data-ttu-id="df5ec-113">如果将模块置于不同的程序集，将发生运行时错误。</span><span class="sxs-lookup"><span data-stu-id="df5ec-113">If you place the module in a different assembly, run-time errors will occur.</span></span>  
   
- <span data-ttu-id="ecf6d-114">`-moduleassemblyname`选项仅当满足以下条件时，才需要：</span><span class="sxs-lookup"><span data-stu-id="ecf6d-114">The `-moduleassemblyname` option is needed only when the following are true:</span></span>  
+ <span data-ttu-id="df5ec-114">`-moduleassemblyname`选项仅当满足以下条件时，才需要：</span><span class="sxs-lookup"><span data-stu-id="df5ec-114">The `-moduleassemblyname` option is needed only when the following are true:</span></span>  
   
--   <span data-ttu-id="ecf6d-115">该模块中的数据类型需要有权`Friend`中引用的程序集中的类型。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-115">A data type in the module needs access to a `Friend` type in a referenced assembly.</span></span>  
+- <span data-ttu-id="df5ec-115">该模块中的数据类型需要有权`Friend`中引用的程序集中的类型。</span><span class="sxs-lookup"><span data-stu-id="df5ec-115">A data type in the module needs access to a `Friend` type in a referenced assembly.</span></span>  
   
--   <span data-ttu-id="ecf6d-116">将在其中生成该模块的程序集引用的程序集具有授予友元程序集访问权限。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-116">The referenced assembly has granted friend assembly access to the assembly into which the module will be built.</span></span>  
+- <span data-ttu-id="df5ec-116">将在其中生成该模块的程序集引用的程序集具有授予友元程序集访问权限。</span><span class="sxs-lookup"><span data-stu-id="df5ec-116">The referenced assembly has granted friend assembly access to the assembly into which the module will be built.</span></span>  
   
- <span data-ttu-id="ecf6d-117">有关创建模块的详细信息，请参阅[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-117">For more information about creating a module, see [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span></span> <span data-ttu-id="ecf6d-118">有关友元程序集的详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-118">For more information about friend assemblies, see [Friend Assemblies](../../../standard/assembly/friend-assemblies.md).</span></span>  
+ <span data-ttu-id="df5ec-117">有关创建模块的详细信息，请参阅[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。</span><span class="sxs-lookup"><span data-stu-id="df5ec-117">For more information about creating a module, see [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span></span> <span data-ttu-id="df5ec-118">有关友元程序集的详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。</span><span class="sxs-lookup"><span data-stu-id="df5ec-118">For more information about friend assemblies, see [Friend Assemblies](../../../standard/assembly/friend-assemblies.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ecf6d-119">`-moduleassemblyname`选项不是可从 Visual Studio 开发环境中; 它是可仅在编译时从命令提示符。</span><span class="sxs-lookup"><span data-stu-id="ecf6d-119">The `-moduleassemblyname` option is not available from within the Visual Studio development environment; it is available only when you compile from a command prompt.</span></span>  
+>  <span data-ttu-id="df5ec-119">`-moduleassemblyname`选项不是可从 Visual Studio 开发环境中; 它是可仅在编译时从命令提示符。</span><span class="sxs-lookup"><span data-stu-id="df5ec-119">The `-moduleassemblyname` option is not available from within the Visual Studio development environment; it is available only when you compile from a command prompt.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ecf6d-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="ecf6d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df5ec-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="df5ec-120">See also</span></span>
 
-- [<span data-ttu-id="ecf6d-121">如何：生成单文件程序集</span><span class="sxs-lookup"><span data-stu-id="ecf6d-121">How to: Build a Multifile Assembly</span></span>](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [<span data-ttu-id="ecf6d-122">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="ecf6d-122">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="ecf6d-123">-目标 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecf6d-123">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
-- [<span data-ttu-id="ecf6d-124">-main</span><span class="sxs-lookup"><span data-stu-id="ecf6d-124">-main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)
-- [<span data-ttu-id="ecf6d-125">-参考 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ecf6d-125">-reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [<span data-ttu-id="ecf6d-126">-addmodule</span><span class="sxs-lookup"><span data-stu-id="ecf6d-126">-addmodule</span></span>](../../../visual-basic/reference/command-line-compiler/addmodule.md)
-- [<span data-ttu-id="ecf6d-127">.NET 中的程序集</span><span class="sxs-lookup"><span data-stu-id="ecf6d-127">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
-- [<span data-ttu-id="ecf6d-128">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="ecf6d-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="ecf6d-129">友元程序集</span><span class="sxs-lookup"><span data-stu-id="ecf6d-129">Friend Assemblies</span></span>](../../../standard/assembly/friend-assemblies.md)
+- [<span data-ttu-id="df5ec-121">如何：生成单文件程序集</span><span class="sxs-lookup"><span data-stu-id="df5ec-121">How to: Build a Multifile Assembly</span></span>](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [<span data-ttu-id="df5ec-122">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="df5ec-122">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="df5ec-123">-目标 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df5ec-123">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
+- [<span data-ttu-id="df5ec-124">-main</span><span class="sxs-lookup"><span data-stu-id="df5ec-124">-main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)
+- [<span data-ttu-id="df5ec-125">-参考 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df5ec-125">-reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [<span data-ttu-id="df5ec-126">-addmodule</span><span class="sxs-lookup"><span data-stu-id="df5ec-126">-addmodule</span></span>](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [<span data-ttu-id="df5ec-127">.NET 中的程序集</span><span class="sxs-lookup"><span data-stu-id="df5ec-127">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
+- [<span data-ttu-id="df5ec-128">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="df5ec-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="df5ec-129">友元程序集</span><span class="sxs-lookup"><span data-stu-id="df5ec-129">Friend Assemblies</span></span>](../../../standard/assembly/friend-assemblies.md)

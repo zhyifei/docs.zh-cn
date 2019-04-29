@@ -14,18 +14,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
 ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781259"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="9b130-102">如何：在 Windows 窗体中更改 ToolStrip 文本和图像的外观</span><span class="sxs-lookup"><span data-stu-id="9b130-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
-<span data-ttu-id="9b130-103">您可以控制是否在显示的文本和图像<xref:System.Windows.Forms.ToolStripItem>和它们相对于彼此的对齐方式和<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="9b130-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="d09ad-102">如何：在 Windows 窗体中更改 ToolStrip 文本和图像的外观</span><span class="sxs-lookup"><span data-stu-id="d09ad-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
+<span data-ttu-id="d09ad-103">您可以控制是否在显示的文本和图像<xref:System.Windows.Forms.ToolStripItem>和它们相对于彼此的对齐方式和<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="d09ad-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a><span data-ttu-id="9b130-104">若要定义 ToolStripItem 上显示的内容</span><span class="sxs-lookup"><span data-stu-id="9b130-104">To define what is displayed on a ToolStripItem</span></span>  
+### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a><span data-ttu-id="d09ad-104">若要定义 ToolStripItem 上显示的内容</span><span class="sxs-lookup"><span data-stu-id="d09ad-104">To define what is displayed on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="9b130-105">设置<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="9b130-105">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to the desired value.</span></span> <span data-ttu-id="9b130-106">可能的值为`Image`， `ImageAndText`， `None`，和`Text`。</span><span class="sxs-lookup"><span data-stu-id="9b130-106">The possibilities are `Image`, `ImageAndText`, `None`, and `Text`.</span></span> <span data-ttu-id="9b130-107">默认值为 `ImageAndText`。</span><span class="sxs-lookup"><span data-stu-id="9b130-107">The default is `ImageAndText`.</span></span>  
+- <span data-ttu-id="d09ad-105">设置<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="d09ad-105">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to the desired value.</span></span> <span data-ttu-id="d09ad-106">可能的值为`Image`， `ImageAndText`， `None`，和`Text`。</span><span class="sxs-lookup"><span data-stu-id="d09ad-106">The possibilities are `Image`, `ImageAndText`, `None`, and `Text`.</span></span> <span data-ttu-id="d09ad-107">默认值为 `ImageAndText`。</span><span class="sxs-lookup"><span data-stu-id="d09ad-107">The default is `ImageAndText`.</span></span>  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -36,9 +36,9 @@ ms.locfileid: "59088466"
     toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;  
     ```  
   
-### <a name="to-align-text-on-a-toolstripitem"></a><span data-ttu-id="9b130-108">若要使 ToolStripItem 上的文本对齐</span><span class="sxs-lookup"><span data-stu-id="9b130-108">To align text on a ToolStripItem</span></span>  
+### <a name="to-align-text-on-a-toolstripitem"></a><span data-ttu-id="d09ad-108">若要使 ToolStripItem 上的文本对齐</span><span class="sxs-lookup"><span data-stu-id="d09ad-108">To align text on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="9b130-109">设置<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="9b130-109">Set the <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> property to the desired value.</span></span> <span data-ttu-id="9b130-110">可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。</span><span class="sxs-lookup"><span data-stu-id="9b130-110">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="9b130-111">默认值为 `MiddleCenter`。</span><span class="sxs-lookup"><span data-stu-id="9b130-111">The default is `MiddleCenter`.</span></span>  
+- <span data-ttu-id="d09ad-109">设置<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="d09ad-109">Set the <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> property to the desired value.</span></span> <span data-ttu-id="d09ad-110">可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。</span><span class="sxs-lookup"><span data-stu-id="d09ad-110">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="d09ad-111">默认值为 `MiddleCenter`。</span><span class="sxs-lookup"><span data-stu-id="d09ad-111">The default is `MiddleCenter`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -49,9 +49,9 @@ ms.locfileid: "59088466"
     toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-align-an-image-on-a-toolstripitem"></a><span data-ttu-id="9b130-112">若要对齐 ToolStripItem 上的图像</span><span class="sxs-lookup"><span data-stu-id="9b130-112">To align an image on a ToolStripItem</span></span>  
+### <a name="to-align-an-image-on-a-toolstripitem"></a><span data-ttu-id="d09ad-112">若要对齐 ToolStripItem 上的图像</span><span class="sxs-lookup"><span data-stu-id="d09ad-112">To align an image on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="9b130-113">设置<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="9b130-113">Set the <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> property to the desired value.</span></span> <span data-ttu-id="9b130-114">可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。</span><span class="sxs-lookup"><span data-stu-id="9b130-114">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="9b130-115">默认值为 `MiddleLeft`。</span><span class="sxs-lookup"><span data-stu-id="9b130-115">The default is `MiddleLeft`.</span></span>  
+- <span data-ttu-id="d09ad-113">设置<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="d09ad-113">Set the <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> property to the desired value.</span></span> <span data-ttu-id="d09ad-114">可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。</span><span class="sxs-lookup"><span data-stu-id="d09ad-114">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="d09ad-115">默认值为 `MiddleLeft`。</span><span class="sxs-lookup"><span data-stu-id="d09ad-115">The default is `MiddleLeft`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -62,9 +62,9 @@ ms.locfileid: "59088466"
     toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a><span data-ttu-id="9b130-116">若要定义 ToolStripItem 文本和图像相对于彼此的显示方式</span><span class="sxs-lookup"><span data-stu-id="9b130-116">To define how ToolStripItem text and images are displayed relative to each other</span></span>  
+### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a><span data-ttu-id="d09ad-116">若要定义 ToolStripItem 文本和图像相对于彼此的显示方式</span><span class="sxs-lookup"><span data-stu-id="d09ad-116">To define how ToolStripItem text and images are displayed relative to each other</span></span>  
   
--   <span data-ttu-id="9b130-117">设置<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="9b130-117">Set the <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> property to the desired value.</span></span> <span data-ttu-id="9b130-118">可能的值为`ImageAboveText`， `ImageBeforeText`， `Overlay`， `TextAboveImage`，和`TextBeforeImage`。</span><span class="sxs-lookup"><span data-stu-id="9b130-118">The possibilities are `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, and `TextBeforeImage`.</span></span> <span data-ttu-id="9b130-119">默认值为 `ImageBeforeText`。</span><span class="sxs-lookup"><span data-stu-id="9b130-119">The default is `ImageBeforeText`.</span></span>  
+- <span data-ttu-id="d09ad-117">设置<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="d09ad-117">Set the <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> property to the desired value.</span></span> <span data-ttu-id="d09ad-118">可能的值为`ImageAboveText`， `ImageBeforeText`， `Overlay`， `TextAboveImage`，和`TextBeforeImage`。</span><span class="sxs-lookup"><span data-stu-id="d09ad-118">The possibilities are `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, and `TextBeforeImage`.</span></span> <span data-ttu-id="d09ad-119">默认值为 `ImageBeforeText`。</span><span class="sxs-lookup"><span data-stu-id="d09ad-119">The default is `ImageBeforeText`.</span></span>  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,9 +75,9 @@ ms.locfileid: "59088466"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9b130-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="9b130-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d09ad-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="d09ad-120">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
-- [<span data-ttu-id="9b130-121">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="9b130-121">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="9b130-122">ToolStrip 控件体系结构</span><span class="sxs-lookup"><span data-stu-id="9b130-122">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="9b130-123">ToolStrip 技术摘要</span><span class="sxs-lookup"><span data-stu-id="9b130-123">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="d09ad-121">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="d09ad-121">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="d09ad-122">ToolStrip 控件体系结构</span><span class="sxs-lookup"><span data-stu-id="d09ad-122">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="d09ad-123">ToolStrip 技术摘要</span><span class="sxs-lookup"><span data-stu-id="d09ad-123">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)

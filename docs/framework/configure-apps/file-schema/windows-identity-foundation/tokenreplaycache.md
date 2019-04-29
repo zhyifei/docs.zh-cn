@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
 ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790502"
 ---
-# <a name="tokenreplaycache"></a><span data-ttu-id="84247-101">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="84247-101">\<tokenReplayCache></span></span>
-<span data-ttu-id="84247-102">使用的服务或安全令牌处理程序集合注册的标记重播缓存。</span><span class="sxs-lookup"><span data-stu-id="84247-102">Registers a token replay cache with a service or a security token handler collection.</span></span>  
+# <a name="tokenreplaycache"></a><span data-ttu-id="30200-101">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="30200-101">\<tokenReplayCache></span></span>
+<span data-ttu-id="30200-102">使用的服务或安全令牌处理程序集合注册的标记重播缓存。</span><span class="sxs-lookup"><span data-stu-id="30200-102">Registers a token replay cache with a service or a security token handler collection.</span></span>  
   
- <span data-ttu-id="84247-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="84247-103">\<system.identityModel></span></span>  
-<span data-ttu-id="84247-104">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="84247-104">\<identityConfiguration></span></span>  
-<span data-ttu-id="84247-105">\<caches></span><span class="sxs-lookup"><span data-stu-id="84247-105">\<caches></span></span>  
-<span data-ttu-id="84247-106">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="84247-106">\<tokenReplayCache></span></span>  
+ <span data-ttu-id="30200-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="30200-103">\<system.identityModel></span></span>  
+<span data-ttu-id="30200-104">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="30200-104">\<identityConfiguration></span></span>  
+<span data-ttu-id="30200-105">\<caches></span><span class="sxs-lookup"><span data-stu-id="30200-105">\<caches></span></span>  
+<span data-ttu-id="30200-106">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="30200-106">\<tokenReplayCache></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84247-107">语法</span><span class="sxs-lookup"><span data-stu-id="84247-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30200-107">语法</span><span class="sxs-lookup"><span data-stu-id="30200-107">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -31,29 +31,29 @@ ms.locfileid: "59113381"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="84247-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="84247-108">Attributes and Elements</span></span>  
- <span data-ttu-id="84247-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="84247-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="30200-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="30200-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="30200-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="30200-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="84247-110">特性</span><span class="sxs-lookup"><span data-stu-id="84247-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="30200-110">特性</span><span class="sxs-lookup"><span data-stu-id="30200-110">Attributes</span></span>  
   
-|<span data-ttu-id="84247-111">特性</span><span class="sxs-lookup"><span data-stu-id="84247-111">Attribute</span></span>|<span data-ttu-id="84247-112">描述</span><span class="sxs-lookup"><span data-stu-id="84247-112">Description</span></span>|  
+|<span data-ttu-id="30200-111">特性</span><span class="sxs-lookup"><span data-stu-id="30200-111">Attribute</span></span>|<span data-ttu-id="30200-112">描述</span><span class="sxs-lookup"><span data-stu-id="30200-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="84247-113">类型</span><span class="sxs-lookup"><span data-stu-id="84247-113">type</span></span>|<span data-ttu-id="84247-114">从派生的类型的<xref:System.IdentityModel.Tokens.TokenReplayCache>类。</span><span class="sxs-lookup"><span data-stu-id="84247-114">A type that derives from the <xref:System.IdentityModel.Tokens.TokenReplayCache> class.</span></span> <span data-ttu-id="84247-115">详细了解如何指定自定义`type`，请参阅 [自定义类型引用]。</span><span class="sxs-lookup"><span data-stu-id="84247-115">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>
+|<span data-ttu-id="30200-113">类型</span><span class="sxs-lookup"><span data-stu-id="30200-113">type</span></span>|<span data-ttu-id="30200-114">从派生的类型的<xref:System.IdentityModel.Tokens.TokenReplayCache>类。</span><span class="sxs-lookup"><span data-stu-id="30200-114">A type that derives from the <xref:System.IdentityModel.Tokens.TokenReplayCache> class.</span></span> <span data-ttu-id="30200-115">详细了解如何指定自定义`type`，请参阅 [自定义类型引用]。</span><span class="sxs-lookup"><span data-stu-id="30200-115">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>
   
-### <a name="child-elements"></a><span data-ttu-id="84247-116">子元素</span><span class="sxs-lookup"><span data-stu-id="84247-116">Child Elements</span></span>  
- <span data-ttu-id="84247-117">None</span><span class="sxs-lookup"><span data-stu-id="84247-117">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="30200-116">子元素</span><span class="sxs-lookup"><span data-stu-id="30200-116">Child Elements</span></span>  
+ <span data-ttu-id="30200-117">None</span><span class="sxs-lookup"><span data-stu-id="30200-117">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="84247-118">父元素</span><span class="sxs-lookup"><span data-stu-id="84247-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="30200-118">父元素</span><span class="sxs-lookup"><span data-stu-id="30200-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="84247-119">元素</span><span class="sxs-lookup"><span data-stu-id="84247-119">Element</span></span>|<span data-ttu-id="84247-120">描述</span><span class="sxs-lookup"><span data-stu-id="84247-120">Description</span></span>|  
+|<span data-ttu-id="30200-119">元素</span><span class="sxs-lookup"><span data-stu-id="30200-119">Element</span></span>|<span data-ttu-id="30200-120">描述</span><span class="sxs-lookup"><span data-stu-id="30200-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="84247-121">\<caches></span><span class="sxs-lookup"><span data-stu-id="84247-121">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="84247-122">注册服务或安全令牌处理程序集合使用的缓存。</span><span class="sxs-lookup"><span data-stu-id="84247-122">Registers the caches used by a service or a security token handler collection.</span></span>|  
+|[<span data-ttu-id="30200-121">\<caches></span><span class="sxs-lookup"><span data-stu-id="30200-121">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="30200-122">注册服务或安全令牌处理程序集合使用的缓存。</span><span class="sxs-lookup"><span data-stu-id="30200-122">Registers the caches used by a service or a security token handler collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="84247-123">备注</span><span class="sxs-lookup"><span data-stu-id="84247-123">Remarks</span></span>  
- <span data-ttu-id="84247-124">令牌重放缓存用于检测重播的标记。</span><span class="sxs-lookup"><span data-stu-id="84247-124">The token replay cache is used to detect replayed tokens.</span></span> <span data-ttu-id="84247-125">通过启用令牌重放检测[ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)元素，它还指定令牌的最大到期时间。</span><span class="sxs-lookup"><span data-stu-id="84247-125">Token replay detection is enabled by the [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) element, which also specifies the maximum expiration time for tokens.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30200-123">备注</span><span class="sxs-lookup"><span data-stu-id="30200-123">Remarks</span></span>  
+ <span data-ttu-id="30200-124">令牌重放缓存用于检测重播的标记。</span><span class="sxs-lookup"><span data-stu-id="30200-124">The token replay cache is used to detect replayed tokens.</span></span> <span data-ttu-id="30200-125">通过启用令牌重放检测[ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)元素，它还指定令牌的最大到期时间。</span><span class="sxs-lookup"><span data-stu-id="30200-125">Token replay detection is enabled by the [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) element, which also specifies the maximum expiration time for tokens.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="84247-126">示例</span><span class="sxs-lookup"><span data-stu-id="84247-126">Example</span></span>  
- <span data-ttu-id="84247-127">以下 XML 显示了用于检测重播的标记的自定义缓存配置。</span><span class="sxs-lookup"><span data-stu-id="84247-127">The following XML shows the configuration of a custom cache for detecting replayed tokens.</span></span>  
+## <a name="example"></a><span data-ttu-id="30200-126">示例</span><span class="sxs-lookup"><span data-stu-id="30200-126">Example</span></span>  
+ <span data-ttu-id="30200-127">以下 XML 显示了用于检测重播的标记的自定义缓存配置。</span><span class="sxs-lookup"><span data-stu-id="30200-127">The following XML shows the configuration of a custom cache for detecting replayed tokens.</span></span>  
   
 ```xml  
 <caches>  
@@ -62,7 +62,7 @@ ms.locfileid: "59113381"
 </caches>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="84247-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="84247-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="30200-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="30200-128">See also</span></span>
 
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
-- [<span data-ttu-id="84247-129">\<tokenReplayDetection></span><span class="sxs-lookup"><span data-stu-id="84247-129">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+- [<span data-ttu-id="30200-129">\<tokenReplayDetection></span><span class="sxs-lookup"><span data-stu-id="30200-129">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

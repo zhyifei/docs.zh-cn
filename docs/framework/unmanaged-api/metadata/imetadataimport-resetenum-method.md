@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777424"
 ---
-# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="4d452-102">IMetaDataImport::ResetEnum 方法</span><span class="sxs-lookup"><span data-stu-id="4d452-102">IMetaDataImport::ResetEnum Method</span></span>
-<span data-ttu-id="4d452-103">将指定的枚举器重置到指定位置。</span><span class="sxs-lookup"><span data-stu-id="4d452-103">Resets the specified enumerator to the specified position.</span></span>  
+# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="88119-102">IMetaDataImport::ResetEnum 方法</span><span class="sxs-lookup"><span data-stu-id="88119-102">IMetaDataImport::ResetEnum Method</span></span>
+<span data-ttu-id="88119-103">将指定的枚举器重置到指定位置。</span><span class="sxs-lookup"><span data-stu-id="88119-103">Resets the specified enumerator to the specified position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d452-104">语法</span><span class="sxs-lookup"><span data-stu-id="4d452-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="88119-104">语法</span><span class="sxs-lookup"><span data-stu-id="88119-104">Syntax</span></span>  
   
 ```  
 HRESULT ResetEnum (  
@@ -36,23 +36,23 @@ HRESULT ResetEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4d452-105">参数</span><span class="sxs-lookup"><span data-stu-id="4d452-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="88119-105">参数</span><span class="sxs-lookup"><span data-stu-id="88119-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="4d452-106">[in]若要重置枚举器。</span><span class="sxs-lookup"><span data-stu-id="4d452-106">[in] The enumerator to reset.</span></span>  
+ <span data-ttu-id="88119-106">[in]若要重置枚举器。</span><span class="sxs-lookup"><span data-stu-id="88119-106">[in] The enumerator to reset.</span></span>  
   
  `ulPos`  
- <span data-ttu-id="4d452-107">[in]在其中放置枚举器的新位置。</span><span class="sxs-lookup"><span data-stu-id="4d452-107">[in] The new position at which to place the enumerator.</span></span>  
+ <span data-ttu-id="88119-107">[in]在其中放置枚举器的新位置。</span><span class="sxs-lookup"><span data-stu-id="88119-107">[in] The new position at which to place the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4d452-108">要求</span><span class="sxs-lookup"><span data-stu-id="4d452-108">Requirements</span></span>  
- <span data-ttu-id="4d452-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4d452-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="88119-108">要求</span><span class="sxs-lookup"><span data-stu-id="88119-108">Requirements</span></span>  
+ <span data-ttu-id="88119-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="88119-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d452-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4d452-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="88119-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="88119-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4d452-111">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4d452-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="88119-111">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="88119-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4d452-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d452-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="88119-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88119-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d452-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d452-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88119-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="88119-113">See also</span></span>
 
-- [<span data-ttu-id="4d452-114">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="4d452-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="4d452-115">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="4d452-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="88119-114">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="88119-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="88119-115">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="88119-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
