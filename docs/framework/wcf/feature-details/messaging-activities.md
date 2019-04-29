@@ -3,11 +3,11 @@ title: 消息传递活动的 WCF
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
 ms.openlocfilehash: 7670a6694e15f0a9e25152102d6237ef1ed60941
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771431"
 ---
 # <a name="messaging-activities"></a>消息传递活动
 
@@ -55,7 +55,7 @@ ms.locfileid: "55255248"
 
 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.SendReply> 活动还具有一个名为 `Content` 的属性。 此属性的类型为 <xref:System.ServiceModel.Activities.SendContent>，它表示 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活动发送的数据。 .NET Framework 定义两个名为 <xref:System.ServiceModel.Activities.SendMessageContent> 和 <xref:System.ServiceModel.Activities.SendParametersContent> 的相关类型，这两个类型都派生自 <xref:System.ServiceModel.Activities.SendContent>。 将 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活动的 `Content` 属性设置为其中一个类型的实例，以便从工作流服务发送数据。 要使用的类型取决于活动发送的数据的类型。 如果活动发送 `Message` 对象或消息协定类型，则使用 <xref:System.ServiceModel.Activities.SendMessageContent>。 如果活动发送数据协定类型，则使用 <xref:System.ServiceModel.Activities.SendParametersContent>。 使用<xref:System.ServiceModel.Activities.SendParametersContent> 可以发送多个参数，而使用 <xref:System.ServiceModel.Activities.SendMessageContent> 只能发送一个对象，即消息（或消息协定类型）。
 
-以命令方式对消息传递活动进行编程时，使用泛型 <xref:System.Activities.InArgument%601> 和 <xref:System.Activities.OutArgument%601> 包装分配给消息的对象或者包装 <xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply>、<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活动的参数属性。 使用<xref:System.Activities.InArgument%601>有关<xref:System.ServiceModel.Activities.Send>并<xref:System.ServiceModel.Activities.SendReply>活动和<xref:System.Activities.OutArgument%601>有关<xref:System.ServiceModel.Activities.Receive>和<xref:System.ServiceModel.Activities.ReceiveReply>活动。 `In` 参数用于发送活动，因为数据将传入到活动。 `Out` 参数用于接收活动，因为数据将传出到活动之外，如下面的示例所示。
+以命令方式对消息传递活动进行编程时，使用泛型 <xref:System.Activities.InArgument%601> 和 <xref:System.Activities.OutArgument%601> 包装分配给消息的对象或者包装 <xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply>、<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活动的参数属性。 使用<xref:System.Activities.InArgument%601>有关<xref:System.ServiceModel.Activities.Send>并<xref:System.ServiceModel.Activities.SendReply>活动和<xref:System.Activities.OutArgument%601>有关<xref:System.ServiceModel.Activities.Receive>和<xref:System.ServiceModel.Activities.ReceiveReply>活动。 `In` 自变量用于发送活动，因为数据将传入到活动。 `Out` 参数用于接收活动，因为数据将传出到活动之外，如下面的示例所示。
 
 ```csharp
 Receive reserveSeat = new Receive

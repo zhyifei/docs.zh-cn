@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938848"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 标记扩展
 提供 CLR<xref:System.Type>是指定的 XAML 类型的基础类型的对象。  
@@ -71,11 +71,11 @@ ms.locfileid: "59211629"
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 提供额外支持泛型类型，并修改的功能行为`x:TypeArguments`和`x:Type`能够提供此支持。  
   
--   `x:TypeArguments` 并且，泛型对象实例化的关联的对象元素可在根以外的其他元素。 有关详细信息，请参阅"XAML 2009"一节[X:typearguments 指令](x-typearguments-directive.md)。  
+- `x:TypeArguments` 并且，泛型对象实例化的关联的对象元素可在根以外的其他元素。 有关详细信息，请参阅"XAML 2009"一节[X:typearguments 指令](x-typearguments-directive.md)。  
   
--   XAML 2009 支持用于在标记中指定的泛型类型约束的语法。 这可由`x:TypeArguments`，也可由`x:Type`，或结合使用的两个功能。  
+- XAML 2009 支持用于在标记中指定的泛型类型约束的语法。 这可由`x:TypeArguments`，也可由`x:Type`，或结合使用的两个功能。  
   
--   WPF XAML 实现的负载也将此功能添加到使用类型的某些 framework 属性的隐式类型转换行为处理 XAML 2009 时<xref:System.Type>。  
+- WPF XAML 实现的负载也将此功能添加到使用类型的某些 framework 属性的隐式类型转换行为处理 XAML 2009 时<xref:System.Type>。  
   
  在 WPF 中，可以使用 XAML 2009 功能但仅针对松散 XAML (未标记编译的 XAML) 中。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   

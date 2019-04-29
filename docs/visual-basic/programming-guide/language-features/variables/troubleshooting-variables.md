@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756749"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>变量疑难解答 (Visual Basic)
 此页列出了使用 Visual Basic 中的变量时可能发生的一些常见问题。  
@@ -18,9 +18,9 @@ ms.locfileid: "58831119"
 ## <a name="unable-to-access-members-of-an-object"></a>无法访问对象的成员  
  如果你的代码尝试访问对象上的属性或方法，可能会出现两种错误结果：  
   
--   如果你声明对象变量为特定类型，然后引用不是由此类型定义的成员，则编译器可能生成错误消息。  
+- 如果你声明对象变量为特定类型，然后引用不是由此类型定义的成员，则编译器可能生成错误消息。  
   
--   当分配给对象变量的对象不显示代码正尝试访问的成员时，将产生运行时 <xref:System.MemberAccessException> 。 当变量为 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)，如果成员不是 `Public`中的变量时可能出现的一些常见问题。 这是因为后期绑定只允许访问 `Public` 成员。  
+- 当分配给对象变量的对象不显示代码正尝试访问的成员时，将产生运行时 <xref:System.MemberAccessException> 。 当变量为 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)，如果成员不是 `Public`中的变量时可能出现的一些常见问题。 这是因为后期绑定只允许访问 `Public` 成员。  
   
  当 [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 设置类型检查 `On`时，对象变量仅可访问声明它所用的类的方法和属性。 下面的示例阐释了这一点。  
 

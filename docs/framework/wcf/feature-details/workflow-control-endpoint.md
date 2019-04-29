@@ -3,11 +3,11 @@ title: 工作流控制终结点
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
 ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929709"
 ---
 # <a name="workflow-control-endpoint"></a>工作流控制终结点
 开发人员可以使用工作流控制终结点调用控制操作，从而远程控制使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流实例。 可以利用此功能以编程方式执行控制操作，如挂起、继续和终止。  
@@ -46,7 +46,7 @@ ms.locfileid: "33502587"
 |TransactedTerminate|在某个事务（从客户端流入或在本地创建）下执行终止操作。 如果系统维护了工作流实例的持久状态，则工作流实例必须在执行此操作期间存在。|  
 |TransactedUnsuspend|在某个事务（从客户端流入或在本地创建）下执行取消挂起操作。 如果系统维护了工作流实例的持久状态，则工作流实例必须在执行此操作期间存在。|  
   
- <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 协定无法用于创建新工作流实例，它只能管理现有工作流实例。 有关远程创建新的工作流实例的详细信息，请参阅[工作流服务主机可扩展性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
+ <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 协定无法用于创建新工作流实例，它只能管理现有工作流实例。 有关远程创建新的工作流实例的详细信息，请参阅[Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 是具有固定协定 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 的标准终结点。 将此终结点添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例后，可以使用此终结点将命令操作发送到由主机实例承载的任何工作流实例。 有关标准终结点的详细信息，请参阅[标准终结点](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)。  

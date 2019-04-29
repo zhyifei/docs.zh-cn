@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769522"
 ---
 # <a name="listview-overview"></a>ListView 概述
 <xref:System.Windows.Controls.ListView>控件提供了用于显示数据项的一组不同的布局或视图中的基础结构。 例如，用户可能需要在表格中显示数据项，并同时对表格的列进行排序。  
@@ -58,9 +58,9 @@ ms.locfileid: "59186493"
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>为实现 GridView 的 ListView 设置样式  
  <xref:System.Windows.Controls.ListView>控件包含<xref:System.Windows.Controls.ListViewItem>对象，表示显示的数据项。 可使用以下属性定义数据项的内容和样式：  
   
--   上<xref:System.Windows.Controls.ListView>控制，请使用<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>， <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>，和<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>属性。  
+- 上<xref:System.Windows.Controls.ListView>控制，请使用<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>， <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>，和<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>属性。  
   
--   上<xref:System.Windows.Controls.ListViewItem>控制，请使用<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>属性。  
+- 上<xref:System.Windows.Controls.ListViewItem>控制，请使用<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>属性。  
   
  若要避免出现对齐问题中的单元格之间<xref:System.Windows.Controls.GridView>，请不要使用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>来设置属性或添加内容中的项的宽度有影响<xref:System.Windows.Controls.ListView>。 例如，可能出现对齐问题，设置时<xref:System.Windows.FrameworkElement.Margin%2A>中的属性<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>。 若要指定属性或定义中的项的宽度有影响的内容<xref:System.Windows.Controls.GridView>，使用的属性<xref:System.Windows.Controls.GridView>类和其相关的类，如<xref:System.Windows.Controls.GridViewColumn>。  
   

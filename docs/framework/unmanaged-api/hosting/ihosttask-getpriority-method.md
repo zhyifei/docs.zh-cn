@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 702992ab4edfea3f0b699efefedb195cd87586ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789566"
 ---
 # <a name="ihosttaskgetpriority-method"></a>IHostTask::GetPriority 方法
 获取表示当前的任务的线程优先级别[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。  

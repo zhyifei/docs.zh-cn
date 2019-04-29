@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929839"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
@@ -29,27 +29,27 @@ ms.locfileid: "59331710"
 ## <a name="certificate-stores"></a>证书存储区  
  证书存放在存储区中。 主要的存储区位置有两个，它们进一步分为子存储区。 如果您是计算机的管理员，就可以使用 MMC 管理单元工具查看这两个主要存储区。 非管理员只能查看当前用户存储区。  
   
--   **本地计算机存储区**。 该存储区包含计算机进程（例如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]）访问的证书。 此位置用于存储向客户端验证服务器身份的证书。  
+- **本地计算机存储区**。 该存储区包含计算机进程（例如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]）访问的证书。 此位置用于存储向客户端验证服务器身份的证书。  
   
--   **当前用户存储区**。 交互式应用程序通常将证书放在此位置，供计算机的当前用户使用。 如果要创建客户端应用程序，通常会将向服务验证用户身份的证书放在此处。  
+- **当前用户存储区**。 交互式应用程序通常将证书放在此位置，供计算机的当前用户使用。 如果要创建客户端应用程序，通常会将向服务验证用户身份的证书放在此处。  
   
  这两个存储区进一步分为子存储区。 使用 WCF 编程时，最重要的子存储区包括：  
   
--   **受信任的根证书颁发机构**。 使用此存储区中的证书可以创建证书链，通过证书链，可以追溯到此存储区中的证书颁发机构证书。  
+- **受信任的根证书颁发机构**。 使用此存储区中的证书可以创建证书链，通过证书链，可以追溯到此存储区中的证书颁发机构证书。  
   
     > [!IMPORTANT]
     >  本地计算机隐式信任放置在此存储区中的任何证书，即使证书不是来自受信任的第三方证书颁发机构，也是如此。 因此，除非完全信任颁发机构并了解后果，否则不要将任何证书放入此存储区。  
   
--   **个人**。 此存储区用于放置与计算机用户关联的证书。 通常，此存储区用于存放在受信任的根证书颁发机构存储区中找到的证书颁发机构证书之一所颁发的证书。 此外，此处还可存放应用程序自行颁发并且信任的证书。  
+- **个人**。 此存储区用于放置与计算机用户关联的证书。 通常，此存储区用于存放在受信任的根证书颁发机构存储区中找到的证书颁发机构证书之一所颁发的证书。 此外，此处还可存放应用程序自行颁发并且信任的证书。  
   
  有关证书存储的详细信息，请参阅[证书存储](/windows/desktop/secauthn/certificate-stores)。  
   
 ### <a name="selecting-a-store"></a>选择存储区  
  证书存储位置的选择，取决于服务或客户端运行的方式和时间。 适用以下一般规则：  
   
--   如果 WCF 服务承载于某个 Windows 服务中，则使用“本地计算机”存储区。 请注意，要将证书安装到本地计算机存储区，需要有管理员权限。  
+- 如果 WCF 服务承载于某个 Windows 服务中，则使用“本地计算机”存储区。 请注意，要将证书安装到本地计算机存储区，需要有管理员权限。  
   
--   如果服务或客户端是在某个用户帐户下运行的应用程序，则使用“当前用户”存储区。  
+- 如果服务或客户端是在某个用户帐户下运行的应用程序，则使用“当前用户”存储区。  
   
 ### <a name="accessing-stores"></a>访问存储区  
  与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
@@ -74,11 +74,11 @@ ms.locfileid: "59331710"
   
  此外，也可以通过配置设置此属性。 下列元素用于指定验证模式：  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>自定义身份验证  
  使用 `CertificateValidationMode` 属性，还可以对证书的身份验证方式进行自定义。 默认情况下，级别设置为 `ChainTrust`。 若要使用 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 值，还必须将 `CustomCertificateValidatorType` 属性设置为程序集和用于验证证书的类型。 若要创建自定义验证程序，必须从抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 类继承。  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
 ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776715"
 ---
 # <a name="how-to-create-outlined-text"></a>如何：创建空心文本
 在大多数情况下，当要将装饰添加到中的文本字符串时您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序中，使用的根据一系列离散的字符或字形的文本。 例如，您可以创建线性渐变画笔，并将其应用于<xref:System.Windows.Controls.Control.Foreground%2A>属性的<xref:System.Windows.Controls.TextBox>对象。 当显示或编辑文本框中时，线性渐变画笔是自动应用于当前集的文本字符串中的字符。  

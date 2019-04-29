@@ -3,11 +3,11 @@ title: XML (Visual Basic 中) 的纯功能转换
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
 ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766449"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>XML (Visual Basic 中) 的纯功能转换
 本节提供 XML 的函数转换教程。 它包括使用函数转换所必须理解的主要概念和语言构造的说明以及使用函数转换来操作 XML 文档的示例。 虽然本教程提供 LINQ to XML 代码示例，但所有基础概念也适用于其他 LINQ 技术。  

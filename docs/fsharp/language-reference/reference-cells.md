@@ -3,11 +3,11 @@ title: 引用单元格
 description: 了解如何F#引用单元格是使您能够创建具有引用语义的可变值的存储位置。
 ms.date: 05/16/2016
 ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795391"
 ---
 # <a name="reference-cells"></a>引用单元格
 
@@ -54,13 +54,13 @@ let ref x = { contents = x }
 |--------------------------|-----------|----|----------|
 |`!`（取消引用运算符）|返回基础值。|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=`（赋值运算符）|更改基础值。|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`（运算符）|将值封装到新的引用单元格中。|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value`（属性）|获取或设置基础值。|`unit -> 'a`|`member x.Value = x.contents`|
+|`ref` （运算符）|将值封装到新的引用单元格中。|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value` （属性）|获取或设置基础值。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents`（记录字段）|获取或设置基础值。|`'a`|`let ref x = { contents = x }`|
 
 可通过多种方式来访问基础值。 取消引用运算符 (`!`) 返回的值不是可赋值的值。 因此，如果要修改基础值，您必须改用赋值运算符 (`:=`)。
 
-`Value` 属性和 `contents` 字段都是可赋值的值。 因此，你可以使用它们来访问或更改基础值，如下面的代码所示。
+`Value` 属性和 `contents` 字段都是可赋值的值。 因此，您可以使用它们来访问或更改基础值，如下面的代码所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 

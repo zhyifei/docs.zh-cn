@@ -6,70 +6,70 @@ helpviewer_keywords:
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
 ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777047"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>如何：向墨迹数据添加自定义数据
 可以将自定义数据添加到手写内容保存为墨迹序列化格式 (ISF) 时将保存的墨迹。  您可以自定义将数据保存到<xref:System.Windows.Ink.DrawingAttributes>，则<xref:System.Windows.Ink.StrokeCollection>，或<xref:System.Windows.Ink.Stroke>。  能够将自定义数据保存在三个对象上使你能够决定保存数据的最佳位置。  所有三个类使用类似的方法来存储和访问自定义数据。  
   
  只能使用以下类型可以另存为自定义数据：  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Boolean>[]  
+- <xref:System.Boolean>[]  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Byte>[]  
+- <xref:System.Byte>[]  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Char>[]  
+- <xref:System.Char>[]  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.DateTime>[]  
+- <xref:System.DateTime>[]  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Decimal>[]  
+- <xref:System.Decimal>[]  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Double>[]  
+- <xref:System.Double>[]  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int16>[]  
+- <xref:System.Int16>[]  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int32>[]  
+- <xref:System.Int32>[]  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Int64>[]  
+- <xref:System.Int64>[]  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Single>[]  
+- <xref:System.Single>[]  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.UInt16>  
+- <xref:System.UInt16>  
   
--   <xref:System.UInt16>[]  
+- <xref:System.UInt16>[]  
   
--   <xref:System.UInt32>  
+- <xref:System.UInt32>  
   
--   <xref:System.UInt32>[]  
+- <xref:System.UInt32>[]  
   
--   <xref:System.UInt64>  
+- <xref:System.UInt64>  
   
--   <xref:System.UInt64>[]  
+- <xref:System.UInt64>[]  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何添加和检索自定义数据<xref:System.Windows.Ink.StrokeCollection>。  

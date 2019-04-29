@@ -9,11 +9,11 @@ helpviewer_keywords:
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
 ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768675"
 ---
 # <a name="how-to-register-an-attached-property"></a>如何：注册附加属性
 此示例演示如何注册附加属性和提供公共访问器，以便可以在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 和代码中使用该属性。 附加属性是由 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定义的语法概念。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类型的大多数附加属性还作为依赖属性实现。 可以对任何使用依赖项属性<xref:System.Windows.DependencyObject>类型。  

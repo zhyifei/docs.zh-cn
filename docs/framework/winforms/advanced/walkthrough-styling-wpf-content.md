@@ -7,22 +7,22 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781298"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>演练：设置 WPF 内容的样式
 本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。
 
  在本演练中，你将要执行以下任务：
 
--   创建项目。
+- 创建项目。
 
--   创建 WPF 控件类型。
+- 创建 WPF 控件类型。
 
--   将样式应用到 WPF 控件。
+- 将样式应用到 WPF 控件。
 
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -30,7 +30,7 @@ ms.locfileid: "59312145"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio 2012.  
+- Visual Studio 2012。  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建 Windows 窗体项目。  
@@ -40,7 +40,7 @@ ms.locfileid: "59312145"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
--   创建新的 Windows 窗体应用程序项目在 Visual Basic 或 Visual C# 名为`StylingWpfContent`。  
+- 创建新的 Windows 窗体应用程序项目在 Visual Basic 或 Visual C# 名为`StylingWpfContent`。  
   
 ## <a name="creating-the-wpf-control-types"></a>创建 WPF 控件类型  
  将 WPF 控件类型添加到项目后，就可在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中托管它。  

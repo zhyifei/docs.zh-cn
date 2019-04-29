@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778724"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 指定声明的编程元素重新声明并隐藏具有相同名称的元素或在基类中的重载元素集。  
@@ -28,19 +28,19 @@ ms.locfileid: "58834135"
   
 ## <a name="rules"></a>规则  
   
--   **声明上下文。** 可以使用`Shadows`仅在类级别。 这意味着声明上下文`Shadows`元素必须是类，且不能为源文件、 命名空间、 接口、 模块、 结构或过程。  
+- **声明上下文。** 可以使用`Shadows`仅在类级别。 这意味着声明上下文`Shadows`元素必须是类，且不能为源文件、 命名空间、 接口、 模块、 结构或过程。  
   
      您可以声明在单个声明语句中只能有一个隐藏的元素。  
   
--   **组合的修饰符。** 不能指定`Shadows`连同`Overloads`， `Overrides`，或`Static`同一声明中。  
+- **组合的修饰符。** 不能指定`Shadows`连同`Overloads`， `Overrides`，或`Static`同一声明中。  
   
--   **元素类型。** 可以与任何其他类型一起隐藏任何类型的已声明元素。 如果隐藏属性或使用另一个属性或过程的过程，参数和返回类型无需与基类属性或过程中的匹配。  
+- **元素类型。** 可以与任何其他类型一起隐藏任何类型的已声明元素。 如果隐藏属性或使用另一个属性或过程的过程，参数和返回类型无需与基类属性或过程中的匹配。  
   
--   **访问。** 通常情况下隐藏它的派生类中从无法在基类中隐藏的元素。 但是，以下注意事项适用。  
+- **访问。** 通常情况下隐藏它的派生类中从无法在基类中隐藏的元素。 但是，以下注意事项适用。  
   
-    -   如果不能从引用它的代码访问隐藏的元素，该引用被解析为隐藏的元素。 例如，如果`Private`元素将隐藏基类元素，不具有访问权限的代码`Private`元素将改为访问的基类元素。  
+    - 如果不能从引用它的代码访问隐藏的元素，该引用被解析为隐藏的元素。 例如，如果`Private`元素将隐藏基类元素，不具有访问权限的代码`Private`元素将改为访问的基类元素。  
   
-    -   如果隐藏某个元素时，仍可以通过使用基类的类型声明的对象来访问隐藏的元素。 您还可以访问通过`MyBase`。  
+    - 如果隐藏某个元素时，仍可以通过使用基类的类型声明的对象来访问隐藏的元素。 您还可以访问通过`MyBase`。  
   
  `Shadows` 修饰符可用于下面的上下文中：  
   

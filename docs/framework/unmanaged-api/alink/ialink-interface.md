@@ -9,11 +9,11 @@ ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789774"
 ---
 # <a name="ialink-interface"></a>IALink 接口
 可帮助在构建.NET Framework 程序集。 此外，此接口包含帮助为多模块程序集编写程序集清单、 签名程序集具有强名称，并创建网络模块的方法。  

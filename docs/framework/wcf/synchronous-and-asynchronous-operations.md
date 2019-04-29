@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935507"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -27,24 +27,24 @@ ms.locfileid: "59770862"
   
  如果服务协定独立于服务或客户端实现，则可以在 WCF 应用程序中实现下列形式的异步执行：  
   
--   客户端可以使用同步消息交换以异步方式调用请求/响应操作。  
+- 客户端可以使用同步消息交换以异步方式调用请求/响应操作。  
   
--   服务可以使用同步消息交换以异步方式实现请求/响应操作。  
+- 服务可以使用同步消息交换以异步方式实现请求/响应操作。  
   
--   消息交换可以是单向的，而与客户端或服务的实现无关。  
+- 消息交换可以是单向的，而与客户端或服务的实现无关。  
   
 ### <a name="suggested-asynchronous-scenarios"></a>建议的异步方案  
  如果操作服务实现执行阻止调用（如执行 I/O 工作），则在该服务操作实现中使用异步方法。 在异步操作实现中，可尝试调用异步操作和方法来尽可能远地扩展异步调用路径。 例如，从 `BeginOperationTwo()` 中调用 `BeginOperationOne()`。  
   
--   在下列情况下，可在客户端应用程序或调用应用程序中使用异步方法：  
+- 在下列情况下，可在客户端应用程序或调用应用程序中使用异步方法：  
   
--   如果从中间层应用程序调用操作。 （有关此类方案的详细信息，请参阅[中间层客户端应用程序](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。）  
+- 如果从中间层应用程序调用操作。 （有关此类方案的详细信息，请参阅[中间层客户端应用程序](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。）  
   
--   如果在 ASP.NET 页中调用操作，可使用异步页。  
+- 如果在 ASP.NET 页中调用操作，可使用异步页。  
   
--   如果从任何单线程的应用程序（如 Windows 窗体或 Windows Presentation Foundation (WPF)）调用操作。 使用基于事件的异步调用模型时，将在 UI 线程上引发结果事件，从而向应用程序添加响应性而无需您自己处理多个线程。  
+- 如果从任何单线程的应用程序（如 Windows 窗体或 Windows Presentation Foundation (WPF)）调用操作。 使用基于事件的异步调用模型时，将在 UI 线程上引发结果事件，从而向应用程序添加响应性而无需您自己处理多个线程。  
   
--   通常，如果可在同步调用和异步调用之间进行选择，应选择异步调用。  
+- 通常，如果可在同步调用和异步调用之间进行选择，应选择异步调用。  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>实现异步服务操作  
  可以通过使用下列三种方法之一实现异步操作：  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  定义一个异步执行（而不考虑它在客户端应用程序中的调用方式）的协定操作 `X`：  
   
--   使用 `BeginOperation` 和 `EndOperation` 模式定义两个方法。  
+- 使用 `BeginOperation` 和 `EndOperation` 模式定义两个方法。  
   
--   `BeginOperation` 方法包括该操作的 `in` 和 `ref` 参数，并返回一个 <xref:System.IAsyncResult> 类型。  
+- `BeginOperation` 方法包括该操作的 `in` 和 `ref` 参数，并返回一个 <xref:System.IAsyncResult> 类型。  
   
--   `EndOperation` 方法包括一个 <xref:System.IAsyncResult> 参数以及 `out` 和 `ref` 参数，并返回操作的返回类型。  
+- `EndOperation` 方法包括一个 <xref:System.IAsyncResult> 参数以及 `out` 和 `ref` 参数，并返回操作的返回类型。  
   
  有关示例，请参见下面的方法。  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757856"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 控件（Windows 窗体）
 Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。  
@@ -58,15 +58,15 @@ Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用�
  [如何：向 ListView 控件添加搜索功能](how-to-add-search-capabilities-to-a-listview-control.md)  
  介绍如何以编程方式使用文本搜索或屏幕坐标查找项。  
   
--   [如何：启用使用设计器的 Windows 窗体 ListView 控件中的磁贴视图](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [如何：启用使用设计器的 Windows 窗体 ListView 控件中的磁贴视图](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [如何：添加和删除项与使用设计器在 Windows 窗体 ListView 控件](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [如何：添加和删除项与使用设计器在 Windows 窗体 ListView 控件](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [如何：将列添加到使用设计器在 Windows 窗体 ListView 控件](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [如何：将列添加到使用设计器在 Windows 窗体 ListView 控件](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [如何：使用设计器的 Windows 窗体 ListView 控件中的项进行分组](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [如何：使用设计器的 Windows 窗体 ListView 控件中的项进行分组](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [演练：创建带有 ListView 和 TreeView 控件使用设计器的资源管理器样式界面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [演练：创建带有 ListView 和 TreeView 控件使用设计器的资源管理器样式界面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ListView> 类  

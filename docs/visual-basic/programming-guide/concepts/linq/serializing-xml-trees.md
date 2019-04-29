@@ -3,11 +3,11 @@ title: 序列化 XML 树 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
 ms.openlocfilehash: ddcd82a3fe8beea87913227ed0ff86fa3974bd11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786446"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>序列化 XML 树 (Visual Basic)
 序列化 XML 树意味着从 XML 树生成 XML。 可以将 XML 树序列化到文件、<xref:System.IO.TextWriter> 类的具体实现或 <xref:System.Xml.XmlWriter> 的具体实现。  

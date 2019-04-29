@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 14d42a4032c3e2b1c231414678912e1658e759d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775006"
 ---
 # <a name="corprffunction-structure"></a>COR_PRF_FUNCTION 结构
 通过将函数的 ID 与其重新编译的 ID 版本组合起来，提供该函数的唯一表示形式。  

@@ -3,11 +3,11 @@ title: 服务性能计数器
 ms.date: 03/30/2017
 ms.assetid: 4210f549-31f2-4ea7-99bd-69eaffb98ddf
 ms.openlocfilehash: dc31e05f82f232095f6560c8fdd9bf75c040e2ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773433"
 ---
 # <a name="service-performance-counters"></a>服务性能计数器
 服务性能计数器将服务行为作为整体来进行衡量，可用于诊断服务整体性能。 如果使用性能监视器 (Perfmon.exe) 查看，可以在 `ServiceModelService 4.0.0.0` 性能对象下找到服务性能计数器。 使用以下模式命名计数器实例：  

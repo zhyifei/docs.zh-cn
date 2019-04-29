@@ -3,14 +3,14 @@ title: 工具
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780739"
 ---
 # <a name="tools"></a>工具
-本主题列出由 Windows Communication Foundation (WCF) 工具生成的所有异常。  
+本主题列出了由 Windows Communication Foundation (WCF) 工具生成的所有异常。  
   
 ## <a name="exception-list"></a>异常列表  
   
@@ -18,22 +18,22 @@ ms.locfileid: "33474599"
 |-------------------|---------------------|  
 |ParametersTarget|\<枚举 >|  
 |ParametersToolConfig|\<configFile>|  
-|ErrInvalidPath|指定的路径无效。 请检查指定的参数。|  
+|ErrInvalidPath|指定的路径无效。 请检查指定的自变量。|  
 |ParametersReference|\<文件路径 >|  
 |WrnCannotLoadConfigFileForValidation|处理从指定位置加载的配置文件时出错。 无法验证此配置文件中定义的服务。|  
-|MoreHelp|有关更多帮助，请键入“svcutil”及指定参数。|  
+|MoreHelp|有关更多帮助，请键入“svcutil”及指定自变量。|  
 |HelpMergeConfig|导致生成的配置合并至现有的文件中，而不是覆盖现有的文件。|  
 |ErrCannotWriteFile|无法写入输出文件。|  
 |ErrInvalidNamespaceArgument|向指定选项传递了指定的无效值。 请指定逗号分隔的目标命名空间和 CLR 命名空间对。|  
 |HelpImportXmlType|配置 DataContract 序列化程序，以便将非 DataContract 类型作为 IXmlSerializable 类型导入。|  
 |ErrExclusiveOptionsSpecified|当已指定了其他指定选项时，将不能使用此指定选项。|  
 |WrnHttpGetFailed|指定的 URI 发生了 HTTP GET 错误。|  
-|ErrInputFileNotAssemblyOrMetadata|通过指定输入自变量读取的位于指定位置的文件似乎不是 XML 元数据文件或有效程序集。|  
+|ErrInputFileNotAssemblyOrMetadata|通过指定输入参数读取的位于指定位置的文件似乎不是 XML 元数据文件或有效程序集。|  
 |WrnUnknownMetadataFound|不能保存指定类型的无法识别的元数据文档。|  
 |ErrDirectoryContainsInvalidCharacters|向指定选项传递了指定的无效值。 路径中不允许出现该指定字符。|  
 |WrnCannotResolveServiceForValidation|无法加载具有指定 configName 的服务。 若要验证服务，请同时提供包含该服务类型的程序集和具有此服务的配置的可执行文件。|  
 |ErrUnexpectedValue|指定的选项不支持任何值。|  
-|#InvalidArg|指定的内容包含无效参数。|  
+|#InvalidArg|指定的内容包含无效自变量。|  
 |ParametersExcludeType|\<type>|  
 |HelpXmlSerializer|生成使用 XmlSerializer 进行序列化和反序列化的数据类型。|  
 |#|---------------------------------------------------------------------------------------------------------------------=|  
@@ -75,7 +75,7 @@ ms.locfileid: "33474599"
 |ErrInputConflictsWithMode|从指定位置读取的输入和其他选项不一致。|  
 |ErrDuplicateValuePassedToTypeArg|多次向指定的选项传递了指定的值。 每个类型仅可以指定一次。|  
 |ErrInputEPRFileParseError|无法从指定位置读取终结点引用。 请验证 XML 是否格式正确且有效。|  
-|ErrCouldNotCreateCodeProvider|无法为指定的值传递到创建代码提供程序 /{1}自变量。 请验证是否正确安装并配置了代码提供程序。|  
+|ErrCouldNotCreateCodeProvider|无法为指定的值传递给创建代码提供程序 /{1}参数。 请验证是否正确安装并配置了代码提供程序。|  
 |ErrPathTooLongDirOnly|产生的指定路径过长。 请检查指定的自变量。|  
 |HelpDataContractSerializer|生成使用 DataContract 序列化程序进行序列化和反序列化的数据类型。|  
 |ErrUnableToExportEndpoint|导出在为程序集加载的配置文件中找到的指定服务类型的指定命名空间中的指定终结点名称时出错。|  
@@ -91,7 +91,7 @@ ms.locfileid: "33474599"
 |ErrDirectoryInsteadOfFile|指定的输入路径似乎是目录。 输入必须是 URL 或文件路径。|  
 |HelpConfig|指示工具生成具有所提供名称的配置文件。 默认文件：output.config。|  
 |ErrSingleUseSwitch|不能多次指定所指定的选项。|  
-|警告|警告:|  
+|警告|警告：|  
 |WrnAmbiguousServiceConfig|发现多个具有指定配置名称的服务配置，指定了以下程序集。|  
 |ErrInvalidInputPath|指定的输入路径似乎未引用任何现有文件，似乎也不是有效的 URI。|  
 |ErrUnableToLoadInputs|读取加载的元数据时出错。|  
@@ -103,20 +103,20 @@ ms.locfileid: "33474599"
 |HelpCodeGenerationDescription|指定的内容可以从元数据文档生成服务协定、客户端和数据类型。|  
 |HelpTargetMetadata|输出元数据。 如果输入是 URL，则 Svcutil.exe 将元数据保存到磁盘，且不生成代码。 如果输入是一个或多个程序集，则 Svcutil.exe 从程序集中的类型生成元数据。|  
 |ErrAmbiguousOptionModeConflict|指定的选项与其他选项冲突。 请检查工具的使用。|  
-|ErrNotLanguageOrCodeDomType|传递给指定参数的指定值不代表已定义的语言，无法作为完全限定的 CLR 类型加载。|  
+|ErrNotLanguageOrCodeDomType|传递给指定自变量的指定值不代表已定义的语言，无法作为完全限定的 CLR 类型加载。|  
 |ErrUnableToUniquifyFilename|无法创建输出文件名。 要用指定的前缀创建的文件过多。|  
 |ErrCannotCreateFile|无法创建指定的输出文件。|  
 |ErrExpectedValue|指定的选项需要指定一个值。|  
 |ErrCannotDisambiguateSpecifiedTypes|在被引用程序集的集合中存在多个具有相同名称的类型。 请使用程序集限定的名称来区分指定选项的指定类型。|  
 |RetreivingMetadataWithMexOnly|尝试使用 WS-Metadata Exchange 从指定位置下载元数据。 此 URL 不支持 DISCO。|  
 |ErrInvalidTarget|当使用指定的选项指定时，指定的目标无效。 已指定受支持的目标。|  
-|ErrPathTooLong|产生的路径过长。 请检查指定的自变量。|  
+|ErrPathTooLong|产生的路径过长。 请评审指定的自变量。|  
 |HelpCommonOptionsCategory|-= 常用选项 =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|没有指定有效的输入文件。 请指定元数据文档或程序集文件。|  
-|ParametersLanguage|\<语言 >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|从加载的文档之一读取元数据时出错。 已指定文档标识符。|  
-|ErrConflictingInputs|指定的输入自变量与指定内容冲突，因为它们指示了不同的工具操作模式。|  
+|ErrConflictingInputs|指定的输入参数与指定内容冲突，因为它们指示了不同的工具操作模式。|  
 |WrnUnableToLoadContractForValidation|加载协定类型时出错。 已指定类型和详细信息。|  
 |WrnAttributeReflectionErrors|从指定位置加载的程序集中的某些类型的属性反射失败。 请验证此程序集是否可以从此位置使用正确的安全特权加载。|  
 |HelpMetadataExportCategory|-= 元数据导出 =-|  
@@ -128,7 +128,7 @@ ms.locfileid: "33474599"
 |ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|若要从架构生成协定，请使用指定选项。|  
 |ErrUnableToLoadInputConfig|无法加载指定的配置文件。|  
-|ErrUnexpectedDelimiter|无效的自变量分隔符（“:”或“=”）无法启动选项。|  
+|ErrUnexpectedDelimiter|无效的参数分隔符（“:”或“=”）无法启动选项。|  
 |ErrMergeConfigUsedWithoutConfig|无法在未指定其他指定选项的情况下使用该指定选项。|  
 |ErrUnableToExportContract|导出从指定类型加载的协定时出错。|  
 |GeneratingMetadata|正在生成元数据文件...|  
@@ -142,7 +142,7 @@ ms.locfileid: "33474599"
 |ErrCodegenError|生成指定语言的代码时出错。<br /><br /> 该语言不支持所有正在生成的代码元素。 应使用另一种语言。|  
 |ErrInputWsdlParseError|读取指定的内容时发生 WSDL 分析错误。 请验证 XML 是否格式正确且有效。|  
 |ErrCouldNotCreateInstance|无法创建传递给指定参数的指定类型的实例。|  
-|ParametersNamespace|\<字符串，字符串 >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|不引用标准库（默认情况下，引用 mscorlib.dll 和 system.servicemodel.dll）。|  
 |WrnCannotLoadConfigFileForExport|处理从指定位置加载的配置文件时出错。 无法加载此配置文件中定义的服务。|  
 |WrnUnableToLoadContractForExport|加载协定类型时出错。 无法导出该指定类型。|

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 ms.openlocfilehash: f546498e5282bcf58d07a06968bb4303e4e6d7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784158"
 ---
 # <a name="module-statement"></a>Module 语句
 声明模块的名称，并引入的变量、 属性、 事件和该模块包含的过程的定义。  
@@ -38,9 +38,9 @@ End Module
  `accessmodifier`  
  可选。 可以是以下各项之一：  
   
--   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
  请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
@@ -67,31 +67,31 @@ End Module
 ## <a name="classes-and-modules"></a>类和模块  
  这些元素具有许多相似之处，但有一些重要的差异。  
   
--   **术语。** 以前版本的 Visual Basic 识别两种类型的模块：*类模块*（.cls 文件） 和*标准模块*（.bas 文件）。 当前版本调用这些*类*并*模块*分别。  
+- **术语。** 以前版本的 Visual Basic 识别两种类型的模块：*类模块*（.cls 文件） 和*标准模块*（.bas 文件）。 当前版本调用这些*类*并*模块*分别。  
   
--   **共享的成员。** 您可以控制是否在不共享类的成员或实例成员。  
+- **共享的成员。** 您可以控制是否在不共享类的成员或实例成员。  
   
--   **面向对象。** 类是面向对象的但不是模块。 因此，只能将类可以为对象实例化。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+- **面向对象。** 类是面向对象的但不是模块。 因此，只能将类可以为对象实例化。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
 ## <a name="rules"></a>规则  
   
--   **修饰符。** 所有模块成员都为隐式[共享](../../../visual-basic/language-reference/modifiers/shared.md)。 不能使用`Shared`关键字时声明一个成员，并且您不能更改任何成员的共享的状态。  
+- **修饰符。** 所有模块成员都为隐式[共享](../../../visual-basic/language-reference/modifiers/shared.md)。 不能使用`Shared`关键字时声明一个成员，并且您不能更改任何成员的共享的状态。  
   
--   **继承。** 而不从任何类型继承一个模块，不能<xref:System.Object>，哪些所有模块从继承。 具体而言，不能从另一个继承一个模块。  
+- **继承。** 而不从任何类型继承一个模块，不能<xref:System.Object>，哪些所有模块从继承。 具体而言，不能从另一个继承一个模块。  
   
      不能使用[Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)在模块定义中，甚至指定<xref:System.Object>。  
   
--   **默认属性。** 您不能在模块中定义的任何默认属性。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
+- **默认属性。** 您不能在模块中定义的任何默认属性。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
   
 ## <a name="behavior"></a>行为  
   
--   **访问级别。** 在模块中，可以声明具有其自己的访问级别的每个成员。 模块成员默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问，除变量和常量、 到哪些默认[专用](../../../visual-basic/language-reference/modifiers/private.md)访问。 当模块具有比其成员之一的限制性更强的访问时，指定的模块的访问级别将优先。  
+- **访问级别。** 在模块中，可以声明具有其自己的访问级别的每个成员。 模块成员默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问，除变量和常量、 到哪些默认[专用](../../../visual-basic/language-reference/modifiers/private.md)访问。 当模块具有比其成员之一的限制性更强的访问时，指定的模块的访问级别将优先。  
   
--   **作用域。** 模块是在整个命名空间范围内。  
+- **作用域。** 模块是在整个命名空间范围内。  
   
      每个模块成员的作用域是整个模块。 请注意，所有成员都会都经受*类型提升*，这将导致它们提升到包含该模块的命名空间的范围。 有关详细信息，请参阅[类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
--   **限定。** 您可以在项目中，有多个模块，而您可以声明具有两个或多个模块中具有相同名称的成员。 但是，如果引用是从外部该模块必须限定对此类成员具有适当的模块名称的任何引用。 有关详细信息，请参阅 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+- **限定。** 您可以在项目中，有多个模块，而您可以声明具有两个或多个模块中具有相同名称的成员。 但是，如果引用是从外部该模块必须限定对此类成员具有适当的模块名称的任何引用。 有关详细信息，请参阅 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  

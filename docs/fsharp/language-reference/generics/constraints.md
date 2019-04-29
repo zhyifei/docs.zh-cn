@@ -3,11 +3,11 @@ title: 约束
 description: 了解如何F#应用于泛型类型参数，以在泛型类型或函数中指定的类型参数的要求的约束。
 ms.date: 05/16/2016
 ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937509"
 ---
 # <a name="constraints"></a>约束
 
@@ -25,15 +25,15 @@ type-parameter-list when constraint1 [ and constraint2]
 
 |约束|语法|描述|
 |----------|------|-----------|
-|类型约束|*类型参数*:&gt; *类型*|提供的类型必须等于或派生从指定的类型，或者，如果该类型是接口，提供的类型必须实现接口。|
-|Null 约束|*类型参数*: null|提供的类型必须支持 null 字面值。 这包括所有的.NET 对象类型而非F#列表、 元组、 函数、 类、 记录或联合类型。|
+|类型约束|*type-parameter* :&gt; *type*|提供的类型必须等于或派生从指定的类型，或者，如果该类型是接口，提供的类型必须实现接口。|
+|Null 约束|*type-parameter* : null|提供的类型必须支持 null 字面值。 这包括所有的.NET 对象类型而非F#列表、 元组、 函数、 类、 记录或联合类型。|
 |显式成员约束|[（]*类型参数*[or...或*类型参数*)]: (*成员签名*)|在至少其中一个提供的类型参数必须具有指定的签名; 的成员不适合公共使用。 成员必须要么显式定义为显式成员约束的有效目标类型或隐式类型扩展的一部分。|
 |构造函数约束|*类型参数*: (新： 单元-&gt; )|提供的类型必须具有默认构造函数。|
 |值类型约束|： 结构|提供的类型必须是一个.NET 值类型。|
 |引用类型约束|： 不结构|提供的类型必须是.NET 引用类型。|
-|枚举类型约束|： 枚举&lt;*基础类型*&gt;|提供的类型必须为枚举的类型具有指定的基础类型;不适合公共使用。|
-|委托约束|： 委托&lt;*元组参数类型*，*返回类型*&gt;|提供的类型必须为委托类型具有指定的参数和返回值;不适合公共使用。|
-|比较约束|： 比较|提供的类型必须支持比较。|
+|枚举类型约束|: enum&lt;*underlying-type*&gt;|提供的类型必须为枚举的类型具有指定的基础类型;不适合公共使用。|
+|委托约束|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|提供的类型必须为委托类型具有指定的参数和返回值;不适合公共使用。|
+|比较约束|: comparison|提供的类型必须支持比较。|
 |相等约束|： 是否相等|提供的类型必须支持相等性。|
 |非托管的约束|： 非托管|提供的类型必须是一个非托管的类型。 非托管的类型都是任一特定基元类型 (`sbyte`， `byte`， `char`， `nativeint`， `unativeint`， `float32`， `float`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint64`，或`decimal`)，枚举类型`nativeptr<_>`，或其字段都为非托管的类型的非泛型结构。|
 

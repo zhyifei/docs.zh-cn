@@ -19,11 +19,11 @@ ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2268dc813d6f12b69bee99dd07f8f4431b12a283
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795078"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行加密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密可用于存储或传输敏感 XML，而无需担心数据被轻易读取。  此过程使用高级加密标准 (AES) 算法（也称为 Rijndael）对 XML 元素进行解密。  
@@ -92,9 +92,9 @@ ms.locfileid: "59295622"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   若要编译此示例，需要包含对 `System.Security.dll` 的引用。  
+- 若要编译此示例，需要包含对 `System.Security.dll` 的引用。  
   
--   包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
+- 包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  永远不要以纯文本形式存储加密密钥，也不要以纯文本形式在计算机之间传输密钥。  请转而使用安全的密钥容器来存储加密密钥。  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765266"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函数
 允许宿主确定在进行显式初始化 CLR 之前将在进程中使用的公共语言运行时 (CLR) 的版本。  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. 由指定的函数`hostCallback`然后进行以下调用顺序：  
   
-    -   由指定的函数`pBeginHostSetup`参数。  
+    - 由指定的函数`pBeginHostSetup`参数。  
   
-    -   `CorBindToRuntimeEx` （或另一个运行时初始化函数）。  
+    - `CorBindToRuntimeEx` （或另一个运行时初始化函数）。  
   
-    -   [Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
+    - [Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
   
-    -   [Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
+    - [Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
   
-    -   由指定的函数`pEndHostSetup`参数。  
+    - 由指定的函数`pEndHostSetup`参数。  
   
  从所有调用`pBeginHostSetup`到`pEndHostSetup`必须出现在单个线程或纤程，具有相同的逻辑堆栈上。 此线程可以不同于在其线程`hostCallback`调用。  
   

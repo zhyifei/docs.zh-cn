@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
 ms.openlocfilehash: de1b46da2a7c6c3db0c0c19cdbb654fcf2fbbd6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771002"
 ---
 # <a name="how-to-improve-the-performance-of-a-treeview"></a>如何：提升 TreeView 的性能
 如果<xref:System.Windows.Controls.TreeView>包含很多项所花费的时间量可能会导致明显的延迟导致用户界面中。 可以通过设置缩短加载时间`VirtualizingStackPanel.IsVirtualizing`附加属性设置为`true`。  UI 也可能较慢时用户滚动做出反应<xref:System.Windows.Controls.TreeView>通过使用鼠标滚轮或拖动滚动条的滚动块。 您可以提高的性能<xref:System.Windows.Controls.TreeView>通过设置在用户滚动时`VirtualizingStackPanel.VirtualizationMode`附加属性设置为<xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>。  

@@ -16,38 +16,38 @@ helpviewer_keywords:
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
 ms.openlocfilehash: 456308e37bddc1df86b49085139a3810c4959a58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763051"
 ---
 # <a name="easing-functions"></a>缓动函数
 缓动函数允许将自定义的数学公式应用到动画。 例如，用户可能希望某个对象逼真地弹跳或表现出像在弹簧上一样。 可使用关键帧甚至 From/To/By 动画来近似地实现这些效果，但它将需要大量工作，并且动画不如使用数学公式准确。  
   
  除了通过继承创建自定义的缓动函数<xref:System.Windows.Media.Animation.EasingFunctionBase>，可以使用由运行时提供的多个缓动函数之一创建常见效果。  
   
--   <xref:System.Windows.Media.Animation.BackEase>：略微收回动画的动作，然后再开始进行动画处理指示的路径中。  
+- <xref:System.Windows.Media.Animation.BackEase>：略微收回动画的动作，然后再开始进行动画处理指示的路径中。  
   
--   <xref:System.Windows.Media.Animation.BounceEase>：创建弹跳效果。  
+- <xref:System.Windows.Media.Animation.BounceEase>：创建弹跳效果。  
   
--   <xref:System.Windows.Media.Animation.CircleEase>：创建加速和/或减速使用循环函数的动画。  
+- <xref:System.Windows.Media.Animation.CircleEase>：创建加速和/或减速使用循环函数的动画。  
   
--   <xref:System.Windows.Media.Animation.CubicEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>3</sup>。  
+- <xref:System.Windows.Media.Animation.CubicEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>3</sup>。  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>：创建类似于弹簧来回直到静止的动画。  
+- <xref:System.Windows.Media.Animation.ElasticEase>：创建类似于弹簧来回直到静止的动画。  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>：创建加速和/或减速使用指数公式的动画。  
+- <xref:System.Windows.Media.Animation.ExponentialEase>：创建加速和/或减速使用指数公式的动画。  
   
--   <xref:System.Windows.Media.Animation.PowerEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>p</sup>其中 p 等于<xref:System.Windows.Media.Animation.PowerEase.Power%2A>属性。  
+- <xref:System.Windows.Media.Animation.PowerEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>p</sup>其中 p 等于<xref:System.Windows.Media.Animation.PowerEase.Power%2A>属性。  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>2</sup>。  
+- <xref:System.Windows.Media.Animation.QuadraticEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>2</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>4</sup>。  
+- <xref:System.Windows.Media.Animation.QuarticEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>4</sup>。  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>5</sup>。  
+- <xref:System.Windows.Media.Animation.QuinticEase>：创建加速和/或减速使用的公式的动画*f*(*t*) = *t*<sup>5</sup>。  
   
--   <xref:System.Windows.Media.Animation.SineEase>：创建加速和/或减速使用正弦公式的动画。  
+- <xref:System.Windows.Media.Animation.SineEase>：创建加速和/或减速使用正弦公式的动画。  
   
  若要应用到动画的缓动函数，使用`EasingFunction`动画属性指定要应用到动画的缓动函数。 下面的示例应用<xref:System.Windows.Media.Animation.BounceEase>缓动函数到<xref:System.Windows.Media.Animation.DoubleAnimation>创建弹跳效果。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "57354500"
   
  可以使用<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>属性更改缓动函数的行为方式，即更改动画的内插。 有三个可能的值可以为<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>：内插遵循与缓动函数相关联的数学公式。  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>：内插遵循与缓动函数相关联的数学公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>：内插遵循 100%内插值减去输出与缓动函数相关联的公式。  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>：内插遵循 100%内插值减去输出与缓动函数相关联的公式。  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>：使用内插<xref:System.Windows.Media.Animation.EasingMode.EaseIn>动画的第一个另一半和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>虚拟机。  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>：使用内插<xref:System.Windows.Media.Animation.EasingMode.EaseIn>动画的第一个另一半和<xref:System.Windows.Media.Animation.EasingMode.EaseOut>虚拟机。  
   
  下图演示了不同的值<xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>其中*f*(*x*) 表示动画进度和*t*表示时间。  
   

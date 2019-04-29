@@ -3,11 +3,11 @@ title: 不同的形状 (Visual Basic 中) 中投影 XML
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766579"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>不同的形状 (Visual Basic 中) 中投影 XML
 本主题演示对形状不同于源 XML 的 XML 进行投影的示例。  
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>后续步骤  
  下面的示例通过查询查找 Word 文档中的所有文本：  
   
--   [查找 Word 文档 (Visual Basic 中) 中的文本](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [查找 Word 文档 (Visual Basic 中) 中的文本](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>请参阅
 

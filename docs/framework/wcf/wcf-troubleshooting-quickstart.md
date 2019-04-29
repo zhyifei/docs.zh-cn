@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780817"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅：[配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 跟踪文件查看器的详细信息，请参阅：[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>我的服务和客户端工作得很好，但是当客户端位于另一台计算机上时，为何就无法正常工作？ 发生了什么情况？  
  根据异常的不同，可能会有多个问题：  
   
--   可能需要将客户端终结点的地址更改为主机名，而不是“localhost”。  
+- 可能需要将客户端终结点的地址更改为主机名，而不是“localhost”。  
   
--   可能需要打开应用程序的端口。 有关详细信息，请参阅 SDK 示例中的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
+- 可能需要打开应用程序的端口。 有关详细信息，请参阅 SDK 示例中的 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 。  
   
--   有关其他可能的问题，请参阅示例主题[运行 Windows Communication Foundation 示例](./samples/running-the-samples.md)。  
+- 有关其他可能的问题，请参阅示例主题[运行 Windows Communication Foundation 示例](./samples/running-the-samples.md)。  
   
--   如果客户端使用的是 Windows 凭据并且异常为 <xref:System.ServiceModel.Security.SecurityNegotiationException>，则按如下方式配置 Kerberos。  
+- 如果客户端使用的是 Windows 凭据并且异常为 <xref:System.ServiceModel.Security.SecurityNegotiationException>，则按如下方式配置 Kerberos。  
   
-    1.  将标识凭据添加到客户端的 App.config 文件中的终结点元素：  
+    1. 将标识凭据添加到客户端的 App.config 文件中的终结点元素：  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  在 System 或 NetworkService 帐户下运行自承载服务。 可以运行此命令在 System 帐户下创建命令窗口：  
+    2. 在 System 或 NetworkService 帐户下运行自承载服务。 可以运行此命令在 System 帐户下创建命令窗口：  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  在 Internet 信息服务 (IIS) 下承载服务，默认情况下，IIS 使用服务主体名称 (SPN) 帐户。  
+    3. 在 Internet 信息服务 (IIS) 下承载服务，默认情况下，IIS 使用服务主体名称 (SPN) 帐户。  
   
-    4.  使用 SetSPN 在域中注册一个新的 SPN。 请注意，您需要具有域管理员的身份才能执行此操作。  
+    4. 使用 SetSPN 在域中注册一个新的 SPN。 请注意，您需要具有域管理员的身份才能执行此操作。  
   
  有关 Kerberos 协议的详细信息，请参阅[WCF 中使用的安全概念](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)和：  
   
--   [调试 Windows 身份验证错误](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [调试 Windows 身份验证错误](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Registering Kerberos Service Principal Names by Using Http.sys（使用 Http.sys 注册 Kerberos 服务主体名称）](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registering Kerberos Service Principal Names by Using Http.sys（使用 Http.sys 注册 Kerberos 服务主体名称）](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos Explained（Kerberos 说明）](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos Explained（Kerberos 说明）](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>当我引发 FaultException\<异常 > 的类型为异常，我总是接收客户端上的一个常规 FaultException 类型而不是泛型类型。 发生了什么情况？  
  强烈建议您创建自己的自定义错误数据类型，并在您的错误协定中将其声明为详细信息类型。 原因是使用系统提供的异常类型：  
   
--   创建一个类型依赖，它将移除面向服务的应用程序中功能最强大的应用程序之一。  
+- 创建一个类型依赖，它将移除面向服务的应用程序中功能最强大的应用程序之一。  
   
--   不能依赖以标准方式进行序列化的异常。 某些异常（如 <xref:System.Security.SecurityException>）可能根本无法序列化。  
+- 不能依赖以标准方式进行序列化的异常。 某些异常（如 <xref:System.Security.SecurityException>）可能根本无法序列化。  
   
--   向客户端公开内部实现的详细信息。 有关详细信息，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+- 向客户端公开内部实现的详细信息。 有关详细信息，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
  但是，如果您正在调试应用程序，则可以序列化异常信息，并使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 类将其返回到客户端。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
 ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931493"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>如何：在数据集合视图中浏览对象
 利用视图，可以通过不同方式查看同一数据集合，具体取决于排序、筛选或分组。 视图还提供了当前记录指针的概念，并允许移动指针。 此示例演示如何获取当前对象，以及使用 <xref:System.Windows.Data.CollectionView> 类提供的功能在数据集合的对象之间导航。  

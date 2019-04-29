@@ -3,11 +3,11 @@ title: 工作流服务主机可扩展性
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929787"
 ---
 # <a name="workflow-service-host-extensibility"></a>工作流服务主机可扩展性
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供用于承载工作流服务的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类。 当在托管应用程序或 Windows 服务中自承载工作流服务时，将使用该类。 同样，当使用 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 承载工作流服务时，也将使用该类。 通过 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类提供的扩展点，您可以添加自定义扩展、更改空闲行为以及承载非服务工作流（即不使用消息传递活动的工作流）。  
@@ -18,13 +18,13 @@ ms.locfileid: "59196471"
 ## <a name="react-to-unhandled-exceptions"></a>响应未经处理的异常  
  使用  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 可以指定工作流服务中出现未经处理的异常时所采取的操作。 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior.Action%2A> 属性指定下列 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction> 值之一：  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> - 中止工作流服务实例。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> - 中止工作流服务实例。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> - 回滚到最后保存的状态，并挂起工作流服务实例。 仅当已至少保存一次工作流时，才会发生此状况。 否则，将中止工作流实例。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> - 回滚到最后保存的状态，并挂起工作流服务实例。 仅当已至少保存一次工作流时，才会发生此状况。 否则，将中止工作流实例。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> - 取消实例。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> - 取消实例。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> - 终止实例。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> - 终止实例。  
   
  可在代码中配置该行为，如下面的示例所示。  
   

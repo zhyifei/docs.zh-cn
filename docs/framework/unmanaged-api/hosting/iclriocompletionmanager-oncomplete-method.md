@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792686"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete 方法
 通过对调用进行的 I/O 请求的状态通知公共语言运行时 (CLR) [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法。  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in]HRESULT 值，该值指示绑定操作的状态。  
   
--   则为 S_OK 指示操作成功完成。  
+- 则为 S_OK 指示操作成功完成。  
   
--   HOST_E_INTERRUPTED 指示在调用完成之前终止。  
+- HOST_E_INTERRUPTED 指示在调用完成之前终止。  
   
--   E_FAIL 指示发生了未知的、 不可恢复的灾难性故障。  
+- E_FAIL 指示发生了未知的、 不可恢复的灾难性故障。  
   
  `NumberOfBytesTransferred`  
  [in]在 I/O 请求的处理期间传输的字节数。  

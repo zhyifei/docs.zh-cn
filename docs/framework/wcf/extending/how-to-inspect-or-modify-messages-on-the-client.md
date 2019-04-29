@@ -3,11 +3,11 @@ title: 如何：检查或修改客户端上的消息
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766833"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>如何：检查或修改客户端上的消息
 您可以检查或修改在 WCF 客户端之间的传入或传出消息，通过实现<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>并将其插入到客户端运行时。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)示例。  
@@ -23,13 +23,13 @@ ms.locfileid: "59343293"
 ## <a name="example"></a>示例  
  下面的代码示例按顺序演示以下各项：  
   
--   客户端检查器实现。  
+- 客户端检查器实现。  
   
--   插入检查器的终结点行为。  
+- 插入检查器的终结点行为。  
   
--   一个 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 派生类，允许您在配置文件中添加行为。  
+- 一个 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 派生类，允许您在配置文件中添加行为。  
   
--   一个配置文件，它添加终结点行为，以便在客户端运行时中插入客户端消息检查器。  
+- 一个配置文件，它添加终结点行为，以便在客户端运行时中插入客户端消息检查器。  
   
 ```csharp  
 // Client message inspector  

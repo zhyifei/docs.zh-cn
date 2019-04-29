@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938621"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 文本 (Visual Basic)
 一个文本表示<xref:System.Xml.Linq.XCData>对象。  
@@ -40,9 +40,9 @@ ms.locfileid: "58828586"
 ## <a name="remarks"></a>备注  
  XML CDATA 节包含应包含，但未能分析，它包含的 xml 的原始文本。 XML CDATA 节可以包含任何文本。 这包括保留的 XML 字符。 XML CDATA 节结尾序列"]] >"。 这意味着以下几点：  
   
--   因为嵌入的分隔符是有效的 XML CDATA 内容，不能使用嵌入式的表达式中的 XML CDATA 文本。  
+- 因为嵌入的分隔符是有效的 XML CDATA 内容，不能使用嵌入式的表达式中的 XML CDATA 文本。  
   
--   XML CDATA 节无法嵌套，因为`content`不能包含值"]] >"。  
+- XML CDATA 节无法嵌套，因为`content`不能包含值"]] >"。  
   
  可以将 XML CDATA 文本分配给一个变量，或将其包含在 XML 元素文本。  
   

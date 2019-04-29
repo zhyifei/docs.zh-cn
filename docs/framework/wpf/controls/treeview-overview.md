@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
 ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761398"
 ---
 # <a name="treeview-overview"></a>TreeView 概述
 <xref:System.Windows.Controls.TreeView>控件提供了一种方法，通过使用可折叠节点在层次结构中显示的信息。 本主题介绍<xref:System.Windows.Controls.TreeView>和<xref:System.Windows.Controls.TreeViewItem>控件，并提供其用法的简单示例。  

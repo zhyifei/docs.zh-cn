@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
 ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929514"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>数据协定中的 XML 和 ADO.NET 类型
 Windows Communication Foundation (WCF) 数据协定模型支持某些直接表示 XML 的类型。 当这些类型序列化为 XML 时，序列化程序将写出这些类型的 XML 内容，而不再进一步进行任何处理。 支持的类型为 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的数组（但不是 `XmlNode` 类型本身）以及实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 类型以及类型化数据集通常用于数据库编程。 这些类型可实现 `IXmlSerializable` 接口，因此它们在数据协定模型中可序列化。 本主题的结尾还列出了一些有关这些类型的特殊注意事项。  
@@ -118,11 +118,11 @@ Windows Communication Foundation (WCF) 数据协定模型支持某些直接表�
   
  实现 `IXmlSerializable` 的类型有以下三种：表示任意内容的类型、表示单一元素的类型和旧的 <xref:System.Data.DataSet> 类型。  
   
--   内容类型使用由 `XmlSchemaProviderAttribute` 属性指定的架构提供程序方法。 该方法不返回 `null`，并且属性 (Attribute) 上的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 属性 (Property) 将保留为它的默认值 `false`。 这是 `IXmlSerializable` 类型的最常见的用法。  
+- 内容类型使用由 `XmlSchemaProviderAttribute` 属性指定的架构提供程序方法。 该方法不返回 `null`，并且属性 (Attribute) 上的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 属性 (Property) 将保留为它的默认值 `false`。 这是 `IXmlSerializable` 类型的最常见的用法。  
   
--   当 `IXmlSerializable` 类型必须控制其根元素名称时，使用元素类型。 若要将某个类型标记为元素类型，可以将 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 属性 (Attribute) 上的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性 (Property) 设置为 `true`，或从架构提供程序方法返回 null。 元素类型可以具有架构提供程序方法，在 `XmlSchemaProviderAttribute` 中可以指定 null 代替方法名称。 但是，如果 `IsAny` 为 `true`，并且已指定了架构提供程序方法，则该方法必须返回 null。  
+- 当 `IXmlSerializable` 类型必须控制其根元素名称时，使用元素类型。 若要将某个类型标记为元素类型，可以将 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 属性 (Attribute) 上的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性 (Property) 设置为 `true`，或从架构提供程序方法返回 null。 元素类型可以具有架构提供程序方法，在 `XmlSchemaProviderAttribute` 中可以指定 null 代替方法名称。 但是，如果 `IsAny` 为 `true`，并且已指定了架构提供程序方法，则该方法必须返回 null。  
   
--   旧 <xref:System.Data.DataSet> 类型为没有使用 `IXmlSerializable` 特性标记的 `XmlSchemaProviderAttribute` 类型。 相反，它们依赖于架构生成的 <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> 方法。 此模式用于 `DataSet` 类型，其类型化数据集在 .NET Framework 的早期版本中派生了一个类，但现在它已过时，并且只有旧版本才支持它。 不要依赖于此模式，并始终将 `XmlSchemaProviderAttribute` 应用于 `IXmlSerializable` 类型。  
+- 旧 <xref:System.Data.DataSet> 类型为没有使用 `IXmlSerializable` 特性标记的 `XmlSchemaProviderAttribute` 类型。 相反，它们依赖于架构生成的 <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> 方法。 此模式用于 `DataSet` 类型，其类型化数据集在 .NET Framework 的早期版本中派生了一个类，但现在它已过时，并且只有旧版本才支持它。 不要依赖于此模式，并始终将 `XmlSchemaProviderAttribute` 应用于 `IXmlSerializable` 类型。  
   
 ### <a name="ixmlserializable-content-types"></a>IXmlSerializable 内容类型  
  如果正在序列化实现 `IXmlSerializable` 的类型的数据成员，且该类型为前面定义的内容类型，则序列化程序将编写该数据成员的包装元素，并将控制权传递给 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法。 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 实现可以编写任何 XML，包括将属性添加到包装元素。 `WriteXml` 完成后，序列化程序将关闭该元素。  
@@ -150,55 +150,55 @@ Windows Communication Foundation (WCF) 数据协定模型支持某些直接表�
   
  序列化和反序列化元素类型与序列化和反序列化内容类型极其相似。 但是，也有一些重要的区别：  
   
--   `WriteXml` 实现应只写入一个元素（当然，该元素可包含多个子元素）。 它不应是此单个元素、多个同级元素或混合内容以外的写属性。 该元素可能为空。  
+- `WriteXml` 实现应只写入一个元素（当然，该元素可包含多个子元素）。 它不应是此单个元素、多个同级元素或混合内容以外的写属性。 该元素可能为空。  
   
--   `ReadXml` 实现不应读取包装元素。 它应读取 `WriteXml` 生成的那一个元素。  
+- `ReadXml` 实现不应读取包装元素。 它应读取 `WriteXml` 生成的那一个元素。  
   
--   定期序列化元素类型时（例如，作为数据协定中的数据成员），序列化程序将在调用 `WriteXml` 之前输出包装元素，如同处理内容类型一样。 然而，在顶层序列化元素类型时，序列化程序通常根本不输出 `WriteXml` 写入的元素周围的包装元素，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 构造函数中构造序列化程序时显式指定了根名称和命名空间。 有关详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+- 定期序列化元素类型时（例如，作为数据协定中的数据成员），序列化程序将在调用 `WriteXml` 之前输出包装元素，如同处理内容类型一样。 然而，在顶层序列化元素类型时，序列化程序通常根本不输出 `WriteXml` 写入的元素周围的包装元素，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 构造函数中构造序列化程序时显式指定了根名称和命名空间。 有关详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
--   如果在构造期间没有指定根名称和命名空间的情况下在顶层序列化元素类型，则 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> 实质上不执行任何操作，且 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> 将调用 `WriteXml`。 在此模式下，正在序列化的对象不能为 null，也不能多元分配。 另外，不能启用对象图保留，也不能使用 `NetDataContractSerializer`。  
+- 如果在构造期间没有指定根名称和命名空间的情况下在顶层序列化元素类型，则 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> 实质上不执行任何操作，且 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> 将调用 `WriteXml`。 在此模式下，正在序列化的对象不能为 null，也不能多元分配。 另外，不能启用对象图保留，也不能使用 `NetDataContractSerializer`。  
   
--   如果在构造时没有指定根名称和命名空间的情况下在顶级反序列化某一元素类型，则在找到任何元素的开头时，<xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> 将返回 `true`。 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 参数设置为 `verifyObjectName` 的 `true` 在行为上与实际读取该对象前 `IsStartObject` 的行为相同。 然后，`ReadObject` 将控制传递到 `ReadXml` 方法。  
+- 如果在构造时没有指定根名称和命名空间的情况下在顶级反序列化某一元素类型，则在找到任何元素的开头时，<xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> 将返回 `true`。 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 参数设置为 `verifyObjectName` 的 `true` 在行为上与实际读取该对象前 `IsStartObject` 的行为相同。 然后，`ReadObject` 将控制传递到 `ReadXml` 方法。  
   
  如上节所述，元素类型的导出架构与 `XmlElement` 类型的导出架构相同，只是架构提供程序方法可以像处理内容类型那样将任何其他架构添加到 <xref:System.Xml.Schema.XmlSchemaSet> 中。 不允许使用元素类型的 `XmlRootAttribute` 属性，也从不为这些类型发出全局元素声明。  
   
 ### <a name="differences-from-the-xmlserializer"></a>与 XmlSerializer 的区别  
  `IXmlSerializable` 接口以及 `XmlSchemaProviderAttribute` 和 `XmlRootAttribute` 属性也都可以由 <xref:System.Xml.Serialization.XmlSerializer> 理解。 但是，在数据协定模型中处理它们的方法有一些不同。 主要的区别总结如下：  
   
--   架构提供程序方法在 `XmlSerializer` 中必须公开为可用的，但在数据协定模型中无需如此。  
+- 架构提供程序方法在 `XmlSerializer` 中必须公开为可用的，但在数据协定模型中无需如此。  
   
--   如果 `IsAny` 在数据协定模型中为 true，但在 `XmlSerializer` 中不为 true，则调用架构提供程序方法。  
+- 如果 `IsAny` 在数据协定模型中为 true，但在 `XmlSerializer` 中不为 true，则调用架构提供程序方法。  
   
--   如果内容或旧数据集类型中没有 `XmlRootAttribute` 属性，则 `XmlSerializer` 将在空白命名空间中导出全局元素声明。 如前面所述，在数据协定模型中，使用的命名空间通常是数据协定命名空间。  
+- 如果内容或旧数据集类型中没有 `XmlRootAttribute` 属性，则 `XmlSerializer` 将在空白命名空间中导出全局元素声明。 如前面所述，在数据协定模型中，使用的命名空间通常是数据协定命名空间。  
   
  创建与这两种序列化技术一起使用的类型时，请注意这些区别。  
   
 ### <a name="importing-ixmlserializable-schema"></a>导入 IXmlSerializable 架构  
  导入从 `IXmlSerializable` 类型生成的架构时，有以下几种可能：  
   
--   生成的架构可能是有效的数据协定架构中所述[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 在此情况下，架构可以正常导入，并且将生成常规数据协定类型。  
+- 生成的架构可能是有效的数据协定架构中所述[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 在此情况下，架构可以正常导入，并且将生成常规数据协定类型。  
   
--   生成的架构可能不是有效的数据协定架构。 例如，您的架构提供程序方法可能生成包含 XML 属性的架构，而数据协定模型不支持 XML 属性。 在此情况下，您可以将架构作为 `IXmlSerializable` 类型导入。 默认情况下未在此导入模式，但可以轻松地使用来启用 – 例如，`/importXmlTypes`到命令行开关[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 详细介绍[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。 请注意，您必须直接处理您的类型实例的 XML。 您也可以考虑使用其他支持各种架构的不同序列化技术 – 请参见有关使用 `XmlSerializer` 的主题。  
+- 生成的架构可能不是有效的数据协定架构。 例如，您的架构提供程序方法可能生成包含 XML 属性的架构，而数据协定模型不支持 XML 属性。 在此情况下，您可以将架构作为 `IXmlSerializable` 类型导入。 默认情况下未在此导入模式，但可以轻松地使用来启用 – 例如，`/importXmlTypes`到命令行开关[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 详细介绍[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。 请注意，您必须直接处理您的类型实例的 XML。 您也可以考虑使用其他支持各种架构的不同序列化技术 – 请参见有关使用 `XmlSerializer` 的主题。  
   
--   您可能希望重新使用代理中的现有 `IXmlSerializable` 类型，而不生成新的类型。 在此情况下，“导入架构以生成类型”主题中介绍的引用类型功能可用于指示要重新使用的类型。 这对应于在 svcutil.exe 上使用 `/reference` 开关，以指定包含要重新使用的类型的程序集。  
+- 您可能希望重新使用代理中的现有 `IXmlSerializable` 类型，而不生成新的类型。 在此情况下，“导入架构以生成类型”主题中介绍的引用类型功能可用于指示要重新使用的类型。 这对应于在 svcutil.exe 上使用 `/reference` 开关，以指定包含要重新使用的类型的程序集。  
   
 ## <a name="representing-arbitrary-xml-in-data-contracts"></a>在数据协定中表示任意 XML  
  `XmlElement`、`XmlNode` 数组和 `IXmlSerializable` 类型，允许您将插入任意 XML 插入数据协定模型中。 `DataContractSerializer` 和 `NetDataContractSerializer` 将此 XML 内容传递到所使用的 XML 编写器，而不会干扰此过程。 但是，XML 编写器可能对它们编写的 XML 强制执行一些限制。 具体而言，以下是一些重要示例：  
   
--   XML 编写器通常不允许 XML 文档声明 (例如， \<？ xml 版本 = 1.0？ >) 的中间编写另一个文档。 您不能使用完整的 XML 文档并将其作为 `Array` 数据成员的 `XmlNode` 进行序列化。 要执行此操作，您必须提取出文档声明或使用自己的编码方案表示它。  
+- XML 编写器通常不允许 XML 文档声明 (例如， \<？ xml 版本 = 1.0？ >) 的中间编写另一个文档。 您不能使用完整的 XML 文档并将其作为 `Array` 数据成员的 `XmlNode` 进行序列化。 要执行此操作，您必须提取出文档声明或使用自己的编码方案表示它。  
   
--   使用 WCF 提供的 XML 编写器的所有拒绝 XML 处理指令 (\<？ … ？ >) 和文档类型定义 (\<！ … … >)，因为 SOAP 消息中禁止这些内容。 同样，您可以使用自己的编码机制避免此限制。 如果您必须要在生成的 XML 中包含这些内容，则可以编写一个自定义编码器，以使用支持这些内容的 XML 编写器。  
+- 使用 WCF 提供的 XML 编写器的所有拒绝 XML 处理指令 (\<？ … ？ >) 和文档类型定义 (\<！ … … >)，因为 SOAP 消息中禁止这些内容。 同样，您可以使用自己的编码机制避免此限制。 如果您必须要在生成的 XML 中包含这些内容，则可以编写一个自定义编码器，以使用支持这些内容的 XML 编写器。  
   
--   在实现 `WriteXml` 时，避免对 XML 编写器调用 <xref:System.Xml.XmlWriter.WriteRaw%2A> 方法。 WCF 使用各种 XML 编码 （包括二进制文件），它是很难或无法使用`WriteRaw`这样的结果是可在任何编码。  
+- 在实现 `WriteXml` 时，避免对 XML 编写器调用 <xref:System.Xml.XmlWriter.WriteRaw%2A> 方法。 WCF 使用各种 XML 编码 （包括二进制文件），它是很难或无法使用`WriteRaw`这样的结果是可在任何编码。  
   
--   在实现时`WriteXml`，避免使用<xref:System.Xml.XmlWriter.WriteEntityRef%2A>和<xref:System.Xml.XmlWriter.WriteNmToken%2A>使用 WCF 提供的 XML 编写器不受支持的方法。  
+- 在实现时`WriteXml`，避免使用<xref:System.Xml.XmlWriter.WriteEntityRef%2A>和<xref:System.Xml.XmlWriter.WriteNmToken%2A>使用 WCF 提供的 XML 编写器不受支持的方法。  
   
 ## <a name="using-dataset-typed-dataset-and-datatable"></a>使用数据集、类型化数据集和数据表  
  数据协定模型中完全支持使用这些类型。 使用这些类型时，请考虑以下事项：  
   
--   这些类型的架构 (尤其是<xref:System.Data.DataSet>及其类型化的派生类) 可能与某些非 WCF 平台进行互操作或可能会导致与这些平台一起使用时的可用性很差。 另外，使用 `DataSet` 类型可能会影响性能。 最后，这可能会增加将来升级应用程序版本的难度。 考虑使用显式定义的数据协定类型代替协定中的 `DataSet` 类型。  
+- 这些类型的架构 (尤其是<xref:System.Data.DataSet>及其类型化的派生类) 可能与某些非 WCF 平台进行互操作或可能会导致与这些平台一起使用时的可用性很差。 另外，使用 `DataSet` 类型可能会影响性能。 最后，这可能会增加将来升级应用程序版本的难度。 考虑使用显式定义的数据协定类型代替协定中的 `DataSet` 类型。  
   
--   导入 `DataSet` 或 `DataTable` 架构时，引用这些类型很重要。 使用 Svcutil.exe 命令行工具，可以通过将 System.Data.dll 程序集名称到传递`/reference`切换。 如果导入类型化数据集架构，则必须引用类型化数据集的类型。 使用 Svcutil.exe，将传递到的类型化数据集的程序集的位置`/reference`切换。 有关引用类型的详细信息，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+- 导入 `DataSet` 或 `DataTable` 架构时，引用这些类型很重要。 使用 Svcutil.exe 命令行工具，可以通过将 System.Data.dll 程序集名称到传递`/reference`切换。 如果导入类型化数据集架构，则必须引用类型化数据集的类型。 使用 Svcutil.exe，将传递到的类型化数据集的程序集的位置`/reference`切换。 有关引用类型的详细信息，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
  对数据协定模型中类型化数据集的支持是有限的。 类型化数据集可以序列化和反序列化，并可导出其架构。 但是，数据协定架构导入无法从该架构生成新的类型化数据集类型，因为它只能重新使用现有的类型化数据集类型。 通过对 Svcutil.exe 使用 `/r` 开关，可以指向现有类型化数据集。 如果尝试在不使用 `/r` 开关的情况下对使用类型化数据集的服务使用 Svcutil.exe，则会自动选择替代序列化程序 (XmlSerializer)。 如果必须使用 DataContractSerializer 且必须从架构生成数据集，则可使用以下过程：生成类型化数据集类型（通过将 Xsd.exe 工具与 `/d` 开关结合起来用于服务）、编译类型，然后在 Svcutil.exe 上使用 `/r` 开关来指向这些类型。  
   

@@ -3,11 +3,11 @@ title: WF 中的活动创作选项
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
 ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774226"
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF 中的活动创作选项
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供了若干用于创建自定义活动的选项。 用于创作给定活动的正确方法取决于所需的运行时功能。  
@@ -18,7 +18,7 @@ ms.locfileid: "49121822"
 |基本活动类|可用的功能|  
 |-------------------------|------------------------|  
 |<xref:System.Activities.Activity>|将一组系统提供的活动和一组自定义活动组成一个复合活动。|  
-|<xref:System.Activities.CodeActivity>|通过提供可以重写的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法实现命令性功能。 还提供对跟踪、变量以及自变量的访问。|  
+|<xref:System.Activities.CodeActivity>|通过提供可以重写的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法实现命令性功能。 还提供对跟踪、变量以及参数的访问。|  
 |<xref:System.Activities.NativeActivity>|提供 <xref:System.Activities.CodeActivity> 的所有功能，另外还可中止活动执行、取消子活动执行、使用书签以及计划活动、活动操作和功能。|  
 |<xref:System.Activities.DynamicActivity>|提供一个类似于 DOM 的方法，使用该方法可以构造通过 <xref:System.ComponentModel.ICustomTypeDescriptor> 与 WF 设计器和运行时系统交互的活动，从而允许在不定义新类型的情况下创建新活动。|  
   

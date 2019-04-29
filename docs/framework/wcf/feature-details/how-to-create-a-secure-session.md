@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787863"
 ---
 # <a name="how-to-create-a-secure-session"></a>如何：创建安全会话
 除[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定，Windows Communication Foundation (WCF) 中的系统提供绑定将自动使用启用了消息安全性的安全会话。  
@@ -21,7 +21,7 @@ ms.locfileid: "59205883"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>通过使用系统提供的一个绑定指定服务使用安全会话  
   
--   配置服务以使用支持消息安全的系统提供的绑定。  
+- 配置服务以使用支持消息安全的系统提供的绑定。  
   
      除[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定，当系统提供的绑定配置为自动使用消息安全时，WCF 使用安全会话。 下表列出了支持消息安全的系统提供的绑定以及消息安全是否是默认的安全机制。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59205883"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>通过使用自定义绑定来指定服务使用安全会话  
   
--   创建一个自定义绑定，该绑定指定由安全会话保护 SOAP 消息。  
+- 创建一个自定义绑定，该绑定指定由安全会话保护 SOAP 消息。  
   
      有关创建自定义绑定的详细信息，请参阅[如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
   

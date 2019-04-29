@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940525"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web 窗体  
+- ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
  本操作说明提供了创建简单的声明感知 ASP.NET Web 窗体应用程序的详细分步过程。 还提供关于如何测试简单声明感知 ASP.NET Web 窗体应用程序以确保成功实现联合身份验证的说明。 本操作说明不包括如何创建安全令牌服务 (STS) 的详细说明，且假定你已配置 STS。  
   
 ## <a name="contents"></a>内容  
   
--   目标  
+- 目标  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   第 2 步 – 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
+- 第 2 步 – 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
 ## <a name="objectives"></a>目标  
   
--   为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
+- 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
   
--   测试成功的声明感知 ASP.NET Web 窗体应用程序  
+- 测试成功的声明感知 ASP.NET Web 窗体应用程序  
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   步骤 2 – 为联合身份验证配置 ASP.NET Web 窗体应用程序  
+- 步骤 2 – 为联合身份验证配置 ASP.NET Web 窗体应用程序  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
  在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。  

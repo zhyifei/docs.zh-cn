@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938928"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 标记扩展
 引用中定义的任何静态的值的代码实体[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 合规的方式。 引用的静态属性可以用于提供在 XAML 中属性的值。  
@@ -38,10 +38,10 @@ ms.locfileid: "59295700"
 
 引用的代码实体必须是以下值之一：  
   
--   一个常量  
--   静态属性  
--   一个字段  
--   一个枚举值
+- 一个常量  
+- 静态属性  
+- 一个字段  
+- 一个枚举值
 
 指定任何其他代码实体，例如非静态属性，会导致编译时错误，如果 XAML 标记编译或 XAML 加载时间分析异常。  
 
@@ -74,11 +74,11 @@ ms.locfileid: "59295700"
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  用于 WPF 编程的默认 XAML 命名空间不包含许多有用的静态属性和有用的静态属性大多具有支持类型转换器，可协助而无需使用如`{x:Static}`。 对于静态属性，必须映射 XAML 命名空间的前缀，如果以下项之一为 true:  
   
--   所引用的类型存在于 WPF 中但不是 WPF 默认 XAML 命名空间的一部分 ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)])。 这是相当普遍使用`x:Static`。 例如，可以使用`x:Static`XAML 命名空间映射到引用<xref:System>CLR 命名空间和 mscorlib 程序集引用的静态属性以<xref:System.Environment>类。  
+- 所引用的类型存在于 WPF 中但不是 WPF 默认 XAML 命名空间的一部分 ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)])。 这是相当普遍使用`x:Static`。 例如，可以使用`x:Static`XAML 命名空间映射到引用<xref:System>CLR 命名空间和 mscorlib 程序集引用的静态属性以<xref:System.Environment>类。  
   
--   从自定义程序集引用类型。  
+- 从自定义程序集引用类型。  
   
--   正在引用存在于 WPF 程序集中的类型，但该类型是未映射到 WPF 默认 XAML 命名空间的一部分的 CLR 命名空间中。 WPF 默认 XAML 命名空间到 CLR 命名空间的映射由中各种 WPF 程序集的定义 (有关这一概念的详细信息，请参阅[XAML 命名空间和 WPF XAML 的 Namespace 映射](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果该 CLR 命名空间主要是组成通常不适用于 XAML，如类定义非映射 CLR 命名空间可存在<xref:System.Windows.Threading>。  
+- 正在引用存在于 WPF 程序集中的类型，但该类型是未映射到 WPF 默认 XAML 命名空间的一部分的 CLR 命名空间中。 WPF 默认 XAML 命名空间到 CLR 命名空间的映射由中各种 WPF 程序集的定义 (有关这一概念的详细信息，请参阅[XAML 命名空间和 WPF XAML 的 Namespace 映射](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果该 CLR 命名空间主要是组成通常不适用于 XAML，如类定义非映射 CLR 命名空间可存在<xref:System.Windows.Threading>。  
   
  有关如何为 WPF 使用前缀和 XAML 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML Namespace 映射](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   

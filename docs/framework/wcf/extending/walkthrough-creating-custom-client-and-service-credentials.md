@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771418"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>演练：创建自定义客户端和服务凭据
 本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。  
@@ -18,9 +18,9 @@ ms.locfileid: "59343046"
 ## <a name="credentials-extensibility-classes"></a>凭据扩展性类  
  <xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>类是 Windows Communication Foundation (WCF) 安全扩展性的主入口点。 这些凭据类提供 API，应用程序代码可以使用这些 API 来设置凭据信息和将凭据类型转换为安全令牌。 (*安全令牌*是用来传输凭据信息到 SOAP 消息内部的形式。)这些凭据类的责任可以分成两部分：  
   
--   为应用程序提供 API 以设置凭据信息。  
+- 为应用程序提供 API 以设置凭据信息。  
   
--   用作 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 实现的工厂。  
+- 用作 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 实现的工厂。  
   
  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 类都继承自用于定义返回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 的协定的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类。  
   
@@ -29,22 +29,22 @@ ms.locfileid: "59343046"
 ## <a name="reasons-to-customize"></a>自定义原因  
  自定义客户端或服务凭据类有多种原因。 首要理由是需要更改默认的 WCF 安全行为方面处理系统提供的凭据类型，尤其是出于以下原因：  
   
--   无法使用其他扩展点进行的更改。  
+- 无法使用其他扩展点进行的更改。  
   
--   添加新的凭据类型。  
+- 添加新的凭据类型。  
   
--   添加新的自定义安全令牌类型。  
+- 添加新的自定义安全令牌类型。  
   
  本主题说明如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用它们。  
   
 ## <a name="first-in-a-series"></a>系列主题中的第一个主题  
  创建自定义凭据类是仅第一步，因为自定义凭据的原因是为了更改有关凭据配置、 安全令牌序列化或身份验证的 WCF 行为。 本节中的其他主题说明如何创建自定义序列化程序和身份验证器。 在这一方面，创建自定义凭据类是系列主题中的第一个主题。 后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。 基于本主题的其他主题包括：  
   
--   [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+- [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+- [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+- [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
 ## <a name="procedures"></a>过程  
   

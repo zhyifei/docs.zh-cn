@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], moving from
 ms.assetid: 40f9e88b-09a3-428e-8da8-c00bb65079c6
 ms.openlocfilehash: d4de7345a4e3ce122c4e1fc0a92f09b447204eb6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941422"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>如何：使 Tab 键能够移出 ToolStrip 控件
 使用以下过程以使用户能够按 TAB 键移动共<xref:System.Windows.Forms.ToolStrip>到下一个控件的 tab 键顺序。  
@@ -20,7 +20,7 @@ ms.locfileid: "59113160"
   
 ### <a name="to-enable-the-user-to-press-the-tab-key-to-move-out-of-a-toolstrip-to-the-next-control"></a>若要使用户能够按 TAB 键能够移出 ToolStrip 到下一个控件  
   
--   设置<xref:System.Windows.Forms.ToolStrip.TabStop%2A>的属性<xref:System.Windows.Forms.ToolStrip>到`true`。  
+- 设置<xref:System.Windows.Forms.ToolStrip.TabStop%2A>的属性<xref:System.Windows.Forms.ToolStrip>到`true`。  
   
 ## <a name="see-also"></a>请参阅
 

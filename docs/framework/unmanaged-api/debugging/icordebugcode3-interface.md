@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752303"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 接口
 提供扩展了"ICorDebugCode"和"ICorDebugCode2"，以便提供有关托管返回值信息的方法。  

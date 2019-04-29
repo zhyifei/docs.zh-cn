@@ -3,11 +3,11 @@ title: WCF Visual Studio 模板
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780661"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
 Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目和项模板可用于在 Visual Studio 中快速构建 WCF 服务和周边应用程序。  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目
   
  创建新项目使用时**WCF 服务**模板，将新项目会自动包括以下三个文件：  
   
--   服务协定文件（IService1.cs 或 IService1.vb）。 服务协定文件是已应用的 WCF 服务属性的接口。 此文件提供简单服务的定义以表明如何定义服务，并且包括基于参数的操作和简单的数据协定示例。 这是创建 WCF 服务项目后显示在代码编辑器中的默认文件。  
+- 服务协定文件（IService1.cs 或 IService1.vb）。 服务协定文件是已应用的 WCF 服务属性的接口。 此文件提供简单服务的定义以表明如何定义服务，并且包括基于参数的操作和简单的数据协定示例。 这是创建 WCF 服务项目后显示在代码编辑器中的默认文件。  
   
--   服务实现文件（Service1.cs 或 Service1.vb）。 服务实现文件实现服务协定文件中定义的协定。  
+- 服务实现文件（Service1.cs 或 Service1.vb）。 服务实现文件实现服务协定文件中定义的协定。  
   
--   应用程序配置文件 (App.config)。 配置文件提供安全的 HTTP 绑定的 WCF 服务模型的基本元素。 它还包括一个服务终结点，并启用了元数据交换。  
+- 应用程序配置文件 (App.config)。 配置文件提供安全的 HTTP 绑定的 WCF 服务模型的基本元素。 它还包括一个服务终结点，并启用了元数据交换。  
   
 > [!NOTE]
 >  Visual Studio 配置为使用运行时将 App.config 文件识别为项目的配置文件[WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)，这是默认配置。 如果在可执行文件中承载服务库，则由于 DLL 的配置文件无效，必须将配置代码移动到可执行文件的配置文件。  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目
   
  创建新项目使用时**WCF Web 应用程序服务**模板，项目包括以下四个文件：  
   
--   服务主机文件 (service1.svc)。  
+- 服务主机文件 (service1.svc)。  
   
--   服务协定文件（IService1.cs 或 IService1.vb）。  
+- 服务协定文件（IService1.cs 或 IService1.vb）。  
   
--   服务实现文件（Service1.svc.cs 或 Service1.svc.vb）。  
+- 服务实现文件（Service1.svc.cs 或 Service1.svc.vb）。  
   
--   Web 配置文件 (Web.config)。  
+- Web 配置文件 (Web.config)。  
   
  此模板将自动创建一个网站（该网站将要部署到虚拟目录），并在该网站中承载服务。  
   

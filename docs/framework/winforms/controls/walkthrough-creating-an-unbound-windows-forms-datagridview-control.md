@@ -12,11 +12,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
 ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792257"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>演练：创建未绑定的 Windows 窗体 DataGridView 控件
 您可能经常想要显示不是从数据库的表格数据。 例如，你可能想要显示二维数组的字符串的内容。 <xref:System.Windows.Forms.DataGridView>类提供了简单且高度可自定义的方式来显示数据，而不绑定到数据源。 本演练演示如何填充<xref:System.Windows.Forms.DataGridView>控制和管理的添加和删除"取消绑定"模式中的行。 默认情况下，用户可以添加新行。 若要禁止添加行，将设置<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性是`false`。  
@@ -75,22 +75,22 @@ ms.locfileid: "59343463"
   
 #### <a name="to-test-the-form"></a>若要测试窗体  
   
--   按 F5 运行该应用程序。  
+- 按 F5 运行该应用程序。  
   
      你将看到<xref:System.Windows.Forms.DataGridView>控件，用于显示中列出的歌曲`PopulateDataGridView`。 您可以添加新行与**添加行**按钮，并且您可以删除与所选的行**删除行**按钮。 未绑定<xref:System.Windows.Forms.DataGridView>控件的数据存储，并且其数据独立于任何外部源，如<xref:System.Data.DataSet>或数组。  
   
 ## <a name="next-steps"></a>后续步骤  
  此应用程序为您提供了一个基本的了解<xref:System.Windows.Forms.DataGridView>控件的功能。 你可以自定义外观和行为<xref:System.Windows.Forms.DataGridView>控制几种方式：  
   
--   更改边框和标头的样式。 有关详细信息，请参阅[如何：更改边框和网格线的样式中的 Windows 窗体 DataGridView 控件](change-the-border-and-gridline-styles-in-the-datagrid.md)。  
+- 更改边框和标头的样式。 有关详细信息，请参阅[如何：更改边框和网格线的样式中的 Windows 窗体 DataGridView 控件](change-the-border-and-gridline-styles-in-the-datagrid.md)。  
   
--   启用或限制的用户输入<xref:System.Windows.Forms.DataGridView>控件。 有关详细信息，请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件](prevent-row-addition-and-deletion-datagridview.md)，和[如何：将列设为只读、 只在 Windows 窗体 DataGridView 控件](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
+- 启用或限制的用户输入<xref:System.Windows.Forms.DataGridView>控件。 有关详细信息，请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件](prevent-row-addition-and-deletion-datagridview.md)，和[如何：将列设为只读、 只在 Windows 窗体 DataGridView 控件](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)。  
   
--   检查用户输入与数据库相关的错误。 有关详细信息，请参见[演练：在 Windows 中的数据输入时发生的错误处理窗体 DataGridView 控件](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
+- 检查用户输入与数据库相关的错误。 有关详细信息，请参见[演练：在 Windows 中的数据输入时发生的错误处理窗体 DataGridView 控件](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
   
--   处理极大型数据集使用的虚拟模式。 有关详细信息，请参见[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](implementing-virtual-mode-wf-datagridview-control.md)。  
+- 处理极大型数据集使用的虚拟模式。 有关详细信息，请参见[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](implementing-virtual-mode-wf-datagridview-control.md)。  
   
--   自定义单元格的外观。 有关详细信息，请参阅[如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](customize-the-appearance-of-cells-in-the-datagrid.md)和[如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
+- 自定义单元格的外观。 有关详细信息，请参阅[如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](customize-the-appearance-of-cells-in-the-datagrid.md)和[如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>请参阅
 

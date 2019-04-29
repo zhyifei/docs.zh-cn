@@ -5,13 +5,13 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776007"
 ---
-# <a name="durable-azure-functions"></a>持久的 Azure 函数
+# <a name="durable-azure-functions"></a>持久 Azure 函数
 
 当使用 Azure Functions 创建无服务器应用程序，您的操作将通常设计为无状态方式运行。 选择此设计的原因是因为作为平台的刻度，则很难知道哪些服务器运行代码。 它还就会难以确定多少个实例处于活动状态，在任意给定时间。 但是，有需要为已知的进程的当前状态的应用程序的类。 请考虑提交到在线商店订单的过程。 签出操作可能是由多个操作，需要了解该过程的状态的工作流。 此类信息可能包括产品库存中，如果客户具有自己的帐户，以及处理信用卡的结果的任何信用额度。 这些操作轻松可能是其自己的内部工作流或甚至从第三方系统服务。
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
 ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785679"
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大程度地提高 WPF 三维性能
 因为你使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]若要生成三维控件和应用程序中包含三维场景，务必要考虑性能优化。 本主题提供 3D 类和属性的可能对性能产生影响的应用程序，以及使用它们时优化性能的建议的列表。  

@@ -3,32 +3,32 @@ title: SAML 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787499"
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
 本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：
 
--   存在不能由这些令牌提供程序操作的凭据存储。
+- 存在不能由这些令牌提供程序操作的凭据存储。
 
--   如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端框架时使用的凭据的详细信息。
+- 如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端框架时使用的凭据的详细信息。
 
--   要生成一个自定义令牌。
+- 要生成一个自定义令牌。
 
  此示例演示如何生成自定义令牌提供程序允许从使用 WCF 客户端框架外部获取的 SAML 令牌。
 
  总之，此示例将演示如下内容：
 
--   如何使用自定义令牌提供程序对客户端进行配置。
+- 如何使用自定义令牌提供程序对客户端进行配置。
 
--   如何将 SAML 令牌传递给自定义客户端凭据。
+- 如何将 SAML 令牌传递给自定义客户端凭据。
 
--   如何将 SAML 令牌提供给 WCF 客户端框架。
+- 如何将 SAML 令牌提供给 WCF 客户端框架。
 
--   客户端如何使用服务器的 X.509 证书对服务器进行身份验证。
+- 客户端如何使用服务器的 X.509 证书对服务器进行身份验证。
 
  服务公开两个终结点，以便与使用配置文件 App.config 定义的服务进行通信。每个终结点由地址、绑定和协定组成。 绑定由使用消息安全的标准 `wsFederationHttpBinding` 进行配置。 一个终结点需要客户端用使用对称校验密钥的 SAML 令牌进行身份验证，而另一个终结点需要客户端用使用不对称校验密钥的 SAML 令牌进行身份验证。 服务还使用 `serviceCredentials` 行为来配置服务证书。 使用 `serviceCredentials` 行为可以配置服务证书。 客户端使用服务证书对服务进行身份验证并提供消息保护。 以下配置引用了在示例安装过程中安装的“localhost”证书，如本主题最后的安装说明所述。 使用 `serviceCredentials` 行为还可以配置受信任的证书以对 SAML 令牌进行签名。 下面的配置引用了在示例过程中安装的“Alice”证书。
 
@@ -303,7 +303,7 @@ ms.locfileid: "59771096"
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。
 
--   创建服务器证书：
+- 创建服务器证书：
 
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。
 
@@ -319,7 +319,7 @@ ms.locfileid: "59771096"
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   将服务器证书安装到客户端的受信任证书存储区中：
+- 将服务器证书安装到客户端的受信任证书存储区中：
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
@@ -327,7 +327,7 @@ ms.locfileid: "59771096"
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   创建颁发者证书。
+- 创建颁发者证书。
 
      Setup.bat 批处理文件中的以下行创建将要使用的颁发者证书。 `%USER_NAME%` 变量指定颁发者名称。 更改此变量可以指定您自己的颁发者名称。 此批处理文件中的默认值为 Alice。
 
@@ -343,7 +343,7 @@ ms.locfileid: "59771096"
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   将颁发者证书安装到服务器的受信任证书存储区中。
+- 将颁发者证书安装到服务器的受信任证书存储区中。
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用颁发者证书填充服务器证书存储这一步骤。
 

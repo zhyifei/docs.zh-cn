@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783820"
 ---
 # <a name="synclock-statement"></a>SyncLock 语句
 执行块之前获取语句块的排他的锁。  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>规则  
   
--   分支。 不能分支到`SyncLock`阻止其块外部。  
+- 分支。 不能分支到`SyncLock`阻止其块外部。  
   
--   锁定对象值。 值`lockobject`不能为`Nothing`。 必须先将其用于创建的锁对象`SyncLock`语句。  
+- 锁定对象值。 值`lockobject`不能为`Nothing`。 必须先将其用于创建的锁对象`SyncLock`语句。  
   
      无法更改的值`lockobject`执行时`SyncLock`块。 该机制要求的锁对象保持不变。  
   
--   不能使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)中的运算符`SyncLock`块。  
+- 不能使用[Await](../../../visual-basic/language-reference/operators/await-operator.md)中的运算符`SyncLock`块。  
   
 ## <a name="behavior"></a>行为  
   
--   机制。 当一个线程到达`SyncLock`语句，它的计算结果`lockobject`表达式和挂起执行，直到它将获取由表达式返回的对象上的排他锁。 在另一个线程到达`SyncLock`语句，它并不获取锁直到第一个线程执行`End SyncLock`语句。  
+- 机制。 当一个线程到达`SyncLock`语句，它的计算结果`lockobject`表达式和挂起执行，直到它将获取由表达式返回的对象上的排他锁。 在另一个线程到达`SyncLock`语句，它并不获取锁直到第一个线程执行`End SyncLock`语句。  
   
--   受保护的数据。 如果`lockobject`是`Shared`变量，防止类的任何实例中的线程执行的排他锁`SyncLock`阻止其他线程执行时。 这将保护在所有实例间共享的数据。  
+- 受保护的数据。 如果`lockobject`是`Shared`变量，防止类的任何实例中的线程执行的排他锁`SyncLock`阻止其他线程执行时。 这将保护在所有实例间共享的数据。  
   
      如果`lockobject`是一个实例变量 (不`Shared`)，锁将阻止执行从当前实例中运行的线程`SyncLock`处的同一实例中的另一个线程在同一时间块。 这样可以保护单个实例保留的数据。  
   
--   获取和释放。 一个`SyncLock`块的行为类似于`Try...Finally`在其中构造`Try`块上获取排他锁`lockobject`和`Finally`块释放它。 正因为如此，`SyncLock`块都可确保释放锁，不管您如何退出块。 这是甚至在未处理的异常的情况下，则返回 true。  
+- 获取和释放。 一个`SyncLock`块的行为类似于`Try...Finally`在其中构造`Try`块上获取排他锁`lockobject`和`Finally`块释放它。 正因为如此，`SyncLock`块都可确保释放锁，不管您如何退出块。 这是甚至在未处理的异常的情况下，则返回 true。  
   
--   框架将调用。 `SyncLock`块将获取并释放通过调用的排他锁`Enter`并`Exit`的方法`Monitor`类<xref:System.Threading>命名空间。  
+- 框架将调用。 `SyncLock`块将获取并释放通过调用的排他锁`Enter`并`Exit`的方法`Monitor`类<xref:System.Threading>命名空间。  
   
 ## <a name="programming-practices"></a>编程做法  
  `lockobject`表达式应计算结果始终为以独占方式属于您的类的对象。 应声明`Private`对象变量来保护属于当前实例的数据或`Private Shared`对象变量来保护数据普遍适用于所有实例。  

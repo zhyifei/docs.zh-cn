@@ -6,18 +6,18 @@ helpviewer_keywords:
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
 ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769052"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>如何：使对象变量不引用任何实例 (Visual Basic)
 您可以通过将其设置为解除关联，从任何对象实例的对象变量[Nothing](../../../../visual-basic/language-reference/nothing.md)。  
   
 ### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>若要解除关联从任何对象实例的对象变量  
   
--   将变量设置为`Nothing`在赋值语句中。  
+- 将变量设置为`Nothing`在赋值语句中。  
   
     ```  
     ' Assume account is a defined class  

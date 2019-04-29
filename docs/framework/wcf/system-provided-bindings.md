@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
 ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791503"
 ---
 # <a name="system-provided-bindings"></a>系统提供的绑定
 
@@ -61,8 +61,8 @@ WCF 附带有以下绑定：
 |<xref:System.ServiceModel.WSHttpBinding>|WS|传输、（消息）、混合|（无）、可靠会话、安全会话|（无）、是|n/a|（文本）、MTOM|否|
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|（消息）、无|（可靠会话）、安全会话|（无）、是|是|（文本）、MTOM|否|
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|（消息）、混合、无|（无）、可靠会话、安全会话|（无）、是|否|（文本）、MTOM|否|
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|（无）、传输、消息、TransportWithMessageCredential、TransportCredentialOnly|请参见下面的注释|无|请参见下面的注释|（二进制）、文本、MTOM|是（缓冲式）|
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|（传输）、TransportWithMessageCredential|请参见下面的注释|无|请参见下面的注释|（二进制）、文本、MTOM|是<br />（缓冲式）|
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|（无）、传输、消息、TransportWithMessageCredential、TransportCredentialOnly|请参见下面的注释|None|请参见下面的注释|（二进制）、文本、MTOM|是（缓冲式）|
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|（传输）、TransportWithMessageCredential|请参见下面的注释|None|请参见下面的注释|（二进制）、文本、MTOM|是<br />（缓冲式）|
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|（传输）、消息、无、混合|（传输）、可靠会话、安全会话|（无）、是|是|二进制|是<br />（缓冲式）|
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|（传输）、无|无、（传输）|（无）、是|是|二进制|是<br />（缓冲式）|
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|消息、（传输）、无|（无）、传输|无、（是）|否|二进制|否|

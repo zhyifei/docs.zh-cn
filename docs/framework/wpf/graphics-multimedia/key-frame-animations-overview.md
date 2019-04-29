@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785787"
 ---
 # <a name="key-frame-animations-overview"></a>关键帧动画概述
 本主题介绍关键帧动画。 通过关键帧动画，可以使用两个以上的目标值进行动画处理，并控制动画的内插方法。  
@@ -28,11 +28,11 @@ ms.locfileid: "59316734"
   
  若要使用关键帧动画进行动画处理，需要完成下列步骤。  
   
--   声明动画并指定其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，就像 from/to/by 动画。  
+- 声明动画并指定其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>，就像 from/to/by 动画。  
   
--   对于每个目标值，请创建相应类型的一个关键帧，将其值设置并<xref:System.Windows.Media.Animation.KeyTime>，并将其添加到动画的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。  
+- 对于每个目标值，请创建相应类型的一个关键帧，将其值设置并<xref:System.Windows.Media.Animation.KeyTime>，并将其添加到动画的<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>集合。  
   
--   以针对 From/To/By 动画的方式将该动画与属性相关联。 有关使用演示图板将动画应用到属性的详细信息，请参阅[演示图板概述](storyboards-overview.md)。  
+- 以针对 From/To/By 动画的方式将该动画与属性相关联。 有关使用演示图板将动画应用到属性的详细信息，请参阅[演示图板概述](storyboards-overview.md)。  
   
  下面的示例使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>进行动画处理<xref:System.Windows.Shapes.Rectangle>到四个不同位置的元素。  
   
@@ -85,33 +85,33 @@ ms.locfileid: "59316734"
   
  关键帧的主要用途是指定<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>和一个<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>。 每个关键帧类型都可提供这两种属性。  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性指定该关键帧的目标值。  
+- <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性指定该关键帧的目标值。  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性指定当 (动画的内<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>为止。  
+- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性指定当 (动画的内<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>为止。  
   
  关键帧动画开始后，循环访问其关键帧中定义的顺序按其<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性。  
   
--   如果 0 时刻没有关键帧，动画创建目标属性的当前值之间的转换和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>的第一个关键帧; 否则，该动画的输出值将成为第一个关键帧的值。  
+- 如果 0 时刻没有关键帧，动画创建目标属性的当前值之间的转换和<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>的第一个关键帧; 否则，该动画的输出值将成为第一个关键帧的值。  
   
--   动画创建之间的转换<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>的第一个和第二个关键帧使用指定的第二个关键帧的内插方法。 第一个关键帧的过渡起始<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>时结束和第二个关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>达到。  
+- 动画创建之间的转换<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>的第一个和第二个关键帧使用指定的第二个关键帧的内插方法。 第一个关键帧的过渡起始<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>时结束和第二个关键帧的<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>达到。  
   
--   动画将继续，这会创建每个后续关键帧和其前面的关键帧之间的过渡。  
+- 动画将继续，这会创建每个后续关键帧和其前面的关键帧之间的过渡。  
   
--   最后的最大关键时间的关键帧，动画将转换为值是等于或小于动画的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
+- 最后的最大关键时间的关键帧，动画将转换为值是等于或小于动画的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
   
  如果该动画<xref:System.Windows.Media.Animation.Timeline.Duration%2A>是<xref:System.Windows.Duration.Automatic%2A>或其<xref:System.Windows.Media.Animation.Timeline.Duration%2A>等于最后一个关键帧在动画结束的时间。 否则为如果动画<xref:System.Windows.Duration>大于关键时间的最后一个关键帧的关键帧值直到其到达末尾的动画保留其<xref:System.Windows.Duration>。 与所有动画关键帧动画使用其<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性来确定是否保留最终值到达其活动期结束时。 有关详细信息，请参阅[计时行为概述](timing-behaviors-overview.md)。  
   
  下面的示例使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>对象定义在前面的示例演示如何<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>和<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>属性的工作。  
   
--   第一个关键帧立即将动画的输出值设置为 0。  
+- 第一个关键帧立即将动画的输出值设置为 0。  
   
--   第二个关键帧在 0 和 350 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 0 秒），播放 2 秒钟，结束时间 = 0:0:2。  
+- 第二个关键帧在 0 和 350 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 0 秒），播放 2 秒钟，结束时间 = 0:0:2。  
   
--   第三个关键帧在 350 和 50 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 2 秒），播放 5 秒钟，结束时间 = 0:0:7。  
+- 第三个关键帧在 350 和 50 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 2 秒），播放 5 秒钟，结束时间 = 0:0:7。  
   
--   第四个关键帧在 50 和 200 之间进行动画处理。 它在第三个关键帧结束时开始（开始时间 = 7 秒），播放 1 秒钟，结束时间 = 0:0:8。  
+- 第四个关键帧在 50 和 200 之间进行动画处理。 它在第三个关键帧结束时开始（开始时间 = 7 秒），播放 1 秒钟，结束时间 = 0:0:8。  
   
--   因为<xref:System.Windows.Media.Animation.Timeline.Duration%2A>动画属性设置为 10 秒，则该动画保留其最终值两秒钟，结束之前开始时间 = 0:0:10。  
+- 因为<xref:System.Windows.Media.Animation.Timeline.Duration%2A>动画属性设置为 10 秒，则该动画保留其最终值两秒钟，结束之前开始时间 = 0:0:10。  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ ms.locfileid: "59316734"
 ### <a name="timespan-values"></a>TimeSpan 值  
  可以使用<xref:System.TimeSpan>值，以指定<xref:System.Windows.Media.Animation.KeyTime>。 该值应大于或等于 0 并且小于或等于动画的持续时间。 以下示例演示一个持续时间为 10 秒钟、有四个关键帧（这些关键帧的关键时间指定为时间值）的动画。  
   
--   在前 3 秒钟内，第一个关键帧在基值和 100 之间进行动画处理，结束时间 = 0:0:03。  
+- 在前 3 秒钟内，第一个关键帧在基值和 100 之间进行动画处理，结束时间 = 0:0:03。  
   
--   第二个关键帧在 100 和 200 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 3 秒），播放 5 秒钟，结束时间 = 0:0:8。  
+- 第二个关键帧在 100 和 200 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 3 秒），播放 5 秒钟，结束时间 = 0:0:8。  
   
--   第三个关键帧在 200 和 500 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 8 秒），播放 1 秒钟，结束时间 = 0:0:9。  
+- 第三个关键帧在 200 和 500 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 8 秒），播放 1 秒钟，结束时间 = 0:0:9。  
   
--   第四个关键帧在 500 和 600 之间进行动画处理。 它在第三个关键帧结束时开始（开始时间 = 9 秒），播放 1 秒钟，结束时间 = 0:0:10。  
+- 第四个关键帧在 500 和 600 之间进行动画处理。 它在第三个关键帧结束时开始（开始时间 = 9 秒），播放 1 秒钟，结束时间 = 0:0:10。  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>百分比值  
  百分比值指定关键帧的动画的百分比处结束<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，指定百分比作为 `%` 符号后的数字。 在代码中，您使用<xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A>方法并将其传递<xref:System.Double>的百分比。 该值必须大于或等于 0 并且小于或等于 100%。 以下示例演示一个持续时间为 10 秒钟、有四个关键帧（这些关键帧的关键时间指定为百分比）的动画。  
   
--   在前 3 秒钟内，第一个关键帧将在基值和 100 之间进行动画处理，结束时间 = 0:0:3。  
+- 在前 3 秒钟内，第一个关键帧将在基值和 100 之间进行动画处理，结束时间 = 0:0:3。  
   
--   第二个关键帧在 100 和 200 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 3 秒），播放 5 秒钟，结束时间 = 0:0:8 (0.8 * 10 = 8)。  
+- 第二个关键帧在 100 和 200 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 3 秒），播放 5 秒钟，结束时间 = 0:0:8 (0.8 * 10 = 8)。  
   
--   第三个关键帧在 200 和 500 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 8 秒），播放 1 秒钟，结束时间 = 0:0:9 (0.9 * 10 = 9)。  
+- 第三个关键帧在 200 和 500 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 8 秒），播放 1 秒钟，结束时间 = 0:0:9 (0.9 * 10 = 9)。  
   
--   第四个关键帧在 500 和 600 之间进行动画处理。 它在第三个关键帧结束时开始（开始时间 = 9 秒），播放 1 秒钟，结束时间 = 0:0:10 (1 * 10 = 10)。  
+- 第四个关键帧在 500 和 600 之间进行动画处理。 它在第三个关键帧结束时开始（开始时间 = 9 秒），播放 1 秒钟，结束时间 = 0:0:10 (1 * 10 = 10)。  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ ms.locfileid: "59316734"
   
  一个<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>关键时间划分的可用时间同样的关键帧，以确定每个关键帧的结束时间数。 下面的示例演示一个持续时间为 10 秒的动画和四个关键帧的关键时间指定为<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>。  
   
--   在前 2.5 秒钟内，第一个关键帧在基值和 100 之间进行动画处理，结束时间 = 0:0:2.5。  
+- 在前 2.5 秒钟内，第一个关键帧在基值和 100 之间进行动画处理，结束时间 = 0:0:2.5。  
   
--   第二个关键帧在 100 和 200 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 2.5 秒），播放大约 2.5 秒钟，结束时间 = 0:0:5。  
+- 第二个关键帧在 100 和 200 之间进行动画处理。 它在第一个关键帧结束后开始（开始时间 = 2.5 秒），播放大约 2.5 秒钟，结束时间 = 0:0:5。  
   
--   第三个关键帧在 200 和 500 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 5 秒），播放 2.5 秒钟，结束时间 = 0:0:7.5。  
+- 第三个关键帧在 200 和 500 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 5 秒），播放 2.5 秒钟，结束时间 = 0:0:7.5。  
   
--   第四个关键帧在 500 和 600 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 7.5 秒），播放 2.5 秒钟，结束时间 = 0:0:1。  
+- 第四个关键帧在 500 和 600 之间进行动画处理。 它在第二个关键帧结束时开始（开始时间 = 7.5 秒），播放 2.5 秒钟，结束时间 = 0:0:1。  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ ms.locfileid: "59316734"
   
 2. 确定动画的*总内插时间*，即关键帧动画完成向前迭代所需的全部时间。  
   
-    1.  如果该动画<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不是<xref:System.Windows.Duration.Automatic%2A>或<xref:System.Windows.Duration.Forever%2A>，总内插时间为动画的值<xref:System.Windows.Media.Animation.Timeline.Duration%2A>属性。  
+    1. 如果该动画<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不是<xref:System.Windows.Duration.Automatic%2A>或<xref:System.Windows.Duration.Forever%2A>，总内插时间为动画的值<xref:System.Windows.Media.Animation.Timeline.Duration%2A>属性。  
   
-    2.  否则，总内插时间是最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>指定其关键帧，如果存在任何值。  
+    2. 否则，总内插时间是最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>指定其关键帧，如果存在任何值。  
   
-    3.  否则，总内插时间为 1 秒。  
+    3. 否则，总内插时间为 1 秒。  
   
 3. 使用总内插时间值来解决<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。  
   

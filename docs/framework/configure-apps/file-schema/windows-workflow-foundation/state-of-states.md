@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
 ms.openlocfilehash: ff75895949c50cd369e4297ea77dc21106994067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794403"
 ---
 # <a name="state-of-states"></a>\<状态 > 的\<状态 >
 一个配置元素，该元素包含应为其发出跟踪记录的已订阅活动的状态。  

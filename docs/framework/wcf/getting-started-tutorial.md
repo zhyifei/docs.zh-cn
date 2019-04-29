@@ -8,11 +8,11 @@ helpviewer_keywords:
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929533"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>教程：开始使用 Windows Communication Foundation 应用程序
 以下一系列教程向您介绍了为 Windows Communication Foundation (WCF) 编程体验。 通过按顺序这些教程将提供初步了解创建 WCF 应用程序所需的步骤。 完成后，你必须正在运行的 WCF 服务和 WCF 客户端调用服务。 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781493"
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -83,9 +83,9 @@ ms.locfileid: "59106738"
 ### <a name="collection-data-contract-naming"></a>集合数据协定命名  
  如 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)中所述，命名集合类型的规则与命名常规数据协定类型的规则类似，但存在一些重要的区别：  
   
--   使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性（而不是 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）来自定义名称。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性 (Attribute) 也有 `Name` 和 `Namespace` 属性 (Property)。  
+- 使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性（而不是 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）来自定义名称。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性 (Attribute) 也有 `Name` 和 `Namespace` 属性 (Property)。  
   
--   当未应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性时，集合类型的默认名称和命名空间依赖于集合内包含的类型的名称和命名空间。 它们不受集合类型本身的名称和命名空间的影响。 有关示例，请参见以下类型。  
+- 当未应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性时，集合类型的默认名称和命名空间依赖于集合内包含的类型的名称和命名空间。 它们不受集合类型本身的名称和命名空间的影响。 有关示例，请参见以下类型。  
   
     ```csharp  
     public CustomerList1 : Collection<string> {}  
@@ -123,7 +123,7 @@ ms.locfileid: "59106738"
   
  请注意，这不再等效于非自定义类型的 XML 表示。  
   
--   您可以使用 `Name` 和 `Namespace` 属性来进一步自定义命名。 请参见下面的类。  
+- 您可以使用 `Name` 和 `Namespace` 属性来进一步自定义命名。 请参见下面的类。  
   
      [!code-csharp[c_collection_types_in_data_contracts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#3)]
      [!code-vb[c_collection_types_in_data_contracts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#3)]  
@@ -278,9 +278,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  如果类型实现多个列表集合接口，则下列限制适用：  
   
--   如果类型针对不同的类型多次实现泛型 <xref:System.Collections.Generic.IEnumerable%601> （或它的派生接口），则该类型不会被视为有效的引用集合类型，因此会被忽略。 即使有些实现是无效的或者使用开放式泛型，也将如此。 例如，实现 <xref:System.Collections.Generic.IEnumerable%601> 的泛型 `int` 以及 T 的泛型 <xref:System.Collections.Generic.IEnumerable%601> 的类型绝不会用作 `int` 或其他任何类型的引用集合，无论该类型是否具有接受 `Add` 的 `int` 方法和/或接受类型 T 的参数的 `Add` 方法，都将如此。  
+- 如果类型针对不同的类型多次实现泛型 <xref:System.Collections.Generic.IEnumerable%601> （或它的派生接口），则该类型不会被视为有效的引用集合类型，因此会被忽略。 即使有些实现是无效的或者使用开放式泛型，也将如此。 例如，实现 <xref:System.Collections.Generic.IEnumerable%601> 的泛型 `int` 以及 T 的泛型 <xref:System.Collections.Generic.IEnumerable%601> 的类型绝不会用作 `int` 或其他任何类型的引用集合，无论该类型是否具有接受 `Add` 的 `int` 方法和/或接受类型 T 的参数的 `Add` 方法，都将如此。  
   
--   如果该类型实现一个泛型集合接口和 <xref:System.Collections.IList>，则该类型将绝不会用作引用的集合类型，除非该泛型集合接口是 <xref:System.Object>类型的封闭式泛型。  
+- 如果该类型实现一个泛型集合接口和 <xref:System.Collections.IList>，则该类型将绝不会用作引用的集合类型，除非该泛型集合接口是 <xref:System.Object>类型的封闭式泛型。  
   
  对于字典集合，只支持下面的表中的情况。  
   
@@ -303,21 +303,21 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="serializing-collections"></a>序列化集合  
  下面是集合序列化规则的列表：  
   
--   允许组合集合类型（具有集合的集合）。 交错数组被视为集合的集合。 不支持多维数组。  
+- 允许组合集合类型（具有集合的集合）。 交错数组被视为集合的集合。 不支持多维数组。  
   
--   字节数组和 <xref:System.Xml.XmlNode> 数组是特殊的数组类型，将被视为基元，而不是集合。 序列化字节数组会产生单个包含一个 Base64 编码数据块的 XML 元素，而不是为每个字节都生成一个单独的元素。 有关如何的详细信息的数组<xref:System.Xml.XmlNode>是处理，请参阅[XML 和 ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 当然，这些特殊类型本身可以参与集合：字节数组的数组会产生多个 XML 元素，其中每个元素都包含一个 Base64 编码数据块。  
+- 字节数组和 <xref:System.Xml.XmlNode> 数组是特殊的数组类型，将被视为基元，而不是集合。 序列化字节数组会产生单个包含一个 Base64 编码数据块的 XML 元素，而不是为每个字节都生成一个单独的元素。 有关如何的详细信息的数组<xref:System.Xml.XmlNode>是处理，请参阅[XML 和 ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 当然，这些特殊类型本身可以参与集合：字节数组的数组会产生多个 XML 元素，其中每个元素都包含一个 Base64 编码数据块。  
   
--   如果 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于集合类型，则该类型会被视为常规数据协定类型，而不是集合。  
+- 如果 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于集合类型，则该类型会被视为常规数据协定类型，而不是集合。  
   
--   如果集合类型实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，下列规则适用（假定类型为 `myType:IList<string>, IXmlSerializable`）：  
+- 如果集合类型实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，下列规则适用（假定类型为 `myType:IList<string>, IXmlSerializable`）：  
   
-    -   如果声明类型为 `IList<string>`，则将类型序列化为列表。  
+    - 如果声明类型为 `IList<string>`，则将类型序列化为列表。  
   
-    -   如果声明类型为 `myType`，则将该声明类型序列化为 `IXmlSerializable`。  
+    - 如果声明类型为 `myType`，则将该声明类型序列化为 `IXmlSerializable`。  
   
-    -   如果该声明类型为 `IXmlSerializable`，则该声明类型将序列化为 `IXmlSerializable`，但前提是将 `myType` 添加到已知类型的列表。  
+    - 如果该声明类型为 `IXmlSerializable`，则该声明类型将序列化为 `IXmlSerializable`，但前提是将 `myType` 添加到已知类型的列表。  
   
--   使用下表中显示的方法对集合进行序列化和反序列化。  
+- 使用下表中显示的方法对集合进行序列化和反序列化。  
   
 |集合类型实现|序列化时调用的方法|反序列化时调用的方法|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
@@ -331,22 +331,22 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  上表按优先级从高到低的顺序列出集合接口。 现举例说明这样列出的含义：如果一个类型同时实现 <xref:System.Collections.IList> 和泛型 <xref:System.Collections.Generic.IEnumerable%601>，则集合将按照 <xref:System.Collections.IList> 规则进行序列化和反序列化：  
   
--   反序列化时，通过首先调用默认构造函数创建类型的实例来反序列化所有集合，该默认构造函数必须存在，序列化程序才能在序列化和反序列化期间，都将集合类型视为集合。  
+- 反序列化时，通过首先调用默认构造函数创建类型的实例来反序列化所有集合，该默认构造函数必须存在，序列化程序才能在序列化和反序列化期间，都将集合类型视为集合。  
   
--   如果同一泛型集合接口实现多次（例如，如果一个类型既实现 <xref:System.Collections.Generic.ICollection%601> 的泛型 `Integer` ，也实现 <xref:System.Collections.Generic.ICollection%601> 的泛型 <xref:System.String>），并且找不到更高优先级的接口，则该集合将不会被视为有效集合。  
+- 如果同一泛型集合接口实现多次（例如，如果一个类型既实现 <xref:System.Collections.Generic.ICollection%601> 的泛型 `Integer` ，也实现 <xref:System.Collections.Generic.ICollection%601> 的泛型 <xref:System.String>），并且找不到更高优先级的接口，则该集合将不会被视为有效集合。  
   
--   集合类型可以应用 <xref:System.SerializableAttribute> 属性，并且可以实现 <xref:System.Runtime.Serialization.ISerializable> 接口。 两者都将被忽略。 但是，如果类型未充分满足集合类型要求（例如，缺少 `Add` 方法），则该类型将不会被视为集合类型，因此会使用 <xref:System.SerializableAttribute> 属性和 <xref:System.Runtime.Serialization.ISerializable> 接口来确定类型是否可以序列化。  
+- 集合类型可以应用 <xref:System.SerializableAttribute> 属性，并且可以实现 <xref:System.Runtime.Serialization.ISerializable> 接口。 两者都将被忽略。 但是，如果类型未充分满足集合类型要求（例如，缺少 `Add` 方法），则该类型将不会被视为集合类型，因此会使用 <xref:System.SerializableAttribute> 属性和 <xref:System.Runtime.Serialization.ISerializable> 接口来确定类型是否可以序列化。  
   
--   为了自定义集合而向其应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性会去掉上面的 <xref:System.SerializableAttribute> 回退机制。 在这种情况下，如果自定义集合不满足集合类型要求，将会引发 <xref:System.Runtime.Serialization.InvalidDataContractException> 异常。 异常字符串通常包含说明给定的类型为什么不被视为有效集合（无 `Add` 方法，无默认构造函数，等等）的信息，因此出于调试目的而应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性通常很有用。  
+- 为了自定义集合而向其应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性会去掉上面的 <xref:System.SerializableAttribute> 回退机制。 在这种情况下，如果自定义集合不满足集合类型要求，将会引发 <xref:System.Runtime.Serialization.InvalidDataContractException> 异常。 异常字符串通常包含说明给定的类型为什么不被视为有效集合（无 `Add` 方法，无默认构造函数，等等）的信息，因此出于调试目的而应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性通常很有用。  
   
 ### <a name="collection-naming"></a>集合命名  
  以下是集合命名规则的列表：  
   
--   默认命名空间的所有字典集合数据协定，以及包含基元类型的列表集合数据协定是`http://schemas.microsoft.com/2003/10/Serialization/Arrays`除非使用 Namespace 重写。 为此，映射到内置 XSD 类型的类型以及 `char`、 `Timespan`和 `Guid` 类型都将被视为基元。  
+- 默认命名空间的所有字典集合数据协定，以及包含基元类型的列表集合数据协定是`http://schemas.microsoft.com/2003/10/Serialization/Arrays`除非使用 Namespace 重写。 为此，映射到内置 XSD 类型的类型以及 `char`、 `Timespan`和 `Guid` 类型都将被视为基元。  
   
--   包含非基元类型的集合类型的默认命名空间如果未使用 Namespace 重写，则与集合中包含的类型的数据协定命名空间相同。  
+- 包含非基元类型的集合类型的默认命名空间如果未使用 Namespace 重写，则与集合中包含的类型的数据协定命名空间相同。  
   
--   列表集合数据协定的默认名称如果未使用 Name 重写，则是“ArrayOf”字符串与集合中包含类型的数据协定名称的组合。 例如，某个整数泛型列表的数据协定名称是“ArrayOfint”。 请记住， `Object` 的数据协定名称是“anyType”，因此诸如 <xref:System.Collections.ArrayList> 这样的非泛型列表的数据协定名称是“ArrayOfanyType”。  
+- 列表集合数据协定的默认名称如果未使用 Name 重写，则是“ArrayOf”字符串与集合中包含类型的数据协定名称的组合。 例如，某个整数泛型列表的数据协定名称是“ArrayOfint”。 请记住， `Object` 的数据协定名称是“anyType”，因此诸如 <xref:System.Collections.ArrayList> 这样的非泛型列表的数据协定名称是“ArrayOfanyType”。  
   
  字典集合数据协定的默认名称如果未使用 `Name`重写，则是“ArrayOfKeyValueOf”字符串与键类型的数据协定名称以及值类型的数据协定名称（按此顺序）的组合。 例如，String 和 Integer 的泛型字典的数据协定名称是“ArrayOfKeyValueOfstringint”。 此外，如果键或值类型不是基元类型，则键和值类型的数据协定命名空间的命名空间哈希将会追加到名称的末尾。 有关命名空间哈希值的详细信息，请参阅[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
@@ -357,13 +357,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collection-customization"></a>集合自定义  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性的下列用法是被禁止的，这些用法会导致 <xref:System.Runtime.Serialization.InvalidDataContractException> 异常：  
   
--   向已应用 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的类型或者它的某个派生类型应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性。  
+- 向已应用 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的类型或者它的某个派生类型应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性。  
   
--   向实现 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 接口的类型应用 <xref:System.Xml.Serialization.IXmlSerializable> 属性。  
+- 向实现 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 接口的类型应用 <xref:System.Xml.Serialization.IXmlSerializable> 属性。  
   
--   向非集合类型应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性。  
+- 向非集合类型应用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性。  
   
--   试图对应用于非字典类型的 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> 属性设置 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> 或 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 。  
+- 试图对应用于非字典类型的 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> 属性设置 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> 或 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 。  
   
 ### <a name="polymorphism-rules"></a>多态性规则  
  如前所述，使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性自定义集合可能会影响集合的可互换性。 如果两个自定义集合类型的名称、命名空间、项名称以及键和值名称（如果它们是字典集合）均匹配，则只能被视为等效。  

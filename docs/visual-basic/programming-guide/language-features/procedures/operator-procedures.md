@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791971"
 ---
 # <a name="operator-procedures-visual-basic"></a>运算符过程 (Visual Basic)
 运算符过程是一系列定义标准运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 上的类或结构定义。 这也称为*运算符重载*。  
@@ -31,13 +31,13 @@ ms.locfileid: "59175014"
 ## <a name="types-of-operator-procedure"></a>类型的运算符过程  
  运算符过程可以是以下类型之一：  
   
--   其中的参数是类或结构的类型的一元运算符的定义。  
+- 其中的参数是类或结构的类型的一元运算符的定义。  
   
--   其中至少一个参数是类或结构的类型的二进制运算符的定义。  
+- 其中至少一个参数是类或结构的类型的二进制运算符的定义。  
   
--   其中的参数是类或结构的类型的转换运算符的定义。  
+- 其中的参数是类或结构的类型的转换运算符的定义。  
   
--   转换运算符返回的类或结构类型的定义。  
+- 转换运算符返回的类或结构类型的定义。  
   
  转换运算符始终是一元，并始终使用`CType`用作您定义的运算符。  
   

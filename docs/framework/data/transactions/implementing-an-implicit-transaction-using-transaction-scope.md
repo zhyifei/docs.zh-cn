@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793674"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用事务范围实现隐式事务
 <xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  <xref:System.Transactions.TransactionScope> 对象有以下三个选项：  
   
--   联接环境事务，或者在环境事务不存在的情况下创建新的环境事务。  
+- 联接环境事务，或者在环境事务不存在的情况下创建新的环境事务。  
   
--   成为新的根范围，也就是说，启动一个新事务并使该事务成为其自己范围中的新环境事务。  
+- 成为新的根范围，也就是说，启动一个新事务并使该事务成为其自己范围中的新环境事务。  
   
--   根本不参与事务。 因此没有环境事务。  
+- 根本不参与事务。 因此没有环境事务。  
   
  如果用 <xref:System.Transactions.TransactionScopeOption.Required> 实例化范围并且存在环境事务，则该范围会联接该事务。 相反，如果不存在环境事务，该范围就会创建新的事务并成为根范围。 这是默认值。 在使用 <xref:System.Transactions.TransactionScopeOption.Required> 时，无论范围是根范围还是仅联接环境事务，该范围中的代码都不需要有不同的行为。 该代码在这两种情况下的行为应相同。  
   

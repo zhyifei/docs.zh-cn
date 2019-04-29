@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758491"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名类型 (Visual Basic)
 Visual Basic 支持匿名类型，以便你能够而无需编写的数据类型的类定义创建对象。 此时，编译器将为你生成类。 类已没有可用的名称，直接继承自<xref:System.Object>，且包含在声明该对象指定的属性。 由于未指定数据类型的名称，因此将它称为*匿名类型*。  
@@ -53,22 +53,22 @@ Visual Basic 支持匿名类型，以便你能够而无需编写的数据类型�
 ## <a name="key-properties"></a>键属性  
  键属性不同于非键属性多个重要方面：  
   
--   只有键属性的值进行比较以确定两个实例是否相等。  
+- 只有键属性的值进行比较以确定两个实例是否相等。  
   
--   键属性的值是只读的并且不能更改。  
+- 键属性的值是只读的并且不能更改。  
   
--   仅匿名类型的编译器生成的哈希代码算法中包括键属性值。  
+- 仅匿名类型的编译器生成的哈希代码算法中包括键属性值。  
   
 ### <a name="equality"></a>相等  
  匿名类型的实例可以是同一匿名类型的实例才相等。 编译器将两个实例视为相同类型的实例，如果满足以下条件：  
   
--   在同一程序集中声明它们。  
+- 在同一程序集中声明它们。  
   
--   它们的属性具有相同的名称相同的推断类型和声明顺序相同。 名称比较不区分大小写。  
+- 它们的属性具有相同的名称相同的推断类型和声明顺序相同。 名称比较不区分大小写。  
   
--   在每个相同的属性都标记为键属性。  
+- 在每个相同的属性都标记为键属性。  
   
--   每个声明中的至少一个属性是键属性。  
+- 每个声明中的至少一个属性是键属性。  
   
  具有任何键属性的匿名类型的实例是只等于其自身。  
   
@@ -86,11 +86,11 @@ Visual Basic 支持匿名类型，以便你能够而无需编写的数据类型�
 ## <a name="anonymous-types-from-query-expressions"></a>查询表达式中的匿名类型  
  查询表达式始终不需要创建匿名类型。 如果可能，它们使用现有类型以保存列数据。 查询从数据源或每条记录中的只有一个字段返回任一整条记录时，将发生这种情况。 在下面的代码示例中，`customers`是一系列的对象`Customer`类。 类具有许多属性，并可在查询结果中，按任意顺序包含一个或多个。 在前两个示例中，任何匿名类型不是必需，因为查询中选择的命名类型的元素：  
   
--   `custs1` 包含一系列字符串，因为`cust.Name`是一个字符串。  
+- `custs1` 包含一系列字符串，因为`cust.Name`是一个字符串。  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` 包含一系列`Customer`对象，因为每个元素的`customers`是`Customer`查询选择对象，并且整个元素。  
+- `custs2` 包含一系列`Customer`对象，因为每个元素的`customers`是`Customer`查询选择对象，并且整个元素。  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

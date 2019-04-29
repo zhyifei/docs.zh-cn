@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
 ms.openlocfilehash: 12c81a9a0651088a348afeaff3b71935d289da53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778737"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 指定一个或多个声明的编程元素与类或结构在整体上，而不是与类或结构的特定实例相关联。  
@@ -30,25 +30,25 @@ ms.locfileid: "58816274"
   
 ## <a name="rules"></a>规则  
   
--   **声明上下文。** 只能在模块级别使用 `Shared`。 这意味着声明上下文`Shared`元素必须是类或结构，并且不能是源文件、 命名空间或过程。  
+- **声明上下文。** 只能在模块级别使用 `Shared`。 这意味着声明上下文`Shared`元素必须是类或结构，并且不能是源文件、 命名空间或过程。  
   
--   **组合的修饰符。** 不能指定`Shared`连同[重写](../../../visual-basic/language-reference/modifiers/overrides.md)， [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)， [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)， [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)，或[静态](../../../visual-basic/language-reference/modifiers/static.md)同一声明中。  
+- **组合的修饰符。** 不能指定`Shared`连同[重写](../../../visual-basic/language-reference/modifiers/overrides.md)， [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)， [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)， [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)，或[静态](../../../visual-basic/language-reference/modifiers/static.md)同一声明中。  
   
--   **访问。** 通过其类或结构的名称而不是类或结构的特定实例的变量名称限定其访问的共享的元素。 甚至不需要创建类或结构来访问它的共享的成员的实例。  
+- **访问。** 通过其类或结构的名称而不是类或结构的特定实例的变量名称限定其访问的共享的元素。 甚至不需要创建类或结构来访问它的共享的成员的实例。  
   
      下面的示例调用共享的过程<xref:System.Double.IsNaN%2A>公开的<xref:System.Double>结构。  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **隐式共享。** 不能使用`Shared`修饰符[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)，但常量被隐式共享。 同样，不能声明为模块或接口的成员`Shared`，但它们会被隐式共享。  
+- **隐式共享。** 不能使用`Shared`修饰符[Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)，但常量被隐式共享。 同样，不能声明为模块或接口的成员`Shared`，但它们会被隐式共享。  
   
 ## <a name="behavior"></a>行为  
   
--   **存储。** 只有一次，无论多少或少数几个实例创建的类或结构，在内存中存储的共享的变量或事件。 同样，共享的过程或属性包含只有一组本地变量。  
+- **存储。** 只有一次，无论多少或少数几个实例创建的类或结构，在内存中存储的共享的变量或事件。 同样，共享的过程或属性包含只有一组本地变量。  
   
--   **通过实例变量访问。** 就可以通过用包含类或结构的特定实例的变量的名称限定其访问的共享的元素。 虽然这通常按预期工作，编译器将生成一条警告消息，并使通过类或结构的名称，而不是变量的访问权限。  
+- **通过实例变量访问。** 就可以通过用包含类或结构的特定实例的变量的名称限定其访问的共享的元素。 虽然这通常按预期工作，编译器将生成一条警告消息，并使通过类或结构的名称，而不是变量的访问权限。  
   
--   **通过的实例表达式进行访问。** 如果通过一个表达式，返回其类或结构的实例访问共享的元素，编译器可让通过类或结构的名称，而不是计算表达式的访问权限。 如果你想要执行其他操作以及返回实例的表达式，这将会产生意外的结果。 下面的示例阐释了这一点。  
+- **通过的实例表达式进行访问。** 如果通过一个表达式，返回其类或结构的实例访问共享的元素，编译器可让通过类或结构的名称，而不是计算表达式的访问权限。 如果你想要执行其他操作以及返回实例的表达式，这将会产生意外的结果。 下面的示例阐释了这一点。  
   
     ```vb
     Sub main()  

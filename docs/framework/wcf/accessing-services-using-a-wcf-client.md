@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782429"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 客户端访问服务
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 由 WCF 客户端引发的许多异常是由服务上异常引起的。 以下是这种情况的一些示例：
 
--   <xref:System.Net.Sockets.SocketException>：现有连接被远程主机强行关闭。
+- <xref:System.Net.Sockets.SocketException>：现有连接被远程主机强行关闭。
 
--   <xref:System.ServiceModel.CommunicationException>：基础连接意外关闭。
+- <xref:System.ServiceModel.CommunicationException>：基础连接意外关闭。
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>：套接字连接已中止。 这可能是由于处理消息时出错或远程主机超过接收超时或者潜在的网络资源问题导致的。
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>：套接字连接已中止。 这可能是由于处理消息时出错或远程主机超过接收超时或者潜在的网络资源问题导致的。
 
 当发生这些类型的异常时，解决问题的最佳方式是在服务端启用跟踪并确定服务端发生了何种异常。 有关跟踪的详细信息，请参阅[跟踪](../../../docs/framework/wcf/diagnostics/tracing/index.md)并[解决您的应用程序中使用跟踪](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 

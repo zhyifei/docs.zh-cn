@@ -3,11 +3,11 @@ title: WCF 错误处理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791217"
 ---
 # <a name="wcf-error-handling"></a>WCF 错误处理
 WCF 应用程序遇到的错误属于下列三组中的一组：  
@@ -26,13 +26,13 @@ WCF 应用程序遇到的错误属于下列三组中的一组：
   
  通过以下一种或多种方法执行 WCF 中的错误处理：  
   
--   直接处理引发的异常。 只能针对通信错误以及代理/通道错误执行此操作。  
+- 直接处理引发的异常。 只能针对通信错误以及代理/通道错误执行此操作。  
   
--   使用错误协定  
+- 使用错误协定  
   
--   实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口  
+- 实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口  
   
--   处理 <xref:System.ServiceModel.ServiceHost> 事件  
+- 处理 <xref:System.ServiceModel.ServiceHost> 事件  
   
 ## <a name="fault-contracts"></a>错误协定  
  利用错误协定，您可以独立于平台的方式定义服务操作期间会发生的错误。 默认情况下，所有从服务操作内引发的异常都将作为 <xref:System.ServiceModel.FaultException> 对象返回到客户端。 <xref:System.ServiceModel.FaultException> 对象将包含很少的信息。 通过定义错误协定并作为 <xref:System.ServiceModel.FaultException%601> 返回错误，可以控制发送到客户端的信息。 有关详细信息，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  

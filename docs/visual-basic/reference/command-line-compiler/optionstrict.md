@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788929"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 强制执行严格类型语义来限制隐式类型转换。  
@@ -47,7 +47,7 @@ ms.locfileid: "59336078"
   
 ### <a name="to-set--optionstrict-programmatically"></a>若要以编程方式设置-optionstrict  
   
--   请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。  
+- 请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。  
   
 ## <a name="example"></a>示例  
  下面的代码编译`Test.vb`使用严格类型语义。  

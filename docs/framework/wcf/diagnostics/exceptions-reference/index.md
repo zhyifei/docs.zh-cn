@@ -3,14 +3,14 @@ title: 关于异常的参考信息
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
 ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777385"
 ---
 # <a name="exceptions-reference"></a>关于异常的参考信息
-本部分列出了以下几个方面生成 Windows Communication Foundation (WCF) 中的所有异常：  
+本部分列出了生成 Windows Communication Foundation (WCF) 的以下区域中的所有异常：  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33474462"
   
  [核心通信：内部双工传输通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [核心通信：命名管道传输通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [核心通信：命名的管道传输通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
  [核心通信：TCP 传输通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   

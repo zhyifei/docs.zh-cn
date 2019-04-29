@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748247"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时在 Windows 窗体上排列 WPF 内容
 本演练演示如何使用 Windows 窗体布局功能（例如锚定和对齐线）排列 Windows Presentation Foundation (WPF) 控件。
 
  在本演练中，你将要执行以下任务：
 
--   创建项目。
+- 创建项目。
 
--   创建 WPF 控件。
+- 创建 WPF 控件。
 
--   在布局面板中承载 WPF 控件。
+- 在布局面板中承载 WPF 控件。
 
--   使用对齐线对齐 WPF 控件。
+- 使用对齐线对齐 WPF 控件。
 
--   锚定和停靠 WPF 控件。
+- 锚定和停靠 WPF 控件。
 
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -37,7 +37,7 @@ ms.locfileid: "59327303"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建 Windows 窗体项目。  
@@ -47,7 +47,7 @@ ms.locfileid: "59327303"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
--   创建新的 Windows 窗体应用程序项目在 Visual Basic 或 Visual C# 名为`ArrangeElementHost`。  
+- 创建新的 Windows 窗体应用程序项目在 Visual Basic 或 Visual C# 名为`ArrangeElementHost`。  
   
 ## <a name="creating-the-wpf-control"></a>创建 WPF 控件  
  将 WPF 控件添加到项目后，就可以在窗体上对其进行排列。  

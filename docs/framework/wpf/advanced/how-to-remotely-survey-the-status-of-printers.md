@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768494"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>如何：远程调查打印机的状态
 在大中型公司，在任何给定时间里，都可能发生由于卡纸、纸张用完或某些其他有问题而导致多台打印机无法工作的情况。 打印机属性中公开的丰富[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供了一种方法用于执行快速调查打印机状态。  
@@ -39,9 +39,9 @@ ms.locfileid: "59340784"
   
  该示例然后使用<xref:System.Printing.PrintServer.GetPrintQueues%2A>若要创建的所有服务器的集合的排队，并开始循环访问它们。 此内部循环包含一个分支结构，该结构对应于检查打印机状态的两种方法：  
   
--   可以读取的标志<xref:System.Printing.PrintQueue.QueueStatus%2A>属性的类型即<xref:System.Printing.PrintQueueStatus>。  
+- 可以读取的标志<xref:System.Printing.PrintQueue.QueueStatus%2A>属性的类型即<xref:System.Printing.PrintQueueStatus>。  
   
--   你可以读取每个相关属性，如<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>，和<xref:System.Printing.PrintQueue.IsPaperJammed%2A>。  
+- 你可以读取每个相关属性，如<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>，和<xref:System.Printing.PrintQueue.IsPaperJammed%2A>。  
   
  此示例演示这两种方法，因此该用户之前进行提示要使用的方法并回复"y"，如果他或她想要使用的标志<xref:System.Printing.PrintQueue.QueueStatus%2A>属性。 请参阅以下有关这两种方法的详细信息。  
   

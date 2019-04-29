@@ -3,11 +3,11 @@ title: 可运行实例的检测周期
 ms.date: 03/30/2017
 ms.assetid: 4ea5c787-b638-47fd-bfc8-ede8c2898ce6
 ms.openlocfilehash: 9652dd811f64e5324219b8aa0700ab8219edeeb0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937951"
 ---
 # <a name="runnable-instances-detection-period"></a>可运行实例的检测周期
 SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并检测持久性数据库中是否有可运行或可激活的实例。 **可运行实例的检测周期**SQL 工作流实例存储的属性指定的时间段后将 SQL 工作流实例存储运行一个检测任务，以检测任何可运行或可激活的工作流上一检测周期后持久性数据库中的实例。  

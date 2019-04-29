@@ -3,11 +3,11 @@ title: Windows Communication Foundation 使用展望：轻松实现未来的迁�
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
 ms.openlocfilehash: 4492626c2cb0958f8aa79fa2b511d9aa9e90b16a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769507"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation 使用展望：轻松实现未来的迁移
 若要确保新的 ASP.NET 应用程序到 WCF 为简化未来迁移，请遵循之前提出的建议，以及以下建议。  
@@ -32,9 +32,9 @@ ms.locfileid: "59176379"
 ## <a name="service-development"></a>服务开发  
  WCF 允许你通过应用定义服务协定<xref:System.ServiceModel.ServiceContractAttribute>到接口或类。 建议将此属性应用于接口而不是类，因为这样可以为可由任意数量的类以不同方式实现的协定创建一个定义。 ASP.NET 2.0 支持将 <xref:System.Web.Services.WebService> 属性应用到接口和类的选项。 但是，如前所述，ASP.NET 2.0 中存在缺陷，如果将 <xref:System.Web.Services.WebService> 属性应用到接口而不是类，则此属性的 Namespace 参数将不起任何作用。 由于它是通常建议修改的默认值，从服务命名空间`http://tempuri.org`，使用的 Namespace 参数<xref:System.Web.Services.WebService>属性，其中一个应继续定义 ASP.NET Web 服务通过应用<xref:System.ServiceModel.ServiceContractAttribute>到接口或类的属性。  
   
--   在定义那些接口的方法中尽量少使用代码。 允许它们将其工作委托给其他类。 新的 WCF 服务类型然后也可以将委托到这些类其大量的工作。  
+- 在定义那些接口的方法中尽量少使用代码。 允许它们将其工作委托给其他类。 新的 WCF 服务类型然后也可以将委托到这些类其大量的工作。  
   
--   使用 `MessageName` 的 <xref:System.Web.Services.WebMethodAttribute> 参数为服务的操作提供显式名称。  
+- 使用 `MessageName` 的 <xref:System.Web.Services.WebMethodAttribute> 参数为服务的操作提供显式名称。  
   
     ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
@@ -43,9 +43,9 @@ ms.locfileid: "59176379"
   
      执行此操作很重要，因为 ASP.NET 中的操作的默认名称是由 WCF 提供的默认名称不同。 通过提供显式名称，可以避免依赖默认名称。  
   
--   不要使用多态方法实现 ASP.NET Web 服务操作，因为 WCF 不支持使用多态方法实现操作。  
+- 不要使用多态方法实现 ASP.NET Web 服务操作，因为 WCF 不支持使用多态方法实现操作。  
   
--   使用 <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> 为 SOAPAction HTTP 标头提供显式值，HTTP 请求将通过此标头路由到方法。  
+- 使用 <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> 为 SOAPAction HTTP 标头提供显式值，HTTP 请求将通过此标头路由到方法。  
   
     ```csharp  
     [WebMethod]  
@@ -55,7 +55,7 @@ ms.locfileid: "59176379"
   
      采用这种方法可摆脱依赖于默认使用的 ASP.NET 和 WCF 相同的 SOAPAction 值。  
   
--   避免使用 SOAP 扩展。 如果 SOAP 扩展是必需的则确定是否正在为其考虑它们的用途是一项功能已提供的 WCF。 如果这确实是这种情况，然后重新考虑该选择不立即采用 WCF。  
+- 避免使用 SOAP 扩展。 如果 SOAP 扩展是必需的则确定是否正在为其考虑它们的用途是一项功能已提供的 WCF。 如果这确实是这种情况，然后重新考虑该选择不立即采用 WCF。  
   
 ## <a name="state-management"></a>状态管理  
  避免必须在服务中保持状态。 不仅保持状态会破坏应用程序的可伸缩性，而且 ASP.NET 和 WCF 的状态管理机制会大不相同，尽管 WCF 在 ASP.NET 兼容模式下支持 ASP.NET 机制。  
@@ -118,11 +118,11 @@ throw new SoapException(
 ## <a name="security"></a>安全性  
  下面是一些安全建议。  
   
--   避免使用 ASP.NET 2.0 配置文件，作为使用它们将限制使用的 ASP.NET 集成模式下，如果将服务迁移到 WCF。  
+- 避免使用 ASP.NET 2.0 配置文件，作为使用它们将限制使用的 ASP.NET 集成模式下，如果将服务迁移到 WCF。  
   
--   避免使用 Acl 来控制访问的服务作为 ASP.NET Web 服务支持使用 Internet Information Services (IIS) 的 Acl，WCF 不会，因为 ASP.NET Web 服务依赖 IIS 进行承载，并且 WCF 不一定需要在 IIS 中承载。  
+- 避免使用 Acl 来控制访问的服务作为 ASP.NET Web 服务支持使用 Internet Information Services (IIS) 的 Acl，WCF 不会，因为 ASP.NET Web 服务依赖 IIS 进行承载，并且 WCF 不一定需要在 IIS 中承载。  
   
--   请务必考虑使用 ASP.NET 2.0 角色提供程序来授权对服务资源的访问。  
+- 请务必考虑使用 ASP.NET 2.0 角色提供程序来授权对服务资源的访问。  
   
 ## <a name="see-also"></a>请参阅
 

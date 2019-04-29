@@ -3,11 +3,11 @@ title: 活动树检查
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
 ms.openlocfilehash: 014795b79b3536b387096e4de64266e26649da21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774102"
 ---
 # <a name="activity-tree-inspection"></a>活动树检查
 活动树检查由工作流应用程序作者用于检查由应用程序承载的工作流。 使用 <xref:System.Activities.WorkflowInspectionServices>，可以在工作流中搜索特定子活动、单个活动并可以枚举其属性，还可以在特定时间缓存活动的运行时元数据。 此主题概述 <xref:System.Activities.WorkflowInspectionServices> 以及如何将其用于检查活动树。  
@@ -47,4 +47,4 @@ ms.locfileid: "57705488"
  **文字\<字符串 >** 检索特定活动而不是枚举的所有活动，<xref:System.Activities.WorkflowInspectionServices.Resolve%2A>使用。 如果以前没有调用过 <xref:System.Activities.WorkflowInspectionServices.Resolve%2A>，则 <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 和 `WorkflowInspectionServices.CacheMetadata` 均会执行元数据缓存。 如果已调用过 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>，则 <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 基于现有元数据。 因此，如果自上次调用 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> 以来对树进行了更改，则 <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 可能会产生意外的结果。 如果之后调用对工作流进行更改<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>，可以通过调用重新缓存元数据<xref:System.Activities.Validation.ActivityValidationServices><xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>方法。 缓存元数据在下一节中讨论。  
   
 ### <a name="caching-metadata"></a>缓存元数据  
- 缓存某个活动的元数据将生成并验证活动的参数、变量、子活动和活动委托的描述。 默认情况下，元数据在准备执行某个活动时由运行时缓存。 例如，如果工作流宿主作者希望在此之前缓存某个活动或活动树的元数据，以便提前使用所有开销，则可使用 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> 在需要时缓存元数据。
+ 缓存某个活动的元数据将生成并验证活动的自变量、变量、子活动和活动委托的描述。 默认情况下，元数据在准备执行某个活动时由运行时缓存。 例如，如果工作流主机作者希望在此之前缓存某个活动或活动树的元数据，以便提前使用所有开销，则可使用 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> 在需要时缓存元数据。

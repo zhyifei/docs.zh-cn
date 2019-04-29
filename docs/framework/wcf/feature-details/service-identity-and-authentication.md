@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748260"
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
 服务的*终结点标识*是从服务 Web Services 描述语言 (WSDL) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 这作为防范*仿冒网站*通过防止客户端被重定向到恶意服务承载的终结点。  
@@ -26,9 +26,9 @@ ms.locfileid: "59145621"
   
  标识处理由以下几个阶段组成：  
   
--   在设计时，客户端开发人员确定终结点元数据（通过 WSDL 公开）的服务终结点。  
+- 在设计时，客户端开发人员确定终结点元数据（通过 WSDL 公开）的服务终结点。  
   
--   在运行时，客户端应用程序在向服务发送任何消息之前检查服务安全凭据的声明。  
+- 在运行时，客户端应用程序在向服务发送任何消息之前检查服务安全凭据的声明。  
   
  客户端上的标识处理与服务上的客户端身份验证相似。 直到已经对客户端的凭据进行了身份验证，安全服务才会执行代码。 同样，直到基于事先从服务元数据已知的内容对服务凭据进行了身份验证，客户端才会向服务发送消息。  
   
@@ -78,21 +78,21 @@ ms.locfileid: "59145621"
   
  如果配置通道以将消息级或传输级安全套接字层 (SSL) 与用于身份验证的 X.509 证书一起用来进行身份验证，则下面的标识值是有效的：  
   
--   DNS。 WCF 可确保在 SSL 握手期间提供的证书包含 DNS 或`CommonName`(CN) 属性等于在客户端上的 DNS 标识中指定的值。 请注意，除了确定服务器证书的有效性之外还执行这些检查。 默认情况下，WCF 会验证服务器证书由受信任的根颁发机构颁发。  
+- DNS。 WCF 可确保在 SSL 握手期间提供的证书包含 DNS 或`CommonName`(CN) 属性等于在客户端上的 DNS 标识中指定的值。 请注意，除了确定服务器证书的有效性之外还执行这些检查。 默认情况下，WCF 会验证服务器证书由受信任的根颁发机构颁发。  
   
--   证书。 在 SSL 握手期间 WCF 可确保远程终结点提供标识中指定的相同证书值。  
+- 证书。 在 SSL 握手期间 WCF 可确保远程终结点提供标识中指定的相同证书值。  
   
--   证书引用。 与“证书”相同。  
+- 证书引用。 与“证书”相同。  
   
--   RSA。 在 SSL 握手期间 WCF 可确保远程终结点提供标识中指定的相同 RSA 密钥。  
+- RSA。 在 SSL 握手期间 WCF 可确保远程终结点提供标识中指定的相同 RSA 密钥。  
   
  如果服务将消息级或传输级 SSL 与用于身份验证的 Windows 凭据一起用来进行身份验证，并且协商凭据，则下面的标识值是有效的：  
   
--   DNS。 协商传递服务的 SPN，因此可以检查 DNS 名称。 SPN 采用 `host/<dns name>` 的格式。  
+- DNS。 协商传递服务的 SPN，因此可以检查 DNS 名称。 SPN 采用 `host/<dns name>` 的格式。  
   
--   SPN。 返回显式的服务 SPN，例如 `host/myservice`。  
+- SPN。 返回显式的服务 SPN，例如 `host/myservice`。  
   
--   UPN。 服务帐户的 UPN。 UPN 采用窗体`username` @ `domain`。 例如，当服务在用户帐户中运行时，它可以是 `username@contoso.com`。  
+- UPN。 服务帐户的 UPN。 UPN 采用窗体`username` @ `domain`。 例如，当服务在用户帐户中运行时，它可以是 `username@contoso.com`。  
   
  以编程的方式指定标识（使用 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 属性）是可选的。 如果未指定标识，并且客户端凭据类型是 Windows，则默认使用 SPN 并将其设置为以“host/”文本为前缀的服务终结点地址的主机名部分。 如果未指定标识，并且客户端凭据类型是证书，则默认使用 `Certificate`。 这将应用于消息级安全和传输级安全。  
   

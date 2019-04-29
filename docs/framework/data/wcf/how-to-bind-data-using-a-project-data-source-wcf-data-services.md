@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765500"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>如何：将使用项目数据源 （WCF 数据服务） 的数据绑定
 
@@ -31,19 +31,19 @@ ms.locfileid: "59517065"
 
      这会在 XAML 文件中为此窗口创建以下对象元素：
 
-    -   一个名为 <xref:System.Windows.Data.CollectionViewSource> 的 `customersViewSource` 元素。 将顶级 <xref:System.Windows.FrameworkElement.DataContext%2A> 对象元素的 <xref:System.Windows.Controls.Grid> 属性设置为此新的 <xref:System.Windows.Data.CollectionViewSource>。
+    - 一个名为 <xref:System.Windows.Data.CollectionViewSource> 的 `customersViewSource` 元素。 将顶级 <xref:System.Windows.FrameworkElement.DataContext%2A> 对象元素的 <xref:System.Windows.Controls.Grid> 属性设置为此新的 <xref:System.Windows.Data.CollectionViewSource>。
 
-    -   一个名为 <xref:System.Windows.Controls.ComboBox> 的数据绑定 `CustomerID`。
+    - 一个名为 <xref:System.Windows.Controls.ComboBox> 的数据绑定 `CustomerID`。
 
-    -   <xref:System.Windows.Controls.Label>。
+    - <xref:System.Windows.Controls.Label>。
 
 4. 拖动**订单**到设计器的导航属性。
 
      这会在 XAML 文件中为此窗口创建以下附加对象元素：
 
-    -   另一个名为 <xref:System.Windows.Data.CollectionViewSource> 的 `customersOrdersViewSource` 元素，其源为 `customerViewSource`。
+    - 另一个名为 <xref:System.Windows.Data.CollectionViewSource> 的 `customersOrdersViewSource` 元素，其源为 `customerViewSource`。
 
-    -   一个名为 <xref:System.Windows.Controls.DataGrid> 的数据绑定 `ordersDataGrid` 控件。
+    - 一个名为 <xref:System.Windows.Controls.DataGrid> 的数据绑定 `ordersDataGrid` 控件。
 
 5. （可选）将其他项从**客户**到设计器节点。
 
@@ -82,13 +82,13 @@ ms.locfileid: "59517065"
 
      这会在窗体上创建以下控件：
 
-    -   一个名为 <xref:System.Windows.Forms.BindingSource> 的 `customersBindingSource` 实例。
+    - 一个名为 <xref:System.Windows.Forms.BindingSource> 的 `customersBindingSource` 实例。
 
-    -   一个名为 <xref:System.Windows.Forms.BindingNavigator> 的 `customersBindingNavigator` 实例。 您可以删除此控件，因为它不是必需的。
+    - 一个名为 <xref:System.Windows.Forms.BindingNavigator> 的 `customersBindingNavigator` 实例。 您可以删除此控件，因为它不是必需的。
 
-    -   一个名为 <xref:System.Windows.Forms.ComboBox> 的数据绑定 `CustomerID`。
+    - 一个名为 <xref:System.Windows.Forms.ComboBox> 的数据绑定 `CustomerID`。
 
-    -   <xref:System.Windows.Forms.Label>。
+    - <xref:System.Windows.Forms.Label>。
 
 3. 拖动**订单**到窗体的导航属性。
 

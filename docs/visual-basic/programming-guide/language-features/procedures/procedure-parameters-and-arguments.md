@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791895"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>过程参数和自变量 (Visual Basic)
 在大多数情况下，一个过程需要一些信息已在其中调用它的情况。 执行重复或共享任务的过程为每个调用使用不同的信息。 此信息包括变量、 常量和表达式在调用时传递给该过程。  
@@ -49,11 +49,11 @@ ms.locfileid: "58825451"
   
  如果调用代码需要具有数据类型不同于其相应的参数，如提供参数`Byte`到`String`参数，它必须执行下列操作之一：  
   
--   提供唯一的参数和扩大到参数的数据类型; 的数据类型  
+- 提供唯一的参数和扩大到参数的数据类型; 的数据类型  
   
--   设置`Option Strict Off`以允许隐式收缩转换; 或  
+- 设置`Option Strict Off`以允许隐式收缩转换; 或  
   
--   使用转换关键字可以显式转换的数据类型。  
+- 使用转换关键字可以显式转换的数据类型。  
   
 ### <a name="type-parameters"></a>类型参数  
  一个*泛型过程*还定义了一个或多个*类型参数*除了其正常参数。 泛型过程，调用代码，以便它可以调整每个调用的要求的数据类型，它调用过程时，每次传递不同的数据类型。 请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
 ms.openlocfilehash: 1143717882652fc8a03947327b5f1ea89dde7373
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793804"
 ---
 # <a name="servicetokenresolver"></a>\<serviceTokenResolver>
 注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。 服务标记解析器用于解析传入的令牌和消息中的加密令牌。  
@@ -44,7 +44,7 @@ ms.locfileid: "55267425"
 |类型|指定的服务令牌解析程序的类型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类型或派生类型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。 详细了解如何指定`type`属性，请参阅 [自定义类型引用]。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   

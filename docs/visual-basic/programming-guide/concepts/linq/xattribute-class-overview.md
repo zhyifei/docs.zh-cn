@@ -3,11 +3,11 @@ title: XAttribute 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
 ms.openlocfilehash: 6b24f429a69067f6af1a61efe4102a5638db3031
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907447"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>XAttribute 类概述 (Visual Basic)
 属性是与元素关联的名称/值对。 <xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。  

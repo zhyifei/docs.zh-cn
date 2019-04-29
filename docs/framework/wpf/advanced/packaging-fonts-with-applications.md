@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773226"
 ---
 # <a name="packaging-fonts-with-applications"></a>将字体与应用程序一起打包
 本主题提供概述了如何使用包字体在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
@@ -158,17 +158,17 @@ ms.locfileid: "59123783"
 ## <a name="limitations-on-font-usage"></a>字体的使用限制  
  以下列表介绍上打包和字体中使用的几个限制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序：  
   
--   **字体嵌入权限位：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不检查或实施任何字体嵌入权限位。 请参阅[Introduction_to_Packing Fonts](#introduction_to_packaging_fonts)部分，了解详细信息。  
+- **字体嵌入权限位：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不检查或实施任何字体嵌入权限位。 请参阅[Introduction_to_Packing Fonts](#introduction_to_packaging_fonts)部分，了解详细信息。  
   
--   **源字体站点：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许对 http 或 ftp 的字体引用[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  
+- **源字体站点：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许对 http 或 ftp 的字体引用[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  
   
--   **使用包的绝对 URI： 表示法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许您创建<xref:System.Windows.Media.FontFamily>对象以编程方式使用"pack:"作为一部分绝对[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]对字体引用。 例如，`"pack://application:,,,/resources/#Pericles Light"`是无效的字体引用。  
+- **使用包的绝对 URI： 表示法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许您创建<xref:System.Windows.Media.FontFamily>对象以编程方式使用"pack:"作为一部分绝对[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]对字体引用。 例如，`"pack://application:,,,/resources/#Pericles Light"`是无效的字体引用。  
   
--   **自动嵌入字体：** 在设计时，没有用于搜索应用程序使用的字体和自动在应用程序的资源中嵌入字体支持。  
+- **自动嵌入字体：** 在设计时，没有用于搜索应用程序使用的字体和自动在应用程序的资源中嵌入字体支持。  
   
--   **字体子集：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不支持为非固定文档创建字体子集。  
+- **字体子集：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不支持为非固定文档创建字体子集。  
   
--   如果存在不正确的引用，应用程序将回退到使用可用字体。  
+- 如果存在不正确的引用，应用程序将回退到使用可用字体。  
   
 ## <a name="see-also"></a>请参阅
 

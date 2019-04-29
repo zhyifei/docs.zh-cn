@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
 ms.openlocfilehash: 2ea12139118af32df18bac805aa0b4f1267c175c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772505"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>内存不足（Visual Basic 编译器错误）
 所需内存多于可用内存。  
@@ -21,17 +21,17 @@ ms.locfileid: "58822862"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   关闭不必要的应用程序、 文档和源代码文件。  
+- 关闭不必要的应用程序、 文档和源代码文件。  
   
--   消除不必要的控件和窗体，因此一次加载更少  
+- 消除不必要的控件和窗体，因此一次加载更少  
   
--   减少的`Public`变量。  
+- 减少的`Public`变量。  
   
--   检查可用磁盘空间。  
+- 检查可用磁盘空间。  
   
--   通过安装额外的内存或重新分配内存来增加可用的 RAM。  
+- 通过安装额外的内存或重新分配内存来增加可用的 RAM。  
   
--   请确保在不再需要时将释放该内存。  
+- 请确保在不再需要时将释放该内存。  
   
 ## <a name="see-also"></a>请参阅
 

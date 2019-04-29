@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758452"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的条件编译
 在中*条件编译*，而其他人将被忽略，将有选择地编译特定程序中的代码块。  
@@ -29,11 +29,11 @@ ms.locfileid: "56967841"
 ## <a name="declaring-conditional-compilation-constants"></a>声明条件编译常量  
  可以通过三种方式之一来设置条件编译常量：  
   
--   在**项目设计器**  
+- 在**项目设计器**  
   
--   在命令行使用命令行编译器时  
+- 在命令行使用命令行编译器时  
   
--   在代码中  
+- 在代码中  
   
  条件编译常量具有特殊的作用域，并且不能从标准的代码访问。 条件编译常数的范围是依赖于它的设置的方式。 下表列出了使用上面提到的三种方法的每个声明的常量的作用域。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56967841"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |---|---|  
 |[程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|提供有关使代码易于阅读和维护建议。|  
   

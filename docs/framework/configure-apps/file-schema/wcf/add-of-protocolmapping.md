@@ -3,11 +3,11 @@ title: <add> 的 <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
 ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704487"
 ---
 # <a name="add-of-protocolmapping"></a>\<add> of \<protocolMapping>
 表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射。 当在运行时创建默认终结点，WCF 查看已配置的映射，并决定要用于特定的绑定基于此地址。  

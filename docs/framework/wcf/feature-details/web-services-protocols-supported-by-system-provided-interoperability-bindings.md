@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929683"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
 Windows Communication Foundation (WCF) 构建与支持的一组称为 Web 服务规范的规范的 Web 服务进行互操作。 为了简化互操作性最佳实践的服务配置，WCF，引入了三个可互操作的系统提供绑定： <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>，和<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 WCF 的互操作性与组织的进步的结构化信息标准 (OASIS) 标准，包括一个可互操作的系统提供绑定： <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布的 WCF 包含两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)并[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
@@ -63,9 +63,9 @@ Windows Communication Foundation (WCF) 构建与支持的一组称为 Web 服务
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding 和 ws2007FederationHttpBinding  
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)并[ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)元素引入为联合方案提供支持，其中第三个参与方颁发用于对客户端进行身份验证令牌。 除了 `wsHttpBinding` 使用的协议以外，`wsFederationHttpBinding` 还使用：  
   
--   用于令牌颁布的 `WS-Trust`。  
+- 用于令牌颁布的 `WS-Trust`。  
   
--   用于已颁发令牌最常见格式的 WSS 安全断言标记语言 (SAML) 令牌配置文件 1.0 和 1.1。  
+- 用于已颁发令牌最常见格式的 WSS 安全断言标记语言 (SAML) 令牌配置文件 1.0 和 1.1。  
   
  示例:  
   

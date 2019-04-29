@@ -1,5 +1,5 @@
 ---
-title: CLR 探查器和 Windows 应用商店应用程序
+title: CLR 探查器和 Windows 应用商店应用
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,13 +15,13 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775097"
 ---
-# <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用程序
+# <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用
 
 本主题讨论你需要想办法编写诊断工具分析的管理 Windows 应用商店应用程序内运行的代码时。 它还提供了指导原则来修改现有的开发工具，以使它们继续工作时对 Windows 应用商店应用程序运行它们。 若要了解此信息，最好是如果您熟悉使用公共语言运行时分析 API，已针对 Windows 桌面应用程序，并且您正确运行现在感兴趣修改该工具的诊断工具中使用此 API若要针对 Windows 应用商店应用程序正确运行。
 
@@ -66,7 +66,7 @@ ms.locfileid: "57358543"
 
 在本文档的示例代码假定：
 
-- Profiler DLL 是用 c + +，因为它必须是本机 DLL，根据 CLR 分析 API 的要求。
+- Profiler DLL 用C++，因为它必须是本机 DLL，根据 CLR 分析 API 的要求。
 
 - Profiler UI 是用 C# 编写的。 这不是有必要，但因为没有任何要求 Profiler UI 的过程语言，为什么不选择一种语言的简洁和简单？
 
@@ -159,7 +159,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
      其中`-p 1336`意味着 Windows 应用商店应用程序具有进程 ID 1336 和`-tid 1424`表示线程 ID 1424 是线程处于挂起状态。 虚拟调试器会分析从命令行 ThreadID，恢复该线程，然后退出。
 
-     下面是一些示例来执行此操作的 c + + 代码 （请确保添加错误检查 ！）：
+     下面是一些示例C++若要执行此操作的代码 （请确保添加错误检查 ！）：
 
     ```cpp
     int wmain(int argc, wchar_t* argv[])
@@ -346,7 +346,7 @@ Profiler DLL 时对其应为日志记录信息。 出于性能原因，你可能
 
 如果开发人员使用 Visual Studio 创建新的 Windows 运行时组件项目，该项目的生成过程生成 WinMD 文件，描述由开发人员编写的元数据 （类、 接口等的类型说明）。 如果此项目是用 C# 或 VB 编写的托管的语言项目，该相同的 WinMD 文件还包含这些类型 （它包含所有从开发人员的源代码编译的 IL 的含义） 的实现。 此类文件称为托管 WinMD 文件。 它们是有趣，因为它们包含 Windows 运行时元数据和基础实现。
 
-与此相反，如果开发人员的 c + + 创建 Windows 运行时组件项目，生成该项目生成包含仅元数据的 WinMD 文件，并实现编译为单独的本机 DLL。 同样，在 Windows SDK 中提供的 WinMD 文件包含仅元数据编译到单独的本机 Dll 作为 Windows 的一部分提供的实现。
+相反，如果开发人员创建的 Windows 运行时组件项目C++，该项目的生成过程生成 WinMD 文件，其中只包含元数据，并实现编译到单独的本机 DLL。 同样，在 Windows SDK 中提供的 WinMD 文件包含仅元数据编译到单独的本机 Dll 作为 Windows 的一部分提供的实现。
 
 下面的信息适用于包含元数据和实现，这两个托管 Winmd 和非托管 Winmd，其中包含仅元数据。
 

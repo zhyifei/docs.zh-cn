@@ -3,11 +3,11 @@ title: 更改发送活动的缓存共享级别
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784288"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>更改发送活动的缓存共享级别
 使用 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 扩展可以自定义缓存共享级别、通道工厂缓存的设置，以及使用 <xref:System.ServiceModel.Activities.Send> 消息传递活动将消息发送到服务终结点的工作流的通道缓存的设置。 这些工作流通常是客户端工作流，但也可以是在 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务。 通道工厂缓存包含已缓存的 <xref:System.ServiceModel.ChannelFactory%601> 对象。 通道缓存包含已缓存的通道。  
@@ -20,11 +20,11 @@ ms.locfileid: "53127051"
   
  下面介绍了可供工作流中的 <xref:System.ServiceModel.Activities.Send> 活动使用的各种缓存共享级别及其建议用法：  
   
--   **宿主级**:在宿主共享级别，缓存是仅供在工作流服务主机中承载的工作流实例。 缓存还可在进程范围的缓存中的工作流服务主机之间共享。  
+- **宿主级**:在宿主共享级别，缓存是仅供在工作流服务主机中承载的工作流实例。 缓存还可在进程范围的缓存中的工作流服务主机之间共享。  
   
--   **实例级别**:在共享级别的实例，缓存可供其整个生存期内的特定工作流实例，但缓存将不可供其他工作流实例。  
+- **实例级别**:在共享级别的实例，缓存可供其整个生存期内的特定工作流实例，但缓存将不可供其他工作流实例。  
   
--   **无缓存**:如果必须使用在配置中定义的终结点的工作流，在缓存处于关闭状态默认情况下中。 在这种情况下，由于打开缓存可能会造成不安全的情况，因此也建议关闭缓存。 例如，在针对每次发送都需要使用不同的标识（不同的凭据或使用模拟）时。  
+- **无缓存**:如果必须使用在配置中定义的终结点的工作流，在缓存处于关闭状态默认情况下中。 在这种情况下，由于打开缓存可能会造成不安全的情况，因此也建议关闭缓存。 例如，在针对每次发送都需要使用不同的标识（不同的凭据或使用模拟）时。  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>更改客户端工作流的缓存共享级别  
  若要在客户端工作流中设置缓存共享，请将 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 类的实例作为扩展添加到所需的工作流实例集。 这样可在所有工作流实例之间共享缓存。 下面的代码示例演示如何执行这些步骤。  

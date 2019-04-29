@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791789"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>过程疑难解答 (Visual Basic)
 此页列出了在使用过程时可能发生的一些常见问题。  
@@ -46,9 +46,9 @@ ms.locfileid: "58830131"
 ## <a name="argument-not-being-modified-by-procedure-call"></a>未修改的参数的过程调用  
  如果你想要允许更改基础调用代码中的自变量的编程元素的过程，必须通过引用传递。 但是，一个过程可以访问的元素的引用类型自变量，即使按值传递。  
   
--   **基础变量**。 若要允许的值替换为基础的变量元素本身的过程，该过程必须声明参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 此外，调用代码必须不在括号中，将自变量，因为这样会重写`ByRef`传递机制。  
+- **基础变量**。 若要允许的值替换为基础的变量元素本身的过程，该过程必须声明参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 此外，调用代码必须不在括号中，将自变量，因为这样会重写`ByRef`传递机制。  
   
--   **引用类型元素**。 如果将参数声明[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)，该过程不能修改基础变量元素本身。 但是，如果参数为引用类型，该过程可以修改它指向的该对象的成员，即使它不能替换变量的值一样。 例如，如果参数为数组变量，该过程不能将一个新数组分配给它，但它可以更改一个或多个元素。 更改的元素将反映在调用代码中的基础数组变量。  
+- **引用类型元素**。 如果将参数声明[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)，该过程不能修改基础变量元素本身。 但是，如果参数为引用类型，该过程可以修改它指向的该对象的成员，即使它不能替换变量的值一样。 例如，如果参数为数组变量，该过程不能将一个新数组分配给它，但它可以更改一个或多个元素。 更改的元素将反映在调用代码中的基础数组变量。  
   
  下面的示例定义两个过程采用一个数组变量的值并运行它的元素上。 过程`increase`只需添加一个到每个元素。 过程`replace`将一个新数组分配给该参数`a()`，然后添加一个到每个元素。 但是，重新分配不影响调用代码中的基础数组变量因为`a()`被声明为`ByVal`。  
   
@@ -75,13 +75,13 @@ ms.locfileid: "58830131"
   
  以下各项，即使它们与参数列表中，不是签名的过程的组件：  
   
--   过程修饰符关键字，如`Public`， `Shared`，和 `Static`  
+- 过程修饰符关键字，如`Public`， `Shared`，和 `Static`  
   
--   参数名称  
+- 参数名称  
   
--   参数修饰符关键字，如`ByRef`和 `Optional`  
+- 参数修饰符关键字，如`ByRef`和 `Optional`  
   
--   （除转换运算符） 的返回值数据类型  
+- （除转换运算符） 的返回值数据类型  
   
  不能通过只改变一个或多个前面的项目重载的过程。  
   
@@ -95,11 +95,11 @@ ms.locfileid: "58830131"
   
  在确定你想要调用的重载，请务必遵守以下规则：  
   
--   提供正确数量的自变量，并按正确的顺序。  
+- 提供正确数量的自变量，并按正确的顺序。  
   
--   理想情况下，参数应具有与对应的参数完全相同的数据类型。 在任何情况下，每个自变量的数据类型必须扩大到的其对应的参数。 这是如此[Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)设置为`Off`。 如果某个重载需要从参数列表中，该重载任何收缩转换不能调用。  
+- 理想情况下，参数应具有与对应的参数完全相同的数据类型。 在任何情况下，每个自变量的数据类型必须扩大到的其对应的参数。 这是如此[Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)设置为`Off`。 如果某个重载需要从参数列表中，该重载任何收缩转换不能调用。  
   
--   如果你提供需要扩大转换的参数，请尽可能地为相应的参数数据类型及其数据类型。 如果两个或多个重载接受您的自变量数据类型，则编译器将解析对调用进行最少量的扩大转换的重载的调用。  
+- 如果你提供需要扩大转换的参数，请尽可能地为相应的参数数据类型及其数据类型。 如果两个或多个重载接受您的自变量数据类型，则编译器将解析对调用进行最少量的扩大转换的重载的调用。  
   
  可以通过减少数据类型不匹配的可能性[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)转换关键字时准备自己的参数。  
   

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
 ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746803"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>如何：创建 Windows 窗体控件的访问键
 *访问密钥*是中的菜单、 菜单项或如按钮控件的标签文本带下划线的字符。 使用访问密钥，用户可以"单击"按钮的同时按下 ALT 键和预定义的访问密钥。 例如，如果某个按钮可运行打印窗体的过程，因此其`Text`属性设置为"打印"、"P"在运行时，按钮文本加下划线的字母"P"将导致字母前添加一个与号。 用户可以运行通过按 ALT + P 与按钮关联的命令。 不能具有不能接收焦点的控件的访问密钥。  

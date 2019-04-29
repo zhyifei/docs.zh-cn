@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
 ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762171"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>如何：在重复循环过程中累积动画值
 此示例演示如何使用<xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A>属性以通过重复循环累积动画值。  
@@ -22,13 +22,13 @@ ms.locfileid: "59146011"
   
  下面的示例演示此行为由四个矩形的宽度进行动画处理。 下面的示例：  
   
--   与第一个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimation>，并设置<xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A>属性设置为`true`。  
+- 与第一个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimation>，并设置<xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A>属性设置为`true`。  
   
--   与第二个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimation>，并设置<xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A>属性设置的默认值为`false`。  
+- 与第二个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimation>，并设置<xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A>属性设置的默认值为`false`。  
   
--   使用第三个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>，并设置<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A>属性设置为`true`。  
+- 使用第三个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>，并设置<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A>属性设置为`true`。  
   
--   包含的最后一个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>，并设置<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A>属性设置为`false`。  
+- 包含的最后一个矩形进行动画处理<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>，并设置<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A>属性设置为`false`。  
   
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   

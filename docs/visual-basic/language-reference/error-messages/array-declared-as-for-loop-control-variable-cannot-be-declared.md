@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935377"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>声明为 For Each 循环控制变量的数组在声明时不能指定初始大小值
 一个`For Each`循环使用数组作为其*元素*迭代变量但初始化该数组。  
@@ -31,7 +31,7 @@ For Each listElement(1) As Integer In arrayList
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   声明中删除该初始化*元素*迭代变量。  
+- 声明中删除该初始化*元素*迭代变量。  
   
 ## <a name="see-also"></a>请参阅
 

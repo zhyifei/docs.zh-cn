@@ -3,11 +3,11 @@ title: let 绑定
 description: 了解如何使用F#let 绑定，将一个标识符关联的值或函数。
 ms.date: 05/16/2016
 ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940994"
 ---
 # <a name="let-bindings"></a>let 绑定
 

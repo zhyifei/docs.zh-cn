@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795000"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  
   
  本演练使用以下加密原则：  
   
--   使用 <xref:System.Security.Cryptography.RijndaelManaged> 类（一种对称算法），用于通过使用其自动生成的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 和 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> 来加密和解密数据。  
+- 使用 <xref:System.Security.Cryptography.RijndaelManaged> 类（一种对称算法），用于通过使用其自动生成的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 和 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> 来加密和解密数据。  
   
--   使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider>（一种非对称算法），对由 <xref:System.Security.Cryptography.RijndaelManaged> 加密的数据的密钥进行加密和解密。 非对称算法最适用于较少的数据，如密钥。  
+- 使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider>（一种非对称算法），对由 <xref:System.Security.Cryptography.RijndaelManaged> 加密的数据的密钥进行加密和解密。 非对称算法最适用于较少的数据，如密钥。  
   
     > [!NOTE]
     >  如果要保护计算机上的数据（而不是与他人交换加密内容），可考虑使用 <xref:System.Security.Cryptography.ProtectedData> 或 <xref:System.Security.Cryptography.ProtectedMemory> 类。  
@@ -48,7 +48,7 @@ ms.locfileid: "59341759"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   对 <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空间的引用。  
+- 对 <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空间的引用。  
   
 ## <a name="creating-a-windows-forms-application"></a>创建 Windows 窗体应用程序  
  本演练中的大多数代码示例均设计为按钮控件的事件处理程序。 下表列出了示例应用程序所需的控件及其匹配代码示例所需的名称。  
@@ -100,15 +100,15 @@ ms.locfileid: "59341759"
   
  加密包使用以下格式：  
   
--   密钥长度，字节数 0 - 3  
+- 密钥长度，字节数 0 - 3  
   
--   IV 长度，字节数 4 - 7  
+- IV 长度，字节数 4 - 7  
   
--   已加密的密钥  
+- 已加密的密钥  
   
--   IV  
+- IV  
   
--   密码文本  
+- 密码文本  
   
  可使用密钥和 IV 的长度来确定起点和加密包所有部件的长度，然后可使用它们来解密文件。  
   

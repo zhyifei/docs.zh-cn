@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794701"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隐藏与您的变量 (Visual Basic 中) 同名的变量
 可以隐藏的变量*隐藏*即，它通过将它重新定义具有相同名称的变量。 可以隐藏你想要在两种方法中隐藏的变量：  
   
--   **通过范围进行隐藏。** 您可以通过范围隐藏变量包含你想要隐藏的变量的区域子区域内重新声明变量。  
+- **通过范围进行隐藏。** 您可以通过范围隐藏变量包含你想要隐藏的变量的区域子区域内重新声明变量。  
   
--   **通过继承进行隐藏。** 如果在类级别定义你想要隐藏的变量，您可以隐藏它通过继承隐藏其与[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)派生类中的关键字。  
+- **通过继承进行隐藏。** 如果在类级别定义你想要隐藏的变量，您可以隐藏它通过继承隐藏其与[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)派生类中的关键字。  
   
 ## <a name="two-ways-to-hide-a-variable"></a>若要隐藏的变量的两种方法  
   

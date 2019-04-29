@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754695"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用调试器显示特性增强调试
 
@@ -45,11 +45,11 @@ class MyHashtable
 ## <a name="using-the-debuggerbrowsableattribute"></a>使用 DebuggerBrowsableAttribute
  将 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 应用于字段或属性，指定字段或属性在调试器窗口中的显示方式。 此属性的构造函数采用一个 <xref:System.Diagnostics.DebuggerBrowsableState> 枚举值，指定以下任一状态：
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> 表示未在数据窗口中显示成员。  例如，将此值用于字段上的 <xref:System.Diagnostics.DebuggerBrowsableAttribute>，则会从层次结构中删除该字段，单击类型实例的加号 (+) 展开封闭类型时，不会显示该字段。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> 表示未在数据窗口中显示成员。  例如，将此值用于字段上的 <xref:System.Diagnostics.DebuggerBrowsableAttribute>，则会从层次结构中删除该字段，单击类型实例的加号 (+) 展开封闭类型时，不会显示该字段。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 表示显示成员，但默认情况下不展开。  这是默认行为。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 表示显示成员，但默认情况下不展开。  这是默认行为。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 表示不显示成员本身，但如果成员是一个数组或集合，则会显示其组成对象。
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 表示不显示成员本身，但如果成员是一个数组或集合，则会显示其组成对象。
 
 > [!NOTE]
 >  在 .NET Framework 2.0 中，Visual Basic 不支持 <xref:System.Diagnostics.DebuggerBrowsableAttribute>。

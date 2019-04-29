@@ -3,11 +3,11 @@ title: 220 - MessageSentToTransport
 ms.date: 03/30/2017
 ms.assetid: aef4e781-240b-45bc-bff8-400053037e71
 ms.openlocfilehash: 92ec664aead15470fbed576bf157d64d984ddebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781740"
 ---
 # <a name="220---messagesenttotransport"></a>220 - MessageSentToTransport
 ## <a name="properties"></a>属性  
@@ -33,5 +33,5 @@ ms.locfileid: "33460429"
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
 |相关 ID|`xs:GUID`|用于将服务或客户端的 `MessageSentToTransport` 事件与另一端的对应 `MessageReceivedFromTransport` 相关的活动 ID。|  
-|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;ServiceName。 示例: 默认网站/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService。|  
-|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;ServiceName。 示例:默认网站/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService。|  
+|应用程序域|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

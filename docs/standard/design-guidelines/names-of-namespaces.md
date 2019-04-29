@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940980"
 ---
 # <a name="names-of-namespaces"></a>命名空间的名称
 与其他命名准则一样，为命名空间命名的目的是为了让使用该框架的程序员能够通过名称快速了解命名空间所涉及的内容。 以下模板指定了为命名空间命名的一般规则：  
@@ -49,7 +49,7 @@ ms.locfileid: "54665131"
   
  针对不同类别的命名空间，存在避免类型名称冲突的特定准则。  
   
--   **应用程序模型命名空间**  
+- **应用程序模型命名空间**  
   
      属于同一应用程序模型的命名空间经常一起使用，但它们几乎从不与其他应用程序模型的命名空间一起使用。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间很少与 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间一起使用。以下是一个常见的应用程序模型命名空间组的列表： 下面是已知的应用程序模型命名空间组的列表：  
   
@@ -60,11 +60,11 @@ ms.locfileid: "54665131"
   
      例如，不要在 <xref:System.Web.UI.Adapters?displayProperty=nameWithType> 命名空间中添加名为 `Page` 的类型，因为 <xref:System.Web.UI?displayProperty=nameWithType> 命名空间已包含名为 `Page` 的类型。  
   
--   **基础结构命名空间**  
+- **基础结构命名空间**  
   
      该组包含在开发常见应用程序期间鲜少导入的命名空间。 例如，`.Design` 命名空间主要用于开发编程工具。 避免与这些命名空间中的类型发生冲突并不重要。  
   
--   **核心命名空间**  
+- **核心命名空间**  
   
      核心命名空间包括所有 `System` 命名空间，不包括应用程序模型命名空间和基础结构命名空间。 核心命名空间包括 `System`、`System.IO`、`System.Xml` 和 `System.Net` 等。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54665131"
   
      例如，永远不要将 `Stream` 用作类型名称。 它会与十分常用的类型 <xref:System.IO.Stream?displayProperty=nameWithType> 相冲突。  
   
--   **技术命名空间组**  
+- **技术命名空间组**  
   
      此类别包括前两个命名空间节点一致 (`(<Company>.<Technology>*`) 的所有命名空间，例如 `Microsoft.Build.Utilities` 和 `Microsoft.Build.Tasks`。 属于同一单一技术的类型之间不能相互冲突，这一点很重要。  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf9d903b4e44ea7a185ad8b3b71b7a5da2f2bda3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760111"
 ---
 # <a name="ihostpolicymanager-interface"></a>IHostPolicyManager 接口
 提供通知的主机的公共语言运行时 (CLR) 的情况下执行的操作中止、 超时或失败的方法。  

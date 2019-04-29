@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784041"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 语句 (Visual Basic)
 强制显式声明所有变量在文件中，或允许隐式声明的变量。  
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>若要在命令行上设置 Option Explicit  
   
--   包括[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)中的编译器选项**vbc**命令。  
+- 包括[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)中的编译器选项**vbc**命令。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Option Explicit`语句强制显式声明所有变量。 尝试使用未声明的变量将导致在编译时错误。  

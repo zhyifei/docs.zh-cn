@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929072"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>如何：实现异步服务操作
 在 Windows Communication Foundation (WCF) 应用程序中的服务操作可以实现异步还是同步而无需指示客户端如何调用它。 例如，可以同步，调用异步服务操作和同步服务操作可以异步调用。 有关演示如何在客户端应用程序中以异步方式调用操作的示例，请参阅[如何：以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 有关同步和异步操作的详细信息，请参阅[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)并[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。 本主题介绍异步服务操作的基本结构，代码并不完整。 服务和客户端的完整示例，请参阅[异步](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100))。  
@@ -34,11 +34,11 @@ ms.locfileid: "59298651"
   
 1. 与下列各项之间的服务协定接口：  
   
-    1.  同步 `SampleMethod` 操作。  
+    1. 同步 `SampleMethod` 操作。  
   
-    2.  异步 `BeginSampleMethod` 操作。  
+    2. 异步 `BeginSampleMethod` 操作。  
   
-    3.  异步`BeginServiceAsyncMethod` / `EndServiceAsyncMethod`操作对。  
+    3. 异步`BeginServiceAsyncMethod` / `EndServiceAsyncMethod`操作对。  
   
 2. 使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象的服务实现。  
   

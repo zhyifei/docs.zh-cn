@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792283"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>演练：在设计时调试自定义 Windows 窗体控件
 时创建自定义控件，您通常会发现它需要调试其设计时行为。 这是如果自定义设计器创作自定义控件尤其如此。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](creating-a-wf-control-design-time-features.md)。  
@@ -29,17 +29,17 @@ ms.locfileid: "59325353"
   
  本演练涉及以下任务：  
   
--   创建用于承载自定义控件的 Windows 窗体项目  
+- 创建用于承载自定义控件的 Windows 窗体项目  
   
--   创建控件库项目  
+- 创建控件库项目  
   
--   将属性添加到自定义控件  
+- 将属性添加到自定义控件  
   
--   将自定义控件添加到主机窗体  
+- 将自定义控件添加到主机窗体  
   
--   设置设计时调试项目  
+- 设置设计时调试项目  
   
--   在设计时调试自定义控件  
+- 在设计时调试自定义控件  
   
  完成后，必须了解调试自定义控件的设计时行为所需的任务。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59325353"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
--   创建一个名为"DebuggingExample"的 Windows 应用程序项目 (**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
+- 创建一个名为"DebuggingExample"的 Windows 应用程序项目 (**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
   
 ## <a name="creating-a-control-library-project"></a>创建控件库项目  
  下一步是创建控件库项目并设置自定义控件。  
@@ -71,7 +71,7 @@ ms.locfileid: "59325353"
   
 #### <a name="to-check-your-progress"></a>若要检查您的进度  
   
--   查找名为新选项卡**DebugControlLibrary 组件**并单击以选择它。 在打开时将看到控件列为**DebugControl**使用其旁边的默认图标。  
+- 查找名为新选项卡**DebugControlLibrary 组件**并单击以选择它。 在打开时将看到控件列为**DebugControl**使用其旁边的默认图标。  
   
 ## <a name="adding-a-property-to-your-custom-control"></a>将属性添加到自定义控件  
  若要演示自定义控件的代码运行在设计时，将添加一个属性，并实现属性的代码中设置断点。  
@@ -149,9 +149,9 @@ ms.locfileid: "59325353"
   
 2. 按 F5 启动调试会话。 请注意，创建 Visual Studio 的新实例。 你可以区分两种方法中的实例：  
   
-    -   调试实例包含单词**运行**标题栏中  
+    - 调试实例包含单词**运行**标题栏中  
   
-    -   调试实例都有**启动**按钮及其**调试**禁用工具栏  
+    - 调试实例都有**启动**按钮及其**调试**禁用工具栏  
   
      在调试实例中设置断点。  
   
@@ -166,11 +166,11 @@ ms.locfileid: "59325353"
 ## <a name="next-steps"></a>后续步骤  
  现在，可以在设计时调试自定义控件，有许多可能的扩展与 Visual Studio IDE 的控件的交互。  
   
--   可以使用<xref:System.ComponentModel.Component.DesignMode%2A>属性的<xref:System.ComponentModel.Component>类来编写代码，将仅在设计时执行。 有关详细信息，请参阅 <xref:System.ComponentModel.Component.DesignMode%2A>。  
+- 可以使用<xref:System.ComponentModel.Component.DesignMode%2A>属性的<xref:System.ComponentModel.Component>类来编写代码，将仅在设计时执行。 有关详细信息，请参阅 <xref:System.ComponentModel.Component.DesignMode%2A>。  
   
--   有几个特性可应用于控件的属性，以处理与设计器的自定义控件的交互。 您可以找到这些属性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空间。  
+- 有几个特性可应用于控件的属性，以处理与设计器的自定义控件的交互。 您可以找到这些属性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空间。  
   
--   自定义控件，可以编写自定义设计器。 这样，您对使用由 Visual Studio 公开可扩展设计器基础结构的设计体验的完全控制。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](creating-a-wf-control-design-time-features.md)。  
+- 自定义控件，可以编写自定义设计器。 这样，您对使用由 Visual Studio 公开可扩展设计器基础结构的设计体验的完全控制。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](creating-a-wf-control-design-time-features.md)。  
   
 ## <a name="see-also"></a>请参阅
 

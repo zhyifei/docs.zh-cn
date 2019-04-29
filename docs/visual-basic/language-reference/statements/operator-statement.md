@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784054"
 ---
 # <a name="operator-statement"></a>Operator Statement
 声明运算符符号、 操作数和运算符过程定义的类或结构的代码。  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>匹配的对  
  必须以匹配对的形式定义某些运算符。 如果你定义此类对任一运算符，则必须定义对其他。 匹配的对如下所示：  
   
--   `=` 和 `<>`  
+- `=` 和 `<>`  
   
--   `>` 和 `<`  
+- `>` 和 `<`  
   
--   `>=` 和 `<=`  
+- `>=` 和 `<=`  
   
--   `IsTrue` 和 `IsFalse`  
+- `IsTrue` 和 `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>数据类型限制  
  定义每个运算符必须涉及在其上定义的类或结构。 这意味着类或结构必须显示为以下数据类型：  
   
--   一元运算符的操作数。  
+- 一元运算符的操作数。  
   
--   至少一个二元运算符的操作数。  
+- 至少一个二元运算符的操作数。  
   
--   操作数或转换运算符的返回类型。  
+- 操作数或转换运算符的返回类型。  
   
  某些运算符具有其他数据类型限制，按如下所示：  
   
--   如果定义了`IsTrue`并`IsFalse`运算符，它们必须均返回`Boolean`类型。  
+- 如果定义了`IsTrue`并`IsFalse`运算符，它们必须均返回`Boolean`类型。  
   
--   如果定义了`<<`并`>>`运算符，它们必须同时指定`Integer`类型`operandtype`的`operand2`。  
+- 如果定义了`<<`并`>>`运算符，它们必须同时指定`Integer`类型`operandtype`的`operand2`。  
   
  返回类型没有对应于其中一个操作数的类型。 例如，如比较运算符`=`或`<>`可以返回`Boolean`即使两个操作数是`Boolean`。  
   
@@ -144,11 +144,11 @@ End Operator
   
  不能定义`AndAlso`运算符直接与`Operator`语句。 但是，可以使用`AndAlso`如果你已满足以下条件：  
   
--   已定义`And`想要用于对相同的操作数类型`AndAlso`。  
+- 已定义`And`想要用于对相同的操作数类型`AndAlso`。  
   
--   您的定义`And`返回与在其上定义它的类或结构相同的类型。  
+- 您的定义`And`返回与在其上定义它的类或结构相同的类型。  
   
--   已定义`IsFalse`运算符已定义的类或结构`And`。  
+- 已定义`IsFalse`运算符已定义的类或结构`And`。  
   
  同样，可以使用`OrElse`如果已定义`Or`相同的操作数，在其中返回类型的类或结构，并且你已定义`IsTrue`类或结构上。  
   
@@ -157,11 +157,11 @@ End Operator
   
  如果你声明一个转换过程要`Widening`，过程代码一定不会产生任何故障。 这意味着：  
   
--   它必须始终返回有效的值类型的`type`。  
+- 它必须始终返回有效的值类型的`type`。  
   
--   它必须处理所有可能的异常和其他错误条件。  
+- 它必须处理所有可能的异常和其他错误条件。  
   
--   它必须处理从它调用任何过程返回的任何错误。  
+- 它必须处理从它调用任何过程返回的任何错误。  
   
  如果已转换过程可能不会成功，或者它可能会导致未经处理的异常，必须将其声明`Narrowing`。  
   

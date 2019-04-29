@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756996"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的变量声明
 声明一个变量来指定其名称和特征。 变量声明语句是[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置和内容确定变量的特征。  
@@ -42,15 +42,15 @@ ms.locfileid: "58833277"
 ## <a name="declaring-data-type"></a>将数据类型声明  
  [作为](../../../../visual-basic/language-reference/statements/as-clause.md)声明语句中的子句可用于定义数据类型或所声明的变量的对象类型。 您可以指定任何以下类型的变量：  
   
--   基本数据类型，如`Boolean`， `Long`，或 `Decimal`  
+- 基本数据类型，如`Boolean`， `Long`，或 `Decimal`  
   
--   复合数据类型，例如数组或结构  
+- 复合数据类型，例如数组或结构  
   
--   对象类型或在应用程序中或在另一个应用程序中定义的类  
+- 对象类型或在应用程序中或在另一个应用程序中定义的类  
   
--   一个[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类，如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
+- 一个[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类，如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
   
--   接口类型，如<xref:System.IComparable>或 <xref:System.IDisposable>  
+- 接口类型，如<xref:System.IComparable>或 <xref:System.IDisposable>  
   
  您可以声明在一个语句中的多个变量，而无需重复的数据类型。 在下面的语句中，变量`i`， `j`，并`k`声明为类型`Integer`，`l`和`m`作为`Long`，和`x`和`y`作为`Single`:  
   

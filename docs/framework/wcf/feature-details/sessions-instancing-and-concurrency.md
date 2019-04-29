@@ -3,11 +3,11 @@ title: 会话、实例化和并发
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748013"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>会话、实例化和并发
  “会话”是在两个终结点之间发送的所有消息的一种相互关系。  “实例化”是指对用户定义的服务对象以及与其相关的 <xref:System.ServiceModel.InstanceContext> 对象的生存期的控制。  “并发”一词是指对 <xref:System.ServiceModel.InstanceContext> 中同时执行的线程数量的控制。  
@@ -19,21 +19,21 @@ ms.locfileid: "59229064"
   
  WCF 会话具有下列主要概念性功能：  
   
--   它们由调用应用程序显式启动和终止。  
+- 它们由调用应用程序显式启动和终止。  
   
--   会话期间传递的消息按照接收消息的顺序进行处理。  
+- 会话期间传递的消息按照接收消息的顺序进行处理。  
   
--   会话将一组消息相互关联，从而形成对话。 该关联的含义是抽象的。 例如，一个基于会话的通道可能会根据共享网络连接来关联消息，而另一个基于会话的通道可能会根据消息正文中的共享标记来关联消息。 可以从会话派生的功能取决于关联的性质。  
+- 会话将一组消息相互关联，从而形成对话。 该关联的含义是抽象的。 例如，一个基于会话的通道可能会根据共享网络连接来关联消息，而另一个基于会话的通道可能会根据消息正文中的共享标记来关联消息。 可以从会话派生的功能取决于关联的性质。  
   
--   没有与 WCF 会话相关联的常规数据存储。  
+- 没有与 WCF 会话相关联的常规数据存储。  
   
  如果你熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>类中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]它提供应用程序和功能，您可能注意到该类型的会话和 WCF 会话之间的以下差异：  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话总是由服务器启动。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话总是由服务器启动。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话原本是无序的。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话原本是无序的。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话提供了一种跨请求的常规数据存储机制。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话提供了一种跨请求的常规数据存储机制。  
   
  客户端应用程序和服务应用程序以不同方式与会话交互。 客户端应用程序启动会话，然后接收并处理在该会话内发送的消息。 服务应用程序可以将会话用作扩展点，以添加其他行为。 通过直接使用 <xref:System.ServiceModel.InstanceContext> 或实现一个自定义实例上下文提供程序，可以做到这一点。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59229064"
   
  可以使用下列实例化模式：  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>：一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 创建的每个客户端请求。  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>：一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 创建的每个客户端请求。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>：一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 是为每个新的客户端会话创建和维护 （这需要支持会话的绑定） 该会话的生存期内。  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>：一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 是为每个新的客户端会话创建和维护 （这需要支持会话的绑定） 该会话的生存期内。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>：单个<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 的应用程序生存期内处理所有客户端请求。  
+- <xref:System.ServiceModel.InstanceContextMode.Single>：单个<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 的应用程序生存期内处理所有客户端请求。  
   
  下面的代码示例演示 <xref:System.ServiceModel.InstanceContextMode> 的默认值（在服务类上显式设置了 <xref:System.ServiceModel.InstanceContextMode.PerSession> ）。  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  有以下三种可用的并发模式：  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>：每个实例上下文可拥有最多一次处理中的实例上下文的消息的其中一个线程。 其他希望使用同一个实例上下文的线程必须一直阻塞，直到原始线程退出该实例上下文为止。  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>：每个实例上下文可拥有最多一次处理中的实例上下文的消息的其中一个线程。 其他希望使用同一个实例上下文的线程必须一直阻塞，直到原始线程退出该实例上下文为止。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每个服务实例可以有多个线程同时处理消息。 若要使用此并发模式，服务实现必须是线程安全的。  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每个服务实例可以有多个线程同时处理消息。 若要使用此并发模式，服务实现必须是线程安全的。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每个服务实例一次处理一个消息，但接受可重入操作的调用。 通过 WCF 客户端对象调用时，该服务仅接受这些调用。  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每个服务实例一次处理一个消息，但接受可重入操作的调用。 通过 WCF 客户端对象调用时，该服务仅接受这些调用。  
   
 > [!NOTE]
 >  理解和开发能够安全地使用多个线程的代码可能比较困难。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，应确保已针对这些模式对服务进行了适当设计。 有关详细信息，请参阅 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  

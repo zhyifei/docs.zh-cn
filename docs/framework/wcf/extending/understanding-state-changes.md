@@ -3,11 +3,11 @@ title: 了解状态更改
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
 ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771567"
 ---
 # <a name="understanding-state-changes"></a>了解状态更改
 本节讨论的内容包括通道具有的状态和转换、用于结构通道状态的类型以及实现它们的方式。  
@@ -24,7 +24,7 @@ ms.locfileid: "33496658"
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject、CommunicationObject 和状态及状态转换  
  <xref:System.ServiceModel.ICommunicationObject> 的初始状态是“已创建”，此时可以配置它的各种属性。 一旦处于“已打开”状态，对象就可用于发送和接收消息，但它的属性将视为不可变。 一旦处在“正在关闭”状态，对象就不能再处理新的发送或接收请求，但在到达“关闭”超时前有可能完成现有的请求。  如果发生不可恢复的错误，则对象将转换到“出错”状态，此时可以检查该对象以获取有关错误的信息，该对象最终将关闭。 处于“已关闭”状态时，该对象实质上已到达状态机的终点。 对象一旦从一个状态转换到下一个状态，它将不会返回至前一状态。  
   
- 下面的关系图演示 <xref:System.ServiceModel.ICommunicationObject> 状态和状态转换。 通过调用以下三种方法之一可导致状态转换：Abort、Open 或 Close。 通过调用其他特定于实现的方法也会导致状态转换。 转换至“出错”状态可能是因为在打开通信对象过程中或在打开通信对象之后发生了错误。  
+ 下面的关系图演示 <xref:System.ServiceModel.ICommunicationObject> 状态和状态转换。 状态转换可能引起调用三种方法之一：Abort、 Open 或关闭。 通过调用其他特定于实现的方法也会导致状态转换。 转换至“出错”状态可能是因为在打开通信对象过程中或在打开通信对象之后发生了错误。  
   
  每个 <xref:System.ServiceModel.ICommunicationObject> 的初始状态都是“已创建”。 在此状态下，应用程序可以通过设置对象的属性来配置对象。 一旦对象所处的状态不是“已创建”，它将被视为不可变。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33496658"
   
  `protected CommunicationObject(object mutex) { … }`  
   
- 最后，第三个构造函数采用一个在激发 <xref:System.ServiceModel.ICommunicationObject> 事件时用作发送方实参的附加形参。  
+ 最后，第三个构造函数采用一个在激发 <xref:System.ServiceModel.ICommunicationObject> 事件时用作发送方自变量的附加参数。  
   
  `protected CommunicationObject(object mutex, object eventSender) { … }`  
   
@@ -80,9 +80,9 @@ ms.locfileid: "33496658"
   
  Open 方法  
   
- 前提条件：状态为“已创建”。  
+ 前置条件：创建状态。  
   
- 后置条件：状态为“已打开”或“出错”。 可能引发异常。  
+ 后置条件：状态为打开或出错。 可能引发异常。  
   
  Open() 方法将尝试打开通信对象，并将状态设置为“已打开”。 如果遇到错误，它会将状态设置为“出错”。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "33496658"
   
  Close 方法  
   
- 前提条件：无。  
+ 前置条件：无。  
   
- 后置条件：状态为“已关闭”。 可能引发异常。  
+ 后置条件：状态为已关闭。 可能引发异常。  
   
  Close() 方法可以在任何状态下调用。 它将尝试正常关闭对象。 如果遇到错误，它将终止对象。 如果当前状态为“正在关闭”或“已关闭”，则该方法将不执行任何操作。 否则，它将状态设置为“正在关闭”。 如果初始状态为“已创建”、“正在打开”或“出错”，它将调用 Abort()（请参见下面的关系图）。 如果初始状态为“已打开”，它将依次调用 OnClosing()（将引发 Closing 事件）、OnClose() 和 OnClosed()。 如果这其中有任何一项引发异常，Close() 将调用 Abort() 并使异常向上冒泡。 OnClosed() 将状态设置为“已关闭”并引发 Closed 事件。 下面的关系图更详细地演示了“关闭”过程。  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33496658"
   
  中止  
   
- 前提条件：无。  
-后置条件：状态为“已关闭”。 可能引发异常。  
+ 前置条件：无。  
+后置条件：状态为已关闭。 可能引发异常。  
   
  如果当前状态是“已关闭”或之前已终止对象（例如，可能通过在其他线程上执行 Abort()），则 Abort() 方法将不执行任何操作。 否则，它将状态设置为“正在关闭”并依次调用 OnClosing()（将引发 Closing 事件）、OnAbort() 和 OnClosed()（因为是正在终止对象而非关闭，所以不调用 OnClose）。 OnClosed() 将状态设置为“已关闭”并引发 Closed 事件。 如果这其中的任何一项引发异常，它都将被重新引发至 Abort 的调用方。 OnClosing()、OnClosed() 和 OnAbort() 的实现不应阻塞（例如，在输入/输出上）。 下面的关系图更详细地演示了“中止”过程。  
   
- ![状态更改](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO AbortFlowChartc")  
+ ![State changes](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 重写 OnAbort 方法以实现自定义终止逻辑，例如，终止内部通信对象。  
   
  Fault  
   
  Fault 方法特定于 <xref:System.ServiceModel.Channels.CommunicationObject> 且不是 <xref:System.ServiceModel.ICommunicationObject> 接口的一部分。 在此处对其介绍是出于完整性的考虑。  
   
- 前提条件：无。  
+ 前置条件：无。  
   
- 后置条件：状态为“出错”。 可能引发异常。  
+ 后置条件：出错状态。 可能引发异常。  
   
  如果当前状态为“出错”或“已关闭”，则 Fault() 方法不执行任何操作。 否则，它将状态设置为“出错”并调用 OnFaulted()（将引发 Faulted 事件）。 如果 OnFaulted 引发异常，则将重新引发它。  
   
@@ -137,14 +137,14 @@ ms.locfileid: "33496658"
   
 |状态|已调用 Abort？|例外|  
 |-----------|----------------------------|---------------|  
-|已创建|不可用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|正在打开|不可用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|已打开|不可用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|创建时间|不适用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|正在打开|不适用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|已打开|不适用|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|是|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Closed|是|如果通过前一个对 Abort 的显式调用来关闭对象，将引发 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>。 如果对对象调用 Close，将引发 <xref:System.ObjectDisposedException?displayProperty=nameWithType>。|  
 |Closed|否|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|已出错|不可用|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
+|已出错|不适用|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>超时  
  在我们讨论的方法中，有一些方法采用超时参数。 它们是 Close、Open（某些重载和异步版本）、OnClose 和 OnOpen。 这些方法旨在允许长时间的操作（例如，在正常断开连接时阻塞输入/输出），以使超时参数指示此类操作在被中断前要耗费多长时间。 任何此类方法的实现都应使用提供的超时值，以此确保它在超时之前返回至调用方。 其他不采用超时的方法的实现不适用于长时间的操作，不应阻塞输入/输出。  

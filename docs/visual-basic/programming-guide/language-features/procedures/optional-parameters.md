@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791957"
 ---
 # <a name="optional-parameters-visual-basic"></a>可选参数 (Visual Basic)
 可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *可选参数*所指示的`Optional`过程定义中的关键字。 适用以下规则：  
   
--   过程定义中的每个可选参数都必须指定默认值。  
+- 过程定义中的每个可选参数都必须指定默认值。  
   
--   可选参数的默认值必须是一个常数表达式。  
+- 可选参数的默认值必须是一个常数表达式。  
   
--   过程定义中跟在可选参数后的每个参数也都必须是可选的。  
+- 过程定义中跟在可选参数后的每个参数也都必须是可选的。  
   
  下面的语法显示带可选参数的过程声明：  
   

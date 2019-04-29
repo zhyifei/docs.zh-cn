@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935221"
 ---
 # <a name="bad-file-name-or-number"></a>错误的文件名或文件号
 尝试访问指定的文件时出错。 此错误的可能原因是：  
   
--   语句引用中未指定文件的名称或数字开头的文件`FileOpen`中指定的语句或的`FileOpen`语句但随后被关闭。  
+- 语句引用中未指定文件的名称或数字开头的文件`FileOpen`中指定的语句或的`FileOpen`语句但随后被关闭。  
   
--   语句引用的文件数量超出了文件编号的范围。  
+- 语句引用的文件数量超出了文件编号的范围。  
   
--   语句引用的文件名或不是有效的数字。  
+- 语句引用的文件名或不是有效的数字。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

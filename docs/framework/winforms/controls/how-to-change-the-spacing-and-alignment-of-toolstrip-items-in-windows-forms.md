@@ -10,11 +10,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
 ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746809"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>如何：在 Windows 窗体中更改 ToolStrip 项的间距和对齐方式
 <xref:System.Windows.Forms.ToolStrip>控件完全支持布局功能，例如调整大小的间距<xref:System.Windows.Forms.ToolStripItem>上的控件相对于彼此，控件的排列<xref:System.Windows.Forms.ToolStrip>，并相对于控件的间距<xref:System.Windows.Forms.ToolStrip>。  
@@ -67,7 +67,7 @@ ms.locfileid: "59323169"
   
 ### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>若要排列的各个工具条上的 ToolStrip 项  
   
--   设置<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>属性的值<xref:System.Windows.Forms.ToolStripLayoutStyle>想。  
+- 设置<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>属性的值<xref:System.Windows.Forms.ToolStripLayoutStyle>想。  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  

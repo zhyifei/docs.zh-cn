@@ -3,11 +3,11 @@ title: 保持 Visual Studio (Visual Basic 中) 中对象
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783469"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>演练：保持 Visual Studio (Visual Basic 中) 中对象
 虽然可在设计时将对象的属性设置为默认值，但销毁对象时，运行时输入的任何值都将丢失。 可使用序列化在实例之间保持对象的数据，以便可存储值并在下次实例化对象时检索这些值。  
@@ -127,7 +127,7 @@ ms.locfileid: "59303344"
   
 ### <a name="to-mark-a-class-as-serializable"></a>将类标记为可序列化  
   
--   更改 Loan 类的类声明，如下所示：  
+- 更改 Loan 类的类声明，如下所示：  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ ms.locfileid: "59303344"
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>阻止对成员进行序列化  
   
--   更改 `PropertyChanged` 事件的声明，如下所示：  
+- 更改 `PropertyChanged` 事件的声明，如下所示：  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ ms.locfileid: "59303344"
   
 ### <a name="to-add-references-to-namespaces"></a>添加对命名空间的引用  
   
--   将下面的语句添加到 `Form1` 类的顶部：  
+- 将下面的语句添加到 `Form1` 类的顶部：  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ ms.locfileid: "59303344"
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>保存数据并对类进行序列化  
   
--   将以下代码添加到 `Form1_FormClosing` 事件过程中：  
+- 将以下代码添加到 `Form1_FormClosing` 事件过程中：  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

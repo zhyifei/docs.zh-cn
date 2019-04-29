@@ -13,11 +13,11 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775851"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>性能计数器和进程内并行应用程序
 使用性能监视器 (Perfmon.exe) 有可能在每个运行时基础上区分性能计数器。 本主题介绍启用此功能所需的注册表更改。  
@@ -25,9 +25,9 @@ ms.locfileid: "33392013"
 ## <a name="the-default-behavior"></a>默认行为  
  默认情况下，性能监视器基于每个应用程序显示性能计数器。 但是，这在两种情形下会出现问题：  
   
--   当监视两个名称相同的应用程序时。 例如，如果两个应用程序的名称都为 myapp.exe，二者在“实例”列中将分别显示为“myapp”和“myapp#1”。 在这种情况下很难将性能计数器与特定的应用程序相匹配。 无法确定为“myapp#1”收集的数据指的是第一个 myapp.exe，还是第二个 myapp.exe。  
+- 当监视两个名称相同的应用程序时。 例如，如果两个应用程序的名称都为 myapp.exe，二者在“实例”列中将分别显示为“myapp”和“myapp#1”。 在这种情况下很难将性能计数器与特定的应用程序相匹配。 无法确定为“myapp#1”收集的数据指的是第一个 myapp.exe，还是第二个 myapp.exe。  
   
--   当应用程序使用多个公共语言运行时实例时。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 支持进程内并行承载方案；也就是说，单个进程或应用程序可以加载多个公共语言运行时实例。 如果一个名为 myapp.exe 的应用程序加载两个运行时实例，则默认情况下会在“实例”列中将这两个实例分别指定为“myapp”和“myapp#1”。 在这种情况下，无法确定“myapp”和“myapp#1”指的是两个名称相同的应用程序，还是具有两个运行时的同一应用程序。 如果名称相同的多个应用程序加载多个运行时，则这种歧义性会更大。  
+- 当应用程序使用多个公共语言运行时实例时。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 支持进程内并行承载方案；也就是说，单个进程或应用程序可以加载多个公共语言运行时实例。 如果一个名为 myapp.exe 的应用程序加载两个运行时实例，则默认情况下会在“实例”列中将这两个实例分别指定为“myapp”和“myapp#1”。 在这种情况下，无法确定“myapp”和“myapp#1”指的是两个名称相同的应用程序，还是具有两个运行时的同一应用程序。 如果名称相同的多个应用程序加载多个运行时，则这种歧义性会更大。  
   
  可以设置注册表项来消除此歧义性。 对于使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开发的应用程序，此注册表更改会向“实例”列中的应用程序名称添加一个进程标识符，后跟一个运行时实例标识符。 现在，应用程序将在“实例”列中标识为 application_`p`processID\_`r`runtimeID，而不是 application 或 application#1。 如果应用程序是使用旧版的公共语言运行时开发的，则该实例将表示为 application\_`p`processID，前提是安装了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33392013"
 |项名称|HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\.NETFramework\Performance|  
 |值名称|ProcessNameFormat|  
 |值类型|REG_DWORD|  
-|值|1 (0x00000001)|  
+|“值”|1 (0x00000001)|  
   
  `ProcessNameFormat` 的值为 0 表示启用了默认行为；也就是说，Perfmon.exe 将基于每个应用程序显示性能计数器。 将此值设为 1 时，Perfmon.exe 会明确区分应用程序的多个版本，并基于每个运行时提供性能计数器。 `ProcessNameFormat` 注册表项设置的任何其他值均不受支持，留待将来使用。  
   

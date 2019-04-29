@@ -3,11 +3,11 @@ title: 如何：在企业中锁定终结点
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766826"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中锁定终结点
 大企业往往要求开发的应用程序符合企业安全策略。 以下主题讨论如何开发和安装客户端的终结点验证程序，它可以用来验证安装在计算机上的所有 Windows Communication Foundation (WCF) 客户端应用程序。  
@@ -43,15 +43,15 @@ ms.locfileid: "59305949"
   
 3. 使用 <xref:System.Configuration?displayProperty=nameWithType> 命名空间类型执行以下操作：  
   
-    1.  将扩展名添加到[ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)部分使用完全限定的类型名称，并锁定该元素。  
+    1. 将扩展名添加到[ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)部分使用完全限定的类型名称，并锁定该元素。  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2.  添加到的行为元素`EndpointBehaviors`的属性[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)节并锁定该元素。 （若要在服务上安装验证程序，该验证程序必须是 <xref:System.ServiceModel.Description.IServiceBehavior>，并已添加到 `ServiceBehaviors` 属性。）下面的代码示例演示执行步骤 a. 和 b. 之后的适当配置，唯一例外是有没有强名称。  
+    2. 添加到的行为元素`EndpointBehaviors`的属性[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)节并锁定该元素。 （若要在服务上安装验证程序，该验证程序必须是 <xref:System.ServiceModel.Description.IServiceBehavior>，并已添加到 `ServiceBehaviors` 属性。）下面的代码示例演示执行步骤 a. 和 b. 之后的适当配置，唯一例外是有没有强名称。  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3.  保存 machine.config 文件。 下面的代码示例执行步骤 3 中的所有任务，但在本地保存已修改的 machine.config 文件的副本。  
+    3. 保存 machine.config 文件。 下面的代码示例执行步骤 3 中的所有任务，但在本地保存已修改的 machine.config 文件的副本。  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   

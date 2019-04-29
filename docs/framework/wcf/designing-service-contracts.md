@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785029"
 ---
 # <a name="designing-service-contracts"></a>设计服务协定
 本主题介绍什么是服务协定、如何定义服务协定、可用的操作（以及基础消息交换的含义）、使用的数据类型以及可帮助您设计能满足方案需求的操作的其他问题。  
@@ -24,28 +24,28 @@ ms.locfileid: "59102734"
   
  本主题介绍设计服务协定时的以下决策要点：  
   
--   是否使用类或接口。  
+- 是否使用类或接口。  
   
--   如何指定要交换的数据类型。  
+- 如何指定要交换的数据类型。  
   
--   您可以使用的交换模式类型。  
+- 您可以使用的交换模式类型。  
   
--   是否可以将显式安全要求作为协定的一部分。  
+- 是否可以将显式安全要求作为协定的一部分。  
   
--   对操作输入和输出的限制。  
+- 对操作输入和输出的限制。  
   
 ## <a name="classes-or-interfaces"></a>类或接口  
  类和接口表示一组功能，因此，用于同时定义 WCF 服务协定。 但是，建议您使用接口，因为接口可以直接对服务协定建模。 如果不经过实现，接口的作用只是根据特定签名对一组方法进行定义。 实现服务协定接口，并且已实现的 WCF 服务。  
   
  服务协定接口具有托管接口的所有优点：  
   
--   服务协定接口可以扩展任何数量的其他服务协定接口。  
+- 服务协定接口可以扩展任何数量的其他服务协定接口。  
   
--   一个类可以通过实现服务协定接口来实现任意数量的服务协定。  
+- 一个类可以通过实现服务协定接口来实现任意数量的服务协定。  
   
--   您可以通过更改接口实现来修改服务协定的实现，而让服务协定保持不变。  
+- 您可以通过更改接口实现来修改服务协定的实现，而让服务协定保持不变。  
   
--   您可以通过实现旧接口和新接口来确定服务的版本。 老客户端连接到原始版本，而新客户端则可以连接到较新的版本。  
+- 您可以通过实现旧接口和新接口来确定服务的版本。 老客户端连接到原始版本，而新客户端则可以连接到较新的版本。  
   
 > [!NOTE]
 >  从其他服务协定接口中继承时，不能重写操作属性，例如名称或命名空间。 如果试图执行该操作，应在当前服务协定中创建新操作。  
@@ -251,11 +251,11 @@ End Interface
   
  实现此 `IExplicitProtectionLevelSampleService` 协定并且具有使用默认 <xref:System.ServiceModel.WSHttpBinding>（其默认的 <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> 是 <xref:System.ServiceModel.SecurityMode.Message>）的终结点的服务具有以下行为：  
   
--   对 `GetString` 操作消息加密并签名。  
+- 对 `GetString` 操作消息加密并签名。  
   
--   `GetInt` 操作消息以未加密且未签名文本（即纯文本）的形式发送。  
+- `GetInt` 操作消息以未加密且未签名文本（即纯文本）的形式发送。  
   
--   `GetGuid` 操作 <xref:System.Guid?displayProperty=nameWithType> 将在一条已加密且签名的消息中返回。  
+- `GetGuid` 操作 <xref:System.Guid?displayProperty=nameWithType> 将在一条已加密且签名的消息中返回。  
   
  有关保护级别以及如何使用它们的详细信息，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)。 有关安全性的详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
   

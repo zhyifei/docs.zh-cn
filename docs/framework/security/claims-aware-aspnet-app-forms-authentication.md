@@ -1,16 +1,16 @@
 ---
-title: 如何：生成声明感知 ASP.NET 应用程序使用基于窗体的身份验证
+title: 如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
 ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792738"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：生成声明感知 ASP.NET 应用程序使用基于窗体的身份验证
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序
 
 ## <a name="applies-to"></a>适用于
 

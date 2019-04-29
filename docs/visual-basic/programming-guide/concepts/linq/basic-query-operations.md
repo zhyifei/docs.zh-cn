@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925643"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查询操作 (Visual Basic)
 本主题提供了简要介绍了[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]表达式在 Visual Basic 中和某些典型查询中执行的操作。 有关详细信息，请参阅下列主题：  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  若要选择多个字段从数据源，您有两种选择：  
   
--   在`Select`子句中，指定你想要在结果中包含的字段。 编译器将定义这些字段作为其属性的匿名类型。 有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+- 在`Select`子句中，指定你想要在结果中包含的字段。 编译器将定义这些字段作为其属性的匿名类型。 有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
      在下面的示例返回的元素为匿名类型的实例，因为你不能为类型根据名称引用其他位置在代码中。 编译器指定的类型名称包含不正常的 Visual Basic 代码中有效的字符。 在下面的示例中的查询返回的集合中的元素`londonCusts4`是匿名类型的实例  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      或  
   
--   定义包含你想要包括在结果中，创建并初始化在类型的实例的特定字段的命名的类型`Select`子句。 仅当您必须使用各个结果集合外部的顺序返回它们，或如果您需要将它们作为方法调用中的参数传递，请使用此选项。 类型`londonCusts5`在下面的示例是 IEnumerable (Of NamePhone)。  
+- 定义包含你想要包括在结果中，创建并初始化在类型的实例的特定字段的命名的类型`Select`子句。 仅当您必须使用各个结果集合外部的顺序返回它们，或如果您需要将它们作为方法调用中的参数传递，请使用此选项。 类型`londonCusts5`在下面的示例是 IEnumerable (Of NamePhone)。  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

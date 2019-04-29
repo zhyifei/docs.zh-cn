@@ -3,11 +3,11 @@ title: 操作数据表中的数据
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
 ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785419"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>操作数据表中的数据
 在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataSet> 之后，您执行的活动可以与使用数据库中的表时执行的活动相同。 您可以添加、查看、编辑和删除表中的数据；可以监视错误和事件；并且可以查询表中的数据。 在中修改数据时**DataTable**，您还可以验证所做的更改是否正确，并确定是否要以编程方式接受或拒绝所做的更改。  

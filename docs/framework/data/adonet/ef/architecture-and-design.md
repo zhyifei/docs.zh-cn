@@ -3,20 +3,20 @@ title: 体系结构和设计
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606837"
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
 中的 SQL 生成模块[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。  
   
  从下至上处理树中的节点。 首先，生成中间结构：SqlSelectStatement 或 SqlBuilder，这两个实现 ISqlFragment。 紧接着，从该结构生成字符串 SQL 语句。 生成中间结构的原因有两个：  
   
--   从逻辑上说，不按顺序填充 SQL SELECT 语句。 先访问参与 FROM 子句的节点，然后再访问参与 WHERE、GROUP BY 和 ORDER BY 子句的节点。  
+- 从逻辑上说，不按顺序填充 SQL SELECT 语句。 先访问参与 FROM 子句的节点，然后再访问参与 WHERE、GROUP BY 和 ORDER BY 子句的节点。  
   
--   若要重命名别名，您必须标识所有使用的别名，避免在重命名期间发生冲突。 若要延迟 SqlBuilder 中的重命名选择，请使用 Symbol 对象以表示作为重命名候选项的列。  
+- 若要重命名别名，您必须标识所有使用的别名，避免在重命名期间发生冲突。 若要延迟 SqlBuilder 中的重命名选择，请使用 Symbol 对象以表示作为重命名候选项的列。  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ ms.locfileid: "59307569"
 ### <a name="isqlfragment"></a>ISqlFragment  
  本节涵盖实现 ISqlFragment 接口的类，此接口有两个用途：  
   
--   所有访问者方法的常见返回类型。  
+- 所有访问者方法的常见返回类型。  
   
--   提供用于写入最终 SQL 字符串的方法。  
+- 提供用于写入最终 SQL 字符串的方法。  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  通常，如果在计算其考虑合并的节点不为空的子句之后再计算 SQL 语句子句，则无法将节点添加到当前语句。 例如，如果下一个节点为 Filter，则仅在满足以下条件时可将该节点并入当前 SqlSelectStatement 中：  
   
--   SELECT 列表为空。 如果 SELECT 列表不为空，则表明 select 列表是由 filter 前面的节点生成的，并且谓词可能更愿意使用由该 SELECT 列表生成的列。  
+- SELECT 列表为空。 如果 SELECT 列表不为空，则表明 select 列表是由 filter 前面的节点生成的，并且谓词可能更愿意使用由该 SELECT 列表生成的列。  
   
--   GROUPBY 为空。 如果 GROUPBY 不为空，则添加 filter 将表示在分组之前进行筛选，此操作是不正确的。  
+- GROUPBY 为空。 如果 GROUPBY 不为空，则添加 filter 将表示在分组之前进行筛选，此操作是不正确的。  
   
--   TOP 子句为空。 如果 TOP 子句不为空，则添加 filter 将表示在执行 TOP 之前进行筛选，此操作是不正确的。  
+- TOP 子句为空。 如果 TOP 子句不为空，则添加 filter 将表示在执行 TOP 之前进行筛选，此操作是不正确的。  
   
  上述情况不适用于非关系节点（如 DbConstantExpression 或算术表达式），因为这些节点总是作为现有 SqlSelectStatement 的一部分包含。  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>关系（非联接）节点  
  下面的表达式类型支持非联接节点：  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  访问这些节点时应遵循以下模式：  
   
 1. 访问关系输入并获取结果 SqlSelectStatement。 对关系节点的输入可以是下列任一项：  
   
-    -   关系节点，包括范围（例如 DbScanExpression）。 访问此类节点将返回 SqlSelectStatement。  
+    - 关系节点，包括范围（例如 DbScanExpression）。 访问此类节点将返回 SqlSelectStatement。  
   
-    -   集运算表达式（例如 UNION ALL）。 必须将结果用括号括起，并将其置于新 SqlSelectStatement 的 FROM 子句中。  
+    - 集运算表达式（例如 UNION ALL）。 必须将结果用括号括起，并将其置于新 SqlSelectStatement 的 FROM 子句中。  
   
 2. 检查是否可以将当前节点添加到由输入生成的 SqlSelectStatement。 标题为“将表达式组合为 SQL 语句”这一节对此进行了描述。 如果不可以添加，则  
   
-    -   弹出当前的 SqlSelectStatement 对象。  
+    - 弹出当前的 SqlSelectStatement 对象。  
   
-    -   创建新的 SqlSelectStatement 对象并将弹出的 SqlSelectStatement 添加为新 SqlSelectStatement 对象的 From 属性。  
+    - 创建新的 SqlSelectStatement 对象并将弹出的 SqlSelectStatement 添加为新 SqlSelectStatement 对象的 From 属性。  
   
-    -   将新对象置于堆栈的顶部。  
+    - 将新对象置于堆栈的顶部。  
   
 3. 将输入表达式绑定从输入中重定向到正确的符号。 此信息保留在 SqlSelectStatement 对象中。  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>联接表达式  
  以下表达式将视为联接表达式，并且 VisitJoinExpression 方法将按某种常见方式处理它们：  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  以下是访问步骤：  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. 通过调用 ProcessJoinInputResult对访问输入的结果进行后续处理，此操作负责在访问联接表达式的子级后保留符号表并完成子级生成的 SqlSelectStatement。 子级的结果可以是下列项之一：  
   
-    -   将向其添加父级的 SqlSelectStatement 之外的 SqlSelectStatement。 在此情况下，可能需要通过添加默认列来完成它。 如果输入是一个联接，则需要创建新的联接符号。 否则，将创建普通符号。  
+    - 将向其添加父级的 SqlSelectStatement 之外的 SqlSelectStatement。 在此情况下，可能需要通过添加默认列来完成它。 如果输入是一个联接，则需要创建新的联接符号。 否则，将创建普通符号。  
   
-    -   一个范围（例如 DbScanExpression），在此情况下，只是将其添加到父级的 SqlSelectStatement 的输入列表。  
+    - 一个范围（例如 DbScanExpression），在此情况下，只是将其添加到父级的 SqlSelectStatement 的输入列表。  
   
-    -   非 SqlSelectStatement，在此情况下，使用括号将其括起。  
+    - 非 SqlSelectStatement，在此情况下，使用括号将其括起。  
   
-    -   向其添加父级的同一 SqlSelectStatement。 在此情况下，需要将 FromExtents 列表中的符号替换为表示所有这些项的单个新 JoinSymbol。  
+    - 向其添加父级的同一 SqlSelectStatement。 在此情况下，需要将 FromExtents 列表中的符号替换为表示所有这些项的单个新 JoinSymbol。  
   
-    -   对于前三种情况，调用 AddFromSymbol 以添加 AS 子句并更新符号表。  
+    - 对于前三种情况，调用 AddFromSymbol 以添加 AS 子句并更新符号表。  
   
  第三步，访问联接条件（如果有）。  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  首先访问 Instance 属性，并且结果为 Symbol、JoinSymbol 或 SymbolPair。 以下是对这三种情况的处理方式：  
   
--   如果返回 JoinSymbol，则其 NameToExtent 属性包含所需属性的符号。 如果联接符号表示嵌套联接，则返回带联接符号的新 Symbol 对，以跟踪将用作实例别名的符号和表示实际属性的符号，从而进行进一步的解析。  
+- 如果返回 JoinSymbol，则其 NameToExtent 属性包含所需属性的符号。 如果联接符号表示嵌套联接，则返回带联接符号的新 Symbol 对，以跟踪将用作实例别名的符号和表示实际属性的符号，从而进行进一步的解析。  
   
--   如果返回 SymbolPair 且 Column 部分为联接符号，则再次返回联接符号，而此时列属性将更新为指向当前属性表达式所表示的属性。 否则，返回一个 SqlBuilder，它使用 SymbolPair 源作为别名并使用当前属性的符号作为列。  
+- 如果返回 SymbolPair 且 Column 部分为联接符号，则再次返回联接符号，而此时列属性将更新为指向当前属性表达式所表示的属性。 否则，返回一个 SqlBuilder，它使用 SymbolPair 源作为别名并使用当前属性的符号作为列。  
   
--   如果返回 Symbol，则 Visit 方法返回一个 SqlBuilder 方法，它使用该实例作为别名并使用属性名作为列名。  
+- 如果返回 Symbol，则 Visit 方法返回一个 SqlBuilder 方法，它使用该实例作为别名并使用属性名作为列名。  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  在用作 DbProjectExpression 的 Projection 属性时，DbNewInstanceExpression 会生成参数的以逗号分隔的列表以表示投影列。  
   
  若 DbNewInstanceExpression 具有集合返回类型并定义一个作为自变量提供的表达式的新集合，则将单独处理以下三种情况：  
   
--   如果 DbNewInstanceExpression 将 DbElementExpression 用作唯一自变量，则将对其进行转换，如下所示：  
+- 如果 DbNewInstanceExpression 将 DbElementExpression 用作唯一自变量，则将对其进行转换，如下所示：  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

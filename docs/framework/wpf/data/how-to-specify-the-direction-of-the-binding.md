@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931475"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>如何：指定绑定方向
 本示例演示如何指定绑定是仅更新绑定目标（目标）属性或绑定源（源）属性，还是同时更新目标属性和源属性。  
@@ -19,15 +19,15 @@ ms.locfileid: "59206429"
 ## <a name="example"></a>示例  
  使用<xref:System.Windows.Data.Binding.Mode%2A>属性指定绑定的方向。 以下枚举列表显示了可供绑定更新的选项：  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> 会在目标属性或源属性更改时进行目标属性或源属性的更新。  
+- <xref:System.Windows.Data.BindingMode.TwoWay> 会在目标属性或源属性更改时进行目标属性或源属性的更新。  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> 仅当源属性更改时更新目标属性。  
+- <xref:System.Windows.Data.BindingMode.OneWay> 仅当源属性更改时更新目标属性。  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> 仅当应用程序启动时或<xref:System.Windows.FrameworkElement.DataContext%2A>发生更改时更新目标属性。  
+- <xref:System.Windows.Data.BindingMode.OneTime> 仅当应用程序启动时或<xref:System.Windows.FrameworkElement.DataContext%2A>发生更改时更新目标属性。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> 在目标属性更改时更新源属性。  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> 在目标属性更改时更新源属性。  
   
--   <xref:System.Windows.Data.BindingMode.Default> 迫使系统将使用目标属性的默认 <xref:System.Windows.Data.Binding.Mode%2A> 值。  
+- <xref:System.Windows.Data.BindingMode.Default> 迫使系统将使用目标属性的默认 <xref:System.Windows.Data.Binding.Mode%2A> 值。  
   
  有关详细信息，请参见 <xref:System.Windows.Data.BindingMode> 枚举。  
   

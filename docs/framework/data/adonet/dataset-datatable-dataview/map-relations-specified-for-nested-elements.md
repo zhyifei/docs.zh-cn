@@ -3,11 +3,11 @@ title: 映射为嵌套元素指定的关系
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785377"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>映射为嵌套元素指定的关系
 架构可以包含**msdata: relationship**批注来显式指定架构中任意两个元素之间的映射。 中指定的两个元素**msdata: relationship**可以嵌套在架构中，但不是一定要。 映射进程使用**msdata: relationship**架构以生成两个列之间主键/外的键关系中。  
@@ -54,14 +54,14 @@ ms.locfileid: "59203140"
   
  XML 架构映射过程在 <xref:System.Data.DataSet> 中创建以下内容：  
   
--   **顺序**和一个**OrderDetail**表。  
+- **顺序**和一个**OrderDetail**表。  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   之间的关系**顺序**并**OrderDetail**表。 **嵌套**为此关系的属性设置为**True**因为**顺序**并**OrderDetail**元素都嵌套在架构.  
+- 之间的关系**顺序**并**OrderDetail**表。 **嵌套**为此关系的属性设置为**True**因为**顺序**并**OrderDetail**元素都嵌套在架构.  
   
     ```  
     ParentTable: Order  

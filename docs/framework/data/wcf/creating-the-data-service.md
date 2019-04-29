@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 ms.openlocfilehash: e8d82ff8958af12842366911b6633ea6b2e0efbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765839"
 ---
 # <a name="create-the-data-service"></a>创建数据服务
 
@@ -52,11 +52,11 @@ ms.locfileid: "59517221"
 
 5. 连接到数据库的数据模型，通过执行以下步骤之一，然后单击**下一步**:
 
-    -   如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何：创建连接到 SQL Server 数据库](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
+    - 如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何：创建连接到 SQL Server 数据库](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
 
          \- 或 -
 
-    -   如果已配置一个连接到 Northwind 数据库的数据库连接，请从连接列表中选择该连接。
+    - 如果已配置一个连接到 Northwind 数据库的数据库连接，请从连接列表中选择该连接。
 
 6. 在向导的最后一页中，选中数据库中所有表对应的复选框，并清除视图和存储过程对应的复选框。
 

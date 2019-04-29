@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762424"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>可视化层中的命中测试
 本主题概述可视化层提供的命中测试功能。 命中测试支持，您可以确定几何或点值是否落在所呈现内容的<xref:System.Windows.Media.Visual>，从而可以实现用户界面行为，例如选择矩形来选择多个对象。  
@@ -22,13 +22,13 @@ ms.locfileid: "59082173"
 ## <a name="hit-testing-scenarios"></a>命中测试方案  
  <xref:System.Windows.UIElement>类提供了<xref:System.Windows.UIElement.InputHitTest%2A>方法，它允许你针对使用给定的坐标值对元素进行命中测试。 在许多情况下，<xref:System.Windows.UIElement.InputHitTest%2A>方法提供实现命中测试的元素的所需的功能。 但是，有多种方案可能需要在可视化层上实现命中测试。  
   
--   命中测试所针对非<xref:System.Windows.UIElement>对象：如果要执行命中测试不是如此<xref:System.Windows.UIElement>对象，如<xref:System.Windows.Media.DrawingVisual>或图形对象。  
+- 命中测试所针对非<xref:System.Windows.UIElement>对象：如果要执行命中测试不是如此<xref:System.Windows.UIElement>对象，如<xref:System.Windows.Media.DrawingVisual>或图形对象。  
   
--   命中测试几何图形的使用：如果你需要将 geometry 对象而不是一个点的坐标值的命中测试是如此。  
+- 命中测试几何图形的使用：如果你需要将 geometry 对象而不是一个点的坐标值的命中测试是如此。  
   
--   命中测试所针对多个对象：这适用于需要针对多个对象，如重叠的对象进行命中测试。 可以获取与几何或点相交的所有视觉对象的结果，而不仅仅是第一个视觉对象的结果。  
+- 命中测试所针对多个对象：这适用于需要针对多个对象，如重叠的对象进行命中测试。 可以获取与几何或点相交的所有视觉对象的结果，而不仅仅是第一个视觉对象的结果。  
   
--   忽略<xref:System.Windows.UIElement>命中测试策略：适用于需要忽略<xref:System.Windows.UIElement>命中测试策略，将考虑这些因素，如元素是否已被禁用或不可见。  
+- 忽略<xref:System.Windows.UIElement>命中测试策略：适用于需要忽略<xref:System.Windows.UIElement>命中测试策略，将考虑这些因素，如元素是否已被禁用或不可见。  
   
 > [!NOTE]
 >  有关演示在可视化层上进行命中测试的完整代码示例，请参阅[使用 DrawingVisuals 进行命中测试示例](https://go.microsoft.com/fwlink/?LinkID=159994)和[使用 Win32 互操作进行命中测试示例](https://go.microsoft.com/fwlink/?LinkID=159995)。  

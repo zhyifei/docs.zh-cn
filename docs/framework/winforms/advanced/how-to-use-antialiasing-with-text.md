@@ -12,11 +12,11 @@ helpviewer_keywords:
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
 ms.openlocfilehash: 24d1b1dfbe955bcfa98a16c3be592ab837ec0182
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779064"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>如何：对文本使用抗锯齿效果
 *抗锯齿*指进行绘制的图形和文本，以提高它们的外观或可读性的锯齿状边缘平滑处理。 与托管[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]类，您可以呈现高质量消除锯齿的文本，以及较低质量的文本。 通常情况下，更高质量呈现花费的处理时间超过较低质量呈现。 若要设置的文本质量级别，设置<xref:System.Drawing.Graphics.TextRenderingHint%2A>的属性<xref:System.Drawing.Graphics>的元素之一<xref:System.Drawing.Text.TextRenderingHint>枚举  

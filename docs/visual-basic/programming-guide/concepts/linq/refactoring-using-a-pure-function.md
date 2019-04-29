@@ -3,11 +3,11 @@ title: 使用纯函数 (Visual Basic) 重构
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
 ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787109"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>使用纯函数 (Visual Basic) 重构
 下面的示例重构前面的示例中，[使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，若要在此示例中，查找段落的文本将移至纯静态方法代码使用纯函数`ParagraphText`.  
@@ -170,7 +170,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>后续步骤  
  下面的示例演示如何将 XML 投影到一个不同的形状：  
   
--   [不同的形状 (Visual Basic 中) 中投影 XML](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [不同的形状 (Visual Basic 中) 中投影 XML](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>请参阅
 

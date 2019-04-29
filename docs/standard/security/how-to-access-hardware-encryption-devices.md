@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795195"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>如何：访问硬件加密设备
 可使用 <xref:System.Security.Cryptography.CspParameters> 类来访问硬件加密设备。 例如，可以使用此类将你的应用程序与智能卡、硬件随机数字生成器或特定加密算法的硬件实现进行集成。  
@@ -54,8 +54,8 @@ ms.locfileid: "59773410"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   包括 <xref:System> 和 <xref:System.Security.Cryptography> 命名空间。  
+- 包括 <xref:System> 和 <xref:System.Security.Cryptography> 命名空间。  
   
--   计算机上必须安装有智能卡读卡器和驱动程序。  
+- 计算机上必须安装有智能卡读卡器和驱动程序。  
   
--   必须使用特定于读卡器的信息来初始化 <xref:System.Security.Cryptography.CspParameters> 对象。  有关详细信息，请参阅读卡器的文档。
+- 必须使用特定于读卡器的信息来初始化 <xref:System.Security.Cryptography.CspParameters> 对象。  有关详细信息，请参阅读卡器的文档。

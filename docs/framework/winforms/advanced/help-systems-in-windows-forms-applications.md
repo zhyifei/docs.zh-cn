@@ -9,11 +9,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
 ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937938"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows 窗体应用程序中的帮助系统
 其中一个最重要的礼物，如的应用程序，开发人员可以为用户提供的功能完善的帮助系统。 这是他们将在这里打开时它们迷惑不解。 提供在基于 Windows 的应用程序的帮助系统轻松可通过使用[HelpProvider 组件](../controls/helpprovider-component-windows-forms.md)。  

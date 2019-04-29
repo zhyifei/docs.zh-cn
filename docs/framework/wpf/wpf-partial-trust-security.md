@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696490"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
 <a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下， [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ，客户端脚本编写语言也不能访问关键系统资源。 因为 Windows Presentation Foundation (WPF) 可从浏览器启动浏览器承载的应用程序，它们应该符合一组类似的限制。 若要强制实施这些限制[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]同时依赖于[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]并[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下，浏览器承载的应用程序请求 Internet 区域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]组的权限，而不考虑是否从 Internet、 本地 intranet 或本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
@@ -29,11 +29,11 @@ ms.locfileid: "59218376"
   
  本主题包含以下各节：  
   
--   [WPF 功能部分信任支持](#WPF_Feature_Partial_Trust_Support)  
+- [WPF 功能部分信任支持](#WPF_Feature_Partial_Trust_Support)  
   
--   [部分信任编程](#Partial_Trust_Programming)  
+- [部分信任编程](#Partial_Trust_Programming)  
   
--   [管理权限](#Managing_Permissions)  
+- [管理权限](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF 功能部分信任支持  
@@ -52,19 +52,19 @@ ms.locfileid: "59218376"
   
  此表涵盖了[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]在高级别的功能。 有关更多详细信息，[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]文档中的每个成员所需的权限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (请参阅[XAML 概述 (WPF)](./advanced/xaml-overview-wpf.md))。  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (请参阅[XAML 概述 (WPF)](./advanced/xaml-overview-wpf.md))。  
   
--   弹出窗口 (请参阅<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
+- 弹出窗口 (请参阅<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
   
--   拖放到 (请参阅[拖放概述](./advanced/drag-and-drop-overview.md))。  
+- 拖放到 (请参阅[拖放概述](./advanced/drag-and-drop-overview.md))。  
   
--   剪贴板 (请参阅<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
+- 剪贴板 (请参阅<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
   
--   映像 (请参阅<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。  
+- 映像 (请参阅<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。  
   
--   序列化 (请参阅<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>， <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。  
+- 序列化 (请参阅<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>， <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。  
   
--   打开文件对话框 (请参阅<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。  
+- 打开文件对话框 (请参阅<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。  
   
  下表概括了[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]不安全的 Internet 的限制范围内运行的功能区域权限集。  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218376"
   
  如果需要增加权限，则需要更改项目设置和 ClickOnce 应用程序清单。 有关详细信息，请参阅 [WPF XAML 浏览器应用程序概述](./app-development/wpf-xaml-browser-applications-overview.md)。 以下各个文档可能也会有帮助。  
   
--   [Mage.exe（清单生成和编辑工具）](../tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+- [Mage.exe（清单生成和编辑工具）](../tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
--   [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。  
+- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。  
   
--   [保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。  
+- [保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。  
   
  如果你[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]需要完全信任，可以使用相同的工具来提高所请求的权限。 尽管[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]将仅接收完全信任，如果它是安装并启动从本地计算机上，在 intranet 或从受信任或允许的站点在浏览器中列出的 URL。 如果从 Intranet 或受信任站点安装应用程序，则用户会收到标准 ClickOnce 提示，通知用户提升了权限。 用户可以选择继续或取消安装。  
   

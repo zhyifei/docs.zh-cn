@@ -16,11 +16,11 @@ ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754461"
 ---
 # <a name="debugging-tracing-and-profiling"></a>调试、跟踪和分析
 若要调试 .NET Framework 应用程序，必须配置编译器和运行时环境，以使调试器能够附加到应用程序，并且如果可能的话，为该应用程序及其相应 Microsoft 中间语言 (MSIL) 同时生成符号和行映射。 在对托管应用程序进行调试后，可对其进行分析以增强性能。 分析可以计算并描述可生成最常执行的代码的源代码行，以及执行它们所需的时间。  

@@ -3,11 +3,11 @@ title: WCF 服务发布
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791204"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
 
@@ -17,19 +17,19 @@ Windows Communication Foundation (WCF) 服务发布帮助您从实际部署到�
 
 WCF 服务发布支持发布的 WCF 服务库模板，以及其相应的项模板包括以下各项集中创建的 WCF 服务：
 
--   带有项模板的 WCF 服务库模板。
+- 带有项模板的 WCF 服务库模板。
 
--   联合服务库。
+- 联合服务库。
 
 可以通过选择找到这些服务模板**文件** > **新建项目**> [**Visual Basic**或**Visual C#** ] > **WCF**。 对于此位置 （包括 WCF 工作流服务应用程序和 WCF 服务应用程序） 中的其他 WCF 模板，可以发布使用[一键式发布为 web 应用程序](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))。
 
 可以将服务发布到以下目标位置。
 
--   本地 IIS。
+- 本地 IIS。
 
--   文件系统。
+- 文件系统。
 
--   FTP 站点。
+- FTP 站点。
 
 ## <a name="using-wcf-service-publishing"></a>使用 WCF 服务发布
 
@@ -63,9 +63,9 @@ WCF 服务发布支持发布的 WCF 服务库模板，以及其相应的项模�
 
  生成的 Web.config 文件包括可用于托管、 Web 和 WCF 服务库中有以下更改 App.config 的内容的 Web 部分：
 
--   排除了基址。
+- 排除了基址。
 
--   排除了 `<diagnostics>` 元素中的设置以保留目标平台的跟踪设置。
+- 排除了 `<diagnostics>` 元素中的设置以保留目标平台的跟踪设置。
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>将具有非 HTTP 绑定的 WCF 服务发布到 IIS
  如果你使用的是 iis 7.0 或更高版本，使用非 HTTP 绑定到 IIS 发布 WCF 服务。 需要进行一些预配置。 有关详细信息，请参阅主题[在 Windows 进程激活服务中承载](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。

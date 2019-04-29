@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
 ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747682"
 ---
 # <a name="getting-started-with-graphics-programming"></a>图形编程入门
 本部分演示如何开始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Windows 窗体应用程序中。 以下主题说明如何完成一些[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]任务，例如绘制并填充形状和文本。  

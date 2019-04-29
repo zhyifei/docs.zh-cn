@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780527"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知问题和注意事项
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的已知问题的信息。  
   
--   [不能缓存的 LINQ 查询](#LINQQueriesThatAreNotCached)  
+- [不能缓存的 LINQ 查询](#LINQQueriesThatAreNotCached)  
   
--   [排序信息丢失](#OrderingInfoLost)  
+- [排序信息丢失](#OrderingInfoLost)  
   
--   [不支持无符号的整数](#UnsignedIntsUnsupported)  
+- [不支持无符号的整数](#UnsignedIntsUnsupported)  
   
--   [类型转换错误](#TypeConversionErrors)  
+- [类型转换错误](#TypeConversionErrors)  
   
--   [不支持引用非标量变量](#RefNonScalarClosures)  
+- [不支持引用非标量变量](#RefNonScalarClosures)  
   
--   [嵌套的查询可能会因 SQL Server 2000](#NestedQueriesSQL2000)  
+- [嵌套的查询可能会因 SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [投影到匿名类型](#ProjectToAnonymousType)  
+- [投影到匿名类型](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>不能缓存的 LINQ 查询  

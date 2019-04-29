@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792829"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 的基于声明的授权
 在依赖方应用程序中，授权可确定允许已经过身份验证的标识访问的资源以及允许该标识对这些资源执行的操作。 授权不当会导致信息泄露和数据篡改。 本主题概述了可用于通过 Windows Identity Foundation (WIF) 和安全令牌服务 (STS) 来实现针对声明感知 ASP.NET Web 应用程序和服务（例如，Microsoft Azure 访问控制服务 (ACS)）的授权的方法。  
@@ -25,13 +25,13 @@ ms.locfileid: "59312171"
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole 方法  
  若要在声明感知应用程序中实现 RBAC 方法，请在 IPrinicpal 接口中使用 IsInRole() 方法，与在非声明感知应用程序中执行的操作一样。 使用 IsInRole() 方法有好几种方式：  
   
--   对 IPrincipal.IsInRole(“Administrator”) 进行显式调用。 在此方法中，结果为布尔值。 在条件语句中使用它。 可在代码中的任意位置使用它。  
+- 对 IPrincipal.IsInRole(“Administrator”) 进行显式调用。 在此方法中，结果为布尔值。 在条件语句中使用它。 可在代码中的任意位置使用它。  
   
--   使用安全性要求 PrincipalPermission.Demand()。 在此方法中，如果未满足要求，则结果为异常。 这应适合您的异常处理策略。 从性能角度看，与停用布尔值相比，引发异常的代价更高。 可在代码中的任何位置进行使用。  
+- 使用安全性要求 PrincipalPermission.Demand()。 在此方法中，如果未满足要求，则结果为异常。 这应适合您的异常处理策略。 从性能角度看，与停用布尔值相比，引发异常的代价更高。 可在代码中的任何位置进行使用。  
   
--   使用声明性特性 [PrincipalPermission(SecurityAction.Demand, Role = “Administrator”)]。 此方法称为声明性方法，因为它用于修饰方法。 它不能在方法实现中的代码块内使用。 如果未满足要求，则结果为异常。 您应确保它适合您的异常处理策略。  
+- 使用声明性特性 [PrincipalPermission(SecurityAction.Demand, Role = “Administrator”)]。 此方法称为声明性方法，因为它用于修饰方法。 它不能在方法实现中的代码块内使用。 如果未满足要求，则结果为异常。 您应确保它适合您的异常处理策略。  
   
--   使用 URL 授权，并使用 web.config 中的\<authorization> 部分。在 URL 级别上管理授权时，此方法很适用。 这是前面提到的方法中最粗糙的方法。 此方法的优点在于，更改是在配置文件中做出的，这意味着无需编译代码即可利用此更改。  
+- 使用 URL 授权，并使用 web.config 中的\<authorization> 部分。在 URL 级别上管理授权时，此方法很适用。 这是前面提到的方法中最粗糙的方法。 此方法的优点在于，更改是在配置文件中做出的，这意味着无需编译代码即可利用此更改。  
   
 ### <a name="expressing-roles-as-claims"></a>将角色表示为声明  
  调用 IsInRole() 方法时，会进行一次检查以查明当前用户是否拥有该角色。 在声明感知应用程序中，该角色由应在令牌中可用的角色声明类型表示。 使用以下 URI 表示此角色声明类型：  
@@ -40,11 +40,11 @@ ms.locfileid: "59312171"
   
  可通过几种方法增强带角色声明类型的令牌：  
   
--   **在令牌颁发过程中**。 对用户进行身份验证时，可由标识提供程序 STS 或联合身份验证提供程序（如 Microsoft Azure 访问控制服务 (ACS)）发布角色声明。  
+- **在令牌颁发过程中**。 对用户进行身份验证时，可由标识提供程序 STS 或联合身份验证提供程序（如 Microsoft Azure 访问控制服务 (ACS)）发布角色声明。  
   
--   **使用 ClaimsAuthenticationManager 将任意声明转换为声明角色类型**。 ClaimsAuthenticationManager 是作为 WIF 的一部分附带的组件。 它允许在请求启动应用程序时拦截请求，并通过添加、更改或删除声明来检查并转换令牌。 有关如何使用 ClaimsAuthenticationManager 来转换声明的详细信息，请参阅[How To:实现基于角色的访问控制 (RBAC) 在声明感知 ASP.NET 应用程序应用程序使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247445)。  
+- **使用 ClaimsAuthenticationManager 将任意声明转换为声明角色类型**。 ClaimsAuthenticationManager 是作为 WIF 的一部分附带的组件。 它允许在请求启动应用程序时拦截请求，并通过添加、更改或删除声明来检查并转换令牌。 有关如何使用 ClaimsAuthenticationManager 来转换声明的详细信息，请参阅[How To:实现基于角色的访问控制 (RBAC) 在声明感知 ASP.NET 应用程序应用程序使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247445)。  
   
--   使用 samlSecurityTokenRequirement 配置节将任意声明映射到角色类型 - 一种声明性方法，其中仅使用配置完成声明转换且无需编码。  
+- 使用 samlSecurityTokenRequirement 配置节将任意声明映射到角色类型 - 一种声明性方法，其中仅使用配置完成声明转换且无需编码。  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>基于声明的授权  

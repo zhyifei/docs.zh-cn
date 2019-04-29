@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754552"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试执行有条件编译
 在开发过程中调试应用程序时，跟踪和调试输出都会出现在 Visual Studio 的“输出”窗口中。 但是，若要在已部署的应用程序中包含跟踪功能，则必须在 TRACE 编译器指令处于启动状态下编译已检测应用程序。 这样就可以将跟踪代码编译成应用程序的发布版本。 如果未启用 TRACE 指令，将在编译过程中忽略所有跟踪代码，并且不会将其包含在将部署的可执行代码中。  
@@ -28,11 +28,11 @@ ms.locfileid: "59298573"
   
  可以通过几种方式来指定应用程序的编译器设置：  
   
--   属性页  
+- 属性页  
   
--   命令行  
+- 命令行  
   
--   #CONST（适用于 Visual Basic）和 #define（适用于 C#）  
+- #CONST（适用于 Visual Basic）和 #define（适用于 C#）  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>从属性页对话框中更改编译设置  
   
@@ -40,9 +40,9 @@ ms.locfileid: "59298573"
   
 2. 从快捷菜单中选择“属性”。  
   
-    -   在 Visual Basic 中，单击属性页左窗格中的“编译”选项卡，再单击“高级编译选项”按钮，以显示“高级编译器设置”对话框。 选中想要启用的编译器设置对应的复选框。 清除要禁用的设置的复选框。  
+    - 在 Visual Basic 中，单击属性页左窗格中的“编译”选项卡，再单击“高级编译选项”按钮，以显示“高级编译器设置”对话框。 选中想要启用的编译器设置对应的复选框。 清除要禁用的设置的复选框。  
   
-    -   在 C# 中，单击属性页左窗格中的“生成”选项卡，然后选中要启用的编译器设置对应的复选框。 清除要禁用的设置的复选框。  
+    - 在 C# 中，单击属性页左窗格中的“生成”选项卡，然后选中要启用的编译器设置对应的复选框。 清除要禁用的设置的复选框。  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>使用命令行编译已插入检测点的代码  
   

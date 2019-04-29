@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791711"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 时使用联合身份验证通过 WS 联合身份验证协议。 配置<xref:System.Security.Claims.ClaimsAuthorizationManager>使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类以提供基于声明的访问控制。  
@@ -52,9 +52,9 @@ ms.locfileid: "59297482"
 ## <a name="remarks"></a>备注  
  \<FederationConfiguration > 元素提供了两种不同方案中的设置：  
   
--   元素时使用 WS 联合被动 Web 应用程序中，包含配置设置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。 它还引用了要用来配置安全令牌处理程序和证书，以及声明授权管理器和声明身份验证管理器等组件的标识配置。  
+- 元素时使用 WS 联合被动 Web 应用程序中，包含配置设置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。 它还引用了要用来配置安全令牌处理程序和证书，以及声明授权管理器和声明身份验证管理器等组件的标识配置。  
   
--   使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类来提供基于声明的访问控制在代码中，元素引用配置的声明授权管理器和使用进行授权策略的标识配置决策。 这是为 true，即使在不是被动 Web 方案; 的方案中例如，Windows Communication Foundation (WCF) 应用程序或不是基于 Web 的应用程序。 如果应用程序不是被动的 Web 应用程序， [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)元素 （和其子策略元素，如果存在） 的引用的标识配置`<federationConfiguration>`元素应用的唯一设置。 将忽略所有其他成员。  
+- 使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类来提供基于声明的访问控制在代码中，元素引用配置的声明授权管理器和使用进行授权策略的标识配置决策。 这是为 true，即使在不是被动 Web 方案; 的方案中例如，Windows Communication Foundation (WCF) 应用程序或不是基于 Web 的应用程序。 如果应用程序不是被动的 Web 应用程序， [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)元素 （和其子策略元素，如果存在） 的引用的标识配置`<federationConfiguration>`元素应用的唯一设置。 将忽略所有其他成员。  
   
  无论何种方案，在运行时加载默认联合身份验证配置。 行为定义，如下所示：  
   

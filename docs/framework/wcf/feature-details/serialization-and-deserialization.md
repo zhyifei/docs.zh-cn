@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748000"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和反序列化
 Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行双向转换。 本主题说明序列化程序的工作原理。  
@@ -109,11 +109,11 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  不过，此方法具有以下可能不需要的特征：  
   
--   性能。 复制数据的效率低。  
+- 性能。 复制数据的效率低。  
   
--   循环引用。 如果对象引用自身，甚至通过其他对象引用自身，则通过复制进行序列化会导致无限循环。 （如果发生这种状况，序列化程序将引发 <xref:System.Runtime.Serialization.SerializationException> 。）  
+- 循环引用。 如果对象引用自身，甚至通过其他对象引用自身，则通过复制进行序列化会导致无限循环。 （如果发生这种状况，序列化程序将引发 <xref:System.Runtime.Serialization.SerializationException> 。）  
   
--   语义。 有时，一定要记住这一点：两个引用指向的是同一个对象而不是两个相同的对象。  
+- 语义。 有时，一定要记住这一点：两个引用指向的是同一个对象而不是两个相同的对象。  
   
  有关这些原因，一些 `DataContractSerializer` 构造函数重载具有 `preserveObjectReferences` 参数（默认值为 `false`）。 如果此参数设置为`true`，一种特殊的编码对象引用，仅 WCF 支持，方法使用。 当设置为 `true`时，XML 代码示例现在如下所示。  
   
@@ -131,11 +131,11 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  了解此模式的限制是很重要的：  
   
--   `DataContractSerializer` 在 `preserveObjectReferences` 设置为 `true` 的情况下生成的 XML 与任何其他技术都无法进行交互，仅可以由另一个其 `DataContractSerializer` 也设置为 `preserveObjectReferences` 的 `true`实例进行访问。  
+- `DataContractSerializer` 在 `preserveObjectReferences` 设置为 `true` 的情况下生成的 XML 与任何其他技术都无法进行交互，仅可以由另一个其 `DataContractSerializer` 也设置为 `preserveObjectReferences` 的 `true`实例进行访问。  
   
--   元数据（架构）不支持此功能。 生成的架构仅对 `preserveObjectReferences` 设置为 `false`的情况有效。  
+- 元数据（架构）不支持此功能。 生成的架构仅对 `preserveObjectReferences` 设置为 `false`的情况有效。  
   
--   此功能可能导致序列化和反序列化进程运行速度减慢。 尽管不必复制数据，但是在此模式中必须执行额外的对象比较。  
+- 此功能可能导致序列化和反序列化进程运行速度减慢。 尽管不必复制数据，但是在此模式中必须执行额外的对象比较。  
   
 > [!CAUTION]
 >  当启用 `preserveObjectReferences` 模式时，需要将 `maxItemsInObjectGraph` 值设置为正确的配额，这一点特别重要。 由于在此模式中处理数组的方式方面的原因，攻击者很容易构造一条小的恶意消息来造成内存大量消耗（仅通过 `maxItemsInObjectGraph` 配额来限制）。  
@@ -230,29 +230,29 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  但是，会出现以下几个问题：  
   
--   安全性。 在要反序列化的 XML 中找到的任何类型都会加载。 有人可以利用这一点来强制加载恶意类型。 仅在使用 `NetDataContractSerializer` 序列化联编程序 *时（使用* 属性或构造函数参数）才应将 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 用于不受信任的数据。 联编程序仅允许加载安全类型。 联编程序机制与 <xref:System.Runtime.Serialization> 命名空间中的类型使用的机制相同。  
+- 安全性。 在要反序列化的 XML 中找到的任何类型都会加载。 有人可以利用这一点来强制加载恶意类型。 仅在使用 `NetDataContractSerializer` 序列化联编程序 *时（使用* 属性或构造函数参数）才应将 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 用于不受信任的数据。 联编程序仅允许加载安全类型。 联编程序机制与 <xref:System.Runtime.Serialization> 命名空间中的类型使用的机制相同。  
   
--   版本管理。 在 XML 中使用完整的类型和程序集名称会严格限制对类型进行版本管理的方式。 以下内容不可更改：类型名称、命名空间、程序集名称和程序集版本。 通过将 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 属性或构造函数参数设置为 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> （而非 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 的默认值），可以允许程序集版本更改，但不允许泛型参数类型更改。  
+- 版本管理。 在 XML 中使用完整的类型和程序集名称会严格限制对类型进行版本管理的方式。 以下内容不可更改：类型名称、命名空间、程序集名称和程序集版本。 通过将 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 属性或构造函数参数设置为 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> （而非 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 的默认值），可以允许程序集版本更改，但不允许泛型参数类型更改。  
   
--   互操作性。 由于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型和程序集名称包含在 XML 中，因此 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外的平台不能访问生成的数据。  
+- 互操作性。 由于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型和程序集名称包含在 XML 中，因此 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外的平台不能访问生成的数据。  
   
--   性能。 写出类型和程序集名称会显著增加生成的 XML 的大小。  
+- 性能。 写出类型和程序集名称会显著增加生成的 XML 的大小。  
   
  此机制与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理（具体是指 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>）使用的二进制或 SOAP 序列化类似。  
   
  使用 `NetDataContractSerializer` 与使用 `DataContractSerializer`类似，但存在以下区别：  
   
--   构造函数不要求指定根类型。 可以使用 `NetDataContractSerializer`的相同实例对任何类型进行序列化。  
+- 构造函数不要求指定根类型。 可以使用 `NetDataContractSerializer`的相同实例对任何类型进行序列化。  
   
--   构造函数不接受已知类型的列表。 如果将类型名称序列化为 XML，则不需要已知类型机制。  
+- 构造函数不接受已知类型的列表。 如果将类型名称序列化为 XML，则不需要已知类型机制。  
   
--   构造函数不接受数据协定代理项， 而是接受一个名为 <xref:System.Runtime.Serialization.ISurrogateSelector> 的 `surrogateSelector` 参数（映射到 <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> 属性）。 这是旧式代理项机制。  
+- 构造函数不接受数据协定代理项， 而是接受一个名为 <xref:System.Runtime.Serialization.ISurrogateSelector> 的 `surrogateSelector` 参数（映射到 <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> 属性）。 这是旧式代理项机制。  
   
--   构造函数接受 `assemblyFormat` 的一个名为 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 的参数，该参数映射到 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 属性。 如前所述，这可以用于增强序列化程序的版本管理功能。 这与二进制或 SOAP 序列化中的 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 机制相同。  
+- 构造函数接受 `assemblyFormat` 的一个名为 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 的参数，该参数映射到 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 属性。 如前所述，这可以用于增强序列化程序的版本管理功能。 这与二进制或 SOAP 序列化中的 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 机制相同。  
   
--   构造函数接受一个名为 <xref:System.Runtime.Serialization.StreamingContext> 的 `context` 参数，该参数映射到 <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> 属性。 可以使用该参数将信息传递到要序列化的类型中。 此用法与其他 <xref:System.Runtime.Serialization.StreamingContext> 类中使用的 <xref:System.Runtime.Serialization> 机制的用法相同。  
+- 构造函数接受一个名为 <xref:System.Runtime.Serialization.StreamingContext> 的 `context` 参数，该参数映射到 <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> 属性。 可以使用该参数将信息传递到要序列化的类型中。 此用法与其他 <xref:System.Runtime.Serialization.StreamingContext> 类中使用的 <xref:System.Runtime.Serialization> 机制的用法相同。  
   
--   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的别名。 这些别名可以为二进制或 SOAP 序列化提供更为一致的编程模型。  
+- <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的别名。 这些别名可以为二进制或 SOAP 序列化提供更为一致的编程模型。  
   
  有关这些功能的详细信息，请参阅[二进制序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
   

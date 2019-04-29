@@ -3,22 +3,22 @@ title: 通道工厂和缓存
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784301"
 ---
 # <a name="channel-factory-and-caching"></a>通道工厂和缓存
 WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建 WCF 服务的通信通道。  创建 <xref:System.ServiceModel.ChannelFactory%601> 实例会带来一定的开销，因为这涉及以下操作：  
   
--   构造 <xref:System.ServiceModel.Description.ContractDescription> 树  
+- 构造 <xref:System.ServiceModel.Description.ContractDescription> 树  
   
--   反映所有所需的 CLR 类型  
+- 反映所有所需的 CLR 类型  
   
--   构造通道堆栈  
+- 构造通道堆栈  
   
--   资源的释放  
+- 资源的释放  
   
  为了尽量减少这种开销，WCF 可以缓存使用 WCF 客户端代理时的通道工厂。  
   

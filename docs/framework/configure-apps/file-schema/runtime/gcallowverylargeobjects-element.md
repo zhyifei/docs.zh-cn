@@ -8,11 +8,11 @@ ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19103b2ac6e6dbba930050074fcea3cfd5a97661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704656"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects > 元素
 在 64 位平台上，启用总大小大于 2 千兆字节 (GB) 的数组。  
@@ -57,11 +57,11 @@ ms.locfileid: "59098011"
 ## <a name="remarks"></a>备注  
  在应用程序配置文件中使用此元素启用数组大于 2 GB 的大小，但不会更改对对象大小或数组大小的其他限制：  
   
--   最大数组中元素数是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
+- 最大数组中元素数是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
--   在任何单个维度中的最大索引是 2,147,483,591 (0x7FFFFFC7) 的字节数组和单字节结构的数组和 2,146,435,071 (0X7FEFFFFF) 对于其他类型。  
+- 在任何单个维度中的最大索引是 2,147,483,591 (0x7FFFFFC7) 的字节数组和单字节结构的数组和 2,146,435,071 (0X7FEFFFFF) 对于其他类型。  
   
--   字符串和其他非数组对象的最大大小保持不变。  
+- 字符串和其他非数组对象的最大大小保持不变。  
   
 > [!CAUTION]
 >  启用此功能前，请确保你的应用程序不包括假设所有数组大于 2 GB 的大小较小的不安全代码。 例如，如果写入假定数组不会超过 2 GB，数组用作缓冲区的不安全代码可能是容易受到缓冲区溢出。  

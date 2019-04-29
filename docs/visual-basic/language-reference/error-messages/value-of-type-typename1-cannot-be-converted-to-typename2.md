@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766800"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>类型的值\<typename1 > 无法转换为\<typename2 >
 类型的值\<typename1 > 无法转换为\<typename2 >。 类型不匹配可能是由于的文件引用的程序集的项目引用混合使用\<程序集名称 >。 请尝试更换的文件引用\<文件路径 > 项目中\<projectname1 > 项目引用\<项目名称 2> >。  
@@ -57,7 +57,7 @@ ms.locfileid: "58829014"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   更改的项目引用的文件引用。  
+- 更改的项目引用的文件引用。  
   
 ## <a name="see-also"></a>请参阅
 

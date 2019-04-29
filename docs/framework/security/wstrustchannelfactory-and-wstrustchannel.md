@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780063"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果已熟悉 Windows Communication Foundation (WCF)，便知道 WCF 客户端已可感知联合。 通过使用 <xref:System.ServiceModel.WSFederationHttpBinding> 或相似的自定义绑定配置 WCF 客户端，便可对服务启用联合身份验证。
@@ -25,7 +25,7 @@ ms.locfileid: "48839412"
 
 - 仅使用 WIF 从 STS 获取令牌，然后启用 WCF 客户端，以便使用此令牌进行身份验证。 有关详细信息，请参阅 [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) 示例。
 
- 第一个方案很容易理解：现有的 WCF 客户端将继续适用于 WIF 信赖方和 STS。 本主题讨论剩余的两个方案。
+ 第一个方案很容易理解：现有的 WCF 客户端将继续适用于 WIF 信赖方和 Sts。 本主题讨论剩余的两个方案。
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>通过 ActAs/OnBehalfOf 增强现有的 WCF 客户端
 在典型的标识委派方案中，客户端调用中间层服务，该服务随后调用后端服务。 中间层服务充当客户端或代表客户端执行操作。

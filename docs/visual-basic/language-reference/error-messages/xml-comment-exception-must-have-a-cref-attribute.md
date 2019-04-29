@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
 ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766598"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML 注释异常必须具有“cref”特性
 \<异常 > 标记提供了一种方法来记录方法可能引发的异常。 所需`cref`特性将指定的成员，它由文档生成器检查名称。 如果存在该成员，它被转换为文档文件中的规范的元素名称。  
@@ -21,7 +21,7 @@ ms.locfileid: "58813283"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   添加`cref`属性为异常，如下所示：  
+- 添加`cref`属性为异常，如下所示：  
   
     ```  
     '''<exception cref="member">description</exception>  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787408"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>无法写入输出文件\<文件名 >:\<错误 >
 创建文件时出现问题。  
@@ -21,9 +21,9 @@ ms.locfileid: "59318216"
   
  文件以独占形式打开的常见情形是：  
   
--   应用程序已经在运行并使用它的文件。 若要解决此问题，请确保应用程序没有运行。  
+- 应用程序已经在运行并使用它的文件。 若要解决此问题，请确保应用程序没有运行。  
   
--   其他应用程序已经打开了该文件。 若要解决此问题，请确保其他应用程序没有访问这些文件。 是哪个应用程序在访问你的文件并不总是很明显；在这种情况下，重新启动计算机可能是终止该应用程序的最简单的方式。  
+- 其他应用程序已经打开了该文件。 若要解决此问题，请确保其他应用程序没有访问这些文件。 是哪个应用程序在访问你的文件并不总是很明显；在这种情况下，重新启动计算机可能是终止该应用程序的最简单的方式。  
   
  即使是项目输出文件中只有一个被标记为只读，也将会引发此异常。  
   

@@ -6,13 +6,13 @@ dev_langs:
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929306"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>如何： 承载的托管应用中的 WCF 服务
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>如何：承载的托管应用中的 WCF 服务
 
 若要在托管应用程序中承载某项服务，请在托管应用程序代码内嵌入该服务的代码，在代码中强制定义、通过配置以声明的方式定义或者使用默认终结点定义该服务的终结点，然后创建 <xref:System.ServiceModel.ServiceHost> 的实例。
 
@@ -50,7 +50,7 @@ ms.locfileid: "47196845"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 有关如何定义和实现服务接口的详细信息，请参阅[如何： 定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)并[如何： 实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。
+    > 有关如何定义和实现服务接口的详细信息，请参阅[如何：定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)和[如何：实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。
 
 5. 在 `Main` 方法的顶部，使用该服务的基址创建 <xref:System.Uri> 类的实例。
 
@@ -99,7 +99,7 @@ ms.locfileid: "47196845"
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [如何：在 IIS 中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [如何：承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [自承载](../../../docs/framework/wcf/samples/self-host.md)
 - [托管服务](../../../docs/framework/wcf/hosting-services.md)
 - [如何：定义服务协定](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)

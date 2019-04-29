@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783872"
 ---
 # <a name="set-statement-visual-basic"></a>Set 语句 (Visual Basic)
 声明`Set`用于将值分配给属性的属性过程。  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  在最多一个的可选`Get`和`Set`中此属性的语句。 可以是以下各项之一：  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>规则  
   
--   **混合的访问级别。** 如果你正在定义的读-写属性，您可以选择指定不同的访问级别为`Get`或`Set`过程，但不可同时使用两者。 如果执行此操作时，过程访问级别必须比属性的访问级别限制性更强。 例如，如果属性声明`Friend`，可以声明`Set`过程`Private`，但不是`Public`。  
+- **混合的访问级别。** 如果你正在定义的读-写属性，您可以选择指定不同的访问级别为`Get`或`Set`过程，但不可同时使用两者。 如果执行此操作时，过程访问级别必须比属性的访问级别限制性更强。 例如，如果属性声明`Friend`，可以声明`Set`过程`Private`，但不是`Public`。  
   
      如果您要定义`WriteOnly`属性，`Set`过程都表示整个属性。 不能声明不同的访问级别`Set`，因为这会设置属性的两个访问级别。  
   
 ## <a name="behavior"></a>行为  
   
--   **从属性过程中返回。** 当`Set`过程返回到调用代码时，将会继续执行该语句提供要存储的值。  
+- **从属性过程中返回。** 当`Set`过程返回到调用代码时，将会继续执行该语句提供要存储的值。  
   
      `Set` 属性过程可以返回使用[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)或[退出语句](../../../visual-basic/language-reference/statements/exit-statement.md)。  
   

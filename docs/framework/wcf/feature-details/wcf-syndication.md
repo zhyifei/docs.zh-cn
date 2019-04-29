@@ -5,11 +5,11 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935520"
 ---
 # <a name="wcf-syndication"></a>WCF 联合
 Windows Communication Foundation (WCF) 提供了支持用于轻松处理 Atom、 RSS 或其他自定义格式的联合源可用于读取和创建它们，以及将它们公开的服务终结点。 本节中的主题详细描述用于联合的此种编程模型。  

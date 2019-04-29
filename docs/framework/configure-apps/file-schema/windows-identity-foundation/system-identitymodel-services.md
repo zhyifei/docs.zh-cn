@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
 ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793778"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 使用 WS 联合身份验证协议进行身份验证的配置节。  
@@ -28,7 +28,7 @@ ms.locfileid: "57362950"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- 无  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -37,7 +37,7 @@ ms.locfileid: "57362950"
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|包含配置的设置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) HTTP 模块。|  
   
 ### <a name="parent-elements"></a>父元素  
- 无  
+ None  
   
 ## <a name="remarks"></a>备注  
  添加`<system.identityModel.services>`SAM 和 WSFAM 提供设置应用程序的配置文件的部分。  

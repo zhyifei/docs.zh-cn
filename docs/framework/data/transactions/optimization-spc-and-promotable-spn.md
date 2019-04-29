@@ -3,11 +3,11 @@ title: 使用单阶段提交和可提升的单阶段通知进行优化
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
 ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793622"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用单阶段提交和可提升的单阶段通知进行优化
 
@@ -50,8 +50,7 @@ ms.locfileid: "57371198"
 
 4. 此时，CN1 使用 SQL 2005 和 <xref:System.Data> 特定的某一机制升级该事务。
 
-5. 
-  <xref:System.Transactions.ITransactionPromoter.Promote%2A> 方法中的返回值是一个包含事务的传播标记的字节数组。  <xref:System.Transactions> 使用此传播标记创建 DTC 事务，它可以合并到本地事务。
+5. <xref:System.Transactions.ITransactionPromoter.Promote%2A> 方法中的返回值是一个包含事务的传播标记的字节数组。  <xref:System.Transactions> 使用此传播标记创建 DTC 事务，它可以合并到本地事务。
 
 6. 此时，CN2 可使用通过调用 <xref:System.Transactions.TransactionInterop> 方法之一而接收到的数据，来将事务传入 SQL 中。
 

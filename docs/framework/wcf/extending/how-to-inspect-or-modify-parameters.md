@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
 ms.openlocfilehash: 2e294b7970a58fad9385802470a514e5a9240495
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766853"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>如何：检查或修改参数
 您可以检查或修改通过实现 Windows Communication Foundation (WCF) 客户端对象或 WCF 服务上的单个操作的传入或传出消息<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>接口并将其插入到客户端或服务运行时。 通常，操作行为用于为单个操作添加参数检查器；其他行为可以用于在更大范围内提供对运行库的方便访问。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)并[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
@@ -26,11 +26,11 @@ ms.locfileid: "59303968"
 ## <a name="example"></a>示例  
  下面的代码示例按顺序演示以下各项：  
   
--   参数检查器实现。  
+- 参数检查器实现。  
   
--   行为实现，它使用 <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>插入参数检查器。  
+- 行为实现，它使用 <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>插入参数检查器。  
   
--   配置文件，它在客户端应用程序中加载和运行终结点行为，以便在客户端上插入参数检查器。  
+- 配置文件，它在客户端应用程序中加载和运行终结点行为，以便在客户端上插入参数检查器。  
   
  [!code-csharp[Interceptors#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
  [!code-vb[Interceptors#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  

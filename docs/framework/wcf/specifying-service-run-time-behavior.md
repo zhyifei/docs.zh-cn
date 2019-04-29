@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
 ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935494"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
@@ -27,25 +27,25 @@ ms.locfileid: "59186870"
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute 和 OperationBehaviorAttribute  
  最重要的行为是 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性，可以使用这两个属性来控制以下各项：  
   
--   实例生存期  
+- 实例生存期  
   
--   并发和同步支持  
+- 并发和同步支持  
   
--   配置行为  
+- 配置行为  
   
--   事务行为  
+- 事务行为  
   
--   序列化行为  
+- 序列化行为  
   
--   元数据转换  
+- 元数据转换  
   
--   会话生存期  
+- 会话生存期  
   
--   地址筛选和标头处理  
+- 地址筛选和标头处理  
   
--   模拟  
+- 模拟  
   
--   若要使用这些属性，请使用适合对应范围的属性来标记服务或操作实现并设置属性。 例如，下面的代码示例演示了一个操作实现，该实现使用 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> 属性来要求此操作的调用方支持模拟。  
+- 若要使用这些属性，请使用适合对应范围的属性来标记服务或操作实现并设置属性。 例如，下面的代码示例演示了一个操作实现，该实现使用 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> 属性来要求此操作的调用方支持模拟。  
   
  [!code-csharp[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
  [!code-vb[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
@@ -77,36 +77,36 @@ ms.locfileid: "59186870"
 ### <a name="service-behaviors"></a>服务行为  
  下面的行为在服务上运行。  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用到 WCF 服务，以指示是否可在运行该服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]兼容性模式。  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用到 WCF 服务，以指示是否可在运行该服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]兼容性模式。  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 控制服务如何向客户端声明授权。  
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 控制服务如何向客户端声明授权。  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>。 配置服务凭据。 使用此类可指定服务的凭据，如 X.509 证书。  
+- <xref:System.ServiceModel.Description.ServiceCredentials>。 配置服务凭据。 使用此类可指定服务的凭据，如 X.509 证书。  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 启用调试和帮助信息功能的 WCF 服务。  
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 启用调试和帮助信息功能的 WCF 服务。  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 控制服务元数据和相关信息的发布。  
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 控制服务元数据和相关信息的发布。  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。 指定安全性事件的审核行为。  
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。 指定安全性事件的审核行为。  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>。 配置运行时吞吐量设置，这些设置可以让您优化服务性能。  
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>。 配置运行时吞吐量设置，这些设置可以让您优化服务性能。  
   
 ### <a name="endpoint-behaviors"></a>终结点行为  
  下面的行为在终结点上运行。 许多这些行为在客户端应用程序中使用。  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>。 在双工客户端应用程序中配置回调服务实现。  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>。 在双工客户端应用程序中配置回调服务实现。  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 启用服务调试 WCF 回调对象。  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 启用服务调试 WCF 回调对象。  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>。 允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。  
+- <xref:System.ServiceModel.Description.ClientCredentials>。 允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>。 由客户端使用以指定应为其创建传输通道的统一资源标识符 (URI)。  
+- <xref:System.ServiceModel.Description.ClientViaBehavior>。 由客户端使用以指定应为其创建传输通道的统一资源标识符 (URI)。  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 WCF 在禁用`MustUnderstand`处理。  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 WCF 在禁用`MustUnderstand`处理。  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 指示运行库对通道使用同步接收进程。  
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 指示运行库对通道使用同步接收进程。  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>。 优化支持事务性接收的传输的接收操作。  
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>。 优化支持事务性接收的传输的接收操作。  
   
 ### <a name="contract-behaviors"></a>协定行为  
  <xref:System.ServiceModel.DeliveryRequirementsAttribute>。 指定绑定必须提供给服务或客户端实现的功能要求。  
@@ -114,11 +114,11 @@ ms.locfileid: "59186870"
 ### <a name="operation-behaviors"></a>操作行为  
  下面的操作行为指定操作的序列化和事务控制。  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的运行时行为。  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的运行时行为。  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 控制 `XmlSerializer` 的运行时行为并将其与某个操作相关联。  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 控制 `XmlSerializer` 的运行时行为并将其与某个操作相关联。  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>。 指定服务操作接受事务标头所处的级别。  
+- <xref:System.ServiceModel.TransactionFlowAttribute>。 指定服务操作接受事务标头所处的级别。  
   
 ## <a name="see-also"></a>请参阅
 

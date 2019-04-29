@@ -10,17 +10,17 @@ ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754214"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>使映像更易于在.NET 中进行调试
 
 编译非托管代码时，可以通过设置 IDE 开关或命令线选项来配置可执行映像进行调试。 例如，可以使用 Visual C++ 中的 /Zi 命令行选项，使其发出调试符号文件（文件扩展名为 .pdb）。 同样，/Od 命令行选项告知编译器禁用优化。 生成的代码运行得更慢，但它是更轻松地调试，这很必要。
 
-编译.NET Framework 托管代码时，Visual c + +、 Visual Basic 和 C# 等编译器会将它们的源程序编译为 Microsoft 中间语言 (MSIL)。 MSIL 然后进行 JIT 编译的之前执行，为本机代码。 与非托管代码一样，可以通过设置 IDE 开关或命令行选项来配置可执行映像进行调试。 此外可以配置用于大致相同的方式在调试 JIT 编译。
+当编译.NET Framework 托管代码中，编译器如视觉对象C++，Visual Basic 和C#将它们的源程序编译为 Microsoft 中间语言 (MSIL)。 MSIL 然后进行 JIT 编译的之前执行，为本机代码。 与非托管代码一样，可以通过设置 IDE 开关或命令行选项来配置可执行映像进行调试。 此外可以配置用于大致相同的方式在调试 JIT 编译。
 
 这种 JIT 配置具有两个方面：
 

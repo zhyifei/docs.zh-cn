@@ -12,11 +12,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
 ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932543"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 控件概述（Windows 窗体）
 若要获取用户输入或显示文本使用 Windows 窗体的文本框。 <xref:System.Windows.Forms.TextBox>控件通常用于可编辑文本，尽管也可将其只读的。 文本框可以显示多个行，该控件的大小的文本换行并添加基本格式设置。 <xref:System.Windows.Forms.TextBox>控件提供了用于显示或输入到控件中的文本的格式样式。 若要显示多种类型的格式化文本，请使用<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[RichTextBox 控件概述](richtextbox-control-overview-windows-forms.md)。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
 ms.openlocfilehash: 4c79989f3bbae1bdb52e3eb0839503b330c6b8fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751288"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network 对象
 提供了一个属性、 事件和用于在计算机连接到的网络进行交互的方法。  

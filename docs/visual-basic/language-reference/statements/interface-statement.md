@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
 ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784184"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 语句 (Visual Basic)
 声明接口的名称，并引入了该接口包含成员的定义。  
@@ -67,31 +67,31 @@ End Interface
   
 ## <a name="rules"></a>规则  
   
--   **嵌套接口。** 您可以定义一个接口在另一个。 外部接口称为*包含的接口*，并调用内部接口*嵌套的接口*。  
+- **嵌套接口。** 您可以定义一个接口在另一个。 外部接口称为*包含的接口*，并调用内部接口*嵌套的接口*。  
   
--   **成员声明。** 仅要定义时的接口成员声明属性或过程，请*签名*的属性或过程。 这包括元素类型 （属性或过程），其参数和参数类型和它的返回类型。 因此，成员定义使用只有一个代码行，并终止语句`End Function`或`End Property`不能在接口中。  
+- **成员声明。** 仅要定义时的接口成员声明属性或过程，请*签名*的属性或过程。 这包括元素类型 （属性或过程），其参数和参数类型和它的返回类型。 因此，成员定义使用只有一个代码行，并终止语句`End Function`或`End Property`不能在接口中。  
   
      与此相反，定义枚举或结构，或嵌套的类或接口时，它时，必须包括其数据成员。  
   
--   **成员修饰符。** 定义模块成员时，不能使用任何访问修饰符，也不能指定[共享](../../../visual-basic/language-reference/modifiers/shared.md)或除任何过程修饰符[重载](../../../visual-basic/language-reference/modifiers/overloads.md)。 可以声明具有任何成员[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)，并可以使用[默认](../../../visual-basic/language-reference/modifiers/default.md)定义一个属性时，以及[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)或[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。  
+- **成员修饰符。** 定义模块成员时，不能使用任何访问修饰符，也不能指定[共享](../../../visual-basic/language-reference/modifiers/shared.md)或除任何过程修饰符[重载](../../../visual-basic/language-reference/modifiers/overloads.md)。 可以声明具有任何成员[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)，并可以使用[默认](../../../visual-basic/language-reference/modifiers/default.md)定义一个属性时，以及[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)或[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。  
   
--   **继承。** 如果此接口使用[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，可以指定一个或多个基接口。 您可以即使它们每个定义具有相同名称的成员，从两个接口继承。 如果这样做，实现代码必须使用名称限定来指定它正在实现的成员。  
+- **继承。** 如果此接口使用[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，可以指定一个或多个基接口。 您可以即使它们每个定义具有相同名称的成员，从两个接口继承。 如果这样做，实现代码必须使用名称限定来指定它正在实现的成员。  
   
      接口不能从具有限制性更强的访问级别的另一个接口继承。 例如，`Public`不能继承自接口`Friend`接口。  
   
      接口不能从嵌套在它的接口继承。  
   
--   **实现。** 当类使用[实现](../../../visual-basic/language-reference/statements/implements-clause.md)语句来实现此接口，它必须实现该接口内定义每个成员。 此外，实现代码中的每个签名必须完全符合此接口中定义的相应签名。 但是，实现代码中的成员的名称没有以匹配在接口中定义的成员名称。  
+- **实现。** 当类使用[实现](../../../visual-basic/language-reference/statements/implements-clause.md)语句来实现此接口，它必须实现该接口内定义每个成员。 此外，实现代码中的每个签名必须完全符合此接口中定义的相应签名。 但是，实现代码中的成员的名称没有以匹配在接口中定义的成员名称。  
   
      当一个类实现过程时，它不能指定为过程`Shared`。  
   
--   **默认属性。** 接口可以指定最多一个属性作为其*默认属性*，其中可以引用而不使用属性名称。 通过声明其与指定了此类的属性[默认](../../../visual-basic/language-reference/modifiers/default.md)修饰符。  
+- **默认属性。** 接口可以指定最多一个属性作为其*默认属性*，其中可以引用而不使用属性名称。 通过声明其与指定了此类的属性[默认](../../../visual-basic/language-reference/modifiers/default.md)修饰符。  
   
      请注意，这意味着一个接口可定义默认属性，仅当未进行任何继承它。  
   
 ## <a name="behavior"></a>行为  
   
--   **访问级别。** 隐式包含了所有接口成员[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。 定义成员时，不能使用任何访问修饰符。 但是，实现接口的类可以为每个实现的成员声明一种访问级别。  
+- **访问级别。** 隐式包含了所有接口成员[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。 定义成员时，不能使用任何访问修饰符。 但是，实现接口的类可以为每个实现的成员声明一种访问级别。  
   
      如果将类实例分配给一个变量，可以依赖其成员的访问级别的变量的数据类型是基础接口或实现的类。 下面的示例阐释了这一点。  
   
@@ -99,11 +99,11 @@ End Interface
   
      如果访问类成员通过`varAsInterface`，它们都具有公共访问权限。 但是，如果访问通过成员`varAsClass`，则`Sub`过程`doSomething`具有私有访问权限。  
   
--   **作用域。** 接口是在整个其命名空间、 类、 结构或模块范围内。  
+- **作用域。** 接口是在整个其命名空间、 类、 结构或模块范围内。  
   
      每个接口成员的作用域是整个接口。  
   
--   **生存期。** 接口本身没有一个生存期，也不执行其成员。 当类将实现一个接口和对象创建的实例类，该对象具有在其中运行应用程序中的生存期。 详细信息，请参阅"生存期"中[Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)。  
+- **生存期。** 接口本身没有一个生存期，也不执行其成员。 当类将实现一个接口和对象创建的实例类，该对象具有在其中运行应用程序中的生存期。 详细信息，请参阅"生存期"中[Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Interface`语句来定义名为接口`thisInterface`，这必须与实现`Property`语句和一个`Function`语句。  

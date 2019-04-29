@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790974"
 ---
 # <a name="textbox-overview"></a>TextBox 概述
 <xref:System.Windows.Controls.TextBox>类，可显示或编辑无格式的文本。 一个常见用途<xref:System.Windows.Controls.TextBox>编辑窗体中的无格式的文本。 例如，一个表单要求输入用户的姓名、 电话号码等使用<xref:System.Windows.Controls.TextBox>文本输入控件。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供有关如何在两者中使用它的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和C#。  

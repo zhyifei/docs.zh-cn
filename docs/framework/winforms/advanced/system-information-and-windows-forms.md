@@ -11,11 +11,11 @@ helpviewer_keywords:
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
 ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934688"
 ---
 # <a name="system-information-and-windows-forms"></a>系统信息和 Windows 窗体
 有时有必要收集有关你的应用程序运行才能在你的代码中进行决策的计算机的信息。 例如，可能有一个函数，则仅当连接到特定网络域; 适用在这种情况下需要一种方法来确定域并禁用函数，如果域不存在。  
