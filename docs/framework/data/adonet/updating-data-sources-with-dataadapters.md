@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756268"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>使用 DataAdapter 更新数据源
 调用 `Update` 的 <xref:System.Data.Common.DataAdapter> 方法可以将 <xref:System.Data.DataSet> 中的更改解析回数据源。 与 `Update` 方法类似，`Fill` 方法将 `DataSet` 的实例和可选的 <xref:System.Data.DataTable> 对象或 `DataTable` 名称用作自变量。 `DataSet` 实例是包含已做的更改的 `DataSet`，`DataTable` 标识从其中检索这些更改的表。 如果未指定 `DataTable`，则使用 `DataTable` 中的第一个 `DataSet`。  
@@ -98,13 +98,13 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>使用 DataAdapter 来检索和更新数据  
  您可以使用 DataAdapter 来检索和更新数据。  
   
--   此示例使用 DataAdapter.AcceptChangesDuringFill 克隆数据库中的数据。 如果该属性设置为 false，则在填充该表时不会调用 AcceptChanges，并将新添加的行视为插入的行。 因此，此示例使用这些行将新行插到数据库中。  
+- 此示例使用 DataAdapter.AcceptChangesDuringFill 克隆数据库中的数据。 如果该属性设置为 false，则在填充该表时不会调用 AcceptChanges，并将新添加的行视为插入的行。 因此，此示例使用这些行将新行插到数据库中。  
   
--   此示例使用 DataAdapter.TableMappings 来定义源表与 DataTable 之间的映射。  
+- 此示例使用 DataAdapter.TableMappings 来定义源表与 DataTable 之间的映射。  
   
--   此示例使用 DataAdapter.FillLoadOption 来确定适配器从 DbDataReader 填充 DataTable 的方式。 在您创建 DataTable 时，可以通过将该属性设置为 LoadOption.Upsert 或 LoadOption.PreserveChanges 而仅将数据库中的数据写入当前版本或原始版本。  
+- 此示例使用 DataAdapter.FillLoadOption 来确定适配器从 DbDataReader 填充 DataTable 的方式。 在您创建 DataTable 时，可以通过将该属性设置为 LoadOption.Upsert 或 LoadOption.PreserveChanges 而仅将数据库中的数据写入当前版本或原始版本。  
   
--   此示例还将通过使用 DbDataAdapter.UpdateBatchSize 执行批处理操作来更新表。  
+- 此示例还将通过使用 DbDataAdapter.UpdateBatchSize 执行批处理操作来更新表。  
   
  在编译并运行此示例之前，您需要创建示例数据库：  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
 ms.openlocfilehash: d197088f94614aac007c0adc310500ae4609f757
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788708"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>如何：手动生成客户端数据服务类 （WCF 数据服务）
 WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成客户端数据服务类**添加服务引用**对话框以将对数据服务的引用添加到 Visual Studio 项目中。 有关详细信息，请参阅[如何：添加数据服务引用](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。 此外，你也可以使用代码生成工具 `DataSvcUtil.exe` 手动生成相同的客户端数据服务类。 此工具，包括与 WCF Data Services，则从数据服务定义生成.NET Framework 类。 还可以使用此工具根据概念模型 (.csdl) 文件和表示 Visual Studio 项目中的实体框架模型的 .edmx 文件生成数据服务类。
@@ -19,7 +19,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>生成支持数据绑定的 C# 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -30,7 +30,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a>生成支持数据绑定的 Visual Basic 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -41,7 +41,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-c-classes-based-on-the-service-uri"></a>基于服务 URI 生成 C# 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -52,7 +52,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a>基于服务 URI 生成 Visual Basic 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -63,7 +63,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>基于概念模型文件 (CSDL) 生成 C# 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
@@ -71,7 +71,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a>基于概念模型文件 (CSDL) 生成 Visual Basic 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
@@ -79,7 +79,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>基于 .edmx 文件生成 C# 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
@@ -87,7 +87,7 @@ WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成�
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a>基于 .edmx 文件生成 Visual Basic 类
 
--   在命令提示符下执行以下命令（无换行符）：
+- 在命令提示符下执行以下命令（无换行符）：
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb

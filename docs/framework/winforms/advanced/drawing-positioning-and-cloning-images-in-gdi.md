@@ -16,11 +16,11 @@ helpviewer_keywords:
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
 ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756896"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>在 GDI+ 中绘制、定位和克隆图像
 可以使用<xref:System.Drawing.Bitmap>类来加载和显示光栅图像，还可以使用<xref:System.Drawing.Imaging.Metafile>类来加载和显示矢量图像。 <xref:System.Drawing.Bitmap>并<xref:System.Drawing.Imaging.Metafile>类都继承自<xref:System.Drawing.Image>类。 若要显示矢量图像，您需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Imaging.Metafile>。 若要显示光栅图像，您需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Bitmap>。 实例<xref:System.Drawing.Graphics>类提供了<xref:System.Drawing.Graphics.DrawImage%2A>方法，用于接收<xref:System.Drawing.Imaging.Metafile>或<xref:System.Drawing.Bitmap>作为自变量。  

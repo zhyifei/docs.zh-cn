@@ -3,11 +3,11 @@ title: 如何：通过非 MEX 绑定检索元数据
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
 ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766774"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>如何：通过非 MEX 绑定检索元数据
 本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 在此示例中的代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。  

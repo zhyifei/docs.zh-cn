@@ -3,11 +3,11 @@ title: OLE DB 架构集合
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771990"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 架构集合
 本节讨论对适用于 Microsoft SQL Server、Oracle 和 Microsoft Jet 的 OLE DB 提供程序的架构集合支持  
@@ -15,17 +15,17 @@ ms.locfileid: "59164679"
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 提供程序  
  Microsoft SQL Server OLE DB 驱动程序还支持下列特定的架构集合除了通用架构集合：  
   
--   表  
+- 表  
   
--   列  
+- 列  
   
--   过程  
+- 过程  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catalog  
+- Catalog  
   
--   索引  
+- 索引  
   
 ### <a name="tables"></a>表  
   
@@ -154,19 +154,19 @@ ms.locfileid: "59164679"
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB 提供程序  
  除了通用架构集合之外，Microsoft Oracle OLE DB 驱动程序还支持下列特定的架构集合：  
   
--   表  
+- 表  
   
--   列  
+- 列  
   
--   过程  
+- 过程  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Views  
+- Views  
   
--   索引  
+- 索引  
   
 ### <a name="tables"></a>表  
   
@@ -297,15 +297,15 @@ ms.locfileid: "59164679"
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB       
  除了通用架构集合之外，Microsoft Jet OLE DB 驱动程序还支持下列特定的架构集合：  
   
--   表  
+- 表  
   
--   列  
+- 列  
   
--   过程  
+- 过程  
   
--   Views  
+- Views  
   
--   索引  
+- 索引  
   
 ### <a name="tables"></a>表  
   

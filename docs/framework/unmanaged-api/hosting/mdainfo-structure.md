@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765201"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 结构
 详细介绍`Event_MDAFired`触发托管调试助手 (MDA) 创建的事件。  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  在运行时激发的事件触发创建 MDA 时采用以下步骤：  
   
--   如果主机尚未注册[IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)实例通过调用[iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)接收通知`Event_MDAFired`事件，在运行时将继续进行其默认情况下，非托管的行为。  
+- 如果主机尚未注册[IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)实例通过调用[iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)接收通知`Event_MDAFired`事件，在运行时将继续进行其默认情况下，非托管的行为。  
   
--   如果主机已注册此事件的处理程序，运行时检查是否将调试程序附加到进程。 如果是，运行时将进入调试器。 当调试器会继续时，它调用到主机。 如果没有调试器已附加，则运行时调用`IActionOnCLREvent::OnEvent`，并将传递指向的指针`MDAInfo`实例作为`data`参数。  
+- 如果主机已注册此事件的处理程序，运行时检查是否将调试程序附加到进程。 如果是，运行时将进入调试器。 当调试器会继续时，它调用到主机。 如果没有调试器已附加，则运行时调用`IActionOnCLREvent::OnEvent`，并将传递指向的指针`MDAInfo`实例作为`data`参数。  
   
  主机可以激活 Mda，MDA 激活时收到通知。 这会在主机重写默认行为并中止引发事件，以防止损坏进程状态的托管的线程的机会。 有关使用 Mda 的详细信息，请参阅[使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   

@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938783"
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全注意事项
 本主题介绍在应用程序中安全性的最佳做法，当您使用 XAML 和.NET Framework XAML 服务 API。  
@@ -34,9 +34,9 @@ ms.locfileid: "59973435"
 ## <a name="xaml-namespaces-and-assembly-trust"></a>XAML 命名空间和程序集信任  
  受信任和不受信任程序集加载到应用程序域之间没有区别的基本的非限定的语法和 XAML 如何解释到程序集的自定义 XAML 命名空间映射的定义。 因此，它是从技术上讲可能不受信任的程序集以欺骗受信任的程序集的预期的 XAML 命名空间映射，并捕获 XAML 源的声明的对象和属性信息。 如果你有安全需求，从而避免这种情况下，应当生成预期的 XAML 命名空间映射，使用以下方法之一：  
   
--   具有强名称，在任何 XAML 命名空间映射中所做的应用程序的 XAML 中使用完全限定的程序集的名称。  
+- 具有强名称，在任何 XAML 命名空间映射中所做的应用程序的 XAML 中使用完全限定的程序集的名称。  
   
--   限制程序集映射到一组固定的引用程序集，通过构造特定<xref:System.Xaml.XamlSchemaContext>在 XAML 读取器和 XAML 对象编写器。 请参阅 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
+- 限制程序集映射到一组固定的引用程序集，通过构造特定<xref:System.Xaml.XamlSchemaContext>在 XAML 读取器和 XAML 对象编写器。 请参阅 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML 类型映射和类型系统访问  
  XAML 支持其自己的类型系统，这在许多方面与 CLR 如何实现基本的 CLR 类型系统对等。 但是，您将基于其类型信息的类型的信任决定的类型意识的某些方面，您应延迟到 CLR 后备类型中的类型信息。 这是因为某些 XAML 类型系统的特定报告功能均保持打开状态作为虚拟方法，因此，不完全受控制的原始的.NET Framework XAML 服务实现。 这些扩展点存在，因为 XAML 类型系统是可扩展的使之与 XAML 本身的可扩展性和与使用默认 CLR 支持实现和默认 XAML 架构上下文及其可能的替代类型映射策略。 详细信息，请参阅特定说明多个的属性上<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。  

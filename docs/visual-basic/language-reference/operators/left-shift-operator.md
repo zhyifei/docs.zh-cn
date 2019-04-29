@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768285"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 运算符 (Visual Basic)
 对位模式执行算术左的移位运算。  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  前一示例的结果如下所示：  
   
--   `result1` 为 192 (0000 0000 0000 1100年)。  
+- `result1` 为 192 (0000 0000 0000 1100年)。  
   
--   `result2` 为 3072 (0000 0000 0000 1100年)。  
+- `result2` 为 3072 (0000 0000 0000 1100年)。  
   
--   `result3` 是-32768 (1000年 0000 0000 0000)。  
+- `result3` 是-32768 (1000年 0000 0000 0000)。  
   
--   `result4` 是 384 (0000 0001 1000年 0000)。  
+- `result4` 是 384 (0000 0001 1000年 0000)。  
   
--   `result5` 为 0 （向左移动 15 位）。  
+- `result5` 为 0 （向左移动 15 位）。  
   
  移位量`result4`计算为 17 和 15，等于 1。  
   

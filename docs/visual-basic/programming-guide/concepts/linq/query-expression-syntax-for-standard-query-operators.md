@@ -3,11 +3,11 @@ title: 标准查询运算符 (Visual Basic 中) 的查询表达式语法
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
 ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766527"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>标准查询运算符 (Visual Basic 中) 的查询表达式语法
 某些使用更频繁的标准查询运算符具有专用的 Visual Basic 语言关键字语法，使他们能够作为的一部分调用*查询表达式*。 查询表达式是比基于方法的等效项更具可读性的另一种查询表示形式。 查询表达式子句在编译时被转换为对查询方法的调用。  

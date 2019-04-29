@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
 ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781326"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>如何：用交错线图案填充形状
 从两种颜色进行阴影图案： 一个用于在后台，一个用于在后台上形成图案的行。 若要用阴影图案填充闭合的形状，请使用<xref:System.Drawing.Drawing2D.HatchBrush>对象。 下面的示例演示如何用阴影图案填充椭圆，使用：  
@@ -22,17 +22,17 @@ ms.locfileid: "59118113"
 ## <a name="example"></a>示例  
  <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A>构造函数采用三个参数： 的阴影样式、 阴影线条的颜色和背景颜色。 阴影样式参数可以为任何值<xref:System.Drawing.Drawing2D.HatchStyle>枚举。 有超过 50 个元素中的<xref:System.Drawing.Drawing2D.HatchStyle>枚举; 其中几个元素显示在下面的列表：  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
  下图显示了实心的椭圆。  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
 ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791477"
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 工具
 Microsoft Windows Communication Foundation (WCF) 工具旨在使你更轻松地创建、 部署和管理 WCF 应用程序。 本节包含有关这些工具的详细信息。 请注意，这些工具不受支持。  
@@ -19,7 +19,7 @@ Microsoft Windows Communication Foundation (WCF) 工具旨在使你更轻松地�
   
  下表列出这些工具并提供了简要说明。  
   
-|工具|描述|  
+|Tool|描述|  
 |----------|-----------------|  
 |[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|依据元数据文档生成服务模块代码，以及依据服务模块代码生成元数据文档。|  
 |[“查找私钥”工具 (FindPrivateKey.exe)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|从指定的存储中检索私钥。|  

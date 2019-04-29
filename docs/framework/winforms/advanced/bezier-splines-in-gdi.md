@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779248"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI + 中的样条
 贝塞尔样条是由四个点指定的曲线： 两个终结点 （p1 和 p2） 和两个控点 （c1 和 c2）。 曲线开始于 p1 和 p2 结束。 曲线不会经历的控点，但控制点的作用像磁铁一样，在某些方向上拉拽曲线并影响曲线弯曲的方式。 下图显示了其终结点和控制点一个贝塞尔曲线。  

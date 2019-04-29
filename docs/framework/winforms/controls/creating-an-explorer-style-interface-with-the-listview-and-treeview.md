@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768584"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面
 Visual Studio 的优势之一是时间的能够在较短中创建具有专业外观的 Windows 窗体应用程序。 一种常见方案使用创建用户界面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>类似于 Windows 操作系统的 Windows 资源管理器功能的控件。 Windows 资源管理器中显示用户的计算机上的文件和文件夹的层次结构。  
@@ -32,9 +32,9 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
 2. 在中**新的项目**对话框框中，执行以下操作：  
   
-    1.  在类别中，选择**Visual Basic**或**Visual C#**。  
+    1. 在类别中，选择**Visual Basic**或**Visual C#**。  
   
-    2.  在模板列表中，选择**Windows 窗体应用程序**。  
+    2. 在模板列表中，选择**Windows 窗体应用程序**。  
   
 3. 单击 **“确定”**。 创建一个新的 Windows 窗体项目。  
   
@@ -44,19 +44,19 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
 6. 添加<xref:System.Windows.Forms.TreeView>名为控件`treeview1`窗体，并将其置于的左侧<xref:System.Windows.Forms.SplitContainer>控件。 在属性窗口中`treeView1`执行以下操作：  
   
-    1.  将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
+    1. 将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-    2.  将 <xref:System.Windows.Forms.TreeView.ImageList%2A> 属性设置为 `imagelist1.`  
+    2. 将 <xref:System.Windows.Forms.TreeView.ImageList%2A> 属性设置为 `imagelist1.`  
   
 7. 添加<xref:System.Windows.Forms.ListView>名为控件`listView1`窗体，并将其置于的右侧<xref:System.Windows.Forms.SplitContainer>控件。 在属性窗口中`listview1`执行以下操作：  
   
-    1.  将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
+    1. 将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-    2.  将 <xref:System.Windows.Forms.ListView.View%2A> 属性设置为 <xref:System.Windows.Forms.View.Details>。  
+    2. 将 <xref:System.Windows.Forms.ListView.View%2A> 属性设置为 <xref:System.Windows.Forms.View.Details>。  
   
-    3.  通过单击省略号打开 ColumnHeader 集合编辑器 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>属性 **。** 添加三个列，并设置其<xref:System.Windows.Forms.ColumnHeader.Text%2A>属性设置为`Name`， `Type`，和`Last Modified`分别。 单击“确定”关闭对话框。  
+    3. 通过单击省略号打开 ColumnHeader 集合编辑器 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>属性 **。** 添加三个列，并设置其<xref:System.Windows.Forms.ColumnHeader.Text%2A>属性设置为`Name`， `Type`，和`Last Modified`分别。 单击“确定”关闭对话框。  
   
-    4.  将 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 属性设置为 `imageList1.`  
+    4. 将 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 属性设置为 `imageList1.`  
   
 8. 实现代码来填充<xref:System.Windows.Forms.TreeView>节点和子节点。 添加到此代码`Form1`类。  
   
@@ -87,18 +87,18 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
 #### <a name="to-test-the-form"></a>若要测试窗体  
   
--   按 F5 运行该应用程序。  
+- 按 F5 运行该应用程序。  
   
      你将看到一个拆分窗体，其中包含<xref:System.Windows.Forms.TreeView>控件，用于左侧和右侧，显示你的项目目录和一个<xref:System.Windows.Forms.ListView>包含三列右侧的控件。 您可以遍历<xref:System.Windows.Forms.TreeView>通过选择目录节点和<xref:System.Windows.Forms.ListView>填充与所选目录的内容。  
   
 ## <a name="next-steps"></a>后续步骤  
  此应用程序提供的一种方法可以使用示例<xref:System.Windows.Forms.TreeView>和<xref:System.Windows.Forms.ListView>一起控制。 有关这些控件的详细信息，请参阅以下主题：  
   
--   [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+- [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [如何：向 ListView 控件添加搜索功能](how-to-add-search-capabilities-to-a-listview-control.md)  
+- [如何：向 ListView 控件添加搜索功能](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [如何：将快捷菜单附加到 TreeView 节点](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+- [如何：将快捷菜单附加到 TreeView 节点](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>请参阅
 

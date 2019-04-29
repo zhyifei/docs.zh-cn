@@ -6,11 +6,11 @@ helpviewer_keywords:
 - examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
 ms.openlocfilehash: 22984ca8b12b1b71cfc5df78f8ac4005e1ad55f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791087"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>在托管 GDI+ 中使用变换
 仿射转换包括旋转、 缩放、 反射、 修剪和平移。 在中[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，则<xref:System.Drawing.Drawing2D.Matrix>类提供的基础上矢量图形、 图像和文本执行仿射转换。  

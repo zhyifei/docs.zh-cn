@@ -3,11 +3,11 @@ title: 客户端配置
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781506"
 ---
 # <a name="client-configuration"></a>客户端配置
 Windows Communication Foundation (WCF) 客户端配置可用于指定地址、 绑定、 行为和协定，客户端终结点，哪些客户端用于连接到服务终结点的"ABC"属性。 [\<客户端 >](../../configure-apps/file-schema/wcf/client.md)元素具有[\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素，其属性用于配置终结点的 abc 属性。 在讨论这些属性[配置终结点](#configuring-endpoints)部分。  

@@ -3,11 +3,11 @@ title: Entity SQL 与 Transact-SQL 有何不同
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774738"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 与 Transact-SQL 有何不同
 本主题介绍之间的差异[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
@@ -20,15 +20,15 @@ ms.locfileid: "59162732"
 ## <a name="support-for-collections"></a>集合支持  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将集合视为一类实体。 例如：  
   
--   集合表达式在 `from` 子句中有效。  
+- 集合表达式在 `from` 子句中有效。  
   
--   `in` 和 `exists` 子查询已被一般化，以允许使用任何集合。  
+- `in` 和 `exists` 子查询已被一般化，以允许使用任何集合。  
   
      子查询是一种集合。 `e1 in e2` 和 `exists(e)` 是执行这些运算的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 构造。  
   
--   集运算（例如 `union`、`intersect` 和 `except`）现在对集合执行运算。  
+- 集运算（例如 `union`、`intersect` 和 `except`）现在对集合执行运算。  
   
--   联接对集合执行运算。  
+- 联接对集合执行运算。  
   
 ## <a name="support-for-expressions"></a>对表达式的支持  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 具有子查询 （表） 和表达式 （行和列）。  

@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795204"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>生成加密和解密的密钥
 创建和管理密钥是加密过程的一个重要部分。 对称算法要求创建密钥和初始化向量 (IV)。 密钥必须对不应解密数据的任何人保密。 IV 并不是一定要保密，但应定期更改。 非对称算法要求创建公钥和私钥。 公钥可以公开给任何人，而私钥必须只有将解密用公钥加密的数据的参与方知道。 本节介绍如何生成和管理对称和非对称算法的密钥。  
@@ -64,9 +64,9 @@ tdes.GenerateKey();
   
  每次创建非对称算法类的新实例时，都将生成一个公钥/私钥对。 在创建类的新实例后，可以使用以下两种方法之一来提取密钥信息：  
   
--   <xref:System.Security.Cryptography.RSA.ToXmlString%2A> 方法，它会返回密钥信息的的 XML 表示形式。  
+- <xref:System.Security.Cryptography.RSA.ToXmlString%2A> 方法，它会返回密钥信息的的 XML 表示形式。  
   
--   <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> 方法，它返回存储密钥信息的 <xref:System.Security.Cryptography.RSAParameters> 结构。  
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> 方法，它返回存储密钥信息的 <xref:System.Security.Cryptography.RSAParameters> 结构。  
   
  这两种方法接受一个布尔值，该值指示是只返回公钥信息还是同时返回公钥和私钥信息。 通过使用 **方法，** RSACryptoServiceProvider **类可以初始化为** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 结构的值。  
   

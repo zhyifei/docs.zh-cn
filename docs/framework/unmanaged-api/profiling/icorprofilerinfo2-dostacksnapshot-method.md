@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779809"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 对指定线程的堆栈上指导托管的帧，并将信息发送到通过回调探查器。  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  异步堆栈遍历可轻松地会导致死锁或访问冲突，除非您遵循以下准则：  
   
--   当你直接暂停线程时，请记住只有从未运行过托管的代码的线程才可以挂起另一个线程。  
+- 当你直接暂停线程时，请记住只有从未运行过托管的代码的线程才可以挂起另一个线程。  
   
--   始终阻止您[icorprofilercallback:: Threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)回调该线程的堆栈遍历直到完成。  
+- 始终阻止您[icorprofilercallback:: Threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)回调该线程的堆栈遍历直到完成。  
   
--   在分析器调用到可以触发垃圾回收的 CLR 函数时，则不持有锁。 即，如果拥有线程可能会使触发垃圾回收的调用并持有锁。  
+- 在分析器调用到可以触发垃圾回收的 CLR 函数时，则不持有锁。 即，如果拥有线程可能会使触发垃圾回收的调用并持有锁。  
   
  此外，还有的死锁风险如果调用`DoStackSnapshot`从您的探查器已创建，以便您可以放心离开，单独的目标线程的堆栈的线程。 第一次你创建的线程进入某些`ICorProfilerInfo*`方法 (包括`DoStackSnapshot`)，CLR 将执行每个线程，该线程上的特定于 CLR 的初始化。 如果您的探查器已挂起目标线程想要遍历，其堆栈，并且该目标线程恰巧拥有锁所需执行此每个线程初始化，将发生死锁。 若要避免这种死锁，进行初始调用到`DoStackSnapshot`单独从在探查器创建的线程以遍历目标线程，但不是先挂起目标线程。 此初始调用可确保每个线程初始化可以完成而无需死锁。 如果`DoStackSnapshot`成功，并且报告至少一个框架，该时间点后，将会挂起任何目标线程和调用该探查器创建线程安全`DoStackSnapshot`来遍历该目标线程的堆栈。  
   

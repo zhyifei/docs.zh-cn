@@ -3,11 +3,11 @@ title: 服务框架数据
 ms.date: 03/30/2017
 ms.assetid: 2a2c8ddc-4e82-4e7f-a79f-97085c469517
 ms.openlocfilehash: 5c65e9d473b5fe3f2b1c29824dcc1151abb0c3f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780799"
 ---
 # <a name="service-framework-data"></a>服务框架数据
 本主题列出由服务框架数据生成的所有异常。  
@@ -36,7 +36,7 @@ ms.locfileid: "33474011"
 |MultipleMessageHeadersWithActor|找到多个具有指定名称、命名空间和角色的标头。|  
 |MultipleRelatesToHeaders|找到多个具有指定关系的 RelatesTo 标头。 每个关系只允许有一个上述标头。|  
 |QueryFunctionTypeNotSupported|不支持 IXsltContextFunction 的指定返回类型。|  
-|QueryIteratorOutOfScope|XpathNodeIterator 已失效。 作为自变量传递给 IXsltContextFunction 的 XPathNodeIterator 仅在函数中有效。 无法将其缓存供以后使用或由函数返回。|  
+|QueryIteratorOutOfScope|XpathNodeIterator 已失效。 作为参数传递给 IXsltContextFunction 的 XPathNodeIterator 仅在函数中有效。 无法将其缓存供以后使用或由函数返回。|  
 |QueryVariableNull|IXsltContextVariable 方法不能返回 null。|  
 |QueryVariableTypeNotSupported|不支持指定的 IxsltContextVariable 派生类型。|  
 |ReceiveShutdownReturnedMessage|通道在关闭时接收到指定操作的意外输入消息。 在不再需要输入消息时关闭通道。|  

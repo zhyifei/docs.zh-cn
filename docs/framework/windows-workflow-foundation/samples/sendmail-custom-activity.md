@@ -3,11 +3,11 @@ title: SendMail 自定义活动
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785939"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
 本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的功能的<xref:System.Net.Mail.SmtpClient>以异步方式发送电子邮件以及发送身份验证的邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
@@ -107,13 +107,13 @@ new SendMail
   
  有关设置 SMTP 服务器的详细信息，请参阅以下链接。  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [配置 SMTP 服务 (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [配置 SMTP 服务 (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0:配置 SMTP 电子邮件](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0:配置 SMTP 电子邮件](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [如何安装 SMTP 服务](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [如何安装 SMTP 服务](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  可下载第三方提供的 SMTP 模拟器。  
   

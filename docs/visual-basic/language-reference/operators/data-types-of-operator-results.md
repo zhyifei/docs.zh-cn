@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778555"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>运算符结果的数据类型 (Visual Basic)
 Visual Basic 确定基于操作数的数据类型的操作的结果数据类型。 在某些情况下这可能是更大的范围比的其中一个操作数的数据类型。  
@@ -22,21 +22,21 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
 ## <a name="data-type-ranges"></a>数据类型范围  
  范围相关的数据类型，从最小到最大值，顺序如下所示：  
   
--   [布尔](../../../visual-basic/language-reference/data-types/boolean-data-type.md)— 两个可能的值  
+- [布尔](../../../visual-basic/language-reference/data-types/boolean-data-type.md)— 两个可能的值  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)，[字节](../../../visual-basic/language-reference/data-types/byte-data-type.md)-256 个可能的整数值  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)，[字节](../../../visual-basic/language-reference/data-types/byte-data-type.md)-256 个可能的整数值  
   
--   [短](../../../visual-basic/language-reference/data-types/short-data-type.md)， [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E + 4) 可能的整数值  
+- [短](../../../visual-basic/language-reference/data-types/short-data-type.md)， [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5...E + 4) 可能的整数值  
   
--   [整数](../../../visual-basic/language-reference/data-types/integer-data-type.md)， [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4294967296 (4.2...E + 9) 可能的整数值  
+- [整数](../../../visual-basic/language-reference/data-types/integer-data-type.md)， [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4294967296 (4.2...E + 9) 可能的整数值  
   
--   [长](../../../visual-basic/language-reference/data-types/long-data-type.md)， [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18446744073709551615 (1.8...E + 19) 可能的整数值  
+- [长](../../../visual-basic/language-reference/data-types/long-data-type.md)， [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18446744073709551615 (1.8...E + 19) 可能的整数值  
   
--   [十进制](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5...E + 29 可能整数的值，最大范围 7.9...E + 28 （绝对值）  
+- [十进制](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5...E + 29 可能整数的值，最大范围 7.9...E + 28 （绝对值）  
   
--   [单个](../../../visual-basic/language-reference/data-types/single-data-type.md)—...最大范围 3.4 E + 38 （绝对值）  
+- [单个](../../../visual-basic/language-reference/data-types/single-data-type.md)—...最大范围 3.4 E + 38 （绝对值）  
   
--   [双精度](../../../visual-basic/language-reference/data-types/double-data-type.md)—...最大范围 1.7 E + 308 （绝对值）  
+- [双精度](../../../visual-basic/language-reference/data-types/double-data-type.md)—...最大范围 1.7 E + 308 （绝对值）  
   
  Visual Basic 数据类型的详细信息，请参阅[数据类型](../../../visual-basic/language-reference/data-types/index.md)。  
   
@@ -68,11 +68,11 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
 ## <a name="integer-arithmetic"></a>整数运算  
  整数运算的结果数据类型取决于操作数的数据类型。 一般情况下，Visual Basic 用于确定结果数据类型使用以下策略：  
   
--   如果二元运算符的两个操作数具有相同的数据类型，结果也为该数据类型。 例外情况是`Boolean`，强制实施到`Short`。  
+- 如果二元运算符的两个操作数具有相同的数据类型，结果也为该数据类型。 例外情况是`Boolean`，强制实施到`Short`。  
   
--   如果与签名操作数合作来无符号的操作数，则结果包含与带符号的类型至少为大型范围作为其中一个操作数。  
+- 如果与签名操作数合作来无符号的操作数，则结果包含与带符号的类型至少为大型范围作为其中一个操作数。  
   
--   否则，结果通常具有较大的两个操作数数据类型。  
+- 否则，结果通常具有较大的两个操作数数据类型。  
   
  请注意，结果数据类型可能与任一操作数的数据类型相同。  
   

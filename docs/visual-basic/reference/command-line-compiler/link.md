@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: d8451a028def44ec7d5b629a1c0749321684e4d2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789033"
 ---
 # <a name="-link-visual-basic"></a>-链接 (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -49,9 +49,9 @@ ms.locfileid: "57202192"
   
  如果链接到本身引用了其他 COM 程序集（程序集 B）的 COM 程序集（程序集 A），则在满足以下任一条件时，还必须链接到程序集 B：  
   
--   程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
+- 程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
   
--   调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
+- 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一个或多个程序集引用所在的目录。  
   

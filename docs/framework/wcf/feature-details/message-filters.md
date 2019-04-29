@@ -5,11 +5,11 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785991"
 ---
 # <a name="message-filters"></a>消息筛选器
 为了实现基于内容的路由，路由服务使用 <xref:System.ServiceModel.Dispatcher.MessageFilter> 实现，这些实现检查消息的特定部分，例如地址、终结点名称或特定 XPath 语句。 如果随 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 一起提供的消息筛选器均无法满足您的需求，则您可以通过创建 <xref:System.ServiceModel.Dispatcher.MessageFilter> 基类的新实现来创建自定义筛选器。  
@@ -28,7 +28,7 @@ ms.locfileid: "48839100"
 |操作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 类匹配包含特定操作的消息。|筛选器基于的操作。|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
 |EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`来匹配包含特定地址的消息。|筛选器基于的地址（在 To 标头中）。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
 |EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`来匹配包含特定地址前缀的消息。|筛选器基于的地址（使用最长的前缀匹配项）。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|And|使用始终在返回前计算两个条件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 类。|不使用 filterData;而 filter1 和 filter2 具有相应消息筛选器的名称 （也在表中），应**AND**ed 组合在一起。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|且|使用始终在返回前计算两个条件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 类。|不使用 filterData;而 filter1 和 filter2 具有相应消息筛选器的名称 （也在表中），应**AND**ed 组合在一起。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |自定义|一个用户定义的类型，此类型扩展 <xref:System.ServiceModel.Dispatcher.MessageFilter> 类并具有采用字符串的构造函数。|customType 特性是要创建的类的完全限定类型名称；filterData 是在创建筛选器时要传递给构造函数的字符串。|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 类根据消息已到达的服务终结点的名称来匹配消息。|名称的服务终结点，例如:"serviceEndpoint1"。  该终结点应为在路由服务上公开的终结点之一。|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。 该筛选器匹配所有到达的消息。|不使用 filterData。 该筛选器将始终匹配所有消息。|\<filter name="matchAll1" filterType="MatchAll" />|  

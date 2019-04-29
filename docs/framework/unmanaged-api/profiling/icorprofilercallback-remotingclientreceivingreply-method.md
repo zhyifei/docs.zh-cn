@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775019"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply 方法
 通知探查器的远程处理调用的服务器端部分已完成，而客户端正在接收并即将处理回复。  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in]中提供的值的值将对应[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)在这些情况下：  
   
--   远程处理 GUID cookie 处于活动状态。  
+- 远程处理 GUID cookie 处于活动状态。  
   
--   通道成功传输消息。  
+- 通道成功传输消息。  
   
--   GUID cookie 处于活动状态的服务器端的过程。  
+- GUID cookie 处于活动状态的服务器端的过程。  
   
  这允许轻松配对的远程处理调用。  
   

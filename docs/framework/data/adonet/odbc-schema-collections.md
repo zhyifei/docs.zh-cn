@@ -3,11 +3,11 @@ title: ODBC 架构集合
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772042"
 ---
 # <a name="odbc-schema-collections"></a>ODBC 架构集合
 
@@ -21,7 +21,7 @@ Microsoft SQL Server ODBC 驱动程序还支持下列特定的架构集合除了
 
 - 索引
 
-- Columns
+- 列
 
 - 过程
 
@@ -29,7 +29,7 @@ Microsoft SQL Server ODBC 驱动程序还支持下列特定的架构集合除了
 
 - ProcedureParameters
 
-- 视图
+- Views
 
 ### <a name="tables-and-views"></a>Tables 和 Views
 
@@ -61,7 +61,7 @@ Microsoft SQL Server ODBC 驱动程序还支持下列特定的架构集合除了
 |SS_TYPE_SCHEMA|String|
 |SS_DATA_TYPE|Byte|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>列
 
 |列名|数据类型|
 |----------------|--------------|
@@ -160,7 +160,7 @@ Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集�
 
 - 表
 
-- Columns
+- 列
 
 - 过程
 
@@ -168,7 +168,7 @@ Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集�
 
 - ProcedureParameters
 
-- 视图
+- Views
 
 - 索引
 
@@ -182,7 +182,7 @@ Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集�
 |TABLE_TYPE|String|
 |REMARKS|String|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>列
 
 |列名|数据类型|
 |----------------|--------------|
@@ -241,7 +241,7 @@ Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集�
 
 - 索引
 
-- Columns
+- 列
 
 - 过程
 
@@ -249,7 +249,7 @@ Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集�
 
 - ProcedureParameters
 
-- 视图
+- Views
 
 ### <a name="tables-and-views"></a>Tables 和 Views
 
@@ -261,7 +261,7 @@ Microsoft SQL Server Oracle ODBC 驱动程序还支持下列特定的架构集�
 |TABLE_TYPE|String|
 |REMARKS|String|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>列
 
 |列名|数据类型|
 |----------------|--------------|

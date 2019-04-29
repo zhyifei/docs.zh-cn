@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
 ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777112"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>如何：添加依赖属性的所有者类型
 此示例演示如何将类添加为所有者为不同类型注册依赖属性。 通过执行此操作，请[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]读取器和属性系统都能够识别此类为附加属性的所有者。 （可选） 将添加为所有者可以选择添加类以提供特定于类型的元数据。  

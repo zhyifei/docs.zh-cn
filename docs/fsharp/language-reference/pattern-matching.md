@@ -3,11 +3,11 @@ title: 模式匹配
 description: 了解如何在中使用模式F#若要比较的逻辑结构的数据，将数据分解为各个构成部分，或从数据中提取信息。
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795455"
 ---
 # <a name="pattern-matching"></a>模式匹配
 
@@ -29,23 +29,23 @@ match expression with
 
 受支持的模式下表所示。 在运行时，对输入进行测试对每个表中列出的顺序中的以下模式和模式以递归方式应用，从第一次到最后一个出现在代码中，并从左到右的模式的每个行。
 
-|name|描述|示例|
+|名称|描述|示例|
 |----|-----------|-------|
 |常量模式|任何数字、 字符或字符串文本、 枚举常量或定义的文本标识符|`1.0`, `"test"`, `30`, `Color.Red`|
 |标识符模式|可区分的联合、 异常标签或活动模式用例的用例值|`Some(x)`<br /><br />`Failure(msg)`|
 |变量模式|*identifier*|`a`|
 |`as` 模式|*模式*作为*标识符*|`(a, b) as tuple1`|
-|或模式|*pattern1* &#124; *pattern2 下*|<code>([h] &#124; [h; _])</code>|
-|和模式|*pattern1* &amp; *pattern2 下*|`(a, b) & (_, "test")`|
+|或模式|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
+|和模式|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Cons 模式|*标识符*::*列表标识符*|`h :: t`|
-|列表模式|[*模式 1*;...;*模式 n* ]|`[ a; b; c ]`|
-|数组模式|[&#124; *模式 1*;..;*模式 n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|带括号模式|(*模式*)|`( a )`|
+|列表模式|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
+|数组模式|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|带括号模式|( *pattern* )|`( a )`|
 |元组模式|(*模式 1*、...、*模式 n* )|`( a, b )`|
-|记录模式|{ *identifier1* = *模式 1*;...;*标识符 n* = *模式 n* }|`{ Name = name; }`|
+|记录模式|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |通配符模式|_|`_`|
-|带有类型批注的模式|*模式*:*类型*|`a : int`|
-|类型测试模式|:? *类型*[作为*标识符*]|`:? System.DateTime as dt`|
+|带有类型批注的模式|*pattern* : *type*|`a : int`|
+|类型测试模式|:? *type* [ as *identifier* ]|`:? System.DateTime as dt`|
 |Null 模式|null|`null`|
 
 ## <a name="constant-patterns"></a>常量模式

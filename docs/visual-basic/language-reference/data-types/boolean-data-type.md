@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796989"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 数据类型 (Visual Basic)
 可以仅由值保存`True`或`False`。 关键字`True`并`False`对应的两种状态`Boolean`变量。  
@@ -36,11 +36,11 @@ ms.locfileid: "58841209"
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **负号。** `Boolean` 不是数值类型，不能表示为负值。 在任何情况下，不应使用`Boolean`来保存数值。  
+- **负号。** `Boolean` 不是数值类型，不能表示为负值。 在任何情况下，不应使用`Boolean`来保存数值。  
   
--   **类型字符。** `Boolean` 不包含文本类型字符或标识符类型字符。  
+- **类型字符。** `Boolean` 不包含文本类型字符或标识符类型字符。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Boolean?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Boolean?displayProperty=nameWithType> 结构。  
   
 ## <a name="example"></a>示例  
  在以下示例中，`runningVB`是`Boolean`变量，其中存储一个简单的是/否设置。  

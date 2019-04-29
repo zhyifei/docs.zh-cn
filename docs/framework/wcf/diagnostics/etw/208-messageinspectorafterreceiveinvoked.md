@@ -3,18 +3,18 @@ title: 208 - MessageInspectorAfterReceiveInvoked
 ms.date: 03/30/2017
 ms.assetid: dfb5f7b0-4346-4949-8104-351726b1f502
 ms.openlocfilehash: 3499131fcb52f0a0ab6d0e78e165522b7092612f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781896"
 ---
 # <a name="208---messageinspectorafterreceiveinvoked"></a>208 - MessageInspectorAfterReceiveInvoked
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|208|  
+|Id|208|  
 |关键字|疑难解答，ServiceModel|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  
@@ -30,5 +30,5 @@ ms.locfileid: "33458893"
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|所调用 `MessageInspector` 的类型的 CLR FullName。|  
-|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;ServiceName。 示例: 默认网站/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService。|  
-|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;ServiceName。 示例:默认网站/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService。|  
+|应用程序域|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

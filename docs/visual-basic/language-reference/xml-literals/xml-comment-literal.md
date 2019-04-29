@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938640"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 注释文本 (Visual Basic)
 一个文本表示<xref:System.Xml.Linq.XComment>对象。  
@@ -39,9 +39,9 @@ ms.locfileid: "58827271"
 ## <a name="remarks"></a>备注  
  XML 注释文本不包含文档内容;它们包含有关文档的信息。 序列"-->"结尾的 XML 注释部分。 这意味着以下几点：  
   
--   因为嵌入的分隔符是有效的 XML 注释内容，不能在 XML 注释文本中使用嵌入式的表达式。  
+- 因为嵌入的分隔符是有效的 XML 注释内容，不能在 XML 注释文本中使用嵌入式的表达式。  
   
--   XML 注释节无法嵌套，因为`content`不能包含值"-->"。  
+- XML 注释节无法嵌套，因为`content`不能包含值"-->"。  
   
  可以将 XML 注释文本分配给一个变量，或将其包含在 XML 元素文本中。  
   

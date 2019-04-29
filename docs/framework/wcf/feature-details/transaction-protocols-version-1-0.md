@@ -3,11 +3,11 @@ title: 事务协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
 ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764618"
 ---
 # <a name="transaction-protocols-version-10"></a>事务协议版本 1.0
 Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和 Ws-coordination 协议的版本 1.0。 有关版本 1.1 的详细信息，请参阅[事务协议](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
@@ -45,13 +45,13 @@ Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和
   
  图和表从安全性的角度演示了四种消息类：  
   
--   激活消息（CreateCoordinationContext 和 CreateCoordinationContextResponse）。  
+- 激活消息（CreateCoordinationContext 和 CreateCoordinationContextResponse）。  
   
--   注册消息（Register 和 RegisterResponse）  
+- 注册消息（Register 和 RegisterResponse）  
   
--   协议消息（Prepare、Rollback、Commit、Aborted 等）。  
+- 协议消息（Prepare、Rollback、Commit、Aborted 等）。  
   
--   应用程序消息。  
+- 应用程序消息。  
   
  前三种消息类可视为事务管理器消息，本主题后面的“应用程序消息交换”将说明它们的绑定配置。 第四种消息类是应用程序间消息，本主题后面的“消息示例”一节将对它进行说明。 本部分介绍 WCF 为每个类使用的协议绑定。  
   
@@ -78,9 +78,9 @@ Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和
 #### <a name="https-transport-configuration"></a>HTTPS 传输配置  
  X.509 证书用于建立事务管理器标识。 要求对客户端/服务器进行身份验证，客户端/服务器授权作为实现详细信息保留：  
   
--   R1111:通过网络提供的 X.509 证书必须具有使用者名称相匹配的原始计算机的完全限定的域名 (FQDN)。  
+- R1111:通过网络提供的 X.509 证书必须具有使用者名称相匹配的原始计算机的完全限定的域名 (FQDN)。  
   
--   B1112:DNS 必须 X.509 主题名称检查在系统中每个发送方接收方对成功之间的功能。  
+- B1112:DNS 必须 X.509 主题名称检查在系统中每个发送方接收方对成功之间的功能。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>激活和注册绑定配置  
  WCF 要求通过 HTTPS 使用相关的请求/答复双工绑定。 （有关关联的更多信息和请求/答复消息交换模式的说明，请参见 WS-Atomic Transaction，第 8 节。）  
@@ -103,9 +103,9 @@ Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和
   
  WS-Atomic Transaction 规范第 8 节更详尽地说明了关联和消息交换模式。  
   
--   R1222:在接收时`CreateCoordinationContext`，协调器必须发出`SecurityContextToken`与关联的机密`STx`。 在遵循 WS-Trust 规范的 `t:IssuedTokens` 标头中返回此令牌。  
+- R1222:在接收时`CreateCoordinationContext`，协调器必须发出`SecurityContextToken`与关联的机密`STx`。 在遵循 WS-Trust 规范的 `t:IssuedTokens` 标头中返回此令牌。  
   
--   R1223:如果激活出现在现有的协调上下文`t:IssuedTokens`标头`SecurityContextToken`与现有关联上下文必须流上`CreateCoordinationContext`消息。  
+- R1223:如果激活出现在现有的协调上下文`t:IssuedTokens`标头`SecurityContextToken`与现有关联上下文必须流上`CreateCoordinationContext`消息。  
   
  一个新`t:IssuedTokens`标头应为附加到传出生成`wscoor:CreateCoordinationContextResponse`消息。  
   
@@ -126,9 +126,9 @@ Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和
 ## <a name="application-message-exchange"></a>应用程序消息交换  
  只要绑定满足下面的安全要求，应用程序就可以对应用程序间消息随意使用任何特定的绑定：  
   
--   R2001:应用程序的消息必须流经`t:IssuedTokens`标头与`CoordinationContext`消息的标头中。  
+- R2001:应用程序的消息必须流经`t:IssuedTokens`标头与`CoordinationContext`消息的标头中。  
   
--   R2002:完整性和保密性`t:IssuedToken`必须提供。  
+- R2002:完整性和保密性`t:IssuedToken`必须提供。  
   
  `CoordinationContext` 标头包含 `wscoor:Identifier`。 尽管的定义`xsd:AnyURI`允许的绝对和相对 Uri，使用 WCF 支持仅`wscoor:Identifiers`，它是绝对 Uri。  
   

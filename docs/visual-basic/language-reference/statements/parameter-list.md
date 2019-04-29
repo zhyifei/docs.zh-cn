@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784002"
 ---
 # <a name="parameter-list-visual-basic"></a>参数列表 (Visual Basic)
 指定过程需要被调用时的参数。 由逗号分隔多个参数。 下面是一个参数的语法。  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>规则  
   
--   **括号。** 如果指定的参数列表，则必须将其括在括号中。 如果没有任何参数，仍可以使用括号内包含一个空列表。 这将通过清晰化元素一个过程提高代码的可读性。  
+- **括号。** 如果指定的参数列表，则必须将其括在括号中。 如果没有任何参数，仍可以使用括号内包含一个空列表。 这将通过清晰化元素一个过程提高代码的可读性。  
   
--   **可选参数。** 如果您使用`Optional`参数的修饰符，列表中的所有后续参数也是可选和通过使用声明`Optional`修饰符。  
+- **可选参数。** 如果您使用`Optional`参数的修饰符，列表中的所有后续参数也是可选和通过使用声明`Optional`修饰符。  
   
      每个可选参数声明必须提供`defaultvalue`子句。  
   
      有关详细信息，请参阅[可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)。  
   
--   **参数数组。** 必须指定`ByVal`为`ParamArray`参数。  
+- **参数数组。** 必须指定`ByVal`为`ParamArray`参数。  
   
      不能使用两者`Optional`和`ParamArray`相同的参数列表中。  
   
      有关详细信息，请参阅[参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。  
   
--   **传递机制。** 每个参数的默认机制是`ByVal`，这意味着该过程不能更改基础变量元素。 但是，如果元素是引用类型，该过程可以修改内容或成员的基础对象，即使它不能替换或重新分配对象本身。  
+- **传递机制。** 每个参数的默认机制是`ByVal`，这意味着该过程不能更改基础变量元素。 但是，如果元素是引用类型，该过程可以修改内容或成员的基础对象，即使它不能替换或重新分配对象本身。  
   
--   **参数名称。** 如果参数的数据类型是一个数组，请按照`parametername`紧跟括号。 参数名称的详细信息，请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+- **参数名称。** 如果参数的数据类型是一个数组，请按照`parametername`紧跟括号。 参数名称的详细信息，请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示`Function`定义两个参数的过程。  

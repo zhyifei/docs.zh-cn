@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
 ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781285"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>如何：用纯色填充形状
 若要使用纯色填充形状，创建<xref:System.Drawing.SolidBrush>对象，，然后将其传递<xref:System.Drawing.SolidBrush>对象的填充方法之一的参数作为<xref:System.Drawing.Graphics>类。 下面的示例演示如何使用的颜色为红色填充椭圆。  

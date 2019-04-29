@@ -8,11 +8,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938978"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.Button> 控件允许用户通过单击来执行某项操作。 单击该按钮时，看上去它像是被按下并释放。 每当用户单击一个按钮，<xref:System.Windows.Forms.Control.Click>调用事件处理程序。 你将代码放在<xref:System.Windows.Forms.Control.Click>事件处理程序以执行所选择的任何操作。  

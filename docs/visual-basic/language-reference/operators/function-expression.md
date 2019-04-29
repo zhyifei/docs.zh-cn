@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778529"
 ---
 # <a name="function-expression-visual-basic"></a>函数表达式 (Visual Basic)
 声明的参数和函数的 lambda 表达式定义的代码。  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Lambda 表达式语法  
  Lambda 表达式的语法类似于标准函数。 差异如下所示：  
   
--   Lambda 表达式没有名称。  
+- Lambda 表达式没有名称。  
   
--   Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
+- Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
   
--   不使用 lambda 表达式`As`子句来指定该函数的返回类型。 相反，从单行 lambda 表达式的主体的计算结果为，值或多行 lambda 表达式的返回值推断类型。 例如，单行 lambda 表达式的主体是否`Where cust.City = "London"`，其返回类型是`Boolean`。  
+- 不使用 lambda 表达式`As`子句来指定该函数的返回类型。 相反，从单行 lambda 表达式的主体的计算结果为，值或多行 lambda 表达式的返回值推断类型。 例如，单行 lambda 表达式的主体是否`Where cust.City = "London"`，其返回类型是`Boolean`。  
   
--   单行 lambda 表达式的主体必须是表达式，而不是语句。 主体可以包含调用的函数过程中，但未一个 sub 过程调用。  
+- 单行 lambda 表达式的主体必须是表达式，而不是语句。 主体可以包含调用的函数过程中，但未一个 sub 过程调用。  
   
--   必须必须推断数据类型或全部指定或者所有参数。  
+- 必须必须推断数据类型或全部指定或者所有参数。  
   
--   不允许使用可选和 Paramarray 参数。  
+- 不允许使用可选和 Paramarray 参数。  
   
--   不允许使用泛型参数。  
+- 不允许使用泛型参数。  
   
 ## <a name="example"></a>示例  
  下面的示例演示两种方法来创建简单的 lambda 表达式。 第一个示例使用`Dim`提供函数的名称。 若要调用函数时，发送时的参数值中。  

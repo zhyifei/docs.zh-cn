@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c3bebe8eabd4d5fd5faec21e0b0efc408353bc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796807"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 接口
 提供允许公共语言运行时 (CLR) 与主机提供的 I/O 完成端口进行交互的方法。  

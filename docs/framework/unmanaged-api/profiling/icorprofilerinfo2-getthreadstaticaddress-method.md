@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8a842dd531576b1029c3924d12b1a4bd95bde37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791555"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress 方法
 获取指定在范围内的指定线程的线程静态字段的地址。  
@@ -53,9 +53,9 @@ HRESULT GetThreadStaticAddress(
 ## <a name="remarks"></a>备注  
  `GetThreadStaticAddress`方法可能会返回以下值之一：  
   
--   如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
+- 如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
   
--   可能在垃圾回收堆的对象的地址。 垃圾回收后，这些地址可能会变为无效操作后垃圾收集探查器不应假定其是否有效。  
+- 可能在垃圾回收堆的对象的地址。 垃圾回收后，这些地址可能会变为无效操作后垃圾收集探查器不应假定其是否有效。  
   
  类的类构造函数完成之前，`GetThreadStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，尽管可能已初始化的一些静态字段和根垃圾回收对象。  
   

@@ -3,11 +3,11 @@ title: 编译器指令
 description: 了解如何F#语言预处理器指令、 条件编译指令、 行指令和编译器指令。
 ms.date: 12/10/2018
 ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766098"
 ---
 # <a name="compiler-directives"></a>编译器指令
 
@@ -24,7 +24,7 @@ ms.locfileid: "53614033"
 |`#if` *符号*|支持条件编译。 后面部分中的代码`#if`如果，则包含*符号*定义。 此外可以使用取反符号`!`。|
 |`#else`|支持条件编译。 如果未定义与前面的 `#if` 一起使用的符号，则将一段代码标记为包含在内。|
 |`#endif`|支持条件编译。 标记条件代码段的末尾。|
-|`#`[行]*int*，<br/>`#`[行]*int* *字符串*，<br/>`#`[行]*int* *逐字字符串*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
+|`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
 |`#nowarn` *warningcode*|禁用编译器警告。 若要禁用警告，请在编译器输出中查找其编号，然后将它包含在引号内。 省略“FS”前缀。 若要禁用同一行上的多个警告编号，请将每个编号用引号引起来，并使用空格分隔每个字符串。 例如：
 
 `#nowarn "9" "40"`

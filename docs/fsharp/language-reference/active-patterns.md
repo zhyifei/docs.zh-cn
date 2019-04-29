@@ -3,11 +3,11 @@ title: 活动模式
 description: 了解如何使用活动模式以定义细分输入的数据中的命名的分区F#编程语言。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772744"
 ---
 # <a name="active-patterns"></a>活动模式
 

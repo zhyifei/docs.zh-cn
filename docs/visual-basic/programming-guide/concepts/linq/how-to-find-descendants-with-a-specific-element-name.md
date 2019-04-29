@@ -3,11 +3,11 @@ title: 如何：查找具有特定元素名称 (Visual Basic 中) 的子代
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
 ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780492"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>如何：查找具有特定元素名称 (Visual Basic 中) 的子代
 有时，您想要查找所有具有特定名称的子代。 可以编写代码用于循环访问所有子代，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴更简单。  

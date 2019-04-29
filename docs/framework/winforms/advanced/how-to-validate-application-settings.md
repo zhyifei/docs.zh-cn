@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778841"
 ---
 # <a name="how-to-validate-application-settings"></a>如何：验证应用程序设置
 本主题演示如何在保留应用程序设置前先验证它们。  
@@ -34,11 +34,11 @@ ms.locfileid: "59317879"
   
  事件处理程序检测到无效值时通常执行以下操作之一：  
   
--   自动提供已知是正确的值，如默认值。  
+- 自动提供已知是正确的值，如默认值。  
   
--   再次询问服务器代码用户，以获取信息。  
+- 再次询问服务器代码用户，以获取信息。  
   
--   如及其关联的操作之前引发的事件<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>并<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，使用<xref:System.ComponentModel.CancelEventArgs>参数来取消该操作。  
+- 如及其关联的操作之前引发的事件<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>并<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，使用<xref:System.ComponentModel.CancelEventArgs>参数来取消该操作。  
   
  有关事件处理的详细信息，请参阅[事件处理程序概述](../event-handlers-overview-windows-forms.md)。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "59317879"
   
 ### <a name="to-obtain-the-application-settings-object"></a>获取应用程序设置对象  
   
--   通过完成以下项目符号项之一，获取对应用程序设置对象（包装器实例）的引用：  
+- 通过完成以下项目符号项之一，获取对应用程序设置对象（包装器实例）的引用：  
   
-    -   如果使用“属性编辑器”中的“Visual Studio 应用程序设置”对话框创建设置，则可通过以下表达式检索为语言生成的默认设置对象。  
+    - 如果使用“属性编辑器”中的“Visual Studio 应用程序设置”对话框创建设置，则可通过以下表达式检索为语言生成的默认设置对象。  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ ms.locfileid: "59317879"
   
          或  
   
-    -   如果是 Visual Basic 开发人员并使用项目设计器创建应用程序设置，则可通过使用 [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md) 对象来检索设置。  
+    - 如果是 Visual Basic 开发人员并使用项目设计器创建应用程序设置，则可通过使用 [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md) 对象来检索设置。  
   
          或  
   
-    -   如果通过从派生来创建你的设置<xref:System.Configuration.ApplicationSettingsBase>直接，您需要手动实例化类。  
+    - 如果通过从派生来创建你的设置<xref:System.Configuration.ApplicationSettingsBase>直接，您需要手动实例化类。  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

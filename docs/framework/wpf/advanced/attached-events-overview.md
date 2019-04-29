@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777138"
 ---
 # <a name="attached-events-overview"></a>附加事件概述
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定义了一个语言组件和称为附加事件的事件类型。 通过附加事件的概念，你能够向任意元素（而不是实际定义或继承事件的元素）添加特定事件的处理程序。 在这种情况下，对象既不会引发事件，目标处理实例也不会定义或“拥有”事件。  
@@ -64,9 +64,9 @@ ms.locfileid: "59613585"
   
  模式如下：  
   
--   一种方法**外*EventName*处理程序**使用两个参数。 第一个参数是要向其添加事件处理程序的实例。 第二个参数是要添加的事件处理程序。 该方法必须是`public`和`static`，不返回值。  
+- 一种方法**外*EventName*处理程序**使用两个参数。 第一个参数是要向其添加事件处理程序的实例。 第二个参数是要添加的事件处理程序。 该方法必须是`public`和`static`，不返回值。  
   
--   一种方法**删除*EventName*处理程序**使用两个参数。 第一个参数是从中删除事件处理程序的实例。 第二个参数是要删除的事件处理程序。 该方法必须是`public`和`static`，不返回值。  
+- 一种方法**删除*EventName*处理程序**使用两个参数。 第一个参数是从中删除事件处理程序的实例。 第二个参数是要删除的事件处理程序。 该方法必须是`public`和`static`，不返回值。  
   
  **外*EventName*处理程序**访问器方法可以加快[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]时处理附加事件处理程序在元素声明属性。 **外*EventName*处理程序**并**删除*EventName*处理程序**方法还可实现的事件处理程序存储区对代码访问附加事件。  
   

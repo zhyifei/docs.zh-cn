@@ -5,11 +5,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
 ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938250"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>演练：验证密码是否复杂 (Visual Basic)
 此方法检查某些强密码特性，并使用有关检查密码失败的信息更新的字符串参数。  
@@ -28,20 +28,20 @@ ms.locfileid: "58824931"
   
  此示例需要：  
   
--   对 <xref:System.Text.RegularExpressions> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+- 对 <xref:System.Text.RegularExpressions> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="security"></a>安全性  
  如果你正在通过网络迁移密码，需要使用安全的方法来传输数据。 有关详细信息，请参阅[ASP.NET Web 应用程序安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))。
   
  您可以提高准确性`ValidatePassword`通过添加其他复杂性检查函数：  
   
--   将密码和针对用户的名称、 用户标识符和应用程序定义的字典及其子字符串进行比较。 执行比较时，将看上去很相似字符视为等效。 例如，将字母"l"和"e"视为等效于数字"1"和"3"。  
+- 将密码和针对用户的名称、 用户标识符和应用程序定义的字典及其子字符串进行比较。 执行比较时，将看上去很相似字符视为等效。 例如，将字母"l"和"e"视为等效于数字"1"和"3"。  
   
--   如果只有一个大写字符，请确保它不是密码的第一个字符。  
+- 如果只有一个大写字符，请确保它不是密码的第一个字符。  
   
--   请确保密码的最后两个字符的字母字符。  
+- 请确保密码的最后两个字符的字母字符。  
   
--   不允许从键盘的首行输入所有符号的密码。  
+- 不允许从键盘的首行输入所有符号的密码。  
   
 ## <a name="see-also"></a>请参阅
 

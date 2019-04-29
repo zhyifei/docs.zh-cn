@@ -3,11 +3,11 @@ title: .NET Framework XAML 服务的 XAML 命名空间
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938770"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 服务的 XAML 命名空间
 XAML 命名空间是扩展的定义中的 XML 命名空间的概念。 类似于 XML 命名空间，您可以定义 XAML 命名空间使用`xmlns`标记中的属性。 在 XAML 节点流和其他 XAML 服务 Api 中还表示 XAML 命名空间。 本主题定义 XAML 命名空间概念，并说明如何 XAML 命名空间可以定义和使用的 XAML 架构上下文和.NET Framework XAML 服务的其他方面。  

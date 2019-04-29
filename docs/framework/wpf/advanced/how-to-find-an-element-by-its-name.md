@@ -8,11 +8,11 @@ helpviewer_keywords:
 - elements [WPF], finding by name
 ms.assetid: cfa7cf35-8aa2-4060-9454-872ed4af3f0e
 ms.openlocfilehash: 7405f9ba8db5d4db0ce35ca250f13e456685f39b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757841"
 ---
 # <a name="how-to-find-an-element-by-its-name"></a>如何：按名称查找元素
 此示例介绍了如何使用<xref:System.Windows.FrameworkElement.FindName%2A>方法以按查找元素及其<xref:System.Windows.FrameworkElement.Name%2A>值。  

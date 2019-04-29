@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784197"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 导致当前类或接口继承另一个类或接口集的属性、 变量、 属性、 过程和事件。  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>规则  
   
--   **类继承。** 如果类使用`Inherits`语句中，可以指定只有一个基类。  
+- **类继承。** 如果类使用`Inherits`语句中，可以指定只有一个基类。  
   
      类不能从嵌套在它的类继承。  
   
--   **接口继承。** 如果接口使用`Inherits`语句，则可以指定一个或多个基接口。 您可以即使它们每个定义具有相同名称的成员，从两个接口继承。 如果这样做，实现代码必须使用名称限定来指定它正在实现的成员。  
+- **接口继承。** 如果接口使用`Inherits`语句，则可以指定一个或多个基接口。 您可以即使它们每个定义具有相同名称的成员，从两个接口继承。 如果这样做，实现代码必须使用名称限定来指定它正在实现的成员。  
   
      接口不能从具有限制性更强的访问级别的另一个接口继承。 例如，`Public`不能继承自接口`Friend`接口。  
   

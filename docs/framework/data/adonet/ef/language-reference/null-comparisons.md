@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
 ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760423"
 ---
 # <a name="null-comparisons"></a>Null 比较
 数据源中的 `null` 值指示未知的值。 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中，可以检查 null 值以便仅对具有有效（非 null）数据的行执行特定的计算或比较。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  

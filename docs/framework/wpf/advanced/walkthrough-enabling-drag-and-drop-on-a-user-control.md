@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778899"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：在用户控件上启用拖放功能
 
@@ -23,13 +23,13 @@ ms.locfileid: "59321674"
 
 本演练阐释了以下任务：
 
--   创建自定义用户控件。
+- 创建自定义用户控件。
 
--   使用户控件成为拖动源。
+- 使用户控件成为拖动源。
 
--   使用户控件成为拖放目标。
+- 使用户控件成为拖放目标。
 
--   使面板能够接收用户控件中放置的数据。
+- 使面板能够接收用户控件中放置的数据。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -108,17 +108,17 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.OnMouseMove%2A>替代执行以下任务：
 
-    -   检查移动鼠标时是否按下了鼠标左键。
+    - 检查移动鼠标时是否按下了鼠标左键。
 
-    -   将圆形数据打包到<xref:System.Windows.DataObject>。 在这种情况下，圆形控件将打包三个数据项：其填充颜色的字符串表示形式、其高度的双精度表示形式以及其自身的副本。
+    - 将圆形数据打包到<xref:System.Windows.DataObject>。 在这种情况下，圆形控件将打包三个数据项：其填充颜色的字符串表示形式、其高度的双精度表示形式以及其自身的副本。
 
-    -   调用静态<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>方法启动拖放操作。 传递到以下三个参数<xref:System.Windows.DragDrop.DoDragDrop%2A>方法：
+    - 调用静态<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>方法启动拖放操作。 传递到以下三个参数<xref:System.Windows.DragDrop.DoDragDrop%2A>方法：
 
-        -   `dragSource` – 对此控件的引用。
+        - `dragSource` – 对此控件的引用。
 
-        -   `data` –<xref:System.Windows.DataObject>前面的代码中创建。
+        - `data` –<xref:System.Windows.DataObject>前面的代码中创建。
 
-        -   `allowedEffects` – 允许的拖放操作，即<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
+        - `allowedEffects` – 允许的拖放操作，即<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
 
 3. 按 F5 生成并运行该应用程序。
 
@@ -143,9 +143,9 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.OnGiveFeedback%2A>替代执行以下任务：
 
-    -   检查<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>拖放目标中设置的值<xref:System.Windows.UIElement.DragOver>事件处理程序。
+    - 检查<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>拖放目标中设置的值<xref:System.Windows.UIElement.DragOver>事件处理程序。
 
-    -   设置基于自定义光标<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>值。 该光标旨在向用户提供关于放置数据所产生的效果的可视反馈。
+    - 设置基于自定义光标<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>值。 该光标旨在向用户提供关于放置数据所产生的效果的可视反馈。
 
 3. 按 F5 生成并运行该应用程序。
 
@@ -181,15 +181,15 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.OnDrop%2A>替代执行以下任务：
 
-    -   使用<xref:System.Windows.DataObject.GetDataPresent%2A>方法用于检查拖动的数据是否包含字符串对象。
+    - 使用<xref:System.Windows.DataObject.GetDataPresent%2A>方法用于检查拖动的数据是否包含字符串对象。
 
-    -   使用<xref:System.Windows.DataObject.GetData%2A>方法提取字符串数据，如果存在。
+    - 使用<xref:System.Windows.DataObject.GetData%2A>方法提取字符串数据，如果存在。
 
-    -   使用<xref:System.Windows.Media.BrushConverter>尝试将字符串转换为<xref:System.Windows.Media.Brush>。
+    - 使用<xref:System.Windows.Media.BrushConverter>尝试将字符串转换为<xref:System.Windows.Media.Brush>。
 
-    -   如果转换成功，将应用到画笔<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供圆形控件的 UI。
+    - 如果转换成功，将应用到画笔<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供圆形控件的 UI。
 
-    -   标记<xref:System.Windows.UIElement.Drop>为已处理的事件。 应将放置事件标记为已处理，这样接收此事件的其他元素才会知道圆形用户控件已处理了该事件。
+    - 标记<xref:System.Windows.UIElement.Drop>为已处理的事件。 应将放置事件标记为已处理，这样接收此事件的其他元素才会知道圆形用户控件已处理了该事件。
 
 3. 按 F5 生成并运行该应用程序。
 
@@ -222,11 +222,11 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.OnDragOver%2A>替代执行以下任务：
 
-    -   将 <xref:System.Windows.DragEventArgs.Effects%2A> 属性设置为 <xref:System.Windows.DragDropEffects.None>。
+    - 将 <xref:System.Windows.DragEventArgs.Effects%2A> 属性设置为 <xref:System.Windows.DragDropEffects.None>。
 
-    -   执行在中执行的相同检查<xref:System.Windows.UIElement.OnDrop%2A>方法，以确定圆形用户控件是否可以处理拖动的数据。
+    - 执行在中执行的相同检查<xref:System.Windows.UIElement.OnDrop%2A>方法，以确定圆形用户控件是否可以处理拖动的数据。
 
-    -   如果用户控件可以处理数据，设置<xref:System.Windows.DragEventArgs.Effects%2A>属性设置为<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
+    - 如果用户控件可以处理数据，设置<xref:System.Windows.DragEventArgs.Effects%2A>属性设置为<xref:System.Windows.DragDropEffects.Copy>或<xref:System.Windows.DragDropEffects.Move>。
 
 3. 按 F5 生成并运行该应用程序。
 
@@ -252,11 +252,11 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.OnDragEnter%2A>替代执行以下任务：
 
-    -   将保存<xref:System.Windows.Shapes.Shape.Fill%2A>的属性<xref:System.Windows.Shapes.Ellipse>中`_previousFill`变量。
+    - 将保存<xref:System.Windows.Shapes.Shape.Fill%2A>的属性<xref:System.Windows.Shapes.Ellipse>中`_previousFill`变量。
 
-    -   执行在中执行的相同检查<xref:System.Windows.UIElement.OnDrop%2A>方法，以确定数据是否可以转换为<xref:System.Windows.Media.Brush>。
+    - 执行在中执行的相同检查<xref:System.Windows.UIElement.OnDrop%2A>方法，以确定数据是否可以转换为<xref:System.Windows.Media.Brush>。
 
-    -   如果数据转换为有效<xref:System.Windows.Media.Brush>，将其应用于<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>。
+    - 如果数据转换为有效<xref:System.Windows.Media.Brush>，将其应用于<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>。
 
 4. 添加以下<xref:System.Windows.UIElement.OnDragLeave%2A>替代，以便提供类处理<xref:System.Windows.UIElement.DragLeave>事件。
 
@@ -265,7 +265,7 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.OnDragLeave%2A>替代执行以下任务：
 
-    -   适用<xref:System.Windows.Media.Brush>以保存`_previousFill`变量<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供圆形用户控件的 UI。
+    - 适用<xref:System.Windows.Media.Brush>以保存`_previousFill`变量<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Ellipse>提供圆形用户控件的 UI。
 
 5. 按 F5 生成并运行该应用程序。
 
@@ -296,11 +296,11 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.DragOver>事件处理程序执行以下任务：
 
-    -   检查拖动的数据包含已打包的中的"对象"数据<xref:System.Windows.DataObject>由圆形用户控件，并对的调用中传递<xref:System.Windows.DragDrop.DoDragDrop%2A>。
+    - 检查拖动的数据包含已打包的中的"对象"数据<xref:System.Windows.DataObject>由圆形用户控件，并对的调用中传递<xref:System.Windows.DragDrop.DoDragDrop%2A>。
 
-    -   如果"对象"数据存在，检查是否**Ctrl**按下键。
+    - 如果"对象"数据存在，检查是否**Ctrl**按下键。
 
-    -   如果**Ctrl**按下键，集<xref:System.Windows.DragEventArgs.Effects%2A>属性设置为<xref:System.Windows.DragDropEffects.Copy>。 否则，设置<xref:System.Windows.DragEventArgs.Effects%2A>属性设置为<xref:System.Windows.DragDropEffects.Move>。
+    - 如果**Ctrl**按下键，集<xref:System.Windows.DragEventArgs.Effects%2A>属性设置为<xref:System.Windows.DragDropEffects.Copy>。 否则，设置<xref:System.Windows.DragEventArgs.Effects%2A>属性设置为<xref:System.Windows.DragDropEffects.Move>。
 
 5. 添加以下代码为<xref:System.Windows.UIElement.Drop>事件处理程序。
 
@@ -309,15 +309,15 @@ ms.locfileid: "59321674"
 
      这<xref:System.Windows.UIElement.Drop>事件处理程序执行以下任务：
 
-    -   检查是否<xref:System.Windows.UIElement.Drop>已处理事件。 例如，如果一个圆形放置在另一圈的句柄<xref:System.Windows.UIElement.Drop>事件，您不希望包含还处理该圆形的面板。
+    - 检查是否<xref:System.Windows.UIElement.Drop>已处理事件。 例如，如果一个圆形放置在另一圈的句柄<xref:System.Windows.UIElement.Drop>事件，您不希望包含还处理该圆形的面板。
 
-    -   如果<xref:System.Windows.UIElement.Drop>不处理事件，检查是否**Ctrl**按下键。
+    - 如果<xref:System.Windows.UIElement.Drop>不处理事件，检查是否**Ctrl**按下键。
 
-    -   如果**Ctrl**按下键时<xref:System.Windows.UIElement.Drop>发生，会复制该圆形控件并将其添加到<xref:System.Windows.Controls.Panel.Children%2A>的集合<xref:System.Windows.Controls.StackPanel>。
+    - 如果**Ctrl**按下键时<xref:System.Windows.UIElement.Drop>发生，会复制该圆形控件并将其添加到<xref:System.Windows.Controls.Panel.Children%2A>的集合<xref:System.Windows.Controls.StackPanel>。
 
-    -   如果**Ctrl**未按下键，将移动从圆<xref:System.Windows.Controls.Panel.Children%2A>到其父面板的集合<xref:System.Windows.Controls.Panel.Children%2A>面板已被删除的集合。
+    - 如果**Ctrl**未按下键，将移动从圆<xref:System.Windows.Controls.Panel.Children%2A>到其父面板的集合<xref:System.Windows.Controls.Panel.Children%2A>面板已被删除的集合。
 
-    -   集<xref:System.Windows.DragEventArgs.Effects%2A>属性以通知<xref:System.Windows.DragDrop.DoDragDrop%2A>方法是否执行了移动或复制操作。
+    - 集<xref:System.Windows.DragEventArgs.Effects%2A>属性以通知<xref:System.Windows.DragDrop.DoDragDrop%2A>方法是否执行了移动或复制操作。
 
 6. 按 F5 生成并运行该应用程序。
 

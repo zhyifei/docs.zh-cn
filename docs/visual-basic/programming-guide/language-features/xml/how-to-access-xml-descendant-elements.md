@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
 ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934805"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>如何：访问 XML 子代元素 (Visual Basic)
 此示例演示如何使用子代轴属性来访问具有指定的名称并且包含 XML 元素下的所有 XML 元素。 具体而言，它使用`Value`属性设置为集合中获取第一个元素的值`name`子代轴属性返回。 `name`子代轴属性获取名为的所有元素`name`中包含的`contacts`对象。 此示例还使用`phone`子代轴属性来访问名为的所有后代`phone`中包含的`contacts`对象。  
@@ -23,7 +23,7 @@ ms.locfileid: "58832211"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 <xref:System.Xml.Linq> 命名空间的引用。  
+- 对 <xref:System.Xml.Linq> 命名空间的引用。  
   
 ## <a name="see-also"></a>请参阅
 

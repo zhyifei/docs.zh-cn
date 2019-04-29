@@ -3,28 +3,28 @@ title: 泛型接口 (Visual Basic 中) 中的变体
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787213"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>泛型接口 (Visual Basic 中) 中的变体
 .NET Framework 4 引入了对多个现有泛型接口的变体支持。 变体支持允许实现这些接口的类进行隐式转换。 下面的接口现在是变体：  
   
--   <xref:System.Collections.Generic.IEnumerable%601>（T 是协变）  
+- <xref:System.Collections.Generic.IEnumerable%601>（T 是协变）  
   
--   <xref:System.Collections.Generic.IEnumerator%601>（T 是协变）  
+- <xref:System.Collections.Generic.IEnumerator%601>（T 是协变）  
   
--   <xref:System.Linq.IQueryable%601>（T 是协变）  
+- <xref:System.Linq.IQueryable%601>（T 是协变）  
   
--   <xref:System.Linq.IGrouping%602>（`TKey` 和 `TElement` 都是协变）  
+- <xref:System.Linq.IGrouping%602>（`TKey` 和 `TElement` 都是协变）  
   
--   <xref:System.Collections.Generic.IComparer%601>（T 是逆变）  
+- <xref:System.Collections.Generic.IComparer%601>（T 是逆变）  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>（T 是逆变）  
+- <xref:System.Collections.Generic.IEqualityComparer%601>（T 是逆变）  
   
--   <xref:System.IComparable%601>（T 是逆变）  
+- <xref:System.IComparable%601>（T 是逆变）  
   
  协变允许方法具有的返回类型比接口的泛型类型参数定义的返回类型的派生程度更大。 若要演示协变功能，请考虑以下泛型接口：`IEnumerable(Of Object)` 和 `IEnumerable(Of String)`。 `IEnumerable(Of String)` 接口不继承 `IEnumerable(Of Object)` 接口。 但是，`String` 类型会继承 `Object` 类型，在某些情况下，建议为这些接口互相指派彼此的对象。 下面的代码示例对此进行了演示。  
   

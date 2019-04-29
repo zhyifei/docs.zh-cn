@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792634"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 设置指定的函数使用指定的 Microsoft 中间语言 (MSIL) 的映射条目的代码图。  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  调试器将假定每个旧的偏移量指 MSIL 偏移的原始未修改 MSIL 代码中，并且，每个新的偏移量是指在新的、 已检测代码的 MSIL 偏移量。 映射应按升序排序。 单步执行才能正常工作，请遵循以下准则：  
   
--   不对重新排序已检测的 MSIL 代码。  
+- 不对重新排序已检测的 MSIL 代码。  
   
--   不要删除原始的 MSIL 代码。  
+- 不要删除原始的 MSIL 代码。  
   
--   在映射中包括的程序数据库 (PDB) 文件中的所有序列点的条目。 映射不会插入缺失的条目。 因此，如果给定以下映射：  
+- 在映射中包括的程序数据库 (PDB) 文件中的所有序列点的条目。 映射不会插入缺失的条目。 因此，如果给定以下映射：  
   
      (0，0 个新)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 旧，20 个新)  
   
-    -   旧的偏移量为 0、 1、 2、 3 或 4 将映射到新偏移量为 0。  
+    - 旧的偏移量为 0、 1、 2、 3 或 4 将映射到新偏移量为 0。  
   
-    -   旧的偏移量为 5、 6、 7 或 8 将映射到新偏移量为 10。  
+    - 旧的偏移量为 5、 6、 7 或 8 将映射到新偏移量为 10。  
   
-    -   旧的偏移量为 9 或更高版本将映射到新偏移量为 20。  
+    - 旧的偏移量为 9 或更高版本将映射到新偏移量为 20。  
   
-    -   新的偏移量为 0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 将映射到旧偏移量为 0。  
+    - 新的偏移量为 0、 1、 2、 3、 4、 5、 6、 7、 8 或 9 将映射到旧偏移量为 0。  
   
-    -   新的偏移 10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的将映射到旧偏移量为 5。  
+    - 新的偏移 10、 11、 12、 13、 14、 15、 16、 17、 18 或 19 的将映射到旧偏移量为 5。  
   
-    -   为 20 或更高版本的新偏移量将映射到旧偏移量为 9。  
+    - 为 20 或更高版本的新偏移量将映射到旧偏移量为 9。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

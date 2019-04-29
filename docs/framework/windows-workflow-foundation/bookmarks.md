@@ -3,16 +3,17 @@ title: Bookmarks1
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
 ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774101"
 ---
 # <a name="bookmarks"></a>书签
 书签是使活动能够被动等待输入而无需保持在一个工作流线程上的机制。 如果某个活动发出正在等待刺激的信号，则该活动可以创建书签。 这指示即使返回了当前正在执行的方法（该方法创建了 <xref:System.Activities.Bookmark>），也不应将该活动的执行视为完成。  
   
 ## <a name="bookmark-basics"></a>书签基础知识  
- <xref:System.Activities.Bookmark> 表示工作流实例中可以在其处继续执行（以及可以通过其传递输入）的点。 通常，为 <xref:System.Activities.Bookmark> 指定一个名称并且外部（宿主或扩展）代码负责使用相关数据继续书签。 继续 <xref:System.Activities.Bookmark> 后，工作流运行时会安排与其创建时的 <xref:System.Activities.BookmarkCallback> 关联的 <xref:System.Activities.Bookmark> 委托。  
+ <xref:System.Activities.Bookmark> 表示工作流实例中可以在其处继续执行（以及可以通过其传递输入）的点。 通常，为 <xref:System.Activities.Bookmark> 指定一个名称并且外部（主机或扩展）代码负责使用相关数据继续书签。 继续 <xref:System.Activities.Bookmark> 后，工作流运行时会安排与其创建时的 <xref:System.Activities.BookmarkCallback> 关联的 <xref:System.Activities.Bookmark> 委托。  
   
 ## <a name="bookmark-options"></a>书签选项  
  <xref:System.Activities.BookmarkOptions> 类指定要创建的 <xref:System.Activities.Bookmark> 的类型。 不互相排斥的可能值为 <xref:System.Activities.BookmarkOptions.None>、<xref:System.Activities.BookmarkOptions.MultipleResume> 和 <xref:System.Activities.BookmarkOptions.NonBlocking>。 创建预期只继续一次的 <xref:System.Activities.BookmarkOptions.None> 时，使用默认的 <xref:System.Activities.Bookmark>。 创建可继续多次的 <xref:System.Activities.BookmarkOptions.MultipleResume> 时，使用 <xref:System.Activities.Bookmark>。 创建可能永不继续的 <xref:System.Activities.BookmarkOptions.NonBlocking> 时，使用 <xref:System.Activities.Bookmark>。 与使用默认的 <xref:System.Activities.BookmarkOptions> 创建的书签不同，<xref:System.Activities.BookmarkOptions.NonBlocking> 书签不会阻止某个活动完成。  

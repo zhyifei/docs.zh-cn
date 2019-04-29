@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776254"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>如何：诊断有问题的打印作业
 网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 丰富的打印作业属性中公开[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供了一种方法用于执行快速的打印作业远程诊断。  
@@ -25,13 +25,13 @@ ms.locfileid: "59338470"
   
 1. 标识用户投诉的打印作业。 用户通常无法准确完成此操作。 他们可能不知道打印服务器或打印机的名称。 它们可能不是设置中使用的描述不同的术语中的打印机的位置及其<xref:System.Printing.PrintQueue.Location%2A>属性。 这样的话，一个好办法是生成用户当前所提交作业的列表。 如果存在多个作业，则可通过用户和打印系统管理员之间的通信来查明出现问题的作业。 子步骤如下。  
   
-    1.  获取所有打印服务器的列表。  
+    1. 获取所有打印服务器的列表。  
   
-    2.  循环访问服务器以查询其打印队列。  
+    2. 循环访问服务器以查询其打印队列。  
   
-    3.  在每一轮服务器循环访问过程中，循环访问所有服务器的队列，以查询其作业  
+    3. 在每一轮服务器循环访问过程中，循环访问所有服务器的队列，以查询其作业  
   
-    4.  在每一轮服务器循环访问过程中，循环访问其作业，并收集与投诉用户已提交的作业相关的标识信息。  
+    4. 在每一轮服务器循环访问过程中，循环访问其作业，并收集与投诉用户已提交的作业相关的标识信息。  
   
 2. 当已识别有问题的打印作业时，检查相关属性以查明可能的问题。 例如，作业是否处于错误状态，或服务于队列的打印机是否在打印该作业之前处于脱机状态？  
   
@@ -49,9 +49,9 @@ ms.locfileid: "59338470"
   
  此时，应用程序包含一个分支结构，该结构对应于检查打印作业状态的两种方法：  
   
--   可以读取的标志<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>属性的类型即<xref:System.Printing.PrintJobStatus>。  
+- 可以读取的标志<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>属性的类型即<xref:System.Printing.PrintJobStatus>。  
   
--   你可以读取每个相关属性，如<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A>和<xref:System.Printing.PrintSystemJobInfo.IsInError%2A>。  
+- 你可以读取每个相关属性，如<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A>和<xref:System.Printing.PrintSystemJobInfo.IsInError%2A>。  
   
  此示例演示这两种方法，因此该用户之前进行提示要使用的方法并回复"Y"，如果他或她想要使用的标志<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>属性。 请参阅以下有关这两种方法的详细信息。 最后，该应用程序使用一种名为 **ReportQueueAndJobAvailability** 的方法来报告是否可以在一天的此时打印该作业。 [确定此时是否可以打印一项打印作业](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)中就此方法进行了讨论。  
   

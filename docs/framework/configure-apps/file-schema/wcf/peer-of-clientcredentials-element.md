@@ -3,11 +3,11 @@ title: <peer> <clientCredentials>元素
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
 ms.openlocfilehash: 7074ee992755557d7e5503035c89bdbefd678792
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783367"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<对等方 > 的\<clientCredentials > 元素
 指定在向对等客户端进行身份验证时使用的凭据。  

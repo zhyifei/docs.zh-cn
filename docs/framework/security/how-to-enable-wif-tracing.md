@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940447"
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：启用 WIF 跟踪
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web 窗体  
+- ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
  此“如何”主题提供了详细的分步过程，用于说明如何在 ASP.NET 应用程序中启用 WIF 跟踪。 还说明了如何测试应用程序，以验证跟踪侦听器和日志是否正常工作。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 它可从以下位置下载：[标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
@@ -25,30 +25,30 @@ ms.locfileid: "59769029"
   
 ## <a name="contents"></a>内容  
   
--   目标  
+- 目标  
   
--   概述  
+- 概述  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用跟踪  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用跟踪  
   
--   步骤 2 - 测试解决方案  
+- 步骤 2 - 测试解决方案  
   
 ## <a name="objectives"></a>目标  
   
--   创建一个简单的 ASP.NET 应用程序，该应用程序使用标识和访问工具中的 WIF 和开发 STS  
+- 创建一个简单的 ASP.NET 应用程序，该应用程序使用标识和访问工具中的 WIF 和开发 STS  
   
--   启用跟踪，并验证其是否正常工作  
+- 启用跟踪，并验证其是否正常工作  
   
 ## <a name="overview"></a>概述  
  跟踪可通过 WIF 调试和解决许多问题类型，包括令牌、cookie、声明、协议消息等。 WIF 跟踪类似于 WCF 跟踪；例如，可选择跟踪的详细级别，显示从关键消息到所有消息的一切内容。 可以在 .xml 文件或 .svclog 文件中生成 WIF 跟踪，可通过使用服务跟踪查看器工具查看。 此工具位于**bin** Windows SDK 目录路径在计算机上安装，例如：**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用跟踪  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用跟踪  
   
--   步骤 2 - 测试解决方案  
+- 步骤 2 - 测试解决方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用跟踪  
  此步骤将创建新的 ASP.NET Web 窗体应用程序并修改 Web.config 文件以启用跟踪。  

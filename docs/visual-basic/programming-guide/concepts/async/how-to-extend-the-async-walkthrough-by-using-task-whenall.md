@@ -3,11 +3,11 @@ title: 如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756502"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练
 提高[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)通过使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
@@ -25,9 +25,9 @@ ms.locfileid: "59331879"
   
 1. 将 `ProcessURLAsync` 方法添加到[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
+    - 如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
   
-    -   如果是通过完成演练开发的代码，请向包含 `GetURLContentsAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.vb 文件是"完整代码示例从演练"部分中的第一个示例。  
+    - 如果是通过完成演练开发的代码，请向包含 `GetURLContentsAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.vb 文件是"完整代码示例从演练"部分中的第一个示例。  
   
      `ProcessURLAsync` 方法整合了原始演练的 `SumPageSizesAsync` 中的 `For Each` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "59331879"
   
 1. 将 `ProcessURLAsync` 的以下版本添加到[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough_HttpClient 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
+    - 如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough_HttpClient 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
   
-    -   如果是通过完成演练开发的代码，请向使用 `HttpClient.GetByteArrayAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.vb 文件是"完整代码示例从演练"部分中的第二个示例。  
+    - 如果是通过完成演练开发的代码，请向使用 `HttpClient.GetByteArrayAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.vb 文件是"完整代码示例从演练"部分中的第二个示例。  
   
      `ProcessURLAsync` 方法整合了原始演练的 `SumPageSizesAsync` 中的 `For Each` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59331879"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>测试 Task.WhenAll 解决方案  
   
--   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但请注意，网站每次会以不同顺序出现。  
+- 对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但请注意，网站每次会以不同顺序出现。  
   
 ## <a name="example"></a>示例  
  以下代码演示使用 `GetURLContentsAsync` 方法从 Web 下载内容的项目的扩展。  

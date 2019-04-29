@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938198"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>如何：确定哪种类型的对象变量引用 (Visual Basic)
 对象变量包含指向其他位置所存储的数据的指针。 在运行时可以更改该数据的类型。 在任何时刻，您可以使用<xref:System.Type.GetTypeCode%2A>方法，以确定当前的运行时类型，或[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)要找出当前运行时类型是否与指定的类型兼容。  
@@ -37,7 +37,7 @@ ms.locfileid: "59342864"
   
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>若要确定对象变量的类型与指定类型兼容  
   
--   使用`TypeOf`运算符配合[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)若要测试与对象`TypeOf`...`Is`表达式。  
+- 使用`TypeOf`运算符配合[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)若要测试与对象`TypeOf`...`Is`表达式。  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  

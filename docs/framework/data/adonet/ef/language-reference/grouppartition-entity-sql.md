@@ -3,11 +3,11 @@ title: GROUPPARTITION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774720"
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
 返回从聚合与之相关的当前组分区提取的参数值集合。 `GroupPartition` 聚合是基于组的聚合，没有基于集合的形式。  
@@ -41,7 +41,7 @@ select p, Sum(ol.Quantity) from LOB.OrderLines as ol
   
  `GROUPPARTITION` 运算符可以与用户定义的聚合函数结合使用。  
   
- `GROUPPARTITION` 是一个特殊的聚合运算符，它保留对于分组的输入集的引用。 此引用可以用在 GROUP BY 处于作用域内的查询中的任何位置。 例如，  
+ `GROUPPARTITION` 是一个特殊的聚合运算符，它保留对于分组的输入集的引用。 此引用可以用在 GROUP BY 处于作用域内的查询中的任何位置。 例如，应用于对象的  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol group by ol.Product as p  

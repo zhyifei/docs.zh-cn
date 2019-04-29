@@ -9,11 +9,11 @@ helpviewer_keywords:
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
 ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776683"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>如何：创建自定义路由事件
 若要支持事件路由使自定义事件，你需要注册<xref:System.Windows.RoutedEvent>使用<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>方法。 本示例演示了创建自定义路由事件的基本原理。  

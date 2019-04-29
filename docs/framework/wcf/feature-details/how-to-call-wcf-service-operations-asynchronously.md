@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779218"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>如何：以异步方式调用 WCF 服务操作
 本主题介绍客户端如何以异步方式访问服务操作。 本主题中的服务可实现 `ICalculator` 接口。 通过使用事件驱动的异步调用模型，客户端可以对此接口异步调用操作。 (有关基于事件的异步调用模型的详细信息，请参阅[使用基于事件的异步模式进行多线程编程](https://go.microsoft.com/fwlink/?LinkId=248184))。 有关演示如何在服务中异步实现操作的示例，请参阅[如何：实现异步服务操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。 有关同步和异步操作的详细信息，请参阅[同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
@@ -30,17 +30,17 @@ ms.locfileid: "59317437"
   
      此代码生成，同步和标准基于委托的异步操作，除了包含 WCF 客户端类：  
   
-    -   两个 <`operationName` > `Async`与基于事件的异步调用方法一起使用的操作。 例如：  
+    - 两个 <`operationName` > `Async`与基于事件的异步调用方法一起使用的操作。 例如：  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   操作已完成事件窗体的 <`operationName` > `Completed`与基于事件的异步调用方法一起使用。 例如：  
+    - 操作已完成事件窗体的 <`operationName` > `Completed`与基于事件的异步调用方法一起使用。 例如：  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> 为每个操作的类型 (窗体的 <`operationName`>`CompletedEventArgs`) 与基于事件的异步调用方法一起使用。 例如：  
+    - <xref:System.EventArgs?displayProperty=nameWithType> 为每个操作的类型 (窗体的 <`operationName`>`CompletedEventArgs`) 与基于事件的异步调用方法一起使用。 例如：  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

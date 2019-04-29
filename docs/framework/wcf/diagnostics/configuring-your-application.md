@@ -3,20 +3,20 @@ title: 配置应用程序
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
 ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784990"
 ---
 # <a name="configuring-your-application"></a>配置应用程序
 Windows Communication Foundation (WCF) 使用.NET 配置系统，并且允许您在计算机和应用程序范围配置服务。  
   
  定义的 WCF 配置设置位于`<system.serviceModel>`节组。 有关如何配置 WCF 服务的详细信息，请参阅以下主题：  
   
--   [配置服务](../../../../docs/framework/wcf/configuring-services.md)  
+- [配置服务](../../../../docs/framework/wcf/configuring-services.md)  
   
--   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
  应用程序定义的配置设置是在 `<appSettings>` 节组中定义的。 有关.NET 配置文件中的应用程序设置的详细信息，请参阅[ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159)。  
   

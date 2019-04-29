@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777450"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 接口
 提供从可迁移可执行 (PE) 文件或其他源（如类型库或独立的运行时元数据二进制文件）导入和操作现有元数据的方法。  
@@ -96,13 +96,13 @@ ms.locfileid: "59180396"
 ## <a name="remarks"></a>备注  
  `IMetaDataImport` 接口的设计主要供将要导入类型信息（例如，开发工具）或管理已部署组件（例如，解析/激活服务）的工具和服务使用。 `IMetaDataImport` 中的方法属于下列任务类别：  
   
--   枚举元数据范围内的项集合。  
+- 枚举元数据范围内的项集合。  
   
--   查找具有特定特征集的项。  
+- 查找具有特定特征集的项。  
   
--   获取指定项的属性。  
+- 获取指定项的属性。  
   
--   Get 方法专门用来返回元数据项的单值属性。 当该属性是对另一个项的引用时，将返回该项的标记。 任何指针输入类型都可为 NULL，以指示未请求特定值。 若要获取基本上由集合对象（例如，某个类实现的接口集合）构成的属性，请使用枚举方法。  
+- Get 方法专门用来返回元数据项的单值属性。 当该属性是对另一个项的引用时，将返回该项的标记。 任何指针输入类型都可为 NULL，以指示未请求特定值。 若要获取基本上由集合对象（例如，某个类实现的接口集合）构成的属性，请使用枚举方法。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

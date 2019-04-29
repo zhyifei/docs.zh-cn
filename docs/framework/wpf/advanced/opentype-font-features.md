@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773706"
 ---
 # <a name="opentype-font-features"></a>OpenType 字体功能
 
@@ -26,15 +26,15 @@ ms.locfileid: "59104476"
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体格式解决了开发人员面临的以下挑战：  
   
--   更广泛的多平台支持。  
+- 更广泛的多平台支持。  
   
--   更出色的国际字符集支持。  
+- 更出色的国际字符集支持。  
   
--   更优的字体数据保护。  
+- 更优的字体数据保护。  
   
--   更小的文件大小，让字体发布更加高效。  
+- 更小的文件大小，让字体发布更加高效。  
   
--   更广泛的高级版式控件支持。  
+- 更广泛的高级版式控件支持。  
   
 > [!NOTE]
 >  Windows SDK 包含了一组可用于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的示例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体。 这些字体提供本主题余下部分所述的大多数功能。 有关详细信息，请参阅[示例 OpenType 字体包](sample-opentype-font-pack.md)。  
@@ -44,11 +44,11 @@ ms.locfileid: "59104476"
 ### <a name="advanced-typographic-extensions"></a>高级版式扩展  
  高级版式表格（[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 布局表格）扩展了具有 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 或 CFF 边框的字体的功能。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 布局字体包含一些其他信息，可扩展字体功能以支持高质量国际版式。 大多数 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体仅体现全部可用 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 功能的一部分。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体提供以下功能。  
   
--   字符与字形之间的丰富映射，可支持连字、定位格式、备用项以及其他字体替换功能。  
+- 字符与字形之间的丰富映射，可支持连字、定位格式、备用项以及其他字体替换功能。  
   
--   支持二维定位和字形附加。  
+- 支持二维定位和字形附加。  
   
--   字体中包含的显式脚本和语言信息，使文本处理应用程序可相应调整其行为。  
+- 字体中包含的显式脚本和语言信息，使文本处理应用程序可相应调整其行为。  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 布局表格在 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 规范的[“字体文件表格”](https://www.microsoft.com/typography/otspec/otff.htm)部分中进行了更详细的描述。  
   
@@ -120,13 +120,13 @@ ms.locfileid: "59104476"
 ## <a name="ligatures"></a>连字  
  连子是为使文本更具可读性或更加美观而由两个或更多字形形成的一个单一字形。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体支持四种类型的连字：  
   
--   **标准连字**。 旨在增强可读性。 标准连字包括“fi”、“fl”和“ff”。  
+- **标准连字**。 旨在增强可读性。 标准连字包括“fi”、“fl”和“ff”。  
   
--   **上下文连字**。 旨在通过在组成连字的字符之间提供更好的联结行为来增强可读性。  
+- **上下文连字**。 旨在通过在组成连字的字符之间提供更好的联结行为来增强可读性。  
   
--   **自由连字**。 重在修饰性，并非专为可读性而设计。  
+- **自由连字**。 重在修饰性，并非专为可读性而设计。  
   
--   **历史连字**。 重在历史性，并非专为可读性而设计。  
+- **历史连字**。 重在历史性，并非专为可读性而设计。  
   
  以下文本显示 Pericles 字体的标准连字字形。  
   

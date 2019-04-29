@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761360"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip 控件概述（Windows 窗体）
 菜单通过持有一个共同的主题进行分组的命令公开给用户的功能。  
@@ -26,11 +26,11 @@ ms.locfileid: "59975593"
 ## <a name="ways-to-use-the-menustrip-control"></a>如何使用 MenuStrip 控件  
  使用<xref:System.Windows.Forms.MenuStrip>控制转移到：  
   
--   创建轻松地自定义，支持的常用的菜单高级用户界面和布局功能，例如文本和图像排序和对齐方式、 拖放操作、 MDI、 溢出和访问菜单命令的其他模式。  
+- 创建轻松地自定义，支持的常用的菜单高级用户界面和布局功能，例如文本和图像排序和对齐方式、 拖放操作、 MDI、 溢出和访问菜单命令的其他模式。  
   
--   支持的典型的外观和行为的操作系统。  
+- 支持的典型的外观和行为的操作系统。  
   
--   与处理事件的其他控件相同的方式处理始终对所有容器和包含的项的事件。  
+- 与处理事件的其他控件相同的方式处理始终对所有容器和包含的项的事件。  
   
  下表显示了一些特别重要的属性的<xref:System.Windows.Forms.MenuStrip>和关联的类。  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776540"
 ---
 # <a name="how-to-clone-a-printer"></a>如何：克隆打印机
 大多数企业都在某些时候，将购买的同一模型的多台打印机。 通常情况下，这些进行所有安装使用几乎完全相同的配置设置。 安装每个打印机可能非常耗时且容易出错。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空间和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都通过 Microsoft.NET Framework 公开的类可以立即从现有的打印队列安装任意数目的克隆的其他打印队列。  
@@ -28,9 +28,9 @@ ms.locfileid: "59310455"
   
 2. 创建<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>从<xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>的<xref:System.Printing.PrintQueue>。 <xref:System.Collections.DictionaryEntry.Value%2A>此字典中的每个条目的属性是一个派生自的类型的一个对象<xref:System.Printing.IndexedProperties.PrintProperty>。 有两种方法来设置此字典中的条目的值。  
   
-    -   使用字典**删除**和<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A>方法来删除该项，然后重新将其添加具有所需的值。  
+    - 使用字典**删除**和<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A>方法来删除该项，然后重新将其添加具有所需的值。  
   
-    -   使用字典的<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A>方法。  
+    - 使用字典的<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A>方法。  
   
      下面的示例说明了这两种方式。  
   

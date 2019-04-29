@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791932"
 ---
 # <a name="partial-methods-visual-basic"></a>分部方法 (Visual Basic)
 分部方法使开发人员能够将自定义逻辑插入到代码。 通常情况下，代码是类的一个设计器生成的一部分。 分部方法中创建的代码生成器的分部类定义和它们通常用于提供的内容已更改的通知。 它们使开发人员指定自定义行为响应更改。  
@@ -33,11 +33,11 @@ End Sub
   
  定义必须满足以下条件：  
   
--   该方法必须是`Sub`，而不`Function`。  
+- 该方法必须是`Sub`，而不`Function`。  
   
--   方法的主体必须保留为空。  
+- 方法的主体必须保留为空。  
   
--   访问修饰符必须`Private`。  
+- 访问修饰符必须`Private`。  
   
 ## <a name="implementation"></a>实现  
  实现主要包含分部方法的正文中填充。 实现通常是在单独的分部类定义中，并由一名开发人员想要扩展生成的代码编写。  

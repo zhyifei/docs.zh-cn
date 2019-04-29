@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933843"
 ---
 # <a name="how-to-use-data-protection"></a>如何：使用数据保护
 .NET Framework 提供对数据保护 API (DPAPI) 的访问，这允许你使用来自当前用户帐户或计算机的信息对数据进行加密。  当使用 DPAPI 时，你会使显式生成和存储加密密钥的困难问题得到缓解。  
@@ -62,9 +62,9 @@ ms.locfileid: "59771837"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   包括对 `System.Security.dll` 的引用。  
+- 包括对 `System.Security.dll` 的引用。  
   
--   包括 <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography> 和 <xref:System.Text> 命名空间。  
+- 包括 <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography> 和 <xref:System.Text> 命名空间。  
   
 ## <a name="see-also"></a>请参阅
 

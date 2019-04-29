@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 ms.openlocfilehash: 0e173f71201d5f98a04d2ad922469e4ff6666681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929280"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>如何：在服务协定中声明错误
 在托管代码中，出现错误条件时引发异常。 在 Windows Communication Foundation (WCF) 应用程序，但是，服务协定指定向客户端通过声明服务协定中的 SOAP 错误返回哪些错误信息。 异常与错误之间的关系的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  

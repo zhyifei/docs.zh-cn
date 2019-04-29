@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
 ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941318"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>如何：使用 Windows 窗体 GroupBox 控件对控件分组
 Windows 窗体<xref:System.Windows.Forms.GroupBox>控件用于分组其他控件。 有三个原因与组控件：  
   
--   若要创建用于清除用户界面相关的窗体元素的直观分组。  
+- 若要创建用于清除用户界面相关的窗体元素的直观分组。  
   
--   若要创建以编程方式分组 （的单选按钮，例如）。  
+- 若要创建以编程方式分组 （的单选按钮，例如）。  
   
--   用于在设计时作为一个单元移动控件。  
+- 用于在设计时作为一个单元移动控件。  
   
 ### <a name="to-create-a-group-of-controls"></a>若要创建的一组控件  
   

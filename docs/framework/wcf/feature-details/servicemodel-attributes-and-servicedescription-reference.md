@@ -3,11 +3,11 @@ title: ServiceModel 属性和 ServiceDescription 引用
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747729"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性和 ServiceDescription 引用
 *说明树*是类型的层次结构 (从开始<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>类) 一起描述服务的每个方面。 Windows Communication Foundation (WCF) 使用说明树形来生成有效的服务运行时，以发布 Web 服务描述语言 (WSDL)、 XML 架构定义语言 (XSD) 和有关客户端可以使用到该服务的策略断言 （元数据）连接到并使用该服务，并生成各种代码和配置文件的表示形式将说明树值。  

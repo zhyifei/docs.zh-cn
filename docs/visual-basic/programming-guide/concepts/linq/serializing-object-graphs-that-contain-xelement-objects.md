@@ -3,11 +3,11 @@ title: 序列化包含 XElement 对象 (Visual Basic 中) 的对象图
 ms.date: 07/20/2015
 ms.assetid: c0cc5c92-5ca3-44b1-98dd-371601df721b
 ms.openlocfilehash: ffb348a0305b0f94c0870edead2a4852eee237cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786541"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>序列化包含 XElement 对象 (Visual Basic 中) 的对象图
 本主题介绍序列化对象图的功能，其中对象图包含对类型为 <xref:System.Xml.Linq.XElement> 的对象的引用。 为便于执行这种类型的序列化，<xref:System.Xml.Linq.XElement> 实现了 <xref:System.Xml.Serialization.IXmlSerializable> 接口。  

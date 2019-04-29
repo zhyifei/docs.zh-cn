@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771886"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost 接口
 提供的功能类似于[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)接口提供在.NET Framework 版本 1，有以下更改：  
   
--   添加了[SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)方法设置主机控件接口。  
+- 添加了[SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)方法设置主机控件接口。  
   
--   提供的一些方法省略`ICorRuntimeHost`。  
+- 提供的一些方法省略`ICorRuntimeHost`。  
   
 ## <a name="methods"></a>方法  
   

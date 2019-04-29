@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
 ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937823"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：创建专用的字体集合
 <xref:System.Drawing.Text.PrivateFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 可以使用<xref:System.Drawing.Text.PrivateFontCollection>对象来维护一组专门为应用程序的字体。 专用字体集合可以包含已安装的系统字体，以及在计算机尚未安装的字体。 若要将字体文件添加到专用字体集合，调用<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法的<xref:System.Drawing.Text.PrivateFontCollection>对象。  
@@ -25,11 +25,11 @@ ms.locfileid: "59210681"
 ## <a name="example"></a>示例  
  以下示例将添加到以下三个字体文件<xref:System.Drawing.Text.PrivateFontCollection>对象：  
   
--   C:\\*systemroot*\Fonts\Arial.tff (Arial, regular)  
+- C:\\*systemroot*\Fonts\Arial.tff (Arial, regular)  
   
--   C:\\*systemroot*\Fonts\CourBI.tff (Courier New，加粗倾斜)  
+- C:\\*systemroot*\Fonts\CourBI.tff (Courier New，加粗倾斜)  
   
--   C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman，粗体显示)  
+- C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman，粗体显示)  
   
  该代码检索的数组<xref:System.Drawing.FontFamily>中的对象<xref:System.Drawing.Text.FontCollection.Families%2A>属性的<xref:System.Drawing.Text.PrivateFontCollection>对象。  
   

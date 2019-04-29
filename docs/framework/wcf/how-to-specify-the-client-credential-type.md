@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
 ms.openlocfilehash: 775c6a297047c7a0e16db091f9a22686fdb01efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928877"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>如何：指定客户端凭据类型
 设置安全模式（传输或消息）后，您可以设置客户端凭据类型。 此属性指定客户端必须向服务提供以进行身份验证的凭据类型。 有关设置安全模式 （设置客户端凭据类型前的必需步骤） 的详细信息，请参阅[如何：将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  

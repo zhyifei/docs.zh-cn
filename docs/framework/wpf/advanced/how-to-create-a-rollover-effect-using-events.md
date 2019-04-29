@@ -1,5 +1,5 @@
 ---
-title: 如何：使用事件创建翻转效果
+title: 如何：使用事件创建变换效果
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
 ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776644"
 ---
-# <a name="how-to-create-a-rollover-effect-using-events"></a>如何：使用事件创建翻转效果
+# <a name="how-to-create-a-rollover-effect-using-events"></a>如何：使用事件创建变换效果
 此示例演示如何根据鼠标指针进入和离开的元素所占据的区域更改元素的颜色。  
   
  此示例中包含的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件和代码隐藏文件。  

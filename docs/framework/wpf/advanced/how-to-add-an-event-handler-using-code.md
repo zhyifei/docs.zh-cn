@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
 ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777060"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用代码添加事件处理程序
 此示例演示如何使用代码将事件处理程序添加到元素。  
@@ -25,9 +25,9 @@ ms.locfileid: "59129351"
   
  C#的示例使用`+=`运算符分配的事件处理程序。 这是用于分配中的处理程序的相同运算符[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件处理模型。 作为一种方式添加事件处理程序的情况下，Microsoft Visual Basic 不支持此运算符。 相反，它要求两种技术之一：  
   
--   使用<xref:System.Windows.UIElement.AddHandler%2A>方法，一起`AddressOf`运算符，以引用的事件处理程序实现。  
+- 使用<xref:System.Windows.UIElement.AddHandler%2A>方法，一起`AddressOf`运算符，以引用的事件处理程序实现。  
   
--   使用`Handles`关键字作为事件处理程序定义的一部分。 此处; 未显示这种方法请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
+- 使用`Handles`关键字作为事件处理程序定义的一部分。 此处; 未显示这种方法请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   

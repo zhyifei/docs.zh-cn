@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783858"
 ---
 # <a name="structure-statement"></a>Structure 语句
 声明结构的名称，并引入的变量、 属性、 事件和结构包含的过程的定义。  
@@ -61,31 +61,31 @@ End Structure
   
 ## <a name="rules"></a>规则  
   
--   **嵌套。** 您可以定义一个在另一个结构。 外部结构称为*包含结构*，并调用的内部结构*嵌套结构*。 但是，您不能通过包含结构访问嵌套的结构的成员。 相反，必须声明嵌套的结构的数据类型的变量。  
+- **嵌套。** 您可以定义一个在另一个结构。 外部结构称为*包含结构*，并调用的内部结构*嵌套结构*。 但是，您不能通过包含结构访问嵌套的结构的成员。 相反，必须声明嵌套的结构的数据类型的变量。  
   
--   **成员声明。** 必须声明一个结构的每个成员。 结构成员不能[受保护](../../../visual-basic/language-reference/modifiers/protected.md)或`Protected Friend`由于执行任何操作可以继承自一个结构。 结构本身，但是，可以是`Protected`或`Protected Friend`。  
+- **成员声明。** 必须声明一个结构的每个成员。 结构成员不能[受保护](../../../visual-basic/language-reference/modifiers/protected.md)或`Protected Friend`由于执行任何操作可以继承自一个结构。 结构本身，但是，可以是`Protected`或`Protected Friend`。  
   
      您可以在结构中声明零个以上的非共享变量或非共享、非自定义的事件。 您不能具有常量、 属性和过程，即使其中一些非共享。  
   
--   **初始化。** 无法初始化结构作为其声明的一部分的任何非共享的数据成员的值。 必须通过在结构上的参数化构造函数初始化此类数据成员或创建该结构的实例后为成员分配一个值。  
+- **初始化。** 无法初始化结构作为其声明的一部分的任何非共享的数据成员的值。 必须通过在结构上的参数化构造函数初始化此类数据成员或创建该结构的实例后为成员分配一个值。  
   
--   **继承。** 而不从任何类型继承结构，不能<xref:System.ValueType>，从其继承的所有结构。 具体而言，不能从另一个继承一个结构。  
+- **继承。** 而不从任何类型继承结构，不能<xref:System.ValueType>，从其继承的所有结构。 具体而言，不能从另一个继承一个结构。  
   
      不能使用[Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)在结构定义中，甚至指定<xref:System.ValueType>。  
   
--   **实现。** 如果使用结构[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现定义中指定的每个接口的每个成员`interfacenames`。  
+- **实现。** 如果使用结构[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现定义中指定的每个接口的每个成员`interfacenames`。  
   
--   **默认属性。** 一种结构可以指定最多一个属性作为其*默认属性*，并使用[默认](../../../visual-basic/language-reference/modifiers/default.md)修饰符。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
+- **默认属性。** 一种结构可以指定最多一个属性作为其*默认属性*，并使用[默认](../../../visual-basic/language-reference/modifiers/default.md)修饰符。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
   
 ## <a name="behavior"></a>行为  
   
--   **访问级别。** 结构中，可以声明具有其自己的访问级别的每个成员。 所有结构成员都默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。 请注意，是否结构本身的更受限制的访问级别，这会自动限制访问其成员，即使您调整和访问修饰符及其访问级别。  
+- **访问级别。** 结构中，可以声明具有其自己的访问级别的每个成员。 所有结构成员都默认为[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。 请注意，是否结构本身的更受限制的访问级别，这会自动限制访问其成员，即使您调整和访问修饰符及其访问级别。  
   
--   **作用域。** 结构是在整个其包含的命名空间、 类、 结构或模块范围内。  
+- **作用域。** 结构是在整个其包含的命名空间、 类、 结构或模块范围内。  
   
      每个结构成员的作用域是整个结构。  
   
--   **生存期。** 一种结构本身没有生存期。 相反，该结构的每个实例都独立于所有其他实例的生存期。  
+- **生存期。** 一种结构本身没有生存期。 相反，该结构的每个实例都独立于所有其他实例的生存期。  
   
      实例的生存期开始时创建该[New 运算符](../../../visual-basic/language-reference/operators/new-operator.md)子句。 包含的变量的生存期结束时结束。  
   
@@ -93,11 +93,11 @@ End Structure
   
      结构成员将具体取决于如何以及在何处声明它们的生存期。 详细信息，请参阅"生存期"中[Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)。  
   
--   **限定。** 结构外的代码必须限定成员的名称与该结构的名称。  
+- **限定。** 结构外的代码必须限定成员的名称与该结构的名称。  
   
      如果嵌套结构内的代码发出到编程元素中的非限定的引用，Visual Basic 搜索元素首先在嵌套结构中，然后在其包含结构等到最外面的包含元素。 有关详细信息，请参阅 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
--   **内存占用情况。** 与所有复合数据类型，不能安全地通过同时添加其成员的名义存储分配计算结构的内存总消耗。 此外，不能安全地假定已在内存中存储的顺序声明的顺序相同。 如果需要控制结构的存储布局，你可以申请<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性为`Structure`语句。  
+- **内存占用情况。** 与所有复合数据类型，不能安全地通过同时添加其成员的名义存储分配计算结构的内存总消耗。 此外，不能安全地假定已在内存中存储的顺序声明的顺序相同。 如果需要控制结构的存储布局，你可以申请<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性为`Structure`语句。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Structure`语句来为某位员工定义一组相关数据。 它演示如何使用`Public`， `Friend`，和`Private`成员以反映数据项目的敏感度。 它还将显示过程、 属性和事件成员。  

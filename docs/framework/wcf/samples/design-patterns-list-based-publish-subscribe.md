@@ -3,11 +3,11 @@ title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773050"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 此示例演示基于列表的发布-订阅模式实现作为 Windows Communication Foundation (WCF) 的程序。  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. 安装服务计算机：  
   
-    1.  在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。 批处理文件 Setupvroot.bat[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用于创建磁盘目录和虚拟目录。  
+    1. 在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。 批处理文件 Setupvroot.bat[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用于创建磁盘目录和虚拟目录。  
   
-    2.  从 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 中将服务程序文件复制到服务计算机上的 ServiceModelSamples 虚拟目录中。 确保在 \bin 目录中包括这些文件。  
+    2. 从 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 中将服务程序文件复制到服务计算机上的 ServiceModelSamples 虚拟目录中。 确保在 \bin 目录中包括这些文件。  
   
-    3.  测试是否可使用浏览器从客户端计算机访问服务。  
+    3. 测试是否可使用浏览器从客户端计算机访问服务。  
   
 2. 安装客户端计算机：  
   
-    1.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+    1. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
   
-    2.  在每个客户端配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
+    2. 在每个客户端配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
   
 3. 安装数据源计算机：  
   
-    1.  将 \datasource\bin\ 文件夹（在语言特定文件夹内）中的数据源程序文件复制到数据源计算机上。  
+    1. 将 \datasource\bin\ 文件夹（在语言特定文件夹内）中的数据源程序文件复制到数据源计算机上。  
   
-    2.  在数据源配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
+    2. 在数据源配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
   
 4. 在客户端计算机上的命令提示符下启动 Client.exe。  
   

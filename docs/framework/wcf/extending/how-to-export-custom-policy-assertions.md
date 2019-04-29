@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767164"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>如何：导出自定义策略断言
 策略断言说明服务终结点的功能和要求。 服务应用程序可以在服务元数据中使用自定义策略断言，来将终结点、绑定或协定自定义信息传递到客户端应用程序。 Windows Communication Foundation (WCF) 可用于导出 WSDL 终结点、 操作或消息使用者，具体的功能和需求进行通信的时间取决于绑定中附加策略表达式中的断言。  

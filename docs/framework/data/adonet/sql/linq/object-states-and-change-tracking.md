@@ -3,11 +3,11 @@ title: 对象状态和更改跟踪
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794389"
 ---
 # <a name="object-states-and-change-tracking"></a>对象状态和更改跟踪
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象始终处于某种*状态*。 例如，当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 创建一个新对象时，该对象就处于 `Unchanged` 状态。 您自己创建的新对象对于 <xref:System.Data.Linq.DataContext> 而言是未知的，因而处于 `Untracked` 状态。 在成功执行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 已知的所有对象均处于 `Unchanged` 状态。 （唯一的例外是已从数据库中成功删除的那些对象，它们处于 `Deleted` 状态，并且在该 <xref:System.Data.Linq.DataContext> 实例中无法使用。）  
@@ -38,11 +38,11 @@ ms.locfileid: "59191150"
   
  将对象从其所在表中删除 ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]) 时，<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 执行以下处理：  
   
--   调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时，会对该对象执行 `DELETE` 操作。  
+- 调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时，会对该对象执行 `DELETE` 操作。  
   
--   不论相关对象是否已加载，都不会将此移除操作传播到相关对象。 具体而言，不会为更新关系属性而加载相关对象。  
+- 不论相关对象是否已加载，都不会将此移除操作传播到相关对象。 具体而言，不会为更新关系属性而加载相关对象。  
   
--   在成功执行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 后，会将这些对象设置为 `Deleted` 状态。 因此，您不能在该 `id` 中使用此类对象或其 <xref:System.Data.Linq.DataContext>。 由 <xref:System.Data.Linq.DataContext> 实例维护的内部缓存不会消除检索到的对象或作为新对象添加的对象，即使这些对象已从数据库中删除也不例外。  
+- 在成功执行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 后，会将这些对象设置为 `Deleted` 状态。 因此，您不能在该 `id` 中使用此类对象或其 <xref:System.Data.Linq.DataContext>。 由 <xref:System.Data.Linq.DataContext> 实例维护的内部缓存不会消除检索到的对象或作为新对象添加的对象，即使这些对象已从数据库中删除也不例外。  
   
  您只能对由 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 跟踪的对象调用 <xref:System.Data.Linq.DataContext>。 对于 `Untracked` 对象，您必须先调用 <xref:System.Data.Linq.Table%601.Attach%2A>，再调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>。 对 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 对象调用 `Untracked` 会引发异常。  
   

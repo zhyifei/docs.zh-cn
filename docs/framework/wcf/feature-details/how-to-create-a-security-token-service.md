@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787668"
 ---
 # <a name="how-to-create-a-security-token-service"></a>如何：创建安全令牌服务
 安全令牌服务实现在 WS-Trust 规范中定义的协议。 此协议为颁发、续订、取消和验证安全令牌定义消息格式和消息交换模式。 给定的安全令牌服务提供这些功能中的一个或多个功能。 本主题考虑最常见的情况：实现令牌颁发。  
@@ -24,61 +24,61 @@ ms.locfileid: "59212474"
 ### <a name="request-message-structure"></a>请求消息结构  
  颁发请求消息结构通常包括以下项：  
   
--   请求的值键入 URI `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`。
+- 请求的值键入 URI `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`。
   
--   令牌类型 URI。 安全断言标记语言 (SAML) 1.1 令牌，此 URI 的值都是`http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`。  
+- 令牌类型 URI。 安全断言标记语言 (SAML) 1.1 令牌，此 URI 的值都是`http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`。  
   
--   密钥大小值，指示与颁发的令牌关联的密钥中的位数。  
+- 密钥大小值，指示与颁发的令牌关联的密钥中的位数。  
   
--   密钥类型 URI。 对于对称密钥，此 URI 的值是`http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`。  
+- 密钥类型 URI。 对于对称密钥，此 URI 的值是`http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`。  
   
  此外，可能会显示几个其他项：  
   
--   由客户端提供的密钥材料。  
+- 由客户端提供的密钥材料。  
   
--   用来指示颁发的令牌将用于的目标服务的范围信息。  
+- 用来指示颁发的令牌将用于的目标服务的范围信息。  
   
  安全令牌服务在构造颁发响应消息时使用颁发请求消息中的信息。  
   
 ## <a name="response-message-structure"></a>响应消息结构  
  颁发响应消息结构通常包括以下项；  
   
--   颁发的安全令牌，例如，一个 SAML 1.1 断言。  
+- 颁发的安全令牌，例如，一个 SAML 1.1 断言。  
   
--   与安全令牌相关联的证明令牌。 对于对称密钥，这通常是密钥材料的加密形式。  
+- 与安全令牌相关联的证明令牌。 对于对称密钥，这通常是密钥材料的加密形式。  
   
--   对颁发的安全令牌的引用。 通常，安全令牌服务返回两个引用：一个可以在颁发的令牌显示在随后由客户端发送的消息中时使用，另一个可以在颁发的令牌没有显示在随后的消息中时使用。  
+- 对颁发的安全令牌的引用。 通常，安全令牌服务返回两个引用：一个可以在颁发的令牌显示在随后由客户端发送的消息中时使用，另一个可以在颁发的令牌没有显示在随后的消息中时使用。  
   
  此外，可能会显示几个其他项：  
   
--   由安全令牌服务提供的密钥材料。  
+- 由安全令牌服务提供的密钥材料。  
   
--   计算共享密钥所需的算法。  
+- 计算共享密钥所需的算法。  
   
--   颁发的令牌的生存期信息。  
+- 颁发的令牌的生存期信息。  
   
 ## <a name="processing-request-messages"></a>处理请求消息  
  安全令牌服务通过检查各个请求消息并确保它可以颁发满足此请求的令牌来处理颁发请求。 安全令牌服务必须先确定以下各项，然后才能构造要颁发的令牌：  
   
--   该请求实际上是一个对要颁发的令牌的请求。  
+- 该请求实际上是一个对要颁发的令牌的请求。  
   
--   安全令牌服务支持请求的令牌类型。  
+- 安全令牌服务支持请求的令牌类型。  
   
--   已授权请求方创建请求。  
+- 已授权请求方创建请求。  
   
--   安全令牌服务可以满足请求方对密钥材料的预期。  
+- 安全令牌服务可以满足请求方对密钥材料的预期。  
   
  构造令牌的两个重要部分是确定对该令牌进行签名时使用的密钥和对共享密钥加密时使用的密钥。 需要对该令牌进行签名，以便当客户端将该令牌显示在目标服务中时，该服务可以确定由它信任的安全令牌服务来颁发该令牌。 需要以目标服务对密钥材料解密的方式来对密钥材料加密。  
   
  对一个涉及创建 <xref:System.IdentityModel.Tokens.SigningCredentials> 实例的 SAML 断言进行签名。 此类的构造函数具有以下各项：  
   
--   密钥的 <xref:System.IdentityModel.Tokens.SecurityKey>，用于对 SAML 断言进行签名。  
+- 密钥的 <xref:System.IdentityModel.Tokens.SecurityKey>，用于对 SAML 断言进行签名。  
   
--   用于标识要使用的签名算法的字符串。  
+- 用于标识要使用的签名算法的字符串。  
   
--   用于标识要使用的摘要算法的字符串。  
+- 用于标识要使用的摘要算法的字符串。  
   
--   或者，用于标识要用来对断言进行签名的密钥的 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>。  
+- 或者，用于标识要用来对断言进行签名的密钥的 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>。  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  

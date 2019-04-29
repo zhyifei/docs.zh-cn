@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940486"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>如何：使用 WIF 跟踪调试声明感知应用程序和服务
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   服务跟踪查看器工具 (SvcTraceViewer.exe)  
+- 服务跟踪查看器工具 (SvcTraceViewer.exe)  
   
--   对 WIF 应用程序进行故障排除和调试  
+- 对 WIF 应用程序进行故障排除和调试  
   
 ## <a name="summary"></a>总结  
  本操作说明介绍进行后述操作所需的步骤：配置 WIF 跟踪、收集跟踪日志以及使用“跟踪查看器”工具分析跟踪日志。 它为排除 WIF 相关问题所需的操作提供跟踪项的常规映射。  
   
 ## <a name="contents"></a>内容  
   
--   目标  
+- 目标  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 使用 Web.config 配置文件配置 WIF 跟踪  
+- 步骤 1 – 使用 Web.config 配置文件配置 WIF 跟踪  
   
--   步骤 2 – 使用跟踪查看器工具分析 WIF 跟踪文件  
+- 步骤 2 – 使用跟踪查看器工具分析 WIF 跟踪文件  
   
--   步骤 3 – 确定解决方案以修复 WIF 相关问题  
+- 步骤 3 – 确定解决方案以修复 WIF 相关问题  
   
--   相关项  
+- 相关项  
   
 ## <a name="objectives"></a>目标  
   
--   配置 WIF 跟踪。  
+- 配置 WIF 跟踪。  
   
--   在跟踪查看器工具中查看跟踪日志。  
+- 在跟踪查看器工具中查看跟踪日志。  
   
--   在跟踪日志中标识 WIF 相关问题。  
+- 在跟踪日志中标识 WIF 相关问题。  
   
--   将纠正措施应用于在跟踪日志中发现的 WIF 相关问题。  
+- 将纠正措施应用于在跟踪日志中发现的 WIF 相关问题。  
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 使用 Web.config 配置文件配置 WIF 跟踪  
+- 步骤 1 – 使用 Web.config 配置文件配置 WIF 跟踪  
   
--   步骤 2 – 使用跟踪查看器工具分析 WIF 跟踪文件  
+- 步骤 2 – 使用跟踪查看器工具分析 WIF 跟踪文件  
   
--   步骤 3 – 确定解决方案以修复 WIF 相关问题  
+- 步骤 3 – 确定解决方案以修复 WIF 相关问题  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>步骤 1 – 使用 Web.config 配置文件配置 WIF 跟踪  
  在此步骤中，将向 Web.config 文件中的配置节添加更改，该文件使 WIF 能够跟踪其事件并将这些事件存储在跟踪日志中。  
@@ -108,4 +108,4 @@ ms.locfileid: "59321544"
   
 ## <a name="related-items"></a>相关项  
   
--   [使用服务跟踪查看器查看相关跟踪和进行故障排除](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

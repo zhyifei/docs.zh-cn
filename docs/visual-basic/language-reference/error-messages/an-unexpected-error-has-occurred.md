@@ -5,20 +5,20 @@ f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751613"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>发生错误，因为无法获得单个实例启动所需的操作系统资源
 应用程序未能获取所需的操作系统资源。 一些可能导致此问题的原因是：  
   
--   应用程序不具备创建命名操作系统对象的权限。  
+- 应用程序不具备创建命名操作系统对象的权限。  
   
--   公共语言运行时不具备创建内存映射文件的权限。  
+- 公共语言运行时不具备创建内存映射文件的权限。  
   
--   应用程序需要访问某个操作系统对象，但另一个进程正在使用该对象。  
+- 应用程序需要访问某个操作系统对象，但另一个进程正在使用该对象。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751600"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>通过实例访问共享成员；将不计算限定表达式
 使用类或结构的实例变量访问`Shared`变量、 属性、 过程或在该类或结构中定义的事件。 如果使用实例变量访问类或结构，例如常量或枚举，或一个嵌套的类或结构的隐式共享的成员，也可能发生此警告。  
@@ -29,7 +29,7 @@ ms.locfileid: "58843560"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   使用类或结构，它定义的名称`Shared`成员来访问它，如下面的示例中所示。  
+- 使用类或结构，它定义的名称`Shared`成员来访问它，如下面的示例中所示。  
   
 ```vb  
 Public Class testClass  

@@ -3,11 +3,11 @@ title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771848"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 Oracle.NET Framework 数据提供程序支持 Oracle **REF CURSOR**数据类型。 在通过数据提供程序使用 Oracle REF CURSOR 时，应考虑下列行为。  
@@ -15,19 +15,19 @@ Oracle.NET Framework 数据提供程序支持 Oracle **REF CURSOR**数据类型�
 > [!NOTE]
 >  有些行为与 Microsoft Oracle OLE DB 提供程序 (MSDAORA) 的行为不同。  
   
--   出于性能原因，Oracle 数据提供程序不会自动绑定**REF CURSOR**数据类型，因为 MSDAORA 会这样做，除非显式指定。  
+- 出于性能原因，Oracle 数据提供程序不会自动绑定**REF CURSOR**数据类型，因为 MSDAORA 会这样做，除非显式指定。  
   
--   数据提供程序不支持任何 ODBC 转义序列，包括用于指定 REF CURSOR 参数的 {resultset} 转义。  
+- 数据提供程序不支持任何 ODBC 转义序列，包括用于指定 REF CURSOR 参数的 {resultset} 转义。  
   
--   若要执行返回 REF Cursor 的存储的过程，必须定义中的参数<xref:System.Data.OracleClient.OracleParameterCollection>与<xref:System.Data.OracleClient.OracleType>的**光标**和一个<xref:System.Data.OracleClient.OracleParameter.Direction%2A>的**输出**。 数据提供程序只支持作为输出参数绑定 REF CURSOR。 提供程序不支持 REF CURSOR 作为输入参数。  
+- 若要执行返回 REF Cursor 的存储的过程，必须定义中的参数<xref:System.Data.OracleClient.OracleParameterCollection>与<xref:System.Data.OracleClient.OracleType>的**光标**和一个<xref:System.Data.OracleClient.OracleParameter.Direction%2A>的**输出**。 数据提供程序只支持作为输出参数绑定 REF CURSOR。 提供程序不支持 REF CURSOR 作为输入参数。  
   
--   不支持从参数值获取 <xref:System.Data.OracleClient.OracleDataReader>。 在执行命令后，值属于 <xref:System.DBNull> 类型。  
+- 不支持从参数值获取 <xref:System.Data.OracleClient.OracleDataReader>。 在执行命令后，值属于 <xref:System.DBNull> 类型。  
   
--   唯一**CommandBehavior**适用于 REF Cursor 的枚举值 (例如，当调用<xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) 是**CloseConnection**; 忽略所有其他。  
+- 唯一**CommandBehavior**适用于 REF Cursor 的枚举值 (例如，当调用<xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) 是**CloseConnection**; 忽略所有其他。  
   
--   中的 REF Cursor 的顺序**OracleDataReader**取决于中的参数顺序**OracleParameterCollection**。 <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> 属性被忽略。  
+- 中的 REF Cursor 的顺序**OracleDataReader**取决于中的参数顺序**OracleParameterCollection**。 <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> 属性被忽略。  
   
--   PL/SQL**表**不支持数据类型。 但是，REF CURSOR 的效率更高。 如果必须使用**表**数据类型，使用 MSDAORA OLE DB.NET 数据提供程序。  
+- PL/SQL**表**不支持数据类型。 但是，REF CURSOR 的效率更高。 如果必须使用**表**数据类型，使用 MSDAORA OLE DB.NET 数据提供程序。  
   
 ## <a name="in-this-section"></a>本节内容  
  [REF CURSOR 示例](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  

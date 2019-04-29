@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788803"
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 可以通过承载的内容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 一个<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>组成可以标识包的页面[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和导航到超链接的。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。  
@@ -25,15 +25,15 @@ ms.locfileid: "59320066"
 ## <a name="structured-navigation"></a>结构化导航  
  在结构化导航中，当一个页面调用另一个页面时需要以下部分或全部行为：  
   
--   调用页导航到被调用页，并且可以选择性地传递被调用页所需的参数。  
+- 调用页导航到被调用页，并且可以选择性地传递被调用页所需的参数。  
   
--   当用户已使用完调用页时，被调用页将专门返回到调用页，并且可以：  
+- 当用户已使用完调用页时，被调用页将专门返回到调用页，并且可以：  
   
-    -   返回描述调用页是如何完成（例如，用户按的是“确定”按钮还是“取消”按钮）的状态信息。  
+    - 返回描述调用页是如何完成（例如，用户按的是“确定”按钮还是“取消”按钮）的状态信息。  
   
-    -   返回从用户那里收集的数据（例如，新员工的详细信息）。  
+    - 返回从用户那里收集的数据（例如，新员工的详细信息）。  
   
--   当调用页返回到被调用页时，被调用页会从导航历史记录中删除，以便将被调用页的一个实例与另一个实例隔离开。  
+- 当调用页返回到被调用页时，被调用页会从导航历史记录中删除，以便将被调用页的一个实例与另一个实例隔离开。  
   
  下图说明了这些行为：  
   
@@ -115,17 +115,17 @@ ms.locfileid: "59320066"
   
  不必向被调用页传递参数。 可以执行以下操作：  
   
--   从调用页：  
+- 从调用页：  
   
-    1.  实例化被调用<xref:System.Windows.Navigation.PageFunction%601>使用默认构造函数。  
+    1. 实例化被调用<xref:System.Windows.Navigation.PageFunction%601>使用默认构造函数。  
   
-    2.  存储中的参数<xref:System.Windows.Application.Properties%2A>。  
+    2. 存储中的参数<xref:System.Windows.Application.Properties%2A>。  
   
-    3.  导航到被调用<xref:System.Windows.Navigation.PageFunction%601>。  
+    3. 导航到被调用<xref:System.Windows.Navigation.PageFunction%601>。  
   
--   从被调用<xref:System.Windows.Navigation.PageFunction%601>:  
+- 从被调用<xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   检索和使用存储在参数<xref:System.Windows.Application.Properties%2A>。  
+    - 检索和使用存储在参数<xref:System.Windows.Application.Properties%2A>。  
   
  但是，你不久就会看到，你仍然需要使用代码来实例化并导航到被调用页，以收集被调用页返回的数据。 出于此原因，<xref:System.Windows.Navigation.PageFunction%601>需求保持活动状态; 否则为下次导航到<xref:System.Windows.Navigation.PageFunction%601>，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]实例化<xref:System.Windows.Navigation.PageFunction%601>使用默认构造函数。  
   

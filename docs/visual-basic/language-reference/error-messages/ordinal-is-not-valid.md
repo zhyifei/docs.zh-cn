@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772484"
 ---
 # <a name="ordinal-is-not-valid"></a>序号无效
 对动态链接库 (DLL) 的调用指示应使用数字而不是过程名称，是使用`#num`语法。 此错误具有以下可能的原因：  
   
--   尝试将转换`#num`为序号失败的表达式。  
+- 尝试将转换`#num`为序号失败的表达式。  
   
--   `#num`指定 DLL 中未指定任何函数。  
+- `#num`指定 DLL 中未指定任何函数。  
   
--   类型库中有一个无效的声明，从而导致无效的序号的内部使用。  
+- 类型库中有一个无效的声明，从而导致无效的序号的内部使用。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

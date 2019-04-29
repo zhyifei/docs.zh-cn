@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
 ms.openlocfilehash: 511a9bc5352e208697460364e463330fc0ef611a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793388"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>如何：将现有实体附加到 DataServiceContext （WCF 数据服务）
 数据服务中已存在一个实体时[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，您可以将直接向表示实体的对象附加<xref:System.Data.Services.Client.DataServiceContext>而不必首先执行查询。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  

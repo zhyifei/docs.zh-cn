@@ -3,11 +3,11 @@ title: 如何：将对象数据写入到 XML 文件 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
 ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783495"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>如何：将对象数据写入到 XML 文件 (Visual Basic)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类从某个类将对象写入 XML 文件。  
@@ -43,13 +43,13 @@ End Module
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   进行序列化的类没有公共的无参数构造函数。  
+- 进行序列化的类没有公共的无参数构造函数。  
   
--   文件存在且为只读 (<xref:System.IO.IOException>)。  
+- 文件存在且为只读 (<xref:System.IO.IOException>)。  
   
--   路径过长 (<xref:System.IO.PathTooLongException>)。  
+- 路径过长 (<xref:System.IO.PathTooLongException>)。  
   
--   磁盘已满 (<xref:System.IO.IOException>)。  
+- 磁盘已满 (<xref:System.IO.IOException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此示例在文件尚未存在时创建新文件。 如果某个应用程序需要创建文件，则该应用程序需要针对文件夹的 `Create` 访问权限。 如果文件已存在，则该应用程序只需要 `Write` 访问权限（这是较弱的特权）。 如有可能，在部署过程中创建文件，并且仅授予针对单个文件的 `Read` 访问权限（而不是针对 `Create` 文件夹的访问权限）会更加安全。  

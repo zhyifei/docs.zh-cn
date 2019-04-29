@@ -11,11 +11,11 @@ ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933778"
 ---
 # <a name="security-and-user-input"></a>安全性和用户输入
 用户数据是指任何种类的输入（来自 Web 请求或 URL 的数据、对 Microsoft Windows 窗体应用程序控件输入的数据等等），它可能会对代码产生负面影响，因为这些数据通常直接用作参数来调用其他代码。 这种情况类似于恶意代码使用奇特参数调用你的代码，因而必须采取同样的防范措施。 用户输入实际上更难以保证安全性，因为没有堆栈帧来跟踪可能不受信任的数据的存在。  
@@ -24,39 +24,39 @@ ms.locfileid: "44192556"
   
  涉及用户数据的重要注意事项包括以下几个方面：  
   
--   服务器响应中的任何用户数据在客户端上的服务器站点的上下文中运行。 如果 Web 服务器获得了用户数据，并将这些数据插入到返回的网页中，那么这些数据可能会包含诸如 **\<script>** 之类的标记，并且就像是从服务器运行的一样。  
+- 服务器响应中的任何用户数据在客户端上的服务器站点的上下文中运行。 如果 Web 服务器获得了用户数据，并将这些数据插入到返回的网页中，那么这些数据可能会包含诸如 **\<script>** 之类的标记，并且就像是从服务器运行的一样。  
   
--   请记住，客户端可以请求任何 URL。  
+- 请记住，客户端可以请求任何 URL。  
   
--   考虑欺骗性的或无效的路径：  
+- 考虑欺骗性的或无效的路径：  
   
-    -   ..\ ，非常长的路径。  
+    - ..\ ，非常长的路径。  
   
-    -   使用通配符 (*)。  
+    - 使用通配符 (*)。  
   
-    -   标记展开 (%token%)。  
+    - 标记展开 (%token%)。  
   
-    -   具有特殊意义的奇特路径形式。  
+    - 具有特殊意义的奇特路径形式。  
   
-    -   备用文件系统流名称，例如 `filename::$DATA`。  
+    - 备用文件系统流名称，例如 `filename::$DATA`。  
   
-    -   文件名的简称，例如 `longfilename` 简称为 `longfi~1`。  
+    - 文件名的简称，例如 `longfilename` 简称为 `longfi~1`。  
   
--   请记住，Eval(userdata) 可以执行任何操作。  
+- 请记住，Eval(userdata) 可以执行任何操作。  
   
--   在后期绑定到包含某些用户数据的名称时要多加小心。  
+- 在后期绑定到包含某些用户数据的名称时要多加小心。  
   
--   如果正在处理 Web 数据，请考虑所允许的各种转义形式，包括：  
+- 如果正在处理 Web 数据，请考虑所允许的各种转义形式，包括：  
   
-    -   十六进制转义 (%nn)。  
+    - 十六进制转义 (%nn)。  
   
-    -   Unicode 转义 (%nnn)。  
+    - Unicode 转义 (%nnn)。  
   
-    -   超长 UTF-8 转义 (%nn%nn)。  
+    - 超长 UTF-8 转义 (%nn%nn)。  
   
-    -   双转义（%nn 成为 %mmnn，其中 %mm 是 '%' 的转义）。  
+    - 双转义（%nn 成为 %mmnn，其中 %mm 是 '%' 的转义）。  
   
--   请注意，用户名可能不止有一种规范格式。 例如，经常可以使用 MYDOMAIN\\*username* 形式或 *username*@mydomain.example.com 形式。  
+- 请注意，用户名可能不止有一种规范格式。 例如，经常可以使用 MYDOMAIN\\*username* 形式或 *username*@mydomain.example.com 形式。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756593"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>如何：将数据移入和移出变量 (Visual Basic)
 通过将变量名称放在赋值语句左侧，可以在变量中存储值。  
@@ -19,7 +19,7 @@ ms.locfileid: "58818524"
   
 #### <a name="to-store-a-value-in-a-variable"></a>若要在变量中存储的值  
   
--   在赋值语句左侧使用变量的名称。  
+- 在赋值语句左侧使用变量的名称。  
   
      下面的示例设置变量的值`alpha`。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "58818524"
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>若要从变量检索值  
   
--   在表达式中使用的变量名称。 您可以使用变量任何可以使用常量或文本，除中定义的常量的值的表达式。  
+- 在表达式中使用的变量名称。 您可以使用变量任何可以使用常量或文本，除中定义的常量的值的表达式。  
   
      或  
   
--   使用以下等号的变量名称 (`=`) 在赋值语句登录。  
+- 使用以下等号的变量名称 (`=`) 在赋值语句登录。  
   
      下面的示例读取该变量的值`startValue`，然后使用该变量的值`counter`在表达式中。  
   

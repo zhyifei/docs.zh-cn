@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766813"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>类型的值\<typename1 > 无法转换为\<typename2 > （多个文件引用）
 类型的值\<typename1 > 无法转换为\<typename2 >。 类型不匹配可能是由于为的文件引用混合使用 '\<filepath1 > 项目中\<projectname1 > 对的文件引用\<filepath2 > 项目中\<项目名称 2> >。 如果两个程序集完全相同，请尝试更换这些引用，以确保两个引用都来自相同的位置。  
@@ -27,9 +27,9 @@ ms.locfileid: "58833524"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果引用的程序集具有相同的程序集标识，然后删除或替换其中一个文件的引用，以便只有单个文件引用。  
+- 如果引用的程序集具有相同的程序集标识，然后删除或替换其中一个文件的引用，以便只有单个文件引用。  
   
--   如果引用的程序集不具有相同的程序集标识，则更改你的代码，以便它不会尝试转换为类型在另一个中的类型。  
+- 如果引用的程序集不具有相同的程序集标识，则更改你的代码，以便它不会尝试转换为类型在另一个中的类型。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,11 +3,11 @@ title: 程序工作流
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
 ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780676"
 ---
 # <a name="procedural-workflows"></a>程序工作流
 程序工作流使用的流控制方法与程序语言中使用的流控制方法类似。 这些构造包括 `While` 和 `If`。 使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 等其他流控制活动，可以随意组合这些工作流。  
@@ -15,21 +15,21 @@ ms.locfileid: "59164744"
 ## <a name="controlling-execution-flow"></a>控制执行流  
  工作流活动库包含的活动可用于对程序语言中使用的大多数流控制方法进行建模， 这些问题包括：  
   
--   <xref:System.Activities.Statements.While>  
+- <xref:System.Activities.Statements.While>  
   
--   <xref:System.Activities.Statements.DoWhile>  
+- <xref:System.Activities.Statements.DoWhile>  
   
--   <xref:System.Activities.Statements.ForEach%601>  
+- <xref:System.Activities.Statements.ForEach%601>  
   
--   <xref:System.Activities.Statements.Parallel>  
+- <xref:System.Activities.Statements.Parallel>  
   
--   <xref:System.Activities.Statements.ParallelForEach%601>  
+- <xref:System.Activities.Statements.ParallelForEach%601>  
   
--   <xref:System.Activities.Statements.If>  
+- <xref:System.Activities.Statements.If>  
   
--   <xref:System.Activities.Statements.Switch%601>  
+- <xref:System.Activities.Statements.Switch%601>  
   
--   <xref:System.Activities.Statements.Pick>  
+- <xref:System.Activities.Statements.Pick>  
   
  若要使用流控制活动，拖放它们从**活动**组成一个复合活动设计器窗口中的工具箱。  
   

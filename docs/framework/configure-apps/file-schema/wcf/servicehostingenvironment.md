@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788396"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 此元素定义服务主机环境要为特定传输实例化的类型。 如果此元素为空，则使用默认类型。 此元素只能在应用程序或计算机级别的配置文件中使用。  
@@ -63,25 +63,25 @@ ms.locfileid: "59215984"
 ## <a name="remarks"></a>备注  
  默认情况下，WCF 服务和 ASP.NET 一起在寄宿应用程序域 (AppDomain) 中并行运行。 即使 WCF 和 ASP.NET 可以在同一 AppDomain 中共存，但在默认情况下，ASP.NET HTTP 管道不会处理 WCF 请求。 因此，WCF 服务不能使用 ASP.NET 应用程序平台的一些元素， 其中包括  
   
--   ASP.NET File/URL 授权  
+- ASP.NET File/URL 授权  
   
--   ASP.NET 模拟  
+- ASP.NET 模拟  
   
--   基于 Cookie 的会话状态  
+- 基于 Cookie 的会话状态  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   通过自定义 HttpModule 获得的管道扩展性  
+- 通过自定义 HttpModule 获得的管道扩展性  
   
  如果要使 WCF 服务在 ASP.NET 上下文中正常工作并仅通过 HTTP 进行通信，则可以使用 WCF 的 ASP.NET 兼容模式。 当 `aspNetCompatibilityEnabled` 属性在应用程序级别中设置为 `true` 时，此模式将启用。 服务实现必须使用 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 类来声明其可以在兼容模式中运行。 当启用此兼容模式时，  
   
--   ASP.NET File/URL 授权将在 WCF 授权之前强制执行。 授权决定是基于请求的传输级标识的。 消息级别的标识将被忽略。  
+- ASP.NET File/URL 授权将在 WCF 授权之前强制执行。 授权决定是基于请求的传输级标识的。 消息级别的标识将被忽略。  
   
--   WCF 服务操作开始是在 ASP.NET 模拟上下文中执行的。 如果为某个特定服务同时启用了 ASP.NET 模拟和 WCF 模拟，则将应用 WCF 模拟上下文。  
+- WCF 服务操作开始是在 ASP.NET 模拟上下文中执行的。 如果为某个特定服务同时启用了 ASP.NET 模拟和 WCF 模拟，则将应用 WCF 模拟上下文。  
   
--   可以通过 WCF 服务代码使用 HttpContext.Current，并且阻止服务公开非 HTTP 终结点。  
+- 可以通过 WCF 服务代码使用 HttpContext.Current，并且阻止服务公开非 HTTP 终结点。  
   
--   WCF 请求由 ASP.NET 管道处理。 已配置为对传入请求执行操作的 HttpModule 也可以处理 WCF 请求。 这些 HttpModule 可包括 ASP.NET 平台组件（如 <xref:System.Web.SessionState.SessionStateModule>）以及自定义第三方模块。  
+- WCF 请求由 ASP.NET 管道处理。 已配置为对传入请求执行操作的 HttpModule 也可以处理 WCF 请求。 这些 HttpModule 可包括 ASP.NET 平台组件（如 <xref:System.Web.SessionState.SessionStateModule>）以及自定义第三方模块。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何启用 ASP 兼容模式。  

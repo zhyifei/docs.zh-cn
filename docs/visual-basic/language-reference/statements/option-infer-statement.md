@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784084"
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -73,7 +73,7 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>若要设置命令行上的 Option Infer  
   
--   包括[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)中的编译器选项**vbc**命令。  
+- 包括[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)中的编译器选项**vbc**命令。  
   
 ## <a name="default-data-types-and-values"></a>默认数据类型和值  
  下表描述了指定 `Dim` 语句中数据类型和初始值设定项的各种组合的结果。  

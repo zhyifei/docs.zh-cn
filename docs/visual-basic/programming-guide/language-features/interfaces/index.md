@@ -8,24 +8,24 @@ helpviewer_keywords:
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775929"
 ---
 # <a name="interfaces-visual-basic"></a>接口 (Visual Basic)
 接口定义了类可以实现的属性、方法和事件。 接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。 在任何时候都可以通过开发附加接口和实现来添加新的功能。  
   
  以下是为何要使用接口继承而不用类继承的一些其他原因：  
   
--   在应用程序要求很多可能不相关的对象类型以提供某种功能的情况下，接口的适用性更强。  
+- 在应用程序要求很多可能不相关的对象类型以提供某种功能的情况下，接口的适用性更强。  
   
--   接口比基类更灵活，因为可以定义单个实现来实现多个接口。  
+- 接口比基类更灵活，因为可以定义单个实现来实现多个接口。  
   
--   在无需从基类继承实现的情况下，接口更好。  
+- 在无需从基类继承实现的情况下，接口更好。  
   
--   在无法使用类继承的情况下接口非常有用。 例如，结构无法从类继承，但它们可以实现接口。  
+- 在无法使用类继承的情况下接口非常有用。 例如，结构无法从类继承，但它们可以实现接口。  
   
 ## <a name="declaring-interfaces"></a>声明接口  
  接口定义包含在 `Interface` 和 `End Interface` 语句内。 在 `Interface` 语句后面，可以选择添加列出一个或多个继承的接口的 `Inherits` 语句。 在声明中，`Inherits` 语句必须出现在除注释外的所有其他语句之前。 接口定义中其余的语句应该包括 `Event`、`Sub`、`Function`、`Property`、`Interface`、`Class`、`Structure` 和 `Enum` 语句。 接口不能包含任何实现代码或与实现代码关联的语句，如 `End Sub` 或 `End Property`。  
@@ -81,7 +81,7 @@ ms.locfileid: "56972374"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[演练：创建和实现接口](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|提供引导你定义和实现自己的接口的详细过程。|  
 |[泛型接口中的变体](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|讨论泛型接口中的协变和逆变，提供 .NET Framework 中的变体泛型接口列表。|

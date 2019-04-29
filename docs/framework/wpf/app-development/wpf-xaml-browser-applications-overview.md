@@ -11,11 +11,11 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785863"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59320127"
   
  本主题包含以下各节：  
   
--   [创建新的 XAML 浏览器应用程序 (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
+- [创建新的 XAML 浏览器应用程序 (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
   
--   [部署 XBAP](#deploying_a_xbap)  
+- [部署 XBAP](#deploying_a_xbap)  
   
--   [与宿主网页通信](#communicating_with_the_host_web_page)  
+- [与宿主网页通信](#communicating_with_the_host_web_page)  
   
--   [XBAP 安全注意事项](#xbap_security_considerations)  
+- [XBAP 安全注意事项](#xbap_security_considerations)  
   
--   [XBAP 启动时间性能注意事项](#xbap_start_time_performance_considerations)  
+- [XBAP 启动时间性能注意事项](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>创建新的 XAML 浏览器应用程序 (XBAP)  
@@ -131,17 +131,17 @@ ms.locfileid: "59320127"
   
  当你使用<xref:System.Windows.Controls.WebBrowser>中应用程序中，WPF 控件在内部实例化本机 WebBrowser ActiveX 控件。 如果应用程序是 Internet Explorer 中运行的部分信任的 XBAP，则 ActiveX 控件会在 Internet Explorer 进程的专用线程中运行。 因此，存在以下限制：  
   
--   <xref:System.Windows.Controls.WebBrowser>控件应提供行为类似于主机浏览器中，包括安全限制。 可以通过 Internet Explorer 安全设置控制这些安全限制中的某些限制。 有关详细信息，请参阅[安全性](../security-wpf.md)。  
+- <xref:System.Windows.Controls.WebBrowser>控件应提供行为类似于主机浏览器中，包括安全限制。 可以通过 Internet Explorer 安全设置控制这些安全限制中的某些限制。 有关详细信息，请参阅[安全性](../security-wpf.md)。  
   
--   在 HTML 页中跨域加载 XBAP 时，将引发异常。  
+- 在 HTML 页中跨域加载 XBAP 时，将引发异常。  
   
--   输入位于不同的线程中 WPF <xref:System.Windows.Controls.WebBrowser>，因此无法截获键盘输入，并且不会共享 IME 状态。  
+- 输入位于不同的线程中 WPF <xref:System.Windows.Controls.WebBrowser>，因此无法截获键盘输入，并且不会共享 IME 状态。  
   
--   由于 ActiveX 控件在另一个线程上运行，导航的计时或顺序可能有所不同。 例如，并不总是通过启动另一个导航请求来取消到某页的导航。  
+- 由于 ActiveX 控件在另一个线程上运行，导航的计时或顺序可能有所不同。 例如，并不总是通过启动另一个导航请求来取消到某页的导航。  
   
--   自定义 ActiveX 控件可能会在通信方面出现问题，因为 WPF 应用程序在另一个线程上运行。  
+- 自定义 ActiveX 控件可能会在通信方面出现问题，因为 WPF 应用程序在另一个线程上运行。  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> 不会引发因为<xref:System.Windows.Interop.HwndHost>无法在另一个线程或进程中运行的窗口的子类。  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> 不会引发因为<xref:System.Windows.Interop.HwndHost>无法在另一个线程或进程中运行的窗口的子类。  
   
 ### <a name="creating-a-full-trust-xbap"></a>创建完全信任的 XBAP  
  如果 XBAP 需要完全信任，则可以更改项目以启用此权限。 以下步骤介绍如何启用完全信任：  
@@ -152,9 +152,9 @@ ms.locfileid: "59320127"
   
  此设置将进行以下更改：  
   
--   在项目文件中，将 `<TargetZone>` 元素值更改为 `Custom`。  
+- 在项目文件中，将 `<TargetZone>` 元素值更改为 `Custom`。  
   
--   应用程序清单 (app.manifest) 中`Unrestricted="true"`属性添加到<xref:System.Security.PermissionSet>元素。  
+- 应用程序清单 (app.manifest) 中`Unrestricted="true"`属性添加到<xref:System.Security.PermissionSet>元素。  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

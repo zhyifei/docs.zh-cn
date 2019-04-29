@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fe8e1355382273a681e927897f4a8ff5814b8de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765422"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 枚举
 指示在托管线程记录事件时写入事件日志的描述性消息的严重级别。  

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756970"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>生成和部署 WPF 应用程序
 生成和部署模型提供的功能生成和部署应用程序本地和远程，其中包括：  
   
--   MSBuild:.NET 构建系统位于 Microsoft.Build.Tasks.Windows 命名空间中。  
+- MSBuild:.NET 构建系统位于 Microsoft.Build.Tasks.Windows 命名空间中。  
   
--   资源： 处理 UI 资源。  
+- 资源： 处理 UI 资源。  
   
--   ClickOnce 部署：.NET 发布和部署系统。  
+- ClickOnce 部署：.NET 发布和部署系统。  
   
 ## <a name="in-this-section"></a>本节内容  
  [生成 WPF 应用程序](building-a-wpf-application-wpf.md)  

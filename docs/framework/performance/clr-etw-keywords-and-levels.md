@@ -10,11 +10,11 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788071"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 关键字和级别
 <a name="top"></a> Windows (ETW) 事件的事件跟踪可以按类别和级别进行筛选。 事件 [CLR ETW 关键字](#keywords) 启用按类别筛选事件；它们用于运行时提供程序和断开提供程序的组合。 [事件级别](#levels) 由标志来标识。  
@@ -25,13 +25,13 @@ ms.locfileid: "59105737"
   
  下表描述了这些关键字：  
   
--   [CLR ETW 运行时关键字](#runtime)  
+- [CLR ETW 运行时关键字](#runtime)  
   
--   [CLR ETW 断开关键字](#rundown)  
+- [CLR ETW 断开关键字](#rundown)  
   
--   [用于运行时提供程序的符号解析的关键字组合](#runtime_combo)  
+- [用于运行时提供程序的符号解析的关键字组合](#runtime_combo)  
   
--   [用于断开提供程序的符号解析的关键字组合](#rundown_combo)  
+- [用于断开提供程序的符号解析的关键字组合](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW 运行时关键字  

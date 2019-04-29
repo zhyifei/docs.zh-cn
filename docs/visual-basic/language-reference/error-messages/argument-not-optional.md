@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
 ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751574"
 ---
 # <a name="argument-not-optional-visual-basic"></a>非可选自变量 (Visual Basic)
 数量和类型的参数必须符合要求。 参数，数目不正确，或者省略自变量不可选。 如果已声明自变量可以仅中对用户定义过程的调用省略`Optional`过程定义中。  

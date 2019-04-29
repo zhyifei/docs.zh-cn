@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762054"
 ---
 # <a name="sealing"></a>密封
 面向对象的框架的一个特性是开发人员可以以框架设计者未曾预料到的方式扩展和定制它们。 这是可扩展设计的强大和危险之处。 因此，在设计框架时，必须根据需要仔细设计可扩展性并在不安全的情况下对其进行限制。  
@@ -27,13 +27,13 @@ ms.locfileid: "54646654"
   
  对类进行密封的充足理由包括：  
   
--   该类是一个静态类。 请参阅[静态类设计](../../../docs/standard/design-guidelines/static-class.md)。  
+- 该类是一个静态类。 请参阅[静态类设计](../../../docs/standard/design-guidelines/static-class.md)。  
   
--   该类在继承的受保护成员中存储了对安全敏感的机密。  
+- 该类在继承的受保护成员中存储了对安全敏感的机密。  
   
--   该类继承了许多虚拟成员，单独密封它们的成本将超过使该类未密封的益处。  
+- 该类继承了许多虚拟成员，单独密封它们的成本将超过使该类未密封的益处。  
   
--   该类是一个需要极快速运行时查找的属性。 密封属性的性能水平略高于未密封的属性。 请参阅[属性](../../../docs/standard/design-guidelines/attributes.md)。  
+- 该类是一个需要极快速运行时查找的属性。 密封属性的性能水平略高于未密封的属性。 请参阅[属性](../../../docs/standard/design-guidelines/attributes.md)。  
   
  **X 切忌** 在密封类型上声明受保护成员或虚拟成员。  
   

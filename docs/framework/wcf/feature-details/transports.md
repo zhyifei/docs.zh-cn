@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933726"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation 中的传输
 传输层是通道堆栈的最低层。 使用 Windows Communication Foundation (WCF) 中的主要传输是 HTTP、 HTTPS、 TCP 和命名的管道。 本节中的主题讨论如何选择传输、配置传输和设置优化属性。  
   
- WCF 包括其他传输协议。 有关消息队列 (也称为 MSMQ) 传输的信息，请参阅[队列和可靠会话](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。 有关对等传输的信息，请参阅[对等网络](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
+ WCF 包括其他传输。 有关消息队列 (也称为 MSMQ) 传输的信息，请参阅[队列和可靠会话](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。 有关对等传输的信息，请参阅[对等网络](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  

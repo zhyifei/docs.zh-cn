@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789891"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 函数
 查找并加载 DLL 的消息。 如果无法找到或加载 DLL 的消息，则返回 0。 消息 DLL 应在其名称是一个语言 ID、 一个子目录或当前目录中。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936352"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>在 Windows 窗体 MenuStrip 控件中合并菜单项
 如果有多文档界面 (MDI) 应用程序，您可以合并到父窗体的菜单的菜单项或整个菜单从子窗体。  
@@ -20,9 +20,9 @@ ms.locfileid: "59231560"
 ## <a name="general-concepts"></a>一般概念  
  合并过程涉及目标和源控件：  
   
--   目标是<xref:System.Windows.Forms.MenuStrip>要在其中合并菜单项 main 的一个或多个 MDI 父窗体上的控件。  
+- 目标是<xref:System.Windows.Forms.MenuStrip>要在其中合并菜单项 main 的一个或多个 MDI 父窗体上的控件。  
   
--   源是<xref:System.Windows.Forms.MenuStrip>包含你想要合并到目标菜单的菜单项的 MDI 子窗体上的控件。  
+- 源是<xref:System.Windows.Forms.MenuStrip>包含你想要合并到目标菜单的菜单项的 MDI 子窗体上的控件。  
   
  <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>属性标识的下拉列表，则会使用当前 MDI 标题填充父窗体的 MDI 子窗体的菜单项。 例如，您通常列出上当前打开的 MDI 子窗体**窗口**菜单。  
   

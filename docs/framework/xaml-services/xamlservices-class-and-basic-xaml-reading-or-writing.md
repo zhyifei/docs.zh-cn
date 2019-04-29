@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938731"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 类和基本的 XAML 读取或写入
 <xref:System.Xaml.XamlServices> 是由 .NET Framework XAML 服务提供的一个类，可用于解决无需对 XAML 节点流的特定访问权限的 XAML 方案，或从这些节点获取的 XAML 类型系统信息。 <xref:System.Xaml.XamlServices> API 可总结如下： `Load` 或 `Parse` 用以支持 XAML 加载路径， `Save` 用以支持 XAML 保存路径，以及 `Transform` ，用以提供联接加载路径和保存的技术。 `Transform` 可用于从一个 XAML 架构更改为另一个。 本主题总结了每个 API 分类，并介绍了特定方法重载之间的差异。  
@@ -25,9 +25,9 @@ ms.locfileid: "59162255"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 和 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 是重载，依赖于上一版本的 .NET Framework 的格式的读取器。 若要使用这些重载，你应该已经创建了读取器实例并使用其 `Create` API 来加载相关形式 （文本或 XML）的 XAML。 如果你已经在其他读取器中移动了记录指针或对它们执行了其他操作，这就不重要了。 <xref:System.Xaml.XamlServices.Load%2A> 的负载路径逻辑始终处理整个根下的 XAML 输入。 这些重载的方案可能包括以下内容：  
   
--   设计图面，其中你从现有的特定于 XML 的文本编辑器提供简单的 XAML 编辑功能。  
+- 设计图面，其中你从现有的特定于 XML 的文本编辑器提供简单的 XAML 编辑功能。  
   
--   核心 <xref:System.IO> 方案的变体，你可以在其中使用专用的读取器打开文件或流。 你的逻辑在尝试将内容加载为 XAML 之前对其执行初步检查或处理。  
+- 核心 <xref:System.IO> 方案的变体，你可以在其中使用专用的读取器打开文件或流。 你的逻辑在尝试将内容加载为 XAML 之前对其执行初步检查或处理。  
   
  你可以加载文件或流，或者可以加载 <xref:System.Xml.XmlReader>、 <xref:System.IO.TextReader>或 <xref:System.Xaml.XamlReader> ，它们通过使用读取器的 API 进行加载来包装你的 XAML 输入。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "59162255"
   
  为更高级方案提供的 `Load` 签名是 <xref:System.Xaml.XamlServices.Load%28System.Xaml.XamlReader%29>。 在以下情况之一，可以使用此签名：  
   
--   你已定义自己的 <xref:System.Xaml.XamlReader>实现。  
+- 你已定义自己的 <xref:System.Xaml.XamlReader>实现。  
   
--   你需要指定与默认设置不同的 <xref:System.Xaml.XamlReader> 设置。  
+- 你需要指定与默认设置不同的 <xref:System.Xaml.XamlReader> 设置。  
   
  非默认设置的示例设置后列任一项： <xref:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot%2A>； <xref:System.Xaml.XamlReaderSettings.BaseUri%2A>； <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A>； <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>； <xref:System.Xaml.XamlReaderSettings.ValuesMustBeString%2A>。 <xref:System.Xaml.XamlServices> 的默认读取器是 <xref:System.Xaml.XamlXmlReader>。 如果你提供自己 <xref:System.Xaml.XamlXmlReader>，对于设置，以下是用以设置非默认 <xref:System.Xaml.XamlXmlReaderSettings>的属性： <xref:System.Xaml.XamlXmlReaderSettings.CloseInput%2A>； <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A>； <xref:System.Xaml.XamlXmlReaderSettings.XmlLang%2A>； <xref:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve%2A>。  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777905"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName 特性
 定义指定的组件对象模型 (COM) 库的托管命名空间名称的自定义接口特性。  
@@ -51,7 +51,7 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
   
  使用<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType>或<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType>托管的名称检索该属性。  
   
- 有关详细信息，请参阅[接口特性](/cpp/windows/interface-attributes)Visual c + + 参考文档。  
+ 有关详细信息，请参阅[接口特性](/cpp/windows/interface-attributes)视觉对象中C++参考文档。  
   
 ## <a name="example"></a>示例  
  下面的示例演示库定义使用`GUID_ManagedName`属性。  

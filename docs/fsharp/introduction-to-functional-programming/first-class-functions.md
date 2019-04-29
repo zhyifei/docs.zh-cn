@@ -1,15 +1,15 @@
 ---
-title: 第一类函数
+title: 头等函数
 description: 了解有关的第一类函数，以及如何对函数式编程中的重要信息F#。
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772752"
 ---
-# <a name="first-class-functions"></a>第一类函数
+# <a name="first-class-functions"></a>头等函数
 
 函数编程语言的决定性特征是提升至最优状态的函数。 您应能够执行的函数，任何您可以使用其他内置类型的值执行操作并将无法执行此操作与一般程度的工作量。
 
@@ -193,5 +193,5 @@ F#提供用于大多数集合类型，包括映射方法[列出了](../language-
 - [列表](../language-reference/lists.md)
 - [元组](../language-reference/tuples.md)
 - [函数](../language-reference/functions/index.md)
-- [`let` 绑定](../language-reference/functions/let-bindings.md)
-- [Lambda 表达式：`fun`关键字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [`let` Bindings](../language-reference/functions/let-bindings.md)
+- [Lambda 表达式：`fun` 关键字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781181"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 指定一个或多个声明的局部变量继续存在，并在其中声明它们的过程终止后保留最新值。  
@@ -22,13 +22,13 @@ ms.locfileid: "58814158"
   
 ## <a name="rules"></a>规则  
   
--   **声明上下文。** 可以使用`Static`仅对本地变量。 这意味着声明上下文`Static`变量必须是一个过程或块，在过程中，并且它不能为源文件、 命名空间、 类、 结构或模块。  
+- **声明上下文。** 可以使用`Static`仅对本地变量。 这意味着声明上下文`Static`变量必须是一个过程或块，在过程中，并且它不能为源文件、 命名空间、 类、 结构或模块。  
   
      不能使用`Static`结构过程内。  
   
--   数据类型的`Static`无法推断局部变量。 有关详细信息，请参阅[本地类型推断](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+- 数据类型的`Static`无法推断局部变量。 有关详细信息，请参阅[本地类型推断](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
--   **组合的修饰符。** 不能指定`Static`连同`ReadOnly`， `Shadows`，或`Shared`同一声明中。  
+- **组合的修饰符。** 不能指定`Static`连同`ReadOnly`， `Shadows`，或`Shared`同一声明中。  
   
 ## <a name="behavior"></a>行为  
  当声明中的静态变量`Shared`过程中，只有一个静态变量副本是可用于整个应用程序。 在调用`Shared`过程的方法是使用类名称，不是指向类的实例的变量。  

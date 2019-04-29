@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773095"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>优化性能：其他建议
 <a name="introduction"></a>本主题提供[优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)这一节中各主题内容之外的性能改进建议。  
   
  本主题包含以下各节：  
   
--   [画笔的不透明度与元素的不透明度](#Opacity)  
+- [画笔的不透明度与元素的不透明度](#Opacity)  
   
--   [导航到对象](#Navigation_Objects)  
+- [导航到对象](#Navigation_Objects)  
   
--   [对大型 3D 图面进行命中测试](#Hit_Testing)  
+- [对大型 3D 图面进行命中测试](#Hit_Testing)  
   
--   [CompositionTarget.Rendering 事件](#CompositionTarget_Rendering_Event)  
+- [CompositionTarget.Rendering 事件](#CompositionTarget_Rendering_Event)  
   
--   [避免使用 ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
+- [避免使用 ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [配置字体缓存服务以缩短启动时间](#FontCache)  
+- [配置字体缓存服务以缩短启动时间](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>画笔的不透明度与元素的不透明度  

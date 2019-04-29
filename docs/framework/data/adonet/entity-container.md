@@ -3,20 +3,20 @@ title: Entity Container — 实体容器
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
 ms.openlocfilehash: 4a629a800df63c67dc17d3fc1531a9862861e9c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667233"
 ---
 # <a name="entity-container"></a>Entity Container — 实体容器
 *实体容器*是逻辑分组[实体集](../../../../docs/framework/data/adonet/entity-set.md)，[关联集](../../../../docs/framework/data/adonet/association-set.md)，以及[函数导入](../../../../docs/framework/data/adonet/model-declared-function.md)。  
   
  对于在概念模型中定义的实体容器，必须满足以下条件：  
   
--   在每个概念模型中必须至少定义一个实体容器。  
+- 在每个概念模型中必须至少定义一个实体容器。  
   
--   每个概念模型中的实体容器必须有唯一的名称。  
+- 每个概念模型中的实体容器必须有唯一的名称。  
   
  实体容器可以定义使用在一个或多个命名空间中定义的实体类型或关联的实体集或关联集。 有关详细信息，请参阅[实体数据模型：命名空间](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)。  
   

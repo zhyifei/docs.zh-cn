@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940434"
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：转换传入声明
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web 窗体  
+- ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
  本指南提供了创建简单的声明感知 ASP.NET Web 窗体应用程序和转换传入声明的详细分步过程。 它还提供关于如何测试应用程序的说明，以便验证当应用程序运行时是否呈现已转换声明。  
   
 ## <a name="contents"></a>内容  
   
--   目标  
+- 目标  
   
--   概述  
+- 概述  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   步骤 2 – 使用自定义 ClaimsAuthenticationManager 实现声明转换  
+- 步骤 2 – 使用自定义 ClaimsAuthenticationManager 实现声明转换  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
 ## <a name="objectives"></a>目标  
   
--   配置 ASP.NET Web 窗体应用程序实现基于声明的身份验证  
+- 配置 ASP.NET Web 窗体应用程序实现基于声明的身份验证  
   
--   通过添加管理员角色声明转换传入声明  
+- 通过添加管理员角色声明转换传入声明  
   
--   测试 ASP.NET Web 窗体应用程序，了解它是否正常工作  
+- 测试 ASP.NET Web 窗体应用程序，了解它是否正常工作  
   
 ## <a name="overview"></a>概述  
  WIF 公开名为 <xref:System.Security.Claims.ClaimsAuthenticationManager> 的类，使用户在声明呈现给信赖方 (RP) 应用程序之前能够进行修改。 <xref:System.Security.Claims.ClaimsAuthenticationManager> 可用于分离身份验证和基础应用程序代码之间的问题。 以下示例演示如何在传入的 <xref:System.Security.Claims.ClaimsPrincipal> 中向声明添加 RP 可能需要的角色。  
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   步骤 2 – 使用自定义 ClaimsAuthenticationManager 实现声明转换  
+- 步骤 2 – 使用自定义 ClaimsAuthenticationManager 实现声明转换  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
  在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。  

@@ -1,5 +1,5 @@
 ---
-title: 如何：打开放置在 RichTextBox 控件上的文件
+title: 如何：打开放入 RichTextBox 控件的文件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
 ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768597"
 ---
-# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>如何：打开放置在 RichTextBox 控件上的文件
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>如何：打开放入 RichTextBox 控件的文件
 在中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，则<xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Documents.FlowDocument>控件都具有内置的拖放功能。 内置功能，可拖放文本内和控件之间。 但是，它不会启用通过拖放控件上的文件来打开文件。 这些控件还会将拖放事件标记为已处理。 因此，默认情况下，无法添加你自己的事件处理程序，以提供功能以打开拖放的文件。  
   
  若要在这些控件中添加额外处理拖放事件，请使用<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>方法添加拖放事件在事件处理程序。 设置`handledEventsToo`参数`true`具有已标记为由事件路由的另一个元素处理的路由事件调用指定的处理程序。  

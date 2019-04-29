@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
 ms.openlocfilehash: f20ed883005641082eb89e2effa5221594910ffe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935351"
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a>数组界限不能出现在类型说明符中
 数组大小不能声明为数据类型说明符的一部分。  
@@ -21,13 +21,13 @@ ms.locfileid: "58838776"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   指定紧跟变量的名称，而不是数组大小类型之后，如下面的示例中所示的数组的大小。  
+- 指定紧跟变量的名称，而不是数组大小类型之后，如下面的示例中所示的数组的大小。  
   
     ```  
     Dim Array(8) As Integer   
     ```  
   
--   定义一个数组并将其与所需的元素数进行初始化，如下面的示例中所示。  
+- 定义一个数组并将其与所需的元素数进行初始化，如下面的示例中所示。  
   
     ```  
     Dim Array2() As Integer = New Integer(8) {}  

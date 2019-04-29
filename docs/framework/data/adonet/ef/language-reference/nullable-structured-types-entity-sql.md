@@ -3,11 +3,11 @@ title: 可以为 null 的结构化类型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760319"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>可以为 null 的结构化类型 (Entity SQL)
 结构化类型的 `null` 实例是不存在的实例。 这不同于其中所有属性都具有 `null` 值的现有实例。  
@@ -17,28 +17,28 @@ ms.locfileid: "59127850"
 ## <a name="kinds-of-nullable-structured-types"></a>可以为 Null 的结构化类型的种类  
  有三种可以为 Null 的结构化类型：  
   
--   行类型。  
+- 行类型。  
   
--   复杂类型。  
+- 复杂类型。  
   
--   实体类型。  
+- 实体类型。  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>能够产生结构化类型的 null 实例的代码模式  
  以下方案会产生 `null` 实例：  
   
--   将 `null` 说明为结构化类型：  
+- 将 `null` 说明为结构化类型：  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   将基类型向上转换为派生类型：  
+- 将基类型向上转换为派生类型：  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   对 false 条件进行外部联接：  
+- 对 false 条件进行外部联接：  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
@@ -59,19 +59,19 @@ ms.locfileid: "59127850"
     ON FalseCondition  
     ```  
   
--   取消 `null` 引用的引用：  
+- 取消 `null` 引用的引用：  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   从空集合获取 ANYELEMENT：  
+- 从空集合获取 ANYELEMENT：  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   检查结构化类型实例是否为 `null`：  
+- 检查结构化类型实例是否为 `null`：  
   
     ```csharp  
     ...  

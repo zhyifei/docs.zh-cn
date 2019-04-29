@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773675"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 
@@ -19,8 +19,7 @@ ms.locfileid: "57846540"
 
 ### <a name="getting-started-with-messaging-activities"></a>消息传递活动入门
 
-- 在 Visual Studio 2012 中，创建一个 WCF 工作流服务应用程序项目。 
-  <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上。
+- 在 Visual Studio 2012 中，创建一个 WCF 工作流服务应用程序项目。 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上。
 
 - 右键单击项目并选择**添加服务引用**。 指向现有 web 服务 WSDL 并单击**确定**。 生成项目以显示生成的活动 (使用实现<xref:System.ServiceModel.Activities.Send>和<xref:System.ServiceModel.Activities.ReceiveReply>) 您的工具箱中。
 
@@ -42,12 +41,11 @@ ms.locfileid: "57846540"
 
 - 可通过将 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 添加到 <xref:System.ServiceModel.WorkflowServiceHost>，然后使用 <xref:System.ServiceModel.Activities.WorkflowControlClient> 来控制工作流实例（例如，已挂起或已终止）。
 
-- 
-  <xref:System.ServiceModel.WorkflowServiceHost> 的示例可在以下部分找到：
+- <xref:System.ServiceModel.WorkflowServiceHost> 的示例可在以下部分找到：
 
-    - [执行](./samples/execution.md)
+  - [执行](./samples/execution.md)
 
-    - 应用程序：[已挂起的实例管理](./samples/suspended-instance-management.md)
+  - 应用程序：[已挂起的实例管理](./samples/suspended-instance-management.md)
 
 - [承载工作流服务概述](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -69,13 +67,13 @@ BestPriceFinder 服务将调用多个航空公司服务来查找最佳票证的�
 
 - 例如，将消息组合在一起的请求-答复相关性就是用于将消息组合在一起的相关性。
 
-    - 上<xref:System.ServiceModel.Activities.Receive>活动上单击<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>属性并添加<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>使用 CorrelationHandle 在上面的第一步中创建。
+  - 上<xref:System.ServiceModel.Activities.Receive>活动上单击<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>属性并添加<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>使用 CorrelationHandle 在上面的第一步中创建。
 
-    - 创建<xref:System.ServiceModel.Activities.SendReply>通过右键单击活动<xref:System.ServiceModel.Activities.Receive>，然后单击"创建 SendReply"。 将其粘贴到工作流中的 <xref:System.ServiceModel.Activities.Receive> 活动后。
+  - 创建<xref:System.ServiceModel.Activities.SendReply>通过右键单击活动<xref:System.ServiceModel.Activities.Receive>，然后单击"创建 SendReply"。 将其粘贴到工作流中的 <xref:System.ServiceModel.Activities.Receive> 活动后。
 
 - 将一段数据映射到一个服务实例的示例为基于内容的相关性，它将一段数据（例如，订单 ID）映射到一个特定的工作流实例。
 
-    - 在任何消息传递活动上，单击 `CorrelationInitializers` 属性，并使用上面创建的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 变量添加 <xref:System.ServiceModel.Activities.CorrelationHandle>。 从下拉菜单中，双击消息上的所需属性（如 OrderID）。 将 `CorrelatesWith` 属性设置为上面使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 变量。
+  - 在任何消息传递活动上，单击 `CorrelationInitializers` 属性，并使用上面创建的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 变量添加 <xref:System.ServiceModel.Activities.CorrelationHandle>。 从下拉菜单中，双击消息上的所需属性（如 OrderID）。 将 `CorrelatesWith` 属性设置为上面使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 变量。
 
 - [相关性概念文档](../wcf/feature-details/correlation.md)
 
@@ -133,9 +131,9 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 示例：
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>数据协定解析程序方案
 
@@ -153,25 +151,25 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 流程图功能使用以下类：
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - 示例：
 
-    - [使用 TryCatch 在 Flowchart 活动中进行错误处理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [使用 TryCatch 在 Flowchart 活动中进行错误处理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [招聘流程](./samples/hiring-process.md)
+  - [招聘流程](./samples/hiring-process.md)
 
 - 设计器文档：
 
-    - [Flowchart 活动设计器](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Flowchart 活动设计器](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>流程图方案
 
@@ -199,15 +197,15 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 示例：
 
-    - [招聘流程](./samples/hiring-process.md)
+  - [招聘流程](./samples/hiring-process.md)
 
-    - [企业采购过程](./samples/corporate-purchase-process.md)
+  - [企业采购过程](./samples/corporate-purchase-process.md)
 
 - 设计器文档：
 
-    - [Parallel 活动设计器](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Parallel 活动设计器](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > 活动设计器](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > 活动设计器](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>过程活动方案
 
@@ -277,7 +275,7 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 1. 基于内容的路由（<xref:System.ServiceModel.Dispatcher.MessageFilter> 对象会检查消息以确定其发送位置。）
 
-2. 协议桥接（传输和消息）
+2. 协议桥接 （传输和消息）
 
 3. 错误处理（路由器将捕获通信异常并将故障转移到备份终结点）
 
@@ -333,8 +331,7 @@ WCF Discovery 是一种框架技术，可用于将合并到应用程序基础结
 
 ### <a name="getting-started"></a>入门
 
-1. 在 Visual Studio 2010 中，创建 WCF 工作流服务应用程序项目。 
-  <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上以开始操作。
+1. 在 Visual Studio 2010 中，创建 WCF 工作流服务应用程序项目。 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 对将置于画布上以开始操作。
 
 2. 打开 web.config 并添加一个无配置文件的 ETW 跟踪行为。
 

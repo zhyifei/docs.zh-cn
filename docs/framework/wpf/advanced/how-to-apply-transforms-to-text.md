@@ -16,11 +16,11 @@ helpviewer_keywords:
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
 ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776936"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>如何：向文本应用转换
 应用变换可以改变应用程序中文本的显示。 下面的示例使用不同类型的呈现变换来影响中文本的显示<xref:System.Windows.Controls.TextBlock>控件。  

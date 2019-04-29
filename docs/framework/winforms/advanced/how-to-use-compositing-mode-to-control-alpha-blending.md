@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779014"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>如何：使用复合模式控制 alpha 值混合处理
 可能您想要创建屏幕外位图，具有以下特征：  
   
--   颜色的 alpha 值都小于 255 个。  
+- 颜色的 alpha 值都小于 255 个。  
   
--   颜色不是 alpha 混合与每个其他的创建位图。  
+- 颜色不是 alpha 混合与每个其他的创建位图。  
   
--   显示完成的位图，位图中的颜色时，alpha 值混合处理与背景色显示设备上。  
+- 显示完成的位图，位图中的颜色时，alpha 值混合处理与背景色显示设备上。  
   
  若要创建这种位图，请构造一个空白<xref:System.Drawing.Bitmap>对象，然后再构造<xref:System.Drawing.Graphics>对象基于该位图。 设置的复合模式<xref:System.Drawing.Graphics>对象传递给<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>。  
   

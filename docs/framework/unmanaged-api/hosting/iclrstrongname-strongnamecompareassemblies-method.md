@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63d4b885b6968b800bc965a9be1ec6b795a42220
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771496"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies 方法
 确定两个程序集是否仅是强名称签名不同。  
@@ -47,11 +47,11 @@ HRESULT StrongNameCompareAssemblies (
  `pdwResult`  
  [out]以下值之一：  
   
--   `SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。  
+- `SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。  
   
--   `SN_CMP_IDENTICAL` (1)-指定程序的程序集完全相同，包括其签名和校验和。  
+- `SN_CMP_IDENTICAL` (1)-指定程序的程序集完全相同，包括其签名和校验和。  
   
--   `SN_CMP_SIGONLY` (2)-指定程序集仅签名和校验和不同。  
+- `SN_CMP_SIGONLY` (2)-指定程序集仅签名和校验和不同。  
   
 ## <a name="return-value"></a>返回值  
  `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  

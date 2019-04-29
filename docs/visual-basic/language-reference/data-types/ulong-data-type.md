@@ -17,11 +17,11 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747066"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 数据类型 (Visual Basic)
 
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>编程提示
   
--   **负号。** 因为`ULong`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`ULong`，Visual Basic 将转换为表达式`Decimal`第一个。  
+- **负号。** 因为`ULong`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`ULong`，Visual Basic 将转换为表达式`Decimal`第一个。  
   
--   **CLS 遵从性。** `ULong`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。  
+- **CLS 遵从性。** `ULong`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。  
   
--   **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互请记住，类型，如`ulong`可以在其他环境中具有不同的数据宽度 （32 位）。 如果您将 32 位自变量传递给此类组件，将其作为声明`UInteger`而不是`ULong`中托管的 Visual Basic 代码。  
+- **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互请记住，类型，如`ulong`可以在其他环境中具有不同的数据宽度 （32 位）。 如果您将 32 位自变量传递给此类组件，将其作为声明`UInteger`而不是`ULong`中托管的 Visual Basic 代码。  
   
      此外，自动化不支持在 Windows 95、 Windows 98、 Windows ME 或 Windows 2000 上 64 位整数。 不能将传递一个 Visual Basic`ULong`到这些平台上自动化组件的参数。  
   
--   **扩大转换。** `ULong`数据类型加宽到`Decimal`， `Single`，和`Double`。 这意味着可以将转换`ULong`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
+- **扩大转换。** `ULong`数据类型加宽到`Decimal`， `Single`，和`Double`。 这意味着可以将转换`ULong`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
--   **类型字符。** 追加文本类型字符`UL`为文本将其强制转换到`ULong`数据类型。 `ULong` 有没有标识符类型字符。
+- **类型字符。** 追加文本类型字符`UL`为文本将其强制转换到`ULong`数据类型。 `ULong` 有没有标识符类型字符。
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt64?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt64?displayProperty=nameWithType> 结构。  
   
 ## <a name="see-also"></a>请参阅
 

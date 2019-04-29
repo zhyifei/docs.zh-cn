@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773354"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>如何：创建和运行长期运行的工作流
 Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数据库的空闲工作流运行时的功能。 中的步骤[如何：运行工作流](how-to-run-a-workflow.md)演示工作流承载的控制台应用程序的基础知识。 示例演示了启动工作流、工作流生命周期处理程序和恢复书签。 为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。 教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。  
@@ -23,25 +23,25 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
 ## <a name="in-this-topic"></a>在本主题中  
   
--   [若要创建持久性数据库](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [若要创建持久性数据库](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [若要添加对 DurableInstancing 程序集的引用](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [若要添加对 DurableInstancing 程序集的引用](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [若要创建工作流主机窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [若要创建工作流主机窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [若要添加的属性和帮助器方法的窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [若要添加的属性和帮助器方法的窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [若要配置实例存储、 工作流生命周期处理程序和扩展](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [若要配置实例存储、 工作流生命周期处理程序和扩展](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [若要启用启动和恢复多个工作流类型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [若要启用启动和恢复多个工作流类型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [若要启动新工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [若要启动新工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [若要恢复的工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [若要恢复的工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [终止工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [终止工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [若要生成并运行应用程序](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [若要生成并运行应用程序](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 若要创建持久性数据库  
   
@@ -54,9 +54,9 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
      选择以下两个文件，然后单击**打开**。  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. 选择**SqlWorkflowInstanceStoreSchema.sql**从**窗口**菜单。 絋粄**WF45GettingStartedTutorial**中选择**可用数据库**下拉列表中，选择**Execute**从**查询**菜单。  
   

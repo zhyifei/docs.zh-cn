@@ -3,11 +3,11 @@ title: 如何：查找具有特定子元素的元素 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
 ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780596"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>如何：查找具有特定子元素的元素 (Visual Basic)
 本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。  

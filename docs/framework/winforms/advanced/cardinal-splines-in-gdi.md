@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
 ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779105"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+ 中的基数样条
 基数样条是一系列单个系统联合起来以形成更大的曲线的曲线。 由一系列点和张力参数指定样条。 基数样条平滑地通过在数组; 每个点有没有尖角中的和任何突然更改曲线的拟合度。 下图显示了一系列点和经过集中每个点的基数样条。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764923"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 图形呈现疑难解答
 本主题概述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可视化层。 它主要关注的角色<xref:System.Windows.Media.Visual>类中呈现支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
@@ -24,27 +24,27 @@ ms.locfileid: "59101362"
   
  <xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。 用户界面控件，如<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用该类来保持其呈现数据。 <xref:System.Windows.Media.Visual>对象提供支持：  
   
--   输出显示：呈现的持久、 序列化的视觉对象的绘图内容。  
+- 输出显示：呈现的持久、 序列化的视觉对象的绘图内容。  
   
--   转换：视觉对象上执行转换。  
+- 转换：视觉对象上执行转换。  
   
--   剪裁：为视觉对象提供剪裁区域支持。  
+- 剪裁：为视觉对象提供剪裁区域支持。  
   
--   命中测试：确定是否在视觉对象的边界内包含坐标或几何形状。  
+- 命中测试：确定是否在视觉对象的边界内包含坐标或几何形状。  
   
--   边界框计算：确定视觉对象的边框。  
+- 边界框计算：确定视觉对象的边框。  
   
  但是，<xref:System.Windows.Media.Visual>如对象不包含对非呈现功能的支持：  
   
--   事件处理  
+- 事件处理  
   
--   布局  
+- 布局  
   
--   样式  
+- 样式  
   
--   数据绑定  
+- 数据绑定  
   
--   全球化  
+- 全球化  
   
  <xref:System.Windows.Media.Visual> 公开为公共抽象类必须从中派生子类。 下图显示了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中所公开的视觉对象的层次结构。  
   
@@ -127,13 +127,13 @@ DrawingGroup 操作的顺序
   
  对于视觉对象和矢量图形指令列表的层次结构，需要注意多个事项：  
   
--   该层次结构中的排序表示绘图信息的呈现顺序。 从可视化元素的根，按照从左到右、从上到下的顺序遍历子元素。 如果某个元素有可视化子元素，则会先遍历该元素的子元素，然后再遍历该元素的同级。  
+- 该层次结构中的排序表示绘图信息的呈现顺序。 从可视化元素的根，按照从左到右、从上到下的顺序遍历子元素。 如果某个元素有可视化子元素，则会先遍历该元素的子元素，然后再遍历该元素的同级。  
   
--   非叶节点元素中层次结构，如<xref:System.Windows.Controls.ContentPresenter>，用于包含子元素，它们不包含指令列表。  
+- 非叶节点元素中层次结构，如<xref:System.Windows.Controls.ContentPresenter>，用于包含子元素，它们不包含指令列表。  
   
--   如果可视化元素既包含矢量图形指令列表又包含可视化子级，则会先呈现父级可视化元素中的指令列表，然后再呈现任何可视化子对象中的绘图。  
+- 如果可视化元素既包含矢量图形指令列表又包含可视化子级，则会先呈现父级可视化元素中的指令列表，然后再呈现任何可视化子对象中的绘图。  
   
--   矢量图形指令列表中的项按照从左到右的顺序呈现。  
+- 矢量图形指令列表中的项按照从左到右的顺序呈现。  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>可视化树  

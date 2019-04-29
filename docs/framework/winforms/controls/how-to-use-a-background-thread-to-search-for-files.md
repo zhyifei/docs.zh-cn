@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785848"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>如何：使用后台线程搜索文件
 <xref:System.ComponentModel.BackgroundWorker>组件替换，并添加了功能<xref:System.Threading>命名空间; 但是，<xref:System.Threading>命名空间保留向后兼容性和将来使用，如果您选择。 有关详细信息，请参阅[BackgroundWorker 组件概述](backgroundworker-component-overview.md)。  
@@ -28,13 +28,13 @@ ms.locfileid: "59157728"
   
  下面的示例 (`DirectorySearcher`) 显示为与指定的搜索字符串相匹配的文件使用后台线程以递归方式搜索目录，然后填充具有搜索结果的列表框的多线程的 Windows 窗体控件。 此示例所示的关键概念是，如下所示：  
   
--   `DirectorySearcher` 启动一个新线程来执行搜索。 线程执行`ThreadProcedure`反过来调用帮助器方法`RecurseDirectory`方法来执行实际搜索并填充列表框。 但是，填充列表框需要跨线程调用，接下来两个项目符号项中所述。  
+- `DirectorySearcher` 启动一个新线程来执行搜索。 线程执行`ThreadProcedure`反过来调用帮助器方法`RecurseDirectory`方法来执行实际搜索并填充列表框。 但是，填充列表框需要跨线程调用，接下来两个项目符号项中所述。  
   
--   `DirectorySearcher` 定义`AddFiles`方法将文件添加到列表框中; 但是，`RecurseDirectory`不能直接调用`AddFiles`因为`AddFiles`可以仅在创建 STA 线程中执行`DirectorySearcher`。  
+- `DirectorySearcher` 定义`AddFiles`方法将文件添加到列表框中; 但是，`RecurseDirectory`不能直接调用`AddFiles`因为`AddFiles`可以仅在创建 STA 线程中执行`DirectorySearcher`。  
   
--   唯一方式`RecurseDirectory`可以调用`AddFiles`是通过跨线程调用 — 即，通过调用<xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>封送`AddFiles`的创建线程`DirectorySearcher`。 `RecurseDirectory` 使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>，以便可以以异步方式进行调用。  
+- 唯一方式`RecurseDirectory`可以调用`AddFiles`是通过跨线程调用 — 即，通过调用<xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>封送`AddFiles`的创建线程`DirectorySearcher`。 `RecurseDirectory` 使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>，以便可以以异步方式进行调用。  
   
--   封送处理一种方法需要函数指针或回调的等效项。 这是.NET Framework 中使用委托来完成。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 采用委托作为参数。 `DirectorySearcher` 因此定义一个委托 (`FileListDelegate`)，将绑定`AddFiles`的实例`FileListDelegate`在其构造函数，并传递到此委托实例<xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher` 此外定义完成搜索时封送一个事件委托。  
+- 封送处理一种方法需要函数指针或回调的等效项。 这是.NET Framework 中使用委托来完成。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 采用委托作为参数。 `DirectorySearcher` 因此定义一个委托 (`FileListDelegate`)，将绑定`AddFiles`的实例`FileListDelegate`在其构造函数，并传递到此委托实例<xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher` 此外定义完成搜索时封送一个事件委托。  
   
 ```vb  
 Option Strict  

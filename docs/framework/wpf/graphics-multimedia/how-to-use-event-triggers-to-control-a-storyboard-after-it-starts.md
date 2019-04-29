@@ -7,28 +7,28 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
 ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769286"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>如何：在情节提要启动之后使用事件触发器来控制情节提要
 此示例演示如何控制<xref:System.Windows.Media.Animation.Storyboard>启动后对它。 若要启动<xref:System.Windows.Media.Animation.Storyboard>通过使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，这样可以将分发到的对象和属性，它们进行动画处理，然后启动情节提要的动画。 如果您为提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，您使它可控制情节提要。 然后您可以以交互方式控制情节提要启动后。  
   
  使用以下情节提要操作一起使用<xref:System.Windows.EventTrigger>对象来控制情节提要。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>：暂停情节提要。  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>：暂停情节提要。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>：恢复暂停的情节提要。  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>：恢复暂停的情节提要。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：更改情节提要速度。  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：更改情节提要速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有，请转到其填充期，末尾情节提要。  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有，请转到其填充期，末尾情节提要。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>：停止情节提要。  
+- <xref:System.Windows.Media.Animation.StopStoryboard>：停止情节提要。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>：删除情节提要，释放资源。  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>：删除情节提要，释放资源。  
   
 ## <a name="example"></a>示例  
  以下示例使用可控制情节提要操作来以交互方式控制情节提要。  

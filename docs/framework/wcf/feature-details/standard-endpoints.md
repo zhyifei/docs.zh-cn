@@ -3,11 +3,11 @@ title: 标准终结点
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747766"
 ---
 # <a name="standard-endpoints"></a>标准终结点
 通过指定地址、绑定和协定来定义终结点。 终结点上可以设置的其他参数包括行为配置、标头和侦听 URI。  对于特定类型的终结点，这些值不会更改。 例如，元数据交换终结点始终使用 <xref:System.ServiceModel.Description.IMetadataExchange> 协定， 其他终结点（如 <xref:System.ServiceModel.Description.WebHttpEndpoint>）始终需要指定的终结点行为。 通过为常用终结点属性设置默认值可以提高终结点的可用性。 开发人员可以通过标准终结点定义具有默认值的终结点，或者定义一个或多个终结点属性不会更改的终结点。  这些终结点的优点是，可以使用此类终结点而无需指定静态性质的信息。 标准终结点可供基础结构终结点和应用程序终结点使用。  
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>下显示的集合提供的后备类型 <`standardEndpoints`> 标准终结点的配置中的部分。  下面的示例演示如何实现此类。  
+ <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>下显示的集合提供后备类型 <`standardEndpoints`> 标准终结点的配置中的部分。  下面的示例演示如何实现此类。  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -130,7 +130,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- 若要在配置中添加的标准终结点，将添加 <`endpoint`> 元素添加 <`service`> 元素及其任何需要中的配置设置 <`standardEndpoints`> 元素。 下面的示例演示如何添加 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，它是随 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 一起提供的标准终结点之一。  
+ 若要添加的标准终结点配置中，添加 <`endpoint`> 元素为 <`service`> 元素和任何所需配置设置中的 <`standardEndpoints`> 元素。 下面的示例演示如何添加 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，它是随 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 一起提供的标准终结点之一。  
   
 ```xml  
 <services>  
@@ -145,7 +145,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
 </standardEndpoints>
 ```  
   
- 使用中的 kind 特性指定标准终结点的类型 <`endpoint`> 元素。 在配置的终结点 <`standardEndpoints`> 元素。 在上例中，添加并配置了一个 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 终结点。 <`udpDiscoveryEndpoint`> 元素包含 <`standardEndpoint`> 设置<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>属性<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>。  
+ 使用中的 kind 特性指定的标准终结点的类型 <`endpoint`> 元素。 在配置终结点，则 <`standardEndpoints`> 元素。 在上例中，添加并配置了一个 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 终结点。 <`udpDiscoveryEndpoint`> 元素包含 <`standardEndpoint`>，用于设置<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>属性的<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>。  
   
 ## <a name="standard-endpoints-shipped-with-the-net-framework"></a>随 .NET Framework 一起提供的标准终结点  
  下表列出了随 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 一起提供的标准终结点。  

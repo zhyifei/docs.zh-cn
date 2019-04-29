@@ -9,11 +9,11 @@ ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698416"
 ---
 # <a name="debugging-interfaces"></a>调试接口
 本节描述进行程序调试处理的非托管接口，所调试的程序在公共语言运行时 (CLR) 中执行。  
@@ -191,8 +191,7 @@ ms.locfileid: "56981603"
  提供针对映射 GUID 的对象及其相应的 `ICorDebugType` 对象的枚举器。  
   
  [ICorDebugHandleValue 接口](icordebughandlevalue-interface.md)\
- 
-  `ICorDebugReferenceValue` 的一个子类，前者表示调试器已为其创建了垃圾回收句柄的引用值。  
+ `ICorDebugReferenceValue` 的一个子类，前者表示调试器已为其创建了垃圾回收句柄的引用值。  
   
  [ICorDebugHeapEnum 接口](icordebugheapenum-interface.md)\
  提供针对托管堆上的对象的枚举器。  
@@ -219,8 +218,7 @@ ms.locfileid: "56981603"
  表示 MSIL 代码的堆栈帧。  
   
  [ICorDebugILFrame2 接口](icordebugilframe2-interface.md)\
- 
-  `ICorDebugILFrame` 的逻辑扩展。  
+ `ICorDebugILFrame` 的逻辑扩展。  
   
  [ICorDebugILFrame3 接口](icordebugilframe3-interface.md)\
  提供用于封装函数的返回值的方法。  
@@ -301,8 +299,7 @@ ms.locfileid: "56981603"
  表示正在执行托管代码的进程。  
   
  [ICorDebugProcess2 接口](icordebugprocess2-interface1.md)\
- 
-  `ICorDebugProcess` 的逻辑扩展。  
+ `ICorDebugProcess` 的逻辑扩展。  
   
  [ICorDebugProcess3 接口](icordebugprocess3-interface.md)\
  控制自定义调试器通知。
@@ -326,8 +323,7 @@ ms.locfileid: "56981603"
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugProcess` 数组。  
   
  [ICorDebugReferenceValue 接口](icordebugreferencevalue-interface.md)\
- 
-  `ICorDebugValue` 的子类，它支持引用类型。  
+ `ICorDebugValue` 的子类，它支持引用类型。  
   
  [ICorDebugRegisterSet 接口](icordebugregisterset-interface.md)\
  表示在当前正在执行代码的计算机上可用的寄存器组。  
@@ -369,8 +365,7 @@ ms.locfileid: "56981603"
  进行逻辑扩展[ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)接口来检索其他调试符号信息。 **仅.NET Native 上可用。**  
   
  [ICorDebugThread 接口](icordebugthread-interface.md)\
- 表示进程中的线程。 
-  `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
+ 表示进程中的线程。 `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
   
  [ICorDebugThread2 接口](icordebugthread2-interface.md)\
  用作 `ICorDebugThread` 的逻辑扩展。  

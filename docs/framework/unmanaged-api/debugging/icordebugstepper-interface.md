@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763732"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper 接口
 表示在代码执行过程中由调试器执行的一个步骤。此步骤作为命令颁发和完成之间的标识符使用，可以实现取消对某个步骤的执行。  
@@ -42,11 +42,11 @@ ms.locfileid: "59212513"
 ## <a name="remarks"></a>备注  
  `ICorDebugStepper`接口具有以下用途：  
   
--   它充当颁发步骤命令和命令的完成之间的标识符。  
+- 它充当颁发步骤命令和命令的完成之间的标识符。  
   
--   它提供了一个中央的界面来封装所有单步执行可执行。  
+- 它提供了一个中央的界面来封装所有单步执行可执行。  
   
--   它提供了过早地取消单步执行操作的方法。  
+- 它提供了过早地取消单步执行操作的方法。  
   
  可以有多个分档器每个线程。 例如，可能会命中的断点时逐过程执行函数，而用户可能想要启动新的单步执行操作，在该函数内部。 负责调试器来确定如何处理这种情况。 调试器可能想要取消原始单步执行操作或嵌套两个操作。 `ICorDebugStepper`接口支持这两种选择。  
   

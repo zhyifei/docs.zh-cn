@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791854"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 过程 (Visual Basic)
 属性过程是一系列操作模块、 类或结构上的自定义属性的 Visual Basic 语句。 属性过程也被称为*属性访问器*。  
   
  Visual Basic 提供的以下属性过程：  
   
--   一个`Get`过程将返回属性的值。 访问表达式中的属性时调用它。  
+- 一个`Get`过程将返回属性的值。 访问表达式中的属性时调用它。  
   
--   一个`Set`过程将属性设置为某个值，包括的对象引用。 调用时将值分配给属性。  
+- 一个`Set`过程将属性设置为某个值，包括的对象引用。 调用时将值分配给属性。  
   
  通常使用的对中定义属性过程`Get`并`Set`语句，但你可以定义单独任一过程，如果该属性是只读的 ([Get 语句](../../../../visual-basic/language-reference/statements/get-statement.md)) 或只写 ([设置语句](../../../../visual-basic/language-reference/statements/set-statement.md))。  
   

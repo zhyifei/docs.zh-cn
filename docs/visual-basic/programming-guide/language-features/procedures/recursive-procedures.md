@@ -11,11 +11,11 @@ helpviewer_keywords:
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
 ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791841"
 ---
 # <a name="recursive-procedures-visual-basic"></a>递归过程 (Visual Basic)
 一个*递归*过程是指调用其自身。 一般情况下，这不是编写 Visual Basic 代码的最有效方法。  

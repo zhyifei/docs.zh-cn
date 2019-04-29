@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
 ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768545"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>如何：将多组设置添加到你在 C 中的应用程序\#
 在某些情况下，你可能想要的应用程序中有多组设置。 例如，如果你正在开发的应用设置的特定组的地方频繁进行更改，可能会比较明智的做法其全都分成单个文件，以便可以成批，替换该文件保持不受影响的其他设置。 Visual Studio，可将多组设置添加到你的项目。 可以通过 Properties.Settings 对象访问更多组设置。  

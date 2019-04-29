@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771720"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo 接口
 提供返回有关特定的公共语言运行时 (CLR) 的信息包括版本、 目录和负载状态的方法。 此接口还提供了特定于运行时的功能，而无需初始化运行时。 它包括运行时的相对[LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)方法，则运行时特定于模块[GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法，并提供运行时接口通过[GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法。  

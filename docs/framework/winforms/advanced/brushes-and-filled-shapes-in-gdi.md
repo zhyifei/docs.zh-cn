@@ -14,11 +14,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779392"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的画笔和实心形状
 闭合的形状，如矩形或椭圆，由边框和内部组成。 使用笔绘制出轮廓，并使用画笔填充其内部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了填充的绘制闭合形状内部的画笔的多个类： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有这些类继承自<xref:System.Drawing.Brush>类。 下图显示了以实线画笔填充矩形和椭圆用阴影画笔填充。  

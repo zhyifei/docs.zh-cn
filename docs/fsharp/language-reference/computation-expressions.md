@@ -3,11 +3,11 @@ title: 计算表达式
 description: 了解如何创建方便的语法中编写计算F#，可以进行序列化和组合使用控制流构造和绑定。
 ms.date: 03/15/2019
 ms.openlocfilehash: 3c2abb5c6204309fc8d5215a53ce8af46c01d218
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766059"
 ---
 # <a name="computation-expressions"></a>计算表达式
 

@@ -3,11 +3,11 @@ title: 示例 XML 文件：命名空间 3 中的测试配置
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
 ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786940"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>示例 XML 文件：命名空间中的测试配置
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 这是一个测试配置文件。 该 XML 在某个命名空间中。  

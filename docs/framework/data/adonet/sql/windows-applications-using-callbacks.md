@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 ms.openlocfilehash: 1efb30581642faba3e839357ef9d6f8d6c8869e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780154"
 ---
 # <a name="windows-applications-using-callbacks"></a>使用回调的 Windows 应用程序
 在大多数异步处理方案中，需要开始一个数据库操作并继续运行其他进程，而不必等待数据库操作完成。 但是，许多方案在数据库操作结束后需要执行某些操作。 例如，在 Windows 应用程序中，可能需要将长时间运行的操作委托给后台线程，同时允许用户界面线程保持响应状态。 但是，在数据库操作完成后，需要使用结果填充窗体。 此类方案最适合使用回调实现。  

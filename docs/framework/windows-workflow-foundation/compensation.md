@@ -3,17 +3,17 @@ title: 补偿
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
 ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774278"
 ---
 # <a name="compensation"></a>补偿
 补偿中 Windows Workflow Foundation (WF) 是一种机制通过先前已完成的工作可以撤消或补偿 （按照应用程序定义的逻辑） 发生后续失败时。 本节介绍如何在工作流中使用补偿。  
   
 ## <a name="compensation-vs-transactions"></a>补偿与事务  
- 通过事务可以将多个操作合并为单个工作单元。 使用事务时，如果事务进程中任何部分出现错误，则您的应用程序可以中止（回滚）在事务内执行的所有更改。 但是，如果工作长时间运行，使用事务可能不合适。 例如，一个作为工作流实现的差旅计划应用程序。 该工作流的步骤可能包含预订航班、等待经理批准，然后支付机票费用。 这个过程会花费几天的时间，不适合将预订航班步骤和支付机票费用步骤合并到同一事务中。 在此类方案中，如果在以后的处理中出现失败，可以使用补偿来撤消工作流的预订步骤。  
+ 通过事务可以将多个操作合并为单个工作单元。 使用事务时，如果事务进程中任何部分出现错误，则你的应用程序可以中止（回滚）在事务内执行的所有更改。 但是，如果工作长时间运行，使用事务可能不合适。 例如，一个作为工作流实现的差旅计划应用程序。 该工作流的步骤可能包含预订航班、等待经理批准，然后支付机票费用。 这个过程会花费几天的时间，不适合将预订航班步骤和支付机票费用步骤合并到同一事务中。 在此类方案中，如果在以后的处理中出现失败，可以使用补偿来撤消工作流的预订步骤。  
   
 > [!NOTE]
 >  本主题介绍工作流中的补偿。 有关工作流中事务的详细信息，请参阅[事务](workflow-transactions.md)和<xref:System.Activities.Statements.TransactionScope>。 有关事务的详细信息，请参阅<xref:System.Transactions?displayProperty=nameWithType>和<xref:System.Transactions.Transaction?displayProperty=nameWithType>。  
