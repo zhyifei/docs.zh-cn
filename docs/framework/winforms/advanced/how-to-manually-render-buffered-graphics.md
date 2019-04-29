@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
 ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756580"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>如何：手动呈现缓冲的图形
 如果你正在管理自己的缓冲图形，你将需要能创建和程序图形缓冲区。 你可以通过调用 <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> 方法，在屏幕上创建与绘图图面相关联的 <xref:System.Drawing.BufferedGraphics> 类的实例。 此方法会创建一个与特定呈现图面（如表格或控件）关联的 <xref:System.Drawing.BufferedGraphics> 实例。 在创建 <xref:System.Drawing.BufferedGraphics> 实例后，可以通过 <xref:System.Drawing.BufferedGraphics.Graphics%2A> 属性，将图形绘制到它表示的缓冲区内。 执行所有图形操作之后，可以通过调用 <xref:System.Drawing.BufferedGraphics.Render%2A> 方法将缓冲区的内容复制到屏幕。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801044"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 在发布 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 之前，用户计算机上运行的所有代码都有相同的权利或权限来访问该计算机的用户所拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。  

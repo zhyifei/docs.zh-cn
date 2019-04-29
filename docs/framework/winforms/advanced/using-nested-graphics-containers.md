@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
 ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766265"
 ---
 # <a name="using-nested-graphics-containers"></a>使用嵌套的 Graphics 容器
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了可用于临时替换或增加中状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建一个容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法的<xref:System.Drawing.Graphics>对象。 您可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须通过调用配对<xref:System.Drawing.Graphics.EndContainer%2A>。  

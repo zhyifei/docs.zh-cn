@@ -3,11 +3,11 @@ title: 标识符 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774655"
 ---
 # <a name="identifiers-entity-sql"></a>标识符 (Entity SQL)
 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符用于表示查询表达式别名、变量引用、对象的属性、函数等等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了两种类型的标识符： 简单标识符和带引号的标识符。  
@@ -20,15 +20,15 @@ ms.locfileid: "59204895"
   
  带引号的标识符不能包含以下字符：  
   
--   换行符。  
+- 换行符。  
   
--   回车符。  
+- 回车符。  
   
--   制表符。  
+- 制表符。  
   
--   Backspace。  
+- Backspace。  
   
--   额外的方括号（即括起标识符的方括号中的方括号）。  
+- 额外的方括号（即括起标识符的方括号中的方括号）。  
   
  带引号的标识符可以包含 Unicode 字符。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "59204895"
 ## <a name="aliasing-rules"></a>别名规则  
  如果需要，建议在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询中指定别名，包括以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 构造：  
   
--   行构造函数的字段。  
+- 行构造函数的字段。  
   
--   查询表达式的 FROM 子句中的项。  
+- 查询表达式的 FROM 子句中的项。  
   
--   查询表达式的 SELECT 子句中的项。  
+- 查询表达式的 SELECT 子句中的项。  
   
--   查询表达式的 GROUP BY 子句中的项。  
+- 查询表达式的 GROUP BY 子句中的项。  
   
 ### <a name="valid-aliases"></a>有效别名  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的有效别名包括任何简单标识符或带引号的标识符。  
@@ -67,9 +67,9 @@ ms.locfileid: "59204895"
 ### <a name="alias-generation"></a>别名生成  
  如果 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询表达式中未指定别名，则 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将尝试根据以下简单规则来生成别名：  
   
--   如果查询表达式（对该查询表达式未指定别名）是一个简单标识符或带引号的标识符，则该标识符用作别名。 例如，将 `ROW(a, [b])` 变为 `ROW(a AS a, [b] AS [b])`。  
+- 如果查询表达式（对该查询表达式未指定别名）是一个简单标识符或带引号的标识符，则该标识符用作别名。 例如，将 `ROW(a, [b])` 变为 `ROW(a AS a, [b] AS [b])`。  
   
--   如果查询表达式是较复杂的表达式，但该查询表达式的最后一部分是简单标识符，则该标识符用作别名。 例如，将 `ROW(a.a1, b.[b1])` 变为 `ROW(a.a1 AS a1, b.[b1] AS [b1])`。  
+- 如果查询表达式是较复杂的表达式，但该查询表达式的最后一部分是简单标识符，则该标识符用作别名。 例如，将 `ROW(a.a1, b.[b1])` 变为 `ROW(a.a1 AS a1, b.[b1] AS [b1])`。  
   
  如果希望以后使用该别名，建议不要使用隐式别名。 别名（隐式或显式）如果冲突，或在同一作用域内重复，都会出现编译错误。 即使存在同名的显式或隐式别名，隐式别名也会通过编译。  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  以下是对作用域的附加说明：  
   
--   选择列表可将新名称按顺序引入作用域。 右侧的投影表达式可以引用投影在左侧的名称。  
+- 选择列表可将新名称按顺序引入作用域。 右侧的投影表达式可以引用投影在左侧的名称。  
   
--   ORDER BY 子句可以引用选择列表中指定的名称（别名）。  
+- ORDER BY 子句可以引用选择列表中指定的名称（别名）。  
   
--   SELECT 表达式内的子句计算顺序确定名称引入作用域的顺序。 计算的顺序首先是 FROM 子句，其次是 WHERE 子句、GROUP BY 子句、HAVING 子句、SELECT 子句，最后是 ORDER BY 子句。  
+- SELECT 表达式内的子句计算顺序确定名称引入作用域的顺序。 计算的顺序首先是 FROM 子句，其次是 WHERE 子句、GROUP BY 子句、HAVING 子句、SELECT 子句，最后是 ORDER BY 子句。  
   
 ### <a name="aggregate-handling"></a>聚合处理  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持两种形式的聚合：基于集合的聚合和基于组的聚合。 基于集合的聚合是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的首选构造，支持基于组的聚合则是为了实现 SQL 兼容性。  

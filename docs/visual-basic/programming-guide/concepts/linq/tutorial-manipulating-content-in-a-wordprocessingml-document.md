@@ -3,11 +3,11 @@ title: 教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
 ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907720"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容
 本教程演示如何应用函数转换方法和 LINQ to XML 来操作 XML 文档。 Visual Basic 示例查询和操作 Microsoft Word 保存的 Office Open XML WordprocessingML 文档中的信息。  

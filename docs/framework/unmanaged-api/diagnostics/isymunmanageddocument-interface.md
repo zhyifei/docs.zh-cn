@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939771"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 接口
 表示由符号存储引用的文档。 文档由统一资源定位器 (URL) 和 GUID 的文档类型定义。 可以找到而不考虑如何存储使用的 URL 的文档和文档类型的 GUID。 可以在符号存储区中存储的文档源并检索通过此接口。  

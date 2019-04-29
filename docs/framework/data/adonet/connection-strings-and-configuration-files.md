@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880069"
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
 在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 [Ildasm.exe（IL 反汇编程序）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。  
