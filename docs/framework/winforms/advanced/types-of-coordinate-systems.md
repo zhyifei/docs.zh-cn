@@ -16,11 +16,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
 ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792339"
 ---
 # <a name="types-of-coordinate-systems"></a>坐标系类型
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用三个坐标空间： 世界、 页和设备。 用于建模对特定图形世界坐标世界坐标，将传递给.NET Framework 中的方法的坐标。 页坐标是指由绘图图面，如窗体或控件使用的坐标系统。 设备坐标是由物理设备上，如屏幕或纸张进行绘制的坐标。 进行调用时`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，将传递给点<xref:System.Drawing.Graphics.DrawLine%2A>方法 —`(0, 0)`和`(160, 80)`— 世界坐标空间中。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在屏幕上绘制行中，通过一系列的转换传递的坐标。 一个转换，名为世界转换中，将世界坐标转换为页面坐标和另一个转换，调用页转换，将页面坐标转换为设备坐标。  

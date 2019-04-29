@@ -3,11 +3,11 @@ title: 如何：使用配置文件发布服务的元数据
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761450"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>如何：使用配置文件发布服务的元数据
 这是个演示 Windows Communication Foundation (WCF) 服务的发布元数据的两个帮助主题之一。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用配置文件发布服务的元数据。  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. 对于上一步中添加的元数据终结点，将 `binding` 特性设置为下列值之一：  
   
-    -   `mexHttpBinding`（对于 HTTP 发布）。  
+    - `mexHttpBinding`（对于 HTTP 发布）。  
   
-    -   `mexHttpsBinding`（对于 HTTPS 发布）。  
+    - `mexHttpsBinding`（对于 HTTPS 发布）。  
   
-    -   `mexNamedPipeBinding`（对于命名管道发布）。  
+    - `mexNamedPipeBinding`（对于命名管道发布）。  
   
-    -   `mexTcpBinding`（对于 TCP 发布）。  
+    - `mexTcpBinding`（对于 TCP 发布）。  
   
 8. 对于上一步中添加的元数据终结点，将地址设置为等于：  
   
-    -   一个空字符串，以在基址和元数据绑定相同的情况下将主机应用程序的基址用作发布点。  
+    - 一个空字符串，以在基址和元数据绑定相同的情况下将主机应用程序的基址用作发布点。  
   
-    -   一个相对地址，前提是主机应用程序具有一个基址。  
+    - 一个相对地址，前提是主机应用程序具有一个基址。  
   
-    -   一个绝对地址。  
+    - 一个绝对地址。  
   
 9. 生成并运行控制台应用程序。  
   

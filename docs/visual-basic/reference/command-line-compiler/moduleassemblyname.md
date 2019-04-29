@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793895"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 指定此模块所属程序集的名称。  
@@ -33,9 +33,9 @@ ms.locfileid: "58832395"
   
  `-moduleassemblyname`选项仅当满足以下条件时，才需要：  
   
--   该模块中的数据类型需要有权`Friend`中引用的程序集中的类型。  
+- 该模块中的数据类型需要有权`Friend`中引用的程序集中的类型。  
   
--   将在其中生成该模块的程序集引用的程序集具有授予友元程序集访问权限。  
+- 将在其中生成该模块的程序集引用的程序集具有授予友元程序集访问权限。  
   
  有关创建模块的详细信息，请参阅[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。 有关友元程序集的详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
   

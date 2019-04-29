@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792192"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现使用后台操作的窗体
 如果某项操作需要很长时间才能完成，并且您不希望用户界面 (UI) 停止响应或"挂起，可以使用<xref:System.ComponentModel.BackgroundWorker>类，以另一个线程上执行此操作。  
@@ -29,13 +29,13 @@ ms.locfileid: "59343397"
   
  本演练涉及以下任务：  
   
--   创建基于 Windows 的应用程序  
+- 创建基于 Windows 的应用程序  
   
--   创建<xref:System.ComponentModel.BackgroundWorker>窗体中  
+- 创建<xref:System.ComponentModel.BackgroundWorker>窗体中  
   
--   添加异步事件处理程序  
+- 添加异步事件处理程序  
   
--   添加进度报告和取消支持  
+- 添加进度报告和取消支持  
   
  在此示例中使用的代码的完整列表，请参阅[如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59343397"
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>使用设计器创建 BackgroundWorker  
   
--   从**组件**选项卡**工具箱**，拖动<xref:System.ComponentModel.BackgroundWorker>拖到窗体。  
+- 从**组件**选项卡**工具箱**，拖动<xref:System.ComponentModel.BackgroundWorker>拖到窗体。  
   
 ## <a name="adding-asynchronous-event-handlers"></a>添加异步事件处理程序  
  你现已准备好添加事件处理程序<xref:System.ComponentModel.BackgroundWorker>组件的异步事件。 这些事件处理程序将调用在后台运行的计算 Fibonacci 数列的耗时操作。  
@@ -145,7 +145,7 @@ ms.locfileid: "59343397"
   
 #### <a name="to-test-your-project"></a>测试项目  
   
--   按 F5 编译并运行应用程序。  
+- 按 F5 编译并运行应用程序。  
   
      在后台运行计算时，您将看到<xref:System.Windows.Forms.ProgressBar>显示一段时间后计算的进度。 也可以取消挂起的操作。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59343397"
 ## <a name="next-steps"></a>后续步骤  
  现在，已实现使用的窗体<xref:System.ComponentModel.BackgroundWorker>组件在后台执行计算可以探究异步操作的其他可能性：  
   
--   使用多个<xref:System.ComponentModel.BackgroundWorker>多个同时操作的对象。  
+- 使用多个<xref:System.ComponentModel.BackgroundWorker>多个同时操作的对象。  
   
--   若要调试多线程应用程序，请参阅[如何：使用线程窗口](/visualstudio/debugger/how-to-use-the-threads-window)。  
+- 若要调试多线程应用程序，请参阅[如何：使用线程窗口](/visualstudio/debugger/how-to-use-the-threads-window)。  
   
--   实现自己的支持异步编程模式的组件。 有关详细信息，请参阅[基于事件的异步模式概述](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
+- 实现自己的支持异步编程模式的组件。 有关详细信息，请参阅[基于事件的异步模式概述](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
   
     > [!CAUTION]
     >  使用任何一种多线程都可能引起极为严重和复杂的 Bug。 在实现任何使用多线程处理的解决方案之前，请参阅[托管线程处理最佳做法](../../../standard/threading/managed-threading-best-practices.md)。  

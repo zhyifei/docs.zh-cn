@@ -14,18 +14,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
 ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781259"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>如何：在 Windows 窗体中更改 ToolStrip 文本和图像的外观
 您可以控制是否在显示的文本和图像<xref:System.Windows.Forms.ToolStripItem>和它们相对于彼此的对齐方式和<xref:System.Windows.Forms.ToolStrip>。  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>若要定义 ToolStripItem 上显示的内容  
   
--   设置<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>属性设置为所需的值。 可能的值为`Image`， `ImageAndText`， `None`，和`Text`。 默认值为 `ImageAndText`。  
+- 设置<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>属性设置为所需的值。 可能的值为`Image`， `ImageAndText`， `None`，和`Text`。 默认值为 `ImageAndText`。  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ ms.locfileid: "59088466"
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>若要使 ToolStripItem 上的文本对齐  
   
--   设置<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>属性设置为所需的值。 可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。 默认值为 `MiddleCenter`。  
+- 设置<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>属性设置为所需的值。 可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。 默认值为 `MiddleCenter`。  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ ms.locfileid: "59088466"
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>若要对齐 ToolStripItem 上的图像  
   
--   设置<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>属性设置为所需的值。 可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。 默认值为 `MiddleLeft`。  
+- 设置<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>属性设置为所需的值。 可能的值为 top、 中间颜色和底部使用 left、 center 和右侧的任意组合。 默认值为 `MiddleLeft`。  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ ms.locfileid: "59088466"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>若要定义 ToolStripItem 文本和图像相对于彼此的显示方式  
   
--   设置<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>属性设置为所需的值。 可能的值为`ImageAboveText`， `ImageBeforeText`， `Overlay`， `TextAboveImage`，和`TextBeforeImage`。 默认值为 `ImageBeforeText`。  
+- 设置<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>属性设置为所需的值。 可能的值为`ImageAboveText`， `ImageBeforeText`， `Overlay`， `TextAboveImage`，和`TextBeforeImage`。 默认值为 `ImageBeforeText`。  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  

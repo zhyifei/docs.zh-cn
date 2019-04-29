@@ -9,22 +9,22 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761008"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>如何：使用 AnimationClock 对属性进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.Clock>对象属性进行动画处理。  
   
  对依赖属性进行动画处理有三种方法：  
   
--   创建<xref:System.Windows.Media.Animation.AnimationTimeline>并将其与该属性使用<xref:System.Windows.Media.Animation.Storyboard>。  
+- 创建<xref:System.Windows.Media.Animation.AnimationTimeline>并将其与该属性使用<xref:System.Windows.Media.Animation.Storyboard>。  
   
--   使用对象的<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法以应用单个<xref:System.Windows.Media.Animation.AnimationTimeline>到目标属性。  
+- 使用对象的<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法以应用单个<xref:System.Windows.Media.Animation.AnimationTimeline>到目标属性。  
   
--   创建<xref:System.Windows.Media.Animation.AnimationClock>从<xref:System.Windows.Media.Animation.AnimationTimeline>并将其应用到的属性。  
+- 创建<xref:System.Windows.Media.Animation.AnimationClock>从<xref:System.Windows.Media.Animation.AnimationTimeline>并将其应用到的属性。  
   
  <xref:System.Windows.Media.Animation.Storyboard> 对象和<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法使您能够不直接创建和分发时钟的情况下对属性进行动画处理 (有关示例，请参阅[使用演示图板对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)和[属性不进行动画处理使用情节提要](how-to-animate-a-property-without-using-a-storyboard.md));创建并自动为您分发时钟。  
   

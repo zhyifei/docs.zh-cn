@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776215"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：确定此时是否可以打印一项打印作业
 打印队列并不总是可用的一天 24 小时。 它们具有开始和结束时间属性可以设置以使其在一天中的某些时间不可用。 例如，此功能可用于保留专供特定部门的下午 5 点后的打印机。 该部门必须使用其他队列服务比其他部门的打印机。 将设置为其他部门队列以在下午 5 点后将不可用，而队列支持的部门可能被设置为始终可用。  
@@ -41,9 +41,9 @@ ms.locfileid: "59326861"
   
  **ReportQueueAndJobAvailability**方法首先检查以查看队列或打印作业是否不可用这一次。 如果其中任一个不可用，它则会检查以查看是否不可用队列。 如果不可用，则该方法报告这一事实以及当队列将再次变得可用的时间。 然后会检查该作业，如果不可用，它报告的下一个时间跨度时它时它可以打印。 最后，该方法将报告该作业可以打印时的最早时间。 这是更高版本的以下两次。  
   
--   打印队列接下来可用的时间。  
+- 打印队列接下来可用的时间。  
   
--   打印作业下一步可用的时间。  
+- 打印作业下一步可用的时间。  
   
  报告一天中的时间时<xref:System.DateTime.ToShortTimeString%2A>也称为方法，因为此方法取消年、 月和天的输出。 打印队列或打印作业的可用性限于在特定的年、 月或天。  
   

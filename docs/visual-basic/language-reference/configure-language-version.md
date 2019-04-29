@@ -3,11 +3,11 @@ title: 选择 Visual Basic 语言版本
 description: 配置编译器能够执行语法验证使用的特定编译器版本。
 ms.date: 05/24/2018
 ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797028"
 ---
 # <a name="select-the-visual-basic-language-version"></a>选择 Visual Basic 语言版本
 
@@ -33,7 +33,7 @@ Visual Basic 编译器将默认为已发布的语言的最新主版本。 你可
 
 值`latest`使用 Visual Basic 语言的最新次版本。 有效值为：
 
-|值|含义|
+|“值”|含义|
 |------------|-------------|
 |default|编译器接受它可支持的最新主版本中的所有有效语言语法。|
 |9|编译器接受仅包含在 Visual Basic 9.0 或更低的语法。|

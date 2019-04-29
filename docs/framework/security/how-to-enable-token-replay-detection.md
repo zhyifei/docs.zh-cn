@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940473"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>如何：启用令牌重播检测
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web 窗体  
+- ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
  此“如何”主题提供了详细的分步过程，用于说明如何在使用 WIF 的 ASP.NET 应用程序中启用令牌重播检测。 还说明了如何测试应用程序，以验证是否启用令牌重播检测。 此“如何”主题未详细介绍如何创建安全令牌服务 (STS)，而是使用随标识和访问工具提供的开发 STS。 开发 STS 不执行实际的身份验证操作，只是用来进行测试。 你将需要安装标识和访问工具才能完成此“如何”主题。 它可从以下位置下载：[标识和访问工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>内容  
   
--   目标  
+- 目标  
   
--   概述  
+- 概述  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用重播检测  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用重播检测  
   
--   步骤 2 - 测试解决方案  
+- 步骤 2 - 测试解决方案  
   
 ## <a name="objectives"></a>目标  
   
--   创建一个简单的 ASP.NET 应用程序，该应用程序使用标识和访问工具中的 WIF 和开发 STS  
+- 创建一个简单的 ASP.NET 应用程序，该应用程序使用标识和访问工具中的 WIF 和开发 STS  
   
--   启用令牌重播检测并验证其是否正常运行  
+- 启用令牌重播检测并验证其是否正常运行  
   
 ## <a name="overview"></a>概述  
  客户端尝试向具有客户端已使用的 STS 令牌的信赖方进行身份验证时，出现重播攻击。 为防止这种攻击，WIF 包含以前用过的 STS 令牌的重播检测缓存。 启用后，重播检测会检查传入请求的令牌，并验证此令牌以前是否已使用过。 如果该令牌已使用过，则会拒绝请求，并引发 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 异常。  
@@ -45,9 +45,9 @@ ms.locfileid: "59772916"
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用重播检测  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用重播检测  
   
--   步骤 2 - 测试解决方案  
+- 步骤 2 - 测试解决方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序，并启用重播检测  
  此步骤将创建新的 ASP.NET Web 窗体应用程序并修改 Web.config 文件以启用重播检测。  

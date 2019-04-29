@@ -3,11 +3,11 @@ title: 在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活�
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934714"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用
 <xref:System.Activities.Statements.Interop> 活动是一个 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活动，该活动将一个 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) 活动包装在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流中。 WF 3 活动可以是单叶活动，也可以是整个活动树。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动的执行（包括取消和异常处理）和持久化在执行的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流实例的上下文中进行。  
@@ -18,13 +18,13 @@ ms.locfileid: "59329409"
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>将 WF 3 活动与 Interop 活动一起使用的条件  
  若要使 WF 3 活动在 <xref:System.Activities.Statements.Interop> 活动中成功执行，必须满足以下条件：  
   
--   WF 3 活动必须派生自 <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>。  
+- WF 3 活动必须派生自 <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>。  
   
--   必须将 WF 3 活动声明为 `public`，不能为 `abstract`。  
+- 必须将 WF 3 活动声明为 `public`，不能为 `abstract`。  
   
--   WF 3 活动必须具有一个公共的默认构造函数。  
+- WF 3 活动必须具有一个公共的默认构造函数。  
   
--   由于 <xref:System.Activities.Statements.Interop> 活动可以支持的接口类型的限制，因此无法直接使用 <xref:System.Workflow.Activities.HandleExternalEventActivity> 和 <xref:System.Workflow.Activities.CallExternalMethodActivity>，但是可以使用通过工作流通信活动工具 (WCA.exe) 创建的派生活动。 请参阅[Windows Workflow Foundation 工具](https://go.microsoft.com/fwlink/?LinkId=178889)有关详细信息。  
+- 由于 <xref:System.Activities.Statements.Interop> 活动可以支持的接口类型的限制，因此无法直接使用 <xref:System.Workflow.Activities.HandleExternalEventActivity> 和 <xref:System.Workflow.Activities.CallExternalMethodActivity>，但是可以使用通过工作流通信活动工具 (WCA.exe) 创建的派生活动。 请参阅[Windows Workflow Foundation 工具](https://go.microsoft.com/fwlink/?LinkId=178889)有关详细信息。  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>在 Interop 活动中配置 WF 3 活动  
  若要跨互操作边界配置 WF 3 活动并将数据传入和传出该活动，则 <xref:System.Activities.Statements.Interop> 活动应公开 WF 3 活动的属性和元数据属性。 WF 3 活动的元数据属性（如 <xref:System.Workflow.ComponentModel.Activity.Name%2A>）通过 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 集合公开。 这是一个名称/值对的集合，用于为 WF 3 活动的元数据属性定义值。 元数据属性是由设置了 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> 标志的依赖项属性支持的属性。  

@@ -3,11 +3,11 @@ title: 可靠消息传送协议版本 1.1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933986"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>可靠消息传送协议版本 1.1
 本主题介绍 Windows Communication Foundation (WCF) 实现的详细信息用于 WS-ReliableMessaging 2007 年 2 月 （版本 1.1） 协议需要使用 HTTP 传输进行互操作。 WCF 遵循 WS-ReliableMessaging 规范的约束和澄清，本主题中所述。 请注意，从开始实现 WS-ReliableMessaging 版本 1.1 协议[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]。  

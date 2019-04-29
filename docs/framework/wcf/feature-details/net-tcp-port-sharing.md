@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762745"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 端口共享
 Windows Communication Foundation (WCF) 提供高性能通信的新的基于 TCP 的网络协议 (net.tcp://)。 WCF 还引入了新的系统组件使得 net.tcp 端口可以在多个用户进程之间共享 Net.TCP 端口共享服务。  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) 提供高性能通信的新的基于 TCP 
 ## <a name="port-sharing-architecture"></a>端口共享结构  
  WCF 中的端口共享结构有三个主要组件：  
   
--   辅助进程：通过使用共享的端口 net.tcp:// 进行通信的任何进程。  
+- 辅助进程：通过使用共享的端口 net.tcp:// 进行通信的任何进程。  
   
--   WCF TCP 传输：实现 net.tcp:// 协议。  
+- WCF TCP 传输：实现 net.tcp:// 协议。  
   
--   Net.TCP 端口共享服务：允许许多辅助进程共享同一 TCP 端口。  
+- Net.TCP 端口共享服务：允许许多辅助进程共享同一 TCP 端口。  
   
  Net.TCP Port Sharing Service 是用户模式的 Windows 服务，可代表通过其连接的辅助进程接受 net.tcp:// 连接。 当套接字连接到达时，端口共享服务将检查传入消息流以获取其目标地址。 基于此地址，端口共享服务可以将数据流路由到最终处理它的应用程序。  
   

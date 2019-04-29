@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940512"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>总结  
  本操作说明提供了创建简单的声明感知 ASP.NET MVC Web 应用程序的详细分步过程。 还提供关于如何测试简单的声明感知 ASP.NET MVC Web 应用程序以确保成功实现基于声明的身份验证的说明。 本操作说明不包括如何创建安全令牌服务 (STS) 的详细说明，且假定你已配置 STS。  
   
 ## <a name="contents"></a>内容  
   
--   目标  
+- 目标  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET MVC 应用程序  
+- 步骤 1 – 创建简单的 ASP.NET MVC 应用程序  
   
--   步骤 2 – 为基于声明的身份验证配置 ASP.NET MVC 应用程序  
+- 步骤 2 – 为基于声明的身份验证配置 ASP.NET MVC 应用程序  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
--   相关项  
+- 相关项  
   
 ## <a name="objectives"></a>目标  
   
--   为基于声明的身份验证配置 ASP.NET MVC Web 应用程序  
+- 为基于声明的身份验证配置 ASP.NET MVC Web 应用程序  
   
--   测试成功的声明感知 ASP.NET MVC Web 应用程序  
+- 测试成功的声明感知 ASP.NET MVC Web 应用程序  
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET MVC 应用程序  
+- 步骤 1 – 创建简单的 ASP.NET MVC 应用程序  
   
--   步骤 2 – 为基于声明的身份验证配置 ASP.NET MVC 应用程序  
+- 步骤 2 – 为基于声明的身份验证配置 ASP.NET MVC 应用程序  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>步骤 1 – 创建简单的 ASP.NET MVC 应用程序  
  在此步骤中，将创建一个新的 ASP.NET MVC 应用程序。  
@@ -218,4 +218,4 @@ ms.locfileid: "59335662"
   
 ## <a name="related-items"></a>相关项  
   
--   [如何：生成声明感知 ASP.NET Web 窗体应用程序使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [如何：生成声明感知 ASP.NET Web 窗体应用程序使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791425"
 ---
 # <a name="understanding-protection-level"></a>了解保护级别
 在许多不同的类中可以找到 `ProtectionLevel` 属性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 类。 此属性控制部分（或整个）消息的保护方式。 本主题介绍 Windows Communication Foundation (WCF) 功能以及其工作原理。  
@@ -26,33 +26,33 @@ ms.locfileid: "59096044"
 ## <a name="basics"></a>基本知识  
  若要了解保护级别功能，以下基本语句适用：  
   
--   消息的任何部分都存在三种基本保护级别。 属性（无论它出现在哪里）设置为 <xref:System.Net.Security.ProtectionLevel> 枚举值之一。 按升序的保护顺序，它们包括：  
+- 消息的任何部分都存在三种基本保护级别。 属性（无论它出现在哪里）设置为 <xref:System.Net.Security.ProtectionLevel> 枚举值之一。 按升序的保护顺序，它们包括：  
   
-    -   `None`。  
+    - `None`。  
   
-    -   `Sign`。 受保护的部分进行数字签名。 这样做可以保证检测到对受保护的消息部分进行的任何篡改。  
+    - `Sign`。 受保护的部分进行数字签名。 这样做可以保证检测到对受保护的消息部分进行的任何篡改。  
   
-    -   `EncryptAndSign`。 签名前会对消息部分进行加密，以确保其保密性。  
+    - `EncryptAndSign`。 签名前会对消息部分进行加密，以确保其保密性。  
   
--   您可以设置仅对保护要求*应用程序数据*借助此功能。 例如，WS-Addressing 标头是基础结构数据，因此不受 `ProtectionLevel` 影响。  
+- 您可以设置仅对保护要求*应用程序数据*借助此功能。 例如，WS-Addressing 标头是基础结构数据，因此不受 `ProtectionLevel` 影响。  
   
--   当安全模式设置为 `Transport` 时，整个消息由传输机制进行保护。 因此，为消息的不同部分设置单独的保护级别没有作用。  
+- 当安全模式设置为 `Transport` 时，整个消息由传输机制进行保护。 因此，为消息的不同部分设置单独的保护级别没有作用。  
   
--   `ProtectionLevel`是开发人员可以设置一种方式*最低级别*绑定必须遵守。 在部署了服务时，在配置中指定的实际绑定不一定支持最低级别。 例如，默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 类不提供安全性（尽管可以启用安全性）。 因此，将它与具有任何非 `None` 设置的协定一起使用将导致引发异常。  
+- `ProtectionLevel`是开发人员可以设置一种方式*最低级别*绑定必须遵守。 在部署了服务时，在配置中指定的实际绑定不一定支持最低级别。 例如，默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 类不提供安全性（尽管可以启用安全性）。 因此，将它与具有任何非 `None` 设置的协定一起使用将导致引发异常。  
   
--   如果服务要求所需的最低`ProtectionLevel`对于所有消息都是`Sign`，（可能是由非 WCF 技术创建） 的客户端可以加密和签名所有消息 （这是多个所需的最小）。 在这种情况下，WCF 不会引发异常，因为客户端的多个所需的最低处理。 但是，请注意，WCF 应用程序 （服务或客户端） 不会过度保护消息部分如有可能，但将遵守最低级别。 还要注意，当使用 `Transport` 作为安全模式时，传输可能过度保护消息流，因为它在本质上无法以更精细的级别进行保护。  
+- 如果服务要求所需的最低`ProtectionLevel`对于所有消息都是`Sign`，（可能是由非 WCF 技术创建） 的客户端可以加密和签名所有消息 （这是多个所需的最小）。 在这种情况下，WCF 不会引发异常，因为客户端的多个所需的最低处理。 但是，请注意，WCF 应用程序 （服务或客户端） 不会过度保护消息部分如有可能，但将遵守最低级别。 还要注意，当使用 `Transport` 作为安全模式时，传输可能过度保护消息流，因为它在本质上无法以更精细的级别进行保护。  
   
--   如果将 `ProtectionLevel` 显式设置为 `Sign` 或 `EncryptAndSign`，则你必须使用启用安全的绑定，否则将会引发异常。  
+- 如果将 `ProtectionLevel` 显式设置为 `Sign` 或 `EncryptAndSign`，则你必须使用启用安全的绑定，否则将会引发异常。  
   
--   如果你选择启用安全的绑定，并且未在协定的任何位置设置 `ProtectionLevel` 属性，则将对所有的应用程序数据进行加密或签名。  
+- 如果你选择启用安全的绑定，并且未在协定的任何位置设置 `ProtectionLevel` 属性，则将对所有的应用程序数据进行加密或签名。  
   
--   如果您选择未启用安全的绑定（例如，`BasicHttpBinding` 类在默认情况下禁用安全），并且没有显式设置 `ProtectionLevel`，那么所有应用程序数据都不会受到保护。  
+- 如果您选择未启用安全的绑定（例如，`BasicHttpBinding` 类在默认情况下禁用安全），并且没有显式设置 `ProtectionLevel`，那么所有应用程序数据都不会受到保护。  
   
--   如果所使用的绑定应用传输级别的安全，则将根据传输的功能对所有应用程序数据进行保护。  
+- 如果所使用的绑定应用传输级别的安全，则将根据传输的功能对所有应用程序数据进行保护。  
   
--   如果所使用的绑定应用消息级别的安全，则将根据协定上设置的保护级别对应用程序数据进行保护。 如果不指定保护级别，则将对消息中所有的应用程序数据进行加密和签名。  
+- 如果所使用的绑定应用消息级别的安全，则将根据协定上设置的保护级别对应用程序数据进行保护。 如果不指定保护级别，则将对消息中所有的应用程序数据进行加密和签名。  
   
--   可以在不同范围级别设置 `ProtectionLevel`。 有一个与范围关联的层次结构，这将在下一节中进行说明。  
+- 可以在不同范围级别设置 `ProtectionLevel`。 有一个与范围关联的层次结构，这将在下一节中进行说明。  
   
 ## <a name="scoping"></a>范围  
  设置最顶层 API 上的 `ProtectionLevel` 可以为它下面所有级别设置级别。 如果 `ProtectionLevel` 在较低级别上设置为其他值，该层次结构中该级别下的所有 API 都将立即重置为新级别（然而它上面的 API 仍将受最顶层级别影响）。 该层次结构如下所示。 同一级别的属性是对等的。  

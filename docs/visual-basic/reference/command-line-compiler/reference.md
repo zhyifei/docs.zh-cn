@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788877"
 ---
 # <a name="-reference-visual-basic"></a>-参考 (Visual Basic)
 使编译器让指定程序集中的类型信息供当前正在编译的项目。  
@@ -38,9 +38,9 @@ ms.locfileid: "58826114"
   
  如果引用的程序集 （程序集 A） 本身引用了另一个程序集 (程序集 B)，则在下列情况下需要引用程序集 B:  
   
--   程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
+- 程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
   
--   调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
+- 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一个或多个程序集引用所在的目录。  
   

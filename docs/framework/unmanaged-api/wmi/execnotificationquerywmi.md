@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935611"
 ---
-# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi function
+# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函数
 
 执行查询以接收事件。 调用立即返回，并且调用方可以轮询返回的枚举器的事件到达。 释放返回的枚举器取消查询。
 
@@ -58,7 +58,7 @@ HRESULT ExecNotificationQueryWmi (
 `lFlags`\
 [in]影响此函数的行为的以下两个标志的组合。 这些值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。
 
-| 返回的常量 | 值  | 描述  |
+| 返回的常量 | “值”  | 描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 该标志会导致半同步调用。 如果未设置此标志，则调用失败。 这是因为事件接收连续，这意味着用户必须轮询返回的枚举器。 无限期地阻止此调用，将无法进行。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 该函数返回的只进的枚举器。 通常情况下，只进的枚举器速度更快，并使用较少的内存比传统的枚举器，但它们不允许对调用[克隆](clone.md)。 |
@@ -91,7 +91,7 @@ HRESULT ExecNotificationQueryWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有权限查看一个或多个函数可以返回的类。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |

@@ -6,26 +6,26 @@ dev_langs:
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
 ms.openlocfilehash: 70aa2ad6385ec4791b05b202dc5dc6d4fe9e57b9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797834"
 ---
 # <a name="query-results"></a>查询结果
 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询在转换为命令目录树执行之后，通常以下列形式之一返回查询结果：  
   
--   概念模型中零个或多个类型化实体对象的集合或复杂类型的投影。  
+- 概念模型中零个或多个类型化实体对象的集合或复杂类型的投影。  
   
--   概念模型支持的 CLR 类型。  
+- 概念模型支持的 CLR 类型。  
   
--   内联集合。  
+- 内联集合。  
   
--   匿名类型。  
+- 匿名类型。  
   
  对数据源执行查询时，结果将具体化为 CLR 类型并返回客户端。 所有对象具体化均由 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 执行。 由于无法在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 与 CLR 之间进行映射而导致的任何错误都将导致在对象具体化过程中引发异常。  
   
- 如果查询执行返回基元概念模型类型，则结果由独立的且与[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]断开连接的 CLR 类型组成。 但如果查询返回 <xref:System.Data.Objects.ObjectQuery%601> 所表示的类型化实体对象的集合，则这些类型由对象上下文进行跟踪。 所有对象行为 （如父/子集合、 更改跟踪、 多态性等） 都都中定义[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]。 此功能可按照[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]中的定义使用。 有关详细信息，请参阅[使用对象](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。  
+ 如果查询执行返回基元概念模型类型，则结果由独立的且与[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]断开连接的 CLR 类型组成。 但如果查询返回 <xref:System.Data.Objects.ObjectQuery%601> 所表示的类型化实体对象的集合，则这些类型由对象上下文进行跟踪。 所有对象行为 （如子/父集合、 更改跟踪、 多态性等） 都是中定义[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]。 此功能可按照[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]中的定义使用。 有关详细信息，请参阅[使用对象](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。  
   
  从查询返回的结构类型（如匿名类型和可以为 null 的复杂类型）可以是 `null` 值。 返回的实体的 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 属性也可以是 `null` 值。 投影值为 `null` 的实体的集合属性会导致这种情况，例如，调用没有任何元素的 <xref:System.Linq.Queryable.FirstOrDefault%2A> 的 <xref:System.Data.Objects.ObjectQuery%601>。  
   

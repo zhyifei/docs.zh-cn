@@ -9,15 +9,15 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778347"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>如何：创建 WSFederationHttpBinding
 
-在 Windows Communication Foundation (WCF) 中，<xref:System.ServiceModel.WSFederationHttpBinding>类 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)配置中) 提供了用于公开联合的服务的机制。 即，服务要求客户端使用安全令牌服务颁发的安全令牌进行身份验证。 本主题演示如何通过代码和配置来设置 <xref:System.ServiceModel.WSFederationHttpBinding>。 绑定一经创建，您就可以设置一个终结点来使用该绑定。
+在 Windows Communication Foundation (WCF) 中，<xref:System.ServiceModel.WSFederationHttpBinding>类 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)配置中) 提供了用于公开联合的服务的机制。 即，服务要求客户端使用安全令牌服务颁发的安全令牌进行身份验证。 本主题演示如何通过代码和配置来设置 <xref:System.ServiceModel.WSFederationHttpBinding>。 绑定一经创建，你就可以设置一个终结点来使用该绑定。
 
  基本步骤概述如下：
 
@@ -45,7 +45,7 @@ ms.locfileid: "46525534"
 
 ## <a name="to-configure-a-wsfederationhttpbinding-in-code"></a>以代码方式配置 WSFederationHttpBinding
 
-1. 创建 <xref:System.ServiceModel.WSFederationHttpBinding> 的一个实例。
+1. 创建 <xref:System.ServiceModel.WSFederationHttpBinding>的一个实例。
 
 2. 根据需要将 <xref:System.ServiceModel.WSFederationHttpSecurity.Mode%2A> 属性设置为 <xref:System.ServiceModel.WSFederationHttpSecurityMode> 或 <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>。 如果一个算法套件，套件以外的其他<xref:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256%2A>是必需的设置<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.AlgorithmSuite%2A>属性的值来自<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。
 
@@ -91,11 +91,11 @@ ms.locfileid: "46525534"
 
 12. 有关详细信息，请参阅[服务标识和身份验证](service-identity-and-authentication.md)。
 
-13. 如果未指定本地颁发者则在客户端上是必需的；不能在服务上使用。 创建[\<绑定 >](../../../../docs/framework/misc/binding.md)可用于与安全令牌服务进行通信的绑定部分中的元素。 有关创建绑定的详细信息，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。
+13. 如果未指定本地颁发者则在客户端上是必需的；不能在服务上使用。 创建[\<绑定 >](../../../../docs/framework/misc/binding.md)可用于与安全令牌服务进行通信的绑定部分中的元素。 有关创建绑定的详细信息，请参阅[如何：在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。
 
 14. 通过设置 `binding` 元素的 `bindingConfiguration` 和 `<issuer>` 属性，来指定在上一步创建的绑定。
 
-15. 不能在客户端上使用；在服务上可选。 创建一个 `<issuerMetadata>` 元素，作为 <`message`> 元素的子元素。 然后，在 `address` 元素的 `<issuerMetadata>` 属性中，指定安全令牌服务将要发布其元数据的地址。 还可以选择添加一个 `<identity>` 子元素，并指定安全令牌服务的标识。
+15. 不能在客户端上使用；在服务上可选。 创建`<issuerMetadata>`的子元素 <`message`> 元素。 然后，在 `address` 元素的 `<issuerMetadata>` 属性中，指定安全令牌服务将要发布其元数据的地址。 还可以选择添加一个 `<identity>` 子元素，并指定安全令牌服务的标识。
 
 16. 在客户端和服务上都是可选的。 添加一个 `<claimTypeRequirements>` 元素，将其作为 `<message>` 元素的子元素。 指定必选和可选声明，该服务依赖于通过添加[\<添加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md)元素`<claimTypeRequirements>`元素和指定声明类型与`claimType`属性。 通过设置 `isOptional` 属性来指定给定的声明是必选的还是可选的。
 
@@ -110,4 +110,4 @@ ms.locfileid: "46525534"
 
 - [联合](federation.md)
 - [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [如何：在 WSFederationHttpBinding 上禁用安全会话](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [如何：禁用安全会话在 WSFederationHttpBinding 上](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

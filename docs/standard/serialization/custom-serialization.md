@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931737"
 ---
 # <a name="custom-serialization"></a>自定义序列化
 自定义序列化是控制类型的序列化和反序列化的过程。 通过控制序列化，可以确保序列化兼容性。换而言之，在不中断类型核心功能的情况下，可在类型的不同版本之间序列化和反序列化。 例如，在类型的第一个版本中，可能只有两个字段。 在类型的下一个版本中，添加了其他几个字段。 但是，第二个版本的应用程序必须可对这两种类型进行序列化和反序列化。 以下各节说明如何控制序列化。
@@ -35,13 +35,13 @@ ms.locfileid: "54627978"
 ## <a name="running-custom-methods-during-and-after-serialization"></a>在序列化期间和序列化之后运行自定义方法  
  最实用且最简便的方法（已引入 .NET Framework 2.0 版）是在序列化期间和序列化之后，将下列属性应用于更正数据所用的方法：  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  这些属性允许类型参与序列化和反序列化过程中的任何一个阶段或所有四个阶段。 这些特性为类型指定了应该在每个阶段调用的方法。 这些方法不会访问序列化流，但是反而允许您在序列化或反序列化前后更改对象。 可以在类型继承层次结构中的所有级别上应用这些特性，而每种方法在该层次结构中是按从基类型到派生程度最大的类型的顺序调用的。 这种机制使得序列化和反序列化可以负责到派生程度最大的实现，从而可以避免实现 <xref:System.Runtime.Serialization.ISerializable> 接口时的复杂性和任何导致的问题。 此外，这种机制允许格式化程序忽略字段的填充以及从序列化流中检索。 有关控制序列化和反序列化的详细信息和示例，请单击以上任一链接。  
   

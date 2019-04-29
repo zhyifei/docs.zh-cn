@@ -3,11 +3,11 @@ title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
 ms.openlocfilehash: b83020601373ba93124dfb24308dd048bfa3c6dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797821"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 从一个或多个值构造结构上类型化的匿名记录。  
@@ -39,9 +39,9 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
  以下规则适用于在行构造函数中指定表达式别名：  
   
--   行构造函数中的表达式不能引用同一构造函数中的其他别名。  
+- 行构造函数中的表达式不能引用同一构造函数中的其他别名。  
   
--   同一行构造函数中的两个表达式不能具有相同别名。  
+- 同一行构造函数中的两个表达式不能具有相同别名。  
   
  有关查询构造函数的详细信息，请参阅[构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785016"
 ---
 # <a name="designing-and-implementing-services"></a>设计和实现服务
 本部分演示如何定义和实现 WCF 约定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
@@ -19,22 +19,22 @@ ms.locfileid: "59319672"
 ## <a name="overview"></a>概述  
  本主题提供了高级概念性阐释设计和实现 WCF 服务。 子主题提供有关具体设计和实现内容的更为详细的信息。 在设计和实现你的 WCF 应用程序时之前, 建议您：  
   
--   了解什么是服务协定、服务协定的工作原理以及如何创建服务协定。  
+- 了解什么是服务协定、服务协定的工作原理以及如何创建服务协定。  
   
--   了解运行时配置或宿主环境可能不支持的协定状态最低要求。  
+- 了解运行时配置或宿主环境可能不支持的协定状态最低要求。  
   
 ## <a name="service-contracts"></a>服务协定  
  服务协定指定以下内容：  
   
--   协定公开的操作。  
+- 协定公开的操作。  
   
--   针对交换的消息所进行的各种操作的签名。  
+- 针对交换的消息所进行的各种操作的签名。  
   
--   这些消息的数据类型。  
+- 这些消息的数据类型。  
   
--   操作的位置。  
+- 操作的位置。  
   
--   用于支持与服务成功通信的特定协议和序列化格式。  
+- 用于支持与服务成功通信的特定协议和序列化格式。  
   
  例如，采购订单协定可能具有一个 `CreateOrder` 操作，该操作接受订单信息类型输入并返回成功或失败信息，包括一个订单标识符。 它还可能具有一个 `GetOrderStatus` 操作，该操作接受一个订单标识符并返回订单状态信息。 此类服务协定需要指定：  
   

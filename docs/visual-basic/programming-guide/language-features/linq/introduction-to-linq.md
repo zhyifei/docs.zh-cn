@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780999"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
 语言集成查询 (LINQ) 将查询功能添加到 Visual Basic，并提供了简单而强大的功能用于与所有种类的数据处理。 而不是将查询发送到数据库进行处理，或使用你要搜索的数据的每种类型的不同的查询语法，LINQ 引入了查询作为 Visual Basic 语言的一部分。 它使用统一语法，而不考虑数据的类型。  
@@ -48,8 +48,7 @@ ms.locfileid: "56973621"
 ## <a name="structure-of-a-linq-query"></a>LINQ 查询的结构  
  LINQ 查询，通常称为*查询表达式*，由标识数据源和查询的迭代变量的查询子句的组合而成。 查询表达式还可以包含排序、筛选、分组和联接的说明或要对源数据应用的计算。 查询表达式语法类似于 SQL的语法；因此，你可能发现该语法大都非常熟悉。  
   
- 查询表达式以 `From` 子句开头。 此子句标识查询的源数据和用于分别表示源数据中每个元素的变量。 这些变量叫做*范围变量*或*迭代变量*。 
-  `From` 子句是查询所必需的，但 `Aggregate` 查询除外，在该查询中 `From` 子句是可选的。 在 `From` 或 `Aggregate` 子句中标识查询的范围和源后，即可包括查询子句的任意组合来优化查询。 有关查询子句的详细信息，请参阅本主题中的更高版本的 Visual Basic LINQ 查询运算符。 例如，下面的查询将客户数据源集合标识为 `customers` 变量和一个名为 `cust` 的迭代变量。  
+ 查询表达式以 `From` 子句开头。 此子句标识查询的源数据和用于分别表示源数据中每个元素的变量。 这些变量叫做*范围变量*或*迭代变量*。 `From` 子句是查询所必需的，但 `Aggregate` 查询除外，在该查询中 `From` 子句是可选的。 在 `From` 或 `Aggregate` 子句中标识查询的范围和源后，即可包括查询子句的任意组合来优化查询。 有关查询子句的详细信息，请参阅本主题中的更高版本的 Visual Basic LINQ 查询运算符。 例如，下面的查询将客户数据源集合标识为 `customers` 变量和一个名为 `cust` 的迭代变量。  
   
  [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
@@ -77,8 +76,7 @@ ms.locfileid: "56973621"
 
 ### <a name="from-clause"></a>From 子句
 
-任一[`From`子句](../../../../visual-basic/language-reference/queries/from-clause.md)或`Aggregate`开始查询所需的子句。 
-  `From` 子句可指定查询的源集合和迭代变量。 例如：
+任一[`From`子句](../../../../visual-basic/language-reference/queries/from-clause.md)或`Aggregate`开始查询所需的子句。 `From` 子句可指定查询的源集合和迭代变量。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
@@ -122,8 +120,7 @@ ms.locfileid: "56973621"
 
 ### <a name="aggregate-clause"></a>Aggregate 子句
 
-任一[`Aggregate`子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)或`From`开始查询所需的子句。 
-  `Aggregate` 子句向集合应用一个或多个聚合函数。 例如，可以使用`Aggregate`子句要计算的查询，返回的所有元素的总和，如以下示例所示。
+任一[`Aggregate`子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)或`From`开始查询所需的子句。 `Aggregate` 子句向集合应用一个或多个聚合函数。 例如，可以使用`Aggregate`子句要计算的查询，返回的所有元素的总和，如以下示例所示。
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
@@ -185,11 +182,11 @@ ms.locfileid: "56973621"
 ## <a name="visual-basic-features-that-support-linq"></a>支持 LINQ 的 Visual Basic 功能  
  Visual Basic 包括其他值得注意的功能，使 LINQ 使用简单和减少必须编写执行 LINQ 查询的代码量。 其中包括：  
   
--   **匿名类型**，使您能够创建基于查询结果的新类型。  
+- **匿名类型**，使您能够创建基于查询结果的新类型。  
   
--   **隐式类型化变量**，使你能够延迟指定类型，并让编译器推断根据查询结果的类型。  
+- **隐式类型化变量**，使你能够延迟指定类型，并让编译器推断根据查询结果的类型。  
   
--   **扩展方法**，使你能够使用你自己的方法扩展现有类型，而无需修改类型本身。  
+- **扩展方法**，使你能够使用你自己的方法扩展现有类型，而无需修改类型本身。  
   
  有关详细信息，请参阅[Visual Basic 功能，支持 LINQ](../../concepts/linq/features-that-support-linq.md)。  
   

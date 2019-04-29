@@ -3,11 +3,11 @@ title: 查找默认段落样式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
 ms.openlocfilehash: 0694c9144e44e4a5de262f97581eb18943937243
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931308"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>查找默认段落样式 (Visual Basic)
 在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  
@@ -89,7 +89,7 @@ The default style is: Normal
 ## <a name="next-steps"></a>后续步骤  
  下一个示例中将创建一个类似的查询，查找文档中的所有段落及其样式：  
   
--   [检索段落及其样式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [检索段落及其样式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>请参阅
 

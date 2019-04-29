@@ -3,17 +3,17 @@ title: 必需自变量和重载组
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937782"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必需自变量和重载组
-可以对活动进行配置，以便必须绑定某些参数才能有效执行该活动。 `RequiredArgument` 特性用于指示活动中的某些参数是必需参数，`OverloadGroup` 特性用于将必需参数的多个类别组合在一起。 使用这些特性，活动作者可以提供简单或复杂的活动验证配置。  
+可以对活动进行配置，以便必须绑定某些参数才能有效执行该活动。 `RequiredArgument` 特性用于指示活动中的某些自变量是必需自变量，`OverloadGroup` 特性用于将必需自变量的多个类别组合在一起。 使用这些特性，活动作者可以提供简单或复杂的活动验证配置。  
   
 ## <a name="using-required-arguments"></a>使用必需参数  
- 若要在活动中使用 `RequiredArgument` 特性，请使用 <xref:System.Activities.RequiredArgumentAttribute> 指示所需参数。 下面的示例定义了一个含有两个必需参数的 `Add` 活动。  
+ 若要在活动中使用 `RequiredArgument` 特性，请使用 <xref:System.Activities.RequiredArgumentAttribute> 指示所需参数。 下面的示例定义了一个含有两个必需自变量的 `Add` 活动。  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -67,7 +67,7 @@ public sealed class Add : CodeActivity<int>
   
 ## <a name="using-overload-groups"></a>使用重载组
 
-重载组提供了一种方法，指示哪些参数组合在活动中有效。 使用 <xref:System.Activities.OverloadGroupAttribute> 将参数组合在一起。 每个组指定名称指定的<xref:System.Activities.OverloadGroupAttribute>。 只有一组重载组中的参数绑定时，该活动才有效。 下面的示例定义了一个 `CreateLocation` 类。  
+重载组提供了一种方法，指示哪些自变量组合在活动中有效。 使用 <xref:System.Activities.OverloadGroupAttribute> 将参数组合在一起。 每个组指定名称指定的<xref:System.Activities.OverloadGroupAttribute>。 只有一组重载组中的参数绑定时，该活动才有效。 下面的示例定义了一个 `CreateLocation` 类。  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -104,7 +104,7 @@ class CreateLocation: Activity
 }  
 ```  
   
- 该活动的目的是指定美国的某个位置。 为此，活动用户可以使用三组参数中的一组来指定该位置。 若要指定参数的有效组合，请定义三个重载组。 `G1` 包含 `Latitude` 和 `Longitude` 参数。 `G2` 包含 `Street`、`City` 和 `State`。 `G3` 包含 `Street` 和 `Zip`。 `Name` 也是一个必需的参数，但它不是重载组的一部分。 为使该活动有效，必须一起绑定 `Name` 和一个（且只有一个）重载组中的所有参数。  
+ 该活动的目的是指定美国的某个位置。 为此，活动用户可以使用三组参数中的一组来指定该位置。 若要指定自变量的有效组合，请定义三个重载组。 `G1` 包含 `Latitude` 和 `Longitude` 自变量。 `G2` 包含 `Street`、`City` 和 `State`。 `G3` 包含 `Street` 和 `Zip`。 `Name` 也是一个必需的自变量，但它不是重载组的一部分。 为使该活动有效，必须一起绑定 `Name` 和一个（且只有一个）重载组中的所有参数。  
   
  在以下示例中，来自[数据库访问活动](./samples/database-access-activities.md)示例，有两个重载组：`ConnectionString`和`ConfigFileSectionName`。 为使此活动有效，必须绑定 `ProviderName` 和 `ConnectionString` 自变量，或者绑定 `ConfigName` 自变量，但不能这些自变量一起绑定。  
   
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  定义重载组时：  
   
--   重载组不能为另一个重载组的子集或等价集。  
+- 重载组不能为另一个重载组的子集或等价集。  
   
     > [!NOTE]
     >  此规则有一个例外。 如果某个重载组是另一重载组的子集，并且该子集仅包含 `RequiredArgument` 为 `false` 的参数，则该重载集有效。  
   
--   重载组可以重叠，但如果组的交集包含一个或两个重载组的所有必需参数，则会出错。 在前面的示例中，`G2` 和 `G3` 重载组重叠，但因为交集不包含一个或两个组的所有参数，所以这是有效的。   
+- 重载组可以重叠，但如果组的交集包含一个或两个重载组的所有必需自变量，则会出错。 在前面的示例中，`G2` 和 `G3` 重载组重叠，但因为交集不包含一个或两个组的所有自变量，所以这是有效的。  
   
- 在重载组中绑定参数时：  
+ 在重载组中绑定自变量时：  
   
--   如果重载组中的所有 `RequiredArgument` 参数均被绑定，则该组将被视为绑定的重载组。  
+- 如果重载组中的所有 `RequiredArgument` 参数均被绑定，则该组将被视为绑定的重载组。  
   
--   如果一个组具有零个 `RequiredArgument` 参数且至少有一个参数被绑定，则该组将被视为绑定的组。  
+- 如果一个组具有零个 `RequiredArgument` 自变量且至少有一个自变量被绑定，则该组将被视为绑定的组。  
   
--   如果没有绑定任何重载组，除非其中的一个重载组中未包含任何 `RequiredArgument` 参数，否则它是一个验证错误。  
+- 如果没有绑定任何重载组，除非其中的一个重载组中未包含任何 `RequiredArgument` 参数，否则它是一个验证错误。  
   
--   绑定多个重载组（即，绑定一个重载组中的所有必需参数，并同时绑定另一个重载组中的所有参数）的做法是错误的。
+- 绑定多个重载组（即，绑定一个重载组中的所有必需参数，并同时绑定另一个重载组中的所有参数）的做法是错误的。

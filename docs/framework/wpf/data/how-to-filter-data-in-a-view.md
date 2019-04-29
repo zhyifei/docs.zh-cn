@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
 ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931500"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>如何：筛选视图中的数据
 此示例演示如何对视图中的数据进行筛选。  

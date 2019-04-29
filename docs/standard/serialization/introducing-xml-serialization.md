@@ -13,11 +13,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933687"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化简介
 
@@ -28,8 +28,7 @@ ms.locfileid: "56981564"
 > [!NOTE]
 > XML 序列化不能转换方法、索引器、私有字段或只读属性（只读集合除外）。 若要序列化对象的所有公共和私有字段和属性，请使用 <xref:System.Runtime.Serialization.DataContractSerializer> 而不要使用 XML 序列化。
 
- XML 序列化中的中心类是 <xref:System.Xml.Serialization.XmlSerializer> 类，此类中最重要的方法是 Serialize 和 Deserialize 方法。 
-  <xref:System.Xml.Serialization.XmlSerializer> 创建 C# 文件并将其编译为 .dll 文件，以执行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程序生成器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 旨在预先生成要与应用程序一起部署的这些序列化程序集，并改进启动性能。 生成的 XML 流**XmlSerializer**符合 World Wide Web 联合会 (W3C) [XML 架构定义语言 (XSD) 1.0 建议](https://www.w3.org/TR/xslt)。 此外，生成的数据类型都符合文档标题为"XML 架构第 2 部分：数据类型。"
+ XML 序列化中的中心类是 <xref:System.Xml.Serialization.XmlSerializer> 类，此类中最重要的方法是 Serialize 和 Deserialize 方法。 <xref:System.Xml.Serialization.XmlSerializer> 创建 C# 文件并将其编译为 .dll 文件，以执行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程序生成器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 旨在预先生成要与应用程序一起部署的这些序列化程序集，并改进启动性能。 生成的 XML 流**XmlSerializer**符合 World Wide Web 联合会 (W3C) [XML 架构定义语言 (XSD) 1.0 建议](https://www.w3.org/TR/xslt)。 此外，生成的数据类型都符合文档标题为"XML 架构第 2 部分：数据类型。"
 
  对象中的数据是用编程语言构造来描述的，如类、字段、属性、基元类型、数组，甚至是 XmlElement 或 XmlAttribute 对象形式的嵌入 XML。 您可以创建自己的用特性批注的类，也可以使用 XML 架构定义工具生成基于现有 XML 架构的类。
 

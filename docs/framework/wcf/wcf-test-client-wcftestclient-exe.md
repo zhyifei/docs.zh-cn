@@ -3,11 +3,11 @@ title: WCF 测试客户端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791191"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 测试客户端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用户能够输入测试参数、 将该输入到服务，提交并查看服务发回的响应。 它提供了完美的服务测试体验与 WCF 服务主机结合使用时。  
@@ -136,34 +136,34 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
 ## <a name="features-supported-by-wcf-test-client"></a>WCF 测试客户端支持的功能  
  以下是 WCF 测试客户端支持的功能的列表：  
   
--   服务调用：请求/响应和单向消息。  
+- 服务调用：请求/响应和单向消息。  
   
--   绑定：Svcutil.exe 支持的所有绑定。  
+- 绑定：Svcutil.exe 支持的所有绑定。  
   
--   控制会话。  
+- 控制会话。  
   
--   消息协定。  
+- 消息协定。  
   
--   XML 序列化。  
+- XML 序列化。  
   
  以下是 WCF 测试客户端不支持的功能的列表：  
   
--   类型：<xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型（包括相关 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 特性）、<xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 类型以及 ADO.NET <xref:System.Data.DataTable> 类型。  
+- 类型：<xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型（包括相关 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 特性）、<xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 类型以及 ADO.NET <xref:System.Data.DataTable> 类型。  
   
--   双工协定。  
+- 双工协定。  
   
--   事务。  
+- 事务。  
   
--   安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、证书和用户名/密码。  
+- 安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、证书和用户名/密码。  
   
--   绑定：WSFederationbinding、 任何上下文绑定和 Https 绑定、 WebHttpbinding （Json 响应消息支持）。  
+- 绑定：WSFederationbinding、 任何上下文绑定和 Https 绑定、 WebHttpbinding （Json 响应消息支持）。  
   
 ## <a name="closing-wcf-test-client"></a>关闭 WCF 测试客户端  
  你可以按以下方式关闭 WCF 测试客户端：  
   
--   上**文件**菜单上，单击**退出**。 或者，在 WCF 测试客户端主窗口中，单击**关闭**。 同时这些操作还关闭 WCF 服务自动主机并停止 Visual Studio 调试过程，如果通过 Visual Studio 启动 WCF 测试客户端。  
+- 上**文件**菜单上，单击**退出**。 或者，在 WCF 测试客户端主窗口中，单击**关闭**。 同时这些操作还关闭 WCF 服务自动主机并停止 Visual Studio 调试过程，如果通过 Visual Studio 启动 WCF 测试客户端。  
   
--   右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这会关闭 WCF 服务自动主机和 WCF 测试客户端并停止 Visual Studio 调试过程。  
+- 右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这会关闭 WCF 服务自动主机和 WCF 测试客户端并停止 Visual Studio 调试过程。  
   
 ## <a name="see-also"></a>请参阅
 

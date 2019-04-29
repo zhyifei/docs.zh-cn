@@ -3,11 +3,11 @@ title: 记录
 description: 了解如何F#记录表示已命名的值，可选择包含成员的简单聚合。
 ms.date: 05/16/2016
 ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795416"
 ---
 # <a name="records"></a>记录
 
@@ -150,5 +150,5 @@ The records are equal.
 - [F# 类型](fsharp-types.md)
 - [类](classes.md)
 - [F# 语言参考](index.md)
-- [引用相等性](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 - [模式匹配](pattern-matching.md)

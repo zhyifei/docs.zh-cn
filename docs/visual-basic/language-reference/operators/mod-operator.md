@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936664"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 运算符 (Visual Basic)
 使两个数字相除，仅返回余数。  
@@ -70,9 +70,9 @@ End Module
   
  相关的运算符包括：  
   
--   [\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)返回整数除法运算的商。 例如，表达式`14 \ 4`的计算结果为 3。  
+- [\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)返回整数除法运算的商。 例如，表达式`14 \ 4`的计算结果为 3。  
   
--   [/ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)返回完整商，包括其余部分中的，作为浮点数。 例如，表达式`14 / 4`的计算结果为 3.5。  
+- [/ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)返回完整商，包括其余部分中的，作为浮点数。 例如，表达式`14 / 4`的计算结果为 3.5。  
   
 ## <a name="attempted-division-by-zero"></a>尝试的除数为零  
  如果`number2`的计算结果为零的行为`Mod`运算符取决于操作数的数据类型。 整数除法引发<xref:System.DivideByZeroException>异常。 浮点除法运算返回<xref:System.Double.NaN>。  

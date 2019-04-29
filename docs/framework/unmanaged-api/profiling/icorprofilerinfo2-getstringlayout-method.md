@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc94c63edb602d87a7c08a9051eb2ef760834477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791637"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 方法
 获取有关字符串对象布局的信息。 此方法中已弃用[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，并且被取代[ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)方法。  
@@ -52,11 +52,11 @@ HRESULT GetStringLayout(
 ## <a name="remarks"></a>备注  
  `GetStringLayout`方法获取偏移量，相对于`ObjectID`指针，以下在其中存储的位置：  
   
--   字符串的缓冲区的长度。  
+- 字符串的缓冲区的长度。  
   
--   该字符串本身的长度。  
+- 该字符串本身的长度。  
   
--   包含实际的宽字符字符串的缓冲区。  
+- 包含实际的宽字符字符串的缓冲区。  
   
  字符串可以是以 null 结尾。  
   

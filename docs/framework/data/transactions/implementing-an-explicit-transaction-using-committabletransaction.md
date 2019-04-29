@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793713"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>使用 CommittableTransaction 执行显式事务
 <xref:System.Transactions.CommittableTransaction> 类为应用程序使用事务提供了一种显式方法，而不是隐式地使用 <xref:System.Transactions.TransactionScope> 类。 对于要跨多个函数调用或多个线程调用使用同一事务的应用程序，前一种类十分有用。 与 <xref:System.Transactions.TransactionScope> 类不同，应用程序编写器需要明确调用 <xref:System.Transactions.CommittableTransaction.Commit%2A> 和 <xref:System.Transactions.Transaction.Rollback%2A> 方法以提交或中止事务。  
@@ -22,9 +22,9 @@ ms.locfileid: "59105412"
   
  此外，在使用 <xref:System.Transactions.CommittableTransaction> 类时，还应注意以下几点。  
   
--   创建 <xref:System.Transactions.CommittableTransaction> 事务并不会设置环境事务。 您需要明确设置和重置环境事务，才能确保资源管理器在需要时在正确的事务上下文中操作。 设置当前环境事务的方式是在全局 <xref:System.Transactions.Transaction.Current%2A> 对象上设置静态 <xref:System.Transactions.Transaction> 属性。  
+- 创建 <xref:System.Transactions.CommittableTransaction> 事务并不会设置环境事务。 您需要明确设置和重置环境事务，才能确保资源管理器在需要时在正确的事务上下文中操作。 设置当前环境事务的方式是在全局 <xref:System.Transactions.Transaction.Current%2A> 对象上设置静态 <xref:System.Transactions.Transaction> 属性。  
   
--   <xref:System.Transactions.CommittableTransaction> 对象不能被重用。 <xref:System.Transactions.CommittableTransaction> 对象一旦提交或回滚后，就不能再在事务中使用。 也就是说，它不能设置为当前环境事务上下文。  
+- <xref:System.Transactions.CommittableTransaction> 对象不能被重用。 <xref:System.Transactions.CommittableTransaction> 对象一旦提交或回滚后，就不能再在事务中使用。 也就是说，它不能设置为当前环境事务上下文。  
   
 ## <a name="creating-a-committabletransaction"></a>创建可提交的事务  
  下面的示例创建一个新的 <xref:System.Transactions.CommittableTransaction> 并提交它。  

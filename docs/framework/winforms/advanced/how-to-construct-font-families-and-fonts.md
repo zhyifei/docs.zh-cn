@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937964"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>如何：构造字体系列和字体
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 分组为字体系列字样相同但不同的样式使用的字体。 例如，Arial 字体系列包含以下字体：  
   
--   Arial 常规  
+- Arial 常规  
   
--   Arial 粗体  
+- Arial 粗体  
   
--   Arial 斜体  
+- Arial 斜体  
   
--   宋体  
+- 宋体  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 使用四种字形形成系列： 常规、 粗体、 斜体和粗体斜体。 如形容词*缩小*并*舍入*不被视为样式; 而不是它们是系列名称的一部分。 例如，Arial 窄是字体系列包含下列成员：  
   
--   Arial 窄常规  
+- Arial 窄常规  
   
--   姚粗体  
+- 姚粗体  
   
--   Arial 窄斜体  
+- Arial 窄斜体  
   
--   Arial 窄的加粗倾斜  
+- Arial 窄的加粗倾斜  
   
  您可以绘制与文本之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，则需构造<xref:System.Drawing.FontFamily>对象和一个<xref:System.Drawing.Font>对象。 <xref:System.Drawing.FontFamily>对象指定 （例如，Arial） 字样和<xref:System.Drawing.Font>对象指定的大小、 样式和单位。  
   

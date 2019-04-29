@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9153c9b3735e265d59ba072f747c92434c95d9ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789865"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
 检索元数据 （而不是由 ALink 分配的令牌） 中使用的实际 FileDef 标记。  

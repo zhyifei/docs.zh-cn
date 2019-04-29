@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938757"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自定义类型和库的 XAML 相关 CLR 特性
 本主题介绍由.NET Framework XAML 服务定义的公共语言运行时 (CLR) 属性。 它还介绍了在.NET Framework 中定义具有对程序集或类型的应用程序的 XAML 相关方案的其他 CLR 属性。 使用这些 CLR 特性属性的程序集、 类型或成员提供了与您的类型相关的 XAML 类型系统信息。 到直接处理 XAML 节点流或专用的 XAML 读取器和 XAML 编写器通过使用.NET Framework XAML 服务的任何 XAML 使用者提供信息。  
@@ -90,9 +90,9 @@ ms.locfileid: "59086203"
   
  **参数：** 支持两种形式的属性：  
   
--   一个字符串，在特性化类型上指定的属性名称。  
+- 一个字符串，在特性化类型上指定的属性名称。  
   
--   一个字符串，指定属性的名称和一个<xref:System.Type>定义命名的属性的类型。 此窗体是用于为 XAML 名称范围属性指定可附加成员。  
+- 一个字符串，指定属性的名称和一个<xref:System.Type>定义命名的属性的类型。 此窗体是用于为 XAML 名称范围属性指定可附加成员。  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> 指定为特性化类提供的 XAML 名称范围值的属性。 应引用实现的对象的 XAML 名称范围属性<xref:System.Windows.Markup.INameScope>并保存的实际的 XAML 名称范围，其存储区，其行为。  
   
@@ -219,9 +219,9 @@ ms.locfileid: "59086203"
   
  **参数：**  
   
--   一个字符串，指定要包含的 XAML 命名空间标识符。  
+- 一个字符串，指定要包含的 XAML 命名空间标识符。  
   
--   一个字符串，指定可以包含从上一个参数的 XAML 命名空间的 XAML 命名空间的标识符。  
+- 一个字符串，指定可以包含从上一个参数的 XAML 命名空间的 XAML 命名空间的标识符。  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 指定可由另一个 XAML 命名空间被包含到 XAML 命名空间。 通常，先前定义的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 中指示了包含 XAML 命令空间。 此方法可用于版本控制库中，使其符合针对以前版本的词汇以前定义的标记的 XAML 词汇。  
   
@@ -230,40 +230,40 @@ ms.locfileid: "59086203"
   
  **参数：**  
   
--   一个字符串，指定要定义的 XAML 命名空间标识符。  
+- 一个字符串，指定要定义的 XAML 命名空间标识符。  
   
--   命名的 CLR 命名空间的字符串。 CLR 命名空间应在您的程序集，定义公共类型和 CLR 命名空间类型至少应适用于 XAML 使用情况。  
+- 命名的 CLR 命名空间的字符串。 CLR 命名空间应在您的程序集，定义公共类型和 CLR 命名空间类型至少应适用于 XAML 使用情况。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 指定每个程序集基于 XAML 命名空间和 CLR 命名空间，然后是用于进行类型解析的 XAML 对象编写器或 XAML 架构上下文之间的映射。  
   
  多个<xref:System.Windows.Markup.XmlnsDefinitionAttribute>可以应用于程序集。 这可能会出于以下原因的任意组合：  
   
--   库设计包含用于运行时 API 访问权限; 的逻辑组织的多个 CLR 命名空间但是，你希望这些命名空间中的所有类型才能通过引用相同的 XAML 命名空间使用 XAML。 在这种情况下，应用多个<xref:System.Windows.Markup.XmlnsDefinitionAttribute>属性使用的相同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值但具有不同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A>值。 这是特别有用，如果你正在定义的框架或应用程序想要将默认 XAML 命名空间中常见的用法的 XAML 命名空间映射。  
+- 库设计包含用于运行时 API 访问权限; 的逻辑组织的多个 CLR 命名空间但是，你希望这些命名空间中的所有类型才能通过引用相同的 XAML 命名空间使用 XAML。 在这种情况下，应用多个<xref:System.Windows.Markup.XmlnsDefinitionAttribute>属性使用的相同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值但具有不同<xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A>值。 这是特别有用，如果你正在定义的框架或应用程序想要将默认 XAML 命名空间中常见的用法的 XAML 命名空间映射。  
   
--   库设计包含多个 CLR 命名空间，并且你希望之间的这些 CLR 命名空间中的类型使用实例的有意 XAML 命名空间分隔。  
+- 库设计包含多个 CLR 命名空间，并且你希望之间的这些 CLR 命名空间中的类型使用实例的有意 XAML 命名空间分隔。  
   
--   在程序集中定义的 CLR 命名空间，并且希望它能够通过多个 XAML 命名空间。 要支持多个具有相同的基本代码的词汇表，将发生这种情况。  
+- 在程序集中定义的 CLR 命名空间，并且希望它能够通过多个 XAML 命名空间。 要支持多个具有相同的基本代码的词汇表，将发生这种情况。  
   
--   在一个或多个 CLR 命名空间中定义 XAML 语言支持。 对于这些数据，<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值应为`http://schemas.microsoft.com/winfx/2006/xaml`。  
+- 在一个或多个 CLR 命名空间中定义 XAML 语言支持。 对于这些数据，<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>值应为`http://schemas.microsoft.com/winfx/2006/xaml`。  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **参考文档：**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **参数：**  
   
--   一个字符串，指定的 XAML 命名空间标识符。  
+- 一个字符串，指定的 XAML 命名空间标识符。  
   
--   一个字符串，指定建议的前缀。  
+- 一个字符串，指定建议的前缀。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 指定要用于 XAML 命名空间的推荐的前缀。 前缀时，可以在由.NET Framework XAML 服务序列化的 XAML 文件中编写元素和属性<xref:System.Xaml.XamlXmlWriter>，或 XAML 实现的库与具有 XAML 的设计环境进行的交互时编辑功能。  
   
  多个<xref:System.Windows.Markup.XmlnsPrefixAttribute>可以应用于程序集。 这可能会出于以下原因的任意组合：  
   
--   您的程序集定义多个 XAML 命名空间的类型。 在这种情况下您应定义每个 XAML 命名空间不同的前缀的值。  
+- 您的程序集定义多个 XAML 命名空间的类型。 在这种情况下您应定义每个 XAML 命名空间不同的前缀的值。  
   
--   支持多个词汇，并为每个词汇和 XAML 命名空间中使用不同的前缀。  
+- 支持多个词汇，并为每个词汇和 XAML 命名空间中使用不同的前缀。  
   
--   在程序集中定义 XAML 语言支持和具有<xref:System.Windows.Markup.XmlnsDefinitionAttribute>为`http://schemas.microsoft.com/winfx/2006/xaml`。 在这种情况下，通常应提升前缀`x`。  
+- 在程序集中定义 XAML 语言支持和具有<xref:System.Windows.Markup.XmlnsDefinitionAttribute>为`http://schemas.microsoft.com/winfx/2006/xaml`。 在这种情况下，通常应提升前缀`x`。  
   
 > [!NOTE]
 >  .NET framework XAML 服务还可定义与 XAML 相关的属性<xref:System.Windows.Markup.RootNamespaceAttribute>。 此属性是项目系统支持的程序集级别属性并不是适用于 XAML 的自定义类型。  

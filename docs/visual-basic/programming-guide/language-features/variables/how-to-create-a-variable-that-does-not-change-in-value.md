@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938224"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>如何：在值 (Visual Basic 中) 创建一个变量，不会更改
 不会更改其值的变量的概念可能似乎是矛盾。 但有些情况下常量不可行时，并可用于具有固定值的变量。 在这种情况下，你可以定义具有的成员变量[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)关键字。  
   
  不能使用[Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)来声明和分配在以下情况下的常量值：  
   
--   `Const`语句不接受你想要使用的数据类型  
+- `Const`语句不接受你想要使用的数据类型  
   
--   在编译时不知道值  
+- 在编译时不知道值  
   
--   无法在编译时计算的常量值  
+- 无法在编译时计算的常量值  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>若要在值中创建一个变量，不会更改  
   

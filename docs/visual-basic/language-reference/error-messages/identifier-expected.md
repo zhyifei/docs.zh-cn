@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
 ms.openlocfilehash: 11a305581ba498715f7f24ecb75f737acdf12bfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936313"
 ---
 # <a name="identifier-expected"></a>应输入标识符
 不是可识别的已声明的元素名称的编程元素出现在上下文要求元素名称的位置。 一个可能的原因是以外的某处指定了一个属性的语句开始处。  
@@ -21,9 +21,9 @@ ms.locfileid: "58843547"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   验证该语句中的任何属性的所有位于开头。  
+- 验证该语句中的任何属性的所有位于开头。  
   
--   验证语句中的所有元素名称都拼写正确。  
+- 验证语句中的所有元素名称都拼写正确。  
   
 ## <a name="see-also"></a>请参阅
 

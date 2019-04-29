@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
 ms.openlocfilehash: 4dadad63f4321e88b79f2006a9e6b7befa27909a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935338"
 ---
 # <a name="array-subscript-expression-missing"></a>缺少数组下标表达式
 数组初始化省略了一个或多个定义数组边界的下标。 例如，该语句可能包含表达式`myArray (5,5,,10)`，其中省略了第三个下标。  
@@ -21,7 +21,7 @@ ms.locfileid: "58837554"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   提供缺少的下标。  
+- 提供缺少的下标。  
   
 ## <a name="see-also"></a>请参阅
 

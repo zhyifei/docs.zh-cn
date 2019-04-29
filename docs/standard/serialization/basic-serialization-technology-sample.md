@@ -3,11 +3,11 @@ title: 基本序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795013"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315005"
   
  下面的项目符号简要说明了此示例所使用的类和技术。  
   
--   运行时序列化  
+- 运行时序列化  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> 用于引用<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>对象。  
+    - <xref:System.Runtime.Serialization.IFormatter> 用于引用<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>对象。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用于向流中的二进制格式将链接的列表序列化。 二进制格式化程序使用了只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 类型才理解的格式。 然而，该数据非常简明。  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用于向流中的二进制格式将链接的列表序列化。 二进制格式化程序使用了只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 类型才理解的格式。 然而，该数据非常简明。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用于序列化到 SOAP 格式的流的链接的列表。 SOAP 是一种标准格式。  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用于序列化到 SOAP 格式的流的链接的列表。 SOAP 是一种标准格式。  
   
--   流 I/O  
+- 流 I/O  
   
-    -   <xref:System.IO.Stream> 可用于序列化和反序列化。 此示例中使用的特定流类型是 <xref:System.IO.FileStream> 类型。 然而，序列化可以用于从 <xref:System.IO.Stream> 派生的任何类型。  
+    - <xref:System.IO.Stream> 可用于序列化和反序列化。 此示例中使用的特定流类型是 <xref:System.IO.FileStream> 类型。 然而，序列化可以用于从 <xref:System.IO.Stream> 派生的任何类型。  
   
-    -   <xref:System.IO.File> 可用于创建 <xref:System.IO.FileStream> 对象，以便在磁盘上读取和创建文件。  
+    - <xref:System.IO.File> 可用于创建 <xref:System.IO.FileStream> 对象，以便在磁盘上读取和创建文件。  
   
-    -   <xref:System.IO.FileStream> 可用于对链接列表进行序列化和反序列化。  
+    - <xref:System.IO.FileStream> 可用于对链接列表进行序列化和反序列化。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794298"
 ---
 # <a name="serialization-guidelines"></a>序列化准则
 本文档列出了在设计要序列化的 API 时要考虑的准则。  
@@ -32,22 +32,22 @@ ms.locfileid: "59317332"
   
 ## <a name="guidelines"></a>准则  
   
--   设计新类型时请务必考虑序列化。  
+- 设计新类型时请务必考虑序列化。  
   
      对于任何类型来说，序列化都是一个重要的设计考虑事项，因为程序可能需要持久保持或传输类型的实例。  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>选择要支持的合适的序列化技术  
  任何给定类型均可支持一种或多种序列化技术，或者不支持任何序列化技术。  
   
--   如果可能需要在 Web 服务中持久保持或使用类型的实例，则应考虑支持数据协定序列化。  
+- 如果可能需要在 Web 服务中持久保持或使用类型的实例，则应考虑支持数据协定序列化。  
   
--   如果需要对序列化类型时生成的 XML 格式具有更多控制，则应考虑改为支持 XML 序列化，或者在支持数据协定序列化之外还支持 XML 序列化。  
+- 如果需要对序列化类型时生成的 XML 格式具有更多控制，则应考虑改为支持 XML 序列化，或者在支持数据协定序列化之外还支持 XML 序列化。  
   
      这对于某些需要使用数据协定序列化所不支持的 XML 构造（例如，用于生成 XML 特性）的互操作性方案可能是必需的。  
   
--   如果类型实例需要越过 .NET 远程处理边界传递，则应考虑支持运行时序列化。  
+- 如果类型实例需要越过 .NET 远程处理边界传递，则应考虑支持运行时序列化。  
   
--   应避免仅仅因为常规持久性原因而支持运行时序列化或 XML 序列化， 而应首选数据协定序列化。  
+- 应避免仅仅因为常规持久性原因而支持运行时序列化或 XML 序列化， 而应首选数据协定序列化。  
   
 #### <a name="supporting-data-contract-serialization"></a>支持数据协定序列化  
  通过将 <xref:System.Runtime.Serialization.DataContractAttribute> 应用到类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 应用到类型的成员（字段和属性），类型可支持数据协定序列化。  

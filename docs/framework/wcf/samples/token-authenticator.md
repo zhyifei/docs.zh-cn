@@ -3,30 +3,30 @@ title: 令牌身份验证器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779166"
 ---
 # <a name="token-authenticator"></a>令牌身份验证器
 此示例演示如何实现一个自定义令牌身份验证器。 令牌身份验证器在 Windows Communication Foundation (WCF) 用于验证消息，使用的令牌验证它自身一致，并进行身份验证标识与令牌相关联。
 
  自定义令牌身份验证器可用在各种场合，如：
 
--   当您希望重写与令牌相关联的默认身份验证机制时。
+- 当您希望重写与令牌相关联的默认身份验证机制时。
 
--   当您生成自定义令牌时。
+- 当您生成自定义令牌时。
 
  此示例对下列内容进行了说明：
 
--   客户端如何使用用户名/密码对来进行身份验证。
+- 客户端如何使用用户名/密码对来进行身份验证。
 
--   服务器如何使用自定义令牌身份验证器来验证客户端凭据。
+- 服务器如何使用自定义令牌身份验证器来验证客户端凭据。
 
--   如何使用自定义令牌身份验证器，WCF 服务代码将联系。
+- 如何使用自定义令牌身份验证器，WCF 服务代码将联系。
 
--   如何使用服务器的 X.509 证书对服务器进行身份验证。
+- 如何使用服务器的 X.509 证书对服务器进行身份验证。
 
  此示例还演示如何调用方的标识是从 WCF 可访问自定义令牌身份验证过程完成后。
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。
 
--   创建服务器证书。
+- 创建服务器证书。
 
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   将服务器证书安装到客户端的受信任证书存储区中。
+- 将服务器证书安装到客户端的受信任证书存储区中。
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 

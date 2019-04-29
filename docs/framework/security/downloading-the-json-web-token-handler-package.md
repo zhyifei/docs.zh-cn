@@ -3,17 +3,17 @@ title: 下载 JSON Web 标记处理程序包
 ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792744"
 ---
 # <a name="download-the-json-web-token-handler-package"></a>下载 JSON Web 令牌处理程序包
 
 本主题讨论了如何在项目中下载和使用 JSON Web 令牌处理程序。
 
-JSON Web 令牌处理程序扩展可用作 NuGet 程序包，可将必要程序集和引用添加到项目。 如果尚未安装 NuGet，请转到 [nuget.org](https://nuget.org) 进行安装。 访问 NuGet 上的扩展页面，查看扩展的版本历史记录：[NuGet 上的 JSON Web 令牌处理程序](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
+JSON Web 令牌处理程序扩展可用作 NuGet 程序包，可将必要程序集和引用添加到项目。 如果尚未安装 NuGet，请转到 [nuget.org](https://nuget.org) 进行安装。 可以通过在 NuGet 上访问其页面看到扩展的版本控制历史记录：[JSON Web 令牌处理程序 NuGet 上](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
 
 ## <a name="use-the-package-manager-gui"></a>使用程序包管理器 GUI
 

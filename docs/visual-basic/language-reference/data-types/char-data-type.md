@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
 ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796976"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 数据类型 (Visual Basic)
 保存无符号的 16 位 （2 个字节） 码位，取值范围为 0 到 65535 之间。 每个*代码点*，或字符代码，表示单个 Unicode 字符。  
@@ -47,15 +47,15 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **负号。** `Char` 是一个无符号的类型，不能表示为负值。 在任何情况下，不应使用`Char`来保存数值。  
+- **负号。** `Char` 是一个无符号的类型，不能表示为负值。 在任何情况下，不应使用`Char`来保存数值。  
   
--   **互操作注意事项。** 如果不是为.NET Framework 编写的组件接口如自动化或 COM 对象，请记住，字符类型具有不同的数据宽度 (8 bits) 在其他环境中。 如果将 8 位自变量传递给此类组件中时，将其作为声明`Byte`而不是`Char`中新的 Visual Basic 代码。  
+- **互操作注意事项。** 如果不是为.NET Framework 编写的组件接口如自动化或 COM 对象，请记住，字符类型具有不同的数据宽度 (8 bits) 在其他环境中。 如果将 8 位自变量传递给此类组件中时，将其作为声明`Byte`而不是`Char`中新的 Visual Basic 代码。  
   
--   **扩大转换。** `Char`数据类型加宽到`String`。 这意味着可以将转换`Char`到`String`而不会遇到<xref:System.OverflowException?displayProperty=nameWithType>错误。  
+- **扩大转换。** `Char`数据类型加宽到`String`。 这意味着可以将转换`Char`到`String`而不会遇到<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
--   **类型字符。** 追加文本类型字符`C`到单字符字符串文本将其强制转换到`Char`数据类型。 `Char` 有没有标识符类型字符。  
+- **类型字符。** 追加文本类型字符`C`到单字符字符串文本将其强制转换到`Char`数据类型。 `Char` 有没有标识符类型字符。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Char?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Char?displayProperty=nameWithType> 结构。  
   
 ## <a name="see-also"></a>请参阅
 

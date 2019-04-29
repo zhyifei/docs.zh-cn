@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
 ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931490"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>如何：获取数据集合的默认视图
 可以通过视图以不同的方式查看同一数据集合，具体取决于排序、筛选或分组规则。 每个集合都有一个共享的默认视图，在绑定指定一个集合作为其源时用作实际绑定源。 此示例演示如何获取集合的默认视图。  

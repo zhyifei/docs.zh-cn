@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929592"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -34,11 +34,11 @@ ms.locfileid: "59122299"
   
  通信堆栈中的另一个必要元素是指定如何对任意给定消息进行格式化的编码。 WCF 提供了以下编码：  
   
--   文本编码，一种可互操作的编码。  
+- 文本编码，一种可互操作的编码。  
   
--   消息传输优化机制 (MTOM) 编码，该编码是一种可互操作的方法，用于高效地将非结构化二进制数据发送到服务或从服务接收这些数据。  
+- 消息传输优化机制 (MTOM) 编码，该编码是一种可互操作的方法，用于高效地将非结构化二进制数据发送到服务或从服务接收这些数据。  
   
--   用于实现高效传输的二进制编码。  
+- 用于实现高效传输的二进制编码。  
   
  可以使用 WCF 的内置扩展点添加更多编码机制 （例如，压缩编码）。  
   

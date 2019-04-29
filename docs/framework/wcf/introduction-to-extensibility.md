@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928592"
 ---
 # <a name="introduction-to-extensibility"></a>扩展性介绍
 Windows Communication Foundation (WCF) 应用程序模型旨在解决的任何分布式应用程序的通信要求更高版本的一部分。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 WCF 扩展性模型旨在支持自定义方案，通过它可以修改在每个级别，甚至替换整个应用程序模型的系统行为。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  
@@ -19,11 +19,11 @@ Windows Communication Foundation (WCF) 应用程序模型旨在解决的任何�
 ## <a name="areas-to-extend"></a>要扩展的范围  
  可以扩展：  
   
--   应用程序运行库。 这将扩展应用程序消息的调度和处理。 此范围还包括扩展安全系统、元数据系统、序列化系统以及将应用程序与基础通道系统相连的绑定和绑定元素。  
+- 应用程序运行库。 这将扩展应用程序消息的调度和处理。 此范围还包括扩展安全系统、元数据系统、序列化系统以及将应用程序与基础通道系统相连的绑定和绑定元素。  
   
--   通道和通道运行库。 这将扩展在消息级别运行的系统，用于提供协议、传输和编码支持。  
+- 通道和通道运行库。 这将扩展在消息级别运行的系统，用于提供协议、传输和编码支持。  
   
--   主机运行库。 此范围将主机应用程序域的关系扩展到通道和应用程序运行库。  
+- 主机运行库。 此范围将主机应用程序域的关系扩展到通道和应用程序运行库。  
   
 ### <a name="extending-the-application-runtime"></a>扩展应用程序运行库  
  在 WCF 应用程序没有区别发往相应通道的消息和目标为应用程序本身的消息。 通道消息支持某些与通道相关的功能，如建立安全对话或可靠会话。 这些消息对于应用程序运行库不可用；涉及应用程序层之前，将处理这些消息。  

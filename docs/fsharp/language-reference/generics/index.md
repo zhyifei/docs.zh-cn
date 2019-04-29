@@ -3,11 +3,11 @@ title: 泛型
 description: 了解如何使用F#泛型函数和类型，以便你能够编写代码，而无需重复代码适用于不同的类型。
 ms.date: 05/16/2016
 ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937522"
 ---
 # <a name="generics"></a>泛型
 

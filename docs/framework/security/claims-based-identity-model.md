@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792805"
 ---
 # <a name="claims-based-identity-model"></a>基于声明的标识模型
 在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 一个声明可能是用户的名称，另一个可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  
   
  在此模型下，可以更轻松地实现单一登录，并且应用程序不再负责执行以下操作：  
   
--   对用户进行身份验证。  
+- 对用户进行身份验证。  
   
--   存储用户帐户和密码。  
+- 存储用户帐户和密码。  
   
--   调用企业目录以查找用户标识详细信息。  
+- 调用企业目录以查找用户标识详细信息。  
   
--   与来自其他平台或公司的标识系统集成。  
+- 与来自其他平台或公司的标识系统集成。  
   
  在此模型下，应用程序可以基于由已对用户进行身份验证的系统提供的声明做出与标识相关的决定。 这可以是来自简单应用程序个性化的任何内容（带用户的名字），以便为用户授予访问应用程序中更有用的功能和资源的权限。  
   
  本主题提供以下信息：  
   
--   [基于声明的标识简介](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [基于声明的标识简介](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [基于声明的标识模型的基本方案](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [基于声明的标识模型的基本方案](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>基于声明的标识简介  

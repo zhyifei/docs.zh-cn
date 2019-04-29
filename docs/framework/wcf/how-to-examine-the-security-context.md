@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929293"
 ---
 # <a name="how-to-examine-the-security-context"></a>如何：检查安全性上下文
 在编程时 Windows Communication Foundation (WCF) 服务，服务安全上下文，可确定客户端凭据和声明用来与服务进行身份验证的详细信息。 这是使用 <xref:System.ServiceModel.ServiceSecurityContext> 类的属性进行的。  
@@ -25,7 +25,7 @@ ms.locfileid: "59305099"
   
 ### <a name="to-get-the-current-security-context"></a>获取当前安全上下文  
   
--   访问静态属性 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 以获取当前的安全上下文。 从参考检查当前上下文的任何属性。  
+- 访问静态属性 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 以获取当前的安全上下文。 从参考检查当前上下文的任何属性。  
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>确定调用方的标识  
   
@@ -46,13 +46,13 @@ ms.locfileid: "59305099"
 ## <a name="compiling-the-code"></a>编译代码  
  该代码使用以下命名空间：  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>请参阅
 

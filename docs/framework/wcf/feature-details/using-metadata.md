@@ -3,11 +3,11 @@ title: 使用元数据
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933613"
 ---
 # <a name="using-metadata"></a>使用元数据
 服务元数据包含计算机可读的服务说明。 服务元数据包括服务终结点、绑定、约定、操作和消息的说明。 服务元数据有多种用途，包括自动生成使用服务的客户端、实现服务说明和动态更新客户端的绑定。  

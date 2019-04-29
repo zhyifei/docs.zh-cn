@@ -1,17 +1,17 @@
 ---
-title: 计时漏洞 CBC 模式下使用填充的对称解密
+title: 使用填充对 CBC 模式对称解密的漏洞进行计时
 description: 了解如何检测和缓解与使用填充的密码块链 (CBC) 模式下对称解密计时漏洞。
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933895"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>计时漏洞 CBC 模式下使用填充的对称解密
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用填充对 CBC 模式对称解密的漏洞进行计时
 
 Microsoft 认为是不再安全而无需首先除确保完整性的密码文本，已应用可验证填充时使用对称加密的密码块链 (CBC) 模式加密的数据进行解密非常具体情况。 此判断基于当前已知加密研究。 
 
@@ -93,7 +93,7 @@ Oracle 是指"告诉"它为提供了有关他们正在执行的操作是否是�
 - 入口解密调用消除计时信号的评估：
   - 计算的保留时间必须至少超出最大，解密操作将需要为包含填充任何数据段的时间量。
   - 应根据中的指导完成时间计算[获取高分辨率时间戳](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)，不能通过使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（取决于前的 over/溢出） 或减法 （取决于 NTP 调整的两个系统时间戳错误）。
-  - 时间计算必须包括解密操作包括中的所有潜在异常管理或 c + + 应用程序，而不仅仅是填充到末尾。
+  - 时间计算必须包括解密操作包括中的所有潜在异常管理或C++应用程序，而不仅仅是填充到末尾。
   - 如果尚未确定成功或失败，计时入口将需要它过期时返回失败。
 - 正在执行未经身份验证的解密的服务应具有在来检测大量"无效"消息都监视。
   - 请记住此信号携带的假正值 （以合法方式损坏的数据） 和假负 （分散通过足够长的时间来躲避检测攻击）。

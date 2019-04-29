@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
 ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928669"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>用 WCF 开发面向服务的应用程序
 本文档的此节提供有关 Windows Communication Foundation (WCF) 的信息，WCF 是用于构建面向服务的应用程序的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。
@@ -35,7 +35,7 @@ ms.locfileid: "33804266"
  描述用于创建 Windows Communication Foundation 应用程序的基础。  
   
  [WCF 功能详细信息](../../../docs/framework/wcf/feature-details/index.md)  
- 显示允许您选择的 WCF 功能需要采用的主题。  
+ 显示允许您选择的 WCF 功能需要使用的主题。  
   
  [扩展 WCF](../../../docs/framework/wcf/extending/index.md)  
  描述如何修改和扩展 WCF 运行时组件  
@@ -68,7 +68,7 @@ ms.locfileid: "33804266"
  对 Windows Communication Foundation 的各方面进行说明的示例  
   
  [Windows Communication Foundation 词汇表](../../../docs/framework/wcf/glossary.md)  
- 显示术语的列表特定到 WCF  
+ 显示术语的列表的特定于 WCF  
   
  [常规参考](../../../docs/framework/wcf/general-reference.md)  
  本节描述用于配置 Windows Communication Foundation 客户端和服务的元素。  

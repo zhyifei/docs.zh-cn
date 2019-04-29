@@ -14,8 +14,8 @@ ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937879"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>如何：创建线性渐变
 GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，线性渐变中的颜色均匀地变化。 以便以非均匀方式将颜色更改，但是，可以自定义线性渐变。  
@@ -35,7 +35,7 @@ GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，
   
 ### <a name="to-use-horizontal-linear-gradients"></a>若要使用水平线性渐变  
   
--   将不透明红色和不透明蓝色分别作为第三个和第四个参数传递。  
+- 将不透明红色和不透明蓝色分别作为第三个和第四个参数传递。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
@@ -60,7 +60,7 @@ GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，
 
 ### <a name="to-customize-linear-gradients"></a>若要自定义线性渐变  
   
--   将不透明的黑色和不透明红色分别作为第三个和第四个参数传递。  
+- 将不透明的黑色和不透明红色分别作为第三个和第四个参数传递。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
@@ -75,7 +75,7 @@ GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，
   
 ### <a name="to-create-diagonal-linear-gradients"></a>若要创建对角线线性渐变  
   
--   传入的不透明的蓝色和不透明绿色作为第三个和第四个参数，分别。  
+- 传入的不透明的蓝色和不透明绿色作为第三个和第四个参数，分别。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  

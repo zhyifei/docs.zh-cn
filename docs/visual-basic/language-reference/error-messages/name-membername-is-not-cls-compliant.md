@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787460"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>名称\<成员名称 > 不符合 cls 的
 程序集标记为`<CLSCompliant(True)>`公开的成员名称以下划线开头的名称，但 (`_`)。  
@@ -29,9 +29,9 @@ ms.locfileid: "58824619"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果必须对源代码控制，更改成员名称，以便它不以下划线开头。  
+- 如果必须对源代码控制，更改成员名称，以便它不以下划线开头。  
   
--   如果你需要成员名称保持不变，删除<xref:System.CLSCompliantAttribute>从其定义或将其标记为`<CLSCompliant(False)>`。 仍然可以将标记为程序集`<CLSCompliant(True)>`。  
+- 如果你需要成员名称保持不变，删除<xref:System.CLSCompliantAttribute>从其定义或将其标记为`<CLSCompliant(False)>`。 仍然可以将标记为程序集`<CLSCompliant(True)>`。  
   
 ## <a name="see-also"></a>请参阅
 

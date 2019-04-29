@@ -13,18 +13,18 @@ helpviewer_keywords:
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
 ms.openlocfilehash: dc9daa945f2a546548f2cc6ea033378bd9ceff93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941215"
 ---
 # <a name="how-to-hide-toolstripmenuitems"></a>如何：隐藏 ToolStripMenuItem
 隐藏菜单项是一种方法来控制你的应用程序的用户界面并限制用户命令。 通常情况下，想要在其上的菜单项都不可用时隐藏整个菜单。 这提供了用户很少会分心。 此外，您可能希望能够同时隐藏和禁用的菜单或菜单项，如仅隐藏不会阻止用户使用的快捷键访问菜单命令。  
   
 ### <a name="to-hide-any-menu-item-programmatically"></a>若要以编程方式隐藏任何菜单项  
   
--   在其中设置菜单项的属性方法中，添加代码以设置<xref:System.Windows.Forms.ToolStripItem.Visible%2A>属性设置为`false`。  
+- 在其中设置菜单项的属性方法中，添加代码以设置<xref:System.Windows.Forms.ToolStripItem.Visible%2A>属性设置为`false`。  
   
     ```vb  
     MenuItem3.Visible = False  

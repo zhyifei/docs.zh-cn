@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
 ms.openlocfilehash: fb6411efc190dce335422369a8d2bbff564b9523
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938211"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>如何：声明对象变量并在 Visual Basic 中为其分配对象
 声明的变量[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)通过指定`As Object`中[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 通过将对象放置在等号后，此类变量分配对象 (`=`) 在赋值语句或初始化子句中。  
@@ -32,11 +32,11 @@ Dim thisObject As Object= "This is an Object"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 <xref:System> 命名空间的引用。  
+- 对 <xref:System> 命名空间的引用。  
   
--   类、 结构或在其中放入的模块`Dim`语句。  
+- 类、 结构或在其中放入的模块`Dim`语句。  
   
--   所要放在赋值语句中的过程。  
+- 所要放在赋值语句中的过程。  
   
 ## <a name="see-also"></a>请参阅
 

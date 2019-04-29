@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792895"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 枚举
 指定接口，.NET Framework 的版本，或在其中引入了接口的 .NET Framework 的版本。  
@@ -227,15 +227,15 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="interface-names"></a>接口名称  
  出现在调试 API 中接口名称的末尾的数字（例如 `ICorDebugThread3` 中的“3”）指定接口版本，而不是 .NET Framework 的版本。 调试 API 中的所有接口名称包括除了 .NET Framework 版本 1 中引入的接口之外的版本号。 接口版本号和 .NET Framework 版本号之间的任何对应关系都是巧合。  
   
--   在 .NET Framework 版本 1.0 中引入的接口不包括数字，因为它们都是隐式版本 1。  
+- 在 .NET Framework 版本 1.0 中引入的接口不包括数字，因为它们都是隐式版本 1。  
   
--   .NET Framework 版本 1.1 使用版本 1.0 接口，并且并未引入任何新调试接口。  
+- .NET Framework 版本 1.1 使用版本 1.0 接口，并且并未引入任何新调试接口。  
   
--   在 .NET Framework 版本 2.0 中引入的 14 调试接口是版本 1 对应部分的逻辑扩展，并在其名称中包含数字“2”。  
+- 在 .NET Framework 版本 2.0 中引入的 14 调试接口是版本 1 对应部分的逻辑扩展，并在其名称中包含数字“2”。  
   
--   .NET Framework 版本 3.0 和 3.5 使用现有 .NET Framework 2.0 接口，并且并未引入任何新接口。  
+- .NET Framework 版本 3.0 和 3.5 使用现有 .NET Framework 2.0 接口，并且并未引入任何新接口。  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引入了多个接口版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 显示为 `ICorDebugThread` 接口的第三个和第四个版本。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]还引入了第一版`ICorDebugStackWalk`界面和第二个版本`ICorDebugNativeFrame`接口 (`ICorDebugNativeFrame2`)。  
+- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引入了多个接口版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 显示为 `ICorDebugThread` 接口的第三个和第四个版本。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]还引入了第一版`ICorDebugStackWalk`界面和第二个版本`ICorDebugNativeFrame`接口 (`ICorDebugNativeFrame2`)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

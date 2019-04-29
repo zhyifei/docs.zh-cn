@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796099"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 场
 使用 Windows Identity Foundation (WIF) 保护 Web 场中部署的信赖方 (RP) 应用程序的资源时，必须采取特定的步骤确保 WIF 能处理场中不同计算机上运行的信赖方应用程序实例的令牌。 处理过程包括验证会话令牌签名、加密和解密会话令牌、缓存会话令牌以及检测重播的安全令牌。  
@@ -17,21 +17,21 @@ ms.locfileid: "59135351"
   
  使用默认设置时，WIF 会执行以下操作：  
   
--   它使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 类的实例读取和写入会话令牌（<xref:System.IdentityModel.Tokens.SessionSecurityToken> 类的实例），此会话令牌传送声明、其他用于身份验证的安全令牌的相关信息和关于会话自身的信息。 会话令牌打包并存储在会话 cookie 中。 默认情况下，<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 使用 <xref:System.IdentityModel.ProtectedDataCookieTransform> 类，使用数据保护 API (DPAPI) 保护会话令牌。 DPAPI 使用用户或计算机凭据提供保护并将关键数据存储在用户配置文件中。  
+- 它使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 类的实例读取和写入会话令牌（<xref:System.IdentityModel.Tokens.SessionSecurityToken> 类的实例），此会话令牌传送声明、其他用于身份验证的安全令牌的相关信息和关于会话自身的信息。 会话令牌打包并存储在会话 cookie 中。 默认情况下，<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 使用 <xref:System.IdentityModel.ProtectedDataCookieTransform> 类，使用数据保护 API (DPAPI) 保护会话令牌。 DPAPI 使用用户或计算机凭据提供保护并将关键数据存储在用户配置文件中。  
   
--   它使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 类的默认内存中实现来存储和处理会话令牌。  
+- 它使用 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 类的默认内存中实现来存储和处理会话令牌。  
   
  这些默认设置在信赖方应用程序部署于单台计算机上的方案中工作，但部署在 Web 场中时 ，每个 HTTP 请求都可能发送到不同计算机上运行的信赖方应用程序的不同实例并由这些实例处理。 在此方案中，以上所示的默认 WIF 设置将不会工作，因为令牌保护和令牌都依赖于特定的计算机。  
   
  若要在 Web 场中部署信赖方应用程序，必须确保会话令牌（以及重播令牌）的处理不依赖于特定计算机上运行的应用程序。 一种方法是实现信赖方应用程序，以便它使用 ASP.NET `<machineKey>` 配置元素提供的功能并提供分布式缓存处理会话令牌和重播令牌。 通过 `<machineKey>` 元素可以在配置文件中指定需要验证、加密和解密令牌的密钥，可在 Web 场中的不同计算机上指定相同的密钥。 WIF 提供专用的会话令牌处理程序 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>该处理程序使用 `<machineKey>` 元素中指定的密钥保护令牌。 若要实现此策略，请遵循这些指导：  
   
--   使用配置中的 ASP.NET `<machineKey>` 元素显式指定可以在场中不同计算机上使用的签名和加密密钥。 以下 XML 显示配置文件中 `<system.web>` 元素下的 `<machineKey>` 元素的规范。  
+- 使用配置中的 ASP.NET `<machineKey>` 元素显式指定可以在场中不同计算机上使用的签名和加密密钥。 以下 XML 显示配置文件中 `<system.web>` 元素下的 `<machineKey>` 元素的规范。  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   配置应用程序使用 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>，方法是将它添加到令牌处理程序集合。 如果此类处理程序存在，必须先从令牌处理程序集合中删除 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>（或者任何派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 类的处理程序）。 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 使用 <xref:System.IdentityModel.Services.MachineKeyTransform> 类，通过使用 `<machineKey>` 元素中指定的加密材料保护会话 cookie 数据。 以下 XML 显示如何添加 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 到令牌处理程序集合。  
+- 配置应用程序使用 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>，方法是将它添加到令牌处理程序集合。 如果此类处理程序存在，必须先从令牌处理程序集合中删除 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>（或者任何派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 类的处理程序）。 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 使用 <xref:System.IdentityModel.Services.MachineKeyTransform> 类，通过使用 `<machineKey>` 元素中指定的加密材料保护会话 cookie 数据。 以下 XML 显示如何添加 <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> 到令牌处理程序集合。  
   
     ```xml  
     <securityTokenHandlers>  
@@ -40,7 +40,7 @@ ms.locfileid: "59135351"
     </securityTokenHandlers>  
     ```  
   
--   派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并实现分布式缓存，即可从运行 RP 的场中所有计算机访问的缓存。 通过指定配置文件中的 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置 RP 使用分布式缓存。 可以替代派生类中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法以按需实现 `<sessionSecurityTokenCache>` 元素的子元素。  
+- 派生自 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 并实现分布式缓存，即可从运行 RP 的场中所有计算机访问的缓存。 通过指定配置文件中的 [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) 元素配置 RP 使用分布式缓存。 可以替代派生类中的 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> 方法以按需实现 `<sessionSecurityTokenCache>` 元素的子元素。  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ ms.locfileid: "59135351"
   
      实现分布式缓存的方法之一是为自定义缓存提供 WCF 前端。 有关实现 WCF 缓存服务的详细信息，请参阅 [WCF 缓存服务](#BKMK_TheWCFCachingService)。 有关实现信赖方应用程序可用于调用缓存服务的 WCF 客户端的详细信息，请参阅 [WCF 缓存客户端](#BKMK_TheWCFClient)。  
   
--   如果应用程序检测到重播令牌，则必须为令牌重播缓存采用相似的分布式缓存策略，方法是从 <xref:System.IdentityModel.Tokens.TokenReplayCache> 派生并在 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 配置元素中指向令牌重播缓存服务。  
+- 如果应用程序检测到重播令牌，则必须为令牌重播缓存采用相似的分布式缓存策略，方法是从 <xref:System.IdentityModel.Tokens.TokenReplayCache> 派生并在 [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 配置元素中指向令牌重播缓存服务。  
   
 > [!IMPORTANT]
 >  所有示例 XML 和本主题中的代码摘自[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)示例。  

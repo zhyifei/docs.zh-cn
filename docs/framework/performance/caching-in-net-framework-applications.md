@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788136"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 应用程序中的缓存
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
@@ -24,17 +24,17 @@ ms.locfileid: "59085774"
 ## <a name="caching-data"></a>缓存数据  
  可使用 <xref:System.Runtime.Caching> 命名空间中的类来缓存信息。 此命名空间中的缓存类提供下列功能：  
   
--   为创建自定义缓存实现提供基础的抽象类型。  
+- 为创建自定义缓存实现提供基础的抽象类型。  
   
--   具体的内存中对象缓存实现。  
+- 具体的内存中对象缓存实现。  
   
  抽象基缓存类 (<xref:System.Runtime.Caching.ObjectCache>) 定义以下缓存任务：  
   
--   创建和管理缓存项。  
+- 创建和管理缓存项。  
   
--   指定过期和逐出信息。  
+- 指定过期和逐出信息。  
   
--   触发响应缓存项更改而引发的事件。  
+- 触发响应缓存项更改而引发的事件。  
   
  <xref:System.Runtime.Caching.MemoryCache> 类是 <xref:System.Runtime.Caching.ObjectCache> 类的内存中对象缓存实现。 <xref:System.Runtime.Caching.MemoryCache> 类可用于大多数缓存任务。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "59085774"
   
  要扩展缓存可执行以下操作：  
   
--   创建一个派生自 <xref:System.Runtime.Caching.ObjectCache> 类的自定义类，然后在此派生类中提供自定义缓存实现。  
+- 创建一个派生自 <xref:System.Runtime.Caching.ObjectCache> 类的自定义类，然后在此派生类中提供自定义缓存实现。  
   
--   创建一个派生自 <xref:System.Runtime.Caching.MemoryCache> 类的类，并自定义或扩展此派生类。 有关如何执行此操作的示例，请参阅[在 ASP.NET 应用程序中使用多个缓存对象来缓存应用程序数据](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)。  
+- 创建一个派生自 <xref:System.Runtime.Caching.MemoryCache> 类的类，并自定义或扩展此派生类。 有关如何执行此操作的示例，请参阅[在 ASP.NET 应用程序中使用多个缓存对象来缓存应用程序数据](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)。  
   
--   创建 <xref:System.Web.Caching.OutputCacheProvider> 类的派生类，并配置应用程序以使用自定义输出缓存提供程序。  
+- 创建 <xref:System.Web.Caching.OutputCacheProvider> 类的派生类，并配置应用程序以使用自定义输出缓存提供程序。  
   
  有关详细信息，请参阅 Scott Guthrie 博客上的 [ASP.NET 4 的可扩展输出缓存（VS 2010 和 .NET 4.0 系列）](https://go.microsoft.com/fwlink/?LinkId=185772)文章。  
   

@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938126"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+ 中的图形路径
 路径是通过将线条、 矩形和简单的曲线相结合形成的。 还记得[向量图形概述](vector-graphics-overview.md)以下基本构建基块已证明是最适用于绘制图片：  
   
--   直线  
+- 直线  
   
--   矩形  
+- 矩形  
   
--   省略号  
+- 省略号  
   
--   Arcs  
+- Arcs  
   
--   多边形  
+- 多边形  
   
--   基数样条  
+- 基数样条  
   
--   贝塞尔自由绘制曲线  
+- 贝塞尔自由绘制曲线  
   
  在 GDI + 中，<xref:System.Drawing.Drawing2D.GraphicsPath>对象允许你收集到单个单元的一系列这些构建基块。 然后可调用一次绘制线条、 矩形、 多边形和曲线的整个序列<xref:System.Drawing.Graphics.DrawPath%2A>方法的<xref:System.Drawing.Graphics>类。 下图显示了通过结合一行、 一段弧线、 贝塞尔样条和的基数样条创建的路径。  
   

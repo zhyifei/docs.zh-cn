@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
 ms.openlocfilehash: b687f83562b3a6f9dd5993f2af1c55ffe6dc8042
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932504"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox 控件（Windows 窗体）
 若要获取用户输入或显示文本使用 Windows 窗体的文本框。 `TextBox`控件通常用于可编辑文本，尽管也可将其只读的。 文本框可以显示多个行，该控件的大小的文本换行并添加基本格式设置。 `TextBox`控件允许文本在控件中输入或显示一种格式。  

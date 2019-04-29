@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
 ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937756"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>如何：将 BMP 图像转换为 PNG 图像
 通常，需要转换图像文件格式。 可以通过调用 <xref:System.Drawing.Image> 类的 <xref:System.Drawing.Image.Save%2A> 方法，并将 <xref:System.Drawing.Imaging.ImageFormat> 指定为所需的图像文件格式来轻松完成转换。  
@@ -27,9 +27,9 @@ ms.locfileid: "59217011"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   Windows 窗体应用程序。  
+- Windows 窗体应用程序。  
   
--   对 `System.Drawing.Imaging` 命名空间的引用。  
+- 对 `System.Drawing.Imaging` 命名空间的引用。  
   
 ## <a name="see-also"></a>请参阅
 

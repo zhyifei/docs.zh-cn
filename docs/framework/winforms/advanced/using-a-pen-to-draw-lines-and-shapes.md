@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
 ms.openlocfilehash: 3846c59712cec6003c35f336714041544dec94b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777242"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>使用钢笔绘制线条和形状
 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`对象绘制的直线线段、 曲线和形状的轮廓。 在本部分中，*行*指任何，除非指定为意味着只有一条线段。 设置笔来控制颜色、 宽度、 对齐方式和使用该笔绘制的直线的样式属性。  

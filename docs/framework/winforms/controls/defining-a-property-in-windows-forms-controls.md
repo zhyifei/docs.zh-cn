@@ -9,20 +9,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
 ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780648"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>在 Windows 窗体控件中定义属性
 有关属性的概述，请参阅[属性概述](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 定义属性时需考虑以下重要注意事项：  
   
--   必须将特性应用于定义的属性。 特性指定设计器应如何显示属性。 有关详细信息，请参阅[组件的设计时特性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
+- 必须将特性应用于定义的属性。 特性指定设计器应如何显示属性。 有关详细信息，请参阅[组件的设计时特性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
   
--   如果更改该属性会影响该控件的可视显示，则调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (继承自控件<xref:System.Windows.Forms.Control>) 从`set`访问器。 <xref:System.Windows.Forms.Control.Invalidate%2A> 反过来调用<xref:System.Windows.Forms.Control.OnPaint%2A>方法，重绘控件。 多次调用<xref:System.Windows.Forms.Control.Invalidate%2A>导致调用一次<xref:System.Windows.Forms.Control.OnPaint%2A>以提高效率。  
+- 如果更改该属性会影响该控件的可视显示，则调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (继承自控件<xref:System.Windows.Forms.Control>) 从`set`访问器。 <xref:System.Windows.Forms.Control.Invalidate%2A> 反过来调用<xref:System.Windows.Forms.Control.OnPaint%2A>方法，重绘控件。 多次调用<xref:System.Windows.Forms.Control.Invalidate%2A>导致调用一次<xref:System.Windows.Forms.Control.OnPaint%2A>以提高效率。  
   
--   .NET Framework 类库为常见数据类型（如整数、小数、布尔值和其他数据类型）提供了类型转换器。 类型转换器的用途通常是提供字符串到数值的转换（从字符串数据转换为其他数据类型）。 常见数据类型与默认类型转换器相关联，默认类型转换器可将数值转换为字符串，并将字符串转换为相应数据类型。 如果定义了自定义（即非标准）数据类型的属性，则应用的特性必须将类型转换器指定为与该属性相关联。 还可使用特性将自定义 UI 类型编辑器与某个属性相关联。 UI 类型编辑器提供一个用于编辑属性或数据类型的用户界面。 UI 类型编辑器的一个例子是颜色选取器。 本主题末尾给出了特性的示例。  
+- .NET Framework 类库为常见数据类型（如整数、小数、布尔值和其他数据类型）提供了类型转换器。 类型转换器的用途通常是提供字符串到数值的转换（从字符串数据转换为其他数据类型）。 常见数据类型与默认类型转换器相关联，默认类型转换器可将数值转换为字符串，并将字符串转换为相应数据类型。 如果定义了自定义（即非标准）数据类型的属性，则应用的特性必须将类型转换器指定为与该属性相关联。 还可使用特性将自定义 UI 类型编辑器与某个属性相关联。 UI 类型编辑器提供一个用于编辑属性或数据类型的用户界面。 UI 类型编辑器的一个例子是颜色选取器。 本主题末尾给出了特性的示例。  
   
     > [!NOTE]
     >  如果没有类型转换器或 UI 类型编辑器可供自定义属性使用，则可根据[扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))中所述来实现一个。  

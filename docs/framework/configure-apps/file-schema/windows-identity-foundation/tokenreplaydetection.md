@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
 ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790489"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
 启用令牌重放检测并指定令牌的到期时间。  
@@ -42,7 +42,7 @@ ms.locfileid: "55283070"
 |expirationPeriod|一个<xref:System.TimeSpan>指定最大的前一个项目被认为过期并从缓存中删除的时间量。  有关如何指定详细信息<xref:System.TimeSpan>值，请参阅[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   

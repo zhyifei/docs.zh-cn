@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797002"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 数据类型 (Visual Basic)
 保留范围在 0 到 255 的无符号的 8 位 （1 个字节） 整数。
@@ -48,15 +48,15 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>编程提示
 
--   **负号。** 因为`Byte`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`Byte`，Visual Basic 将转换为表达式`Short`第一个。
+- **负号。** 因为`Byte`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`Byte`，Visual Basic 将转换为表达式`Short`第一个。
   
--   **格式转换。** 当 Visual Basic 中读取或写入文件，或调用 Dll、 方法和属性时，它可以自动将数据格式之间转换。 二进制数据存储在`Byte`这种格式转换过程中会保留变量和数组。 不应使用`String`变量对于二进制数据，因为其内容在 ANSI 和 Unicode 格式之间转换过程可能会损坏。
+- **格式转换。** 当 Visual Basic 中读取或写入文件，或调用 Dll、 方法和属性时，它可以自动将数据格式之间转换。 二进制数据存储在`Byte`这种格式转换过程中会保留变量和数组。 不应使用`String`变量对于二进制数据，因为其内容在 ANSI 和 Unicode 格式之间转换过程可能会损坏。
 
--   **扩大转换。** `Byte`数据类型加宽到`Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`。 这意味着可以将转换`Byte`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。
+- **扩大转换。** `Byte`数据类型加宽到`Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`。 这意味着可以将转换`Byte`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。
   
--   **类型字符。** `Byte` 不包含文本类型字符或标识符类型字符。
+- **类型字符。** `Byte` 不包含文本类型字符或标识符类型字符。
 
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Byte?displayProperty=nameWithType> 结构。
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Byte?displayProperty=nameWithType> 结构。
 
 ## <a name="example"></a>示例
 

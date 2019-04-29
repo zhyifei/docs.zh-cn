@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932790"
 ---
 # <a name="using-message-contracts"></a>使用消息约定
 通常在生成 Windows Communication Foundation (WCF) 应用程序时，开发人员密切关注数据结构和序列化问题而无需自己考虑在其中执行数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 标头属性  
  SOAP 标准定义了下列可存在于标头上的属性：  
   
--   `Actor/Role`（在 SOAP 1.1 中为 `Actor`，在 SOAP 1.2 中为 `Role`）  
+- `Actor/Role`（在 SOAP 1.1 中为 `Actor`，在 SOAP 1.2 中为 `Role`）  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  `Actor` 或 `Role` 属性指定要使用给定标头的节点的统一资源标识符 (URI)。 `MustUnderstand` 属性指定处理标头的节点是否必须理解该标头。 `Relay` 特性指定标头是否要中继到下游节点。 WCF 不会执行对传入的消息，这些属性的任何处理除`MustUnderstand`特性，如本主题后面的"消息协定版本管理"部分中指定。 但它允许您根据需要读取和写入这些属性，如下所述。  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  下面的规则适用于标头的版本管理：  
   
--   WCF 不反对缺少标头，相应的成员将保留其默认值。  
+- WCF 不反对缺少标头，相应的成员将保留其默认值。  
   
--   WCF 还会忽略意外的额外标头。 此规则的一种例外情况是在传入的 SOAP 消息中，额外标头的 `MustUnderstand` 属性设置为 `true`。在这种情况下，由于存在一个无法处理但必须理解的标头，因此会引发异常。  
+- WCF 还会忽略意外的额外标头。 此规则的一种例外情况是在传入的 SOAP 消息中，额外标头的 `MustUnderstand` 属性设置为 `true`。在这种情况下，由于存在一个无法处理但必须理解的标头，因此会引发异常。  
   
  消息正文具有类似的版本管理规则，即忽略缺少和附加的消息正文部分。  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  在使用继承自其他消息协定类型的消息协定类型创建或访问消息时，下面的规则适用：  
   
--   继承层次结构中的所有消息头集合在一起构成消息头的完整集合。  
+- 继承层次结构中的所有消息头集合在一起构成消息头的完整集合。  
   
--   继承层次结构中的所有消息正文部分集合在一起构成消息正文的完整集合。 正文部分按照通常排序规则排列（按 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 属性，然后按字母顺序排序），与它们在继承层次结构中的位置无关。 在使用消息协定继承时，强烈建议消息正文部分不要出现在继承树的多个级别上。 如果基类和派生类用相同的名称定义标头或正文部分，则使用最基础的类中的成员来存储该标头或正文部分的值。  
+- 继承层次结构中的所有消息正文部分集合在一起构成消息正文的完整集合。 正文部分按照通常排序规则排列（按 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 属性，然后按字母顺序排序），与它们在继承层次结构中的位置无关。 在使用消息协定继承时，强烈建议消息正文部分不要出现在继承树的多个级别上。 如果基类和派生类用相同的名称定义标头或正文部分，则使用最基础的类中的成员来存储该标头或正文部分的值。  
   
  考虑下面代码示例中的类。  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>WSDL 注意事项  
  在从使用消息协定的服务生成 Web 服务描述语言 (WSDL) 协定时，必须记住生成的 WSDL 中并不会反映所有的消息协定功能。 请考虑以下几点：  
   
--   WSDL 无法表示标头数组的概念。 使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 创建具有标头数组的消息时，生成的 WSDL 只反映一个标头而不是该数组。  
+- WSDL 无法表示标头数组的概念。 使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 创建具有标头数组的消息时，生成的 WSDL 只反映一个标头而不是该数组。  
   
--   生成的 WSDL 文档可能不反映某些保护级别信息。  
+- 生成的 WSDL 文档可能不反映某些保护级别信息。  
   
--   在 WSDL 中生成的消息类型的名称与消息协定类型的类名称相同。  
+- 在 WSDL 中生成的消息类型的名称与消息协定类型的类名称相同。  
   
--   在多个操作中使用同一个消息协定时，会在 WSDL 文档中生成多个消息类型。 对于后续使用，会在名称中添加数字“2”、“3”等以使名称唯一。 在导回 WSDL 时，会创建多个消息协定类型，除了名称不同外，这些消息协定类型完全相同。  
+- 在多个操作中使用同一个消息协定时，会在 WSDL 文档中生成多个消息类型。 对于后续使用，会在名称中添加数字“2”、“3”等以使名称唯一。 在导回 WSDL 时，会创建多个消息协定类型，除了名称不同外，这些消息协定类型完全相同。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 编码注意事项  
  WCF 允许你使用的旧式 SOAP 编码样式的 XML，但是，不是建议使用。 使用这种样式时（在应用于服务协定的 `Use` 上将 `Encoded` 属性设置为 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>），下面的附加注意事项适用：  
   
--   不支持消息头；这意味着属性 <xref:System.ServiceModel.MessageHeaderAttribute> 和数组属性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 与 SOAP 编码不兼容。  
+- 不支持消息头；这意味着属性 <xref:System.ServiceModel.MessageHeaderAttribute> 和数组属性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 与 SOAP 编码不兼容。  
   
--   如果未包装消息协定，即如果属性 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 设置为 `false`，则消息协定只能具有一个正文部分。  
+- 如果未包装消息协定，即如果属性 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 设置为 `false`，则消息协定只能具有一个正文部分。  
   
--   请求消息协定的包装元素的名称必须与操作名称匹配。 为此请使用消息协定的 `WrapperName` 属性。  
+- 请求消息协定的包装元素的名称必须与操作名称匹配。 为此请使用消息协定的 `WrapperName` 属性。  
   
--   响应消息协定的包装元素的名称必须与具有“Response”后缀的操作名称相同。 为此请使用消息协定的 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 属性。  
+- 响应消息协定的包装元素的名称必须与具有“Response”后缀的操作名称相同。 为此请使用消息协定的 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 属性。  
   
--   SOAP 编码保留对象引用。 例如，考虑下面的代码。  
+- SOAP 编码保留对象引用。 例如，考虑下面的代码。  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

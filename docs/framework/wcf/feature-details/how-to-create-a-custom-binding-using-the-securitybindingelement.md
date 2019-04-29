@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787850"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：使用 SecurityBindingElement 创建自定义绑定
 Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以配置，但配置 WCF 支持的所有安全选项时未提供最大的灵活性。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 有关创建自定义绑定的详细信息，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以�
   
  在提供传输级安全时，将使用其他类：  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>必需的绑定元素  
  有大量的可能绑定元素可以组合为绑定。 并非所有这些组合都是有效的。 本节介绍安全绑定中必须存在的元素。  
   
  有效的安全绑定取决于多种因素，其中包括：  
   
--   安全模式。  
+- 安全模式。  
   
--   传输协议。  
+- 传输协议。  
   
--   协定中指定的消息交换模式 (MEP)。  
+- 协定中指定的消息交换模式 (MEP)。  
   
  下表显示上述因素各种组合的有效绑定元素组合配置。 请注意，这些是最低需求。 你可以向绑定添加更多绑定元素，如消息编码绑定元素、事务绑定元素和其他绑定元素。  
   

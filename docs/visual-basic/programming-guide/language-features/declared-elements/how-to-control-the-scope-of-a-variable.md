@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794727"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>如何：控制变量 (Visual Basic 中) 的作用域
 通常情况下，变量位于*作用域*，或作为参考，整个声明它的区域可见。 在某些情况下，该变量的*访问级别*可能会影响其作用域。  
@@ -28,13 +28,13 @@ ms.locfileid: "59324313"
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>若要使变量仅在一个块中可见  
   
--   位置[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)变量之间的起始和终止声明语句的该块中，例如之间`For`并`Next`语句的`For`循环。  
+- 位置[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)变量之间的起始和终止声明语句的该块中，例如之间`For`并`Next`语句的`For`循环。  
   
      您可以引用该变量只能在块中。  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>若要使变量仅在一个过程中可见  
   
--   位置`Dim`在过程内但在任何块外部变量的语句 (如`With`...`End With`块)。  
+- 位置`Dim`在过程内但在任何块外部变量的语句 (如`With`...`End With`块)。  
   
      您可以参考中的过程，包括在过程中包含的所有块内仅从变量。  
   

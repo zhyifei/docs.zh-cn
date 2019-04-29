@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
 ms.openlocfilehash: 4bcfe96361de9e196cb684ac4ba734f82442e25c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940889"
 ---
 # <a name="param-visual-basic"></a>\<param > (Visual Basic)
 定义的参数名称和说明。  
@@ -33,9 +33,9 @@ ms.locfileid: "58825555"
   
  文本`<param>`标记将出现在以下位置：  
   
--   参数的 IntelliSense 信息。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。  
+- 参数的 IntelliSense 信息。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。  
   
--   对象浏览器。 有关详细信息，请参阅[查看代码的结构](/visualstudio/ide/viewing-the-structure-of-code)。  
+- 对象浏览器。 有关详细信息，请参阅[查看代码的结构](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  使用 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 进行编译可以将文档注释处理到文件中。  
   

@@ -3,17 +3,17 @@ title: 针对相关的疑难解答
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932816"
 ---
 # <a name="troubleshooting-correlation"></a>针对相关的疑难解答
 相关用于在工作流服务消息之间和工作流服务消息与正确的工作流实例之间建立关联，如果未正确配置相关，则将接收不到消息，且应用程序无法正常运行。 本主题概述了对相关问题进行疑难解答的几种方法，还列出了使用相关时可能出现的一些常见问题。
 
 ## <a name="handle-the-unknownmessagereceived-event"></a>处理 UnknownMessageReceived 事件
- 服务接收到未知消息（包括无法与现有实例关联的消息）时，将发生 <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> 事件。 对于自承载服务，可在宿主应用程序中处理此事件。
+ 服务接收到未知消息（包括无法与现有实例关联的消息）时，将发生 <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> 事件。 对于自承载服务，可在主机应用程序中处理此事件。
 
 ```csharp
 host.UnknownMessageReceived += delegate(object sender, UnknownMessageReceivedEventArgs e)
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- 之间不允许存在持久性<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>对。 会创建一个非永久性区域，该区域会持续到两个活动都已完成。 如果某个活动（如延迟活动）处于此非永久性区域中，并使工作流成为空闲状态，则工作流不会持久，即使主机配置为在工作流成为空闲状态时保持工作流也是如此。 如果某个活动（如 Persist 活动）尝试在非永久性区域中显式保持，则会引发严重异常，工作流会中止，并将 <xref:System.ServiceModel.FaultException> 返回给调用方。 严重异常消息为“System.InvalidOperationException: 非永久性块内不能包含 Persist 活动”。 此异常不会返回给调用方，但是可以观察到（如果启用了跟踪）。 返回给调用方的 <xref:System.ServiceModel.FaultException> 消息为“无法执行操作，因为 WorkflowInstance‘5836145b-7da2-49d0-a052-a49162adeab6’已完成”。
+ 之间不允许存在持久性<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>对。 会创建一个非永久性区域，该区域会持续到两个活动都已完成。 如果某个活动（如延迟活动）处于此非永久性区域中，并使工作流成为空闲状态，则工作流不会持久，即使主机配置为在工作流成为空闲状态时保持工作流也是如此。 如果某个活动（如 Persist 活动）尝试在非永久性区域中显式保持，则会引发严重异常，工作流会中止，并将 <xref:System.ServiceModel.FaultException> 返回给调用方。 严重异常消息为"System.InvalidOperationException:保存活动不能包含非永久性块内。"。 此异常不会返回给调用方，但是可以观察到（如果启用了跟踪）。 返回给调用方的 <xref:System.ServiceModel.FaultException> 消息为“无法执行操作，因为 WorkflowInstance‘5836145b-7da2-49d0-a052-a49162adeab6’已完成”。
 
  有关请求-答复相关详细信息，请参阅[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- 如果 XPath 查询配置不正确，从而未检索到任何相关数据，则会返回错误，同时显示下面的消息：“相关查询生成了空结果集。 请确保正确配置了终结点的相关查询。” 解决此问题的一种快速方式是将 XPath 查询替换为文本值，如上一节中所述。 如果使用中的 XPath 查询生成器，则可能出现此问题**添加相关初始值设定项**或**CorrelatesOn 定义**对话框和工作流服务使用消息协定。 下面的示例定义了一个消息协定类。
+ 如果 XPath 查询配置不正确，以便不检索任何相关数据，会返回错误，并显示以下消息："相关查询生成一个空结果集。 请确保正确配置了终结点的相关查询。” 解决此问题的一种快速方式是将 XPath 查询替换为文本值，如上一节中所述。 如果使用中的 XPath 查询生成器，则可能出现此问题**添加相关初始值设定项**或**CorrelatesOn 定义**对话框和工作流服务使用消息协定。 下面的示例定义了一个消息协定类。
 
 ```csharp
 [MessageContract]

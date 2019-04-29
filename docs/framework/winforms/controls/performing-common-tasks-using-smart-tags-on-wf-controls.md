@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932595"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>演练：使用 Windows 窗体控件上的智能标记执行常规任务
 在 Windows 窗体应用程序构造窗体和控件，如有需要反复执行的许多任务。 以下是一些你将遇到的执行常用任务：  
   
--   添加或删除选项卡上<xref:System.Windows.Forms.TabControl>。  
+- 添加或删除选项卡上<xref:System.Windows.Forms.TabControl>。  
   
--   将控件停靠到其父级。  
+- 将控件停靠到其父级。  
   
--   更改的方向<xref:System.Windows.Forms.SplitContainer>控件。  
+- 更改的方向<xref:System.Windows.Forms.SplitContainer>控件。  
   
  若要加快开发速度，许多控件提供智能标记，可用于在设计时执行常见任务，比如在一个独立的上下文相关菜单。 这些任务称作*智能标记谓词*。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "59318242"
   
  本演练涉及以下任务：  
   
--   创建 Windows 窗体项目  
+- 创建 Windows 窗体项目  
   
--   使用智能标记  
+- 使用智能标记  
   
--   启用和禁用智能标记  
+- 启用和禁用智能标记  
   
  完成上述操作后，你将会了解这些重要布局功能所发挥的作用。  
   

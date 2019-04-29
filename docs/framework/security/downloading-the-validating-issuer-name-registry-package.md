@@ -3,17 +3,17 @@ title: 下载验证颁发者名称注册表包
 ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
 ms.openlocfilehash: 833a0722fdd27df4e488ed7fac99444c6d9b8905
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940577"
 ---
 # <a name="download-the-validating-issuer-name-registry-package"></a>下载验证颁发者名称注册表包
 
 本主题讨论如何在项目中下载和使用验证颁发者名称注册表 (VINR)。
 
-VINR 可用作 NuGet 包，可将必要程序集和引用添加到项目。 如果尚未安装 NuGet，请转到 [nuget.org](https://nuget.org) 进行安装。 访问 NuGet 上的扩展页面，查看扩展的版本历史记录：[NuGet 上的 Microsoft 验证颁发者名称注册表](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
+VINR 可用作 NuGet 包，可将必要程序集和引用添加到项目。 如果尚未安装 NuGet，请转到 [nuget.org](https://nuget.org) 进行安装。 可以通过在 NuGet 上访问其页面看到扩展的版本控制历史记录：[Microsoft 验证 NuGet 上的颁发者名称注册表](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
 
 ## <a name="use-the-package-manager-gui"></a>使用程序包管理器 GUI
 

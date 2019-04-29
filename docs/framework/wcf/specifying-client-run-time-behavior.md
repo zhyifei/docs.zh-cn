@@ -8,11 +8,11 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935455"
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定客户端运行时行为
 Windows Communication Foundation (WCF) 客户端，如 Windows Communication Foundation (WCF) 服务，可以配置为修改以满足客户端应用程序的运行时行为。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 有关详细信息，请参阅[指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) 客户端，如 Windows Communication Fou
   
  由于涉及到一些安全问题，因此强烈建议您：  
   
--   使用应用程序配置文件将 <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性的值设置为 `true`。  
+- 使用应用程序配置文件将 <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性的值设置为 `true`。  
   
--   仅在受控调试方案中才能这样做。  
+- 仅在受控调试方案中才能这样做。  
   
  下面的代码示例演示客户端指示 WCF 在返回托管的异常信息从客户端回调对象在 SOAP 消息中的配置文件。  
   

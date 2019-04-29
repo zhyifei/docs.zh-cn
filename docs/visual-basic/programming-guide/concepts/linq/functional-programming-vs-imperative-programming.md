@@ -3,11 +3,11 @@ title: 函数编程与命令式编程 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931659"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>函数编程与命令式编程 (Visual Basic)
 本主题对函数编程和更传统的命令性（过程性）编程进行比较。  
@@ -35,11 +35,11 @@ ms.locfileid: "58827324"
 ## <a name="advantages-of-pure-functions"></a>纯函数的优点  
  以纯函数形式实现函数转换的主要原因是纯函数是可以组合的：即独立并且无状态。 这些特性可带来很多好处，包括以下各项：  
   
--   可读性和可维护性更高。 这是因为每个函数都设计为在给定参数的情况下完成特定任务。 函数不依赖于任何外部状态。  
+- 可读性和可维护性更高。 这是因为每个函数都设计为在给定参数的情况下完成特定任务。 函数不依赖于任何外部状态。  
   
--   更易于反复开发。 因为代码更容易重构，因此对设计的更改通常更容易实现。 例如，假设您编写了一个复杂的转换，但随后发现某些代码在转换中重复多次。 如果您通过纯方法重构，则可以随意调用纯方法而不必担心会有什么副作用。  
+- 更易于反复开发。 因为代码更容易重构，因此对设计的更改通常更容易实现。 例如，假设您编写了一个复杂的转换，但随后发现某些代码在转换中重复多次。 如果您通过纯方法重构，则可以随意调用纯方法而不必担心会有什么副作用。  
   
--   更易于测试和调试。 由于纯函数更容易单独测试，因此您可以编写使用典型值、有效边缘情况和无效边缘情况调用纯函数的测试代码。  
+- 更易于测试和调试。 由于纯函数更容易单独测试，因此您可以编写使用典型值、有效边缘情况和无效边缘情况调用纯函数的测试代码。  
   
 ## <a name="transitioning-for-oop-developers"></a>针对 OOP 开发人员的转换  
  在传统的面向对象编程 (OOP) 中，大多数开发人员都习惯于命令性/过程式编程。 若要切换到纯函数式开发，开发人员必须转变开发思路和方法。  

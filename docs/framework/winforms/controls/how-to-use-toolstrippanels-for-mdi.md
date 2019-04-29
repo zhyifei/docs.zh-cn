@@ -10,11 +10,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
 ms.openlocfilehash: 42d4ed23f477f545c4ff2be53c36d8ea86d3b4f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785757"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>如何：将 ToolStripPanel 用于 MDI
 <xref:System.Windows.Forms.ToolStripPanel> 通过使用 <xref:System.Windows.Forms.ToolStripPanel.Join%2A> 方法为多文档界面 (MDI) 应用程序提供了灵活性。  
@@ -28,7 +28,7 @@ ms.locfileid: "59219871"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System.Design、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System.Design、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   

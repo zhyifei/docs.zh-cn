@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930268"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 方法
 获取可枚举对象句柄的进程中。  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  `types`参数指定要包含在集合中的句柄类型。 `types` 可以是任何以下三个成员[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举：  
   
--   `CorHandleStrongOnly` （仅限强引用到句柄）。  
+- `CorHandleStrongOnly` （仅限强引用到句柄）。  
   
--   `CorHandleWeakOnly` （仅限弱引用到句柄）。  
+- `CorHandleWeakOnly` （仅限弱引用到句柄）。  
   
--   `CorHandleAll` （所有句柄）。  
+- `CorHandleAll` （所有句柄）。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

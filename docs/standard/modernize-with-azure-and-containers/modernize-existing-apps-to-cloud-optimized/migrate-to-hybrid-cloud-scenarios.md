@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936718"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>迁移到混合云方案
 
@@ -33,9 +33,9 @@ Azure Stack 是一种混合云平台，可从组织的数据中心交付 Azure �
 
 Azure Stack 中两个部署选项，以满足你的需求提供：
 
--   Azure Stack 集成系统
+- Azure Stack 集成系统
 
--   Azure Stack 开发工具包
+- Azure Stack 开发工具包
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack 集成系统
 
@@ -47,23 +47,23 @@ Microsoft Azure Stack 开发工具包是单节点部署的 Azure Stack，可用�
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Azure 混合云**
+- **Azure 混合云**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Active Directory 服务帐户用于 Windows 容器**
+- **Active Directory 服务帐户用于 Windows 容器**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **创建具有 Active Directory 支持的容器**
+- **创建具有 Active Directory 支持的容器**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Azure 混合权益许可**
+- **Azure 混合权益许可**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

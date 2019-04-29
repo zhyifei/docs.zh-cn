@@ -3,11 +3,11 @@ title: 与企业服务和 COM+ 事务的互操作性
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793648"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>与企业服务和 COM+ 事务的互操作性
 <xref:System.Transactions> 命名空间支持使用此命名空间创建的事务对象与通过 COM+ 创建的事务之间的互操作性。  
@@ -29,9 +29,9 @@ ms.locfileid: "59301901"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 指定以下要求：  
   
--   选中 <xref:System.Transactions.Transaction.Current%2A> 时，如果 <xref:System.Transactions> 检测到它没有运行在默认上下文中，则应支持 COM+ 上下文中的事务。 请注意，默认上下文不能包含事务。 因此，在默认上下文中，即使使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，也会对 <xref:System.Transactions> 返回 <xref:System.Transactions.Transaction.Current%2A> 所使用的、存储在线程本地存储区中的事务。  
+- 选中 <xref:System.Transactions.Transaction.Current%2A> 时，如果 <xref:System.Transactions> 检测到它没有运行在默认上下文中，则应支持 COM+ 上下文中的事务。 请注意，默认上下文不能包含事务。 因此，在默认上下文中，即使使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，也会对 <xref:System.Transactions> 返回 <xref:System.Transactions.Transaction.Current%2A> 所使用的、存储在线程本地存储区中的事务。  
   
--   如果创建一个新的 <xref:System.Transactions.TransactionScope> 对象，并在默认上下文之外的上下文中执行此操作，则 <xref:System.Transactions.TransactionScope> 对象的当前事务应在 COM+ 中反映出来。 在这种情况下，<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 的行为与 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 类似，因为前者会创建新的 COM+ 上下文。  
+- 如果创建一个新的 <xref:System.Transactions.TransactionScope> 对象，并在默认上下文之外的上下文中执行此操作，则 <xref:System.Transactions.TransactionScope> 对象的当前事务应在 COM+ 中反映出来。 在这种情况下，<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 的行为与 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 类似，因为前者会创建新的 COM+ 上下文。  
   
  此外，当在 <xref:System.Transactions.Transaction.Current%2A> 和 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 中设置了 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 时，这两种模式都表示不能直接设置 <xref:System.Transactions.Transaction.Current%2A>。  任何直接设置 <xref:System.Transactions.Transaction.Current%2A> 而不是创建 <xref:System.Transactions.TransactionScope> 的尝试都会导致 <xref:System.InvalidOperationException>。 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举值由未显式指定要使用哪个值的新事务范围继承。 例如，如果用 <xref:System.Transactions.TransactionScope> 创建新的 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 对象，然后创建另一个 <xref:System.Transactions.TransactionScope> 对象，但不指定 <xref:System.Transactions.EnterpriseServicesInteropOption> 值，则第二个 <xref:System.Transactions.TransactionScope> 对象也具有 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 值。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "59301901"
   
 1. <xref:System.Transactions.Transaction.Current%2A> 检查以查看是否存在事务。 此检查会执行下列操作：  
   
-    -   检查是否存在范围。  
+    - 检查是否存在范围。  
   
-    -   如果存在范围，则选中最初创建该范围时传入的 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举值。  
+    - 如果存在范围，则选中最初创建该范围时传入的 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举值。  
   
-    -   如果将 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举设置为 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，则 COM+ 事务（<xref:System.EnterpriseServices> 事务）将优先于托管线程本地存储区中的 <xref:System.Transactions> 事务。  
+    - 如果将 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举设置为 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>，则 COM+ 事务（<xref:System.EnterpriseServices> 事务）将优先于托管线程本地存储区中的 <xref:System.Transactions> 事务。  
   
          如果将该枚举值设置为 <xref:System.Transactions.EnterpriseServicesInteropOption.None>，则托管线程本地存储区中的 <xref:System.Transactions> 事务将优先。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "59301901"
   
 3. 如果需要创建新事务，则会生成 <xref:System.Transactions.EnterpriseServicesInteropOption> 的下列值：  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>：创建与 COM+ 上下文关联的事务。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>：创建与 COM+ 上下文关联的事务。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>:<xref:System.Transactions>创建事务。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>:<xref:System.Transactions>创建事务。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>： 如果没有 COM + 上下文中，创建并附加到上下文事务。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>： 如果没有 COM + 上下文中，创建并附加到上下文事务。  
   
  下表使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举阐释了企业服务 (ES) 上下文和需要事务的事务范围。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "59301901"
   
  在上表中：  
   
--   ST 表示范围的环境事务由 <xref:System.Transactions> 管理，这一点不同于可能存在的任何 <xref:System.EnterpriseServices> 上下文的事务。  
+- ST 表示范围的环境事务由 <xref:System.Transactions> 管理，这一点不同于可能存在的任何 <xref:System.EnterpriseServices> 上下文的事务。  
   
--   ES 表示范围的环境事务与 <xref:System.EnterpriseServices> 上下文的事务相同。
+- ES 表示范围的环境事务与 <xref:System.EnterpriseServices> 上下文的事务相同。

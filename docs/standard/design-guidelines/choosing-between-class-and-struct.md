@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778776"
 ---
 # <a name="choosing-between-class-and-struct"></a>在类和结构之间选择
 每个框架设计者面临的基本设计决策之一是将类型设计为类（引用类型）还是结构（值类型）。 要做出合适的选择，深入理解引用类型和值类型的行为差异非常重要。  
@@ -39,13 +39,13 @@ ms.locfileid: "54565860"
   
  **X 避免**定义一个结构，除非该类型具有所有以下特征：  
   
--   它逻辑上表示单个值，类似于基元类型（`int`， `double`，等等）。  
+- 它逻辑上表示单个值，类似于基元类型（`int`， `double`，等等）。  
   
--   它的实例大小小于 16 字节。  
+- 它的实例大小小于 16 字节。  
   
--   它是不可变的。  
+- 它是不可变的。  
   
--   它不会频繁装箱。  
+- 它不会频繁装箱。  
   
  在所有其他情况下，应将类型定义为类。  
   

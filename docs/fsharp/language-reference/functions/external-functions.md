@@ -3,11 +3,11 @@ title: 外部函数
 description: 了解如何F#在本机代码中调用函数的语言支持。
 ms.date: 05/16/2016
 ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934623"
 ---
 # <a name="external-functions"></a>外部函数
 
@@ -24,7 +24,7 @@ extern declaration
 
 在上述语法中，*自变量*表示参数提供给`System.Runtime.InteropServices.DllImportAttribute`属性。 第一个参数是一个字符串，表示包含此函数，不带.dll 扩展名的 DLL 的名称。 可以提供其他参数的公共属性的任何`System.Runtime.InteropServices.DllImportAttribute`类，如调用约定。
 
-假设您有一个本机 c + + DLL，其中包含以下导出的函数。
+假设您有一个本机C++包含以下导出的函数的 DLL。
 
 ```cpp
 #include <stdio.h>

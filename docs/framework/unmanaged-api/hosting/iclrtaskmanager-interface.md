@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19ef7cb78791496de76e5741f8254ee88563c776
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763368"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager 接口
 提供了使宿主可以显式请求的公共语言运行时 (CLR) 的方法创建新的任务、 获取当前正在执行的任务，并设置地理语言和区域性的任务。  

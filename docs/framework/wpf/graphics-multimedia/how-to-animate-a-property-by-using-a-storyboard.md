@@ -1,5 +1,5 @@
 ---
-title: 如何：使用演示图板对属性进行动画处理
+title: 如何：使用情节提要对属性进行动画处理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761203"
 ---
-# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>如何：使用演示图板对属性进行动画处理
+# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>如何：使用情节提要对属性进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.Storyboard>属性进行动画处理。 若要使用属性进行动画处理<xref:System.Windows.Media.Animation.Storyboard>，创建动画，以你想要进行动画处理，同时还创建每个属性<xref:System.Windows.Media.Animation.Storyboard>来包含动画。  
   
  属性类型确定要使用的动画类型。 例如，若要对采用的属性进行动画处理<xref:System.Double>值，请使用<xref:System.Windows.Media.Animation.DoubleAnimation>。 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加的属性指定的对象和向其应用动画属性。  

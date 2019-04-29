@@ -5,51 +5,51 @@ ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940499"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 显示登录状态
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   ASP.NET® Web 窗体  
+- ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
  本主题介绍如何在已启用 WIF 的 ASP.NET 应用程序中显示登录状态。 WIF 提供的机制可使应用程序声明感知、管理应用程序资源的身份验证和授权。  
   
 ## <a name="contents"></a>内容  
   
--   概述  
+- 概述  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 安装标识和访问扩展  
+- 步骤 1 – 安装标识和访问扩展  
   
--   步骤 2 – 创建信赖方 ASP.NET 应用程序  
+- 步骤 2 – 创建信赖方 ASP.NET 应用程序  
   
--   步骤 3 – 启用本地开发 STS 以验证用户身份  
+- 步骤 3 – 启用本地开发 STS 以验证用户身份  
   
--   步骤 4 – 修改 ASP.NET 应用程序以显示登录状态  
+- 步骤 4 – 修改 ASP.NET 应用程序以显示登录状态  
   
--   步骤 5 - 测试 WIF 和 ASP.NET 应用程序之间的集成  
+- 步骤 5 - 测试 WIF 和 ASP.NET 应用程序之间的集成  
   
 ## <a name="overview"></a>概述  
  本主题演示如何使用 WIF 创建简单的声明感知应用程序，以及如何轻松显示用户是否已登录。 以下步骤使用的本地开发 STS 包含在标识和访问 Visual Studio 扩展中。 本地开发 STS 专门用于测试和开发环境，提供一种简单的方法将声明集成到应用程序中。 它不可用于生产环境，因为它不执行实际的身份验证，也不需要凭据。 但以下步骤中的指令性代码与使用实际身份验证的生产就绪应用程序的相同。  
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 安装标识和访问扩展  
+- 步骤 1 – 安装标识和访问扩展  
   
--   步骤 2 – 创建信赖方 ASP.NET 应用程序  
+- 步骤 2 – 创建信赖方 ASP.NET 应用程序  
   
--   步骤 3 – 启用本地开发 STS 以验证用户身份  
+- 步骤 3 – 启用本地开发 STS 以验证用户身份  
   
--   步骤 4 – 修改 ASP.NET 应用程序以显示登录状态  
+- 步骤 4 – 修改 ASP.NET 应用程序以显示登录状态  
   
--   步骤 5 - 测试 WIF 和 ASP.NET 应用程序之间的集成  
+- 步骤 5 - 测试 WIF 和 ASP.NET 应用程序之间的集成  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>步骤 1 – 安装标识和访问扩展  
  此步骤介绍如何为 Visual Studio 2012 配置标识和访问扩展。 此扩展会自动启动配置应用程序过程，以与 STS 终结点进行通信。  

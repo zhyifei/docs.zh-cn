@@ -3,11 +3,11 @@ title: 查找 Word 文档 (Visual Basic 中) 中的文本
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
 ms.openlocfilehash: f8414662e2013b152e471d6c4c003e602c0d277d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931537"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>查找 Word 文档 (Visual Basic 中) 中的文本
 本主题扩展了以前的查询，以执行一些有用的任务：在文档中查找一个字符串的所有匹配项。  
@@ -305,7 +305,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>后续步骤  
  下一节提供有关 WordprocessingML 文档的更多信息：  
   
--   [详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>请参阅
 

@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869002"
 ---
 # <a name="using-the-assert-method"></a>使用 Assert 方法
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073723"
   
  下图显示了在使用时，会发生什么情况**Assert**。 假设以下语句针对程序集 A、B、C、E 和 F 以及 P1 和 P1A 两个权限为 true：  
   
--   P1A 表示读取 C 驱动器上的 .txt 文件的权限。  
+- P1A 表示读取 C 驱动器上的 .txt 文件的权限。  
   
--   P1 表示读取 C 驱动器上所有文件的权限。  
+- P1 表示读取 C 驱动器上所有文件的权限。  
   
--   P1A 和 P1 都**FileIOPermission**类型，且 P1A 是 P1 的子集。  
+- P1A 和 P1 都**FileIOPermission**类型，且 P1A 是 P1 的子集。  
   
--   已向程序集 E 和 F 授予了 P1A 权限。  
+- 已向程序集 E 和 F 授予了 P1A 权限。  
   
--   已向程序集 C 授予了 P1 权限。  
+- 已向程序集 C 授予了 P1 权限。  
   
--   尚未向程序集 A 和 B 授予 P1 或 P1A 权限。  
+- 尚未向程序集 A 和 B 授予 P1 或 P1A 权限。  
   
--   方法 A 包含在程序集 A 中，方法 B 包含在程序集 B 中，依次类推。  
+- 方法 A 包含在程序集 A 中，方法 B 包含在程序集 B 中，依次类推。  
   
  ![显示断言方法程序集的关系图。](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

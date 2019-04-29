@@ -3,11 +3,11 @@ title: 异常类型
 description: 了解如何定义和使用F#异常类型。
 ms.date: 05/16/2016
 ms.openlocfilehash: ed721dd0dc46a486fafeac2fa4c096800995ccb7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772718"
 ---
 # <a name="exception-types"></a>异常类型
 

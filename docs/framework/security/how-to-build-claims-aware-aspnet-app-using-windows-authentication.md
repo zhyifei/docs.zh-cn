@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940538"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序
 ## <a name="applies-to"></a>适用于  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web 窗体  
+- ASP.NET® Web 窗体  
   
 ## <a name="summary"></a>总结  
  本操作说明提供了创建使用 Windows 身份验证的简单声明感知 ASP.NET Web 窗体应用程序的详细分步过程。 还提供关于如何测试应用程序以验证用户使用 Windows 身份验证登录时是否呈现声明的说明。  
   
 ## <a name="contents"></a>内容  
   
--   目标  
+- 目标  
   
--   概述  
+- 概述  
   
--   步骤摘要  
+- 步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   步骤 2 – 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序  
+- 步骤 2 – 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
 ## <a name="objectives"></a>目标  
   
--   为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序  
+- 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序  
   
--   测试 ASP.NET Web 窗体应用程序，了解它是否正常工作  
+- 测试 ASP.NET Web 窗体应用程序，了解它是否正常工作  
   
 ## <a name="overview"></a>概述  
  在 .NET 4.5 中，已将 WIF 及其基于声明的授权作为 Framework 的重要组成部分包括在内。 以前，如果想要来自 ASP.NET 用户的声明，需要安装 WIF，然后将接口转换为如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User` 的主体对象。 现在，声明由这些主体对象自动提供。  
@@ -47,11 +47,11 @@ ms.locfileid: "59767963"
   
 ## <a name="summary-of-steps"></a>步骤摘要  
   
--   步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
+- 步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
   
--   步骤 2 – 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序  
+- 步骤 2 – 为使用 Windows 身份验证的声明配置 ASP.NET Web 窗体应用程序  
   
--   步骤 3 - 测试你的解决方案  
+- 步骤 3 - 测试你的解决方案  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序  
  在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。  

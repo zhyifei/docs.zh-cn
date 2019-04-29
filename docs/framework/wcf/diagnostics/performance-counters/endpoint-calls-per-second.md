@@ -3,14 +3,14 @@ title: 终结点：Calls Per Second（每秒调用次数）
 ms.date: 03/30/2017
 ms.assetid: ca0fc06d-d68f-4236-bd5f-c7ff6214acdd
 ms.openlocfilehash: a70df63f6fd268abdd2e1799d1aa38afb41e2811
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797210"
 ---
 # <a name="endpoint-calls-per-second"></a>终结点：Calls Per Second（每秒调用次数）
-计数器名称：Calls Per Second（每秒调用次数）  
+计数器名称：每秒调用。  
   
 ## <a name="description"></a>描述  
  一秒内对此终结点的调用次数。  

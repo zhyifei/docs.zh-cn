@@ -3,20 +3,20 @@ title: 消息流概述
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797472"
 ---
 # <a name="message-flow-overview"></a>消息流概述
 在包含相互连接的服务的分布式系统中，必须确定服务之间的因果关系。 了解作为请求流的一部分的各种组件对于支持关键方案（如运行状况监视、疑难解答和根本原因分析）非常重要。 为了在各种服务之间启用跟踪相关性，我们通过以下功能在 .NET Framework 4 中添加了相关支持：
 
--   分析跟踪：高性能、 低详细级别跟踪功能使用 Windows 事件跟踪 (ETW)。
+- 分析跟踪：高性能、 低详细级别跟踪功能使用 Windows 事件跟踪 (ETW)。
 
--   WCF/WF 服务的端到端活动模型：此功能支持通过生成的跟踪相关性<xref:System.ServiceModel>和<xref:System.Workflow.ComponentModel>命名空间。
+- WCF/WF 服务的端到端活动模型：此功能支持通过生成的跟踪相关性<xref:System.ServiceModel>和<xref:System.Workflow.ComponentModel>命名空间。
 
--   WF 的 ETW 跟踪：此功能使用由 WF 服务生成的跟踪记录提供可见性工作流的当前状态和进度。
+- WF 的 ETW 跟踪：此功能使用由 WF 服务生成的跟踪记录提供可见性工作流的当前状态和进度。
 
  可使用跟踪或跟踪记录中记录的错误来查找代码缺陷或格式不正确的消息。 可使用事件的邮件头中的“相关性”节点的 ActivityId 属性来确定出错的活动。 若要启用消息流跟踪的活动 ID，请参阅[配置消息流跟踪](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)。 本主题演示如何在入门教程中创建的项目中启用消息流跟踪。
 
