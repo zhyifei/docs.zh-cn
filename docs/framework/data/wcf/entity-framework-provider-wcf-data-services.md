@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
 ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765617"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>实体框架提供程序（WCF 数据服务）
 与 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 类似，ADO.NET 实体框架也基于实体数据模型（一种实体关系模型）。 实体框架将针对实体数据模型，这称为其实现操作转换为*概念模型*，对数据源的等效操作。 这使实体框架成为基于关系数据的数据服务的理想提供程序，任何具有支持实体框架的数据提供程序的数据库都可用于 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]。 有关当前支持实体框架的数据源的列表，请参阅[实体框架的第三方提供程序](https://go.microsoft.com/fwlink/?LinkId=143699)。  
