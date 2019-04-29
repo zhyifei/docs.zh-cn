@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765566"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>承载数据服务（WCF 数据服务）
 通过使用 WCF 数据服务，可以创建一项服务，数据公开为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 此数据服务定义为从 <xref:System.Data.Services.DataService%601> 继承的类。 此类提供处理请求消息、 执行对数据源的更新和生成响应消息，OData 所要求的所需的功能。 但是，数据服务不能将绑定到和网络套接字上侦听传入的 HTTP 请求。 对于这一必需的功能，数据服务依赖于宿主计算机。
 
  数据服务主机可代表数据服务执行以下任务：
 
--   侦听请求并将这些请求路由到数据服务。
+- 侦听请求并将这些请求路由到数据服务。
 
--   针对每个请求创建数据服务的一个实例。
+- 针对每个请求创建数据服务的一个实例。
 
--   请求数据服务处理传入的请求。
+- 请求数据服务处理传入的请求。
 
--   代表数据服务发送响应。
+- 代表数据服务发送响应。
 
  若要简化承载数据服务，WCF 数据服务设计将使用 Windows Communication Foundation (WCF) 进行集成。 数据服务提供一个默认 WCF 实现，可作为数据服务主机中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序。 因此，您可以通过以下方式之一承载数据服务：
 
--   在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序中。
+- 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序中。
 
--   在支持自承载 WCF 服务的托管应用程序中。
+- 在支持自承载 WCF 服务的托管应用程序中。
 
--   在其他某些自定义数据服务宿主中。
+- 在其他某些自定义数据服务宿主中。
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>在 ASP.NET 应用程序中承载数据服务
 
@@ -65,13 +65,13 @@ ms.locfileid: "59517936"
 ## <a name="defining-a-custom-data-service-host"></a>定义自定义数据服务主机
  对于 WCF 宿主实现过于受限的情况，您还可以为数据服务定义自定义宿主。 实现 <xref:System.Data.Services.IDataServiceHost> 接口的任何类都可用作数据服务的网络宿主。 自定义宿主必须实现 <xref:System.Data.Services.IDataServiceHost> 接口，并且能够承担数据服务主机的以下基本责任：
 
--   向数据服务提供服务根路径。
+- 向数据服务提供服务根路径。
 
--   处理请求，并向相应的 <xref:System.Data.Services.IDataServiceHost> 成员实现响应标头信息。
+- 处理请求，并向相应的 <xref:System.Data.Services.IDataServiceHost> 成员实现响应标头信息。
 
--   处理由数据服务引发的异常。
+- 处理由数据服务引发的异常。
 
--   验证查询字符串中的参数。
+- 验证查询字符串中的参数。
 
 ## <a name="see-also"></a>请参阅
 

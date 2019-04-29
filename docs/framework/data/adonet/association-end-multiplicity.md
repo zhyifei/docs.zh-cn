@@ -3,22 +3,22 @@ title: 关联端重数
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769652"
 ---
 # <a name="association-end-multiplicity"></a>关联端重数
 *关联端重*定义的数字[实体类型](../../../../docs/framework/data/adonet/entity-type.md)一端可以存在的实例[关联](../../../../docs/framework/data/adonet/association-type.md)。  
   
  关联端重数可以具有下列值之一：  
   
--   一 (1):指示在关联端存在的一个实体类型实例。  
+- 一 (1):指示在关联端存在的一个实体类型实例。  
   
--   零或一 (0..1):指示在关联端存在零个或一个实体类型实例。  
+- 零或一 (0..1):指示在关联端存在零个或一个实体类型实例。  
   
--   很多 (\*):指示在关联端存在零行、 一行或多个实体类型实例。  
+- 很多 (\*):指示在关联端存在零行、 一行或多个实体类型实例。  
   
  关联的特征通常由关联端重数表示。 例如，如果关联端有一 （1） 和许多的重数 (\*)，该关联称为一个对多关联。 在下面的示例中，`PublishedBy` 关联是一个一对多关联（一个出版商可以出版很多书，而一本书只能由一个出版商出版）。 `WrittenBy` 关联是一个多对多关联（一本书可以有多位作者，而一位作者可以著有多本书）。  
   

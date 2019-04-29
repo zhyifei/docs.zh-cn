@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771153"
 ---
 # <a name="popup-placement-behavior"></a>Popup 放置行为
 一个<xref:System.Windows.Controls.Primitives.Popup>控件浮动在应用程序上的单独窗口中显示内容。 您可以指定的位置<xref:System.Windows.Controls.Primitives.Popup>相对于控件、 鼠标或通过使用屏幕<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，并<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>属性。  这些属性协同工作，可以灵活地指定位置的<xref:System.Windows.Controls.Primitives.Popup>。  
@@ -36,13 +36,13 @@ ms.locfileid: "59161494"
 ## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>术语的定义：Popup 解析  
  以下术语可了解如何<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，并<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>互相关联起来的属性和<xref:System.Windows.Controls.Primitives.Popup>:  
   
--   目标对象  
+- 目标对象  
   
--   目标区域  
+- 目标区域  
   
--   目标原点  
+- 目标原点  
   
--   Popup 对齐点  
+- Popup 对齐点  
   
  这些条款提供的方便的方法来指代的各个方面<xref:System.Windows.Controls.Primitives.Popup>和与之关联的控件。  
   
@@ -135,11 +135,11 @@ ms.locfileid: "59161494"
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>当 Popup 到达屏幕边缘时  
  出于安全原因，<xref:System.Windows.Controls.Primitives.Popup>屏幕的边缘不能隐藏。 将发生以下三种情况之一时<xref:System.Windows.Controls.Primitives.Popup>到达屏幕边缘：  
   
--   弹出窗口重新自行对齐沿着将遮挡屏幕边缘<xref:System.Windows.Controls.Primitives.Popup>。  
+- 弹出窗口重新自行对齐沿着将遮挡屏幕边缘<xref:System.Windows.Controls.Primitives.Popup>。  
   
--   Popup 使用其他 Popup 对齐点。  
+- Popup 使用其他 Popup 对齐点。  
   
--   Popup 使用其他目标原点和 Popup 对齐点。  
+- Popup 使用其他目标原点和 Popup 对齐点。  
   
  将在本部分后面进一步介绍这些选项。  
   

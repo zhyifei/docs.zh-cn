@@ -3,11 +3,11 @@ title: <certificateReference> 的 <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704331"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference > 为\<标识 >
 指定 X.509 证书验证的设置。 连接到此标识的终结点的安全 Windows Communication Foundation (WCF) 客户端验证服务器提供的声明包含用于构造此标识的标识声明。  

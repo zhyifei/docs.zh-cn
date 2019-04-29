@@ -6,11 +6,11 @@ helpviewer_keywords:
 - system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
 ms.openlocfilehash: 55c99640907a0c372f8c7bbc50b9b45c9f15ef3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769234"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>如何：在渐变中使用系统颜色
 若要在渐变中使用系统颜色，请使用 *\<SystemColor >* 颜色和 *\<SystemColor >* ColorKey 静态属性<xref:System.Windows.SystemColors>类来获取对颜色，引用其中 *\<SystemColor >* 是所需的系统颜色的名称。 使用 *\<SystemColor >* ColorKey 属性时想要创建的动态引用，随着系统主题变化而自动更新。 否则，请使用 *\<SystemColor >* Color 属性。  

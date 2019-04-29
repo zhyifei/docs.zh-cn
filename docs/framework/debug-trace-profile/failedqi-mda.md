@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754721"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 当运行时代表运行时可调用包装器 (RCW) 在 COM 接口指针上调用 `QueryInterface` 且 `QueryInterface` 调用失败时，将激活 `failedQI` 托管调试助手 (MDA)。  
@@ -25,11 +25,11 @@ ms.locfileid: "59217622"
   
 ## <a name="cause"></a>原因  
   
--   从错误的上下文进行调用。  
+- 从错误的上下文进行调用。  
   
--   注册的代理将无法进行 `QueryInterface` 调用，因为尝试在错误的上下文中进行调用。  
+- 注册的代理将无法进行 `QueryInterface` 调用，因为尝试在错误的上下文中进行调用。  
   
--   OLE 拥有的代理返回失败 HRESULT。  
+- OLE 拥有的代理返回失败 HRESULT。  
   
 ## <a name="resolution"></a>解决方法  
  请参阅 MSDN 文档的 COM 规则部分。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762790"
 ---
 # <a name="geometry-overview"></a>Geometry 概述
 本概述介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>类描述形状。 本主题还对照了之间的差异<xref:System.Windows.Media.Geometry>对象和<xref:System.Windows.Shapes.Shape>元素。  
@@ -55,11 +55,11 @@ ms.locfileid: "59179993"
   
  简单的几何类包括<xref:System.Windows.Media.LineGeometry>， <xref:System.Windows.Media.RectangleGeometry>，和<xref:System.Windows.Media.EllipseGeometry>和用于创建基本几何形状，例如线条、 矩形和圆形。  
   
--   一个<xref:System.Windows.Media.LineGeometry>定义通过指定行和终结点的起始点。  
+- 一个<xref:System.Windows.Media.LineGeometry>定义通过指定行和终结点的起始点。  
   
--   一个<xref:System.Windows.Media.RectangleGeometry>定义与<xref:System.Windows.Rect>结构指定其相对位置以及高度和宽度。 可以通过设置创建一个圆角的矩形<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>和<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>属性。  
+- 一个<xref:System.Windows.Media.RectangleGeometry>定义与<xref:System.Windows.Rect>结构指定其相对位置以及高度和宽度。 可以通过设置创建一个圆角的矩形<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>和<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>属性。  
   
--   <xref:System.Windows.Media.EllipseGeometry>由中心点、 x 半径和 y 半径定义。  以下示例介绍如何创建简单几何来进行呈现和剪裁。  
+- <xref:System.Windows.Media.EllipseGeometry>由中心点、 x 半径和 y 半径定义。  以下示例介绍如何创建简单几何来进行呈现和剪裁。  
   
  这些相同的形状以及更复杂的形状，可以使用创建<xref:System.Windows.Media.PathGeometry>或通过合并几何对象组合在一起，但这些类用于生成这些基本几何形状提供更简单的方法。  
   
@@ -175,9 +175,9 @@ ms.locfileid: "59179993"
 ## <a name="composite-geometries"></a>复合几何  
  可以使用创建复合几何对象<xref:System.Windows.Media.GeometryGroup>、 一个<xref:System.Windows.Media.CombinedGeometry>，或通过调用静态<xref:System.Windows.Media.Geometry>方法<xref:System.Windows.Media.Geometry.Combine%2A>。  
   
--   <xref:System.Windows.Media.CombinedGeometry>对象和<xref:System.Windows.Media.Geometry.Combine%2A>方法执行布尔操作以合并由两个几何定义的区域。 <xref:System.Windows.Media.Geometry> 将放弃没有面积的对象。 只有两个<xref:System.Windows.Media.Geometry>（尽管这两个几何也可能是复合几何），可以组合对象。  
+- <xref:System.Windows.Media.CombinedGeometry>对象和<xref:System.Windows.Media.Geometry.Combine%2A>方法执行布尔操作以合并由两个几何定义的区域。 <xref:System.Windows.Media.Geometry> 将放弃没有面积的对象。 只有两个<xref:System.Windows.Media.Geometry>（尽管这两个几何也可能是复合几何），可以组合对象。  
   
--   <xref:System.Windows.Media.GeometryGroup>类创建的合并，<xref:System.Windows.Media.Geometry>对象包含而合并其面积。 任意数量的<xref:System.Windows.Media.Geometry>可以将对象添加到<xref:System.Windows.Media.GeometryGroup>。 有关示例，请参阅[创建复合形状](how-to-create-a-composite-shape.md)。  
+- <xref:System.Windows.Media.GeometryGroup>类创建的合并，<xref:System.Windows.Media.Geometry>对象包含而合并其面积。 任意数量的<xref:System.Windows.Media.Geometry>可以将对象添加到<xref:System.Windows.Media.GeometryGroup>。 有关示例，请参阅[创建复合形状](how-to-create-a-composite-shape.md)。  
   
  因为它们不会执行合并操作，使用<xref:System.Windows.Media.GeometryGroup>对象通过使用提供性能优势<xref:System.Windows.Media.CombinedGeometry>对象或<xref:System.Windows.Media.Geometry.Combine%2A>方法。  
   
@@ -207,11 +207,11 @@ ms.locfileid: "59179993"
 ## <a name="other-geometry-features"></a>其他几何功能  
  <xref:System.Windows.Media.Geometry>类还提供了有用的实用工具方法，如下所示：  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A> -获取的区域<xref:System.Windows.Media.Geometry>。  
+- <xref:System.Windows.Media.Geometry.GetArea%2A> -获取的区域<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A> -确定 Geometry 是否包含另一个<xref:System.Windows.Media.Geometry>。  
+- <xref:System.Windows.Media.Geometry.FillContains%2A> -确定 Geometry 是否包含另一个<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -确定是否的笔划<xref:System.Windows.Media.Geometry>包含指定的点。  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A> -确定是否的笔划<xref:System.Windows.Media.Geometry>包含指定的点。  
   
  请参阅<xref:System.Windows.Media.Geometry>类及其方法的完整列表。  
   

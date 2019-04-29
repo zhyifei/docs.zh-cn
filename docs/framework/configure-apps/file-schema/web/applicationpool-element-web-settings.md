@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698572"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理的进程范围行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
@@ -66,11 +66,11 @@ ms.locfileid: "59184725"
 ## <a name="example"></a>示例  
  下面的示例演示如何在以下情况下的 aspnet.config 文件中配置 ASP.NET 进程范围行为：  
   
--   应用程序托管在[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]应用程序池。  
+- 应用程序托管在[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]应用程序池。  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 在集成模式下运行。  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 在集成模式下运行。  
   
--   应用程序使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更高版本。  
+- 应用程序使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更高版本。  
   
  在示例中的值是默认值。  
   

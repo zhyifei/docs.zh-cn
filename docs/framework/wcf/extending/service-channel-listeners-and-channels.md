@@ -1,15 +1,15 @@
 ---
-title: 服务： 通道侦听器和通道
+title: 服务：通道侦听器和通道
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771446"
 ---
-# <a name="service-channel-listeners-and-channels"></a>服务： 通道侦听器和通道
+# <a name="service-channel-listeners-and-channels"></a>服务：通道侦听器和通道
 
 有三个类别的通道对象： 通道、 通道侦听器和通道工厂。 通道是应用程序和通道堆栈之间的接口。 通道侦听器负责在接收（即侦听）端创建通道，这通常是为了响应新传入的消息或连接。 通道工厂负责在发送端创建通道，以便启动与终结点的通信。
 
@@ -35,7 +35,7 @@ WCF 为此过程提供基类帮助器。 (在本文中讨论的通道帮助器�
 
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。
 
-下面的讨论基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。
+下面的讨论基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。
 
 ## <a name="creating-a-channel-listener"></a>创建通道侦听器
 

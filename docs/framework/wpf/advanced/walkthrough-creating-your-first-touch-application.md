@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778815"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>演练：创建你的第一个触控应用程序
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使应用程序能够响应触摸。 例如，可以使用一个与应用程序交互或敏式设备，如本演练中创建该应用程序，用户可以移动，触摸屏上的多个手指重设大小，或使用触摸来旋转的单个对象。  
@@ -23,9 +23,9 @@ ms.locfileid: "59326978"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio。  
+- Visual Studio。  
   
--   接受触控输入，如触摸屏，支持 Windows 触摸设备。  
+- 接受触控输入，如触摸屏，支持 Windows 触摸设备。  
   
  此外，应该基本了解如何创建中的应用程序的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，尤其是如何订阅和处理事件。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326978"
 ## <a name="testing-the-application"></a>测试应用程序
  若要测试应用程序，请尝试以下操作。 请注意，您可以多个以下项之一在同一时间。
 
--   若要将移动<xref:System.Windows.Shapes.Rectangle>，将手指放<xref:System.Windows.Shapes.Rectangle>并在屏幕上移动手指。
+- 若要将移动<xref:System.Windows.Shapes.Rectangle>，将手指放<xref:System.Windows.Shapes.Rectangle>并在屏幕上移动手指。
 
--   若要调整大小<xref:System.Windows.Shapes.Rectangle>，将两根手指放<xref:System.Windows.Shapes.Rectangle>，并将手指，或将其彼此相差。
+- 若要调整大小<xref:System.Windows.Shapes.Rectangle>，将两根手指放<xref:System.Windows.Shapes.Rectangle>，并将手指，或将其彼此相差。
 
--   若要旋转<xref:System.Windows.Shapes.Rectangle>，将两根手指放<xref:System.Windows.Shapes.Rectangle>和旋转相对于每个其他手指。
+- 若要旋转<xref:System.Windows.Shapes.Rectangle>，将两根手指放<xref:System.Windows.Shapes.Rectangle>和旋转相对于每个其他手指。
 
  若要导致延时，快速提升您将手指从屏幕执行上一操作。 <xref:System.Windows.Shapes.Rectangle>将继续移动、 调整大小，或为几秒钟才会停止旋转。
 

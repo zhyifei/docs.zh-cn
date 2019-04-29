@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764642"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名称范围
 XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 名称范围中的名称可用于在对象树的对象 XAML 定义名称和其实例等效项之间建立关系。 通常，在加载 XAML 应用程序的各个 XAML 页面根时会以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 托管代码创建 XAML 名称范围。 由定义作为编程对象的 XAML 名称范围<xref:System.Windows.Markup.INameScope>接口，并由实际类还实现<xref:System.Windows.NameScope>。  
@@ -76,13 +76,13 @@ XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 
 ### <a name="xaml-namescope-implementations"></a>XAML 名称范围实现  
  以下类实现<xref:System.Windows.Markup.INameScope>直接：  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> 不使用 XAML 名称范围;因为它是一种字典实现，它而是使用密钥。 唯一原因<xref:System.Windows.ResourceDictionary>实现<xref:System.Windows.Markup.INameScope>是引发异常对用户代码，可帮助阐明，则返回 true 的 XAML 名称范围之间的区别以及如何<xref:System.Windows.ResourceDictionary>处理键，并还确保 XAML 名称范围不应用于<xref:System.Windows.ResourceDictionary>由父元素。  
   
@@ -90,9 +90,9 @@ XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 
   
  以下类定义其自己的 XAML 名称范围，通过使用<xref:System.Windows.NameScope?displayProperty=nameWithType>帮助器类，并连接到通过其 XAML 名称范围实现<xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType>附加属性：  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>请参阅
 

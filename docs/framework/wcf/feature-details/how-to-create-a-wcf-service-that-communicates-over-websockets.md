@@ -3,11 +3,11 @@ title: 如何：创建通过 WebSocket 进行通信的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787525"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>如何：创建通过 WebSocket 进行通信的 WCF 服务
 WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑定通过 WebSocket 进行通信。  当 <xref:System.ServiceModel.NetHttpBinding> 确定服务协定定义回调协定时，将使用 WebSocket。 本主题描述如何实现使用 <xref:System.ServiceModel.NetHttpBinding> 通过 WebSocket 进行通信的 WCF 服务和客户端。  
@@ -108,7 +108,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
   
      回调协定操作将作为异步方法实现。  
   
-    1.  实现客户端代码。  
+    1. 实现客户端代码。  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
   
          为清楚起见，此处重复使用了 CallbackHandler。 客户端应用程序创建新的 InstanceContext，并指定回调接口的实现。 下一步，它创建将引用发送到新创建的 InstanceContext 的代理类实例。 当客户端调用服务时，该服务将使用指定的回调协定调用客户端。  
   
-    2.  配置客户端  
+    2. 配置客户端  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
 ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768480"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件提供了直观的图形界面的用户可以查看和设置日期信息。 该控件显示一个日历： 包含数月，排列在列下方星期几，与所选的突出显示的日期范围内的网格。 可以通过单击箭头按钮在月标题的任何一侧选择不同的月份。 与类似<xref:System.Windows.Forms.DateTimePicker>控件，您可以选择与此控件的多个日期。 有关详细信息<xref:System.Windows.Forms.DateTimePicker>控件，请参阅[DateTimePicker 控件](datetimepicker-control-windows-forms.md)。  

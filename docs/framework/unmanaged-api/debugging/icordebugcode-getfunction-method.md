@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0104a52c3aa206f86daff30d9d16298e6beae324
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750237"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction 方法
 获取与此"ICorDebugCode"关联"ICorDebugFunction"。  

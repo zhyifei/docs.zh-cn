@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771015"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>如何：将 Freezable 设为只读
 此示例演示如何使<xref:System.Windows.Freezable>只读通过调用其<xref:System.Windows.Freezable.Freeze%2A>方法。  
   
  不能冻结<xref:System.Windows.Freezable>对象是否满足以下条件之一`true`有关对象：  
   
--   它具有经过动画处理或数据绑定属性。  
+- 它具有经过动画处理或数据绑定属性。  
   
--   它具有由动态资源设置的属性。 有关动态资源的详细信息，请参阅[XAML 资源](xaml-resources.md)。  
+- 它具有由动态资源设置的属性。 有关动态资源的详细信息，请参阅[XAML 资源](xaml-resources.md)。  
   
--   它包含<xref:System.Windows.Freezable>不能冻结的子对象。  
+- 它包含<xref:System.Windows.Freezable>不能冻结的子对象。  
   
  如果这些条件`false`为你<xref:System.Windows.Freezable>对象，并且您不想要对其进行修改，请考虑冻结它来获得性能优势。  
   

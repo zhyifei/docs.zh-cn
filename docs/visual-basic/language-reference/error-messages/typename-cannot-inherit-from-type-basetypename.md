@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764356"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>\<类型名称 > 不能继承自\<类型 >\<基类型名称 > 扩展的基本访问权限，因此\<类型 > 程序集外部的
 类或接口继承自的基类或接口但具有限制性较弱的访问级别。  
@@ -23,11 +23,11 @@ ms.locfileid: "58838945"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   更改派生的类或接口的基类或接口至少限制的访问级别。  
+- 更改派生的类或接口的基类或接口至少限制的访问级别。  
   
      或  
   
--   如果需要限制较少的访问级别，请删除`Inherits`语句。 不能从更受限制的基类或接口继承。  
+- 如果需要限制较少的访问级别，请删除`Inherits`语句。 不能从更受限制的基类或接口继承。  
   
 ## <a name="see-also"></a>请参阅
 

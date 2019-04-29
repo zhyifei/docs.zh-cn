@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
 ms.openlocfilehash: c88e9da85357df5b0bbbb5957ed2f7ca8276a04b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751459"
 ---
 # <a name="myapplication-object"></a>My.Application 对象
 提供属性、 方法和与当前应用程序相关的事件。  
@@ -17,11 +17,11 @@ ms.locfileid: "58818407"
 ## <a name="remarks"></a>备注  
  有关方法和属性信息`My.Application`对象，请参阅以下资源：  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 适用于在所有项目中可用的成员。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 适用于在所有项目中可用的成员。  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 适用于 Windows 窗体应用程序中可用的成员。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 适用于 Windows 窗体应用程序中可用的成员。  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 适用于可在控制台应用程序中的成员。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 适用于可在控制台应用程序中的成员。  
   
 ## <a name="requirements"></a>要求  
  **Namespace**：<xref:Microsoft.VisualBasic.ApplicationServices>  

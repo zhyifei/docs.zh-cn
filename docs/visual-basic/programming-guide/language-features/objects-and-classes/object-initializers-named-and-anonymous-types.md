@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760748"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>对象初始值设定项：命名和匿名类型 (Visual Basic)
 对象初始值设定项，可以使用单个表达式指定为复杂对象的属性。 它们可以用于创建的命名类型和匿名类型的实例。  
@@ -63,11 +63,11 @@ ms.locfileid: "58821343"
   
 ### <a name="remarks-about-named-types"></a>有关命名类型的备注  
   
--   不能在对象初始值设定项列表中的多个时间初始化类成员。 声明`cust7`将导致错误。  
+- 不能在对象初始值设定项列表中的多个时间初始化类成员。 声明`cust7`将导致错误。  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   成员可用于初始化自身或另一个字段。 如果之前尚未初始化，如下所示的以下声明访问成员`cust8`，将使用默认值。 请记住，使用对象初始值设定项的声明，处理时，第一件事是调用适当的构造函数。 之后，将初始化初始值设定项列表中的各个字段。 下面的示例中的默认值为`Name`分配给`cust8`，并已初始化的值分配`cust9`。  
+- 成员可用于初始化自身或另一个字段。 如果之前尚未初始化，如下所示的以下声明访问成员`cust8`，将使用默认值。 请记住，使用对象初始值设定项的声明，处理时，第一件事是调用适当的构造函数。 之后，将初始化初始值设定项列表中的各个字段。 下面的示例中的默认值为`Name`分配给`cust8`，并已初始化的值分配`cust9`。  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ ms.locfileid: "58821343"
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   可以嵌套对象初始值设定项。 在以下示例中，`AddressClass`是具有两个属性的类`City`并`State`，和`Customer`类具有`Address`的实例的属性`AddressClass`。  
+- 可以嵌套对象初始值设定项。 在以下示例中，`AddressClass`是具有两个属性的类`City`并`State`，和`Customer`类具有`Address`的实例的属性`AddressClass`。  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   初始化列表不能为空。  
+- 初始化列表不能为空。  
   
--   正在初始化的实例不能是类型对象。  
+- 正在初始化的实例不能是类型对象。  
   
--   正在初始化类成员不能为共享的成员、 只读成员、 常量或方法调用。  
+- 正在初始化类成员不能为共享的成员、 只读成员、 常量或方法调用。  
   
--   正在初始化类成员不能编制索引，或限定。 下面的示例引发编译器错误：  
+- 正在初始化类成员不能编制索引，或限定。 下面的示例引发编译器错误：  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ ms.locfileid: "58821343"
   
 ### <a name="remarks-about-anonymous-types"></a>有关匿名类型的备注  
   
--   通常，所有或大多数匿名类型声明中的属性将是键属性，通过键入关键字指示`Key`属性名称的前面。  
+- 通常，所有或大多数匿名类型声明中的属性将是键属性，通过键入关键字指示`Key`属性名称的前面。  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      键属性的详细信息，请参阅[密钥](../../../../visual-basic/language-reference/modifiers/key.md)。  
   
--   如已命名的类型，初始值设定项列表的匿名类型定义必须声明至少一个属性。  
+- 如已命名的类型，初始值设定项列表的匿名类型定义必须声明至少一个属性。  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   当声明匿名类型的实例时，编译器将生成匹配的匿名类型定义。 名称和数据类型的属性来自实例声明中，并由编译器在定义中包含。 属性不是名为，将为命名类型，请提前定义。 其类型推断。 不能通过使用指定的属性的数据类型`As`子句。  
+- 当声明匿名类型的实例时，编译器将生成匹配的匿名类型定义。 名称和数据类型的属性来自实例声明中，并由编译器在定义中包含。 属性不是名为，将为命名类型，请提前定义。 其类型推断。 不能通过使用指定的属性的数据类型`As`子句。  
   
--   匿名类型也可以建立的名称和其属性的值采用一些其他方法。 例如，匿名类型属性可能需要的名称和变量，或名称的值和另一个对象的属性的值。  
+- 匿名类型也可以建立的名称和其属性的值采用一些其他方法。 例如，匿名类型属性可能需要的名称和变量，或名称的值和另一个对象的属性的值。  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

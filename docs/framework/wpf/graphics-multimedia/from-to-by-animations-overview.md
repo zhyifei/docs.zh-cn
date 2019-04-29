@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762392"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 动画概述
 本主题介绍如何使用 From/To/By 动画对依赖属性进行动画处理。 From/To/By 动画创建两个值之间的转换。  
@@ -65,15 +65,15 @@ ms.locfileid: "59209146"
 ## <a name="target-values"></a>目标值  
  From/To/By 动画创建两个目标值之间的转换。 通常指定起始值 (通过设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性) 和终止值 (通过设置<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性)。 但是，还可以仅指定起始值、目标值或偏移值。 在这些类中，动画从要进行动画处理的属性中获取缺少的目标值。 以下列表描述了指定动画目标值的各种方法。  
   
--   **起始值**  
+- **起始值**  
   
      使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性时想要显式指定动画的起始值。 可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性本身，或使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>或<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。 如果仅指定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性中，动画从该值过渡到基值属性的基值。  
   
--   **终止值**  
+- **终止值**  
   
      若要指定动画的结束值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性。 如果使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>本身的属性，从要进行动画处理的属性或将应用到相同属性的另一个动画的输出动画获取其起始值。 可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性和<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性来显式指定开始和结束值的动画。  
   
--   **偏移值**  
+- **偏移值**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性可以指定偏移，而不是显式的起始或动画的结束值。 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画属性指定由多少动画更改其持续时间内的值。 可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>独自或与属性<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性。 如果仅指定<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性，则动画将偏移量的值添加到属性的基值或另一个动画的输出。  
   
@@ -134,9 +134,9 @@ ms.locfileid: "59209146"
 ## <a name="other-animation-types"></a>其他动画类型  
  From/To/By 动画不是唯一的动画类型的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供： 它还提供了关键帧动画和路径动画。  
   
--   关键帧动画沿使用关键帧描述的任意数量的目标值进行动画处理。 有关详细信息，请参阅[关键帧动画概述](key-frame-animations-overview.md)。  
+- 关键帧动画沿使用关键帧描述的任意数量的目标值进行动画处理。 有关详细信息，请参阅[关键帧动画概述](key-frame-animations-overview.md)。  
   
--   路径动画会生成输出值<xref:System.Windows.Media.PathGeometry>。 有关详细信息，请参阅[路径动画概述](path-animations-overview.md)。  
+- 路径动画会生成输出值<xref:System.Windows.Media.PathGeometry>。 有关详细信息，请参阅[路径动画概述](path-animations-overview.md)。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还支持创建自己的自定义动画类型。 有关详细信息，请参阅[自定义动画概述](custom-animations-overview.md)。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
 ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772868"
 ---
 # <a name="preview-events"></a>预览事件
 预览事件，也称为隧道事件，也是路由的路由的事件，在应用程序根元素引发该事件并报告为事件数据中的源间传递的方向。 并非所有事件方案支持或要求预览事件;本主题介绍的情况下，预览事件存在，应用程序或组件应如何处理它们和在其中创建自定义组件或类中的预览事件可能是适当的情况。  

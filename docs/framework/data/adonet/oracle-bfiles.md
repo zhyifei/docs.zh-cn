@@ -3,11 +3,11 @@ title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771964"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.OracleBFile> 类，该类用于使用 Oracle <xref:System.Data.OracleClient.OracleType.BFile> 数据类型。  
@@ -16,11 +16,11 @@ Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.Or
   
  其他特征**BFILE**将其从区分开来的数据类型**LOB**数据类型是：  
   
--   包含非结构化数据。  
+- 包含非结构化数据。  
   
--   支持服务器端分块。  
+- 支持服务器端分块。  
   
--   使用引用复制语义。 例如，如果在执行复制操作**BFILE**，则只**BFILE**复制定位符 （这是对文件的引用）。 而不会复制文件中的数据。  
+- 使用引用复制语义。 例如，如果在执行复制操作**BFILE**，则只**BFILE**复制定位符 （这是对文件的引用）。 而不会复制文件中的数据。  
   
  **BFILE**为引用较大，Lob，应使用数据类型，因此，在数据库中存储不可行。 当使用涉及更多的客户端、 服务器和通信开销**BFILE**数据类型与比较**LOB**数据类型。 若要访问效率更高**BFILE**如果只需要获取少量的数据。 如果需要获取整个对象，访问数据库驻留的 LOB 会更加有效。  
   

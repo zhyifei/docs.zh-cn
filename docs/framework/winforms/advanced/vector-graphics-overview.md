@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748420"
 ---
 # <a name="vector-graphics-overview"></a>向量图形概述
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 绘制线条、 矩形和其他形状的坐标系统上。 可以选择使用不同的坐标系统，但默认坐标系统中都具有原点左上角具有 x 轴指向右，y 轴指向下方。 默认坐标系统中的度量单位为像素。  
@@ -32,19 +32,19 @@ ms.locfileid: "59087958"
   
  随着时间推移，某些基本构造块已被证明是最适用于创建二维图片。 这些构建基块，支持的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，给出了下面的列表：  
   
--   直线  
+- 直线  
   
--   矩形  
+- 矩形  
   
--   省略号  
+- 省略号  
   
--   Arcs  
+- Arcs  
   
--   多边形  
+- 多边形  
   
--   基数样条  
+- 基数样条  
   
--   贝塞尔曲线样条  
+- 贝塞尔曲线样条  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>进行绘制的图形对象的方法  
  <xref:System.Drawing.Graphics>类中[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供了用于绘制的项前面的列表中的以下方法： <xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawRectangle%2A>， <xref:System.Drawing.Graphics.DrawEllipse%2A>， <xref:System.Drawing.Graphics.DrawPolygon%2A>， <xref:System.Drawing.Graphics.DrawArc%2A>， <xref:System.Drawing.Graphics.DrawCurve%2A> （适用于基本样条），并<xref:System.Drawing.Graphics.DrawBezier%2A>. 每种方法将重载;也就是说，每个方法支持多个不同的参数列表。 例如，一种<xref:System.Drawing.Graphics.DrawLine%2A>方法接收<xref:System.Drawing.Pen>对象和四个整数，而另一个变体<xref:System.Drawing.Graphics.DrawLine%2A>方法接收<xref:System.Drawing.Pen>对象和两个<xref:System.Drawing.Point>对象。  

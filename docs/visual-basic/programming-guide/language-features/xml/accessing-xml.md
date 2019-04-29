@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
 ms.openlocfilehash: 0540c52cf3e4cd7594f051c10832ea99cf58a34e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756957"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中访问 XML
 Visual Basic 提供了用于访问和导航 XML 轴属性[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]结构。 这些属性使用特殊语法，可以通过指定的 XML 名称来访问元素和属性。  
@@ -28,10 +28,10 @@ Visual Basic 提供了用于访问和导航 XML 轴属性[!INCLUDE[sqltecxlinq](
 |*attribute 轴*|`phone.@type`|获取所有`type`的属性`phone`元素。|  
 |*descendant 轴*|`contacts...<name>`|获取所有`name`的元素`contacts`元素，而不考虑它们在层次结构中深度。|  
 |*扩展索引器*|`contacts...<name>(0)`|获取第一个`name`序列中的元素。|  
-|*value*|`contacts...<name>.Value`|获取在序列中，第一个对象的字符串表示形式或`Nothing`如果序列为空。|  
+|*值*|`contacts...<name>.Value`|获取在序列中，第一个对象的字符串表示形式或`Nothing`如果序列为空。|  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：访问 XML 子代元素](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
+ [如何：访问 XML 后代元素](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
  演示如何使用子代轴属性访问具有指定的名称并且包含指定的 XML 元素下的所有 XML 元素。  
   
  [如何：访问 XML 子元素](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
@@ -40,7 +40,7 @@ Visual Basic 提供了用于访问和导航 XML 轴属性[!INCLUDE[sqltecxlinq](
  [如何：访问 XML 特性](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
  演示如何使用特性轴属性访问某个 XML 元素中具有指定的名称的所有 XML 属性。  
   
- [如何：声明和使用 XML 命名空间前缀](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
+ [如何：声明和使用 XML Namespace 前缀](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
  演示如何声明 XML 命名空间前缀，并使用它来创建和访问 XML 元素。  
   
 ## <a name="related-sections"></a>相关章节  

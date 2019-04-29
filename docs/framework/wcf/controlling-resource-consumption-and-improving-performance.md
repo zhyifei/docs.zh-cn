@@ -3,11 +3,11 @@ title: 控制资源使用并提高性能
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
 ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785055"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制资源使用并提高性能
 本主题介绍可以用于控制资源消耗并会影响性能指标的 Windows Communication Foundation (WCF) 体系结构的不同区域中的各种属性。
@@ -19,7 +19,7 @@ ms.locfileid: "54664156"
 
  序列化配额的一个示例是 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 属性，该属性指定序列化程序在一次 <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> 方法调用中序列化或反序列化的对象的最大数目。 应用程序级控制器的一个示例是 <xref:System.ServiceModel.Dispatcher.ServiceThrottle.MaxConcurrentSessions%2A?displayProperty=nameWithType> 属性，该属性默认情况下将并发会话通道连接的数目限定为不超过 10 个。 （与配额不同，如果达到此控制器值，应用程序会继续处理，但不接受新的会话通道，也就是说，在其中某个会话通道终止之前，新客户端将无法连接。）
 
- 这些控制机制旨在针对某些类型的攻击提供现成的缓解措施，或者改善内存需求量、启动时间等性能指标。 但是，根据不同的应用程序，这些控制机制可能会妨碍服务应用程序性能或者使应用程序根本无法工作。 例如，旨在传送视频的应用程序可能很容易超过默认的 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> 属性值。 本主题提供的各种控件概述适用于 WCF 的所有级别的应用程序，介绍了各种方法来获取有关设置是否会妨碍应用程序的详细信息并介绍纠正各种问题的方法。 大多数控制器以及某些配额都是在应用程序级别提供的，即使基属性是序列化约束或传输约束，也是如此。 例如，可使用 Service 类的 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 属性来设置 <xref:System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 属性。
+ 这些控制机制旨在针对某些类型的攻击提供现成的缓解，或者改善内存需求量、启动时间等性能指标。 但是，根据不同的应用程序，这些控制机制可能会妨碍服务应用程序性能或者使应用程序根本无法工作。 例如，旨在传送视频的应用程序可能很容易超过默认的 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> 属性值。 本主题提供的各种控件概述适用于 WCF 的所有级别的应用程序，介绍了各种方法来获取有关设置是否会妨碍应用程序的详细信息并介绍纠正各种问题的方法。 大多数控制器以及某些配额都是在应用程序级别提供的，即使基属性是序列化约束或传输约束，也是如此。 例如，可使用 Service 类的 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 属性来设置 <xref:System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 属性。
 
 > [!NOTE]
 > 如果您的特定问题，您应首先阅读[WCF 疑难解答快速入门](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)若要查看您的问题 （和解决方案） 列表中是否存在。

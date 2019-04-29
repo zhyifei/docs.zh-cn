@@ -2,14 +2,14 @@
 title: F# 中的函数编程简介
 description: 了解基础知识中的函数编程F#。
 ms.date: 10/29/2018
-ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
+ms.openlocfilehash: 84022e58c0f17b9e9875402c653c31e494e940da
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25724474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772783"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>F# 中的函数编程简介 #
+# <a name="introduction-to-functional-programming-in-f"></a>F 中的函数编程简介\#
 
 函数编程是编程的一种样式的强调的函数和不可变数据使用。 类型化的函数编程是函数编程与结合使用时与静态类型，如F#。 一般情况下，在函数式编程强调了以下概念：
 
@@ -99,7 +99,7 @@ let addOneIfOdd input =
 
 ```fsharp
 let printString (str: string) =
-    printfn "String is: %s" s
+    printfn "String is: %s" str
 ```
 
 签名如下所示：
@@ -161,90 +161,15 @@ let addOneToValue x =
     x + 1
 ```
 
-尽管此函数不依赖于全局值，但它的值写入`x`到程序的输出。 尽管没有任何问题本质上是执行此操作，但它意味着该函数不是纯。
+尽管此函数不依赖于全局值，但它的值写入`x`到程序的输出。 尽管没有任何问题本质上是执行此操作，但它意味着该函数不是纯。 如果您的程序的另一个部分依赖于外部程序，例如输出缓冲区的内容然后调用此函数会影响您的程序的其他部分。
 
-删除`printfn`语句最终使函数纯：
+删除`printfn`语句使纯函数：
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-尽管此函数本身不是_更好地_与早期版本相比`printfn`语句，它确实保证此函数的唯一用途是返回值。 调用此函数一次或 1 亿次将仍导致相同的操作： 只生成一个值。 此可预测性是函数编程中有价值，因为它意味着任何纯函数是引用透明。
-
-### <a name="referential-transparency"></a>引用透明度
-
-引用透明度是表达式和函数的属性。 是引用透明表达式，它必须能够将替换为其生成的值，而无需更改程序的行为。 所有纯函数是引用透明的。
-
-与纯函数，它可以是需要考虑引用透明度从数学角度来看。 中的数学表达式`y = f(x)`，`f(x)`可以替换为函数的结果仍将等于`y`。 这是用于在函数式编程引用透明度也同样适用。
-
-请考虑调用以前定义`addOneIfOdd`函数两次：
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 = addOneIffOdd 1 // Produces 2
-let res2 = addOneIffOdd 2 // Produces 2
-```
-
-我们可以替换该参数使用函数体中，替换每个函数调用`input`与每个值：
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 =
-    let result =
-        if isOdd 1 then
-            1 + 1
-        else
-            1
-
-    result
-let res2 =
-    let result =
-        if isOdd 2 then
-            2 + 1
-        else
-            2
-
-    result
-```
-
-这两`res1`并`res2`具有相同的值，就像调用函数时，该值指示`addOneIfOdd`是引用透明 ！
-
-此外，函数无需是纯也显示为引用透明的。 以前的定义，请考虑`addOneTovalue`:
-
-```fsharp
-let addOneToValue x = 
-    printfn "x is %d" x
-    x + 1
-```
-
-此外可以通过其正文替换为对此函数的任何调用，并将发生每次相同的情况：
-
-* 之前，要添加的值打印到输出
-* 值已添加到其中的 1
-
-在编程时F#，它通常是引用是目标，而不是纯度的透明度。 但是，它是仍很好的做法时你可以编写纯函数。
+尽管此函数本身不是_更好地_与早期版本相比`printfn`语句，它确实保证此函数的唯一用途是返回值。 多次调用此函数生成的结果相同： 它只是产生一个值。 由纯度给定可预测性是许多的功能性编程人员梦寐以求的目标。
 
 ### <a name="immutability"></a>不可变性
 

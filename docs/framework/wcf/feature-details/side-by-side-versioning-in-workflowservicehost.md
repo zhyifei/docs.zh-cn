@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747913"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost 中的并行版本控制
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中引入的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 并行版本控制功能提供了在单个终结点上承载工作流服务的多个版本的能力。 所提供的并行功能允许配置工作流服务，以便使用新的工作流定义来创建工作流服务的新实例，而对于正在运行的实例则使用现有的定义来完成。 本主题概述了使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流服务并行执行。  
@@ -27,21 +27,21 @@ ms.locfileid: "58465862"
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>承载工作流服务的多个版本的规则  
  当用户向 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 添加其他版本时，必须满足几个条件，以便以相同的一组终结点和说明来承载工作流服务。 如果任何其他版本未能满足这些条件，则 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 在调用 `Open` 时会引发异常。 作为附加版本向主机提供的每个工作流定义必须满足以下要求（其中，主版本是提供给主机构造函数的工作流服务定义）。 附加的工作流版本必须：  
   
--   具有与工作流服务的主版本相同的 <xref:System.ServiceModel.Activities.WorkflowService.Name%2A>。  
+- 具有与工作流服务的主版本相同的 <xref:System.ServiceModel.Activities.WorkflowService.Name%2A>。  
   
--   在其 <xref:System.ServiceModel.Activities.Receive> 中不得有主版本中不存在的任何 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 活动，并且这些活动必须与操作协定相匹配。  
+- 在其 <xref:System.ServiceModel.Activities.Receive> 中不得有主版本中不存在的任何 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 活动，并且这些活动必须与操作协定相匹配。  
   
--   具有唯一的 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 有且仅有一个工作流定义可以具有 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
+- 具有唯一的 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。 有且仅有一个工作流定义可以具有 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>。  
   
  允许进行一些更改。 以下各项在各版本间可能有所不同：  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 可能有与主版本不同的名称和包。  
+- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 可能有与主版本不同的名称和包。  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 值可能不同于主版本。  
+- <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 值可能不同于主版本。  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> 可能不同于主版本。  
+- <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> 可能不同于主版本。  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> 可能不同于主版本。  
+- <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> 可能不同于主版本。  
   
 ### <a name="configuring-the-definitionidentity"></a>配置 DefinitionIdentity  
  使用工作流设计器中，创建工作流服务时<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>使用设置**属性**窗口。 单击外部服务的根活动在设计器中选择工作流服务，并选择**属性窗口**从**视图**菜单。 选择**WorkflowIdentity**旁边显示的下拉列表从**DefinitionIdentity**属性，然后展开，并指定所需<xref:System.Activities.WorkflowIdentity>属性。 在下面的示例<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>配备<xref:System.Activities.WorkflowIdentity.Name%2A>`MortgageWorkflow`和一个<xref:System.Activities.WorkflowIdentity.Version%2A>的`1.0.0.0`。 <xref:System.Activities.WorkflowIdentity.Package%2A> 是可选的，在此示例中是 `null`。  

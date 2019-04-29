@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760709"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员使用 Visual Basic 或 Visual C# 根据实体框架概念模型编写查询。 针对实体框架的查询由针对对象上下文执行的命令目录树查询表示。 LINQ to Entities 将语言集成查询 (LINQ) 查询转换为命令目录树查询，针对实体框架执行这些查询，并返回可同时由实体框架和 LINQ 使用的对象。 以下是创建和执行 LINQ to Entities 查询的过程：  
@@ -57,13 +57,13 @@ LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员�
   
  查询结果通常以下面的某一种形式返回：  
   
--   概念模型中定义的零个或多个类型化实体对象的集合或复杂类型的投影。  
+- 概念模型中定义的零个或多个类型化实体对象的集合或复杂类型的投影。  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]支持的 CLR 类型。  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]支持的 CLR 类型。  
   
--   内联集合。  
+- 内联集合。  
   
--   匿名类型。  
+- 匿名类型。  
   
  有关详细信息，请参阅[查询结果](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)。  
   

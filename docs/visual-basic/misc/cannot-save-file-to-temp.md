@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
 ms.openlocfilehash: b78c2c23e155317642f3fc0aae95f72fb05bb63f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769988"
 ---
 # <a name="cannot-save-file-to-temp"></a>无法将文件保存到 TEMP
 组件找不到名为 TEMP 目录，或者包含 TEMP 目录的驱动器或分区的空间不足，不能保存信息。  

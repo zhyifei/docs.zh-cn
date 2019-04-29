@@ -6,19 +6,19 @@ f1_keywords:
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935247"
 ---
 # <a name="bad-record-length"></a>错误的记录长度
 此错误的可能原因包括：  
   
--   中指定的记录变量的长度`FileGet`， `FileGetObject`，`FilePut`或`FilePutObject`语句不同于相应中指定的长度`FileOpen`语句。  
+- 中指定的记录变量的长度`FileGet`， `FileGetObject`，`FilePut`或`FilePutObject`语句不同于相应中指定的长度`FileOpen`语句。  
   
--   中的变量`FilePut`或`FilePutObject`语句或包含可变长度字符串。  
+- 中的变量`FilePut`或`FilePutObject`语句或包含可变长度字符串。  
   
--   中的变量`FilePut`或`FilePutObject`或者包括`Variant`类型。  
+- 中的变量`FilePut`或`FilePutObject`或者包括`Variant`类型。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762293"
 ---
 # <a name="transforms-overview"></a>变换概述
 本主题介绍如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>类来旋转、 缩放、 移动 （转换） 和倾斜<xref:System.Windows.FrameworkElement>对象。  
@@ -101,9 +101,9 @@ ms.locfileid: "59162191"
 ## <a name="transforming-a-frameworkelement"></a>转换 FrameworkElement  
  若要将变换应用于<xref:System.Windows.FrameworkElement>，创建<xref:System.Windows.Media.Transform>并将其应用到两个属性之一的<xref:System.Windows.FrameworkElement>类提供了：  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – 一个转换，该布局处理过程前应用了。 转换应用后，布局系统处理元素转换后的大小和位置。  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – 一个转换，该布局处理过程前应用了。 转换应用后，布局系统处理元素转换后的大小和位置。  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> – 一个转换，修改元素的外观，但在布局处理过程完成后应用。 通过使用<xref:System.Windows.UIElement.RenderTransform%2A>属性，而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性，可获得性能优势。  
+- <xref:System.Windows.UIElement.RenderTransform%2A> – 一个转换，修改元素的外观，但在布局处理过程完成后应用。 通过使用<xref:System.Windows.UIElement.RenderTransform%2A>属性，而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性，可获得性能优势。  
   
  应使用哪个属性？ 因为它提供性能优势，使用<xref:System.Windows.UIElement.RenderTransform%2A>属性可能的尤其是当您使用动画时<xref:System.Windows.Media.Transform>对象。 使用<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性时缩放、 旋转或扭曲，并且需要对转换后的元素大小调整元素的父级。 请注意，当一起使用时<xref:System.Windows.FrameworkElement.LayoutTransform%2A>属性，<xref:System.Windows.Media.TranslateTransform>对象显示为具有对元素没有影响。 这是因为布局系统将转换后的元素返回到其原始位置作为其处理的一部分。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
 ms.openlocfilehash: be3c74e8f8c69eb9f0a1d0dda4d6c90dfd7e567a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760735"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>如何：推断属性名和匿名类型声明 (Visual Basic 中) 中的类型
 匿名类型不提供直接指定属性的数据类型的机制。 所有属性的类型都是推断出来的。 下面的示例从用于初始化属性的值，直接推断 `Name` 和 `Price` 属性的类型。  
@@ -24,11 +24,11 @@ ms.locfileid: "58824709"
   
 #### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>匿名类型可以从以下来源推断属性名和类型：  
   
--   从变量名称。 匿名类型 `anonProduct` 将具有两个属性： `productName` 和 `productPrice`。 它们的数据类型将是原始变量的数据类型，分别为 `String` 和 `Double`。  
+- 从变量名称。 匿名类型 `anonProduct` 将具有两个属性： `productName` 和 `productPrice`。 它们的数据类型将是原始变量的数据类型，分别为 `String` 和 `Double`。  
   
      [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
--   从其他对象的属性或字段名称。 例如，考虑包含 `car` 和 `CarClass` 属性的 `Name` 类型的 `ID` 对象。 若要创建一个匿名类型实例 `car1`，并且其 `Name` 和 `ID` 属性使用 `car` 对象的值进行初始化，则可以编写下面的代码：  
+- 从其他对象的属性或字段名称。 例如，考虑包含 `car` 和 `CarClass` 属性的 `Name` 类型的 `ID` 对象。 若要创建一个匿名类型实例 `car1`，并且其 `Name` 和 `ID` 属性使用 `car` 对象的值进行初始化，则可以编写下面的代码：  
   
      [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
@@ -36,13 +36,13 @@ ms.locfileid: "58824709"
   
      [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
--   从 XML 成员名称。  
+- 从 XML 成员名称。  
   
      [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      为 `anon` 产生的类型将具有一个属性 `Book`，其类型为 <xref:System.Collections.IEnumerable>(Of XElement)。  
   
--   从没有参数的函数，例如下面示例中的 `SomeFunction` 。  
+- 从没有参数的函数，例如下面示例中的 `SomeFunction` 。  
   
      `Dim sc As New SomeClass`  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58824709"
   
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>名称推理在许多情况下将失败，包括：  
   
--   推理派生自对方法、构造函数或需要参数的参数化属性的调用。 如果 `anon1` 具有一个或多个参数，则上面的 `someFunction` 声明将失败。  
+- 推理派生自对方法、构造函数或需要参数的参数化属性的调用。 如果 `anon1` 具有一个或多个参数，则上面的 `someFunction` 声明将失败。  
   
      `' Not valid.`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "58824709"
   
      `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
   
--   推理派生自复杂表达式。  
+- 推理派生自复杂表达式。  
   
     ```  
     Dim aString As String = "Act "  
@@ -80,7 +80,7 @@ ms.locfileid: "58824709"
   
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
--   对多个属性的推理会产生两个或更多的同名属性。 回到前面示例中的声明，在那些声明中，不能将 `product.Name` 和 `car1.Name` 同时列为同一匿名类型的属性。 这是因为这些属性的推断标识符都是 `Name`。  
+- 对多个属性的推理会产生两个或更多的同名属性。 回到前面示例中的声明，在那些声明中，不能将 `product.Name` 和 `car1.Name` 同时列为同一匿名类型的属性。 这是因为这些属性的推断标识符都是 `Name`。  
   
      `' Not valid.`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "58824709"
   
      `' Dim anon7 = New With {Key product.Price, Key price}`  
   
--   属性的初始类型和值取决于尚未建立的另一个属性。 例如， `.IDName = .LastName` 在匿名类型声明中无效，除非 `.LastName` 已经初始化。  
+- 属性的初始类型和值取决于尚未建立的另一个属性。 例如， `.IDName = .LastName` 在匿名类型声明中无效，除非 `.LastName` 已经初始化。  
   
      `' Not valid.`  
   
@@ -108,7 +108,7 @@ ms.locfileid: "58824709"
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
--   匿名类型的属性名和 <xref:System.Object>的成员的名称相同。 例如，因为 `Equals` 是 <xref:System.Object>的一个方法，所以下面的声明会失败。  
+- 匿名类型的属性名和 <xref:System.Object>的成员的名称相同。 例如，因为 `Equals` 是 <xref:System.Object>的一个方法，所以下面的声明会失败。  
   
      `' Not valid.`  
   

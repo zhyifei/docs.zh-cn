@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
 ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766722"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>变量\<变量名 > 在赋值前被使用
 变量\<变量名 > 在赋值前被使用。 可能在运行时导致 null 引用异常。  
@@ -27,9 +27,9 @@ ms.locfileid: "58819354"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   检查控制流逻辑，并确保该变量具有有效的值，控制权将传递给读取它的任何语句之前。  
+- 检查控制流逻辑，并确保该变量具有有效的值，控制权将传递给读取它的任何语句之前。  
   
--   若要保证变量始终具有有效的值的一种方法是初始化其作为其声明的一部分。 请参阅中的"初始化" [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。  
+- 若要保证变量始终具有有效的值的一种方法是初始化其作为其声明的一部分。 请参阅中的"初始化" [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,11 +8,11 @@ ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704591"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 元素
 指定是否应为从远程源加载的程序集授予完全信任在.NET Framework 4 及更高版本。
@@ -42,7 +42,7 @@ ms.locfileid: "55675304"
   
 ## <a name="enabled-attribute"></a>已启用的属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|不要授予完全信任应用程序从远程源。 这是默认设置。|  
 |`true`|从远程源向应用程序授予完全信任。|  

@@ -3,11 +3,11 @@ title: 安全异常
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780856"
 ---
 # <a name="security-exceptions"></a>安全异常
 本主题列出所有安全异常。  
@@ -29,12 +29,12 @@ ms.locfileid: "50201369"
 |CachedNegotiationStateQuotaReached|服务无法缓存协商状态，因为已达到指定容量。 请重试请求。|  
 |CacheQuotaReached|无法添加该项目。 最大缓存大小已指定。|  
 |CannotDetermineSPNBasedOnAddress|客户端无法以 SspiNegotiation/Kerberos 为目的根据指定目标地址中的标识确定服务主体名称。 目标地址标识必须是 UPN 标识 (例如 acmedomain\\\alice) 或 SPN 标识 （例如主机/bobs-machine)。|  
-|CannotFindCert|无法使用下列指定的搜索标准找到 X.509 证书：StoreName、StoreLocation、FindType、FindValue。|  
-|CannotFindCertForTarget|无法使用下列指定的搜索标准为指定目标找到 X.509 证书：StoreName、StoreLocation、FindType、FindValue。|  
+|CannotFindCert|找不到使用指定的搜索条件的 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue。|  
+|CannotFindCertForTarget|找不到使用指定的搜索条件的 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue 为指定的目标。|  
 |CannotFindCorrelationStateForApplyingSecurity|无法找到将安全性应用到应答器上的答复所需的相关性状态。|  
 |CannotFindNegotiationState|无法找到指定上下文的协商状态。|  
 |CannotFindSecuritySession|无法找到具有指定 ID 的安全会话。|  
-|CannotImportProtectionLevelForContract|用于导入进程的策略无法为指定协定导入绑定。 该绑定的保护要求与已经为该协定导入的绑定不兼容。 必须重新配置该绑定。|  
+|CannotImportProtectionLevelForContract|用于导入进程的策略无法为指定协定导入绑定。 该绑定的保护需求与已经为该协定导入的绑定不兼容。 必须重新配置该绑定。|  
 |CannotImportSupportingTokensForOperationWithoutRequestAction|安全策略导入失败。 该安全策略的操作作用域中包含支持令牌需求。 协定描述没有为此操作相关联的请求消息指定操作。|  
 |CannotIssueRstTokenType|无法颁发指定类型的令牌。|  
 |CannotObtainIssuedTokenKeySize|无法确定已颁发令牌的密钥大小。|  
@@ -55,8 +55,8 @@ ms.locfileid: "50201369"
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|安全策略导出失败。 该绑定同时包含 AsymmetricSecurityBindingElement 和安全传输绑定元素。 不支持此类绑定的策略导出。|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|安全策略导出失败。 该绑定同时包含 SymmetricSecurityBindingElement 和安全传输绑定元素。 不支持此类绑定的策略导出。|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|安全策略导出失败。 绑定包含 TransportSecurityBindingElement，但是没有实现 ITransportTokenAssertionProvider 的传输绑定元素。 不支持此类绑定的策略导出。 请确保绑定中的传输绑定元素实现 ITransportTokenAssertionProvider 接口。|  
-|FoundMultipleCerts|使用指定的下列搜索标准找到多个 X.509 证书：StoreName、StoreLocation、FindType、FindValue。 请提供更具体的查找值。|  
-|FoundMultipleCertsForTarget|使用下列指定的搜索标准为指定目标找到多个 X.509 证书：StoreName、StoreLocation、FindType、FindValue。 请提供更具体的查找值。|  
+|FoundMultipleCerts|找到使用指定的搜索条件的多个 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue。 请提供更具体的查找值。|  
+|FoundMultipleCertsForTarget|找到使用指定的搜索条件的多个 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue 为指定的目标。 请提供更具体的查找值。|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 不支持标头解密。 请使用 SecurityVersion.WsSecurityXXX2005 及更高版本或使用传输安全来加密完整的消息。|  
 |IdentityCheckFailedForIncomingMessage|传入消息标识检查失败。 目标终结点的所需标识已指定。|  
 |IdentityCheckFailedForOutgoingMessage|传出消息的标识检查失败。 目标终结点的所需标识已指定。|  
@@ -66,7 +66,7 @@ ms.locfileid: "50201369"
 |InvalidQName|QName 无效。|  
 |InvalidRenewResponseAction|收到带有指定无效操作的安全会话续订响应。|  
 |InvalidSspiNegotiation|安全支持提供程序接口协商失败。|  
-|IssuerBindingNotPresentInTokenRequirement|安全令牌管理器要求在描述安全对话的令牌要求中指定引导安全绑定元素。 令牌要求按如下方式指定。|  
+|IssuerBindingNotPresentInTokenRequirement|安全令牌管理器需求在描述安全对话的令牌需求中指定引导安全绑定元素。 令牌要求按如下方式指定。|  
 |KeyLengthMustBeMultipleOfEight|为对称密钥指定的密钥长度不是 8 的倍数。|  
 |LsaAuthorityNotContacted|内部 SSL 错误（有关详细信息，请参阅 Win32 状态代码）。 请检查服务器证书以确定它是否能够交换密钥。|  
 |MaximumPolicyRedirectionsExceeded|已达到递归策略提取限制。 请检查以确定联合身份验证服务链中是否存在循环。|  
@@ -154,5 +154,5 @@ ms.locfileid: "50201369"
 |UnknownEncodingInBinarySecurityToken|读取二进制安全令牌时，遇到无法识别的编码。|  
 |UnsecuredMessageFaultReceived|从另一方收到未进行安全处理或安全处理不正确的错误。 有关错误代码和详细信息，请参见内部 FaultException。|  
 |UnsupportedPasswordType|不支持指定用户名令牌所使用的密码类型。|  
-|UnsupportedSecureConversationBootstrapProtectionRequirements|无法导入安全策略。 不支持安全对话引导绑定的保护要求。 安全对话引导的保护要求要求必须对请求和响应均进行签名和加密。|  
+|UnsupportedSecureConversationBootstrapProtectionRequirements|无法导入安全策略。 不支持安全对话引导绑定的保护需求。 安全对话引导的保护要求要求必须对请求和响应均进行签名和加密。|  
 |UnsupportedSecurityPolicyAssertion|在指定的安全策略导入过程中检测到不支持的安全策略断言。|

@@ -8,11 +8,11 @@ ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704565"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > 元素
 优化附属程序集的探测。  
@@ -57,19 +57,19 @@ ms.locfileid: "59157373"
 ## <a name="remarks"></a>备注  
  一般情况下，资源管理器探测的资源，如中所述[打包和部署资源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)主题。 这意味着，当资源管理器探测程序特定的本地化版本的资源，它可能会在全局程序集缓存中查找、 在应用程序代码基，查询 Windows 安装程序的特定于区域性的文件夹中查找的附属程序集，并引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。 `<relativeBindForResources>`元素对中的资源管理器探测附属程序集的方式进行优化。 在以下情况下的资源探测时，它可以提高性能：  
   
--   当附属程序集部署在与代码程序集相同的位置。 换而言之，如果代码程序集安装在全局程序集缓存，附属程序集必须也那里安装。 如果代码程序集安装在应用程序的基本代码，那么还必须在基本代码的特定于区域性的文件夹中安装附属程序集。  
+- 当附属程序集部署在与代码程序集相同的位置。 换而言之，如果代码程序集安装在全局程序集缓存，附属程序集必须也那里安装。 如果代码程序集安装在应用程序的基本代码，那么还必须在基本代码的特定于区域性的文件夹中安装附属程序集。  
   
--   Windows 安装程序时未使用或只是偶尔使用按需安装附属程序集。  
+- Windows 安装程序时未使用或只是偶尔使用按需安装附属程序集。  
   
--   当应用程序代码不会处理<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
+- 当应用程序代码不会处理<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
  设置`enabled`的属性`<relativeBindForResources>`元素`true`优化资源管理器的探测附属程序集，如下所示：  
   
--   它使用父代码程序集的位置来探测附属程序集。  
+- 它使用父代码程序集的位置来探测附属程序集。  
   
--   它不会查询 Windows 安装程序的附属程序集。  
+- 它不会查询 Windows 安装程序的附属程序集。  
   
--   它不会引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
+- 它不会引发<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,11 +3,11 @@ title: 如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动�
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
 ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747623"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间
 如果服务和客户端应用程序使用可用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化的数据类型，则会在运行时生成并编译这些数据类型的序列化代码，从而导致启动性能降低。  
@@ -37,11 +37,11 @@ ms.locfileid: "59326419"
   
 4. 通过使用下列选项之一使生成的序列化代码可供你的应用程序使用：  
   
-    1.  生成的序列化代码编译为单独的程序集名称 [*原始程序集*]。Xmlserializers.dll (例如 MyApp.XmlSerializers.dll) 组成。 您的应用程序必须能够加载该程序集，而该程序集必须使用与原始程序集相同的密钥进行签名。 如果您要重新编译原始程序集，则必须重新生成序列化程序集。  
+    1. 生成的序列化代码编译为单独的程序集名称 [*原始程序集*]。Xmlserializers.dll (例如 MyApp.XmlSerializers.dll) 组成。 您的应用程序必须能够加载该程序集，而该程序集必须使用与原始程序集相同的密钥进行签名。 如果您要重新编译原始程序集，则必须重新生成序列化程序集。  
   
-    2.  将生成的序列化代码编译成单独的程序集，并在使用 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> 的服务协定上使用 <xref:System.ServiceModel.XmlSerializerFormatAttribute>。 将 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 属性设置为指向已编译的序列化程序集。  
+    2. 将生成的序列化代码编译成单独的程序集，并在使用 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> 的服务协定上使用 <xref:System.ServiceModel.XmlSerializerFormatAttribute>。 将 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 属性设置为指向已编译的序列化程序集。  
   
-    3.  将生成的序列化代码编译到您的应用程序集内并将 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute><xref:System.ServiceModel.XmlSerializerFormatAttribute>添加到使用  的服务协定中。 不要设置 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 属性。 默认序列化程序集假定为当前程序集。  
+    3. 将生成的序列化代码编译到您的应用程序集内并将 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute><xref:System.ServiceModel.XmlSerializerFormatAttribute>添加到使用  的服务协定中。 不要设置 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> 或 <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> 属性。 默认序列化程序集假定为当前程序集。  
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>若要在 Visual Studio 中生成 XmlSerializer 序列化代码  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791230"
 ---
 # <a name="wcf-client-overview"></a>WCF 客户端概述
 本部分介绍客户端应用程序执行的操作、 如何配置、 创建和使用 Windows Communication Foundation (WCF) 客户端，以及如何保护客户端应用程序。  
@@ -30,15 +30,15 @@ ms.locfileid: "59770381"
   
  以下部分将讨论上述这些步骤，并简单介绍以下问题：  
   
--   处理错误。  
+- 处理错误。  
   
--   配置和保护客户端。  
+- 配置和保护客户端。  
   
--   为双工服务创建回调对象。  
+- 为双工服务创建回调对象。  
   
--   异步调用服务。  
+- 异步调用服务。  
   
--   使用客户端通道调用服务。  
+- 使用客户端通道调用服务。  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>获取服务协定、绑定和地址  
  在 WCF 中，服务和客户端建模约定使用托管的属性、 接口和方法。 若要连接客户端应用程序中的服务，则需要获取该服务协定的类型信息。 通常情况下，您执行此操作通过使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，其下载元数据从服务中，将其转换为托管的源代码文件中所选的语言并创建客户端可用于配置 WCF 客户端对象的应用程序配置文件。 例如，如果要创建 WCF 客户端对象调用`MyCalculatorService`，并且您知道，在发布该服务的元数据`http://computerName/MyCalculatorService/Service.svc?wsdl`，则下面的代码示例演示如何使用 Svcutil.exe 获取`ClientCode.vb`文件包含在托管代码中的服务协定。  
@@ -146,11 +146,11 @@ End Interface
   
  双工服务的客户端必须：  
   
--   实现一个回调协定类。  
+- 实现一个回调协定类。  
   
--   创建回调协定实现类的实例并使用它来创建<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>将传递给 WCF 客户端构造函数的对象。  
+- 创建回调协定实现类的实例并使用它来创建<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>将传递给 WCF 客户端构造函数的对象。  
   
--   调用操作并处理操作回调。  
+- 调用操作并处理操作回调。  
   
  双工 WCF 客户端对象函数，如其非双工对应项，它们公开必要的功能，支持回调，包括回调服务的配置出现异常。  
   

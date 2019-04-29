@@ -3,11 +3,11 @@ title: <certificate> <clientCertificate>元素
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
 ms.openlocfilehash: 98e60d750dad1529ffb35055d26e278ceb7c873a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704344"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<证书 > 的\<clientCertificate > 元素
 指定用于对消息进行签名和加密的 X.509 证书。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772939"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>如何：与 WCF 终结点和消息队列应用程序交换消息
 通过使用 MSMQ 集成绑定与 WCF 消息转换 MSMQ 消息，可以将现有消息队列 (MSMQ) 应用程序集成与 Windows Communication Foundation (WCF) 应用程序。 这允许您调用 MSMQ 接收方应用程序从 WCF 客户端，以及从 MSMQ 发件人应用程序调用 WCF 服务。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758270"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>如何：折叠和隐藏代码 (Visual Basic 中) 的部分
 `#Region`指令，可折叠并隐藏 Visual Basic 文件中的代码段。 `#Region`指令，可以使用 Visual Studio 代码编辑器时指定的一段代码，你可以展开或折叠。 有选择地隐藏代码的功能使你的文件更易于管理且更易读取。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。  
@@ -20,7 +20,7 @@ ms.locfileid: "58822255"
   
 ### <a name="to-collapse-and-hide-a-section-of-code"></a>若要折叠和隐藏代码节  
   
--   放置之间的代码部分`#Region`和`#End Region`语句，如以下示例所示：  
+- 放置之间的代码部分`#Region`和`#End Region`语句，如以下示例所示：  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   

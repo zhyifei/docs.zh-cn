@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775864"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用配置文件配置应用
 .NET Framework 通过配置文件为开发人员和管理员提供了对应用程序运行方式的控制权和灵活性。 配置文件是可以按需要更改的 XML 文件。 管理员能够控制应用程序可以访问哪些受保护的资源，应用程序将使用哪些版本的程序集，以及远程应用程序和对象位于何处。 开发人员可以将设置置于配置文件中，从而没有必要在每次设置更改时重新编译应用程序。 本节说明可以对什么进行配置以及为什么对应用程序进行配置会有用。  
@@ -66,7 +66,7 @@ ms.locfileid: "59147103"
   
  应用程序配置文件的名称和位置取决于应用的主机，可以是下列项之一：  
   
--   可执行文件承载的应用。  
+- 可执行文件承载的应用。  
   
      这些应用具有两个配置文件：一个开发人员在开发过程中修改的源配置文件，一个随应用一起分发的输出文件。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59147103"
   
      Visual Studio 会自动将源配置文件复制到已编译程序集所在的目录中，以便创建随应用程序一起部署的输出配置文件。 在某些情况下，Visual Studio 可能修改输出配置文件；有关详细信息，请参阅[重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)文章中的[重定向应用级别的程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel)一节。  
   
--   ASP.NET 承载的应用。  
+- ASP.NET 承载的应用。  
   
      有关 ASP.NET 配置文件的详细信息，请参阅[ASP.NET 配置设置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
   
--   Internet Explorer 承载的应用。  
+- Internet Explorer 承载的应用。  
   
      如果 Internet Explorer 中承载的应用具有配置文件，则该文件的位置是在 `<link>` 标记中使用以下语法指定的：  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59147103"
   
  安全配置文件位于以下位置：  
   
--   企业策略配置文件：%runtime-install-path%\Config\Enterprisesec.config  
+- 企业策略配置文件：%runtime-install-path%\Config\Enterprisesec.config  
   
--   计算机策略配置文件：%runtime-install-path%\Config\Security.config  
+- 计算机策略配置文件：%runtime-install-path%\Config\Security.config  
   
--   用户策略配置文件：%USERPROFILE%\Application data\Microsoft\CLR security config\vxx.xx\Security.config  
+- 用户策略配置文件：%USERPROFILE%\Application data\Microsoft\CLR security config\vxx.xx\Security.config  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：通过使用 devpath 查找程序集查找程序集](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

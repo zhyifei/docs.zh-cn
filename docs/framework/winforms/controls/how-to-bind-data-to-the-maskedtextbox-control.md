@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761362"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>如何：将数据绑定到 MaskedTextBox 控件
 您可以将数据绑定到<xref:System.Windows.Forms.MaskedTextBox>控制就像可以连接到任何其他 Windows 窗体控件。 但是，如果在数据库中数据的格式与掩码定义所需的格式不匹配，您将需要重新设置数据格式。 下面的过程演示如何执行此操作使用<xref:System.Windows.Forms.Binding.Format>并<xref:System.Windows.Forms.Binding.Parse>的事件<xref:System.Windows.Forms.Binding>类来显示单独的电话号码和电话扩展数据库字段为单一的可编辑字段。  
@@ -239,15 +239,15 @@ ms.locfileid: "59342227"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   创建视觉对象C#或 Visual Basic 项目。  
+- 创建视觉对象C#或 Visual Basic 项目。  
   
--   添加<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控件添加到窗体，如前面的过程中所述。  
+- 添加<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控件添加到窗体，如前面的过程中所述。  
   
--   打开项目的默认窗体源代码文件。  
+- 打开项目的默认窗体源代码文件。  
   
--   将以前的"代码"部分中列出的代码替换为此文件中的源代码。  
+- 将以前的"代码"部分中列出的代码替换为此文件中的源代码。  
   
--   编译该应用程序。  
+- 编译该应用程序。  
   
 ## <a name="see-also"></a>请参阅
 
