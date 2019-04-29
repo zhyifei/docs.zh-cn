@@ -3,33 +3,33 @@ title: 重构为纯函数 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
 ms.openlocfilehash: 0a37b30278c850256355612cec09a4c017c7adc2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787161"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a><span data-ttu-id="cebff-102">重构为纯函数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cebff-102">Refactoring Into Pure Functions (Visual Basic)</span></span>
+# <a name="refactoring-into-pure-functions-visual-basic"></a><span data-ttu-id="f137a-102">重构为纯函数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f137a-102">Refactoring Into Pure Functions (Visual Basic)</span></span>
 
-<span data-ttu-id="cebff-103">纯函数转换的一个重要方面是学习如何使用纯函数重构代码。</span><span class="sxs-lookup"><span data-stu-id="cebff-103">An important aspect of pure functional transformations is learning how to refactor code using pure functions.</span></span>
+<span data-ttu-id="f137a-103">纯函数转换的一个重要方面是学习如何使用纯函数重构代码。</span><span class="sxs-lookup"><span data-stu-id="f137a-103">An important aspect of pure functional transformations is learning how to refactor code using pure functions.</span></span>
 
-<span data-ttu-id="cebff-104">如本节前面所述，纯函数具有两个有用的特性：</span><span class="sxs-lookup"><span data-stu-id="cebff-104">As noted previously in this section, a pure function has two useful characteristics:</span></span>
+<span data-ttu-id="f137a-104">如本节前面所述，纯函数具有两个有用的特性：</span><span class="sxs-lookup"><span data-stu-id="f137a-104">As noted previously in this section, a pure function has two useful characteristics:</span></span>
 
-- <span data-ttu-id="cebff-105">它没有任何副作用。</span><span class="sxs-lookup"><span data-stu-id="cebff-105">It has no side effects.</span></span> <span data-ttu-id="cebff-106">函数不会更改函数以外的任何变量或任何类型的数据。</span><span class="sxs-lookup"><span data-stu-id="cebff-106">The function does not change any variables or the data of any type outside of the function.</span></span>
+- <span data-ttu-id="f137a-105">它没有任何副作用。</span><span class="sxs-lookup"><span data-stu-id="f137a-105">It has no side effects.</span></span> <span data-ttu-id="f137a-106">函数不会更改函数以外的任何变量或任何类型的数据。</span><span class="sxs-lookup"><span data-stu-id="f137a-106">The function does not change any variables or the data of any type outside of the function.</span></span>
 
-- <span data-ttu-id="cebff-107">它具有一致性。</span><span class="sxs-lookup"><span data-stu-id="cebff-107">It is consistent.</span></span> <span data-ttu-id="cebff-108">在提供同一组输入数据的情况下，它将始终返回相同的输出值。</span><span class="sxs-lookup"><span data-stu-id="cebff-108">Given the same set of input data, it will always return the same output value.</span></span>
+- <span data-ttu-id="f137a-107">它具有一致性。</span><span class="sxs-lookup"><span data-stu-id="f137a-107">It is consistent.</span></span> <span data-ttu-id="f137a-108">在提供同一组输入数据的情况下，它将始终返回相同的输出值。</span><span class="sxs-lookup"><span data-stu-id="f137a-108">Given the same set of input data, it will always return the same output value.</span></span>
 
- <span data-ttu-id="cebff-109">转换为函数编程的一种方式是重构现有代码以消除不必要的副作用和外部依赖项。</span><span class="sxs-lookup"><span data-stu-id="cebff-109">One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies.</span></span> <span data-ttu-id="cebff-110">这样，您可以创建现有代码的纯函数版本。</span><span class="sxs-lookup"><span data-stu-id="cebff-110">In this way, you can create pure function versions of existing code.</span></span>
+ <span data-ttu-id="f137a-109">转换为函数编程的一种方式是重构现有代码以消除不必要的副作用和外部依赖项。</span><span class="sxs-lookup"><span data-stu-id="f137a-109">One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies.</span></span> <span data-ttu-id="f137a-110">这样，您可以创建现有代码的纯函数版本。</span><span class="sxs-lookup"><span data-stu-id="f137a-110">In this way, you can create pure function versions of existing code.</span></span>
 
-<span data-ttu-id="cebff-111">本主题讨论什么是纯函数，什么不是纯函数。</span><span class="sxs-lookup"><span data-stu-id="cebff-111">This topic discusses what a pure function is and what it is not.</span></span> <span data-ttu-id="cebff-112">[教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教程演示如何操作 WordprocessingML 文档，并包括两个有关如何的示例使用纯函数进行重构。</span><span class="sxs-lookup"><span data-stu-id="cebff-112">The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.</span></span>
+<span data-ttu-id="f137a-111">本主题讨论什么是纯函数，什么不是纯函数。</span><span class="sxs-lookup"><span data-stu-id="f137a-111">This topic discusses what a pure function is and what it is not.</span></span> <span data-ttu-id="f137a-112">[教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教程演示如何操作 WordprocessingML 文档，并包括两个有关如何的示例使用纯函数进行重构。</span><span class="sxs-lookup"><span data-stu-id="f137a-112">The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.</span></span>
 
-## <a name="eliminating-side-effects-and-external-dependencies"></a><span data-ttu-id="cebff-113">消除副作用和外部依赖项</span><span class="sxs-lookup"><span data-stu-id="cebff-113">Eliminating Side Effects and External Dependencies</span></span>
+## <a name="eliminating-side-effects-and-external-dependencies"></a><span data-ttu-id="f137a-113">消除副作用和外部依赖项</span><span class="sxs-lookup"><span data-stu-id="f137a-113">Eliminating Side Effects and External Dependencies</span></span>
 
-<span data-ttu-id="cebff-114">下面的示例对比两个非纯函数和一个纯函数。</span><span class="sxs-lookup"><span data-stu-id="cebff-114">The following examples contrast two non-pure functions and a pure function.</span></span>
+<span data-ttu-id="f137a-114">下面的示例对比两个非纯函数和一个纯函数。</span><span class="sxs-lookup"><span data-stu-id="f137a-114">The following examples contrast two non-pure functions and a pure function.</span></span>
 
-### <a name="non-pure-function-that-changes-a-class-member"></a><span data-ttu-id="cebff-115">可更改类成员的非纯函数</span><span class="sxs-lookup"><span data-stu-id="cebff-115">Non-Pure Function that Changes a Class Member</span></span>
+### <a name="non-pure-function-that-changes-a-class-member"></a><span data-ttu-id="f137a-115">可更改类成员的非纯函数</span><span class="sxs-lookup"><span data-stu-id="f137a-115">Non-Pure Function that Changes a Class Member</span></span>
 
-<span data-ttu-id="cebff-116">在下面的代码中，`HyphenatedConcat` 函数不是纯函数，因为它修改了类中的 `aMember` 数据成员：</span><span class="sxs-lookup"><span data-stu-id="cebff-116">In the following code, the `HyphenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:</span></span>
+<span data-ttu-id="f137a-116">在下面的代码中，`HyphenatedConcat` 函数不是纯函数，因为它修改了类中的 `aMember` 数据成员：</span><span class="sxs-lookup"><span data-stu-id="f137a-116">In the following code, the `HyphenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:</span></span>
 
 ```vb
 Module Module1
@@ -46,17 +46,17 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="cebff-117">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="cebff-117">This code produces the following output:</span></span>
+<span data-ttu-id="f137a-117">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="f137a-117">This code produces the following output:</span></span>
 
 ```
 StringOne-StringTwo
 ```
 
-<span data-ttu-id="cebff-118">请注意，它是不相关正在修改的数据具有`public`或`private`访问或者是`shared`成员还是实例成员。</span><span class="sxs-lookup"><span data-stu-id="cebff-118">Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member.</span></span> <span data-ttu-id="cebff-119">纯函数不会更改函数以外的任何数据。</span><span class="sxs-lookup"><span data-stu-id="cebff-119">A pure function does not change any data outside of the function.</span></span>
+<span data-ttu-id="f137a-118">请注意，它是不相关正在修改的数据具有`public`或`private`访问或者是`shared`成员还是实例成员。</span><span class="sxs-lookup"><span data-stu-id="f137a-118">Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member.</span></span> <span data-ttu-id="f137a-119">纯函数不会更改函数以外的任何数据。</span><span class="sxs-lookup"><span data-stu-id="f137a-119">A pure function does not change any data outside of the function.</span></span>
 
-### <a name="non-pure-function-that-changes-an-argument"></a><span data-ttu-id="cebff-120">可更改参数的非纯函数</span><span class="sxs-lookup"><span data-stu-id="cebff-120">Non-Pure Function that Changes an Argument</span></span>
+### <a name="non-pure-function-that-changes-an-argument"></a><span data-ttu-id="f137a-120">可更改参数的非纯函数</span><span class="sxs-lookup"><span data-stu-id="f137a-120">Non-Pure Function that Changes an Argument</span></span>
 
-<span data-ttu-id="cebff-121">此外，此同一个函数的下面版本不是纯函数，因为它修改了其参数 `sb` 的内容。</span><span class="sxs-lookup"><span data-stu-id="cebff-121">Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.</span></span>
+<span data-ttu-id="f137a-121">此外，此同一个函数的下面版本不是纯函数，因为它修改了其参数 `sb` 的内容。</span><span class="sxs-lookup"><span data-stu-id="f137a-121">Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.</span></span>
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="cebff-122">此版本的程序生成的输出与第一个版本相同，因为 `HyphenatedConcat` 函数已通过调用 <xref:System.Text.StringBuilder.Append%2A> 成员函数而更改了其第一个参数的值（状态）。</span><span class="sxs-lookup"><span data-stu-id="cebff-122">This version of the program produces the same output as the first version, because the `HyphenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function.</span></span> <span data-ttu-id="cebff-123">请注意，即使 `HyphenatedConcat` 实际上使用了按值调用参数传递，也会发生此更改。</span><span class="sxs-lookup"><span data-stu-id="cebff-123">Note that this alteration occurs despite that fact that `HyphenatedConcat` uses call-by-value parameter passing.</span></span>
+<span data-ttu-id="f137a-122">此版本的程序生成的输出与第一个版本相同，因为 `HyphenatedConcat` 函数已通过调用 <xref:System.Text.StringBuilder.Append%2A> 成员函数而更改了其第一个参数的值（状态）。</span><span class="sxs-lookup"><span data-stu-id="f137a-122">This version of the program produces the same output as the first version, because the `HyphenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function.</span></span> <span data-ttu-id="f137a-123">请注意，即使 `HyphenatedConcat` 实际上使用了按值调用参数传递，也会发生此更改。</span><span class="sxs-lookup"><span data-stu-id="f137a-123">Note that this alteration occurs despite that fact that `HyphenatedConcat` uses call-by-value parameter passing.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="cebff-124">对于引用类型，按值传递参数会得到对所传递对象的引用的副本。</span><span class="sxs-lookup"><span data-stu-id="cebff-124">For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed.</span></span> <span data-ttu-id="cebff-125">此副本与原始引用一样，仍与同一个实例数据关联（除非为引用变量分配新对象）。</span><span class="sxs-lookup"><span data-stu-id="cebff-125">This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object).</span></span> <span data-ttu-id="cebff-126">函数修改参数不一定需要按引用调用。</span><span class="sxs-lookup"><span data-stu-id="cebff-126">Call-by-reference is not necessarily required for a function to modify a parameter.</span></span>
+> <span data-ttu-id="f137a-124">对于引用类型，按值传递参数会得到对所传递对象的引用的副本。</span><span class="sxs-lookup"><span data-stu-id="f137a-124">For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed.</span></span> <span data-ttu-id="f137a-125">此副本与原始引用一样，仍与同一个实例数据关联（除非为引用变量分配新对象）。</span><span class="sxs-lookup"><span data-stu-id="f137a-125">This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object).</span></span> <span data-ttu-id="f137a-126">函数修改参数不一定需要按引用调用。</span><span class="sxs-lookup"><span data-stu-id="f137a-126">Call-by-reference is not necessarily required for a function to modify a parameter.</span></span>
 
-### <a name="pure-function"></a><span data-ttu-id="cebff-127">纯函数</span><span class="sxs-lookup"><span data-stu-id="cebff-127">Pure Function</span></span>
+### <a name="pure-function"></a><span data-ttu-id="f137a-127">纯函数</span><span class="sxs-lookup"><span data-stu-id="f137a-127">Pure Function</span></span>
 
-<span data-ttu-id="cebff-128">下面版本的程序演示如何将 `HyphenatedConcat` 函数作为纯函数实现。</span><span class="sxs-lookup"><span data-stu-id="cebff-128">This next version of the program hows how to implement the `HyphenatedConcat` function as a pure function.</span></span>
+<span data-ttu-id="f137a-128">下面版本的程序演示如何将 `HyphenatedConcat` 函数作为纯函数实现。</span><span class="sxs-lookup"><span data-stu-id="f137a-128">This next version of the program hows how to implement the `HyphenatedConcat` function as a pure function.</span></span>
 
 ```vb
 Module Module1
@@ -95,17 +95,17 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="cebff-129">此版本同样生成相同的输出行：`StringOne-StringTwo`。</span><span class="sxs-lookup"><span data-stu-id="cebff-129">Again, this version produces the same line of output: `StringOne-StringTwo`.</span></span> <span data-ttu-id="cebff-130">请注意保留串联值，它存储在中间变量 `s2` 中。</span><span class="sxs-lookup"><span data-stu-id="cebff-130">Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.</span></span>
+<span data-ttu-id="f137a-129">此版本同样生成相同的输出行：`StringOne-StringTwo`。</span><span class="sxs-lookup"><span data-stu-id="f137a-129">Again, this version produces the same line of output: `StringOne-StringTwo`.</span></span> <span data-ttu-id="f137a-130">请注意保留串联值，它存储在中间变量 `s2` 中。</span><span class="sxs-lookup"><span data-stu-id="f137a-130">Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.</span></span>
 
-<span data-ttu-id="cebff-131">一种非常实用的方法是编写本地不纯（即声明和修改本地变量）但在全局为纯的函数。</span><span class="sxs-lookup"><span data-stu-id="cebff-131">One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure.</span></span> <span data-ttu-id="cebff-132">这些函数具有许多需要的可组合特性，但舍弃了一些较为繁复的函数编程语法，如在使用简单的循环即可完成同样操作时必须使用递归。</span><span class="sxs-lookup"><span data-stu-id="cebff-132">Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.</span></span>
+<span data-ttu-id="f137a-131">一种非常实用的方法是编写本地不纯（即声明和修改本地变量）但在全局为纯的函数。</span><span class="sxs-lookup"><span data-stu-id="f137a-131">One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure.</span></span> <span data-ttu-id="f137a-132">这些函数具有许多需要的可组合特性，但舍弃了一些较为繁复的函数编程语法，如在使用简单的循环即可完成同样操作时必须使用递归。</span><span class="sxs-lookup"><span data-stu-id="f137a-132">Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.</span></span>
 
-## <a name="standard-query-operators"></a><span data-ttu-id="cebff-133">标准查询运算符</span><span class="sxs-lookup"><span data-stu-id="cebff-133">Standard Query Operators</span></span>
+## <a name="standard-query-operators"></a><span data-ttu-id="f137a-133">标准查询运算符</span><span class="sxs-lookup"><span data-stu-id="f137a-133">Standard Query Operators</span></span>
 
-<span data-ttu-id="cebff-134">标准查询运算符的重要特性是它们以纯函数的形式实现。</span><span class="sxs-lookup"><span data-stu-id="cebff-134">An important characteristic of the standard query operators is that they are implemented as pure functions.</span></span>
+<span data-ttu-id="f137a-134">标准查询运算符的重要特性是它们以纯函数的形式实现。</span><span class="sxs-lookup"><span data-stu-id="f137a-134">An important characteristic of the standard query operators is that they are implemented as pure functions.</span></span>
 
-<span data-ttu-id="cebff-135">有关详细信息，请参阅[标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="cebff-135">For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span></span>
+<span data-ttu-id="f137a-135">有关详细信息，请参阅[标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="f137a-135">For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="cebff-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="cebff-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f137a-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="f137a-136">See also</span></span>
 
-- [<span data-ttu-id="cebff-137">纯功能转换 (Visual Basic) 简介</span><span class="sxs-lookup"><span data-stu-id="cebff-137">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [<span data-ttu-id="cebff-138">函数编程与命令式编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cebff-138">Functional Programming vs. Imperative Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [<span data-ttu-id="f137a-137">纯功能转换 (Visual Basic) 简介</span><span class="sxs-lookup"><span data-stu-id="f137a-137">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [<span data-ttu-id="f137a-138">函数编程与命令式编程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f137a-138">Functional Programming vs. Imperative Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

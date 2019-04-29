@@ -12,32 +12,32 @@ helpviewer_keywords:
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: KrzysztofCwalina
 ms.openlocfilehash: d0a2f11b53f50f2ec2f301f7b88df65e1cd7b811
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762041"
 ---
-# <a name="static-class-design"></a><span data-ttu-id="a3fc3-102">静态类设计</span><span class="sxs-lookup"><span data-stu-id="a3fc3-102">Static Class Design</span></span>
-<span data-ttu-id="a3fc3-103">静态类的定义为：仅包含静态成员的类 (当然除了继承自<xref:System.Object?displayProperty=nameWithType> 的实例成员和可能是私有的构造函数)。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-103">A static class is defined as a class that contains only static members (of course besides the instance members inherited from <xref:System.Object?displayProperty=nameWithType> and possibly a private constructor).</span></span> <span data-ttu-id="a3fc3-104">某些语言提供对静态类的内置支持。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-104">Some languages provide built-in support for static classes.</span></span> <span data-ttu-id="a3fc3-105">在 C# 2.0 及更高版本中，当类声明为静态时，它是密封、抽象的，并且不能覆盖或声明实例成员。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-105">In C# 2.0 and later, when a class is declared to be static, it is sealed, abstract, and no instance members can be overridden or declared.</span></span>  
+# <a name="static-class-design"></a><span data-ttu-id="9e71c-102">静态类设计</span><span class="sxs-lookup"><span data-stu-id="9e71c-102">Static Class Design</span></span>
+<span data-ttu-id="9e71c-103">静态类的定义为：仅包含静态成员的类 (当然除了继承自<xref:System.Object?displayProperty=nameWithType> 的实例成员和可能是私有的构造函数)。</span><span class="sxs-lookup"><span data-stu-id="9e71c-103">A static class is defined as a class that contains only static members (of course besides the instance members inherited from <xref:System.Object?displayProperty=nameWithType> and possibly a private constructor).</span></span> <span data-ttu-id="9e71c-104">某些语言提供对静态类的内置支持。</span><span class="sxs-lookup"><span data-stu-id="9e71c-104">Some languages provide built-in support for static classes.</span></span> <span data-ttu-id="9e71c-105">在 C# 2.0 及更高版本中，当类声明为静态时，它是密封、抽象的，并且不能覆盖或声明实例成员。</span><span class="sxs-lookup"><span data-stu-id="9e71c-105">In C# 2.0 and later, when a class is declared to be static, it is sealed, abstract, and no instance members can be overridden or declared.</span></span>  
   
- <span data-ttu-id="a3fc3-106">静态类是纯面向对象设计和简单性之间的妥协。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-106">Static classes are a compromise between pure object-oriented design and simplicity.</span></span> <span data-ttu-id="a3fc3-107">它们通常用于提供其他操作的快捷方式（例如<xref:System.IO.File?displayProperty=nameWithType> ），扩展方法的持有者，或完全面向对象的包装器不合适的功能（例如<xref:System.Environment?displayProperty=nameWithType> ）。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-107">They are commonly used to provide shortcuts to other operations (such as <xref:System.IO.File?displayProperty=nameWithType>), holders of extension methods, or functionality for which a full object-oriented wrapper is unwarranted (such as <xref:System.Environment?displayProperty=nameWithType>).</span></span>  
+ <span data-ttu-id="9e71c-106">静态类是纯面向对象设计和简单性之间的妥协。</span><span class="sxs-lookup"><span data-stu-id="9e71c-106">Static classes are a compromise between pure object-oriented design and simplicity.</span></span> <span data-ttu-id="9e71c-107">它们通常用于提供其他操作的快捷方式（例如<xref:System.IO.File?displayProperty=nameWithType> ），扩展方法的持有者，或完全面向对象的包装器不合适的功能（例如<xref:System.Environment?displayProperty=nameWithType> ）。</span><span class="sxs-lookup"><span data-stu-id="9e71c-107">They are commonly used to provide shortcuts to other operations (such as <xref:System.IO.File?displayProperty=nameWithType>), holders of extension methods, or functionality for which a full object-oriented wrapper is unwarranted (such as <xref:System.Environment?displayProperty=nameWithType>).</span></span>  
   
- <span data-ttu-id="a3fc3-108">**✓ 务必** 谨慎使用静态类。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-108">**✓ DO** use static classes sparingly.</span></span>  
+ <span data-ttu-id="9e71c-108">**✓ 务必** 谨慎使用静态类。</span><span class="sxs-lookup"><span data-stu-id="9e71c-108">**✓ DO** use static classes sparingly.</span></span>  
   
- <span data-ttu-id="a3fc3-109">静态类应仅用作框架的面向对象核心的支持类。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-109">Static classes should be used only as supporting classes for the object-oriented core of the framework.</span></span>  
+ <span data-ttu-id="9e71c-109">静态类应仅用作框架的面向对象核心的支持类。</span><span class="sxs-lookup"><span data-stu-id="9e71c-109">Static classes should be used only as supporting classes for the object-oriented core of the framework.</span></span>  
   
- <span data-ttu-id="a3fc3-110">**X 切忌** 将静态类视为杂项存储桶。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-110">**X DO NOT** treat static classes as a miscellaneous bucket.</span></span>  
+ <span data-ttu-id="9e71c-110">**X 切忌** 将静态类视为杂项存储桶。</span><span class="sxs-lookup"><span data-stu-id="9e71c-110">**X DO NOT** treat static classes as a miscellaneous bucket.</span></span>  
   
- <span data-ttu-id="a3fc3-111">**X 切忌** 在静态类中声明或覆盖实例成员。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-111">**X DO NOT** declare or override instance members in static classes.</span></span>  
+ <span data-ttu-id="9e71c-111">**X 切忌** 在静态类中声明或覆盖实例成员。</span><span class="sxs-lookup"><span data-stu-id="9e71c-111">**X DO NOT** declare or override instance members in static classes.</span></span>  
   
- <span data-ttu-id="a3fc3-112">**✓ 务必** 将静态类声明为密封，抽象，并添加一个私有实例构造函数，如果您的编程语言没有内置静态类支持的话。</span><span class="sxs-lookup"><span data-stu-id="a3fc3-112">**✓ DO** declare static classes as sealed, abstract, and add a private instance constructor if your programming language does not have built-in support for static classes.</span></span>  
+ <span data-ttu-id="9e71c-112">**✓ 务必** 将静态类声明为密封，抽象，并添加一个私有实例构造函数，如果您的编程语言没有内置静态类支持的话。</span><span class="sxs-lookup"><span data-stu-id="9e71c-112">**✓ DO** declare static classes as sealed, abstract, and add a private instance constructor if your programming language does not have built-in support for static classes.</span></span>  
   
- <span data-ttu-id="a3fc3-113">*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*</span><span class="sxs-lookup"><span data-stu-id="a3fc3-113">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="9e71c-113">*部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*</span><span class="sxs-lookup"><span data-stu-id="9e71c-113">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="a3fc3-114">*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="a3fc3-114">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="9e71c-114">*经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="9e71c-114">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3fc3-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3fc3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e71c-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e71c-115">See also</span></span>
 
-- [<span data-ttu-id="a3fc3-116">类型设计准则</span><span class="sxs-lookup"><span data-stu-id="a3fc3-116">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)
-- [<span data-ttu-id="a3fc3-117">框架设计指南</span><span class="sxs-lookup"><span data-stu-id="a3fc3-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="9e71c-116">类型设计准则</span><span class="sxs-lookup"><span data-stu-id="9e71c-116">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)
+- [<span data-ttu-id="9e71c-117">框架设计指南</span><span class="sxs-lookup"><span data-stu-id="9e71c-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

@@ -1,80 +1,80 @@
 ---
-title: 如何：生成声明感知 ASP.NET 应用程序使用基于窗体的身份验证
+title: 如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
 ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792738"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a><span data-ttu-id="72507-102">如何：生成声明感知 ASP.NET 应用程序使用基于窗体的身份验证</span><span class="sxs-lookup"><span data-stu-id="72507-102">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a><span data-ttu-id="a581c-102">如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-102">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>
 
-## <a name="applies-to"></a><span data-ttu-id="72507-103">适用于</span><span class="sxs-lookup"><span data-stu-id="72507-103">Applies To</span></span>
+## <a name="applies-to"></a><span data-ttu-id="a581c-103">适用于</span><span class="sxs-lookup"><span data-stu-id="a581c-103">Applies To</span></span>
 
-- <span data-ttu-id="72507-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="72507-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>
+- <span data-ttu-id="a581c-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="a581c-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>
 
-- <span data-ttu-id="72507-105">ASP.NET® Web 窗体</span><span class="sxs-lookup"><span data-stu-id="72507-105">ASP.NET® Web Forms</span></span>
+- <span data-ttu-id="a581c-105">ASP.NET® Web 窗体</span><span class="sxs-lookup"><span data-stu-id="a581c-105">ASP.NET® Web Forms</span></span>
 
-## <a name="summary"></a><span data-ttu-id="72507-106">总结</span><span class="sxs-lookup"><span data-stu-id="72507-106">Summary</span></span>
+## <a name="summary"></a><span data-ttu-id="a581c-106">总结</span><span class="sxs-lookup"><span data-stu-id="a581c-106">Summary</span></span>
 
-<span data-ttu-id="72507-107">本操作说明提供了创建使用 Forms 身份验证的简单声明感知 ASP.NET Web 窗体应用程序的详细分步程序。</span><span class="sxs-lookup"><span data-stu-id="72507-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Forms authentication.</span></span> <span data-ttu-id="72507-108">它还提供关于如何测试应用程序以验证用户使用 Forms 身份验证登录时是否呈现声明的说明。</span><span class="sxs-lookup"><span data-stu-id="72507-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in with Forms authentication.</span></span>
+<span data-ttu-id="a581c-107">本操作说明提供了创建使用 Forms 身份验证的简单声明感知 ASP.NET Web 窗体应用程序的详细分步程序。</span><span class="sxs-lookup"><span data-stu-id="a581c-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Forms authentication.</span></span> <span data-ttu-id="a581c-108">它还提供关于如何测试应用程序以验证用户使用 Forms 身份验证登录时是否呈现声明的说明。</span><span class="sxs-lookup"><span data-stu-id="a581c-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in with Forms authentication.</span></span>
 
-## <a name="contents"></a><span data-ttu-id="72507-109">内容</span><span class="sxs-lookup"><span data-stu-id="72507-109">Contents</span></span>
+## <a name="contents"></a><span data-ttu-id="a581c-109">内容</span><span class="sxs-lookup"><span data-stu-id="a581c-109">Contents</span></span>
 
-- <span data-ttu-id="72507-110">目标</span><span class="sxs-lookup"><span data-stu-id="72507-110">Objectives</span></span>
+- <span data-ttu-id="a581c-110">目标</span><span class="sxs-lookup"><span data-stu-id="a581c-110">Objectives</span></span>
 
-- <span data-ttu-id="72507-111">概述</span><span class="sxs-lookup"><span data-stu-id="72507-111">Overview</span></span>
+- <span data-ttu-id="a581c-111">概述</span><span class="sxs-lookup"><span data-stu-id="a581c-111">Overview</span></span>
 
-- <span data-ttu-id="72507-112">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="72507-112">Summary of Steps</span></span>
+- <span data-ttu-id="a581c-112">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="a581c-112">Summary of Steps</span></span>
 
-- <span data-ttu-id="72507-113">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
+- <span data-ttu-id="a581c-113">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
 
-- <span data-ttu-id="72507-114">步骤 2 – 为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
+- <span data-ttu-id="a581c-114">步骤 2 – 为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
 
-- <span data-ttu-id="72507-115">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="72507-115">Step 3 – Test Your Solution</span></span>
+- <span data-ttu-id="a581c-115">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="a581c-115">Step 3 – Test Your Solution</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="72507-116">目标</span><span class="sxs-lookup"><span data-stu-id="72507-116">Objectives</span></span>
+## <a name="objectives"></a><span data-ttu-id="a581c-116">目标</span><span class="sxs-lookup"><span data-stu-id="a581c-116">Objectives</span></span>
 
-- <span data-ttu-id="72507-117">为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-117">Configure an ASP.NET Web Forms application for claims using Forms authentication</span></span>
+- <span data-ttu-id="a581c-117">为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-117">Configure an ASP.NET Web Forms application for claims using Forms authentication</span></span>
 
-- <span data-ttu-id="72507-118">测试 ASP.NET Web 窗体应用程序，了解它是否正常工作</span><span class="sxs-lookup"><span data-stu-id="72507-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>
+- <span data-ttu-id="a581c-118">测试 ASP.NET Web 窗体应用程序，了解它是否正常工作</span><span class="sxs-lookup"><span data-stu-id="a581c-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>
 
-## <a name="overview"></a><span data-ttu-id="72507-119">概述</span><span class="sxs-lookup"><span data-stu-id="72507-119">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="a581c-119">概述</span><span class="sxs-lookup"><span data-stu-id="a581c-119">Overview</span></span>
 
-<span data-ttu-id="72507-120">在 .NET 4.5 中，已将 WIF 及其基于声明的授权作为 Framework 的重要组成部分包括在内。</span><span class="sxs-lookup"><span data-stu-id="72507-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="72507-121">以前，如果想要来自 ASP.NET 用户的声明，需要安装 WIF，然后将接口转换为如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User` 的主体对象。</span><span class="sxs-lookup"><span data-stu-id="72507-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="72507-122">现在，声明由这些主体对象自动提供。</span><span class="sxs-lookup"><span data-stu-id="72507-122">Now, claims are served automatically by these Principal objects.</span></span>
+<span data-ttu-id="a581c-120">在 .NET 4.5 中，已将 WIF 及其基于声明的授权作为 Framework 的重要组成部分包括在内。</span><span class="sxs-lookup"><span data-stu-id="a581c-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="a581c-121">以前，如果想要来自 ASP.NET 用户的声明，需要安装 WIF，然后将接口转换为如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User` 的主体对象。</span><span class="sxs-lookup"><span data-stu-id="a581c-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="a581c-122">现在，声明由这些主体对象自动提供。</span><span class="sxs-lookup"><span data-stu-id="a581c-122">Now, claims are served automatically by these Principal objects.</span></span>
 
-<span data-ttu-id="72507-123">Forms 身份验证已因包括在 .NET 4.5 中而获益，因为所有通过窗体进行身份验证的用户都自动具有与他们相关的声明。</span><span class="sxs-lookup"><span data-stu-id="72507-123">Forms authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Forms automatically have claims associated with them.</span></span> <span data-ttu-id="72507-124">如本操作说明所示，可在使用 Forms 身份验证的 ASP.NET 应用程序中立即开始使用这些声明。</span><span class="sxs-lookup"><span data-stu-id="72507-124">You can begin using these claims immediately in an ASP.NET application that uses Forms authentication, as this How-To demonstrates.</span></span>
+<span data-ttu-id="a581c-123">Forms 身份验证已因包括在 .NET 4.5 中而获益，因为所有通过窗体进行身份验证的用户都自动具有与他们相关的声明。</span><span class="sxs-lookup"><span data-stu-id="a581c-123">Forms authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Forms automatically have claims associated with them.</span></span> <span data-ttu-id="a581c-124">如本操作说明所示，可在使用 Forms 身份验证的 ASP.NET 应用程序中立即开始使用这些声明。</span><span class="sxs-lookup"><span data-stu-id="a581c-124">You can begin using these claims immediately in an ASP.NET application that uses Forms authentication, as this How-To demonstrates.</span></span>
 
-## <a name="summary-of-steps"></a><span data-ttu-id="72507-125">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="72507-125">Summary of Steps</span></span>
+## <a name="summary-of-steps"></a><span data-ttu-id="a581c-125">步骤摘要</span><span class="sxs-lookup"><span data-stu-id="a581c-125">Summary of Steps</span></span>
 
-- <span data-ttu-id="72507-126">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
+- <span data-ttu-id="a581c-126">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
 
-- <span data-ttu-id="72507-127">步骤 2 – 为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
+- <span data-ttu-id="a581c-127">步骤 2 – 为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
 
-- <span data-ttu-id="72507-128">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="72507-128">Step 3 – Test Your Solution</span></span>
+- <span data-ttu-id="a581c-128">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="a581c-128">Step 3 – Test Your Solution</span></span>
 
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="72507-129">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="a581c-129">步骤 1 – 创建简单的 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>
 
-<span data-ttu-id="72507-130">在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="72507-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>
+<span data-ttu-id="a581c-130">在此步骤中，将创建一个新的 ASP.NET Web 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="a581c-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>
 
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="72507-131">创建一个简单 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-131">To create a simple ASP.NET application</span></span>
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="a581c-131">创建一个简单 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-131">To create a simple ASP.NET application</span></span>
 
-1. <span data-ttu-id="72507-132">启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。</span><span class="sxs-lookup"><span data-stu-id="72507-132">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>
+1. <span data-ttu-id="a581c-132">启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。</span><span class="sxs-lookup"><span data-stu-id="a581c-132">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>
 
-2. <span data-ttu-id="72507-133">在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。</span><span class="sxs-lookup"><span data-stu-id="72507-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>
+2. <span data-ttu-id="a581c-133">在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。</span><span class="sxs-lookup"><span data-stu-id="a581c-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>
 
-3. <span data-ttu-id="72507-134">在“名称”中，输入 `TestApp`，然后按“确定”。</span><span class="sxs-lookup"><span data-stu-id="72507-134">In **Name**, enter `TestApp` and press **OK**.</span></span>
+3. <span data-ttu-id="a581c-134">在“名称”中，输入 `TestApp`，然后按“确定”。</span><span class="sxs-lookup"><span data-stu-id="a581c-134">In **Name**, enter `TestApp` and press **OK**.</span></span>
 
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="72507-135">步骤 2 – 为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-135">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="a581c-135">步骤 2 – 为使用 Forms 身份验证的声明配置 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-135">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>
 
-<span data-ttu-id="72507-136">在此步骤中，将向“Web.config”配置文件添加一个配置项并编辑“Default.aspx”文件，以便显示帐户的声明信息。</span><span class="sxs-lookup"><span data-stu-id="72507-136">In this step you will add a configuration entry to the *Web.config* configuration file and edit the *Default.aspx* file to display claims information for an account.</span></span>
+<span data-ttu-id="a581c-136">在此步骤中，将向“Web.config”配置文件添加一个配置项并编辑“Default.aspx”文件，以便显示帐户的声明信息。</span><span class="sxs-lookup"><span data-stu-id="a581c-136">In this step you will add a configuration entry to the *Web.config* configuration file and edit the *Default.aspx* file to display claims information for an account.</span></span>
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a><span data-ttu-id="72507-137">为使用 Forms 身份验证的声明配置 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-137">To configure ASP.NET application for claims using Forms authentication</span></span>
+#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a><span data-ttu-id="a581c-137">为使用 Forms 身份验证的声明配置 ASP.NET 应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-137">To configure ASP.NET application for claims using Forms authentication</span></span>
 
-1. <span data-ttu-id="72507-138">在“Default.aspx”文件中，将现有标记替换为以下内容：</span><span class="sxs-lookup"><span data-stu-id="72507-138">In the *Default.aspx* file, replace the existing markup with the following:</span></span>
+1. <span data-ttu-id="a581c-138">在“Default.aspx”文件中，将现有标记替换为以下内容：</span><span class="sxs-lookup"><span data-stu-id="a581c-138">In the *Default.aspx* file, replace the existing markup with the following:</span></span>
 
     ```aspx
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TestApp._Default" %>
@@ -93,9 +93,9 @@ ms.locfileid: "57354747"
     </asp:Content>
     ```
 
-    <span data-ttu-id="72507-139">此步骤将向“Default.aspx”页添加 GridView 控件，该页将填充从 Forms 身份验证检索的声明。</span><span class="sxs-lookup"><span data-stu-id="72507-139">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Forms authentication.</span></span>
+    <span data-ttu-id="a581c-139">此步骤将向“Default.aspx”页添加 GridView 控件，该页将填充从 Forms 身份验证检索的声明。</span><span class="sxs-lookup"><span data-stu-id="a581c-139">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Forms authentication.</span></span>
 
-2. <span data-ttu-id="72507-140">保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。</span><span class="sxs-lookup"><span data-stu-id="72507-140">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="72507-141">将现有代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="72507-141">Replace the existing code with the following:</span></span>
+2. <span data-ttu-id="a581c-140">保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。</span><span class="sxs-lookup"><span data-stu-id="a581c-140">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="a581c-141">将现有代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="a581c-141">Replace the existing code with the following:</span></span>
 
     ```csharp
     using System;
@@ -120,16 +120,16 @@ ms.locfileid: "57354747"
     }
     ```
 
-    <span data-ttu-id="72507-142">以上代码将显示有关已通过身份验证的用户（包括由 Forms 身份验证标识的用户）的声明。</span><span class="sxs-lookup"><span data-stu-id="72507-142">The above code will display claims about an authenticated user, including users identified by Forms authentication.</span></span>
+    <span data-ttu-id="a581c-142">以上代码将显示有关已通过身份验证的用户（包括由 Forms 身份验证标识的用户）的声明。</span><span class="sxs-lookup"><span data-stu-id="a581c-142">The above code will display claims about an authenticated user, including users identified by Forms authentication.</span></span>
 
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="72507-143">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="72507-143">Step 3 – Test Your Solution</span></span>
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="a581c-143">步骤 3 - 测试你的解决方案</span><span class="sxs-lookup"><span data-stu-id="a581c-143">Step 3 – Test Your Solution</span></span>
 
-<span data-ttu-id="72507-144">此步骤中将测试 ASP.NET Web 窗体应用程序，并验证用户使用 Forms 身份验证登录时是否呈现声明。</span><span class="sxs-lookup"><span data-stu-id="72507-144">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>
+<span data-ttu-id="a581c-144">此步骤中将测试 ASP.NET Web 窗体应用程序，并验证用户使用 Forms 身份验证登录时是否呈现声明。</span><span class="sxs-lookup"><span data-stu-id="a581c-144">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="72507-145">为使用 Forms 身份验证的声明测试 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="72507-145">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="a581c-145">为使用 Forms 身份验证的声明测试 ASP.NET Web 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="a581c-145">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>
 
-1. <span data-ttu-id="72507-146">按 F5 生成并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="72507-146">Press **F5** to build and run the application.</span></span> <span data-ttu-id="72507-147">将显示“Default.aspx”，其页面右上角具有“注册”和“登录”链接。</span><span class="sxs-lookup"><span data-stu-id="72507-147">You should be presented with *Default.aspx*, which has **Register** and **Log in** links in the top right of the page.</span></span> <span data-ttu-id="72507-148">单击“注册”。</span><span class="sxs-lookup"><span data-stu-id="72507-148">Click **Register**.</span></span>
+1. <span data-ttu-id="a581c-146">按 F5 生成并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="a581c-146">Press **F5** to build and run the application.</span></span> <span data-ttu-id="a581c-147">将显示“Default.aspx”，其页面右上角具有“注册”和“登录”链接。</span><span class="sxs-lookup"><span data-stu-id="a581c-147">You should be presented with *Default.aspx*, which has **Register** and **Log in** links in the top right of the page.</span></span> <span data-ttu-id="a581c-148">单击“注册”。</span><span class="sxs-lookup"><span data-stu-id="a581c-148">Click **Register**.</span></span>
 
-2. <span data-ttu-id="72507-149">在“注册”页上，创建用户帐户，然后单击“注册”。</span><span class="sxs-lookup"><span data-stu-id="72507-149">On the **Register** page, create a user account, and then click **Register**.</span></span> <span data-ttu-id="72507-150">将使用 Forms 身份验证创建帐户，并将使你自动登录。</span><span class="sxs-lookup"><span data-stu-id="72507-150">Your account will be created using Forms authentication, and you will be automatically signed in.</span></span>
+2. <span data-ttu-id="a581c-149">在“注册”页上，创建用户帐户，然后单击“注册”。</span><span class="sxs-lookup"><span data-stu-id="a581c-149">On the **Register** page, create a user account, and then click **Register**.</span></span> <span data-ttu-id="a581c-150">将使用 Forms 身份验证创建帐户，并将使你自动登录。</span><span class="sxs-lookup"><span data-stu-id="a581c-150">Your account will be created using Forms authentication, and you will be automatically signed in.</span></span>
 
-3. <span data-ttu-id="72507-151">已重定向到主页后，将看到一个位于标题“你的声明”下方的表格，它包含有关帐户的“颁发者”、“原始颁发者”、“类型”、“值”和“值类型”声明信息。</span><span class="sxs-lookup"><span data-stu-id="72507-151">After you have been redirected to the home page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span>
+3. <span data-ttu-id="a581c-151">已重定向到主页后，将看到一个位于标题“你的声明”下方的表格，它包含有关帐户的“颁发者”、“原始颁发者”、“类型”、“值”和“值类型”声明信息。</span><span class="sxs-lookup"><span data-stu-id="a581c-151">After you have been redirected to the home page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span>

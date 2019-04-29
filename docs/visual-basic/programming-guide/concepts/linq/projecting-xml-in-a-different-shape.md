@@ -3,23 +3,23 @@ title: 不同的形状 (Visual Basic 中) 中投影 XML
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766579"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="d0047-102">不同的形状 (Visual Basic 中) 中投影 XML</span><span class="sxs-lookup"><span data-stu-id="d0047-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
-<span data-ttu-id="d0047-103">本主题演示对形状不同于源 XML 的 XML 进行投影的示例。</span><span class="sxs-lookup"><span data-stu-id="d0047-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="513d0-102">不同的形状 (Visual Basic 中) 中投影 XML</span><span class="sxs-lookup"><span data-stu-id="513d0-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
+<span data-ttu-id="513d0-103">本主题演示对形状不同于源 XML 的 XML 进行投影的示例。</span><span class="sxs-lookup"><span data-stu-id="513d0-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="d0047-104">许多典型的 XML 转换由链接的查询组成，如本示例中所示。</span><span class="sxs-lookup"><span data-stu-id="d0047-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="d0047-105">一种很常见的做法是从某种格式的 XML 开始，将中间结果投影为匿名类型或命名类型的集合，最后将结果投影回与源 XML 形状完全不同的 XML。</span><span class="sxs-lookup"><span data-stu-id="d0047-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="513d0-104">许多典型的 XML 转换由链接的查询组成，如本示例中所示。</span><span class="sxs-lookup"><span data-stu-id="513d0-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="513d0-105">一种很常见的做法是从某种格式的 XML 开始，将中间结果投影为匿名类型或命名类型的集合，最后将结果投影回与源 XML 形状完全不同的 XML。</span><span class="sxs-lookup"><span data-stu-id="513d0-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d0047-106">示例</span><span class="sxs-lookup"><span data-stu-id="d0047-106">Example</span></span>  
- <span data-ttu-id="d0047-107">本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。</span><span class="sxs-lookup"><span data-stu-id="d0047-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="d0047-108">本示例还标识每个段落的样式和文本。</span><span class="sxs-lookup"><span data-stu-id="d0047-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="d0047-109">最后，本示例将以不同的形状投影 XML。</span><span class="sxs-lookup"><span data-stu-id="d0047-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="d0047-110">本示例以本教程中前面的一些示例为基础构建。</span><span class="sxs-lookup"><span data-stu-id="d0047-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="d0047-111">下面代码中的注释标识出了执行投影操作的新语句。</span><span class="sxs-lookup"><span data-stu-id="d0047-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="513d0-106">示例</span><span class="sxs-lookup"><span data-stu-id="513d0-106">Example</span></span>  
+ <span data-ttu-id="513d0-107">本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。</span><span class="sxs-lookup"><span data-stu-id="513d0-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="513d0-108">本示例还标识每个段落的样式和文本。</span><span class="sxs-lookup"><span data-stu-id="513d0-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="513d0-109">最后，本示例将以不同的形状投影 XML。</span><span class="sxs-lookup"><span data-stu-id="513d0-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="513d0-110">本示例以本教程中前面的一些示例为基础构建。</span><span class="sxs-lookup"><span data-stu-id="513d0-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="513d0-111">下面代码中的注释标识出了执行投影操作的新语句。</span><span class="sxs-lookup"><span data-stu-id="513d0-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="d0047-112">有关创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="d0047-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="513d0-112">有关创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="513d0-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="d0047-113">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="d0047-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="d0047-114">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="d0047-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="513d0-113">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="513d0-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="513d0-114">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="513d0-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="d0047-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="d0047-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="513d0-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="513d0-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -227,11 +227,11 @@ End Module
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="d0047-116">后续步骤</span><span class="sxs-lookup"><span data-stu-id="d0047-116">Next Steps</span></span>  
- <span data-ttu-id="d0047-117">下面的示例通过查询查找 Word 文档中的所有文本：</span><span class="sxs-lookup"><span data-stu-id="d0047-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="513d0-116">后续步骤</span><span class="sxs-lookup"><span data-stu-id="513d0-116">Next Steps</span></span>  
+ <span data-ttu-id="513d0-117">下面的示例通过查询查找 Word 文档中的所有文本：</span><span class="sxs-lookup"><span data-stu-id="513d0-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [<span data-ttu-id="d0047-118">查找 Word 文档 (Visual Basic 中) 中的文本</span><span class="sxs-lookup"><span data-stu-id="d0047-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [<span data-ttu-id="513d0-118">查找 Word 文档 (Visual Basic 中) 中的文本</span><span class="sxs-lookup"><span data-stu-id="513d0-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d0047-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="d0047-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="513d0-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="513d0-119">See also</span></span>
 
-- [<span data-ttu-id="d0047-120">教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容</span><span class="sxs-lookup"><span data-stu-id="d0047-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="513d0-120">教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容</span><span class="sxs-lookup"><span data-stu-id="513d0-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

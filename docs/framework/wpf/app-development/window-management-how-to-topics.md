@@ -7,29 +7,29 @@ helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
 ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788682"
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="74f65-102">窗口管理操作指南主题</span><span class="sxs-lookup"><span data-stu-id="74f65-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="74f65-103">以下主题说明如何管理[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。</span><span class="sxs-lookup"><span data-stu-id="74f65-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="1e963-102">窗口管理操作指南主题</span><span class="sxs-lookup"><span data-stu-id="1e963-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="1e963-103">以下主题说明如何管理[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。</span><span class="sxs-lookup"><span data-stu-id="1e963-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="74f65-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="74f65-104">In This Section</span></span>  
- [<span data-ttu-id="74f65-105">自动调整窗口大小以适应其中的内容</span><span class="sxs-lookup"><span data-stu-id="74f65-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="74f65-106">在应用程序中获取所有窗口</span><span class="sxs-lookup"><span data-stu-id="74f65-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="74f65-107">获取和设置主应用程序窗口</span><span class="sxs-lookup"><span data-stu-id="74f65-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="74f65-108">打开对话框</span><span class="sxs-lookup"><span data-stu-id="74f65-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="74f65-109">打开消息框</span><span class="sxs-lookup"><span data-stu-id="74f65-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
-  [<span data-ttu-id="74f65-110">打开窗口</span><span class="sxs-lookup"><span data-stu-id="74f65-110">Open a Window</span></span>](how-to-open-a-window.md)  
-  [<span data-ttu-id="74f65-111">返回对话框结果</span><span class="sxs-lookup"><span data-stu-id="74f65-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1e963-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="1e963-104">In This Section</span></span>  
+ [<span data-ttu-id="1e963-105">自动调整窗口大小以适应其中的内容</span><span class="sxs-lookup"><span data-stu-id="1e963-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="1e963-106">在应用程序中获取所有窗口</span><span class="sxs-lookup"><span data-stu-id="1e963-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="1e963-107">获取和设置主应用程序窗口</span><span class="sxs-lookup"><span data-stu-id="1e963-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="1e963-108">打开对话框</span><span class="sxs-lookup"><span data-stu-id="1e963-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="1e963-109">打开消息框</span><span class="sxs-lookup"><span data-stu-id="1e963-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
+  [<span data-ttu-id="1e963-110">打开窗口</span><span class="sxs-lookup"><span data-stu-id="1e963-110">Open a Window</span></span>](how-to-open-a-window.md)  
+  [<span data-ttu-id="1e963-111">返回对话框结果</span><span class="sxs-lookup"><span data-stu-id="1e963-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="74f65-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="74f65-112">Related Sections</span></span>  
- [<span data-ttu-id="74f65-113">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="74f65-113">Application Management Overview</span></span>](application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="1e963-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="1e963-112">Related Sections</span></span>  
+ [<span data-ttu-id="1e963-113">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="1e963-113">Application Management Overview</span></span>](application-management-overview.md)  
   
- [<span data-ttu-id="74f65-114">导航概述</span><span class="sxs-lookup"><span data-stu-id="74f65-114">Navigation Overview</span></span>](navigation-overview.md)  
+ [<span data-ttu-id="1e963-114">导航概述</span><span class="sxs-lookup"><span data-stu-id="1e963-114">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="74f65-115">承载</span><span class="sxs-lookup"><span data-stu-id="74f65-115">Hosting</span></span>](hosting-wpf-applications.md)  
+ [<span data-ttu-id="1e963-115">承载</span><span class="sxs-lookup"><span data-stu-id="1e963-115">Hosting</span></span>](hosting-wpf-applications.md)  
   
- [<span data-ttu-id="74f65-116">生成和部署</span><span class="sxs-lookup"><span data-stu-id="74f65-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="1e963-116">生成和部署</span><span class="sxs-lookup"><span data-stu-id="1e963-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

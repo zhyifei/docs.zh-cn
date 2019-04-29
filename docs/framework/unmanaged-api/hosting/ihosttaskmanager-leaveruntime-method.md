@@ -18,19 +18,19 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81da8052b79047933b4afc6d5686029465d83eba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796690"
 ---
-# <a name="ihosttaskmanagerleaveruntime-method"></a><span data-ttu-id="a8b74-102">IHostTaskManager::LeaveRuntime 方法</span><span class="sxs-lookup"><span data-stu-id="a8b74-102">IHostTaskManager::LeaveRuntime Method</span></span>
-<span data-ttu-id="a8b74-103">通知主机当前正在执行的任务是要保持公共语言运行时 (CLR)，然后输入非托管的代码。</span><span class="sxs-lookup"><span data-stu-id="a8b74-103">Notifies the host that the currently executing task is about to leave the common language runtime (CLR) and enter unmanaged code.</span></span>  
+# <a name="ihosttaskmanagerleaveruntime-method"></a><span data-ttu-id="b0819-102">IHostTaskManager::LeaveRuntime 方法</span><span class="sxs-lookup"><span data-stu-id="b0819-102">IHostTaskManager::LeaveRuntime Method</span></span>
+<span data-ttu-id="b0819-103">通知主机当前正在执行的任务是要保持公共语言运行时 (CLR)，然后输入非托管的代码。</span><span class="sxs-lookup"><span data-stu-id="b0819-103">Notifies the host that the currently executing task is about to leave the common language runtime (CLR) and enter unmanaged code.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="a8b74-104">相应地调用[ihosttaskmanager:: Enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)通知主机当前正在执行的任务重新进入托管的代码。</span><span class="sxs-lookup"><span data-stu-id="a8b74-104">A corresponding call to [IHostTaskManager::EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) notifies the host that the currently executing task is reentering managed code.</span></span>  
+>  <span data-ttu-id="b0819-104">相应地调用[ihosttaskmanager:: Enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)通知主机当前正在执行的任务重新进入托管的代码。</span><span class="sxs-lookup"><span data-stu-id="b0819-104">A corresponding call to [IHostTaskManager::EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) notifies the host that the currently executing task is reentering managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8b74-105">语法</span><span class="sxs-lookup"><span data-stu-id="a8b74-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0819-105">语法</span><span class="sxs-lookup"><span data-stu-id="b0819-105">Syntax</span></span>  
   
 ```  
 HRESULT LeaveRuntime (  
@@ -38,46 +38,46 @@ HRESULT LeaveRuntime (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a8b74-106">参数</span><span class="sxs-lookup"><span data-stu-id="a8b74-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b0819-106">参数</span><span class="sxs-lookup"><span data-stu-id="b0819-106">Parameters</span></span>  
  `target`  
- <span data-ttu-id="a8b74-107">[in]要调用的非托管函数的映射可移植可执行文件内的地址。</span><span class="sxs-lookup"><span data-stu-id="a8b74-107">[in] The address within the mapped portable executable file of the unmanaged function to be called.</span></span>  
+ <span data-ttu-id="b0819-107">[in]要调用的非托管函数的映射可移植可执行文件内的地址。</span><span class="sxs-lookup"><span data-stu-id="b0819-107">[in] The address within the mapped portable executable file of the unmanaged function to be called.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a8b74-108">返回值</span><span class="sxs-lookup"><span data-stu-id="a8b74-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b0819-108">返回值</span><span class="sxs-lookup"><span data-stu-id="b0819-108">Return Value</span></span>  
   
-|<span data-ttu-id="a8b74-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a8b74-109">HRESULT</span></span>|<span data-ttu-id="a8b74-110">描述</span><span class="sxs-lookup"><span data-stu-id="a8b74-110">Description</span></span>|  
+|<span data-ttu-id="b0819-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b0819-109">HRESULT</span></span>|<span data-ttu-id="b0819-110">描述</span><span class="sxs-lookup"><span data-stu-id="b0819-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a8b74-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a8b74-111">S_OK</span></span>|<span data-ttu-id="a8b74-112">`LeaveRuntime` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="a8b74-112">`LeaveRuntime` returned successfully.</span></span>|  
-|<span data-ttu-id="a8b74-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a8b74-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a8b74-114">CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="a8b74-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a8b74-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a8b74-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a8b74-116">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="a8b74-116">The call timed out.</span></span>|  
-|<span data-ttu-id="a8b74-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a8b74-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a8b74-118">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="a8b74-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a8b74-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a8b74-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a8b74-120">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="a8b74-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a8b74-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a8b74-121">E_FAIL</span></span>|<span data-ttu-id="a8b74-122">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="a8b74-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a8b74-123">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="a8b74-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a8b74-124">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="a8b74-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="a8b74-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="a8b74-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="a8b74-126">没有足够的内存是可用于完成请求的分配。</span><span class="sxs-lookup"><span data-stu-id="a8b74-126">Not enough memory is available to complete the requested allocation.</span></span>|  
+|<span data-ttu-id="b0819-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b0819-111">S_OK</span></span>|<span data-ttu-id="b0819-112">`LeaveRuntime` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="b0819-112">`LeaveRuntime` returned successfully.</span></span>|  
+|<span data-ttu-id="b0819-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b0819-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b0819-114">CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="b0819-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b0819-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b0819-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b0819-116">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="b0819-116">The call timed out.</span></span>|  
+|<span data-ttu-id="b0819-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b0819-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b0819-118">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="b0819-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="b0819-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b0819-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b0819-120">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="b0819-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="b0819-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b0819-121">E_FAIL</span></span>|<span data-ttu-id="b0819-122">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="b0819-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b0819-123">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="b0819-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b0819-124">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="b0819-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b0819-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="b0819-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="b0819-126">没有足够的内存是可用于完成请求的分配。</span><span class="sxs-lookup"><span data-stu-id="b0819-126">Not enough memory is available to complete the requested allocation.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a8b74-127">备注</span><span class="sxs-lookup"><span data-stu-id="a8b74-127">Remarks</span></span>  
- <span data-ttu-id="a8b74-128">可以嵌套到和从非托管代码的调用序列。</span><span class="sxs-lookup"><span data-stu-id="a8b74-128">Call sequences to and from unmanaged code can be nested.</span></span> <span data-ttu-id="a8b74-129">例如下, 表列出了在其中的假设情况下对的调用序列`LeaveRuntime`， [ihosttaskmanager:: Reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)， [ihosttaskmanager:: Reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)，和`IHostTaskManager::EnterRuntime`允许宿主确定嵌套的层。</span><span class="sxs-lookup"><span data-stu-id="a8b74-129">For example, the list below describes a hypothetical situation in which the sequence of calls to `LeaveRuntime`, [IHostTaskManager::ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager::ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), and `IHostTaskManager::EnterRuntime` allows the host to identify the nested layers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b0819-127">备注</span><span class="sxs-lookup"><span data-stu-id="b0819-127">Remarks</span></span>  
+ <span data-ttu-id="b0819-128">可以嵌套到和从非托管代码的调用序列。</span><span class="sxs-lookup"><span data-stu-id="b0819-128">Call sequences to and from unmanaged code can be nested.</span></span> <span data-ttu-id="b0819-129">例如下, 表列出了在其中的假设情况下对的调用序列`LeaveRuntime`， [ihosttaskmanager:: Reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)， [ihosttaskmanager:: Reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)，和`IHostTaskManager::EnterRuntime`允许宿主确定嵌套的层。</span><span class="sxs-lookup"><span data-stu-id="b0819-129">For example, the list below describes a hypothetical situation in which the sequence of calls to `LeaveRuntime`, [IHostTaskManager::ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager::ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), and `IHostTaskManager::EnterRuntime` allows the host to identify the nested layers.</span></span>  
   
-|<span data-ttu-id="a8b74-130">操作</span><span class="sxs-lookup"><span data-stu-id="a8b74-130">Action</span></span>|<span data-ttu-id="a8b74-131">相应的方法调用</span><span class="sxs-lookup"><span data-stu-id="a8b74-131">Corresponding Method Call</span></span>|  
+|<span data-ttu-id="b0819-130">操作</span><span class="sxs-lookup"><span data-stu-id="b0819-130">Action</span></span>|<span data-ttu-id="b0819-131">相应的方法调用</span><span class="sxs-lookup"><span data-stu-id="b0819-131">Corresponding Method Call</span></span>|  
 |------------|-------------------------------|  
-|<span data-ttu-id="a8b74-132">托管的 Visual Basic 可执行文件调用非托管的函数以 C 编写通过使用平台调用。</span><span class="sxs-lookup"><span data-stu-id="a8b74-132">A managed Visual Basic executable calls an unmanaged function written in C by using platform invoke.</span></span>|`IHostTaskManager::LeaveRuntime`|  
-|<span data-ttu-id="a8b74-133">非托管的 C 函数调用编写的托管 DLL 中的方法C#。</span><span class="sxs-lookup"><span data-stu-id="a8b74-133">The unmanaged C function calls a method in a managed DLL written in C#.</span></span>|`IHostTaskManager::ReverseEnterRuntime`|  
-|<span data-ttu-id="a8b74-134">托管C#函数调用的以 C 编写的另一个非托管的函数，还使用平台调用。</span><span class="sxs-lookup"><span data-stu-id="a8b74-134">The managed C# function calls another unmanaged function written in C, also using platform invoke.</span></span>|`IHostTaskManager::LeaveRuntime`|  
-|<span data-ttu-id="a8b74-135">第二个非托管的函数将返回到执行C#函数。</span><span class="sxs-lookup"><span data-stu-id="a8b74-135">The second unmanaged function returns execution to the C# function.</span></span>|`IHostTaskManager::EnterRuntime`|  
-|<span data-ttu-id="a8b74-136">C#函数返回第一个非托管函数执行。</span><span class="sxs-lookup"><span data-stu-id="a8b74-136">The C# function returns execution to the first unmanaged function.</span></span>|`IHostTaskManager::ReverseLeaveRuntime`|  
-|<span data-ttu-id="a8b74-137">第一个非托管的函数执行返回给 Visual Basic 程序。</span><span class="sxs-lookup"><span data-stu-id="a8b74-137">The first unmanaged function returns execution to the Visual Basic program.</span></span>|`IHostTaskManager::EnterRuntime`|  
+|<span data-ttu-id="b0819-132">托管的 Visual Basic 可执行文件调用非托管的函数以 C 编写通过使用平台调用。</span><span class="sxs-lookup"><span data-stu-id="b0819-132">A managed Visual Basic executable calls an unmanaged function written in C by using platform invoke.</span></span>|`IHostTaskManager::LeaveRuntime`|  
+|<span data-ttu-id="b0819-133">非托管的 C 函数调用编写的托管 DLL 中的方法C#。</span><span class="sxs-lookup"><span data-stu-id="b0819-133">The unmanaged C function calls a method in a managed DLL written in C#.</span></span>|`IHostTaskManager::ReverseEnterRuntime`|  
+|<span data-ttu-id="b0819-134">托管C#函数调用的以 C 编写的另一个非托管的函数，还使用平台调用。</span><span class="sxs-lookup"><span data-stu-id="b0819-134">The managed C# function calls another unmanaged function written in C, also using platform invoke.</span></span>|`IHostTaskManager::LeaveRuntime`|  
+|<span data-ttu-id="b0819-135">第二个非托管的函数将返回到执行C#函数。</span><span class="sxs-lookup"><span data-stu-id="b0819-135">The second unmanaged function returns execution to the C# function.</span></span>|`IHostTaskManager::EnterRuntime`|  
+|<span data-ttu-id="b0819-136">C#函数返回第一个非托管函数执行。</span><span class="sxs-lookup"><span data-stu-id="b0819-136">The C# function returns execution to the first unmanaged function.</span></span>|`IHostTaskManager::ReverseLeaveRuntime`|  
+|<span data-ttu-id="b0819-137">第一个非托管的函数执行返回给 Visual Basic 程序。</span><span class="sxs-lookup"><span data-stu-id="b0819-137">The first unmanaged function returns execution to the Visual Basic program.</span></span>|`IHostTaskManager::EnterRuntime`|  
   
-## <a name="requirements"></a><span data-ttu-id="a8b74-138">要求</span><span class="sxs-lookup"><span data-stu-id="a8b74-138">Requirements</span></span>  
- <span data-ttu-id="a8b74-139">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a8b74-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0819-138">要求</span><span class="sxs-lookup"><span data-stu-id="b0819-138">Requirements</span></span>  
+ <span data-ttu-id="b0819-139">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b0819-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8b74-140">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a8b74-140">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b0819-140">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b0819-140">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a8b74-141">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a8b74-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b0819-141">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="b0819-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a8b74-142">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8b74-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b0819-142">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0819-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8b74-143">请参阅</span><span class="sxs-lookup"><span data-stu-id="a8b74-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0819-143">请参阅</span><span class="sxs-lookup"><span data-stu-id="b0819-143">See also</span></span>
 
-- [<span data-ttu-id="a8b74-144">ICLRTask 接口</span><span class="sxs-lookup"><span data-stu-id="a8b74-144">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="a8b74-145">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="a8b74-145">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="a8b74-146">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="a8b74-146">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="a8b74-147">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="a8b74-147">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="b0819-144">ICLRTask 接口</span><span class="sxs-lookup"><span data-stu-id="b0819-144">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="b0819-145">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="b0819-145">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="b0819-146">IHostTask 接口</span><span class="sxs-lookup"><span data-stu-id="b0819-146">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="b0819-147">IHostTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="b0819-147">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

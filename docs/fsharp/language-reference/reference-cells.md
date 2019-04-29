@@ -3,68 +3,68 @@ title: 引用单元格
 description: 了解如何F#引用单元格是使您能够创建具有引用语义的可变值的存储位置。
 ms.date: 05/16/2016
 ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795391"
 ---
-# <a name="reference-cells"></a><span data-ttu-id="f736a-103">引用单元格</span><span class="sxs-lookup"><span data-stu-id="f736a-103">Reference Cells</span></span>
+# <a name="reference-cells"></a><span data-ttu-id="09823-103">引用单元格</span><span class="sxs-lookup"><span data-stu-id="09823-103">Reference Cells</span></span>
 
-<span data-ttu-id="f736a-104">*引用单元格*是使您能够创建具有引用语义的可变值的存储位置。</span><span class="sxs-lookup"><span data-stu-id="f736a-104">*Reference cells* are storage locations that enable you to create mutable values with reference semantics.</span></span>
+<span data-ttu-id="09823-104">*引用单元格*是使您能够创建具有引用语义的可变值的存储位置。</span><span class="sxs-lookup"><span data-stu-id="09823-104">*Reference cells* are storage locations that enable you to create mutable values with reference semantics.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f736a-105">语法</span><span class="sxs-lookup"><span data-stu-id="f736a-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="09823-105">语法</span><span class="sxs-lookup"><span data-stu-id="09823-105">Syntax</span></span>
 
 ```fsharp
 ref expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="f736a-106">备注</span><span class="sxs-lookup"><span data-stu-id="f736a-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="09823-106">备注</span><span class="sxs-lookup"><span data-stu-id="09823-106">Remarks</span></span>
 
-<span data-ttu-id="f736a-107">可以在值前面使用 `ref` 运算符来创建用于封装该值的新引用单元格。</span><span class="sxs-lookup"><span data-stu-id="f736a-107">You use the `ref` operator before a value to create a new reference cell that encapsulates the value.</span></span> <span data-ttu-id="f736a-108">然后，您可以更改基础值，因为该值是可变的。</span><span class="sxs-lookup"><span data-stu-id="f736a-108">You can then change the underlying value because it is mutable.</span></span>
+<span data-ttu-id="09823-107">可以在值前面使用 `ref` 运算符来创建用于封装该值的新引用单元格。</span><span class="sxs-lookup"><span data-stu-id="09823-107">You use the `ref` operator before a value to create a new reference cell that encapsulates the value.</span></span> <span data-ttu-id="09823-108">然后，您可以更改基础值，因为该值是可变的。</span><span class="sxs-lookup"><span data-stu-id="09823-108">You can then change the underlying value because it is mutable.</span></span>
 
-<span data-ttu-id="f736a-109">引用单元格容纳实际值；它不仅仅是一个地址。</span><span class="sxs-lookup"><span data-stu-id="f736a-109">A reference cell holds an actual value; it is not just an address.</span></span> <span data-ttu-id="f736a-110">使用 `ref` 运算符创建引用单元格时，将以封装的可变值的形式创建基础值的副本。</span><span class="sxs-lookup"><span data-stu-id="f736a-110">When you create a reference cell by using the `ref` operator, you create a copy of the underlying value as an encapsulated mutable value.</span></span>
+<span data-ttu-id="09823-109">引用单元格容纳实际值；它不仅仅是一个地址。</span><span class="sxs-lookup"><span data-stu-id="09823-109">A reference cell holds an actual value; it is not just an address.</span></span> <span data-ttu-id="09823-110">使用 `ref` 运算符创建引用单元格时，将以封装的可变值的形式创建基础值的副本。</span><span class="sxs-lookup"><span data-stu-id="09823-110">When you create a reference cell by using the `ref` operator, you create a copy of the underlying value as an encapsulated mutable value.</span></span>
 
-<span data-ttu-id="f736a-111">可以使用 `!`（感叹号）运算符取消对引用单元格的引用。</span><span class="sxs-lookup"><span data-stu-id="f736a-111">You can dereference a reference cell by using the `!` (bang) operator.</span></span>
+<span data-ttu-id="09823-111">可以使用 `!`（感叹号）运算符取消对引用单元格的引用。</span><span class="sxs-lookup"><span data-stu-id="09823-111">You can dereference a reference cell by using the `!` (bang) operator.</span></span>
 
-<span data-ttu-id="f736a-112">下面的代码示例阐释了引用单元格的声明和用法。</span><span class="sxs-lookup"><span data-stu-id="f736a-112">The following code example illustrates the declaration and use of reference cells.</span></span>
+<span data-ttu-id="09823-112">下面的代码示例阐释了引用单元格的声明和用法。</span><span class="sxs-lookup"><span data-stu-id="09823-112">The following code example illustrates the declaration and use of reference cells.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2201.fs)]
 
-<span data-ttu-id="f736a-113">输出为 `50`。</span><span class="sxs-lookup"><span data-stu-id="f736a-113">The output is `50`.</span></span>
+<span data-ttu-id="09823-113">输出为 `50`。</span><span class="sxs-lookup"><span data-stu-id="09823-113">The output is `50`.</span></span>
 
-<span data-ttu-id="f736a-114">引用单元格是 `Ref` 泛型记录类型的实例，声明方式如下所示。</span><span class="sxs-lookup"><span data-stu-id="f736a-114">Reference cells are instances of the `Ref` generic record type, which is declared as follows.</span></span>
+<span data-ttu-id="09823-114">引用单元格是 `Ref` 泛型记录类型的实例，声明方式如下所示。</span><span class="sxs-lookup"><span data-stu-id="09823-114">Reference cells are instances of the `Ref` generic record type, which is declared as follows.</span></span>
 
 ```fsharp
 type Ref<'a> =
 { mutable contents: 'a }
 ```
 
-<span data-ttu-id="f736a-115">类型 `'a ref` 是 `Ref<'a>` 的同义词。</span><span class="sxs-lookup"><span data-stu-id="f736a-115">The type `'a ref` is a synonym for `Ref<'a>`.</span></span> <span data-ttu-id="f736a-116">IDE 中的编译器和 IntelliSense 显示此类型的前者，而基础定义是后者。</span><span class="sxs-lookup"><span data-stu-id="f736a-116">The compiler and IntelliSense in the IDE display the former for this type, but the underlying definition is the latter.</span></span>
+<span data-ttu-id="09823-115">类型 `'a ref` 是 `Ref<'a>` 的同义词。</span><span class="sxs-lookup"><span data-stu-id="09823-115">The type `'a ref` is a synonym for `Ref<'a>`.</span></span> <span data-ttu-id="09823-116">IDE 中的编译器和 IntelliSense 显示此类型的前者，而基础定义是后者。</span><span class="sxs-lookup"><span data-stu-id="09823-116">The compiler and IntelliSense in the IDE display the former for this type, but the underlying definition is the latter.</span></span>
 
-<span data-ttu-id="f736a-117">`ref` 运算符创建新引用单元格。</span><span class="sxs-lookup"><span data-stu-id="f736a-117">The `ref` operator creates a new reference cell.</span></span> <span data-ttu-id="f736a-118">下面的代码声明 `ref` 运算符。</span><span class="sxs-lookup"><span data-stu-id="f736a-118">The following code is the declaration of the `ref` operator.</span></span>
+<span data-ttu-id="09823-117">`ref` 运算符创建新引用单元格。</span><span class="sxs-lookup"><span data-stu-id="09823-117">The `ref` operator creates a new reference cell.</span></span> <span data-ttu-id="09823-118">下面的代码声明 `ref` 运算符。</span><span class="sxs-lookup"><span data-stu-id="09823-118">The following code is the declaration of the `ref` operator.</span></span>
 
 ```fsharp
 let ref x = { contents = x }
 ```
 
-<span data-ttu-id="f736a-119">下表显示了可用于引用单元格的功能。</span><span class="sxs-lookup"><span data-stu-id="f736a-119">The following table shows the features that are available on the reference cell.</span></span>
+<span data-ttu-id="09823-119">下表显示了可用于引用单元格的功能。</span><span class="sxs-lookup"><span data-stu-id="09823-119">The following table shows the features that are available on the reference cell.</span></span>
 
-|<span data-ttu-id="f736a-120">运算符、成员或字段</span><span class="sxs-lookup"><span data-stu-id="f736a-120">Operator, member, or field</span></span>|<span data-ttu-id="f736a-121">描述</span><span class="sxs-lookup"><span data-stu-id="f736a-121">Description</span></span>|<span data-ttu-id="f736a-122">类型</span><span class="sxs-lookup"><span data-stu-id="f736a-122">Type</span></span>|<span data-ttu-id="f736a-123">定义</span><span class="sxs-lookup"><span data-stu-id="f736a-123">Definition</span></span>|
+|<span data-ttu-id="09823-120">运算符、成员或字段</span><span class="sxs-lookup"><span data-stu-id="09823-120">Operator, member, or field</span></span>|<span data-ttu-id="09823-121">描述</span><span class="sxs-lookup"><span data-stu-id="09823-121">Description</span></span>|<span data-ttu-id="09823-122">类型</span><span class="sxs-lookup"><span data-stu-id="09823-122">Type</span></span>|<span data-ttu-id="09823-123">定义</span><span class="sxs-lookup"><span data-stu-id="09823-123">Definition</span></span>|
 |--------------------------|-----------|----|----------|
-|<span data-ttu-id="f736a-124">`!`（取消引用运算符）</span><span class="sxs-lookup"><span data-stu-id="f736a-124">`!` (dereference operator)</span></span>|<span data-ttu-id="f736a-125">返回基础值。</span><span class="sxs-lookup"><span data-stu-id="f736a-125">Returns the underlying value.</span></span>|`'a ref -> 'a`|`let (!) r = r.contents`|
-|<span data-ttu-id="f736a-126">`:=`（赋值运算符）</span><span class="sxs-lookup"><span data-stu-id="f736a-126">`:=` (assignment operator)</span></span>|<span data-ttu-id="f736a-127">更改基础值。</span><span class="sxs-lookup"><span data-stu-id="f736a-127">Changes the underlying value.</span></span>|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|<span data-ttu-id="f736a-128">`ref`（运算符）</span><span class="sxs-lookup"><span data-stu-id="f736a-128">`ref` (operator)</span></span>|<span data-ttu-id="f736a-129">将值封装到新的引用单元格中。</span><span class="sxs-lookup"><span data-stu-id="f736a-129">Encapsulates a value into a new reference cell.</span></span>|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|<span data-ttu-id="f736a-130">`Value`（属性）</span><span class="sxs-lookup"><span data-stu-id="f736a-130">`Value` (property)</span></span>|<span data-ttu-id="f736a-131">获取或设置基础值。</span><span class="sxs-lookup"><span data-stu-id="f736a-131">Gets or sets the underlying value.</span></span>|`unit -> 'a`|`member x.Value = x.contents`|
-|<span data-ttu-id="f736a-132">`contents`（记录字段）</span><span class="sxs-lookup"><span data-stu-id="f736a-132">`contents` (record field)</span></span>|<span data-ttu-id="f736a-133">获取或设置基础值。</span><span class="sxs-lookup"><span data-stu-id="f736a-133">Gets or sets the underlying value.</span></span>|`'a`|`let ref x = { contents = x }`|
+|<span data-ttu-id="09823-124">`!`（取消引用运算符）</span><span class="sxs-lookup"><span data-stu-id="09823-124">`!` (dereference operator)</span></span>|<span data-ttu-id="09823-125">返回基础值。</span><span class="sxs-lookup"><span data-stu-id="09823-125">Returns the underlying value.</span></span>|`'a ref -> 'a`|`let (!) r = r.contents`|
+|<span data-ttu-id="09823-126">`:=`（赋值运算符）</span><span class="sxs-lookup"><span data-stu-id="09823-126">`:=` (assignment operator)</span></span>|<span data-ttu-id="09823-127">更改基础值。</span><span class="sxs-lookup"><span data-stu-id="09823-127">Changes the underlying value.</span></span>|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
+|<span data-ttu-id="09823-128">`ref` （运算符）</span><span class="sxs-lookup"><span data-stu-id="09823-128">`ref` (operator)</span></span>|<span data-ttu-id="09823-129">将值封装到新的引用单元格中。</span><span class="sxs-lookup"><span data-stu-id="09823-129">Encapsulates a value into a new reference cell.</span></span>|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|<span data-ttu-id="09823-130">`Value` （属性）</span><span class="sxs-lookup"><span data-stu-id="09823-130">`Value` (property)</span></span>|<span data-ttu-id="09823-131">获取或设置基础值。</span><span class="sxs-lookup"><span data-stu-id="09823-131">Gets or sets the underlying value.</span></span>|`unit -> 'a`|`member x.Value = x.contents`|
+|<span data-ttu-id="09823-132">`contents`（记录字段）</span><span class="sxs-lookup"><span data-stu-id="09823-132">`contents` (record field)</span></span>|<span data-ttu-id="09823-133">获取或设置基础值。</span><span class="sxs-lookup"><span data-stu-id="09823-133">Gets or sets the underlying value.</span></span>|`'a`|`let ref x = { contents = x }`|
 
-<span data-ttu-id="f736a-134">可通过多种方式来访问基础值。</span><span class="sxs-lookup"><span data-stu-id="f736a-134">There are several ways to access the underlying value.</span></span> <span data-ttu-id="f736a-135">取消引用运算符 (`!`) 返回的值不是可赋值的值。</span><span class="sxs-lookup"><span data-stu-id="f736a-135">The value returned by the dereference operator (`!`) is not an assignable value.</span></span> <span data-ttu-id="f736a-136">因此，如果要修改基础值，您必须改用赋值运算符 (`:=`)。</span><span class="sxs-lookup"><span data-stu-id="f736a-136">Therefore, if you are modifying the underlying value, you must use the assignment operator (`:=`) instead.</span></span>
+<span data-ttu-id="09823-134">可通过多种方式来访问基础值。</span><span class="sxs-lookup"><span data-stu-id="09823-134">There are several ways to access the underlying value.</span></span> <span data-ttu-id="09823-135">取消引用运算符 (`!`) 返回的值不是可赋值的值。</span><span class="sxs-lookup"><span data-stu-id="09823-135">The value returned by the dereference operator (`!`) is not an assignable value.</span></span> <span data-ttu-id="09823-136">因此，如果要修改基础值，您必须改用赋值运算符 (`:=`)。</span><span class="sxs-lookup"><span data-stu-id="09823-136">Therefore, if you are modifying the underlying value, you must use the assignment operator (`:=`) instead.</span></span>
 
-<span data-ttu-id="f736a-137">`Value` 属性和 `contents` 字段都是可赋值的值。</span><span class="sxs-lookup"><span data-stu-id="f736a-137">Both the `Value` property and the `contents` field are assignable values.</span></span> <span data-ttu-id="f736a-138">因此，你可以使用它们来访问或更改基础值，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="f736a-138">Therefore, you can use these to either access or change the underlying value, as shown in the following code.</span></span>
+<span data-ttu-id="09823-137">`Value` 属性和 `contents` 字段都是可赋值的值。</span><span class="sxs-lookup"><span data-stu-id="09823-137">Both the `Value` property and the `contents` field are assignable values.</span></span> <span data-ttu-id="09823-138">因此，您可以使用它们来访问或更改基础值，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="09823-138">Therefore, you can use these to either access or change the underlying value, as shown in the following code.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2203.fs)]
 
-<span data-ttu-id="f736a-139">输出如下所示。</span><span class="sxs-lookup"><span data-stu-id="f736a-139">The output is as follows.</span></span>
+<span data-ttu-id="09823-139">输出如下所示。</span><span class="sxs-lookup"><span data-stu-id="09823-139">The output is as follows.</span></span>
 
 ```
 10
@@ -73,15 +73,15 @@ let ref x = { contents = x }
 12
 ```
 
-<span data-ttu-id="f736a-140">提供字段 `contents` 的目的是为了与其他版本的 ML 兼容，并且该字段将在编译过程中产生警告。</span><span class="sxs-lookup"><span data-stu-id="f736a-140">The field `contents` is provided for compatibility with other versions of ML and will produce a warning during compilation.</span></span> <span data-ttu-id="f736a-141">若要禁用警告，请使用 `--mlcompatibility` 编译器选项。</span><span class="sxs-lookup"><span data-stu-id="f736a-141">To disable the warning, use the `--mlcompatibility` compiler option.</span></span> <span data-ttu-id="f736a-142">有关详细信息，请参阅[编译器选项](compiler-options.md)。</span><span class="sxs-lookup"><span data-stu-id="f736a-142">For more information, see [Compiler Options](compiler-options.md).</span></span>
+<span data-ttu-id="09823-140">提供字段 `contents` 的目的是为了与其他版本的 ML 兼容，并且该字段将在编译过程中产生警告。</span><span class="sxs-lookup"><span data-stu-id="09823-140">The field `contents` is provided for compatibility with other versions of ML and will produce a warning during compilation.</span></span> <span data-ttu-id="09823-141">若要禁用警告，请使用 `--mlcompatibility` 编译器选项。</span><span class="sxs-lookup"><span data-stu-id="09823-141">To disable the warning, use the `--mlcompatibility` compiler option.</span></span> <span data-ttu-id="09823-142">有关详细信息，请参阅[编译器选项](compiler-options.md)。</span><span class="sxs-lookup"><span data-stu-id="09823-142">For more information, see [Compiler Options](compiler-options.md).</span></span>
 
-<span data-ttu-id="f736a-143">C#程序员应知道`ref`在C#不是与相同`ref`中F#。</span><span class="sxs-lookup"><span data-stu-id="f736a-143">C# programmers should know that `ref` in C# is not the same thing as `ref` in F#.</span></span> <span data-ttu-id="f736a-144">中的构造等效于F#都[byref](byrefs.md)，这是从引用单元格不同的概念。</span><span class="sxs-lookup"><span data-stu-id="f736a-144">The equivalent constructs in F# are [byrefs](byrefs.md), which are a different concept from reference cells.</span></span>
+<span data-ttu-id="09823-143">C#程序员应知道`ref`在C#不是与相同`ref`中F#。</span><span class="sxs-lookup"><span data-stu-id="09823-143">C# programmers should know that `ref` in C# is not the same thing as `ref` in F#.</span></span> <span data-ttu-id="09823-144">中的构造等效于F#都[byref](byrefs.md)，这是从引用单元格不同的概念。</span><span class="sxs-lookup"><span data-stu-id="09823-144">The equivalent constructs in F# are [byrefs](byrefs.md), which are a different concept from reference cells.</span></span>
 
-<span data-ttu-id="f736a-145">值标记为`mutable`可能会自动提升为`'a ref`如果捕获的闭包中; 请参阅[值](values/index.md)。</span><span class="sxs-lookup"><span data-stu-id="f736a-145">Values marked as `mutable`may be automatically promoted to `'a ref` if captured by a closure; see [Values](values/index.md).</span></span>
+<span data-ttu-id="09823-145">值标记为`mutable`可能会自动提升为`'a ref`如果捕获的闭包中; 请参阅[值](values/index.md)。</span><span class="sxs-lookup"><span data-stu-id="09823-145">Values marked as `mutable`may be automatically promoted to `'a ref` if captured by a closure; see [Values](values/index.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f736a-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="f736a-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09823-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="09823-146">See also</span></span>
 
-- [<span data-ttu-id="f736a-147">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="f736a-147">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="f736a-148">参数和自变量</span><span class="sxs-lookup"><span data-stu-id="f736a-148">Parameters and Arguments</span></span>](parameters-and-arguments.md)
-- [<span data-ttu-id="f736a-149">符号和运算符参考</span><span class="sxs-lookup"><span data-stu-id="f736a-149">Symbol and Operator Reference</span></span>](symbol-and-operator-reference/index.md)
-- [<span data-ttu-id="f736a-150">值</span><span class="sxs-lookup"><span data-stu-id="f736a-150">Values</span></span>](values/index.md)
+- [<span data-ttu-id="09823-147">F# 语言参考</span><span class="sxs-lookup"><span data-stu-id="09823-147">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="09823-148">参数和自变量</span><span class="sxs-lookup"><span data-stu-id="09823-148">Parameters and Arguments</span></span>](parameters-and-arguments.md)
+- [<span data-ttu-id="09823-149">符号和运算符参考</span><span class="sxs-lookup"><span data-stu-id="09823-149">Symbol and Operator Reference</span></span>](symbol-and-operator-reference/index.md)
+- [<span data-ttu-id="09823-150">值</span><span class="sxs-lookup"><span data-stu-id="09823-150">Values</span></span>](values/index.md)
