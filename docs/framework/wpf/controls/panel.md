@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
 ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770664"
 ---
-# <a name="panel"></a><span data-ttu-id="a835c-102">Panel</span><span class="sxs-lookup"><span data-stu-id="a835c-102">Panel</span></span>
-<span data-ttu-id="a835c-103"><xref:System.Windows.Controls.Panel> 是支持应用程序布局中的所有元素的基类[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a835c-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="panel"></a><span data-ttu-id="e829f-102">Panel</span><span class="sxs-lookup"><span data-stu-id="e829f-102">Panel</span></span>
+<span data-ttu-id="e829f-103"><xref:System.Windows.Controls.Panel> 是支持应用程序布局中的所有元素的基类[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e829f-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a835c-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a835c-104">In This Section</span></span>  
- [<span data-ttu-id="a835c-105">面板概述</span><span class="sxs-lookup"><span data-stu-id="a835c-105">Panels Overview</span></span>](panels-overview.md)  
- [<span data-ttu-id="a835c-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="a835c-106">How-to Topics</span></span>](panel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e829f-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e829f-104">In This Section</span></span>  
+ [<span data-ttu-id="e829f-105">面板概述</span><span class="sxs-lookup"><span data-stu-id="e829f-105">Panels Overview</span></span>](panels-overview.md)  
+ [<span data-ttu-id="e829f-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="e829f-106">How-to Topics</span></span>](panel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a835c-107">参考</span><span class="sxs-lookup"><span data-stu-id="a835c-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e829f-107">参考</span><span class="sxs-lookup"><span data-stu-id="e829f-107">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "57367591"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="a835c-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="a835c-108">Related Sections</span></span>  
- [<span data-ttu-id="a835c-109">布局</span><span class="sxs-lookup"><span data-stu-id="a835c-109">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="e829f-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="e829f-108">Related Sections</span></span>  
+ [<span data-ttu-id="e829f-109">布局</span><span class="sxs-lookup"><span data-stu-id="e829f-109">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="a835c-110">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="a835c-110">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="e829f-110">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="e829f-110">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="a835c-111">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="a835c-111">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="e829f-111">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="e829f-111">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

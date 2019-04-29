@@ -3,22 +3,22 @@ title: <add> 的 <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
 ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704539"
 ---
-# <a name="add-of-filters"></a><span data-ttu-id="85faa-102">\<添加 > 的\<筛选器 ></span><span class="sxs-lookup"><span data-stu-id="85faa-102">\<add> of \<filters></span></span>
-<span data-ttu-id="85faa-103">一个 XPath 筛选器，用于指定要记录的消息的种类。</span><span class="sxs-lookup"><span data-stu-id="85faa-103">A XPath filter that specifies the kind of message to be logged.</span></span>  
+# <a name="add-of-filters"></a><span data-ttu-id="1aa00-102">\<添加 > 的\<筛选器 ></span><span class="sxs-lookup"><span data-stu-id="1aa00-102">\<add> of \<filters></span></span>
+<span data-ttu-id="1aa00-103">一个 XPath 筛选器，用于指定要记录的消息的种类。</span><span class="sxs-lookup"><span data-stu-id="1aa00-103">A XPath filter that specifies the kind of message to be logged.</span></span>  
   
- <span data-ttu-id="85faa-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="85faa-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="85faa-105">\<diagnostic></span><span class="sxs-lookup"><span data-stu-id="85faa-105">\<diagnostic></span></span>  
-<span data-ttu-id="85faa-106">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="85faa-106">\<messageLogging></span></span>  
-<span data-ttu-id="85faa-107">\<filters></span><span class="sxs-lookup"><span data-stu-id="85faa-107">\<filters></span></span>  
-<span data-ttu-id="85faa-108">\<add></span><span class="sxs-lookup"><span data-stu-id="85faa-108">\<add></span></span>  
+ <span data-ttu-id="1aa00-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="1aa00-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="1aa00-105">\<diagnostic></span><span class="sxs-lookup"><span data-stu-id="1aa00-105">\<diagnostic></span></span>  
+<span data-ttu-id="1aa00-106">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="1aa00-106">\<messageLogging></span></span>  
+<span data-ttu-id="1aa00-107">\<filters></span><span class="sxs-lookup"><span data-stu-id="1aa00-107">\<filters></span></span>  
+<span data-ttu-id="1aa00-108">\<add></span><span class="sxs-lookup"><span data-stu-id="1aa00-108">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="85faa-109">语法</span><span class="sxs-lookup"><span data-stu-id="85faa-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1aa00-109">语法</span><span class="sxs-lookup"><span data-stu-id="1aa00-109">Syntax</span></span>  
   
 ```xml  
 <filters>
@@ -26,35 +26,35 @@ ms.locfileid: "59128695"
 </filters>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="85faa-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="85faa-110">Attributes and Elements</span></span>  
- <span data-ttu-id="85faa-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="85faa-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1aa00-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="1aa00-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="1aa00-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1aa00-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="85faa-112">特性</span><span class="sxs-lookup"><span data-stu-id="85faa-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1aa00-112">特性</span><span class="sxs-lookup"><span data-stu-id="1aa00-112">Attributes</span></span>  
   
-|<span data-ttu-id="85faa-113">特性</span><span class="sxs-lookup"><span data-stu-id="85faa-113">Attribute</span></span>|<span data-ttu-id="85faa-114">描述</span><span class="sxs-lookup"><span data-stu-id="85faa-114">Description</span></span>|  
+|<span data-ttu-id="1aa00-113">特性</span><span class="sxs-lookup"><span data-stu-id="1aa00-113">Attribute</span></span>|<span data-ttu-id="1aa00-114">描述</span><span class="sxs-lookup"><span data-stu-id="1aa00-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="85faa-115">筛选器</span><span class="sxs-lookup"><span data-stu-id="85faa-115">filter</span></span>|<span data-ttu-id="85faa-116">一个字符串，用于指定由 XPath 1.0 表达式定义的 XML 文档的查询。</span><span class="sxs-lookup"><span data-stu-id="85faa-116">A string that specifies a query on an XML document defined by an XPath 1.0 expression.</span></span> <span data-ttu-id="85faa-117">有关详细信息，请参阅 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。</span><span class="sxs-lookup"><span data-stu-id="85faa-117">For more information, see <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.</span></span>|  
+|<span data-ttu-id="1aa00-115">筛选器</span><span class="sxs-lookup"><span data-stu-id="1aa00-115">filter</span></span>|<span data-ttu-id="1aa00-116">一个字符串，用于指定由 XPath 1.0 表达式定义的 XML 文档的查询。</span><span class="sxs-lookup"><span data-stu-id="1aa00-116">A string that specifies a query on an XML document defined by an XPath 1.0 expression.</span></span> <span data-ttu-id="1aa00-117">有关详细信息，请参阅 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。</span><span class="sxs-lookup"><span data-stu-id="1aa00-117">For more information, see <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="85faa-118">子元素</span><span class="sxs-lookup"><span data-stu-id="85faa-118">Child Elements</span></span>  
- <span data-ttu-id="85faa-119">无。</span><span class="sxs-lookup"><span data-stu-id="85faa-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1aa00-118">子元素</span><span class="sxs-lookup"><span data-stu-id="1aa00-118">Child Elements</span></span>  
+ <span data-ttu-id="1aa00-119">无。</span><span class="sxs-lookup"><span data-stu-id="1aa00-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="85faa-120">父元素</span><span class="sxs-lookup"><span data-stu-id="85faa-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1aa00-120">父元素</span><span class="sxs-lookup"><span data-stu-id="1aa00-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="85faa-121">元素</span><span class="sxs-lookup"><span data-stu-id="85faa-121">Element</span></span>|<span data-ttu-id="85faa-122">描述</span><span class="sxs-lookup"><span data-stu-id="85faa-122">Description</span></span>|  
+|<span data-ttu-id="1aa00-121">元素</span><span class="sxs-lookup"><span data-stu-id="1aa00-121">Element</span></span>|<span data-ttu-id="1aa00-122">描述</span><span class="sxs-lookup"><span data-stu-id="1aa00-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="85faa-123">\<filters></span><span class="sxs-lookup"><span data-stu-id="85faa-123">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|<span data-ttu-id="85faa-124">包含用于控制所记录的消息类型的 XPath 筛选器集合。</span><span class="sxs-lookup"><span data-stu-id="85faa-124">Contains a collection of XPath filters used to control what kind of message is logged.</span></span>|  
+|[<span data-ttu-id="1aa00-123">\<filters></span><span class="sxs-lookup"><span data-stu-id="1aa00-123">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|<span data-ttu-id="1aa00-124">包含用于控制所记录的消息类型的 XPath 筛选器集合。</span><span class="sxs-lookup"><span data-stu-id="1aa00-124">Contains a collection of XPath filters used to control what kind of message is logged.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="85faa-125">备注</span><span class="sxs-lookup"><span data-stu-id="85faa-125">Remarks</span></span>  
- <span data-ttu-id="85faa-126">如果将 `logMessagesAtTransportLevel` 指定为 `true`，筛选器将只应用于传输层。</span><span class="sxs-lookup"><span data-stu-id="85faa-126">Filters are applied only at the transport layer, specified by `logMessagesAtTransportLevel` is `true`.</span></span> <span data-ttu-id="85faa-127">筛选器不影响服务级别和格式不正确的消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="85faa-127">Service level and malformed message logging are not affected by filters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1aa00-125">备注</span><span class="sxs-lookup"><span data-stu-id="1aa00-125">Remarks</span></span>  
+ <span data-ttu-id="1aa00-126">如果将 `logMessagesAtTransportLevel` 指定为 `true`，筛选器将只应用于传输层。</span><span class="sxs-lookup"><span data-stu-id="1aa00-126">Filters are applied only at the transport layer, specified by `logMessagesAtTransportLevel` is `true`.</span></span> <span data-ttu-id="1aa00-127">筛选器不影响服务级别和格式不正确的消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="1aa00-127">Service level and malformed message logging are not affected by filters.</span></span>  
   
- <span data-ttu-id="85faa-128">若要向集合添加筛选器，请使用 `add` 关键字。</span><span class="sxs-lookup"><span data-stu-id="85faa-128">To add a filter to the collection, use the `add` keyword.</span></span> <span data-ttu-id="85faa-129">如果定义一个或多个筛选器，则仅记录与其中至少一个筛选器相匹配的消息。</span><span class="sxs-lookup"><span data-stu-id="85faa-129">When one or more filters are defined, only messages that match at least one of the filters are logged.</span></span> <span data-ttu-id="85faa-130">如果未定义任何筛选器，则所有消息都可通过。</span><span class="sxs-lookup"><span data-stu-id="85faa-130">If no filter is defined, all messages pass through.</span></span>  
+ <span data-ttu-id="1aa00-128">若要向集合添加筛选器，请使用 `add` 关键字。</span><span class="sxs-lookup"><span data-stu-id="1aa00-128">To add a filter to the collection, use the `add` keyword.</span></span> <span data-ttu-id="1aa00-129">如果定义一个或多个筛选器，则仅记录与其中至少一个筛选器相匹配的消息。</span><span class="sxs-lookup"><span data-stu-id="1aa00-129">When one or more filters are defined, only messages that match at least one of the filters are logged.</span></span> <span data-ttu-id="1aa00-130">如果未定义任何筛选器，则所有消息都可通过。</span><span class="sxs-lookup"><span data-stu-id="1aa00-130">If no filter is defined, all messages pass through.</span></span>  
   
- <span data-ttu-id="85faa-131">筛选器支持完整的 XPath 语法，并按照其在配置文件中出现的顺序进行应用。</span><span class="sxs-lookup"><span data-stu-id="85faa-131">Filters support the full XPath syntax, and are applied in the order they appear in the configuration file.</span></span> <span data-ttu-id="85faa-132">存在语法错误的筛选器会导致配置异常。</span><span class="sxs-lookup"><span data-stu-id="85faa-132">A syntactically incorrect filter results in a configuration exception.</span></span>  
+ <span data-ttu-id="1aa00-131">筛选器支持完整的 XPath 语法，并按照其在配置文件中出现的顺序进行应用。</span><span class="sxs-lookup"><span data-stu-id="1aa00-131">Filters support the full XPath syntax, and are applied in the order they appear in the configuration file.</span></span> <span data-ttu-id="1aa00-132">存在语法错误的筛选器会导致配置异常。</span><span class="sxs-lookup"><span data-stu-id="1aa00-132">A syntactically incorrect filter results in a configuration exception.</span></span>  
   
- <span data-ttu-id="85faa-133">下面的示例演示如何配置一个筛选器，它仅记录具有 SOAP 标头部分的消息。</span><span class="sxs-lookup"><span data-stu-id="85faa-133">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
+ <span data-ttu-id="1aa00-133">下面的示例演示如何配置一个筛选器，它仅记录具有 SOAP 标头部分的消息。</span><span class="sxs-lookup"><span data-stu-id="1aa00-133">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="85faa-134">示例</span><span class="sxs-lookup"><span data-stu-id="85faa-134">Example</span></span>  
- <span data-ttu-id="85faa-135">下面的示例演示如何配置一个筛选器，它仅记录具有 SOAP 标头部分的消息。</span><span class="sxs-lookup"><span data-stu-id="85faa-135">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
+## <a name="example"></a><span data-ttu-id="1aa00-134">示例</span><span class="sxs-lookup"><span data-stu-id="1aa00-134">Example</span></span>  
+ <span data-ttu-id="1aa00-135">下面的示例演示如何配置一个筛选器，它仅记录具有 SOAP 标头部分的消息。</span><span class="sxs-lookup"><span data-stu-id="1aa00-135">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
   
 ```xml  
 <messageLogging logEntireMessage="true"
@@ -70,7 +70,7 @@ ms.locfileid: "59128695"
 </messageLogging>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="85faa-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="85faa-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1aa00-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="1aa00-136">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
@@ -79,5 +79,5 @@ ms.locfileid: "59128695"
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [<span data-ttu-id="85faa-137">配置消息日志记录</span><span class="sxs-lookup"><span data-stu-id="85faa-137">Configuring Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [<span data-ttu-id="85faa-138">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="85faa-138">\<messageLogging></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [<span data-ttu-id="1aa00-137">配置消息日志记录</span><span class="sxs-lookup"><span data-stu-id="1aa00-137">Configuring Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [<span data-ttu-id="1aa00-138">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="1aa00-138">\<messageLogging></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
