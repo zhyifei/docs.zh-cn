@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95f00fea637b5263699779b7abe9863d266d7f19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786186"
 ---
-# <a name="strongnametokenfromassemblyex-function"></a><span data-ttu-id="13303-102">StrongNameTokenFromAssemblyEx 函数</span><span class="sxs-lookup"><span data-stu-id="13303-102">StrongNameTokenFromAssemblyEx Function</span></span>
-<span data-ttu-id="13303-103">从指定的程序集文件中，创建一个强名称标记并返回该标记代表的公钥。</span><span class="sxs-lookup"><span data-stu-id="13303-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
+# <a name="strongnametokenfromassemblyex-function"></a><span data-ttu-id="06010-102">StrongNameTokenFromAssemblyEx 函数</span><span class="sxs-lookup"><span data-stu-id="06010-102">StrongNameTokenFromAssemblyEx Function</span></span>
+<span data-ttu-id="06010-103">从指定的程序集文件中，创建一个强名称标记并返回该标记代表的公钥。</span><span class="sxs-lookup"><span data-stu-id="06010-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
   
- <span data-ttu-id="13303-104">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="13303-104">This function has been deprecated.</span></span> <span data-ttu-id="13303-105">使用[iclrstrongname:: Strongnametokenfromassemblyex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="13303-105">Use the [ICLRStrongName::StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) method instead.</span></span>  
+ <span data-ttu-id="06010-104">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="06010-104">This function has been deprecated.</span></span> <span data-ttu-id="06010-105">使用[iclrstrongname:: Strongnametokenfromassemblyex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="06010-105">Use the [ICLRStrongName::StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13303-106">语法</span><span class="sxs-lookup"><span data-stu-id="13303-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06010-106">语法</span><span class="sxs-lookup"><span data-stu-id="06010-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameTokenFromAssemblyEx (  
@@ -40,43 +40,43 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="13303-107">参数</span><span class="sxs-lookup"><span data-stu-id="13303-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="06010-107">参数</span><span class="sxs-lookup"><span data-stu-id="06010-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="13303-108">[in]程序集可移植可执行 (PE) 文件的路径。</span><span class="sxs-lookup"><span data-stu-id="13303-108">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
+ <span data-ttu-id="06010-108">[in]程序集可移植可执行 (PE) 文件的路径。</span><span class="sxs-lookup"><span data-stu-id="06010-108">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="13303-109">[out]返回的强名称标记中。</span><span class="sxs-lookup"><span data-stu-id="13303-109">[out] The returned strong name token.</span></span>  
+ <span data-ttu-id="06010-109">[out]返回的强名称标记中。</span><span class="sxs-lookup"><span data-stu-id="06010-109">[out] The returned strong name token.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="13303-110">[out]以字节为单位的强名称标记的大小。</span><span class="sxs-lookup"><span data-stu-id="13303-110">[out] The size, in bytes, of the strong name token.</span></span>  
+ <span data-ttu-id="06010-110">[out]以字节为单位的强名称标记的大小。</span><span class="sxs-lookup"><span data-stu-id="06010-110">[out] The size, in bytes, of the strong name token.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="13303-111">[out]返回的公共密钥。</span><span class="sxs-lookup"><span data-stu-id="13303-111">[out] The returned public key.</span></span>  
+ <span data-ttu-id="06010-111">[out]返回的公共密钥。</span><span class="sxs-lookup"><span data-stu-id="06010-111">[out] The returned public key.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="13303-112">[out]以字节为单位的公钥大小。</span><span class="sxs-lookup"><span data-stu-id="13303-112">[out] The size, in bytes, of the public key.</span></span>  
+ <span data-ttu-id="06010-112">[out]以字节为单位的公钥大小。</span><span class="sxs-lookup"><span data-stu-id="06010-112">[out] The size, in bytes, of the public key.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="13303-113">返回值</span><span class="sxs-lookup"><span data-stu-id="13303-113">Return Value</span></span>  
- <span data-ttu-id="13303-114">`true` 在成功完成;否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="13303-114">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="06010-113">返回值</span><span class="sxs-lookup"><span data-stu-id="06010-113">Return Value</span></span>  
+ <span data-ttu-id="06010-114">`true` 在成功完成;否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="06010-114">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="13303-115">备注</span><span class="sxs-lookup"><span data-stu-id="13303-115">Remarks</span></span>  
- <span data-ttu-id="13303-116">强名称标记是简写形式的公共密钥。</span><span class="sxs-lookup"><span data-stu-id="13303-116">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="13303-117">令牌是通过使用程序集进行签名的公钥创建一个 64 位哈希。</span><span class="sxs-lookup"><span data-stu-id="13303-117">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="13303-118">该令牌是程序集的强名称的一部分，且可以从程序集元数据读取。</span><span class="sxs-lookup"><span data-stu-id="13303-118">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="06010-115">备注</span><span class="sxs-lookup"><span data-stu-id="06010-115">Remarks</span></span>  
+ <span data-ttu-id="06010-116">强名称标记是简写形式的公共密钥。</span><span class="sxs-lookup"><span data-stu-id="06010-116">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="06010-117">令牌是通过使用程序集进行签名的公钥创建一个 64 位哈希。</span><span class="sxs-lookup"><span data-stu-id="06010-117">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="06010-118">该令牌是程序集的强名称的一部分，且可以从程序集元数据读取。</span><span class="sxs-lookup"><span data-stu-id="06010-118">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
   
- <span data-ttu-id="13303-119">正在检索密钥并创建令牌后，应调用[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数，以释放已分配的内存。</span><span class="sxs-lookup"><span data-stu-id="13303-119">After the key is retrieved and the token is created, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
+ <span data-ttu-id="06010-119">正在检索密钥并创建令牌后，应调用[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数，以释放已分配的内存。</span><span class="sxs-lookup"><span data-stu-id="06010-119">After the key is retrieved and the token is created, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
   
- <span data-ttu-id="13303-120">如果`StrongNameTokenFromAssemblyEx`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。</span><span class="sxs-lookup"><span data-stu-id="13303-120">If the `StrongNameTokenFromAssemblyEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="06010-120">如果`StrongNameTokenFromAssemblyEx`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。</span><span class="sxs-lookup"><span data-stu-id="06010-120">If the `StrongNameTokenFromAssemblyEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13303-121">要求</span><span class="sxs-lookup"><span data-stu-id="13303-121">Requirements</span></span>  
- <span data-ttu-id="13303-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="13303-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06010-121">要求</span><span class="sxs-lookup"><span data-stu-id="06010-121">Requirements</span></span>  
+ <span data-ttu-id="06010-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="06010-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13303-123">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="13303-123">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="06010-123">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="06010-123">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="13303-124">**库：** 包含为 mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="13303-124">**Library:** Included as a resource in mscoree.dll</span></span>  
+ <span data-ttu-id="06010-124">**库：** 包含为 mscoree.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="06010-124">**Library:** Included as a resource in mscoree.dll</span></span>  
   
- <span data-ttu-id="13303-125">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13303-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="06010-125">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06010-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13303-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="13303-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06010-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="06010-126">See also</span></span>
 
-- [<span data-ttu-id="13303-127">StrongNameTokenFromAssemblyEx 方法</span><span class="sxs-lookup"><span data-stu-id="13303-127">StrongNameTokenFromAssemblyEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [<span data-ttu-id="13303-128">StrongNameTokenFromAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="13303-128">StrongNameTokenFromAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [<span data-ttu-id="13303-129">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="13303-129">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="06010-127">StrongNameTokenFromAssemblyEx 方法</span><span class="sxs-lookup"><span data-stu-id="06010-127">StrongNameTokenFromAssemblyEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [<span data-ttu-id="06010-128">StrongNameTokenFromAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="06010-128">StrongNameTokenFromAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [<span data-ttu-id="06010-129">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="06010-129">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

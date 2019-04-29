@@ -1,5 +1,5 @@
 ---
-title: <appSettings> 的 <configuration> 元素
+title: <configuration> 的 <appSettings> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -10,20 +10,20 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705553"
 ---
-# <a name="appsettings-element-for-configuration"></a><span data-ttu-id="c2cd3-102">\<appSettings > 元素\<配置 ></span><span class="sxs-lookup"><span data-stu-id="c2cd3-102">\<appSettings> element for \<configuration></span></span>
+# <a name="appsettings-element-for-configuration"></a><span data-ttu-id="de0da-102">\<appSettings > 元素\<配置 ></span><span class="sxs-lookup"><span data-stu-id="de0da-102">\<appSettings> element for \<configuration></span></span>
 
-<span data-ttu-id="c2cd3-103">包含自定义应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-103">Contains custom application settings.</span></span> <span data-ttu-id="c2cd3-104">这是.NET Framework 提供的预定义的配置部分。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-104">This is a predefined configuration section provided by the .NET Framework.</span></span>
+<span data-ttu-id="de0da-103">包含自定义应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="de0da-103">Contains custom application settings.</span></span> <span data-ttu-id="de0da-104">这是.NET Framework 提供的预定义的配置部分。</span><span class="sxs-lookup"><span data-stu-id="de0da-104">This is a predefined configuration section provided by the .NET Framework.</span></span>
 
-<span data-ttu-id="c2cd3-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="c2cd3-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="c2cd3-106">&nbsp;&nbsp;**\<appSettings>**</span><span class="sxs-lookup"><span data-stu-id="c2cd3-106">&nbsp;&nbsp;**\<appSettings>**</span></span>
+<span data-ttu-id="de0da-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="de0da-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="de0da-106">&nbsp;&nbsp;**\<appSettings>**</span><span class="sxs-lookup"><span data-stu-id="de0da-106">&nbsp;&nbsp;**\<appSettings>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c2cd3-107">语法</span><span class="sxs-lookup"><span data-stu-id="c2cd3-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="de0da-107">语法</span><span class="sxs-lookup"><span data-stu-id="de0da-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -31,37 +31,37 @@ ms.locfileid: "55289583"
 </appSettings>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="c2cd3-108">特性</span><span class="sxs-lookup"><span data-stu-id="c2cd3-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="de0da-108">特性</span><span class="sxs-lookup"><span data-stu-id="de0da-108">Attribute</span></span>
 
-|           | <span data-ttu-id="c2cd3-109">描述</span><span class="sxs-lookup"><span data-stu-id="c2cd3-109">Description</span></span> |
+|           | <span data-ttu-id="de0da-109">描述</span><span class="sxs-lookup"><span data-stu-id="de0da-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="c2cd3-110">文件</span><span class="sxs-lookup"><span data-stu-id="c2cd3-110">**file**</span></span>  | <span data-ttu-id="c2cd3-111">可选特性。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-111">Optional attribute.</span></span><br><br><span data-ttu-id="c2cd3-112">指定包含自定义应用程序配置设置的外部文件的相对路径。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-112">Specifies a relative path to an external file containing custom application configuration settings.</span></span> <span data-ttu-id="c2cd3-113">指定的文件是否包含相同类型的设置中指定 **\<添加 >** ， **\<删除 >**，以及 **\<清除 >** 元素，并使用同一个键/值对的格式设置为这些元素。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-113">The specified file contains the same kind of settings that are specified in the **\<add>**, **\<remove>**, and **\<clear>** elements and uses the same key/value pair format as those elements.</span></span><br><br><span data-ttu-id="c2cd3-114">指定的路径是相对于主配置文件。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-114">The path specified is relative to the main configuration file.</span></span> <span data-ttu-id="c2cd3-115">对于 Windows 窗体应用程序，这是二进制文件夹 (如 */bin/debug*)，不应用程序配置文件的位置。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-115">For a Windows Forms application, this is the binary folder (such as */bin/debug*), not the location of the application configuration file.</span></span> <span data-ttu-id="c2cd3-116">为 Web 窗体应用程序的路径是相对于应用程序根目录中，其中*web.config*文件的位置。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-116">For Web Forms applications, the path is relative to the application root, where the *web.config* file is located.</span></span><br><br><span data-ttu-id="c2cd3-117">请注意，运行时会忽略该属性，是否找不到指定的文件。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-117">Note that the runtime ignores the attribute if the specified file can not be found.</span></span> |
+| <span data-ttu-id="de0da-110">文件</span><span class="sxs-lookup"><span data-stu-id="de0da-110">**file**</span></span>  | <span data-ttu-id="de0da-111">可选特性。</span><span class="sxs-lookup"><span data-stu-id="de0da-111">Optional attribute.</span></span><br><br><span data-ttu-id="de0da-112">指定包含自定义应用程序配置设置的外部文件的相对路径。</span><span class="sxs-lookup"><span data-stu-id="de0da-112">Specifies a relative path to an external file containing custom application configuration settings.</span></span> <span data-ttu-id="de0da-113">指定的文件是否包含相同类型的设置中指定 **\<添加 >** ， **\<删除 >**，以及 **\<清除 >** 元素，并使用同一个键/值对的格式设置为这些元素。</span><span class="sxs-lookup"><span data-stu-id="de0da-113">The specified file contains the same kind of settings that are specified in the **\<add>**, **\<remove>**, and **\<clear>** elements and uses the same key/value pair format as those elements.</span></span><br><br><span data-ttu-id="de0da-114">指定的路径是相对于主配置文件。</span><span class="sxs-lookup"><span data-stu-id="de0da-114">The path specified is relative to the main configuration file.</span></span> <span data-ttu-id="de0da-115">对于 Windows 窗体应用程序，这是二进制文件夹 (如 */bin/debug*)，不应用程序配置文件的位置。</span><span class="sxs-lookup"><span data-stu-id="de0da-115">For a Windows Forms application, this is the binary folder (such as */bin/debug*), not the location of the application configuration file.</span></span> <span data-ttu-id="de0da-116">为 Web 窗体应用程序的路径是相对于应用程序根目录中，其中*web.config*文件的位置。</span><span class="sxs-lookup"><span data-stu-id="de0da-116">For Web Forms applications, the path is relative to the application root, where the *web.config* file is located.</span></span><br><br><span data-ttu-id="de0da-117">请注意，运行时会忽略该属性，是否找不到指定的文件。</span><span class="sxs-lookup"><span data-stu-id="de0da-117">Note that the runtime ignores the attribute if the specified file can not be found.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="c2cd3-118">父元素</span><span class="sxs-lookup"><span data-stu-id="c2cd3-118">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="de0da-118">父元素</span><span class="sxs-lookup"><span data-stu-id="de0da-118">Parent element</span></span>
 
-|     | <span data-ttu-id="c2cd3-119">描述</span><span class="sxs-lookup"><span data-stu-id="c2cd3-119">Description</span></span> |
+|     | <span data-ttu-id="de0da-119">描述</span><span class="sxs-lookup"><span data-stu-id="de0da-119">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="c2cd3-120">**\<配置 >** 元素</span><span class="sxs-lookup"><span data-stu-id="c2cd3-120">**\<configuration>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="c2cd3-121">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="de0da-120">**\<配置 >** 元素</span><span class="sxs-lookup"><span data-stu-id="de0da-120">**\<configuration>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="de0da-121">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="de0da-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="c2cd3-122">子元素</span><span class="sxs-lookup"><span data-stu-id="c2cd3-122">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="de0da-122">子元素</span><span class="sxs-lookup"><span data-stu-id="de0da-122">Child elements</span></span>
 
-|     | <span data-ttu-id="c2cd3-123">描述</span><span class="sxs-lookup"><span data-stu-id="c2cd3-123">Description</span></span> |
+|     | <span data-ttu-id="de0da-123">描述</span><span class="sxs-lookup"><span data-stu-id="de0da-123">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="c2cd3-124">**\<add>**</span><span class="sxs-lookup"><span data-stu-id="c2cd3-124">**\<add>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | <span data-ttu-id="c2cd3-125">添加自定义应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-125">Adds a custom application setting.</span></span> |
-| [<span data-ttu-id="c2cd3-126">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="c2cd3-126">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | <span data-ttu-id="c2cd3-127">清除所有以前定义的应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-127">Clears all previously defined application settings.</span></span> |
-| [<span data-ttu-id="c2cd3-128">**\<remove>**</span><span class="sxs-lookup"><span data-stu-id="c2cd3-128">**\<remove>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | <span data-ttu-id="c2cd3-129">删除以前定义的应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-129">Removes a previously defined application setting.</span></span> |
+| [<span data-ttu-id="de0da-124">**\<add>**</span><span class="sxs-lookup"><span data-stu-id="de0da-124">**\<add>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | <span data-ttu-id="de0da-125">添加自定义应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="de0da-125">Adds a custom application setting.</span></span> |
+| [<span data-ttu-id="de0da-126">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="de0da-126">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | <span data-ttu-id="de0da-127">清除所有以前定义的应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="de0da-127">Clears all previously defined application settings.</span></span> |
+| [<span data-ttu-id="de0da-128">**\<remove>**</span><span class="sxs-lookup"><span data-stu-id="de0da-128">**\<remove>**</span></span>](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | <span data-ttu-id="de0da-129">删除以前定义的应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="de0da-129">Removes a previously defined application setting.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="c2cd3-130">备注</span><span class="sxs-lookup"><span data-stu-id="c2cd3-130">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="de0da-130">备注</span><span class="sxs-lookup"><span data-stu-id="de0da-130">Remarks</span></span>
 
-<span data-ttu-id="c2cd3-131">**\<AppSettings >** 元素将自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web service Url 或任何其他自定义配置信息存储应用程序。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-131">The **\<appSettings>** element stores custom application configuration information, such as database connection strings, file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> <span data-ttu-id="c2cd3-132">中指定的键/值对 **\<appSettings >** 在代码中使用访问元素<xref:System.Configuration.ConfigurationSettings>类。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-132">The key/value pairs specified in the **\<appSettings>** element are accessed in code using the <xref:System.Configuration.ConfigurationSettings> class.</span></span>
+<span data-ttu-id="de0da-131">**\<AppSettings >** 元素将自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web service Url 或任何其他自定义配置信息存储应用程序。</span><span class="sxs-lookup"><span data-stu-id="de0da-131">The **\<appSettings>** element stores custom application configuration information, such as database connection strings, file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> <span data-ttu-id="de0da-132">中指定的键/值对 **\<appSettings >** 在代码中使用访问元素<xref:System.Configuration.ConfigurationSettings>类。</span><span class="sxs-lookup"><span data-stu-id="de0da-132">The key/value pairs specified in the **\<appSettings>** element are accessed in code using the <xref:System.Configuration.ConfigurationSettings> class.</span></span>
 
-<span data-ttu-id="c2cd3-133">可以使用**文件**属性中 **\<appSettings >** 元素的*Web.config*和应用程序配置文件。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-133">You can use the **file** attribute in the **\<appSettings>** element of the *Web.config* and application configuration files.</span></span> <span data-ttu-id="c2cd3-134">此属性指定提供其他设置或重写中指定的设置的配置文件 **\<appSettings >** 元素。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-134">This attribute specifies a configuration file that provides additional settings or overrides the settings specified in the **\<appSettings>** element.</span></span> <span data-ttu-id="c2cd3-135">**文件**属性可以在源代码管理团队开发方案，例如当用户需要重写应用程序配置文件中指定的项目设置中使用。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-135">The **file** attribute can be used in source control team development scenarios, such as when a user wants to override the project settings specified in an application configuration file.</span></span>
+<span data-ttu-id="de0da-133">可以使用**文件**属性中 **\<appSettings >** 元素的*Web.config*和应用程序配置文件。</span><span class="sxs-lookup"><span data-stu-id="de0da-133">You can use the **file** attribute in the **\<appSettings>** element of the *Web.config* and application configuration files.</span></span> <span data-ttu-id="de0da-134">此属性指定提供其他设置或重写中指定的设置的配置文件 **\<appSettings >** 元素。</span><span class="sxs-lookup"><span data-stu-id="de0da-134">This attribute specifies a configuration file that provides additional settings or overrides the settings specified in the **\<appSettings>** element.</span></span> <span data-ttu-id="de0da-135">**文件**属性可以在源代码管理团队开发方案，例如当用户需要重写应用程序配置文件中指定的项目设置中使用。</span><span class="sxs-lookup"><span data-stu-id="de0da-135">The **file** attribute can be used in source control team development scenarios, such as when a user wants to override the project settings specified in an application configuration file.</span></span>
 
-<span data-ttu-id="c2cd3-136">指定的配置文件 **文件** 属性必须具有的根节点 **\<appSettings >** 而非 **\<配置 >**.</span><span class="sxs-lookup"><span data-stu-id="c2cd3-136">Configuration files specified by the **file** attribute must have a root node of **\<appSettings>** rather than **\<configuration>**.</span></span>
+<span data-ttu-id="de0da-136">指定的配置文件 **文件** 属性必须具有的根节点 **\<appSettings >** 而非 **\<配置 >**.</span><span class="sxs-lookup"><span data-stu-id="de0da-136">Configuration files specified by the **file** attribute must have a root node of **\<appSettings>** rather than **\<configuration>**.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c2cd3-137">示例</span><span class="sxs-lookup"><span data-stu-id="c2cd3-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="de0da-137">示例</span><span class="sxs-lookup"><span data-stu-id="de0da-137">Example</span></span>
 
-<span data-ttu-id="c2cd3-138">下面的示例演示外部应用程序设置文件 (custom.config)，该文件定义自定义应用程序设置：</span><span class="sxs-lookup"><span data-stu-id="c2cd3-138">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
+<span data-ttu-id="de0da-138">下面的示例演示外部应用程序设置文件 (custom.config)，该文件定义自定义应用程序设置：</span><span class="sxs-lookup"><span data-stu-id="de0da-138">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -70,7 +70,7 @@ ms.locfileid: "55289583"
 </appSettings>
 ```
 
-<span data-ttu-id="c2cd3-139">下面的示例演示使用外部设置文件中的设置并自行设置应用程序设置的应用程序配置文件：</span><span class="sxs-lookup"><span data-stu-id="c2cd3-139">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
+<span data-ttu-id="de0da-139">下面的示例演示使用外部设置文件中的设置并自行设置应用程序设置的应用程序配置文件：</span><span class="sxs-lookup"><span data-stu-id="de0da-139">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
 
 ```xml
 <configuration>
@@ -80,10 +80,10 @@ ms.locfileid: "55289583"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="c2cd3-140">配置文件</span><span class="sxs-lookup"><span data-stu-id="c2cd3-140">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="de0da-140">配置文件</span><span class="sxs-lookup"><span data-stu-id="de0da-140">Configuration file</span></span>
 
-<span data-ttu-id="c2cd3-141">在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。</span><span class="sxs-lookup"><span data-stu-id="c2cd3-141">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="de0da-141">在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。</span><span class="sxs-lookup"><span data-stu-id="de0da-141">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c2cd3-142">请参阅</span><span class="sxs-lookup"><span data-stu-id="c2cd3-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de0da-142">请参阅</span><span class="sxs-lookup"><span data-stu-id="de0da-142">See also</span></span>
 
-- [<span data-ttu-id="c2cd3-143">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="c2cd3-143">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="de0da-143">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="de0da-143">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

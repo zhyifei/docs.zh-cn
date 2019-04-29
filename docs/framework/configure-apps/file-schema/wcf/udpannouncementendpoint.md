@@ -3,19 +3,19 @@ title: <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
 ms.openlocfilehash: 04f5fb27a0da7e553ff3c0308f7fb2e2df2e0b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788253"
 ---
-# <a name="udpannouncementendpoint"></a><span data-ttu-id="4cd88-101">\<udpAnnouncementEndpoint></span><span class="sxs-lookup"><span data-stu-id="4cd88-101">\<udpAnnouncementEndpoint></span></span>
-<span data-ttu-id="4cd88-102">此配置元素定义服务通过 UDP 绑定发送公告消息所使用的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="4cd88-102">This configuration element defines a standard endpoint that is used by services to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="4cd88-103">它具有固定协定并支持两个发现版本。</span><span class="sxs-lookup"><span data-stu-id="4cd88-103">It has a fixed contract and supports two discovery versions.</span></span> <span data-ttu-id="4cd88-104">此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址值。</span><span class="sxs-lookup"><span data-stu-id="4cd88-104">In addition it has a fixed UDP binding and a default address value as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery version 1.1).</span></span> <span data-ttu-id="4cd88-105">您可以指定用于发送和接收公告消息的多播地址。</span><span class="sxs-lookup"><span data-stu-id="4cd88-105">You can specify the multicast address to use for sending and receiving the announcement messages.</span></span>  
+# <a name="udpannouncementendpoint"></a><span data-ttu-id="22283-101">\<udpAnnouncementEndpoint></span><span class="sxs-lookup"><span data-stu-id="22283-101">\<udpAnnouncementEndpoint></span></span>
+<span data-ttu-id="22283-102">此配置元素定义服务通过 UDP 绑定发送公告消息所使用的标准终结点。</span><span class="sxs-lookup"><span data-stu-id="22283-102">This configuration element defines a standard endpoint that is used by services to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="22283-103">它具有固定协定并支持两个发现版本。</span><span class="sxs-lookup"><span data-stu-id="22283-103">It has a fixed contract and supports two discovery versions.</span></span> <span data-ttu-id="22283-104">此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址值。</span><span class="sxs-lookup"><span data-stu-id="22283-104">In addition it has a fixed UDP binding and a default address value as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery version 1.1).</span></span> <span data-ttu-id="22283-105">您可以指定用于发送和接收公告消息的多播地址。</span><span class="sxs-lookup"><span data-stu-id="22283-105">You can specify the multicast address to use for sending and receiving the announcement messages.</span></span>  
   
-<span data-ttu-id="4cd88-106">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="4cd88-106">\<system.ServiceModel></span></span>  
-<span data-ttu-id="4cd88-107">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="4cd88-107">\<standardEndpoints></span></span>  
+<span data-ttu-id="22283-106">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="22283-106">\<system.ServiceModel></span></span>  
+<span data-ttu-id="22283-107">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="22283-107">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cd88-108">语法</span><span class="sxs-lookup"><span data-stu-id="4cd88-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22283-108">语法</span><span class="sxs-lookup"><span data-stu-id="22283-108">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -30,32 +30,32 @@ ms.locfileid: "59210004"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4cd88-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="4cd88-109">Attributes and Elements</span></span>  
- <span data-ttu-id="4cd88-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="4cd88-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="22283-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="22283-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="22283-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="22283-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4cd88-111">特性</span><span class="sxs-lookup"><span data-stu-id="4cd88-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="22283-111">特性</span><span class="sxs-lookup"><span data-stu-id="22283-111">Attributes</span></span>  
   
-|<span data-ttu-id="4cd88-112">特性</span><span class="sxs-lookup"><span data-stu-id="4cd88-112">Attribute</span></span>|<span data-ttu-id="4cd88-113">描述</span><span class="sxs-lookup"><span data-stu-id="4cd88-113">Description</span></span>|  
+|<span data-ttu-id="22283-112">特性</span><span class="sxs-lookup"><span data-stu-id="22283-112">Attribute</span></span>|<span data-ttu-id="22283-113">描述</span><span class="sxs-lookup"><span data-stu-id="22283-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="4cd88-114">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="4cd88-114">discoveryVersion</span></span>|<span data-ttu-id="4cd88-115">一个字符串，指定两个 WS-Discovery 协议版本中的其中一个版本。</span><span class="sxs-lookup"><span data-stu-id="4cd88-115">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="4cd88-116">有效值为 WSDiscovery11 和 WSDiscoveryApril2005。</span><span class="sxs-lookup"><span data-stu-id="4cd88-116">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="4cd88-117">此值的类型为 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。</span><span class="sxs-lookup"><span data-stu-id="4cd88-117">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
-|<span data-ttu-id="4cd88-118">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="4cd88-118">maxAnnouncementDelay</span></span>|<span data-ttu-id="4cd88-119">一个 Timespan 值，指定 Discovery 协议在发送 Hello 消息之前等待的最大延迟值。</span><span class="sxs-lookup"><span data-stu-id="4cd88-119">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="4cd88-120">消息在发送之前将等待一个随机时间值（介于 0 到此特性值之间）。</span><span class="sxs-lookup"><span data-stu-id="4cd88-120">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="4cd88-121">此特性用于设置随机的短时间延迟，以防止在网络出现故障后所有服务同时重新联机所造成的网络风暴。</span><span class="sxs-lookup"><span data-stu-id="4cd88-121">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
-|<span data-ttu-id="4cd88-122">multicastAddress</span><span class="sxs-lookup"><span data-stu-id="4cd88-122">multicastAddress</span></span>|<span data-ttu-id="4cd88-123">一个 URI，指定用于发送和接收发现消息的多播地址。</span><span class="sxs-lookup"><span data-stu-id="4cd88-123">A URI that specifies a multicast address to use for sending and receiving the discovery messages.</span></span> <span data-ttu-id="4cd88-124">默认值是符合协议规范的多播地址。</span><span class="sxs-lookup"><span data-stu-id="4cd88-124">The default value is the multicast address as conformant to the protocol specification.</span></span>|  
-|<span data-ttu-id="4cd88-125">name</span><span class="sxs-lookup"><span data-stu-id="4cd88-125">name</span></span>|<span data-ttu-id="4cd88-126">一个字符串，指定标准终结点的配置的名称。</span><span class="sxs-lookup"><span data-stu-id="4cd88-126">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="4cd88-127">此名称在服务终结点的 `endpointConfiguration` 特性中用于将标准终结点链接到其配置。</span><span class="sxs-lookup"><span data-stu-id="4cd88-127">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
+|<span data-ttu-id="22283-114">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="22283-114">discoveryVersion</span></span>|<span data-ttu-id="22283-115">一个字符串，指定两个 WS-Discovery 协议版本中的其中一个版本。</span><span class="sxs-lookup"><span data-stu-id="22283-115">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="22283-116">有效值为 WSDiscovery11 和 WSDiscoveryApril2005。</span><span class="sxs-lookup"><span data-stu-id="22283-116">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="22283-117">此值的类型为 <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>。</span><span class="sxs-lookup"><span data-stu-id="22283-117">This value is of type <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.</span></span>|  
+|<span data-ttu-id="22283-118">maxAnnouncementDelay</span><span class="sxs-lookup"><span data-stu-id="22283-118">maxAnnouncementDelay</span></span>|<span data-ttu-id="22283-119">一个 Timespan 值，指定 Discovery 协议在发送 Hello 消息之前等待的最大延迟值。</span><span class="sxs-lookup"><span data-stu-id="22283-119">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending a Hello message.</span></span> <span data-ttu-id="22283-120">消息在发送之前将等待一个随机时间值（介于 0 到此特性值之间）。</span><span class="sxs-lookup"><span data-stu-id="22283-120">The messages will wait for a random time value between 0 and the value of this attribute before being sent.</span></span> <span data-ttu-id="22283-121">此特性用于设置随机的短时间延迟，以防止在网络出现故障后所有服务同时重新联机所造成的网络风暴。</span><span class="sxs-lookup"><span data-stu-id="22283-121">This attribute is used to set a small, random delay to prevent network storms when a network goes out and all services come back online at the same time.</span></span>|  
+|<span data-ttu-id="22283-122">multicastAddress</span><span class="sxs-lookup"><span data-stu-id="22283-122">multicastAddress</span></span>|<span data-ttu-id="22283-123">一个 URI，指定用于发送和接收发现消息的多播地址。</span><span class="sxs-lookup"><span data-stu-id="22283-123">A URI that specifies a multicast address to use for sending and receiving the discovery messages.</span></span> <span data-ttu-id="22283-124">默认值是符合协议规范的多播地址。</span><span class="sxs-lookup"><span data-stu-id="22283-124">The default value is the multicast address as conformant to the protocol specification.</span></span>|  
+|<span data-ttu-id="22283-125">name</span><span class="sxs-lookup"><span data-stu-id="22283-125">name</span></span>|<span data-ttu-id="22283-126">一个字符串，指定标准终结点的配置的名称。</span><span class="sxs-lookup"><span data-stu-id="22283-126">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="22283-127">此名称在服务终结点的 `endpointConfiguration` 特性中用于将标准终结点链接到其配置。</span><span class="sxs-lookup"><span data-stu-id="22283-127">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4cd88-128">子元素</span><span class="sxs-lookup"><span data-stu-id="4cd88-128">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="22283-128">子元素</span><span class="sxs-lookup"><span data-stu-id="22283-128">Child Elements</span></span>  
   
-|<span data-ttu-id="4cd88-129">元素</span><span class="sxs-lookup"><span data-stu-id="4cd88-129">Element</span></span>|<span data-ttu-id="4cd88-130">描述</span><span class="sxs-lookup"><span data-stu-id="4cd88-130">Description</span></span>|  
+|<span data-ttu-id="22283-129">元素</span><span class="sxs-lookup"><span data-stu-id="22283-129">Element</span></span>|<span data-ttu-id="22283-130">描述</span><span class="sxs-lookup"><span data-stu-id="22283-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4cd88-131">\<udpTransportSettings></span><span class="sxs-lookup"><span data-stu-id="4cd88-131">\<udpTransportSettings></span></span>](udptransportsettings.md)|<span data-ttu-id="4cd88-132">一个设置集合，用于为 UDP 终结点配置 UDP 传输。</span><span class="sxs-lookup"><span data-stu-id="4cd88-132">A collection of settings that allow you to configure UDP transport for the UDP endpoint.</span></span>|  
+|[<span data-ttu-id="22283-131">\<udpTransportSettings></span><span class="sxs-lookup"><span data-stu-id="22283-131">\<udpTransportSettings></span></span>](udptransportsettings.md)|<span data-ttu-id="22283-132">一个设置集合，用于为 UDP 终结点配置 UDP 传输。</span><span class="sxs-lookup"><span data-stu-id="22283-132">A collection of settings that allow you to configure UDP transport for the UDP endpoint.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4cd88-133">父元素</span><span class="sxs-lookup"><span data-stu-id="4cd88-133">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="22283-133">父元素</span><span class="sxs-lookup"><span data-stu-id="22283-133">Parent Elements</span></span>  
   
-|<span data-ttu-id="4cd88-134">元素</span><span class="sxs-lookup"><span data-stu-id="4cd88-134">Element</span></span>|<span data-ttu-id="4cd88-135">描述</span><span class="sxs-lookup"><span data-stu-id="4cd88-135">Description</span></span>|  
+|<span data-ttu-id="22283-134">元素</span><span class="sxs-lookup"><span data-stu-id="22283-134">Element</span></span>|<span data-ttu-id="22283-135">描述</span><span class="sxs-lookup"><span data-stu-id="22283-135">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4cd88-136">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="4cd88-136">\<standardEndpoints></span></span>](standardendpoints.md)|<span data-ttu-id="4cd88-137">具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。</span><span class="sxs-lookup"><span data-stu-id="4cd88-137">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="22283-136">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="22283-136">\<standardEndpoints></span></span>](standardendpoints.md)|<span data-ttu-id="22283-137">具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。</span><span class="sxs-lookup"><span data-stu-id="22283-137">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="4cd88-138">示例</span><span class="sxs-lookup"><span data-stu-id="4cd88-138">Example</span></span>  
- <span data-ttu-id="4cd88-139">下面的示例演示一个客户端，该客户端分别通过采用默认多播地址和所指定多播地址的 UDP 多播传输侦听公告。</span><span class="sxs-lookup"><span data-stu-id="4cd88-139">The following example demonstrates a client listening for announcement over a UDP multicast transport with default multicast address, and UDP multicast transport with specified multicast address.</span></span>  
+## <a name="example"></a><span data-ttu-id="22283-138">示例</span><span class="sxs-lookup"><span data-stu-id="22283-138">Example</span></span>  
+ <span data-ttu-id="22283-139">下面的示例演示一个客户端，该客户端分别通过采用默认多播地址和所指定多播地址的 UDP 多播传输侦听公告。</span><span class="sxs-lookup"><span data-stu-id="22283-139">The following example demonstrates a client listening for announcement over a UDP multicast transport with default multicast address, and UDP multicast transport with specified multicast address.</span></span>  
   
 ```xml  
 <services>
@@ -79,6 +79,6 @@ ms.locfileid: "59210004"
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4cd88-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="4cd88-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22283-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="22283-140">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

@@ -10,21 +10,21 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: c3b1fa2274c58061c446e42b3331e69fdf991b42
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58635493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705956"
 ---
-# <a name="stdpicture-interface"></a><span data-ttu-id="f263e-102">StdPicture 接口</span><span class="sxs-lookup"><span data-stu-id="f263e-102">StdPicture Interface</span></span>
+# <a name="stdpicture-interface"></a><span data-ttu-id="a63c2-102">StdPicture 接口</span><span class="sxs-lookup"><span data-stu-id="a63c2-102">StdPicture Interface</span></span>
 
 ```csharp
 [GuidAttribute("7BF80981-BF32-101A-8BBB-00AA00300CAB")]
 public interface StdPicture : Picture
 ```
 
-## <a name="requirements"></a><span data-ttu-id="f263e-103">要求</span><span class="sxs-lookup"><span data-stu-id="f263e-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a63c2-103">要求</span><span class="sxs-lookup"><span data-stu-id="a63c2-103">Requirements</span></span>
 
-<span data-ttu-id="f263e-104">**Namespace**：`stdole`</span><span class="sxs-lookup"><span data-stu-id="f263e-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="a63c2-104">**Namespace**：`stdole`</span><span class="sxs-lookup"><span data-stu-id="a63c2-104">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="f263e-105">**程序集：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="f263e-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="a63c2-105">**程序集：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="a63c2-105">**Assembly:** stdole (in stdole.dll)</span></span>

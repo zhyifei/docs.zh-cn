@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782990"
 ---
-# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="dced3-102">ICorDebugReferenceValue::DereferenceStrong 方法</span><span class="sxs-lookup"><span data-stu-id="dced3-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
-<span data-ttu-id="dced3-103">`DereferenceStrong` 未实现。</span><span class="sxs-lookup"><span data-stu-id="dced3-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="dced3-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="dced3-104">Do not call this method.</span></span>  
+# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="b48e5-102">ICorDebugReferenceValue::DereferenceStrong 方法</span><span class="sxs-lookup"><span data-stu-id="b48e5-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
+<span data-ttu-id="b48e5-103">`DereferenceStrong` 未实现。</span><span class="sxs-lookup"><span data-stu-id="b48e5-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="b48e5-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="b48e5-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dced3-105">语法</span><span class="sxs-lookup"><span data-stu-id="dced3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b48e5-105">语法</span><span class="sxs-lookup"><span data-stu-id="b48e5-105">Syntax</span></span>  
   
 ```  
 HRESULT DereferenceStrong (  
@@ -35,11 +35,11 @@ HRESULT DereferenceStrong (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="dced3-106">要求</span><span class="sxs-lookup"><span data-stu-id="dced3-106">Requirements</span></span>  
- <span data-ttu-id="dced3-107">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dced3-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b48e5-106">要求</span><span class="sxs-lookup"><span data-stu-id="b48e5-106">Requirements</span></span>  
+ <span data-ttu-id="b48e5-107">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b48e5-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dced3-108">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dced3-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b48e5-108">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b48e5-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dced3-109">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dced3-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b48e5-109">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b48e5-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dced3-110">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dced3-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b48e5-110">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b48e5-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

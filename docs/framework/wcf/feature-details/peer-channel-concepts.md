@@ -3,24 +3,24 @@ title: 对等通道概念
 ms.date: 03/30/2017
 ms.assetid: 379c2c0b-a44f-4423-9480-4739e7f18614
 ms.openlocfilehash: 8955f6ab18e7fddac2f99b30be38532781c7ae21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769429"
 ---
-# <a name="peer-channel-concepts"></a><span data-ttu-id="33f16-102">对等通道概念</span><span class="sxs-lookup"><span data-stu-id="33f16-102">Peer Channel Concepts</span></span>
-<span data-ttu-id="33f16-103">本部分简要介绍构成了 Windows Communication Foundation (WCF) 对等通道的概念。</span><span class="sxs-lookup"><span data-stu-id="33f16-103">This section briefly explains the concepts that make up the Windows Communication Foundation (WCF) Peer Channel.</span></span>  
+# <a name="peer-channel-concepts"></a><span data-ttu-id="95ba3-102">对等通道概念</span><span class="sxs-lookup"><span data-stu-id="95ba3-102">Peer Channel Concepts</span></span>
+<span data-ttu-id="95ba3-103">本部分简要介绍构成了 Windows Communication Foundation (WCF) 对等通道的概念。</span><span class="sxs-lookup"><span data-stu-id="95ba3-103">This section briefly explains the concepts that make up the Windows Communication Foundation (WCF) Peer Channel.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="33f16-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="33f16-104">In This Section</span></span>  
- <span data-ttu-id="33f16-105">[对等网格](../../../../docs/framework/wcf/feature-details/peer-meshes.md):描述创建使用对等通道的网格的特征。</span><span class="sxs-lookup"><span data-stu-id="33f16-105">[Peer Meshes](../../../../docs/framework/wcf/feature-details/peer-meshes.md):  Describes the characteristics of meshes created using Peer Channel.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="95ba3-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="95ba3-104">In This Section</span></span>  
+ <span data-ttu-id="95ba3-105">[对等网格](../../../../docs/framework/wcf/feature-details/peer-meshes.md):描述创建使用对等通道的网格的特征。</span><span class="sxs-lookup"><span data-stu-id="95ba3-105">[Peer Meshes](../../../../docs/framework/wcf/feature-details/peer-meshes.md):  Describes the characteristics of meshes created using Peer Channel.</span></span>  
   
- <span data-ttu-id="33f16-106">[对等节点](../../../../docs/framework/wcf/feature-details/peer-nodes.md):描述对等节点。</span><span class="sxs-lookup"><span data-stu-id="33f16-106">[Peer Nodes](../../../../docs/framework/wcf/feature-details/peer-nodes.md):  Describes peer nodes.</span></span>  
+ <span data-ttu-id="95ba3-106">[对等节点](../../../../docs/framework/wcf/feature-details/peer-nodes.md):描述对等节点。</span><span class="sxs-lookup"><span data-stu-id="95ba3-106">[Peer Nodes](../../../../docs/framework/wcf/feature-details/peer-nodes.md):  Describes peer nodes.</span></span>  
   
- <span data-ttu-id="33f16-107">[对等通道安全](../../../../docs/framework/wcf/feature-details/peer-channel-security.md):描述安全方案和解决方案提供的对等通道。</span><span class="sxs-lookup"><span data-stu-id="33f16-107">[Peer Channel Security](../../../../docs/framework/wcf/feature-details/peer-channel-security.md):  Describes security scenarios and solutions provided by Peer Channel.</span></span>  
+ <span data-ttu-id="95ba3-107">[对等通道安全](../../../../docs/framework/wcf/feature-details/peer-channel-security.md):描述安全方案和解决方案提供的对等通道。</span><span class="sxs-lookup"><span data-stu-id="95ba3-107">[Peer Channel Security](../../../../docs/framework/wcf/feature-details/peer-channel-security.md):  Describes security scenarios and solutions provided by Peer Channel.</span></span>  
   
- <span data-ttu-id="33f16-108">[对等解析程序](../../../../docs/framework/wcf/feature-details/peer-resolvers.md):介绍如何使用对等名称解析协议 (PRNP) 以及其他自定义冲突解决程序。</span><span class="sxs-lookup"><span data-stu-id="33f16-108">[Peer Resolvers](../../../../docs/framework/wcf/feature-details/peer-resolvers.md):  Discusses the use of Peer Name Resolution Protocol (PRNP) and other custom resolvers.</span></span>  
+ <span data-ttu-id="95ba3-108">[对等解析程序](../../../../docs/framework/wcf/feature-details/peer-resolvers.md):介绍如何使用对等名称解析协议 (PRNP) 以及其他自定义冲突解决程序。</span><span class="sxs-lookup"><span data-stu-id="95ba3-108">[Peer Resolvers](../../../../docs/framework/wcf/feature-details/peer-resolvers.md):  Discusses the use of Peer Name Resolution Protocol (PRNP) and other custom resolvers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33f16-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="33f16-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95ba3-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="95ba3-109">See also</span></span>
 
-- [<span data-ttu-id="33f16-110">生成对等通道应用程序</span><span class="sxs-lookup"><span data-stu-id="33f16-110">Building a Peer Channel Application</span></span>](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [<span data-ttu-id="95ba3-110">生成对等通道应用程序</span><span class="sxs-lookup"><span data-stu-id="95ba3-110">Building a Peer Channel Application</span></span>](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

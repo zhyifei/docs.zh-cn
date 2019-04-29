@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 362cbe9ff19e74bafc73fde857d231185179efbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777483"
 ---
-# <a name="imetadataimportgettypespecfromtoken-method"></a><span data-ttu-id="23f0c-102">IMetaDataImport::GetTypeSpecFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="23f0c-102">IMetaDataImport::GetTypeSpecFromToken Method</span></span>
-<span data-ttu-id="23f0c-103">获取指定标记所表示的类型规范的二进制元数据签名。</span><span class="sxs-lookup"><span data-stu-id="23f0c-103">Gets the binary metadata signature of the type specification represented by the specified token.</span></span>  
+# <a name="imetadataimportgettypespecfromtoken-method"></a><span data-ttu-id="c01b6-102">IMetaDataImport::GetTypeSpecFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="c01b6-102">IMetaDataImport::GetTypeSpecFromToken Method</span></span>
+<span data-ttu-id="c01b6-103">获取指定标记所表示的类型规范的二进制元数据签名。</span><span class="sxs-lookup"><span data-stu-id="c01b6-103">Gets the binary metadata signature of the type specification represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23f0c-104">语法</span><span class="sxs-lookup"><span data-stu-id="23f0c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c01b6-104">语法</span><span class="sxs-lookup"><span data-stu-id="c01b6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeSpecFromToken (   
@@ -37,29 +37,29 @@ HRESULT GetTypeSpecFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="23f0c-105">参数</span><span class="sxs-lookup"><span data-stu-id="23f0c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c01b6-105">参数</span><span class="sxs-lookup"><span data-stu-id="c01b6-105">Parameters</span></span>  
  `typespec`  
- <span data-ttu-id="23f0c-106">[in]与请求的元数据签名关联的 TypeSpec 标记。</span><span class="sxs-lookup"><span data-stu-id="23f0c-106">[in] The TypeSpec token associated with the requested metadata signature.</span></span>  
+ <span data-ttu-id="c01b6-106">[in]与请求的元数据签名关联的 TypeSpec 标记。</span><span class="sxs-lookup"><span data-stu-id="c01b6-106">[in] The TypeSpec token associated with the requested metadata signature.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="23f0c-107">[out]指向二进制元数据签名的指针。</span><span class="sxs-lookup"><span data-stu-id="23f0c-107">[out] A pointer to the binary metadata signature.</span></span>  
+ <span data-ttu-id="c01b6-107">[out]指向二进制元数据签名的指针。</span><span class="sxs-lookup"><span data-stu-id="c01b6-107">[out] A pointer to the binary metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="23f0c-108">[out]大小，以字节为单位的元数据签名。</span><span class="sxs-lookup"><span data-stu-id="23f0c-108">[out] The size, in bytes, of the metadata signature.</span></span>  
+ <span data-ttu-id="c01b6-108">[out]大小，以字节为单位的元数据签名。</span><span class="sxs-lookup"><span data-stu-id="c01b6-108">[out] The size, in bytes, of the metadata signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="23f0c-109">返回值</span><span class="sxs-lookup"><span data-stu-id="23f0c-109">Return Value</span></span>  
- <span data-ttu-id="23f0c-110">一个 HRESULT，指示成功或失败。</span><span class="sxs-lookup"><span data-stu-id="23f0c-110">An HRESULT that indicates success or failure.</span></span> <span data-ttu-id="23f0c-111">可以使用 FAILED 宏测试失败。</span><span class="sxs-lookup"><span data-stu-id="23f0c-111">Failures can be tested with the FAILED macro.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c01b6-109">返回值</span><span class="sxs-lookup"><span data-stu-id="c01b6-109">Return Value</span></span>  
+ <span data-ttu-id="c01b6-110">一个 HRESULT，指示成功或失败。</span><span class="sxs-lookup"><span data-stu-id="c01b6-110">An HRESULT that indicates success or failure.</span></span> <span data-ttu-id="c01b6-111">可以使用 FAILED 宏测试失败。</span><span class="sxs-lookup"><span data-stu-id="c01b6-111">Failures can be tested with the FAILED macro.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23f0c-112">要求</span><span class="sxs-lookup"><span data-stu-id="23f0c-112">Requirements</span></span>  
- <span data-ttu-id="23f0c-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="23f0c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c01b6-112">要求</span><span class="sxs-lookup"><span data-stu-id="c01b6-112">Requirements</span></span>  
+ <span data-ttu-id="c01b6-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c01b6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23f0c-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="23f0c-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c01b6-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c01b6-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="23f0c-115">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="23f0c-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c01b6-115">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c01b6-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="23f0c-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23f0c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c01b6-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c01b6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23f0c-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="23f0c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c01b6-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="c01b6-117">See also</span></span>
 
-- [<span data-ttu-id="23f0c-118">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="23f0c-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="23f0c-119">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="23f0c-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c01b6-118">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="c01b6-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c01b6-119">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="c01b6-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

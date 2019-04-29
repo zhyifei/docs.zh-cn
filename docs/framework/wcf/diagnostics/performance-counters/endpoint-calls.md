@@ -1,27 +1,16 @@
 ---
-title: "终结点：Calls（调用次数）"
-ms.custom: 
+title: 终结点：Calls（调用次数）
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 223aefec-3011-4f35-afa7-a34c76708d52
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a87e9c4447ca5cfc084ed44a25d934dd5a2bca7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 056b3a571c035c9c0187a3883efdb303cbbc4849
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797249"
 ---
-# <a name="endpoint-calls"></a><span data-ttu-id="b6df9-102">终结点：Calls（调用次数）</span><span class="sxs-lookup"><span data-stu-id="b6df9-102">Endpoint: Calls</span></span>
-<span data-ttu-id="b6df9-103">计数器名称：Calls（调用次数）。</span><span class="sxs-lookup"><span data-stu-id="b6df9-103">Counter Name: Calls.</span></span>  
+# <a name="endpoint-calls"></a><span data-ttu-id="73815-102">终结点：Calls（调用次数）</span><span class="sxs-lookup"><span data-stu-id="73815-102">Endpoint: Calls</span></span>
+<span data-ttu-id="73815-103">计数器名称：调用。</span><span class="sxs-lookup"><span data-stu-id="73815-103">Counter Name: Calls.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b6df9-104">描述</span><span class="sxs-lookup"><span data-stu-id="b6df9-104">Description</span></span>  
- <span data-ttu-id="b6df9-105">对此终结点的调用次数。</span><span class="sxs-lookup"><span data-stu-id="b6df9-105">Number of calls to this endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="73815-104">描述</span><span class="sxs-lookup"><span data-stu-id="73815-104">Description</span></span>  
+ <span data-ttu-id="73815-105">对此终结点的调用次数。</span><span class="sxs-lookup"><span data-stu-id="73815-105">Number of calls to this endpoint.</span></span>

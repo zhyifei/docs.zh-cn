@@ -5,17 +5,17 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 5d569cf5edc9f1e39b9c53908b7fbe075d3f2bf5
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934610"
 ---
-# <a name="introduction-tothe-docker-application-life-cycle"></a><span data-ttu-id="bfc3c-103">Docker 应用程序生命周期简介</span><span class="sxs-lookup"><span data-stu-id="bfc3c-103">Introduction to the Docker application life cycle</span></span>
+# <a name="introduction-tothe-docker-application-life-cycle"></a><span data-ttu-id="fe8da-103">Docker 应用程序生命周期简介</span><span class="sxs-lookup"><span data-stu-id="fe8da-103">Introduction to the Docker application life cycle</span></span>
 
-<span data-ttu-id="bfc3c-104">*容器化应用程序生命周期是开发人员开始旅程。开发人员选择实现容器和 Docker，因为它消除了部署和 IT 操作的摩擦从而最终帮助每个人都可以进行端到端和更快更灵活多变、 提高工作效率。*</span><span class="sxs-lookup"><span data-stu-id="bfc3c-104">*The life cycle of containerized applications is a journey that begins with the developer. The developer chooses to implement containers and Docker because it eliminates frictions in deployments and IT operations, which ultimately helps everyone to be more agile, more productive end-to-end, and faster.*</span></span>
+<span data-ttu-id="fe8da-104">*容器化应用程序生命周期是开发人员开始旅程。开发人员选择实现容器和 Docker，因为它消除了部署和 IT 操作的摩擦从而最终帮助每个人都可以进行端到端和更快更灵活多变、 提高工作效率。*</span><span class="sxs-lookup"><span data-stu-id="fe8da-104">*The life cycle of containerized applications is a journey that begins with the developer. The developer chooses to implement containers and Docker because it eliminates frictions in deployments and IT operations, which ultimately helps everyone to be more agile, more productive end-to-end, and faster.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="bfc3c-105">[上一页](../docker-containers-images-and-registries.md)
->[下一页](containers-foundation-for-devops-collaboration.md)</span><span class="sxs-lookup"><span data-stu-id="bfc3c-105">[Previous](../docker-containers-images-and-registries.md)
+><span data-ttu-id="fe8da-105">[上一页](../docker-containers-images-and-registries.md)
+>[下一页](containers-foundation-for-devops-collaboration.md)</span><span class="sxs-lookup"><span data-stu-id="fe8da-105">[Previous](../docker-containers-images-and-registries.md)
 [Next](containers-foundation-for-devops-collaboration.md)</span></span>

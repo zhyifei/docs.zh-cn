@@ -5,16 +5,16 @@ ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7acf08262c73df00a96cfb5c244cdfc352e51ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789748"
 ---
-# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="afdaf-102">ICorDebugDataTarget2::GetImageLocation 方法</span><span class="sxs-lookup"><span data-stu-id="afdaf-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
-<span data-ttu-id="afdaf-103">返回模块基址中的模块路径。</span><span class="sxs-lookup"><span data-stu-id="afdaf-103">Returns the path of a module from the module's base address.</span></span>  
+# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="7853f-102">ICorDebugDataTarget2::GetImageLocation 方法</span><span class="sxs-lookup"><span data-stu-id="7853f-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
+<span data-ttu-id="7853f-103">返回模块基址中的模块路径。</span><span class="sxs-lookup"><span data-stu-id="7853f-103">Returns the path of a module from the module's base address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afdaf-104">语法</span><span class="sxs-lookup"><span data-stu-id="afdaf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7853f-104">语法</span><span class="sxs-lookup"><span data-stu-id="7853f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,  
@@ -24,34 +24,34 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="afdaf-105">参数</span><span class="sxs-lookup"><span data-stu-id="afdaf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7853f-105">参数</span><span class="sxs-lookup"><span data-stu-id="7853f-105">Parameters</span></span>  
  `baseAddress`  
- <span data-ttu-id="afdaf-106">[in]一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，该值表示模块的基址。</span><span class="sxs-lookup"><span data-stu-id="afdaf-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
+ <span data-ttu-id="7853f-106">[in]一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，该值表示模块的基址。</span><span class="sxs-lookup"><span data-stu-id="7853f-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
   
  `cchName`  
- <span data-ttu-id="afdaf-107">[输入] 缓冲器中将接收模块路径的字符数。</span><span class="sxs-lookup"><span data-stu-id="afdaf-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
+ <span data-ttu-id="7853f-107">[输入] 缓冲器中将接收模块路径的字符数。</span><span class="sxs-lookup"><span data-stu-id="7853f-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="afdaf-108">[输出] 指针指向写入 `szName` 缓冲器的字符数。</span><span class="sxs-lookup"><span data-stu-id="afdaf-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
+ <span data-ttu-id="7853f-108">[输出] 指针指向写入 `szName` 缓冲器的字符数。</span><span class="sxs-lookup"><span data-stu-id="7853f-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="afdaf-109">[输出] 模块路径。</span><span class="sxs-lookup"><span data-stu-id="afdaf-109">[out] The path of the module.</span></span>  
+ <span data-ttu-id="7853f-109">[输出] 模块路径。</span><span class="sxs-lookup"><span data-stu-id="7853f-109">[out] The path of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="afdaf-110">备注</span><span class="sxs-lookup"><span data-stu-id="afdaf-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7853f-110">备注</span><span class="sxs-lookup"><span data-stu-id="7853f-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="afdaf-111">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="afdaf-111">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="7853f-111">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="7853f-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="afdaf-112">要求</span><span class="sxs-lookup"><span data-stu-id="afdaf-112">Requirements</span></span>  
- <span data-ttu-id="afdaf-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="afdaf-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7853f-112">要求</span><span class="sxs-lookup"><span data-stu-id="7853f-112">Requirements</span></span>  
+ <span data-ttu-id="7853f-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7853f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="afdaf-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="afdaf-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7853f-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7853f-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="afdaf-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="afdaf-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7853f-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7853f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="afdaf-116">**.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="afdaf-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="7853f-116">**.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7853f-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="afdaf-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="afdaf-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7853f-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="7853f-117">See also</span></span>
 
-- [<span data-ttu-id="afdaf-118">ICorDebugDataTarget2 接口</span><span class="sxs-lookup"><span data-stu-id="afdaf-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [<span data-ttu-id="afdaf-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="afdaf-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="7853f-118">ICorDebugDataTarget2 接口</span><span class="sxs-lookup"><span data-stu-id="7853f-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [<span data-ttu-id="7853f-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="7853f-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

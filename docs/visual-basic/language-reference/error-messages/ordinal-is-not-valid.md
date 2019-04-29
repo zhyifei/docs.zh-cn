@@ -5,29 +5,29 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772484"
 ---
-# <a name="ordinal-is-not-valid"></a><span data-ttu-id="18c92-102">序号无效</span><span class="sxs-lookup"><span data-stu-id="18c92-102">Ordinal is not valid</span></span>
-<span data-ttu-id="18c92-103">对动态链接库 (DLL) 的调用指示应使用数字而不是过程名称，是使用`#num`语法。</span><span class="sxs-lookup"><span data-stu-id="18c92-103">Your call to a dynamic-link library (DLL) indicated to use a number instead of a procedure name, using the `#num` syntax.</span></span> <span data-ttu-id="18c92-104">此错误具有以下可能的原因：</span><span class="sxs-lookup"><span data-stu-id="18c92-104">This error has the following possible causes:</span></span>  
+# <a name="ordinal-is-not-valid"></a><span data-ttu-id="a7a61-102">序号无效</span><span class="sxs-lookup"><span data-stu-id="a7a61-102">Ordinal is not valid</span></span>
+<span data-ttu-id="a7a61-103">对动态链接库 (DLL) 的调用指示应使用数字而不是过程名称，是使用`#num`语法。</span><span class="sxs-lookup"><span data-stu-id="a7a61-103">Your call to a dynamic-link library (DLL) indicated to use a number instead of a procedure name, using the `#num` syntax.</span></span> <span data-ttu-id="a7a61-104">此错误具有以下可能的原因：</span><span class="sxs-lookup"><span data-stu-id="a7a61-104">This error has the following possible causes:</span></span>  
   
--   <span data-ttu-id="18c92-105">尝试将转换`#num`为序号失败的表达式。</span><span class="sxs-lookup"><span data-stu-id="18c92-105">An attempt to convert the `#num` expression to an ordinal failed.</span></span>  
+- <span data-ttu-id="a7a61-105">尝试将转换`#num`为序号失败的表达式。</span><span class="sxs-lookup"><span data-stu-id="a7a61-105">An attempt to convert the `#num` expression to an ordinal failed.</span></span>  
   
--   <span data-ttu-id="18c92-106">`#num`指定 DLL 中未指定任何函数。</span><span class="sxs-lookup"><span data-stu-id="18c92-106">The `#num` specified does not specify any function in the DLL.</span></span>  
+- <span data-ttu-id="a7a61-106">`#num`指定 DLL 中未指定任何函数。</span><span class="sxs-lookup"><span data-stu-id="a7a61-106">The `#num` specified does not specify any function in the DLL.</span></span>  
   
--   <span data-ttu-id="18c92-107">类型库中有一个无效的声明，从而导致无效的序号的内部使用。</span><span class="sxs-lookup"><span data-stu-id="18c92-107">A type library has an invalid declaration resulting in internal use of an invalid ordinal number.</span></span>  
+- <span data-ttu-id="a7a61-107">类型库中有一个无效的声明，从而导致无效的序号的内部使用。</span><span class="sxs-lookup"><span data-stu-id="a7a61-107">A type library has an invalid declaration resulting in internal use of an invalid ordinal number.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="18c92-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="18c92-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a7a61-108">更正此错误</span><span class="sxs-lookup"><span data-stu-id="a7a61-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="18c92-109">请确保表达式表示的有效数字，或按名称调用该过程。</span><span class="sxs-lookup"><span data-stu-id="18c92-109">Make sure the expression represents a valid number, or call the procedure by name.</span></span>  
+1. <span data-ttu-id="a7a61-109">请确保表达式表示的有效数字，或按名称调用该过程。</span><span class="sxs-lookup"><span data-stu-id="a7a61-109">Make sure the expression represents a valid number, or call the procedure by name.</span></span>  
   
-2. <span data-ttu-id="18c92-110">请确保`#num`标识 DLL 中有效的函数。</span><span class="sxs-lookup"><span data-stu-id="18c92-110">Make sure `#num` identifies a valid function in the DLL.</span></span>  
+2. <span data-ttu-id="a7a61-110">请确保`#num`标识 DLL 中有效的函数。</span><span class="sxs-lookup"><span data-stu-id="a7a61-110">Make sure `#num` identifies a valid function in the DLL.</span></span>  
   
-3. <span data-ttu-id="18c92-111">隔离导致问题的代码添加注释的过程调用。</span><span class="sxs-lookup"><span data-stu-id="18c92-111">Isolate the procedure call causing the problem by commenting out the code.</span></span> <span data-ttu-id="18c92-112">编写`Declare`语句过程中，并将问题报告给类型库供应商联系。</span><span class="sxs-lookup"><span data-stu-id="18c92-112">Write a `Declare` statement for the procedure, and report the problem to the type library vendor.</span></span>  
+3. <span data-ttu-id="a7a61-111">隔离导致问题的代码添加注释的过程调用。</span><span class="sxs-lookup"><span data-stu-id="a7a61-111">Isolate the procedure call causing the problem by commenting out the code.</span></span> <span data-ttu-id="a7a61-112">编写`Declare`语句过程中，并将问题报告给类型库供应商联系。</span><span class="sxs-lookup"><span data-stu-id="a7a61-112">Write a `Declare` statement for the procedure, and report the problem to the type library vendor.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18c92-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="18c92-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7a61-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="a7a61-113">See also</span></span>
 
-- [<span data-ttu-id="18c92-114">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="18c92-114">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="a7a61-114">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="a7a61-114">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d9fcbca92b1615679be57fb4c9b872339fef8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696609"
 ---
-# <a name="ihostsemaphorewait-method"></a><span data-ttu-id="2684f-102">IHostSemaphore::Wait 方法</span><span class="sxs-lookup"><span data-stu-id="2684f-102">IHostSemaphore::Wait Method</span></span>
-<span data-ttu-id="2684f-103">导致当前[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)等待，直到它拥有的实例或指定的经历的时间量。</span><span class="sxs-lookup"><span data-stu-id="2684f-103">Causes the current [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instance to wait until it is owned or the specified amount of time elapses.</span></span>  
+# <a name="ihostsemaphorewait-method"></a><span data-ttu-id="9e848-102">IHostSemaphore::Wait 方法</span><span class="sxs-lookup"><span data-stu-id="9e848-102">IHostSemaphore::Wait Method</span></span>
+<span data-ttu-id="9e848-103">导致当前[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)等待，直到它拥有的实例或指定的经历的时间量。</span><span class="sxs-lookup"><span data-stu-id="9e848-103">Causes the current [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instance to wait until it is owned or the specified amount of time elapses.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2684f-104">语法</span><span class="sxs-lookup"><span data-stu-id="2684f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e848-104">语法</span><span class="sxs-lookup"><span data-stu-id="9e848-104">Syntax</span></span>  
   
 ```  
 HRESULT Wait (  
@@ -36,38 +36,38 @@ HRESULT Wait (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2684f-105">参数</span><span class="sxs-lookup"><span data-stu-id="2684f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e848-105">参数</span><span class="sxs-lookup"><span data-stu-id="9e848-105">Parameters</span></span>  
  `dwMilliseconds`  
- <span data-ttu-id="2684f-106">[in]如果返回前, 等待的毫秒数当前`IHostSemaphore`不属于实例。</span><span class="sxs-lookup"><span data-stu-id="2684f-106">[in] The number of milliseconds to wait before returning, if the current `IHostSemaphore` instance is not owned.</span></span>  
+ <span data-ttu-id="9e848-106">[in]如果返回前, 等待的毫秒数当前`IHostSemaphore`不属于实例。</span><span class="sxs-lookup"><span data-stu-id="9e848-106">[in] The number of milliseconds to wait before returning, if the current `IHostSemaphore` instance is not owned.</span></span>  
   
  `option`  
- <span data-ttu-id="2684f-107">[in]之一[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值，指定如果此主机应采取什么操作操作阻止。</span><span class="sxs-lookup"><span data-stu-id="2684f-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, specifying what action the host should take if this operation blocks.</span></span>  
+ <span data-ttu-id="9e848-107">[in]之一[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值，指定如果此主机应采取什么操作操作阻止。</span><span class="sxs-lookup"><span data-stu-id="9e848-107">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values, specifying what action the host should take if this operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2684f-108">返回值</span><span class="sxs-lookup"><span data-stu-id="2684f-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9e848-108">返回值</span><span class="sxs-lookup"><span data-stu-id="9e848-108">Return Value</span></span>  
   
-|<span data-ttu-id="2684f-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2684f-109">HRESULT</span></span>|<span data-ttu-id="2684f-110">描述</span><span class="sxs-lookup"><span data-stu-id="2684f-110">Description</span></span>|  
+|<span data-ttu-id="9e848-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9e848-109">HRESULT</span></span>|<span data-ttu-id="9e848-110">描述</span><span class="sxs-lookup"><span data-stu-id="9e848-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2684f-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="2684f-111">S_OK</span></span>|<span data-ttu-id="2684f-112">`Wait` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="2684f-112">`Wait` returned successfully.</span></span>|  
-|<span data-ttu-id="2684f-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2684f-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2684f-114">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="2684f-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="2684f-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2684f-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2684f-116">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="2684f-116">The call timed out.</span></span>|  
-|<span data-ttu-id="2684f-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2684f-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2684f-118">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="2684f-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="2684f-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2684f-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2684f-120">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="2684f-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="2684f-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2684f-121">E_FAIL</span></span>|<span data-ttu-id="2684f-122">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="2684f-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2684f-123">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="2684f-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2684f-124">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="2684f-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="2684f-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="2684f-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="2684f-126">宿主的等待时间间隔，期间检测到死锁，并选择当前`IHostSemaphore`实例作为死锁牺牲品。</span><span class="sxs-lookup"><span data-stu-id="2684f-126">The host detected a deadlock during the wait interval, and chose the current `IHostSemaphore` instance as a deadlock victim.</span></span>|  
+|<span data-ttu-id="9e848-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="9e848-111">S_OK</span></span>|<span data-ttu-id="9e848-112">`Wait` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="9e848-112">`Wait` returned successfully.</span></span>|  
+|<span data-ttu-id="9e848-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9e848-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9e848-114">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="9e848-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="9e848-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9e848-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9e848-116">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="9e848-116">The call timed out.</span></span>|  
+|<span data-ttu-id="9e848-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9e848-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9e848-118">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="9e848-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="9e848-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9e848-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9e848-120">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="9e848-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="9e848-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9e848-121">E_FAIL</span></span>|<span data-ttu-id="9e848-122">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="9e848-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9e848-123">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="9e848-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9e848-124">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="9e848-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="9e848-125">HOST_E_DEADLOCK</span><span class="sxs-lookup"><span data-stu-id="9e848-125">HOST_E_DEADLOCK</span></span>|<span data-ttu-id="9e848-126">宿主的等待时间间隔，期间检测到死锁，并选择当前`IHostSemaphore`实例作为死锁牺牲品。</span><span class="sxs-lookup"><span data-stu-id="9e848-126">The host detected a deadlock during the wait interval, and chose the current `IHostSemaphore` instance as a deadlock victim.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2684f-127">要求</span><span class="sxs-lookup"><span data-stu-id="2684f-127">Requirements</span></span>  
- <span data-ttu-id="2684f-128">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2684f-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e848-127">要求</span><span class="sxs-lookup"><span data-stu-id="9e848-127">Requirements</span></span>  
+ <span data-ttu-id="9e848-128">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e848-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2684f-129">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2684f-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9e848-129">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9e848-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2684f-130">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2684f-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9e848-130">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="9e848-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2684f-131">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2684f-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9e848-131">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e848-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2684f-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="2684f-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e848-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e848-132">See also</span></span>
 
-- [<span data-ttu-id="2684f-133">ICLRSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="2684f-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="2684f-134">IHostAutoEvent 接口</span><span class="sxs-lookup"><span data-stu-id="2684f-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="2684f-135">IHostManualEvent 接口</span><span class="sxs-lookup"><span data-stu-id="2684f-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="2684f-136">IHostSemaphore 接口</span><span class="sxs-lookup"><span data-stu-id="2684f-136">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="2684f-137">IHostSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="2684f-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="9e848-133">ICLRSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="9e848-133">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="9e848-134">IHostAutoEvent 接口</span><span class="sxs-lookup"><span data-stu-id="9e848-134">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="9e848-135">IHostManualEvent 接口</span><span class="sxs-lookup"><span data-stu-id="9e848-135">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="9e848-136">IHostSemaphore 接口</span><span class="sxs-lookup"><span data-stu-id="9e848-136">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [<span data-ttu-id="9e848-137">IHostSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="9e848-137">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
