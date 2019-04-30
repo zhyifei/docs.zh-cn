@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03a4f7ecc227679e6b0afa29b20de1aefeae3b76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987865"
 ---
-# <a name="icordebugnativeframegetregisterset-method"></a><span data-ttu-id="491c6-102">ICorDebugNativeFrame::GetRegisterSet 方法</span><span class="sxs-lookup"><span data-stu-id="491c6-102">ICorDebugNativeFrame::GetRegisterSet Method</span></span>
-<span data-ttu-id="491c6-103">获取设置此堆栈帧的寄存器。</span><span class="sxs-lookup"><span data-stu-id="491c6-103">Gets the register set for this stack frame.</span></span>  
+# <a name="icordebugnativeframegetregisterset-method"></a><span data-ttu-id="17306-102">ICorDebugNativeFrame::GetRegisterSet 方法</span><span class="sxs-lookup"><span data-stu-id="17306-102">ICorDebugNativeFrame::GetRegisterSet Method</span></span>
+<span data-ttu-id="17306-103">获取设置此堆栈帧的寄存器。</span><span class="sxs-lookup"><span data-stu-id="17306-103">Gets the register set for this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="491c6-104">语法</span><span class="sxs-lookup"><span data-stu-id="491c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17306-104">语法</span><span class="sxs-lookup"><span data-stu-id="17306-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegisterSet (  
@@ -35,17 +35,17 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="491c6-105">参数</span><span class="sxs-lookup"><span data-stu-id="491c6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17306-105">参数</span><span class="sxs-lookup"><span data-stu-id="17306-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="491c6-106">[out]指向的地址的指针[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)表示注册的对象设置为此堆栈帧。</span><span class="sxs-lookup"><span data-stu-id="491c6-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for this stack frame.</span></span>  
+ <span data-ttu-id="17306-106">[out]指向的地址的指针[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)表示注册的对象设置为此堆栈帧。</span><span class="sxs-lookup"><span data-stu-id="17306-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for this stack frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="491c6-107">要求</span><span class="sxs-lookup"><span data-stu-id="491c6-107">Requirements</span></span>  
- <span data-ttu-id="491c6-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="491c6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17306-107">要求</span><span class="sxs-lookup"><span data-stu-id="17306-107">Requirements</span></span>  
+ <span data-ttu-id="17306-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="17306-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="491c6-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="491c6-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17306-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17306-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="491c6-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="491c6-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17306-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17306-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="491c6-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="491c6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="17306-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17306-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="491c6-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="491c6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17306-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="17306-112">See also</span></span>

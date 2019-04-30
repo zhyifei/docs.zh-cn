@@ -8,27 +8,27 @@ helpviewer_keywords:
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
 ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971142"
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="8cbe3-102">WPF 应用程序中的窗口</span><span class="sxs-lookup"><span data-stu-id="8cbe3-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="8cbe3-103">用户与通过 windows 应用程序进行交互。</span><span class="sxs-lookup"><span data-stu-id="8cbe3-103">Users interact with applications through windows.</span></span> <span data-ttu-id="8cbe3-104">窗口的基本目的是承载并显示内容。</span><span class="sxs-lookup"><span data-stu-id="8cbe3-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="8cbe3-105">内容，窗口承载取决于数据的类型，应用程序进行操作，其中包括媒体、 Extensible Application Markup Language (XAML) 页、 网页、 文档、 数据库表和记录和系统信息类型。</span><span class="sxs-lookup"><span data-stu-id="8cbe3-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="034d2-102">WPF 应用程序中的窗口</span><span class="sxs-lookup"><span data-stu-id="034d2-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="034d2-103">用户与通过 windows 应用程序进行交互。</span><span class="sxs-lookup"><span data-stu-id="034d2-103">Users interact with applications through windows.</span></span> <span data-ttu-id="034d2-104">窗口的基本目的是承载并显示内容。</span><span class="sxs-lookup"><span data-stu-id="034d2-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="034d2-105">内容，窗口承载取决于数据的类型，应用程序进行操作，其中包括媒体、 Extensible Application Markup Language (XAML) 页、 网页、 文档、 数据库表和记录和系统信息类型。</span><span class="sxs-lookup"><span data-stu-id="034d2-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8cbe3-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="8cbe3-106">In This Section</span></span>  
- [<span data-ttu-id="8cbe3-107">WPF 窗口概述</span><span class="sxs-lookup"><span data-stu-id="8cbe3-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
- [<span data-ttu-id="8cbe3-108">对话框概述</span><span class="sxs-lookup"><span data-stu-id="8cbe3-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
- [<span data-ttu-id="8cbe3-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="8cbe3-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="034d2-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="034d2-106">In This Section</span></span>  
+ [<span data-ttu-id="034d2-107">WPF 窗口概述</span><span class="sxs-lookup"><span data-stu-id="034d2-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
+ [<span data-ttu-id="034d2-108">对话框概述</span><span class="sxs-lookup"><span data-stu-id="034d2-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
+ [<span data-ttu-id="034d2-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="034d2-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="8cbe3-110">参考</span><span class="sxs-lookup"><span data-stu-id="8cbe3-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="034d2-110">参考</span><span class="sxs-lookup"><span data-stu-id="034d2-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="8cbe3-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="8cbe3-111">Related Sections</span></span>  
- [<span data-ttu-id="8cbe3-112">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="8cbe3-112">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="8cbe3-113">导航概述</span><span class="sxs-lookup"><span data-stu-id="8cbe3-113">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="8cbe3-114">承载</span><span class="sxs-lookup"><span data-stu-id="8cbe3-114">Hosting</span></span>](hosting-wpf-applications.md)  
-  [<span data-ttu-id="8cbe3-115">生成和部署</span><span class="sxs-lookup"><span data-stu-id="8cbe3-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="034d2-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="034d2-111">Related Sections</span></span>  
+ [<span data-ttu-id="034d2-112">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="034d2-112">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="034d2-113">导航概述</span><span class="sxs-lookup"><span data-stu-id="034d2-113">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="034d2-114">承载</span><span class="sxs-lookup"><span data-stu-id="034d2-114">Hosting</span></span>](hosting-wpf-applications.md)  
+  [<span data-ttu-id="034d2-115">生成和部署</span><span class="sxs-lookup"><span data-stu-id="034d2-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

@@ -8,63 +8,63 @@ helpviewer_keywords:
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
 ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972271"
 ---
-# <a name="dialog-box-controls-and-components-windows-forms"></a><span data-ttu-id="4c67e-102">对话框控件和组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="4c67e-102">Dialog-Box Controls and Components (Windows Forms)</span></span>
-<span data-ttu-id="4c67e-103">以下 Windows 窗体控件和组件提供标准对话框。</span><span class="sxs-lookup"><span data-stu-id="4c67e-103">The following Windows Forms controls and components present standard dialog boxes.</span></span> <span data-ttu-id="4c67e-104">单击链接，获取有关每个对话框中可用函数的详细信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-104">Follow the links for more information about the functions available in each dialog box.</span></span>  
+# <a name="dialog-box-controls-and-components-windows-forms"></a><span data-ttu-id="fcfcb-102">对话框控件和组件（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="fcfcb-102">Dialog-Box Controls and Components (Windows Forms)</span></span>
+<span data-ttu-id="fcfcb-103">以下 Windows 窗体控件和组件提供标准对话框。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-103">The following Windows Forms controls and components present standard dialog boxes.</span></span> <span data-ttu-id="fcfcb-104">单击链接，获取有关每个对话框中可用函数的详细信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-104">Follow the links for more information about the functions available in each dialog box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4c67e-105">参考</span><span class="sxs-lookup"><span data-stu-id="4c67e-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fcfcb-105">参考</span><span class="sxs-lookup"><span data-stu-id="fcfcb-105">Reference</span></span>  
  <xref:System.Windows.Forms.ColorDialog>  
- <span data-ttu-id="4c67e-106">提供关于 <xref:System.Windows.Forms.ColorDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-106">Provides reference information about the <xref:System.Windows.Forms.ColorDialog> class and its members.</span></span>  
+ <span data-ttu-id="fcfcb-106">提供关于 <xref:System.Windows.Forms.ColorDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-106">Provides reference information about the <xref:System.Windows.Forms.ColorDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.FontDialog>  
- <span data-ttu-id="4c67e-107">提供关于 <xref:System.Windows.Forms.FontDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-107">Provides reference information about the <xref:System.Windows.Forms.FontDialog> class and its members.</span></span>  
+ <span data-ttu-id="fcfcb-107">提供关于 <xref:System.Windows.Forms.FontDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-107">Provides reference information about the <xref:System.Windows.Forms.FontDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.OpenFileDialog>  
- <span data-ttu-id="4c67e-108">提供关于 <xref:System.Windows.Forms.OpenFileDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-108">Provides reference information about the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
+ <span data-ttu-id="fcfcb-108">提供关于 <xref:System.Windows.Forms.OpenFileDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-108">Provides reference information about the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.PageSetupDialog>  
- <span data-ttu-id="4c67e-109">提供关于 <xref:System.Windows.Forms.PageSetupDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-109">Provides reference information about the <xref:System.Windows.Forms.PageSetupDialog> class and its members.</span></span>  
+ <span data-ttu-id="fcfcb-109">提供关于 <xref:System.Windows.Forms.PageSetupDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-109">Provides reference information about the <xref:System.Windows.Forms.PageSetupDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.PrintDialog>  
- <span data-ttu-id="4c67e-110">提供关于 <xref:System.Windows.Forms.PrintDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-110">Provides reference information about the <xref:System.Windows.Forms.PrintDialog> class and its members.</span></span>  
+ <span data-ttu-id="fcfcb-110">提供关于 <xref:System.Windows.Forms.PrintDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-110">Provides reference information about the <xref:System.Windows.Forms.PrintDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- <span data-ttu-id="4c67e-111">提供关于 <xref:System.Windows.Forms.PrintPreviewDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-111">Provides reference information about the <xref:System.Windows.Forms.PrintPreviewDialog> class and its members.</span></span>  
+ <span data-ttu-id="fcfcb-111">提供关于 <xref:System.Windows.Forms.PrintPreviewDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-111">Provides reference information about the <xref:System.Windows.Forms.PrintPreviewDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.SaveFileDialog>  
- <span data-ttu-id="4c67e-112">提供关于 <xref:System.Windows.Forms.SaveFileDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-112">Provides reference information about the <xref:System.Windows.Forms.SaveFileDialog> class and its members.</span></span>  
+ <span data-ttu-id="fcfcb-112">提供关于 <xref:System.Windows.Forms.SaveFileDialog> 类及其成员的引用信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-112">Provides reference information about the <xref:System.Windows.Forms.SaveFileDialog> class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="4c67e-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="4c67e-113">Related Sections</span></span>  
- [<span data-ttu-id="4c67e-114">Windows 窗体中的对话框</span><span class="sxs-lookup"><span data-stu-id="4c67e-114">Dialog Boxes in Windows Forms</span></span>](../dialog-boxes-in-windows-forms.md)  
- <span data-ttu-id="4c67e-115">介绍如何为 Windows 窗体创建对话框。</span><span class="sxs-lookup"><span data-stu-id="4c67e-115">Describes how to create a dialog box for a Windows Form.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="fcfcb-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="fcfcb-113">Related Sections</span></span>  
+ [<span data-ttu-id="fcfcb-114">Windows 窗体中的对话框</span><span class="sxs-lookup"><span data-stu-id="fcfcb-114">Dialog Boxes in Windows Forms</span></span>](../dialog-boxes-in-windows-forms.md)  
+ <span data-ttu-id="fcfcb-115">介绍如何为 Windows 窗体创建对话框。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-115">Describes how to create a dialog box for a Windows Form.</span></span>  
   
- [<span data-ttu-id="4c67e-116">ColorDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="4c67e-116">ColorDialog Component Overview</span></span>](colordialog-component-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-117">使用户可以在预配置对话框的调色板中选择颜色，并向此调色板添加自定义颜色。</span><span class="sxs-lookup"><span data-stu-id="4c67e-117">Enables the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
+ [<span data-ttu-id="fcfcb-116">ColorDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="fcfcb-116">ColorDialog Component Overview</span></span>](colordialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-117">使用户可以在预配置对话框的调色板中选择颜色，并向此调色板添加自定义颜色。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-117">Enables the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
   
- [<span data-ttu-id="4c67e-118">FolderBrowserDialog 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="4c67e-118">FolderBrowserDialog Component Overview (Windows Forms)</span></span>](folderbrowserdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-119">使用户能够浏览和选择文件夹。</span><span class="sxs-lookup"><span data-stu-id="4c67e-119">Enables users to browse and select folders.</span></span>  
+ [<span data-ttu-id="fcfcb-118">FolderBrowserDialog 组件概述（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="fcfcb-118">FolderBrowserDialog Component Overview (Windows Forms)</span></span>](folderbrowserdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-119">使用户能够浏览和选择文件夹。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-119">Enables users to browse and select folders.</span></span>  
   
- [<span data-ttu-id="4c67e-120">FontDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="4c67e-120">FontDialog Component Overview</span></span>](fontdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-121">公开当前系统上安装的字体。</span><span class="sxs-lookup"><span data-stu-id="4c67e-121">Exposes the fonts that are currently installed on the system.</span></span>  
+ [<span data-ttu-id="fcfcb-120">FontDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="fcfcb-120">FontDialog Component Overview</span></span>](fontdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-121">公开当前系统上安装的字体。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-121">Exposes the fonts that are currently installed on the system.</span></span>  
   
- [<span data-ttu-id="4c67e-122">OpenFileDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="4c67e-122">OpenFileDialog Component Overview</span></span>](openfiledialog-component-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-123">允许用户通过预配置的对话框打开文件。</span><span class="sxs-lookup"><span data-stu-id="4c67e-123">Allows users to open files via a pre-configured dialog box.</span></span>  
+ [<span data-ttu-id="fcfcb-122">OpenFileDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="fcfcb-122">OpenFileDialog Component Overview</span></span>](openfiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-123">允许用户通过预配置的对话框打开文件。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-123">Allows users to open files via a pre-configured dialog box.</span></span>  
   
- [<span data-ttu-id="4c67e-124">PageSetupDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="4c67e-124">PageSetupDialog Component Overview</span></span>](pagesetupdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-125">通过预配置的对话框设置用于打印的页面详细信息。</span><span class="sxs-lookup"><span data-stu-id="4c67e-125">Sets page details for printing via a pre-configured dialog box.</span></span>  
+ [<span data-ttu-id="fcfcb-124">PageSetupDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="fcfcb-124">PageSetupDialog Component Overview</span></span>](pagesetupdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-125">通过预配置的对话框设置用于打印的页面详细信息。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-125">Sets page details for printing via a pre-configured dialog box.</span></span>  
   
- [<span data-ttu-id="4c67e-126">PrintDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="4c67e-126">PrintDialog Component Overview</span></span>](printdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-127">选择打印机，选中要打印的压面，并确定其他与打印相关的设置。</span><span class="sxs-lookup"><span data-stu-id="4c67e-127">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
+ [<span data-ttu-id="fcfcb-126">PrintDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="fcfcb-126">PrintDialog Component Overview</span></span>](printdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-127">选择打印机，选中要打印的压面，并确定其他与打印相关的设置。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-127">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
   
- [<span data-ttu-id="4c67e-128">PrintPreviewDialog 控件概述</span><span class="sxs-lookup"><span data-stu-id="4c67e-128">PrintPreviewDialog Control Overview</span></span>](printpreviewdialog-control-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-129">显示文档打印时将显示的情况。</span><span class="sxs-lookup"><span data-stu-id="4c67e-129">Displays a document as it will appear when it is printed.</span></span>  
+ [<span data-ttu-id="fcfcb-128">PrintPreviewDialog 控件概述</span><span class="sxs-lookup"><span data-stu-id="fcfcb-128">PrintPreviewDialog Control Overview</span></span>](printpreviewdialog-control-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-129">显示文档打印时将显示的情况。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-129">Displays a document as it will appear when it is printed.</span></span>  
   
- [<span data-ttu-id="4c67e-130">SaveFileDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="4c67e-130">SaveFileDialog Component Overview</span></span>](savefiledialog-component-overview-windows-forms.md)  
- <span data-ttu-id="4c67e-131">选择要保存的文件及要保存的位置。</span><span class="sxs-lookup"><span data-stu-id="4c67e-131">Selects files to save and where to save them.</span></span>  
+ [<span data-ttu-id="fcfcb-130">SaveFileDialog 组件概述</span><span class="sxs-lookup"><span data-stu-id="fcfcb-130">SaveFileDialog Component Overview</span></span>](savefiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fcfcb-131">选择要保存的文件及要保存的位置。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-131">Selects files to save and where to save them.</span></span>  
   
- <span data-ttu-id="4c67e-132">另请参阅 [Windows 窗体中的对话框](../dialog-boxes-in-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="4c67e-132">Also see [Dialog Boxes in Windows Forms](../dialog-boxes-in-windows-forms.md).</span></span>
+ <span data-ttu-id="fcfcb-132">另请参阅 [Windows 窗体中的对话框](../dialog-boxes-in-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="fcfcb-132">Also see [Dialog Boxes in Windows Forms](../dialog-boxes-in-windows-forms.md).</span></span>

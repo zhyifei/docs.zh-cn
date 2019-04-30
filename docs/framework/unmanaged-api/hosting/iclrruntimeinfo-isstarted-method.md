@@ -16,16 +16,16 @@ ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993156"
 ---
-# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="41fc4-102">ICLRRuntimeInfo::IsStarted 方法</span><span class="sxs-lookup"><span data-stu-id="41fc4-102">ICLRRuntimeInfo::IsStarted Method</span></span>
-<span data-ttu-id="41fc4-103">指示是否已启动运行时 (即，是否[iclrruntimehost:: Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)已调用并已成功)。</span><span class="sxs-lookup"><span data-stu-id="41fc4-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
+# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="296d1-102">ICLRRuntimeInfo::IsStarted 方法</span><span class="sxs-lookup"><span data-stu-id="296d1-102">ICLRRuntimeInfo::IsStarted Method</span></span>
+<span data-ttu-id="296d1-103">指示是否已启动运行时 (即，是否[iclrruntimehost:: Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)已调用并已成功)。</span><span class="sxs-lookup"><span data-stu-id="296d1-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41fc4-104">语法</span><span class="sxs-lookup"><span data-stu-id="41fc4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="296d1-104">语法</span><span class="sxs-lookup"><span data-stu-id="296d1-104">Syntax</span></span>  
   
 ```  
 HRESULT IsStarted(  
@@ -33,35 +33,35 @@ HRESULT IsStarted(
         [out] DWORD    *pdwStartupFlags);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="41fc4-105">参数</span><span class="sxs-lookup"><span data-stu-id="41fc4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="296d1-105">参数</span><span class="sxs-lookup"><span data-stu-id="296d1-105">Parameters</span></span>  
  `pbStarted`  
- <span data-ttu-id="41fc4-106">[out]`true`如果此运行时已启动; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="41fc4-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
+ <span data-ttu-id="296d1-106">[out]`true`如果此运行时已启动; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="296d1-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
   
  `pdwStartupFlags`  
- <span data-ttu-id="41fc4-107">[out]返回用来启动运行时的标志。</span><span class="sxs-lookup"><span data-stu-id="41fc4-107">[out] Returns the flags that were used to start the runtime.</span></span>  
+ <span data-ttu-id="296d1-107">[out]返回用来启动运行时的标志。</span><span class="sxs-lookup"><span data-stu-id="296d1-107">[out] Returns the flags that were used to start the runtime.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="41fc4-108">返回值</span><span class="sxs-lookup"><span data-stu-id="41fc4-108">Return Value</span></span>  
- <span data-ttu-id="41fc4-109">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="41fc4-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="296d1-108">返回值</span><span class="sxs-lookup"><span data-stu-id="296d1-108">Return Value</span></span>  
+ <span data-ttu-id="296d1-109">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="296d1-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="41fc4-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="41fc4-110">HRESULT</span></span>|<span data-ttu-id="41fc4-111">描述</span><span class="sxs-lookup"><span data-stu-id="41fc4-111">Description</span></span>|  
+|<span data-ttu-id="296d1-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="296d1-110">HRESULT</span></span>|<span data-ttu-id="296d1-111">描述</span><span class="sxs-lookup"><span data-stu-id="296d1-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="41fc4-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="41fc4-112">S_OK</span></span>|<span data-ttu-id="41fc4-113">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="41fc4-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="41fc4-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="41fc4-114">E_NOTIMPL</span></span>|<span data-ttu-id="41fc4-115">公共语言运行时 (CLR) 版本低于中的 CLR 版本[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="41fc4-115">The common language runtime (CLR) version is earlier than the CLR version in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>|  
+|<span data-ttu-id="296d1-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="296d1-112">S_OK</span></span>|<span data-ttu-id="296d1-113">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="296d1-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="296d1-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="296d1-114">E_NOTIMPL</span></span>|<span data-ttu-id="296d1-115">公共语言运行时 (CLR) 版本低于中的 CLR 版本[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="296d1-115">The common language runtime (CLR) version is earlier than the CLR version in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="41fc4-116">备注</span><span class="sxs-lookup"><span data-stu-id="41fc4-116">Remarks</span></span>  
- <span data-ttu-id="41fc4-117">此方法并不适用于 CLR 版本早于中的 CLR 版本[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="41fc4-117">This method does not work with CLR versions earlier than the CLR version in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span>  
+## <a name="remarks"></a><span data-ttu-id="296d1-116">备注</span><span class="sxs-lookup"><span data-stu-id="296d1-116">Remarks</span></span>  
+ <span data-ttu-id="296d1-117">此方法并不适用于 CLR 版本早于中的 CLR 版本[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="296d1-117">This method does not work with CLR versions earlier than the CLR version in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41fc4-118">要求</span><span class="sxs-lookup"><span data-stu-id="41fc4-118">Requirements</span></span>  
- <span data-ttu-id="41fc4-119">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="41fc4-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="296d1-118">要求</span><span class="sxs-lookup"><span data-stu-id="296d1-118">Requirements</span></span>  
+ <span data-ttu-id="296d1-119">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="296d1-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="41fc4-120">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="41fc4-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="296d1-120">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="296d1-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="41fc4-121">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="41fc4-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="296d1-121">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="296d1-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="41fc4-122">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41fc4-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="296d1-122">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="296d1-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41fc4-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="41fc4-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="296d1-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="296d1-123">See also</span></span>
 
-- [<span data-ttu-id="41fc4-124">ICLRRuntimeInfo 接口</span><span class="sxs-lookup"><span data-stu-id="41fc4-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="41fc4-125">承载接口</span><span class="sxs-lookup"><span data-stu-id="41fc4-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="41fc4-126">承载</span><span class="sxs-lookup"><span data-stu-id="41fc4-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="296d1-124">ICLRRuntimeInfo 接口</span><span class="sxs-lookup"><span data-stu-id="296d1-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="296d1-125">承载接口</span><span class="sxs-lookup"><span data-stu-id="296d1-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="296d1-126">承载</span><span class="sxs-lookup"><span data-stu-id="296d1-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

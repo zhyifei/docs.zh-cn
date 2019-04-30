@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89831261c5da156343cb098ace715495ddafccaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968748"
 ---
-# <a name="isymunmanagedreadergetsymattribute-method"></a><span data-ttu-id="a934c-102">ISymUnmanagedReader::GetSymAttribute 方法</span><span class="sxs-lookup"><span data-stu-id="a934c-102">ISymUnmanagedReader::GetSymAttribute Method</span></span>
-<span data-ttu-id="a934c-103">获取根据其名称的自定义属性。</span><span class="sxs-lookup"><span data-stu-id="a934c-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="a934c-104">与不同的元数据自定义特性，这些自定义属性保存在符号存储区中。</span><span class="sxs-lookup"><span data-stu-id="a934c-104">Unlike metadata custom attributes, these custom attributes are held in the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetsymattribute-method"></a><span data-ttu-id="2710e-102">ISymUnmanagedReader::GetSymAttribute 方法</span><span class="sxs-lookup"><span data-stu-id="2710e-102">ISymUnmanagedReader::GetSymAttribute Method</span></span>
+<span data-ttu-id="2710e-103">获取根据其名称的自定义属性。</span><span class="sxs-lookup"><span data-stu-id="2710e-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="2710e-104">与不同的元数据自定义特性，这些自定义属性保存在符号存储区中。</span><span class="sxs-lookup"><span data-stu-id="2710e-104">Unlike metadata custom attributes, these custom attributes are held in the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a934c-105">语法</span><span class="sxs-lookup"><span data-stu-id="a934c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2710e-105">语法</span><span class="sxs-lookup"><span data-stu-id="2710e-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSymAttribute (  
@@ -39,28 +39,28 @@ HRESULT GetSymAttribute (
         length_is (*pcBuffer)] BYTE buffer[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a934c-106">参数</span><span class="sxs-lookup"><span data-stu-id="a934c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2710e-106">参数</span><span class="sxs-lookup"><span data-stu-id="2710e-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="a934c-107">[in]为其请求该属性的对象元数据标记。</span><span class="sxs-lookup"><span data-stu-id="a934c-107">[in] The metadata token for the object for which the attribute is requested.</span></span>  
+ <span data-ttu-id="2710e-107">[in]为其请求该属性的对象元数据标记。</span><span class="sxs-lookup"><span data-stu-id="2710e-107">[in] The metadata token for the object for which the attribute is requested.</span></span>  
   
  `name`  
- <span data-ttu-id="a934c-108">[in]指示要检索的特性的变量指向的指针。</span><span class="sxs-lookup"><span data-stu-id="a934c-108">[in] A pointer to the variable that indicates the attribute to retrieve.</span></span>  
+ <span data-ttu-id="2710e-108">[in]指示要检索的特性的变量指向的指针。</span><span class="sxs-lookup"><span data-stu-id="2710e-108">[in] A pointer to the variable that indicates the attribute to retrieve.</span></span>  
   
  `cBuffer`  
- <span data-ttu-id="a934c-109">[in] `buffer` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="a934c-109">[in] The size of the `buffer` array.</span></span>  
+ <span data-ttu-id="2710e-109">[in] `buffer` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="2710e-109">[in] The size of the `buffer` array.</span></span>  
   
  `pcBuffer`  
- <span data-ttu-id="a934c-110">[out]指向接收特性数据的长度的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="a934c-110">[out] A pointer to the variable that receives the length of the attribute data.</span></span>  
+ <span data-ttu-id="2710e-110">[out]指向接收特性数据的长度的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="2710e-110">[out] A pointer to the variable that receives the length of the attribute data.</span></span>  
   
  `buffer`  
- <span data-ttu-id="a934c-111">[out]指向接收属性数据的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="a934c-111">[out] A pointer to the variable that receives the attribute data.</span></span>  
+ <span data-ttu-id="2710e-111">[out]指向接收属性数据的变量的指针。</span><span class="sxs-lookup"><span data-stu-id="2710e-111">[out] A pointer to the variable that receives the attribute data.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a934c-112">返回值</span><span class="sxs-lookup"><span data-stu-id="a934c-112">Return Value</span></span>  
- <span data-ttu-id="a934c-113">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="a934c-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2710e-112">返回值</span><span class="sxs-lookup"><span data-stu-id="2710e-112">Return Value</span></span>  
+ <span data-ttu-id="2710e-113">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="2710e-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a934c-114">要求</span><span class="sxs-lookup"><span data-stu-id="a934c-114">Requirements</span></span>  
- <span data-ttu-id="a934c-115">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a934c-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2710e-114">要求</span><span class="sxs-lookup"><span data-stu-id="2710e-114">Requirements</span></span>  
+ <span data-ttu-id="2710e-115">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2710e-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a934c-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="a934c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2710e-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="2710e-116">See also</span></span>
 
-- [<span data-ttu-id="a934c-117">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="a934c-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="2710e-117">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="2710e-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

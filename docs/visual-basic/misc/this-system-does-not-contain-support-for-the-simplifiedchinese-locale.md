@@ -5,21 +5,21 @@ f1_keywords:
 - vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
 ms.openlocfilehash: c9b2483ca51982d93f746d23d996d552a621c64d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942613"
 ---
-# <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a><span data-ttu-id="8f9fb-102">此系统不包含对 SimplifiedChinese 区域设置的支持</span><span class="sxs-lookup"><span data-stu-id="8f9fb-102">This system does not contain support for the SimplifiedChinese locale</span></span>
-<span data-ttu-id="8f9fb-103">你正尝试使用 `VbStrConv.SimplifiedChinese` 枚举成员，但你的系统不支持简体中文区域设置。</span><span class="sxs-lookup"><span data-stu-id="8f9fb-103">You are attempting to use the `VbStrConv.SimplifiedChinese` enumeration member, but your system does not support the Simplified Chinese locale.</span></span>  
+# <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a><span data-ttu-id="0afe9-102">此系统不包含对 SimplifiedChinese 区域设置的支持</span><span class="sxs-lookup"><span data-stu-id="0afe9-102">This system does not contain support for the SimplifiedChinese locale</span></span>
+<span data-ttu-id="0afe9-103">你正尝试使用 `VbStrConv.SimplifiedChinese` 枚举成员，但你的系统不支持简体中文区域设置。</span><span class="sxs-lookup"><span data-stu-id="0afe9-103">You are attempting to use the `VbStrConv.SimplifiedChinese` enumeration member, but your system does not support the Simplified Chinese locale.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8f9fb-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="8f9fb-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0afe9-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="0afe9-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="8f9fb-105">升级计算机以支持简体中文区域设置，或在支持区域设置的计算机上运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="8f9fb-105">Upgrade the machine to support the Simplified Chinese locale, or run the application on a machine that supports the locale.</span></span>  
+1. <span data-ttu-id="0afe9-105">升级计算机以支持简体中文区域设置，或在支持区域设置的计算机上运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="0afe9-105">Upgrade the machine to support the Simplified Chinese locale, or run the application on a machine that supports the locale.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8f9fb-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8f9fb-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0afe9-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="0afe9-106">See also</span></span>
 
 - <xref:System.Globalization>
 
-- [<span data-ttu-id="8f9fb-107">基于 .NET Framework 的国际应用程序简介</span><span class="sxs-lookup"><span data-stu-id="8f9fb-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [<span data-ttu-id="0afe9-107">基于 .NET Framework 的国际应用程序简介</span><span class="sxs-lookup"><span data-stu-id="0afe9-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

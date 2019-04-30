@@ -5,22 +5,22 @@ f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
 ms.openlocfilehash: 5c55a767b1ea61117940b9c6f2a741174297274a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944971"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="4b4b8-102">没有可访问重载\<方法名称 > 可以使用而无需收缩转换这些自变量调用</span><span class="sxs-lookup"><span data-stu-id="4b4b8-102">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>
-<span data-ttu-id="4b4b8-103">调用了重载方法，但是方法不可与所提供的未进行收缩转换的参数列表相匹配。</span><span class="sxs-lookup"><span data-stu-id="4b4b8-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a><span data-ttu-id="53f67-102">没有可访问重载\<方法名称 > 可以使用而无需收缩转换这些自变量调用</span><span class="sxs-lookup"><span data-stu-id="53f67-102">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>
+<span data-ttu-id="53f67-103">调用了重载方法，但是方法不可与所提供的未进行收缩转换的参数列表相匹配。</span><span class="sxs-lookup"><span data-stu-id="53f67-103">An overloaded method was called, but no method was matched with the list of provided arguments without a narrowing conversion.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4b4b8-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="4b4b8-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="53f67-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="53f67-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="4b4b8-105">指定 `Option Strict Off`。</span><span class="sxs-lookup"><span data-stu-id="4b4b8-105">Specify `Option Strict Off`.</span></span>  
+1. <span data-ttu-id="53f67-105">指定 `Option Strict Off`。</span><span class="sxs-lookup"><span data-stu-id="53f67-105">Specify `Option Strict Off`.</span></span>  
   
-2. <span data-ttu-id="4b4b8-106">更改参数以匹配重载方法的其中一个签名。</span><span class="sxs-lookup"><span data-stu-id="4b4b8-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
+2. <span data-ttu-id="53f67-106">更改参数以匹配重载方法的其中一个签名。</span><span class="sxs-lookup"><span data-stu-id="53f67-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b4b8-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="4b4b8-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53f67-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="53f67-107">See also</span></span>
 
-- [<span data-ttu-id="4b4b8-108">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="4b4b8-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [<span data-ttu-id="4b4b8-109">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="4b4b8-109">Widening and Narrowing Conversions</span></span>](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="53f67-108">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="53f67-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="53f67-109">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="53f67-109">Widening and Narrowing Conversions</span></span>](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

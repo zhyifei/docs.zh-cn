@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2cd66a895f99d62e8deaa45afab12d963aee2901
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991973"
 ---
-# <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a><span data-ttu-id="b44a0-102">ICorProfilerInfo::GetILFunctionBodyAllocator 方法</span><span class="sxs-lookup"><span data-stu-id="b44a0-102">ICorProfilerInfo::GetILFunctionBodyAllocator Method</span></span>
-<span data-ttu-id="b44a0-103">获取提供的方法来分配内存来用于换出的 Microsoft 中间语言 (MSIL) 代码中的方法主体的接口。</span><span class="sxs-lookup"><span data-stu-id="b44a0-103">Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in Microsoft intermediate language (MSIL) code.</span></span>  
+# <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a><span data-ttu-id="32dac-102">ICorProfilerInfo::GetILFunctionBodyAllocator 方法</span><span class="sxs-lookup"><span data-stu-id="32dac-102">ICorProfilerInfo::GetILFunctionBodyAllocator Method</span></span>
+<span data-ttu-id="32dac-103">获取提供的方法来分配内存来用于换出的 Microsoft 中间语言 (MSIL) 代码中的方法主体的接口。</span><span class="sxs-lookup"><span data-stu-id="32dac-103">Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in Microsoft intermediate language (MSIL) code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b44a0-104">语法</span><span class="sxs-lookup"><span data-stu-id="b44a0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32dac-104">语法</span><span class="sxs-lookup"><span data-stu-id="32dac-104">Syntax</span></span>  
   
 ```  
 HRESULT GetILFunctionBodyAllocator(  
@@ -35,25 +35,25 @@ HRESULT GetILFunctionBodyAllocator(
     [out] IMethodMalloc **ppMalloc);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b44a0-105">参数</span><span class="sxs-lookup"><span data-stu-id="b44a0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="32dac-105">参数</span><span class="sxs-lookup"><span data-stu-id="32dac-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="b44a0-106">[in]该方法所在的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="b44a0-106">[in] The ID of the module in which the method resides.</span></span>  
+ <span data-ttu-id="32dac-106">[in]该方法所在的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="32dac-106">[in] The ID of the module in which the method resides.</span></span>  
   
  `ppMalloc`  
- <span data-ttu-id="b44a0-107">[out]一个指向[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)提供的方法来分配内存的接口。</span><span class="sxs-lookup"><span data-stu-id="b44a0-107">[out] A pointer to an [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface that provides a method to allocate the memory.</span></span>  
+ <span data-ttu-id="32dac-107">[out]一个指向[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)提供的方法来分配内存的接口。</span><span class="sxs-lookup"><span data-stu-id="32dac-107">[out] A pointer to an [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface that provides a method to allocate the memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b44a0-108">备注</span><span class="sxs-lookup"><span data-stu-id="b44a0-108">Remarks</span></span>  
- <span data-ttu-id="b44a0-109">方法体中的 MSIL 代码必须位于作为相对虚拟地址 (RVA)，相对于已加载模块，这意味着，它遵循中 4 GB 的模块。</span><span class="sxs-lookup"><span data-stu-id="b44a0-109">A method body in MSIL code must be located as a relative virtual address (RVA), relative to the loaded module, which means that it follows the module within 4 GB.</span></span> <span data-ttu-id="b44a0-110">轻松的工具来换出的一种方法，正文`GetILFunctionBodyAllocator`方法可确保该内存分配该范围内。</span><span class="sxs-lookup"><span data-stu-id="b44a0-110">To make it easier for a tool to swap out the body of a method, the `GetILFunctionBodyAllocator` method ensures that memory is allocated within that range.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32dac-108">备注</span><span class="sxs-lookup"><span data-stu-id="32dac-108">Remarks</span></span>  
+ <span data-ttu-id="32dac-109">方法体中的 MSIL 代码必须位于作为相对虚拟地址 (RVA)，相对于已加载模块，这意味着，它遵循中 4 GB 的模块。</span><span class="sxs-lookup"><span data-stu-id="32dac-109">A method body in MSIL code must be located as a relative virtual address (RVA), relative to the loaded module, which means that it follows the module within 4 GB.</span></span> <span data-ttu-id="32dac-110">轻松的工具来换出的一种方法，正文`GetILFunctionBodyAllocator`方法可确保该内存分配该范围内。</span><span class="sxs-lookup"><span data-stu-id="32dac-110">To make it easier for a tool to swap out the body of a method, the `GetILFunctionBodyAllocator` method ensures that memory is allocated within that range.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b44a0-111">要求</span><span class="sxs-lookup"><span data-stu-id="b44a0-111">Requirements</span></span>  
- <span data-ttu-id="b44a0-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b44a0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32dac-111">要求</span><span class="sxs-lookup"><span data-stu-id="32dac-111">Requirements</span></span>  
+ <span data-ttu-id="32dac-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="32dac-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b44a0-113">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b44a0-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="32dac-113">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="32dac-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b44a0-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b44a0-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="32dac-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32dac-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b44a0-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b44a0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="32dac-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32dac-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b44a0-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="b44a0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32dac-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="32dac-116">See also</span></span>
 
-- [<span data-ttu-id="b44a0-117">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="b44a0-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="32dac-117">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="32dac-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

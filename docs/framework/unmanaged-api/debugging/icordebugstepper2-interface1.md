@@ -17,35 +17,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256f67d21a22ee4692d88311cc150736e61563a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987410"
 ---
-# <a name="icordebugstepper2-interface"></a><span data-ttu-id="8bed1-102">ICorDebugStepper2 接口</span><span class="sxs-lookup"><span data-stu-id="8bed1-102">ICorDebugStepper2 Interface</span></span>
-<span data-ttu-id="8bed1-103">仅我的代码 (JMC) 调试提供支持。</span><span class="sxs-lookup"><span data-stu-id="8bed1-103">Provides support for just my code (JMC) debugging.</span></span>  
+# <a name="icordebugstepper2-interface"></a><span data-ttu-id="6581a-102">ICorDebugStepper2 接口</span><span class="sxs-lookup"><span data-stu-id="6581a-102">ICorDebugStepper2 Interface</span></span>
+<span data-ttu-id="6581a-103">仅我的代码 (JMC) 调试提供支持。</span><span class="sxs-lookup"><span data-stu-id="6581a-103">Provides support for just my code (JMC) debugging.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8bed1-104">方法</span><span class="sxs-lookup"><span data-stu-id="8bed1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6581a-104">方法</span><span class="sxs-lookup"><span data-stu-id="6581a-104">Methods</span></span>  
   
-|<span data-ttu-id="8bed1-105">方法</span><span class="sxs-lookup"><span data-stu-id="8bed1-105">Method</span></span>|<span data-ttu-id="8bed1-106">描述</span><span class="sxs-lookup"><span data-stu-id="8bed1-106">Description</span></span>|  
+|<span data-ttu-id="6581a-105">方法</span><span class="sxs-lookup"><span data-stu-id="6581a-105">Method</span></span>|<span data-ttu-id="6581a-106">描述</span><span class="sxs-lookup"><span data-stu-id="6581a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8bed1-107">SetJMC 方法</span><span class="sxs-lookup"><span data-stu-id="8bed1-107">SetJMC Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|<span data-ttu-id="8bed1-108">设置一个值，指定是否有此 ICorDebugStepper 步骤只能通过由应用程序的开发人员编写的代码。</span><span class="sxs-lookup"><span data-stu-id="8bed1-108">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span>|  
+|[<span data-ttu-id="6581a-107">SetJMC 方法</span><span class="sxs-lookup"><span data-stu-id="6581a-107">SetJMC Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|<span data-ttu-id="6581a-108">设置一个值，指定是否有此 ICorDebugStepper 步骤只能通过由应用程序的开发人员编写的代码。</span><span class="sxs-lookup"><span data-stu-id="6581a-108">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8bed1-109">备注</span><span class="sxs-lookup"><span data-stu-id="8bed1-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6581a-109">备注</span><span class="sxs-lookup"><span data-stu-id="6581a-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8bed1-110">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="8bed1-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="6581a-110">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="6581a-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8bed1-111">要求</span><span class="sxs-lookup"><span data-stu-id="8bed1-111">Requirements</span></span>  
- <span data-ttu-id="8bed1-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8bed1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6581a-111">要求</span><span class="sxs-lookup"><span data-stu-id="6581a-111">Requirements</span></span>  
+ <span data-ttu-id="6581a-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6581a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8bed1-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8bed1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6581a-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6581a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8bed1-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8bed1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6581a-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6581a-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8bed1-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bed1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6581a-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6581a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bed1-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="8bed1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6581a-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="6581a-116">See also</span></span>
 
-- [<span data-ttu-id="8bed1-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="8bed1-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="6581a-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="6581a-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

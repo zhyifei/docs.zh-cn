@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c14d364320c82f061ef606a402563dacfce28139
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986643"
 ---
-# <a name="icorpublishappdomainenumnext-method"></a><span data-ttu-id="b718d-102">ICorPublishAppDomainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="b718d-102">ICorPublishAppDomainEnum::Next Method</span></span>
-<span data-ttu-id="b718d-103">在过程中，从当前位置开始获取指定的当前存在的应用程序域数。</span><span class="sxs-lookup"><span data-stu-id="b718d-103">Gets the specified number of application domains that currently exist in the process, starting at the current position.</span></span>  
+# <a name="icorpublishappdomainenumnext-method"></a><span data-ttu-id="23bde-102">ICorPublishAppDomainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="23bde-102">ICorPublishAppDomainEnum::Next Method</span></span>
+<span data-ttu-id="23bde-103">在过程中，从当前位置开始获取指定的当前存在的应用程序域数。</span><span class="sxs-lookup"><span data-stu-id="23bde-103">Gets the specified number of application domains that currently exist in the process, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b718d-104">语法</span><span class="sxs-lookup"><span data-stu-id="b718d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23bde-104">语法</span><span class="sxs-lookup"><span data-stu-id="23bde-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,25 +38,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b718d-105">参数</span><span class="sxs-lookup"><span data-stu-id="b718d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23bde-105">参数</span><span class="sxs-lookup"><span data-stu-id="23bde-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="b718d-106">[in]要检索的元素数。</span><span class="sxs-lookup"><span data-stu-id="b718d-106">[in] The number of elements to be retrieved.</span></span>  
+ <span data-ttu-id="23bde-106">[in]要检索的元素数。</span><span class="sxs-lookup"><span data-stu-id="23bde-106">[in] The number of elements to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="b718d-107">[out]检索到的数组的指针[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)对象，其中每个表示应用程序域。</span><span class="sxs-lookup"><span data-stu-id="b718d-107">[out] A pointer to the array of retrieved [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objects, each of which represents an application domain.</span></span>  
+ <span data-ttu-id="23bde-107">[out]检索到的数组的指针[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)对象，其中每个表示应用程序域。</span><span class="sxs-lookup"><span data-stu-id="23bde-107">[out] A pointer to the array of retrieved [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objects, each of which represents an application domain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="b718d-108">[out]指向实际返回的应用程序域数。</span><span class="sxs-lookup"><span data-stu-id="b718d-108">[out] Pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="b718d-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="b718d-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="23bde-108">[out]指向实际返回的应用程序域数。</span><span class="sxs-lookup"><span data-stu-id="23bde-108">[out] Pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="23bde-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="23bde-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b718d-110">要求</span><span class="sxs-lookup"><span data-stu-id="b718d-110">Requirements</span></span>  
- <span data-ttu-id="b718d-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b718d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23bde-110">要求</span><span class="sxs-lookup"><span data-stu-id="23bde-110">Requirements</span></span>  
+ <span data-ttu-id="23bde-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="23bde-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b718d-112">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="b718d-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="23bde-112">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="23bde-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="b718d-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b718d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="23bde-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23bde-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b718d-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b718d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="23bde-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23bde-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b718d-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="b718d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23bde-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="23bde-115">See also</span></span>
 
-- [<span data-ttu-id="b718d-116">ICorPublishAppDomainEnum 接口</span><span class="sxs-lookup"><span data-stu-id="b718d-116">ICorPublishAppDomainEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+- [<span data-ttu-id="23bde-116">ICorPublishAppDomainEnum 接口</span><span class="sxs-lookup"><span data-stu-id="23bde-116">ICorPublishAppDomainEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)

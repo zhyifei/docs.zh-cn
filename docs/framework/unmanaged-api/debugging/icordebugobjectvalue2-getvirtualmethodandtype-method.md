@@ -19,15 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 252a65c66764d60f5e307ba1eaad4ded34d9744d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965693"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="bd470-102">ICorDebugObjectValue2::GetVirtualMethodAndType 方法</span><span class="sxs-lookup"><span data-stu-id="bd470-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="bd470-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="bd470-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="502de-102">ICorDebugObjectValue2::GetVirtualMethodAndType 方法</span><span class="sxs-lookup"><span data-stu-id="502de-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="502de-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="502de-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd470-104">语法</span><span class="sxs-lookup"><span data-stu-id="bd470-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="502de-104">语法</span><span class="sxs-lookup"><span data-stu-id="502de-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethodAndType (  
@@ -37,7 +37,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="bd470-105">备注</span><span class="sxs-lookup"><span data-stu-id="bd470-105">Remarks</span></span>  
- <span data-ttu-id="bd470-106">获取接口表示的派生程度最高的方法和类型的指定的成员引用的"ICorDebugFunction"和"ICorDebugType"实例的指针。</span><span class="sxs-lookup"><span data-stu-id="bd470-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="502de-105">备注</span><span class="sxs-lookup"><span data-stu-id="502de-105">Remarks</span></span>  
+ <span data-ttu-id="502de-106">获取接口表示的派生程度最高的方法和类型的指定的成员引用的"ICorDebugFunction"和"ICorDebugType"实例的指针。</span><span class="sxs-lookup"><span data-stu-id="502de-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd470-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="bd470-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="502de-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="502de-107">See also</span></span>

@@ -9,35 +9,35 @@ helpviewer_keywords:
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
 ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962431"
 ---
-# <a name="element-tree-and-serialization"></a><span data-ttu-id="240df-102">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="240df-102">Element Tree and Serialization</span></span>
-<span data-ttu-id="240df-103">WPF 编程元素彼此之间通常以某种形式的树关系存在。</span><span class="sxs-lookup"><span data-stu-id="240df-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="240df-104">例如，XAML 中创建的应用程序 UI 可概念化为一个对象树。</span><span class="sxs-lookup"><span data-stu-id="240df-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="240df-105">可进一步将元素树分为两个离散但有时会并行的树：逻辑树和可视化树。</span><span class="sxs-lookup"><span data-stu-id="240df-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="240df-106">WPF 中的序列化涉及保存这两个树和应用程序的状态并将状态写入文件（可能以 XAML 形式）。</span><span class="sxs-lookup"><span data-stu-id="240df-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
+# <a name="element-tree-and-serialization"></a><span data-ttu-id="66306-102">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="66306-102">Element Tree and Serialization</span></span>
+<span data-ttu-id="66306-103">WPF 编程元素彼此之间通常以某种形式的树关系存在。</span><span class="sxs-lookup"><span data-stu-id="66306-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="66306-104">例如，XAML 中创建的应用程序 UI 可概念化为一个对象树。</span><span class="sxs-lookup"><span data-stu-id="66306-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="66306-105">可进一步将元素树分为两个离散但有时会并行的树：逻辑树和可视化树。</span><span class="sxs-lookup"><span data-stu-id="66306-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="66306-106">WPF 中的序列化涉及保存这两个树和应用程序的状态并将状态写入文件（可能以 XAML 形式）。</span><span class="sxs-lookup"><span data-stu-id="66306-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="240df-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="240df-107">In This Section</span></span>  
- [<span data-ttu-id="240df-108">WPF 中的树</span><span class="sxs-lookup"><span data-stu-id="240df-108">Trees in WPF</span></span>](trees-in-wpf.md)  
- [<span data-ttu-id="240df-109">XamlWriter.Save 的序列化限制</span><span class="sxs-lookup"><span data-stu-id="240df-109">Serialization Limitations of XamlWriter.Save</span></span>](serialization-limitations-of-xamlwriter-save.md)  
- [<span data-ttu-id="240df-110">不在对象树中的对象元素的初始化</span><span class="sxs-lookup"><span data-stu-id="240df-110">Initialization for Object Elements Not in an Object Tree</span></span>](initialization-for-object-elements-not-in-an-object-tree.md)  
- [<span data-ttu-id="240df-111">帮助主题</span><span class="sxs-lookup"><span data-stu-id="240df-111">How-to Topics</span></span>](element-tree-and-serialization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66306-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="66306-107">In This Section</span></span>  
+ [<span data-ttu-id="66306-108">WPF 中的树</span><span class="sxs-lookup"><span data-stu-id="66306-108">Trees in WPF</span></span>](trees-in-wpf.md)  
+ [<span data-ttu-id="66306-109">XamlWriter.Save 的序列化限制</span><span class="sxs-lookup"><span data-stu-id="66306-109">Serialization Limitations of XamlWriter.Save</span></span>](serialization-limitations-of-xamlwriter-save.md)  
+ [<span data-ttu-id="66306-110">不在对象树中的对象元素的初始化</span><span class="sxs-lookup"><span data-stu-id="66306-110">Initialization for Object Elements Not in an Object Tree</span></span>](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [<span data-ttu-id="66306-111">帮助主题</span><span class="sxs-lookup"><span data-stu-id="66306-111">How-to Topics</span></span>](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="240df-112">参考</span><span class="sxs-lookup"><span data-stu-id="240df-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66306-112">参考</span><span class="sxs-lookup"><span data-stu-id="66306-112">Reference</span></span>  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
-## <a name="related-sections"></a><span data-ttu-id="240df-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="240df-113">Related Sections</span></span>  
- [<span data-ttu-id="240df-114">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="240df-114">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="240df-115">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="240df-115">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="240df-116">基元素</span><span class="sxs-lookup"><span data-stu-id="240df-116">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="240df-117">属性</span><span class="sxs-lookup"><span data-stu-id="240df-117">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="240df-118">事件</span><span class="sxs-lookup"><span data-stu-id="240df-118">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="240df-119">输入</span><span class="sxs-lookup"><span data-stu-id="240df-119">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="240df-120">资源</span><span class="sxs-lookup"><span data-stu-id="240df-120">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="240df-121">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="240df-121">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-  [<span data-ttu-id="240df-122">线程模型</span><span class="sxs-lookup"><span data-stu-id="240df-122">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="66306-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="66306-113">Related Sections</span></span>  
+ [<span data-ttu-id="66306-114">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="66306-114">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="66306-115">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="66306-115">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="66306-116">基元素</span><span class="sxs-lookup"><span data-stu-id="66306-116">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="66306-117">属性</span><span class="sxs-lookup"><span data-stu-id="66306-117">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="66306-118">事件</span><span class="sxs-lookup"><span data-stu-id="66306-118">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="66306-119">输入</span><span class="sxs-lookup"><span data-stu-id="66306-119">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="66306-120">资源</span><span class="sxs-lookup"><span data-stu-id="66306-120">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="66306-121">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="66306-121">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="66306-122">线程模型</span><span class="sxs-lookup"><span data-stu-id="66306-122">Threading Model</span></span>](threading-model.md)
