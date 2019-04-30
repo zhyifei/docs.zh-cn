@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20ab65be32e6730ef828347c28eeed25d9033777
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996029"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="fcfa2-102">ICorDebugEditAndContinueSnapshot::SetILMap 方法</span><span class="sxs-lookup"><span data-stu-id="fcfa2-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="fcfa2-103">`SetILMap` 已过时。</span><span class="sxs-lookup"><span data-stu-id="fcfa2-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="fcfa2-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="fcfa2-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="61c96-102">ICorDebugEditAndContinueSnapshot::SetILMap 方法</span><span class="sxs-lookup"><span data-stu-id="61c96-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+<span data-ttu-id="61c96-103">`SetILMap` 已过时。</span><span class="sxs-lookup"><span data-stu-id="61c96-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="61c96-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="61c96-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fcfa2-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="fcfa2-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61c96-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="61c96-105">See also</span></span>
 
-- [<span data-ttu-id="fcfa2-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="fcfa2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="61c96-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="61c96-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

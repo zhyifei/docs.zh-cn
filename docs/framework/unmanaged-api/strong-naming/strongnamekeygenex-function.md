@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000241"
 ---
-# <a name="strongnamekeygenex-function"></a><span data-ttu-id="97cbc-102">StrongNameKeyGenEx 函数</span><span class="sxs-lookup"><span data-stu-id="97cbc-102">StrongNameKeyGenEx Function</span></span>
-<span data-ttu-id="97cbc-103">生成新公钥/私钥对与指定的密钥大小，用于强名称。</span><span class="sxs-lookup"><span data-stu-id="97cbc-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
+# <a name="strongnamekeygenex-function"></a><span data-ttu-id="8fd26-102">StrongNameKeyGenEx 函数</span><span class="sxs-lookup"><span data-stu-id="8fd26-102">StrongNameKeyGenEx Function</span></span>
+<span data-ttu-id="8fd26-103">生成新公钥/私钥对与指定的密钥大小，用于强名称。</span><span class="sxs-lookup"><span data-stu-id="8fd26-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
   
- <span data-ttu-id="97cbc-104">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="97cbc-104">This function has been deprecated.</span></span> <span data-ttu-id="97cbc-105">使用[iclrstrongname:: Strongnamekeygenex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="97cbc-105">Use the [ICLRStrongName::StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) method instead.</span></span>  
+ <span data-ttu-id="8fd26-104">此函数已弃用。</span><span class="sxs-lookup"><span data-stu-id="8fd26-104">This function has been deprecated.</span></span> <span data-ttu-id="8fd26-105">使用[iclrstrongname:: Strongnamekeygenex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="8fd26-105">Use the [ICLRStrongName::StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97cbc-106">语法</span><span class="sxs-lookup"><span data-stu-id="97cbc-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8fd26-106">语法</span><span class="sxs-lookup"><span data-stu-id="8fd26-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameKeyGenEx (  
@@ -40,47 +40,47 @@ BOOLEAN StrongNameKeyGenEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="97cbc-107">参数</span><span class="sxs-lookup"><span data-stu-id="97cbc-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8fd26-107">参数</span><span class="sxs-lookup"><span data-stu-id="8fd26-107">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="97cbc-108">[in]请求的密钥容器名称。</span><span class="sxs-lookup"><span data-stu-id="97cbc-108">[in] The requested key container name.</span></span> <span data-ttu-id="97cbc-109">`wszKeyContainer` 必须为非空字符串，或空值，以生成一个临时名称。</span><span class="sxs-lookup"><span data-stu-id="97cbc-109">`wszKeyContainer` must be a non-empty string, or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="8fd26-108">[in]请求的密钥容器名称。</span><span class="sxs-lookup"><span data-stu-id="8fd26-108">[in] The requested key container name.</span></span> <span data-ttu-id="8fd26-109">`wszKeyContainer` 必须为非空字符串，或空值，以生成一个临时名称。</span><span class="sxs-lookup"><span data-stu-id="8fd26-109">`wszKeyContainer` must be a non-empty string, or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="97cbc-110">[in]指定是否保留注册密钥。</span><span class="sxs-lookup"><span data-stu-id="97cbc-110">[in] Specifies whether to leave the key registered.</span></span> <span data-ttu-id="97cbc-111">支持以下值：</span><span class="sxs-lookup"><span data-stu-id="97cbc-111">The following values are supported:</span></span>  
+ <span data-ttu-id="8fd26-110">[in]指定是否保留注册密钥。</span><span class="sxs-lookup"><span data-stu-id="8fd26-110">[in] Specifies whether to leave the key registered.</span></span> <span data-ttu-id="8fd26-111">支持以下值：</span><span class="sxs-lookup"><span data-stu-id="8fd26-111">The following values are supported:</span></span>  
   
--   <span data-ttu-id="97cbc-112">0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。</span><span class="sxs-lookup"><span data-stu-id="97cbc-112">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+- <span data-ttu-id="8fd26-112">0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。</span><span class="sxs-lookup"><span data-stu-id="8fd26-112">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
--   <span data-ttu-id="97cbc-113">0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。</span><span class="sxs-lookup"><span data-stu-id="97cbc-113">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+- <span data-ttu-id="8fd26-113">0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。</span><span class="sxs-lookup"><span data-stu-id="8fd26-113">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `dwKeySize`  
- <span data-ttu-id="97cbc-114">[in]请求的密钥，以位为单位的大小。</span><span class="sxs-lookup"><span data-stu-id="97cbc-114">[in] The requested size of the key, in bits.</span></span>  
+ <span data-ttu-id="8fd26-114">[in]请求的密钥，以位为单位的大小。</span><span class="sxs-lookup"><span data-stu-id="8fd26-114">[in] The requested size of the key, in bits.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="97cbc-115">[out]返回的公共/专用密钥对。</span><span class="sxs-lookup"><span data-stu-id="97cbc-115">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="8fd26-115">[out]返回的公共/专用密钥对。</span><span class="sxs-lookup"><span data-stu-id="8fd26-115">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="97cbc-116">[out]大小，以字节为单位的`ppbKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="97cbc-116">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="8fd26-116">[out]大小，以字节为单位的`ppbKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="8fd26-116">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="97cbc-117">返回值</span><span class="sxs-lookup"><span data-stu-id="97cbc-117">Return Value</span></span>  
- <span data-ttu-id="97cbc-118">`true` 在成功完成;否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="97cbc-118">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8fd26-117">返回值</span><span class="sxs-lookup"><span data-stu-id="8fd26-117">Return Value</span></span>  
+ <span data-ttu-id="8fd26-118">`true` 在成功完成;否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="8fd26-118">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="97cbc-119">备注</span><span class="sxs-lookup"><span data-stu-id="97cbc-119">Remarks</span></span>  
- <span data-ttu-id="97cbc-120">.NET framework 1.0 和 1.1 版需要`dwKeySize`1024 位使用强名称; 程序集进行签名的版本 2.0 添加为 2048年位密钥的支持。</span><span class="sxs-lookup"><span data-stu-id="97cbc-120">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8fd26-119">备注</span><span class="sxs-lookup"><span data-stu-id="8fd26-119">Remarks</span></span>  
+ <span data-ttu-id="8fd26-120">.NET framework 1.0 和 1.1 版需要`dwKeySize`1024 位使用强名称; 程序集进行签名的版本 2.0 添加为 2048年位密钥的支持。</span><span class="sxs-lookup"><span data-stu-id="8fd26-120">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
   
- <span data-ttu-id="97cbc-121">正在检索密钥后，应调用[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数，以释放已分配的内存。</span><span class="sxs-lookup"><span data-stu-id="97cbc-121">After the key is retrieved, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
+ <span data-ttu-id="8fd26-121">正在检索密钥后，应调用[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函数，以释放已分配的内存。</span><span class="sxs-lookup"><span data-stu-id="8fd26-121">After the key is retrieved, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
   
- <span data-ttu-id="97cbc-122">如果`StrongNameKeyGenEx`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。</span><span class="sxs-lookup"><span data-stu-id="97cbc-122">If the `StrongNameKeyGenEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="8fd26-122">如果`StrongNameKeyGenEx`函数不成功完成，则调用[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函数检索最后一个生成的错误。</span><span class="sxs-lookup"><span data-stu-id="8fd26-122">If the `StrongNameKeyGenEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97cbc-123">要求</span><span class="sxs-lookup"><span data-stu-id="97cbc-123">Requirements</span></span>  
- <span data-ttu-id="97cbc-124">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="97cbc-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8fd26-123">要求</span><span class="sxs-lookup"><span data-stu-id="8fd26-123">Requirements</span></span>  
+ <span data-ttu-id="8fd26-124">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8fd26-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97cbc-125">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="97cbc-125">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="8fd26-125">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="8fd26-125">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="97cbc-126">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="97cbc-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8fd26-126">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="8fd26-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="97cbc-127">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97cbc-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8fd26-127">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fd26-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97cbc-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="97cbc-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8fd26-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="8fd26-128">See also</span></span>
 
-- [<span data-ttu-id="97cbc-129">StrongNameKeyGenEx 方法</span><span class="sxs-lookup"><span data-stu-id="97cbc-129">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [<span data-ttu-id="97cbc-130">StrongNameKeyGen 方法</span><span class="sxs-lookup"><span data-stu-id="97cbc-130">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [<span data-ttu-id="97cbc-131">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="97cbc-131">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="8fd26-129">StrongNameKeyGenEx 方法</span><span class="sxs-lookup"><span data-stu-id="8fd26-129">StrongNameKeyGenEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [<span data-ttu-id="8fd26-130">StrongNameKeyGen 方法</span><span class="sxs-lookup"><span data-stu-id="8fd26-130">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
+- [<span data-ttu-id="8fd26-131">ICLRStrongName 接口</span><span class="sxs-lookup"><span data-stu-id="8fd26-131">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

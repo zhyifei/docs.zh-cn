@@ -3,19 +3,19 @@ title: 如何：检索单个特性 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
 ms.openlocfilehash: f56bdf86e4b63bc952c1d139aac9ee619b5a5f6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051281"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a><span data-ttu-id="3422f-102">如何：检索单个特性 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3422f-102">How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="3422f-103">本主题说明在给定属性名称的情况下，如何检索元素的单个属性。</span><span class="sxs-lookup"><span data-stu-id="3422f-103">This topic explains how to retrieve a single attribute of an element, given the attribute name.</span></span> <span data-ttu-id="3422f-104">这对于编写查询表达式查找具有特定属性的元素十分有用。</span><span class="sxs-lookup"><span data-stu-id="3422f-104">This is useful for writing query expressions where you want to find an element that has a particular attribute.</span></span>  
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a><span data-ttu-id="50168-102">如何：检索单个特性 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50168-102">How to: Retrieve a Single Attribute (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="50168-103">本主题说明在给定属性名称的情况下，如何检索元素的单个属性。</span><span class="sxs-lookup"><span data-stu-id="50168-103">This topic explains how to retrieve a single attribute of an element, given the attribute name.</span></span> <span data-ttu-id="50168-104">这对于编写查询表达式查找具有特定属性的元素十分有用。</span><span class="sxs-lookup"><span data-stu-id="50168-104">This is useful for writing query expressions where you want to find an element that has a particular attribute.</span></span>  
   
- <span data-ttu-id="3422f-105"><xref:System.Xml.Linq.XElement.Attribute%2A> 类的 <xref:System.Xml.Linq.XElement> 方法返回具有指定名称的 <xref:System.Xml.Linq.XAttribute>。</span><span class="sxs-lookup"><span data-stu-id="3422f-105">The <xref:System.Xml.Linq.XElement.Attribute%2A> method of the <xref:System.Xml.Linq.XElement> class returns the <xref:System.Xml.Linq.XAttribute> with the specified name.</span></span>  
+ <span data-ttu-id="50168-105"><xref:System.Xml.Linq.XElement.Attribute%2A> 类的 <xref:System.Xml.Linq.XElement> 方法返回具有指定名称的 <xref:System.Xml.Linq.XAttribute>。</span><span class="sxs-lookup"><span data-stu-id="50168-105">The <xref:System.Xml.Linq.XElement.Attribute%2A> method of the <xref:System.Xml.Linq.XElement> class returns the <xref:System.Xml.Linq.XAttribute> with the specified name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3422f-106">示例</span><span class="sxs-lookup"><span data-stu-id="3422f-106">Example</span></span>  
- <span data-ttu-id="3422f-107">下面的示例使用 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="3422f-107">The following example uses the <xref:System.Xml.Linq.XElement.Attribute%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="50168-106">示例</span><span class="sxs-lookup"><span data-stu-id="50168-106">Example</span></span>  
+ <span data-ttu-id="50168-107">下面的示例使用 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="50168-107">The following example uses the <xref:System.Xml.Linq.XElement.Attribute%2A> method.</span></span>  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -28,17 +28,17 @@ For Each e As XElement In elList
 Next  
 ```  
   
- <span data-ttu-id="3422f-108">本示例首先在名为 `Phone` 的树中查找所有后代，然后查找名为 `type` 的属性。</span><span class="sxs-lookup"><span data-stu-id="3422f-108">This example finds all the descendants in the tree named `Phone`, and then finds the attribute named `type`.</span></span>  
+ <span data-ttu-id="50168-108">本示例首先在名为 `Phone` 的树中查找所有后代，然后查找名为 `type` 的属性。</span><span class="sxs-lookup"><span data-stu-id="50168-108">This example finds all the descendants in the tree named `Phone`, and then finds the attribute named `type`.</span></span>  
   
- <span data-ttu-id="3422f-109">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="3422f-109">This code produces the following output:</span></span>  
+ <span data-ttu-id="50168-109">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="50168-109">This code produces the following output:</span></span>  
   
 ```  
 home  
 work  
 ```  
   
-## <a name="example"></a><span data-ttu-id="3422f-110">示例</span><span class="sxs-lookup"><span data-stu-id="3422f-110">Example</span></span>  
- <span data-ttu-id="3422f-111">如果希望检索属性的值，可以强制转换该值，就像使用 <xref:System.Xml.Linq.XElement> 对象时一样。</span><span class="sxs-lookup"><span data-stu-id="3422f-111">If you want to retrieve the value of the attribute, you can cast it, just as you do for with <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="3422f-112">下面的示例演示这一操作。</span><span class="sxs-lookup"><span data-stu-id="3422f-112">The following example demonstrates this.</span></span>  
+## <a name="example"></a><span data-ttu-id="50168-110">示例</span><span class="sxs-lookup"><span data-stu-id="50168-110">Example</span></span>  
+ <span data-ttu-id="50168-111">如果希望检索属性的值，可以强制转换该值，就像使用 <xref:System.Xml.Linq.XElement> 对象时一样。</span><span class="sxs-lookup"><span data-stu-id="50168-111">If you want to retrieve the value of the attribute, you can cast it, just as you do for with <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="50168-112">下面的示例演示这一操作。</span><span class="sxs-lookup"><span data-stu-id="50168-112">The following example demonstrates this.</span></span>  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -53,17 +53,17 @@ For Each el As XElement In elList
 Next  
 ```  
   
- <span data-ttu-id="3422f-113">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="3422f-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="50168-113">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="50168-113">This code produces the following output:</span></span>  
   
 ```  
 home  
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="3422f-114">为 <xref:System.Xml.Linq.XAttribute> 类提供了以下类型的显式强制转换运算符：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。</span><span class="sxs-lookup"><span data-stu-id="3422f-114">provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="50168-114">为 <xref:System.Xml.Linq.XAttribute> 类提供了以下类型的显式强制转换运算符：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。</span><span class="sxs-lookup"><span data-stu-id="50168-114">provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3422f-115">示例</span><span class="sxs-lookup"><span data-stu-id="3422f-115">Example</span></span>  
- <span data-ttu-id="3422f-116">下面的示例显式命名空间中的属性的相同代码。</span><span class="sxs-lookup"><span data-stu-id="3422f-116">The following example shows the same code for an attribute that is in a namespace.</span></span> <span data-ttu-id="3422f-117">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="3422f-117">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="50168-115">示例</span><span class="sxs-lookup"><span data-stu-id="50168-115">Example</span></span>  
+ <span data-ttu-id="50168-116">下面的示例显式命名空间中的属性的相同代码。</span><span class="sxs-lookup"><span data-stu-id="50168-116">The following example shows the same code for an attribute that is in a namespace.</span></span> <span data-ttu-id="50168-117">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="50168-117">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -85,13 +85,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="3422f-118">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="3422f-118">This code produces the following output:</span></span>  
+ <span data-ttu-id="50168-118">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="50168-118">This code produces the following output:</span></span>  
   
 ```  
 home  
 work  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3422f-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="3422f-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50168-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="50168-119">See also</span></span>
 
-- [<span data-ttu-id="3422f-120">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3422f-120">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [<span data-ttu-id="50168-120">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50168-120">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

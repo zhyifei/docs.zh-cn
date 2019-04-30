@@ -6,26 +6,26 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
 ms.openlocfilehash: 6c91661db92b31e291ede46a509acf8e7bc4b34d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032815"
 ---
-# <a name="printing-and-print-system-management"></a><span data-ttu-id="9f992-102">打印和打印系统管理</span><span class="sxs-lookup"><span data-stu-id="9f992-102">Printing and Print System Management</span></span>
-[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] <span data-ttu-id="9f992-103">和 Microsoft.NET Framework 引入新的打印路径 — 一种替代方法[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]打印 — 和大幅扩展了打印系统管理集[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9f992-103">and Microsoft .NET Framework introduce a new print path — an alternative to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="printing-and-print-system-management"></a><span data-ttu-id="0a204-102">打印和打印系统管理</span><span class="sxs-lookup"><span data-stu-id="0a204-102">Printing and Print System Management</span></span>
+[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] <span data-ttu-id="0a204-103">和 Microsoft.NET Framework 引入新的打印路径 — 一种替代方法[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]打印 — 和大幅扩展了打印系统管理集[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0a204-103">and Microsoft .NET Framework introduce a new print path — an alternative to [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] printing — and a vastly expanded set of print system management [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9f992-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="9f992-104">In This Section</span></span>  
- [<span data-ttu-id="9f992-105">打印概述</span><span class="sxs-lookup"><span data-stu-id="9f992-105">Printing Overview</span></span>](printing-overview.md)  
- <span data-ttu-id="9f992-106">新的打印路径的讨论和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9f992-106">A discussion of the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0a204-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="0a204-104">In This Section</span></span>  
+ [<span data-ttu-id="0a204-105">打印概述</span><span class="sxs-lookup"><span data-stu-id="0a204-105">Printing Overview</span></span>](printing-overview.md)  
+ <span data-ttu-id="0a204-106">新的打印路径的讨论和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0a204-106">A discussion of the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
- [<span data-ttu-id="9f992-107">帮助主题</span><span class="sxs-lookup"><span data-stu-id="9f992-107">How-to Topics</span></span>](printing-how-to-topics.md)  
- <span data-ttu-id="9f992-108">一组文章演示如何使用新的打印路径和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9f992-108">A set of articles showing how to use the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+ [<span data-ttu-id="0a204-107">帮助主题</span><span class="sxs-lookup"><span data-stu-id="0a204-107">How-to Topics</span></span>](printing-how-to-topics.md)  
+ <span data-ttu-id="0a204-108">一组文章演示如何使用新的打印路径和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0a204-108">A set of articles showing how to use the new print path and [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f992-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="9f992-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a204-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="0a204-109">See also</span></span>
 
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>
-- [<span data-ttu-id="9f992-110">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="9f992-110">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="9f992-111">XPS 文档</span><span class="sxs-lookup"><span data-stu-id="9f992-111">XPS Documents</span></span>](/windows/desktop/printdocs/documents)
+- [<span data-ttu-id="0a204-110">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="0a204-110">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="0a204-111">XPS 文档</span><span class="sxs-lookup"><span data-stu-id="0a204-111">XPS Documents</span></span>](/windows/desktop/printdocs/documents)

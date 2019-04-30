@@ -7,27 +7,27 @@ helpviewer_keywords:
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
 ms.openlocfilehash: 003715b04f3a5c0fb41e846beb189f117378ea58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053023"
 ---
-# <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="caaf5-102">如何：修改 XML 文本 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="caaf5-102">How to: Modify XML Literals (Visual Basic)</span></span>
+# <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="7bd8b-102">如何：修改 XML 文本 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7bd8b-102">How to: Modify XML Literals (Visual Basic)</span></span>
 
-<span data-ttu-id="caaf5-103">Visual Basic 提供方便的方式来修改 XML 文本。</span><span class="sxs-lookup"><span data-stu-id="caaf5-103">Visual Basic provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="caaf5-104">可以添加或删除元素和属性，并还可以使用新的 XML 元素来替换现有元素。</span><span class="sxs-lookup"><span data-stu-id="caaf5-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="caaf5-105">本主题提供如何修改现有 XML 文本的几个示例。</span><span class="sxs-lookup"><span data-stu-id="caaf5-105">This topic provides several examples of how to modify an existing XML literal.</span></span>
+<span data-ttu-id="7bd8b-103">Visual Basic 提供方便的方式来修改 XML 文本。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-103">Visual Basic provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="7bd8b-104">可以添加或删除元素和属性，并还可以使用新的 XML 元素来替换现有元素。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="7bd8b-105">本主题提供如何修改现有 XML 文本的几个示例。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-105">This topic provides several examples of how to modify an existing XML literal.</span></span>
 
-### <a name="to-modify-the-value-of-an-xml-literal"></a><span data-ttu-id="caaf5-106">若要修改的 XML 文本值</span><span class="sxs-lookup"><span data-stu-id="caaf5-106">To modify the value of an XML literal</span></span>
+### <a name="to-modify-the-value-of-an-xml-literal"></a><span data-ttu-id="7bd8b-106">若要修改的 XML 文本值</span><span class="sxs-lookup"><span data-stu-id="7bd8b-106">To modify the value of an XML literal</span></span>
 
-1. <span data-ttu-id="caaf5-107">若要修改的 XML 文本的值，获取对 XML 文本，并且已设置的引用`Value`属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="caaf5-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span></span>
+1. <span data-ttu-id="7bd8b-107">若要修改的 XML 文本的值，获取对 XML 文本，并且已设置的引用`Value`属性设置为所需的值。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span></span>
 
-    <span data-ttu-id="caaf5-108">以下代码示例将更新的所有值\<价格 > XML 文档中的元素。</span><span class="sxs-lookup"><span data-stu-id="caaf5-108">The following code example updates the value of all the \<Price> elements in an XML document.</span></span>
+    <span data-ttu-id="7bd8b-108">以下代码示例将更新的所有值\<价格 > XML 文档中的元素。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-108">The following code example updates the value of all the \<Price> elements in an XML document.</span></span>
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
-    <span data-ttu-id="caaf5-109">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="caaf5-109">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="7bd8b-109">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-109">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="caaf5-110">源 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-110">Source XML:</span></span>
+    <span data-ttu-id="7bd8b-110">源 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-110">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -45,7 +45,7 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-    <span data-ttu-id="caaf5-111">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-111">Modified XML:</span></span>
+    <span data-ttu-id="7bd8b-111">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-111">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -64,17 +64,17 @@ ms.locfileid: "57675324"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="caaf5-112">`Value`属性是指集合中的第一个 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="caaf5-112">The `Value` property refers to the first XML element in a collection.</span></span> <span data-ttu-id="caaf5-113">如果不存在具有相同的名称在集合中的多个元素，则将设置`Value`属性会影响仅在集合中的第一个元素。</span><span class="sxs-lookup"><span data-stu-id="caaf5-113">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span></span>
+    > <span data-ttu-id="7bd8b-112">`Value`属性是指集合中的第一个 XML 元素。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-112">The `Value` property refers to the first XML element in a collection.</span></span> <span data-ttu-id="7bd8b-113">如果不存在具有相同的名称在集合中的多个元素，则将设置`Value`属性会影响仅在集合中的第一个元素。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-113">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span></span>
 
-### <a name="to-add-an-attribute-to-an-xml-literal"></a><span data-ttu-id="caaf5-114">将属性添加到 XML 文本</span><span class="sxs-lookup"><span data-stu-id="caaf5-114">To add an attribute to an XML literal</span></span>
+### <a name="to-add-an-attribute-to-an-xml-literal"></a><span data-ttu-id="7bd8b-114">将属性添加到 XML 文本</span><span class="sxs-lookup"><span data-stu-id="7bd8b-114">To add an attribute to an XML literal</span></span>
 
-1. <span data-ttu-id="caaf5-115">若要将属性添加到 XML 文本，首先获取对 XML 文本的引用。</span><span class="sxs-lookup"><span data-stu-id="caaf5-115">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="caaf5-116">然后可以通过添加新的 XML 特性轴属性添加一个属性。</span><span class="sxs-lookup"><span data-stu-id="caaf5-116">You can then add an attribute by adding a new XML attribute axis property.</span></span> <span data-ttu-id="caaf5-117">您还可以添加一个新<xref:System.Xml.Linq.XAttribute>对象与 XML 文本使用<xref:System.Xml.Linq.XContainer.Add%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="caaf5-117">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="caaf5-118">下面的示例显示了这两个选项。</span><span class="sxs-lookup"><span data-stu-id="caaf5-118">The following example shows both options.</span></span>
+1. <span data-ttu-id="7bd8b-115">若要将属性添加到 XML 文本，首先获取对 XML 文本的引用。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-115">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="7bd8b-116">然后可以通过添加新的 XML 特性轴属性添加一个属性。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-116">You can then add an attribute by adding a new XML attribute axis property.</span></span> <span data-ttu-id="7bd8b-117">您还可以添加一个新<xref:System.Xml.Linq.XAttribute>对象与 XML 文本使用<xref:System.Xml.Linq.XContainer.Add%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-117">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="7bd8b-118">下面的示例显示了这两个选项。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-118">The following example shows both options.</span></span>
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
-    <span data-ttu-id="caaf5-119">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="caaf5-119">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="7bd8b-119">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-119">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="caaf5-120">源 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-120">Source XML:</span></span>
+    <span data-ttu-id="7bd8b-120">源 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-120">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -92,7 +92,7 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-    <span data-ttu-id="caaf5-121">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-121">Modified XML:</span></span>
+    <span data-ttu-id="7bd8b-121">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-121">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -110,21 +110,21 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-    <span data-ttu-id="caaf5-122">有关 XML 特性轴属性的详细信息，请参阅[XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)。</span><span class="sxs-lookup"><span data-stu-id="caaf5-122">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span></span>
+    <span data-ttu-id="7bd8b-122">有关 XML 特性轴属性的详细信息，请参阅[XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-122">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span></span>
 
-### <a name="to-add-an-element-to-an-xml-literal"></a><span data-ttu-id="caaf5-123">若要将元素添加到 XML 文本</span><span class="sxs-lookup"><span data-stu-id="caaf5-123">To add an element to an XML literal</span></span>
+### <a name="to-add-an-element-to-an-xml-literal"></a><span data-ttu-id="7bd8b-123">若要将元素添加到 XML 文本</span><span class="sxs-lookup"><span data-stu-id="7bd8b-123">To add an element to an XML literal</span></span>
 
-1. <span data-ttu-id="caaf5-124">若要将元素添加到 XML 文本，首先获取对 XML 文本的引用。</span><span class="sxs-lookup"><span data-stu-id="caaf5-124">To add an element to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="caaf5-125">然后，可以添加一个新<xref:System.Xml.Linq.XElement>对象使用的元素的最后一个子元素作为<xref:System.Xml.Linq.XContainer.Add%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="caaf5-125">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="caaf5-126">您可以添加一个新<xref:System.Xml.Linq.XElement>对象使用的第一个子元素作为<xref:System.Xml.Linq.XContainer.AddFirst%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="caaf5-126">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span></span>
+1. <span data-ttu-id="7bd8b-124">若要将元素添加到 XML 文本，首先获取对 XML 文本的引用。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-124">To add an element to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="7bd8b-125">然后，可以添加一个新<xref:System.Xml.Linq.XElement>对象使用的元素的最后一个子元素作为<xref:System.Xml.Linq.XContainer.Add%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-125">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="7bd8b-126">您可以添加一个新<xref:System.Xml.Linq.XElement>对象使用的第一个子元素作为<xref:System.Xml.Linq.XContainer.AddFirst%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-126">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span></span>
 
-    <span data-ttu-id="caaf5-127">若要在特定位置相对于其他子元素添加一个新的元素，请首先获取对相邻的子元素的引用。</span><span class="sxs-lookup"><span data-stu-id="caaf5-127">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span></span> <span data-ttu-id="caaf5-128">然后，可以添加新<xref:System.Xml.Linq.XElement>对象使用相邻的子元素之前的<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="caaf5-128">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span></span> <span data-ttu-id="caaf5-129">您还可以添加新<xref:System.Xml.Linq.XElement>通过使用相邻的子元素之后的对象<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="caaf5-129">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span></span>
+    <span data-ttu-id="7bd8b-127">若要在特定位置相对于其他子元素添加一个新的元素，请首先获取对相邻的子元素的引用。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-127">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span></span> <span data-ttu-id="7bd8b-128">然后，可以添加新<xref:System.Xml.Linq.XElement>对象使用相邻的子元素之前的<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-128">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span></span> <span data-ttu-id="7bd8b-129">您还可以添加新<xref:System.Xml.Linq.XElement>通过使用相邻的子元素之后的对象<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-129">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span></span>
 
-    <span data-ttu-id="caaf5-130">下面的示例显示了每种技术的示例。</span><span class="sxs-lookup"><span data-stu-id="caaf5-130">The following example shows examples of each of these techniques.</span></span>
+    <span data-ttu-id="7bd8b-130">下面的示例显示了每种技术的示例。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-130">The following example shows examples of each of these techniques.</span></span>
 
     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]
 
-    <span data-ttu-id="caaf5-131">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="caaf5-131">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="7bd8b-131">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-131">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="caaf5-132">源 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-132">Source XML:</span></span>
+    <span data-ttu-id="7bd8b-132">源 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-132">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -142,7 +142,7 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-    <span data-ttu-id="caaf5-133">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-133">Modified XML:</span></span>
+    <span data-ttu-id="7bd8b-133">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-133">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -164,15 +164,15 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a><span data-ttu-id="caaf5-134">若要从 XML 文本中移除的元素或属性</span><span class="sxs-lookup"><span data-stu-id="caaf5-134">To remove an element or attribute from an XML literal</span></span>
+### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a><span data-ttu-id="7bd8b-134">若要从 XML 文本中移除的元素或属性</span><span class="sxs-lookup"><span data-stu-id="7bd8b-134">To remove an element or attribute from an XML literal</span></span>
 
-1. <span data-ttu-id="caaf5-135">若要从 XML 文本中删除一个元素或属性，请获取对元素或属性与调用的引用`Remove`方法，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="caaf5-135">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span></span>
+1. <span data-ttu-id="7bd8b-135">若要从 XML 文本中删除一个元素或属性，请获取对元素或属性与调用的引用`Remove`方法，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-135">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span></span>
 
     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]
 
-    <span data-ttu-id="caaf5-136">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="caaf5-136">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="7bd8b-136">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-136">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="caaf5-137">源 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-137">Source XML:</span></span>
+    <span data-ttu-id="7bd8b-137">源 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-137">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -192,7 +192,7 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-    <span data-ttu-id="caaf5-138">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-138">Modified XML:</span></span>
+    <span data-ttu-id="7bd8b-138">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-138">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -210,21 +210,21 @@ ms.locfileid: "57675324"
       </Book></Catalog>
     ```
 
-    <span data-ttu-id="caaf5-139">若要从 XML 文本中移除所有元素或属性，获取对 XML 文本的引用，并调用<xref:System.Xml.Linq.XElement.RemoveAll%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="caaf5-139">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span></span>
+    <span data-ttu-id="7bd8b-139">若要从 XML 文本中移除所有元素或属性，获取对 XML 文本的引用，并调用<xref:System.Xml.Linq.XElement.RemoveAll%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-139">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span></span>
 
-### <a name="to-modify-an-xml-literal"></a><span data-ttu-id="caaf5-140">若要修改 XML 文本</span><span class="sxs-lookup"><span data-stu-id="caaf5-140">To modify an XML literal</span></span>
+### <a name="to-modify-an-xml-literal"></a><span data-ttu-id="7bd8b-140">若要修改 XML 文本</span><span class="sxs-lookup"><span data-stu-id="7bd8b-140">To modify an XML literal</span></span>
 
-1. <span data-ttu-id="caaf5-141">若要更改的 XML 元素的名称，首先获取对元素的引用。</span><span class="sxs-lookup"><span data-stu-id="caaf5-141">To change the name of an XML element, first obtain a reference to the element.</span></span> <span data-ttu-id="caaf5-142">然后创建一个新<xref:System.Xml.Linq.XElement>有一个新的命名并传递新的对象<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XNode.ReplaceWith%2A>方法的现有<xref:System.Xml.Linq.XElement>对象。</span><span class="sxs-lookup"><span data-stu-id="caaf5-142">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span></span>
+1. <span data-ttu-id="7bd8b-141">若要更改的 XML 元素的名称，首先获取对元素的引用。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-141">To change the name of an XML element, first obtain a reference to the element.</span></span> <span data-ttu-id="7bd8b-142">然后创建一个新<xref:System.Xml.Linq.XElement>有一个新的命名并传递新的对象<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XNode.ReplaceWith%2A>方法的现有<xref:System.Xml.Linq.XElement>对象。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-142">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span></span>
 
-    <span data-ttu-id="caaf5-143">如果要替换的元素具有必须保留的子元素，将新的值设置<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XContainer.Nodes%2A>现有元素的属性。</span><span class="sxs-lookup"><span data-stu-id="caaf5-143">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span></span> <span data-ttu-id="caaf5-144">这会将新元素的值设置为现有元素的内部 XML。</span><span class="sxs-lookup"><span data-stu-id="caaf5-144">This will set the value of the new element to the inner XML of the existing element.</span></span> <span data-ttu-id="caaf5-145">另外，可以将新元素的值设置`Value`现有元素的属性。</span><span class="sxs-lookup"><span data-stu-id="caaf5-145">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span></span>
+    <span data-ttu-id="7bd8b-143">如果要替换的元素具有必须保留的子元素，将新的值设置<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XContainer.Nodes%2A>现有元素的属性。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-143">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span></span> <span data-ttu-id="7bd8b-144">这会将新元素的值设置为现有元素的内部 XML。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-144">This will set the value of the new element to the inner XML of the existing element.</span></span> <span data-ttu-id="7bd8b-145">另外，可以将新元素的值设置`Value`现有元素的属性。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-145">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span></span>
 
-    <span data-ttu-id="caaf5-146">下面的代码示例替换所有\<说明 > 的元素\<抽象 > 元素。</span><span class="sxs-lookup"><span data-stu-id="caaf5-146">The following code example replaces all \<Description> elements with an \<Abstract> element.</span></span> <span data-ttu-id="caaf5-147">内容\<说明 > 元素保留在新\<抽象 > 元素中的使用<xref:System.Xml.Linq.XContainer.Nodes%2A>的属性\<说明 ><xref:System.Xml.Linq.XElement>对象。</span><span class="sxs-lookup"><span data-stu-id="caaf5-147">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span></span>
+    <span data-ttu-id="7bd8b-146">下面的代码示例替换所有\<说明 > 的元素\<抽象 > 元素。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-146">The following code example replaces all \<Description> elements with an \<Abstract> element.</span></span> <span data-ttu-id="7bd8b-147">内容\<说明 > 元素保留在新\<抽象 > 元素中的使用<xref:System.Xml.Linq.XContainer.Nodes%2A>的属性\<说明 ><xref:System.Xml.Linq.XElement>对象。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-147">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span></span>
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
-    <span data-ttu-id="caaf5-148">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="caaf5-148">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="7bd8b-148">下面显示了示例源为 XML 并修改此代码示例中的 XML。</span><span class="sxs-lookup"><span data-stu-id="7bd8b-148">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="caaf5-149">源 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-149">Source XML:</span></span>
+    <span data-ttu-id="7bd8b-149">源 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-149">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -256,7 +256,7 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-    <span data-ttu-id="caaf5-150">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="caaf5-150">Modified XML:</span></span>
+    <span data-ttu-id="7bd8b-150">修改后的 XML:</span><span class="sxs-lookup"><span data-stu-id="7bd8b-150">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -286,10 +286,10 @@ ms.locfileid: "57675324"
     </Catalog>
     ```
 
-## <a name="see-also"></a><span data-ttu-id="caaf5-151">请参阅</span><span class="sxs-lookup"><span data-stu-id="caaf5-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bd8b-151">请参阅</span><span class="sxs-lookup"><span data-stu-id="7bd8b-151">See also</span></span>
 
-- [<span data-ttu-id="caaf5-152">在 Visual Basic 中操控 XML</span><span class="sxs-lookup"><span data-stu-id="caaf5-152">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [<span data-ttu-id="caaf5-153">XML</span><span class="sxs-lookup"><span data-stu-id="caaf5-153">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="caaf5-154">如何：从文件、 字符串或 Stream 加载 XML</span><span class="sxs-lookup"><span data-stu-id="caaf5-154">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [<span data-ttu-id="caaf5-155">LINQ</span><span class="sxs-lookup"><span data-stu-id="caaf5-155">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [<span data-ttu-id="caaf5-156">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="caaf5-156">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="7bd8b-152">在 Visual Basic 中操控 XML</span><span class="sxs-lookup"><span data-stu-id="7bd8b-152">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [<span data-ttu-id="7bd8b-153">XML</span><span class="sxs-lookup"><span data-stu-id="7bd8b-153">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="7bd8b-154">如何：从文件、 字符串或 Stream 加载 XML</span><span class="sxs-lookup"><span data-stu-id="7bd8b-154">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [<span data-ttu-id="7bd8b-155">LINQ</span><span class="sxs-lookup"><span data-stu-id="7bd8b-155">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [<span data-ttu-id="7bd8b-156">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="7bd8b-156">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

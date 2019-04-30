@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 032c1e3dcfe50cd30953ca581ff9f0d83b78518d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995860"
 ---
-# <a name="icordebugframegetchain-method"></a><span data-ttu-id="2c00a-102">ICorDebugFrame::GetChain 方法</span><span class="sxs-lookup"><span data-stu-id="2c00a-102">ICorDebugFrame::GetChain Method</span></span>
-<span data-ttu-id="2c00a-103">获取一个指针指向此帧所属的链。</span><span class="sxs-lookup"><span data-stu-id="2c00a-103">Gets a pointer to the chain this frame is a part of.</span></span>  
+# <a name="icordebugframegetchain-method"></a><span data-ttu-id="b0286-102">ICorDebugFrame::GetChain 方法</span><span class="sxs-lookup"><span data-stu-id="b0286-102">ICorDebugFrame::GetChain Method</span></span>
+<span data-ttu-id="b0286-103">获取一个指针指向此帧所属的链。</span><span class="sxs-lookup"><span data-stu-id="b0286-103">Gets a pointer to the chain this frame is a part of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c00a-104">语法</span><span class="sxs-lookup"><span data-stu-id="2c00a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0286-104">语法</span><span class="sxs-lookup"><span data-stu-id="b0286-104">Syntax</span></span>  
   
 ```  
 HRESULT GetChain (  
@@ -35,15 +35,15 @@ HRESULT GetChain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2c00a-105">参数</span><span class="sxs-lookup"><span data-stu-id="2c00a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b0286-105">参数</span><span class="sxs-lookup"><span data-stu-id="b0286-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="2c00a-106">[out]指向一个 ICorDebugChain 对象，表示包含此帧链的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="2c00a-106">[out] A pointer to the address of an ICorDebugChain object that represents the chain containing this frame.</span></span>  
+ <span data-ttu-id="b0286-106">[out]指向一个 ICorDebugChain 对象，表示包含此帧链的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="b0286-106">[out] A pointer to the address of an ICorDebugChain object that represents the chain containing this frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2c00a-107">要求</span><span class="sxs-lookup"><span data-stu-id="2c00a-107">Requirements</span></span>  
- <span data-ttu-id="2c00a-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2c00a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0286-107">要求</span><span class="sxs-lookup"><span data-stu-id="b0286-107">Requirements</span></span>  
+ <span data-ttu-id="b0286-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b0286-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2c00a-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2c00a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b0286-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0286-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2c00a-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c00a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b0286-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0286-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2c00a-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c00a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b0286-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0286-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

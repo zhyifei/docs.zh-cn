@@ -7,29 +7,29 @@ helpviewer_keywords:
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
 ms.openlocfilehash: 6eea47ea2c8aee697eb34ca904dad22ca88e6ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051892"
 ---
-# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a><span data-ttu-id="852ab-102">如何：声明自定义事件以避免阻止 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="852ab-102">How to: Declare Custom Events To Avoid Blocking (Visual Basic)</span></span>
-<span data-ttu-id="852ab-103">非常重要的一个事件处理程序不会阻止后续事件处理程序时，有几种情况。</span><span class="sxs-lookup"><span data-stu-id="852ab-103">There are several circumstances when it is important that one event handler not block subsequent event handlers.</span></span> <span data-ttu-id="852ab-104">自定义事件，以异步方式调用其事件处理程序的事件。</span><span class="sxs-lookup"><span data-stu-id="852ab-104">Custom events allow the event to call its event handlers asynchronously.</span></span>  
+# <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a><span data-ttu-id="3fc20-102">如何：声明自定义事件以避免阻止 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3fc20-102">How to: Declare Custom Events To Avoid Blocking (Visual Basic)</span></span>
+<span data-ttu-id="3fc20-103">非常重要的一个事件处理程序不会阻止后续事件处理程序时，有几种情况。</span><span class="sxs-lookup"><span data-stu-id="3fc20-103">There are several circumstances when it is important that one event handler not block subsequent event handlers.</span></span> <span data-ttu-id="3fc20-104">自定义事件，以异步方式调用其事件处理程序的事件。</span><span class="sxs-lookup"><span data-stu-id="3fc20-104">Custom events allow the event to call its event handlers asynchronously.</span></span>  
   
- <span data-ttu-id="852ab-105">默认情况下，事件声明的后备存储字段是多路广播的委托，它按顺序将合并所有事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="852ab-105">By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers.</span></span> <span data-ttu-id="852ab-106">这意味着，如果一个处理程序需要很长时间才能完成，则会阻止其他处理程序完成之前。</span><span class="sxs-lookup"><span data-stu-id="852ab-106">This means that if one handler takes a long time to complete, it blocks the other handlers until it completes.</span></span> <span data-ttu-id="852ab-107">（功能良好的事件处理程序应永远不会执行耗时较长或可能阻止的操作。）</span><span class="sxs-lookup"><span data-stu-id="852ab-107">(Well-behaved event handlers should never perform lengthy or potentially blocking operations.)</span></span>  
+ <span data-ttu-id="3fc20-105">默认情况下，事件声明的后备存储字段是多路广播的委托，它按顺序将合并所有事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="3fc20-105">By default, the backing-store field for an event declaration is a multicast delegate that serially combines all the event handlers.</span></span> <span data-ttu-id="3fc20-106">这意味着，如果一个处理程序需要很长时间才能完成，则会阻止其他处理程序完成之前。</span><span class="sxs-lookup"><span data-stu-id="3fc20-106">This means that if one handler takes a long time to complete, it blocks the other handlers until it completes.</span></span> <span data-ttu-id="3fc20-107">（功能良好的事件处理程序应永远不会执行耗时较长或可能阻止的操作。）</span><span class="sxs-lookup"><span data-stu-id="3fc20-107">(Well-behaved event handlers should never perform lengthy or potentially blocking operations.)</span></span>  
   
- <span data-ttu-id="852ab-108">而不是使用 Visual Basic 提供的事件的默认实现，可以使用自定义事件以异步方式执行的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="852ab-108">Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.</span></span>  
+ <span data-ttu-id="3fc20-108">而不是使用 Visual Basic 提供的事件的默认实现，可以使用自定义事件以异步方式执行的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="3fc20-108">Instead of using the default implementation of events that Visual Basic provides, you can use a custom event to execute the event handlers asynchronously.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="852ab-109">示例</span><span class="sxs-lookup"><span data-stu-id="852ab-109">Example</span></span>  
- <span data-ttu-id="852ab-110">在此示例中，`AddHandler`访问器添加的每个处理程序委托`Click`事件<xref:System.Collections.ArrayList>存储在`EventHandlerList`字段。</span><span class="sxs-lookup"><span data-stu-id="852ab-110">In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.</span></span>  
+## <a name="example"></a><span data-ttu-id="3fc20-109">示例</span><span class="sxs-lookup"><span data-stu-id="3fc20-109">Example</span></span>  
+ <span data-ttu-id="3fc20-110">在此示例中，`AddHandler`访问器添加的每个处理程序委托`Click`事件<xref:System.Collections.ArrayList>存储在`EventHandlerList`字段。</span><span class="sxs-lookup"><span data-stu-id="3fc20-110">In this example, the `AddHandler` accessor adds the delegate for each handler of the `Click` event to an <xref:System.Collections.ArrayList> stored in the `EventHandlerList` field.</span></span>  
   
- <span data-ttu-id="852ab-111">在代码引发`Click`事件，`RaiseEvent`访问器调用以异步方式使用的所有事件处理程序委托<xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="852ab-111">When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method.</span></span> <span data-ttu-id="852ab-112">该方法调用的工作线程上的每个处理程序，并立即返回，因此处理程序无法阻止另一个。</span><span class="sxs-lookup"><span data-stu-id="852ab-112">That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.</span></span>  
+ <span data-ttu-id="3fc20-111">在代码引发`Click`事件，`RaiseEvent`访问器调用以异步方式使用的所有事件处理程序委托<xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="3fc20-111">When code raises the `Click` event, the `RaiseEvent` accessor invokes all the event handler delegates asynchronously using the <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> method.</span></span> <span data-ttu-id="3fc20-112">该方法调用的工作线程上的每个处理程序，并立即返回，因此处理程序无法阻止另一个。</span><span class="sxs-lookup"><span data-stu-id="3fc20-112">That method invokes each handler on a worker thread and returns immediately, so handlers cannot block one another.</span></span>  
   
  [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
-## <a name="see-also"></a><span data-ttu-id="852ab-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="852ab-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3fc20-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="3fc20-113">See also</span></span>
 
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>
-- [<span data-ttu-id="852ab-114">事件</span><span class="sxs-lookup"><span data-stu-id="852ab-114">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [<span data-ttu-id="852ab-115">如何：声明自定义事件以节省内存</span><span class="sxs-lookup"><span data-stu-id="852ab-115">How to: Declare Custom Events To Conserve Memory</span></span>](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [<span data-ttu-id="3fc20-114">事件</span><span class="sxs-lookup"><span data-stu-id="3fc20-114">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="3fc20-115">如何：声明自定义事件以节省内存</span><span class="sxs-lookup"><span data-stu-id="3fc20-115">How to: Declare Custom Events To Conserve Memory</span></span>](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

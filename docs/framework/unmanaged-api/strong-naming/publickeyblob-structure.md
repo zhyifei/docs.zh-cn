@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a361e04b6f8f39ec0083471d8cb47d5a29376c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000345"
 ---
-# <a name="publickeyblob-structure"></a><span data-ttu-id="263b1-102">PublicKeyBlob 结构</span><span class="sxs-lookup"><span data-stu-id="263b1-102">PublicKeyBlob Structure</span></span>
-<span data-ttu-id="263b1-103">以二进制格式表示的公钥/私钥对的公钥。</span><span class="sxs-lookup"><span data-stu-id="263b1-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  
+# <a name="publickeyblob-structure"></a><span data-ttu-id="ef09e-102">PublicKeyBlob 结构</span><span class="sxs-lookup"><span data-stu-id="ef09e-102">PublicKeyBlob Structure</span></span>
+<span data-ttu-id="ef09e-103">以二进制格式表示的公钥/私钥对的公钥。</span><span class="sxs-lookup"><span data-stu-id="ef09e-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="263b1-104">语法</span><span class="sxs-lookup"><span data-stu-id="263b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef09e-104">语法</span><span class="sxs-lookup"><span data-stu-id="ef09e-104">Syntax</span></span>  
   
 ```  
 typedef struct {  
@@ -37,28 +37,28 @@ typedef struct {
 } PublicKeyBlob;   
 ```  
   
-## <a name="members"></a><span data-ttu-id="263b1-105">成员</span><span class="sxs-lookup"><span data-stu-id="263b1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ef09e-105">成员</span><span class="sxs-lookup"><span data-stu-id="ef09e-105">Members</span></span>  
   
-|<span data-ttu-id="263b1-106">成员</span><span class="sxs-lookup"><span data-stu-id="263b1-106">Member</span></span>|<span data-ttu-id="263b1-107">描述</span><span class="sxs-lookup"><span data-stu-id="263b1-107">Description</span></span>|  
+|<span data-ttu-id="ef09e-106">成员</span><span class="sxs-lookup"><span data-stu-id="ef09e-106">Member</span></span>|<span data-ttu-id="ef09e-107">描述</span><span class="sxs-lookup"><span data-stu-id="ef09e-107">Description</span></span>|  
 |------------|-----------------|  
-|`SigAlgId`|<span data-ttu-id="263b1-108">签名算法的标识符 (类型的`ALG_ID`WinCrypt.h 中定义) 的公钥。</span><span class="sxs-lookup"><span data-stu-id="263b1-108">The identifier for the signature algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
-|`HashAlgId`|<span data-ttu-id="263b1-109">哈希算法的标识符 (类型的`ALG_ID`WinCrypt.h 中定义) 的公钥。</span><span class="sxs-lookup"><span data-stu-id="263b1-109">The identifier for the hash algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
-|`cbPublicKey`|<span data-ttu-id="263b1-110">以字节为单位的密钥的长度。</span><span class="sxs-lookup"><span data-stu-id="263b1-110">The length of the key in bytes.</span></span>|  
-|`PublicKey`|<span data-ttu-id="263b1-111">包含返回 CryptoAPI 的格式中的密钥值的长度可变的字节数组。</span><span class="sxs-lookup"><span data-stu-id="263b1-111">A variable-length byte array that contains the key value in the format returned by the CryptoAPI.</span></span>|  
+|`SigAlgId`|<span data-ttu-id="ef09e-108">签名算法的标识符 (类型的`ALG_ID`WinCrypt.h 中定义) 的公钥。</span><span class="sxs-lookup"><span data-stu-id="ef09e-108">The identifier for the signature algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
+|`HashAlgId`|<span data-ttu-id="ef09e-109">哈希算法的标识符 (类型的`ALG_ID`WinCrypt.h 中定义) 的公钥。</span><span class="sxs-lookup"><span data-stu-id="ef09e-109">The identifier for the hash algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
+|`cbPublicKey`|<span data-ttu-id="ef09e-110">以字节为单位的密钥的长度。</span><span class="sxs-lookup"><span data-stu-id="ef09e-110">The length of the key in bytes.</span></span>|  
+|`PublicKey`|<span data-ttu-id="ef09e-111">包含返回 CryptoAPI 的格式中的密钥值的长度可变的字节数组。</span><span class="sxs-lookup"><span data-stu-id="ef09e-111">A variable-length byte array that contains the key value in the format returned by the CryptoAPI.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="263b1-112">备注</span><span class="sxs-lookup"><span data-stu-id="263b1-112">Remarks</span></span>  
- <span data-ttu-id="263b1-113">`PublicKeyBlob`结构可供[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)， [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)，和其他强名称的函数来表示公钥/私钥对的公钥。</span><span class="sxs-lookup"><span data-stu-id="263b1-113">The `PublicKeyBlob` structure is used by [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md), and other strong name functions to represent the public key of a public/private key pair.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ef09e-112">备注</span><span class="sxs-lookup"><span data-stu-id="ef09e-112">Remarks</span></span>  
+ <span data-ttu-id="ef09e-113">`PublicKeyBlob`结构可供[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)， [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)，和其他强名称的函数来表示公钥/私钥对的公钥。</span><span class="sxs-lookup"><span data-stu-id="ef09e-113">The `PublicKeyBlob` structure is used by [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md), and other strong name functions to represent the public key of a public/private key pair.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="263b1-114">要求</span><span class="sxs-lookup"><span data-stu-id="263b1-114">Requirements</span></span>  
- <span data-ttu-id="263b1-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="263b1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef09e-114">要求</span><span class="sxs-lookup"><span data-stu-id="ef09e-114">Requirements</span></span>  
+ <span data-ttu-id="ef09e-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ef09e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="263b1-116">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="263b1-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="ef09e-116">**标头：** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="ef09e-116">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="263b1-117">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="263b1-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ef09e-117">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ef09e-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="263b1-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="263b1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ef09e-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef09e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="263b1-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="263b1-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef09e-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="ef09e-119">See also</span></span>
 
-- [<span data-ttu-id="263b1-120">StrongNameGetPublicKey 函数</span><span class="sxs-lookup"><span data-stu-id="263b1-120">StrongNameGetPublicKey Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [<span data-ttu-id="263b1-121">StrongNameSignatureGeneration 函数</span><span class="sxs-lookup"><span data-stu-id="263b1-121">StrongNameSignatureGeneration Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [<span data-ttu-id="ef09e-120">StrongNameGetPublicKey 函数</span><span class="sxs-lookup"><span data-stu-id="ef09e-120">StrongNameGetPublicKey Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
+- [<span data-ttu-id="ef09e-121">StrongNameSignatureGeneration 函数</span><span class="sxs-lookup"><span data-stu-id="ef09e-121">StrongNameSignatureGeneration Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)

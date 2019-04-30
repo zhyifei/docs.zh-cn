@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 628ca1b555d80319312450d784981cfed1bda947
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045989"
 ---
-# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="ffc9d-102">CorErrorIfEmitOutOfOrder 枚举</span><span class="sxs-lookup"><span data-stu-id="ffc9d-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
-<span data-ttu-id="ffc9d-103">包含一些标志值，用于指示无序发出元数据时应生成错误消息的条件。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
+# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="2ae46-102">CorErrorIfEmitOutOfOrder 枚举</span><span class="sxs-lookup"><span data-stu-id="2ae46-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
+<span data-ttu-id="2ae46-103">包含一些标志值，用于指示无序发出元数据时应生成错误消息的条件。</span><span class="sxs-lookup"><span data-stu-id="2ae46-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffc9d-104">语法</span><span class="sxs-lookup"><span data-stu-id="ffc9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ae46-104">语法</span><span class="sxs-lookup"><span data-stu-id="2ae46-104">Syntax</span></span>  
   
 ```  
 typedef enum CorErrorIfEmitOutOfOrder {  
@@ -43,26 +43,26 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ffc9d-105">成员</span><span class="sxs-lookup"><span data-stu-id="ffc9d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2ae46-105">成员</span><span class="sxs-lookup"><span data-stu-id="2ae46-105">Members</span></span>  
   
-|<span data-ttu-id="ffc9d-106">成员</span><span class="sxs-lookup"><span data-stu-id="ffc9d-106">Member</span></span>|<span data-ttu-id="ffc9d-107">描述</span><span class="sxs-lookup"><span data-stu-id="ffc9d-107">Description</span></span>|  
+|<span data-ttu-id="2ae46-106">成员</span><span class="sxs-lookup"><span data-stu-id="2ae46-106">Member</span></span>|<span data-ttu-id="2ae46-107">描述</span><span class="sxs-lookup"><span data-stu-id="2ae46-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|<span data-ttu-id="ffc9d-108">指示默认行为，不会生成错误消息。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderNone`|<span data-ttu-id="ffc9d-109">指示编译器不应生成错误消息。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-109">Indicates that the compiler should not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderAll`|<span data-ttu-id="ffc9d-110">指示编译器应该生成一条错误消息时字段、 属性、 事件、 方法或参数，将发出顺序。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
-|`MDMethodOutOfOrder`|<span data-ttu-id="ffc9d-111">指示一种方法发出顺序时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
-|`MDFieldOutOfOrder`|<span data-ttu-id="ffc9d-112">指示无序发出一个字段时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
-|`MDParamOutOfOrder`|<span data-ttu-id="ffc9d-113">指示参数发出顺序时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
-|`MDPropertyOutOfOrder`|<span data-ttu-id="ffc9d-114">指示无序发出属性时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
-|`MDEventOutOfOrder`|<span data-ttu-id="ffc9d-115">指示事件发出顺序时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
+|`MDErrorOutOfOrderDefault`|<span data-ttu-id="2ae46-108">指示默认行为，不会生成错误消息。</span><span class="sxs-lookup"><span data-stu-id="2ae46-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderNone`|<span data-ttu-id="2ae46-109">指示编译器不应生成错误消息。</span><span class="sxs-lookup"><span data-stu-id="2ae46-109">Indicates that the compiler should not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderAll`|<span data-ttu-id="2ae46-110">指示编译器应该生成一条错误消息时字段、 属性、 事件、 方法或参数，将发出顺序。</span><span class="sxs-lookup"><span data-stu-id="2ae46-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
+|`MDMethodOutOfOrder`|<span data-ttu-id="2ae46-111">指示一种方法发出顺序时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="2ae46-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
+|`MDFieldOutOfOrder`|<span data-ttu-id="2ae46-112">指示无序发出一个字段时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="2ae46-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
+|`MDParamOutOfOrder`|<span data-ttu-id="2ae46-113">指示参数发出顺序时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="2ae46-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
+|`MDPropertyOutOfOrder`|<span data-ttu-id="2ae46-114">指示无序发出属性时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="2ae46-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
+|`MDEventOutOfOrder`|<span data-ttu-id="2ae46-115">指示事件发出顺序时，编译器应该生成一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="2ae46-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ffc9d-116">要求</span><span class="sxs-lookup"><span data-stu-id="ffc9d-116">Requirements</span></span>  
- <span data-ttu-id="ffc9d-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ffc9d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ae46-116">要求</span><span class="sxs-lookup"><span data-stu-id="2ae46-116">Requirements</span></span>  
+ <span data-ttu-id="2ae46-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2ae46-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ffc9d-118">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ffc9d-118">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="2ae46-118">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2ae46-118">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ffc9d-119">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffc9d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2ae46-119">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ae46-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ffc9d-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="ffc9d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ae46-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="2ae46-120">See also</span></span>
 
-- [<span data-ttu-id="ffc9d-121">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="ffc9d-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="2ae46-121">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="2ae46-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

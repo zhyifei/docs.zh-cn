@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9eb96a75686a14182b9526a0832223c2b9abfc34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040672"
 ---
-# <a name="deletemethod-function"></a><span data-ttu-id="7ed08-103">DeleteMethod 函数</span><span class="sxs-lookup"><span data-stu-id="7ed08-103">DeleteMethod function</span></span>
-<span data-ttu-id="7ed08-104">从 CIM 类定义中删除指定的方法。</span><span class="sxs-lookup"><span data-stu-id="7ed08-104">Deletes the specified method from a CIM class definition.</span></span>
+# <a name="deletemethod-function"></a><span data-ttu-id="40b43-103">DeleteMethod 函数</span><span class="sxs-lookup"><span data-stu-id="40b43-103">DeleteMethod function</span></span>
+<span data-ttu-id="40b43-104">从 CIM 类定义中删除指定的方法。</span><span class="sxs-lookup"><span data-stu-id="40b43-104">Deletes the specified method from a CIM class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="7ed08-105">语法</span><span class="sxs-lookup"><span data-stu-id="7ed08-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40b43-105">语法</span><span class="sxs-lookup"><span data-stu-id="40b43-105">Syntax</span></span>  
   
 ```  
 HRESULT Delete (
@@ -38,40 +38,40 @@ HRESULT Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="7ed08-106">参数</span><span class="sxs-lookup"><span data-stu-id="7ed08-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="40b43-106">参数</span><span class="sxs-lookup"><span data-stu-id="40b43-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="7ed08-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="7ed08-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="40b43-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="40b43-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="7ed08-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="7ed08-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="40b43-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="40b43-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="7ed08-109">[in]要从类表中删除的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="7ed08-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="7ed08-110">`wszName` 必须为有效指针`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="7ed08-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="40b43-109">[in]要从类表中删除的方法的名称。</span><span class="sxs-lookup"><span data-stu-id="40b43-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="40b43-110">`wszName` 必须为有效指针`LPCWSTR`。</span><span class="sxs-lookup"><span data-stu-id="40b43-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="7ed08-111">返回值</span><span class="sxs-lookup"><span data-stu-id="7ed08-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="40b43-111">返回值</span><span class="sxs-lookup"><span data-stu-id="40b43-111">Return value</span></span>
 
-<span data-ttu-id="7ed08-112">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="7ed08-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="40b43-112">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="40b43-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="7ed08-113">返回的常量</span><span class="sxs-lookup"><span data-stu-id="7ed08-113">Constant</span></span>  |<span data-ttu-id="7ed08-114">“值”</span><span class="sxs-lookup"><span data-stu-id="7ed08-114">Value</span></span>  |<span data-ttu-id="7ed08-115">描述</span><span class="sxs-lookup"><span data-stu-id="7ed08-115">Description</span></span>  |
+|<span data-ttu-id="40b43-113">返回的常量</span><span class="sxs-lookup"><span data-stu-id="40b43-113">Constant</span></span>  |<span data-ttu-id="40b43-114">“值”</span><span class="sxs-lookup"><span data-stu-id="40b43-114">Value</span></span>  |<span data-ttu-id="40b43-115">描述</span><span class="sxs-lookup"><span data-stu-id="40b43-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="7ed08-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="7ed08-116">0x80041002</span></span> | <span data-ttu-id="7ed08-117">指定的方法不存在。</span><span class="sxs-lookup"><span data-stu-id="7ed08-117">The specified method does not exist.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="7ed08-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="7ed08-118">0x80041006</span></span> | <span data-ttu-id="7ed08-119">没有足够的内存来完成该操作。</span><span class="sxs-lookup"><span data-stu-id="7ed08-119">There is not enough memory to complete the operation.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="7ed08-120">0</span><span class="sxs-lookup"><span data-stu-id="7ed08-120">0</span></span> | <span data-ttu-id="7ed08-121">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="7ed08-121">The function call was successful.</span></span>  |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="40b43-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="40b43-116">0x80041002</span></span> | <span data-ttu-id="40b43-117">指定的方法不存在。</span><span class="sxs-lookup"><span data-stu-id="40b43-117">The specified method does not exist.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="40b43-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="40b43-118">0x80041006</span></span> | <span data-ttu-id="40b43-119">没有足够的内存来完成该操作。</span><span class="sxs-lookup"><span data-stu-id="40b43-119">There is not enough memory to complete the operation.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="40b43-120">0</span><span class="sxs-lookup"><span data-stu-id="40b43-120">0</span></span> | <span data-ttu-id="40b43-121">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="40b43-121">The function call was successful.</span></span>  |
 
-## <a name="remarks"></a><span data-ttu-id="7ed08-122">备注</span><span class="sxs-lookup"><span data-stu-id="7ed08-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="40b43-122">备注</span><span class="sxs-lookup"><span data-stu-id="40b43-122">Remarks</span></span>
 
-<span data-ttu-id="7ed08-123">此函数包装对的调用[IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod)方法。</span><span class="sxs-lookup"><span data-stu-id="7ed08-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
+<span data-ttu-id="40b43-123">此函数包装对的调用[IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod)方法。</span><span class="sxs-lookup"><span data-stu-id="40b43-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
 
-<span data-ttu-id="7ed08-124">对于不支持方法删除[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 实例的指针。</span><span class="sxs-lookup"><span data-stu-id="7ed08-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
+<span data-ttu-id="40b43-124">对于不支持方法删除[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 实例的指针。</span><span class="sxs-lookup"><span data-stu-id="40b43-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="7ed08-125">要求</span><span class="sxs-lookup"><span data-stu-id="7ed08-125">Requirements</span></span>  
- <span data-ttu-id="7ed08-126">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ed08-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40b43-125">要求</span><span class="sxs-lookup"><span data-stu-id="40b43-125">Requirements</span></span>  
+ <span data-ttu-id="40b43-126">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40b43-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ed08-127">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="7ed08-127">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="40b43-127">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="40b43-127">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="7ed08-128">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="7ed08-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="40b43-128">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="40b43-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ed08-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="7ed08-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40b43-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="40b43-129">See also</span></span>
 
-- [<span data-ttu-id="7ed08-130">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="7ed08-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="40b43-130">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="40b43-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

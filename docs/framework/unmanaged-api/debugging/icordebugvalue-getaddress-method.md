@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac550ee7b1d66612557b30d15c275c90cf09b8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986851"
 ---
-# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="b8c5e-102">ICorDebugValue::GetAddress 方法</span><span class="sxs-lookup"><span data-stu-id="b8c5e-102">ICorDebugValue::GetAddress Method</span></span>
-<span data-ttu-id="b8c5e-103">获取此"ICorDebugValue"对象，它是正在调试的过程中的地址。</span><span class="sxs-lookup"><span data-stu-id="b8c5e-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
+# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="c19d8-102">ICorDebugValue::GetAddress 方法</span><span class="sxs-lookup"><span data-stu-id="c19d8-102">ICorDebugValue::GetAddress Method</span></span>
+<span data-ttu-id="c19d8-103">获取此"ICorDebugValue"对象，它是正在调试的过程中的地址。</span><span class="sxs-lookup"><span data-stu-id="c19d8-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8c5e-104">语法</span><span class="sxs-lookup"><span data-stu-id="b8c5e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c19d8-104">语法</span><span class="sxs-lookup"><span data-stu-id="c19d8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAddress (  
@@ -35,20 +35,20 @@ HRESULT GetAddress (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b8c5e-105">参数</span><span class="sxs-lookup"><span data-stu-id="b8c5e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c19d8-105">参数</span><span class="sxs-lookup"><span data-stu-id="c19d8-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="b8c5e-106">[out]指向`CORDB_ADDRESS`对象，它指定此值对象的地址。</span><span class="sxs-lookup"><span data-stu-id="b8c5e-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
+ <span data-ttu-id="c19d8-106">[out]指向`CORDB_ADDRESS`对象，它指定此值对象的地址。</span><span class="sxs-lookup"><span data-stu-id="c19d8-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b8c5e-107">备注</span><span class="sxs-lookup"><span data-stu-id="b8c5e-107">Remarks</span></span>  
- <span data-ttu-id="b8c5e-108">如果值为不可用，则返回 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="b8c5e-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="b8c5e-109">这可能是如果值为至少一部分在寄存器中或存储在垃圾回收器句柄 (`GCHandle`)。</span><span class="sxs-lookup"><span data-stu-id="b8c5e-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c19d8-107">备注</span><span class="sxs-lookup"><span data-stu-id="c19d8-107">Remarks</span></span>  
+ <span data-ttu-id="c19d8-108">如果值为不可用，则返回 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="c19d8-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="c19d8-109">这可能是如果值为至少一部分在寄存器中或存储在垃圾回收器句柄 (`GCHandle`)。</span><span class="sxs-lookup"><span data-stu-id="c19d8-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8c5e-110">要求</span><span class="sxs-lookup"><span data-stu-id="b8c5e-110">Requirements</span></span>  
- <span data-ttu-id="b8c5e-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b8c5e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c19d8-110">要求</span><span class="sxs-lookup"><span data-stu-id="c19d8-110">Requirements</span></span>  
+ <span data-ttu-id="c19d8-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c19d8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8c5e-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b8c5e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c19d8-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c19d8-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b8c5e-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b8c5e-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c19d8-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c19d8-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b8c5e-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8c5e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c19d8-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c19d8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8c5e-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="b8c5e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c19d8-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c19d8-115">See also</span></span>

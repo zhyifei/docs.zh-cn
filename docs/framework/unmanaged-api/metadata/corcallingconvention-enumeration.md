@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 44a4b5903cec2249eb1e176381fe3d8e600dd5e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046106"
 ---
-# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="cacec-102">CorCallingConvention 枚举</span><span class="sxs-lookup"><span data-stu-id="cacec-102">CorCallingConvention Enumeration</span></span>
-<span data-ttu-id="cacec-103">包含一些值，用于描述托管代码中执行的调用约定类型。</span><span class="sxs-lookup"><span data-stu-id="cacec-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
+# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="a0c6a-102">CorCallingConvention 枚举</span><span class="sxs-lookup"><span data-stu-id="a0c6a-102">CorCallingConvention Enumeration</span></span>
+<span data-ttu-id="a0c6a-103">包含一些值，用于描述托管代码中执行的调用约定类型。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cacec-104">语法</span><span class="sxs-lookup"><span data-stu-id="cacec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0c6a-104">语法</span><span class="sxs-lookup"><span data-stu-id="a0c6a-104">Syntax</span></span>  
   
 ```  
 typedef enum CorCallingConvention  
@@ -50,31 +50,31 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cacec-105">成员</span><span class="sxs-lookup"><span data-stu-id="cacec-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a0c6a-105">成员</span><span class="sxs-lookup"><span data-stu-id="a0c6a-105">Members</span></span>  
   
-|<span data-ttu-id="cacec-106">成员</span><span class="sxs-lookup"><span data-stu-id="cacec-106">Member</span></span>|<span data-ttu-id="cacec-107">描述</span><span class="sxs-lookup"><span data-stu-id="cacec-107">Description</span></span>|  
+|<span data-ttu-id="a0c6a-106">成员</span><span class="sxs-lookup"><span data-stu-id="a0c6a-106">Member</span></span>|<span data-ttu-id="a0c6a-107">描述</span><span class="sxs-lookup"><span data-stu-id="a0c6a-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="cacec-108">指示默认调用约定。</span><span class="sxs-lookup"><span data-stu-id="cacec-108">Indicates a default calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="cacec-109">指示该方法采用可变数目的参数。</span><span class="sxs-lookup"><span data-stu-id="cacec-109">Indicates that the method takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="cacec-110">指示在调用到一个字段。</span><span class="sxs-lookup"><span data-stu-id="cacec-110">Indicates that the call is to a field.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="cacec-111">指示调用是对本地方法。</span><span class="sxs-lookup"><span data-stu-id="cacec-111">Indicates that the call is to a local method.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="cacec-112">指示调用是对一个属性。</span><span class="sxs-lookup"><span data-stu-id="cacec-112">Indicates that the call is to a property.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="cacec-113">指示在调用非托管。</span><span class="sxs-lookup"><span data-stu-id="cacec-113">Indicates that the call is unmanaged.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="cacec-114">指示泛型方法实例化。</span><span class="sxs-lookup"><span data-stu-id="cacec-114">Indicates a generic method instantiation.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="cacec-115">指示 64 位 PInvoke 调用采用可变数量的参数的方法。</span><span class="sxs-lookup"><span data-stu-id="cacec-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="cacec-116">介绍 4 位值无效。</span><span class="sxs-lookup"><span data-stu-id="cacec-116">Describes an invalid 4-bit value.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="cacec-117">指示底部四位所描述的调用约定。</span><span class="sxs-lookup"><span data-stu-id="cacec-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="cacec-118">指示高位描述`this`参数。</span><span class="sxs-lookup"><span data-stu-id="cacec-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="cacec-119">指示`this`参数是在签名中明确描述。</span><span class="sxs-lookup"><span data-stu-id="cacec-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="cacec-120">指示具有明确的数字的类型参数的泛型方法签名。</span><span class="sxs-lookup"><span data-stu-id="cacec-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="cacec-121">这在之前发生的普通参数计数。</span><span class="sxs-lookup"><span data-stu-id="cacec-121">This precedes an ordinary parameter count.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="a0c6a-108">指示默认调用约定。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-108">Indicates a default calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="a0c6a-109">指示该方法采用可变数目的参数。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-109">Indicates that the method takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="a0c6a-110">指示在调用到一个字段。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-110">Indicates that the call is to a field.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="a0c6a-111">指示调用是对本地方法。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-111">Indicates that the call is to a local method.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="a0c6a-112">指示调用是对一个属性。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-112">Indicates that the call is to a property.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="a0c6a-113">指示在调用非托管。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-113">Indicates that the call is unmanaged.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="a0c6a-114">指示泛型方法实例化。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-114">Indicates a generic method instantiation.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="a0c6a-115">指示 64 位 PInvoke 调用采用可变数量的参数的方法。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="a0c6a-116">介绍 4 位值无效。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-116">Describes an invalid 4-bit value.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="a0c6a-117">指示底部四位所描述的调用约定。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="a0c6a-118">指示高位描述`this`参数。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="a0c6a-119">指示`this`参数是在签名中明确描述。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="a0c6a-120">指示具有明确的数字的类型参数的泛型方法签名。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="a0c6a-121">这在之前发生的普通参数计数。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-121">This precedes an ordinary parameter count.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cacec-122">要求</span><span class="sxs-lookup"><span data-stu-id="cacec-122">Requirements</span></span>  
- <span data-ttu-id="cacec-123">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cacec-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a0c6a-122">要求</span><span class="sxs-lookup"><span data-stu-id="a0c6a-122">Requirements</span></span>  
+ <span data-ttu-id="a0c6a-123">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0c6a-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cacec-124">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="cacec-124">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="a0c6a-124">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a0c6a-124">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="cacec-125">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cacec-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a0c6a-125">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0c6a-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cacec-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="cacec-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0c6a-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0c6a-126">See also</span></span>
 
-- [<span data-ttu-id="cacec-127">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="cacec-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="a0c6a-127">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="a0c6a-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
