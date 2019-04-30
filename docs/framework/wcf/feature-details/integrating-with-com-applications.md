@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
 ms.openlocfilehash: 51626da6e97e346f43cfe606a5164024580a2ac7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046991"
 ---
 # <a name="integrating-with-com-applications"></a>与 COM 应用程序集成
 Windows Communication Foundation (WCF) 服务可以直接集成到现有的代码使用 WCF 服务名字对象。 服务标记可以在众多基于 COM 的开发环境（如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0）中使用。  

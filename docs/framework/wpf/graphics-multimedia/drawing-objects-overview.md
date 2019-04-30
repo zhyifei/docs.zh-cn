@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020390"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 对象概述
 本主题介绍<xref:System.Windows.Media.Drawing>对象，并说明如何使用它们来有效地绘制形状、 位图、 文本和媒体。 使用<xref:System.Windows.Media.Drawing>对象在创建剪贴画时绘制<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>对象。  
@@ -23,25 +23,25 @@ ms.locfileid: "59325509"
 ## <a name="what-is-a-drawing-object"></a>什么是 Drawing 对象？  
  一个<xref:System.Windows.Media.Drawing>对象描述可见内容，如形状、 位图、 视频或文本行。 不同类型的图形描述不同类型的内容。 下面是不同类型图形对象的列表。  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 绘制形状。  
+- <xref:System.Windows.Media.GeometryDrawing> – 绘制形状。  
   
--   <xref:System.Windows.Media.ImageDrawing> – 绘制图像。  
+- <xref:System.Windows.Media.ImageDrawing> – 绘制图像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 绘制文本。  
+- <xref:System.Windows.Media.GlyphRunDrawing> – 绘制文本。  
   
--   <xref:System.Windows.Media.VideoDrawing> – 播放音频或视频文件。  
+- <xref:System.Windows.Media.VideoDrawing> – 播放音频或视频文件。  
   
--   <xref:System.Windows.Media.DrawingGroup> – 绘制其他绘图。 使用图形组将其他图形合并到单个复合图形。  
+- <xref:System.Windows.Media.DrawingGroup> – 绘制其他绘图。 使用图形组将其他图形合并到单个复合图形。  
   
  <xref:System.Windows.Media.Drawing> 对象具有多种功能;有许多方法可以使用<xref:System.Windows.Media.Drawing>对象。  
   
--   您可以通过将其显示为图像<xref:System.Windows.Media.DrawingImage>和一个<xref:System.Windows.Controls.Image>控件。  
+- 您可以通过将其显示为图像<xref:System.Windows.Media.DrawingImage>和一个<xref:System.Windows.Controls.Image>控件。  
   
--   可以使用其与<xref:System.Windows.Media.DrawingBrush>绘制一个对象，如<xref:System.Windows.Controls.Page.Background%2A>的<xref:System.Windows.Controls.Page>。  
+- 可以使用其与<xref:System.Windows.Media.DrawingBrush>绘制一个对象，如<xref:System.Windows.Controls.Page.Background%2A>的<xref:System.Windows.Controls.Page>。  
   
--   可以使用它来描述的外观<xref:System.Windows.Media.DrawingVisual>。  
+- 可以使用它来描述的外观<xref:System.Windows.Media.DrawingVisual>。  
   
--   可用来枚举的内容<xref:System.Windows.Media.Visual>。  
+- 可用来枚举的内容<xref:System.Windows.Media.Visual>。  
   
  WPF 提供能够绘制形状、位图、文本和媒体的其他对象类型。 例如，您还可以使用<xref:System.Windows.Shapes.Shape>对象绘制形状，和<xref:System.Windows.Controls.MediaElement>控件提供了另一种方法将视频添加到你的应用程序。 因此何时应使用<xref:System.Windows.Media.Drawing>对象？ 当可以牺牲框架级别功能来获得性能优势或需要<xref:System.Windows.Freezable>功能。 因为<xref:System.Windows.Media.Drawing>对象缺乏对支持[布局](../advanced/layout.md)、 输入和焦点，它们提供性能优势，使它们非常适合用于描述背景、 剪贴画，以及与低级别绘图<xref:System.Windows.Media.Visual>对象。  
   

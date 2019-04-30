@@ -3,11 +3,11 @@ title: 联合示例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051905"
 ---
 # <a name="federation-sample"></a>联合示例
 本示例演示联合安全。  
@@ -17,13 +17,13 @@ ms.locfileid: "59769913"
   
  此方案包括 4 个部分：  
   
--   BookStore 服务  
+- BookStore 服务  
   
--   BookStore STS  
+- BookStore STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   BookStore 客户端  
+- BookStore 客户端  
   
  BookStore 服务支持两个操作：`BrowseBooks` 和 `BuyBook`。 它允许匿名访问 `BrowseBooks` 操作，但需要经过身份验证才能访问 `BuyBooks` 操作。 身份验证采用由 BookStore STS 颁发的令牌的形式。 BookStore 服务的配置文件使用 `wsFederationHttpBinding` 将客户端指向 BookStore STS。  
   

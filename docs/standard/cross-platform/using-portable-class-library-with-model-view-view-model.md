@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050489"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>将可移植类库与模型-视图-视图模型配合使用
 可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)实现模型-视图-视图模型 (MVVM) 模式并跨多个平台共享程序集。
@@ -32,27 +32,27 @@ ms.locfileid: "56835780"
 ## <a name="classes-that-support-mvvm"></a>支持 MVVM 类
  当你针对[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]， [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，Silverlight 或 Windows Phone 7.5 的应用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目中，下列类是可用于实现 MVVM 模式：
 
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 类
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 类
 
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> 类
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> 类
 
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 类
+- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 类
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> 类
+- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> 类
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> 类
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> 类
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> 类
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> 类
 
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> 类
+- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> 类
 
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> 类
+- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> 类
 
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> 类
+- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> 类
 
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 类
+- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 类
 
--   中的所有类<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空间
+- 中的所有类<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空间
 
 ## <a name="implementing-mvvm"></a>实现 MVVM
  若要实现 MVVM，您通常创建模型和视图模型中的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目，因为[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目不能引用不可移植的项目。 模型和视图模型可以是同一个项目中或单独的项目中。 如果使用单独的项目，添加从视图模型项目到模型项目的引用。

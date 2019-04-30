@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ed8b85475dc7327c1aac6f920aba627215e27c7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965797"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 函数
 从目标进程中的公共语言运行时 (CLR) 路径创建版本字符串。  

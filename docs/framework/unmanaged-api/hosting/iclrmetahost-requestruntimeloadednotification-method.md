@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984641"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 提供保证在首次加载，但尚未启动的公共语言运行时 (CLR) 版本时要调用的回调函数。 此方法取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函数。  
@@ -49,11 +49,11 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="remarks"></a>备注  
  回调的工作原理如下所示：  
   
--   仅当首次加载运行时调用回调。  
+- 仅当首次加载运行时调用回调。  
   
--   对同一个运行时的可重入加载不调用回调。  
+- 对同一个运行时的可重入加载不调用回调。  
   
--   非可重入运行时负载时，序列化对回调函数的调用。  
+- 非可重入运行时负载时，序列化对回调函数的调用。  
   
  回调函数具有以下原型：  
   
@@ -66,13 +66,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  回调函数的原型如下所示：  
   
--   `pfnCallbackThreadSet`：  
+- `pfnCallbackThreadSet`：  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   `pfnCallbackThreadUnset`：  
+- `pfnCallbackThreadUnset`：  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
@@ -80,11 +80,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  如果主机尝试加载或导致另一个运行时可重入的方式加载`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`提供在回调函数必须使用如下所示的参数：  
   
--   `pfnCallbackThreadSet` 必须通过尝试此类负载之前可能会导致运行时加载的线程调用。  
+- `pfnCallbackThreadSet` 必须通过尝试此类负载之前可能会导致运行时加载的线程调用。  
   
--   `pfnCallbackThreadUnset` 必须在调用时该线程将不再导致出现运行时负载 （和从初始的回调返回之前）。  
+- `pfnCallbackThreadUnset` 必须在调用时该线程将不再导致出现运行时负载 （和从初始的回调返回之前）。  
   
--   `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`都是不可重入。  
+- `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`都是不可重入。  
   
 > [!NOTE]
 >  不能调用主机应用程序`pfnCallbackThreadSet`并`pfnCallbackThreadUnset`范围外的`pCallbackFunction`参数。  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 ms.assetid: 9004e72f-fdec-4264-a37d-2c99764efc13
 ms.openlocfilehash: e5ba42c2ff86f46e2722d0f4455c10ab7b85af1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971244"
 ---
 # <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>如何：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误
 下面的代码示例演示如何使用 <xref:System.Windows.Forms.DataGridView> 控件将数据输入错误报告给用户。  
@@ -30,7 +30,7 @@ ms.locfileid: "59204648"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   引用 System、System.Data、System.Windows.Forms 和 System.XML 程序集。  
+- 引用 System、System.Data、System.Windows.Forms 和 System.XML 程序集。  
   
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   

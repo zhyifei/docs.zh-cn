@@ -13,11 +13,11 @@ helpviewer_keywords:
 - loading [WPF], stopping
 ms.assetid: e2b695b0-517e-462c-8ccf-90cc8d6ba864
 ms.openlocfilehash: c5694bb2cb6c618cd84bad3dc893ae3855e44892
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006676"
 ---
 # <a name="how-to-stop-a-page-from-loading"></a>如何：停止加载页面
 此示例演示如何调用<xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A>方法来完成下载之前停止站点导航到内容。  

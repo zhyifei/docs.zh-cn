@@ -8,11 +8,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008780"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>如何：使用 From、To 和 By 控制动画
 "From/To/By"或"基本动画创建两个目标值之间的转换 (请参阅[动画概述](animation-overview.md)有关不同类型的动画的简介)。 若要设置基本动画的目标值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。  下表总结了如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性可能会一起使用或单独来确定动画的目标值。  

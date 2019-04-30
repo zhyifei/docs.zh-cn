@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973766"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式
 如果想要显示非常大量的表格数据<xref:System.Windows.Forms.DataGridView>控件，可以设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置为`true`和显式管理其数据存储区与控件的交互。 这样可以微调控件在此情况下的性能。  
@@ -112,16 +112,16 @@ ms.locfileid: "59344320"
   
 #### <a name="to-test-the-form"></a>若要测试窗体  
   
--   编译并运行该应用程序。  
+- 编译并运行该应用程序。  
   
      你将看到<xref:System.Windows.Forms.DataGridView>控件填充三个客户记录。 可以修改行中的多个单元格的值，并在编辑模式中两次，一次非编辑模式，若要还原到其原始值的整行，请按 esc 键。 当你修改、 添加或删除控件中的行时`Customer`修改、 添加或删除数据存储中的对象。  
   
 ## <a name="next-steps"></a>后续步骤  
  此应用程序为您提供了必须处理实现中的虚拟模式的事件的一个基本的了解<xref:System.Windows.Forms.DataGridView>控件。 您可以提高在多方面此基本应用程序：  
   
--   实现缓存来自外部数据库的值的数据存储。 缓存应检索并放弃根据需要的值，使其仅包含必要的操作时使用少量内存客户端计算机上的显示。  
+- 实现缓存来自外部数据库的值的数据存储。 缓存应检索并放弃根据需要的值，使其仅包含必要的操作时使用少量内存客户端计算机上的显示。  
   
--   对数据存储，具体取决于你的需求的性能进行微调。 例如，你可能想要通过使用更大的缓存大小和最大程度减少数据库查询的次数补偿慢速网络连接，而客户端计算机的内存限制。  
+- 对数据存储，具体取决于你的需求的性能进行微调。 例如，你可能想要通过使用更大的缓存大小和最大程度减少数据库查询的次数补偿慢速网络连接，而客户端计算机的内存限制。  
   
  有关缓存来自外部数据库的值的详细信息，请参阅[如何：实现虚拟模式在 Windows 中实时数据加载窗体 DataGridView 控件](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。  
   

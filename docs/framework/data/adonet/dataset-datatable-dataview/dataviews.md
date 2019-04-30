@@ -3,11 +3,11 @@ title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034328"
 ---
 # <a name="dataviews"></a>DataView
 您可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。 使用**DataView**，您可以公开具有不同的排序顺序的表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。  

@@ -3,11 +3,11 @@ title: Association Set — 关联集
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034590"
 ---
 # <a name="association-set"></a>Association Set — 关联集
 *关联集*是逻辑容器[关联](../../../../docs/framework/data/adonet/association-type.md)相同类型的实例。 关联集不是一种数据建模构造，也就是说，它没有描述数据结构或关系。 相反，关联集提供了一种承载或存储环境构造（例如公共语言运行库或 SQL Server 数据库）来分组关联实例，以便可以将它们映射到某个数据存储区。  
@@ -16,11 +16,11 @@ ms.locfileid: "59204479"
   
  关联集的定义包含以下信息：  
   
--   关联集名称。 （必需）  
+- 关联集名称。 （必需）  
   
--   要包含其实例的关联。 （必需）  
+- 要包含其实例的关联。 （必需）  
   
--   两个[关联集端](../../../../docs/framework/data/adonet/association-set-end.md)。  
+- 两个[关联集端](../../../../docs/framework/data/adonet/association-set-end.md)。  
   
 ## <a name="example"></a>示例  
  下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。 上图没有传达有关关联集的信息，但下图显示了一个基于此模型的关联集和实体集的示例。  

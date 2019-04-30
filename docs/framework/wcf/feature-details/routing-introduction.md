@@ -3,11 +3,11 @@ title: 路由简介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991089"
 ---
 # <a name="routing-introduction"></a>路由简介
 路由服务提供的泛型可插入 SOAP 中介能够根据消息内容路由消息。 使用路由服务，您可以创建复杂的路由逻辑，以便实现服务聚合、服务版本管理、优先级路由和多播路由等方案。 路由服务还提供了错误处理功能，使您可以设置备份终结点的列表。如果将消息发送到主目标终结点时失败，则会发送到这些备份终结点。  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  许多路由服务配置都采用将消息仅路由至一个特定终结点的专有筛选器逻辑，但是，您可能需要将给定消息路由至多个目标终结点。 若要将消息多播到多个目标，必须满足以下条件：  
   
--   通道形状不能为请求-答复（但可以为单向或双工），因为客户端应用程序在响应请求时只能接收一个答复。  
+- 通道形状不能为请求-答复（但可以为单向或双工），因为客户端应用程序在响应请求时只能接收一个答复。  
   
--   多个筛选器在计算消息时必须返回 `true`。  
+- 多个筛选器在计算消息时必须返回 `true`。  
   
  如果满足这些条件，则将消息路由至计算结果为 `true` 的所有筛选器的所有终结点。 下面的示例定义路由的配置会导致消息同时路由至两个终结点，如果消息中的终结点地址为 `http://localhost:8000/routingservice/router/rounding` 。  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **请求处理**  
   
--   获取**MessageVersion**的出站绑定/通道。  
+- 获取**MessageVersion**的出站绑定/通道。  
   
--   获取原始消息的正文读取器。  
+- 获取原始消息的正文读取器。  
   
--   创建新的消息使用相同的操作、 正文读取器和一个新**MessageVersion**。  
+- 创建新的消息使用相同的操作、 正文读取器和一个新**MessageVersion**。  
   
--   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，复制收件人、 From、 FaultTo 和 RelatesTo 标头到新消息。  
+- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，复制收件人、 From、 FaultTo 和 RelatesTo 标头到新消息。  
   
--   将所有消息属性复制到新消息。  
+- 将所有消息属性复制到新消息。  
   
--   存储原始请求消息，以备在处理响应时使用。  
+- 存储原始请求消息，以备在处理响应时使用。  
   
--   返回新的请求消息。  
+- 返回新的请求消息。  
   
  **响应处理**  
   
--   获取**MessageVersion**的原始请求消息。  
+- 获取**MessageVersion**的原始请求消息。  
   
--   获取接收的响应消息的正文读取器。  
+- 获取接收的响应消息的正文读取器。  
   
--   创建新的响应消息具有相同的操作、 正文读取器和**MessageVersion**的原始请求消息。  
+- 创建新的响应消息具有相同的操作、 正文读取器和**MessageVersion**的原始请求消息。  
   
--   如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，复制收件人、 From、 FaultTo 和 RelatesTo 标头到新消息。  
+- 如果<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>！ = **Addressing.None**，复制收件人、 From、 FaultTo 和 RelatesTo 标头到新消息。  
   
--   将所有消息属性复制到新消息。  
+- 将所有消息属性复制到新消息。  
   
--   返回新的响应消息。  
+- 返回新的响应消息。  
   
  默认情况下**SoapProcessingBehavior**自动添加到客户端终结点的<xref:System.ServiceModel.Routing.RoutingBehavior>服务启动时; 但是，您可以控制是否 SOAP 处理添加到所有客户端终结点使用<xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>属性。 此外，如果需要更为精细地控制 SOAP 处理，您还可以向特定终结点直接添加该行为，并在终结点级别上启用或禁用该行为。  
   

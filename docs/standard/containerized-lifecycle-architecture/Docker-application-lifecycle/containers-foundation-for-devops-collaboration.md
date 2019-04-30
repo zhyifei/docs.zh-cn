@@ -1,17 +1,17 @@
 ---
-title: 容器作为 DevOps 协作的基础
+title: 将容器作为 DevOps 协作的基础
 description: 了解容器来简化开发运营的关键角色。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012203"
 ---
-# <a name="containers-as-the-foundation-for-devops-collaboration"></a>容器作为 DevOps 协作的基础
+# <a name="containers-as-the-foundation-for-devops-collaboration"></a>将容器作为 DevOps 协作的基础
 
 由容器和 Docker 技术的性质，开发人员可以其软件和依赖项通过轻松地共享 IT 操作和生产环境同时消除典型的"适用于我的计算机"借口。 容器解决不同的环境之间的应用程序冲突。 间接，容器和 Docker 将开发人员和 IT 运营更接近组合在一起，使它们更高效地协作更轻松。 采用容器工作流将许多客户提供 DevOps 连续性它们已试图但以前版本更复杂的配置通过实现和构建管道。 容器简化 DevOps 中的生成/测试/部署管道。
 

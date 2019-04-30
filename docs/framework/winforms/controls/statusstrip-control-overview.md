@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
 ms.openlocfilehash: f6f2d4b19b7ec91c964c72e3aca85e0253c7cc22
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009638"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip 控件概述
 <xref:System.Windows.Forms.StatusStrip> 控件将显示有关在 <xref:System.Windows.Forms.Form> 上查看的对象、对象组件的信息或应用程序内与该对象操作相关的上下文信息。 通常，<xref:System.Windows.Forms.StatusStrip> 控件由 <xref:System.Windows.Forms.ToolStripStatusLabel> 对象组成，每个对象将显示文本、图标或两者都有。 <xref:System.Windows.Forms.StatusStrip> 也可以包括 <xref:System.Windows.Forms.ToolStripDropDownButton>、<xref:System.Windows.Forms.ToolStripSplitButton> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控件。  

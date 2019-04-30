@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043208"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
 创建对指定成员的类型或模块的当前作用域之外定义，并定义该引用的令牌的引用。  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  通常情况下，使用之前`DefineImportMember`方法，您必须创建，在当前作用域、 类型引用或目标成员的父类、 接口或模块的模块参考。 然后传入此引用的元数据标记`tkParent`参数。 不需要创建对目标成员的父级的引用，如果将在解决更高版本的编译器或链接器。 总结：  
   
--   如果目标成员是字段或方法，可以使用两种[imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)或[imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)方法为创建的类型引用，在当前范围内，成员的父类或父接口。  
+- 如果目标成员是字段或方法，可以使用两种[imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)或[imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)方法为创建的类型引用，在当前范围内，成员的父类或父接口。  
   
--   如果目标成员的全局变量或全局函数 （即，不是成员的类或接口），请使用[imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)方法中成员的父级的当前范围，创建模块引用模块。  
+- 如果目标成员的全局变量或全局函数 （即，不是成员的类或接口），请使用[imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)方法中成员的父级的当前范围，创建模块引用模块。  
   
--   如果目标成员的父级将由编译器或链接器的更高版本解析，则传递`mdTokenNil`在`tkParent`。 此应用的唯一情况是全局函数或全局变量从最终将链接到当前模块的.obj 文件导入和合并的元数据。  
+- 如果目标成员的父级将由编译器或链接器的更高版本解析，则传递`mdTokenNil`在`tkParent`。 此应用的唯一情况是全局函数或全局变量从最终将链接到当前模块的.obj 文件导入和合并的元数据。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

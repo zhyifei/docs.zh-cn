@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006407"
 ---
 # <a name="message-security-certificate"></a>消息安全证书
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS 安全性和 X.509 v3 证书身份验证，并要求使用服务器的 X.509 v3 证书进行服务器身份验证。 此示例使用默认设置，以便客户端和服务器之间的所有应用程序消息都经过签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ，客户端控制台程序和由 Internet 信息服务 (IIS) 承载的服务库组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
   
  通过运行消息安全示例随附的 Setup.bat 批处理文件，可以用相关的证书将客户端和服务器配置为运行承载应用程序，该应用程序需要基于证书的安全性。 该批处理文件可以在三个模式下运行。 若要在单计算机模式类型中运行**setup.bat**在开发人员命令提示符的 Visual Studio; 服务模式类型**setup.bat service**; 个客户端模式类型和**setup.bat 客户端**. 在跨计算机运行示例时，可以使用客户端模式和服务器模式。 有关详细信息，请参见本主题末尾的设置过程。 下面提供了批处理文件不同节的简要概述，您可以修改这些批处理文件，使其能够在相应的配置中运行：  
   
--   创建客户端证书。  
+- 创建客户端证书。  
   
      批处理文件中的以下行用于创建客户端证书。 创建的证书的主题名称中会使用指定的客户端名称。 证书存储在 `My` 存储位置下的 `CurrentUser` 存储区中。  
   
@@ -215,7 +215,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
     ```  
   
--   将客户端证书安装到服务器的受信任证书存储区中。  
+- 将客户端证书安装到服务器的受信任证书存储区中。  
   
      批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 为了使安装在 TrustedPeople 存储区中的证书，以获得信任由 Windows Communication Foundation (WCF) 服务，客户端证书验证模式必须设置为`PeerOrChainTrust`或`PeerTrust`。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。  
   
@@ -226,7 +226,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople   
     ```  
   
--   创建服务器证书。  
+- 创建服务器证书。  
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  
   
@@ -242,7 +242,7 @@ Press <ENTER> to terminate client.
   
      %SERVER_NAME% 变量指定服务器名称。 该证书存储在 LocalMachine 存储区中。 如果用服务自变量运行 Setup.bat 批处理文件 (例如， **setup.bat 服务**) %server_name%包含计算机的名称的完全限定域名。 否则，它默认为 localhost。  
   
--   将服务器证书安装到客户端的受信任证书存储区中。  
+- 将服务器证书安装到客户端的受信任证书存储区中。  
   
      以下行将服务器证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   授予对证书私钥的权限。  
+- 授予对证书私钥的权限。  
   
      Setup.bat 文件中的以下行使存储在 LocalMachine 存储中的服务器证书可以供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作进程帐户访问。  
   
@@ -329,7 +329,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
--   运行完示例后运行示例文件夹中的 Cleanup.bat。  
+- 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
     >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  

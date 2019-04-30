@@ -3,24 +3,24 @@ title: 如何：最大的文件或目录树 (LINQ) (Visual Basic 中) 中的查�
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
 ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008897"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>如何：最大的文件或目录树 (LINQ) (Visual Basic 中) 中的查询
 此示例演示与文件大小（以字节为单位）相关的五个查询：  
   
--   如何检索最大文件的大小（以字节为单位）。  
+- 如何检索最大文件的大小（以字节为单位）。  
   
--   如何检索最小文件的大小（以字节为单位）。  
+- 如何检索最小文件的大小（以字节为单位）。  
   
--   如何从指定根文件夹下的一个或多个文件夹检索 <xref:System.IO.FileInfo> 对象最大或最小文件。  
+- 如何从指定根文件夹下的一个或多个文件夹检索 <xref:System.IO.FileInfo> 对象最大或最小文件。  
   
--   如何检索序列（如 10 个最大文件）。  
+- 如何检索序列（如 10 个最大文件）。  
   
--   如何基于文件大小（以字节为单位）按组对文件进行排序（忽略小于指定大小的文件）。  
+- 如何基于文件大小（以字节为单位）按组对文件进行排序（忽略小于指定大小的文件）。  
   
 ## <a name="example"></a>示例  
  下面的示例包含五个单独的查询，它们演示如何根据文件大小（以字节为单位）对文件进行查询和分组。 可以轻松地修改这些示例，以便使查询基于 <xref:System.IO.FileInfo> 对象的其他某个属性。  

@@ -3,31 +3,31 @@ title: 外部映射
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037890"
 ---
 # <a name="external-mapping"></a>外部映射
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持*外部映射*，依据你使用单独的 XML 文件指定的数据库的数据模型与您的对象模型之间的映射的进程。 使用外部映射文件具有以下优点：  
   
--   可以将映射代码放在应用程序代码外部。 此方法可以降低应用程序代码的混乱程度。  
+- 可以将映射代码放在应用程序代码外部。 此方法可以降低应用程序代码的混乱程度。  
   
--   可以将外部映射文件视为类似于配置文件的某种东西。 例如，在发布二进制文件后，只需交换出外部映射文件，就可以更新应用程序的工作方式。  
+- 可以将外部映射文件视为类似于配置文件的某种东西。 例如，在发布二进制文件后，只需交换出外部映射文件，就可以更新应用程序的工作方式。  
   
 ## <a name="requirements"></a>要求  
  映射文件必须为 XML 文件，并且该文件必须能够通过 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 架构定义 (.xsd) 文件的验证。  
   
  适用以下规则：  
   
--   映射文件必须为 XML 文件。  
+- 映射文件必须为 XML 文件。  
   
--   XML 映射文件必须能够通过 XML 架构定义文件的验证。 有关详细信息，请参阅[如何：验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+- XML 映射文件必须能够通过 XML 架构定义文件的验证。 有关详细信息，请参阅[如何：验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
--   外部映射会重写基于属性的映射。 换句话说，在使用外部映射源创建 <xref:System.Data.Linq.DataContext> 时，<xref:System.Data.Linq.DataContext> 会忽略已在类上创建的所有映射属性。 无论类是否包含在外部映射文件中，都会发生这种情况。  
+- 外部映射会重写基于属性的映射。 换句话说，在使用外部映射源创建 <xref:System.Data.Linq.DataContext> 时，<xref:System.Data.Linq.DataContext> 会忽略已在类上创建的所有映射属性。 无论类是否包含在外部映射文件中，都会发生这种情况。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持混合使用两种映射方式（基于属性的映射和外部映射）。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持混合使用两种映射方式（基于属性的映射和外部映射）。  
   
 ## <a name="xml-schema-definition-file"></a>XML 架构定义文件  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部映射必须能够通过以下 XML 架构定义的验证。  

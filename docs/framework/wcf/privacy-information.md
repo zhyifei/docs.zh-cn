@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032978"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
@@ -38,9 +38,9 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  身份验证通过在客户端和服务之间传递凭据来执行。 身份验证可以通过传输级安全实现，也可以通过 SOAP 消息级安全实现，如下所述：  
   
--   在 SOAP 消息安全中，身份验证通过诸如用户名/密码、X.509 证书、Kerberos 票证以及 SAML 令牌等凭据来执行，所有这些凭据都可能包含个人信息（根据颁发机构的情况而定）。  
+- 在 SOAP 消息安全中，身份验证通过诸如用户名/密码、X.509 证书、Kerberos 票证以及 SAML 令牌等凭据来执行，所有这些凭据都可能包含个人信息（根据颁发机构的情况而定）。  
   
--   使用传输安全时，身份验证通过传统的传输身份验证机制来实现，如 HTTP 身份验证方案（基本、摘要式、协商、集成 Windows 身份验证、NTLM、无身份验证和匿名）和窗体身份验证。  
+- 使用传输安全时，身份验证通过传统的传输身份验证机制来实现，如 HTTP 身份验证方案（基本、摘要式、协商、集成 Windows 身份验证、NTLM、无身份验证和匿名）和窗体身份验证。  
   
  身份验证可以导致在相互通信的终结点之间建立安全会话。 会话由 GUID 标识，而 GUID 能够在安全会话的整个生存期保持有效。 下表显示保留的内容和保留位置。  
   

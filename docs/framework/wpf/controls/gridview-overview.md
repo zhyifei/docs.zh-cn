@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008743"
 ---
 # <a name="gridview-overview"></a>GridView 概述
 <xref:System.Windows.Controls.GridView> 视图模式是一种视图模式的<xref:System.Windows.Controls.ListView>控件。 <xref:System.Windows.Controls.GridView>类和及其支持类使您和您的用户能够查看通常使用按钮作为交互式列标题的表中的项集合。 本主题介绍<xref:System.Windows.Controls.GridView>类，并概述了其用途。  
@@ -73,30 +73,30 @@ ms.locfileid: "59201294"
   
  以下列表更详细地讨论使用的功能<xref:System.Windows.Controls.GridView>进行用户交互：  
   
--   **使用拖放方法对列重新排序。**  
+- **使用拖放方法对列重新排序。**  
   
      用户可以对中的列重新排序<xref:System.Windows.Controls.GridView>由列标题上时按鼠标左键，然后将该列拖动到新位置。 当用户拖动列标题时，将显示标题的浮动版本以及显示列的插入位置的黑色实线。  
   
      如果你想要修改的浮动版本的标头的默认样式，指定<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.GridViewColumnHeader>，它是键入触发时<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>属性设置为<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>。 有关详细信息，请参阅[为拖动的 GridView 列标题创建样式](how-to-create-a-style-for-a-dragged-gridview-column-header.md)。  
   
--   **根据列的内容重设其大小。**  
+- **根据列的内容重设其大小。**  
   
      用户可双击列标题右侧的手柄来根据列的内容重设其大小。  
   
     > [!NOTE]
     >  可以设置<xref:System.Windows.Controls.GridViewColumn.Width%2A>属性设置为`Double.NaN`以生成相同的效果。  
   
--   **选择行项目。**  
+- **选择行项目。**  
   
      用户可以选择中的一个或多个项<xref:System.Windows.Controls.GridView>。  
   
      如果你想要更改<xref:System.Windows.Style>选定项，请参阅[使用触发器为 ListView 中选定项设置样式](how-to-use-triggers-to-style-selected-items-in-a-listview.md)。  
   
--   **滚动查看最初未显示在屏幕上的内容。**  
+- **滚动查看最初未显示在屏幕上的内容。**  
   
      如果的大小<xref:System.Windows.Controls.GridView>是不足够大以显示所有项，用户可以滚动浏览水平或垂直通过使用滚动条，其中提供的<xref:System.Windows.Controls.ScrollViewer>控件。 一个<xref:System.Windows.Controls.Primitives.ScrollBar>处于隐藏状态，如果所有内容都是在特定方向中可见。 列标题不会随着垂直滚动条滚动，但可水平滚动。  
   
--   **通过单击列标题按钮与列交互。**  
+- **通过单击列标题按钮与列交互。**  
   
      如果提供了排序算法，则当用户单击列标题按钮时，可以对列中显示的数据进行排序。  
   
@@ -110,17 +110,17 @@ ms.locfileid: "59201294"
 ## <a name="gridview-supporting-classes"></a>GridView 支持类  
  下面的类支持<xref:System.Windows.Controls.GridView>视图模式。  
   
--   <xref:System.Windows.Controls.GridViewColumn>  
+- <xref:System.Windows.Controls.GridViewColumn>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GridViewRowPresenter>  
+- <xref:System.Windows.Controls.GridViewRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
+- <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewColumnCollection>  
+- <xref:System.Windows.Controls.GridViewColumnCollection>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
+- <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>请参阅
 

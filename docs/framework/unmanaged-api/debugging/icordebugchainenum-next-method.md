@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989230"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next 方法
 从当前位置开始枚举中获取指定的数量的 ICorDebugChain 实例。  

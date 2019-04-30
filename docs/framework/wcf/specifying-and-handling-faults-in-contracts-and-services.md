@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006390"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>在协定和服务中指定和处理错误
 Windows Communication Foundation (WCF) 应用程序处理错误情况下，通过将托管的异常对象映射到 SOAP 错误对象，并对托管的异常对象的 SOAP 错误对象。 本节中的主题讨论如何设计协定以将错误条件作为自定义 SOAP 错误公开、如何作为服务实现的一部分返回这些错误，以及客户端如何捕捉这些错误。  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) 应用程序处理错误情况下，通�
   
  通常，服务（以及双工客户端）使用下列步骤将错误处理成功地集成到其应用程序中：  
   
--   将异常条件映射到自定义 SOAP 错误。  
+- 将异常条件映射到自定义 SOAP 错误。  
   
--   客户端和服务将 SOAP 错误作为异常进行发送和接收。  
+- 客户端和服务将 SOAP 错误作为异常进行发送和接收。  
   
  此外，WCF 客户端和服务可以出于调试目的使用未声明的 soap 错误，并可以扩展默认的错误行为。 下面的部分讨论这些任务和概念。  
   

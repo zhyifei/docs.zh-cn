@@ -8,11 +8,11 @@ helpviewer_keywords:
 - dialog boxes [WPF], returning results
 ms.assetid: 4c5cf286-746b-4052-934d-d80cbf8acba3
 ms.openlocfilehash: b574a5bbc08d947371837116915c2fc8c13ec81d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006702"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>如何：返回对话框结果
 此示例演示如何检索通过调用打开的窗口的对话框结果<xref:System.Windows.Window.ShowDialog%2A>。  

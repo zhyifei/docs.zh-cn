@@ -5,11 +5,11 @@ helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014318"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
 组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
@@ -23,40 +23,40 @@ ms.locfileid: "58828077"
   
  <xref:System.ComponentModel.Component> 和 <xref:System.ComponentModel.MarshalByValueComponent> 类是 <xref:System.ComponentModel.IComponent> 接口的基实现。 这些类之间的主要区别在于 <xref:System.ComponentModel.Component> 类由引用封送，而 <xref:System.ComponentModel.IComponent> 由值封送。 以下列表为实施者提供了全面的指南。  
   
--   如果组件需要由引用封送，请从 <xref:System.ComponentModel.Component> 派生。  
+- 如果组件需要由引用封送，请从 <xref:System.ComponentModel.Component> 派生。  
   
--   如果组件需要由值封送，请从 <xref:System.ComponentModel.MarshalByValueComponent> 派生。  
+- 如果组件需要由值封送，请从 <xref:System.ComponentModel.MarshalByValueComponent> 派生。  
   
--   如果因单一继承导致无法从其中一个基实现派生组件，则请实现 <xref:System.ComponentModel.IComponent>。  
+- 如果因单一继承导致无法从其中一个基实现派生组件，则请实现 <xref:System.ComponentModel.IComponent>。  
   
 ## <a name="component-classes"></a>组件类  
  <xref:System.ComponentModel> 命名空间提供用于实现组件和控件的运行时和设计时行为的类。 此命名空间包括用于特性和类型转换器的实现、数据源绑定和组件授权的基类和接口。  
   
  核心组件类包括：  
   
--   <xref:System.ComponentModel.Component>。 <xref:System.ComponentModel.IComponent> 接口的基实现。 此类可以实现在应用程序之间共享对象。  
+- <xref:System.ComponentModel.Component>。 <xref:System.ComponentModel.IComponent> 接口的基实现。 此类可以实现在应用程序之间共享对象。  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> 接口的基实现。  
+- <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> 接口的基实现。  
   
--   <xref:System.ComponentModel.Container>。 <xref:System.ComponentModel.IContainer> 接口的基实现。 此类封装零个或多个组件。  
+- <xref:System.ComponentModel.Container>。 <xref:System.ComponentModel.IContainer> 接口的基实现。 此类封装零个或多个组件。  
   
  部分用于组件授权的类包括：  
   
--   <xref:System.ComponentModel.License>。 所有许可证的抽象基类。 对组件的特定实例授予许可证。  
+- <xref:System.ComponentModel.License>。 所有许可证的抽象基类。 对组件的特定实例授予许可证。  
   
--   <xref:System.ComponentModel.LicenseManager>。 提供属性和方法，用以将许可证添加到组件和管理 <xref:System.ComponentModel.LicenseProvider>。  
+- <xref:System.ComponentModel.LicenseManager>。 提供属性和方法，用以将许可证添加到组件和管理 <xref:System.ComponentModel.LicenseProvider>。  
   
--   <xref:System.ComponentModel.LicenseProvider>。 实现许可证提供程序的抽象基类。  
+- <xref:System.ComponentModel.LicenseProvider>。 实现许可证提供程序的抽象基类。  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>。 指定要与某个类一起使用的 <xref:System.ComponentModel.LicenseProvider> 类。  
+- <xref:System.ComponentModel.LicenseProviderAttribute>。 指定要与某个类一起使用的 <xref:System.ComponentModel.LicenseProvider> 类。  
   
  常用于描述和保存组件的类。  
   
--   <xref:System.ComponentModel.TypeDescriptor>。 提供有关组件特征的信息，如组件的特性、属性和事件。  
+- <xref:System.ComponentModel.TypeDescriptor>。 提供有关组件特征的信息，如组件的特性、属性和事件。  
   
--   <xref:System.ComponentModel.EventDescriptor>。 提供有关事件的信息。  
+- <xref:System.ComponentModel.EventDescriptor>。 提供有关事件的信息。  
   
--   <xref:System.ComponentModel.PropertyDescriptor>。 提供有关属性的信息。  
+- <xref:System.ComponentModel.PropertyDescriptor>。 提供有关属性的信息。  
   
 ## <a name="related-sections"></a>相关章节  
  [控件和组件创作疑难解答](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  

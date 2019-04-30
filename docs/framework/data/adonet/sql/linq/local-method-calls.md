@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
 ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033509"
 ---
 # <a name="local-method-calls"></a>本地方法调用
 本地方法调用是在对象模型中执行的方法调用。 远程方法调用是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 转换成 SQL 并传输至数据库引擎进行执行的方法调用。 当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 无法将调用转换成 SQL 时，将需要本地方法调用。 否则会引发 <xref:System.InvalidOperationException>。  

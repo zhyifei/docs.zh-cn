@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025452"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 的类型转换器概述
 类型转换器为对象编写器提供逻辑，用于从 XAML 标记中的字符串转换为对象图中的特定对象。 在 .NET Framework XAML 服务中，类型转换器必须是派生自 <xref:System.ComponentModel.TypeConverter>的类。 某些转换器还支持 XAML 保存路径，可以用于将对象从序列化标记序列化为字符串形式。 本主题介绍如何以及何时调用 XAML 中的类型转换器，以及为 <xref:System.ComponentModel.TypeConverter>的方法重写提供实现建议。  
@@ -45,13 +45,13 @@ ms.locfileid: "59095719"
   
  <xref:System.ComponentModel.TypeConverter> 定义了四个成员，它们对于针对 XAML 处理用途的转换为字符串和从字符串转换是相关的：  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  在这些成员中，最重要的方法是 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>，它将输入字符串转换为所需的对象类型。 可以实现 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 方法以将更广泛的类型转换为转换器的预期目标类型。 因此，它可以实现扩展到 XAML 外部的用途，如支持运行时转换。 但是，对于 XAML 使用，只有可以处理 <xref:System.String> 输入的代码路径才十分重要。  
   

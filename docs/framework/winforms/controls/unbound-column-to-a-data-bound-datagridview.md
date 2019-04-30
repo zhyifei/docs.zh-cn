@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
 ms.openlocfilehash: 40308f7e8cc12dcff5b7d4393645f6a9007cc2b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009196"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>如何：将未绑定的列添加到已绑定数据的 Windows 窗体 DataGridView 控件
 在 <xref:System.Windows.Forms.DataGridView> 控件中显示的数据通常来自某种类型的数据源，但你可能需要显示并非来自该数据源的一列数据。 这种列称为未绑定列。 未绑定列可有多种形式。 它们常用于提供对数据行详细信息的访问。  
@@ -30,9 +30,9 @@ ms.locfileid: "59215828"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
+- 名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
   
--   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
+- 对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

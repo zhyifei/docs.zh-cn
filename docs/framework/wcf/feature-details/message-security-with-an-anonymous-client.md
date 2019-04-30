@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038579"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名客户端的消息安全
 
@@ -25,7 +25,7 @@ ms.locfileid: "57680304"
 |安全模式|消息|
 |互操作性|WCF 仅|
 |身份验证（服务器）|初始协商要求服务器身份验证，而不是客户端身份验证|
-|身份验证（客户端）|无|
+|身份验证（客户端）|None|
 |完整性|是，使用共享安全上下文|
 |保密性|是，使用共享安全上下文|
 |传输|HTTP|
@@ -94,7 +94,7 @@ ms.locfileid: "57680304"
 
 - 使用代码（和客户端代码）创建独立客户端。
 
-- 创建不定义任何终结点地址的客户端。 而使用将配置名称作为参数的客户端构造函数。 例如：
+- 创建不定义任何终结点地址的客户端。 而使用将配置名称作为自变量的客户端构造函数。 例如：
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]

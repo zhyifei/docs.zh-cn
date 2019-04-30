@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
 ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011479"
 ---
 # <a name="custom-control-painting-and-rendering"></a>自定义控件的绘制和呈现
 自定义绘制的控件是可轻松在.NET Framework 的许多复杂任务之一。 在创作时自定义控件，有许多种有关控件的图形外观。 如果创作继承的控件`Control`，必须提供代码，使您的控件来呈现其图形表示形式。 如果通过继承创建用户控件`UserControl`，继承或从一个 Windows 窗体控件，可以忽略在标准的图形表示形式，并提供你自己的图形代码。 如果你想要提供的构成控件的自定义呈现`UserControl`创作，你的选项变得更为有限，但仍允许范围广泛的控件和应用程序的图形化可能性。  

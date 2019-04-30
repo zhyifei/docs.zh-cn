@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0acb322fa3348f0bb2d819529a370110580343c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985876"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函数
 通过使用版本信息的 XML 文件中存储公共语言运行时 (CLR) 加载到进程中。 XML 文件的格式只被现代性的标准应用程序配置文件。 有关配置文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。  

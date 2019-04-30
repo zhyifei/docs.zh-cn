@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036226"
 ---
 # <a name="localization-attributes-and-comments"></a>本地化特性和注释
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用于提供本地化规则和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释包含两组信息：可本地化特性和任意形式的本地化注释。 可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。 任意形式的注释是应用程序作者希望包含的任何信息。  
@@ -27,11 +27,11 @@ ms.locfileid: "59301849"
   
 3. 可以分配的值包括：  
   
-    -   **None** - 注释和特性都保留在程序集中，不会生成单独的文件。  
+    - **None** - 注释和特性都保留在程序集中，不会生成单独的文件。  
   
-    -   **CommentsOnly** - 仅从程序集中去掉注释，并将它们放在单独的 LocFile 中。  
+    - **CommentsOnly** - 仅从程序集中去掉注释，并将它们放在单独的 LocFile 中。  
   
-    -   **All** - 从程序集中去掉注释和特性，并将它们两者都放在单独的 LocFile 中。  
+    - **All** - 从程序集中去掉注释和特性，并将它们两者都放在单独的 LocFile 中。  
   
 4. 从 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 中提取可本地化资源时，可本地化性特性将由 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 本地化 API 保留。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301849"
   
  有三种类型的特性：  
   
--   **Category**。 它指定是否可以从本地化工具修改值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
+- **Category**。 它指定是否可以从本地化工具修改值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
   
--   **Readability**。 它指定本地化工具是否可读取（和显示）值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
+- **Readability**。 它指定本地化工具是否可读取（和显示）值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
   
--   **Modifiability**。 它指定本地化工具是否允许修改值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
+- **Modifiability**。 它指定本地化工具是否允许修改值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
   
  这些特性可以按照由空格分开的任何顺序进行指定。 如果指定了重复特性，则最后一个特性将替代前面的特性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 会将 Modifiability 设置为 Modifiable，因为最后一个值是 Modifiable。  
   

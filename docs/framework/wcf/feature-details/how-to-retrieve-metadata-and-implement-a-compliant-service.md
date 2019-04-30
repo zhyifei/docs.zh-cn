@@ -3,11 +3,11 @@ title: 如何：检索元数据并实现兼容服务
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000787"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>如何：检索元数据并实现兼容服务
 通常，设计和实现服务并不是由同一个人完成的。 在交互操作应用程序很重要的环境中，可以用 Web 服务描述语言 (WSDL) 设计或描述协定，而且开发人员必须实现一个与所提供的协定相兼容的服务。 您可能想要将现有服务迁移到 Windows Communication Foundation (WCF)，但保留连网格式。 此外，双工协定还需要调用方实现一个回调协定。  
@@ -39,17 +39,17 @@ ms.locfileid: "59322662"
   
  下面的代码演示：  
   
--   实现时符合协定要求的服务协定接口 (`ISampleService`)。  
+- 实现时符合协定要求的服务协定接口 (`ISampleService`)。  
   
--   客户端所使用的帮助器接口，可用于同时扩展服务协定接口和 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>，并可用于客户端应用程序 (`ISampleServiceChannel`)。  
+- 客户端所使用的帮助器接口，可用于同时扩展服务协定接口和 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>，并可用于客户端应用程序 (`ISampleServiceChannel`)。  
   
--   扩展 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 的帮助器类，可用于客户端应用程序 (`SampleServiceClient`)。  
+- 扩展 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 的帮助器类，可用于客户端应用程序 (`SampleServiceClient`)。  
   
--   从服务生成的配置文件。  
+- 从服务生成的配置文件。  
   
--   简单的 `ISampleService` 服务实现。  
+- 简单的 `ISampleService` 服务实现。  
   
--   客户端配置文件到服务器端版本的转换。  
+- 客户端配置文件到服务器端版本的转换。  
   
 [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]
 

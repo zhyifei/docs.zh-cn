@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971946"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定义与 .NET Framework XAML 服务一起使用的自定义类型
 当您定义了业务对象的自定义类型或不在特定框架上具有依赖项的类型时，有的 XAML 可以按照某些最佳实践。 如果您遵循这些实践，.NET Framework XAML 服务及其 XAML 读取器和 XAML 编写器可以发现你的类型的 XAML 特征，并为其适当 XAML 节点流使用的 XAML 类型系统中的表示形式。 本主题介绍类型定义、 成员定义和 CLR 类型或成员的特性化最佳的实践。  
@@ -17,9 +17,9 @@ ms.locfileid: "59164432"
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>构造函数模式和 XAML 的类型定义  
  若要实例化成对象元素在 XAML 中，自定义类必须满足以下要求：  
   
--   自定义类必须是公共的并且必须公开默认 （无参数） 公共构造函数。 （有关结构注释，请参阅下节内容。）  
+- 自定义类必须是公共的并且必须公开默认 （无参数） 公共构造函数。 （有关结构注释，请参阅下节内容。）  
   
--   自定义类不得为嵌套的类。 额外的完整名称路径中的"dot"使类命名空间划分不明确的并且会干扰其他 XAML 功能，例如附加属性。  
+- 自定义类不得为嵌套的类。 额外的完整名称路径中的"dot"使类命名空间划分不明确的并且会干扰其他 XAML 功能，例如附加属性。  
   
  如果为对象元素，可以实例化一个对象，所创建的对象可以填充属性元素将该对象作为其基础类型的任何属性的形式。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "59164432"
   
  `public static object Get` PropertyName `(object` `target` `)`  
   
--   `target` 对象在实现中可以指定为更具体的类型。 可以使用此范围限定在可附加成员; 的使用情况你预期的作用域之外的使用情况将引发无效强制转换异常，然后显示 XAML 分析错误的。 参数名称`target`不是必需的但名为`target`大多数实现约定。  
+- `target` 对象在实现中可以指定为更具体的类型。 可以使用此范围限定在可附加成员; 的使用情况你预期的作用域之外的使用情况将引发无效强制转换异常，然后显示 XAML 分析错误的。 参数名称`target`不是必需的但名为`target`大多数实现约定。  
   
--   返回值在实现中可以指定为更具体的类型。  
+- 返回值在实现中可以指定为更具体的类型。  
   
  若要支持<xref:System.ComponentModel.TypeConverter>应用的可附加成员的特性用法的已启用的文本语法<xref:System.ComponentModel.TypeConverterAttribute>到`Get` *PropertyName*访问器。 将应用于`get`而不是`set`可能看起来直观; 但是，此约定可支持这一概念的只读的可附加成员进行序列化的这是在设计器的情况下很有用。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "59164432"
   
  `public static void Set` PropertyName `(object`  `target` `, object`  `value` `)`  
   
--   `target`上一节中所述，可以在实现中，使用相同的逻辑和后果更具体的类型为指定对象。  
+- `target`上一节中所述，可以在实现中，使用相同的逻辑和后果更具体的类型为指定对象。  
   
--   `value` 对象在实现中可以指定为更具体的类型。  
+- `value` 对象在实现中可以指定为更具体的类型。  
   
  请记住，此方法的值是从 XAML 用法，通常以特性形式的输入。 从属性窗体必须针对文本语法，值转换器支持，并且特性上`Get` *PropertyName*访问器。  
   

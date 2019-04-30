@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034549"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>配置参数和参数数据类型
 
@@ -56,10 +56,10 @@ Parameter 的数据类型是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdns
 |<xref:System.Char>| |不支持从 char 推断 <xref:System.Data.SqlDbType> 。|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|SQL Server 2008 中的 DateTimeOffset。 SQL Server 2008 以前的 SQL Server 版本不支持从 DateTimeOffset 推断 <xref:System.Data.SqlDbType> 。|||DateTime|
-|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numeric|数字|
+|<xref:System.Decimal>|十进制|十进制|十进制|Numeric|数字|
 |<xref:System.Double>|Double|Float|Double|Double|Double|
 |<xref:System.Single>|Single|Real|Single|Real|Float|
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
+|<xref:System.Guid>|GUID|UniqueIdentifier|GUID|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|数字|
@@ -96,7 +96,7 @@ Parameter 的数据类型是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdns
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>对 SqlCommand 和存储的过程使用参数
 
-在数据驱动的应用程序中，存储过程具有许多优势。 通过利用存储过程，数据库操作可以包装在单个命令中，为获取最佳性能而进行优化并通过附加的安全性得到增强。 尽管可以通过在 SQL 语句中传递后接参数自变量的存储过程名称来调用相应的存储过程，但如果使用 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 对象的 <xref:System.Data.Common.DbCommand> 集合，则可以让您更为明确地定义存储过程参数，并访问输出参数和返回值。
+在数据驱动的应用程序中，存储过程具有许多优势。 通过利用存储过程，数据库操作可以包装在单个命令中，为获取最佳性能而进行优化并通过附加的安全性得到增强。 虽然可以通过传递存储的过程的名称后接参数自变量的 SQL 语句，通过调用存储的过程<xref:System.Data.Common.DbCommand.Parameters%2A>的集合[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.Common.DbCommand>对象使您更为明确地定义存储过程参数，还可以访问输出参数和返回值。
 
 > [!NOTE]
 > 参数化语句在服务器上通过使用 `sp_executesql,` 执行，sp_executesql 允许重复使用查询计划。 `sp_executesql` 批处理命令中的本地光标或变量对于调用 `sp_executesql`的批处理命令是不可见的。 数据库上下文中的更改只持续到 `sp_executesql` 语句的结尾。 有关详细信息，请参阅[sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。

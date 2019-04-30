@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
 ms.openlocfilehash: 0c85564503f3c83e436044cd92ee3014945f1ef3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051866"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 指定一个或多个声明的编程元素没有任何访问限制。  
@@ -25,15 +25,15 @@ ms.locfileid: "58818379"
   
 ## <a name="rules"></a>规则  
   
--   **声明上下文。** 可以使用`Public`仅在模块、 接口或命名空间级别。 这意味着声明上下文`Public`元素必须是源文件、 命名空间、 接口、 模块、 类或结构，并且不能为一个过程。  
+- **声明上下文。** 可以使用`Public`仅在模块、 接口或命名空间级别。 这意味着声明上下文`Public`元素必须是源文件、 命名空间、 接口、 模块、 类或结构，并且不能为一个过程。  
   
 ## <a name="behavior"></a>行为  
   
--   **访问级别。** 模块、 类或结构可以访问所有代码都可以都访问其`Public`元素。  
+- **访问级别。** 模块、 类或结构可以访问所有代码都可以都访问其`Public`元素。  
   
--   **默认访问权限。** 到公共访问权限，并且您过程默认值中的局部变量不能对其使用任何访问修饰符。  
+- **默认访问权限。** 到公共访问权限，并且您过程默认值中的局部变量不能对其使用任何访问修饰符。  
   
--   **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+- **访问修饰符。** 指定的访问级别的关键字称为*访问修饰符*。 访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `Public` 修饰符可用于下面的上下文中：  
   

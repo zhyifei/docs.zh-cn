@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967903"
 ---
 # <a name="custom-stream-upgrades"></a>自定义流升级
 面向流的传输（如 TCP 和命名管道）对客户端与服务器之间的连续字节流进行操作。 该流通过 <xref:System.IO.Stream> 对象实现。 在流升级中，客户端需要向通道堆栈中添加可选的协议层，并要求通信通道的另一端也执行该操作。 流升级包括使用升级后的对象替换原始 <xref:System.IO.Stream> 对象的过程。  
@@ -32,35 +32,35 @@ ms.locfileid: "59977764"
 ## <a name="how-to-implement-a-stream-upgrade"></a>如何实现流升级  
  Windows Communication Foundation (WCF) 提供了四个`abstract`可以实现的类：  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  若要实现自定义流升级，请执行下列操作。 此过程在客户端计算机和服务器计算机上均实现最低流升级过程。  
   
 1. 创建用于实现 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> 的类。  
   
-    1.  重写要在所升级的流中采用的 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> 方法，并返回升级后的流。 此方法同步工作；异步启动升级存在类似方法。  
+    1. 重写要在所升级的流中采用的 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> 方法，并返回升级后的流。 此方法同步工作；异步启动升级存在类似方法。  
   
-    2.  重写 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 方法以检查其他升级。  
+    2. 重写 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 方法以检查其他升级。  
   
 2. 创建用于实现 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> 的类。  
   
-    1.  重写要在所升级的流中采用的 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> 方法，并返回升级后的流。 此方法同步工作；异步接受升级存在类似方法。  
+    1. 重写要在所升级的流中采用的 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> 方法，并返回升级后的流。 此方法同步工作；异步接受升级存在类似方法。  
   
-    2.  重写 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 方法，以确定在升级过程中的此时该升级接受程序是否支持请求的升级。  
+    2. 重写 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 方法，以确定在升级过程中的此时该升级接受程序是否支持请求的升级。  
   
 3. 创建用于实现 <xref:System.ServiceModel.Channels.StreamUpgradeProvider> 的类。 重写 <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> 方法和 <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> 方法，以返回步骤 2 和步骤 1 中定义的接受程序和发起程序的实例。  
   
 4. 创建用于实现 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 的类。  
   
-    1.  在客户端上重写 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> 方法，然后在服务上重写 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> 方法。  
+    1. 在客户端上重写 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> 方法，然后在服务上重写 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> 方法。  
   
-    2.  在客户端上重写 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 方法，然后在服务上重写 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 方法，以便将升级“绑定元素”添加到 <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>。  
+    2. 在客户端上重写 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 方法，然后在服务上重写 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 方法，以便将升级“绑定元素”添加到 <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>。  
   
 5. 将新的流升级绑定元素添加到服务器计算机和客户端计算机上的绑定。  
   

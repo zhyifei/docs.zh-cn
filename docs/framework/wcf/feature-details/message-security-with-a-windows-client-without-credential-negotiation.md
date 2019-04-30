@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038590"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>没有凭据协商的 Windows 客户端的消息安全
 以下方案显示了 Windows Communication Foundation (WCF) 客户端和受保护的 Kerberos 协议的服务。  
@@ -36,9 +36,9 @@ ms.locfileid: "59344827"
 ## <a name="service"></a>服务  
  下面的代码和配置应独立运行。 执行下列操作之一：  
   
--   使用代码（而不使用配置）创建独立服务。  
+- 使用代码（而不使用配置）创建独立服务。  
   
--   使用提供的配置创建服务，但不定义任何终结点。  
+- 使用提供的配置创建服务，但不定义任何终结点。  
   
 ### <a name="code"></a>代码  
  下面的代码创建使用消息安全的服务终结点。 代码禁用了服务凭据协商并禁止建立安全上下文令牌 (SCT)。  
@@ -95,9 +95,9 @@ ms.locfileid: "59344827"
 ## <a name="client"></a>客户端  
  下面的代码和配置应独立运行。 执行下列操作之一：  
   
--   使用代码（和客户端代码）创建独立客户端。  
+- 使用代码（和客户端代码）创建独立客户端。  
   
--   创建不定义任何终结点地址的客户端。 而使用将配置名称作为自变量的客户端构造函数。 例如：  
+- 创建不定义任何终结点地址的客户端。 而使用将配置名称作为自变量的客户端构造函数。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

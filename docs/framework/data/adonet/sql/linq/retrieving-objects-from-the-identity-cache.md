@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033470"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>从实体缓存检索对象
 本主题介绍从 <xref:System.Data.Linq.DataContext> 管理的标识缓存中返回对象的 LINQ to SQL 查询类型。  
@@ -24,39 +24,39 @@ ms.locfileid: "59211226"
   
  查询必须具有以下常规形式之一，才能从标识缓存中检索对象：  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  在这些常规形式中，`Function1`、`Function2` 和 `predicate` 定义如下。  
   
  `Function1` 可以是以下任意形式：  
   
--   <xref:System.Linq.Queryable.Where%2A>  
+- <xref:System.Linq.Queryable.Where%2A>  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `Function2` 可以是以下任意形式：  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  `predicate` 必须是一个表达式，并且其中对象的主键属性必须设置为常量值。 如果对象的主键由多个属性定义，则每个主键属性都必须设置为常量值。 下面的示例是 `predicate` 必须采用的形式：  
   
--   `c => c.PK == constant_value`  
+- `c => c.PK == constant_value`  
   
--   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
+- `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>示例  
  下面的代码提供了从标识缓存中检索对象的 LINQ to SQL 查询类型的示例。  

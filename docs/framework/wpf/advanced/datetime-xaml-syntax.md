@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
 ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052919"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 语法
 某些控件，例如<xref:System.Windows.Controls.Calendar>并<xref:System.Windows.Controls.DatePicker>，具有使用的属性<xref:System.DateTime>类型。 虽然通常会在运行时在代码隐藏中指定这些控件的初始日期或时间，但可以在 XAML 中指定初始日期或时间。 WPF XAML 分析器处理的分析<xref:System.DateTime>值使用内置的 XAML 文本语法。 本主题介绍的细节<xref:System.DateTime>XAML 文本语法。  

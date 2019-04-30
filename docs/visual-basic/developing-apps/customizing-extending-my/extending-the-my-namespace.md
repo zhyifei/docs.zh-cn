@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014214"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>扩展 Visual Basic 中的 My 命名空间
 `My`在 Visual Basic 中的命名空间公开属性和方法，您可以轻松地充分利用.NET Framework 的强大功能。 `My`命名空间简化了常见编程问题，通常可一行代码将一个困难的任务。 此外，`My`命名空间可完全扩展，使你可以自定义的行为`My`并将新的服务添加到其层次结构，以适应特定的应用程序需求。 本主题将讨论如何自定义的现有成员`My`命名空间以及如何添加到你自己自定义类`My`命名空间。  
   
  **主题内容**  
   
--   [自定义现有我 Namespace 成员](#customizing)  
+- [自定义现有我 Namespace 成员](#customizing)  
   
--   [将成员添加到我的对象](#addingtoobjects)  
+- [将成员添加到我的对象](#addingtoobjects)  
   
--   [自定义将对象添加到我 Namespace](#addingcustom)  
+- [自定义将对象添加到我 Namespace](#addingcustom)  
   
--   [将成员添加到我 Namespace](#addingtonamespace)  
+- [将成员添加到我 Namespace](#addingtonamespace)  
   
--   [将事件添加到自定义 My 对象](#addingevents)  
+- [将事件添加到自定义 My 对象](#addingevents)  
   
--   [设计指南](#design)  
+- [设计指南](#design)  
   
--   [设计的类库我](#designing)  
+- [设计的类库我](#designing)  
   
--   [打包和部署扩展](#packaging)  
+- [打包和部署扩展](#packaging)  
   
 ## <a name="customizing"></a> 自定义现有我 Namespace 成员  
  `My`命名空间中 Visual Basic 公开经常使用你的应用程序、 您的计算机，和的详细信息。 有关中的对象的完整列表`My`命名空间，请参阅[我引用](../../../visual-basic/language-reference/keywords/my-reference.md)。 您可能要自定义的现有成员`My`命名空间，以便他们更好地匹配应用程序的需求。 中的对象的任何属性`My`命名空间不是只读的可以设置为自定义值。  
@@ -76,22 +76,22 @@ ms.locfileid: "58814144"
 ## <a name="design"></a> 设计指南  
  开发扩展时`My`命名空间中，使用以下准则来帮助你扩展组件的维护成本降至最低。  
   
--   **包括仅扩展逻辑。** 包含的逻辑`My`命名空间扩展应包括仅公开在所需的功能所需的代码`My`命名空间。 因为您的扩展插件将驻留在用户项目为源代码，更新的扩展组件都会产生高额的维护成本，并应尽可能避免使用。  
+- **包括仅扩展逻辑。** 包含的逻辑`My`命名空间扩展应包括仅公开在所需的功能所需的代码`My`命名空间。 因为您的扩展插件将驻留在用户项目为源代码，更新的扩展组件都会产生高额的维护成本，并应尽可能避免使用。  
   
--   **最小化项目的假设。** 当你创建的扩展`My`命名空间中，不要假设一组引用，项目级别导入或特定的编译器设置 (例如，`Option Strict`关闭)。 相反，最小化依赖项并使用完全限定所有类型引用`Global`关键字。 此外，请确保该扩展编译有`Option Strict`上以最大程度减少扩展中的错误。  
+- **最小化项目的假设。** 当你创建的扩展`My`命名空间中，不要假设一组引用，项目级别导入或特定的编译器设置 (例如，`Option Strict`关闭)。 相反，最小化依赖项并使用完全限定所有类型引用`Global`关键字。 此外，请确保该扩展编译有`Option Strict`上以最大程度减少扩展中的错误。  
   
--   **隔离扩展插件代码。** 将代码放在一个文件使您的扩展插件可轻松部署为 Visual Studio 项模板。 有关详细信息，请参阅本主题后面的"打包和部署扩展"。 将所有`My`单个文件中的命名空间扩展插件代码或在项目中的单独文件夹还有助于用户查找`My`命名空间扩展。  
+- **隔离扩展插件代码。** 将代码放在一个文件使您的扩展插件可轻松部署为 Visual Studio 项模板。 有关详细信息，请参阅本主题后面的"打包和部署扩展"。 将所有`My`单个文件中的命名空间扩展插件代码或在项目中的单独文件夹还有助于用户查找`My`命名空间扩展。  
   
 ## <a name="designing"></a> 设计的类库我  
  对于多数对象模型情况一样，一些设计模式非常适合在`My`命名空间和其他人不这样做。 设计的扩展时`My`命名空间，请考虑以下原则：  
   
--   **无状态方法。** 中的方法`My`命名空间应提供某项特定任务的完整解决方案。 请确保传递给方法的参数值提供完成特定任务所需的所有输入。 避免创建依赖于以前的状态，如对资源的打开连接的方法。  
+- **无状态方法。** 中的方法`My`命名空间应提供某项特定任务的完整解决方案。 请确保传递给方法的参数值提供完成特定任务所需的所有输入。 避免创建依赖于以前的状态，如对资源的打开连接的方法。  
   
--   **全局实例。** 在中维护的唯一状态`My`命名空间是全局性的项目。 例如，`My.Application.Info`封装整个应用程序共享的状态。  
+- **全局实例。** 在中维护的唯一状态`My`命名空间是全局性的项目。 例如，`My.Application.Info`封装整个应用程序共享的状态。  
   
--   **简单的参数类型。** 为简单起见通过避免复杂的参数类型。 相反，创建不采取输入任何参数的方法或执行简单的输入的类型，如字符串、 基元类型和等等。  
+- **简单的参数类型。** 为简单起见通过避免复杂的参数类型。 相反，创建不采取输入任何参数的方法或执行简单的输入的类型，如字符串、 基元类型和等等。  
   
--   **工厂方法。** 有些类型不一定困难，若要实例化。 提供工厂方法作为扩展`My`命名空间，可更轻松地发现和使用属于此类别的类型。 工厂方法，适合于的一个示例是`My.Computer.FileSystem.OpenTextFileReader`。 有多个流类型在.NET Framework 中可用。 具体而言，指定文本文件`OpenTextFileReader`可帮助用户了解要使用的流。  
+- **工厂方法。** 有些类型不一定困难，若要实例化。 提供工厂方法作为扩展`My`命名空间，可更轻松地发现和使用属于此类别的类型。 工厂方法，适合于的一个示例是`My.Computer.FileSystem.OpenTextFileReader`。 有多个流类型在.NET Framework 中可用。 具体而言，指定文本文件`OpenTextFileReader`可帮助用户了解要使用的流。  
   
  这些准则并不排除类库的常规设计原则。 相反，它们是针对使用的 Visual Basic 开发人员进行了优化的建议和`My`命名空间。 用于创建类库的常规设计原则，请参阅[Framework 设计准则](../../../standard/design-guidelines/index.md)。  
   

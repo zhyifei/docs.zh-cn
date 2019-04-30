@@ -3,22 +3,22 @@ title: 动态启用分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999456"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>动态启用分析跟踪
 通过 Windows 操作系统附带的工具，可以使用 Windows 事件跟踪 (ETW) 动态启用或禁用跟踪。 所有[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) 服务，分析跟踪可以启用和禁用动态而无需修改应用程序的 Web.config 文件或重新启动该服务。 这样，发出跟踪事件的应用程序就可以保持原样。  
   
  可以以类似的方式配置 WCF 跟踪选项。 例如，可以将严重性级别从 **Error** 更改为 **Information** 而不影响应用程序。 可以使用以下工具来实现此功能：  
   
--   **Logman** – 一个命令行工具，用于配置、控制和查询跟踪数据。 有关详细信息，请参阅[Logman 创建跟踪](https://go.microsoft.com/fwlink/?LinkId=165426)并[Logman 更新跟踪](https://go.microsoft.com/fwlink/?LinkId=165427)。  
+- **Logman** – 一个命令行工具，用于配置、控制和查询跟踪数据。 有关详细信息，请参阅[Logman 创建跟踪](https://go.microsoft.com/fwlink/?LinkId=165426)并[Logman 更新跟踪](https://go.microsoft.com/fwlink/?LinkId=165427)。  
   
--   **EventViewer** - Windows 图形管理工具，用于查看跟踪的结果。 有关详细信息，请参阅[WCF 服务和 Windows 的事件跟踪](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)并[事件查看器](https://go.microsoft.com/fwlink/?LinkId=165428)。  
+- **EventViewer** - Windows 图形管理工具，用于查看跟踪的结果。 有关详细信息，请参阅[WCF 服务和 Windows 的事件跟踪](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)并[事件查看器](https://go.microsoft.com/fwlink/?LinkId=165428)。  
   
--   **Perfmon** – Windows 图形管理工具，它使用计数器监视跟踪计数器以及跟踪对性能的影响。 有关详细信息，请参阅[数据收集器设置手动创建](https://go.microsoft.com/fwlink/?LinkId=165429)。  
+- **Perfmon** – Windows 图形管理工具，它使用计数器监视跟踪计数器以及跟踪对性能的影响。 有关详细信息，请参阅[数据收集器设置手动创建](https://go.microsoft.com/fwlink/?LinkId=165429)。  
   
 ### <a name="keywords"></a>关键字  
  使用 <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> 类时，通常按严重性级别（如 Error、Warning 和 Information）筛选 .NET Framework 跟踪消息。 ETW 支持严重性级别概念，但引入了使用关键字的新型灵活筛选器机制。 关键字为任意文本值，用于使跟踪事件提供有关事件含义的附加上下文。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
 ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962573"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误
 可以使用 Windows 窗体<xref:System.Windows.Forms.ErrorProvider>若要查看的数据集或其他数据源中的列错误的组件。 有关<xref:System.Windows.Forms.ErrorProvider>组件，在窗体上显示数据错误它不一定要直接与控件相关联。 一旦它绑定到数据源，它可以显示绑定到相同的数据源的任何控件旁的错误图标。  

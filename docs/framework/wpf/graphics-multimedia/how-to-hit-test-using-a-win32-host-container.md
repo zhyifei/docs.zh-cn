@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
 ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025101"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>如何：使用 Win32 宿主容器进行命中测试
 可以创建视觉对象中的[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]通过视觉对象提供宿主窗口容器的窗口。 若要为包含的视觉对象提供事件处理，需要处理传递到宿主窗口容器的消息筛选器循环的消息。 请参阅[教程：承载在 Win32 应用程序中的视觉对象](tutorial-hosting-visual-objects-in-a-win32-application.md)有关详细信息如何托管中的可视化对象[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。  

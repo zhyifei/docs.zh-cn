@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037123"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>加载延迟的内容（WCF 数据服务）
 默认情况下，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 会限制查询返回的数据量。 不过，如果需要，您可以从该数据服务显式加载其他数据，包括相关实体、分页响应数据以及二进制数据流。 本主题介绍如何将这种延迟的内容加载到应用程序。  
@@ -22,14 +22,14 @@ ms.locfileid: "59518001"
 ## <a name="related-entities"></a>相关实体  
  执行查询时，仅返回所处理实体集中的实体。 例如，当针对 Northwind 数据服务的某个查询返回 `Customers` 实体时，默认情况下不会返回相关的 `Orders` 实体，即使 `Customers` 和 `Orders` 之间存在关系也是如此。 此外，如果数据服务中启用了分页，则必须从该服务显式加载后续数据页。 可通过以下两种方法来加载相关实体：  
   
--   **预先加载**:可以使用`$expand`查询选项来请求查询返回与该实体的关联相关的实体集所请求的查询。 使用 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 的 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法将 `$expand` 选项添加到发送给数据服务的查询。 可以请求多个相关的实体集，方法是用逗号分隔它们，如下面的示例所示。 查询请求的所有实体均在单个响应中返回。 下面的示例将返回 `Order_Details` 以及 `Customers` 和 `Orders` 实体集：  
+- **预先加载**:可以使用`$expand`查询选项来请求查询返回与该实体的关联相关的实体集所请求的查询。 使用 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 的 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法将 `$expand` 选项添加到发送给数据服务的查询。 可以请求多个相关的实体集，方法是用逗号分隔它们，如下面的示例所示。 查询请求的所有实体均在单个响应中返回。 下面的示例将返回 `Order_Details` 以及 `Customers` 和 `Orders` 实体集：  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]将实体集数量限制为 12，这是可通过使用 `$expand` 查询选项包括在单个查询中的数量。  
   
--   **显式加载**:您可以调用<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>方法<xref:System.Data.Services.Client.DataServiceContext>要显式加载相关的实体实例。 每次调用 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法都会创建一个对数据服务的单独请求。 下面的示例为 `Order_Details` 实体显式加载 `Orders`：  
+- **显式加载**:您可以调用<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>方法<xref:System.Data.Services.Client.DataServiceContext>要显式加载相关的实体实例。 每次调用 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 方法都会创建一个对数据服务的单独请求。 下面的示例为 `Order_Details` 实体显式加载 `Orders`：  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

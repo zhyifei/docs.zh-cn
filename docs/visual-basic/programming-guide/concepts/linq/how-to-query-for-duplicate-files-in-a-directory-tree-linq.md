@@ -3,11 +3,11 @@ title: 如何：查询目录树 (LINQ) (Visual Basic 中) 中的重复文件
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
 ms.openlocfilehash: 81955b18755f41a582aed7768c709c8e77cffba6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024334"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>如何：查询目录树 (LINQ) (Visual Basic 中) 中的重复文件
 有时，具有相同名称的文件可能位于多个文件夹中。 例如，在 Visual Studio 安装文件夹下，多个文件夹中都有 readme.htm 文件。 此示例显示如何在指定根文件夹下查询此类重复文件名。 第二个示例显示如何查询大小和创建时间都匹配的文件。  

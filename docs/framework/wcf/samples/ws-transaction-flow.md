@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007469"
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
 本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务，但操作经过属性化，以演示了如何使用`TransactionFlowAttribute`与**TransactionFlowOption**若要确定到什么程度事务启用流的枚举。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  
@@ -39,13 +39,13 @@ public interface ICalculator
 
  这按处理操作的顺序定义这些操作：  
   
--   `Add` 操作请求必须包括流事务。  
+- `Add` 操作请求必须包括流事务。  
   
--   `Subtract` 操作请求可能包括流事务。  
+- `Subtract` 操作请求可能包括流事务。  
   
--   由于显式 NotAllowed 设置，`Multiply` 操作请求不得包括流事务。  
+- 由于显式 NotAllowed 设置，`Multiply` 操作请求不得包括流事务。  
   
--   由于省略 `Divide` 属性，`TransactionFlow` 操作请求不得包括流事务。  
+- 由于省略 `Divide` 属性，`TransactionFlow` 操作请求不得包括流事务。  
   
  若要启用事务流，使用绑定[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)除了适当的操作属性必须使用启用的属性。 在本示例中，除了元数据交换终结点以外，服务的配置还公开 TCP 终结点和 HTTP 终结点。 TCP 终结点和 HTTP 终结点使用以下绑定，其中有两种[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)启用的属性。  
   
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  对操作的调用如下：  
   
--   `Add` 请求将必需的事务流动到服务，服务的操作在客户端的事务范围内发生。  
+- `Add` 请求将必需的事务流动到服务，服务的操作在客户端的事务范围内发生。  
   
--   第一个 `Subtract` 请求也将允许的事务流动到服务，服务的操作再次在客户端的事务范围内发生。  
+- 第一个 `Subtract` 请求也将允许的事务流动到服务，服务的操作再次在客户端的事务范围内发生。  
   
--   第二个 `Subtract` 请求在用 `TransactionScopeOption.Suppress` 选项声明的新事务范围内执行。 这会禁止客户端的初始外层事务，请求不会将事务流动到服务。 此方法允许客户端显式放弃和防止将事务流动到服务（不需要流动时）。 服务的操作发生在新的未连接的事务范围内。  
+- 第二个 `Subtract` 请求在用 `TransactionScopeOption.Suppress` 选项声明的新事务范围内执行。 这会禁止客户端的初始外层事务，请求不会将事务流动到服务。 此方法允许客户端显式放弃和防止将事务流动到服务（不需要流动时）。 服务的操作发生在新的未连接的事务范围内。  
   
--   `Multiply` 请求不会将事务流动到服务，因为客户端的生成的 `ICalculator` 接口定义包括设置为 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
+- `Multiply` 请求不会将事务流动到服务，因为客户端的生成的 `ICalculator` 接口定义包括设置为 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
   
--   `Divide` 请求不会将事务流动到服务，因为客户端的 `ICalculator` 接口生成的定义再次没有包括 `TransactionFlowAttribute`。 服务的操作再次发生在另一个新的未连接的事务范围内。  
+- `Divide` 请求不会将事务流动到服务，因为客户端的 `ICalculator` 接口生成的定义再次没有包括 `TransactionFlowAttribute`。 服务的操作再次发生在另一个新的未连接的事务范围内。  
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
@@ -238,47 +238,47 @@ Press <ENTER> to terminate the service.
   
 1. 在运行 Windows Server 2003 或 Windows XP 的服务计算机上，按以下说明配置 MSDTC 以允许传入网络事务。  
   
-    1.  从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
+    1. 从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
   
-    2.  展开**组件服务**。 打开**计算机**文件夹。  
+    2. 展开**组件服务**。 打开**计算机**文件夹。  
   
-    3.  右键单击**我的电脑**，然后选择**属性**。  
+    3. 右键单击**我的电脑**，然后选择**属性**。  
   
-    4.  上**MSDTC**选项卡上，单击**的安全配置**。  
+    4. 上**MSDTC**选项卡上，单击**的安全配置**。  
   
-    5.  检查**网络 DTC 访问**并**允许入站**。  
+    5. 检查**网络 DTC 访问**并**允许入站**。  
   
-    6.  单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
+    6. 单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
   
-    7.  单击“确定”关闭对话框。  
+    7. 单击“确定”关闭对话框。  
   
 2. 在运行 Windows Server 2008 或 Windows Vista 的服务计算机上，按以下说明配置 MSDTC 以允许传入网络事务。  
   
-    1.  从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
+    1. 从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
   
-    2.  展开**组件服务**。 打开**计算机**文件夹。 选择**分布式事务处理协调器**。  
+    2. 展开**组件服务**。 打开**计算机**文件夹。 选择**分布式事务处理协调器**。  
   
-    3.  右键单击**DTC 协调器**，然后选择**属性**。  
+    3. 右键单击**DTC 协调器**，然后选择**属性**。  
   
-    4.  上**安全**选项卡上，选中**网络 DTC 访问**并**允许入站**。  
+    4. 上**安全**选项卡上，选中**网络 DTC 访问**并**允许入站**。  
   
-    5.  单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
+    5. 单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
   
-    6.  单击“确定”关闭对话框。  
+    6. 单击“确定”关闭对话框。  
   
 3. 在客户端计算机上，配置 MSDTC 以允许传出网络事务：  
   
-    1.  从**启动**菜单中，导航到`Control Panel`，然后**管理工具**，，然后**组件服务**。  
+    1. 从**启动**菜单中，导航到`Control Panel`，然后**管理工具**，，然后**组件服务**。  
   
-    2.  右键单击**我的电脑**，然后选择**属性**。  
+    2. 右键单击**我的电脑**，然后选择**属性**。  
   
-    3.  上**MSDTC**选项卡上，单击**的安全配置**。  
+    3. 上**MSDTC**选项卡上，单击**的安全配置**。  
   
-    4.  检查**网络 DTC 访问**并**允许出站**。  
+    4. 检查**网络 DTC 访问**并**允许出站**。  
   
-    5.  单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
+    5. 单击**确定**，然后单击**是**以重新启动 MSDTC 服务。  
   
-    6.  单击“确定”关闭对话框。  
+    6. 单击“确定”关闭对话框。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

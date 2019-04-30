@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
 ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013434"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>如何：显示 Windows 窗体 ListView 控件的图标
 Windows 窗体<xref:System.Windows.Forms.ListView>控件可以显示来自三个图像列表的图标。 列表、 详细信息，以及 SmallIcon 视图中显示图像的图像列表中指定<xref:System.Windows.Forms.ListView.SmallImageList%2A>属性。 图标视图将从图像列表中指定的图像显示<xref:System.Windows.Forms.ListView.LargeImageList%2A>属性。 列表视图还可以显示一组额外的图标，在中设置<xref:System.Windows.Forms.ListView.StateImageList%2A>属性旁边的大或小图标。 有关图像列表的详细信息，请参阅[ImageList 组件](imagelist-component-windows-forms.md)和[如何：添加或删除图像与 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  

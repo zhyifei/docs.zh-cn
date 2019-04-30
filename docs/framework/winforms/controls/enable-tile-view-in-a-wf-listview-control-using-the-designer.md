@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
 ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972104"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器在 Windows 窗体 ListView 控件中启用平铺视图
 磁贴视图功能<xref:System.Windows.Forms.ListView>控件使您可以提供一种视觉平衡图形和文本信息之间。 磁贴视图中，为项目显示的文本信息与为详细信息视图定义的列信息相同。 磁贴视图功能结合的分组或插入标记中的功能<xref:System.Windows.Forms.ListView>控件。  

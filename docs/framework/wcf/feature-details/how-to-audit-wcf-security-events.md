@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 ms.openlocfilehash: 634489ced9b437d7b273eb5fa1092165cc6a935f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047957"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
 Windows Communication Foundation (WCF)，可安全事件记录到 Windows 事件日志中，可以使用 Windows 事件查看器查看。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  

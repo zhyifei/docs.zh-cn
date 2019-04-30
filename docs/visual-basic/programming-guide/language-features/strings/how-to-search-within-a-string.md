@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
 ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032079"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>如何：字符串 (Visual Basic 中) 内的搜索
 此示例调用<xref:System.String.IndexOf%2A>方法<xref:System.String>要报告的子字符串的第一个匹配项的索引对象。  
@@ -22,7 +22,7 @@ ms.locfileid: "58823293"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   `Imports`语句指定<xref:System>命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+- `Imports`语句指定<xref:System>命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="robust-programming"></a>可靠编程  
  <xref:System.String.IndexOf%2A>方法报告的子字符串的第一个匹配项的第一个字符位置。 索引是基于 0 的这意味着字符串的第一个字符的索引为 0。  

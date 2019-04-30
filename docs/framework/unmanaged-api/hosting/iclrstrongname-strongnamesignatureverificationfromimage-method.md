@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a7e09ac96a8803f41d78b532c9da67315e5dd6b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992805"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage 方法
 验证已映射到内存的程序集对关联的公钥是否有效。  
@@ -48,22 +48,22 @@ HRESULT StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in]影响验证行为的标志。 支持以下值：  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001)-强制实施验证，即使需要重写注册表设置。  
+- `SN_INFLAG_FORCE_VER` (0x00000001)-强制实施验证，即使需要重写注册表设置。  
   
--   `SN_INFLAG_INSTALL` (0x00000002)-指定在此映像上执行第一次验证。  
+- `SN_INFLAG_INSTALL` (0x00000002)-指定在此映像上执行第一次验证。  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定缓存将允许仅对具有管理权限的用户的访问。  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定缓存将允许仅对具有管理权限的用户的访问。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定程序集可以访问仅向当前用户。  
+- `SN_INFLAG_USER_ACCESS` (0x00000008)-指定程序集可以访问仅向当前用户。  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定缓存将提供不保证其访问限制。  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定缓存将提供不保证其访问限制。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000)-保留以用于内部调试。  
+- `SN_INFLAG_RUNTIME` (0x80000000)-保留以用于内部调试。  
   
  `pdwOutFlags`  
  [out]有关其他输出信息标志。 支持以下值：  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值设置为`false`指定注册表设置使验证成功。  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值设置为`false`指定注册表设置使验证成功。  
   
 ## <a name="return-value"></a>返回值  
  `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e538d288-2070-40ca-9da6-4fbc68cd6ad0
 ms.openlocfilehash: aedf89f1e570b34d31050fabb91842cefe351488
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033730"
 ---
 # <a name="how-to-query-for-information"></a>如何：查询信息
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的查询与 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中的查询使用相同的语法。 唯一的区别是中引用的对象[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查询映射到数据库中的元素。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  

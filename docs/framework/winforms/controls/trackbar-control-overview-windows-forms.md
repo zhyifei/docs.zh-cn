@@ -9,11 +9,11 @@ helpviewer_keywords:
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
 ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009261"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.TrackBar>控件 （有时也称为"滑块"控件） 用于浏览大量的信息或用于直观地调整数字设置。 <xref:System.Windows.Forms.TrackBar>控件具有两个部分： thumb，也称为滑块，将和刻度线。 滚动块是可调整的一部分。 其位置对应于<xref:System.Windows.Forms.TrackBar.Value%2A>属性。 刻度线是按固定间隔分布的可视指示符。 指定并可以水平或垂直对齐的增量移动跟踪条。 例如，可能会使用跟踪条以控制光标闪烁速率或鼠标的速度的系统。  

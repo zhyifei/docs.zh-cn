@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032469"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
@@ -21,11 +21,11 @@ ms.locfileid: "59332139"
 ## <a name="nulls-and-three-valued-logic"></a>空和三值逻辑  
  在列定义中允许空值将三值逻辑引入您的应用程序。 可以将比较计算为以下三个条件之一：  
   
--   True  
+- True  
   
--   False  
+- False  
   
--   未知  
+- 未知  
   
  因为空被视作未知，所以，对两个空值进行彼此比较，其结果不被视为相等。 在使用算术运算符的表达式中，如果任何操作数为空，结果也为空。  
   

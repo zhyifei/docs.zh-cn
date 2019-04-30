@@ -3,11 +3,11 @@ title: WS 2007 联合 HTTP 绑定
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
 ms.openlocfilehash: 550a88552658864e3eedb70463e676ad6f9a2511
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007508"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 联合 HTTP 绑定
 此示例演示 <xref:System.ServiceModel.WS2007FederationHttpBinding> 的用法，它是一个标准绑定，可用来生成支持 1.3 版 WS-Trust 规范的联合方案。  

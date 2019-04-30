@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010665"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
 <a name="introduction"></a> 代码隐藏是一个术语，用于描述标记定义的对象，与联接的代码时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译。 本主题介绍了代码隐藏的要求以及代码中的可选内联代码机制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
  本主题包含以下各节：  
   
--   [系统必备](#Prerequisites)  
+- [系统必备](#Prerequisites)  
   
--   [代码隐藏和 XAML 语言](#codebehind_and_the_xaml_language)  
+- [代码隐藏和 XAML 语言](#codebehind_and_the_xaml_language)  
   
--   [代码隐藏、 事件处理程序和 WPF 中的分部类要求](#Code_behind__Event_Handler__and_Partial_Class)  
+- [代码隐藏、 事件处理程序和 WPF 中的分部类要求](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [内联代码的限制](#Inline_Code_Limitations)  
+- [内联代码的限制](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
@@ -38,15 +38,15 @@ ms.locfileid: "59088555"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>代码隐藏、 事件处理程序和 WPF 中的分部类要求  
   
--   分部类必须派生自支持的根元素的类型。  
+- 分部类必须派生自支持的根元素的类型。  
   
--   请注意，标记编译生成操作的默认行为下, 您可以将派生留空的分部类定义中的代码隐藏侧。 即使未指定，编译的结果将假定页面根后备类型的分部类的基础。 但是，依赖于此行为不是一种最佳做法。  
+- 请注意，标记编译生成操作的默认行为下, 您可以将派生留空的分部类定义中的代码隐藏侧。 即使未指定，编译的结果将假定页面根后备类型的分部类的基础。 但是，依赖于此行为不是一种最佳做法。  
   
--   在代码隐藏中编写的事件处理程序的实例方法，并且不能为静态方法。 这些方法必须由标识的 CLR 命名空间中的分部类定义`x:Class`。 您不能有资格的一个事件处理程序，以指示名称[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器，查找事件布线，另一个类作用域中的事件处理程序。  
+- 在代码隐藏中编写的事件处理程序的实例方法，并且不能为静态方法。 这些方法必须由标识的 CLR 命名空间中的分部类定义`x:Class`。 您不能有资格的一个事件处理程序，以指示名称[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器，查找事件布线，另一个类作用域中的事件处理程序。  
   
--   该处理程序必须在后备类型系统中匹配相应的事件的委托。  
+- 该处理程序必须在后备类型系统中匹配相应的事件的委托。  
   
--   对于 Microsoft Visual Basic 语言具体而言，您使用的是特定于语言的`Handles`关键字将处理程序相关联的实例和事件处理程序声明，而不是附加处理程序中的属性中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 但是，此方法也存在一些限制，因为`Handles`关键字不能支持所有的特定功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统，如某些路由事件方案或附加事件。 有关详细信息，请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
+- 对于 Microsoft Visual Basic 语言具体而言，您使用的是特定于语言的`Handles`关键字将处理程序相关联的实例和事件处理程序声明，而不是附加处理程序中的属性中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 但是，此方法也存在一些限制，因为`Handles`关键字不能支持所有的特定功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统，如某些路由事件方案或附加事件。 有关详细信息，请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  

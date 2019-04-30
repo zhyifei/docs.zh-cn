@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013741"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>需要对程序集的引用\<assemblyidentity > 包含类型\<类型名称 >，但由于项目之间存在多义性。 找不到合适的引用\<projectname1 > 和\<项目名称 2> >
 表达式使用在项目外部定义的类型，如类、结构、接口、枚举或委托。 但是，你具有对定义该类型的多个程序集的项目引用。  

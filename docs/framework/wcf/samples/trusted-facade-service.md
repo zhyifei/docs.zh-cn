@@ -3,11 +3,11 @@ title: 受信任的外观服务
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007690"
 ---
 # <a name="trusted-facade-service"></a>受信任的外观服务
 此方案示例演示如何流动到另一个使用 Windows Communication Foundation (WCF) 调用方的标识信息从一个服务的安全基础结构。  
@@ -16,11 +16,11 @@ ms.locfileid: "59768184"
   
  本示例包含以下组件：  
   
--   计算器客户端  
+- 计算器客户端  
   
--   计算器外观服务  
+- 计算器外观服务  
   
--   计算器后端服务  
+- 计算器后端服务  
   
  外观服务负责验证请求和对调用方进行身份验证。 成功进行身份验证和验证后，服务将使用从周边网络到内部网络的受控通信通道将请求转发到后端服务。 作为所转发请求的一部分，外观服务包含有关调用方标识的信息，这样后端服务可以在其处理过程中使用此信息。 使用消息 `Username` 标头内部的 `Security` 安全令牌传输调用方标识。 此示例使用 WCF 安全基础结构传输和提取此信息从`Security`标头。  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  下面提供该批处理文件不同部分的简要概述。  
   
--   创建服务器证书。  
+- 创建服务器证书。  
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      `%SERVER_NAME%` 变量指定服务器名，默认值为 localhost。 该证书存储在 LocalMachine 存储区中。  
   
--   将外观服务的证书安装到客户端的受信任证书存储区中。  
+- 将外观服务的证书安装到客户端的受信任证书存储区中。  
   
      下面的行将外观服务的证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。  
   

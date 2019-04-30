@@ -3,11 +3,11 @@ title: 如何：列出所有节点在树 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021617"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何：列出所有节点在树 (Visual Basic)
 有时，列出树中的所有节点会有帮助。 它可帮助准确了解方法或属性是如何影响树的。 以文本形式列出所有节点的一种方法是生成准确逐一地标识树中所有节点的 XPath 表达式。  

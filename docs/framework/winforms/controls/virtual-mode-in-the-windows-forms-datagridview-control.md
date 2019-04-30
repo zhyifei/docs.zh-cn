@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
 ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009131"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的虚拟模式
 虚拟模式下，你可以管理之间的交互<xref:System.Windows.Forms.DataGridView>控件和自定义数据缓存。 若要实现虚拟模式下，设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置为`true`并处理一个或多个本主题中所述的事件。 通常会处理至少`CellValueNeeded`事件，它使数据缓存中的值查找的控件。  

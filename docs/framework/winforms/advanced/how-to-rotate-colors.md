@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
 ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967326"
 ---
 # <a name="how-to-rotate-colors"></a>如何：旋转颜色
 四维颜色空间中的旋转很难直观显示。 我们可以轻松地实现旋转同意接受保持一个固定的颜色组件的可视化效果。 假设我们同意将 alpha 分量固定在 1 （完全不透明）。 然后我们可以直观显示三维颜色空间具有红色、 绿色和蓝色的轴，如下图中所示。  

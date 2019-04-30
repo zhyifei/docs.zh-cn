@@ -3,11 +3,11 @@ title: 如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
 ms.openlocfilehash: 078580b96ab911f65790e58338951532cd7ad704
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047901"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点
 Windows Communication Foundation (WCF) 可以创建公开支持 ASP.NET AJAX 的终结点在客户端网站上可从 JavaScript 中调用的服务。 若要创建这样的终结点，可以使用配置文件（与使用所有其他 WCF 终结点一样），或使用不要求任何配置元素的方法。 本主题演示第二种方法。  
