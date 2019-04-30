@@ -17,41 +17,41 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1eac0b9fe252e476f8ff781f2181a203886d3beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993533"
 ---
-# <a name="icorpublishenum-interface"></a><span data-ttu-id="1c607-102">ICorPublishEnum 接口</span><span class="sxs-lookup"><span data-stu-id="1c607-102">ICorPublishEnum Interface</span></span>
-<span data-ttu-id="1c607-103">提供有关进程和应用程序域的信息的发布中使用的枚举器的抽象基接口。</span><span class="sxs-lookup"><span data-stu-id="1c607-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  
+# <a name="icorpublishenum-interface"></a><span data-ttu-id="25fc0-102">ICorPublishEnum 接口</span><span class="sxs-lookup"><span data-stu-id="25fc0-102">ICorPublishEnum Interface</span></span>
+<span data-ttu-id="25fc0-103">提供有关进程和应用程序域的信息的发布中使用的枚举器的抽象基接口。</span><span class="sxs-lookup"><span data-stu-id="25fc0-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1c607-104">方法</span><span class="sxs-lookup"><span data-stu-id="1c607-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="25fc0-104">方法</span><span class="sxs-lookup"><span data-stu-id="25fc0-104">Methods</span></span>  
   
-|<span data-ttu-id="1c607-105">方法</span><span class="sxs-lookup"><span data-stu-id="1c607-105">Method</span></span>|<span data-ttu-id="1c607-106">描述</span><span class="sxs-lookup"><span data-stu-id="1c607-106">Description</span></span>|  
+|<span data-ttu-id="25fc0-105">方法</span><span class="sxs-lookup"><span data-stu-id="25fc0-105">Method</span></span>|<span data-ttu-id="25fc0-106">描述</span><span class="sxs-lookup"><span data-stu-id="25fc0-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1c607-107">Clone 方法</span><span class="sxs-lookup"><span data-stu-id="1c607-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|<span data-ttu-id="1c607-108">创建一份`ICorPublishEnum`对象。</span><span class="sxs-lookup"><span data-stu-id="1c607-108">Creates a copy of this `ICorPublishEnum` object.</span></span>|  
-|[<span data-ttu-id="1c607-109">GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="1c607-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|<span data-ttu-id="1c607-110">枚举中获取项的数目。</span><span class="sxs-lookup"><span data-stu-id="1c607-110">Gets the number of items in the enumeration.</span></span>|  
-|[<span data-ttu-id="1c607-111">Reset 方法</span><span class="sxs-lookup"><span data-stu-id="1c607-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|<span data-ttu-id="1c607-112">将的光标移到枚举的开头。</span><span class="sxs-lookup"><span data-stu-id="1c607-112">Moves the cursor of to the beginning of the enumeration.</span></span>|  
-|[<span data-ttu-id="1c607-113">Skip 方法</span><span class="sxs-lookup"><span data-stu-id="1c607-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|<span data-ttu-id="1c607-114">将光标向前移动在枚举中指定数目的项。</span><span class="sxs-lookup"><span data-stu-id="1c607-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
+|[<span data-ttu-id="25fc0-107">Clone 方法</span><span class="sxs-lookup"><span data-stu-id="25fc0-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|<span data-ttu-id="25fc0-108">创建一份`ICorPublishEnum`对象。</span><span class="sxs-lookup"><span data-stu-id="25fc0-108">Creates a copy of this `ICorPublishEnum` object.</span></span>|  
+|[<span data-ttu-id="25fc0-109">GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="25fc0-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|<span data-ttu-id="25fc0-110">枚举中获取项的数目。</span><span class="sxs-lookup"><span data-stu-id="25fc0-110">Gets the number of items in the enumeration.</span></span>|  
+|[<span data-ttu-id="25fc0-111">Reset 方法</span><span class="sxs-lookup"><span data-stu-id="25fc0-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|<span data-ttu-id="25fc0-112">将的光标移到枚举的开头。</span><span class="sxs-lookup"><span data-stu-id="25fc0-112">Moves the cursor of to the beginning of the enumeration.</span></span>|  
+|[<span data-ttu-id="25fc0-113">Skip 方法</span><span class="sxs-lookup"><span data-stu-id="25fc0-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|<span data-ttu-id="25fc0-114">将光标向前移动在枚举中指定数目的项。</span><span class="sxs-lookup"><span data-stu-id="25fc0-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1c607-115">备注</span><span class="sxs-lookup"><span data-stu-id="1c607-115">Remarks</span></span>  
- <span data-ttu-id="1c607-116">派生自以下枚举器`ICorPublishEnum`:</span><span class="sxs-lookup"><span data-stu-id="1c607-116">The following enumerators derive from `ICorPublishEnum`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25fc0-115">备注</span><span class="sxs-lookup"><span data-stu-id="25fc0-115">Remarks</span></span>  
+ <span data-ttu-id="25fc0-116">派生自以下枚举器`ICorPublishEnum`:</span><span class="sxs-lookup"><span data-stu-id="25fc0-116">The following enumerators derive from `ICorPublishEnum`:</span></span>  
   
--   [<span data-ttu-id="1c607-117">ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="1c607-117">ICorPublishAppDomainEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
+- [<span data-ttu-id="25fc0-117">ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="25fc0-117">ICorPublishAppDomainEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
   
--   [<span data-ttu-id="1c607-118">ICorPublishProcessEnum</span><span class="sxs-lookup"><span data-stu-id="1c607-118">ICorPublishProcessEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
+- [<span data-ttu-id="25fc0-118">ICorPublishProcessEnum</span><span class="sxs-lookup"><span data-stu-id="25fc0-118">ICorPublishProcessEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
   
-## <a name="requirements"></a><span data-ttu-id="1c607-119">要求</span><span class="sxs-lookup"><span data-stu-id="1c607-119">Requirements</span></span>  
- <span data-ttu-id="1c607-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1c607-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25fc0-119">要求</span><span class="sxs-lookup"><span data-stu-id="25fc0-119">Requirements</span></span>  
+ <span data-ttu-id="25fc0-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="25fc0-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1c607-121">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="1c607-121">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="25fc0-121">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="25fc0-121">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="1c607-122">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c607-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="25fc0-122">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="25fc0-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1c607-123">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c607-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25fc0-123">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25fc0-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c607-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="1c607-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25fc0-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="25fc0-124">See also</span></span>
 
-- [<span data-ttu-id="1c607-125">CorpubPublish 组件类</span><span class="sxs-lookup"><span data-stu-id="1c607-125">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
-- [<span data-ttu-id="1c607-126">调试接口</span><span class="sxs-lookup"><span data-stu-id="1c607-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="25fc0-125">CorpubPublish 组件类</span><span class="sxs-lookup"><span data-stu-id="25fc0-125">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [<span data-ttu-id="25fc0-126">调试接口</span><span class="sxs-lookup"><span data-stu-id="25fc0-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
