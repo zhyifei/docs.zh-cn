@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949937"
 ---
 # <a name="lazy-initialization"></a>迟缓初始化
 对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语迟缓初始化和迟缓实例化是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  
   
--   对象创建成本高且程序可能不会使用它。 例如，假定内存中有具有 `Orders` 属性的 `Customer` 对象，该对象包含大量 `Order` 对象，初始化这些对象需要数据库连接。 如果用户永远不要求显示 Orders 或在计算中使用该数据，则无需使用系统内存或计算周期来创建它。 通过使用 `Lazy<Orders>` 来声明 `Orders` 对象用于迟缓初始化，可以避免在不使用该对象时浪费系统资源。  
+- 对象创建成本高且程序可能不会使用它。 例如，假定内存中有具有 `Orders` 属性的 `Customer` 对象，该对象包含大量 `Order` 对象，初始化这些对象需要数据库连接。 如果用户永远不要求显示 Orders 或在计算中使用该数据，则无需使用系统内存或计算周期来创建它。 通过使用 `Lazy<Orders>` 来声明 `Orders` 对象用于迟缓初始化，可以避免在不使用该对象时浪费系统资源。  
   
--   对象创建成本高，且希望将其创建推迟到其他高成本操作完成后。 例如，假定程序在启动时加载多个对象实例，但是只需立即加载其中一部分。 可以通过推迟初始化不需要的对象，直到创建所需对象，提升程序的启动性能。  
+- 对象创建成本高，且希望将其创建推迟到其他高成本操作完成后。 例如，假定程序在启动时加载多个对象实例，但是只需立即加载其中一部分。 可以通过推迟初始化不需要的对象，直到创建所需对象，提升程序的启动性能。  
   
  虽然可以编写自己的代码来执行迟缓初始化，但我们建议使用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 及其相关的类型还支持线程安全并提供一致的异常传播策略。  
   
@@ -128,11 +128,11 @@ ms.locfileid: "59182294"
   
  <xref:System.Threading.ThreadLocal%601> 包装其对象的方式与 <xref:System.Lazy%601> 非常相似，但存在以下主要区别：  
   
--   每个线程都通过使用其自己的专有数据来初始化线程本地变量，这些数据不能从其他线程访问。  
+- 每个线程都通过使用其自己的专有数据来初始化线程本地变量，这些数据不能从其他线程访问。  
   
--   <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> 属性可以读取和写入，并且可以修改任意次数。 这可能会影响异常传播，例如，一个 `get` 操作可能会引发异常，但下一个操作可能会成功初始化该值。  
+- <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> 属性可以读取和写入，并且可以修改任意次数。 这可能会影响异常传播，例如，一个 `get` 操作可能会引发异常，但下一个操作可能会成功初始化该值。  
   
--   如果没有提供初始化委托，<xref:System.Threading.ThreadLocal%601> 将通过使用该类型的默认值初始化其包装类型。 在这一方面，<xref:System.Threading.ThreadLocal%601> 与 <xref:System.ThreadStaticAttribute> 属性一致。  
+- 如果没有提供初始化委托，<xref:System.Threading.ThreadLocal%601> 将通过使用该类型的默认值初始化其包装类型。 在这一方面，<xref:System.Threading.ThreadLocal%601> 与 <xref:System.ThreadStaticAttribute> 属性一致。  
   
  以下示例显示了每个访问 `ThreadLocal<int>` 实例的线程都将获取其数据的唯一副本。  
   

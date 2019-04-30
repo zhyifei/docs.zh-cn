@@ -3,14 +3,14 @@ title: WS 绑定
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
 ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949898"
 ---
 # <a name="ws-binding"></a>WS 绑定
-本节包含演示 Windows Communication Foundation (WCF) 中的 Windows 服务绑定的示例。  
+本节包含演示 Windows 服务绑定 Windows Communication Foundation (WCF) 中的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [WS 事务流](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  

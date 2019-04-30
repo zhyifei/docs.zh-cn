@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da6321e50082c3f73477b8187cc5bf671655df21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943377"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames 函数
 
@@ -51,7 +51,7 @@ HRESULT QualifierSet_GetNames (
 `lFlags`\
 [in]以下标志或值，该值指定要在枚举中包括哪些名称之一。
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 |  | 0 | 返回所有限定符的名称。 |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 返回限定符的名称特定于当前的属性或对象。 <br/> 属性：返回仅特定于 （包括重写） 的属性限定符，而不从类定义传播这些限定符。 <br/> 实例：返回的是仅特定于实例的限定符名称。 <br/> 类：要派生的类的特定返回仅限定符。
@@ -64,7 +64,7 @@ HRESULT QualifierSet_GetNames (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存，可开始新的枚举。 |

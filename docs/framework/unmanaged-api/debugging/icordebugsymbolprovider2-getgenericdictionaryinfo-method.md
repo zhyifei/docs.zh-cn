@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944644"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
 检索泛型字典映射。  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  该映射由两个顶级部分组成：  
   
--   一个[directory](#Directory)包含在此映射中包括的所有字典的相对虚拟地址 (RVA)。  
+- 一个[directory](#Directory)包含在此映射中包括的所有字典的相对虚拟地址 (RVA)。  
   
--   一个字节对齐[堆](#Heap)包含的对象实例化信息。 在最后一个目录输入后立即开始。  
+- 一个字节对齐[堆](#Heap)包含的对象实例化信息。 在最后一个目录输入后立即开始。  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>目录  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  泛型字典映射的目录部分具有以下结构：  
   
--   前 4 个字节包含字典条目的数量（也就是说，字典中的相对虚拟地址数）。 我们将把此值作为*N*。如果设置了高位，则按相对虚拟地址以升序对条目排序。  
+- 前 4 个字节包含字典条目的数量（也就是说，字典中的相对虚拟地址数）。 我们将把此值作为*N*。如果设置了高位，则按相对虚拟地址以升序对条目排序。  
   
--   *N*的目录项，请执行。 每个条目由 8 个字节（两个 4 字节段）构成：  
+- *N*的目录项，请执行。 每个条目由 8 个字节（两个 4 字节段）构成：  
   
-    -   字节 0-3:RVA;字典的相对虚拟地址。  
+    - 字节 0-3:RVA;字典的相对虚拟地址。  
   
-    -   字节 4-7:偏移量;相对于堆开始的偏移量。  
+    - 字节 4-7:偏移量;相对于堆开始的偏移量。  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>堆  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  在堆上每个实例化信息项的格式为：  
   
--   此实例化信息项的长度（采用压缩 ECMA 元数据格式，以字节为单位）。 该值不包括此长度信息。  
+- 此实例化信息项的长度（采用压缩 ECMA 元数据格式，以字节为单位）。 该值不包括此长度信息。  
   
--   泛型实例化类型的数目或*T*，采用压缩 ECMA 元数据格式。  
+- 泛型实例化类型的数目或*T*，采用压缩 ECMA 元数据格式。  
   
--   *T*每个以 ECMA 类型签名格式表示的类型。  
+- *T*每个以 ECMA 类型签名格式表示的类型。  
   
  包含每个堆元素的长度使目录部分实现简单排序，而不对堆造成影响。  
   

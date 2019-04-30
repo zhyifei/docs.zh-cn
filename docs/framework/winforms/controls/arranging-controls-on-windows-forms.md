@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, positioning on form
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
 ms.openlocfilehash: 75da29036b1afe7275a19a3e1e11a33b0e266edc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954396"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>排列 Windows 窗体上的控件
 通过在窗体上以各种方式放置和操作控件，可以为用户创建直观且实用的用户界面。  

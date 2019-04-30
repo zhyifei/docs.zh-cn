@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 589bd7b2132693c89dc10ae1a5c8d0bf52ed481e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949079"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 方法
 将分配的程序集级别的属性。  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_LocalNotSupported
 ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
 ms.openlocfilehash: 6a8a41a06dda243b724a1c37e74f3f38abf69898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942566"
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>此系统不包含对指定区域设置的支持
 你正尝试使用 `VbStrConv` 枚举，但你的系统不支持指定的区域设置。  

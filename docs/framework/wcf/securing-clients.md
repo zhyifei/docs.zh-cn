@@ -5,11 +5,11 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949612"
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 Windows Communication Foundation (WCF)，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 有关创建安全服务的详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "59331801"
   
  一种常见的证书形式是 X.509 证书。 可以通过两种方式来提供凭据：  
   
--   在客户端代码中对其进行编程（使用 `SetCertificate` 方法）。  
+- 在客户端代码中对其进行编程（使用 `SetCertificate` 方法）。  
   
  通过添加[\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)部分中的客户端的配置文件和使用`clientCredentials`元素 （如下所示）。  
   

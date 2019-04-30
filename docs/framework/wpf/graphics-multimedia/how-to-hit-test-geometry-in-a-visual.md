@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
 ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947337"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>如何：对视觉对象中的几何图形进行命中测试
 此示例演示如何以组成一个或多针对视觉对象执行命中的测试<xref:System.Windows.Media.Geometry>对象。  

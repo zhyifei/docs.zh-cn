@@ -12,19 +12,19 @@ helpviewer_keywords:
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
 ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954344"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel 控件中的自动调整大小行为
 ## <a name="distinct-autosize-behaviors"></a>各种自动调整大小行为  
  <xref:System.Windows.Forms.TableLayoutPanel>控件按以下方式支持自动调整大小行为：  
   
--   通过<xref:System.Windows.Forms.Control.AutoSize%2A>属性;  
+- 通过<xref:System.Windows.Forms.Control.AutoSize%2A>属性;  
   
--   通过<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>属性上的<xref:System.Windows.Forms.TableLayoutPanel>控件的列和行样式。  
+- 通过<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>属性上的<xref:System.Windows.Forms.TableLayoutPanel>控件的列和行样式。  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>具有行和列样式的 AutoSize 属性  
  下表描述了之间的交互<xref:System.Windows.Forms.Control.AutoSize%2A>属性和<xref:System.Windows.Forms.TableLayoutPanel>控件的列和行样式。  

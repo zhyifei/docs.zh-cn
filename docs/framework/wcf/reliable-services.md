@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
 ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955158"
 ---
 # <a name="reliable-services"></a>可靠服务
 队列和可靠会话是实现可靠消息传递的 Windows Communication Foundation (WCF) 功能。 本主题介绍 WCF 的可靠消息传送功能。  
@@ -22,15 +22,15 @@ ms.locfileid: "59216764"
   
  可靠消息传递执行以下功能：  
   
--   传送从源发送到目标的消息的保证，而不管消息传送或传输是否失败。  
+- 传送从源发送到目标的消息的保证，而不管消息传送或传输是否失败。  
   
--   使源和目标相互分离。 即使源或目标不可用，此功能也能为源和目标提供独立的故障与恢复，以及消息的可靠传送和传输。  
+- 使源和目标相互分离。 即使源或目标不可用，此功能也能为源和目标提供独立的故障与恢复，以及消息的可靠传送和传输。  
   
  可靠消息传递经常伴随高延迟成本。 *延迟*是指消息到达来自源目标所需要的时间。 WCF，因此，提供以下类型的可靠消息传送：  
   
--   [可靠会话](../../../docs/framework/wcf/feature-details/reliable-sessions.md)，它提供没有高延迟成本的可靠传送。  
+- [可靠会话](../../../docs/framework/wcf/feature-details/reliable-sessions.md)，它提供没有高延迟成本的可靠传送。  
   
--   [WCF 中的队列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)，它提供可靠传送和源与目标之间的分离。  
+- [WCF 中的队列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)，它提供可靠传送和源与目标之间的分离。  
   
 ## <a name="reliable-sessions"></a>可靠会话  
  可靠会话使用 WS 可靠消息传递协议提供源和目标之间的端到端可靠消息传送，而不管分隔消息（源和目标）终结点的中介的数量和类型如何。 这包括不使用 SOAP 的任何传输中介（例如 HTTP 代理）或在终结点之间流动所必需的使用 SOAP 的中介（例如基于 SOAP 的路由器或网桥）。 可靠会话使用内存中的传送窗口屏蔽 SOAP 消息级别的失败并在传输失败时重新建立连接。  

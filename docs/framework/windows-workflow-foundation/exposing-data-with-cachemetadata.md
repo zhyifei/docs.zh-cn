@@ -3,11 +3,11 @@ title: 使用 CacheMetadata 公开数据
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945699"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>使用 CacheMetadata 公开数据
 
@@ -15,8 +15,7 @@ ms.locfileid: "57482673"
 
 ## <a name="default-cachemetadata-behavior"></a>默认 CacheMetadata 行为
 
-
-  <xref:System.Activities.NativeActivity.CacheMetadata%2A> 所派生活动的 <xref:System.Activities.NativeActivity> 的默认实现将通过以下方式来处理以下方法类型：
+<xref:System.Activities.NativeActivity.CacheMetadata%2A> 所派生活动的 <xref:System.Activities.NativeActivity> 的默认实现将通过以下方式来处理以下方法类型：
 
 - <xref:System.Activities.InArgument%601><xref:System.Activities.OutArgument%601>，或<xref:System.Activities.InOutArgument%601>（泛型自变量）：这些自变量公开给运行时作为参数的名称，并键入等于公开的属性名称和类型、 相应的自变量方向和某些验证数据。
 
@@ -60,7 +59,7 @@ protected override void CacheMetadata(NativeActivityMetadata metadata)
 
 为了使用变量将数据传递给将由活动安排的子活动，有必要将变量添加为实现变量；不能用这种方式设置公共变量的值。 原因在于，活动将更有可能作为功能的实现（有参数）执行，而不是作为封装类（有属性）执行。 但是，在有些情况下，必须显式设置参数，如使用 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> 时，因为安排的活动不能像子活动那样访问父活动的参数。
 
-下面的代码段演示如何使用 <xref:System.Activities.Activity.CacheMetadata%2A> 将参数从本机活动传入一个安排的活动。
+下面的代码段演示如何使用 <xref:System.Activities.Activity.CacheMetadata%2A> 将自变量从本机活动传入一个安排的活动。
 
 ```csharp
 public sealed class ChildActivity : NativeActivity

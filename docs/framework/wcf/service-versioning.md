@@ -3,11 +3,11 @@ title: 服务版本控制
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949781"
 ---
 # <a name="service-versioning"></a>服务版本控制
 服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑版本控制 Windows Communication Foundation (WCF) 中。  
@@ -15,13 +15,13 @@ ms.locfileid: "59122403"
 ## <a name="four-categories-of-service-changes"></a>服务更改的四个类别  
  可能需要的服务更改可分成四类：  
   
--   协定更改：例如，可能会添加一个操作，或在消息中的数据元素可能要添加或更改。  
+- 协定更改：例如，可能会添加一个操作，或在消息中的数据元素可能要添加或更改。  
   
--   地址更改：例如，服务将移动到终结点有新的地址的不同位置。  
+- 地址更改：例如，服务将移动到终结点有新的地址的不同位置。  
   
--   绑定的更改：例如，一种安全机制更改或其设置更改。  
+- 绑定的更改：例如，一种安全机制更改或其设置更改。  
   
--   实现更改：例如，当内部方法实现更改。  
+- 实现更改：例如，当内部方法实现更改。  
   
  这些更改中有一些称为“中断性”，而其他则为“非中断性”。 更改*不间断*如果新版本中已成功处理将成功处理的早期版本中的所有消息。 任何更改都不满足该条件是*重大*更改。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "59122403"
 ### <a name="strict-versioning"></a>严格版本管理  
  很多情况下，当更改版本是一个问题时，服务开发人员无法控制客户端，因此无法假设它们将对消息 XML 或架构中的更改作何反应。 在这些情况下，出于两个原因，必须保证将针对旧架构验证新消息：  
   
--   开发旧客户端时的假设是架构将不会更改。 这些旧客户端可能无法处理设计时并未考虑要处理的消息。  
+- 开发旧客户端时的假设是架构将不会更改。 这些旧客户端可能无法处理设计时并未考虑要处理的消息。  
   
--   旧客户端可能就在尝试处理消息之前针对旧架构执行实际架构验证。  
+- 旧客户端可能就在尝试处理消息之前针对旧架构执行实际架构验证。  
   
  此类情况下的建议方法是将现有数据协定视为不可变，并用唯一的 XML 限定名创建新协定。 服务开发人员然后可向现有服务协定添加新方法或者以使用新数据协定的方法创建新服务协定。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "59122403"
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>区分数据协定和 .NET 类型  
  通过将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于类，.NET 类或结构可映射为数据协定。 .NET 类型与其数据协定映射二者完全不同。 同一个数据协定映射可能有多个 .NET 类型。 此区别尤其有益于允许在保留映射的数据协定的同时更改 .NET 类型，从而甚至在是严格意义上保持与现有客户端的兼容性。 为了保持 .NET 类型与数据协定之间的这一区别，始终应该执行两项操作：  
   
--   指定一个 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>。 应总是指定数据协定的名称和命名空间，以防止在协定中暴露 .NET 类型的名称和命名空间。 这样，如果以后决定更改 .NET 命名空间或类型名称，数据协定将保持不变。  
+- 指定一个 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>。 应总是指定数据协定的名称和命名空间，以防止在协定中暴露 .NET 类型的名称和命名空间。 这样，如果以后决定更改 .NET 命名空间或类型名称，数据协定将保持不变。  
   
--   指定 <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>。 应总是指定数据成员的名称，以防止在协定中暴露 .NET 成员名称。 这样，如果以后决定更改成员的 .NET 名称，数据协定将保持不变。  
+- 指定 <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>。 应总是指定数据成员的名称，以防止在协定中暴露 .NET 成员名称。 这样，如果以后决定更改成员的 .NET 名称，数据协定将保持不变。  
   
 ### <a name="changing-or-removing-members"></a>更改或移除成员  
  即使是在允许宽松版本管理的情况下，更改成员的名称或数据类型或者移除数据成员仍然是中断性更改。 如果必须更改或移除，请创建新的数据协定。  

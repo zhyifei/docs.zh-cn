@@ -14,11 +14,11 @@ helpviewer_keywords:
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
 ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945036"
 ---
 # <a name="class-statement-visual-basic"></a>Class 语句 (Visual Basic)
 声明类的名称，并引入的变量、 属性、 事件和类构成的过程的定义。  
@@ -65,23 +65,23 @@ End Class
   
 ## <a name="rules"></a>规则  
   
--   **嵌套。** 您可以定义一个类在另一个。 外部的类称为*包含类*，内部的类称为*嵌套类*。  
+- **嵌套。** 您可以定义一个类在另一个。 外部的类称为*包含类*，内部的类称为*嵌套类*。  
   
--   **继承。** 如果类使用[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，可以指定只有一个基类或接口。 类不能从多个元素继承。  
+- **继承。** 如果类使用[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)，可以指定只有一个基类或接口。 类不能从多个元素继承。  
   
      类不能从具有限制性更强的访问级别的另一个类继承。 例如，`Public`类不能继承`Friend`类。  
   
      类不能从嵌套在它的类继承。  
   
--   **实现。** 如果类使用[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现定义中指定的每个接口的每个成员`interfacenames`。 一种例外是重新实现的基类成员。 详细信息，请参阅"重新实现"中[实现](../../../visual-basic/language-reference/statements/implements-clause.md)。  
+- **实现。** 如果类使用[Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)，则必须实现定义中指定的每个接口的每个成员`interfacenames`。 一种例外是重新实现的基类成员。 详细信息，请参阅"重新实现"中[实现](../../../visual-basic/language-reference/statements/implements-clause.md)。  
   
--   **默认属性。** 类可以指定最多一个属性作为其*默认属性*。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
+- **默认属性。** 类可以指定最多一个属性作为其*默认属性*。 有关详细信息，请参阅[默认](../../../visual-basic/language-reference/modifiers/default.md)。  
   
 ## <a name="behavior"></a>行为  
   
--   **访问级别。** 在类中，可以声明具有其自己的访问级别的每个成员。 默认为类成员[公共](../../../visual-basic/language-reference/modifiers/public.md)访问，除变量和常量、 到哪些默认[专用](../../../visual-basic/language-reference/modifiers/private.md)访问。 当一个类具有比其成员之一的限制性更强的访问时，类访问权限级别优先。  
+- **访问级别。** 在类中，可以声明具有其自己的访问级别的每个成员。 默认为类成员[公共](../../../visual-basic/language-reference/modifiers/public.md)访问，除变量和常量、 到哪些默认[专用](../../../visual-basic/language-reference/modifiers/private.md)访问。 当一个类具有比其成员之一的限制性更强的访问时，类访问权限级别优先。  
   
--   **作用域。** 类是在整个其包含的命名空间、 类、 结构或模块范围内。  
+- **作用域。** 类是在整个其包含的命名空间、 类、 结构或模块范围内。  
   
      每个类成员的作用域是整个类。  
   
@@ -89,18 +89,18 @@ End Class
   
      类成员具有具体取决于如何以及在何处声明它们的生存期。 有关详细信息，请参阅[在 Visual Basic 中的生存期](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
   
--   **限定。** 在类外部的代码必须限定成员的名称与该类的名称。  
+- **限定。** 在类外部的代码必须限定成员的名称与该类的名称。  
   
      如果在嵌套类的代码发出到编程元素中的非限定的引用，Visual Basic 搜索元素首先在嵌套类中，然后在其包含的类，等到最外面的包含元素。  
   
 ## <a name="classes-and-modules"></a>类和模块  
  这些元素具有许多相似之处，但有一些重要的差异。  
   
--   **术语。** 以前版本的 Visual Basic 识别两种类型的模块：*类模块*（.cls 文件） 和*标准模块*（.bas 文件）。 当前版本调用这些*类*并*模块*分别。  
+- **术语。** 以前版本的 Visual Basic 识别两种类型的模块：*类模块*（.cls 文件） 和*标准模块*（.bas 文件）。 当前版本调用这些*类*并*模块*分别。  
   
--   **共享的成员。** 您可以控制是否在不共享类的成员或实例成员。  
+- **共享的成员。** 您可以控制是否在不共享类的成员或实例成员。  
   
--   **面向对象。** 类是面向对象的但不是模块。 可以创建类的一个或多个实例。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+- **面向对象。** 类是面向对象的但不是模块。 可以创建类的一个或多个实例。 有关详细信息，请参阅[对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Class`语句定义的类和几个成员。  

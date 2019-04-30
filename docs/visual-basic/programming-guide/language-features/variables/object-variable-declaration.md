@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959973"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>对象变量声明 (Visual Basic)
 正常的声明语句用于声明对象变量。 对于数据类型，您指定`Object`(即[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 或更具体的类是要创建该对象。  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>早期绑定的优点  
  声明对象变量作为特定类具有几个优势：  
   
--   自动类型检查  
+- 自动类型检查  
   
--   保证特定类的所有成员访问  
+- 保证特定类的所有成员访问  
   
--   在代码编辑器中的 Microsoft IntelliSense 支持  
+- 在代码编辑器中的 Microsoft IntelliSense 支持  
   
--   改进了的代码的可读性  
+- 改进了的代码的可读性  
   
--   在代码中减少错误  
+- 在代码中减少错误  
   
--   在捕获到错误编译时间而不是运行时  
+- 在捕获到错误编译时间而不是运行时  
   
--   更快地执行代码  
+- 更快地执行代码  
   
 ## <a name="access-to-object-variable-members"></a>对象变量的成员的访问权限  
  当`Option Strict`打开`On`，对象变量可以访问的方法和类与其声明的属性。 下面的示例阐释了这一点。  

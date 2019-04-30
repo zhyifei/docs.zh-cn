@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961355"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体 DataGrid 控件创建主/详细信息列表
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332074"
   
 6. 配置<xref:System.Windows.Forms.DataGrid>控制你想要指定主网格中，按如下所示：  
   
-    1.  选择<xref:System.Data.DataSet>从下拉列表中<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性。  
+    1. 选择<xref:System.Data.DataSet>从下拉列表中<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性。  
   
-    2.  从下拉列表中选择主表 （例如，"客户"）<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性。  
+    2. 从下拉列表中选择主表 （例如，"客户"）<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性。  
   
 7. 配置<xref:System.Windows.Forms.DataGrid>控件指定详细信息网格中，按如下所示：  
   
-    1.  选择<xref:System.Data.DataSet>从下拉列表中<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性。  
+    1. 选择<xref:System.Data.DataSet>从下拉列表中<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性。  
   
-    2.  选择从下拉列表中的母版和详细信息表之间的关系 (例如，"Customers.CustOrd")<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性。 若要查看的关系，通过单击加号展开节点 (**+**) 旁边的下拉列表中的主表。  
+    2. 选择从下拉列表中的母版和详细信息表之间的关系 (例如，"Customers.CustOrd")<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性。 若要查看的关系，通过单击加号展开节点 (**+**) 旁边的下拉列表中的主表。  
   
 ## <a name="see-also"></a>请参阅
 

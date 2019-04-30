@@ -10,11 +10,11 @@ helpviewer_keywords:
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
 ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947571"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>如何：将 Visual 编码为图像文件
 此示例演示如何进行编码<xref:System.Windows.Media.Visual>为图像文件，并使用对象<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和一个<xref:System.Windows.Media.Imaging.PngBitmapEncoder>。  

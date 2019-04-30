@@ -3,11 +3,11 @@ title: MSMQ 传输
 ms.date: 03/30/2017
 ms.assetid: 3f29a2fe-24df-4614-b64c-b0c084fb7003
 ms.openlocfilehash: a2e5384808b82f48bd1d4856bf893130da8c5f1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959414"
 ---
 # <a name="msmq-transport"></a>MSMQ 传输
 本主题列出由 MSMQ 传输生成的所有异常。  
@@ -34,7 +34,7 @@ ms.locfileid: "33474904"
 |MsmqSendError|发送到指定队列时发生错误。 确保已安装和运行 MSMQ。 如果要发送到本地队列，则确保该队列存在并具有所需的访问模式和权限。|  
 |MsmqTimeSpanTooLarge|消息的生存时间太大。 无法发送该消息。 消息的生存时间 (TTL) 不能超过 Int32 最大值。|  
 |MsmqTokenProviderNeededForCertificates|无法找到 X509SecurityTokenProvider。 无法发送该消息。 证书身份验证模式需要 X.509 令牌提供程序。 确保安全令牌提供程序可用于已安装的证书。|  
-|MsmqTransactedDLQExpected|绑定和 MSMQ 配置不匹配。 无法发送消息。 在绑定中指定的自定义死信队列必须是事务性队列。 确保自定义死信队列地址正确并且此队列是事务性队列。|  
+|MsmqTransactedDLQExpected|绑定和 MSMQ 配置不匹配。 无法发送消息。 在绑定中指定的自定义死信队列必须是事务队列。 确保自定义死信队列地址正确并且此队列是事务性队列。|  
 |MsmqTransactionalQueueNeeded|绑定与 MSMQ 队列配置不匹配。 无法启动服务终结点。 ExactlyOnce 属性被设置为 true，而从中读取消息的队列不是事务性队列。 若要更正该错误，请将 ExactlyOnce 属性设置为 false 或者为此绑定创建事务性队列。|  
 |MsmqTransactionCurrentRequired|没有任何事务可用于发送会话中的消息。 发送排队的会话中的消息需要事务。 确保已指定用于发送会话中的消息的事务范围。|  
 |MsmqTransactionRequired|需要事务，但事务不可用。 无法发送或接收消息。 确保已指定用于发送或接收消息的事务范围。|  

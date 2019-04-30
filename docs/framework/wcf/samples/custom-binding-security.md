@@ -6,8 +6,8 @@ ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943931"
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。
@@ -19,9 +19,9 @@ ms.locfileid: "59973577"
 
  服务配置可定义支持以下内容的自定义绑定：
 
--   使用 TLS/SSL 协议保护的 TCP 通信。
+- 使用 TLS/SSL 协议保护的 TCP 通信。
 
--   Windows 消息安全。
+- Windows 消息安全。
 
  自定义绑定配置通过同时启用消息级安全性来启用安全传输。 绑定元素的顺序十分重要中定义自定义绑定，因为每个表示通道堆栈中的层 (请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md))。 自定义绑定在服务和客户端配置文件中进行定义，如下面的示例配置所示。
 
@@ -76,7 +76,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
  下面提供了批处理文件中适用于本示例的各个节的简要概述，以便可以修改批处理文件从而在相应的配置下运行：
 
--   创建服务器证书。
+- 创建服务器证书。
 
      Setup.bat 文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件将服务器名默认为 localhost。
 
@@ -92,7 +92,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   将服务器证书安装到客户端的受信任证书存储区中。
+- 将服务器证书安装到客户端的受信任证书存储区中。
 
      Setup.bat 文件中的以下行将服务器证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
@@ -128,36 +128,36 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 1. 在服务计算机上：  
   
-    1.  在服务计算机上创建一个名为 servicemodelsamples 的虚拟目录。  
+    1. 在服务计算机上创建一个名为 servicemodelsamples 的虚拟目录。  
   
-    2.  将服务程序文件从 \inetpub\wwwroot\servicemodelsamples 复制到服务计算机上的虚拟目录中。 确保复制 \bin 子目录中的文件。  
+    2. 将服务程序文件从 \inetpub\wwwroot\servicemodelsamples 复制到服务计算机上的虚拟目录中。 确保复制 \bin 子目录中的文件。  
   
-    3.  将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
+    3. 将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-    4.  对于使用管理员特权打开 Visual Studio 中开发人员命令提示符处运行以下命令： `Setup.bat service`。 这会用与运行批处理文件的计算机的名称匹配的主题名称创建服务证书。  
+    4. 对于使用管理员特权打开 Visual Studio 中开发人员命令提示符处运行以下命令： `Setup.bat service`。 这会用与运行批处理文件的计算机的名称匹配的主题名称创建服务证书。  
   
         > [!NOTE]
         >  Setup.bat 批处理文件设计为通过 Visual Studio 2010 命令提示运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 Visual Studio 2010 命令提示中自动设置此环境变量。
 
-    5.  更改[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Service.exe.config 文件以反映上一步中生成的证书的使用者名称中。
+    5. 更改[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Service.exe.config 文件以反映上一步中生成的证书的使用者名称中。
 
-    6.  在命令提示符下运行 Service.exe。
+    6. 在命令提示符下运行 Service.exe。
 
 2. 在客户端计算机上：
 
-    1.  将 \client\bin\ 文件夹中的客户端程序文件复制到客户端计算机上。 还要复制 Cleanup.bat 文件。
+    1. 将 \client\bin\ 文件夹中的客户端程序文件复制到客户端计算机上。 还要复制 Cleanup.bat 文件。
 
-    2.  运行 Cleanup.bat 以移除先前示例中使用的所有旧证书。
+    2. 运行 Cleanup.bat 以移除先前示例中使用的所有旧证书。
 
-    3.  使用管理特权打开 Visual Studio 开发人员命令提示，在服务计算机上运行以下命令来导出服务的证书 (替换`%SERVER_NAME%`提供计算机的完全限定的名称，该服务正在运行）：
+    3. 使用管理特权打开 Visual Studio 开发人员命令提示，在服务计算机上运行以下命令来导出服务的证书 (替换`%SERVER_NAME%`提供计算机的完全限定的名称，该服务正在运行）：
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4.  将 %SERVER_NAME%.cer 复制到客户端计算机（用运行服务的计算机的完全限定名称替换 %SERVER_NAME%）。
+    4. 将 %SERVER_NAME%.cer 复制到客户端计算机（用运行服务的计算机的完全限定名称替换 %SERVER_NAME%）。
 
-    5.  通过使用管理特权打开 Visual Studio 开发人员命令提示和客户端计算机上运行以下命令导入服务的证书 (替换 %server_name%的完全限定名称的计算机的位置服务正在运行）：
+    5. 通过使用管理特权打开 Visual Studio 开发人员命令提示和客户端计算机上运行以下命令导入服务的证书 (替换 %server_name%的完全限定名称的计算机的位置服务正在运行）：
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -165,7 +165,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
          如果证书是由可信颁发者颁发的，则不需要执行步骤 c、d 和 e。
 
-    6.  按如下所示修改客户端的 App.config 文件：
+    6. 按如下所示修改客户端的 App.config 文件：
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7.  如果在域环境中 NetworkService 或 LocalSystem 以外的帐户下运行服务，则可能需要修改客户端的 App.config 文件中服务终结点的终结点标识，以便基于用于运行服务的帐户来设置相应的 UPN 或 SPN。 有关终结点标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主题。
+    7. 如果在域环境中 NetworkService 或 LocalSystem 以外的帐户下运行服务，则可能需要修改客户端的 App.config 文件中服务终结点的终结点标识，以便基于用于运行服务的帐户来设置相应的 UPN 或 SPN。 有关终结点标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)主题。
 
-    8.  在命令提示符下运行 Client.exe。
+    8. 在命令提示符下运行 Client.exe。
 
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理
 
--   运行完示例后运行示例文件夹中的 Cleanup.bat。
+- 运行完示例后运行示例文件夹中的 Cleanup.bat。

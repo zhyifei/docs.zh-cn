@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947948"
 ---
 # <a name="user-drawn-controls"></a>用户描述的控件
 .NET Framework 为您提供了轻松开发自己的控件的功能。 可以创建一个用户控件，这是一组标准控件绑定到一起的代码，或您可以设计自己的控件的基础知识，设置。 甚至可以使用继承创建继承自现有控件的控件并将添加到其固有的功能。 无论何种方法使用，.NET Framework 提供了用于绘制用于您创建的任何控件的自定义图形界面的功能。  
   
  控件的绘制通过在控件的代码执行来实现<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 单个参数的<xref:System.Windows.Forms.Control.OnPaint%2A>方法是<xref:System.Windows.Forms.PaintEventArgs>对象，它提供的所有信息和呈现控件所需的功能。 <xref:System.Windows.Forms.PaintEventArgs>作为属性提供了将控件的呈现中使用的两个主要对象：  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 对象的矩形，表示要绘制的控件的一部分。 这可以是整个控件或具体取决于如何绘制控件的控件的一部分。  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 对象的矩形，表示要绘制的控件的一部分。 这可以是整个控件或具体取决于如何绘制控件的控件的一部分。  
   
--   <xref:System.Drawing.Graphics> 对象-封装一些面向图形的对象和提供必要的功能，绘制控件的方法。  
+- <xref:System.Drawing.Graphics> 对象-封装一些面向图形的对象和提供必要的功能，绘制控件的方法。  
   
  有关详细信息<xref:System.Drawing.Graphics>对象以及如何使用它，请参阅[如何：创建用于绘制图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)。  
   

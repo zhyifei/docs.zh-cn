@@ -3,11 +3,11 @@ title: LINQ to XML 安全性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
 ms.openlocfilehash: fb811b86eef9123bf079b9eb45ff1eaa29fde7b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955852"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML 安全性 (Visual Basic)
 本主题说明与 LINQ to XML 相关的安全问题。 此外，它还提供减轻安全隐患的一些指导。  
@@ -26,25 +26,25 @@ ms.locfileid: "58839676"
   
  如果在不足够安全的环境中操作，则可能会遇到许多与 XML 及 <xref:System.Xml?displayProperty=nameWithType>、<xref:System.Xml.Schema?displayProperty=nameWithType>、<xref:System.Xml.XPath?displayProperty=nameWithType> 和 <xref:System.Xml.Xsl?displayProperty=nameWithType> 中的类的使用相关的安全问题。 这些问题包括但不限于以下问题：  
   
--   XSD、XPath 和 XSLT 是基于字符串的语言，您可以使用此语言指定消耗很多时间和内存的操作。 从不受信任的源获取 XSD、XPath 或 XSLT 字符串的应用程序程序员应当负责验证这些字符串以确保其中不包含恶意内容，或监视这些字符串并尽量避免计算这些字符串时消耗过多的系统资源。  
+- XSD、XPath 和 XSLT 是基于字符串的语言，您可以使用此语言指定消耗很多时间和内存的操作。 从不受信任的源获取 XSD、XPath 或 XSLT 字符串的应用程序程序员应当负责验证这些字符串以确保其中不包含恶意内容，或监视这些字符串并尽量避免计算这些字符串时消耗过多的系统资源。  
   
--   XSD 架构（包括内联架构）从本质上就容易受到拒绝服务攻击，因此不应接受来自不受信任的源的架构。  
+- XSD 架构（包括内联架构）从本质上就容易受到拒绝服务攻击，因此不应接受来自不受信任的源的架构。  
   
--   XSD 和 XSLT 可能包括对其他文件的引用，这种引用可能导致跨区和跨域攻击。  
+- XSD 和 XSLT 可能包括对其他文件的引用，这种引用可能导致跨区和跨域攻击。  
   
--   DTD 中的外部实体可能会导致跨区和跨域攻击。  
+- DTD 中的外部实体可能会导致跨区和跨域攻击。  
   
--   DTD 容易受到拒绝服务攻击。  
+- DTD 容易受到拒绝服务攻击。  
   
--   异常深的 XML 文档可能引起拒绝服务问题；您可能需要限制 XML 文档的深度。  
+- 异常深的 XML 文档可能引起拒绝服务问题；您可能需要限制 XML 文档的深度。  
   
--   不接受不受信任的程序集中的支持组件，如 <xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager> 和 <xref:System.Xml.XmlResolver> 对象。  
+- 不接受不受信任的程序集中的支持组件，如 <xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager> 和 <xref:System.Xml.XmlResolver> 对象。  
   
--   分块区读取数据以缓解大文档攻击。  
+- 分块区读取数据以缓解大文档攻击。  
   
--   XSLT 样式表中的脚本块易于受到多种攻击。  
+- XSLT 样式表中的脚本块易于受到多种攻击。  
   
--   构造动态 XPath 表达式之前需仔细验证这些表达式。  
+- 构造动态 XPath 表达式之前需仔细验证这些表达式。  
   
 ## <a name="linq-to-xml-security-issues"></a>LINQ to XML 安全问题  
  本主题中介绍的安全问题不区分顺序。 所有问题都很重要，都应得到相应解决。  

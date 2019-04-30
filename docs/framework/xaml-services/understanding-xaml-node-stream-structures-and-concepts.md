@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954084"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>了解 XAML 节点流结构和概念
 
@@ -45,13 +45,13 @@ XAML 节点流概念具有显著优点，如果你浏览了整个节点流，系
 
 - 根据报告为当前节点或当前记录的 <xref:System.Xaml.XamlNodeType> ，调用下面的一个操作以获取节点内容的相关信息：
 
-    - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartMember> 的 <xref:System.Xaml.XamlNodeType.EndMember>，调用 <xref:System.Xaml.XamlXmlReader.Member%2A> 以获取成员的相关 <xref:System.Xaml.XamlMember> 信息。 请注意，成员可能为 <xref:System.Xaml.XamlDirective>，因此不一定是前一个对象中具有传统定义类型的成员。 例如，应用于对象的 `x:Name` 显示为 XAML 成员，其中 <xref:System.Xaml.XamlMember.IsDirective%2A> 为 true，成员的 <xref:System.Xaml.XamlMember.Name%2A> 为 `Name`，且其他属性指示此指令在 XAML 语言 XAML 命名空间下。
+  - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartMember> 的 <xref:System.Xaml.XamlNodeType.EndMember>，调用 <xref:System.Xaml.XamlXmlReader.Member%2A> 以获取成员的相关 <xref:System.Xaml.XamlMember> 信息。 请注意，成员可能为 <xref:System.Xaml.XamlDirective>，因此不一定是前一个对象中具有传统定义类型的成员。 例如，应用于对象的 `x:Name` 显示为 XAML 成员，其中 <xref:System.Xaml.XamlMember.IsDirective%2A> 为 true，成员的 <xref:System.Xaml.XamlMember.Name%2A> 为 `Name`，且其他属性指示此指令在 XAML 语言 XAML 命名空间下。
 
-    - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartObject> 的 <xref:System.Xaml.XamlNodeType.EndObject>，调用 <xref:System.Xaml.XamlXmlReader.Type%2A> 以获取对象的相关 <xref:System.Xaml.XamlType> 信息。
+  - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 或 <xref:System.Xaml.XamlNodeType.StartObject> 的 <xref:System.Xaml.XamlNodeType.EndObject>，调用 <xref:System.Xaml.XamlXmlReader.Type%2A> 以获取对象的相关 <xref:System.Xaml.XamlType> 信息。
 
-    - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.Value>，调用 <xref:System.Xaml.XamlXmlReader.Value%2A>。 只有节点为成员值的最简单表达式或者对象的初始化文本时，此节点才是一个值（但是，应注意本主题下一节中介绍的类型转换行为）。
+  - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.Value>，调用 <xref:System.Xaml.XamlXmlReader.Value%2A>。 只有节点为成员值的最简单表达式或者对象的初始化文本时，此节点才是一个值（但是，应注意本主题下一节中介绍的类型转换行为）。
 
-    - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>，调用 <xref:System.Xaml.XamlXmlReader.Namespace%2A> ，以获取命名空间节点的命名空间信息。
+  - 对于 <xref:System.Xaml.XamlXmlReader.NodeType%2A> 的 <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>，调用 <xref:System.Xaml.XamlXmlReader.Namespace%2A> ，以获取命名空间节点的命名空间信息。
 
 - 调用 <xref:System.Xaml.XamlXmlReader.Read%2A> ，以使 XAML 读取器前进到 XAML 节点流中的下一个节点，然后重复步骤。
 
@@ -140,15 +140,15 @@ XAML 节点循环以线性方式遍历 XAML 节点流。 节点流遍历对象�
 
 - `Value` 节点表示值本身；不存在“EndValue”。 后面只能接 `EndMember`。
 
-    - 对象的 XAML 初始化文本因可能用于构造而不会导致对象-值结构。 相反，会创建名为 `_Initialization` 的成员的专用成员节点。 并且此成员节点包含初始化值字符串。 如果存在， `_Initialization` 始终为第一个 `StartMember`。 可使用 XAML 语言 XAML 名称范围在限某些 XAML 服务表示形式中限定`_Initialization` ，以阐明 `_Initialization` 不是后备类型中的定义属性。
+  - 对象的 XAML 初始化文本因可能用于构造而不会导致对象-值结构。 相反，会创建名为 `_Initialization` 的成员的专用成员节点。 并且此成员节点包含初始化值字符串。 如果存在， `_Initialization` 始终为第一个 `StartMember`。 可使用 XAML 语言 XAML 名称范围在限某些 XAML 服务表示形式中限定`_Initialization` ，以阐明 `_Initialization` 不是后备类型中的定义属性。
 
-    - 成员-值组合表示值的属性设置。 可能最终为处理此值时使用的值转换器，并且值为纯字符串。 但是，在 XAML 对象编写器处理此节点流后才会计算此值。 XAML 对象编写器处理必需的 XAML 架构上下文、类型系统映射和值转换器所需的其他支持。
+  - 成员-值组合表示值的属性设置。 可能最终为处理此值时使用的值转换器，并且值为纯字符串。 但是，在 XAML 对象编写器处理此节点流后才会计算此值。 XAML 对象编写器处理必需的 XAML 架构上下文、类型系统映射和值转换器所需的其他支持。
 
 - `EndMember` 节点可后接后续成员的 `StartMember` 节点或成员所有者的 `EndObject` 节点。
 
 - `EndObject` 节点可后接 `EndMember` 节点。 在对象在集合的项中成对出现的情况中，还可后接 `StartObject` 节点。 或者，可后接应用于下一个 `Namespace` 的 `StartObject`节点。
 
-    - 对于关闭整个节点流的独特情况，根的 `EndObject` 后面不接任何内容；此时读取器位于文件结尾，且 <xref:System.Xaml.XamlReader.Read%2A> 返回 `false`。
+  - 对于关闭整个节点流的独特情况，根的 `EndObject` 后面不接任何内容；此时读取器位于文件结尾，且 <xref:System.Xaml.XamlReader.Read%2A> 返回 `false`。
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

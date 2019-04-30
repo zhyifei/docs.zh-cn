@@ -1,5 +1,5 @@
 ---
-title: 如何：在导航历史记录中前进或后退
+title: 如何：通过导航历史记录前进或后退
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947753"
 ---
-# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>如何：在导航历史记录中前进或后退
+# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>如何：通过导航历史记录前进或后退
 此示例说明如何导航前进或后退到导航历史记录中的条目。  
   
 ## <a name="example"></a>示例  
  从以下主机中的内容中运行的代码可以导航前进或后退导航历史记录，一次一个条目。  
   
--   <xref:System.Windows.Navigation.NavigationWindow> 使用 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> 使用 <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> 使用 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> 使用 <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  您可以导航正向的一项之前，您必须首先请检查是否有条目前进导航历史记录中通过检查**CanGoForward**属性。 若要导航正向一个条目，请调用**GoForward**方法。 以下示例所示：  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
 ms.openlocfilehash: ea7d7aae1cd79a0243a9c721b5e3958fba82f84f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973181"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>使用动态对象 (Visual Basic)
 动态对象提供另一种方法，而不`Object`类型，将在运行时的后期绑定到一个对象。 通过使用动态中定义的接口在运行时动态对象公开属性和方法等成员<xref:System.Dynamic>命名空间。 可以使用中的类<xref:System.Dynamic>命名空间创建的与静态类型或格式不匹配的数据结构处理的对象。 此外可以使用 IronPython 和 IronRuby 等动态语言中定义的动态对象。 有关演示如何创建动态对象，或使用动态语言中定义的动态对象的示例，请参阅[演练：创建和使用动态对象](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)， <xref:System.Dynamic.DynamicObject>，或<xref:System.Dynamic.ExpandoObject>。  

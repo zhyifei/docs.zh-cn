@@ -3,18 +3,18 @@ title: 4035 - PendingSessionQueueRatio
 ms.date: 03/30/2017
 ms.assetid: fe40094f-6f2c-4dd8-b872-191c7812118e
 ms.openlocfilehash: c0a64a069ea07085cc28f8e7b3461228ad5d5efe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943125"
 ---
 # <a name="4035---pendingsessionqueueratio"></a>4035 - PendingSessionQueueRatio
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|4035|  
+|Id|4035|  
 |关键字|配额|  
 |级别|详细|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  

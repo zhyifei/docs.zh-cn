@@ -3,11 +3,11 @@ title: 如何：测试发现代理
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
 ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972908"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>如何：测试发现代理
 本主题是演示如何实现发现代理的四个主题中的第四个。 在上一主题中，[如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，实现使用发现代理查找服务，然后调用该服务的 WCF 客户端应用。 本主题说明如何验证发现代理、服务以及客户端应用程序是否按预期方式工作。  

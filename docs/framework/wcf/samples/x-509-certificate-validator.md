@@ -3,11 +3,11 @@ title: X.509 证书验证程序
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949911"
 ---
 # <a name="x509-certificate-validator"></a>X.509 证书验证程序
 此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的要求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。
@@ -16,11 +16,11 @@ ms.locfileid: "59772149"
 
  概括而言，此示例演示：
 
--   如何使用 X.509 证书对客户端进行身份验证。
+- 如何使用 X.509 证书对客户端进行身份验证。
 
--   服务器如何根据自定义 X509CertificateValidator 验证客户端凭据。
+- 服务器如何根据自定义 X509CertificateValidator 验证客户端凭据。
 
--   如何使用服务器的 X.509 证书对服务器进行身份验证。
+- 如何使用服务器的 X.509 证书对服务器进行身份验证。
 
  服务会公开单一终结点以便与使用 App.config 配置文件定义的服务进行通信。终结点由地址、绑定和协定组成。 使用标准配置的绑定`wsHttpBinding`，默认情况下使用`WSSecurity`和客户端证书身份验证。 服务行为指定对客户端 X.509 证书进行验证的“自定义”模式以及验证程序类的类型。 该行为还使用 serviceCertificate 元素指定服务器证书。 服务器证书必须包含相同的值`SubjectName`作为`findValue`中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
 
@@ -254,7 +254,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：
 
--   创建服务器证书：
+- 创建服务器证书：
 
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 %SERVER_NAME% 变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 默认值为 localhost。
 
@@ -268,7 +268,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   将服务器证书安装到客户端的受信任证书存储区中：
+- 将服务器证书安装到客户端的受信任证书存储区中：
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
@@ -276,7 +276,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   创建客户端证书：
+- 创建客户端证书：
 
      Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。 %USER_NAME% 变量指定客户端名称。 此值设置为“test1”，因为这是客户端代码查找的名称。 如果更改 %USER_NAME% 的值，必须更改 Client.cs 源文件中对应的值并重新生成客户端。
 
@@ -292,7 +292,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   将客户端证书安装到服务器的受信任证书存储区中：
+- 将客户端证书安装到服务器的受信任证书存储区中：
 
      Setup.bat 批处理文件中的以下行将客户端证书复制到受信任的人的存储区中。 因为服务器系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于受信任的根证书（例如由 Microsoft 颁发的证书），则不需要执行使用客户端证书填充服务器证书存储区这一步骤。
 

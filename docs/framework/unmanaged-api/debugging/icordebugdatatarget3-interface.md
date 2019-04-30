@@ -5,11 +5,11 @@ ms.assetid: f477af85-994f-4df0-ae78-404ed252bf49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3b0d67d390931cc92c0b6a1320f66545517cde3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965199"
 ---
 # <a name="icordebugdatatarget3-interface"></a>ICorDebugDataTarget3 接口
 进行逻辑扩展[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)接口以提供有关已加载模块的信息。  

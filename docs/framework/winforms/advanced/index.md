@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
 ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942904"
 ---
 # <a name="enhancing-windows-forms-applications"></a>增强 Windows 窗体应用程序
 Windows 窗体包含很多功能，可用于增强基于 Windows 的应用程序以满足特定用户需求。 以下主题介绍这些功能及其使用方式。  
@@ -34,7 +34,7 @@ Windows 窗体包含很多功能，可用于增强基于 Windows 的应用程序
  [全球化 Windows 窗体应用程序](globalizing-windows-forms.md)  
  包含一些指向显示如何全球化 Windows 窗体应用程序的主题的链接。  
   
- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
+ [Windows 窗体和非托管应用程序](windows-forms-and-unmanaged-applications.md)  
  包含一些指向描述和显示如何从 Windows 窗体应用程序访问 COM 组件的主题的链接。  
   
  [系统信息和 Windows 窗体](system-information-and-windows-forms.md)  

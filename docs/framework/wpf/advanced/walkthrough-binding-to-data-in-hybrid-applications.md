@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981807"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：在混合应用程序中绑定到数据
 无论您使用数据源绑定到控件是必需的用户提供对基础数据的访问[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本演练演示如何在混合应用程序中包含这两个使用数据绑定[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。  
   
  本演练涉及以下任务：  
   
--   创建项目。  
+- 创建项目。  
   
--   定义数据模板。  
+- 定义数据模板。  
   
--   指定窗体布局。  
+- 指定窗体布局。  
   
--   指定数据绑定。  
+- 指定数据绑定。  
   
--   使用互操作功能显示数据。  
+- 使用互操作功能显示数据。  
   
--   向项目添加数据源。  
+- 向项目添加数据源。  
   
--   绑定到数据源。  
+- 绑定到数据源。  
   
  在本演练中所涉及任务的完整代码列表，请参阅[混合应用程序示例中的数据绑定](https://go.microsoft.com/fwlink/?LinkID=159983)。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "59300861"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio。  
+- Visual Studio。  
   
--   对 Microsoft SQL Server 上运行的 Northwind 示例数据库的访问。  
+- 对 Microsoft SQL Server 上运行的 Northwind 示例数据库的访问。  
   
 ## <a name="creating-the-project"></a>创建项目  
   
@@ -53,9 +53,9 @@ ms.locfileid: "59300861"
   
 2. 在解决方案资源管理器中，添加对下列程序集的引用。  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. 打开 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59300861"
   
 #### <a name="to-define-the-data-template"></a>定义数据模板  
   
--   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
+- 将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ ms.locfileid: "59300861"
   
 #### <a name="to-set-up-the-grid-layout"></a>设置网格布局  
   
--   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
+- 将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>设置 Label 控件  
   
--   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
+- 将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59300861"
   
 #### <a name="to-specify-data-bindings"></a>指定数据绑定  
   
--   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
+- 将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
      <xref:System.Windows.Data.Binding>类绑定<xref:System.Windows.Controls.TextBox>控件添加到数据库中的相应字段。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59300861"
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>在 DataGridView 控件中显示数据  
   
--   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
+- 将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

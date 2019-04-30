@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_NumberOfCharsMustBePositive
 ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
 ms.openlocfilehash: 0b2dc0b7b308877d7029c9a32047296cace9a456
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944906"
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>NumberOfChars 必须大于 0
 使用 `PeekChars` 对象的 `TextFieldParser` 方法时，必须提供一个大于 `NumberOfChars` 的 `0`值。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   将 `NumberOfChars` 更改为大于 `0`的值。  
+- 将 `NumberOfChars` 更改为大于 `0`的值。  
   
 ## <a name="see-also"></a>请参阅
 

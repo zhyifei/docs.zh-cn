@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943346"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>如何：控制变量 (Visual Basic 中) 的可用性
 通过指定控制变量的可用性及其*访问级别*。 访问级别确定哪些代码有权读取或写入到该变量。  
   
--   *成员变量*（定义在模块级别和任何过程之外） 默认为公共访问，这意味着用户可以看见任何代码可以访问它们。 可以通过指定访问修饰符对此进行更改。  
+- *成员变量*（定义在模块级别和任何过程之外） 默认为公共访问，这意味着用户可以看见任何代码可以访问它们。 可以通过指定访问修饰符对此进行更改。  
   
--   *本地变量*（定义在过程内） 名义上具有公共访问，虽然只有其过程中的代码可以访问它们。 不能更改访问级别的本地变量，但可以更改包含它的过程的访问级别。  
+- *本地变量*（定义在过程内） 名义上具有公共访问，虽然只有其过程中的代码可以访问它们。 不能更改访问级别的本地变量，但可以更改包含它的过程的访问级别。  
   
  有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   

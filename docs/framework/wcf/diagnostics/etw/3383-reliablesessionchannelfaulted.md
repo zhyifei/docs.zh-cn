@@ -3,18 +3,18 @@ title: 3383 - ReliableSessionChannelFaulted
 ms.date: 03/30/2017
 ms.assetid: f5948284-8536-4ab8-9c81-e22da5b56d62
 ms.openlocfilehash: 8d107848a80e965dc9cee42dacaedde2b20d9036
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33465077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943216"
 ---
 # <a name="3383---reliablesessionchannelfaulted"></a>3383 - ReliableSessionChannelFaulted
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|3383|  
+|Id|3383|  
 |关键字|通道|  
 |级别|信息性|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  

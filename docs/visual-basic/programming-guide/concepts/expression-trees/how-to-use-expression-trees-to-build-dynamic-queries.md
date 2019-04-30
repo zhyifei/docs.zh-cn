@@ -3,11 +3,11 @@ title: 如何：使用表达式树来生成动态查询 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966213"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>如何：使用表达式树来生成动态查询 (Visual Basic)
 在 LINQ 中，表达式树用于表示针对数据源的结构化查询，这些数据源可实现 <xref:System.Linq.IQueryable%601>。 例如，LINQ 提供程序可实现 <xref:System.Linq.IQueryable%601> 接口，用于查询关系数据存储。 Visual Basic 编译器编译代码，生成一个表达式树在运行时作为目标，此类数据源的查询。 然后，查询提供程序可以遍历表达式树数据结构，并将其转换为适合于数据源的查询语言。  
@@ -101,13 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   创建新的**控制台应用程序**项目。  
+- 创建新的**控制台应用程序**项目。  
   
--   添加对 System.Core.dll 的引用（如果尚未引用）。  
+- 添加对 System.Core.dll 的引用（如果尚未引用）。  
   
--   包括 System.Linq.Expressions 命名空间。  
+- 包括 System.Linq.Expressions 命名空间。  
   
--   复制代码示例中并将其粘贴到`Main``Sub`过程。  
+- 复制代码示例中并将其粘贴到`Main``Sub`过程。  
   
 ## <a name="see-also"></a>请参阅
 

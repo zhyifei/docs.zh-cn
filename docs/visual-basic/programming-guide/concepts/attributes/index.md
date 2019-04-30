@@ -3,24 +3,24 @@ title: 特性概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968046"
 ---
 # <a name="attributes-overview-visual-basic"></a>特性概述 (Visual Basic)
 使用特性，可以有效地将元数据或声明性信息与代码（程序集、类型、方法、属性等）相关联。 将特性与程序实体相关联后，可以在运行时使用*反射*这项技术查询特性。 有关详细信息，请参阅[反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。  
   
  特性具有以下属性：  
   
--   特性向程序添加元数据。 *元数据*是程序中定义的类型的相关信息。 所有 .NET 程序集都包含一组指定的元数据，用于描述程序集中定义的类型和类型成员。 可以添加自定义特性来指定所需的其他任何信息。 有关详细信息，请参阅[创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)。  
+- 特性向程序添加元数据。 *元数据*是程序中定义的类型的相关信息。 所有 .NET 程序集都包含一组指定的元数据，用于描述程序集中定义的类型和类型成员。 可以添加自定义特性来指定所需的其他任何信息。 有关详细信息，请参阅[创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)。  
   
--   可以将一个或多个特性应用于整个程序集、模块或较小的程序元素（如类和属性）。  
+- 可以将一个或多个特性应用于整个程序集、模块或较小的程序元素（如类和属性）。  
   
--   特性可以像方法和属性一样接受自变量。  
+- 特性可以像方法和属性一样接受自变量。  
   
--   程序可使用反射来检查自己的元数据或其他程序中的元数据。 有关详细信息，请参阅[使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
+- 程序可使用反射来检查自己的元数据或其他程序中的元数据。 有关详细信息，请参阅[使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
   
 ## <a name="using-attributes"></a>使用属性  
  可以将特性附加到大多数的声明中，尽管特定特性可能会限制可有效附加到的声明的类型。 在 Visual Basic 中，特性是用尖括号 (\< >) 括起来的。 特性的后面必须紧接着应用它的元素，且两者必须位于同一代码行。  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>特性的常见用途  
  下面列出了代码中特性的一些常见用途：  
   
--   在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关详细信息，请参阅 <xref:System.Web.Services.WebMethodAttribute>。  
+- 在 Web 服务中使用 `WebMethod` 特性标记方法，以指明方法应可通过 SOAP 协议进行调用。 有关详细信息，请参阅 <xref:System.Web.Services.WebMethodAttribute>。  
   
--   描述在与本机代码互操作时如何封送方法参数。 有关详细信息，请参阅 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
+- 描述在与本机代码互操作时如何封送方法参数。 有关详细信息，请参阅 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
   
--   描述类、方法和接口的 COM 属性。  
+- 描述类、方法和接口的 COM 属性。  
   
--   使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 类调用非托管代码。  
+- 使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 类调用非托管代码。  
   
--   从标题、版本、说明或商标方面描述程序集。  
+- 从标题、版本、说明或商标方面描述程序集。  
   
--   描述要序列化并暂留类的哪些成员。  
+- 描述要序列化并暂留类的哪些成员。  
   
--   描述如何为了执行 XML 序列化在类成员和 XML 节点之间进行映射。  
+- 描述如何为了执行 XML 序列化在类成员和 XML 节点之间进行映射。  
   
--   描述的方法的安全要求。  
+- 描述的方法的安全要求。  
   
--   指定用于强制实施安全规范的特征。  
+- 指定用于强制实施安全规范的特征。  
   
--   通过实时 (JIT) 编译器控制优化，这样代码就一直都易于调试。  
+- 通过实时 (JIT) 编译器控制优化，这样代码就一直都易于调试。  
   
--   获取方法调用方的相关信息。  
+- 获取方法调用方的相关信息。  
   
 ## <a name="related-sections"></a>相关章节  
  有关详细信息，请参见:  
   
--   [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [如何：创建 C /C++联合使用特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何：创建 C /C++联合使用特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [常见特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+- [常见特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [调用方信息 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [调用方信息 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>请参阅
 

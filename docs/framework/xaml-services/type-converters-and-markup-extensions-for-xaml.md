@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954254"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的类型转换器和标记扩展
 类型转换器和标记扩展是 XAML 类型系统和 XAML 编写器用来生成对象图组件的两种技术。 尽管类型转换器和标记扩展共享一些特征，但它们在 XAML 节点流中以不同的方式表示。 在本文档集中，类型转换器、标记扩展和类似的构造有时统称为值转换器。  
@@ -22,13 +22,13 @@ ms.locfileid: "59200982"
 ## <a name="value-converters"></a>值转换器  
  在 XAML 中，值转换器能用于各种方案。 以下列表显示了 XAML 中不同类型的值转换器：  
   
--   类型转换器  
+- 类型转换器  
   
--   标记扩展  
+- 标记扩展  
   
--   值序列化程序  
+- 值序列化程序  
   
--   为 XAML 文本语法提供逻辑的相关类或支持类  
+- 为 XAML 文本语法提供逻辑的相关类或支持类  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>类型转换器  

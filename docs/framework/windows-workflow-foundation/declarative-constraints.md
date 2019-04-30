@@ -3,11 +3,11 @@ title: 声明性约束
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945816"
 ---
 # <a name="declarative-constraints"></a>声明性约束
 声明性约束为活动及其与其他活动的关系提供了一个功能强大的验证方法。 约束是在创作过程中为活动配置的，但工作流宿主也可以指定其他约束。 本主题概述了如何使用声明性约束提供活动验证。  
@@ -63,8 +63,7 @@ public sealed class SampleActivity : CodeActivity
 
 可以使用多个验证活动，这些活动提供工作流中与验证的活动有关的其他活动的相关信息。 <xref:System.Activities.Validation.GetParentChain> 返回一个活动集合，该集合包含当前活动和根活动之间的所有活动。 <xref:System.Activities.Validation.GetChildSubtree> 提供一个活动集合，该集合包含采用递归模式的子活动，并且 <xref:System.Activities.Validation.GetWorkflowTree> 获取工作流中的所有活动。  
   
-下面的示例定义了一个 `CreateState` 活动。 
-  `CreateState` 活动必须包含在 `CreateCountry` 活动中，并且 `GetParent` 方法返回一个强制此要求的约束。  `GetParent` 将 <xref:System.Activities.Validation.GetParentChain> 活动与 <xref:System.Activities.Statements.ForEach%601> 结合使用，以检查 `CreateState` 活动的父活动，从而确定是否满足要求。  
+下面的示例定义了一个 `CreateState` 活动。 `CreateState` 活动必须包含在 `CreateCountry` 活动中，并且 `GetParent` 方法返回一个强制此要求的约束。  `GetParent` 将 <xref:System.Activities.Validation.GetParentChain> 活动与 <xref:System.Activities.Statements.ForEach%601> 结合使用，以检查 `CreateState` 活动的父活动，从而确定是否满足要求。  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -139,7 +138,7 @@ public sealed class CreateState : CodeActivity
 ```
   
 ## <a name="additional-constraints"></a>其他约束  
- 工作流宿主创作者可以通过创建约束并将这些约束添加到 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 实例的 <xref:System.Activities.Validation.ValidationSettings> 字典中为工作流中的活动指定其他验证约束。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中的每个项目都包含应用约束的活动类型以及用于该活动类型的其他约束列表。 为工作流调用验证时，指定类型的每个活动（包括派生的类）都计算约束。 在本示例中，将上一节中的 `ActivityDisplayNameIsNotSetWarning` 约束应用于工作流中的所有活动。  
+ 工作流主机作者可以通过创建约束并将这些约束添加到 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 实例的 <xref:System.Activities.Validation.ValidationSettings> 字典中为工作流中的活动指定其他验证约束。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中的每个项目都包含应用约束的活动类型以及用于该活动类型的其他约束列表。 为工作流调用验证时，指定类型的每个活动（包括派生的类）都计算约束。 在本示例中，将上一节中的 `ActivityDisplayNameIsNotSetWarning` 约束应用于工作流中的所有活动。  
   
 ```csharp  
 Activity wf = new Sequence  

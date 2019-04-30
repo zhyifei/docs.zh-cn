@@ -3,11 +3,11 @@ title: Windows 工作流体系结构
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
 ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945920"
 ---
 # <a name="windows-workflow-architecture"></a>Windows 工作流体系结构
 Windows Workflow Foundation (WF) 引发了开发长时间运行的交互式应用程序的抽象级别。 工作单元封装为活动。 活动运行环境提供用于流控制、异常处理、错误传播、状态数据保存、从内存加载和卸载正在进行的工作流、跟踪以及事务流的功能。  
@@ -43,10 +43,10 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-life-cycle"></a>活动生命周期  
  活动实例启动时处于 <xref:System.Activities.ActivityInstanceState.Executing> 状态。 除非发生异常，否则活动将保持此状态，直到已完成执行所有子活动和所有其他挂起的工作（如 <xref:System.Activities.Bookmark> 对象），此时，该活动将转换为 <xref:System.Activities.ActivityInstanceState.Closed> 状态。 活动实例的父级可以请求取消子级；如果可以取消子级，该子级则在完成时处于 <xref:System.Activities.ActivityInstanceState.Canceled> 状态。 如果在执行期间引发异常，运行时会使活动进入 <xref:System.Activities.ActivityInstanceState.Faulted> 状态，并将此异常向上传播到活动父链。 下面列出了活动的三个完成状态：  
   
--   **关闭：** 该活动已完成其工作并退出。  
+- **关闭：** 该活动已完成其工作并退出。  
   
--   **已取消：** 该活动已正常放弃其工作并退出。 当进入此状态时，不会显式回滚工作。  
+- **已取消：** 该活动已正常放弃其工作并退出。 当进入此状态时，不会显式回滚工作。  
   
--   **出现故障：** 活动遇到了错误，并且具有未完成其工作的情况下退出。  
+- **出现故障：** 活动遇到了错误，并且具有未完成其工作的情况下退出。  
   
  当保存或卸载活动时，活动会保持 <xref:System.Activities.ActivityInstanceState.Executing> 状态。

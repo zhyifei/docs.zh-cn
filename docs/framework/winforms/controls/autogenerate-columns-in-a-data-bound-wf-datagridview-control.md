@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
 ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954305"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>如何：在已绑定数据的 Windows 窗体 DataGridView 控件中自动生成列
 下面的代码示例演示如何显示来自绑定的数据源中的列<xref:System.Windows.Forms.DataGridView>控件。 当<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>属性值是`true`（默认值），<xref:System.Windows.Forms.DataGridViewColumn>为数据源表中的每个列创建。  
@@ -28,11 +28,11 @@ ms.locfileid: "59165992"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   名为 `customersDataGridView` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
+- 名为 `customersDataGridView` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
   
--   一个<xref:System.Data.DataSet>名为对象`customersDataSet`具有一个名为表`Customers`。  
+- 一个<xref:System.Data.DataSet>名为对象`customersDataSet`具有一个名为表`Customers`。  
   
--   对 <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType> 和 <xref:System.Xml?displayProperty=nameWithType> 程序集的引用。  
+- 对 <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType> 和 <xref:System.Xml?displayProperty=nameWithType> 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

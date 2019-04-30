@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949183"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 编程和宿主保护特性
 在 SQL Server 主机中加载和执行托管代码需要满足主机对代码访问安全性和主机资源保护的要求。  代码访问安全性要求由三个 SQL Server 权限集之一指定：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 权限集内执行的代码必须避免某些类型或应用了 <xref:System.Security.Permissions.HostProtectionAttribute> 属性的成员。 <xref:System.Security.Permissions.HostProtectionAttribute> 不是可靠性保证的安全权限，因为它标识主机可能禁止的特定代码结构（类型或方法）。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 可执行有助于保护主机稳定性的编程模型。  
@@ -27,11 +27,11 @@ ms.locfileid: "59088714"
 ## <a name="host-protection-attributes"></a>主机保护属性  
  主机保护属性识别不符合主机编程模型的类型或成员，并表示以下级别的可靠性威胁：  
   
--   为良性。  
+- 为良性。  
   
--   可能导致服务器托管的用户代码不稳定。  
+- 可能导致服务器托管的用户代码不稳定。  
   
--   可能导致服务器进程本身不稳定。  
+- 可能导致服务器进程本身不稳定。  
   
  SQL Server 不允许使用带有 <xref:System.Security.Permissions.HostProtectionAttribute> 的类型或成员，该属性指定 <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization>、<xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> 或 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt> 的 <xref:System.Security.Permissions.HostProtectionResource> 值。 这样可防止程序集调用启用共享状态、执行同步、终止时可能导致资源泄漏或影响 SQL Server 进程的完整性的成员。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969203"
 ---
 # <a name="-doc"></a>-doc
 将文档注释处理到一个 XML 文件中。  
@@ -36,9 +36,9 @@ ms.locfileid: "58824580"
   
  在源代码文件中，文档注释可先于以下定义：  
   
--   用户定义类型，例如[类](../../../visual-basic/language-reference/statements/class-statement.md)或[接口](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- 用户定义类型，例如[类](../../../visual-basic/language-reference/statements/class-statement.md)或[接口](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   成员，例如字段、[事件](../../../visual-basic/language-reference/statements/event-statement.md)、[属性](../../../visual-basic/language-reference/statements/property-statement.md)、[函数](../../../visual-basic/language-reference/statements/function-statement.md)或[子例程](../../../visual-basic/language-reference/statements/sub-statement.md)。  
+- 成员，例如字段、[事件](../../../visual-basic/language-reference/statements/event-statement.md)、[属性](../../../visual-basic/language-reference/statements/property-statement.md)、[函数](../../../visual-basic/language-reference/statements/function-statement.md)或[子例程](../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
  若要将生成的 XML 文件与 Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) 功能配合使用，请将 XML 文件的文件名设为与要支持的程序集相同的名称。 确保 XML 文件与程序集位于同一目录中，以便在 Visual Studio 项目中引用此程序集时，也可以找到 .xml 文件。 IntelliSense 不需要 XML 文档文件来处理项目内或项目引用的项目中的代码。  
   

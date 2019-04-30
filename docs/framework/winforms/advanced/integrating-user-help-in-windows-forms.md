@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942917"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>在 Windows 窗体中集成用户帮助
 构建基于 Windows 的应用程序的一个很必要，但经常被忽略的方面是帮助系统时，因为这是用户在其中打开有关混淆的时间中的帮助。 Windows 窗体支持两种不同类型的帮助，每个提供的[HelpProvider 组件](../controls/helpprovider-component-windows-forms.md)。 第一个涉及用户指向帮助文件的 HTML 或 HTML 帮助 1。*x*或更高版本格式。 第二个可以显示简短的"这是什么"-键入单个控件; 上的帮助这是在对话框中特别有用。 可以在同一个窗体上使用两种类型的帮助。  

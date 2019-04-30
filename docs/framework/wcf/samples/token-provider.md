@@ -3,32 +3,32 @@ title: 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965654"
 ---
 # <a name="token-provider"></a>令牌提供程序
 此示例演示如何实现自定义令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：
 
--   存在不能由这些令牌提供程序操作的凭据存储。
+- 存在不能由这些令牌提供程序操作的凭据存储。
 
--   如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端框架时使用的凭据的详细信息。
+- 如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端框架时使用的凭据的详细信息。
 
--   要生成一个自定义令牌。
+- 要生成一个自定义令牌。
 
  此示例演示如何生成一个自定义令牌提供程序，以便将用户的输入转换为另一种格式。
 
  总之，此示例将演示如下内容：
 
--   客户端如何使用用户名/密码对来进行身份验证。
+- 客户端如何使用用户名/密码对来进行身份验证。
 
--   如何使用自定义令牌提供程序对客户端进行配置。
+- 如何使用自定义令牌提供程序对客户端进行配置。
 
--   服务器如何使用密码和自定义 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>（用来验证用户名和密码是否相匹配）来验证客户端凭据。
+- 服务器如何使用密码和自定义 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>（用来验证用户名和密码是否相匹配）来验证客户端凭据。
 
--   客户端如何使用服务器的 X.509 证书对服务器进行身份验证。
+- 客户端如何使用服务器的 X.509 证书对服务器进行身份验证。
 
  此示例还演示在执行自定义令牌身份验证过程之后，如何访问调用方的标识。
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：
 
--   创建服务器证书。
+- 创建服务器证书。
 
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   将服务器证书安装到客户端的受信任证书存储区中：
+- 将服务器证书安装到客户端的受信任证书存储区中：
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 

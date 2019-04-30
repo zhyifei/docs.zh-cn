@@ -8,11 +8,11 @@ helpviewer_keywords:
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
 ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955579"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>代码中用作元素名称的关键字 (Visual Basic)
 任何程序元素，如变量、 类或成员，可以具有相同的名称与限制性关键字。 例如，可以创建一个名为变量`Loop`。 但是，来引用它的版本 — 有为受限制的相同名称`Loop`关键字，必须使用完全限定字符串在其之前或将其括在方括号 (`[ ]`)，如下面的示例所示。  

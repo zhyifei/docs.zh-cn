@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a673c98b11fbca5f66e9e1ae61f224448c20797
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966200"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 枚举
 标识要进行垃圾回收的对象的源。  
@@ -69,9 +69,9 @@ typedef enum {
 ## <a name="remarks"></a>备注  
  `CorGCReferenceType`枚举的使用方式如下：  
   
--   值作为`type`字段[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)结构，它表示引用或句柄的源。  
+- 值作为`type`字段[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)结构，它表示引用或句柄的源。  
   
--   作为`types`自变量[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它指定句柄，以在枚举中包括的类型。  
+- 作为`types`自变量[ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)方法，它指定句柄，以在枚举中包括的类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945075"
 ---
 # <a name="attribute-list-visual-basic"></a>特性列表 (Visual Basic)
 指定要应用于声明的编程元素的特性。 用逗号分隔多个属性。 下面是一个属性的语法。  
@@ -36,15 +36,15 @@ ms.locfileid: "58818406"
   
 ## <a name="rules"></a>规则  
   
--   **放置。** 可以将特性应用于最声明的编程元素。 若要将应用一个或多个属性，将置于*特性块*元素声明的开头。 在属性列表中的每个条目指定你想要将应用，一个属性、 修饰符和自变量将用于此属性的调用。  
+- **放置。** 可以将特性应用于最声明的编程元素。 若要将应用一个或多个属性，将置于*特性块*元素声明的开头。 在属性列表中的每个条目指定你想要将应用，一个属性、 修饰符和自变量将用于此属性的调用。  
   
--   **尖括号。** 如果提供的属性列表，则必须将其括在尖括号中 ("`<`"和"`>`")。  
+- **尖括号。** 如果提供的属性列表，则必须将其括在尖括号中 ("`<`"和"`>`")。  
   
--   **声明的一部分。** 该属性必须是元素声明，而不是单独语句的一部分。 您可以使用行继续符序列 (" `_`") 来扩展到多个源代码行上的声明语句。  
+- **声明的一部分。** 该属性必须是元素声明，而不是单独语句的一部分。 您可以使用行继续符序列 (" `_`") 来扩展到多个源代码行上的声明语句。  
   
--   **修饰符。** 特性修饰符 (`Assembly`或`Module`) 上应用到编程元素中的源文件开头的每个属性必需的。 应用于不在源文件开头的元素的特性不允许出现特性修饰符。  
+- **修饰符。** 特性修饰符 (`Assembly`或`Module`) 上应用到编程元素中的源文件开头的每个属性必需的。 应用于不在源文件开头的元素的特性不允许出现特性修饰符。  
   
--   **自变量。** 属性的所有位置参数必须位于任何变量或属性初始值设定项之前。  
+- **自变量。** 属性的所有位置参数必须位于任何变量或属性初始值设定项之前。  
   
 ## <a name="example"></a>示例  
  下面的示例应用<xref:System.Runtime.InteropServices.DllImportAttribute>属性的主干定义为`Function`过程。  

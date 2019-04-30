@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cdb9f748279e4e74c0dbd1ced1f48e3a24b9904d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959531"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 函数
 
@@ -58,7 +58,7 @@ HRESULT GetPropertyQualifierSet (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |

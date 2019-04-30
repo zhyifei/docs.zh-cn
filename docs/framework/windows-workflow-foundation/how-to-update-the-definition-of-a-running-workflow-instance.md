@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
 ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969476"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>如何：更新正在运行的工作流实例的定义
 
@@ -102,7 +102,7 @@ ms.locfileid: "57722901"
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";
     ```
 
-11. 将以下 `StartUpdate` 方法添加到 `Program` 类（或 `Module1`）。 此方法将指定的 xaml 工作流定义加载到 `ActivityBuilder`，然后调用 `DynamicUpdate.PrepareForUpdate`。 `PrepareForUpdate` 为 `ActivityBuilder` 中的工作流定义创建副本。  修改工作流定义后，会将此副本与修改的工作流定义一起使用以创建更新映射。
+11. 将以下 `StartUpdate` 方法添加到 `Program` 类（或 `Module1`）。 此方法将指定的 xaml 工作流定义加载到 `ActivityBuilder`，然后调用 `DynamicUpdate.PrepareForUpdate`。 `PrepareForUpdate` 为 `ActivityBuilder` 中的工作流定义创建副本。 修改工作流定义后，会将此副本与修改的工作流定义一起使用以创建更新映射。
 
     ```vb
     Private Function StartUpdate(name As String) As ActivityBuilder

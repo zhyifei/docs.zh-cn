@@ -6,8 +6,8 @@ ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946661"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>扩展保护身份验证示例自述文件
 扩展的保护是一种安全计划中拦截 (MITM) 攻击，在其中攻击者 （"人-中-干预"） 截获客户端的凭据，并使用它们来访问客户端的目标服务器上的安全资源。  
@@ -27,9 +27,9 @@ ms.locfileid: "59979116"
   
 4. 此示例要求客户端与服务器建立一个安全通道，因此它要求存在服务器证书，此证书可从 Internet 信息服务 (IIS) 管理器进行安装。  
   
-    1.  打开 IIS 管理器-> 服务器证书 （从功能视图选项卡）。  
+    1. 打开 IIS 管理器-> 服务器证书 （从功能视图选项卡）。  
   
-    2.  为了测试此示例，你可以创建一个自签名证书。 （如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中）。  
+    2. 为了测试此示例，你可以创建一个自签名证书。 （如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中）。  
   
 5. 转至默认网站的“操作”窗格。 单击编辑站点-> 的绑定。 如果 HTTPS 不存在，则将其作为一种类型添加，端口号为 443，并分配在上一步中创建的 SSL 证书。  
   

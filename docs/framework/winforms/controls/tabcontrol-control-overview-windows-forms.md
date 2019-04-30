@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971933"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.TabControl> 显示多个选项卡，就像笔记本中的分隔线或档案柜中一组文件夹的标签。 选项卡可以包含图片和其他控件。 可以使用选项卡控件以生成将显示 Windows 操作系统，如控件面板显示属性中的许多位置的多页对话框中的类型。 此外，<xref:System.Windows.Forms.TabControl>可用于创建用于设置的一组相关属性的属性页。  

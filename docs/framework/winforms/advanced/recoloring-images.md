@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948065"
 ---
 # <a name="recoloring-images"></a>对图像重新着色
 重新着色是调整图像颜色的过程。 重新着色的一些示例在一种颜色更改为另一个，调整相对于另一种颜色的颜色的亮度、 调整亮度或对比度的所有颜色，并将颜色转换为种灰色底纹。  
