@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
 ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050425"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>如何：标签语句 (Visual Basic)
 语句块组成的代码由冒号分隔行。 标识字符串或整数的代码注释行被称为*标记为*。 语句标签用于标记的一行代码以将其标识用于与语句如`On Error Goto`。  
@@ -28,7 +28,7 @@ ms.locfileid: "58828636"
   
 ### <a name="to-label-a-line-of-code"></a>若要标记的代码行  
   
--   将跟一个冒号，源代码的行的开头的标识符。  
+- 将跟一个冒号，源代码的行的开头的标识符。  
   
      例如，以下代码行标记为`Jump`和`120`分别：  
   

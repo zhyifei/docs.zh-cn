@@ -3,11 +3,11 @@ title: 如何：将列表示为时间戳列或版本列
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
 ms.openlocfilehash: db73bf4880d8f5556247f7b037fca24b0ddc56d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037734"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>如何：将列表示为时间戳列或版本列
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>属性的<xref:System.Data.Linq.Mapping.ColumnAttribute>属性可指定字段或属性表示保存数据库时间戳或版本号的数字的数据库列。  

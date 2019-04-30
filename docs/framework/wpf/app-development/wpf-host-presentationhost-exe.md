@@ -6,26 +6,26 @@ helpviewer_keywords:
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
 ms.openlocfilehash: 586d306d0f375241c9382e1e24cf1af75b990ba9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019149"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主机 (PresentationHost.exe)
 Windows Presentation Foundation (WPF) 主机 (PresentationHost.exe) 是应用程序，使[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]兼容的浏览器中托管应用程序 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]及更高版本)。 默认情况下，Windows Presentation Foundation (WPF) 主机注册为 shell 并[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]处理程序的浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]内容，其中包括：  
   
--   松散（未编译）[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件 (.xaml)。  
+- 松散（未编译）[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件 (.xaml)。  
   
--   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
+- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
   
  对于这些类型，Windows Presentation Foundation (WPF) 主机的文件：  
   
--   启动注册[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]处理程序来承载 Windows Presentation Foundation (WPF) 内容。  
+- 启动注册[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]处理程序来承载 Windows Presentation Foundation (WPF) 内容。  
   
--   加载的所需的正确版本[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]和 Windows Presentation Foundation (WPF) 程序集。  
+- 加载的所需的正确版本[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]和 Windows Presentation Foundation (WPF) 程序集。  
   
--   确保部署区域具有适当的权限级别。  
+- 确保部署区域具有适当的权限级别。  
   
  本主题介绍了可以与 PresentationHost.exe 一起使用的命令行参数。  
   

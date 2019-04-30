@@ -3,11 +3,11 @@ title: 传播
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971374"
 ---
 # <a name="propagation"></a>传播
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动传播。  
@@ -26,11 +26,11 @@ ms.locfileid: "59154032"
 ## <a name="propagation-definition"></a>传播定义  
  如果下列所有条件都适用，则活动 M 的 gAId 会传播到活动 N。  
   
--   N 是为 M 创建的  
+- N 是为 M 创建的  
   
--   N 已知 M 的 gAId  
+- N 已知 M 的 gAId  
   
--   N 的 gAId 与 M 的 gAId 相同。  
+- N 的 gAId 与 M 的 gAId 相同。  
   
  gAId 通过 ActivityId 消息头传播，如下面的 XML 架构所示。  
   

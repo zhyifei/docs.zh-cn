@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032014"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 与其他任何开发平台不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有支持的双向内容快速开发的许多功能，例如，混合从左到右和从右到左同一文档中的数据。 同时，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]创建需要双向功能，如阿拉伯语和希伯来语用户的用户的卓越的体验。  
@@ -166,11 +166,11 @@ ms.locfileid: "59079820"
   
  此属性指定如何确定数字的区域性。 它采用三个之一<xref:System.Windows.Media.NumberCultureSource>枚举值。  
   
--   重写：数字区域性是<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>属性。  
+- 重写：数字区域性是<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>属性。  
   
--   文本：数字区域性是文本运行的区域性。 在标记中，这将是`xml:lang`，或其别名`Language`属性 (<xref:System.Windows.FrameworkElement.Language%2A>或<xref:System.Windows.FrameworkContentElement.Language%2A>)。 此外，它是派生自的类的默认值<xref:System.Windows.FrameworkContentElement>。 此类类包括<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>， <xref:System.Windows.Documents.Table?displayProperty=nameWithType>， <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> ，依此类推。  
+- 文本：数字区域性是文本运行的区域性。 在标记中，这将是`xml:lang`，或其别名`Language`属性 (<xref:System.Windows.FrameworkElement.Language%2A>或<xref:System.Windows.FrameworkContentElement.Language%2A>)。 此外，它是派生自的类的默认值<xref:System.Windows.FrameworkContentElement>。 此类类包括<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>， <xref:System.Windows.Documents.Table?displayProperty=nameWithType>， <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> ，依此类推。  
   
--   用户：数字区域性是当前线程的区域性。 此属性是默认值的所有子类<xref:System.Windows.FrameworkElement>如<xref:System.Windows.Controls.Page>，<xref:System.Windows.Window>和<xref:System.Windows.Controls.TextBlock>。  
+- 用户：数字区域性是当前线程的区域性。 此属性是默认值的所有子类<xref:System.Windows.FrameworkElement>如<xref:System.Windows.Controls.Page>，<xref:System.Windows.Window>和<xref:System.Windows.Controls.TextBlock>。  
   
  **CultureOverride**：  
   
@@ -180,15 +180,15 @@ ms.locfileid: "59079820"
   
  此属性指定要执行的数字替换类型。 它采用以下之一<xref:System.Windows.Media.NumberSubstitutionMethod>枚举值。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替换方法根据数字区域性确定<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>属性。 这是默认设置。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替换方法根据数字区域性确定<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>属性。 这是默认设置。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>：如果数字区域性为阿拉伯语或波斯语区域性，它指定数字取决于上下文。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>：如果数字区域性为阿拉伯语或波斯语区域性，它指定数字取决于上下文。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>：数字始终呈现为欧洲数字。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>：数字始终呈现为欧洲数字。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：使用指定的区域性的数字区域性民族数字呈现数字<xref:System.Globalization.CultureInfo.NumberFormat%2A>。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：使用指定的区域性的数字区域性民族数字呈现数字<xref:System.Globalization.CultureInfo.NumberFormat%2A>。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用数字区域性的传统数字呈现数字。 对于大多数区域性，这是与相同<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。 但是，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>而此值产生阿拉伯数字让所有阿拉伯语区域性产生拉丁数字让某些阿拉伯语区域性。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用数字区域性的传统数字呈现数字。 对于大多数区域性，这是与相同<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。 但是，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>而此值产生阿拉伯数字让所有阿拉伯语区域性产生拉丁数字让某些阿拉伯语区域性。  
   
  这些值对双向内容开发人员意味着什么？ 在大多数情况下，可能需要开发人员只需定义<xref:System.Windows.FlowDirection>以及每个文本的语言[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素，例如`Language="ar-SA"`并且<xref:System.Windows.Media.NumberSubstitution>逻辑负责根据正确的数字显示[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 下面的示例演示了如何使用中的阿拉伯数字和英文数字[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序运行在阿拉伯语版的[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。  
   

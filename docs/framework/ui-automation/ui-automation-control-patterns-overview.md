@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033080"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自动化控件模式概述
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126355"
 ## <a name="ui-automation-control-pattern-components"></a>UI 自动化控件模式组件  
  控件模式支持定义控件中可用的功能的离散件所需的方法、属性、事件和关系。  
   
--   UI 自动化元素和其父级、子级和同级之间的关系描述 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树内该元素的结构。  
+- UI 自动化元素和其父级、子级和同级之间的关系描述 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树内该元素的结构。  
   
--   这些方法允许 UI 自动化客户端操作控件。  
+- 这些方法允许 UI 自动化客户端操作控件。  
   
--   属性和事件提供有关控件模式的功能的信息以及有关控件状态的信息。  
+- 属性和事件提供有关控件模式的功能的信息以及有关控件状态的信息。  
   
  控件模式与 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 关联，如同接口与 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] 对象关联。 在 [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]中，你可以查询一个对象以询问该对象所支持的接口，然后使用这些接口来访问功能。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，UI 自动化客户端可以询问一个控件其所支持的控件模式，然后通过由支持的控件模式公开的属性、方法、事件和结构来与该控件进行交互。 例如，对于多行编辑框，UI 自动化提供程序实现 <xref:System.Windows.Automation.Provider.IScrollProvider>。 当客户端知道 <xref:System.Windows.Automation.AutomationElement> 支持 <xref:System.Windows.Automation.ScrollPattern> 控件模式时，它可以使用由该控件模式公开的属性、方法和事件来操作该控件或访问有关该控件的信息。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with Storyboards
 ms.assetid: 1020e44e-e21e-49a8-be53-53cbc1910e83
 ms.openlocfilehash: 03b01205f1a31426a01b09533b350682c384df4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024750"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a>如何：使用情节提要对三维旋转进行动画处理
 下面的示例演示如何创建旋转时它"松动"通过进行动画处理的三维对象<xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A>并<xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A>的属性<xref:System.Windows.Media.Media3D.AxisAngleRotation3D>对象。 这<xref:System.Windows.Media.Media3D.AxisAngleRotation3D>对象指定的旋转变换的三维对象，并因此对其属性进行动画处理创建需的旋转效果。 在情节提要<xref:System.Windows.Media.Animation.DoubleAnimation>用于进行动画处理<xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Angle%2A>属性，同时<xref:System.Windows.Media.Animation.Vector3DAnimation>用于进行动画处理<xref:System.Windows.Media.Media3D.AxisAngleRotation3D.Axis%2A>属性。  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe9bc9aea4ceb0f5b5c03416f43894b482c3294e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044286"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption 方法
 获取当前元数据范围的指定选项的值。 选项，可以控制如何处理对当前元数据范围的调用。  
@@ -46,19 +46,19 @@ HRESULT GetOption (
 ## <a name="remarks"></a>备注  
  以下列表显示了此方法支持的 Guid。 有关说明，请参阅[imetadatadispenserex:: Setoption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)方法。 如果`optionId`是不在此列表中，此方法返回 HRESULT `E_INVALIDARG`，指示存在错误的参数。  
   
--   MetaDataCheckDuplicatesFor  
+- MetaDataCheckDuplicatesFor  
   
--   MetaDataRefToDefCheck  
+- MetaDataRefToDefCheck  
   
--   MetaDataNotificationForTokenMovement  
+- MetaDataNotificationForTokenMovement  
   
--   MetaDataSetENC  
+- MetaDataSetENC  
   
--   MetaDataErrorIfEmitOutOfOrder  
+- MetaDataErrorIfEmitOutOfOrder  
   
--   MetaDataGenerateTCEAdapters  
+- MetaDataGenerateTCEAdapters  
   
--   MetaDataLinkerOptions  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033457"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>返回或跳过序列中的元素
 使用 <xref:System.Linq.Queryable.Take%2A> 运算符可返回序列中给定数目的元素，然后跳过其余元素。  
@@ -22,9 +22,9 @@ ms.locfileid: "59168306"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用带有 SQL <xref:System.Linq.Queryable.Skip%2A> 子句的子查询来转换 `NOT EXISTS`。 这种转换存在以下局限性：  
   
--   自变量必须为集合。 不支持多重集，即便为有序多重集也不例外。  
+- 自变量必须为集合。 不支持多重集，即便为有序多重集也不例外。  
   
--   生成的查询可能要比为应用了 <xref:System.Linq.Queryable.Skip%2A> 的基查询生成的查询复杂得多。 这种复杂性可能会导致性能降低，甚至发生超时。  
+- 生成的查询可能要比为应用了 <xref:System.Linq.Queryable.Skip%2A> 的基查询生成的查询复杂得多。 这种复杂性可能会导致性能降低，甚至发生超时。  
   
 ## <a name="example"></a>示例  
  下面的示例使用 `Take` 选择前五个受雇的 `Employees`。 请注意，此集合首先按 `HireDate` 排序。  

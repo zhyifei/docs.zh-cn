@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022319"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>演练：使用 COM 对象 (Visual Basic 中) 实现继承
 您可以从 Visual Basic 类进行派生`Public`中 COM 对象，即使这些早期版本的 Visual Basic 中创建的类。 可以重写或重载只是作为属性的属性和方法从 COM 对象继承的类和任何其他基类的方法可以重写或重载。 具有不希望重新编译现有类库时，从 COM 对象的继承非常有用。  
@@ -125,9 +125,9 @@ ms.locfileid: "59334141"
   
  属性和方法继承自 COM 类可以重写，这意味着您可以声明的本地属性或方法来代替属性或继承自基类的 COM 类的方法。 重写继承的 COM 属性的规则包括类似于重写其他属性和方法有以下例外规则：  
   
--   如果重写任何属性或方法从 COM 类继承，则必须重写所有其他继承的属性和方法。  
+- 如果重写任何属性或方法从 COM 类继承，则必须重写所有其他继承的属性和方法。  
   
--   使用属性`ByRef`参数不能重写。  
+- 使用属性`ByRef`参数不能重写。  
   
 ## <a name="see-also"></a>请参阅
 

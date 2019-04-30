@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024022"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概述
 用户界面中的内容通常比计算机屏幕的显示区域大。 <xref:System.Windows.Controls.ScrollViewer>控件提供了方便地启用中的内容滚动[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。 本主题介绍<xref:System.Windows.Controls.ScrollViewer>元素，并提供了几个用法示例。  

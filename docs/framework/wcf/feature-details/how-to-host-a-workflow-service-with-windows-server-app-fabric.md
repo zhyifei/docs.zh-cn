@@ -3,11 +3,11 @@ title: 如何：使用 Windows Server App Fabric 承载工作流服务
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 ms.openlocfilehash: d1042aca7e4127c39e59bf0bf400974f0cecb1e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039491"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>如何：使用 Windows Server App Fabric 承载工作流服务
 在 App Fabric 中承载工作流服务类似于在 IIS/WAS 下承载。 唯一的区别在于 App Fabric 提供的用于部署、监控和管理工作流服务的工具。 本主题使用工作流服务中创建[创建一个长时间运行的工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 本主题将指导您创建工作流服务。 本主题将介绍如何使用 App Fabric 承载工作流服务。 有关 Windows Server App Fabric 的详细信息，请参阅[Windows Server App Fabric 文档](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成以下步骤之前，请确保已安装 Windows Server App Fabric。  为此，请打开 Internet Information Services (inetmgr.exe)，请单击您的服务器名称**连接**查看，单击站点，然后单击**Default Web Site**。 在屏幕的右侧，您应该看到一个名为部分**App Fabric**。 如果您看不到这一部分（它位于右侧窗格的顶部），则表示您还未安装 App Fabric。 有关安装 Windows Server App Fabric 的详细信息请参阅[安装 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)。  

@@ -3,11 +3,11 @@ title: 使用 Pick 活动
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004726"
 ---
 # <a name="using-the-pick-activity"></a>使用 Pick 活动
 此示例演示如何使用 <xref:System.Activities.Statements.Pick> 活动。
@@ -24,17 +24,17 @@ ms.locfileid: "59302969"
 
  设计器工作流设计器版本的示例演示如何在设计器中创建工作流。 包含以下文件：
 
--   Program.cs:包括`Main`执行示例工作流函数。
+- Program.cs:包括`Main`执行示例工作流函数。
 
--   ReadString.cs:从控制台读取一些输入自定义活动。
+- ReadString.cs:从控制台读取一些输入自定义活动。
 
--   Sequence1.xaml:使用 Pick 的设计器创建一个工作流。
+- Sequence1.xaml:使用 Pick 的设计器创建一个工作流。
 
  编码工作流示例的编码版本演示如何在设计器中创建工作流。 包含以下文件：
 
--   Program.cs:包括`Main`执行示例工作流函数。
+- Program.cs:包括`Main`执行示例工作流函数。
 
--   ReadString.cs:从控制台读取一些输入自定义活动。
+- ReadString.cs:从控制台读取一些输入自定义活动。
 
 #### <a name="to-use-this-sample"></a>使用此示例
 

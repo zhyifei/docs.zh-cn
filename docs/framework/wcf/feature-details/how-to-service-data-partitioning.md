@@ -3,11 +3,11 @@ title: 如何：服务数据分区
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
 ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047524"
 ---
 # <a name="how-to-service-data-partitioning"></a>如何：服务数据分区
 本主题概述了在同一目标服务的多个实例之间划分消息时所需采取的基本步骤。 如果需要缩放服务以提供更好的服务质量，或者需要以特定方式处理来自不同客户的请求，此时通常采用服务数据划分。 例如，来自高值或"黄金"客户的消息可能需要在更高的优先级比来自普通客户的消息处理。  

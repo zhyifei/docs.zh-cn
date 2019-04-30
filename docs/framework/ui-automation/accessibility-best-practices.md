@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033223"
 ---
 # <a name="accessibility-best-practices"></a>辅助功能最佳方案
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074230"
   
  应用程序应提供以下键盘界面：  
   
--   用户可与之交互的所有控件的制表位，例如按钮、链接或列表框  
+- 用户可与之交互的所有控件的制表位，例如按钮、链接或列表框  
   
--   逻辑 Tab 键顺序  
+- 逻辑 Tab 键顺序  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>显示键盘焦点  
@@ -90,11 +90,11 @@ ms.locfileid: "59074230"
   
  应用程序使用键盘焦点执行以下操作：  
   
--   始终应有一个项具有键盘焦点  
+- 始终应有一个项具有键盘焦点  
   
--   键盘焦点应该为可见和明显  
+- 键盘焦点应该为可见和明显  
   
--   选择和/或带有焦点的项应以可视化方式突出显示  
+- 选择和/或带有焦点的项应以可视化方式突出显示  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>支持导航标准和功能强大的导航方案  
@@ -102,11 +102,11 @@ ms.locfileid: "59074230"
   
  应用程序应提供以下键盘界面：  
   
--   所有命令、菜单和控件的快捷键和带下划线的访问键  
+- 所有命令、菜单和控件的快捷键和带下划线的访问键  
   
--   重要链接的键盘快捷键  
+- 重要链接的键盘快捷键  
   
--   所有菜单项都具有一个访问键；所有按钮都有加速键，所有命令都具有一个加速键。  
+- 所有菜单项都具有一个访问键；所有按钮都有加速键，所有命令都具有一个加速键。  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>不要让鼠标位置干扰键盘导航  

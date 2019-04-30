@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051021"
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel> 元素是控制呈现元素的组件，其大小和维度，其位置和子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及构造自定义的功能<xref:System.Windows.Controls.Panel>元素。  
   
  本主题包含以下各节：  
   
--   [Panel 类](#Panels_view_from_10000_feet)  
+- [Panel 类](#Panels_view_from_10000_feet)  
   
--   [Panel 元素公共成员](#Panels_declared_members)  
+- [Panel 元素公共成员](#Panels_declared_members)  
   
--   [派生 Panel 元素](#Panels_derived_elements)  
+- [派生 Panel 元素](#Panels_derived_elements)  
   
--   [用户界面 Panel](#Panels_main_UI_elements)  
+- [用户界面 Panel](#Panels_main_UI_elements)  
   
--   [嵌套 Panel 元素](#Panels_nested_panel_elements)  
+- [嵌套 Panel 元素](#Panels_nested_panel_elements)  
   
--   [自定义 Panel 元素](#Panels_custom_panel_elements)  
+- [自定义 Panel 元素](#Panels_custom_panel_elements)  
   
--   [本地化/全球化支持](#Panels_global_localization)  
+- [本地化/全球化支持](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Panel 类  

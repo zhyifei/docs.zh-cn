@@ -3,11 +3,11 @@ title: 使用 Windows Management Instrumentation 进行诊断
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048274"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management Instrumentation (WMI) 提供程序的运行时服务的检测数据。  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management In
   
      此 PowerShell 脚本使用安全描述符定义语言 (SDDL) 授予内置用户组访问权限的"根/servicemodel"WMI 命名空间。 它指定了以下 ACL：  
   
-    -   内置管理员 (BA) - 已经具有访问权。  
+    - 内置管理员 (BA) - 已经具有访问权。  
   
-    -   网络服务 (NS) - 已经具有访问权。  
+    - 网络服务 (NS) - 已经具有访问权。  
   
-    -   本地系统 (LS) - 已经具有访问权。  
+    - 本地系统 (LS) - 已经具有访问权。  
   
-    -   Built-In Users - 向其授予访问权的组。  
+    - Built-In Users - 向其授予访问权的组。  
   
 #### <a name="to-grant-provider-registration-access"></a>向提供程序授予注册访问权  
   

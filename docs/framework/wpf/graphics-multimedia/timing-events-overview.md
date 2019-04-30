@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002386"
 ---
 # <a name="timing-events-overview"></a>计时事件概述
 本主题介绍如何使用上可用的五个计时事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象。  
@@ -23,11 +23,11 @@ ms.locfileid: "59167162"
   
  有多个方法中的属性进行动画处理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **使用情节提要对象**（标记和代码）：可以使用<xref:System.Windows.Media.Animation.Storyboard>对象排列和分发到一个或多个对象的动画。 有关示例，请参阅[使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)。  
+- **使用情节提要对象**（标记和代码）：可以使用<xref:System.Windows.Media.Animation.Storyboard>对象排列和分发到一个或多个对象的动画。 有关示例，请参阅[使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)。  
   
--   **使用本地动画**（仅代码）：您可以将应用<xref:System.Windows.Media.Animation.AnimationTimeline>直接对它们进行动画处理的属性的对象。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](how-to-animate-a-property-without-using-a-storyboard.md)。  
+- **使用本地动画**（仅代码）：您可以将应用<xref:System.Windows.Media.Animation.AnimationTimeline>直接对它们进行动画处理的属性的对象。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](how-to-animate-a-property-without-using-a-storyboard.md)。  
   
--   **使用时钟**（仅代码）：您可以显式管理时钟创建并自行分发动画时钟。  有关示例，请参阅[通过使用 AnimationClock 对属性进行动画处理](how-to-animate-a-property-by-using-an-animationclock.md)。  
+- **使用时钟**（仅代码）：您可以显式管理时钟创建并自行分发动画时钟。  有关示例，请参阅[通过使用 AnimationClock 对属性进行动画处理](how-to-animate-a-property-by-using-an-animationclock.md)。  
   
  因为您可以使用这些标记和代码中，此概述中的示例使用<xref:System.Windows.Media.Animation.Storyboard>对象。 但是，所介绍的概念适用于其他对属性进行动画处理的方法。  
   

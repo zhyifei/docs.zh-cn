@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010017"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+ 中的图元文件
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了<xref:System.Drawing.Imaging.Metafile>类，使您可以记录和显示图元文件。 图元文件，也称为矢量图像，是存储为一系列绘图命令和设置的映像。 在中记录的命令和设置<xref:System.Drawing.Imaging.Metafile>对象可以存储在内存中或保存到文件或流。  
@@ -22,11 +22,11 @@ ms.locfileid: "59119855"
 ## <a name="metafile-formats"></a>图元文件格式  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以显示图元文件的已存储在以下格式：  
   
--   Windows Metafile (WMF)  
+- Windows Metafile (WMF)  
   
--   增强型图元文件 (EMF)  
+- 增强型图元文件 (EMF)  
   
--   EMF+  
+- EMF+  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以记录图元文件中的 EMF 和 EMF + 格式，但不是在 WMF 格式。  
   

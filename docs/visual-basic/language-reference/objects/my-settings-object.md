@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050306"
 ---
 # <a name="mysettings-object"></a>My.Settings 对象
 提供用于访问应用程序的设置属性和方法。  
@@ -25,13 +25,13 @@ ms.locfileid: "58840362"
   
  每个设置具有**名称**，**类型**，**作用域**，以及**值**，并且这些设置确定如何要访问每个设置的属性将出现在`My.Settings`对象：  
   
--   **名称**确定属性的名称。  
+- **名称**确定属性的名称。  
   
--   **类型**确定属性的类型。  
+- **类型**确定属性的类型。  
   
--   **作用域**指示该属性是只读的。 如果值为**应用程序**，该属性是只读的; 如果值为**用户**，属性为读写。  
+- **作用域**指示该属性是只读的。 如果值为**应用程序**，该属性是只读的; 如果值为**用户**，属性为读写。  
   
--   **值**是属性的默认值。  
+- **值**是属性的默认值。  
   
 ## <a name="methods"></a>方法  
   

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012062"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>通过监视和遥测对应用进行现代化
 
@@ -35,15 +35,15 @@ Application Insights 是面向 web 开发人员可以在多个平台上的可扩
 
 [容器监视解决方案](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)中 Log Analytics 可帮助您查看和管理 Docker 和 Windows 容器主机在一个位置。 此解决方案显示哪些容器正在运行，哪些容器映像运行它们，以及运行容器。 可以查看详细的审核信息，包括与容器一起使用的命令。 此外可以通过查看和搜索集中式的日志，而无需远程查看 Docker 或 Windows 的主机来排查容器。 您可以找到可能会干扰并花费较长的主机上的过多资源的容器。 此外，您可以查看集中式的 CPU、 内存、 存储和网络使用情况和性能信息，为容器。 在运行 Windows 的计算机，您可以集中并比较日志从 Windows Server HYPER-V 和 Docker 容器。 该解决方案支持以下容器业务流程协调程序：
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
+- Service Fabric
 
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 图 4-11 显示了各种容器主机和代理和 OMS 之间的关系。
 
@@ -53,45 +53,45 @@ Application Insights 是面向 web 开发人员可以在多个平台上的可扩
 
 可以使用的 Log Analytics 容器监视解决方案：
 
--   请参阅有关在单个位置所有容器主机的信息。
+- 请参阅有关在单个位置所有容器主机的信息。
 
--   知道哪些容器正在运行，哪些映像运行它们，并运行位置。
+- 知道哪些容器正在运行，哪些映像运行它们，并运行位置。
 
--   请参阅在容器上的操作的审核线索。
+- 请参阅在容器上的操作的审核线索。
 
--   通过查看和搜索而无需远程登录到 Docker 主机的集中化的日志进行故障排除。
+- 通过查看和搜索而无需远程登录到 Docker 主机的集中化的日志进行故障排除。
 
--   查找可能是"噪声邻居，"并在消耗过多资源的主机上的容器。
+- 查找可能是"噪声邻居，"并在消耗过多资源的主机上的容器。
 
--   查看集中式的 CPU、 内存、 存储和网络使用情况和性能信息，为容器。
+- 查看集中式的 CPU、 内存、 存储和网络使用情况和性能信息，为容器。
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Microsoft Azure 中的监视概述**
+- **Microsoft Azure 中的监视概述**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **什么是 Application Insights？**
+- **什么是 Application Insights？**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **什么是 Log Analytics？**
+- **什么是 Log Analytics？**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Azure Monitor 中的容器监视解决方案**
+- **Azure Monitor 中的容器监视解决方案**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Azure Monitor 概述**
+- **Azure Monitor 概述**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **什么是 Operations Management Suite (OMS)？**
+- **什么是 Operations Management Suite (OMS)？**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **监视 Service Fabric 和 OMS 中的 Windows Server 容器**
+- **监视 Service Fabric 和 OMS 中的 Windows Server 容器**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

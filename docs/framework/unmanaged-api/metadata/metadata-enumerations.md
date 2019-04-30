@@ -9,11 +9,11 @@ ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042193"
 ---
 # <a name="metadata-enumerations"></a>元数据枚举
 本节描述元数据 API 使用的非托管枚举。  
@@ -26,10 +26,10 @@ ms.locfileid: "33460963"
  包含一些值，用于描述程序集引用的函数。  
   
  [CeeSectionAttr 枚举](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- 提供用于指定以供节特性值[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
+ 提供用于指定以供节的特性值[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
   
  [CeeSectionRelocType 枚举](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
- 提供值来影响的一种`reloc`指令发出对的调用中[iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)方法。  
+ 提供要影响的类型值`reloc`发出的调用中的指令[iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)方法。  
   
  [COINITICOR 枚举](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
  指定使用的常量[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)初始化公共语言运行时。  
@@ -71,10 +71,10 @@ ms.locfileid: "33460963"
  包含值，用于描述对的调用中定义的文件类型[imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)方法。  
   
  [CorFileMapping 枚举](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- 包含值，用于描述从调用返回的文件映射的类型[imetadatainfo::](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)方法。  
+ 包含描述从调用返回的文件映射的类型的值[imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)方法。  
   
  [CorGenericParamAttr 枚举](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- 包含值，用于描述<xref:System.Type>对于泛型类型，为调用中使用的参数[imetadataemit2:: Definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)方法。  
+ 包含值，用于描述<xref:System.Type>泛型类型，作为调用中使用参数[IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)方法。  
   
  [CorImportOptions 枚举](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  包含一些标志值，用于在导入当前作用域范围外的程序集的过程中控制行为。  
@@ -116,7 +116,7 @@ ms.locfileid: "33460963"
  包含一些值，用于描述方法参数的元数据。  
   
  [CorPEKind 枚举](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)  
- 包含值，用于描述可移植可执行文件中，从调用返回[imetadataimport2:: Getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)方法。  
+ 包含值，用于描述可移植可执行文件，如从调用返回[IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)方法。  
   
  [CorPinvokeMap 枚举](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)  
  包含一些值，用于描述 PInvoke 调用的功能。  
@@ -152,7 +152,7 @@ ms.locfileid: "33460963"
  包含一些值，用于描述非托管的调用约定。  
   
  [CorValidatorModuleType 枚举](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- 提供使用的值[IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)接口来指定的模块 （与.obj 文件的 PE 文件） 的类型。  
+ 提供了所使用的值[IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)接口来指定模块 （与.obj 文件的 PE 文件） 的类型。  
   
  [COUNINITIEE 枚举](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
  指定使用的常量[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)初始化公共语言运行时。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009118"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -23,23 +23,23 @@ ms.locfileid: "59321882"
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 本演练涉及以下任务：  
   
--   创建 Windows 窗体项目  
+- 创建 Windows 窗体项目  
   
--   沿水平方向和垂直方向排列控件  
+- 沿水平方向和垂直方向排列控件  
   
--   更改流方向  
+- 更改流方向  
   
--   插入分流符  
+- 插入分流符  
   
--   使用填充和边距排列控件  
+- 使用填充和边距排列控件  
   
--   通过在工具箱中双击控件将其插入  
+- 通过在工具箱中双击控件将其插入  
   
--   通过绘制控件轮廓将其插入  
+- 通过绘制控件轮廓将其插入  
   
--   使用插入符号插入控件  
+- 使用插入符号插入控件  
   
--   将现有控件重新分配给另一个父控件  
+- 将现有控件重新分配给另一个父控件  
   
  完成上述操作后，你将会了解这些重要布局功能所发挥的作用。  
   
@@ -179,13 +179,13 @@ ms.locfileid: "59321882"
 ## <a name="next-steps"></a>后续步骤  
  可使用布局面板和控件的组合实现复杂布局。 有关进一步探索的建议包括：  
   
--   将其中一个 <xref:System.Windows.Forms.Button> 控件调整为更大的大小，并注意对布局产生的效果。  
+- 将其中一个 <xref:System.Windows.Forms.Button> 控件调整为更大的大小，并注意对布局产生的效果。  
   
--   布局面板可以包含其他布局面板。 试验将 <xref:System.Windows.Forms.TableLayoutPanel> 控件放入现有控件。  
+- 布局面板可以包含其他布局面板。 试验将 <xref:System.Windows.Forms.TableLayoutPanel> 控件放入现有控件。  
   
--   将 <xref:System.Windows.Forms.FlowLayoutPanel> 控件停靠到父窗体。 调整窗体大小，并注意对布局产生的效果。  
+- 将 <xref:System.Windows.Forms.FlowLayoutPanel> 控件停靠到父窗体。 调整窗体大小，并注意对布局产生的效果。  
   
--   将其中一个控件的 <xref:System.Windows.Forms.Control.Visible%2A> 属性设置为 `false` ，并注意 <xref:System.Windows.Forms.FlowLayoutPanel> 作为响应是如何进行重排的。  
+- 将其中一个控件的 <xref:System.Windows.Forms.Control.Visible%2A> 属性设置为 `false` ，并注意 <xref:System.Windows.Forms.FlowLayoutPanel> 作为响应是如何进行重排的。  
   
 ## <a name="see-also"></a>请参阅
 

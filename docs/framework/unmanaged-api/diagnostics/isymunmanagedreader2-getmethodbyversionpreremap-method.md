@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcd200b7fa431f193dd202c3c2a690aa22ec8e32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986253"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap 方法
 获取符号读取器方法，给定一个方法标记和编辑并继续的版本号。 版本号从 1 开始，并会在每的次递增的方法更改因执行编辑并继续操作。  

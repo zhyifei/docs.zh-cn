@@ -5,18 +5,18 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039138"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>如何：安装和配置 WCF 激活组件
 本主题介绍在设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
   
--   安装 （或确认安装） WCF 激活组件。  
+- 安装 （或确认安装） WCF 激活组件。  
   
--   配置 WAS 以支持非 HTTP 协议。 下面的过程对 [!INCLUDE[wv](../../../../includes/wv-md.md)] 进行 TCP 激活配置。  
+- 配置 WAS 以支持非 HTTP 协议。 下面的过程对 [!INCLUDE[wv](../../../../includes/wv-md.md)] 进行 TCP 激活配置。  
   
  安装和配置 WAS，请参阅后[如何：承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)用于创建公开使用 WAS 的非 HTTP 终结点的 WCF 服务的过程。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "59327979"
   
      为方便起见，在位于示例目录中名为 RemoveNetTcpSiteBinding.cmd 的批处理文件中实现以下两个步骤。  
   
-    1.  通过在管理员级别命令提示符窗口中运行以下命令，从启用的协议列表移除 net.tcp。  
+    1. 通过在管理员级别命令提示符窗口中运行以下命令，从启用的协议列表移除 net.tcp。  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -67,7 +67,7 @@ ms.locfileid: "59327979"
         > [!NOTE]
         >  此命令是单行文本。  
   
-    2.  通过在提升的命令提示符窗口中运行以下命令移除 net.tcp 网站绑定：  
+    2. 通过在提升的命令提示符窗口中运行以下命令移除 net.tcp 网站绑定：  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

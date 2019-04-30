@@ -9,21 +9,21 @@ ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985590"
 ---
 # <a name="hosting-structures"></a>承载结构
-本部分描述承载 API 使用的非托管的结构。  
+本节描述承载 API 使用的非托管的结构。  
   
 ## <a name="in-this-section"></a>本节内容  
  [AssemblyBindInfo 结构](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
  提供有关引用程序集的详细的信息。  
   
  [BucketParameters 结构](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
- 将存储与事件相关联的当前异常的事件和参数的类型名称。  
+ 存储与事件相关联的当前异常的事件和参数的类型名称。  
   
  [COR_GC_STATS 结构](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
  提供有关垃圾回收机制的公共语言运行时 (CLR) 的统计信息。  
@@ -32,16 +32,16 @@ ms.locfileid: "33434681"
  包含有关垃圾回收的每个线程统计信息。  
   
  [CustomDumpItem 结构](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- 描述要添加到自定义转储错误报告中的项。  
+ 描述要添加到错误报告中的自定义转储的项。  
   
  [MDAInfo 结构](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- 提供有关的详细信息`Event_MDAFired`触发的托管调试助手 (MDA) 创建的事件。  
+ 详细介绍`Event_MDAFired`触发托管调试助手 (MDA) 创建的事件。  
   
  [ModuleBindInfo 结构](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
  提供有关引用的模块和包含它的程序集的详细的信息。  
   
  [StackOverflowInfo 结构](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
- 由于溢出时引发的异常上存储的溢出发生和信息的类型。  
+ 由于发生溢出时引发的异常上存储的类型发生溢出和信息。  
   
 ## <a name="related-sections"></a>相关章节  
  [承载组件类](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051151"
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 Windows Communication Foundation (WCF) 服务设计为支持托管代码的任何 Windows 进程中运行。  

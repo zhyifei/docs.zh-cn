@@ -3,24 +3,24 @@ title: 聚合查询
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
 ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032547"
 ---
 # <a name="aggregate-queries"></a>聚合查询
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持 `Average`、`Count`、`Max`、`Min` 和 `Sum` 聚合运算符。 请注意 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中聚合运算符的以下特征：  
   
--   聚合查询是立即执行的。  
+- 聚合查询是立即执行的。  
   
      有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
--   聚合查询通常返回一个数字，而非一个集合。  
+- 聚合查询通常返回一个数字，而非一个集合。  
   
      有关详细信息，请参阅[聚合操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))。  
   
--   不能对匿名类型调用聚合。  
+- 不能对匿名类型调用聚合。  
   
  以下主题中的示例来自 Northwind 示例数据库。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   

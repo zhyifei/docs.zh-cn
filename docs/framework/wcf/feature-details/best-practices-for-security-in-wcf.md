@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048239"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 以下各节列出了在使用 Windows Communication Foundation (WCF) 创建安全应用程序时应考虑的最佳做法。 有关安全性的详细信息，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)和[元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -26,11 +26,11 @@ ms.locfileid: "59166122"
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>使用 X509 证书而不是 NTLM  
  WCF 提供了两种用于对等身份验证机制：X509 证书 （由对等通道使用） 和 Windows 身份验证的 SSPI 协商从 Kerberos 降级为 NTLM。  由于以下几个原因，使用 1024 位或更多位的密钥、基于证书的身份验证优于 NTLM：  
   
--   提供相互身份验证；  
+- 提供相互身份验证；  
   
--   使用更强的加密算法；以及  
+- 使用更强的加密算法；以及  
   
--   不易使用转发的 X509 凭据。  
+- 不易使用转发的 X509 凭据。  
    
 ## <a name="always-revert-after-impersonation"></a>始终在模拟后还原  
  在使用启用客户端模拟的 API 时，应确保还原为原始标识。 例如，在使用 <xref:System.Security.Principal.WindowsIdentity> 和 <xref:System.Security.Principal.WindowsImpersonationContext> 时使用 C# `using` 语句或 Visual Basic `Using` 语句，如以下代码中所示。 <xref:System.Security.Principal.WindowsImpersonationContext> 类实现 <xref:System.IDisposable> 接口，因此，一旦代码离开 `using` 块，公共语言运行库 (CLR) 就会自动还原到原始标识。  

@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055051"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
 
@@ -50,13 +50,13 @@ ms.locfileid: "48030835"
 
 可移植类库项目中可用的类型和成员受若干兼容性因素的约束：
 
--   它们必须在所选各目标之间共享。
+- 它们必须在所选各目标之间共享。
 
--   它们必须在这些目标上具有类似的行为方式。
+- 它们必须在这些目标上具有类似的行为方式。
 
--   它们不能是要弃用的候选项。
+- 它们不能是要弃用的候选项。
 
--   它们必须在可移植环境中有意义，特别是在支持成员不可移植时。
+- 它们必须在可移植环境中有意义，特别是在支持成员不可移植时。
 
 如果一个成员在可移植类库和所选的目标中受支持，它将会你的 IntelliSense 项目中出现。 但是，请记住某一 API 可能在可移植类库中受支持，但你是否可以使用该 API ​​取决于你选择的目标。
 
@@ -78,9 +78,9 @@ ms.locfileid: "48030835"
 
 部署引用可移植类库程序集的 .NET Framework 应用时，你必须指定一个对 .NET Framework 正确版本的依赖项。 通过指定此依赖项，可确保与你的应用程序一起安装所需的版本。
 
--   若要创建 ClickOnce 部署的依赖项： 在**解决方案资源管理器**，选择想要发布的项目的项目节点。 （这是引用了可移植类库项目的项目）在菜单栏上依次选择**项目** > **属性**，然后选择**发布**选项卡。上**发布**页上，选择**先决条件**。 选择所需 .NET Framework 版本作为系统必备组件。
+- 若要创建 ClickOnce 部署的依赖项：在中**解决方案资源管理器**，选择想要发布的项目的项目节点。 （这是引用了可移植类库项目的项目）在菜单栏上依次选择**项目** > **属性**，然后选择**发布**选项卡。上**发布**页上，选择**先决条件**。 选择所需 .NET Framework 版本作为系统必备组件。
 
--   若要创建安装项目的依赖项： 在**解决方案资源管理器**，选择安装项目。 在菜单栏上依次选择**项目** > **属性** > **先决条件**。 选择所需 .NET Framework 版本作为系统必备组件。
+- 若要创建安装项目的依赖项：在中**解决方案资源管理器**，选择安装项目。 在菜单栏上依次选择**项目** > **属性** > **先决条件**。 选择所需 .NET Framework 版本作为系统必备组件。
 
 有关部署.NET Framework 应用程序的详细信息，请参阅[开发人员部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)。
 

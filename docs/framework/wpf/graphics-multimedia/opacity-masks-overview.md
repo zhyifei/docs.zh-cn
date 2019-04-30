@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008398"
 ---
 # <a name="opacity-masks-overview"></a>不透明蒙板概述
 不透明蒙板能够使部分元素或视觉对象透明或部分透明。 若要创建不透明蒙板，则应用<xref:System.Windows.Media.Brush>到<xref:System.Windows.UIElement.OpacityMask%2A>元素的属性或<xref:System.Windows.Media.Visual>。  画笔映射到元素或视觉对象，并且画笔的每个像素的不透明度值用于确定生成的元素或视觉对象的每个相应像素的不透明度。  
@@ -36,21 +36,21 @@ ms.locfileid: "59080080"
 ## <a name="creating-an-opacity-mask"></a>创建不透明蒙板  
  若要创建不透明蒙板，你可以创建<xref:System.Windows.Media.Brush>并将其应用于<xref:System.Windows.UIElement.OpacityMask%2A>元素或视觉对象的属性。 可以使用任何类型的<xref:System.Windows.Media.Brush>作为不透明蒙板。  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>:用于使元素或从视图 visual 淡入淡出。  
+- <xref:System.Windows.Media.LinearGradientBrush>、<xref:System.Windows.Media.RadialGradientBrush>：用于使元素或从视图 visual 淡入淡出。  
   
      下图显示了<xref:System.Windows.Media.LinearGradientBrush>用作不透明蒙板。  
   
      ![具有 LinearGradientBrush 不透明蒙版的对象](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush 不透明蒙板示例  
   
--   <xref:System.Windows.Media.ImageBrush>：用于创建纹理和软或撕裂边缘效果。  
+- <xref:System.Windows.Media.ImageBrush>：用于创建纹理和软或撕裂边缘效果。  
   
      下图显示了<xref:System.Windows.Media.ImageBrush>用作不透明蒙板。  
   
      ![具有 ImageBrush 不透明蒙版的对象](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush 不透明蒙板示例  
   
--   <xref:System.Windows.Media.DrawingBrush>：用于从形状、 图像和渐变的模式创建复杂的不透明蒙板。  
+- <xref:System.Windows.Media.DrawingBrush>：用于从形状、 图像和渐变的模式创建复杂的不透明蒙板。  
   
      下图显示了<xref:System.Windows.Media.DrawingBrush>用作不透明蒙板。  
   

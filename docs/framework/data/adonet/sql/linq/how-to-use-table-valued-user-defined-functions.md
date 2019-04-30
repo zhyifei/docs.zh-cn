@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
 ms.openlocfilehash: eedc2e9b997e91ed9fe0038f260aa475d23a0627
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033587"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>如何：使用表值用户定义的函数
 表值函数返回单个行集（与存储过程不同，存储过程可返回多个结果形状）。 由于表值函数的返回类型为 `Table`，因此在 SQL 中可以使用表的任何地方均可以使用表值函数。 此外，您还可以完全像处理表那样来处理表值函数。  

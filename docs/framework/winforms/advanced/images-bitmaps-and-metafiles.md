@@ -8,16 +8,14 @@ helpviewer_keywords:
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
 ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003933"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>图像、位图和图元文件
-
-  `Image` 类是一个抽象基类，提供用于处理光栅图像（位图）和矢量图像（图元文件）的方法。 `Bitmap` 类和 <xref:System.Drawing.Imaging.Metafile> 类从 `Image` 类继承。 `Bitmap` 类通过提供用于加载、保存和操作光栅图像的附加方法，在 `Image` 类的功能上进行扩展。 
-  <xref:System.Drawing.Imaging.Metafile> 类通过提供用于记录和检查矢量图像的附加方法，在 `Image` 类的功能上进行扩展。  
+`Image` 类是一个抽象基类，提供用于处理光栅图像（位图）和矢量图像（图元文件）的方法。 `Bitmap` 类和 <xref:System.Drawing.Imaging.Metafile> 类从 `Image` 类继承。 `Bitmap` 类通过提供用于加载、保存和操作光栅图像的附加方法，在 `Image` 类的功能上进行扩展。 <xref:System.Drawing.Imaging.Metafile> 类通过提供用于记录和检查矢量图像的附加方法，在 `Image` 类的功能上进行扩展。  
   
 ## <a name="in-this-section"></a>本节内容  
  [位图类型](types-of-bitmaps.md)  

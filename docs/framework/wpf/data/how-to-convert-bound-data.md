@@ -10,11 +10,11 @@ helpviewer_keywords:
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
 ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020928"
 ---
 # <a name="how-to-convert-bound-data"></a>如何：转换已绑定的数据
 此示例演示如何将应用到绑定中使用的数据转换。  

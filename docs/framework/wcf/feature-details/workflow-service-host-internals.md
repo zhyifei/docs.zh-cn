@@ -3,11 +3,11 @@ title: 工作流服务主机内部机制
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
 ms.openlocfilehash: 0596e15e27460a08f859ec3398afbeae752c86fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984191"
 ---
 # <a name="workflow-service-host-internals"></a>工作流服务主机内部机制
 <xref:System.ServiceModel.WorkflowServiceHost> 为工作流服务提供主机。 它负责侦听传入消息并将这些消息路由到相应的工作流服务实例，控制空闲工作流的卸载与持久保留，等等。 本主题说明 WorkflowServiceHost 如何处理传入消息。  

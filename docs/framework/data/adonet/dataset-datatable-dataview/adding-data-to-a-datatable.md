@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
 ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034510"
 ---
 # <a name="adding-data-to-a-datatable"></a>将数据添加到数据表中
 在创建 <xref:System.Data.DataTable> 并使用列和约束定义其结构之后，您可以将新的数据行添加到表中。 要添加新行，可将一个新变量声明为 <xref:System.Data.DataRow> 类型。 一个新**DataRow**调用时返回对象<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**然后创建**DataRow**对象基于的表的结构定义的<xref:System.Data.DataColumnCollection>。  

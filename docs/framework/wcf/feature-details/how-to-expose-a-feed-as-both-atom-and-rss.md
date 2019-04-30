@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039555"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>如何：作为 Atom 和 RSS 公开源
 Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 本主题讨论如何使用 Atom 1.0 和 RSS 2.0 创建公开联合源的联合服务。 此服务公开一个可以返回任一联合格式的终结点。 为了简单起见，本示例中使用的服务为自承载服务。 在生产环境中，此类型的服务将承载在 IIS 或 WAS 下。 有关不同 WCF 托管选项的详细信息，请参阅[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012706"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在“Windows 窗体”中使用控件的概述
 本主题描述 Windows 窗体应用程序的基本元素，并提供一个简单示例，使用控件以及处理 Windows 窗体应用程序中的事件。  
@@ -22,9 +22,9 @@ ms.locfileid: "59207352"
 ## <a name="simple-windows-forms-applications"></a>简单 Windows 窗体应用程序  
  至少，Windows 窗体应用程序由以下元素组成：  
   
--   派生的一个或多个类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
+- 派生的一个或多个类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
   
--   一个`Main`调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，并传递<xref:System.Windows.Forms.Form>到它的实例。 <xref:System.Windows.Forms.Application.Run%2A>方法处理从操作系统到应用程序的消息。  
+- 一个`Main`调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，并传递<xref:System.Windows.Forms.Form>到它的实例。 <xref:System.Windows.Forms.Application.Run%2A>方法处理从操作系统到应用程序的消息。  
   
  下面的代码示例显示了 Windows 窗体应用程序的必备要素。  
   

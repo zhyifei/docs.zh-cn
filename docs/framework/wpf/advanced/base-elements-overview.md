@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032053"
 ---
 # <a name="base-elements-overview"></a>基元素概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中较高比重的类都派生自四类，它们通常在 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文档中称为基元素。 这些类是<xref:System.Windows.UIElement>， <xref:System.Windows.FrameworkElement>， <xref:System.Windows.ContentElement>，和<xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject>类也相关，因为它是这两者的一个公共基类<xref:System.Windows.UIElement>和 <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ ms.locfileid: "59110053"
   
  如果创建派生的类<xref:System.Windows.DependencyObject>，还将继承以下功能：  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> 和<xref:System.Windows.DependencyObject.SetValue%2A>支持以及常规属性系统支持。  
+- <xref:System.Windows.DependencyObject.GetValue%2A> 和<xref:System.Windows.DependencyObject.SetValue%2A>支持以及常规属性系统支持。  
   
--   能够使用依赖属性和实现为依赖属性的附加属性。  
+- 能够使用依赖属性和实现为依赖属性的附加属性。  
   
  如果创建派生自类<xref:System.Windows.UIElement>，还将继承以下功能之外，提供的<xref:System.Windows.DependencyObject>:  
   
--   对已动画处理的属性值的基本支持。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。  
+- 对已动画处理的属性值的基本支持。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。  
   
--   基本输入事件支持以及命令支持。 有关详细信息，请参阅[输入概述](input-overview.md)和[命令概述](commanding-overview.md)。  
+- 基本输入事件支持以及命令支持。 有关详细信息，请参阅[输入概述](input-overview.md)和[命令概述](commanding-overview.md)。  
   
--   可进行替代以便介绍布局系统的虚拟方法。  
+- 可进行替代以便介绍布局系统的虚拟方法。  
   
  如果创建派生自类<xref:System.Windows.FrameworkElement>，还将继承以下功能之外，提供的<xref:System.Windows.UIElement>:  
   
--   样式和情节提要支持。 有关详细信息，请参阅<xref:System.Windows.Style>并[演示图板概述](../graphics-multimedia/storyboards-overview.md)。  
+- 样式和情节提要支持。 有关详细信息，请参阅<xref:System.Windows.Style>并[演示图板概述](../graphics-multimedia/storyboards-overview.md)。  
   
--   数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../data/data-binding-overview.md)。  
+- 数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../data/data-binding-overview.md)。  
   
--   动态资源引用支持。 有关详细信息，请参阅 [XAML 资源](xaml-resources.md)。  
+- 动态资源引用支持。 有关详细信息，请参阅 [XAML 资源](xaml-resources.md)。  
   
--   属性值继承支持，以及元数据中的其他标记，这些标记有助于报告关于框架服务属性的情况，例如数据绑定、样式或布局的框架实现。 有关详细信息，请参阅[框架属性元数据](framework-property-metadata.md)。  
+- 属性值继承支持，以及元数据中的其他标记，这些标记有助于报告关于框架服务属性的情况，例如数据绑定、样式或布局的框架实现。 有关详细信息，请参阅[框架属性元数据](framework-property-metadata.md)。  
   
--   逻辑树概念。 有关详细信息，请参见 [WPF 中的树](trees-in-wpf.md)。  
+- 逻辑树概念。 有关详细信息，请参见 [WPF 中的树](trees-in-wpf.md)。  
   
--   布局系统的实用 WPF 框架级别实现的支持包括<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>可以检测到的重写更改为属性影响布局。  
+- 布局系统的实用 WPF 框架级别实现的支持包括<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>可以检测到的重写更改为属性影响布局。  
   
  如果创建派生自类<xref:System.Windows.ContentElement>，还将继承以下功能之外，提供的<xref:System.Windows.DependencyObject>:  
   
--   支持动画。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。  
+- 支持动画。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。  
   
--   基本输入事件支持以及命令支持。 有关详细信息，请参阅[输入概述](input-overview.md)和[命令概述](commanding-overview.md)。  
+- 基本输入事件支持以及命令支持。 有关详细信息，请参阅[输入概述](input-overview.md)和[命令概述](commanding-overview.md)。  
   
  如果创建派生自类<xref:System.Windows.FrameworkContentElement>，你将获得以下功能之外，提供的<xref:System.Windows.ContentElement>:  
   
--   样式和情节提要支持。 有关详细信息，请参阅<xref:System.Windows.Style>并[动画概述](../graphics-multimedia/animation-overview.md)。  
+- 样式和情节提要支持。 有关详细信息，请参阅<xref:System.Windows.Style>并[动画概述](../graphics-multimedia/animation-overview.md)。  
   
--   数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../data/data-binding-overview.md)。  
+- 数据绑定支持。 有关详细信息，请参阅 [数据绑定概述](../data/data-binding-overview.md)。  
   
--   动态资源引用支持。 有关详细信息，请参阅 [XAML 资源](xaml-resources.md)。  
+- 动态资源引用支持。 有关详细信息，请参阅 [XAML 资源](xaml-resources.md)。  
   
--   属性值继承支持，以及元数据中的其他标记，这些标记有助于报告关于框架服务属性的情况，例如数据绑定、样式或布局的框架实现。 有关详细信息，请参阅[框架属性元数据](framework-property-metadata.md)。  
+- 属性值继承支持，以及元数据中的其他标记，这些标记有助于报告关于框架服务属性的情况，例如数据绑定、样式或布局的框架实现。 有关详细信息，请参阅[框架属性元数据](framework-property-metadata.md)。  
   
--   你不会继承布局系统修改访问 (如<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>)。 布局系统实现才可在上找到<xref:System.Windows.FrameworkElement>。 但是，继承<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>可以检测对影响布局，并报告给任何内容宿主的属性的更改的替代。  
+- 你不会继承布局系统修改访问 (如<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>)。 布局系统实现才可在上找到<xref:System.Windows.FrameworkElement>。 但是，继承<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>可以检测对影响布局，并报告给任何内容宿主的属性的更改的替代。  
   
  针对各种类记录内容模型。 如果想要查找相应的类进行派生，类的内容模型是应该考虑的一个可能因素。 有关详细信息，请参阅 [WPF 内容模型](../controls/wpf-content-model.md)。  
   

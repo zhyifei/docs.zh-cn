@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034420"
 ---
 # <a name="copying-dataset-contents"></a>复制数据集内容
 可以创建一份<xref:System.Data.DataSet>，以便可以处理的数据，而不会影响原始数据，或处理中的数据的子集**数据集**。 复制时**数据集**，你可以：  
   
--   创建的一个精确副本**数据集**，包括架构、 数据、 行状态信息和行版本。  
+- 创建的一个精确副本**数据集**，包括架构、 数据、 行状态信息和行版本。  
   
--   创建**数据集**，其中包含对现有的架构**数据集**，但已被修改的行。 可以返回已修改的所有行，也可以指定特定**DataRowState**。 有关行状态的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+- 创建**数据集**，其中包含对现有的架构**数据集**，但已被修改的行。 可以返回已修改的所有行，也可以指定特定**DataRowState**。 有关行状态的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
--   复制的架构，即关系结构**数据集**仅，而不复制任何行。 可以使用 <xref:System.Data.DataTable> 将行导入现有 <xref:System.Data.DataTable.ImportRow%2A>。  
+- 复制的架构，即关系结构**数据集**仅，而不复制任何行。 可以使用 <xref:System.Data.DataTable> 将行导入现有 <xref:System.Data.DataTable.ImportRow%2A>。  
   
  若要创建的一个精确副本**数据集**其中包括架构和数据，请使用<xref:System.Data.DataSet.Copy%2A>方法**数据集**。 下面的代码示例演示如何创建完全相同的副本**数据集**。  
   

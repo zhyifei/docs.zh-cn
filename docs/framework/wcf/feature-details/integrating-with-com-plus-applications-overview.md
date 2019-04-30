@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046913"
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
 Windows Communication Foundation (WCF) 提供了用于创建分布式应用程序的丰富环境。 如果你已在使用 COM + 中承载的基于组件的应用程序逻辑，可以使用 WCF 来扩展现有的逻辑，而不是无需将其重写。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
   
  在 COM+ 组件上的接口作为 Web 服务公开时，这些服务的规范和协定取决于在应用程序初始化时执行的自动映射。 下面的列表演示此映射的概念模型：  
   
--   为每个公开的 COM 类定义一个服务。  
+- 为每个公开的 COM 类定义一个服务。  
   
--   服务的协定直接派生自选定组件的接口定义，并可能在配置中定义方法排除。  
+- 服务的协定直接派生自选定组件的接口定义，并可能在配置中定义方法排除。  
   
--   该协定中的操作直接派生自组件接口定义中的方法。  
+- 该协定中的操作直接派生自组件接口定义中的方法。  
   
--   这些操作的参数直接派生自与组件的方法参数对应的 COM 互操作性类型。  
+- 这些操作的参数直接派生自与组件的方法参数对应的 COM 互操作性类型。  
   
  服务的默认地址和传输绑定是在服务配置文件中提供的，但可以根据需要重新配置。  
   
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) 提供了用于创建分布式应用程�
 ## <a name="supported-interfaces"></a>支持的接口  
  对可作为 Web 服务公开的接口的类型有一些限制。 不支持以下类型的接口：  
   
--   将对象引用作为参数传递的接口 –“受限对象引用支持”一节中介绍了以下受限对象引用方法。  
+- 将对象引用作为参数传递的接口 –“受限对象引用支持”一节中介绍了以下受限对象引用方法。  
   
--   传递与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互操作性转换不兼容的类型的接口。  
+- 传递与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互操作性转换不兼容的类型的接口。  
   
--   由 COM+ 承载时启用应用程序池的应用程序的接口。  
+- 由 COM+ 承载时启用应用程序池的应用程序的接口。  
   
--   标记为应用程序专用的组件的接口。  
+- 标记为应用程序专用的组件的接口。  
   
--   COM+ 基础结构接口。  
+- COM+ 基础结构接口。  
   
--   系统应用程序的接口。  
+- 系统应用程序的接口。  
   
--   尚未添加到全局程序集缓存中的企业服务组件的接口。  
+- 尚未添加到全局程序集缓存中的企业服务组件的接口。  
   
 ### <a name="limited-object-reference-support"></a>受限对象引用支持  
  由于许多已部署的 COM+ 组件需要根据引用参数来使用对象（如返回 ADO Recordset 对象），因此 COM+ 集成为对象引用参数提供了有限支持。 该支持仅限于实现 `IPersistStream` COM 接口的对象。 其中包括 ADO Recordset 对象，并且可针对应用程序特定的 COM 对象实现。  
@@ -76,15 +76,15 @@ Windows Communication Foundation (WCF) 提供了用于创建分布式应用程�
 ## <a name="selecting-the-hosting-mode"></a>选择宿主模式  
  COM+ 可以通过以下宿主模式之一来公开 Web 服务：  
   
--   COM+ 承载  
+- COM+ 承载  
   
      Web 服务承载于应用程序的专用 COM+ 服务器进程 (Dllhost.exe) 中。 此模式要求显式启动应用程序才能接收 Web 服务请求。 可以使用 COM+ 选项“Run as an NT Service”[作为 NT 服务运行]或“Leave running when idle”[空闲时保持运行]来防止在空闲时关闭应用程序及其服务。 此模式对服务器应用程序同时提供 Web 服务和 DCOM 访问。  
   
--   Web 承载  
+- Web 承载  
   
      Web 服务承载于 Web 服务器工作进程中。 此模式不要求 COM+ 在接收初始请求时处于活动状态。 如果在接收该请求时应用程序处于非活动状态，则在处理该请求之前会自动激活它。 此模式也对服务器应用程序同时提供 Web 服务和 DCOM 访问，但会导致 Web 服务请求产生进程跃点。 这通常要求客户端启用模拟。 在 WCF 中，这可以与<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>的属性<xref:System.ServiceModel.Security.WindowsClientCredential>类，该类将其作为泛型的属性访问<xref:System.ServiceModel.ChannelFactory%601>类，并将<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>枚举值。  
   
--   进程内 Web 承载  
+- 进程内 Web 承载  
   
      Web 服务和 COM+ 应用程序逻辑承载于 Web 服务器工作进程中。 这样可以自动激活 Web 承载模式，而不会导致 Web 服务请求产生进程跃点。 其缺点在于无法通过 DCOM 访问服务器应用程序。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033145"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
 > [!NOTE]
@@ -61,15 +61,15 @@ ms.locfileid: "59183971"
 ### <a name="programmatic-access"></a>编程访问  
  使用编程访问可以通过代码模仿由传统鼠标和键盘输入展开的任何交互和体验。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 通过五个组件实现编程访问：  
   
--   借助 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树，可以方便地在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]结构中导航。 树是基于 hWnd 的集合生成的。 有关详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
+- 借助 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树，可以方便地在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]结构中导航。 树是基于 hWnd 的集合生成的。 有关详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
   
--   自动化元素是 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]中的独立组件。 这些组件的粒度级通常比 hWnd 更精细。 有关详细信息，请参阅 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)。  
+- 自动化元素是 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]中的独立组件。 这些组件的粒度级通常比 hWnd 更精细。 有关详细信息，请参阅 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)。  
   
--   自动化属性提供有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素的特定信息。 有关更多信息，请参见 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
+- 自动化属性提供有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素的特定信息。 有关更多信息，请参见 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
   
--   控件模式定义了控件功能的特定方面；控件模式可以由属性、方法、事件和结构信息组成。 有关详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
+- 控件模式定义了控件功能的特定方面；控件模式可以由属性、方法、事件和结构信息组成。 有关详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
--   自动化事件提供事件通知和信息。 有关更多信息，请参见 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+- 自动化事件提供事件通知和信息。 有关更多信息，请参见 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
 <a name="Key_properties_critical_to_test_automation"></a>   
 ### <a name="key-properties-for-test-automation"></a>测试自动化的关键属性  
@@ -103,9 +103,9 @@ ms.locfileid: "59183971"
 ## <a name="related-tools-and-technologies"></a>相关的工具和技术  
  有许多支持使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]进行自动测试的相关工具和技术。  
   
--   是 Inspect.exe[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]应用程序，可用于收集[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供程序和客户端开发和调试信息。 中包含 Inspect.exe [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]。  
+- 是 Inspect.exe[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]应用程序，可用于收集[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供程序和客户端开发和调试信息。 中包含 Inspect.exe [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]。  
   
--   MSAABridge 向 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 客户端公开 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 信息。 将 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 桥接到 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 的主要目的是使现有的 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 客户端具有与已实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的任何框架进行交互的能力。  
+- MSAABridge 向 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 客户端公开 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 信息。 将 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 桥接到 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 的主要目的是使现有的 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 客户端具有与已实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的任何框架进行交互的能力。  
   
 <a name="Security"></a>   
 ## <a name="security"></a>安全性  

@@ -3,11 +3,11 @@ title: WCF 服务主机 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052607"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服务主机 (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您以启动 Visual Studio 调试器 (F5) 以自动承载和测试已实现的服务。 然后，您可以测试使用 WCF 测试客户端 (WcfTestClient.exe) 或自己的客户端，以查找并解决任何潜在错误的服务。  
@@ -72,32 +72,32 @@ Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您�
   
  **WCF 服务主机**主窗口包含两个菜单：  
   
--   **文件**:包含**关闭**并**退出**命令。 当您单击**关闭**，则**WCF 服务主机**对话框将关闭，但继续承载服务。 当您单击**退出**，WCF 服务主机也将关闭。 这还将停止所有承载的服务。  
+- **文件**:包含**关闭**并**退出**命令。 当您单击**关闭**，则**WCF 服务主机**对话框将关闭，但继续承载服务。 当您单击**退出**，WCF 服务主机也将关闭。 这还将停止所有承载的服务。  
   
--   **帮助**:包含**有关**命令包含版本信息。 它还包含**帮助**可以打开帮助文件的命令。  
+- **帮助**:包含**有关**命令包含版本信息。 它还包含**帮助**可以打开帮助文件的命令。  
   
  主**WCF 服务主机**窗口包含两个区域：  
   
--   第一个功能是**服务**。 该区域包含一个显示所有服务基本信息的列表。 这些信息包括：  
+- 第一个功能是**服务**。 该区域包含一个显示所有服务基本信息的列表。 这些信息包括：  
   
-    -   **服务**：列出所有服务。  
+    - **服务**：列出所有服务。  
   
-    -   **状态**:列出了服务的状态。 有效值为"已启动"、"已停止"和"错误"。  
+    - **状态**:列出了服务的状态。 有效值为"已启动"、"已停止"和"错误"。  
   
-    -   **元数据地址**:显示服务的元数据地址。  
+    - **元数据地址**:显示服务的元数据地址。  
   
--   第二个区域**的其他信息**。 它将显示服务状态的详细的说明中选择特定的服务行时**服务**区域。 如果状态为“错误”，则可以在屏幕上查看完整的错误消息。  
+- 第二个区域**的其他信息**。 它将显示服务状态的详细的说明中选择特定的服务行时**服务**区域。 如果状态为“错误”，则可以在屏幕上查看完整的错误消息。  
   
 ## <a name="stopping-wcf-service-host"></a>停止 WCF 服务主机  
  可以通过以下四种方法来关闭 WCF 服务主机：  
   
--   停止在 Visual Studio 中的调试会话。  
+- 停止在 Visual Studio 中的调试会话。  
   
--   选择**退出**从**文件**中的菜单**WCF 服务主机**窗口。  
+- 选择**退出**从**文件**中的菜单**WCF 服务主机**窗口。  
   
--   选择**退出**从系统通知区域中的 WCF 服务主机任务栏图标上下文菜单。  
+- 选择**退出**从系统通知区域中的 WCF 服务主机任务栏图标上下文菜单。  
   
--   如果正在使用它，请退出 WCF 测试客户端。  
+- 如果正在使用它，请退出 WCF 测试客户端。  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>在无管理员权限的情况下使用服务主机  
  若要使不具有管理员权限的用户能够开发 WCF 服务，ACL （访问控制列表） 创建命名空间"http://+:8731/Design_Time_Addresses"在 Visual Studio 安装的过程。 该 ACL 被设置为“(UI)”，这将包括登录到此计算机的所有交互用户。 管理员可以添加或删除此 ACL 中的用户或打开其他端口。此 ACL 使用户能够使用 WCF 服务自动主机 (wcfSvcHost.exe)，而无需向其授予管理员权限。  

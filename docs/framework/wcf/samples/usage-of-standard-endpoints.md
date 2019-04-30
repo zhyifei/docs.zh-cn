@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006315"
 ---
 # <a name="usage-of-standard-endpoints"></a>标准终结点的用法
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. 使多个项目可以启动。
 
-    1.  在中**解决方案资源管理器**，右键单击该标准终结点解决方案，然后选择**属性**。
+    1. 在中**解决方案资源管理器**，右键单击该标准终结点解决方案，然后选择**属性**。
 
-    2.  在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。
+    2. 在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。
 
-    3.  利用将服务项目移到列表的开头**操作**设置为**启动**。
+    3. 利用将服务项目移到列表的开头**操作**设置为**启动**。
 
-    4.  客户端将项目移动服务项目之后，还具有**操作**设置为**启动**。
+    4. 客户端将项目移动服务项目之后，还具有**操作**设置为**启动**。
 
          这指定客户端项目在服务项目之后执行。
 

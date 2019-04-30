@@ -3,11 +3,11 @@ title: 自定义查找条件
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006364"
 ---
 # <a name="custom-find-criteria"></a>自定义查找条件
 本示例演示如何使用逻辑来创建自定义范围匹配以及如何实现自定义发现服务。 客户端使用自定义范围匹配功能在系统提供的 WCF Discovery 查找功能基础之上进行优化并进一步生成。 本示例包含的方案如下所示：  
@@ -20,9 +20,9 @@ ms.locfileid: "59332529"
   
 ## <a name="demonstrates"></a>演示  
   
--   创建自定义发现服务。  
+- 创建自定义发现服务。  
   
--   通过算法实现自定义范围匹配。  
+- 通过算法实现自定义范围匹配。  
   
 ## <a name="discussion"></a>讨论  
  客户端查找条件匹配的"OR"类型。 如果服务终结点上的范围与客户端提供的任何范围匹配，则服务响应回客户端。 在本例中，客户端查找具有下面列表中任何范围的计算器服务：  

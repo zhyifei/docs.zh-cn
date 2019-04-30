@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050683"
 ---
 # <a name="understanding-generated-client-code"></a>了解生成的客户端代码
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 可生成用于生成客户端应用程序的客户端代码和客户端应用程序配置文件。 本主题提供了有关标准服务协定方案的生成代码示例的教程。 有关生成客户端应用程序使用生成的代码的详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
@@ -20,15 +20,15 @@ ms.locfileid: "59189152"
   
  由于 Svcutil.exe 具有许多可以修改生成的类型信息的选项，因此本主题并不对所有方案进行讨论。 但是，以下标准任务涉及查找生成的代码：  
   
--   标识服务协定接口。  
+- 标识服务协定接口。  
   
--   确定 WCF 客户端类。  
+- 确定 WCF 客户端类。  
   
--   标识数据类型。  
+- 标识数据类型。  
   
--   标识双工服务的回调协定。  
+- 标识双工服务的回调协定。  
   
--   标识帮助器服务协定通道接口。  
+- 标识帮助器服务协定通道接口。  
   
 ### <a name="finding-service-contract-interfaces"></a>查找服务协定接口  
  若要查找对服务协定建模的接口，请搜索使用 <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 属性进行标记的接口。 由于存在其他属性 (Attribute) 和设置在该属性 (Attribute) 自身上的显式属性 (Property)，因此要通过快速读取查找该属性 (Attribute) 通常并不容易。 请记住，服务协定接口和客户端协定接口属于两种不同的类型。 下面的代码示例演示原始服务协定。  

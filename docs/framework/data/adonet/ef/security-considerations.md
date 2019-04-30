@@ -3,11 +3,11 @@ title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033964"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 除此之外，您还应遵循有关创建安全的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -18,11 +18,11 @@ ms.locfileid: "59161353"
 #### <a name="use-only-trusted-data-source-providers"></a>仅使用可信的数据源提供程序。  
  若要与数据源通信，提供程序必须执行下列操作：  
   
--   从[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接收连接字符串。  
+- 从[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接收连接字符串。  
   
--   将命令目录树转换为数据源的本机查询语言。  
+- 将命令目录树转换为数据源的本机查询语言。  
   
--   组合并返回结果集。  
+- 组合并返回结果集。  
   
  在登录操作过程中，将通过基础数据源的网络库将基于用户密码的信息传递给服务器。 恶意提供程序可能窃取用户凭据，生成恶意查询或篡改结果集。  
   
@@ -32,19 +32,19 @@ ms.locfileid: "59161353"
 #### <a name="secure-the-connection-string"></a>保护连接字符串。  
  保护应用程序时，最重要的目标之一是保护对数据源的访问。 不受保护或构造不当的连接字符串会构成潜在的安全漏洞。 如果以纯文本形式存储连接信息或者将其保留在内存中，则可能危及整个系统的安全。 建议采用以下方法保护连接字符串：  
   
--   对 SQL Server 数据源使用 Windows 身份验证。  
+- 对 SQL Server 数据源使用 Windows 身份验证。  
   
      如果使用 Windows 身份验证连接到 SQL Server 数据源，则连接字符串不包含登录和密码信息。  
   
--   使用受保护的配置加密配置文件节。  
+- 使用受保护的配置加密配置文件节。  
   
      ASP.NET 提供了一项称为“受保护配置”的功能，您可以使用此功能对配置文件中的敏感信息进行加密。 虽然受保护配置主要是为 ASP.NET 设计的，但您也可以使用该功能对 Windows 应用程序中的配置文件节进行加密。 新的受保护的配置功能的详细说明，请参阅[配置加密配置信息使用受保护的](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))。  
   
--   将连接字符串存储在受保护的配置文件中。  
+- 将连接字符串存储在受保护的配置文件中。  
   
      绝不应在源代码中嵌入连接字符串。 你可以在配置文件中存储连接字符串，从而不必将其嵌入到应用程序的代码中。 默认情况下，实体数据模型向导将连接字符串存储在应用程序配置文件中。 必须保护此文件，避免未经授权的访问。  
   
--   动态创建连接时使用连接字符串生成器。  
+- 动态创建连接时使用连接字符串生成器。  
   
      如果必须在运行时构造连接字符串，请使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类。 此字符串生成器类可以验证并转义无效的输入信息，从而有助于防止连接字符串注入式攻击。 有关详细信息，请参阅[如何：生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 另外，应使用适当的字符串生成器类构造作为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]连接字符串一部分的数据源连接字符串。 有关 ADO.NET 提供程序的连接字符串生成器的信息，请参阅[连接字符串生成器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
   
@@ -65,15 +65,15 @@ ms.locfileid: "59161353"
 #### <a name="run-applications-with-the-minimum-permissions"></a>以最低权限运行应用程序。  
  如果允许托管应用程序以完全信任权限运行，则 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 不限制该应用程序对计算机的访问。 这会在应用程序中造成安全漏洞而威胁整个系统。 若要使用 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 中的代码访问安全机制和其他安全机制，应使用部分信任权限运行应用程序，且使用应用程序实现其功能所需的最小权限集。 下面的代码访问权限是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序所需的最小权限：  
   
--   <xref:System.Security.Permissions.FileIOPermission>：使用 <xref:System.Security.Permissions.FileIOPermissionAccess.Write> 打开指定的元数据文件，或者使用 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> 在目录中搜索元数据文件。  
+- <xref:System.Security.Permissions.FileIOPermission>：使用 <xref:System.Security.Permissions.FileIOPermissionAccess.Write> 打开指定的元数据文件，或者使用 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> 在目录中搜索元数据文件。  
   
--   <xref:System.Security.Permissions.ReflectionPermission>：使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 支持 LINQ to Entities 查询。  
+- <xref:System.Security.Permissions.ReflectionPermission>：使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 支持 LINQ to Entities 查询。  
   
--   <xref:System.Transactions.DistributedTransactionPermission>：使用 <xref:System.Security.Permissions.PermissionState.Unrestricted> 在 <xref:System.Transactions><xref:System.Transactions.Transaction> 中登记。  
+- <xref:System.Transactions.DistributedTransactionPermission>：使用 <xref:System.Security.Permissions.PermissionState.Unrestricted> 在 <xref:System.Transactions><xref:System.Transactions.Transaction> 中登记。  
   
--   <xref:System.Security.Permissions.SecurityPermission>：使用 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 以通过 <xref:System.Runtime.Serialization.ISerializable> 接口对异常进行序列化。  
+- <xref:System.Security.Permissions.SecurityPermission>：使用 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 以通过 <xref:System.Runtime.Serialization.ISerializable> 接口对异常进行序列化。  
   
--   打开数据库连接和执行针对数据库中，命令如权限<xref:System.Data.SqlClient.SqlClientPermission>为 SQL Server 数据库。  
+- 打开数据库连接和执行针对数据库中，命令如权限<xref:System.Data.SqlClient.SqlClientPermission>为 SQL Server 数据库。  
   
  有关更多信息，请参见 [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
   
@@ -94,31 +94,31 @@ ms.locfileid: "59161353"
 #### <a name="prevent-sql-injection-attacks"></a>防范 SQL 注入式攻击。  
  应用程序经常接受外部输入（来自用户或其他外部代理），并根据该输入执行操作。 任何直接或间接从用户或外部代理派生的输入都可能包含使用目标语言的语法来执行未授权操作的内容。 如果目标语言为结构化查询语言 (SQL)（如 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]），则此行为被称为 SQL 注入式攻击。 恶意用户可直接向查询中注入命令并删除数据库表、引起拒绝服务或者更改所执行操作的性质。  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)] 注入式攻击：  
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] 注入式攻击：  
   
      SQL 注入式攻击在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中的实施方法是向查询谓词和参数名称中使用的值提供恶意输入。 若要避免 SQL 注入风险，切勿组合用户输入与 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文本。  
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询可在任何接受文本的位置接受参数。 应使用参数化查询，而不是将来自外部代理的文本直接注入查询。 此外应考虑使用[查询生成器方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))安全地构造 Entity SQL。  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 注入式攻击：  
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 注入式攻击：  
   
      尽管在 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]中可以撰写查询，但是要通过对象模型 API 执行。 与 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询不同，[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 查询不使用字符串操作或串联来撰写，所以不易受到传统的 SQL 注入式攻击的影响。  
   
 #### <a name="prevent-very-large-result-sets"></a>避免结果集过大。  
  如果客户端执行的操作所消耗的资源与结果集的大小成正比，则过大的结果集会导致客户端系统关闭。 在下列情况下可能发生意外的过大结果集：  
   
--   针对大型数据库的查询未包含适当的筛选条件。  
+- 针对大型数据库的查询未包含适当的筛选条件。  
   
--   查询在服务器上创建笛卡尔联接。  
+- 查询在服务器上创建笛卡尔联接。  
   
--   嵌套的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询。  
+- 嵌套的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询。  
   
  如果接受用户输入，则必须确保输入内容不会导致结果集过大以致超出系统的处理能力。 此外可以使用<xref:System.Linq.Queryable.Take%2A>中的方法[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]或[限制](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)中的运算符[!INCLUDE[esql](../../../../../includes/esql-md.md)]来限制结果集的大小。  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>避免在将方法公开给可能不受信任的调用方时返回 IQueryable 结果。  
  避免公开给可能不受信任的调用方的方法返回 <xref:System.Linq.IQueryable%601> 类型的原因如下：  
   
--   公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可以对公开安全数据或增大结果集大小的结果调用方法。 例如，请考虑使用以下方法签名：  
+- 公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可以对公开安全数据或增大结果集大小的结果调用方法。 例如，请考虑使用以下方法签名：  
   
     ```  
     public IQueryable<Customer> GetCustomer(int customerId)  
@@ -126,7 +126,7 @@ ms.locfileid: "59161353"
   
      此查询的使用方可以对返回的 `.Include("Orders")` 调用 `IQueryable<Customer>`，以检索查询不打算公开的数据。 通过将方法的返回类型更改为 <xref:System.Collections.Generic.IEnumerable%601> 并调用具体化结果的方法（如 `.ToList()`），可以避免此问题。  
   
--   由于 <xref:System.Linq.IQueryable%601> 查询在循环访问结果时执行，因此公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可能会捕捉引发的异常。 这些异常可能包含不适用于使用方的信息。  
+- 由于 <xref:System.Linq.IQueryable%601> 查询在循环访问结果时执行，因此公开 <xref:System.Linq.IQueryable%601> 类型的查询的使用方可能会捕捉引发的异常。 这些异常可能包含不适用于使用方的信息。  
   
 ## <a name="security-considerations-for-entities"></a>有关实体的安全注意事项  
  生成和处理实体类型时应考虑下列安全注意事项。  

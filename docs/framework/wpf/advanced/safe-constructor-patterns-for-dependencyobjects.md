@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
 ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053504"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全构造函数模式
 通常，类构造函数不应调用诸如虚拟方法或委托等回叫，其原因是构造函数可作为派生类的构造函数的基本初始化进行调用。 输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。 但是，属性系统本身在内部调用并公开回叫，作为依赖属性系统的一部分。 与设置具有依赖项属性值一样简单操作<xref:System.Windows.DependencyObject.SetValue%2A>调用可能包括回叫某个位置在决定中。 因此，在构造函数体内设置依赖属性值时应保持谨慎（将类型用作基类可能会导致问题）。 没有特定的模式，用于实现<xref:System.Windows.DependencyObject>构造函数可避免对依赖属性状态和内在回叫的特定问题此处进行了说明。  

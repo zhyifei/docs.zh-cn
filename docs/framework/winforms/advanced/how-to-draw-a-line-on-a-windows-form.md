@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
 ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004154"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>如何：在 Windows 窗体上绘制直线
 此示例窗体上绘制直线。 通常情况下，在窗体上绘制，当您处理该窗体<xref:System.Windows.Forms.Control.Paint>事件并执行绘制使用<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>属性的<xref:System.Windows.Forms.PaintEventArgs>，在此示例中所示  

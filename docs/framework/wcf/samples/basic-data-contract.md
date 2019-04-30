@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
 ms.openlocfilehash: 775f799d683cfa543e65879af8cd1332a2bfb848
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002672"
 ---
 # <a name="basic-data-contract"></a>基本数据协定
 本示例演示如何实现数据协定。 数据协定允许您在服务中传入和传出结构化数据。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)但使用复数代替基本数字类型。  

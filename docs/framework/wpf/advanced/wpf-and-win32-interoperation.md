@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053166"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互操作
 本主题概述如何互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，如果对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码投入很大，重复使用部分此代码可能更有效。  
@@ -21,9 +21,9 @@ ms.locfileid: "59314407"
 ## <a name="wpf-and-win32-interoperation-basics"></a>WPF 和 Win32 互操作基础知识  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码间的互操作存在两种基本方法。  
   
--   在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 窗口中承载 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 内容。 通过此方法，可在标准 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口和应用程序的框架内使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的高级图形功能。  
+- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 窗口中承载 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 内容。 通过此方法，可在标准 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口和应用程序的框架内使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的高级图形功能。  
   
--   在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容中承载 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。 通过此方法，可在其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的上下文中使用现有自定义 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控件，并可跨边界传递数据。  
+- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容中承载 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。 通过此方法，可在其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的上下文中使用现有自定义 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 控件，并可跨边界传递数据。  
   
  本主题中对上述每种方法进行了概念性介绍。 托管的更加面向代码演示[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]，请参阅[演练：Win32 中承载 WPF 内容](walkthrough-hosting-wpf-content-in-win32.md)。 托管的更加面向代码演示[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，请参阅[演练：中承载 Win32 控件在 WPF 中的](walkthrough-hosting-a-win32-control-in-wpf.md)。  
   
@@ -33,13 +33,13 @@ ms.locfileid: "59314407"
   
  存在的一个项目级问题是无法将 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件编译到 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 项目中。  可通过一些项目分离技术对此进行弥补。  
   
--   创建包含所有的 C# DLL 你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页为已编译的程序集，然后让你[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]可执行文件包含[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]作为参考。  
+- 创建包含所有的 C# DLL 你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页为已编译的程序集，然后让你[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]可执行文件包含[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]作为参考。  
   
--   创建一个 C# 可执行文件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容，并将其引用[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] ，其中包含[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内容。  
+- 创建一个 C# 可执行文件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容，并将其引用[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] ，其中包含[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内容。  
   
--   使用<xref:System.Windows.Markup.XamlReader.Load%2A>加载任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]在运行时，而不是编译您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+- 使用<xref:System.Windows.Markup.XamlReader.Load%2A>加载任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]在运行时，而不是编译您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
--   不要使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，并写入所有你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在代码中，构建元素树从<xref:System.Windows.Application>。  
+- 不要使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，并写入所有你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在代码中，构建元素树从<xref:System.Windows.Application>。  
   
  请使用最适合你的方法。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "59314407"
   
 5. 在处理程序（或处理程序调用的函数）中，执行以下操作：  
   
-    1.  创建一个新<xref:System.Windows.Interop.HwndSource>对象，将父窗口 HWND 作为其`parent`参数。  
+    1. 创建一个新<xref:System.Windows.Interop.HwndSource>对象，将父窗口 HWND 作为其`parent`参数。  
   
-    2.  创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类的一个实例。  
+    2. 创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类的一个实例。  
   
-    3.  将分配到的引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象<xref:System.Windows.Interop.HwndSource>对象<xref:System.Windows.Interop.HwndSource.RootVisual%2A>属性。  
+    3. 将分配到的引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象<xref:System.Windows.Interop.HwndSource>对象<xref:System.Windows.Interop.HwndSource.RootVisual%2A>属性。  
   
-    4.  <xref:System.Windows.Interop.HwndSource>对象<xref:System.Windows.Interop.HwndSource.Handle%2A>属性包含窗口句柄 (HWND)。 要获取可在应用程序的非托管部分中使用的 HWND，需将 `Handle.ToPointer()` 强制装换为 HWND。  
+    4. <xref:System.Windows.Interop.HwndSource>对象<xref:System.Windows.Interop.HwndSource.Handle%2A>属性包含窗口句柄 (HWND)。 要获取可在应用程序的非托管部分中使用的 HWND，需将 `Handle.ToPointer()` 强制装换为 HWND。  
   
 6. 实现一个托管类，该类包含一个用于保存对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象的引用的静态字段。 此类可以获取对引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象从你[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的代码，但重要的是，它会阻止的详细信息在<xref:System.Windows.Interop.HwndSource>无意中进行垃圾回收。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "59314407"
   
 6. 处理选择的窗口消息，例如控件通知。 方法有两种。 两种方法提供对消息流的相同访问权限，因此你的选择很大程度上取决于编程简便性。  
   
-    -   实现消息处理的所有消息 （而不仅仅是关闭消息） 中的重写<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
+    - 实现消息处理的所有消息 （而不仅仅是关闭消息） 中的重写<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
   
-    -   使承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素处理的消息，处理<xref:System.Windows.Interop.HwndHost.MessageHook>事件。 对发送到承载窗口的主窗口过程的每个消息都会引发该事件。  
+    - 使承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素处理的消息，处理<xref:System.Windows.Interop.HwndHost.MessageHook>事件。 对发送到承载窗口的主窗口过程的每个消息都会引发该事件。  
   
-    -   无法处理超出进程使用的 windows 中的消息<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
+    - 无法处理超出进程使用的 windows 中的消息<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
   
 7. 通过使用平台调用来调用非托管 `SendMessage` 函数，与承载窗口通信。  
   
@@ -120,35 +120,35 @@ ms.locfileid: "59314407"
   
 #### <a name="notable-differences-in-output-behavior"></a>输出行为的显著差异  
   
--   <xref:System.Windows.FrameworkElement>它是<xref:System.Windows.Interop.HwndHost>基类、 具有很多属性，表示对 UI 的更改。 这些包括属性如下所述<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>，这将更改该元素作为父级内的元素的布局。 但是，这些属性大多数未映射到可能的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 等效项（即使这类等效项可能存在）。 过多这些属性及其含义具有过高的绘制技术针对性，这使得映射并不可行。 因此，如设置属性<xref:System.Windows.FrameworkElement.FlowDirection%2A>上<xref:System.Windows.Interop.HwndHost>不起作用。  
+- <xref:System.Windows.FrameworkElement>它是<xref:System.Windows.Interop.HwndHost>基类、 具有很多属性，表示对 UI 的更改。 这些包括属性如下所述<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>，这将更改该元素作为父级内的元素的布局。 但是，这些属性大多数未映射到可能的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 等效项（即使这类等效项可能存在）。 过多这些属性及其含义具有过高的绘制技术针对性，这使得映射并不可行。 因此，如设置属性<xref:System.Windows.FrameworkElement.FlowDirection%2A>上<xref:System.Windows.Interop.HwndHost>不起作用。  
   
--   <xref:System.Windows.Interop.HwndHost> 不能旋转、 缩放、 倾斜，或其他受 Transform 影响。  
+- <xref:System.Windows.Interop.HwndHost> 不能旋转、 缩放、 倾斜，或其他受 Transform 影响。  
   
--   <xref:System.Windows.Interop.HwndHost> 不支持<xref:System.Windows.UIElement.Opacity%2A>属性 （alpha 值混合处理）。 如果中的内容<xref:System.Windows.Interop.HwndHost>执行<xref:System.Drawing>操作包含 alpha 信息，本身不是冲突，但<xref:System.Windows.Interop.HwndHost>作为一个整体仅支持不透明度 = 1.0 （100%)。  
+- <xref:System.Windows.Interop.HwndHost> 不支持<xref:System.Windows.UIElement.Opacity%2A>属性 （alpha 值混合处理）。 如果中的内容<xref:System.Windows.Interop.HwndHost>执行<xref:System.Drawing>操作包含 alpha 信息，本身不是冲突，但<xref:System.Windows.Interop.HwndHost>作为一个整体仅支持不透明度 = 1.0 （100%)。  
   
--   <xref:System.Windows.Interop.HwndHost> 将显示在其他之上[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]相同的顶级窗口中的元素。 但是，<xref:System.Windows.Controls.ToolTip>或<xref:System.Windows.Controls.ContextMenu>生成的菜单是一个单独的顶级窗口，并因此就能正常工作与<xref:System.Windows.Interop.HwndHost>。  
+- <xref:System.Windows.Interop.HwndHost> 将显示在其他之上[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]相同的顶级窗口中的元素。 但是，<xref:System.Windows.Controls.ToolTip>或<xref:System.Windows.Controls.ContextMenu>生成的菜单是一个单独的顶级窗口，并因此就能正常工作与<xref:System.Windows.Interop.HwndHost>。  
   
--   <xref:System.Windows.Interop.HwndHost> 不遵从其父级的剪辑区域<xref:System.Windows.UIElement>。 这可能是一个问题，如果你尝试将放<xref:System.Windows.Interop.HwndHost>滚动区域内的类或<xref:System.Windows.Controls.Canvas>。  
+- <xref:System.Windows.Interop.HwndHost> 不遵从其父级的剪辑区域<xref:System.Windows.UIElement>。 这可能是一个问题，如果你尝试将放<xref:System.Windows.Interop.HwndHost>滚动区域内的类或<xref:System.Windows.Controls.Canvas>。  
   
 #### <a name="notable-differences-in-input-behavior"></a>输入行为的显著差异  
   
--   通常，虽然输入的设备作用域内<xref:System.Windows.Interop.HwndHost>托管[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]区域中，输入的事件直接转到[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]。  
+- 通常，虽然输入的设备作用域内<xref:System.Windows.Interop.HwndHost>托管[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]区域中，输入的事件直接转到[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]。  
   
--   尽管鼠标位于<xref:System.Windows.Interop.HwndHost>，你的应用程序不会收到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]鼠标事件和的值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性<xref:System.Windows.UIElement.IsMouseOver%2A>将`false`。  
+- 尽管鼠标位于<xref:System.Windows.Interop.HwndHost>，你的应用程序不会收到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]鼠标事件和的值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性<xref:System.Windows.UIElement.IsMouseOver%2A>将`false`。  
   
--   虽然<xref:System.Windows.Interop.HwndHost>具有键盘焦点，你的应用程序将不会收到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]键盘事件和的值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性<xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>将`false`。  
+- 虽然<xref:System.Windows.Interop.HwndHost>具有键盘焦点，你的应用程序将不会收到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]键盘事件和的值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]属性<xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>将`false`。  
   
--   当焦点位于<xref:System.Windows.Interop.HwndHost>并更改到另一个控件内<xref:System.Windows.Interop.HwndHost>，你的应用程序将不会收到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件<xref:System.Windows.UIElement.GotFocus>或<xref:System.Windows.UIElement.LostFocus>。  
+- 当焦点位于<xref:System.Windows.Interop.HwndHost>并更改到另一个控件内<xref:System.Windows.Interop.HwndHost>，你的应用程序将不会收到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件<xref:System.Windows.UIElement.GotFocus>或<xref:System.Windows.UIElement.LostFocus>。  
   
--   相关触笔属性和事件相似，且并不报告信息，而在触笔位于<xref:System.Windows.Interop.HwndHost>。  
+- 相关触笔属性和事件相似，且并不报告信息，而在触笔位于<xref:System.Windows.Interop.HwndHost>。  
   
 <a name="tabbing_mnemonics_accelerators"></a>   
 ## <a name="tabbing-mnemonics-and-accelerators"></a>Tab 键、助记键和加速键  
  <xref:System.Windows.Interop.IKeyboardInputSink>并<xref:System.Windows.Interop.IKeyboardInputSite>接口允许你创建的无缝键盘体验，为混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序：  
   
--   [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 组件之间的 Tab 键  
+- [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 组件之间的 Tab 键  
   
--   焦点位于 Win32 组件内和 WPF 组件内时皆起作用的助记键和加速键。  
+- 焦点位于 Win32 组件内和 WPF 组件内时皆起作用的助记键和加速键。  
   
  <xref:System.Windows.Interop.HwndHost>并<xref:System.Windows.Interop.HwndSource>这两个类提供的实现<xref:System.Windows.Interop.IKeyboardInputSink>，但它们不会处理更高级的方案所需的所有输入的消息。 替换为适当方法，获取所需的键盘行为。  
   

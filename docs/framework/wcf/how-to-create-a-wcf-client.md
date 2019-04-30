@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
 ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002074"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>教程：创建 Windows Communication Foundation 客户端
 
@@ -47,7 +47,7 @@ ms.locfileid: "59174364"
 
 2. 添加引用**GettingStartedClient**投影到<xref:System.ServiceModel>程序集： 
 
-    1.  在中**解决方案资源管理器**窗口中，选择**引用**下的文件夹**GettingStartedClient**项目，，然后选择**添加引用**从快捷菜单。 
+    1. 在中**解决方案资源管理器**窗口中，选择**引用**下的文件夹**GettingStartedClient**项目，，然后选择**添加引用**从快捷菜单。 
 
     2. 在中**添加引用**窗口下**程序集**在窗口的左侧，选择**Framework**。
     

@@ -3,11 +3,11 @@ title: 病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046432"
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 一个*有害消息*是一条消息，已超出向应用程序的交付尝试最大数目。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -19,27 +19,27 @@ ms.locfileid: "59305021"
 ## <a name="handling-poison-messages"></a>处理病毒消息  
  在 WCF 中，病毒消息处理提供了用于接收应用程序处理消息无法调度到应用程序或那些虽然调度到应用程序，但其失败由于特定于应用程序要处理的消息的机制原因。 病毒消息处理是由每个可用排队绑定中的下列属性配置的：  
   
--   `ReceiveRetryCount`。 一个整数值，指示将某个消息从应用程序队列传递到应用程序的最大重试次数。 默认值为 5。 对于立即重试就可以修复问题（如数据库出现临时死锁）的情况，这个数值已足够了。  
+- `ReceiveRetryCount`。 一个整数值，指示将某个消息从应用程序队列传递到应用程序的最大重试次数。 默认值为 5。 对于立即重试就可以修复问题（如数据库出现临时死锁）的情况，这个数值已足够了。  
   
--   `MaxRetryCycles`。 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，消息尝试最多 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 对于 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，将忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- `MaxRetryCycles`。 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，消息尝试最多 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 对于 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，将忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   `RetryCycleDelay`。 重试周期之间的时间延迟。 默认值为 30 分钟。 `MaxRetryCycles` 和 `RetryCycleDelay` 共同提供一个机制，用于解决周期性延迟之后重试可修复问题的问题。 例如，这种机制可以处理 SQL Server 挂起的事务提交中锁定的行集。  
+- `RetryCycleDelay`。 重试周期之间的时间延迟。 默认值为 30 分钟。 `MaxRetryCycles` 和 `RetryCycleDelay` 共同提供一个机制，用于解决周期性延迟之后重试可修复问题的问题。 例如，这种机制可以处理 SQL Server 挂起的事务提交中锁定的行集。  
   
--   `ReceiveErrorHandling`。 一个枚举，指示对在已尝试过最大重试次数后仍无法传递的消息所采取的操作。 可能的值包括“错误”、“删除”、“拒绝”和“移动”。 默认选项为“错误”。  
+- `ReceiveErrorHandling`。 一个枚举，指示对在已尝试过最大重试次数后仍无法传递的消息所采取的操作。 可能的值包括“错误”、“删除”、“拒绝”和“移动”。 默认选项为“错误”。  
   
--   错误。 此选项会向导致 `ServiceHost` 出现错误的侦听器发送一个错误。 必须利用其他一些外部机制将该消息从应用程序中移除，应用程序才能继续处理队列中的消息。  
+- 错误。 此选项会向导致 `ServiceHost` 出现错误的侦听器发送一个错误。 必须利用其他一些外部机制将该消息从应用程序中移除，应用程序才能继续处理队列中的消息。  
   
--   删除。 此选项删除病毒消息，该消息永远不会再传递到应用程序。 如果该消息的 `TimeToLive` 属性在此时已过期，那么此消息可能会显示在发送方的死信队列中。 如果不是这种情况，则该消息将不会显示在任何位置。 此选项指示用户尚未指定丢失消息时该如何处理。  
+- 删除。 此选项删除病毒消息，该消息永远不会再传递到应用程序。 如果该消息的 `TimeToLive` 属性在此时已过期，那么此消息可能会显示在发送方的死信队列中。 如果不是这种情况，则该消息将不会显示在任何位置。 此选项指示用户尚未指定丢失消息时该如何处理。  
   
--   拒绝。 此选项仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。 选择此选项会指示消息队列 (MSMQ) 将否定确认发送回发送队列管理器，以说明应用程序无法接收该消息。 该消息会放入发送队列管理器的死信队列中。  
+- 拒绝。 此选项仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。 选择此选项会指示消息队列 (MSMQ) 将否定确认发送回发送队列管理器，以说明应用程序无法接收该消息。 该消息会放入发送队列管理器的死信队列中。  
   
--   移动。 此选项仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。 选择此选项会将病毒消息移动到病毒消息队列，以供以后由病毒消息处理应用程序进行处理。 病毒消息队列是应用程序队列的子队列。 病毒消息处理应用程序可作为从病毒队列中读取消息的 WCF 服务。 病毒队列是应用程序队列的子队列，其地址为 net.msmq://\<*机器名*>/*applicationQueue*; poison，其中*计算机名*是该队列所驻留的计算机的名称和*applicationQueue*是特定于应用程序队列的名称。  
+- 移动。 此选项仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。 选择此选项会将病毒消息移动到病毒消息队列，以供以后由病毒消息处理应用程序进行处理。 病毒消息队列是应用程序队列的子队列。 病毒消息处理应用程序可作为从病毒队列中读取消息的 WCF 服务。 病毒队列是应用程序队列的子队列，其地址为 net.msmq://\<*机器名*>/*applicationQueue*; poison，其中*计算机名*是该队列所驻留的计算机的名称和*applicationQueue*是特定于应用程序队列的名称。  
   
  下面是对消息尝试传递的最大次数：  
   
--   对于 [!INCLUDE[wv](../../../../includes/wv-md.md)]，请用 ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) 计算。  
+- 对于 [!INCLUDE[wv](../../../../includes/wv-md.md)]，请用 ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) 计算。  
   
--   对于 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，请用 (ReceiveRetryCount + 1) 计算。  
+- 对于 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，请用 (ReceiveRetryCount + 1) 计算。  
   
 > [!NOTE]
 >  对于成功传递的消息，不会再重试传递。  
@@ -52,9 +52,9 @@ ms.locfileid: "59305021"
   
  WCF 提供了两个标准排队的绑定：  
   
--   <xref:System.ServiceModel.NetMsmqBinding>。 一个[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]适合于执行基于队列的通信与其他 WCF 终结点的绑定。  
+- <xref:System.ServiceModel.NetMsmqBinding>。 一个[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]适合于执行基于队列的通信与其他 WCF 终结点的绑定。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 这种绑定适用于与现有消息队列应用程序之间的通信。  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 这种绑定适用于与现有消息队列应用程序之间的通信。  
   
 > [!NOTE]
 >  您可以更改基于您的 WCF 服务的要求这些绑定中的属性。 对于接收应用程序来说，整个病毒消息处理机制都是本地的。 处理过程对于发送应用程序是不可见的，除非接收应用程序最终停止接收并将否定确认发送回发送方。 这种情况下，该消息会移动到发送方的死信队列中。  
@@ -97,11 +97,11 @@ ms.locfileid: "59305021"
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003 和 Windows XP 之间的差异  
  如上所述，并非所有病毒消息处理设置均适用于 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 下面列出了 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的消息队列在病毒消息处理方面的主要差异：  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持子队列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中的消息队列不支持子队列。 子队列用于病毒消息处理。 重试队列和病毒队列是应用程序队列的子队列，是基于病毒消息处理设置创建的。 `MaxRetryCycles` 用于指示要创建的重试子队列的数量。 因此，当在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上运行时，`MaxRetryCycles` 会被忽略，并且不允许 `ReceiveErrorHandling.Move`。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持子队列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中的消息队列不支持子队列。 子队列用于病毒消息处理。 重试队列和病毒队列是应用程序队列的子队列，是基于病毒消息处理设置创建的。 `MaxRetryCycles` 用于指示要创建的重试子队列的数量。 因此，当在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上运行时，`MaxRetryCycles` 会被忽略，并且不允许 `ReceiveErrorHandling.Move`。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持否定确认，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中的消息队列不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持否定确认，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中的消息队列不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持用于记录消息传递尝试次数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 会维护中止计数在内存中，所以，此属性可能包含不精确的值时由场中的多个 WCF 服务读取同一条消息。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持用于记录消息传递尝试次数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 会维护中止计数在内存中，所以，此属性可能包含不精确的值时由场中的多个 WCF 服务读取同一条消息。  
   
 ## <a name="see-also"></a>请参阅
 

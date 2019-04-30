@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039372"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows 进程激活服务中承载
 Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的工作进程的生存期。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，例如 Net.TCP，在宿主环境支持基于消息的激活并提供承载大量在给定计算机上的应用程序的能力。  
@@ -18,13 +18,13 @@ Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communic
   
  WAS 进程模型提供了一些功能，可以以一种更为可靠、更易管理并有效地使用资源的方式承载应用程序：  
   
--   基于消息的应用程序激活和辅助进程应用程序会动态地启动和停止，以响应使用 HTTP 和非 HTTP 网络协议送达的传入工作项。  
+- 基于消息的应用程序激活和辅助进程应用程序会动态地启动和停止，以响应使用 HTTP 和非 HTTP 网络协议送达的传入工作项。  
   
--   可靠的应用程序和辅助进程回收可以使应用程序保持良好的运行状况。  
+- 可靠的应用程序和辅助进程回收可以使应用程序保持良好的运行状况。  
   
--   集中的应用程序配置和管理。  
+- 集中的应用程序配置和管理。  
   
--   允许应用程序利用 IIS 进程模型，而无需完全 IIS 安装的部署需求量。  
+- 允许应用程序利用 IIS 进程模型，而无需完全 IIS 安装的部署需求量。  
   
  有关 WAS 功能的详细信息，请参阅[IIS 7.0 Beta:IIS 7.0 Web 管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   

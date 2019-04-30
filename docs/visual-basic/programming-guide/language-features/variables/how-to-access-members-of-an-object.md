@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052126"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>如何：访问对象 (Visual Basic 中) 的成员
 引用的对象的对象变量后，你通常想要与该对象，例如其方法、 属性、 字段和事件的成员。 例如，一次创建一个新<xref:System.Windows.Forms.Form>对象，你可能想要设置其<xref:System.Windows.Forms.Control.Text%2A>属性或调用其<xref:System.Windows.Forms.Control.Focus%2A>方法。  
@@ -20,7 +20,7 @@ ms.locfileid: "59322753"
   
 #### <a name="to-access-members-of-an-object"></a>若要访问对象的成员  
   
--   使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
+- 使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
   
     ```  
     currentText = newForm.Text  

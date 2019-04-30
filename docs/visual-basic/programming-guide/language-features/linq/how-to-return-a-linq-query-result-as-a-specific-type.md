@@ -10,11 +10,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 ms.openlocfilehash: 5ccd71d93185f9478f6720419369df713d590c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053751"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>如何：LINQ 查询结果返回为特定的类型 (Visual Basic)
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。 默认情况下，LINQ 查询以匿名类型返回的对象的列表。 此外可以指定一个查询使用返回特定类型的列表`Select`子句。  

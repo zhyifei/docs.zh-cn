@@ -9,11 +9,11 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003881"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>如何：设置 JPEG 压缩级别
 在将图像保存到磁盘中时，可能需要修改图像的参数，以最大限度地减小文件的大小或提高其质量。 可以通过修改 JPEG 图像的压缩级别来调整其质量。 若要指定压缩级别保存 JPEG 图像时，必须创建<xref:System.Drawing.Imaging.EncoderParameters>对象，并将其传递给<xref:System.Drawing.Image.Save%2A>方法的<xref:System.Drawing.Image>类。 初始化<xref:System.Drawing.Imaging.EncoderParameters>对象，使它具有一个数组，其中包含一个<xref:System.Drawing.Imaging.EncoderParameter>。 当您创建<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>编码器和所需的压缩级别。  
@@ -123,11 +123,11 @@ End Function
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   Windows 窗体应用程序。  
+- Windows 窗体应用程序。  
   
--   一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+- 一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
--   一个位于 **c:\\** 位置的名为 `TestPhoto.jpg` 的图像文件。  
+- 一个位于 **c:\\** 位置的名为 `TestPhoto.jpg` 的图像文件。  
   
 ## <a name="see-also"></a>请参阅
 

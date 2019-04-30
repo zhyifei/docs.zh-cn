@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008171"
 ---
 # <a name="shapes"></a>形状
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 绘制基本形状使用提供支持<xref:System.Windows.Shapes.Shape>类。 Shape 对象派生自<xref:System.Windows.FrameworkElement>这种情况下，参与布局系统并可以只需使用绘制[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  

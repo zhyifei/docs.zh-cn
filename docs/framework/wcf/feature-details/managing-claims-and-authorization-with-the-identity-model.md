@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046627"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用标识模型管理声明和授权
 授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 Windows Communication Foundation (WCF) 执行授权处理支持两种机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是名为基于声明的模型*标识模型*。 WCF 使用标识模型创建的声明从传入消息;可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  

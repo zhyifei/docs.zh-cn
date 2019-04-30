@@ -3,11 +3,11 @@ title: 通过自定义绑定发布和检索元数据
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
 ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991206"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>通过自定义绑定发布和检索元数据
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供对向服务添加元数据终结点的支持。 这些元数据终结点可以响应在具有的 URL 的 HTTP GET 请求`?wsdl`查询字符串和 Ws-transfer GET 请求的 Ws-metadataexchange (MEX) 规范中定义。 MEX 终结点可实现 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 协定。  

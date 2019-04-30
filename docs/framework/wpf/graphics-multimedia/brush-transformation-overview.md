@@ -10,11 +10,11 @@ helpviewer_keywords:
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
 ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020599"
 ---
 # <a name="brush-transformation-overview"></a>Brush 变换概述
 Brush 类提供两个转换属性：<xref:System.Windows.Media.Brush.Transform%2A>和<xref:System.Windows.Media.Brush.RelativeTransform%2A>。 使用这些属性，可以旋转、缩放、倾斜和转换画笔的内容。 本主题介绍这两个属性之间的区别，并提供有关它们的用法示例。  

@@ -3,11 +3,11 @@ title: 在 ADO.NET 中检索和修改数据
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033912"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
 任何数据库应用程序的一项主要功能是连接数据源并检索数据源中包含的数据。 ADO.NET 的.NET Framework 数据提供程序充当应用程序和数据源之间的桥梁使您可以执行命令以及使用检索数据**DataReader**或**DataAdapter**. 任何数据库应用程序的一项关键功能是更新数据库中存储的数据的能力。 在 ADO.NET 中，更新数据时会使用**DataAdapter**并<xref:System.Data.DataSet>，和**命令**对象; 并且它还可能会使用事务。  

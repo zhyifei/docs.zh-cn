@@ -15,11 +15,11 @@ ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018735"
 ---
 # <a name="principal-and-identity-objects"></a>主体和标识对象
 托管的代码可以发现的标识或通过主体的角色<xref:System.Security.Principal.IPrincipal>对象，包含对引用<xref:System.Security.Principal.IIdentity>对象。 将标识对象和主体对象同用户帐户与组帐户这样常见的概念进行比较，可能会有所帮助。 在大多数网络环境中，用户帐户表示人员或程序，而组帐户表示特定类别的用户及其拥有的权限。 同样，.NET Framework 中的标识对象表示用户，而角色表示成员资格与安全性上下文。 在 .NET Framework 中，主体对象同时封装标识对象和角色。 .NET Framework 应用程序根据主体的标识或角色成员资格（后者更常见）来向主体授予权限。  

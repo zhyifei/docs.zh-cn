@@ -3,11 +3,11 @@ title: 自定义编码器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996900"
 ---
 # <a name="custom-encoders"></a>自定义编码器
 本主题讨论如何创建自定义编码器。  
@@ -30,11 +30,11 @@ ms.locfileid: "59190569"
   
  WCF 提供了以下类型的绑定元素派生自<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>可以为文本、 二进制和消息传输优化机制 (MTOM) 编码提供的类：  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：互操作性最但效率最低的 XML 消息编码器。 Web 服务或 Web 服务客户端通常都能理解文本 XML。 但是，将大型二进制数据块作为文本传输不是有效的传输方式。  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：互操作性最但效率最低的 XML 消息编码器。 Web 服务或 Web 服务客户端通常都能理解文本 XML。 但是，将大型二进制数据块作为文本传输不是有效的传输方式。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示绑定元素，它指定的字符编码和消息版本控制用于基于二进制的 XML 消息。 这是最有效的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示绑定元素，它指定的字符编码和消息版本控制用于基于二进制的 XML 消息。 这是最有效的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示用于使用消息传输优化机制 (MTOM) 编码的消息的消息版本控制和指定的字符编码的绑定元素。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示用于使用消息传输优化机制 (MTOM) 编码的消息的消息版本控制和指定的字符编码的绑定元素。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
   
  绑定元素创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 工厂创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 实例。 通常，只有一个实例。 但是如果使用会话，将为每个会话提供一个不同的编码器。 二进制编码器用此来调整动态字典（请参见“XML 基础结构”）。  
   
@@ -69,19 +69,19 @@ ms.locfileid: "59190569"
 ## <a name="writing-your-own-encoder"></a>编写自己的编码器  
  若要实现自己的自定义消息编码器，您必须提供下列抽象基类的自定义实现：  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  将消息从内存中的表示形式转换为可以写入流中的表示形式封装在 <xref:System.ServiceModel.Channels.MessageEncoder> 类中，它可作为支持特定类型的 XML 编码的 XML 读取器和 XML 编写器的工厂。  
   
--   您必须重写的此类的主要方法包括：  
+- 您必须重写的此类的主要方法包括：  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>，此方法采用 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 对象并将其写入 <xref:System.IO.Stream> 对象。  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>，此方法采用 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 对象并将其写入 <xref:System.IO.Stream> 对象。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>，此方法采用 <xref:System.IO.Stream> 对象以及最大标头大小，并返回一个 <xref:System.ServiceModel.Channels.Message> 对象。  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>，此方法采用 <xref:System.IO.Stream> 对象以及最大标头大小，并返回一个 <xref:System.ServiceModel.Channels.Message> 对象。  
   
  你写入这些方法中的代码处理标准传输协议和你自定义的编码之间的转换。  
   

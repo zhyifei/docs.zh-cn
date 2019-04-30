@@ -3,11 +3,11 @@ title: 为 Windows Communication Foundation 配置 Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039762"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>为 Windows Communication Foundation 配置 Internet Information Services 7.0
 
@@ -22,11 +22,11 @@ Internet Information Services (IIS) 7.0 具有模块化设计，允许有选择�
 
  此功能具有下列子组件：
 
--   .NET Environment
+- .NET Environment
 
--   配置 API
+- 配置 API
 
--   进程模型
+- 进程模型
 
  如果选择 WAS，根节点只**过程模型**默认情况下选中子节点。 请注意，使用此安装时，你将只安装 WAS，因为没有用于 Web 服务器的支持功能。
 

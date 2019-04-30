@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031299"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun 对象和 Glyphs 元素简介
 本主题介绍<xref:System.Windows.Media.GlyphRun>对象和<xref:System.Windows.Documents.Glyphs>元素。  
@@ -27,13 +27,13 @@ ms.locfileid: "59341044"
   
 2. 打印方案。  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作为设备打印机语言。  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作为设备打印机语言。  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
   
-    -   以前的打印机驱动程序，从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 应用程序输出为固定格式。  
+    - 以前的打印机驱动程序，从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 应用程序输出为固定格式。  
   
-    -   打印后台处理格式。  
+    - 打印后台处理格式。  
   
 3. 固定格式的文档演示，包括以前版本的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 客户端和其他计算设备。  
   
@@ -67,15 +67,15 @@ ms.locfileid: "59341044"
 ### <a name="indices-property"></a>Indices 属性  
  <xref:System.Windows.Documents.Glyphs.Indices%2A>属性是字形规范的字符串。 在一系列字形形成单个群集的情况下，群集中第一个字形的规范之前会跟有一个规范，说明组合了多少个字形和多少个代码点来形成群集。 <xref:System.Windows.Documents.Glyphs.Indices%2A>属性收集在一个字符串中的以下属性。  
   
--   字形索引  
+- 字形索引  
   
--   字形步进宽度  
+- 字形步进宽度  
   
--   组合字形附加矢量  
+- 组合字形附加矢量  
   
--   从代码点映射到字形的群集  
+- 从代码点映射到字形的群集  
   
--   字形标志  
+- 字形标志  
   
  每个字形规范具有以下形式。  
   

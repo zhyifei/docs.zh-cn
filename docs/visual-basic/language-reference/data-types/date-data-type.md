@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971803"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 数据类型 (Visual Basic)
 保存 IEEE 64 位（8 字节）值，它代表从 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，12:00:00 AM（午夜）到 11:59:59.9999999 PM 的时间。 每个增量表示自公历 1 年 1 月 1 日开始后经过的 100 纳秒的时间。 最大值表示 10000 年 1 月 1 日开始之前的 100 纳秒。  
@@ -61,11 +61,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **互操作注意事项。** 如果你与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）交互，请记住，其他环境中的日期/时间类型与 Visual Basic `Date` 类型不兼容。 如果将日期/时间自变量传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Double` 而不是 `Date`，并使用转换方法 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 和 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>。  
+- **互操作注意事项。** 如果你与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）交互，请记住，其他环境中的日期/时间类型与 Visual Basic `Date` 类型不兼容。 如果将日期/时间自变量传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Double` 而不是 `Date`，并使用转换方法 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 和 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>。  
   
--   **类型字符。** `Date` 不包含文本类型字符或标识符类型字符。 但是，编译器会将括在数字符号 (`# #`) 内的文本作为 `Date`。  
+- **类型字符。** `Date` 不包含文本类型字符或标识符类型字符。 但是，编译器会将括在数字符号 (`# #`) 内的文本作为 `Date`。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.DateTime?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.DateTime?displayProperty=nameWithType> 结构。  
   
 ## <a name="example"></a>示例  
  `Date` 数据类型的变量或常数都包含日期和时间。 下面的示例阐释了这一点。  

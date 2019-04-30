@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
 ms.openlocfilehash: 99c52b93cee858511d50aba2f30f2b9f96d91ccd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034367"
 ---
 # <a name="creating-autoincrement-columns"></a>创建 AutoIncrement 列
 要确保列值的唯一，可将列值设置为在表中添加新行时自动递增。 若要创建自动递增<xref:System.Data.DataColumn>，将<xref:System.Data.DataColumn.AutoIncrement%2A>属性的列**true**。 <xref:System.Data.DataColumn>中定义的值然后开始<xref:System.Data.DataColumn.AutoIncrementSeed%2A>属性，与每个行添加的值**AutoIncrement**列中定义的值会增加<xref:System.Data.DataColumn.AutoIncrementStep%2A>的列的属性。  

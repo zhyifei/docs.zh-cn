@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047953"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>如何：使用 SSL 证书配置端口
 创建使用自承载的 Windows Communication Foundation (WCF) 服务时<xref:System.ServiceModel.WSHttpBinding>类，使用传输安全，还必须使用 X.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
@@ -27,15 +27,15 @@ ms.locfileid: "59345581"
   
  本主题介绍如何完成以下一些过程：  
   
--   确定计算机当前的端口配置。  
+- 确定计算机当前的端口配置。  
   
--   获取证书的指纹（以下两个过程需要证书指纹）。  
+- 获取证书的指纹（以下两个过程需要证书指纹）。  
   
--   将 SSL 证书绑定到端口配置。  
+- 将 SSL 证书绑定到端口配置。  
   
--   将 SSL 证书绑定到端口配置并支持客户端证书。  
+- 将 SSL 证书绑定到端口配置并支持客户端证书。  
   
--   从某个端口号删除 SSL 证书。  
+- 从某个端口号删除 SSL 证书。  
   
  请注意，修改存储于计算机上的证书需要管理特权。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59345581"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   **-I**交换机具有的语法`IP`:`port` ，指示该工具将证书设置为计算机的端口 8012。 另外，也可将端口号前面的四个零替换为计算机的实际 IP 地址。  
+    - **-I**交换机具有的语法`IP`:`port` ，指示该工具将证书设置为计算机的端口 8012。 另外，也可将端口号前面的四个零替换为计算机的实际 IP 地址。  
   
-    -   **-H**开关指定证书的指纹。  
+    - **-H**开关指定证书的指纹。  
   
 2. 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中使用 Netsh.exe 工具，如下面的示例所示。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59345581"
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   **Certhash**参数指定的证书的指纹。  
+    - **Certhash**参数指定的证书的指纹。  
   
-    -   **Ipport**参数指定的 IP 地址和端口，以及功能类似 **-i**前述 Httpcfg.exe 工具的开关。  
+    - **Ipport**参数指定的 IP 地址和端口，以及功能类似 **-i**前述 Httpcfg.exe 工具的开关。  
   
-    -   **Appid**参数是一个 GUID，用于标识所属应用程序。  
+    - **Appid**参数是一个 GUID，用于标识所属应用程序。  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>将 SSL 证书绑定至端口号并支持客户端证书  
   

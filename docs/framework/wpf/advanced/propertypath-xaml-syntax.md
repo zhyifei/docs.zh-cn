@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053530"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
 <xref:System.Windows.PropertyPath>对象支持复杂内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设置的各种属性的语法<xref:System.Windows.PropertyPath>类型作为其值。 本主题介绍<xref:System.Windows.PropertyPath>应用于绑定和动画语法的语法。  
@@ -69,11 +69,11 @@ ms.locfileid: "59122910"
   
  括号指示此属性在<xref:System.Windows.PropertyPath>应使用部分限定构造。 它可以使用 XML 命名空间来查找具有适当映射的类型。 `ownerType`搜索类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器有权访问，通过<xref:System.Windows.Markup.XmlnsDefinitionAttribute>中每个程序集的声明。 大部分应用程序都具有映射到 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空间的默认 XML 命名空间，因此通常仅有自定义类型或该命名空间之外的类型才需要前缀。  `propertyName` 必须解析为 `ownerType` 中存在的属性名称。 此语法一般用于以下任一情况：  
   
--   路径是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的样式或模板（该样式或模板没有指定的目标类型）中指定的。 除此之外，限定用法一般无效，因为在非样式、非模板情况下，属性存在于实例中，而不是类型中。  
+- 路径是在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的样式或模板（该样式或模板没有指定的目标类型）中指定的。 除此之外，限定用法一般无效，因为在非样式、非模板情况下，属性存在于实例中，而不是类型中。  
   
--   属性为附加属性。  
+- 属性为附加属性。  
   
--   要绑定到静态属性中。  
+- 要绑定到静态属性中。  
   
  用作情节提要目标，该属性指定为`propertyName`必须是<xref:System.Windows.DependencyProperty>。  
   
@@ -118,19 +118,19 @@ or
 ### <a name="escapes-for-property-path-strings"></a>属性路径字符串的转义  
  对于某些业务对象，你可能会遇到这样的情况：属性路径字符串需要转义序列以进行正确分析。 因为大多数此类字符在常用于定义业务对象的语言方面具有类似的命名交互问题，因此转义需要非常少见。  
   
--   在索引器 ([ ]) 内部，脱字符号 (^) 用于对下一个字符进行转义。  
+- 在索引器 ([ ]) 内部，脱字符号 (^) 用于对下一个字符进行转义。  
   
--   必须（使用 XML 实体）对 XML 语言定义专用的某些字符进行转义。 使用 `&` 对字符“&”进行转义。 使用 `>` 对结束标记“>”进行转义。  
+- 必须（使用 XML 实体）对 XML 语言定义专用的某些字符进行转义。 使用 `&` 对字符“&”进行转义。 使用 `>` 对结束标记“>”进行转义。  
   
--   必须（使用反斜杠 `\`）对特定于 WPF XAML 分析程序行为的字符进行转义，以处理标记扩展。  
+- 必须（使用反斜杠 `\`）对特定于 WPF XAML 分析程序行为的字符进行转义，以处理标记扩展。  
   
-    -   反斜杠 (`\`) 本身是转义字符。  
+    - 反斜杠 (`\`) 本身是转义字符。  
   
-    -   等号 (`=`) 将属性名与属性值分隔开。  
+    - 等号 (`=`) 将属性名与属性值分隔开。  
   
-    -   逗号 (`,`) 用于分隔属性。  
+    - 逗号 (`,`) 用于分隔属性。  
   
-    -   右大括号 (`}`) 是标记扩展的结尾。  
+    - 右大括号 (`}`) 是标记扩展的结尾。  
   
 > [!NOTE]
 >  从技术上讲，这些转义符还适用于情节提要属性路径，但通常会遍历适用于现有 WPF 对象的对象模型，转义应该是不必要的。  

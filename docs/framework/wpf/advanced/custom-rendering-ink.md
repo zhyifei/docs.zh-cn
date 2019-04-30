@@ -10,26 +10,26 @@ helpviewer_keywords:
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
 ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010626"
 ---
 # <a name="custom-rendering-ink"></a>自定义呈现墨迹
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>笔划的属性，可指定笔划，其大小、 颜色和形状，如的外观，但可能有些时候你想要自定义外观更<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允许。 建议通过使用喷笔、油画和多种其他效果呈现外观，从而自定义墨迹的外观。 Windows Presentation Foundation (WPF) 允许您为自定义通过实现自定义呈现墨迹<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>对象。  
   
  本主题包含以下小节：  
   
--   [体系结构](#Architecture)  
+- [体系结构](#Architecture)  
   
--   [实现动态呈现器](#ImplementingADynamicRenderer)  
+- [实现动态呈现器](#ImplementingADynamicRenderer)  
   
--   [实现自定义笔划](#ImplementingCustomStrokes)  
+- [实现自定义笔划](#ImplementingCustomStrokes)  
   
--   [实现自定义 InkCanvas](#ImplementingACustomInkCanvas)  
+- [实现自定义 InkCanvas](#ImplementingACustomInkCanvas)  
   
--   [结束语](#Conclusion)  
+- [结束语](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>体系结构  
@@ -75,11 +75,11 @@ ms.locfileid: "59323715"
   
  自定义上呈现笔画<xref:System.Windows.Controls.InkCanvas>执行以下操作：  
   
--   创建派生一个类<xref:System.Windows.Controls.InkCanvas>。  
+- 创建派生一个类<xref:System.Windows.Controls.InkCanvas>。  
   
--   分配你的自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>到<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType>属性。  
+- 分配你的自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>到<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType>属性。  
   
--   重写 <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 方法。 使用此方法时，请删除之前添加到 InkCanvas 的原始笔划。 然后创建一个自定义笔划，将其添加到<xref:System.Windows.Controls.InkCanvas.Strokes%2A>属性，并调用具有一个新的基本类<xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs>，其中包含自定义笔划。  
+- 重写 <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 方法。 使用此方法时，请删除之前添加到 InkCanvas 的原始笔划。 然后创建一个自定义笔划，将其添加到<xref:System.Windows.Controls.InkCanvas.Strokes%2A>属性，并调用具有一个新的基本类<xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs>，其中包含自定义笔划。  
   
  以下C#的代码演示了一个自定义<xref:System.Windows.Controls.InkCanvas>类，该类使用自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>，并收集自定义笔划。  
   

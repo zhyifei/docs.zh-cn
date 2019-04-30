@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022345"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 互操作介绍 (Visual Basic)
 组件对象模型 (COM) 允许到其他组件和主机应用程序公开其功能的对象。 虽然 COM 对象的基础 Windows 编程的许多年来，应用程序面向公共语言运行时 (CLR) 提供了许多优点。  
@@ -28,15 +28,15 @@ ms.locfileid: "56745594"
 ## <a name="type-libraries-and-assembly-manifests"></a>类型库和程序集清单  
  类型库描述 COM 对象，如成员名称和数据类型的特征。 程序集清单执行的相同函数[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。 它们包括有关以下信息：  
   
--   程序集标识、 版本、 区域性和数字签名。  
+- 程序集标识、 版本、 区域性和数字签名。  
   
--   组成程序集实现的文件。  
+- 组成程序集实现的文件。  
   
--   类型和构成该程序集的资源。 这包括那些从其导出。  
+- 类型和构成该程序集的资源。 这包括那些从其导出。  
   
--   对其他程序集的编译时依赖项。  
+- 对其他程序集的编译时依赖项。  
   
--   要正确运行的程序集所需的权限。  
+- 要正确运行的程序集所需的权限。  
   
  有关程序集和程序集清单的详细信息，请参阅[.NET 中的程序集](../../../standard/assembly/index.md)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56745594"
 - [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [与非托管代码交互操作](../../../framework/interop/index.md)
 - [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [在.NET 中的程序集](../../../standard/assembly/index.md)
+- [.NET 中的程序集](../../../standard/assembly/index.md)
 - [Tlbimp.exe（类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe（类型库导出程序）](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [互操作封送处理](../../../framework/interop/interop-marshaling.md)

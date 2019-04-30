@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
 ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010652"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>ColorConvertedBitmap 标记扩展
 提供了一种方法来指定不具有嵌入的配置文件是位图源。 颜色上下文 / 配置文件指定的[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]，如映像源[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  

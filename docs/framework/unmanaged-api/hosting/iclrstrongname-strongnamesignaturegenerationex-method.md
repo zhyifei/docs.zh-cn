@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992883"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx 方法
 为指定的程序集，根据指定的标志生成的强名称签名。  
@@ -69,9 +69,9 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]一个或多个以下值：  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) 的重新计算链接的模块的所有哈希值。  
+- `SN_SIGN_ALL_FILES` (0x00000001) 的重新计算链接的模块的所有哈希值。  
   
--   `SN_TEST_SIGN` (0x00000002) — 测试签名程序集。  
+- `SN_TEST_SIGN` (0x00000002) — 测试签名程序集。  
   
 ## <a name="return-value"></a>返回值  
  `S_OK` 如果成功，则完成的方法否则为指示失败的 HRESULT 值 (请参阅[常见的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)列表)。  

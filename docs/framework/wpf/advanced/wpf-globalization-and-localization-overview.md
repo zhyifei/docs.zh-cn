@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053959"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 
@@ -28,43 +28,43 @@ ms.locfileid: "58819575"
 
  设计时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基于[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，请考虑实施这些最佳做法：  
   
--   编写你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 避免创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在代码中。 在创建时你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]通过使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，通过内置的本地化 Api 公开。  
+- 编写你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 避免创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]在代码中。 在创建时你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]通过使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，通过内置的本地化 Api 公开。  
   
--   避免使用绝对位置和固定的大小进行布局的内容;相反，使用相对或自动大小调整。
+- 避免使用绝对位置和固定的大小进行布局的内容;相反，使用相对或自动大小调整。
   
-    -   使用<xref:System.Windows.Window.SizeToContent%2A>并将宽度和高度设置为`Auto`。  
+    - 使用<xref:System.Windows.Window.SizeToContent%2A>并将宽度和高度设置为`Auto`。  
   
-    -   避免使用<xref:System.Windows.Controls.Canvas>布置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s。  
+    - 避免使用<xref:System.Windows.Controls.Canvas>布置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s。  
   
-    -   使用<xref:System.Windows.Controls.Grid>及其大小共享功能。  
+    - 使用<xref:System.Windows.Controls.Grid>及其大小共享功能。  
   
--   在边距中提供额外的空间，因为本地化文本通常需要更多空间。 额外空间为可能会延伸的字符预留了余地。  
+- 在边距中提供额外的空间，因为本地化文本通常需要更多空间。 额外空间为可能会延伸的字符预留了余地。  
   
--   启用<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>上<xref:System.Windows.Controls.TextBlock>以避免剪裁。
+- 启用<xref:System.Windows.Controls.TextBlock.TextWrapping%2A>上<xref:System.Windows.Controls.TextBlock>以避免剪裁。
   
--   设置 `xml:lang` 特性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改中的许多功能的行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 请参阅[WPF 的全球化](globalization-for-wpf.md)有关设置的详细信息[xml: lang 处理在 XAML 中](../../xaml-services/xml-lang-handling-in-xaml.md)。  
+- 设置 `xml:lang` 特性。 此属性描述特定元素及其子元素的区域性。 此属性的值更改中的许多功能的行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 例如，它可以更改断字、拼写检查、数字替换、复杂脚本成型和字体回退的行为。 请参阅[WPF 的全球化](globalization-for-wpf.md)有关设置的详细信息[xml: lang 处理在 XAML 中](../../xaml-services/xml-lang-handling-in-xaml.md)。  
   
--   创建自定义复合字体，以获取更好地控制用于不同语言的字体。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 windows\fonts 目录中的 GlobalUserInterface.composite 字体。  
+- 创建自定义复合字体，以获取更好地控制用于不同语言的字体。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用 windows\fonts 目录中的 GlobalUserInterface.composite 字体。  
   
--   当创建导航应用程序可能本地化区域性中的显示的文本从右到左格式时，显式设置<xref:System.Windows.FlowDirection>的每个页，以确保页面不会继承<xref:System.Windows.FlowDirection>从<xref:System.Windows.Navigation.NavigationWindow>。  
+- 当创建导航应用程序可能本地化区域性中的显示的文本从右到左格式时，显式设置<xref:System.Windows.FlowDirection>的每个页，以确保页面不会继承<xref:System.Windows.FlowDirection>从<xref:System.Windows.Navigation.NavigationWindow>。  
   
--   创建托管浏览器之外的独立导航应用程序时，设置<xref:System.Windows.Application.StartupUri%2A>将初始应用程序<xref:System.Windows.Navigation.NavigationWindow>而不是到页面 (例如， `<Application StartupUri="NavigationWindow.xaml">`)。 此设计使您可以更改<xref:System.Windows.FlowDirection>窗口和导航栏。 有关详细信息和示例，请参阅[全球化主页示例](https://go.microsoft.com/fwlink/?LinkID=159990)。  
+- 创建托管浏览器之外的独立导航应用程序时，设置<xref:System.Windows.Application.StartupUri%2A>将初始应用程序<xref:System.Windows.Navigation.NavigationWindow>而不是到页面 (例如， `<Application StartupUri="NavigationWindow.xaml">`)。 此设计使您可以更改<xref:System.Windows.FlowDirection>窗口和导航栏。 有关详细信息和示例，请参阅[全球化主页示例](https://go.microsoft.com/fwlink/?LinkID=159990)。  
   
 ### <a name="best-practices-for-wpf-localization"></a>WPF 本地化的最佳做法
 
  进行本地化时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 基于应用程序，请考虑实施下列最佳做法：  
   
--   使用本地化注释为本地化人员提供额外的上下文。  
+- 使用本地化注释为本地化人员提供额外的上下文。  
   
--   使用本地化特性控制本地化，而不是选择性地省略<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>元素上的属性。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)有关详细信息。  
+- 使用本地化特性控制本地化，而不是选择性地省略<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>元素上的属性。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)有关详细信息。  
   
--   使用`msbuild -t:updateuid`并`-t:checkuid`若要添加并检查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>中的属性在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性，用于开发和本地化之间跟踪更改。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性可帮助您对新的开发更改进行本地化。 如果你手动添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性设置为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该任务是通常会比较繁重并且准确性较低。  
+- 使用`msbuild -t:updateuid`并`-t:checkuid`若要添加并检查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>中的属性在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性，用于开发和本地化之间跟踪更改。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性可帮助您对新的开发更改进行本地化。 如果你手动添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性设置为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该任务是通常会比较繁重并且准确性较低。  
   
-    -   请勿编辑或更改<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>后开始进行本地化的属性。  
+    - 请勿编辑或更改<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>后开始进行本地化的属性。  
   
-    -   不要使用重复<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性 （使用复制和粘贴命令时，请记住此提示）。  
+    - 不要使用重复<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性 （使用复制和粘贴命令时，请记住此提示）。  
   
-    -   设置`UltimateResourceFallback`assemblyinfo.* 若要指定合适的回退语言中的位置 (例如， `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`)。  
+    - 设置`UltimateResourceFallback`assemblyinfo.* 若要指定合适的回退语言中的位置 (例如， `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`)。  
   
          如果您决定通过省略主程序集中添加源语言`<UICulture>`在项目文件中标记中，设置`UltimateResourceFallback`与主程序集而不是附属项的位置 (例如， `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。  
   
@@ -72,19 +72,19 @@ ms.locfileid: "58819575"
 
 进行本地化时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序中，有几个选项。 例如，将可本地化资源绑定到应用程序中[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]文件，在 resx 表中存储可本地化的文本，或者让本地化人员使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。 本部分介绍使用 XAML，可提供的好处的 BAML 形式的本地化工作流：  
   
--   可以本地化您的生成后。  
+- 可以本地化您的生成后。  
   
--   以便在开发时可以进行本地化，您可以从较旧版本的 XAML 的 BAML 形式更新本地化使用 XAML 的 BAML 形式的较新版本。  
+- 以便在开发时可以进行本地化，您可以从较旧版本的 XAML 的 BAML 形式更新本地化使用 XAML 的 BAML 形式的较新版本。  
   
--   你可以验证原始源元素和语义在编译时由于 XAML 的 BAML 形式的已编译的形式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+- 你可以验证原始源元素和语义在编译时由于 XAML 的 BAML 形式的已编译的形式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
 ### <a name="localization-build-process"></a>本地化生成过程  
 
 开发时[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序中，本地化的生成过程如下所示：  
   
--   开发人员创建，并将其全球化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 在项目文件中，开发人员设置`<UICulture>en-US</UICulture>`，以便编译应用程序时，会生成非特定于语言的主程序集。 此程序集具有一个附属 .resources.dll 文件，其中包含所有可本地化的资源。 （可选） 在主程序集中保留源语言，因为我们本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]支持从主程序集进行提取。  
+- 开发人员创建，并将其全球化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 在项目文件中，开发人员设置`<UICulture>en-US</UICulture>`，以便编译应用程序时，会生成非特定于语言的主程序集。 此程序集具有一个附属 .resources.dll 文件，其中包含所有可本地化的资源。 （可选） 在主程序集中保留源语言，因为我们本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]支持从主程序集进行提取。  
   
--   该文件编译为在生成时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]转换为 XAML 的 BAML 形式。 区域性非特定`MyDialog.exe`和区域性相关 （英语）`MyDialog.resources.dll`向说英语的客户发布文件。  
+- 该文件编译为在生成时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]转换为 XAML 的 BAML 形式。 区域性非特定`MyDialog.exe`和区域性相关 （英语）`MyDialog.resources.dll`向说英语的客户发布文件。  
   
 ### <a name="localization-workflow"></a>本地化工作流
 

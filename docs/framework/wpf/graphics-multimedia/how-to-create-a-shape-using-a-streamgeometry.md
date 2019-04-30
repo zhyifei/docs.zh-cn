@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
 ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054565"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>如何：使用 StreamGeometry 创建形状
 <xref:System.Windows.Media.StreamGeometry> 是轻量替代<xref:System.Windows.Media.PathGeometry>对于创建几何形状。 使用<xref:System.Windows.Media.StreamGeometry>何时需要描述复杂几何，但不是希望支持数据绑定、 动画或修改的开销。 例如，由于其效率<xref:System.Windows.Media.StreamGeometry>类是描述装饰器的一个不错选择。  

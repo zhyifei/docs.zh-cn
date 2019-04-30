@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000215"
 ---
 # <a name="next-function"></a>下一个函数
 检索到的调用开始枚举中的下一步属性[BeginEnumeration](beginenumeration.md)。
@@ -89,7 +89,7 @@ HRESULT Next (
 
 如果`plFlavor`不是`null`，则`LONG`值接收围绕原点的属性的信息，如下所示：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 该属性是标准系统属性。 |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类：属性继承自的父类。 <br> 实例：属性，继承自的父类，而未已修改的实例。  |

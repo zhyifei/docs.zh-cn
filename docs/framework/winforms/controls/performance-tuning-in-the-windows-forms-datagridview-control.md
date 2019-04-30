@@ -7,11 +7,11 @@ helpviewer_keywords:
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
 ms.openlocfilehash: 79f74db4ebd095156207a6218f59c0e9ae423085
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012641"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的性能优化
 当使用大量的数据，`DataGridView`控件可以消耗大量的内存开销，除非谨慎使用。 在内存有限的客户端，可以避免此开销的一些通过避免具有高内存成本的功能。 你还可以管理部分或全部数据维护和检索任务自己使用的虚拟模式以自定义你的方案的内存使用情况。  

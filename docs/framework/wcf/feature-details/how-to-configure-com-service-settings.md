@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039407"
 ---
 # <a name="how-to-configure-com-service-settings"></a>如何：配置 COM+ 服务设置
 使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。 在 COM + 承载模式中，Application.config 文件被放置在应用程序根目录中 (应用程序 %PROGRAMFILES%\ComPlus\\{appid} 是默认值)。 无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。  

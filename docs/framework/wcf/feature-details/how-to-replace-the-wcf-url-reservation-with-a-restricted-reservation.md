@@ -3,11 +3,11 @@ title: 如何：用受限预留替换 WCF URL 预留
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: f9cfda1d4ca14dd380dd01f944d4c900f9832096
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039541"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>如何：用受限预留替换 WCF URL 预留
 URL 预留使你能够限制谁可以接收来自某个 URL 或某一组 URL 的消息。 预留由一个 URL 模板、一个访问控制列表 (ACL) 和一组标志组成。 URL 模板定义预留所影响的 URL。 有关如何处理 URL 模板的详细信息，请参阅[路由传入的请求](https://go.microsoft.com/fwlink/?LinkId=136764)。 ACL 控制哪个用户或用户组允许接收来自指定 URL 的消息。 标志指示预留是赋予用户或用户组直接侦听 URL 的权限，还是将侦听权限委托给其他进程。  

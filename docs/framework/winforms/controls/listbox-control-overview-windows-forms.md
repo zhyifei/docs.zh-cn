@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012888"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ListBox>控件显示用户可以从中选择一个或多个项列表。 如果总项数超出可显示的数字，滚动条自动添加到<xref:System.Windows.Forms.ListBox>控件。 当<xref:System.Windows.Forms.ListBox.MultiColumn%2A>属性设置为`true`、 列表框中显示多个列中的项和水平滚动条的显示。 当<xref:System.Windows.Forms.ListBox.MultiColumn%2A>属性设置为`false`、 列表框中显示的单个列中的项和垂直滚动条的显示。 当<xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>设置为`true`，该滚动条显示而不考虑项的数目。 <xref:System.Windows.Forms.ListBox.SelectionMode%2A>属性确定一次可以选择多少个列表项。  

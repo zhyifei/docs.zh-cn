@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049331"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函数
 加载类型库并使用所提供[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)若要解决任何内部引用的类型库。  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in]一个[REGKIND 枚举](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)标志，用于控制如何注册类型库。 其可能的值为：  
   
--   `REGKIND_DEFAULT`：使用默认注册行为。  
+- `REGKIND_DEFAULT`：使用默认注册行为。  
   
--   `REGKIND_REGISTER`：注册此类型库。  
+- `REGKIND_REGISTER`：注册此类型库。  
   
--   `REGKIND_NONE`：未注册此类型库。  
+- `REGKIND_NONE`：未注册此类型库。  
   
  `pTlbResolver`  
  [in]实现的指针[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。  

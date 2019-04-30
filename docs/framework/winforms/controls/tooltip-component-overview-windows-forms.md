@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolTip component [Windows Forms], about ToolTip component
 ms.assetid: 3fbc6f08-c882-4acd-a960-a08efe3c7e6e
 ms.openlocfilehash: 3fbe883501d1ce36ca25ea07631f98042f451e07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009317"
 ---
 # <a name="tooltip-component-overview-windows-forms"></a>ToolTip 组件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ToolTip> 组件在用户指向控件时显示文本。 ToolTip 可与任何控件关联。 此组件的示例用法： 若要在窗体上节省空间，可以在按钮上显示一个小图标，并使用 ToolTip 来解释按钮的功能。  

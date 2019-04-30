@@ -17,11 +17,11 @@ helpviewer_keywords:
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
 ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053140"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation (WPF) 类层次结构的指导的教程。 本主题涵盖了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的大部分主要子系统，并说明它们的交互方式。 本主题还详细介绍了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架构师所做的一些选择。  

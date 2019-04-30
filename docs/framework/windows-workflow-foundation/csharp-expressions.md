@@ -3,30 +3,30 @@ title: C# 表达式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
 ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009807"
 ---
 # <a name="c-expressions"></a>C# 表达式
 从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 中支持 C# 表达式。 新的 C# 工作流项目中创建 Visual Studio 2012 面向[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 表达式和 Visual Basic 工作流项目使用 Visual Basic 表达式。 现有使用 Visual Basic 表达式的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流项目可以不受项目语言限制而迁移到 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，并得到支持。 本主题概述了 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 表达式。
 
 ## <a name="using-c-expressions-in-workflows"></a>在工作流中使用 C# 表达式
 
--   [在工作流设计器中使用 C# 表达式](csharp-expressions.md#WFDesigner)
+- [在工作流设计器中使用 C# 表达式](csharp-expressions.md#WFDesigner)
 
-    -   [向后兼容性](csharp-expressions.md#BackwardCompat)
+    - [向后兼容性](csharp-expressions.md#BackwardCompat)
 
--   [在代码工作流中使用 C# 表达式](csharp-expressions.md#CodeWorkflows)
+- [在代码工作流中使用 C# 表达式](csharp-expressions.md#CodeWorkflows)
 
--   [在 XAML 工作流中使用 C# 表达式](csharp-expressions.md#XamlWorkflows)
+- [在 XAML 工作流中使用 C# 表达式](csharp-expressions.md#XamlWorkflows)
 
-    -   [编译的 Xaml](csharp-expressions.md#CompiledXaml)
+    - [编译的 Xaml](csharp-expressions.md#CompiledXaml)
 
-    -   [松散 Xaml](csharp-expressions.md#LooseXaml)
+    - [松散 Xaml](csharp-expressions.md#LooseXaml)
 
--   [在 XAMLX 工作流服务中使用 C# 表达式](csharp-expressions.md#WFServices)
+- [在 XAMLX 工作流服务中使用 C# 表达式](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> 在工作流设计器中使用 C# 表达式
  从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 中支持 C# 表达式。 C# 工作流项目中创建 Visual Studio 2012 面向[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 表达式，而 Visual Basic 工作流项目使用 Visual Basic 表达式。 若要指定所需的 C# 表达式，它在框中键入标有**输入 C# 表达式**。 该标签显示在属性窗口中（当在设计器中选中活动时），或显示在工作流设计器的活动上。 下例中，在 `WriteLine` 范围内，一个 `Sequence` 中包含了两个 `NoPersistScope` 活动。
@@ -40,7 +40,7 @@ ms.locfileid: "57720574"
  在现有已迁移到 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 工作流项目中使用的 Visual Basic 表达式是得到支持的。 现有的 Visual Basic 表达式的文本时可以在工作流设计器中查看 Visual Basic 表达式，将替换**值在 XAML 中设置**，除非 Visual Basic 表达式是有效的 C# 语法。 如果 Visual Basic 表达式符合 C# 语法则予以显示。 若要将 Visual Basic 表达式更新为 C#，可在工作流设计器中编辑这些表达式，指定等效的 C# 表达式。 将 Visual Basic 表达式更新为 C# 不是必须的，但一旦在工作流设计器中进行更新，这些表达式即转换成 C# 并不可重新转换为 Visual Basic。
 
 ### <a name="CodeWorkflows"></a> 在代码工作流中使用 C# 表达式
- 基于 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 代码的工作流支持 C# 表达式，但 C# 表达式须用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType> 进行编译，然后才能调用工作流。 工作流作者可以用 `CSharpValue` 表示表达式的右值，用 `CSharpReference` 表示表达式的左值。 在下例中，用一个 `Assign` 活动以及 `WriteLine` 活动中所包含的 `Sequence` 活动创建了一个工作流。 为 `CSharpReference` 的 `To` 参数指定了一个 `Assign`，用来表示表达式的左值。 为 `CSharpValue` 的 `Value` 参数和 `Assign` 的 `Text` 参数指定了一个 `WriteLine`，用于表示这两个表达式的右值。
+ 基于 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 代码的工作流支持 C# 表达式，但 C# 表达式须用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType> 进行编译，然后才能调用工作流。 工作流作者可以用 `CSharpValue` 表示表达式的右值，用 `CSharpReference` 表示表达式的左值。 在下例中，用一个 `Assign` 活动以及 `WriteLine` 活动中所包含的 `Sequence` 活动创建了一个工作流。 为 `CSharpReference` 的 `To` 自变量指定了一个 `Assign`，用来表示表达式的左值。 为 `CSharpValue` 的 `Value` 自变量和 `Assign` 的 `Text` 自变量指定了一个 `WriteLine`，用于表示这两个表达式的右值。
 
 ```csharp
 Variable<int> n = new Variable<int>
@@ -176,22 +176,22 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
  在动态活动中编译 C# 表达式的 `CompileExpressions` 重载中有几处不同。
 
--   `CompileExpressions` 的参数是一个 `DynamicActivity`。
+- `CompileExpressions` 的参数是一个 `DynamicActivity`。
 
--   通过使用 `DynamicActivity.Name` 属性检索类型名称和命名空间。
+- 通过使用 `DynamicActivity.Name` 属性检索类型名称和命名空间。
 
--   将 `TextExpressionCompilerSettings.ForImplementation` 设置为 `true`。
+- 将 `TextExpressionCompilerSettings.ForImplementation` 设置为 `true`。
 
--   调用 `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` 而非 `CompiledExpressionInvoker.SetCompiledExpressionRoot`。
+- 调用 `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` 而非 `CompiledExpressionInvoker.SetCompiledExpressionRoot`。
 
  有关使用在代码中使用表达式的详细信息，请参阅[编写工作流、 活动和表达式使用命令性代码](authoring-workflows-activities-and-expressions-using-imperative-code.md)。
 
 ### <a name="XamlWorkflows"></a> 在 XAML 工作流中使用 C# 表达式
  XAML 工作流支持 C# 表达式。 编译型 XAML 工作流被编译到类型中，而宽松型 XAML 工作流由运行时加载，并在工作流执行时编译到活动树中。
 
--   [编译的 Xaml](csharp-expressions.md#CompiledXaml)
+- [编译的 Xaml](csharp-expressions.md#CompiledXaml)
 
--   [松散 Xaml](csharp-expressions.md#LooseXaml)
+- [松散 Xaml](csharp-expressions.md#LooseXaml)
 
 #### <a name="CompiledXaml"></a> 编译的 Xaml
  编译型 XAML 工作流支持 C# 表达式，此种工作流编译成类型，作为面向 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 的 C# 工作流项目的组成部分。 已编译的 XAML 是在 Visual Studio 中，工作流创作的默认类型和 C# 工作流项目中创建 Visual Studio 面向[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]使用 C# 表达式。

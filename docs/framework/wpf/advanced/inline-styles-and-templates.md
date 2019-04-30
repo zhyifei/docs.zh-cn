@@ -8,11 +8,11 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051003"
 ---
 # <a name="inline-styles-and-templates"></a>内联样式和模板
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了<xref:System.Windows.Style>对象和模板对象 (<xref:System.Windows.FrameworkTemplate>子类) 作为一种方式在资源中定义的元素的可视外观，以便它们可以使用多次。 出于此原因中的属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]采用类型<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>几乎总是进行对现有样式和模板的资源引用而不是内联定义新的。  

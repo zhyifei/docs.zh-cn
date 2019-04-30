@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
 ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013447"
 ---
 # <a name="how-to-disable-tab-pages"></a>如何：禁用选项卡页
 在某些情况下，将想要限制可在 Windows 窗体应用程序中的数据访问。 一个例子可能具有选项卡控件，则选项卡页中显示的数据时管理员可能想要限制从来宾或较低级别的用户的选项卡页的信息。  

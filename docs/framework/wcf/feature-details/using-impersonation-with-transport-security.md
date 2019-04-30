@@ -3,11 +3,11 @@ title: 将模拟用于传输安全
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050670"
 ---
 # <a name="using-impersonation-with-transport-security"></a>将模拟用于传输安全
 *模拟*是服务器应用程序的客户端标识的能力。 服务在验证对资源的访问时常常使用模拟。 服务器应用程序使用服务帐户运行，但当服务器接受客户端连接时，它模拟客户端，以便使用客户端凭据执行访问检查。 传输安全是一种传递凭据和使用这些凭据确保通信安全的机制。 本主题介绍使用模拟功能具有 Windows Communication Foundation (WCF) 中的传输安全性。 有关使用消息安全的模拟的详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -33,24 +33,24 @@ ms.locfileid: "59151432"
 ### <a name="named-pipe-transport"></a>命名管道传输协议  
  使用命名管道传输协议时，请注意以下事项：  
   
--   命名管道传输协议应仅用在本地计算机上。 WCF 中的命名的管道传输显式不允许跨计算机的连接。  
+- 命名管道传输协议应仅用在本地计算机上。 WCF 中的命名的管道传输显式不允许跨计算机的连接。  
   
--   命名管道不能用在 `Impersonate` 或 `Delegate` 模拟级别上。 命名管道不能在这些模拟级别实施计算机上的保证。  
+- 命名管道不能用在 `Impersonate` 或 `Delegate` 模拟级别上。 命名管道不能在这些模拟级别实施计算机上的保证。  
   
  有关 named pipes 的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ### <a name="http-transport"></a>HTTP 传输协议  
  使用 HTTP 传输的绑定 (<xref:System.ServiceModel.WSHttpBinding>并<xref:System.ServiceModel.BasicHttpBinding>) 支持多种身份验证方案，如中所述[了解 HTTP 身份验证](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)。 支持的模拟级别取决于身份验证方案。 使用 HTTP 传输协议时，请注意以下事项：  
   
--   `Anonymous` 身份验证方案忽略模拟。  
+- `Anonymous` 身份验证方案忽略模拟。  
   
--   `Basic`身份验证方案仅支持`Delegate`级别。 所有低于此级别的模拟级别都会升级。  
+- `Basic`身份验证方案仅支持`Delegate`级别。 所有低于此级别的模拟级别都会升级。  
   
--   `Digest` 身份验证方案仅支持 `Impersonate` 和 `Delegate` 级别。  
+- `Digest` 身份验证方案仅支持 `Impersonate` 和 `Delegate` 级别。  
   
--   `NTLM` 身份验证方案（可直接选择或通过协商选择）仅在本地计算机上支持 `Delegate` 级别。  
+- `NTLM` 身份验证方案（可直接选择或通过协商选择）仅在本地计算机上支持 `Delegate` 级别。  
   
--   Kerberos 身份验证方案（只能通过协商选择）可用于任何受支持的模拟级别。  
+- Kerberos 身份验证方案（只能通过协商选择）可用于任何受支持的模拟级别。  
   
  有关 HTTP 传输的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990933"
 ---
 # <a name="securing-services-and-clients"></a>保护服务和客户端的安全
 在本部分中的信息重点介绍编程安全 Windows Communication Foundation (WCF) 中。 通常，这包括选择系统提供的相应绑定、设置安全元素的属性，然后设置服务行为的属性（控制检索凭据以供服务或客户端使用的方式）。 这些技术涵盖大多数情况下，大多数用户的安全要求，如中所示[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如果你的方案需要更多的功能，首先请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); 如果解决方案并不明显，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。 如果要创建 （或与进行互操作） 的系统使用丰富的声明，请参阅中的主题[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  

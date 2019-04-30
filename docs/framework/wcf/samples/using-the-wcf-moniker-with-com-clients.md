@@ -3,11 +3,11 @@ title: 对 COM 客户端使用 WCF 标记
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051606"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>对 COM 客户端使用 WCF 标记
 此示例演示如何使用 Windows Communication Foundation (WCF) 服务名字对象将 Web 服务集成到基于 COM 的开发环境，如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 本示例由 Windows 脚本宿主客户端 (.vbs)、客户端支持库 (.dll) 和 Internet 信息服务 (IIS) 承载的服务库 (.dll) 组成。 该服务是一个计算器服务，COM 客户端将对服务调用数学运算（加、减、乘和除）。 客户端活动显示在消息框窗口中。  
@@ -43,11 +43,11 @@ public interface ICalculator
   
  示例演示三种使用标记的备选方法：  
   
--   类型化协定 - 该协定在客户端计算机上注册为 COM 可见类型。  
+- 类型化协定 - 该协定在客户端计算机上注册为 COM 可见类型。  
   
--   WSDL 协定 - 该协定以 WSDL 文档的形式提供。  
+- WSDL 协定 - 该协定以 WSDL 文档的形式提供。  
   
--   元数据交换协定 - 该协定可在运行时从元数据交换 (MEX) 终结点进行检索。  
+- 元数据交换协定 - 该协定可在运行时从元数据交换 (MEX) 终结点进行检索。  
   
 ## <a name="typed-contract"></a>类型化协定  
  若要对类型化协定用法使用标记，必须向 COM 注册服务协定的经适当属性化的类型。 首先，必须通过使用生成客户端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。  
@@ -87,11 +87,11 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  标记使用的参数将会指定：  
   
--   服务终结点的地址。  
+- 服务终结点的地址。  
   
--   客户端应该用来与该终结点连接的绑定。 虽然可以在客户端配置文件中定义自定义绑定，但本例中使用了系统定义的 wsHttpBinding。 自定义绑定在与 Cscript.exe 处于同一目录的 Cscript.exe.config 文件中进行定义，以便可以与 Windows 脚本主机一起使用。  
+- 客户端应该用来与该终结点连接的绑定。 虽然可以在客户端配置文件中定义自定义绑定，但本例中使用了系统定义的 wsHttpBinding。 自定义绑定在与 Cscript.exe 处于同一目录的 Cscript.exe.config 文件中进行定义，以便可以与 Windows 脚本主机一起使用。  
   
--   在终结点受支持的协定的类型。 此类型是在上面生成并注册的类型。 由于 Visual Basic 脚本不提供强类型 COM 环境，因此必须指定协定的标识符。 此 GUID 是 CalcProxy.tlb 中的 `interfaceID`，可以通过使用 COM 工具（如 OLE/COM 对象查看器 (OleView.exe)）来查看。 对于强类型环境（如 Office VBA 或 Visual Basic 6.0），可以添加对类型库的显式引用，然后声明代理对象的类型，以此取代协定参数。 这样还可在客户端应用程序开发过程中提供 IntelliSense 支持。  
+- 在终结点受支持的协定的类型。 此类型是在上面生成并注册的类型。 由于 Visual Basic 脚本不提供强类型 COM 环境，因此必须指定协定的标识符。 此 GUID 是 CalcProxy.tlb 中的 `interfaceID`，可以通过使用 COM 工具（如 OLE/COM 对象查看器 (OleView.exe)）来查看。 对于强类型环境（如 Office VBA 或 Visual Basic 6.0），可以添加对类型库的显式引用，然后声明代理对象的类型，以此取代协定参数。 这样还可在客户端应用程序开发过程中提供 IntelliSense 支持。  
   
  在用服务标记构造代理实例之后，客户端应用程序可以对此代理调用方法，这将生成调用相应服务操作的服务标记基础结构。  
   
@@ -127,13 +127,13 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  标记使用的参数将会指定：  
   
--   服务终结点的地址。  
+- 服务终结点的地址。  
   
--   客户端用于与该终结点连接的绑定和在其中定义该绑定的命名空间。 在本例中，使用 `wsHttpBinding_ICalculator`。  
+- 客户端用于与该终结点连接的绑定和在其中定义该绑定的命名空间。 在本例中，使用 `wsHttpBinding_ICalculator`。  
   
--   定义协定的 WSDL。 在本例中是已从 serviceWsdl.xml 文件中读取的字符串。  
+- 定义协定的 WSDL。 在本例中是已从 serviceWsdl.xml 文件中读取的字符串。  
   
--   协定的名称和命名空间。 由于 WSDL 可能包含多个协定，因此需要此标识。  
+- 协定的名称和命名空间。 由于 WSDL 可能包含多个协定，因此需要此标识。  
   
     > [!NOTE]
     >  默认情况下，WCF 服务生成单独的 WSDL 文件，每个命名空间的使用。 这些文件通过使用 WSDL 导入构造连接。 由于标记需要单个 WSDL 定义，因此服务必须使用单个命名空间（如本示例中的演示），或者必须手动合并单独的文件。  
@@ -165,13 +165,13 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  标记使用的参数将会指定：  
   
--   服务元数据交换终结点的地址。  
+- 服务元数据交换终结点的地址。  
   
--   服务终结点的地址。  
+- 服务终结点的地址。  
   
--   客户端用于与该终结点连接的绑定和在其中定义该绑定的命名空间。 在本例中，使用 `wsHttpBinding_ICalculator`。  
+- 客户端用于与该终结点连接的绑定和在其中定义该绑定的命名空间。 在本例中，使用 `wsHttpBinding_ICalculator`。  
   
--   协定的名称和命名空间。 由于 WSDL 可能包含多个协定，因此需要此标识。  
+- 协定的名称和命名空间。 由于 WSDL 可能包含多个协定，因此需要此标识。  
   
  在用服务标记构造代理实例之后，客户端应用程序可以对此代理调用方法，这将生成调用相应服务操作的服务标记基础结构。  
   
@@ -235,4 +235,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
--   出于安全目的，请在示例结束后删除虚拟目录定义和在安装步骤中授予的权限。  
+- 出于安全目的，请在示例结束后删除虚拟目录定义和在安装步骤中授予的权限。  

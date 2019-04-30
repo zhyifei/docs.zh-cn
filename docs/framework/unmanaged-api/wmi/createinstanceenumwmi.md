@@ -17,15 +17,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040698"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函数
 
-返回将返回满足指定的选择条件指定类的实例的枚举器。
+返回枚举器，该枚举器返回符合指定选择条件的指定类的实例。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -54,7 +54,7 @@ HRESULT CreateInstanceEnumWmi (
 `lFlags`\
 [in]影响此函数的行为的标志的组合。 以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果集，该函数检索当前连接的区域设置的本地化命名空间中存储已修正的限定符。 <br/> 如果未设置，此函数检索仅立即命名空间中存储的限定符。 |
 | `WBEM_FLAG_DEEP` | 0 | 枚举在层次结构中包括此和所有子类。 |
@@ -93,7 +93,7 @@ HRESULT CreateInstanceEnumWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有权限查看的指定类的实例。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |

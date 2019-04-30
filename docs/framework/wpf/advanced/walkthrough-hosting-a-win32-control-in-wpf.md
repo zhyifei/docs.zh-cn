@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032329"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>演练：在 WPF 中承载 Win32 控件
 Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富环境。 但是，当您在 Win32 代码中有大量投入时，可能会重复使用至少某些更有效的在 WPF 应用程序中的代码而不是完全重写。 WPF 提供了一个简单的机制，用于承载 Win32 窗口中，在 WPF 页上。  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富
   
 6. 处理发送到宿主窗口的选定消息，例如，来自子控件的通知。 有两种方法可以实现此目的。  
   
-    -   如果想要在承载类中处理消息，重写<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>类。  
+    - 如果想要在承载类中处理消息，重写<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>类。  
   
-    -   如果您愿意让 WPF 处理消息，请处理<xref:System.Windows.Interop.HwndHost>类<xref:System.Windows.Interop.HwndHost.MessageHook>代码隐藏中的事件。 对于所承载的窗口收到的每条消息，都将发生此事件。 如果选择此选项，仍必须重写<xref:System.Windows.Interop.HwndHost.WndProc%2A>，但只需要最小实现。  
+    - 如果您愿意让 WPF 处理消息，请处理<xref:System.Windows.Interop.HwndHost>类<xref:System.Windows.Interop.HwndHost.MessageHook>代码隐藏中的事件。 对于所承载的窗口收到的每条消息，都将发生此事件。 如果选择此选项，仍必须重写<xref:System.Windows.Interop.HwndHost.WndProc%2A>，但只需要最小实现。  
   
 7. 重写<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>并<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>。 必须重写这些方法才能履行<xref:System.Windows.Interop.HwndHost>协定，但你可能只需提供的最小实现。  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富
 ## <a name="implement-communication-between-the-control-and-the-page"></a>在控件和页面之间的实现通信  
  通过将其发送 Windows 消息操作控件。 当用户与控件交互时，控件会通过向其宿主窗口发送通知来通知你。 [中承载 Win32 ListBox 控件在 WPF 中](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)示例包含一个用户界面，提供了几个示例的工作方式：  
   
--   向列表中追加项。  
+- 向列表中追加项。  
   
--   从列表中删除选定项  
+- 从列表中删除选定项  
   
--   显示当前选定项的文本。  
+- 显示当前选定项的文本。  
   
--   显示列表中的项数。  
+- 显示列表中的项数。  
   
  用户还可以选择某个项的列表框中单击它，就像传统的 Win32 应用程序。 每当用户通过选择、添加或追加项来更改列表框的状态时，都将更新所显示的数据。  
   

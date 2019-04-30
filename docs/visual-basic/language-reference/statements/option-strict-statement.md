@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051164"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 隐式数据类型将转换限制为仅进行扩大转换，不允许后期绑定，并禁止隐式键入会导致`Object`类型。  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>备注  
  当`Option Strict On`或`Option Strict`出现在文件中，以下情况会导致编译时错误：  
   
--   隐式收缩转换  
+- 隐式收缩转换  
   
--   后期绑定  
+- 后期绑定  
   
--   隐式键入会导致 `Object` 类型  
+- 隐式键入会导致 `Object` 类型  
   
 > [!NOTE]
 >  您可以设置的警告配置[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)，有三个设置对应于三个条件会导致编译时错误。 有关如何使用这些设置的信息，请参阅[若要在 IDE 中设置警告配置](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions)本主题中更高版本。  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  当您将设置`Option Strict`到`On`，Visual Basic 会检查所有编程元素指定数据类型。 可以显式指定，或通过使用局部类型推理来指定数据类型。 建议为所有编程元素指定数据类型，原因如下：  
   
--   这样，对变量和参数的 IntelliSense 支持。 这使您可以键入代码时查看其属性和其他成员。  
+- 这样，对变量和参数的 IntelliSense 支持。 这使您可以键入代码时查看其属性和其他成员。  
   
--   它使编译器能够执行类型检查。 类型检查可帮助您找到可以在运行时因类型转换错误而失败的语句。 它还标识对不支持这些方法的对象上的方法的调用。  
+- 它使编译器能够执行类型检查。 类型检查可帮助您找到可以在运行时因类型转换错误而失败的语句。 它还标识对不支持这些方法的对象上的方法的调用。  
   
--   它可加快执行的代码。 原因之一就是，如果不指定编程元素的数据类型，Visual Basic 编译器为其分配`Object`类型。 已编译的代码可能需要将之间来回转换`Object`和其他数据类型，这会降低性能。  
+- 它可加快执行的代码。 原因之一就是，如果不指定编程元素的数据类型，Visual Basic 编译器为其分配`Object`类型。 已编译的代码可能需要将之间来回转换`Object`和其他数据类型，这会降低性能。  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>隐式收缩转换错误  
  隐式数据类型转换为收缩转换时，将发生隐式收缩转换错误。  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  可能会导致错误的转换在表达式中包含发生的隐式转换。 有关详细信息，请参阅下列主题：  
   
--   [+ 运算符](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+ 运算符](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= 运算符](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+= 运算符](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ = 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  当使用连接字符串[& 运算符](../../../visual-basic/language-reference/operators/concatenation-operator.md)，会考虑所有转换为字符串会扩大。 因此这些转换不会生成隐式收缩转换错误，即使`Option Strict`上。  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> 若要在 IDE 中设置警告配置  
  当你使用[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`语句中，你可以生成错误的条件的其他控制。 **警告配置**一部分**编译页**具有对应于三个条件会导致编译时错误的设置时`Option Strict`上。 这些设置如下：  
   
--   隐式转换  
+- 隐式转换  
   
--   晚期绑定；调用可能在运行时失败  
+- 晚期绑定；调用可能在运行时失败  
   
--   隐式类型；假定为对象  
+- 隐式类型；假定为对象  
   
  “Option Strict”设置为“开启”时，所有这三个警告配置设置都将被设置为“错误”。 “Option Strict”设置为“关闭”时，所有这三个设置都将被设置为“无”。  
   

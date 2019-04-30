@@ -3,11 +3,11 @@ title: 处理异常和错误
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991392"
 ---
 # <a name="handling-exceptions-and-faults"></a>处理异常和错误
 异常用来在服务或客户端实现中在本地传达错误， 而错误则用来跨服务边界传达错误，如在服务器与客户端之间传达。 除了错误以外，传输通道也常常使用传输特定的机制来传达传输级错误。 例如，HTTP 传输机制使用状态码（如 404）来传达不存在的终结点 URL（不存在发回错误的终结点）。 本文档由三部分组成，它们为自定义通道的作者提供指南。 第一部分提供关于何时以及如何定义和引发异常的指南。 第二部分提供关于生成和使用错误的指南。 第三部分说明如何提供跟踪信息来帮助自定义通道用户对所运行的应用程序进行疑难解答。  
@@ -309,9 +309,9 @@ public class MessageFault
 ## <a name="tracing"></a>跟踪  
  .NET Framework 提供了一种用来跟踪程序执行情况的机制，使用此机制，可以在无法简单地附加一个调试器并逐句通过代码时帮助诊断成品应用程序或中间问题。 此机制的核心组件位于 <xref:System.Diagnostics?displayProperty=nameWithType> 命名空间中，此机制中包含下列组件：  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>（要写入的跟踪信息的源）、<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>（具体侦听器的抽象基类，具体侦听器接收要从 <xref:System.Diagnostics.TraceSource> 跟踪的信息并将其输出到侦听器特定的目标， 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪信息输出到 XML 文件中。) 以及 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>（允许应用程序用户控制跟踪的详细级别，通常在配置中指定）。  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>（要写入的跟踪信息的源）、<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>（具体侦听器的抽象基类，具体侦听器接收要从 <xref:System.Diagnostics.TraceSource> 跟踪的信息并将其输出到侦听器特定的目标， 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪信息输出到 XML 文件中。) 以及 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>（允许应用程序用户控制跟踪的详细级别，通常在配置中指定）。  
   
--   除了核心组件，你可以使用[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)以查看和搜索 WCF 跟踪。 该工具专为跟踪文件生成的 WCF，写出使用<xref:System.Diagnostics.XmlWriterTraceListener>。 下图演示了跟踪中涉及到的各种组件。  
+- 除了核心组件，你可以使用[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)以查看和搜索 WCF 跟踪。 该工具专为跟踪文件生成的 WCF，写出使用<xref:System.Diagnostics.XmlWriterTraceListener>。 下图演示了跟踪中涉及到的各种组件。  
   
  ![处理异常和错误](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

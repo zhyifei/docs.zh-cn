@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010613"
 ---
 # <a name="data-and-data-objects"></a>数据和数据对象
 拖放操作的一部分传输的数据存储在数据对象。  从概念上讲，数据对象包含一个或多个以下对：  
   
--   <xref:System.Object> ，其中包含实际数据。  
+- <xref:System.Object> ，其中包含实际数据。  
   
--   对应的数据格式标识符。  
+- 对应的数据格式标识符。  
   
  数据本身可以包含任何可以表示为基本<xref:System.Object>。  相应的数据格式是一个字符串或<xref:System.Type>，它提供有关设置数据的格式的提示是在中。  数据对象支持托管多个数据/数据格式对;这样一个数据对象提供多种格式的数据。  
   

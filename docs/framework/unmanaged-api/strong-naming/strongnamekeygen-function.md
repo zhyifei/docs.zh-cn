@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8ebecce4078ba6c2b59e6bfba2d54300ba0c4ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000254"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 函数
 创建新的公钥/私钥对，以便强名称使用。  
@@ -46,9 +46,9 @@ BOOLEAN StrongNameKeyGen (
  `dwFlags`  
  [in]指定是否保留注册密钥。 支持以下值：  
   
--   0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
+- 0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
   
--   0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
+- 0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
   
  `ppbKeyBlob`  
  [out]返回的公共/专用密钥对。  

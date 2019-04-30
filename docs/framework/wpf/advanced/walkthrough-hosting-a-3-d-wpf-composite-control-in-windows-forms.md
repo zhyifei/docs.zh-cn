@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
 ms.openlocfilehash: e5b98a33f29759a81ba1cbc1fefbd45c0e5bf736
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007144"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 3-D WPF 复合控件
 
@@ -23,17 +23,17 @@ ms.locfileid: "59330163"
 
 本演练涉及以下任务：
 
--   创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。
+- 创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。
 
--   创建 Windows 窗体宿主项目。
+- 创建 Windows 窗体宿主项目。
 
--   承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。
+- 承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。
 
 ## <a name="prerequisites"></a>系统必备
 
 你需要以下组件来完成本演练：
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 <a name="To_Create_the_UserControl"></a>
 ## <a name="create-the-usercontrol"></a>创建用户控件
@@ -57,11 +57,11 @@ ms.locfileid: "59330163"
 
 3. 将引用添加到以下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序集：
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
 4. 添加对引用`HostingWpfUserControlInWf`项目。
 

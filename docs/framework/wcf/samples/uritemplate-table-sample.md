@@ -3,22 +3,22 @@ title: UriTemplate 表示例
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006442"
 ---
 # <a name="uritemplate-table-sample"></a>UriTemplate 表示例
 <xref:System.UriTemplateTable> 类提供了一个类似字典的关联表结构，该结构可用来处理一组 `UriTemplate` 实例。 可以按照该表中的所有模板来高效地匹配特定统一资源标识符 (URI)，并可以检索与匹配的模板相关联的数据。  
   
  此示例演示与 `UriTemplateTable` 类相关的以下关键概念：  
   
--   用来实例化 `UriTemplateTable` 的语法。  
+- 用来实例化 `UriTemplateTable` 的语法。  
   
--   用一组键/值对填充 `UriTemplateTable`。  
+- 用一组键/值对填充 `UriTemplateTable`。  
   
--   按照该表使用 <xref:System.UriTemplateTable.MatchSingle%2A> 来匹配候选 URI。  
+- 按照该表使用 <xref:System.UriTemplateTable.MatchSingle%2A> 来匹配候选 URI。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   

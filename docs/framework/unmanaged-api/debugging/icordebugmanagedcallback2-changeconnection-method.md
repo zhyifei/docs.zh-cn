@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4eeecc22db5786f66b3d484b521989e71817d8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995112"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection 方法
 通知调试器与指定的连接关联的任务集已更改。  
@@ -46,9 +46,9 @@ HRESULT ChangeConnection (
 ## <a name="remarks"></a>备注  
  一个`ChangeConnection`回调时将触发以下情况之一：  
   
--   当调试器附加到包含连接的进程。 在这种情况下，运行时将生成并调度[ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)事件和一个`ChangeConnection`事件过程中每个连接。 一个`ChangeConnection`为每个现有的连接，而不考虑该连接组的任务具有已更改自创建以来生成事件。  
+- 当调试器附加到包含连接的进程。 在这种情况下，运行时将生成并调度[ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)事件和一个`ChangeConnection`事件过程中每个连接。 一个`ChangeConnection`为每个现有的连接，而不考虑该连接组的任务具有已更改自创建以来生成事件。  
   
--   当主机调用[iclrdebugmanager:: Setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)中[承载 API](../../../../docs/framework/unmanaged-api/hosting/index.md)。  
+- 当主机调用[iclrdebugmanager:: Setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)中[承载 API](../../../../docs/framework/unmanaged-api/hosting/index.md)。  
   
  调试器应扫描选取新的更改的过程中的所有线程。  
   

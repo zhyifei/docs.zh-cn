@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008197"
 ---
 # <a name="path-markup-syntax"></a>路径标记语法
 路径中讨论[形状和基本绘图中 WPF 概述](shapes-and-basic-drawing-in-wpf-overview.md)和[几何概述](geometry-overview.md)，但是，本主题详细介绍了功能强大且复杂的微型语言，可用于指定路径使用更简洁的几何图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -25,11 +25,11 @@ ms.locfileid: "59082485"
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry and PathFigureCollection Mini-Languages  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供用于描述几何路径提供微型语言的两个类：<xref:System.Windows.Media.StreamGeometry>和<xref:System.Windows.Media.PathFigureCollection>。  
   
--   您使用<xref:System.Windows.Media.StreamGeometry>微型语言设置类型的属性时<xref:System.Windows.Media.Geometry>，如<xref:System.Windows.UIElement.Clip%2A>的属性<xref:System.Windows.UIElement>或<xref:System.Windows.Shapes.Path.Data%2A>属性<xref:System.Windows.Shapes.Path>元素。 下面的示例使用属性语法创建<xref:System.Windows.Media.StreamGeometry>。  
+- 您使用<xref:System.Windows.Media.StreamGeometry>微型语言设置类型的属性时<xref:System.Windows.Media.Geometry>，如<xref:System.Windows.UIElement.Clip%2A>的属性<xref:System.Windows.UIElement>或<xref:System.Windows.Shapes.Path.Data%2A>属性<xref:System.Windows.Shapes.Path>元素。 下面的示例使用属性语法创建<xref:System.Windows.Media.StreamGeometry>。  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   您使用<xref:System.Windows.Media.PathFigureCollection>微型语言设置时<xref:System.Windows.Media.PathGeometry.Figures%2A>属性的<xref:System.Windows.Media.PathGeometry>。 下面的示例使用特性语法来创建<xref:System.Windows.Media.PathFigureCollection>为<xref:System.Windows.Media.PathGeometry>。  
+- 您使用<xref:System.Windows.Media.PathFigureCollection>微型语言设置时<xref:System.Windows.Media.PathGeometry.Figures%2A>属性的<xref:System.Windows.Media.PathGeometry>。 下面的示例使用特性语法来创建<xref:System.Windows.Media.PathFigureCollection>为<xref:System.Windows.Media.PathGeometry>。  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   

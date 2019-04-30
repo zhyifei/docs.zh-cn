@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
 ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026427"
 ---
 # <a name="exceptions-and-performance"></a>异常和性能
 一个常见的与异常相关的问题是，如果异常用于通常会失败的代码，则实现的性能将变得不可接受。 这确实是一个问题。 当成员引发异常时，其性能可能会慢几个数量级。 但是，在严格遵守禁止使用错误代码的异常准则的同时，仍可能实现良好的性能。 本部分中描述了两种建议的模式。  

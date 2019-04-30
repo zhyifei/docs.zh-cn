@@ -11,11 +11,11 @@ helpviewer_keywords:
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
 ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053283"
 ---
 # <a name="-operator-visual-basic"></a>>> 运算符 (Visual Basic)
 对位模式执行算术右移位运算。  
@@ -64,15 +64,15 @@ result = pattern >> amount
   
  前面的示例中的结果如下所示：  
   
--   `result1` 是 2560 (0000 0000 0000 1010年)。  
+- `result1` 是 2560 (0000 0000 0000 1010年)。  
   
--   `result2` 为 160 (0000 0000 1010年 0000)。  
+- `result2` 为 160 (0000 0000 1010年 0000)。  
   
--   `result3` 为 2 (0000 0000 0000 0010)。  
+- `result3` 为 2 (0000 0000 0000 0010)。  
   
--   `result4` 为 640 (0000 0010 1000年 0000)。  
+- `result4` 为 640 (0000 0010 1000年 0000)。  
   
--   `result5` 为 0 （向右移动 15 位）。  
+- `result5` 为 0 （向右移动 15 位）。  
   
  移位量`result4`计算为 18 和 15，等于 2。  
   
@@ -82,9 +82,9 @@ result = pattern >> amount
   
  前面的示例中的结果如下所示：  
   
--   `negresult1` 是-512 (1111年 1110年 0000 0000)。  
+- `negresult1` 是-512 (1111年 1110年 0000 0000)。  
   
--   `negresult2` 为-1 （传播符号位）。  
+- `negresult2` 为-1 （传播符号位）。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：访问预定义的 UTC 和本地时区对象
+title: 如何：访问预定义 UTC 和本地时区对象
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026596"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>如何：访问预定义的 UTC 和本地时区对象
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>如何：访问预定义 UTC 和本地时区对象
 
 <xref:System.TimeZoneInfo>类提供了两个属性<xref:System.TimeZoneInfo.Utc%2A>和<xref:System.TimeZoneInfo.Local%2A>，您的代码访问权限向预定义的时区对象。 本主题介绍如何访问这些属性返回的 <xref:System.TimeZoneInfo> 对象。
 

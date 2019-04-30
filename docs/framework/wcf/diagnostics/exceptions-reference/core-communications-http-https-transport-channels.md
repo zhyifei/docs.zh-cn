@@ -1,13 +1,13 @@
 ---
-title: 核心通信： HTTP HTTPS 传输通道
+title: 核心通信：HTTP HTTPS 传输通道
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
 ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998746"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>核心通信：HTTP/HTTPS 传输通道
 本主题列出了由 Windows Communication Foundation (WCF) 传输 HTTP/HTTPS 通道生成的所有异常。  
@@ -27,7 +27,7 @@ ms.locfileid: "50198219"
 |HttpSendFailure|向指定的服务终结点发出 HTTP 请求时发生错误。 请确保原因不是安全绑定不匹配。 还要确保该服务的配置不是针对安全套接字层进行的。|  
 |MessageXmlProtocolError|从网络接收到的 XML 存在问题。 有关详细信息，请参见内部异常。|  
 |MissingContentType|接收方返回一个错误，该错误指示对指定服务终结点发出的请求缺少内容类型。 有关更多信息，请参见内部异常。|  
-|ProxyAuthenticationLevelMismatch|HTTP 代理身份验证凭据所指定的相互身份验证要求比对目标服务器身份验证的要求更严格。|  
+|ProxyAuthenticationLevelMismatch|HTTP 代理身份验证凭据所指定的相互身份验证需求比对目标服务器身份验证的需求更严格。|  
 |ProxyImpersonationLevelMismatch|HTTP 代理身份验证凭据所指定的模拟级别限制比对目标服务器身份验证的限制更严格。|  
 |SecureChannelFailure|无法使用指定的颁发机构为安全套接字层/传输层安全建立安全通道。|  
 |TrustFailure|无法使用指定的颁发机构为安全套接字层/传输层安全的安全通道建立信任关系。|  

@@ -3,11 +3,11 @@ title: 自定义消息编码器：自定义文本编码器的 WCF
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
 ms.openlocfilehash: a1523c854bbae09b2ac5cb0565962b394ec9b70e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003075"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自定义消息编码器：自定义文本编码器
 

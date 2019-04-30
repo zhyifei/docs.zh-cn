@@ -1,17 +1,17 @@
 ---
-title: 云原生应用程序呢？
+title: 云本机应用程序呢？
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |云原生应用程序呢？
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012068"
 ---
-# <a name="what-about-cloud-native-applications"></a>云原生应用程序呢？
+# <a name="what-about-cloud-native-applications"></a>云本机应用程序呢？
 
 尽管[云原生](https://azure.microsoft.com/overview/cloudnative/)应用程序不是重点的本指南中，很有帮助，若要了解此更新成熟度级别，并且可用来区分从云优化的应用程序。
 

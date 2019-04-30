@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971816"
 ---
 # <a name="xkey-directive"></a>x:Key 指令
 唯一标识创建和引用 XAML 定义的字典中的元素。 添加`x:Key`XAML 对象元素的值是标识资源字典，例如在 WPF 中的资源的最常见方法<xref:System.Windows.ResourceDictionary>。  
@@ -61,9 +61,9 @@ ms.locfileid: "59223714"
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  子对象的父对象，它是<xref:System.Collections.IDictionary>实现，如 WPF <xref:System.Windows.ResourceDictionary>，通常必须包括`x:Key`特性和密钥值必须是唯一的字典中。 有两个值得注意的例外情况：  
   
--   某些 WPF 类型声明一个隐式字典用法键。 例如，<xref:System.Windows.Style>与<xref:System.Windows.Style.TargetType%2A>，或<xref:System.Windows.DataTemplate>与<xref:System.Windows.DataTemplate.DataType%2A>，可以采用<xref:System.Windows.ResourceDictionary>，并使用隐式键。  
+- 某些 WPF 类型声明一个隐式字典用法键。 例如，<xref:System.Windows.Style>与<xref:System.Windows.Style.TargetType%2A>，或<xref:System.Windows.DataTemplate>与<xref:System.Windows.DataTemplate.DataType%2A>，可以采用<xref:System.Windows.ResourceDictionary>，并使用隐式键。  
   
--   WPF 支持合并的资源字典概念。 可之间合并的字典中，共享密钥和共享的键行为可以使用访问<xref:System.Windows.FrameworkContentElement.FindResource%2A>。 有关详细信息，请参阅[合并资源字典](../wpf/advanced/merged-resource-dictionaries.md)。  
+- WPF 支持合并的资源字典概念。 可之间合并的字典中，共享密钥和共享的键行为可以使用访问<xref:System.Windows.FrameworkContentElement.FindResource%2A>。 有关详细信息，请参阅[合并资源字典](../wpf/advanced/merged-resource-dictionaries.md)。  
   
  在整个 WPF XAML 实现和应用程序模型中，不会 XAML 标记编译器检查键唯一性。 相反，丢失或非唯一`x:Key`值会导致加载时 XAML 分析器错误。 但是，WPF 的字典的 Visual Studio 处理可以通常在设计阶段注意此类错误。  
   
@@ -101,11 +101,11 @@ keyObject
 |-|-|  
 |`keyObject`|用作键的对象的对象元素给定`object`专用字典中。|  
   
--   使用此类容器/父级不在此处显示。 `object` 应为表示专用的词典实现的对象元素的子级。 `keyObject` 应为对象实例 （或值类型的值），适合用作该特定专用的词典实现的密钥。  
+- 使用此类容器/父级不在此处显示。 `object` 应为表示专用的词典实现的对象元素的子级。 `keyObject` 应为对象实例 （或值类型的值），适合用作该特定专用的词典实现的密钥。  
   
--   WPF 不实现需要这种用法的字典。 对象键是更常规 XAML 语言，其中在 XAML 中创建字典是需要某些自定义词典方案可能是有用的功能。 有关使用非字符串键用于资源的隐式样式等 WPF 功能，用于建立或指定键的其他方法存在，因此不需要使用对象键。  
+- WPF 不实现需要这种用法的字典。 对象键是更常规 XAML 语言，其中在 XAML 中创建字典是需要某些自定义词典方案可能是有用的功能。 有关使用非字符串键用于资源的隐式样式等 WPF 功能，用于建立或指定键的其他方法存在，因此不需要使用对象键。  
   
--   *keyObject*也可能是在对象元素窗体，而不是直接对象实例中的标记扩展用法。  
+- *keyObject*也可能是在对象元素窗体，而不是直接对象实例中的标记扩展用法。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight Usage 备注。  
  `x:Key` 适用于 Silverlight 单独说明了。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  

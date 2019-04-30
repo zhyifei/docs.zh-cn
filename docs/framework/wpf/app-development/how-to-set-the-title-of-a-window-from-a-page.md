@@ -1,5 +1,5 @@
 ---
-title: 如何：设置从一个页面的窗口标题
+title: 如何：设置页面窗口标题
 ms.date: 03/30/2017
 helpviewer_keywords:
 - windows [WPF], setting title from a page
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - pages [WPF], setting window title from
 ms.assetid: fecf0d19-3eb6-4f8c-a44f-ff1b6f2b34b3
 ms.openlocfilehash: 55444de6c61107979307b94910ba944e7001cf9e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053998"
 ---
-# <a name="how-to-set-the-title-of-a-window-from-a-page"></a>如何：设置从一个页面的窗口标题
+# <a name="how-to-set-the-title-of-a-window-from-a-page"></a>如何：设置页面窗口标题
 此示例演示如何在其中设置窗口的标题<xref:System.Windows.Controls.Page>托管。  
   
 ## <a name="example"></a>示例  

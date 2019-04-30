@@ -3,22 +3,22 @@ title: 自定义 WSDL 发布
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990582"
 ---
 # <a name="custom-wsdl-publication"></a>自定义 WSDL 发布
 此示例演示如何：  
   
--   在自定义 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性 (Attribute) 上实现 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，以便将该属性 (Attribute) 的属性 (Property) 导出为 WSDL 批注。  
+- 在自定义 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性 (Attribute) 上实现 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，以便将该属性 (Attribute) 的属性 (Property) 导出为 WSDL 批注。  
   
--   实现 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 以导入自定义 WSDL 批注。  
+- 实现 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 以导入自定义 WSDL 批注。  
   
--   分别在自定义协定行为和自定义操作行为上实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，以便在 CodeDom 中将导入的批注作为导入的协定和操作的注释写入。  
+- 分别在自定义协定行为和自定义操作行为上实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，以便在 CodeDom 中将导入的批注作为导入的协定和操作的注释写入。  
   
--   使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>下载 WSDL，<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>若要通过自定义 WSDL 导入，导入 WSDL 和<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>生成 Windows Communication Foundation (WCF) 客户端代码将 WSDL 批注作为 / / 和 '' C# 和 Visual 中的注释基本。  
+- 使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>下载 WSDL，<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>若要通过自定义 WSDL 导入，导入 WSDL 和<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>生成 Windows Communication Foundation (WCF) 客户端代码将 WSDL 批注作为 / / 和 '' C# 和 Visual 中的注释基本。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  

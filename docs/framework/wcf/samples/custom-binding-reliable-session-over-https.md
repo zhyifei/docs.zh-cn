@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
 ms.openlocfilehash: 8755dd68dea5b926d90950f257ca70749f93de15
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003127"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>基于 HTTPS 的自定义绑定可靠会话
 此示例演示对可靠会话使用 SSL 传输安全。 可靠会话实现 WS-Reliable Messaging 协议。 您可以通过在可靠会话上组合 WS-Security 来获得安全的可靠会话。 但是有时候，您可以选择对 SSL 改用 HTTP 传输安全。  

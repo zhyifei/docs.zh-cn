@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
 ms.openlocfilehash: 74966dd1661faa43df334987b2e3b0e84eff3446
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037852"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>如何：将列表示为类成员
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute>属性来将字段或属性与数据库列相关联。  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>将字段或属性映射到数据库列  
   
--   将 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute) 添加到相应属性 (Property) 或字段的声明中。  
+- 将 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute) 添加到相应属性 (Property) 或字段的声明中。  
   
 ## <a name="example"></a>示例  
  下面的代码将 `CustomerID` 类中的 `Customer` 字段映射到 `CustomerID` 数据库表中的 `Customers` 列。  

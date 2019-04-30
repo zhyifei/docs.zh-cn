@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054921"
 ---
 # <a name="expander-overview"></a>Expander 概述
 <xref:System.Windows.Controls.Expander>控件提供了一种方法来提供类似于一个窗口，并且包括一个标头的可展开区域中的内容。  

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053127"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows 窗体和 WPF 属性映射
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]技术有两个相似但不同属性模型。 *属性映射*支持两种体系结构之间的互操作，并提供以下功能：  
   
--   轻松将映射到承载的控件或元素的主机环境中的相关属性更改。  
+- 轻松将映射到承载的控件或元素的主机环境中的相关属性更改。  
   
--   提供了使用默认处理映射最常用的属性。  
+- 提供了使用默认处理映射最常用的属性。  
   
--   允许方便地删除，重写时，或扩展默认属性。  
+- 允许方便地删除，重写时，或扩展默认属性。  
   
--   确保主机上的属性值更改自动检测到并转换为托管的控件或元素。  
+- 确保主机上的属性值更改自动检测到并转换为托管的控件或元素。  
   
 > [!NOTE]
 >  属性更改事件不会传播到宿主控件或元素层次结构。 如果本地属性的值不会由于直接设置、 样式、 继承、 数据绑定或其他机制更改属性的值的更改不会执行属性转换。  
@@ -54,66 +54,66 @@ ms.locfileid: "59088816"
 ## <a name="updates-to-parent-properties"></a>父属性的更新  
  对大多数父属性的更改会导致到承载的子控件的通知。 以下列表介绍它们的值更改时不会导致通知的属性。  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  例如，如果您更改的值<xref:System.Windows.Controls.Control.Background%2A>的属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，<xref:System.Windows.Forms.Control.BackColor%2A>所承载控件的属性不会更改。  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>使用 ElementHost 控件的属性映射  
  以下属性提供了内置的更改通知。 不要调用<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>方法映射这些属性时：  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Cursor  
+- Cursor  
   
--   停靠  
+- 停靠  
   
--   已启用  
+- 已启用  
   
--   字体  
+- 字体  
   
--   ForeColor  
+- ForeColor  
   
--   位置  
+- 位置  
   
--   边距  
+- 边距  
   
--   填充  
+- 填充  
   
--   父级  
+- 父级  
   
--   Region  
+- Region  
   
--   RightToLeft  
+- RightToLeft  
   
--   大小  
+- 大小  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   Text  
+- Text  
   
--   可见  
+- 可见  
   
  <xref:System.Windows.Forms.Integration.ElementHost>控件将转换的默认[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]属性设置为其[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通过使用以下转换表的等效项。  
   

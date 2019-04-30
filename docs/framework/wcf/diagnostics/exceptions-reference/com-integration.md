@@ -3,11 +3,11 @@ title: COM+ 集成
 ms.date: 03/30/2017
 ms.assetid: 6a687c1b-d0be-42fb-8f9b-20fea1317411
 ms.openlocfilehash: 1680a75adbd4cd6e43be5c3aed2f00049447ab35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998837"
 ---
 # <a name="com-integration"></a>COM+ 集成
 本主题列出由 COM+ 集成生成的所有异常。  

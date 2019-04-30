@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019071"
 ---
 # <a name="adorners-overview"></a>装饰器概述
 装饰器是一种特殊的<xref:System.Windows.FrameworkElement>，可用来向用户提供可视提示。 装饰器有很多用途，可用来向元素添加功能句柄，或者提供有关某个控件的状态信息。  
@@ -23,13 +23,13 @@ ms.locfileid: "59320465"
   
  装饰器的常见应用包括：  
   
--   添加功能句柄<xref:System.Windows.UIElement>，使用户能够操作以某种方式 （重设大小、 旋转、 重新定位等） 的元素。  
+- 添加功能句柄<xref:System.Windows.UIElement>，使用户能够操作以某种方式 （重设大小、 旋转、 重新定位等） 的元素。  
   
--   提供视觉反馈以指示各种状态，或者响应各种事件。  
+- 提供视觉反馈以指示各种状态，或者响应各种事件。  
   
--   上叠加视觉效果<xref:System.Windows.UIElement>。  
+- 上叠加视觉效果<xref:System.Windows.UIElement>。  
   
--   以可视方式遮盖或替代部分或全部<xref:System.Windows.UIElement>。  
+- 以可视方式遮盖或替代部分或全部<xref:System.Windows.UIElement>。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用于装饰视觉元素的基本框架。 下表列出了装饰对象时使用的主要类型及其用途。 下面是几个用法示例。  
   

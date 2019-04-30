@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048097"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>配置 WS-Atomic 事务支持
 本主题介绍如何通过 WS-AT 配置实用工具来配置 WS-AtomicTransaction (WS-AT) 支持。  
@@ -106,17 +106,17 @@ ms.locfileid: "59315174"
   
 4. 在中**数值数据**输入框中，输入要指定你想要启用的跟踪级别的以下有效值之一。  
   
--   0：关闭  
+- 0：关闭  
   
--   1：严重  
+- 1：严重  
   
--   3：错误。 这是默认值。  
+- 3：错误。 这是默认值。  
   
--   7：警告  
+- 7：警告  
   
--   15：信息  
+- 15：信息  
   
--   31：详细  
+- 31：详细  
   
 ## <a name="see-also"></a>请参阅
 

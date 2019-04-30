@@ -3,11 +3,11 @@ title: 实体框架概述
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
 ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034044"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 
@@ -18,7 +18,7 @@ ms.locfileid: "53145788"
 ## <a name="give-life-to-models"></a>赋予模型生命
  构建应用程序或服务时常用的一种长期存在的设计方法是将应用程序或服务分为三部分：域模型、逻辑模型和物理模型。 域模型定义要建模的系统中的实体和关系。 关系数据库的逻辑模型通过外键约束将实体和关系规范化到表中。 物理模型通过指定分区和索引等存储详细信息实现特定数据引擎的功能。
 
- 物理模型由数据库管理员进行优化以改善性能，而编写应用程序代码的程序员的工作主要限制为通过编写 SQL 查询和调用存储过程来处理逻辑模型。 域模型通常用作捕获和沟通应用程序要求的工具，常常以静态关系图形式提供，用于在项目早期阶段查看和讨论之用，随后会被弃用。 许多开发团队会跳过概念模型的创建，直接从指定关系数据库中的表、列和键开始工作。
+ 物理模型由数据库管理员进行优化以改善性能，而编写应用程序代码的程序员的工作主要限制为通过编写 SQL 查询和调用存储过程来处理逻辑模型。 域模型通常用作捕获和沟通应用程序需求的工具，常常以静态关系图形式提供，用于在项目早期阶段查看和讨论之用，随后会被弃用。 许多开发团队会跳过概念模型的创建，直接从指定关系数据库中的表、列和键开始工作。
 
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]开发人员能够在域模型中查询实体和关系，从而赋予模型生命 (称为*概念*中的模型[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]) 时依赖于[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]转换这些对数据源特定于命令的操作。 这使应用程序不再对特定数据源具有硬编码的依赖性。
 

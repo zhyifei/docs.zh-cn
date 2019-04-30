@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054934"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 文本中的空白 (Visual Basic)
 Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文本[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 它不会合并无意义的空白字符。  
@@ -18,11 +18,11 @@ Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文�
 ## <a name="significant-and-insignificant-white-space"></a>有效空白和无关紧要的空白区域  
  只有三个区域中，XML 文本中的空格字符是有意义：  
   
--   它们的特性值中。  
+- 它们的特性值中。  
   
--   当它们都属于某个元素的文本内容和文本中还包含其他字符。  
+- 当它们都属于某个元素的文本内容和文本中还包含其他字符。  
   
--   它们在嵌入式表达式的元素的文本内容。  
+- 它们在嵌入式表达式的元素的文本内容。  
   
  否则为编译器将视为无意义的空白字符，不包括然后中[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]该文字的对象。  
   

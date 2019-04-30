@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000319"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 函数
 确定两个程序集是否仅是强名称签名不同。  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out]以下值之一：  
   
--   `SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。  
+- `SN_CMP_DIFFERENT` (0)-指定程序集包含不同的数据。  
   
--   `SN_CMP_IDENTICAL` (1)-指定程序的程序集完全相同，包括其签名和校验和。  
+- `SN_CMP_IDENTICAL` (1)-指定程序的程序集完全相同，包括其签名和校验和。  
   
--   `SN_CMP_SIGONLY` (2)-指定程序集仅签名和校验和不同。  
+- `SN_CMP_SIGONLY` (2)-指定程序集仅签名和校验和不同。  
   
 ## <a name="return-value"></a>返回值  
  `true` 在成功完成;否则为`false`。  

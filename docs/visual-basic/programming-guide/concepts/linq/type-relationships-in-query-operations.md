@@ -12,11 +12,11 @@ helpviewer_keywords:
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
 ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053179"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查询操作中的类型关系 (Visual Basic)
 中使用的变量[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询操作为强类型，必须相互兼容。 数据源中、 查询本身，以及在查询执行过程中，使用强类型化。 下图标识术语用于描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。 有关查询的部分的详细信息，请参阅[基本查询操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  

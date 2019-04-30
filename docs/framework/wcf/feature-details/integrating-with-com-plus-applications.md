@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046926"
 ---
 # <a name="integrating-with-com-applications"></a>与 COM+ 应用程序集成
 Windows Communication Foundation (WCF) 提供了用于创建分布式应用程序的丰富环境。 如果您在 COM + 中承载的基于组件的应用程序逻辑有大量投入时，可以使用 WCF 来扩展现有的逻辑，而不是无需将其重写。 本部分中的主题介绍如何通过 WCF 使用 COM +。  

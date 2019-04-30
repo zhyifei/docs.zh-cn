@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053439"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
@@ -37,19 +37,19 @@ ms.locfileid: "59209705"
   
  有两种方式可以访问 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]：托管组件和非托管组件。 非托管组件提供以下功能。  
   
--   适用于新的或专用图像格式的扩展性模型。  
+- 适用于新的或专用图像格式的扩展性模型。  
   
--   对包括 [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 和图标 (.ico) 在内的本机图像格式增强了性能和安全性。  
+- 对包括 [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 和图标 (.ico) 在内的本机图像格式增强了性能和安全性。  
   
--   高位深图像数据最多保留 8 位/通道（32 位/像素）。  
+- 高位深图像数据最多保留 8 位/通道（32 位/像素）。  
   
--   非破坏性图像缩放、剪切和旋转。  
+- 非破坏性图像缩放、剪切和旋转。  
   
--   简化的颜色管理。  
+- 简化的颜色管理。  
   
--   对文件内的专用元数据的支持。  
+- 对文件内的专用元数据的支持。  
   
--   托管组件利用非托管基础结构提供图像与其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能（如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、动画和图形）的无缝集成。 托管的组件还可以利用 Windows Presentation Foundation (WPF) 图像处理编解码器扩展性模型可以自动识别中的新图像格式的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序。  
+- 托管组件利用非托管基础结构提供图像与其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能（如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、动画和图形）的无缝集成。 托管的组件还可以利用 Windows Presentation Foundation (WPF) 图像处理编解码器扩展性模型可以自动识别中的新图像格式的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序。  
   
  大多数托管[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]驻留在<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空间，但一些重要类型，如<xref:System.Windows.Media.ImageBrush>并<xref:System.Windows.Media.ImageDrawing>驻留在<xref:System.Windows.Media?displayProperty=nameWithType>命名空间和<xref:System.Windows.Controls.Image>驻留在<xref:System.Windows.Controls?displayProperty=nameWithType>命名空间。  
   
@@ -132,13 +132,13 @@ ms.locfileid: "59209705"
 #### <a name="stretching-images"></a>拉伸图像  
  <xref:System.Windows.Controls.Image.Stretch%2A>属性控制如何拉伸图像以填充其容器。 <xref:System.Windows.Controls.Image.Stretch%2A>属性接受以下值，通过定义<xref:System.Windows.Media.Stretch>枚举：  
   
--   <xref:System.Windows.Media.Stretch.None>：不拉伸图像以填充输出区域。 如果图像比输出区域大，将图像绘制到输出区域，剪裁掉无法容纳的内容。  
+- <xref:System.Windows.Media.Stretch.None>：不拉伸图像以填充输出区域。 如果图像比输出区域大，将图像绘制到输出区域，剪裁掉无法容纳的内容。  
   
--   <xref:System.Windows.Media.Stretch.Fill>：缩放图像以适应输出区域。 由于图像的高度和宽度独立进行缩放，因此图像的原始纵横比可能不会保留。 也就是说，为了完全填充输出容器，图像可能会扭曲。  
+- <xref:System.Windows.Media.Stretch.Fill>：缩放图像以适应输出区域。 由于图像的高度和宽度独立进行缩放，因此图像的原始纵横比可能不会保留。 也就是说，为了完全填充输出容器，图像可能会扭曲。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>：缩放图像，使其完全适应输出区域。 图像的纵横比会保留。  
+- <xref:System.Windows.Media.Stretch.Uniform>：缩放图像，使其完全适应输出区域。 图像的纵横比会保留。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>：缩放图像，使其在保留图像的原始纵横比的同时完全填充输出区域。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>：缩放图像，使其在保留图像的原始纵横比的同时完全填充输出区域。  
   
  下面的示例应用每个可用<xref:System.Windows.Media.Stretch>到枚举<xref:System.Windows.Controls.Image>。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010535"
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
@@ -47,9 +47,9 @@ ms.locfileid: "59315681"
   
 4. **TemplatedParent 模板属性。** 元素具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>如果将其创建为模板的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 有关何时应用此原则的详细信息，请参阅本主题后面的 [TemplatedParent](#templatedparent)。 在模板中，按以下优先级顺序应用：  
   
-    1.  从触发<xref:System.Windows.FrameworkElement.TemplatedParent%2A>模板。  
+    1. 从触发<xref:System.Windows.FrameworkElement.TemplatedParent%2A>模板。  
   
-    2.  属性集 (通常通过[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性) 中<xref:System.Windows.FrameworkElement.TemplatedParent%2A>模板。  
+    2. 属性集 (通常通过[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性) 中<xref:System.Windows.FrameworkElement.TemplatedParent%2A>模板。  
   
 5. **隐式样式。** 仅应用于 `Style` 属性。 `Style` 属性是由任何样式资源通过与其类型匹配的键来填充的。 该样式资源必须存在于页面或应用程序中；查找隐式样式资源不会进入到主题中。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315681"
   
 9. **默认（主题）样式。** 有关何时应用此样式以及主题样式如何与主题样式中的模板相关的详细信息，请参阅本主题后面的[默认（主题）样式](#themestyles)。 在默认样式中，按以下优先级顺序应用：  
   
-    1.  主题样式中的活动触发器。  
+    1. 主题样式中的活动触发器。  
   
-    2.  主题样式中的资源库。  
+    2. 主题样式中的资源库。  
   
 10. **继承。** 有几个依赖属性从父元素向子元素继承值，因此不需要在应用程序中的每个元素上专门设置这些属性。 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315681"
 ## <a name="the-style-property"></a>Style 属性  
  前面介绍的查找顺序适用于之外的所有可能的依赖关系属性：<xref:System.Windows.FrameworkElement.Style%2A>属性。 <xref:System.Windows.FrameworkElement.Style%2A>属性是唯一的因为它不能为自己设置样式，因此优先级项 5 到 8 不适用。 此外，进行动画处理，或强制<xref:System.Windows.FrameworkElement.Style%2A>建议不要 (和动画处理<xref:System.Windows.FrameworkElement.Style%2A>需要自定义动画类)。 这两种处理均通过三种方式<xref:System.Windows.FrameworkElement.Style%2A>可能设置属性：  
   
--   **显式样式。** <xref:System.Windows.FrameworkElement.Style%2A>直接设置属性。 在大多数情况下，样式不是内联定义的，而是作为资源由显式键进行引用的。 在这种情况下，Style 属性本身就像本地值（优先级项 3）一样来应用。  
+- **显式样式。** <xref:System.Windows.FrameworkElement.Style%2A>直接设置属性。 在大多数情况下，样式不是内联定义的，而是作为资源由显式键进行引用的。 在这种情况下，Style 属性本身就像本地值（优先级项 3）一样来应用。  
   
--   **隐式样式。** <xref:System.Windows.FrameworkElement.Style%2A>未直接设置属性。 但是，<xref:System.Windows.FrameworkElement.Style%2A>资源查找序列 （页面、 应用程序） 中的某级别上存在，并且使用的样式是要应用于的类型匹配的资源键进行键控。 在这种情况下，<xref:System.Windows.FrameworkElement.Style%2A>属性本身就标识为第 5 项序列中的优先级来。 可以通过使用检测到该条件<xref:System.Windows.DependencyPropertyHelper>针对<xref:System.Windows.FrameworkElement.Style%2A>属性，然后查找<xref:System.Windows.BaseValueSource.ImplicitStyleReference>结果中。  
+- **隐式样式。** <xref:System.Windows.FrameworkElement.Style%2A>未直接设置属性。 但是，<xref:System.Windows.FrameworkElement.Style%2A>资源查找序列 （页面、 应用程序） 中的某级别上存在，并且使用的样式是要应用于的类型匹配的资源键进行键控。 在这种情况下，<xref:System.Windows.FrameworkElement.Style%2A>属性本身就标识为第 5 项序列中的优先级来。 可以通过使用检测到该条件<xref:System.Windows.DependencyPropertyHelper>针对<xref:System.Windows.FrameworkElement.Style%2A>属性，然后查找<xref:System.Windows.BaseValueSource.ImplicitStyleReference>结果中。  
   
--   **默认样式**，也称为**主题样式。** <xref:System.Windows.FrameworkElement.Style%2A>属性不直接，设置和实际上将读作`null`直到运行时。 在这种情况下，样式来自作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 表示引擎一部分的运行时主题评估。  
+- **默认样式**，也称为**主题样式。** <xref:System.Windows.FrameworkElement.Style%2A>属性不直接，设置和实际上将读作`null`直到运行时。 在这种情况下，样式来自作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 表示引擎一部分的运行时主题评估。  
   
  对于主题中不存在的隐式样式，该类型必须完全-匹配`MyButton``Button`的派生的类不会隐式使用的样式`Button`。  
   

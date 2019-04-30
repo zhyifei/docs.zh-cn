@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 ms.openlocfilehash: 75c7a0e50301ce80d51b9b2a10ed650a1600ec79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047732"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保证服务的安全
 保护使用 X.509 证书的服务是大多数绑定 Windows Communication Foundation (WCF) 中使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  
@@ -70,17 +70,17 @@ ms.locfileid: "59300081"
 ## <a name="compiling-the-code"></a>编译代码  
  编译该代码需要以下命名空间：  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.Web.Services.Description>  
+- <xref:System.Web.Services.Description>  
   
--   <xref:System.Security.Cryptography.X509Certificates>  
+- <xref:System.Security.Cryptography.X509Certificates>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>请参阅
 

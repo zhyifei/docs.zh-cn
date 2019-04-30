@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051853"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 指定的可读取但不是会写入变量或属性。  
@@ -24,11 +24,11 @@ ms.locfileid: "58825386"
   
 ## <a name="rules"></a>规则  
   
--   **声明上下文。** 只能在模块级别使用 `ReadOnly`。 这意味着声明上下文`ReadOnly`元素必须是类、 结构或模块，并且不能是源文件、 命名空间或过程。  
+- **声明上下文。** 只能在模块级别使用 `ReadOnly`。 这意味着声明上下文`ReadOnly`元素必须是类、 结构或模块，并且不能是源文件、 命名空间或过程。  
   
--   **组合的修饰符。** 不能指定`ReadOnly`一起使用`Static`同一声明中。  
+- **组合的修饰符。** 不能指定`ReadOnly`一起使用`Static`同一声明中。  
   
--   **分配一个值。** 代码使用`ReadOnly`属性不能将其值设置。 但是，有权访问基础存储的代码可以分配或在任何时间更改的值。  
+- **分配一个值。** 代码使用`ReadOnly`属性不能将其值设置。 但是，有权访问基础存储的代码可以分配或在任何时间更改的值。  
   
      可以将值赋给`ReadOnly`变量仅在其声明中或在类或结构在其中定义的构造函数中。  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050046"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout 方法
 完成已由调用之前定义的类的字段的布局[DefineTypeDef 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)。  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  但是，您可能希望根据非托管代码使用的排列方式布局的字段。 在这种情况下，选择连续或显式布局，并调用`SetClassLayout`完成字段的布局：  
   
--   顺序布局：指定封装大小。 字段对齐根据自然大小或包装大小，在较小的偏移量字段的任何结果。 设置`rFieldOffsets`和`ulClassSize`为零。  
+- 顺序布局：指定封装大小。 字段对齐根据自然大小或包装大小，在较小的偏移量字段的任何结果。 设置`rFieldOffsets`和`ulClassSize`为零。  
   
--   显式布局：指定每个字段的偏移量，或者指定类的大小和封装大小。  
+- 显式布局：指定每个字段的偏移量，或者指定类的大小和封装大小。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

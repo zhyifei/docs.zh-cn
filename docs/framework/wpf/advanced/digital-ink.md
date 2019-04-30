@@ -8,11 +8,11 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010550"
 ---
 # <a name="digital-ink"></a>数字墨迹
 本部分介绍如何使用中的数字墨迹[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 传统上只能在 Tablet PC SDK 中找到，数字墨迹现已在 Windows Presentation Foundation 的核心。 这意味着现在可以通过使用 Windows Presentation Foundation 的强大开发成熟的 Tablet PC 应用程序。  

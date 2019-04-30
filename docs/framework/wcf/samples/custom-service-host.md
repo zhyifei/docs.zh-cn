@@ -3,11 +3,11 @@ title: 自定义服务主机
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
 ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990660"
 ---
 # <a name="custom-service-host"></a>自定义服务主机
 本示例演示如何使用 <xref:System.ServiceModel.ServiceHost> 类的自定义派生来改变服务的运行时行为。 此方法为通过通用方式配置大量服务提供了一个可重用的替代方法。 此示例还演示如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 类在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 承载环境中使用自定义 ServiceHost。  

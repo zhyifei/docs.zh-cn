@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032226"
 ---
 # <a name="attached-properties-overview"></a>附加属性概述
 
@@ -46,11 +46,11 @@ ms.locfileid: "57370119"
 
 尽管可以在任何对象上设置附加属性，但这并不自动意味着设置该属性会产生实际的结果，或者该值会被其他对象使用。 通常，附加属性是为了使来自各种可能的类层次结构或逻辑关系的对象都可以向用于定义附加属性的类型报告公用信息。 定义附加属性的类型通常采用以下模型之一：
 
--   设计定义附加属性的类型，以便它可以是将为附加属性设置值的元素的父元素。 随后，该类型将在内部逻辑中对照某些对象树结构循环访问其子对象，获取值，并以某种方式作用于这些值。
+- 设计定义附加属性的类型，以便它可以是将为附加属性设置值的元素的父元素。 随后，该类型将在内部逻辑中对照某些对象树结构循环访问其子对象，获取值，并以某种方式作用于这些值。
 
--   定义附加属性的类型将用作各种可能的父元素和内容模型的子元素。
+- 定义附加属性的类型将用作各种可能的父元素和内容模型的子元素。
 
--   定义附加属性的类型表示一项服务。 其他类型为该附加属性设置值。 然后，当在服务的上下文中计算设置该属性的元素时，将通过服务类的内部逻辑获取附加属性的值。
+- 定义附加属性的类型表示一项服务。 其他类型为该附加属性设置值。 然后，当在服务的上下文中计算设置该属性的元素时，将通过服务类的内部逻辑获取附加属性的值。
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>父级定义的附加属性示例
 
@@ -102,9 +102,9 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 `public static object GetPropertyName(object target)`
 
--   `target` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType>方法的类型参数作为<xref:System.Windows.UIElement>，因为附加的属性只是在上设置<xref:System.Windows.UIElement>实例。
+- `target` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType>方法的类型参数作为<xref:System.Windows.UIElement>，因为附加的属性只是在上设置<xref:System.Windows.UIElement>实例。
 
--   返回值在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A>方法将其作为类型<xref:System.Windows.Controls.Dock>，因为值只能设置为该枚举。
+- 返回值在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.GetDock%2A>方法将其作为类型<xref:System.Windows.Controls.Dock>，因为值只能设置为该枚举。
 
 #### <a name="the-set-accessor"></a>Set 访问器
 
@@ -112,9 +112,9 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 `public static void SetPropertyName(object target, object value)`
 
--   `target` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法将其作为类型<xref:System.Windows.UIElement>，因为附加的属性只是在上设置<xref:System.Windows.UIElement>实例。
+- `target` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法将其作为类型<xref:System.Windows.UIElement>，因为附加的属性只是在上设置<xref:System.Windows.UIElement>实例。
 
--   `value` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法将其作为类型<xref:System.Windows.Controls.Dock>，因为值只能设置为该枚举。 请记住，此方法的值是 XAML 加载器在标记中的附加属性用法中遇到附加属性时的输入。 该输入是在标记中指定为 XAML 属性值的值。 因此必须存在可用于你所使用的类型的类型转换、值序列化程序或标记扩展支持，以便可以从属性值（最终仅仅是一个字符串）创建相应的类型。
+- `value` 对象在实现中可以指定为更具体的类型。 例如，<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法将其作为类型<xref:System.Windows.Controls.Dock>，因为值只能设置为该枚举。 请记住，此方法的值是 XAML 加载器在标记中的附加属性用法中遇到附加属性时的输入。 该输入是在标记中指定为 XAML 属性值的值。 因此必须存在可用于你所使用的类型的类型转换、值序列化程序或标记扩展支持，以便可以从属性值（最终仅仅是一个字符串）创建相应的类型。
 
 下面的示例显示了依赖关系属性注册 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，并将**Get_PropertyName_** 并**Set_PropertyName_** 访问器。 在此示例中，附加属性名称为 `IsBubbleSource`。 因此，访问器必须名为 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
 
@@ -125,21 +125,21 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 WPF 定义了多个[!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]，后者用于提供有关向反射进程和反射类型和属性的信息，例如设计器的典型用户的附加属性的信息。 由于附加属性的类型没有范围限制，因此设计者需要一种方法来避免用户查看全局列表时，看到使用 XAML 的特定技术实现中定义的所有附加属性。 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]该 WPF 定义附加的属性可用于范围限定在属性窗口中，其中应显示给定的附加的属性的情况。 你还可考虑对自己的自定义附加属性应用这些特性。 有关 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] 的用途和语法说明，请参阅相应的参考页面：
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## 了解更多关于附加属性 <a name="more"></a>
 
--   有关如何创建附加属性的详细信息，请参阅[注册附加属性](how-to-register-an-attached-property.md)。
+- 有关如何创建附加属性的详细信息，请参阅[注册附加属性](how-to-register-an-attached-property.md)。
 
--   有关依赖属性和附加属性的更多高级使用方案，请参阅[自定义依赖属性](custom-dependency-properties.md)。
+- 有关依赖属性和附加属性的更多高级使用方案，请参阅[自定义依赖属性](custom-dependency-properties.md)。
 
--   还可将属性注册为附加属性和依赖属性，但仍需公开“包装器”实现。 在这种情况下，属性可在该元素上设置，也可通过 XAML 附加属性语法在任何元素上设置。 具有适当的方案的标准和附加用法的属性的一个示例是<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>。
+- 还可将属性注册为附加属性和依赖属性，但仍需公开“包装器”实现。 在这种情况下，属性可在该元素上设置，也可通过 XAML 附加属性语法在任何元素上设置。 具有适当的方案的标准和附加用法的属性的一个示例是<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>。
 
 ## <a name="see-also"></a>请参阅
 

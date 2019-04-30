@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
 ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051879"
 ---
 # <a name="button"></a>Button
 一个<xref:System.Windows.Controls.Button>控件响应用户输入从鼠标、 键盘、 触笔或其他输入的设备和引发<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 一个<xref:System.Windows.Controls.Button>是一个简单[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]组件，它可以包含简单内容，例如文本、，还可以包含复杂内容，例如图像和<xref:System.Windows.Controls.Panel>控件。  

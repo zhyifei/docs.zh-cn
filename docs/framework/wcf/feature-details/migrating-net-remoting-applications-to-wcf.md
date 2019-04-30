@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ',NET remoting [WCF]'
 ms.assetid: 24793465-65ae-4308-8c12-dce4fd12a583
 ms.openlocfilehash: 4040fb0ac223f91705a49b733f6a1f42d144068e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046601"
 ---
 # <a name="migrating-net-remoting-applications-to-wcf"></a>将 .NET 远程处理应用程序迁移到 WCF
 **本主题介绍一项传统技术，保留该技术是为了向后兼容现有的应用程序，不建议对新的开发使用该技术。现在应使用 WCF 开发分布式应用程序。**  

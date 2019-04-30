@@ -3,22 +3,22 @@ title: 配置 Windows 进程激活服务以用于 Windows Communication Foundati
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
 ms.openlocfilehash: a4c331465087c6910cb67a71d2153e08f82a6cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039697"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>配置 Windows 进程激活服务以用于 Windows Communication Foundation
 本主题介绍设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤的[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
   
--   安装 （或确认安装） 所需的 WCF 激活组件。  
+- 安装 （或确认安装） 所需的 WCF 激活组件。  
   
--   创建一个具有要使用的网络协议绑定的 WAS 站点，或者向现有站点添加新协议绑定。  
+- 创建一个具有要使用的网络协议绑定的 WAS 站点，或者向现有站点添加新协议绑定。  
   
--   创建一个应用程序以承载服务，并使该应用程序可以使用所需的网络协议。  
+- 创建一个应用程序以承载服务，并使该应用程序可以使用所需的网络协议。  
   
--   构建 WCF 服务公开非 HTTP 终结点。  
+- 构建 WCF 服务公开非 HTTP 终结点。  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>使用非 HTTP 绑定配置站点  
  若要将非 HTTP 绑定与 WAS 一起使用，必须将站点绑定添加到 WAS 配置。 WAS 的配置存储是 applicationHost.config 文件，该文件位于 %windir%\system32\inetsrv\config 目录中。 此配置存储由 WAS 和 IIS 7.0 共享。  

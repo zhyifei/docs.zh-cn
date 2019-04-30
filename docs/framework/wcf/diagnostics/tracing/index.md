@@ -3,20 +3,20 @@ title: 跟踪
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997979"
 ---
 # <a name="tracing"></a>跟踪
 Windows Communication Foundation (WCF) 提供有关错误监视和分析应用程序检测和诊断数据。 您可以使用跟踪代替调试器来了解应用程序的运行行为，或者为什么出错。 您还可以在组件之间关联错误和处理，以提供端对端体验。  
   
  WCF 输出诊断跟踪的以下数据：  
   
--   应用程序所有组件之间进程里程碑的跟踪，如操作调用、代码异常、警告及其他重大处理事件。  
+- 应用程序所有组件之间进程里程碑的跟踪，如操作调用、代码异常、警告及其他重大处理事件。  
   
--   跟踪功能出现故障时发生的 Windows 错误事件。  
+- 跟踪功能出现故障时发生的 Windows 错误事件。  
   
 ## <a name="in-this-section"></a>本节内容  
  [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

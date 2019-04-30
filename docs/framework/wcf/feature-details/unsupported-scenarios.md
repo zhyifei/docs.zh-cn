@@ -3,11 +3,11 @@ title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050748"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，Windows Communication Foundation (WCF) 不支持某些特定安全方案。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，并因此 WCF 不支持该平台上运行使用 Windows 身份验证的服务。 运行 Windows XP Home Edition 下的 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -20,13 +20,13 @@ ms.locfileid: "59178771"
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>启用了 Windows XP 和安全上下文令牌 Cookie  
  WCF 不支持模拟和<xref:System.InvalidOperationException>时存在以下条件引发：  
   
--   操作系统为 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- 操作系统为 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   身份验证模式产生 Windows 标识。  
+- 身份验证模式产生 Windows 标识。  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 的 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性设置为 <xref:System.ServiceModel.ImpersonationOption.Required>。  
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 的 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性设置为 <xref:System.ServiceModel.ImpersonationOption.Required>。  
   
--   创建了基于状态的安全上下文令牌 (SCT)。默认情况下禁止创建此类令牌。  
+- 创建了基于状态的安全上下文令牌 (SCT)。默认情况下禁止创建此类令牌。  
   
  基于状态的 SCT 只能使用自定义绑定来创建。 有关详细信息，请参阅[如何：创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在代码中，可通过创建安全绑定元素（<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>）启用令牌，方法是：使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> 方法，并且将 `requireCancellation` 参数设置为 `false`。 该参数引用 SCT 的缓存。 若将该值设置为 `false`，则启用基于状态的 SCT 功能。  
   
@@ -68,18 +68,18 @@ ms.locfileid: "59178771"
   
  以下是判断证书是否使用 KSP 的两种可行方法：  
   
--   对 `p/invoke` 执行 `CertGetCertificateContextProperty`，并对返回的 `dwProvType` 检查 `CertGetCertificateContextProperty`。  
+- 对 `p/invoke` 执行 `CertGetCertificateContextProperty`，并对返回的 `dwProvType` 检查 `CertGetCertificateContextProperty`。  
   
--   使用`certutil`命令从命令行来查询证书。 有关详细信息，请参阅[证书疑难解答的 Certutil 任务](https://go.microsoft.com/fwlink/?LinkId=120056)。  
+- 使用`certutil`命令从命令行来查询证书。 有关详细信息，请参阅[证书疑难解答的 Certutil 任务](https://go.microsoft.com/fwlink/?LinkId=120056)。  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果要求使用 ASP.NET 模拟和 ASP.NET 兼容性，消息安全将失败  
  WCF 不支持以下设置组合，因为它们可能会阻止客户端身份验证的发生：  
   
--   启用了 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟。 这通过 Web.config 文件中设置`impersonate`属性的 <`identity`> 元素`true`。  
+- 启用了 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟。 这通过 Web.config 文件中设置`impersonate`属性的 <`identity`> 元素`true`。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 通过设置启用兼容性模式`aspNetCompatibilityEnabled`的属性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 通过设置启用兼容性模式`aspNetCompatibilityEnabled`的属性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
--   使用了消息模式安全。  
+- 使用了消息模式安全。  
   
  解决办法是禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式。 或者，如果[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]是必需的兼容性模式下，禁用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]模拟功能，并改为使用 WCF 提供的模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   

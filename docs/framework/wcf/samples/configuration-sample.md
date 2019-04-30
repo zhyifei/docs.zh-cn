@@ -3,11 +3,11 @@ title: 配置示例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002232"
 ---
 # <a name="configuration-sample"></a>配置示例
 此示例演示如何使用配置文件使服务成为可发现的服务。  
@@ -27,15 +27,15 @@ ms.locfileid: "59768236"
 ## <a name="service-configuration"></a>服务配置  
  此示例中的配置文件演示两个功能：  
   
--   使服务在标准 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 上成为可发现的服务。  
+- 使服务在标准 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 上成为可发现的服务。  
   
--   调整该服务的应用程序终结点的发现相关信息，并在标准终结点上调整某些与发现相关的设置。  
+- 调整该服务的应用程序终结点的发现相关信息，并在标准终结点上调整某些与发现相关的设置。  
   
  若要启用发现，必须在该服务的应用程序配置文件中进行几个更改：  
   
--   必须将一个发现终结点添加到 `<service>` 元素。 这是一个标准 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 终结点， 这是一个运行时与发现服务相关联的系统终结点。 发现服务侦听此终结点上的消息。  
+- 必须将一个发现终结点添加到 `<service>` 元素。 这是一个标准 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 终结点， 这是一个运行时与发现服务相关联的系统终结点。 发现服务侦听此终结点上的消息。  
   
--   `<serviceDiscovery>` 行为将添加到 `<serviceBehaviors>` 节。 这使该服务在运行时可被发现，并使用前面提到的发现终结点来侦听发现 `Probe` 和 `Resolve` 消息。 通过这两个添加操作，可在指定的发现终结点处发现服务。  
+- `<serviceDiscovery>` 行为将添加到 `<serviceBehaviors>` 节。 这使该服务在运行时可被发现，并使用前面提到的发现终结点来侦听发现 `Probe` 和 `Resolve` 消息。 通过这两个添加操作，可在指定的发现终结点处发现服务。  
   
  下面的配置代码段演示定义了一个应用程序终结点和一个发现终结点的服务：  
   

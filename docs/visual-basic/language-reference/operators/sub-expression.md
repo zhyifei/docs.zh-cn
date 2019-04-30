@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013499"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub 表达式 (Visual Basic)
 声明的参数和子例程 lambda 表达式定义的代码。  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>Lambda 表达式语法  
  Lambda 表达式的语法类似于标准的子例程。 差异如下所示：  
   
--   Lambda 表达式没有名称。  
+- Lambda 表达式没有名称。  
   
--   Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
+- Lambda 表达式不能有修饰符，如`Overloads`或`Overrides`。  
   
--   单行 lambda 表达式的主体必须是一条语句，不是表达式。 主体可以包含调用的 sub 过程，但不是为 function 过程的调用。  
+- 单行 lambda 表达式的主体必须是一条语句，不是表达式。 主体可以包含调用的 sub 过程，但不是为 function 过程的调用。  
   
--   在 lambda 表达式中，必须必须推断数据类型或所有参数已指定所有参数。  
+- 在 lambda 表达式中，必须必须推断数据类型或所有参数已指定所有参数。  
   
--   可选和`ParamArray`lambda 表达式中不允许使用参数。  
+- 可选和`ParamArray`lambda 表达式中不允许使用参数。  
   
--   在 lambda 表达式中不允许使用泛型参数。  
+- 在 lambda 表达式中不允许使用泛型参数。  
   
 ## <a name="example"></a>示例  
  下面是向控制台写入值的 lambda 表达式的示例。 该示例显示了一个子例程的这两个单行和多行 lambda 表达式语法。 有关更多示例，请参阅[Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  

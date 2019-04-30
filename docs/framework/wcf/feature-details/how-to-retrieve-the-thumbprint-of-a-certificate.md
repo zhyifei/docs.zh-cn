@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: 51debbbcfec2fd5b82460e1dd1d6ece8e77bfc13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000774"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>如何：检索证书的指纹
 在编写的 Windows Communication Foundation (WCF) 应用程序时，使用 X.509 证书进行身份验证，它通常是需要指定在证书中找到的声明。 例如，在 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 方法中使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 枚举时，必须提供指纹声明。 查找声明值有两个步骤。 首先，打开用于证书的 Microsoft 管理控制台 (MMC) 管理单元 （请参阅[如何：使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。)接着，如下文所述，查找适当的证书并复制其指纹（或其他声明值）。  

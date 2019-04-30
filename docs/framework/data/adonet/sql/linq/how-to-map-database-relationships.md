@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033717"
 ---
 # <a name="how-to-map-database-relationships"></a>如何：映射数据库关系
 可以在您的实体类中将始终相同的任何数据关系编码为属性引用。 例如，在 Northwind 示例数据库中，由于客户通常会下订单，因此在模型中客户与其订单之间始终存在关系。  
@@ -22,11 +22,11 @@ ms.locfileid: "59152875"
   
  大多数关系都是一对多关系，这一点在本主题后面部分的示例中会有所体现。 您还可以按如下方式来表示一对一和多对多关系：  
   
--   一对一：通过包括表示这种关系<xref:System.Data.Linq.EntitySet%601>两端。  
+- 一对一：通过包括表示这种关系<xref:System.Data.Linq.EntitySet%601>两端。  
   
      例如，考虑`Customer` - `SecurityCode`关系，创建，以便客户的安全代码将不会找到在`Customer`表并只能由经过授权的用户可以访问。  
   
--   多对多：在多对多关系的链接表的主键 (也称为*交接*表) 通常由其他两个表中的外键的组合成。  
+- 多对多：在多对多关系的链接表的主键 (也称为*交接*表) 通常由其他两个表中的外键的组合成。  
   
      例如，考虑`Employee` - `Project`通过使用链接表形成多对多关系`EmployeeProject`。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 要求使用以下三个类对这种关系进行建模：`Employee`、`Project` 和 `EmployeeProject`。 在这种情况下，更改 `Employee` 和 `Project` 之间的关系似乎需要更新主键 `EmployeeProject`。 但是，这种情况最好的模型化处理方法是删除现有 `EmployeeProject`，然后创建新的 `EmployeeProject`。  
   

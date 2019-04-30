@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018148"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>演练：使用 Microsoft Expression Blend 创建按钮
 本演练将引导你完成创建过程[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用 Microsoft Expression Blend 的自定义的按钮。  
@@ -117,17 +117,17 @@ ms.locfileid: "59300456"
   
 10. **请看起来像玻璃 glassCube:** 设置<xref:System.Windows.Shapes.Shape.Fill%2A>到玻璃介绍通过使用线性渐变的 75%不透明和之间交替颜色白色和透明超过 6 大约均匀分布的时间间隔。 这是要设置为梯度停止点：  
   
-    -   梯度停止点 1:Alpha 值为 75%的白色  
+    - 梯度停止点 1:Alpha 值为 75%的白色  
   
-    -   梯度停止点 2:透明  
+    - 梯度停止点 2:透明  
   
-    -   梯度停止点 3:Alpha 值为 75%的白色  
+    - 梯度停止点 3:Alpha 值为 75%的白色  
   
-    -   梯度停止点 4:透明  
+    - 梯度停止点 4:透明  
   
-    -   梯度停止点 5:Alpha 值为 75%的白色  
+    - 梯度停止点 5:Alpha 值为 75%的白色  
   
-    -   梯度停止点 6:透明  
+    - 梯度停止点 6:透明  
   
      这将创建"波浪"玻璃外观。  
   
@@ -173,9 +173,9 @@ ms.locfileid: "59300456"
   
 6. **创建 IsFocused 属性触发器：** 使用相同的过程<xref:System.Windows.UIElement.IsMouseOver%2A>（请参阅本部分中的第一步），创建另一个属性触发器<xref:System.Windows.UIElement.IsFocused%2A>属性。 虽然**触发器录制已打开**，到触发器中添加下列操作：  
   
-    -   **glassCube**获取<xref:System.Windows.UIElement.Opacity%2A>的 100%。  
+    - **glassCube**获取<xref:System.Windows.UIElement.Opacity%2A>的 100%。  
   
-    -   **outerRectangle**获取<xref:System.Windows.Shapes.Shape.Stroke%2A>"{DynamicResource {x： 静态 SystemColors.HighlightBrushKey}}"的自定义表达式值。  
+    - **outerRectangle**获取<xref:System.Windows.Shapes.Shape.Stroke%2A>"{DynamicResource {x： 静态 SystemColors.HighlightBrushKey}}"的自定义表达式值。  
   
  作为本演练的最后一步，我们将向按钮添加动画。 将由事件触发这些动画 — 具体而言，<xref:System.Windows.UIElement.MouseEnter>和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
@@ -208,19 +208,19 @@ ms.locfileid: "59300456"
   
 5. **创建另一个事件触发器，并将不同的动画与它相关联：** 让我们添加一个更多的动画。 使用你用于创建上一个事件触发器动画到类似的步骤：  
   
-    1.  创建新的事件触发器使用<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+    1. 创建新的事件触发器使用<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
-    2.  将相关联的新时间线<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+    2. 将相关联的新时间线<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
      ![如何创建新的时间线](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  对于此时间线，创建两个关键帧，0.0 秒时的一个，另一个位于 0.3 秒之间。  
+    1. 对于此时间线，创建两个关键帧，0.0 秒时的一个，另一个位于 0.3 秒之间。  
   
-    2.  在突出显示的 0.3 秒之间的关键帧，设置**旋转变换角度**到 360 度。  
+    2. 在突出显示的 0.3 秒之间的关键帧，设置**旋转变换角度**到 360 度。  
   
      ![如何创建旋转转换](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  按 F5 运行该应用程序。 单击按钮。 请注意，在玻璃层会旋转一周。  
+    1. 按 F5 运行该应用程序。 单击按钮。 请注意，在玻璃层会旋转一周。  
   
 ## <a name="conclusion"></a>结束语  
  您已经完成了自定义的按钮。 执行此过程通过已应用到应用程序中的所有按钮的按钮模板。 如果将模板编辑模式 （请参阅下图） 并创建多个按钮，会看到它们的外观和行为类似自定义按钮而不是像默认按钮。  
@@ -237,15 +237,15 @@ ms.locfileid: "59300456"
   
  总之，自定义按钮模板的过程中已了解如何执行以下操作在 Microsoft Expression Blend 中：  
   
--   自定义控件的外观。  
+- 自定义控件的外观。  
   
--   设置属性触发器。 属性触发器是非常有用，因为它们可以用于大多数对象，而不仅仅是控件。  
+- 设置属性触发器。 属性触发器是非常有用，因为它们可以用于大多数对象，而不仅仅是控件。  
   
--   设置事件触发器。 事件触发器是非常有用，因为它们可以用于大多数对象，而不仅仅是控件。  
+- 设置事件触发器。 事件触发器是非常有用，因为它们可以用于大多数对象，而不仅仅是控件。  
   
--   创建动画。  
+- 创建动画。  
   
--   杂项： 创建渐变添加 BitmapEffects，使用转换，并设置对象的基本属性。  
+- 杂项： 创建渐变添加 BitmapEffects，使用转换，并设置对象的基本属性。  
   
 ## <a name="see-also"></a>请参阅
 

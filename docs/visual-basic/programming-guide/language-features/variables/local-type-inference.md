@@ -13,11 +13,11 @@ helpviewer_keywords:
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
 ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052581"
 ---
 # <a name="local-type-inference-visual-basic"></a>局部类型推理 (Visual Basic)
 使用 Visual Basic 编译器*类型推理*以确定未声明的局部变量的数据类型`As`子句。 编译器将推断变量的初始化表达式的类型的类型。 这使您无需显式声明一个类型，声明变量，如下面的示例中所示。 由于声明，而两者`num1`和`num2`强类型为整数。  

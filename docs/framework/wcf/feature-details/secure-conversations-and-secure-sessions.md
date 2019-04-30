@@ -3,11 +3,11 @@ title: 安全对话和安全会话
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 ms.openlocfilehash: 9b2c22d6db5a773bfb3f3a41e458b530fc889d71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990998"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>安全对话和安全会话
 Windows Communication Foundation (WCF) 的一项功能是能够建立安全会话之间相互进行身份验证和加密和数字签名过程达成的两个终结点。 例如，服务终结点可能要求客户端终结点发送一个基于 X.509 证书的安全令牌，以便进行身份验证。 在对客户端进行身份验证之后，服务终结点将向客户端返回一个安全上下文令牌 (SCT)，该令牌随后将用于保护该会话中的所有后续消息。 通过建立这一安全会话，可使两个终结点之间交换的一组消息更有效率，因为 SCT 具有对称密钥。 在生成数字签名或加密一组数据时，与对称密钥相比，作为 X.509 证书基础的非对称密钥明显需要更多的计算能力。  

@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050761"
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
 本部分包含常见的问题和故障排除帮助使用 Windows Communication Foundation (WCF) 中的队列。  
@@ -29,11 +29,11 @@ ms.locfileid: "59977283"
   
  **答：** MSMQ 4.0，但不是在 MSMQ 3.0 中提供了以下功能：  
   
--   只有 MSMQ 4.0 才支持自定义死信队列。  
+- 只有 MSMQ 4.0 才支持自定义死信队列。  
   
--   MSMQ 3.0 和 MSMQ 4.0 处理病毒消息的方式不同。  
+- MSMQ 3.0 和 MSMQ 4.0 处理病毒消息的方式不同。  
   
--   只有 MSMQ 4.0 才支持远程事务处理读取。  
+- 只有 MSMQ 4.0 才支持远程事务处理读取。  
   
  有关详细信息，请参阅[队列功能在 Windows Vista、 Windows Server 2003 和 Windows XP 中的功能差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。  
   
@@ -60,19 +60,19 @@ ms.locfileid: "59977283"
   
  **答：** 若要确定答案，工作通过下面的检查列表：  
   
--   检查事务性队列需求是否与指定的保证相符。 请注意下面的原则：  
+- 检查事务性队列需求是否与指定的保证相符。 请注意下面的原则：  
   
-    -   您可以发送持久性消息 （数据报和会话） 具有"一次性"保证 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) 只向事务性队列。  
+    - 您可以发送持久性消息 （数据报和会话） 具有"一次性"保证 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) 只向事务性队列。  
   
-    -   可以发送只具有“一次性”保证的会话。  
+    - 可以发送只具有“一次性”保证的会话。  
   
-    -   需要使用事务从事务性队列接收会话中的消息。  
+    - 需要使用事务从事务性队列接收会话中的消息。  
   
-    -   可以发送或接收可变或持久性消息 （仅限于数据报） 没有保证 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) 仅为非事务性队列。  
+    - 可以发送或接收可变或持久性消息 （仅限于数据报） 没有保证 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) 仅为非事务性队列。  
   
--   检查死信队列。 如果在此处找到消息，则确定没有传送这些消息的原因。  
+- 检查死信队列。 如果在此处找到消息，则确定没有传送这些消息的原因。  
   
--   检查传出队列的连通性或寻址问题。  
+- 检查传出队列的连通性或寻址问题。  
   
  **问：** 我已经指定了自定义死信队列，但当我启动发送方应用程序时，我收到异常，找不到死信队列，或发送应用程序不具有权限到死信队列。 为什么会出现这种情况？  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **答：** 原因可能有以下三种：  
   
--   如果处于域模式下，则远程事务处理接收要求 Microsoft 分布式事务协调器 (MSDTC) 网络访问。 您可以启用此功能使用**添加/删除组件**。  
+- 如果处于域模式下，则远程事务处理接收要求 Microsoft 分布式事务协调器 (MSDTC) 网络访问。 您可以启用此功能使用**添加/删除组件**。  
   
      ![屏幕快照，显示启用网络 DTC 访问。](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   检查与事务管理器进行通信的身份验证模式。 如果要在工作组模式下，必须选择"不要求进行验证"。 如果处于域模式下，必须选择"要求相互身份验证"。  
+- 检查与事务管理器进行通信的身份验证模式。 如果要在工作组模式下，必须选择"不要求进行验证"。 如果处于域模式下，必须选择"要求相互身份验证"。  
   
      ![启用 XA 事务](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   请确保 MSDTC 在列表中的异常**Internet 连接防火墙**设置。  
+- 请确保 MSDTC 在列表中的异常**Internet 连接防火墙**设置。  
   
--   确保您使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支持远程事务处理读取。 早期的 Windows 版本上的 MSMQ 不支持远程事务处理读取。  
+- 确保您使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支持远程事务处理读取。 早期的 Windows 版本上的 MSMQ 不支持远程事务处理读取。  
   
  **问：** 从队列中读取的服务时的网络服务，例如，在 Web 主机，为什么收到访问拒绝异常时引发从队列中读取？  
   

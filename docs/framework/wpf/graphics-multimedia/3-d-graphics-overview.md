@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053688"
 ---
 # <a name="3-d-graphics-overview"></a>三维图形概述
 <a name="introduction"></a>通过 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能，开发人员可以使用标记和程序代码绘制和转换 3D 图形，并对其进行动画处理。 开发人员可以合并 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 图形以创建丰富的控件、提供复杂的数据图解，或者增强用户对应用程序界面的体验。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支持并非旨在提供功能齐全的游戏开发平台。 本主题概述了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形系统中的 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能。  
@@ -86,11 +86,11 @@ ms.locfileid: "59087984"
   
  定义特性的模型的图面[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Media.Media3D.Material>抽象类。 Material 的具体子类用来确定模型图面的某些外观特征，每个子类还提供一个可以向其传递 SolidColorBrush、TileBrush 或 VisualBrush 的 Brush 属性。  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定将向模型应用画笔，就好像该模型已漫射光来照亮。 使用 DiffuseMaterial 与直接针对 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用画笔非常相似；模型表面不反射光，就好像是自发光一样。  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定将向模型应用画笔，就好像该模型已漫射光来照亮。 使用 DiffuseMaterial 与直接针对 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用画笔非常相似；模型表面不反射光，就好像是自发光一样。  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> 指定将向模型应用画笔，就像模型的表面坚硬或者光亮，能够反射高光。 可以通过指定的值设置到此反射特质或"，"建议纹理的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>属性。  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> 指定将向模型应用画笔，就像模型的表面坚硬或者光亮，能够反射高光。 可以通过指定的值设置到此反射特质或"，"建议纹理的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>属性。  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> 可以指定将应用纹理，就好像模型所发出的光与画笔的颜色。 这不会使模型成为光源；但是它参与阴影设置的方式将不同于用 DiffuseMaterial 或 SpecularMaterial 设置纹理时的情况。  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> 可以指定将应用纹理，就好像模型所发出的光与画笔的颜色。 这不会使模型成为光源；但是它参与阴影设置的方式将不同于用 DiffuseMaterial 或 SpecularMaterial 设置纹理时的情况。  
   
  为了提高性能的背面<xref:System.Windows.Media.Media3D.GeometryModel3D>（有视图之外，因为它们是将模型从照相机在相反一侧这些人脸） 可以从场景。  若要指定<xref:System.Windows.Media.Media3D.Material>若要将应用于的模型如飞机隐面，将设置该模型的<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>属性。  
   
@@ -111,13 +111,13 @@ ms.locfileid: "59087984"
   
  下面的光派生自的基类<xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>：提供环境照明照亮所有对象，其位置或方向无关。  
+- <xref:System.Windows.Media.Media3D.AmbientLight>：提供环境照明照亮所有对象，其位置或方向无关。  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>：像远处的光源那样照亮。  具有方向性光源<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定为 Vector3D，但是没有指定的位置。  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>：像远处的光源那样照亮。  具有方向性光源<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定为 Vector3D，但是没有指定的位置。  
   
--   <xref:System.Windows.Media.Media3D.PointLight>：像近处的光源那样照亮。 PointLights 具有一个位置并从该位置投射光。 场景中的对象根据对象相对于光源的位置和距离被照亮。 <xref:System.Windows.Media.Media3D.PointLightBase> 公开<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>属性，用于确定位置距离，超过该模型将不会由光源照亮。 PointLight 还公开了多个衰减属性，这些属性确定光源的亮度如何随距离的增加而减小。 可以为光源的衰减指定恒定、线性或二次内插算法。  
+- <xref:System.Windows.Media.Media3D.PointLight>：像近处的光源那样照亮。 PointLights 具有一个位置并从该位置投射光。 场景中的对象根据对象相对于光源的位置和距离被照亮。 <xref:System.Windows.Media.Media3D.PointLightBase> 公开<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>属性，用于确定位置距离，超过该模型将不会由光源照亮。 PointLight 还公开了多个衰减属性，这些属性确定光源的亮度如何随距离的增加而减小。 可以为光源的衰减指定恒定、线性或二次内插算法。  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>：继承自 <xref:System.Windows.Media.Media3D.PointLight>。 Spotlights 的照亮方式与 PointLight 类似，但是它既具有位置又具有方向。 这些项目中设置的锥形区域的 light<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度为单位指定的属性。  
+- <xref:System.Windows.Media.Media3D.SpotLight>：继承自 <xref:System.Windows.Media.Media3D.PointLight>。 Spotlights 的照亮方式与 PointLight 类似，但是它既具有位置又具有方向。 这些项目中设置的锥形区域的 light<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度为单位指定的属性。  
   
  光源是<xref:System.Windows.Media.Media3D.Model3D>对象，因此可以转换，并对光源属性，包括位置、 颜色、 方向和范围进行动画处理。  
   

@@ -3,22 +3,22 @@ title: 数据集、数据表和数据视图
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
 ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034289"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>数据集、数据表和数据视图
 ADO.NET <xref:System.Data.DataSet> 是数据的一种内存驻留表示形式，无论它包含的数据来自什么数据源，都会提供一致的关系编程模型。 <xref:System.Data.DataSet> 表示整个数据集，其中包含对数据进行包含、排序和约束的表以及表间的关系。  
   
  使用 <xref:System.Data.DataSet> 的方法有若干种，这些方法可以单独应用，也可以结合应用。 你可以：  
   
--   以编程方式在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataRelation>、<xref:System.Data.Constraint> 和 <xref:System.Data.DataSet>，并使用数据填充表。  
+- 以编程方式在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataRelation>、<xref:System.Data.Constraint> 和 <xref:System.Data.DataSet>，并使用数据填充表。  
   
--   通过 <xref:System.Data.DataSet> 用现有关系数据源中的数据表填充 `DataAdapter`。  
+- 通过 <xref:System.Data.DataSet> 用现有关系数据源中的数据表填充 `DataAdapter`。  
   
--   使用 XML 加载和保持 <xref:System.Data.DataSet> 内容。 有关详细信息，请参阅[在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
+- 使用 XML 加载和保持 <xref:System.Data.DataSet> 内容。 有关详细信息，请参阅[在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
   
  强类型化的 <xref:System.Data.DataSet> 也可以使用 XML Web services 来进行传输。 <xref:System.Data.DataSet> 的设计使其成为使用 XML Web services 传输数据的理想选择。 有关 XML Web service 的概述，请参阅 [XML Web service 概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))。 有关通过 XML Web service 使用 <xref:System.Data.DataSet> 的示例，请参阅[通过 XML Web service 使用数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)。  
   

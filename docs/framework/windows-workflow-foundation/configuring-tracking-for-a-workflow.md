@@ -3,11 +3,11 @@ title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
 ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052763"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 工作流可以公开为 WCF 服务中托管时<xref:System.ServiceModel.Activities.WorkflowServiceHost>服务主机。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是基于工作流的服务的指定 .NET ServiceHost 实现。 本节介绍如何为在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中运行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流服务配置跟踪。 通过在 Web.config 文件（对于 Web 承载的服务）或 App.config 文件（对于在独立的应用程序中承载的服务，例如在控制台应用程序中承载的服务）中指定服务行为，或通过使用代码向服务宿主的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中添加与跟踪相关的行为，可以完成上述配置。
 
-对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，您可以使用配置文件中的 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 元素添加 `behavior`，如以下示例所示。
+为工作流服务中托管<xref:System.ServiceModel.WorkflowServiceHost>，可以添加<xref:System.Activities.Tracking.EtwTrackingParticipant>使用 <`behavior`> 元素中的配置文件，如下面的示例中所示。
 
 ```xml
 <behaviors>
@@ -64,7 +64,7 @@ instance.Extensions.Add(trackingParticipant);
 <behaviors>
 ```
 
-此外，对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，您可以通过代码添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展。 若要添加自定义跟踪参与者，请创建一个新的行为扩展并将其添加到 <xref:System.ServiceModel.ServiceHost> 中，如以下代码示例中所示。
+此外，对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，你可以通过代码添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展。 若要添加自定义跟踪参与者，请创建一个新的行为扩展并将其添加到 <xref:System.ServiceModel.ServiceHost> 中，如以下代码示例中所示。
 
 > [!NOTE]
 > 如果你想要查看演示如何创建添加自定义跟踪参与者的自定义行为元素的示例代码，请参阅[跟踪](./samples/tracking.md)示例。

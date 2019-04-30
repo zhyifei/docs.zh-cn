@@ -3,11 +3,11 @@ title: 从 XML 推断数据集关系结构
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034237"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>从 XML 推断数据集关系结构
 <xref:System.Data.DataSet> 的关系结构（即架构）由表、列、约束和关系组成。 当从 XML 中加载 <xref:System.Data.DataSet> 时，可以预定义架构，也可以从所加载的 XML 显式（或通过推断）创建架构。 有关加载的架构和内容的详细信息<xref:System.Data.DataSet>从 XML，请参阅[从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)并[从 XML 加载数据集架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
 ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022306"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>演练：使用 Visual Basic 创建 COM 对象
 创建新的应用程序或组件时，最好创建.NET Framework 程序集。 但是，Visual Basic 还可以轻松公开.NET Framework 组件由 com 使用。 这使您可以提供新的组件需要 COM 组件的早期应用程序套件。 本演练演示如何使用 Visual Basic 来公开[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]对象作为 COM 对象，使用或不使用 COM 类模板。  

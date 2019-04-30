@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037084"
 ---
 # <a name="commanding-overview"></a>命令概述
 <a name="introduction"></a>命令是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的一种输出机制，与设备输出相比，其提供的输出处理更侧重于语义级别。 示例命令如许多应用程序均具有的“复制”、“剪切”和“粘贴”操作。  
@@ -27,15 +27,15 @@ ms.locfileid: "59139030"
   
  本主题包含以下各节：  
   
--   [什么是命令？](#commands_at_10000_feet)  
+- [什么是命令？](#commands_at_10000_feet)  
   
--   [WPF 中的简单命令示例](#simple_command)  
+- [WPF 中的简单命令示例](#simple_command)  
   
--   [WPF 命令中的四个主要概念](#Four_main_Concepts)  
+- [WPF 命令中的四个主要概念](#Four_main_Concepts)  
   
--   [命令库](#Command_Library)  
+- [命令库](#Command_Library)  
   
--   [创建自定义命令](#creating_commands)  
+- [创建自定义命令](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>什么是命令？  
@@ -60,13 +60,13 @@ ms.locfileid: "59139030"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>WPF 命令中的四个主要概念  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的路由命令模型可分解为四个主要概念：命令、命令源、命令目标和命令绑定：  
   
--   *命令*是要执行的操作。  
+- *命令*是要执行的操作。  
   
--   *命令源*是调用命令的对象。  
+- *命令源*是调用命令的对象。  
   
--   *命令目标*是在其上执行命令的对象。  
+- *命令目标*是在其上执行命令的对象。  
   
--   *命令绑定*是将命令逻辑映射到命令的对象。  
+- *命令绑定*是将命令逻辑映射到命令的对象。  
   
  在前面的示例中，<xref:System.Windows.Input.ApplicationCommands.Paste%2A> 命令是命令，<xref:System.Windows.Controls.MenuItem> 是命令源，<xref:System.Windows.Controls.TextBox> 是命令目标，命令绑定由 <xref:System.Windows.Controls.TextBox> 控件提供。  值得注意的是，<xref:System.Windows.Input.CommandBinding> 并不总是由作为命令目标类的控件提供。  通常，<xref:System.Windows.Input.CommandBinding> 必须由应用程序开发者创建，否则 <xref:System.Windows.Input.CommandBinding> 可能会附加到命令目标的上级元素。  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139030"
   
  <xref:System.Windows.Input.ICommandSource> 公开三个属性：<xref:System.Windows.Input.ICommandSource.Command%2A>、<xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 和 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>：  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> 是在调用命令源时执行的命令。  
+- <xref:System.Windows.Input.ICommandSource.Command%2A> 是在调用命令源时执行的命令。  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 是要执行命令的对象。  值得注意的是，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，仅当 <xref:System.Windows.Input.ICommand> 为 <xref:System.Windows.Input.RoutedCommand> 时，<xref:System.Windows.Input.ICommandSource> 上的 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 属性才适用。  如果在 <xref:System.Windows.Input.ICommandSource> 上设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 并且相应的命令不是 <xref:System.Windows.Input.RoutedCommand>，则忽略命令目标。 如果未设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>，则具有键盘焦点的元素将成为命令目标。  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 是要执行命令的对象。  值得注意的是，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，仅当 <xref:System.Windows.Input.ICommand> 为 <xref:System.Windows.Input.RoutedCommand> 时，<xref:System.Windows.Input.ICommandSource> 上的 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 属性才适用。  如果在 <xref:System.Windows.Input.ICommandSource> 上设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 并且相应的命令不是 <xref:System.Windows.Input.RoutedCommand>，则忽略命令目标。 如果未设置 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>，则具有键盘焦点的元素将成为命令目标。  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 是用于将信息传递给实现命令的处理程序的用户定义数据类型。  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 是用于将信息传递给实现命令的处理程序的用户定义数据类型。  
   
  实现 <xref:System.Windows.Input.ICommandSource> 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类是 <xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Documents.Hyperlink> 和 <xref:System.Windows.Input.InputBinding>。  单击 <xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem> 和 <xref:System.Windows.Documents.Hyperlink> 时，调用一个命令，当执行与其关联的 <xref:System.Windows.Input.InputGesture> 时，<xref:System.Windows.Input.InputBinding> 调用命令。  
   

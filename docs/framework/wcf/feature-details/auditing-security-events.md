@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048265"
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 创建使用 Windows Communication Foundation (WCF) 的应用程序可以利用审核功能记录安全事件 （成功、 失败，或两者）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
@@ -21,9 +21,9 @@ ms.locfileid: "59101285"
 ## <a name="audit-level-and-behavior"></a>审核级别和行为  
  存在两个安全审核级别：  
   
--   服务授权级别，在该级别对调用方进行授权。  
+- 服务授权级别，在该级别对调用方进行授权。  
   
--   消息级别，在其中 WCF 消息的有效性检查，并对调用方进行身份验证。  
+- 消息级别，在其中 WCF 消息的有效性检查，并对调用方进行身份验证。  
   
  你可以检查这两个审核级别的成功或失败，这被称为*审核行为*。  
   

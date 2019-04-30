@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052542"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 WPF 复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当您有大量投入时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码，它可以更有效地扩展现有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是从头开始重新编写。 常见情况是你想要嵌入其中一个或多个控件实现的与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在 Windows 窗体应用程序中。 有关自定义 WPF 控件的详细信息，请参阅[控件自定义](../controls/control-customization.md)。  
@@ -20,9 +20,9 @@ ms.locfileid: "59322831"
   
  本演练涉及以下任务：  
   
--   实现 WPF 复合控件。  
+- 实现 WPF 复合控件。  
   
--   实现 Windows 窗体主机应用程序。  
+- 实现 Windows 窗体主机应用程序。  
   
  在本演练中所涉及任务的完整代码列表，请参阅[承载 WPF 复合控件在 Windows 窗体示例](https://go.microsoft.com/fwlink/?LinkID=159996)。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "59322831"
   
  项目应具有对以下系统 DLL 的引用。 如果默认未包含其中任何 DLL，请将它们添加到项目中。  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   系统  
+- 系统  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>创建用户界面  
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]复合控件实现与[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 复合控件[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]包含五个<xref:System.Windows.Controls.TextBox>元素。 每个<xref:System.Windows.Controls.TextBox>元素都有一个关联<xref:System.Windows.Controls.TextBlock>充当标签的元素。 有两个<xref:System.Windows.Controls.Button>在底部，元素**确定**并**取消**。 当用户单击任一按钮时，该控件会引发将信息返回给主机的自定义事件。  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>初始化控件  
  下面的代码实现几个基本任务：  
   
--   声明一个私有事件`OnButtonClick`，和及其关联的委托`MyControlEventHandler`。  
+- 声明一个私有事件`OnButtonClick`，和及其关联的委托`MyControlEventHandler`。  
   
--   创建几个存储用户数据的私有全局变量。 此数据通过相应的属性公开。  
+- 创建几个存储用户数据的私有全局变量。 此数据通过相应的属性公开。  
   
--   实现一个处理程序`Init`，为控件的<xref:System.Windows.FrameworkElement.Loaded>事件。 此处理程序通过向全局变量分配 MyControl1.xaml 中定义的值来对它们进行初始化。 若要执行此操作，它使用<xref:System.Windows.FrameworkElement.Name%2A>分配给典型<xref:System.Windows.Controls.TextBlock>元素， `nameLabel`，以访问该元素的属性设置。  
+- 实现一个处理程序`Init`，为控件的<xref:System.Windows.FrameworkElement.Loaded>事件。 此处理程序通过向全局变量分配 MyControl1.xaml 中定义的值来对它们进行初始化。 若要执行此操作，它使用<xref:System.Windows.FrameworkElement.Name%2A>分配给典型<xref:System.Windows.Controls.TextBlock>元素， `nameLabel`，以访问该元素的属性设置。  
   
  删除现有的构造函数并将以下代码添加到你`MyControl1`类。  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>处理按钮的单击事件  
  用户指示数据输入任务已完成通过单击**确定**按钮或**取消**按钮。 这两个按钮都使用相同<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序`ButtonClicked`。 这两个按钮都具有名称，`btnOK`或`btnCancel`，这样，要确定通过检查的值被单击的按钮的处理程序`sender`参数。 该处理程序执行以下任务：  
   
--   创建`MyControlEventArgs`对象，其中包含从数据<xref:System.Windows.Controls.TextBox>元素。  
+- 创建`MyControlEventArgs`对象，其中包含从数据<xref:System.Windows.Controls.TextBox>元素。  
   
--   如果用户单击**取消**按钮，集`MyControlEventArgs`对象的`IsOK`属性设置为`false`。  
+- 如果用户单击**取消**按钮，集`MyControlEventArgs`对象的`IsOK`属性设置为`false`。  
   
--   引发`OnButtonClick`事件以向主机指示用户已完成，并且传回所收集的数据。  
+- 引发`OnButtonClick`事件以向主机指示用户已完成，并且传回所收集的数据。  
   
  将以下代码添加到您`MyControl1`类后,`Init`方法。  
   
@@ -209,15 +209,15 @@ namespace MyControls
   
 4. 添加对下列程序集的引用。  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>实现应用程序的用户界面  
  Windows 窗体应用程序的 UI 包含若干个与 WPF 复合控件进行交互的控件。  
@@ -296,9 +296,9 @@ namespace MyControls
   
  中的其余两行将`Form1_Load`方法附加到两个控件事件处理程序：  
   
--   `OnButtonClick` 是一个自定义事件，当用户单击由复合控件激发**确定**或**取消**按钮。 处理该事件可获取用户的响应并收集用户指定的任何数据。  
+- `OnButtonClick` 是一个自定义事件，当用户单击由复合控件激发**确定**或**取消**按钮。 处理该事件可获取用户的响应并收集用户指定的任何数据。  
   
--   <xref:System.Windows.FrameworkElement.Loaded> 是一个标准事件引发的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制时完全加载。 此处使用该事件是因为本示例需要使用控件中的属性初始化几个全局变量。 在窗体的时间<xref:System.Windows.Forms.Form.Load>事件，该控件不是完全加载，并且这些值仍设置为`null`。 你需要等到该控件<xref:System.Windows.FrameworkElement.Loaded>事件发生之前可以访问这些属性。  
+- <xref:System.Windows.FrameworkElement.Loaded> 是一个标准事件引发的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制时完全加载。 此处使用该事件是因为本示例需要使用控件中的属性初始化几个全局变量。 在窗体的时间<xref:System.Windows.Forms.Form.Load>事件，该控件不是完全加载，并且这些值仍设置为`null`。 你需要等到该控件<xref:System.Windows.FrameworkElement.Loaded>事件发生之前可以访问这些属性。  
   
  <xref:System.Windows.FrameworkElement.Loaded>事件处理程序在前面的代码所示。 `OnButtonClick`中下一节讨论处理程序。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
 ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002256"
 ---
 # <a name="property-animation-techniques-overview"></a>属性动画技术概述
 本主题介绍了处理动画属性的不同方法：情节提要、本地动画、时钟和基于帧的动画。  

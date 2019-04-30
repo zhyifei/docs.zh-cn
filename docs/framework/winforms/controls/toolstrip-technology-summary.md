@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009482"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 技术摘要
 本主题概述了 `ToolStrip` 控件及支持其使用的类的相关信息。  
@@ -25,23 +25,23 @@ ms.locfileid: "59120948"
 ## <a name="background"></a>背景  
  借助 `ToolStrip` 控件及其关联的类，可创建外观和行为一致且专业的高级工具栏功能。 与以前的控件相比，`ToolStrip` 控件和类提供了以下改进：  
   
--   更加一致的事件模型。  
+- 更加一致的事件模型。  
   
--   更加一致的设计时行为，包含任务列表和项集合编辑器。  
+- 更加一致的设计时行为，包含任务列表和项集合编辑器。  
   
--   具有 `ToolStripManager` 和 `ToolStripRenderer` 的自定义呈现。  
+- 具有 `ToolStripManager` 和 `ToolStripRenderer` 的自定义呈现。  
   
--   具有 `ToolStripContainer` 和 `ToolStripPanel` 的内置漂浮（停靠时共享工具区域中的水平或垂直空间）。  
+- 具有 `ToolStripContainer` 和 `ToolStripPanel` 的内置漂浮（停靠时共享工具区域中的水平或垂直空间）。  
   
--   在设计时和运行时重新排列具有 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 属性的项。  
+- 在设计时和运行时重新排列具有 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 属性的项。  
   
--   借助 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 属性将项重新定位到溢出菜单。  
+- 借助 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 属性将项重新定位到溢出菜单。  
   
--   可借助 `ToolStripContainer`、`ToolStripPanel` 和 `ToolStripContentPanel` 完全配置控件位置。  
+- 可借助 `ToolStripContainer`、`ToolStripPanel` 和 `ToolStripContentPanel` 完全配置控件位置。  
   
--   使用 `ToolStripControlHost` 承载 `ToolStrip`、传统或自定义控件。  
+- 使用 `ToolStripControlHost` 承载 `ToolStrip`、传统或自定义控件。  
   
--   使用 `ToolStripPanel` 合并 `ToolStrip` 控件。  
+- 使用 `ToolStripPanel` 合并 `ToolStrip` 控件。  
   
  `ToolStrip` 是 `MenuStrip`、`ContextMenuStrip` 和 `StatusStrip` 的可扩展基类。 这些控件是继承常见行为和事件处理的 <xref:System.Windows.Forms.ToolStripItem> 容器，已经过扩展以使每个实现均处理适合的行为。 下表列出了从 <xref:System.Windows.Forms.ToolStripItem> 派生的控件。 基础 `ToolStrip` 类处理这些控件的绘制、用户输入和拖放事件。  
   
@@ -63,26 +63,26 @@ ms.locfileid: "59120948"
 ### <a name="task-dialog-boxes"></a>任务对话框  
  在 Visual Studio 中，单击设计器中控件上的智能标记会显示任务列表，用于方便访问很多常用命令。  
   
--   [MenuStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [ToolStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [ContextMenuStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [StatusStrip 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [ToolStripContainer 任务对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>项集合编辑器  
  在 Visual Studio 中，单击时**编辑项**任务列表中或右键单击该控件，然后选择**编辑项**快捷菜单中显示该控件的集合编辑器。 集合编辑器用于添加、删除和重新排序控件中所包含的项。 还可以查看和更改控件及其内含项的属性。  
   
--   [MenuStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [StatusStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [ContextMenuStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [ToolStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [ToolStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>承载控件  
  <xref:System.Windows.Forms.ToolStripControlHost> 类为 <xref:System.Windows.Forms.ToolStripComboBox>、<xref:System.Windows.Forms.ToolStripTextBox> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控件提供了内置包装。 还可以在 <xref:System.Windows.Forms.ToolStripControlHost> 中承载任何其他现有控件或 COM 控件。  

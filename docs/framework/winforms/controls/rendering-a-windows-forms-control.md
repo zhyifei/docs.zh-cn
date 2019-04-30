@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012472"
 ---
 # <a name="rendering-a-windows-forms-control"></a>呈现 Windows 窗体控件
 呈现是指创建用户的屏幕上的可视表示形式的过程。 Windows 窗体使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（是的新 Windows 图形库） 以进行呈现。 提供访问权限的托管的类[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]位于<xref:System.Drawing?displayProperty=nameWithType>命名空间及其子命名空间。  
   
  控件呈现中包括以下元素：  
   
--   提供由基类的绘图功能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
+- 提供由基类的绘图功能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
--   基本元素[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]图形库。  
+- 基本元素[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]图形库。  
   
--   几何图形的绘图区域。  
+- 几何图形的绘图区域。  
   
--   用于释放图形资源的过程。  
+- 用于释放图形资源的过程。  
   
 ## <a name="drawing-functionality-provided-by-control"></a>绘图控件提供的功能  
  类的基类<xref:System.Windows.Forms.Control>提供了绘图功能通过其<xref:System.Windows.Forms.Control.Paint>事件。 中的控件引发<xref:System.Windows.Forms.Control.Paint>事件时需要更新其显示。 有关.NET Framework 中的事件的详细信息，请参阅[处理和引发事件](../../../standard/events/index.md)。  

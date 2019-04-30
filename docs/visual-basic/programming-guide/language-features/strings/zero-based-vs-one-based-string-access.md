@@ -5,11 +5,11 @@ helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
 ms.openlocfilehash: a6ceb10d4a3cb9463551d8c85375ddbbb607ffdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024451"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>以零起始的字符串访问与在 Visual Basic 中的基于 1 的字符串访问
 本主题将比较了 Visual Basic 和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供对字符串中字符的访问。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]始终提供了对字符串中字符的从零开始访问权限，而 Visual Basic 提供的从零开始的和基于 1 的访问权限，具体取决于该函数。  

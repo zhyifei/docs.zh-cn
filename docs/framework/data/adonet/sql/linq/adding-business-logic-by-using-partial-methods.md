@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
 ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033834"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>通过使用分部方法添加业务逻辑
 你可以自定义 Visual Basic 和C#生成的代码中的您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]通过使用项目*分部方法*。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的代码定义签名作为分部方法的一部分。 如果您要实现此方法，您可以添加自己的分部方法。 如果您不添加自己的实现，编译器将丢弃分部方法签名并调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的默认方法。  

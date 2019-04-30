@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053101"
 ---
 # <a name="table-overview"></a>表概述
 <xref:System.Windows.Documents.Table> 为支持流文档内容的基于网格的表示形式的块级别元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
   
  本主题包含以下各节：  
   
--   [表基础](#table_basics)  
+- [表基础](#table_basics)  
   
--   [表与网格有什么区别？](#table_vs_Grid)  
+- [表与网格有什么区别？](#table_vs_Grid)  
   
--   [基本表结构](#basic_table_structure)  
+- [基本表结构](#basic_table_structure)  
   
--   [表包含](#table_containment)  
+- [表包含](#table_containment)  
   
--   [行分组](#row_groupings)  
+- [行分组](#row_groupings)  
   
--   [背景呈现优先级](#rendering_precedence)  
+- [背景呈现优先级](#rendering_precedence)  
   
--   [跨行或列 ](#spanning_rows_or_columns)  
+- [跨行或列 ](#spanning_rows_or_columns)  
   
--   [使用代码生成表 ](#building_a_table_with_code)  
+- [使用代码生成表 ](#building_a_table_with_code)  
   
--   [相关主题] 
+- [相关主题] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>表基础  
@@ -50,15 +50,15 @@ ms.locfileid: "59317657"
 ### <a name="basic-table-structure"></a>基本表结构  
  <xref:System.Windows.Documents.Table> 提供基于网格的表示形式，包括列 (由<xref:System.Windows.Documents.TableColumn>元素) 和行 (由<xref:System.Windows.Documents.TableRow>元素)。 <xref:System.Windows.Documents.TableColumn> 元素不承载的内容;它们只需定义列和列的特征。 <xref:System.Windows.Documents.TableRow> 元素必须承载于<xref:System.Windows.Documents.TableRowGroup>元素，它定义的表中行的分组。 <xref:System.Windows.Documents.TableCell> 元素，其中包含要显示的表的实际内容，必须承载于<xref:System.Windows.Documents.TableRow>元素。 <xref:System.Windows.Documents.TableCell> 只能包含派生的元素<xref:System.Windows.Documents.Block>。  有效子元素<xref:System.Windows.Documents.TableCell>包括。  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> 元素不能直接承载文本内容。 有关流的包含规则的详细信息之类的内容元素<xref:System.Windows.Documents.TableCell>，请参阅[流文档概述](flow-document-overview.md)。  
@@ -78,19 +78,19 @@ ms.locfileid: "59317657"
 ### <a name="table-containment"></a>表包容  
  <xref:System.Windows.Documents.Table> 派生自<xref:System.Windows.Documents.Block>元素，并遵循的常见规则<xref:System.Windows.Documents.Block>级别元素。  一个<xref:System.Windows.Documents.Table>元素可包含任何以下元素：  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>行分组  

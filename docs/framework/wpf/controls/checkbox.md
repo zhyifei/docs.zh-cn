@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
 ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052217"
 ---
 # <a name="checkbox"></a>CheckBox
 可以使用<xref:System.Windows.Controls.CheckBox>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的应用程序来表示用户可以选中或清除的选项。 可以使用单个复选框，也可以组合两个或多个复选框。  

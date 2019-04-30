@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037747"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 标记扩展
 定义和引用从外部程序集加载的资源键。 这样一种资源查找程序集，而不是显式的资源字典在程序集或对类中指定目标类型。  
@@ -52,9 +52,9 @@ ms.locfileid: "59169749"
 ## <a name="remarks"></a>备注  
  如上面的用法中所示 {`ComponentResourceKey`} 标记扩展用法在两个位置找到：  
   
--   内的主题资源字典，由控件作者提供的键的定义。  
+- 内的主题资源字典，由控件作者提供的键的定义。  
   
--   从程序集访问主题资源，当你重新模板化控件但想要使用来自控件的主题提供资源的属性值。  
+- 从程序集访问主题资源，当你重新模板化控件但想要使用来自控件的主题提供资源的属性值。  
   
  用于引用来自主题的组件资源，通常建议您使用`{DynamicResource}`而非`{StaticResource}`。 这是与用法中所示。 `{DynamicResource}` 建议，因为用户可以更改主题本身。 如果你想与支持该主题的控件作者的意图最匹配的组件资源，应启用组件资源参考，用于也是动态的。  
   

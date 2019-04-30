@@ -8,11 +8,11 @@ helpviewer_keywords:
 - grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
 ms.openlocfilehash: ba3361c8477cf72031296651af022bac3ac90281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971283"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.GroupBox>控件用于提供可识别分组其他控件。 通常情况下，使用分组框按功能细分窗体。 例如，可以指定邮件的选项，如使用哪些通宵运输工具的订单窗体。 分组分组框中的所有选项为用户提供一个逻辑的视觉提示，并且在设计时的所有控件可以方便 — 当移动单个<xref:System.Windows.Forms.GroupBox>控制，所有其包含的控件移动，过。  

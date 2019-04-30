@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050657"
 ---
 # <a name="using-data-contracts"></a>使用数据协定
 “数据协定”  是在服务与客户端之间达成的正式协议，用于以抽象方式描述要交换的数据。 也就是说，为了进行通信，客户端和服务不必共享相同的类型，而只需共享相同的数据协定。 数据协定为每个参数或返回类型精确定义为进行交换而序列化哪些数据（将哪些数据转换为 XML）。  
@@ -38,21 +38,21 @@ ms.locfileid: "59129930"
 ### <a name="notes"></a>说明  
  下面的注释提供在创建数据协定时需要考虑的事项：  
   
--   仅当用于未标记的类型时，才接受 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性。 这包括未使用 <xref:System.Runtime.Serialization.DataContractAttribute>、 <xref:System.SerializableAttribute>、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>或 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性之一标记的类型，或通过任何其他方式（如 <xref:System.Xml.Serialization.IXmlSerializable>）标记为可序列化的类型。  
+- 仅当用于未标记的类型时，才接受 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性。 这包括未使用 <xref:System.Runtime.Serialization.DataContractAttribute>、 <xref:System.SerializableAttribute>、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>或 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性之一标记的类型，或通过任何其他方式（如 <xref:System.Xml.Serialization.IXmlSerializable>）标记为可序列化的类型。  
   
--   可以将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 应用于字段和属性 (Property)。  
+- 可以将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 应用于字段和属性 (Property)。  
   
--   成员可访问性级别（internal、private、protected 或 public）对数据协定无任何影响。  
+- 成员可访问性级别（internal、private、protected 或 public）对数据协定无任何影响。  
   
--   如果将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于静态成员，则将忽略该属性。  
+- 如果将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于静态成员，则将忽略该属性。  
   
--   在序列化期间，为属性数据成员调用 property-get 代码来获取要序列化的属性的值。  
+- 在序列化期间，为属性数据成员调用 property-get 代码来获取要序列化的属性的值。  
   
--   在反序列化期间，首先创建一个未初始化的对象，而不在该类型上调用任何构造函数。 然后反序列化所有数据成员。  
+- 在反序列化期间，首先创建一个未初始化的对象，而不在该类型上调用任何构造函数。 然后反序列化所有数据成员。  
   
--   在反序列化期间，为属性数据成员调用 property-set 代码，将属性设置为要反序列化的值。  
+- 在反序列化期间，为属性数据成员调用 property-set 代码，将属性设置为要反序列化的值。  
   
--   对于将要生效的数据协定，它必须能序列化其所有数据成员。 有关可序列化类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+- 对于将要生效的数据协定，它必须能序列化其所有数据成员。 有关可序列化类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
      泛型类型的处理方式与非泛型类型完全相同。 泛型参数无特殊要求。 例如，请注意以下类型：  
   

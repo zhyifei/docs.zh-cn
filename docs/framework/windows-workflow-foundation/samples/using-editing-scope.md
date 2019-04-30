@@ -3,11 +3,11 @@ title: 使用编辑范围
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004765"
 ---
 # <a name="using-editing-scope"></a>使用编辑范围
 此示例演示如何对一组更改进行批处理，以便可以在一个原子单元中撤消它们。 默认情况下，活动设计器作者采取的操作会自动集成到撤消/重复系统中。  
@@ -28,9 +28,9 @@ ms.locfileid: "59769419"
   
 2. 单击**打开编辑范围**。  
   
-    1.  此命令将调用 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>；后者会创建一个编辑范围，并将其推入到编辑堆栈中。  
+    1. 此命令将调用 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>；后者会创建一个编辑范围，并将其推入到编辑堆栈中。  
   
-    2.  然后将三个活动添加到选定的 <xref:System.Activities.Presentation.Model.ModelItem> 中。 请注意，如果尚未使用 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> 打开编辑范围，则这三个新活动将会显示在设计器画布上。 因为此操作仍然在 <xref:System.Activities.Presentation.Model.EditingScope> 中挂起，所以不会更新设计器。  
+    2. 然后将三个活动添加到选定的 <xref:System.Activities.Presentation.Model.ModelItem> 中。 请注意，如果尚未使用 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> 打开编辑范围，则这三个新活动将会显示在设计器画布上。 因为此操作仍然在 <xref:System.Activities.Presentation.Model.EditingScope> 中挂起，所以不会更新设计器。  
   
 3. 按**关闭编辑范围**提交编辑范围。 三个活动出现在设计器中。  
   

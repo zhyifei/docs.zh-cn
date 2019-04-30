@@ -3,11 +3,11 @@ title: 在自定义设计器中使用 ExpressionTextBox
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004752"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>在自定义设计器中使用 ExpressionTextBox
 此示例演示如何在自定义活动设计器中使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。 自定义活动 `MultiAssign` 将两个字符串值分配给两个字符串变量。 某些 <xref:System.Activities.Presentation.View.ExpressionTextBox> 控件绑定到 <xref:System.Activities.InArgument>，而某些控件绑定到 <xref:System.Activities.OutArgument>。

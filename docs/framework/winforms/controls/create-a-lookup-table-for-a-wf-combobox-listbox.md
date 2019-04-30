@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
 ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011465"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：为 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件创建查找表
 有时，在 Windows 窗体上以用户友好格式显示数据，但存储数据时使用对程序而言更有意义的格式会很有帮助。 例如，食品订单窗体可能按列表框中的名称显示菜单项。 但是，记录订单的数据表将包含代表该食品的唯一 ID 号。 下表显示如何存储和显示食品订单窗体数据的示例。  

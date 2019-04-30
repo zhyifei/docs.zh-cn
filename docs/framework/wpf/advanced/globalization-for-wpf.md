@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031327"
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍你应注意的编写时的问题[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]全球市场的应用程序。 全球化编程元素中定义[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]在`System.Globalization`。
@@ -69,59 +69,59 @@ ms.locfileid: "59084162"
 
  目前支持以下脚本：
 
--   阿拉伯语
+- 阿拉伯语
 
--   孟加拉语
+- 孟加拉语
 
--   梵文
+- 梵文
 
--   西里尔文
+- 西里尔文
 
--   希腊语
+- 希腊语
 
--   古吉拉特语
+- 古吉拉特语
 
--   果鲁穆奇语
+- 果鲁穆奇语
 
--   希伯来语
+- 希伯来语
 
--   表意文字脚本
+- 表意文字脚本
 
--   卡纳达语
+- 卡纳达语
 
--   老挝语
+- 老挝语
 
--   拉丁语
+- 拉丁语
 
--   马拉雅拉姆语
+- 马拉雅拉姆语
 
--   蒙古语
+- 蒙古语
 
--   奥里亚语
+- 奥里亚语
 
--   叙利亚语
+- 叙利亚语
 
--   泰米尔语
+- 泰米尔语
 
--   泰卢固语
+- 泰卢固语
 
--   塔安那文
+- 塔安那文
 
--   泰语*
+- 泰语*
 
--   藏语
+- 藏语
 
  *此版本支持显示和编辑泰语文本，但不支持断词。
 
  目前不支持以下脚本：
 
--   高棉语
+- 高棉语
 
--   古朝鲜语
+- 古朝鲜语
 
--   缅甸语
+- 缅甸语
 
--   僧伽罗语
+- 僧伽罗语
 
  所有书写系统都引擎都支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字体可包括[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]布局表格，字体创建者来设计更好地国际化的高端版式字体。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字体布局表格包含有关字形替换、 字形位置、 对齐和定位基线，信息使文本处理应用程序改进文本布局。
 
@@ -133,9 +133,9 @@ ms.locfileid: "59084162"
 ### <a name="international-layout"></a>国际化布局
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一种支持水平、双向和垂直布局的简便方式。 在演示框架<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性可以用于定义布局。 流方向模式包括：
 
--   *LeftToRight* - 适用于拉丁语和东亚语等语言的水平布局。
+- *LeftToRight* - 适用于拉丁语和东亚语等语言的水平布局。
 
--   *RightToLeft* - 适用于阿拉伯语和希伯来语等语言的双向布局。
+- *RightToLeft* - 适用于阿拉伯语和希伯来语等语言的双向布局。
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>开发可本地化的应用程序

@@ -9,11 +9,11 @@ ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000436"
 ---
 # <a name="profiling-structures"></a>分析结构
 本节描述分析 API 使用的非托管结构。  
@@ -32,7 +32,7 @@ ms.locfileid: "33456493"
  通过将函数的 ID 与其重新编译的 ID 版本组合起来，提供该函数的唯一表示形式。  
   
  [COR_PRF_FUNCTION_ARGUMENT_INFO 结构](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  
- 按从左向右的顺序表示函数的自变量。  
+ 按从左向右的顺序表示函数的参数。  
   
  [COR_PRF_FUNCTION_ARGUMENT_RANGE 结构](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)  
  表示内存中按从左向右的顺序连续存储的函数自变量块。  

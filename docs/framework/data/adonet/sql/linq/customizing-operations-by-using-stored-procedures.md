@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
 ms.openlocfilehash: 93aa679e02482e5c237c233655ee19f3bae17fd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032841"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>通过使用存储过程自定义操作
 存储过程代表用于重写默认行为的常见方法。 本主题中的示例演示了如何将生成的方法包装用于存储过程，以及如何直接调用存储过程。  

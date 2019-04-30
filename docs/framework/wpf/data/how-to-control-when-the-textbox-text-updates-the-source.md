@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
 ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051996"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>如何：控制文本框文本更新源的时间
 本主题介绍如何使用 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 属性控制绑定源更新的时机。 本主题使用 <xref:System.Windows.Controls.TextBox> 控件作为示例。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
 ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011404"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据格式设置
 <xref:System.Windows.Forms.DataGridView>控件提供了单元格的值与父列显示的数据类型之间的自动转换。 文本中的列，例如，显示日期、 时间、 数字和枚举值的字符串表示形式，并将用户输入的字符串值转换为数据存储所需的类型。  

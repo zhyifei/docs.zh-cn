@@ -3,11 +3,11 @@ title: 与 Web Services Enhancements 3.0 的互操作性
 ms.date: 03/30/2017
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
 ms.openlocfilehash: 19786393a09610b4bd6c593f89beece8b9a0d3f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038644"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>与 Web Services Enhancements 3.0 的互操作性
 Windows Communication Foundation (WCF) 客户端和服务与 Microsoft.NET (WSE) 客户端和服务与 Web Services Enhancements 3.0 网络级别兼容，当 WCF 客户端和服务配置为使用 2004 年 8 月版Ws-addressing 规范。  

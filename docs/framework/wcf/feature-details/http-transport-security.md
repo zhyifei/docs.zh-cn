@@ -3,11 +3,11 @@ title: HTTP 传输安全
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000839"
 ---
 # <a name="http-transport-security"></a>HTTP 传输安全
 如果使用 HTTP 作为传输，则由安全套接字层 (SSL) 实现提供安全。 SSL 广泛用于 Internet 中，以便向客户端证明服务的身份，并且随后向通道提供保密性（加密）。 本主题说明 SSL 的工作原理以及它如何实现 Windows Communication Foundation (WCF) 中。  
@@ -31,9 +31,9 @@ ms.locfileid: "59113797"
 ## <a name="implementing-ssl-with-wcf"></a>使用 WCF 实现 SSL  
  HTTP 传输安全 （或 SSL） 到 WCF 外部提供。 可以使用两种方式之一来实现 SSL；决定因素是承载应用程序的方式：  
   
--   如果使用的 Internet 信息服务 (IIS) 作为 WCF 主机，使用 IIS 基础结构设置 SSL 服务。  
+- 如果使用的 Internet 信息服务 (IIS) 作为 WCF 主机，使用 IIS 基础结构设置 SSL 服务。  
   
--   如果要创建自承载的 WCF 应用程序，可以将 SSL 证书绑定到使用 HttpCfg.exe 工具的地址。  
+- 如果要创建自承载的 WCF 应用程序，可以将 SSL 证书绑定到使用 HttpCfg.exe 工具的地址。  
   
 ### <a name="using-iis-for-transport-security"></a>使用 IIS 实现传输安全  
   

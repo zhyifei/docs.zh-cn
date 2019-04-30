@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calendars
 ms.assetid: 051c6518-e0ca-426b-855c-f9bf70972970
 ms.openlocfilehash: 589eb55e001441230da3f8a0c5652c2a3dccb829
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012745"
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar 控件（Windows 窗体）
 Windows 窗体`MonthCalendar`控件提供了直观的图形界面的用户可以查看和设置日期信息。 该控件显示的网格包含月份，排列在下星期日期列中的带编号的天。 可以通过单击箭头按钮在月标题的任何一侧选择不同的月份。 与类似<xref:System.Windows.Forms.DateTimePicker>控件，可以选择一系列日期与此控件; 但是，<xref:System.Windows.Forms.DateTimePicker>让您可以设置时间以及日期。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024685"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>区域性对字符串的影响 (Visual Basic)
 此帮助页讨论了 Visual Basic 如何使用区域性信息来执行的字符串转换和比较。  
@@ -29,9 +29,9 @@ ms.locfileid: "58834616"
   
  `Str` （将数字转换为字符串） 和`Val`（将字符串转换为数字） 函数字符串和数字之间进行转换时不使用应用程序的区域性信息。 相反，它们将句点 （.） 识别为有效的小数分隔符。 可识别区域性的这些函数是：  
   
--   **使用当前区域性的转换。** `CStr`并`Format`函数将数字转换为字符串，并`CDbl`和`CInt`函数将字符串转换为数字。  
+- **使用当前区域性的转换。** `CStr`并`Format`函数将数字转换为字符串，并`CDbl`和`CInt`函数将字符串转换为数字。  
   
--   **使用特定区域性的转换。** 每个数字的对象都有`ToString(IFormatProvider)`方法，将数字转换为字符串，该方法和一个`Parse(String, IFormatProvider)`方法将字符串转换为数字。 例如，`Double`类型提供了<xref:System.Double.ToString%28System.IFormatProvider%29>和<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>方法。  
+- **使用特定区域性的转换。** 每个数字的对象都有`ToString(IFormatProvider)`方法，将数字转换为字符串，该方法和一个`Parse(String, IFormatProvider)`方法将字符串转换为数字。 例如，`Double`类型提供了<xref:System.Double.ToString%28System.IFormatProvider%29>和<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>方法。  
   
  有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Conversion.Str%2A> 和 <xref:Microsoft.VisualBasic.Conversion.Val%2A>。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "58834616"
 ## <a name="comparing-strings"></a>比较字符串  
  有两个重要的情况下，需要字符串比较：  
   
--   **向用户显示的数据进行排序。** 使用基于当前区域性，因此字符串正确排序的操作。  
+- **向用户显示的数据进行排序。** 使用基于当前区域性，因此字符串正确排序的操作。  
   
--   **确定是否两个应用程序内部字符串完全匹配 （通常出于安全目的）。** 使用忽略当前区域性的操作。  
+- **确定是否两个应用程序内部字符串完全匹配 （通常出于安全目的）。** 使用忽略当前区域性的操作。  
   
  您可以执行这两种类型的比较使用 Visual Basic<xref:Microsoft.VisualBasic.Strings.StrComp%2A>函数。 指定可选`Compare`参数来控制的比较的类型：`Text`大多数输入和输出`Binary`用于确定完全匹配项。  
   

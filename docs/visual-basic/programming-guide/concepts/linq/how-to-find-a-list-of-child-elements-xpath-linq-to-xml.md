@@ -3,11 +3,11 @@ title: 如何：查找子元素 (XPATH-LINQ to XML) 的列表 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
 ms.openlocfilehash: 7ed31f17157176a6c100a8d02e065843a62b9587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021656"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>如何：查找子元素 (XPATH-LINQ to XML) 的列表 (Visual Basic)
 本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 轴进行比较。  

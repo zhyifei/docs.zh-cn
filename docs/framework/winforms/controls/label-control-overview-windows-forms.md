@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012850"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.Label>控件用于显示文本或图像，用户不能编辑。 它们用于确定在窗体上的对象，哪些特定控件的说明进行的操作如果单击，例如，或以响应运行时事件或在应用程序中的过程中显示信息。 例如，可以使用标签将描述性的隐藏式字幕添加到文本框、 列表框、 组合框等。 此外可以编写在运行时通过响应事件中的标签显示的文本更改的代码。 例如，如果你的应用程序需要几分钟来处理更改，您可以在标签中显示的处理状态消息。  

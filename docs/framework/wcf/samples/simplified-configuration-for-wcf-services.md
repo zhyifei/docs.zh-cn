@@ -3,11 +3,11 @@ title: WCF 服务的简化配置
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007846"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服务的简化配置
 此示例演示如何实现和配置典型的服务和客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  
@@ -63,11 +63,11 @@ ms.locfileid: "59304254"
   
 3. 按照以下步骤运行示例：  
   
-    1.  右键单击**服务**项目，然后选择**设为启动项目**，然后按**Ctrl + F5**。  
+    1. 右键单击**服务**项目，然后选择**设为启动项目**，然后按**Ctrl + F5**。  
   
-    2.  等待确认服务已准备好并且正在运行的控制台输出。  
+    2. 等待确认服务已准备好并且正在运行的控制台输出。  
   
-    3.  右键单击**客户端**项目，然后选择**设为启动项目**，然后按**Ctrl + F5**。  
+    3. 右键单击**客户端**项目，然后选择**设为启动项目**，然后按**Ctrl + F5**。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

@@ -3,11 +3,11 @@ title: 将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和�
 ms.date: 03/30/2017
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
 ms.openlocfilehash: 70ee2e8e0c457e9db2853935ef95b86c7f903fc3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004635"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动
 除了可将工作流定义编译为程序集中包含的类型之外，还可将工作流定义序列化为 XAML。 这些已序列化的定义可以重新加载以供编辑或检测，可以传递给生成系统以供编译，也可以加载并调用。 本主题概述如何序列化工作流定义以及如何使用 XAML 工作流定义。  
@@ -17,7 +17,7 @@ ms.locfileid: "57715836"
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- 每个 <xref:System.Activities.DynamicActivityProperty> 实例均表示工作流的一个输入参数，并且 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含构成工作流逻辑的活动。 请注意，此示例中的右值表达式是 Visual Basic 表达式。 Lambda 表达式不可序列化为 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果序列化的工作流要在工作流设计器中打开或进行编辑，则应使用 Visual Basic 表达式。 有关详细信息，请参阅[编写工作流、 活动和表达式使用命令性代码](authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
+ 每个 <xref:System.Activities.DynamicActivityProperty> 实例均表示工作流的一个输入自变量，并且 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含构成工作流逻辑的活动。 请注意，此示例中的右值表达式是 Visual Basic 表达式。 Lambda 表达式不可序列化为 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果序列化的工作流要在工作流设计器中打开或进行编辑，则应使用 Visual Basic 表达式。 有关详细信息，请参阅[编写工作流、 活动和表达式使用命令性代码](authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
   
  若要将由 <xref:System.Activities.ActivityBuilder> 实例表示的工作流定义序列化为 XAML，应使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 创建 <xref:System.Xaml.XamlWriter>，然后通过 <xref:System.Xaml.XamlServices>，使用 <xref:System.Xaml.XamlWriter> 对工作流定义进行序列化。 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 提供一些方法，可以在 <xref:System.Activities.ActivityBuilder> 实例和 XAML 之间进行映射，并可加载 XAML 工作流以及返回可调用的 <xref:System.Activities.DynamicActivity>。 在下面的示例中，将上一示例中的 <xref:System.Activities.ActivityBuilder> 实例序列化为一个字符串，并将其保存到一个文件中。  
   

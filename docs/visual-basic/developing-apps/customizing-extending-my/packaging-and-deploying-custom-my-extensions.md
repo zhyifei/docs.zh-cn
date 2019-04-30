@@ -7,15 +7,15 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014201"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>打包和部署自定义 My 扩展 (Visual Basic)
 
-Visual Basic 提供了用于轻松对你可以部署您的自定义`My`通过使用 Visual Studio 模板的命名空间扩展。 如果要为其创建的项目模板在`My`扩展新的项目类型的重要组成部分，您只需包含您的自定义`My`项目导出模板时使用的扩展插件代码。 有关导出项目模板的详细信息，请参阅[如何： 创建项目模板](/visualstudio/ide/how-to-create-project-templates)。
+Visual Basic 提供了用于轻松对你可以部署您的自定义`My`通过使用 Visual Studio 模板的命名空间扩展。 如果要为其创建的项目模板在`My`扩展新的项目类型的重要组成部分，您只需包含您的自定义`My`项目导出模板时使用的扩展插件代码。 有关导出项目模板的详细信息，请参阅[如何：创建项目模板](/visualstudio/ide/how-to-create-project-templates)。
 
 如果您的自定义`My`扩展在单个代码文件中，你可以将文件导出为用户可添加到任何类型的 Visual Basic 项目项模板。 然后可以自定义项模板以启用其他功能和您的自定义行为`My`Visual Basic 项目中的扩展。 这些功能包括：
 
@@ -33,7 +33,7 @@ Visual Basic 提供了用于轻松对你可以部署您的自定义`My`通过使
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>导出为项模板的 My namespace 扩展
 
-有一个文件，其中包括后你`My`命名空间扩展可以将代码文件导出为 Visual Studio 项模板。 有关如何将文件导出为 Visual Studio 项模板的说明，请参阅[如何： 创建项模板](/visualstudio/ide/how-to-create-item-templates)。
+有一个文件，其中包括后你`My`命名空间扩展可以将代码文件导出为 Visual Studio 项模板。 有关如何将文件导出为 Visual Studio 项模板的说明，请参阅[如何：创建项模板](/visualstudio/ide/how-to-create-item-templates)。
 
 > [!NOTE]
 > 如果你`My`命名空间扩展具有特定的程序集的依赖项，则可以自定义项模板以自动安装在`My`命名空间扩展添加到该程序集的引用时。 因此，想要排除该程序集引用时将代码文件导出为 Visual Studio 项模板。
@@ -60,8 +60,8 @@ CustomData 文件包含 <`VBMyExtensionTemplate>`具有属性，如以下表中�
 
 |特性|描述|
 |---|---|
-|`ID`|必须的。 扩展的唯一标识符。 如果具有此 ID 的扩展已添加到项目中，不会提示用户重新添加它。|
-|`Version`|必须的。 在项模板的版本号。|
+|`ID`|必需。 扩展的唯一标识符。 如果具有此 ID 的扩展已添加到项目中，不会提示用户重新添加它。|
+|`Version`|必需。 在项模板的版本号。|
 |`AssemblyFullName`|可选。 程序集名称。 当此程序集的引用添加到项目中时，将提示用户添加`My`从此项模板的扩展。|
 
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>添加\<CustomDataSignature > 元素的.vstemplate 文件

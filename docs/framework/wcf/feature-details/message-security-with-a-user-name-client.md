@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046556"
 ---
 # <a name="message-security-with-a-user-name-client"></a>用户名客户端的消息安全
 下图显示了 Windows Communication Foundation (WCF) 服务和客户端使用消息级安全保护。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
@@ -33,9 +33,9 @@ ms.locfileid: "59081549"
 ## <a name="service"></a>服务  
  下面的代码和配置应独立运行。 执行下列操作之一：  
   
--   使用代码（而不使用配置）创建独立服务。  
+- 使用代码（而不使用配置）创建独立服务。  
   
--   使用提供的配置创建服务，但不定义任何终结点。  
+- 使用提供的配置创建服务，但不定义任何终结点。  
   
 ### <a name="code"></a>代码  
  下面的代码演示如何创建使用消息安全的服务终结点。  

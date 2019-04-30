@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053790"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
 这是演示如何使用事件的两个主题的第二个。 第一个主题，[演练：声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，演示如何声明和引发事件。 本部分使用窗体和该演练中的类来显示如何处理时其发生的事件。  
@@ -76,7 +76,7 @@ ms.locfileid: "59308557"
   
 #### <a name="to-call-the-longtask-method"></a>若要调用 LongTask 方法  
   
--   将以下代码添加到 `Button1_Click` 事件处理程序中：  
+- 将以下代码添加到 `Button1_Click` 事件处理程序中：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
@@ -105,7 +105,7 @@ ms.locfileid: "59308557"
   
 #### <a name="to-handle-events-for-a-different-widget"></a>若要处理不同的小组件的事件  
   
--   添加以下代码行`Button1_Click`过程中，读取的行前面紧邻`mWidget.LongTask(12.2, 0.33)`:  
+- 添加以下代码行`Button1_Click`过程中，读取的行前面紧邻`mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   

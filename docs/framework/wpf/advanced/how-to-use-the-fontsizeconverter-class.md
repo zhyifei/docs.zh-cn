@@ -9,8 +9,8 @@ ms.openlocfilehash: f33a297ae07d5509d2b4d9a98636086ac433a57f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051034"
 ---
 # <a name="how-to-use-the-fontsizeconverter-class"></a>如何：使用 FontSizeConverter 类
 ## <a name="example"></a>示例  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037916"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)
 在将实体对象（如 Customers 或 Orders）通过网络序列化到客户端时，这些实体会与其数据上下文分离。 数据上下文不再跟踪这些实体的更改或它们与其他对象的关联。 只要客户端只读取数据，这就不会成为问题。 要使客户端可以向数据库添加新行，也比较容易做到。 但是，如果应用程序要求客户端能够更新或删除数据，则必须在调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> 之前将实体附加到新的数据上下文。 此外，如果对原始值使用开放式并发检查，则还需要一种为数据库同时提供原始实体和修改后的实体的方式。 使用 `Attach` 方法可以在实体分离后将其放入新的数据上下文中。  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>中间层实现  
  下面的示例演示中间层上的接口方法的实现。 下面是要注意的两个要点：  
   
--   <xref:System.Data.Linq.DataContext> 是在方法范围上声明的。  
+- <xref:System.Data.Linq.DataContext> 是在方法范围上声明的。  
   
--   该方法返回实际结果的 <xref:System.Collections.IEnumerable> 集合。 序列化程序将执行查询，以便将结果发送回客户端/表示层。 若要在中间层上对查询结果进行本地访问，可以通过对查询变量调用 `ToList` 或 `ToArray` 来强制执行。 然后，可以将该列表或数组作为 `IEnumerable` 返回。  
+- 该方法返回实际结果的 <xref:System.Collections.IEnumerable> 集合。 序列化程序将执行查询，以便将结果发送回客户端/表示层。 若要在中间层上对查询结果进行本地访问，可以通过对查询变量调用 `ToList` 或 `ToArray` 来强制执行。 然后，可以将该列表或数组作为 `IEnumerable` 返回。  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>更新数据  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持以下这些涉及开放式并发的方案中的更新：  
   
--   基于时间戳或 RowVersion 号的开放式并发。  
+- 基于时间戳或 RowVersion 号的开放式并发。  
   
--   基于实体属性子集的原始值的开放式并发。  
+- 基于实体属性子集的原始值的开放式并发。  
   
--   基于完整原始实体和已修改实体的开放式并发。  
+- 基于完整原始实体和已修改实体的开放式并发。  
   
  还可以对实体及其关系（如一个 Customer 及其关联 Order 对象的集合）一起执行更新或删除。 如果在客户端上对实体对象及其子代 (`EntitySet`) 集合的关系图进行修改，并且开放式并发检查需要原始值，则客户端必须为每个实体和 <xref:System.Data.Linq.EntitySet%601> 对象提供这些原始值。 如果需要使客户端可以在单个方法调用中进行一组相关的更新、删除和插入操作，则必须为客户端提供一种相应的方式，以便指示要对每个实体执行的操作的类型。 然后，在调用 <xref:System.Data.Linq.ITable.Attach%2A> 之前，必须在中间层上为每个实体调用适当的 <xref:System.Data.Linq.ITable.InsertOnSubmit%2A> 方法，然后依次调用 <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>、<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 或 `Attach`（对于插入操作，不调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>）。 在尝试进行更新之前，不要将从数据库中检索数据作为一种获取原始值的方式。  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>期望的实体成员  
  如前所述，在调用 `Attach` 方法之前，只需设置实体对象的特定成员。 需要设置的实体成员必须满足以下条件：  
   
--   属于实体的标识。  
+- 属于实体的标识。  
   
--   需要进行修改。  
+- 需要进行修改。  
   
--   为时间戳，或将其 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 属性设置为除 `Never` 之外的某个值。  
+- 为时间戳，或将其 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 属性设置为除 `Never` 之外的某个值。  
   
  如果某个表使用时间戳或版本号进行开放式并发检查，则在调用 <xref:System.Data.Linq.ITable.Attach%2A> 之前必须设置这些成员。 当该 Column 属性 (Attribute) 上的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 属性 (Property) 设置为 true 时，相应的成员将专门用于进行开放式并发检查。 只有当数据库具有相同的版本号或时间戳值时，才会提交所请求的任何更新。  
   

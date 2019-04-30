@@ -3,11 +3,11 @@ title: LINQ to XML 与其他 XML Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
 ms.openlocfilehash: 80d3d034454d4de74e8aafd41679b82d111e6f3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021201"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 与其他 XML 技术
 本主题将 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与下面的 XML 技术进行比较：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 了解这些信息，有助于确定要使用哪种技术。  

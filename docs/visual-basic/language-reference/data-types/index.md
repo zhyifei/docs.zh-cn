@@ -38,11 +38,11 @@ helpviewer_keywords:
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
 ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971738"
 ---
 # <a name="data-type-summary-visual-basic"></a>数据类型摘要 (Visual Basic)
 下表显示了 Visual Basic 数据类型、 其支持的公共语言运行时类型、 他们的名义存储分配和其值的范围。  
@@ -77,16 +77,16 @@ ms.locfileid: "58821967"
 ## <a name="memory-consumption"></a>内存消耗  
  声明基本数据类型时，是不安全假设其内存使用量，并以其名义存储分配相同。 这是由于以下注意事项：  
   
--   **存储分配。** 公共语言运行时可以将基于当前在其执行应用程序平台的特征的存储。 如果内存几乎已满，它可能会一起尽可能包尽可能真实地将声明的元素。 在其他情况下，可能会符合其内存地址与自然硬件边界，以优化性能。  
+- **存储分配。** 公共语言运行时可以将基于当前在其执行应用程序平台的特征的存储。 如果内存几乎已满，它可能会一起尽可能包尽可能真实地将声明的元素。 在其他情况下，可能会符合其内存地址与自然硬件边界，以优化性能。  
   
--   **平台宽度。** 在 64 位平台上的存储分配是不同的 32 位平台上的分配。  
+- **平台宽度。** 在 64 位平台上的存储分配是不同的 32 位平台上的分配。  
   
 ### <a name="composite-data-types"></a>复合数据类型  
  相同的注意事项适用于复合数据类型，如结构或数组的每个成员。 不能依赖于只需将该类型的成员的名义存储分配相加。 此外，还有其他注意事项，如下所示：  
   
--   **开销。** 某些复合类型具有更多的内存要求。 例如，一个数组，使用额外的内存，数组本身，还为每个维度。 在 32 位平台上，这种开销当前是 12 个字节加上每个维度的 8 个字节。 在 64 位平台上此要求是增加一倍。  
+- **开销。** 某些复合类型具有更多的内存要求。 例如，一个数组，使用额外的内存，数组本身，还为每个维度。 在 32 位平台上，这种开销当前是 12 个字节加上每个维度的 8 个字节。 在 64 位平台上此要求是增加一倍。  
   
--   **存储数据布局。** 不能完全假定已在内存中存储的顺序声明的顺序相同。 您甚至不能使假设字节对齐方式，例如 2 字节或 4 字节边界。 如果您在定义类或结构，并且您需要控制其成员的存储布局，可以将应用<xref:System.Runtime.InteropServices.StructLayoutAttribute>类或结构的属性。  
+- **存储数据布局。** 不能完全假定已在内存中存储的顺序声明的顺序相同。 您甚至不能使假设字节对齐方式，例如 2 字节或 4 字节边界。 如果您在定义类或结构，并且您需要控制其成员的存储布局，可以将应用<xref:System.Runtime.InteropServices.StructLayoutAttribute>类或结构的属性。  
   
 ### <a name="object-overhead"></a>对象的开销  
  `Object`指任何基本或复合数据类型使用 4 个字节，以及数据类型中包含的数据。  

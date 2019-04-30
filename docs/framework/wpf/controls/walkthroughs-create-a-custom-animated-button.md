@@ -1,5 +1,5 @@
 ---
-title: 演练：创建自定义的动画的按钮
+title: 演练：创建自定义的动画按钮
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024464"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>演练：创建自定义的动画的按钮
+# <a name="walkthroughs-create-a-custom-animated-button"></a>演练：创建自定义的动画按钮
 顾名思义，Windows Presentation Foundation (WPF) 非常适用于为客户进行丰富的演示体验。 这些演练演示如何自定义外观和行为 （包括动画） 按钮。 完成此自定义，以便您可以应用此自定义按钮轻松于任何按钮在应用程序中使用的样式和模板。 下图显示了您将创建的自定义的按钮。  
   
  ![您将创建的自定义的按钮](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

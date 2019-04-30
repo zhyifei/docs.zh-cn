@@ -3,11 +3,11 @@ title: 寻址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
 ms.openlocfilehash: a59c3b354404169c2baadd4ab8c2702728d9a891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002932"
 ---
 # <a name="addressing"></a>寻址
 “寻址”示例演示终结点地址的各个方面和功能。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载的。 服务和客户端都是控制台应用程序。 服务使用相对和绝对终结点地址的组合来定义多个终结点。  

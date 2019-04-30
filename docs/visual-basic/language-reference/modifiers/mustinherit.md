@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053933"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 指定一个类可以仅用作基类，则不能直接从其中创建对象。  
@@ -29,9 +29,9 @@ ms.locfileid: "58816559"
   
 ## <a name="rules"></a>规则  
   
--   **声明上下文。** 可以使用`MustInherit`仅在`Class`语句。  
+- **声明上下文。** 可以使用`MustInherit`仅在`Class`语句。  
   
--   **组合的修饰符。** 不能指定`MustInherit`一起使用`NotInheritable`同一声明中。  
+- **组合的修饰符。** 不能指定`MustInherit`一起使用`NotInheritable`同一声明中。  
   
 ## <a name="example"></a>示例  
  下面的示例演示强制的继承和强制重写。 类的基类`shape`定义一个变量， `acrossLine`。 类`circle`并`square`派生自`shape`。 它们继承的定义`acrossLine`，但它们必须定义该函数`area`因为该计算不同的形状的每一类。  

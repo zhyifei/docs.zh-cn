@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033561"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>实现业务逻辑 (LINQ to SQL)
 本主题中的术语“业务逻辑”指的是在对数据库数据进行插入、更新或删除操作之前，应用于数据的任何自定义规则或验证测试。 业务逻辑有时也称为“业务规则”或“域逻辑”。 在 n 层应用程序中，业务逻辑通常设计为逻辑层，因此可以独立于表示层或数据访问层进行修改。 在对数据库数据进行任何更新、插入或删除操作前后，数据访问层可以调用业务逻辑。  

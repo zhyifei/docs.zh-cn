@@ -3,11 +3,11 @@ title: SQL-CLR 类型映射
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037695"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  
@@ -16,23 +16,23 @@ ms.locfileid: "59152485"
   
  本主题讨论下列内容：  
   
--   [默认类型映射](#DefaultTypeMapping)  
+- [默认类型映射](#DefaultTypeMapping)  
   
--   [类型映射运行时行为矩阵](#BehaviorMatrix)  
+- [类型映射运行时行为矩阵](#BehaviorMatrix)  
   
--   [CLR 和 SQL 执行之间的行为差异](#BehaviorDiffs)  
+- [CLR 和 SQL 执行之间的行为差异](#BehaviorDiffs)  
   
--   [枚举映射](#EnumMapping)  
+- [枚举映射](#EnumMapping)  
   
--   [数值映射](#NumericMapping)  
+- [数值映射](#NumericMapping)  
   
--   [文本和 XML 的映射](#TextMapping)  
+- [文本和 XML 的映射](#TextMapping)  
   
--   [日期和时间映射](#DateMapping)  
+- [日期和时间映射](#DateMapping)  
   
--   [二进制映射](#BinaryMapping)  
+- [二进制映射](#BinaryMapping)  
   
--   [杂项映射](#MiscMapping)  
+- [杂项映射](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>默认类型映射  
@@ -58,21 +58,21 @@ ms.locfileid: "59152485"
   
  例如，以下是一些 CLR 和 SQL Server 之间的行为差异：  
   
--   SQL Server 对一些数据类型的排序不同于 CLR 中等效类型数据的排序。 例如，SQL Server 类型 `UNIQUEIDENTIFIER` 的数据排序不同于 CLR 类型 <xref:System.Guid?displayProperty=nameWithType> 的数据排序。  
+- SQL Server 对一些数据类型的排序不同于 CLR 中等效类型数据的排序。 例如，SQL Server 类型 `UNIQUEIDENTIFIER` 的数据排序不同于 CLR 类型 <xref:System.Guid?displayProperty=nameWithType> 的数据排序。  
   
--   SQL Server 处理一些字符串比较操作的方式不同于 CLR。 在 SQL Server 中，字符串比较行为取决于服务器上的排序规则设置。 有关详细信息，请参阅[使用排序规则](https://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 联机丛书中。  
+- SQL Server 处理一些字符串比较操作的方式不同于 CLR。 在 SQL Server 中，字符串比较行为取决于服务器上的排序规则设置。 有关详细信息，请参阅[使用排序规则](https://go.microsoft.com/fwlink/?LinkId=115330)Microsoft SQL Server 联机丛书中。  
   
--   对于一些映射函数，SQL Server 返回的函数值可能与 CLR 不同。 例如，相等函数会不同，因为在两个字符串仅在尾随空白不同的情况下，SQL Server 会视这两个字符串相等，而 CLR 则视其不相等。  
+- 对于一些映射函数，SQL Server 返回的函数值可能与 CLR 不同。 例如，相等函数会不同，因为在两个字符串仅在尾随空白不同的情况下，SQL Server 会视这两个字符串相等，而 CLR 则视其不相等。  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>枚举映射  
  LINQ to SQL 支持使用如下两种方式将 CLR <xref:System.Enum?displayProperty=nameWithType> 类型映射到 SQL Server 类型：  
   
--   映射到 SQL 数值类型（`TINYINT`、`SMALLINT`、`INT`、`BIGINT`）  
+- 映射到 SQL 数值类型（`TINYINT`、`SMALLINT`、`INT`、`BIGINT`）  
   
      将 CLR <xref:System.Enum?displayProperty=nameWithType> 类型映射到 SQL 数值类型时，您会将此 CLR <xref:System.Enum?displayProperty=nameWithType> 的基础整数值映射到 SQL Server 数据库列的值。 例如，如果一个名为 <xref:System.Enum?displayProperty=nameWithType> 的 `DaysOfWeek` 包含一个名为 `Tue` 且基础整数值为 3 的成员，则此成员映射到数据库值 3。  
   
--   映射到 SQL 文本类型（`CHAR`、`NCHAR`、`VARCHAR`、`NVARCHAR`）  
+- 映射到 SQL 文本类型（`CHAR`、`NCHAR`、`VARCHAR`、`NVARCHAR`）  
   
      将 CLR <xref:System.Enum?displayProperty=nameWithType> 类型映射到 SQL 文本类型时，SQL 数据库值会映射到 CLR <xref:System.Enum?displayProperty=nameWithType> 成员的名称。 例如，如果一个名为 <xref:System.Enum?displayProperty=nameWithType> 的 `DaysOfWeek` 包含一个名为 `Tue` 且基础整数值为 3 的成员，则此成员映射到数据库值 `Tue`。  
   
@@ -154,13 +154,13 @@ ms.locfileid: "59152485"
 ### <a name="xml-types"></a>XML 类型  
  从 Microsoft SQL Server 2005 开始，提供了 SQL Server `XML` 数据类型。 您可以将 SQL Server `XML` 数据类型映射到 <xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XDocument> 或 <xref:System.String>。 如果列中存储了无法读入 <xref:System.Xml.Linq.XElement> 的 XML 片段，则此列必须映射到 <xref:System.String> 以免出现运行时错误。 必须映射到 <xref:System.String> 的 XML 片段包括：  
   
--   XML 元素的序列。  
+- XML 元素的序列。  
   
--   特性  
+- 特性  
   
--   公共标识符 (PI)  
+- 公共标识符 (PI)  
   
--   注释  
+- 注释  
   
  尽管可以将映射<xref:System.Xml.Linq.XElement>并<xref:System.Xml.Linq.XDocument>到 SQL Server 中所示[类型映射运行时行为矩阵](#BehaviorMatrix)，则<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>方法具有这些类型没有默认 SQL Server 类型映射。  
   

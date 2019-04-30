@@ -13,11 +13,11 @@ ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018588"
 ---
 # <a name="impersonating-and-reverting"></a>模拟与恢复
 有时可能需要获取 Windows 帐户标记来模拟 Windows 帐户。 例如，基于 ASP.NET 的应用程序可能需要在不同时间代表多个用户进行工作。 应用程序可以从 Internet 信息服务 (IIS) 接受一个表示管理员的标记，模拟该用户，执行一项操作，然后还原到以前的身份。 然后，可以从 IIS 接受一个表示拥有较少权限的用户的标记，执行某项操作，并再次还原。  

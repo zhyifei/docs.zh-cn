@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
 ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055103"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>结构\<结构名称 > 必须包含至少一个实例成员变量或未标记为 Custom 的至少一个实例事件声明
 结构定义不包括任何非共享的变量或非共享的非自定义事件。  
@@ -23,7 +23,7 @@ ms.locfileid: "58813933"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   定义至少一个变量或事件不是`Shared`。 如果定义只能有一个事件，它必须为非自定义以及非共享。  
+- 定义至少一个变量或事件不是`Shared`。 如果定义只能有一个事件，它必须为非自定义以及非共享。  
   
 ## <a name="see-also"></a>请参阅
 

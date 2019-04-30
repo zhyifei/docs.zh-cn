@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 1a5378665d29e02799dd732d17705e462f40a2b1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009495"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip 控件（Windows 窗体）
 <xref:System.Windows.Forms.ToolStrip> 控件是可承载 Windows 窗体应用程序中菜单、控件和用户控件的工具栏。  
@@ -73,13 +73,13 @@ ms.locfileid: "57721458"
  [如何：实现自定义 ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)  
  描述如何通过实现从 <xref:System.Windows.Forms.ToolStripRenderer> 中派生的类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。  
   
--   [如何：创建含有标准项使用设计器的基本 Windows 窗体 ToolStrip](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [如何：创建含有标准项使用设计器的基本 Windows 窗体 ToolStrip](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
--   [如何：将 ToolStrip 从 toolstripcontainer 移到窗体](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [如何：将 ToolStrip 从 toolstripcontainer 移到窗体](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [演练：创建具有专业样式的 ToolStrip 控件](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [演练：创建具有专业样式的 ToolStrip 控件](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.ToolStrip> 类  

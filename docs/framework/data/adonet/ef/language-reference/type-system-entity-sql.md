@@ -3,20 +3,20 @@ title: 类型系统 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034096"
 ---
 # <a name="type-system-entity-sql"></a>类型系统 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持多种类型：  
   
--   基元（简单）类型，如 `Int32` 和 `String.`。  
+- 基元（简单）类型，如 `Int32` 和 `String.`。  
   
--   在架构中定义的名义类型，如 <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.ComplexType> 和 <xref:System.Data.Metadata.Edm.RelationshipType>。  
+- 在架构中定义的名义类型，如 <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.ComplexType> 和 <xref:System.Data.Metadata.Edm.RelationshipType>。  
   
--   架构中未显式定义的匿名类型：<xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType> 和 <xref:System.Data.Metadata.Edm.RefType>。  
+- 架构中未显式定义的匿名类型：<xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType> 和 <xref:System.Data.Metadata.Edm.RefType>。  
   
  本部分讨论在架构中未显式定义但 Entity SQL 支持的匿名类型。 有关基元类型和名义类型的信息，请参阅[概念模型类型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。  
   
@@ -31,13 +31,13 @@ ms.locfileid: "59134558"
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持使用以下运算符对引用进行构造、解构和导航：  
   
--   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
+- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
--   [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
+- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
   
--   [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
+- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
   
--   [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
+- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
   
  可以使用成员访问（点）运算符 (`.`) 对引用进行导航。 下面的代码段通过对 r（引用）属性进行导航提取 Order 的 Id 属性。  
   

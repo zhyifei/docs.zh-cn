@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013642"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断
 变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断。 请更改名称\<变量名 >，或使用完全限定的名称 （例如，Me.variablename 或 MyBase.variablename）。  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>解决此警告  
   
--   通过其名称更改为标识符，也不是类的字段的名称使本地循环控制变量。  
+- 通过其名称更改为标识符，也不是类的字段的名称使本地循环控制变量。  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   阐明循环控制变量绑定到类字段，通过前缀来`Me.`向变量名称。  
+- 阐明循环控制变量绑定到类字段，通过前缀来`Me.`向变量名称。  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   使用而不是依赖于本地类型推断，`As`子句来指定 for 循环控制变量的类型。  
+- 使用而不是依赖于本地类型推断，`As`子句来指定 for 循环控制变量的类型。  
   
     ```  
     For Index As Integer = 1 To 10  

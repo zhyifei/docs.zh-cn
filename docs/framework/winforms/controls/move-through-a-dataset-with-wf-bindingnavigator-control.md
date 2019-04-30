@@ -10,11 +10,11 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
 ms.openlocfilehash: d76c2e5882c9df94674294da00ba446dfbfd2b3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012732"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>如何：使用 Windows 窗体 BindingNavigator 控件浏览数据集
 生成数据驱动的应用程序时，经常需要向用户显示数据集合。 <xref:System.Windows.Forms.BindingNavigator> 控件与 <xref:System.Windows.Forms.BindingSource> 组件一起为滚动集合并按顺序显示其中的项提供方便的可扩展解决方案。  
@@ -31,7 +31,7 @@ ms.locfileid: "59086515"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System、System.Data、System.Drawing、System.Windows.Forms 和 System.Xml 程序集的引用。  
+- 对 System、System.Data、System.Drawing、System.Windows.Forms 和 System.Xml 程序集的引用。  
   
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052256"
 ---
 # <a name="dialog-boxes-overview"></a>对话框概述
 独立应用程序通常会在主窗口中同时显示应用程序对其进行操作和公开的功能来处理通过该数据的主数据[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]等机制，菜单栏、 工具栏和状态栏。 重要的应用程序可能还会显示其他窗口来执行以下操作：  
   
--   向用户显示特定信息。  
+- 向用户显示特定信息。  
   
--   从用户处收集信息。  
+- 从用户处收集信息。  
   
--   同时显示并收集信息。  
+- 同时显示并收集信息。  
   
  这些类型的窗口被称为*对话框*，并有两种类型： 模式和无模式。  
   
@@ -122,27 +122,27 @@ ms.locfileid: "59177406"
 #### <a name="configuring-a-modal-dialog-box"></a>配置模式对话框  
  典型对话框的用户界面包括以下内容：  
   
--   收集所需数据要求的各种控件。  
+- 收集所需数据要求的各种控件。  
   
--   显示**确定**按钮用户单击以关闭对话框，返回到函数，并继续处理。  
+- 显示**确定**按钮用户单击以关闭对话框，返回到函数，并继续处理。  
   
--   显示**取消**按钮，用户单击关闭对话框并停止进一步处理功能。  
+- 显示**取消**按钮，用户单击关闭对话框并停止进一步处理功能。  
   
--   显示**关闭**标题栏中的按钮。  
+- 显示**关闭**标题栏中的按钮。  
   
--   显示一个图标。  
+- 显示一个图标。  
   
--   显示**最小化**，**最大化**，并**还原**按钮。  
+- 显示**最小化**，**最大化**，并**还原**按钮。  
   
--   显示**系统**菜单以最小化、 最大化、 还原和关闭该对话框。  
+- 显示**系统**菜单以最小化、 最大化、 还原和关闭该对话框。  
   
--   在打开对话框的窗口上方和中心打开。  
+- 在打开对话框的窗口上方和中心打开。  
   
--   对话框应尽可能可以调整大小（以防对话框过小）并为用户提供合适的默认尺寸，需要分别设置默认和最小尺寸。  
+- 对话框应尽可能可以调整大小（以防对话框过小）并为用户提供合适的默认尺寸，需要分别设置默认和最小尺寸。  
   
--   按 ESC 键应该配置导致的键盘快捷方式**取消**按钮按下。 这通过设置来实现<xref:System.Windows.Controls.Button.IsCancel%2A>的属性**取消**按钮切换为`true`。  
+- 按 ESC 键应该配置导致的键盘快捷方式**取消**按钮按下。 这通过设置来实现<xref:System.Windows.Controls.Button.IsCancel%2A>的属性**取消**按钮切换为`true`。  
   
--   按 ENTER （或 RETURN） 键应该配置导致的键盘快捷方式**确定**按钮按下。 这通过设置来实现<xref:System.Windows.Controls.Button.IsDefault%2A>的属性**确定**按钮`true`。  
+- 按 ENTER （或 RETURN） 键应该配置导致的键盘快捷方式**确定**按钮按下。 这通过设置来实现<xref:System.Windows.Controls.Button.IsDefault%2A>的属性**确定**按钮`true`。  
   
  以下代码演示了这种配置。  
   
@@ -183,13 +183,13 @@ ms.locfileid: "59177406"
 #### <a name="validating-user-provided-data"></a>验证用户提供的数据  
  当打开对话框并且用户提供所需数据时，对话框出于以下原因负责确保提供的数据有效：  
   
--   从安全角度，应该验证所有输入。  
+- 从安全角度，应该验证所有输入。  
   
--   从特定于域的角度，数据验证可以防止代码处理错误数据，这可能引发异常。  
+- 从特定于域的角度，数据验证可以防止代码处理错误数据，这可能引发异常。  
   
--   从用户体验角度，对话框可以帮助用户显示他们输入的哪些数据无效。  
+- 从用户体验角度，对话框可以帮助用户显示他们输入的哪些数据无效。  
   
--   从性能角度，多层应用程序中的数据验证可以减少客户端和应用程序层之间的往返次数，尤其当应用程序由 Web 服务或基于服务器的数据库构成时。  
+- 从性能角度，多层应用程序中的数据验证可以减少客户端和应用程序层之间的往返次数，尤其当应用程序由 Web 服务或基于服务器的数据库构成时。  
   
  若要验证中的绑定的控件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您需要定义验证规则并将其与绑定相关联。 验证规则是派生的自定义类<xref:System.Windows.Controls.ValidationRule>。 下面的示例演示的验证规则， `MarginValidationRule`，哪些会检查绑定的值是否<xref:System.Double>和指定范围内。  
   
@@ -329,11 +329,11 @@ ms.locfileid: "59177406"
 #### <a name="closing-a-modeless-dialog-box"></a>关闭无模式对话框  
  因为<xref:System.Windows.Window.DialogResult%2A>不需要为其设置，可以使用系统关闭无模式对话框提供机制，包括以下：  
   
--   单击**关闭**标题栏中的按钮。  
+- 单击**关闭**标题栏中的按钮。  
   
--   按 ALT+F4。  
+- 按 ALT+F4。  
   
--   选择**关闭**从**系统**菜单。  
+- 选择**关闭**从**系统**菜单。  
   
  或者，你的代码可以调用<xref:System.Windows.Window.Close%2A>时**关闭**单击按钮。  
   

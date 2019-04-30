@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044127"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 方法
 使用指定的签名中，创建方法或全局函数的定义，并将令牌返回到该方法定义。  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>定义一个方法的 PInvoke  
  若要通过 PInvoke 调用每个非托管函数，必须定义表示目标的非托管函数的托管的方法。 若要定义的托管的方法，请使用`DefineMethod`某些设置为特定值，具体取决于 PInvoke 的使用方式的参数：  
   
--   True PInvoke-涉及到驻留在非托管 DLL 的外部的非托管方法的调用。  
+- True PInvoke-涉及到驻留在非托管 DLL 的外部的非托管方法的调用。  
   
--   本地 PInvoke-涉及到在当前托管模块中嵌入本机非托管方法的调用。  
+- 本地 PInvoke-涉及到在当前托管模块中嵌入本机非托管方法的调用。  
   
  下表中提供的参数设置。  
   

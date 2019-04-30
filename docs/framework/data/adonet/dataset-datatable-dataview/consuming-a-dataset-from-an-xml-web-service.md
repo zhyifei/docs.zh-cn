@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034471"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
 <xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**是"可序列化"，它可以被指定为输入还是输出而无需任何其他编码的 XML Web services 所需流式传输的内容**数据集**从 XML Web 服务到客户端并返回。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流、 通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  

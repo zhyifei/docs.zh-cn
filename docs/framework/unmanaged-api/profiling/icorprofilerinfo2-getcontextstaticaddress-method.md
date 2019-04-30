@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46fd79931e7f2f05b1b17ebca3f8cff28c152ff4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000657"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress 方法
 获取指定的上下文在作用域中的指定上下文的静态字段的地址。  
@@ -53,9 +53,9 @@ HRESULT GetContextStaticAddress(
 ## <a name="remarks"></a>备注  
  `GetContextStaticAddress`方法可能会返回以下值之一：  
   
--   如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
+- 如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
   
--   可能在垃圾回收堆的对象的地址。 使垃圾回收后，探查器不应假定它们是有效，则这些地址可能会回收后无效。  
+- 可能在垃圾回收堆的对象的地址。 使垃圾回收后，探查器不应假定它们是有效，则这些地址可能会回收后无效。  
   
  类的类构造函数完成之前，`GetContextStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，尽管可能已初始化的一些静态字段和根垃圾回收对象。  
   

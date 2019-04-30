@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031992"
 ---
 # <a name="advanced-text-formatting"></a>高级文本格式设置
 Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]用于在你的应用程序中包括的文本。 布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Controls.TextBlock>、 提供了最常见和常规使用用于呈现文本元素。 绘制[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，在绘图中加入格式化的文本提供一种方法。 在最高级别，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了一个可扩展的文本格式引擎，用于控制文本呈现，如文本存储管理、 文本运行格式管理和嵌入的对象管理的各个方面。  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_
   
  若要处理文本存储的虚拟化，文本存储必须派生自<xref:System.Windows.Media.TextFormatting.TextSource>。 <xref:System.Windows.Media.TextFormatting.TextSource> 定义文本格式化程序用于从文本存储中检索文本运行的方法。 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 是文本格式化程序用来检索文本的方法运行行格式设置中使用。 对调用<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>反复进行文本格式化程序直到发生以下情况之一：  
   
--   一个<xref:System.Windows.Media.TextFormatting.TextEndOfLine>或返回子类。  
+- 一个<xref:System.Windows.Media.TextFormatting.TextEndOfLine>或返回子类。  
   
--   文本运行的累积的宽度超出创建文本格式化程序是调用或对文本格式化程序的调用中指定的最大线条宽度<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>方法。  
+- 文本运行的累积的宽度超出创建文本格式化程序是调用或对文本格式化程序的调用中指定的最大线条宽度<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>方法。  
   
--   一个[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]返回换行序列，如"CF"、"LF"或"CRLF"。  
+- 一个[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]返回换行序列，如"CF"、"LF"或"CRLF"。  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>提供文本运行  

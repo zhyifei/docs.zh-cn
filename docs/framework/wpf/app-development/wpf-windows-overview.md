@@ -29,11 +29,11 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052724"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户与 Windows Presentation Foundation (WPF) 独立应用程序通过 windows 进行交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序使用来提供自己的窗口<xref:System.Windows.Window>类。 本主题介绍<xref:System.Windows.Window>之前介绍的创建和管理独立应用程序中的 windows 基础知识。  
@@ -51,29 +51,29 @@ ms.locfileid: "59296116"
   
  *非工作区*的一个窗口由实现[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]和包含几个部分的一个窗口所共有的大多数窗口，其中包括：  
   
--   边框。  
+- 边框。  
   
--   标题栏。  
+- 标题栏。  
   
--   图标。  
+- 图标。  
   
--   “最小化”、“最大化”和“还原”按钮。  
+- “最小化”、“最大化”和“还原”按钮。  
   
--   “关闭”按钮。  
+- “关闭”按钮。  
   
--   “系统”菜单，其中包含允许用户最小化、最大化、还原、移动和关闭窗口以及重设窗口大小的菜单项。  
+- “系统”菜单，其中包含允许用户最小化、最大化、还原、移动和关闭窗口以及重设窗口大小的菜单项。  
   
  *工作区*的一个窗口是窗口的非工作区中的区域和开发人员用于添加特定于应用程序的内容，如菜单栏、 工具栏和控件。  
   
  在中[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，由封装窗口<xref:System.Windows.Window>类，用于执行以下操作：  
   
--   显示窗口。  
+- 显示窗口。  
   
--   配置窗口的大小、位置和外观。  
+- 配置窗口的大小、位置和外观。  
   
--   托管特定于应用程序的内容。  
+- 托管特定于应用程序的内容。  
   
--   管理窗口的生存期。  
+- 管理窗口的生存期。  
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>实现窗口  
@@ -88,11 +88,11 @@ ms.locfileid: "59296116"
   
  若要启用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记文件和代码隐藏文件协同工作，需要以下项：  
   
--   在标记中，`Window`元素必须包括`x:Class`属性。 应用程序生成时，是否存在`x:Class`在标记文件会导致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]来创建`partial`派生的类<xref:System.Windows.Window>并且具有指定的名称`x:Class`属性。 这需要添加[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]命名空间声明[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 生成`partial`类实现`InitializeComponent`方法，调用以注册事件并设置标记中实现的属性。  
+- 在标记中，`Window`元素必须包括`x:Class`属性。 应用程序生成时，是否存在`x:Class`在标记文件会导致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]来创建`partial`派生的类<xref:System.Windows.Window>并且具有指定的名称`x:Class`属性。 这需要添加[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]命名空间声明[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 生成`partial`类实现`InitializeComponent`方法，调用以注册事件并设置标记中实现的属性。  
   
--   在代码隐藏中，类必须是`partial`具有相同名称指定的类`x:Class`属性在标记中，并且它必须派生自<xref:System.Windows.Window>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md))。  
+- 在代码隐藏中，类必须是`partial`具有相同名称指定的类`x:Class`属性在标记中，并且它必须派生自<xref:System.Windows.Window>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md))。  
   
--   在代码隐藏<xref:System.Windows.Window>类必须实现构造函数调用`InitializeComponent`方法。 `InitializeComponent` 实现由标记文件中生成的`partial`类，以注册事件和设置在标记中定义的属性。  
+- 在代码隐藏<xref:System.Windows.Window>类必须实现构造函数调用`InitializeComponent`方法。 `InitializeComponent` 实现由标记文件中生成的`partial`类，以注册事件和设置在标记中定义的属性。  
   
 > [!NOTE]
 >  添加一个新<xref:System.Windows.Window>到你的项目通过使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，则<xref:System.Windows.Window>通过使用标记和代码隐藏实现，并且包括必要的配置来创建作为标记和代码隐藏文件之间的关联此处所述。  
@@ -108,9 +108,9 @@ ms.locfileid: "59296116"
 ## <a name="configuring-a-window-definition-for-msbuild"></a>为 MSBuild 配置窗口定义  
  如何实现您的窗口确定如何将其配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]。 使用同时定义窗口[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记和代码隐藏：  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项。  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项。  
   
--   代码隐藏文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile`项。  
+- 代码隐藏文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile`项。  
   
  这如下所示[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]项目文件。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "59296116"
 #### <a name="window-ownership"></a>窗口所有权  
  通过使用打开的窗口<xref:System.Windows.Window.Show%2A>方法不具有与创建它的窗口的隐式关系; 用户可以与这两个窗口独立于另一个，这意味着两个窗口中可以执行以下操作：  
   
--   覆盖另 (除非其中一个窗口具有其<xref:System.Windows.Window.Topmost%2A>属性设置为`true`)。  
+- 覆盖另 (除非其中一个窗口具有其<xref:System.Windows.Window.Topmost%2A>属性设置为`true`)。  
   
--   在不影响另一个窗口的情况下最小化、最大化和还原。  
+- 在不影响另一个窗口的情况下最小化、最大化和还原。  
   
  某些窗口要求与打开它们的窗口保持某种关系。 例如，[!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)]应用程序可能打开属性窗口和工具窗口的典型行为是覆盖创建它们的窗口。 此外，此类窗口应始终与创建它们的窗口一起关闭、最小化、最大化和还原。 这种关系可以建立一个窗口，从而*自己*另一个，并通过设置来实现<xref:System.Windows.Window.Owner%2A>的属性*所有者窗口*引用*所有者窗口*。 这在下面的示例中显示。  
   
@@ -174,9 +174,9 @@ ms.locfileid: "59296116"
   
  建立所有权后：  
   
--   拥有的窗口可以通过检查的值来引用它的所有者窗口及其<xref:System.Windows.Window.Owner%2A>属性。  
+- 拥有的窗口可以通过检查的值来引用它的所有者窗口及其<xref:System.Windows.Window.Owner%2A>属性。  
   
--   所有者窗口可以发现它拥有通过检查的值的所有 windows 其<xref:System.Windows.Window.OwnedWindows%2A>属性。  
+- 所有者窗口可以发现它拥有通过检查的值的所有 windows 其<xref:System.Windows.Window.OwnedWindows%2A>属性。  
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>防止窗口激活  
@@ -184,21 +184,21 @@ ms.locfileid: "59296116"
   
  如果你的应用程序具有一个窗口，其中显示时不应激活，则可以设置其<xref:System.Windows.Window.ShowActivated%2A>属性设置为`false`然后才能调用<xref:System.Windows.Window.Show%2A>第一次的方法。 结果是：  
   
--   不会激活窗口。  
+- 不会激活窗口。  
   
--   窗口的<xref:System.Windows.Window.Activated>不会引发事件。  
+- 窗口的<xref:System.Windows.Window.Activated>不会引发事件。  
   
--   当前激活的窗口保持激活状态。  
+- 当前激活的窗口保持激活状态。  
   
  但是，只要用户通过单击工作区或非工作区激活了窗口，窗口就会变为激活状态。 这种情况下：  
   
--   已激活窗口。  
+- 已激活窗口。  
   
--   窗口的<xref:System.Windows.Window.Activated>引发事件。  
+- 窗口的<xref:System.Windows.Window.Activated>引发事件。  
   
--   停用之前激活的窗口。  
+- 停用之前激活的窗口。  
   
--   在窗口<xref:System.Windows.Window.Deactivated>和<xref:System.Windows.Window.Activated>按预期方式响应用户操作，随后会引发事件。  
+- 在窗口<xref:System.Windows.Window.Deactivated>和<xref:System.Windows.Window.Activated>按预期方式响应用户操作，随后会引发事件。  
   
 <a name="Window_Activation"></a>   
 ### <a name="window-activation"></a>窗口激活  
@@ -227,21 +227,21 @@ ms.locfileid: "59296116"
 ### <a name="closing-a-window"></a>关闭窗口  
  窗口的生存期在用户关闭它时终止。 可以使用非工作区中的元素关闭窗口，这些元素包括：  
   
--   **关闭**项**系统**菜单。  
+- **关闭**项**系统**菜单。  
   
--   按 ALT+F4。  
+- 按 ALT+F4。  
   
--   按下**关闭**按钮。  
+- 按下**关闭**按钮。  
   
  可以向工作区提供其他关闭窗口的机制，较为常见的机制包括：  
   
--   **退出**中的项**文件**菜单通常用于主应用程序窗口。  
+- **退出**中的项**文件**菜单通常用于主应用程序窗口。  
   
--   一个**关闭**中的项**文件**菜单中的，通常出现在辅助应用程序窗口。  
+- 一个**关闭**中的项**文件**菜单中的，通常出现在辅助应用程序窗口。  
   
--   一个**取消**按钮，通常出现在模式对话框。  
+- 一个**取消**按钮，通常出现在模式对话框。  
   
--   一个**关闭**按钮，通常出现在无模式对话框。  
+- 一个**关闭**按钮，通常出现在无模式对话框。  
   
  若要关闭窗口以响应其中一种自定义机制，您需要调用<xref:System.Windows.Window.Close%2A>方法。 下面的示例实现的功能，通过选择关闭窗口**退出**上**文件**菜单。  
   
@@ -266,13 +266,13 @@ ms.locfileid: "59296116"
   
  尽管可以通过在非客户端和客户端区域中提供的机制显式关闭窗口，窗口也可能隐式关闭应用程序的其他部分中的行为的结果或[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，其中包括：  
   
--   用户注销或关闭 Windows。  
+- 用户注销或关闭 Windows。  
   
--   窗口的所有者关闭 (请参阅<xref:System.Windows.Window.Owner%2A>)。  
+- 窗口的所有者关闭 (请参阅<xref:System.Windows.Window.Owner%2A>)。  
   
--   关闭主应用程序窗口和<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnMainWindowClose>。  
+- 关闭主应用程序窗口和<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnMainWindowClose>。  
   
--   调用 <xref:System.Windows.Application.Shutdown%2A>。  
+- 调用 <xref:System.Windows.Application.Shutdown%2A>。  
   
 > [!NOTE]
 >  窗口在关闭后无法重新打开。  
@@ -293,11 +293,11 @@ ms.locfileid: "59296116"
   
  此外可以指定的初始位置<xref:System.Windows.Window>第一次出现时通过设置<xref:System.Windows.Window.WindowStartupLocation%2A>具有以下项之一属性<xref:System.Windows.WindowStartupLocation>枚举值：  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认值）  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认值）  
   
--   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
+- <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
--   <xref:System.Windows.WindowStartupLocation.Manual>  
+- <xref:System.Windows.WindowStartupLocation.Manual>  
   
  如果启动位置指定为<xref:System.Windows.WindowStartupLocation.Manual>，并<xref:System.Windows.Window.Left%2A>并<xref:System.Windows.Window.Top%2A>属性未设置，<xref:System.Windows.Window>将要求的位置的 Windows 中显示。  
   
@@ -325,13 +325,13 @@ ms.locfileid: "59296116"
   
  如果想要的宽度和窗口的高度以适应窗口大小的大小的内容，则可以使用<xref:System.Windows.Window.SizeToContent%2A>属性，它具有以下值：  
   
--   <xref:System.Windows.SizeToContent.Manual>。 不起作用（默认值）。  
+- <xref:System.Windows.SizeToContent.Manual>。 不起作用（默认值）。  
   
--   <xref:System.Windows.SizeToContent.Width>。 适应内容宽度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
+- <xref:System.Windows.SizeToContent.Width>。 适应内容宽度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
   
--   <xref:System.Windows.SizeToContent.Height>。 适应内容高度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>到内容的高度。  
+- <xref:System.Windows.SizeToContent.Height>。 适应内容高度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>到内容的高度。  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>。 适应内容宽度和高度，具有相同的效果与设置这两<xref:System.Windows.FrameworkElement.MinHeight%2A>并<xref:System.Windows.FrameworkElement.MaxHeight%2A>的内容和设置这两个高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>。 适应内容宽度和高度，具有相同的效果与设置这两<xref:System.Windows.FrameworkElement.MinHeight%2A>并<xref:System.Windows.FrameworkElement.MaxHeight%2A>的内容和设置这两个高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
   
  以下示例显示了一个窗口，它在第一次显示时即自动调整垂直方向和水平方向上的大小以适应内容。  
   
@@ -381,11 +381,11 @@ ms.locfileid: "59296116"
   
  可以通过设置配置窗口的状态及其<xref:System.Windows.Window.WindowState%2A>属性，它可以具有下列任一<xref:System.Windows.WindowState>枚举值：  
   
--   <xref:System.Windows.WindowState.Normal>（默认值）  
+- <xref:System.Windows.WindowState.Normal>（默认值）  
   
--   <xref:System.Windows.WindowState.Maximized>  
+- <xref:System.Windows.WindowState.Maximized>  
   
--   <xref:System.Windows.WindowState.Minimized>  
+- <xref:System.Windows.WindowState.Minimized>  
   
  以下示例显示如何创建在打开时最大化显示的窗口。  
   
@@ -405,13 +405,13 @@ ms.locfileid: "59296116"
   
  你可以配置如何调整窗口大小通过设置其<xref:System.Windows.Window.ResizeMode%2A>属性，它可以是以下之一<xref:System.Windows.ResizeMode>枚举值：  
   
--   <xref:System.Windows.ResizeMode.NoResize>  
+- <xref:System.Windows.ResizeMode.NoResize>  
   
--   <xref:System.Windows.ResizeMode.CanMinimize>  
+- <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize>（默认值）  
+- <xref:System.Windows.ResizeMode.CanResize>（默认值）  
   
--   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
+- <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  如同<xref:System.Windows.Window.WindowStyle%2A>，窗口的大小调整模式是不太可能更改在其生存期内，这意味着，您将很可能设置从[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记。  
   
@@ -425,13 +425,13 @@ ms.locfileid: "59296116"
   
  若要控制窗口的边框类型获取，则设置其<xref:System.Windows.Window.WindowStyle%2A>属性的下列值之一<xref:System.Windows.WindowStyle>枚举：  
   
--   <xref:System.Windows.WindowStyle.None>  
+- <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认值）  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认值）  
   
--   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
+- <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
--   <xref:System.Windows.WindowStyle.ToolWindow>  
+- <xref:System.Windows.WindowStyle.ToolWindow>  
   
  在下图说明了这些窗口样式的效果：  
   

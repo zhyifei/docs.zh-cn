@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
 ms.openlocfilehash: c95ba40d606470f97d32d05b25c9588ed71cdc79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007924"
 ---
 # <a name="self-host"></a>自承载
 此示例演示如何在控制台应用程序中实现自承载服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服务配置文件已从 Web.config 重命名为 App.config，并修改为配置一个由主机使用的基址。 服务源代码已修改为实现一个静态 `Main` 函数，该函数创建并打开一个提供已配置的基址的服务主机。 服务实现已修改为将每个操作的输出写入控制台。 客户端未经修改，只是配置了服务的正确终结点地址。  

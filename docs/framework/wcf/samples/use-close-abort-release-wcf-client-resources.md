@@ -1,14 +1,14 @@
 ---
-title: 使用关闭和中止发布 WCF 客户端资源
+title: 使用“关闭”和“中止”发布 WCF 客户端资源
 description: Dispose 可以失败，并且网络出现故障时引发异常。 这可能会导致意外的行为。 相反，使用关闭和中止网络发生故障时释放客户端资源。
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
 ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007568"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>关闭和中止发布资源安全地时网络连接已删除
 
@@ -21,8 +21,7 @@ ms.locfileid: "57678964"
 
 C# 的“using”语句会导致调用 `Dispose`()。 它等效于 `Close`()，当发生网络错误时可能会引发异常。 由于对 `Dispose`() 的调用是在“using”块的右大括号处隐式发生的，因此导致异常的根源往往会被编写代码和阅读代码的人所忽略。 这是应用程序错误的潜在根源。
 
-
-  `DemonstrateProblemUsingCanThrow` 方法中演示的第一个问题是，右大括号引发异常，不执行右大括号后面的代码：
+`DemonstrateProblemUsingCanThrow` 方法中演示的第一个问题是，右大括号引发异常，不执行右大括号后面的代码：
 
 ```csharp
 using (CalculatorClient client = new CalculatorClient())
@@ -34,8 +33,7 @@ Console.WriteLine("Hope this code wasn't important, because it might not happen.
 
 即使 using 块中的内容不会引发异常或可以捕获 using 块中的所有异常，`Console.WriteLine` 也不会发生，因为右大括号处的隐式 `Dispose`() 调用可能会引发异常。
 
-
-  `DemonstrateProblemUsingCanThrowAndMask` 方法中演示的第二个问题是右大括号引发异常的另一种隐含情况：
+`DemonstrateProblemUsingCanThrowAndMask` 方法中演示的第二个问题是右大括号引发异常的另一种隐含情况：
 
 ```csharp
 using (CalculatorClient client = new CalculatorClient())

@@ -3,18 +3,18 @@ title: 3507 - ServiceEndpointAdded
 ms.date: 03/30/2017
 ms.assetid: c068fc0e-07ee-4551-9824-ea7216e1fe37
 ms.openlocfilehash: c787a1a5af752a3d08e2049cfa0b600b7739e56c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009833"
 ---
 # <a name="3507---serviceendpointadded"></a>3507 - ServiceEndpointAdded
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|3507|  
+|Id|3507|  
 |关键字|WFServices|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  
@@ -32,4 +32,4 @@ ms.locfileid: "33512055"
 |Address|xs:string|终结点的地址。|  
 |绑定|xs:string|终结点的绑定。|  
 |协定|xs:string|终结点的协定。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|应用程序域|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

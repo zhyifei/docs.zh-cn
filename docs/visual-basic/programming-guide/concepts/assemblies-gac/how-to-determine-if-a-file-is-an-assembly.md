@@ -3,11 +3,11 @@ title: 如何：确定文件是否为程序集 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
 ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022163"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>如何：确定文件是否为程序集 (Visual Basic)
 当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。 有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../framework/app-domains/assembly-manifest.md)。  

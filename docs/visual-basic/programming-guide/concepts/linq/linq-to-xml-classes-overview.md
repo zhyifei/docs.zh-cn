@@ -3,11 +3,11 @@ title: LINQ to XML 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051515"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML 类概述 (Visual Basic)
 本主题提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 命名空间中 <xref:System.Xml.Linq> 类的列表及每个类的简短说明。  
@@ -26,9 +26,9 @@ ms.locfileid: "58822825"
 ### <a name="xcontainer-class"></a>XContainer 类  
  <xref:System.Xml.Linq.XContainer> 是适用于可能具有子节点的所有节点的抽象基类。 下面的类派生自 <xref:System.Xml.Linq.XContainer> 类：  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>XDeclaration 类  
  <xref:System.Xml.Linq.XDeclaration> 表示一个 XML 声明。 XML 声明用于声明 XML 版本和文档的编码。 此外，XML 声明还指定 XML 文档是否为独立文档。 如果文档是独立文档，则在外部 DTD 或从内部子集引用的外部参数实体中不存在外部标记声明。  
@@ -55,15 +55,15 @@ ms.locfileid: "58822825"
 ### <a name="xnode-class"></a>XNode 类  
  <xref:System.Xml.Linq.XNode> 是一个抽象类，它表示 XML 树的节点。 下面的类派生自 <xref:System.Xml.Linq.XNode> 类：  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer 类  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> 提供用于比较节点的文档顺序的功能。  

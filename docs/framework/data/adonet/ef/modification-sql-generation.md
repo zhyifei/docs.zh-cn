@@ -3,11 +3,11 @@ title: 修改 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034122"
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 生成
 
@@ -56,7 +56,7 @@ DbDeleteCommandTree 表示单独行删除操作，表示为一个命令目录树
 
 当 Returning 不为 null 时，指示该命令返回一个读取器。 否则，该命令应返回一个标量值，指示所影响的（已插入或已更新的）行的数量。
 
-Returning 值指定基于已插入或已更新的行返回结果投影。 它仅可以属于表示行的 DbNewInstanceExpression 类型，其每个参数均为 DbPropertyExpression 并且位于表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。 Returning 属性中使用的 DbPropertyExpressions 表示的属性始终为存储生成的值或计算值。 在 DbInsertCommandTree 中，当插入行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Identity 或 StoreGeneratedPattern.Computed）时，Returning 不为 null。 在 DbUpdateCommandTrees 中，当更新行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Computed）时，Returning 不为 null。
+Returning 值指定基于已插入或已更新的行返回结果投影。 它仅可以属于表示行的 DbNewInstanceExpression 类型，其每个自变量均为 DbPropertyExpression 并且位于表示对相应 DbModificationCommandTree 的 Target 的引用的 DbVariableReferenceExpression 之上。 Returning 属性中使用的 DbPropertyExpressions 表示的属性始终为存储生成的值或计算值。 在 DbInsertCommandTree 中，当插入行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Identity 或 StoreGeneratedPattern.Computed）时，Returning 不为 null。 在 DbUpdateCommandTrees 中，当更新行的表中的属性至少有一个指定为存储生成的值或计算值（在 ssdl 中标记为 StoreGeneratedPattern.Computed）时，Returning 不为 null。
 
 #### <a name="setclauses-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>DbInsertCommandTree 和 DbUpdateCommandTree 中的 SetClauses
 
@@ -228,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-此用户代码生成以下传递给提供程序的命令目录树：
+此用户代码生成以下传递给提供程序的命令树：
 
 ```
 DbUpdateCommandTree
@@ -279,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-此用户代码生成以下传递给提供程序的命令目录树。
+此用户代码生成以下传递给提供程序的命令树。
 
 ```
 DbDeleteCommandTree

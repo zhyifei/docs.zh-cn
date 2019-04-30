@@ -9,11 +9,11 @@ ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049812"
 ---
 # <a name="metadata-interfaces"></a>元数据接口
 本节描述非托管接口，这些接口提供对由 .NET Framework 类型、方法、字段等公开的元数据的访问。  

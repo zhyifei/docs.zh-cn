@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009163"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中使用新记录行
 当你使用<xref:System.Windows.Forms.DataGridView>用于编辑应用程序中的数据，通常要使用户能够将新的数据行添加到数据存储。 <xref:System.Windows.Forms.DataGridView>控件通过其中总是最后一行以显示新记录，提供行来支持此功能。 它是使用其行标题中的星号 （*） 符号进行标记。 以下各节讨论一些应考虑启用程序与用于新记录的行时的情况。  
@@ -29,9 +29,9 @@ ms.locfileid: "59184816"
 ## <a name="the-rows-collection"></a>行集合  
  用于新记录的行包含在<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.Rows%2A>集合但其行为以不同的方式在两个方面：  
   
--   用于新记录的行不能删除从<xref:System.Windows.Forms.DataGridView.Rows%2A>集合以编程方式。 <xref:System.InvalidOperationException>如果尝试执行此操作，将引发。 用户也不能删除用于新记录的行。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>方法不会删除从此行<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。  
+- 用于新记录的行不能删除从<xref:System.Windows.Forms.DataGridView.Rows%2A>集合以编程方式。 <xref:System.InvalidOperationException>如果尝试执行此操作，将引发。 用户也不能删除用于新记录的行。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>方法不会删除从此行<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。  
   
--   用于新记录的行后，可以不添加任何行。 <xref:System.InvalidOperationException>如果尝试执行此操作会引发。 因此，为新记录行始终是中的最后一行<xref:System.Windows.Forms.DataGridView>控件。 上的方法<xref:System.Windows.Forms.DataGridViewRowCollection>中添加行 —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— 存在用于新记录的行时在内部调用插入方法。  
+- 用于新记录的行后，可以不添加任何行。 <xref:System.InvalidOperationException>如果尝试执行此操作会引发。 因此，为新记录行始终是中的最后一行<xref:System.Windows.Forms.DataGridView>控件。 上的方法<xref:System.Windows.Forms.DataGridViewRowCollection>中添加行 —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— 存在用于新记录的行时在内部调用插入方法。  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Visual 自定义项的行的新记录  
  创建新记录所对应的行时，它基于指定的行<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性。 未指定此行的任何单元格样式继承从其他属性。 有关单元格的样式继承的详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)。  

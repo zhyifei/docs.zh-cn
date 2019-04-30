@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991236"
 ---
 # <a name="queues-overview"></a>队列概述
 本节介绍与排队通信相关的一般概念和核心概念。 后续各节将有关此处所述的队列概念中如何显示在 Windows Communication Foundation (WCF) 的详细信息。  
@@ -36,9 +36,9 @@ ms.locfileid: "59099763"
 ## <a name="queues-and-transactions"></a>队列和事务  
  事务允许您将一组操作组合到一起，这样如果一个操作失败，所有的操作都将失败。 事务使用方法的一个示例：某人使用 ATM 将存款帐户中的 1,000 美元转存到他的支票帐户中。 需要的操作如下：  
   
--   从存款帐户中取出 1,000 美元。  
+- 从存款帐户中取出 1,000 美元。  
   
--   将 1,000 美元存入支票帐户中。  
+- 将 1,000 美元存入支票帐户中。  
   
  如果第一步操作成功完成，即从存款帐户中取出了 1,000 美元，但没有完成第二步操作，则将会丢失 1,000 美元，因为这笔钱已经从存款帐户中取出。 为了保持帐户处于有效状态，如果一个操作失败，则两个操作都必须无效。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "59099763"
   
  任何错误，例如消息无法到达目标队列或生存时间即将过期，都必须单独处理。 因此通常情况下，排队应用程序会写入两组逻辑：  
   
--   发送和接收消息的普通客户端和服务逻辑。  
+- 发送和接收消息的普通客户端和服务逻辑。  
   
--   处理失败传输或传送中的消息的补偿逻辑。  
+- 处理失败传输或传送中的消息的补偿逻辑。  
   
  下面的部分讨论以下概念。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: 43f8439708c73e8e5241a923360caf549bf09d8b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017953"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions > 元素
 包含将 XSD 类型映射到 .NET Framework 类型时 <xref:System.Xml.Serialization.XmlSchemaImporter> 所用的类型。 有关配置文件的详细信息，请参阅[配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)。  

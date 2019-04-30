@@ -16,11 +16,11 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051255"
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 应用程序开发人员拥有丰富的打印和打印系统管理新[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -43,21 +43,21 @@ ms.locfileid: "59075855"
   
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径的优势巨大，其中包括：  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] 打印支持  
+- [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] 打印支持  
   
--   对高级颜色配置文件的本机支持（包括 32 位/通道 (bpc)、CMYK、已命名的颜色、n 墨迹）以及对透明和渐变的本机支持。  
+- 对高级颜色配置文件的本机支持（包括 32 位/通道 (bpc)、CMYK、已命名的颜色、n 墨迹）以及对透明和渐变的本机支持。  
   
--   改进的打印性能的同时在.NET Framework 和[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]基于应用程序。  
+- 改进的打印性能的同时在.NET Framework 和[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]基于应用程序。  
   
--   行业标准 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 格式。  
+- 行业标准 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 格式。  
   
  对于基本打印方案，提供了简单直观的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]只需单一入口点即可进入用户界面、完成配置和作业提交。 对于高级方案，为 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 自定义（或根本没有 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]）、同步或异步打印以及批量打印功能添加了附加支持。 这两个选项在完全或部分信任模式下都提供打印支持。  
   
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 的设计充分考虑了扩展性。 使用扩展性框架，可以将特性和功能以模块化方式添加到 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 中。 扩展性功能包括：  
   
--   打印架构。 公共架构将定期进行更新，并可以实现设备功能的迅速扩展。 （请参阅下面的 **PrintTicket 和 PrintCapabilities**。）  
+- 打印架构。 公共架构将定期进行更新，并可以实现设备功能的迅速扩展。 （请参阅下面的 **PrintTicket 和 PrintCapabilities**。）  
   
--   可扩展筛选器管道。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印机驱动程序 (XPSDrv) 筛选器管道设计用于启用直接和可缩放的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档打印。 有关详细信息，请参阅[XPSDrv 的打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
+- 可扩展筛选器管道。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印机驱动程序 (XPSDrv) 筛选器管道设计用于启用直接和可缩放的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档打印。 有关详细信息，请参阅[XPSDrv 的打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
   
 ### <a name="print-path-architecture"></a>打印路径体系结构  
  虽然两个[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].NET Framework 应用程序都支持[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序使用[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]到[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]转换来创建[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]格式的内容对于[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]打印机驱动程序 (XPSDrv)。 不要求这些应用程序使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径，而可以继续使用基于 [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] 的打印。 但是，大多数 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能和增强功能仅可用于面向 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径的应用程序。  
@@ -110,7 +110,7 @@ ms.locfileid: "59075855"
 
 对于不需要 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能或支持的应用程序，当前的 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 打印路径保持不变。  
   
--   有关其他参考资料[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]打印路径和各种[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]转换选项，请参见[Microsoft XPS 文档转换器 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)并[XPSDrv 的打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。  
+- 有关其他参考资料[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]打印路径和各种[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]转换选项，请参见[Microsoft XPS 文档转换器 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)并[XPSDrv 的打印机驱动程序](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。  
   
 <a name="XPS_Driver_Model_intro"></a>   
 ## <a name="xpsdrv-driver-model"></a>XPSDrv 驱动程序模型  
@@ -120,19 +120,19 @@ ms.locfileid: "59075855"
   
  当使用面向 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印机驱动程序 (XPSDrv) 的[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档时，与其 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] 等效项相比，后台打印文件的大小通常更小；不过，也存在例外情况：  
   
--   相当复杂、分为多层或者编写效率低下的向量图形可能比同一图形的位图图形更大。  
+- 相当复杂、分为多层或者编写效率低下的向量图形可能比同一图形的位图图形更大。  
   
--   出于屏幕显示的目的，XPS 文件中嵌入了设备字体以及基于计算机的字体，而 GDI 打印后台文件未嵌入设备字体。 这两种字体都划分了子集（请参见下面的内容），而且打印机驱动程序可以在将文件传输给打印机之前删除这些设备字体。  
+- 出于屏幕显示的目的，XPS 文件中嵌入了设备字体以及基于计算机的字体，而 GDI 打印后台文件未嵌入设备字体。 这两种字体都划分了子集（请参见下面的内容），而且打印机驱动程序可以在将文件传输给打印机之前删除这些设备字体。  
   
  可通过几种机制来减小后台打印文件的大小：  
   
--   **字体子集划分**。 只有在实际的文档中使用的字符才存储在 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文件中。  
+- **字体子集划分**。 只有在实际的文档中使用的字符才存储在 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文件中。  
   
--   **高级图形支持**。 对透明和渐变基元的本机支持可避免 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档中的内容光栅化。  
+- **高级图形支持**。 对透明和渐变基元的本机支持可避免 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档中的内容光栅化。  
   
--   **公共资源的识别**。 将多次使用的资源（如表示公司徽标的图像）视为共享资源，并且只加载一次。  
+- **公共资源的识别**。 将多次使用的资源（如表示公司徽标的图像）视为共享资源，并且只加载一次。  
   
--   **ZIP 压缩**。 所有 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档均使用 ZIP 压缩。  
+- **ZIP 压缩**。 所有 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档均使用 ZIP 压缩。  
   
 ## <a name="see-also"></a>请参阅
 

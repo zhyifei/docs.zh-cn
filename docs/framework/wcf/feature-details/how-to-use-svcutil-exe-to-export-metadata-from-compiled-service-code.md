@@ -3,20 +3,20 @@ title: 如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
 ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047330"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
 Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型的元数据，如下所示：  
   
--   若要使用 Svcutil.exe 为一组程序集导出所有已编译服务协定的元数据，请将这些程序集指定为输入参数。 这是默认行为。  
+- 若要使用 Svcutil.exe 为一组程序集导出所有已编译服务协定的元数据，请将这些程序集指定为输入参数。 这是默认行为。  
   
--   若要使用 Svcutil.exe 导出已编译服务的元数据，请将该（这些）服务程序集指定为输入参数。 必须使用 `/serviceName` 选项来指示要导出的服务的配置名称。 Svcutil.exe 自动为指定的可执行程序集加载配置文件。  
+- 若要使用 Svcutil.exe 导出已编译服务的元数据，请将该（这些）服务程序集指定为输入参数。 必须使用 `/serviceName` 选项来指示要导出的服务的配置名称。 Svcutil.exe 自动为指定的可执行程序集加载配置文件。  
   
--   若要导出一组程序集内的所有数据协定类型，请使用 `/dataContractOnly` 选项。  
+- 若要导出一组程序集内的所有数据协定类型，请使用 `/dataContractOnly` 选项。  
   
 > [!NOTE]
 >  请使用 `/reference` 选项来指定所有相关程序集的文件路径。  

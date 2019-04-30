@@ -8,11 +8,11 @@ helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
 ms.openlocfilehash: 315154b37218c0a6845f0a46149fc056780ee650
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051307"
 ---
 # <a name="how-to-build-a-table-programmatically"></a>如何：以编程方式生成表
 以下示例演示如何以编程方式创建<xref:System.Windows.Documents.Table>并填充其内容。 表的内容被分为五个行 (由<xref:System.Windows.Documents.TableRow>中所含对象<xref:System.Windows.Documents.Table.RowGroups%2A>对象) 和六列 (由<xref:System.Windows.Documents.TableColumn>对象)。 各行用于不同的显示目的，其中，标题行用于显示整个表的标题，标头行用于描述表中的数据列，而页脚行则包含摘要信息。  请注意，“标题”行、“标头”行和“页脚”行并非表格所固有的，它们只是具有不同特征的行。 表单元格包含实际内容，可以包含文本、 图像或几乎任何其他[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]元素。  

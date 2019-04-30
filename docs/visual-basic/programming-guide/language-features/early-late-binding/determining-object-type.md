@@ -10,11 +10,11 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050514"
 ---
 # <a name="determining-object-type-visual-basic"></a>确定对象类型 (Visual Basic)
 一般的对象变量 (也就是说，变量声明为`Object`) 可以包含来自任何类的对象。 使用类型的变量时`Object`，可能需要采取不同操作基于对象的类; 例如，某些对象可能的特定属性或方法不支持。 Visual Basic 提供两种方法来确定哪种类型的对象存储在一个对象变量：`TypeName`函数和`TypeOf...Is`运算符。  

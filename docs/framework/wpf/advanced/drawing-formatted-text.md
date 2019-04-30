@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
 ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051619"
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题提供的功能的概述<xref:System.Windows.Media.FormattedText>对象。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  

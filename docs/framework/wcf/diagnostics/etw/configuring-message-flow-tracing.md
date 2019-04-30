@@ -3,14 +3,14 @@ title: 配置消息流跟踪
 ms.date: 03/30/2017
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
 ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999513"
 ---
 # <a name="configuring-message-flow-tracing"></a>配置消息流跟踪
-启用 Windows Communication Foundation (WCF) 活动跟踪后，端到端活动 Id 分配给整个 WCF 堆栈的逻辑活动。 在 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 中，此功能现在具备性能更高的版本。它与 Windows 事件跟踪 (ETW) 一起使用，称为消息流跟踪。 启用此功能时，端对端活动 ID 取自（如果为空，则分配到）传入消息，并传播到在通道解码消息之后发出的所有跟踪事件。 客户通过此功能，可以在解码来自不同服务的跟踪日志后重新构造消息流。  
+启用 Windows Communication Foundation (WCF) 的活动跟踪后，端到端活动 Id 将分配给在整个 WCF 堆栈的逻辑活动。 在 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 中，此功能现在具备性能更高的版本。它与 Windows 事件跟踪 (ETW) 一起使用，称为消息流跟踪。 启用此功能时，端对端活动 ID 取自（如果为空，则分配到）传入消息，并传播到在通道解码消息之后发出的所有跟踪事件。 客户通过此功能，可以在解码来自不同服务的跟踪日志后重新构造消息流。  
   
  检测到应用程序存在问题后，可以启用跟踪，然后在解决问题之后立即禁用跟踪。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33804841"
 > [!NOTE]
 >  由于 `endToEndTracing` 配置元素驻留在 Web.config 文件中，因此不能采用与 ETW 一样的方法来动态配置该配置元素。 若要使 `endToEndTracing` 配置元素生效，必须回收应用程序。  
   
- 活动通过一个标识符（称为活动 ID）的交换进行关联。 此标识符是 GUID，由 System.Diagnostics.CorrelationManager 类生成。 如果您操作 System.Diagnostics.Trace.CorrelationManager.ActivityID，请确保在执行控制传输回 WCF 代码时，值设置为原始值。  此外，如果您使用异步 WCF 编程模型，请确保在线程之间传输 System.Diagnostics.Trace.CorrelationManager.ActivityID。  
+ 活动通过一个标识符（称为活动 ID）的交换进行关联。 此标识符是 GUID，由 System.Diagnostics.CorrelationManager 类生成。 如果你操作 System.Diagnostics.Trace.CorrelationManager.ActivityID，请确保在执行控制传输回 WCF 代码时，值设置为原始值。  此外，如果您使用异步 WCF 编程模型，请确保在线程之间传输 System.Diagnostics.Trace.CorrelationManager.ActivityID。  
   
 ## <a name="message-flow-tracing-and-rest-services"></a>消息流跟踪和 REST 服务  
  消息流跟踪使您能够端对端跟踪请求。  借助于基于 SOAP 的服务，将在 SOAP 消息标头中发送活动 ID。 REST 请求不包含此标头，因此改用特殊的 HTTP 事件标头。 下面的代码段演示如何以编程方式检索活动 ID的值：  
@@ -43,7 +43,7 @@ if (OperationContext.Current.IncomingMessageProperties.TryGetValue(HttpRequestMe
 }
 ```
 
- 您可以使用下面的代码，以编程方式添加标头：  
+ 你可以使用下面的代码，以编程方式添加标头：  
   
 ```csharp  
 HttpContent content = new StreamContent(contentStream);  

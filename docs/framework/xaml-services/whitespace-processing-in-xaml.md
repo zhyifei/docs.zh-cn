@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025428"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML 中的空白处理
 XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器实现。 本主题介绍这些 XAML 语言规则。 它还介绍了由定义的其他空格处理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 处理器和序列化的 XAML 编写器的实现。  
@@ -41,13 +41,13 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>内部文本和字符串基元中的空白区域  
  先前的标准化规则适用于 XAML 元素中找到的内部文本。 标准化后，XAML 处理器将所有内部文本转换为适当的类型，如下所示：  
   
--   如果属性的类型不是一个集合，但不直接是 <xref:System.Object> 类型，则 XAML 处理器会尝试使用其类型转换器来转换为该类型。 此处的转换失败将导致编译时错误。  
+- 如果属性的类型不是一个集合，但不直接是 <xref:System.Object> 类型，则 XAML 处理器会尝试使用其类型转换器来转换为该类型。 此处的转换失败将导致编译时错误。  
   
--   如果该属性的类型是一个集合，并且内部文本是连续的（无干扰元素标记），则内部文本解析为单个 <xref:System.String>。 如果集合类型不能接受 <xref:System.String>，这也会导致编译时错误。  
+- 如果该属性的类型是一个集合，并且内部文本是连续的（无干扰元素标记），则内部文本解析为单个 <xref:System.String>。 如果集合类型不能接受 <xref:System.String>，这也会导致编译时错误。  
   
--   如果该属性的类型为 <xref:System.Object>，则内部文本解析为单个 <xref:System.String>。 如果存在干扰元素标记，这将导致编译时错误，因为 <xref:System.Object> 类型表示单个对象（<xref:System.String> 或其他）。  
+- 如果该属性的类型为 <xref:System.Object>，则内部文本解析为单个 <xref:System.String>。 如果存在干扰元素标记，这将导致编译时错误，因为 <xref:System.Object> 类型表示单个对象（<xref:System.String> 或其他）。  
   
--   如果属性的类型是一个集合，并且内部文本是不连续的，则第一个子字符串将转换为 <xref:System.String> 并添加为集合项，干扰元素将添加为集合项，并且最后尾随的子字符串（如果有）将作为第三个 <xref:System.String> 项添加到集合。  
+- 如果属性的类型是一个集合，并且内部文本是不连续的，则第一个子字符串将转换为 <xref:System.String> 并添加为集合项，干扰元素将添加为集合项，并且最后尾随的子字符串（如果有）将作为第三个 <xref:System.String> 项添加到集合。  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>保留空白  

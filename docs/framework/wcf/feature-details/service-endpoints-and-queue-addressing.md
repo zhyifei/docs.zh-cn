@@ -3,11 +3,11 @@ title: 服务终结点和队列寻址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050384"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服务终结点和队列寻址
 本主题讨论客户端如何对从队列中读取的服务进行寻址以及服务终结点如何映射到队列。 请注意下, 图显示经典 Windows Communication Foundation (WCF) 排队应用程序部署。  
@@ -34,11 +34,11 @@ ms.locfileid: "59172518"
   
  其中：  
   
--   \<*主机名*> 是承载目标队列的计算机的名称。  
+- \<*主机名*> 是承载目标队列的计算机的名称。  
   
--   [private] 可选。 它在对作为专用队列的目标队列寻址时使用。 若要对公共队列寻址，不能指定 private。 请注意，与 MSMQ 路径不同中已有不包含"$"WCF URI 形式。  
+- [private] 可选。 它在对作为专用队列的目标队列寻址时使用。 若要对公共队列寻址，不能指定 private。 请注意，与 MSMQ 路径不同中已有不包含"$"WCF URI 形式。  
   
--   \<*队列名称*> 是队列的名称。 队列名还可以引用子队列。 因此， \<*队列名称*> = \<*队列名称*> [;*子队列名*]。  
+- \<*队列名称*> 是队列的名称。 队列名还可以引用子队列。 因此， \<*队列名称*> = \<*队列名称*> [;*子队列名*]。  
   
  示例 1:若要解决的专用队列 PurchaseOrders 对计算机 abc atadatum.com 上承载，则 URI 将为 net.msmq: //abc.adatum.com/private/purchaseorders。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59172518"
 ### <a name="multiple-contracts-in-a-queue"></a>队列中存在多个协定  
  队列中的消息可以实现不同的协定。 在这种情况下，下列条件中必须有一个成立才能成功读取并处理所有消息：  
   
--   为服务指定一个实现所有协定的终结点。 此为推荐方法。  
+- 为服务指定一个实现所有协定的终结点。 此为推荐方法。  
   
--   指定多个具有不同协定的终结点，但要确保所有终结点都使用相同的 `NetMsmqBinding` 对象。 ServiceModel 中的调度逻辑使用一个消息泵，它从传输通道中读取消息以进行调度，并最终根据相应的协定将消息多路分解到不同的终结点。 消息泵是为侦听 URI/绑定对创建的。 队列地址被排队侦听器用作侦听 URI。 通过让所有终结点使用相同的绑定对象，可以确保使用单个消息泵来读取消息，并且根据协定将消息多路分解到相关终结点。  
+- 指定多个具有不同协定的终结点，但要确保所有终结点都使用相同的 `NetMsmqBinding` 对象。 ServiceModel 中的调度逻辑使用一个消息泵，它从传输通道中读取消息以进行调度，并最终根据相应的协定将消息多路分解到不同的终结点。 消息泵是为侦听 URI/绑定对创建的。 队列地址被排队侦听器用作侦听 URI。 通过让所有终结点使用相同的绑定对象，可以确保使用单个消息泵来读取消息，并且根据协定将消息多路分解到相关终结点。  
   
 ### <a name="srmp-messaging"></a>SRMP 消息传递  
  如前所述，可以使用 SRMP 协议进行队列到队列的传输。 当 HTTP 传输协议在传输队列和目标队列之间传输消息时，经常使用这一协议。  

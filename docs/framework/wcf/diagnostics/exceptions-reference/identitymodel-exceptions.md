@@ -3,10 +3,11 @@ title: IdentityModel 异常
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
 ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998512"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 异常
 本主题列出 IdentityModel 生成的所有异常。  
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/04/2018
 |SAMLAttributeMissingNameAttributeOnRead|缺少所读取的 SamlAttribute 的“Name”或其长度为 0。|  
 |UnknownICryptoType|不支持 ICrypto 实现。|  
 |TraceCodeSecurityTokenProviderClosed|已关闭安全令牌提供程序。|  
-|SAMLUnableToLoadAdvice|无法加载\<saml:advice > 元素。|  
+|SAMLUnableToLoadAdvice|未能加载\<saml: advice > 元素。|  
 |SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|缺少 SamlAuthenticationStatement 的所读取的“AuthenticationMethod”属性或其长度为 0。|  
 |UnsupportedTransformAlgorithm|不支持的转换或规范化算法。|  
 |SAMLAudienceRestrictionShouldHaveOneAudience|SamlAudienceRestrictionCondition 必须包含至少一个受众 (URI)。|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 |TraceCodeSecuritySessionClosedFaultReceived|客户端安全会话接收到来自服务器的会话已关闭错误。|  
 |TraceCodeIssuanceTokenProviderRedirectApplied|IssuanceTokenProvider 已应用重定向标头。|  
 |TraceCodeSecuritySessionClosedFaultSendFailure|向客户端发送安全会话已关闭错误时发生故障。|  
-|ValueMustBeZero|此自变量的值必须为 0。|  
+|ValueMustBeZero|此参数的值必须为 0。|  
 |SAMLUnableToResolveSignatureKey|无法解析在 SamlAssertion 签名中找到的 SecurityKeyIdentifier。 无法验证特定颁发机构的 SamlAssertion 签名。|  
 |X509IsNotInTrustedStore|特定的 X.509 证书不在被信任的人的存储区中。|  
 |SAMLElementNotRecognized|不支持此特定元素。|  
@@ -79,15 +80,15 @@ ms.lasthandoff: 05/04/2018
 |SAMLSignatureAlreadyRead|已在 SAML 断言中读取签名。|  
 |AlgorithmAndPrivateKeyMisMatch|指定的算法和私钥不匹配。|  
 |EmptyTransformChainNotSupported|不支持空转换链。|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;'offset' 超出范围。|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;'size' 超出范围。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全令牌管理器无法为特定需求创建令牌身份验证器。|  
+|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;offset 不在范围。|  
+|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;大小不在范围。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全令牌管理器无法为特定需求创建令牌身份验证器。|  
 |UnableToCreateKeyedHashAlgorithm|无法从特定签名算法的特定值创建 KeyedHashAlgorithm。|  
-|SAMLUnableToLoadAssertion|\<Saml:assertion > 元素加载失败。|  
-|X509FindValueMismatchMulti|特定的 X509FindType 要求自变量 findValue 的类型为两个值之一。 而自变量 findValue 为另外的类型。|  
+|SAMLUnableToLoadAssertion|\<Saml:assertion > 未能加载元素。|  
+|X509FindValueMismatchMulti|特定的 X509FindType 要求参数 findValue 的类型为两个值之一。 而自变量 findValue 为另外的类型。|  
 |TraceCodeSecurityIdentityDeterminationSuccess|已确定 EndpointAddress 的身份。|  
 |UndefinedUseOfPrefixAtElement|元素使用的特定前缀未定义命名空间。|  
 |TraceCodeSecuritySessionResponderOperationFailure|服务器上安全会话操作失败。|  
-|CannotFindCert|无法使用下列特定的搜索标准找到 X.509 证书：StoreName、StoreLocation、FindType、FindValue。|  
+|CannotFindCert|找不到使用特定的搜索条件的 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue。|  
 |X509InvalidUsageTime|特定的 X.509 证书使用时间无效。 使用时间不在要求的 NotBefore 时间和 NotAfter 时间之间。|  
 |TraceCodeSecurityIdentityDeterminationFailure|无法确定 EndpointAddress 的身份。|  
 |AsyncObjectAlreadyEnded|已对此异步结果对象调用 End 方法。|  
@@ -99,11 +100,11 @@ ms.lasthandoff: 05/04/2018
 |SAMLAssertionMissingMajorVersionAttributeOnRead|缺少所读取的 SamlAssertion 的 MajorVersion 或其长度为 0。|  
 |SamlAttributeClaimRightShouldBePossessProperty|此 SamlAttribute 构造函数需要声明权利具有值 System.IdentityModel.Claims.Rights.PossessProperty。|  
 |AuthorizationPolicyEvaluated|已评估带有特定 ID 的策略。|  
-|SAMLUnableToLoadCondtions|\<Saml:conditions > 元素加载失败。|  
+|SAMLUnableToLoadCondtions|\<Saml: conditions > 未能加载元素。|  
 |AESKeyLengthNotSupported|不支持特定位密钥。 仅支持 128、192 和 256 位密钥。|  
 |UserNameCannotBeEmpty|用户名不能为空。|  
 |AlgorithmAndPublicKeyMisMatch|指定的算法和公钥不匹配。|  
-|SAMLUnableToLoadCondtion|\<Saml:conditions > 元素加载失败。|  
+|SAMLUnableToLoadCondtion|\<Saml: conditions > 未能加载元素。|  
 |SamlAssertionMissingSigningCredentials|尚未在 SamlAssertion 上设置 SigningCredentials。 必须签名 SamlAssertion，请在要处理的 SamlAssertion 上设置有效的 SigningCredentials。|  
 |SspiPayloadNotEncrypted|未使用 SSPI 安全上下文加密二进制数据。|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|所读取的 SamlAuthorizationDecisionStatement 不包含任何 SamlAction。|  
@@ -124,12 +125,12 @@ ms.lasthandoff: 05/04/2018
 |AESCryptGetKeyParamFailed|获取特定的密钥参数失败。|  
 |InvalidNamespaceForEmptyPrefix|空前缀的命名空间无效。|  
 |AESCipherModeNotSupported|不支持特定的密码模式。 仅支持 CBC。|  
-|ArgumentCannotBeEmptyString|自变量必须为非空字符串。|  
+|ArgumentCannotBeEmptyString|参数必须为非空字符串。|  
 |SAMLAssertionMissingMinorVersionAttributeOnRead|缺少所读取的 SamlAssertion 的 MinorVersion 或其长度为 0。|  
 |SpecifiedStringNotAvailableInDictionary|指定的字符串不是当前字典中的项。|  
 |KerberosApReqInvalidOrOutOfMemory|AP-REQ 无效或系统没有足够内存。|  
 |FailLogonUser|指定用户的 LogonUser 失败。 请确保用户具有有效的 Windows 帐户。|  
-|ValueMustBeNonNegative|此参数的值必须为非负。|  
+|ValueMustBeNonNegative|此自变量的值必须为非负。|  
 |X509ValidationFail|指定的 X.509 证书验证失败。|  
 |TraceCodeSecuritySessionRequestorOperationSuccess|客户端已成功完成安全会话操作。|  
 |SAMLActionNameRequiredOnRead|缺少 SamlAction 读取的字符串或其长度为 0。|  
@@ -137,9 +138,9 @@ ms.lasthandoff: 05/04/2018
 |SAMLAssertionIdRequired|SamlAssertion 的“assertionId”不能为 Null 或为空。|  
 |InvalidOperationForWriterState|指定的操作在指定的 XmlWriter 状态下无效。|  
 |CannotValidateSecurityTokenType|指定的安全令牌身份验证器无法验证指定类型的令牌。|  
-|X509FindValueMismatch|指定的 X509FindType 要求参数 findValue 的类型为指定值。 而参数 findValue 为另外的类型。|  
+|X509FindValueMismatch|指定的 X509FindType 要求自变量 findValue 的类型为指定值。 而自变量 findValue 为另外的类型。|  
 |TraceCodeSecurityClientSessionCloseSent|Close 消息由客户端安全会话发送。|  
-|SuiteDoesNotAcceptAlgorithm|指定的算法组不接受指定操作的指定算法。|  
+|SuiteDoesNotAcceptAlgorithm|指定的算法套件不接受指定操作的指定算法。|  
 |TraceCodeSecuritySessionRequestorOperationFailure|客户端安全会话操作失败。|  
 |SAMLUnableToLoadStatement|加载 SamlStatement 失败。|  
 |InnerReaderMustBeAtElement|元素必须有内部读取器。|  
@@ -173,13 +174,13 @@ ms.lasthandoff: 05/04/2018
 |SAMLSubjectRequiresNameIdentifierOrConfirmationMethod|SamlSubject 要求指定“NameIdentifier”或“ConfirmationMethod”。 但二者都未指定。|  
 |SAMLAttributeMissingNamespaceAttributeOnRead|缺少所读取的 SamlAttribute 的“Namespace”或其长度为 0。|  
 |SAMLSubjectConfirmationClauseMissingConfirmationMethodOnRead|所读取的 SamlSubjectConfirmation 上找不到“ConfirmationMethod”。|  
-|SecurityTokenRequirementHasInvalidTypeForProperty|令牌要求的指定属性有意外类型。 属性类型应为其他值。|  
+|SecurityTokenRequirementHasInvalidTypeForProperty|令牌需求的指定属性有意外类型。 属性类型应为其他值。|  
 |TraceCodeNegotiationTokenProviderAttached|已附加 NegotiationTokenProvider。|  
 |TraceCodeSpnegoClientNegotiationCompleted|SpnegoTokenProvider 已完成 SSPI 协商。|  
 |SAMLUnableToLoadUnknownElement|选定的 SamlSerializer 无法反序列化此元素。 请注册自定义 SamlSerializer 来反序列化自定义元素。|  
 |CreateSequenceRefused|RM 目标已经拒绝创建顺序请求。|  
 |TraceCodeSecuritySessionRedirectApplied|已重定向客户端安全会话。|  
-|SecurityTokenRequirementDoesNotContainProperty|令牌需求不包含指定的属性。|  
+|SecurityTokenRequirementDoesNotContainProperty|令牌要求不包含指定的属性。|  
 |SAMLAttributeValueCannotBeNull|SamlAttribute 中找到的 attributeValues 之一为 Null 值。 请确保创建 SamlAttribute 时列表不为 Null。|  
 |ValueMustBeGreaterThanZero|此参数的值必须大于 0。|  
 |TraceCodeNegotiationAuthenticatorAttached|已附加 NegotiationTokenAuthenticator。|  
@@ -206,7 +207,7 @@ ms.lasthandoff: 05/04/2018
 |KeyIdentifierCannotCreateKey|SecurityKeyIdentifier 没有任何可以创建密钥的子句。|  
 |X509IsInUntrustedStore|指定的 X.509 证书在不受信任的证书存储区中。|  
 |UnexpectedXmlChildNode|指定类型的指定的 XML 子节点不是指定元素所预期的。|  
-|TokenDoesNotMeetKeySizeRequirements|指定的令牌不满足指定算法组的密钥大小要求。|  
+|TokenDoesNotMeetKeySizeRequirements|指定的令牌不满足指定算法套件的密钥大小需求。|  
 |TraceCodeSecuritySessionRequestorStartOperation|已在客户端启动安全会话操作。|  
 |InvalidHexString|无效的十六进制字符串格式。|  
 |SamlAttributeClaimResourceShouldBeAString|此 SamlAttribute 构造函数要求声明的资源为“string”类型。|  
@@ -218,15 +219,15 @@ ms.lasthandoff: 05/04/2018
 |TraceCodeSecurityTokenAuthenticatorOpened|已打开安全令牌身份验证器。|  
 |RequiredAttributeMissing|指定的元素需要指定的属性。|  
 |LocalIdCannotBeEmpty|localId 不能为空。 请指定有效的“localId”。|  
-|ValueMustBeInRange|此参数的值必须在指定的范围内。|  
+|ValueMustBeInRange|此自变量的值必须在指定的范围内。|  
 |TraceCodeIssuanceTokenProviderBeginSecurityNegotiation|IssuanceTokenProvider 已启动新的安全协商。|  
 |InvalidNtMapping|指定的 X.509 证书无法映射到 Windows 帐户。 需要 UPN 主题替换名称。|  
 |AESCryptSetKeyParamFailed|设置指定的密钥参数失败。|  
 |TraceCodeSecuritySessionClosedResponseReceived|客户端安全会话收到来自服务器的已关闭响应。|  
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|无法从指定的非对称加密创建指定算法的签名反格式化程序。|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|异步回调引发异常。|  
-|LengthMustBeGreaterThanZero|此参数的长度必须大于 0。|  
-|FoundMultipleCerts|使用指定的下列搜索标准找到多个 X.509 证书：StoreName、StoreLocation、FindType、FindValue。 请提供更具体的查找值。|  
+|LengthMustBeGreaterThanZero|此自变量的长度必须大于 0。|  
+|FoundMultipleCerts|找到使用指定的搜索条件的多个 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue。 请提供更具体的查找值。|  
 |AtLeastOneTransformRequired|转换元素必须包含至少一个转换。|  
 |SAMLTokenNotSerialized|SamlAssertion 无法序列化为 XML。 有关详细信息，请参见内部异常。|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|安全协议保证传出消息的安全。|  
@@ -238,7 +239,7 @@ ms.lasthandoff: 05/04/2018
 |TraceCodeSecurityBindingVerifyIncomingMessageFailure|安全协议无法验证传入的消息。|  
 |SamlSigningTokenMissing|传递到 SamlSecurityTokenAuthenticator 的 SamlAssertion 不包含签名令牌。|  
 |NoPrivateKeyAvailable|没有可用的私钥。|  
-|ValueMustBeOne|此参数的值必须为 1。|  
+|ValueMustBeOne|此自变量的值必须为 1。|  
 |TraceCodeSecurityPendingServerSessionRemoved|服务器已激活挂起的安全会话。|  
 |TraceCodeImportSecurityChannelBindingExit|已完成安全 ImportChannelBinding。|  
 |X509CertStoreLocationNotValid|StoreLocation 必须为 LocalMachine 或 CurrentUser。|  

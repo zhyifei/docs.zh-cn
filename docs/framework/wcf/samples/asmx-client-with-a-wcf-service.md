@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
 ms.openlocfilehash: 1eee814b17a7547bbbc07e17dd675c5f37860341
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002737"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>带有 WCF 服务的 ASMX 客户端
 此示例演示如何创建使用 Windows Communication Foundation (WCF) 服务，然后从非 WCF 客户端，如 ASMX 客户端访问服务。  

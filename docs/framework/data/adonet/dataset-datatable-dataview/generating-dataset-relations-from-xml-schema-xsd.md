@@ -3,20 +3,20 @@ title: 从 XML 架构生成数据集关系 (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034315"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>从 XML 架构生成数据集关系 (XSD)
 在 <xref:System.Data.DataSet> 中，可通过创建父子关系来形成两个或更多个列之间的关联。 有三种方法来表示**数据集**XML 架构定义语言 (XSD) 架构中的关系：  
   
--   指定嵌套复杂类型。  
+- 指定嵌套复杂类型。  
   
--   使用**msdata: relationship**批注。  
+- 使用**msdata: relationship**批注。  
   
--   指定**xs: keyref**而无需**msdata:ConstraintOnly**批注。  
+- 指定**xs: keyref**而无需**msdata:ConstraintOnly**批注。  
   
 ## <a name="nested-complex-types"></a>嵌套的复杂类型  
  架构中的嵌套复杂类型定义指示元素的父子关系。 下面的 XML 架构片断显示**OrderDetail**是子元素的**顺序**元素。  

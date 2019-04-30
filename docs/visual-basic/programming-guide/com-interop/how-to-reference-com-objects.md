@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022376"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>如何：从 Visual Basic 引用 COM 对象
 在 Visual Basic 中，添加对包含类型库的 COM 对象的引用需要互操作程序集创建为 COM 库。 对 COM 对象的成员的引用是路由到互操作程序集，并转发给实际的 COM 对象。 从 COM 对象的响应路由到互操作程序集，并将其转发到你[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。  
@@ -38,11 +38,11 @@ ms.locfileid: "59295258"
   
 2. 调用 Tlbimp 从命令提示符下，提供以下信息：  
   
-    -   包含类型库的 DLL 的名称和位置  
+    - 包含类型库的 DLL 的名称和位置  
   
-    -   名称和命名空间的位置信息应放置的位置  
+    - 名称和命名空间的位置信息应放置的位置  
   
-    -   目标互操作程序集的名称和位置  
+    - 目标互操作程序集的名称和位置  
   
      以下代码提供了一个示例：  
   

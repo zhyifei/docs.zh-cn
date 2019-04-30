@@ -3,11 +3,11 @@ title: MSMQ 4.0 中的病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052087"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于[事务处理 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
@@ -27,13 +27,13 @@ ms.locfileid: "59316461"
 
  一旦将消息标记为已中毒，则将按照 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 枚举中的设置来处理该消息。 迭代可能的值：
 
--   错误 （默认值）：若要故障侦听器和服务主机。
+- 错误 （默认值）：若要故障侦听器和服务主机。
 
--   删除：若要删除该消息。
+- 删除：若要删除该消息。
 
--   Move:若要将消息移到病毒消息子队列。 此值仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
+- Move:若要将消息移到病毒消息子队列。 此值仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
 
--   拒绝：若要拒绝的消息，将消息发送回发送方的死信队列。 此值仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
+- 拒绝：若要拒绝的消息，将消息发送回发送方的死信队列。 此值仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。
 
  示例演示了如何使用 `Move` 处理病毒消息。 `Move` 可使消息移动到病毒子队列中。
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
 
-    1.  在 Visual Studio 2012 中打开服务器管理器。
+    1. 在 Visual Studio 2012 中打开服务器管理器。
 
-    2.  展开**功能**选项卡。
+    2. 展开**功能**选项卡。
 
-    3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
+    3. 右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
 
-    4.  检查**事务性**框。
+    4. 检查**事务性**框。
 
-    5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。
+    5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 

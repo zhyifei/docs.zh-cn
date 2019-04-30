@@ -3,11 +3,11 @@ title: 服务
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
 ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991440"
 ---
 # <a name="service"></a>服务
 服务  
@@ -45,8 +45,8 @@ class Service
   
  服务使用的基址。  
   
-### <a name="behaviors"></a>行为  
- 数据类型：Behavior array  
+### <a name="behaviors"></a>Behaviors  
+ 数据类型：行为数组  
   
  访问类型：只读  
   
@@ -73,7 +73,7 @@ class Service
   
  该地址处的服务名称。  
   
-### <a name="extensions"></a>扩展  
+### <a name="extensions"></a>Extensions  
  数据类型：String array  
   
  访问类型：只读  
@@ -87,7 +87,7 @@ class Service
   
  服务元数据设置。  
   
-### <a name="name"></a>name  
+### <a name="name"></a>名称  
  数据类型：String  
   
  访问类型：只读  
@@ -109,7 +109,7 @@ class Service
  服务打开的时间。  
   
 ### <a name="outgoingchannels"></a>OutgoingChannels  
- 数据类型：Channel array  
+ 数据类型：通道阵列分区  
   
  访问类型：只读  
   

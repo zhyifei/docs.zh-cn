@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053088"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 画笔概述
 在屏幕上可见的所有内容是可见的因为它通过画笔绘制。 例如，画笔用于描述背景的按钮、 文本、 前的景色和形状的填充。 本主题介绍的概念与绘制[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔，并提供示例。 借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。  
@@ -131,9 +131,9 @@ ms.locfileid: "59132205"
 ## <a name="paint-using-predefined-and-system-brushes"></a>使用预定义画笔和系统画笔进行绘制  
  为方便起见，Windows Presentation Foundation (WPF) 提供了一组预定义的系统画笔用于绘制对象。  
   
--   有关可用的预定义画笔的列表，请参阅<xref:System.Windows.Media.Brushes>类。 有关演示如何使用预定义的画笔的示例，请参阅[使用纯色绘制区域](how-to-paint-an-area-with-a-solid-color.md)。  
+- 有关可用的预定义画笔的列表，请参阅<xref:System.Windows.Media.Brushes>类。 有关演示如何使用预定义的画笔的示例，请参阅[使用纯色绘制区域](how-to-paint-an-area-with-a-solid-color.md)。  
   
--   有关可用的系统画笔的列表，请参阅<xref:System.Windows.SystemColors>类。 有关示例，请参阅[使用系统画笔绘制区域](how-to-paint-an-area-with-a-system-brush.md)。  
+- 有关可用的系统画笔的列表，请参阅<xref:System.Windows.SystemColors>类。 有关示例，请参阅[使用系统画笔绘制区域](how-to-paint-an-area-with-a-system-brush.md)。  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>常见的画笔功能  

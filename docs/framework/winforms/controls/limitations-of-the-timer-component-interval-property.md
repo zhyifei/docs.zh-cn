@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
 ms.openlocfilehash: 54782c4e0460ba1ba9b8a870b8f60f08a76340b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012836"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows 窗体 Timer 组件的 Interval 属性的限制
 Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.Forms.Timer.Interval%2A>属性，它指定一个计时器事件和下一步之间传递的毫秒数。 除非禁用该组件，计时器会继续接收<xref:System.Windows.Forms.Timer.Tick>事件的时间大致相同时间间隔。  
@@ -22,11 +22,11 @@ Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.
 ## <a name="the-interval-property"></a>间隔属性  
  <xref:System.Windows.Forms.Timer.Interval%2A>属性有一些限制需要考虑进行编程时<xref:System.Windows.Forms.Timer>组件：  
   
--   如果你的应用程序或其他应用程序在系统上进行大量需求 — 例如长循环、 大量的计算或驱动器、 网络或端口访问 — 你的应用程序可能无法获得的计时器事件，通常为<xref:System.Windows.Forms.Timer.Interval%2A>属性指定。  
+- 如果你的应用程序或其他应用程序在系统上进行大量需求 — 例如长循环、 大量的计算或驱动器、 网络或端口访问 — 你的应用程序可能无法获得的计时器事件，通常为<xref:System.Windows.Forms.Timer.Interval%2A>属性指定。  
   
--   不保证所精确经过的时间间隔。 若要确保准确性，计时器应检查系统时钟根据需要而不是尝试进行内部跟踪的累计的时间。  
+- 不保证所精确经过的时间间隔。 若要确保准确性，计时器应检查系统时钟根据需要而不是尝试进行内部跟踪的累计的时间。  
   
--   精度为<xref:System.Windows.Forms.Timer.Interval%2A>属性是以毫秒为单位。 某些计算机提供的高分辨率计数器，分辨率高于毫秒。 此类计数器的可用性取决于您的计算机的处理器硬件。
+- 精度为<xref:System.Windows.Forms.Timer.Interval%2A>属性是以毫秒为单位。 某些计算机提供的高分辨率计数器，分辨率高于毫秒。 此类计数器的可用性取决于您的计算机的处理器硬件。
   
 ## <a name="see-also"></a>请参阅
 

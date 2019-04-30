@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008210"
 ---
 # <a name="path-animations-overview"></a>路径动画概述
 <a name="introduction"></a>本主题介绍了路径动画，使你能够使用几何路径来生成输出值。 路径动画可用于沿着复杂路径移动和旋转对象。  

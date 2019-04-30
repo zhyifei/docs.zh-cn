@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
 ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013706"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>语句在命名空间中无效
 语句不能出现在命名空间的级别。 允许在命名空间级别的唯一声明是模块、 接口、 类、 委托、 枚举和结构声明。  
@@ -21,7 +21,7 @@ ms.locfileid: "58841753"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   将语句移动到模块、 类、 接口、 结构、 枚举或委托定义内的位置。  
+- 将语句移动到模块、 类、 接口、 结构、 枚举或委托定义内的位置。  
   
 ## <a name="see-also"></a>请参阅
 

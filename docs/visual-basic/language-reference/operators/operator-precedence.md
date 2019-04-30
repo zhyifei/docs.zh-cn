@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013525"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的运算符优先级
 如果在表达式中出现多个运算，每个部分进行计算，并在预先确定的顺序调用中解析*运算符优先级*。  
@@ -27,13 +27,13 @@ ms.locfileid: "58830027"
 ## <a name="precedence-rules"></a>优先规则  
  当表达式包含多个类别中的运算符时，它们会根据以下规则进行评估：  
   
--   算术运算和串联运算符具有下面部分中所述的优先顺序，都具有更高的优先级高于比较、 逻辑和位运算符。  
+- 算术运算和串联运算符具有下面部分中所述的优先顺序，都具有更高的优先级高于比较、 逻辑和位运算符。  
   
--   所有比较运算符都具有相同的优先级，以及所有都具有更高的优先级高于逻辑运算符和位运算符，但算术运算和串联运算符的优先顺序更低。  
+- 所有比较运算符都具有相同的优先级，以及所有都具有更高的优先级高于逻辑运算符和位运算符，但算术运算和串联运算符的优先顺序更低。  
   
--   逻辑和位运算符具有下面部分中所述的优先顺序，并且所有优先级低于算术运算符、 串联和比较运算符。  
+- 逻辑和位运算符具有下面部分中所述的优先顺序，并且所有优先级低于算术运算符、 串联和比较运算符。  
   
--   具有相同的优先级的运算符左到右求值表达式中出现的顺序。  
+- 具有相同的优先级的运算符左到右求值表达式中出现的顺序。  
   
 ## <a name="precedence-order"></a>优先顺序  
  运算符按以下优先顺序计算：  

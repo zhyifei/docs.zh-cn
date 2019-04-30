@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
 ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002061"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>如何：在服务上模拟客户端
 模拟 Windows Communication Foundation (WCF) 服务上的客户端使服务能够代表客户端执行操作。 对于受访问控制列表 (ACL) 检查的操作（例如，访问计算机上的目录和文件，或访问 SQL Server 数据库），ACL 检查针对的是客户端用户帐户。 本主题演示一些基本步骤，通过这些步骤，Windows 域中的客户端可以设置客户端模拟级别。 有关此操作的可运行示例，请参阅 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关客户端模拟的详细信息，请参阅[委托和模拟](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  

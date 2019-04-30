@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
 ms.openlocfilehash: aa81eb7470b818fa2b65200503e5ce65b467c0f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011289"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器隐藏 Windows 窗体 DataGridView 控件中的列
 有时，你会想仅显示在 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中可用的某些列。 例如，你可能想要显示某位员工到具有管理凭据，而隐藏的其他用户的用户的工资列。 或者，你可能想要将控件绑定到包含许多列，其中仅有一些你想要显示的数据源。 在这种情况下，你通常会移除不感兴趣显示，而不是隐藏它们的列。 有关详细信息，请参阅[如何：添加和删除列在 Windows 窗体 DataGridView 控件使用设计器](add-and-remove-columns-in-the-datagrid-using-the-designer.md)。  

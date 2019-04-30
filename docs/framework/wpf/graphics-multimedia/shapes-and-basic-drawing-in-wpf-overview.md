@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008296"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本图形概述
 本主题概述了如何绘制与<xref:System.Windows.Shapes.Shape>对象。 一个<xref:System.Windows.Shapes.Shape>是一种<xref:System.Windows.UIElement>，使您可以在屏幕上绘制一个形状。 由于它们是 UI 元素<xref:System.Windows.Shapes.Shape>对象可以用在<xref:System.Windows.Controls.Panel>元素和多数控件。  
@@ -28,13 +28,13 @@ ms.locfileid: "59189126"
 ## <a name="shape-objects"></a>形状对象  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了随时可用的大量<xref:System.Windows.Shapes.Shape>对象。  所有形状对象都继承自<xref:System.Windows.Shapes.Shape>类。 可用形状对象包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，并<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Shapes.Shape> 对象共享以下通用属性。  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>：介绍了如何绘制形状的轮廓。  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>：介绍了如何绘制形状的轮廓。  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>：描述形状的轮廓的粗细。  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>：描述形状的轮廓的粗细。  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>：介绍了如何绘制形状的内部。  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>：介绍了如何绘制形状的内部。  
   
--   用于指定坐标和顶点的数据属性，以与设备无关的像素来度量。  
+- 用于指定坐标和顶点的数据属性，以与设备无关的像素来度量。  
   
  由于它们源自<xref:System.Windows.UIElement>，形状对象可以用在面板和多数控件。 <xref:System.Windows.Controls.Canvas>面板是特别适合用于创建复杂的图形，因为它支持绝对定位子对象。  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Stretch 属性采用下列值之一：  
   
--   <xref:System.Windows.Media.Stretch.None>：<xref:System.Windows.Shapes.Shape>对象的内容未拉伸。  
+- <xref:System.Windows.Media.Stretch.None>：<xref:System.Windows.Shapes.Shape>对象的内容未拉伸。  
   
--   <xref:System.Windows.Media.Stretch.Fill>：<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以填充布局空间。  不保留纵横比。  
+- <xref:System.Windows.Media.Stretch.Fill>：<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以填充布局空间。  不保留纵横比。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>：<xref:System.Windows.Shapes.Shape>对象的内容将被拉伸以尽可能以填充布局空间，同时保留原始纵横比。  
+- <xref:System.Windows.Media.Stretch.Uniform>：<xref:System.Windows.Shapes.Shape>对象的内容将被拉伸以尽可能以填充布局空间，同时保留原始纵横比。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>：<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以完全填充布局空间，同时保留原始纵横比。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>：<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以完全填充布局空间，同时保留原始纵横比。  
   
  请注意，当<xref:System.Windows.Shapes.Shape>对象的内容将被拉伸，<xref:System.Windows.Shapes.Shape>在拉伸后绘制对象的轮廓。  
   

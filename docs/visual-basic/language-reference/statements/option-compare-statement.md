@@ -19,11 +19,11 @@ helpviewer_keywords:
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024737"
 ---
 # <a name="option-compare-statement"></a>Option Compare 语句
 声明比较字符串数据时要使用的默认比较方法。  
@@ -75,7 +75,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>若要设置命令行上的 Option Compare  
   
--   包括[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)中的编译器选项**vbc**命令。  
+- 包括[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)中的编译器选项**vbc**命令。  
   
 ## <a name="example"></a>示例  
  下例使用 `Option Compare` 语句将二进制比较设置为默认字符串比较方法。 若要使用此代码，请取消 `Option Compare Binary` 语句的注释，并将其置于源文件顶部。  

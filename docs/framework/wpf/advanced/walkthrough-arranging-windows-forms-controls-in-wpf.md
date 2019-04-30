@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007157"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>演练：在 WPF 中排列 Windows 窗体控件
 本演练演示如何使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局功能来排列[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]混合应用程序中的控件。  
   
  本演练涉及以下任务：  
   
--   创建项目。  
+- 创建项目。  
   
--   使用默认布局设置。  
+- 使用默认布局设置。  
   
--   根据内容调整大小。  
+- 根据内容调整大小。  
   
--   使用绝对定位。  
+- 使用绝对定位。  
   
--   显式指定大小。  
+- 显式指定大小。  
   
--   设置布局属性。  
+- 设置布局属性。  
   
--   了解 Z 顺序限制。  
+- 了解 Z 顺序限制。  
   
--   停靠。  
+- 停靠。  
   
--   设置可见性。  
+- 设置可见性。  
   
--   承载不拉伸的控件。  
+- 承载不拉伸的控件。  
   
--   缩放。  
+- 缩放。  
   
--   旋转。  
+- 旋转。  
   
--   设置填充和边距。  
+- 设置填充和边距。  
   
--   使用动态布局容器。  
+- 使用动态布局容器。  
   
  在本演练中所涉及任务的完整代码列表，请参阅[在 WPF 示例中排列 Windows 窗体控件](https://go.microsoft.com/fwlink/?LinkID=159971)。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59338769"
   
 2. 在解决方案资源管理器中，添加对下列程序集的引用。  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. 双击 MainWindow.xaml，在 XAML 视图中将其打开。  
   

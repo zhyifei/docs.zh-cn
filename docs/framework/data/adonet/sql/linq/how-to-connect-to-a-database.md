@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
 ms.openlocfilehash: f04726bc12fdfbca530ee5533d5b8969addf962e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037838"
 ---
 # <a name="how-to-connect-to-a-database"></a>如何：连接到数据库
 <xref:System.Data.Linq.DataContext> 是用来连接到数据库、从中检索对象以及将更改提交回数据库的主要渠道。 您使用<xref:System.Data.Linq.DataContext>正如您将使用[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>。 事实上，<xref:System.Data.Linq.DataContext> 是用您提供的连接或连接字符串初始化的。 有关详细信息，请参阅[DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)。  

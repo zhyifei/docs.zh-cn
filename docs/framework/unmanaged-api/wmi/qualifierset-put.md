@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e42cf3440bef030f5c7bec71ed1b4b875b79a61
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000267"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函数
 
@@ -58,7 +58,7 @@ HRESULT QualifierSet_Put (
 `lFlavor`\
 [in]定义此限定符的所需的限定符特色信息的以下常量之一。 默认值是`WBEM_FLAVOR_OVERRIDABLE`(0)。
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 可以在派生的类或实例中重写限定符。 **这是默认值。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | 限定符传播到实例。 |

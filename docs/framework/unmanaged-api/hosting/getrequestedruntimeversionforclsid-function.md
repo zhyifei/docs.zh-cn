@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4b4ac1a37c2b3506216499ed0c9f8194949b768
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985642"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 函数
 获取相应的公共语言运行时 (CLR) 版本信息，为具有指定类`CLSID`。  
@@ -56,9 +56,9 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  `dwResolutionFlags`  
  [in] CLSID_RESOLUTION_FLAGS 值之一。 支持以下值：  
   
--   CLSID_RESOLUTION_DEFAULT:(0x0) 指定应使用默认互操作行为。  
+- CLSID_RESOLUTION_DEFAULT:(0x0) 指定应使用默认互操作行为。  
   
--   CLSID_RESOLUTION_REGISTERED:(0x1) 指定应搜索注册表和应应用填充程序策略。  
+- CLSID_RESOLUTION_REGISTERED:(0x1) 指定应搜索注册表和应应用填充程序策略。  
   
 ## <a name="return-value"></a>返回值  
   

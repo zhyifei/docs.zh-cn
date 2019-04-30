@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
 ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053205"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>演练：在 Win32 中承载 WPF 内容
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码有大量投入时，向应用程序添加 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能（而不是重写原始代码）可能更有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一个简单的机制，用于托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。  
@@ -41,13 +41,13 @@ ms.locfileid: "59296103"
   
 4. 处理[WM_CREATE](/windows/desktop/winmsg/wm-create)中窗口过程并执行以下通知：  
   
-    1.  创建一个新的 <xref:System.Windows.Interop.HwndSource> 对象，将父窗口用作其 `parent` 参数。  
+    1. 创建一个新的 <xref:System.Windows.Interop.HwndSource> 对象，将父窗口用作其 `parent` 参数。  
   
-    2.  创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类的一个实例。  
+    2. 创建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类的一个实例。  
   
-    3.  将分配到的引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象<xref:System.Windows.Interop.HwndSource.RootVisual%2A>属性的<xref:System.Windows.Interop.HwndSource>。  
+    3. 将分配到的引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象<xref:System.Windows.Interop.HwndSource.RootVisual%2A>属性的<xref:System.Windows.Interop.HwndSource>。  
   
-    4.  获取该内容的 HWND。 <xref:System.Windows.Interop.HwndSource.Handle%2A> 对象的 <xref:System.Windows.Interop.HwndSource> 属性包含窗口句柄 (HWND)。 要获取可在应用程序的非托管部分中使用的 HWND，需将 `Handle.ToPointer()` 强制装换为 HWND。  
+    4. 获取该内容的 HWND。 <xref:System.Windows.Interop.HwndSource.Handle%2A> 对象的 <xref:System.Windows.Interop.HwndSource> 属性包含窗口句柄 (HWND)。 要获取可在应用程序的非托管部分中使用的 HWND，需将 `Handle.ToPointer()` 强制装换为 HWND。  
   
 5. 实现一个托管类，该类包含一个用于保存对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的引用的静态字段。 该类使你可以从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 代码获取对 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 内容的引用。  
   
@@ -65,13 +65,13 @@ ms.locfileid: "59296103"
  本部分介绍如何对主机[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容在基本[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序。 该内容本身是在 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 中作为托管类实现的。 大多数情况下，它是简单的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 编程。 对内容实现的关键方面中讨论[实现 WPF 内容](#implementing_the_wpf_page)。
 
 <a name="autoNestedSectionsOUTLINE1"></a>
--   [基本应用程序](#the_basic_application)
+- [基本应用程序](#the_basic_application)
 
--   [承载 WPF 内容](#hosting_the_wpf_page)
+- [承载 WPF 内容](#hosting_the_wpf_page)
 
--   [保存对 WPF 内容的引用](#holding_a_reference)
+- [保存对 WPF 内容的引用](#holding_a_reference)
 
--   [与 WPF 内容通信](#communicating_with_the_page)
+- [与 WPF 内容通信](#communicating_with_the_page)
 
 <a name="the_basic_application"></a>
 ### <a name="the-basic-application"></a>基本应用程序
@@ -87,11 +87,11 @@ ms.locfileid: "59296103"
 
  该模板将创建一个基本的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序，包括：
 
--   应用程序的入口点。
+- 应用程序的入口点。
 
--   一个窗口和关联的窗口过程 (WndProc)。
+- 一个窗口和关联的窗口过程 (WndProc)。
 
--   使用菜单**文件**并**帮助**标题。 **文件**菜单还拥有**退出**关闭应用程序的项。 **帮助**菜单还拥有**有关**启动简单的对话框中的项。
+- 使用菜单**文件**并**帮助**标题。 **文件**菜单还拥有**退出**关闭应用程序的项。 **帮助**菜单还拥有**有关**启动简单的对话框中的项。
 
  在开始编写代码以承载之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容，您需要做两项修改对基本模板。
 
@@ -170,11 +170,11 @@ ms.locfileid: "59296103"
  可以托管和使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容而无需任何有关实际实现的知识。 如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容已打包在一个单独[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]，它可以将其内置于任何[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]语言。 以下是在该示例中使用的 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 实现的简短演练。 本节包含下列子节。
 
 <a name="autoNestedSectionsOUTLINE2"></a>
--   [布局](#page_layout)
+- [布局](#page_layout)
 
--   [将数据返回到主机窗口](#returning_data_to_window)
+- [将数据返回到主机窗口](#returning_data_to_window)
 
--   [设置 WPF 属性](#set_page_properties)
+- [设置 WPF 属性](#set_page_properties)
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>布局
