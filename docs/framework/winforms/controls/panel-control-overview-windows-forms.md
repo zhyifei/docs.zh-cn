@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012680"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.Panel>控件用于提供可识别分组其他控件。 通常情况下，您可以使用面板按功能细分窗体。 例如，可以指定邮件的选项，如使用哪些通宵运输工具的订单窗体。 分组面板中的所有选项为用户提供一个逻辑的视觉提示。 在设计时控件可以轻松地移动所有 — 在移动时<xref:System.Windows.Forms.Panel>控制，所有其包含的控件移动，过。 可以通过访问面板中进行分组的控件及其<xref:System.Windows.Forms.Control.Controls%2A>属性。 此属性返回的集合<xref:System.Windows.Forms.Control>检索这种方式为其特定类型实例，因此通常需要强制转换控件。  

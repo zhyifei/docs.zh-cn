@@ -3,20 +3,20 @@ title: 推断表
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034250"
 ---
 # <a name="inferring-tables"></a>推断表
 当从 XML 文档推断 <xref:System.Data.DataSet> 的架构时，ADO.NET 首先会确定哪些 XML 元素表示表。 以下 XML 结构生成的表**数据集**架构：  
   
--   具有属性的元素  
+- 具有属性的元素  
   
--   具有子元素的元素  
+- 具有子元素的元素  
   
--   重复元素  
+- 重复元素  
   
 ## <a name="elements-with-attributes"></a>具有属性的元素  
  在其中指定了属性的元素将生成推断表。 例如，考虑以下 XML：  

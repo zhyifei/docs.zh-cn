@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990335"
 ---
 # <a name="default-message-contract"></a>默认消息协定
 默认消息协定示例演示了一个服务，在该服务中，用户定义的自定义消息会在服务操作来回传递。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现将计算器接口作为类型化的服务。 而不是为加法、 减法、 乘法和除法中使用的各个服务操作[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此示例还传递包含操作数和运算符，并返回的自定义消息算术计算的结果。  

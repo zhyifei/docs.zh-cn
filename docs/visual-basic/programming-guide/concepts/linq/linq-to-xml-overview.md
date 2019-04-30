@@ -3,11 +3,11 @@ title: LINQ to XML 概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 987409aab9d3d12cc3cbbebaa64da0bffcee1c8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021253"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML 概述 (Visual Basic)
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。  
@@ -28,7 +28,7 @@ ms.locfileid: "54504036"
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的另一个优势是通过将查询结果用作 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 对象构造函数的参数，实现了一种功能强大的创建 XML 树的方法。 此方法称为*功能构造*，可使开发人员轻松地将 XML 树从一个形状转换成另一个形状。  
   
- 例如，可能有一个典型 XML 采购订单中所述[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。 通过使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，可以运行以下查询，以获取采购单每个项元素的部件号属性值：  
+ 例如，可能有典型 XML 采购订单，如[示例 XML 文件：典型采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) 中所述。 通过使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，可以运行以下查询，以获取采购单每个项元素的部件号属性值：  
   
 ```vb  
 Dim partNos = _  
@@ -49,19 +49,19 @@ Select item
   
  除了这些 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 功能以外，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供了改进的 XML 编程接口。 使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以：  
   
--   从文件或流加载 XML。  
+- 从文件或流加载 XML。  
   
--   将 XML 序列化为文件或流。  
+- 将 XML 序列化为文件或流。  
   
--   使用函数构造从头开始创建 XML。  
+- 使用函数构造从头开始创建 XML。  
   
--   使用类似 XPath 的轴查询 XML。  
+- 使用类似 XPath 的轴查询 XML。  
   
--   使用 <xref:System.Xml.Linq.XContainer.Add%2A>、<xref:System.Xml.Linq.XNode.Remove%2A>、<xref:System.Xml.Linq.XNode.ReplaceWith%2A> 和 <xref:System.Xml.Linq.XElement.SetValue%2A> 等方法对内存 XML 树进行操作。  
+- 使用 <xref:System.Xml.Linq.XContainer.Add%2A>、<xref:System.Xml.Linq.XNode.Remove%2A>、<xref:System.Xml.Linq.XNode.ReplaceWith%2A> 和 <xref:System.Xml.Linq.XElement.SetValue%2A> 等方法对内存 XML 树进行操作。  
   
--   使用 XSD 验证 XML 树。  
+- 使用 XSD 验证 XML 树。  
   
--   使用这些功能的组合，可将 XML 树从一种形状转换为另一种形状。  
+- 使用这些功能的组合，可将 XML 树从一种形状转换为另一种形状。  
   
 ## <a name="creating-xml-trees"></a>创建 XML 树  
  使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 编程的一个明显优势是易于创建 XML 树。 例如，若要创建一个小型 XML 树，您可以编写代码，如下所示：  

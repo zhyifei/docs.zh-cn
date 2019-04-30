@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033860"
 ---
 # <a name="large-udts"></a>大型 UDT
 通过用户定义类型 (UDT)，开发人员可通过在 SQL Server 数据库中存储公共语言运行时 (CLR) 对象来扩展服务器的标量类型系统。 UDT 可以包含多个元素并可具有多种行为，与传统别名数据类型不同，它们由单一 SQL Server 系统数据类型组成。  
@@ -49,21 +49,21 @@ ms.locfileid: "59303474"
   
  当 <xref:System.Data.SqlClient.SqlDataReader> 设置为 SQL Server 2005 时，<xref:System.Data.SqlTypes.SqlBinary> 的以下方法将返回 `Type System Version` 而不是 UDT：  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
  当 `Byte[]` 设置为 SQL Server 2005 时，以下方法将返回 `Type System Version` 的数组而不是 UDT：  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
  请注意，不会对 ADO.NET 的当前版本进行任何转换。  
   

@@ -3,30 +3,30 @@ title: 函数编程与过程编程 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028390"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>函数编程与过程编程 (LINQ to XML) (Visual Basic)
 XML 应用程序有多种类型：  
   
--   有些应用程序采用源 XML 文档并生成与源文档形状不同的新 XML 文档。  
+- 有些应用程序采用源 XML 文档并生成与源文档形状不同的新 XML 文档。  
   
--   有些应用程序采用源 XML 文档并生成格式完全不同的结果文档，如 HTML 或 CSV 文本文件。  
+- 有些应用程序采用源 XML 文档并生成格式完全不同的结果文档，如 HTML 或 CSV 文本文件。  
   
--   有些应用程序采用源 XML 文档并将记录插入数据库。  
+- 有些应用程序采用源 XML 文档并将记录插入数据库。  
   
--   有些应用程序采用另一个源（如数据库）中的数据并从该数据创建 XML 文档。  
+- 有些应用程序采用另一个源（如数据库）中的数据并从该数据创建 XML 文档。  
   
  这些并不是所有的 XML 应用程序类型，但它们是 XML 程序员必须实现的一组有代表性的功能类型。  
   
  对于所有这些类型应用程序，开发人员可以采用两种对比方法：  
   
--   使用声明性方法的函数构造。  
+- 使用声明性方法的函数构造。  
   
--   使用过程代码的内存中 XML 树修改法。  
+- 使用过程代码的内存中 XML 树修改法。  
   
  LINQ to XML 同时支持这两种方法。  
   

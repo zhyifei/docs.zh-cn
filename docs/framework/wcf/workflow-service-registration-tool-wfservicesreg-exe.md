@@ -3,11 +3,11 @@ title: 工作流服务注册工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
 ms.openlocfilehash: 3ea0f737cc050ec3f918044e0e105a41011a3e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052568"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>工作流服务注册工具 (WFServicesReg.exe)
 工作流服务注册工具 (WFServicesReg.exe) 是一个独立的工具，可用于添加、移除或修复 Windows Workflow Foundation (WF) 服务的配置元素。  
@@ -34,25 +34,25 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>注册  
  该工具检查 Web.config 文件并注册以下内容：  
   
--   [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引用程序集。  
+- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 引用程序集。  
   
--   用于 .xoml 文件的生成提供程序。  
+- 用于 .xoml 文件的生成提供程序。  
   
--   用于 .xoml 和 .rules 文件的 HTTP 处理程序。  
+- 用于 .xoml 和 .rules 文件的 HTTP 处理程序。  
   
  该工具检查 Machine.config 文件并注册以下扩展：  
   
--   behaviorExtensions  
+- behaviorExtensions  
   
--   bindingElementExtensions  
+- bindingElementExtensions  
   
--   bindingExtensions  
+- bindingExtensions  
   
  该工具还注册以下客户端元数据导入程序：  
   
--   policyImporters  
+- policyImporters  
   
--   wsdlImporters  
+- wsdlImporters  
   
  该工具还在 IIS 元数据库中注册 .xoml 和 .rules 脚本映射和处理程序。  
   
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  在 64 位计算机上，如果启用 `Enable32BitAppOnWin64` 开关，则该工具注册 WOW 模式脚本映射；如果禁用 `Enable32BitAppOnWin64` 开关，则该工具注册本机 64 位模式脚本映射。  
   
- 上[!INCLUDE[wv](../../../includes/wv-md.md)]和 Windows Server 2008 (IIS 7.0 和更高版本) 计算机，两组.xoml 和.rules 处理程序注册： 一个用于集成模式下，一个用于经典模式。  
+ 在[!INCLUDE[wv](../../../includes/wv-md.md)]和 Windows Server 2008 (IIS 7.0 及更高版本) 计算机，两组.xoml 和.rules 处理程序注册： 一个用于集成模式下，一个用于经典模式。  
   
  在 64 位计算机上，注册三组处理程序（无论 `Enable32BitAppOnWin64` 开关处于什么状态）：一组用于集成模式，一组用于 WOW 经典模式，一组用于本机 64 位经典模式。  
   
@@ -82,7 +82,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>删除了特定网站下的脚本映射  
  在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 计算机上，从特定网站（如默认网站）而不是网站节点中意外删除了 .xoml 或 .rules。  
   
- 若要修复特定网站的已删除处理程序，你应运行"WFServicesReg.exe /r"以便从所有网站移除处理程序，然后运行"WFServicesReg.exe /c"来为所有网站创建相应的处理程序。  
+ 若要修复特定网站的已删除处理程序，应运行"WFServicesReg.exe /r"若要从所有网站移除处理程序，然后运行"WFServicesReg.exe /c"为所有网站创建相应的处理程序。  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>切换 IIS 模式后配置处理程序  
- 当 IIS 处于共享配置模式并且已安装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 时，IIS 元数据库将配置在共享位置下。 如果将 IIS 切换到非共享配置模式，则本地元数据库将不包含必需的处理程序。 若要正确配置本地元数据库，你可以导入到本地，或运行"WFServicesReg.exe /c"，这会将配置本地元数据库将共享元数据库。
+ 当 IIS 处于共享配置模式并且已安装 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 时，IIS 元数据库将配置在共享位置下。 如果将 IIS 切换到非共享配置模式，则本地元数据库将不包含必需的处理程序。 若要正确配置本地元数据库，或者可以导入到本地，或运行"WFServicesReg.exe /c"，这会将配置本地元数据库将共享元数据库。

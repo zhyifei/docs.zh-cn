@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
 ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023887"
 ---
 # <a name="wpf-content-model"></a>WPF 内容模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是一个演示平台，提供了许多控件和类似控件的类型，主要用于显示不同类型的内容。 若要确定所要使用的控件或要从其派生的控件，应该了解特定控件可以最佳效果显示的对象类型。  
@@ -43,45 +43,45 @@ ms.locfileid: "59134584"
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>包含一个任意对象的控件  
  <xref:System.Windows.Controls.ContentControl>类包含一段任意内容。 它的内容属性是<xref:System.Windows.Controls.ContentControl.Content%2A>。 以下控件继承自<xref:System.Windows.Controls.ContentControl>并使用其内容模型：  
   
--   <xref:System.Windows.Controls.Button>  
+- <xref:System.Windows.Controls.Button>  
   
--   <xref:System.Windows.Controls.Primitives.ButtonBase>  
+- <xref:System.Windows.Controls.Primitives.ButtonBase>  
   
--   <xref:System.Windows.Controls.CheckBox>  
+- <xref:System.Windows.Controls.CheckBox>  
   
--   <xref:System.Windows.Controls.ComboBoxItem>  
+- <xref:System.Windows.Controls.ComboBoxItem>  
   
--   <xref:System.Windows.Controls.ContentControl>  
+- <xref:System.Windows.Controls.ContentControl>  
   
--   <xref:System.Windows.Controls.Frame>  
+- <xref:System.Windows.Controls.Frame>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GroupItem>  
+- <xref:System.Windows.Controls.GroupItem>  
   
--   <xref:System.Windows.Controls.Label>  
+- <xref:System.Windows.Controls.Label>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Navigation.NavigationWindow>  
+- <xref:System.Windows.Navigation.NavigationWindow>  
   
--   <xref:System.Windows.Controls.RadioButton>  
+- <xref:System.Windows.Controls.RadioButton>  
   
--   <xref:System.Windows.Controls.Primitives.RepeatButton>  
+- <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
--   <xref:System.Windows.Controls.ScrollViewer>  
+- <xref:System.Windows.Controls.ScrollViewer>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
+- <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
--   <xref:System.Windows.Controls.Primitives.ToggleButton>  
+- <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
--   <xref:System.Windows.Controls.ToolTip>  
+- <xref:System.Windows.Controls.ToolTip>  
   
--   <xref:System.Windows.Controls.UserControl>  
+- <xref:System.Windows.Controls.UserControl>  
   
--   <xref:System.Windows.Window>  
+- <xref:System.Windows.Window>  
   
  下图显示四个按钮，其<xref:System.Windows.Controls.ContentControl.Content%2A>设置为字符串，<xref:System.DateTime>对象， <xref:System.Windows.Shapes.Rectangle>，和一个<xref:System.Windows.Controls.Panel>，其中包含<xref:System.Windows.Shapes.Ellipse>和<xref:System.Windows.Controls.TextBlock>:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59134584"
   
  以下控件继承自<xref:System.Windows.Controls.HeaderedContentControl>并使用其内容模型：  
   
--   <xref:System.Windows.Controls.Expander>  
+- <xref:System.Windows.Controls.Expander>  
   
--   <xref:System.Windows.Controls.GroupBox>  
+- <xref:System.Windows.Controls.GroupBox>  
   
--   <xref:System.Windows.Controls.TabItem>  
+- <xref:System.Windows.Controls.TabItem>  
   
  下图显示了两个<xref:System.Windows.Controls.TabItem>对象。 第一个<xref:System.Windows.Controls.TabItem>已<xref:System.Windows.UIElement>对象作为<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和<xref:System.Windows.Controls.ContentControl.Content%2A>。 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A>设置为<xref:System.Windows.Controls.StackPanel>，其中包含<xref:System.Windows.Shapes.Ellipse>和一个<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Controls.ContentControl.Content%2A>设置为<xref:System.Windows.Controls.StackPanel>，其中包含<xref:System.Windows.Controls.TextBlock>和一个<xref:System.Windows.Controls.Label>。 第二个<xref:System.Windows.Controls.TabItem>具有一个字符串<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和一个<xref:System.Windows.Controls.TextBlock>中<xref:System.Windows.Controls.ContentControl.Content%2A>。  
   
@@ -111,37 +111,37 @@ ms.locfileid: "59134584"
   
  以下控件继承自<xref:System.Windows.Controls.ItemsControl>并使用其内容模型：  
   
--   <xref:System.Windows.Controls.Menu>  
+- <xref:System.Windows.Controls.Menu>  
   
--   <xref:System.Windows.Controls.Primitives.MenuBase>  
+- <xref:System.Windows.Controls.Primitives.MenuBase>  
   
--   <xref:System.Windows.Controls.ContextMenu>  
+- <xref:System.Windows.Controls.ContextMenu>  
   
--   <xref:System.Windows.Controls.ComboBox>  
+- <xref:System.Windows.Controls.ComboBox>  
   
--   <xref:System.Windows.Controls.ItemsControl>  
+- <xref:System.Windows.Controls.ItemsControl>  
   
--   <xref:System.Windows.Controls.ListBox>  
+- <xref:System.Windows.Controls.ListBox>  
   
--   <xref:System.Windows.Controls.ListView>  
+- <xref:System.Windows.Controls.ListView>  
   
--   <xref:System.Windows.Controls.TabControl>  
+- <xref:System.Windows.Controls.TabControl>  
   
--   <xref:System.Windows.Controls.TreeView>  
+- <xref:System.Windows.Controls.TreeView>  
   
--   <xref:System.Windows.Controls.Primitives.Selector>  
+- <xref:System.Windows.Controls.Primitives.Selector>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBar>  
+- <xref:System.Windows.Controls.Primitives.StatusBar>  
   
  下图显示<xref:System.Windows.Controls.ListBox>，其中包含这些类型的项：  
   
--   一个字符串。  
+- 一个字符串。  
   
--   一个 <xref:System.DateTime> 对象。  
+- 一个 <xref:System.DateTime> 对象。  
   
--   <xref:System.Windows.UIElement>。  
+- <xref:System.Windows.UIElement>。  
   
--   一个<xref:System.Windows.Controls.Panel>，其中包含<xref:System.Windows.Shapes.Ellipse>和一个<xref:System.Windows.Controls.TextBlock>。  
+- 一个<xref:System.Windows.Controls.Panel>，其中包含<xref:System.Windows.Shapes.Ellipse>和一个<xref:System.Windows.Controls.TextBlock>。  
   
  ![显示具有四种类型的内容的 ListBox 的屏幕截图。](./media/wpf-content-model/control-content-model-listbox.png)  
   
@@ -150,11 +150,11 @@ ms.locfileid: "59134584"
   
  以下控件继承自<xref:System.Windows.Controls.HeaderedItemsControl>并使用其内容模型：  
   
--   <xref:System.Windows.Controls.MenuItem>  
+- <xref:System.Windows.Controls.MenuItem>  
   
--   <xref:System.Windows.Controls.ToolBar>  
+- <xref:System.Windows.Controls.ToolBar>  
   
--   <xref:System.Windows.Controls.TreeViewItem>  
+- <xref:System.Windows.Controls.TreeViewItem>  
   
 <a name="classes_that_contain_a_collection_of_uielement_objects"></a>   
 ## <a name="classes-that-contain-a-collection-of-uielement-objects"></a>包含一个 UIElement 对象集合的类  
@@ -162,27 +162,27 @@ ms.locfileid: "59134584"
   
  以下类继承自<xref:System.Windows.Controls.Panel>类并使用其内容模型：  
   
--   <xref:System.Windows.Controls.Canvas>  
+- <xref:System.Windows.Controls.Canvas>  
   
--   <xref:System.Windows.Controls.DockPanel>  
+- <xref:System.Windows.Controls.DockPanel>  
   
--   <xref:System.Windows.Controls.Grid>  
+- <xref:System.Windows.Controls.Grid>  
   
--   <xref:System.Windows.Controls.Primitives.TabPanel>  
+- <xref:System.Windows.Controls.Primitives.TabPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
   
--   <xref:System.Windows.Controls.Primitives.UniformGrid>  
+- <xref:System.Windows.Controls.Primitives.UniformGrid>  
   
--   <xref:System.Windows.Controls.StackPanel>  
+- <xref:System.Windows.Controls.StackPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingPanel>  
+- <xref:System.Windows.Controls.VirtualizingPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingStackPanel>  
+- <xref:System.Windows.Controls.VirtualizingStackPanel>  
   
--   <xref:System.Windows.Controls.WrapPanel>  
+- <xref:System.Windows.Controls.WrapPanel>  
   
  有关详细信息，请参阅[面板概述](panels-overview.md)。  
   
@@ -190,23 +190,23 @@ ms.locfileid: "59134584"
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>影响 UIElement 外观的类  
  <xref:System.Windows.Controls.Decorator>类应用视觉效果上或周围单个子<xref:System.Windows.UIElement>。 它的内容属性是<xref:System.Windows.Controls.Decorator.Child%2A>。 以下类继承自<xref:System.Windows.Controls.Decorator>并使用其内容模型：  
   
--   <xref:System.Windows.Documents.AdornerDecorator>  
+- <xref:System.Windows.Documents.AdornerDecorator>  
   
--   <xref:System.Windows.Controls.Border>  
+- <xref:System.Windows.Controls.Border>  
   
--   <xref:System.Windows.Controls.Primitives.BulletDecorator>  
+- <xref:System.Windows.Controls.Primitives.BulletDecorator>  
   
--   <xref:Microsoft.Windows.Themes.ButtonChrome>  
+- <xref:Microsoft.Windows.Themes.ButtonChrome>  
   
--   <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
+- <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
   
--   <xref:System.Windows.Controls.InkPresenter>  
+- <xref:System.Windows.Controls.InkPresenter>  
   
--   <xref:Microsoft.Windows.Themes.ListBoxChrome>  
+- <xref:Microsoft.Windows.Themes.ListBoxChrome>  
   
--   <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
+- <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
   
--   <xref:System.Windows.Controls.Viewbox>  
+- <xref:System.Windows.Controls.Viewbox>  
   
  如下图所示<xref:System.Windows.Controls.TextBox>具有 （即装饰有）<xref:System.Windows.Controls.Border>围绕它。  
   

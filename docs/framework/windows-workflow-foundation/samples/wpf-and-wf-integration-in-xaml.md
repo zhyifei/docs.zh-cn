@@ -3,11 +3,11 @@ title: XAML 中的 WPF 和 WF 集成
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
 ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004702"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML 中的 WPF 和 WF 集成
 此示例演示如何创建一个 XAML 文档中使用 Windows Presentation Foundation (WPF) 和 Windows Workflow Foundation (WF) 功能的应用程序。 若要实现此目的，此示例，请使用 Windows Workflow Foundation (WF) 和 XAML 扩展性。

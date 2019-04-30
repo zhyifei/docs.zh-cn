@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991011"
 ---
 # <a name="schema-import-and-export"></a>架构导入和导出
 Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行转换（双向）。 除了序列化程序本身，WCF 还包括关联的架构导入和架构导出机制。 *架构*是的 XML 序列化程序生成或反序列化程序可以访问的形状的正式、 精确和计算机可读说明。 WCF 使用 World Wide Web 联合会 (W3C) XML 架构定义语言 (XSD) 作为其架构表示形式，可与许多第三方平台广泛互操作。  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  请注意，生成的类型遵循多种数据协定最佳做法 (位于[最佳实践：数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   此类型实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+- 此类型实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
--   数据成员作为封装私有字段的公共属性来实现。  
+- 数据成员作为封装私有字段的公共属性来实现。  
   
--   此类是一个分部类，不修改生成的代码就可以添加内容。  
+- 此类是一个分部类，不修改生成的代码就可以添加内容。  
   
  <xref:System.Runtime.Serialization.XsdDataContractExporter> 使您能够进行反向操作，使用可用 `DataContractSerializer` 进行序列化的类型并生成 XSD 架构文档。  
   

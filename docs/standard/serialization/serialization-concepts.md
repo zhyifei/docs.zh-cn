@@ -3,11 +3,11 @@ title: 序列化概念
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
 ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018107"
 ---
 # <a name="serialization-concepts"></a>序列化概念
 为什么要使用序列化？ 两个最重要的原因是将对象状态保存到存储媒体，以便可以在以后阶段重新创建精确副本；以及将对象按值从一个应用程序域发送至另一个应用程序域。 例如，序列化用于在 ASP.NET 中保存会话状态，并将对象复制到 Windows 窗体的剪贴板中。 它还可用于在远程处理中将对象按值从一个应用程序域传递至另一个应用程序域。

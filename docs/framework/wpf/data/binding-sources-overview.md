@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023775"
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。  
@@ -42,13 +42,13 @@ ms.locfileid: "59145920"
 ### <a name="other-characteristics"></a>其他特性  
  下表提供了需要注意的其他要点：  
   
--   如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中创建对象，类必须具有默认的构造函数。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]语言，如C#，可能会为你创建的默认构造函数。  
+- 如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中创建对象，类必须具有默认的构造函数。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]语言，如C#，可能会为你创建的默认构造函数。  
   
--   用作绑定的绑定源属性的属性必须为类的公共属性。 不能出于绑定目的来访问显式定义的接口属性，也不能访问没有基实现的受保护、私有、内部或虚拟属性。  
+- 用作绑定的绑定源属性的属性必须为类的公共属性。 不能出于绑定目的来访问显式定义的接口属性，也不能访问没有基实现的受保护、私有、内部或虚拟属性。  
   
--   不能绑定到公共字段。  
+- 不能绑定到公共字段。  
   
--   类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关详细信息，请参阅 <xref:System.Windows.Data.IValueConverter>。  
+- 类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关详细信息，请参阅 <xref:System.Windows.Data.IValueConverter>。  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>将整个对象用作绑定源  
@@ -80,11 +80,11 @@ ms.locfileid: "59145920"
   
  此表描述了数据绑定中有关权限要求的以下要点：  
   
--   对于 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性，只要绑定引擎能够使用反射访问绑定源属性，数据绑定就有效。 否则，绑定引擎会发出找不到属性的警告，并使用回退值或默认值（如果可用）。  
+- 对于 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性，只要绑定引擎能够使用反射访问绑定源属性，数据绑定就有效。 否则，绑定引擎会发出找不到属性的警告，并使用回退值或默认值（如果可用）。  
   
--   可以绑定到在编译时或运行时定义的动态对象上的属性。  
+- 可以绑定到在编译时或运行时定义的动态对象上的属性。  
   
--   始终可以绑定到依赖属性。  
+- 始终可以绑定到依赖属性。  
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 绑定的权限要求非常类似。 在部分信任沙盒中，<xref:System.Windows.Data.XmlDataProvider>没有权限访问指定的数据时将失败。  
   

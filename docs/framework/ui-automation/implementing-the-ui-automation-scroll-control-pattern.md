@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983405"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>实现 UI 自动化 Scroll 控件模式
 > [!NOTE]
@@ -30,17 +30,17 @@ ms.locfileid: "59154526"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Scroll 控件模式时，请注意以下准则和约定：  
   
--   此控件的子级必须实现 <xref:System.Windows.Automation.Provider.IScrollItemProvider>。  
+- 此控件的子级必须实现 <xref:System.Windows.Automation.Provider.IScrollItemProvider>。  
   
--   容器控件的滚动条不支持 <xref:System.Windows.Automation.ScrollPattern> 控件模式。 相反，它们必须支持 <xref:System.Windows.Automation.RangeValuePattern> 控件模式。  
+- 容器控件的滚动条不支持 <xref:System.Windows.Automation.ScrollPattern> 控件模式。 相反，它们必须支持 <xref:System.Windows.Automation.RangeValuePattern> 控件模式。  
   
--   当以百分比度量滚动时，与滚动刻度相关的所有值或量必须规范化为 0 到 100 的范围。  
+- 当以百分比度量滚动时，与滚动刻度相关的所有值或量必须规范化为 0 到 100 的范围。  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 和 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 独立于 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>。  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 和 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 独立于 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>。  
   
--   如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` 则 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 应设置为 100%，且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 应设置为 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 类似，如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 则 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 应设置为 100%，且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 应设置为 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 这允许使用这些属性值中的 UI 自动化客户端<xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A>方法，同时避免[争用条件](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723)方向客户端不感兴趣滚动被激活。  
+- 如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` 则 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 应设置为 100%，且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 应设置为 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 类似，如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 则 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 应设置为 100%，且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 应设置为 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 这允许使用这些属性值中的 UI 自动化客户端<xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A>方法，同时避免[争用条件](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723)方向客户端不感兴趣滚动被激活。  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 是特定于区域设置。 设置 HorizontalScrollPercent = 100.0 时，则对于英语等从左到右阅读的语言，必须将控件的滚动位置设置为等于其最右位置。 而对于阿拉伯语等从右到左阅读的语言，设置 HorizontalScrollPercent = 100.0 时必须将滚动位置设置为最左位置。  
+- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 是特定于区域设置。 设置 HorizontalScrollPercent = 100.0 时，则对于英语等从左到右阅读的语言，必须将控件的滚动位置设置为等于其最右位置。 而对于阿拉伯语等从右到左阅读的语言，设置 HorizontalScrollPercent = 100.0 时必须将滚动位置设置为最左位置。  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider 必需的成员  

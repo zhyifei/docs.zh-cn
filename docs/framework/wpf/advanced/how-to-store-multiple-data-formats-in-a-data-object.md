@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], storing multiple formats
 ms.assetid: 941ace29-29c4-4c26-b75b-ea7d06aa0d69
 ms.openlocfilehash: 3f8e7233e1d28fec1f7dac114b04287aa3aff49f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052373"
 ---
 # <a name="how-to-store-multiple-data-formats-in-a-data-object"></a>如何：在数据对象中存储多种数据格式
 下面的示例演示如何使用<xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29>方法将数据添加到多个格式中的数据对象。  

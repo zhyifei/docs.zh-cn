@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
 ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039398"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>如何：创建单向协定
 本主题演示了创建使用单向协定的方法所需的基本步骤。 此类方法调用 Windows Communication Foundation (WCF) 服务从客户端上的操作，但不是期待答复。 例如，可以使用这种类型的协定将通知发布给许多订户。 在创建双工（双向）协定（可使得客户端和服务器可以独立地相互通信，这样双方都可以启动对另一方的呼叫）时，还可以使用单向协定。 具体而言，这样做可允许服务器对客户端进行单向呼叫，而客户端可以将这些呼叫视为事件。 有关指定单向方法的详细信息，请参见 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性和 <xref:System.ServiceModel.OperationContractAttribute> 类。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973194"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 虽然你可能会作为一系列按顺序执行，在现实中的过程进行可视化的 Visual Studio 项目大多数程序都是事件驱动的这意味着执行流由外部发生*事件*。  
@@ -53,11 +53,11 @@ ms.locfileid: "57201100"
   
  `WithEvents` 语句和 `Handles` 子句通常是事件处理程序的最佳选择，因为它们使用的声明性语法简化了事件处理程序的编码、读取和调试。 不过，请注意，使用 `WithEvents` 变量还要遵循以下限制：  
   
--   不能将 `WithEvents` 变量用作对象变量。 也就是说，不能将其声明为 `Object`，必须在声明变量时指定类名。  
+- 不能将 `WithEvents` 变量用作对象变量。 也就是说，不能将其声明为 `Object`，必须在声明变量时指定类名。  
   
--   由于共享的事件未绑定到类实例中，不能使用`WithEvents`以声明性方式处理共享的事件。 同样，不能使用 `WithEvents` 或 `Handles` 处理 `Structure` 中的事件。 在这两种情况下，均可使用 `AddHandler` 语句处理这些事件。  
+- 由于共享的事件未绑定到类实例中，不能使用`WithEvents`以声明性方式处理共享的事件。 同样，不能使用 `WithEvents` 或 `Handles` 处理 `Structure` 中的事件。 在这两种情况下，均可使用 `AddHandler` 语句处理这些事件。  
   
--   无法创建 `WithEvents` 变量的数组。  
+- 无法创建 `WithEvents` 变量的数组。  
   
  `WithEvents` 变量允许一个事件处理程序处理一种或多种事件，也允许一个或多个事件处理程序处理同一种事件。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "57201100"
   
 ### <a name="to-handle-events-from-a-base-class"></a>处理继承自基类的事件的具体操作  
   
--   向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如：  
+- 向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如：  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

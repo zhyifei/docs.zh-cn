@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053153"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>演练：使用 ElementHost 控件映射属性
 
@@ -21,13 +21,13 @@ ms.locfileid: "59300913"
 
 本演练涉及以下任务：
 
--   创建项目。
+- 创建项目。
 
--   定义新的属性映射。
+- 定义新的属性映射。
 
--   删除默认属性映射。
+- 删除默认属性映射。
 
--   扩展默认属性映射。
+- 扩展默认属性映射。
 
 在本演练中所涉及任务的完整代码列表，请参阅[映射属性使用 ElementHost 控件示例](https://go.microsoft.com/fwlink/?LinkID=160018)。
 
@@ -37,7 +37,7 @@ ms.locfileid: "59300913"
 
 你需要以下组件来完成本演练：
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>创建项目
 
@@ -47,13 +47,13 @@ ms.locfileid: "59300913"
 
 2. 在中**解决方案资源管理器**，将引用添加到以下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序集。
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. 将以下代码复制到顶部`Form1`代码文件。
 
@@ -101,7 +101,7 @@ ms.locfileid: "59300913"
 
 ### <a name="to-remove-a-default-property-mapping"></a>删除默认属性映射
 
--   将以下代码复制到用于定义`Form1`类。
+- 将以下代码复制到用于定义`Form1`类。
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ ms.locfileid: "59300913"
 
 ### <a name="to-extend-a-default-property-mapping"></a>扩展默认属性映射
 
--   将以下代码复制到用于定义`Form1`类。
+- 将以下代码复制到用于定义`Form1`类。
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ ms.locfileid: "59300913"
 
      `Form1_Load`方法将处理<xref:System.Windows.Forms.Form.Load>事件并执行以下初始化。
 
-    -   创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Button>元素。
+    - 创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Button>元素。
 
-    -   调用先前在演练中定义的方法来设置属性映射。
+    - 调用先前在演练中定义的方法来设置属性映射。
 
-    -   将初始值分配给映射的属性。
+    - 将初始值分配给映射的属性。
 
 2. 按 F5 生成并运行该应用程序。
 

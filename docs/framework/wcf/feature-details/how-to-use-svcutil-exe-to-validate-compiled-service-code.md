@@ -3,11 +3,11 @@ title: 如何：使用 Svcutil.exe 验证已编译的服务代码
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
 ms.openlocfilehash: 599f5624b7eb0c32cbcc0a78e6c7f989ce470b58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038748"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>如何：使用 Svcutil.exe 验证已编译的服务代码
 可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)不承载服务的情况下检测服务实现和配置中的错误。  

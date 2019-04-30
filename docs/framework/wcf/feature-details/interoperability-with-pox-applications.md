@@ -3,11 +3,11 @@ title: 与 POX 应用程序的互操作性
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046887"
 ---
 # <a name="interoperability-with-pox-applications"></a>与 POX 应用程序的互操作性
 
@@ -31,9 +31,9 @@ ms.locfileid: "50192630"
 
 此自定义绑定包含两个元素：
 
-- [\<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
+- [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
 
-- [\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
+- [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
 
 WCF 文本消息编码器被专门配置为使用的标准<xref:System.ServiceModel.Channels.MessageVersion.None%2A>值，使其可以处理 XML 消息负载并到达包装在 SOAP 信封中。
 

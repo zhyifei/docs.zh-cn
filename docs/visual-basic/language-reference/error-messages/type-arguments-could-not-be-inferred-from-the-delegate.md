@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
 ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013629"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>未能从委托中推理类型参数
 赋值语句使用 `AddressOf` 将泛型过程的地址赋给委托，但它不会为泛型过程提供任何类型参数。  
@@ -23,7 +23,7 @@ ms.locfileid: "58838594"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   为 `AddressOf` 表达式中的泛型过程指定类型参数。  
+- 为 `AddressOf` 表达式中的泛型过程指定类型参数。  
   
 ## <a name="see-also"></a>请参阅
 

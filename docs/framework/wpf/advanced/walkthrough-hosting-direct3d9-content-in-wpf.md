@@ -6,40 +6,40 @@ helpviewer_keywords:
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
 ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007108"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>演练：在 WPF 中承载 Direct3D9 内容
 本演练演示如何承载 Windows Presentation Foundation (WPF) 应用程序中的 Direct3D9 内容。  
   
  在本演练中，你将要执行以下任务：  
   
--   创建用于承载 Direct3D9 内容的 WPF 项目。  
+- 创建用于承载 Direct3D9 内容的 WPF 项目。  
   
--   导入的 Direct3D9 内容。  
+- 导入的 Direct3D9 内容。  
   
--   使用显示 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>类。  
+- 使用显示 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>类。  
   
  完成后，您将知道如何进行承载 Direct3D9 内容在 WPF 应用程序。  
   
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio。  
+- Visual Studio。  
   
--   DirectX 9 或更高版本的 SDK。  
+- DirectX 9 或更高版本的 SDK。  
   
--   包含 WPF 兼容格式的 Direct3D9 内容的 DLL。 有关详细信息，请参阅[WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)和[演练：创建在 WPF 中承载的 Direct3D9 内容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
+- 包含 WPF 兼容格式的 Direct3D9 内容的 DLL。 有关详细信息，请参阅[WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)和[演练：创建在 WPF 中承载的 Direct3D9 内容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
   
 ## <a name="creating-the-wpf-project"></a>创建 WPF 项目  
  第一步是创建 WPF 应用程序的项目。  
   
 #### <a name="to-create-the-wpf-project"></a>创建 WPF 项目  
   
--   新的 WPF 应用程序项目中 Visual C# 创建名为`D3DHost`。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+- 新的 WPF 应用程序项目中 Visual C# 创建名为`D3DHost`。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
      在中打开 MainWindow.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   

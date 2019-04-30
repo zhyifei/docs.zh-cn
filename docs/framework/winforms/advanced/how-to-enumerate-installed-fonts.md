@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
 ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004091"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>如何：枚举已安装的字体
 <xref:System.Drawing.Text.InstalledFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 可以使用<xref:System.Drawing.Text.InstalledFontCollection>对象枚举在计算机上安装的字体。 <xref:System.Drawing.Text.FontCollection.Families%2A>的属性<xref:System.Drawing.Text.InstalledFontCollection>对象是一个数组<xref:System.Drawing.FontFamily>对象。  

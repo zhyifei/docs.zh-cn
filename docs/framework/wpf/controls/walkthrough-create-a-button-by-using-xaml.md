@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023965"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
 本演练的目的是了解如何创建 Windows Presentation Foundation (WPF) 应用程序中使用的动画的按钮。 本演练使用样式和模板来创建自定义的按钮资源允许重用代码和从按钮声明按钮逻辑的分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -421,15 +421,15 @@ ms.locfileid: "59309493"
 ## <a name="summary"></a>总结  
  在本演练中，您执行了以下练习：  
   
--   面向<xref:System.Windows.Style>为对象类型 (<xref:System.Windows.Controls.Button>)。  
+- 面向<xref:System.Windows.Style>为对象类型 (<xref:System.Windows.Controls.Button>)。  
   
--   控制在整个应用程序中使用的按钮的基本属性<xref:System.Windows.Style>。  
+- 控制在整个应用程序中使用的按钮的基本属性<xref:System.Windows.Style>。  
   
--   创建资源，如渐变来使用的属性值的<xref:System.Windows.Style>资源库。  
+- 创建资源，如渐变来使用的属性值的<xref:System.Windows.Style>资源库。  
   
--   通过将模板应用于按钮自定义整个应用程序中的按钮的外观。  
+- 通过将模板应用于按钮自定义整个应用程序中的按钮的外观。  
   
--   自定义行为响应用户操作中的按钮 (如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的动画效果。  
+- 自定义行为响应用户操作中的按钮 (如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的动画效果。  
   
 ## <a name="see-also"></a>请参阅
 

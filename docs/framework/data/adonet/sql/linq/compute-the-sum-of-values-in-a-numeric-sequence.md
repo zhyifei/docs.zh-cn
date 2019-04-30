@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 24e335b0-984e-4825-8721-0a91b533b7c3
 ms.openlocfilehash: 2f66b996a0e688205d61f5fca476c0335616ee38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032937"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>计算数值序列中值的和
 使用 <xref:System.Linq.Enumerable.Sum%2A> 运算符可以计算序列中数值的和。  
   
  请注意 `Sum` 中 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 运算符的以下特征：  
   
--   使用标准查询运算符中的聚合运算符 `Sum` 计算空序列或只包含 null 的序列时，所得结果为零。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，SQL 的语义保持不变。 因此，使用 `Sum` 计算空序列或只包含 null 的序列时，所得结果为 null 而非零。  
+- 使用标准查询运算符中的聚合运算符 `Sum` 计算空序列或只包含 null 的序列时，所得结果为零。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，SQL 的语义保持不变。 因此，使用 `Sum` 计算空序列或只包含 null 的序列时，所得结果为 null 而非零。  
   
--   针对中间结果的 SQL 限制适用于 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的聚合。 32 位整型量之和不是使用 64 位结果计算的，且在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 转换 `Sum` 时可能会发生溢出。 即使对于内存中的对应序列，标准查询运算符的实现不会造成溢出，仍存在这种可能性。  
+- 针对中间结果的 SQL 限制适用于 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的聚合。 32 位整型量之和不是使用 64 位结果计算的，且在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 转换 `Sum` 时可能会发生溢出。 即使对于内存中的对应序列，标准查询运算符的实现不会造成溢出，仍存在这种可能性。  
   
 ## <a name="example"></a>示例  
  下面的示例查找 `Order` 表中所有订单的总运费。  

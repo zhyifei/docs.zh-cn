@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039723"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异
 本主题总结了在 Windows Communication Foundation (WCF) 队列功能之间的差异[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
@@ -26,11 +26,11 @@ ms.locfileid: "59115981"
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上的消息队列 (MSMQ) 之间在病毒消息处理方面的主要差异包括以下几点：  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持子队列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持子队列。 子队列用于病毒消息处理。 重试队列和病毒队列是应用程序队列的子队列，是基于病毒消息处理设置创建的。 `MaxRetryCycles` 用于指示要创建的重试子队列的数量。 因此，当在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上运行时，`MaxRetryCycles` 会被忽略，并且不允许 `ReceiveErrorHandling.Move`。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持子队列，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持子队列。 子队列用于病毒消息处理。 重试队列和病毒队列是应用程序队列的子队列，是基于病毒消息处理设置创建的。 `MaxRetryCycles` 用于指示要创建的重试子队列的数量。 因此，当在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上运行时，`MaxRetryCycles` 会被忽略，并且不允许 `ReceiveErrorHandling.Move`。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持否定确认，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持否定确认，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持用于对消息传递尝试次数进行计数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 会维护中止计数在内存中，所以，此属性可能包含不精确的值时由多个 Web 场中的 WCF 服务读取同一条消息。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持用于对消息传递尝试次数进行计数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 会维护中止计数在内存中，所以，此属性可能包含不精确的值时由多个 Web 场中的 WCF 服务读取同一条消息。  
   
 ## <a name="remote-transactional-read"></a>远程事务性读取  
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支持远程事务性读取。 这允许从队列中进行读取的应用程序与该队列承载在不同的计算机上。 这样可以确保服务场能够从中心队列进行读取，从而增加系统的总体吞吐量。 另外，还可以确保在读取和处理消息时一旦出现故障，事务能够回滚并且消息保留在队列中以供以后处理。  

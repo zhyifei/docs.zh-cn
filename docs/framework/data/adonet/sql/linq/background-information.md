@@ -3,22 +3,22 @@ title: 背景信息
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
 ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033782"
 ---
 # <a name="background-information"></a>背景信息
 本节中的主题介绍有关使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的基础知识以外的概念和过程。  
   
  请按以下这些步骤查找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 代码和应用程序的其他示例：  
   
--   Microsoft Docs 中搜索特定问题。  
+- Microsoft Docs 中搜索特定问题。  
   
--   参与[LINQ 论坛](https://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。  
+- 参与[LINQ 论坛](https://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。  
   
--   学习详细介绍的白皮书[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技术并包含 Visual Basic 和 C# 代码示例。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](https://go.microsoft.com/fwlink/?LinkId=93205)。  
+- 学习详细介绍的白皮书[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技术并包含 Visual Basic 和 C# 代码示例。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](https://go.microsoft.com/fwlink/?LinkId=93205)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ADO.NET 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

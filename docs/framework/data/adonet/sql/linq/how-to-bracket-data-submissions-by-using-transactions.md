@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
 ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037856"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>如何：通过使用事务对数据提交进行分类
 您可以使用 <xref:System.Transactions.TransactionScope> 来封闭您提交到数据库的数据。 有关详细信息，请参阅[事务支持](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966473"
 ---
 # <a name="capitalization-conventions"></a>大写约定
 本章中的准则列出了一种针对用例的简单方法，当统一应用此方法时，可以使类型、成员和参数的标识符易于阅读。  
@@ -23,9 +23,9 @@ ms.locfileid: "54670168"
 ## <a name="capitalization-rules-for-identifiers"></a>标识符的大小写规则  
  若要区分标识符中的单词，请将标识符中每个单词的首字母大写。 不要使用下划线来区分单词，也不要为此在标识符中的任何位置使用下划线。 根据标识符的使用情况，可以通过两种适当的方法将标识符大写：  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  PascalCasing 约定用于除参数名称之外的所有标识符，将每个单词的第一个字符大写（包括超过两个字母的首字母缩写），如以下示例所示：  
   

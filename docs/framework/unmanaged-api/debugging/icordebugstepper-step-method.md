@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 444390622ca68244661b91dc85814b05556b12a2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994313"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 方法
 导致此单步执行其包含的线程，并 （可选） 到 ICorDebugStepper 继续单步执行通过该线程中调用的函数。  

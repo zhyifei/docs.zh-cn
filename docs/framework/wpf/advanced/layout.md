@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054351"
 ---
 # <a name="layout"></a>布局
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 布局系统。 了解布局计算发生的方式和时间对于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建用户界面非常重要。  
   
  本主题包含以下各节：  
   
--   [元素边界框](#LayoutSystem_BoundingBox)  
+- [元素边界框](#LayoutSystem_BoundingBox)  
   
--   [布局系统](#LayoutSystem_Overview)  
+- [布局系统](#LayoutSystem_Overview)  
   
--   [测量和排列子元素](#LayoutSystem_Measure_Arrange)  
+- [测量和排列子元素](#LayoutSystem_Measure_Arrange)  
   
--   [面板元素和自定义布局行为](#LayoutSystem_PanelsCustom)  
+- [面板元素和自定义布局行为](#LayoutSystem_PanelsCustom)  
   
--   [布局性能注意事项](#LayoutSystem_Performance)  
+- [布局性能注意事项](#LayoutSystem_Performance)  
   
--   [子像素渲染和布局舍入](#LayoutSystem_LayoutRounding)  
+- [子像素渲染和布局舍入](#LayoutSystem_LayoutRounding)  
   
--   [后续步骤](#LayoutSystem_whatsnext)  
+- [后续步骤](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>元素边界框  
@@ -120,19 +120,19 @@ ms.locfileid: "59330488"
 ## <a name="layout-performance-considerations"></a>布局性能注意事项  
  布局是一个递归过程。 在每个子元素<xref:System.Windows.Controls.Panel.Children%2A>集合在每次调用布局系统期间得到处理。 因此，应避免在不必要时触发布局系统。 以下注意事项有助于实现更好的性能。  
   
--   应注意哪些属性值更改会强制执行布局系统的递归更新。  
+- 应注意哪些属性值更改会强制执行布局系统的递归更新。  
   
      如果依赖属性的值可能导致布局系统被初始化，则会使用公共标志对该依赖属性进行标记。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有关哪些属性值更改会强制执行递归的有用提示更新由布局系统。 一般情况下，可能会影响元素的边界框的大小的任何属性应具有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>标志设置为 true。 有关详细信息，请参阅[依赖项属性概述](dependency-properties-overview.md)。  
   
--   如果可能，请使用<xref:System.Windows.UIElement.RenderTransform%2A>而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。  
+- 如果可能，请使用<xref:System.Windows.UIElement.RenderTransform%2A>而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。  
   
      一个<xref:System.Windows.FrameworkElement.LayoutTransform%2A>可以是非常有用的方式来影响的内容[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 但是，如果转换的效果不必影响其他元素的位置，它是使用<xref:System.Windows.UIElement.RenderTransform%2A>相反，因为<xref:System.Windows.UIElement.RenderTransform%2A>不会调用布局系统。 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 应用其转换和强制执行递归布局更新以受影响的元素的新位置。  
   
--   避免不必要调用<xref:System.Windows.UIElement.UpdateLayout%2A>。  
+- 避免不必要调用<xref:System.Windows.UIElement.UpdateLayout%2A>。  
   
      <xref:System.Windows.UIElement.UpdateLayout%2A>方法强制执行递归布局更新，并经常是不必要。 除非你确定需要进行完整更新，否则请依赖布局系统为你调用此方法。  
   
--   使用具有较大时<xref:System.Windows.Controls.Panel.Children%2A>集合，请考虑使用<xref:System.Windows.Controls.VirtualizingStackPanel>而不是正则表达式<xref:System.Windows.Controls.StackPanel>。  
+- 使用具有较大时<xref:System.Windows.Controls.Panel.Children%2A>集合，请考虑使用<xref:System.Windows.Controls.VirtualizingStackPanel>而不是正则表达式<xref:System.Windows.Controls.StackPanel>。  
   
      通过虚拟化其子集合，<xref:System.Windows.Controls.VirtualizingStackPanel>仅在当前父级的视区中的内存中保留对象。 因此，在大多数情况下，性能得到显著提高。  
   

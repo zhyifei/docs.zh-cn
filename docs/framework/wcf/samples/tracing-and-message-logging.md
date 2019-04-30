@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007729"
 ---
 # <a name="tracing-and-message-logging"></a>跟踪和消息日志记录
 本示例演示如何启用跟踪和消息日志记录。 生成的跟踪和消息日志使用查看[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -52,11 +52,11 @@ ms.locfileid: "59322129"
   
  通过创建用户定义的活动跟踪可以扩展 ServiceModel 提供的跟踪。 用户定义的活动跟踪允许用户创建跟踪活动，以便执行下列操作：  
   
--   将跟踪分组到逻辑工作单元。  
+- 将跟踪分组到逻辑工作单元。  
   
--   通过传输和传播关联活动。  
+- 通过传输和传播关联活动。  
   
--   降低 （例如，日志文件的磁盘空间成本） 的 WCF 跟踪的性能成本。  
+- 降低 （例如，日志文件的磁盘空间成本） 的 WCF 跟踪的性能成本。  
   
  有关用户定义的活动跟踪的详细信息，请参阅[扩展跟踪](../../../../docs/framework/wcf/samples/extending-tracing.md)示例。  
   

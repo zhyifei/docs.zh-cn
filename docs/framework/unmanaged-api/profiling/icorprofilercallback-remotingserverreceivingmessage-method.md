@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 30015cc6cae935c43cdbfec1a6eeae5c703ef9f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041816"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
 通知探查器进程已接收到的远程方法调用或激活请求。  
@@ -39,11 +39,11 @@ HRESULT RemotingClientSendingMessage(
  `pCookie`  
  [in]中提供的值的值将对应[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)在这些情况下：  
   
--   远程处理 GUID cookie 处于活动状态。  
+- 远程处理 GUID cookie 处于活动状态。  
   
--   通道成功传输消息。  
+- 通道成功传输消息。  
   
--   GUID cookie 处于活动状态的客户端的过程。  
+- GUID cookie 处于活动状态的客户端的过程。  
   
  这允许轻松配对的远程处理调用以及逻辑调用堆栈的创建。  
   

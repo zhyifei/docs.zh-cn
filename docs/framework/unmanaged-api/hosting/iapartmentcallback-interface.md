@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985500"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback 接口
 提供用于在单元内使回调方法。 *单元*是个对象共享相同的线程访问要求进程内的逻辑容器。  

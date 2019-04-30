@@ -5,11 +5,11 @@ helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
 ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009158"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>使用托管 HTML 文档对象模型
 托管的 HTML 文档对象模型 (DOM) 提供包装器基于[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]HTML 类公开的 Internet 资源管理器。 这些类用于处理 HTML 页面中承载<xref:System.Windows.Forms.WebBrowser>控件，或要生成新的页从一开始。  

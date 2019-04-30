@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
 ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013824"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>从隐式转换\<typename1 > 到\<typename2 >' ByRef 参数的值复制\<参数名 > 返回到匹配的参数。
 与调用了过程[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其对应的参数的不同类型的参数。  
@@ -27,9 +27,9 @@ ms.locfileid: "58831751"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果可能，请与过程参数，使用相同类型的调用参数，因此 Visual Basic 不需要执行任何转换。  
+- 如果可能，请与过程参数，使用相同类型的调用参数，因此 Visual Basic 不需要执行任何转换。  
   
--   如果需要调用实参类型与形参类型不同的过程，但不需要将值返回到调用实参中，请将形参定义为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 而不是 `ByRef`。  
+- 如果需要调用实参类型与形参类型不同的过程，但不需要将值返回到调用实参中，请将形参定义为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 而不是 `ByRef`。  
   
 ## <a name="see-also"></a>请参阅
 

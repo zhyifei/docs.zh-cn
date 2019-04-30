@@ -5,52 +5,52 @@ helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
 ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043572"
 ---
 # <a name="channel-model-overview"></a>通道模型概述
 Windows Communication Foundation (WCF) 通道堆栈是分层的通信堆栈处理消息的一个或多个频道。 堆栈底部是传输通道，它负责使通道堆栈适应基础传输（例如，TCP、HTTP、SMTP 和其他类型的传输）。 通道为消息的发送和接收提供了一个低级编程模型。 此编程模型依赖于多个接口和其他类型统称为 WCF 通道模型。 本主题讨论通道形状、基本通道侦听器（在服务上）和通道工厂（在客户端上）的构造。  
   
 ## <a name="channel-stack"></a>通道堆栈  
- 与使用称为通道堆栈的通信堆栈世界的通信的 WCF 终结点。 下图对通道堆栈和其他通信堆栈（如 TCP/IP）进行了比较。  
+ WCF 终结点与世界上使用称为通道堆栈的通信堆栈的通信。 下图对通道堆栈和其他通信堆栈（如 TCP/IP）进行了比较。  
   
  ![通道模型](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   
- 首先说明共同点：在两种情况下，堆栈的每一层均提供该层下面一层的一些抽象，并仅向其上的一层公开该抽象。 每一层只使用其下面一层的抽象。 而且在这两种情况下，两个堆栈通信时，每个层均与另一个堆栈中的相应层通信，例如，IP 层与 IP 层通信，TCP 层与 TCP 层通信，依此类推。  
+ 首先，相似之处：在这两种情况下，堆栈中的每个层提供该层下面的层和公开该抽象仅向其上的一层的一些抽象。 每一层只使用其下面一层的抽象。 而且在这两种情况下，两个堆栈通信时，每个层均与另一个堆栈中的相应层通信，例如，IP 层与 IP 层通信，TCP 层与 TCP 层通信，依此类推。  
   
- 现在说明区别：TCP 堆栈旨在提供物理网络的抽象，而通道堆栈不仅提供消息传送方式（即传输）的抽象，还提供其他功能（比如消息的内容或通信所使用的协议，包括但不仅仅限于传输）的抽象。 例如，可靠的会话绑定元素是通道堆栈的一部分，但却不在传输下面或传输本身中。 此抽象是通过要求堆栈中的底部通道使基础传输协议适应通道堆栈体系结构，然后依赖堆栈中更上层的通道提供通信功能（比如可靠性保证和安全）来实现的。  
+ 现在说明区别：虽然 TCP 堆栈旨在提供物理网络的抽象，通道堆栈旨在提供一种抽象的如何传递消息，即、 传输，不仅还等什么是在邮件或其他功能协议用于通信，包括但不仅仅的传输。 例如，可靠的会话绑定元素是通道堆栈的一部分，但却不在传输下面或传输本身中。 此抽象是通过要求堆栈中的底部通道使基础传输协议适应通道堆栈体系结构，然后依赖堆栈中更上层的通道提供通信功能（比如可靠性保证和安全）来实现的。  
   
  消息作为 <xref:System.ServiceModel.Channels.Message> 对象流过通信堆栈。 如上图所示，底部通道称为传输通道。 它是负责与其他方之间发送和接收消息的通道。 这包括负责在与用于和其他方通信的格式之间转换 <xref:System.ServiceModel.Channels.Message> 对象。 传输通道上面可以有任意个协议通道，每个协议通道负责提供一种通信功能（如可靠的传递保证）。 协议通道对以 <xref:System.ServiceModel.Channels.Message> 对象的形式流过其中的消息执行操作。 协议通道通常会转换消息（例如，通过添加标头或加密正文），或者发送和接收协议通道自己的控制消息（例如回执确认）。  
   
 ## <a name="channel-shapes"></a>通道形状  
- 每个通道均实现一个或多个接口，称为通道形状接口或通道形状。 这些通道形状提供面向通信的方法（如通道实现的发送和接收或请求和答复）和通道调用的用户。 通道形状的最底层是<xref:System.ServiceModel.Channels.IChannel>接口，该接口提供`GetProperty` \<T > 方法，用作访问由堆栈中的通道公开的任意功能的分层机制。 扩展 <xref:System.ServiceModel.Channels.IChannel> 的五种通道形状为：  
+ 每个通道均实现一个或多个接口，称为通道形状接口或通道形状。 这些通道形状提供面向通信的方法（如通道实现的发送和接收或请求和答复）和通道调用的用户。 通道形状的底部是<xref:System.ServiceModel.Channels.IChannel>接口，这是一个接口，提供`GetProperty` \<T > 方法，用作访问由通道堆栈中的任意功能的分层机制。 扩展 <xref:System.ServiceModel.Channels.IChannel> 的五种通道形状为：  
   
--   <xref:System.ServiceModel.Channels.IInputChannel>  
+- <xref:System.ServiceModel.Channels.IInputChannel>  
   
--   <xref:System.ServiceModel.Channels.IOutputChannel>  
+- <xref:System.ServiceModel.Channels.IOutputChannel>  
   
--   <xref:System.ServiceModel.Channels.IRequestChannel>  
+- <xref:System.ServiceModel.Channels.IRequestChannel>  
   
--   <xref:System.ServiceModel.Channels.IReplyChannel>  
+- <xref:System.ServiceModel.Channels.IReplyChannel>  
   
--   <xref:System.ServiceModel.Channels.IDuplexChannel>  
+- <xref:System.ServiceModel.Channels.IDuplexChannel>  
   
  另外，这些形状中的每个形状均有一个扩展 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 以支持会话的等效项。 这些是：  
   
--   <xref:System.ServiceModel.Channels.IInputSessionChannel>  
+- <xref:System.ServiceModel.Channels.IInputSessionChannel>  
   
--   <xref:System.ServiceModel.Channels.IOutputSessionChannel>  
+- <xref:System.ServiceModel.Channels.IOutputSessionChannel>  
   
--   <xref:System.ServiceModel.Channels.IRequestSessionChannel>  
+- <xref:System.ServiceModel.Channels.IRequestSessionChannel>  
   
--   <xref:System.ServiceModel.Channels.IReplySessionChannel>  
+- <xref:System.ServiceModel.Channels.IReplySessionChannel>  
   
--   <xref:System.ServiceModel.Channels.IDuplexSessionChannel>  
+- <xref:System.ServiceModel.Channels.IDuplexSessionChannel>  
   
- 在现有的传输协议支持某些基本消息交换模式后，通道形状可以实现模式化。 例如，单向消息传递对应于<xref:System.ServiceModel.Channels.IInputChannel> / <xref:System.ServiceModel.Channels.IOutputChannel>对，请求-答复对应于<xref:System.ServiceModel.Channels.IRequestChannel> / <xref:System.ServiceModel.Channels.IReplyChannel>对，双向双工通信对应于<xref:System.ServiceModel.Channels.IDuplexChannel>(同时扩展<xref:System.ServiceModel.Channels.IInputChannel>和<xref:System.ServiceModel.Channels.IOutputChannel>)。  
+ 在现有的传输协议支持某些基本消息交换模式后，通道形状可以实现模式化。 例如，单向消息传递对应于<xref:System.ServiceModel.Channels.IInputChannel> / <xref:System.ServiceModel.Channels.IOutputChannel>对，请求-答复对应于<xref:System.ServiceModel.Channels.IRequestChannel> / <xref:System.ServiceModel.Channels.IReplyChannel>对和双向双工通信对应于<xref:System.ServiceModel.Channels.IDuplexChannel>(同时扩展<xref:System.ServiceModel.Channels.IInputChannel>和<xref:System.ServiceModel.Channels.IOutputChannel>)。  
   
 ## <a name="programming-with-the-channel-stack"></a>通道堆栈的编程  
  通道堆栈通常是使用工厂模式创建的，在这种模式中，绑定创建通道堆栈。 在发送端，使用绑定生成 <xref:System.ServiceModel.ChannelFactory>，而后者生成通道堆栈并返回对堆栈中顶部通道的引用。 之后，应用程序可以使用此通道发送消息。 有关详细信息，请参阅[客户端通道级编程](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。  

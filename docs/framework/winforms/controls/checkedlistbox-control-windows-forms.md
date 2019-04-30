@@ -14,11 +14,11 @@ helpviewer_keywords:
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
 ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956450"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控件（Windows 窗体）
 Windows 窗体`CheckedListBox`控件将显示一系列项，如<xref:System.Windows.Forms.ListBox>控件，并还可以显示在列表中的项旁边的复选标记。  

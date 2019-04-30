@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b05ba185a9ad4ab076d29d7d609734d41677b760
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986045"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod 方法
 打开的符号信息发送到一个方法。 给定的方法将成为当前方法的调用，以定义序列点、 参数和词法范围。 没有围绕整个方法的隐式词法作用域。 重新打开之前关闭的方法会清除任何以前定义的符号，该方法。 一次可以有一个 open 方法。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
 ms.openlocfilehash: de9f7972c7a51ea623c3630fe62bb48f6109317e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052893"
 ---
 # <a name="how-to-create-a-composite-shape"></a>如何：创建复合形状
 此示例演示如何创建使用复合形状<xref:System.Windows.Media.Geometry>对象并将其显示使用<xref:System.Windows.Shapes.Path>元素。 在以下示例中， <xref:System.Windows.Media.LineGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和一个<xref:System.Windows.Media.RectangleGeometry>与一起使用<xref:System.Windows.Media.GeometryGroup>创建复合形状。 然后使用绘制几何图形的<xref:System.Windows.Shapes.Path>元素。  

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972362"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定义默认值
 `ShouldSerialize` 和`Reset`是可以提供的属性的可选方法，如果相应属性不具有简单的默认值。 如果该属性具有简单的默认值，则应该应用<xref:System.ComponentModel.DefaultValueAttribute>并改为提供给特性类构造函数的默认值。 任何机制可以在设计器中的使用下列功能：  
   
--   如果已修改从其默认值，则属性提供属性浏览器中的可视指示。  
+- 如果已修改从其默认值，则属性提供属性浏览器中的可视指示。  
   
--   用户可以在属性上右键单击并选择**重置**将该属性还原为其默认值。  
+- 用户可以在属性上右键单击并选择**重置**将该属性还原为其默认值。  
   
--   在设计器生成更高效的代码。  
+- 在设计器生成更高效的代码。  
   
     > [!NOTE]
     >  请应用<xref:System.ComponentModel.DefaultValueAttribute>或提供`Reset` *PropertyName*并`ShouldSerialize` *PropertyName*方法。 不要同时使用。  

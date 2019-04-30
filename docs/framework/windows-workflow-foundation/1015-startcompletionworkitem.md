@@ -3,17 +3,18 @@ title: 1015 - StartCompletionWorkItem
 ms.date: 03/30/2017
 ms.assetid: 96fd1d4e-c5d0-46ad-8a71-4b4b49ac7262
 ms.openlocfilehash: 6a2d4c866ec7d43e8ae40b5616a97c3b7adf1843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032261"
 ---
 # <a name="1015---startcompletionworkitem"></a>1015 - StartCompletionWorkItem
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|1015|  
+|Id|1015|  
 |关键字|WFRuntime|  
 |级别|详细|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
@@ -34,4 +35,4 @@ ms.lasthandoff: 05/04/2018
 |CompletedActivity|xs:string|已完成活动的类型名称。|  
 |CompletedActivityDisplayName|xs:string|已完成活动的显示名称。|  
 |CompletedActivityInstanceId|xs:string|已完成活动的实例 ID。|  
-|AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|应用程序域|xs:string|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

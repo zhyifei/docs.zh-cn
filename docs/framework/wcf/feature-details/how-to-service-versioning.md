@@ -3,11 +3,11 @@ title: 如何：服务版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047472"
 ---
 # <a name="how-to-service-versioning"></a>如何：服务版本控制
 本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。 在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。 这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。  
@@ -17,13 +17,13 @@ ms.locfileid: "59346283"
   
  这两个服务公开的运算包括：  
   
--   添加  
+- 添加  
   
--   减  
+- 减  
   
--   相乘  
+- 相乘  
   
--   除  
+- 除  
   
  由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。 例如，由于两个服务的默认操作相同，因此不能使用操作筛选器。  
   

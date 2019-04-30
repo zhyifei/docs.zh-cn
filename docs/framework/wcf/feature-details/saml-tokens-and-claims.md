@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
 ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991049"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 令牌和声明
 安全断言标记语言 (SAML)*令牌*的声明的 XML 表示形式。 默认情况下，Windows Communication Foundation (WCF) 在联合的安全方案中使用的 SAML 令牌是*颁发的令牌*。  

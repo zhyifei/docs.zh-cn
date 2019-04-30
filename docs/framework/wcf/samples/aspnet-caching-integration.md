@@ -3,11 +3,11 @@ title: ASP.NET 缓存集成
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002724"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 缓存集成
 此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。 本主题重点介绍 ASP.NET 输出缓存集成功能。  
@@ -34,11 +34,11 @@ ms.locfileid: "59770017"
 ## <a name="to-run-the-sample"></a>运行示例  
  该示例由三个项目组成：  
   
--   **服务**：一个包含在 ASP.NET 中承载的 WCF HTTP 服务的 Web 应用程序项目。  
+- **服务**：一个包含在 ASP.NET 中承载的 WCF HTTP 服务的 Web 应用程序项目。  
   
--   **客户端**:一个对服务进行调用的控制台应用程序项目。  
+- **客户端**:一个对服务进行调用的控制台应用程序项目。  
   
--   **常见**:包含使用客户端和服务的客户类型的共享的库。  
+- **常见**:包含使用客户端和服务的客户类型的共享的库。  
   
  在客户端控制台应用程序运行时，客户端会对服务进行请求，并将响应中的相关信息写入控制台窗口。  
   

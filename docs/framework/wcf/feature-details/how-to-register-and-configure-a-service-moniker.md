@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
 ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000800"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务名字对象
 必须在使用之前在 COM 应用程序中的 Windows Communication Foundation (WCF) 服务名字对象具有类型化协定中, 所需的特性化的类型向 COM 注册，并使用所需的绑定配置的 COM 应用程序和标记配置。  
@@ -36,7 +36,7 @@ ms.locfileid: "59313575"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>为 COM 应用程序和标记配置所需的绑定配置  
   
--   将绑定定义放置 (パ[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端应用程序配置文件中) 客户端应用程序的配置文件中。 例如，对于名为 CallCenterClient.exe 的 Visual Basic 6.0 可执行文件，配置应放置到该可执行文件所在目录中名为 CallCenterConfig.exe.config 的文件中。 此时，客户端应用程序就可以使用标记了。 请注意，如果使用的标准绑定 WCF 提供的类型之一，可能不是必需的绑定配置。  
+- 将绑定定义放置 (パ[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成的客户端应用程序配置文件中) 客户端应用程序的配置文件中。 例如，对于名为 CallCenterClient.exe 的 Visual Basic 6.0 可执行文件，配置应放置到该可执行文件所在目录中名为 CallCenterConfig.exe.config 的文件中。 此时，客户端应用程序就可以使用标记了。 请注意，如果使用的标准绑定 WCF 提供的类型之一，可能不是必需的绑定配置。  
   
      注册下面的类型。  
   

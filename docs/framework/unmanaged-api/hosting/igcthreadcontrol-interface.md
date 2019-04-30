@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c00f401bedc1a2810c4e9b3046a45e53a79f1ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992766"
 ---
 # <a name="igcthreadcontrol-interface"></a>IGCThreadControl 接口
 提供用于参与防止因阻塞而垃圾回收的线程的调度方法。  

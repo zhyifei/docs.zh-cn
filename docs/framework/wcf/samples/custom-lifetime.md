@@ -3,11 +3,11 @@ title: 自定义生存期
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
 ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003153"
 ---
 # <a name="custom-lifetime"></a>自定义生存期
 
@@ -64,8 +64,7 @@ using (new OperationContextScope((IClientChannel)proxy2))
 
 <xref:System.ServiceModel.IExtensibleObject%601>接口由对象实现，允许使用自定义其功能的扩展。
 
-
-  <xref:System.ServiceModel.IExtension%601> 接口由可作为类型为 `T` 的类扩展的对象来实现。
+<xref:System.ServiceModel.IExtension%601> 接口由可作为类型为 `T` 的类扩展的对象来实现。
 
 最后，<xref:System.ServiceModel.IExtensionCollection%601>接口是一系列<xref:System.ServiceModel.IExtension%601>实现允许检索的实现<xref:System.ServiceModel.IExtension%601>按其类型。
 
@@ -77,8 +76,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>
 }
 ```
 
-
-  <xref:System.ServiceModel.IExtension%601> 接口具有 <xref:System.ServiceModel.IExtension%601.Attach%2A> 和 <xref:System.ServiceModel.IExtension%601.Detach%2A> 两个方法。 顾名思义，当运行时将扩展附加到 <xref:System.ServiceModel.InstanceContext> 类的实例以及将扩展从该类的实例分离时，将会调用这两个方法。 在此示例中，`Attach` 方法用于跟踪属于当前扩展实例的 <xref:System.ServiceModel.InstanceContext> 对象。
+<xref:System.ServiceModel.IExtension%601> 接口具有 <xref:System.ServiceModel.IExtension%601.Attach%2A> 和 <xref:System.ServiceModel.IExtension%601.Detach%2A> 两个方法。 顾名思义，当运行时将扩展附加到 <xref:System.ServiceModel.InstanceContext> 类的实例以及将扩展从该类的实例分离时，将会调用这两个方法。 在此示例中，`Attach` 方法用于跟踪属于当前扩展实例的 <xref:System.ServiceModel.InstanceContext> 对象。
 
 ```csharp
 InstanceContext owner;
@@ -144,8 +142,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
 
 没有新消息到达实例对于转为空闲状态时续订正在运行的计时器的方法。
 
-此示例实现 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 以截获对 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法的调用，并将这些调用路由到 `CustomLeaseExtension`。 
-  <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现包含在 `CustomLifetimeLease` 类中。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF 即将发布的服务实例时调用方法。 但是，在 ServiceBehavior 的 `ISharedSessionInstance` 集合中，只有特定 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现的一个实例。 这意味着无法知道如果<xref:System.ServiceModel.InstanceContext>WCF 检查当时关闭<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。 因此，此示例使用线程锁定将请求序列化到<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。
+此示例实现 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 以截获对 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法的调用，并将这些调用路由到 `CustomLeaseExtension`。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现包含在 `CustomLifetimeLease` 类中。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF 即将发布的服务实例时调用方法。 但是，在 ServiceBehavior 的 `ISharedSessionInstance` 集合中，只有特定 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 实现的一个实例。 这意味着无法知道如果<xref:System.ServiceModel.InstanceContext>WCF 检查当时关闭<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。 因此，此示例使用线程锁定将请求序列化到<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。
 
 > [!IMPORTANT]
 > 由于序列化可能会严重影响应用程序的性能，因此不推荐使用线程锁定方法。

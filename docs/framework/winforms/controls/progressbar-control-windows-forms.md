@@ -6,16 +6,15 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
 ms.openlocfilehash: 2ad6450e26777a4642f0b9c685c9f5e552b5fdc7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012506"
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar 控件（Windows 窗体）
 > [!IMPORTANT]
->  
-  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
+>  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
   
  Windows 窗体<xref:System.Windows.Forms.ProgressBar>控件通过显示适当数量的水平栏中排列矩形指示操作的进度。 操作完成后，填充栏。 进度条通常用于为用户提供的方式指示等待较长时间的操作以完成 — 例如，大型文件正在加载时。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
 ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032183"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>演练：在 WPF 中托管 Windows 窗体复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当您有大量投入时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码，它可以更有效地重复使用至少某些中的代码在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序而不是从头开始重新编写。 最常见的方案是具有现有 Windows 窗体控件。 在某些情况下，你甚至可能无法使用这些控件的源代码。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一个简单的过程中的此类控件承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 例如，可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对于大多数应用编程，同时承载专用<xref:System.Windows.Forms.DataGridView>控件。  
@@ -24,9 +24,9 @@ ms.locfileid: "59337846"
   
  本演练涉及以下任务：  
   
--   实现 Windows 窗体复合控件。  
+- 实现 Windows 窗体复合控件。  
   
--   实现 WPF 主机应用程序。  
+- 实现 WPF 主机应用程序。  
   
  在本演练中所涉及任务的完整代码列表，请参阅[承载 Windows 窗体复合控件在 WPF 示例中](https://go.microsoft.com/fwlink/?LinkID=159999)。  
   
@@ -58,32 +58,32 @@ ms.locfileid: "59337846"
   
  项目应具有对以下系统 DLL 的引用。 如果默认不包含其中任何 DLL，则将它们添加到项目中。  
   
--   系统  
+- 系统  
   
--   System.Data  
+- System.Data  
   
--   System.Drawing  
+- System.Drawing  
   
--   System.Windows.Forms  
+- System.Windows.Forms  
   
--   System.Xml  
+- System.Xml  
   
 ### <a name="adding-controls-to-the-form"></a>将控件添加到窗体  
  向窗体添加控件：  
   
--   打开`MyControl1`在设计器中。  
+- 打开`MyControl1`在设计器中。  
   
  添加五个<xref:System.Windows.Forms.Label>及其对应<xref:System.Windows.Forms.TextBox>控件，调整大小和排列方式与其在上图中，在窗体上。 在示例中，<xref:System.Windows.Forms.TextBox>控件命名为：  
   
--   `txtName`  
+- `txtName`  
   
--   `txtAddress`  
+- `txtAddress`  
   
--   `txtCity`  
+- `txtCity`  
   
--   `txtState`  
+- `txtState`  
   
--   `txtZip`  
+- `txtZip`  
   
  添加两个<xref:System.Windows.Forms.Button>控件标记为**确定**并**取消**。 在此示例中，按钮名称是`btnOK`和`btnCancel`分别。  
   
@@ -159,11 +159,11 @@ ms.locfileid: "59337846"
 ### <a name="implementing-the-basic-layout"></a>实现基本布局
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的主机在 MainWindow.xaml 中实现应用程序。 此文件包含[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定义布局，并托管在 Windows 窗体控件的标记。 该应用程序分为三个区域：
 
--   **控件属性**面板，其中包含一组可用于修改所承载控件的各种属性的选项按钮。
+- **控件属性**面板，其中包含一组可用于修改所承载控件的各种属性的选项按钮。
 
--   **来自控件的数据**面板，其中包含几个<xref:System.Windows.Controls.TextBlock>从承载控件返回显示的数据的元素。
+- **来自控件的数据**面板，其中包含几个<xref:System.Windows.Controls.TextBlock>从承载控件返回显示的数据的元素。
 
--   所承载控件本身。
+- 所承载控件本身。
 
  基本布局如下面的 XAML 中所示。 需要的标记到主机`MyControl1`从本示例中，省略了，但将在下文。
 
@@ -183,18 +183,18 @@ ms.locfileid: "59337846"
 
  XAML 中的两个元素处理承载：
 
--   `WindowsFormsHost` 表示<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，可用于承载 Windows 窗体控件中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。
+- `WindowsFormsHost` 表示<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，可用于承载 Windows 窗体控件中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。
 
--   `mcl:MyControl1`表示`MyControl1`，添加到<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的子集合。 因此，此 Windows 窗体控件呈现为一部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]窗口中，并且您可以与该控件从该应用程序进行通信。
+- `mcl:MyControl1`表示`MyControl1`，添加到<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的子集合。 因此，此 Windows 窗体控件呈现为一部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]窗口中，并且您可以与该控件从该应用程序进行通信。
 
 ### <a name="implementing-the-code-behind-file"></a>实现代码隐藏文件
  代码隐藏文件，MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，包含实现的功能的过程性代码[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]前面部分所述。 主要任务有：
 
--   附加到事件处理程序`MyControl1`的`OnButtonClick`事件。
+- 附加到事件处理程序`MyControl1`的`OnButtonClick`事件。
 
--   修改的各种属性`MyControl1`根据选项按钮集合的设置方式。
+- 修改的各种属性`MyControl1`根据选项按钮集合的设置方式。
 
--   显示控件收集的数据。
+- 显示控件收集的数据。
 
 #### <a name="initializing-the-application"></a>初始化应用程序
  初始化代码包含在窗口的一个事件处理程序<xref:System.Windows.FrameworkElement.Loaded>事件，并将事件处理程序附加到控件的`OnButtonClick`事件。

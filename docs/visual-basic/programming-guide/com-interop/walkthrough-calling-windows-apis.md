@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
 ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022397"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>演练：调用 Windows Api (Visual Basic)
 Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您可以使用它们来执行任务时很难编写你自己的等效过程。 例如，Windows 提供了一个名为函数`FlashWindowEx`允许您进行应用程序的标题栏在浅色和深色阴影之间切换。  

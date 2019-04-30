@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
 ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053257"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 概述
 <xref:System.Windows.Controls.ContextMenu>类表示使用特定于上下文的公开功能的元素<xref:System.Windows.Controls.Menu>。 通常情况下，用户公开<xref:System.Windows.Controls.ContextMenu>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过右键单击鼠标按钮。 本主题介绍<xref:System.Windows.Controls.ContextMenu>元素，并提供有关如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和代码。  

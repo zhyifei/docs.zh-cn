@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973298"
 ---
 # <a name="type-promotion-visual-basic"></a>类型提升 (Visual Basic)
 声明模块中的编程元素时，Visual Basic 会将其范围到包含该模块的命名空间的提升。 这称为*类型提升*。  
@@ -54,9 +54,9 @@ ms.locfileid: "58838867"
 ## <a name="recommendations"></a>建议  
  下面的建议提供良好编程习惯。  
   
--   **唯一的名称。** 在必须对编程元素的命名的完全控制，请始终是最好的场合使用唯一的名称。 相同的名称需要额外的限定，并且可以使代码难以阅读。 它们还可能会导致细微错误和意外的结果。  
+- **唯一的名称。** 在必须对编程元素的命名的完全控制，请始终是最好的场合使用唯一的名称。 相同的名称需要额外的限定，并且可以使代码难以阅读。 它们还可能会导致细微错误和意外的结果。  
   
--   **完全限定。** 当你使用模块和相同的命名空间中的其他元素时，最安全的方法是始终使用完全限定的所有编程元素。 如果类型提升大大降低模块成员，并且不完全限定的成员，可能会无意中访问不同的编程元素。  
+- **完全限定。** 当你使用模块和相同的命名空间中的其他元素时，最安全的方法是始终使用完全限定的所有编程元素。 如果类型提升大大降低模块成员，并且不完全限定的成员，可能会无意中访问不同的编程元素。  
   
 ## <a name="see-also"></a>请参阅
 

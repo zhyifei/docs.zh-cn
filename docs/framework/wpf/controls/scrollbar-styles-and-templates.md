@@ -10,11 +10,11 @@ helpviewer_keywords:
 - parts [WPF], ScrollBar
 ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
 ms.openlocfilehash: 22b2206067302f621a94a1e9abca1607792b3393
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052880"
 ---
 # <a name="scrollbar-styles-and-templates"></a>ScrollBar 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.Primitives.ScrollBar>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  

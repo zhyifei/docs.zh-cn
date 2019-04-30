@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022410"
 ---
 # <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
 组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 本部分介绍了一些与创建和使用 Visual Basic 中使用 COM 对象相关的问题。  
@@ -19,7 +19,7 @@ ms.locfileid: "44183166"
  [COM 互操作介绍](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  概述了 COM 互操作性。  
   
- [如何：通过 Visual Basic 引用 COM 对象](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [如何：从 Visual Basic 引用 COM 对象](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  介绍了如何添加对包含类型库的 COM 对象的引用。  
   
  [如何：使用 ActiveX 控件](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "44183166"
  [如何：调用 Windows API](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
  展示了如何在 User32.dll 中定义和调用 `MessageBox` 函数。  
   
- [如何：调用采用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [如何：调用需要使用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  展示了如何调用包含无符号类型参数的 Windows 函数。  
   
  [演练：使用 Visual Basic 创建 COM 对象](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f97e6f16029b9a273a68d52b830939819bfa5380
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993026"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx 方法
 生成新公钥/私钥对与指定的密钥大小，用于强名称。  
@@ -46,9 +46,9 @@ HRESULT StrongNameKeyGenEx (
  `dwFlags`  
  [in]一个值，指定是否保留注册密钥。 支持以下值：  
   
--   0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
+- 0x00000000-时使用`wszKeyContainer`为 null 以生成一个临时密钥容器名称。  
   
--   0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
+- 0x00000001 (`SN_LEAVE_KEY`)-指定应保持注册密钥。  
   
  `dwKeySize`  
  [in]请求的密钥，以位为单位的大小。  

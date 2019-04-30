@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966892"
 ---
 # <a name="using-keyboard-events"></a>使用键盘事件
 大多数 Windows 窗体程序通过处理键盘事件处理键盘输入。 本主题提供对键盘事件的概述，包括有关何时使用每个事件和向每个事件提供的数据的详细信息。  另请参阅[事件处理程序概述 （Windows 窗体）](event-handlers-overview-windows-forms.md)并[事件概述 （Windows 窗体）](events-overview-windows-forms.md)。  
@@ -22,11 +22,11 @@ ms.locfileid: "59114265"
 ## <a name="keyboard-events"></a>键盘事件  
  Windows 窗体提供了两个在用户按下键盘键时发生的事件和一个在用户释放键盘键时发生的事件：  
   
--   <xref:System.Windows.Forms.Control.KeyDown> 事件发生一次  
+- <xref:System.Windows.Forms.Control.KeyDown> 事件发生一次  
   
--   用户按住相同的键时，<xref:System.Windows.Forms.Control.KeyPress> 事件可发生多次。  
+- 用户按住相同的键时，<xref:System.Windows.Forms.Control.KeyPress> 事件可发生多次。  
   
--   用户释放某个键时，<xref:System.Windows.Forms.Control.KeyUp> 事件发生一次。  
+- 用户释放某个键时，<xref:System.Windows.Forms.Control.KeyUp> 事件发生一次。  
   
  用户按某个键时，Windows 窗体会根据键盘消息指定的是字符键还是物理键来确定引发哪个事件。 有关字符键和物理密钥的详细信息，请参阅[键盘输入工作原理](how-keyboard-input-works.md)。  
   

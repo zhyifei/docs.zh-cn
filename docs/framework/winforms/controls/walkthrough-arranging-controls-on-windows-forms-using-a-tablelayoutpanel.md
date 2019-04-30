@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009105"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -28,21 +28,21 @@ ms.locfileid: "59341616"
   
  本演练涉及以下任务：  
   
--   创建 Windows 窗体项目  
+- 创建 Windows 窗体项目  
   
--   在行和列中排列控件  
+- 在行和列中排列控件  
   
--   设置行和列属性  
+- 设置行和列属性  
   
--   跨越行和列与控件  
+- 跨越行和列与控件  
   
--   自动处理溢出  
+- 自动处理溢出  
   
--   通过在工具箱中双击控件将其插入  
+- 通过在工具箱中双击控件将其插入  
   
--   通过绘制控件轮廓将其插入  
+- 通过绘制控件轮廓将其插入  
   
--   将现有控件重新分配给另一个父控件  
+- 将现有控件重新分配给另一个父控件  
   
  完成上述操作后，你将会了解这些重要布局功能所发挥的作用。  
   
@@ -158,25 +158,25 @@ ms.locfileid: "59341616"
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>为了演示不允许多个控件中单元格  
   
--   拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.TableLayoutPanel>控件并将它放到一个已占用的单元格。 请注意，<xref:System.Windows.Forms.TableLayoutPanel>控件不允许您就可以删除<xref:System.Windows.Forms.Button>到占用的单元格的控件。  
+- 拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.TableLayoutPanel>控件并将它放到一个已占用的单元格。 请注意，<xref:System.Windows.Forms.TableLayoutPanel>控件不允许您就可以删除<xref:System.Windows.Forms.Button>到占用的单元格的控件。  
   
 ## <a name="swapping-controls"></a>交换控件  
  <xref:System.Windows.Forms.TableLayoutPanel>控件使您能够交换占用两个不同的单元格的控件。  
   
 #### <a name="to-swap-controls"></a>交换控件  
   
--   拖动其中一个<xref:System.Windows.Forms.Button>中占用的单元格和拖放到另一个占用的单元格上的控件。 请注意，两个控件也会移动从一个单元格将其他。  
+- 拖动其中一个<xref:System.Windows.Forms.Button>中占用的单元格和拖放到另一个占用的单元格上的控件。 请注意，两个控件也会移动从一个单元格将其他。  
   
 ## <a name="next-steps"></a>后续步骤  
  可使用布局面板和控件的组合实现复杂布局。 有关进一步探索的建议包括：  
   
--   尝试调整大小的一个<xref:System.Windows.Forms.Button>为更大的大小并注意对布局产生效果的控件。  
+- 尝试调整大小的一个<xref:System.Windows.Forms.Button>为更大的大小并注意对布局产生效果的控件。  
   
--   粘贴选择内容的多个控件添加到<xref:System.Windows.Forms.TableLayoutPanel>控件并请注意如何插入控件。  
+- 粘贴选择内容的多个控件添加到<xref:System.Windows.Forms.TableLayoutPanel>控件并请注意如何插入控件。  
   
--   布局面板可以包含其他布局面板。 试验将 <xref:System.Windows.Forms.TableLayoutPanel> 控件放入现有控件。  
+- 布局面板可以包含其他布局面板。 试验将 <xref:System.Windows.Forms.TableLayoutPanel> 控件放入现有控件。  
   
--   将 <xref:System.Windows.Forms.TableLayoutPanel> 控件停靠到父窗体。 调整窗体大小，并注意对布局产生的效果。  
+- 将 <xref:System.Windows.Forms.TableLayoutPanel> 控件停靠到父窗体。 调整窗体大小，并注意对布局产生的效果。  
   
 ## <a name="see-also"></a>请参阅
 

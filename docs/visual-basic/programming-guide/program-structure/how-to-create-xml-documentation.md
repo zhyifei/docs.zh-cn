@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
 ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050424"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>如何：在 Visual Basic 中创建 XML 文档
 此示例演示如何将 XML 文档注释添加到你的代码。  

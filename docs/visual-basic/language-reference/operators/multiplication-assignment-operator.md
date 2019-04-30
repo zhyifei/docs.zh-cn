@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
 ms.openlocfilehash: 7c009a6b3acfe1528a2c34ed1e10735ac86507e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032125"
 ---
 # <a name="-operator-visual-basic"></a>*= 运算符 (Visual Basic)
 将表达式的值的变量或属性的值相乘并将结果赋给变量或属性。  

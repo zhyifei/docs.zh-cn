@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050530"
 ---
 # <a name="comments-in-code-visual-basic"></a>代码中的注释 (Visual Basic)
 阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号通知 Visual Basic 编译器忽略它，后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
@@ -48,11 +48,11 @@ ms.locfileid: "59343007"
   
  请记住以下几点：  
   
--   每个重要的变量声明前都应有注释，用以描述被声明变量的用途。  
+- 每个重要的变量声明前都应有注释，用以描述被声明变量的用途。  
   
--   变量、控件和过程的命名应当足够清楚，使得只在遇到复杂的实现详细情况时才使用注释。  
+- 变量、控件和过程的命名应当足够清楚，使得只在遇到复杂的实现详细情况时才使用注释。  
   
--   注释不能与行继续符同行。  
+- 注释不能与行继续符同行。  
   
  您可以添加或删除的代码块的注释符通过选择一个或多个行代码，然后选择**注释**(![Visual Studio 中的 Visual Basic 注释按钮](./media/comments-in-code/visual-basic-comment-button.gif)) 和**取消注释** (![Visual Studio 中的 Visual Basic 取消注释按钮](./media/comments-in-code/visual-basic-uncomment-button.gif)) 上的按钮**编辑**工具栏。  
   

@@ -3,11 +3,11 @@ title: 如何：共享程序集与其他应用程序 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: 520fe69d30ca55251ae7a19dcd7a1ea0c11e7bd5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022176"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>如何：共享程序集与其他应用程序 (Visual Basic)
 程序集可以是私有或共享程序集：默认情况下，大多数简单程序都包含一个私有程序集，因为它们并不打算由其他应用程序使用。  

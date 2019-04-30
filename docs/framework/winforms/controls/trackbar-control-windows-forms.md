@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
 ms.openlocfilehash: adeb796b0411473d8e17f164f2f87bdf6ed7ae0e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009237"
 ---
 # <a name="trackbar-control-windows-forms"></a>TrackBar 控件（Windows 窗体）
 Windows 窗体`TrackBar`控件 （有时也称为"滑块"控件） 用于浏览大量的信息或用于直观地调整数字设置。 `TrackBar`控件具有两个部分： thumb，也称为滑块，将和刻度线。 滚动块是可调整的一部分。 其位置对应于<xref:System.Windows.Forms.TrackBar.Value%2A>属性。 刻度线是按固定间隔分布的可视指示符。 指定并可以水平或垂直对齐的增量移动跟踪条。 设置光标闪烁速率或鼠标的速度会跟踪条的用法示例。  

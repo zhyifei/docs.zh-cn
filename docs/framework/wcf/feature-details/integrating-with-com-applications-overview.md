@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047004"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 应用程序集成概述
 Windows Communication Foundation (WCF) 提供了托管的代码开发人员，使用用于创建连接的应用程序的丰富环境。 但是，如果有大量投入时基于 COM 的非托管代码中，并且不希望迁移，可以仍将 WCF Web 服务直接到现有代码使用 WCF 服务名字对象。 服务标记可以在众多基于 COM 的开发环境（如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0）中使用。  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) 提供了托管的代码开发人员，�
   
  与其他 WCF 客户端中，使用标记时，应用程序指定地址、 绑定和协定与服务进行通信。 可以采用以下方式之一来指定协定：  
   
--   类型化协定 – 该协定在客户端计算机上注册为 COM 可见类型。  
+- 类型化协定 – 该协定在客户端计算机上注册为 COM 可见类型。  
   
--   WSDL 协定 – 该协定以 WSDL 文档的形式提供。  
+- WSDL 协定 – 该协定以 WSDL 文档的形式提供。  
   
--   MEX 协定 – 在运行时从元数据交换 (MEX) 终结点检索协定。  
+- MEX 协定 – 在运行时从元数据交换 (MEX) 终结点检索协定。  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>服务标记支持的参数  
  下表显示了服务标记支持的参数。  

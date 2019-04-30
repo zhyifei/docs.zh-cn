@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054323"
 ---
 # <a name="animation-overview"></a>动画概述
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337729"
   
  计算机上的动画与此类似。 例如，使一个矩形图形逐渐从视野中消失的程序可能按以下方式工作。  
   
--   程序创建一个计时器。  
+- 程序创建一个计时器。  
   
--   程序按照设定的时间间隔检查计时器以查看经历了多长时间。  
+- 程序按照设定的时间间隔检查计时器以查看经历了多长时间。  
   
--   程序每次检查计时器时，它将根据经历的时间来计算矩形的当前不透明度值。  
+- 程序每次检查计时器时，它将根据经历的时间来计算矩形的当前不透明度值。  
   
--   然后，程序用新值更新矩形并重画此矩形。  
+- 然后，程序用新值更新矩形并重画此矩形。  
   
  早于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]开发人员必须创建和管理其自己的计时系统或使用特殊的自定义库。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括通过托管代码公开的高效计时系统和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和的紧密地集成到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]框架。 通过使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画，可以轻松地对控件和其他图形对象进行动画处理。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337729"
   
  若要使属性具有动画功能，属性必须满足以下三个要求：  
   
--   它必须是依赖属性。  
+- 它必须是依赖属性。  
   
--   它必须属于继承的类<xref:System.Windows.DependencyObject>并实现<xref:System.Windows.Media.Animation.IAnimatable>接口。  
+- 它必须属于继承的类<xref:System.Windows.DependencyObject>并实现<xref:System.Windows.Media.Animation.IAnimatable>接口。  
   
--   必须存在可用的兼容动画类型。 (如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]未提供，可以创建你自己。 请参阅[自定义动画概述](custom-animations-overview.md)。)  
+- 必须存在可用的兼容动画类型。 (如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]未提供，可以创建你自己。 请参阅[自定义动画概述](custom-animations-overview.md)。)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含具有的许多对象<xref:System.Windows.Media.Animation.IAnimatable>属性。 控件，如<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.TabControl>，以及<xref:System.Windows.Controls.Panel>并<xref:System.Windows.Shapes.Shape>对象继承自<xref:System.Windows.DependencyObject>。 其中大多数属性都是依赖属性。  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337729"
 ## <a name="animation-types"></a>动画类型  
  由于动画生成属性值，因此不同的属性类型具有不同的动画类型。 若要对采用的属性进行动画处理<xref:System.Double>，如<xref:System.Windows.FrameworkElement.Width%2A>属性的元素，使用生成的动画，<xref:System.Double>值。 若要对采用的属性进行动画处理<xref:System.Windows.Point>，使用生成的动画，<xref:System.Windows.Point>值，等等。 由于存在许多不同的属性类型，有一些动画类中的<xref:System.Windows.Media.Animation>命名空间。 幸运的是，它们都遵循严格的命名约定，因此可以轻松地区分它们：  
   
--   \<*类型*> 动画  
+- \<*类型*> 动画  
   
      这些动画称为“From/To/By”或“基本”动画，它们在起始值和目标值之间进行动画处理，或者通过将偏移量值与其起始值相加来进行动画处理。  
   
-    -   若要指定起始值，请设置动画的“From”属性。  
+    - 若要指定起始值，请设置动画的“From”属性。  
   
-    -   若要指定终止值，请设置动画的“To”属性。  
+    - 若要指定终止值，请设置动画的“To”属性。  
   
-    -   若要指定偏移量值，请设置动画的“By”属性。  
+    - 若要指定偏移量值，请设置动画的“By”属性。  
   
      此概述中的示例使用这些动画，因为这些动画使用起来最简单。 From/To/By 动画 From/To/By 动画概述中详细介绍。  
   
--   \<*Type*>AnimationUsingKeyFrames  
+- \<*Type*>AnimationUsingKeyFrames  
   
      关键帧动画的功能比“From/To/By”动画的功能更强大，因为可以指定任意多个目标值，甚至可以控制它们的插值方法。 某些类型只能用关键帧动画进行动画处理。 中详细描述了关键帧动画[关键帧动画概述](key-frame-animations-overview.md)。  
   
--   \<*Type*>AnimationUsingPath  
+- \<*Type*>AnimationUsingPath  
   
      路径动画支持使用几何路径来生成动画值。  
   
--   \<*Type*>AnimationBase  
+- \<*Type*>AnimationBase  
   
      抽象类在实现时进行动画处理\<*类型*> 值。 此类用作类的基类\<*类型*> 动画并\<*类型*> AnimationUsingKeyFrames 类。 只有在想要创建自己的自定义动画时，才需要直接处理这些类。 否则，请使用\<*类型*> 动画或关键帧\<*类型*> 动画。  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59337729"
   
  分配将名称传递给<xref:System.Windows.FrameworkElement>不同于分配将名称传递给<xref:System.Windows.Freezable>对象。 大多数控件和面板是框架元素；而大多数纯图形对象（如画笔、转换和几何图形）是 Freezable 对象。 如果您不确定某个类型是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.Freezable>，请参阅**继承层次结构**参考文档的部分。  
   
--   若要使<xref:System.Windows.FrameworkElement>成为动画目标，您为其提供一个名称通过设置其<xref:System.Windows.FrameworkElement.Name%2A>属性。 在代码中，您必须使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法以向其所属的页面注册的元素名称。  
+- 若要使<xref:System.Windows.FrameworkElement>成为动画目标，您为其提供一个名称通过设置其<xref:System.Windows.FrameworkElement.Name%2A>属性。 在代码中，您必须使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法以向其所属的页面注册的元素名称。  
   
--   若要使<xref:System.Windows.Freezable>对象中的动画目标[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，则使用[X:name 指令](../../xaml-services/x-name-directive.md)以将其分配一个名称。 在代码中，您只需使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法以向其所属的页面注册该对象。  
+- 若要使<xref:System.Windows.Freezable>对象中的动画目标[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，则使用[X:name 指令](../../xaml-services/x-name-directive.md)以将其分配一个名称。 在代码中，您只需使用<xref:System.Windows.FrameworkElement.RegisterName%2A>方法以向其所属的页面注册该对象。  
   
  以下各节提供的命名中的元素示例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和代码。 有关命名和设定目标的更多详细信息，请参阅[情节提要概述](storyboards-overview.md)。  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337729"
 ## <a name="animation-samples"></a>动画示例  
  以下示例有助于开始向应用程序添加动画。  
   
--   [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      演示不同的 From/To/By 设置。  
   
--   [动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      演示可控制动画计时行为的不同方法。 此示例还演示如何对动画的目标值进行数据绑定。  
   

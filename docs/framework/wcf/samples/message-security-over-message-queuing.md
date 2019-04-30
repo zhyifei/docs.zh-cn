@@ -3,11 +3,11 @@ title: 基于消息队列的消息安全性
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989803"
 ---
 # <a name="message-security-over-message-queuing"></a>基于消息队列的消息安全性
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS-Security 和 X.509v3 证书身份验证，并要求使用服务器的 X.509v3 证书对 MSMQ 进行服务器身份验证。 有时候消息安全性更重要，以确保 MSMQ 存储区中的消息始终是加密的，并且应用程序能够对消息执行其自己的身份验证。
@@ -20,15 +20,15 @@ ms.locfileid: "59770784"
 
 2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
 
-    1.  在 Visual Studio 2012 中打开服务器管理器。
+    1. 在 Visual Studio 2012 中打开服务器管理器。
 
-    2.  展开**功能**选项卡。
+    2. 展开**功能**选项卡。
 
-    3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
+    3. 右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
 
-    4.  检查**事务性**框。
+    4. 检查**事务性**框。
 
-    5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。
+    5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 
@@ -77,7 +77,7 @@ ms.locfileid: "59770784"
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
--   运行完示例后运行示例文件夹中的 Cleanup.bat。  
+- 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
     >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
@@ -287,7 +287,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 ## <a name="comments"></a>注释
 
--   创建客户端证书。
+- 创建客户端证书。
 
      批处理文件中的以下行用于创建客户端证书。 创建的证书的主题名称中会使用指定的客户端名称。 证书存储在 `My` 存储位置下的 `CurrentUser` 存储区中。
 
@@ -298,7 +298,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   将客户端证书安装到服务器的受信任证书存储区中。
+- 将客户端证书安装到服务器的受信任证书存储区中。
 
      批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 若要信任的 Windows Communication Foundation (WCF) 服务的 TrustedPeople 存储中安装证书，客户端证书验证模式必须设置为`PeerOrChainTrust`或`PeerTrust`值。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。
 
@@ -309,7 +309,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   创建服务器证书。
+- 创建服务器证书。
 
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书：
 
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      %SERVER_NAME% 变量指定服务器名称。 该证书存储在 LocalMachine 存储区中。 如果用服务自变量运行 setup 批处理文件 (例如， `setup.bat service`) %server_name%包含计算机的名称的完全限定域名。否则，它默认为 localhost
 
--   将服务器证书安装到客户端的受信任证书存储区中。
+- 将服务器证书安装到客户端的受信任证书存储区中。
 
      以下行将服务器证书复制到客户端的受信任人存储中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 

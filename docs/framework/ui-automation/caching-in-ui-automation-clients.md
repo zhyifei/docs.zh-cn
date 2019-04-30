@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032352"
 ---
 # <a name="caching-in-ui-automation-clients"></a>在 UI 自动化客户端中缓存
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175820"
 ## <a name="retrieving-cached-properties"></a>检索缓存的属性  
  你可以通过以下方法和属性检索元素的缓存属性。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  如果请求的属性不在缓存中，则会引发异常。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175820"
 ## <a name="retrieving-cached-control-patterns"></a>检索缓存的控件模式  
  可以通过以下方法检索元素的缓存控件模式。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  如果模式不在缓存中，则 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> 会引发异常，并且 <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> 会返回 `false`。  
   

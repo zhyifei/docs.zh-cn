@@ -3,11 +3,11 @@ title: unit 类型
 description: 了解如何F#单位类型通常用来保存其中一个值所需的语言语法需要或所需的任何值时的位置。
 ms.date: 05/16/2016
 ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982522"
 ---
 # <a name="unit-type"></a>unit 类型
 
@@ -22,7 +22,7 @@ ms.locfileid: "53611979"
 
 ## <a name="remarks"></a>备注
 
-每个F#表达式的计算结果必须为一个值。 不会生成所需类型的值的表达式`unit`使用。 `unit`类型类似于`void`C# 和 c + + 等语言中的类型。
+每个F#表达式的计算结果必须为一个值。 不会生成所需类型的值的表达式`unit`使用。 `unit`类与类似`void`语言中键入类似于C#和C++。
 
 `unit`类型具有一个值，并由该令牌指示该值`()`。
 
@@ -36,5 +36,5 @@ ms.locfileid: "53611979"
 
 ## <a name="see-also"></a>请参阅
 
-- [基元](primitive-types.md)
+- [Primitive](primitive-types.md)
 - [F# 语言参考](index.md)

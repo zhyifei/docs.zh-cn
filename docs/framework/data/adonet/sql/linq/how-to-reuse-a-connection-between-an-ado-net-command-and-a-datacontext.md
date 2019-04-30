@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e26c7eb-c18a-43b5-a8f0-28fd8b04b0f0
 ms.openlocfilehash: 47e1e45cfe693e3569c343f1058ce2d610af96dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033691"
 ---
 # <a name="how-to-reuse-a-connection-between-an-adonet-command-and-a-datacontext"></a>如何：重复使用 ADO.NET 命令和 DataContext 之间的连接
 因为[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]一部分[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]系列技术和基于提供的服务[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]，可以重复使用之间的连接[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]命令和一个<xref:System.Data.Linq.DataContext>。  

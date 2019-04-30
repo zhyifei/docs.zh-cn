@@ -14,11 +14,11 @@ ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018575"
 ---
 # <a name="role-based-security"></a>基于角色的安全性
 在财务或业务应用程序中经常使用角色来强制执行策略。 例如，应用程序可能会根据发出请求的用户是否是指定角色的成员，以限制其所处理事务的大小。 职员处理事务的授权可能低于所指定阈值，主管可能具有更高的限制，而副总裁可能具有比主管更高的限制（或无限制）。 当应用程序需要多项审批来完成操作时，也可以使用基于角色的安全性。 这种情况可能发生在采购系统中，任何员工均可生成采购请求，但只有采购代理可以将此请求转换成可发送给供应商的采购订单。  
@@ -29,11 +29,11 @@ ms.locfileid: "33582527"
   
  .NET Framework 提供基于角色的安全性支持，其灵活并且可扩展，足以满足各种应用程序的需求。 你可以选择与现有身份验证基础结构进行交互操作（如 COM+ 1.0 服务）或创建自定义身份验证系统。 基于角色的安全性非常适合在主要在服务器上进行处理 ASP.NET Web 应用程序中使用。 但是，.NET Framework 基于角色的安全性可以在客户端或服务器上使用。  
   
- 在阅读本部分之前, 请确保你了解中的材料[安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)。  
+ 在阅读本部分中之前, 请确保了解中的材料[重要安全性概念](../../../docs/standard/security/key-security-concepts.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)|说明如何设置和管理 Windows 和通用的标识与主体。|  
 |[安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)|介绍使用.NET Framework 安全性之前必须了解的基本概念。|  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051814"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 指定可写入但无法读取属性。  
@@ -34,15 +34,15 @@ ms.locfileid: "58829015"
 > [!IMPORTANT]
 >  当你定义并使用`WriteOnly`属性，请考虑以下附加保护措施：  
   
--   **重写。** 如果该属性是类的成员，允许其默认为[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，并不声明`Overridable`或`MustOverride`。 这可以防止不需要访问通过重写派生的类。  
+- **重写。** 如果该属性是类的成员，允许其默认为[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，并不声明`Overridable`或`MustOverride`。 这可以防止不需要访问通过重写派生的类。  
   
--   **访问级别。** 如果在一个或多个变量中保存该属性的敏感数据，将其声明[专用](../../../visual-basic/language-reference/modifiers/private.md)以便没有其他代码可以访问它们。  
+- **访问级别。** 如果在一个或多个变量中保存该属性的敏感数据，将其声明[专用](../../../visual-basic/language-reference/modifiers/private.md)以便没有其他代码可以访问它们。  
   
--   **加密。** 将所有敏感数据存储以加密形式，而不是以纯文本。 如果恶意代码以某种方式获得该内存区域的访问权，则更难以进行使用的数据。 加密也是很有用，如有必要进行序列化的敏感数据。  
+- **加密。** 将所有敏感数据存储以加密形式，而不是以纯文本。 如果恶意代码以某种方式获得该内存区域的访问权，则更难以进行使用的数据。 加密也是很有用，如有必要进行序列化的敏感数据。  
   
--   **正在重置。** 类、 结构或将属性定义的模块时被终止，默认值或其他无意义的值重置的敏感数据。 这提供额外的保护时进行常规访问时释放该内存区域。  
+- **正在重置。** 类、 结构或将属性定义的模块时被终止，默认值或其他无意义的值重置的敏感数据。 这提供额外的保护时进行常规访问时释放该内存区域。  
   
--   **持久性。** 如果可以避免，则不保留任何敏感数据，例如在磁盘上。 此外，任何敏感数据写入剪贴板。  
+- **持久性。** 如果可以避免，则不保留任何敏感数据，例如在磁盘上。 此外，任何敏感数据写入剪贴板。  
   
  `WriteOnly`修饰符可用于在此上下文中：  
   

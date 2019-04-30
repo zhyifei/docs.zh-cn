@@ -3,11 +3,11 @@ title: 公告示例
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002750"
 ---
 # <a name="announcements-sample"></a>公告示例
 此示例显示如何使用发现功能的公告功能。 服务使用公告可以发出包含有关服务的元数据的公告消息。 默认情况下，服务启动时会发送 Hello 公告，服务关闭时会发送 Bye 公告。 这些公告可以进行多播，也可点到点发送。 此示例由两个项目组成，即服务项目和客户端项目。  

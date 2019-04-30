@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050215"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>优化性能：布局和示例
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设计在计算布局和验证对象引用时会产生不必要的开销，从而影响性能。 对象的构造会影响应用程序的性能特征，在运行时更是如此。  
@@ -26,25 +26,25 @@ ms.locfileid: "59107063"
   
  布局系统对集合中的每个子成员都完成两个处理过程：测量处理过程和排列处理过程。 每个子对象提供了自己的重写的实现<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>方法中，以便提供其自己特定的布局行为。 简单地说，布局是一个递归系统，实现在屏幕上对元素进行大小调整、定位和绘制。  
   
--   子<xref:System.Windows.UIElement>对象通过首先测量其核心属性来开始布局过程。  
+- 子<xref:System.Windows.UIElement>对象通过首先测量其核心属性来开始布局过程。  
   
--   对象的<xref:System.Windows.FrameworkElement>属性与大小，如<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>，进行计算。  
+- 对象的<xref:System.Windows.FrameworkElement>属性与大小，如<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>，进行计算。  
   
--   <xref:System.Windows.Controls.Panel>-应用特定的逻辑，如<xref:System.Windows.Controls.DockPanel.Dock%2A>的属性<xref:System.Windows.Controls.DockPanel>，或<xref:System.Windows.Controls.StackPanel.Orientation%2A>属性的<xref:System.Windows.Controls.StackPanel>。  
+- <xref:System.Windows.Controls.Panel>-应用特定的逻辑，如<xref:System.Windows.Controls.DockPanel.Dock%2A>的属性<xref:System.Windows.Controls.DockPanel>，或<xref:System.Windows.Controls.StackPanel.Orientation%2A>属性的<xref:System.Windows.Controls.StackPanel>。  
   
--   在测量所有的子对象后，将排列或定位内容。  
+- 在测量所有的子对象后，将排列或定位内容。  
   
--   将子对象集合绘制到屏幕上。  
+- 将子对象集合绘制到屏幕上。  
   
  如果发生下列任一操作，将再次调用布局处理过程：  
   
--   向集合中添加了一个子对象。  
+- 向集合中添加了一个子对象。  
   
--   一个<xref:System.Windows.FrameworkElement.LayoutTransform%2A>应用到子对象。  
+- 一个<xref:System.Windows.FrameworkElement.LayoutTransform%2A>应用到子对象。  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A>为子对象调用方法。  
+- <xref:System.Windows.UIElement.UpdateLayout%2A>为子对象调用方法。  
   
--   使用影响测量或排列过程的元数据进行标记的依赖属性的值发生更改时。  
+- 使用影响测量或排列过程的元数据进行标记的依赖属性的值发生更改时。  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>尽可能使用最高效的面板  
  布局过程的复杂性直接取决于的布局行为<xref:System.Windows.Controls.Panel>-派生您使用的元素。 例如，<xref:System.Windows.Controls.Grid>或<xref:System.Windows.Controls.StackPanel>控件提供了更多的功能比<xref:System.Windows.Controls.Canvas>控件。 功能大幅度改进的代价是性能成本的大幅度提高。 但是，如果您不需要的功能，<xref:System.Windows.Controls.Grid>控件提供了应使用成本较低的替代方法，如<xref:System.Windows.Controls.Canvas>或自定义面板。  

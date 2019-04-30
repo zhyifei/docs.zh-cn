@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966858"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>如何：设置钢笔颜色
 此示例将更改的预先存在的颜色<xref:System.Drawing.Pen>对象  
@@ -27,7 +27,7 @@ ms.locfileid: "59213410"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   一个<xref:System.Drawing.Pen>名为对象`myPen`。  
+- 一个<xref:System.Drawing.Pen>名为对象`myPen`。  
   
 ## <a name="robust-programming"></a>可靠编程  
  应调用<xref:System.Drawing.Pen.Dispose%2A>消耗系统资源的对象 (如<xref:System.Drawing.Pen>对象) 结束使用它们之后。  

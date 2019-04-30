@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009209"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控件和组件创作疑难解答
 本主题列出了开发组件和控件时遇到的常见问题。 有关详细信息，请参阅[使用组件编程](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))。  
   
--   无法将控件添加到工具箱  
+- 无法将控件添加到工具箱  
   
--   无法调试 Windows 窗体用户控件或组件  
+- 无法调试 Windows 窗体用户控件或组件  
   
--   在继承的控件或组件中引发了两次事件  
+- 在继承的控件或组件中引发了两次事件  
   
--   设计时错误："无法创建组件 '*组件名称*'"  
+- 设计时错误："无法创建组件 '*组件名称*'"  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   组件图标未出现在工具箱中  
+- 组件图标未出现在工具箱中  
   
 ## <a name="cannot-add-control-to-toolbox"></a>无法将控件添加到工具箱  
  如果要将在另一项目中创建的自定义控件或第三方控件添加到“工具箱”中，必须手动操作。 如果当前项目中包含控件或组件，它应自动显示在“工具箱”中。 有关详细信息，请参见[演练：自动填充工具箱与自定义组件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
@@ -42,11 +42,11 @@ ms.locfileid: "59343410"
   
 2. 在“选择工具箱项”对话框中，添加组件：  
   
-    -   如果要添加 .NET Framework 组件或控件，请单击“.NET Framework 组件”选项卡。  
+    - 如果要添加 .NET Framework 组件或控件，请单击“.NET Framework 组件”选项卡。  
   
          - 或 -  
   
-    -   如果要添加 COM 组件或 ActiveX 控件，请单击“COM 组件”选项卡。  
+    - 如果要添加 COM 组件或 ActiveX 控件，请单击“COM 组件”选项卡。  
   
 3. 如果对话框中列出了该控件，请务必将它选中，然后单击“确定”。  
   
@@ -54,15 +54,15 @@ ms.locfileid: "59343410"
   
 4. 如果对话框中未列出该控件，请执行以下操作：  
   
-    1.  单击“浏览”按钮。  
+    1. 单击“浏览”按钮。  
   
-    2.  浏览到包含 .dll 文件（它包含控件）的文件夹。  
+    2. 浏览到包含 .dll 文件（它包含控件）的文件夹。  
   
-    3.  选择 .dll 文件并单击“打开”。  
+    3. 选择 .dll 文件并单击“打开”。  
   
          控件即会出现在对话框中。  
   
-    4.  确认选中该控件，然后单击“确定”。  
+    4. 确认选中该控件，然后单击“确定”。  
   
          控件即会添加到“工具箱”中。  
   

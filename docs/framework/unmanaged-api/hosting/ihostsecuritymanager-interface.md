@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957576"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 接口
 提供方法，以允许访问和控制当前正在执行的线程的安全上下文。  
@@ -42,13 +42,13 @@ ms.locfileid: "59223753"
   
  CLR 会在内部处理托管的线程上下文。 它会查询特定于进程的`IHostSecurityManager`在以下情况下：  
   
--   在终结器执行期间的终结器线程。  
+- 在终结器执行期间的终结器线程。  
   
--   在类和模块构造函数执行。  
+- 在类和模块构造函数执行。  
   
--   在对的调用中，在辅助线程上异步点[ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
+- 在对的调用中，在辅助线程上异步点[ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)方法。  
   
--   处于维护的 I/O 完成端口。  
+- 处于维护的 I/O 完成端口。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

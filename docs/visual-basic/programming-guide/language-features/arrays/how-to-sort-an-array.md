@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053654"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>如何：在 Visual Basic 中的对数组进行排序
 此示例中声明的数组`String`对象名为`zooAnimals`，填充它，而按字母顺序排序。  
@@ -32,16 +32,16 @@ End Sub
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 Mscorlib.dll 的访问和<xref:System>命名空间。  
+- 对 Mscorlib.dll 的访问和<xref:System>命名空间。  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   数组为空 (<xref:System.ArgumentNullException>类)  
+- 数组为空 (<xref:System.ArgumentNullException>类)  
   
--   数组是多维数组 (<xref:System.RankException>类)  
+- 数组是多维数组 (<xref:System.RankException>类)  
   
--   数组的一个或多个元素不实现<xref:System.IComparable>接口 (<xref:System.InvalidOperationException>类)  
+- 数组的一个或多个元素不实现<xref:System.IComparable>接口 (<xref:System.InvalidOperationException>类)  
   
 ## <a name="see-also"></a>请参阅
 

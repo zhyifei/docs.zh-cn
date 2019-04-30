@@ -3,11 +3,11 @@ title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
 ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051476"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
@@ -219,15 +219,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，必须安装 WCF 非 HTTP 激活组件：  
   
-    1.  从“开始”菜单中，选择“控制面板”。  
+    1. 从“开始”菜单中，选择“控制面板”。  
   
-    2.  选择**程序和功能**。  
+    2. 选择**程序和功能**。  
   
-    3.  单击**打开或关闭 Windows 功能**。  
+    3. 单击**打开或关闭 Windows 功能**。  
   
-    4.  下**功能摘要**，单击**添加功能**。  
+    4. 下**功能摘要**，单击**添加功能**。  
   
-    5.  展开**Microsoft.NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。  
+    5. 展开**Microsoft.NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。  
   
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
@@ -235,21 +235,21 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5. 在默认情况下 MSMQ 激活服务将作为网络服务运行。 因此，用于激活应用程序的队列必须具有对网络服务的接收和查看权限。 可以通过使用消息队列 MMC 来添加这些权限：  
   
-    1.  从**启动**菜单上，单击**运行**，然后键入`Compmgmt.msc`然后按 ENTER。  
+    1. 从**启动**菜单上，单击**运行**，然后键入`Compmgmt.msc`然后按 ENTER。  
   
-    2.  下**服务和应用程序**，展开**消息队列**。  
+    2. 下**服务和应用程序**，展开**消息队列**。  
   
-    3.  单击**专用队列**。  
+    3. 单击**专用队列**。  
   
-    4.  右键单击队列 (servicemodelsamples/Service.svc) 并选择**属性**。  
+    4. 右键单击队列 (servicemodelsamples/Service.svc) 并选择**属性**。  
   
-    5.  上**安全**选项卡上，单击**添加**和授予查看和接收对网络服务的权限。  
+    5. 上**安全**选项卡上，单击**添加**和授予查看和接收对网络服务的权限。  
   
 6. 将 Windows 进程激活服务 (WAS) 配置为支持 MSMQ 激活。  
   
      为方便起见，在位于示例目录中名为 AddMsmqSiteBinding.cmd 的批处理文件中实现以下步骤。  
   
-    1.  若要支持 net.msmq 激活，必须首先将默认网站绑定到 net.msmq 协议。 可以通过使用随 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理工具集安装的 appcmd.exe 来执行此操作。 在具有提升权限的（管理员）命令提示符处，运行下列命令。  
+    1. 若要支持 net.msmq 激活，必须首先将默认网站绑定到 net.msmq 协议。 可以通过使用随 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理工具集安装的 appcmd.exe 来执行此操作。 在具有提升权限的（管理员）命令提示符处，运行下列命令。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -261,7 +261,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          此命令可将 net.msmq 站点绑定添加到默认网站。  
   
-    2.  尽管网站内的所有应用程序共享一个公共 net.msmq 绑定，但是每个应用程序可以单独启用 net.msmq 支持。 若要启用 /servicemodelsamples 应用程序的 net.msmq，请在具有提升权限的命令提示符处运行以下命令。  
+    2. 尽管网站内的所有应用程序共享一个公共 net.msmq 绑定，但是每个应用程序可以单独启用 net.msmq 支持。 若要启用 /servicemodelsamples 应用程序的 net.msmq，请在具有提升权限的命令提示符处运行以下命令。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
@@ -284,7 +284,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      为方便起见，在位于示例目录中名为 RemoveMsmqSiteBinding.cmd 的批处理文件中实现以下步骤：  
   
-    1.  通过在具有提升权限的命令提示符处运行以下命令，从启用的协议列表中移除 net.msmq。  
+    1. 通过在具有提升权限的命令提示符处运行以下命令，从启用的协议列表中移除 net.msmq。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
@@ -293,7 +293,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  此命令是单行文本。  
   
-    2.  通过在具有提升权限的命令提示符处运行以下命令移除 net.msmq 站点绑定。  
+    2. 通过在具有提升权限的命令提示符处运行以下命令移除 net.msmq 站点绑定。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
@@ -330,17 +330,17 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      更改运行辅助进程所用的标识：  
   
-    1.  运行 Inetmgr.exe。  
+    1. 运行 Inetmgr.exe。  
   
-    2.  下**应用程序池**，右键单击**应用程序池**(通常**DefaultAppPool**)，然后选择**设置应用程序池默认设置...**.  
+    2. 下**应用程序池**，右键单击**应用程序池**(通常**DefaultAppPool**)，然后选择**设置应用程序池默认设置...**.  
   
-    3.  更改标识属性以使用特定用户帐户。  
+    3. 更改标识属性以使用特定用户帐户。  
   
      更改运行激活服务所使用的标识：  
   
-    1.  运行 Services.msc。  
+    1. 运行 Services.msc。  
   
-    2.  右键单击**net.msmq listener Adapter**，然后选择**属性**。  
+    2. 右键单击**net.msmq listener Adapter**，然后选择**属性**。  
   
 4. 更改中的帐户**登录**选项卡。  
   

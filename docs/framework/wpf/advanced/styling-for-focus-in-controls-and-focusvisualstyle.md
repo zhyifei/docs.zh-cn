@@ -7,11 +7,11 @@ helpviewer_keywords:
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
 ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053363"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>为控件中的焦点设置样式以及 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供两种用于在控件接收键盘焦点时更改其视觉外观的并行机制。 第一种机制是使用属性资源库属性如<xref:System.Windows.UIElement.IsKeyboardFocused%2A>样式或模板应用于控件中。 第二种机制是提供一个单独的样式的值作为<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>属性;"焦点视觉样式"为绘制控件，而不更改控件或其他 UI 的可视化树的装饰器创建单独的可视化树通过替换的元素。 本主题讨论上述每一种机制的适用情况。  

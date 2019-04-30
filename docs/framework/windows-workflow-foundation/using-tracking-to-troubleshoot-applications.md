@@ -3,11 +3,11 @@ title: 使用跟踪对应用程序进行故障排除
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004583"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用跟踪对应用程序进行故障排除
 Windows Workflow Foundation (WF) 可以跟踪工作流相关信息以提供有关 Windows Workflow Foundation 应用程序或服务的执行详细信息。 Windows Workflow Foundation 主机将能够在执行工作流实例期间捕获工作流事件。 如果您的工作流产生错误或异常，可以使用 Windows Workflow Foundation 跟踪详细信息以诊断其处理故障。  

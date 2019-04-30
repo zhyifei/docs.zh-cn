@@ -3,11 +3,11 @@ title: 弱类型 JSON 序列化示例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006351"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱类型 JSON 序列化示例
 将用户定义的类型序列化为给定的连网格式，或者将连网格式反序列为原来的用户定义的类型时，给定的用户定义的类型必须在服务和客户端上可用。 通常，为实现此目的，系统将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于这些用户定义的类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于这些类型的成员。 该机制同样适用时使用 JavaScript 对象表示法 (JSON) 对象，如本主题中所述[如何：序列化和反序列化 JSON 数据](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  

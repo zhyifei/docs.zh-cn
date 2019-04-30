@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2016795e7b2c0588e2bd69e764fb96f7f90b24d0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994066"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval 方法
 创建一个 ICorDebugEval 对象，可收集和公开此 ICorDebugThread 的功能。  

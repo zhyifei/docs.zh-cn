@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053517"
 ---
 # <a name="read-only-dependency-properties"></a>只读依赖项属性
 本主题介绍只读依赖属性，包括现有只读依赖属性、创建自定义只读依赖属性的方案和技术。  
@@ -31,11 +31,11 @@ ms.locfileid: "59162418"
   
  创建只读依赖属性的大多数过程与[自定义依赖属性](custom-dependency-properties.md)和[实现依赖属性](how-to-implement-a-dependency-property.md)主题中介绍的过程相同。 但有三个重要的差异：  
   
--   当注册属性，调用<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法而非普通<xref:System.Windows.DependencyProperty.Register%2A>属性注册的方法。  
+- 当注册属性，调用<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法而非普通<xref:System.Windows.DependencyProperty.Register%2A>属性注册的方法。  
   
--   实现 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”属性时，请确保该包装器也没有设置的实现，以便在公开的公共包装器的只读状态中不存在不一致现象。  
+- 实现 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”属性时，请确保该包装器也没有设置的实现，以便在公开的公共包装器的只读状态中不存在不一致现象。  
   
--   由只读注册返回的对象是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。 仍应将该字段存储为成员，但通常不将其设置为类型的公共成员。  
+- 由只读注册返回的对象是<xref:System.Windows.DependencyPropertyKey>而非<xref:System.Windows.DependencyProperty>。 仍应将该字段存储为成员，但通常不将其设置为类型的公共成员。  
   
  无论你具有什么专用字段或值，可使用你确定的任何逻辑来完全编写对只读依赖属性的支持。 但是，在最初或运行时逻辑过程中设置属性的最简单方法是使用属性系统的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是避开属性系统并直接设置专有支持字段。 具体而言，没有的签名<xref:System.Windows.DependencyObject.SetValue%2A>接受类型参数的<xref:System.Windows.DependencyPropertyKey>。 如何以及在何处设置此值以编程方式在应用程序逻辑中你如何可能想要设置的访问将影响<xref:System.Windows.DependencyPropertyKey>首次注册依赖属性时创建。 如果完全在专有类中处理此逻辑，或者如果要求从程序集的其他部分对其进行设置，可以在内部进行设置。 一种方法是调用<xref:System.Windows.DependencyObject.SetValue%2A>通知存储的属性值需要为其更改的类实例的相关事件的类事件处理程序中。 另一种方法是将绑定依赖关系属性在一起使用配对<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回调在注册过程中的这些属性的元数据的一部分。  
   

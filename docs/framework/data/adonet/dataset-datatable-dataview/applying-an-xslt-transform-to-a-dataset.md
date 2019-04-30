@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
 ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034458"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>将 XSLT 转换应用于 DataSet
 **WriteXml**方法<xref:System.Data.DataSet>使你能够编写的内容**数据集**作为 XML 数据。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 但是，同步**数据集**与<xref:System.Xml.XmlDataDocument>可以将 XSLT 样式表应用到的内容**数据集**而无需首先编写的内容**数据集**与 XML 数据使用**WriteXml**。  

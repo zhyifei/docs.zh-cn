@@ -10,11 +10,11 @@ helpviewer_keywords:
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
 ms.openlocfilehash: d754dc5e8a57b3c4e2e5439bb2524a22d44813c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004037"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>如何：提取与 Windows 窗体中的文件关联的图标
 多个文件有嵌入提供关联的文件类型的可视表示形式的图标。 例如，Microsoft Word 文档包含标识为 Word 文档的图标。 当列表控件或表控件中显示文件，可能想要显示的图标表示每个文件名旁边的文件类型。 您可以轻松执行此操作通过使用<xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>方法。  
@@ -28,7 +28,7 @@ ms.locfileid: "59112549"
 ## <a name="compiling-the-code"></a>编译代码  
  若要编译示例：  
   
--   将上面的代码粘贴到 Windows 窗体，并调用`ExtractAssociatedIconExample`方法从窗体的构造函数或<xref:System.Windows.Forms.Form.Load>事件处理方法。  
+- 将上面的代码粘贴到 Windows 窗体，并调用`ExtractAssociatedIconExample`方法从窗体的构造函数或<xref:System.Windows.Forms.Form.Load>事件处理方法。  
   
      将需要确保你的窗体将导入<xref:System.IO>命名空间。  
   

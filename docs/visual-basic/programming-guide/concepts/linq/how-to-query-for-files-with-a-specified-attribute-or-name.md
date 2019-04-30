@@ -3,11 +3,11 @@ title: 如何：查询具有指定的特性或名称 (Visual Basic 中) 的文�
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
 ms.openlocfilehash: 0c6875a0e4b8224010b20ca17ab6318387490aca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021357"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何：查询具有指定的特性或名称 (Visual Basic 中) 的文件
 此示例演示了如何在指定目录树中查找具有指定文件扩展名（如“.txt”）的所有文件。 它还演示了如何基于时间在树中返回最新或最旧的文件。  

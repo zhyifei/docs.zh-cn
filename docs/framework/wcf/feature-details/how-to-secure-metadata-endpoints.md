@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047563"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>如何：保护元数据终结点
 服务的元数据中可能包含恶意用户可以利用的关于您的应用程序的敏感信息。 服务使用者可能还要求一种用于获取关于服务的元数据的安全机制。 因此，有时需要使用安全终结点来发布元数据。  
@@ -88,9 +88,9 @@ ms.locfileid: "59307517"
 ## <a name="compiling-the-code"></a>编译代码  
  该代码示例使用下列命名空间：  
   
--   <xref:System.ServiceModel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>请参阅
 

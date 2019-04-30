@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971764"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 数据类型 (Visual Basic)
 保存有符号表示 96 位 （12 字节） 整数数字 10 的可变次幂缩放的 128 位 （16 字节） 值。 比例因子指定小数点; 右侧的位数其范围从 0 到 28。 小数位数为 0 （没有小数位），最大值为 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 具有 28 位小数，最大值为 + /-7.9228162514264337593543950335，并最小的非零值为 + /-0.0000000000000000000000000001 （+ /-1E 28)。  
@@ -37,13 +37,13 @@ ms.locfileid: "58834096"
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **精度。** `Decimal` 不是浮点数据类型。 `Decimal`结构保存的二进制整数值，以及符号位和缩放因子，指定了值的哪些部分是小数部分的整数。 因此，`Decimal`数字在浮点类型相比，内存中具有更精确的表示形式 (`Single`和`Double`)。  
+- **精度。** `Decimal` 不是浮点数据类型。 `Decimal`结构保存的二进制整数值，以及符号位和缩放因子，指定了值的哪些部分是小数部分的整数。 因此，`Decimal`数字在浮点类型相比，内存中具有更精确的表示形式 (`Single`和`Double`)。  
   
--   **性能。** `Decimal`数据类型是最慢的所有数字类型。 应权衡针对性能，而不选择数据类型的精度的重要性。  
+- **性能。** `Decimal`数据类型是最慢的所有数字类型。 应权衡针对性能，而不选择数据类型的精度的重要性。  
   
--   **扩大转换。** `Decimal`数据类型加宽到`Single`或`Double`。 这意味着可以将转换`Decimal`而不会遇到这些类型的任一<xref:System.OverflowException?displayProperty=nameWithType>错误。  
+- **扩大转换。** `Decimal`数据类型加宽到`Single`或`Double`。 这意味着可以将转换`Decimal`而不会遇到这些类型的任一<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
--   **尾随零。** Visual Basic 不存储中的尾随零`Decimal`文本。 但是，`Decimal`变量将保留任何计算所得的尾随零。 下面的示例阐释了这一点。  
+- **尾随零。** Visual Basic 不存储中的尾随零`Decimal`文本。 但是，`Decimal`变量将保留任何计算所得的尾随零。 下面的示例阐释了这一点。  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ ms.locfileid: "58834096"
   
      d1 = 2.375，d2 = 1.625，d3 = 4.000，d4 = 4  
   
--   **类型字符。** 将文本类型字符 `D` 追加到文本会将其强制转换为 `Decimal` 数据类型。 将标识符类型字符 `@` 追加到任何标识符会将其强制转换为 `Decimal`。  
+- **类型字符。** 将文本类型字符 `D` 追加到文本会将其强制转换为 `Decimal` 数据类型。 将标识符类型字符 `@` 追加到任何标识符会将其强制转换为 `Decimal`。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Decimal?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Decimal?displayProperty=nameWithType> 结构。  
   
 ## <a name="range"></a>范围  
  可能需要使用`D`键入要分配到较大的值的字符`Decimal`变量或常量。 此要求是因为编译器将解释为文字`Long`除非文本类型字符遵循文本，如以下示例所示。  

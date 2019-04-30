@@ -9,11 +9,11 @@ helpviewer_keywords:
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
 ms.openlocfilehash: a99da5804bbc31897198b9b6d9e21da9f17dfe26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051411"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a>如何：检测何时按下 Enter 键
 此示例演示如何检测何时<xref:System.Windows.Input.Key.Enter>键盘上按下键。  

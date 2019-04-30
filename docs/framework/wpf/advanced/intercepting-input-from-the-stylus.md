@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031247"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>截获触笔输入
 <xref:System.Windows.Input.StylusPlugIns>体系结构提供了用于通过实现低级别控制的机制<xref:System.Windows.Input.Stylus>输入和数字墨迹创建<xref:System.Windows.Ink.Stroke>对象。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供了一种机制，以实现自定义行为，并将其应用到从触笔设备以获得最佳性能的数据的流。  
   
  本主题包含以下小节：  
   
--   [体系结构](#Architecture)  
+- [体系结构](#Architecture)  
   
--   [实现触笔插件](#ImplementingStylusPlugins)  
+- [实现触笔插件](#ImplementingStylusPlugins)  
   
--   [将插件添加到 InkCanvas](#AddingYourPluginToAnInkCanvas)  
+- [将插件添加到 InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
--   [结束语](#Conclusion)  
+- [结束语](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>体系结构  

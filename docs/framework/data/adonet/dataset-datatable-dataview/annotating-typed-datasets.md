@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034497"
 ---
 # <a name="annotating-typed-datasets"></a>为类型化的数据集进行批注
 批注使您能够在不修改基础架构的情况下修改类型化 <xref:System.Data.DataSet> 中元素的名称。 如果修改基础架构中的元素的名称会使类型化**数据集**要引用的对象执行不存在于数据源，并且会丢失对存在于数据源中的对象的引用。  

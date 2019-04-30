@@ -10,11 +10,11 @@ helpviewer_keywords:
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
 ms.openlocfilehash: 0372fbf63f6d12e266674f92225183911aa4ca30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014123"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>使用 My.Application、My.Computer 和 My.User 执行任务 (Visual Basic)
 三个主要`My`对象提供对信息和常用的访问功能一起使用的是`My.Application`(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>)， `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)，和`My.User`(<xref:Microsoft.VisualBasic.ApplicationServices.User>)。 可以使用这些对象分别访问与当前应用程序、，安装应用程序的计算机或应用程序，当前用户相关的信息。  

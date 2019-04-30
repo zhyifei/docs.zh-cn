@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
 ms.openlocfilehash: 994cafc44a37d16d0f70caec560f530c6a836ec0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055116"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>语句在方法/多行 lambda 内无效
 语句内无效`Sub`， `Function`，属性`Get`，或属性`Set`过程。 某些语句可以放置在模块或类级别。 其他人，例如`Option Strict`，必须为命名空间级别并且位于所有其他声明之前。  
@@ -21,7 +21,7 @@ ms.locfileid: "58841558"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   从过程中删除该语句。  
+- 从过程中删除该语句。  
   
 ## <a name="see-also"></a>请参阅
 

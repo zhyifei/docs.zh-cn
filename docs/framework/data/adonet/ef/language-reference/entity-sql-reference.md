@@ -3,11 +3,11 @@ title: 实体 SQL 引用
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034263"
 ---
 # <a name="entity-sql-reference"></a>实体 SQL 引用
 
@@ -77,7 +77,7 @@ ms.locfileid: "55826637"
 |--------------|---------|
 |[FROM](from-entity-sql.md)|指定中使用的集合[选择](select-entity-sql.md)语句。|
 |[GROUP BY](group-by-entity-sql.md)|指定到哪些对象的查询返回的组 ([选择](select-entity-sql.md)) 表达式的放置。|
-|[GroupPartition](grouppartition-entity-sql.md)|返回从聚合与之相关的组分区提取的自变量值集合。|
+|[GroupPartition](grouppartition-entity-sql.md)|返回从聚合与之相关的组分区提取的参数值集合。|
 |[HAVING](having-entity-sql.md)|指定组或聚合的搜索条件。|
 |[LIMIT](limit-entity-sql.md)|用于[ORDER BY](order-by-entity-sql.md)子句以执行物理分页。|
 |[ORDER BY](order-by-entity-sql.md)|指定返回的对象使用的排序顺序[选择](select-entity-sql.md)语句。|

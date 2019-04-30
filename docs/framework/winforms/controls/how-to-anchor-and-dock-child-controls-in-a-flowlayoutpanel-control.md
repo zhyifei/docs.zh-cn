@@ -8,11 +8,11 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
 ms.openlocfilehash: 255ac50ae79d6931c9b82b50677c450c0834fdea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011166"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>如何：在 FlowLayoutPanel 控件中锚定和停靠子控件
 <xref:System.Windows.Forms.FlowLayoutPanel> 控件支持其子控件中的 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 属性。  
@@ -56,7 +56,7 @@ ms.locfileid: "59329032"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   

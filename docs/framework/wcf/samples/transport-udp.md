@@ -3,11 +3,11 @@ title: 传输：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007716"
 ---
 # <a name="transport-udp"></a>传输：UDP
 UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 WCF 中，创建自定义传输的推荐的过程。 创建自定义传输的步骤如下：  
@@ -32,15 +32,15 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
 ## <a name="message-exchange-patterns"></a>消息交换模式  
  编写自定义传输的第一步是决定该传输需要哪些消息交换模式 (MEP)。 有三种 MEP 可供选择：  
   
--   数据报 (IInputChannel/IOutputChannel)  
+- 数据报 (IInputChannel/IOutputChannel)  
   
      当使用数据报 MEP 时，客户端使用“启动后不管”交换形式发送消息。 “发后不理”交换形式是一种要求带外确认成功传递的交换形式。 消息在传输过程中可能会丢失，而永远不能到达服务。 如果在客户端成功完成发送操作，这并不保证远程终结点已经收到消息。 数据报是消息传递的基本构造块，因为您可以在它上面构建自己的协议，包括可靠的协议和安全的协议。 客户端数据报通道实现 <xref:System.ServiceModel.Channels.IOutputChannel> 接口，而服务数据报通道实现 <xref:System.ServiceModel.Channels.IInputChannel> 接口。  
   
--   请求/响应 (IRequestChannel/IReplyChannel)  
+- 请求/响应 (IRequestChannel/IReplyChannel)  
   
      在此 MEP 中，将发送一个消息并接收一个答复。 此模式由请求-响应对组成。 请求-响应调用的示例有远程过程调用 (RPC) 和浏览器 GET。 此模式也称为半双工。 在此 MEP 中，客户端通道实现 <xref:System.ServiceModel.Channels.IRequestChannel>，而服务通道实现 <xref:System.ServiceModel.Channels.IReplyChannel>。  
   
--   双工 (IDuplexChannel)  
+- 双工 (IDuplexChannel)  
   
      通过双工 MEP，客户端可以发送任意数目的消息，并以任意顺序接收消息。 双工 MEP 就像电话通话，所说的每一个字都是一条消息。 由于在这种 MEP 中两端都可发送和接收，因此，由客户端和服务通道实现的接口为 <xref:System.ServiceModel.Channels.IDuplexChannel>。  
   
@@ -52,17 +52,17 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 和 WCF 对象生存期  
  WCF 具有一个常见的状态机，用于管理的对象，如生命周期<xref:System.ServiceModel.Channels.IChannel>， <xref:System.ServiceModel.Channels.IChannelFactory>，和<xref:System.ServiceModel.Channels.IChannelListener>用于进行通信。 这些通信对象可以处于五种状态。 这些状态通过 <xref:System.ServiceModel.CommunicationState> 枚举来表示，如下所示：  
   
--   创建：这是状态<xref:System.ServiceModel.ICommunicationObject>它首次实例化。 在此状态中不会发生输入/输出 (I/O)。  
+- 创建：这是状态<xref:System.ServiceModel.ICommunicationObject>它首次实例化。 在此状态中不会发生输入/输出 (I/O)。  
   
--   正在打开：对象转换到此状态时<xref:System.ServiceModel.ICommunicationObject.Open%2A>调用。 此时，属性被设置为不可变属性，并且可以开始输入/输出。 此转换只有从“已创建”状态转换才有效。  
+- 正在打开：对象转换到此状态时<xref:System.ServiceModel.ICommunicationObject.Open%2A>调用。 此时，属性被设置为不可变属性，并且可以开始输入/输出。 此转换只有从“已创建”状态转换才有效。  
   
--   打开：对象即转换到时打开进程完成后，此状态。 此转换只有从“正在打开”状态转换才有效。 此时，对象完全可用于传送。  
+- 打开：对象即转换到时打开进程完成后，此状态。 此转换只有从“正在打开”状态转换才有效。 此时，对象完全可用于传送。  
   
--   关闭：对象转换到此状态时<xref:System.ServiceModel.ICommunicationObject.Close%2A>调用以完成正常关闭。 此转换只有从“已打开”状态转换才有效。  
+- 关闭：对象转换到此状态时<xref:System.ServiceModel.ICommunicationObject.Close%2A>调用以完成正常关闭。 此转换只有从“已打开”状态转换才有效。  
   
--   关闭：在已关闭状态对象将不再可用。 一般情况下，仍然可以访问大多数配置以进行检查，但不能进行通信。 此状态相当于被释放。  
+- 关闭：在已关闭状态对象将不再可用。 一般情况下，仍然可以访问大多数配置以进行检查，但不能进行通信。 此状态相当于被释放。  
   
--   出现故障：在出错状态，对象是可访问权限检查，但无法再使用。 当发生不可恢复的错误时，对象即转换到此状态。 从这种状态的唯一有效的转换是到`Closed`状态。  
+- 出现故障：在出错状态，对象是可访问权限检查，但无法再使用。 当发生不可恢复的错误时，对象即转换到此状态。 从这种状态的唯一有效的转换是到`Closed`状态。  
   
  每次状态转换都会触发事件。 可以随时调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 方法，它将导致对象立即从当前状态转换到“已关闭”状态。 调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 将终止任何未完成的工作。  
   
@@ -70,13 +70,13 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
 ## <a name="channel-factory-and-channel-listener"></a>通道工厂和通道侦听器  
  编写自定义传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现，并为服务通道创建 <xref:System.ServiceModel.Channels.IChannelListener> 的实现。 通道层使用工厂模式构建通道。 WCF 为此过程提供基类帮助器。  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject> 类实现 <xref:System.ServiceModel.ICommunicationObject> 并强制执行前面步骤 2 中所述的状态机。 
+- <xref:System.ServiceModel.Channels.CommunicationObject> 类实现 <xref:System.ServiceModel.ICommunicationObject> 并强制执行前面步骤 2 中所述的状态机。 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> 类实现 <xref:System.ServiceModel.Channels.CommunicationObject> 并为 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供统一的基类。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 类与 <xref:System.ServiceModel.Channels.ChannelBase>（用来实现 <xref:System.ServiceModel.Channels.IChannel> 的基类）结合使用。  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>并<xref:System.ServiceModel.Channels.IChannelFactory>并将合并`CreateChannel`成一个重载`OnCreateChannel`抽象方法。  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase>类实现<xref:System.ServiceModel.Channels.ChannelManagerBase>并<xref:System.ServiceModel.Channels.IChannelFactory>并将合并`CreateChannel`成一个重载`OnCreateChannel`抽象方法。  
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。  
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。  
   
  在此示例中，工厂实现包含在 UdpChannelFactory.cs 中，侦听器实现包含在 UdpChannelListener.cs 中。 <xref:System.ServiceModel.Channels.IChannel> 实现位于 UdpOutputChannel.cs 和 UdpInputChannel.cs 中。  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>添加标准绑定  
  绑定元素可以按照以下两种方式使用：  
   
--   通过自定义绑定：自定义绑定允许用户创建自己的绑定元素的任意一组所基于的绑定。  
+- 通过自定义绑定：自定义绑定允许用户创建自己的绑定元素的任意一组所基于的绑定。  
   
--   通过使用系统提供的、包含我们的绑定元素的绑定。 WCF 提供了几个系统定义的绑定，如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 这些绑定中的每个绑定与一个准确定义的配置文件相关联。  
+- 通过使用系统提供的、包含我们的绑定元素的绑定。 WCF 提供了几个系统定义的绑定，如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 这些绑定中的每个绑定与一个准确定义的配置文件相关联。  
   
  此示例在从 `SampleProfileUdpBinding` 派生的 <xref:System.ServiceModel.Channels.Binding> 中实现配置文件绑定。 `SampleProfileUdpBinding` 中最多包含四个绑定元素：`UdpTransportBindingElement`、`TextMessageEncodingBindingElement CompositeDuplexBindingElement` 和 `ReliableSessionBindingElement`。  
   

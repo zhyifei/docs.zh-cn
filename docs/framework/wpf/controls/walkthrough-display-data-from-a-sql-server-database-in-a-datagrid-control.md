@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024056"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>演练：DataGrid 控件中显示的 SQL Server 数据库中的数据
 
@@ -23,9 +23,9 @@ ms.locfileid: "59336104"
 
 你需要以下组件来完成本演练：
 
--   Visual Studio。
+- Visual Studio。
 
--   正在运行的 SQL Server 或 SQL Server Express 的 AdventureWorks 示例数据库附加到该实例的访问权限。 您可以下载 AdventureWorks 数据库从[GitHub](https://github.com/Microsoft/sql-server-samples/releases)。
+- 正在运行的 SQL Server 或 SQL Server Express 的 AdventureWorks 示例数据库附加到该实例的访问权限。 您可以下载 AdventureWorks 数据库从[GitHub](https://github.com/Microsoft/sql-server-samples/releases)。
 
 ## <a name="create-entity-classes"></a>创建实体类
 

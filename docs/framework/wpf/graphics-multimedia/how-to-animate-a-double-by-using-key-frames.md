@@ -10,11 +10,11 @@ helpviewer_keywords:
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
 ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010197"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>如何：使用关键帧对双精度值进行动画处理
 此示例演示如何采用的属性的值进行动画处理<xref:System.Double>使用关键帧。  

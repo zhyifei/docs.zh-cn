@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982444"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>此数组被固定或临时锁定 (Visual Basic)
 此错误具有以下可能的原因：  
   
--   使用`ReDim`若要更改的固定大小数组的元素数。  
+- 使用`ReDim`若要更改的固定大小数组的元素数。  
   
--   Redimensioning 模块级别动态数组，其中的一个元素具有作为参数传递给过程。 如果传递一个元素，则数组将被锁定以防止取消分配内存的过程中的引用参数。  
+- Redimensioning 模块级别动态数组，其中的一个元素具有作为参数传递给过程。 如果传递一个元素，则数组将被锁定以防止取消分配内存的过程中的引用参数。  
   
--   尝试将一个值赋给`Variant`变量包含一个数组，但`Variant`当前被锁定。  
+- 尝试将一个值赋给`Variant`变量包含一个数组，但`Variant`当前被锁定。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

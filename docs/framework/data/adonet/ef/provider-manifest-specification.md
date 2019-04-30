@@ -3,11 +3,11 @@ title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033992"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -45,18 +45,18 @@ ms.locfileid: "59169905"
   
  编写具有两部分的 XML 文件：  
   
--   以存储类型或函数的“EDM 对应项”的形式表示的提供程序类型列表。 存储类型具有对应的 EDM 类型。 存储函数具有对应的 EDM 函数。 例如，varchar 是一个 SQL Server 类型，但对应的 EDM 类型是字符串。  
+- 以存储类型或函数的“EDM 对应项”的形式表示的提供程序类型列表。 存储类型具有对应的 EDM 类型。 存储函数具有对应的 EDM 函数。 例如，varchar 是一个 SQL Server 类型，但对应的 EDM 类型是字符串。  
   
--   提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
+- 提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>使用非对称类型映射编写提供程序  
  在编写[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的数据存储提供程序时，某些类型的 EDM 到提供程序的类型映射可能与提供程序到 EDM 的类型映射不同。 例如，无限制的 EDM PrimitiveTypeKind.String 可能会映射到提供程序上的 nvarchar(4000)，而 nvarchar(4000) 将映射到 EDM PrimitiveTypeKind.String(MaxLength=4000)。  
   
  编写具有两部分的 XML 文件：  
   
--   提供程序类型的列表以 EDM 表示，并定义了两个方向的映射：EDM 到提供程序和提供程序到 EDM。  
+- 提供程序类型的列表以 EDM 表示，并定义了两个方向的映射：EDM 到提供程序和提供程序到 EDM。  
   
--   提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
+- 提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
   
 ## <a name="provider-manifest-discoverability"></a>提供程序清单的可发现性  
  清单可以由实体服务中的若干组件类型（例如“工具”或“查询”）间接地使用，但更多的是通过使用数据存储元数据加载程序由元数据直接利用。  

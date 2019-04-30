@@ -11,11 +11,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
 ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954530"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>如何：使用颜色矩阵设置图像中的 Alpha 值
 <xref:System.Drawing.Bitmap>类 (派生自<xref:System.Drawing.Image>类) 和<xref:System.Drawing.Imaging.ImageAttributes>类提供用于获取和设置像素值的功能。 可以使用<xref:System.Drawing.Imaging.ImageAttributes>类来修改 alpha 值为整个图像，也可以调用<xref:System.Drawing.Bitmap.SetPixel%2A>方法的<xref:System.Drawing.Bitmap>类来修改单个像素的值。  

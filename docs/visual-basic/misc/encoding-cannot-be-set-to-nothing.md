@@ -3,11 +3,11 @@ title: 编码不能设置为 Nothing。
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
 ms.openlocfilehash: 30b0b4a29fbdf931aa62263b75d1fa946e87b145
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970321"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>编码不能设置为 Nothing。
 尝试读取或写入文件失败，因为已将参数 `encoding` 设置为 `Nothing` ，但需要有效值。  
@@ -16,7 +16,7 @@ ms.locfileid: "58028445"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   为 `encoding` 参数提供有效值。  
+- 为 `encoding` 参数提供有效值。  
   
 ## <a name="see-also"></a>请参阅
 

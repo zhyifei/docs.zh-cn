@@ -3,11 +3,11 @@ title: 内联函数
 description: 了解如何使用F#直接集成到调用代码的内联函数。
 ms.date: 05/16/2016
 ms.openlocfilehash: 12c175e3e46e12d978fe02d3e1fe83142e71a25d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966590"
 ---
 # <a name="inline-functions"></a>内联函数
 

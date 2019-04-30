@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
 ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009053"
 ---
 # <a name="creating-a-new-windows-form"></a>创建新的 Windows 窗体
 本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。 此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。 若要详细了解 Windows 窗体应用程序，可以使用它们、 事件和处理事件和如何处理来自用户输入的控件，请参阅相关的主题列表。  

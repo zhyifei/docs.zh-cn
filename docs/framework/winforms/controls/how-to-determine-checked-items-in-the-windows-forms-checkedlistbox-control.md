@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
 ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010912"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>如何：确定 Windows 窗体 CheckedListBox 控件中的选定项
 在 Windows 窗体中显示数据时<xref:System.Windows.Forms.CheckedListBox>控件，您可以或者循环访问集合中存储<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>属性或逐步执行列表使用<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法，以确定未选中的项。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法将项索引号作为其参数并返回`true`或`false`。 与您所料，相反<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>属性不用于确定未选中的项; 它们确定哪些项会突出显示。  

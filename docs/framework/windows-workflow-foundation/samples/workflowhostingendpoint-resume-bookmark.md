@@ -3,11 +3,11 @@ title: WorkflowHostingEndpoint 恢复书签
 ms.date: 03/30/2017
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
 ms.openlocfilehash: 5c3c996a73d8f88e925d459fae3eb785996eada4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004739"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a>WorkflowHostingEndpoint 恢复书签
 此示例演示如何将 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 与 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 一起使用创建工作流实例。  
@@ -18,9 +18,9 @@ ms.locfileid: "59340537"
 ## <a name="discussion"></a>讨论  
  此示例使用 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 创建使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流实例。 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 是可用于以下方案的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的扩展点：  
   
--   创建新的工作流实例。  
+- 创建新的工作流实例。  
   
--   恢复 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载的工作流实例上的书签。  
+- 恢复 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载的工作流实例上的书签。  
   
  所包含的示例终结点将公开一个协定，该协定提供用于创建工作流并返回实例 ID 或使用特定 ID 创建实例的操作。 示例控制台应用程序使用一个基本工作流定义创建 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例，并将 `CreationEndpoint` 添加到主机。 然后它对所添加的终结点调用 `Create` 操作以创建新的工作流实例。  
   

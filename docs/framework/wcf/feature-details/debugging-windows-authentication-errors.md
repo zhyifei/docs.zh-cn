@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048044"
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层上出现安全错误时，会显示这些由 Windows Communication Foundation (WCF)。 本主题提供一组问题以帮助诊断这些错误。  
@@ -45,13 +45,13 @@ ms.locfileid: "59299444"
   
  具体地说，四种帐户类型包括：  
   
--   本地用户：仅限计算机的用户配置文件。 例如 `MachineName\Administrator` 或 `MachineName\ProfileName`。  
+- 本地用户：仅限计算机的用户配置文件。 例如 `MachineName\Administrator` 或 `MachineName\ProfileName`。  
   
--   本地系统：内置帐户 SYSTEM 未加入域的计算机上。  
+- 本地系统：内置帐户 SYSTEM 未加入域的计算机上。  
   
--   域用户：在 Windows 域用户帐户。 例如：`DomainName\ProfileName`。  
+- 域用户：在 Windows 域用户帐户。 例如：`DomainName\ProfileName`。  
   
--   域的计算机：具有计算机标识加入 Windows 域的计算机上运行的进程。 例如：`MachineName\Network Service`。  
+- 域的计算机：具有计算机标识加入 Windows 域的计算机上运行的进程。 例如：`MachineName\Network Service`。  
   
 > [!NOTE]
 >  在调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 类的 <xref:System.ServiceModel.ServiceHost> 方法时，将捕获服务凭据。 每当客户端发送消息时，即会读取客户端凭据。  
@@ -85,15 +85,15 @@ ms.locfileid: "59299444"
   
 2. 要求 SSPI 协商：  
   
-    1.  如果要使用标准绑定，请将 `NegotiateServiceCredential` 属性设置为 `true`。  
+    1. 如果要使用标准绑定，请将 `NegotiateServiceCredential` 属性设置为 `true`。  
   
-    2.  如果要使用自定义绑定，请将 `AuthenticationMode` 元素的 `Security` 属性设置为 `SspiNegotiated`。  
+    2. 如果要使用自定义绑定，请将 `AuthenticationMode` 元素的 `Security` 属性设置为 `SspiNegotiated`。  
   
 3. 通过禁用 NTLM 来要求 SSPI 协商使用 Kerberos：  
   
-    1.  为此，可在代码中使用下面的语句：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. 为此，可在代码中使用下面的语句：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  或者在配置文件中将 `allowNtlm` 属性设置为 `false`。 此属性包含在[ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)。  
+    2. 或者在配置文件中将 `allowNtlm` 属性设置为 `false`。 此属性包含在[ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)。  
   
 ### <a name="ntlm-protocol"></a>NTLM 协议  
   

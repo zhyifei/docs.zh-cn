@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Margin property [WPF], setting
 ms.assetid: 70ebee01-6f87-4352-8dd4-402c65eaaed6
 ms.openlocfilehash: 3263810806b6b4bbec15eadfd1f1da3a57d12698
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052360"
 ---
 # <a name="how-to-set-margins-of-elements-and-controls"></a>如何：设置元素和控件的边距
 此示例介绍了如何设置<xref:System.Windows.FrameworkElement.Margin%2A>属性，通过更改在代码隐藏中的边距的任何现有属性值。 <xref:System.Windows.FrameworkElement.Margin%2A>属性是属性的<xref:System.Windows.FrameworkElement>基元素，并因此由各种控件和其他元素继承。  

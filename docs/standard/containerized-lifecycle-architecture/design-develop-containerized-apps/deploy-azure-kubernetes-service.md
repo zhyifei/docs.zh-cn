@@ -5,13 +5,13 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006516"
 ---
-# <a name="deploy-to-azure-kubernetes-service-aks"></a>将部署到 Azure Kubernetes 服务 (AKS)
+# <a name="deploy-to-azure-kubernetes-service-aks"></a>部署到 Azure Kubernetes 服务 (AKS)
 
 可以与 AKS 使用您首选的客户端的操作系统进行交互，下面我们介绍如何使用 Microsoft Windows 和 Windows，在 Ubuntu Linux 的嵌入式的版本使用 Bash 命令。
 

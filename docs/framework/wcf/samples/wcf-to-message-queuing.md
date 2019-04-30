@@ -3,11 +3,11 @@ title: Windows Communication Foundation 到消息队列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007534"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 到消息队列
 此示例演示如何，Windows Communication Foundation (WCF) 应用程序可以向消息队列 (MSMQ) 应用程序发送消息。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。 服务和客户端不需要同时运行。
@@ -138,15 +138,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。  
   
-    1.  在 Visual Studio 2012 中打开服务器管理器。  
+    1. 在 Visual Studio 2012 中打开服务器管理器。  
   
-    2.  展开**功能**选项卡。  
+    2. 展开**功能**选项卡。  
   
-    3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。  
+    3. 右键单击**私有消息队列**，然后选择**新建**，**专用队列**。  
   
-    4.  检查**事务性**框。  
+    4. 检查**事务性**框。  
   
-    5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。  
+    5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。  
   
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   

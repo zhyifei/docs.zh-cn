@@ -8,11 +8,11 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
 ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054180"
 ---
 # <a name="object-variable-values-visual-basic"></a>对象变量值 (Visual Basic)
 变量[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)可以指任何类型的数据。 在中存储的值`Object`变量保存到其他位置在内存中，而变量本身保存一个指针，该数据。  

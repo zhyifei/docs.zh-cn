@@ -11,11 +11,11 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051658"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供丰富的文档功能，可创建旨在比前几代 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 更易于访问和读取的高保真内容文档。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
@@ -61,11 +61,11 @@ ms.locfileid: "59313952"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包体系结构用作大量关键技术的基础：  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档符合 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]。  
+- [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档符合 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]。  
   
--   Microsoft Office“12”开放式 XML 格式文档 (.docx)。  
+- Microsoft Office“12”开放式 XML 格式文档 (.docx)。  
   
--   用于个人应用程序设计的自定义存储格式。  
+- 用于个人应用程序设计的自定义存储格式。  
   
  基于打包 Api，<xref:System.Windows.Xps.Packaging.XpsDocument>专门设计用于存储[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定内容文档。 <xref:System.Windows.Xps.Packaging.XpsDocument>是可以在查看器，显示在中打开一个自包含的文档<xref:System.Windows.Controls.DocumentViewer>控件，路由到打印后台处理，或直接输出到[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-兼容的打印机。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "59313952"
 #### <a name="packagerelationships"></a>PackageRelationships  
  一个<xref:System.IO.Packaging.PackageRelationship>（"关系"） 提供了用于将与包或包中的部件关联的其他信息的机制。 关系是一种包级别的设备，可以在未修改实际部件内容的情况下将其他信息与部件关联。 在许多情况下，直接向部件内容中插入新数据通常是不可行的：  
   
--   部件及其内容架构的实际类型未知。  
+- 部件及其内容架构的实际类型未知。  
   
--   即使已知，内容架构可能也不会提供添加新信息的方式。  
+- 即使已知，内容架构可能也不会提供添加新信息的方式。  
   
--   部件可能已进行数字签名或加密，不能进行任何修改。  
+- 部件可能已进行数字签名或加密，不能进行任何修改。  
   
  包关系提供一种可检测到的方式，用于添加其他信息并将该信息与各个部件或整个包关联。 包关系具有两种主要功能：  
   
@@ -125,13 +125,13 @@ ms.locfileid: "59313952"
 ## <a name="xps-documents"></a>XPS 文档  
  [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文档是一个包，其中包含一个或多个固定文档以及呈现操作所需的所有资源和信息。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 还是 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印文件格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>存储在标准 ZIP 数据集中，并且可以包括 XML 和二进制组件，如图像和字体文件的组合。 [PackageRelationships](#PackageRelationships) 用于定义内容和完全呈现文档所需的资源之间的依赖关系。  <xref:System.Windows.Xps.Packaging.XpsDocument>设计提供单一的、 高保真文档解决方案，可支持多个用途：  
   
--   将固定文档内容和资源读取、写入和存储为单个可移植且易于分发的文件。  
+- 将固定文档内容和资源读取、写入和存储为单个可移植且易于分发的文件。  
   
--   利用 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 查看器应用程序显示文档。  
+- 利用 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 查看器应用程序显示文档。  
   
--   以 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机打印后台输出格式输出文档。  
+- 以 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机打印后台输出格式输出文档。  
   
--   将文档直接路由到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机。  
+- 将文档直接路由到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007274"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
@@ -28,24 +28,24 @@ ms.locfileid: "59314383"
 
  本演练演示以下任务：
 
--   创建 WPF 应用程序项目。
+- 创建 WPF 应用程序项目。
 
--   添加对引用[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
+- 添加对引用[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
 
--   正在初始化缓存。
+- 正在初始化缓存。
 
--   正在添加的缓存项的包含文本文件的内容。
+- 正在添加的缓存项的包含文本文件的内容。
 
--   提供的缓存项的逐出策略。
+- 提供的缓存项的逐出策略。
 
--   监视缓存的文件的路径和通知的缓存实例更改为受监视的项目。
+- 监视缓存的文件的路径和通知的缓存实例更改为受监视的项目。
 
 ## <a name="prerequisites"></a>系统必备
  若要完成本演练，你将需要：
 
--   Microsoft Visual Studio 2010。
+- Microsoft Visual Studio 2010。
 
--   包含少量的文本的文本文件。 （您将显示文本文件的内容在消息框中。）在本演练中所示的代码假定正在使用以下文件：
+- 包含少量的文本的文本文件。 （您将显示文本文件的内容在消息框中。）在本演练中所示的代码假定正在使用以下文件：
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ ms.locfileid: "59314383"
 
 7. 通过执行以下步骤添加对缓存程序集的引用：
 
-    1.  在中**解决方案资源管理器**，右键单击项目的名称，然后单击**添加引用**。
+    1. 在中**解决方案资源管理器**，右键单击项目的名称，然后单击**添加引用**。
 
-    2.  选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。
+    2. 选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>若要更改 Visual C# 项目中的目标.NET Framework
 
@@ -125,9 +125,9 @@ ms.locfileid: "59314383"
 
 4. 通过执行以下步骤添加对缓存程序集的引用：
 
-    1.  右键单击**引用**文件夹，然后单击**添加引用**。
+    1. 右键单击**引用**文件夹，然后单击**添加引用**。
 
-    2.  选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。
+    2. 选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>将按钮添加到 WPF 窗口
  接下来，您将添加一个按钮控件，并创建为按钮的事件处理程序`Click`事件。 更高版本将添加代码，以便当单击按钮时，缓存并显示文本文件的内容。
@@ -143,13 +143,13 @@ ms.locfileid: "59314383"
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>正在初始化缓存和缓存条目
  接下来，将添加代码以执行以下任务：
 
--   创建缓存类的实例 — 也就是说，您将实例化一个新<xref:System.Runtime.Caching.MemoryCache>对象。
+- 创建缓存类的实例 — 也就是说，您将实例化一个新<xref:System.Runtime.Caching.MemoryCache>对象。
 
--   指定缓存使用<xref:System.Runtime.Caching.HostFileChangeMonitor>对象来监视在文本文件中的更改。
+- 指定缓存使用<xref:System.Runtime.Caching.HostFileChangeMonitor>对象来监视在文本文件中的更改。
 
--   读取该文本文件并缓存其内容作为缓存项。
+- 读取该文本文件并缓存其内容作为缓存项。
 
--   显示缓存的文本文件的内容。
+- 显示缓存的文本文件的内容。
 
 #### <a name="to-create-the-cache-object"></a>若要创建缓存对象
 

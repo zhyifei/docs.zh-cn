@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 ms.assetid: 997508f2-87e5-4bec-a78e-9eec8f1fb15b
 ms.openlocfilehash: b9ffe797fef9e063470ef93ce73f881aed80e7f6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012485"
 ---
 # <a name="putting-controls-on-windows-forms"></a>将控件放在 Windows 窗体上
 有多种，具体取决于你的应用程序需要放在 Windows 窗体上的控件。  

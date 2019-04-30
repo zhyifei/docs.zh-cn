@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032417"
 ---
 # <a name="inserting-an-image-from-a-file"></a>从文件中插入图像
 可以将二进制大对象 (BLOB) 作为二进制或字符数据写入数据库，具体视数据源的字段类型而定。 BLOB 是一个表示 `text`、`ntext` 和 `image` 数据类型的通用术语，这些数据类型通常包含文档和图片。  

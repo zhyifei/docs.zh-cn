@@ -3,11 +3,11 @@ title: 大型数据和流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038599"
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
 Windows Communication Foundation (WCF) 是基于 XML 的通信基础结构。 因为 XML 数据通常在定义的标准文本格式进行编码[XML 1.0 规范](https://go.microsoft.com/fwlink/?LinkId=94838)、 已连接系统的开发人员和架构师通常会关心发送的消息的线路需求量 （或大小） 之间网络和 XML 的基于文本的编码的二进制数据传输效率使特殊面临挑战。  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) 是基于 XML 的通信基础结构。 �
   
  传输此类大型数据内容的最常见情形是传输具有以下特点的二进制数据对象：  
   
--   无法方便地分成消息序列。  
+- 无法方便地分成消息序列。  
   
--   必须以及时方式传递。  
+- 必须以及时方式传递。  
   
--   当开始传输时，还不是已全部就绪。  
+- 当开始传输时，还不是已全部就绪。  
   
  对于不具有上述限制条件的数据，通常最好在一个会话的范围内发送消息序列，而不是一次性地发送一个大消息。 有关详细信息，请参阅本主题后面的"流式处理数据"部分。  
   
@@ -112,9 +112,9 @@ class MyData
   
  当使用 MTOM 时，将根据以下规则序列化上面的数据协定：  
   
--   如果 `binaryBuffer` 不是 `null`，并且有个别包含足够的数据，使得需要 Base64 编码所没有的 MTOM 外部化开销（MIME 头等等），则这些数据将外部化并作为二进制 MIME 部分随消息一起传送。 如果未超过阈值，则数据会编码为 Base64。  
+- 如果 `binaryBuffer` 不是 `null`，并且有个别包含足够的数据，使得需要 Base64 编码所没有的 MTOM 外部化开销（MIME 头等等），则这些数据将外部化并作为二进制 MIME 部分随消息一起传送。 如果未超过阈值，则数据会编码为 Base64。  
   
--   字符串（和其他所有非二进制的类型）无论多大，始终表示为消息正文内的字符串。  
+- 字符串（和其他所有非二进制的类型）无论多大，始终表示为消息正文内的字符串。  
   
  无论您是否使用显式数据协定（如上面的示例中所示）、操作中是否使用参数列表、是否有嵌套的数据协定或者是否传输集合内的数据协定对象，MTOM 编码的效果都是一样的。 字节数组始终是优化的候选项，如果达到优化阈值，将会对字节数组进行优化。  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>限制  
  启用流式处理后，不能使用大量的 WCF 功能：  
   
--   无法执行消息正文的数字签名，因为它们需要对整个消息内容进行哈希运算。 采用流模式的情况下，当构造和发送消息头时，内容尚未完全就绪，因此无法计算数字签名。  
+- 无法执行消息正文的数字签名，因为它们需要对整个消息内容进行哈希运算。 采用流模式的情况下，当构造和发送消息头时，内容尚未完全就绪，因此无法计算数字签名。  
   
--   加密依赖于数字签名来验证是否已正确地重新构造数据。  
+- 加密依赖于数字签名来验证是否已正确地重新构造数据。  
   
--   如果消息在传输过程中丢失，可靠的会话必须在客户端上缓冲已发送的消息以便可以重新传递，并且在将消息传递给服务实现之前必须在服务上保留消息以保存消息顺序，以备在未按顺序接收消息时可以按照正确的顺序重新排列消息。  
+- 如果消息在传输过程中丢失，可靠的会话必须在客户端上缓冲已发送的消息以便可以重新传递，并且在将消息传递给服务实现之前必须在服务上保留消息以保存消息顺序，以备在未按顺序接收消息时可以按照正确的顺序重新排列消息。  
   
  由于上述功能约束，您只能对流模式使用传输级安全选项，并且无法打开可靠会话。 流处理仅在下列系统定义的绑定中可用：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  由于 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 的基础传输具有内在的可靠传递和基于连接的会话支持，因此与 HTTP 不同，这两个绑定在实践中受上述约束的影响非常小。  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>启用流模式  
  您可以通过以下方式启用流模式：  
   
--   以流模式发送和接受请求，以缓冲模式接受和返回响应 (<xref:System.ServiceModel.TransferMode.StreamedRequest>)。  
+- 以流模式发送和接受请求，以缓冲模式接受和返回响应 (<xref:System.ServiceModel.TransferMode.StreamedRequest>)。  
   
--   以缓冲模式发送和接受请求，以流模式接受和返回响应 (<xref:System.ServiceModel.TransferMode.StreamedResponse>)。  
+- 以缓冲模式发送和接受请求，以流模式接受和返回响应 (<xref:System.ServiceModel.TransferMode.StreamedResponse>)。  
   
--   在两个方向均以流模式发送/接收请求/响应 (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- 在两个方向均以流模式发送/接收请求/响应 (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  您可以通过将传输模式设置为 <xref:System.ServiceModel.TransferMode.Buffered> 来禁用流模式，该设置是所有绑定的默认设置。 下面的代码演示如何在配置中设置传输模式。  
   

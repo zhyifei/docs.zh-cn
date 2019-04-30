@@ -6,16 +6,15 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
 ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009539"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar 控件（Windows 窗体）
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> 控件取代了 `ToolBar` 控件并添加了功能；但是，可以选择保留 `ToolBar` 控件以实现向后兼容并供将来使用。  
+>  <xref:System.Windows.Forms.ToolStrip> 控件取代了 `ToolBar` 控件并添加了功能；但是，可以选择保留 `ToolBar` 控件以实现向后兼容并供将来使用。  
   
  Windows 窗体 `ToolBar` 控件在窗体上用作可显示下拉菜单的行的控件条以及可激活命令的位图按钮。 因此，单击工具栏按钮相当于选择菜单命令。 按钮可配置为显示为并用作下压按钮、下拉菜单或分隔符。 通常，工具栏包含对应于应用程序菜单结构中的项的按钮和菜单，提供对应用程序最常用的函数和命令的快速访问。  
   

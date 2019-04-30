@@ -8,11 +8,11 @@ helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
 ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004323"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>如何：确定编码器支持的参数
 可以调整图像的参数，例如质量和压缩级别，但你必须知道给定的图像编码器支持哪些参数。 <xref:System.Drawing.Image>类提供了<xref:System.Drawing.Image.GetEncoderParameterList%2A>方法，以便你可以确定特定编码器支持的图像参数。 使用 GUID 指定编码器。 <xref:System.Drawing.Image.GetEncoderParameterList%2A>方法返回的数组<xref:System.Drawing.Imaging.EncoderParameter>对象。  
@@ -26,9 +26,9 @@ ms.locfileid: "59204570"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   Windows 窗体应用程序。  
+- Windows 窗体应用程序。  
   
--   一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+- 一个<xref:System.Windows.Forms.PaintEventArgs>，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
 ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983460"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>实现 UI 自动化 RangeValue 控件模式
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59175782"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Range Value 控件模式时，请注意以下准则和约定：  
   
--   控件允许基于区域设置或用户首选项来校准支持的属性。 这样的一个示例是温度计控件，它可被设置为以华氏或摄氏显示温度。  
+- 控件允许基于区域设置或用户首选项来校准支持的属性。 这样的一个示例是温度计控件，它可被设置为以华氏或摄氏显示温度。  
   
--   具有不明确范围值的控件（如进度栏或滑块）应对这些值进行规范化。  
+- 具有不明确范围值的控件（如进度栏或滑块）应对这些值进行规范化。  
   
  ![进度栏。](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 进度栏的示例，其中值为整数类型，最小和最大属性值分别被规范化为 0 和 100  

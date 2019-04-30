@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
 ms.openlocfilehash: 327cb3f376ef37278d8ea58f32fdb8eeb7b67c51
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989867"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>与 ASMX Web 服务互操作
 此示例演示如何将 Windows Communication Foundation (WCF) 客户端应用程序与现有 ASMX Web 服务进行集成。  

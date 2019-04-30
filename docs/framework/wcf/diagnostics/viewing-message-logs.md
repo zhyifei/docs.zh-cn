@@ -3,11 +3,11 @@ title: 查看消息日志
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964393"
 ---
 # <a name="viewing-message-logs"></a>查看消息日志
 本主题描述如何查看消息日志。  
@@ -29,9 +29,9 @@ ms.locfileid: "59139056"
   
  您可以使用以下方法之一解决此问题。  
   
--   仅查看三个消息日志中的两个[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在任何时间。  
+- 仅查看三个消息日志中的两个[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在任何时间。  
   
--   如果您必须查看中的所有三个日志[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在同一时间中，您可以修改中继服务通过创建一个新<xref:System.ServiceModel.Channels.Message>实例。 此实例应该是传入消息正文以及除 `ActivityId` 和 `Action` 标头以外所有标头的副本。 下面的示例代码演示如何执行该操作。  
+- 如果您必须查看中的所有三个日志[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)在同一时间中，您可以修改中继服务通过创建一个新<xref:System.ServiceModel.Channels.Message>实例。 此实例应该是传入消息正文以及除 `ActivityId` 和 `Action` 标头以外所有标头的副本。 下面的示例代码演示如何执行该操作。  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>不准确消息日志记录内容的异常情况  
  在以下条件下，记录的消息可能不是网络上存在的八进制流的准确表示形式。  
   
--   对于 BasicHttpBinding，在 /addressing/none 命名空间中记录传入消息的信封标头。  
+- 对于 BasicHttpBinding，在 /addressing/none 命名空间中记录传入消息的信封标头。  
   
--   空白字符可能不匹配。  
+- 空白字符可能不匹配。  
   
--   对于传入消息，可能用不同形式表示空元素。 例如，\<标记 >\</标记 > 而不是\<标记 / >  
+- 对于传入消息，可能用不同形式表示空元素。 例如，\<标记 >\</标记 > 而不是\<标记 / >  
   
--   默认情况下或通过显式设置 enableLoggingKnownPii="true" 已禁用已知 PII 日志记录。  
+- 默认情况下或通过显式设置 enableLoggingKnownPii="true" 已禁用已知 PII 日志记录。  
   
--   已启用编码以转换到 UTF-8。  
+- 已启用编码以转换到 UTF-8。  
   
 ## <a name="see-also"></a>请参阅
 

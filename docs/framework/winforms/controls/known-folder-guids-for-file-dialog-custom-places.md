@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
 ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973832"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>文件对话框自定义区域的已知文件夹 GUID
 您使用<xref:System.Guid>来指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹添加到文件夹时<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知文件夹 Guid 不区分大小写和中的 KnownFolders.h 文件中定义[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  

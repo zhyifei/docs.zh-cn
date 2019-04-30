@@ -9,11 +9,11 @@ helpviewer_keywords:
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
 ms.openlocfilehash: 27c26d3575c2a931f407a475c655f29d042a8653
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966896"
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows 窗体入门
 使用 Windows 窗体，可以创建功能强大的基于 Windows 的应用程序。 以下主题介绍深入了解如何利用 Windows 窗体来显示数据、 处理用户输入以及部署您的应用程序轻松地增强的安全性。  

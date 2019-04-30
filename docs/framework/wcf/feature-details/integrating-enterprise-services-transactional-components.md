@@ -3,11 +3,11 @@ title: 集成企业服务事务性组件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047030"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>集成企业服务事务性组件
 Windows Communication Foundation (WCF) 提供了一种自动机制与企业服务集成 (请参阅[与 COM + 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 因为 WCF 事务功能基于<xref:System.Transactions>基础结构，将企业服务与 WCF 集成的过程是相同的指定之间互操作性<xref:System.Transactions>和企业服务，如中所述[与企业服务和 COM + 事务的互操作性](https://go.microsoft.com/fwlink/?LinkId=94949)。  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) 提供了一种自动机制与企业服�
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>使企业服务与服务操作相集成  
  下面的代码演示对 Allowed 事务流执行的操作，该操作创建一个具有 <xref:System.Transactions.TransactionScope> 选项的 <xref:System.Transactions.EnterpriseServicesInteropOption.Full>。 以下条件适用于这种情况：  
   
--   如果客户端对事务进行流式处理，则操作（包括调用企业服务组件）将在该事务范围内执行。 使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 可确保事务与 <xref:System.EnterpriseServices> 上下文同步，这意味着 <xref:System.Transactions> 的环境事务和 <xref:System.EnterpriseServices> 相同。  
+- 如果客户端对事务进行流式处理，则操作（包括调用企业服务组件）将在该事务范围内执行。 使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 可确保事务与 <xref:System.EnterpriseServices> 上下文同步，这意味着 <xref:System.Transactions> 的环境事务和 <xref:System.EnterpriseServices> 相同。  
   
--   如果客户端不对事务进行流式处理，则将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 设置为 `true` 可为操作创建新的事务范围。 同样，使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 可确保操作的事务与 <xref:System.EnterpriseServices> 组件的上下文中使用的事务相同。  
+- 如果客户端不对事务进行流式处理，则将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 设置为 `true` 可为操作创建新的事务范围。 同样，使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 可确保操作的事务与 <xref:System.EnterpriseServices> 组件的上下文中使用的事务相同。  
   
  任何其他方法调用也发生在同一个操作的事务范围内。  
   

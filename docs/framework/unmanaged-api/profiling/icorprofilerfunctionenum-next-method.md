@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 62e70a2fe421651aac9a4921ca885c53c864c4f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991947"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next 方法
 从一个函数的顺序集合中获取指定数量的连续函数（从枚举器在序列中的当前位置开始）。  

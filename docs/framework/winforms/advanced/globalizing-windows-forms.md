@@ -10,15 +10,15 @@ helpviewer_keywords:
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
 ms.openlocfilehash: 72bab76245b7b613ed97acec4cc616732c54de0f
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004505"
 ---
 # <a name="globalizing-windows-forms-applications"></a>全球化 Windows 窗体应用程序
 
-*全球化*是设计和开发的软件产品的函数为多个区域性的过程。
+*全球化*是设计和开发针对多个区域性的软件产品的过程。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -36,7 +36,7 @@ ms.locfileid: "36208565"
 
 ## <a name="related-sections"></a>相关章节
 
-- [全球化和本地化.NET 应用程序](../../../standard/globalization-localization/index.md)
+- [对 .NET 应用程序进行全球化和本地化](../../../standard/globalization-localization/index.md)
 
 - [演练：在设计器中使用 ClickOnce 部署 API 按需下载附属程序集](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
 
@@ -44,12 +44,12 @@ ms.locfileid: "36208565"
 
 - [演练：使用 ClickOnce 部署 API 按需下载附属程序集](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [如何： 为 Windows 窗体全球化设置区域性和 UI 区域性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
+- [如何：为 Windows 窗体全球化设置区域性和 UI 区域性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [如何： 创建镜像的 Windows 窗体和控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
+- [如何：创建镜像的 Windows 窗体和控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [如何：使用 AutoSize 属性和 TableLayoutPanel 控件支持对 Windows 窗体的本地化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
+- [如何：支持对使用 AutoSize 和 TableLayoutPanel 控件的 Windows 窗体的本地化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [演练： 本地化 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
+- [演练：本地化 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [演练： 创建布局调整本地化比例的](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
+- [演练：创建布局根据本地化需要调整比例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

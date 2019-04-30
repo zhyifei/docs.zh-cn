@@ -3,11 +3,11 @@ title: 在 WCF 中排队
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049630"
 ---
 # <a name="queuing-in-wcf"></a>在 WCF 中排队
 本部分介绍如何使用 Windows Communication Foundation (WCF) 中的排队的通信。  
@@ -21,11 +21,11 @@ ms.locfileid: "59128760"
   
  有关 WCF 中排队绑定需要注意的问题包括：  
   
--   必须单向操作，因为默认排队绑定 WCF 中的所有服务不支持使用队列的双工通信。 双向通信示例 ([双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)) 说明了如何使用两个单向协定来实现使用队列的双工通信。  
+- 必须单向操作，因为默认排队绑定 WCF 中的所有服务不支持使用队列的双工通信。 双向通信示例 ([双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)) 说明了如何使用两个单向协定来实现使用队列的双工通信。  
   
--   若要生成 WCF 客户端使用元数据交换需要服务上的其他 HTTP 终结点，以便它可以查询直接生成 WCF 客户端并获取用于适当配置排队的通信的绑定信息。  
+- 若要生成 WCF 客户端使用元数据交换需要服务上的其他 HTTP 终结点，以便它可以查询直接生成 WCF 客户端并获取用于适当配置排队的通信的绑定信息。  
   
--   根据排队绑定，WCF 之外额外的配置是必需的。 例如，<xref:System.ServiceModel.NetMsmqBinding>随附于 WCF 的类需要配置绑定，以及按最小方式配置消息队列 (MSMQ)。  
+- 根据排队绑定，WCF 之外额外的配置是必需的。 例如，<xref:System.ServiceModel.NetMsmqBinding>随附于 WCF 的类需要配置绑定，以及按最小方式配置消息队列 (MSMQ)。  
   
  以下部分介绍的特定排队的绑定附带的 WCF 中，基于 MSMQ。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "59128760"
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 和 Durable 属性  
  `ExactlyOnce` 和 `Durable` 属性影响消息在队列之间的传输方式：  
   
--   `ExactlyOnce`：如果设置为`true`（默认值），则排队的通道可确保确认消息，如果传递，不重复。 还可确保消息不会丢失。 如果无法传递消息，或在传递消息前已超过消息的生存时间，则将在死信队列中记录传递失败的消息以及失败原因。 当设置为 `false` 时，排队通道将尽量传输消息。 在这种情况下，可以任意选择一个死信队列。  
+- `ExactlyOnce`：如果设置为`true`（默认值），则排队的通道可确保确认消息，如果传递，不重复。 还可确保消息不会丢失。 如果无法传递消息，或在传递消息前已超过消息的生存时间，则将在死信队列中记录传递失败的消息以及失败原因。 当设置为 `false` 时，排队通道将尽量传输消息。 在这种情况下，可以任意选择一个死信队列。  
   
--   `Durable:`：当设置为 `true`（默认值）时，排队通道确保 MSMQ 将消息永久存储在磁盘上。 因而，如果 MSMQ 服务要停止并重新启动，则磁盘上的消息将传输到目标队列或传递到服务。 当设置为 `false` 时，消息将存储在可变存储区中，而且会在停止并重新启动 MSMQ 服务时丢失。  
+- `Durable:`：当设置为 `true`（默认值）时，排队通道确保 MSMQ 将消息永久存储在磁盘上。 因而，如果 MSMQ 服务要停止并重新启动，则磁盘上的消息将传输到目标队列或传递到服务。 当设置为 `false` 时，消息将存储在可变存储区中，而且会在停止并重新启动 MSMQ 服务时丢失。  
   
  对于 `ExactlyOnce` 可靠传输，MSMQ 要求队列是事务性队列。 同时，MSMQ 还需要一个从事务性队列中进行读取的事务。 同样，在使用 `NetMsmqBinding` 时，请记住，如果将 `ExactlyOnce` 设置为 `true`，则需要使用事务来发送或接收消息。 与此类似，MSMQ 要求队列为非事务性队列来实现高效保证，例如，当 `ExactlyOnce` 为 `false` 以及进行可变消息传递时。 因此，将 `ExactlyOnce` 设置为 `false`，或将 durable 设置为 `false` 时，将无法使用事务发送或接收消息。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "59128760"
   
  绑定具有两个相关属性：  
   
--   `DeadLetterQueue`：此属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 有关这些属性的解释的详细信息，请参阅[使用死信队列来处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+- `DeadLetterQueue`：此属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 有关这些属性的解释的详细信息，请参阅[使用死信队列来处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`：此属性是特定于应用程序的死信队列的统一资源标识符 (URI) 地址。 如果这是必需`DeadLetterQueue`。`Custom` 选择。  
+- `CustomDeadLetterQueue`：此属性是特定于应用程序的死信队列的统一资源标识符 (URI) 地址。 如果这是必需`DeadLetterQueue`。`Custom` 选择。  
   
 #### <a name="poison-message-handling-properties"></a>病毒消息处理属性  
  当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 有关这些属性的详细信息，请参阅[病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
@@ -83,47 +83,47 @@ ms.locfileid: "59128760"
 #### <a name="other-properties"></a>其他属性  
  除了上述各属性，在绑定中公开的其他 MSMQ 特定的属性还包括：  
   
--   `UseSourceJournal`：打开以指示源日记记录的属性。 源日记记录是一项 MSMQ 功能，用于跟踪从传输队列成功传输的消息。  
+- `UseSourceJournal`：打开以指示源日记记录的属性。 源日记记录是一项 MSMQ 功能，用于跟踪从传输队列成功传输的消息。  
   
--   `UseMsmqTracing`：要指示已打开 MSMQ 跟踪的属性。 每当消息离开或到达承载 MSMQ 队列管理器的计算机时，MSMQ 跟踪都会向报告队列发送报告消息。  
+- `UseMsmqTracing`：要指示已打开 MSMQ 跟踪的属性。 每当消息离开或到达承载 MSMQ 队列管理器的计算机时，MSMQ 跟踪都会向报告队列发送报告消息。  
   
--   `QueueTransferProtocol`：要用于队列到队列的消息传输协议的枚举。 MSMQ 实现本机队列到队列的传输协议和称为 SOAP 可靠消息传输协议 (SRMP) 的基于 SOAP 的协议。 当使用 HTTP 传输进行队列到队列的传输时将使用 SRMP。 当使用 HTTPS 进行队列到队列的传输时将使用 SRMP 安全。  
+- `QueueTransferProtocol`：要用于队列到队列的消息传输协议的枚举。 MSMQ 实现本机队列到队列的传输协议和称为 SOAP 可靠消息传输协议 (SRMP) 的基于 SOAP 的协议。 当使用 HTTP 传输进行队列到队列的传输时将使用 SRMP。 当使用 HTTPS 进行队列到队列的传输时将使用 SRMP 安全。  
   
--   `UseActiveDirectory`：一个布尔值以指示是否必须使用 Active Directory 进行队列地址解析。 默认情况下，此功能处于关闭状态。 有关详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+- `UseActiveDirectory`：一个布尔值以指示是否必须使用 Active Directory 进行队列地址解析。 默认情况下，此功能处于关闭状态。 有关详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding`希望 WCF 终结点与在 C 中，编写的现有 MSMQ 应用程序进行通信时使用C++，COM 或 System.Messaging Api。  
   
  对于 `NetMsmqBinding`，绑定属性基本相同。 不过，存在以下差异：  
   
--   将 `MsmqIntegrationBinding` 的操作协定限制为采用一个类型为 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 的参数，其中类型参数为正文类型。  
+- 将 `MsmqIntegrationBinding` 的操作协定限制为采用一个类型为 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 的参数，其中类型参数为正文类型。  
   
--   很多 MSMQ 本机消息属性都在 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 中公开以供使用。  
+- 很多 MSMQ 本机消息属性都在 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 中公开以供使用。  
   
--   为帮助对消息正文进行序列化和反序列化，提供了若干序列化程序，如 XML 和 ActiveX。  
+- 为帮助对消息正文进行序列化和反序列化，提供了若干序列化程序，如 XML 和 ActiveX。  
   
 ### <a name="sample-code"></a>代码示例  
  有关编写使用 MSMQ 的 WCF 服务的分步指导，请参见下列主题：  
   
--   [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+- [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+- [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  有关说明 MSMQ 在 WCF 中的用法的完整代码示例，请参见下列主题：  
   
--   [已进行事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+- [已进行事务处理的 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
--   [可变排队通信](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+- [可变排队通信](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [死信队列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+- [死信队列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
--   [会话和队列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+- [会话和队列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md) 
+- [双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md) 
   
--   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
+- [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+- [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>请参阅
 

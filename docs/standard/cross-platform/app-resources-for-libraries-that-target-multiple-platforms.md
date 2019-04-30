@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055012"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>面向多个平台的库的应用程序资源
 可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)项目类型以确保可以从多个平台访问类库中的资源。 该项目类型可以在 Visual Studio 2012 中，面向.NET Framework 类库的可移植子集。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]确保可从桌面应用、Silverlight 应用、Windows Phone 应用和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用访问你的库。
@@ -61,13 +61,13 @@ ms.locfileid: "54641143"
 |BornLength|12|
 |Hired|雇佣日期|
 |HiredLength|12|
-|ID|ID|
+|Id|Id|
 |ID.Length|12|
 |名称|名称|
 |NameLength|25|
 |标题|Employee Database|
 
- 下面的代码定义`UILibrary`类，该类使用名为资源管理器包装`resources`由 Visual Studio 生成时**访问修饰符**文件更改为**公共**. UILibrary 类根据需要分析字符串数据。 。 请注意，该类位于 `MyCompany.Employees` 命名空间中。
+ 下面的代码定义`UILibrary`类，该类使用名为资源管理器包装`resources`由 Visual Studio 生成时**访问修饰符**文件更改为**公共**. UILibrary 类根据需要分析字符串数据。 . 请注意，该类位于 `MyCompany.Employees` 命名空间中。
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
@@ -88,11 +88,11 @@ ms.locfileid: "54641143"
 |-------------------|--------------------|
 |Born|Date de naissance|
 |BornLength|20|
-|Hired|Date embauché|
+|Hired|日期 embauché|
 |HiredLength|16|
-|ID|ID|
+|Id|Id|
 |名称|Nom|
-|标题|Base de données des employés|
+|标题|基 de données des employés|
 
  以下代码阐释如何从控制台模式应用访问 `UILibrary` 类及其资源。 它需要将对 UILIbrary.dll 的引用添加到控制台应用项目。
 

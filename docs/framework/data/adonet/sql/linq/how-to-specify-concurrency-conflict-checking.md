@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
 ms.openlocfilehash: 53d3ba6969705940c403795d3764c021f0829c64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033678"
 ---
 # <a name="how-to-specify-concurrency-conflict-checking"></a>如何：指定并发冲突检查
 您可以指定在您调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时要检查数据库的哪些列是否发生并发冲突。 有关详细信息，请参阅[如何：指定针对并发冲突对哪些成员进行测试](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)。  

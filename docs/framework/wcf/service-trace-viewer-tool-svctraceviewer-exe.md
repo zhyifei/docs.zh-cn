@@ -3,11 +3,11 @@ title: 服务跟踪查看器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051751"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析生成的 WCF 的诊断跟踪。 服务跟踪查看器使您能够轻松地合并、 查看和筛选日志中的跟踪消息，以便可以诊断、 修复和验证 WCF 服务问题。  

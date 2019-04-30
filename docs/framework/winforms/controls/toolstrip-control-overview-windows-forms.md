@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009521"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类将用户界面元素组合到工具栏、 状态栏和菜单提供一个通用框架。 <xref:System.Windows.Forms.ToolStrip> 控件提供丰富的设计时体验，包括就地激活和编辑、 自定义布局和漂浮，即工具栏共享水平或垂直空间的能力。  
@@ -24,19 +24,19 @@ Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类�
 ## <a name="features-of-the-toolstrip-controls"></a>ToolStrip 控件的功能  
  使用<xref:System.Windows.Forms.ToolStrip>控制转移到：  
   
--   在容器中显示常见的用户界面。  
+- 在容器中显示常见的用户界面。  
   
--   创建轻松地自定义，支持的常用的工具栏高级用户界面和布局功能，例如使用文本和图像、 下拉按钮和控件停靠、 漂浮、 按钮、 溢出按钮和运行时重新排序<xref:System.Windows.Forms.ToolStrip>项。  
+- 创建轻松地自定义，支持的常用的工具栏高级用户界面和布局功能，例如使用文本和图像、 下拉按钮和控件停靠、 漂浮、 按钮、 溢出按钮和运行时重新排序<xref:System.Windows.Forms.ToolStrip>项。  
   
--   支持溢出和运行时项重新排序。 溢出功能将项目移动到下拉列表菜单时没有足够的空间来将它们显示在<xref:System.Windows.Forms.ToolStrip>。  
+- 支持溢出和运行时项重新排序。 溢出功能将项目移动到下拉列表菜单时没有足够的空间来将它们显示在<xref:System.Windows.Forms.ToolStrip>。  
   
--   支持的典型的外观和行为通过常见的呈现模型的操作系统。  
+- 支持的典型的外观和行为通过常见的呈现模型的操作系统。  
   
--   与处理事件的其他控件相同的方式处理始终对所有容器和包含的项的事件。  
+- 与处理事件的其他控件相同的方式处理始终对所有容器和包含的项的事件。  
   
--   将项从一个拖<xref:System.Windows.Forms.ToolStrip>到另一个中或在<xref:System.Windows.Forms.ToolStrip>。  
+- 将项从一个拖<xref:System.Windows.Forms.ToolStrip>到另一个中或在<xref:System.Windows.Forms.ToolStrip>。  
   
--   创建下拉列表控件和用户界面类型编辑器中的高级布局<xref:System.Windows.Forms.ToolStripDropDown>。  
+- 创建下拉列表控件和用户界面类型编辑器中的高级布局<xref:System.Windows.Forms.ToolStripDropDown>。  
   
  使用<xref:System.Windows.Forms.ToolStripControlHost>类上使用其他控件<xref:System.Windows.Forms.ToolStrip>，并获得<xref:System.Windows.Forms.ToolStrip>为它们的功能。  
   

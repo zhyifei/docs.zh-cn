@@ -3,11 +3,11 @@ title: 层次结构支持
 ms.date: 03/30/2017
 ms.assetid: 19bb2794-b4e7-402e-8307-1d1517381a08
 ms.openlocfilehash: 668f4f1dd284550e644ce6b8a4491ca47105575e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033548"
 ---
 # <a name="inheritance-support"></a>层次结构支持
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持*单表映射*。 换言之，整个继承层次结构存储在单个数据库表中。 该表包含整个层次结构的所有可能数据列的平展联合。 （联合是将两个表组合成一个表的结果，组合后的表包含任一原始表中存在的行。）每行中不适用于该行所表示的实例类型的列为 null。  

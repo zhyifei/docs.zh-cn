@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
 ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026440"
 ---
 # <a name="event-design"></a>事件设计
 事件是最常用的回叫（允许框架调用用户代码的结构）。 其他回叫机制包括接受委托的成员、虚拟成员和基于接口的插件。来自可用性研究的数据表明，相比使用其他回叫机制，大多数开发人员更习惯使用事件。 事件能与 Visual Studio 和许多语言很好地集成。  

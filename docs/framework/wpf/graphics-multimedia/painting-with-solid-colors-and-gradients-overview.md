@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009399"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用纯色和渐变进行绘制概述
 本主题介绍如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>对象用纯色、 线性渐变和径向渐变进行绘制。  
@@ -27,15 +27,15 @@ ms.locfileid: "59148299"
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>在“XAML”中使用 SolidColorBrush  
  若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中使用纯色绘制某个区域，请使用以下选项之一。  
   
--   按照名称选择预定义的纯色画笔。  例如，可以设置按钮的<xref:System.Windows.Controls.Control.Background%2A>为"红色"或"中度蓝色"。  另一系列预定义的纯色画笔，请参阅的静态属性<xref:System.Windows.Media.Brushes>类。 下面是一个示例。  
+- 按照名称选择预定义的纯色画笔。  例如，可以设置按钮的<xref:System.Windows.Controls.Control.Background%2A>为"红色"或"中度蓝色"。  另一系列预定义的纯色画笔，请参阅的静态属性<xref:System.Windows.Media.Brushes>类。 下面是一个示例。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   通过指定红色、绿色和蓝色的分量从 32 位调色板中选择一种颜色，以合并为单个纯色。  从 32 位调色板指定一种颜色的格式为“*#rrggbb*”，其中 *rr* 为两位十六进制数，用于指定红色的相对量，*gg* 指定绿色的相对量，*bb* 指定蓝色的相对量。  此外，该颜色可指定为“#*aarrggbb*”，其中，*aa* 指定该颜色的 *alpha* 值或透明度。 使用此方法能够创建部分透明的颜色。  在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>设置为完全不透明红色使用十六进制表示法。  
+- 通过指定红色、绿色和蓝色的分量从 32 位调色板中选择一种颜色，以合并为单个纯色。  从 32 位调色板指定一种颜色的格式为“*#rrggbb*”，其中 *rr* 为两位十六进制数，用于指定红色的相对量，*gg* 指定绿色的相对量，*bb* 指定蓝色的相对量。  此外，该颜色可指定为“#*aarrggbb*”，其中，*aa* 指定该颜色的 *alpha* 值或透明度。 使用此方法能够创建部分透明的颜色。  在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>设置为完全不透明红色使用十六进制表示法。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   使用属性标记语法来描述<xref:System.Windows.Media.SolidColorBrush>。 此语法更详细，并且能够指定其他设置，例如画笔的不透明度。 在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的两个属性<xref:System.Windows.Controls.Button>元素设置为完全不透明红色。 第一个画笔的颜色使用预定义的颜色名称描述。 第二个画笔的颜色使用十六进制表示法描述。  
+- 使用属性标记语法来描述<xref:System.Windows.Media.SolidColorBrush>。 此语法更详细，并且能够指定其他设置，例如画笔的不透明度。 在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的两个属性<xref:System.Windows.Controls.Button>元素设置为完全不透明红色。 第一个画笔的颜色使用预定义的颜色名称描述。 第二个画笔的颜色使用十六进制表示法描述。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59148299"
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>在代码中使用 SolidColorBrush 进行绘制  
  若要在代码中使用纯色绘制某个区域，请使用下列选项之一。  
   
--   使用提供的预定义画笔之一<xref:System.Windows.Media.Brushes>类。 在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>设置为<xref:System.Windows.Media.Brushes.Red%2A>。  
+- 使用提供的预定义画笔之一<xref:System.Windows.Media.Brushes>类。 在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>设置为<xref:System.Windows.Media.Brushes.Red%2A>。  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   创建<xref:System.Windows.Media.SolidColorBrush>并设置其<xref:System.Windows.Media.SolidColorBrush.Color%2A>属性使用<xref:System.Windows.Media.Color>结构。 可以使用从预定义的颜色<xref:System.Windows.Media.Colors>类也可以创建<xref:System.Windows.Media.Color>使用静态<xref:System.Windows.Media.Color.FromArgb%2A>方法。  
+- 创建<xref:System.Windows.Media.SolidColorBrush>并设置其<xref:System.Windows.Media.SolidColorBrush.Color%2A>属性使用<xref:System.Windows.Media.Color>结构。 可以使用从预定义的颜色<xref:System.Windows.Media.Colors>类也可以创建<xref:System.Windows.Media.Color>使用静态<xref:System.Windows.Media.Color.FromArgb%2A>方法。  
   
      下面的示例演示如何设置<xref:System.Windows.Media.SolidColorBrush.Color%2A>属性的<xref:System.Windows.Media.SolidColorBrush>使用预定义的颜色。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "59148299"
   
  <xref:System.Windows.Media.GradientStop>是渐变画笔的基本构造块。  梯度停止点指定<xref:System.Windows.Media.GradientStop.Color%2A>在<xref:System.Windows.Media.GradientStop.Offset%2A>沿渐变轴。  
   
--   渐变停止点的<xref:System.Windows.Media.GradientStop.Color%2A>属性指定梯度停止点的颜色。 您可以通过使用预定义的颜色设置颜色 (由<xref:System.Windows.Media.Colors>类) 或通过指定 ScRGB 或 ARGB 值。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，还可以使用十六进制表示法描述一种颜色。 有关详细信息，请参阅<xref:System.Windows.Media.Color>结构。  
+- 渐变停止点的<xref:System.Windows.Media.GradientStop.Color%2A>属性指定梯度停止点的颜色。 您可以通过使用预定义的颜色设置颜色 (由<xref:System.Windows.Media.Colors>类) 或通过指定 ScRGB 或 ARGB 值。 在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，还可以使用十六进制表示法描述一种颜色。 有关详细信息，请参阅<xref:System.Windows.Media.Color>结构。  
   
--   渐变停止点的<xref:System.Windows.Media.GradientStop.Offset%2A>属性指定的位置的渐变停止点的颜色渐变轴上。 偏移量是<xref:System.Double>范围从 0 到 1。 梯度停止点的偏移值越接近 0，颜色就越接近渐变的起点。 梯度停止点的偏移值越接近 1，颜色就越接近渐变的终点。  
+- 渐变停止点的<xref:System.Windows.Media.GradientStop.Offset%2A>属性指定的位置的渐变停止点的颜色渐变轴上。 偏移量是<xref:System.Double>范围从 0 到 1。 梯度停止点的偏移值越接近 0，颜色就越接近渐变的起点。 梯度停止点的偏移值越接近 1，颜色就越接近渐变的终点。  
   
  梯度停止点之间每个点的颜色按两个边界梯度停止点指定的颜色组合执行线性内插。 下图突出显示了上一示例中的梯度停止点。 圆圈标记梯度停止点的位置，虚线显示渐变轴。  
   

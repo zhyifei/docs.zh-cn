@@ -3,11 +3,11 @@ title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051840"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
 
@@ -73,7 +73,7 @@ public class CalculatorService : ICalculator
 
 示例使用经过修改的无安全性的 `netNamedPipeBinding` 绑定。 绑定是在客户端和服务的配置文件中指定的。 服务的绑定类型是在终结点元素的 `binding` 属性中指定的，如下面的示例配置所示。
 
-如果您想使用安全的命名管道绑定，请将服务器的安全模式更改为所需的安全设置，并在客户端上重新运行 svcutil.exe 以获取更新的客户端配置文件。
+如果你想使用安全的命名管道绑定，请将服务器的安全模式更改为所需的安全设置，并在客户端上重新运行 svcutil.exe 以获取更新的客户端配置文件。
 
 ```xml
 <system.serviceModel>

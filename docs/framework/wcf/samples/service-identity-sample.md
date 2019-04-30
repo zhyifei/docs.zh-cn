@@ -6,8 +6,8 @@ ms.openlocfilehash: 72068002572ff82d2f166ffdd79e455cec7a2961
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051424"
 ---
 # <a name="service-identity-sample"></a>服务标识示例
 此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅中的示例[客户端](../../../../docs/framework/wcf/samples/client.md)演示服务器身份验证。
@@ -17,11 +17,11 @@ ms.locfileid: "59977855"
 
  此示例介绍以下功能：
 
--   如何在服务的不同终结点上设置不同类型的标识。 每种标识具有不同的功能。 要使用哪种标识取决于终结点绑定中使用的安全凭据的类型。
+- 如何在服务的不同终结点上设置不同类型的标识。 每种标识具有不同的功能。 要使用哪种标识取决于终结点绑定中使用的安全凭据的类型。
 
--   可以在配置中通过声明方式设置标识，也可以在代码中强制设置标识。 通常，对于客户端和服务，应使用配置来设置标识。
+- 可以在配置中通过声明方式设置标识，也可以在代码中强制设置标识。 通常，对于客户端和服务，应使用配置来设置标识。
 
--   如何在客户端设置自定义标识。 自定义标识通常是对现有标识类型的自定义，客户端可以通过它检查服务凭据中提供的其他声明信息，以便在调用服务之前做出身份验证决策。
+- 如何在客户端设置自定义标识。 自定义标识通常是对现有标识类型的自定义，客户端可以通过它检查服务凭据中提供的其他声明信息，以便在调用服务之前做出身份验证决策。
 
     > [!NOTE]
     >  此示例检查称为 identity.com 的特定证书的标识以及此证书中包含的 RSA 密钥。 在客户端上的配置中使用证书和 RSA 标识类型时，获取这些值的简便方法是检查在其中序列化这些值的服务的 WSDL。
@@ -154,7 +154,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
--   运行完示例后运行示例文件夹中的 Cleanup.bat。  
+- 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
     >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

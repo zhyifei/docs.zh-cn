@@ -22,21 +22,19 @@ helpviewer_keywords:
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054401"
 ---
 # <a name="integer-data-type-visual-basic"></a>整数数据类型 (Visual Basic)
 保存 32 位（4 字节）带符号整数，值的范围为 -2,147,483,648 到 2,147,483,647。  
   
 ## <a name="remarks"></a>备注
- 
-  `Integer` 数据类型为 32 位处理器提供了优化性能。 其他整数类型在内存中的加载和存储的速度都要稍慢一些。  
+ `Integer` 数据类型为 32 位处理器提供了优化性能。 其他整数类型在内存中的加载和存储的速度都要稍慢一些。  
   
- 
-  `Integer` 的默认值为 0。  
+ `Integer` 的默认值为 0。  
 
 ## <a name="literal-assignments"></a>文本分配
 
@@ -53,7 +51,7 @@ ms.locfileid: "56443018"
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 作为前缀和十六进制、 二进制或八进制数字之间的前导分隔符。 例如：
+从 Visual Basic 15.5 开始，还可以使用下划线字符 (`_`) 作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -69,14 +67,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>编程提示
 
--   **互操作注意事项。** 如果你不是为.NET Framework 中，如自动化或 COM 对象编写的组件与交互记住`Integer`在其他环境中具有不同的数据宽度 （16 位）。 如果将一个 16 位自变量传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Short` 而不是 `Integer`。  
+- **互操作注意事项。** 如果你不是为.NET Framework 中，如自动化或 COM 对象编写的组件与交互记住`Integer`在其他环境中具有不同的数据宽度 （16 位）。 如果将一个 16 位自变量传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Short` 而不是 `Integer`。  
   
--   **扩大转换。** 
-  `Integer` 数据类型加宽到 `Long`、`Decimal`、`Single` 或 `Double`。 这意味着，你可以将 `Integer` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。  
+- **扩大转换。** `Integer` 数据类型加宽到 `Long`、`Decimal`、`Single` 或 `Double`。 这意味着，你可以将 `Integer` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。  
   
--   **类型字符。** 将文本类型字符 `I` 追加到文本会将其强制转换为 `Integer` 数据类型。 将标识符类型字符 `%` 追加到任何标识符会将其强制转换为 `Integer`。  
+- **类型字符。** 将文本类型字符 `I` 追加到文本会将其强制转换为 `Integer` 数据类型。 将标识符类型字符 `%` 追加到任何标识符会将其强制转换为 `Integer`。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Int32?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Int32?displayProperty=nameWithType> 结构。  
   
 ## <a name="range"></a>范围
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032370"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>客户端 UI 自动化提供程序的实现
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224453"
   
  在客户端自己的代码中实现的提供程序通过使用 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>注册。 此方法将 <xref:System.Windows.Automation.ClientSideProviderDescription> 结构数组作为参数，每个结构均指定以下属性：  
   
--   创建提供程序对象的回调函数。  
+- 创建提供程序对象的回调函数。  
   
--   提供程序将提供的控件的类名。  
+- 提供程序将提供的控件的类名。  
   
--   提供程序将提供的应用程序（通常为可执行文件的完整名称）的映像名称。  
+- 提供程序将提供的应用程序（通常为可执行文件的完整名称）的映像名称。  
   
--   控制如何将类名与在目标应用程序中找到的窗口类进行匹配的标志。  
+- 控制如何将类名与在目标应用程序中找到的窗口类进行匹配的标志。  
   
  最后两个参数为可选。 当客户端需要为不同的应用程序使用不同的提供程序时，它可能会指定目标应用程序的映像名称。 例如，客户端可能会为支持“多视图”模式的已知应用程序中的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 列表视图控件使用一个提供程序，为不支持“多视图”模式的另一个已知应用程序中的类似控件使用另一个提供程序。  
   

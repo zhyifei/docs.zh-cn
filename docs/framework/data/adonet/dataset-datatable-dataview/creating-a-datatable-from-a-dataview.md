@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034393"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>从数据视图中创建数据表
 如果从数据源检索到数据，并且使用该数据填充了 <xref:System.Data.DataTable>，则在可能需要对返回的数据进行排序和筛选，或者通过其他方式限制返回的数据时，不必重新检索该数据。 <xref:System.Data.DataView> 类可以实现此目的。 此外，如果您需要创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>，可以使用<xref:System.Data.DataView.ToTable%2A>方法将所有行和列，或者数据的一个子集复制到一个新<xref:System.Data.DataTable>。 <xref:System.Data.DataView.ToTable%2A> 方法使您可以：  
   
--   创建一个 <xref:System.Data.DataTable>，包含属于 <xref:System.Data.DataView> 中的一个列子集。  
+- 创建一个 <xref:System.Data.DataTable>，包含属于 <xref:System.Data.DataView> 中的一个列子集。  
   
--   创建<xref:System.Data.DataTable>包括仅非重复行从<xref:System.Data.DataView>，与 TRANSACT-SQL 中的 DISTINCT 关键字类似。  
+- 创建<xref:System.Data.DataTable>包括仅非重复行从<xref:System.Data.DataView>，与 TRANSACT-SQL 中的 DISTINCT 关键字类似。  
   
 ## <a name="example"></a>示例  
  以下控制台应用程序示例创建<xref:System.Data.DataTable>，其中包含从数据**Person.Contact**表中**AdventureWorks**示例数据库。 接下来，该示例将创建一个经过排序和筛选<xref:System.Data.DataView>基于<xref:System.Data.DataTable>。 在显示的内容后<xref:System.Data.DataTable>并<xref:System.Data.DataView>，该示例创建一个新<xref:System.Data.DataTable>从<xref:System.Data.DataView>通过调用<xref:System.Data.DataView.ToTable%2A>方法中，选择可用列的子集。 最后，该示例显示新的 <xref:System.Data.DataTable> 的内容。  

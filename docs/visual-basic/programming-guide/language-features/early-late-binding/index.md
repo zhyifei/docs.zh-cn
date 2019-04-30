@@ -14,11 +14,11 @@ helpviewer_keywords:
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973220"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>早期绑定和后期绑定 (Visual Basic)
 Visual Basic 编译器会执行名为的进程`binding`对象分配给对象变量时。 如果对象被分配给声明为特定对象类型的变量，就是*早期绑定*对象。 借助早期绑定对象，编译器可以在应用程序执行前分配内存并执行其他优化。 例如，下面的代码片段将变量声明为类型 <xref:System.IO.FileStream>：  

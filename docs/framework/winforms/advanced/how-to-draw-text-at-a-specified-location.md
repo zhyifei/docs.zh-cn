@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004052"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>如何：在指定位置绘制文本
 在执行自定义绘图时，可以从指定位置开始的一个水平行中绘制文本。 可以通过使用这种方式绘制文本<xref:System.Drawing.Graphics.DrawString%2A>重载的方法<xref:System.Drawing.Graphics>采用类<xref:System.Drawing.Point>或<xref:System.Drawing.PointF>参数。 <xref:System.Drawing.Graphics.DrawString%2A>方法还需要<xref:System.Drawing.Brush>和 <xref:System.Drawing.Font>  
@@ -43,7 +43,7 @@ ms.locfileid: "59336403"
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例需要：  
   
--   <xref:System.Windows.Forms.PaintEventArgs>  `e`这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+- <xref:System.Windows.Forms.PaintEventArgs>  `e`这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050709"
 ---
 # <a name="transport-quotas"></a>传输配额
 传输配额是一种策略机制，用于决定连接何时正在占用过多资源。 配额是一种硬性限制，它在超出配额值时立即禁止使用其他资源。 传输配额可防止恶意或无意的拒绝服务攻击。  
@@ -19,11 +19,11 @@ ms.locfileid: "59773256"
 ## <a name="types-of-transport-quotas"></a>传输配额的类型  
  WCF 传输具有三种类型的配额：  
   
--   *超时*缓解的拒绝服务攻击的时间长时间占用资源。  
+- *超时*缓解的拒绝服务攻击的时间长时间占用资源。  
   
--   *内存分配限制*防止单个连接耗尽系统内存并拒绝对其他连接的服务。  
+- *内存分配限制*防止单个连接耗尽系统内存并拒绝对其他连接的服务。  
   
--   *集合大小限制*绑定间接分配内存或限量供应的资源的消耗。  
+- *集合大小限制*绑定间接分配内存或限量供应的资源的消耗。  
   
 ## <a name="transport-quota-descriptions"></a>传输配额说明  
  本部分介绍可用于标准的 WCF 传输的传输配额：HTTP (S)、 TCP/IP 和命名的管道。 自定义传输可以公开它们自己的、未包含在此列表中的可配置配额。 若要了解自定义传输的配额，请参考自定义传输的文档。  

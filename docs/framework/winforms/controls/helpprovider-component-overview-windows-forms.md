@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971218"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 组件概述（Windows 窗体）
 Windows 窗体[HelpProvider](helpprovider-component-windows-forms.md)组件用于将 HTML Help 1.x 帮助文件 （.chm 文件，使用 HTML Help Workshop 生成或.htm 文件） 与 Windows 应用程序相关联。 你可以提供多种方式帮助：  
   
--   为 Windows 窗体上控件提供上下文相关帮助。  
+- 为 Windows 窗体上控件提供上下文相关帮助。  
   
--   提供特定对话框或出现在对话框中的特定控件的上下文相关帮助。  
+- 提供特定对话框或出现在对话框中的特定控件的上下文相关帮助。  
   
--   打开帮助文件的特定区域，如表的内容、 索引或搜索功能的主页。  
+- 打开帮助文件的特定区域，如表的内容、 索引或搜索功能的主页。  
   
 ## <a name="using-the-help-provider"></a>使用帮助提供程序  
  添加<xref:System.Windows.Forms.HelpProvider>向 Windows 窗体组件允许要公开的帮助属性的窗体上的其他控件<xref:System.Windows.Forms.HelpProvider>组件。 这使您可以在 Windows 窗体上的控件提供帮助。 可以将帮助文件与相关联<xref:System.Windows.Forms.HelpProvider>组件使用<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性。 指定通过调用提供的帮助类型<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>提供的值和<xref:System.Windows.Forms.HelpNavigator>枚举为指定的控件。 你提供的关键字或主题的帮助通过调用<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>方法。  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009079"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 **Windows 窗体设计器**为你提供许多布局工具实现此目的。 三个最重要的是<xref:System.Windows.Forms.Control.Margin%2A>， <xref:System.Windows.Forms.Control.Padding%2A>，和<xref:System.Windows.Forms.Control.AutoSize%2A>是存在于所有 Windows 窗体控件上的属性。  
@@ -37,13 +37,13 @@ ms.locfileid: "59302460"
   
  本演练涉及以下任务：  
   
--   创建 Windows 窗体项目  
+- 创建 Windows 窗体项目  
   
--   边距设置为您的控件  
+- 边距设置为您的控件  
   
--   设置控件的填充  
+- 设置控件的填充  
   
--   自动调整控件大小  
+- 自动调整控件大小  
   
  完成上述操作后，你将会了解这些重要布局功能所发挥的作用。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59302460"
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
--   若要能够创建和安装 Visual Studio 的计算机上运行 Windows 窗体应用程序项目的足够权限。  
+- 若要能够创建和安装 Visual Studio 的计算机上运行 Windows 窗体应用程序项目的足够权限。  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
@@ -178,11 +178,11 @@ ms.locfileid: "59302460"
 ## <a name="next-steps"></a>后续步骤  
  有许多其他布局功能，用于在 Windows 窗体应用程序排列控件。 下面是可以尝试一些组合：  
   
--   生成窗体使用<xref:System.Windows.Forms.TableLayoutPanel>控件。 有关详细信息，请参阅[演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。 请尝试更改的值<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.Control.Padding%2A>属性，并将<xref:System.Windows.Forms.Control.Margin%2A>上子控件的属性。  
+- 生成窗体使用<xref:System.Windows.Forms.TableLayoutPanel>控件。 有关详细信息，请参阅[演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。 请尝试更改的值<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.Control.Padding%2A>属性，并将<xref:System.Windows.Forms.Control.Margin%2A>上子控件的属性。  
   
--   请尝试相同的试验使用<xref:System.Windows.Forms.FlowLayoutPanel>控件。 有关详细信息，请参阅[演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
+- 请尝试相同的试验使用<xref:System.Windows.Forms.FlowLayoutPanel>控件。 有关详细信息，请参阅[演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
--   通过停靠子控件中的实验<xref:System.Windows.Forms.Panel>控件。 <xref:System.Windows.Forms.Control.Padding%2A>属性是的更多常规实现<xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>属性，并且可以使自己这种情况，通过将子控件放入<xref:System.Windows.Forms.Panel>控件和设置子控件的<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill>. 设置<xref:System.Windows.Forms.Panel>控件的<xref:System.Windows.Forms.Control.Padding%2A>到各种值并记下影响的属性。  
+- 通过停靠子控件中的实验<xref:System.Windows.Forms.Panel>控件。 <xref:System.Windows.Forms.Control.Padding%2A>属性是的更多常规实现<xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>属性，并且可以使自己这种情况，通过将子控件放入<xref:System.Windows.Forms.Panel>控件和设置子控件的<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill>. 设置<xref:System.Windows.Forms.Panel>控件的<xref:System.Windows.Forms.Control.Padding%2A>到各种值并记下影响的属性。  
   
 ## <a name="see-also"></a>请参阅
 

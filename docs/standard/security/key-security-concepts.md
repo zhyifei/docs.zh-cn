@@ -14,11 +14,11 @@ ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018614"
 ---
 # <a name="key-security-concepts"></a>安全性的基础概念
 Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移动代码的安全性问题，并提供支持，使组件可以决定用户有权执行的操作。  
@@ -35,11 +35,11 @@ Microsoft .NET Framework 提供基于角色的安全性，帮助解决有关移�
 ## <a name="principal"></a>主体  
  主体表示用户的标识和角色，并代表用户进行操作。 .NET Framework 中基于角色的安全性支持三种主体：  
   
--   泛型主体表示独立于 Windows 用户和角色存在的用户和角色。  
+- 泛型主体表示独立于 Windows 用户和角色存在的用户和角色。  
   
--   Windows 主体表示 Windows 用户及其角色（或其 Windows 组）。 Windows 主体可以模拟其他用户，这意味着当代表属于一个用户的标识时，主体可代表该用户访问资源。  
+- Windows 主体表示 Windows 用户及其角色（或其 Windows 组）。 Windows 主体可以模拟其他用户，这意味着当代表属于一个用户的标识时，主体可代表该用户访问资源。  
   
--   应用程序可以用任何所需的方式自定义主体。 它们可以扩展该主体的标识和角色的基本概念。  
+- 应用程序可以用任何所需的方式自定义主体。 它们可以扩展该主体的标识和角色的基本概念。  
   
  有关详细信息，请参阅[主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)。  
   

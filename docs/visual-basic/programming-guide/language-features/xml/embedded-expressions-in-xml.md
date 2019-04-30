@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961221"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中的嵌入式表达式 (Visual Basic)
 嵌入的表达式，可以创建包含在运行时计算的表达式的 XML 文本。 嵌入式表达式的语法是`<%=` `expression` `%>`，这是相同的语法中使用[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]。  
@@ -42,27 +42,27 @@ ms.locfileid: "58827570"
 |XML 元素特性|<xref:System.Xml.Linq.XAttribute> 或一系列 <xref:System.Xml.Linq.XAttribute>|忽略|  
 |XML 文档根元素|<xref:System.Xml.Linq.XElement> 或其中一个集合<xref:System.Xml.Linq.XElement>对象和任意数量<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>对象|忽略|  
   
--   XML 元素名称中嵌入表达式的示例：  
+- XML 元素名称中嵌入表达式的示例：  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   XML 元素的内容中嵌入表达式的示例：  
+- XML 元素的内容中嵌入表达式的示例：  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   XML 元素属性名称中嵌入表达式的示例：  
+- XML 元素属性名称中嵌入表达式的示例：  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   嵌入表达式的 XML 元素特性值中的示例：  
+- 嵌入表达式的 XML 元素特性值中的示例：  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   XML 元素特性中嵌入表达式的示例：  
+- XML 元素特性中嵌入表达式的示例：  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   XML 文档的根元素中的嵌入式表达式的示例：  
+- XML 文档的根元素中的嵌入式表达式的示例：  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

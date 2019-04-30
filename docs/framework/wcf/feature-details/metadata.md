@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039073"
 ---
 # <a name="metadata"></a>元数据
 Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索和导入服务元数据的基础结构。 WCF 服务使用元数据来描述如何与服务的终结点交互，以便诸如 Svcutil.exe 之类的工具，可以自动生成用于访问服务的客户端代码。  

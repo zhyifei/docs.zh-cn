@@ -3,11 +3,11 @@ title: 修改 XML 树 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
 ms.openlocfilehash: 4673902880822e6e4ed0bc144aedc2428faa5b69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031793"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>修改 XML 树 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一个 XML 树在内存中的存储区。 在从源中加载或分析 XML 树之后，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许就地修改该树，然后序列化该树，可以将它保存到文件中或发送到远程服务器。  

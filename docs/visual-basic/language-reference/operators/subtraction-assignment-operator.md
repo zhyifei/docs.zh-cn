@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
 ms.openlocfilehash: be1ff4f10f6b30d8448d2441ee3ad2c1e2f80e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013486"
 ---
 # <a name="--operator-visual-basic"></a>-= 运算符 (Visual Basic)
 减去表达式的值的变量或属性的值，并将结果赋给变量或属性。  

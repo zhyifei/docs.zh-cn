@@ -5,11 +5,11 @@ helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
 ms.openlocfilehash: e295d492c8c2e5cbd69f295e83f44b63c74ca553
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013564"
 ---
 # <a name="operators-visual-basic"></a>运算符 (Visual Basic)
 ## <a name="in-this-section"></a>本节内容
@@ -20,7 +20,7 @@ ms.locfileid: "49452516"
   
  [运算符结果的数据类型](data-types-of-operator-results.md)  
   
- [DirectCast 运算符](directcast-operator.md)  
+ [DirectCast operator](directcast-operator.md)  
   
  [TryCast 运算符](trycast-operator.md)  
   

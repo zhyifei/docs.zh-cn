@@ -8,20 +8,20 @@ ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949274"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 跟踪 ETW 事件
 <a name="top"></a> 这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。  
   
  JIT 跟踪事件包含以下两个类别：  
   
--   [JIT 内联事件](#jit_inlining_events)  
+- [JIT 内联事件](#jit_inlining_events)  
   
--   [JIT 尾调用事件](#jit_tail_call_events)  
+- [JIT 尾调用事件](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>JIT 内联事件  

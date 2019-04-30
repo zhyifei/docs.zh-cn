@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
 ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039125"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>如何：使用代码发布服务的元数据
 这是一个讨论 Windows Communication Foundation (WCF) 服务的发布元数据的两个操作指南主题。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用代码发布服务的元数据。  

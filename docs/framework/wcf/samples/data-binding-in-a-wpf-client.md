@@ -6,8 +6,8 @@ ms.openlocfilehash: 1bc6dd2ef981115068cbd4cd491a14fea70d7e3a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990595"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 客户端中的数据绑定
 本示例演示 Windows Presentation Foundation (WPF) 客户端中数据绑定的用法。 此示例使用随机生成一个数组的唱片集以返回到客户端的 Windows Communication Foundation (WCF) 服务。 每个唱片集都有名称、价格和唱片集曲目列表。 唱片集曲目具有名称和持续时间。 服务返回的信息自动绑定到 Windows Presentation Foundation (WPF) 客户端提供的用户界面 (UI) 中。  

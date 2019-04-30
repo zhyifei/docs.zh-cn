@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992506"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
 获取当前作用域中的程序集和其元数据的估计二进制大小。  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in]值为[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)枚举，用于指定是否要获取的准确或近似大小。 只有三个值都有效： cssAccurate，cssQuick，和 cssDiscardTransientCAs:  
   
--   cssAccurate 返回确切的存储大小，但花费的时间来计算。  
+- cssAccurate 返回确切的存储大小，但花费的时间来计算。  
   
--   cssQuick 返回大小，为安全起见，填充，但需要更少的时间来计算。  
+- cssQuick 返回大小，为安全起见，填充，但需要更少的时间来计算。  
   
--   cssDiscardTransientCAs 告知`GetSaveSize`，它可以丢弃可放弃的自定义属性。  
+- cssDiscardTransientCAs 告知`GetSaveSize`，它可以丢弃可放弃的自定义属性。  
   
  `pdwSaveSize`  
  [out]一个指向保存该文件所需的大小。  

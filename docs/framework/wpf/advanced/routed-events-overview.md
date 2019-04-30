@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982344"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
@@ -86,11 +86,11 @@ ms.locfileid: "59330438"
 ## <a name="routing-strategies"></a>路由策略  
  路由事件使用以下三种路由策略之一：  
   
--   **浮升：** 调用事件源的事件处理程序。 路由事件随后会路由到后续的父级元素，直到到达元素树的根。 大多数路由事件都使用浮升路由策略。 浮升路由事件通常用于报告来自不同控件或其他 UI 元素的输入或状态变化。  
+- **浮升：** 调用事件源的事件处理程序。 路由事件随后会路由到后续的父级元素，直到到达元素树的根。 大多数路由事件都使用浮升路由策略。 浮升路由事件通常用于报告来自不同控件或其他 UI 元素的输入或状态变化。  
   
--   **直接：** 仅源元素本身才有机会调用处理程序来响应。 这与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 用于事件的“路由”相似。 但是，与标准不同[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件支持类处理 （下一节中介绍类处理） 和可由<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
+- **直接：** 仅源元素本身才有机会调用处理程序来响应。 这与 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 用于事件的“路由”相似。 但是，与标准不同[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件支持类处理 （下一节中介绍类处理） 和可由<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
   
--   **隧道：** 最初，调用元素树的根处的事件处理程序。 随后，路由事件将朝着路由事件的源节点元素（即引发路由事件的元素）方向，沿路由线路传播到后续的子元素。 合成控件的过程中通常会使用或处理隧道路由事件，通过这种方式，可以有意地禁止复合部件中的事件，或者将其替换为特定于整个控件的事件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的输入事件通常是以隧道/浮升对实现的。 隧道事件有时又称作预览事件，这是由该对所使用的命名约定决定的。  
+- **隧道：** 最初，调用元素树的根处的事件处理程序。 随后，路由事件将朝着路由事件的源节点元素（即引发路由事件的元素）方向，沿路由线路传播到后续的子元素。 合成控件的过程中通常会使用或处理隧道路由事件，通过这种方式，可以有意地禁止复合部件中的事件，或者将其替换为特定于整个控件的事件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的输入事件通常是以隧道/浮升对实现的。 隧道事件有时又称作预览事件，这是由该对所使用的命名约定决定的。  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>为什么使用路由事件？  
@@ -104,9 +104,9 @@ ms.locfileid: "59330438"
   
  之所以将任何给定的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件作为路由事件实现（而不是作为标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件实现），除了路由方面的原因，还有两个其他原因。 如果要实现自己的事件，则可能也需要考虑这些原则：  
   
--   某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]样式和模板化功能，如<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>需要被引用的事件是路由的事件。 前面提到的事件标识符方案就是这样的。  
+- 某些[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]样式和模板化功能，如<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>需要被引用的事件是路由的事件。 前面提到的事件标识符方案就是这样的。  
   
--   路由事件支持类处理机制，类可以通过该机制来指定静态方法，这些静态方法能够在任何已注册的实例处理程序访问路由事件之前，处理这些路由事件。 这在控件设计中非常有用，因为类可以强制执行事件驱动的类行为，以防它们在处理实例上的事件时被意外禁止。  
+- 路由事件支持类处理机制，类可以通过该机制来指定静态方法，这些静态方法能够在任何已注册的实例处理程序访问路由事件之前，处理这些路由事件。 这在控件设计中非常有用，因为类可以强制执行事件驱动的类行为，以防它们在处理实例上的事件时被意外禁止。  
   
  本主题将用单独的章节来讨论上述每个因素。  
   
@@ -147,21 +147,21 @@ ms.locfileid: "59330438"
   
  但是，没有"handledEventsToo"机制，侦听器仍可运行处理程序响应路由事件在其中<xref:System.Windows.RoutedEventArgs.Handled%2A>是`true`事件数据中。 换言之，将事件数据标记为“已处理”并不会真的停止事件路由。 在代码中，或在只能使用 handledEventsToo 机制<xref:System.Windows.EventSetter>:  
   
--   在代码中，而不是使用常规的工作方式的特定于语言的事件语法[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，调用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]方法<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>来添加处理程序。 请将 `handledEventsToo` 的值指定为 `true`。  
+- 在代码中，而不是使用常规的工作方式的特定于语言的事件语法[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，调用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]方法<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>来添加处理程序。 请将 `handledEventsToo` 的值指定为 `true`。  
   
--   在中<xref:System.Windows.EventSetter>，将<xref:System.Windows.EventSetter.HandledEventsToo%2A>属性不存在`true`。  
+- 在中<xref:System.Windows.EventSetter>，将<xref:System.Windows.EventSetter.HandledEventsToo%2A>属性不存在`true`。  
   
  除了行为的<xref:System.Windows.RoutedEventArgs.Handled%2A>路由事件，这一概念在生成状态<xref:System.Windows.RoutedEventArgs.Handled%2A>牵涉到将应用程序设计和编写事件处理程序代码的方式。 从概念上讲<xref:System.Windows.RoutedEventArgs.Handled%2A>作为路由事件公开的简单协议。 具体使用此协议负责，但如何进行概念设计的值<xref:System.Windows.RoutedEventArgs.Handled%2A>应使用如下所示：  
   
--   如果路由事件标记为“已处理”，则它不必由该路由中的其他元素再次处理。  
+- 如果路由事件标记为“已处理”，则它不必由该路由中的其他元素再次处理。  
   
--   如果路由的事件未标记为已处理，则路由中前面的其他侦听器已选择不进行注册处理程序或已注册的选择不操作事件数据和设置的处理程序<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`。 （或者，当前侦听器很可能是路由中的第一个点。）当前侦听器上的处理程序现在有三个可能的操作过程：  
+- 如果路由的事件未标记为已处理，则路由中前面的其他侦听器已选择不进行注册处理程序或已注册的选择不操作事件数据和设置的处理程序<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`。 （或者，当前侦听器很可能是路由中的第一个点。）当前侦听器上的处理程序现在有三个可能的操作过程：  
   
-    -   不执行任何操作；该事件保持未处理状态，该事件将路由到下一个侦听器。  
+    - 不执行任何操作；该事件保持未处理状态，该事件将路由到下一个侦听器。  
   
-    -   执行代码以响应该事件，但是所执行的操作被视为不足以保证将事件标记为“已处理”。 该事件将路由到下一个侦听器。  
+    - 执行代码以响应该事件，但是所执行的操作被视为不足以保证将事件标记为“已处理”。 该事件将路由到下一个侦听器。  
   
-    -   执行代码以响应该事件。 在传递到处理程序的事件数据中将该事件标记为“已处理”，因为所执行的操作被视为不足以保证将该事件标记为“已处理”。 该事件仍将路由到下一个侦听器，但<xref:System.Windows.RoutedEventArgs.Handled%2A> = `true`在其事件数据，因此，只有`handledEventsToo`侦听器都有机会进一步调用处理程序。  
+    - 执行代码以响应该事件。 在传递到处理程序的事件数据中将该事件标记为“已处理”，因为所执行的操作被视为不足以保证将该事件标记为“已处理”。 该事件仍将路由到下一个侦听器，但<xref:System.Windows.RoutedEventArgs.Handled%2A> = `true`在其事件数据，因此，只有`handledEventsToo`侦听器都有机会进一步调用处理程序。  
   
  此概念设计通过前面所述的路由行为得到增强： 会更加困难 （尽管仍可以在代码或样式） 来调用即使路由前面的处理程序已设置路由事件附加处理程序<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`。  
   

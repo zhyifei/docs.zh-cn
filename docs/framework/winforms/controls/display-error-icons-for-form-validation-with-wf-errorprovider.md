@@ -12,11 +12,11 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
 ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972180"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标
 可以使用 Windows 窗体<xref:System.Windows.Forms.ErrorProvider>组件，用户输入无效数据时显示错误图标。 您必须具有至少两个选项卡上，它们之间并由此调用验证代码以窗体控件。  

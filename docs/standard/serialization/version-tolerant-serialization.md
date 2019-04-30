@@ -14,18 +14,18 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028247"
 ---
 # <a name="version-tolerant-serialization"></a>版本容错序列化
 在 .NET Framework 1.0 和 1.1 版本中，创建可从应用程序的一个版本重用至下一个版本的可序列化类型时会产生问题。 如果通过添加额外字段来修改类型，则会出现以下问题：  
   
--   要求应用程序的较旧版本反序列化旧类型的新版本时，会引发异常。  
+- 要求应用程序的较旧版本反序列化旧类型的新版本时，会引发异常。  
   
--   应用程序的较新版本反序列化缺少数据的类型的较旧版本时，会引发异常。  
+- 应用程序的较新版本反序列化缺少数据的类型的较旧版本时，会引发异常。  
   
  版本容错序列化 (VTS) 是 .NET Framework 2.0 中引入的一组功能，它使得修改可序列化类型随着时间推移而变得更加容易。 VTS 功能尤其是为应用了 <xref:System.SerializableAttribute> 特性的类（包括泛型类型）而启用的。 VTS 允许向这些类添加新字段，而不破坏与该类型其他版本的兼容性。 有关可用的示例应用程序，请参阅[版本容错序列化技术示例](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md)。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "54584683"
 ## <a name="feature-list"></a>功能列表  
  功能集包括：  
   
--   外来或意外数据容错功能。 该功能允许类型的较新版本将数据发送至较旧版本。  
+- 外来或意外数据容错功能。 该功能允许类型的较新版本将数据发送至较旧版本。  
   
--   缺少可选数据容错功能。 该功能允许较旧版本将数据发送至较新版本。  
+- 缺少可选数据容错功能。 该功能允许较旧版本将数据发送至较新版本。  
   
--   序列化回调。 该功能在缺少数据的情况下启用智能默认值设置。  
+- 序列化回调。 该功能在缺少数据的情况下启用智能默认值设置。  
   
  此外，添加了新的可选字段时还有声明功能。 这是 <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> 特性的 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 属性。  
   
@@ -262,23 +262,23 @@ End Class
 ## <a name="best-practices"></a>最佳实践  
  要确保版本管理行为正确，修改类型版本时请遵循以下规则：  
   
--   切勿移除已序列化的字段。  
+- 切勿移除已序列化的字段。  
   
--   如果未在以前版本中将 <xref:System.NonSerializedAttribute> 特性应用于某个字段，则切勿将该特性应用于该字段。  
+- 如果未在以前版本中将 <xref:System.NonSerializedAttribute> 特性应用于某个字段，则切勿将该特性应用于该字段。  
   
--   切勿更改已序列化字段的名称或类型。  
+- 切勿更改已序列化字段的名称或类型。  
   
--   添加新的已序列化字段时，请应用 OptionalFieldAttribute 特性。  
+- 添加新的已序列化字段时，请应用 OptionalFieldAttribute 特性。  
   
--   从字段（在以前版本中不可序列化）中移除 NonSerializedAttribute 特性时，请应用 OptionalFieldAttribute 特性。  
+- 从字段（在以前版本中不可序列化）中移除 NonSerializedAttribute 特性时，请应用 OptionalFieldAttribute 特性。  
   
--   对于所有可选字段，除非可接受 0 或 null 作为默认值，否则请使用序列化回调设置有意义的默认值。  
+- 对于所有可选字段，除非可接受 0 或 null 作为默认值，否则请使用序列化回调设置有意义的默认值。  
   
  要确保类型与将来的序列化引擎兼容，请遵循以下准则：  
   
--   始终正确设置 OptionalFieldAttribute 特性上的 VersionAdded 属性。  
+- 始终正确设置 OptionalFieldAttribute 特性上的 VersionAdded 属性。  
   
--   避免版本管理分支。  
+- 避免版本管理分支。  
   
 ## <a name="see-also"></a>请参阅
 

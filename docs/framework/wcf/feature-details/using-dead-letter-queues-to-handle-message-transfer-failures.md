@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050696"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用死信队列处理消息传输故障
 排队消息可能传送失败。 这些失败的消息将记录在死信队列中。 传送失败可能是由于网络故障、队列已删除、队列已满、身份验证失败或未能准时传送等原因而引起的。  
@@ -30,18 +30,18 @@ ms.locfileid: "59174611"
   
  该绑定具有下列死信队列属性：  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>从死信队列中读取消息  
  从死信队列中读取消息的应用程序将类似于 WCF 服务，用于读取来自应用程序队列，但存在下列细微差异除外：  
   
--   若要从系统的事务性死信队列中读取消息，统一资源标识符 (URI) 必须为以下形式：net.msmq://localhost/system$;DeadXact。  
+- 若要从系统的事务性死信队列中读取消息，统一资源标识符 (URI) 必须为以下形式：net.msmq://localhost/system$;DeadXact。  
   
--   若要从系统的非事务性死信队列中读取消息，URI 必须为以下形式：net.msmq://localhost/system$;DeadLetter。  
+- 若要从系统的非事务性死信队列中读取消息，URI 必须为以下形式：net.msmq://localhost/system$;DeadLetter。  
   
--   若要从自定义死信队列读取消息，URI 必须为形式： net.msmq: //localhost/private/<\<*自定义 dlq 名称*> 位置*自定义 dlq 名称*是自定义名称死信队列。  
+- 若要从自定义死信队列读取消息，URI 必须为形式： net.msmq: //localhost/private/<\<*自定义 dlq 名称*> 位置*自定义 dlq 名称*是自定义名称死信队列。  
   
  有关如何对地址队列的详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
 ms.openlocfilehash: 3ebfcaaf22ca632e5784dc1f01a351583e78e865
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011497"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据输入
 `DataGridView`控件提供了多项功能，可用于更改用户添加或修改控件中的数据的方式。 例如，您可以使数据输入效率更高通过新行提供默认值，并且发生错误时通知用户。  

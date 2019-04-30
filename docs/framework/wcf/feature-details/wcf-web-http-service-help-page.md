@@ -3,11 +3,11 @@ title: WCF Web HTTP 服务帮助页
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
 ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050399"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 当用户浏览到 WCF WEB HTTP 服务和附加"/help"的 URL，例如末尾`http://localhost:8000/Customers/Help`，如显示以下信息帮助页。  

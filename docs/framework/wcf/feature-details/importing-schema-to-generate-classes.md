@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972661"
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从使用 Windows Communication Foundation (WCF) 可用架构生成类，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>类。 本主题描述该过程和变体。  
@@ -148,13 +148,13 @@ ms.locfileid: "59228583"
   
 ##### <a name="design-considerations"></a>设计注意事项  
   
--   直接使用弱类型 XML 表示形式可能有些困难。 可以考虑使用其他序列化引擎（例如 <xref:System.Xml.Serialization.XmlSerializer>），以便以强类型方式使用与数据协定不兼容的架构。 有关详细信息，请参阅[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+- 直接使用弱类型 XML 表示形式可能有些困难。 可以考虑使用其他序列化引擎（例如 <xref:System.Xml.Serialization.XmlSerializer>），以便以强类型方式使用与数据协定不兼容的架构。 有关详细信息，请参阅[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
--   某些架构构造不能通过 <xref:System.Runtime.Serialization.XsdDataContractImporter> 事件导入，即使是 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 属性设置为 `true`。 此外，在此情况下可以考虑使用 <xref:System.Xml.Serialization.XmlSerializer>。  
+- 某些架构构造不能通过 <xref:System.Runtime.Serialization.XsdDataContractImporter> 事件导入，即使是 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 属性设置为 `true`。 此外，在此情况下可以考虑使用 <xref:System.Xml.Serialization.XmlSerializer>。  
   
--   是的确切架构构造支持时<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>是`true`或`false`中所述[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+- 是的确切架构构造支持时<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>是`true`或`false`中所述[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
--   生成的 <xref:System.Xml.Serialization.IXmlSerializable> 类型的架构在导入和导出时不保留保真。 也就是说，从生成的类型导出架构或作为类导入时不返回原始架构。  
+- 生成的 <xref:System.Xml.Serialization.IXmlSerializable> 类型的架构在导入和导出时不保留保真。 也就是说，从生成的类型导出架构或作为类导入时不返回原始架构。  
   
  可以结合使用 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 选项和上述 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 选项。 对于那些必须作为 <xref:System.Xml.Serialization.IXmlSerializable> 实现生成的类型，使用 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 功能时将跳过结构检查。  
   
@@ -175,9 +175,9 @@ ms.locfileid: "59228583"
 #### <a name="import-options-advanced-options"></a>导入选项：高级选项  
  下面介绍高级导入选项：  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 属性。 指定用于为生成的类生成代码的 <xref:System.CodeDom.Compiler.CodeDomProvider>。 导入机制尝试避免不受 <xref:System.CodeDom.Compiler.CodeDomProvider> 支持的功能。 如果未设置 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，则可以无限制地使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 功能全集。  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 属性。 指定用于为生成的类生成代码的 <xref:System.CodeDom.Compiler.CodeDomProvider>。 导入机制尝试避免不受 <xref:System.CodeDom.Compiler.CodeDomProvider> 支持的功能。 如果未设置 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，则可以无限制地使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 功能全集。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
+- <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
 ## <a name="see-also"></a>请参阅
 

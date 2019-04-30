@@ -3,11 +3,11 @@ title: 访问 OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005597"
 ---
 # <a name="accessing-operationcontext"></a>访问 OperationContext
 此示例演示如何将消息传递活动 (<xref:System.ServiceModel.Activities.Receive>并<xref:System.ServiceModel.Activities.Send>) 可以与自定义范围活动一起使用来访问<xref:System.ServiceModel.OperationContext.Current%2A>并附加或检索传出或传入消息中的自定义消息头。  
@@ -28,13 +28,13 @@ ms.locfileid: "59772877"
   
 2. 在添加 URL ACL 后，请使用下列步骤。  
   
-    1.  生成解决方案。  
+    1. 生成解决方案。  
   
-    2.  右键单击解决方案并选择设置多个启动项目**设置启动项目**。  
+    2. 右键单击解决方案并选择设置多个启动项目**设置启动项目**。  
   
-    3.  添加**服务**并**客户端**（按此顺序） 为多个启动项目。  
+    3. 添加**服务**并**客户端**（按此顺序） 为多个启动项目。  
   
-    4.  运行该应用程序。 客户端控制台显示运行两次的工作流，而服务窗口显示这些工作流的实例 ID。  
+    4. 运行该应用程序。 客户端控制台显示运行两次的工作流，而服务窗口显示这些工作流的实例 ID。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

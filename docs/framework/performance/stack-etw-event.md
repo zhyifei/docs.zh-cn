@@ -8,11 +8,11 @@ ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949144"
 ---
 # <a name="stack-etw-event"></a>堆栈 ETW 事件
 堆栈事件应与其他事件结合使用，在引发事件后生成堆栈跟踪。 启用运行时提供程序时，记录该事件。 这是一个发生频率非常高的事件，因为每当引发另一个运行时事件时，都将引发此事件。 因此，我们建议谨慎使用此事件。  

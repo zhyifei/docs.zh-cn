@@ -3,11 +3,11 @@ title: 自定义操作：概述
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
 ms.openlocfilehash: 29fb75271b7bc324d462078e94e4a28534986fba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038076"
 ---
 # <a name="customizing-operations-overview"></a>自定义操作：概述
 默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会根据映射生成动态 SQL 来执行插入、更新和删除操作。 但在实践中，您通常需要添加您自己的业务逻辑来提供安全、验证等。  

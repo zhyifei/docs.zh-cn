@@ -3,11 +3,11 @@ title: 开始使用F#在 Visual Studio Code
 description: 了解如何使用F#使用 Visual Studio Code 和 Ionide 插件套件。
 ms.date: 12/23/2018
 ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949536"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>开始使用F#在 Visual Studio Code
 

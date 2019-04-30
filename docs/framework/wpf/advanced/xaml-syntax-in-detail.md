@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981365"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义的术语，用于描述的 XAML 语法的元素。 这些条款通常使用，本文档中，同时用于 WPF 文档的其余部分专门以及其他使用 XAML 或通过 XAML 语言支持在 System.Xaml 级别启用的基本 XAML 概念的框架。 本主题进一步在本主题中引入的基本术语[XAML 概述 (WPF)](xaml-overview-wpf.md)。  
@@ -58,9 +58,9 @@ ms.locfileid: "59298885"
 ## <a name="object-element-syntax"></a>对象元素语法  
  *对象元素语法*是实例的 CLR 类或结构化通过声明的 XML 元素的 XAML 标记语法。 此语法类似于其他标记语言，如 HTML 元素语法。 对象元素语法开头左尖括号 (\<)，然后立即由类或结构被实例化的类型名称。 类型名称，后面可以有零个或多个空格和零个或多个属性还可以声明的对象元素上使用一个或多个空格来分隔每个特性名称 ="值"对。 最后，必须是以下值之一，则返回 true:  
   
--   必须由正斜杠 （/） 后紧跟右尖括号 (>) 关闭的元素和标记。  
+- 必须由正斜杠 （/） 后紧跟右尖括号 (>) 关闭的元素和标记。  
   
--   必须是右尖括号 (>) 完成的开始标记。 其他对象元素、 属性元素或内部文本，可以按照开始标记。 完全可能此处包含哪些内容通常受对象模型的元素。 关闭对象元素标记的等效项也必须位于正确的嵌套，并与其他开始和结束标记对之间实现平衡。  
+- 必须是右尖括号 (>) 完成的开始标记。 其他对象元素、 属性元素或内部文本，可以按照开始标记。 完全可能此处包含哪些内容通常受对象模型的元素。 关闭对象元素标记的等效项也必须位于正确的嵌套，并与其他开始和结束标记对之间实现平衡。  
   
  由.NET 实现的 XAML 具有一组规则可将对象元素映射到类型，为属性或事件和 XAML 命名空间到 CLR 命名空间和程序集的属性。 对于 WPF 和.NET Framework 中，XAML 对象元素将映射到[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中定义的类型引用的程序集，它的属性映射到这些类型的成员。 在引用 XAML 中的 CLR 类型时，你有权访问该类型的继承成员。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59298885"
 ## <a name="collection-syntax"></a>集合语法  
  XAML 规范要求 XAML 处理器实现来标识的属性的值类型的集合。 在.NET 中的常规 XAML 处理器实现取决于托管的代码和 CLR，并标识集合类型通过以下项之一：  
   
--   类型实现<xref:System.Collections.IList>。  
+- 类型实现<xref:System.Collections.IList>。  
   
--   类型实现<xref:System.Collections.IDictionary>。  
+- 类型实现<xref:System.Collections.IDictionary>。  
   
--   派生自类型<xref:System.Array>(有关在 XAML 中数组的详细信息，请参阅[X:array 标记扩展](../../xaml-services/x-array-markup-extension.md)。)  
+- 派生自类型<xref:System.Array>(有关在 XAML 中数组的详细信息，请参阅[X:array 标记扩展](../../xaml-services/x-array-markup-extension.md)。)  
   
  如果属性的类型是一个集合，然后不需要为对象元素标记中指定推断的集合类型。 相反，旨在成为集合中的项的元素被指定为一个或多个属性元素的子元素。 每个此类项在加载期间计算为一个对象，然后通过调用添加到集合`Add`隐式集合的方法。 例如，<xref:System.Windows.Style.Triggers%2A>的属性<xref:System.Windows.Style>采用专用的集合类型<xref:System.Windows.TriggerCollection>，它可以实现<xref:System.Collections.IList>。 不需要实例化<xref:System.Windows.TriggerCollection>标记中的对象元素。 相反，您可以指定一个或多个<xref:System.Windows.Trigger>项中的元素作为`Style.Triggers`属性元素中，其中<xref:System.Windows.Trigger>（或派生的类） 是应作为项类型的强类型化和隐式类型<xref:System.Windows.TriggerCollection>。  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59298885"
   
  附加的属性使用语法看起来类似于属性元素语法中，您还指定*typeName*。*propertyName*组合。 有两个重要的差异：  
   
--   可以使用*typeName*。*propertyName*甚至设置附加的属性通过特性语法时的组合。 附加的属性是唯一的用例，其中，符合条件的属性名称是在特性语法要求。  
+- 可以使用*typeName*。*propertyName*甚至设置附加的属性通过特性语法时的组合。 附加的属性是唯一的用例，其中，符合条件的属性名称是在特性语法要求。  
   
--   此外可以附加属性使用属性元素语法。 但是，对于典型的属性元素语法*typeName*指定为包含属性的元素的对象元素。 如果您引用的附加属性，则*typeName*是定义附加的属性不包含的对象元素的类。  
+- 此外可以附加属性使用属性元素语法。 但是，对于典型的属性元素语法*typeName*指定为包含属性的元素的对象元素。 如果您引用的附加属性，则*typeName*是定义附加的属性不包含的对象元素的类。  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>附加事件  

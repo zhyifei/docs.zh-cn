@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050592"
 ---
 # <a name="delegates-visual-basic"></a>委托 (Visual Basic)
 
@@ -64,7 +64,7 @@ ms.locfileid: "57674024"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明|
 |-----------|-----------------|
 |[如何：调用委托方法](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|通过示例展示了如何将方法与委托相关联，然后通过委托调用相应的方法。|
 |[如何：将过程传递给 Visual Basic 中的另一个过程](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|介绍了如何使用委托将一个过程传递给另一个过程。|

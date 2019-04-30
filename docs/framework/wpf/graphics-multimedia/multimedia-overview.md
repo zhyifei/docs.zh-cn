@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030365"
 ---
 # <a name="multimedia-overview"></a>多媒体概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的多媒体功能能够使音频和视频集成到应用程序，增强用户体验。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的多媒体功能。  
@@ -37,11 +37,11 @@ ms.locfileid: "59340485"
 ### <a name="independent-mode"></a>独立模式  
  在独立模式下，媒体内容驱动媒体播放。 独立模式可实现下列选项：  
   
--   媒体的<xref:System.Uri>可以直接指定。  
+- 媒体的<xref:System.Uri>可以直接指定。  
   
--   可以直接控制媒体播放。  
+- 可以直接控制媒体播放。  
   
--   媒体的<xref:System.Windows.Controls.MediaElement.Position%2A>和<xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>可以修改属性。  
+- 媒体的<xref:System.Windows.Controls.MediaElement.Position%2A>和<xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>可以修改属性。  
   
  通过这两个设置加载媒体<xref:System.Windows.Controls.MediaElement>对象的<xref:System.Windows.Controls.MediaElement.Source%2A>属性或通过调用<xref:System.Windows.Media.MediaPlayer>对象的<xref:System.Windows.Media.MediaPlayer.Open%2A>方法。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "59340485"
 ### <a name="clock-mode"></a>时钟模式  
  在时钟模式下，<xref:System.Windows.Media.MediaTimeline>驱动器媒体的播放。 时钟模式具有以下特征：  
   
--   媒体的<xref:System.Uri>间接设置通过<xref:System.Windows.Media.MediaTimeline>。  
+- 媒体的<xref:System.Uri>间接设置通过<xref:System.Windows.Media.MediaTimeline>。  
   
--   可由时钟控制媒体播放。 不可使用媒体对象的控制方法。  
+- 可由时钟控制媒体播放。 不可使用媒体对象的控制方法。  
   
--   通过设置加载介质<xref:System.Windows.Media.MediaTimeline>对象的<xref:System.Windows.Media.MediaTimeline.Source%2A>属性，从时间线创建时钟并将时钟分配至媒体对象。 这种方法还加载媒体时<xref:System.Windows.Media.MediaTimeline>内<xref:System.Windows.Media.Animation.Storyboard>目标<xref:System.Windows.Controls.MediaElement>。  
+- 通过设置加载介质<xref:System.Windows.Media.MediaTimeline>对象的<xref:System.Windows.Media.MediaTimeline.Source%2A>属性，从时间线创建时钟并将时钟分配至媒体对象。 这种方法还加载媒体时<xref:System.Windows.Media.MediaTimeline>内<xref:System.Windows.Media.Animation.Storyboard>目标<xref:System.Windows.Controls.MediaElement>。  
   
  在时钟模式下控制媒体播放<xref:System.Windows.Media.Animation.ClockController>必须使用控制方法。 一个<xref:System.Windows.Media.Animation.ClockController>取自<xref:System.Windows.Media.Animation.ClockController>属性的<xref:System.Windows.Media.MediaClock>。 如果尝试使用的控制方法<xref:System.Windows.Controls.MediaElement>或<xref:System.Windows.Media.MediaPlayer>对象在时钟模式下，<xref:System.InvalidOperationException>将引发。  
   

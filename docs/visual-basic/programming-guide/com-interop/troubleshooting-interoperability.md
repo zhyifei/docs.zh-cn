@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022293"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
 当 COM 和托管的代码之间互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，可能会遇到一个或多个以下常见的问题。  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX 控件问题  
  使用 Visual Basic 6.0 的大多数 ActiveX 控件与 Visual Basic.NET 配合使用不费力。 主要的例外是容器控件中或直观地包含其他控件的控件。 将无法正常使用 Visual Studio 的较旧控件的一些示例如下所示：  
   
--   Microsoft Forms 2.0 框架控件  
+- Microsoft Forms 2.0 框架控件  
   
--   Up-down 控件，也称为数值调节钮控件  
+- Up-down 控件，也称为数值调节钮控件  
   
--   Sheridan 选项卡控件  
+- Sheridan 选项卡控件  
   
  有仅几个解决方法不受支持 ActiveX 控件问题。 如果您拥有原始源代码，可以将现有控件迁移到 Visual Studio。 否则，可以检查与软件供应商的更新。NET 兼容版本的控件来替换不受支持的 ActiveX 控件。  
   

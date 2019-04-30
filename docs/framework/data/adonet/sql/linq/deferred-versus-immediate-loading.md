@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032456"
 ---
 # <a name="deferred-versus-immediate-loading"></a>推迟加载与即时加载
 查询某对象时，实际上您只检索请求的对象。 *相关*不会自动获取对象在同一时间。 (有关详细信息，请参阅[跨关系查询](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)您无法看到相关对象尚未加载这一事实，原因是尝试访问它们时将产生检索它们的请求。  
@@ -29,9 +29,9 @@ ms.locfileid: "59096987"
   
  您真正需要的是同时检索相关对象的集合的方法。 此集合是关系图的精确剖面，因此您检索到的数据绝不会比您所需要的数据多或少。 为此，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了 <xref:System.Data.Linq.DataLoadOptions>，用以立即加载对象模型的某一区域。 方法包括：  
   
--   <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 方法，用于立即加载与主目标相关的数据。  
+- <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 方法，用于立即加载与主目标相关的数据。  
   
--   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 方法，用于筛选为特定关系检索到的对象。  
+- <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 方法，用于筛选为特定关系检索到的对象。  
   
 ## <a name="see-also"></a>请参阅
 

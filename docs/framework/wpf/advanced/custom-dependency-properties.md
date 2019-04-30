@@ -15,11 +15,11 @@ helpviewer_keywords:
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
 ms.openlocfilehash: 12843c74a7519d29e869be0342b18a1137f2dc5a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054245"
 ---
 # <a name="custom-dependency-properties"></a>自定义依赖项属性
 
@@ -47,21 +47,21 @@ ms.locfileid: "57372212"
 
 上一个类，实现属性，只要类派生自<xref:System.Windows.DependencyObject>，可以选择支持与属性<xref:System.Windows.DependencyProperty>标识符，因此若要使其依赖项属性。 不必总是将属性实现为依赖属性，这不一定合适，具体取决于方案需要。 有时，使用私有字段支持属性的通常方法已足够满足需求。 但是，如果要使属性支持以下一个或多个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，则应该将属性实现为依赖属性：
 
--   需要可以在样式中设置属性。 有关详细信息，请参阅[样式设置和模板化](../controls/styling-and-templating.md)。
+- 需要可以在样式中设置属性。 有关详细信息，请参阅[样式设置和模板化](../controls/styling-and-templating.md)。
 
--   需要属性支持数据绑定。 有关数据绑定依赖属性的详细信息，请参阅[绑定两个控件的属性](../data/how-to-bind-the-properties-of-two-controls.md)。
+- 需要属性支持数据绑定。 有关数据绑定依赖属性的详细信息，请参阅[绑定两个控件的属性](../data/how-to-bind-the-properties-of-two-controls.md)。
 
--   需要可以使用动态资源引用设置属性。 有关详细信息，请参阅 [XAML 资源](xaml-resources.md)。
+- 需要可以使用动态资源引用设置属性。 有关详细信息，请参阅 [XAML 资源](xaml-resources.md)。
 
--   需要从元素树中的父元素自动继承属性值。 在这种情况下，注册<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法，即使您还创建了属性包装器的[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]访问。 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
+- 需要从元素树中的父元素自动继承属性值。 在这种情况下，注册<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法，即使您还创建了属性包装器的[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]访问。 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
 
--   需要属性可以进行动画处理。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。
+- 需要属性可以进行动画处理。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。
 
--   需要属性系统在先前的值因属性系统、环境或用户执行的操作而发生更改，或者因读取和使用样式而发生更改时进行报告。 通过使用属性元素据，属性可以指定回调方法，每次属性系统确定属性值已明确改动时将调用此回调方法。 与此相关的一个概念是属性值强制转换。 有关详细信息，请参阅[依赖属性回调和验证](dependency-property-callbacks-and-validation.md)。
+- 需要属性系统在先前的值因属性系统、环境或用户执行的操作而发生更改，或者因读取和使用样式而发生更改时进行报告。 通过使用属性元素据，属性可以指定回调方法，每次属性系统确定属性值已明确改动时将调用此回调方法。 与此相关的一个概念是属性值强制转换。 有关详细信息，请参阅[依赖属性回调和验证](dependency-property-callbacks-and-validation.md)。
 
--   需要使用同时也被 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 进程使用的已建立的元数据约定，例如报告更改属性值是否应需要布局系统重新安排元素的可视内容。 或者需要能够使用元素据替代，以便派生类可以更改基于元数据的特性，例如默认值。
+- 需要使用同时也被 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 进程使用的已建立的元数据约定，例如报告更改属性值是否应需要布局系统重新安排元素的可视内容。 或者需要能够使用元素据替代，以便派生类可以更改基于元数据的特性，例如默认值。
 
--   你想接收 Visual Studio WPF 设计器的自定义控件的属性支持，如**属性**窗口编辑。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
+- 你想接收 Visual Studio WPF 设计器的自定义控件的属性支持，如**属性**窗口编辑。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
 
 检查这些方案时，还应考虑是否可以通过替代现有依赖属性的元素据而不是通过实现一个全新的属性来实现方案。 元素据替代是否可行取决于方案以及方案与现有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 依赖属性和类中的实现的相似度。 有关替代现有属性上的元素据的详细信息，请参阅[依赖属性元素据](dependency-property-metadata.md)。
 
@@ -70,13 +70,13 @@ ms.locfileid: "57372212"
 
 定义依赖属性包含 4 个不同的概念。 这些概念并不一定是严格的过程步骤，因为其中一些概念在实现中会被合并为一行代码：
 
--   （可选）创建依赖属性的属性元素据。
+- （可选）创建依赖属性的属性元素据。
 
--   在属性系统中注册属性名称，并指定所有者类型和属性值类型。 此外，还应指定属性元素据（如果用到）。
+- 在属性系统中注册属性名称，并指定所有者类型和属性值类型。 此外，还应指定属性元素据（如果用到）。
 
--   定义<xref:System.Windows.DependencyProperty>标识符作为`public` `static` `readonly`字段上的所有者类型。
+- 定义<xref:System.Windows.DependencyProperty>标识符作为`public` `static` `readonly`字段上的所有者类型。
 
--   定义一个 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”属性，并且其名称与依赖属性名称相匹配。 实现 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”属性的 `get` 和 `set` 访问器，以连接支持此属性的依赖属性。
+- 定义一个 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”属性，并且其名称与依赖属性名称相匹配。 实现 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]“包装器”属性的 `get` 和 `set` 访问器，以连接支持此属性的依赖属性。
 
 <a name="registering"></a>
 ### <a name="registering-the-property-with-the-property-system"></a>在属性系统中注册属性
@@ -112,11 +112,11 @@ ms.locfileid: "57372212"
 
 同样，按照约定，包装器属性的名称必须是选择并指定为第一个参数的名称相同<xref:System.Windows.DependencyProperty.Register%2A>注册属性的调用。 如果属性不遵从此约定，尽管不一定会禁用所有可能的用法，但你会遇到几个比较突出的问题：
 
--   样式和模板的某些方面不起作用。
+- 样式和模板的某些方面不起作用。
 
--   大多数工具和设计器必须依赖命名约定，才能正确序列化 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 或在每个属性级别提供设计器环境帮助。
+- 大多数工具和设计器必须依赖命名约定，才能正确序列化 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 或在每个属性级别提供设计器环境帮助。
 
--   处理特性值时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 加载程序的会完全跳过包装器，并依赖于命名约定。 有关详细信息，请参阅 [XAML 加载和依赖属性](xaml-loading-and-dependency-properties.md)。
+- 处理特性值时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 加载程序的会完全跳过包装器，并依赖于命名约定。 有关详细信息，请参阅 [XAML 加载和依赖属性](xaml-loading-and-dependency-properties.md)。
 
 <a name="metadata"></a>
 ### <a name="property-metadata-for-a-new-dependency-property"></a>新依赖属性的属性元数据
@@ -129,25 +129,25 @@ ms.locfileid: "57372212"
 
 #### <a name="setting-appropriate-metadata-flags"></a>设置合适的元数据标记
 
--   如果属性 （或值的更改） 将影响[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，并特别是影响布局系统的大小或呈现的页上，将元素的方式将设置一个或多个下列标志： <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>。
+- 如果属性 （或值的更改） 将影响[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，并特别是影响布局系统的大小或呈现的页上，将元素的方式将设置一个或多个下列标志： <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>， <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 指示对此属性的更改需要更改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈现其中包含的对象可能需要增加或减少空间父级范围内的。 例如，“宽度”属性应该设置此标记。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 指示对此属性的更改需要更改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈现其中包含的对象可能需要增加或减少空间父级范围内的。 例如，“宽度”属性应该设置此标记。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 指示对此属性的更改需要更改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈现，通常不需要更改在专用空间中，但不指明该空间内的位置已更改。 例如，“对齐”属性应该设置此标记。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 指示对此属性的更改需要更改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]呈现，通常不需要更改在专用空间中，但不指明该空间内的位置已更改。 例如，“对齐”属性应该设置此标记。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 指示发生的一些其他更改不会影响布局和度量值，但需要其他的呈现。 更改现有元素的颜色的属性便是一个示例，例如“背景”。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 指示发生的一些其他更改不会影响布局和度量值，但需要其他的呈现。 更改现有元素的颜色的属性便是一个示例，例如“背景”。
 
-    -   对属性系统或布局回调进行自己的替代实现时，这些标记通常用作元数据中的协议。 例如，您可能有<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>将调用的回调<xref:System.Windows.UIElement.InvalidateArrange%2A>如果实例的任何属性报告值发生了更改，并具有<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>作为`true`其元数据中。
+    - 对属性系统或布局回调进行自己的替代实现时，这些标记通常用作元数据中的协议。 例如，您可能有<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>将调用的回调<xref:System.Windows.UIElement.InvalidateArrange%2A>如果实例的任何属性报告值发生了更改，并具有<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>作为`true`其元数据中。
 
--   超出上述所需大小时，某些属性可能会影响所含父元素的呈现特征。 例如，<xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A>对该属性的更改可以在其中更改包含段落的流文档的整个呈现流文档模型中使用的属性。 使用<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange>或<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure>来标识您自己的属性中相似的情况。
+- 超出上述所需大小时，某些属性可能会影响所含父元素的呈现特征。 例如，<xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A>对该属性的更改可以在其中更改包含段落的流文档的整个呈现流文档模型中使用的属性。 使用<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange>或<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure>来标识您自己的属性中相似的情况。
 
--   默认情况下，依赖属性支持数据绑定。 在无实际的数据绑定方案或大型对象的数据绑定性能构成问题的情况下，可有意禁用数据绑定。
+- 默认情况下，依赖属性支持数据绑定。 在无实际的数据绑定方案或大型对象的数据绑定性能构成问题的情况下，可有意禁用数据绑定。
 
--   默认情况下，数据绑定<xref:System.Windows.Data.Binding.Mode%2A>的依赖项属性值默认为<xref:System.Windows.Data.BindingMode.OneWay>。 您始终可以更改绑定要<xref:System.Windows.Data.BindingMode.TwoWay>每个绑定实例; 有关详细信息，请参阅[指定绑定的方向](../data/how-to-specify-the-direction-of-the-binding.md)。 作为依赖属性的作者，你可以选择要使用的属性，但<xref:System.Windows.Data.BindingMode.TwoWay>默认情况下的绑定模式。 现有依赖属性的一个示例是<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; 此属性的方案是<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>设置逻辑和的合成<xref:System.Windows.Controls.MenuItem>与默认主题样式交互。 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>属性逻辑在以本机方式使用数据绑定来根据其他状态属性和方法调用保持的属性的状态。 绑定的另一个示例属性<xref:System.Windows.Data.BindingMode.TwoWay>默认情况下是<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>。
+- 默认情况下，数据绑定<xref:System.Windows.Data.Binding.Mode%2A>的依赖项属性值默认为<xref:System.Windows.Data.BindingMode.OneWay>。 您始终可以更改绑定要<xref:System.Windows.Data.BindingMode.TwoWay>每个绑定实例; 有关详细信息，请参阅[指定绑定的方向](../data/how-to-specify-the-direction-of-the-binding.md)。 作为依赖属性的作者，你可以选择要使用的属性，但<xref:System.Windows.Data.BindingMode.TwoWay>默认情况下的绑定模式。 现有依赖属性的一个示例是<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; 此属性的方案是<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>设置逻辑和的合成<xref:System.Windows.Controls.MenuItem>与默认主题样式交互。 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>属性逻辑在以本机方式使用数据绑定来根据其他状态属性和方法调用保持的属性的状态。 绑定的另一个示例属性<xref:System.Windows.Data.BindingMode.TwoWay>默认情况下是<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>。
 
--   此外可以通过设置启用属性继承自定义依赖属性中的<xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits>标志。 在父元素和子元素具有相同属性的情况中，属性继承非常有用，它可以使子元素将该特定属性值设置为与父元素设置的值相同。 示例可继承的属性是<xref:System.Windows.FrameworkElement.DataContext%2A>，这用于绑定操作，启用数据演示的重要母版-详细信息方案。 通过使<xref:System.Windows.FrameworkElement.DataContext%2A>可继承的任何子元素继承该数据上下文还。 因为使用了属性值继承，你可以在页面或应用程序根目录上指定数据上下文，而无需对所有可能子元素中的绑定重新指定上下文。 <xref:System.Windows.FrameworkElement.DataContext%2A> 也是一个很好的示例来演示继承覆盖默认值，但它可以始终在本地上设置的任何特定的子元素;有关详细信息，请参阅[对分层数据使用主-从模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。 属性值继承确实可能存在性能成本，因此应谨慎使用；有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
+- 此外可以通过设置启用属性继承自定义依赖属性中的<xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits>标志。 在父元素和子元素具有相同属性的情况中，属性继承非常有用，它可以使子元素将该特定属性值设置为与父元素设置的值相同。 示例可继承的属性是<xref:System.Windows.FrameworkElement.DataContext%2A>，这用于绑定操作，启用数据演示的重要母版-详细信息方案。 通过使<xref:System.Windows.FrameworkElement.DataContext%2A>可继承的任何子元素继承该数据上下文还。 因为使用了属性值继承，你可以在页面或应用程序根目录上指定数据上下文，而无需对所有可能子元素中的绑定重新指定上下文。 <xref:System.Windows.FrameworkElement.DataContext%2A> 也是一个很好的示例来演示继承覆盖默认值，但它可以始终在本地上设置的任何特定的子元素;有关详细信息，请参阅[对分层数据使用主-从模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。 属性值继承确实可能存在性能成本，因此应谨慎使用；有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
 
--   设置<xref:System.Windows.FrameworkPropertyMetadataOptions.Journal>标志，用于指示是否应检测到或者使用导航日志服务的依赖项属性。 例如，<xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>属性; 在所选内容中选择任何项时导航日志历史记录应保留控件。
+- 设置<xref:System.Windows.FrameworkPropertyMetadataOptions.Journal>标志，用于指示是否应检测到或者使用导航日志服务的依赖项属性。 例如，<xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>属性; 在所选内容中选择任何项时导航日志历史记录应保留控件。
 
 <a name="RODP"></a>
 ## <a name="read-only-dependency-properties"></a>只读依赖项属性

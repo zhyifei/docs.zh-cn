@@ -3,11 +3,11 @@ title: Web 服务协议互操作性指南
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050345"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
 Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题提供了一系列 WCF 实现的 Web 服务协议。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  
@@ -76,29 +76,29 @@ Windows Communication Foundation (WCF) 实现多个 Web 服务协议。 这些�
   
  <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter> 和 <xref:System.ServiceModel.Description.MetadataResolver> 类支持以下元数据规范：  
   
--   [XML 架构第 1 部分：结构第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
+- [XML 架构第 1 部分：结构第二版](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML 架构第 2 部分：数据类型第二版](https://go.microsoft.com/fwlink/?LinkId=40138)  
+- [XML 架构第 2 部分：数据类型第二版](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
+- [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+- [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+- [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+- [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+- [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [Ws-transfer Get 进行元数据检索](https://go.microsoft.com/fwlink/?LinkId=96708)  
+- [Ws-transfer Get 进行元数据检索](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  此外，跨 WCF 实现以下互操作性配置文件：  
   
--   [基本配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+- [基本配置文件 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [简单 SOAP 绑定 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
+- [简单 SOAP 绑定 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [基本安全配置文件 1.0 工作草案](https://go.microsoft.com/fwlink/?LinkId=96711)  
+- [基本安全配置文件 1.0 工作草案](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>请参阅
 

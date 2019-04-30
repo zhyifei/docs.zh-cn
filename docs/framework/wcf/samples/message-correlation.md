@@ -3,11 +3,11 @@ title: 消息相关性
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989763"
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
@@ -275,15 +275,15 @@ static void DisplayOrderStatus()
 
 2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
 
-    1.  在 Visual Studio 2012 中打开服务器管理器。
+    1. 在 Visual Studio 2012 中打开服务器管理器。
 
-    2.  展开**功能**选项卡。
+    2. 展开**功能**选项卡。
 
-    3.  右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
+    3. 右键单击**私有消息队列**，然后选择**新建**，**专用队列**。
 
-    4.  检查**事务性**框。
+    4. 检查**事务性**框。
 
-    5.  输入`ServiceModelSamplesTransacted`作为新队列的名称。
+    5. 输入`ServiceModelSamplesTransacted`作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。
 

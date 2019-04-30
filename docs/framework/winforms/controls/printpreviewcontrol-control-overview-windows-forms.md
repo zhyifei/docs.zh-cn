@@ -8,11 +8,11 @@ helpviewer_keywords:
 - PrintPreviewControl control
 ms.assetid: 4513c6c7-5e9b-4f4c-82ca-00f993a26955
 ms.openlocfilehash: e9f1c2ae912b6beeba70c318b94a3052e2f99acb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012590"
 ---
 # <a name="printpreviewcontrol-control-overview-windows-forms"></a>PrintPreviewControl 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.PrintPreviewControl>用来显示[PrintDocument](printdocument-component-windows-forms.md)打印时将显示。 此控件具有没有按钮或其他用户界面元素，因此通常仅在你想要编写自己的打印预览用户界面时才使用 <xref:System.Windows.Forms.PrintPreviewControl>。 如果您希望的标准用户界面，使用<xref:System.Windows.Forms.PrintPreviewDialog>控制; 请参阅[PrintPreviewDialog 控件概述](printpreviewdialog-control-overview-windows-forms.md)概述。  

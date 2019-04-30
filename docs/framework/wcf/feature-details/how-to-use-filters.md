@@ -3,22 +3,22 @@ title: 如何：使用筛选器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972856"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
   
--   添加  
+- 添加  
   
--   减  
+- 减  
   
--   相乘  
+- 相乘  
   
--   除  
+- 除  
   
  鉴于这两个服务实现相同的运算，您无法使用 Action 筛选器，这是因为在消息中指定的操作将并非唯一。 您必须执行其他工作来确保将消息路由到适当的终结点。  
   
@@ -137,10 +137,10 @@ ms.locfileid: "59295518"
     > [!NOTE]
     >  PrefixEndpointAddress 筛选器在执行匹配时不会计算主机名，因为可以使用多种主机名形式引用单个主机，而所有这些主机名可能都是从客户端应用程序引用主机的有效方式。 例如，下面的所有主机名可能引用同一主机：  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. 最后一个筛选器必须支持路由到达常规终结点但没有自定义标头的消息。 对于此种情况，消息应在 regularCalc 和 roundingCalc 服务之间交替。 若要支持这些消息的"轮循机制"路由，使用一个允许一个筛选器实例要与匹配的处理每条消息的自定义筛选器。  下面定义了 RoundRobinMessageFilter 的两个实例，这两个实例组合在一起以指示它们应彼此交替。  
   

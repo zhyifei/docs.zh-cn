@@ -3,11 +3,11 @@ title: LINQ to SQL 中的安全性
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036993"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL 中的安全性
 连接到数据库时始终都存在安全风险。 尽管 LINQ to SQL 可能包括一些使用 SQL Server 中的数据的新方法，但它并没有提供任何附加安全机制。  
@@ -25,13 +25,13 @@ ms.locfileid: "59078139"
   
  如果缺少集成安全性，则连接字符串中将需要明文密码。 帮助保护连接字符串的最佳方法如下（按风险升序排列）：  
   
--   使用集成安全性。  
+- 使用集成安全性。  
   
--   通过密码保护连接字符串并尽可能减少连接字符串的传递。  
+- 通过密码保护连接字符串并尽可能减少连接字符串的传递。  
   
--   使用 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 类来替代连接字符串，因为它可以限制公开的持续时间。 可使用 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> 来实例化 LINQ to SQL <xref:System.Data.SqlClient.SqlConnection> 类。  
+- 使用 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 类来替代连接字符串，因为它可以限制公开的持续时间。 可使用 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> 来实例化 LINQ to SQL <xref:System.Data.SqlClient.SqlConnection> 类。  
   
--   最大程度地减少所有连接字符串的生存期和接触点。  
+- 最大程度地减少所有连接字符串的生存期和接触点。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010678"
 ---
 # <a name="binding-markup-extension"></a>绑定标记扩展
 延迟输入属性值，将数据绑定值，创建一个中间表达式对象，并解释适用于的元素，并在运行时与其绑定的数据上下文。  
@@ -54,55 +54,55 @@ ms.locfileid: "59170308"
   
  这些属性值的几个需要的对象类型，不支持 XAML 中的文本语法中的本机类型转换，因此需标记扩展设置作为属性值。 检查每个属性以获取详细信息;.NET Framework 类库中的 XAML 属性用法部分有关使用 XAML 特性语法使用字符串或而无需进一步的标记扩展用法基本上是在中指定的值相同`Binding`表达式，与您未放置引号将每个异常`bindProp` =`value`在`Binding`表达式。  
   
--   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>： 一个字符串，标识可能的绑定组。 这是一个相对高级的绑定的概念;请参阅参考页面的<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>。  
+- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>： 一个字符串，标识可能的绑定组。 这是一个相对高级的绑定的概念;请参阅参考页面的<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>。  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>： 可设置为`bindProp` = `value`在表达式中，但若要执行此操作的字符串值，需要对象引用，如[StaticResource 标记扩展](staticresource-markup-extension.md)。 在这种情况下，值是自定义转换器类的实例。  
+- <xref:System.Windows.Data.Binding.Converter%2A>： 可设置为`bindProp` = `value`在表达式中，但若要执行此操作的字符串值，需要对象引用，如[StaticResource 标记扩展](staticresource-markup-extension.md)。 在这种情况下，值是自定义转换器类的实例。  
   
--   <xref:System.Windows.Data.Binding.ConverterCulture%2A>： 可设置为基于标准的标识符; 表达式中请参阅参考主题<xref:System.Windows.Data.Binding.ConverterCulture%2A>。  
+- <xref:System.Windows.Data.Binding.ConverterCulture%2A>： 可设置为基于标准的标识符; 表达式中请参阅参考主题<xref:System.Windows.Data.Binding.ConverterCulture%2A>。  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>： 可设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的参数的类型。 如果传递引用类型的值，这种用法需要对象引用，如嵌套[StaticResource 标记扩展](staticresource-markup-extension.md)。  
+- <xref:System.Windows.Data.Binding.ConverterParameter%2A>： 可设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的参数的类型。 如果传递引用类型的值，这种用法需要对象引用，如嵌套[StaticResource 标记扩展](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>： 与互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每个绑定属性表示的这些特定的绑定方法。 请参阅[数据绑定概述](../data/data-binding-overview.md)。  
+- <xref:System.Windows.Data.Binding.ElementName%2A>： 与互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每个绑定属性表示的这些特定的绑定方法。 请参阅[数据绑定概述](../data/data-binding-overview.md)。  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>： 可设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的值的类型。 如果传递引用类型，需要对象引用，如嵌套[StaticResource 标记扩展](staticresource-markup-extension.md)。  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>： 可设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的值的类型。 如果传递引用类型，需要对象引用，如嵌套[StaticResource 标记扩展](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+- <xref:System.Windows.Data.Binding.IsAsync%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
--   <xref:System.Windows.Data.Binding.Mode%2A>:*值*是中的常量名<xref:System.Windows.Data.BindingMode>枚举。 例如 `{Binding Mode=OneWay}`。  
+- <xref:System.Windows.Data.Binding.Mode%2A>:*值*是中的常量名<xref:System.Windows.Data.BindingMode>枚举。 例如 `{Binding Mode=OneWay}`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
--   <xref:System.Windows.Data.Binding.Path%2A>： 为数据对象或常规对象模型中描述的路径的字符串。 格式为遍历不能进行详细介绍本主题中的对象模型提供多个不同的约定。 请参阅[PropertyPath XAML 语法](propertypath-xaml-syntax.md)。  
+- <xref:System.Windows.Data.Binding.Path%2A>： 为数据对象或常规对象模型中描述的路径的字符串。 格式为遍历不能进行详细介绍本主题中的对象模型提供多个不同的约定。 请参阅[PropertyPath XAML 语法](propertypath-xaml-syntax.md)。  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>： 与互斥<xref:System.Windows.Data.Binding.ElementName%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每个绑定属性表示的这些特定的绑定方法。 请参阅[数据绑定概述](../data/data-binding-overview.md)。 需要一个嵌套[RelativeSource 标记扩展](relativesource-markupextension.md)使用情况，以指定的值。  
+- <xref:System.Windows.Data.Binding.RelativeSource%2A>： 与互斥<xref:System.Windows.Data.Binding.ElementName%2A>和<xref:System.Windows.Data.Binding.Source%2A>; 每个绑定属性表示的这些特定的绑定方法。 请参阅[数据绑定概述](../data/data-binding-overview.md)。 需要一个嵌套[RelativeSource 标记扩展](relativesource-markupextension.md)使用情况，以指定的值。  
   
--   <xref:System.Windows.Data.Binding.Source%2A>： 与互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.ElementName%2A>; 每个绑定属性表示的这些特定的绑定方法。 请参阅[数据绑定概述](../data/data-binding-overview.md)。 需要嵌套的扩展用法，通常[StaticResource 标记扩展](staticresource-markup-extension.md)到对象数据源引用键控的资源字典中。  
+- <xref:System.Windows.Data.Binding.Source%2A>： 与互斥<xref:System.Windows.Data.Binding.RelativeSource%2A>和<xref:System.Windows.Data.Binding.ElementName%2A>; 每个绑定属性表示的这些特定的绑定方法。 请参阅[数据绑定概述](../data/data-binding-overview.md)。 需要嵌套的扩展用法，通常[StaticResource 标记扩展](staticresource-markup-extension.md)到对象数据源引用键控的资源字典中。  
   
--   <xref:System.Windows.Data.BindingBase.StringFormat%2A>： 一个字符串，描述绑定的数据的字符串格式约定。 这是一个相对高级的绑定的概念;请参阅参考页面的<xref:System.Windows.Data.BindingBase.StringFormat%2A>。  
+- <xref:System.Windows.Data.BindingBase.StringFormat%2A>： 一个字符串，描述绑定的数据的字符串格式约定。 这是一个相对高级的绑定的概念;请参阅参考页面的<xref:System.Windows.Data.BindingBase.StringFormat%2A>。  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>： 可设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的参数的类型。 如果传递引用类型的值需要对象引用，如嵌套[StaticResource 标记扩展](staticresource-markup-extension.md)。  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>： 可设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的参数的类型。 如果传递引用类型的值需要对象引用，如嵌套[StaticResource 标记扩展](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是中的常量名<xref:System.Windows.Data.UpdateSourceTrigger>枚举。 例如 `{Binding UpdateSourceTrigger=LostFocus}`。 特定控件可能具有不同的默认值为此绑定属性。 请参阅 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是中的常量名<xref:System.Windows.Data.UpdateSourceTrigger>枚举。 例如 `{Binding UpdateSourceTrigger=LostFocus}`。 特定控件可能具有不同的默认值为此绑定属性。 请参阅 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
+- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
+- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>： 描述到 XML 数据源的 XMLDOM 的路径的字符串。 请参阅[绑定到 XML 数据使用 XMLDataProvider 和 XPath 查询](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+- <xref:System.Windows.Data.Binding.XPath%2A>： 描述到 XML 数据源的 XMLDOM 的路径的字符串。 请参阅[绑定到 XML 数据使用 XMLDataProvider 和 XPath 查询](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
  以下是属性的<xref:System.Windows.Data.Binding>不能使用设置的`Binding`标记扩展 /`{Binding}`表达式形式。  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>： 此属性需要对回调实现的引用。 不能在 XAML 语法引用回调/事件处理程序之外的方法。  
+- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>： 此属性需要对回调实现的引用。 不能在 XAML 语法引用回调/事件处理程序之外的方法。  
   
--   <xref:System.Windows.Data.Binding.ValidationRules%2A>： 该属性会采用的泛型集合<xref:System.Windows.Controls.ValidationRule>对象。 这可能表示为属性元素中<xref:System.Windows.Data.Binding>对象元素，但具有中的使用情况没有现成的特性分析技术`Binding`表达式。 请参阅参考主题<xref:System.Windows.Data.Binding.ValidationRules%2A>。  
+- <xref:System.Windows.Data.Binding.ValidationRules%2A>： 该属性会采用的泛型集合<xref:System.Windows.Controls.ValidationRule>对象。 这可能表示为属性元素中<xref:System.Windows.Data.Binding>对象元素，但具有中的使用情况没有现成的特性分析技术`Binding`表达式。 请参阅参考主题<xref:System.Windows.Data.Binding.ValidationRules%2A>。  
   
--   <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
+- <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
   
 ## <a name="remarks"></a>备注  
   

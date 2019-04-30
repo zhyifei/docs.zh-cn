@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026414"
 ---
 # <a name="extension-methods"></a>扩展方法
 扩展方法是一种语言特性，允许使用实例方法调用语法来调用静态方法。 这些方法必须至少使用一个参数，该参数表示方法要操作的实例。  
@@ -22,9 +22,9 @@ ms.locfileid: "54621755"
   
  **✓ 考虑**在以下任何一种情况下使用扩展方法：  
   
--   提供与接口的每个实现相关的辅助功能（如果上述功能可以根据核心接口编写）。 这是因为不能将具体实现分配给接口。 例如，`LINQ to Objects` 运算符作为所有 <xref:System.Collections.Generic.IEnumerable%601> 类型的扩展方法被实现。 因此，任何 `IEnumerable<>` 实现都会自动启用LINQ。  
+- 提供与接口的每个实现相关的辅助功能（如果上述功能可以根据核心接口编写）。 这是因为不能将具体实现分配给接口。 例如，`LINQ to Objects` 运算符作为所有 <xref:System.Collections.Generic.IEnumerable%601> 类型的扩展方法被实现。 因此，任何 `IEnumerable<>` 实现都会自动启用LINQ。  
   
--   当实例方法在某种类型上引入依赖关系，但这样的依赖关系会破坏依赖关系管理规则的时候。 例如，从 <xref:System.String> 到 <xref:System.Uri?displayProperty=nameWithType> 的依赖关系可能是不可取的，因此返回 `System.Uri` 的 `String.ToUri()` 实例方法从依赖关系管理的角度来看可能存在设计错误。 返回 `System.Uri` 的静态扩展方法 `Uri.ToUri(this string str)` 可能是更好的设计。  
+- 当实例方法在某种类型上引入依赖关系，但这样的依赖关系会破坏依赖关系管理规则的时候。 例如，从 <xref:System.String> 到 <xref:System.Uri?displayProperty=nameWithType> 的依赖关系可能是不可取的，因此返回 `System.Uri` 的 `String.ToUri()` 实例方法从依赖关系管理的角度来看可能存在设计错误。 返回 `System.Uri` 的静态扩展方法 `Uri.ToUri(this string str)` 可能是更好的设计。  
   
  **X 避免**在 <xref:System.Object?displayProperty=nameWithType> 上定义扩展方法。  
   

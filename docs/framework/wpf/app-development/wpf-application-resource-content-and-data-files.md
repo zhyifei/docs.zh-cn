@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032248"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 应用程序通常依赖包含不可执行的数据，如文件[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，图像、 视频和音频。 Windows Presentation Foundation (WPF) 提供了配置、 确定，并使用这些类型的数据文件，称为应用程序数据文件的特殊支持。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  
   
--   **资源文件**:数据文件编译为可执行文件或库的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。  
+- **资源文件**:数据文件编译为可执行文件或库的[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。  
   
--   **内容文件**:与可执行文件的显式关联的独立数据文件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。  
+- **内容文件**:与可执行文件的显式关联的独立数据文件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。  
   
--   **源站点文件**:没有与可执行文件关联的独立数据文件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。  
+- **源站点文件**:没有与可执行文件关联的独立数据文件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集。  
   
  这三种类型的文件之间的一个重要区别是：资源文件和内容文件在生成时即为程序集所知；程序集明确知道它们的存在。 为源站点文件，但是，程序集可能完全不了解它们，或者通过 pack[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]引用; 的后一种情况下不能保证被引用的源站点文件实际存在。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211916"
   
  应在以下情况下使用资源文件：  
   
--   将资源文件编译到程序集内之后，无需更新资源文件的内容。  
+- 将资源文件编译到程序集内之后，无需更新资源文件的内容。  
   
--   希望通过减少文件依赖项的数量来简化应用程序分发的复杂性。  
+- 希望通过减少文件依赖项的数量来简化应用程序分发的复杂性。  
   
--   在应用程序数据文件必须是可本地化 (请参阅[WPF 全球化和本地化概述](../advanced/wpf-globalization-and-localization-overview.md))。  
+- 在应用程序数据文件必须是可本地化 (请参阅[WPF 全球化和本地化概述](../advanced/wpf-globalization-and-localization-overview.md))。  
   
 > [!NOTE]
 >  在本部分中所述的资源文件是不同的资源文件中所述[XAML 资源](../advanced/xaml-resources.md)和不同于嵌入或链接的资源中所述[管理应用程序资源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211916"
 ## <a name="site-of-origin-files"></a>源站点文件  
  资源文件有显式关系与它们一起分发的程序集由定义<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>。 但是，有些情况下可能需要在程序集和应用程序数据文件之间建立隐式关系或不存在的关系，这些情况包括：  
   
--   在编译时不存在的文件。  
+- 在编译时不存在的文件。  
   
--   在运行之前不知道程序集将需要哪些文件。  
+- 在运行之前不知道程序集将需要哪些文件。  
   
--   希望能够更新文件，无需重新编译与这些文件关联的程序集。  
+- 希望能够更新文件，无需重新编译与这些文件关联的程序集。  
   
--   应用程序使用大型数据文件（如音频和视频），并且你希望仅在用户选择下载时才下载这些文件。  
+- 应用程序使用大型数据文件（如音频和视频），并且你希望仅在用户选择下载时才下载这些文件。  
   
  可以加载这些类型的文件使用的传统[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]方案，如 file:/// 和 http:// 方案。  
   

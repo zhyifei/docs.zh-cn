@@ -10,32 +10,32 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050606"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 在 Windows Presentation Foundation (WPF)[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用于标识和加载在许多方面，包括以下文件：  
   
--   指定[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]以显示应用程序首次启动时。  
+- 指定[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]以显示应用程序首次启动时。  
   
--   加载图像。  
+- 加载图像。  
   
--   导航到页。  
+- 导航到页。  
   
--   加载不可执行的数据文件。  
+- 加载不可执行的数据文件。  
   
  此外，[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]可用于标识和加载不同的位置，包括以下文件：  
   
--   当前程序集。  
+- 当前程序集。  
   
--   引用的程序集。  
+- 引用的程序集。  
   
--   相对于程序集的某个位置。  
+- 相对于程序集的某个位置。  
   
--   应用程序的源站点。  
+- 应用程序的源站点。  
   
  若要标识和从这些位置加载这些类型的文件提供一致的机制[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]利用的可扩展性*pack URI 方案*。 本主题提供的方案的概述，介绍了如何构造 pack[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]的各种方案，讨论绝对和相对[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]并[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]解析，然后说明如何使用包[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]从这两个标记和代码。  
 
@@ -59,15 +59,15 @@ ms.locfileid: "59344346"
   
  包和部件之间的关系类似于应用程序和文件之间的关系，其中应用程序（包）可以包含一个或多个文件（部件），包括：  
   
--   编译到本地程序集内的资源文件。  
+- 编译到本地程序集内的资源文件。  
   
--   编译到所引用的程序集内的资源文件。  
+- 编译到所引用的程序集内的资源文件。  
   
--   编译到引用程序集内的资源文件。  
+- 编译到引用程序集内的资源文件。  
   
--   内容文件。  
+- 内容文件。  
   
--   源站点文件。  
+- 源站点文件。  
   
  若要访问这些类型的文件，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持两种授权： 应用程序: / / 和 siteoforigin:///: / /。 application:/// 授权标识在编译时已知的应用程序数据文件，包括资源文件和内容文件。 siteoforigin:/// 授权标识源站点文件。 下图显示了每种授权的范围。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "59344346"
 ### <a name="local-assembly-resource-file"></a>本地程序集资源文件  
  包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]资源编译到本地程序集的文件使用以下授权和路径：  
   
--   **授权**：application:///。  
+- **授权**：application:///。  
   
--   **路径**:资源文件，包括其路径，相对于本地程序集项目文件夹根目录的名称。  
+- **路径**:资源文件，包括其路径，相对于本地程序集项目文件夹根目录的名称。  
   
  下面的示例演示了包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位于本地程序集的项目文件夹的根目录中的资源文件。  
   
@@ -102,21 +102,21 @@ ms.locfileid: "59344346"
 ### <a name="referenced-assembly-resource-file"></a>引用的程序集资源文件  
  包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]资源编译到引用的程序集中的文件使用以下授权和路径：  
   
--   **授权**：application:///。  
+- **授权**：application:///。  
   
--   **路径**:资源文件编译到引用的程序集的名称。 路径必须符合以下格式：  
+- **路径**:资源文件编译到引用的程序集的名称。 路径必须符合以下格式：  
   
      *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
-    -   **程序集短名称**：所引用的程序集的短名称。  
+    - **程序集短名称**：所引用的程序集的短名称。  
   
-    -   **;版本** [可选]：所引用的包含资源文件的程序集的版本。 此部分在加载两个或多个具有相同短名称的引用程序集时使用。  
+    - **;版本** [可选]：所引用的包含资源文件的程序集的版本。 此部分在加载两个或多个具有相同短名称的引用程序集时使用。  
   
-    -   **;公钥** [可选]：用于对引用程序集进行签名的公钥。 此部分在加载两个或多个具有相同短名称的引用程序集时使用。  
+    - **;公钥** [可选]：用于对引用程序集进行签名的公钥。 此部分在加载两个或多个具有相同短名称的引用程序集时使用。  
   
-    -   **;组件**：指定所引用的程序集是从本地程序集引用的。  
+    - **;组件**：指定所引用的程序集是从本地程序集引用的。  
   
-    -   **/路径**：资源文件的名称，包括其相对于所引用程序集的项目文件夹根目录的路径。  
+    - **/路径**：资源文件的名称，包括其相对于所引用程序集的项目文件夹根目录的路径。  
   
  下面的示例演示了包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位于引用程序集的项目文件夹的根目录中的资源文件。  
   
@@ -138,9 +138,9 @@ ms.locfileid: "59344346"
 ## <a name="content-file-pack-uris"></a>内容文件 Pack URI  
  包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]内容文件使用以下授权和路径：  
   
--   **授权**：application:///。  
+- **授权**：application:///。  
   
--   **路径**:内容文件，包括其相对于应用程序的主可执行程序集的文件系统位置的路径名称。  
+- **路径**:内容文件，包括其相对于应用程序的主可执行程序集的文件系统位置的路径名称。  
   
  下面的示例演示了包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位于可执行程序集所在的文件夹中的内容文件。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "59344346"
 ## <a name="site-of-origin-pack-uris"></a>源站点 Pack URI  
  包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为源站点文件使用以下授权和路径：  
   
--   **授权**：siteoforigin:///。  
+- **授权**：siteoforigin:///。  
   
--   **路径**:源站点文件，包括其相对于从中启动可执行程序集位置的路径的名称。  
+- **路径**:源站点文件，包括其相对于从中启动可执行程序集位置的路径的名称。  
   
  下面的示例演示了包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]源站点文件，存储在从中启动可执行程序集的位置。  
   
@@ -175,17 +175,17 @@ ms.locfileid: "59344346"
   
  类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通常被配置为文件[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项具有以下内容作为其根元素之一：  
   
--   <xref:System.Windows.Window?displayProperty=nameWithType>  
+- <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
+- <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
 ## <a name="absolute-vs-relative-pack-uris"></a>绝对与相对 Pack URI  
@@ -246,11 +246,11 @@ ms.locfileid: "59344346"
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 解析不适用于[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]参阅以下内容：  
   
--   引用的程序集内的内容文件： 这些文件类型不受[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。  
+- 引用的程序集内的内容文件： 这些文件类型不受[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。  
   
--   嵌入的文件中引用的程序集：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]标识这些是唯一的因为它们包括这两个引用的程序集的名称和`;component`后缀。  
+- 嵌入的文件中引用的程序集：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]标识这些是唯一的因为它们包括这两个引用的程序集的名称和`;component`后缀。  
   
--   源站点文件：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]标识这些是唯一的因为它们是由包的唯一文件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]包含 siteoforigin:/// 授权: / / 颁发机构。  
+- 源站点文件：[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]标识这些是唯一的因为它们是由包的唯一文件[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]包含 siteoforigin:/// 授权: / / 颁发机构。  
   
  包的一种简化形式[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]解析使是让代码在某种程度上独立于资源和内容文件的位置。 例如，如果有本地程序集重新配置为内容文件，包中的资源文件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的资源将保持不变，可使用包的代码一样[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
   
@@ -258,17 +258,17 @@ ms.locfileid: "59344346"
 ## <a name="programming-with-pack-uris"></a>使用 Pack URI 编程  
  许多[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]类实现可设置与包属性的[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，其中包括：  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
  可以从标记和代码中设置这些属性。 本节演示这两种设置方式的基本构造，然后演示通用方案示例。  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049266"
 ---
 # <a name="compareto-function"></a>CompareTo 函数
 
@@ -73,7 +73,7 @@ HRESULT CompareTo (
 
 可以作为传递的标志`lEnumFlags`中定义参数*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。 通过指定以下标志的按位组合，可以指定在比较中涉及的各个特征：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | 忽略源 （在服务器和它们原来的位置的命名空间）。 |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | 忽略所有限定符 (包括**键**并**动态**) |
@@ -84,7 +84,7 @@ HRESULT CompareTo (
 
 也可以指定单个复合标志，如下所示：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | 请考虑在比较中的所有功能。 |
 
