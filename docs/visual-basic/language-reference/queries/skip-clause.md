@@ -9,45 +9,45 @@ helpviewer_keywords:
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
 ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945244"
 ---
-# <a name="skip-clause-visual-basic"></a><span data-ttu-id="f8157-102">Skip 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f8157-102">Skip Clause (Visual Basic)</span></span>
-<span data-ttu-id="f8157-103">绕过集合中指定数量的元素，然后返回剩余的元素。</span><span class="sxs-lookup"><span data-stu-id="f8157-103">Bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
+# <a name="skip-clause-visual-basic"></a><span data-ttu-id="215d3-102">Skip 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="215d3-102">Skip Clause (Visual Basic)</span></span>
+<span data-ttu-id="215d3-103">绕过集合中指定数量的元素，然后返回剩余的元素。</span><span class="sxs-lookup"><span data-stu-id="215d3-103">Bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8157-104">语法</span><span class="sxs-lookup"><span data-stu-id="f8157-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="215d3-104">语法</span><span class="sxs-lookup"><span data-stu-id="215d3-104">Syntax</span></span>  
   
 ```  
 Skip count  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="f8157-105">部件</span><span class="sxs-lookup"><span data-stu-id="f8157-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="215d3-105">部件</span><span class="sxs-lookup"><span data-stu-id="215d3-105">Parts</span></span>  
  `count`  
- <span data-ttu-id="f8157-106">必需。</span><span class="sxs-lookup"><span data-stu-id="f8157-106">Required.</span></span> <span data-ttu-id="f8157-107">一个值或表达式的计算结果为要跳过序列中的元素数。</span><span class="sxs-lookup"><span data-stu-id="f8157-107">A value or an expression that evaluates to the number of elements of the sequence to skip.</span></span>  
+ <span data-ttu-id="215d3-106">必需。</span><span class="sxs-lookup"><span data-stu-id="215d3-106">Required.</span></span> <span data-ttu-id="215d3-107">一个值或表达式的计算结果为要跳过序列中的元素数。</span><span class="sxs-lookup"><span data-stu-id="215d3-107">A value or an expression that evaluates to the number of elements of the sequence to skip.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f8157-108">备注</span><span class="sxs-lookup"><span data-stu-id="f8157-108">Remarks</span></span>  
- <span data-ttu-id="f8157-109">`Skip`子句会使查询以绕过在结果列表的开始处的元素并返回剩余元素。</span><span class="sxs-lookup"><span data-stu-id="f8157-109">The `Skip` clause causes a query to bypass elements at the beginning of a results list and return the remaining elements.</span></span> <span data-ttu-id="f8157-110">要跳过的元素数由`count`参数。</span><span class="sxs-lookup"><span data-stu-id="f8157-110">The number of elements to skip is identified by the `count` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="215d3-108">备注</span><span class="sxs-lookup"><span data-stu-id="215d3-108">Remarks</span></span>  
+ <span data-ttu-id="215d3-109">`Skip`子句会使查询以绕过在结果列表的开始处的元素并返回剩余元素。</span><span class="sxs-lookup"><span data-stu-id="215d3-109">The `Skip` clause causes a query to bypass elements at the beginning of a results list and return the remaining elements.</span></span> <span data-ttu-id="215d3-110">要跳过的元素数由`count`参数。</span><span class="sxs-lookup"><span data-stu-id="215d3-110">The number of elements to skip is identified by the `count` parameter.</span></span>  
   
- <span data-ttu-id="f8157-111">可以使用`Skip`子句与`Take`子句从查询的任何段返回一系列数据。</span><span class="sxs-lookup"><span data-stu-id="f8157-111">You can use the `Skip` clause with the `Take` clause to return a range of data from any segment of a query.</span></span> <span data-ttu-id="f8157-112">若要执行此操作，将传递到范围内的第一个元素的索引`Skip`子句和范围的大小`Take`子句。</span><span class="sxs-lookup"><span data-stu-id="f8157-112">To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.</span></span>  
+ <span data-ttu-id="215d3-111">可以使用`Skip`子句与`Take`子句从查询的任何段返回一系列数据。</span><span class="sxs-lookup"><span data-stu-id="215d3-111">You can use the `Skip` clause with the `Take` clause to return a range of data from any segment of a query.</span></span> <span data-ttu-id="215d3-112">若要执行此操作，将传递到范围内的第一个元素的索引`Skip`子句和范围的大小`Take`子句。</span><span class="sxs-lookup"><span data-stu-id="215d3-112">To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.</span></span>  
   
- <span data-ttu-id="f8157-113">当你使用`Skip`查询中的子句，您可能还需要确保将启用的顺序返回结果`Skip`子句，以绕过预期的结果。</span><span class="sxs-lookup"><span data-stu-id="f8157-113">When you use the `Skip` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Skip` clause to bypass the intended results.</span></span> <span data-ttu-id="f8157-114">对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="f8157-114">For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).</span></span>  
+ <span data-ttu-id="215d3-113">当你使用`Skip`查询中的子句，您可能还需要确保将启用的顺序返回结果`Skip`子句，以绕过预期的结果。</span><span class="sxs-lookup"><span data-stu-id="215d3-113">When you use the `Skip` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Skip` clause to bypass the intended results.</span></span> <span data-ttu-id="215d3-114">对查询结果进行排序的详细信息，请参阅[Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="215d3-114">For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).</span></span>  
   
- <span data-ttu-id="f8157-115">可以使用`SkipWhile`子句来指定只有某些元素将忽略，具体取决于提供的条件。</span><span class="sxs-lookup"><span data-stu-id="f8157-115">You can use the `SkipWhile` clause to specify that only certain elements are ignored, depending on a supplied condition.</span></span>  
+ <span data-ttu-id="215d3-115">可以使用`SkipWhile`子句来指定只有某些元素将忽略，具体取决于提供的条件。</span><span class="sxs-lookup"><span data-stu-id="215d3-115">You can use the `SkipWhile` clause to specify that only certain elements are ignored, depending on a supplied condition.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8157-116">示例</span><span class="sxs-lookup"><span data-stu-id="f8157-116">Example</span></span>  
- <span data-ttu-id="f8157-117">下面的代码示例使用`Skip`子句一起使用`Take`子句，以从页中的查询返回的数据。</span><span class="sxs-lookup"><span data-stu-id="f8157-117">The following code example uses the `Skip` clause together with the `Take` clause to return data from a query in pages.</span></span> <span data-ttu-id="f8157-118">`GetCustomers`函数使用`Skip`子句，以跳过列表中的客户，直到提供的起始索引值，并使用`Take`子句返回的客户从该索引值开始页。</span><span class="sxs-lookup"><span data-stu-id="f8157-118">The `GetCustomers` function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.</span></span>  
+## <a name="example"></a><span data-ttu-id="215d3-116">示例</span><span class="sxs-lookup"><span data-stu-id="215d3-116">Example</span></span>  
+ <span data-ttu-id="215d3-117">下面的代码示例使用`Skip`子句一起使用`Take`子句，以从页中的查询返回的数据。</span><span class="sxs-lookup"><span data-stu-id="215d3-117">The following code example uses the `Skip` clause together with the `Take` clause to return data from a query in pages.</span></span> <span data-ttu-id="215d3-118">`GetCustomers`函数使用`Skip`子句，以跳过列表中的客户，直到提供的起始索引值，并使用`Take`子句返回的客户从该索引值开始页。</span><span class="sxs-lookup"><span data-stu-id="215d3-118">The `GetCustomers` function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f8157-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8157-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="215d3-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="215d3-119">See also</span></span>
 
-- [<span data-ttu-id="f8157-120">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="f8157-120">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="f8157-121">查询</span><span class="sxs-lookup"><span data-stu-id="f8157-121">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="f8157-122">Select 子句</span><span class="sxs-lookup"><span data-stu-id="f8157-122">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="f8157-123">From 子句</span><span class="sxs-lookup"><span data-stu-id="f8157-123">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="f8157-124">Order By 子句</span><span class="sxs-lookup"><span data-stu-id="f8157-124">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [<span data-ttu-id="f8157-125">Skip While 子句</span><span class="sxs-lookup"><span data-stu-id="f8157-125">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [<span data-ttu-id="f8157-126">Take 子句</span><span class="sxs-lookup"><span data-stu-id="f8157-126">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)
+- [<span data-ttu-id="215d3-120">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="215d3-120">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="215d3-121">查询</span><span class="sxs-lookup"><span data-stu-id="215d3-121">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="215d3-122">Select 子句</span><span class="sxs-lookup"><span data-stu-id="215d3-122">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="215d3-123">From 子句</span><span class="sxs-lookup"><span data-stu-id="215d3-123">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="215d3-124">Order By 子句</span><span class="sxs-lookup"><span data-stu-id="215d3-124">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [<span data-ttu-id="215d3-125">Skip While 子句</span><span class="sxs-lookup"><span data-stu-id="215d3-125">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [<span data-ttu-id="215d3-126">Take 子句</span><span class="sxs-lookup"><span data-stu-id="215d3-126">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)

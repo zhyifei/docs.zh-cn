@@ -9,33 +9,33 @@ helpviewer_keywords:
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
 ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945348"
 ---
-# <a name="distinct-clause-visual-basic"></a><span data-ttu-id="82dfd-102">Distinct 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82dfd-102">Distinct Clause (Visual Basic)</span></span>
-<span data-ttu-id="82dfd-103">将当前的范围变量，以消除重复值在后续查询子句中的值限制。</span><span class="sxs-lookup"><span data-stu-id="82dfd-103">Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.</span></span>  
+# <a name="distinct-clause-visual-basic"></a><span data-ttu-id="88414-102">Distinct 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88414-102">Distinct Clause (Visual Basic)</span></span>
+<span data-ttu-id="88414-103">将当前的范围变量，以消除重复值在后续查询子句中的值限制。</span><span class="sxs-lookup"><span data-stu-id="88414-103">Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82dfd-104">语法</span><span class="sxs-lookup"><span data-stu-id="82dfd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="88414-104">语法</span><span class="sxs-lookup"><span data-stu-id="88414-104">Syntax</span></span>  
   
 ```  
 Distinct  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="82dfd-105">备注</span><span class="sxs-lookup"><span data-stu-id="82dfd-105">Remarks</span></span>  
- <span data-ttu-id="82dfd-106">可以使用`Distinct`子句返回唯一项的列表。</span><span class="sxs-lookup"><span data-stu-id="82dfd-106">You can use the `Distinct` clause to return a list of unique items.</span></span> <span data-ttu-id="82dfd-107">`Distinct`子句会使查询以忽略重复的查询结果。</span><span class="sxs-lookup"><span data-stu-id="82dfd-107">The `Distinct` clause causes the query to ignore duplicate query results.</span></span> <span data-ttu-id="82dfd-108">`Distinct`子句应用到重复的值的所有返回指定的字段`Select`子句。</span><span class="sxs-lookup"><span data-stu-id="82dfd-108">The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause.</span></span> <span data-ttu-id="82dfd-109">如果没有`Select`指定子句，则`Distinct`子句应用于查询中标识的范围变量`From`子句。</span><span class="sxs-lookup"><span data-stu-id="82dfd-109">If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause.</span></span> <span data-ttu-id="82dfd-110">如果范围变量不是不可变类型，查询将只会忽略查询结果，如果该类型的所有成员都匹配现有的查询结果。</span><span class="sxs-lookup"><span data-stu-id="82dfd-110">If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="88414-105">备注</span><span class="sxs-lookup"><span data-stu-id="88414-105">Remarks</span></span>  
+ <span data-ttu-id="88414-106">可以使用`Distinct`子句返回唯一项的列表。</span><span class="sxs-lookup"><span data-stu-id="88414-106">You can use the `Distinct` clause to return a list of unique items.</span></span> <span data-ttu-id="88414-107">`Distinct`子句会使查询以忽略重复的查询结果。</span><span class="sxs-lookup"><span data-stu-id="88414-107">The `Distinct` clause causes the query to ignore duplicate query results.</span></span> <span data-ttu-id="88414-108">`Distinct`子句应用到重复的值的所有返回指定的字段`Select`子句。</span><span class="sxs-lookup"><span data-stu-id="88414-108">The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause.</span></span> <span data-ttu-id="88414-109">如果没有`Select`指定子句，则`Distinct`子句应用于查询中标识的范围变量`From`子句。</span><span class="sxs-lookup"><span data-stu-id="88414-109">If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause.</span></span> <span data-ttu-id="88414-110">如果范围变量不是不可变类型，查询将只会忽略查询结果，如果该类型的所有成员都匹配现有的查询结果。</span><span class="sxs-lookup"><span data-stu-id="88414-110">If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="82dfd-111">示例</span><span class="sxs-lookup"><span data-stu-id="82dfd-111">Example</span></span>  
- <span data-ttu-id="82dfd-112">下面的查询表达式联接客户列表和客户订单的列表。</span><span class="sxs-lookup"><span data-stu-id="82dfd-112">The following query expression joins a list of customers and a list of customer orders.</span></span> <span data-ttu-id="82dfd-113">`Distinct`子句是包括在内，以返回的唯一客户名称列表，并且订单日期。</span><span class="sxs-lookup"><span data-stu-id="82dfd-113">The `Distinct` clause is included to return a list of unique customer names and order dates.</span></span>  
+## <a name="example"></a><span data-ttu-id="88414-111">示例</span><span class="sxs-lookup"><span data-stu-id="88414-111">Example</span></span>  
+ <span data-ttu-id="88414-112">下面的查询表达式联接客户列表和客户订单的列表。</span><span class="sxs-lookup"><span data-stu-id="88414-112">The following query expression joins a list of customers and a list of customer orders.</span></span> <span data-ttu-id="88414-113">`Distinct`子句是包括在内，以返回的唯一客户名称列表，并且订单日期。</span><span class="sxs-lookup"><span data-stu-id="88414-113">The `Distinct` clause is included to return a list of unique customer names and order dates.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
-## <a name="see-also"></a><span data-ttu-id="82dfd-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="82dfd-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88414-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="88414-114">See also</span></span>
 
-- [<span data-ttu-id="82dfd-115">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="82dfd-115">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="82dfd-116">查询</span><span class="sxs-lookup"><span data-stu-id="82dfd-116">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="82dfd-117">From 子句</span><span class="sxs-lookup"><span data-stu-id="82dfd-117">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="82dfd-118">Select 子句</span><span class="sxs-lookup"><span data-stu-id="82dfd-118">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="82dfd-119">Where 子句</span><span class="sxs-lookup"><span data-stu-id="82dfd-119">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
+- [<span data-ttu-id="88414-115">Visual Basic 中的 LINQ 简介</span><span class="sxs-lookup"><span data-stu-id="88414-115">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="88414-116">查询</span><span class="sxs-lookup"><span data-stu-id="88414-116">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="88414-117">From 子句</span><span class="sxs-lookup"><span data-stu-id="88414-117">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="88414-118">Select 子句</span><span class="sxs-lookup"><span data-stu-id="88414-118">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="88414-119">Where 子句</span><span class="sxs-lookup"><span data-stu-id="88414-119">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

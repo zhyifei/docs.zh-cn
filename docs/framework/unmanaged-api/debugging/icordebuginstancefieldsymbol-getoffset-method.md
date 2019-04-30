@@ -5,16 +5,16 @@ ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8ea777755aebb59f3e865df26c38c74ef68ae31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946387"
 ---
-# <a name="icordebuginstancefieldsymbolgetoffset-method"></a><span data-ttu-id="9a20a-102">ICorDebugInstanceFieldSymbol::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="9a20a-102">ICorDebugInstanceFieldSymbol::GetOffset Method</span></span>
-<span data-ttu-id="9a20a-103">获取父类中此示例字段的偏移量（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="9a20a-103">Gets the offset in bytes of this instance field in its parent class.</span></span>  
+# <a name="icordebuginstancefieldsymbolgetoffset-method"></a><span data-ttu-id="97109-102">ICorDebugInstanceFieldSymbol::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="97109-102">ICorDebugInstanceFieldSymbol::GetOffset Method</span></span>
+<span data-ttu-id="97109-103">获取父类中此示例字段的偏移量（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="97109-103">Gets the offset in bytes of this instance field in its parent class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a20a-104">语法</span><span class="sxs-lookup"><span data-stu-id="9a20a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97109-104">语法</span><span class="sxs-lookup"><span data-stu-id="97109-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOffset(  
@@ -22,25 +22,25 @@ HRESULT GetOffset(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a20a-105">参数</span><span class="sxs-lookup"><span data-stu-id="9a20a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97109-105">参数</span><span class="sxs-lookup"><span data-stu-id="97109-105">Parameters</span></span>  
  `pcbOffset`  
- <span data-ttu-id="9a20a-106">指向此示例字段在父类中偏移的字节数的指针。</span><span class="sxs-lookup"><span data-stu-id="9a20a-106">A pointer to the number of bytes that this instance field is offset in its parent class.</span></span>  
+ <span data-ttu-id="97109-106">指向此示例字段在父类中偏移的字节数的指针。</span><span class="sxs-lookup"><span data-stu-id="97109-106">A pointer to the number of bytes that this instance field is offset in its parent class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a20a-107">备注</span><span class="sxs-lookup"><span data-stu-id="9a20a-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="97109-107">备注</span><span class="sxs-lookup"><span data-stu-id="97109-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9a20a-108">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="9a20a-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="97109-108">此方法仅适用于 .NET Native。</span><span class="sxs-lookup"><span data-stu-id="97109-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a20a-109">要求</span><span class="sxs-lookup"><span data-stu-id="9a20a-109">Requirements</span></span>  
- <span data-ttu-id="9a20a-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9a20a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97109-109">要求</span><span class="sxs-lookup"><span data-stu-id="97109-109">Requirements</span></span>  
+ <span data-ttu-id="97109-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="97109-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a20a-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a20a-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="97109-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="97109-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a20a-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a20a-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="97109-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="97109-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a20a-113">**.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a20a-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="97109-113">**.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97109-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a20a-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="9a20a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97109-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="97109-114">See also</span></span>
 
-- [<span data-ttu-id="9a20a-115">ICorDebugInstanceFieldSymbol 接口</span><span class="sxs-lookup"><span data-stu-id="9a20a-115">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [<span data-ttu-id="9a20a-116">调试接口</span><span class="sxs-lookup"><span data-stu-id="9a20a-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="97109-115">ICorDebugInstanceFieldSymbol 接口</span><span class="sxs-lookup"><span data-stu-id="97109-115">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
+- [<span data-ttu-id="97109-116">调试接口</span><span class="sxs-lookup"><span data-stu-id="97109-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

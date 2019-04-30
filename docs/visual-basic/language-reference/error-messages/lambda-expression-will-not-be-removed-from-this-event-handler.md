@@ -8,16 +8,16 @@ helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946622"
 ---
-# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="8fb3f-102">将不会从此事件处理程序中移除 Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="8fb3f-102">Lambda expression will not be removed from this event handler</span></span>
-<span data-ttu-id="8fb3f-103">从此事件处理程序不会移除 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="8fb3f-104">将 lambda 表达式分配给一个变量并将该变量来添加和删除该事件。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="6b4e1-102">将不会从此事件处理程序中移除 Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="6b4e1-102">Lambda expression will not be removed from this event handler</span></span>
+<span data-ttu-id="6b4e1-103">从此事件处理程序不会移除 lambda 表达式。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="6b4e1-104">将 lambda 表达式分配给一个变量并将该变量来添加和删除该事件。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
   
- <span data-ttu-id="8fb3f-105">当事件处理程序中使用 lambda 表达式时，可能无法看到所需的行为。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="8fb3f-106">编译器将生成新的方法对于每个 lambda 表达式定义，即使它们是完全相同。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="8fb3f-107">因此，下面的代码显示`False`。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-107">Therefore, the following code displays `False`.</span></span>  
+ <span data-ttu-id="6b4e1-105">当事件处理程序中使用 lambda 表达式时，可能无法看到所需的行为。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="6b4e1-106">编译器将生成新的方法对于每个 lambda 表达式定义，即使它们是完全相同。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="6b4e1-107">因此，下面的代码显示`False`。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-107">Therefore, the following code displays `False`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="8fb3f-108">当事件处理程序中使用 lambda 表达式时，这可能会导致意外的结果。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="8fb3f-109">在以下示例中，lambda 表达式添加`AddHandler`情况下不删除`RemoveHandler`语句。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
+ <span data-ttu-id="6b4e1-108">当事件处理程序中使用 lambda 表达式时，这可能会导致意外的结果。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="6b4e1-109">在以下示例中，lambda 表达式添加`AddHandler`情况下不删除`RemoveHandler`语句。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="8fb3f-110">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-110">By default, this message is a warning.</span></span> <span data-ttu-id="8fb3f-111">有关如何隐藏警告或将警告视为错误的详细信息，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="6b4e1-110">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-110">By default, this message is a warning.</span></span> <span data-ttu-id="6b4e1-111">有关如何隐藏警告或将警告视为错误的详细信息，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="8fb3f-112">**错误 ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="8fb3f-112">**Error ID:** BC42326</span></span>  
+ <span data-ttu-id="6b4e1-112">**错误 ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="6b4e1-112">**Error ID:** BC42326</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8fb3f-113">更正此错误</span><span class="sxs-lookup"><span data-stu-id="8fb3f-113">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6b4e1-113">更正此错误</span><span class="sxs-lookup"><span data-stu-id="6b4e1-113">To correct this error</span></span>  
   
--   <span data-ttu-id="8fb3f-114">若要避免出现警告，并删除 lambda 表达式，lambda 表达式分配给一个变量，并在这种使用该变量`AddHandler`和`RemoveHandler`语句，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="8fb3f-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
+- <span data-ttu-id="6b4e1-114">若要避免出现警告，并删除 lambda 表达式，lambda 表达式分配给一个变量，并在这种使用该变量`AddHandler`和`RemoveHandler`语句，如下面的示例中所示。</span><span class="sxs-lookup"><span data-stu-id="6b4e1-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
   
 ```vb  
 Module Module1  
@@ -84,8 +84,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8fb3f-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="8fb3f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b4e1-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="6b4e1-115">See also</span></span>
 
-- [<span data-ttu-id="8fb3f-116">Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="8fb3f-116">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [<span data-ttu-id="8fb3f-117">宽松委托转换</span><span class="sxs-lookup"><span data-stu-id="8fb3f-117">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [<span data-ttu-id="8fb3f-118">事件</span><span class="sxs-lookup"><span data-stu-id="8fb3f-118">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="6b4e1-116">Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="6b4e1-116">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="6b4e1-117">宽松委托转换</span><span class="sxs-lookup"><span data-stu-id="6b4e1-117">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [<span data-ttu-id="6b4e1-118">事件</span><span class="sxs-lookup"><span data-stu-id="6b4e1-118">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

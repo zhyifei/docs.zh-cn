@@ -1,1 +1,9 @@
-<span data-ttu-id="ee3f8-101">IIS 6.0</span><span class="sxs-lookup"><span data-stu-id="ee3f8-101">IIS 6.0</span></span>
+---
+ms.openlocfilehash: 9b40c3ca943eb55751485723ccfa8da5fa1baa86
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762746"
+---
+<span data-ttu-id="f1939-101">IIS 6.0</span><span class="sxs-lookup"><span data-stu-id="f1939-101">IIS 6.0</span></span>
