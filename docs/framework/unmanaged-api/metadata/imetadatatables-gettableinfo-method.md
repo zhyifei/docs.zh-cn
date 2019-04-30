@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 82c88c75d5799134d8c683c91e28f956743b84ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992220"
 ---
-# <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="c6125-102">IMetaDataTables::GetTableInfo 方法</span><span class="sxs-lookup"><span data-stu-id="c6125-102">IMetaDataTables::GetTableInfo Method</span></span>
-<span data-ttu-id="c6125-103">获取名称、 行大小、 行数、 列数和指定的表的键列索引。</span><span class="sxs-lookup"><span data-stu-id="c6125-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  
+# <a name="imetadatatablesgettableinfo-method"></a><span data-ttu-id="1c907-102">IMetaDataTables::GetTableInfo 方法</span><span class="sxs-lookup"><span data-stu-id="1c907-102">IMetaDataTables::GetTableInfo Method</span></span>
+<span data-ttu-id="1c907-103">获取名称、 行大小、 行数、 列数和指定的表的键列索引。</span><span class="sxs-lookup"><span data-stu-id="1c907-103">Gets the name, row size, number of rows, number of columns, and key column index of the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6125-104">语法</span><span class="sxs-lookup"><span data-stu-id="c6125-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c907-104">语法</span><span class="sxs-lookup"><span data-stu-id="1c907-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTableInfo (  
@@ -40,35 +40,35 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c6125-105">参数</span><span class="sxs-lookup"><span data-stu-id="c6125-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c907-105">参数</span><span class="sxs-lookup"><span data-stu-id="1c907-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="c6125-106">[in]表的标识符要返回其属性。</span><span class="sxs-lookup"><span data-stu-id="c6125-106">[in] The identifier of the table whose properties to return.</span></span>  
+ <span data-ttu-id="1c907-106">[in]表的标识符要返回其属性。</span><span class="sxs-lookup"><span data-stu-id="1c907-106">[in] The identifier of the table whose properties to return.</span></span>  
   
  `pcbRow`  
- <span data-ttu-id="c6125-107">[out]指向大小 （字节） 的表行的指针。</span><span class="sxs-lookup"><span data-stu-id="c6125-107">[out] A pointer to the size, in bytes, of a table row.</span></span>  
+ <span data-ttu-id="1c907-107">[out]指向大小 （字节） 的表行的指针。</span><span class="sxs-lookup"><span data-stu-id="1c907-107">[out] A pointer to the size, in bytes, of a table row.</span></span>  
   
  `pcRows`  
- <span data-ttu-id="c6125-108">[out]指向表中的行数的指针。</span><span class="sxs-lookup"><span data-stu-id="c6125-108">[out] A pointer to the number of rows in the table.</span></span>  
+ <span data-ttu-id="1c907-108">[out]指向表中的行数的指针。</span><span class="sxs-lookup"><span data-stu-id="1c907-108">[out] A pointer to the number of rows in the table.</span></span>  
   
  `pcCols`  
- <span data-ttu-id="c6125-109">[out]指向表中的列数的指针。</span><span class="sxs-lookup"><span data-stu-id="c6125-109">[out] A pointer to the number of columns in the table.</span></span>  
+ <span data-ttu-id="1c907-109">[out]指向表中的列数的指针。</span><span class="sxs-lookup"><span data-stu-id="1c907-109">[out] A pointer to the number of columns in the table.</span></span>  
   
  `piKey`  
- <span data-ttu-id="c6125-110">[out]索引键列，则为-1 如果表没有键列的指针。</span><span class="sxs-lookup"><span data-stu-id="c6125-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span></span>  
+ <span data-ttu-id="1c907-110">[out]索引键列，则为-1 如果表没有键列的指针。</span><span class="sxs-lookup"><span data-stu-id="1c907-110">[out] A pointer to the index of the key column, or -1 if the table has no key column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="c6125-111">[out]为表名的指针指向的指针。</span><span class="sxs-lookup"><span data-stu-id="c6125-111">[out] A pointer to a pointer to the table name.</span></span>  
+ <span data-ttu-id="1c907-111">[out]为表名的指针指向的指针。</span><span class="sxs-lookup"><span data-stu-id="1c907-111">[out] A pointer to a pointer to the table name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6125-112">要求</span><span class="sxs-lookup"><span data-stu-id="c6125-112">Requirements</span></span>  
- <span data-ttu-id="c6125-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c6125-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c907-112">要求</span><span class="sxs-lookup"><span data-stu-id="1c907-112">Requirements</span></span>  
+ <span data-ttu-id="1c907-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1c907-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6125-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c6125-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1c907-114">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1c907-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c6125-115">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c6125-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1c907-115">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="1c907-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c6125-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6125-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1c907-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c907-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6125-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="c6125-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c907-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="1c907-117">See also</span></span>
 
-- [<span data-ttu-id="c6125-118">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="c6125-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="c6125-119">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="c6125-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="1c907-118">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="1c907-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="1c907-119">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="1c907-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

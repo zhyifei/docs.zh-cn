@@ -8,28 +8,28 @@ helpviewer_keywords:
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
 ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052230"
 ---
-# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="db606-102">生成和部署帮助主题</span><span class="sxs-lookup"><span data-stu-id="db606-102">Build and Deploy How-to Topics</span></span>
-<span data-ttu-id="db606-103">以下主题说明如何创建针对各种项目文件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序类型。</span><span class="sxs-lookup"><span data-stu-id="db606-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
+# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="bd5c2-102">生成和部署帮助主题</span><span class="sxs-lookup"><span data-stu-id="bd5c2-102">Build and Deploy How-to Topics</span></span>
+<span data-ttu-id="bd5c2-103">以下主题说明如何创建针对各种项目文件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序类型。</span><span class="sxs-lookup"><span data-stu-id="bd5c2-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="db606-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="db606-104">In This Section</span></span>  
- [<span data-ttu-id="db606-105">将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="db606-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [<span data-ttu-id="db606-106">将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务</span><span class="sxs-lookup"><span data-stu-id="db606-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [<span data-ttu-id="db606-107">确定已安装的 WPF 版本</span><span class="sxs-lookup"><span data-stu-id="db606-107">Determine the Installed Version of WPF</span></span>](how-to-determine-the-installed-version-of-wpf.md)  
- [<span data-ttu-id="db606-108">检测是否安装了 .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="db606-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [<span data-ttu-id="db606-109">检测是否安装了 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="db606-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [<span data-ttu-id="db606-110">检测是否安装了适用于 Firefox 的 WPF 插件</span><span class="sxs-lookup"><span data-stu-id="db606-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bd5c2-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="bd5c2-104">In This Section</span></span>  
+ [<span data-ttu-id="bd5c2-105">将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="bd5c2-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [<span data-ttu-id="bd5c2-106">将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务</span><span class="sxs-lookup"><span data-stu-id="bd5c2-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [<span data-ttu-id="bd5c2-107">确定已安装的 WPF 版本</span><span class="sxs-lookup"><span data-stu-id="bd5c2-107">Determine the Installed Version of WPF</span></span>](how-to-determine-the-installed-version-of-wpf.md)  
+ [<span data-ttu-id="bd5c2-108">检测是否安装了 .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="bd5c2-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [<span data-ttu-id="bd5c2-109">检测是否安装了 .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="bd5c2-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [<span data-ttu-id="bd5c2-110">检测是否安装了适用于 Firefox 的 WPF 插件</span><span class="sxs-lookup"><span data-stu-id="bd5c2-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="db606-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="db606-111">Related Sections</span></span>  
- [<span data-ttu-id="db606-112">生成 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="db606-112">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="bd5c2-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="bd5c2-111">Related Sections</span></span>  
+ [<span data-ttu-id="bd5c2-112">生成 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="bd5c2-112">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="db606-113">部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="db606-113">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="bd5c2-113">部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="bd5c2-113">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="db606-114">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="db606-114">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="bd5c2-114">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="bd5c2-114">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- <span data-ttu-id="db606-115">[如何：创建新的 WPF 浏览器应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="db606-115">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>
+ <span data-ttu-id="bd5c2-115">[如何：创建新的 WPF 浏览器应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="bd5c2-115">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>

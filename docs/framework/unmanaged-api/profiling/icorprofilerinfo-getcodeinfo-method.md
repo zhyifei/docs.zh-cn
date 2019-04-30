@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d069446ecb0b630870f0d2c9c4bdc23232c40c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991882"
 ---
-# <a name="icorprofilerinfogetcodeinfo-method"></a><span data-ttu-id="15ea7-102">ICorProfilerInfo::GetCodeInfo 方法</span><span class="sxs-lookup"><span data-stu-id="15ea7-102">ICorProfilerInfo::GetCodeInfo Method</span></span>
-<span data-ttu-id="15ea7-103">获取与指定函数 ID 关联的本机代码的范围。</span><span class="sxs-lookup"><span data-stu-id="15ea7-103">Gets the extent of native code associated with the specified function ID.</span></span>  
+# <a name="icorprofilerinfogetcodeinfo-method"></a><span data-ttu-id="84714-102">ICorProfilerInfo::GetCodeInfo 方法</span><span class="sxs-lookup"><span data-stu-id="84714-102">ICorProfilerInfo::GetCodeInfo Method</span></span>
+<span data-ttu-id="84714-103">获取与指定函数 ID 关联的本机代码的范围。</span><span class="sxs-lookup"><span data-stu-id="84714-103">Gets the extent of native code associated with the specified function ID.</span></span>  
   
- <span data-ttu-id="15ea7-104">此方法已过时。</span><span class="sxs-lookup"><span data-stu-id="15ea7-104">This method is obsolete.</span></span> <span data-ttu-id="15ea7-105">使用[ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="15ea7-105">Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.</span></span>  
+ <span data-ttu-id="84714-104">此方法已过时。</span><span class="sxs-lookup"><span data-stu-id="84714-104">This method is obsolete.</span></span> <span data-ttu-id="84714-105">使用[ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)方法相反。</span><span class="sxs-lookup"><span data-stu-id="84714-105">Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15ea7-106">语法</span><span class="sxs-lookup"><span data-stu-id="15ea7-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84714-106">语法</span><span class="sxs-lookup"><span data-stu-id="84714-106">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeInfo(  
@@ -38,32 +38,32 @@ HRESULT GetCodeInfo(
     [out] ULONG      *pcSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="15ea7-107">参数</span><span class="sxs-lookup"><span data-stu-id="15ea7-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84714-107">参数</span><span class="sxs-lookup"><span data-stu-id="84714-107">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="15ea7-108">[in] 与本机代码关联的函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="15ea7-108">[in] The ID of the function with which the native code is associated.</span></span>  
+ <span data-ttu-id="84714-108">[in] 与本机代码关联的函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="84714-108">[in] The ID of the function with which the native code is associated.</span></span>  
   
  `pStart`  
- <span data-ttu-id="15ea7-109">[out] 指向组成该函数本机代码的字节数组的指针。</span><span class="sxs-lookup"><span data-stu-id="15ea7-109">[out] A pointer to an array of bytes that compose the native code of the function.</span></span>  
+ <span data-ttu-id="84714-109">[out] 指向组成该函数本机代码的字节数组的指针。</span><span class="sxs-lookup"><span data-stu-id="84714-109">[out] A pointer to an array of bytes that compose the native code of the function.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="15ea7-110">[out] 指向以字节为单位指定本机代码大小的整数的指针。</span><span class="sxs-lookup"><span data-stu-id="15ea7-110">[out] A pointer to an integer that specifies the size, in bytes, of the native code.</span></span>  
+ <span data-ttu-id="84714-110">[out] 指向以字节为单位指定本机代码大小的整数的指针。</span><span class="sxs-lookup"><span data-stu-id="84714-110">[out] A pointer to an integer that specifies the size, in bytes, of the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="15ea7-111">备注</span><span class="sxs-lookup"><span data-stu-id="15ea7-111">Remarks</span></span>  
- <span data-ttu-id="15ea7-112">为了优化性能，.NET Framework 2.0 版中的运行时将函数的预编译本机代码拆分为多个部分。</span><span class="sxs-lookup"><span data-stu-id="15ea7-112">To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions.</span></span> <span data-ttu-id="15ea7-113">因此，`GetCodeInfo` 方法在.NET Framework 2.0 中已过时，因为它无法处理函数的本机代码的范围。</span><span class="sxs-lookup"><span data-stu-id="15ea7-113">Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code.</span></span> <span data-ttu-id="15ea7-114">探查器应切换为使用更常规的 `ICorProfilerInfo2::GetCodeInfo2` 方法。</span><span class="sxs-lookup"><span data-stu-id="15ea7-114">Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84714-111">备注</span><span class="sxs-lookup"><span data-stu-id="84714-111">Remarks</span></span>  
+ <span data-ttu-id="84714-112">为了优化性能，.NET Framework 2.0 版中的运行时将函数的预编译本机代码拆分为多个部分。</span><span class="sxs-lookup"><span data-stu-id="84714-112">To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions.</span></span> <span data-ttu-id="84714-113">因此，`GetCodeInfo` 方法在.NET Framework 2.0 中已过时，因为它无法处理函数的本机代码的范围。</span><span class="sxs-lookup"><span data-stu-id="84714-113">Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code.</span></span> <span data-ttu-id="84714-114">探查器应切换为使用更常规的 `ICorProfilerInfo2::GetCodeInfo2` 方法。</span><span class="sxs-lookup"><span data-stu-id="84714-114">Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.</span></span>  
   
- <span data-ttu-id="15ea7-115">此函数使用调用方分配的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="15ea7-115">This function uses caller-allocated buffers.</span></span>  
+ <span data-ttu-id="84714-115">此函数使用调用方分配的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="84714-115">This function uses caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15ea7-116">要求</span><span class="sxs-lookup"><span data-stu-id="15ea7-116">Requirements</span></span>  
- <span data-ttu-id="15ea7-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15ea7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84714-116">要求</span><span class="sxs-lookup"><span data-stu-id="84714-116">Requirements</span></span>  
+ <span data-ttu-id="84714-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="84714-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15ea7-118">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="15ea7-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="84714-118">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="84714-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="15ea7-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15ea7-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="84714-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84714-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15ea7-120">**.NET framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="15ea7-120">**.NET Framework Versions:** 1.0</span></span>  
+ <span data-ttu-id="84714-120">**.NET framework 版本：** 1.0</span><span class="sxs-lookup"><span data-stu-id="84714-120">**.NET Framework Versions:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15ea7-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="15ea7-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84714-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="84714-121">See also</span></span>
 
-- [<span data-ttu-id="15ea7-122">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="15ea7-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="15ea7-123">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="15ea7-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="15ea7-124">分析</span><span class="sxs-lookup"><span data-stu-id="15ea7-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="84714-122">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="84714-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="84714-123">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="84714-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="84714-124">分析</span><span class="sxs-lookup"><span data-stu-id="84714-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

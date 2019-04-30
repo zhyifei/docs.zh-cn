@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfca06c656f3274f4c5ddb06373a0296dc5e6905
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995184"
 ---
-# <a name="icordebugmanagedcallbackloadmodule-method"></a><span data-ttu-id="d5cb4-102">ICorDebugManagedCallback::LoadModule 方法</span><span class="sxs-lookup"><span data-stu-id="d5cb4-102">ICorDebugManagedCallback::LoadModule Method</span></span>
-<span data-ttu-id="d5cb4-103">通知调试器已成功加载了公共语言运行时 (CLR) 模块。</span><span class="sxs-lookup"><span data-stu-id="d5cb4-103">Notifies the debugger that a common language runtime (CLR) module has been successfully loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadmodule-method"></a><span data-ttu-id="4a2b6-102">ICorDebugManagedCallback::LoadModule 方法</span><span class="sxs-lookup"><span data-stu-id="4a2b6-102">ICorDebugManagedCallback::LoadModule Method</span></span>
+<span data-ttu-id="4a2b6-103">通知调试器已成功加载了公共语言运行时 (CLR) 模块。</span><span class="sxs-lookup"><span data-stu-id="4a2b6-103">Notifies the debugger that a common language runtime (CLR) module has been successfully loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5cb4-104">语法</span><span class="sxs-lookup"><span data-stu-id="d5cb4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a2b6-104">语法</span><span class="sxs-lookup"><span data-stu-id="4a2b6-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadModule (  
@@ -36,26 +36,26 @@ HRESULT LoadModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d5cb4-105">参数</span><span class="sxs-lookup"><span data-stu-id="d5cb4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4a2b6-105">参数</span><span class="sxs-lookup"><span data-stu-id="4a2b6-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="d5cb4-106">[in]指向一个 ICorDebugAppDomain 对象，表示在其中加载的模块的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="d5cb4-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the module has been loaded.</span></span>  
+ <span data-ttu-id="4a2b6-106">[in]指向一个 ICorDebugAppDomain 对象，表示在其中加载的模块的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="4a2b6-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the module has been loaded.</span></span>  
   
  `pModule`  
- <span data-ttu-id="d5cb4-107">[in]指向一个 icor 调试模块对象，表示 CLR 模块的指针。</span><span class="sxs-lookup"><span data-stu-id="d5cb4-107">[in] A pointer to an ICorDebugModule object that represents the CLR module.</span></span>  
+ <span data-ttu-id="4a2b6-107">[in]指向一个 icor 调试模块对象，表示 CLR 模块的指针。</span><span class="sxs-lookup"><span data-stu-id="4a2b6-107">[in] A pointer to an ICorDebugModule object that represents the CLR module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d5cb4-108">备注</span><span class="sxs-lookup"><span data-stu-id="d5cb4-108">Remarks</span></span>  
- <span data-ttu-id="d5cb4-109">`LoadModule`回调提供适当的时间来检查模块的元数据、 设置在实时 (JIT) 编译器标志，或启用或禁用类加载模块的回调。</span><span class="sxs-lookup"><span data-stu-id="d5cb4-109">The `LoadModule` callback provides an appropriate time to examine metadata for the module, set just-in-time (JIT) compiler flags, or enable or disable class loading callbacks for the module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4a2b6-108">备注</span><span class="sxs-lookup"><span data-stu-id="4a2b6-108">Remarks</span></span>  
+ <span data-ttu-id="4a2b6-109">`LoadModule`回调提供适当的时间来检查模块的元数据、 设置在实时 (JIT) 编译器标志，或启用或禁用类加载模块的回调。</span><span class="sxs-lookup"><span data-stu-id="4a2b6-109">The `LoadModule` callback provides an appropriate time to examine metadata for the module, set just-in-time (JIT) compiler flags, or enable or disable class loading callbacks for the module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5cb4-110">要求</span><span class="sxs-lookup"><span data-stu-id="d5cb4-110">Requirements</span></span>  
- <span data-ttu-id="d5cb4-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d5cb4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a2b6-110">要求</span><span class="sxs-lookup"><span data-stu-id="4a2b6-110">Requirements</span></span>  
+ <span data-ttu-id="4a2b6-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4a2b6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5cb4-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5cb4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4a2b6-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4a2b6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d5cb4-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5cb4-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4a2b6-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a2b6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5cb4-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5cb4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4a2b6-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a2b6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5cb4-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="d5cb4-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a2b6-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="4a2b6-115">See also</span></span>
 
-- [<span data-ttu-id="d5cb4-116">UnloadModule 方法</span><span class="sxs-lookup"><span data-stu-id="d5cb4-116">UnloadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
-- [<span data-ttu-id="d5cb4-117">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="d5cb4-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="4a2b6-116">UnloadModule 方法</span><span class="sxs-lookup"><span data-stu-id="4a2b6-116">UnloadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
+- [<span data-ttu-id="4a2b6-117">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="4a2b6-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

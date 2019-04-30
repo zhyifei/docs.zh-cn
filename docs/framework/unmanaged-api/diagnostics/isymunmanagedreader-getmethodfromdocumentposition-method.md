@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4ed13397748b2668c275b221e38bd75c0dd37f03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969177"
 ---
-# <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a><span data-ttu-id="862e1-102">ISymUnmanagedReader::GetMethodFromDocumentPosition 方法</span><span class="sxs-lookup"><span data-stu-id="862e1-102">ISymUnmanagedReader::GetMethodFromDocumentPosition Method</span></span>
-<span data-ttu-id="862e1-103">返回包含在文档中的给定位置处的断点的方法。</span><span class="sxs-lookup"><span data-stu-id="862e1-103">Returns the method that contains the breakpoint at the given position in a document.</span></span>  
+# <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a><span data-ttu-id="54fb2-102">ISymUnmanagedReader::GetMethodFromDocumentPosition 方法</span><span class="sxs-lookup"><span data-stu-id="54fb2-102">ISymUnmanagedReader::GetMethodFromDocumentPosition Method</span></span>
+<span data-ttu-id="54fb2-103">返回包含在文档中的给定位置处的断点的方法。</span><span class="sxs-lookup"><span data-stu-id="54fb2-103">Returns the method that contains the breakpoint at the given position in a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="862e1-104">语法</span><span class="sxs-lookup"><span data-stu-id="862e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54fb2-104">语法</span><span class="sxs-lookup"><span data-stu-id="54fb2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodFromDocumentPosition (  
@@ -37,25 +37,25 @@ HRESULT GetMethodFromDocumentPosition (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="862e1-105">参数</span><span class="sxs-lookup"><span data-stu-id="862e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="54fb2-105">参数</span><span class="sxs-lookup"><span data-stu-id="54fb2-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="862e1-106">[in]指定的文档。</span><span class="sxs-lookup"><span data-stu-id="862e1-106">[in] The specified document.</span></span>  
+ <span data-ttu-id="54fb2-106">[in]指定的文档。</span><span class="sxs-lookup"><span data-stu-id="54fb2-106">[in] The specified document.</span></span>  
   
  `line`  
- <span data-ttu-id="862e1-107">[in]指定文档的行。</span><span class="sxs-lookup"><span data-stu-id="862e1-107">[in] The line of the specified document.</span></span>  
+ <span data-ttu-id="54fb2-107">[in]指定文档的行。</span><span class="sxs-lookup"><span data-stu-id="54fb2-107">[in] The line of the specified document.</span></span>  
   
  `column`  
- <span data-ttu-id="862e1-108">[in]指定文档的列。</span><span class="sxs-lookup"><span data-stu-id="862e1-108">[in] The column of the specified document.</span></span>  
+ <span data-ttu-id="54fb2-108">[in]指定文档的列。</span><span class="sxs-lookup"><span data-stu-id="54fb2-108">[in] The column of the specified document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="862e1-109">[out]指向的地址的指针[ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)对象，表示包含断点的方法。</span><span class="sxs-lookup"><span data-stu-id="862e1-109">[out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.</span></span>  
+ <span data-ttu-id="54fb2-109">[out]指向的地址的指针[ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)对象，表示包含断点的方法。</span><span class="sxs-lookup"><span data-stu-id="54fb2-109">[out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="862e1-110">返回值</span><span class="sxs-lookup"><span data-stu-id="862e1-110">Return Value</span></span>  
- <span data-ttu-id="862e1-111">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="862e1-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="54fb2-110">返回值</span><span class="sxs-lookup"><span data-stu-id="54fb2-110">Return Value</span></span>  
+ <span data-ttu-id="54fb2-111">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="54fb2-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="862e1-112">要求</span><span class="sxs-lookup"><span data-stu-id="862e1-112">Requirements</span></span>  
- <span data-ttu-id="862e1-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="862e1-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54fb2-112">要求</span><span class="sxs-lookup"><span data-stu-id="54fb2-112">Requirements</span></span>  
+ <span data-ttu-id="54fb2-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="54fb2-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="862e1-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="862e1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54fb2-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="54fb2-114">See also</span></span>
 
-- [<span data-ttu-id="862e1-115">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="862e1-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="54fb2-115">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="54fb2-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c2725c62105e92996bb2d8e79e8ff504904e9c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948715"
 ---
-# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="b0ce0-102">ICorDebugProcess5::GetTypeFields 方法</span><span class="sxs-lookup"><span data-stu-id="b0ce0-102">ICorDebugProcess5::GetTypeFields Method</span></span>
-<span data-ttu-id="b0ce0-103">提供有关属于一种类型的字段信息。</span><span class="sxs-lookup"><span data-stu-id="b0ce0-103">Provides information about the fields that belong to a type.</span></span>  
+# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="bf008-102">ICorDebugProcess5::GetTypeFields 方法</span><span class="sxs-lookup"><span data-stu-id="bf008-102">ICorDebugProcess5::GetTypeFields Method</span></span>
+<span data-ttu-id="bf008-103">提供有关属于一种类型的字段信息。</span><span class="sxs-lookup"><span data-stu-id="bf008-103">Provides information about the fields that belong to a type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0ce0-104">语法</span><span class="sxs-lookup"><span data-stu-id="b0ce0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf008-104">语法</span><span class="sxs-lookup"><span data-stu-id="bf008-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeFields(  
@@ -38,32 +38,32 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0ce0-105">参数</span><span class="sxs-lookup"><span data-stu-id="b0ce0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bf008-105">参数</span><span class="sxs-lookup"><span data-stu-id="bf008-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="b0ce0-106">[in]检索其字段信息的类型的标识符。</span><span class="sxs-lookup"><span data-stu-id="b0ce0-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
+ <span data-ttu-id="bf008-106">[in]检索其字段信息的类型的标识符。</span><span class="sxs-lookup"><span data-stu-id="bf008-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
   
  `celt`  
- <span data-ttu-id="b0ce0-107">[in]数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)其字段信息是要检索的对象。</span><span class="sxs-lookup"><span data-stu-id="b0ce0-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
+ <span data-ttu-id="bf008-107">[in]数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)其字段信息是要检索的对象。</span><span class="sxs-lookup"><span data-stu-id="bf008-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
   
  `fields`  
- <span data-ttu-id="b0ce0-108">[out]一个数组[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)对象，它提供有关属于该类型的字段的信息。</span><span class="sxs-lookup"><span data-stu-id="b0ce0-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
+ <span data-ttu-id="bf008-108">[out]一个数组[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)对象，它提供有关属于该类型的字段的信息。</span><span class="sxs-lookup"><span data-stu-id="bf008-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
   
  `pceltNeeded`  
- <span data-ttu-id="b0ce0-109">[out]指向数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)中包含的对象`fields`。</span><span class="sxs-lookup"><span data-stu-id="b0ce0-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
+ <span data-ttu-id="bf008-109">[out]指向数[COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md)中包含的对象`fields`。</span><span class="sxs-lookup"><span data-stu-id="bf008-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0ce0-110">备注</span><span class="sxs-lookup"><span data-stu-id="b0ce0-110">Remarks</span></span>  
- <span data-ttu-id="b0ce0-111">`celt`参数，用于指定该方法用来填充其字段信息的字段数目`fields`，应与对应的值`COR_TYPE_LAYOUT::numFields`字段。</span><span class="sxs-lookup"><span data-stu-id="b0ce0-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bf008-110">备注</span><span class="sxs-lookup"><span data-stu-id="bf008-110">Remarks</span></span>  
+ <span data-ttu-id="bf008-111">`celt`参数，用于指定该方法用来填充其字段信息的字段数目`fields`，应与对应的值`COR_TYPE_LAYOUT::numFields`字段。</span><span class="sxs-lookup"><span data-stu-id="bf008-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0ce0-112">要求</span><span class="sxs-lookup"><span data-stu-id="b0ce0-112">Requirements</span></span>  
- <span data-ttu-id="b0ce0-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b0ce0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf008-112">要求</span><span class="sxs-lookup"><span data-stu-id="bf008-112">Requirements</span></span>  
+ <span data-ttu-id="bf008-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bf008-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0ce0-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0ce0-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bf008-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bf008-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b0ce0-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0ce0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bf008-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf008-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0ce0-116">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0ce0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="bf008-116">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf008-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0ce0-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="b0ce0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf008-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="bf008-117">See also</span></span>
 
-- [<span data-ttu-id="b0ce0-118">ICorDebugProcess5 接口</span><span class="sxs-lookup"><span data-stu-id="b0ce0-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="b0ce0-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="b0ce0-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="bf008-118">ICorDebugProcess5 接口</span><span class="sxs-lookup"><span data-stu-id="bf008-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="bf008-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="bf008-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

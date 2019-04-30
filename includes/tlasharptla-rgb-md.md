@@ -1,1 +1,9 @@
-<span data-ttu-id="88cd1-101">RGB</span><span class="sxs-lookup"><span data-stu-id="88cd1-101">RGB</span></span>
+---
+ms.openlocfilehash: df447551b3bb65ff6caf663b288904709cbe550e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62087737"
+---
+<span data-ttu-id="74e09-101">RGB</span><span class="sxs-lookup"><span data-stu-id="74e09-101">RGB</span></span>

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045534"
 ---
-# <a name="corpekind-enumeration"></a><span data-ttu-id="3a1ef-102">CorPEKind 枚举</span><span class="sxs-lookup"><span data-stu-id="3a1ef-102">CorPEKind Enumeration</span></span>
-<span data-ttu-id="3a1ef-103">包含值，用于描述一个可移植可执行 (PE) 文件，如从调用返回[IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
+# <a name="corpekind-enumeration"></a><span data-ttu-id="154a1-102">CorPEKind 枚举</span><span class="sxs-lookup"><span data-stu-id="154a1-102">CorPEKind Enumeration</span></span>
+<span data-ttu-id="154a1-103">包含值，用于描述一个可移植可执行 (PE) 文件，如从调用返回[IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)。</span><span class="sxs-lookup"><span data-stu-id="154a1-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a1ef-104">语法</span><span class="sxs-lookup"><span data-stu-id="3a1ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="154a1-104">语法</span><span class="sxs-lookup"><span data-stu-id="154a1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorPEKind {  
@@ -41,27 +41,27 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3a1ef-105">成员</span><span class="sxs-lookup"><span data-stu-id="3a1ef-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="154a1-105">成员</span><span class="sxs-lookup"><span data-stu-id="154a1-105">Members</span></span>  
   
-|<span data-ttu-id="3a1ef-106">成员</span><span class="sxs-lookup"><span data-stu-id="3a1ef-106">Member</span></span>|<span data-ttu-id="3a1ef-107">描述</span><span class="sxs-lookup"><span data-stu-id="3a1ef-107">Description</span></span>|  
+|<span data-ttu-id="154a1-106">成员</span><span class="sxs-lookup"><span data-stu-id="154a1-106">Member</span></span>|<span data-ttu-id="154a1-107">描述</span><span class="sxs-lookup"><span data-stu-id="154a1-107">Description</span></span>|  
 |------------|-----------------|  
-|`peNot`|<span data-ttu-id="3a1ef-108">指示这不是 PE 文件。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-108">Indicates that this is not a PE file.</span></span>|  
-|`peILOnly`|<span data-ttu-id="3a1ef-109">指示此 PE 文件包含仅托管代码。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-109">Indicates that this PE file contains only managed code.</span></span>|  
-|`pe32BitRequired`|<span data-ttu-id="3a1ef-110">指示此 PE 文件进行 Win32 调用。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-110">Indicates that this PE file makes Win32 calls.</span></span>|  
-|`pe32Plus`|<span data-ttu-id="3a1ef-111">指示此 PE 文件在 64 位平台上运行。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
-|`pe32Unmanaged`|<span data-ttu-id="3a1ef-112">指示此 PE 文件是本机代码。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-112">Indicates that this PE file is native code.</span></span>|  
-|<span data-ttu-id="3a1ef-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="3a1ef-113">pe32BitPreferred</span></span>|<span data-ttu-id="3a1ef-114">指示此 PE 文件与平台无关，并且更适合于创建要在 32 位环境中加载。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
+|`peNot`|<span data-ttu-id="154a1-108">指示这不是 PE 文件。</span><span class="sxs-lookup"><span data-stu-id="154a1-108">Indicates that this is not a PE file.</span></span>|  
+|`peILOnly`|<span data-ttu-id="154a1-109">指示此 PE 文件包含仅托管代码。</span><span class="sxs-lookup"><span data-stu-id="154a1-109">Indicates that this PE file contains only managed code.</span></span>|  
+|`pe32BitRequired`|<span data-ttu-id="154a1-110">指示此 PE 文件进行 Win32 调用。</span><span class="sxs-lookup"><span data-stu-id="154a1-110">Indicates that this PE file makes Win32 calls.</span></span>|  
+|`pe32Plus`|<span data-ttu-id="154a1-111">指示此 PE 文件在 64 位平台上运行。</span><span class="sxs-lookup"><span data-stu-id="154a1-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
+|`pe32Unmanaged`|<span data-ttu-id="154a1-112">指示此 PE 文件是本机代码。</span><span class="sxs-lookup"><span data-stu-id="154a1-112">Indicates that this PE file is native code.</span></span>|  
+|<span data-ttu-id="154a1-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="154a1-113">pe32BitPreferred</span></span>|<span data-ttu-id="154a1-114">指示此 PE 文件与平台无关，并且更适合于创建要在 32 位环境中加载。</span><span class="sxs-lookup"><span data-stu-id="154a1-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3a1ef-115">备注</span><span class="sxs-lookup"><span data-stu-id="3a1ef-115">Remarks</span></span>  
- <span data-ttu-id="3a1ef-116">按位组合中，可以使用这些值。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-116">These values can be used in bitwise combinations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="154a1-115">备注</span><span class="sxs-lookup"><span data-stu-id="154a1-115">Remarks</span></span>  
+ <span data-ttu-id="154a1-116">按位组合中，可以使用这些值。</span><span class="sxs-lookup"><span data-stu-id="154a1-116">These values can be used in bitwise combinations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a1ef-117">要求</span><span class="sxs-lookup"><span data-stu-id="3a1ef-117">Requirements</span></span>  
- <span data-ttu-id="3a1ef-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3a1ef-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="154a1-117">要求</span><span class="sxs-lookup"><span data-stu-id="154a1-117">Requirements</span></span>  
+ <span data-ttu-id="154a1-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="154a1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3a1ef-119">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="3a1ef-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="154a1-119">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="154a1-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="3a1ef-120">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a1ef-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="154a1-120">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="154a1-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a1ef-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="3a1ef-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="154a1-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="154a1-121">See also</span></span>
 
-- [<span data-ttu-id="3a1ef-122">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="3a1ef-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="154a1-122">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="154a1-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
