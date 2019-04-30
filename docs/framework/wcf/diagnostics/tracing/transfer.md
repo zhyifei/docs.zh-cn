@@ -3,11 +3,11 @@ title: 传输
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964484"
 ---
 # <a name="transfer"></a>传输
 本主题介绍 Windows Communication Foundation (WCF) 活动跟踪模型中的传输。  
@@ -35,9 +35,9 @@ ms.locfileid: "59311014"
 ## <a name="example-of-transfers"></a>传输示例  
  下面列出了两个传输示例。  
   
--   在创建服务主机时，构造函数将从调用代码获得控制权，或者调用代码将控制权转移给构造函数。 构造函数执行完时，它将控制权返回给调用代码，或者构造函数将控制权转移回调用代码。 这是嵌套关系时的情况。  
+- 在创建服务主机时，构造函数将从调用代码获得控制权，或者调用代码将控制权转移给构造函数。 构造函数执行完时，它将控制权返回给调用代码，或者构造函数将控制权转移回调用代码。 这是嵌套关系时的情况。  
   
--   侦听器开始处理传输数据时，它将创建一个新线程，并将相应的上下文传递到“接收字节”活动进行处理，并且传递控制权和数据。 该线程处理完请求后，接收字节活动不向侦听器传回任何内容。 在这种情况下，有传入的新线程活动而没有传出的新线程活动。 这两个活动相关，但不是嵌套关系。  
+- 侦听器开始处理传输数据时，它将创建一个新线程，并将相应的上下文传递到“接收字节”活动进行处理，并且传递控制权和数据。 该线程处理完请求后，接收字节活动不向侦听器传回任何内容。 在这种情况下，有传入的新线程活动而没有传出的新线程活动。 这两个活动相关，但不是嵌套关系。  
   
 ## <a name="activity-transfer-sequence"></a>活动传输序列  
  格式正确的活动传输序列包含下列步骤。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973723"
 ---
 # <a name="tilebrush-overview"></a>TileBrush 概述
 <xref:System.Windows.Media.TileBrush> 对象提供对如何使用图像、 绘制区域的控制自如地<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。 本主题介绍如何使用<xref:System.Windows.Media.TileBrush>功能来获得更好地控制如何<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>绘制区域。  
@@ -40,11 +40,11 @@ ms.locfileid: "59125290"
 ## <a name="brush-content"></a>画笔内容  
  有三种不同类型的<xref:System.Windows.Media.TileBrush>和每个不同类型的内容与绘制。  
   
--   如果画笔为<xref:System.Windows.Media.ImageBrush>，此内容是一个图像<xref:System.Windows.Media.ImageBrush.ImageSource%2A>属性指定的内容<xref:System.Windows.Media.ImageBrush>。  
+- 如果画笔为<xref:System.Windows.Media.ImageBrush>，此内容是一个图像<xref:System.Windows.Media.ImageBrush.ImageSource%2A>属性指定的内容<xref:System.Windows.Media.ImageBrush>。  
   
--   如果画笔为<xref:System.Windows.Media.DrawingBrush>，此内容为绘图。 <xref:System.Windows.Media.DrawingBrush.Drawing%2A>属性指定的内容<xref:System.Windows.Media.DrawingBrush>。  
+- 如果画笔为<xref:System.Windows.Media.DrawingBrush>，此内容为绘图。 <xref:System.Windows.Media.DrawingBrush.Drawing%2A>属性指定的内容<xref:System.Windows.Media.DrawingBrush>。  
   
--   如果画笔为<xref:System.Windows.Media.VisualBrush>，此内容为视觉对象。 <xref:System.Windows.Media.VisualBrush.Visual%2A>属性指定的内容<xref:System.Windows.Media.VisualBrush>。  
+- 如果画笔为<xref:System.Windows.Media.VisualBrush>，此内容为视觉对象。 <xref:System.Windows.Media.VisualBrush.Visual%2A>属性指定的内容<xref:System.Windows.Media.VisualBrush>。  
   
  可以指定的位置和尺寸<xref:System.Windows.Media.TileBrush>通过使用内容<xref:System.Windows.Media.TileBrush.Viewbox%2A>属性，尽管通常会保留<xref:System.Windows.Media.TileBrush.Viewbox%2A>设置为其默认值。 默认情况下，<xref:System.Windows.Media.TileBrush.Viewbox%2A>配置为完全包含画笔的内容。 有关配置详细信息<xref:System.Windows.Controls.Viewbox>，请参阅<xref:System.Windows.Controls.Viewbox>属性页。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "59125290"
 ## <a name="the-base-tile"></a>基本图块  
  一个<xref:System.Windows.Media.TileBrush>其内容投射到基本图块。 <xref:System.Windows.Media.TileBrush.Stretch%2A>属性控制如何<xref:System.Windows.Media.TileBrush>拉伸内容以填充基本图块。 <xref:System.Windows.Media.TileBrush.Stretch%2A>属性接受以下值，通过定义<xref:System.Windows.Media.Stretch>枚举：  
   
--   <xref:System.Windows.Media.Stretch.None>：画笔的内容未拉伸以填充磁贴。  
+- <xref:System.Windows.Media.Stretch.None>：画笔的内容未拉伸以填充磁贴。  
   
--   <xref:System.Windows.Media.Stretch.Fill>：画笔的内容进行缩放以适合图块。 由于内容的高度和宽度独立进行缩放，因此内容的原始纵横比可能不会保留。 也就是说，为了完全填充输出图块，画笔的内容可能会弯曲。  
+- <xref:System.Windows.Media.Stretch.Fill>：画笔的内容进行缩放以适合图块。 由于内容的高度和宽度独立进行缩放，因此内容的原始纵横比可能不会保留。 也就是说，为了完全填充输出图块，画笔的内容可能会弯曲。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>：缩放画笔的内容，使其完全符合该磁贴。 内容的纵横比会保留。  
+- <xref:System.Windows.Media.Stretch.Uniform>：缩放画笔的内容，使其完全符合该磁贴。 内容的纵横比会保留。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>：缩放画笔的内容，使其在保留内容的原始纵横比的同时完全填充输出区域。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>：缩放画笔的内容，使其在保留内容的原始纵横比的同时完全填充输出区域。  
   
  下图阐释了不同<xref:System.Windows.Media.TileBrush.Stretch%2A>设置。  
   
@@ -99,15 +99,15 @@ ms.locfileid: "59125290"
 ### <a name="tiling-behavior"></a>平铺行为  
  一个<xref:System.Windows.Media.TileBrush>其基本图块未完全填充输出区域和其他然后平铺模式时生成的平铺的模式<xref:System.Windows.Media.TileMode.None>指定。 当平铺画笔的图块未完全填充输出区域，其<xref:System.Windows.Media.TileBrush.TileMode%2A>属性指定是否应复制基本图块，以填充输出区域，指定如果是这样，都应复制基本图块的方式。 <xref:System.Windows.Media.TileBrush.TileMode%2A>属性接受以下值，通过定义<xref:System.Windows.Media.TileMode>枚举：  
   
--   <xref:System.Windows.Media.TileMode.None>：仅在基本图块绘制。  
+- <xref:System.Windows.Media.TileMode.None>：仅在基本图块绘制。  
   
--   <xref:System.Windows.Media.TileMode.Tile>：绘制基本图块，并通过重复基本磁贴，这样，一个磁贴的右边缘旁边的左边缘的下一步，并同样边缘和上填充剩余的区域。  
+- <xref:System.Windows.Media.TileMode.Tile>：绘制基本图块，并通过重复基本磁贴，这样，一个磁贴的右边缘旁边的左边缘的下一步，并同样边缘和上填充剩余的区域。  
   
--   <xref:System.Windows.Media.TileMode.FlipX>：与相同<xref:System.Windows.Media.TileMode.Tile>，只不过磁贴的交替列水平翻转。  
+- <xref:System.Windows.Media.TileMode.FlipX>：与相同<xref:System.Windows.Media.TileMode.Tile>，只不过磁贴的交替列水平翻转。  
   
--   <xref:System.Windows.Media.TileMode.FlipY>：与相同<xref:System.Windows.Media.TileMode.Tile>，只不过磁贴的交替行垂直翻转。  
+- <xref:System.Windows.Media.TileMode.FlipY>：与相同<xref:System.Windows.Media.TileMode.Tile>，只不过磁贴的交替行垂直翻转。  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>：<xref:System.Windows.Media.TileMode.FlipX> 和 <xref:System.Windows.Media.TileMode.FlipY> 的组合。  
+- <xref:System.Windows.Media.TileMode.FlipXY>：<xref:System.Windows.Media.TileMode.FlipX> 和 <xref:System.Windows.Media.TileMode.FlipY> 的组合。  
   
  下图阐释了不同的平铺模式。  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
 ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960896"
 ---
 # <a name="application-settings-for-custom-controls"></a>自定义控件的应用程序设置
 必须完成某些任务，以使能够保持应用程序设置时的控件都承载在第三方应用程序中的自定义控件。  

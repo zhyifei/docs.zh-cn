@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972349"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows 窗体设计器中的设计时错误
 本主题说明 Windows 窗体设计器加载失败时出现在 Microsoft Visual Studio 中的设计时错误列表的含义和用法。 如果出现此错误列表，则不应将其视为设计器中的 Bug，而应作为纠正代码中的错误的辅助手段。  
@@ -25,11 +25,11 @@ ms.locfileid: "59213137"
   
  通过单击错误类别标题或单击 V 形展开/折叠按钮，可展开或折叠错误类别。 展开错误类别时，将显示以下附加帮助信息：  
   
--   此错误的实例。  
+- 此错误的实例。  
   
--   有关此错误的帮助。  
+- 有关此错误的帮助。  
   
--   有关此错误的论坛帖子。  
+- 有关此错误的论坛帖子。  
   
 ### <a name="instances-of-this-error"></a>此错误的实例  
  附加帮助信息中列出了当前项目中所含错误的所有实例。 许多错误包含用以下格式表示的确切位置：[项目名称] [窗体名称] 行:[行号] 列:[列号]。 单击“转到代码”链接可跳转到代码中发生错误的位置。  
@@ -45,9 +45,9 @@ ms.locfileid: "59213137"
 ### <a name="forum-posts-about-this-error"></a>有关此错误的论坛帖子  
  附加帮助信息包含一个指向与该错误相关的 MSDN 论坛帖子的链接。 将基于错误消息字符串来搜索论坛。 还可尝试搜索以下论坛：  
   
--   [Windows 窗体设计器论坛](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Windows 窗体设计器论坛](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows 窗体论坛](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Windows 窗体论坛](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>忽略并继续  
  可选择忽略错误条件并继续加载设计器。 选择此操作可能会导致意外行为。 例如，控件可能不会显示在设计图面上。  

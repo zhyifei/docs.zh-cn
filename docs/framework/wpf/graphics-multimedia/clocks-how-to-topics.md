@@ -10,11 +10,11 @@ helpviewer_keywords:
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
 ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970958"
 ---
 # <a name="clocks-how-to-topics"></a>时钟帮助主题
 以下主题介绍如何使用<xref:System.Windows.Media.Animation.Clock>对象来维护计时的状态信息<xref:System.Windows.Media.Animation.Timeline>。  

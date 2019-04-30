@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000579"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 接口
 提供了一些方法，可由代码探查器用于与公共语言运行时 (CLR) 通信，从而控制事件监视并请求信息。 `ICorProfilerInfo3`接口是的扩展[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)接口。 它提供在 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 及更高版本中受支持的新方法。  

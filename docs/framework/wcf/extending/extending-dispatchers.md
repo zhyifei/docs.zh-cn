@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967606"
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
 调度程序负责从基础通道提取出传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。  
@@ -40,37 +40,37 @@ ms.locfileid: "59335025"
 ## <a name="scenarios"></a>方案  
  可以有很多理由来扩展调度程序：  
   
--   自定义消息验证。 用户可以强制消息对某个架构有效。 这可以通过实现消息拦截器接口来完成。 有关示例，请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)。  
+- 自定义消息验证。 用户可以强制消息对某个架构有效。 这可以通过实现消息拦截器接口来完成。 有关示例，请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)。  
   
--   自定义消息日志记录。 用户可以检查并记录流过某个终结点的应用程序消息集。 此操作也可以使用消息拦截器接口完成。  
+- 自定义消息日志记录。 用户可以检查并记录流过某个终结点的应用程序消息集。 此操作也可以使用消息拦截器接口完成。  
   
--   自定义消息转换。 用户可以在运行时对消息应用某些转换（例如，用于版本控制）。 此操作也可以使用消息拦截器接口完成。  
+- 自定义消息转换。 用户可以在运行时对消息应用某些转换（例如，用于版本控制）。 此操作也可以使用消息拦截器接口完成。  
   
--   自定义数据模型。 用户可以不支持默认情况下，WCF 中的数据序列化模型 (即<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>， <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>，和原始消息)。 这可以通过实现消息格式化程序接口来完成。 有关示例，请参阅[操作格式化程序和操作选择器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。  
+- 自定义数据模型。 用户可以不支持默认情况下，WCF 中的数据序列化模型 (即<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>， <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>，和原始消息)。 这可以通过实现消息格式化程序接口来完成。 有关示例，请参阅[操作格式化程序和操作选择器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。  
   
--   自定义参数验证。 用户可以强制类型化参数有效（与 XML 相对）。 可以使用参数检查器来完成此操作。  
+- 自定义参数验证。 用户可以强制类型化参数有效（与 XML 相对）。 可以使用参数检查器来完成此操作。  
   
--   自定义操作调度。 用户可以对操作之外的内容（例如，对正文元素或自定义消息属性）实现调度。 这可以使用 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 接口来完成。 有关示例，请参阅[操作格式化程序和操作选择器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。  
+- 自定义操作调度。 用户可以对操作之外的内容（例如，对正文元素或自定义消息属性）实现调度。 这可以使用 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 接口来完成。 有关示例，请参阅[操作格式化程序和操作选择器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)。  
   
--   对象池。 用户可以将实例放入池中，而不是为每个调用分配一个新的实例。 这可以使用实例提供程序接口来实现。 有关示例，请参阅[池](../../../../docs/framework/wcf/samples/pooling.md)。  
+- 对象池。 用户可以将实例放入池中，而不是为每个调用分配一个新的实例。 这可以使用实例提供程序接口来实现。 有关示例，请参阅[池](../../../../docs/framework/wcf/samples/pooling.md)。  
   
--   实例租约。 用户可以实现实例生存期的租约模式，类似于 .NET Framework 远程处理的租约模式。 这可以使用实例上下文生存期接口来完成。  
+- 实例租约。 用户可以实现实例生存期的租约模式，类似于 .NET Framework 远程处理的租约模式。 这可以使用实例上下文生存期接口来完成。  
   
--   自定义错误处理。 用户可以控制如何处理两个本地错误以及如何将错误发送回客户端。 这可以使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口来实现。  
+- 自定义错误处理。 用户可以控制如何处理两个本地错误以及如何将错误发送回客户端。 这可以使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口来实现。  
   
--   自定义授权行为。 通过扩展“协定”或“操作”的运行时部分并添加基于消息中呈现的标记的安全检查，用户可以实现自定义访问控制。 这可以使用消息拦截器接口或参数拦截器接口来完成。 有关示例，请参阅[安全扩展性](../../../../docs/framework/wcf/samples/security-extensibility.md)。  
+- 自定义授权行为。 通过扩展“协定”或“操作”的运行时部分并添加基于消息中呈现的标记的安全检查，用户可以实现自定义访问控制。 这可以使用消息拦截器接口或参数拦截器接口来完成。 有关示例，请参阅[安全扩展性](../../../../docs/framework/wcf/samples/security-extensibility.md)。  
   
     > [!CAUTION]
     >  由于更改安全属性有可能危及安全的 WCF 应用程序，强烈建议您采取谨慎的与安全相关的修改，并在部署之前全面测试。  
   
--   自定义 WCF 运行时验证程序。 你可以安装自定义验证程序检查服务、 协定和绑定来强制实施有关 WCF 应用程序的企业级策略。 (有关示例，请参阅[如何：在企业中的锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。)  
+- 自定义 WCF 运行时验证程序。 你可以安装自定义验证程序检查服务、 协定和绑定来强制实施有关 WCF 应用程序的企业级策略。 (有关示例，请参阅[如何：在企业中的锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。)  
   
 ### <a name="using-the-dispatchruntime-class"></a>使用 DispatchRuntime 类  
  使用 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 类可修改服务或单个终结点的默认行为，或将实现自定义修改的对象插入到以下一个或全部两个服务进程中（对于双工客户端则为客户端进程）：  
   
--   将传入消息转换为对象并在服务对象上以方法调用形式释放这些对象。  
+- 将传入消息转换为对象并在服务对象上以方法调用形式释放这些对象。  
   
--   将响应服务操作调用后收到的对象转换为出站消息。  
+- 将响应服务操作调用后收到的对象转换为出站消息。  
   
  通过 <xref:System.ServiceModel.Dispatcher.DispatchRuntime>，即使在无法识别消息的情况下，您也可以为特定协定中的所有消息截获和扩展通道或终结点调度程序。 当到达的消息与协定中声明的任何消息均不匹配时，就会将该消息调度到由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A> 属性返回的操作。 若要截获或扩展针对特定操作的所有消息，请参见 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 类。  
   
@@ -84,17 +84,17 @@ ms.locfileid: "59335025"
   
 4. 与安全相关的组件可使用以下属性：  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 可指示写入审核事件的位置。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 可指示写入审核事件的位置。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 可控制服务是否尝试使用传入消息所提供的凭据进行模拟。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 可控制服务是否尝试使用传入消息所提供的凭据进行模拟。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 可控制是否将成功消息身份验证事件写入由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指定的事件日志。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 可控制是否将成功消息身份验证事件写入由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指定的事件日志。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 可控制如何设置 <xref:System.Threading.Thread.CurrentPrincipal%2A> 属性。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 可控制如何设置 <xref:System.Threading.Thread.CurrentPrincipal%2A> 属性。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 可指定如何执行授权事件的审核。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 可指定如何执行授权事件的审核。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 可指定是否要取消显示记录过程中出现的非关键异常。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 可指定是否要取消显示记录过程中出现的非关键异常。  
   
  通常，服务行为（可实现 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 的对象）、协定行为（可实现 <xref:System.ServiceModel.Description.IServiceBehavior> 的对象）或终结点行为（可实现 <xref:System.ServiceModel.Description.IContractBehavior> 的对象）会将自定义扩展对象分配给 <xref:System.ServiceModel.Description.IEndpointBehavior> 属性或将其插入集合。 然后，以编程方式或通过实现自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 对象来将安装行为对象添加到相应的行为集合中，这样便能使用应用程序配置文件插入该行为。  
   
@@ -109,23 +109,23 @@ ms.locfileid: "59335025"
   
  下面的属性控制操作级别上的运行时执行：  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> 属性可获取该操作的各个值。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> 属性可获取该操作的各个值。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> 指定事务行为。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> 指定事务行为。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> 属性可以控制用户定义的服务对象的、相对于 <xref:System.ServiceModel.InstanceContext> 的生存期。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> 属性可以控制用户定义的服务对象的、相对于 <xref:System.ServiceModel.InstanceContext> 的生存期。  
   
--   使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 属性可以显式控制从消息到对象以及从对象到消息的转换。  
+- 使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 属性可以显式控制从消息到对象以及从对象到消息的转换。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> 属性指定操作模拟级别。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> 属性指定操作模拟级别。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> 属性插入操作的自定义调用上下文扩展。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> 属性插入操作的自定义调用上下文扩展。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> 属性控制销毁参数对象的时间。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> 属性控制销毁参数对象的时间。  
   
--   使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> 属性可以插入自定义调用程序对象。  
+- 使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> 属性可以插入自定义调用程序对象。  
   
--   使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 属性可以插入自定义参数检查器，您可以使用该检查器来检查或修改参数以及返回值。  
+- 使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 属性可以插入自定义参数检查器，您可以使用该检查器来检查或修改参数以及返回值。  
   
 ## <a name="see-also"></a>请参阅
 

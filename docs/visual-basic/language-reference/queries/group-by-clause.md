@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945322"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 子句 (Visual Basic)
 对查询结果的元素进行分组。 也可用于将聚合函数应用于每个组。 分组运算基于一个或多个键。  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>部件  
   
--   `listField1`， `listField2`  
+- `listField1`， `listField2`  
   
      可选。 分组结果中将包括一个或多个显式标识字段的查询变量的一个或多个字段。 如果未指定字段，则分组结果中将包括一个或多个查询变量的所有字段。  
   
--   `keyExp1`  
+- `keyExp1`  
   
      必需。 标识键以用于确定元素所在的组的表达式。 可以指定多个键以形成组合键。  
   
--   `keyExp2`  
+- `keyExp2`  
   
      可选。 与 `keyExp1` 结合以形成组合键的一个或多个其他键。  
   
--   `aggregateList`  
+- `aggregateList`  
   
      必需。 标识如何对组进行聚合的一个或多个表达式。 若要标识分组结果的成员名称，请使用 `Group` 关键字，它可以采用以下任意一种形式：  
   

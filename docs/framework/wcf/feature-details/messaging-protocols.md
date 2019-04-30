@@ -3,11 +3,11 @@ title: 消息协议
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948117"
 ---
 # <a name="messaging-protocols"></a>消息协议
 
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) 通道堆栈采用编码和传输通道�
 - [XML](https://www.w3.org/TR/REC-xml)
 - [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [SOAP 1.2 核心](https://www.w3.org/TR/soap12-part1/)
-- [的 Ws-addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
+- [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
 - [W3C Web 服务寻址 1.0-核心](https://www.w3.org/TR/2006/REC-ws-addr-core-20060509)
 - [W3C Web 服务寻址 1.0-SOAP 绑定](https://www.w3.org/TR/2006/REC-ws-addr-soap-20060509)
 - [W3C Web 服务寻址 1.0-WSDL 绑定](https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/)
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) 通道堆栈采用编码和传输通道�
 | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
 | xop |`http://www.w3.org/2004/08/xop/include` |
 | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
-| 分发点 |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 和 SOAP 1.2
 
@@ -297,7 +297,7 @@ WCF 提供一项功能，通过这两个基础传输通道可构成一个复合�
 
 - R3516:请求消息发送到终结点必须有`ReplyTo`标头`[address]`属性等于`http://www.w3.org/2005/08/addressing/anonymous`如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备`wsap:UsingAddressing`断言，但不`cdp:CompositeDuplex`附加的断言。
 
-WS-addressing WSDL 规范力图描述类似协议绑定，它引入了一个带有 3 个文本值（required、optional 和 prohibited）的 `<wsaw:Anonymous/>` 元素来指示对 `wsa:ReplyTo` 标头的要求（第 3.2 节）。 遗憾的是，在 WS-Policy 的上下文中，这样的元素定义不特别适合用作断言，因为它要求使用特定于域的扩展来支持将此类元素用作断言的备选项的交集。 这样的元素定义还指示 `ReplyTo` 标头的值在传输时与终结点行为相反，这使它只能特定于 HTTP 传输。
+WS-addressing WSDL 规范力图描述类似协议绑定，它引入了一个带有 3 个文本值（required、optional 和 prohibited）的 `<wsaw:Anonymous/>` 元素来指示对 `wsa:ReplyTo` 标头的需求（第 3.2 节）。 遗憾的是，在 WS-Policy 的上下文中，这样的元素定义不特别适合用作断言，因为它要求使用特定于域的扩展来支持将此类元素用作断言的备选项的交集。 这样的元素定义还指示 `ReplyTo` 标头的值在传输时与终结点行为相反，这使它只能特定于 HTTP 传输。
 
 #### <a name="action-definition"></a>操作定义
 WS-Addressing 2004/08 为 `wsa:Action` 元素定义了一个 `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` 属性。 WS-Addressing 1.0 WSDL 绑定 (WS-ADDR10-WSDL) 定义了一个类似属性 `wsaw10:Action`。
@@ -388,7 +388,7 @@ Content-Length: 0
 
 就可以将 MTOM 用于非 HTTP 传输使用 WCF。 不过，在本主题中，我们将着重讨论 HTTP 上的应用。
 
-MTOM 格式利用了包含 MTOM 本身、XOP 以及 MIME 在内的大型规范集。 在某种程度上，此规范集的模块性使得重新构造格式和处理语义的确切要求变得有点困难。 本节介绍 MTOM HTTP 绑定的格式和处理要求。
+MTOM 格式利用了包含 MTOM 本身、XOP 以及 MIME 在内的大型规范集。 在某种程度上，此规范集的模块性使得重新构造格式和处理语义的确切需求变得有点困难。 本节介绍 MTOM HTTP 绑定的格式和处理需求。
 
 ### <a name="mtom-message-encoding"></a>MTOM 消息编码
 
@@ -407,7 +407,7 @@ MTOM 格式利用了包含 MTOM 本身、XOP 以及 MIME 在内的大型规范�
 
     1. 通过将被替换字符处理为 base64 编码的数据，将其转换为二进制数据。
 
-    2. 生成一个符合 R3133 和 R3134 要求的唯一 Content-ID 标头值。
+    2. 生成一个符合 R3133 和 R3134 需求的唯一 Content-ID 标头值。
 
     3. 生成一个具有二进制值的 Content-Transfer-Encoding MIME 标头。
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
 ms.openlocfilehash: cf4c23f385ba624befdc17c42145d20e184792b9
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009334"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>ToolStripStatusLabel 控件概述
 <xref:System.Windows.Forms.ToolStripStatusLabel>作为标签<xref:System.Windows.Forms.StatusStrip>。 像<xref:System.Windows.Forms.Label>或<xref:System.Windows.Forms.ToolStripLabel>，则<xref:System.Windows.Forms.ToolStripStatusLabel>为文本、 图像或同时提供非可单击的显示区域。 <xref:System.Windows.Forms.ToolStripStatusLabel>由承载<xref:System.Windows.Forms.StatusStrip>。  

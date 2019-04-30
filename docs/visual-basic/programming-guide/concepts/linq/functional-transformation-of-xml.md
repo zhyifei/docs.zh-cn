@@ -3,11 +3,11 @@ title: XML (Visual Basic 中) 的功能转换
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 62edd7adf425f8a36128497a6dae445a3e9cbfc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968475"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>XML (Visual Basic 中) 的功能转换
 本主题讨论用于修改 XML 文档的纯函数转换方法，并将该方法与过程方法进行比较。  
@@ -15,11 +15,11 @@ ms.locfileid: "54609416"
 ## <a name="modifying-an-xml-document"></a>修改 XML 文档  
  对 XML 程序员来说，最常见的任务之一就是将 XML 从一种形状转换为另一种形状。 XML 文档的形状就是文档的结构，包括下列内容：  
   
--   文档所表达的层次结构。  
+- 文档所表达的层次结构。  
   
--   元素和属性的名称。  
+- 元素和属性的名称。  
   
--   元素和属性的数据类型。  
+- 元素和属性的数据类型。  
   
  通常，将 XML 从一种形状转换为另一种形状的最有效方法是纯函数转换方法。 在这种方法中，程序员的主要任务是创建一个转换，该转换将应用到整个 XML 文档（或应用到一个或多个严格定义的节点）。 可以说，函数转换最容易进行编码（如果程序员熟悉这种方法），生成的代码最容易维护，并且相比其他方法通常更加简洁。  
   

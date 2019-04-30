@@ -22,18 +22,18 @@ helpviewer_keywords:
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955618"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>如何：拆分和合并语句中的代码 (Visual Basic)
 编写你的代码时，可能有时创建耗时较长的语句都必须采取措施水平滚动代码编辑器中。 尽管这不会影响的方式运行代码，它使得您或任何其他人无法读取代码在监视器上显示。 在这种情况下，应考虑将单个的长语句分成多个行。  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>若要拆分为多行的一条语句  
   
--   使用行继续符，它是一个下划线 (`_`)，在想要中断的行的点。 该下划线必须紧跟在空格后，并且在它后面紧跟行终止符（回车）。  
+- 使用行继续符，它是一个下划线 (`_`)，在想要中断的行的点。 该下划线必须紧跟在空格后，并且在它后面紧跟行终止符（回车）。  
   
     > [!NOTE]
     >  在某些情况下，如果您忽略行继续符，Visual Basic 编译器将隐式 continue 语句在下一行代码上。 可以为其省略行继续符的语法元素的列表，请参阅"隐式行继续符"中的[语句](../../../visual-basic/programming-guide/language-features/statements.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "58837702"
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>若要将多个语句置于同一行上  
   
--   用冒号分隔的语句 (`:`)，如下面的示例。  
+- 用冒号分隔的语句 (`:`)，如下面的示例。  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

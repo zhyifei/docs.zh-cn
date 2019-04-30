@@ -3,11 +3,11 @@ title: 符号和运算符参考
 description: 了解符号和运算符中使用F#编程语言。
 ms.date: 02/11/2019
 ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982731"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -143,7 +143,7 @@ ms.locfileid: "56092938"
 |`f x`（函数应用程序）|左侧|
 |<code>&#124;</code> （模式匹配）|右|
 |前缀运算符（`+`*op*，`-`*op*，`%`，`%%`，`&`，`&&``!`*op*，`~`*op*）|左侧|
-|`.`|左|
+|`.`|左侧|
 |`f(x)`|左侧|
 |`f<`*types*`>`|左侧|
 

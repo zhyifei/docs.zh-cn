@@ -5,11 +5,11 @@ helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
 ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954097"
 ---
 # <a name="generics-in-xaml"></a>XAML 中的泛型
 .NET Framework XAML 服务实现在 System.Xaml 中为使用 CLR 的泛型类型提供支持。 此支持包括作为类型参数指定的泛型约束和通过调用适当强制该约束`Add`泛型集合用例的方法。 本主题介绍使用和引用 XAML 中的泛型类型的方面。  

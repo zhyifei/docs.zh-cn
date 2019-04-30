@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949261"
 ---
 # <a name="loader-etw-events"></a>加载程序 ETW 事件
 <a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
@@ -21,15 +21,15 @@ ms.locfileid: "59141526"
   
  加载程序事件可细分为以下几类：  
   
--   [应用程序域事件](#application_domain_events)  
+- [应用程序域事件](#application_domain_events)  
   
--   [CLR 加载程序程序集事件](#clr_loader_assembly_events)  
+- [CLR 加载程序程序集事件](#clr_loader_assembly_events)  
   
--   [模块事件](#module_events)  
+- [模块事件](#module_events)  
   
--   [CLR 域模块事件](#clr_domain_module_events)  
+- [CLR 域模块事件](#clr_domain_module_events)  
   
--   [模块范围事件](#module_range_events)  
+- [模块范围事件](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>应用程序域事件  
@@ -134,11 +134,11 @@ ms.locfileid: "59141526"
   
 ### <a name="remarks"></a>备注  
   
--   可通过分析工具使用名称中具有“Pdb”的字段，以便查找匹配分析会话期间所加载的模块的 PDB。 这些字段的值对应写入模块 IMAGE_DIRECTORY_ENTRY_DEBUG 部分的数据，调试器通常使用此模块来帮助查找匹配已加载模块的 PDB。  
+- 可通过分析工具使用名称中具有“Pdb”的字段，以便查找匹配分析会话期间所加载的模块的 PDB。 这些字段的值对应写入模块 IMAGE_DIRECTORY_ENTRY_DEBUG 部分的数据，调试器通常使用此模块来帮助查找匹配已加载模块的 PDB。  
   
--   以“ManagedPdb”开头的字段名是指对应于由托管编译器 （如 C# 或 Visual Basic 编译器）生成的 MSIL 模块的托管 PDB。 此 PDB 使用托管的 PDB 格式，并介绍原始托管源代码中的元素（如文件、行号和符号名）如何映射到被编译到 MSIL 模块中的 MSIL 元素。  
+- 以“ManagedPdb”开头的字段名是指对应于由托管编译器 （如 C# 或 Visual Basic 编译器）生成的 MSIL 模块的托管 PDB。 此 PDB 使用托管的 PDB 格式，并介绍原始托管源代码中的元素（如文件、行号和符号名）如何映射到被编译到 MSIL 模块中的 MSIL 元素。  
   
--   以“NativePdb”开头的字段名是指通过调用 `NGEN createPDB`而生成的 NGen PDB。 此 PDB 使用本机 PDB 格式，并介绍元素如何从原始托管的源代码中（如文件、行号和符号名）映射到被编译到 NGen 模块的本机元素。  
+- 以“NativePdb”开头的字段名是指通过调用 `NGEN createPDB`而生成的 NGen PDB。 此 PDB 使用本机 PDB 格式，并介绍元素如何从原始托管的源代码中（如文件、行号和符号名）映射到被编译到 NGen 模块的本机元素。  
   
  [返回页首](#top)  
   

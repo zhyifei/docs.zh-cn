@@ -3,11 +3,11 @@ title: 度量单位
 description: 了解如何浮点和的有符号整数值F#可以具有关联的度量值，这些信息通常用于指示长度、 卷和大容量单位。
 ms.date: 05/16/2016
 ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982535"
 ---
 # <a name="units-of-measure"></a>度量单位
 

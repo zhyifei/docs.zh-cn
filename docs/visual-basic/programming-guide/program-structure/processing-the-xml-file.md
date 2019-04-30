@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 ms.openlocfilehash: a10255be140c7c86a435cca98cec5df7df82ffee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955488"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>处理 XML 文件 (Visual Basic)
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 (有关如何标记代码的信息，请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)。)ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识对应[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]元数据/反射项目。  
@@ -18,9 +18,9 @@ ms.locfileid: "58842091"
   
  编译器在生成 ID 字符串时应遵循以下规则：  
   
--   字符串不得包含空格。  
+- 字符串不得包含空格。  
   
--   ID 字符串的第一部分标识被标识的成员类型，单个字符后跟一个冒号。 使用以下成员类型。  
+- ID 字符串的第一部分标识被标识的成员类型，单个字符后跟一个冒号。 使用以下成员类型。  
   
 |字符|描述|  
 |---|---|  
@@ -32,9 +32,9 @@ ms.locfileid: "58842091"
 |E|事件： `Event`|  
 |!|错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 Visual Basic 编译器错误的生成信息无法解析的链接。|  
   
--   第二部分`String`是开始的命名空间的根处的项的完全限定的名称。 用句点分隔的项、 其封闭类型和命名空间名称。 如果项本身的名称包含句点，它们替换为数字符号 （#）。 假定项，因此无法直接在其名称中包含数字符号。 例如，完全限定的名称`String`构造函数将是`System.String.#ctor`。  
+- 第二部分`String`是开始的命名空间的根处的项的完全限定的名称。 用句点分隔的项、 其封闭类型和命名空间名称。 如果项本身的名称包含句点，它们替换为数字符号 （#）。 假定项，因此无法直接在其名称中包含数字符号。 例如，完全限定的名称`String`构造函数将是`System.String.#ctor`。  
   
--   对于属性和方法，如果方法带有自变量，则后跟用括号括起来的自变量列表。 如果没有任何自变量，则不会出现括号。 确保自变量之间用逗号分隔。 每个自变量的编码直接遵循中的编码方式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]签名。  
+- 对于属性和方法，如果方法带有自变量，则后跟用括号括起来的自变量列表。 如果没有任何自变量，则不会出现括号。 确保自变量之间用逗号分隔。 每个自变量的编码直接遵循中的编码方式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]签名。  
   
 ## <a name="example"></a>示例  
  下面的代码演示如何的 ID 字符串类并生成其成员。  

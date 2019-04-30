@@ -10,11 +10,11 @@ helpviewer_keywords:
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
 ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966811"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>如何：应用 PropertyNameChanged 模式
 下面的代码示例演示如何将应用*PropertyName*Changed 模式的自定义控件。 实现自定义控件与 Windows 窗体数据绑定引擎配合使用时，将应用此模式。  
@@ -26,7 +26,7 @@ ms.locfileid: "59213020"
 ## <a name="compiling-the-code"></a>编译代码  
  若要编译前面的代码示例：  
   
--   将代码粘贴到空代码文件中。 必须使用包含在 Windows 窗体上的自定义控件`Main`方法。  
+- 将代码粘贴到空代码文件中。 必须使用包含在 Windows 窗体上的自定义控件`Main`方法。  
   
 ## <a name="see-also"></a>请参阅
 

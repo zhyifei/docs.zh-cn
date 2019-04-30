@@ -8,20 +8,20 @@ ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949157"
 ---
 # <a name="thread-pool-etw-events"></a>线程池 ETW 事件
 <a name="top"></a> 这些事件收集有关工作线程和 I/O 线程的信息。  
   
  存在两组线程池事件：  
   
--   [工作线程池事件](#worker)：提供有关应用程序如何使用线程池以及工作负荷如何影响并发控制的信息。  
+- [工作线程池事件](#worker)：提供有关应用程序如何使用线程池以及工作负荷如何影响并发控制的信息。  
   
--   [I/O 线程池事件](#io)：提供有关线程池中创建、停用、恢复或终止的 I/O 线程的信息。  
+- [I/O 线程池事件](#io)：提供有关线程池中创建、停用、恢复或终止的 I/O 线程的信息。  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>工作线程池事件  

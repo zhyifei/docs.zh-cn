@@ -6,16 +6,15 @@ helpviewer_keywords:
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
 ms.openlocfilehash: 9ef6bc125a641538e7fd2da4c17c5f25dfc62709
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009651"
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar 控件（Windows 窗体）
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
+>  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
   
  Windows 窗体 <xref:System.Windows.Forms.StatusBar> 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 <xref:System.Windows.Forms.StatusBar> 控件可以具有状态栏面板上显示的图标来指示状态或一系列的动画中的图标指示进程正在运行;例如，Microsoft Word，该值指示是要保存文档。  
   

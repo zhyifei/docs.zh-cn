@@ -10,11 +10,11 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973085"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>演练：声明和引发事件 (Visual Basic)
 本演练演示如何声明和引发事件的类名为`Widget`。 完成步骤后，你可能想要读取的配套主题，[演练：处理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，其中说明了如何使用从事件`Widget`对象提供的应用程序中的状态信息。  
@@ -44,7 +44,7 @@ ms.locfileid: "59320686"
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>若要声明的小组件类的事件  
   
--   使用`Event`关键字来声明中的事件`Widget`类。 请注意，事件可以具有`ByVal`并`ByRef`自变量，作为`Widget`的`PercentDone`事件所示：  
+- 使用`Event`关键字来声明中的事件`Widget`类。 请注意，事件可以具有`ByVal`并`ByRef`自变量，作为`Widget`的`PercentDone`事件所示：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   

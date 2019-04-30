@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002271"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用图像、图形和视觉对象进行绘制
 本主题介绍如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，并<xref:System.Windows.Media.VisualBrush>对象，若要使用图像绘制区域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
@@ -57,15 +57,15 @@ ms.locfileid: "59204193"
   
  一个<xref:System.Windows.Media.DrawingBrush>使用绘制区域<xref:System.Windows.Media.Drawing>对象。 一个<xref:System.Windows.Media.Drawing>对象描述可见内容，如形状、 位图、 视频或文本行。 不同类型的图形描述不同类型的内容。 下面是不同类型图形对象的列表。  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 绘制形状。  
+- <xref:System.Windows.Media.GeometryDrawing> – 绘制形状。  
   
--   <xref:System.Windows.Media.ImageDrawing> – 绘制图像。  
+- <xref:System.Windows.Media.ImageDrawing> – 绘制图像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 绘制文本。  
+- <xref:System.Windows.Media.GlyphRunDrawing> – 绘制文本。  
   
--   <xref:System.Windows.Media.VideoDrawing> – 播放音频或视频文件。  
+- <xref:System.Windows.Media.VideoDrawing> – 播放音频或视频文件。  
   
--   <xref:System.Windows.Media.DrawingGroup> – 绘制其他绘图。 使用图形组将其他图形合并到单个复合图形。  
+- <xref:System.Windows.Media.DrawingGroup> – 绘制其他绘图。 使用图形组将其他图形合并到单个复合图形。  
   
  有关详细信息<xref:System.Windows.Media.Drawing>对象，请参阅[Drawing 对象概述](drawing-objects-overview.md)。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "59204193"
   
  有两种方法来指定<xref:System.Windows.Media.VisualBrush.Visual%2A>内容的<xref:System.Windows.Media.VisualBrush>。  
   
--   创建一个新<xref:System.Windows.Media.Visual>并使用它来设置<xref:System.Windows.Media.VisualBrush.Visual%2A>属性的<xref:System.Windows.Media.VisualBrush>。 有关示例，请参阅[示例：使用视觉对象绘制对象](#examplevisualbrush1)下一节。  
+- 创建一个新<xref:System.Windows.Media.Visual>并使用它来设置<xref:System.Windows.Media.VisualBrush.Visual%2A>属性的<xref:System.Windows.Media.VisualBrush>。 有关示例，请参阅[示例：使用视觉对象绘制对象](#examplevisualbrush1)下一节。  
   
--   使用现有<xref:System.Windows.Media.Visual>，这将创建目标的重复图像<xref:System.Windows.Media.Visual>。 然后，可以使用<xref:System.Windows.Media.VisualBrush>创建有趣的效果，例如反射和放大效果。 有关示例，请参阅[示例：创建反射](#examplevisualbrush2)部分。  
+- 使用现有<xref:System.Windows.Media.Visual>，这将创建目标的重复图像<xref:System.Windows.Media.Visual>。 然后，可以使用<xref:System.Windows.Media.VisualBrush>创建有趣的效果，例如反射和放大效果。 有关示例，请参阅[示例：创建反射](#examplevisualbrush2)部分。  
   
  定义一个新<xref:System.Windows.Media.VisualBrush.Visual%2A>有关<xref:System.Windows.Media.VisualBrush>并且<xref:System.Windows.Media.Visual>是<xref:System.Windows.UIElement>布局系统 （如面板或控件） 上运行<xref:System.Windows.UIElement>及其子元素时<xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A>属性设置为`true`。 但是，根<xref:System.Windows.UIElement>实质上独立于系统的其余部分： 样式和外部布局不能渗透此边界。 因此，应显式指定根的大小<xref:System.Windows.UIElement>，因为其唯一父级是<xref:System.Windows.Media.VisualBrush>，因此它不能自动调整自身大小到当前所绘制的区域。 有关 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的布局的更多信息，请参阅[布局](../advanced/layout.md)。  
   

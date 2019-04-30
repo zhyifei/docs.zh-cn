@@ -3,34 +3,34 @@ title: 路由服务
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991037"
 ---
 # <a name="routing-service"></a>路由服务
 路由服务是充当消息路由器的泛型 SOAP 中介。 路由服务的核心功能是基于消息内容来路由消息，通过该功能，可基于消息本身（标头或消息正文）中的值将消息转发到客户端终结点。  
   
  <xref:System.ServiceModel.Routing.RoutingService>作为 Windows Communication Foundation (WCF) 服务中实现<xref:System.ServiceModel.Routing>命名空间。 路由服务公开一个或多个用于接收消息的服务终结点，然后基于消息内容将每个消息路由到一个或多个客户端终结点。 该服务提供了以下功能：  
   
--   基于内容的路由  
+- 基于内容的路由  
   
-    -   服务聚合  
+    - 服务聚合  
   
-    -   服务版本控制  
+    - 服务版本控制  
   
-    -   优先级路由  
+    - 优先级路由  
   
-    -   动态配置  
+    - 动态配置  
   
--   协议桥接  
+- 协议桥接  
   
--   SOAP 处理  
+- SOAP 处理  
   
--   高级错误处理  
+- 高级错误处理  
   
--   备份终结点  
+- 备份终结点  
   
  尽管可以创建可实现上述一个或多个目标的中介服务，但是此实现通常与特定方案或解决方案相关，并且不能轻松应用于新应用程序。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "59129436"
   
  通过将消息筛选器组合到筛选器表，您可以构造路由逻辑来处理如下所示的多个路由方案：  
   
--   服务聚合  
+- 服务聚合  
   
--   服务版本控制  
+- 服务版本控制  
   
--   优先级路由  
+- 优先级路由  
   
--   动态配置  
+- 动态配置  
   
  有关消息筛选器和筛选器表的详细信息，请参阅[路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)并[消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "59129436"
 ## <a name="streaming"></a>流式处理  
  如果你设置绑定以支持流式处理，则路由服务可以成功对消息进行流式处理。  但是，在某些情况下可能需要对消息进行缓冲：  
   
--   多播（缓冲以创建更多消息副本）  
+- 多播（缓冲以创建更多消息副本）  
   
--   故障转移（缓冲以免消息需要发送到备份）  
+- 故障转移（缓冲以免消息需要发送到备份）  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly 为 false（缓冲以提供带有 MessageBuffer 的 MessageFilterTable，以便筛选器可以检查正文）  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly 为 false（缓冲以提供带有 MessageBuffer 的 MessageFilterTable，以便筛选器可以检查正文）  
   
--   动态配置  
+- 动态配置  
   
 ## <a name="see-also"></a>请参阅
 

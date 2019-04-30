@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
 ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008936"
 ---
 # <a name="advanced-ink-handling"></a>高级墨迹处理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附带<xref:System.Windows.Controls.InkCanvas>，并且您可以将其放在应用程序并立即开始收集和显示墨迹的元素。 但是，如果<xref:System.Windows.Controls.InkCanvas>控件不提供足够精细的控制级别，你可以通过自定义您自己的墨迹收集和使用手写内容呈现类可以保持较高级别上的控制<xref:System.Windows.Input.StylusPlugIns>。  

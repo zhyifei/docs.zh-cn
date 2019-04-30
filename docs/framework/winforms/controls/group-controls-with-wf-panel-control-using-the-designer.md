@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971296"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体 Panel 控件对控件进行分组
 Windows 窗体<xref:System.Windows.Forms.Panel>控件用于分组其他控件。 有三个原因与组控件。 一个是 visual 对于清除用户界面; 相关窗体元素的分组另一种是以编程方式分组的单选按钮，例如;最后一个是用于在设计时作为一个单元移动控件。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
 ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955501"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 限制
 早期版本的 Visual Basic 强制执行在代码中，如变量的名称，在模块和模块大小允许的变量数的长度的边界。 在 Visual Basic.NET 中，这些限制已放宽，为您提供编写和安排你的代码以更大的自由度。  
@@ -22,15 +22,15 @@ ms.locfileid: "58824905"
   
  以下是在极端情况下可能会遇到一些限制：  
   
--   **名称的长度。** 没有最大为每个声明的编程元素的名称的字符数。 如果元素名称进行限定，此最大值适用于整个限定字符串。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+- **名称的长度。** 没有最大为每个声明的编程元素的名称的字符数。 如果元素名称进行限定，此最大值适用于整个限定字符串。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
--   **行长度。** 没有源代码的物理行中的 65535 个字符的最大值。 逻辑源的代码行可以是使用行继续符的情况下更长。 请参阅[如何：拆分和合并代码中的语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
+- **行长度。** 没有源代码的物理行中的 65535 个字符的最大值。 逻辑源的代码行可以是使用行继续符的情况下更长。 请参阅[如何：拆分和合并代码中的语句](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)。  
   
--   **数组维数。** 没有可以声明为数组的维度的最大数目。 这就限制了多少个索引可用于指定的数组元素。 请参阅[数组中 Visual Basic 的维度](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
+- **数组维数。** 没有可以声明为数组的维度的最大数目。 这就限制了多少个索引可用于指定的数组元素。 请参阅[数组中 Visual Basic 的维度](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
   
--   **字符串长度。** 没有可以在单个字符串中存储的 Unicode 字符的最大数目。 请参阅[字符串数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)。  
+- **字符串长度。** 没有可以在单个字符串中存储的 Unicode 字符的最大数目。 请参阅[字符串数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)。  
   
--   **环境字符串长度。** 没有 32768 个字符作为命令行参数使用任何环境字符串的最大值。 这是在所有平台上的限制。  
+- **环境字符串长度。** 没有 32768 个字符作为命令行参数使用任何环境字符串的最大值。 这是在所有平台上的限制。  
   
 ## <a name="see-also"></a>请参阅
 

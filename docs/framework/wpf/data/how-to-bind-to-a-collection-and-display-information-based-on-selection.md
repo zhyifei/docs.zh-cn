@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967931"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>如何：绑定到集合并根据选择的内容显示信息
 在简单的母版-详细信息方案中，具有数据绑定<xref:System.Windows.Controls.ItemsControl>如<xref:System.Windows.Controls.ListBox>。 基于用户所选内容上，显示有关选定项的详细信息。 此示例演示如何实现此方案。  

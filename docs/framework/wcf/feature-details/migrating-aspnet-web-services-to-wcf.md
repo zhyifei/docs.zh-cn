@@ -3,11 +3,11 @@ title: 将 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948091"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>将 ASP.NET Web 服务迁移到 WCF
 ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提供用于在 Internet Information Services (IIS) 内承载服务的功能。 Windows Communication Foundation (WCF) 提供了.NET Framework 类库、 工具和承载功能，使软件实体，可以使用任何协议，包括 Web 服务所使用的协议进行通信。  ASP.NET Web 服务迁移到 WCF 允许应用程序以充分利用新功能和改进功能，是唯一的 WCF。  
@@ -22,13 +22,13 @@ ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提
   
  给定这些潜在的好处的相对于 ASP.NET Web 的 WCF 服务，如果使用的，或考虑使用 ASP.NET Web 服务有多个选项：  
   
--   继续使用 ASP.NET Web 服务，并放弃由 WCF 提供的好处。  
+- 继续使用 ASP.NET Web 服务，并放弃由 WCF 提供的好处。  
   
--   继续使用 ASP.NET Web 服务，并打算在将来的某个时间采用 WCF。 在本部分中的主题介绍如何充分利用能够使用新 ASP.NET Web 服务的应用程序以及未来的 WCF 应用程序的前景。 在本部分中的主题还说明如何生成新的 ASP.NET Web 服务，以使其更轻松地将它们迁移到 WCF。 但是，如果服务的安全很重要，或可靠性或事务保证是必需的或者如果自定义管理工具将需要构造，则它是更好的选择采用 WCF。 WCF 专为这样的方案。  
+- 继续使用 ASP.NET Web 服务，并打算在将来的某个时间采用 WCF。 在本部分中的主题介绍如何充分利用能够使用新 ASP.NET Web 服务的应用程序以及未来的 WCF 应用程序的前景。 在本部分中的主题还说明如何生成新的 ASP.NET Web 服务，以使其更轻松地将它们迁移到 WCF。 但是，如果服务的安全很重要，或可靠性或事务保证是必需的或者如果自定义管理工具将需要构造，则它是更好的选择采用 WCF。 WCF 专为这样的方案。  
   
--   对于新开发，同时继续保持现有的 ASP.NET Web 服务应用程序采用 WCF。 这种选择很可能是最佳选择。 它的好处 WCF，同时可节省修改现有的应用程序以使用它的成本。 在此方案中，在现有 ASP.NET 应用程序中新的 WCF 应用程序可以共存。 新的 WCF 应用程序将能够使用现有的 ASP.NET Web 服务，并可以使用 WCF 进行编程到现有 ASP.NET 应用程序通过 WCF ASP.NET 兼容模式的新操作功能。  
+- 对于新开发，同时继续保持现有的 ASP.NET Web 服务应用程序采用 WCF。 这种选择很可能是最佳选择。 它的好处 WCF，同时可节省修改现有的应用程序以使用它的成本。 在此方案中，在现有 ASP.NET 应用程序中新的 WCF 应用程序可以共存。 新的 WCF 应用程序将能够使用现有的 ASP.NET Web 服务，并可以使用 WCF 进行编程到现有 ASP.NET 应用程序通过 WCF ASP.NET 兼容模式的新操作功能。  
   
--   采用 WCF 和现有 ASP.NET Web 服务应用程序迁移到 WCF。 可以选择此选项可以使用 WCF，提供的功能来增强现有应用程序，或者重新生成现有的 ASP.NET Web 服务在新的功能、 功能更强大的 WCF 应用程序。  
+- 采用 WCF 和现有 ASP.NET Web 服务应用程序迁移到 WCF。 可以选择此选项可以使用 WCF，提供的功能来增强现有应用程序，或者重新生成现有的 ASP.NET Web 服务在新的功能、 功能更强大的 WCF 应用程序。  
   
 > [!NOTE]
 >  必须格外小心，如果承载的 WCF 服务由 IIS 5.x 和 ASP.NET 中卸载。 当由 IIS 承载的 WCF 服务时卸载 ASP.NET 时，可以请求 5.x，服务的代码。 正在运行 IIS 的操作系统上卸载 ASP.NET 时卸载 5.x 和 WCF、 带有.svc 扩展名的文件被视为文本文件和内容，包括任何源代码，代码返回给请求者。  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969801"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc 接口
 提供用于新的 Microsoft 中间语言 (MSIL) 函数主体分配内存的方法。  

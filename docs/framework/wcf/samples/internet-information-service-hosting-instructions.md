@@ -3,11 +3,11 @@ title: Internet 信息服务承载说明
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954851"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet 信息服务承载说明
 若要运行由 Internet 信息服务 (IIS) 承载的示例，必须确保 IIS 已正确安装且正在运行。  
@@ -46,13 +46,13 @@ ms.locfileid: "59328954"
   
 8. 请确保以下各项处于选中状态：  
   
-    1.  **.NET 可扩展性**  
+    1. **.NET 可扩展性**  
   
-    2.  **ASP.NET 2.0**  
+    2. **ASP.NET 2.0**  
   
-    3.  **ISAPI 扩展**  
+    3. **ISAPI 扩展**  
   
-    4.  **ISAPI 筛选器**  
+    4. **ISAPI 筛选器**  
   
 9. 项下标记为**World Wide Web 服务**，展开**常见 Http 功能**。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "59328954"
   
 8. 请确保以下各项处于选中状态：  
   
-    1.  **.NET 可扩展性**  
+    1. **.NET 可扩展性**  
   
-    2.  **ASP.NET 2.0**  
+    2. **ASP.NET 2.0**  
   
-    3.  **ISAPI 扩展**  
+    3. **ISAPI 扩展**  
   
-    4.  **ISAPI 筛选器**  
+    4. **ISAPI 筛选器**  
   
 9. 展开项标记为**Web 管理工具**，然后选择**IIS 管理控制台**。  
   

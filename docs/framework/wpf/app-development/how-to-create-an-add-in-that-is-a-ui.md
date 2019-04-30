@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947883"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>如何：创建作为 UI 的外接程序
 此示例演示如何为 Windows Presentation Foundation (WPF) 的 WPF 独立应用程序是托管的外接程序创建。  
@@ -25,9 +25,9 @@ ms.locfileid: "59100296"
   
  此示例重点介绍启用此方案中，WPF 扩展到.NET Framework 外接程序模型，并假设条件如下：  
   
--   了解.NET Framework 外接程序模型，包括管道、 外接程序和主机开发。 如果您不熟悉这些概念，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 有关演示如何实现一个管道、 外接程序和主机应用程序的教程，请参阅[演练：创建可扩展的应用程序](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))。  
+- 了解.NET Framework 外接程序模型，包括管道、 外接程序和主机开发。 如果您不熟悉这些概念，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 有关演示如何实现一个管道、 外接程序和主机应用程序的教程，请参阅[演练：创建可扩展的应用程序](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))。  
   
--   .NET Framework 外接程序模型的 WPF 扩展的知识。 请参阅[WPF 外接程序概述](wpf-add-ins-overview.md)。  
+- .NET Framework 外接程序模型的 WPF 扩展的知识。 请参阅[WPF 外接程序概述](wpf-add-ins-overview.md)。  
   
 ## <a name="example"></a>示例  
  是一个 WPF UI 的外接程序创建的每个管道段、 外接程序和主机应用程序需要特定代码。  
@@ -87,9 +87,9 @@ ms.locfileid: "59100296"
   
  用于处理与外接程序 UI 代码在外接程序的应用程序域中运行。 这些交互包括以下内容：  
   
--   处理<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+- 处理<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
--   显示<xref:System.Windows.MessageBox>。  
+- 显示<xref:System.Windows.MessageBox>。  
   
  此活动完全独立于主机应用程序。  
   

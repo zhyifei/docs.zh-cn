@@ -3,11 +3,11 @@ title: ActivityTransfer
 ms.date: 03/30/2017
 ms.assetid: fc40ef17-2a92-4ce2-853c-6ba8e5d571f3
 ms.openlocfilehash: 936e870c1ec991e2e33acf8a08ccc93975989679
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50034413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964289"
 ---
 # <a name="activitytransfer"></a>ActivityTransfer
 活动传输事件  
@@ -30,17 +30,17 @@ class ActivityTransfer : WSAT_TraceEvent
   
 ### <a name="activityid"></a>ActivityID  
   
--   数据类型：object  
+- 数据类型：object  
     访问类型：只读  
   
--   活动 ID  
+- 活动 ID  
   
 ### <a name="relatedactivityid"></a>RelatedActivityID  
   
--   数据类型：object  
+- 数据类型：object  
     访问类型：只读  
   
--   相关活动 ID  
+- 相关活动 ID  
   
 ## <a name="requirements"></a>要求  
   

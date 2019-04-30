@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000228"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 函数
 为指定的程序集，根据指定的标志生成的强名称签名。  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]一个或多个以下值：  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) 的重新计算链接的模块的所有哈希值。  
+- `SN_SIGN_ALL_FILES` (0x00000001) 的重新计算链接的模块的所有哈希值。  
   
--   `SN_TEST_SIGN` (0x00000002) — 测试签名程序集。  
+- `SN_TEST_SIGN` (0x00000002) — 测试签名程序集。  
   
 ## <a name="return-value"></a>返回值  
  `true` 在成功完成;否则为`false`。  

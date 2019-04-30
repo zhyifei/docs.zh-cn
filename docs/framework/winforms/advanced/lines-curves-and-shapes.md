@@ -9,11 +9,11 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
 ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942969"
 ---
 # <a name="lines-curves-and-shapes"></a>直线、曲线和图形
 矢量图形部分[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]用于绘制线条、 绘制曲线和绘制并填充形状。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949599"
 ---
 # <a name="sending-and-receiving-faults"></a>发送和接收错误
 SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情况下，将这些信息以互操作方式从客户端传送到服务。 通常情况下，服务会定义自定义错误内容并指定可以返回错误的操作。 (有关详细信息，请参阅[定义和指定错误](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)本主题讨论在出现相应的错误条件时服务或双工客户端如何发送这些错误，以及客户端或服务应用程序如何处理这些错误。 Windows Communication Foundation (WCF) 应用程序中的错误处理的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -47,9 +47,9 @@ SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情
 ## <a name="handling-faults"></a>处理错误  
  在 WCF 客户端中 SOAP 错误在通信期间发生感兴趣的客户端应用程序作为托管异常引发。 虽然有许多可能引发异常的任何程序执行期间，使用 WCF 客户端编程模型的应用程序可以期望处理由通信的以下两种类型的异常。  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  当某个操作超过指定的超时期限时，引发 <xref:System.TimeoutException> 对象。  
   
@@ -81,13 +81,13 @@ SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情
   
  通常，客户端对象通道以下列方式之一关闭：  
   
--   WCF 客户端对象时回收。  
+- WCF 客户端对象时回收。  
   
--   在客户端应用程序调用 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 时。  
+- 在客户端应用程序调用 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 时。  
   
--   在客户端应用程序调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 时。  
+- 在客户端应用程序调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 时。  
   
--   在客户端应用程序调用会话的终止操作时。  
+- 在客户端应用程序调用会话的终止操作时。  
   
  在所有情况下，关闭通道都会指示通道开始关闭所有可能正在发送消息以支持应用程序级复杂功能的基础通道。 例如，当协定需要使用会话时，绑定便会尝试通过与服务通道交换消息来建立会话，直到会话建立。 当通道关闭时，基础会话通道会通知服务会话已终止。 在此情况下，如果通道已经中止、关闭或由于其他原因（例如，网络电缆被拔出）而变得不可用，则客户端通道无法通知服务通道会话已终止，从而引发异常。  
   

@@ -8,10 +8,10 @@ helpviewer_keywords:
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
 ms.openlocfilehash: 462e32520393a1c23809cce8eb3c130c13bc882f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947254"
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>如何：修改直线或线段末端的线帽
 此示例演示如何修改处的开始或结束的一种开放的形状<xref:System.Windows.Shapes.Shape>元素。 若要更改在打开的开始处上限<xref:System.Windows.Shapes.Shape>，使用其<xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A>属性。 若要更改末尾的一种开放上限<xref:System.Windows.Shapes.Shape>，使用其<xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A>属性。 若要查看可用的线帽，请参阅<xref:System.Windows.Media.PenLineCap>枚举。  

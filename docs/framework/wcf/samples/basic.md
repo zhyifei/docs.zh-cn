@@ -3,14 +3,14 @@ title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
 ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944113"
 ---
 # <a name="basic"></a>Basic
-本部分包含示例演示基本 Windows Communication Foundation (WCF) 功能的部分。  
+本部分包含示例说明了基本的 Windows Communication Foundation (WCF) 功能的部分。  
   
 ## <a name="in-this-section"></a>本节内容  
  [入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "33809445"
  演示数据协定。  
   
  [发现](../../../../docs/framework/wcf/samples/discovery-samples.md)  
- 演示 WCF discovery。  
+ 演示 WCF 发现。  
   
  [管理](../../../../docs/framework/wcf/samples/management.md)  
  演示 WCF 管理。  
@@ -47,4 +47,4 @@ ms.locfileid: "33809445"
  DemonstratesWCF 联合。  
   
  [Web](../../../../docs/framework/wcf/samples/web.md)  
- 演示 WCF 中的 Web 宿主。
+ 演示如何在 WCF 中的 Web 承载。

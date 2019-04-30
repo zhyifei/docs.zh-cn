@@ -3,11 +3,11 @@ title: 可靠消息传送协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
 ms.openlocfilehash: 02a0815f62999c27507ed5e1610f090e944c135a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946700"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>可靠消息传送协议版本 1.0
 本主题介绍 Windows Communication Foundation (WCF) 实现的详细信息，为 Ws-reliable Messaging 2005 年 2 月 （版本 1.0） 协议需要使用 HTTP 传输进行互操作。 WCF 遵循 Ws-reliable Messaging 规范的约束和澄清，本主题中所述。 请注意，WS-ReliableMessaging 版本 1.0 协议是从 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 开始实现的。  
@@ -16,9 +16,9 @@ ms.locfileid: "55073208"
   
  为方便起见，本主题使用以下角色：  
   
--   发起方：启动 WS-Reliable Message 序列创建的客户端  
+- 发起方：启动 WS-Reliable Message 序列创建的客户端  
   
--   响应方：接收发起方的请求的服务  
+- 响应方：接收发起方的请求的服务  
   
  本文档使用下表中的前缀和命名空间。  
   
@@ -35,29 +35,29 @@ ms.locfileid: "55073208"
 ### <a name="sequence-establishment-messages"></a>序列建立消息  
  WCF 实现`CreateSequence`和`CreateSequenceResponse`消息以建立可靠的消息序列。 适用以下约束：  
   
--   B1101:WCF 发起方不会生成可选的 Expires 元素`CreateSequence`消息，或者在情况时`CreateSequence`消息中包含`Offer`元素中，可选`Expires`中的元素`Offer`元素。  
+- B1101:WCF 发起方不会生成可选的 Expires 元素`CreateSequence`消息，或者在情况时`CreateSequence`消息中包含`Offer`元素中，可选`Expires`中的元素`Offer`元素。  
   
--   B1102:访问时`CreateSequence`消息，WCF`Responder`发送和接收都`Expires`元素如果它们存在，但不使用它们的值。  
+- B1102:访问时`CreateSequence`消息，WCF`Responder`发送和接收都`Expires`元素如果它们存在，但不使用它们的值。  
   
  WS-Reliable Messaging 引入了 `Offer` 机制来建立两个形成会话的反向相关的序列。  
   
--   R1103:如果`CreateSequence`包含`Offer`元素中，可靠消息响应方必须接受序列并使用响应`CreateSequenceResponse`，其中包含`wsrm:Accept`元素形成两个相关反向序列或拒绝`CreateSequence`请求。  
+- R1103:如果`CreateSequence`包含`Offer`元素中，可靠消息响应方必须接受序列并使用响应`CreateSequenceResponse`，其中包含`wsrm:Accept`元素形成两个相关反向序列或拒绝`CreateSequence`请求。  
   
--   R1104：在反向序列上流动的 `SequenceAcknowledgement` 和应用程序消息必须发送到 `ReplyTo` 的 `CreateSequence` 终结点引用。  
+- R1104：在反向序列上流动的 `SequenceAcknowledgement` 和应用程序消息必须发送到 `ReplyTo` 的 `CreateSequence` 终结点引用。  
   
--   R1105：`AcksTo` 中的 `ReplyTo` 和 `CreateSequence` 终结点引用必须具有与八进制识别匹配的地址值。  
+- R1105：`AcksTo` 中的 `ReplyTo` 和 `CreateSequence` 终结点引用必须具有与八进制识别匹配的地址值。  
   
      WCF 响应方验证的 URI 部分`AcksTo`和`ReplyTo`创建序列之前 Epr 是否相同。  
   
--   R1106：`AcksTo` 中的 `ReplyTo` 和 `CreateSequence` 终结点引用应具有相同的引用参数集。  
+- R1106：`AcksTo` 中的 `ReplyTo` 和 `CreateSequence` 终结点引用应具有相同的引用参数集。  
   
      WCF 不强制但假定的该 [引用参数]`AcksTo`并`ReplyTo`上`CreateSequence`相同，并且使用 [reference parameters] 从`ReplyTo`确认和相反序列消息的终结点引用。  
   
--   R1107:使用建立的两个相反序列时`Offer`机制`SequenceAcknowledgement`和反向序列上流动的应用程序消息必须发送到`ReplyTo`终结点引用`CreateSequence`。  
+- R1107:使用建立的两个相反序列时`Offer`机制`SequenceAcknowledgement`和反向序列上流动的应用程序消息必须发送到`ReplyTo`终结点引用`CreateSequence`。  
   
--   R1108:使用 Offer 机制建立两个相反序列时`[address]`的属性`wsrm:AcksTo`终结点引用的子元素`wsrm:Accept`元素的`CreateSequenceResponse`必须匹配识别字节的目标URI`CreateSequence`.  
+- R1108:使用 Offer 机制建立两个相反序列时`[address]`的属性`wsrm:AcksTo`终结点引用的子元素`wsrm:Accept`元素的`CreateSequenceResponse`必须匹配识别字节的目标URI`CreateSequence`.  
   
--   R1109:使用建立的两个相反序列时`Offer`机制、 发送的发起方和响应方的消息的确认消息必须发送到相同的终结点引用。  
+- R1109:使用建立的两个相反序列时`Offer`机制、 发送的发起方和响应方的消息的确认消息必须发送到相同的终结点引用。  
   
      WCF 使用 Ws-reliable Messaging 在发起方和响应方之间建立可靠会话。 WCF 的 Ws-reliable Messaging 实现提供了可靠会话为单向、 请求-答复和完全双工消息传递模式。 Ws-reliable Messaging`Offer`上的机制`CreateSequence` / `CreateSequenceResponse` ，便可以建立两个相关的相反序列，并提供适合于所有消息终结点的会话协议。 因为 WCF 提供了会话包括会话完整性的端到端保护的安全保障，是用于确保适用于同一参与方的消息到达同一目标。 这也允许在应用程序消息上捎带序列确认消息。 因此，约束 R1104、 R1105 和 R1108 适用于 WCF。  
   
@@ -133,11 +133,11 @@ ms.locfileid: "55073208"
 ### <a name="sequence"></a>序列  
  以下是适用于序列的约束的列表：  
   
--   B1201:WCF 生成，并访问序列号不高于`xs:long`的最大包含值 9223372036854775807。  
+- B1201:WCF 生成，并访问序列号不高于`xs:long`的最大包含值 9223372036854775807。  
   
--   B1202:WCF 始终会生成正文为空的最后一个消息使用的操作 URI 的`http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`。  
+- B1202:WCF 始终会生成正文为空的最后一个消息使用的操作 URI 的`http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`。  
   
--   B1203:WCF 接收和传送一条带有包含的序列标头`LastMessage`元素，只要操作 URI 不是`http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`。  
+- B1203:WCF 接收和传送一条带有包含的序列标头`LastMessage`元素，只要操作 URI 不是`http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`。  
   
  Sequence 标头的一个示例。  
   
@@ -167,9 +167,9 @@ ms.locfileid: "55073208"
 ### <a name="sequenceacknowledgement-header"></a>SequenceAcknowledgement 标头  
  WCF 将非法携带机制用于在 Ws-reliable Messaging 中提供的序列确认。  
   
--   R1401:使用建立的两个相反序列时`Offer`机制，`SequenceAcknowledgement`可能传输到目标接收方的任何应用程序消息中包括标头。  
+- R1401:使用建立的两个相反序列时`Offer`机制，`SequenceAcknowledgement`可能传输到目标接收方的任何应用程序消息中包括标头。  
   
--   B1402:当 WCF 必须之前生成确认消息接收任何序列消息 (例如，若要满足`AckRequested`消息)，WCF 生成`SequenceAcknowledgement`标题，其中包含范围 0-0，如下面的示例中所示。  
+- B1402:当 WCF 必须之前生成确认消息接收任何序列消息 (例如，若要满足`AckRequested`消息)，WCF 生成`SequenceAcknowledgement`标题，其中包含范围 0-0，如下面的示例中所示。  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -180,16 +180,16 @@ ms.locfileid: "55073208"
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B1403:WCF 不会生成`SequenceAcknowledgement`包含的标头`Nack`元素，但支持`Nack`元素。  
+- B1403:WCF 不会生成`SequenceAcknowledgement`包含的标头`Nack`元素，但支持`Nack`元素。  
   
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging 错误  
  下面是适用于 WCF 实现的 WS 可靠消息传送错误的约束的列表：  
   
--   B1501:WCF 不会生成`MessageNumberRollover`故障。  
+- B1501:WCF 不会生成`MessageNumberRollover`故障。  
   
--   B1502:WCF 终结点可能生成`CreateSequenceRefused`错误，如规范中所述。  
+- B1502:WCF 终结点可能生成`CreateSequenceRefused`错误，如规范中所述。  
   
--   B1503:When 服务终结点达到其连接限制，无法处理新连接时，WCF 将生成额外`CreateSequenceRefused`错误子代码`netrm:ConnectionLimitReached`，如以下示例所示。  
+- B1503:When 服务终结点达到其连接限制，无法处理新连接时，WCF 将生成额外`CreateSequenceRefused`错误子代码`netrm:ConnectionLimitReached`，如以下示例所示。  
   
     ```xml  
     <s:Envelope>  
@@ -228,17 +228,17 @@ ms.locfileid: "55073208"
 ### <a name="ws-addressing-faults"></a>WS-Addressing 错误  
  因为 Ws-reliable Messaging 使用 Ws-addressing，所以 WCF Ws-reliable Messaging 实现可能生成 Ws-addressing 错误。 本部分介绍了在 Ws-reliable Messaging 层显式生成 WCF Ws-addressing 错误：  
   
--   B1601:WCF 生成错误消息寻址标头需要以下项之一为 true 时：  
+- B1601:WCF 生成错误消息寻址标头需要以下项之一为 true 时：  
   
-    -   消息缺少 `Sequence` 标头和 `Action` 标头。  
+    - 消息缺少 `Sequence` 标头和 `Action` 标头。  
   
-    -   `CreateSequence` 消息缺少 `MessageId` 标头。  
+    - `CreateSequence` 消息缺少 `MessageId` 标头。  
   
-    -   `CreateSequence` 消息缺少 `ReplyTo` 标头。  
+    - `CreateSequence` 消息缺少 `ReplyTo` 标头。  
   
--   B1602:WCF 生成缺少的消息的操作不受支持容错`Sequence`标头和具有`Action`不是可识别的 Ws-reliable Messaging 规范中的标头。  
+- B1602:WCF 生成缺少的消息的操作不受支持容错`Sequence`标头和具有`Action`不是可识别的 Ws-reliable Messaging 规范中的标头。  
   
--   B1603:WCF 生成终结点不可用来指示终结点不会处理序列基于检查错误`CreateSequence`消息的寻址标头。  
+- B1603:WCF 生成终结点不可用来指示终结点不会处理序列基于检查错误`CreateSequence`消息的寻址标头。  
   
 ## <a name="protocol-composition"></a>协议组合  
   
@@ -247,9 +247,9 @@ ms.locfileid: "55073208"
   
  尽管 WS-Reliable Messaging 规范只提及 WS-Addressing 2004/08，它并未限制要使用的 WS-Addressing 版本。 下面是适用于 WCF 的约束的列表：  
   
--   R2101： 这两个可以与 Ws-reliable Messaging 使用 Ws-addressing 2004/08 和 Ws-addressing 1.0。  
+- R2101： 这两个可以与 Ws-reliable Messaging 使用 Ws-addressing 2004/08 和 Ws-addressing 1.0。  
   
--   R2102:A 单一版本的 Ws-addressing 必须在整个给定的 Ws-reliable Messaging 序列或通过使用相关的反向序列对`wsrm:Offer`机制。  
+- R2102:A 单一版本的 Ws-addressing 必须在整个给定的 Ws-reliable Messaging 序列或通过使用相关的反向序列对`wsrm:Offer`机制。  
   
 ### <a name="composition-with-soap"></a>与 SOAP 组合  
  WCF 支持使用 SOAP 1.1 和 SOAP 1.2 与 Ws-reliable Messaging。  
@@ -257,28 +257,28 @@ ms.locfileid: "55073208"
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>与 WS-Security 和 WS-SecureConversation 组合  
  WCF 提供了通过使用 Ws-secure Conversation 使用安全传输协议 (HTTPS)、 与 Ws-security 的组合和组合的 Ws-reliable Messaging 序列的保护。 下面是适用于 WCF 的约束的列表：  
   
--   R2301： 为了保护单个消息的 Ws-reliable Messaging 序列的完整性的完整性和保密性，WCF 需要必须使用 Ws-secure Conversation。  
+- R2301： 为了保护单个消息的 Ws-reliable Messaging 序列的完整性的完整性和保密性，WCF 需要必须使用 Ws-secure Conversation。  
   
--   R2302:AWS-必须在建立 Ws-reliable Messaging 序列之前建立安全对话会话中。  
+- R2302:AWS-必须在建立 Ws-reliable Messaging 序列之前建立安全对话会话中。  
   
--   R2303:如果 Ws-reliable Messaging 序列生存期超过了 Ws-secure Conversation 会话的生存期，`SecurityContextToken`建立通过使用 Ws-secure Conversation 必须续订通过使用相应的 Ws-secure Conversation 续订绑定。  
+- R2303:如果 Ws-reliable Messaging 序列生存期超过了 Ws-secure Conversation 会话的生存期，`SecurityContextToken`建立通过使用 Ws-secure Conversation 必须续订通过使用相应的 Ws-secure Conversation 续订绑定。  
   
--   B2304:WS-Reliable Messaging 序列或一对相关的相反序列始终绑定到单个 Ws-secureconversation 会话。  
+- B2304:WS-Reliable Messaging 序列或一对相关的相反序列始终绑定到单个 Ws-secureconversation 会话。  
   
      WCF 源生成`wsse:SecurityTokenReference`元素中的元素扩展性节`CreateSequence`消息。  
   
--   与 Ws-secure Conversation R2305:When`CreateSequence`消息必须包含`wsse:SecurityTokenReference`元素。  
+- 与 Ws-secure Conversation R2305:When`CreateSequence`消息必须包含`wsse:SecurityTokenReference`元素。  
   
 ## <a name="ws-reliable-messaging-ws-policy-assertion"></a>WS-Reliable Messaging WS-Policy 断言  
  WCF 使用 Ws-reliable Messaging Ws-policy 断言`wsrm:RMAssertion`来描述终结点功能。 下面是适用于 WCF 的约束的列表：  
   
--   B3001:WCF 将附加`wsrm:RMAssertion`Ws-policy 断言到`wsdl:binding`元素。 WCF 支持这两个附件`wsdl:binding`和`wsdl:port`元素。  
+- B3001:WCF 将附加`wsrm:RMAssertion`Ws-policy 断言到`wsdl:binding`元素。 WCF 支持这两个附件`wsdl:binding`和`wsdl:port`元素。  
   
--   B3002:WCF 支持 Ws-reliable Messaging 断言的以下可选属性，并在 WCF 提供对它们的控制`ReliableMessagingBindingElement`:  
+- B3002:WCF 支持 Ws-reliable Messaging 断言的以下可选属性，并在 WCF 提供对它们的控制`ReliableMessagingBindingElement`:  
   
-    -   `wsrm:InactivityTimeout`  
+    - `wsrm:InactivityTimeout`  
   
-    -   `wsrm:AcknowledgementInterval`  
+    - `wsrm:AcknowledgementInterval`  
   
      下面是一个示例。  
   
@@ -294,9 +294,9 @@ ms.locfileid: "55073208"
   
  设置启用流控制<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType>属性设置为`true`。 下面是适用于 WCF 的约束的列表：  
   
--   B4001:当启用可靠消息流控制时，WCF 生成`netrm:BufferRemaining`元素的元素扩展性中`SequenceAcknowledgement`标头。  
+- B4001:当启用可靠消息流控制时，WCF 生成`netrm:BufferRemaining`元素的元素扩展性中`SequenceAcknowledgement`标头。  
   
--   B4002:启用可靠消息流控制时，WCF 不需要`netrm:BufferRemaining`元素出现在`SequenceAcknowledgement`标头，如下面的示例中所示。  
+- B4002:启用可靠消息流控制时，WCF 不需要`netrm:BufferRemaining`元素出现在`SequenceAcknowledgement`标头，如下面的示例中所示。  
   
     ```xml  
     <wsrm:SequenceAcknowledgement>  
@@ -310,18 +310,18 @@ ms.locfileid: "55073208"
     </wsrm:SequenceAcknowledgement>  
     ```  
   
--   B4003:WCF 使用`netrm:BufferRemaining`以指示多少新消息的可靠消息传递目标可以缓冲。  
+- B4003:WCF 使用`netrm:BufferRemaining`以指示多少新消息的可靠消息传递目标可以缓冲。  
   
--   B4004: WCF 可靠消息传递服务限制的可靠消息传递目标应用程序不能快速接收消息时，传输的消息数。 可靠消息传递目标将缓冲消息，而该元素的值将下降为 0。  
+- B4004: WCF 可靠消息传递服务限制的可靠消息传递目标应用程序不能快速接收消息时，传输的消息数。 可靠消息传递目标将缓冲消息，而该元素的值将下降为 0。  
   
--   B4005:WCF 将生成`netrm:BufferRemaining`整数值介于 0 和 4096 （含)，并读取介于 0 的整数值和`xs:int`的`maxInclusive`值 214748364 （含)。  
+- B4005:WCF 将生成`netrm:BufferRemaining`整数值介于 0 和 4096 （含)，并读取介于 0 的整数值和`xs:int`的`maxInclusive`值 214748364 （含)。  
   
 ## <a name="message-exchange-patterns"></a>消息交换模式  
  Ws-reliable Messaging 用于不同消息交换模式时，本部分将介绍 WCF 的行为。 对于每个消息交换模式，可以考虑下面的两个部署方案：  
   
--   不可寻址的发起方：发起方位于防火墙;响应方可以将消息传递到发起方，仅在 HTTP 响应上。  
+- 不可寻址的发起方：发起方位于防火墙;响应方可以将消息传递到发起方，仅在 HTTP 响应上。  
   
--   可寻址的发起方：发起方和响应方都可以发送 HTTP 请求;换而言之，可以建立两个反向 HTTP 连接。  
+- 可寻址的发起方：发起方和响应方都可以发送 HTTP 请求;换而言之，可以建立两个反向 HTTP 连接。  
   
 ### <a name="one-way-non-addressable-initiator"></a>单向、不可寻址的发起方  
   

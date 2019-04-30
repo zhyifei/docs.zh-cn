@@ -3,11 +3,11 @@ title: 类型提供程序安全性
 description: 了解如何在类型提供程序安全性F#，包括如何更改的类型提供程序的信任设置。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968228"
 ---
 # <a name="type-provider-security"></a>类型提供程序安全性
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
 ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971142"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 应用程序中的窗口
 用户与通过 windows 应用程序进行交互。 窗口的基本目的是承载并显示内容。 内容，窗口承载取决于数据的类型，应用程序进行操作，其中包括媒体、 Extensible Application Markup Language (XAML) 页、 网页、 文档、 数据库表和记录和系统信息类型。  

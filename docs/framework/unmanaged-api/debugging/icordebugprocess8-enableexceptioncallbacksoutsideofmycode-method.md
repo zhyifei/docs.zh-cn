@@ -7,11 +7,11 @@ ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08937e87b8bd2249b8608f8ec1ed1f7734961b3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948559"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode 方法
 [支持版本：[!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] 及更高版本]  
@@ -33,9 +33,9 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>备注  
  如果 `enableExceptionsOutsideOfJMC` 的值是 `false`：  
   
--   DEBUG_EXCEPTION_FIRST_CHANCE 异常不会导致回调到调试器。  
+- DEBUG_EXCEPTION_FIRST_CHANCE 异常不会导致回调到调试器。  
   
--   DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 异常不会导致回调到调试器如果异常不会转义到用户代码 （即，从异常源到异常处理程序的路径有没有标记为 JustMyCode 或 JMC 的方法）。  
+- DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 异常不会导致回调到调试器如果异常不会转义到用户代码 （即，从异常源到异常处理程序的路径有没有标记为 JustMyCode 或 JMC 的方法）。  
   
  `enableExceptionsOutsideOfJMC` 的默认值为 `true`。  
   

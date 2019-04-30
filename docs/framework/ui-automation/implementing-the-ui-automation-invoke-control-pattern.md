@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983341"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>实现 UI 自动化 Invoke 控件模式
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134779"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Invoke 控件模式时，请注意以下准则和约定：  
   
--   如果不通过另一个控件模式提供程序公开同一行为，则控件实现 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。 例如，如果控件上的 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法与 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 方法或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 方法执行同一操作，则控件不应实现 <xref:System.Windows.Automation.Provider.IInvokeProvider>。  
+- 如果不通过另一个控件模式提供程序公开同一行为，则控件实现 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。 例如，如果控件上的 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法与 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 方法或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 方法执行同一操作，则控件不应实现 <xref:System.Windows.Automation.Provider.IInvokeProvider>。  
   
--   通常通过单击或双击或按 ENTER、预定义的键盘快捷键或某种备用的击键组合来调用控件。  
+- 通常通过单击或双击或按 ENTER、预定义的键盘快捷键或某种备用的击键组合来调用控件。  
   
--   在已被激活的控件上引发<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> （作为对执行关联操作的控件的响应）。 如果可能，应在控件完成操作后引发事件且在不阻止的情况下返回事件。 在以下情况中，应在服务 Invoke 请求之前引发调用的事件：  
+- 在已被激活的控件上引发<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> （作为对执行关联操作的控件的响应）。 如果可能，应在控件完成操作后引发事件且在不阻止的情况下返回事件。 在以下情况中，应在服务 Invoke 请求之前引发调用的事件：  
   
-    -   不可能等至操作完成，或这一做法不实际。  
+    - 不可能等至操作完成，或这一做法不实际。  
   
-    -   该操作需要用户交互。  
+    - 该操作需要用户交互。  
   
-    -   该操作很耗时并且会导致调用的客户端花费大量的时间进行阻止。  
+    - 该操作很耗时并且会导致调用的客户端花费大量的时间进行阻止。  
   
--   如果调用该控件会产生巨大的负面影响，应通过 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 属性公开这些副作用。 例如，即使 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 不与所选内容相关联， <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 也可能会导致另一个控件变为处于选定状态。  
+- 如果调用该控件会产生巨大的负面影响，应通过 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 属性公开这些副作用。 例如，即使 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 不与所选内容相关联， <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 也可能会导致另一个控件变为处于选定状态。  
   
--   悬停（或鼠标悬停）效果通常不会构成调用的事件。 但是，执行基于悬停状态的操作（而不是导致视觉效果）的控件应支持 <xref:System.Windows.Automation.InvokePattern> 控件模式。  
+- 悬停（或鼠标悬停）效果通常不会构成调用的事件。 但是，执行基于悬停状态的操作（而不是导致视觉效果）的控件应支持 <xref:System.Windows.Automation.InvokePattern> 控件模式。  
   
 > [!NOTE]
 >  如果该控件仅可作为与鼠标相关的副作用的结果被调用，则此实现被视为可访问性问题。  
   
--   调用一个控件不同于选择一个项。 但是，具体取决于控件，调用控件可能导致项被选为副作用。 例如，调用“我的文档”文件夹中的 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 文档列表项将会同时选择该项和打开该文档。  
+- 调用一个控件不同于选择一个项。 但是，具体取决于控件，调用控件可能导致项被选为副作用。 例如，调用“我的文档”文件夹中的 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 文档列表项将会同时选择该项和打开该文档。  
   
--   元素被调用时将立即从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中消失。 从由事件回调提供的元素请求信息可能失败。 建议的解决方法是预取缓存的信息。  
+- 元素被调用时将立即从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中消失。 从由事件回调提供的元素请求信息可能失败。 建议的解决方法是预取缓存的信息。  
   
--   控件可实现多个控件模式。 例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具栏上的“填充颜色”控件同时实现 <xref:System.Windows.Automation.InvokePattern> 和 <xref:System.Windows.Automation.ExpandCollapsePattern> 控件模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 公开菜单，而 <xref:System.Windows.Automation.InvokePattern> 用所选颜色填充活动选择项。  
+- 控件可实现多个控件模式。 例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具栏上的“填充颜色”控件同时实现 <xref:System.Windows.Automation.InvokePattern> 和 <xref:System.Windows.Automation.ExpandCollapsePattern> 控件模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 公开菜单，而 <xref:System.Windows.Automation.InvokePattern> 用所选颜色填充活动选择项。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>IInvokeProvider 必需的成员  

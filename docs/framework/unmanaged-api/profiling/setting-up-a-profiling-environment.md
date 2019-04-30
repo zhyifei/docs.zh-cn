@@ -13,11 +13,11 @@ ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000423"
 ---
 # <a name="setting-up-a-profiling-environment"></a>设置分析环境
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59098177"
   
  托管进程（应用程序或服务）启动时，将加载公共语言运行时 (CLR)。 初始化 CLR 时，将评估以下两个环境变量以决定进程是否应连接到探查器：  
   
--   COR_ENABLE_PROFILING:仅当此环境变量存在并且设置为 1，CLR 将连接到探查器。  
+- COR_ENABLE_PROFILING:仅当此环境变量存在并且设置为 1，CLR 将连接到探查器。  
   
--   COR_PROFILER:如果 COR_ENABLE_PROFILING 检查通过，CLR 将连接到具有此 CLSID 或 ProgID，必须已事先存储在注册表中的探查器。 COR_PROFILER 环境变量被定义为字符串，如以下两个示例中所示。  
+- COR_PROFILER:如果 COR_ENABLE_PROFILING 检查通过，CLR 将连接到具有此 CLSID 或 ProgID，必须已事先存储在注册表中的探查器。 COR_PROFILER 环境变量被定义为字符串，如以下两个示例中所示。  
   
     ```  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -45,23 +45,23 @@ ms.locfileid: "59098177"
 ## <a name="environment-variable-scope"></a>环境变量范围  
  设置 COR_ENABLE_PROFILING 和 COR_PROFILER 环境变量的方式将决定其影响范围。 可以通过下列方式之一设置这些变量：  
   
--   如果设置中的变量[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)调用时，它们将仅应用于时正在运行的应用程序。 （它们将也应用于由继承环境的应用程序启动的其他应用程序。）  
+- 如果设置中的变量[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)调用时，它们将仅应用于时正在运行的应用程序。 （它们将也应用于由继承环境的应用程序启动的其他应用程序。）  
   
--   如果在“命令提示符”窗口中设置变量，则它们将应用于从该窗口中启动的所有应用程序。  
+- 如果在“命令提示符”窗口中设置变量，则它们将应用于从该窗口中启动的所有应用程序。  
   
--   如果在用户级别设置变量，它们将应用于用文件资源管理器启动的所有应用程序。 在设置变量后打开的“命令提示符”窗口将具有这些环境设置，从该窗口中启动的任何应用程序也将如此。 若要在用户级别设置环境变量，右键单击**我的电脑**，单击**属性**，单击**高级**选项卡上，单击**环境变量**，并添加到变量**用户变量**列表。  
+- 如果在用户级别设置变量，它们将应用于用文件资源管理器启动的所有应用程序。 在设置变量后打开的“命令提示符”窗口将具有这些环境设置，从该窗口中启动的任何应用程序也将如此。 若要在用户级别设置环境变量，右键单击**我的电脑**，单击**属性**，单击**高级**选项卡上，单击**环境变量**，并添加到变量**用户变量**列表。  
   
--   如果在计算机级别设置变量，它们将应用于在该计算机上启动的所有应用程序。 在该计算机上打开的“命令提示符”窗口将具有这些环境设置，从该窗口中启动的任何应用程序也将如此。 这表示该计算机上的每个托管进程都将通过你的探查器启动。 若要在计算机级别设置环境变量，右键单击**我的电脑**，单击**属性**，单击**高级**选项卡上，单击**环境变量**，将变量添加到**系统变量**列表，然后再重新启动计算机。 重启后，变量将在系统范围内可用。  
+- 如果在计算机级别设置变量，它们将应用于在该计算机上启动的所有应用程序。 在该计算机上打开的“命令提示符”窗口将具有这些环境设置，从该窗口中启动的任何应用程序也将如此。 这表示该计算机上的每个托管进程都将通过你的探查器启动。 若要在计算机级别设置环境变量，右键单击**我的电脑**，单击**属性**，单击**高级**选项卡上，单击**环境变量**，将变量添加到**系统变量**列表，然后再重新启动计算机。 重启后，变量将在系统范围内可用。  
   
  如果要分析 Windows 服务，必须在设置环境变量并注册探查器 DLL 之后重启计算机。 有关这些注意事项的详细信息，请参阅明[分析 Windows 服务](#windows_service)。  
   
 ## <a name="additional-considerations"></a>其他注意事项  
   
--   探查器类实现[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)并[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)接口。 在 .NET Framework 2.0 版中，探查器必须实现 `ICorProfilerCallback2`。 否则，将不会加载 `ICorProfilerCallback2`。  
+- 探查器类实现[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)并[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)接口。 在 .NET Framework 2.0 版中，探查器必须实现 `ICorProfilerCallback2`。 否则，将不会加载 `ICorProfilerCallback2`。  
   
--   在给定环境中一次只能由一个事件探查器分析进程。 可以在不同环境中注册两个不同的探查器，但每个探查器必须分析单独的进程。 必须将探查器作为进程内 COM 服务器 DLL 实现，后者被映射到与正在被分析的进程相同的地址空间。 这表示探查器在进程内运行。 .NET Framework 不支持任何其他类型的 COM 服务器。 例如，如果探查器要监视远程计算机上的应用程序，则它必须在每台计算机上实现收集器代理。 这些代理将批处理结果，并将它们传递给中央数据收集计算机。  
+- 在给定环境中一次只能由一个事件探查器分析进程。 可以在不同环境中注册两个不同的探查器，但每个探查器必须分析单独的进程。 必须将探查器作为进程内 COM 服务器 DLL 实现，后者被映射到与正在被分析的进程相同的地址空间。 这表示探查器在进程内运行。 .NET Framework 不支持任何其他类型的 COM 服务器。 例如，如果探查器要监视远程计算机上的应用程序，则它必须在每台计算机上实现收集器代理。 这些代理将批处理结果，并将它们传递给中央数据收集计算机。  
   
--   由于探查器是在进程内实例化的 COM 对象，所以每个被分析的应用程序都将具有其自己的探查器副本。 因此，单个探查器实例不一定要处理来自多个应用程序的数据。 但是，必须向探查器的日志记录代码添加逻辑，以防日志文件从其他被分析的应用程序进行覆盖。  
+- 由于探查器是在进程内实例化的 COM 对象，所以每个被分析的应用程序都将具有其自己的探查器副本。 因此，单个探查器实例不一定要处理来自多个应用程序的数据。 但是，必须向探查器的日志记录代码添加逻辑，以防日志文件从其他被分析的应用程序进行覆盖。  
   
 ## <a name="initializing-the-profiler"></a>初始化探查器  
  如果两次环境变量检查均通过，CLR 就会以与 COM `CoCreateInstance` 函数类似的方式创建探查器实例。 直接调用 `CoCreateInstance` 不会加载探查器。 因此避免了调用 `CoInitialize`（需设置线程模型）。 CLR 将调用[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)探查器中的方法。 此方法的签名如下。  

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951588"
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个演示框架，可用于开发以下类型的应用程序：  
   
--   独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
+- 独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]（由导航页组成的应用程序，这些应用程序作为可执行程序集生成并由 Web 浏览器（如 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox）承载）。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]（由导航页组成的应用程序，这些应用程序作为可执行程序集生成并由 Web 浏览器（如 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox）承载）。  
   
--   自定义控件库（包含可重用控件的非可执行程序集）。  
+- 自定义控件库（包含可重用控件的非可执行程序集）。  
   
--   类库（包含可重用类的非可执行程序集）。  
+- 类库（包含可重用类的非可执行程序集）。  
   
 > [!NOTE]
 >  强烈建议不要在 Windows 服务中使用 WPF 类型。 如果尝试在 Windows 服务中使用这些功能，这些功能可能无法按预期工作。  
@@ -32,21 +32,21 @@ ms.locfileid: "59211057"
 ## <a name="application-management"></a>应用程序管理  
  可执行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序通常需要实现一组核心功能，其中包括：  
   
--   创建和管理常见的应用程序基础结构（包括创建入口点方法和 Windows 消息循环，以接收系统和输入消息）。  
+- 创建和管理常见的应用程序基础结构（包括创建入口点方法和 Windows 消息循环，以接收系统和输入消息）。  
   
--   对应用程序的生存期进行跟踪并与之进行交互。  
+- 对应用程序的生存期进行跟踪并与之进行交互。  
   
--   检索和处理命令行参数。  
+- 检索和处理命令行参数。  
   
--   共享应用程序范围的属性和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 资源。  
+- 共享应用程序范围的属性和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 资源。  
   
--   检测和处理未经处理的异常。  
+- 检测和处理未经处理的异常。  
   
--   返回退出代码。  
+- 返回退出代码。  
   
--   管理独立应用程序中的窗口。  
+- 管理独立应用程序中的窗口。  
   
--   跟踪 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 以及使用导航窗口和框架的独立应用程序中的导航。  
+- 跟踪 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 以及使用导航窗口和框架的独立应用程序中的导航。  
   
  以上功能由通过*应用程序定义*添加到应用程序的 <xref:System.Windows.Application> 类来实现。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "59211057"
 ## <a name="windows-and-dialog-boxes"></a>窗口和对话框  
  用户通过窗口与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序交互。 窗口旨在托管应用程序内容并提供通常允许用户与内容交互的应用程序功能。 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，通过 <xref:System.Windows.Window> 类封装窗口，该类支持：  
   
--   创建和显示窗口。  
+- 创建和显示窗口。  
   
--   建立所有者/所拥有窗口关系。  
+- 建立所有者/所拥有窗口关系。  
   
--   配置窗口外观（例如，大小、位置、图标、标题栏文本、边框）。  
+- 配置窗口外观（例如，大小、位置、图标、标题栏文本、边框）。  
   
--   对窗口的生存期进行跟踪并与之进行交互。  
+- 对窗口的生存期进行跟踪并与之进行交互。  
   
  有关详细信息，请参阅 [WPF 窗口概述](wpf-windows-overview.md)。  
   
@@ -84,23 +84,23 @@ ms.locfileid: "59211057"
 ## <a name="navigation"></a>导航  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持使用页面 (<xref:System.Windows.Controls.Page>) 和超链接 (<xref:System.Windows.Documents.Hyperlink>) 进行Web 式导航。 导航可以通过多种方式来实现，其中包括：  
   
--   在 Web 浏览器中承载的独立页面。  
+- 在 Web 浏览器中承载的独立页面。  
   
--   被编译到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 中并在 Web 浏览器中承载的页面。  
+- 被编译到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 中并在 Web 浏览器中承载的页面。  
   
--   被编译到独立应用程序中并由导航窗口 (<xref:System.Windows.Navigation.NavigationWindow>) 承载的页面。  
+- 被编译到独立应用程序中并由导航窗口 (<xref:System.Windows.Navigation.NavigationWindow>) 承载的页面。  
   
--   由框架 (<xref:System.Windows.Controls.Frame>) 承载的页面（可能在独立页面中承载），或是被编译到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或独立应用程序中的页面。  
+- 由框架 (<xref:System.Windows.Controls.Frame>) 承载的页面（可能在独立页面中承载），或是被编译到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或独立应用程序中的页面。  
   
  为了便于导航，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 实现了：  
   
--   <xref:System.Windows.Navigation.NavigationService>，供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用于处理导航请求以支持应用程序内导航的共享导航引擎。  
+- <xref:System.Windows.Navigation.NavigationService>，供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用于处理导航请求以支持应用程序内导航的共享导航引擎。  
   
--   用于启动导航的导航方法。  
+- 用于启动导航的导航方法。  
   
--   各种导航事件，用于对导航的生存期进行跟踪并与之进行交互。  
+- 各种导航事件，用于对导航的生存期进行跟踪并与之进行交互。  
   
--   记住通过日志实现的后向和前向导航，还可以检查和操控这些导航。  
+- 记住通过日志实现的后向和前向导航，还可以检查和操控这些导航。  
   
  有关信息，请参阅[导航概述](navigation-overview.md)。  
   

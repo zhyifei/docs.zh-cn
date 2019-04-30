@@ -8,11 +8,11 @@ helpviewer_keywords:
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
 ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010549"
 ---
 # <a name="dependency-property-metadata"></a>依赖项属性元数据
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统包括一个元数据报告系统，该系统不局限于可以通过反射或常规[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特征报告的关于某个属性的内容。 依赖属性的元数据还可以由定义依赖属性的类来唯一地分配，可以在依赖属性添加到另一个类时进行更改，可以由所有从定义基类继承依赖属性的派生类来明确地重写。  
@@ -25,11 +25,11 @@ ms.locfileid: "59170360"
 ## <a name="how-dependency-property-metadata-is-used"></a>依赖属性元数据的使用方式  
  依赖属性的元数据作为一个对象存在，可以通过查询该对象来检查依赖属性的特征。 当属性系统处理任何给定的依赖属性时，也会经常访问这些元数据。 依赖属性的元数据对象可以包含以下类型的信息：  
   
--   依赖属性的默认值（如果通过本地值、样式和继承等信息不能确定依赖属性的其他任何值）。有关在为依赖属性赋值时，默认值如何参与属性系统所使用的优先级的完整讨论，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。  
+- 依赖属性的默认值（如果通过本地值、样式和继承等信息不能确定依赖属性的其他任何值）。有关在为依赖属性赋值时，默认值如何参与属性系统所使用的优先级的完整讨论，请参阅[依赖属性值优先级](dependency-property-value-precedence.md)。  
   
--   对影响每个所有者类型的强制行为或更改通知行为的回叫实现的引用。 请注意，这些回叫通常是用非公共访问级别定义的，因此，除非实际引用位于允许的访问范围内，否则通常无法从元数据获得这些引用。 有关依赖属性回叫的详细信息，请参阅[依赖属性回调和验证](dependency-property-callbacks-and-validation.md)。  
+- 对影响每个所有者类型的强制行为或更改通知行为的回叫实现的引用。 请注意，这些回叫通常是用非公共访问级别定义的，因此，除非实际引用位于允许的访问范围内，否则通常无法从元数据获得这些引用。 有关依赖属性回叫的详细信息，请参阅[依赖属性回调和验证](dependency-property-callbacks-and-validation.md)。  
   
--   如果所讨论的依赖属性被视为一个 WPF 框架级别的属性，则元数据中可能包含 WPF 框架级别的依赖属性特征，这些特征报告各种服务（如 WPF 框架级别的布局引擎和属性继承逻辑）的信息和状态。 有关依赖属性元数据的这一方面的详细信息，请参阅[框架属性元数据](framework-property-metadata.md)。  
+- 如果所讨论的依赖属性被视为一个 WPF 框架级别的属性，则元数据中可能包含 WPF 框架级别的依赖属性特征，这些特征报告各种服务（如 WPF 框架级别的布局引擎和属性继承逻辑）的信息和状态。 有关依赖属性元数据的这一方面的详细信息，请参阅[框架属性元数据](framework-property-metadata.md)。  
   
 <a name="APIs"></a>   
 ## <a name="metadata-apis"></a>元数据 API  
@@ -62,15 +62,15 @@ ms.locfileid: "59170360"
   
  当你重写元数据时，系统会合并或替换不同的元数据特征。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 合并。 如果您将添加一个新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，该回叫存储在元数据。 如果未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>重写时，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>升级为从在元数据中指定它的最近上级的引用。  
+- <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 合并。 如果您将添加一个新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，该回叫存储在元数据。 如果未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>重写时，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>升级为从在元数据中指定它的最近上级的引用。  
   
--   实际属性系统行为<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是层次结构中的所有元数据所有者的实现都保留并添加到表中，属性系统的执行顺序是首先调用派生程度最高的类的回叫。  
+- 实际属性系统行为<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是层次结构中的所有元数据所有者的实现都保留并添加到表中，属性系统的执行顺序是首先调用派生程度最高的类的回叫。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 将被替换。 如果未指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>重写时，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>来自元数据中指定的最近上级。  
+- <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 将被替换。 如果未指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>重写时，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>来自元数据中指定的最近上级。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 实现将替换为。 如果您将添加一个新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，该回叫存储在元数据。 如果未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>重写时，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>升级为从在元数据中指定它的最近上级的引用。  
+- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 实现将替换为。 如果您将添加一个新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，该回叫存储在元数据。 如果未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>重写时，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>升级为从在元数据中指定它的最近上级的引用。  
   
--   属性系统行为是仅<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>调用直接元数据中。 没有对其他引用<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>保留层次结构中的实现。  
+- 属性系统行为是仅<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>调用直接元数据中。 没有对其他引用<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>保留层次结构中的实现。  
   
  此行为通过<xref:System.Windows.PropertyMetadata.Merge%2A>，并可以对派生的元数据类中重写。  
   

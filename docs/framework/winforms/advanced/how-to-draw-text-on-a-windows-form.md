@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
 ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004076"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>如何：在 Windows 窗体上绘制文本
 下面的代码示例演示如何使用<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>窗体上绘制文本。 或者，可以使用<xref:System.Windows.Forms.TextRenderer>窗体上绘制文本。 有关详细信息，请参阅[如何：用 GDI 绘制文本](how-to-draw-text-with-gdi.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "59172973"
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   未安装 Arial 字体。  
+- 未安装 Arial 字体。  
   
 ## <a name="see-also"></a>请参阅
 

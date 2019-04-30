@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
 ms.openlocfilehash: e31f728de228bea743f6c7b5cbfef3cd73367262
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971623"
 ---
 # <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>范围变量\<变量 > 隐藏封闭块、 以前定义的范围变量或在查询表达式中隐式声明的变量中的变量
 范围变量名称中指定`Select`， `From`， `Aggregate`，或`Let`子句的查询或查询，隐式声明的变量名称中之前已指定的范围变量名称重复例如，字段名称或聚合函数的名称。  
@@ -21,7 +21,7 @@ ms.locfileid: "58822708"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   确保特定的查询作用域中的所有范围变量都具有唯一的名称。 可以将一个查询括在括号中以确保嵌套的查询具有一个唯一范围。  
+- 确保特定的查询作用域中的所有范围变量都具有唯一的名称。 可以将一个查询括在括号中以确保嵌套的查询具有一个唯一范围。  
   
 ## <a name="see-also"></a>请参阅
 

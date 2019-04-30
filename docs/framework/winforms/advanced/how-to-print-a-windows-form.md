@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003972"
 ---
 # <a name="how-to-print-a-windows-form"></a>如何：打印 Windows 窗体
 作为开发过程的一部分，您通常需要打印一份 Windows 窗体。 下面的代码示例演示如何通过使用打印一份当前窗体<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法。  
@@ -30,9 +30,9 @@ ms.locfileid: "59121961"
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   你没有访问打印机的权限。  
+- 你没有访问打印机的权限。  
   
--   不没有安装任何打印机。  
+- 不没有安装任何打印机。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  若要运行此代码示例，必须有权访问你的计算机上使用的打印机。  

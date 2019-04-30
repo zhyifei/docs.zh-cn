@@ -17,11 +17,11 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 ms.openlocfilehash: 4d93b1e40371b00f9d1ff69ec31ad0983beb493f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971725"
 ---
 # <a name="uinteger-data-type"></a>UInteger 数据类型
 
@@ -48,7 +48,7 @@ ms.locfileid: "58821486"
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 作为前缀和十六进制、 二进制或八进制数字之间的前导分隔符。 例如：
+从 Visual Basic 15.5 开始，还可以使用下划线字符 (`_`) 作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -66,17 +66,17 @@ Dim number = &H_0FAC_14D7ui
 
  `UInteger`并`Integer`数据类型在 32 位处理器上，提供最佳性能，因为较小的整数类型 (`UShort`， `Short`， `Byte`，并`SByte`)，即使它们使用较少的位，需要更多的时间加载、 存储和提取。  
   
--   **负号。** 因为`UInteger`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`UInteger`，Visual Basic 将转换为表达式`Long`第一个。  
+- **负号。** 因为`UInteger`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`UInteger`，Visual Basic 将转换为表达式`Long`第一个。  
   
--   **CLS 遵从性。** `UInteger`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
+- **CLS 遵从性。** `UInteger`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
   
--   **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互请记住，类型，如`uint`可以在其他环境中具有不同的数据宽度 （16 位）。 如果您将 16 位自变量传递给此类组件，将其作为声明`UShort`而不是`UInteger`中托管的 Visual Basic 代码。  
+- **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互请记住，类型，如`uint`可以在其他环境中具有不同的数据宽度 （16 位）。 如果您将 16 位自变量传递给此类组件，将其作为声明`UShort`而不是`UInteger`中托管的 Visual Basic 代码。  
   
--   **扩大转换。** `UInteger`数据类型加宽到`Long`， `ULong`， `Decimal`， `Single`，并`Double`。 这意味着可以将转换`UInteger`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
+- **扩大转换。** `UInteger`数据类型加宽到`Long`， `ULong`， `Decimal`， `Single`，并`Double`。 这意味着可以将转换`UInteger`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
--   **类型字符。** 追加文本类型字符`UI`为文本将其强制转换到`UInteger`数据类型。 `UInteger` 有没有标识符类型字符。  
+- **类型字符。** 追加文本类型字符`UI`为文本将其强制转换到`UInteger`数据类型。 `UInteger` 有没有标识符类型字符。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt32?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt32?displayProperty=nameWithType> 结构。  
   
 ## <a name="see-also"></a>请参阅
 

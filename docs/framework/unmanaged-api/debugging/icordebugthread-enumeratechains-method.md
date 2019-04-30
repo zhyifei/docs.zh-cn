@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994040"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 方法
 获取包含此 ICorDebugThread 对象中的所有堆栈链的 ICorDebugChainEnum 枚举器的接口指针。  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>备注  
  堆栈链表示在线程的物理调用堆栈。 在以下情况下创建一个堆栈链边界：  
   
--   托管到非托管或非托管到托管的转换。  
+- 托管到非托管或非托管到托管的转换。  
   
--   上下文切换。  
+- 上下文切换。  
   
--   一个调试器用户线程进行的攻击。  
+- 一个调试器用户线程进行的攻击。  
   
  在单一上下文中运行纯托管的代码的线程的简单情况下，线程和堆栈链之间存在一对一的对应关系。  
   

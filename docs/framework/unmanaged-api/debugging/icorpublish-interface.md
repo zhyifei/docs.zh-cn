@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7581d68f5c2b575403ddc84d06147f012e7ab39e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993564"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish 接口
 用作发布进程的信息和有关应用程序域的信息，这些进程中的常规接口。  

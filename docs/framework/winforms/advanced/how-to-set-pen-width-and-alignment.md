@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967259"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>如何：设置钢笔的宽度和对齐方式
 当你创建<xref:System.Drawing.Pen>，可以作为构造函数的参数之一提供钢笔的宽度。 你可以使用笔的宽度<xref:System.Drawing.Pen.Width%2A>属性的<xref:System.Drawing.Pen>类。  
@@ -26,7 +26,7 @@ ms.locfileid: "59074971"
   
 ### <a name="to-vary-the-width-of-a-pen"></a>若要改变笔的宽度  
   
--   设置的值<xref:System.Drawing.Pen.Alignment%2A>属性设置为<xref:System.Drawing.Drawing2D.PenAlignment.Center>（默认值） 以指定使用绿色笔绘制的像素会位于理论的线条。 下图显示了生成的行。  
+- 设置的值<xref:System.Drawing.Pen.Alignment%2A>属性设置为<xref:System.Drawing.Drawing2D.PenAlignment.Center>（默认值） 以指定使用绿色笔绘制的像素会位于理论的线条。 下图显示了生成的行。  
   
      ![使用绿色突出显示黑色细线。](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59074971"
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>若要更改笔的对齐方式  
   
--   设置的值<xref:System.Drawing.Pen.Alignment%2A>属性设置为<xref:System.Drawing.Drawing2D.PenAlignment.Center>指定用绿色笔绘制的像素会位于矩形的边界。  
+- 设置的值<xref:System.Drawing.Pen.Alignment%2A>属性设置为<xref:System.Drawing.Drawing2D.PenAlignment.Center>指定用绿色笔绘制的像素会位于矩形的边界。  
   
      下图显示了所得矩形的大小：
   
@@ -48,7 +48,7 @@ ms.locfileid: "59074971"
   
 ### <a name="to-create-an-inset-pen"></a>若要创建嵌入钢笔  
   
--   通过按如下所示修改前面的代码示例中的第三个语句更改绿色笔对齐方式：  
+- 通过按如下所示修改前面的代码示例中的第三个语句更改绿色笔对齐方式：  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

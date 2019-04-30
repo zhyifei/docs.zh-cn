@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013369"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333569"
   
  有三个基本方面的格式设置<xref:System.Windows.Forms.DataGrid>控件：  
   
--   您可以设置属性来建立数据显示为默认样式。  
+- 您可以设置属性来建立数据显示为默认样式。  
   
--   以此为基础，你可以然后自定义在运行时显示某些表的方式。  
+- 以此为基础，你可以然后自定义在运行时显示某些表的方式。  
   
--   最后，您可以修改哪些列显示在数据网格和颜色，并显示了其他格式设置。  
+- 最后，您可以修改哪些列显示在数据网格和颜色，并显示了其他格式设置。  
   
  作为在格式设置数据网格中的初始步骤，可以设置的属性<xref:System.Windows.Forms.DataGrid>本身。 这些颜色和格式选择窗体从其然后可以进行更改，具体取决于数据的表和列显示的基础。  
   

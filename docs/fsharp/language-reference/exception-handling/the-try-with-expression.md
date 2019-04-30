@@ -3,11 +3,11 @@ title: 异常:try...with 表达式
 description: 了解如何使用F#的 try...使用异常处理的表达式。
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945530"
 ---
 # <a name="exceptions-the-trywith-expression"></a>异常:try...with 表达式
 
@@ -38,9 +38,9 @@ with
 
 |模式|描述|
 |-------|-----------|
-|:? *异常类型*|与指定的.NET 异常类型匹配。|
+|:? *exception-type*|与指定的.NET 异常类型匹配。|
 |:? *异常类型*作为*标识符*|匹配指定的.NET 异常类型，但为异常提供了一个命名的值。|
-|*异常名称*(*自变量*)|匹配F#异常类型和绑定参数。|
+|*exception-name*(*arguments*)|匹配F#异常类型和绑定参数。|
 |*identifier*|匹配任何异常并将名称绑定到的异常对象。 等效于 **:？作为 System.Exception**_标识符_|
 |*标识符*时*条件*|如果条件为 true，则匹配的任何异常。|
 

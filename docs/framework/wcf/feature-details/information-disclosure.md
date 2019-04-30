@@ -3,11 +3,11 @@ title: 信息泄露
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972596"
 ---
 # <a name="information-disclosure"></a>信息泄露
 信息泄露会使攻击者获得有价值的系统相关信息。 因此，应始终考虑到您正在泄露何种信息以及恶意用户是否可能使用这些信息。 下面列出了可能的信息泄露攻击并针对每种攻击提供了缓解措施。  
@@ -32,16 +32,16 @@ ms.locfileid: "59195898"
   
  缓解措施包括：  
   
--   假定服务引用是值得信任的。 无论何时传输服务引用实例时都应小心处理，以确保它们没有被篡改。  
+- 假定服务引用是值得信任的。 无论何时传输服务引用实例时都应小心处理，以确保它们没有被篡改。  
   
--   某些应用程序可以提供这样一种用户体验，即允许基于服务引用中的数据和经过远程主机证明的信任数据来交互地建立信任。 WCF 为这样一种功能，提供了扩展点，但用户必须实现它们。  
+- 某些应用程序可以提供这样一种用户体验，即允许基于服务引用中的数据和经过远程主机证明的信任数据来交互地建立信任。 WCF 为这样一种功能，提供了扩展点，但用户必须实现它们。  
   
 ## <a name="ntlm"></a>NTLM  
  默认情况下，在 Windows 域环境中，Windows 身份验证使用 Kerberos 协议对用户进行身份验证和授权。 如果出于某种原因而无法使用 Kerberos 协议，则使用 NT LAN Manager (NTLM) 作为后备方式。 通过将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 属性设置为 `false`，可以禁用此行为。 在允许使用 NTLM 时应注意的问题包括：  
   
--   NTLM 会公开客户端用户名。 如果用户名需要保密，请将绑定上的 `AllowNTLM` 属性设置为 `false`。  
+- NTLM 会公开客户端用户名。 如果用户名需要保密，请将绑定上的 `AllowNTLM` 属性设置为 `false`。  
   
--   NTLM 不提供服务器身份验证。 因此，当您使用 NTLM 作为身份验证协议时，客户端无法确保其正在与正确的服务进行通信。  
+- NTLM 不提供服务器身份验证。 因此，当您使用 NTLM 作为身份验证协议时，客户端无法确保其正在与正确的服务进行通信。  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>指定客户端凭据或无效标识会强制使用 NTLM  
  在创建客户端时，如果指定不带域名的客户端凭据或指定无效的服务器标识，则会导致使用 NTLM 而不是 Kerberos 协议（如果 `AlllowNtlm` 属性设置为 `true`）。 因为 NTLM 不进行服务器身份验证，所以信息可能会泄露。  

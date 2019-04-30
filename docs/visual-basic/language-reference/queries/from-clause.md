@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945335"
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
 指定一个或多个范围变量和查询的集合。  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  每个`From`子句可以后跟其他查询子句以优化查询的任意组合。 可以按以下方式来优化查询：  
   
--   通过使用隐式组合多个集合`From`并`Select`子句，或通过使用显式`Join`或`Group Join`子句。  
+- 通过使用隐式组合多个集合`From`并`Select`子句，或通过使用显式`Join`或`Group Join`子句。  
   
--   使用`Where`子句来筛选查询结果。  
+- 使用`Where`子句来筛选查询结果。  
   
--   对结果进行排序通过使用`Order By`子句。  
+- 对结果进行排序通过使用`Order By`子句。  
   
--   通过将类似的结果组合在一起`Group By`子句。  
+- 通过将类似的结果组合在一起`Group By`子句。  
   
--   使用`Aggregate`子句，以标识要针对整个查询结果计算的聚合函数。  
+- 使用`Aggregate`子句，以标识要针对整个查询结果计算的聚合函数。  
   
--   使用`Let`子句引入迭代变量的值由而不是集合的表达式。  
+- 使用`Let`子句引入迭代变量的值由而不是集合的表达式。  
   
--   使用`Distinct`子句忽略重复的查询结果。  
+- 使用`Distinct`子句忽略重复的查询结果。  
   
--   标识要通过使用返回的结果的部分`Skip`， `Take`， `Skip While`，和`Take While`子句。  
+- 标识要通过使用返回的结果的部分`Skip`， `Take`， `Skip While`，和`Take While`子句。  
   
 ## <a name="example"></a>示例  
  下面的查询中使用表达式`From`子句来声明范围变量`cust`每个`Customer`对象中`customers`集合。 `Where`子句使用的范围变量将输出限制为客户，从指定的区域。 `For Each`循环显示查询结果中的每个客户的公司名称。  

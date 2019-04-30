@@ -3,11 +3,11 @@ title: 如何：创建自定义实例存储
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
 ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945634"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>如何：创建自定义实例存储
 
@@ -15,8 +15,7 @@ ms.locfileid: "57707763"
 
 ## <a name="implementing-the-begintrycommand-method"></a>实现 BeginTryCommand 方法
 
-<xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 由持久性引擎发送给实例存储区。 
-  `command` 参数的类型指示要执行的命令；此参数可以是以下类型：
+<xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> 由持久性引擎发送给实例存储区。 `command` 参数的类型指示要执行的命令；此参数可以是以下类型：
 
 - <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>：工作流持久保存到存储介质时，持久性引擎将此命令发送到实例存储区中。 工作流持久性数据将提供给在 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 参数的 `command` 成员中的方法。 
 

@@ -3,11 +3,11 @@ title: 安装“消息队列 (MSMQ)”
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954942"
 ---
 # <a name="installing-message-queuing-msmq"></a>安装“消息队列 (MSMQ)”
 以下过程介绍如何安装“消息队列 4.0”和“消息队列 3.0”。  
@@ -37,9 +37,9 @@ ms.locfileid: "59305086"
   
 3. 展开“Microsoft Message Queue (MSMQ) 服务器”，展开“Microsoft Message Queue (MSMQ) 服务器核心”，然后选中对应于以下要安装的“消息队列”功能的复选框：  
   
-    -   MSMQ Active Directory 域服务集成（用于加入域的计算机）。  
+    - MSMQ Active Directory 域服务集成（用于加入域的计算机）。  
   
-    -   MSMQ HTTP 支持。  
+    - MSMQ HTTP 支持。  
   
 4. 单击 **“确定”**。  
   

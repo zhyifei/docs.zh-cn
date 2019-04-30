@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
 ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972674"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>如何：使用 COM+ 服务模型配置工具
 在选择了适当的宿主模式之后，就可使用 COM+ 服务模型配置命令行工具 (ComSvcConfig.exe) 来配置将作为 Web 服务公开的应用程序接口。  
@@ -33,7 +33,7 @@ ms.locfileid: "59322584"
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>使用 COM+ 宿主模式将接口添加到将作为 Web 服务公开的接口集  
   
--   使用 `/install` 和 `/hosting:complus` 选项运行 ComSvcConfig，如下面的示例所示。  
+- 使用 `/install` 和 `/hosting:complus` 选项运行 ComSvcConfig，如下面的示例所示。  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
@@ -49,7 +49,7 @@ ms.locfileid: "59322584"
   
 ### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>使用 COM+ 宿主模式，仅将接口中的特定方法添加到将作为 Web 服务公开的接口集  
   
--   使用 `/install` 和 `/hosting:complus` 选项以及所需方法的显式命名运行 ComSvcConfig，如下面的示例所示。  
+- 使用 `/install` 和 `/hosting:complus` 选项以及所需方法的显式命名运行 ComSvcConfig，如下面的示例所示。  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
@@ -59,7 +59,7 @@ ms.locfileid: "59322584"
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>使用 Web 宿主模式将接口添加到将作为 Web 服务公开的接口集  
   
--   使用 `/install` 选项和 `/hosting:was` 选项运行 ComSvcConfig，如下面的示例所示。  
+- 使用 `/install` 选项和 `/hosting:was` 选项运行 ComSvcConfig，如下面的示例所示。  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
@@ -73,7 +73,7 @@ ms.locfileid: "59322584"
   
 ### <a name="to-remove-a-web-service-for-a-specified-interface"></a>移除指定接口的 Web 服务  
   
--   使用 `/uninstall` 选项运行 ComSvcConfig，如下面的示例所示。  
+- 使用 `/uninstall` 选项运行 ComSvcConfig，如下面的示例所示。  
   
     ```  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
@@ -83,7 +83,7 @@ ms.locfileid: "59322584"
   
 ### <a name="to-list-currently-exposed-interfaces"></a>列出当前公开的接口  
   
--   使用 `/list` 选项运行 ComSvcConfig，如下面的示例所示。  
+- 使用 `/list` 选项运行 ComSvcConfig，如下面的示例所示。  
   
     ```  
     ComSvcConfig.exe /list  
@@ -93,7 +93,7 @@ ms.locfileid: "59322584"
   
 ### <a name="to-list-specific-currently-exposed-interfaces"></a>列出当前公开的特定接口  
   
--   使用 `/list` 选项运行 ComSvcConfig，如下面的示例所示。  
+- 使用 `/list` 选项运行 ComSvcConfig，如下面的示例所示。  
   
     ```  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
@@ -103,7 +103,7 @@ ms.locfileid: "59322584"
   
 ### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>显示可与此实用工具一起使用的选项的帮助  
   
--   使用 /? 选项运行 ComSvcConfig， 如下面的示例所示。  
+- 使用 /? 选项运行 ComSvcConfig， 如下面的示例所示。  
   
     ```  
     ComSvcConfig.exe /?  

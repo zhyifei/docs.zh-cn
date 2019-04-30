@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966857"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何：从命令行创建 Windows 窗体应用程序
 下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练：在 WPF 中承载 Windows 窗体控件](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。  
@@ -44,11 +44,11 @@ ms.locfileid: "59299861"
   
 4. 将 `Main` 方法添加到类。  
   
-    1.  将应用<xref:System.STAThreadAttribute>到 C#`Main`方法，以指定 Windows 窗体应用程序是单线程单元。 （该属性不需要在 Visual Basic 中，由于 Windows 窗体应用程序开发与 Visual Basic 使用单线程单元模型的默认值。）  
+    1. 将应用<xref:System.STAThreadAttribute>到 C#`Main`方法，以指定 Windows 窗体应用程序是单线程单元。 （该属性不需要在 Visual Basic 中，由于 Windows 窗体应用程序开发与 Visual Basic 使用单线程单元模型的默认值。）  
   
-    2.  调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>将操作系统样式应用于你的应用程序。  
+    2. 调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>将操作系统样式应用于你的应用程序。  
   
-    3.  创建一个窗体实例，并运行。  
+    3. 创建一个窗体实例，并运行。  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ ms.locfileid: "59299861"
   
 2. 编译该窗体。  
   
-    -   如果使用的 C#，请键入： `csc form1.cs`  
+    - 如果使用的 C#，请键入： `csc form1.cs`  
   
          `-or-`  
   
-    -   如果使用的 Visual Basic，请键入： `vbc form1.vb`  
+    - 如果使用的 Visual Basic，请键入： `vbc form1.vb`  
   
 3. 在命令提示符下键入： `Form1.exe`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59299861"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   若要编译代码，请遵循处理过程中描述如何编译和运行应用程序的说明。  
+- 若要编译代码，请遵循处理过程中描述如何编译和运行应用程序的说明。  
   
 ## <a name="see-also"></a>请参阅
 

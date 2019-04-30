@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID71
 ms.assetid: 5e2528f5-81b3-4e5e-a294-a43cc738a42e
 ms.openlocfilehash: 3e981a55158ae77ed8a2b5f3d33c02aea175abdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970360"
 ---
 # <a name="disk-not-ready"></a>磁盘未准备好
 对于指定的驱动器，没有磁盘或者驱动器门处于打开状态。  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949001"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
 确定特定于计算机或计算机不可知的可移植可执行文件类型。  

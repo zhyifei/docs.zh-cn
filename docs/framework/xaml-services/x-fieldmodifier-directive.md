@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971857"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指令
 修改 XAML 编译行为，以便与定义的已命名的对象引用的字段<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>而不是访问<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>默认行为。  
@@ -36,11 +36,11 @@ ms.locfileid: "59144542"
   
  值为`x:FieldModifier`属性因编程语言，并在特定框架中它的用途而异。 要使用的字符串取决于如何实现每种语言及其<xref:System.CodeDom.Compiler.CodeDomProvider>和类型转换器，它将返回定义的含义<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及该语言是否区分大小写。  
   
--   对于 C#，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`public`。  
+- 对于 C#，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`public`。  
   
--   用于 Microsoft Visual Basic.NET，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`Public`。  
+- 用于 Microsoft Visual Basic.NET，要传递的用于指定的字符串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>是`Public`。  
   
--   有关[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，XAML 没有目标当前存在; 因此，要传递的字符串是不确定。  
+- 有关[!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]，XAML 没有目标当前存在; 因此，要传递的字符串是不确定。  
   
  此外可以指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>(`internal`中C#， `Friend` Visual Basic 中) 但指定<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>并不常见因为`NotPublic`因为该行为已是默认值。  
   

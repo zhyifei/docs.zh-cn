@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950301"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>如何：为安全会话创建安全上下文令牌
 通过在安全会话中使用有状态安全上下文令牌 (SCT)，可以使该会话避免因为重新使用服务而受到影响。 例如，如果在安全会话中使用了无状态 SCT 并且 Internet 信息服务 (IIS) 被重置，则与该服务相关联的会话数据将丢失。 这些会话数据包括一个 SCT 令牌缓存。 因此，当客户端下一次向该服务发送无状态 SCT 时，将返回错误，这是因为无法检索到与该 SCT 相关联的密钥。 但是，如果使用有状态 SCT，则与该 SCT 相关联的密钥将包含在该 SCT 中。 由于密钥包含在 SCT 中并因而包含在消息中，因此安全会话不会因为重新使用服务而受到影响。 默认情况下，Windows Communication Foundation (WCF) 在安全会话中使用无状态 Sct。 本主题详细介绍如何在安全会话中使用有状态 SCT。  
@@ -26,15 +26,15 @@ ms.locfileid: "59189334"
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>在安全会话中使用有状态 SCT  
   
--   创建一个自定义绑定，该绑定指定由使用有状态 SCT 的安全会话来保护 SOAP 消息。  
+- 创建一个自定义绑定，该绑定指定由使用有状态 SCT 的安全会话来保护 SOAP 消息。  
   
-    1.  通过添加定义自定义绑定[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)到该服务的配置文件。  
+    1. 通过添加定义自定义绑定[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)到该服务的配置文件。  
   
         ```xml  
         <customBinding>  
         ```  
   
-    2.  添加[\<绑定 >](../../../../docs/framework/misc/binding.md)子元素[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+    2. 添加[\<绑定 >](../../../../docs/framework/misc/binding.md)子元素[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
          通过在配置文件中将 `name` 属性设置为一个唯一的名称，指定一个绑定名称。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59189334"
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3.  指定消息通过添加发往和来自此服务的身份验证模式[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)子元素[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+    3. 指定消息通过添加发往和来自此服务的身份验证模式[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)子元素[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
          通过将 `authenticationMode` 属性设置为 `SecureConversation`，指定使用安全会话。 通过将 `requireSecurityContextCancellation` 属性设置为 `false`，指定使用有状态 SCT。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59189334"
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4.  指定如何在客户端进行身份验证通过添加建立安全会话时[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子元素[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。  
+    4. 指定如何在客户端进行身份验证通过添加建立安全会话时[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子元素[\<安全 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)。  
   
          通过设置 `authenticationMode` 属性，指定如何对客户端进行身份验证。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59189334"
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5.  指定添加一个编码元素，如消息编码[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
+    5. 指定添加一个编码元素，如消息编码[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6.  指定传输，方法添加一个传输元素，如[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)。  
+    6. 指定传输，方法添加一个传输元素，如[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)。  
   
         ```xml  
         <httpTransport />  

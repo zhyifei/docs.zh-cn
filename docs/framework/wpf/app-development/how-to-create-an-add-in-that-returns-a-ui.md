@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947831"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>如何：创建返回 UI 的外接程序
 此示例演示如何创建 Windows Presentation Foundation (WPF) 返回到主机 WPF 独立应用程序的外接程序。  
@@ -25,9 +25,9 @@ ms.locfileid: "59115741"
   
  此示例重点介绍启用此方案中，WPF 扩展到.NET Framework 外接程序模型，并假设条件如下：  
   
--   了解.NET Framework 外接程序模型，包括管道、 外接程序和主机开发。 如果您不熟悉这些概念，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 有关演示如何实现一个管道、 外接程序和主机应用程序的教程，请参阅[演练：创建可扩展的应用程序](../../add-ins/walkthrough-create-extensible-app.md)。  
+- 了解.NET Framework 外接程序模型，包括管道、 外接程序和主机开发。 如果您不熟悉这些概念，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 有关演示如何实现一个管道、 外接程序和主机应用程序的教程，请参阅[演练：创建可扩展的应用程序](../../add-ins/walkthrough-create-extensible-app.md)。  
   
--   .NET Framework 外接程序模型，可以在此处找到的 WPF 扩展知识：[WPF 外接程序概述](wpf-add-ins-overview.md)。  
+- .NET Framework 外接程序模型，可以在此处找到的 WPF 扩展知识：[WPF 外接程序概述](wpf-add-ins-overview.md)。  
   
 ## <a name="example"></a>示例  
  若要返回 WPF UI 的外接程序创建的每个管道段、 外接程序和主机应用程序需要特定代码。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - functions [WPF], returning from
 ms.assetid: 87804905-7e8f-417b-b0e3-5622da686396
 ms.openlocfilehash: 8539395625ead3b71e8e50b36567c098eb13da01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981391"
 ---
 # <a name="how-to-return-from-a-page-function"></a>如何：通过页函数返回
 本示例显示如何从页函数返回结果。  

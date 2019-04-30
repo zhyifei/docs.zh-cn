@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
 ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982626"
 ---
 # <a name="xshared-attribute"></a>x:Shared 特性
 如果设置为`false`，修改 WPF 资源检索行为，以便特性化的资源的请求创建每个请求而不是共享同一个实例的所有请求的新实例。  
@@ -45,9 +45,9 @@ ms.locfileid: "59125731"
   
  在 WPF 中，`x:Shared`是仅在以下情况下有效：  
   
--   <xref:System.Windows.ResourceDictionary> ，其中包含与项`x:Shared`必须进行编译。 <xref:System.Windows.ResourceDictionary>不能为松散 XAML 中或用于主题。  
+- <xref:System.Windows.ResourceDictionary> ，其中包含与项`x:Shared`必须进行编译。 <xref:System.Windows.ResourceDictionary>不能为松散 XAML 中或用于主题。  
   
--   <xref:System.Windows.ResourceDictionary>包含的项不能嵌套在另一个<xref:System.Windows.ResourceDictionary>。 例如，不能使用`x:Shared`中的项<xref:System.Windows.ResourceDictionary>，位于<xref:System.Windows.Style>已<xref:System.Windows.ResourceDictionary>项。  
+- <xref:System.Windows.ResourceDictionary>包含的项不能嵌套在另一个<xref:System.Windows.ResourceDictionary>。 例如，不能使用`x:Shared`中的项<xref:System.Windows.ResourceDictionary>，位于<xref:System.Windows.Style>已<xref:System.Windows.ResourceDictionary>项。  
   
 ## <a name="see-also"></a>请参阅
 

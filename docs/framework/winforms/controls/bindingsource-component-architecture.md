@@ -8,28 +8,28 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961572"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 组件体系结构
 使用<xref:System.Windows.Forms.BindingSource>组件，普遍可以将所有 Windows 窗体控件都绑定到数据源。  
   
  <xref:System.Windows.Forms.BindingSource>组件简化将控件绑定到数据源的过程，并通过传统的数据绑定有以下优点：  
   
--   使设计时绑定到业务对象。  
+- 使设计时绑定到业务对象。  
   
--   封装<xref:System.Windows.Forms.CurrencyManager>功能，并公开<xref:System.Windows.Forms.CurrencyManager>在设计时的事件。  
+- 封装<xref:System.Windows.Forms.CurrencyManager>功能，并公开<xref:System.Windows.Forms.CurrencyManager>在设计时的事件。  
   
--   简化了创建列表支持<xref:System.ComponentModel.IBindingList>针对本机不支持列表的数据源更改通知，从而列表更改通知的接口。  
+- 简化了创建列表支持<xref:System.ComponentModel.IBindingList>针对本机不支持列表的数据源更改通知，从而列表更改通知的接口。  
   
--   提供的扩展点<xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType>方法。  
+- 提供的扩展点<xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType>方法。  
   
--   提供数据源和控件之间的间接级别。 在运行时可能会更改数据源时，这种间接方式很重要。  
+- 提供数据源和控件之间的间接级别。 在运行时可能会更改数据源时，这种间接方式很重要。  
   
--   特别是与其他数据相关的 Windows 窗体控件，互操作<xref:System.Windows.Forms.BindingNavigator>和<xref:System.Windows.Forms.DataGridView>控件。  
+- 特别是与其他数据相关的 Windows 窗体控件，互操作<xref:System.Windows.Forms.BindingNavigator>和<xref:System.Windows.Forms.DataGridView>控件。  
   
  出于这些原因，<xref:System.Windows.Forms.BindingSource>组件是在 Windows 窗体控件绑定到数据源的首选的方法。  
   
@@ -40,38 +40,38 @@ ms.locfileid: "59165342"
   
  提供的一致界面<xref:System.Windows.Forms.BindingSource>组件极大地简化了数据绑定到控件的过程。 针对数据源类型提供的更改通知，<xref:System.Windows.Forms.BindingSource>组件会自动进行通信的控件和数据源之间的更改。 对于不提供更改通知的数据源类型，事件都是提供可用于引发更改通知。 以下列表显示了支持的功能<xref:System.Windows.Forms.BindingSource>组件：  
   
--   间接寻址。  
+- 间接寻址。  
   
--   当前项管理。  
+- 当前项管理。  
   
--   作为列表的数据源。  
+- 作为列表的数据源。  
   
--   <xref:System.Windows.Forms.BindingSource> 作为<xref:System.ComponentModel.IBindingList>。  
+- <xref:System.Windows.Forms.BindingSource> 作为<xref:System.ComponentModel.IBindingList>。  
   
--   自定义项的创建。  
+- 自定义项的创建。  
   
--   事务的项的创建。  
+- 事务的项的创建。  
   
--   <xref:System.Collections.IEnumerable> 支持。  
+- <xref:System.Collections.IEnumerable> 支持。  
   
--   设计时支持。  
+- 设计时支持。  
   
--   静态<xref:System.Windows.Forms.ListBindingHelper>方法。  
+- 静态<xref:System.Windows.Forms.ListBindingHelper>方法。  
   
--   排序和筛选与<xref:System.ComponentModel.IBindingListView>接口。  
+- 排序和筛选与<xref:System.ComponentModel.IBindingListView>接口。  
   
--   与集成<xref:System.Windows.Forms.BindingNavigator>。  
+- 与集成<xref:System.Windows.Forms.BindingNavigator>。  
   
 ### <a name="indirection"></a>间接寻址  
  <xref:System.Windows.Forms.BindingSource>组件提供了一个控件和数据源之间的间接级别。 而不是将控件绑定到数据源，将绑定到控件<xref:System.Windows.Forms.BindingSource>，并将附加到数据源<xref:System.Windows.Forms.BindingSource>组件的<xref:System.Windows.Forms.BindingSource.DataSource%2A>属性。  
   
  使用此级别的间接寻址，可以更改数据源，而重置控件绑定。 这为您提供以下功能：  
   
--   可以将附加<xref:System.Windows.Forms.BindingSource>到不同的数据源，同时保留当前的控件绑定。  
+- 可以将附加<xref:System.Windows.Forms.BindingSource>到不同的数据源，同时保留当前的控件绑定。  
   
--   可更改数据源中的项，并通知绑定的控件。 有关详细信息，请参阅[如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。  
+- 可更改数据源中的项，并通知绑定的控件。 有关详细信息，请参阅[如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。  
   
--   可以将绑定到<xref:System.Type>而不是在内存中的对象。 有关详细信息，请参阅[如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)。 你可以然后绑定到对象在运行时。  
+- 可以将绑定到<xref:System.Type>而不是在内存中的对象。 有关详细信息，请参阅[如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)。 你可以然后绑定到对象在运行时。  
   
 ### <a name="currency-management"></a>当前项管理  
  <xref:System.Windows.Forms.BindingSource>组件实现<xref:System.Windows.Forms.ICurrencyManagerProvider>接口来处理您的货币管理。 与<xref:System.Windows.Forms.ICurrencyManagerProvider>接口，您还可以访问到的货币管理器<xref:System.Windows.Forms.BindingSource>，另一个的货币管理器除了<xref:System.Windows.Forms.BindingSource>绑定到同一<xref:System.Windows.Forms.BindingSource.DataMember%2A>。  
@@ -128,11 +128,11 @@ ms.locfileid: "59165342"
 ### <a name="transactional-item-creation"></a>事务的项的创建  
  <xref:System.Windows.Forms.BindingSource>组件实现<xref:System.ComponentModel.ICancelAddNew>接口，这使事务的项的创建。 通过使用调用暂时创建一个新项后<xref:System.Windows.Forms.BindingSource.AddNew%2A>，可能会提交或回滚按以下方式添加：  
   
--   <xref:System.ComponentModel.ICancelAddNew.EndNew%2A>方法显式提交挂起的添加。  
+- <xref:System.ComponentModel.ICancelAddNew.EndNew%2A>方法显式提交挂起的添加。  
   
--   执行另一个集合操作，例如插入、 删除或移动的同时，将隐式提交挂起的添加。  
+- 执行另一个集合操作，例如插入、 删除或移动的同时，将隐式提交挂起的添加。  
   
--   <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>方法将挂起的添加时回滚该方法不已提交。  
+- <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>方法将挂起的添加时回滚该方法不已提交。  
   
 ### <a name="ienumerable-support"></a>IEnumerable 支持  
  <xref:System.Windows.Forms.BindingSource>组件允许控件绑定到<xref:System.Collections.IEnumerable>数据源。 与此组件，您可以将绑定到数据源如<xref:System.Data.SqlClient.SqlDataReader?displayProperty=nameWithType>。  
@@ -147,13 +147,13 @@ ms.locfileid: "59165342"
 ### <a name="static-listbindinghelper-methods"></a>静态 ListBindingHelper 方法  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>， <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>，并<xref:System.Windows.Forms.BindingSource>类型的所有共享通用逻辑生成从列表`DataSource` / `DataMember`对。 此外，此常见逻辑将公开用于控件作者和其他第三方在下面的示例`static`方法：  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
+- <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
   
 ### <a name="sorting-and-filtering-with-the-ibindinglistview-interface"></a>排序和筛选与 IBindingListView 接口  
  <xref:System.Windows.Forms.BindingSource>组件实现<xref:System.ComponentModel.IBindingListView>接口，它扩展了<xref:System.ComponentModel.IBindingList>接口。 <xref:System.ComponentModel.IBindingList>提供了单个列进行排序和<xref:System.ComponentModel.IBindingListView>提供高级排序和筛选。 使用<xref:System.ComponentModel.IBindingListView>，可以进行排序和筛选器项中的数据源，如果数据源还实现这些接口之一。 <xref:System.Windows.Forms.BindingSource>组件不提供这些成员的参考实现。 相反，将调用转发给基础列表。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985356"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 类
 提供用于创建本机可移植可执行 (PE) 文件的功能。 接口通常用于由编译器生成可执行其已编译的输出。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991045"
 ---
 # <a name="routing-scenarios"></a>路由方案
 尽管路由服务可高度自定义，但是，如果要从头开始创建新配置，设计高效的路由逻辑很富有挑战性。  然而，大多数路由服务配置都遵循一些常见方案。 虽然这些方案可能并不直接适用于特定配置，但是了解如何配置路由服务以处理这些方案有助于您了解路由服务。  
@@ -49,9 +49,9 @@ ms.locfileid: "59223822"
 ### <a name="multicast"></a>多播  
  路由消息时，您通常需要将各消息路由到一个特定的目标终结点。  但是，有时您可能需要将消息副本路由到多个目标终结点。 若要执行多播路由，必须满足以下条件：  
   
--   通道形状不能为请求-答复（但可以为单向或双工），因为请求-答复要求客户端应用程序在响应请求时只能接收一个答复。  
+- 通道形状不能为请求-答复（但可以为单向或双工），因为请求-答复要求客户端应用程序在响应请求时只能接收一个答复。  
   
--   多个筛选器必须返回 **，则返回 true**计算消息时。  
+- 多个筛选器必须返回 **，则返回 true**计算消息时。  
   
  如果满足这些条件，则与返回 true 的筛选器关联的每个目标终结点都将收到消息的一个副本。  
   

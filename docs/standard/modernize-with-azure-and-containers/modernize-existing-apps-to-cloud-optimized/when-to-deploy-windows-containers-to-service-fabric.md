@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973638"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>何时将 Windows 容器部署到 Service Fabric
 
@@ -17,9 +17,9 @@ ms.locfileid: "53129501"
 
 许多组织是提升并转移到容器的现有单一式应用程序有两个原因：
 
--   成本的降低，或者由于合并和删除的现有硬件，或在更高的密度运行的应用程序。
+- 成本的降低，或者由于合并和删除的现有硬件，或在更高的密度运行的应用程序。
 
--   开发和运营之间一致的部署协定。
+- 开发和运营之间一致的部署协定。
 
 追求降低成本是可以理解，并可能所有组织都跟踪这一目标。 一致的部署是更难以评估，但同样重要。 一致的部署协定说开发人员可自由选择使用适时，技术和运营团队获取一种方法来部署和管理应用程序。 本协议缓解了具有处理许多不同的技术，复杂的操作也不会强迫开发人员可以仅使用特定技术的麻烦。 从根本上来说，每个应用程序是适用于容器化的独立的部署映像中。
 

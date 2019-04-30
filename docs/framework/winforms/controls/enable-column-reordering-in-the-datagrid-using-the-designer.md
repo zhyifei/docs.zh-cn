@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
 ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972089"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器在 Windows 窗体 DataGridView 控件中启用列重新排序
 查看显示在 Windows 窗体中的数据时<xref:System.Windows.Forms.DataGridView>控件，用户有时想要比较的特定列中的值。 这可以是列广泛分散在控件中，如果不方便，尤其是当用户必须来回水平滚动才能看到他们感兴趣的所有列。 可以通过使用户能够对列重新排序比较列的值更容易的任务。 当启用列重新排序时，用户可以将列移到新位置通过拖放列标题中的使用鼠标。  
@@ -24,7 +24,7 @@ ms.locfileid: "59194963"
   
 ### <a name="to-enable-column-reordering"></a>若要启用列重新排序  
   
--   单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控件，并选择**启用列重新排序**.  
+- 单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控件，并选择**启用列重新排序**.  
   
 ## <a name="see-also"></a>请参阅
 

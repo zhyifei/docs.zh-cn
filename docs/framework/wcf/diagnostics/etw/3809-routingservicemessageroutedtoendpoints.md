@@ -3,18 +3,18 @@ title: 3809 - RoutingServiceMessageRoutedToEndpoints
 ms.date: 03/30/2017
 ms.assetid: 22479cc6-72d1-48df-912c-fc37bddeb043
 ms.openlocfilehash: b31192e613b7e9f5e4ea1a382b529b693ae0e9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33468769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999825"
 ---
 # <a name="3809---routingservicemessageroutedtoendpoints"></a>3809 - RoutingServiceMessageRoutedToEndpoints
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|3809|  
+|Id|3809|  
 |关键字|RoutingServices|  
 |级别|详细|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  

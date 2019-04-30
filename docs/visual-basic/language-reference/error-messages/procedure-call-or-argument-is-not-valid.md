@@ -5,18 +5,18 @@ f1_keywords:
 - vbrID5
 ms.assetid: 9b07d280-66c6-4ea5-a8ed-5ddb0036f877
 ms.openlocfilehash: 50a1e20903af344ffb6e5c48b0f3bb954b49d976
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971686"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>过程调用或参数无效 (Visual Basic)
 无法完成调用的某些部分。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   检查参数以确保未超出允许的值的允许的范围。  
+- 检查参数以确保未超出允许的值的允许的范围。  
   
 ## <a name="see-also"></a>请参阅
 

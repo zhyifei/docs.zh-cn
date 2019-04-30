@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967851"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定终结点地址
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过其终结点。 每个 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和一个 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 协定指定可用的操作。 绑定指定如何与服务进行通信，而地址指定查找服务的位置。 每个终结点都必须具有一个唯一的地址。 终结点的地址由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个表示服务地址的统一资源定位符 (URI)，一个表示服务的安全标识的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 和一个可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 可选标头提供用于标识终结点或与终结点交互的更多详细寻址信息。 例如，标头可指示如何处理传入消息，终结点应发送答复消息的位置，或在多个实例可用时应使用哪个服务实例处理来自特定用户的传入消息。  
@@ -22,13 +22,13 @@ ms.locfileid: "59097520"
   
  大多数传输的地址 URI 包含四个部分。 例如，此 URI`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`有以下四个部分：  
   
--   方案：http:  
+- 方案：http:  
   
--   计算机： `www.fabrikam.com`  
+- 计算机： `www.fabrikam.com`  
   
--   （可选）端口：322  
+- （可选）端口：322  
   
--   路径：/mathservice.svc/secureEndpoint  
+- 路径：/mathservice.svc/secureEndpoint  
   
  作为 EPR 模型的一部分，每个终结点引用都可以包含一些添加额外标识信息的引用参数。 在 WCF 中，这些引用参数建模为的实例<xref:System.ServiceModel.Channels.AddressHeader>类。  
   

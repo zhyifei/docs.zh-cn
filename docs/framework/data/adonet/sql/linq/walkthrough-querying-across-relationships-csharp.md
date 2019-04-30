@@ -3,11 +3,11 @@ title: 演练：跨关系查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
 ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033392"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>演练：跨关系查询 (C#)
 本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*关联*来表示数据库中的外键关系。  
@@ -22,18 +22,18 @@ ms.locfileid: "59325366"
 ## <a name="overview"></a>概述  
  本演练由三项主要任务组成：  
   
--   添加一个实体类以表示 Northwind 示例数据库中的 Orders 表。  
+- 添加一个实体类以表示 Northwind 示例数据库中的 Orders 表。  
   
--   向 `Customer` 类补充一些批注，以增强 `Customer` 和 `Order` 类之间的关系。  
+- 向 `Customer` 类补充一些批注，以增强 `Customer` 和 `Order` 类之间的关系。  
   
--   创建并运行查询以测试能否通过使用 `Order` 类获取 `Customer` 信息。  
+- 创建并运行查询以测试能否通过使用 `Order` 类获取 `Customer` 信息。  
   
 ## <a name="mapping-relationships-across-tables"></a>跨表映射关系  
  在 `Customer` 类定义的后面，创建包含如下代码的 `Order` 实体类定义，这些代码表示 `Order.Customer` 作为外键与 `Customer.CustomerID` 相关。  
   
 #### <a name="to-add-the-order-entity-class"></a>添加 Order 实体类  
   
--   在 `Customer` 类后面键入或粘贴如下代码：  
+- 在 `Customer` 类后面键入或粘贴如下代码：  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59325366"
   
 #### <a name="to-annotate-the-customer-class"></a>对 Customer 类进行批注  
   
--   将下面的代码键入或粘贴到 `Customer` 类中：  
+- 将下面的代码键入或粘贴到 `Customer` 类中：  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   

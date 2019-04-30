@@ -3,11 +3,11 @@ title: 消息日志记录的安全问题
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998148"
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
@@ -21,11 +21,11 @@ ms.locfileid: "59170659"
   
  下面的提示有助于您避免意外公开日志文件的内容：  
   
--   确保在 Web 承载和自承载方案中都使用访问控制列表 (ACL) 对日志文件进行保护。  
+- 确保在 Web 承载和自承载方案中都使用访问控制列表 (ACL) 对日志文件进行保护。  
   
--   选择无法使用 Web 请求轻松提供的文件扩展名。 例如，.xml 文件扩展名不是一个安全的选择。 可以参考 Internet 信息服务 (IIS) 管理指南以查看可提供的扩展名的列表。  
+- 选择无法使用 Web 请求轻松提供的文件扩展名。 例如，.xml 文件扩展名不是一个安全的选择。 可以参考 Internet 信息服务 (IIS) 管理指南以查看可提供的扩展名的列表。  
   
--   为日志文件位置指定绝对路径，该位置应当在 Web 主机虚拟根目录公共目录之外，以防止外部方使用 Web 浏览器进行访问。  
+- 为日志文件位置指定绝对路径，该位置应当在 Web 主机虚拟根目录公共目录之外，以防止外部方使用 Web 浏览器进行访问。  
   
  默认情况下，不会在跟踪和已记录消息中记录密钥和个人身份信息 (PII)（例如用户名和密码）。 但是，计算机管理员可以在 Machine.config 文件的 `enableLoggingKnownPII` 元素中使用 `machineSettings` 属性来允许计算机上运行的应用程序记录已知的个人身份信息 (PII)。 下面的配置演示如何执行该操作：  
   
@@ -99,13 +99,13 @@ ms.locfileid: "59170659"
 ## <a name="events-triggered-by-message-logging"></a>消息日志记录触发的事件  
  下面列出了消息日志记录发出的所有事件。  
   
--   消息日志记录：在配置中，或通过 WMI 启用消息日志记录时，将发出此事件。 此事件的内容是“消息日志记录已打开。 将记录敏感信息，即使已在网络上对其进行加密: 例如，消息正文。”  
+- 消息日志记录：在配置中，或通过 WMI 启用消息日志记录时，将发出此事件。 此事件的内容是“消息日志记录已打开。 将记录敏感信息，即使已在网络上对其进行加密: 例如，消息正文。”  
   
--   日志记录的消息：通过 WMI 禁用消息日志记录时，将发出此事件。 此事件的内容是“消息日志记录已关闭”。  
+- 日志记录的消息：通过 WMI 禁用消息日志记录时，将发出此事件。 此事件的内容是“消息日志记录已关闭”。  
   
--   登录到已知的 PII:启用记录已知 PII 时发出此事件。 发生这种情况时`enableLoggingKnownPii`中的属性`machineSettings`Machine.config 文件的元素设置为`true`，和`logKnownPii`属性的`source`App.config 或 Web.config 文件中的元素设置为`true`.  
+- 登录到已知的 PII:启用记录已知 PII 时发出此事件。 发生这种情况时`enableLoggingKnownPii`中的属性`machineSettings`Machine.config 文件的元素设置为`true`，和`logKnownPii`属性的`source`App.config 或 Web.config 文件中的元素设置为`true`.  
   
--   日志不允许的已知的 PII:不允许记录已知 PII 时发出此事件。 发生这种情况时`logKnownPii`的属性`source`App.config 或 Web.config 文件中的元素设置为`true`，但`enableLoggingKnownPii`属性中`machineSettings`Machine.config 文件的元素设置为`false`. 不引发异常。  
+- 日志不允许的已知的 PII:不允许记录已知 PII 时发出此事件。 发生这种情况时`logKnownPii`的属性`source`App.config 或 Web.config 文件中的元素设置为`true`，但`enableLoggingKnownPii`属性中`machineSettings`Machine.config 文件的元素设置为`false`. 不引发异常。  
   
  可以在 Windows 附带的事件查看器工具中查看这些事件。 有关这方面的详细信息，请参阅[事件日志记录](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   

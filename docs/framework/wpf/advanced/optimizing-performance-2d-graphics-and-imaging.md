@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981937"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>优化性能：二维图形和图像处理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了多种可按应用程序要求进行优化的二维图形和图像处理功能。 本主题提供有关这些方面性能优化的信息。  
@@ -34,13 +34,13 @@ ms.locfileid: "59074984"
   
  有四种类型的<xref:System.Windows.Media.Drawing>对象：  
   
--   <xref:System.Windows.Media.GeometryDrawing> 绘制形状。  
+- <xref:System.Windows.Media.GeometryDrawing> 绘制形状。  
   
--   <xref:System.Windows.Media.ImageDrawing> 绘制图像。  
+- <xref:System.Windows.Media.ImageDrawing> 绘制图像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> 绘制文本。  
+- <xref:System.Windows.Media.GlyphRunDrawing> 绘制文本。  
   
--   <xref:System.Windows.Media.DrawingGroup> 绘制其他绘图。 使用图形组将其他图形合并到单个复合图形。  
+- <xref:System.Windows.Media.DrawingGroup> 绘制其他绘图。 使用图形组将其他图形合并到单个复合图形。  
   
  <xref:System.Windows.Media.GeometryDrawing>对象用于绘制几何内容。 <xref:System.Windows.Media.Geometry>类和具体类派生，如<xref:System.Windows.Media.CombinedGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和<xref:System.Windows.Media.PathGeometry>、 用于呈现二维图形提供一种方式，以及提供命中测试和剪裁支持。 几何对象可用于定义控件的区域或定义应用于图像的剪裁区域等。 几何对象可以是简单区域（例如矩形和圆形），或者是由两个或多个几何对象创建的复合区域。 可以通过组合创建更复杂的几何区域<xref:System.Windows.Media.PathSegment>的派生的对象，如<xref:System.Windows.Media.ArcSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.QuadraticBezierSegment>。  
   
@@ -65,18 +65,18 @@ ms.locfileid: "59074984"
  <xref:System.Windows.Media.DrawingVisual>对象是一个轻量绘图类，用于呈现形状、 图像或文本。 此类之所以为轻量类是因为它不提供布局或事件处理，从而性能得以提升。 因此，绘图非常适用于背景和剪贴画。 有关详细信息，请参阅[使用 DrawingVisual 对象](../graphics-multimedia/using-drawingvisual-objects.md)。  
   
 <a name="Images"></a>   
-## <a name="images"></a>图像  
+## <a name="images"></a>映像  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图像处理对 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 先前版本的图像处理功能进行了极大改进。 显示位图或在公共控件上使用图像等图像处理功能以前主要由 Microsoft Windows 图形设备接口 (GDI) 或Microsoft Windows GDI+ 应用程序编程接口 (API) 处理。 这些 API 提供基线图像处理功能，但缺少编解码器扩展性支持和高保真图像支持等功能。 WPF 图像处理 API 已经过重新设计，克服了 GDI 和 GDI+ 的缺点，提供新的 API 集以在应用程序内显示和使用图像。  
   
  使用图像时，为使性能更佳，请考虑以下建议：  
   
--   如果应用程序要求显示缩略图，请考虑创建一个缩略版图像。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 会加载图像并将其解码到最大尺寸。 如果仅需要缩略版本图像，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 会先将图像解码为完整尺寸，然后将其缩放为缩略图大小，这个过程是多余的。 若要避免此多余的过程，可请求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将图像解码到缩略图大小，或者请求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 加载缩略图大小的图像。  
+- 如果应用程序要求显示缩略图，请考虑创建一个缩略版图像。 默认情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 会加载图像并将其解码到最大尺寸。 如果仅需要缩略版本图像，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 会先将图像解码为完整尺寸，然后将其缩放为缩略图大小，这个过程是多余的。 若要避免此多余的过程，可请求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将图像解码到缩略图大小，或者请求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 加载缩略图大小的图像。  
   
--   请务必将图像解码到所需大小而不是默认大小。 如上所述，请求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将图像解码为所需大小而不是默认的最大尺寸。 这样不仅会减小应用程序的工作集，还会减慢其执行速度。  
+- 请务必将图像解码到所需大小而不是默认大小。 如上所述，请求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将图像解码为所需大小而不是默认的最大尺寸。 这样不仅会减小应用程序的工作集，还会减慢其执行速度。  
   
--   如果可能，请将多个图像合并到单个图像中，例如由多个图像构成的胶卷条。  
+- 如果可能，请将多个图像合并到单个图像中，例如由多个图像构成的胶卷条。  
   
--   有关详细信息，请参阅 [图像概述](../graphics-multimedia/imaging-overview.md)。  
+- 有关详细信息，请参阅 [图像概述](../graphics-multimedia/imaging-overview.md)。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  对任何位图缩放进行动画处理时，默认高质量图像重采样算法有时可能由于消耗过多系统资源导致帧速率下降，从而导致动画明显变慢。 通过设置<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>的属性<xref:System.Windows.Media.RenderOptions>对象传递给<xref:System.Windows.Media.BitmapScalingMode.LowQuality>缩放位图时，可以创建更为流畅的动画。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 模式告知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现引擎处理图像时从质量优化算法切换到速度优化算法。  

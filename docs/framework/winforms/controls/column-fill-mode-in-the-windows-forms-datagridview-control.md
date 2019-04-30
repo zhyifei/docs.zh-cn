@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956276"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列填充模式
 在列填充模式中，<xref:System.Windows.Forms.DataGridView> 控件自动调整其列的大小，以便它们可填充可用显示区域的宽度。 该控件不显示水平滚动条，除非有必要使每列的宽度等于或大于其 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 属性值。  
@@ -45,22 +45,22 @@ ms.locfileid: "59214723"
 ### <a name="comments"></a>注释  
  使用此演示应用程序：  
   
--   更改窗体大小。 观察列如何更改宽度并同时保留由 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 属性值指示的比例。  
+- 更改窗体大小。 观察列如何更改宽度并同时保留由 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 属性值指示的比例。  
   
--   通过使用鼠标拖动列分隔线，更改列的大小。 观察 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 值如何进行更改。  
+- 通过使用鼠标拖动列分隔线，更改列的大小。 观察 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 值如何进行更改。  
   
--   更改某一列的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，然后拖动以调整窗体大小。 当将窗体调整到足够小时，观察如何让 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 值不低于 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值。  
+- 更改某一列的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，然后拖动以调整窗体大小。 当将窗体调整到足够小时，观察如何让 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 值不低于 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值。  
   
--   将所有列的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值变大，以便组合值超过控件的宽度。 观察水平滚动条的显示方式。  
+- 将所有列的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值变大，以便组合值超过控件的宽度。 观察水平滚动条的显示方式。  
   
--   更改某些列的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 值。 当调整列或窗体的大小时，观察效果。  
+- 更改某些列的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 值。 当调整列或窗体的大小时，观察效果。  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
--   Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
+- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

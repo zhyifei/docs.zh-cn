@@ -3,11 +3,11 @@ title: 网络 MSMQ 绑定
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
 ms.openlocfilehash: ee32ea09eed28c1c7cd5df2df2d13fd5f41f4b22
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972375"
 ---
 # <a name="net-msmq-binding"></a>网络 MSMQ 绑定
 本节包含演示如何使用终结点元素的 MSMQ 绑定特性的示例。  

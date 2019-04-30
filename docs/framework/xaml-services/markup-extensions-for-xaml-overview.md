@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971907"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 的标记扩展概述
 标记扩展是一种用于获取既不是基元也不是特定 XAML 类型的值的 XAML 方法。 对于特性用法，标记扩展使用已知的左大括号 `{` 字符序列输入标记扩展范围，并使用右大括号 `}` 退出。 使用 .NET Framework XAML 服务时，可以使用 System.Xaml 程序集中的某些预定义 XAML 语言标记扩展。 还可以使用 <xref:System.Windows.Markup.MarkupExtension> 类（在 System.Xaml 中定义）的子类，并定义自己的标记扩展。 或者，如果已在引用特定框架，则可以使用由该框架定义的标记扩展。  
@@ -54,9 +54,9 @@ ms.locfileid: "59224918"
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>为自定义标记扩展定义支持类型  
  使用 .NET Framework XAML 服务或是在 .NET Framework XAML 服务上构建的框架时，对于如何命名标记扩展支持类型有两种选择。 类型名与 XAML 对象编写器在 XAML 中遇到标记扩展用法时如何尝试访问并调用标记扩展支持类型相关。 使用以下命名策略之一：  
   
--   将类型名命名为与 XAML 标记用法标记完全匹配。 例如，若要支持 `{Collate ...}` 扩展用法，请将支持类型命名为 `Collate`。  
+- 将类型名命名为与 XAML 标记用法标记完全匹配。 例如，若要支持 `{Collate ...}` 扩展用法，请将支持类型命名为 `Collate`。  
   
--   将类型名命名为用法字符串标记加上后缀 `Extension`。 例如，若要支持 `{Collate ...}` 扩展用法，请将支持类型命名为 `CollateExtension`。  
+- 将类型名命名为用法字符串标记加上后缀 `Extension`。 例如，若要支持 `{Collate ...}` 扩展用法，请将支持类型命名为 `CollateExtension`。  
   
  查找顺序是首先查找带 `Extension`后缀的类名，然后查找不带 `Extension` 后缀的类名。  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  处理的工作原理在概念上如同标记扩展是要创建的对象，然后设置其成员值。 要设置的每个指定属性的计算方式都类似于如何在分析 XAML 时对创建的对象设置指定成员。 有两个重要的差异：  
   
--   如前所述，标记扩展支持类型不需要具有默认构造函数，即可在 XAML 中进行实例化。 其对象构造会推迟到文本语法中的可能参数进行词汇切分并计算为位置或命名参数，会在该时间调用适当的构造函数。  
+- 如前所述，标记扩展支持类型不需要具有默认构造函数，即可在 XAML 中进行实例化。 其对象构造会推迟到文本语法中的可能参数进行词汇切分并计算为位置或命名参数，会在该时间调用适当的构造函数。  
   
--   标记扩展用法可以进行嵌套。 首先计算最内层的标记扩展。 因此，可以采用这类用法，并一个构造参数声明为需要生成值转换器（如标记扩展）的类型。  
+- 标记扩展用法可以进行嵌套。 首先计算最内层的标记扩展。 因此，可以采用这类用法，并一个构造参数声明为需要生成值转换器（如标记扩展）的类型。  
   
  前面的示例演示了对这类处理的依赖。 .NET Framework XAML 服务 XAML 对象编写器会在本机级别将枚举常量名处理为枚举值。  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 为 <xref:System.Type> 返回的对象类型报告 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 信息。 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 通过其纯签名返回 <xref:System.Object>。 但各种使用者可能需要更精确的返回类型信息。 这包括：  
   
--   设计器和 IDE，可能能够为标记扩展用法提供可识别类型的支持。  
+- 设计器和 IDE，可能能够为标记扩展用法提供可识别类型的支持。  
   
--   目标类上的 `SetMarkupExtension` 处理程序的高级实现，可能依赖于反射来确定标记扩展的返回类型，而不是按名称在特定已知 <xref:System.Windows.Markup.MarkupExtension> 实现上进行分支。  
+- 目标类上的 `SetMarkupExtension` 处理程序的高级实现，可能依赖于反射来确定标记扩展的返回类型，而不是按名称在特定已知 <xref:System.Windows.Markup.MarkupExtension> 实现上进行分支。  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>标记扩展用法的序列化  

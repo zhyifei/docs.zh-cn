@@ -13,11 +13,11 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971309"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> .NET Framework 包括开发人员可用于创建支持外接程序扩展性的应用程序的外接程序模型。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题介绍 WPF 增加.NET Framework 外接程序模型若要启用这些方案，它、 其优点和局限性的体系结构的内容。  
@@ -30,33 +30,33 @@ ms.locfileid: "59304800"
 ## <a name="add-ins-overview"></a>外接程序概述  
  为了需要对应用程序重新编译和重新部署才能引入新功能这一复杂过程，应用程序实现了扩展机制，使开发者（包括第一方和第三方）能够创建与应用程序集成的其他应用程序。 支持此扩展性类型的最常见方式是，使用外接程序（也称为“加载项”和“插件”）。 通过外接程序公开扩展性的实际应用程序示例包括：  
   
--   Internet Explorer 加载项。  
+- Internet Explorer 加载项。  
   
--   Windows Media Player 插件。  
+- Windows Media Player 插件。  
   
--   Visual Studio 外接程序。  
+- Visual Studio 外接程序。  
   
  例如，通过 Windows Media Player 外接程序模型，第三方开发人员可以实现“插件”，从而以各种方式对 Windows Media Player 进行扩展，包括为 Windows Media Player 本身不支持的媒体格式（例如 DVD、MP3）创建解码器和编码器，创建音频效果和外观。 尽管有一些实体和行为是所有外接程序模型共有的，但会生成每个外接程序模型以公开某个应用程序的特有功能。  
   
  典型外接程序扩展性解决方案的三大实体是“协定”、“外接程序”和“主机应用程序”。 协定会定义外接程序与主机应用程序之间的两种集成方式：  
   
--   外接程序集成主机应用程序所实现的功能。  
+- 外接程序集成主机应用程序所实现的功能。  
   
--   主机应用程序公开供外接程序集成的功能。  
+- 主机应用程序公开供外接程序集成的功能。  
   
  为了使外接程序能发挥作用，主机应用程序需要在运行时找到它们并进行加载。 因此，支持外接程序的应用程序需要承担以下附加的职责：  
   
--   **发现**:查找遵循主机应用程序支持的协定的外接程序。  
+- **发现**:查找遵循主机应用程序支持的协定的外接程序。  
   
--   **激活**:正在加载、 运行和建立与外接程序的通信。  
+- **激活**:正在加载、 运行和建立与外接程序的通信。  
   
--   **隔离**:使用应用程序域或进程建立隔离边界，保护应用程序免受潜在的安全和外接程序执行问题。  
+- **隔离**:使用应用程序域或进程建立隔离边界，保护应用程序免受潜在的安全和外接程序执行问题。  
   
--   **通信**:允许加载项和主机应用程序彼此通信跨隔离边界，通过调用方法并传递数据。  
+- **通信**:允许加载项和主机应用程序彼此通信跨隔离边界，通过调用方法并传递数据。  
   
--   **生存期管理**:加载和卸载应用程序域和进程以干净、 可预测的方式 (请参阅[应用程序域](../../app-domains/application-domains.md))。  
+- **生存期管理**:加载和卸载应用程序域和进程以干净、 可预测的方式 (请参阅[应用程序域](../../app-domains/application-domains.md))。  
   
--   **版本控制**:确保，主机应用程序和外接程序仍可进行通信时创建的新版本。  
+- **版本控制**:确保，主机应用程序和外接程序仍可进行通信时创建的新版本。  
   
  总之，开发一个可靠的外接程序模型不是一项简单的任务。 出于此原因，.NET Framework 构建外接程序模型提供一种基础结构。  
   
@@ -75,27 +75,27 @@ ms.locfileid: "59304800"
   
 1. **外接程序返回 UI**。 外接程序返回 UI 到主机应用程序通过方法调用，如协定所定义的。 此方案可用于以下情况：  
   
-    -   返回的外接程序的 UI 的外观取决于数据或条件可仅在运行时，例如动态生成的报告。  
+    - 返回的外接程序的 UI 的外观取决于数据或条件可仅在运行时，例如动态生成的报告。  
   
-    -   为服务提供的外接程序的 UI 与从外接程序可以使用的主机应用程序的 UI。  
+    - 为服务提供的外接程序的 UI 与从外接程序可以使用的主机应用程序的 UI。  
   
-    -   外接程序主要执行某项服务的主机应用程序，并向主机应用程序的 ui 报告状态。  
+    - 外接程序主要执行某项服务的主机应用程序，并向主机应用程序的 ui 报告状态。  
   
 2. **外接程序为 UI**。 外接程序是一个 UI，如协定所定义的。 此方案可用于以下情况：  
   
-    -   外接程序提供的服务都需要显示，例如广告。  
+    - 外接程序提供的服务都需要显示，例如广告。  
   
-    -   服务提供的外接程序的 UI 是普遍适用于所有主机应用程序可以使用该外接程序，如计算器或颜色选取器。  
+    - 服务提供的外接程序的 UI 是普遍适用于所有主机应用程序可以使用该外接程序，如计算器或颜色选取器。  
   
  这些方案需要，可以主机应用程序和外接程序应用程序域之间传递 UI 对象。 自.NET Framework 外接程序模型依赖于远程处理应用程序域之间进行通信，它们之间传递的对象必须可远程处理。  
   
  可远程处理的对象是某个类的实例，并执行以下一个或多个任务：  
   
--   派生自<xref:System.MarshalByRefObject>类。  
+- 派生自<xref:System.MarshalByRefObject>类。  
   
--   实现 <xref:System.Runtime.Serialization.ISerializable> 接口。  
+- 实现 <xref:System.Runtime.Serialization.ISerializable> 接口。  
   
--   具有<xref:System.SerializableAttribute>应用属性。  
+- 具有<xref:System.SerializableAttribute>应用属性。  
   
 > [!NOTE]
 >  有关创建可远程处理.NET Framework 对象的详细信息，请参阅[使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))。  
@@ -156,11 +156,11 @@ ms.locfileid: "59304800"
 ## <a name="add-ins-and-xaml-browser-applications"></a>外接程序和 XAML 浏览器应用程序  
  到目前为止，示例中的主机应用程序都安装为独立应用程序。 但是，如果满足以下附加的生成和实现要求，[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 也可以承载外接程序：  
   
--   必须专门配置 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 应用程序清单，以便将管道（文件夹和程序集）和外接程序程序集下载到客户端计算机上的 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 应用程序缓存中 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 所在的文件夹中。  
+- 必须专门配置 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 应用程序清单，以便将管道（文件夹和程序集）和外接程序程序集下载到客户端计算机上的 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 应用程序缓存中 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 所在的文件夹中。  
   
--   用于发现和加载外接程序的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 代码必须将 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 应用程序缓存用作管道和外接程序位置。  
+- 用于发现和加载外接程序的 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 代码必须将 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 应用程序缓存用作管道和外接程序位置。  
   
--   如果外接程序引用位于源站点的松散文件，则 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 必须将外接程序加载到专门的安全上下文中；在由 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 承载时，外接程序只能引用位于主机应用程序源站点的松散文件。  
+- 如果外接程序引用位于源站点的松散文件，则 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 必须将外接程序加载到专门的安全上下文中；在由 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 承载时，外接程序只能引用位于主机应用程序源站点的松散文件。  
   
  下面几个小节将详细介绍这些任务。  
   
@@ -194,13 +194,13 @@ ms.locfileid: "59304800"
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>从应用程序基使用管道和外接程序  
  为 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 部署配置管道和外接程序时，它们将下载到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 所在的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 缓存文件夹中。 若要从 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 中使用管道和外接程序，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 代码必须从应用程序基获取它们。 各种视频类型和模型使用的管道和外接程序的.NET Framework 外接程序的成员对于此方案提供特殊支持。 首先，路径由<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>枚举值。 将此值用于使用管道的相关外接程序成员的重载，这些成员包括：  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
 ### <a name="accessing-the-hosts-site-of-origin"></a>访问宿主的源站点  
  为确保外接程序可以引用源站点的文件，必须使用等效于主机应用程序的安全隔离来加载外接程序。 此安全级别由<xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType>枚举值，并传递给<xref:System.AddIn.Hosting.AddInToken.Activate%2A>方法激活外接程序时。  
@@ -213,9 +213,9 @@ ms.locfileid: "59304800"
   
  从根本上说，WPF 未通过 UI 从外接程序的宿主应用程序;相反，WPF 将传递的 Win32 窗口句柄的 ui 使用 WPF 互操作性。 在这种情况下，当从外接程序的 UI 传递到主机应用程序时，将发生以下情况：  
   
--   在外接程序端，WPF 主机应用程序将显示的 ui 获取窗口句柄。 由派生的内部 WPF 类封装窗口句柄<xref:System.Windows.Interop.HwndSource>并实现<xref:System.AddIn.Contract.INativeHandleContract>。 此类的实例返回的<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>和从外接程序的应用程序域封至主机应用程序的应用程序域。  
+- 在外接程序端，WPF 主机应用程序将显示的 ui 获取窗口句柄。 由派生的内部 WPF 类封装窗口句柄<xref:System.Windows.Interop.HwndSource>并实现<xref:System.AddIn.Contract.INativeHandleContract>。 此类的实例返回的<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>和从外接程序的应用程序域封至主机应用程序的应用程序域。  
   
--   在主机应用程序端，WPF 会重新打包<xref:System.Windows.Interop.HwndSource>作为内部 WPF 类派生自<xref:System.Windows.Interop.HwndHost>，并在使用<xref:System.AddIn.Contract.INativeHandleContract>。 此类的实例返回的<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>到主机应用程序。  
+- 在主机应用程序端，WPF 会重新打包<xref:System.Windows.Interop.HwndSource>作为内部 WPF 类派生自<xref:System.Windows.Interop.HwndHost>，并在使用<xref:System.AddIn.Contract.INativeHandleContract>。 此类的实例返回的<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>到主机应用程序。  
   
  <xref:System.Windows.Interop.HwndHost> 存在能够显示用户界面，标识的窗口句柄，从 WPF 用户界面。 有关详细信息，请参阅 [WPF 和 Win32 互操作](../advanced/wpf-and-win32-interoperation.md)。  
   
@@ -230,51 +230,51 @@ ms.locfileid: "59304800"
 ## <a name="wpf-add-in-benefits"></a>WPF 外接程序的优点  
  由于 WPF 外接程序用户界面显示从主机应用程序使用的内部类派生自<xref:System.Windows.Interop.HwndHost>，这些用户界面的功能受到<xref:System.Windows.Interop.HwndHost>方面布局，如 WPF UI 服务呈现、 数据绑定、 样式、 模板和资源。 但是，WPF 扩展了其内部<xref:System.Windows.Interop.HwndHost>子类的附加功能，包括以下：  
   
--   主机应用程序的 UI 和外接程序的 UI 之间按 tab 键。 请注意，"外接程序是一个用户界面"编程模型需要外接程序端适配器重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>使 tab 键切换功能，无论外接程序是完全信任还是部分受信任的。  
+- 主机应用程序的 UI 和外接程序的 UI 之间按 tab 键。 请注意，"外接程序是一个用户界面"编程模型需要外接程序端适配器重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>使 tab 键切换功能，无论外接程序是完全信任还是部分受信任的。  
   
--   接受从主机应用程序的用户界面显示的外接程序用户界面的可访问性要求。  
+- 接受从主机应用程序的用户界面显示的外接程序用户界面的可访问性要求。  
   
--   使 WPF 应用程序能够在多个应用程序域方案中安全地运行。  
+- 使 WPF 应用程序能够在多个应用程序域方案中安全地运行。  
   
--   防止非法访问外接程序用户界面窗口句柄时使用安全隔离 （即，部分信任安全沙盒） 运行外接程序。 调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>以确保此安全性：  
+- 防止非法访问外接程序用户界面窗口句柄时使用安全隔离 （即，部分信任安全沙盒） 运行外接程序。 调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>以确保此安全性：  
   
-    -   对于"外接程序返回 UI"编程模型的一个外接程序的 UI 跨隔离边界传递的窗口句柄的唯一方法是调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
+    - 对于"外接程序返回 UI"编程模型的一个外接程序的 UI 跨隔离边界传递的窗口句柄的唯一方法是调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
   
-    -   对于"外接程序是一个用户界面"的编程模型，重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>上的外接程序端适配器和调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>（如上述示例中所示） 是必需的因为调用外接程序端适配器`QueryContract`实现主机端适配器。  
+    - 对于"外接程序是一个用户界面"的编程模型，重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>上的外接程序端适配器和调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>（如上述示例中所示） 是必需的因为调用外接程序端适配器`QueryContract`实现主机端适配器。  
   
--   提供多个应用程序域执行保护。 由于应用程序域的限制，因此即使存在隔离边界，外接程序应用程序域中引发的未经处理的异常也会导致整个应用程序出现故障。 但是，WPF 和.NET Framework 外接程序模型提供简单的方法要解决此问题并提高应用程序的稳定性。 WPF 外接程序显示的 UI 创建<xref:System.Windows.Threading.Dispatcher>的线程的应用程序域在上运行，如果主机应用程序是一个 WPF 应用程序。 你可以检测到处理应用程序域中发生的所有未处理的异常<xref:System.Windows.Threading.Dispatcher.UnhandledException>WPF 外接程序的事件<xref:System.Windows.Threading.Dispatcher>。 可以获取<xref:System.Windows.Threading.Dispatcher>从<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>属性。  
+- 提供多个应用程序域执行保护。 由于应用程序域的限制，因此即使存在隔离边界，外接程序应用程序域中引发的未经处理的异常也会导致整个应用程序出现故障。 但是，WPF 和.NET Framework 外接程序模型提供简单的方法要解决此问题并提高应用程序的稳定性。 WPF 外接程序显示的 UI 创建<xref:System.Windows.Threading.Dispatcher>的线程的应用程序域在上运行，如果主机应用程序是一个 WPF 应用程序。 你可以检测到处理应用程序域中发生的所有未处理的异常<xref:System.Windows.Threading.Dispatcher.UnhandledException>WPF 外接程序的事件<xref:System.Windows.Threading.Dispatcher>。 可以获取<xref:System.Windows.Threading.Dispatcher>从<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>属性。  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>WPF 外接程序限制  
  WPF 将添加到由提供的默认行为的优点之外<xref:System.Windows.Interop.HwndSource>， <xref:System.Windows.Interop.HwndHost>，和窗口句柄，也有限制从主机应用程序显示的外接程序用户界面：  
   
--   从主机应用程序中显示的外接程序用户界面不遵从主机应用程序的剪辑行为。  
+- 从主机应用程序中显示的外接程序用户界面不遵从主机应用程序的剪辑行为。  
   
--   互操作性方案中的“空域”概念也适用于外接程序（请参阅[技术区概述](../advanced/technology-regions-overview.md)）。  
+- 互操作性方案中的“空域”概念也适用于外接程序（请参阅[技术区概述](../advanced/technology-regions-overview.md)）。  
   
--   主机应用程序的 UI 服务，如资源继承、 数据绑定和命令，不会自动提供外接程序用户界面。 若要向外接程序提供这些服务，需要更新管道。  
+- 主机应用程序的 UI 服务，如资源继承、 数据绑定和命令，不会自动提供外接程序用户界面。 若要向外接程序提供这些服务，需要更新管道。  
   
--   不能旋转、 缩放、 倾斜，或不受转换一个外接程序的 UI (请参阅[转换概述](../graphics-multimedia/transforms-overview.md))。  
+- 不能旋转、 缩放、 倾斜，或不受转换一个外接程序的 UI (请参阅[转换概述](../graphics-multimedia/transforms-overview.md))。  
   
--   通过绘制从操作呈现的外接程序用户界面中的内容<xref:System.Drawing>命名空间可以包含 alpha 值混合处理。 但是，加载项 UI 和主机应用程序 UI，其中包含它必须是 100%不透明的;换而言之，`Opacity`上的属性必须设置为 1。  
+- 通过绘制从操作呈现的外接程序用户界面中的内容<xref:System.Drawing>命名空间可以包含 alpha 值混合处理。 但是，加载项 UI 和主机应用程序 UI，其中包含它必须是 100%不透明的;换而言之，`Opacity`上的属性必须设置为 1。  
   
--   如果<xref:System.Windows.Window.AllowsTransparency%2A>窗口包含一个外接程序的 UI 在主机应用程序中的属性设置为`true`外, 接程序是不可见。 即使外接程序用户界面是 100%不透明，这是如此 (即，`Opacity`属性具有值为 1)。  
+- 如果<xref:System.Windows.Window.AllowsTransparency%2A>窗口包含一个外接程序的 UI 在主机应用程序中的属性设置为`true`外, 接程序是不可见。 即使外接程序用户界面是 100%不透明，这是如此 (即，`Opacity`属性具有值为 1)。  
   
--   加载项 UI 必须出现在同一顶级窗口中的其他 WPF 元素之上。  
+- 加载项 UI 必须出现在同一顶级窗口中的其他 WPF 元素之上。  
   
--   可以使用呈现外接程序的 UI 的任何部分<xref:System.Windows.Media.VisualBrush>。 相反外, 接程序可能需要生成用户界面中，若要创建位图，可传递到主机应用程序使用通过协定所定义的方法的快照。  
+- 可以使用呈现外接程序的 UI 的任何部分<xref:System.Windows.Media.VisualBrush>。 相反外, 接程序可能需要生成用户界面中，若要创建位图，可传递到主机应用程序使用通过协定所定义的方法的快照。  
   
--   不能从播放媒体文件<xref:System.Windows.Controls.MediaElement>外接程序 UI 中。  
+- 不能从播放媒体文件<xref:System.Windows.Controls.MediaElement>外接程序 UI 中。  
   
--   生成外接程序用户界面的鼠标事件则既不接收，也不引发主机应用程序，并`IsMouseOver`主机应用程序 UI 的属性的值为`false`。  
+- 生成外接程序用户界面的鼠标事件则既不接收，也不引发主机应用程序，并`IsMouseOver`主机应用程序 UI 的属性的值为`false`。  
   
--   当外接程序 UI 中的控件焦点`GotFocus`和`LostFocus`事件是既没有接收到不会引发主机应用程序。  
+- 当外接程序 UI 中的控件焦点`GotFocus`和`LostFocus`事件是既没有接收到不会引发主机应用程序。  
   
--   包含一个外接程序的 UI 的主机应用程序的部分将显示为空白时打印。  
+- 包含一个外接程序的 UI 的主机应用程序的部分将显示为空白时打印。  
   
--   所有调度程序 (请参阅<xref:System.Windows.Threading.Dispatcher>) 由外接程序创建 UI 必须手动关闭所有者外接程序卸载之前如果主机应用程序继续执行。 协定可以实现允许主机应用程序外接程序卸载之前通知外接程序，从而允许外接程序用户界面关闭自己的调度程序的方法。  
+- 所有调度程序 (请参阅<xref:System.Windows.Threading.Dispatcher>) 由外接程序创建 UI 必须手动关闭所有者外接程序卸载之前如果主机应用程序继续执行。 协定可以实现允许主机应用程序外接程序卸载之前通知外接程序，从而允许外接程序用户界面关闭自己的调度程序的方法。  
   
--   如果加载项 UI<xref:System.Windows.Controls.InkCanvas>或包含<xref:System.Windows.Controls.InkCanvas>，不能卸载外接程序。  
+- 如果加载项 UI<xref:System.Windows.Controls.InkCanvas>或包含<xref:System.Windows.Controls.InkCanvas>，不能卸载外接程序。  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>性能优化  

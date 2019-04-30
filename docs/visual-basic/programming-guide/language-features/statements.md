@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946453"
 ---
 # <a name="statements-in-visual-basic"></a>语句 (Visual Basic)
 
@@ -156,7 +156,7 @@ ms.locfileid: "43506285"
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    有关详细信息，请参阅[对象初始值设定项： 命名类型和匿名类型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)或[集合初始值设定项](./collection-initializers/index.md)。
+    有关详细信息，请参阅[对象初始值设定项：命名和匿名类型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)或[集合初始值设定项](./collection-initializers/index.md)。
 
 - 后一种开放嵌入式表达式 (`<%=`) 或嵌入式表达式结束之前 (`%>`) 在 XML 文本中。 例如：
 
@@ -196,7 +196,7 @@ ms.locfileid: "43506285"
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   有关详细信息，请参阅[使用...使用语句结束](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或[对象初始值设定项： 命名类型和匿名类型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)。
+   有关详细信息，请参阅[使用...使用语句结束](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或[对象初始值设定项：命名和匿名类型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)。
 
 - XML 轴属性限定符后 (`.`或`.@`或`...`)。 但是，您必须包含行继续符 (`_`) 在使用时，指定成员限定符的时`With`关键字。 例如：
 

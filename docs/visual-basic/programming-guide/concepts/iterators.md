@@ -3,11 +3,11 @@ title: 迭代器 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966161"
 ---
 # <a name="iterators-visual-basic"></a>迭代器 (Visual Basic)
 迭代器可用于逐步迭代集合，例如列表和数组。  
@@ -44,21 +44,21 @@ End Function
   
  **在本主题中**  
   
--   [简单迭代器](#BKMK_SimpleIterator)  
+- [简单迭代器](#BKMK_SimpleIterator)  
   
--   [创建集合类](#BKMK_CollectionClass)  
+- [创建集合类](#BKMK_CollectionClass)  
   
--   [Try 块](#BKMK_TryBlocks)  
+- [Try 块](#BKMK_TryBlocks)  
   
--   [匿名方法](#BKMK_AnonymousMethods)  
+- [匿名方法](#BKMK_AnonymousMethods)  
   
--   [对泛型列表使用迭代器](#BKMK_GenericList)  
+- [对泛型列表使用迭代器](#BKMK_GenericList)  
   
--   [语法信息](#BKMK_SyntaxInformation)  
+- [语法信息](#BKMK_SyntaxInformation)  
   
--   [技术实现](#BKMK_Technical)  
+- [技术实现](#BKMK_Technical)  
   
--   [迭代器的使用](#BKMK_UseOfIterators)  
+- [迭代器的使用](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  对于除简单迭代器示例主题中的所有示例，包括[导入](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)语句`System.Collections`和`System.Collections.Generic`命名空间。  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a>迭代器的使用  
  需要使用复杂代码填充列表序列时，使用迭代器可保持 `For Each` 循环的简单性。 需执行以下操作时，这可能很有用：  
   
--   在第一次 `For Each` 循环迭代之后，修改列表序列。  
+- 在第一次 `For Each` 循环迭代之后，修改列表序列。  
   
--   避免在 `For Each` 循环的第一次迭代之前完全加载大型列表。 一个示例是用于加载一批表格行的分页提取。 另一个示例关于 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，该方法在 .NET Framework 中实现迭代器。  
+- 避免在 `For Each` 循环的第一次迭代之前完全加载大型列表。 一个示例是用于加载一批表格行的分页提取。 另一个示例关于 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，该方法在 .NET Framework 中实现迭代器。  
   
--   在迭代器中封装生成列表。 使用迭代器方法，可生成该列表，然后在循环中产出每个结果。  
+- 在迭代器中封装生成列表。 使用迭代器方法，可生成该列表，然后在循环中产出每个结果。  
   
 ## <a name="see-also"></a>请参阅
 

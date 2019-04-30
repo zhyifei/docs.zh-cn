@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989191"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 接口
 提供一个回调接口，该接口可提供对特定目标进程的访问。  
@@ -37,13 +37,13 @@ ms.locfileid: "59188703"
 ## <a name="remarks"></a>备注  
  `ICorDebugDataTarget` 其方法具有以下特征：  
   
--   调试服务对此接口来访问内存和其他数据目标进程中的调用方法。  
+- 调试服务对此接口来访问内存和其他数据目标进程中的调用方法。  
   
--   调试器客户端必须实现此接口作为适用于特定目标 （例如，实时进程或内存转储）。  
+- 调试器客户端必须实现此接口作为适用于特定目标 （例如，实时进程或内存转储）。  
   
--   `ICorDebugDataTarget`方法可以实现其他的方法内调用只能从`ICorDebug*`接口。 这可确保调试器客户端已通过哪个线程调用，以及何时进行控制。  
+- `ICorDebugDataTarget`方法可以实现其他的方法内调用只能从`ICorDebug*`接口。 这可确保调试器客户端已通过哪个线程调用，以及何时进行控制。  
   
--   `ICorDebugDataTarget`实现必须始终返回有关目标的最新信息。  
+- `ICorDebugDataTarget`实现必须始终返回有关目标的最新信息。  
   
  目标进程应停止，并以任何方式时不更改`ICorDebug*`接口 (并因此`ICorDebugDataTarget`方法) 正被调用。 如果目标是将其状态更改，并实时过程[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法必须再次调用以提供替换 ICorDebugProcess 实例。  
   

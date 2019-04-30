@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949339"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 性能
 如果想要创建一个具有卓越性能的应用，你应该像设计应用的任何其他功能一样设计和规划性能。 你可以使用由 Microsoft 所提供的用于测量你的应用性能的工具，并对内存使用、代码吞吐量和响应能力进行改进（如果需要）。 本主题列出了 Microsoft 提供的性能分析工具，并提供了介绍应用开发特定领域性能的其他主题的链接。  
@@ -30,7 +30,7 @@ ms.locfileid: "57361273"
 ### <a name="performance-tools"></a>性能工具  
  以下是一些你可以与 .NET Framework 应用一起使用的性能工具。  
   
-|工具|描述|  
+|Tool|描述|  
 |----------|-----------------|  
 |Visual Studio 性能分析|用于分析你的 .NET Framework 应用的 CPU 使用情况，该应用将部署到运行 Windows 操作系统的计算机。<br /><br /> 在打开一个项目后，此工具可以从 Visual Studio 中的“调试”菜单处获取。 有关更多信息，请参见 [性能资源管理器](/visualstudio/profiling/performance-explorer)。 **注意：** 当面向 Windows Phone 时，请使用 Windows Phone 应用程序分析（参见下一行）。|  
 |Windows Phone 应用程序分析|用于分析在你的 Windows Phone 应用中的 CPU 和内存、网络数据传输率、应用响应能力和电池消耗。<br /><br /> 安装 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) 后，此工具可以从 Visual Studio 中 Windows Phone 项目的“调试”菜单获取。 有关详细信息，请参阅[Windows Phone 8 的应用程序分析](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))。|  
@@ -43,7 +43,7 @@ ms.locfileid: "57361273"
 ## <a name="performance-by-app-type"></a>按应用程序类型的性能  
  每种 .NET Framework 应用都具有它自己的最佳实践、注意事项以及评估性能的工具。 下表提供指向特定 .NET Framework 应用类型的性能主题的链接。  
   
-|应用类型|请参见|  
+|应用类型|查看|  
 |--------------|---------|  
 |针对所有平台的 .NET Framework 应用|[垃圾回收和性能](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [性能提示](../../../docs/framework/performance/performance-tips.md)|  
 |采用 C++、C# 和 Visual Basic 编写的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用|[使用 C++、C# 和 Visual Basic 的 Windows 应用商店应用的性能最佳做法](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
@@ -52,7 +52,7 @@ ms.locfileid: "57361273"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[在 .NET Framework 应用程序中缓存](../../../docs/framework/performance/caching-in-net-framework-applications.md)|描述用于缓存数据以提高应用性能的技术。|  
 |[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)|描述如何按需初始化对象以提高性能，尤其是在应用启动时。|  

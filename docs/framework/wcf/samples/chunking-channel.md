@@ -3,11 +3,11 @@ title: 通道分块
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002351"
 ---
 # <a name="chunking-channel"></a>通道分块
 发送使用 Windows Communication Foundation (WCF) 的大型消息时，它是内存的通常需要限制用于缓冲这些消息量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。  
@@ -240,30 +240,30 @@ interface ITestService
   
  值得注意的一些详细信息：  
   
--   Send 首先调用 `ThrowIfDisposedOrNotOpened` 以确保 `CommunicationState` 处于已打开状态。  
+- Send 首先调用 `ThrowIfDisposedOrNotOpened` 以确保 `CommunicationState` 处于已打开状态。  
   
--   发送是同步的，以便每个会话一次只发送一个消息。 有一个名为 `ManualResetEvent` 的 `sendingDone`，在发送分块消息时将会重置。 发送结束消息块消息后，将设置此事件。 Send 方法在尝试发送传出消息之前将等待设置此事件。  
+- 发送是同步的，以便每个会话一次只发送一个消息。 有一个名为 `ManualResetEvent` 的 `sendingDone`，在发送分块消息时将会重置。 发送结束消息块消息后，将设置此事件。 Send 方法在尝试发送传出消息之前将等待设置此事件。  
   
--   Send 将锁定 `CommunicationObject.ThisLock` 以防止在发送时更改同步状态。 有关 <xref:System.ServiceModel.Channels.CommunicationObject> 状态和状态机的更多信息，请参见 <xref:System.ServiceModel.Channels.CommunicationObject> 文档。  
+- Send 将锁定 `CommunicationObject.ThisLock` 以防止在发送时更改同步状态。 有关 <xref:System.ServiceModel.Channels.CommunicationObject> 状态和状态机的更多信息，请参见 <xref:System.ServiceModel.Channels.CommunicationObject> 文档。  
   
--   传递给 Send 的超时值用作整个发送操作（包括发送所有消息块）的超时值。  
+- 传递给 Send 的超时值用作整个发送操作（包括发送所有消息块）的超时值。  
   
--   为避免对整个原始消息正文进行缓存，选择了自定义 <xref:System.Xml.XmlDictionaryWriter> 设计。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 相反，我们有一个自定义<xref:System.Xml.XmlDictionaryWriter>传递给`message.WriteBodyContents`。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。  
+- 为避免对整个原始消息正文进行缓存，选择了自定义 <xref:System.Xml.XmlDictionaryWriter> 设计。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 相反，我们有一个自定义<xref:System.Xml.XmlDictionaryWriter>传递给`message.WriteBodyContents`。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。  
   
 ## <a name="implementing-the-receive-operation"></a>实现 Receive 操作  
  在高级别上，Receive 操作首先检查传入消息是否不为 `null` 以及其操作是否为 `ChunkingAction`。 如果传入消息不符合这两个条件，则会从 Receive 按原样返回该消息。 否则，Receive 将创建一个新的 `ChunkingReader` 和一个包装在其周围的新的 `ChunkingMessage`（通过调用 `GetNewChunkingMessage`）。 在返回该新 `ChunkingMessage` 之前，Receive 将使用线程池的线程来执行 `ReceiveChunkLoop`，它会循环调用 `innerChannel.Receive` 并将消息块发送到 `ChunkingReader`，直到收到结束消息块消息或达到接收超时值。  
   
  值得注意的一些详细信息：  
   
--   和 Send 一样，Receive 首先调用 `ThrowIfDisposedOrNotOepned` 以确保 `CommunicationState` 处于已打开状态。  
+- 和 Send 一样，Receive 首先调用 `ThrowIfDisposedOrNotOepned` 以确保 `CommunicationState` 处于已打开状态。  
   
--   接收也是同步的，以便一次只能从会话接收一个消息。 这一点特别重要，因为一旦接收了一个开始消息块消息，所有随后接收的消息都将是此新消息块序列中的消息块，直到接收到结束消息块消息为止。 在接收属于当前正在取消分块的消息的所有消息块之前，Receive 无法从内部通道提取消息。 为了完成此操作，Receive 使用一个名为 `ManualResetEvent` 的 `currentMessageCompleted`，它是在接收到结束消息块消息时设置的，并在接收到新的开始消息块消息时重置。  
+- 接收也是同步的，以便一次只能从会话接收一个消息。 这一点特别重要，因为一旦接收了一个开始消息块消息，所有随后接收的消息都将是此新消息块序列中的消息块，直到接收到结束消息块消息为止。 在接收属于当前正在取消分块的消息的所有消息块之前，Receive 无法从内部通道提取消息。 为了完成此操作，Receive 使用一个名为 `ManualResetEvent` 的 `currentMessageCompleted`，它是在接收到结束消息块消息时设置的，并在接收到新的开始消息块消息时重置。  
   
--   与 Send 不同，Receive 在接收时不阻止同步状态的转换。 例如，可以在正在接收时调用 Close，并等待挂起的原始消息接收完成或达到指定的超时值。  
+- 与 Send 不同，Receive 在接收时不阻止同步状态的转换。 例如，可以在正在接收时调用 Close，并等待挂起的原始消息接收完成或达到指定的超时值。  
   
--   传递给 Receive 的超时值用作整个接收操作（包括接收所有消息块）的超时值。  
+- 传递给 Receive 的超时值用作整个接收操作（包括接收所有消息块）的超时值。  
   
--   如果使用消息的层在使用消息正文时的速率低于传入消息块消息的速率，则 `ChunkingReader` 会缓冲这些传入的消息块，直至达到由 `ChunkingBindingElement.MaxBufferedChunks` 指定的限制。 一旦达到该制，将不再从下一层拉取消息块，直到用完缓冲消息块或达到接收超时值。  
+- 如果使用消息的层在使用消息正文时的速率低于传入消息块消息的速率，则 `ChunkingReader` 会缓冲这些传入的消息块，直至达到由 `ChunkingBindingElement.MaxBufferedChunks` 指定的限制。 一旦达到该制，将不再从下一层拉取消息块，直到用完缓冲消息块或达到接收超时值。  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject 重写  
   

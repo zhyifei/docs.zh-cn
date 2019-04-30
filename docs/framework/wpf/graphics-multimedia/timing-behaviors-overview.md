@@ -6,11 +6,11 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002329"
 ---
 # <a name="timing-behaviors-overview"></a>计时行为概述
 本主题介绍动画和其他的计时行为<xref:System.Windows.Media.Animation.Timeline>对象。  
@@ -106,9 +106,9 @@ ms.locfileid: "59129585"
   
  下面的示例创建<xref:System.Windows.Media.Animation.Storyboard>具有两个子<xref:System.Windows.Media.Animation.DoubleAnimation>对象。 这两<xref:System.Windows.Media.Animation.DoubleAnimation>对象进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>从 0 到 100。 <xref:System.Windows.Shapes.Rectangle>元素具有非动画的<xref:System.Windows.FrameworkElement.Width%2A>值为 500 [设备无关的像素]。  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性的第一个<xref:System.Windows.Media.Animation.DoubleAnimation>设置为<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>，默认值。 因此，矩形的宽度后保持为 100<xref:System.Windows.Media.Animation.DoubleAnimation>结束。  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性的第一个<xref:System.Windows.Media.Animation.DoubleAnimation>设置为<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>，默认值。 因此，矩形的宽度后保持为 100<xref:System.Windows.Media.Animation.DoubleAnimation>结束。  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性的第二个<xref:System.Windows.Media.Animation.DoubleAnimation>设置为<xref:System.Windows.Media.Animation.FillBehavior.Stop>。 因此，<xref:System.Windows.FrameworkElement.Width%2A>第二个<xref:System.Windows.Shapes.Rectangle>后还原为 500<xref:System.Windows.Media.Animation.DoubleAnimation>结束。  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>属性的第二个<xref:System.Windows.Media.Animation.DoubleAnimation>设置为<xref:System.Windows.Media.Animation.FillBehavior.Stop>。 因此，<xref:System.Windows.FrameworkElement.Width%2A>第二个<xref:System.Windows.Shapes.Rectangle>后还原为 500<xref:System.Windows.Media.Animation.DoubleAnimation>结束。  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,11 +116,11 @@ ms.locfileid: "59129585"
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>用于控制时间线速度的属性  
  <xref:System.Windows.Media.Animation.Timeline>类提供三个属性用于指定其速度：  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> -指定相对于其父级，此时时间前进速率<xref:System.Windows.Media.Animation.Timeline>。 大于 1 的值增加的速度<xref:System.Windows.Media.Animation.Timeline>及其子<xref:System.Windows.Media.Animation.Timeline>对象; 0 和 1 之间的值将减慢其速度。 一个值，该值指示<xref:System.Windows.Media.Animation.Timeline>作为其父级相同的费率进行。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>容器时间线的设置会影响所有子<xref:System.Windows.Media.Animation.Timeline>对象。  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> -指定相对于其父级，此时时间前进速率<xref:System.Windows.Media.Animation.Timeline>。 大于 1 的值增加的速度<xref:System.Windows.Media.Animation.Timeline>及其子<xref:System.Windows.Media.Animation.Timeline>对象; 0 和 1 之间的值将减慢其速度。 一个值，该值指示<xref:System.Windows.Media.Animation.Timeline>作为其父级相同的费率进行。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>容器时间线的设置会影响所有子<xref:System.Windows.Media.Animation.Timeline>对象。  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – 指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>以时间线的加速所占用。 有关示例，请参见 [如何：加速或减速播放动画](how-to-accelerate-or-decelerate-an-animation.md)。 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – 指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>以时间线的加速所占用。 有关示例，请参见 [如何：加速或减速播放动画](how-to-accelerate-or-decelerate-an-animation.md)。 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>以时间线的所用减速。 有关示例，请参见 [如何：加速或减速播放动画](how-to-accelerate-or-decelerate-an-animation.md)。  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>以时间线的所用减速。 有关示例，请参见 [如何：加速或减速播放动画](how-to-accelerate-or-decelerate-an-animation.md)。  
   
 ## <a name="see-also"></a>请参阅
 

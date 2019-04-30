@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982431"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>未定义 Sub 或 Function (Visual Basic)
 一个`Sub`或`Function`必须定义即可调用。 此错误的可能原因包括：  
   
--   过程名称拼写错误。  
+- 过程名称拼写错误。  
   
--   尝试从另一个项目中调用的过程，而无需显式添加对该项目中的引用**引用**对话框。  
+- 尝试从另一个项目中调用的过程，而无需显式添加对该项目中的引用**引用**对话框。  
   
--   指定对调用的过程不可见的过程。  
+- 指定对调用的过程不可见的过程。  
   
--   声明 Windows 动态链接库 (DLL) 例程或不在指定的库或代码资源的 Macintosh 代码资源例程。  
+- 声明 Windows 动态链接库 (DLL) 例程或不在指定的库或代码资源的 Macintosh 代码资源例程。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

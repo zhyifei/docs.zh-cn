@@ -5,11 +5,11 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948650"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 方法
 启用或禁用虚拟模块拆分。  
@@ -54,40 +54,40 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="behavioral-differences"></a>行为差异  
  容器模块包含以下行为和特征：  
   
--   所有组成子模块的元数据合并在一起。  
+- 所有组成子模块的元数据合并在一起。  
   
--   类型名称可能改变。  
+- 类型名称可能改变。  
   
--   [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回的磁盘上的模块的路径。  
+- [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回的磁盘上的模块的路径。  
   
--   [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法将返回该映像的大小。  
+- [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法将返回该映像的大小。  
   
--   ICorDebugAssembly3.EnumerateContainedAssemblies 方法列举子模块。  
+- ICorDebugAssembly3.EnumerateContainedAssemblies 方法列举子模块。  
   
--   ICorDebugAssembly3.GetContainerAssembly 方法返回 `S_FALSE`。  
+- ICorDebugAssembly3.GetContainerAssembly 方法返回 `S_FALSE`。  
   
  子模块包含以下行为和特征：  
   
--   他们具有一套减少的元数据，这些元数据只对应合并的原始程序集。  
+- 他们具有一套减少的元数据，这些元数据只对应合并的原始程序集。  
   
--   元数据名未改变。  
+- 元数据名未改变。  
   
--   元数据令牌经生成过程合并之前，不大可能与原始程序集中的令牌匹配。  
+- 元数据令牌经生成过程合并之前，不大可能与原始程序集中的令牌匹配。  
   
--   [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回程序集名称，而不是文件路径。  
+- [Icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)方法返回程序集名称，而不是文件路径。  
   
--   [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法将返回原始的未合并的映像大小。  
+- [Icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)方法将返回原始的未合并的映像大小。  
   
--   ICorDebugModule3.EnumerateContainedAssemblies 方法返回 `S_FALSE`。  
+- ICorDebugModule3.EnumerateContainedAssemblies 方法返回 `S_FALSE`。  
   
--   ICorDebugAssembly3.GetContainerAssembly 方法返回包含模块。  
+- ICorDebugAssembly3.GetContainerAssembly 方法返回包含模块。  
   
 ## <a name="interfaces-retrieved-from-modules"></a>从模块恢复的接口  
  模块可恢复或创建多个接口。 其中包括：  
   
--   ICorDebugClass 对象，该返回的对象[icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)方法。  
+- ICorDebugClass 对象，该返回的对象[icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)方法。  
   
--   Icor 调试程序集对象，该返回的对象[icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法。  
+- Icor 调试程序集对象，该返回的对象[icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)方法。  
   
  这些对象始终由缓存[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)，并且它们将具有相同的指针标识，无论它们是创建还是从容器模块还是子模块查询。 子模块提供了这些缓存对象的筛选视图，而非包含各自副本的单独缓存。  
   

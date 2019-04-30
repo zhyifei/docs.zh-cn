@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982587"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指令
 约束类型参数传递给泛型类型的构造函数的泛型。  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 和 WPF 泛型 XAML 用法  
  有关 XAML 2006 使用情况和 XAML 的 WPF 应用程序使用，存在以下限制`x:TypeArguments`和从 XAML 中常规的泛型类型用法：  
   
--   XAML 文件的根元素可以支持引用泛型类型的泛型 XAML 用法。  
+- XAML 文件的根元素可以支持引用泛型类型的泛型 XAML 用法。  
   
--   根元素必须映射到具有至少一个类型参数的泛型类型。 例如， <xref:System.Windows.Navigation.PageFunction%601>。 页函数是 XAML 在 WPF 中的泛型用法支持的主要方案。  
+- 根元素必须映射到具有至少一个类型参数的泛型类型。 例如， <xref:System.Windows.Navigation.PageFunction%601>。 页函数是 XAML 在 WPF 中的泛型用法支持的主要方案。  
   
--   泛型的根元素 XAML 对象元素还必须声明分部类使用`x:Class`。 即使定义 WPF 生成操作，这是如此。  
+- 泛型的根元素 XAML 对象元素还必须声明分部类使用`x:Class`。 即使定义 WPF 生成操作，这是如此。  
   
--   `x:TypeArguments` 不能引用嵌套的泛型约束。  
+- `x:TypeArguments` 不能引用嵌套的泛型约束。  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或不带任何 WPF 3.0 或 3.5 WPF XAML 2006 依赖关系  
  在.NET Framework XAML 服务 XAML 2006 或 XAML 2009，放宽了对泛型的 XAML 用法的 WPF 相关限制。 您可以实例化泛型对象元素，在后备类型系统和对象模型可以支持的 XAML 标记中的任意位置。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
 ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977556"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支持 LINQ 的 Visual Basic 功能
 名称[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指的是在 Visual Basic 支持查询语法和其他语言构造大大降低直接在语言中的技术。 使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，无需学习新语言对外部数据源的查询。 可以通过使用 Visual Basic 针对关系数据库、 XML 存储或对象中的数据进行查询。 此集成的语言的查询功能，编译时检查语法错误和类型安全。 这种集成还可确保您已知道大多数您需要了解在 Visual Basic 中编写丰富而各不相同的查询。  

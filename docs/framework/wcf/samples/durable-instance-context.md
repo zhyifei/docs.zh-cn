@@ -3,11 +3,11 @@ title: 持久性实例上下文
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990252"
 ---
 # <a name="durable-instance-context"></a>持久性实例上下文
 此示例演示如何自定义 Windows Communication Foundation (WCF) 运行时以启用持久性实例上下文。 它使用 SQL Server 2005 作为其后备存储（在本例中为 SQL Server 2005 Express）。 但是，它还提供了一种访问自定义存储机制的方法。  
@@ -233,11 +233,11 @@ else
   
  WCF 允许通过添加新的状态和使用其可扩展对象模式的行为来扩展它的 InstanceContext 的运行时组件。 若要使用新功能扩展现有的运行时类，或者，或将新的状态功能添加到一个对象，WCF 中使用的可扩展对象模式。 有三个接口中的可扩展对象模式-IExtensibleObject\<T >，IExtension\<T >，和 IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > 接口由允许自定义其功能的扩展对象实现。  
+- IExtensibleObject\<T > 接口由允许自定义其功能的扩展对象实现。  
   
--   IExtension\<T > 接口实现的 T 类型的类扩展的对象  
+- IExtension\<T > 接口实现的 T 类型的类扩展的对象  
   
--   IExtensionCollection\<T > 接口是 Iextension，来检索 Iextension 按其类型的集合。  
+- IExtensionCollection\<T > 接口是 Iextension，来检索 Iextension 按其类型的集合。  
   
  因此，应当创建一个 InstanceContextExtension 类，该类实现 IExtension 接口并定义保存上下文 ID 所必需的状态。 此类还提供用来存放正使用的存储管理器的状态。 在保存了新状态之后，就无法对其进行修改。 因此，状态是在构造实例时提供并保存到实例中的，之后，只能使用只读属性来进行访问。  
   

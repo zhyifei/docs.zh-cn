@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983354"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>实现 UI 自动化 MultipleView 控件模式
 > [!NOTE]
@@ -27,13 +27,13 @@ ms.locfileid: "59125193"
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Multiple View 控件模式时，请注意以下准则和约定：  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> 还应在一个容器中实现，此容器用于管理当前视图，如果它不同于提供当前视图的控件。 例如，Windows 资源管理器包含当前文件夹内容的列表控件，而该控件的视图是从 Windows 资源管理器应用程序进行管理的。  
+- <xref:System.Windows.Automation.Provider.IMultipleViewProvider> 还应在一个容器中实现，此容器用于管理当前视图，如果它不同于提供当前视图的控件。 例如，Windows 资源管理器包含当前文件夹内容的列表控件，而该控件的视图是从 Windows 资源管理器应用程序进行管理的。  
   
--   能够对其内容进行排序的控件不被视为支持多个视图。  
+- 能够对其内容进行排序的控件不被视为支持多个视图。  
   
--   视图的集合必须跨实例相同。  
+- 视图的集合必须跨实例相同。  
   
--   视图名称必须是适合在文本到语音转换、盲文和其他用户可读的应用程序中使用。  
+- 视图名称必须是适合在文本到语音转换、盲文和其他用户可读的应用程序中使用。  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>IMultipleViewProvider 所需的成员  

@@ -3,42 +3,42 @@ title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007664"
 ---
 # <a name="udp-activation"></a>UDP 激活
 此示例基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以使用 Windows 进程激活服务 (WAS) 支持进程激活。  
   
  该示例主要由三个部分组成：  
   
--   UDP 协议激活器，代表要激活的应用程序接收 UDP 消息的独立进程。  
+- UDP 协议激活器，代表要激活的应用程序接收 UDP 消息的独立进程。  
   
--   使用 UDP 自定义传输发送消息的客户端。  
+- 使用 UDP 自定义传输发送消息的客户端。  
   
--   通过 UDP 自定义传输接收消息的服务（承载于 WAS 激活的工作进程中）。  
+- 通过 UDP 自定义传输接收消息的服务（承载于 WAS 激活的工作进程中）。  
   
 ## <a name="udp-protocol-activator"></a>UDP 协议激活器  
  UDP 协议激活器是 WCF 客户端和 WCF 服务之间的桥梁。 该激活器通过 UDP 协议在传输层提供数据通信。 它主要有两个功能：  
   
--   WAS 侦听器适配器 (LA)，它与 WAS 协作激活进程以响应传入消息。  
+- WAS 侦听器适配器 (LA)，它与 WAS 协作激活进程以响应传入消息。  
   
--   UDP 协议侦听器，它代表要激活的应用程序接受 UDP 消息。  
+- UDP 协议侦听器，它代表要激活的应用程序接受 UDP 消息。  
   
  激活器必须作为独立的程序在服务器计算机上运行。 通常，WAS 侦听器适配器（如 NetTcpActivator 和 NetPipeActivator）在长时间运行的 Windows 服务中实现。 但是，为了简单明确起见，此示例将协议激活器作为独立的应用程序实现。  
   
 ### <a name="was-listener-adapter"></a>WAS 侦听器适配器  
  UDP 的 WAS 侦听器适配器是在 `UdpListenerAdapter` 类中实现的。 该适配器是与 WAS 交互以针对 UDP 协议执行应用程序激活的模块。 这一过程是通过调用下列 Webhost API 实现的：  
   
--   `WebhostRegisterProtocol`  
+- `WebhostRegisterProtocol`  
   
--   `WebhostUnregisterProtocol`  
+- `WebhostUnregisterProtocol`  
   
--   `WebhostOpenListenerChannelInstance`  
+- `WebhostOpenListenerChannelInstance`  
   
--   `WebhostCloseAllListenerChannelInstances`  
+- `WebhostCloseAllListenerChannelInstances`  
   
  最初调用 `WebhostRegisterProtocol` 之后，侦听器适配器将为 applicationHost.config（位于 %windir%\system32\inetsrv）中注册的所有应用程序接收来自 WAS 的回调 `ApplicationCreated`。 在此示例中，我们仅在启用 UDP 协议（协议 ID 为“net.udp”时）的情况下处理应用程序。 如果其他实现对应用程序的动态配置更改（例如，应用程序从禁用转换为启用）作出响应，这些实现可能会以不同的方式处理上述情况。  
   
@@ -83,17 +83,17 @@ ms.locfileid: "59337651"
   
 2. 在 Windows Vista 上生成项目。 编译后，该项目还将在后期生成阶段执行下列操作：  
   
-    -   将 UDP 绑定安装到“默认网站”站点。  
+    - 将 UDP 绑定安装到“默认网站”站点。  
   
-    -   创建虚拟应用程序“ServiceModelSamples”，指向物理路径“%SystemDrive%\inetpub\wwwroot\servicemodelsamples”。  
+    - 创建虚拟应用程序“ServiceModelSamples”，指向物理路径“%SystemDrive%\inetpub\wwwroot\servicemodelsamples”。  
   
-    -   这还为该虚拟应用程序启用“net.udp”协议。  
+    - 这还为该虚拟应用程序启用“net.udp”协议。  
   
 3. 启动用户接口应用程序“WasNetActivator.exe”。 单击**安装程序**选项卡上，选中以下复选框，然后单击**安装**安装它们：  
   
-    -   UDP 侦听器适配器  
+    - UDP 侦听器适配器  
   
-    -   UDP 协议处理程序  
+    - UDP 协议处理程序  
   
 4. 单击**激活**的用户界面应用程序"WasNetActivator.exe"选项卡。 单击**启动**按钮以启动侦听器适配器。 现在即可运行程序。  
   
@@ -103,21 +103,21 @@ ms.locfileid: "59337651"
 ## <a name="sample-usage"></a>示例用法  
  编译后，生成四个不同的二进制文件：  
   
--   Client.exe:客户端代码中。 App.config 编译到客户端配置文件 Client.exe.config 中。  
+- Client.exe:客户端代码中。 App.config 编译到客户端配置文件 Client.exe.config 中。  
   
--   UDPActivation.dll：包含所有主要 UDP 实现的库。  
+- UDPActivation.dll：包含所有主要 UDP 实现的库。  
   
--   Service.dll:服务代码中。 此代码被复制到虚拟应用程序 ServiceModelSamples 的 \bin 目录。 服务文件是 Service.svc，配置文件是 Web.config。编译后，这两个文件将被复制到以下位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
+- Service.dll:服务代码中。 此代码被复制到虚拟应用程序 ServiceModelSamples 的 \bin 目录。 服务文件是 Service.svc，配置文件是 Web.config。编译后，这两个文件将被复制到以下位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
   
--   WasNetActivator:UDP 激活器程序。  
+- WasNetActivator:UDP 激活器程序。  
   
--   确保所有的必需部分均已正确安装。 下列步骤说明如何运行该示例：  
+- 确保所有的必需部分均已正确安装。 下列步骤说明如何运行该示例：  
   
 1. 确保已启动下面的 Windows 服务：  
   
-    -   Windows 进程激活服务 (WAS)。  
+    - Windows 进程激活服务 (WAS)。  
   
-    -   Internet 信息服务 (IIS):W3SVC.  
+    - Internet 信息服务 (IIS):W3SVC.  
   
 2. 然后启动激活器 WasNetActivator.exe。 下**激活**选项卡上的唯一协议**UDP**，在下拉列表中选择。 单击**启动**按钮启动激活器。  
   

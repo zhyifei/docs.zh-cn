@@ -1,15 +1,15 @@
 ---
-title: 如何：可靠会话内保护消息
+title: 如何：在可靠会话内保护消息
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
 ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972999"
 ---
-# <a name="how-to-secure-messages-within-reliable-sessions"></a>如何：可靠会话内保护消息
+# <a name="how-to-secure-messages-within-reliable-sessions"></a>如何：在可靠会话内保护消息
 
 本主题概述了使用系统提供的绑定之一来启用在可靠会话内交换的消息的消息级安全所需的步骤。这些绑定支持这种会话，但默认情况下不支持。 使用代码以强制方式或配置文件中以声明方式，请启用安全的可靠会话。 此过程使用客户端和服务配置文件来启用安全的可靠会话。
 

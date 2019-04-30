@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946739"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。  
@@ -24,15 +24,15 @@ ms.locfileid: "59312561"
 ## <a name="defining-settings"></a>定义设置  
  应用程序设置体系结构用于 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 Windows 窗体中，它包含许多在这两种环境中共享的基类。 最重要的是<xref:System.Configuration.SettingsBase>，它提供对一个集合，通过设置访问并提供用于加载和保存设置的低级别方法。 每个环境都实现其自己的类派生自<xref:System.Configuration.SettingsBase>为该环境提供其他设置功能。 在基于 Windows 窗体的应用程序，必须派生自的类上定义所有应用程序设置<xref:System.Configuration.ApplicationSettingsBase>类，该类向基的类添加了以下功能：  
   
--   高层加载和保存操作  
+- 高层加载和保存操作  
   
--   对用户范围设置的支持  
+- 对用户范围设置的支持  
   
--   将用户的设置还原为预定义的默认值  
+- 将用户的设置还原为预定义的默认值  
   
--   从以前的应用程序版本升级设置  
+- 从以前的应用程序版本升级设置  
   
--   在更改设置前或在保存设置前验证设置  
+- 在更改设置前或在保存设置前验证设置  
   
  可以使用多个属性定义中所述设置<xref:System.Configuration>命名空间; 中介绍了这些[应用程序设置特性](application-settings-attributes.md)。 在定义一个设置时，必须将其应用与<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>，它描述了该设置将应用到整个应用程序或只是当前用户。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "59312561"
   
  最初随 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 一起发布的配置系统支持通过本地计算机的 machine.config 文件，或在与应用程序一起部署的 `app.`exe.config 文件内提供静态应用程序配置数据。 <xref:System.Configuration.LocalFileSettingsProvider>类按以下方式扩展此本机支持：  
   
--   应用程序范围设置可存储在 machine.config 或 `app.`exe.config 文件中。 Machine.config 始终为只读，而出于安全考虑，`app`.exe.config 对大多数应用程序也限制为只读。  
+- 应用程序范围设置可存储在 machine.config 或 `app.`exe.config 文件中。 Machine.config 始终为只读，而出于安全考虑，`app`.exe.config 对大多数应用程序也限制为只读。  
   
--   用户范围设置可存储在 `app`.exe.config 文件中，在这种情况下，这些设置被视为静态默认设置。  
+- 用户范围设置可存储在 `app`.exe.config 文件中，在这种情况下，这些设置被视为静态默认设置。  
   
--   非默认的用户范围设置存储在新文件 *user*.config 中，其中 *user* 是当前执行应用程序的用户的用户名。 可以指定的用户范围设置的默认值<xref:System.Configuration.DefaultSettingValueAttribute>。 由于用户范围设置在应用程序执行期间经常更改，因此 `user`.config 始终可读/写。  
+- 非默认的用户范围设置存储在新文件 *user*.config 中，其中 *user* 是当前执行应用程序的用户的用户名。 可以指定的用户范围设置的默认值<xref:System.Configuration.DefaultSettingValueAttribute>。 由于用户范围设置在应用程序执行期间经常更改，因此 `user`.config 始终可读/写。  
   
  所有这 3 种配置文件都以 XML 格式存储设置。 应用程序范围设置的顶级 XML 元素为 `<appSettings>`，而 `<userSettings>` 用于用户范围设置。 同时包含应用程序范围设置和用户范围设置默认值的 `app`.exe.config 文件如下所示：  
   

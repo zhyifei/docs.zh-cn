@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001530"
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系统提供了一个强大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]用于获取输入不同的设备，包括鼠标、 键盘、 触控和触笔。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。
@@ -144,43 +144,43 @@ ms.locfileid: "59320010"
 ### <a name="prerequisites"></a>系统必备
  需要以下组件才能开发响应触摸的应用程序。
 
--   Visual Studio 2010。
+- Visual Studio 2010。
 
--   Windows 7。
+- Windows 7。
 
--   支持 Windows 触控的设备，如触摸屏。
+- 支持 Windows 触控的设备，如触摸屏。
 
 ### <a name="terminology"></a>术语
  讨论触摸时使用了以下术语。
 
--   **触摸**是 Windows 7 可识别的一种用户输入。 通常，将手指放在触敏式屏幕上会触发触摸。 请注意，如果设备仅将手指的位置和移动转换为鼠标输入，则笔记本电脑上常用的触摸板等设备不支持触摸。
+- **触摸**是 Windows 7 可识别的一种用户输入。 通常，将手指放在触敏式屏幕上会触发触摸。 请注意，如果设备仅将手指的位置和移动转换为鼠标输入，则笔记本电脑上常用的触摸板等设备不支持触摸。
 
--   **多点触摸**是同时发生在多个点上的触摸。 Windows 7 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多点触摸。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档中每当论及触摸时，相关概念均适用于多点触摸。
+- **多点触摸**是同时发生在多个点上的触摸。 Windows 7 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多点触摸。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档中每当论及触摸时，相关概念均适用于多点触摸。
 
--   当触摸被解释为应用于对象的实际操作时，就发生了**操作**。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，操作事件将输入解释为转换、扩展或旋转操作。
+- 当触摸被解释为应用于对象的实际操作时，就发生了**操作**。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，操作事件将输入解释为转换、扩展或旋转操作。
 
--   `touch device` 表示产生触摸输入的设备，例如触摸屏上的一根手指。
+- `touch device` 表示产生触摸输入的设备，例如触摸屏上的一根手指。
 
 ### <a name="controls-that-respond-to-touch"></a>响应触摸的控件
  如果以下控件的内容延伸到视图之外，则可以通过在控件上拖动手指来滚动该控件。
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  <xref:System.Windows.Controls.ScrollViewer>定义<xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType>附加属性，可用于指定是否触摸平移启用水平、 垂直、 两者，还是两者皆否。 <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType>属性指定如何快速滚动速度变慢时用户将手指从触摸屏。 <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType>附加的属性指定滚动偏移与转换操作偏移的比率。
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320010"
 
  所有三个类都定义了以下事件，其行为类似，而无论定义类是什么。
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  像键盘和鼠标事件一样，触摸事件也是路由事件。 以 `Preview` 开头的事件是隧道事件，以 `Touch` 开头的事件是冒泡事件。 有关路由事件的详细信息，请参阅[路由事件概述](routed-events-overview.md)。 在您处理这些事件，可以通过调用获取的输入，相对于任何元素的位置<xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A>或<xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A>方法。
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320010"
 ### <a name="manipulation-events"></a>操作事件
  其中一个应用程序使用户能够的对象执行操作的情况下为<xref:System.Windows.UIElement>类定义了操作事件。 与只是报告触摸位置的触摸事件不同，操作事件会报告可采用何种方式解释输入。 有三种类型的操作：转换、扩展和旋转。 下列内容介绍了如何调用这三种类型的操作。
 
--   将一根手指放在对象上，并在触摸屏上拖动手指以调用转换操作。 此操作通常会移动对象。
+- 将一根手指放在对象上，并在触摸屏上拖动手指以调用转换操作。 此操作通常会移动对象。
 
--   将两根手指放在物体上，并将手指相互靠拢或分开以调用扩展操作。 此操作通常会调整对象的大小。
+- 将两根手指放在物体上，并将手指相互靠拢或分开以调用扩展操作。 此操作通常会调整对象的大小。
 
--   将两根手指放在对象上，并将一个手指围绕另一个手指旋转以调用旋转操作。 此操作通常会旋转对象。
+- 将两根手指放在对象上，并将一个手指围绕另一个手指旋转以调用旋转操作。 此操作通常会旋转对象。
 
  多种类型的操作可以同时发生。
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320010"
 
  <xref:System.Windows.UIElement>定义了以下操作事件。
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  默认情况下，<xref:System.Windows.UIElement>不会接收这些操作事件。 若要在接收操作事件<xref:System.Windows.UIElement>，将<xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType>到`true`。
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320010"
 
  下列内容描述了上图中所示的触摸事件和操作事件之间的关系。
 
--   当第一个触控设备生成<xref:System.Windows.UIElement.TouchDown>上的事件<xref:System.Windows.UIElement>，操作逻辑调用<xref:System.Windows.UIElement.CaptureTouch%2A>方法，后者生成<xref:System.Windows.UIElement.GotTouchCapture>事件。
+- 当第一个触控设备生成<xref:System.Windows.UIElement.TouchDown>上的事件<xref:System.Windows.UIElement>，操作逻辑调用<xref:System.Windows.UIElement.CaptureTouch%2A>方法，后者生成<xref:System.Windows.UIElement.GotTouchCapture>事件。
 
--   当<xref:System.Windows.UIElement.GotTouchCapture>发生，操作逻辑调用<xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType>方法，后者生成<xref:System.Windows.UIElement.ManipulationStarting>事件。
+- 当<xref:System.Windows.UIElement.GotTouchCapture>发生，操作逻辑调用<xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType>方法，后者生成<xref:System.Windows.UIElement.ManipulationStarting>事件。
 
--   当<xref:System.Windows.UIElement.TouchMove>发生事件，操作逻辑将生成<xref:System.Windows.UIElement.ManipulationDelta>之前发生的事件<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件。
+- 当<xref:System.Windows.UIElement.TouchMove>发生事件，操作逻辑将生成<xref:System.Windows.UIElement.ManipulationDelta>之前发生的事件<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件。
 
--   当上一次触摸设备时元素将引发<xref:System.Windows.UIElement.TouchUp>事件，操作逻辑会生成<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件。
+- 当上一次触摸设备时元素将引发<xref:System.Windows.UIElement.TouchUp>事件，操作逻辑会生成<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件。
 
 <a name="focus"></a>
 ## <a name="focus"></a>焦点

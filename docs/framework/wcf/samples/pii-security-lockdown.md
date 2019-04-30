@@ -3,20 +3,20 @@ title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989646"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何控制通过 Windows Communication Foundation (WCF) 服务的多个安全相关的功能：  
   
--   加密服务配置文件中的敏感信息。  
+- 加密服务配置文件中的敏感信息。  
   
--   锁定配置文件中的元素以使嵌套的服务子目录不能重写设置。  
+- 锁定配置文件中的元素以使嵌套的服务子目录不能重写设置。  
   
--   控制跟踪和消息日志中的个人身份信息 (PII) 日志记录。  
+- 控制跟踪和消息日志中的个人身份信息 (PII) 日志记录。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -124,9 +124,9 @@ ms.locfileid: "59326640"
   
  使用 DPAPI 和 RSA 也可以对配置文件元素进行加密。 有关更多信息，请参见以下链接：  
   
--   [构建安全的 ASP.NET 应用程序：身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [构建安全的 ASP.NET 应用程序：身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [如何：加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [如何：加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   

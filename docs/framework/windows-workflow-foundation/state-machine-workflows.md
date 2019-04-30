@@ -3,11 +3,11 @@ title: 状态机工作流
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004663"
 ---
 # <a name="state-machine-workflows"></a>状态机工作流
 状态机是用于开发程序的已知范例。 <xref:System.Activities.Statements.StateMachine> 活动与 <xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> 以及其他活动一起可用于生成状态机工作流程序。 本主题概述如何创建状态机工作流。  
@@ -15,11 +15,11 @@ ms.locfileid: "59222986"
 ## <a name="state-machine-workflow-overview"></a>状态机工作流概述  
  状态机工作流提供建模样式，使用该样式可以通过事件驱动方式对您的工作流进行建模。 <xref:System.Activities.Statements.StateMachine> 活动包含状态和转换，它们构成了状态机的逻辑，并且可以在能够使用活动的任何地方使用。 状态机运行时有若干类：  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  为了创建状态机工作流，需要将状态将添加到 <xref:System.Activities.Statements.StateMachine> 活动中，并且使用转换控制各状态之间的流。 以下屏幕截图中，从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)，显示了三种状态和三个转换的状态机工作流。 **初始化目标**是初始状态，表示工作流中的第一个状态。 这指定的行，从而导致它从**启动**节点。 名为工作流中的最终状态**FinalState**，并表示在其中完成工作流的点。  
   

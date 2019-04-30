@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
 ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033808"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>如何：处理查询中的复合键
 有些运算符只能带一个自变量。 如果您的参数必须包含数据库中的多个列，则您必须创建一个匿名类型来表示这种组合。  

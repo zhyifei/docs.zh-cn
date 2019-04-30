@@ -3,18 +3,18 @@ title: 3351 - ServerMaxPooledConnectionsQuotaReached
 ms.date: 03/30/2017
 ms.assetid: b2ca1131-0017-4a5f-ab7b-2b0f73589e84
 ms.openlocfilehash: 19876f05957a14d463b3d5057ceb818ddd0e2f0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33463838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971413"
 ---
 # <a name="3351---servermaxpooledconnectionsquotareached"></a>3351 - ServerMaxPooledConnectionsQuotaReached
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|3351|  
+|Id|3351|  
 |关键字|配额|  
 |级别|详细|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  

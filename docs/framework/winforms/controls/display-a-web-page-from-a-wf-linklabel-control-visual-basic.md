@@ -13,11 +13,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
 ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972156"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：通过 Windows 窗体 LinkLabel 控件显示 Web 页面 (Visual Basic)
 此示例在默认浏览器中显示网页，当用户单击 Windows 窗体<xref:System.Windows.Forms.LinkLabel>控件。  
@@ -40,11 +40,11 @@ End Sub
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   名为 Windows 窗体`Form1`。  
+- 名为 Windows 窗体`Form1`。  
   
--   名为 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控件。  
+- 名为 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控件。  
   
--   活动的 Internet 连接。  
+- 活动的 Internet 连接。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  对调用<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。 有关详细信息，请参阅 <xref:System.Security.SecurityException>。  

@@ -10,11 +10,11 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949235"
 ---
 # <a name="net-performance-tips"></a>.NET 性能提示
 术语“性能”通常指程序的执行速度。 有时通过遵循源代码中的一些基本规则便可以提高执行速度。 在某些程序中，十分重要的一点是需要仔细检查代码并使用探查器确保程序尽可能快地运行。 而在其他程序中，由于代码在编写时便运行得足够快，因此不必执行此类优化。 本文列出了一些性能可能遭受影响的常见领域以及相关改进建议，并提供其他性能主题的链接。 有关规划和测量性能的详细信息，请参阅[性能](../../../docs/framework/performance/index.md)  
@@ -30,17 +30,17 @@ ms.locfileid: "59216465"
   
 ## <a name="other-resources"></a>其他资源  
   
--   [更快地编写托管代码：了解开销情况](https://go.microsoft.com/fwlink/?LinkId=99294)  
+- [更快地编写托管代码：了解开销情况](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [编写高性能的托管应用程序：入门](https://go.microsoft.com/fwlink/?LinkId=99295)  
+- [编写高性能的托管应用程序：入门](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [垃圾回收器基础知识和性能提示](https://go.microsoft.com/fwlink/?LinkId=99296)  
+- [垃圾回收器基础知识和性能提示](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [.NET 应用程序的性能提示和技巧](https://go.microsoft.com/fwlink/?LinkId=99297)  
+- [.NET 应用程序的性能提示和技巧](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani 关于性能问题的见解](https://go.microsoft.com/fwlink/?LinkId=115679)  
+- [Rico Mariani 关于性能问题的见解](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
--   [Vance Morrison 的博客](https://blogs.msdn.microsoft.com/vancem/)
+- [Vance Morrison 的博客](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>请参阅
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999253"
 ---
 # <a name="event-logging-in-wcf"></a>WCF 中的事件日志记录
 Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部事件。  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部�
 ### <a name="application-event-log"></a>应用程序事件日志  
  **应用程序事件日志**包含大部分由 WCF 生成的事件。 大多数项都指示未能为应用程序启用某个功能。 示例包括：  
   
--   消息日志记录/跟踪：跟踪和消息日志记录失败时，WCF 会将事件写入到事件日志。 但是，并非每个跟踪故障都会触发事件。 若要防止跟踪故障完全填满事件日志，WCF 实现这种情况下 10 分钟中断周期。 这意味着，如果 WCF 在事件日志中写入跟踪故障，它将不会再次在至少 10 分钟。  
+- 消息日志记录/跟踪：跟踪和消息日志记录失败时，WCF 会将事件写入到事件日志。 但是，并非每个跟踪故障都会触发事件。 若要防止跟踪故障完全填满事件日志，WCF 实现这种情况下 10 分钟中断周期。 这意味着，如果 WCF 在事件日志中写入跟踪故障，它将不会再次在至少 10 分钟。  
   
--   共享的侦听器：WCF TCP 端口共享服务记录的事件时未能启动。  
+- 共享的侦听器：WCF TCP 端口共享服务记录的事件时未能启动。  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]：记录事件时该服务无法启动。  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]：记录事件时该服务无法启动。  
   
--   严重和错误事件，如启动故障或崩溃  
+- 严重和错误事件，如启动故障或崩溃  
   
--   打开消息日志记录：记录事件时启用消息日志记录。 这将通知管理员可能在消息头和正文中记录应用程序特定的敏感信息。  
+- 打开消息日志记录：记录事件时启用消息日志记录。 这将通知管理员可能在消息头和正文中记录应用程序特定的敏感信息。  
   
--   当设置 `enableLoggingKnownPII` 文件的 `machineSettings` 元素中的 `machine.config` 属性时，将记录一个事件。 此属性指定是否允许计算机上运行的任何应用程序来记录已知的个人身份信息 (PII)。  
+- 当设置 `enableLoggingKnownPII` 文件的 `machineSettings` 元素中的 `machine.config` 属性时，将记录一个事件。 此属性指定是否允许计算机上运行的任何应用程序来记录已知的个人身份信息 (PII)。  
   
--   如果为特定应用程序将 `logKnownPii` 或 `app.config` 文件中的 `web.config` 属性设置为 `true` 以开启 PII 日志记录，但 `enableLoggingKnownPII` 文件的 `machineSettings` 元素中的 `machine.config` 属性设置为 `false`，则会记录一个事件。 此外，如果将 `logKnownPii` 和 `enableLoggingKnownPII` 都设置为 `true`，也会记录一个事件。 有关这些配置设置的详细信息，请参阅的安全性部分[配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主题。  
+- 如果为特定应用程序将 `logKnownPii` 或 `app.config` 文件中的 `web.config` 属性设置为 `true` 以开启 PII 日志记录，但 `enableLoggingKnownPII` 文件的 `machineSettings` 元素中的 `machine.config` 属性设置为 `false`，则会记录一个事件。 此外，如果将 `logKnownPii` 和 `enableLoggingKnownPII` 都设置为 `true`，也会记录一个事件。 有关这些配置设置的详细信息，请参阅的安全性部分[配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主题。  
   
 ### <a name="security-event-log"></a>安全事件日志  
  **安全事件日志**包含由 WCF 记录的安全审核事件。  

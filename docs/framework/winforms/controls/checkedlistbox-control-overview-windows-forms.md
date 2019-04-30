@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956359"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.CheckedListBox>控件扩展<xref:System.Windows.Forms.ListBox>控件。 它执行的几乎所有列表框 does 和还可以显示在列表中的项旁边的复选标记。 其他两个控件之间的差异是，检查列表框和仅支持<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 和列表框只能有一项或选择无的检查。 请注意，所选的项将会突出显示在窗体上不选中项相同。  

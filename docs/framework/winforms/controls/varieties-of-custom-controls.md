@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009144"
 ---
 # <a name="varieties-of-custom-controls"></a>各种自定义控件
 使用 .NET Framework 可以开发和实现新的控件。 可以通过继承来扩展熟悉的用户控件和现有控件的功能。 还可以编写自定义控件，这些控件执行自己的绘制。  
@@ -31,17 +31,17 @@ ms.locfileid: "59170692"
   
  <xref:System.Windows.Forms.Control>类执行以下任务以提供可在 Windows 窗体应用程序中的可视显示：  
   
--   公开窗口句柄。  
+- 公开窗口句柄。  
   
--   管理消息路由。  
+- 管理消息路由。  
   
--   提供鼠标和键盘事件，以及许多其他用户界面事件。  
+- 提供鼠标和键盘事件，以及许多其他用户界面事件。  
   
--   提供高级布局功能。  
+- 提供高级布局功能。  
   
--   包含特定于可视显示许多属性，例如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>，和<xref:System.Windows.Forms.Control.Width%2A>。  
+- 包含特定于可视显示许多属性，例如<xref:System.Windows.Forms.Control.ForeColor%2A>， <xref:System.Windows.Forms.Control.BackColor%2A>， <xref:System.Windows.Forms.Control.Height%2A>，和<xref:System.Windows.Forms.Control.Width%2A>。  
   
--   为 Windows 窗体控件充当 Microsoft® ActiveX® 控件提供必需的安全性和线程支持。  
+- 为 Windows 窗体控件充当 Microsoft® ActiveX® 控件提供必需的安全性和线程支持。  
   
  由于基类提供了大量基础结构，因此使开发自己的 Windows 窗体控件变得相对简单。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59170692"
   
  如果为以下情况，则从 <xref:System.Windows.Forms.UserControl> 类继承：  
   
--   你想要将多个 Windows 窗体控件的功能组合到单个可重用单元。  
+- 你想要将多个 Windows 窗体控件的功能组合到单个可重用单元。  
   
 ### <a name="extended-controls"></a>扩展控件  
  你可以从任何现有的 Windows 窗体控件派生继承的控件。 使用此方法，你可以保留 Windows 窗体控件的所有固有功能，然后通过添加自定义属性、方法或其他功能来扩展该功能。 可以使用此选项重写基控件的绘制逻辑，然后通过更改该控件的外观来扩展其用户界面。  
@@ -74,9 +74,9 @@ ms.locfileid: "59170692"
   
  如果为以下情况，则从 Windows 窗体控件继承：  
   
--   大部分所需功能与现有的 Windows 窗体控件相同。  
+- 大部分所需功能与现有的 Windows 窗体控件相同。  
   
--   不需要自定义图形用户界面，或者想为现有控件设计一个新的图形用户界面。  
+- 不需要自定义图形用户界面，或者想为现有控件设计一个新的图形用户界面。  
   
 ### <a name="custom-controls"></a>自定义控件  
  创建控件的另一种方法是创建继承，开始通过继承<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control>类提供了所有基本功能所需的控件，包括鼠标和键盘处理事件，但没有特定于控件的功能或图形界面。  
@@ -91,9 +91,9 @@ ms.locfileid: "59170692"
   
  如果为以下情况，则从 <xref:System.Windows.Forms.Control> 类继承：  
   
--   你想要提供控件的自定义图形表示形式。  
+- 你想要提供控件的自定义图形表示形式。  
   
--   你需要实现不能通过标准控件实现的自定义功能。  
+- 你需要实现不能通过标准控件实现的自定义功能。  
   
 ### <a name="activex-controls"></a>ActiveX 控件  
  尽管 Windows 窗体基础结构已为承载 Windows 窗体控件进行了优化，但仍可以使用 ActiveX 控件。 Visual Studio 中对此任务提供支持。 有关详细信息，请参阅[如何：向 Windows 窗体添加 ActiveX 控件](how-to-add-activex-controls-to-windows-forms.md)。  

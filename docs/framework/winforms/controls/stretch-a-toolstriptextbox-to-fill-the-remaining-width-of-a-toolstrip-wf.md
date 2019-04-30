@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
 ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971920"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>如何：拉伸 ToolStripTextBox 以填充 ToolStrip （Windows 窗体） 的其余宽度
 当您将设置<xref:System.Windows.Forms.ToolStrip.Stretch%2A>的属性<xref:System.Windows.Forms.ToolStrip>控制对`true`，该控件填充其容器端到端，并调整其容器调整大小时。 在此配置中，您可能会很有帮助的控件中，如拉伸项<xref:System.Windows.Forms.ToolStripTextBox>、 以填充可用空间和调整时该控件调整大小的大小。 此拉伸很有用，例如，如果你想要实现的外观和行为类似于在 Microsoft® Internet Explorer 的地址栏。  
@@ -27,7 +27,7 @@ ms.locfileid: "59223571"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
 

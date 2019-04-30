@@ -3,11 +3,11 @@ title: 终结点
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
 ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963600"
 ---
 # <a name="endpoint"></a>终结点
 终结点  
@@ -70,8 +70,8 @@ class Endpoint
   
  承载终结点的 AppDomain 的 AppDomain ID。  
   
-### <a name="behaviors"></a>行为  
- 数据类型：Behavior array  
+### <a name="behaviors"></a>Behaviors  
+ 数据类型：行为数组  
   
  访问类型：只读  
   
@@ -120,7 +120,7 @@ class Endpoint
  承载该终结点的进程的进程 ID。  
   
 ### <a name="ref"></a>ref  
- 数据类型：Contract  
+ 数据类型：协定  
   
  访问类型：只读  
   

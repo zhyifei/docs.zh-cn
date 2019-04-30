@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973274"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>宽松委托转换 (Visual Basic)
 宽松的委托转换，可将子例程和函数分配给委托或处理程序，即使它们的签名不相同。 因此，绑定到委托将与已允许为方法调用的绑定一致。  
@@ -19,7 +19,7 @@ ms.locfileid: "58842715"
 ## <a name="parameters-and-return-type"></a>参数和返回类型  
  替代签名完全匹配，宽松的转换需要满足以下条件时`Option Strict`设置为`On`:  
   
--   扩大转换为已分配的函数的相应参数的数据类型必须存在从每个委托参数的数据类型或`Sub`。 在下面的示例中，委托`Del1`具有一个参数、 `Integer`。 参数`m`中已分配的 lambda 表达式必须具有的扩大转换的数据类型`Integer`，如`Long`或`Double`。  
+- 扩大转换为已分配的函数的相应参数的数据类型必须存在从每个委托参数的数据类型或`Sub`。 在下面的示例中，委托`Del1`具有一个参数、 `Integer`。 参数`m`中已分配的 lambda 表达式必须具有的扩大转换的数据类型`Integer`，如`Long`或`Double`。  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "58842715"
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   扩大转换必须存在于已分配的函数的返回类型的相反方向或`Sub`到委托的返回类型。 在以下示例中，每个已分配的 lambda 表达式的主体必须为数据类型扩大到`Integer`因为的返回类型`del1`是`Integer`。  
+- 扩大转换必须存在于已分配的函数的返回类型的相反方向或`Sub`到委托的返回类型。 在以下示例中，每个已分配的 lambda 表达式的主体必须为数据类型扩大到`Integer`因为的返回类型`del1`是`Integer`。  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

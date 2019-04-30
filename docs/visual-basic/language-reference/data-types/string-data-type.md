@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971707"
 ---
 # <a name="string-data-type-visual-basic"></a>String 数据类型 (Visual Basic)
 存储无符号的 16 位 （2 个字节） 码位的序列该范围从 0 到 65535 之间的值中。 每个*代码点*，或字符代码，表示单个 Unicode 字符。 一个字符串，可包含从 0 到大约 20 亿 (2 ^31) 的 Unicode 字符。  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **负号。** 请记住保留字符`String`是无符号，并且不能表示负值。 在任何情况下，不应使用`String`来保存数值。  
+- **负号。** 请记住保留字符`String`是无符号，并且不能表示负值。 在任何情况下，不应使用`String`来保存数值。  
   
--   **互操作注意事项。** 如果你不是为.NET Framework 编写的组件与交互如自动化或 COM 对象，请记住，字符串字符具有不同的数据宽度 （8 位） 在其他环境中。 如果您将 8 位字符的字符串参数传递给此类组件，将其作为声明`Byte()`，数组`Byte`元素，而不是`String`中新的 Visual Basic 代码。  
+- **互操作注意事项。** 如果你不是为.NET Framework 编写的组件与交互如自动化或 COM 对象，请记住，字符串字符具有不同的数据宽度 （8 位） 在其他环境中。 如果您将 8 位字符的字符串参数传递给此类组件，将其作为声明`Byte()`，数组`Byte`元素，而不是`String`中新的 Visual Basic 代码。  
   
--   **类型字符。** 追加标识符类型字符`$`到任何标识符会强制转换到`String`数据类型。 `String` 有没有文本类型字符。 但是，编译器将文本括在引号 (`" "`) 作为`String`。  
+- **类型字符。** 追加标识符类型字符`$`到任何标识符会强制转换到`String`数据类型。 `String` 有没有文本类型字符。 但是，编译器将文本括在引号 (`" "`) 作为`String`。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是<xref:System.String?displayProperty=nameWithType>类。  
+- **Framework 类型。** .NET Framework 中的对应类型是<xref:System.String?displayProperty=nameWithType>类。  
   
 ## <a name="see-also"></a>请参阅
 

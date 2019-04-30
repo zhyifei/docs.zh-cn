@@ -3,11 +3,11 @@ title: WCF 中使用的安全概念
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
 ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990868"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF 中使用的安全概念
 Windows Communication Foundation (WCF) 安全是基于已在使用的概念和各种安全基础结构中部署。  

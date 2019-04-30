@@ -3,11 +3,11 @@ title: 使用传输安全保护消息
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990959"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
@@ -25,11 +25,11 @@ ms.locfileid: "59160883"
   
  使用 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 的传输安全影响着在传输队列和目标队列之间进行传输时，对 MSMQ 消息进行保护的方式，其中，保护是指：  
   
--   对消息进行签名，以确保该消息未经篡改。  
+- 对消息进行签名，以确保该消息未经篡改。  
   
--   对消息进行加密，以确保无法查看或篡改该消息。 此操作是可选的，但建议执行该操作。  
+- 对消息进行加密，以确保无法查看或篡改该消息。 此操作是可选的，但建议执行该操作。  
   
--   目标队列管理器对消息发送方进行标识以确保不可否认性。  
+- 目标队列管理器对消息发送方进行标识以确保不可否认性。  
   
  在 MSMQ 中，目标队列独立于身份验证，具有一个访问控制列表 (ACL)，用于检查客户端是否有权将消息发送到目标队列， 同时还将检查接收应用程序是否有从目标队列接收消息的权限。  
   

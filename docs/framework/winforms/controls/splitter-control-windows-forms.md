@@ -7,11 +7,11 @@ helpviewer_keywords:
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
 ms.openlocfilehash: 37d9cb91e28a93b98394620a4385989968700fae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009664"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter 控件（Windows 窗体）
 Windows 窗体`Splitter`控制用于在运行时调整停靠的控件的大小。 `Splitter`通常具有的数据来展示，如 Windows 资源管理器，它的数据窗格包含不同的宽度的信息在不同的时间长度可变的控件与窗体上使用控件。  

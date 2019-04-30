@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969463"
 ---
 # <a name="windows-forms-controls-by-function"></a>根据功能列出的 Windows 窗体控件
 Windows 窗体还提供控件和组件执行的许多功能。 下表列出了 Windows 窗体控件和组件根据常规函数。 此外，多个控件存在的具有相同的功能时，与它所取代的控件中还要注意： 列出推荐的控件。 在随后的一个单独的表中，使用它们的建议替换项列出被取代的控件。  

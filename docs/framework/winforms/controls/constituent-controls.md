@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956065"
 ---
 # <a name="constituent-controls"></a>构成控件
 组成用户控件的控件（也称作“构成控件”）在自定义图形呈现方面的灵活性相对较差。 所有 Windows 窗体控件都处理其自身通过自己的呈现<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 由于此方法受到保护，开发人员无法对其进行访问，因此在绘制控件时无法阻止其执行。 然而，这并不意味着不能添加影响构成控件外观的代码。 附加呈现可通过添加事件处理程序来完成。 例如，假设正在创作<xref:System.Windows.Forms.UserControl>与名为的按钮`MyButton`。 如果想要获取无法提供的附加呈现<xref:System.Web.UI.WebControls.Button>，将代码添加到你的用户控件如下所示：  

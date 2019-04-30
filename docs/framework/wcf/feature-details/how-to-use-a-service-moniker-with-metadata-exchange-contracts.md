@@ -3,11 +3,11 @@ title: 如何：将服务名字对象与元数据交换协定一起使用
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 ms.openlocfilehash: 367cbd4a2bfbde3d4ab0a74eeeaf5d5f5662ec27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972895"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>如何：将服务名字对象与元数据交换协定一起使用
 在开发一些新的 WCF 服务之后, 可以决定你想要能够从脚本或 Visual Basic 6.0 应用程序中调用这些服务。 一种方法是生成 WCF 客户端程序集，向 COM 注册程序集、 程序集安装在 GAC 中，然后从 Visual Basic 代码中引用 COM 类型。 当你将分发应用程序时，必须将分发的 WCF 客户端程序集。 然后，用户必须使用 COM 注册 WCF 客户端程序集，并且将该程序集放置在 GAC 中。 WCF COM 互操作还可使相同的服务调用，而不依赖于 WCF 客户端程序集。 WCF 标记使您能够从任何 COM 兼容语言 （Visual Basic、 VBScript、 Visual Basic for Applications (VBA) 和等等） 可通过指定元数据交换 (Mex) 终结点的服务标记用于提取类型的 URI 调用任何 WCF 服务有关服务的信息。 本主题介绍如何调用使用指定 Mex 终结点的 WCF 名字对象的 WCF 入门示例。  

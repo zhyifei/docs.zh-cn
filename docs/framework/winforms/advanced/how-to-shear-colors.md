@@ -9,11 +9,11 @@ helpviewer_keywords:
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
 ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954645"
 ---
 # <a name="how-to-shear-colors"></a>如何：切变颜色
 修剪每增加或减少到另一个颜色组件比例颜色组件。 例如，考虑红色组件加一半的蓝色组件值的转换。 在这种转换 （0.2，0.5，1） 的颜色将变为 （0.7，0.5，1）。 新的红色分量为 0.2 + (1/2)(1) = 0.7。  

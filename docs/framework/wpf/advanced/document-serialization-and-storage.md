@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962729"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
 Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示高质量的文档。  增强的功能，支持固定文档和流文档以及高级查看控件，结合功能强大的二维和三维图形功能需要.NET Framework 应用程序到新的质量和用户体验级别。  能够灵活地管理文档的内存中表示形式是.NET Framework 中，一项主要功能并能够高效保存和加载数据存储区中的文档是几乎每个应用程序的需求。  将文档从内部的内存中表示形式转换为外部数据存储的过程称为序列化。  反之，读取数据存储并重新创建原始内存中实例的过程则称为反序列化。  
@@ -24,19 +24,19 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 文档序列化程序的功能  
   
--   通过直接访问高级别文档对象（逻辑树和视觉对象），可以有效存储已分页的内容、二维/三维元素、图像、媒体、超链接、注释以及其他支持内容。  
+- 通过直接访问高级别文档对象（逻辑树和视觉对象），可以有效存储已分页的内容、二维/三维元素、图像、媒体、超链接、注释以及其他支持内容。  
   
--   同步和异步操作。  
+- 同步和异步操作。  
   
--   支持具有以下增强功能的插件序列化程序：  
+- 支持具有以下增强功能的插件序列化程序：  
   
-    -   所有.NET Framework 应用程序使用的系统级访问。  
+    - 所有.NET Framework 应用程序使用的系统级访问。  
   
-    -   简单应用程序插件的发现功能。  
+    - 简单应用程序插件的发现功能。  
   
-    -   第三方自定义插件的简单部署、安装和更新。  
+    - 第三方自定义插件的简单部署、安装和更新。  
   
-    -   对自定义运行时设置和选项的用户界面支持。  
+    - 对自定义运行时设置和选项的用户界面支持。  
   
 ### <a name="xps-print-path"></a>XPS 打印路径  
  Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径还提供了一个可扩展机制，用于编写通过打印输出的文档。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以作为文档文件格式，也可以作为 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档可直接发送到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](printing-overview.md)。  

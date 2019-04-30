@@ -8,11 +8,11 @@ helpviewer_keywords:
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
 ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954188"
 ---
 # <a name="data-binding-wpf"></a>数据绑定 (WPF)
 Windows Presentation Foundation (WPF) 数据绑定提供了简单而一致的方式，应用程序能够显示和与数据交互。 元素可以从各种数据源的公共语言运行时 (CLR) 对象和 XML 的形式绑定到数据。  

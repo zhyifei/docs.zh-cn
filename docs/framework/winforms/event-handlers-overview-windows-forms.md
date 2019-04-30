@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
 ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966824"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>事件处理程序概述（Windows 窗体）
 事件处理程序是绑定到一个事件的方法。 当引发事件时，执行事件处理程序中的代码。 每个事件处理程序提供了两个参数，可用于正确地处理该事件。 下面的示例演示的事件处理程序<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。  

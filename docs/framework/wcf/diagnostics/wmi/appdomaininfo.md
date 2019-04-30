@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964250"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 应用程序域信息  
@@ -35,7 +35,7 @@ class AppDomainInfo
 ## <a name="methods"></a>方法  
  AppDomainInfo 类未定义任何方法。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  AppDomainInfo 类具有以下属性：  
   
 ### <a name="appdomainid"></a>AppDomainId  
@@ -80,7 +80,7 @@ class AppDomainInfo
   
  侦听 System.Wmi.MessageLogging 跟踪源的集合跟踪侦听器。  
   
-### <a name="name"></a>name  
+### <a name="name"></a>名称  
  数据类型：String  
   
  访问类型：只读  
