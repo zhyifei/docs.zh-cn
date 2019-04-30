@@ -57,7 +57,7 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
   
 ## <a name="see-also"></a>请参阅
 
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+- [Windows 窗体和非托管应用程序](windows-forms-and-unmanaged-applications.md)
 - [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 互操作性示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
