@@ -11,11 +11,11 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032309"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
@@ -44,15 +44,15 @@ ms.locfileid: "59332674"
 ## <a name="scaling-in-ui-automation-clients"></a>UI 自动化客户端中的缩放  
   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不使用逻辑坐标。 下面的方法和属性将返回物理坐标或将其用作参数。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
+- <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
  默认情况下，在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 环境中运行的 UI 自动化客户端应用程序将不能从这些方法和属性中获得正确的结果。 例如，由于光标的位置是逻辑坐标，客户端不能仅将这些坐标传递到 <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> 以获取光标下的元素。 此外，该应用程序不能正确将 Windows 放置在其客户端区域之外。  
   

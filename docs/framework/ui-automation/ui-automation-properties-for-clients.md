@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033042"
 ---
 # <a name="ui-automation-properties-for-clients"></a>客户端的 UI 自动化属性
 > [!NOTE]
@@ -41,11 +41,11 @@ ms.locfileid: "59116358"
   
  有关详细信息，请参阅以下参考主题：  
   
--   <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
   
--   <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
+- <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
 <a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>检索属性  
@@ -53,9 +53,9 @@ ms.locfileid: "59116358"
   
  此外，任何 <xref:System.Windows.Automation.AutomationElement> 或控件模式属性，包括在 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 或 <xref:System.Windows.Automation.AutomationElement.Current%2A> 结构中不可用的属性，都可以通过使用以下方法之一进行检索：  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
   
  这些方法提供略好的性能以及对属性的完整范围的访问权限。  
   
