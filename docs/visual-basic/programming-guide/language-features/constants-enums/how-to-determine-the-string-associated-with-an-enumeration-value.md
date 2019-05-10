@@ -6,30 +6,30 @@ helpviewer_keywords:
 - strings [Visual Basic], enumeration values
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
-ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 25c55c14507c67b9bdd8606cb85afd55f9a748fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610534"
 ---
-# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a><span data-ttu-id="9953f-102">如何：确定与枚举值 (Visual Basic 中) 关联的字符串</span><span class="sxs-lookup"><span data-stu-id="9953f-102">How to: Determine the String Associated with an Enumeration Value (Visual Basic)</span></span>
-<span data-ttu-id="9953f-103"><xref:System.Enum.GetValues%2A>和<xref:System.Enum.GetNames%2A>方法可用于确定字符串和枚举成员与相关联的值。</span><span class="sxs-lookup"><span data-stu-id="9953f-103">The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.</span></span>  
+# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a><span data-ttu-id="927f0-102">如何：确定与枚举值 (Visual Basic 中) 关联的字符串</span><span class="sxs-lookup"><span data-stu-id="927f0-102">How to: Determine the String Associated with an Enumeration Value (Visual Basic)</span></span>
+<span data-ttu-id="927f0-103"><xref:System.Enum.GetValues%2A>和<xref:System.Enum.GetNames%2A>方法可用于确定字符串和枚举成员与相关联的值。</span><span class="sxs-lookup"><span data-stu-id="927f0-103">The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.</span></span>  
   
-### <a name="to-determine-the-string-associated-with-an-enumeration"></a><span data-ttu-id="9953f-104">若要确定与枚举关联的字符串</span><span class="sxs-lookup"><span data-stu-id="9953f-104">To determine the string associated with an enumeration</span></span>  
+### <a name="to-determine-the-string-associated-with-an-enumeration"></a><span data-ttu-id="927f0-104">若要确定与枚举关联的字符串</span><span class="sxs-lookup"><span data-stu-id="927f0-104">To determine the string associated with an enumeration</span></span>  
   
-- <span data-ttu-id="9953f-105">使用<xref:System.Enum.GetNames%2A>方法来检索与枚举成员关联的字符串。</span><span class="sxs-lookup"><span data-stu-id="9953f-105">Use the <xref:System.Enum.GetNames%2A> method to retrieve the strings associated with the enumeration members.</span></span> <span data-ttu-id="9953f-106">此示例中声明枚举，这`flavorEnum`，然后使用<xref:System.Enum.GetNames%2A>方法来显示与每个成员关联的字符串。</span><span class="sxs-lookup"><span data-stu-id="9953f-106">This example declares an enumeration, `flavorEnum`, then uses the <xref:System.Enum.GetNames%2A> method to display the strings associated with each member.</span></span>  
+- <span data-ttu-id="927f0-105">使用<xref:System.Enum.GetNames%2A>方法来检索与枚举成员关联的字符串。</span><span class="sxs-lookup"><span data-stu-id="927f0-105">Use the <xref:System.Enum.GetNames%2A> method to retrieve the strings associated with the enumeration members.</span></span> <span data-ttu-id="927f0-106">此示例中声明枚举，这`flavorEnum`，然后使用<xref:System.Enum.GetNames%2A>方法来显示与每个成员关联的字符串。</span><span class="sxs-lookup"><span data-stu-id="927f0-106">This example declares an enumeration, `flavorEnum`, then uses the <xref:System.Enum.GetNames%2A> method to display the strings associated with each member.</span></span>  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="9953f-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="9953f-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="927f0-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="927f0-107">See also</span></span>
 
 - <xref:System.Enum.GetValues%2A>
 - <xref:System.Enum.GetNames%2A>
 - <xref:System.Enum>
-- [<span data-ttu-id="9953f-108">如何：声明枚举</span><span class="sxs-lookup"><span data-stu-id="9953f-108">How to: Declare an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
-- [<span data-ttu-id="9953f-109">如何：为枚举成员，请参阅</span><span class="sxs-lookup"><span data-stu-id="9953f-109">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [<span data-ttu-id="9953f-110">枚举和名称限定</span><span class="sxs-lookup"><span data-stu-id="9953f-110">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [<span data-ttu-id="9953f-111">如何：循环访问在 Visual Basic 中枚举</span><span class="sxs-lookup"><span data-stu-id="9953f-111">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [<span data-ttu-id="9953f-112">何时使用枚举</span><span class="sxs-lookup"><span data-stu-id="9953f-112">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [<span data-ttu-id="9953f-113">Enum 语句</span><span class="sxs-lookup"><span data-stu-id="9953f-113">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)
+- [<span data-ttu-id="927f0-108">如何：声明枚举</span><span class="sxs-lookup"><span data-stu-id="927f0-108">How to: Declare an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [<span data-ttu-id="927f0-109">如何：为枚举成员，请参阅</span><span class="sxs-lookup"><span data-stu-id="927f0-109">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [<span data-ttu-id="927f0-110">枚举和名称限定</span><span class="sxs-lookup"><span data-stu-id="927f0-110">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
+- [<span data-ttu-id="927f0-111">如何：循环访问在 Visual Basic 中枚举</span><span class="sxs-lookup"><span data-stu-id="927f0-111">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [<span data-ttu-id="927f0-112">何时使用枚举</span><span class="sxs-lookup"><span data-stu-id="927f0-112">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
+- [<span data-ttu-id="927f0-113">Enum 语句</span><span class="sxs-lookup"><span data-stu-id="927f0-113">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)
