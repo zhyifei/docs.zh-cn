@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f42cf864e836c53cff5e7d620f4bdfa43c4c7ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920713"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661288"
 ---
 # <a name="iterator-visual-basic"></a>迭代器 (Visual Basic)
 指定的函数或`Get`访问器是一个迭代器。  
@@ -34,9 +34,9 @@ ms.locfileid: "61920713"
 ## <a name="usage"></a>用法  
  `Iterator` 修饰符可用于下面的上下文中：  
   
--   [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>示例  
  下面的示例演示一个迭代器函数。 迭代器函数具有`Yield`内的语句[为...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)循环。 每次迭代[为每个](../../../visual-basic/language-reference/statements/for-each-next-statement.md)在语句体`Main`会调用`Power`迭代器函数。 对迭代器函数的每个调用将继续到 `Yield` 语句的下一次执行（在 `For…Next` 循环的下一次迭代期间发生）。  

@@ -2,12 +2,12 @@
 title: 使用扩展方法 (Visual Basic) 重构
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 925ae6b1ae82576a830b06ef11232f7dad9875f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 360b723fd8ef63338213dfcaa2c00f659ba3e74a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787122"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666081"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>使用扩展方法 (Visual Basic) 重构
 此示例基于上一示例中，[检索段落 (Visual Basic 中) 的文本](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)，来重构字符串作为扩展方法使用纯函数实现的串联。  

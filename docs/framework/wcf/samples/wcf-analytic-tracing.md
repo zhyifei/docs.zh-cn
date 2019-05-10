@@ -2,12 +2,12 @@
 title: WCF 分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 95a4335ef41240e8cc85c06b7997c12d98800b1d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723350"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624237"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
 此示例演示如何将您自己的跟踪事件添加到 Windows Communication Foundation (WCF) 将写入到 ETW 中的分析跟踪流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 来与 WCF 服务集成的写入事件。  

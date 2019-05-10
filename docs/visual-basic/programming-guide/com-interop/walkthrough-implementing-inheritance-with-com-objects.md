@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 79d80a1a91911a361bd21f1f3f74424f4f656a18
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022319"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620059"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>演练：使用 COM 对象 (Visual Basic 中) 实现继承
 您可以从 Visual Basic 类进行派生`Public`中 COM 对象，即使这些早期版本的 Visual Basic 中创建的类。 可以重写或重载只是作为属性的属性和方法从 COM 对象继承的类和任何其他基类的方法可以重写或重载。 具有不希望重新编译现有类库时，从 COM 对象的继承非常有用。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098775"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620885"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自动布局概述
 本主题介绍如何编写上面向开发人员的指导原则[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]具有可本地化的应用程序[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在过去，UI 的本地化是一个耗时的过程。 UI 适用于每种语言需要按像素逐一调整。 使用适当的设计和编码标准，今天[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以构建，这样本地化人员较少的调整大小和重新定位的工作量。 种编写可以更轻松地重设大小和重新定位应用程序的方法称为自动布局，可以通过使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序设计。  
@@ -19,15 +19,15 @@ ms.locfileid: "59098775"
 ## <a name="advantages-of-using-automatic-layout"></a>使用自动布局的优点  
  因为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的演示系统，是功能强大且灵活，它提供到可以进行调整以适应不同语言的要求的应用程序中的布局元素的功能。 下面列出自动布局的部分优点。  
 
--   UI 会显示在任何语言中。  
+- UI 会显示在任何语言中。  
 
--   减少了文本转换完后重新调整控件位置和大小的需要。  
+- 减少了文本转换完后重新调整控件位置和大小的需要。  
   
--   减少了重新调整窗口大小的需要。  
+- 减少了重新调整窗口大小的需要。  
 
--   UI 布局中的任何语言正确呈现。  
+- UI 布局中的任何语言正确呈现。  
 
--   本地化过程可缩减为与进行字符串转换差不多。  
+- 本地化过程可缩减为与进行字符串转换差不多。  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>自动布局和控件  

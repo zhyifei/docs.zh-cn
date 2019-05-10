@@ -2,12 +2,12 @@
 title: 授权策略
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332671"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750584"
 ---
 # <a name="authorization-policy"></a>授权策略
 
@@ -18,17 +18,17 @@ ms.locfileid: "56332671"
 
  概括而言，此示例演示：
 
--   如何使用用户名和密码对客户端进行身份验证。
+- 如何使用用户名和密码对客户端进行身份验证。
 
--   如何使用 X.509 证书对客户端进行身份验证。
+- 如何使用 X.509 证书对客户端进行身份验证。
 
--   服务器如何根据自定义 `UsernamePassword` 验证程序验证客户端凭据。
+- 服务器如何根据自定义 `UsernamePassword` 验证程序验证客户端凭据。
 
--   如何使用服务器的 X.509 证书对服务器进行身份验证。
+- 如何使用服务器的 X.509 证书对服务器进行身份验证。
 
--   服务器可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 控制对服务中的某些方法的访问。
+- 服务器可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 控制对服务中的某些方法的访问。
 
--   如何实现 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>。
+- 如何实现 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>。
 
 服务公开两个终结点，以便与使用配置文件 App.config 定义的服务进行通信。每个终结点由地址、绑定和协定组成。 其中一个绑定是使用标准 `wsHttpBinding` 绑定配置的，该标准绑定使用 WS-Security 和客户端用户名身份验证。 另一个绑定是使用标准 `wsHttpBinding` 绑定配置的，该标准绑定使用 WS-Security 和客户端证书身份验证。 [\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)指定要用于服务身份验证的用户凭据。 服务器证书必须包含相同的值`SubjectName`属性设置为`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)。
 
@@ -397,9 +397,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：
 
--   创建服务器证书。
+- 创建服务器证书。
 
-     Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 %SERVER_NAME% 变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 默认值为 localhost。
+    Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 %SERVER_NAME% 变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 默认值为 localhost。
 
     ```
     echo ************
@@ -411,19 +411,19 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   将服务器证书安装到客户端的受信任证书存储区中。
+- 将服务器证书安装到客户端的受信任证书存储区中。
 
-     Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
+    Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   创建客户端证书。
+- 创建客户端证书。
 
-     Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。 %USER_NAME% 变量指定服务器名称。 此值设置为“test1”，因为这是 `IAuthorizationPolicy` 查找的名称。 如果更改 %USER_NAME% 的值，必须更改 `IAuthorizationPolicy.Evaluate` 方法中的对应值。
+    Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。 %USER_NAME% 变量指定服务器名称。 此值设置为“test1”，因为这是 `IAuthorizationPolicy` 查找的名称。 如果更改 %USER_NAME% 的值，必须更改 `IAuthorizationPolicy.Evaluate` 方法中的对应值。
 
-     证书存储在 CurrentUser 存储位置下的 My（个人）存储区中。
+    证书存储在 CurrentUser 存储位置下的 My（个人）存储区中。
 
     ```
     echo ************
@@ -432,9 +432,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   将客户端证书安装到服务器的受信任证书存储区中。
+- 将客户端证书安装到服务器的受信任证书存储区中。
 
-     Setup.bat 批处理文件中的以下行将客户端证书复制到受信任的人的存储区中。 因为服务器系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于受信任的根证书（例如由 Microsoft 颁发的证书），则不需要执行使用客户端证书填充服务器证书存储区这一步骤。
+    Setup.bat 批处理文件中的以下行将客户端证书复制到受信任的人的存储区中。 因为服务器系统不是隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于受信任的根证书（例如由 Microsoft 颁发的证书），则不需要执行使用客户端证书填充服务器证书存储区这一步骤。
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. 从启动 Client.exe *\client\bin*。 客户端活动将显示在客户端控制台应用程序上。
 
-  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例
 
@@ -474,7 +474,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 5. 在服务器上运行`setup.bat service`中使用管理员特权打开 Visual Studio 开发人员命令提示。
 
-   运行`setup.bat`与`service`参数的计算机的完全限定的域名创建一个服务证书，将服务证书导出到名为的文件*Service.cer*。
+    运行`setup.bat`与`service`参数的计算机的完全限定的域名创建一个服务证书，将服务证书导出到名为的文件*Service.cer*。
 
 6. 编辑*Service.exe.config*以反映新的证书名称 (在`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 这是完全限定的域名相同计算机。 也会更改**computername**中\<服务 > /\<baseAddresses > 元素从本地主机到服务计算机的完全限定名称。
 
@@ -482,7 +482,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 8. 在客户端上运行`setup.bat client`中使用管理员特权打开 Visual Studio 开发人员命令提示。
 
-   运行`setup.bat`与`client`参数创建一个名为的客户端证书**test1**并将客户端证书导出到名为的文件*Client.cer*。
+    运行`setup.bat`与`client`参数创建一个名为的客户端证书**test1**并将客户端证书导出到名为的文件*Client.cer*。
 
 9. 在中*Client.exe.config*客户端计算机上文件中，更改要与你的服务的新地址相匹配的终结点的地址值。 执行此操作通过替换**localhost**与服务器的完全限定的域名。
 
@@ -490,17 +490,17 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 11. 在客户端上运行*ImportServiceCert.bat*中使用管理员特权打开 Visual Studio 开发人员命令提示。
 
-   这会将 Service.cer 文件到中导入的服务证书**CurrentUser-TrustedPeople**存储。
+    这会将 Service.cer 文件到中导入的服务证书**CurrentUser-TrustedPeople**存储。
 
 12. 在服务器上，运行*ImportClientCert.bat*中使用管理员特权打开 Visual Studio 开发人员命令提示。
 
-   这会将 Client.cer 文件到中导入客户端证书**LocalMachine-TrustedPeople**存储。
+    这会将 Client.cer 文件到中导入客户端证书**LocalMachine-TrustedPeople**存储。
 
 13. 在服务器计算机上，从命令提示窗口中启动 Service.exe。
 
 14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。
 
-   如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+    如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="clean-up-after-the-sample"></a>在此示例后清理
 

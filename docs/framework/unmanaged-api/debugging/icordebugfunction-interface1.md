@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 550b85474c1ccd7e125549e86df906439caf410e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672986"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621501"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction 接口
 
@@ -45,9 +45,9 @@ ms.locfileid: "61672986"
   
  方法的元数据标记之间的关系`mdMethodDef`，和方法的`ICorDebugFunction`对象所依赖的函数上是否允许编辑并继续：  
   
--   如果该函数不允许编辑并继续，之间存在一对一的关系`ICorDebugFunction`对象和`mdMethodDef`令牌。 也就是说，该函数具有一个`ICorDebugFunction`对象，另一个`mdMethodDef`令牌。  
+- 如果该函数不允许编辑并继续，之间存在一对一的关系`ICorDebugFunction`对象和`mdMethodDef`令牌。 也就是说，该函数具有一个`ICorDebugFunction`对象，另一个`mdMethodDef`令牌。  
   
--   编辑并继续允许对该函数，如果之间存在多对一关系`ICorDebugFunction`对象和`mdMethodDef`令牌。 这就是，该函数可能具有的多个实例`ICorDebugFunction`，一个用于每个版本的函数，但只有一个`mdMethodDef`令牌。  
+- 编辑并继续允许对该函数，如果之间存在多对一关系`ICorDebugFunction`对象和`mdMethodDef`令牌。 这就是，该函数可能具有的多个实例`ICorDebugFunction`，一个用于每个版本的函数，但只有一个`mdMethodDef`令牌。  
   
 > [!NOTE]
 >  此接口不支持跨计算机或跨进程远程调用。  

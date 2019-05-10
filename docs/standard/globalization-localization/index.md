@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683127"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622641"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>对 .NET 应用程序进行全球化和本地化
 
@@ -38,9 +38,9 @@ ms.locfileid: "61683127"
 
 遵循这三个步骤有两大好处：
 
--   让你无需改进为支持单个区域性（如美国英语）而专门设计的应用程序以支持其他区域性。英语，以支持其他区域性。
+- 让你无需改进为支持单个区域性（如美国英语）而专门设计的应用程序以支持其他区域性。英语，以支持其他区域性。
 
--   这会产生更加稳定并有少量 Bug 的本地化应用程序。
+- 这会产生更加稳定并有少量 Bug 的本地化应用程序。
 
 .NET 为开发全球通用和本地化的应用程序提供了广泛支持。 特别是，.NET 类库中许多类成员通过返回可反映当前用户区域性或指定区域性约定的值来帮助全球化。 此外，.NET 支持附属程序集，这可推动本地化应用程序的过程。
 

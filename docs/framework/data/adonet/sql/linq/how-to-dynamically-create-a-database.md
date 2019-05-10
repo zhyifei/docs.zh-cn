@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877261"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623864"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>如何：动态创建数据库
 在 LINQ to SQL 中，对象模型映射到关系数据库。 通过使用基于属性的映射或外部映射文件启用映射，以描述关系数据库的结构。 在两种方案中，存在足够的有关使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法创建新的数据库实例的关系数据库的信息。  
@@ -19,9 +19,9 @@ ms.locfileid: "61877261"
   
  您可以在任意数量的方案中，尤其是在已知数据提供程序（如 Microsoft SQL Server 2008）可用时，使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法。 典型的方案包括：  
   
--   您正在生成自动将自身安装到客户系统上的应用程序。  
+- 您正在生成自动将自身安装到客户系统上的应用程序。  
   
--   您正在生成需要用本地数据库来保存其脱机状态的客户端应用程序。  
+- 您正在生成需要用本地数据库来保存其脱机状态的客户端应用程序。  
   
  您还可以通过使用 .mdf 文件或只使用目录名（取决于您的连接字符串），将 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法与 SQL Server 一起使用。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用连接字符串来定义要创建的数据库和作为数据库创建位置的服务器。  
   

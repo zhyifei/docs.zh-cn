@@ -4,12 +4,12 @@ description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795355"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063302"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在 Azure DevOps Services 中为容器中的 .NET Core 2.0 应用程序创建 CI/CD 管道并部署到 Kubernetes 群集
 
@@ -21,7 +21,7 @@ ms.locfileid: "61795355"
 
 务必以突出显示的两个管道，生成/CI 和发布/CD，通过 Docker 注册表 （如 Docker 中心或 Azure 容器注册表） 中的连接。 Docker 注册表是相比传统的 CI/CD 过程不带 Docker 的主要区别之一。
 
-如所示在图 5 月 13 日，第一阶段是生成/CI 管道。 在 Azure DevOps 服务可以创建生成/CD 管道将编译代码、 创建 Docker 映像，并将它们推送到 Docker 注册表，如 Docker 中心或 Azure 容器注册表。
+如所示在图 5 月 13 日，第一阶段是生成/CI 管道。 在 Azure DevOps 服务可以创建生成/CI 管道，请将编译的代码创建 Docker 映像，并将它们推送到 Docker 注册表，如 Docker 中心或 Azure 容器注册表。
 
 ![Azure DevOps，生成进程任务定义的浏览器视图。](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 

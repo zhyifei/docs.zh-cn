@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86779197004f2a8e84d44aaeff2df2dacb05fb01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007109"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621215"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 
@@ -18,15 +18,15 @@ ms.locfileid: "62007109"
 
 本演练涉及以下任务：
 
--   创建[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]宿主项目。
+- 创建[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]宿主项目。
 
--   添加可本地化的内容。
+- 添加可本地化的内容。
 
--   启用本地化。
+- 启用本地化。
 
--   分配资源标识符。
+- 分配资源标识符。
 
--   使用 LocBaml 工具生成附属程序集。
+- 使用 LocBaml 工具生成附属程序集。
 
 在本演练中所涉及任务的完整代码列表，请参阅[本地化混合应用程序示例](https://go.microsoft.com/fwlink/?LinkID=160015)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "62007109"
 
 你需要以下组件来完成本演练：
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>创建 Windows 窗体宿主项目
 

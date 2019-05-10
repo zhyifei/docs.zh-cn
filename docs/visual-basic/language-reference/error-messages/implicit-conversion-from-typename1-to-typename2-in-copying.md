@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7ac0e7961e1a039e505c85a35c7c31353ed6578e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013824"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661988"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>从隐式转换\<typename1 > 到\<typename2 >' ByRef 参数的值复制\<参数名 > 返回到匹配的参数。
 与调用了过程[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其对应的参数的不同类型的参数。  

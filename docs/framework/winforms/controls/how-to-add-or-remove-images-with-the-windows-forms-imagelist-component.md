@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072969"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624026"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>如何：使用 Windows 窗体 ImageList 组件添加或移除图像
 Windows 窗体<xref:System.Windows.Forms.ImageList>组件通常用图像填充之前与控件关联。 但是，可以添加和删除与控件关联的图像列表后的图像。  
@@ -28,7 +28,7 @@ Windows 窗体<xref:System.Windows.Forms.ImageList>组件通常用图像填充�
   
 ### <a name="to-add-images-programmatically"></a>若要以编程方式添加映像  
   
--   使用<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>图像列表的方法<xref:System.Windows.Forms.ImageList.Images%2A>属性。  
+- 使用<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>图像列表的方法<xref:System.Windows.Forms.ImageList.Images%2A>属性。  
   
      在下面的代码示例中，将路径设置的映像的位置是**我的文档**文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机将包含此文件夹。 选择此位置还使得用户可以具有最少的系统的访问级别更多安全地运行应用程序。 下面的代码示例，则需要具有的窗体<xref:System.Windows.Forms.ImageList>已添加的控件。  
   
@@ -76,7 +76,7 @@ Windows 窗体<xref:System.Windows.Forms.ImageList>组件通常用图像填充�
   
 ### <a name="to-add-images-with-a-key-value"></a>若要添加图像与密钥值。  
   
--   使用之一<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>方法的图像列表的<xref:System.Windows.Forms.ImageList.Images%2A>采用键值的属性。  
+- 使用之一<xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>方法的图像列表的<xref:System.Windows.Forms.ImageList.Images%2A>采用键值的属性。  
   
      在下面的代码示例中，将路径设置的映像的位置是**我的文档**文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机将包含此文件夹。 选择此位置还使得用户可以具有最少的系统的访问级别更多安全地运行应用程序。 下面的代码示例，则需要具有的窗体<xref:System.Windows.Forms.ImageList>已添加的控件。  
   
@@ -107,7 +107,7 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>若要以编程方式删除所有映像  
   
--   使用<xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>方法来删除单一映像  
+- 使用<xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>方法来删除单一映像  
   
      -  
   
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>删除密钥的图像  
   
--   使用<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>方法删除其密钥的单一映像。  
+- 使用<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>方法删除其密钥的单一映像。  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

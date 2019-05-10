@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd7bf92750c6e314a5c9105bb961bf68b68182cb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773354"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063827"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>如何：创建和运行长期运行的工作流
 Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数据库的空闲工作流运行时的功能。 中的步骤[如何：运行工作流](how-to-run-a-workflow.md)演示工作流承载的控制台应用程序的基础知识。 示例演示了启动工作流、工作流生命周期处理程序和恢复书签。 为了有效演示工作流持久性，需要一个支持启动和恢复多个工作流实例的更为复杂的工作流主机。 教程中此步骤演示了如何创建 Windows 窗体主机应用程序，此 Windows 窗体主机应用程序支持启动和恢复多个工作流实例、工作流持久性，并为高级功能（如在后续教程步骤中演示的跟踪和版本控制）提供基础。  
@@ -84,7 +84,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
 3. 在窗体上配置以下属性。  
   
-    |属性|“值”|  
+    |属性|值|  
     |--------------|-----------|  
     |FormBorderStyle|FixedSingle|  
     |MaximizeBox|False|  
@@ -92,7 +92,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
 4. 按照指定顺序将以下控件添加到窗体，并根据指示配置这些属性。  
   
-    |控件|属性：“值”|  
+    |控件|属性：值|  
     |-------------|---------------------|  
     |**Button**|姓名:NewGame<br /><br /> 位置：13, 13<br /><br /> 字号:75, 23<br /><br /> 文本：新游戏|  
     |**标签**|位置：94, 18<br /><br /> 文本：猜测一个数字，从 1 到|  
@@ -105,7 +105,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     > [!NOTE]
     >  在添加以下控件时，请将其放入 GroupBox。  
   
-    |控件|属性：“值”|  
+    |控件|属性：值|  
     |-------------|---------------------|  
     |**标签**|位置：7, 20<br /><br /> 文本：工作流实例 ID|  
     |**组合框**|姓名:InstanceId<br /><br /> DropDownStyle:DropDownList<br /><br /> 位置：121, 17<br /><br /> 字号:227, 21|  
@@ -119,7 +119,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
  以下示例展示了完成的窗体。  
   
- ![WF45 入门教程工作流主机窗体](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![Windows Workflow Foundation 工作流主机窗体的屏幕截图。](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)  
   
 ### <a name="BKMK_AddHelperMethods"></a> 若要添加的属性和帮助器方法的窗体  
  本节的步骤将属性和帮助器添加至窗体类，此窗体类将配置窗体的 UI，以支持运行和恢复数字猜测工作流。  

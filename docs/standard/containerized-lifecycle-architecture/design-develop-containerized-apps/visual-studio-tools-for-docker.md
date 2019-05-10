@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664356"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上的 Visual Studio 2017 中使用 Docker 工具
 
@@ -79,7 +79,7 @@ ms.locfileid: "61795539"
 | 自动在项目负载上拉取所需的 Docker 图像 | On | Docker Compose | 为了加快运行速度加载项目时，Visual Studio 会启动 Docker pull 操作在后台，以便准备好运行你的代码时，该图像已下载或下载过程中。 如果只是加载项目，并浏览代码，您可以关闭此以避免下载不需要的容器映像。 |
 | 在后台自动启动容器 | On | Docker Compose | 再次以提高性能，Visual Studio 创建一个容器使用卷装载供当生成并运行你的容器。 如果你想要控制创建容器时，关闭此功能。 |
 | 在解决方案上的终止容器自动关闭 | On | Docker Compose | 关闭此功能如果您想要为解决方案之后关闭解决方案或关闭 Visual Studio 继续运行的容器。 |
-| 不提示信任 localhost SSL 证书 | Off | ASP.NET Core 2.1 项目 | 如果不信任 localhost SSL 证书，则 Visual Studio 将提示每次运行你的项目，除非选中此复选框。 |
+| 不提示信任 localhost SSL 证书 | Off | ASP.NET Core 2.2 项目 | 如果不信任 localhost SSL 证书，则 Visual Studio 将提示每次运行你的项目，除非选中此复选框。 |
 
 > [!WARNING]
 > 如果 localhost SSL 证书不受信任，并选中复选框后，若要禁止显示提示，然后 HTTPS web 请求可能会在你的应用程序或服务中的运行时失败。 在这种情况下，取消选中**不会提示**复选框，会运行你的项目，并指示在提示符下的信任。

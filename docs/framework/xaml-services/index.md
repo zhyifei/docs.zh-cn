@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007417"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663238"
 ---
 # <a name="xaml-services"></a>XAML 服务
 本主题介绍的技术一名为.NET Framework XAML 服务的功能。 服务和 Api 所述的大多数都位于 System.Xaml，它是一个程序集随程序集[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET 核心程序集。 服务包括阅读器和编写器，架构类和架构支持，工厂类、 XAML 语言内部函数支持和其他 XAML 语言功能的特性化。  

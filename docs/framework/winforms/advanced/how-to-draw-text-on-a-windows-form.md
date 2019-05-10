@@ -9,12 +9,12 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing text
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dc99a863765cd617c2ab4a636286f42f5e8daf79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004076"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626184"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>如何：在 Windows 窗体上绘制文本
 下面的代码示例演示如何使用<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>窗体上绘制文本。 或者，可以使用<xref:System.Windows.Forms.TextRenderer>窗体上绘制文本。 有关详细信息，请参阅[如何：用 GDI 绘制文本](how-to-draw-text-with-gdi.md)。  

@@ -2,12 +2,12 @@
 title: 不同的形状 (Visual Basic 中) 中投影 XML
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e5639948cbc264a4b17cffe80de70b011e4d2a70
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766579"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666125"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>不同的形状 (Visual Basic 中) 中投影 XML
 本主题演示对形状不同于源 XML 的 XML 进行投影的示例。  

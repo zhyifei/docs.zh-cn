@@ -2,12 +2,12 @@
 title: 程序工作流
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2ef23f61e67e0b4c08f12322bac429762205ef8d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780676"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622844"
 ---
 # <a name="procedural-workflows"></a>程序工作流
 程序工作流使用的流控制方法与程序语言中使用的流控制方法类似。 这些构造包括 `While` 和 `If`。 使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 等其他流控制活动，可以随意组合这些工作流。  

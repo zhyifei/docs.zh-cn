@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747534"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665931"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建基于 Windows 的可访问应用程序
 创建具有辅助功能的应用程序具有重要的商业意义。 很多政府都有针对软件购买的辅助功能法规。 Certified for Windows 徽标包括辅助功能需求。 据估计，仅美国就有 3 千万居民（其中很多为潜在客户）受到软件辅助功能的影响。  
   
  此演练将针对 Certified for Windows 徽标的 5 项辅助功能需求。 根据这些要求，具有辅助功能的应用程序将：  
   
--   支持控件面板大小、颜色、字体和输入设置。 当用户更改控件面板设置时，菜单栏、标题栏、边框和状态栏都将调整大小。 此应用程序中不需要对控件或代码进行任何其他更改。  
+- 支持控件面板大小、颜色、字体和输入设置。 当用户更改控件面板设置时，菜单栏、标题栏、边框和状态栏都将调整大小。 此应用程序中不需要对控件或代码进行任何其他更改。  
   
--   支持高对比度模式。  
+- 支持高对比度模式。  
   
--   提供对所有功能的已记录的键盘访问。  
+- 提供对所有功能的已记录的键盘访问。  
   
--   以可视方式和以编程方式公开键盘焦点的位置。  
+- 以可视方式和以编程方式公开键盘焦点的位置。  
   
--   避免仅靠声音传达重要信息。  
+- 避免仅靠声音传达重要信息。  
   
  有关详细信息，请参阅[用于设计支持辅助功能的应用程序的资源](/visualstudio/ide/reference/resources-for-designing-accessible-applications)。  
   
@@ -41,31 +41,31 @@ ms.locfileid: "61747534"
   
 #### <a name="to-begin-making-the-application"></a>开始生成应用程序  
   
--   在 Visual Basic 或视觉对象中创建新的 Windows 应用程序C#。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）  
+- 在 Visual Basic 或视觉对象中创建新的 Windows 应用程序C#。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）  
   
 ## <a name="adding-the-controls-to-the-form"></a>将控件添加到窗体  
  将控件添加到窗体时，请牢记以下指南以生成具有辅助功能的应用程序：  
   
--   设置 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 属性。 在此示例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的默认设置已经足够。 有关辅助功能属性的详细信息，请参阅[为 Windows 窗体上的控件提供辅助功能信息](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
+- 设置 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 属性。 在此示例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的默认设置已经足够。 有关辅助功能属性的详细信息，请参阅[为 Windows 窗体上的控件提供辅助功能信息](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
   
--   将字体大小设置为 10 号或更大。  
+- 将字体大小设置为 10 号或更大。  
   
     > [!NOTE]
     >  如果在启动时将窗体的字体大小设置为 10，则随后添加到窗体的所有控件的字体大小均为 10。  
   
--   确保任何描述 TextBox 控件的 Label 控件均按 Tab 顺序紧排在相应的 TextBox 控件之前。  
+- 确保任何描述 TextBox 控件的 Label 控件均按 Tab 顺序紧排在相应的 TextBox 控件之前。  
   
--   添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>用户可能想要导航到任何控件的属性。  
+- 添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>用户可能想要导航到任何控件的属性。  
   
--   添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>的标签位于用户可能想要导航到的控件之前的属性。 将标签的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`，以便在用户按下访问键时将焦点设置到按 Tab 键顺序的下一控件。  
+- 添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>的标签位于用户可能想要导航到的控件之前的属性。 将标签的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`，以便在用户按下访问键时将焦点设置到按 Tab 键顺序的下一控件。  
   
--   将访问键添加到所有菜单项。  
+- 将访问键添加到所有菜单项。  
   
 #### <a name="to-make-your-windows-application-accessible"></a>使 Windows 应用程序具有辅助功能  
   
--   将控件添加到窗体并如下所述设置属性。 有关如何在窗体上排列控件的模型，请查看表结尾处的图片。  
+- 将控件添加到窗体并如下所述设置属性。 有关如何在窗体上排列控件的模型，请查看表结尾处的图片。  
   
-    |对象|属性|“值”|  
+    |对象|属性|值|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|订购窗体|  
     ||AccessibleName|订购窗体|  
@@ -137,20 +137,20 @@ ms.locfileid: "61747534"
     |MenuItem|名称|exitApp|  
     ||Text|退出(&X)|
     
-      你的窗体将类似于下图：
+      Your form will look something like the following image:
     
-      ![使用名称文本框中，以及大小和浇头选择比萨订购窗体。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>支持高对比度模式  
  高对比度模式是一种 Windows 系统设置，它通过使用有益于视力受损用户的对比颜色和字体大小提高可读性。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>提供属性以确定是否设置高对比度模式。  
   
  如果 SystemInformation.HighContrast 为`true`，则应用程序应：  
   
--   显示使用系统配色方案的所有用户界面元素  
+- 显示使用系统配色方案的所有用户界面元素  
   
--   通过可视提示或声音传递任何通过颜色传递的信息。 例如，如果特定列表项使用红色字体突出显示，则还可为字体加粗，以便用户得到突出显示项的非颜色提示。  
+- 通过可视提示或声音传递任何通过颜色传递的信息。 例如，如果特定列表项使用红色字体突出显示，则还可为字体加粗，以便用户得到突出显示项的非颜色提示。  
   
--   忽略文本之后的任何图像或图案  
+- 忽略文本之后的任何图像或图案  
   
  应用程序应在启动时检查 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的设置，并响应系统事件 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>。 每当 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的值更改时，都会引发 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。  
   

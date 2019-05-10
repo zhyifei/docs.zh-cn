@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a59faf1b6f845858e36efcabdf0758e41ad75dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935234"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619737"
 ---
 # <a name="bad-file-mode"></a>错误的文件模式
 在操作文件内容中使用的语句必须是适用于在其中打开该文件的模式。 可能的原因包括：  

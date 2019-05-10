@@ -2,12 +2,12 @@
 title: LINQ 消息查询相关性
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e979e6539d94d15b74f1da14f7082431ed2ff8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004921"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622716"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ 消息查询相关性
 此示例演示如何使用一个与系统提供的 <xref:System.ServiceModel.Dispatcher.MessageQuery> 相对的自定义 <xref:System.ServiceModel.XPathMessageQuery> 实现，执行基于内容的相关性。  
@@ -28,11 +28,11 @@ ms.locfileid: "62004921"
   
 2. 在添加 URL ACL 后，请使用下列步骤。  
   
-    1.  生成解决方案。  
+    1. 生成解决方案。  
   
-    2.  右键单击解决方案并选择设置多个启动项目**设置启动项目**。 添加**服务**并**客户端**（按此顺序） 为多个启动项目。  
+    2. 右键单击解决方案并选择设置多个启动项目**设置启动项目**。 添加**服务**并**客户端**（按此顺序） 为多个启动项目。  
   
-    3.  运行该应用程序。 客户端控制台演示工作流如何发送订单、接收订购单 ID 以及随后确认订单。 服务窗口将显示正在处理的请求。  
+    3. 运行该应用程序。 客户端控制台演示工作流如何发送订单、接收订购单 ID 以及随后确认订单。 服务窗口将显示正在处理的请求。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

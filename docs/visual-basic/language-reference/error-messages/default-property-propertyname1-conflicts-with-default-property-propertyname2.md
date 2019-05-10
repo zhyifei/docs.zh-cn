@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c964003217e7b96cf25288e2ae6ae6a2fb07a6c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651382"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>默认属性\<propertyname1 > 与默认属性冲突\<propertyname2 > 中\<类名 >'，因此应声明为 Shadows
 使用与基类中定义的属性相同的名称声明属性。 在这种情况下，在此类的属性应隐藏基类属性。  

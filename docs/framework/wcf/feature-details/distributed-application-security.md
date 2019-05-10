@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856526"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626974"
 ---
 # <a name="distributed-application-security"></a>分布式应用程序安全
 Windows Communication Foundation (WCF) 安全分为三个主要功能区域： 传输安全、 访问控制和审核。 传输安全提供完整性、保密性和身份验证。 传输安全由传送安全、消息安全或 `TransportWithMessageCredential` 实现。  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) 安全分为三个主要功能区域： �
 ## <a name="transfer-security-scenarios"></a>传输安全方案  
  使用 WCF 传输安全的常见方案包括：  
   
--   使用 Windows 确保传输安全。 WCF 客户端和服务部署在 Windows 域 （或 Windows 林） 中。 消息包含个人数据，因此要求客户端和服务相互进行身份验证，要求实现消息完整性和消息保密性。 此外，还需要有已发生特定事务的证明，例如，消息的接收方应记录签名信息。  
+- 使用 Windows 确保传输安全。 WCF 客户端和服务部署在 Windows 域 （或 Windows 林） 中。 消息包含个人数据，因此要求客户端和服务相互进行身份验证，要求实现消息完整性和消息保密性。 此外，还需要有已发生特定事务的证明，例如，消息的接收方应记录签名信息。  
   
--   使用 `UserName` 和 HTTPS 确保传输安全。 WCF 客户端和服务需要一些开发，以便通过 Internet 工作。 客户端凭据根据数据库（其中的内容为用户名/密码对）进行身份验证。 服务是用受信任的安全套接字层 (SSL) 证书部署在一个 HTTPS 地址的。 由于消息是通过 Internet 传输的，因此，客户端和服务需要相互进行身份验证，并且必须在传输过程中保持消息的保密性和完整性。  
+- 使用 `UserName` 和 HTTPS 确保传输安全。 WCF 客户端和服务需要一些开发，以便通过 Internet 工作。 客户端凭据根据数据库（其中的内容为用户名/密码对）进行身份验证。 服务是用受信任的安全套接字层 (SSL) 证书部署在一个 HTTPS 地址的。 由于消息是通过 Internet 传输的，因此，客户端和服务需要相互进行身份验证，并且必须在传输过程中保持消息的保密性和完整性。  
   
--   使用证书确保传输安全。 WCF 客户端和服务需要一些开发，以便通过公共 internet 工作。 客户端和服务都具有可用于确保消息安全的证书。 客户端和服务通过 Internet 进行相互通信，执行要求消息完整性、保密性和相互身份验证的重要事务。  
+- 使用证书确保传输安全。 WCF 客户端和服务需要一些开发，以便通过公共 internet 工作。 客户端和服务都具有可用于确保消息安全的证书。 客户端和服务通过 Internet 进行相互通信，执行要求消息完整性、保密性和相互身份验证的重要事务。  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>完整性、保密性和身份验证  
  三项功能 — 完整性、保密性和身份验证 — 合称为传输安全。 传输安全提供的这些功能，有助于减轻对分布式应用程序的威胁。 下表简要介绍构成传输安全的三项功能。  

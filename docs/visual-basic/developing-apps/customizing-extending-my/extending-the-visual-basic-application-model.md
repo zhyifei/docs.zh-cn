@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602451"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469486"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>扩展 Visual Basic 应用程序模型
 您可以将功能添加到应用程序模型中通过重写`Overridable`的成员<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类。 此技术，可自定义应用程序模型的行为并添加对你自己的方法的调用，如应用程序启动和关闭。  
@@ -76,10 +76,10 @@ ms.locfileid: "64602451"
   
  如果应用程序是单实例应用程序，并且已在运行该应用程序，应用程序的后续实例调用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>方法上的原始实例应用程序，然后退出。  
  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>构造函数调用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性来确定要用于应用程序的窗体的文本呈现引擎。 默认情况下<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性返回`False`，这是中的默认值，该值指示要使用的 GDI 文本呈现引擎， [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]。 您可以重写<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性以返回`True`，指示要使用的 GDI + 文本呈现引擎，这是在 Visual Basic.NET 2002年和 Visual Basic.NET 2003年默认设置。  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>构造函数调用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性来确定要用于应用程序的窗体的文本呈现引擎。 默认情况下<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性返回`False`，指示使用的 GDI 文本呈现引擎，这是 Visual Basic 2005 和更高版本中的默认值。 您可以重写<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>属性以返回`True`，指示要使用的 GDI + 文本呈现引擎，这是在 Visual Basic.NET 2002年和 Visual Basic.NET 2003年默认设置。  
   
 ## <a name="configuring-the-application"></a>配置应用程序  
- Visual Basic 应用程序模型的一部分<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering>类提供了配置应用程序的受保护的属性。 应在实现类的构造函数中设置这些属性。  
+ Visual Basic 应用程序模型的一部分<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类提供了配置应用程序的受保护的属性。 应在实现类的构造函数中设置这些属性。  
   
  在默认 Windows 窗体项目中，**项目设计器**创建代码以设置与设计器设置的属性。 仅当启动应用程序; 时，才使用属性应用程序启动后对它们进行设置都不起作用。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648258"
 ---
 # <a name="how-to-obtain-font-metrics"></a>如何：获取字体规格
 <xref:System.Drawing.FontFamily>类提供了检索特定系列/样式组合的各种度量值的以下方法：  

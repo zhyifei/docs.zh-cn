@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 29422ad384240b017b279795d07e3c8100fae493
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c091d9473bb7c3540453cb5763052f45f61b61f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011055"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624009"
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>如何：向 Windows 窗体应用程序添加 Web 浏览器功能
 使用 <xref:System.Windows.Forms.WebBrowser> 控件，可将 Web 浏览器功能添加到应用程序中。 默认情况下，该控件的工作方式类似于 Web 浏览器。 通过设置 <xref:System.Windows.Forms.WebBrowser.Url%2A> 属性加载初始 URL 后，可以通过单击超链接或通过使用键盘快捷方式在导航历史记录中后移或前移，从而进行导航。 默认情况下，可以通过右键单击快捷菜单来访问其他浏览器功能。 还可通过将新文档置于控件上来打开它们。 <xref:System.Windows.Forms.WebBrowser> 控件还具有几个属性、方法和事件，可将它们可用于实现与 Internet Explorer 中类似的用户界面功能。  

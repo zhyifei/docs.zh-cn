@@ -2,12 +2,12 @@
 title: 与 ASP.NET Web 服务的互操作性
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16e22a091b88d12abccb063d2407db82460458c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638600"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>与 ASP.NET Web 服务的互操作性
 之间的互操作性[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服务和 Windows Communication Foundation (WCF) Web 服务可以通过确保服务实现使用这两种技术符合 WS-基本配置文件 1.1 规范。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务符合 WS-Basic Profile 1.1 是可互操作与 WCF 客户端通过使用 WCF 系统提供的绑定， <xref:System.ServiceModel.BasicHttpBinding>。  

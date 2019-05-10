@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007361"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621360"
 ---
 # <a name="the-ink-threading-model"></a>墨迹线程处理模型
 Tablet PC 上的优势之一是墨迹的，它极为相似书写一样使用普通的笔和纸。  若要实现此目的，触笔收集输入的数据以高得多的速度比鼠标将手写内容呈现为用户写入。  应用程序的用户界面 (UI) 线程是不够的笔数据和呈现墨迹收集，因为它可能被阻止。  若要解决此问题，问题[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序使用两个其他线程，当用户将墨迹。  

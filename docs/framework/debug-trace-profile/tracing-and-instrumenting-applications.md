@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614230"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469536"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  可通过实现自己的侦听器生成自定义结果。 例如，自定义跟踪侦听器可能将消息显示给消息框，或连接到数据库以将消息添加到表中。 所有自定义侦听器都应支持上述 6 种方法。 有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。  
   
 > [!NOTE]
->  在 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 中，“Debug.Write”、“Debug.WriteIf”、“Debug.WriteLine”和“Debug.WriteLineIf”方法已代替了 Visual Basic 早期版本中提供的“Debug.Print”方法。  
+>  在 Visual Basic 中， **Debug.Write**， **Debug.WriteIf**， **Debug.WriteLine**，以及**Debug.WriteLineIf**方法已代替**Debug.Print**了早期版本的 Visual Basic 中提供的方法。  
   
  “Write”和“WriteLine”方法始终写入指定的文本。 “Assert”、“WriteIf”和“WriteLineIf”需要布尔型自变量，该自变量控制它们是否写入指定的文本；只有在表达式为“true”（对于“WriteIf”和“WriteLineIf”），或“false”（对于“Assert”）时，它们才会写入指定的文本。 “Fail”方法始终写入指定的文本。 有关详细信息，请参阅[如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)和.NET Framework 参考。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937823"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624196"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：创建专用的字体集合
 <xref:System.Drawing.Text.PrivateFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 可以使用<xref:System.Drawing.Text.PrivateFontCollection>对象来维护一组专门为应用程序的字体。 专用字体集合可以包含已安装的系统字体，以及在计算机尚未安装的字体。 若要将字体文件添加到专用字体集合，调用<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法的<xref:System.Drawing.Text.PrivateFontCollection>对象。  

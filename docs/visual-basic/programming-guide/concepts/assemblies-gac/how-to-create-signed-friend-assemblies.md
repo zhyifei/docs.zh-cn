@@ -2,12 +2,12 @@
 title: 如何：创建签名的友元程序集 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3267df18cf5a7be2ceb5867b16cbb58bbf9010ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022267"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624783"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何：创建签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  

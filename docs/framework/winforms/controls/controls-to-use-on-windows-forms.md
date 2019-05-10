@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011745"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469512"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows 窗体上使用的控件
 下面按字母顺序列出了可在 Windows 窗体上使用的控件和组件。 除本节介绍的 Windows 窗体控件外，还可向 Windows 窗体添加 ActiveX 控件和自定义控件。 如果在此处列出的控件中未找到所需控件，还可创建自己的控件。 有关详细信息，请参阅[设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)。 有关选择所需控件的详细信息，请参阅[按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)。  
@@ -229,7 +229,7 @@ ms.locfileid: "62011745"
  提供一些链接，这些链接指向分步说明主题、有关创建何种控件的建议和与创建自己的控件相关的其他信息。  
   
  [不同语言和库中的控件和可编程对象的比较](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- 提供一个表，该表将 Visual Basic 6.0 中的控件映射到 [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] 中的相应控件。 请注意，控件现在是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的类。  
+ 提供 Visual Basic 6.0 中的控件映射到相应的控件在 Visual Basic 中的表。 请注意，控件现在是.NET Framework 中的类。  
   
  [如何：向 Windows 窗体添加 ActiveX 控件](how-to-add-activex-controls-to-windows-forms.md)  
  介绍在 Windows 窗体中如何使用 ActiveX 控件。

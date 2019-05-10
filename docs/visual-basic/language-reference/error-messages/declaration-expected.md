@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619532"
 ---
 # <a name="declaration-expected"></a>需要声明
 非声明语句，如分配或循环语句发生在外的任何过程。 只有声明允许外部过程。  
@@ -23,11 +23,11 @@ ms.locfileid: "61803826"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   将非声明语句移动到过程的正文。  
+- 将非声明语句移动到过程的正文。  
   
--   开始使用适当的声明关键字声明。  
+- 开始使用适当的声明关键字声明。  
   
--   请确保声明关键字没有拼写错误。  
+- 请确保声明关键字没有拼写错误。  
   
 ## <a name="see-also"></a>请参阅
 

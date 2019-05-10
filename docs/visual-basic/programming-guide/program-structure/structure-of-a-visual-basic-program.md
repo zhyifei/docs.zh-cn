@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f4136a2c8fb7ca98ff22aa6a5fc676f30cd1c5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839393"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624302"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
 从标准构建基块是构建 Visual Basic 程序。 一个*解决方案*由一个或多个项目组成。 一个*项目*又可以包含一个或多个程序集。 每个*程序集*从一个或多个源代码文件编译。 一个*源文件*提供定义和实现的类、 结构、 模块和接口，它们最终包含了所有代码。  
@@ -47,30 +47,30 @@ ms.locfileid: "61839393"
 ## <a name="namespace-level-programming-elements"></a>Namespace 级别的编程元素  
  类、 结构和模块包含在源文件中的所有代码。 它们是*命名空间级别*元素可出现在命名空间或文件级别的源的文件。 它们具有所有其他编程元素的声明。 接口，它们定义元素签名，但不提供实现，也出现在模块级别。 模块级别元素的详细信息，请参阅：  
   
--   [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  在命名空间级别的数据元素是枚举和委托。  
   
 ## <a name="module-level-programming-elements"></a>模块级的编程元素  
  过程、 运算符、 属性和事件是可以保存可执行代码 （在运行时执行操作的语句） 的唯一编程元素。 它们是*模块级*的程序元素。 过程级别元素的详细信息，请参阅：  
   
--   [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  在模块级别的数据元素是变量、 常量、 枚举和委托。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "61839393"
 ## <a name="the-main-procedure"></a>主要过程  
  `Main`过程是用于运行时应用程序已加载的第一个代码。 `Main` 可作为起始点和应用程序的总体控制。 有四种`Main`:  
   
--   `Sub Main()`  
+- `Sub Main()`  
   
--   `Sub Main(ByVal cmdArgs() As String)`  
+- `Sub Main(ByVal cmdArgs() As String)`  
   
--   `Function Main() As Integer`  
+- `Function Main() As Integer`  
   
--   `Function Main(ByVal cmdArgs() As String) As Integer`  
+- `Function Main(ByVal cmdArgs() As String) As Integer`  
   
  此过程的最常见类型是`Sub Main()`。 有关详细信息，请参阅[在 Visual Basic 中的 Main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)。  
   
