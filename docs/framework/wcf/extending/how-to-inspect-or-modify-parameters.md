@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 2e294b7970a58fad9385802470a514e5a9240495
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15de504a27180c19d3450f7e4ddd490999b916
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766853"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651121"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>如何：检查或修改参数
 您可以检查或修改通过实现 Windows Communication Foundation (WCF) 客户端对象或 WCF 服务上的单个操作的传入或传出消息<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>接口并将其插入到客户端或服务运行时。 通常，操作行为用于为单个操作添加参数检查器；其他行为可以用于在更大范围内提供对运行库的方便访问。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)并[扩展调度程序](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  

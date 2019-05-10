@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12c73d7344bba3ca36169c2f46134876295dee00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941344"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651749"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>如何：冻结 Windows 窗体 DataGridView 控件中的列
 用户查看 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中显示的数据时，有时需要频繁地引用单个列或列集。 例如，显示包含许多列的客户信息表时，使其他列可在可使区域外滚动的同时始终显示客户姓名非常有用。  

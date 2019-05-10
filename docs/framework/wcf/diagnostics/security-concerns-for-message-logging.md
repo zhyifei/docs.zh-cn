@@ -2,12 +2,12 @@
 title: 消息日志记录的安全问题
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e1503249d5fd33e320ccb6642eb6e97c3029ba85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651830"
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  

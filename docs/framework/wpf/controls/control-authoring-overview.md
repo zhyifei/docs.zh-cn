@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f36ef46bcca2cc99261660143507bac633ebdd3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017678"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651444"
 ---
 # <a name="control-authoring-overview"></a>控件创作概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控件模型的扩展性极大地减少了创建新控件的需要。 但在某些情况下，仍可能需要创建自定义控件。 本主题讨论可最大限度减少在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中创建自定义控件以及其他控件创作模型的需要的功能。 本主题还演示如何创建新控件。  
@@ -22,18 +22,18 @@ ms.locfileid: "62017678"
 ## <a name="alternatives-to-writing-a-new-control"></a>编写新控件的替代方法  
  以前，如果要通过现有控件获取自定义体验，只能更改控件的标准属性，例如背景色、边框宽度和字号。 如果希望在这些预定义参数的基础之上扩展控件的外观或行为，则需要创建新控件，常用的方法是继承现有控件并重写负责绘制该控件的方法。  虽然这仍是一种可选方法，但也可以利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的丰富内容模型、样式、模板和触发器来自定义现有的控件。 下表提供了一些示例，演示如何在不创建新控件的情况下使用这些功能来实现一致的自定义体验。  
   
--   **丰富内容。** 很多标准 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件都支持丰富内容。 例如，内容属性的<xref:System.Windows.Controls.Button>属于类型<xref:System.Object>，因此理论上的任何内容都可以显示在<xref:System.Windows.Controls.Button>。  若要使按钮显示图像和文本，可以添加的图像和一个<xref:System.Windows.Controls.TextBlock>到<xref:System.Windows.Controls.StackPanel>，并将分配<xref:System.Windows.Controls.StackPanel>到<xref:System.Windows.Controls.ContentControl.Content%2A>属性。 由于这些控件可以显示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 视觉元素和任意数据，因此，降低了创建新控件或修改现有控件来支持复杂可视化效果的需求。 详细了解的内容模型<xref:System.Windows.Controls.Button>和其他内容中的模型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，请参阅[WPF 内容模型](wpf-content-model.md)。  
+- **丰富内容。** 很多标准 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件都支持丰富内容。 例如，内容属性的<xref:System.Windows.Controls.Button>属于类型<xref:System.Object>，因此理论上的任何内容都可以显示在<xref:System.Windows.Controls.Button>。  若要使按钮显示图像和文本，可以添加的图像和一个<xref:System.Windows.Controls.TextBlock>到<xref:System.Windows.Controls.StackPanel>，并将分配<xref:System.Windows.Controls.StackPanel>到<xref:System.Windows.Controls.ContentControl.Content%2A>属性。 由于这些控件可以显示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 视觉元素和任意数据，因此，降低了创建新控件或修改现有控件来支持复杂可视化效果的需求。 详细了解的内容模型<xref:System.Windows.Controls.Button>和其他内容中的模型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，请参阅[WPF 内容模型](wpf-content-model.md)。  
   
--   **样式。** 一个<xref:System.Windows.Style>是表示控件的属性的值的集合。 使用样式可创建所需控件外观和行为的可重用表示形式，而无需编写新控件。 例如，假设您希望的所有你<xref:System.Windows.Controls.TextBlock>控件具有红色 Arial 字体，并且字号为 14。 可以创建一个样式作为资源，并相应设置适当属性。 然后每个<xref:System.Windows.Controls.TextBlock>，您将添加到你的应用程序将具有相同的外观。  
+- **样式。** 一个<xref:System.Windows.Style>是表示控件的属性的值的集合。 使用样式可创建所需控件外观和行为的可重用表示形式，而无需编写新控件。 例如，假设您希望的所有你<xref:System.Windows.Controls.TextBlock>控件具有红色 Arial 字体，并且字号为 14。 可以创建一个样式作为资源，并相应设置适当属性。 然后每个<xref:System.Windows.Controls.TextBlock>，您将添加到你的应用程序将具有相同的外观。  
   
--   **数据模板。** 一个<xref:System.Windows.DataTemplate>，可以自定义控件上显示数据的方式。 例如，<xref:System.Windows.DataTemplate>可用于指定数据中的显示方式<xref:System.Windows.Controls.ListBox>。  有关这种情况的示例，请参阅[数据模块化概述](../data/data-templating-overview.md)。  除了自定义的数据，外观<xref:System.Windows.DataTemplate>可以包含 UI 元素，后者可提供很大的灵活性在自定义 Ui。  例如，通过使用<xref:System.Windows.DataTemplate>，可以创建<xref:System.Windows.Controls.ComboBox>中的每个项包含一个复选框。  
+- **数据模板。** 一个<xref:System.Windows.DataTemplate>，可以自定义控件上显示数据的方式。 例如，<xref:System.Windows.DataTemplate>可用于指定数据中的显示方式<xref:System.Windows.Controls.ListBox>。  有关这种情况的示例，请参阅[数据模块化概述](../data/data-templating-overview.md)。  除了自定义的数据，外观<xref:System.Windows.DataTemplate>可以包含 UI 元素，后者可提供很大的灵活性在自定义 Ui。  例如，通过使用<xref:System.Windows.DataTemplate>，可以创建<xref:System.Windows.Controls.ComboBox>中的每个项包含一个复选框。  
   
--   **控件模板。** 中的许多控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Controls.ControlTemplate>来定义控件的结构和外观，将控件的外观与控件的功能分隔开来。 您可以极大地更改控件的外观，通过重新定义其<xref:System.Windows.Controls.ControlTemplate>。  例如，假设需要一个看起来像交通信号灯的控件。 此控件具有简单的用户界面和功能。  该控件有三个圆圈，一次只有一个圆圈亮起。 经过考虑之后，您可能会发现<xref:System.Windows.Controls.RadioButton>提供的功能只选择一个时间，但的默认外观<xref:System.Windows.Controls.RadioButton>完全不像交通信号灯上的灯。  因为<xref:System.Windows.Controls.RadioButton>使用的控件模板来定义其外观，很容易重新定义<xref:System.Windows.Controls.ControlTemplate>，使其适合的控件，要求使用单选按钮来制作交通信号灯。  
+- **控件模板。** 中的许多控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Controls.ControlTemplate>来定义控件的结构和外观，将控件的外观与控件的功能分隔开来。 您可以极大地更改控件的外观，通过重新定义其<xref:System.Windows.Controls.ControlTemplate>。  例如，假设需要一个看起来像交通信号灯的控件。 此控件具有简单的用户界面和功能。  该控件有三个圆圈，一次只有一个圆圈亮起。 经过考虑之后，您可能会发现<xref:System.Windows.Controls.RadioButton>提供的功能只选择一个时间，但的默认外观<xref:System.Windows.Controls.RadioButton>完全不像交通信号灯上的灯。  因为<xref:System.Windows.Controls.RadioButton>使用的控件模板来定义其外观，很容易重新定义<xref:System.Windows.Controls.ControlTemplate>，使其适合的控件，要求使用单选按钮来制作交通信号灯。  
   
     > [!NOTE]
     >  尽管<xref:System.Windows.Controls.RadioButton>可以使用<xref:System.Windows.DataTemplate>、<xref:System.Windows.DataTemplate>不足在此示例中。  <xref:System.Windows.DataTemplate>定义控件的内容的外观。 情况下<xref:System.Windows.Controls.RadioButton>，内容是圆圈，以指示右侧出现的任何内容是否<xref:System.Windows.Controls.RadioButton>处于选中状态。  在交通信号灯的示例中，单选按钮只需要是可“点亮”的圆圈。 由于交通信号灯的外观要求很大差异的默认外观<xref:System.Windows.Controls.RadioButton>，有必要重新定义<xref:System.Windows.Controls.ControlTemplate>。  一般情况下<xref:System.Windows.DataTemplate>用于定义的内容 （或数据），一个控件，以及一个<xref:System.Windows.Controls.ControlTemplate>用于定义控件的方式。  
   
--   **触发器。** 一个<xref:System.Windows.Trigger>，可动态更改的外观和行为的控件，而无需创建一个新的控件。 例如，假设您有多个<xref:System.Windows.Controls.ListBox>应用程序中的控件，并且希望在每个项<xref:System.Windows.Controls.ListBox>在选中时为粗体和红色。 在第一个想到的可能是创建继承自类<xref:System.Windows.Controls.ListBox>并重写<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>方法来更改外观，所选的项，但更好的方法是将触发器添加到样式的<xref:System.Windows.Controls.ListBoxItem>更改的外观所选的项。 触发器可以更改属性值或根据属性值执行操作。 <xref:System.Windows.EventTrigger>使您能够在事件发生时执行操作。  
+- **触发器。** 一个<xref:System.Windows.Trigger>，可动态更改的外观和行为的控件，而无需创建一个新的控件。 例如，假设您有多个<xref:System.Windows.Controls.ListBox>应用程序中的控件，并且希望在每个项<xref:System.Windows.Controls.ListBox>在选中时为粗体和红色。 在第一个想到的可能是创建继承自类<xref:System.Windows.Controls.ListBox>并重写<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>方法来更改外观，所选的项，但更好的方法是将触发器添加到样式的<xref:System.Windows.Controls.ListBoxItem>更改的外观所选的项。 触发器可以更改属性值或根据属性值执行操作。 <xref:System.Windows.EventTrigger>使您能够在事件发生时执行操作。  
   
  有关样式、模板和触发器的详细信息，请参阅[样式设置和模板化](styling-and-templating.md)。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "62017678"
 #### <a name="benefits-of-deriving-from-usercontrol"></a>从 UserControl 派生的优点  
  请考虑从派生<xref:System.Windows.Controls.UserControl>如果所有以下应用：  
   
--   希望采用与生成应用程序相似的方法生成控件。  
+- 希望采用与生成应用程序相似的方法生成控件。  
   
--   控件仅包含现有组件。  
+- 控件仅包含现有组件。  
   
--   无需支持复杂的自定义项。  
+- 无需支持复杂的自定义项。  
   
 ### <a name="deriving-from-control"></a>从 Control 派生  
  派生自<xref:System.Windows.Controls.Control>类是使用大多数现有的模型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。 当你创建的控件的继承<xref:System.Windows.Controls.Control>类，您通过使用模板定义其外观。 通过这种方式，可以将运算逻辑从视觉表示形式中分离出来。 您还可以确保 UI 和逻辑分离而不是事件和避免引用元素中的使用命令和绑定<xref:System.Windows.Controls.ControlTemplate>只要有可能。  如果 UI 和控件的逻辑正确分离，您的控件的用户可以重新定义控件的<xref:System.Windows.Controls.ControlTemplate>来自定义其外观。 尽管生成自定义<xref:System.Windows.Controls.Control>不是作为构造简单<xref:System.Windows.Controls.UserControl>，自定义<xref:System.Windows.Controls.Control>提供最大的灵活性。  
@@ -63,9 +63,9 @@ ms.locfileid: "62017678"
 #### <a name="benefits-of-deriving-from-control"></a>从 Control 派生的优点  
  请考虑从派生<xref:System.Windows.Controls.Control>而不是使用<xref:System.Windows.Controls.UserControl>类如果以下任一情况:  
   
--   你想要通过可自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。  
+- 你想要通过可自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。  
   
--   希望控件支持不同的主题。  
+- 希望控件支持不同的主题。  
   
 ### <a name="deriving-from-frameworkelement"></a>从 FrameworkElement 派生  
  从派生的控件<xref:System.Windows.Controls.UserControl>或<xref:System.Windows.Controls.Control>依赖于组合现有元素。 对于许多方案，这是一个可接受的解决方案，因为任何对象，它继承自<xref:System.Windows.FrameworkElement>可以是<xref:System.Windows.Controls.ControlTemplate>。 但是，某些时候，简单的元素组合不能满足控件的外观需要。 对于这些方案，使组件基于<xref:System.Windows.FrameworkElement>是正确的选择。  
@@ -75,11 +75,11 @@ ms.locfileid: "62017678"
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>从 FrameworkElement 派生的优点  
  请考虑从派生<xref:System.Windows.FrameworkElement>如果以下任一情况:  
   
--   希望对控件的外观进行精确控制，而不仅仅是简单的元素组合提供的效果。  
+- 希望对控件的外观进行精确控制，而不仅仅是简单的元素组合提供的效果。  
   
--   希望通过定义自己的呈现逻辑来定义控件的外观。  
+- 希望通过定义自己的呈现逻辑来定义控件的外观。  
   
--   你想要在超过可能采用的新颖方式组合现有元素<xref:System.Windows.Controls.UserControl>和<xref:System.Windows.Controls.Control>。  
+- 你想要在超过可能采用的新颖方式组合现有元素<xref:System.Windows.Controls.UserControl>和<xref:System.Windows.Controls.Control>。  
   
 <a name="control_authoring_basics"></a>   
 ## <a name="control-authoring-basics"></a>控件创作基础知识  
@@ -88,33 +88,33 @@ ms.locfileid: "62017678"
 ### <a name="use-dependency-properties"></a>使用依赖属性  
  当属性为依赖属性时，可以执行以下操作：  
   
--   在样式中设置该属性。  
+- 在样式中设置该属性。  
   
--   将该属性绑定到数据源。  
+- 将该属性绑定到数据源。  
   
--   使用动态资源作为该属性的值。  
+- 使用动态资源作为该属性的值。  
   
--   对该属性进行动画处理。  
+- 对该属性进行动画处理。  
   
  如果希望控件的属性支持以上任一功能，应将该属性实现为依赖属性。 下面的示例通过执行以下操作定义一个名为 `Value` 的依赖属性：  
   
--   定义<xref:System.Windows.DependencyProperty>名为标识符`ValueProperty`作为`public` `static` `readonly`字段。  
+- 定义<xref:System.Windows.DependencyProperty>名为标识符`ValueProperty`作为`public` `static` `readonly`字段。  
   
--   通过调用属性系统注册的属性名称<xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>，以指定以下内容：  
+- 通过调用属性系统注册的属性名称<xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>，以指定以下内容：  
   
-    -   属性的名称。  
+    - 属性的名称。  
   
-    -   属性的类型。  
+    - 属性的类型。  
   
-    -   拥有属性的类型。  
+    - 拥有属性的类型。  
   
-    -   属性的元数据。 元数据包含该属性的默认值<xref:System.Windows.CoerceValueCallback>和一个<xref:System.Windows.PropertyChangedCallback>。  
+    - 属性的元数据。 元数据包含该属性的默认值<xref:System.Windows.CoerceValueCallback>和一个<xref:System.Windows.PropertyChangedCallback>。  
   
--   通过实现该属性的 `get` 和 `set` 访问器，定义一个名为 `Value`（与用来注册该依赖属性的名称相同）的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 包装器属性。 请注意，`get`并`set`访问器仅调用<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分别。 建议依赖项属性的访问器不包含其他逻辑，因为客户端和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]取值函数和调用可以绕过<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 例如，如果属性绑定到数据源，则不会调用该属性的 `set` 访问器。  而不是将额外的逻辑添加到 get 和 set 访问器，请使用<xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.CoerceValueCallback>，和<xref:System.Windows.PropertyChangedCallback>委托进行响应或发生更改时检查的值。  有关这些回叫的详细信息，请参阅[依赖属性回叫和验证](../advanced/dependency-property-callbacks-and-validation.md)。  
+- 通过实现该属性的 `get` 和 `set` 访问器，定义一个名为 `Value`（与用来注册该依赖属性的名称相同）的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 包装器属性。 请注意，`get`并`set`访问器仅调用<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分别。 建议依赖项属性的访问器不包含其他逻辑，因为客户端和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]取值函数和调用可以绕过<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 例如，如果属性绑定到数据源，则不会调用该属性的 `set` 访问器。  而不是将额外的逻辑添加到 get 和 set 访问器，请使用<xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.CoerceValueCallback>，和<xref:System.Windows.PropertyChangedCallback>委托进行响应或发生更改时检查的值。  有关这些回叫的详细信息，请参阅[依赖属性回叫和验证](../advanced/dependency-property-callbacks-and-validation.md)。  
   
--   定义一种方法<xref:System.Windows.CoerceValueCallback>名为`CoerceValue`。 `CoerceValue` 确保 `Value` 大于或等于 `MinValue` 且小于或等于 `MaxValue`。  
+- 定义一种方法<xref:System.Windows.CoerceValueCallback>名为`CoerceValue`。 `CoerceValue` 确保 `Value` 大于或等于 `MinValue` 且小于或等于 `MaxValue`。  
   
--   定义一种方法<xref:System.Windows.PropertyChangedCallback>名为`OnValueChanged`。 `OnValueChanged` 创建<xref:System.Windows.RoutedPropertyChangedEventArgs%601>对象，并准备引发`ValueChanged`路由的事件。 路由事件在下一节中讨论。  
+- 定义一种方法<xref:System.Windows.PropertyChangedCallback>名为`OnValueChanged`。 `OnValueChanged` 创建<xref:System.Windows.RoutedPropertyChangedEventArgs%601>对象，并准备引发`ValueChanged`路由的事件。 路由事件在下一节中讨论。  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -124,29 +124,29 @@ ms.locfileid: "62017678"
 ### <a name="use-routed-events"></a>使用路由事件  
  就像依赖属性以附加功能扩展 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性的概念一样，路由事件扩展标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件的概念。 在创建新的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件时，将事件实现为路由事件也是一种好方法，因为路由事件支持以下行为：  
   
--   事件可以在多个控件的父级上进行处理。 如果事件是浮升事件，元素树中的单个父级可订阅该事件。 然后，应用程序作者可以使用一个处理程序来响应多个控件的该事件。 例如，如果您的控件是在每个项的一部分<xref:System.Windows.Controls.ListBox>(因为它包含在<xref:System.Windows.DataTemplate>)，应用程序开发人员可以在定义控件的事件的事件处理程序<xref:System.Windows.Controls.ListBox>。 每当其中任何控件发生该事件时，都会调用该事件处理程序。  
+- 事件可以在多个控件的父级上进行处理。 如果事件是浮升事件，元素树中的单个父级可订阅该事件。 然后，应用程序作者可以使用一个处理程序来响应多个控件的该事件。 例如，如果您的控件是在每个项的一部分<xref:System.Windows.Controls.ListBox>(因为它包含在<xref:System.Windows.DataTemplate>)，应用程序开发人员可以在定义控件的事件的事件处理程序<xref:System.Windows.Controls.ListBox>。 每当其中任何控件发生该事件时，都会调用该事件处理程序。  
   
--   路由的事件可在<xref:System.Windows.EventSetter>，这使应用程序开发人员能够指定的样式中的事件处理程序。  
+- 路由的事件可在<xref:System.Windows.EventSetter>，这使应用程序开发人员能够指定的样式中的事件处理程序。  
   
--   路由的事件可在<xref:System.Windows.EventTrigger>，可用于通过对属性进行动画处理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。  
+- 路由的事件可在<xref:System.Windows.EventTrigger>，可用于通过对属性进行动画处理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 有关详细信息，请参阅 [动画概述](../graphics-multimedia/animation-overview.md)。  
   
  下面的示例通过执行以下操作定义了一个路由事件：  
   
--   定义<xref:System.Windows.RoutedEvent>名为标识符`ValueChangedEvent`作为`public` `static` `readonly`字段。  
+- 定义<xref:System.Windows.RoutedEvent>名为标识符`ValueChangedEvent`作为`public` `static` `readonly`字段。  
   
--   通过调用注册路由的事件<xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType>方法。 该示例在调用时指定以下信息<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
+- 通过调用注册路由的事件<xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType>方法。 该示例在调用时指定以下信息<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
   
-    -   事件名称是 `ValueChanged`。  
+    - 事件名称是 `ValueChanged`。  
   
-    -   路由策略是<xref:System.Windows.RoutingStrategy.Bubble>，这意味着首先，调用源 （引发事件的对象） 上的事件处理程序，然后使用上的最近的事件处理程序开始，相继调用源的父元素上的事件处理程序父元素。  
+    - 路由策略是<xref:System.Windows.RoutingStrategy.Bubble>，这意味着首先，调用源 （引发事件的对象） 上的事件处理程序，然后使用上的最近的事件处理程序开始，相继调用源的父元素上的事件处理程序父元素。  
   
-    -   事件处理程序的类型是<xref:System.Windows.RoutedPropertyChangedEventHandler%601>、 构造与<xref:System.Decimal>类型。  
+    - 事件处理程序的类型是<xref:System.Windows.RoutedPropertyChangedEventHandler%601>、 构造与<xref:System.Decimal>类型。  
   
-    -   该事件的所属类型为 `NumericUpDown`。  
+    - 该事件的所属类型为 `NumericUpDown`。  
   
--   声明一个名为 `ValueChanged` 的公共事件，并包含事件访问器声明。 此示例调用<xref:System.Windows.UIElement.AddHandler%2A>中`add`访问器声明并<xref:System.Windows.UIElement.RemoveHandler%2A>中`remove`访问器声明，以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件服务。  
+- 声明一个名为 `ValueChanged` 的公共事件，并包含事件访问器声明。 此示例调用<xref:System.Windows.UIElement.AddHandler%2A>中`add`访问器声明并<xref:System.Windows.UIElement.RemoveHandler%2A>中`remove`访问器声明，以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件服务。  
   
--   创建一个名为 `OnValueChanged` 的受保护的虚拟方法，该方法会引发 `ValueChanged` 事件。  
+- 创建一个名为 `OnValueChanged` 的受保护的虚拟方法，该方法会引发 `ValueChanged` 事件。  
   
  [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
  [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
@@ -178,11 +178,11 @@ ms.locfileid: "62017678"
 #### <a name="attached-properties"></a>附加属性  
  应使用以下准则在自定义控件上实现附加属性：  
   
--   具有`public` `static` `readonly` <xref:System.Windows.DependencyProperty>窗体*PropertyName* `Property`创建使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 属性名称传递给<xref:System.Windows.DependencyProperty.RegisterAttached%2A>必须匹配*PropertyName*。  
+- 具有`public` `static` `readonly` <xref:System.Windows.DependencyProperty>窗体*PropertyName* `Property`创建使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 属性名称传递给<xref:System.Windows.DependencyProperty.RegisterAttached%2A>必须匹配*PropertyName*。  
   
--   实现一对名为`Set`*属性名称*和`Get`*属性名称*的 `public` `static` CLR 方法。 这两种方法应接受派生自的类<xref:System.Windows.DependencyProperty>作为其第一个参数。 `Set`*属性名称*方法还接受其类型与属性的注册数据类型匹配的参数。 `Get`*属性名称* 方法应返回相同类型的值。 如果缺少 `Set`*属性名称*方法，则该属性标记为只读。  
+- 实现一对名为`Set`*属性名称*和`Get`*属性名称*的 `public` `static` CLR 方法。 这两种方法应接受派生自的类<xref:System.Windows.DependencyProperty>作为其第一个参数。 `Set`*属性名称*方法还接受其类型与属性的注册数据类型匹配的参数。 `Get`*属性名称* 方法应返回相同类型的值。 如果缺少 `Set`*属性名称*方法，则该属性标记为只读。  
   
--   `Set` *PropertyName*并`Get` *PropertyName*必须直接路由到<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>方法目标依赖对象，分别。 通过调用方法包装器或直接调用目标依赖对象，设计器可以访问附加属性。  
+- `Set` *PropertyName*并`Get` *PropertyName*必须直接路由到<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>方法目标依赖对象，分别。 通过调用方法包装器或直接调用目标依赖对象，设计器可以访问附加属性。  
   
  有关附加属性的详细信息，请参阅[附加属性概述](../advanced/attached-properties-overview.md)。  
   

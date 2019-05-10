@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649716"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>如何：匹配字符串与模式 (Visual Basic)
 如果想要找出的表达式[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)满足一种模式，则可以使用[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "61864697"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>若要匹配针对特定字符的字符串表达式中的字符  
   
--   直接在模式字符串中放置的特定字符。 某些特殊字符必须括在方括号中 (`[ ]`)。 有关详细信息，请参阅[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。  
+- 直接在模式字符串中放置的特定字符。 某些特殊字符必须括在方括号中 (`[ ]`)。 有关详细信息，请参阅[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。  
   
      下面的示例测试是否`myString`只包含单个字符`H`。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "61864697"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>在对通配符字符的字符串表达式中的字符进行匹配  
   
--   将问号 (`?`) 模式字符串中。 此位置中的任何有效字符，可以成功匹配。  
+- 将问号 (`?`) 模式字符串中。 此位置中的任何有效字符，可以成功匹配。  
   
      下面的示例测试是否`myString`包含单个字符`W`跟两个字符的任何值。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "61864697"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>针对列表的字符的字符串表达式中的字符进行匹配  
   
--   将括号放 (`[ ]`) 在模式字符串，并放置的字符列表括号内。 不要用逗号或任何其他分隔符分隔字符。 在列表中的任何单个字符，可以成功匹配。  
+- 将括号放 (`[ ]`) 在模式字符串，并放置的字符列表括号内。 不要用逗号或任何其他分隔符分隔字符。 在列表中的任何单个字符，可以成功匹配。  
   
      下面的示例测试是否`myString`包含跟一个字符的任意有效字符`A`， `C`，或`E`。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "61864697"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>针对一系列字符的字符串表达式中的字符进行匹配  
   
--   将括号放 (`[ ]`) 在模式字符串中，并将最低和最高的字符范围中放入括号内，由连字符分隔 (`–`)。 在范围内的任何单个字符，可以成功匹配。  
+- 将括号放 (`[ ]`) 在模式字符串中，并将最低和最高的字符范围中放入括号内，由连字符分隔 (`–`)。 在范围内的任何单个字符，可以成功匹配。  
   
      下面的示例测试是否`myString`包含的字符`num`正好有一个字符后跟`i`， `j`， `k`， `l`， `m`，或`n`。  
   

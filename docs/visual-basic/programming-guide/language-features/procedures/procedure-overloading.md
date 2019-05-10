@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 14a31c440861cdc2296bcd02357e5fe0004bf359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791867"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638847"
 ---
 # <a name="procedure-overloading-visual-basic"></a>过程重载 (Visual Basic)
 *重载*过程是指在多个版本中，使用相同名称但不同的参数列表定义。 重载的目的是定义一个过程的几个密切相关的版本而无需将它们按名称区分开。 通过不同的参数列表执行此操作。  

@@ -2,12 +2,12 @@
 title: Exceptions
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b08fca37e9695f57f1fcca114531e8a1e8b90c55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773628"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640903"
 ---
 # <a name="exceptions"></a>Exceptions
 工作流可以使用 <xref:System.Activities.Statements.TryCatch> 活动处理工作流执行期间引发的异常。 可以对这些异常进行处理，或者使用 <xref:System.Activities.Statements.Rethrow> 活动重新引发异常。 <xref:System.Activities.Statements.TryCatch.Finally%2A> 节中的活动在 <xref:System.Activities.Statements.TryCatch.Try%2A> 节或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 节完成时执行。 通过托管工作流<xref:System.Activities.WorkflowApplication>还可以使用实例<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>事件处理程序以处理未处理的异常<xref:System.Activities.Statements.TryCatch>活动。  

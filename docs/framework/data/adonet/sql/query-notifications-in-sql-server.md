@@ -2,12 +2,12 @@
 title: SQL Server 中的查询通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: e31a733635cf56a9c5e539dfb1d71d7d7037175a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a68c01c7db782a9904ba36edec9d13332cab39a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645665"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查询通知
 查询通知建立在 Service Broker 基础结构的基础上，使应用程序可以在数据更改时收到通知。 如果应用程序提供数据库中信息的缓存（例如 Web 应用程序），需要在源数据更改时接收通知，此功能特别有用。  

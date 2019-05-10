@@ -2,12 +2,12 @@
 title: Windows 工作流基础概念
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945660"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650931"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows 工作流基础概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]的工作流开发中会运用一些开发人员可能还不熟悉的概念。 本主题介绍其中的一些概念以及如何实现这些概念。  

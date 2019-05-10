@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7f8a19e2e4395e43aa99b6ff63536fbbbc26cb2a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646966"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 数据类型 (Visual Basic)
 
@@ -48,7 +48,7 @@ ms.locfileid: "61747066"
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 作为前缀和十六进制、 二进制或八进制数字之间的前导分隔符。 例如：
+从 Visual Basic 15.5 开始，还可以使用下划线字符 (`_`) 作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C

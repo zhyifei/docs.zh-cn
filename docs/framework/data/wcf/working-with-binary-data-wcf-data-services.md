@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 428f12c90d646b1c08cdeaf48467efc2ce53859a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660259"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>处理二进制数据（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，可检索和更新二进制数据，从[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源中的以下方法之一：  
   
--   作为实体的基元类型属性。 当使用可轻松加载到内存中的小型二进制数据对象时，建议使用此方法。 在这种情况下，二进制属性是数据模型公开的实体属性，而数据服务会在响应消息中将二进制数据序列化为 base-64 二进制编码的 XML。  
+- 作为实体的基元类型属性。 当使用可轻松加载到内存中的小型二进制数据对象时，建议使用此方法。 在这种情况下，二进制属性是数据模型公开的实体属性，而数据服务会在响应消息中将二进制数据序列化为 base-64 二进制编码的 XML。  
   
--   作为单独的二进制资源流。 当访问和更改可能表示照片、视频或其他任何类型的二进制编码数据的二进制大型对象 (BLOB) 数据时，建议使用此方法。  
+- 作为单独的二进制资源流。 当访问和更改可能表示照片、视频或其他任何类型的二进制编码数据的二进制大型对象 (BLOB) 数据时，建议使用此方法。  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 实现的流式处理的二进制数据中定义通过 HTTP [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 在这种机制，二进制数据视为是分开的媒体资源，但与实体，这称为媒体链接入口相关。 有关详细信息，请参阅[流式处理提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   

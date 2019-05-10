@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906979"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645865"
 ---
 # <a name="user-defined-constants-visual-basic"></a>用户定义的常量 (Visual Basic)
 常量是有意义的名称采用的数字或字符串不会更改的位置。 顾名思义，常量存储在应用程序的执行过程中保持不变的值。 您可以使用由该控件或组件，定义的常量或可以创建你自己。 创建自己的常量被称为*用户定义*。  
@@ -37,13 +37,13 @@ ms.locfileid: "61906979"
 ## <a name="scope-of-user-defined-constants"></a>作用域的用户定义的常量  
  一个`Const`语句的作用域是在同一位置中声明的变量相同。 您可以通过以下方式之一指定作用域：  
   
--   若要创建过程中仅存在一个常量，请在该过程中声明。  
+- 若要创建过程中仅存在一个常量，请在该过程中声明。  
   
--   若要创建在类中，所有过程而不是属于该模块以外的任何代码都可用的常数，请将其声明的类的声明部分。  
+- 若要创建在类中，所有过程而不是属于该模块以外的任何代码都可用的常数，请将其声明的类的声明部分。  
   
--   若要创建一个常量，它是可用的程序集外部客户端程序集的所有成员而不可用，将使用其声明`Friend`类的声明部分中的关键字。  
+- 若要创建一个常量，它是可用的程序集外部客户端程序集的所有成员而不可用，将使用其声明`Friend`类的声明部分中的关键字。  
   
--   若要创建可在整个应用程序使用的常量，将使用其声明`Public`关键字在下面的声明部分类。  
+- 若要创建可在整个应用程序使用的常量，将使用其声明`Public`关键字在下面的声明部分类。  
   
  有关详细信息，请参阅[如何：声明常量](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)。  
   

@@ -2,12 +2,12 @@
 title: 自定义令牌
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862b4b26295ef3e90064b27ecd753e9b541471a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855044"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650219"
 ---
 # <a name="custom-token"></a>自定义令牌
 此示例演示如何将添加到 Windows Communication Foundation (WCF) 应用程序自定义令牌的实现。 示例使用 `CreditCardToken` 将客户端的信用卡相关信息安全地传递到服务。 令牌在 WS-Security 消息头中传递，并连同消息正文和其他消息头一起使用对称安全绑定元素进行签名和加密。 当内置令牌不足时可以进行这样的操作。 本示例演示如何向服务提供自定义安全令牌而不必使用某个内置令牌。 该服务实现定义“请求-答复”通信模式的协定。
@@ -17,13 +17,13 @@ ms.locfileid: "61855044"
 
  总之，此示例将演示如下内容：
 
--   客户端如何向服务传递自定义安全令牌。
+- 客户端如何向服务传递自定义安全令牌。
 
--   服务如何使用和验证自定义安全令牌。
+- 服务如何使用和验证自定义安全令牌。
 
--   如何 WCF 服务代码可以获取有关接收到的安全令牌包括自定义安全令牌的信息。
+- 如何 WCF 服务代码可以获取有关接收到的安全令牌包括自定义安全令牌的信息。
 
--   如何使用服务器的 X.509 证书保护用于消息加密和签名的对称密钥。
+- 如何使用服务器的 X.509 证书保护用于消息加密和签名的对称密钥。
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>使用自定义安全令牌的客户端身份验证
  服务公开单个终结点，此终结点是使用 `BindingHelper` 和 `EchoServiceHost` 类以编程方式创建的。 终结点由地址、绑定和协定组成。 此绑定使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 按照自定义绑定进行配置。 本示例将 `SymmetricSecurityBindingElement` 设置为使用服务的 X.509 证书在传输过程中保护对称密钥和在 WS-Security 消息头中传递自定义 `CreditCardToken` 作为签名和加密的安全令牌。 此行为指定用于客户端身份验证的服务凭据和有关服务 X.509 证书的信息。
@@ -543,7 +543,7 @@ string GetCallerCreditCardNumber()
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。
 
--   创建服务器证书：
+- 创建服务器证书：
 
      `Setup.bat` 批处理文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。 如果更改 `%SERVER_NAME%` 变量，则必须浏览 Client.cs 和 Service.cs 文件并用 Setup.bat 脚本中使用的服务器名来替换 localhost 的所有实例。
 
@@ -559,7 +559,7 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   将服务器证书安装到客户端的受信任证书存储区中：
+- 将服务器证书安装到客户端的受信任证书存储区中：
 
      Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   若要从 IIS 承载的服务启用对证书私钥的访问，必须为 IIS 承载的进程运行时所使用的用户帐户授予对该私钥的适当权限。 这将由 Setup.bat 脚本中的最后步骤来完成。
+- 若要从 IIS 承载的服务启用对证书私钥的访问，必须为 IIS 承载的进程运行时所使用的用户帐户授予对该私钥的适当权限。 这将由 Setup.bat 脚本中的最后步骤来完成。
 
     ```
     echo ************

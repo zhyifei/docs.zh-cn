@@ -2,12 +2,12 @@
 title: 支持令牌
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 5f2b1500f54f8ade3c4924e3eb22cd022c6800c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6257499b22506359c4a23ce7c11655c00c22ef62
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965615"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650969"
 ---
 # <a name="supporting-tokens"></a>支持令牌
 支持令牌示例演示如何将其他令牌添加到使用 WS-Security 的消息。 该示例除添加用户名安全令牌外，还添加 X.509 二进制安全令牌。 在 WS-Security 消息头中将令牌从客户端传递到服务，部分消息使用与 X.509 安全令牌关联的私钥进行签名，以证明 X.509 证书相对于接收方的所有权。 这可用于当要求有多个与消息关联的声明时对发送方进行身份验证或授权。 该服务实现定义“请求-答复”通信模式的协定。

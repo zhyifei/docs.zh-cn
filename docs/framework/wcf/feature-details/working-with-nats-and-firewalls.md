@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5415fc173be10834f73b5959481951407bcee0b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637331"
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 和防火墙
 网络连接的客户端和服务器通常不具有用于进行通信的直接和开放的路径。 数据包在终结点计算机和网络中的中间计算机上进行筛选、路由、分析和转换。 网络地址转换 (NAT) 和防火墙是可以参与网络通信的中间应用程序的常见示例。  

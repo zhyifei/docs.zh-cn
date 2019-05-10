@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60c4dac76b4a7868da9143cab1433ee93f97c7d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913089"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636814"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>如何：响应 Windows 窗体 DataGrid 控件中的单击
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "61913089"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>若要检测的 DataGrid 用户选择不同的单元格时  
   
--   在<xref:System.Windows.Forms.DataGrid.CurrentCellChanged>事件处理程序中，编写代码以做出适当的响应。  
+- 在<xref:System.Windows.Forms.DataGrid.CurrentCellChanged>事件处理程序中，编写代码以做出适当的响应。  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "61913089"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>若要确定用户单击的哪一部分数据网格  
   
--   调用<xref:System.Windows.Forms.DataGrid.HitTest%2A>方法中相应的事件处理程序，例如针对<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件。  
+- 调用<xref:System.Windows.Forms.DataGrid.HitTest%2A>方法中相应的事件处理程序，例如针对<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件。  
   
      <xref:System.Windows.Forms.DataGrid.HitTest%2A>方法将返回<xref:System.Windows.Forms.DataGrid.HitTestInfo>对象，其中包含的行和列的被单击的区域。  
   

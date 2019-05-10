@@ -2,12 +2,12 @@
 title: SystemWebRouting 集成示例
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9f9dc871b92b8cd689234c79b09c98e38a2848d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650988"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 集成示例
 此示例演示 <xref:System.Web.Routing> 命名空间中承载层与类的集成。 通过 <xref:System.Web.Routing> 命名空间中的类，应用程序可以使用不直接与物理资源对应的 URL。 使用 Web 路由允许开发人员为随后映射回实际 WCF 服务的 HTTP 创建虚拟地址。 如果必须以不使用物理文件或资源的方式承载 WCF 服务，或者必须使用不包含 .html 或 .aspx 这类文件的 URL 访问服务时，这会十分有用。 此示例演示如何利用 <xref:System.Web.Routing.RouteTable> 类创建映射到 global.asax 中定义的运行服务的虚拟 URI。 
@@ -58,13 +58,13 @@ ms.locfileid: "62007755"
   
 3. 在 Internet 信息服务 (IIS) 管理器中创建 Web 应用程序。  
   
-    1.  在 IIS 管理器中，右键单击**Default Web Site** ，然后选择**添加应用程序**。  
+    1. 在 IIS 管理器中，右键单击**Default Web Site** ，然后选择**添加应用程序**。  
   
-    2.  有关**别名**，键入`WebRoutingIntegration`。  
+    2. 有关**别名**，键入`WebRoutingIntegration`。  
   
-    3.  有关**物理路径**，选择项目中的服务文件夹。  
+    3. 有关**物理路径**，选择项目中的服务文件夹。  
   
-    4.  按“确定”。  
+    4. 按“确定”。  
   
 4. 启动应用程序，右键单击 Web 应用程序并选择**管理应用程序**，然后**浏览**。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: db0127712ab0cb4586b364abf899bcf4765632d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645594"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>加载延迟的内容（WCF 数据服务）
 默认情况下，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 会限制查询返回的数据量。 不过，如果需要，您可以从该数据服务显式加载其他数据，包括相关实体、分页响应数据以及二进制数据流。 本主题介绍如何将这种延迟的内容加载到应用程序。  

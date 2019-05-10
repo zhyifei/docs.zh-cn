@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864398"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649614"
 ---
 # <a name="function-procedures-visual-basic"></a>Function 过程 (Visual Basic)
 一个`Function`过程是 Visual Basic 语句括在一系列`Function`和`End Function`语句。 `Function`过程执行一项任务，再将控制权返回到调用代码。 当它返回控制时，它还向调用代码返回一个值。  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>返回值  
  值`Function`过程将发送回调用代码名为其返回值。 此过程返回此值在两种方式之一：  
   
--   它使用`Return`语句以指定返回值，并返回到调用程序立即控制。 下面的示例阐释了这一点。  
+- 它使用`Return`语句以指定返回值，并返回到调用程序立即控制。 下面的示例阐释了这一点。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   它将值分配给自己的过程的一个或多个语句中的函数名称。 控件不返回给调用程序直到`Exit Function`或`End Function`执行语句。 下面的示例阐释了这一点。  
+- 它将值分配给自己的过程的一个或多个语句中的函数名称。 控件不返回给调用程序直到`Exit Function`或`End Function`执行语句。 下面的示例阐释了这一点。  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

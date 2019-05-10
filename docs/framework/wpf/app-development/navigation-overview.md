@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 23e40a27d04d960306f219a7e8d95a464b1e0dec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335077"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639648"
 ---
 # <a name="navigation-overview"></a>导航概述
 Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使用的浏览器样式导航： 独立应用程序和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 对包内容的导航窗格中，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了<xref:System.Windows.Controls.Page>类。 可以从一个导航<xref:System.Windows.Controls.Page>到另一个以声明方式，通过使用<xref:System.Windows.Documents.Hyperlink>，或以编程方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住从其导航和导航回它们的页。  
@@ -47,31 +47,31 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  本节解释并演示导航的以下方面：  
   
--   [实现页](#CreatingAXAMLPage)  
+- [实现页](#CreatingAXAMLPage)  
   
--   [配置起始页](#Configuring_a_Start_Page)  
+- [配置起始页](#Configuring_a_Start_Page)  
   
--   [配置主机窗口的标题、宽度和高度](#ConfiguringAXAMLPage)  
+- [配置主机窗口的标题、宽度和高度](#ConfiguringAXAMLPage)  
   
--   [超链接导航](#NavigatingBetweenXAMLPages)  
+- [超链接导航](#NavigatingBetweenXAMLPages)  
   
--   [片段导航](#FragmentNavigation)  
+- [片段导航](#FragmentNavigation)  
   
--   [导航服务](#NavigationService)  
+- [导航服务](#NavigationService)  
   
--   [使用导航服务以编程方式导航](#Programmatic_Navigation_with_the_Navigation_Service)  
+- [使用导航服务以编程方式导航](#Programmatic_Navigation_with_the_Navigation_Service)  
   
--   [导航生存期](#Navigation_Lifetime)  
+- [导航生存期](#Navigation_Lifetime)  
   
--   [使用日志记住导航](#NavigationHistory)  
+- [使用日志记住导航](#NavigationHistory)  
   
--   [页生存期和日志](#PageLifetime)  
+- [页生存期和日志](#PageLifetime)  
   
--   [保留导航历史记录的内容状态](#RetainingContentStateWithNavigationHistory)  
+- [保留导航历史记录的内容状态](#RetainingContentStateWithNavigationHistory)  
   
--   [Cookie](#Cookies)  
+- [Cookie](#Cookies)  
   
--   [结构化导航](#Structured_Navigation)  
+- [结构化导航](#Structured_Navigation)  
   
 <a name="CreatingAXAMLPage"></a>   
 ### <a name="implementing-a-page"></a>实现页  
@@ -102,11 +102,11 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  要允许标记文件和代码隐藏文件协同工作，需要进行以下配置：  
   
--   在标记中，`Page`元素必须包括`x:Class`属性。 应用程序生成时，是否存在`x:Class`在标记文件会导致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]来创建`partial`派生的类<xref:System.Windows.Controls.Page>并且具有指定的名称`x:Class`属性。 这需要添加[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]命名空间声明[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 生成`partial`类实现`InitializeComponent`，调用它来注册事件并设置属性的标记中实现。  
+- 在标记中，`Page`元素必须包括`x:Class`属性。 应用程序生成时，是否存在`x:Class`在标记文件会导致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]来创建`partial`派生的类<xref:System.Windows.Controls.Page>并且具有指定的名称`x:Class`属性。 这需要添加[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]命名空间声明[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 生成`partial`类实现`InitializeComponent`，调用它来注册事件并设置属性的标记中实现。  
   
--   在代码隐藏中，类必须是`partial`具有相同名称指定的类`x:Class`属性在标记中，并且它必须派生自<xref:System.Windows.Controls.Page>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md))。  
+- 在代码隐藏中，类必须是`partial`具有相同名称指定的类`x:Class`属性在标记中，并且它必须派生自<xref:System.Windows.Controls.Page>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md))。  
   
--   在代码隐藏<xref:System.Windows.Controls.Page>类必须实现构造函数调用`InitializeComponent`方法。 `InitializeComponent` 实现由标记文件中生成的`partial`类，以注册事件和设置在标记中定义的属性。  
+- 在代码隐藏<xref:System.Windows.Controls.Page>类必须实现构造函数调用`InitializeComponent`方法。 `InitializeComponent` 实现由标记文件中生成的`partial`类，以注册事件和设置在标记中定义的属性。  
   
 > [!NOTE]
 >  添加一个新<xref:System.Windows.Controls.Page>到你的项目使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，则<xref:System.Windows.Controls.Page>使用标记和代码隐藏实现，它包括必要的配置来创建作为标记和代码隐藏文件之间的关联此处所述。  
@@ -162,9 +162,9 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  一个`Hyperlink`元素具有以下要求：  
   
--   包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的<xref:System.Windows.Controls.Page>以导航到，所指定的`NavigateUri`属性。  
+- 包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的<xref:System.Windows.Controls.Page>以导航到，所指定的`NavigateUri`属性。  
   
--   内容，用户可以单击初始化导航，如文本和图像 (内容的`Hyperlink`元素可以包含，请参阅<xref:System.Windows.Documents.Hyperlink>)。  
+- 内容，用户可以单击初始化导航，如文本和图像 (内容的`Hyperlink`元素可以包含，请参阅<xref:System.Windows.Documents.Hyperlink>)。  
   
  下图显示[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]与<xref:System.Windows.Controls.Page>具有<xref:System.Windows.Documents.Hyperlink>。  
   
@@ -186,11 +186,11 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  有关<xref:System.Windows.Documents.Hyperlink>导航到内容片段`NavigateUri`属性必须包括以下：  
   
--   [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的<xref:System.Windows.Controls.Page>以导航到的内容片段。  
+- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的<xref:System.Windows.Controls.Page>以导航到的内容片段。  
   
--   “#”字符。  
+- “#”字符。  
   
--   在元素的名称<xref:System.Windows.Controls.Page>，其中包含内容片段。  
+- 在元素的名称<xref:System.Windows.Controls.Page>，其中包含内容片段。  
   
  片段[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]采用以下格式。  
   
@@ -225,11 +225,11 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  但是，有些情况需要使用<xref:System.Windows.Navigation.NavigationService>直接，其中包括：  
   
--   当需要进行实例化<xref:System.Windows.Controls.Page>使用非默认构造函数。  
+- 当需要进行实例化<xref:System.Windows.Controls.Page>使用非默认构造函数。  
   
--   当需要进行设置的属性<xref:System.Windows.Controls.Page>导航到它之前。  
+- 当需要进行设置的属性<xref:System.Windows.Controls.Page>导航到它之前。  
   
--   当<xref:System.Windows.Controls.Page>，需要以导航到只能确定在运行时。  
+- 当<xref:System.Windows.Controls.Page>，需要以导航到只能确定在运行时。  
   
  在这些情况下，您需要编写代码来以编程方式通过调用启动导航<xref:System.Windows.Navigation.NavigationService.Navigate%2A>方法的<xref:System.Windows.Navigation.NavigationService>对象。 这就需要获取对引用<xref:System.Windows.Navigation.NavigationService>。  
   
@@ -288,23 +288,23 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
 ### <a name="navigation-lifetime"></a>导航生存期  
  如你所见，有很多方法初始化导航。 发起导航，并导航时，可以跟踪并影响导航使用由实现的以下事件时<xref:System.Windows.Navigation.NavigationService>:  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigating>。 请求新导航时发生。 可用于取消导航。  
+- <xref:System.Windows.Navigation.NavigationService.Navigating>。 请求新导航时发生。 可用于取消导航。  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationProgress>。 在下载过程中定期发生，用于提供定位进度信息。  
+- <xref:System.Windows.Navigation.NavigationService.NavigationProgress>。 在下载过程中定期发生，用于提供定位进度信息。  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigated>。 已定位并下载页时发生。  
+- <xref:System.Windows.Navigation.NavigationService.Navigated>。 已定位并下载页时发生。  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationStopped>。 停止导航时发生 (通过调用<xref:System.Windows.Navigation.NavigationService.StopLoading%2A>)，或当前导航正在进行时在请求新导航。  
+- <xref:System.Windows.Navigation.NavigationService.NavigationStopped>。 停止导航时发生 (通过调用<xref:System.Windows.Navigation.NavigationService.StopLoading%2A>)，或当前导航正在进行时在请求新导航。  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationFailed>。 在导航到所需内容的同时遇到错误时发生。  
+- <xref:System.Windows.Navigation.NavigationService.NavigationFailed>。 在导航到所需内容的同时遇到错误时发生。  
   
--   <xref:System.Windows.Navigation.NavigationService.LoadCompleted>。 导航到的内容已加载和分析，并开始呈现时发生。  
+- <xref:System.Windows.Navigation.NavigationService.LoadCompleted>。 导航到的内容已加载和分析，并开始呈现时发生。  
   
--   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>。 导航到内容片段开始时发生，具体如何发生如下所述：  
+- <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>。 导航到内容片段开始时发生，具体如何发生如下所述：  
   
-    -   立即，如果所需片段位于当前内容中。  
+    - 立即，如果所需片段位于当前内容中。  
   
-    -   源内容加载之后，如果所需片段在不同内容中。  
+    - 源内容加载之后，如果所需片段在不同内容中。  
   
  引发导航事件的顺序如下图所示。  
   
@@ -312,19 +312,19 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  一般情况下，<xref:System.Windows.Controls.Page>不关心这些事件。 很有可能，应用程序而言，与之和，出于此原因，会引发这些事件还通过<xref:System.Windows.Application>类：  
   
--   <xref:System.Windows.Application.Navigating?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.Navigating?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Application.NavigationProgress?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.NavigationProgress?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Application.Navigated?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.Navigated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Application.NavigationFailed?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.NavigationFailed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Application.NavigationStopped?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.NavigationStopped?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Application.LoadCompleted?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.LoadCompleted?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
   
  每次<xref:System.Windows.Navigation.NavigationService>引发事件时，<xref:System.Windows.Application>类引发相应事件。 <xref:System.Windows.Controls.Frame> 和<xref:System.Windows.Navigation.NavigationWindow>提供相同的事件来检测其各自的范围内的导航。  
   
@@ -385,13 +385,13 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  您可以使用的以下成员之一以编程方式导航日志<xref:System.Windows.Navigation.NavigationService>类：  
   
--   <xref:System.Windows.Navigation.NavigationService.GoBack%2A>  
+- <xref:System.Windows.Navigation.NavigationService.GoBack%2A>  
   
--   <xref:System.Windows.Navigation.NavigationService.GoForward%2A>  
+- <xref:System.Windows.Navigation.NavigationService.GoForward%2A>  
   
--   <xref:System.Windows.Navigation.NavigationService.CanGoBack%2A>  
+- <xref:System.Windows.Navigation.NavigationService.CanGoBack%2A>  
   
--   <xref:System.Windows.Navigation.NavigationService.CanGoForward%2A>  
+- <xref:System.Windows.Navigation.NavigationService.CanGoForward%2A>  
   
  此外可以以编程方式，如中所述操作日记[保留导航历史记录的内容状态](#RetainingContentStateWithNavigationHistory)本主题中更高版本。  
   
@@ -415,9 +415,9 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  当<xref:System.Windows.Controls.Page>不是保持活动状态，不应执行下列操作之一：  
   
--   存储对它或它的任何部分的引用。  
+- 存储对它或它的任何部分的引用。  
   
--   将事件处理程序注册到并非由其实现的事件。  
+- 将事件处理程序注册到并非由其实现的事件。  
   
  执行以下任一操作将创建引用，强制<xref:System.Windows.Controls.Page>要保留在内存中，即使已从日志中删除它。  
   
@@ -445,31 +445,31 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 在中使用以下控件时将自动使用这种支持<xref:System.Windows.Controls.Page>:  
   
--   <xref:System.Windows.Controls.CheckBox>  
+- <xref:System.Windows.Controls.CheckBox>  
   
--   <xref:System.Windows.Controls.ComboBox>  
+- <xref:System.Windows.Controls.ComboBox>  
   
--   <xref:System.Windows.Controls.Expander>  
+- <xref:System.Windows.Controls.Expander>  
   
--   <xref:System.Windows.Controls.Frame>  
+- <xref:System.Windows.Controls.Frame>  
   
--   <xref:System.Windows.Controls.ListBox>  
+- <xref:System.Windows.Controls.ListBox>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.MenuItem>  
+- <xref:System.Windows.Controls.MenuItem>  
   
--   <xref:System.Windows.Controls.ProgressBar>  
+- <xref:System.Windows.Controls.ProgressBar>  
   
--   <xref:System.Windows.Controls.RadioButton>  
+- <xref:System.Windows.Controls.RadioButton>  
   
--   <xref:System.Windows.Controls.Slider>  
+- <xref:System.Windows.Controls.Slider>  
   
--   <xref:System.Windows.Controls.TabControl>  
+- <xref:System.Windows.Controls.TabControl>  
   
--   <xref:System.Windows.Controls.TabItem>  
+- <xref:System.Windows.Controls.TabItem>  
   
--   <xref:System.Windows.Controls.TextBox>  
+- <xref:System.Windows.Controls.TextBox>  
   
  如果<xref:System.Windows.Controls.Page>使用这些控件，输入的数据会记住跨<xref:System.Windows.Controls.Page>导航，如所示**喜爱的颜色**<xref:System.Windows.Controls.ListBox>下图中。  
   
@@ -501,21 +501,21 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  以下是一些在支持 cookie 的方式[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]都可以创建和管理 cookie。  
+- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]都可以创建和管理 cookie。  
   
--   创建的 cookie[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]可以从浏览器访问。  
+- 创建的 cookie[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]可以从浏览器访问。  
   
--   来自相同域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以创建和共享 cookie。  
+- 来自相同域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以创建和共享 cookie。  
   
--   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]同一个域中的页面可以创建和共享 cookie。  
+- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]同一个域中的页面可以创建和共享 cookie。  
   
--   调度 cookie 时[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和宽松[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页发出 Web 请求。  
+- 调度 cookie 时[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和宽松[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页发出 Web 请求。  
   
--   顶级[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]托管在 IFRAME 可以访问 cookie。  
+- 顶级[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]托管在 IFRAME 可以访问 cookie。  
   
--   中的 cookie 支持[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]是相同的所有支持的浏览器。  
+- 中的 cookie 支持[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]是相同的所有支持的浏览器。  
   
--   在中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]，于 cookie 的 P3P 策略遵循[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，特别是涉及第一方和第三方[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
+- 在中[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]，于 cookie 的 P3P 策略遵循[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，特别是涉及第一方和第三方[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
   
 <a name="Structured_Navigation"></a>   
 ### <a name="structured-navigation"></a>结构化导航  
@@ -527,11 +527,11 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
 ## <a name="the-navigationwindow-class"></a>NavigationWindow 类  
  到目前为止，你已全面了解最有可能用可导航内容生成应用程序的导航服务。 这些服务所述的上下文[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，但它们并不局限于[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 现代操作系统和 Windows 应用程序充分利用现代用户将浏览器样式导航并入独立应用程序的浏览器体验。 常见示例包括：  
   
--   **Word 同义词库**:导航字选择。  
+- **Word 同义词库**:导航字选择。  
   
--   **文件资源管理器**:文件和文件夹导航。  
+- **文件资源管理器**:文件和文件夹导航。  
   
--   **向导**:细分复杂的任务分为多页，可以在它们之间导航。 例如，Windows 组件向导处理添加和删除 Windows 功能。  
+- **向导**:细分复杂的任务分为多页，可以在它们之间导航。 例如，Windows 组件向导处理添加和删除 Windows 功能。  
   
  若要将浏览器样式导航并入独立应用程序，可以使用<xref:System.Windows.Navigation.NavigationWindow>类。 <xref:System.Windows.Navigation.NavigationWindow> 派生自<xref:System.Windows.Window>并将其扩展具有相同支持进行导航的[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]提供。 可以使用<xref:System.Windows.Navigation.NavigationWindow>作为独立应用程序中任一的主窗口或对话框之类的次窗口。  
   
@@ -647,11 +647,11 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
 ### <a name="navigating-to-loose-xaml-files"></a>导航到松散 XAML 文件  
  松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件是具有以下特征的文件：  
   
--   仅包含[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]（即无代码）。  
+- 仅包含[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]（即无代码）。  
   
--   具有适当的命名空间声明。  
+- 具有适当的命名空间声明。  
   
--   具有 .xaml 文件扩展名。  
+- 具有 .xaml 文件扩展名。  
   
  例如，考虑以下内容存储为松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件 Person.xaml。  
   
@@ -663,11 +663,11 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  您可以显示松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]从以下文件：  
   
--   本地计算机上的网站、Intranet 或 Internet。  
+- 本地计算机上的网站、Intranet 或 Internet。  
   
--   一个[!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)]文件共享。  
+- 一个[!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)]文件共享。  
   
--   本地磁盘。  
+- 本地磁盘。  
   
  松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]可以将文件添加到浏览器的收藏夹，也是浏览器的主页。  
   

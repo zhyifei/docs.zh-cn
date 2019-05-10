@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2c48788507eed40e8240491dbd5064ad6c293c9f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032248"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651930"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 应用程序通常依赖包含不可执行的数据，如文件[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，图像、 视频和音频。 Windows Presentation Foundation (WPF) 提供了配置、 确定，并使用这些类型的数据文件，称为应用程序数据文件的特殊支持。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  

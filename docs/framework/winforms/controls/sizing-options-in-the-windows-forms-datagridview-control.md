@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1da98dfa58651eca2052f7d180912d1aa2898385
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651967"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的大小调整选项
 <xref:System.Windows.Forms.DataGridView> 行、 列和标头可以更改由于许多不同的匹配项的大小。 下表显示了这些情况的发生。  
@@ -46,13 +46,13 @@ ms.locfileid: "61903157"
 ## <a name="resizing-with-the-mouse"></a>使用鼠标调整大小  
  默认情况下，用户可以调整行、 列和不使用基于单元格的值自动调整大小模式的标头大小。 若要防止用户与其他模式，如列填充模式中，调整大小将设置一个或多个以下<xref:System.Windows.Forms.DataGridView>属性：  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  此外可以通过设置调整单个行或列的大小来防止用户其<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>属性。 默认情况下<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>属性值根据<xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>列的属性值和<xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>属性值的行。 如果显式设置<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>到<xref:System.Windows.Forms.DataGridViewTriState.True>或<xref:System.Windows.Forms.DataGridViewTriState.False>，但是，控件的值是该行或列的指定的值重写。 设置<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>到<xref:System.Windows.Forms.DataGridViewTriState.NotSet>还原继承。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "61903157"
   
  若要配置标头和行和不重写控件值的列的大小调整模式，设置一个或多个以下<xref:System.Windows.Forms.DataGridView>属性：  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  若要重写的单个列的控件的列大小调整模式，请设置其<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>属性的值以外的其他<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>。 列的大小调整模式实际上由其<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>属性。 此属性的值基于列的<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>属性值，除非该值<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>，在这种情况下该控件的<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>继承值。  
   
@@ -93,27 +93,27 @@ ms.locfileid: "61903157"
 ## <a name="programmatic-resizing"></a>以编程方式调整大小  
  禁用自动调整大小后，可以以编程方式设置的确切宽度或高度的行、 列或标头通过以下属性：  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  以编程方式还可以调整大小的行、 列和标头以适应其内容，使用以下方法：  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  这些方法将调整行、 列或一次标头而不是将它们配置为连续重设大小的大小。 新的大小自动计算要显示不经剪辑的所有单元格内容。 当您以编程方式调整列大小具有<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>的属性值<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>，但是，使用计算的基于内容的宽度来按比例调整列<xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>属性值和的实际列宽度以便所有列都填充可用显示区域的控件然后根据这些新的比例计算。  
   

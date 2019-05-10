@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830357"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649761"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>算术运算符 (Visual Basic)
 算术运算符用于执行许多熟悉涉及计算的数字表示的文本、 变量、 其他表达式、 函数和属性调用和常量的值的算术运算。 此外属于算术运算符将移位运算符，它在操作数的单个位级别上执行操作并向左或向右移动其位模式。  
@@ -70,13 +70,13 @@ ms.locfileid: "61830357"
   
  算术移位不是循环，这意味着移出结果的一端的数位另一端不重新移入。 因 shift 而空出的位设置，如下所示：  
   
--   0 表示算术左移位运算  
+- 0 表示算术左移位运算  
   
--   算术右移位运算的一个正数，数字为 0  
+- 算术右移位运算的一个正数，数字为 0  
   
--   算术右移位运算的无符号的数据类型为 0 (`Byte`， `UShort`， `UInteger`， `ULong`)  
+- 算术右移位运算的无符号的数据类型为 0 (`Byte`， `UShort`， `UInteger`， `ULong`)  
   
--   1 表示算术右移位运算的负号 (`SByte`， `Short`， `Integer`，或`Long`)  
+- 1 表示算术右移位运算的负号 (`SByte`， `Short`， `Integer`，或`Long`)  
   
  下面的示例将转移`Integer`左侧和右侧值。  
   

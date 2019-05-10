@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18d8a22e20626a30585f556f97b54c65f1ab46a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793713"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645779"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>使用 CommittableTransaction 执行显式事务
 <xref:System.Transactions.CommittableTransaction> 类为应用程序使用事务提供了一种显式方法，而不是隐式地使用 <xref:System.Transactions.TransactionScope> 类。 对于要跨多个函数调用或多个线程调用使用同一事务的应用程序，前一种类十分有用。 与 <xref:System.Transactions.TransactionScope> 类不同，应用程序编写器需要明确调用 <xref:System.Transactions.CommittableTransaction.Commit%2A> 和 <xref:System.Transactions.Transaction.Rollback%2A> 方法以提交或中止事务。  

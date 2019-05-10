@@ -2,12 +2,12 @@
 title: 持久性已颁发令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650087"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  
@@ -15,21 +15,21 @@ ms.locfileid: "61990205"
 ## <a name="discussion"></a>讨论  
  Windows Communication Foundation (WCF) 中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 配有[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
--   存在不能由内置令牌提供程序操作的凭据存储区。  
+- 存在不能由内置令牌提供程序操作的凭据存储区。  
   
--   如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端时使用的凭据的详细信息。  
+- 如果你想要提供您自己自定义机制，用于转换从点凭据时用户提供到 WCF 客户端时使用的凭据的详细信息。  
   
--   要生成一个自定义令牌。  
+- 要生成一个自定义令牌。  
   
  此示例演示如何生成一个自定义令牌提供程序，该提供程序可以缓存由安全令牌服务 (STS) 颁发的令牌。  
   
  总之，此示例将演示如下内容：  
   
--   如何使用自定义令牌提供程序对客户端进行配置。  
+- 如何使用自定义令牌提供程序对客户端进行配置。  
   
--   如何可以缓存已颁发的令牌，并将其提供给 WCF 客户端。  
+- 如何可以缓存已颁发的令牌，并将其提供给 WCF 客户端。  
   
--   客户端如何使用服务器的 X.509 证书对服务器进行身份验证。  
+- 客户端如何使用服务器的 X.509 证书对服务器进行身份验证。  
   
  此示例由客户端控制台程序 (Client.exe)、安全令牌服务控制台程序 (Securitytokenservice.exe) 和服务控制台程序 (Service.exe) 组成。 该服务实现定义“请求-答复”通信模式的协定。 该协定由 `ICalculator` 接口定义，此接口公开数学运算（加、减、乘和除）。 客户端从安全令牌服务 (STS) 中获取安全令牌，向给定数学运算的服务发出同步请求，服务使用结果进行回复。 客户端活动显示在控制台窗口中。  
   

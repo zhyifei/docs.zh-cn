@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb74c1ef1661fc8bd7a57f079f10d24a7eef8187
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639763"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>如何：在已绑定数据的 Windows 窗体 DataGridView 控件中自动生成列
 下面的代码示例演示如何显示来自绑定的数据源中的列<xref:System.Windows.Forms.DataGridView>控件。 当<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>属性值是`true`（默认值），<xref:System.Windows.Forms.DataGridViewColumn>为数据源表中的每个列创建。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863501"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635631"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的过程
 一个*过程*是 Visual Basic 语句括在声明语句块 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和一个匹配`End`声明。 在 Visual Basic 中的所有可执行语句必须位于某个过程内。  
@@ -24,11 +24,11 @@ ms.locfileid: "61863501"
 ## <a name="returning-from-a-procedure"></a>从过程中返回  
  过程运行完毕后，会将控件返回给调用代码。 若要执行此操作，可使用 [Return Statement](../../../../visual-basic/language-reference/statements/return-statement.md)、该过程相应的 [Exit Statement](../../../../visual-basic/language-reference/statements/exit-statement.md) 语句或 [End \<关键字> Statement ](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) 语句。 然后控件在过程调用之后传递给调用代码。  
   
--   使用 `Return` 语句，控件将立即返回到调用代码。 `Return` 语句之后的语句不会运行。 在同一过程中可拥有多个 `Return` 语句。  
+- 使用 `Return` 语句，控件将立即返回到调用代码。 `Return` 语句之后的语句不会运行。 在同一过程中可拥有多个 `Return` 语句。  
   
--   使用 `Exit Sub` 或 `Exit Function` 语句，控件立即返回到调用代码。 `Exit` 语句之后的语句不会运行。 在同一过程中可拥有多个 `Exit` 语句，也可混合 `Return` 和 `Exit` 语句。  
+- 使用 `Exit Sub` 或 `Exit Function` 语句，控件立即返回到调用代码。 `Exit` 语句之后的语句不会运行。 在同一过程中可拥有多个 `Exit` 语句，也可混合 `Return` 和 `Exit` 语句。  
   
--   如果一个过程没有 `Return` 或 `Exit` 语句，则在过程主体的最后一个语句之后以 `End Sub` 或 `End Function`、`End Get` 或 `End Set` 语句结尾。 `End` 语句立即将控件返回到调用代码。 一个过程中只能有一个 `End` 语句。  
+- 如果一个过程没有 `Return` 或 `Exit` 语句，则在过程主体的最后一个语句之后以 `End Sub` 或 `End Function`、`End Get` 或 `End Set` 语句结尾。 `End` 语句立即将控件返回到调用代码。 一个过程中只能有一个 `End` 语句。  
   
 ## <a name="parameters-and-arguments"></a>形参和实参  
  在大多数情况下，每次调用过程时，过程都需对不同数据进行操作。 可将此信息作为过程调用的一部分传递给该过程。 过程定义零个或多个形参，每个形参表示一个该过程希望你传递给它的值。 过程调用中，与过程定义中每个形参相对应的是的实参。 实参表示给定过程调用中传递给相应形参的值。  
@@ -36,19 +36,19 @@ ms.locfileid: "61863501"
 ## <a name="types-of-procedures"></a>过程类型  
  Visual Basic 使用几种类型的过程：  
   
--   [Sub 过程](./sub-procedures.md)执行操作，但不向调用代码返回值。  
+- [Sub 过程](./sub-procedures.md)执行操作，但不向调用代码返回值。  
   
--   事件处理过程是为响应由用户操作所引发的事件或由程序中的发生所引发的事件而执行的 `Sub` 过程。  
+- 事件处理过程是为响应由用户操作所引发的事件或由程序中的发生所引发的事件而执行的 `Sub` 过程。  
   
--   [Function 过程](./function-procedures.md)向调用代码返回值。 其可在返回前执行其他操作。
+- [Function 过程](./function-procedures.md)向调用代码返回值。 其可在返回前执行其他操作。
 
     某些用 C# 编写的函数会返回引用返回值。 函数调用方可修改返回值，这种修改反映在被调用对象的状态中。 从 Visual Basic 2017 开始，Visual Basic 代码可以使用引用返回值，但不能返回引用的值。 有关详细信息，请参阅[引用返回值](ref-return-values.md)。
   
--   [属性过程](./property-procedures.md)返回并分配对象或模块上的属性值。  
+- [属性过程](./property-procedures.md)返回并分配对象或模块上的属性值。  
   
--   如果一个或两个操作数是新定义的类或结构，则[运算符过程](./operator-procedures.md)定义标准运算符的行为。  
+- 如果一个或两个操作数是新定义的类或结构，则[运算符过程](./operator-procedures.md)定义标准运算符的行为。  
   
--   [Visual Basic 中的泛型过程](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)除定义其正常参数外，还定义一个或多个类型参数，因此调用代码可在每次调用时传递特定的数据类型。  
+- [Visual Basic 中的泛型过程](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)除定义其正常参数外，还定义一个或多个类型参数，因此调用代码可在每次调用时传递特定的数据类型。  
   
 ## <a name="procedures-and-structured-code"></a>过程和结构化代码  
  应用程序中的每行可执行代码都必须位于某个过程内，例如 `Main`、`calculate` 或 `Button1_Click`。 如果将较大的过程细分为较小的过程，则应用程序将更易读取。  
@@ -57,9 +57,9 @@ ms.locfileid: "61863501"
   
  使用过程来构建代码具有以下好处：  
   
--   过程允许将程序分解成离散的逻辑单元。 调试独立的单元比在没有过程时调试整个程序更容易。  
+- 过程允许将程序分解成离散的逻辑单元。 调试独立的单元比在没有过程时调试整个程序更容易。  
   
--   开发可供某一程序使用的过程后，也可在其他程序中使用它们，通常只需很少修改或无需修改。 这有助于避免代码重复。  
+- 开发可供某一程序使用的过程后，也可在其他程序中使用它们，通常只需很少修改或无需修改。 这有助于避免代码重复。  
   
 ## <a name="see-also"></a>请参阅
 

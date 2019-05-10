@@ -2,12 +2,12 @@
 title: 使用 ModelItem 编辑上下文
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8b2f2b8d4c528de14ea8b37e4eda8190f1757c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669493"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664706"
 ---
 # <a name="using-the-modelitem-editing-context"></a>使用 ModelItem 编辑上下文
 <xref:System.Activities.Presentation.Model.ModelItem> 编辑上下文是主机应用程序用来与设计器进行通信的对象。 <xref:System.Activities.Presentation.EditingContext> 公开两个可以使用的方法：<xref:System.Activities.Presentation.EditingContext.Items%2A> 和 <xref:System.Activities.Presentation.EditingContext.Services%2A>  

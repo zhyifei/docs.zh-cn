@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce8d4c5ede0d722d2c1768b9c2cd7929f296114e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651235"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 命名约定
 当在 Visual Basic 应用程序中命名元素时，该名称的第一个字符必须是字母字符或下划线。 但请注意，以下划线开头的名称不符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 0bda4ad6a4d5368d93e2ca603b78bf9db6aca858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9006e12838581a98c7e7945278c7d767a3074259
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920908"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661780"
 ---
 # <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 是因为它重载不符合 CLS 規格\<proceduresignature2 > 与它不同的仅通过数组参数类型的数组或数组参数类型的秩
 过程或属性被标记为`<CLSCompliant(True)>`时它将替代另一个过程或属性，而且它们的参数列表之间的唯一区别是交错数组的嵌套级别或数组的秩。  
@@ -37,9 +37,9 @@ ms.locfileid: "61920908"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果你需要 CLS 遵从性，定义在重载，可通过比仅引用此帮助页上的更改的更多方式彼此不同。  
+- 如果你需要 CLS 遵从性，定义在重载，可通过比仅引用此帮助页上的更改的更多方式彼此不同。  
   
--   如果你需要重载的区别仅由所做的更改引用上此帮助页上，删除<xref:System.CLSCompliantAttribute>与其定义或将其作为标记`<CLSCompliant(False)>`。  
+- 如果你需要重载的区别仅由所做的更改引用上此帮助页上，删除<xref:System.CLSCompliantAttribute>与其定义或将其作为标记`<CLSCompliant(False)>`。  
   
 ## <a name="see-also"></a>请参阅
 

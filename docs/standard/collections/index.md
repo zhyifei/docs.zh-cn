@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909126"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664577"
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 类似的数据在作为集合而存储和操作时通常可以得到更高效地处理。 可使用 <xref:System.Array?displayProperty=nameWithType> 类或 <xref:System.Collections>、<xref:System.Collections.Generic>、 <xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命令空间中的类来添加、移除和修改集合中的单个元素或一系列元素。  
@@ -30,17 +30,17 @@ ms.locfileid: "61909126"
 ## <a name="common-collection-features"></a>常用集合功能  
  所有集合都提供用于在集合中添加、删除或查找项的方法。 此外，所有直接或间接实现 <xref:System.Collections.ICollection> 接口或 <xref:System.Collections.Generic.ICollection%601> 接口的集合均共享这些功能：  
   
--   **可枚举集合**  
+- **可枚举集合**  
   
      .NET Framework 集合实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，以启用要循环访问的集合。 可将枚举器看作集合中可指向任何元素的可移动指针。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 语句和  [For Each...Next 语句](../../visual-basic/language-reference/statements/for-each-next-statement.md)使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法公开的枚举器并隐藏操作枚举器的复杂性。 此外，任何实现 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的集合均被认为是可查询类型，并可使用 LINQ 对其进行查询。 LINQ 查询提供数据访问的一个通用模式。 它们通常比标准 `foreach` 循环更简洁、更具可读性，并提供筛选、排序和分组功能。 LINQ 查询还可提高性能。 有关详细信息，请参阅 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、[LINQ 查询 (C#) 简介](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)和[基本查询操作 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
   
--   **可将集合内容复制到数组**  
+- **可将集合内容复制到数组**  
   
      可使用 **CopyTo** 方法将所有集合复制到数组中；但新数组中的元素顺序是以枚举器返回元素的顺序为依据。 得到的数组始终是一维的，下限为零。  
   
  此外，许多集合类包含下列功能：  
   
--   **容量和计数属性**  
+- **容量和计数属性**  
   
      集合的容量是它可包含的元素数。 集合的计数是它实际所含的元素数。 某些集合隐藏容量、计数或将这两者都隐藏。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "61909126"
   
      <xref:System.Collections.BitArray> 是一种特殊情况；它的容量与其长度相同，而其长度与其计数相同。  
   
--   **下限一致**  
+- **下限一致**  
   
      集合的下限是其第一个元素的索引。 <xref:System.Collections> 命名空间中的所有索引集合的下限均为零，这表示它们从 0 开始建立索引。 <xref:System.Array> 默认下限为零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 创建 Array 类的实例时可定义其他下限。  
   
--   **同步以从多个线程进行访问**（仅 <xref:System.Collections> 类）。  
+- **同步以从多个线程进行访问**（仅 <xref:System.Collections> 类）。  
   
      <xref:System.Collections> 命名空间中的非泛型集合类型通过同步提供一些线程安全性；通常通过 <xref:System.Collections.ICollection.SyncRoot%2A> 和 <xref:System.Collections.ICollection.IsSynchronized%2A> 成员公开。 这些集合不是默认为线程安全的。 如需对集合进行可扩展、高效的多线程访问，请使用 <xref:System.Collections.Concurrent> 命名空间中的一个类或考虑使用不可变集合。 有关详细信息，请参阅[线程安全集合](../../../docs/standard/collections/thread-safe/index.md)。  
   

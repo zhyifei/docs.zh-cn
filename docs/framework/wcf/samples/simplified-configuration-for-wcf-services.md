@@ -2,12 +2,12 @@
 title: WCF 服务的简化配置
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 791d2dcf2578ed0b816450f558654dae259653bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007846"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650983"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服务的简化配置
 此示例演示如何实现和配置典型的服务和客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  

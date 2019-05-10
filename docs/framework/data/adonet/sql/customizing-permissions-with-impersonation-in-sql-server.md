@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模拟自定义权限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d44e410727924260640f0f50aea5ea41f264f3af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877898"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650346"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模拟自定义权限
 许多应用程序都使用存储过程来访问数据，依靠所属权链接来限制对基表的访问。 您可以授予针对存储过程的 EXECUTE 权限，撤消或拒绝针对基表的权限。 如果存储过程和表具有相同的所有者，则 SQL Server 不检查调用方的权限。 但是，如果对象具有不同的所有者或使用动态 SQL，则所属权链接不起作用。  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>指定执行上下文  
  除了指定用户外，还可以将 EXECUTE AS 与以下任意关键字一起使用。  
   
--   CALLER。 以 CALLER 身份执行是默认设置；如果未指定其他选项，则过程将在调用方的安全上下文中运行。  
+- CALLER。 以 CALLER 身份执行是默认设置；如果未指定其他选项，则过程将在调用方的安全上下文中运行。  
   
--   OWNER。 以 OWNER 身份执行将在过程所有者的上下文中执行过程。 如果过程是在 `dbo` 或数据库所有者拥有的架构中创建的，则此过程将以无限制权限执行。  
+- OWNER。 以 OWNER 身份执行将在过程所有者的上下文中执行过程。 如果过程是在 `dbo` 或数据库所有者拥有的架构中创建的，则此过程将以无限制权限执行。  
   
--   SELF。 以 SELF 身份执行将在存储过程创建者的安全上下文中执行。 这相当于以指定用户的身份执行，这里的指定用户是指创建或改变过程的人。  
+- SELF。 以 SELF 身份执行将在存储过程创建者的安全上下文中执行。 这相当于以指定用户的身份执行，这里的指定用户是指创建或改变过程的人。  
   
 ## <a name="see-also"></a>请参阅
 

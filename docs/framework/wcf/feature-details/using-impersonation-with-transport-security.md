@@ -2,12 +2,12 @@
 title: 将模拟用于传输安全
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f392dbe5806532eba181adef4ba3c8bebce9eddd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050670"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637448"
 ---
 # <a name="using-impersonation-with-transport-security"></a>将模拟用于传输安全
 *模拟*是服务器应用程序的客户端标识的能力。 服务在验证对资源的访问时常常使用模拟。 服务器应用程序使用服务帐户运行，但当服务器接受客户端连接时，它模拟客户端，以便使用客户端凭据执行访问检查。 传输安全是一种传递凭据和使用这些凭据确保通信安全的机制。 本主题介绍使用模拟功能具有 Windows Communication Foundation (WCF) 中的传输安全性。 有关使用消息安全的模拟的详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  

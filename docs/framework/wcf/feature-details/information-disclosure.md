@@ -2,12 +2,12 @@
 title: 信息泄露
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef660262925260ab5181829c38e32fd2c78b44e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972596"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638687"
 ---
 # <a name="information-disclosure"></a>信息泄露
 信息泄露会使攻击者获得有价值的系统相关信息。 因此，应始终考虑到您正在泄露何种信息以及恶意用户是否可能使用这些信息。 下面列出了可能的信息泄露攻击并针对每种攻击提供了缓解措施。  

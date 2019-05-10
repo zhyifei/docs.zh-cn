@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eeff1c78b768e2c8f5a2583db86480ad96c5a9b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967606"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655450"
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
 调度程序负责从基础通道提取出传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。  

@@ -2,12 +2,12 @@
 title: JSON Web 标记处理程序
 ms.date: 03/30/2017
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-ms.openlocfilehash: 27c01a3d0ce0f2891b00ad28526d4753b9be4ce0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ffaaaebd87c63b784a749f8998d43d14fe768e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641114"
 ---
 # <a name="json-web-token-handler"></a>JSON Web 标记处理程序
 Windows Identity Foundation 的 JSON Web 标记处理程序扩展使你能够在应用程序中创建和验证 JSON Web 标记 (JWT)。 可将 JWT 标记处理程序配置为像其他内置安全标记处理程序一样在 WIF 管线中运行，但也可以单独使用它来在轻型应用程序中执行标记验证。 在使用 OAuth 2.0 持有人标记方案（例如，对 Microsoft Azure Active Directory 进行身份验证）时，JWT 标记处理程序尤其有用。  

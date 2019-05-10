@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3972b1c68fa4012de01d4b675523814911f6bae8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047940"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635001"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>如何：使 X.509 证书可由 WCF 访问
 若要使 X.509 证书对 Windows Communication Foundation (WCF) 访问，应用程序代码必须指定证书存储区名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储区中的 X.509 证书关联的私钥，WCF 必须有权执行此操作。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  

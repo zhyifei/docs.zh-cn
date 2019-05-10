@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01f9784cc2263c282d75251556a1f000027ca2ae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868753"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639790"
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "61868753"
   
  本主题包含以下各节：  
   
--   [1 级透明度模型](#the_level_1_transparency_model)  
+- [1 级透明度模型](#the_level_1_transparency_model)  
   
--   [透明性属性](#transparency_attributes)  
+- [透明性属性](#transparency_attributes)  
   
--   [安全透明度示例](#security_transparency_examples)  
+- [安全透明度示例](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>1 级透明度模型  
@@ -40,11 +40,11 @@ ms.locfileid: "61868753"
   
  可将整个程序集、程序集中的某些类或类中的某些方法标记为安全透明。 安全透明的代码不能提升特权。 此限制会造成三个后果：  
   
--   安全透明的代码不能执行 <xref:System.Security.Permissions.SecurityAction.Assert> 操作。  
+- 安全透明的代码不能执行 <xref:System.Security.Permissions.SecurityAction.Assert> 操作。  
   
--   安全透明的代码将满足的任何链接要求都会变成完全要求。  
+- 安全透明的代码将满足的任何链接要求都会变成完全要求。  
   
--   若有任何必须在安全透明的代码中执行的不安全代码（不可验证的代码），都会引起对 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 安全权限的完全要求。  
+- 若有任何必须在安全透明的代码中执行的不安全代码（不可验证的代码），都会引起对 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 安全权限的完全要求。  
   
  在执行期间，公共语言运行时 (CLR) 会强制执行这些规则。 安全透明的代码会将其调用的代码的所有安全需求全部传递回调用方。 流过安全透明代码的要求不能提升特权。 如果低信任应用程序调用安全透明的代码并导致对高特权的要求，该要求将流回低信任代码并失败。 由于安全透明的代码不能执行断言操作，因此该代码不能停止该要求。 从完全信任代码中调用相同的安全透明代码将使要求成功。  
   

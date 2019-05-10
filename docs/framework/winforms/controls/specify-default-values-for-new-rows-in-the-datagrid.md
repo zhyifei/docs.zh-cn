@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 8a90cbef7032fd3753a6c9ec0b856a4e2ea1db27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009729"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651951"
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值
 应用程序填充默认值为新添加的行时，可以进行数据输入更方便。 与<xref:System.Windows.Forms.DataGridView>类，您可以填充默认值与<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。 当用户输入新记录的行时，引发此事件。 当你的代码处理此事件时，可以填充具有所选的值的所需单元格。  

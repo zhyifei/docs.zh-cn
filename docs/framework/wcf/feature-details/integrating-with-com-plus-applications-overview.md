@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046913"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638641"
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
 Windows Communication Foundation (WCF) 提供了用于创建分布式应用程序的丰富环境。 如果你已在使用 COM + 中承载的基于组件的应用程序逻辑，可以使用 WCF 来扩展现有的逻辑，而不是无需将其重写。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  

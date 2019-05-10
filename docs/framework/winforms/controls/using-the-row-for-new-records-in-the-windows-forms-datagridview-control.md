@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651540"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中使用新记录行
 当你使用<xref:System.Windows.Forms.DataGridView>用于编辑应用程序中的数据，通常要使用户能够将新的数据行添加到数据存储。 <xref:System.Windows.Forms.DataGridView>控件通过其中总是最后一行以显示新记录，提供行来支持此功能。 它是使用其行标题中的星号 （*） 符号进行标记。 以下各节讨论一些应考虑启用程序与用于新记录的行时的情况。  

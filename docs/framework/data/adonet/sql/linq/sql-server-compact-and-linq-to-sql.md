@@ -2,12 +2,12 @@
 title: SQL Server Compact 与 LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: db3f7aef082d965dc27b69f5a966ff038c0ffac0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0cb45b31f7134264068297f54013f49b35f669d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917847"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651205"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact 与 LINQ to SQL
 SQL Server Compact 是与 Visual Studio 一起安装的默认数据库。 有关详细信息，请参阅[使用 SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))。  
@@ -19,28 +19,28 @@ SQL Server Compact 是与 Visual Studio 一起安装的默认数据库。 有关
   
  请注意下列特性：  
   
--   SQL Server Compact 打包为可直接对数据库文件（扩展名为 .sdf）使用的 DLL。  
+- SQL Server Compact 打包为可直接对数据库文件（扩展名为 .sdf）使用的 DLL。  
   
--   在与客户端应用程序相同的进程中运行的是 SQL Server Compact。 因此，与 SQL Server Compact 进行通信的效率可能大大高于与 SQL Server 通信。 但是，SQL Server Compact 确实需要耗费一定的开销与托管和非托管代码之间的互操作性。  
+- 在与客户端应用程序相同的进程中运行的是 SQL Server Compact。 因此，与 SQL Server Compact 进行通信的效率可能大大高于与 SQL Server 通信。 但是，SQL Server Compact 确实需要耗费一定的开销与托管和非托管代码之间的互操作性。  
   
--   SQL Server Compact DLL 的大小很小。 这一特征减小了应用程序的总大小。  
+- SQL Server Compact DLL 的大小很小。 这一特征减小了应用程序的总大小。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 运行时和 SQLMetal 命令行工具支持 SQL Server Compact。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 运行时和 SQLMetal 命令行工具支持 SQL Server Compact。  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 不支持 SQL Server Compact。  
+- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 不支持 SQL Server Compact。  
   
 ## <a name="feature-set"></a>功能集  
  SQL Server Compact 功能集可能会影响以下方面是 SQL Server 功能集相比要简单得[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]应用程序：  
   
--   SQL Server Compact 不支持存储过程或视图。  
+- SQL Server Compact 不支持存储过程或视图。  
   
--   SQL Server Compact 仅支持部分数据类型和 SQL 函数。  
+- SQL Server Compact 仅支持部分数据类型和 SQL 函数。  
   
--   SQL Server Compact 仅支持部分 SQL 构造。  
+- SQL Server Compact 仅支持部分 SQL 构造。  
   
--   SQL Server Compact 仅提供具有最基本功能的优化器。 有些查询可能会超时。  
+- SQL Server Compact 仅提供具有最基本功能的优化器。 有些查询可能会超时。  
   
--   SQL Server Compact 不支持部分信任。  
+- SQL Server Compact 不支持部分信任。  
   
 ## <a name="see-also"></a>请参阅
 

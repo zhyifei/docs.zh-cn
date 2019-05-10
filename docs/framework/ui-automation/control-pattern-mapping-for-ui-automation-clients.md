@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 78274e2a5597291adcdafccf759b826f54a264ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609888"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647202"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自动化客户端的控件模式映射
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "61609888"
 |控件类型|支持|有条件支持|不支持|  
 |------------------|---------------|-------------------------|-------------------|  
 |Button|None|调用、切换、展开折叠|None|  
-|Calendar|网格、表|选择、滚动|“值”|  
+|Calendar|网格、表|选择、滚动|值|  
 |复选框|切换|None|None|  
 |组合框|展开/折叠|选择、值|Scroll|  
 |数据网格|Grid|滚动、选择、表|None|  
@@ -45,7 +45,7 @@ ms.locfileid: "61609888"
 |Group|None|展开/折叠|None|  
 |Header|None|Transform|None|  
 |标头项|None|转换、调用|None|  
-|超链接|调用|“值”|None|  
+|超链接|调用|值|None|  
 |图像|None|网格项、表项|调用、选择项|  
 |列表|None|网格、多个视图、滚动、选择|表|  
 |列表项|选择项|展开折叠、网格项、调用、滚动项、切换、值|None|  
@@ -64,7 +64,7 @@ ms.locfileid: "61609888"
 |Tab|选择|Scroll|None|  
 |选项卡项|选择项|None|调用|  
 |表|网格、网格项、表、表项|None|None|  
-|Text|None|网格项、表项、文本|“值”|  
+|Text|None|网格项、表项、文本|值|  
 |Thumb|Transform|None|None|  
 |标题栏|None|None|None|  
 |工具栏|None|停靠、展开折叠、转换|None|  

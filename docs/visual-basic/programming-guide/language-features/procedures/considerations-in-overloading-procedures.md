@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b5a26a8b68a2f786213aa49f30247d692b3de2f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649650"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>重载过程注意事项 (Visual Basic)
 重载的过程，您必须使用不同*签名*为每个重载版本。 这通常意味着每个版本必须指定不同的参数列表。 详细信息，请参阅"不同的签名"中[过程重载](./procedure-overloading.md)。  

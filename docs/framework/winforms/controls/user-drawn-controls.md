@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd7ce150e4dc0ecfe53f92ec8b557459f1e14e3a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651568"
 ---
 # <a name="user-drawn-controls"></a>用户描述的控件
 .NET Framework 为您提供了轻松开发自己的控件的功能。 可以创建一个用户控件，这是一组标准控件绑定到一起的代码，或您可以设计自己的控件的基础知识，设置。 甚至可以使用继承创建继承自现有控件的控件并将添加到其固有的功能。 无论何种方法使用，.NET Framework 提供了用于绘制用于您创建的任何控件的自定义图形界面的功能。  

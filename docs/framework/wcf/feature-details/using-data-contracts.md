@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f33bdc006c6b965ba60257637f3cef182555d7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637725"
 ---
 # <a name="using-data-contracts"></a>使用数据协定
 “数据协定”  是在服务与客户端之间达成的正式协议，用于以抽象方式描述要交换的数据。 也就是说，为了进行通信，客户端和服务不必共享相同的类型，而只需共享相同的数据协定。 数据协定为每个参数或返回类型精确定义为进行交换而序列化哪些数据（将哪些数据转换为 XML）。  

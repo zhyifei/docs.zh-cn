@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ba821b461434cb7a5247d2962a161a1c171bbd14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792257"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651463"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>演练：创建未绑定的 Windows 窗体 DataGridView 控件
 您可能经常想要显示不是从数据库的表格数据。 例如，你可能想要显示二维数组的字符串的内容。 <xref:System.Windows.Forms.DataGridView>类提供了简单且高度可自定义的方式来显示数据，而不绑定到数据源。 本演练演示如何填充<xref:System.Windows.Forms.DataGridView>控制和管理的添加和删除"取消绑定"模式中的行。 默认情况下，用户可以添加新行。 若要禁止添加行，将设置<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性是`false`。  
