@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |生�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811823"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614511"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>生成适用于云的可复原服务：在云中处理暂时性故障
 
@@ -43,19 +43,19 @@ ms.locfileid: "61811823"
 
 ### <a name="additional-resources"></a>其他资源
 
--   **实现弹性通信来处理部分失败错误**
+- **实现弹性通信来处理部分失败错误**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **实体框架连接复原和重试逻辑 （6 和更高版本）**
+- **实体框架连接复原和重试逻辑 （6 和更高版本）**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **暂时性故障处理应用程序块**
+- **暂时性故障处理应用程序块**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Polly 适用于弹性 HTTP 通信库**
+- **Polly 适用于弹性 HTTP 通信库**
 
     https://github.com/App-vNext/Polly
 

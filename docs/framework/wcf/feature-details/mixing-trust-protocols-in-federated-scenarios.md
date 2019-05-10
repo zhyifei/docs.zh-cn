@@ -2,12 +2,12 @@
 title: 在联合方案中混合信任协议
 ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
-ms.openlocfilehash: ce5c3a1875d84d98068dcc78d8346a88bc0b28f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18f486b9de83db48e186bb3856aff6cc6ccb56b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046679"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606513"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>在联合方案中混合信任协议
 联合客户端与服务进行通信时，有些服务的信任版本与安全令牌服务 (STS) 的信任版本不同。 服务 WSDL 包含的 `RequestSecurityTokenTemplate` 断言可能具有与 STS 不同版本的 WS-Trust 元素。 在这种情况下，Windows Communication Foundation (WCF) 客户端将从接收的 Ws-trust 元素`RequestSecurityTokenTemplate`以匹配 STS 信任版本。 WCF 处理标准绑定不匹配的信任版本。 由 WCF 识别的所有标准算法参数为标准绑定的一部分。 本主题介绍 WCF 行为的各种服务和 STS 之间的信任设置。  

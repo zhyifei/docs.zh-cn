@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627032"
 ---
 # <a name="data-transfer-architectural-overview"></a>数据传输体系结构概述
 Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它可以接收消息，处理消息，根据用户代码调度消息以便进一步操作，或者从用户代码给定的数据构造消息并将消息发送到目标。 本主题旨在向高级开发人员说明用于处理消息和所包含数据的体系结构。 有关如何发送和接收数据的面向任务的更简单介绍，请参阅 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
 ### <a name="getting-data-from-a-message-body"></a>从消息正文获取数据  
  可以采用两种主要方式提取消息正文中存储的数据：  
   
--   通过调用 <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 方法并传入一个 XML 编写器，可以一次获取整个消息正文。 完整的消息正文会写出到此编写器中。 一次获取整个消息正文也称为“写入消息” 。 编写主要由通道堆栈在发送消息时完成：通道堆栈的某些部分通常会访问整个消息正文、进行编码，然后发送整个消息正文。  
+- 通过调用 <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 方法并传入一个 XML 编写器，可以一次获取整个消息正文。 完整的消息正文会写出到此编写器中。 一次获取整个消息正文也称为“写入消息” 。 编写主要由通道堆栈在发送消息时完成：通道堆栈的某些部分通常会访问整个消息正文、进行编码，然后发送整个消息正文。  
   
--   从消息正文获取信息的另一种方式是调用 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> 并获取一个 XML 读取器。 之后可以通过在读取器上调用方法，根据需要按顺序访问消息正文。 逐段获取消息正文也称为“读取消息” 。 读取消息主要由服务框架在接收消息时使用。 例如，使用 <xref:System.Runtime.Serialization.DataContractSerializer> 时，服务框架将使用 XML 读取器获取消息正文并将其传递给反序列化引擎，之后，反序列化引擎将开始逐元素地读取消息并构造相应对象图。  
+- 从消息正文获取信息的另一种方式是调用 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> 并获取一个 XML 读取器。 之后可以通过在读取器上调用方法，根据需要按顺序访问消息正文。 逐段获取消息正文也称为“读取消息” 。 读取消息主要由服务框架在接收消息时使用。 例如，使用 <xref:System.Runtime.Serialization.DataContractSerializer> 时，服务框架将使用 XML 读取器获取消息正文并将其传递给反序列化引擎，之后，反序列化引擎将开始逐元素地读取消息并构造相应对象图。  
   
  消息正文只能检索一次。 这为使用只进流提供了可能。 例如，您可以写入一个从 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 读取数据的 <xref:System.IO.FileStream> 重写，并以 XML Infoset 形式返回结果。 永远不需要"后退"到该文件的开头。  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider 接口  
  在将包含经过流处理的正文的传出消息写入 XML 编写器时， <xref:System.ServiceModel.Channels.Message> 会在其 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 实现中使用类似于下面的一系列调用：  
   
--   写入流之前的所有必要信息（例如 XML 开始标记）。  
+- 写入流之前的所有必要信息（例如 XML 开始标记）。  
   
--   写入流。  
+- 写入流。  
   
--   写入流之后的任何信息（例如 XML 结束标记）。  
+- 写入流之后的任何信息（例如 XML 结束标记）。  
   
  这对于类似于文本 XML 编码的编码可以正常工作。 但是，有些编码不将 XML Infoset 信息（例如，开始和结束 XML 元素的标记）和元素中包含的数据放在一起。 例如，在 MTOM 编码中，消息拆分为多个部分。 一部分包含 XML Infoset，其中可能包含对实际元素内容的其他部分的引用。 由于 XML Infoset 通常比流处理的内容小，因此有必要缓冲 Infoset，将其写出，然后以流处理方式写入内容。 这意味着在写入结束元素标记时，应当尚未写出流。  
   

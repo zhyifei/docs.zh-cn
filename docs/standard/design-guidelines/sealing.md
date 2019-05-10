@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f25573c0fef29ef54dc04c5287757903429d89d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615205"
 ---
 # <a name="sealing"></a>密封
 面向对象的框架的一个特性是开发人员可以以框架设计者未曾预料到的方式扩展和定制它们。 这是可扩展设计的强大和危险之处。 因此，在设计框架时，必须根据需要仔细设计可扩展性并在不安全的情况下对其进行限制。  

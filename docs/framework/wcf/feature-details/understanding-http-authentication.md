@@ -2,12 +2,12 @@
 title: 了解 HTTP 身份验证
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebfb5920fcd5c1a8faac8780dc1c32c92f9f6255
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918900"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614817"
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 身份验证
 身份验证是判断客户端是否有资格访问资源的过程。 HTTP 协议支持将身份验证作为协商访问安全资源的一种方式。  
@@ -29,11 +29,11 @@ ms.locfileid: "61918900"
 ## <a name="choosing-an-authentication-scheme"></a>选择身份验证方案  
  为 HTTP 服务器选择可能的身份验证方案时，需要考虑的事项包括以下几点：  
   
--   考虑是否需要保护资源。 使用 HTTP 身份验证需要传输更多数据，并可以限制与客户端的互操作性。 允许匿名访问不需要保护的资源。  
+- 考虑是否需要保护资源。 使用 HTTP 身份验证需要传输更多数据，并可以限制与客户端的互操作性。 允许匿名访问不需要保护的资源。  
   
--   如果资源需要保护，则要考虑哪种身份验证方案可以提供所需的安全级别。 此处讨论的安全级别最低的标准身份验证方案是基本身份验证。 基本身份验证不保护用户的凭据。 安全级别最高的标准身份验证方案是协商身份验证，它将使用 Kerberos 协议。  
+- 如果资源需要保护，则要考虑哪种身份验证方案可以提供所需的安全级别。 此处讨论的安全级别最低的标准身份验证方案是基本身份验证。 基本身份验证不保护用户的凭据。 安全级别最高的标准身份验证方案是协商身份验证，它将使用 Kerberos 协议。  
   
--   服务器不应（在 WWW-Authentication 头中）提供任何它不准备接受或不足以保护受保护资源安全的方案。 客户端可以在服务器提供的任何身份验证方案间自由选择。 某些客户端默认选择安全级别低的身份验证方案，或选择服务器列表中的第一个身份验证方案。  
+- 服务器不应（在 WWW-Authentication 头中）提供任何它不准备接受或不足以保护受保护资源安全的方案。 客户端可以在服务器提供的任何身份验证方案间自由选择。 某些客户端默认选择安全级别低的身份验证方案，或选择服务器列表中的第一个身份验证方案。  
   
 ## <a name="see-also"></a>请参阅
 

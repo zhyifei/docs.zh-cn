@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344658"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625869"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
 程序集的供应商可以声明应用程序应通过包括发布服务器策略文件与升级后的程序集使用的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译到程序集中，放置在全局程序集缓存中。  
@@ -57,15 +57,15 @@ ms.locfileid: "59344658"
   
      在此命令：  
   
-    -   *PublisherPolicyFile*参数是发布服务器策略文件的名称。  
+    - *PublisherPolicyFile*参数是发布服务器策略文件的名称。  
   
-    -   *PublisherPolicyAssemblyFile*参数是此命令生成的发布服务器策略程序集的名称。 程序集文件名称必须遵循格式：  
+    - *PublisherPolicyAssemblyFile*参数是此命令生成的发布服务器策略程序集的名称。 程序集文件名称必须遵循格式：  
   
          **策略。** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile*参数是包含密钥对的文件的名称。 您必须签署的程序集和发行者策略程序集具有相同的密钥对。  
+    - *KeyPairFile*参数是包含密钥对的文件的名称。 您必须签署的程序集和发行者策略程序集具有相同的密钥对。  
   
-    -   *ProcessorArchitecture*参数标识的特定于处理器的程序集的目标平台。  
+    - *ProcessorArchitecture*参数标识的特定于处理器的程序集的目标平台。  
   
         > [!NOTE]
         >  面向特定的处理器体系结构的功能是.NET Framework 2.0 版中的新增功能。  

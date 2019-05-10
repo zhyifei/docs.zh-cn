@@ -2,12 +2,12 @@
 title: 疑难解答
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917625"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613766"
 ---
 # <a name="troubleshooting"></a>疑难解答
 下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。  
@@ -31,9 +31,9 @@ ms.locfileid: "61917625"
 ## <a name="cascade-delete"></a>级联删除  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持且无法识别级联删除操作。 如果要在表中删除一个具有约束的行，必须执行以下操作之一：  
   
--   在数据库的外键约束中设置 `ON DELETE CASCADE` 规则。  
+- 在数据库的外键约束中设置 `ON DELETE CASCADE` 规则。  
   
--   使用你自己的代码先删除阻止删除父对象的子对象。  
+- 使用你自己的代码先删除阻止删除父对象的子对象。  
   
  否则，将引发 <xref:System.Data.SqlClient.SqlException> 异常。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "61917625"
 ## <a name="expression-not-queryable"></a>不可查询的表达式  
  如果收到错误消息“表达式 [表达式] 不可查询；是否缺少程序集引用?” ，请确保满足以下要求：  
   
--   应用程序面向的是 [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)]。  
+- 应用程序面向的是 [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)]。  
   
--   您具有对 `System.Core.dll` 和 `System.Data.Linq.dll` 的引用。  
+- 您具有对 `System.Core.dll` 和 `System.Data.Linq.dll` 的引用。  
   
--   你有`Imports`(Visual Basic) 或`using`(C#) 指令<xref:System.Linq>和<xref:System.Data.Linq>。  
+- 你有`Imports`(Visual Basic) 或`using`(C#) 指令<xref:System.Linq>和<xref:System.Data.Linq>。  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  在调试 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目的过程中，可能会遍历某个实体的关系。 这样做会使这些项进入缓存，而 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会检测到这些项的存在。 如果随后试图执行 <xref:System.Data.Linq.Table%601.Attach%2A> 或 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>，或者执行一个生成具有相同键的多个行的类似方法，则会引发 <xref:System.Data.Linq.DuplicateKeyException>。  

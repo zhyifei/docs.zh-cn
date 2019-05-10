@@ -2,12 +2,12 @@
 title: System.String 方法
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613745"
 ---
 # <a name="systemstring-methods"></a>System.String 方法
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持以下 <xref:System.String> 方法。  
@@ -15,9 +15,9 @@ ms.locfileid: "61876650"
 ## <a name="unsupported-systemstring-methods-in-general"></a>一般情况下不支持的 System.String 方法  
  一般情况下不支持的 <xref:System.String> 方法：  
   
--   区分区域性的重载 (采用的方法`CultureInfo`  /  `StringComparison`  /  `IFormatProvider`)。  
+- 区分区域性的重载 (采用的方法`CultureInfo`  /  `StringComparison`  /  `IFormatProvider`)。  
   
--   带有或生成 `char` 数组的方法。  
+- 带有或生成 `char` 数组的方法。  
   
 ## <a name="unsupported-systemstring-static-methods"></a>不支持的 System.String 静态方法  
   
@@ -47,13 +47,13 @@ ms.locfileid: "61876650"
   
 ## <a name="differences-from-net"></a>与 .NET 的差异  
   
--   查询不考虑可能在服务器上生效的 SQL Server 排序规则，因而默认情况下将提供区分区域性和大小写的比较。 此行为不同于 .NET Framework 默认的区分大小写的语义。  
+- 查询不考虑可能在服务器上生效的 SQL Server 排序规则，因而默认情况下将提供区分区域性和大小写的比较。 此行为不同于 .NET Framework 默认的区分大小写的语义。  
   
--   当`LastIndexOf`返回 0，则说明的字符串是`NULL`或找到的位置为 0。  
+- 当`LastIndexOf`返回 0，则说明的字符串是`NULL`或找到的位置为 0。  
   
--   对长度固定的字符串（`CHAR`、`NCHAR`）执行串联或其他运算时，可能会返回意外结果，原因是这些类型会自动在数据库中应用空白。  
+- 对长度固定的字符串（`CHAR`、`NCHAR`）执行串联或其他运算时，可能会返回意外结果，原因是这些类型会自动在数据库中应用空白。  
   
--   由于许多方法（如 `Replace`、`ToLower`、`ToUpper`）和字符索引器未实现对 `TEXT` 或 `NTEXT` 列以及 XML 的有效转换，因此，如果对它们进行正常转换，则会发生 `SqlExceptions`。 对这些类型而言，这种行为被视为可接受。 但是，所有字符串运算都必须符合 `VARCHAR`、`NVARCHAR`、`VARCHAR(max)` 和 `NVARCHAR(max)` 的公共语言运行库 (CLR) 语义。  
+- 由于许多方法（如 `Replace`、`ToLower`、`ToUpper`）和字符索引器未实现对 `TEXT` 或 `NTEXT` 列以及 XML 的有效转换，因此，如果对它们进行正常转换，则会发生 `SqlExceptions`。 对这些类型而言，这种行为被视为可接受。 但是，所有字符串运算都必须符合 `VARCHAR`、`NVARCHAR`、`VARCHAR(max)` 和 `NVARCHAR(max)` 的公共语言运行库 (CLR) 语义。  
   
 ## <a name="see-also"></a>请参阅
 

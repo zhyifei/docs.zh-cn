@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912868"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630433"
 ---
 # <a name="how-to-set-the-input-mask"></a>如何：设置输入掩码
 掩码的文本框控件是支持的声明性语法来接受或拒绝用户输入增强的文本框控件。 通过设置掩码属性，可以指定允许的用户输入，而无需在应用程序中编写任何自定义验证逻辑。 有关详细信息，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox>类。  
@@ -34,15 +34,15 @@ ms.locfileid: "61912868"
   
 1. 在中**设计**视图中，选择<xref:System.Windows.Forms.MaskedTextBox>。  
   
-    1.  单击要打开的智能标记**MaskedTextBox 任务**面板。  
+    1. 单击要打开的智能标记**MaskedTextBox 任务**面板。  
   
-    2.  单击**设置掩码**。  
+    2. 单击**设置掩码**。  
   
      \- 或 -  
   
-    1.  在中**属性**窗口中，选择<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。  
+    1. 在中**属性**窗口中，选择<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。  
   
-    2.  单击属性值列中的省略号按钮。  
+    2. 单击属性值列中的省略号按钮。  
   
      **输入掩码**对话框随即出现。  
   

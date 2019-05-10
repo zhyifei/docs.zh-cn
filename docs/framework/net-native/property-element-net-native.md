@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 374ace4ec5e25731e4a7e958be145a660ff2ef7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614872"
 ---
 # <a name="property-element-net-native"></a>\<属性 > 元素 (.NET Native)
 将运行时反射策略应用到一个属性。  
@@ -37,13 +37,13 @@ ms.locfileid: "61866764"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |method_name|属性名称。 该属性的类型由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这个属性的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
@@ -81,9 +81,9 @@ ms.locfileid: "61866764"
   
  然而，编译和执行此示例将引发 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常。 尽管我们已经使 `Book` 类型的元数据变得可用，我们却未使属性获取者的实施变得动态可用。 我们可通过以下方法之一纠正这个错误：  
   
--   通过在其 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素中为 `Book` 类型定义 `Dynamic` 策略。  
+- 通过在其 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素中为 `Book` 类型定义 `Dynamic` 策略。  
   
--   通过为我们想要调用其 getter 的每个属性添加一个嵌套 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 元素，如以下 default.rd.xml 文件所示。  
+- 通过为我们想要调用其 getter 的每个属性添加一个嵌套 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 元素，如以下 default.rd.xml 文件所示。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

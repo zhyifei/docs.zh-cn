@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d24e7ad22eeebfb1c129306451aefbd393a9d087
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615799"
 ---
 # <a name="animation-tips-and-tricks"></a>动画提示和技巧
 使用中的动画时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，有一些提示和技巧，可使动画更好地执行，并避免挫折。  
@@ -41,11 +41,11 @@ ms.locfileid: "62020265"
   
  有关<xref:System.Windows.Media.Animation.Timeline>以反映更改，它的时钟必须重新生成并用于替换以前创建的时钟。 时钟不会自动重新生成。 以下是应用时间线更改的几种方法：  
   
--   如果时间线是或属于<xref:System.Windows.Media.Animation.Storyboard>，你可以使其通过重新应用其情节提要使用反映更改<xref:System.Windows.Media.Animation.BeginStoryboard>或<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法。 这还会产生重新启动动画的附带影响。 在代码中，可以使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法将情节提要回其之前的位置。  
+- 如果时间线是或属于<xref:System.Windows.Media.Animation.Storyboard>，你可以使其通过重新应用其情节提要使用反映更改<xref:System.Windows.Media.Animation.BeginStoryboard>或<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法。 这还会产生重新启动动画的附带影响。 在代码中，可以使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法将情节提要回其之前的位置。  
   
--   如果您将动画应用于属性使用直接<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法中，调用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>再次方法并将其传递已修改的动画。  
+- 如果您将动画应用于属性使用直接<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法中，调用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>再次方法并将其传递已修改的动画。  
   
--   如果要直接在时钟级别上工作，请创建并应用一组新的时钟，然后用它们替换之前生成的一组时钟。  
+- 如果要直接在时钟级别上工作，请创建并应用一组新的时钟，然后用它们替换之前生成的一组时钟。  
   
  有关时间线和时钟的详细信息，请参阅[动画和计时系统概述](animation-and-timing-system-overview.md)。  
   
@@ -105,13 +105,13 @@ ms.locfileid: "62020265"
   
  删除动画有多种不同的方法。 可以使用以下方法删除属于的动画<xref:System.Windows.Media.Animation.Storyboard>。  
   
--   若要删除<xref:System.Windows.Media.Animation.Storyboard>开始使用事件触发器，请参阅[如何：删除情节提要](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))。  
+- 若要删除<xref:System.Windows.Media.Animation.Storyboard>开始使用事件触发器，请参阅[如何：删除情节提要](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))。  
   
--   若要使用代码来删除<xref:System.Windows.Media.Animation.Storyboard>，请参阅<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>方法。  
+- 若要使用代码来删除<xref:System.Windows.Media.Animation.Storyboard>，请参阅<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>方法。  
   
  无论动画如何启动，都可以使用下一个技术。  
   
--   若要从特定的属性中删除动画，请使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>方法。 指定要进行动画处理的第一个参数的属性和`null`为第二个。 这将从该属性中删除所有动画时钟。  
+- 若要从特定的属性中删除动画，请使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>方法。 指定要进行动画处理的第一个参数的属性和`null`为第二个。 这将从该属性中删除所有动画时钟。  
   
  有关属性进行动画处理的不同方式的详细信息，请参阅[属性动画技术概述](property-animation-techniques-overview.md)。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "62020265"
   
  若要避免出现性能问题时应用大量时钟使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>，它们完成后，您应该从属性的基值删除组合时钟。 删除时钟有多种方法。  
   
--   若要从属性中删除所有时钟，请使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29>或<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>经过动画处理的对象的方法。 指定要进行动画处理的第一个参数的属性和`null`为第二个。 这将从该属性中删除所有动画时钟。  
+- 若要从属性中删除所有时钟，请使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29>或<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>经过动画处理的对象的方法。 指定要进行动画处理的第一个参数的属性和`null`为第二个。 这将从该属性中删除所有动画时钟。  
   
--   若要删除特定<xref:System.Windows.Media.Animation.AnimationClock>从列表中的时钟，使用<xref:System.Windows.Media.Animation.Clock.Controller%2A>属性<xref:System.Windows.Media.Animation.AnimationClock>检索<xref:System.Windows.Media.Animation.ClockController>，然后调用<xref:System.Windows.Media.Animation.ClockController.Remove%2A>方法<xref:System.Windows.Media.Animation.ClockController>。 这通常是<xref:System.Windows.Media.Animation.Clock.Completed>时钟的事件处理程序。 请注意，只有根时钟可以受<xref:System.Windows.Media.Animation.ClockController>;<xref:System.Windows.Media.Animation.Clock.Controller%2A>子时钟的属性将返回`null`。 另请注意，<xref:System.Windows.Media.Animation.Clock.Completed>如果时钟的有效持续时间将永远不会调用事件。  在这种情况下，用户将需要确定何时调用<xref:System.Windows.Media.Animation.ClockController.Remove%2A>。  
+- 若要删除特定<xref:System.Windows.Media.Animation.AnimationClock>从列表中的时钟，使用<xref:System.Windows.Media.Animation.Clock.Controller%2A>属性<xref:System.Windows.Media.Animation.AnimationClock>检索<xref:System.Windows.Media.Animation.ClockController>，然后调用<xref:System.Windows.Media.Animation.ClockController.Remove%2A>方法<xref:System.Windows.Media.Animation.ClockController>。 这通常是<xref:System.Windows.Media.Animation.Clock.Completed>时钟的事件处理程序。 请注意，只有根时钟可以受<xref:System.Windows.Media.Animation.ClockController>;<xref:System.Windows.Media.Animation.Clock.Controller%2A>子时钟的属性将返回`null`。 另请注意，<xref:System.Windows.Media.Animation.Clock.Completed>如果时钟的有效持续时间将永远不会调用事件。  在这种情况下，用户将需要确定何时调用<xref:System.Windows.Media.Animation.ClockController.Remove%2A>。  
   
  此动画问题主要出现在生存期较长的对象上。  当对某个对象进行垃圾回收时，它的时钟也会断开连接并进行垃圾回收。  
   

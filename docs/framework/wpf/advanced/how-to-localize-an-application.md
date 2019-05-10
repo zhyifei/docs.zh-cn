@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298313"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614625"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -91,21 +91,21 @@ ms.locfileid: "59298313"
   
 4. 运行 LocBaml 时可指定下列选项：  
   
-    -   **分析**或 **-p:** 分析 Baml、 资源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]文件以生成.csv 或.txt 文件。  
+    - **分析**或 **-p:** 分析 Baml、 资源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]文件以生成.csv 或.txt 文件。  
   
-    -   **生成**或 **-g:** 通过使用翻译的文件生成本地化的二进制文件。  
+    - **生成**或 **-g:** 通过使用翻译的文件生成本地化的二进制文件。  
   
-    -   **out**或 **-o** {*filedirectory*] **:** 输出文件的名称。  
+    - **out**或 **-o** {*filedirectory*] **:** 输出文件的名称。  
   
-    -   **区域性**或 **-cul** {*区域性*] **:** 输出程序集的区域设置。  
+    - **区域性**或 **-cul** {*区域性*] **:** 输出程序集的区域设置。  
   
-    -   **translation** or **-trans** {*translation.csv*] **:** 已翻译或本地化文件。  
+    - **translation** or **-trans** {*translation.csv*] **:** 已翻译或本地化文件。  
   
-    -   **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码包含自定义控件，必须提供**asmpath**对自定义控件程序集。  
+    - **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码包含自定义控件，必须提供**asmpath**对自定义控件程序集。  
   
-    -   **nologo:** 显示没有徽标或版权信息。  
+    - **nologo:** 显示没有徽标或版权信息。  
   
-    -   **verbose:** 显示详细模式信息。  
+    - **verbose:** 显示详细模式信息。  
   
     > [!NOTE]
     >  如果要在运行该工具时需要的选项的列表，请键入**LocBaml.exe**然后按 ENTER。  
@@ -133,23 +133,23 @@ ms.locfileid: "59298313"
 
    这七个字段是：  
   
-   1.  **BAML 名称**。 与源语言附属程序集相关的 BAML 资源的名称。  
+   1. **BAML 名称**。 与源语言附属程序集相关的 BAML 资源的名称。  
   
-   2.  **资源键**。 本地化的资源标识符。  
+   2. **资源键**。 本地化的资源标识符。  
   
-   3.  **Category**。 值类型。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
+   3. **Category**。 值类型。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
-   4.  **Readability**。 值是否可以由本地化人员读取。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
+   4. **Readability**。 值是否可以由本地化人员读取。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
-   5.  **Modifiability**。 值是否可以由本地化人员修改。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
+   5. **Modifiability**。 值是否可以由本地化人员修改。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
-   6.  **注释**。 值的附加说明，用于确定值被本地化的方式。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
+   6. **注释**。 值的附加说明，用于确定值被本地化的方式。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
-   7.  **值**。 要翻译为所需区域性设置的文本值。  
+   7. **值**。 要翻译为所需区域性设置的文本值。  
   
    下表显示了这些字段映射到 .csv 文件的分隔值的方式：  
   
-   |BAML 名称|资源键|类别|可读性|可修改性|注释|“值”|  
+   |BAML 名称|资源键|类别|可读性|可修改性|注释|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|忽略|false|false||#Text1;#Text2|
    |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
@@ -188,9 +188,9 @@ ms.locfileid: "59298313"
   
 7. 若要测试新的附属程序集，你需要更改应用程序将在其下运行的区域性设置。 可以通过两种方法执行此操作：  
   
-    -   更改操作系统的区域设置 (**启动** &#124; **控制面板** &#124; **区域和语言选项**)。  
+    - 更改操作系统的区域设置 (**启动** &#124; **控制面板** &#124; **区域和语言选项**)。  
   
-    -   在你的应用程序中，将下列代码添加到 App.xaml.cs 中：  
+    - 在你的应用程序中，将下列代码添加到 App.xaml.cs 中：  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ ms.locfileid: "59298313"
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>使用 LocBaml 的一些提示  
   
--   所有定义自定义控件的依赖程序集必须复制到 LocBaml 的本地目录，或安装到 GAC。 这是必要的，因为本地化 API 在读取 [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] 时必须具有对依赖程序集的访问权限。  
+- 所有定义自定义控件的依赖程序集必须复制到 LocBaml 的本地目录，或安装到 GAC。 这是必要的，因为本地化 API 在读取 [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] 时必须具有对依赖程序集的访问权限。  
   
--   如果主程序集已签名，则生成的资源 DLL 也必须签名以进行加载。  
+- 如果主程序集已签名，则生成的资源 DLL 也必须签名以进行加载。  
   
--   本地化的资源 DLL 的版本需与主程序集进行同步。  
+- 本地化的资源 DLL 的版本需与主程序集进行同步。  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>下一步  

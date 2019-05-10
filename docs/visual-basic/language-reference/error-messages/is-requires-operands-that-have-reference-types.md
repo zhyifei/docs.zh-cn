@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65fbba9689ae01d8156bd0b3e2efeb6b75bd79e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799179"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625959"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>Is 要求具有引用类型的操作数，但此操作数具有值类型\<类型名称 >
 `Is`比较运算符确定两个对象变量是否引用同一个实例。 对于值类型未定义此比较。  
@@ -21,7 +21,7 @@ ms.locfileid: "61799179"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   使用适当的算术比较运算符或`Like`运算符比较两个值类型。  
+- 使用适当的算术比较运算符或`Like`运算符比较两个值类型。  
   
 ## <a name="see-also"></a>请参阅
 

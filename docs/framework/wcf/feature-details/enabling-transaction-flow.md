@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 180fc99195444057c5bbb4a1679e948f9ddf1830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 560b03b8e2788c88e6c92c64834bf36c750575ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856656"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626946"
 ---
 # <a name="enabling-transaction-flow"></a>启用事务流
 Windows Communication Foundation (WCF) 提供了用于控制事务流高度灵活的选项。 服务事务流设置可以使用属性与配置的组合来表示。  
@@ -17,11 +17,11 @@ Windows Communication Foundation (WCF) 提供了用于控制事务流高度灵�
 ## <a name="transaction-flow-settings"></a>事务流设置  
  服务终结点的事务流设置根据下列三个值的交集生成：  
   
--   为服务协定中的每个方法指定的 <xref:System.ServiceModel.TransactionFlowAttribute> 属性。  
+- 为服务协定中的每个方法指定的 <xref:System.ServiceModel.TransactionFlowAttribute> 属性。  
   
--   特定绑定中的 `TransactionFlow` 绑定属性。  
+- 特定绑定中的 `TransactionFlow` 绑定属性。  
   
--   特定绑定中的 `TransactionFlowProtocol` 绑定属性。 `TransactionFlowProtocol` 绑定属性允许您在可用于流动事务的两个不同事务协议之间进行选择。 后面几节将对这些协议逐一进行简要描述。  
+- 特定绑定中的 `TransactionFlowProtocol` 绑定属性。 `TransactionFlowProtocol` 绑定属性允许您在可用于流动事务的两个不同事务协议之间进行选择。 后面几节将对这些协议逐一进行简要描述。  
   
 ### <a name="ws-atomictransaction-protocol"></a>WS-AtomicTransaction 协议  
  WS-AtomicTransaction (WS-AT) 协议对于要求第三方协议堆栈具有互操作性时的情形非常有用。  

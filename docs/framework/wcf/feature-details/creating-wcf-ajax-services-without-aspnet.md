@@ -2,12 +2,12 @@
 title: 创建不使用 ASP.NET 的 WCF AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: 77a850408c3d952dbd4f682ea704d3248ae17c3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de7e5dc075a821518928514be532ea1940c1ff17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857202"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627119"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>创建不使用 ASP.NET 的 WCF AJAX 服务
 Windows Communication Foundation (WCF) AJAX 服务可以从任何支持 JavaScript 的网页，访问而无需 ASP.NET AJAX。 本主题介绍如何创建 WCF 服务。  
@@ -16,11 +16,11 @@ Windows Communication Foundation (WCF) AJAX 服务可以从任何支持 JavaScri
   
  有三个部分创建的 WCF AJAX 服务：  
   
--   创建一个可以从浏览器中访问的 AJAX 终结点。  
+- 创建一个可以从浏览器中访问的 AJAX 终结点。  
   
--   创建一个与 AJAX 兼容的服务协定。  
+- 创建一个与 AJAX 兼容的服务协定。  
   
--   访问 WCF AJAX 服务。  
+- 访问 WCF AJAX 服务。  
   
 ## <a name="creating-an-ajax-endpoint"></a>创建 AJAX 终结点  
  若要启用 WCF 服务中的 AJAX 支持的最基本方法是使用<xref:System.ServiceModel.Activation.WebServiceHostFactory>关联服务，如以下示例所示的.svc 文件中。  

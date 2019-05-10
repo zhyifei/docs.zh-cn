@@ -6,27 +6,27 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904536"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613038"
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 Windows Communication Foundation (WCF) 是一个框架，用于构建面向服务的应用程序。 使用 WCF，您可以发送数据作为异步消息从一个服务终结点到另一个。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：
 
--   处理企业事务的安全服务。
+- 处理企业事务的安全服务。
 
--   将当前数据提供给其他服务（例如流量报告或其他监视服务）的服务。
+- 将当前数据提供给其他服务（例如流量报告或其他监视服务）的服务。
 
--   使两个人能够实时通信或交换数据的聊天服务。
+- 使两个人能够实时通信或交换数据的聊天服务。
 
--   轮询一个或多个服务以查找数据并将其以逻辑表现形式展示出来的面板应用程序。
+- 轮询一个或多个服务以查找数据并将其以逻辑表现形式展示出来的面板应用程序。
 
--   将使用 Windows Workflow Foundation 实现的工作流作为 WCF 服务公开。
+- 将使用 Windows Workflow Foundation 实现的工作流作为 WCF 服务公开。
 
--   轮询服务以查找最新数据源的 Silverlight 应用程序。
+- 轮询服务以查找最新数据源的 Silverlight 应用程序。
 
 在创建此类应用程序可能存在 WCF 之前时，WCF 使终结点的开发比以往更容易。 总之，WCF 旨在提供一种创建 Web 服务和 Web 服务客户端的可管理方法。
 
@@ -34,51 +34,51 @@ Windows Communication Foundation (WCF) 是一个框架，用于构建面向服�
 
 WCF 包含以下功能集。 有关详细信息，请参阅[WCF 功能详细信息](../../../docs/framework/wcf/feature-details/index.md)。
 
--   **服务导向**
+- **服务导向**
 
      使用 WS 标准的一个结果是 WCF 使你能够创建*面向服务*应用程序。 面向服务的体系结构 (SOA) 依赖 Web 服务发送和接收数据。 这些服务具有松耦合的常规优点，而不是从一个应用程序到另一个应用程序进行硬编码。 松耦合关系意味着只要符合基本协定，则在任何平台上创建的任何客户端均可连接到所有服务。
 
--   **互操作性**
+- **互操作性**
 
      WCF 实现 Web 服务互操作性的现代行业的标准。 有关支持的标准的详细信息，请参阅[互操作性和集成](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)。
 
--   **多种消息模式**
+- **多种消息模式**
 
      采用多种模式之一交换消息。 最常用的模式是请求/答复模式，其中一个终结点从另一个终结点请求数据， 另一个终结点进行答复。 还有其他模式，比如单向消息，其中只有一个终结点发送消息，而不期望得到答复。 更复杂的模式是双工交换模式，在该模式下，两个终结点建立连接并来回发送数据，类似于即时消息传递程序。 有关如何实现不同消息交换模式使用 WCF 请参阅[协定](../../../docs/framework/wcf/feature-details/contracts.md)。
 
--   **服务元数据**
+- **服务元数据**
 
      WCF 支持使用 WSDL、 XML 架构和 Ws-policy 等行业标准中指定的格式发布服务元数据。 此元数据可用于自动生成并配置客户端用于访问 WCF 服务。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 有关详细信息，请参阅[元数据](../../../docs/framework/wcf/feature-details/metadata.md)。
 
--   **数据协定**
+- **数据协定**
 
      因为使用构建 WCF [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，它还包括代码友好提供你想要强制实施的约定的方法。 数据协定就是其中一种通用类型的协定。 实质上，当您使用 Visual C# 或 Visual Basic 对服务进行编码时，处理数据的最简单方法是使用属于数据实体的属性创建表示该数据实体的类。 WCF 包含用于在这一简便方式处理数据的综合系统。 在创建了表示数据的类之后，服务会自动生成使客户端能够符合所设计数据类型的元数据。 有关详细信息，请参阅[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
--   **安全性**
+- **安全性**
 
      可对消息进加密以保护隐私，而且可以要求用户对其自身进行身份验证，然后才允许接收消息。 可使用众所周知的标准（如 SSL 或 WS-SecureConversation）实现安全性。 有关详细信息，请参阅[安全性](../../../docs/framework/wcf/feature-details/security.md)。
 
--   **多种传输和编码方式**
+- **多种传输和编码方式**
 
      可通过多种内置传输协议和编码中的任意一种发送消息。 最常用的协议和编码是发送文本编码的 SOAP 消息使用在万维网上使用超文本传输协议 (HTTP)。 或者，WCF 允许您将消息发送通过 TCP、 命名管道或 MSMQ。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 有关支持由 WCF 传输和编码的详细信息请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。
 
--   **可靠的排队消息**
+- **可靠的排队消息**
 
      WCF 支持使用可靠会话通过 Ws-reliable Messaging 实现和使用 MSMQ 的可靠的消息交换。 有关 WCF 中的可靠和排队消息传递支持的详细信息请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。
 
--   **持久性消息**
+- **持久性消息**
 
      持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 此外可以创建使用 Windows Workflow Foundation (WF) 的持久消息。 有关详细信息，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)。
 
--   **事务**
+- **事务**
 
      WCF 还支持使用三个事务模型之一的事务：Ws-atomicttransactions、 中的 Api<xref:System.Transactions>命名空间，以及 Microsoft 分布式事务处理协调器。 有关事务的详细信息在 WCF 中的支持，请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。
 
--   **AJAX 和 REST 支持**
+- **AJAX 和 REST 支持**
 
      REST 是不断发展的 Web 2.0 技术的一个示例。 WCF 可以配置为处理未包装在 SOAP 信封中的"明文"XML 数据。 WCF 还可以扩展以支持特定的 XML 格式，如 ATOM (流行的 RSS 标准)，甚至非 XML 格式，如 JavaScript 对象表示法 (JSON)。
 
--   **扩展性**
+- **扩展性**
 
      WCF 体系结构具有大量扩展点。 如果需要额外功能，它还提供许多入口点，允许您自定义服务的行为。 有关可用扩展点，请参阅[Extending WCF](../../../docs/framework/wcf/extending/index.md)。
 

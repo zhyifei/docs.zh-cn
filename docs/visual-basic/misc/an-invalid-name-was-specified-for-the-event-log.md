@@ -2,12 +2,12 @@
 title: 为事件日志指定了无效名称
 ms.date: 07/20/2015
 ms.assetid: b1b158bd-f13f-4371-a8af-31c0e86ae6be
-ms.openlocfilehash: 2b9c934272d0f3392c845dcd2f0062a98dc50c7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 05f37239510482de218847f069dc74cbef91f398
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940668"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609170"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a>为事件日志指定了无效名称
 为事件日志指定了无效名称。 通常名称中存在无效字符、文件名太长或空白文件名会导致此结果。  
