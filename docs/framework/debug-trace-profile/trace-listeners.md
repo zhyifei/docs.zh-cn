@@ -16,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5657e55856845404c5f8f063bd69d51614a234c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873816"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614286"
 ---
 # <a name="trace-listeners"></a>跟踪侦听器
 使用 Trace、Debug 和 <xref:System.Diagnostics.TraceSource> 时，必须具有用于收集和记录发送的消息的机制。 跟踪消息可由侦听器接收。 侦听器的用途是收集、存储和路由跟踪消息。 侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
   
  侦听器可用于 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 类，其中每个类都可以将输出发送到多种侦听器对象。 以下是常用的预定义侦听器：  
   
--   <xref:System.Diagnostics.TextWriterTraceListener> 将输出重定向到 <xref:System.IO.TextWriter> 类的实例或为 <xref:System.IO.Stream> 类的任何项。 它也可以写入到控制台或文件，因为它们是 <xref:System.IO.Stream> 类。  
+- <xref:System.Diagnostics.TextWriterTraceListener> 将输出重定向到 <xref:System.IO.TextWriter> 类的实例或为 <xref:System.IO.Stream> 类的任何项。 它也可以写入到控制台或文件，因为它们是 <xref:System.IO.Stream> 类。  
   
--   <xref:System.Diagnostics.EventLogTraceListener> 将输出重定向到事件日志。  
+- <xref:System.Diagnostics.EventLogTraceListener> 将输出重定向到事件日志。  
   
--   <xref:System.Diagnostics.DefaultTraceListener> 向 OutputDebugString 和 Debugger.Log 方法发出 Write 和 WriteLine 消息。 在 Visual Studio 中，这会导致“输出”窗口中显示调试消息。 Fail 和失败的 Assert 消息也发到 OutputDebugString Windows API 和 Debugger.Log 方法，同样将显示消息框。 此行为是 Debug 和 Trace 消息的默认行为，因为 DefaultTraceListener 自动包含在每个 `Listeners` 集合中，且是自动包含的唯一侦听器。  
+- <xref:System.Diagnostics.DefaultTraceListener> 向 OutputDebugString 和 Debugger.Log 方法发出 Write 和 WriteLine 消息。 在 Visual Studio 中，这会导致“输出”窗口中显示调试消息。 Fail 和失败的 Assert 消息也发到 OutputDebugString Windows API 和 Debugger.Log 方法，同样将显示消息框。 此行为是 Debug 和 Trace 消息的默认行为，因为 DefaultTraceListener 自动包含在每个 `Listeners` 集合中，且是自动包含的唯一侦听器。  
   
--   <xref:System.Diagnostics.ConsoleTraceListener> 将跟踪或调试输出定向到标准输出或标准错误流。  
+- <xref:System.Diagnostics.ConsoleTraceListener> 将跟踪或调试输出定向到标准输出或标准错误流。  
   
--   <xref:System.Diagnostics.DelimitedListTraceListener> 将跟踪或调试输出定向到文本编写器（如流编写器）或流（如文件流）。 跟踪输出采用由 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 属性指定的分隔符分隔的文本格式。  
+- <xref:System.Diagnostics.DelimitedListTraceListener> 将跟踪或调试输出定向到文本编写器（如流编写器）或流（如文件流）。 跟踪输出采用由 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 属性指定的分隔符分隔的文本格式。  
   
--   <xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪或调试输出以 XML 编码数据的形式定向到 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
+- <xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪或调试输出以 XML 编码数据的形式定向到 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
   
  如果你希望 <xref:System.Diagnostics.DefaultTraceListener> 以外的任何侦听器接收 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 输出，则必须将其添加到 `Listeners` 集合。 有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[如何：使用 TraceSource 和筛选器与跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。 侦听器集合中的任何侦听器均从跟踪输出方法获取相同消息。 例如，假设你设置了两个侦听器：TextWriterTraceListener 和 EventLogTraceListener。 每个侦听器接收相同消息。 TextWriterTraceListener 将输出定向到流，而 EventLogTraceListener 将输出定向到事件日志。  
   

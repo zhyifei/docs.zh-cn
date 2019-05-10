@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a18e2ab31998b7759803e023151892694757119
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613383"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 终结点
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点向客户端访问 WCF 服务提供的功能。  
   
  有关如何创建一个终结点的概述，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 每个终结点包含：  
   
--   一个指示要查找终结点位置的地址。  
+- 一个指示要查找终结点位置的地址。  
   
--   一个指定客户端如何与终结点进行通信的绑定。  
+- 一个指定客户端如何与终结点进行通信的绑定。  
   
--   一个标识可用方法的协定。  
+- 一个标识可用方法的协定。  
   
  有关如何指定终结点的上述各个部分的说明，请参见：  
   
--   [指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+- [指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
   
--   [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+- [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
--   [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+- [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="in-this-section"></a>本节内容  
  [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)  

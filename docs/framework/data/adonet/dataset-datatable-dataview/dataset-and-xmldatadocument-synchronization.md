@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7763e7065e74d99ee5521ea1e4f48fa0108f235a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879809"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623399"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>数据集和 XmlDataDocument 同步
 ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。 若要实现分层数据访问，可以使用 .NET Framework 中的可用 XML 类。 以前，数据的这两种表示形式是单独使用的。 但是，.NET Framework 可以实时、 同步访问通过对数据的关系和层次结构表示**数据集**对象和<xref:System.Xml.XmlDataDocument>对象，分别。  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
   
  有几种方法可以同步**数据集**与**XmlDataDocument**。 你可以：  
   
--   填充**数据集**使用架构 （即关系结构） 和数据，然后将其同步与新**XmlDataDocument**。 这将提供现有关系数据的分层视图。 例如：  
+- 填充**数据集**使用架构 （即关系结构） 和数据，然后将其同步与新**XmlDataDocument**。 这将提供现有关系数据的分层视图。 例如：  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   填充**数据集**仅具有架构 (如强类型化**数据集**)，使其与同步**XmlDataDocument**，然后加载**XmlDataDocument**从 XML 文档。 这将提供现有分层数据的关系视图。 表名和列名中的您**数据集**架构必须匹配要与其同步的 XML 元素的名称。 该匹配区分大小写。  
+- 填充**数据集**仅具有架构 (如强类型化**数据集**)，使其与同步**XmlDataDocument**，然后加载**XmlDataDocument**从 XML 文档。 这将提供现有分层数据的关系视图。 表名和列名中的您**数据集**架构必须匹配要与其同步的 XML 元素的名称。 该匹配区分大小写。  
   
      请注意的架构**数据集**只需匹配要在关系视图中公开的 XML 元素。 这样，就可以具有非常大的 XML 文档，而该文档上可以有非常小的关系“窗口”。 **XmlDataDocument**即使保留整个 XML 文档**数据集**仅公开一小部分。 (此详细示例，请参阅[将数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)。)  
   
@@ -63,7 +63,7 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
   
      无法加载**XmlDataDocument**如果与同步**数据集**，其中包含数据。 否则会引发异常。  
   
--   创建一个新**XmlDataDocument**并将其加载 XML 文档中，然后访问数据使用的关系视图**数据集**属性**XmlDataDocument**。 您需要设置的架构**数据集**才能查看中的数据的任何**XmlDataDocument**使用**数据集**。 中的表名称和列的名称，你**数据集**架构必须匹配要与其同步的 XML 元素的名称。 该匹配区分大小写。  
+- 创建一个新**XmlDataDocument**并将其加载 XML 文档中，然后访问数据使用的关系视图**数据集**属性**XmlDataDocument**。 您需要设置的架构**数据集**才能查看中的数据的任何**XmlDataDocument**使用**数据集**。 中的表名称和列的名称，你**数据集**架构必须匹配要与其同步的 XML 元素的名称。 该匹配区分大小写。  
   
      下面的代码示例演示如何访问中的数据的关系视图**XmlDataDocument**。  
   

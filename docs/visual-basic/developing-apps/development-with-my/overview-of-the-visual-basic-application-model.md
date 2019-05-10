@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0144c92e01e617081ae05003e6a7175c63166891
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014138"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622797"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 应用程序模型概述
 Visual Basic 提供定义完善的模型，用于控制 Windows 窗体应用程序的行为： Visual Basic 应用程序模型。 此模型包括用于处理应用程序的启动和关闭，以及用于捕获未经处理的异常事件的事件。 它还提供用于开发单实例应用程序的支持。 应用程序模型是可扩展的因此需要更多控制的开发人员可以自定义其可重写方法。  

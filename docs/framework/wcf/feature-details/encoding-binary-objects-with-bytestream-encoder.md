@@ -2,12 +2,12 @@
 title: 使用字节流编码器编码二进制对象
 ms.date: 03/30/2017
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
-ms.openlocfilehash: 9619fdf6979833c30159e1ea02b3f8d6b98a6629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09a919e11971f81bc76dca0e45a7eb0e70ef749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856500"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626928"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>使用字节流编码器编码二进制对象
 使用配置发送和接收原始二进制数据使用 Windows Communication Foundation (WCF) <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>。  
@@ -39,8 +39,8 @@ void ProcessMessage(Message message) ;
 ## <a name="scenarios"></a>方案  
  字节流编码器可在以下方案中使用。  
   
--   使用 WCF 的计算机之间传输 JPEG 图像。 在此方案中，图像会通过传输从外部源到达，而发送的数据会是组成图像的原始字节。 某个服务会接收二进制数据并显示图像。  
+- 使用 WCF 的计算机之间传输 JPEG 图像。 在此方案中，图像会通过传输从外部源到达，而发送的数据会是组成图像的原始字节。 某个服务会接收二进制数据并显示图像。  
   
--   从消息队列读出信息并进行处理。 消息会从消息队列管理器中读取，并在消息队列通道中向上传递以进行处理。 消息队列通道会充当 WCF 通道堆栈中的队列管理器。  
+- 从消息队列读出信息并进行处理。 消息会从消息队列管理器中读取，并在消息队列通道中向上传递以进行处理。 消息队列通道会充当 WCF 通道堆栈中的队列管理器。  
   
  对于通过消息队列通道发送消息，发送方无法控制从队列管理器接收的字节。 如果接收进程无法读取原始字节，则消息会以错误格式接收，不会进行处理；假定接收进程能够将接收的字节转换为可用格式。

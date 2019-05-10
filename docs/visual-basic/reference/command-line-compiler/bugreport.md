@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624321"
 ---
 # <a name="-bugreport"></a>-bugreport
 创建提交 bug 报告时，可以使用一个文件。  
@@ -31,17 +31,17 @@ ms.locfileid: "61839561"
 ## <a name="remarks"></a>备注  
  以下信息添加到`file`:  
   
--   在编译中的所有源代码文件的副本。  
+- 在编译中的所有源代码文件的副本。  
   
--   编译器选项编译中使用的列表。  
+- 编译器选项编译中使用的列表。  
   
--   有关编译器、 公共语言运行时和操作系统的版本信息。  
+- 有关编译器、 公共语言运行时和操作系统的版本信息。  
   
--   编译器输出（如有）。  
+- 编译器输出（如有）。  
   
--   说明问题，这向您发出提示。  
+- 说明问题，这向您发出提示。  
   
--   应修复所预期的问题的说明，这向您发出提示。  
+- 应修复所预期的问题的说明，这向您发出提示。  
   
  因为所有源代码文件的副本包含在`file`，可能想要重现在尽可能短小的程序 （可疑的） 代码缺陷。  
   

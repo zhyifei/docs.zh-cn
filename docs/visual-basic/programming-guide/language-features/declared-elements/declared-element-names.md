@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610553"
 ---
 # <a name="declared-element-names-visual-basic"></a>已声明的元素名称 (Visual Basic)
 每个已声明的元素有一个名称，也称为*标识符*，这是代码使用来对其进行引用。  
@@ -36,13 +36,13 @@ ms.locfileid: "61828609"
 ## <a name="rules"></a>规则  
  在 Visual Basic 中的元素名称必须遵守以下规则：  
   
--   它必须以字母字符或下划线开头 (`_`)。  
+- 它必须以字母字符或下划线开头 (`_`)。  
   
--   它必须仅包含字母字符、 十进制数字和下划线。  
+- 它必须仅包含字母字符、 十进制数字和下划线。  
   
--   如果以下划线开头，它必须包含至少一个字母字符或十进制数。  
+- 如果以下划线开头，它必须包含至少一个字母字符或十进制数。  
   
--   它不能超过 1023年个字符。  
+- 它不能超过 1023年个字符。  
   
  1023 个字符的长度限制也适用于整个字符串的完全限定的名称，例如`outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "61828609"
   
  一般情况下，应使用转义后名称时，才：  
   
--   从以前版本的 Visual Basic 的没有保留关键字用作名称; 迁移你的代码或  
+- 从以前版本的 Visual Basic 的没有保留关键字用作名称; 迁移你的代码或  
   
--   您正在使用中则不保留给定的关键字的另一种语言编写的代码。  
+- 您正在使用中则不保留给定的关键字的另一种语言编写的代码。  
   
  否则，应考虑重命名该元素，如果其名称与关键字冲突。 集成的开发环境 (IDE) 提供了执行此操作的简单办法。 有关详细信息，请参阅[重构](/visualstudio/vb-ide/refactoring-vb)。  
   

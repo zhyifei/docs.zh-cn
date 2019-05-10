@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0e450a370c27de4690105231847de25ce5a90553
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053647"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627455"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>如何：初始化数组变量在 Visual Basic 中
 通过包括数组文本中初始化数组变量`New`子句并指定数组的初始值。 你可以指定的类型，或允许其从数组文本中的值推断出来。 有关如何推断出的类型的详细信息，请参阅"填充数组初始值"中[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  

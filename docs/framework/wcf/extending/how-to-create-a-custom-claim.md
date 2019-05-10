@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c1c1e050cfef36aa53b83a764c0b7e308783394
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857774"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619605"
 ---
 # <a name="how-to-create-a-custom-claim"></a>如何：创建自定义声明
 标识模型基础结构在 Windows Communication Foundation (WCF) 提供内置的声明类型和帮助器函数具有权限的一组用于创建<xref:System.IdentityModel.Claims.Claim>具有这些类型和权限的实例。 这些内置的声明用于 WCF 支持的客户端凭据类型中找到默认情况下的模型信息。 在许多情况下，这些内置的声明足够满足需要，然而一些应用程序可能需要自定义声明。 声明由声明类型、要应用该声明的资源和在该资源上断言的权限组成。 本主题描述如何创建自定义声明。  
@@ -19,15 +19,15 @@ ms.locfileid: "61857774"
   
 1. 通过将声明类型、资源值和权限传递到 <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> 构造函数来创建自定义声明。  
   
-    1.  确定声明类型的唯一值。  
+    1. 确定声明类型的唯一值。  
   
          声明类型是一个唯一的字符串标识符。 自定义声明的设计者负责确保声明类型所使用的字符串标识符是唯一的。 由 WCF 定义的声明类型的列表，请参阅<xref:System.IdentityModel.Claims.ClaimTypes>类。  
   
-    2.  选择资源的基元数据类型和值。  
+    2. 选择资源的基元数据类型和值。  
   
          资源是一个对象。 资源的 CLR 类型可以是一个基元类型，例如 <xref:System.String> 或 <xref:System.Int32>，也可以是任何可序列化的类型。 该资源的 CLR 类型必须可序列化，因为声明进行序列化多个点由 WCF。 基元类型是可序列化的类型。  
   
-    3.  选择由 WCF 或自定义权限的唯一值定义的权限。  
+    3. 选择由 WCF 或自定义权限的唯一值定义的权限。  
   
          权限是一个唯一的字符串标识符。 由 WCF 定义的权限在定义<xref:System.IdentityModel.Claims.Rights>类。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "61857774"
   
 1. 通过将声明类型、资源值和权限传递到 <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> 构造函数来创建自定义声明。  
   
-    1.  确定声明类型的唯一值。  
+    1. 确定声明类型的唯一值。  
   
          声明类型是一个唯一的字符串标识符。 自定义声明的设计者负责确保声明类型所使用的字符串标识符是唯一的。 由 WCF 定义的声明类型的列表，请参阅<xref:System.IdentityModel.Claims.ClaimTypes>类。  
   
-    2.  为资源选择或定义一个可序列化的非基元类型。  
+    2. 为资源选择或定义一个可序列化的非基元类型。  
   
          资源是一个对象。 该资源的 CLR 类型必须可序列化，因为声明进行序列化多个点由 WCF。 基元类型本身是可序列化的类型。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61857774"
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  选择由 WCF 或自定义权限的唯一值定义的权限。  
+    3. 选择由 WCF 或自定义权限的唯一值定义的权限。  
   
          权限是一个唯一的字符串标识符。 由 WCF 定义的权限在定义<xref:System.IdentityModel.Claims.Rights>类。  
   

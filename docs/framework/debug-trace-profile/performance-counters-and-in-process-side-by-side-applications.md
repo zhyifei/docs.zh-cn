@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c50132be2755119b19e38d94919eb4b0ab28d994
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775851"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614323"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>性能计数器和进程内并行应用程序
 使用性能监视器 (Perfmon.exe) 有可能在每个运行时基础上区分性能计数器。 本主题介绍启用此功能所需的注册表更改。  
@@ -39,7 +39,7 @@ ms.locfileid: "61775851"
 |项名称|HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\.NETFramework\Performance|  
 |值名称|ProcessNameFormat|  
 |值类型|REG_DWORD|  
-|“值”|1 (0x00000001)|  
+|值|1 (0x00000001)|  
   
  `ProcessNameFormat` 的值为 0 表示启用了默认行为；也就是说，Perfmon.exe 将基于每个应用程序显示性能计数器。 将此值设为 1 时，Perfmon.exe 会明确区分应用程序的多个版本，并基于每个运行时提供性能计数器。 `ProcessNameFormat` 注册表项设置的任何其他值均不受支持，留待将来使用。  
   

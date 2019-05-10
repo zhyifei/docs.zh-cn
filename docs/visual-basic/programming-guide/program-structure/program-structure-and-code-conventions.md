@@ -13,21 +13,21 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916937"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624335"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>程序结构和代码约定 (Visual Basic)
 本节介绍典型的 Visual Basic 程序结构，提供了一个简单的 Visual Basic 程序，"Hello，World"并且讨论了 Visual Basic 代码约定。 代码约定是针对不是程序的逻辑，而是其物理结构和外观的建议。 遵循它们使您的代码易于阅读、 理解和维护。 代码约定可以包含其他项中：  
   
--   标记和注释代码的标准化的格式。  
+- 标记和注释代码的标准化的格式。  
   
--   间距、 格式和缩进代码的指南。  
+- 间距、 格式和缩进代码的指南。  
   
--   对象、 变量和过程的命名约定。  
+- 对象、 变量和过程的命名约定。  
   
  下列主题显示了一系列编程准则以及的好的用法示例的 Visual Basic 程序。  
   

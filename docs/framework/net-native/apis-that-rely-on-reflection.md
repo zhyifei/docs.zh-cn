@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868974"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624700"
 ---
 # <a name="apis-that-rely-on-reflection"></a>利用反射的 API
 在某些情况下，在代码中对反射的使用不是明显的，并且 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链并不保存在运行时间需要的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  要成功运行，此代码需要几个元数据项：  
   
--   你想要调用的方法的类型的 `Browse` 元数据。  
+- 你想要调用的方法的类型的 `Browse` 元数据。  
   
--   你想要调用的方法 `Browse` 元数据。  如果它是一个公共方法，为包含类型添加的公共 `Browse` 元数据也包括方法。  
+- 你想要调用的方法 `Browse` 元数据。  如果它是一个公共方法，为包含类型添加的公共 `Browse` 元数据也包括方法。  
   
--   你想要调用的方法的动态元数据，保证反射调用委托不会遭到 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链的删除。 如果该方法的动态元数据丢失，当 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法得到调用时会引发以下异常：  
+- 你想要调用的方法的动态元数据，保证反射调用委托不会遭到 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链的删除。 如果该方法的动态元数据丢失，当 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法得到调用时会引发以下异常：  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

@@ -2,12 +2,12 @@
 title: 发现版本控制
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
-ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f90fc5183e974b9045c156e0ae74099abfbc41a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856643"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626954"
 ---
 # <a name="discovery-versioning"></a>发现版本控制
 本主题简要概述了一些新增发现功能的实现， 还概述了如何选择要使用的发现版本。  
@@ -17,13 +17,13 @@ ms.locfileid: "61856643"
   
  下面的发现类现在具有 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 属性，并在其构造函数中采用 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 参数：  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005  
  提供<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005>作为构造函数参数可使实现使用 Ws-discovery 协议的 April2005 版本。 此版本对应于 WS-Discovery 协议规范的已发布版本。 此版本应当用于与使用 April2005 版 WS-Discovery 的旧版应用程序进行互操作。  

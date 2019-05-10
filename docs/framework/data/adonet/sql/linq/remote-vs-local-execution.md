@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a25186f6283f01ef56b1c684c4a43b9a60fb6d64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877118"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619670"
 ---
 # <a name="remote-vs-local-execution"></a>远程查询执行与本地执行
 您可以决定以远程方式（即数据库引擎对数据库执行查询）或在本地（[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对本地缓存执行查询）执行您的查询。  
@@ -23,18 +23,18 @@ ms.locfileid: "61877118"
   
  如果数据库有数千行订单，则在处理其中很小一部分时您不需要将它们全都检索出来。 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Data.Linq.EntitySet%601> 类实现了 <xref:System.Linq.IQueryable> 接口。 这种方式确保了可以以远程方式执行此类查询。 利用此技术有两大优点：  
   
--   不会检索到不需要的数据。  
+- 不会检索到不需要的数据。  
   
--   由于利用了数据库索引，由数据库引擎执行的查询通常更为高效。  
+- 由于利用了数据库索引，由数据库引擎执行的查询通常更为高效。  
   
 ## <a name="local-execution"></a>本地执行  
  在其他一些情况下，您可能需要在本地缓存中保留完整的相关实体集。 为此，<xref:System.Data.Linq.EntitySet%601> 提供了 <xref:System.Data.Linq.EntitySet%601.Load%2A> 方法，用于显式加载 <xref:System.Data.Linq.EntitySet%601> 的所有成员。  
   
  如果 <xref:System.Data.Linq.EntitySet%601> 已经加载，则后续查询将在本地执行。 这种方式在两个方面起到帮助作用：  
   
--   如果此完整集必须在本地使用或使用多次，则您可以避免远程查询和与之相关的延迟。  
+- 如果此完整集必须在本地使用或使用多次，则您可以避免远程查询和与之相关的延迟。  
   
--   实体可以序列化为完整的实体。  
+- 实体可以序列化为完整的实体。  
   
  下面的代码段演示了如何实现本地执行：  
   

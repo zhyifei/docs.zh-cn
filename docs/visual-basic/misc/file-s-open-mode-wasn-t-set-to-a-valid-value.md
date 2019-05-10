@@ -2,17 +2,17 @@
 title: 文件的打开模式未设置为有效值
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: 28ee1776d0b99d1a960414edd975ced4f4d85402
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e6dfae9b9bbe374b6779ea32a4653b6fbb81d89d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024841"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624897"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>文件的打开模式未设置为有效值
 为文件的打开模式提供的值无效。 下表显示 <xref:Microsoft.VisualBasic.OpenMode> 枚举的有效值。  
   
-|“值”|模式|  
+|值|模式|  
 |-----------|----------|  
 |1|`OpenMode.Input`|  
 |2|`OpenMode.Output`|  
