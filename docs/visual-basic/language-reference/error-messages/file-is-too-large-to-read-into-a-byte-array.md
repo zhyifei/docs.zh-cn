@@ -2,19 +2,19 @@
 title: 文件太大，无法读取到字节数组中
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
-ms.openlocfilehash: 0c7d35e08eeb42e35c4c40e47434a64393d829b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a842205e9184355e4ea750ea2eb32e4bcf05a14d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800875"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665107"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>文件太大，无法读取到字节数组中
 尝试读取到字节数组的文件的大小超过 4 GB。 `My.Computer.FileSystem.ReadAllBytes`方法不能读取超过此大小的文件。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   使用<xref:System.IO.StreamReader>读取该文件。 有关详细信息，请参阅[基础知识的.NET Framework 文件 I/O 和文件系统 (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)。  
+- 使用<xref:System.IO.StreamReader>读取该文件。 有关详细信息，请参阅[基础知识的.NET Framework 文件 I/O 和文件系统 (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)。  
   
 ## <a name="see-also"></a>请参阅
 

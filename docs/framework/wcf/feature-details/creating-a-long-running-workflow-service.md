@@ -2,12 +2,12 @@
 title: 创建长时间运行的工作流服务
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048107"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063803"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>创建长时间运行的工作流服务
 本主题描述如何创建长时间运行的工作流服务。 长时间运行的工作流服务可能会运行很长一段时间。 在某一时刻，工作流可能会转入空闲状态，等待一些附加信息。 当这种情况发生时，工作流将保存到 SQL 数据库并从内存中删除。 当附加信息变得可用时，工作流实例将重新加载回内存，继续执行。  在此方案中，您将实现一个非常简化的订单系统。  客户端向工作流服务发送初始消息以启动订单。 此服务将订单 ID 返回给客户端。 此时，工作流服务要等待来自客户端的另一条消息，它转入空闲状态并保存到 SQL Server 数据库。  当客户端发送下一条消息订购项目时，工作流服务将重新加载回内存，完成处理此订单。 在代码示例中它将返回一个字符串，指示项目已添加到订单中。 代码示例并不是技术的现实应用，而是作为一个简单的示例来说明长时间运行的工作流服务。 本主题假定你知道如何创建 Visual Studio 2012 项目和解决方案。
@@ -100,10 +100,15 @@ ms.locfileid: "62048107"
     1. 选择**序列**，其中包含新添加**接收**并**SendReply**活动，然后单击**变量**按钮。 添加下图中突出显示的变量：
 
          ![添加新变量](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "添加 ItemId 变量。")
+         
+         此外将添加`orderResult`作为**字符串**中`Sequence`作用域。
 
     2. 选择**接收**活动和设置如下图中显示的属性：
 
          ![设置 Receive 活动属性](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "设置 Receive 活动属性。")
+         
+         > [!NOTE]
+         >  不要忘记更改**ServiceContractName**字段`../IAddItem`。
 
     3. 单击**定义...** 中的链接**ReceiveAddItem**活动并添加以下插图所示的参数： 这会配置接收活动接受两个参数，即订单 ID 和正在排序的项的 ID。
 

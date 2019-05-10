@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84afe4e354d4029bc61ba67bc93bd36a3430de4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975970"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610602"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>如何：声明常量 (Visual Basic)
 您使用`Const`语句声明一个常量，并将其值设置。 通过声明一个常量，您将有意义的名称分配给一个值。 一旦声明一个常量，不能修改或分配一个新值。  
@@ -41,7 +41,7 @@ ms.locfileid: "61975970"
   
 ### <a name="to-declare-a-constant"></a>若要声明常量  
   
--   编写包含访问说明符声明`Const`关键字和一个表达式，如以下示例所示：  
+- 编写包含访问说明符声明`Const`关键字和一个表达式，如以下示例所示：  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61975970"
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>若要声明一个常量，它具有显式声明的数据类型  
   
--   编写的声明，包括`As`关键字和显式数据类型，如以下示例所示：  
+- 编写的声明，包括`As`关键字和显式数据类型，如以下示例所示：  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "61975970"
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>若要在单个行上声明多个常量  
   
--   单独使用一个逗号和空格，如以下示例所示的声明：  
+- 单独使用一个逗号和空格，如以下示例所示的声明：  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

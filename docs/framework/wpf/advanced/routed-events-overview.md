@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982344"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063898"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
@@ -197,10 +197,9 @@ ms.locfileid: "61982344"
   
  实现成对出现的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入事件，使来自输入的单个用户操作（如按鼠标按钮）按顺序引发该对中的两个路由事件。 首先引发隧道事件并沿路由传播。 然后引发浮升事件并沿路由传播。 两个事件按字面意思共享相同的事件数据实例，因为<xref:System.Windows.UIElement.RaiseEvent%2A>引发浮升事件在实现类中的方法调用侦听隧道事件中的事件数据，并在新引发的事件中重用它。 具有隧道事件处理程序的侦听器首先获得将路由事件标记为“已处理”的机会（首先是类处理程序，然后是实例处理程序）。 如果隧道路由中的某个元素将路由事件标记为“已处理”，则会针对浮升事件发送已处理的事件数据，而且将不调用等效的浮升输入事件的附加典型处理程序。 已处理的浮升事件看起来好像尚未引发。 此处理行为对于控件合成非常有用，因为在此情况下你可能希望所有基于命中测试的输入事件或者所有基于焦点的输入事件都由最终的控件（而不是它的复合部件）报告。 作为可支持控件类的代码的一部分，最后一个控件元素靠近合成中的根，因此将有机会首先对隧道事件进行类处理，或者有机会将该路由事件“替换”为更针对控件的事件。  
   
- 为了说明输入事件处理的工作方式，请思考下面的输入事件示例。 在下面的树插图中，`leaf element #2` 是先后发生的 `PreviewMouseDown` 事件和 `MouseDown` 事件的源。  
+ 为了说明输入事件处理的工作方式，请思考下面的输入事件示例。 在下面的树插图`leaf element #2`是这两者的源`PreviewMouseDown`，然后`MouseDown`事件：  
   
- ![事件路由示意图](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
-输入事件的浮升和隧道  
+ ![事件路由示意图](./media/routed-events-overview/input-event-routing.png)  
   
  事件的处理顺序如下所述：  
   

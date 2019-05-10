@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174104"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583567"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -27,11 +27,11 @@ ms.locfileid: "59174104"
   
  代码访问权限有三种类型：  
   
--   `Code access permissions`从 <xref:System.Security.CodeAccessPermission> 类派生。 需要具有权限才能访问受保护的资源（如文件和环境变量）和执行受保护的操作（如访问托管代码）。  
+- `Code access permissions`从 <xref:System.Security.CodeAccessPermission> 类派生。 需要具有权限才能访问受保护的资源（如文件和环境变量）和执行受保护的操作（如访问托管代码）。  
   
--   `Identity permissions`表示标识程序集的特征。 对程序集授予权限需要基于证据，而证据可以包括如数字签名或代码来源等项。 标识权限也从 <xref:System.Security.CodeAccessPermission> 基类派生。  
+- `Identity permissions`表示标识程序集的特征。 对程序集授予权限需要基于证据，而证据可以包括如数字签名或代码来源等项。 标识权限也从 <xref:System.Security.CodeAccessPermission> 基类派生。  
   
--   `Role-based security permissions`基于主体是否具有指定标识或是否是指定角色的成员。 <xref:System.Security.Permissions.PrincipalPermission> 类允许对活动主体进行声明性和强制性权限检查。  
+- `Role-based security permissions`基于主体是否具有指定标识或是否是指定角色的成员。 <xref:System.Security.Permissions.PrincipalPermission> 类允许对活动主体进行声明性和强制性权限检查。  
   
  为了确定代码是否获得了访问某一资源或执行某一操作的授权，运行库的安全系统将遍历调用堆栈，将每个调用方已获得的权限与要求的权限进行比较。 如果调用堆栈中的任何调用方没有要求的权限，则会引发 <xref:System.Security.SecurityException> 并拒绝访问。  
   

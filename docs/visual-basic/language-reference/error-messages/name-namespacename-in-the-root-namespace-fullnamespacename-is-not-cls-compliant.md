@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: faed46eaf21513945ef4eb0c76d36780e960d380
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918354"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592029"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>名称\<命名空间名称 > 的根命名空间\<fullnamespacename > 不符合 cls 的
 程序集标记为`<CLSCompliant(True)>`，但名称以下划线开头的根命名空间名称元素 (`_`)。  

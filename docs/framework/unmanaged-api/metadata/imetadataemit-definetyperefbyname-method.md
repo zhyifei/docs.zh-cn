@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156164"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584487"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
 获取在指定范围内，这是当前作用域之外定义的类型的元数据令牌。  
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in]指定解析范围标记。 以下令牌类型是有效的：  
   
--   `mdModuleRef`如果类型在其中定义调用方在同一程序集中定义的。  
+- `mdModuleRef`如果类型在其中定义调用方在同一程序集中定义的。  
   
--   `mdAssemblyRef`如果不是在其中定义调用方的程序集中定义的类型。  
+- `mdAssemblyRef`如果不是在其中定义调用方的程序集中定义的类型。  
   
--   `mdTypeRef`如果该类型是嵌套的类型。  
+- `mdTypeRef`如果该类型是嵌套的类型。  
   
--   `mdModule`如果在其中定义调用方位于同一模块中定义该类型。  
+- `mdModule`如果在其中定义调用方位于同一模块中定义该类型。  
   
--   如果全局定义的类型，则为 null。  
+- 如果全局定义的类型，则为 null。  
   
  `szName`  
  [in]以 unicode 格式的目标类型的名称。  

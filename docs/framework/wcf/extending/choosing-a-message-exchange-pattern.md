@@ -2,12 +2,12 @@
 title: 选择消息交换模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922836"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664909"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>选择消息交换模式
 编写自定义传输的第一步是确定哪个*消息交换模式*（或 Mep） 所需的正在开发的通道。 本主题说明可用的选项，并讨论各种不同的需求。 这是通道开发任务列表中所述的第一个任务[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -15,15 +15,15 @@ ms.locfileid: "61922836"
 ## <a name="six-message-exchange-patterns"></a>六种消息交换模式  
  有三种 MEP 可供选择：  
   
--   数据报（<xref:System.ServiceModel.Channels.IInputChannel> 和 <xref:System.ServiceModel.Channels.IOutputChannel>）  
+- 数据报（<xref:System.ServiceModel.Channels.IInputChannel> 和 <xref:System.ServiceModel.Channels.IOutputChannel>）  
   
      在使用数据报 MEP 时，客户端发送消息使用*发后不理*exchange。 “发后不理”交换形式是一种要求带外确认成功传递的交换形式。 消息在传输过程中可能会丢失，而永远不能到达服务。 如果在客户端成功完成发送操作，这并不保证远程终结点已经收到消息。 数据报是消息传递的基本构造块，因为您可以在它上面构建自己的协议，包括可靠的协议和安全的协议。 客户端数据报通道实现 <xref:System.ServiceModel.Channels.IOutputChannel> 接口，而服务数据报通道实现 <xref:System.ServiceModel.Channels.IInputChannel> 接口。  
   
--   请求-响应（<xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>）  
+- 请求-响应（<xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>）  
   
      在此 MEP 中，将发送一个消息并接收一个答复。 此模式由请求-响应对组成。 请求-响应调用的示例包括远程过程调用 (RPC) 和浏览器的 GET 请求。 此模式也称为半双工。 在此 MEP 中，客户端通道实现 <xref:System.ServiceModel.Channels.IRequestChannel>，而服务通道实现 <xref:System.ServiceModel.Channels.IReplyChannel>。  
   
--   双工 (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
+- 双工 (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
   
      通过双工 MEP，客户端可以发送任意数目的消息，并以任意顺序接收消息。 双工 MEP 就像电话通话，所说的每一个字都是一条消息。 由于在这种 MEP 中两端都可发送和接收，因此，由客户端和服务通道实现的接口为 <xref:System.ServiceModel.Channels.IDuplexChannel>。  
   
@@ -32,17 +32,17 @@ ms.locfileid: "61922836"
   
  每个 Mep 还可以支持*会话*。 会话（和 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType><xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>类型的 的实现）会将通道上发送和接收的所有消息关联在一起。 请求-响应模式是一种由两个消息组成的独立会话，因为请求和响应是相关的。 与此形成对照的是，支持会话的请求-响应模式意味着该通道上的所有请求-响应对都是相关的。 这使您总共有六种 MEP 可以选择：  
   
--   数据报  
+- 数据报  
   
--   请求-响应  
+- 请求-响应  
   
--   双工  
+- 双工  
   
--   带会话的数据报  
+- 带会话的数据报  
   
--   带会话的请求-响应  
+- 带会话的请求-响应  
   
--   带会话的双工  
+- 带会话的双工  
   
 > [!NOTE]
 >  对于 UDP 传输，所支持的唯一 MEP 是数据报，因为 UDP 的性质是一个“启动后不管”协议。  
@@ -72,25 +72,25 @@ ms.locfileid: "61922836"
 ## <a name="writing-sessionful-channels"></a>编写会话通道  
  作为会话通道作者，有几件事是您的通道为了提供会话所必须做的。 在发送端，您的通道需要：  
   
--   为每个新通道创建一个新会话，并将其与一个新的会话标识关联，该标识是一个唯一的字符串。 或者从堆栈中位于您下方的会话通道获取一个新会话。  
+- 为每个新通道创建一个新会话，并将其与一个新的会话标识关联，该标识是一个唯一的字符串。 或者从堆栈中位于您下方的会话通道获取一个新会话。  
   
--   对于用此通道发送的每条消息，如果您的通道创建了会话（而不是从您下面的层获取会话），您需要将此消息与会话关联。 对于协议通道，这通常通过添加 SOAP 标头来完成。 对于传输通道，这通常通过创建一个新的传输连接或向组帧协议添加会话信息来完成。  
+- 对于用此通道发送的每条消息，如果您的通道创建了会话（而不是从您下面的层获取会话），您需要将此消息与会话关联。 对于协议通道，这通常通过添加 SOAP 标头来完成。 对于传输通道，这通常通过创建一个新的传输连接或向组帧协议添加会话信息来完成。  
   
--   对于每个使用此通道发送的消息，都需要提供上面提到的传递保证。 如果依靠位于您下面的通道来提供会话，该通道也应提供传递保证。 如果您自己提供会话，您需要把这些保证作为您的协议的一部分加以实现。 通常，如果您编写在两端都采用 WCF 的协议通道，您可能需要 TCP 传输或可靠消息通道，并依靠其中一种方法来提供会话。  
+- 对于每个使用此通道发送的消息，都需要提供上面提到的传递保证。 如果依靠位于您下面的通道来提供会话，该通道也应提供传递保证。 如果您自己提供会话，您需要把这些保证作为您的协议的一部分加以实现。 通常，如果您编写在两端都采用 WCF 的协议通道，您可能需要 TCP 传输或可靠消息通道，并依靠其中一种方法来提供会话。  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。 这可能很简单，只需在位于您下面的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A>（如果您只从它获取了会话）、发送特殊 SOAP 消息或关闭传输连接。  
+- 当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。 这可能很简单，只需在位于您下面的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A>（如果您只从它获取了会话）、发送特殊 SOAP 消息或关闭传输连接。  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。 这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
+- 当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。 这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
   
  在接收端，您的通道需要：  
   
--   对于每个传入消息，通道侦听器必须检测到消息所属的会话。 如果这是会话中的第一个消息，通道侦听器必须创建一个新通道，并将其从调用返回到 <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>。 否则，通道侦听器必须找到与该会话对应的现有通道，并通过该通道传递消息。  
+- 对于每个传入消息，通道侦听器必须检测到消息所属的会话。 如果这是会话中的第一个消息，通道侦听器必须创建一个新通道，并将其从调用返回到 <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>。 否则，通道侦听器必须找到与该会话对应的现有通道，并通过该通道传递消息。  
   
--   如果您的通道正在提供会话（连同所要求的传递保证），可能会要求接收方执行某些操作，例如重新排列消息或发送确认消息。  
+- 如果您的通道正在提供会话（连同所要求的传递保证），可能会要求接收方执行某些操作，例如重新排列消息或发送确认消息。  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。 如果通道在等待关闭超时到期时收到消息，则可能会导致异常。 这是因为通道将处于关闭状态，却突然收到消息，所以会引发异常。  
+- 当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A> 时，应使用指定的或默认的超时值执行必要的工作来关闭该会话。 如果通道在等待关闭超时到期时收到消息，则可能会导致异常。 这是因为通道将处于关闭状态，却突然收到消息，所以会引发异常。  
   
--   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。 同样，这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
+- 当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。 同样，这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
   
 ## <a name="see-also"></a>请参阅
 

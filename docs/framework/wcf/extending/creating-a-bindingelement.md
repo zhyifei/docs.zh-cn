@@ -2,12 +2,12 @@
 title: 创建 BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c08494315f43f35f60d70abf643f596a013c302
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858346"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587348"
 ---
 # <a name="creating-a-bindingelement"></a>创建 BindingElement
 绑定和绑定元素 (扩展的对象<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分别) 是 Windows Communication Foundation (WCF) 应用程序模型是与通道工厂和通道侦听器相关联的位置。 无绑定，使用自定义通道需要在通道级编程中所述[服务通道级编程](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)并[客户端通道级编程](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主题讨论的最低要求若要启用在 WCF，开发中使用您的通道<xref:System.ServiceModel.Channels.BindingElement>通道，和中的步骤 4 中所述的应用程序使用[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -59,11 +59,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>编码绑定元素  
  若要创建新的编码绑定元素，请首先扩展 <xref:System.ServiceModel.Channels.BindingElement> 类并实现 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> 类。 之后，至少必须实现 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> 方法和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> 属性。  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>。 返回此绑定元素的新副本。 作为一种最佳做法，我们建议绑定元素作者实现 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>，方法是使用复制构造函数首先调用基复制构造函数，然后克隆此类中的所有附加字段。  
+- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>。 返回此绑定元素的新副本。 作为一种最佳做法，我们建议绑定元素作者实现 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>，方法是使用复制构造函数首先调用基复制构造函数，然后克隆此类中的所有附加字段。  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>。 返回一个 <xref:System.ServiceModel.Channels.MessageEncoderFactory>，它为实现新编码器的实际类提供句柄并扩展 <xref:System.ServiceModel.Channels.MessageEncoder>。 有关详细信息，请参阅 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 和 <xref:System.ServiceModel.Channels.MessageEncoder>。  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>。 返回一个 <xref:System.ServiceModel.Channels.MessageEncoderFactory>，它为实现新编码器的实际类提供句柄并扩展 <xref:System.ServiceModel.Channels.MessageEncoder>。 有关详细信息，请参阅 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 和 <xref:System.ServiceModel.Channels.MessageEncoder>。  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>。 返回此编码中使用的 <xref:System.ServiceModel.Channels.MessageVersion>，表示正在使用的 SOAP 和 WS-Addressing 的版本。  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>。 返回此编码中使用的 <xref:System.ServiceModel.Channels.MessageVersion>，表示正在使用的 SOAP 和 WS-Addressing 的版本。  
   
  有关用户定义的编码绑定元素的可选方法和属性的完整列表，请参见 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>。  
   

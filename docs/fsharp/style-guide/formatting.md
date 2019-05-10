@@ -2,12 +2,12 @@
 title: F#代码格式设置准则
 description: 了解有关格式设置准则F#代码。
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902585"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063588"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#代码格式设置准则
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>含空白区域的外侧代码函数自变量
+
+在定义函数时，使用每个自变量周围的空白区域。
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>类型批注
+
+#### <a name="right-pad-function-argument-type-annotations"></a>右填充函数参数类型批注
+
+在定义的参数和类型批注时，使用之后的空白区域`:`符号：
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>含空白区域的外侧代码返回类型批注
+
+中的 let 绑定函数或值类型批注 （在函数的情况下返回类型），使用空白区域之前和之后`:`符号：
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>格式设置的空行

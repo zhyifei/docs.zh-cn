@@ -1,15 +1,15 @@
 ---
-title: 演练：在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型
+title: 演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 836d035aab06f18c13e3675fbd72c5ab9879a3d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359450"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754832"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>演练：在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)
 
 如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。
 
@@ -209,13 +209,13 @@ ms.locfileid: "57359450"
 
 3. 打开 SampleClass.vb 文件。 将以下代码行添加到 SampleClass 类。
 
-```vb
-Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
-    Return Now
-End Function
-```
+    ```vb
+    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
+        Return Now
+    End Function
+    ```
 
-    Save the file.
+    保存该文件。
 
 4. 保存项目。
 

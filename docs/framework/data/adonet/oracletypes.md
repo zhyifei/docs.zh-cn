@@ -2,12 +2,12 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb45bc5b7bc317d04f5275afadbb1879117e3af0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878418"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586946"
 ---
 # <a name="oracletypes"></a>OracleTypes
 Oracle .NET Framework 数据提供程序包括多个可以用于使用 Oracle 数据类型的结构。 包括 <xref:System.Data.OracleClient.OracleNumber> 和 <xref:System.Data.OracleClient.OracleString>。  
@@ -17,9 +17,9 @@ Oracle .NET Framework 数据提供程序包括多个可以用于使用 Oracle �
   
  以下 C# 示例：  
   
--   创建一个 Oracle 表并为该表加载数据。  
+- 创建一个 Oracle 表并为该表加载数据。  
   
--   使用 <xref:System.Data.OracleClient.OracleDataReader> 访问数据，并使用多个 <xref:System.Data.OracleClient.OracleType> 结构显示数据。  
+- 使用 <xref:System.Data.OracleClient.OracleDataReader> 访问数据，并使用多个 <xref:System.Data.OracleClient.OracleType> 结构显示数据。  
   
 ## <a name="creating-an-oracle-table"></a>创建 Oracle 表  
  此示例创建一个 Oracle 表并为该表加载数据。 必须先运行此示例，才能运行下一个示例。  

@@ -2,12 +2,12 @@
 title: SQL Server 安全性概述
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 52e6f69c006353fcafcbf8f567675a7c14830f76
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922195"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582816"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概述
 具有重叠安全层的全面防御策略是抵御安全威胁的最佳方式。 SQL Server 提供的安全体系结构旨在允许数据库管理员和开发人员创建安全的数据库应用程序并抵御威胁。 通过引入新功能，SQL Server 的每个版本都在先前的 SQL Server 版本基础上得到改善。 但是，安全性并不是现成的。 每个应用程序都具有其独特的安全要求。 开发人员需要了解哪些功能组合最适合抵御已知的威胁，并需要预见未来可能出现的威胁。  

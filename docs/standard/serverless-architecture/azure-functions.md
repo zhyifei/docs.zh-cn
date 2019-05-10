@@ -4,12 +4,12 @@ description: Azure functions 提供无服务器功能跨多个语言 （C#、 Ja
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754231"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -25,7 +25,7 @@ Azure functions 提供无服务器计算体验。 通过调用函数*触发器*�
 
 有两个版本的 Azure Functions 运行时：1.x 和 2.x。 版本 1.x 已正式推出 (GA)。 它支持从门户或 Windows 计算机的.NET 开发，并使用.NET Framework。 1.x 支持C#，JavaScript，和F#，使用 Python、 PHP、 TypeScript、 Batch、 Bash、 和 PowerShell 的实验性支持。
 
-版本 2.x 处于预览状态。 它利用.NET Core，并支持 Windows、 macOS 和 Linux 计算机上的跨平台开发。 2.x 添加了适用于 Java 的一流支持，但尚不直接支持的任何实验性语言。 版本 2.x 使用新的绑定扩展性模型，从而使第三方扩展到平台独立的版本控制的绑定，并更简化的执行环境。
+[版本 2.x 现也已公开发布](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/)。 它利用.NET Core，并支持 Windows、 macOS 和 Linux 计算机上的跨平台开发。 2.x 添加了适用于 Java 的一流支持，但尚不直接支持的任何实验性语言。 版本 2.x 使用新的绑定扩展性模型，从而使第三方扩展到平台独立的版本控制的绑定，并更简化的执行环境。
 
 > **与 1.x 中没有的已知的问题[绑定重定向支持](https://github.com/Azure/azure-functions-host/issues/992)。** 问题是特定于.NET 开发。 依赖库的运行时中包括的库中的不同版本的项目会受到影响。 功能团队已致力于具体进度有关的问题。 它将进入正式发布之前，团队将解决在 2.x 中的绑定重定向。 此处提供了官方团队语句中使用的建议修补程序和解决方法：[在 Azure Functions 中的程序集解析](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)。
 
