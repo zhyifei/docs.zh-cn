@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e47a140b1fed80618ba4279515cd45721a8e52f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756970"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662151"
 ---
-# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="6be10-102">生成和部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="6be10-102">Building and Deploying WPF Applications</span></span>
-<span data-ttu-id="6be10-103">生成和部署模型提供的功能生成和部署应用程序本地和远程，其中包括：</span><span class="sxs-lookup"><span data-stu-id="6be10-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
+# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="090d6-102">生成和部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="090d6-102">Building and Deploying WPF Applications</span></span>
+<span data-ttu-id="090d6-103">生成和部署模型提供的功能生成和部署应用程序本地和远程，其中包括：</span><span class="sxs-lookup"><span data-stu-id="090d6-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
   
-- <span data-ttu-id="6be10-104">MSBuild:.NET 构建系统位于 Microsoft.Build.Tasks.Windows 命名空间中。</span><span class="sxs-lookup"><span data-stu-id="6be10-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
+- <span data-ttu-id="090d6-104">MSBuild:.NET 构建系统位于 Microsoft.Build.Tasks.Windows 命名空间中。</span><span class="sxs-lookup"><span data-stu-id="090d6-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
   
-- <span data-ttu-id="6be10-105">资源： 处理 UI 资源。</span><span class="sxs-lookup"><span data-stu-id="6be10-105">Resources: working with UI resources.</span></span>  
+- <span data-ttu-id="090d6-105">资源： 处理 UI 资源。</span><span class="sxs-lookup"><span data-stu-id="090d6-105">Resources: working with UI resources.</span></span>  
   
-- <span data-ttu-id="6be10-106">ClickOnce 部署：.NET 发布和部署系统。</span><span class="sxs-lookup"><span data-stu-id="6be10-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
+- <span data-ttu-id="090d6-106">ClickOnce 部署：.NET 发布和部署系统。</span><span class="sxs-lookup"><span data-stu-id="090d6-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6be10-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="6be10-107">In This Section</span></span>  
- [<span data-ttu-id="6be10-108">生成 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="6be10-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
- [<span data-ttu-id="6be10-109">部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="6be10-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
- [<span data-ttu-id="6be10-110">帮助主题</span><span class="sxs-lookup"><span data-stu-id="6be10-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="090d6-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="090d6-107">In This Section</span></span>  
+ [<span data-ttu-id="090d6-108">生成 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="090d6-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="090d6-109">部署 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="090d6-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="090d6-110">帮助主题</span><span class="sxs-lookup"><span data-stu-id="090d6-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="6be10-111">参考</span><span class="sxs-lookup"><span data-stu-id="6be10-111">Reference</span></span>  
- <span data-ttu-id="6be10-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="6be10-112">MSBuild</span></span>  
+## <a name="reference"></a><span data-ttu-id="090d6-111">参考</span><span class="sxs-lookup"><span data-stu-id="090d6-111">Reference</span></span>  
+ <span data-ttu-id="090d6-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="090d6-112">MSBuild</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6be10-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="6be10-113">Related Sections</span></span>  
- [<span data-ttu-id="6be10-114">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="6be10-114">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="6be10-115">WPF 中的窗口</span><span class="sxs-lookup"><span data-stu-id="6be10-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
-  [<span data-ttu-id="6be10-116">导航概述</span><span class="sxs-lookup"><span data-stu-id="6be10-116">Navigation Overview</span></span>](navigation-overview.md)  
-  <span data-ttu-id="6be10-117">[WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）</span><span class="sxs-lookup"><span data-stu-id="6be10-117">[WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)</span></span>  
-  [<span data-ttu-id="6be10-118">承载</span><span class="sxs-lookup"><span data-stu-id="6be10-118">Hosting</span></span>](hosting-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="090d6-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="090d6-113">Related Sections</span></span>  
+ [<span data-ttu-id="090d6-114">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="090d6-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="090d6-115">WPF 中的窗口</span><span class="sxs-lookup"><span data-stu-id="090d6-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="090d6-116">导航概述</span><span class="sxs-lookup"><span data-stu-id="090d6-116">Navigation Overview</span></span>](navigation-overview.md)  
+  <span data-ttu-id="090d6-117">[WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）</span><span class="sxs-lookup"><span data-stu-id="090d6-117">[WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)</span></span>  
+  [<span data-ttu-id="090d6-118">承载</span><span class="sxs-lookup"><span data-stu-id="090d6-118">Hosting</span></span>](hosting-wpf-applications.md)
