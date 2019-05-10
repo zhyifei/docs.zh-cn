@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
-ms.openlocfilehash: 26510832d196aa6418112e3a00d73c7a1d3aef92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9afa14ca7709f34c006c0c30a756b208d5a5d83
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922767"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912518"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 必须大于 0
 与上传和下载的文件时[My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)，则必须指定`connectionTimeout`大于`0`。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   提供一个大于 `connectionTimeout` 的 `0`。  
+- 提供一个大于 `connectionTimeout` 的 `0`。  
   
 ## <a name="see-also"></a>请参阅
 

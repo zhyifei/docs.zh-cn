@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674293"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210447"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -41,7 +41,7 @@ ms.locfileid: "61674293"
   
 ### <a name="value-attribute"></a>值属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |"name=value"|预定义的开关名称以及其值 (`true`或`false`)。 由分号分隔多个交换机名称/值对 （";"）。 有关支持的.NET Framework 的预定义的开关名称的列表，请参阅备注部分。|  
   
@@ -90,15 +90,17 @@ ms.locfileid: "61674293"
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|控件是否<xref:System.Net.ServicePointManager?displayProperty=nameWithType>和<xref:System.Net.Security.SslStream?displayProperty=nameWithType>类可以使用 SSL 3.0 协议。 有关详细信息，请参阅[缓解：TLS 协议](../../../migration-guide/mitigation-tls-protocols.md)。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|禁用恢复为默认值为 Tls12、 Tls11、 Tls SystemDefault TLS 版本。|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|禁用 SslStream TLS 服务器端将发出警报。|.NET Framework 4.7|
+|`Switch.System.Runtime.InteropServices.`<br/>`DoNotMarshalOutByrefSafeArrayOnInvoke`|控制是否在 COM 互操作事件的 ByRef SafeArray 参数封送回本机代码 (`false`) 或已禁用回本机代码封送处理 (`true`)。|.NET Framework 4.8|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控件是否[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)序列化为基于 ECMAScript V6 和 V8 标准一些控制字符。 有关详细信息，请参阅[缓解：使用 DataContractJsonSerializer 对控制字符的序列化](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控件是否<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>支持多个调整或仅一次调整时区的。 如果`true`，它使用<xref:System.TimeZoneInfo>类型序列化和反序列化日期和时间数据; 否则，它使用<xref:System.TimeZone>类型，不支持多个调整规则。|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|控件是否<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType>对象序列化和反序列化期间使用更大数组大小。 将此开关设置为`true`以提高性能的序列化和反序列化大型对象类型的关系图如<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控件是否<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>构造函数设置新的对象的<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>与现有的对象引用的属性。 有关详细信息，请参阅[缓解：ClaimsIdentity 构造函数](../../../migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控件是否尝试重用<xref:System.Security.Cryptography.AesCryptoServiceProvider>解密器会引发<xref:System.Security.Cryptography.CryptographicException>。 有关详细信息，请参阅[AesCryptoServiceProvider 解密器提供了可重用的转换](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控件是否的值[CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)属性是[IntPtr](xref:System.IntPtr)表示一个窗口的内存位置处理，或者是否窗口句柄 (HWND)。 有关详细信息，请参阅[缓解：Cspparameters.parentwindowhandle 分配 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedCMS 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedXML 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|控制是否使用托管加密类在 FIPS 模式，则会引发<xref:System.Security.Cryptography.CryptographicException>(`true`) 或依赖于系统库的实现 (`false`)。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedCMS 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|控件是否<xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype>方法可正确处理由操作系统支持的所有已命名的曲线 (`false`) 或恢复到旧行为。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedXML 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|确定是否`TransportWithMessageCredential`安全模式允许带未签名的消息"to"标头。 这是选择的开关。 有关详细信息，请参阅[.NET Framework 4.6.1 中的运行时更改](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|控件是否<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>构造函数将引发<xref:System.ArgumentException>的元素之一是如果`null`。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|确定是否尝试使用 X509 证书与 CSG 密钥存储提供程序引发异常。 有关详细信息，请参阅[WCF 传输安全性支持使用 CNG 存储的证书](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)。|.NET Framework 4.6.1|

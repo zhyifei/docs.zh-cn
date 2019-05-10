@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d238e9c426b5ae7df0cde745b51eace1cae5d87
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803852"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913207"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>复制的 ByRef 参数值\<parametername > 返回到匹配的参数用于限制从类型\<typename1 > 类型\<typename2 >
 加宽到相应的参数类型，由自变量调用过程时，从参数的参数转换为收缩转换。  
@@ -27,11 +27,11 @@ ms.locfileid: "61803852"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果可能，请与过程参数，使用相同类型的调用参数，因此 Visual Basic 不需要执行任何转换。  
+- 如果可能，请与过程参数，使用相同类型的调用参数，因此 Visual Basic 不需要执行任何转换。  
   
--   如果需要调用实参类型与形参类型不同的过程，但不需要将值返回到调用实参中，请将形参定义为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 而不是 `ByRef`。  
+- 如果需要调用实参类型与形参类型不同的过程，但不需要将值返回到调用实参中，请将形参定义为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 而不是 `ByRef`。  
   
--   如果你需要将值返回到调用的参数，定义反向转换运算符用作[Widening](../../../visual-basic/language-reference/modifiers/widening.md)如有可能。  
+- 如果你需要将值返回到调用的参数，定义反向转换运算符用作[Widening](../../../visual-basic/language-reference/modifiers/widening.md)如有可能。  
   
 ## <a name="see-also"></a>请参阅
 

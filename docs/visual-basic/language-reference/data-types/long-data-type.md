@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b4226c83f25807e013823031820d58790bb6db2
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918445"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912785"
 ---
 # <a name="long-data-type-visual-basic"></a>Long 数据类型 (Visual Basic)
 
@@ -52,7 +52,7 @@ ms.locfileid: "61918445"
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 作为前缀和十六进制、 二进制或八进制数字之间的前导分隔符。 例如：
+从 Visual Basic 15.5 开始，还可以使用下划线字符 (`_`) 作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>编程提示
 
--   **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互记住`Long`在其他环境中具有不同的数据宽度 （32 位）。 如果您将 32 位自变量传递给此类组件，将其作为声明`Integer`而不是`Long`中新的 Visual Basic 代码。  
+- **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互记住`Long`在其他环境中具有不同的数据宽度 （32 位）。 如果您将 32 位自变量传递给此类组件，将其作为声明`Integer`而不是`Long`中新的 Visual Basic 代码。  
   
--   **扩大转换。** `Long`数据类型加宽到`Decimal`， `Single`，或`Double`。 这意味着，你可以将 `Long` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。  
+- **扩大转换。** `Long`数据类型加宽到`Decimal`， `Single`，或`Double`。 这意味着，你可以将 `Long` 转换为这些类型中的任意类型，而不会遇到 <xref:System.OverflowException?displayProperty=nameWithType> 错误。  
   
--   **类型字符。** 将文本类型字符 `L` 追加到文本会将其强制转换为 `Long` 数据类型。 将标识符类型字符 `&` 追加到任何标识符会将其强制转换为 `Long`。  
+- **类型字符。** 将文本类型字符 `L` 追加到文本会将其强制转换为 `Long` 数据类型。 将标识符类型字符 `&` 追加到任何标识符会将其强制转换为 `Long`。  
   
--   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Int64?displayProperty=nameWithType> 结构。  
+- **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Int64?displayProperty=nameWithType> 结构。  
 
 ## <a name="see-also"></a>请参阅
 

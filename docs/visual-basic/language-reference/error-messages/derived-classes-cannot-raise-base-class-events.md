@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 0e9acf4b3e71295655c15ae9b1c80852c9aca8df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 030c9c2ffa97572298b23f05c23e3af0df7387b0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803566"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913165"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>派生类无法引发基类事件
 只能从声明它的声明空间，可以引发一个事件。 因此，一个类无法引发从任何其他类，甚至从其派生的其中一个事件。  
@@ -21,7 +21,7 @@ ms.locfileid: "61803566"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   移动`Event`语句或`RaiseEvent`语句，使它们位于同一个类。  
+- 移动`Event`语句或`RaiseEvent`语句，使它们位于同一个类。  
   
 ## <a name="see-also"></a>请参阅
 

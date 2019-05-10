@@ -12,15 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 7162fcc24595bbb16d268d5d9e1ea4d82f6e67fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5cb1ddc130a8b1913f30b0d20d27941005dd9d3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920531"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063252"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 运算符 (Visual Basic)
-将对象引用变量与数据类型进行比较。  
+检查表达式的结果的运行时类型是否兼容的类型使用指定的类型。
   
 ## <a name="syntax"></a>语法  
   

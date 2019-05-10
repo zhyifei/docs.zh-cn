@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 54d66a60d20a6add4c2b4a160f87b58b5a1d00e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e55e561fa20a3740d352537958681b0a66fc381e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592044"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>“System.Nullable(Of T)”的方法不能用作“AddressOf”运算符的操作数
 语句使用`AddressOf`运算符的操作数表示的过程与<xref:System.Nullable%601>结构。  

@@ -2,12 +2,12 @@
 title: 在 SQL Server 中创建应用程序角色
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878015"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910713"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中创建应用程序角色
 应用程序角色可提供对应用程序（而不是数据库角色或用户）分配权限的方法。 用户可以连接到数据库、激活应用程序角色以及采用授予应用程序的权限。 授予应用程序角色的权限在连接期间有效。  
@@ -18,23 +18,23 @@ ms.locfileid: "61878015"
 ## <a name="application-role-features"></a>应用程序角色功能  
  应用程序角色具有以下功能：  
   
--   与数据库角色不同，应用程序角色不包含成员。  
+- 与数据库角色不同，应用程序角色不包含成员。  
   
--   当客户端应用程序向 `sp_setapprole` 系统存储过程提供应用程序角色名称和密码时，可激活应用程序角色。  
+- 当客户端应用程序向 `sp_setapprole` 系统存储过程提供应用程序角色名称和密码时，可激活应用程序角色。  
   
--   密码必须存储在客户端计算机上，并且在运行时提供；应用程序角色无法从 SQL Server 内激活。  
+- 密码必须存储在客户端计算机上，并且在运行时提供；应用程序角色无法从 SQL Server 内激活。  
   
--   密码不加密。 参数密码作为单向哈希进行存储。  
+- 密码不加密。 参数密码作为单向哈希进行存储。  
   
--   一旦激活，通过应用程序角色获取的权限在连接期间保持有效。  
+- 一旦激活，通过应用程序角色获取的权限在连接期间保持有效。  
   
--   应用程序角色继承授予 `public` 角色的权限。  
+- 应用程序角色继承授予 `public` 角色的权限。  
   
--   如果固定服务器角色 `sysadmin` 的成员激活某一应用程序角色，则安全上下文在连接期间切换为应用程序角色的上下文。  
+- 如果固定服务器角色 `sysadmin` 的成员激活某一应用程序角色，则安全上下文在连接期间切换为应用程序角色的上下文。  
   
--   如果您在具有应用程序角色的数据库中创建 `guest` 帐户，则不必为该应用程序角色或调用它的任何登录名创建数据库用户帐户。 只有当在另一个数据库中存在 `guest` 帐户时，应用程序才能直接访问另一数据库。  
+- 如果您在具有应用程序角色的数据库中创建 `guest` 帐户，则不必为该应用程序角色或调用它的任何登录名创建数据库用户帐户。 只有当在另一个数据库中存在 `guest` 帐户时，应用程序才能直接访问另一数据库。  
   
--   返回登录名的内置函数（如 SYSTEM_USER）返回调用应用程序角色的登录名。 返回数据库用户名的内置函数将返回应用程序角色的名称。  
+- 返回登录名的内置函数（如 SYSTEM_USER）返回调用应用程序角色的登录名。 返回数据库用户名的内置函数将返回应用程序角色的名称。  
   
 ### <a name="the-principle-of-least-privilege"></a>最低特权原则  
  仅当密码遭泄漏时，应用程序角色才被授予必要的权限。 在使用应用程序角色的任何数据库中，应撤消对 `public` 角色的权限。 在不希望应用程序角色的调用方具有访问权限的任何数据库中，禁用 `guest` 帐户。  
@@ -47,9 +47,9 @@ ms.locfileid: "61878015"
   
  可能需要考虑以下替代方法。  
   
--   使用通过 EXECUTE AS 语句及其 NO REVERT 和 WITH COOKIE 字句切换的上下文。 您可以在未映射为登录名的数据库中创建用户帐户。 然后，向此帐户分配权限。 对于很少登录的用户使用 EXECUTE AS 比较安全，因为它基于权限，而不基于密码。 有关详细信息，请参阅[SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
+- 使用通过 EXECUTE AS 语句及其 NO REVERT 和 WITH COOKIE 字句切换的上下文。 您可以在未映射为登录名的数据库中创建用户帐户。 然后，向此帐户分配权限。 对于很少登录的用户使用 EXECUTE AS 比较安全，因为它基于权限，而不基于密码。 有关详细信息，请参阅[SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)。  
   
--   使用证书对存储过程进行签名，并仅授予执行这些过程的权限。 有关详细信息，请参阅[SQL Server 中的签名存储过程](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
+- 使用证书对存储过程进行签名，并仅授予执行这些过程的权限。 有关详细信息，请参阅[SQL Server 中的签名存储过程](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)。  
   
 ## <a name="external-resources"></a>外部资源  
  有关更多信息，请参见以下资源。  

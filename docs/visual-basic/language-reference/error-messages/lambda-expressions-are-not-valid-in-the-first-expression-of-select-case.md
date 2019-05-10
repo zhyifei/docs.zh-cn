@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921272"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589722"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambda 表达式在“Select Case”语句的第一个表达式中无效
 不能使用 lambda 表达式中的测试表达式`Select Case`语句。 返回的函数，测试表达式的 lambda 表达式定义`Select Case`语句必须是基本数据类型。  
@@ -29,9 +29,9 @@ ms.locfileid: "61921272"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   检查你的代码以确定是否可以使用其他条件构造，例如 `If...Then...Else` 语句。  
+- 检查你的代码以确定是否可以使用其他条件构造，例如 `If...Then...Else` 语句。  
   
--   您可能打算调用该函数，如下面的代码中所示：  
+- 您可能打算调用该函数，如下面的代码中所示：  
   
 ```vb  
 Dim num? As Integer  

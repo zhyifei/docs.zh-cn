@@ -7,23 +7,25 @@ helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], about OpenFileDialog
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-ms.openlocfilehash: ec275a5923d332d23205c79442fa23bc6e402e3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24327ded50ac927642e2687b40b1f10de9bdf41e
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804554"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211705"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>OpenFileDialog 组件概述（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.OpenFileDialog> 组件是一个预配置的对话框。 它是相同**打开的文件**公开的 Windows 操作系统的对话框。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。  
-  
-## <a name="using-this-component"></a>使用此组件  
- 将在基于 Windows 的应用程序中的此组件作为一个简单的解决方案的文件选择而不用配置你自己的对话框。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。 但是，应注意，当使用<xref:System.Windows.Forms.OpenFileDialog>组件，您必须编写您自己的文件打开逻辑。  
-  
- 使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法，以便在运行时显示对话框。 可以让用户选择多个文件与要打开<xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A>属性。 此外，还可以使用<xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A>属性来确定是否在对话框中显示只读复选框。 <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A>属性指示是否选定只读复选框。 最后，<xref:System.Windows.Forms.FileDialog.Filter%2A>属性设置的当前文件名筛选器字符串，它确定在对话框中的"文件类型"框中显示的选项。  
-  
- 添加到窗体时<xref:System.Windows.Forms.OpenFileDialog>组件在 Windows 窗体设计器底部的任务栏中显示。  
-  
+
+Windows 窗体 <xref:System.Windows.Forms.OpenFileDialog> 组件是一个预配置的对话框。 它是相同**打开的文件**公开的 Windows 操作系统的对话框。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。
+
+## <a name="use-this-component"></a>使用此组件
+
+将在基于 Windows 的应用程序中的此组件作为一个简单的解决方案的文件选择而不用配置你自己的对话框。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。 但是，应注意，当使用<xref:System.Windows.Forms.OpenFileDialog>组件，您必须编写您自己的文件打开逻辑。
+
+使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法，以便在运行时显示对话框。 可以让用户选择多个文件与要打开<xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A>属性。 此外，还可以使用<xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A>属性来确定是否在对话框中显示只读复选框。 <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A>属性指示是否选定只读复选框。 最后，<xref:System.Windows.Forms.FileDialog.Filter%2A>属性设置的当前文件名筛选器字符串，它确定在对话框中的"文件类型"框中显示的选项。
+
+添加到窗体时<xref:System.Windows.Forms.OpenFileDialog>组件在 Visual Studio 中的 Windows 窗体设计器底部的任务栏中显示。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.OpenFileDialog>

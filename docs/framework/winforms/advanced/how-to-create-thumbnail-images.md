@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937628"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063774"
 ---
 # <a name="how-to-create-thumbnail-images"></a>如何：创建缩略图图像
 缩略图是映像的小版本。 您可以通过调用创建缩略图<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>对象。  
@@ -21,9 +21,9 @@ ms.locfileid: "61937628"
 ## <a name="example"></a>示例  
  下面的示例构造<xref:System.Drawing.Image>JPG 文件中的对象。 原始图像的宽度为 640 像素，高度为 479 像素。 代码将创建具有 100 个像素的宽度和高度为 100 像素的缩略图。  
   
- 下图显示的缩略图。  
+ 下图显示了缩略图：  
   
- ![缩略图](./media/thumbnail1.png "Thumbnail1")  
+ ![显示在输出缩略图的屏幕截图。](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  在此示例中，回调方法，声明，但从未使用。 这支持所有版本的 GDI +。  

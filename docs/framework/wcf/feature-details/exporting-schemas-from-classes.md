@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5c11ebf87f68a87c410c87fd860ba58f4f63a35
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856666"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587587"
 ---
 # <a name="exporting-schemas-from-classes"></a>从类导出架构
 若要从数据协定模型中使用的类生成 XML 架构定义语言 (XSD) 架构，请使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 类。 本主题描述创建架构的过程。  
@@ -43,18 +43,18 @@ ms.locfileid: "61856666"
 ## <a name="export-options"></a>导出选项  
  您可以将 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractExporter> 属性设置为 <xref:System.Runtime.Serialization.ExportOptions> 类的实例以控制导出过程的各个方面。 您可以具体设置以下选项：  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 这一 `Type` 集合表示要导出的类型的已知类型。 (有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 这一 `Type` 集合表示要导出的类型的已知类型。 (有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 通过此属性可以提供 <xref:System.Runtime.Serialization.IDataContractSurrogate> ，该属性将自定义导出过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 通过此属性可以提供 <xref:System.Runtime.Serialization.IDataContractSurrogate> ，该属性将自定义导出过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
 ## <a name="helper-methods"></a>帮助器方法  
  除了具有导出架构的主要作用， `XsdDataContractExporter` 还具有几个有用的帮助器方法，它们可提供有关类型的信息。 这些问题包括：  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 方法。 此方法采用 `Type` 并返回表示根元素名称和命名空间的 <xref:System.Xml.XmlQualifiedName> ，此名称和命名空间可在此类型被序列化为根对象时使用。  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 方法。 此方法采用 `Type` 并返回表示根元素名称和命名空间的 <xref:System.Xml.XmlQualifiedName> ，此名称和命名空间可在此类型被序列化为根对象时使用。  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 方法。 此方法采用 `Type` 并返回表示 XSD 架构类型名称的 <xref:System.Xml.XmlQualifiedName> ，此名称可在此类型导出到架构中时使用。 对于表示架构中匿名类型的 <xref:System.Xml.Serialization.IXmlSerializable> 类型，此方法返回 `null`。  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 方法。 此方法采用 `Type` 并返回表示 XSD 架构类型名称的 <xref:System.Xml.XmlQualifiedName> ，此名称可在此类型导出到架构中时使用。 对于表示架构中匿名类型的 <xref:System.Xml.Serialization.IXmlSerializable> 类型，此方法返回 `null`。  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 方法。 此方法只能与表示架构中匿名类型的 <xref:System.Xml.Serialization.IXmlSerializable> 类型一起使用，并为所有其他类型返回 `null` 。 对于匿名类型，此方法返回表示给定 <xref:System.Xml.Schema.XmlSchemaType> 的 `Type`。  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 方法。 此方法只能与表示架构中匿名类型的 <xref:System.Xml.Serialization.IXmlSerializable> 类型一起使用，并为所有其他类型返回 `null` 。 对于匿名类型，此方法返回表示给定 <xref:System.Xml.Schema.XmlSchemaType> 的 `Type`。  
   
  导出选项会影响所有这些方法。  
   

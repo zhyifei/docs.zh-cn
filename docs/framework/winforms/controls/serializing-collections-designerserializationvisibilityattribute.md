@@ -11,33 +11,28 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c113dcf814a252808ae3232751028947c26821ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012433"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211601"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合
 
 自定义控件有时将公开为属性的集合。 本演练演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>类来控制在设计时序列化集合的方式。 将应用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>到集合属性的值可确保将序列化属性。
 
- 要将本主题中的代码作为单个列表进行复制，请参阅[如何：序列化使用 DesignerSerializationVisibilityAttribute 标准类型的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))。
-
-> [!NOTE]
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
+要将本主题中的代码作为单个列表进行复制，请参阅[如何：序列化使用 DesignerSerializationVisibilityAttribute 标准类型的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))。
 
 ## <a name="prerequisites"></a>系统必备
- 若要完成本演练，你将需要：
 
-- 若要能够创建和安装 Visual Studio 的计算机上运行 Windows 窗体应用程序项目的足够权限。
+若要完成本演练，必须具有 Visual Studio。
 
-## <a name="creating-a-control-that-has-a-serializable-collection"></a>创建一个控件具有可序列化集合
- 第一步是创建具有可序列化集合作为属性的控件。 您可以编辑此集合使用的内容**集合编辑器**，使用户能够从**属性**窗口。
+## <a name="create-a-control-with-a-serializable-collection"></a>创建具有可序列化集合的控件
 
-### <a name="to-create-a-control-with-a-serializable-collection"></a>若要创建具有可序列化集合的控件
+第一步是创建具有可序列化集合作为属性的控件。 您可以编辑此集合使用的内容**集合编辑器**，使用户能够从**属性**窗口。
 
-1. 创建一个名为 Windows 控件库项目`SerializationDemoControlLib`。 有关详细信息，请参阅[Windows 控件库模板](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))。
+1. 在 Visual Studio 中，创建一个名为 Windows 控件库项目`SerializationDemoControlLib`。 有关详细信息，请参阅[Windows 控件库模板](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))。
 
 2. 重命名`UserControl1`到`SerializationDemoControl`。 有关详细信息，请参阅[重命名代码符号重构](/visualstudio/ide/reference/rename)。
 
@@ -62,21 +57,21 @@ ms.locfileid: "62012433"
 
 7. 定义`Strings`属性上的`SerializationDemoControl`。
 
-> [!NOTE]
-> <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>值用于启用序列化的集合。
+   > [!NOTE]
+   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>值用于启用序列化的集合。
 
- [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
- [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
- [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]
+   [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
+   [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
+   [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]
 
-1. 按 F5 生成项目并在“UserControl 测试容器”中运行该控件。
+8. 按**F5**以生成项目，然后运行控件**UserControl 测试容器**。
 
-2. 查找`Strings`中的属性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 测试容器**。 单击`Strings`属性，然后单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以打开**字符串集合编辑器**.
+9. 查找`Strings`中的属性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 测试容器**。 单击`Strings`属性，然后单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以打开**字符串集合编辑器**.
 
-3. 输入中的多个字符串**字符串集合编辑器**。 分隔通过按每个字符串的末尾处的 ENTER 键。 单击**确定**完后输入字符串。
+10. 输入中的多个字符串**字符串集合编辑器**。 通过按分隔**Enter**密钥在每个字符串的末尾。 单击**确定**完后输入字符串。
 
-> [!NOTE]
-> 您键入的字符串出现在<xref:System.Windows.Forms.TextBox>的`SerializationDemoControl`。
+   > [!NOTE]
+   > 您键入的字符串出现在<xref:System.Windows.Forms.TextBox>的`SerializationDemoControl`。
 
 ## <a name="serializing-a-collection-property"></a>序列化集合属性
 

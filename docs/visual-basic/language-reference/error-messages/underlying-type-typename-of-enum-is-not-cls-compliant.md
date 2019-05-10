@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 636fcc36e7bac52467998dc9c59f14ba1bedead3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b58759502b9297f9cd5ac89296ab147c40fc89f1
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774876"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913360"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>基础类型\<类型名称 > 的枚举不符合 cls 的
 为此枚举不是指定的数据类型的一部分[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。 这不是在组件中，一个错误，因为[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支持此数据类型。 但是，在严格符合 cls 的代码中编写的另一个组件可能不支持此数据类型。 此类组件可能不能成功与您的组件进行交互。  
