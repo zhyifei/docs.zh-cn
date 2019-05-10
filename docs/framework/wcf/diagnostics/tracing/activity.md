@@ -2,12 +2,12 @@
 title: 活动
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7f498c1f2222add197f428386076148cccc9ad06
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998018"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656292"
 ---
 # <a name="activity"></a>活动
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动跟踪。 活动是帮助用户缩小故障范围的处理单位。 在同一活动中发生的错误直接相关。 例如，消息解密失败可导致操作失败。 操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。  

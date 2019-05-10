@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7fb3398ec325cd8b483ef7a222c8dd392a4e72b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935494"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656009"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 41794c5ecadbcdc0b38c7c73afc7c010a4ea6989
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98e0ed5f4fe7b0c016b4477ac9f646037b0877ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939138"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593437"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的单元格样式
 中的每个单元格<xref:System.Windows.Forms.DataGridView>控件可以有自己的样式，如文本格式、 背景色、 前景色和字体。 但是，通常情况下，多个单元格将共享特定的样式特征。  

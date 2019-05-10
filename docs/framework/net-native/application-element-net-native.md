@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657188"
 ---
 # <a name="application-element-net-native"></a>\<应用程序 > 元素 (.NET Native)
 作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务，并将运行时反射策略应用到一个应用的所有程序元素。  
@@ -52,7 +52,7 @@ ms.locfileid: "61868594"
   
 ## <a name="all-attributes"></a>所有特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |policy_setting|该策略的设置将应用到该应用中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
@@ -81,9 +81,9 @@ ms.locfileid: "61868594"
   
  `<Application>` 元素可通过以下方法之一使用：  
   
--   作为定义在运行时间需要元数据的程序元素的容器。 在这种情况下，`<Application>` 元素不需要具有任何特性。 在编译时间，编译器工具搜索 .NET Framework 核心库等所有库，以查找由 `<Application>` 元素的子元素识别出的程序元素。 相比而言，编译器工具仅搜素由 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素指定的库，以查找由 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 的子元素识别出的程序元素。  
+- 作为定义在运行时间需要元数据的程序元素的容器。 在这种情况下，`<Application>` 元素不需要具有任何特性。 在编译时间，编译器工具搜索 .NET Framework 核心库等所有库，以查找由 `<Application>` 元素的子元素识别出的程序元素。 相比而言，编译器工具仅搜素由 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素指定的库，以查找由 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 的子元素识别出的程序元素。  
   
--   作为为反射、序列化和互操作设置应用程序范围的策略的元素。 `<Application>` 元素的特性定义应用程序范围的策略，它可能会遭到 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定义的子元素的改写。  
+- 作为为反射、序列化和互操作设置应用程序范围的策略的元素。 `<Application>` 元素的特性定义应用程序范围的策略，它可能会遭到 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定义的子元素的改写。  
   
 ## <a name="see-also"></a>请参阅
 

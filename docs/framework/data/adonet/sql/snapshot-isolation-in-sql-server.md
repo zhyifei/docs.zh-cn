@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ff89f2d5ffa177b9413f6a2925bb05729e053a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592896"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔离
 快照隔离可增强 OLTP 应用程序的并发性。  
@@ -41,35 +41,35 @@ SET READ_COMMITTED_SNAPSHOT ON
   
  SQL Server 的早期版本支持 SQL-92 标准中定义的四个隔离级别：  
   
--   READ UNCOMMITTED 是限制性最弱的隔离级别，因为该级别忽略其他事务放置的锁。 使用 READ UNCOMMITTED 级别执行的事务，可以读取尚未由其他事务提交的修改后的数据值；这些行为称为“脏”读。  
+- READ UNCOMMITTED 是限制性最弱的隔离级别，因为该级别忽略其他事务放置的锁。 使用 READ UNCOMMITTED 级别执行的事务，可以读取尚未由其他事务提交的修改后的数据值；这些行为称为“脏”读。  
   
--   READ COMMITTED 是 SQL Server 默认的隔离级别。 该级别通过指定语句不能读取其他事务已修改但是尚未提交的数据值，禁止执行脏读。 在当前事务中的各个语句执行之间，其他事务仍可以修改、插入或删除数据，从而产生无法重复的读操作，或“影子”数据。  
+- READ COMMITTED 是 SQL Server 默认的隔离级别。 该级别通过指定语句不能读取其他事务已修改但是尚未提交的数据值，禁止执行脏读。 在当前事务中的各个语句执行之间，其他事务仍可以修改、插入或删除数据，从而产生无法重复的读操作，或“影子”数据。  
   
--   REPEATABLE READ 是比 READ COMMITTED 限制性更强的隔离级别。 该级别包括 READ COMMITTED，并且另外指定了在当前事务提交之前，其他任何事务均不可以修改或删除当前事务已读取的数据。 并发性低于 READ COMMITTED，因为已读数据的共享锁在整个事务期间持有，而不是在每个语句结束时释放。  
+- REPEATABLE READ 是比 READ COMMITTED 限制性更强的隔离级别。 该级别包括 READ COMMITTED，并且另外指定了在当前事务提交之前，其他任何事务均不可以修改或删除当前事务已读取的数据。 并发性低于 READ COMMITTED，因为已读数据的共享锁在整个事务期间持有，而不是在每个语句结束时释放。  
   
--   SERIALIZABLE 是限制性最强的隔离级别，因为该级别锁定整个范围的键，并一直持有锁，直到事务完成。 该级别包括 REPEATABLE READ，并增加了在事务完成之前，其他事务不能向事务已读取的范围插入新行的限制。  
+- SERIALIZABLE 是限制性最强的隔离级别，因为该级别锁定整个范围的键，并一直持有锁，直到事务完成。 该级别包括 REPEATABLE READ，并增加了在事务完成之前，其他事务不能向事务已读取的范围插入新行的限制。  
   
  有关详细信息，请参阅[事务锁定和行版本控制指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。  
   
 ### <a name="snapshot-isolation-level-extensions"></a>快照隔离级别扩展  
  SQL Server 通过引入 SNAPSHOT 隔离级别并另外实现 READ COMMITTED 而引入了对 SQL-92 隔离级别的扩展。 READ_COMMITTED_SNAPSHOT 隔离级别可以透明地替换所有事务的 READ COMMITTED。  
   
--   SNAPSHOT 隔离指定在一个事务中读取的数据永远不会反映其他同时进行的事务所作的更改。 事务使用事务开始时存在的数据行版本。 在读取数据时不会对数据放置任何锁，所以，SNAPSHOT 事务不会阻止其他事务写入数据。 写入数据的事务不会阻止快照事务读取数据。 您需要通过设置 ALLOW_SNAPSHOT_ISOLATION 数据库选项启用快照隔离后，才可以使用快照隔离。  
+- SNAPSHOT 隔离指定在一个事务中读取的数据永远不会反映其他同时进行的事务所作的更改。 事务使用事务开始时存在的数据行版本。 在读取数据时不会对数据放置任何锁，所以，SNAPSHOT 事务不会阻止其他事务写入数据。 写入数据的事务不会阻止快照事务读取数据。 您需要通过设置 ALLOW_SNAPSHOT_ISOLATION 数据库选项启用快照隔离后，才可以使用快照隔离。  
   
--   在数据库中启用快照隔离时，READ_COMMITTED_SNAPSHOT 数据库选项确定默认 READ COMMITTED 隔离级别的行为。 如果不显式指定 READ_COMMITTED_SNAPSHOT ON，READ COMMITTED 将应用于所有隐式事务。 此时的行为与设置 READ_COMMITTED_SNAPSHOT OFF（默认设置）相同。 当 READ_COMMITTED_SNAPSHOT OFF 生效时，数据库引擎使用共享锁强制使用默认隔离级别。 如果将 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON，数据库引擎将使用行版本化和快照隔离作为默认设置，而不是使用锁来保护数据。  
+- 在数据库中启用快照隔离时，READ_COMMITTED_SNAPSHOT 数据库选项确定默认 READ COMMITTED 隔离级别的行为。 如果不显式指定 READ_COMMITTED_SNAPSHOT ON，READ COMMITTED 将应用于所有隐式事务。 此时的行为与设置 READ_COMMITTED_SNAPSHOT OFF（默认设置）相同。 当 READ_COMMITTED_SNAPSHOT OFF 生效时，数据库引擎使用共享锁强制使用默认隔离级别。 如果将 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON，数据库引擎将使用行版本化和快照隔离作为默认设置，而不是使用锁来保护数据。  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>快照隔离和行版本化的工作原理  
  启用快照隔离级别时，每次更新行时，SQL Server 数据库引擎存储中的原始行的副本**tempdb**，并将事务序列号添加到行。 以下是发生的事件序列：  
   
--   新的事务启动，并为该事务分配一个事务序列号。  
+- 新的事务启动，并为该事务分配一个事务序列号。  
   
--   数据库引擎读取在事务中的行，并检索中的行版本**tempdb**其序列号为最接近，并且小于事务序列号。  
+- 数据库引擎读取在事务中的行，并检索中的行版本**tempdb**其序列号为最接近，并且小于事务序列号。  
   
--   数据库引擎检查事务编号是否不在未提交事务的事务编号列表中，这些未提交事务是在快照事务开始时进入活动状态的。  
+- 数据库引擎检查事务编号是否不在未提交事务的事务编号列表中，这些未提交事务是在快照事务开始时进入活动状态的。  
   
--   事务将读取从行的版本**tempdb**这是自事务开始以来的。 事务不会看到事务开始后插入的新行，因为这些序列号值将大于事务序列号的值。  
+- 事务将读取从行的版本**tempdb**这是自事务开始以来的。 事务不会看到事务开始后插入的新行，因为这些序列号值将大于事务序列号的值。  
   
--   当前事务将看到开始后删除该事务，因为中的行版本的行**tempdb**具有较低的序列号值。  
+- 当前事务将看到开始后删除该事务，因为中的行版本的行**tempdb**具有较低的序列号值。  
   
  快照隔离的实际效果是事务看到在事务开始时存在的所有数据，不会在基础表上授予或放置任何锁。 在存在争用的情况下，这样可以改进性能。  
   
@@ -93,15 +93,15 @@ SqlTransaction sqlTran =
   
  该代码连接到**AdventureWorks**示例数据库在 SQL Server 中的，并创建一个名为表**TestSnapshot**并将其插入一行数据。 该代码使用 ALTER DATABASE Transact-SQL 语句对数据库启用快照隔离，但是不设置 READ_COMMITTED_SNAPSHOT 选项，让默认的 READ COMMITTED 隔离级别的行为生效。 然后，该代码执行下列操作：  
   
--   开始但是不完成 sqlTransaction1，sqlTransaction1 使用 SERIALIZABLE 隔离级别开始更新事务。 这样做的结果是锁定表。  
+- 开始但是不完成 sqlTransaction1，sqlTransaction1 使用 SERIALIZABLE 隔离级别开始更新事务。 这样做的结果是锁定表。  
   
--   打开第二个连接，并开始使用快照隔离级别来读取中的数据的第二个事务**TestSnapshot**表。 因为启用了快照隔离，此事务可以读取在开始 sqlTransaction1 之前存在的数据。  
+- 打开第二个连接，并开始使用快照隔离级别来读取中的数据的第二个事务**TestSnapshot**表。 因为启用了快照隔离，此事务可以读取在开始 sqlTransaction1 之前存在的数据。  
   
--   打开第三个连接，并使用 READ COMMITTED 隔离级别开始一个事务，尝试读取表中的数据。 在这种情况下，代码无法读取数据，因为代码在第一个事务中无法通过在表上放置的锁进行读取，因而超时。如果使用 REPEATABLE READ 和 SERIALIZABLE 隔离级别，因为这些隔离级别也无法通过第一个事务中放置的锁，因而会出现同样的结果。  
+- 打开第三个连接，并使用 READ COMMITTED 隔离级别开始一个事务，尝试读取表中的数据。 在这种情况下，代码无法读取数据，因为代码在第一个事务中无法通过在表上放置的锁进行读取，因而超时。如果使用 REPEATABLE READ 和 SERIALIZABLE 隔离级别，因为这些隔离级别也无法通过第一个事务中放置的锁，因而会出现同样的结果。  
   
--   打开第四个连接，并使用 READ UNCOMMITTED 隔离级别开始一个事务，对 sqlTransaction1 中未提交的值执行脏读。 如果第一个事务未提交，数据库中永远不会真正存在此值。  
+- 打开第四个连接，并使用 READ UNCOMMITTED 隔离级别开始一个事务，对 sqlTransaction1 中未提交的值执行脏读。 如果第一个事务未提交，数据库中永远不会真正存在此值。  
   
--   它将回滚的第一个事务，并通过删除清除**TestSnapshot**表以及禁用快照隔离**AdventureWorks**数据库。  
+- 它将回滚的第一个事务，并通过删除清除**TestSnapshot**表以及禁用快照隔离**AdventureWorks**数据库。  
   
 > [!NOTE]
 >  以下示例使用同一连接字符串，且其连接池已关闭。 如果某个连接被汇集，则重置其隔离级别并不会重置服务器的隔离级别。 因此，使用同一内部池连接的后续连接将会启动，且其隔离级别将设置为该池连接的隔离级别。 关闭连接池的另一种方法是为每个连接显式设置隔离级别。  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>示例  
  以下示例演示修改数据时的快照隔离行为。 该代码执行下列操作：  
   
--   连接到**AdventureWorks**示例数据库并启用快照隔离。  
+- 连接到**AdventureWorks**示例数据库并启用快照隔离。  
   
--   创建名为的表**TestSnapshotUpdate**并将其插入三行示例数据。  
+- 创建名为的表**TestSnapshotUpdate**并将其插入三行示例数据。  
   
--   使用 SNAPSHOT 隔离开始但是不完成 sqlTransaction1。 在事务中选择三行数据。  
+- 使用 SNAPSHOT 隔离开始但是不完成 sqlTransaction1。 在事务中选择三行数据。  
   
--   创建另一个**SqlConnection**到**AdventureWorks**并创建第二个事务使用 READ COMMITTED 隔离级别的更新在 sqlTransaction1 中选择的行之一中的值。  
+- 创建另一个**SqlConnection**到**AdventureWorks**并创建第二个事务使用 READ COMMITTED 隔离级别的更新在 sqlTransaction1 中选择的行之一中的值。  
   
--   提交 sqlTransaction2。  
+- 提交 sqlTransaction2。  
   
--   返回 sqlTransaction1 并尝试更新 sqlTransaction1 已提交的相同的行。 将引发 3960 错误，sqlTransaction1 将自动回滚。 **SqlException.Number**并**SqlException.Message**将显示在控制台窗口。  
+- 返回 sqlTransaction1 并尝试更新 sqlTransaction1 已提交的相同的行。 将引发 3960 错误，sqlTransaction1 将自动回滚。 **SqlException.Number**并**SqlException.Message**将显示在控制台窗口。  
   
--   执行清理代码，以关闭中的快照隔离**AdventureWorks**和删除**TestSnapshotUpdate**表。  
+- 执行清理代码，以关闭中的快照隔离**AdventureWorks**和删除**TestSnapshotUpdate**表。  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  

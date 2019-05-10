@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c8d4e45035a49a35c32f334895eeae27a1f02a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656215"
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -22,9 +22,9 @@ ms.locfileid: "61912569"
 ## <a name="enabling-tracing"></a>启用跟踪  
  Windows Communication Foundation (WCF) 将输出诊断跟踪的以下数据：  
   
--   对进程里程碑的跟踪跨应用程序的所有组件，如操作调用、代码异常、警告及其他重大处理事件。  
+- 对进程里程碑的跟踪跨应用程序的所有组件，如操作调用、代码异常、警告及其他重大处理事件。  
   
--   跟踪功能出现故障时发生的 Windows 错误事件。 请参阅[事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
+- 跟踪功能出现故障时发生的 Windows 错误事件。 请参阅[事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
  WCF 跟踪构建的<xref:System.Diagnostics>。 若要使用跟踪，应在配置文件或代码中定义跟踪源。 WCF 为每个 WCF 程序集定义一个跟踪源。 `System.ServiceModel`跟踪源的最常规的 WCF 跟踪源，并在 WCF 通信堆栈，从进入/离开传输到进入/离开用户代码记录处理里程碑。 `System.ServiceModel.MessageLogging` 跟踪源记录流过系统的所有消息。  
   
@@ -58,19 +58,19 @@ ms.locfileid: "61912569"
 ## <a name="configuring-trace-sources-to-emit-traces"></a>配置要发出跟踪的跟踪源  
  WCF 定义每个程序集的跟踪源。 在程序集中生成的跟踪由为该跟踪源定义的侦听器访问。 定义下列跟踪源：  
   
--   System.ServiceModel:记录所有阶段的 WCF 处理，每当读取配置，在传输过程中处理消息，安全处理一条消息调度在用户代码中，依次类推。  
+- System.ServiceModel:记录所有阶段的 WCF 处理，每当读取配置，在传输过程中处理消息，安全处理一条消息调度在用户代码中，依次类推。  
   
--   System.ServiceModel.MessageLogging:记录流过系统的所有消息。  
+- System.ServiceModel.MessageLogging:记录流过系统的所有消息。  
   
--   System.IdentityModel。  
+- System.IdentityModel。  
   
--   System.ServiceModel.Activation。  
+- System.ServiceModel.Activation。  
   
--   System.IO.Log:.NET Framework 接口对公用日志文件系统 (CLFS) 日志记录功能。  
+- System.IO.Log:.NET Framework 接口对公用日志文件系统 (CLFS) 日志记录功能。  
   
--   System.Runtime.Serialization:日志读取或写入对象时。  
+- System.Runtime.Serialization:日志读取或写入对象时。  
   
--   CardSpace。  
+- CardSpace。  
   
  可以将每个跟踪源配置为使用相同（共享）的侦听器，如下面的配置示例中所示。  
   

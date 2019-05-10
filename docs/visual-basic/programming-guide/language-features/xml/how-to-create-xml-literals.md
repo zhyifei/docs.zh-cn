@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 991f10b00082bb4eb2b54f10c1b85cdc2c9009d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775903"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598539"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>如何：创建 XML 文本 (Visual Basic)
 通过使用 XML 文本，可以直接在代码中创建 XML 文档、 片段或元素。 本主题中的示例演示如何创建 XML 元素具有三个子元素，以及如何创建 XML 文档。  

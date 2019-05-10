@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b947109f99d94b0ecb1d798835c311f2374e96fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751067"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601038"
 ---
 # <a name="structures-and-classes-visual-basic"></a>结构和类 (Visual Basic)
 Visual Basic 统一的结构和类，因此这两个实体支持的大多数功能相同的语法。 但是，也有重要区别结构和类。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8c268c816975fa9b00725d317365c147312b950
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593461"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
 在已向窗体添加控件并为你的应用程序确定的用户界面后，可以将控件绑定到数据源，以便在运行时，用户可以更改和保存到应用程序相关的数据。  
@@ -31,9 +31,9 @@ ms.locfileid: "62011707"
   
 2. 在中**属性**窗口：  
   
-    1.  展开 **(DataBindings)** 节点。  
+    1. 展开 **(DataBindings)** 节点。  
   
-    2.  单击箭头旁边<xref:System.Windows.Forms.TextBox.Text%2A>属性。  
+    2. 单击箭头旁边<xref:System.Windows.Forms.TextBox.Text%2A>属性。  
   
          **数据源**UI 类型编辑器将打开。  
   

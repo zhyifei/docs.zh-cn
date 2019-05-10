@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4acb7bd60c6087b5d0052dd15540e700fa2e46cd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598684"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  
@@ -41,13 +41,13 @@ ms.locfileid: "61804580"
 ## <a name="xaml-defined-markup-extensions"></a>XAML 定义的标记扩展  
  存在这么几种标记扩展，它们并非特定于 XAML 的 WPF 实现，而是语言形式的 XAML 的内部函数或功能的实现。 这些标记扩展在 System.Xaml 程序集中作为常规 .NET Framework XAML 服务的一部分而实现，并且位于 XAML 语言 XAML 命名空间内。 就常见标记用法而言，这些标记扩展通常可由用法中的 `x:` 前缀标识。 <xref:System.Windows.Markup.MarkupExtension>基类 （也在 System.Xaml 中定义） 提供了所有标记扩展应都使用以支持在 XAML 读取器和 XAML 编写器，包括 WPF XAML 中的模式。  
   
--   `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此扩展最常用于样式和模板。 有关详细信息，请参阅 [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)。  
+- `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此扩展最常用于样式和模板。 有关详细信息，请参阅 [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)。  
   
--   `x:Static` 生成静态值。 这些值来自于值类型代码实体，它们不直接是目标属性值的类型，但可以计算为该类型。 有关详细信息，请参阅 [x:Static 标记扩展](../../xaml-services/x-static-markup-extension.md)。  
+- `x:Static` 生成静态值。 这些值来自于值类型代码实体，它们不直接是目标属性值的类型，但可以计算为该类型。 有关详细信息，请参阅 [x:Static 标记扩展](../../xaml-services/x-static-markup-extension.md)。  
   
--   `x:Null` 将 `null` 指定为属性的值，可用于特性或属性元素值。 有关详细信息，请参阅 [x:Null 标记扩展](../../xaml-services/x-null-markup-extension.md)。  
+- `x:Null` 将 `null` 指定为属性的值，可用于特性或属性元素值。 有关详细信息，请参阅 [x:Null 标记扩展](../../xaml-services/x-null-markup-extension.md)。  
   
--   在特意不使用 WPF 基元素和控件模型提供的集合支持的情况下，`x:Array` 为 XAML 语法中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。  
+- 在特意不使用 WPF 基元素和控件模型提供的集合支持的情况下，`x:Array` 为 XAML 语法中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../xaml-services/x-array-markup-extension.md)。  
   
 > [!NOTE]
 >  `x:` 前缀在 XAML 文件或生成的根元素中用于 XAML 语言内部函数的典型 XAML 命名空间映射。 例如，WPF 应用程序的 Visual Studio 模板启动使用这一个 XAML 文件`x:`映射。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但本文档将采用默认的 `x:` 映射，并通过它来标识属于 XAML 语言的 XAML 命名空间已定义部分的那些实体，这与 WPF 默认命名空间或与特定框架不相关的其他 XAML 命名空间相反。  
@@ -56,19 +56,19 @@ ms.locfileid: "61804580"
 ## <a name="wpf-specific-markup-extensions"></a>特定于 WPF 的标记扩展  
  WPF 编程中最常用的标记扩展是支持资源引用的标记扩展（`StaticResource` 和 `DynamicResource`），和支持数据绑定的标记扩展 (`Binding`)。  
   
--   `StaticResource` 通过替换已定义资源的值来为属性提供值。 `StaticResource` 计算最终在 XAML 加载时进行，并且在运行时没有访问对象图的权限。 有关详细信息，请访问 [StaticResource 标记扩展](staticresource-markup-extension.md)。  
+- `StaticResource` 通过替换已定义资源的值来为属性提供值。 `StaticResource` 计算最终在 XAML 加载时进行，并且在运行时没有访问对象图的权限。 有关详细信息，请访问 [StaticResource 标记扩展](staticresource-markup-extension.md)。  
   
--   `DynamicResource` 通过将值推迟为对资源的运行时引用来为属性提供值。 动态资源引用强制在每次访问此类资源时都进行新查找，且在运行时有权访问对象图。 为了获取此访问权限，WPF 属性系统中的依赖项属性和计算出的表达式支持 `DynamicResource` 概念。 因此，只能对依赖项属性目标使用 `DynamicResource`。 有关详细信息，请参阅 [DynamicResource 标记扩展](dynamicresource-markup-extension.md)。  
+- `DynamicResource` 通过将值推迟为对资源的运行时引用来为属性提供值。 动态资源引用强制在每次访问此类资源时都进行新查找，且在运行时有权访问对象图。 为了获取此访问权限，WPF 属性系统中的依赖项属性和计算出的表达式支持 `DynamicResource` 概念。 因此，只能对依赖项属性目标使用 `DynamicResource`。 有关详细信息，请参阅 [DynamicResource 标记扩展](dynamicresource-markup-extension.md)。  
   
--   `Binding` 使用在运行时应用于父对象的数据上下文来为属性提供数据绑定值。 此标记扩展相对复杂，因为它会启用大量内联语法来指定数据绑定。 有关详细信息，请参阅 [Binding 标记扩展](binding-markup-extension.md)。  
+- `Binding` 使用在运行时应用于父对象的数据上下文来为属性提供数据绑定值。 此标记扩展相对复杂，因为它会启用大量内联语法来指定数据绑定。 有关详细信息，请参阅 [Binding 标记扩展](binding-markup-extension.md)。  
   
--   `RelativeSource` 提供源信息<xref:System.Windows.Data.Binding>，可以定位在运行时对象树中的若干可能关系。 对于在多用途模板中创建的绑定，或在未充分了解周围的对象树的情况下以代码创建的绑定，此标记扩展为其提供专用源。 有关详细信息，请参阅 [RelativeSource 标记扩展](relativesource-markupextension.md)。  
+- `RelativeSource` 提供源信息<xref:System.Windows.Data.Binding>，可以定位在运行时对象树中的若干可能关系。 对于在多用途模板中创建的绑定，或在未充分了解周围的对象树的情况下以代码创建的绑定，此标记扩展为其提供专用源。 有关详细信息，请参阅 [RelativeSource 标记扩展](relativesource-markupextension.md)。  
   
--   `TemplateBinding` 使控件模板能够使用模板化属性的值，这些属性来自于将使用该模板的类的对象模型定义属性。 换言之，模板定义中的属性可访问仅在应用了模板之后才存在的上下文。 有关详细信息，请参阅 [TemplateBinding 标记扩展](templatebinding-markup-extension.md)。 有关 `TemplateBinding` 的实际使用的详细信息，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
+- `TemplateBinding` 使控件模板能够使用模板化属性的值，这些属性来自于将使用该模板的类的对象模型定义属性。 换言之，模板定义中的属性可访问仅在应用了模板之后才存在的上下文。 有关详细信息，请参阅 [TemplateBinding 标记扩展](templatebinding-markup-extension.md)。 有关 `TemplateBinding` 的实际使用的详细信息，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
--   `ColorConvertedBitmap` 支持相对高级的映像方案。 有关详细信息，请参阅 [ColorConvertedBitmap 标记扩展](colorconvertedbitmap-markup-extension.md)。  
+- `ColorConvertedBitmap` 支持相对高级的映像方案。 有关详细信息，请参阅 [ColorConvertedBitmap 标记扩展](colorconvertedbitmap-markup-extension.md)。  
   
--   `ComponentResourceKey` 和 `ThemeDictionary` 支持资源查找的各个方面，特别是支持查找与自定义控件一起打包的资源和主题。 有关详细信息，请参阅 [ComponentResourceKey 标记扩展](componentresourcekey-markup-extension.md)、[ThemeDictionary 标记扩展](themedictionary-markup-extension.md)或[控件创作概述](../controls/control-authoring-overview.md)。  
+- `ComponentResourceKey` 和 `ThemeDictionary` 支持资源查找的各个方面，特别是支持查找与自定义控件一起打包的资源和主题。 有关详细信息，请参阅 [ComponentResourceKey 标记扩展](componentresourcekey-markup-extension.md)、[ThemeDictionary 标记扩展](themedictionary-markup-extension.md)或[控件创作概述](../controls/control-authoring-overview.md)。  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*Extension 类  
@@ -83,18 +83,18 @@ ms.locfileid: "61804580"
 ### <a name="extension-class-interpretation-of-initialization-text"></a>初始化文本的扩展类解释  
  跟在标记扩展名称后且仍在括号内的字符串标记由 XAML 处理器通过以下方式之一进行解释：  
   
--   逗号始终表示各个标记的分隔符。  
+- 逗号始终表示各个标记的分隔符。  
   
--   如果各个分隔的标记不包含任何等号，则每个标记都将被视为构造函数参数。 必须按该签名所期望的类型和该签名所期望的适当顺序给出每个构造函数参数。  
+- 如果各个分隔的标记不包含任何等号，则每个标记都将被视为构造函数参数。 必须按该签名所期望的类型和该签名所期望的适当顺序给出每个构造函数参数。  
   
     > [!NOTE]
     >  XAML 处理器必须调用与对的数量这一参数计数匹配的构造函数。 出于此原因，如果要实现自定义标记扩展，不提供多个构造函数具有相同数量的参数。 如果多个标记扩展构造函数路径具有相同的参数计数，则不会定义 XAML 处理器的行为方式，但应预计到如果这种情况存在于标记扩展类型定义中，则会允许 XAML 处理器引发有关使用情况的异常。  
   
--   如果各个分隔的标记包含等号，则 XAML 处理器会首先为标记扩展调用默认构造函数。 之后，每个“名称=值”对会解释为标记扩展上存在的属性名称以及赋给该属性的值。  
+- 如果各个分隔的标记包含等号，则 XAML 处理器会首先为标记扩展调用默认构造函数。 之后，每个“名称=值”对会解释为标记扩展上存在的属性名称以及赋给该属性的值。  
   
--   如果标记扩展中的构造函数行为与属性设置行为之间存在并行结果，则使用哪个行为都无关紧要。 较常见的用法是将“属性`=`值”对用于具有多个可设置属性的标记扩展，因为这可使标记意图性更强，并减少意外转置构造函数参数的可能性。 （当指定“属性=值”对时，这些属性可以按任意顺序排列。）另外，无法保证标记扩展提供设置其每个可设置属性的构造函数参数。 例如，<xref:System.Windows.Data.Binding>是标记扩展，具有许多可通过扩展以设置的属性*属性*`=`*值*窗体，但<xref:System.Windows.Data.Binding>仅支持两个构造函数： 默认构造函数和一个设置初始路径。  
+- 如果标记扩展中的构造函数行为与属性设置行为之间存在并行结果，则使用哪个行为都无关紧要。 较常见的用法是将“属性`=`值”对用于具有多个可设置属性的标记扩展，因为这可使标记意图性更强，并减少意外转置构造函数参数的可能性。 （当指定“属性=值”对时，这些属性可以按任意顺序排列。）另外，无法保证标记扩展提供设置其每个可设置属性的构造函数参数。 例如，<xref:System.Windows.Data.Binding>是标记扩展，具有许多可通过扩展以设置的属性*属性*`=`*值*窗体，但<xref:System.Windows.Data.Binding>仅支持两个构造函数： 默认构造函数和一个设置初始路径。  
   
--   文本逗号在未转义的情况下无法传递给标记扩展。  
+- 文本逗号在未转义的情况下无法传递给标记扩展。  
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>转义序列和标记扩展  

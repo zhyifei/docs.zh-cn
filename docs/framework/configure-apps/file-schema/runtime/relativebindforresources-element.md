@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592659"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > 元素
 优化附属程序集的探测。  
@@ -39,7 +39,7 @@ ms.locfileid: "61704565"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|在运行时不会优化附属程序集的探测。 这是默认值。|  
 |`true`|在运行时优化附属程序集探测。|  

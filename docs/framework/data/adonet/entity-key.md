@@ -2,25 +2,25 @@
 title: 实体键
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599646"
 ---
 # <a name="entity-key"></a>实体键
 *实体键*是[属性](../../../../docs/framework/data/adonet/property.md)或一组的属性[实体类型](../../../../docs/framework/data/adonet/entity-type.md)，用于确定标识。 构成实体键的属性是在设计时选择的。 实体键属性的值必须唯一标识实体类型实例中的[实体集](../../../../docs/framework/data/adonet/entity-set.md)在运行时。 在选择构成实体键的属性时应确保实例在实体集中的唯一性。  
   
  下面是将一组属性用作实体键的要求：  
   
--   实体集中不能存在两个相同的实体键。 也就是说，对于实体集中的任意两个实体，构成一个键的所有属性的值不能全部相同。 但是，构成实体键的部分（而不是全部）值可以相同。  
+- 实体集中不能存在两个相同的实体键。 也就是说，对于实体集中的任意两个实体，构成一个键的所有属性的值不能全部相同。 但是，构成实体键的部分（而不是全部）值可以相同。  
   
--   实体键必须包含一系列不可以为 null 且不可变[基元类型属性](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
+- 实体键必须包含一系列不可以为 null 且不可变[基元类型属性](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
   
--   构成给定实体类型的实体键的属性不可更改。 对于某个给定实体类型，不能允许存在多个可能的实体键；不支持代理键。  
+- 构成给定实体类型的实体键的属性不可更改。 对于某个给定实体类型，不能允许存在多个可能的实体键；不支持代理键。  
   
--   当实体位于继承层次结构中时，根实体必须包含构成实体键的所有属性，并且必须在根实体类型上定义实体键。 有关详细信息，请参阅[实体数据模型：继承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。  
+- 当实体位于继承层次结构中时，根实体必须包含构成实体键的所有属性，并且必须在根实体类型上定义实体键。 有关详细信息，请参阅[实体数据模型：继承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。  
   
 ## <a name="example"></a>示例  
  下图显示了一个具有三个实体类型的概念模型：`Book`、`Publisher` 和 `Author`。 构成其实体键的每个实体类型的属性均用“(Key)”标示出来。 请注意，`Author` 实体类型有一个包含两个属性（`Name` 和 `Address`）的实体键。  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 829ff08fe3805f37bc6189a66a6675b3518da138
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906628"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601014"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义一个类，可对不同的数据类型 (Visual Basic 中) 提供相同的功能
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  
@@ -50,11 +50,11 @@ ms.locfileid: "61906628"
   
 4. 如果代码是对类型形参执行操作，而不是简单的赋值，请在该类型形参后添加一个 `As` 子句，以便添加一个或多个 *约束*。 约束可保证为该类型形参提供的类型满足如下所示的要求：  
   
-    -   支持代码执行的运算（如 `>`）  
+    - 支持代码执行的运算（如 `>`）  
   
-    -   支持代码访问的成员（如方法）  
+    - 支持代码访问的成员（如方法）  
   
-    -   公开无参数构造函数  
+    - 公开无参数构造函数  
   
      如果未指定任何约束，则代码只能使用 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)支持的那些运算和成员。 有关详细信息，请参阅 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)。  
   

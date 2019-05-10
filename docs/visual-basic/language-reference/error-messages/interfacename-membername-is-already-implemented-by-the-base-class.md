@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5943eff5fa7e68da9905e3e589eea264c06943c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921324"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593319"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>\<interfacename >。\<成员名称 > 已经由基类的实现\<a m e >。 重新实现\<类型 > 假定
 属性、 过程或派生类中的事件使用`Implements`子句，用于指定已在基类中实现的接口成员。  
@@ -25,9 +25,9 @@ ms.locfileid: "61921324"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果要重新实现接口成员，则无需执行任何操作。 在派生类中的代码可访问重新实现的成员，除非您使用`MyBase`关键字访问基类实现。  
+- 如果要重新实现接口成员，则无需执行任何操作。 在派生类中的代码可访问重新实现的成员，除非您使用`MyBase`关键字访问基类实现。  
   
--   如果不打算重新实现接口成员，请从属性、过程或事件声明中删除 `Implements` 子句。  
+- 如果不打算重新实现接口成员，请从属性、过程或事件声明中删除 `Implements` 子句。  
   
 ## <a name="see-also"></a>请参阅
 

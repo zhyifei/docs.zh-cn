@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 76976f1599ecbbaf7405d7941f66aa2c5f955565
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031247"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598957"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>截获触笔输入
 <xref:System.Windows.Input.StylusPlugIns>体系结构提供了用于通过实现低级别控制的机制<xref:System.Windows.Input.Stylus>输入和数字墨迹创建<xref:System.Windows.Ink.Stroke>对象。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供了一种机制，以实现自定义行为，并将其应用到从触笔设备以获得最佳性能的数据的流。  

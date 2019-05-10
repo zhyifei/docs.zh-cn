@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID9
 ms.assetid: d0344a65-ec02-4caf-8d3c-9977392ca353
-ms.openlocfilehash: de9e66d7c94a769cfe89bc477b44ea5f3eb57bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3f56c8a03c4c47d985a8b7cb33b3d31fc6cb281d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013668"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593188"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>下标超出范围 (Visual Basic)
 数组下标无效，因为它超出了允许的范围。 维度的最低下标值始终是 0 和最高下标值返回的`GetUpperBound`该维度的方法。  

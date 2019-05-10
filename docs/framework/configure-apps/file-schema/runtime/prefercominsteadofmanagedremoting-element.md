@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5b0a394500dbea0d557a33ea8d2e169c2c6561f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e32e4b490f0824cf97a1ae5910d7c74801c7b439
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592696"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 元素
 指定是否在运行时将使用 COM 互操作而不是远程处理的所有调用跨应用程序域边界。  
@@ -38,7 +38,7 @@ ms.locfileid: "61674020"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|在运行时将使用远程处理跨应用程序域边界。 这是默认设置。|  
 |`true`|运行时将跨应用程序域边界使用 COM 互操作。|  
@@ -56,9 +56,9 @@ ms.locfileid: "61674020"
 ## <a name="remarks"></a>备注  
  当您将设置`enabled`属性为`true`，运行时的行为，如下所示：  
   
--   在运行时不会调用[iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)有关[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口时[IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口进入域通过 COM 接口。 相反，它构造[运行时可调用包装器](../../../../../docs/framework/interop/runtime-callable-wrapper.md)(RCW) 对象周围。  
+- 在运行时不会调用[iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)有关[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口时[IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口进入域通过 COM 接口。 相反，它构造[运行时可调用包装器](../../../../../docs/framework/interop/runtime-callable-wrapper.md)(RCW) 对象周围。  
   
--   在接收时，运行时将返回 E_NOINTERFACE`QueryInterface`寻求[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口的任何[COM 可调用包装器](../../../../../docs/framework/interop/com-callable-wrapper.md)(CCW) 已在此域中创建。  
+- 在接收时，运行时将返回 E_NOINTERFACE`QueryInterface`寻求[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口的任何[COM 可调用包装器](../../../../../docs/framework/interop/com-callable-wrapper.md)(CCW) 已在此域中创建。  
   
  请确保这两种行为，COM 上的所有调用之间的都接口的托管的对象跨应用程序域边界使用 COM 和 COM 互操作而不是远程处理。  
   

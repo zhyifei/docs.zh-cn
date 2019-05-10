@@ -2,12 +2,12 @@
 title: 语言集成查询 (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbd73d879a3e2fe4cc38d6c8548434d21ca06467
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701900"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597088"
 ---
 # <a name="language-integrated-query-linq"></a>语言集成查询 (LINQ)
 
@@ -21,30 +21,30 @@ ms.locfileid: "61701900"
 
 ## <a name="query-expression-overview"></a>查询表达式概述
 
--   查询表达式可用于查询并转换所有启用了 LINQ 的数据源中的数据。 例如，通过一个查询即可检索 SQL 数据库中的数据，并生成 XML 流作为输出。  
+- 查询表达式可用于查询并转换所有启用了 LINQ 的数据源中的数据。 例如，通过一个查询即可检索 SQL 数据库中的数据，并生成 XML 流作为输出。  
   
--   查询表达式易于掌握，因为使用了许多熟悉的 C# 语言构造。  
+- 查询表达式易于掌握，因为使用了许多熟悉的 C# 语言构造。  
   
--   查询表达式中的变量全都是强类型，尽管在许多情况下，无需显式提供类型，因为编译器可以推断出。 有关详细信息，请参阅 [LINQ 查询操作中的类型关系](type-relationships-in-linq-query-operations.md)。  
+- 查询表达式中的变量全都是强类型，尽管在许多情况下，无需显式提供类型，因为编译器可以推断出。 有关详细信息，请参阅 [LINQ 查询操作中的类型关系](type-relationships-in-linq-query-operations.md)。  
   
--   只有在循环访问查询变量后，才会执行查询（例如，在 `foreach` 语句中）。 有关详细信息，请参阅 [LINQ 查询简介](introduction-to-linq-queries.md)。  
+- 只有在循环访问查询变量后，才会执行查询（例如，在 `foreach` 语句中）。 有关详细信息，请参阅 [LINQ 查询简介](introduction-to-linq-queries.md)。  
   
--   在编译时，查询表达式根据 C# 规范规则转换成标准查询运算符方法调用。 可使用查询语法表示的任何查询都可以使用方法语法进行表示。 不过，在大多数情况下，查询语法的可读性更高，也更为简洁。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#query-expressions)和[标准查询运算符概述](standard-query-operators-overview.md)。  
+- 在编译时，查询表达式根据 C# 规范规则转换成标准查询运算符方法调用。 可使用查询语法表示的任何查询都可以使用方法语法进行表示。 不过，在大多数情况下，查询语法的可读性更高，也更为简洁。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/expressions.md#query-expressions)和[标准查询运算符概述](standard-query-operators-overview.md)。  
   
--   通常，我们建议在编写 LINQ 查询时尽量使用查询语法，并在必要时尽可能使用方法语法。 这两种不同的形式在语义或性能上毫无差异。 查询表达式通常比使用方法语法编写的等同表达式更具可读性。  
+- 通常，我们建议在编写 LINQ 查询时尽量使用查询语法，并在必要时尽可能使用方法语法。 这两种不同的形式在语义或性能上毫无差异。 查询表达式通常比使用方法语法编写的等同表达式更具可读性。  
   
--   一些查询操作（如 <xref:System.Linq.Enumerable.Count%2A> 或 <xref:System.Linq.Enumerable.Max%2A>）没有等效的查询表达式子句，因此必须表示为方法调用。 可以各种方式结合使用方法语法和查询语法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](query-syntax-and-method-syntax-in-linq.md)。  
+- 一些查询操作（如 <xref:System.Linq.Enumerable.Count%2A> 或 <xref:System.Linq.Enumerable.Max%2A>）没有等效的查询表达式子句，因此必须表示为方法调用。 可以各种方式结合使用方法语法和查询语法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](query-syntax-and-method-syntax-in-linq.md)。  
   
--   查询表达式可被编译成表达式树或委托，具体视应用查询的类型而定。 <xref:System.Collections.Generic.IEnumerable%601> 查询编译为委托。 <xref:System.Linq.IQueryable> 和 <xref:System.Linq.IQueryable%601> 查询编译为表达式树。 有关详细信息，请参阅[表达式树](../../../expression-trees.md)。  
+- 查询表达式可被编译成表达式树或委托，具体视应用查询的类型而定。 <xref:System.Collections.Generic.IEnumerable%601> 查询编译为委托。 <xref:System.Linq.IQueryable> 和 <xref:System.Linq.IQueryable%601> 查询编译为表达式树。 有关详细信息，请参阅[表达式树](../../../expression-trees.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 
 若要详细了解 LINQ，请先自行熟悉[查询表达式基础知识](../../../linq/query-expression-basics.md)中的一些基本概念，然后再阅读感兴趣的 LINQ 技术的相关文档：   
--   XML 文档：[LINQ to XML](linq-to-xml.md)  
+- XML 文档：[LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET 实体框架：[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- ADO.NET 实体框架：[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   .NET 集合、文件、字符串等：[LINQ to objects](linq-to-objects.md)
+- .NET 集合、文件、字符串等：[LINQ to objects](linq-to-objects.md)
 
 若要更深入地全面了解 LINQ，请参阅 [C# 中的 LINQ](../../../linq/linq-in-csharp.md)。
 

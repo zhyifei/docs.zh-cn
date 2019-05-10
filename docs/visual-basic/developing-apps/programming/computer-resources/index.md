@@ -6,27 +6,27 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 7128a71f28d1755a14fcda5f09bee11202ab4154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c53358d483868317887258c92b1aad2d9dcba00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973871"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662694"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>访问计算机资源 (Visual Basic)
 
 `My.Computer` 对象是 `My` 中的三个中心对象之一，提供对信息和常用功能的访问权限。 `My.Computer` 提供用于访问运行应用程序的计算机的方法、属性和事件。 其对象包括：  
   
--   <xref:Microsoft.VisualBasic.Devices.Audio>
--   剪贴板 (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
--   <xref:Microsoft.VisualBasic.Devices.Clock>
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem>
--   <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
--   <xref:Microsoft.VisualBasic.Devices.Keyboard>
--   <xref:Microsoft.VisualBasic.Devices.Mouse>
--   <xref:Microsoft.VisualBasic.Devices.Network>
--   <xref:Microsoft.VisualBasic.Devices.Ports>
--   注册表 (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Audio>
+- 剪贴板 (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Clock>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
+- <xref:Microsoft.VisualBasic.Devices.Keyboard>
+- <xref:Microsoft.VisualBasic.Devices.Mouse>
+- <xref:Microsoft.VisualBasic.Devices.Network>
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- 注册表 (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
   
 ## <a name="in-this-section"></a>本节内容
 

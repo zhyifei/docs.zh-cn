@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680151"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596124"
 ---
 # <a name="indexers-c-programming-guide"></a>索引器（C# 编程指南）
 
@@ -40,29 +40,29 @@ ms.locfileid: "61680151"
   
 ## <a name="indexers-overview"></a>索引器概述  
   
--   使用索引器可以用类似于数组的方式为对象建立索引。  
+- 使用索引器可以用类似于数组的方式为对象建立索引。  
   
--   `get` 取值函数返回值。 `set` 取值函数分配值。  
+- `get` 取值函数返回值。 `set` 取值函数分配值。  
   
--   [this](../../../csharp/language-reference/keywords/this.md) 关键字用于定义索引器。  
+- [this](../../../csharp/language-reference/keywords/this.md) 关键字用于定义索引器。  
   
--   [value](../../../csharp/language-reference/keywords/value.md) 关键字用于定义 `set` 索引器所赋的值。  
+- [value](../../../csharp/language-reference/keywords/value.md) 关键字用于定义 `set` 索引器所赋的值。  
   
--   索引器不必根据整数值进行索引；由你决定如何定义特定的查找机制。  
+- 索引器不必根据整数值进行索引；由你决定如何定义特定的查找机制。  
   
--   索引器可被重载。  
+- 索引器可被重载。  
   
--   索引器可以有多个形参，例如当访问二维数组时。  
+- 索引器可以有多个形参，例如当访问二维数组时。  
   
 ## <a name="BKMK_RelatedSections"></a>相关部分  
   
--   [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [接口中的索引器](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [接口中的索引器](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [属性与索引器之间的比较](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [属性与索引器之间的比较](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [限制访问器可访问性](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制访问器可访问性](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 

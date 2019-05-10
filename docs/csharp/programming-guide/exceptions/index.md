@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595405"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>异常和异常处理（C# 编程指南）
 C# 语言的异常处理功能有助于处理在程序运行期间发生的任何意外或异常情况。 异常处理功能使用 `try`、`catch` 和 `finally` 关键字来尝试执行可能失败的操作、在你确定合理的情况下处理故障，以及在事后清除资源。 公共语言运行时 (CLR)、.NET Framework/任何第三方库或应用程序代码都可以生成异常。 异常是使用 `throw` 关键字创建而成。  
@@ -26,40 +26,40 @@ C# 语言的异常处理功能有助于处理在程序运行期间发生的任�
 ## <a name="exceptions-overview"></a>异常概述  
  异常具有以下属性：  
   
--   异常是最终全都派生自 `System.Exception` 的类型。  
+- 异常是最终全都派生自 `System.Exception` 的类型。  
   
--   在可能抛出异常的语句周围使用 `try` 代码块。  
+- 在可能抛出异常的语句周围使用 `try` 代码块。  
   
--   在 `try` 代码块中出现异常后，控制流会跳转到调用堆栈中任意位置上的首个相关异常处理程序。 在 C# 中，`catch` 关键字用于定义异常处理程序。  
+- 在 `try` 代码块中出现异常后，控制流会跳转到调用堆栈中任意位置上的首个相关异常处理程序。 在 C# 中，`catch` 关键字用于定义异常处理程序。  
   
--   如果给定的异常没有对应的异常处理程序，那么程序会停止执行，并显示错误消息。  
+- 如果给定的异常没有对应的异常处理程序，那么程序会停止执行，并显示错误消息。  
   
--   除非可以处理异常并让应用程序一直处于已知状态，否则不捕获异常。 如果捕获 `System.Exception`，使用 `catch` 代码块末尾的 `throw` 关键字重新抛出异常。  
+- 除非可以处理异常并让应用程序一直处于已知状态，否则不捕获异常。 如果捕获 `System.Exception`，使用 `catch` 代码块末尾的 `throw` 关键字重新抛出异常。  
   
--   如果 `catch` 代码块定义异常变量，可以用它来详细了解所发生的异常类型。  
+- 如果 `catch` 代码块定义异常变量，可以用它来详细了解所发生的异常类型。  
   
--   使用 `throw` 关键字，程序可以显式生成异常。  
+- 使用 `throw` 关键字，程序可以显式生成异常。  
   
--   异常对象包含错误详细信息，如调用堆栈的状态和错误的文本说明。  
+- 异常对象包含错误详细信息，如调用堆栈的状态和错误的文本说明。  
   
--   即使有异常抛出，`finally` 代码块中的代码仍会执行。 使用 `finally` 代码块可释放资源。例如，关闭在 `try` 代码块中打开的任何流或文件。  
+- 即使有异常抛出，`finally` 代码块中的代码仍会执行。 使用 `finally` 代码块可释放资源。例如，关闭在 `try` 代码块中打开的任何流或文件。  
   
--   .NET Framework 中的托管异常在 Win32 结构化异常处理机制的基础之上实现。 有关详细信息，请参阅[结构化异常处理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[速成教程：深入了解 Win32 结构化异常处理](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。  
+- .NET Framework 中的托管异常在 Win32 结构化异常处理机制的基础之上实现。 有关详细信息，请参阅[结构化异常处理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[速成教程：深入了解 Win32 结构化异常处理](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。  
   
 ## <a name="related-sections"></a>相关章节  
  若要详细了解异常和异常处理，请参阅以下主题：  
   
--   [使用异常](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [使用异常](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
   
--   [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
   
--   [创建和引发异常](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [创建和引发异常](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
   
--   [编译器生成的异常](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [编译器生成的异常](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [如何：使用 try/catch 处理异常（C# 编程指南）](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [如何：使用 try/catch 处理异常（C# 编程指南）](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [如何：使用 finally 执行清除代码](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [如何：使用 finally 执行清除代码](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
 

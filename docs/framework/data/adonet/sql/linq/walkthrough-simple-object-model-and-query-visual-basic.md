@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0d4e3360920347c38f24b962c097af32eb92bc48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037006"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657413"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>演练：简单对象模型和查询 (Visual Basic)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  

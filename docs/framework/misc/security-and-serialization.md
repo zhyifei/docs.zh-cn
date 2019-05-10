@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c275e7179daf0dfdf2dda8bf364a4682565f28a6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868831"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596736"
 ---
 # <a name="security-and-serialization"></a>安全和序列化
 由于序列化可以允许其他代码查看或修改在其他情况下无法访问的对象实例数据，因此执行序列化的代码需要具有特殊的权限：带有指定 <xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 。 在默认策略下，通过 Internet 下载的代码或 Intranet 代码不会授予该权限；只有本地计算机上的代码才被授予该权限。  
@@ -28,7 +28,7 @@ ms.locfileid: "61868831"
   
  <xref:System.Runtime.Serialization.ISerializable> 接口只适合由序列化基础结构使用。 然而，如果该接口未受到保护，则可能会漏露敏感信息。 如果通过实现 **ISerializable**来提供自定义序列化，请确保采取以下预防措施：  
   
--   应通过如下方法显式保护 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 方法的安全：要求为 **SecurityPermission** 指定 **SerializationFormatter** 权限，或确保不会在方法输出中泄露敏感信息。 例如：  
+- 应通过如下方法显式保护 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 方法的安全：要求为 **SecurityPermission** 指定 **SerializationFormatter** 权限，或确保不会在方法输出中泄露敏感信息。 例如：  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -45,7 +45,7 @@ ms.locfileid: "61868831"
     }  
     ```  
   
--   用于序列化的特殊构造函数也应当进行彻底的输入验证，并且应当受到保护或者成为私有函数，以帮助防范恶意代码的滥用行为。 构造函数应当实施与通过任何其他方式获取这样的类的实例（例如，通过某种工厂显式创建或间接创建该类）时所需要的相同的安全检查和权限。  
+- 用于序列化的特殊构造函数也应当进行彻底的输入验证，并且应当受到保护或者成为私有函数，以帮助防范恶意代码的滥用行为。 构造函数应当实施与通过任何其他方式获取这样的类的实例（例如，通过某种工厂显式创建或间接创建该类）时所需要的相同的安全检查和权限。  
   
 ## <a name="see-also"></a>请参阅
 

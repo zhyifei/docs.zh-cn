@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600945"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中，基于分类实施数据类型。 Visual Basic 数据类型可以根据特定类型的变量存储其自己的数据或指向的数据分类。 如果将存储其自己的数据很*值类型*; 如果它包含一个指针，它是的内存中的其他位置的数据*引用类型*。  
@@ -23,13 +23,13 @@ ms.locfileid: "61869662"
 ## <a name="value-types"></a>值类型  
  数据类型是*值类型*如果它保存在其自己的内存分配中的数据。 值类型包括：  
   
--   所有数值数据类型  
+- 所有数值数据类型  
   
--   `Boolean`、 `Char`和 `Date`  
+- `Boolean`、 `Char`和 `Date`  
   
--   所有的结构，即使其成员是引用类型  
+- 所有的结构，即使其成员是引用类型  
   
--   枚举，因为它们的基础类型始终`SByte`， `Short`， `Integer`， `Long`， `Byte`， `UShort`， `UInteger`，或 `ULong`  
+- 枚举，因为它们的基础类型始终`SByte`， `Short`， `Integer`， `Long`， `Byte`， `UShort`， `UInteger`，或 `ULong`  
   
  每个结构是值类型，即使它包含引用类型成员。 出于此原因，值类型，如`Char`和`Integer`由.NET Framework 结构实现。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "61869662"
 ## <a name="reference-types"></a>引用类型  
  一个*引用类型*包含保存的数据的另一个内存位置的指针。 引用类型包括：  
   
--   `String`  
+- `String`  
   
--   所有数组，即使其元素是值类型  
+- 所有数组，即使其元素是值类型  
   
--   类类型如 <xref:System.Windows.Forms.Form>  
+- 类类型如 <xref:System.Windows.Forms.Form>  
   
--   委托  
+- 委托  
   
  类是*引用类型*。 出于此原因，如引用类型`Object`并`String`支持的[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类。 请注意，每个数组是引用类型，即使其成员是值类型。  
   
@@ -57,15 +57,15 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="elements-that-are-not-types"></a>不是类型的元素  
  以下的编程元素不适合作为类型，因为您不能指定其中任何一个已声明元素的数据类型为：  
   
--   命名空间  
+- 命名空间  
   
--   模块  
+- 模块  
   
--   事件  
+- 事件  
   
--   属性和过程  
+- 属性和过程  
   
--   变量、 常量和字段  
+- 变量、 常量和字段  
   
 ## <a name="working-with-the-object-data-type"></a>使用对象数据类型  
  可以将引用类型或值类型分配给的变量`Object`数据类型。 `Object`变量始终保存一个指针，该数据，永远不会数据本身。 但是，如果将分配到值类型`Object`变量，其行为就像它保留其自己的数据。 有关详细信息，请参阅[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)。  

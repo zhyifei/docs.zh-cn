@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903352"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657061"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -34,18 +34,18 @@ ms.locfileid: "61903352"
   
  连接使用的准确详细信息与以下内容有关：  
   
--   使用连接对象构造 <xref:System.Data.Linq.DataContext> 时的连接状态。  
+- 使用连接对象构造 <xref:System.Data.Linq.DataContext> 时的连接状态。  
   
--   连接字符串设置（例如，启用多活动结果集 (MARS)）。 有关详细信息，请参阅[多个活动结果集 (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)。  
+- 连接字符串设置（例如，启用多活动结果集 (MARS)）。 有关详细信息，请参阅[多个活动结果集 (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)。  
   
 ## <a name="updating-without-querying"></a>在不进行查询的情况下更新  
  问： 是否可以在不先查询数据库的情况下更新表数据？  
   
  答： 虽然 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 没有基于集的更新命令，但是可以使用以下方法之一进行更新而无需先进行查询：  
   
--   使用 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> 发送 SQL 代码。  
+- 使用 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> 发送 SQL 代码。  
   
--   创建对象的新实例，并初始化所有影响更新的当前值（字段）。 然后使用 <xref:System.Data.Linq.DataContext> 将对象附加到 <xref:System.Data.Linq.Table%601.Attach%2A> 并修改您要更改的字段。  
+- 创建对象的新实例，并初始化所有影响更新的当前值（字段）。 然后使用 <xref:System.Data.Linq.DataContext> 将对象附加到 <xref:System.Data.Linq.Table%601.Attach%2A> 并修改您要更改的字段。  
   
 ## <a name="unexpected-query-results"></a>意外的查询结果  
  问： 我的查询返回了意外的结果。 如何检查所发生的情况？  
@@ -57,9 +57,9 @@ ms.locfileid: "61903352"
   
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了两种方法来通过存储过程返回数据库生成的值：  
   
--   通过命名输出结果。  
+- 通过命名输出结果。  
   
--   通过显式指定输出参数。  
+- 通过显式指定输出参数。  
   
  下面是错误输出的示例。 因为 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 无法映射结果，所以始终返回 0：  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a0de8aee53c5db63952e4baa72827a92c47ccce0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053088"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593364"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 画笔概述
 在屏幕上可见的所有内容是可见的因为它通过画笔绘制。 例如，画笔用于描述背景的按钮、 文本、 前的景色和形状的填充。 本主题介绍的概念与绘制[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔，并提供示例。 借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。  
