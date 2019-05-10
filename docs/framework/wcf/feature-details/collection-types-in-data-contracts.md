@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781493"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654447"
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  

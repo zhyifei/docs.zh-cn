@@ -9,12 +9,12 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d76c2e5882c9df94674294da00ba446dfbfd2b3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3f9759eab464d0f66712358705e2481532412162
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649215"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>如何：使用 Windows 窗体 BindingNavigator 控件浏览数据集
 生成数据驱动的应用程序时，经常需要向用户显示数据集合。 <xref:System.Windows.Forms.BindingNavigator> 控件与 <xref:System.Windows.Forms.BindingSource> 组件一起为滚动集合并按顺序显示其中的项提供方便的可扩展解决方案。  

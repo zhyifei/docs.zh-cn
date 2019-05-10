@@ -6,19 +6,19 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3fd7e6f7e8e4fcabf279975f7ffc2d848679396
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907031"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645252"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>如何：循环访问在 Visual Basic 中枚举
 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。 若要循环访问枚举，可以将为数组，并使用它<xref:System.Enum.GetValues%2A>方法。 您还可以通过枚举使用迭代`For...Each`语句中，使用<xref:System.Enum.GetNames%2A>或<xref:System.Enum.GetValues%2A>方法提取字符串或数字值。  
   
 ### <a name="to-iterate-through-an-enumeration"></a>若要循环访问枚举  
   
--   声明数组并将枚举转换为其与<xref:System.Enum.GetValues%2A>然后再将数组传递作为您的方法将任何其他变量。 下面的示例显示枚举的每个成员<xref:Microsoft.VisualBasic.FirstDayOfWeek>如循环枚举。  
+- 声明数组并将枚举转换为其与<xref:System.Enum.GetValues%2A>然后再将数组传递作为您的方法将任何其他变量。 下面的示例显示枚举的每个成员<xref:Microsoft.VisualBasic.FirstDayOfWeek>如循环枚举。  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   

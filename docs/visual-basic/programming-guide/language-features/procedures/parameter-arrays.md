@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 372d5fdd2702d6f85f784ee5addea91abe46d3bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639025"
 ---
 # <a name="parameter-arrays-visual-basic"></a>参数数组 (Visual Basic)
 通常情况下，不能调用有更多参数不是过程声明指定的过程。 当您需要的参数数量不确定时，可以声明*参数数组*，它允许过程接受一个参数的值的数组。 无需知道何时定义过程的参数数组中的元素数。 数组大小由该过程每次调用单独确定。  

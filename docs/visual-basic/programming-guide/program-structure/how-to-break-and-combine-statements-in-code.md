@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955618"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648780"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>如何：拆分和合并语句中的代码 (Visual Basic)
 编写你的代码时，可能有时创建耗时较长的语句都必须采取措施水平滚动代码编辑器中。 尽管这不会影响的方式运行代码，它使得您或任何其他人无法读取代码在监视器上显示。 在这种情况下，应考虑将单个的长语句分成多个行。  

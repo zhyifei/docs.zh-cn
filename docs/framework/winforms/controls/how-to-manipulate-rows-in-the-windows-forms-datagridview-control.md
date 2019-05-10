@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], manipulating rows
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
-ms.openlocfilehash: 095efc7279a1dc6702aeeb5ec5d598dbdd8818b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23591bf6948800f2394e3df8d65ccd055fdde69c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913739"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649270"
 ---
 # <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>如何：操作 Windows 窗体 DataGridView 控件中的行
 以下代码示例演示了使用 <xref:System.Windows.Forms.DataGridViewRow> 类的属性操作 <xref:System.Windows.Forms.DataGridView> 行的各种方法。  
@@ -28,7 +28,7 @@ ms.locfileid: "61913739"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   

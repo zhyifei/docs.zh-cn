@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2021a1bf706233e6361848a95f512262c1c16b6f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647107"
 ---
 # <a name="3-d-graphics-overview"></a>三维图形概述
 <a name="introduction"></a>通过 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能，开发人员可以使用标记和程序代码绘制和转换 3D 图形，并对其进行动画处理。 开发人员可以合并 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 图形以创建丰富的控件、提供复杂的数据图解，或者增强用户对应用程序界面的体验。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支持并非旨在提供功能齐全的游戏开发平台。 本主题概述了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形系统中的 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能。  

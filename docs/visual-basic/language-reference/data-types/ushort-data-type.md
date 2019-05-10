@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 8845a6bde4e1a701b5420029788259724cd0f8d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d85219fad631b09c19eac054b87d4843b0c73a45
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646936"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 数据类型 (Visual Basic)
 
@@ -48,7 +48,7 @@ ms.locfileid: "61748755"
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 作为前缀和十六进制、 二进制或八进制数字之间的前导分隔符。 例如：
+从 Visual Basic 15.5 开始，还可以使用下划线字符 (`_`) 作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 例如：
 
 ```vb
 Dim number As UShort = &H_FF8C

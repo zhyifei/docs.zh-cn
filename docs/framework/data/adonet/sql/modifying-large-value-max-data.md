@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648720"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大值 (max) 数据
 大型对象 (LOB) 数据类型是那些超过 8 千字节 (KB) 最大行大小的数据类型。 SQL Server 为 `max`、`varchar` 和 `nvarchar` 数据类型提供了 `varbinary` 说明符以允许存储最大为 2^32 字节的值。 表列和 Transact-SQL 变量可以指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 数据类型。 在 ADO.NET 中，`max` 数据类型可通过 `DataReader` 来提取，并可指定为输入和输出参数值而无需任何特殊处理。 对于大型 `varchar` 数据类型，可以增量检索和更新数据。  
@@ -26,11 +26,11 @@ ms.locfileid: "61922221"
 ## <a name="large-value-type-restrictions"></a>大值类型限制  
  下面的限制适用于 `max` 数据类型，但对于较小的数据类型则不存在此限制：  
   
--   `sql_variant` 不能包含大型 `varchar` 数据类型。  
+- `sql_variant` 不能包含大型 `varchar` 数据类型。  
   
--   大型 `varchar` 列不能指定为索引中的键列。 它们可以存在于非聚集索引中包含的列中。  
+- 大型 `varchar` 列不能指定为索引中的键列。 它们可以存在于非聚集索引中包含的列中。  
   
--   大型 `varchar` 列不能用作分区键列。  
+- 大型 `varchar` 列不能用作分区键列。  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>在 Transact-SQL 中使用大值类型  
  Transact-SQL `OPENROWSET` 函数是一个用于连接和访问远程数据的一次性方法。 它包含从 OLE DB 数据源访问远程数据所需的所有连接信息。 可以在某一查询的 FROM 子句中像表名称一样引用 `OPENROWSET`。 根据 OLE DB 提供程序的功能，它还可作为 INSERT、UPDATE 或 DELETE 语句的目标表被引用。  

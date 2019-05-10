@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876728"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648682"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>演练：仅使用存储过程 (Visual Basic)
 本演练提供了通过仅使用存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  

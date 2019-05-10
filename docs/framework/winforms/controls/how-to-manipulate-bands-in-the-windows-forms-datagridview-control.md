@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bands [Windows Forms], manipulating in Windows Forms
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
-ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: edc743221806da08f6916fd028165c2c0fd34f35
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649307"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>如何：在 Windows 窗体 DataGridView 控件中操作区段
 以下代码示例介绍了使用从 <xref:System.Windows.Forms.DataGridViewRow> 和 <xref:System.Windows.Forms.DataGridViewColumn> 类派生的 <xref:System.Windows.Forms.DataGridViewBand> 类的属性处理 <xref:System.Windows.Forms.DataGridView> 行和列的各种方法。  

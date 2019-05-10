@@ -2,12 +2,12 @@
 title: 上下文交换协议
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651114"
 ---
 # <a name="context-exchange-protocol"></a>上下文交换协议
 本部分介绍 Windows Communication Foundation (WCF) 版本.NET Framework 版本 3.5 中引入的上下文交换协议。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP cookie 或 SOAP 标头。  
@@ -21,16 +21,16 @@ ms.locfileid: "61857345"
   
  以下是此模式中的固定行为的列表：  
   
--   任何试图在已经打开通道之后使用 `SetContext` 来重置上下文的操作都会引发 <xref:System.InvalidOperationException>。  
+- 任何试图在已经打开通道之后使用 `SetContext` 来重置上下文的操作都会引发 <xref:System.InvalidOperationException>。  
   
--   任何试图在传出消息中使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 来发送上下文的操作都会引发 <xref:System.InvalidOperationException>。  
+- 任何试图在传出消息中使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 来发送上下文的操作都会引发 <xref:System.InvalidOperationException>。  
   
--   在已使用特定的上下文对通道进行初始化之后，如果使用特定的上下文从服务器接收消息，则会导致 <xref:System.ServiceModel.ProtocolException>。  
+- 在已使用特定的上下文对通道进行初始化之后，如果使用特定的上下文从服务器接收消息，则会导致 <xref:System.ServiceModel.ProtocolException>。  
   
     > [!NOTE]
     >  仅在打开通道时没有显式设置任何上下文的情况下，从服务器上接收初始上下文才是合适的。  
   
--   传入消息上的 <xref:System.ServiceModel.Channels.ContextMessageProperty> 始终为空。  
+- 传入消息上的 <xref:System.ServiceModel.Channels.ContextMessageProperty> 始终为空。  
   
 ## <a name="mode-2-application-context-management"></a>模式 2:应用程序上下文管理  
  在此模式中，<xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 设置为 `false`。 在此模式中，上下文通道并不对上下文进行管理， 而是由应用程序负责通过使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 来检索、管理和应用上下文。 任何尝试调用 `GetContext` 或 `SetContext` 的操作都会导致 <xref:System.InvalidOperationException>。  
@@ -53,7 +53,7 @@ ms.locfileid: "61857345"
   
  要求支持上下文交换协议的服务终结点可以在其发布的策略中明确此要求。 已经引入了两个新的策略断言来表示要求客户端在 SOAP 级支持上下文交换协议或启用 HTTP Cookie 支持。 由 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 属性控制如何将这些断言生成到服务策略中，如下所示：  
   
--   对于 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>，将生成以下断言：  
+- 对于 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>，将生成以下断言：  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ ms.locfileid: "61857345"
     protectionLevel="Sign" />  
     ```  
   
--   对于 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>，将生成以下断言：  
+- 对于 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>，将生成以下断言：  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

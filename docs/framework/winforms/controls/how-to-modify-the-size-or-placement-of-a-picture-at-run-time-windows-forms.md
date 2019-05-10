@@ -11,23 +11,23 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 695abf51870ef9164e4543a91b3183e801eee55f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649257"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>如何：在运行时 （Windows 窗体） 中修改的大小或位置的图片
 如果使用 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件在窗体上可以设置<xref:System.Windows.Forms.PictureBox.SizeMode%2A>到其上的属性：  
   
--   将图片的左上的角的控件的左上角对齐  
+- 将图片的左上的角的控件的左上角对齐  
   
--   使图片在控件内居中  
+- 使图片在控件内居中  
   
--   调整控件以适合其显示的图片的大小  
+- 调整控件以适合其显示的图片的大小  
   
--   拉伸以适合控件显示的任何图片  
+- 拉伸以适合控件显示的任何图片  
   
  拉伸图片 （尤其是一个位图格式） 可能导致丢失在图像质量。 图元文件，这是一系列有关在运行时绘制图像的图形说明的都更好地适合拉伸比位图。  
   

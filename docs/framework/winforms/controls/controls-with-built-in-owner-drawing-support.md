@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df3a61dae9ad926f56da4e9d15e0e8b8c6f1c8a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011575"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648246"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>具有内置所有者描述支持的控件
 Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改特定控件的可视外观的技术。  
@@ -38,27 +38,27 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  以下 Windows 窗体控件在所有版本的 .NET Framework 中都支持所有者描述：  
   
--   <xref:System.Windows.Forms.ListBox>  
+- <xref:System.Windows.Forms.ListBox>  
   
--   <xref:System.Windows.Forms.ComboBox>  
+- <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem> (由<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem> (由<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>)  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
  以下控件仅在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中支持所有者描述：  
   
--   <xref:System.Windows.Forms.ToolTip>  
+- <xref:System.Windows.Forms.ToolTip>  
   
--   <xref:System.Windows.Forms.ListView>  
+- <xref:System.Windows.Forms.ListView>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  以下控件支持所有者描述且是 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中的新增功能：  
   
--   <xref:System.Windows.Forms.DataGridView>  
+- <xref:System.Windows.Forms.DataGridView>  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
  以下各节进一步详述了以上每个控件。  
   
@@ -74,19 +74,19 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下主题：  
   
--   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [如何：在组合框控件中创建大小可变的文本](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+- [如何：在组合框控件中创建大小可变的文本](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem 组件  
  <xref:System.Windows.Forms.MenuItem>组件代表中的单个菜单项<xref:System.Windows.Forms.MainMenu>或<xref:System.Windows.Forms.ContextMenu>组件。  
@@ -95,11 +95,11 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下参考主题：  
   
--   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl 控件  
  <xref:System.Windows.Forms.TabControl>控件可绘制控件中的各个选项卡。 所有者描述影响只有选项卡;<xref:System.Windows.Forms.TabPage>内容不会受到影响。  
@@ -108,9 +108,9 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下参考主题：  
   
--   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip 组件  
  <xref:System.Windows.Forms.ToolTip>组件，您可以在显示时绘制整个工具提示。  
@@ -119,11 +119,11 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下参考主题：  
   
--   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView 控件  
  <xref:System.Windows.Forms.ListView>控件可绘制控件中的各个项、 子项和列标题。  
@@ -136,13 +136,13 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下参考主题：  
   
--   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView 控件  
  <xref:System.Windows.Forms.TreeView>控件可绘制控件中的单个节点。  
@@ -153,9 +153,9 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下参考主题：  
   
--   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView 控件  
  <xref:System.Windows.Forms.DataGridView>控件可绘制控件中的各个单元格和行。  
@@ -166,15 +166,15 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下主题：  
   
--   <xref:System.Windows.Forms.DataGridView.CellPainting>  
+- <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [如何：自定义 Windows 窗体 DataGridView 控件中的行的外观](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [如何：自定义 Windows 窗体 DataGridView 控件中的行的外观](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip 控件  
  <xref:System.Windows.Forms.ToolStrip> 和派生的控件使您能够自定义其外观的任何方面。  
@@ -183,11 +183,11 @@ Windows 窗体中的所有者描述（也称为自定义绘图）是一种更改
   
  有关详细信息（包括代码示例），请参阅以下主题：  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>  
+- <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+- [如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [如何：自定义绘制 ToolStrip 控件](how-to-custom-draw-a-toolstrip-control.md)  
+- [如何：自定义绘制 ToolStrip 控件](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>请参阅
 

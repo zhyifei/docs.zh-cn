@@ -2,12 +2,12 @@
 title: 选择消息编码器
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93024258ddcf76444d48a19c071b0a18248ea46b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608380"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645460"
 ---
 # <a name="choosing-a-message-encoder"></a>选择消息编码器
 本主题讨论在包含 Windows Communication Foundation (WCF) 中的消息编码器之间选择条件： 二进制、 文本和消息传输优化机制 (MTOM)。  

@@ -2,12 +2,12 @@
 title: 病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046432"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638428"
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 一个*有害消息*是一条消息，已超出向应用程序的交付尝试最大数目。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  

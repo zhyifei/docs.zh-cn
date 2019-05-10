@@ -2,12 +2,12 @@
 title: 如何：最大的文件或目录树 (LINQ) (Visual Basic 中) 中的查询
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a329c16e356686be8eb1530bf4a68b796965c14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008897"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648822"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>如何：最大的文件或目录树 (LINQ) (Visual Basic 中) 中的查询
 此示例演示与文件大小（以字节为单位）相关的五个查询：  

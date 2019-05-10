@@ -2,12 +2,12 @@
 title: 本地通道
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 11f3e4fe07ffa285f72ba8fd92224a3ba78d238b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989828"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656026"
 ---
 # <a name="local-channel"></a>本地通道
 本地通道是使用相同的应用程序域内进行通信的 Windows Communication Foundation (WCF) 传输通道。 对于客户端和服务在相同应用程序域内运行，并且必须避免典型 WCF 通道堆栈（消息的序列化和反序列化）开销的方案，这十分有用。  

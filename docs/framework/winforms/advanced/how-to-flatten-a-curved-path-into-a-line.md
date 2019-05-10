@@ -8,12 +8,12 @@ helpviewer_keywords:
 - paths [Windows Forms], flattening
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d59a802618ddd5080c651e822ed4c09641f7f170
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781334"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645368"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>如何：将曲线路径平展为直线
 一个<xref:System.Drawing.Drawing2D.GraphicsPath>对象将存储一系列行和贝塞尔自由绘制曲线。 可以将多种类型的曲线 （省略号，弧线，基数样条） 添加到路径，但之后再将它存储在路径中的各段曲线转换为贝塞尔样条。 拉平路径组成，将在路径中的每个贝塞尔自由绘制曲线转换为一系列直线。 下图显示一个路径之前和之后平展。  

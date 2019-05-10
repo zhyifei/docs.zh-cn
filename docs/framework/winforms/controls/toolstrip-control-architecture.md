@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e02b9daa40a5f8a2f8bfd8874d006550628a70b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009590"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654724"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控件体系结构
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>类用于显示工具栏、 状态和菜单项提供一个灵活、 可扩展的系统。 这些类都包含在<xref:System.Windows.Forms>命名空间和它们全部通常具有"ToolStrip"前缀命名 (如<xref:System.Windows.Forms.ToolStripOverflow>) 或带有"带状"后缀 (例如<xref:System.Windows.Forms.MenuStrip>)。  

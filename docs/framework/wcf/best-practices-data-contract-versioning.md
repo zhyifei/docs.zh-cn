@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a56111796b1e301862dcbd9e76a6294c709ea06f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652146"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
 本主题列出了创建容易随时间而改变的数据协定的最佳做法。 有关数据协定的详细信息，请参阅中的主题[Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  

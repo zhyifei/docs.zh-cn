@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: c8df3d57e5a6ff1f0021381db189025719808641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 47943392ec6628b6d5a67ac333dd6793f35857b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876507"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645677"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>如何：执行数据服务查询 （WCF 数据服务）
 通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以使用生成的客户端数据服务类，从基于 .NET Framework 的客户端应用程序查询数据服务。 可以使用下列方法之一执行查询：  

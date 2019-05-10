@@ -2,12 +2,12 @@
 title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0b2a09cb4e64d3f921a3fb633aef7cd171b6b591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990712"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650170"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
 此示例演示如何实现具有安全元数据终结点使用的非元数据交换绑定，其中一个服务以及如何配置[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端以获取从类元数据终结点元数据。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  

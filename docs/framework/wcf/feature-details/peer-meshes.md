@@ -2,12 +2,12 @@
 title: 对等网格
 ms.date: 03/30/2017
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9113fab13da8503e6ce0335e5bb19a2634973dad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766787"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654493"
 ---
 # <a name="peer-meshes"></a>对等网格
 一个*mesh*是它可以在彼此之间进行通信和唯一的网格 id 标识的对等节点的命名的集合 （一个互连图） 每个节点都与其他多个节点相连接。 在连接良好的网格中，任何两个节点之间都存在一条路径，网格最远端的节点之间的跃点也相对较少，并且即使失去某些节点或连接，网格也会保持连接。网格中的活动节点会发布自己的含有相应网格 ID 的终结点信息，以便其他对等节点可以找到它们。  

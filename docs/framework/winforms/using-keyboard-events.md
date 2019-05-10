@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dc404a73d5de96c69e4241b818965fe2bef22a50
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966892"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655648"
 ---
 # <a name="using-keyboard-events"></a>使用键盘事件
 大多数 Windows 窗体程序通过处理键盘事件处理键盘输入。 本主题提供对键盘事件的概述，包括有关何时使用每个事件和向每个事件提供的数据的详细信息。  另请参阅[事件处理程序概述 （Windows 窗体）](event-handlers-overview-windows-forms.md)并[事件概述 （Windows 窗体）](events-overview-windows-forms.md)。  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212409"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642886"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 虽然 Windows Presentation Foundation (WPF) 提供了各种安全服务，它还利用基础平台 （包括操作系统） 的安全功能[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
   
- ![WPF 安全性图示](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![关系图显示了 WPF 安全模型。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  本主题的其余部分主要讨论与 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 相关的各个层。  
 
@@ -39,9 +39,9 @@ ms.locfileid: "59212409"
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  除了常规的评审和增强的 Windows，有三个主要功能[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]，我们将讨论此主题中：  
   
--   /GS 编译  
+- /GS 编译  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]。  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]。  
   
 #### <a name="gs-compilation"></a>/GS 编译  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 通过对众多核心系统库进行重新编译提供保护，这些核心系统库包括所有 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 依赖项（如 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 以帮助缓解缓冲区溢出。 通过使用/GS 形参和 C/C++ 命令行编译器可实现这一点。 虽然应显式避免缓冲区溢出，但 /GS 编译针对由它们无意或恶意创建的潜在漏洞提供了深层防御示例。  
@@ -66,9 +66,9 @@ ms.locfileid: "59212409"
   
  保护计算机免受此安全威胁的一种方法就是使用所需的最少特权数运行应用程序。 这就是通常所说的最低特权原则，也是 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 操作系统的核心功能。 此功能称为用户帐户控制 (UAC)，被 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] UAC 使用，主要有两种使用方式：  
   
--   若要在默认情况下使用 UAC 特权运行大多数应用程序，即使用户是管理员，也只有需要使用管理员特权的应用程序才会使用管理员特权运行。 要使用管理特权运行，必须以应用程序清单形式或作为安全策略中的一个条目显式标记应用程序。  
+- 若要在默认情况下使用 UAC 特权运行大多数应用程序，即使用户是管理员，也只有需要使用管理员特权的应用程序才会使用管理员特权运行。 要使用管理特权运行，必须以应用程序清单形式或作为安全策略中的一个条目显式标记应用程序。  
   
--   提供兼容性解决方案(如虚拟化)。 例如，许多应用程序尝试写入受限位置，例如 C:\Program Files。 对于在 UAC 中执行的应用程序，存在基于用户的可选位置无需管理员特权就能写入。 对于在 UAC 中运行的应用程序，UAC 可虚拟化 C:\Program Files，这样认为其写入到其中的应用程序实际上是写入到基于用户的可选位置。 这种兼容性工作可使操作系统来运行许多以前无法在 UAC 中运行的应用程序。  
+- 提供兼容性解决方案(如虚拟化)。 例如，许多应用程序尝试写入受限位置，例如 C:\Program Files。 对于在 UAC 中执行的应用程序，存在基于用户的可选位置无需管理员特权就能写入。 对于在 UAC 中运行的应用程序，UAC 可虚拟化 C:\Program Files，这样认为其写入到其中的应用程序实际上是写入到基于用户的可选位置。 这种兼容性工作可使操作系统来运行许多以前无法在 UAC 中运行的应用程序。  
   
 #### <a name="code-integrity-checks"></a>代码完整性检查  
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 集成了更深入的代码完整性检查，有助于防止恶意代码在负载/运行时注入到系统文件或内核。 这超出了系统文件保护。  
@@ -100,11 +100,11 @@ ms.locfileid: "59212409"
   
  托管应用程序被编译为 Microsoft 中间语言 (MSIL)。 当执行托管应用程序中的方法时，将采用实时 (JIT) 编译方式把 MSIL 编译为本机代码。 JIT 编译包括的验证过程将应用许多众多安全和可靠规则，从而确保代码不会：  
   
--   违反类型合约  
+- 违反类型合约  
   
--   引入缓冲区溢出  
+- 引入缓冲区溢出  
   
--   随意访问内存。  
+- 随意访问内存。  
   
  不允许不符合验证规则的托管代码执行，除非它被视为受信任代码。  
   
@@ -116,29 +116,29 @@ ms.locfileid: "59212409"
   
  [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 开始执行时授予托管应用程序的权限集称为一个权限集，由应用程序提供的证据确定。 对于 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 应用程序，提供的证据为从中启动应用程序的位置或区域。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 可以标识以下区域：  
   
--   **我的电脑**。 从客户端计算机（完全受信任）上启动的应用程序。  
+- **我的电脑**。 从客户端计算机（完全受信任）上启动的应用程序。  
   
--   **本地 Intranet**。 从 Intranet 启动的应用程序。 （某种程度上受信任）。  
+- **本地 Intranet**。 从 Intranet 启动的应用程序。 （某种程度上受信任）。  
   
--   **Internet**。 从 Intranet 启动的应用程序。 （最不受信任）。  
+- **Internet**。 从 Intranet 启动的应用程序。 （最不受信任）。  
   
--   **受信任的站点**。 由受信任用户标识的应用程序。 （最不受信任）。  
+- **受信任的站点**。 由受信任用户标识的应用程序。 （最不受信任）。  
   
--   **不受信任的站点**。 由不受信任的用户标识的应用程序。 （不受信任）。  
+- **不受信任的站点**。 由不受信任的用户标识的应用程序。 （不受信任）。  
   
  对于这些区域中的任一一个，[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 都会提供一个预定义的权限集，包括可匹配与之关联的信任级别的权限。 这些问题包括：  
   
--   **FullTrust**。 对于从启动应用程序**我的电脑**区域。 将授予全部可能的权限。  
+- **FullTrust**。 对于从启动应用程序**我的电脑**区域。 将授予全部可能的权限。  
   
--   **LocalIntranet**。 对于从启动应用程序**本地 Intranet**区域。 将授予权限的子集，以提供对客户端计算机资源适度的访问权限，包括隔离存储、用户界面的无限制访问、无限制使用文件对话框、有限的反射和有限访问环境变量。 不提供对关键资源（如注册表）的权限。  
+- **LocalIntranet**。 对于从启动应用程序**本地 Intranet**区域。 将授予权限的子集，以提供对客户端计算机资源适度的访问权限，包括隔离存储、用户界面的无限制访问、无限制使用文件对话框、有限的反射和有限访问环境变量。 不提供对关键资源（如注册表）的权限。  
   
--   **Internet**。 对于从启动应用程序**Internet**或**受信任的站点**区域。 将授予权限的子集，以提供对客户端计算机资源有限的访问权限，包括隔离存储、仅限打开文件和有限的用户界面。 从根本上来说，此权限集将隔离客户端计算机中的应用程序。  
+- **Internet**。 对于从启动应用程序**Internet**或**受信任的站点**区域。 将授予权限的子集，以提供对客户端计算机资源有限的访问权限，包括隔离存储、仅限打开文件和有限的用户界面。 从根本上来说，此权限集将隔离客户端计算机中的应用程序。  
   
  应用程序标识为来自**不受信任的站点**区域会授予任何权限通过[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]根本。 因此，对它们而言，就不存在预定义的权限集。  
   
- 下图说明了区域、权限集、权限和资源之间的关系。  
+ 下图说明了区域、 权限集、 权限和资源之间的关系：  
   
- ![CAS 权限集](./media/caspermissionsets.png "CASPermissionSets")  
+ ![图，显示 CAS 权限集。](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
  Internet 区域安全沙盒的限制条件同样适用于 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 从系统库导入的任何代码，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 这可确保代码的每一位都是锁定的，即便 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 也是如此。 遗憾的是，为了能够执行，[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 需要执行要求更多权限的功能，所需的权限比通过 Internet 区域安全沙盒启用的那些功能的权限还要多。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "59212409"
   
  要执行此 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)][!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 基础代码必须执行更多可用功能，而不止是调用 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]包括：  
   
--   创建用于呈现的窗口句柄 (hWnd)  
+- 创建用于呈现的窗口句柄 (hWnd)  
   
--   调度消息  
+- 调度消息  
   
--   加载 Tahoma 字体  
+- 加载 Tahoma 字体  
   
  从安全角度而言，允许从沙盒应用程序直接访问上述任何操作将会导致灾难性后果。  
   
@@ -190,11 +190,11 @@ ms.locfileid: "59212409"
   
  在 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 之前，用户可能会受限于以下任一项：  
   
--   随机弹出窗口。  
+- 随机弹出窗口。  
   
--   混淆的脚本重定向。  
+- 混淆的脚本重定向。  
   
--   某些网站上出现大量安全对话框。  
+- 某些网站上出现大量安全对话框。  
   
  在某些情况下，不受信任的网站将尝试通过诱导 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 安装或反复显示 [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] 安装对话框（即使用户可能已取消）攻击用户。 使用这些技术，有可能会有相当多的用户上当受骗，从而导致安装间谍软件应用程序。  
   

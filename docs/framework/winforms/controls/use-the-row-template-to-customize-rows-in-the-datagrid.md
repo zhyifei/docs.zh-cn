@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: cb3a826262a49a8653e3a344bd126d434f2522dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1f6312f9ac8520b2131e1d2d7a7fb996aee6060e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651593"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>如何：使用行模板自定义 Windows 窗体 DataGridView 控件中的行
 <xref:System.Windows.Forms.DataGridView>控件中使用行模板为基础，它将添加到该控件通过数据绑定或在调用时的所有行<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>而无需指定要使用的现有行的方法。  

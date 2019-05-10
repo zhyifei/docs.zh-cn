@@ -2,12 +2,12 @@
 title: 创建自定义流控制活动
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f457e6f8cefd7183ca20cb449adf1ac15d7bde79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647150"
 ---
 # <a name="creating-custom-flow-control-activities"></a>创建自定义流控制活动
 .NET Framework 包含多种流控制活动的作用类似抽象编程结构 (如<xref:System.Activities.Statements.Flowchart>) 或标准编程语句 (如<xref:System.Activities.Statements.If>)。 本主题讨论的示例项目之一的体系结构[非泛型 ForEach](./samples/non-generic-foreach.md)。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98377a48b1ffe1ffabd72d0b42de4ed3da3ef93a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696490"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642927"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
 <a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下， [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ，客户端脚本编写语言也不能访问关键系统资源。 因为 Windows Presentation Foundation (WPF) 可从浏览器启动浏览器承载的应用程序，它们应该符合一组类似的限制。 若要强制实施这些限制[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]同时依赖于[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]并[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](请参阅[WPF 安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 默认情况下，浏览器承载的应用程序请求 Internet 区域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]组的权限，而不考虑是否从 Internet、 本地 intranet 或本地计算机启动。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  

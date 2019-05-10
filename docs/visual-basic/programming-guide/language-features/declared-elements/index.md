@@ -2,45 +2,45 @@
 title: 已声明的元素 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918003"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639177"
 ---
 # <a name="declared-elements-in-visual-basic"></a>已声明的元素 (Visual Basic)
 已声明的元素是在声明语句中定义的编程元素。 已声明的元素包括变量、常量、枚举、类，结构、模块、接口、过程、过程参数、函数返回、外部过程引用、运算符、属性、事件和委托。  
   
  声明语句包括以下语句：  
   
--   [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+- [Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
--   [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)  
+- [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
--   [Enum 语句](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+- [Enum 语句](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
--   [Class 语句](../../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class 语句](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module 语句](../../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module 语句](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface 语句](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface 语句](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare 语句](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare 语句](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event 语句](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event 语句](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
--   [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>本节内容  
  [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

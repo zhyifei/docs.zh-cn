@@ -2,12 +2,12 @@
 title: 如何：创建请求-答复协定
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f5af7f3a0954e9becf1b9098f372878b537fec9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645825"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>如何：创建请求-答复协定
 请求-答复协定指定返回答复的方法。 必须根据此协定的条款发送答复并与请求相关联。 即使该方法不返回任何答复（采用 C# 语言时，返回 `void`，采用 Visual Basic 语言时，返回 `Sub`），基础结构也将创建一条空消息并将其发送给调用方。 若要防止发送空答复消息，请对操作使用单向协定。  

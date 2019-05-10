@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 00945e0f3cd4e605bf625068ab6693101ae3b164
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647058"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 数据类型 (Visual Basic)
 保存有符号表示 96 位 （12 字节） 整数数字 10 的可变次幂缩放的 128 位 （16 字节） 值。 比例因子指定小数点; 右侧的位数其范围从 0 到 28。 小数位数为 0 （没有小数位），最大值为 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 具有 28 位小数，最大值为 + /-7.9228162514264337593543950335，并最小的非零值为 + /-0.0000000000000000000000000001 （+ /-1E 28)。  

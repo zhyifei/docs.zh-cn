@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9fa0844f4508906ae30b936e41fb4392b74d1437
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955501"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648734"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 限制
 早期版本的 Visual Basic 强制执行在代码中，如变量的名称，在模块和模块大小允许的变量数的长度的边界。 在 Visual Basic.NET 中，这些限制已放宽，为您提供编写和安排你的代码以更大的自由度。  

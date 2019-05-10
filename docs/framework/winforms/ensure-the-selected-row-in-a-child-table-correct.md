@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bbebd9f040c60016305a861abee3723450a7456b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966949"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651985"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>如何：确保子表中的选定行保持在正确的位置
 通常当在 Windows 窗体中使用数据绑定时，将显示称为父/子视图或母版/详细视图中的数据。 这是指一个数据绑定方案，其中来自同一源的数据将显示在两个控件中。 更改一个控件中的选定内容会导致在第二个控件中显示的数据变动。 例如，第一个控件可能会包含一个客户列表，而第二个控件则可能包含与第一个控件中选定客户相关的订单列表。  

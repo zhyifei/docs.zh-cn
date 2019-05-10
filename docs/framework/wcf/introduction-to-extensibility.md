@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ac605b562531329333b5f05e081d89de55d8cd2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928592"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645428"
 ---
 # <a name="introduction-to-extensibility"></a>扩展性介绍
 Windows Communication Foundation (WCF) 应用程序模型旨在解决的任何分布式应用程序的通信要求更高版本的一部分。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 WCF 扩展性模型旨在支持自定义方案，通过它可以修改在每个级别，甚至替换整个应用程序模型的系统行为。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  

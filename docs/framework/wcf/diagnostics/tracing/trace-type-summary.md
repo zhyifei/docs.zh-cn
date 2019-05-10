@@ -2,12 +2,12 @@
 title: 跟踪类型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44446b58510e58758934a5eb964efc8643854879
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925146"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647185"
 ---
 # <a name="trace-type-summary"></a>跟踪类型摘要
 [源级别](https://go.microsoft.com/fwlink/?LinkID=94943)定义各种跟踪级别：严重、 错误、 警告、 信息和详细，并提供的说明`ActivityTracing`标志切换的输出以跟踪边界和活动传输事件。  
@@ -37,13 +37,13 @@ ms.locfileid: "61925146"
   
  这意味着活动必须满足以下条件。  
   
--   它必须分别由开始跟踪和停止跟踪来启动和停止  
+- 它必须分别由开始跟踪和停止跟踪来启动和停止  
   
--   它必须刚好在挂起跟踪或恢复跟踪之前具有传输跟踪  
+- 它必须刚好在挂起跟踪或恢复跟踪之前具有传输跟踪  
   
--   如果有挂起和恢复跟踪，则在挂起跟踪和恢复跟踪之间不能有任何跟踪  
+- 如果有挂起和恢复跟踪，则在挂起跟踪和恢复跟踪之间不能有任何跟踪  
   
--   只要符合上述条件，就可以有任意多个严重/错误/警告/信息/详细/传输跟踪  
+- 只要符合上述条件，就可以有任意多个严重/错误/警告/信息/详细/传输跟踪  
   
  下面的正则表达式用于定义全局范围内的理想活动，  
   

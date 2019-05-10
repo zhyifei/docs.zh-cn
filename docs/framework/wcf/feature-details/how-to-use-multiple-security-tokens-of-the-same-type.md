@@ -2,12 +2,12 @@
 title: 如何：使用相同类型的多个安全令牌
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e82c2e256b057f45863d0533efd0c53b921cadce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972830"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650282"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>如何：使用相同类型的多个安全令牌
 - 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 中，客户端消息只包含一个任意给定类型的令牌。 现在，客户端消息可以包含某种类型的多个令牌。 本主题演示如何将同一类型的多个令牌包含在客户端消息中。  

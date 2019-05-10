@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 889a9b74bf0b2f2ef029dd622c7ddbbd9b844fa0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757544"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651186"
 ---
 # <a name="profiling-overview"></a>分析概述
 <a name="top"></a> 探查器是一种工具，监视另一个应用程序的执行。 公共语言运行时 (CLR) 探查器是一个动态链接库 (DLL)，具有使用分析 API 从 CLR 中接收消息以及向 CLR 发送消息的功能。 CLR 在运行时加载探查器 DLL。  

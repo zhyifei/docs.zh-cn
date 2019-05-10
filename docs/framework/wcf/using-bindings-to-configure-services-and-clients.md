@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f01fefc46cbc2cddaef9b025d59db8e2f734d9f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645130"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用绑定配置服务和客户端
 绑定是指定连接到终结点所需的通信详细信息的对象。 更具体地说，绑定包含用于创建客户端或服务运行时的配置信息，创建方法是定义用于各个终结点或客户端通道的传输、连网格式（消息编码）和协议的具体内容。 若要创建的正常运行的 Windows Communication Foundation (WCF) 服务，在服务中的每个终结点需要的绑定。 本主题解释什么是绑定、如何定义绑定以及如何为终结点指定特定的绑定。  

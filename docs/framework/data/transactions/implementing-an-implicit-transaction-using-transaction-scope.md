@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793674"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645760"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用事务范围实现隐式事务
 <xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  

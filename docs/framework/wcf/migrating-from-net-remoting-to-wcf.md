@@ -2,12 +2,12 @@
 title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4ca96fe38d766ffe48ab17dc113f4fce8997a0a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955228"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651086"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  

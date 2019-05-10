@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 75df256f852b45af4bc6cf519c13ccd62ae1d689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009521"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654769"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类将用户界面元素组合到工具栏、 状态栏和菜单提供一个通用框架。 <xref:System.Windows.Forms.ToolStrip> 控件提供丰富的设计时体验，包括就地激活和编辑、 自定义布局和漂浮，即工具栏共享水平或垂直空间的能力。  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e8ab97c545577dd393fd7d9844b396973621e6a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904262"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650862"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>如何：更改 Windows 窗体 TabControl 的外观
 可以使用的属性来更改 Windows 窗体中的选项卡的外观<xref:System.Windows.Forms.TabControl>和<xref:System.Windows.Forms.TabPage>构成控件上的各个选项卡对象。 通过设置这些属性，可以在选项卡上显示的图像、 显示垂直而不是水平选项卡、 显示多个行的选项卡上，并启用或以编程方式禁用选项卡。  

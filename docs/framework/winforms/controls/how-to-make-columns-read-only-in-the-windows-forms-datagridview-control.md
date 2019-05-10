@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: 2a4ca0a718373c56f77e8f3c45a9d6ee6d76a081
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c865db5caf33b34f12c7acf8078995b12db3c970
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649271"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>如何：将 Windows 窗体 DataGridView 控件中的列设为只读
 无需对所有的数据进行编辑。 在 <xref:System.Windows.Forms.DataGridView> 控件中，列 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> 属性值确定用户是否可在该列中编辑单元格。 有关如何使控件完全只读的信息，请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件](prevent-row-addition-and-deletion-datagridview.md)。  

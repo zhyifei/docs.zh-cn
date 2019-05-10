@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a595f38f6dd68b9c152bfa78ec0bebf36e173e17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013642"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649971"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断
 变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断。 请更改名称\<变量名 >，或使用完全限定的名称 （例如，Me.variablename 或 MyBase.variablename）。  

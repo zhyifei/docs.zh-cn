@@ -2,12 +2,12 @@
 title: 维护名称 / 值对 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: 67bde0954b74b7e5145dd2d930e16feb3371a881
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e95e8c751211d59d5bffbf3e625665703e01429c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649801"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>维护名称/值对 (Visual Basic)
 很多应用程序都必须维护需要保存为名称/值对的信息。 此信息可能是配置信息或全局设置。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含一些方法，能轻松保存一组名称/值对。 可以将这些信息保存为属性，也可以保存为一组子元素。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 839f7790a5dd300313931672c60e7826af39aeea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857618"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651093"
 ---
 # <a name="contracts"></a>协定
 本部分演示如何定义和实现 Windows Communication Foundation (WCF) 协定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
@@ -21,32 +21,32 @@ ms.locfileid: "61857618"
 ## <a name="overview"></a>概述  
  本主题提供了高级概念性设计和实现 WCF 服务。 各个子主题提供了有关具体设计和实现细节的更多详细信息。 在设计和实现你的 WCF 应用程序时之前, 建议您：  
   
--   了解什么是服务协定、服务协定的工作原理以及如何创建服务协定。  
+- 了解什么是服务协定、服务协定的工作原理以及如何创建服务协定。  
   
--   了解运行时配置或承载环境可能不支持的协定状态最低要求。  
+- 了解运行时配置或承载环境可能不支持的协定状态最低要求。  
   
 ## <a name="service-contracts"></a>服务协定  
  服务协定是一个声明，它提供了有关以下方面的信息：  
   
--   服务中操作的分组方式。  
+- 服务中操作的分组方式。  
   
--   针对交换的消息所进行的各种操作的签名。  
+- 针对交换的消息所进行的各种操作的签名。  
   
--   这些消息的数据类型。  
+- 这些消息的数据类型。  
   
--   操作的位置。  
+- 操作的位置。  
   
--   用于支持与服务成功通信的特定协议和序列化格式。  
+- 用于支持与服务成功通信的特定协议和序列化格式。  
   
  例如，采购订单协定可能具有一个 `CreateOrder` 操作，该操作接受订单信息类型输入并返回成功或失败信息，包括一个订单标识符。 它还可能具有一个 `GetOrderStatus` 操作，该操作接受一个订单标识符并返回订单状态信息。 此类服务协定需要指定：  
   
--   采购订单协定由 `CreateOrder` 和 `GetOrderStatus` 操作组成。  
+- 采购订单协定由 `CreateOrder` 和 `GetOrderStatus` 操作组成。  
   
--   这些操作指定了输入消息和输出消息。  
+- 这些操作指定了输入消息和输出消息。  
   
--   这些消息可以携带的数据。  
+- 这些消息可以携带的数据。  
   
--   有关成功处理消息所必需的通信基础结构的分类声明。 例如，这些详细信息包括建立成功通信是否需要安全以及需要哪些形式的安全。  
+- 有关成功处理消息所必需的通信基础结构的分类声明。 例如，这些详细信息包括建立成功通信是否需要安全以及需要哪些形式的安全。  
   
  若要表达这种对应用程序在其他平台 （包括非 Microsoft 平台） 上的信息，XML 服务协定公开表示标准 XML 格式，如[Web 服务描述语言 (WSDL)](https://go.microsoft.com/fwlink/?LinkId=87004)并[XML 架构 (XSD)](https://go.microsoft.com/fwlink/?LinkId=87005)，等等。 许多平台的开发人员都可以使用此公共协定信息创建可与该服务通信的应用程序，既因为开发人员理解规范的语言，又因为这些语言通过描述服务支持的公共形式、格式和协议，支持互操作。 有关 WCF 如何处理此类信息的详细信息，请参阅[元数据](../../../../docs/framework/wcf/feature-details/metadata.md)。  
   

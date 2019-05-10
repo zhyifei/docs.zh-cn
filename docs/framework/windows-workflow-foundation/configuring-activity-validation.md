@@ -2,12 +2,12 @@
 title: 配置活动验证
 ms.date: 03/30/2017
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-ms.openlocfilehash: 65928de1dc8b8d9914648463a136790c7978f53c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c971b56e269fbb330bd9ad0a551a9fb9ca01196
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655104"
 ---
 # <a name="configuring-activity-validation"></a>配置活动验证
 通过活动验证，活动作者和用户可以在执行活动配置之前标识和报告此配置中的错误。 Windows Workflow Foundation (WF) 提供了以下三种类型的活动验证：  
