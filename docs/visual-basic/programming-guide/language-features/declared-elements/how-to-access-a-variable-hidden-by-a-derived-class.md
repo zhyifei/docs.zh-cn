@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43f7af1a1b540dd630cc2f228f1e5a6018d7c5d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61829655"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610461"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>如何：访问被派生类 (Visual Basic) 隐藏的变量
 当在派生类中的代码访问的变量时，编译器通常解析到最接近的可访问版本，它是可访问的版本引用派生步骤最少向后访问类中。 如果在派生类中定义的变量，则代码通常会访问该定义。  
@@ -23,7 +23,7 @@ ms.locfileid: "61829655"
   
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>若要访问被派生类隐藏的基类变量  
   
--   在表达式或赋值语句中，变量名称前面加`MyBase`关键字和一个句点 (`.`)。  
+- 在表达式或赋值语句中，变量名称前面加`MyBase`关键字和一个句点 (`.`)。  
   
      编译器解析对变量的基类版本的引用。  
   

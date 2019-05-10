@@ -3,20 +3,20 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310247"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592365"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
   
 ### <a name="overview-of-federated-authentication"></a>联合身份验证概述  
- 当两个信任域之间存在信任关系时，联合身份验证允许一个信任域中的安全令牌服务 (STS) 向另一个信任域中的 STS 提供身份验证信息。 下图显示了此情况的示例。  
+ 当两个信任域之间存在信任关系时，联合身份验证允许一个信任域中的安全令牌服务 (STS) 向另一个信任域中的 STS 提供身份验证信息。 出现这种是在下图中所示：  
   
- ![联合身份验证方案](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
+ ![联合身份验证方案的图示。](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Fabrikam 信任域中的客户端向 Contoso 信任域中的信赖方 (RP) 应用发送请求。  
   
@@ -50,7 +50,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
  下方的关系图展示了被动重定向事例中整体信息流。 通过 STS 自动重定向请求，无需登录页便可建立凭据：  
   
- ![使用被动重定向登录的执行时序图](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![使用被动重定向的登录中显示的关系图。](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  下方的关系图展示了用户经过身份验证访问 STS 且由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 处理其安全令牌后的更多详细信息：  
   
@@ -63,9 +63,9 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 ### <a name="events"></a>事件  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和它们的父类 <xref:System.IdentityModel.Services.HttpModuleBase> 在处理 HTTP 请求的各个阶段引发事件。 可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序的 `global.asax` 文件中处理这些事件。  
   
--   ASP.NET 基础结构调用模块的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法来初始化模块。  
+- ASP.NET 基础结构调用模块的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法来初始化模块。  
   
--   ASP.NET 基础结构首次在派生于 <xref:System.IdentityModel.Services.HttpModuleBase> 的某个应用程序模块上调用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法时将引发 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 事件。 此方法访问静态 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 属性，导致从 Web.config 文件加载配置。 仅在首次访问此属性时引发该事件。 可以通过事件处理程序中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 属性访问从配置中初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 对象。 可以在将配置应用到任何模块前使用此事件修改配置。 可以在 Application_Start 方法中为此事件添加处理程序：  
+- ASP.NET 基础结构首次在派生于 <xref:System.IdentityModel.Services.HttpModuleBase> 的某个应用程序模块上调用 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法时将引发 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 事件。 此方法访问静态 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 属性，导致从 Web.config 文件加载配置。 仅在首次访问此属性时引发该事件。 可以通过事件处理程序中的 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 属性访问从配置中初始化的 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 对象。 可以在将配置应用到任何模块前使用此事件修改配置。 可以在 Application_Start 方法中为此事件添加处理程序：  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -76,19 +76,19 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
      每个模块替代 <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType> 抽象方法。 第一种方法为与模块相关的 ASP.NET 管道事件添加处理程序。 大多数情况下，模块的默认实现便已足够。 第二种方法从模块的 <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType> 属性初始化其各个属性。 （这是之前加载的配置的副本。）如果要支持从派生自 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 的类中的配置初始化新属性，则需要替代第二种方法。 在此情况下，也需要从相应的配置对象进行派生，从而支持添加的配置属性；例如，从 <xref:System.IdentityModel.Configuration.IdentityConfiguration>、<xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 或 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 派生。  
   
--   WS-FAM 截获由 STS 颁发的安全令牌时引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 事件。  
+- WS-FAM 截获由 STS 颁发的安全令牌时引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 事件。  
   
--   WS-FAM 在验证令牌后引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> 事件。  
+- WS-FAM 在验证令牌后引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> 事件。  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> 在为用户创建会话安全令牌时，引发 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> 事件。  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> 在为用户创建会话安全令牌时，引发 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> 事件。  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> 使用包含会话安全令牌的 Cookie 截获后续请求时，引发 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> 事件。  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> 使用包含会话安全令牌的 Cookie 截获后续请求时，引发 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> 事件。  
   
--   在 WS-FAM 将用户重定向到颁发者之前引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 事件。 事件中传递的 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> 的 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> 属性提供 WS 联合身份验证登录请求。 可选择在将请求发送到颁发者之前修改请求。  
+- 在 WS-FAM 将用户重定向到颁发者之前引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 事件。 事件中传递的 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> 的 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> 属性提供 WS 联合身份验证登录请求。 可选择在将请求发送到颁发者之前修改请求。  
   
--   成功写入 Cookie 且用户登录后，WS-FAM 引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> 事件。  
+- 成功写入 Cookie 且用户登录后，WS-FAM 引发 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> 事件。  
   
--   为每个用户关闭会话时，WS FAM 将对每个会话引发一次 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 事件。 如果在客户端上关闭会话（例如，通过删除会话 Cookie 的方式），则不会引发该事件。 在 SSO 环境中，IP-STS 也可以请求每个 RP 注销。 这也将引发此事件，这时 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> 设置为 `true`。  
+- 为每个用户关闭会话时，WS FAM 将对每个会话引发一次 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 事件。 如果在客户端上关闭会话（例如，通过删除会话 Cookie 的方式），则不会引发该事件。 在 SSO 环境中，IP-STS 也可以请求每个 RP 注销。 这也将引发此事件，这时 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> 设置为 `true`。  
   
 > [!NOTE]
 >  不应在由 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 或 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 引发的任何事件期间使用 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 属性。 这是因为 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 是在身份验证进程后设置的，而事件是在身份验证进程中引发的。  

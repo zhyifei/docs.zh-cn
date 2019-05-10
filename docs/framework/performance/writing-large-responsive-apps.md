@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61861226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613818"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。 
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  在本文中，我们讨论了你应该如何注意可能会影响你的应用响应能力的性能瓶颈征兆，对于大型系统或处理大量数据的系统尤为如此。 常见的原因包括装箱、字符串操作、LINQ 和 lambda、异步方法中的缓存、没有大小限制或处置策略的缓存、不恰当的字典使用以及来回传递结构。 请记住优化应用的四个事实：  
   
--   切勿过早地优化 – 保持高效并在你发现问题时优化应用。 
+- 切勿过早地优化 – 保持高效并在你发现问题时优化应用。 
   
--   配置文件不会撒谎 – 若不测量，便只是猜测。 
+- 配置文件不会撒谎 – 若不测量，便只是猜测。 
   
--   好的工具将使一切大不相同 – 下载 PerfView 并且试用。 
+- 好的工具将使一切大不相同 – 下载 PerfView 并且试用。 
   
--   一切皆与分配有关 – 这就是编译器平台团队花大部分时间改进新编译器性能的原因所在。 
+- 一切皆与分配有关 – 这就是编译器平台团队花大部分时间改进新编译器性能的原因所在。 
   
 ## <a name="see-also"></a>请参阅
 

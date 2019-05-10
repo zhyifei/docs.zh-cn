@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8adc9644f987166729c43b79a6891960978341dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340329"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612727"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>如何：创作 Windows 窗体的控件
 控件表示用户和程序之间的图形链接。 控件可以提供或处理数据、接受用户输入、响应事件或执行连接用户和应用程序的其他功能（任意数量）。 因为控件本质上是具有图形界面的组件，所以它能提供组件所提供的所有功能并提供用户交互。 控件是针对特定目的而创建的，而创作控件只是另一种编程任务。 考虑到这一点，以下步骤概述了控件的创作过程。 链接提供有关各个步骤的附加信息。  
@@ -25,13 +25,13 @@ ms.locfileid: "59340329"
   
 1. 确定希望控件完成的操作或它在应用程序中所起的作用。 要考虑的因素有：  
   
-    -   需要哪种图形界面？  
+    - 需要哪种图形界面？  
   
-    -   此控件会处理哪些特定用户交互？  
+    - 此控件会处理哪些特定用户交互？  
   
-    -   是否有现有控件提供所需功能？  
+    - 是否有现有控件提供所需功能？  
   
-    -   通过组合几个 Windows 窗体控件可以获得所需功能吗？  
+    - 通过组合几个 Windows 窗体控件可以获得所需功能吗？  
   
 2. 如果控件需要一个对象模型，请确定如何在整个对象模型中分配功能，并在控件和任何子对象之间划分功能。 如果打算创作一个复杂的控件，或者想要并入一些功能，则对象模型可能会有用。  
   
