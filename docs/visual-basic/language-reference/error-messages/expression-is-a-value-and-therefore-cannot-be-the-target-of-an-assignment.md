@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802604"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665144"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>表达式是一个值，因此不能作为赋值目标
 语句试图将值分配为表达式。 您可以在运行时分配到可写的变量、 属性或数组元素的值。 下面的示例说明了如何可能出现此错误。  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果该语句将值分配给一个表达式，用单个可写的变量、 属性或数组元素替换该表达式。  
+- 如果该语句将值分配给一个表达式，用单个可写的变量、 属性或数组元素替换该表达式。  
   
--   如果该语句进行间接访问通过值类型 （通常是结构），创建一个变量来保存值类型。  
+- 如果该语句进行间接访问通过值类型 （通常是结构），创建一个变量来保存值类型。  
   
--   为变量分配相应的结构 （或其他值类型）。  
+- 为变量分配相应的结构 （或其他值类型）。  
   
--   使用变量来访问要为其赋值的属性。  
+- 使用变量来访问要为其赋值的属性。  
   
 ## <a name="see-also"></a>请参阅
 

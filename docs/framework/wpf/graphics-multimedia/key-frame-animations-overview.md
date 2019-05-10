@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5c0e574ea494bedc1c359d38cda0d17bbb03fcdf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785787"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645343"
 ---
 # <a name="key-frame-animations-overview"></a>关键帧动画概述
 本主题介绍关键帧动画。 通过关键帧动画，可以使用两个以上的目标值进行动画处理，并控制动画的内插方法。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8254e48444fef248adb7c33b14faa43242647d59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779088"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655616"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作
 可通过在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 消息循环上显示 Windows 窗体来解决组件对象模型 (COM) 互操作性问题，可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法来创建该消息循环。  
@@ -41,4 +41,4 @@ ms.locfileid: "61779088"
 
 - [向 COM 公开 .NET Framework 组件](../../interop/exposing-dotnet-components-to-com.md)
 - [如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+- [Windows 窗体和非托管应用程序](windows-forms-and-unmanaged-applications.md)

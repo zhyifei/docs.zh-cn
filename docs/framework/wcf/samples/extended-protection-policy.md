@@ -2,12 +2,12 @@
 title: 扩展保护策略
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2a79798569e308c37bd66bf0bdf8dee0cfa6951
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650060"
 ---
 # <a name="extended-protection-policy"></a>扩展保护策略
 扩展保护是一种针对中间人 (MITM) 攻击提供保护的安全计划。 MITM 攻击是一种安全威胁，MITM 在该攻击中获取客户端凭据并将其转发给服务器。  
@@ -34,9 +34,9 @@ ms.locfileid: "61990166"
   
 4. 本示例要求客户端与服务器建立一个安全通道，因此它要求存在服务器证书，此证书可从 Internet 信息服务 (IIS) 管理器进行安装。  
   
-    1.  打开 IIS 管理器。 打开**服务器证书**，后者在中显示**功能查看**选项卡上选择根节点 （计算机名称） 时。  
+    1. 打开 IIS 管理器。 打开**服务器证书**，后者在中显示**功能查看**选项卡上选择根节点 （计算机名称） 时。  
   
-    2.  为了测试此示例，可以创建一个自签名证书。 如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中。  
+    2. 为了测试此示例，可以创建一个自签名证书。 如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中。  
   
 5. 打开**操作**默认网站上的窗格。 单击**编辑站点**，**绑定**。 如果 HTTPS 尚不存在，请将其作为类型添加，使用端口号 443。 分配在上一步中创建的 SSL 证书。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 000c7f8f87792b598f177cae123010eb8888c328
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907590"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645963"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>如何：引用枚举成员 (Visual Basic)
 枚举提供简便的方法来处理相关常量集以及要将常量值与名称相关联。 例如，可以为一组与星期几相关联的整数常量声明一个枚举，然后在代码中使用星期几的名称而不是整数值。  
@@ -21,7 +21,7 @@ ms.locfileid: "61907590"
   
 ### <a name="to-refer-to-an-enumeration-member"></a>若要引用枚举成员  
   
--   有资格使用枚举的成员名称。 例如，下面的示例将分配`Saturday`的成员`FirstDayOfWeek`给该变量的枚举`DayValue`。  
+- 有资格使用枚举的成员名称。 例如，下面的示例将分配`Saturday`的成员`FirstDayOfWeek`给该变量的枚举`DayValue`。  
   
      [!code-vb[VbEnumsTask#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#19)]  
   

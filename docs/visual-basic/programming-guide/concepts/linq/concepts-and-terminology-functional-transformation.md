@@ -2,12 +2,12 @@
 title: 概念和术语 （功能转换） (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a2dd2fe835ada29fdb6639905673b4e0b60aca6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663474"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642031"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>概念和术语 （功能转换） (Visual Basic)
 本主题介绍纯函数转换的概念和术语。 与更加传统的命令性编程方式相比，用来转换数据的函数转换方法所生成的代码往往编程速度更快、含义更明确、更易于调试和维护。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876273"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645879"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  

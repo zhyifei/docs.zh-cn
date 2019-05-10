@@ -2,12 +2,12 @@
 title: XElement 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-ms.openlocfilehash: 7fbe1cc484ea3482bc455c161783bd7a4513d0bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d5ae3feae632c3bc3ce927a6d376e9ec4911e9fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783602"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647388"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>XElement 类概述 (Visual Basic)
 <xref:System.Xml.Linq.XElement> 类是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的基础类之一。 它表示一个 XML 元素。 可以使用该类创建元素；更改元素内容；添加、更改或删除子元素；向元素中添加属性；或以文本格式序列化元素内容。 还可以与 <xref:System.Xml?displayProperty=nameWithType> 中的其他类（例如 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 和 <xref:System.Xml.Xsl.XslCompiledTransform>）进行互操作。  

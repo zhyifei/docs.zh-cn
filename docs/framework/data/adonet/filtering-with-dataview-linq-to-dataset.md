@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878821"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645689"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>使用 DataView 进行筛选 (LINQ to DataSet)
 使用特定条件筛选数据，然后通过 UI 控件在客户端中表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式来筛选数据并返回满足指定筛选条件的数据行子集。 除了基于字符串的筛选功能以外<xref:System.Data.DataView>还提供了使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]筛选条件的表达式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 表达式允许执行比基于字符串的筛选更复杂而功能强大的筛选操作。  
   
  使用 <xref:System.Data.DataView> 筛选数据有两种方式：  
   
--   通过使用 Where 子句的 <xref:System.Data.DataView> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。  
+- 通过使用 Where 子句的 <xref:System.Data.DataView> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。  
   
--   使用 <xref:System.Data.DataView> 现有的基于字符串的筛选功能。  
+- 使用 <xref:System.Data.DataView> 现有的基于字符串的筛选功能。  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>通过具有筛选信息的查询创建 DataView  
  可以通过 <xref:System.Data.DataView> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 对象。 如果该查询包含一个 `Where` 子句，则会使用查询中的筛选信息创建 <xref:System.Data.DataView>。 `Where` 子句中的表达式用于确定哪些数据行将包括在 <xref:System.Data.DataView> 中并作为筛选器的基础。  
@@ -76,9 +76,9 @@ ms.locfileid: "61878821"
 ## <a name="clearing-the-filter"></a>清除筛选器  
  使用 <xref:System.Data.DataView> 属性设置筛选之后，可以清除 <xref:System.Data.DataView.RowFilter%2A> 上的筛选器。 <xref:System.Data.DataView> 上的筛选器可以采用两种不同的方式清除：  
   
--   将 <xref:System.Data.DataView.RowFilter%2A> 属性设置为 `null`。  
+- 将 <xref:System.Data.DataView.RowFilter%2A> 属性设置为 `null`。  
   
--   将 <xref:System.Data.DataView.RowFilter%2A> 属性设置为一个空字符串。  
+- 将 <xref:System.Data.DataView.RowFilter%2A> 属性设置为一个空字符串。  
   
 ### <a name="example"></a>示例  
  下面的示例通过查询创建 <xref:System.Data.DataView>，然后通过将 <xref:System.Data.DataView.RowFilter%2A> 属性设置为 `null` 来清除该筛选器：  
