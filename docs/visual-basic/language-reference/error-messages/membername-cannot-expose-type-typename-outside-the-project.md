@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 16f579a05236ba8977a071cb08068be8e98799f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cb5191442ed8d3ee47c5116b10740e277ffa5bac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921077"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661919"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a><span data-ttu-id="dc37e-102">'\<成员名称 > 不能公开类型\<类型名称 > 通过在项目外部\<containertype >'\<containertypename ></span><span class="sxs-lookup"><span data-stu-id="dc37e-102">'\<membername>' cannot expose type '\<typename>' outside the project through \<containertype> '\<containertypename>'</span></span>
-<span data-ttu-id="dc37e-103">变量、 过程参数或函数返回公开其容器外，但它被声明为不必须在容器外公开的类型。</span><span class="sxs-lookup"><span data-stu-id="dc37e-103">A variable, procedure parameter, or function return is exposed outside its container, but it is declared as a type that must not be exposed outside the container.</span></span>  
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a><span data-ttu-id="9e18c-102">'\<成员名称 > 不能公开类型\<类型名称 > 通过在项目外部\<containertype >'\<containertypename ></span><span class="sxs-lookup"><span data-stu-id="9e18c-102">'\<membername>' cannot expose type '\<typename>' outside the project through \<containertype> '\<containertypename>'</span></span>
+<span data-ttu-id="9e18c-103">变量、 过程参数或函数返回公开其容器外，但它被声明为不必须在容器外公开的类型。</span><span class="sxs-lookup"><span data-stu-id="9e18c-103">A variable, procedure parameter, or function return is exposed outside its container, but it is declared as a type that must not be exposed outside the container.</span></span>  
   
- <span data-ttu-id="dc37e-104">下面的主干代码显示了将生成此错误的情况。</span><span class="sxs-lookup"><span data-stu-id="dc37e-104">The following skeleton code shows a situation that generates this error.</span></span>  
+ <span data-ttu-id="9e18c-104">下面的主干代码显示了将生成此错误的情况。</span><span class="sxs-lookup"><span data-stu-id="9e18c-104">The following skeleton code shows a situation that generates this error.</span></span>  
   
 ```  
 Private Class privateClass  
@@ -27,14 +27,14 @@ Public Class mainClass
 End Class  
 ```  
   
- <span data-ttu-id="dc37e-105">声明的类型`Protected`， `Friend`， `Protected Friend`，或`Private`用于其声明上下文以外的访问受到限制。</span><span class="sxs-lookup"><span data-stu-id="dc37e-105">A type that is declared `Protected`, `Friend`, `Protected Friend`, or `Private` is intended to have limited access outside its declaration context.</span></span> <span data-ttu-id="dc37e-106">使用与数据，将无法具有受限制更少访问的变量的类型实现此目的。</span><span class="sxs-lookup"><span data-stu-id="dc37e-106">Using it as the data type of a variable with less restricted access would defeat this purpose.</span></span> <span data-ttu-id="dc37e-107">在上面的主干代码`exposedVar`是`Public`，并将公开`privateClass`不应有权访问它的代码。</span><span class="sxs-lookup"><span data-stu-id="dc37e-107">In the preceding skeleton code, `exposedVar` is `Public` and would expose `privateClass` to code that should not have access to it.</span></span>  
+ <span data-ttu-id="9e18c-105">声明的类型`Protected`， `Friend`， `Protected Friend`，或`Private`用于其声明上下文以外的访问受到限制。</span><span class="sxs-lookup"><span data-stu-id="9e18c-105">A type that is declared `Protected`, `Friend`, `Protected Friend`, or `Private` is intended to have limited access outside its declaration context.</span></span> <span data-ttu-id="9e18c-106">使用与数据，将无法具有受限制更少访问的变量的类型实现此目的。</span><span class="sxs-lookup"><span data-stu-id="9e18c-106">Using it as the data type of a variable with less restricted access would defeat this purpose.</span></span> <span data-ttu-id="9e18c-107">在上面的主干代码`exposedVar`是`Public`，并将公开`privateClass`不应有权访问它的代码。</span><span class="sxs-lookup"><span data-stu-id="9e18c-107">In the preceding skeleton code, `exposedVar` is `Public` and would expose `privateClass` to code that should not have access to it.</span></span>  
   
- <span data-ttu-id="dc37e-108">**错误 ID:** BC30909</span><span class="sxs-lookup"><span data-stu-id="dc37e-108">**Error ID:** BC30909</span></span>  
+ <span data-ttu-id="9e18c-108">**错误 ID:** BC30909</span><span class="sxs-lookup"><span data-stu-id="9e18c-108">**Error ID:** BC30909</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="dc37e-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="dc37e-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9e18c-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="9e18c-109">To correct this error</span></span>  
   
-- <span data-ttu-id="dc37e-110">更改访问级别，变量、 过程参数或函数的返回让至少作为其数据类型的访问级别限制性最高。</span><span class="sxs-lookup"><span data-stu-id="dc37e-110">Change the access level of the variable, procedure parameter, or function return to be at least as restrictive as the access level of its data type.</span></span>  
+- <span data-ttu-id="9e18c-110">更改访问级别，变量、 过程参数或函数的返回让至少作为其数据类型的访问级别限制性最高。</span><span class="sxs-lookup"><span data-stu-id="9e18c-110">Change the access level of the variable, procedure parameter, or function return to be at least as restrictive as the access level of its data type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc37e-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="dc37e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e18c-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e18c-111">See also</span></span>
 
-- [<span data-ttu-id="dc37e-112">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="dc37e-112">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [<span data-ttu-id="9e18c-112">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="9e18c-112">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

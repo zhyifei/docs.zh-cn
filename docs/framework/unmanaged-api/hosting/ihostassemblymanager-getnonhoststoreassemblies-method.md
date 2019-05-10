@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 750263f5620569ec1d51a4eebe7ea5d74bb84df2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760189"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650285"
 ---
-# <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a><span data-ttu-id="56be1-102">IHostAssemblyManager::GetNonHostStoreAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="56be1-102">IHostAssemblyManager::GetNonHostStoreAssemblies Method</span></span>
-<span data-ttu-id="56be1-103">获取到的接口指针[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)表示主机需要公共语言运行时 (CLR) 加载的程序集的列表。</span><span class="sxs-lookup"><span data-stu-id="56be1-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) that represents the list of assemblies that the host expects the common language runtime (CLR) to load.</span></span>  
+# <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a><span data-ttu-id="01ea9-102">IHostAssemblyManager::GetNonHostStoreAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="01ea9-102">IHostAssemblyManager::GetNonHostStoreAssemblies Method</span></span>
+<span data-ttu-id="01ea9-103">获取到的接口指针[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)表示主机需要公共语言运行时 (CLR) 加载的程序集的列表。</span><span class="sxs-lookup"><span data-stu-id="01ea9-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) that represents the list of assemblies that the host expects the common language runtime (CLR) to load.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56be1-104">语法</span><span class="sxs-lookup"><span data-stu-id="56be1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01ea9-104">语法</span><span class="sxs-lookup"><span data-stu-id="01ea9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNonHostStoreAssemblies (  
@@ -35,49 +35,49 @@ HRESULT GetNonHostStoreAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="56be1-105">参数</span><span class="sxs-lookup"><span data-stu-id="56be1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01ea9-105">参数</span><span class="sxs-lookup"><span data-stu-id="01ea9-105">Parameters</span></span>  
  `ppReferenceList`  
- <span data-ttu-id="56be1-106">[out]指向的地址的指针`ICLRAssemblyReferenceList`，其中包含一系列主机需要 CLR 加载的程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="56be1-106">[out] A pointer to the address of an `ICLRAssemblyReferenceList` that contains a list of references to assemblies that the host expects the CLR to load.</span></span>  
+ <span data-ttu-id="01ea9-106">[out]指向的地址的指针`ICLRAssemblyReferenceList`，其中包含一系列主机需要 CLR 加载的程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="01ea9-106">[out] A pointer to the address of an `ICLRAssemblyReferenceList` that contains a list of references to assemblies that the host expects the CLR to load.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="56be1-107">返回值</span><span class="sxs-lookup"><span data-stu-id="56be1-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="01ea9-107">返回值</span><span class="sxs-lookup"><span data-stu-id="01ea9-107">Return Value</span></span>  
   
-|<span data-ttu-id="56be1-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="56be1-108">HRESULT</span></span>|<span data-ttu-id="56be1-109">描述</span><span class="sxs-lookup"><span data-stu-id="56be1-109">Description</span></span>|  
+|<span data-ttu-id="01ea9-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="01ea9-108">HRESULT</span></span>|<span data-ttu-id="01ea9-109">描述</span><span class="sxs-lookup"><span data-stu-id="01ea9-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="56be1-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="56be1-110">S_OK</span></span>|<span data-ttu-id="56be1-111">`GetNonHostStoreAssemblies` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="56be1-111">`GetNonHostStoreAssemblies` returned successfully.</span></span>|  
-|<span data-ttu-id="56be1-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="56be1-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="56be1-113">CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="56be1-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="56be1-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="56be1-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="56be1-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="56be1-115">The call timed out.</span></span>|  
-|<span data-ttu-id="56be1-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="56be1-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="56be1-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="56be1-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="56be1-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="56be1-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="56be1-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="56be1-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="56be1-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="56be1-120">E_FAIL</span></span>|<span data-ttu-id="56be1-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="56be1-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="56be1-122">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="56be1-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="56be1-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="56be1-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="56be1-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="56be1-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="56be1-125">没有足够的内存已可用于创建针对所请求的引用列表`ICLRAssemblyReferenceList`。</span><span class="sxs-lookup"><span data-stu-id="56be1-125">Not enough memory was available to create the list of references for the requested `ICLRAssemblyReferenceList`.</span></span>|  
+|<span data-ttu-id="01ea9-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="01ea9-110">S_OK</span></span>|<span data-ttu-id="01ea9-111">`GetNonHostStoreAssemblies` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="01ea9-111">`GetNonHostStoreAssemblies` returned successfully.</span></span>|  
+|<span data-ttu-id="01ea9-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="01ea9-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="01ea9-113">CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="01ea9-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="01ea9-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="01ea9-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="01ea9-115">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="01ea9-115">The call timed out.</span></span>|  
+|<span data-ttu-id="01ea9-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="01ea9-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="01ea9-117">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="01ea9-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="01ea9-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="01ea9-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="01ea9-119">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="01ea9-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="01ea9-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="01ea9-120">E_FAIL</span></span>|<span data-ttu-id="01ea9-121">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="01ea9-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="01ea9-122">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="01ea9-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="01ea9-123">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="01ea9-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="01ea9-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="01ea9-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="01ea9-125">没有足够的内存已可用于创建针对所请求的引用列表`ICLRAssemblyReferenceList`。</span><span class="sxs-lookup"><span data-stu-id="01ea9-125">Not enough memory was available to create the list of references for the requested `ICLRAssemblyReferenceList`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="56be1-126">备注</span><span class="sxs-lookup"><span data-stu-id="56be1-126">Remarks</span></span>  
- <span data-ttu-id="56be1-127">CLR 使用以下指导原则集引用进行解析：</span><span class="sxs-lookup"><span data-stu-id="56be1-127">The CLR resolves references using the following set of guidelines:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01ea9-126">备注</span><span class="sxs-lookup"><span data-stu-id="01ea9-126">Remarks</span></span>  
+ <span data-ttu-id="01ea9-127">CLR 使用以下指导原则集引用进行解析：</span><span class="sxs-lookup"><span data-stu-id="01ea9-127">The CLR resolves references using the following set of guidelines:</span></span>  
   
-- <span data-ttu-id="56be1-128">首先，它会查询返回的程序集引用列表`GetNonHostStoreAssemblies`。</span><span class="sxs-lookup"><span data-stu-id="56be1-128">First, it consults the list of assembly references returned by `GetNonHostStoreAssemblies`.</span></span>  
+- <span data-ttu-id="01ea9-128">首先，它会查询返回的程序集引用列表`GetNonHostStoreAssemblies`。</span><span class="sxs-lookup"><span data-stu-id="01ea9-128">First, it consults the list of assembly references returned by `GetNonHostStoreAssemblies`.</span></span>  
   
-- <span data-ttu-id="56be1-129">如果该程序集出现在列表中，CLR 将绑定到其正常。</span><span class="sxs-lookup"><span data-stu-id="56be1-129">If the assembly appears in the list, the CLR binds to it normally.</span></span>  
+- <span data-ttu-id="01ea9-129">如果该程序集出现在列表中，CLR 将绑定到其正常。</span><span class="sxs-lookup"><span data-stu-id="01ea9-129">If the assembly appears in the list, the CLR binds to it normally.</span></span>  
   
-- <span data-ttu-id="56be1-130">如果程序集不会显示在列表中，并且主机具有提供的实现[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)，CLR 将调用[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)以允许主机提供要将绑定到程序集。</span><span class="sxs-lookup"><span data-stu-id="56be1-130">If the assembly does not appear in the list and the host has provided an implementation of [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), the CLR calls [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) to allow the host to supply the assembly to bind to.</span></span>  
+- <span data-ttu-id="01ea9-130">如果程序集不会显示在列表中，并且主机具有提供的实现[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)，CLR 将调用[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)以允许主机提供要将绑定到程序集。</span><span class="sxs-lookup"><span data-stu-id="01ea9-130">If the assembly does not appear in the list and the host has provided an implementation of [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), the CLR calls [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) to allow the host to supply the assembly to bind to.</span></span>  
   
-- <span data-ttu-id="56be1-131">否则，CLR 将无法将绑定到程序集。</span><span class="sxs-lookup"><span data-stu-id="56be1-131">Otherwise, the CLR fails to bind to the assembly.</span></span>  
+- <span data-ttu-id="01ea9-131">否则，CLR 将无法将绑定到程序集。</span><span class="sxs-lookup"><span data-stu-id="01ea9-131">Otherwise, the CLR fails to bind to the assembly.</span></span>  
   
- <span data-ttu-id="56be1-132">如果主机设置`ppReferenceList`为 null，则 CLR 首先探测全局程序集缓存中，并调用`ProvideAssembly`，然后探测应用程序基，若要解决的程序集引用。</span><span class="sxs-lookup"><span data-stu-id="56be1-132">If the host sets `ppReferenceList` to null, the CLR first probes the global assembly cache, calls `ProvideAssembly`, and then probes the application base to resolve an assembly reference.</span></span>  
+ <span data-ttu-id="01ea9-132">如果主机设置`ppReferenceList`为 null，则 CLR 首先探测全局程序集缓存中，并调用`ProvideAssembly`，然后探测应用程序基，若要解决的程序集引用。</span><span class="sxs-lookup"><span data-stu-id="01ea9-132">If the host sets `ppReferenceList` to null, the CLR first probes the global assembly cache, calls `ProvideAssembly`, and then probes the application base to resolve an assembly reference.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="56be1-133">CLR 调用时初始化，`GetNonHostStoreAssemblies`仅一次。</span><span class="sxs-lookup"><span data-stu-id="56be1-133">Upon initialization, the CLR calls `GetNonHostStoreAssemblies` only once.</span></span> <span data-ttu-id="56be1-134">不再次调用该方法。</span><span class="sxs-lookup"><span data-stu-id="56be1-134">The method is not called again.</span></span>  
+>  <span data-ttu-id="01ea9-133">CLR 调用时初始化，`GetNonHostStoreAssemblies`仅一次。</span><span class="sxs-lookup"><span data-stu-id="01ea9-133">Upon initialization, the CLR calls `GetNonHostStoreAssemblies` only once.</span></span> <span data-ttu-id="01ea9-134">不再次调用该方法。</span><span class="sxs-lookup"><span data-stu-id="01ea9-134">The method is not called again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56be1-135">要求</span><span class="sxs-lookup"><span data-stu-id="56be1-135">Requirements</span></span>  
- <span data-ttu-id="56be1-136">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56be1-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01ea9-135">要求</span><span class="sxs-lookup"><span data-stu-id="01ea9-135">Requirements</span></span>  
+ <span data-ttu-id="01ea9-136">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="01ea9-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56be1-137">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="56be1-137">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="01ea9-137">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="01ea9-137">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="56be1-138">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="56be1-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="01ea9-138">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="01ea9-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="56be1-139">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56be1-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="01ea9-139">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01ea9-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56be1-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="56be1-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01ea9-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="01ea9-140">See also</span></span>
 
-- [<span data-ttu-id="56be1-141">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="56be1-141">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="56be1-142">IHostAssemblyManager 接口</span><span class="sxs-lookup"><span data-stu-id="56be1-142">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [<span data-ttu-id="56be1-143">IHostAssemblyStore 接口</span><span class="sxs-lookup"><span data-stu-id="56be1-143">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="01ea9-141">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="01ea9-141">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="01ea9-142">IHostAssemblyManager 接口</span><span class="sxs-lookup"><span data-stu-id="01ea9-142">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="01ea9-143">IHostAssemblyStore 接口</span><span class="sxs-lookup"><span data-stu-id="01ea9-143">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
