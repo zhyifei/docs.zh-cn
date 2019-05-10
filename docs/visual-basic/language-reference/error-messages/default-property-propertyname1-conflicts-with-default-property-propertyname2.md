@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c964003217e7b96cf25288e2ae6ae6a2fb07a6c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651382"
 ---
-# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a><span data-ttu-id="6e7e8-102">默认属性\<propertyname1 > 与默认属性冲突\<propertyname2 > 中\<类名 >'，因此应声明为 Shadows</span><span class="sxs-lookup"><span data-stu-id="6e7e8-102">Default property '\<propertyname1>' conflicts with default property '\<propertyname2>' in '\<classname>' and so should be declared 'Shadows'</span></span>
-<span data-ttu-id="6e7e8-103">使用与基类中定义的属性相同的名称声明属性。</span><span class="sxs-lookup"><span data-stu-id="6e7e8-103">A property is declared with the same name as a property defined in the base class.</span></span> <span data-ttu-id="6e7e8-104">在这种情况下，在此类的属性应隐藏基类属性。</span><span class="sxs-lookup"><span data-stu-id="6e7e8-104">In this situation, the property in this class should shadow the base class property.</span></span>  
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a><span data-ttu-id="4e8d7-102">默认属性\<propertyname1 > 与默认属性冲突\<propertyname2 > 中\<类名 >'，因此应声明为 Shadows</span><span class="sxs-lookup"><span data-stu-id="4e8d7-102">Default property '\<propertyname1>' conflicts with default property '\<propertyname2>' in '\<classname>' and so should be declared 'Shadows'</span></span>
+<span data-ttu-id="4e8d7-103">使用与基类中定义的属性相同的名称声明属性。</span><span class="sxs-lookup"><span data-stu-id="4e8d7-103">A property is declared with the same name as a property defined in the base class.</span></span> <span data-ttu-id="4e8d7-104">在这种情况下，在此类的属性应隐藏基类属性。</span><span class="sxs-lookup"><span data-stu-id="4e8d7-104">In this situation, the property in this class should shadow the base class property.</span></span>  
   
- <span data-ttu-id="6e7e8-105">此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="6e7e8-105">This message is a warning.</span></span> <span data-ttu-id="6e7e8-106">默认假定`Shadows` 。</span><span class="sxs-lookup"><span data-stu-id="6e7e8-106">`Shadows` is assumed by default.</span></span> <span data-ttu-id="6e7e8-107">若要深入了解如何隐藏警告或将警告视为错误，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="6e7e8-107">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="4e8d7-105">此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="4e8d7-105">This message is a warning.</span></span> <span data-ttu-id="4e8d7-106">默认假定`Shadows` 。</span><span class="sxs-lookup"><span data-stu-id="4e8d7-106">`Shadows` is assumed by default.</span></span> <span data-ttu-id="4e8d7-107">若要深入了解如何隐藏警告或将警告视为错误，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="4e8d7-107">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="6e7e8-108">**错误 ID:** BC40007</span><span class="sxs-lookup"><span data-stu-id="6e7e8-108">**Error ID:** BC40007</span></span>  
+ <span data-ttu-id="4e8d7-108">**错误 ID:** BC40007</span><span class="sxs-lookup"><span data-stu-id="4e8d7-108">**Error ID:** BC40007</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6e7e8-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="6e7e8-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4e8d7-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="4e8d7-109">To correct this error</span></span>  
   
-- <span data-ttu-id="6e7e8-110">添加`Shadows`关键字为声明或将更改正在声明的属性的名称。</span><span class="sxs-lookup"><span data-stu-id="6e7e8-110">Add the `Shadows` keyword to the declaration, or change the name of the property being declared.</span></span>  
+- <span data-ttu-id="4e8d7-110">添加`Shadows`关键字为声明或将更改正在声明的属性的名称。</span><span class="sxs-lookup"><span data-stu-id="4e8d7-110">Add the `Shadows` keyword to the declaration, or change the name of the property being declared.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e7e8-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="6e7e8-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e8d7-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e8d7-111">See also</span></span>
 
-- [<span data-ttu-id="6e7e8-112">Shadows</span><span class="sxs-lookup"><span data-stu-id="6e7e8-112">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [<span data-ttu-id="6e7e8-113">在 Visual Basic 中隐藏</span><span class="sxs-lookup"><span data-stu-id="6e7e8-113">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [<span data-ttu-id="4e8d7-112">Shadows</span><span class="sxs-lookup"><span data-stu-id="4e8d7-112">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [<span data-ttu-id="4e8d7-113">在 Visual Basic 中隐藏</span><span class="sxs-lookup"><span data-stu-id="4e8d7-113">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

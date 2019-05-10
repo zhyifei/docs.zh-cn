@@ -4,37 +4,37 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a59faf1b6f845858e36efcabdf0758e41ad75dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935234"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619737"
 ---
-# <a name="bad-file-mode"></a><span data-ttu-id="a713d-102">错误的文件模式</span><span class="sxs-lookup"><span data-stu-id="a713d-102">Bad file mode</span></span>
-<span data-ttu-id="a713d-103">在操作文件内容中使用的语句必须是适用于在其中打开该文件的模式。</span><span class="sxs-lookup"><span data-stu-id="a713d-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="a713d-104">可能的原因包括：</span><span class="sxs-lookup"><span data-stu-id="a713d-104">Possible causes include:</span></span>  
+# <a name="bad-file-mode"></a><span data-ttu-id="f8b59-102">错误的文件模式</span><span class="sxs-lookup"><span data-stu-id="f8b59-102">Bad file mode</span></span>
+<span data-ttu-id="f8b59-103">在操作文件内容中使用的语句必须是适用于在其中打开该文件的模式。</span><span class="sxs-lookup"><span data-stu-id="f8b59-103">Statements used in manipulating file contents must be appropriate to the mode in which the file was opened.</span></span> <span data-ttu-id="f8b59-104">可能的原因包括：</span><span class="sxs-lookup"><span data-stu-id="f8b59-104">Possible causes include:</span></span>  
   
-- <span data-ttu-id="a713d-105">一个`FilePutObject`或`FileGetObject`语句指定的顺序文件。</span><span class="sxs-lookup"><span data-stu-id="a713d-105">A `FilePutObject` or `FileGetObject` statement specifies a sequential file.</span></span>  
+- <span data-ttu-id="f8b59-105">一个`FilePutObject`或`FileGetObject`语句指定的顺序文件。</span><span class="sxs-lookup"><span data-stu-id="f8b59-105">A `FilePutObject` or `FileGetObject` statement specifies a sequential file.</span></span>  
   
-- <span data-ttu-id="a713d-106">一个`Print`语句指定为访问模式而不打开的文件`Output`或`Append`。</span><span class="sxs-lookup"><span data-stu-id="a713d-106">A `Print` statement specifies a file opened for an access mode other than `Output` or `Append`.</span></span>  
+- <span data-ttu-id="f8b59-106">一个`Print`语句指定为访问模式而不打开的文件`Output`或`Append`。</span><span class="sxs-lookup"><span data-stu-id="f8b59-106">A `Print` statement specifies a file opened for an access mode other than `Output` or `Append`.</span></span>  
   
-- <span data-ttu-id="a713d-107">`Input`语句指定为访问模式而不打开的文件 `Input`</span><span class="sxs-lookup"><span data-stu-id="a713d-107">An `Input` statement specifies a file opened for an access mode other than `Input`</span></span>  
+- <span data-ttu-id="f8b59-107">`Input`语句指定为访问模式而不打开的文件 `Input`</span><span class="sxs-lookup"><span data-stu-id="f8b59-107">An `Input` statement specifies a file opened for an access mode other than `Input`</span></span>  
   
-- <span data-ttu-id="a713d-108">试图写入只读文件。</span><span class="sxs-lookup"><span data-stu-id="a713d-108">An attempt to write to a read-only file.</span></span>  
+- <span data-ttu-id="f8b59-108">试图写入只读文件。</span><span class="sxs-lookup"><span data-stu-id="f8b59-108">An attempt to write to a read-only file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a713d-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="a713d-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f8b59-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="f8b59-109">To correct this error</span></span>  
   
-- <span data-ttu-id="a713d-110">请确保`FilePutObject`并`FileGetObject`仅指文件供`Random`或`Binary`访问。</span><span class="sxs-lookup"><span data-stu-id="a713d-110">Make sure `FilePutObject` and `FileGetObject` are only referring to files open for `Random` or `Binary` access.</span></span>  
+- <span data-ttu-id="f8b59-110">请确保`FilePutObject`并`FileGetObject`仅指文件供`Random`或`Binary`访问。</span><span class="sxs-lookup"><span data-stu-id="f8b59-110">Make sure `FilePutObject` and `FileGetObject` are only referring to files open for `Random` or `Binary` access.</span></span>  
   
-- <span data-ttu-id="a713d-111">请确保`Print`指定为打开的文件`Output`或`Append`访问模式。</span><span class="sxs-lookup"><span data-stu-id="a713d-111">Make sure `Print` specifies a file opened for either `Output` or `Append` access mode.</span></span> <span data-ttu-id="a713d-112">如果不是，使用不同的语句将数据放在文件中，或重新打开相应的模式中的文件。</span><span class="sxs-lookup"><span data-stu-id="a713d-112">If not, use a different statement to place data in the file, or reopen the file in an appropriate mode.</span></span>  
+- <span data-ttu-id="f8b59-111">请确保`Print`指定为打开的文件`Output`或`Append`访问模式。</span><span class="sxs-lookup"><span data-stu-id="f8b59-111">Make sure `Print` specifies a file opened for either `Output` or `Append` access mode.</span></span> <span data-ttu-id="f8b59-112">如果不是，使用不同的语句将数据放在文件中，或重新打开相应的模式中的文件。</span><span class="sxs-lookup"><span data-stu-id="f8b59-112">If not, use a different statement to place data in the file, or reopen the file in an appropriate mode.</span></span>  
   
-- <span data-ttu-id="a713d-113">请确保`Input`指定为打开的文件`Input`。</span><span class="sxs-lookup"><span data-stu-id="a713d-113">Make sure `Input` specifies a file opened for `Input`.</span></span> <span data-ttu-id="a713d-114">如果没有，请使用不同的语句将数据放在文件或重新打开相应的模式中的文件。</span><span class="sxs-lookup"><span data-stu-id="a713d-114">If not, use a different statement to place data in the file or reopen the file in an appropriate mode.</span></span>  
+- <span data-ttu-id="f8b59-113">请确保`Input`指定为打开的文件`Input`。</span><span class="sxs-lookup"><span data-stu-id="f8b59-113">Make sure `Input` specifies a file opened for `Input`.</span></span> <span data-ttu-id="f8b59-114">如果没有，请使用不同的语句将数据放在文件或重新打开相应的模式中的文件。</span><span class="sxs-lookup"><span data-stu-id="f8b59-114">If not, use a different statement to place data in the file or reopen the file in an appropriate mode.</span></span>  
   
-- <span data-ttu-id="a713d-115">如果写入只读文件时，将该文件的读/写状态更改或不尝试对其进行写入。</span><span class="sxs-lookup"><span data-stu-id="a713d-115">If you are writing to a read-only file, change the read/write status of the file or do not try to write to it.</span></span>  
+- <span data-ttu-id="f8b59-115">如果写入只读文件时，将该文件的读/写状态更改或不尝试对其进行写入。</span><span class="sxs-lookup"><span data-stu-id="f8b59-115">If you are writing to a read-only file, change the read/write status of the file or do not try to write to it.</span></span>  
   
-- <span data-ttu-id="a713d-116">使用 `My.Computer.FileSystem` 对象中的可用功能。</span><span class="sxs-lookup"><span data-stu-id="a713d-116">Use the functionality available in the `My.Computer.FileSystem` object.</span></span>  
+- <span data-ttu-id="f8b59-116">使用 `My.Computer.FileSystem` 对象中的可用功能。</span><span class="sxs-lookup"><span data-stu-id="f8b59-116">Use the functionality available in the `My.Computer.FileSystem` object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a713d-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="a713d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8b59-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8b59-117">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileSystem>
-- [<span data-ttu-id="a713d-118">排除故障：读取和写入文本文件</span><span class="sxs-lookup"><span data-stu-id="a713d-118">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [<span data-ttu-id="f8b59-118">排除故障：读取和写入文本文件</span><span class="sxs-lookup"><span data-stu-id="f8b59-118">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
