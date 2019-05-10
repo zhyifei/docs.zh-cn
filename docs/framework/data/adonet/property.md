@@ -2,12 +2,12 @@
 title: 属性
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97bb41305bd9b736fd67b51d77ee15ad9efa3f29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879031"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645237"
 ---
 # <a name="property"></a>属性
 *属性*是的基本构建基块[实体类型](../../../../docs/framework/data/adonet/entity-type.md)并[复杂类型](../../../../docs/framework/data/adonet/complex-type.md)。 属性定义了实体类型实例或复杂类型实例要包含的数据的形状和特征。 概念模型中的属性类似于为类定义的属性。 正如类的属性定义类的形状和携带有关对象的信息一样，概念模型中的属性也定义实体类型的形状和携带有关实体类型实例的信息。  
@@ -17,11 +17,11 @@ ms.locfileid: "61879031"
   
  属性定义包含以下信息：  
   
--   属性名。 （必需）  
+- 属性名。 （必需）  
   
--   属性类型。 （必需）  
+- 属性类型。 （必需）  
   
--   一套[方面](../../../../docs/framework/data/adonet/facet.md)。 （可选）  
+- 一套[方面](../../../../docs/framework/data/adonet/facet.md)。 （可选）  
   
  属性可以包含基元数据（例如字符串、整数或布尔值）或结构化数据（例如复杂类型）。 基元类型的属性也称为标量属性。 有关详细信息，请参阅[实体数据模型：基元数据类型](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。  
   

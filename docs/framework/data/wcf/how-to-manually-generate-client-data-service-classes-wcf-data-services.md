@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: d197088f94614aac007c0adc310500ae4609f757
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 86cf9a622f244fd6ea13113310eb05f65da1463f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788708"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645614"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>如何：手动生成客户端数据服务类 （WCF 数据服务）
 WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成客户端数据服务类**添加服务引用**对话框以将对数据服务的引用添加到 Visual Studio 项目中。 有关详细信息，请参阅[如何：添加数据服务引用](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。 此外，你也可以使用代码生成工具 `DataSvcUtil.exe` 手动生成相同的客户端数据服务类。 此工具，包括与 WCF Data Services，则从数据服务定义生成.NET Framework 类。 还可以使用此工具根据概念模型 (.csdl) 文件和表示 Visual Studio 项目中的实体框架模型的 .edmx 文件生成数据服务类。

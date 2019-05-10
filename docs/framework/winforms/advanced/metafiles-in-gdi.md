@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f46c24b699aa49db2bc4b8467ce96a125602acec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010017"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645745"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+ 中的图元文件
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了<xref:System.Drawing.Imaging.Metafile>类，使您可以记录和显示图元文件。 图元文件，也称为矢量图像，是存储为一系列绘图命令和设置的映像。 在中记录的命令和设置<xref:System.Drawing.Imaging.Metafile>对象可以存储在内存中或保存到文件或流。  

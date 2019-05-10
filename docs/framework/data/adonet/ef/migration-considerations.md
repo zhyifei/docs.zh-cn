@@ -2,12 +2,12 @@
 title: 迁移注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6453e0960af5a91e5abc40d1ce6002b7733175dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641263"
 ---
 # <a name="migration-considerations-entity-framework"></a>迁移注意事项（实体框架）
 现有的应用程序可以从多方面受益于 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 实体框架。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关使用的优点的详细信息[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)并[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  

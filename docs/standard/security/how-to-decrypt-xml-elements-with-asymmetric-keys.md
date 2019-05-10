@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 303c7db984b682d24a8f0e00160eb2d0827a84e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c1891bf91095a5c09257b795c66e96dbc2bf69d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795143"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653887"
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>如何：用非对称密钥对 XML 元素进行解密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类对 XML 文档内的元素进行加密和解密。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅 World Wide Web 联合会 (W3C) 建议[XML 签名语法和处理](https://www.w3.org/TR/xmldsig-core/)。  

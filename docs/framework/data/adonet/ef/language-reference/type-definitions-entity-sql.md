@@ -2,12 +2,12 @@
 title: 类型定义 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641400"
 ---
 # <a name="type-definitions-entity-sql"></a>类型定义 (Entity SQL)
 类型定义用在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 内联函数的声明语句中。  
@@ -19,25 +19,25 @@ ms.locfileid: "61879549"
   
  类型定义可以为以下任一情况：  
   
--   标识符的类型（例如，“Int32”或“AdventureWorks.Order”）。  
+- 标识符的类型（例如，“Int32”或“AdventureWorks.Order”）。  
   
--   关键字 `COLLECTION` 后跟放在括号中的另一个类型定义（例如，“Collection(AdventureWorks.Order)”）。  
+- 关键字 `COLLECTION` 后跟放在括号中的另一个类型定义（例如，“Collection(AdventureWorks.Order)”）。  
   
--   关键字 ROW 后跟放在括号中的属性定义列表（例如，“Row(x AdventureWorks.Order)”）。 属性定义具有格式，如"`identifier type_definition`， `identifier type_definition`，..."。  
+- 关键字 ROW 后跟放在括号中的属性定义列表（例如，“Row(x AdventureWorks.Order)”）。 属性定义具有格式，如"`identifier type_definition`， `identifier type_definition`，..."。  
   
--   关键字 REF 后跟放在括号中的标识符类型（例如，“Ref(AdventureWorks.Order)”）。 REF 类型定义运算符要求将实体类型作为自变量。 您不能指定基元类型作为参数。  
+- 关键字 REF 后跟放在括号中的标识符类型（例如，“Ref(AdventureWorks.Order)”）。 REF 类型定义运算符要求将实体类型作为自变量。 您不能指定基元类型作为参数。  
   
  还可以嵌套类型定义（例如，“Collection(Row(x Ref(AdventureWorks.Order)))”）。  
   
  类型定义选项为：  
   
--   `IdentifierName supported_type`或  
+- `IdentifierName supported_type`或  
   
--   `IdentifierName` COLLECTION(`type_definition`) 或  
+- `IdentifierName` COLLECTION(`type_definition`) 或  
   
--   `IdentifierName` ROW(`property_definition`) 或  
+- `IdentifierName` ROW(`property_definition`) 或  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+- `IdentifierName` REF(`supported_entity_type`)  
   
  属性定义选项为 `IdentifierName type_definition`。  
   
