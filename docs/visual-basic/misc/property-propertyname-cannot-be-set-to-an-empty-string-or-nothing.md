@@ -2,22 +2,22 @@
 title: 属性<propertyname>不能设置为空字符串或 Nothing
 ms.date: 07/20/2015
 ms.assetid: c4f6ceb2-cee0-4e79-9cc6-cb20276d24f8
-ms.openlocfilehash: e01b1ea32a62a8da4df2fd0ae120f32fc58c0cb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 146d1d9acf3f6ab0bb0f4cba45567a2901616e5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592165"
 ---
-# <a name="property-propertyname-cannot-be-set-to-an-empty-string-or-nothing"></a><span data-ttu-id="95955-102">属性\<属性名称 > 不能设置为空字符串或 Nothing</span><span class="sxs-lookup"><span data-stu-id="95955-102">Property \<propertyname> cannot be set to an empty string or Nothing</span></span>
-<span data-ttu-id="95955-103">该属性要求使用除空字符串 ("") 或 `Nothing`以外的值。</span><span class="sxs-lookup"><span data-stu-id="95955-103">The property requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="95955-104">如果计算值时有误，则可能会出现此结果。</span><span class="sxs-lookup"><span data-stu-id="95955-104">This may be a result of incorrectly calculating the value.</span></span>  
+# <a name="property-propertyname-cannot-be-set-to-an-empty-string-or-nothing"></a><span data-ttu-id="271aa-102">属性\<属性名称 > 不能设置为空字符串或 Nothing</span><span class="sxs-lookup"><span data-stu-id="271aa-102">Property \<propertyname> cannot be set to an empty string or Nothing</span></span>
+<span data-ttu-id="271aa-103">该属性要求使用除空字符串 ("") 或 `Nothing`以外的值。</span><span class="sxs-lookup"><span data-stu-id="271aa-103">The property requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="271aa-104">如果计算值时有误，则可能会出现此结果。</span><span class="sxs-lookup"><span data-stu-id="271aa-104">This may be a result of incorrectly calculating the value.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="95955-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="95955-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="271aa-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="271aa-105">To correct this error</span></span>  
   
-- <span data-ttu-id="95955-106">提供一个有效值。</span><span class="sxs-lookup"><span data-stu-id="95955-106">Supply a valid value.</span></span>  
+- <span data-ttu-id="271aa-106">提供一个有效值。</span><span class="sxs-lookup"><span data-stu-id="271aa-106">Supply a valid value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95955-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="95955-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="271aa-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="271aa-107">See also</span></span>
 
-- [<span data-ttu-id="95955-108">错误类型</span><span class="sxs-lookup"><span data-stu-id="95955-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
-- [<span data-ttu-id="95955-109">Nothing</span><span class="sxs-lookup"><span data-stu-id="95955-109">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="271aa-108">错误类型</span><span class="sxs-lookup"><span data-stu-id="271aa-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="271aa-109">Nothing</span><span class="sxs-lookup"><span data-stu-id="271aa-109">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)
 - <xref:System.NullReferenceException>

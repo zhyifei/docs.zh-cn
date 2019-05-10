@@ -2,27 +2,27 @@
 title: 映射嵌套架构元素之间的隐式关系
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586817"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="83f04-102">映射嵌套架构元素之间的隐式关系</span><span class="sxs-lookup"><span data-stu-id="83f04-102">Map Implicit Relations Between Nested Schema Elements</span></span>
-<span data-ttu-id="83f04-103">XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。</span><span class="sxs-lookup"><span data-stu-id="83f04-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="83f04-104">在这种情况下，映射过程将应用默认映射并在 <xref:System.Data.DataSet> 中创建以下内容：</span><span class="sxs-lookup"><span data-stu-id="83f04-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="6f800-102">映射嵌套架构元素之间的隐式关系</span><span class="sxs-lookup"><span data-stu-id="6f800-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="6f800-103">XML 架构定义语言 (XSD) 架构可以具有相互嵌套的复杂类型。</span><span class="sxs-lookup"><span data-stu-id="6f800-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="6f800-104">在这种情况下，映射过程将应用默认映射并在 <xref:System.Data.DataSet> 中创建以下内容：</span><span class="sxs-lookup"><span data-stu-id="6f800-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   <span data-ttu-id="83f04-105">为每个复杂类型（父和子）创建一个表。</span><span class="sxs-lookup"><span data-stu-id="83f04-105">One table for each of the complex types (parent and child).</span></span>  
+- <span data-ttu-id="6f800-105">为每个复杂类型（父和子）创建一个表。</span><span class="sxs-lookup"><span data-stu-id="6f800-105">One table for each of the complex types (parent and child).</span></span>  
   
--   <span data-ttu-id="83f04-106">一个附加主键列每个表定义的父级上不存在任何唯一约束，如果名为*TableName*id （_i) 其中*TableName*是父表的名称。</span><span class="sxs-lookup"><span data-stu-id="83f04-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
+- <span data-ttu-id="6f800-106">一个附加主键列每个表定义的父级上不存在任何唯一约束，如果名为*TableName*id （_i) 其中*TableName*是父表的名称。</span><span class="sxs-lookup"><span data-stu-id="6f800-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
--   <span data-ttu-id="83f04-107">为主键将附加列标识父表上的主键约束 (通过设置**IsPrimaryKey**属性设置为**True**)。</span><span class="sxs-lookup"><span data-stu-id="83f04-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="83f04-108">该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3。</span><span class="sxs-lookup"><span data-stu-id="83f04-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="83f04-109">例如，第一个约束的默认名称为 Constraint1。</span><span class="sxs-lookup"><span data-stu-id="83f04-109">For example, the default name for the first constraint is Constraint1.</span></span>  
+- <span data-ttu-id="6f800-107">为主键将附加列标识父表上的主键约束 (通过设置**IsPrimaryKey**属性设置为**True**)。</span><span class="sxs-lookup"><span data-stu-id="6f800-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="6f800-108">该约束以 Constraint\# 的形式来命名，其中 \# 为 1、2、3。</span><span class="sxs-lookup"><span data-stu-id="6f800-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="6f800-109">例如，第一个约束的默认名称为 Constraint1。</span><span class="sxs-lookup"><span data-stu-id="6f800-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
--   <span data-ttu-id="83f04-110">在子表上创建外键约束，该约束将附加列标识为引用父表主键的外键。</span><span class="sxs-lookup"><span data-stu-id="83f04-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="83f04-111">命名约束*ParentTable_ChildTable*其中*ParentTable*是父表的名称并*ChildTable*是子表的名称。</span><span class="sxs-lookup"><span data-stu-id="83f04-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
+- <span data-ttu-id="6f800-110">在子表上创建外键约束，该约束将附加列标识为引用父表主键的外键。</span><span class="sxs-lookup"><span data-stu-id="6f800-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="6f800-111">命名约束*ParentTable_ChildTable*其中*ParentTable*是父表的名称并*ChildTable*是子表的名称。</span><span class="sxs-lookup"><span data-stu-id="6f800-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
--   <span data-ttu-id="83f04-112">在父表和子表之间创建数据关系。</span><span class="sxs-lookup"><span data-stu-id="83f04-112">A data relation between the parent and child tables.</span></span>  
+- <span data-ttu-id="6f800-112">在父表和子表之间创建数据关系。</span><span class="sxs-lookup"><span data-stu-id="6f800-112">A data relation between the parent and child tables.</span></span>  
   
- <span data-ttu-id="83f04-113">下面的示例演示一个架构位置**OrderDetail**是子元素的**顺序**。</span><span class="sxs-lookup"><span data-stu-id="83f04-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
+ <span data-ttu-id="6f800-113">下面的示例演示一个架构位置**OrderDetail**是子元素的**顺序**。</span><span class="sxs-lookup"><span data-stu-id="6f800-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ ms.locfileid: "61879588"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="83f04-114">XML 架构映射过程中创建以下**数据集**:</span><span class="sxs-lookup"><span data-stu-id="83f04-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
+ <span data-ttu-id="6f800-114">XML 架构映射过程中创建以下**数据集**:</span><span class="sxs-lookup"><span data-stu-id="6f800-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
--   <span data-ttu-id="83f04-115">**顺序**和一个**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="83f04-115">An **Order** and an **OrderDetail** table.</span></span>  
+- <span data-ttu-id="6f800-115">**顺序**和一个**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="6f800-115">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   <span data-ttu-id="83f04-116">Unique 约束**顺序**表。</span><span class="sxs-lookup"><span data-stu-id="83f04-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="83f04-117">请注意， **IsPrimaryKey**属性设置为**True**。</span><span class="sxs-lookup"><span data-stu-id="83f04-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
+- <span data-ttu-id="6f800-116">Unique 约束**顺序**表。</span><span class="sxs-lookup"><span data-stu-id="6f800-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="6f800-117">请注意， **IsPrimaryKey**属性设置为**True**。</span><span class="sxs-lookup"><span data-stu-id="6f800-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ ms.locfileid: "61879588"
     IsPrimaryKey: True  
     ```  
   
--   <span data-ttu-id="83f04-118">上的外键约束**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="83f04-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
+- <span data-ttu-id="6f800-118">上的外键约束**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="6f800-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ ms.locfileid: "61879588"
     RelatedColumns: Order_Id   
     ```  
   
--   <span data-ttu-id="83f04-119">之间的关系**顺序**并**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="83f04-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="83f04-120">**嵌套**为此关系的属性设置为**True**因为**顺序**并**OrderDetail**元素都嵌套在架构.</span><span class="sxs-lookup"><span data-stu-id="83f04-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+- <span data-ttu-id="6f800-119">之间的关系**顺序**并**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="6f800-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="6f800-120">**嵌套**为此关系的属性设置为**True**因为**顺序**并**OrderDetail**元素都嵌套在架构.</span><span class="sxs-lookup"><span data-stu-id="6f800-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -97,8 +97,8 @@ ms.locfileid: "61879588"
     Nested: True  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="83f04-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="83f04-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f800-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="6f800-121">See also</span></span>
 
-- [<span data-ttu-id="83f04-122">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="83f04-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="83f04-123">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="83f04-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="83f04-124">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="83f04-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="6f800-122">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="6f800-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="6f800-123">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="6f800-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="6f800-124">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="6f800-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

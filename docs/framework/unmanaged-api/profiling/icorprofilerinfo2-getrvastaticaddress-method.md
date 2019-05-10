@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3749c600d54671071efbec8322e050cde446c27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8c2d1aee741ac54e861f7068d883731745ca7788
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791620"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584312"
 ---
-# <a name="icorprofilerinfo2getrvastaticaddress-method"></a><span data-ttu-id="e5798-102">ICorProfilerInfo2::GetRVAStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="e5798-102">ICorProfilerInfo2::GetRVAStaticAddress Method</span></span>
-<span data-ttu-id="e5798-103">获取指定的相对虚拟地址 (RVA) 的静态字段的地址。</span><span class="sxs-lookup"><span data-stu-id="e5798-103">Gets the address of the specified relative virtual address (RVA) static field.</span></span>  
+# <a name="icorprofilerinfo2getrvastaticaddress-method"></a><span data-ttu-id="34683-102">ICorProfilerInfo2::GetRVAStaticAddress 方法</span><span class="sxs-lookup"><span data-stu-id="34683-102">ICorProfilerInfo2::GetRVAStaticAddress Method</span></span>
+<span data-ttu-id="34683-103">获取指定的相对虚拟地址 (RVA) 的静态字段的地址。</span><span class="sxs-lookup"><span data-stu-id="34683-103">Gets the address of the specified relative virtual address (RVA) static field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5798-104">语法</span><span class="sxs-lookup"><span data-stu-id="e5798-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34683-104">语法</span><span class="sxs-lookup"><span data-stu-id="34683-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRVAStaticAddress(  
@@ -36,35 +36,35 @@ HRESULT GetRVAStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e5798-105">参数</span><span class="sxs-lookup"><span data-stu-id="e5798-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="34683-105">参数</span><span class="sxs-lookup"><span data-stu-id="34683-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="e5798-106">[in]包含请求的 RVA 静态字段的类的 ID。</span><span class="sxs-lookup"><span data-stu-id="e5798-106">[in] The ID of the class that contains the requested RVA-static field.</span></span>  
+ <span data-ttu-id="34683-106">[in]包含请求的 RVA 静态字段的类的 ID。</span><span class="sxs-lookup"><span data-stu-id="34683-106">[in] The ID of the class that contains the requested RVA-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="e5798-107">[in]请求的 RVA 静态字段的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="e5798-107">[in] Metadata token for the requested RVA-static field.</span></span>  
+ <span data-ttu-id="34683-107">[in]请求的 RVA 静态字段的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="34683-107">[in] Metadata token for the requested RVA-static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="e5798-108">[out]指向 RVA 静态字段的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="e5798-108">[out] A pointer to the address of the RVA-static field.</span></span>  
+ <span data-ttu-id="34683-108">[out]指向 RVA 静态字段的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="34683-108">[out] A pointer to the address of the RVA-static field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e5798-109">备注</span><span class="sxs-lookup"><span data-stu-id="e5798-109">Remarks</span></span>  
- <span data-ttu-id="e5798-110">`GetRVAStaticAddress`方法可能会返回以下值之一：</span><span class="sxs-lookup"><span data-stu-id="e5798-110">The `GetRVAStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34683-109">备注</span><span class="sxs-lookup"><span data-stu-id="34683-109">Remarks</span></span>  
+ <span data-ttu-id="34683-110">`GetRVAStaticAddress`方法可能会返回以下值之一：</span><span class="sxs-lookup"><span data-stu-id="34683-110">The `GetRVAStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="e5798-111">如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="e5798-111">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="34683-111">如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="34683-111">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="e5798-112">可能在垃圾回收堆的对象的地址。</span><span class="sxs-lookup"><span data-stu-id="e5798-112">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="e5798-113">使垃圾回收后，探查器不应假定它们是有效，则这些地址可能会回收后无效。</span><span class="sxs-lookup"><span data-stu-id="e5798-113">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="34683-112">可能在垃圾回收堆的对象的地址。</span><span class="sxs-lookup"><span data-stu-id="34683-112">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="34683-113">使垃圾回收后，探查器不应假定它们是有效，则这些地址可能会回收后无效。</span><span class="sxs-lookup"><span data-stu-id="34683-113">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="e5798-114">类的类构造函数完成之前，`GetRVAStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，虽然一些静态字段可能已初始化，并且可能根垃圾回收对象。</span><span class="sxs-lookup"><span data-stu-id="e5798-114">Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="34683-114">类的类构造函数完成之前，`GetRVAStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，虽然一些静态字段可能已初始化，并且可能根垃圾回收对象。</span><span class="sxs-lookup"><span data-stu-id="34683-114">Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5798-115">要求</span><span class="sxs-lookup"><span data-stu-id="e5798-115">Requirements</span></span>  
- <span data-ttu-id="e5798-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e5798-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34683-115">要求</span><span class="sxs-lookup"><span data-stu-id="34683-115">Requirements</span></span>  
+ <span data-ttu-id="34683-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="34683-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5798-117">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e5798-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="34683-117">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="34683-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e5798-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5798-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34683-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34683-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e5798-119">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5798-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="34683-119">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34683-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5798-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5798-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34683-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="34683-120">See also</span></span>
 
-- [<span data-ttu-id="e5798-121">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="e5798-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="e5798-122">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="e5798-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="34683-121">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="34683-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="34683-122">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="34683-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
