@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-ms.openlocfilehash: c8c6cbf9682a1b46d44edb94dea8a092e74216e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 941c8200207a13c88b8deaf828b353b7c17c4461
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946479"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610889"
 ---
-# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="1055f-102">文件\<文件名 > 已打开，因此无法删除</span><span class="sxs-lookup"><span data-stu-id="1055f-102">File '\<filename>' cannot be deleted because it is open</span></span>
-<span data-ttu-id="1055f-103">正在尝试删除打开的文件。</span><span class="sxs-lookup"><span data-stu-id="1055f-103">A deletion is being attempted on an open file.</span></span>  
+# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="905ca-102">文件\<文件名 > 已打开，因此无法删除</span><span class="sxs-lookup"><span data-stu-id="905ca-102">File '\<filename>' cannot be deleted because it is open</span></span>
+<span data-ttu-id="905ca-103">正在尝试删除打开的文件。</span><span class="sxs-lookup"><span data-stu-id="905ca-103">A deletion is being attempted on an open file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1055f-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="1055f-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="905ca-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="905ca-104">To correct this error</span></span>  
   
-- <span data-ttu-id="1055f-105">在删除之前关闭该文件。</span><span class="sxs-lookup"><span data-stu-id="1055f-105">Close the file before deleting it.</span></span>  
+- <span data-ttu-id="905ca-105">在删除之前关闭该文件。</span><span class="sxs-lookup"><span data-stu-id="905ca-105">Close the file before deleting it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1055f-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="1055f-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="905ca-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="905ca-106">See also</span></span>
 
-- [<span data-ttu-id="1055f-107">My.Computer.FileSystem.DeleteFile</span><span class="sxs-lookup"><span data-stu-id="1055f-107">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
-- [<span data-ttu-id="1055f-108">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="1055f-108">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="905ca-107">My.Computer.FileSystem.DeleteFile</span><span class="sxs-lookup"><span data-stu-id="905ca-107">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
+- [<span data-ttu-id="905ca-108">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="905ca-108">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
