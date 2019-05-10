@@ -6,31 +6,31 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26511c577bf06b016dfc69cedc7fce2bafb35f32
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921714"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645382"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>如何：使用系统画笔绘制区域
 <xref:System.Windows.SystemColors>类提供了访问系统画笔和颜色，如<xref:System.Windows.SystemColors.ControlBrush%2A>， <xref:System.Windows.SystemColors.ControlBrushKey%2A>，和<xref:System.Windows.SystemColors.DesktopBrush%2A>。 系统画笔是<xref:System.Windows.Media.SolidColorBrush>对象，它使用指定的系统颜色绘制区域。 系统画笔总是生成纯色填充，它不能用于创建渐变。  
   
  可以将系统画笔用作静态资源，也可以用作动态资源。 如果希望在应用程序运行期间画笔自动进行更新（当用户更改系统画笔时），请使用动态资源；否则请使用静态资源。 SystemColors 类包含大量静态属性，这些属性严格遵循命名约定：  
   
--   *\<SystemColor>* Brush  
+- *\<SystemColor>* Brush  
   
      获取对的静态引用<xref:System.Windows.Media.SolidColorBrush>指定的系统颜色。  
   
--   *\<SystemColor>* BrushKey  
+- *\<SystemColor>* BrushKey  
   
      获取到的动态引用<xref:System.Windows.Media.SolidColorBrush>指定的系统颜色。  
   
--   *\<SystemColor>* Color  
+- *\<SystemColor>* Color  
   
      获取对的静态引用<xref:System.Windows.Media.Color>指定的系统颜色的结构。  
   
--   *\<SystemColor>* ColorKey  
+- *\<SystemColor>* ColorKey  
   
      获取到的动态引用<xref:System.Windows.Media.Color>指定的系统颜色的结构。  
   

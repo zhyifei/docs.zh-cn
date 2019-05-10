@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: 8fb78f3c14708c79f1910e202287c25a3b2213b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 92cc6d732b59617a6043bd71a9549649ff1ad356
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803046"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662046"
 ---
 # <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>Get 访问器属性的\<属性名称 > 不可访问
 语句试图检索属性的值不包含属性的访问权限时`Get`过程。  

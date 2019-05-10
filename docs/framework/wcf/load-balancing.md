@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3b24ef892e1fe3dd28fee4ce8fa44f7373c7c01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921935"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645481"
 ---
 # <a name="load-balancing"></a>负载平衡
 若要增加 Windows Communication Foundation (WCF) 应用程序的容量的一种方法是通过将它们部署到负载平衡服务器场中扩展它们。 WCF 应用程序可以使用标准负载均衡技术，包括如 Windows 网络负载平衡的软件负载均衡器，以及基于硬件的负载平衡设备达到负载平衡。  

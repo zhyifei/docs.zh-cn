@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23f3758527b787551ad83cbd4e19076b788c9dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864489"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649698"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的逻辑运算符和位运算符
 逻辑运算符比较`Boolean`表达式，并返回`Boolean`结果。 `And`， `Or`， `AndAlso`， `OrElse`，并`Xor`运算符是*二进制*因为它们采用两个操作数，而`Not`运算符是*一元*因为它采用单个操作数。 这些运算符的一些可以执行对整数值的按位逻辑运算。  
@@ -72,13 +72,13 @@ ms.locfileid: "61864489"
   
  前面的示例中设置的值`x`为 1。 由于以下原因发生这种情况：  
   
--   值被视为二进制文件：  
+- 值被视为二进制文件：  
   
      以二进制形式的 3 = 011  
   
      以二进制形式的 5 = 101  
   
--   `And`运算符将二进制表示形式，一次的一个二进制位置 （位） 进行比较。 如果给定位置处的两个位都为 1，1 位于该位置在结果中。 如果任一位为 0，0 位于该位置在结果中。 在前面的示例这样，如下所示：  
+- `And`运算符将二进制表示形式，一次的一个二进制位置 （位） 进行比较。 如果给定位置处的两个位都为 1，1 位于该位置在结果中。 如果任一位为 0，0 位于该位置在结果中。 在前面的示例这样，如下所示：  
   
      011 (3 以二进制形式)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "61864489"
   
      001 （以二进制形式，结果）  
   
--   结果将被视为小数。 001 的值是 1 的二进制表示形式，因此`x`= 1。  
+- 结果将被视为小数。 001 的值是 1 的二进制表示形式，因此`x`= 1。  
   
  按位`Or`操作类似，只是一个 1 分配给结果位，如果一个或两个比较位为 1。 `Xor` 如果恰好有一个比较位 （不能同时） 为 1，1 赋给结果位。 `Not` 采用单个操作数和反转所有位，包括符号位，并将该值分配到的结果。 这意味着，对于已签名的正数和负数`Not`始终返回一个负值，而对于负数，`Not`始终返回一个值为正或零值。  
   

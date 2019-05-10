@@ -2,12 +2,12 @@
 title: XDocument 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-ms.openlocfilehash: f9a531b9e90a8d6511dd0a2c6fc3131c9bfe1e89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 135d775a914bc6a440c639628281aa313cb85636
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907811"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639187"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument 类概述 (Visual Basic)
 本主题介绍 <xref:System.Xml.Linq.XDocument> 类。  
@@ -22,15 +22,15 @@ ms.locfileid: "61907811"
 ## <a name="components-of-xdocument"></a>Xdocument 的组件  
  <xref:System.Xml.Linq.XDocument> 可以包含以下元素：  
   
--   一个 <xref:System.Xml.Linq.XDeclaration> 对象。 <xref:System.Xml.Linq.XDeclaration> 使您能够指定 XML 声明的相关部分：XML 版本、文档的编码以及 XML 文档是否是独立的。  
+- 一个 <xref:System.Xml.Linq.XDeclaration> 对象。 <xref:System.Xml.Linq.XDeclaration> 使您能够指定 XML 声明的相关部分：XML 版本、文档的编码以及 XML 文档是否是独立的。  
   
--   一个 <xref:System.Xml.Linq.XElement> 对象。 这是 XML 文档的根节点。  
+- 一个 <xref:System.Xml.Linq.XElement> 对象。 这是 XML 文档的根节点。  
   
--   任意数目的 <xref:System.Xml.Linq.XProcessingInstruction> 对象。 处理指令将信息传递给处理 XML 的应用程序。  
+- 任意数目的 <xref:System.Xml.Linq.XProcessingInstruction> 对象。 处理指令将信息传递给处理 XML 的应用程序。  
   
--   任意数目的 <xref:System.Xml.Linq.XComment> 对象。 注释将与根元素同级。 <xref:System.Xml.Linq.XComment> 对象不能是列表中的第一个参数，因为 XML 文档以注释开头无效。  
+- 任意数目的 <xref:System.Xml.Linq.XComment> 对象。 注释将与根元素同级。 <xref:System.Xml.Linq.XComment> 对象不能是列表中的第一个参数，因为 XML 文档以注释开头无效。  
   
--   一个用于 DTD 的 <xref:System.Xml.Linq.XDocumentType>。  
+- 一个用于 DTD 的 <xref:System.Xml.Linq.XDocumentType>。  
   
  序列化 <xref:System.Xml.Linq.XDocument> 时，即使 `XDocument.Declaration` 为 `null`，输出也将具有 XML 声明，前提是编写器已经将 `Writer.Settings.OmitXmlDeclaration` 设置为 `false`（默认值）。  
   

@@ -2,14 +2,14 @@
 title: 在 Visual Studio 中创建启用了 AJAX 的 WCF 服务和 ASP.NET 客户端
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754603"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>如何：创建支持 AJAX 的 WCF 服务和访问该服务的 ASP.NET 客户端
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>如何：创建启用了 AJAX 的 WCF 服务和 ASP.NET 客户端访问服务
 
 本主题演示如何使用 Visual Studio 来创建启用了 AJAX 的 Windows Communication Foundation (WCF) 服务和 ASP.NET 客户端访问该服务。
 
@@ -77,15 +77,15 @@ ms.locfileid: "48024605"
 
 4. 回到**源**视图中，添加以下代码之间 **\<ScriptManager >** 标记，以指定 WCF 服务的路径：
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. 添加 Javascript 函数的代码`Calculate()`。 将以下代码中的放置**head** web 窗体的部分：
+5. 添加 Javascript 函数的代码`Calculate()`。 将以下代码中的放置**head** web 窗体的部分：
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {
