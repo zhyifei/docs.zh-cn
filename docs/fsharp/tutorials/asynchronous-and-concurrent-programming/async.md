@@ -2,12 +2,12 @@
 title: 异步编程
 description: 了解如何F#通过是易于使用和自然语言的语言级别编程模型实现异步编程。
 ms.date: 06/20/2016
-ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343449"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753590"
 ---
 # <a name="async-programming-in-f"></a>F 中的异步编程\#
 
@@ -26,7 +26,7 @@ ms.locfileid: "59343449"
 open System
 open System.Net
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -45,11 +45,11 @@ printfn "%s" html
 
 有几个语法构造是值得一提：
 
-*   `let!` 将一个异步表达式 （其在另一个上下文中运行） 的结果绑定。
-*   `use!` 工作方式就类似于`let!`，但它超出范围时释放其绑定的资源。
-*   `do!` 将 await 的异步工作流，这不会返回任何内容。
-*   `return` 只需从异步表达式将返回结果。
-*   `return!` 执行另一个异步工作流并返回其返回值作为结果。
+* `let!` 将一个异步表达式 （其在另一个上下文中运行） 的结果绑定。
+* `use!` 工作方式就类似于`let!`，但它超出范围时释放其绑定的资源。
+* `do!` 将 await 的异步工作流，这不会返回任何内容。
+* `return` 只需从异步表达式将返回结果。
+* `return!` 执行另一个异步工作流并返回其返回值作为结果。
 
 此外，正常`let`， `use`，和`do`关键字可以用异步版本，就像在普通函数中。
 
@@ -59,45 +59,45 @@ printfn "%s" html
 
 1. `Async.RunSynchronously` 将另一个线程上启动异步工作流，并等待其结果。
 
-```fsharp
-open System
-open System.Net
+    ```fsharp
+    open System
+    open System.Net
 
-let fetchHtmlAsync url = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+    let fetchHtmlAsync url =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            let! html = webClient.AsyncDownloadString(uri)
+            return html
+        }
 
- // Execution will pause until fetchHtmlAsync finishes
- let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+    // Execution will pause until fetchHtmlAsync finishes
+    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
- // you actually have the result from fetchHtmlAsync now!
- printfn "%s" html
- ```
+    // you actually have the result from fetchHtmlAsync now!
+    printfn "%s" html
+    ```
 
 2. `Async.Start` 将另一个线程上启动的异步工作流，并将**不**等待其结果。
 
-```fsharp
-open System
-open System.Net
-  
-let uploadDataAsync url data = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        webClient.UploadStringAsync(uri, data)
-    }
+    ```fsharp
+    open System
+    open System.Net
 
-let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
+    let uploadDataAsync url data =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            webClient.UploadStringAsync(uri, data)
+        }
 
-// Execution will continue after calling this!
-Async.Start(workflow)
+    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
-printfn "%s" "uploadDataAsync is running in the background..."
- ```
+    // Execution will continue after calling this!
+    Async.Start(workflow)
+
+    printfn "%s" "uploadDataAsync is running in the background..."
+    ```
 
 还有其他方法来启动异步工作流可用于更多特定方案。 对其进行详细[异步参考中](https://msdn.microsoft.com/library/ee370232.aspx)。
 
@@ -115,13 +115,13 @@ printfn "%s" "uploadDataAsync is running in the background..."
 open System
 open System.Net
 
-let urlList = 
+let urlList =
     [ "https://www.microsoft.com"
       "https://www.google.com"
       "https://www.amazon.com"
       "https://www.facebook.com" ]
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -144,13 +144,13 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>重要信息和建议
 
-*   将"Async"追加到末尾将使用的任何函数
+* 将"Async"追加到末尾将使用的任何函数
 
  虽然这是命名约定，但它确实使 API 可发现性等内容更容易。 尤其是例程的当有相同的同步和异步版本，它是例程的显式声明为异步通过名称的一个好办法。
 
-*   侦听编译器 ！
+* 侦听编译器 ！
 
- F#编译器是非常严格，因此几乎不可能执行一些麻烦的问题等操作以同步方式运行"async"代码。 如果您遇到一条警告，则代码不会执行认为它将如何登录。 如果编译器可以为取悦，按预期方式将很可能执行代码。
+F#编译器是非常严格，因此几乎不可能执行一些麻烦的问题等操作以同步方式运行"async"代码。 如果您遇到一条警告，则代码不会执行认为它将如何登录。 如果编译器可以为取悦，按预期方式将很可能执行代码。
 
 ## <a name="for-the-cvb-programmer-looking-into-f"></a>有关C#/VB 程序员研究 F\#
 
@@ -164,23 +164,23 @@ for html in htmlList do
 
 ### <a name="similarities"></a>相似之处
 
-*   `let!``use!`，并`do!`类似于`await`内调用的异步作业时`async{ }`块。
+* `let!``use!`，并`do!`类似于`await`内调用的异步作业时`async{ }`块。
 
- 只能在使用三个关键字`async { }`块中，类似于如何`await`只能在调用`async`方法。 简单地说，`let!`适用于你想要捕获和使用结果`use!`是相同，但某些内容在使用后，应会清理其资源和`do!`适用于你想要等待的异步工作流完成不返回值再继续。
+  只能在使用三个关键字`async { }`块中，类似于如何`await`只能在调用`async`方法。 简单地说，`let!`适用于你想要捕获和使用结果`use!`是相同，但某些内容在使用后，应会清理其资源和`do!`适用于你想要等待的异步工作流完成不返回值再继续。
 
-*   F#类似的方式支持数据并行。
+* F#类似的方式支持数据并行。
 
- 尽管它以非常不同的方式，运行`Async.Parallel`对应于`Task.WhenAll`想的一组异步作业结果，它们全部完成时的方案。
+  尽管它以非常不同的方式，运行`Async.Parallel`对应于`Task.WhenAll`想的一组异步作业结果，它们全部完成时的方案。
 
 ### <a name="differences"></a>差异
 
-*   嵌套`let!`不允许，与不同嵌套 `await`
+* 嵌套`let!`不允许，与不同嵌套 `await`
 
- 与不同`await`，可以嵌套无限期`let!`能并且必须包含另一个内部使用它之前绑定其结果`let!`， `do!`，或`use!`。
+  与不同`await`，可以嵌套无限期`let!`能并且必须包含另一个内部使用它之前绑定其结果`let!`， `do!`，或`use!`。
 
-*   取消支持是在F#比C#/VB.
+* 取消支持是在F#比C#/VB.
 
- 支持的任务在执行中途取消C#/VB 需要检查`IsCancellationRequested`属性或调用`ThrowIfCancellationRequested()`上`CancellationToken`传递到异步方法的对象。
+  支持的任务在执行中途取消C#/VB 需要检查`IsCancellationRequested`属性或调用`ThrowIfCancellationRequested()`上`CancellationToken`传递到异步方法的对象。
 
 与此相反，F#异步工作流是更自然可取消。 取消是一个简单的三步骤过程。
 
@@ -200,7 +200,7 @@ let workflow =
             printfn "Working..."
             do! Async.Sleep 1000
     }
-    
+
 let tokenSource = new CancellationTokenSource()
 
 // Start the workflow in the background
@@ -214,6 +214,6 @@ tokenSource.Cancel()
 
 ## <a name="further-resources"></a>其他资源：
 
-*   [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [异步序列 F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F# HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)
+* [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
+* [异步序列 F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+* [F# HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)

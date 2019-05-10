@@ -2,19 +2,19 @@
 title: 对数据进行分组 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842049"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754460"
 ---
 # <a name="grouping-data-visual-basic"></a>对数据进行分组 (Visual Basic)
 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  
   
  下图演示了对字符序列进行分组的结果。 每个组的键是字符。  
   
- ![LINQ 分组操作](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![图，显示 LINQ 分组操作。](./media/grouping-data/linq-group-operation.png)  
   
  下一节列出了对数据元素进行分组的标准查询运算符方法。  
   

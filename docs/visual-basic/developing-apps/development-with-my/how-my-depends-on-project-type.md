@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755724"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 对项目类型的依赖方式 (Visual Basic)
 `My` 公开特定项目类型所需的那些对象。 例如，`My.Forms`对象是在 Windows 窗体应用程序中可用，但在一个控制台应用程序中不可用。 本主题介绍了其中`My`对象是在不同的项目类型中可用。  
@@ -17,11 +17,11 @@ ms.locfileid: "58842078"
 ## <a name="my-in-windows-applications-and-web-sites"></a>我在 Windows 应用程序和网站  
  `My` 公开可在当前项目类型; 中的对象它将阻止不是适用的对象。 例如，下图显示了`My`Windows 窗体项目中的对象模型。  
   
- ![形状的我在 Windows 窗体应用程序](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ ![图示显示我在 Windows 窗体应用程序中的对象模型。](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
  在网站项目中，`My`公开为 Web 开发人员相关的对象 (如`My.Request`并`My.Response`对象) 时取消不相关的对象 (如`My.Forms`对象)。 下图显示了`My`网站项目中的对象模型：  
   
- ![形状的我的 Web 应用中](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ ![图示显示我的 Web 应用程序中的对象模型。](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>项目详细信息  
  下表显示了哪些`My`对象启用默认情况下为八个项目类型：Windows 应用程序、 类库、 控制台应用程序、 Windows 控件库、 Web 控件库、 Windows 服务、 为空和网站。  

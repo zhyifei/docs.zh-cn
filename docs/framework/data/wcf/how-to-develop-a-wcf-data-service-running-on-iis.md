@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755605"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何：开发在 IIS 上运行的 WCF 数据服务
 
@@ -23,9 +23,9 @@ ms.locfileid: "59517815"
 > [!NOTE]
 > 若要创建 Northwind 数据服务，您的本地计算机上必须已安装 Northwind 示例数据库。 若要下载此示例数据库，请访问 [SQL Server 的示例数据库](https://go.microsoft.com/fwlink/?linkid=24758)下载页。
 
- 本主题说明如何使用实体框架提供程序创建数据服务。 还有其他一些数据服务提供程序可以使用。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。
+本主题说明如何使用实体框架提供程序创建数据服务。 还有其他一些数据服务提供程序可以使用。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。
 
- 在创建服务之后，您必须显式提供对数据服务资源的访问权限。 有关详细信息，请参阅[如何：启用对数据服务的访问](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
+在创建服务之后，您必须显式提供对数据服务资源的访问权限。 有关详细信息，请参阅[如何：启用对数据服务的访问](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>创建在 IIS 运行的 ASP.NET web 应用程序
 
@@ -35,7 +35,7 @@ ms.locfileid: "59517815"
 
 3. 选择**ASP.NET Web 应用程序**模板。
 
-1. 输入`NorthwindService`作为项目的名称。
+4. 输入`NorthwindService`作为项目的名称。
 
 5. 单击 **“确定”**。
 
@@ -47,13 +47,13 @@ ms.locfileid: "59517815"
 
 9. 从具有管理员权限的命令提示符中，根据操作系统，执行以下命令之一：
 
-    -   32 位系统：
+    - 32 位系统：
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   64 位系统：
+    - 64 位系统：
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ ms.locfileid: "59517815"
 
 10. 从具有管理员权限的命令提示符中，根据操作系统，执行以下命令之一：
 
-    -   32 位系统：
+    - 32 位系统：
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   64 位系统：
+    - 64 位系统：
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ ms.locfileid: "59517815"
 
 5. 连接到数据库的数据模型，通过执行以下步骤之一，然后单击**下一步**:
 
-    -   如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何：创建连接到 SQL Server 数据库](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
+    - 如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何：创建连接到 SQL Server 数据库](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
 
          \- 或 -
 
-    -   如果已配置一个连接到 Northwind 数据库的数据库连接，请从连接列表中选择该连接。
+    - 如果已配置一个连接到 Northwind 数据库的数据库连接，请从连接列表中选择该连接。
 
 6. 在向导的最后一页中，选中数据库中所有表对应的复选框，并清除视图和存储过程对应的复选框。
 

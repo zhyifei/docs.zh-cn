@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704825"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754672"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > 元素
 
-指定是否禁用数值调节钮等待关键部分时争用。 \ 
+指定是否禁用数值调节钮等待关键部分时争用。  
   
  \<configuration>  
 \<运行时 >  
@@ -36,14 +36,14 @@ ms.locfileid: "61704825"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**enabled**|指定当它们争用时是否启用数值调节钮等待关键部分。|  
+|**enabled**|指定是否禁用数值调节钮等待关键节时它们激烈。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|1|数值调节钮等待已启用。|  
-|0|数值调节钮等待处于禁用状态。 这是默认值|  
+|1|不能获取关键节时，可禁用数值调节钮等待。|  
+|0|不能获取关键节时，请勿禁用旋转等待。 这是默认值。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

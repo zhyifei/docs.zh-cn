@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80dc542f71aaf3eec6891006d77c5d39c985abf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906524"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600994"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>如何：将对象转换为 Visual Basic 中的另一种类型
 您将转换`Object`通过使用转换关键字，如另一种数据类型的变量[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)。  
@@ -31,7 +31,7 @@ End Sub
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 <xref:System?displayProperty=nameWithType> 命名空间的引用。  
+- 对 <xref:System?displayProperty=nameWithType> 命名空间的引用。  
   
 ## <a name="see-also"></a>请参阅
 

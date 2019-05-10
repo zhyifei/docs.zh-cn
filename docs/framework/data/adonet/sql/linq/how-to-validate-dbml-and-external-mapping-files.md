@@ -2,12 +2,12 @@
 title: 如何：验证 DBML 和外部映射文件
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310234"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910645"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>如何：验证 DBML 和外部映射文件
 您修改的外部映射文件和 .dbml 文件必须通过其各自架构定义的验证。 本主题提供了 Visual Studio 用户的步骤来实现验证过程。  
@@ -30,9 +30,9 @@ ms.locfileid: "59310234"
   
 5. 请注意符合您需要的相应架构定义。  
   
-    -   DbmlSchema.xsd 是用于验证 .dbml 文件的架构定义。 有关详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
+    - DbmlSchema.xsd 是用于验证 .dbml 文件的架构定义。 有关详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
   
-    -   LinqToSqlMapping.xsd 是用于验证外部 XML 映射文件的架构定义。 有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
+    - LinqToSqlMapping.xsd 是用于验证外部 XML 映射文件的架构定义。 有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
 6. 在中**使用**列所需的架构定义行，单击此项可打开下拉列表框中，，然后单击**使用此架构**。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59310234"
   
 1. 找到包含本主题前面部分所述架构定义的帮助主题。  
   
-    -   对于.dbml 文件，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
+    - 对于.dbml 文件，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
   
-    -   对于外部映射文件，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
+    - 对于外部映射文件，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
   
 2. 单击**复制代码**代码文件复制到剪贴板。  
   

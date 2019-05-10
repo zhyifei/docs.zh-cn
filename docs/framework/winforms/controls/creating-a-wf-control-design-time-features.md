@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011551"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211207"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件
 
@@ -68,17 +68,13 @@ ms.locfileid: "62011551"
 
 ## <a name="prerequisites"></a>系统必备
 
-若要完成本演练，你将需要：
-
-- 若要能够创建和安装 Visual Studio 的计算机上运行 Windows 窗体应用程序项目的足够权限。
+为了完成本演练，您将需要 Visual Studio。
 
 ## <a name="creating-the-project"></a>创建项目
 
 第一步是创建应用程序项目。 将使用此项目以生成承载自定义控件的应用程序。
 
-### <a name="to-create-the-project"></a>要创建项目
-
-- 创建一个名为"MarqueeControlTest"的 Windows 窗体应用程序项目 (**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。
+打开 Visual Studio 并创建一个名为"MarqueeControlTest"的 Windows 窗体应用程序项目 (**文件** > **新建** > **项目** > **可视化C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**).
 
 ## <a name="creating-a-control-library-project"></a>创建控件库项目
 

@@ -2,12 +2,12 @@
 title: 后取消剩余异步任务之一完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 5dd9a99b96dc1e599fc2bde3a796beadf33f8147
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 587c863ba110f035ace5207d8404fd70b3befe37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663487"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755831"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>后取消剩余异步任务之一完成 (Visual Basic)
 

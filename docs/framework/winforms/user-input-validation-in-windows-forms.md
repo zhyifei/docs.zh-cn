@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caaf641f919c10751f59df8972af9d95fa930d88
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800121"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655578"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows 窗体中的用户输入验证
 当用户输入到你的应用程序数据时，你可以验证数据有效，然后再在应用程序将使用它。 可能需要某些文本字段不为零长度、 字段将格式化为电话号码或其他类型的格式正确的数据，或字符串不包含任何不安全字符无法用于危及安全的数据库。 Windows 窗体提供了几种方法，以验证你的应用程序中的输入。  
@@ -27,11 +27,11 @@ ms.locfileid: "61800121"
 ## <a name="event-driven-validation"></a>事件驱动的验证  
  如果您想要完整的编程控制验证，或需要执行复杂的验证检查，则应使用大多数 Windows 窗体控件中内置的验证事件。 接受自由的用户输入的每个控件具有<xref:System.Windows.Forms.Control.Validating>每当该控件所需数据验证时将发生的事件。 在<xref:System.Windows.Forms.Control.Validating>事件处理方法，可以验证用户输入以下几种方式。 例如，如果您有必须包含邮政编码的文本框中，您可以按以下方式来执行验证：  
   
--   如果邮政编码必须属于特定组的邮政编码，您可以对要验证用户输入的数据的输入执行字符串比较。 例如，如果邮政编码必须为 {10001、 10002，10003} 集中，然后可以使用字符串比较来验证数据。  
+- 如果邮政编码必须属于特定组的邮政编码，您可以对要验证用户输入的数据的输入执行字符串比较。 例如，如果邮政编码必须为 {10001、 10002，10003} 集中，然后可以使用字符串比较来验证数据。  
   
--   如果邮政编码必须为特定窗体中您可以使用正则表达式验证用户输入的数据。 例如，若要验证的表单`#####`或`#####-####`，可以使用正则表达式`^(\d{5})(-\d{4})?$`。 若要验证的表单`A#A #A#`，可以使用正则表达式`[A-Z]\d[A-Z] \d[A-Z]\d`。 有关正则表达式的详细信息，请参阅[.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)并[正则表达式示例](../../standard/base-types/regular-expression-examples.md)。  
+- 如果邮政编码必须为特定窗体中您可以使用正则表达式验证用户输入的数据。 例如，若要验证的表单`#####`或`#####-####`，可以使用正则表达式`^(\d{5})(-\d{4})?$`。 若要验证的表单`A#A #A#`，可以使用正则表达式`[A-Z]\d[A-Z] \d[A-Z]\d`。 有关正则表达式的详细信息，请参阅[.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)并[正则表达式示例](../../standard/base-types/regular-expression-examples.md)。  
   
--   如果邮政编码必须是有效的美国邮政编码，则可以调用邮政编码 Web 服务，以便验证用户输入的数据。  
+- 如果邮政编码必须是有效的美国邮政编码，则可以调用邮政编码 Web 服务，以便验证用户输入的数据。  
   
  <xref:System.Windows.Forms.Control.Validating>提供事件类型的对象<xref:System.ComponentModel.CancelEventArgs>。 如果您确定控件的数据无效，则可以取消<xref:System.Windows.Forms.Control.Validating>通过设置此对象的事件<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性设置为`true`。 如果未设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性，Windows 窗体将假定该验证已成功为该控件，并引发<xref:System.Windows.Forms.Control.Validated>事件。  
   
@@ -58,11 +58,11 @@ ms.locfileid: "61800121"
 #### <a name="explicit-validation"></a>显式验证  
  显式验证方法验证一次数据。 可以验证响应用户操作，例如单击保存按钮或下一个链接中的数据。 当用户执行任何操作发生时，可以通过以下方式之一来触发显式验证：  
   
--   调用<xref:System.Windows.Forms.ContainerControl.Validate%2A>来验证失去焦点的最后一个控件。  
+- 调用<xref:System.Windows.Forms.ContainerControl.Validate%2A>来验证失去焦点的最后一个控件。  
   
--   调用<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>来验证窗体或容器控件中的所有子控件。  
+- 调用<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>来验证窗体或容器控件中的所有子控件。  
   
--   调用自定义的方法来手动验证控件中的数据。  
+- 调用自定义的方法来手动验证控件中的数据。  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>默认隐式验证行为的 Windows 窗体控件  
  不同的 Windows 窗体控件具有不同的默认值为其<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>属性。 下表显示了最常用的控件和各自的默认值。  
@@ -79,11 +79,11 @@ ms.locfileid: "61800121"
 ## <a name="closing-the-form-and-overriding-validation"></a>关闭该窗体和重写验证  
  当控件保持焦点，因为它包含的数据无效时，就无法关闭父窗体中的常用方法之一：  
   
--   通过单击**关闭**按钮。  
+- 通过单击**关闭**按钮。  
   
--   通过选择**关闭**中**系统**菜单。  
+- 通过选择**关闭**中**系统**菜单。  
   
--   通过调用<xref:System.Windows.Forms.Form.Close%2A>方法以编程方式。  
+- 通过调用<xref:System.Windows.Forms.Form.Close%2A>方法以编程方式。  
   
  但是，在某些情况下，你可能想要让用户关闭该窗体而不考虑在控件中的值是否有效。 您可以重写验证并关闭仍通过创建窗体的一个处理程序中包含无效数据的窗体<xref:System.Windows.Forms.Form.Closing>事件。 在事件中，设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性设置为`false`。 这会强制关闭该窗体。 有关详细信息及示例，请参阅<xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>。  
   

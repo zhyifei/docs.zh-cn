@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a43c55d4ad6a895957b53ae18c3641c5383a24ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585079"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何时使用枚举 (Visual Basic)
 枚举提供了使用相关常量集的简单方法。 一个枚举，或`Enum`，是一组值的符号名称。 枚举被视为数据类型，并可用于创建用变量和属性使用的常数的集。  
@@ -19,13 +19,13 @@ ms.locfileid: "61907304"
   
  使用枚举的优点包括：  
   
--   这样可以减少错误引起的转置或键入数字。  
+- 这样可以减少错误引起的转置或键入数字。  
   
--   便于将来更改值。  
+- 便于将来更改值。  
   
--   使代码易于阅读，这意味着它不太可能的错误将蔓延到其中。  
+- 使代码易于阅读，这意味着它不太可能的错误将蔓延到其中。  
   
--   可确保向前兼容性。 借助枚举、 你的代码是不太可能会失败，如果有人在将来更改的成员名称与对应的值。  
+- 可确保向前兼容性。 借助枚举、 你的代码是不太可能会失败，如果有人在将来更改的成员名称与对应的值。  
   
 ## <a name="naming-enumerations"></a>命名枚举  
  枚举成员使用的命名约定。 当 Visual Basic 遇到的枚举成员名称时，如果其他引用的类型库包含相同的名称可能会引发异常。 使用唯一的前缀，用于标识您的应用程序或组件中的值。  
