@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7371cbd4fef4abced95744071ff222b40e160e3e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766813"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620315"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a><span data-ttu-id="01fc9-102">类型的值\<typename1 > 无法转换为\<typename2 > （多个文件引用）</span><span class="sxs-lookup"><span data-stu-id="01fc9-102">Value of type '\<typename1>' cannot be converted to '\<typename2>' (Multiple file references)</span></span>
-<span data-ttu-id="01fc9-103">类型的值\<typename1 > 无法转换为\<typename2 >。</span><span class="sxs-lookup"><span data-stu-id="01fc9-103">Value of type '\<typename1>' cannot be converted to '\<typename2>'.</span></span> <span data-ttu-id="01fc9-104">类型不匹配可能是由于为的文件引用混合使用 '\<filepath1 > 项目中\<projectname1 > 对的文件引用\<filepath2 > 项目中\<项目名称 2> >。</span><span class="sxs-lookup"><span data-stu-id="01fc9-104">Type mismatch could be due to mixing a file reference to '\<filepath1>' in project '\<projectname1>' with a file reference to '\<filepath2>' in project '\<projectname2>'.</span></span> <span data-ttu-id="01fc9-105">如果两个程序集完全相同，请尝试更换这些引用，以确保两个引用都来自相同的位置。</span><span class="sxs-lookup"><span data-stu-id="01fc9-105">If both assemblies are identical, try replacing these references so both references are from the same location.</span></span>  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a><span data-ttu-id="2e900-102">类型的值\<typename1 > 无法转换为\<typename2 > （多个文件引用）</span><span class="sxs-lookup"><span data-stu-id="2e900-102">Value of type '\<typename1>' cannot be converted to '\<typename2>' (Multiple file references)</span></span>
+<span data-ttu-id="2e900-103">类型的值\<typename1 > 无法转换为\<typename2 >。</span><span class="sxs-lookup"><span data-stu-id="2e900-103">Value of type '\<typename1>' cannot be converted to '\<typename2>'.</span></span> <span data-ttu-id="2e900-104">类型不匹配可能是由于为的文件引用混合使用 '\<filepath1 > 项目中\<projectname1 > 对的文件引用\<filepath2 > 项目中\<项目名称 2> >。</span><span class="sxs-lookup"><span data-stu-id="2e900-104">Type mismatch could be due to mixing a file reference to '\<filepath1>' in project '\<projectname1>' with a file reference to '\<filepath2>' in project '\<projectname2>'.</span></span> <span data-ttu-id="2e900-105">如果两个程序集完全相同，请尝试更换这些引用，以确保两个引用都来自相同的位置。</span><span class="sxs-lookup"><span data-stu-id="2e900-105">If both assemblies are identical, try replacing these references so both references are from the same location.</span></span>  
   
- <span data-ttu-id="01fc9-106">在其中一个项目会对程序集的多个文件引用的情况下，编译器无法保证一个类型可转换为另一个。</span><span class="sxs-lookup"><span data-stu-id="01fc9-106">In a situation where a project makes more than one file reference to an assembly, the compiler cannot guarantee that one type can be converted to another.</span></span>  
+ <span data-ttu-id="2e900-106">在其中一个项目会对程序集的多个文件引用的情况下，编译器无法保证一个类型可转换为另一个。</span><span class="sxs-lookup"><span data-stu-id="2e900-106">In a situation where a project makes more than one file reference to an assembly, the compiler cannot guarantee that one type can be converted to another.</span></span>  
   
- <span data-ttu-id="01fc9-107">每个文件引用指定文件路径和项目 （通常为 DLL 文件） 的输出文件的名称。</span><span class="sxs-lookup"><span data-stu-id="01fc9-107">Each file reference specifies a file path and name for the output file of a project (typically a DLL file).</span></span> <span data-ttu-id="01fc9-108">编译器无法保证输出文件来自同一源，或它们表示相同的程序集的相同版本。</span><span class="sxs-lookup"><span data-stu-id="01fc9-108">The compiler cannot guarantee that the output files come from the same source, or that they represent the same version of the same assembly.</span></span> <span data-ttu-id="01fc9-109">因此，它不能保证在不同的引用类型具有相同的类型，或甚至一个可以转换为其他。</span><span class="sxs-lookup"><span data-stu-id="01fc9-109">Therefore, it cannot guarantee that the types in the different references are the same type, or even that one can be converted to the other.</span></span>  
+ <span data-ttu-id="2e900-107">每个文件引用指定文件路径和项目 （通常为 DLL 文件） 的输出文件的名称。</span><span class="sxs-lookup"><span data-stu-id="2e900-107">Each file reference specifies a file path and name for the output file of a project (typically a DLL file).</span></span> <span data-ttu-id="2e900-108">编译器无法保证输出文件来自同一源，或它们表示相同的程序集的相同版本。</span><span class="sxs-lookup"><span data-stu-id="2e900-108">The compiler cannot guarantee that the output files come from the same source, or that they represent the same version of the same assembly.</span></span> <span data-ttu-id="2e900-109">因此，它不能保证在不同的引用类型具有相同的类型，或甚至一个可以转换为其他。</span><span class="sxs-lookup"><span data-stu-id="2e900-109">Therefore, it cannot guarantee that the types in the different references are the same type, or even that one can be converted to the other.</span></span>  
   
- <span data-ttu-id="01fc9-110">如果你知道引用的程序集具有相同的程序集标识，可以使用单个文件引用。</span><span class="sxs-lookup"><span data-stu-id="01fc9-110">You can use a single file reference if you know that the referenced assemblies have the same assembly identity.</span></span> <span data-ttu-id="01fc9-111">*程序集标识* 包括程序集的名称、版本、公钥（如果有）和区域性。</span><span class="sxs-lookup"><span data-stu-id="01fc9-111">The *assembly identity* includes the assembly's name, version, public key if any, and culture.</span></span> <span data-ttu-id="01fc9-112">此信息唯一地标识该程序集。</span><span class="sxs-lookup"><span data-stu-id="01fc9-112">This information uniquely identifies the assembly.</span></span>  
+ <span data-ttu-id="2e900-110">如果你知道引用的程序集具有相同的程序集标识，可以使用单个文件引用。</span><span class="sxs-lookup"><span data-stu-id="2e900-110">You can use a single file reference if you know that the referenced assemblies have the same assembly identity.</span></span> <span data-ttu-id="2e900-111">*程序集标识* 包括程序集的名称、版本、公钥（如果有）和区域性。</span><span class="sxs-lookup"><span data-stu-id="2e900-111">The *assembly identity* includes the assembly's name, version, public key if any, and culture.</span></span> <span data-ttu-id="2e900-112">此信息唯一地标识该程序集。</span><span class="sxs-lookup"><span data-stu-id="2e900-112">This information uniquely identifies the assembly.</span></span>  
   
- <span data-ttu-id="01fc9-113">**错误 ID:** BC30961</span><span class="sxs-lookup"><span data-stu-id="01fc9-113">**Error ID:** BC30961</span></span>  
+ <span data-ttu-id="2e900-113">**错误 ID:** BC30961</span><span class="sxs-lookup"><span data-stu-id="2e900-113">**Error ID:** BC30961</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="01fc9-114">更正此错误</span><span class="sxs-lookup"><span data-stu-id="01fc9-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2e900-114">更正此错误</span><span class="sxs-lookup"><span data-stu-id="2e900-114">To correct this error</span></span>  
   
-- <span data-ttu-id="01fc9-115">如果引用的程序集具有相同的程序集标识，然后删除或替换其中一个文件的引用，以便只有单个文件引用。</span><span class="sxs-lookup"><span data-stu-id="01fc9-115">If the referenced assemblies have the same assembly identity, then remove or replace one of the file references so that there is only a single file reference.</span></span>  
+- <span data-ttu-id="2e900-115">如果引用的程序集具有相同的程序集标识，然后删除或替换其中一个文件的引用，以便只有单个文件引用。</span><span class="sxs-lookup"><span data-stu-id="2e900-115">If the referenced assemblies have the same assembly identity, then remove or replace one of the file references so that there is only a single file reference.</span></span>  
   
-- <span data-ttu-id="01fc9-116">如果引用的程序集不具有相同的程序集标识，则更改你的代码，以便它不会尝试转换为类型在另一个中的类型。</span><span class="sxs-lookup"><span data-stu-id="01fc9-116">If the referenced assemblies do not have the same assembly identity, then change your code so that it does not attempt to convert a type in one to a type in the other.</span></span>  
+- <span data-ttu-id="2e900-116">如果引用的程序集不具有相同的程序集标识，则更改你的代码，以便它不会尝试转换为类型在另一个中的类型。</span><span class="sxs-lookup"><span data-stu-id="2e900-116">If the referenced assemblies do not have the same assembly identity, then change your code so that it does not attempt to convert a type in one to a type in the other.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01fc9-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="01fc9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e900-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="2e900-117">See also</span></span>
 
-- [<span data-ttu-id="01fc9-118">在 Visual Basic 中的类型转换</span><span class="sxs-lookup"><span data-stu-id="01fc9-118">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [<span data-ttu-id="01fc9-119">管理项目中的引用</span><span class="sxs-lookup"><span data-stu-id="01fc9-119">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
+- [<span data-ttu-id="2e900-118">在 Visual Basic 中的类型转换</span><span class="sxs-lookup"><span data-stu-id="2e900-118">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [<span data-ttu-id="2e900-119">管理项目中的引用</span><span class="sxs-lookup"><span data-stu-id="2e900-119">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)

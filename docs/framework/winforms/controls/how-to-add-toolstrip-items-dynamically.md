@@ -9,34 +9,34 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: d84b62005554479d227778f513e72594322791a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9426c7cb3251dbbd95727b78c57be7a0b71556e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124925"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624012"
 ---
-# <a name="how-to-add-toolstrip-items-dynamically"></a><span data-ttu-id="bdcf4-102">如何：动态添加 ToolStrip 项</span><span class="sxs-lookup"><span data-stu-id="bdcf4-102">How to: Add ToolStrip Items Dynamically</span></span>
-<span data-ttu-id="bdcf4-103">打开菜单时，可以动态填充 <xref:System.Windows.Forms.ToolStrip> 控件的菜单项集合。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-103">You can dynamically populate the menu item collection of a <xref:System.Windows.Forms.ToolStrip> control when the menu opens.</span></span>  
+# <a name="how-to-add-toolstrip-items-dynamically"></a><span data-ttu-id="07fd9-102">如何：动态添加 ToolStrip 项</span><span class="sxs-lookup"><span data-stu-id="07fd9-102">How to: Add ToolStrip Items Dynamically</span></span>
+<span data-ttu-id="07fd9-103">打开菜单时，可以动态填充 <xref:System.Windows.Forms.ToolStrip> 控件的菜单项集合。</span><span class="sxs-lookup"><span data-stu-id="07fd9-103">You can dynamically populate the menu item collection of a <xref:System.Windows.Forms.ToolStrip> control when the menu opens.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bdcf4-104">示例</span><span class="sxs-lookup"><span data-stu-id="bdcf4-104">Example</span></span>  
- <span data-ttu-id="bdcf4-105">下面的代码示例演示如何将项动态地添加到 <xref:System.Windows.Forms.ContextMenuStrip> 控件中。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-105">The following code example demonstrates how to dynamically add items to a <xref:System.Windows.Forms.ContextMenuStrip> control.</span></span> <span data-ttu-id="bdcf4-106">该示例还显示如何对窗体上三个不同的控件重用相同的 <xref:System.Windows.Forms.ContextMenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-106">The example also shows how to reuse the same <xref:System.Windows.Forms.ContextMenuStrip> for three different controls on the form.</span></span>  
+## <a name="example"></a><span data-ttu-id="07fd9-104">示例</span><span class="sxs-lookup"><span data-stu-id="07fd9-104">Example</span></span>  
+ <span data-ttu-id="07fd9-105">下面的代码示例演示如何将项动态地添加到 <xref:System.Windows.Forms.ContextMenuStrip> 控件中。</span><span class="sxs-lookup"><span data-stu-id="07fd9-105">The following code example demonstrates how to dynamically add items to a <xref:System.Windows.Forms.ContextMenuStrip> control.</span></span> <span data-ttu-id="07fd9-106">该示例还显示如何对窗体上三个不同的控件重用相同的 <xref:System.Windows.Forms.ContextMenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="07fd9-106">The example also shows how to reuse the same <xref:System.Windows.Forms.ContextMenuStrip> for three different controls on the form.</span></span>  
   
- <span data-ttu-id="bdcf4-107">在示例中，<xref:System.Windows.Forms.ToolStripDropDown.Opening> 事件处理程序会填充菜单项集合。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-107">In the example, an <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler populates the menu item collection.</span></span> <span data-ttu-id="bdcf4-108"><xref:System.Windows.Forms.ToolStripDropDown.Opening> 事件处理程序将检查 <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> 属性并添加 <xref:System.Windows.Forms.ToolStripItem> 描述源控件。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-108">The <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler examines the <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> properties and adds a <xref:System.Windows.Forms.ToolStripItem> describing the source control.</span></span>  
+ <span data-ttu-id="07fd9-107">在示例中，<xref:System.Windows.Forms.ToolStripDropDown.Opening> 事件处理程序会填充菜单项集合。</span><span class="sxs-lookup"><span data-stu-id="07fd9-107">In the example, an <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler populates the menu item collection.</span></span> <span data-ttu-id="07fd9-108"><xref:System.Windows.Forms.ToolStripDropDown.Opening> 事件处理程序将检查 <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> 属性并添加 <xref:System.Windows.Forms.ToolStripItem> 描述源控件。</span><span class="sxs-lookup"><span data-stu-id="07fd9-108">The <xref:System.Windows.Forms.ToolStripDropDown.Opening> event handler examines the <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.ToolStripItem.OwnerItem%2A?displayProperty=nameWithType> properties and adds a <xref:System.Windows.Forms.ToolStripItem> describing the source control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
 [!code-csharp[System.Windows.Forms.ToolStrip.Misc#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#40)]
 [!code-vb[System.Windows.Forms.ToolStrip.Misc#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#40)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bdcf4-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="bdcf4-109">Compiling the Code</span></span>  
- <span data-ttu-id="bdcf4-110">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="bdcf4-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="07fd9-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="07fd9-109">Compiling the Code</span></span>  
+ <span data-ttu-id="07fd9-110">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="07fd9-110">This example requires:</span></span>  
   
--   <span data-ttu-id="bdcf4-111">对 System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-111">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="07fd9-111">对 System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="07fd9-111">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="bdcf4-112">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="bdcf4-113">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="bdcf4-113">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="07fd9-112">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="07fd9-112">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="07fd9-113">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="07fd9-113">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdcf4-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="bdcf4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07fd9-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="07fd9-114">See also</span></span>
 
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.MenuStrip>
@@ -44,4 +44,4 @@ ms.locfileid: "59124925"
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>
-- [<span data-ttu-id="bdcf4-115">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="bdcf4-115">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="07fd9-115">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="07fd9-115">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
