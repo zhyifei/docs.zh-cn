@@ -2,39 +2,39 @@
 title: 维护名称 / 值对 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: 67bde0954b74b7e5145dd2d930e16feb3371a881
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e95e8c751211d59d5bffbf3e625665703e01429c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649801"
 ---
-# <a name="maintaining-namevalue-pairs-visual-basic"></a><span data-ttu-id="48114-102">维护名称/值对 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="48114-102">Maintaining Name/Value Pairs (Visual Basic)</span></span>
-<span data-ttu-id="48114-103">很多应用程序都必须维护需要保存为名称/值对的信息。</span><span class="sxs-lookup"><span data-stu-id="48114-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="48114-104">此信息可能是配置信息或全局设置。</span><span class="sxs-lookup"><span data-stu-id="48114-104">This information might be configuration information or global settings.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="48114-105">包含一些方法，能轻松保存一组名称/值对。</span><span class="sxs-lookup"><span data-stu-id="48114-105">contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="48114-106">可以将这些信息保存为属性，也可以保存为一组子元素。</span><span class="sxs-lookup"><span data-stu-id="48114-106">You can either keep the information as attributes or as a set of child elements.</span></span>  
+# <a name="maintaining-namevalue-pairs-visual-basic"></a><span data-ttu-id="4be42-102">维护名称/值对 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4be42-102">Maintaining Name/Value Pairs (Visual Basic)</span></span>
+<span data-ttu-id="4be42-103">很多应用程序都必须维护需要保存为名称/值对的信息。</span><span class="sxs-lookup"><span data-stu-id="4be42-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="4be42-104">此信息可能是配置信息或全局设置。</span><span class="sxs-lookup"><span data-stu-id="4be42-104">This information might be configuration information or global settings.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="4be42-105">包含一些方法，能轻松保存一组名称/值对。</span><span class="sxs-lookup"><span data-stu-id="4be42-105">contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="4be42-106">可以将这些信息保存为属性，也可以保存为一组子元素。</span><span class="sxs-lookup"><span data-stu-id="4be42-106">You can either keep the information as attributes or as a set of child elements.</span></span>  
   
- <span data-ttu-id="48114-107">将信息保存为属性和保存为子元素之间的区别在于属性具有约束，对于一个元素，只能有一个属性具有特定的名称。</span><span class="sxs-lookup"><span data-stu-id="48114-107">One difference between keeping the information as attributes or as child elements is that attributes have the constraint that there can be only one attribute with a particular name for an element.</span></span> <span data-ttu-id="48114-108">而这种限制不适用于子元素。</span><span class="sxs-lookup"><span data-stu-id="48114-108">This limitation does not apply to child elements.</span></span>  
+ <span data-ttu-id="4be42-107">将信息保存为属性和保存为子元素之间的区别在于属性具有约束，对于一个元素，只能有一个属性具有特定的名称。</span><span class="sxs-lookup"><span data-stu-id="4be42-107">One difference between keeping the information as attributes or as child elements is that attributes have the constraint that there can be only one attribute with a particular name for an element.</span></span> <span data-ttu-id="4be42-108">而这种限制不适用于子元素。</span><span class="sxs-lookup"><span data-stu-id="4be42-108">This limitation does not apply to child elements.</span></span>  
   
-## <a name="setattributevalue-and-setelementvalue"></a><span data-ttu-id="48114-109">SetAttributeValue 与 SetElementValue</span><span class="sxs-lookup"><span data-stu-id="48114-109">SetAttributeValue and SetElementValue</span></span>  
- <span data-ttu-id="48114-110">两种有助于保存名称/值对的方法是 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> 和 <xref:System.Xml.Linq.XElement.SetElementValue%2A>。</span><span class="sxs-lookup"><span data-stu-id="48114-110">The two methods that facilitate keeping name/value pairs are <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> and <xref:System.Xml.Linq.XElement.SetElementValue%2A>.</span></span> <span data-ttu-id="48114-111">这两种方法具有相似的语义。</span><span class="sxs-lookup"><span data-stu-id="48114-111">These two methods have similar semantics.</span></span>  
+## <a name="setattributevalue-and-setelementvalue"></a><span data-ttu-id="4be42-109">SetAttributeValue 与 SetElementValue</span><span class="sxs-lookup"><span data-stu-id="4be42-109">SetAttributeValue and SetElementValue</span></span>  
+ <span data-ttu-id="4be42-110">两种有助于保存名称/值对的方法是 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> 和 <xref:System.Xml.Linq.XElement.SetElementValue%2A>。</span><span class="sxs-lookup"><span data-stu-id="4be42-110">The two methods that facilitate keeping name/value pairs are <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> and <xref:System.Xml.Linq.XElement.SetElementValue%2A>.</span></span> <span data-ttu-id="4be42-111">这两种方法具有相似的语义。</span><span class="sxs-lookup"><span data-stu-id="4be42-111">These two methods have similar semantics.</span></span>  
   
- <span data-ttu-id="48114-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> 可以添加、修改或移除元素的属性。</span><span class="sxs-lookup"><span data-stu-id="48114-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> can add, modify, or remove attributes of an element.</span></span>  
+ <span data-ttu-id="4be42-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> 可以添加、修改或移除元素的属性。</span><span class="sxs-lookup"><span data-stu-id="4be42-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> can add, modify, or remove attributes of an element.</span></span>  
   
-- <span data-ttu-id="48114-113">如果使用不存在的属性的名称调用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>，则该方法会创建一个新属性并将该属性添加到指定的元素中。</span><span class="sxs-lookup"><span data-stu-id="48114-113">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an attribute that does not exist, the method creates a new attribute and adds it to the specified element.</span></span>  
+- <span data-ttu-id="4be42-113">如果使用不存在的属性的名称调用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>，则该方法会创建一个新属性并将该属性添加到指定的元素中。</span><span class="sxs-lookup"><span data-stu-id="4be42-113">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an attribute that does not exist, the method creates a new attribute and adds it to the specified element.</span></span>  
   
-- <span data-ttu-id="48114-114">如果使用现有属性的名称调用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>，并指定一些内容，则会用指定内容替换属性的内容。</span><span class="sxs-lookup"><span data-stu-id="48114-114">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute and with some specified content, the contents of the attribute are replaced with the specified content.</span></span>  
+- <span data-ttu-id="4be42-114">如果使用现有属性的名称调用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>，并指定一些内容，则会用指定内容替换属性的内容。</span><span class="sxs-lookup"><span data-stu-id="4be42-114">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute and with some specified content, the contents of the attribute are replaced with the specified content.</span></span>  
   
-- <span data-ttu-id="48114-115">如果使用现有属性的名称调用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>，并指定内容为空，则会从该属性的父级移除该属性。</span><span class="sxs-lookup"><span data-stu-id="48114-115">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute, and specify null for the content, the attribute is removed from its parent.</span></span>  
+- <span data-ttu-id="4be42-115">如果使用现有属性的名称调用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>，并指定内容为空，则会从该属性的父级移除该属性。</span><span class="sxs-lookup"><span data-stu-id="4be42-115">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute, and specify null for the content, the attribute is removed from its parent.</span></span>  
   
- <span data-ttu-id="48114-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> 可以添加、修改或移除元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="48114-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> can add, modify, or remove child elements of an element.</span></span>  
+ <span data-ttu-id="4be42-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> 可以添加、修改或移除元素的子元素。</span><span class="sxs-lookup"><span data-stu-id="4be42-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> can add, modify, or remove child elements of an element.</span></span>  
   
-- <span data-ttu-id="48114-117">如果使用不存在的子元素的名称调用 <xref:System.Xml.Linq.XElement.SetElementValue%2A>，则该方法会创建一个新元素并将该新元素添加到指定的元素中。</span><span class="sxs-lookup"><span data-stu-id="48114-117">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of a child element that does not exist, the method creates a new element and adds it to the specified element.</span></span>  
+- <span data-ttu-id="4be42-117">如果使用不存在的子元素的名称调用 <xref:System.Xml.Linq.XElement.SetElementValue%2A>，则该方法会创建一个新元素并将该新元素添加到指定的元素中。</span><span class="sxs-lookup"><span data-stu-id="4be42-117">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of a child element that does not exist, the method creates a new element and adds it to the specified element.</span></span>  
   
-- <span data-ttu-id="48114-118">如果使用现有元素的名称调用 <xref:System.Xml.Linq.XElement.SetElementValue%2A>，并指定一些内容，则会用指定内容替换元素的内容。</span><span class="sxs-lookup"><span data-stu-id="48114-118">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element and with some specified content, the contents of the element are replaced with the specified content.</span></span>  
+- <span data-ttu-id="4be42-118">如果使用现有元素的名称调用 <xref:System.Xml.Linq.XElement.SetElementValue%2A>，并指定一些内容，则会用指定内容替换元素的内容。</span><span class="sxs-lookup"><span data-stu-id="4be42-118">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element and with some specified content, the contents of the element are replaced with the specified content.</span></span>  
   
-- <span data-ttu-id="48114-119">如果使用现有元素的名称调用 <xref:System.Xml.Linq.XElement.SetElementValue%2A>，并指定内容为空，则会从该元素的父级移除该元素。</span><span class="sxs-lookup"><span data-stu-id="48114-119">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element, and specify null for the content, the element is removed from its parent.</span></span>  
+- <span data-ttu-id="4be42-119">如果使用现有元素的名称调用 <xref:System.Xml.Linq.XElement.SetElementValue%2A>，并指定内容为空，则会从该元素的父级移除该元素。</span><span class="sxs-lookup"><span data-stu-id="4be42-119">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element, and specify null for the content, the element is removed from its parent.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="48114-120">示例</span><span class="sxs-lookup"><span data-stu-id="48114-120">Example</span></span>  
- <span data-ttu-id="48114-121">下面的示例创建一个没有属性的元素。</span><span class="sxs-lookup"><span data-stu-id="48114-121">The following example creates an element with no attributes.</span></span> <span data-ttu-id="48114-122">之后使用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> 方法创建一个名称/值对列表并维护该列表。</span><span class="sxs-lookup"><span data-stu-id="48114-122">It then uses the <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
+## <a name="example"></a><span data-ttu-id="4be42-120">示例</span><span class="sxs-lookup"><span data-stu-id="4be42-120">Example</span></span>  
+ <span data-ttu-id="4be42-121">下面的示例创建一个没有属性的元素。</span><span class="sxs-lookup"><span data-stu-id="4be42-121">The following example creates an element with no attributes.</span></span> <span data-ttu-id="4be42-122">之后使用 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> 方法创建一个名称/值对列表并维护该列表。</span><span class="sxs-lookup"><span data-stu-id="4be42-122">It then uses the <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
   
 ```vb  
 ' Create an element with no content.  
@@ -57,7 +57,7 @@ root.SetAttributeValue("DefaultColor", Nothing)
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="48114-123">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="48114-123">This example produces the following output:</span></span>  
+ <span data-ttu-id="4be42-123">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="4be42-123">This example produces the following output:</span></span>  
   
 ```xml  
 <Root Top="22" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
@@ -65,8 +65,8 @@ Console.WriteLine(root)
 <Root Top="10" Left="20" Bottom="122" Right="300" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="48114-124">示例</span><span class="sxs-lookup"><span data-stu-id="48114-124">Example</span></span>  
- <span data-ttu-id="48114-125">下面的示例创建一个没有子元素的元素。</span><span class="sxs-lookup"><span data-stu-id="48114-125">The following example creates an element with no child elements.</span></span> <span data-ttu-id="48114-126">之后使用 <xref:System.Xml.Linq.XElement.SetElementValue%2A> 方法创建一个名称/值对列表并维护该列表。</span><span class="sxs-lookup"><span data-stu-id="48114-126">It then uses the <xref:System.Xml.Linq.XElement.SetElementValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
+## <a name="example"></a><span data-ttu-id="4be42-124">示例</span><span class="sxs-lookup"><span data-stu-id="4be42-124">Example</span></span>  
+ <span data-ttu-id="4be42-125">下面的示例创建一个没有子元素的元素。</span><span class="sxs-lookup"><span data-stu-id="4be42-125">The following example creates an element with no child elements.</span></span> <span data-ttu-id="4be42-126">之后使用 <xref:System.Xml.Linq.XElement.SetElementValue%2A> 方法创建一个名称/值对列表并维护该列表。</span><span class="sxs-lookup"><span data-stu-id="4be42-126">It then uses the <xref:System.Xml.Linq.XElement.SetElementValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
   
 ```vb  
 ' Create an element with no content.  
@@ -91,7 +91,7 @@ root.SetElementValue("DefaultColor", Nothing)
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="48114-127">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="48114-127">This example produces the following output:</span></span>  
+ <span data-ttu-id="4be42-127">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="4be42-127">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -118,8 +118,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="48114-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="48114-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4be42-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="4be42-128">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [<span data-ttu-id="48114-129">修改 XML 树 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="48114-129">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [<span data-ttu-id="4be42-129">修改 XML 树 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4be42-129">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

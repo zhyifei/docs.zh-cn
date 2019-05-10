@@ -8,31 +8,31 @@ helpviewer_keywords:
 - BMP images [Windows Forms], converting to PNG
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
-ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 59200941aa0f872a0bd99510bfaa8a8b878a9061
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648305"
 ---
-# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a><span data-ttu-id="a3e26-102">如何：将 BMP 图像转换为 PNG 图像</span><span class="sxs-lookup"><span data-stu-id="a3e26-102">How to: Convert a BMP image to a PNG image</span></span>
-<span data-ttu-id="a3e26-103">通常，需要转换图像文件格式。</span><span class="sxs-lookup"><span data-stu-id="a3e26-103">Oftentimes, you will want to convert from one image file format to another.</span></span> <span data-ttu-id="a3e26-104">可以通过调用 <xref:System.Drawing.Image> 类的 <xref:System.Drawing.Image.Save%2A> 方法，并将 <xref:System.Drawing.Imaging.ImageFormat> 指定为所需的图像文件格式来轻松完成转换。</span><span class="sxs-lookup"><span data-stu-id="a3e26-104">You can do this conversion easily by calling the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class and specifying the <xref:System.Drawing.Imaging.ImageFormat> for the desired image file format.</span></span>  
+# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a><span data-ttu-id="f5c18-102">如何：将 BMP 图像转换为 PNG 图像</span><span class="sxs-lookup"><span data-stu-id="f5c18-102">How to: Convert a BMP image to a PNG image</span></span>
+<span data-ttu-id="f5c18-103">通常，需要转换图像文件格式。</span><span class="sxs-lookup"><span data-stu-id="f5c18-103">Oftentimes, you will want to convert from one image file format to another.</span></span> <span data-ttu-id="f5c18-104">可以通过调用 <xref:System.Drawing.Image> 类的 <xref:System.Drawing.Image.Save%2A> 方法，并将 <xref:System.Drawing.Imaging.ImageFormat> 指定为所需的图像文件格式来轻松完成转换。</span><span class="sxs-lookup"><span data-stu-id="f5c18-104">You can do this conversion easily by calling the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class and specifying the <xref:System.Drawing.Imaging.ImageFormat> for the desired image file format.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a3e26-105">示例</span><span class="sxs-lookup"><span data-stu-id="a3e26-105">Example</span></span>  
- <span data-ttu-id="a3e26-106">以下示例从一个类型加载 BMP 图像，并以 PNG 格式保存该图像。</span><span class="sxs-lookup"><span data-stu-id="a3e26-106">The following example loads a BMP image from a type, and saves the image in the PNG format.</span></span>  
+## <a name="example"></a><span data-ttu-id="f5c18-105">示例</span><span class="sxs-lookup"><span data-stu-id="f5c18-105">Example</span></span>  
+ <span data-ttu-id="f5c18-106">以下示例从一个类型加载 BMP 图像，并以 PNG 格式保存该图像。</span><span class="sxs-lookup"><span data-stu-id="f5c18-106">The following example loads a BMP image from a type, and saves the image in the PNG format.</span></span>  
   
  [!code-csharp[UsingImageEncodersDecoders#4](~/samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#4)]
  [!code-vb[UsingImageEncodersDecoders#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#4)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a3e26-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="a3e26-107">Compiling the Code</span></span>  
- <span data-ttu-id="a3e26-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a3e26-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f5c18-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="f5c18-107">Compiling the Code</span></span>  
+ <span data-ttu-id="f5c18-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="f5c18-108">This example requires:</span></span>  
   
-- <span data-ttu-id="a3e26-109">Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="a3e26-109">A Windows Forms application.</span></span>  
+- <span data-ttu-id="f5c18-109">Windows 窗体应用程序。</span><span class="sxs-lookup"><span data-stu-id="f5c18-109">A Windows Forms application.</span></span>  
   
-- <span data-ttu-id="a3e26-110">对 `System.Drawing.Imaging` 命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="a3e26-110">A reference to the `System.Drawing.Imaging` namespace.</span></span>  
+- <span data-ttu-id="f5c18-110">对 `System.Drawing.Imaging` 命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="f5c18-110">A reference to the `System.Drawing.Imaging` namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3e26-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3e26-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5c18-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="f5c18-111">See also</span></span>
 
-- [<span data-ttu-id="a3e26-112">如何：列出已安装的编码器</span><span class="sxs-lookup"><span data-stu-id="a3e26-112">How to: List Installed Encoders</span></span>](how-to-list-installed-encoders.md)
-- [<span data-ttu-id="a3e26-113">在托管 GDI+ 中使用图像编码器和解码器</span><span class="sxs-lookup"><span data-stu-id="a3e26-113">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
-- [<span data-ttu-id="a3e26-114">位图类型</span><span class="sxs-lookup"><span data-stu-id="a3e26-114">Types of Bitmaps</span></span>](types-of-bitmaps.md)
+- [<span data-ttu-id="f5c18-112">如何：列出已安装的编码器</span><span class="sxs-lookup"><span data-stu-id="f5c18-112">How to: List Installed Encoders</span></span>](how-to-list-installed-encoders.md)
+- [<span data-ttu-id="f5c18-113">在托管 GDI+ 中使用图像编码器和解码器</span><span class="sxs-lookup"><span data-stu-id="f5c18-113">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [<span data-ttu-id="f5c18-114">位图类型</span><span class="sxs-lookup"><span data-stu-id="f5c18-114">Types of Bitmaps</span></span>](types-of-bitmaps.md)
