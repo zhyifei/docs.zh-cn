@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bca11c0c1828513077985aa11553ec5c0ad52a27
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765566"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910792"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>承载数据服务（WCF 数据服务）
 通过使用 WCF 数据服务，可以创建一项服务，数据公开为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 此数据服务定义为从 <xref:System.Data.Services.DataService%601> 继承的类。 此类提供处理请求消息、 执行对数据源的更新和生成响应消息，OData 所要求的所需的功能。 但是，数据服务不能将绑定到和网络套接字上侦听传入的 HTTP 请求。 对于这一必需的功能，数据服务依赖于宿主计算机。

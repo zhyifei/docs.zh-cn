@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1e776a42ca63e4b862e307cbcae1bab2847d0ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923235"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587295"
 ---
 # <a name="creating-user-defined-bindings"></a>创建用户定义的绑定
 有多种方式可以创建系统未提供的绑定：  
   
--   基于 <xref:System.ServiceModel.Channels.CustomBinding> 类（可向其中填充绑定元素的容器）创建一个自定义绑定。 然后将自定义绑定添加到服务终结点。 可以通过编程方式或者在应用程序配置文件中创建自定义绑定。 若要从应用程序配置文件中使用绑定元素，该绑定元素必须扩展 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)和<xref:System.ServiceModel.Channels.CustomBinding>。  
+- 基于 <xref:System.ServiceModel.Channels.CustomBinding> 类（可向其中填充绑定元素的容器）创建一个自定义绑定。 然后将自定义绑定添加到服务终结点。 可以通过编程方式或者在应用程序配置文件中创建自定义绑定。 若要从应用程序配置文件中使用绑定元素，该绑定元素必须扩展 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)和<xref:System.ServiceModel.Channels.CustomBinding>。  
   
--   可以创建一个从标准绑定派生的类。 例如，可以从 <xref:System.ServiceModel.WSHttpBinding> 派生一个类并重写 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 方法，以获取绑定元素并插入自定义绑定元素或建立一个特定的安全值。  
+- 可以创建一个从标准绑定派生的类。 例如，可以从 <xref:System.ServiceModel.WSHttpBinding> 派生一个类并重写 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 方法，以获取绑定元素并插入自定义绑定元素或建立一个特定的安全值。  
   
--   可以创建一个新的 <xref:System.ServiceModel.Channels.Binding> 类型来完全控制整个绑定实现。  
+- 可以创建一个新的 <xref:System.ServiceModel.Channels.Binding> 类型来完全控制整个绑定实现。  
   
 ## <a name="the-order-of-binding-elements"></a>绑定元素的顺序  
  发送或接收消息时，每个绑定元素都表示一个处理步骤。 在运行时，绑定元素会创建必要的通道和侦听器，用以生成传出和传入通道堆栈。  

@@ -2,12 +2,12 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ad1cba170a7ade06de4678651a8dfcb608d5c46
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673324"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607203"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 指定自定义绑定的通道池设置。  
@@ -52,11 +52,11 @@ ms.locfileid: "61673324"
   
  `ChannelPoolSettings` 指定三项配额：  
   
--   `idleTimeout` 配额用于减少通过长时间占用资源来对服务器实施的拒绝服务 (DOS) 攻击。 在客户端，设置正确的值可增加与服务连接的可靠性。 默认值基于资源的保守适度分配。 该值适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
+- `idleTimeout` 配额用于减少通过长时间占用资源来对服务器实施的拒绝服务 (DOS) 攻击。 在客户端，设置正确的值可增加与服务连接的可靠性。 默认值基于资源的保守适度分配。 该值适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
   
--   `leaseTimeout` 配额用于与负载均衡器的集成以及提高可靠性。 默认值基于资源的保守分配。 该值适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
+- `leaseTimeout` 配额用于与负载均衡器的集成以及提高可靠性。 默认值基于资源的保守分配。 该值适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
   
--   `maxOutboundChannelsPerEndpoint` 配额设置服务器与客户端上的缓存限制，用于提高可靠性。 其默认值基于资源的保守适度分配，适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
+- `maxOutboundChannelsPerEndpoint` 配额设置服务器与客户端上的缓存限制，用于提高可靠性。 其默认值基于资源的保守适度分配，适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
   
 ## <a name="see-also"></a>请参阅
 

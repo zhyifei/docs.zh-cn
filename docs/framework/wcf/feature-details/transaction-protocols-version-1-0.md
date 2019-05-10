@@ -2,12 +2,12 @@
 title: 事务协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cb12e2dc60771856b0abaf6cb40e24398ce93513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764618"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585737"
 ---
 # <a name="transaction-protocols-version-10"></a>事务协议版本 1.0
 Windows Communication Foundation (WCF) 版本 1 实现 Ws-atomic Transaction 和 Ws-coordination 协议的版本 1.0。 有关版本 1.1 的详细信息，请参阅[事务协议](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  

@@ -2,12 +2,12 @@
 title: 用户定义的函数
 ms.date: 03/30/2017
 ms.assetid: 3304c9b2-5c7a-4a95-9d45-4f260dcb606e
-ms.openlocfilehash: f1222d9332d365c9c3c6ca2aa28cbb48e92c04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 57675c470383fb45e9ccf34a846144b435cf4d0d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917652"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910668"
 ---
 # <a name="user-defined-functions"></a>用户定义的函数
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在您的对象模型中使用方法来表示用户定义的函数。 您可以通过应用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性（如果需要）将方法指定为函数。 有关详细信息，请参阅[LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。  

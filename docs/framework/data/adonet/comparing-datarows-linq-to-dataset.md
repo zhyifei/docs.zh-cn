@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077168"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583742"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>比较 DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定义多种用于比较源元素的集合运算符以查看它们是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 提供下面的集合运算符：  
   
--   <xref:System.Linq.Enumerable.Distinct%2A>  
+- <xref:System.Linq.Enumerable.Distinct%2A>  
   
--   <xref:System.Linq.Enumerable.Union%2A>  
+- <xref:System.Linq.Enumerable.Union%2A>  
   
--   <xref:System.Linq.Enumerable.Intersect%2A>  
+- <xref:System.Linq.Enumerable.Intersect%2A>  
   
--   <xref:System.Linq.Enumerable.Except%2A>  
+- <xref:System.Linq.Enumerable.Except%2A>  
   
  这些运算符通过对每个元素集合调用 <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> 和 <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> 方法来比较源元素。 对于 <xref:System.Data.DataRow>，这些运算符执行引用比较，在对表格格式数据执行集合操作的情况下，这通常不是理想的行为。 对于集合运算，通常需要确定元素值而不是元素引用是否相等。 因此，向 <xref:System.Data.DataRowComparer> 中添加了 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 类。 此类可用于比较行值。  
   

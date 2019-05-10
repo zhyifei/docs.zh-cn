@@ -10,12 +10,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a906db44a548361df2822efa24d1dd1849cb5a24
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954899"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063738"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>如何：在形状中平铺图像
 就像可以彼此以涵盖地板放置磁贴，可以将矩形图像彼此放置于填充 （磁贴） 形状。 若要磁贴形状的内部，使用纹理画笔。 当构造<xref:System.Drawing.TextureBrush>对象，将传递给构造函数的自变量之一为<xref:System.Drawing.Image>对象。 纹理画笔用于绘制形状的内部，当填充形状与此图像的重复副本。  
@@ -26,11 +26,11 @@ ms.locfileid: "61954899"
   
 - 此示例使用以下 75 × 75 映像磁贴 200 × 200 的矩形。  
   
- ![磁贴 1](./media/tile1.gif "tile1")  
+ ![磁贴图像显示红色房屋和树。](./media/how-to-tile-a-shape-with-an-image/rectangle-tile-200x200.gif)  
   
 - 下图显示如何使用图像平铺矩形。 请注意，所有磁贴具有相同方向;没有翻转。  
   
- ![磁贴 2](./media/tile2.gif "tile2")  
+ ![为所有图块使用相同的方向图像平铺的矩形。](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-no-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
@@ -39,7 +39,7 @@ ms.locfileid: "61954899"
   
 - 此示例使用相同 75 × 75 图像以填充 200 × 200 的矩形。 自动换行模式设置为水平翻转图像。 下图显示如何使用图像平铺矩形。 请注意当您从一个磁贴移动到下一个给定行中，水平翻转图像。  
   
- ![磁贴 3](./media/tile3.gif "tile3")  
+ ![水平翻转图像平铺的矩形。](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
@@ -55,7 +55,7 @@ ms.locfileid: "61954899"
   
 - 此示例使用相同的 75 × 75 映像磁贴 200 × 200 的矩形。 自动换行模式设置为水平和垂直翻转图像。 下图显示该矩形的映像的平铺。 请注意当您从一个磁贴移动到下一个给定行中，水平翻转图像和当您从一个磁贴移动到下一个给定列中，垂直翻转图像。  
   
- ![磁贴 5](./media/tile5.gif "tile5")  
+ ![水平和垂直翻转图像平铺的矩形。](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-vertical-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  

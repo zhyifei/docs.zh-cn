@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646327"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584544"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>类和结构（C# 编程指南）
 类和结构是 .NET Framework 通用类型系统的两种基本构造。 每种本质上都是一种数据结构，其中封装了同属一个逻辑单元的一组数据和行为。 数据和行为是类或结构的*成员*，包括方法、属性和事件等（此主题稍后将具体列举）。  
@@ -44,25 +44,25 @@ ms.locfileid: "61646327"
 ### <a name="members"></a>成员  
  所有方法、字段、常量、属性和事件都必须在类型中进行声明；这些被称为类型的*成员*。 C# 没有全局变量或方法，这一点其他某些语言不同。 即使是程序的入口点 `Main` 方法，也必须在类或结构中进行声明。 下面列出了所有可以在类或结构中声明的各种成员。  
   
--   [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [常量](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [常量](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [事件](../../../csharp/programming-guide/events/index.md)  
+- [事件](../../../csharp/programming-guide/events/index.md)  
   
--   [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [索引器](../../../csharp/programming-guide/indexers/index.md)  
+- [索引器](../../../csharp/programming-guide/indexers/index.md)  
   
--   [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>可访问性  
  一些方法和属性可供类或结构外部的代码（称为“*客户端代码*”）调用或访问。 另一些方法和属性只能在类或结构本身中使用。 请务必限制代码的可访问性，仅供预期的客户端代码进行访问。 使用访问修饰符 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 和 [private protected](../../../csharp/language-reference/keywords/private-protected.md) 可指定类型及其成员对客户端代码的可访问性。 可访问性的默认值为 `private`。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  

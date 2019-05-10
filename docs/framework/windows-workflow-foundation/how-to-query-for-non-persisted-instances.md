@@ -2,12 +2,12 @@
 title: 如何：查询非持有化实例
 ms.date: 03/30/2017
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-ms.openlocfilehash: 000342013be4380e1a038fb8233050523f6bc758
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cbc3ec59bc0fbd8c39d351c248a664dc9231044c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009781"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584945"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>如何：查询非持有化实例
 创建某个服务的新实例时，如果该服务已定义 SQL 工作流实例存储行为，则服务主机将在实例存储区中为该服务实例创建一个初始项。 随后，当该服务实例第一次持久化时，SQL 工作流实例存储行为会将当前实例状态与执行激活、恢复和控制操作所需的其他数据一起存储。  

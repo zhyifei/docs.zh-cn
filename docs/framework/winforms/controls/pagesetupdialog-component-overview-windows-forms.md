@@ -7,21 +7,23 @@ helpviewer_keywords:
 - Page Setup dialog box [Windows Forms], displaying
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-ms.openlocfilehash: 30ac782cae830ac996132046cbbc57392067c0ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 989183b6152dfccb6167d89433317cea596d83c5
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932530"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211743"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 组件概述（Windows 窗体）
-Windows 窗体<xref:System.Windows.Forms.PageSetupDialog>组件是一个预配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页详细信息。 用于在基于 Windows 的应用程序中作为一个简单的解决方案为用户设置首选项而不是配置您自己的对话框。 可以使用户能够设置边框和边距调整、 页眉和页脚和纵向或横向布局。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。  
-  
-## <a name="key-properties-and-methods"></a>键属性和方法  
- 使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法，以便在运行时显示对话框。 此组件具有可以设置与单个页面的属性 (<xref:System.Drawing.Printing.PrintDocument>类) 或任何文档 (<xref:System.Drawing.Printing.PageSettings>类)。 此外，<xref:System.Windows.Forms.PageSetupDialog>组件可用于确定特定的打印机设置，它们将存储在<xref:System.Drawing.Printing.PrinterSettings>类。  
-  
- 添加到窗体时<xref:System.Windows.Forms.PageSetupDialog>组件在 Windows 窗体设计器底部的任务栏中显示。  
-  
+
+Windows 窗体<xref:System.Windows.Forms.PageSetupDialog>组件是一个预配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页详细信息。 用于在基于 Windows 的应用程序中作为一个简单的解决方案为用户设置首选项而不是配置您自己的对话框。 可以使用户能够设置边框和边距调整、 页眉和页脚和纵向或横向布局。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。
+
+## <a name="key-properties-and-methods"></a>键属性和方法
+
+使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法，以便在运行时显示对话框。 此组件具有可以设置与单个页面的属性 (<xref:System.Drawing.Printing.PrintDocument>类) 或任何文档 (<xref:System.Drawing.Printing.PageSettings>类)。 此外，<xref:System.Windows.Forms.PageSetupDialog>组件可用于确定特定的打印机设置，它们将存储在<xref:System.Drawing.Printing.PrinterSettings>类。
+
+添加到窗体时<xref:System.Windows.Forms.PageSetupDialog>组件在 Visual Studio 中的 Windows 窗体设计器底部的任务栏中显示。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.PageSetupDialog>

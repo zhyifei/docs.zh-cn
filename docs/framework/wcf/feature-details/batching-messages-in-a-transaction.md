@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a517dc4e143b561a17bb3715b69be393bee2b21e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596773"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585017"
 ---
 # <a name="batching-messages-in-a-transaction"></a>在事务中对消息进行批处理
 排队的应用程序使用事务来确保消息的正确性以及传递的可靠性。 但是，事务是一种成本较高的操作，可能会大幅度降低消息吞吐量。 提高消息吞吐量的一个方法是让一个应用程序在单个事务内读取和处理多个消息。 这需要在性能和恢复之间进行权衡；随着批处理中消息数量的增加，事务回滚时所需完成的恢复工作的工作量也会增加。 需要注意的是，在事务中对消息进行批处理与会话是不同的。 一个*会话*是相关的消息由单个应用程序处理和作为一个单元提交的分组。 当必须将一组相关消息一起进行处理的时候，通常使用会话。 这方面的一个例子是在线购物网站。 *批处理*用于处理多个，不相关的消息的方式增加消息吞吐量。 有关会话的详细信息，请参阅[会话中的分组排队消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。 批处理中的消息也是由单个应用程序处理，并且作为一个单元提交，但批处理中的消息之间可能没有任何关系。 在事务中对消息进行批处理是一种优化方法，它不会改变应用程序的运行方式。  

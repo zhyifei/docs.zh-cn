@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 805e1cc7d1def74a2a3e7b28afd052be1c4836c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754513"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596841"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>如何：创建和初始化跟踪源
 <xref:System.Diagnostics.TraceSource> 类由应用程序用来生成可与应用程序相关联的跟踪。 <xref:System.Diagnostics.TraceSource> 提供了一些跟踪方法，利用这些跟踪方法，你可以方便地跟踪事件，跟踪数据和发出信息跟踪。 你可以使用或不使用配置文件来创建和初始化 <xref:System.Diagnostics.TraceSource> 的跟踪输出。 本主题提供这两种选项的说明。 但是，建议你使用配置文件，以便于重新配置在运行时由跟踪源生成的跟踪。  

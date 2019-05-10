@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954774"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063722"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>如何：使用颜色矩阵对单色进行转换
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>用于存储和操作图像的类。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>对象存储为 32 位数字，每个像素的颜色：各 8 位红色、 绿色、 蓝色和 alpha。 每四个组件是一个介于 0 到 255 之间，其中 0 表示没有亮度，255 表示最大亮度。 Alpha 分量指定颜色的透明度：0 表示完全透明，255 表示完全不透明。  
@@ -32,13 +32,13 @@ ms.locfileid: "61954774"
   
  下面的矩阵乘法将按所列顺序执行转换的对。  
   
- ![重新着色](./media/recoloring01.gif "recoloring01")  
+ ![转换矩阵乘法的屏幕截图。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  颜色矩阵的元素进行行和列索引 （从零开始）。 例如，第五个行和第三列的矩阵 M 中的项表示由 M [4] [2]。  
   
  5 × 5 单位矩阵 （如以下插图所示） 具有的对角线上的 1 和 0 在其他地方。 如果您要乘以一个向量，颜色恒等矩阵，则不会更改颜色向量。 窗体中的颜色转换矩阵的简便方法是使用恒等矩阵来启动，稍微进行更改，生成所需的转换。  
   
- ![重新着色](./media/recoloring02.gif "recoloring02")  
+ ![颜色转换 5 x 5 标识矩阵的屏幕截图。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  矩阵和转换的更多详细讨论，请参阅[坐标系和坐标转换](coordinate-systems-and-transformations.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954774"
   
  下图显示在右侧左侧上的原始映像和转换后的图像。  
   
- ![颜色](./media/colortrans1.png "colortrans1")  
+ ![在左侧和右侧的紫红色正方形紫色正方形。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  在下面的示例代码使用以下步骤进行重新着色：  
   
