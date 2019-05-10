@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-ms.openlocfilehash: 401801c7c9072ce11f9eafdb84f2b377669ae545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ec878e04b0128c997c5be51d2c714d55abcde8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802643"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665123"
 ---
 # <a name="file-already-open"></a>文件已打开
 有时必须在另一部分之前关闭的文件`FileOpen`或位置执行其他操作。 此错误的可能原因包括：  
   
--   顺序输出模式`FileOpen`已打开的文件执行操作  
+- 顺序输出模式`FileOpen`已打开的文件执行操作  
   
--   语句引用打开的文件。  
+- 语句引用打开的文件。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   

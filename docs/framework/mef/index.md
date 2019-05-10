@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872841"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648497"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>结束语
  本主题包括 MEF 的基础概念。
 
--   部件，目录和撰写容器
+- 部件，目录和撰写容器
 
      部件和撰写容器是 MEF 应用程序的基础构造块。 部件是所有导入或导出值（最多包含自己）的对象。 目录提供了一组来自特定源的部件。 撰写容器使用目录提供的部件来执行将导入绑定到导出的组合。
 
--   导入和导出
+- 导入和导出
 
      导入和导出是组件进行通信的方式。 组件使用导入指定对特定值或对象的需求，使用导出指定值的可用性。 每个导入都通过其协定匹配了一组导出。
 

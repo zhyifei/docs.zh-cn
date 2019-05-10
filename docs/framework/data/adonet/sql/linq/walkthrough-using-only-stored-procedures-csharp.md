@@ -2,12 +2,12 @@
 title: 演练：仅使用存储过程 (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655127"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>演练：仅使用存储过程 (C#)
 本演练提供了通过仅执行存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  
@@ -26,13 +26,13 @@ ms.locfileid: "61876520"
 ## <a name="prerequisites"></a>系统必备  
  本演练需要如下内容：  
   
--   本演练使用专用文件夹（“c:\linqtest7”）来保存文件。 请在开始本演练前创建此文件夹。  
+- 本演练使用专用文件夹（“c:\linqtest7”）来保存文件。 请在开始本演练前创建此文件夹。  
   
--   Northwind 示例数据库。  
+- Northwind 示例数据库。  
   
      如果您的开发计算机上没有此数据库，您可以从 Microsoft 下载网站下载它。 有关说明，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下载此数据库后，请将 northwnd.mdf 文件复制到 c:\linqtest7 文件夹。  
   
--   从 Northwind 数据库生成的 C# 代码文件。  
+- 从 Northwind 数据库生成的 C# 代码文件。  
   
      本演练是通过使用 SqlMetal 工具以及如下命令行编写的：  
   
@@ -43,17 +43,17 @@ ms.locfileid: "61876520"
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
   
--   设置[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
+- 设置[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
   
--   将 System.Data.Linq 程序集添加到项目中。  
+- 将 System.Data.Linq 程序集添加到项目中。  
   
--   向项目添加数据库代码文件。  
+- 向项目添加数据库代码文件。  
   
--   创建与数据库的连接。  
+- 创建与数据库的连接。  
   
--   设置用户界面。  
+- 设置用户界面。  
   
--   运行和测试应用程序。  
+- 运行和测试应用程序。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
  在此第一个任务中，创建一个包含必要的引用，生成并运行的 Visual Studio 解决方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  

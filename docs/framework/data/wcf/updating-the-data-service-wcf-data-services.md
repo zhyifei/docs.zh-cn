@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b351b2a69d2829b67c80839f3257fa8e218b55d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876104"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660636"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新数据服务（WCF 数据服务）
 当你使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送，库将转换到客户端数据服务类的实例在源中的条目。 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些数据服务类。 客户端通过使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法跟踪您报告的实体更改。 客户端利用这些方法可跟踪已添加和删除的实体以及您对属性值或对实体实例之间关系的更改。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，将以基于 REST 的操作的形式将这些跟踪的更改发送回数据服务。  
@@ -54,13 +54,13 @@ ms.locfileid: "61876104"
   
  在附加对象时需要考虑下列注意事项：  
   
--   对象以 <xref:System.Data.Services.Client.EntityStates.Unchanged> 状态附加。  
+- 对象以 <xref:System.Data.Services.Client.EntityStates.Unchanged> 状态附加。  
   
--   附加对象时，不会附加与附加的对象有关的对象。  
+- 附加对象时，不会附加与附加的对象有关的对象。  
   
--   如果实体已被上下文跟踪，则不能附加对象。  
+- 如果实体已被上下文跟踪，则不能附加对象。  
   
--   当附加收到的带有 eTag 值的实体对象时，使用采用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 参数的 `etag` 方法重载。 然后，使用此 eTag 值在保存对附加对象的更改时检查并发。  
+- 当附加收到的带有 eTag 值的实体对象时，使用采用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 参数的 `etag` 方法重载。 然后，使用此 eTag 值在保存对附加对象的更改时检查并发。  
   
  有关详细信息，请参阅[如何：将现有实体附加到 DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)。  
   

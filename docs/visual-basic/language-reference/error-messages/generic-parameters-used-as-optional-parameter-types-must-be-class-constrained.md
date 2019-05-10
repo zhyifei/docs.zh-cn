@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11cf4f8d9457ebff385a601786dc97334f274324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802319"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662062"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>用作可选参数类型的泛型参数必须受类约束
 使用可选参数使用不受约束为引用类型的类型参数声明的过程。  
@@ -25,7 +25,7 @@ ms.locfileid: "61802319"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   约束类型参数以接受仅为引用类型，或不使用它为可选参数。  
+- 约束类型参数以接受仅为引用类型，或不使用它为可选参数。  
   
 ## <a name="see-also"></a>请参阅
 

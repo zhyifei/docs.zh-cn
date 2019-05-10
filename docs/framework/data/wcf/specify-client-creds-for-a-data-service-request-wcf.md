@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed32cb7d1c9da8a98333bc7eddd3e5707e4664ff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875575"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660869"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>如何：指定数据服务的客户端凭据请求 （WCF 数据服务）
 默认情况下，客户端库在向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务发送请求时不提供凭据。 但是，可以通过为 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 属性提供 <xref:System.Data.Services.Client.DataServiceContext> 以指定发送凭据，对发送到数据服务的请求进行身份验证。 有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 本主题中的示例演示如何显式提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端从数据服务请求数据时使用的凭据。  
@@ -44,11 +44,11 @@ ms.locfileid: "61875575"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  本主题中的示例适用以下安全注意事项：  
   
--   为验证此示例中提供的凭据是否能够正常工作，罗斯文数据服务必须使用一种非匿名访问的身份验证方案。 否则，承载数据服务的网站将不会请求凭据。  
+- 为验证此示例中提供的凭据是否能够正常工作，罗斯文数据服务必须使用一种非匿名访问的身份验证方案。 否则，承载数据服务的网站将不会请求凭据。  
   
--   用户凭据应仅在执行过程中请求并且不应缓存。 必须始终安全地存储凭据。  
+- 用户凭据应仅在执行过程中请求并且不应缓存。 必须始终安全地存储凭据。  
   
--   使用基本和摘要式身份验证发送的数据不会加密，因此攻击者会看到数据。 此外，基本身份验证凭据（用户名和密码）是以明文形式发送的，会被截取。  
+- 使用基本和摘要式身份验证发送的数据不会加密，因此攻击者会看到数据。 此外，基本身份验证凭据（用户名和密码）是以明文形式发送的，会被截取。  
   
  有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。  
   

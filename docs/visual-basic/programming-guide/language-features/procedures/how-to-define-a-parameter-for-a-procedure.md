@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863696"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665382"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定义参数的过程 (Visual Basic)
 一个*参数*允许调用代码将调用它时，将值传递给过程。 声明过程每个参数相同的方式声明变量，指定其名称和数据类型。 您还指定的传递机制，以及该参数是否可选。  
@@ -46,11 +46,11 @@ ms.locfileid: "61863696"
   
      指定所有编程元素的数据类型被称为*强类型化*。 当您将设置`Option Strict On`，Visual Basic 强制实施强类型化。 这是强烈建议，原因如下：  
   
-    -   这样，对变量和参数的 IntelliSense 支持。 这样可以查看其属性和其他成员，当您键入代码。  
+    - 这样，对变量和参数的 IntelliSense 支持。 这样可以查看其属性和其他成员，当您键入代码。  
   
-    -   它允许编译器执行类型检查。 这有助于 catch 语句可以在运行时因等溢出错误而失败。 不支持它们的对象，它还捕获对方法的调用。  
+    - 它允许编译器执行类型检查。 这有助于 catch 语句可以在运行时因等溢出错误而失败。 不支持它们的对象，它还捕获对方法的调用。  
   
-    -   这会导致代码更快地执行。 原因之一就是，如果不指定编程元素的数据类型，Visual Basic 编译器为其分配`Object`类型。 已编译的代码可能需要将之间来回转换`Object`和其他数据类型，这会降低性能。  
+    - 这会导致代码更快地执行。 原因之一就是，如果不指定编程元素的数据类型，Visual Basic 编译器为其分配`Object`类型。 已编译的代码可能需要将之间来回转换`Object`和其他数据类型，这会降低性能。  
   
 ## <a name="see-also"></a>请参阅
 

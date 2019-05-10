@@ -10,12 +10,12 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2b9524b6a3e3c77d3c68c4d9e138b8c0e2a9373
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913113"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662296"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>如何：呈现视觉样式元素
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空间公开了<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>对象，后者表示 Windows 用户界面 (UI) 元素支持的视觉样式。 本主题演示如何使用<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>类来呈现<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，它表示**注销**并**关机**开始菜单的按钮。  
@@ -37,11 +37,11 @@ ms.locfileid: "61913113"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   自定义控件派生自<xref:System.Windows.Forms.Control>类。  
+- 自定义控件派生自<xref:System.Windows.Forms.Control>类。  
   
--   一个<xref:System.Windows.Forms.Form>承载自定义控件。  
+- 一个<xref:System.Windows.Forms.Form>承载自定义控件。  
   
--   对引用<xref:System?displayProperty=nameWithType>， <xref:System.Drawing?displayProperty=nameWithType>， <xref:System.Windows.Forms?displayProperty=nameWithType>，和<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空间。  
+- 对引用<xref:System?displayProperty=nameWithType>， <xref:System.Drawing?displayProperty=nameWithType>， <xref:System.Windows.Forms?displayProperty=nameWithType>，和<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空间。  
   
 ## <a name="see-also"></a>请参阅
 

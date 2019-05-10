@@ -2,12 +2,12 @@
 title: SqlClient 对高可用性的支持，灾难恢复
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876079"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645924"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
 本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
@@ -21,9 +21,9 @@ ms.locfileid: "61876079"
   
  以下连接属性已添加到 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的 SqlClient：  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  您可通过编程方式修改这些连接字符串关键字：  
   
@@ -45,17 +45,17 @@ ms.locfileid: "61876079"
   
  使用以下准则来连接到可用性组中的服务器或 SQL Server 2012 故障转移群集实例：  
   
--   连接到单子网或多子网时使用 `MultiSubnetFailover` 连接属性，这样可提高它们的性能。  
+- 连接到单子网或多子网时使用 `MultiSubnetFailover` 连接属性，这样可提高它们的性能。  
   
--   要连接到可用性组，请在连接字符串中指定作为服务器的可用性组的可用性组侦听器。  
+- 要连接到可用性组，请在连接字符串中指定作为服务器的可用性组的可用性组侦听器。  
   
--   连接到 SQL Server 实例配置有 64 个以上的 IP 地址将导致连接失败。  
+- 连接到 SQL Server 实例配置有 64 个以上的 IP 地址将导致连接失败。  
   
--   使用的应用程序的行为`MultiSubnetFailover`连接属性不受影响的身份验证的类型：SQL Server 身份验证、 Kerberos 身份验证或 Windows 身份验证。  
+- 使用的应用程序的行为`MultiSubnetFailover`连接属性不受影响的身份验证的类型：SQL Server 身份验证、 Kerberos 身份验证或 Windows 身份验证。  
   
--   增加 `Connect Timeout` 的值以延长故障转移时间并减少应用程序连接重试次数。  
+- 增加 `Connect Timeout` 的值以延长故障转移时间并减少应用程序连接重试次数。  
   
--   不支持分布式事务。  
+- 不支持分布式事务。  
   
  如果只读路由无效，在下列情况下连接到辅助副本位置将失败：  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30033
 ms.assetid: 3d07f6d0-9a2f-49ca-94e8-1e354932e855
-ms.openlocfilehash: ea0469d623bab226d410b5cf1401d08fc60710cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 91a5cc5c822b837657502aa82d2dd9b48b237b9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649785"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661995"
 ---
 # <a name="identifier-is-too-long"></a>标识符太长
 名称或标识符的每个编程元素被限制为 1023年个字符。 此外，完全限定的名称不能超过 1023年个字符。 这意味着，整个标识符字符串 (`<namespace>.<...>.<namespace>.<class>.<element>`) 不能超过 1023年个字符之间，包括成员访问运算符 (`.`) 字符。  

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06bf058fe51c59b6619a296ab3d6093224ab8937
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875324"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660531"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF 数据服务客户端实用工具 (DataSvcUtil.exe)
 
 DataSvcUtil.exe 是由 WCF 数据服务使用提供的命令行工具[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源，并生成从.NET Framework 客户端应用程序访问数据服务所需的客户端数据服务类。 通过使用以下元数据源，该实用工具可以生成数据类：
 
--   数据服务的根 URI。 该实用工具会请求描述数据服务所公开的数据模型的服务元数据文档。 有关详细信息，请参阅[OData:服务元数据文档](https://go.microsoft.com/fwlink/?LinkId=186070)。
+- 数据服务的根 URI。 该实用工具会请求描述数据服务所公开的数据模型的服务元数据文档。 有关详细信息，请参阅[OData:服务元数据文档](https://go.microsoft.com/fwlink/?LinkId=186070)。
 
--   使用定义的概念架构定义语言 (CSDL) 中定义的数据模型文件 (.csdl) [ \[MC CSDL\]:概念架构定义文件格式](https://go.microsoft.com/fwlink/?LinkID=159072)规范。
+- 使用定义的概念架构定义语言 (CSDL) 中定义的数据模型文件 (.csdl) [ \[MC CSDL\]:概念架构定义文件格式](https://go.microsoft.com/fwlink/?LinkID=159072)规范。
 
--   使用随实体框架提供的实体数据模型工具创建的 .edmx 文件。 有关详细信息，请参阅[ \[MC EDMX\]:用于数据服务打包格式的实体数据模型](https://go.microsoft.com/fwlink/?LinkID=178833)规范。
+- 使用随实体框架提供的实体数据模型工具创建的 .edmx 文件。 有关详细信息，请参阅[ \[MC EDMX\]:用于数据服务打包格式的实体数据模型](https://go.microsoft.com/fwlink/?LinkID=178833)规范。
 
 有关详细信息，请参阅[如何：手动生成客户端数据服务类](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。
 

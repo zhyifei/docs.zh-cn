@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3321a9a290e6ba49be289848e4d16907ad9edbda
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802292"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662582"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>类型转换函数 (Visual Basic)
 这些函数是代码的内联方式编译，这意味着转换代码计算表达式的值的一部分。 有时是没有调用过程，以完成转换，从而提高性能。 每个函数都强制转换为特定的数据类型的表达式。  
@@ -171,21 +171,21 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>行为  
   
--   **强制转换。** 一般情况下，可以使用数据类型转换函数要强制转换到特定的数据类型，而不是默认数据类型操作的结果。 例如，使用`CDec`强制执行在其中单精度、 双精度或整型运算将通常会发生的情况下小数运算。  
+- **强制转换。** 一般情况下，可以使用数据类型转换函数要强制转换到特定的数据类型，而不是默认数据类型操作的结果。 例如，使用`CDec`强制执行在其中单精度、 双精度或整型运算将通常会发生的情况下小数运算。  
   
--   **失败的转换。** 如果`expression`传递给函数是外部的数据类型范围它是要转换<xref:System.OverflowException>时发生。  
+- **失败的转换。** 如果`expression`传递给函数是外部的数据类型范围它是要转换<xref:System.OverflowException>时发生。  
   
--   **小数部分。** 当将非整型值转换为整型类型，整数转换函数 (`CByte`， `CInt`， `CLng`， `CSByte`， `CShort`， `CUInt`， `CULng`，和`CUShort`) 中删除小数部分和舍入到最接近的整数值。  
+- **小数部分。** 当将非整型值转换为整型类型，整数转换函数 (`CByte`， `CInt`， `CLng`， `CSByte`， `CShort`， `CUInt`， `CULng`，和`CUShort`) 中删除小数部分和舍入到最接近的整数值。  
   
      如果小数部分正好是 0.5，整数转换函数将其舍入为接近的偶数。 例如，0.5 舍入为 0，和 1.5 和 2.5 舍入为 2。 这有时称为*银行家的舍入*，其目的是将许多这样的数字相加时可能会累积的偏补偿。  
   
      `CInt` 并`CLng`有所不同<xref:Microsoft.VisualBasic.Conversion.Int%2A>和<xref:Microsoft.VisualBasic.Conversion.Fix%2A>函数，它截断，而不是舍入的数字的小数部分。 此外，`Fix`和`Int`始终返回相同的数据类型的值与传入的。  
   
--   **日期/时间转换。** 使用<xref:Microsoft.VisualBasic.Information.IsDate%2A>函数来确定一个值，是否可以转换为日期和时间。 `CDate` 识别的日期文本和时间文本，但不是数字值。 转换 Visual Basic 6.0`Date`值设为`Date`在 Visual Basic 2005 中的值或更高版本，可以使用<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>方法。  
+- **日期/时间转换。** 使用<xref:Microsoft.VisualBasic.Information.IsDate%2A>函数来确定一个值，是否可以转换为日期和时间。 `CDate` 识别的日期文本和时间文本，但不是数字值。 转换 Visual Basic 6.0`Date`值设为`Date`在 Visual Basic 2005 中的值或更高版本，可以使用<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>方法。  
   
--   **非特定于日期/时间值。** [日期数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)始终包含日期和时间信息。 为进行类型转换，Visual Basic 将 1/1/0001 (年 1 月 1 年 1) 要*中性值*次为非特定值的日期，和 00:00:00 （午夜）。 如果您在转换`Date`值为一个字符串，`CStr`不在生成的字符串中包括非特定值。 例如，如果您将转换`#January 1, 0001 9:30:00#`为一个字符串，则结果为"9:30:00 AM"; 禁止显示日期信息。 但是，日期信息仍会在原始`Date`值和可恢复函数如<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>函数。  
+- **非特定于日期/时间值。** [日期数据类型](../../../visual-basic/language-reference/data-types/date-data-type.md)始终包含日期和时间信息。 为进行类型转换，Visual Basic 将 1/1/0001 (年 1 月 1 年 1) 要*中性值*次为非特定值的日期，和 00:00:00 （午夜）。 如果您在转换`Date`值为一个字符串，`CStr`不在生成的字符串中包括非特定值。 例如，如果您将转换`#January 1, 0001 9:30:00#`为一个字符串，则结果为"9:30:00 AM"; 禁止显示日期信息。 但是，日期信息仍会在原始`Date`值和可恢复函数如<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>函数。  
   
--   **区域差异。** 涉及到字符串类型转换函数执行基于应用程序的当前区域性设置的转换。 例如，`CDate`识别根据您的系统的区域设置日期的格式。 必须提供一天、 月和年按正确的顺序为区域设置，或可能不正确解释日期。 如果它包含一个星期的字符串，例如"Wednesday"无法识别的长日期格式。  
+- **区域差异。** 涉及到字符串类型转换函数执行基于应用程序的当前区域性设置的转换。 例如，`CDate`识别根据您的系统的区域设置日期的格式。 必须提供一天、 月和年按正确的顺序为区域设置，或可能不正确解释日期。 如果它包含一个星期的字符串，例如"Wednesday"无法识别的长日期格式。  
   
      如果需要将转换为或格式不是由您的区域设置指定的值的字符串表示形式，则不能使用 Visual Basic 类型转换函数。 若要执行此操作，请使用`ToString(IFormatProvider)`和`Parse(String, IFormatProvider)`该值的类型的方法。 例如，使用<xref:System.Double.Parse%2A?displayProperty=nameWithType>转换为字符串时`Double`，并使用<xref:System.Double.ToString%2A?displayProperty=nameWithType>类型的值转换时`Double`为字符串。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92fc78aa7645abb742fdb38c360ac6641b1591d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627060"
 ---
 # <a name="data-member-default-values"></a>数据成员默认值
 在中[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，类型具有的概念*默认值*。 例如，对于任何引用类型，默认值为 `null`，而整型的默认值为零。 如果某个数据成员设置为其默认值，有时会希望序列化数据中不包含该数据成员。 由于成员具有默认值，这个实际值不需要进行序列化；这样处理可以提高性能。  
@@ -50,9 +50,9 @@ ms.locfileid: "61857111"
 ### <a name="schema-representation"></a>架构表示形式  
  XML 架构定义语言 (XSD) 架构表示形式的数据成员的详细信息时`EmitDefaultValue`属性设置为`false`中讨论[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 下面是简要概述：  
   
--   当<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>设置为`false`，表示架构中为特定于 Windows Communication Foundation (WCF) 的批注。 没有用于表示此信息的可交互操作方式。 特别是，架构中的“default”属性不用于此目的，`minOccurs` 属性仅受 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 设置的影响，而 `nillable` 属性仅受数据成员类型的影响。  
+- 当<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>设置为`false`，表示架构中为特定于 Windows Communication Foundation (WCF) 的批注。 没有用于表示此信息的可交互操作方式。 特别是，架构中的“default”属性不用于此目的，`minOccurs` 属性仅受 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 设置的影响，而 `nillable` 属性仅受数据成员类型的影响。  
   
--   要使用的实际默认值在架构中不存在。 由接收终结点负责对缺少元素进行适当解释。  
+- 要使用的实际默认值在架构中不存在。 由接收终结点负责对缺少元素进行适当解释。  
   
  在架构导入<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>属性自动设置为`false`时提到的特定于 WCF 的批注以前检测到。 对于 `false` 属性设置为 `nillable` 的引用类型，该属性也设置为 `false`，以支持在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务时常遇到的特定互操作性方案。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d2d5c34a501368ed77d6ceef73b57c6bd79be
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013902"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469501"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常量和枚举 (Visual Basic)
 Visual Basic 提供预定义的常量并为开发人员的枚举的数。 常量存储中保持不变的应用程序执行中的值。 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。  
@@ -27,7 +27,7 @@ Visual Basic 提供预定义的常量并为开发人员的枚举的数。 常量
 |`DEBUG`|一个`Boolean`值，可以在中设置该值**项目属性**对话框。 默认情况下，定义一个项目的调试配置`DEBUG`。 当`DEBUG`定义，则<xref:System.Diagnostics.Debug>类方法生成的输出**输出**窗口。 如果它不定义，<xref:System.Diagnostics.Debug>类方法不进行编译，不生成任何调试输出。|  
 |`TARGET`|一个表示命令行中的设置或项目的输出类型的字符串 **/target**选项。 可能值`TARGET`是：<br /><br /> -"winexe"为 Windows 应用程序。<br />-"exe"的控制台应用程序。<br />-类库"库"。<br />-对于模块"模块"。<br />- **/Target**可能会在 Visual Studio 集成的开发环境中设置选项。 有关详细信息，请参阅[/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
 |`TRACE`|一个`Boolean`值，可以在中设置该值**项目属性**对话框。 默认情况下，项目的所有配置都定义`TRACE`。 当`TRACE`定义，则<xref:System.Diagnostics.Trace>类方法生成的输出**输出**窗口。 未定义，当<xref:System.Diagnostics.Trace>类方法将不被编译，但不`Trace`生成输出。|  
-|`VBC_VER`|一个表示 Visual Basic 版本中的数字*主要*。*次要*格式。 版本的版本号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]是 8.0。|  
+|`VBC_VER`|一个表示 Visual Basic 版本中的数字*主要*。*次要*格式。|  
   
 ### <a name="print-and-display-constants"></a>打印和显示常量  
  当调用打印和显示功能时，您可以代替实际值在代码中使用以下常量。  

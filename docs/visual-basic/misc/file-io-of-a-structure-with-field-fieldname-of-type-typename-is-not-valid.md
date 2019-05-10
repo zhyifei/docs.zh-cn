@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedFieldType2
 ms.assetid: 028e936f-6210-4290-adb2-46298e13e160
-ms.openlocfilehash: 3c6e275480e4ae20be4a6d60fc78b4618e5c9069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ca40fb53beb5a7888456547747d2fb957c6ef0ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024854"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624912"
 ---
 # <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>文件 I/O 具有字段的结构\<fieldname > 类型的\<类型名称 > 无效
 试图向文件写入的结构包含不支持的类型。  
