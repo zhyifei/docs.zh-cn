@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825da3a09f8b8013ffecaedfee0dce2362c8a7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d6e5b74e508f55ec8e94b09960e496ff21936228
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598969"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586975"
 ---
-# <a name="functionenter2-function"></a><span data-ttu-id="04ae9-102">FunctionEnter2 函数</span><span class="sxs-lookup"><span data-stu-id="04ae9-102">FunctionEnter2 Function</span></span>
-<span data-ttu-id="04ae9-103">通知探查器，控制被传递给函数，并介绍有关堆栈帧和函数参数。</span><span class="sxs-lookup"><span data-stu-id="04ae9-103">Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments.</span></span> <span data-ttu-id="04ae9-104">此函数取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="04ae9-104">This function supersedes the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) function.</span></span>  
+# <a name="functionenter2-function"></a><span data-ttu-id="1bc37-102">FunctionEnter2 函数</span><span class="sxs-lookup"><span data-stu-id="1bc37-102">FunctionEnter2 Function</span></span>
+<span data-ttu-id="1bc37-103">通知探查器，控制被传递给函数，并介绍有关堆栈帧和函数参数。</span><span class="sxs-lookup"><span data-stu-id="1bc37-103">Notifies the profiler that control is being passed to a function and provides information about the stack frame and function arguments.</span></span> <span data-ttu-id="1bc37-104">此函数取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="1bc37-104">This function supersedes the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04ae9-105">语法</span><span class="sxs-lookup"><span data-stu-id="04ae9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1bc37-105">语法</span><span class="sxs-lookup"><span data-stu-id="1bc37-105">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionEnter2 (  
@@ -37,50 +37,50 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="04ae9-106">参数</span><span class="sxs-lookup"><span data-stu-id="04ae9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1bc37-106">参数</span><span class="sxs-lookup"><span data-stu-id="1bc37-106">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="04ae9-107">[in]控件传递到函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="04ae9-107">[in] The identifier of the function to which control is passed.</span></span>  
+ <span data-ttu-id="1bc37-107">[in]控件传递到函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="1bc37-107">[in] The identifier of the function to which control is passed.</span></span>  
   
  `clientData`  
- <span data-ttu-id="04ae9-108">[in]通过使用以前指定探查器的重新映射的函数标识符[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="04ae9-108">[in] The remapped function identifier, which the profiler previously specified by using the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
+ <span data-ttu-id="1bc37-108">[in]通过使用以前指定探查器的重新映射的函数标识符[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="1bc37-108">[in] The remapped function identifier, which the profiler previously specified by using the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
   
  `func`  
- <span data-ttu-id="04ae9-109">[in]一个`COR_PRF_FRAME_INFO`值，该值指向有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="04ae9-109">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="1bc37-109">[in]一个`COR_PRF_FRAME_INFO`值，该值指向有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="1bc37-109">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="04ae9-110">探查器应将此视为可以传递回执行引擎的不透明句柄[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="04ae9-110">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="1bc37-110">探查器应将此视为可以传递回执行引擎的不透明句柄[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="1bc37-110">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
  `argumentInfo`  
- <span data-ttu-id="04ae9-111">[in]一个指向[COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)结构，它在内存中的函数的参数指定的位置。</span><span class="sxs-lookup"><span data-stu-id="04ae9-111">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that specifies the locations in memory of the function's arguments.</span></span>  
+ <span data-ttu-id="1bc37-111">[in]一个指向[COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)结构，它在内存中的函数的参数指定的位置。</span><span class="sxs-lookup"><span data-stu-id="1bc37-111">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that specifies the locations in memory of the function's arguments.</span></span>  
   
- <span data-ttu-id="04ae9-112">若要访问参数的信息，`COR_PRF_ENABLE_FUNCTION_ARGS`标志必须设置。</span><span class="sxs-lookup"><span data-stu-id="04ae9-112">In order to access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag must be set.</span></span> <span data-ttu-id="04ae9-113">可以使用探查器[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法设置的事件标志。</span><span class="sxs-lookup"><span data-stu-id="04ae9-113">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
+ <span data-ttu-id="1bc37-112">若要访问参数的信息，`COR_PRF_ENABLE_FUNCTION_ARGS`标志必须设置。</span><span class="sxs-lookup"><span data-stu-id="1bc37-112">In order to access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag must be set.</span></span> <span data-ttu-id="1bc37-113">可以使用探查器[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法设置的事件标志。</span><span class="sxs-lookup"><span data-stu-id="1bc37-113">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="04ae9-114">备注</span><span class="sxs-lookup"><span data-stu-id="04ae9-114">Remarks</span></span>  
- <span data-ttu-id="04ae9-115">值`func`并`argumentInfo`参数都不是有效后`FunctionEnter2`函数返回，因为这些值可能会更改或已损坏。</span><span class="sxs-lookup"><span data-stu-id="04ae9-115">The values of the `func` and `argumentInfo` parameters are not valid after the `FunctionEnter2` function returns because the values may change or be destroyed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1bc37-114">备注</span><span class="sxs-lookup"><span data-stu-id="1bc37-114">Remarks</span></span>  
+ <span data-ttu-id="1bc37-115">值`func`并`argumentInfo`参数都不是有效后`FunctionEnter2`函数返回，因为这些值可能会更改或已损坏。</span><span class="sxs-lookup"><span data-stu-id="1bc37-115">The values of the `func` and `argumentInfo` parameters are not valid after the `FunctionEnter2` function returns because the values may change or be destroyed.</span></span>  
   
- <span data-ttu-id="04ae9-116">`FunctionEnter2`函数是一个回调; 必须实现它。</span><span class="sxs-lookup"><span data-stu-id="04ae9-116">The `FunctionEnter2` function is a callback; you must implement it.</span></span> <span data-ttu-id="04ae9-117">实现必须使用`__declspec`(`naked`) 存储类特性。</span><span class="sxs-lookup"><span data-stu-id="04ae9-117">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="1bc37-116">`FunctionEnter2`函数是一个回调; 必须实现它。</span><span class="sxs-lookup"><span data-stu-id="1bc37-116">The `FunctionEnter2` function is a callback; you must implement it.</span></span> <span data-ttu-id="1bc37-117">实现必须使用`__declspec`(`naked`) 存储类特性。</span><span class="sxs-lookup"><span data-stu-id="1bc37-117">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="04ae9-118">调用此函数之前，执行引擎不会保存任何寄存器。</span><span class="sxs-lookup"><span data-stu-id="04ae9-118">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="1bc37-118">调用此函数之前，执行引擎不会保存任何寄存器。</span><span class="sxs-lookup"><span data-stu-id="1bc37-118">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="04ae9-119">在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。</span><span class="sxs-lookup"><span data-stu-id="04ae9-119">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="1bc37-119">在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。</span><span class="sxs-lookup"><span data-stu-id="1bc37-119">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="04ae9-120">退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。</span><span class="sxs-lookup"><span data-stu-id="04ae9-120">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="1bc37-120">退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。</span><span class="sxs-lookup"><span data-stu-id="1bc37-120">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="04ae9-121">实现`FunctionEnter2`不应阻止，因为它会延迟垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="04ae9-121">The implementation of `FunctionEnter2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="04ae9-122">实现不应尝试垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。</span><span class="sxs-lookup"><span data-stu-id="04ae9-122">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="04ae9-123">如果尝试在垃圾回收，则运行时将阻止直到`FunctionEnter2`返回。</span><span class="sxs-lookup"><span data-stu-id="04ae9-123">If a garbage collection is attempted, the runtime will block until `FunctionEnter2` returns.</span></span>  
+ <span data-ttu-id="1bc37-121">实现`FunctionEnter2`不应阻止，因为它会延迟垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="1bc37-121">The implementation of `FunctionEnter2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="1bc37-122">实现不应尝试垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。</span><span class="sxs-lookup"><span data-stu-id="1bc37-122">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="1bc37-123">如果尝试在垃圾回收，则运行时将阻止直到`FunctionEnter2`返回。</span><span class="sxs-lookup"><span data-stu-id="1bc37-123">If a garbage collection is attempted, the runtime will block until `FunctionEnter2` returns.</span></span>  
   
- <span data-ttu-id="04ae9-124">此外，`FunctionEnter2`函数不能调用到托管代码中或以任何方式导致托管的内存分配。</span><span class="sxs-lookup"><span data-stu-id="04ae9-124">Also, the `FunctionEnter2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="1bc37-124">此外，`FunctionEnter2`函数不能调用到托管代码中或以任何方式导致托管的内存分配。</span><span class="sxs-lookup"><span data-stu-id="1bc37-124">Also, the `FunctionEnter2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04ae9-125">要求</span><span class="sxs-lookup"><span data-stu-id="04ae9-125">Requirements</span></span>  
- <span data-ttu-id="04ae9-126">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="04ae9-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1bc37-125">要求</span><span class="sxs-lookup"><span data-stu-id="1bc37-125">Requirements</span></span>  
+ <span data-ttu-id="1bc37-126">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1bc37-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04ae9-127">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="04ae9-127">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="1bc37-127">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="1bc37-127">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="04ae9-128">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04ae9-128">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1bc37-128">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1bc37-128">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="04ae9-129">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04ae9-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1bc37-129">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1bc37-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04ae9-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="04ae9-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bc37-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="1bc37-130">See also</span></span>
 
-- [<span data-ttu-id="04ae9-131">FunctionLeave2 函数</span><span class="sxs-lookup"><span data-stu-id="04ae9-131">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="04ae9-132">FunctionTailcall2 函数</span><span class="sxs-lookup"><span data-stu-id="04ae9-132">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="04ae9-133">SetEnterLeaveFunctionHooks2 方法</span><span class="sxs-lookup"><span data-stu-id="04ae9-133">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="04ae9-134">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="04ae9-134">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="1bc37-131">FunctionLeave2 函数</span><span class="sxs-lookup"><span data-stu-id="1bc37-131">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="1bc37-132">FunctionTailcall2 函数</span><span class="sxs-lookup"><span data-stu-id="1bc37-132">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="1bc37-133">SetEnterLeaveFunctionHooks2 方法</span><span class="sxs-lookup"><span data-stu-id="1bc37-133">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="1bc37-134">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="1bc37-134">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16e086f54865307e116a9e522b2fbadee8502249
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1ec24952b91f5d959c1ac0bb50e2bbe4b94002b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598943"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586799"
 ---
-# <a name="functionenter3withinfo-function"></a><span data-ttu-id="f050e-102">FunctionEnter3WithInfo 函数</span><span class="sxs-lookup"><span data-stu-id="f050e-102">FunctionEnter3WithInfo Function</span></span>
-<span data-ttu-id="f050e-103">通知探查器正在将控件传递给函数，并提供句柄，可传递给[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数参数。</span><span class="sxs-lookup"><span data-stu-id="f050e-103">Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.</span></span>  
+# <a name="functionenter3withinfo-function"></a><span data-ttu-id="58b7d-102">FunctionEnter3WithInfo 函数</span><span class="sxs-lookup"><span data-stu-id="58b7d-102">FunctionEnter3WithInfo Function</span></span>
+<span data-ttu-id="58b7d-103">通知探查器正在将控件传递给函数，并提供句柄，可传递给[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数参数。</span><span class="sxs-lookup"><span data-stu-id="58b7d-103">Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f050e-104">语法</span><span class="sxs-lookup"><span data-stu-id="f050e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58b7d-104">语法</span><span class="sxs-lookup"><span data-stu-id="58b7d-104">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionEnter3WithInfo(  
@@ -34,40 +34,40 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f050e-105">参数</span><span class="sxs-lookup"><span data-stu-id="f050e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="58b7d-105">参数</span><span class="sxs-lookup"><span data-stu-id="58b7d-105">Parameters</span></span>  
  `functionIDOrClientID`  
- <span data-ttu-id="f050e-106">[in]控件传递到函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="f050e-106">[in] The identifier of the function to which control is passed.</span></span>  
+ <span data-ttu-id="58b7d-106">[in]控件传递到函数的标识符。</span><span class="sxs-lookup"><span data-stu-id="58b7d-106">[in] The identifier of the function to which control is passed.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="f050e-107">[in] 表示有关给定堆栈帧的信息的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="f050e-107">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="f050e-108">此句柄无效，仅在传递到回调过程。</span><span class="sxs-lookup"><span data-stu-id="f050e-108">This handle is valid only during the callback to which it is passed.</span></span>  
+ <span data-ttu-id="58b7d-107">[in] 表示有关给定堆栈帧的信息的不透明的句柄。</span><span class="sxs-lookup"><span data-stu-id="58b7d-107">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="58b7d-108">此句柄无效，仅在传递到回调过程。</span><span class="sxs-lookup"><span data-stu-id="58b7d-108">This handle is valid only during the callback to which it is passed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f050e-109">备注</span><span class="sxs-lookup"><span data-stu-id="f050e-109">Remarks</span></span>  
- <span data-ttu-id="f050e-110">`FunctionEnter3WithInfo`回调方法通知探查器，如函数调用，并启用探查器以使用[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)检查参数值。</span><span class="sxs-lookup"><span data-stu-id="f050e-110">The `FunctionEnter3WithInfo` callback method notifies the profiler as functions are called, and enables the profiler to use the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to inspect argument values.</span></span> <span data-ttu-id="f050e-111">若要访问参数信息`COR_PRF_ENABLE_FUNCTION_ARGS`标志必须设置。</span><span class="sxs-lookup"><span data-stu-id="f050e-111">To access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag has to be set.</span></span> <span data-ttu-id="f050e-112">可以使用探查器[icorprofilerinfo:: Seteventmask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)设置的事件标志，然后使用[ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)注册应用此函数的实现。</span><span class="sxs-lookup"><span data-stu-id="f050e-112">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58b7d-109">备注</span><span class="sxs-lookup"><span data-stu-id="58b7d-109">Remarks</span></span>  
+ <span data-ttu-id="58b7d-110">`FunctionEnter3WithInfo`回调方法通知探查器，如函数调用，并启用探查器以使用[ICorProfilerInfo3::GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)检查参数值。</span><span class="sxs-lookup"><span data-stu-id="58b7d-110">The `FunctionEnter3WithInfo` callback method notifies the profiler as functions are called, and enables the profiler to use the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to inspect argument values.</span></span> <span data-ttu-id="58b7d-111">若要访问参数信息`COR_PRF_ENABLE_FUNCTION_ARGS`标志必须设置。</span><span class="sxs-lookup"><span data-stu-id="58b7d-111">To access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag has to be set.</span></span> <span data-ttu-id="58b7d-112">可以使用探查器[icorprofilerinfo:: Seteventmask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)设置的事件标志，然后使用[ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)注册应用此函数的实现。</span><span class="sxs-lookup"><span data-stu-id="58b7d-112">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.</span></span>  
   
- <span data-ttu-id="f050e-113">`FunctionEnter3WithInfo`函数是一个回调; 必须实现它。</span><span class="sxs-lookup"><span data-stu-id="f050e-113">The `FunctionEnter3WithInfo` function is a callback; you must implement it.</span></span> <span data-ttu-id="f050e-114">实现必须使用`__declspec(naked)`存储类特性。</span><span class="sxs-lookup"><span data-stu-id="f050e-114">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
+ <span data-ttu-id="58b7d-113">`FunctionEnter3WithInfo`函数是一个回调; 必须实现它。</span><span class="sxs-lookup"><span data-stu-id="58b7d-113">The `FunctionEnter3WithInfo` function is a callback; you must implement it.</span></span> <span data-ttu-id="58b7d-114">实现必须使用`__declspec(naked)`存储类特性。</span><span class="sxs-lookup"><span data-stu-id="58b7d-114">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
   
- <span data-ttu-id="f050e-115">调用此函数之前，执行引擎不会保存任何寄存器。</span><span class="sxs-lookup"><span data-stu-id="f050e-115">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="58b7d-115">调用此函数之前，执行引擎不会保存任何寄存器。</span><span class="sxs-lookup"><span data-stu-id="58b7d-115">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="f050e-116">在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。</span><span class="sxs-lookup"><span data-stu-id="f050e-116">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="58b7d-116">在进入时，必须保存使用，包括浮点单元 (FPU) 中的所有注册。</span><span class="sxs-lookup"><span data-stu-id="58b7d-116">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="f050e-117">退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。</span><span class="sxs-lookup"><span data-stu-id="f050e-117">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="58b7d-117">退出时，必须通过弹出已推送到由其调用方的所有参数由还原堆栈。</span><span class="sxs-lookup"><span data-stu-id="58b7d-117">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="f050e-118">实现`FunctionEnter3WithInfo`不应阻止，因为它会延迟垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="f050e-118">The implementation of `FunctionEnter3WithInfo` should not block, because it will delay garbage collection.</span></span> <span data-ttu-id="f050e-119">实现不应尝试的垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。</span><span class="sxs-lookup"><span data-stu-id="f050e-119">The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="f050e-120">如果尝试在垃圾回收，则运行时将阻止直到`FunctionEnter3WithInfo`返回。</span><span class="sxs-lookup"><span data-stu-id="f050e-120">If a garbage collection is attempted, the runtime will block until `FunctionEnter3WithInfo` returns.</span></span>  
+ <span data-ttu-id="58b7d-118">实现`FunctionEnter3WithInfo`不应阻止，因为它会延迟垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="58b7d-118">The implementation of `FunctionEnter3WithInfo` should not block, because it will delay garbage collection.</span></span> <span data-ttu-id="58b7d-119">实现不应尝试的垃圾回收，因为堆栈可能不是在垃圾收集友好状态中。</span><span class="sxs-lookup"><span data-stu-id="58b7d-119">The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="58b7d-120">如果尝试在垃圾回收，则运行时将阻止直到`FunctionEnter3WithInfo`返回。</span><span class="sxs-lookup"><span data-stu-id="58b7d-120">If a garbage collection is attempted, the runtime will block until `FunctionEnter3WithInfo` returns.</span></span>  
   
- <span data-ttu-id="f050e-121">`FunctionEnter3WithInfo`函数不得调入托管代码或以任何方式导致托管的内存分配。</span><span class="sxs-lookup"><span data-stu-id="f050e-121">The `FunctionEnter3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.</span></span>  
+ <span data-ttu-id="58b7d-121">`FunctionEnter3WithInfo`函数不得调入托管代码或以任何方式导致托管的内存分配。</span><span class="sxs-lookup"><span data-stu-id="58b7d-121">The `FunctionEnter3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f050e-122">要求</span><span class="sxs-lookup"><span data-stu-id="f050e-122">Requirements</span></span>  
- <span data-ttu-id="f050e-123">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f050e-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58b7d-122">要求</span><span class="sxs-lookup"><span data-stu-id="58b7d-122">Requirements</span></span>  
+ <span data-ttu-id="58b7d-123">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="58b7d-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f050e-124">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="f050e-124">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="58b7d-124">**标头：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="58b7d-124">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="f050e-125">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f050e-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="58b7d-125">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58b7d-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f050e-126">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f050e-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="58b7d-126">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58b7d-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f050e-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="f050e-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58b7d-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="58b7d-127">See also</span></span>
 
-- [<span data-ttu-id="f050e-128">GetFunctionEnter3Info</span><span class="sxs-lookup"><span data-stu-id="f050e-128">GetFunctionEnter3Info</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
-- [<span data-ttu-id="f050e-129">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="f050e-129">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [<span data-ttu-id="f050e-130">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="f050e-130">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [<span data-ttu-id="f050e-131">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="f050e-131">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="58b7d-128">GetFunctionEnter3Info</span><span class="sxs-lookup"><span data-stu-id="58b7d-128">GetFunctionEnter3Info</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
+- [<span data-ttu-id="58b7d-129">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="58b7d-129">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
+- [<span data-ttu-id="58b7d-130">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="58b7d-130">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
+- [<span data-ttu-id="58b7d-131">分析全局静态函数</span><span class="sxs-lookup"><span data-stu-id="58b7d-131">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

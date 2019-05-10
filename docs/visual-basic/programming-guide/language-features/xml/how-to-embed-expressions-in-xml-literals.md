@@ -5,29 +5,29 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 31e79a8787978ffab2e35cd2827b80a8f1ed843e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca80ac666e8676e4e58a9741b00125c0126570fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61861356"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598382"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a><span data-ttu-id="54149-102">如何：在 XML 文本 (Visual Basic 中) 中嵌入表达式</span><span class="sxs-lookup"><span data-stu-id="54149-102">How to: Embed Expressions in XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="54149-103">您可以将 XML 文本与嵌入的表达式来创建 XML 文档、 片段或包含在运行时创建的内容的元素。</span><span class="sxs-lookup"><span data-stu-id="54149-103">You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time.</span></span> <span data-ttu-id="54149-104">以下示例演示如何使用嵌入式的表达式在运行时填充元素内容、 属性和元素名称。</span><span class="sxs-lookup"><span data-stu-id="54149-104">The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.</span></span>  
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a><span data-ttu-id="597eb-102">如何：在 XML 文本 (Visual Basic 中) 中嵌入表达式</span><span class="sxs-lookup"><span data-stu-id="597eb-102">How to: Embed Expressions in XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="597eb-103">您可以将 XML 文本与嵌入的表达式来创建 XML 文档、 片段或包含在运行时创建的内容的元素。</span><span class="sxs-lookup"><span data-stu-id="597eb-103">You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time.</span></span> <span data-ttu-id="597eb-104">以下示例演示如何使用嵌入式的表达式在运行时填充元素内容、 属性和元素名称。</span><span class="sxs-lookup"><span data-stu-id="597eb-104">The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.</span></span>  
   
- <span data-ttu-id="54149-105">嵌入式表达式的语法是`<%=` `exp` `%>`，这是相同的语法的[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]使用。</span><span class="sxs-lookup"><span data-stu-id="54149-105">The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uses.</span></span> <span data-ttu-id="54149-106">有关详细信息，请参阅[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="54149-106">For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span></span>  
+ <span data-ttu-id="597eb-105">嵌入式表达式的语法是`<%=` `exp` `%>`，这是相同的语法的[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]使用。</span><span class="sxs-lookup"><span data-stu-id="597eb-105">The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uses.</span></span> <span data-ttu-id="597eb-106">有关详细信息，请参阅[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="597eb-106">For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span></span>  
   
- <span data-ttu-id="54149-107">此外可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 来创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。</span><span class="sxs-lookup"><span data-stu-id="54149-107">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="54149-108">有关详细信息，请参阅 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="54149-108">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="597eb-107">此外可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 来创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。</span><span class="sxs-lookup"><span data-stu-id="597eb-107">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="597eb-108">有关详细信息，请参阅 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="597eb-108">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
-## <a name="procedures"></a><span data-ttu-id="54149-109">过程</span><span class="sxs-lookup"><span data-stu-id="54149-109">Procedures</span></span>  
+## <a name="procedures"></a><span data-ttu-id="597eb-109">过程</span><span class="sxs-lookup"><span data-stu-id="597eb-109">Procedures</span></span>  
   
-#### <a name="to-insert-text-as-element-content"></a><span data-ttu-id="54149-110">若要作为元素内容中插入文本</span><span class="sxs-lookup"><span data-stu-id="54149-110">To insert text as element content</span></span>  
+#### <a name="to-insert-text-as-element-content"></a><span data-ttu-id="597eb-110">若要作为元素内容中插入文本</span><span class="sxs-lookup"><span data-stu-id="597eb-110">To insert text as element content</span></span>  
   
--   <span data-ttu-id="54149-111">下面的示例演示如何插入文本中包含的`contactName`变量之间的开始和结束的名称元素。</span><span class="sxs-lookup"><span data-stu-id="54149-111">The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.</span></span>  
+- <span data-ttu-id="597eb-111">下面的示例演示如何插入文本中包含的`contactName`变量之间的开始和结束的名称元素。</span><span class="sxs-lookup"><span data-stu-id="597eb-111">The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.</span></span>  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
-     <span data-ttu-id="54149-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="54149-112">This example produces the following output:</span></span>  
+     <span data-ttu-id="597eb-112">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="597eb-112">This example produces the following output:</span></span>  
   
     ```xml  
     <contact>  
@@ -35,13 +35,13 @@ ms.locfileid: "61861356"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a><span data-ttu-id="54149-113">作为属性值中插入文本</span><span class="sxs-lookup"><span data-stu-id="54149-113">To insert text as an attribute value</span></span>  
+#### <a name="to-insert-text-as-an-attribute-value"></a><span data-ttu-id="597eb-113">作为属性值中插入文本</span><span class="sxs-lookup"><span data-stu-id="597eb-113">To insert text as an attribute value</span></span>  
   
--   <span data-ttu-id="54149-114">下面的示例演示如何插入中包含的文本`phoneType`变量的值作为`type`属性。</span><span class="sxs-lookup"><span data-stu-id="54149-114">The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.</span></span>  
+- <span data-ttu-id="597eb-114">下面的示例演示如何插入中包含的文本`phoneType`变量的值作为`type`属性。</span><span class="sxs-lookup"><span data-stu-id="597eb-114">The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.</span></span>  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
-     <span data-ttu-id="54149-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="54149-115">This example produces the following output:</span></span>  
+     <span data-ttu-id="597eb-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="597eb-115">This example produces the following output:</span></span>  
   
     ```xml  
     <contact>  
@@ -49,15 +49,15 @@ ms.locfileid: "61861356"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a><span data-ttu-id="54149-116">若要插入的元素名称的文本</span><span class="sxs-lookup"><span data-stu-id="54149-116">To insert text for an element name</span></span>  
+#### <a name="to-insert-text-for-an-element-name"></a><span data-ttu-id="597eb-116">若要插入的元素名称的文本</span><span class="sxs-lookup"><span data-stu-id="597eb-116">To insert text for an element name</span></span>  
   
--   <span data-ttu-id="54149-117">下面的示例演示如何插入文本中包含的`elementName`变量作为元素的名称。</span><span class="sxs-lookup"><span data-stu-id="54149-117">The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.</span></span>  
+- <span data-ttu-id="597eb-117">下面的示例演示如何插入文本中包含的`elementName`变量作为元素的名称。</span><span class="sxs-lookup"><span data-stu-id="597eb-117">The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.</span></span>  
   
-     <span data-ttu-id="54149-118">创建元素时使用此技术，必须将它们与\</ > 标记。</span><span class="sxs-lookup"><span data-stu-id="54149-118">When creating elements by using this technique, you must close them with the \</> tag.</span></span>  
+     <span data-ttu-id="597eb-118">创建元素时使用此技术，必须将它们与\</ > 标记。</span><span class="sxs-lookup"><span data-stu-id="597eb-118">When creating elements by using this technique, you must close them with the \</> tag.</span></span>  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
-     <span data-ttu-id="54149-119">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="54149-119">This example produces the following output:</span></span>  
+     <span data-ttu-id="597eb-119">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="597eb-119">This example produces the following output:</span></span>  
   
     ```xml  
     <contact>  
@@ -65,9 +65,9 @@ ms.locfileid: "61861356"
     </contact>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="54149-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="54149-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="597eb-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="597eb-120">See also</span></span>
 
-- [<span data-ttu-id="54149-121">如何：创建 XML 文本</span><span class="sxs-lookup"><span data-stu-id="54149-121">How to: Create XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
-- [<span data-ttu-id="54149-122">XML 中的嵌入式表达式</span><span class="sxs-lookup"><span data-stu-id="54149-122">Embedded Expressions in XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [<span data-ttu-id="54149-123">在 Visual Basic 中创建 XML</span><span class="sxs-lookup"><span data-stu-id="54149-123">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [<span data-ttu-id="54149-124">XML</span><span class="sxs-lookup"><span data-stu-id="54149-124">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="597eb-121">如何：创建 XML 文本</span><span class="sxs-lookup"><span data-stu-id="597eb-121">How to: Create XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [<span data-ttu-id="597eb-122">XML 中的嵌入式表达式</span><span class="sxs-lookup"><span data-stu-id="597eb-122">Embedded Expressions in XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [<span data-ttu-id="597eb-123">在 Visual Basic 中创建 XML</span><span class="sxs-lookup"><span data-stu-id="597eb-123">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="597eb-124">XML</span><span class="sxs-lookup"><span data-stu-id="597eb-124">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
