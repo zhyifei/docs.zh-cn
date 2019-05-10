@@ -2,12 +2,12 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0a98bfd401aaabfb754c422cc753bc5092f9f76c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771848"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633343"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 Oracle.NET Framework 数据提供程序支持 Oracle **REF CURSOR**数据类型。 在通过数据提供程序使用 Oracle REF CURSOR 时，应考虑下列行为。  

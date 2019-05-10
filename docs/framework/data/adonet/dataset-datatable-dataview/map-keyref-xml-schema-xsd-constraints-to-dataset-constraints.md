@@ -2,12 +2,12 @@
 title: 将 keyref XML 架构 (XSD) 约束映射到数据集约束
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607483"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604027"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>将 keyref XML 架构 (XSD) 约束映射到数据集约束
 **Keyref**元素可用于在文档内的元素之间建立链接。 它类似于关系数据库中的外键关系。 如果指定了架构**keyref**元素，元素转换到的表中的列上的相应外键约束在架构映射过程<xref:System.Data.DataSet>。 默认情况下**keyref**元素还会生成关系，使用**ParentTable**， **ChildTable**， **ParentColumn**，和**ChildColumn**对关系指定的属性。  

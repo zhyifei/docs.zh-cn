@@ -13,19 +13,19 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609402"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在运行时 （Windows 窗体） 设置图片
 你可以以编程方式设置 Windows 窗体显示的图像<xref:System.Windows.Forms.PictureBox>控件。  
   
 ### <a name="to-set-a-picture-programmatically"></a>若要以编程方式设置图片  
   
--   设置<xref:System.Windows.Forms.PictureBox.Image%2A>属性使用<xref:System.Drawing.Image.FromFile%2A>方法的<xref:System.Drawing.Image>类。  
+- 设置<xref:System.Windows.Forms.PictureBox.Image%2A>属性使用<xref:System.Drawing.Image.FromFile%2A>方法的<xref:System.Drawing.Image>类。  
   
      在下面的示例中，设置的位置的路径是映像的 My Documents 文件夹。 此操作后，因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62013226"
   
 ### <a name="to-clear-a-graphic"></a>若要清除图形  
   
--   首先，释放正在使用的映像的内存，然后清除该图形。 垃圾回收将释放的内存更高版本如果内存管理成为问题。  
+- 首先，释放正在使用的映像的内存，然后清除该图形。 垃圾回收将释放的内存更高版本如果内存管理成为问题。  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

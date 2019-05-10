@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aafd494a2330609f68295588cf649bc4666f4cfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614882"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 编程和宿主保护特性
 在 SQL Server 主机中加载和执行托管代码需要满足主机对代码访问安全性和主机资源保护的要求。  代码访问安全性要求由三个 SQL Server 权限集之一指定：SAFE、 EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 权限集内执行的代码必须避免某些类型或应用了 <xref:System.Security.Permissions.HostProtectionAttribute> 属性的成员。 <xref:System.Security.Permissions.HostProtectionAttribute> 不是可靠性保证的安全权限，因为它标识主机可能禁止的特定代码结构（类型或方法）。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 可执行有助于保护主机稳定性的编程模型。  

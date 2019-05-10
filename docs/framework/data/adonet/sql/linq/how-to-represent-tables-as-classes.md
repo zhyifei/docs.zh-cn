@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
-ms.openlocfilehash: 49e7d6768d8739bba94c9e8d38bcc582c8bd6e4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff943fbc7ae137128d6c635fd2366ad14cf70d15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902897"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620022"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>如何：将表表示为类
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.TableAttribute>属性来将某个类指定为与数据库表关联的实体类。  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>将类映射到数据库表  
   
--   将 <xref:System.Data.Linq.Mapping.TableAttribute> 属性添加到类声明中。  
+- 将 <xref:System.Data.Linq.Mapping.TableAttribute> 属性添加到类声明中。  
   
 ## <a name="example"></a>示例  
  下面的代码创建作为与 `Customer` 数据库表关联的实体类的 `Customers` 类。  

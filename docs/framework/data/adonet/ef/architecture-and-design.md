@@ -2,12 +2,12 @@
 title: 体系结构和设计
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20edf6e2546830fd9fa764a2936987c573b8283a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606837"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632032"
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
 中的 SQL 生成模块[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。  

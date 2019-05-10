@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306490"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618051"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>演练：操作数据 (Visual Basic)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -21,13 +21,13 @@ ms.locfileid: "59306490"
 ## <a name="prerequisites"></a>系统必备  
  本演练需要如下内容：  
   
--   本演练使用专用文件夹（“c:\linqtest2”）来保存文件。 请在开始本演练前创建此文件夹。  
+- 本演练使用专用文件夹（“c:\linqtest2”）来保存文件。 请在开始本演练前创建此文件夹。  
   
--   Northwind 示例数据库。  
+- Northwind 示例数据库。  
   
      如果您的开发计算机上没有此数据库，您可以从 Microsoft 下载网站下载它。 有关说明，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下载此数据库后，请将 northwnd.mdf 文件复制到 c:\linqtest2 文件夹。  
   
--   从 Northwind 数据库生成的 Visual Basic 代码文件。  
+- 从 Northwind 数据库生成的 Visual Basic 代码文件。  
   
      可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 工具生成此文件。 本演练是通过使用 SQLMetal 工具以及如下命令行编写的：  
   
@@ -38,17 +38,17 @@ ms.locfileid: "59306490"
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
   
--   创建[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
+- 创建[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
   
--   向项目添加数据库代码文件。  
+- 向项目添加数据库代码文件。  
   
--   创建新的客户对象。  
+- 创建新的客户对象。  
   
--   修改客户的联系人姓名。  
+- 修改客户的联系人姓名。  
   
--   删除订单。  
+- 删除订单。  
   
--   将这些更改提交至 Northwind 数据库。  
+- 将这些更改提交至 Northwind 数据库。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
  在此第一个任务中，创建一个包含必要的引用，生成并运行的 Visual Studio 解决方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  
@@ -136,7 +136,7 @@ ms.locfileid: "59306490"
   
 #### <a name="to-change-the-name-of-a-customer"></a>更改客户的姓名  
   
--   将下面的代码添加到 `Console.ReadLine()` 上方：  
+- 将下面的代码添加到 `Console.ReadLine()` 上方：  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ ms.locfileid: "59306490"
   
 #### <a name="to-delete-a-row"></a>删除行  
   
--   将下面的代码添加到 `Console.ReadLine()` 上方紧靠它的位置：  
+- 将下面的代码添加到 `Console.ReadLine()` 上方紧靠它的位置：  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b9a9061503ae4bf68903f35eb7624deed2f34c9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788071"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616604"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 关键字和级别
 <a name="top"></a> Windows (ETW) 事件的事件跟踪可以按类别和级别进行筛选。 事件 [CLR ETW 关键字](#keywords) 启用按类别筛选事件；它们用于运行时提供程序和断开提供程序的组合。 [事件级别](#levels) 由标志来标识。  
@@ -37,7 +37,7 @@ ms.locfileid: "61788071"
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW 运行时关键字  
  下表列出了 CLR ETW 运行时关键字、它们的值以及它们的用途。  
   
-|运行时关键字名称|“值”|用途|  
+|运行时关键字名称|值|用途|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|启用 [垃圾回收事件](../../../docs/framework/performance/garbage-collection-etw-events.md)的回收。|  
 |`LoaderKeyword`|0x00000008|启用 [加载程序事件](../../../docs/framework/performance/loader-etw-events.md)的回收。|  
@@ -62,7 +62,7 @@ ms.locfileid: "61788071"
 ### <a name="clr-etw-rundown-keywords"></a>CLR ETW 断开关键字  
  下表列出了 CLR ETW 断开关键字、它们的值以及它们的用途。  
   
-|断开关键字名称|“值”|用途|  
+|断开关键字名称|值|用途|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|当与 `StartRundownKeyword` 和 `EndRundownKeyword`一起使用时启用加载程序事件的回收。|  
 |`JitRundownKeyword`|0x00000010|当与 `DCStart` 和 `DCEnd` 一起使用时启用 JIT 编译的方法的方法 `StartRundownKeyword` 和 `EndRundownKeyword`事件的回收。|  

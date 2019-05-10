@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 45eaa66396049b619c9164b20eed798505d478a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607038"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI 自动化对 DataGrid 控件类型的支持
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59161026"
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与数据网格控件密切相关的属性。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|属性|“值”|说明|  
+|属性|值|说明|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -61,13 +61,13 @@ ms.locfileid: "59161026"
   
  数据网格容器内的数据项至少将支持：  
   
--   Selection Item 控件模式（如果数据网格是可选择的）  
+- Selection Item 控件模式（如果数据网格是可选择的）  
   
--   Scroll Item 控件模式（如果数据网格是可滚动的）  
+- Scroll Item 控件模式（如果数据网格是可滚动的）  
   
--   Grid Item 控件模式  
+- Grid Item 控件模式  
   
--   Table Item 控件模式  
+- Table Item 控件模式  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  

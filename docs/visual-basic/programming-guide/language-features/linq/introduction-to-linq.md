@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633498"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
 语言集成查询 (LINQ) 将查询功能添加到 Visual Basic，并提供了简单而强大的功能用于与所有种类的数据处理。 而不是将查询发送到数据库进行处理，或使用你要搜索的数据的每种类型的不同的查询语法，LINQ 引入了查询作为 Visual Basic 语言的一部分。 它使用统一语法，而不考虑数据的类型。  

@@ -2,12 +2,12 @@
 title: 承载工作流服务
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855863"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613328"
 ---
 # <a name="hosting-workflow-services"></a>承载工作流服务
 工作流服务在承载后才能对传入消息做出响应。 工作流服务使用的是 WCF 消息传递基础结构，因此承载的方式也类似。 类似于 WCF 服务，工作流服务可以托管在任何托管应用程序在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 下。 此外，可以在 Windows Server App Fabric 下承载工作流服务。 有关 Windows Server App Fabric 的详细信息请参阅[Windows Server App Fabric 文档](https://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=196494)，并[AppFabric 承载概念](https://go.microsoft.com/fwlink/?LinkId=196495)。 服务承载 WCF 的各种不同方法的详细信息，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。
@@ -18,9 +18,9 @@ ms.locfileid: "61855863"
 ## <a name="hosting-under-iis-or-was"></a>在 IIS 或 WAS 下承载
  在 IIS 或 WAS 下承载工作流服务时，涉及到创建虚拟目录以及将定义服务及其行为的文件放在该虚拟目录中。 此时可能出现以下几种情况：
 
--   将定义工作流服务的 .xamlx 文件放在 IIS/WAS 虚拟目录中，同时放入指定服务行为、终结点和其他配置元素的 Web.config 文件。
+- 将定义工作流服务的 .xamlx 文件放在 IIS/WAS 虚拟目录中，同时放入指定服务行为、终结点和其他配置元素的 Web.config 文件。
 
--   将定义工作流服务的 .xamlx 文件放在一个 IIS/WAS 虚拟目录中。 .xamlx 文件指定要公开的终结点。 终结点将在 `WorkflowService.Endpoints` 元素中指定，如下面的示例所示。
+- 将定义工作流服务的 .xamlx 文件放在一个 IIS/WAS 虚拟目录中。 .xamlx 文件指定要公开的终结点。 终结点将在 `WorkflowService.Endpoints` 元素中指定，如下面的示例所示。
 
     ```xml
     <WorkflowService xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -38,9 +38,9 @@ ms.locfileid: "61855863"
     > [!NOTE]
     > 不能在 .xamlx 文件中指定行为，因此，如果需要指定行为设置，则必须使用 Web.config。
 
--   将定义工作流服务的 .xamlx 文件放在一个 IIS/WAS 虚拟目录中。 另外，将一个 .svc 文件放在该虚拟目录中。 使用 .svc 文件可以指定自定义 Web 服务主机工厂、应用自定义行为或者从自定义位置加载配置。
+- 将定义工作流服务的 .xamlx 文件放在一个 IIS/WAS 虚拟目录中。 另外，将一个 .svc 文件放在该虚拟目录中。 使用 .svc 文件可以指定自定义 Web 服务主机工厂、应用自定义行为或者从自定义位置加载配置。
 
--   将一个程序集放在 IIS/WAS 虚拟目录中，该程序集包含一个使用 WCF 消息传递活动的活动。
+- 将一个程序集放在 IIS/WAS 虚拟目录中，该程序集包含一个使用 WCF 消息传递活动的活动。
 
  定义工作流服务的.xamlx 文件必须包含 <`Service`> 根元素或包含派生自任何类型的根元素<xref:System.Workflow.ComponentModel.Activity>。 使用 Visual Studio 活动模板时，将创建.xamlx 文件。 使用 WCF 工作流服务模板时，将创建.xamlx 文件。
 

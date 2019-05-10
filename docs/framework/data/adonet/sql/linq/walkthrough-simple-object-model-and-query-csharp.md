@@ -2,12 +2,12 @@
 title: 演练：简单对象模型和查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309454"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617970"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>演练：简单对象模型和查询 (C#)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -20,24 +20,24 @@ ms.locfileid: "59309454"
   
 ## <a name="prerequisites"></a>系统必备  
   
--   本演练使用专用文件夹（“c:\linqtest5”）来保存文件。 请在开始本演练前创建此文件夹。  
+- 本演练使用专用文件夹（“c:\linqtest5”）来保存文件。 请在开始本演练前创建此文件夹。  
   
--   本演练需要 Northwind 示例数据库。 如果您的开发计算机上没有此数据库，您可以从 Microsoft 下载网站下载它。 有关说明，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下载此数据库后，请将文件复制到 c:\linqtest5 文件夹。  
+- 本演练需要 Northwind 示例数据库。 如果您的开发计算机上没有此数据库，您可以从 Microsoft 下载网站下载它。 有关说明，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下载此数据库后，请将文件复制到 c:\linqtest5 文件夹。  
   
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
   
--   创建[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
+- 创建[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
   
--   将类映射到数据库表。  
+- 将类映射到数据库表。  
   
--   指定类中的属性表示数据库列。  
+- 指定类中的属性表示数据库列。  
   
--   指定到 Northwind 数据库的连接。  
+- 指定到 Northwind 数据库的连接。  
   
--   创建针对该数据库运行的简单查询。  
+- 创建针对该数据库运行的简单查询。  
   
--   执行查询并观察结果。  
+- 执行查询并观察结果。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
  在此第一个任务中，创建一个包含必要的引用，生成并运行的 Visual Studio 解决方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  
@@ -76,22 +76,22 @@ ms.locfileid: "59309454"
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>创建一个实体类并将其映射到数据库表  
   
--   将下面的代码键入或粘贴到 Program.cs 中紧靠在 `Program` 类声明上方的位置：  
+- 将下面的代码键入或粘贴到 Program.cs 中紧靠在 `Program` 类声明上方的位置：  
   
      [!code-csharp[DLinqWalk1CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>指定类中的属性表示数据库列  
  在此步骤中，你要完成几项任务。  
   
--   您要使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute) 指定实体类中的 `CustomerID` 和 `City` 属性 (Property) 表示数据库表中的列。  
+- 您要使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute) 指定实体类中的 `CustomerID` 和 `City` 属性 (Property) 表示数据库表中的列。  
   
--   您要指定 `CustomerID` 属性表示数据库中的主键列。  
+- 您要指定 `CustomerID` 属性表示数据库中的主键列。  
   
--   您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 然后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就可以直接存储和检索值，而不用使用可能包含业务逻辑的公共访问器。  
+- 您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 然后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就可以直接存储和检索值，而不用使用可能包含业务逻辑的公共访问器。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>表示两个数据库列的特性  
   
--   将下面的代码键入或粘贴到 Program.cs 中 `Customer` 类的大括号内。  
+- 将下面的代码键入或粘贴到 Program.cs 中 `Customer` 类的大括号内。  
   
      [!code-csharp[DLinqWalk1CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#3)]  
   
@@ -102,7 +102,7 @@ ms.locfileid: "59309454"
   
 #### <a name="to-specify-the-database-connection"></a>指定数据库连接  
   
--   将下面的代码键入或粘贴到 `Main` 方法中。  
+- 将下面的代码键入或粘贴到 `Main` 方法中。  
   
      请注意，假定 `northwnd.mdf` 文件位于 linqtest5 文件夹中。 有关更多信息，请参见本演练前面部分的“先决条件”一节。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59309454"
   
 #### <a name="to-create-a-simple-query"></a>创建简单查询  
   
--   将下面的代码键入或粘贴到 `Main` 方法中的 `Table<Customer>` 声明后面。  
+- 将下面的代码键入或粘贴到 `Main` 方法中的 `Table<Customer>` 声明后面。  
   
      [!code-csharp[DLinqWalk1ACS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#5)]  
   

@@ -8,31 +8,31 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874467"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614309"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的性能计数器
 本主题提供了一系列性能计数器可以中找到[Windows 性能监视器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)。  
   
--   [异常性能计数器](#exception)  
+- [异常性能计数器](#exception)  
   
--   [互操作性能计数器](#interop)  
+- [互操作性能计数器](#interop)  
   
--   [JIT 性能计数器](#jit)  
+- [JIT 性能计数器](#jit)  
   
--   [加载性能计数器](#loading)  
+- [加载性能计数器](#loading)  
   
--   [锁定和线程性能计数器](#lockthread)  
+- [锁定和线程性能计数器](#lockthread)  
   
--   [内存性能计数器](#memory)  
+- [内存性能计数器](#memory)  
   
--   [联网性能计数器](#networking)  
+- [联网性能计数器](#networking)  
   
--   [安全性能计数器](#security)  
+- [安全性能计数器](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>异常性能计数器  
@@ -161,21 +161,21 @@ ms.locfileid: "61874467"
   
  几类受支持的网络性能计数器如下：  
   
--   事件计数器，用于测量某些事件的发生次数。  
+- 事件计数器，用于测量某些事件的发生次数。  
   
--   数据计数器，用于测量已发送或已接收的数据量。  
+- 数据计数器，用于测量已发送或已接收的数据量。  
   
--   持续时间计数器，测量不同进程花费的时间。 测量对象每个间隔（通常以秒计）退出不同状态后的次数。  
+- 持续时间计数器，测量不同进程花费的时间。 测量对象每个间隔（通常以秒计）退出不同状态后的次数。  
   
--   每间隔计数器，用于测量每个间隔（通常以秒计）中正在进行特定转换的对象数。  
+- 每间隔计数器，用于测量每个间隔（通常以秒计）中正在进行特定转换的对象数。  
   
  适用于事件的网络性能计数器包括：  
   
--   **已建立的连接**  
+- **已建立的连接**  
   
--   **已接收的数据报**  
+- **已接收的数据报**  
   
--   **已发送的数据报**  
+- **已发送的数据报**  
   
  这些性能计数器提供自进程启动以来的计数。 已建立的 <xref:System.Net.Sockets.Socket> 连接的计数包括显式 <xref:System.Net.Sockets.Socket> 方法调用（由已建立的流套接连接的应用程序执行）以及其他类（例如 <xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.WebClient> 和 <xref:System.Net.Sockets.TcpClient>）对 <xref:System.Net.Sockets.Socket> 类执行的内部调用  
   
@@ -183,33 +183,33 @@ ms.locfileid: "61874467"
   
  适用于数据的网络性能计数器包括：  
   
--   **已接收的字节数**  
+- **已接收的字节数**  
   
--   **已发送的字节数**  
+- **已发送的字节数**  
   
  上述计数器提供自进程启动以来的字节计数。  
   
  有如下两个持续时间计数器可测量 <xref:System.Net.HttpWebRequest> 对象经过整个或部分生命周期所花费的时间：  
   
--   **HttpWebRequest 平均生存期**  
+- **HttpWebRequest 平均生存期**  
   
--   **HttpWebRequest 平均排队时间**  
+- **HttpWebRequest 平均排队时间**  
   
  对于“HttpWebRequest 平均排队时间”计数器，大多数 <xref:System.Net.HttpWebRequest> 对象的生存期总是开始于创建对象时，而在应用程序关闭响应流时结束。 有两种不常见的情况：  
   
--   如果应用程序从未调用 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 方法，则忽略 <xref:System.Net.HttpWebRequest> 对象的生存期。  
+- 如果应用程序从未调用 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 方法，则忽略 <xref:System.Net.HttpWebRequest> 对象的生存期。  
   
--   如果 <xref:System.Net.HttpWebRequest>对象在调用 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.EndGetResponse%2A> 方法时引发 <xref:System.Net.WebException>，则在引发异常时生存期结束。 从技术上来说，此时（返回至用户的响应流实际上为包含响应流副本的内存流）也关闭基础响应流。  
+- 如果 <xref:System.Net.HttpWebRequest>对象在调用 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.EndGetResponse%2A> 方法时引发 <xref:System.Net.WebException>，则在引发异常时生存期结束。 从技术上来说，此时（返回至用户的响应流实际上为包含响应流副本的内存流）也关闭基础响应流。  
   
  有 4 个计数器可在每个间隔跟踪某些 <xref:System.Net.HttpWebRequest> 对象问题。 这些性能计数器可帮助应用程序开发人员、管理员和支持人员更好地了解 <xref:System.Net.HttpWebRequest> 对象的当前行为。 这些计数器包括：  
   
--   **创建的 HttpWebRequest/秒**  
+- **创建的 HttpWebRequest/秒**  
   
--   **已排队的 HttpWebRequest/秒**  
+- **已排队的 HttpWebRequest/秒**  
   
--   **已中止的 HttpWebRequest/秒**  
+- **已中止的 HttpWebRequest/秒**  
   
--   **失败的 HttpWebRequest/秒**  
+- **失败的 HttpWebRequest/秒**  
   
  “已中止的 HttpWebRequest/秒”计数器也对 <xref:System.Net.HttpWebRequest.Abort%2A> 的内部调用进行计数。 这些内部调用通常由应用程序可能要测量的超时导致。  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  网络性能计数器包含在连个类别中：  
   
--   “.NET CLR 网络”- .NET Framework 版本 2 上引入且在 .NET Framework 版本 2 及更高版本上受支持的原始性能计数器。  
+- “.NET CLR 网络”- .NET Framework 版本 2 上引入且在 .NET Framework 版本 2 及更高版本上受支持的原始性能计数器。  
   
--   “.NET CLR 网络 4.0.0.0”- 所有上述套接计数器和 .NET Framework 版本 4 及更高版本上受支持的新的性能计数器。 这些新的计数器提供有关 <xref:System.Net.HttpWebRequest> 对象的性能信息。  
+- “.NET CLR 网络 4.0.0.0”- 所有上述套接计数器和 .NET Framework 版本 4 及更高版本上受支持的新的性能计数器。 这些新的计数器提供有关 <xref:System.Net.HttpWebRequest> 对象的性能信息。  
   
  有关访问和管理应用程序中性能计数器的详细信息，请参阅[性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)。  
   

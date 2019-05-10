@@ -2,12 +2,12 @@
 title: Entity SQL 与 Transact-SQL 有何不同
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d6c98741107cd9ea7b0f29e4d06aed7d0ce27888
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774738"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631798"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 与 Transact-SQL 有何不同
 本主题介绍之间的差异[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
-ms.openlocfilehash: 857d5ea3771b098d4edcbd7b24f1e6feaf3ec2cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22f9276a3fa7fcecf6b4667f5aaba489c6ed296e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013031"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630595"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>如何：设置应用程序的 ToolStrip 呈现器
 可以单独自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观，或应用程序中所有 <xref:System.Windows.Forms.ToolStrip> 控件的外观。  
@@ -40,7 +40,7 @@ ms.locfileid: "62013031"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System.Design、System.Drawing 和 System.Windows.Forms 程序集的引用。  
+- 对 System.Design、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
