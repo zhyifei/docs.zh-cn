@@ -4,12 +4,12 @@ description: 了解使用 Docker 时已使用每天的一些基本术语。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d465065341bc58295c965853f4178b05b12a3d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591224"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -33,7 +33,7 @@ ms.locfileid: "61785588"
 
 **注册表**：提供存储库访问权限的服务。 大多数公共映像的默认注册表是 [Docker 中心](https://hub.docker.com/)（归作为组织的 Docker 所有）。 注册表通常包含来自多个团队的存储库。 公司通常使用私有注册表来存储和管理其创建的映像。 另一个示例是 Azure 容器注册表。
 
-**多体系结构映像**：对于多体系结构，是一项功能，可简化选择适当的映像，根据其中 Docker 正在运行的平台，例如，当 Dockerfile 请求的基本映像 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** 从注册表它真正获得 **`2.1-nanoserver-1709`**， **`2.1-nanoserver-1803`**， **`2.1-nanoserver-1809`** 或 **`2.1-stretch`**，具体取决于操作系统和其中运行 Docker 版本。
+**多体系结构映像**：对于多体系结构，是一项功能，可简化选择适当的映像，根据其中 Docker 正在运行的平台，例如，当 Dockerfile 请求的基本映像 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** 从注册表它真正获得 **`2.2-nanoserver-1709`**， **`2.2-nanoserver-1803`**， **`2.2-nanoserver-1809`** 或 **`2.2-stretch`**，具体取决于操作系统和其中运行 Docker 版本。
 
 **Docker 中心**：上传并使用映像的公共注册表。 Docker 中心提供 Docker 映像托管、公共或私有注册表，生成触发器和 Web 挂钩，以及与 GitHub 和 Bitbucket 集成。
 

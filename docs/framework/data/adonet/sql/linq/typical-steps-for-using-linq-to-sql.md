@@ -2,12 +2,12 @@
 title: 使用 LINQ to SQL 的典型步骤
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876964"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063003"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>使用 LINQ to SQL 的典型步骤
 若要实现 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序，请按照本主题后面部分说明的步骤操作。 请注意，很多步骤是可选的。 您可以以对象模型的默认状态使用它，这种可能性很高。  
@@ -55,7 +55,7 @@ ms.locfileid: "61876964"
 ## <a name="using-the-object-model"></a>使用对象模型  
  下图显示了在两层方案中开发人员与数据之间的关系。 有关其他方案，请参阅[N 层和远程应用程序使用 LINQ 到 SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)。  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![显示 Linq 对象模型的屏幕截图。](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  既然您已经有了对象模型，您就可以在该模型中描述信息请求和操作数据。 您应从对象模型中的对象和属性的角度来考虑，而不是从数据库的行和列的角度来考虑。 您不是直接对数据库进行操作。  
   

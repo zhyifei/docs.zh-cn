@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792896"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592232"
 ---
 # <a name="resources-in-net-apps"></a>.NET 应用中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
@@ -43,23 +43,23 @@ ms.locfileid: "61792896"
 ## <a name="retrieving-resources"></a>检索资源  
  在运行时，应用会基于 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 属性指定的区域性为每个线程加载相应的本地化资源。 此属性的值按如下方式派生：  
   
--   向 <xref:System.Globalization.CultureInfo> 属性直接分配一个表示本地化区域性的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 对象。  
+- 向 <xref:System.Globalization.CultureInfo> 属性直接分配一个表示本地化区域性的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 对象。  
   
--   如果没有明确分配区域性，则从 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性检索默认线程 UI 区域性。  
+- 如果没有明确分配区域性，则从 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性检索默认线程 UI 区域性。  
   
--   如果没有明确分配默认线程 UI 区域性，则在本地计算机上检索当前用户的区域性。 在 Windows 上运行的 .NET 实现通过调用 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 函数来完成此操作。  
+- 如果没有明确分配默认线程 UI 区域性，则在本地计算机上检索当前用户的区域性。 在 Windows 上运行的 .NET 实现通过调用 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 函数来完成此操作。  
   
  有关如何设置当前 UI 区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 参考页。  
   
  随后，通过使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 类，可以为当前的 UI 区域性或特定区域性检索资源。 虽然 <xref:System.Resources.ResourceManager> 类最常用于检索资源，但 <xref:System.Resources?displayProperty=nameWithType> 命名空间包含可用于检索资源的其他类型。 这些方法包括：  
   
--   <xref:System.Resources.ResourceReader> 类 - 可用于枚举嵌入在程序集或存储于独立二进制 .resources 文件中的资源。 当您不知道运行时可用资源的准确名称时，这将会很有用。  
+- <xref:System.Resources.ResourceReader> 类 - 可用于枚举嵌入在程序集或存储于独立二进制 .resources 文件中的资源。 当您不知道运行时可用资源的准确名称时，这将会很有用。  
   
--   <xref:System.Resources.ResXResourceReader> 类 - 可用于从 XML (.resx) 文件中检索资源。  
+- <xref:System.Resources.ResXResourceReader> 类 - 可用于从 XML (.resx) 文件中检索资源。  
   
--   <xref:System.Resources.ResourceSet> 类 - 可用于检索特定区域性的资源，而不遵循回退规则。 资源可以存储在程序集或独立的二进制 .resources 文件中。 您还可以开发 <xref:System.Resources.IResourceReader> 实现以使用 <xref:System.Resources.ResourceSet> 类从某个其他源中检索资源。  
+- <xref:System.Resources.ResourceSet> 类 - 可用于检索特定区域性的资源，而不遵循回退规则。 资源可以存储在程序集或独立的二进制 .resources 文件中。 您还可以开发 <xref:System.Resources.IResourceReader> 实现以使用 <xref:System.Resources.ResourceSet> 类从某个其他源中检索资源。  
   
--   <xref:System.Resources.ResXResourceSet> 类 - 可用于将 XML 资源文件中的所有项目都检索到内存中。  
+- <xref:System.Resources.ResXResourceSet> 类 - 可用于将 XML 资源文件中的所有项目都检索到内存中。  
   
 ## <a name="see-also"></a>请参阅
 

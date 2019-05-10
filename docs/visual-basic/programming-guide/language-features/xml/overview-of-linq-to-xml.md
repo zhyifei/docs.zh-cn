@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8695e94797c297154db9597c6e9938ed9aecfef
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761816"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063047"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic 中的 LINQ to XML 概述
 Visual Basic 提供的支持[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]通过 XML 文本和 XML 轴属性。 这使您要用于在 Visual Basic 代码中使用 XML 熟悉、 便利的语法。 *XML 文本*，可以在代码中直接包含 XML。 *XML 轴属性*使您能够访问子节点、 子代节点和属性的 XML 文本。 有关详细信息，请参阅[XML 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)并[在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  
@@ -20,7 +20,7 @@ Visual Basic 提供的支持[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)
 > [!NOTE]
 >  在 ASP.NET 页面中的声明性代码中不支持 XML 文本和 XML 轴属性。 若要使用 Visual Basic XML 功能，请将代码放在 ASP.NET 应用程序中的代码隐藏页中。  
   
- ![视频链接](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "播放视频")相关视频演示，请参阅[如何开始使用 LINQ to XML？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml)并[如何创建 Excel 电子表格使用 LINQ to XML？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)。  
+ [播放按钮](./media/overview-of-linq-to-xml/play-video-icon-example.gif)相关的视频演示，请参阅[如何开始使用 LINQ to XML？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml)并[如何创建 Excel 电子表格使用 LINQ to XML？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)。   
   
 ## <a name="creating-xml"></a>创建 XML  
  有两种方法在 Visual Basic 中创建 XML 树。 您可以声明 XML 文本直接在代码中，也可以使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]Api 可以创建的树。 这两个进程都使代码能够反映 XML 树的最终结构。 例如，下面的代码示例创建一个 XML 元素：  

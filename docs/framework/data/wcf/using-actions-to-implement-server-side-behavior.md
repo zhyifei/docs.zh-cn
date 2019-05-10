@@ -2,12 +2,12 @@
 title: 使用操作来实现服务器端行为
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875246"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063160"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用操作来实现服务器端行为
 
@@ -46,7 +46,7 @@ OData 操作提供了用于实现这样一种行为方法，即该行为将作�
   
 3. 存储来自 Invoke() 的任何结果，以便可以使用 GetResult() 检索这些结果  
   
- 参数可作为标记进行传递。 这是因为可以编写与表示资源的标记结合使用的数据服务提供程序，如果是这种情况，则您可能需要将这些标记转换（封送处理）为实际资源，然后才能调度到实际动作。 在封送处理此参数之后，此参数必须处于可编辑状态，以便将在调用动作时对资源所做的任何更改保存并写入到磁盘中。  
+ 参数可作为标记进行传递。 这是因为可以编写与表示资源的标记结合使用的数据服务提供程序，如果是这种情况，则您可能需要将这些标记转换（封送处理）为实际资源，然后才能调度到实际动作。 封送参数后，它必须处于可编辑状态，以便对资源调用操作时出现的任何更改将保存并写入到磁盘。  
   
  此接口需要两个方法：调用和 GetResult。 Invoke 调用用于实现动作行为的委托，而 GetResult 返回此动作的结果。  
   

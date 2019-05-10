@@ -2,12 +2,12 @@
 title: ADO.NET 体系结构
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e85100733e20b69cf6b8c52c58d250be869971cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880082"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592644"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 体系结构
 以前，数据处理主要依赖于基于连接的双层模型。 随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。  
@@ -29,13 +29,13 @@ ADO.NET 体系结构
 ### <a name="choosing-a-datareader-or-a-dataset"></a>选择 DataReader 或 DataSet  
  决定是否应使用你的应用程序时`DataReader`(请参阅[使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) 或`DataSet`(请参阅[数据集、 数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md))，请考虑的类型应用程序所需的功能。 使用 `DataSet` 可执行以下操作：  
   
--   在应用程序中将数据缓存在本地，以便可以对数据进行处理。 如果只需要读取查询结果，则 `DataReader` 是更好的选择。  
+- 在应用程序中将数据缓存在本地，以便可以对数据进行处理。 如果只需要读取查询结果，则 `DataReader` 是更好的选择。  
   
--   在层间或从 XML Web services 对数据进行远程处理。  
+- 在层间或从 XML Web services 对数据进行远程处理。  
   
--   与数据进行动态交互，例如绑定到 Windows 窗体控件或组合并关联来自多个源的数据。  
+- 与数据进行动态交互，例如绑定到 Windows 窗体控件或组合并关联来自多个源的数据。  
   
--   对数据执行大量的处理，而不需要与数据源保持打开的连接，从而将该连接释放给其他客户端使用。  
+- 对数据执行大量的处理，而不需要与数据源保持打开的连接，从而将该连接释放给其他客户端使用。  
   
  如果不需要 `DataSet` 所提供的功能，则可以通过使用 `DataReader` 以只进、只读方式返回数据，从而提高应用程序的性能。 尽管`DataAdapter`使用`DataReader`以填充其内容`DataSet`(请参阅[填充数据集从 DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md))，通过使用`DataReader`，可以提升性能，因为这样可以节省内存将由`DataSet`，并避免创建和填充的内容所需的处理`DataSet`。  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: bf0239422fb5a98e4670aea407f684753d3a7ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc3c102dbfe7c55e66093421bc11379d48ba000d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920856"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592088"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>“Module”语句只能出现在文件级或命名空间级
 `Module` 语句必须出现在源文件的顶部后立即`Option`和`Imports`语句、 全局属性和命名空间声明，但所有其他声明之前。  

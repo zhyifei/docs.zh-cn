@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 性能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006783"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592164"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 性能
 
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  注意，WF4 SQL 暂留提供程序在数据库层会执行较多的工作。  由于 SQL 数据库可能成为瓶颈，所以务必要监视该处的 CPU 和磁盘使用情况。  在对工作流应用程序进行性能测试时，务必包括 SQL 数据库中的下列性能计数器：
 
--   PhysicalDisk\\磁盘读取时间百分比
+- PhysicalDisk\\磁盘读取时间百分比
 
--   PhysicalDisk\\磁盘时间百分比
+- PhysicalDisk\\磁盘时间百分比
 
--   PhysicalDisk\\磁盘写入时间百分比
+- PhysicalDisk\\磁盘写入时间百分比
 
--   PhysicalDisk\\平均百分比Disk Queue Length
+- PhysicalDisk\\平均百分比Disk Queue Length
 
--   PhysicalDisk\Avg.Disk Read Queue Length
+- PhysicalDisk\Avg.Disk Read Queue Length
 
--   PhysicalDisk\Avg.Disk Write Queue Length
+- PhysicalDisk\Avg.Disk Write Queue Length
 
--   PhysicalDisk\Current Disk Queue Length
+- PhysicalDisk\Current Disk Queue Length
 
--   处理器信息\\处理器时间百分比
+- 处理器信息\\处理器时间百分比
 
--   SQLServer:Latches\Average Latch Wait Time (ms)
+- SQLServer:Latches\Average Latch Wait Time (ms)
 
--   SQLServer:Latches\Latch Waits/sec
+- SQLServer:Latches\Latch Waits/sec
 
 ### <a name="tracking"></a>跟踪
  跟踪工作流可用于跟踪工作流的进度。  跟踪事件中所包含的信息由跟踪配置文件决定。  跟踪配置文件越复杂，跟踪的成本就越高。
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  使用 ETW 跟踪代替 SQL 跟踪的好处包括：
 
--   跟踪事件的收集可以分散到其他进程。  这就为记录事件的方式提供了更大的灵活性。
+- 跟踪事件的收集可以分散到其他进程。  这就为记录事件的方式提供了更大的灵活性。
 
--   轻松地与 WCF ETW 事件或其他 ETW 提供程序，例如 SQL Server 或内核提供程序结合使用 ETW 跟踪事件。
+- 轻松地与 WCF ETW 事件或其他 ETW 提供程序，例如 SQL Server 或内核提供程序结合使用 ETW 跟踪事件。
 
--   工作流作者无需更改工作流，就能很好地使用特定的跟踪实现，如 WF3 SQL 跟踪服务的批处理模式。
+- 工作流作者无需更改工作流，就能很好地使用特定的跟踪实现，如 WF3 SQL 跟踪服务的批处理模式。
 
--   管理员无需回收主机进程就可以打开或关闭跟踪。
+- 管理员无需回收主机进程就可以打开或关闭跟踪。
 
  ETW 跟踪的种种性能优势也带来了一个缺点。  如果系统受到密集的资源压力，ETW 事件可能会丢失。  处理事件的目的不是为了阻止正常的程序执行，因此不能保证所有 ETW 事件都会广播至其订阅者。  这使 ETW 跟踪非常适合运行状况监视，但不适合审核。
 

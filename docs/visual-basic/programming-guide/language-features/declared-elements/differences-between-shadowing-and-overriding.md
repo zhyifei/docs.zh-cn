@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcf43040e9cbbcb2a59b1e1cf8c1f58951d5d87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610467"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>隐藏和重写之间的差异 (Visual Basic)
 定义从基类继承的类时，你有时想要重新定义一个或多个派生类中的基类元素。 隐藏和重写均可用于此目的。  
@@ -41,15 +41,15 @@ ms.locfileid: "61827939"
 ## <a name="guidelines"></a>准则  
  通常用在以下情况下重写：  
   
--   可以定义多态派生的类。  
+- 可以定义多态派生的类。  
   
--   需要安全地让编译器强制执行完全相同的元素类型和调用的序列。  
+- 需要安全地让编译器强制执行完全相同的元素类型和调用的序列。  
   
  通常用在以下情况下隐藏：  
   
--   您希望您的基类可能会被修改，并定义使用您所遇到的相同名称的元素。  
+- 您希望您的基类可能会被修改，并定义使用您所遇到的相同名称的元素。  
   
--   你希望可以随意更改的元素类型或调用序列。  
+- 你希望可以随意更改的元素类型或调用序列。  
   
 ## <a name="see-also"></a>请参阅
 

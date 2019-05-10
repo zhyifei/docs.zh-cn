@@ -2,31 +2,31 @@
 title: Complex Type — 复杂类型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6a7190a144280930d67f179373f29f6b19e98cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583664"
 ---
 # <a name="complex-type"></a>Complex Type — 复杂类型
 一个*复杂类型*是用于定义上的丰富结构化属性的模板[实体类型](../../../../docs/framework/data/adonet/entity-type.md)或其他复杂类型。 每个模板都包含以下内容：  
   
--   唯一名称。 （必需）  
+- 唯一名称。 （必需）  
   
     > [!NOTE]
     >  复杂类型的名称不能与同一命名空间中的实体类型的名称相同。  
   
--   一个或多个窗体中的数据[属性](../../../../docs/framework/data/adonet/property.md)。 （可选）。  
+- 一个或多个窗体中的数据[属性](../../../../docs/framework/data/adonet/property.md)。 （可选）。  
   
     > [!NOTE]
     >  复杂类型的属性可以是另一个复杂类型。  
   
  复杂类型与实体类型相似，因为复杂类型可以以基元类型属性或其他复杂类型的形式携带数据负载。 但是，在复杂类型与实体类型之间仍存在着一些重要区别：  
   
--   复杂类型没有标识，因此不能独立存在。 复杂类型只能作为实体类型或其他复杂类型的属性而存在。  
+- 复杂类型没有标识，因此不能独立存在。 复杂类型只能作为实体类型或其他复杂类型的属性而存在。  
   
--   复杂类型不能参与[关联](../../../../docs/framework/data/adonet/association-type.md)。 关联的任一端都不能是复杂类型，因此[导航属性](../../../../docs/framework/data/adonet/navigation-property.md)不能为复杂类型定义。  
+- 复杂类型不能参与[关联](../../../../docs/framework/data/adonet/association-type.md)。 关联的任一端都不能是复杂类型，因此[导航属性](../../../../docs/framework/data/adonet/navigation-property.md)不能为复杂类型定义。  
   
 ## <a name="example"></a>示例  
  [ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)使用称为概念性架构定义语言的特定于域的语言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 来定义概念模型。 下面的 CSDL 定义了一个复杂类型 Address，它具有基元类型属性 `StreetAddress`、`City`、`StateOrProvince`、`Country` 和 `PostalCode`。  

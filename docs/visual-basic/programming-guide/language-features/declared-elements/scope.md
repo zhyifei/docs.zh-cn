@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806e4605411304f58d0428f2588454ba9652946e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917834"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610370"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的范围
 *作用域*声明的元素是一组的所有代码都可以引用它而无需限定其名称或使其可通过[Imports 语句 （.NET Namespace 和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可以具有以下级别之一的作用域：  
@@ -37,11 +37,11 @@ ms.locfileid: "61917834"
 ## <a name="specifying-scope-and-defining-variables"></a>指定作用域，以及定义变量  
  在声明它时指定元素的范围。 作用域取决于以下因素：  
   
--   在其中声明该元素的区域 （块、 过程、 模块、 类或结构）  
+- 在其中声明该元素的区域 （块、 过程、 模块、 类或结构）  
   
--   包含元素的声明的命名空间  
+- 包含元素的声明的命名空间  
   
--   为元素声明的访问级别  
+- 为元素声明的访问级别  
   
  时要格外小心定义变量具有相同名称但不同的作用域，因为这样做可能会导致意外结果。 有关详细信息，请参阅 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
@@ -51,21 +51,21 @@ ms.locfileid: "61917834"
 ### <a name="block-scope"></a>块范围  
  块是一组语句包含在启动和终止声明语句，如下所示：  
   
--   `Do` 和 `Loop`  
+- `Do` 和 `Loop`  
   
--   `For` [`Each`] 和 `Next`  
+- `For` [`Each`] 和 `Next`  
   
--   `If` 和 `End If`  
+- `If` 和 `End If`  
   
--   `Select` 和 `End Select`  
+- `Select` 和 `End Select`  
   
--   `SyncLock` 和 `End SyncLock`  
+- `SyncLock` 和 `End SyncLock`  
   
--   `Try` 和 `End Try`  
+- `Try` 和 `End Try`  
   
--   `While` 和 `End While`  
+- `While` 和 `End While`  
   
--   `With` 和 `End With`  
+- `With` 和 `End With`  
   
  如果您声明一个块内的变量，可以仅在该块中使用它。 在下面的示例中，整数变量的作用域`cube`是块之间`If`和`End If`，你可以不再引用`cube`时将执行传递到块之外。  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>本地变量的优点  
  本地变量是出于以下原因适合用于临时计算的任何类型：  
   
--   **避免名称冲突。** 本地变量名称不容易发生冲突。 例如，可以创建多个不同的过程包含一个名为变量`intTemp`。 只要每个`intTemp`被声明为局部变量，每个过程识别其自己的版本的`intTemp`。 任何一个步骤可能会更改其本地中的值`intTemp`而不会影响`intTemp`其他过程中的变量。  
+- **避免名称冲突。** 本地变量名称不容易发生冲突。 例如，可以创建多个不同的过程包含一个名为变量`intTemp`。 只要每个`intTemp`被声明为局部变量，每个过程识别其自己的版本的`intTemp`。 任何一个步骤可能会更改其本地中的值`intTemp`而不会影响`intTemp`其他过程中的变量。  
   
--   **内存占用情况。** 本地变量仅在其过程运行时占用的内存。 该过程返回到调用代码时，会释放其内存。 与此相反，[共享](../../../../visual-basic/language-reference/modifiers/shared.md)并[静态](../../../../visual-basic/language-reference/modifiers/static.md)变量消耗内存资源，直到你的应用程序停止运行，因此，它们仅在必要时使用。 *实例变量*占用内存实例继续存在，这使它们更少比本地变量有效，但可能会比效率更高`Shared`或`Static`变量。  
+- **内存占用情况。** 本地变量仅在其过程运行时占用的内存。 该过程返回到调用代码时，会释放其内存。 与此相反，[共享](../../../../visual-basic/language-reference/modifiers/shared.md)并[静态](../../../../visual-basic/language-reference/modifiers/static.md)变量消耗内存资源，直到你的应用程序停止运行，因此，它们仅在必要时使用。 *实例变量*占用内存实例继续存在，这使它们更少比本地变量有效，但可能会比效率更高`Shared`或`Static`变量。  
   
 ### <a name="minimizing-scope"></a>最大程度减少作用域  
  一般情况下，当声明的任何变量或常量时，它编程最佳做法是使其范围尽可能窄 （块范围是最小）。 这有助于节约内存和最大程度减少你错误地引用错误的变量的代码的可能性。 同样，应将变量声明[静态](../../../../visual-basic/language-reference/modifiers/static.md)仅当有必要过程调用之间保留值。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028686"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062941"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. 和？（） null 条件运算符 (Visual Basic)
 
@@ -37,6 +37,24 @@ Dim length As Integer
 If customers IsNot Nothing Then
    length = customers.Length
 End If
+```
+
+有时需要对可能为 null，基于该对象上的布尔值成员的值的对象执行操作 (如的布尔属性`IsAllowedFreeShipping`在下面的示例):
+
+```vb
+  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+  
+  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+   ApplyFreeShippingToOrders(customer)
+  End If
+```
+
+您可以缩短你的代码并避免手动检查为 null，如下所示使用 null 条件运算符：
+
+```vb
+ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+ 
+ If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
 NULL 条件运算符采用最小化求值策略。  如果条件成员访问和索引操作链中的一个操作返回`Nothing`，链的执行将停止的其余部分。  在以下示例中，`C(E)`如果未进行求值`A`， `B`，或`C`计算结果为`Nothing`。

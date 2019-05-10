@@ -2,12 +2,12 @@
 title: 持久性参与者
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73799fd66dd619d2573a1d334a6dbd23a9ff5b4e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672648"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592150"
 ---
 # <a name="persistence-participants"></a>持久性参与者
 持久性参与者可以参与应用程序宿主触发的持久性操作（保存或加载）。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]附带了两个抽象类**PersistenceParticipant**并**PersistenceIOParticipant**，可以用来创建持久性参与者。 持久性参与者派生自这些类之一，它实现所需的方法，然后将该类的实例添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 应用程序宿主可在持久保存工作流实例时查找此类工作流扩展，并在适当时对持久性参与者调用适当的方法。  
@@ -48,17 +48,17 @@ ms.locfileid: "61672648"
   
  在加载工作流实例时，持久性提供程序将在该实例上创建锁。 这避免该实例在多节点方案中被多个主机加载。 如果你尝试加载已被锁定的工作流实例会看到如下所示异常：异常"System.ServiceModel.Persistence.InstanceLockException:请求的操作无法完成，因为锁例如 00000000-0000-0000-0000-000000000000 无法获取"。 在发生下列情况之一时将会导致该错误：  
   
--   在多节点方案中，另一个主机加载了该实例。  有几种不同的方法可以解决这些类型的冲突：转移对拥有锁和重试的节点的处理，或者强制将导致其他主机无法保存其工作的负载。  
+- 在多节点方案中，另一个主机加载了该实例。  有几种不同的方法可以解决这些类型的冲突：转移对拥有锁和重试的节点的处理，或者强制将导致其他主机无法保存其工作的负载。  
   
--   在单节点方案中并且主机出现崩溃。  在主机再次启动时（进程回收或者创建新的持久性提供程序工厂），新主机将尝试加载由于锁尚未到期而仍被旧主机锁定的实例。  
+- 在单节点方案中并且主机出现崩溃。  在主机再次启动时（进程回收或者创建新的持久性提供程序工厂），新主机将尝试加载由于锁尚未到期而仍被旧主机锁定的实例。  
   
--   在单节点方案中并且有关实例在某个点上已中止并且创建具有不同主机 ID 的新的持久性提供程序实例。  
+- 在单节点方案中并且有关实例在某个点上已中止并且创建具有不同主机 ID 的新的持久性提供程序实例。  
   
  锁定超时时间值默认为 5 分钟，您可以在调用 <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A> 时指定其他超时时间值。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [如何：创建自定义持久性参与者](how-to-create-a-custom-persistence-participant.md)  
+- [如何：创建自定义持久性参与者](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>请参阅
 

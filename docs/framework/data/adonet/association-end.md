@@ -2,12 +2,12 @@
 title: 关联端
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 085188969b0daf5153b40361d4b15d696920c829
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769600"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592590"
 ---
 # <a name="association-end"></a>关联端
 *关联端*标识[实体类型](../../../../docs/framework/data/adonet/entity-type.md)的另一端[关联](../../../../docs/framework/data/adonet/association-type.md)和关联的结束类型实例可以存在的实体数。 关联端定义为关联的一部分；关联必须正好有两个关联端。 [导航属性](../../../../docs/framework/data/adonet/navigation-property.md)允许导航到另一个关联端。  
