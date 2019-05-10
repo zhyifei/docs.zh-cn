@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidDateValue1
 ms.assetid: 928b8d75-f523-40c3-819a-03a1eb596ccc
-ms.openlocfilehash: a4d9884564567d00ee2fa3a0fa3c325415aa1945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3120593d1f8d73e924b163d9c2d37807fdacdf9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666288"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659544"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a><span data-ttu-id="a25e2-102">参数\<argumentname > 不能转换为类型 Date</span><span class="sxs-lookup"><span data-stu-id="a25e2-102">Argument '\<argumentname>' cannot be converted to type 'Date'</span></span>
-<span data-ttu-id="a25e2-103">尝试转换将变量更改为类型 `Date`，但该值未被识别为有效日期。</span><span class="sxs-lookup"><span data-stu-id="a25e2-103">A conversion attempted to change a variable to type `Date`, but the value is not recognized as a valid date.</span></span>  
+# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a><span data-ttu-id="21ec5-102">参数\<argumentname > 不能转换为类型 Date</span><span class="sxs-lookup"><span data-stu-id="21ec5-102">Argument '\<argumentname>' cannot be converted to type 'Date'</span></span>
+<span data-ttu-id="21ec5-103">尝试转换将变量更改为类型 `Date`，但该值未被识别为有效日期。</span><span class="sxs-lookup"><span data-stu-id="21ec5-103">A conversion attempted to change a variable to type `Date`, but the value is not recognized as a valid date.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a25e2-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="a25e2-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="21ec5-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="21ec5-104">To correct this error</span></span>  
   
-- <span data-ttu-id="a25e2-105">查找有意义的转换。</span><span class="sxs-lookup"><span data-stu-id="a25e2-105">Find a conversion that is meaningful.</span></span>  
+- <span data-ttu-id="21ec5-105">查找有意义的转换。</span><span class="sxs-lookup"><span data-stu-id="21ec5-105">Find a conversion that is meaningful.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a25e2-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="a25e2-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21ec5-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="21ec5-106">See also</span></span>
 
-- [<span data-ttu-id="a25e2-107">在 Visual Basic 中的类型转换</span><span class="sxs-lookup"><span data-stu-id="a25e2-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [<span data-ttu-id="a25e2-108">Date 数据类型</span><span class="sxs-lookup"><span data-stu-id="a25e2-108">Date Data Type</span></span>](../../visual-basic/language-reference/data-types/date-data-type.md)
+- [<span data-ttu-id="21ec5-107">在 Visual Basic 中的类型转换</span><span class="sxs-lookup"><span data-stu-id="21ec5-107">Type Conversions in Visual Basic</span></span>](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [<span data-ttu-id="21ec5-108">Date 数据类型</span><span class="sxs-lookup"><span data-stu-id="21ec5-108">Date Data Type</span></span>](../../visual-basic/language-reference/data-types/date-data-type.md)
