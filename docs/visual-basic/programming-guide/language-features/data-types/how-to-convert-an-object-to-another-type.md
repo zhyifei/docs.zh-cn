@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80dc542f71aaf3eec6891006d77c5d39c985abf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906524"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600994"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a><span data-ttu-id="09429-102">如何：将对象转换为 Visual Basic 中的另一种类型</span><span class="sxs-lookup"><span data-stu-id="09429-102">How to: Convert an Object to Another Type in Visual Basic</span></span>
-<span data-ttu-id="09429-103">您将转换`Object`通过使用转换关键字，如另一种数据类型的变量[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)。</span><span class="sxs-lookup"><span data-stu-id="09429-103">You convert an `Object` variable to another data type by using a conversion keyword such as [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).</span></span>  
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a><span data-ttu-id="b40dc-102">如何：将对象转换为 Visual Basic 中的另一种类型</span><span class="sxs-lookup"><span data-stu-id="b40dc-102">How to: Convert an Object to Another Type in Visual Basic</span></span>
+<span data-ttu-id="b40dc-103">您将转换`Object`通过使用转换关键字，如另一种数据类型的变量[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)。</span><span class="sxs-lookup"><span data-stu-id="b40dc-103">You convert an `Object` variable to another data type by using a conversion keyword such as [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="09429-104">示例</span><span class="sxs-lookup"><span data-stu-id="09429-104">Example</span></span>  
- <span data-ttu-id="09429-105">以下示例将转换`Object`变量`Integer`和一个`String`。</span><span class="sxs-lookup"><span data-stu-id="09429-105">The following example converts an `Object` variable to an `Integer` and a `String`.</span></span>  
+## <a name="example"></a><span data-ttu-id="b40dc-104">示例</span><span class="sxs-lookup"><span data-stu-id="b40dc-104">Example</span></span>  
+ <span data-ttu-id="b40dc-105">以下示例将转换`Object`变量`Integer`和一个`String`。</span><span class="sxs-lookup"><span data-stu-id="b40dc-105">The following example converts an `Object` variable to an `Integer` and a `String`.</span></span>  
   
 ```  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,21 +26,21 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- <span data-ttu-id="09429-106">如果您知道的内容`Object`变量是特定数据类型，则最好将变量转换为该数据类型。</span><span class="sxs-lookup"><span data-stu-id="09429-106">If you know that the contents of an `Object` variable are of a particular data type, it is better to convert the variable to that data type.</span></span> <span data-ttu-id="09429-107">如果您继续使用`Object`变量，则会引发*装箱*并*取消装箱*（对于值类型） 或*后期绑定*（适用于引用类型）。</span><span class="sxs-lookup"><span data-stu-id="09429-107">If you continue to use the `Object` variable, you incur either *boxing* and *unboxing* (for a value type) or *late binding* (for a reference type).</span></span> <span data-ttu-id="09429-108">这些操作都采用额外的执行时间，并且会降低性能。</span><span class="sxs-lookup"><span data-stu-id="09429-108">These operations all take extra execution time and make your performance slower.</span></span>  
+ <span data-ttu-id="b40dc-106">如果您知道的内容`Object`变量是特定数据类型，则最好将变量转换为该数据类型。</span><span class="sxs-lookup"><span data-stu-id="b40dc-106">If you know that the contents of an `Object` variable are of a particular data type, it is better to convert the variable to that data type.</span></span> <span data-ttu-id="b40dc-107">如果您继续使用`Object`变量，则会引发*装箱*并*取消装箱*（对于值类型） 或*后期绑定*（适用于引用类型）。</span><span class="sxs-lookup"><span data-stu-id="b40dc-107">If you continue to use the `Object` variable, you incur either *boxing* and *unboxing* (for a value type) or *late binding* (for a reference type).</span></span> <span data-ttu-id="b40dc-108">这些操作都采用额外的执行时间，并且会降低性能。</span><span class="sxs-lookup"><span data-stu-id="b40dc-108">These operations all take extra execution time and make your performance slower.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="09429-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="09429-109">Compiling the Code</span></span>  
- <span data-ttu-id="09429-110">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="09429-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b40dc-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="b40dc-109">Compiling the Code</span></span>  
+ <span data-ttu-id="b40dc-110">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="b40dc-110">This example requires:</span></span>  
   
--   <span data-ttu-id="09429-111">对 <xref:System?displayProperty=nameWithType> 命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="09429-111">A reference to the <xref:System?displayProperty=nameWithType> namespace.</span></span>  
+- <span data-ttu-id="b40dc-111">对 <xref:System?displayProperty=nameWithType> 命名空间的引用。</span><span class="sxs-lookup"><span data-stu-id="b40dc-111">A reference to the <xref:System?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09429-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="09429-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b40dc-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="b40dc-112">See also</span></span>
 
 - <xref:System.Object>
-- [<span data-ttu-id="09429-113">在 Visual Basic 中的类型转换</span><span class="sxs-lookup"><span data-stu-id="09429-113">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [<span data-ttu-id="09429-114">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="09429-114">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [<span data-ttu-id="09429-115">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="09429-115">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [<span data-ttu-id="09429-116">字符串和其他类型之间的转换</span><span class="sxs-lookup"><span data-stu-id="09429-116">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [<span data-ttu-id="09429-117">数组转换</span><span class="sxs-lookup"><span data-stu-id="09429-117">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
-- [<span data-ttu-id="09429-118">结构</span><span class="sxs-lookup"><span data-stu-id="09429-118">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [<span data-ttu-id="09429-119">数据类型</span><span class="sxs-lookup"><span data-stu-id="09429-119">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="09429-120">类型转换函数</span><span class="sxs-lookup"><span data-stu-id="09429-120">Type Conversion Functions</span></span>](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="b40dc-113">在 Visual Basic 中的类型转换</span><span class="sxs-lookup"><span data-stu-id="b40dc-113">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [<span data-ttu-id="b40dc-114">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="b40dc-114">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="b40dc-115">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="b40dc-115">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [<span data-ttu-id="b40dc-116">字符串和其他类型之间的转换</span><span class="sxs-lookup"><span data-stu-id="b40dc-116">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [<span data-ttu-id="b40dc-117">数组转换</span><span class="sxs-lookup"><span data-stu-id="b40dc-117">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [<span data-ttu-id="b40dc-118">结构</span><span class="sxs-lookup"><span data-stu-id="b40dc-118">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="b40dc-119">数据类型</span><span class="sxs-lookup"><span data-stu-id="b40dc-119">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="b40dc-120">类型转换函数</span><span class="sxs-lookup"><span data-stu-id="b40dc-120">Type Conversion Functions</span></span>](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
