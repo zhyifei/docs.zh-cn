@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7c36e8fc150fe3268120ed728f1bed87d24e800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007107"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623589"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>演练：使用 WindowsFormsHost 元素映射属性
 
@@ -21,17 +21,17 @@ ms.locfileid: "62007107"
 
 本演练涉及以下任务：
 
--   创建项目。
+- 创建项目。
 
--   定义应用程序布局。
+- 定义应用程序布局。
 
--   定义新的属性映射。
+- 定义新的属性映射。
 
--   删除默认属性映射。
+- 删除默认属性映射。
 
--   替换默认属性映射。
+- 替换默认属性映射。
 
--   扩展默认属性映射。
+- 扩展默认属性映射。
 
 在本演练中所涉及任务的完整代码列表，请参阅[映射属性使用 WindowsFormsHost 元素示例](https://go.microsoft.com/fwlink/?LinkID=160019)。
 
@@ -41,7 +41,7 @@ ms.locfileid: "62007107"
 
 你需要以下组件来完成本演练：
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>创建并设置项目
 
@@ -76,7 +76,7 @@ ms.locfileid: "62007107"
 
 ### <a name="to-define-a-new-property-mapping"></a>定义新的属性映射
 
--   将以下代码复制到用于定义`Window1`类。
+- 将以下代码复制到用于定义`Window1`类。
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ ms.locfileid: "62007107"
 
 ### <a name="to-remove-a-default-property-mapping"></a>删除默认属性映射
 
--   将以下代码复制到用于定义`Window1`类。
+- 将以下代码复制到用于定义`Window1`类。
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ ms.locfileid: "62007107"
 
 ### <a name="to-replace-a-default-property-mapping"></a>替换默认属性映射
 
--   将以下代码复制到用于定义`Window1`类。
+- 将以下代码复制到用于定义`Window1`类。
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ ms.locfileid: "62007107"
 
 ### <a name="to-extend-a-default-property-mapping"></a>扩展默认属性映射
 
--   将以下代码复制到用于定义`Window1`类。
+- 将以下代码复制到用于定义`Window1`类。
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ ms.locfileid: "62007107"
 
      `WindowLoaded`方法将处理<xref:System.Windows.FrameworkElement.Loaded>事件并执行以下初始化。
 
-    -   创建[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控件。
+    - 创建[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控件。
 
-    -   调用先前在演练中定义的方法来设置属性映射。
+    - 调用先前在演练中定义的方法来设置属性映射。
 
-    -   将初始值分配给映射的属性。
+    - 将初始值分配给映射的属性。
 
 2. 按 F5 生成并运行该应用程序。 单击复选框可查看的效果<xref:System.Windows.FrameworkElement.FlowDirection%2A>映射。 单击复选框时，布局会反转其左右方向。
 

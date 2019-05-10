@@ -2,12 +2,12 @@
 title: 招聘流程
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005051"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622487"
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
@@ -18,35 +18,35 @@ ms.locfileid: "62005051"
   
  此示例演示 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的以下功能：  
   
--   用于对业务流程进行建模的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流。  
+- 用于对业务流程进行建模的 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Sequence> 工作流。  
   
--   工作流服务。  
+- 工作流服务。  
   
--   消息传递活动。  
+- 消息传递活动。  
   
--   基于内容的相关性。  
+- 基于内容的相关性。  
   
--   自定义活动（声明性和基于代码）。  
+- 自定义活动（声明性和基于代码）。  
   
--   系统提供的 SQL Server 持久性。  
+- 系统提供的 SQL Server 持久性。  
   
--   自定义的 <xref:System.Activities.Persistence.PersistenceParticipant>。  
+- 自定义的 <xref:System.Activities.Persistence.PersistenceParticipant>。  
   
--   自定义跟踪。  
+- 自定义跟踪。  
   
--   Windows 事件跟踪 (ETW) 跟踪。  
+- Windows 事件跟踪 (ETW) 跟踪。  
   
--   活动的构成。  
+- 活动的构成。  
   
--   <xref:System.Activities.Statements.Parallel> 活动。  
+- <xref:System.Activities.Statements.Parallel> 活动。  
   
--   <xref:System.Activities.Statements.CancellationScope> 活动。  
+- <xref:System.Activities.Statements.CancellationScope> 活动。  
   
--   持久性计时器（<xref:System.Activities.Statements.Delay> 活动）。  
+- 持久性计时器（<xref:System.Activities.Statements.Delay> 活动）。  
   
--   事务。  
+- 事务。  
   
--   同一个解决方案中多个工作流。  
+- 同一个解决方案中多个工作流。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -64,25 +64,25 @@ ms.locfileid: "62005051"
   
 2. 请求方的经理必须审批请求：  
   
-    1.  经理可以拒绝请求。  
+    1. 经理可以拒绝请求。  
   
-    2.  经理可将请求返回给请求方以获取其他信息：  
+    2. 经理可将请求返回给请求方以获取其他信息：  
   
-        1.  请求方复查请求并将请求发送回经理。  
+        1. 请求方复查请求并将请求发送回经理。  
   
-    3.  经理可以批准请求。  
+    3. 经理可以批准请求。  
   
 3. 在请求方的经理批准后，部门所有人必须审批请求：  
   
-    1.  部门所有人可以拒绝请求。  
+    1. 部门所有人可以拒绝请求。  
   
-    2.  部门所有人可以批准请求。  
+    2. 部门所有人可以批准请求。  
   
 4. 在部门所有人批准后，流程需要经过两名 HR 经理或 CEO 的审批：  
   
-    1.  流程可转换为已接受或已拒绝状态。  
+    1. 流程可转换为已接受或已拒绝状态。  
   
-    2.  如果流程为已接受状态，则启动 `ResumeRequest` 工作流的新实例（通过服务引用将 `ResumeRequest` 链接到 HiringRequest.csproj）。  
+    2. 如果流程为已接受状态，则启动 `ResumeRequest` 工作流的新实例（通过服务引用将 `ResumeRequest` 链接到 HiringRequest.csproj）。  
   
  一旦经理批准招聘新员工，HR 必须找到合适的人选。 此流程由第二个工作流（在 ResumeRequestService.csproj 中定义的 `ResumeRequest`）执行。 此工作流定义向 Contoso 的外部工作机会网站提交提供职位空缺的招聘启事的流程，接收申请人的简历并监视招聘启事的状态。 职位可存在一段固定的时间，直到时间到期为止，或直到 Contoso 的某员工决定删除它为止。 `ResumeRequest` 工作流包含以下几个步骤：  
   
@@ -215,19 +215,19 @@ ms.locfileid: "62005051"
   
 2. 如果生成解决方案失败，请验证以下内容：  
   
-    -   对引用`ContosoHR`不缺少`InternalClient`或`CareersWebSite`项目。  
+    - 对引用`ContosoHR`不缺少`InternalClient`或`CareersWebSite`项目。  
   
 3. 如果执行解决方案失败，请验证以下内容：  
   
-    1.  所有服务正在运行。  
+    1. 所有服务正在运行。  
   
-    2.  服务引用已更新。  
+    2. 服务引用已更新。  
   
-        1.  打开 App_WebReferences 文件夹  
+        1. 打开 App_WebReferences 文件夹  
   
-        2.  右键单击**Contoso** ，然后选择**更新 Web/服务引用**。  
+        2. 右键单击**Contoso** ，然后选择**更新 Web/服务引用**。  
   
-        3.  通过在 Visual Studio 中按 CTRL + SHIFT + B 重新生成解决方案。  
+        3. 通过在 Visual Studio 中按 CTRL + SHIFT + B 重新生成解决方案。  
   
 ## <a name="uninstalling"></a>卸载  
   

@@ -2,21 +2,21 @@
 title: 如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63027e892fe8404001c6869be33af8cff1bc014a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643997"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
 此示例演示了比较两个文件列表的 3 种方法：  
   
--   通过查询布尔值指定两个文件列表是否相同。  
+- 通过查询布尔值指定两个文件列表是否相同。  
   
--   通过查询交集检索同时存在于两个文件夹中的文件。  
+- 通过查询交集检索同时存在于两个文件夹中的文件。  
   
--   通过查询差集检索仅存在于一个文件夹中的文件。  
+- 通过查询差集检索仅存在于一个文件夹中的文件。  
   
     > [!NOTE]
     >  此处的方法适用于比较任何类型的对象序列。  

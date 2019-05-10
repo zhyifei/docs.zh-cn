@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e6af8d6410c4e383990bdaa27f97cc698be71719
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649201"
 ---
 # <a name="how-to-clone-a-printer"></a>如何：克隆打印机
 大多数企业都在某些时候，将购买的同一模型的多台打印机。 通常情况下，这些进行所有安装使用几乎完全相同的配置设置。 安装每个打印机可能非常耗时且容易出错。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空间和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都通过 Microsoft.NET Framework 公开的类可以立即从现有的打印队列安装任意数目的克隆的其他打印队列。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3769da28e1c9a27c8363b0d6ec639cedaf0f03be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624844"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>如何：调用 Windows Api (Visual Basic)
 此示例中定义和调用`MessageBox`user32.dll 中的函数，然后将字符串传递给它。  
@@ -23,16 +23,16 @@ ms.locfileid: "61818711"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 <xref:System> 命名空间的引用。  
+- 对 <xref:System> 命名空间的引用。  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   该方法不是静态的是抽象的或之前已定义。 父类型是一个接口或长度*名称*或*dllName*为零。 (<xref:System.ArgumentException>)  
+- 该方法不是静态的是抽象的或之前已定义。 父类型是一个接口或长度*名称*或*dllName*为零。 (<xref:System.ArgumentException>)  
   
--   *名称*或*dllName*是`Nothing`。 (<xref:System.ArgumentNullException>)  
+- *名称*或*dllName*是`Nothing`。 (<xref:System.ArgumentNullException>)  
   
--   之前已使用 `CreateType` 创建包含类型。 (<xref:System.InvalidOperationException>)  
+- 之前已使用 `CreateType` 创建包含类型。 (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>请参阅
 
