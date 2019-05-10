@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99d5dc2e0f8389f8c9e90786c4d9d0fa037eb828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651418"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a><span data-ttu-id="9e17f-102">默认属性访问之间不明确继承的接口成员的\<defaultpropertyname > 的接口\<interfacename1 >' 和 '\<defaultpropertyname > 的接口\<interfacename2 ></span><span class="sxs-lookup"><span data-stu-id="9e17f-102">Default property access is ambiguous between the inherited interface members '\<defaultpropertyname>' of interface '\<interfacename1>' and '\<defaultpropertyname>' of interface '\<interfacename2>'</span></span>
-<span data-ttu-id="9e17f-103">接口继承自两个接口，其中每个声明具有相同名称的默认属性。</span><span class="sxs-lookup"><span data-stu-id="9e17f-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="9e17f-104">编译器无法解析所需的访问而无需限定此默认属性。</span><span class="sxs-lookup"><span data-stu-id="9e17f-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="9e17f-105">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="9e17f-105">The following example illustrates this.</span></span>  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a><span data-ttu-id="86b0b-102">默认属性访问之间不明确继承的接口成员的\<defaultpropertyname > 的接口\<interfacename1 >' 和 '\<defaultpropertyname > 的接口\<interfacename2 ></span><span class="sxs-lookup"><span data-stu-id="86b0b-102">Default property access is ambiguous between the inherited interface members '\<defaultpropertyname>' of interface '\<interfacename1>' and '\<defaultpropertyname>' of interface '\<interfacename2>'</span></span>
+<span data-ttu-id="86b0b-103">接口继承自两个接口，其中每个声明具有相同名称的默认属性。</span><span class="sxs-lookup"><span data-stu-id="86b0b-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="86b0b-104">编译器无法解析所需的访问而无需限定此默认属性。</span><span class="sxs-lookup"><span data-stu-id="86b0b-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="86b0b-105">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="86b0b-105">The following example illustrates this.</span></span>  
   
 ```  
 Public Interface Iface1  
@@ -35,21 +35,21 @@ Public Class testClass
 End Class  
 ```  
   
- <span data-ttu-id="9e17f-106">当指定`testObj(1)`，编译器会尝试将它解析为默认属性。</span><span class="sxs-lookup"><span data-stu-id="9e17f-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="9e17f-107">但是，有两个可能的默认属性由于继承的接口，因此，编译器将引发此错误。</span><span class="sxs-lookup"><span data-stu-id="9e17f-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
+ <span data-ttu-id="86b0b-106">当指定`testObj(1)`，编译器会尝试将它解析为默认属性。</span><span class="sxs-lookup"><span data-stu-id="86b0b-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="86b0b-107">但是，有两个可能的默认属性由于继承的接口，因此，编译器将引发此错误。</span><span class="sxs-lookup"><span data-stu-id="86b0b-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
   
- <span data-ttu-id="9e17f-108">**错误 ID:** BC30686</span><span class="sxs-lookup"><span data-stu-id="9e17f-108">**Error ID:** BC30686</span></span>  
+ <span data-ttu-id="86b0b-108">**错误 ID:** BC30686</span><span class="sxs-lookup"><span data-stu-id="86b0b-108">**Error ID:** BC30686</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9e17f-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="9e17f-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="86b0b-109">更正此错误</span><span class="sxs-lookup"><span data-stu-id="86b0b-109">To correct this error</span></span>  
   
-- <span data-ttu-id="9e17f-110">避免继承具有相同名称的任何成员。</span><span class="sxs-lookup"><span data-stu-id="9e17f-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="9e17f-111">在前面的示例中，如果`testObj`不需要任何的成员，例如， `Iface2`，然后将其声明，如下所示：</span><span class="sxs-lookup"><span data-stu-id="9e17f-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
+- <span data-ttu-id="86b0b-110">避免继承具有相同名称的任何成员。</span><span class="sxs-lookup"><span data-stu-id="86b0b-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="86b0b-111">在前面的示例中，如果`testObj`不需要任何的成员，例如， `Iface2`，然后将其声明，如下所示：</span><span class="sxs-lookup"><span data-stu-id="86b0b-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     <span data-ttu-id="9e17f-112">或</span><span class="sxs-lookup"><span data-stu-id="9e17f-112">-or-</span></span>  
+     <span data-ttu-id="86b0b-112">或</span><span class="sxs-lookup"><span data-stu-id="86b0b-112">-or-</span></span>  
   
-- <span data-ttu-id="9e17f-113">在类中实现继承的接口。</span><span class="sxs-lookup"><span data-stu-id="9e17f-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="9e17f-114">然后您可以实现每个具有不同名称的继承属性。</span><span class="sxs-lookup"><span data-stu-id="9e17f-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="9e17f-115">但是，仅有一种可以实现类的默认属性。</span><span class="sxs-lookup"><span data-stu-id="9e17f-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="9e17f-116">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="9e17f-116">The following example illustrates this.</span></span>  
+- <span data-ttu-id="86b0b-113">在类中实现继承的接口。</span><span class="sxs-lookup"><span data-stu-id="86b0b-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="86b0b-114">然后您可以实现每个具有不同名称的继承属性。</span><span class="sxs-lookup"><span data-stu-id="86b0b-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="86b0b-115">但是，仅有一种可以实现类的默认属性。</span><span class="sxs-lookup"><span data-stu-id="86b0b-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="86b0b-116">下面的示例阐释了这一点。</span><span class="sxs-lookup"><span data-stu-id="86b0b-116">The following example illustrates this.</span></span>  
   
     ```  
     Public Class useIface3  
@@ -63,6 +63,6 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9e17f-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e17f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86b0b-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="86b0b-117">See also</span></span>
 
-- [<span data-ttu-id="9e17f-118">接口</span><span class="sxs-lookup"><span data-stu-id="9e17f-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="86b0b-118">接口</span><span class="sxs-lookup"><span data-stu-id="86b0b-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
