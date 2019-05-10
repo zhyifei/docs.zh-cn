@@ -2,24 +2,24 @@
 title: 从 XML 架构生成数据集关系 (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2cf6d2ed949a3efa39c0f1c049bc03e7a5b0eb0b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034315"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621082"
 ---
-# <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="13721-102">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="13721-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
-<span data-ttu-id="13721-103">在 <xref:System.Data.DataSet> 中，可通过创建父子关系来形成两个或更多个列之间的关联。</span><span class="sxs-lookup"><span data-stu-id="13721-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="13721-104">有三种方法来表示**数据集**XML 架构定义语言 (XSD) 架构中的关系：</span><span class="sxs-lookup"><span data-stu-id="13721-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="614e0-102">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="614e0-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
+<span data-ttu-id="614e0-103">在 <xref:System.Data.DataSet> 中，可通过创建父子关系来形成两个或更多个列之间的关联。</span><span class="sxs-lookup"><span data-stu-id="614e0-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="614e0-104">有三种方法来表示**数据集**XML 架构定义语言 (XSD) 架构中的关系：</span><span class="sxs-lookup"><span data-stu-id="614e0-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  
   
-- <span data-ttu-id="13721-105">指定嵌套复杂类型。</span><span class="sxs-lookup"><span data-stu-id="13721-105">Specify nested complex types.</span></span>  
+- <span data-ttu-id="614e0-105">指定嵌套复杂类型。</span><span class="sxs-lookup"><span data-stu-id="614e0-105">Specify nested complex types.</span></span>  
   
-- <span data-ttu-id="13721-106">使用**msdata: relationship**批注。</span><span class="sxs-lookup"><span data-stu-id="13721-106">Use the **msdata:Relationship** annotation.</span></span>  
+- <span data-ttu-id="614e0-106">使用**msdata: relationship**批注。</span><span class="sxs-lookup"><span data-stu-id="614e0-106">Use the **msdata:Relationship** annotation.</span></span>  
   
-- <span data-ttu-id="13721-107">指定**xs: keyref**而无需**msdata:ConstraintOnly**批注。</span><span class="sxs-lookup"><span data-stu-id="13721-107">Specify an **xs:keyref** without the **msdata:ConstraintOnly** annotation.</span></span>  
+- <span data-ttu-id="614e0-107">指定**xs: keyref**而无需**msdata:ConstraintOnly**批注。</span><span class="sxs-lookup"><span data-stu-id="614e0-107">Specify an **xs:keyref** without the **msdata:ConstraintOnly** annotation.</span></span>  
   
-## <a name="nested-complex-types"></a><span data-ttu-id="13721-108">嵌套的复杂类型</span><span class="sxs-lookup"><span data-stu-id="13721-108">Nested Complex Types</span></span>  
- <span data-ttu-id="13721-109">架构中的嵌套复杂类型定义指示元素的父子关系。</span><span class="sxs-lookup"><span data-stu-id="13721-109">Nested complex type definitions in a schema indicate the parent-child relationships of the elements.</span></span> <span data-ttu-id="13721-110">下面的 XML 架构片断显示**OrderDetail**是子元素的**顺序**元素。</span><span class="sxs-lookup"><span data-stu-id="13721-110">The following XML Schema fragment shows that **OrderDetail** is a child element of the **Order** element.</span></span>  
+## <a name="nested-complex-types"></a><span data-ttu-id="614e0-108">嵌套的复杂类型</span><span class="sxs-lookup"><span data-stu-id="614e0-108">Nested Complex Types</span></span>  
+ <span data-ttu-id="614e0-109">架构中的嵌套复杂类型定义指示元素的父子关系。</span><span class="sxs-lookup"><span data-stu-id="614e0-109">Nested complex type definitions in a schema indicate the parent-child relationships of the elements.</span></span> <span data-ttu-id="614e0-110">下面的 XML 架构片断显示**OrderDetail**是子元素的**顺序**元素。</span><span class="sxs-lookup"><span data-stu-id="614e0-110">The following XML Schema fragment shows that **OrderDetail** is a child element of the **Order** element.</span></span>  
   
 ```xml  
 <xs:element name="Order">  
@@ -33,10 +33,10 @@ ms.locfileid: "62034315"
 </xs:element>  
 ```  
   
- <span data-ttu-id="13721-111">XML 架构映射过程中创建表**数据集**对应于架构中嵌套的复杂类型。</span><span class="sxs-lookup"><span data-stu-id="13721-111">The XML Schema mapping process creates tables in the **DataSet** that correspond to the nested complex types in the schema.</span></span> <span data-ttu-id="13721-112">它还将创建其他列用作父**-** 所生成的表的子列。</span><span class="sxs-lookup"><span data-stu-id="13721-112">It also creates additional columns that are used as parent**-** child columns for the generated tables.</span></span> <span data-ttu-id="13721-113">请注意，这些**-** 子列指定的关系，这是不与指定主键/外键约束相同。</span><span class="sxs-lookup"><span data-stu-id="13721-113">Note that these parent**-** child columns specify relationships, which is not the same as specifying primary key/foreign key constraints.</span></span>  
+ <span data-ttu-id="614e0-111">XML 架构映射过程中创建表**数据集**对应于架构中嵌套的复杂类型。</span><span class="sxs-lookup"><span data-stu-id="614e0-111">The XML Schema mapping process creates tables in the **DataSet** that correspond to the nested complex types in the schema.</span></span> <span data-ttu-id="614e0-112">它还将创建其他列用作父**-** 所生成的表的子列。</span><span class="sxs-lookup"><span data-stu-id="614e0-112">It also creates additional columns that are used as parent**-** child columns for the generated tables.</span></span> <span data-ttu-id="614e0-113">请注意，这些**-** 子列指定的关系，这是不与指定主键/外键约束相同。</span><span class="sxs-lookup"><span data-stu-id="614e0-113">Note that these parent**-** child columns specify relationships, which is not the same as specifying primary key/foreign key constraints.</span></span>  
   
-## <a name="msdatarelationship-annotation"></a><span data-ttu-id="13721-114">msdata:Relationship 批注</span><span class="sxs-lookup"><span data-stu-id="13721-114">msdata:Relationship Annotation</span></span>  
- <span data-ttu-id="13721-115">**Msdata: relationship**批注可以显式指定不嵌套在架构中的元素之间的父-子关系。</span><span class="sxs-lookup"><span data-stu-id="13721-115">The **msdata:Relationship** annotation allows you to explicitly specify parent-child relationships between elements in the schema that are not nested.</span></span> <span data-ttu-id="13721-116">下面的示例演示的结构**关系**元素。</span><span class="sxs-lookup"><span data-stu-id="13721-116">The following example shows the structure of the **Relationship** element.</span></span>  
+## <a name="msdatarelationship-annotation"></a><span data-ttu-id="614e0-114">msdata:Relationship 批注</span><span class="sxs-lookup"><span data-stu-id="614e0-114">msdata:Relationship Annotation</span></span>  
+ <span data-ttu-id="614e0-115">**Msdata: relationship**批注可以显式指定不嵌套在架构中的元素之间的父-子关系。</span><span class="sxs-lookup"><span data-stu-id="614e0-115">The **msdata:Relationship** annotation allows you to explicitly specify parent-child relationships between elements in the schema that are not nested.</span></span> <span data-ttu-id="614e0-116">下面的示例演示的结构**关系**元素。</span><span class="sxs-lookup"><span data-stu-id="614e0-116">The following example shows the structure of the **Relationship** element.</span></span>  
   
 ```xml  
 <msdata:Relationship name="CustOrderRelationship"    
@@ -46,9 +46,9 @@ msdata:parentkey=""
 msdata:childkey="" />  
 ```  
   
- <span data-ttu-id="13721-117">特性**msdata: relationship**批注标识为父-子关系中所涉及的元素**parentkey**并**childkey**元素和关系所涉及的属性。</span><span class="sxs-lookup"><span data-stu-id="13721-117">The attributes of the **msdata:Relationship** annotation identify the elements involved in the parent-child relationship, as well as the **parentkey** and **childkey** elements and attributes involved in the relationship.</span></span> <span data-ttu-id="13721-118">映射过程使用此信息来生成中的表**数据集**并创建这些表之间主键/外的键关系。</span><span class="sxs-lookup"><span data-stu-id="13721-118">The mapping process uses this information to generate tables in the **DataSet** and to create the primary key/foreign key relationship between these tables.</span></span>  
+ <span data-ttu-id="614e0-117">特性**msdata: relationship**批注标识为父-子关系中所涉及的元素**parentkey**并**childkey**元素和关系所涉及的属性。</span><span class="sxs-lookup"><span data-stu-id="614e0-117">The attributes of the **msdata:Relationship** annotation identify the elements involved in the parent-child relationship, as well as the **parentkey** and **childkey** elements and attributes involved in the relationship.</span></span> <span data-ttu-id="614e0-118">映射过程使用此信息来生成中的表**数据集**并创建这些表之间主键/外的键关系。</span><span class="sxs-lookup"><span data-stu-id="614e0-118">The mapping process uses this information to generate tables in the **DataSet** and to create the primary key/foreign key relationship between these tables.</span></span>  
   
- <span data-ttu-id="13721-119">例如，以下架构片断指定**顺序**并**OrderDetail**同一级别的元素 （不嵌套）。</span><span class="sxs-lookup"><span data-stu-id="13721-119">For example, the following schema fragment specifies **Order** and **OrderDetail** elements at the same level (not nested).</span></span> <span data-ttu-id="13721-120">该架构指定**msdata: relationship**批注，指定这两个元素之间的父-子关系。</span><span class="sxs-lookup"><span data-stu-id="13721-120">The schema specifies an **msdata:Relationship** annotation, which specifies the parent-child relationship between these two elements.</span></span> <span data-ttu-id="13721-121">在这种情况下，显式关系必须指定使用**msdata: relationship**批注。</span><span class="sxs-lookup"><span data-stu-id="13721-121">In this case, an explicit relationship must be specified using the **msdata:Relationship** annotation.</span></span>  
+ <span data-ttu-id="614e0-119">例如，以下架构片断指定**顺序**并**OrderDetail**同一级别的元素 （不嵌套）。</span><span class="sxs-lookup"><span data-stu-id="614e0-119">For example, the following schema fragment specifies **Order** and **OrderDetail** elements at the same level (not nested).</span></span> <span data-ttu-id="614e0-120">该架构指定**msdata: relationship**批注，指定这两个元素之间的父-子关系。</span><span class="sxs-lookup"><span data-stu-id="614e0-120">The schema specifies an **msdata:Relationship** annotation, which specifies the parent-child relationship between these two elements.</span></span> <span data-ttu-id="614e0-121">在这种情况下，显式关系必须指定使用**msdata: relationship**批注。</span><span class="sxs-lookup"><span data-stu-id="614e0-121">In this case, an explicit relationship must be specified using the **msdata:Relationship** annotation.</span></span>  
   
 ```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -78,25 +78,25 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- <span data-ttu-id="13721-122">映射进程使用**关系**元素来创建之间的父-子关系**OrderNumber**中的列**顺序**表并**OrderNo**中的列**OrderDetail**表中**数据集**。</span><span class="sxs-lookup"><span data-stu-id="13721-122">The mapping process uses the **Relationship** element to create a parent-child relationship between the **OrderNumber** column in the **Order** table and the **OrderNo** column in the **OrderDetail** table in the **DataSet**.</span></span> <span data-ttu-id="13721-123">映射进程仅指定关系；与关系数据库中的主键/外键约束不同，它并不会自动为这些列中的值指定任何约束。</span><span class="sxs-lookup"><span data-stu-id="13721-123">The mapping process only specifies the relationship; it does not automatically specify any constraints on the values in these columns, as do the primary key/foreign key constraints in relational databases.</span></span>  
+ <span data-ttu-id="614e0-122">映射进程使用**关系**元素来创建之间的父-子关系**OrderNumber**中的列**顺序**表并**OrderNo**中的列**OrderDetail**表中**数据集**。</span><span class="sxs-lookup"><span data-stu-id="614e0-122">The mapping process uses the **Relationship** element to create a parent-child relationship between the **OrderNumber** column in the **Order** table and the **OrderNo** column in the **OrderDetail** table in the **DataSet**.</span></span> <span data-ttu-id="614e0-123">映射进程仅指定关系；与关系数据库中的主键/外键约束不同，它并不会自动为这些列中的值指定任何约束。</span><span class="sxs-lookup"><span data-stu-id="614e0-123">The mapping process only specifies the relationship; it does not automatically specify any constraints on the values in these columns, as do the primary key/foreign key constraints in relational databases.</span></span>  
   
-### <a name="in-this-section"></a><span data-ttu-id="13721-124">本节内容</span><span class="sxs-lookup"><span data-stu-id="13721-124">In This Section</span></span>  
- [<span data-ttu-id="13721-125">映射嵌套架构元素之间的隐式关系</span><span class="sxs-lookup"><span data-stu-id="13721-125">Map Implicit Relations Between Nested Schema Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- <span data-ttu-id="13721-126">描述的约束和关系中隐式创建**数据集**时在 XML 架构中遇到嵌套的元素。</span><span class="sxs-lookup"><span data-stu-id="13721-126">Describes the constraints and relations that are implicitly created in a **DataSet** when nested elements are encountered in XML Schema.</span></span>  
+### <a name="in-this-section"></a><span data-ttu-id="614e0-124">本节内容</span><span class="sxs-lookup"><span data-stu-id="614e0-124">In This Section</span></span>  
+ [<span data-ttu-id="614e0-125">映射嵌套架构元素之间的隐式关系</span><span class="sxs-lookup"><span data-stu-id="614e0-125">Map Implicit Relations Between Nested Schema Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ <span data-ttu-id="614e0-126">描述的约束和关系中隐式创建**数据集**时在 XML 架构中遇到嵌套的元素。</span><span class="sxs-lookup"><span data-stu-id="614e0-126">Describes the constraints and relations that are implicitly created in a **DataSet** when nested elements are encountered in XML Schema.</span></span>  
   
- [<span data-ttu-id="13721-127">映射为嵌套元素指定的关系</span><span class="sxs-lookup"><span data-stu-id="13721-127">Map Relations Specified for Nested Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- <span data-ttu-id="13721-128">介绍如何在中显式设置关系**数据集**XML 架构中的嵌套元素。</span><span class="sxs-lookup"><span data-stu-id="13721-128">Describes how to explicitly set relations in a **DataSet** for nested elements in XML Schema.</span></span>  
+ [<span data-ttu-id="614e0-127">映射为嵌套元素指定的关系</span><span class="sxs-lookup"><span data-stu-id="614e0-127">Map Relations Specified for Nested Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ <span data-ttu-id="614e0-128">介绍如何在中显式设置关系**数据集**XML 架构中的嵌套元素。</span><span class="sxs-lookup"><span data-stu-id="614e0-128">Describes how to explicitly set relations in a **DataSet** for nested elements in XML Schema.</span></span>  
   
- [<span data-ttu-id="13721-129">指定无嵌套元素之间的关系</span><span class="sxs-lookup"><span data-stu-id="13721-129">Specify Relations Between Elements with No Nesting</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- <span data-ttu-id="13721-130">介绍如何创建中的关系**数据集**不嵌套的 XML 架构元素之间。</span><span class="sxs-lookup"><span data-stu-id="13721-130">Describes how to create relations in a **DataSet** between XML Schema elements that are not nested.</span></span>  
+ [<span data-ttu-id="614e0-129">指定无嵌套元素之间的关系</span><span class="sxs-lookup"><span data-stu-id="614e0-129">Specify Relations Between Elements with No Nesting</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ <span data-ttu-id="614e0-130">介绍如何创建中的关系**数据集**不嵌套的 XML 架构元素之间。</span><span class="sxs-lookup"><span data-stu-id="614e0-130">Describes how to create relations in a **DataSet** between XML Schema elements that are not nested.</span></span>  
   
-### <a name="related-sections"></a><span data-ttu-id="13721-131">相关章节</span><span class="sxs-lookup"><span data-stu-id="13721-131">Related Sections</span></span>  
- [<span data-ttu-id="13721-132">从 XML 架构派生数据集关系结构 (XSD)</span><span class="sxs-lookup"><span data-stu-id="13721-132">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- <span data-ttu-id="13721-133">描述的关系结构或架构**数据集**创建从 XML 架构定义语言 (XSD) 架构。</span><span class="sxs-lookup"><span data-stu-id="13721-133">Describes the relational structure, or schema, of a **DataSet** that is created from XML Schema definition language (XSD) schema.</span></span>  
+### <a name="related-sections"></a><span data-ttu-id="614e0-131">相关章节</span><span class="sxs-lookup"><span data-stu-id="614e0-131">Related Sections</span></span>  
+ [<span data-ttu-id="614e0-132">从 XML 架构派生数据集关系结构 (XSD)</span><span class="sxs-lookup"><span data-stu-id="614e0-132">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="614e0-133">描述的关系结构或架构**数据集**创建从 XML 架构定义语言 (XSD) 架构。</span><span class="sxs-lookup"><span data-stu-id="614e0-133">Describes the relational structure, or schema, of a **DataSet** that is created from XML Schema definition language (XSD) schema.</span></span>  
   
- [<span data-ttu-id="13721-134">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="13721-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- <span data-ttu-id="13721-135">描述用于创建唯一约束和外键约束中的 XML 架构元素**数据集**。</span><span class="sxs-lookup"><span data-stu-id="13721-135">Describes the XML Schema elements used to create unique and foreign key constraints in a **DataSet**.</span></span>  
+ [<span data-ttu-id="614e0-134">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="614e0-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="614e0-135">描述用于创建唯一约束和外键约束中的 XML 架构元素**数据集**。</span><span class="sxs-lookup"><span data-stu-id="614e0-135">Describes the XML Schema elements used to create unique and foreign key constraints in a **DataSet**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13721-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="13721-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="614e0-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="614e0-136">See also</span></span>
 
-- [<span data-ttu-id="13721-137">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="13721-137">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="614e0-137">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="614e0-137">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
