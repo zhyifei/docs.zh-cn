@@ -1,19 +1,19 @@
 ---
-title: 演练：承载 WPF 时钟在 Win32 中
+title: 演练：在 Win32 中承载 WPF 时钟
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494943"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755903"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>演练：承载 WPF 时钟在 Win32 中
+# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>演练：在 Win32 中承载 WPF 时钟
 
 若要将放[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序，使用<xref:System.Windows.Interop.HwndSource>，其中提供了包含的 HWND 你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。 首先创建<xref:System.Windows.Interop.HwndSource>，为其赋予类似于 CreateWindow 的参数。 然后，通知<xref:System.Windows.Interop.HwndSource>有关[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您要在其中包含内容。 最后，获取共 HWND <xref:System.Windows.Interop.HwndSource>。 本演练演示如何创建混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]重新实现操作系统的应用程序**日期和时间属性**对话框。
 
@@ -29,13 +29,13 @@ ms.locfileid: "57494943"
 
 下图显示了本教程的预期最终产品：
 
-![“日期和时间属性”对话框](./media/interoparch06.PNG "InteropArch06")
+![显示日期和时间属性对话框中的屏幕截图。](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-可以通过创建 c + + 重新创建此对话框[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]项目中[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，并使用对话框编辑器创建以下：
+可以通过创建此对话框中重新创建C++在 Visual Studio 中，并使用对话框编辑器创建以下 Win32 项目：
 
-![“日期和时间属性”对话框](./media/interoparch07.PNG "InteropArch07")
+![重新创建的日期和时间属性对话框](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
-(不需要使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]若要使用<xref:System.Windows.Interop.HwndSource>，并且不需要使用 c + + 编写[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程序，但这是相当典型的方法来执行此操作，并且非常适合用于分布教程说明)。
+(不需要使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]若要使用<xref:System.Windows.Interop.HwndSource>，并不需要使用C++编写[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程序，但这是相当典型的方法来执行此操作，并且非常适合用于分布教程说明)。
 
 您需要完成五个特定的子步骤才能将放置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]时钟在对话框：
 
@@ -53,7 +53,7 @@ ms.locfileid: "57494943"
 
 第一步是将此非托管[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]项目转换成了一可调用托管代码。 使用 /clr 编译器选项，它将链接到你想要使用，并调整与一起使用的 Main 方法所需的 Dll [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。
 
-若要启用 c + + 项目内的托管代码使用：右键单击 win32clock 项目，然后选择**属性**。 上**常规**属性页 （默认值），更改到的公共语言运行时支持`/clr`。
+若要启用的托管代码使用C++项目：右键单击 win32clock 项目，然后选择**属性**。 上**常规**属性页 （默认值），更改到的公共语言运行时支持`/clr`。
 
 接下来，添加对所需的 Dll 的引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:PresentationCore.dll、 PresentationFramework.dll、 System.dll、 WindowsBase.dll、 UIAutomationProvider.dll 和 UIAutomationTypes.dll。 （以下说明假定操作系统安装在 C: 驱动器上。）
 
@@ -229,7 +229,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 最终结果如下所示：
 
-![“日期和时间属性”对话框](./media/interoparch08.PNG "InteropArch08")
+![最终结果日期和时间属性对话框](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 若要进行比较将最终结果与生成此屏幕截图中的代码，请参阅[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)。
 

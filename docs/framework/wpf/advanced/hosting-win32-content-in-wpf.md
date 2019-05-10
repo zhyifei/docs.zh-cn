@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 8773cac1e421ecdca036e88d79797dae16f72b17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 390f63fca912de6de2a1349363e239eb603df549
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055074"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750614"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中承载 Win32 内容
 
@@ -366,7 +366,7 @@ public partial class Window1 : Window {
 
 后者可提供：
 
-![WPF 应用程序屏幕截图](./media/interoparch09.PNG "InteropArch09")
+![运行的 WPF 应用程序的屏幕截图。](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
 ## <a name="see-also"></a>请参阅
 

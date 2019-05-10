@@ -2,12 +2,12 @@
 title: 身份验证的扩展保护概述
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856721"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665955"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>身份验证的扩展保护概述
 身份验证的扩展保护有助于抵御中间人 (MITM) 攻击，在此类攻击中，攻击者截获客户端凭据并将它们转发给服务器。  

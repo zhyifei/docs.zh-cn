@@ -2,12 +2,12 @@
 title: 开始使用F#在 Visual Studio 中
 description: 了解如何使用F#使用 Visual Studio。
 ms.date: 07/03/2018
-ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331905"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754861"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>开始使用F#在 Visual Studio 中
 
@@ -25,7 +25,7 @@ Visual Studio 中最基本的项目之一是控制台应用程序。  以下是�
 
 3. 选择任一 **.NET Core 控制台应用程序**或**控制台应用**。
 
-3. 选择**好**按钮以创建F#项目 ！  现在应看到F#解决方案资源管理器中的项目。
+4. 选择**好**按钮以创建F#项目 ！  现在应看到F#解决方案资源管理器中的项目。
 
 ## <a name="writing-your-code"></a>编写代码
 
@@ -35,7 +35,7 @@ Visual Studio 中最基本的项目之一是控制台应用程序。  以下是�
 
 在前面的代码示例，一个函数`square`具有已定义接受名为输入`x`并将其本身乘以。  因为F#使用[类型推理](../language-reference/type-inference.md)的类型`x`不需要指定。  F#编译器了解有效，乘法的类型，并将分配到的类型`x`具体取决于`square`调用。  如果您悬停`square`，则应查看以下信息：
 
-```
+```fsharp
 val square: x:int -> int
 ```
 

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 893782e041b1397fe0598394b69575a5c9e53806
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012914"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625396"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中查看多个行
 默认情况下，Windows 窗体<xref:System.Windows.Forms.TextBox>控件显示单行文本并不会显示滚动条。 文本的长度超过可用空间，仅部分文本可见。 可以通过设置更改此默认行为<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>为适当的值的属性。  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>若要显示在 TextBox 控件中返回一个回车符  
   
--   若要显示多行的回车<xref:System.Windows.Forms.TextBox>，使用<xref:System.Environment.NewLine%2A>属性。  
+- 若要显示多行的回车<xref:System.Windows.Forms.TextBox>，使用<xref:System.Environment.NewLine%2A>属性。  
   
      请注意，解释转义符 (\\) 是特定于语言的。 Visual Basic 则使用`Chr$(13) & Chr$(10)`为回车符和换行符字符组合。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62012914"
   
 2. 将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。  
   
-    |“值”|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|使用此值，如果该文本则为一个段落，几乎总是能适合控件。 用户可以使用鼠标指针在控件内移动，如果文本太长而无法一次性全部显示。|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|如果你想要显示的行，其中一些可能会比的宽度更长列表，请使用此值<xref:System.Windows.Forms.TextBox>控件。|  
@@ -41,7 +41,7 @@ ms.locfileid: "62012914"
   
 3. 将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
-    |“值”|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |`false`|控件中的文本不会自动换行，所以它将滚动到右侧，直到到达一个分行符。 使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Horizontal>滚动条或<xref:System.Windows.Forms.ScrollBars.Both>、 更高版本。|  
     |`true`（默认值）|不会出现水平滚动条。 使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Vertical>滚动条或<xref:System.Windows.Forms.ScrollBars.None>、 更高版本来显示一个或多个段落。|  

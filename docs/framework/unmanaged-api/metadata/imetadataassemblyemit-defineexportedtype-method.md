@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625436"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 创建包含指定导出类型的元数据的 `ExportedType` 结构，并返回关联的元数据标记。  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in]指定导出的类型实现的位置标记。 有效的值和其关联的含义是：  
   
--   `mdFile` 类型是此程序集内的不同文件中实现的。  
+- `mdFile` 类型是此程序集内的不同文件中实现的。  
   
--   `mdAssemblyRef` 类型是在不同的程序集中实现的。  
+- `mdAssemblyRef` 类型是在不同的程序集中实现的。  
   
--   `mdExportedTYpe` 该类型嵌套在其他类型。  
+- `mdExportedTYpe` 该类型嵌套在其他类型。  
   
--   `mdFileNil` 类型是在清单的同一个文件中并不是嵌套的类型。  
+- `mdFileNil` 类型是在清单的同一个文件中并不是嵌套的类型。  
   
  `tkTypeDef`  
  [in]指定要导出的类型的元数据标记。 此值中输入`TypeDef`将实现类型，将只适用于该文件是在此程序集中的文件中的表。  

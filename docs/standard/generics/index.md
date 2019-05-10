@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622813"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -41,17 +41,17 @@ ms.locfileid: "61683296"
   
  本主题概述了 .NET 中的泛型，并总结了泛型类型或方法。 它包含下列部分：  
   
--   [定义和使用泛型](#defining_and_using_generics)  
+- [定义和使用泛型](#defining_and_using_generics)  
   
--   [泛型术语](#generics_terminology)  
+- [泛型术语](#generics_terminology)  
   
--   [类库和语言支持](#class_library_and_language_support)  
+- [类库和语言支持](#class_library_and_language_support)  
   
--   [嵌套类型和泛型](#nested_types_and_generics)  
+- [嵌套类型和泛型](#nested_types_and_generics)  
   
--   [相关主题](#related_topics)  
+- [相关主题](#related_topics)  
   
--   [引用](#reference)  
+- [引用](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>定义和使用泛型  
@@ -71,21 +71,21 @@ ms.locfileid: "61683296"
 ### <a name="generics-terminology"></a>泛型术语  
  介绍 .NET 中的泛型需要用到以下术语：  
   
--   *泛型类型定义* 是用作模板的类、结构或接口声明，带有可包含或使用的类型的占位符。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类可以包含两种类型：密钥和值。 由于泛型类型定义只是一个模板，所以你无法创建作为泛型类型定义的类、结构或接口的实例。  
+- *泛型类型定义* 是用作模板的类、结构或接口声明，带有可包含或使用的类型的占位符。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类可以包含两种类型：密钥和值。 由于泛型类型定义只是一个模板，所以你无法创建作为泛型类型定义的类、结构或接口的实例。  
   
--   *泛型类型参数*（或*类型参数*）是泛型类型或方法定义中的占位符。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型类型具有两个类型形参 `TKey` 和 `TValue`，它们分别代表密钥和值的类型。  
+- *泛型类型参数*（或*类型参数*）是泛型类型或方法定义中的占位符。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型类型具有两个类型形参 `TKey` 和 `TValue`，它们分别代表密钥和值的类型。  
   
--   *构造泛型类型*（或 *构造类型*）是为泛型类型定义的泛型类型形参指定类型的结果。  
+- *构造泛型类型*（或 *构造类型*）是为泛型类型定义的泛型类型形参指定类型的结果。  
   
--   *泛型类型实参* 是被泛型类型形参所替代的任何类型。  
+- *泛型类型实参* 是被泛型类型形参所替代的任何类型。  
   
--   一般术语 *泛型类型* 包括构造类型和泛型类型定义。  
+- 一般术语 *泛型类型* 包括构造类型和泛型类型定义。  
   
--   借助泛型类型参数的*协变*和*逆变*，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体” 。 有关详细信息，请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+- 借助泛型类型参数的*协变*和*逆变*，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体” 。 有关详细信息，请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
--   *约束*是对泛型类型参数的限制。 例如，你可能会将一个类型形参限制为实现 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型接口的类型，以确保可对该类型的实例进行排序。 此外，你还可以将类型形参限制为具有特定基类、具有默认构造函数或作为引用类型或值类型的类型。 泛型类型的用户不能替换不满足约束条件的类型实参。  
+- *约束*是对泛型类型参数的限制。 例如，你可能会将一个类型形参限制为实现 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型接口的类型，以确保可对该类型的实例进行排序。 此外，你还可以将类型形参限制为具有特定基类、具有默认构造函数或作为引用类型或值类型的类型。 泛型类型的用户不能替换不满足约束条件的类型实参。  
   
--   *泛型方法定义* 是具有两个形参列表的方法：泛型类型形参列表和形参列表。 类型形参可作为返回类型或形参类型出现，如以下代码所示。  
+- *泛型方法定义* 是具有两个形参列表的方法：泛型类型形参列表和形参列表。 类型形参可作为返回类型或形参类型出现，如以下代码所示。  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -103,29 +103,29 @@ ms.locfileid: "61683296"
 ## <a name="advantages-and-disadvantages-of-generics"></a>泛型的利与弊  
  使用泛型集合和委托有很多好处：  
   
--   类型安全。 泛型将类型安全的负担从你那里转移到编译器。 没有必要编写代码来测试正确的数据类型，因为它会在编译时强制执行。 降低了强制类型转换的必要性和运行时错误的可能性。  
+- 类型安全。 泛型将类型安全的负担从你那里转移到编译器。 没有必要编写代码来测试正确的数据类型，因为它会在编译时强制执行。 降低了强制类型转换的必要性和运行时错误的可能性。  
   
--   代码更少且可以更轻松地重用代码。 无需从基类型继承，无需重写成员。 例如，可立即使用 <xref:System.Collections.Generic.LinkedList%601> 。 例如，你可以使用下列变量声明来创建字符串的链接列表：  
+- 代码更少且可以更轻松地重用代码。 无需从基类型继承，无需重写成员。 例如，可立即使用 <xref:System.Collections.Generic.LinkedList%601> 。 例如，你可以使用下列变量声明来创建字符串的链接列表：  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
--   性能更好。 泛型集合类型通常能更好地存储和操作值类型，因为无需对值类型进行装箱。  
+- 性能更好。 泛型集合类型通常能更好地存储和操作值类型，因为无需对值类型进行装箱。  
   
--   泛型委托可以在无需创建多个委托类的情况下进行类型安全的回调。 例如， <xref:System.Predicate%601> 泛型委托允许你创建一种为特定类型实现你自己的搜索标准的方法并将你的方法与 <xref:System.Array> 类型比如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>方法一起使用。  
+- 泛型委托可以在无需创建多个委托类的情况下进行类型安全的回调。 例如， <xref:System.Predicate%601> 泛型委托允许你创建一种为特定类型实现你自己的搜索标准的方法并将你的方法与 <xref:System.Array> 类型比如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>方法一起使用。  
   
--   泛型简化动态生成的代码。 使用具有动态生成的代码的泛型时，无需生成类型。 这会增加方案数量，在这些方案中你可以使用轻量动态方法而非生成整个程序集。 有关详细信息，请参阅[如何：定义和执行动态方法 ](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 和 <xref:System.Reflection.Emit.DynamicMethod>。  
+- 泛型简化动态生成的代码。 使用具有动态生成的代码的泛型时，无需生成类型。 这会增加方案数量，在这些方案中你可以使用轻量动态方法而非生成整个程序集。 有关详细信息，请参阅[如何：定义和执行动态方法 ](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 和 <xref:System.Reflection.Emit.DynamicMethod>。  
   
  以下是泛型的一些局限：  
   
--   泛型类型可从多数基类中派生，如 <xref:System.MarshalByRefObject> （约束可用于要求泛型类型形参派生自诸如 <xref:System.MarshalByRefObject>的基类）。 不过，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支持上下文绑定泛型类型。 泛型类型可派生自 <xref:System.ContextBoundObject>，但尝试创建该类型实例会导致 <xref:System.TypeLoadException>。  
+- 泛型类型可从多数基类中派生，如 <xref:System.MarshalByRefObject> （约束可用于要求泛型类型形参派生自诸如 <xref:System.MarshalByRefObject>的基类）。 不过，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支持上下文绑定泛型类型。 泛型类型可派生自 <xref:System.ContextBoundObject>，但尝试创建该类型实例会导致 <xref:System.TypeLoadException>。  
   
--   枚举不能具有泛型类型形参。 枚举偶尔可为泛型（例如，因为它嵌套在被定义使用 Visual Basic、C# 或 C++ 的泛型类型中）。 有关详细信息，请参阅 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的“枚举”。  
+- 枚举不能具有泛型类型形参。 枚举偶尔可为泛型（例如，因为它嵌套在被定义使用 Visual Basic、C# 或 C++ 的泛型类型中）。 有关详细信息，请参阅 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的“枚举”。  
   
--   轻量动态方法不能是泛型。  
+- 轻量动态方法不能是泛型。  
   
--   在 Visual Basic、C# 和 C++ 中，包含在泛型类型中的嵌套类型不能被实例化，除非已将类型分配给所有封闭类型的类型形参。 另一种说法是：在反射中，定义使用这些语言的嵌套类型包括其所有封闭类型的类型形参。 这使封闭类型的类型形参可在嵌套类型的成员定义中使用。 有关详细信息，请参阅 <xref:System.Type.MakeGenericType%2A>中的“嵌套类型”。  
+- 在 Visual Basic、C# 和 C++ 中，包含在泛型类型中的嵌套类型不能被实例化，除非已将类型分配给所有封闭类型的类型形参。 另一种说法是：在反射中，定义使用这些语言的嵌套类型包括其所有封闭类型的类型形参。 这使封闭类型的类型形参可在嵌套类型的成员定义中使用。 有关详细信息，请参阅 <xref:System.Type.MakeGenericType%2A>中的“嵌套类型”。  
   
     > [!NOTE]
     >  通过在动态程序集中触发代码或通过使用 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 定义的嵌套类型不需要包括其封闭类型的类型参数；然而，如果不包括，类型参数就不会在嵌套类的范围内。  
@@ -138,9 +138,9 @@ ms.locfileid: "61683296"
 ## <a name="class-library-and-language-support"></a>类库和语言支持  
  .NET 在以下命名空间中提供了大量泛型集合类：  
   
--   <xref:System.Collections.Generic> 命名空间包含 .NET 提供的大部分泛型集合类型（如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型类）。  
+- <xref:System.Collections.Generic> 命名空间包含 .NET 提供的大部分泛型集合类型（如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型类）。  
   
--   <xref:System.Collections.ObjectModel> 命名空间包含向类用户公开对象模型的其他泛型集合类型（如 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 泛型类）。  
+- <xref:System.Collections.ObjectModel> 命名空间包含向类用户公开对象模型的其他泛型集合类型（如 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 泛型类）。  
   
  <xref:System> 命名空间提供实现排序和等同性比较的泛型接口，还提供事件处理程序、转换和搜索谓词的泛型委托类型。  
   

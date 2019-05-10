@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867129"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469696"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>对象生存期：如何创建和销毁 (Visual Basic) 对象
 使用 `New` 关键字创建类的实例（即对象）。 通常，初始化任务必须在使用之前在新对象上执行。 常见的初始化任务包括打开文件、连接到数据库以及读取注册表项的值。 Visual Basic 控制的使用过程名为的新对象初始化*构造函数*（允许控制初始化的特殊方法）。  
@@ -38,7 +38,7 @@ ms.locfileid: "61867129"
  构造函数和析构函数控制对象的创建和析构。 `Sub New`并`Sub Finalize`Visual Basic 中的过程初始化并销毁对象，它们替换`Class_Initialize`和`Class_Terminate`Visual Basic 6.0 和早期版本中使用的方法。  
   
 ### <a name="sub-new"></a>Sub New  
- 创建类时，`Sub New` 构造函数仅可运行一次。 调用此函数的位置只能是相同类或派生类的另一个构造函数的代码的第一行。 此外，`Sub New` 方法中的代码始终在类中任何其他代码之前运行。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 和更高版本中隐式创建`Sub New`构造函数在运行时，如果未显式定义`Sub New`类的过程。  
+ 创建类时，`Sub New` 构造函数仅可运行一次。 调用此函数的位置只能是相同类或派生类的另一个构造函数的代码的第一行。 此外，`Sub New` 方法中的代码始终在类中任何其他代码之前运行。 Visual Basic 和更高版本中隐式创建`Sub New`构造函数在运行时，如果未显式定义`Sub New`类的过程。  
   
  若要创建类的构造函数，请在类定义中的任何位置创建一个名为 `Sub New` 的过程。 若要创建参数化构造函数，请按指定任何其他过程的参数的方式，将参数名称和数据类型指定为 `Sub New`，如下面代码所示：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "61867129"
   
  `Finalize` 析构函数是一种仅可从其所属的类或派生类中调用的受保护方法。 系统在对象被销毁时自动调用 `Finalize`，所以你不应从派生类的 `Finalize` 实现的外部显式调用 `Finalize`。  
   
- 与 `Class_Terminate`（对象设置为 Nothing 就立即执行）不同，在对象失去范围到 Visual Basic 调用 `Finalize` 析构函数之间通常存在延迟。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 及更高版本允许另一种析构函数 <xref:System.IDisposable.Dispose%2A>，此函数可随时显式调用以立即释放资源。  
+ 与 `Class_Terminate`（对象设置为 Nothing 就立即执行）不同，在对象失去范围到 Visual Basic 调用 `Finalize` 析构函数之间通常存在延迟。 Visual Basic 和更高版本允许析构函数，第二种<xref:System.IDisposable.Dispose%2A>，可以显式调用随时以立即释放资源。  
   
 > [!NOTE]
 >  `Finalize` 析构函数不应引发异常，因为它们不能由应用程序处理，并且可能会导致应用程序终止。  
@@ -84,13 +84,13 @@ ms.locfileid: "61867129"
 ### <a name="implementing-idisposable"></a>正在实现 IDisposable  
  实现 <xref:System.IDisposable> 接口的类应该包含代码的以下部分：  
   
--   用于跟踪对象是否已释放的字段：  
+- 用于跟踪对象是否已释放的字段：  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   可释放类的资源的 <xref:System.IDisposable.Dispose%2A> 的重载。 应通过基类的 <xref:System.IDisposable.Dispose%2A> 和 `Finalize` 方法调用此方法：  
+- 可释放类的资源的 <xref:System.IDisposable.Dispose%2A> 的重载。 应通过基类的 <xref:System.IDisposable.Dispose%2A> 和 `Finalize` 方法调用此方法：  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ ms.locfileid: "61867129"
     End Sub  
     ```  
   
--   仅包含以下代码的 <xref:System.IDisposable.Dispose%2A> 的实现：  
+- 仅包含以下代码的 <xref:System.IDisposable.Dispose%2A> 的实现：  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ ms.locfileid: "61867129"
     End Sub  
     ```  
   
--   仅包含以下代码的 `Finalize` 方法的重写：  
+- 仅包含以下代码的 `Finalize` 方法的重写：  
   
     ```  
     Protected Overrides Sub Finalize()  

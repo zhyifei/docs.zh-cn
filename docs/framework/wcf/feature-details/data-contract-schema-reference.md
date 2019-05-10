@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7797b7a8786a89671175bccb501b7fe69c021d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627079"
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
@@ -24,19 +24,19 @@ ms.locfileid: "61857176"
 ### <a name="support-levels"></a>支持级别  
  `DataContractSerializer` 提供对于给定的 XML 架构功能提供以下支持级别：  
   
--   **支持**。 从此功能到使用 `DataContractSerializer`的 CLR 类型或属性（或二者）具有显式映射。  
+- **支持**。 从此功能到使用 `DataContractSerializer`的 CLR 类型或属性（或二者）具有显式映射。  
   
--   **已忽略**。 在 `DataContractSerializer`导入的架构中允许此功能，当对代码生成无任何影响。  
+- **已忽略**。 在 `DataContractSerializer`导入的架构中允许此功能，当对代码生成无任何影响。  
   
--   **已禁止**。 `DataContractSerializer` 不支持导入使用此功能的架构。 例如，Svcutil.exe 在访问带有使用这类功能的架构的 WSDL 时会转而改用 <xref:System.Xml.Serialization.XmlSerializer> 。 这是默认情况。  
+- **已禁止**。 `DataContractSerializer` 不支持导入使用此功能的架构。 例如，Svcutil.exe 在访问带有使用这类功能的架构的 WSDL 时会转而改用 <xref:System.Xml.Serialization.XmlSerializer> 。 这是默认情况。  
   
 ## <a name="general-information"></a>常规信息  
   
--   架构命名空间在 [XML 架构](https://go.microsoft.com/fwlink/?LinkId=95475)中描述。 在此文档中使用前缀“xs”。  
+- 架构命名空间在 [XML 架构](https://go.microsoft.com/fwlink/?LinkId=95475)中描述。 在此文档中使用前缀“xs”。  
   
--   将忽略具有非架构命名空间的任何属性。  
+- 将忽略具有非架构命名空间的任何属性。  
   
--   将忽略任何批注（在此文档中描述的批注除外）。  
+- 将忽略任何批注（在此文档中描述的批注除外）。  
   
 ### <a name="xsschema-attributes"></a>\<xs:schema >： 属性  
   
@@ -120,11 +120,11 @@ ms.locfileid: "61857176"
 ### <a name="general-information"></a>常规信息  
  `<xs:element>` 会在以下上下文中发生：  
   
--   在描述常规（非集合）数据协定的数据成员的 `<xs:sequence>`内发生。 在这种情况下， `maxOccurs` 属性必须为 1。 （不允许值为 0。）  
+- 在描述常规（非集合）数据协定的数据成员的 `<xs:sequence>`内发生。 在这种情况下， `maxOccurs` 属性必须为 1。 （不允许值为 0。）  
   
--   在描述集合数据协定的数据成员的 `<xs:sequence>`内发生。 在这种情况下， `maxOccurs` 属性必须大于 1 或为“unbounded”。  
+- 在描述集合数据协定的数据成员的 `<xs:sequence>`内发生。 在这种情况下， `maxOccurs` 属性必须大于 1 或为“unbounded”。  
   
--   在作为全局元素声明 (GED) 的 `<xs:schema>` 内发生。  
+- 在作为全局元素声明 (GED) 的 `<xs:schema>` 内发生。  
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs: element > maxOccurs = 1 内的\<xs:sequence > （数据成员）  
   
@@ -144,17 +144,17 @@ ms.locfileid: "61857176"
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs: element > 与 maxOccurs > 中的 1 \<xs:sequence > （集合）  
   
--   映射到 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>。  
+- 映射到 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>。  
   
--   在集合类型中，在 xs:sequence 内只允许一个 xs:element。  
+- 在集合类型中，在 xs:sequence 内只允许一个 xs:element。  
   
  集合可以是以下类型之一：  
   
--   常规集合（例如，数组）。  
+- 常规集合（例如，数组）。  
   
--   字典集合（将一个值映射到另一个值，例如 <xref:System.Collections.Hashtable>）。  
+- 字典集合（将一个值映射到另一个值，例如 <xref:System.Collections.Hashtable>）。  
   
--   字典和密钥/值对类型的数组之间仅有的差别在于生成的编程模型。 有一种架构批注机制可用来指示给定的类型是一个字典集合。  
+- 字典和密钥/值对类型的数组之间仅有的差别在于生成的编程模型。 有一种架构批注机制可用来指示给定的类型是一个字典集合。  
   
  `ref`、 `block`、 `default`、 `fixed`, `form`和 `id` 属性的规则与非集合情况下的规则相同。 其他属性包含下表中的规则。  
   
@@ -168,13 +168,13 @@ ms.locfileid: "61857176"
   
 ### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs: element > 内\<xs:schema > 全局元素声明  
   
--   在架构中的某个类型时具有相同的名称和命名空间的全局元素声明 (GED) 或在其内部指定匿名类型的全局元素声明 (GED) 可认为是与该类型相关联。  
+- 在架构中的某个类型时具有相同的名称和命名空间的全局元素声明 (GED) 或在其内部指定匿名类型的全局元素声明 (GED) 可认为是与该类型相关联。  
   
--   架构导出：将为每个生成的（简单的和复杂的）类型生成相关联的 GED。  
+- 架构导出：将为每个生成的（简单的和复杂的）类型生成相关联的 GED。  
   
--   反序列化/序列化：将关联的 GED 用作类型的根元素。  
+- 反序列化/序列化：将关联的 GED 用作类型的根元素。  
   
--   架构导入：当关联的 GED 遵循以下规则时，将不是必需的并可忽略（除非它们定义了类型）。  
+- 架构导入：当关联的 GED 遵循以下规则时，将不是必需的并可忽略（除非它们定义了类型）。  
   
 |特性|架构|  
 |---------------|------------|  
@@ -202,11 +202,11 @@ ms.locfileid: "61857176"
   
  \* 使用时`simpleType`和`complexType,`匿名类型的映射与非匿名类型相同，只不过没有匿名数据协定，因此创建已命名的数据协定后，使用生成的名称派生自元素名称。 下面的列表中是匿名类型的规则：  
   
--   WCF 实现详细信息：如果`xs:element`名称不能包含句点、 匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
+- WCF 实现详细信息：如果`xs:element`名称不能包含句点、 匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
   
--   内部类型的生成数据协定名称是由外部类型的数据协定名称后跟一个句点、元素名称和字符串“Type”构成。  
+- 内部类型的生成数据协定名称是由外部类型的数据协定名称后跟一个句点、元素名称和字符串“Type”构成。  
   
--   如果已存在具有这个名称的数据协定，则通过在该名称后追加“1”、“2”、“3”等以使名称具有唯一性，从而创建一个唯一的名称。  
+- 如果已存在具有这个名称的数据协定，则通过在该名称后追加“1”、“2”、“3”等以使名称具有唯一性，从而创建一个唯一的名称。  
   
 ## <a name="simple-types---xssimpletype"></a>简单类型- \<xs:simpleType >  
   
@@ -228,11 +228,11 @@ ms.locfileid: "61857176"
   
 ### <a name="xsrestriction"></a>\<xs:restriction>  
   
--   仅 base="`xs:anyType`" 支持复杂类型限制。  
+- 仅 base="`xs:anyType`" 支持复杂类型限制。  
   
--   除 `xs:string` 之外没有任何限制方面的 `xs:enumeration` 的简单类型限制映射到枚举数据协定。  
+- 除 `xs:string` 之外没有任何限制方面的 `xs:enumeration` 的简单类型限制映射到枚举数据协定。  
   
--   将所有其他简单类型限制映射到它们限制的类型。 例如， `xs:int` 的限制将映射到一个整数，就像 `xs:int` 自身一样。 有关基元类型映射的详细信息，请参阅类型/基元映射。  
+- 将所有其他简单类型限制映射到它们限制的类型。 例如， `xs:int` 的限制将映射到一个整数，就像 `xs:int` 自身一样。 有关基元类型映射的详细信息，请参阅类型/基元映射。  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >： 属性  
   
@@ -464,9 +464,9 @@ public class Employee : Person
   
  如果派生的类型包含与基类型中的元素有相同名称的元素，则重复元素声明映射到一个具有生成的唯一名称的数据成员。 将向数据成员名称添加正整数数字（“member1”、“member2”等）直至查找到唯一的名称。 相反：  
   
--   如果派生的数据协定有一个数据成员与基数据协定中的数据成员具有相同的名称和类型，则 `DataContractSerializer` 在派生的类型中生成此对应的元素。  
+- 如果派生的数据协定有一个数据成员与基数据协定中的数据成员具有相同的名称和类型，则 `DataContractSerializer` 在派生的类型中生成此对应的元素。  
   
--   如果派生的数据协定有一个数据成员与基数据协定中的数据成员具有相同的名称，但类型不同，则 `DataContractSerializer` 使用基类型和派生的类型声明中的 `xs:anyType` 类型的元素导入架构。 在 `xs:annotations/xs:appInfo/ser:ActualType/@Name`中保留原始类型名称。  
+- 如果派生的数据协定有一个数据成员与基数据协定中的数据成员具有相同的名称，但类型不同，则 `DataContractSerializer` 使用基类型和派生的类型声明中的 `xs:anyType` 类型的元素导入架构。 在 `xs:annotations/xs:appInfo/ser:ActualType/@Name`中保留原始类型名称。  
   
  两个变体可能会导致一个使用有歧义的内容模型的架构，此内容模型取决于各自数据成员的顺序。  
   
@@ -609,11 +609,11 @@ public class Employee : Person
   
  应注意以下事项：  
   
--   已引入`ser:char` 来表示 <xref:System.Char>类型的 Unicode 字符。  
+- 已引入`ser:char` 来表示 <xref:System.Char>类型的 Unicode 字符。  
   
--   `valuespace` 的 `xs:duration` 已简化为一个有序集，因此可以将其映射到 <xref:System.TimeSpan>。  
+- `valuespace` 的 `xs:duration` 已简化为一个有序集，因此可以将其映射到 <xref:System.TimeSpan>。  
   
--   在从派生自`FactoryType` 的类型中导出的架构中使用 <xref:System.Runtime.Serialization.ISerializable>。  
+- 在从派生自`FactoryType` 的类型中导出的架构中使用 <xref:System.Runtime.Serialization.ISerializable>。  
   
 ## <a name="importing-non-datacontract-schemas"></a>导入非 DataContract 架构  
  `DataContractSerializer` 具有 `ImportXmlTypes` 选项，可允许导入不符合 `DataContractSerializer` XSD 配置文件的架构（请参见 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 属性）。 将此选项设置为 `true` 可接受不符合要求的架构类型，并将其映射到下面的实现，即包装 <xref:System.Xml.Serialization.IXmlSerializable> 数组的 <xref:System.Xml.XmlNode> （仅类名称不同）。  

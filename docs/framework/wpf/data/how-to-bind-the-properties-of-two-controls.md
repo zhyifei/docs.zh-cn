@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754049"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>如何：绑定两个控件的属性
 此示例演示如何使用 <xref:System.Windows.Data.Binding.ElementName%2A> 属性将一个实例化控件的属性绑定到另一个。  
@@ -23,9 +23,10 @@ ms.locfileid: "59222054"
   
  当此示例呈现时，应如下所示：  
   
- ![具有绿色背景的画布](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **注意** 绑定目标属性（在此示例中为 <xref:System.Windows.Controls.Panel.Background%2A> 属性）必须是依赖项属性。 有关详细信息，请参阅[数据绑定概述](data-binding-overview.md)。  
+![绿色的值的框处于选中状态和一个绿色方框显示组合框的屏幕截图。](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> 绑定目标属性 (在此示例中，<xref:System.Windows.Controls.Panel.Background%2A>属性) 必须是依赖属性。 有关详细信息，请参阅[数据绑定概述](data-binding-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 
