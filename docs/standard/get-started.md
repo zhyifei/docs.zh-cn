@@ -31,6 +31,6 @@ ms.locfileid: "53765211"
 
 * [.NET Core 教程](../core/tutorials/index.md)详细说明了通过所选的操作系统和工具来开始使用 .NET Core 的众多方法。
 
-## <a name="get-started-using-docker-on-net-framework"></a>.NET Framework 上的 Docker 入门
+## <a name="get-started-using-docker-on-net-framework"></a> Docker 上的 .NET Framework 入门
 
-[.NET Framework 上的 Docker](../framework/docker/index.md)介绍了如何使用 Windows Docker 容器上的 .NET Framework。
+[Docker 上的 .NET Framework](../framework/docker/index.md)介绍了如何使用 Windows Docker 容器上的 .NET Framework。
