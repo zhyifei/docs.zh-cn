@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 0ebd5b1532af77c082a2d8cd6508a83e969b325e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481140"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587046"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -52,11 +52,11 @@ ms.locfileid: "59481140"
 
 CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
-* `coreclr_initialize`:启动 .NET Core 运行时并设置默认（且仅设置）AppDomain。
-* `coreclr_execute_assembly`:执行托管程序集。
-* `coreclr_create_delegate`:创建指向托管方法的函数指针。
-* `coreclr_shutdown`:关闭 .NET Core 运行时。
-* `coreclr_shutdown_2`:如 `coreclr_shutdown`，但还会检索托管代码的退出代码。
+* `coreclr_initialize`：启动 .NET Core 运行时并设置默认（且仅设置）AppDomain。
+* `coreclr_execute_assembly`：执行托管程序集。
+* `coreclr_create_delegate`：创建指向托管方法的函数指针。
+* `coreclr_shutdown`：关闭 .NET Core 运行时。
+* `coreclr_shutdown_2`：如 `coreclr_shutdown`，但还会检索托管代码的退出代码。
 
 加载 CoreCLR 库之后，下一步是使用 `GetProcAddress`（对于 Windows）或 `dlsym`（对于 Linux/Mac）引用这些函数。
 
@@ -68,13 +68,11 @@ CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
 常用属性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  这是程序集路径列表（在 Windows 上，以“;”分隔；在 Linux 上，以“:”分隔），运行时默认能够解析这些路径。 一些主机有硬编码清单，其中列出了它们可以加载的程序集。 其他主机将把任何库放在这个列表上的特定位置（例如 coreclr.dll 旁边）。
-* `APP_PATHS`
-  这是为在受信任的平台程序集 (TPA) 列表中找不到的程序集探测的路径列表。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
-*  `APP_NI_PATHS` 此列表与 APP_PATHS 相似，不同之处在于其中的路径用于探测本机映像。
-*  `NATIVE_DLL_SEARCH_DIRECTORIES` 此属性是一个路径列表，加载程序在查找通过 p/invoke 调用的本机库时应使用这些路径进行探测。
-*  `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
+* `TRUSTED_PLATFORM_ASSEMBLIES` 这是程序集路径列表（对于 Windows，使用“;”分隔，对于 Linux，使用“:”分隔），运行时在默认情况下能够解析这些路径。 一些主机有硬编码清单，其中列出了它们可以加载的程序集。 其他主机将把任何库放在这个列表上的特定位置（例如 coreclr.dll 旁边）。
+* `APP_PATHS` 这是一个用来探测程序集的路径的列表（如果在受信任的平台程序集 (TPA) 列表中找不到程序集）。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
+* `APP_NI_PATHS` 此列表与 APP_PATHS 相似，不同之处在于其中的路径用于探测本机映像。
+* `NATIVE_DLL_SEARCH_DIRECTORIES` 此属性是一个路径列表，加载程序在查找通过 p/invoke 调用的本机库时应使用这些路径进行探测。
+* `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
 
 在此示例主机中，TPA 列表是通过简单列出当前目录中的所有库来进行构造的：
 
@@ -166,13 +164,11 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 
 常见 AppDomain 属性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  这是程序集路径列表（在 Windows 上，以 `;` 分隔；在 Linux/Mac 上，以 `:` 分隔），AppDomain 应优先加载它们，并完全信任它们（甚至是在部分信任的域中，也不例外）。 此列表应包含“框架”程序集和其他受信任的模块，与 .NET Framework 方案中的 GAC 类似。 一些主机会将任何库置于此列表上的 *coreclr.dll* 旁，其他主机具有硬编码的清单，其中列出了用于所需用途的受信任程序集。
-* `APP_PATHS`
-  这是为在受信任的平台程序集 (TPA) 列表中找不到的程序集探测的路径列表。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
-*  `APP_NI_PATHS` 此列表与 APP_PATHS 非常相似，不同之处在于其中的路径用于探测本机映像。
-*  `NATIVE_DLL_SEARCH_DIRECTORIES` 此属性是一个路径列表，加载程序在查找通过 p/invoke 调用的本机 DLL 时应使用这些路径进行探测。
-*  `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
+* `TRUSTED_PLATFORM_ASSEMBLIES` 这是一个程序集路径的列表（在 Windows 上以 `;` 分隔，在 Linux/Mac 上以 `:` 分隔），AppDomain 应优先加载它们并对其授予完全信任（甚至在部分受信任域中也一样）。 此列表应包含“框架”程序集和其他受信任的模块，与 .NET Framework 方案中的 GAC 类似。 一些主机会将任何库置于此列表上的 *coreclr.dll* 旁，其他主机具有硬编码的清单，其中列出了用于所需用途的受信任程序集。
+* `APP_PATHS` 这是一个用来探测程序集的路径的列表（如果在受信任的平台程序集 (TPA) 列表中找不到程序集）。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
+* `APP_NI_PATHS` 此列表与 APP_PATHS 非常相似，不同之处在于其中的路径用于探测本机映像。
+* `NATIVE_DLL_SEARCH_DIRECTORIES` 此属性是一个路径列表，加载程序在查找通过 p/invoke 调用的本机 DLL 时应使用这些路径进行探测。
+* `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
 
 在[简单示例主机](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree)中，这些属性将进行如下设置：
 

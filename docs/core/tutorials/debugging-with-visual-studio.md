@@ -3,16 +3,16 @@ title: 使用 Visual Studio 2017 调试 Hello World .NET Core 应用程序
 description: 了解如何使用 Visual Studio 2017 调试用 C# 或 Visual Basic 编写的 Hello World 应用程序。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610712"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063061"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 调试 C# 或Visual Basic .NET Core Hello World 应用程序
 
-至此，已按照[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 用用程序](vb-with-visual-studio.md)中的步骤操作，创建和运行简单的控制台应用程序。 编写和编译应用程序后，可以开始进行测试。 Visual Studio 提供一整套调试工具，方便你在测试和排除应用程序故障时使用。
+至此，已按照[使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序](with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 用用程序](vb-with-visual-studio.md)中的步骤操作，创建和运行简单的控制台应用程序。 编写和编译应用程序后，可以开始进行测试。 Visual Studio 提供一整套调试工具，方便你在测试和排除应用程序故障时使用。 
 
 ## <a name="debugging-in-debug-mode"></a>在调试模式下调试
 
