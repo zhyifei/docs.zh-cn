@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: bca8fc1cb3a54be9c329dc02aa27057ad839b3d3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c4efe358147c10ac31d42b83f6f4a65c274fe8dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624560"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="0353b-102">如何：Ping 主机</span><span class="sxs-lookup"><span data-stu-id="0353b-102">How to: Ping a Host</span></span>
-<span data-ttu-id="0353b-103">此示例演示如何 ping 远程主机。</span><span class="sxs-lookup"><span data-stu-id="0353b-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="fa6ea-102">如何：Ping 主机</span><span class="sxs-lookup"><span data-stu-id="fa6ea-102">How to: Ping a Host</span></span>
+<span data-ttu-id="fa6ea-103">此示例演示如何 ping 远程主机。</span><span class="sxs-lookup"><span data-stu-id="fa6ea-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0353b-104">示例</span><span class="sxs-lookup"><span data-stu-id="0353b-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fa6ea-104">示例</span><span class="sxs-lookup"><span data-stu-id="fa6ea-104">Example</span></span>  
   
 ```csharp
 using System;  
@@ -120,7 +120,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="0353b-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="0353b-105">Compiling the Code</span></span>  
- <span data-ttu-id="0353b-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="0353b-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fa6ea-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="fa6ea-105">Compiling the Code</span></span>  
+ <span data-ttu-id="fa6ea-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="fa6ea-106">This example requires:</span></span>  
   
--   <span data-ttu-id="0353b-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="0353b-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="fa6ea-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="fa6ea-107">References to the **System.Net** namespace.</span></span>
