@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074516"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591388"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反射发出中的安全问题
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了三种发出 Microsoft 中间语言 (MSIL) 的方式，每种方式都有其自身的安全问题：  
   
--   [动态程序集](#Dynamic_Assemblies)  
+- [动态程序集](#Dynamic_Assemblies)  
   
--   [匿名托管的动态方法](#Anonymously_Hosted_Dynamic_Methods)  
+- [匿名托管的动态方法](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [与现有程序集关联的动态方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [与现有程序集关联的动态方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  无论采用何种方式生成动态代码，执行生成的代码都需要生成代码使用的类型和方法所需的所有权限。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074516"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>从部分受信任的代码生成动态程序集  
  请考虑具有 Internet 权限的程序集可以生成瞬态动态程序集并执行其代码的条件：  
   
--   动态程序集仅使用其他程序集的公共类型和成员。  
+- 动态程序集仅使用其他程序集的公共类型和成员。  
   
--   这些类型和成员所需的权限包含在部分受信任的程序集的授予集中。  
+- 这些类型和成员所需的权限包含在部分受信任的程序集的授予集中。  
   
--   程序集不保存到磁盘。  
+- 程序集不保存到磁盘。  
   
--   不生成调试符号。 （`Internet` 和 `LocalIntranet` 权限集未包括必要的权限。）  
+- 不生成调试符号。 （`Internet` 和 `LocalIntranet` 权限集未包括必要的权限。）  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>匿名托管的动态方法  
@@ -70,9 +70,9 @@ ms.locfileid: "59074516"
   
  如果应用程序域允许此操作，匿名托管动态方法可以跳过 JIT 可见性检查，但受到以下限制：匿名托管动态方法访问的非公共类型和成员必须位于其授予集等于发出调用堆栈的授予集或其子集中。 如果应用程序域授予带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，则启用此跳过 JIT 可见性检查的受限能力。  
   
--   如果你的方法仅使用公共类型和成员，则在构造过程中不需要任何权限。  
+- 如果你的方法仅使用公共类型和成员，则在构造过程中不需要任何权限。  
   
--   如果指定应跳过 JIT 可见性检查，则在构造方法时执行的请求包括带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，以及包含正在访问的非公共成员的程序集的授予集。  
+- 如果指定应跳过 JIT 可见性检查，则在构造方法时执行的请求包括带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，以及包含正在访问的非公共成员的程序集的授予集。  
   
  由于考虑到非公共成员的授予集，因此被授予 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 的部分受信任代码无法通过执行受信任程序集的非公共成员来提升其特权。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074516"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>从部分受信任的代码中生成匿名托管的动态方法  
  请考虑具有 Internet 权限的程序集可以生成匿名托管的动态方法并执行该方法的条件：  
   
--   动态方法仅使用公共类型和成员。 如果动态方法的授予集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，则动态方法可以使用任何其授予集等于发出程序集的授予集（或等于发出程序集的授予集的子集）的程序集的非公共类型和成员。  
+- 动态方法仅使用公共类型和成员。 如果动态方法的授予集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，则动态方法可以使用任何其授予集等于发出程序集的授予集（或等于发出程序集的授予集的子集）的程序集的非公共类型和成员。  
   
--   动态方法使用的所有类型和成员所需的权限包含在部分受信任的程序集的授予集中。  
+- 动态方法使用的所有类型和成员所需的权限包含在部分受信任的程序集的授予集中。  
   
 > [!NOTE]
 >  动态方法不支持调试符号。  
@@ -96,21 +96,21 @@ ms.locfileid: "59074516"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>与现有程序集关联的动态方法  
  若要将动态方法与现有程序集中的某一类型或模块关联，请使用指定关联类型或模块的任一 <xref:System.Reflection.Emit.DynamicMethod> 构造函数。 调用这些构造函数所需的权限各不相同，这是因为将动态方法与现有类型或模块关联会授予该动态方法访问非公共类型和成员的权限：  
   
--   与某一类型关联的动态方法具有对该类型的所有成员（甚至私有成员）以及包含此关联类型的程序集中的所有内部类型和成员的访问权限。  
+- 与某一类型关联的动态方法具有对该类型的所有成员（甚至私有成员）以及包含此关联类型的程序集中的所有内部类型和成员的访问权限。  
   
--   与某一模块相关联的态方法具有对该模块中的所有 `internal` 类型和成员（在 Visual Basic 中为 `Friend`，在公共语言运行时元数据中为 `assembly`）的访问权限。  
+- 与某一模块相关联的态方法具有对该模块中的所有 `internal` 类型和成员（在 Visual Basic 中为 `Friend`，在公共语言运行时元数据中为 `assembly`）的访问权限。  
   
  此外，你可以使用一个构造函数来指定跳过 JIT 编译器的可见性检查的能力。 执行此操作可向动态方法授予对所有程序集中的所有类型和成员的访问权限，而无论访问级别如何。  
   
  构造函数所需的权限取决于你决定向动态方法授予多少访问权限：  
   
--   如果你的方法仅使用公共类型和成员，并且你将该方法与你自己的类型或模块关联，则不需要任何权限。  
+- 如果你的方法仅使用公共类型和成员，并且你将该方法与你自己的类型或模块关联，则不需要任何权限。  
   
--   如果指定应跳过 JIT 可见性检查，则构造函数需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 如果指定应跳过 JIT 可见性检查，则构造函数需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
--   如果将动态方法与另一类型（甚至是你自己的程序集中的另一类型）关联，则构造函数需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission> 和带有 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>。  
+- 如果将动态方法与另一类型（甚至是你自己的程序集中的另一类型）关联，则构造函数需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission> 和带有 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>。  
   
--   如果将动态方法与另一程序集中的类型或模块关联，则构造函数可能需要下列两项：带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission> 和包含其他模块的程序集的授予集。 也就是说，调用堆栈必须包括目标模块的授权集中的所有权限以及 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>。  
+- 如果将动态方法与另一程序集中的类型或模块关联，则构造函数可能需要下列两项：带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission> 和包含其他模块的程序集的授予集。 也就是说，调用堆栈必须包括目标模块的授权集中的所有权限以及 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>。  
   
     > [!NOTE]
     >  为实现向后兼容性，如果对目标授予集和 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 的请求失败，构造函数将需要带有 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>。  
@@ -126,13 +126,13 @@ ms.locfileid: "59074516"
   
  请考虑具有 Internet 权限的程序集可以生成并执行动态方法的条件：  
   
--   动态方法要么与发出它的模块或类型相关联，要么其授予集中包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，并且该方法与其授予集等于发出程序集的授予集（或者等于发出程序集的授予集的子集）的程序集中的模块关联。  
+- 动态方法要么与发出它的模块或类型相关联，要么其授予集中包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，并且该方法与其授予集等于发出程序集的授予集（或者等于发出程序集的授予集的子集）的程序集中的模块关联。  
   
--   动态方法仅使用公共类型和成员。 如果动态方法的授予集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，并且该方法与其授予集等于发出程序集的授予集（或者等于发出程序集的授予集的子集）的程序集中的模块关联，那么该方法可使用关联模块中标记为 `internal` 的类型和成员（在 Visual Basic 中为 `Friend`，在公共语言运行时元数据中为 `assembly`）。  
+- 动态方法仅使用公共类型和成员。 如果动态方法的授予集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，并且该方法与其授予集等于发出程序集的授予集（或者等于发出程序集的授予集的子集）的程序集中的模块关联，那么该方法可使用关联模块中标记为 `internal` 的类型和成员（在 Visual Basic 中为 `Friend`，在公共语言运行时元数据中为 `assembly`）。  
   
--   动态方法使用的所有类型和成员所需的权限包含在部分受信任的程序集的授予集中。  
+- 动态方法使用的所有类型和成员所需的权限包含在部分受信任的程序集的授予集中。  
   
--   动态方法不会跳过 JIT 可见性检查。  
+- 动态方法不会跳过 JIT 可见性检查。  
   
 > [!NOTE]
 >  动态方法不支持调试符号。  

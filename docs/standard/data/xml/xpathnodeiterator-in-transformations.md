@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b191114731b63916d1bc9ecca4eee01f83c4fa48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836048"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615331"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>转换中的 XPathNodeIterator
-<xref:System.Xml.XPath.XPathNodeIterator> 提供的方法可以循环访问执行 XML 路径语言 (XPath) 查询所创建的节点集或者使用 node-set 方法转换成节点集的结果树片段。 <xref:System.Xml.XPath.XPathNodeIterator> 使您能够循环访问该节点集内的节点。 检索到节点集后，<xref:System.Xml.XPath.XPathNodeIterator> 类提供对选定节点集的只读、只进游标。 该节点集以文档顺序创建，因此调用此方法会移到文档顺序中的下一个节点。 <xref:System.Xml.XPath.XPathNodeIterator> 不生成节点集内所有节点的节点树， 而是提供数据的单节点窗口，当您在树中浏览时，会公开所指向的基础节点。 <xref:System.Xml.XPath.XPathNodeIterator> 类中可用的方法和属性使您能够获取当前节点中的信息。 有关可用方法和属性的列表，请参阅 <xref:System.Windows.Forms.ToolBar>。  
+<xref:System.Xml.XPath.XPathNodeIterator> 提供的方法可以循环访问执行 XML 路径语言 (XPath) 查询所创建的节点集或者使用 node-set 方法转换成节点集的结果树片段。 <xref:System.Xml.XPath.XPathNodeIterator> 使您能够循环访问该节点集内的节点。 检索到节点集后，<xref:System.Xml.XPath.XPathNodeIterator> 类提供对选定节点集的只读、只进游标。 该节点集以文档顺序创建，因此调用此方法会移到文档顺序中的下一个节点。 <xref:System.Xml.XPath.XPathNodeIterator> 不生成节点集内所有节点的节点树， 而是提供数据的单节点窗口，当你在树中浏览时，会公开所指向的基础节点。 <xref:System.Xml.XPath.XPathNodeIterator> 类中可用的方法和属性使您能够获取当前节点中的信息。 有关可用方法和属性的列表，请参阅 <xref:System.Windows.Forms.ToolBar>。  
   
  由于 <xref:System.Xml.XPath.XPathNodeIterator> 在 XPath 查询创建的节点集中移动，并且只向前移动，因此，移动方法是使用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 方法。 此方法的返回类型是 `Boolean`，如果移到下一选定节点，则返回 `true`，如果再也没有其他选定节点，则返回 `false`。 如果返回 `true`，下表显示了可用的属性：  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.CurrentPosition%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.CurrentPosition%2A>  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
  第一次查看一个节点集时，必须调用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 以将 <xref:System.Xml.XPath.XPathNodeIterator> 定位在选定节点集的第一个节点上。 这样可以编写 while 循环。  
   

@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836417"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622726"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 <a name="top"></a> 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
   
--   `Covariance`  
+- `Covariance`  
   
      使你能够使用比原始指定的类型派生程度更大的类型。  
   
      你可以向 `IEnumerable<Derived>` 类型的变量分配`IEnumerable(Of Derived)` （在 Visual Basic 中为 `IEnumerable<Base>`）的实例。  
   
--   `Contravariance`  
+- `Contravariance`  
   
      使你能够使用比原始指定的类型更泛型（派生程度更小）的类型。  
   
      你可以向 `Action<Base>` 类型的变量分配`Action(Of Base)` （在 Visual Basic 中为 `Action<Derived>`）的实例。  
   
--   `Invariance`  
+- `Invariance`  
   
      这意味着，你只能使用原始指定的类型；固定泛型类型参数既不是协变类型，也不是逆变类型。  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836417"
   
  协变和逆变统称为“变体”。 未标记为协变或逆变的泛型类型参数称为“固定参数” 。 有关公共语言运行时中变体的事项的简短摘要：  
   
--   在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 类型参数仅限于泛型接口和泛型委托类型。  
+- 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 类型参数仅限于泛型接口和泛型委托类型。  
   
--   泛型接口或泛型委托类型可以同时具有协变和逆变类型参数。  
+- 泛型接口或泛型委托类型可以同时具有协变和逆变类型参数。  
   
--   变体仅适用于引用类型；如果为 Variant 类型参数指定值类型，则该类型参数对于生成的构造类型是不变的。  
+- 变体仅适用于引用类型；如果为 Variant 类型参数指定值类型，则该类型参数对于生成的构造类型是不变的。  
   
--   变体不适用于委托组合。 也就是说，在给定类型 `Action<Derived>` 和 `Action<Base>` （在 Visual Basic 中为`Action(Of Derived)` 和 `Action(Of Base)` ）的两个委托的情况下，无法将第二个委托与第一个委托结合起来，尽管结果将是类型安全的。 变体允许将第二个委托分配给类型 `Action<Derived>`的变量，但只能在这两个委托的类型完全匹配的情况下对它们进行组合。  
+- 变体不适用于委托组合。 也就是说，在给定类型 `Action<Derived>` 和 `Action<Base>` （在 Visual Basic 中为`Action(Of Derived)` 和 `Action(Of Base)` ）的两个委托的情况下，无法将第二个委托与第一个委托结合起来，尽管结果将是类型安全的。 变体允许将第二个委托分配给类型 `Action<Derived>`的变量，但只能在这两个委托的类型完全匹配的情况下对它们进行组合。  
   
  以下各小节将详细介绍协变和逆变类型参数：  
   
--   [具有协变类型参数的泛型接口](#InterfaceCovariantTypeParameters)  
+- [具有协变类型参数的泛型接口](#InterfaceCovariantTypeParameters)  
   
--   [具有逆变泛型类型参数的泛型接口](#InterfaceCovariantTypeParameters)  
+- [具有逆变泛型类型参数的泛型接口](#InterfaceCovariantTypeParameters)  
   
--   [具有 Variant 类型参数的泛型委托](#DelegateVariantTypeParameters)  
+- [具有 Variant 类型参数的泛型委托](#DelegateVariantTypeParameters)  
   
--   [定义 Variant 泛型接口和委托](#DefiningVariantTypeParameters)  
+- [定义 Variant 泛型接口和委托](#DefiningVariantTypeParameters)  
   
--   [Variant 泛型接口和委托类型的列表](#VariantList)  
+- [Variant 泛型接口和委托类型的列表](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>具有协变类型参数的泛型接口  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: acc732f72e9dae0796da78cdbb8ef4666ae9791a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c41940e74682653339207b4c7cfc48eb3e48b322
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628938"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>确定何时实现基于事件的异步模式
 基于事件的异步模式可用于公开类的异步行为。 通过引入此模式，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定义了下面两种用于公开异步行为的模式：基于 <xref:System.IAsyncResult?displayProperty=nameWithType> 接口的异步模式和基于事件的模式。 本主题介绍了何时适合实现这两种模式。  
@@ -33,36 +33,36 @@ ms.locfileid: "54574425"
 ## <a name="guidelines"></a>准则  
  下面列出了应在何时实现基于事件的异步模式的相关指南：  
   
--   将基于事件的模式用作公开类的异步行为的默认 API。  
+- 将基于事件的模式用作公开类的异步行为的默认 API。  
   
--   如果类主要用于客户端应用（例如，Windows 窗体），请勿公开 <xref:System.IAsyncResult> 模式。  
+- 如果类主要用于客户端应用（例如，Windows 窗体），请勿公开 <xref:System.IAsyncResult> 模式。  
   
--   仅在需要满足特定要求时，才公开 <xref:System.IAsyncResult> 模式。 例如，为了与现有 API 兼容，可能需要公开 <xref:System.IAsyncResult> 模式。  
+- 仅在需要满足特定要求时，才公开 <xref:System.IAsyncResult> 模式。 例如，为了与现有 API 兼容，可能需要公开 <xref:System.IAsyncResult> 模式。  
   
--   请勿在不公开基于事件的模式的情况下公开 <xref:System.IAsyncResult> 模式。  
+- 请勿在不公开基于事件的模式的情况下公开 <xref:System.IAsyncResult> 模式。  
   
--   如果必须公开 <xref:System.IAsyncResult> 模式，请以高级选项的形式这样做。 例如，如果生成代理对象，默认生成的是基于事件的模式，并含用于生成 <xref:System.IAsyncResult> 模式的选项。  
+- 如果必须公开 <xref:System.IAsyncResult> 模式，请以高级选项的形式这样做。 例如，如果生成代理对象，默认生成的是基于事件的模式，并含用于生成 <xref:System.IAsyncResult> 模式的选项。  
   
--   在 <xref:System.IAsyncResult> 模式实现的基础之上生成基于事件的模式实现。  
+- 在 <xref:System.IAsyncResult> 模式实现的基础之上生成基于事件的模式实现。  
   
--   避免对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 请对“高级”类公开基于事件的模式，并对“低级”类公开 <xref:System.IAsyncResult> 模式。 例如，比较 <xref:System.Net.WebClient> 组件上基于事件的模式与 <xref:System.Web.HttpRequest> 类上的 <xref:System.IAsyncResult> 模式。  
+- 避免对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 请对“高级”类公开基于事件的模式，并对“低级”类公开 <xref:System.IAsyncResult> 模式。 例如，比较 <xref:System.Net.WebClient> 组件上基于事件的模式与 <xref:System.Web.HttpRequest> 类上的 <xref:System.IAsyncResult> 模式。  
   
-    -   出于兼容性需要，可以对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 例如，如果已释放使用 <xref:System.IAsyncResult> 模式的 API，需要保留 <xref:System.IAsyncResult> 模式，以实现向后兼容性。  
+    - 出于兼容性需要，可以对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 例如，如果已释放使用 <xref:System.IAsyncResult> 模式的 API，需要保留 <xref:System.IAsyncResult> 模式，以实现向后兼容性。  
   
-    -   如果生成的对象模型复杂性远远超过分离实现的好处，请对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 对一个类公开两种模式优于避免公开基于事件的模式。  
+    - 如果生成的对象模型复杂性远远超过分离实现的好处，请对相同的类公开基于事件的模式和 <xref:System.IAsyncResult> 模式。 对一个类公开两种模式优于避免公开基于事件的模式。  
   
-    -   如果必须对一个类公开基于事件的模式和 <xref:System.IAsyncResult> 模式，请将 <xref:System.ComponentModel.EditorBrowsableAttribute> 设置为 <xref:System.ComponentModel.EditorBrowsableState.Advanced>，以将 <xref:System.IAsyncResult> 模式实现标记为高级功能。 这会指示设计环境（如 Visual Studio IntelliSense）不显示 <xref:System.IAsyncResult> 属性和方法。 这些属性和方法仍完全可用，这样做只是为了让使用 IntelliSense 的开发人员对 API 更加明确。  
+    - 如果必须对一个类公开基于事件的模式和 <xref:System.IAsyncResult> 模式，请将 <xref:System.ComponentModel.EditorBrowsableAttribute> 设置为 <xref:System.ComponentModel.EditorBrowsableState.Advanced>，以将 <xref:System.IAsyncResult> 模式实现标记为高级功能。 这会指示设计环境（如 Visual Studio IntelliSense）不显示 <xref:System.IAsyncResult> 属性和方法。 这些属性和方法仍完全可用，这样做只是为了让使用 IntelliSense 的开发人员对 API 更加明确。  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>除了基于事件的模式外还公开 IAsyncResult 模式的条件  
  虽然基于事件的异步模式在上述情况下有许多优点，但也有一些缺点。如果性能是最重要的要求，应注意这些缺点。  
   
  <xref:System.IAsyncResult> 模式比基于事件的模式更适用 的情况有三种：  
   
--   对 <xref:System.IAsyncResult> 阻止等待操作  
+- 对 <xref:System.IAsyncResult> 阻止等待操作  
   
--   对多个 <xref:System.IAsyncResult> 对象阻止等待操作  
+- 对多个 <xref:System.IAsyncResult> 对象阻止等待操作  
   
--   对 <xref:System.IAsyncResult> 轮询完成状态  
+- 对 <xref:System.IAsyncResult> 轮询完成状态  
   
  虽然可以使用基于事件的模式来处理这些情况，但这样做比使用 <xref:System.IAsyncResult> 模式更不方便。  
   
@@ -72,13 +72,13 @@ ms.locfileid: "54574425"
   
  下面列出了一些在决定使用 <xref:System.IAsyncResult> 模式时要遵循的建议：  
   
--   仅在特别需要对 <xref:System.Threading.WaitHandle> 或<xref:System.IAsyncResult> 对象的支持时，才公开 <xref:System.IAsyncResult> 模式。  
+- 仅在特别需要对 <xref:System.Threading.WaitHandle> 或<xref:System.IAsyncResult> 对象的支持时，才公开 <xref:System.IAsyncResult> 模式。  
   
--   仅在有使用 <xref:System.IAsyncResult> 模式的现有 API 时，才公开 <xref:System.IAsyncResult> 模式。  
+- 仅在有使用 <xref:System.IAsyncResult> 模式的现有 API 时，才公开 <xref:System.IAsyncResult> 模式。  
   
--   如果有基于 <xref:System.IAsyncResult> 模式的现有 API，还请考虑在下一个版本中公开基于事件的模式。  
+- 如果有基于 <xref:System.IAsyncResult> 模式的现有 API，还请考虑在下一个版本中公开基于事件的模式。  
   
--   仅在有高性能要求，且已验证无法通过基于事件的模式满足这些要求，但可以通过 <xref:System.IAsyncResult> 模式满足时，才公开 <xref:System.IAsyncResult> 模式。  
+- 仅在有高性能要求，且已验证无法通过基于事件的模式满足这些要求，但可以通过 <xref:System.IAsyncResult> 模式满足时，才公开 <xref:System.IAsyncResult> 模式。  
   
 ## <a name="see-also"></a>请参阅
 

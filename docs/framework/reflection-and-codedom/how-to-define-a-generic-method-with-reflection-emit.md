@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344229"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591727"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：用反射发出定义泛型方法
 第一个过程演示如何使用两个类型参数创建简单的泛型方法，以及如何将类约束、接口约束和特殊约束应用于类型参数。  
@@ -164,11 +164,11 @@ ms.locfileid: "59344229"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
+- 代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
   
--   不需要其他程序集引用。  
+- 不需要其他程序集引用。  
   
--   使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
+- 使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103410"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599871"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服务应用程序介绍
 Microsoft Windows 服务（过去称为 NT 服务）允许用户创建可在其自身的 Windows 会话中长时间运行的可执行应用程序。 这些服务可在计算机启动时自动启动，可以暂停和重启，并且不显示任何用户界面。 这些功能使服务非常适合在服务器上使用，或者需要长时间运行的功能（不会影响在同一台计算机上工作的其他用户）的情况。 还可以在与登录用户或默认计算机帐户不同的特定用户帐户的安全性上下文中运行服务。 有关服务和 Windows 会话的详细信息，请参阅 Windows SDK 文档。  
@@ -41,19 +41,19 @@ Microsoft Windows 服务（过去称为 NT 服务）允许用户创建可在其�
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>服务应用程序与其他 Visual Studio 应用程序  
  服务应用程序与许多其他项目类型的运行方式存在以下几个方面的不同：  
   
--   在项目能够以有意义的方式运行之前，服务应用程序项目创建的已编译可执行文件必须安装在服务器上。 无法通过按 F5 或 F11 来调试或运行服务应用程序；无法立即运行服务或单步执行其代码。 相反，必须安装并启动服务，然后将调试程序附加到服务进程。 有关详细信息，请参阅[如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。  
+- 在项目能够以有意义的方式运行之前，服务应用程序项目创建的已编译可执行文件必须安装在服务器上。 无法通过按 F5 或 F11 来调试或运行服务应用程序；无法立即运行服务或单步执行其代码。 相反，必须安装并启动服务，然后将调试程序附加到服务进程。 有关详细信息，请参阅[如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。  
   
--   与某些项目类型不同，你必须为服务应用程序创建安装组件。 安装组件在服务器上安装并注册该服务，并使用 Windows 服务控制管理器为服务创建条目。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+- 与某些项目类型不同，你必须为服务应用程序创建安装组件。 安装组件在服务器上安装并注册该服务，并使用 Windows 服务控制管理器为服务创建条目。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
--   服务应用程序的 `Main` 方法必须为项目包含的服务发出 Run 命令。 `Run` 方法将服务加载到相应服务器上的服务控制管理器中。 如果使用 Windows 服务项目模板，则会自动为你编写此方法。 请注意，加载服务与启动服务不同。 有关详细信息，请参阅下面的“服务生存期”。  
+- 服务应用程序的 `Main` 方法必须为项目包含的服务发出 Run 命令。 `Run` 方法将服务加载到相应服务器上的服务控制管理器中。 如果使用 Windows 服务项目模板，则会自动为你编写此方法。 请注意，加载服务与启动服务不同。 有关详细信息，请参阅下面的“服务生存期”。  
   
--   Windows 服务应用程序在不同于登录用户的交互式工作站的窗口站中运行。 窗口站是一个安全对象，它包含一个剪贴板、一个全局原子集和一组桌面对象。 由于 Windows 服务站不是交互式工作站，因此从 Windows 服务应用程序中引发的对话框将不会显示，并且可能导致程序停止响应。 同样，错误消息应记录在 Windows 事件日志中，而不是在用户界面中引发。  
+- Windows 服务应用程序在不同于登录用户的交互式工作站的窗口站中运行。 窗口站是一个安全对象，它包含一个剪贴板、一个全局原子集和一组桌面对象。 由于 Windows 服务站不是交互式工作站，因此从 Windows 服务应用程序中引发的对话框将不会显示，并且可能导致程序停止响应。 同样，错误消息应记录在 Windows 事件日志中，而不是在用户界面中引发。  
   
      .NET Framework 支持的 Windows 服务类不支持与交互式工作站（即登录用户）的交互。 .NET Framework 也不包括表示工作站和桌面的类。 如果 Windows 服务必须与其他工作站进行交互，则需要访问非管理的 Windows API。 有关详细信息，请参阅 Windows SDK 文档。  
   
      Windows 服务与用户或其他工作站的交互必须经过精心设计，以便包括各种场景（如没有登录用户或用户具有一组意外的桌面对象）。 在某些情况下，编写在用户控制下运行的 Windows 应用程序可能更合适。  
   
--   Windows 服务应用程序在其自己的安全上下文中运行，并在用户登录安装这些应用程序的 Windows 计算机之前启动。 应仔细规划要在哪个用户帐户中运行服务；在系统帐户下运行的服务具有比用户帐户更多的权限和特权。  
+- Windows 服务应用程序在其自己的安全上下文中运行，并在用户登录安装这些应用程序的 Windows 计算机之前启动。 应仔细规划要在哪个用户帐户中运行服务；在系统帐户下运行的服务具有比用户帐户更多的权限和特权。  
   
 ## <a name="service-lifetime"></a>服务生存期  
  一项服务在其生存期内会经历几个内部状态。 首先，服务会安装到它将在其上运行的系统上。 此过程执行服务项目的安装程序，并将该服务加载到该计算机的服务控制管理器中。 服务控制管理器是 Windows 提供的用于管理服务的中央实用程序。  
@@ -76,9 +76,9 @@ Microsoft Windows 服务（过去称为 NT 服务）允许用户创建可在其�
   
 ## <a name="requirements"></a>要求  
   
--   必须在 Windows 服务应用程序项目或其他 .NET Framework（启用了在生成并从 <xref:System.ServiceProcess.ServiceBase> 类继承时创建 .exe 文件的项目）中创建服务。  
+- 必须在 Windows 服务应用程序项目或其他 .NET Framework（启用了在生成并从 <xref:System.ServiceProcess.ServiceBase> 类继承时创建 .exe 文件的项目）中创建服务。  
   
--   包含 Windows 服务的项目必须具有项目及其服务的安装组件。 这可以通过“属性”窗口轻松完成。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+- 包含 Windows 服务的项目必须具有项目及其服务的安装组件。 这可以通过“属性”窗口轻松完成。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
 ## <a name="see-also"></a>请参阅
 

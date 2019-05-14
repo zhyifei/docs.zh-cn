@@ -5,37 +5,37 @@ ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 390ffa1dd9f2e76372b0e4fcbf2916918b64d748
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 59ac88b2e7c6b3ecd4d06c0183a2f8a7f4a9e2d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260092"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590254"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>在 DOM 中创建新节点
 <xref:System.Xml.XmlDocument> 为所有节点类型提供了 create 方法。 为该方法提供名称（需要时）以及那些具有内容的节点（如文本节点）的内容或其他参数，这样便可创建节点。 下面的方法需要填充名称和几个其他参数以创建相应的节点。  
   
--   <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
+- <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateComment%2A>  
+- <xref:System.Xml.XmlDocument.CreateComment%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateDocumentFragment%2A>  
+- <xref:System.Xml.XmlDocument.CreateDocumentFragment%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateDocumentType%2A>  
+- <xref:System.Xml.XmlDocument.CreateDocumentType%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateElement%2A>  
+- <xref:System.Xml.XmlDocument.CreateElement%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateNode%2A>  
+- <xref:System.Xml.XmlDocument.CreateNode%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateProcessingInstruction%2A>  
+- <xref:System.Xml.XmlDocument.CreateProcessingInstruction%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateSignificantWhitespace%2A>  
+- <xref:System.Xml.XmlDocument.CreateSignificantWhitespace%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateTextNode%2A>  
+- <xref:System.Xml.XmlDocument.CreateTextNode%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateWhitespace%2A>  
+- <xref:System.Xml.XmlDocument.CreateWhitespace%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
+- <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
   
  其他节点类型不仅仅只要求向参数提供数据。  
   

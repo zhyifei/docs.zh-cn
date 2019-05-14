@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149352"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626416"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>创建用于容纳 DLL 函数的类
 将常用的 DLL 函数包装在托管类中，这是封装平台功能的一种有效方式。 虽然不必在每种情形下都这样做，但由于定义 DLL 函数相当麻烦且容易出错，所以提供类包装器非常简便。 如果使用 Visual Basic 或 C# 进行编程，必须在一个类或 Visual Basic 模块中声明 DLL 函数。  
@@ -28,11 +28,11 @@ ms.locfileid: "59149352"
   
  为平台调用设计托管类时，应考虑类和 DLL 函数之间的关系。 例如，你可以：  
   
--   在现有类内声明 DLL 函数。  
+- 在现有类内声明 DLL 函数。  
   
--   分别为每个 DLL 函数创建一个类，使函数相互独立，易于查找。  
+- 分别为每个 DLL 函数创建一个类，使函数相互独立，易于查找。  
   
--   为一组相关 DLL 函数创建一个类，形成逻辑分组并减少开销。  
+- 为一组相关 DLL 函数创建一个类，形成逻辑分组并减少开销。  
   
  可对该类及其方法随意命名。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   

@@ -1,16 +1,16 @@
 ---
-title: 机器学习资源 - ML.NET
+title: 机器学习资源
 description: 浏览这些 ML.NET 资源，以帮助自定义创建 AI 解决方案和集成到 .NET 应用程序。
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: 0fc8a3e3d30331cf6948b9fbbf911a72f3c9924e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0558b4ec3ec170faf136441d99ba80949310bbb1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960467"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636609"
 ---
-# <a name="machine-learning-resources---mlnet"></a>机器学习资源 - ML.NET
+# <a name="machine-learning-resources"></a>机器学习资源 
 
 以下 [ML.NET](../index.yml) 资源可帮助生成自定义 AI 解决方案，并将其集成到 .NET 应用程序：
 

@@ -2,12 +2,12 @@
 title: PNRP 缓存
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182476"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622996"
 ---
 # <a name="pnrp-caches"></a>PNRP 缓存
 对等名称解析协议 (PNRP) 缓存是对等机上维护的算法选择的对等终结点的本地集合。  
@@ -15,9 +15,9 @@ ms.locfileid: "59182476"
 ## <a name="pnrp-cache-initialization"></a>PNRP 缓存初始化  
  若要初始化 PNRP 缓存或对等名称记录集合，当对等节点启动时节点可以使用以下方法：  
   
--   从硬盘存储中加载节点关闭时出现的持久性缓存条目。  
+- 从硬盘存储中加载节点关闭时出现的持久性缓存条目。  
   
--   如果应用程序使用 P2P 协作基础结构，将在该节点的联系人管理器中提供协作信息。  
+- 如果应用程序使用 P2P 协作基础结构，将在该节点的联系人管理器中提供协作信息。  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>使用多级别缓存缩放对等名称解析  
  若要保持较小的 PNRP 缓存大小，对等节点将使用多级别缓存，其中每个级别包含最大数目的条目。 缓存中的每个级别代表 PNRP ID 数值空间 (2<sup>256</sup>) 的十分之一较小部分。 缓存中最低的级别包含本地注册的 PNRP ID 和其他数字上相近的 PNRP ID。 当缓存级别填充了多达 20 个条目时，会创建新的较低级别。 缓存中级别的最大数目近似于 log10(云中 PNRP ID 的总数)。 例如，对于有 1 亿 PNRP ID 的全局云，存在不超过 8 (=log10(100,000,000)) 个的缓存级别，以及相似数量的跃点以在名称解析期间解析 PNRP ID。 这一机制允许分布式哈希表，可为此哈希表通过以下方式解析任意 PNRP ID：将 PNRP 请求消息转发到下个最近的对等机，直到找到具有相应 CPA 的对等机。  

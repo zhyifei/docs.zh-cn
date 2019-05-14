@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615376"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用于编译架构的 XmlSchemaSet
 介绍 <xref:System.Xml.Schema.XmlSchemaSet>，一个可以存储和验证 XML 架构定义语言 (XSD) 架构的缓存。  
@@ -37,9 +37,9 @@ ms.locfileid: "54579584"
 ## <a name="migrating-to-the-xmlschemaset"></a>迁移到 XmlSchemaSet  
  以下代码示例提供从过时的 <xref:System.Xml.Schema.XmlSchemaSet> 类迁移到新的 <xref:System.Xml.Schema.XmlSchemaCollection> 类的指南。 该代码示例说明两个类之间的下列主要区别。  
   
--   与 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 类的 <xref:System.Xml.Schema.XmlSchemaCollection> 方法不同，在调用 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法时，不编译架构。 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法在示例代码中显式调用。  
+- 与 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 类的 <xref:System.Xml.Schema.XmlSchemaCollection> 方法不同，在调用 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法时，不编译架构。 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法在示例代码中显式调用。  
   
--   要循环访问 <xref:System.Xml.Schema.XmlSchemaSet>，必须使用 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 属性。  
+- 要循环访问 <xref:System.Xml.Schema.XmlSchemaSet>，必须使用 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 属性。  
   
  以下是过时的 <xref:System.Xml.Schema.XmlSchemaCollection> 代码示例。  
   

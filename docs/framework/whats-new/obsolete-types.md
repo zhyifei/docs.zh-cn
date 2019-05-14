@@ -8,67 +8,67 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114684"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663446"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
 <a name="introduction"></a>本文中的表格列出了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中由程序集组织的过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](obsolete-members.md)。
 
--   [系统程序集中的过时类型](#obsolete_types_in_system_assemblies)
+- [系统程序集中的过时类型](#obsolete_types_in_system_assemblies)
 
-    -   [mscorlib.dll](#mscorlib)
+    - [mscorlib.dll](#mscorlib)
 
-    -   [System.Core.dll](#Core)
+    - [System.Core.dll](#Core)
 
-    -   [System.Data.dll](#data)
+    - [System.Data.dll](#data)
 
-    -   [System.Data.OracleClient.dll](#oracleclient)
+    - [System.Data.OracleClient.dll](#oracleclient)
 
-    -   [System.Design.dll](#design)
+    - [System.Design.dll](#design)
 
-    -   [System.dll](#system)
+    - [System.dll](#system)
 
-    -   [System.EnterpriseServices.dll](#enterpriseservices)
+    - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    -   [System.Net.dll](#net)
+    - [System.Net.dll](#net)
 
-    -   [System.ServiceModel.dll](#servicemodel)
+    - [System.ServiceModel.dll](#servicemodel)
 
-    -   [System.Web.dll](#web)
+    - [System.Web.dll](#web)
 
-    -   [System.Web.Mobile.dll](#mobile)
+    - [System.Web.Mobile.dll](#mobile)
 
-    -   [System.Workflow.Activities.dll](#workflow_activities)
+    - [System.Workflow.Activities.dll](#workflow_activities)
 
-    -   [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    -   [System.Workflow.Runtime.dll](#workflow_runtime)
+    - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    -   [System.WorkflowServices.dll](#workflowservices)
+    - [System.WorkflowServices.dll](#workflowservices)
 
-    -   [System.Xaml.dll](#xaml)
+    - [System.Xaml.dll](#xaml)
 
-    -   [System.Xml.dll](#xml)
+    - [System.Xml.dll](#xml)
 
-    -   [WindowsBase.dll](#WindowsBase)
+    - [WindowsBase.dll](#WindowsBase)
 
--   [Microsoft 程序集中的过时类型](#obsolete_types_in_microsoft_assemblies)
+- [Microsoft 程序集中的过时类型](#obsolete_types_in_microsoft_assemblies)
 
-    -   [IEHost.dll and IEExec.exe](#IEHost)
+    - [IEHost.dll and IEExec.exe](#IEHost)
 
-    -   [Microsoft.Build.Engine.dll](#Engine)
+    - [Microsoft.Build.Engine.dll](#Engine)
 
-    -   [Microsoft.JScript.dll](#jscript)
+    - [Microsoft.JScript.dll](#jscript)
 
-    -   [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    -   [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    -   [Microsoft.VisualC.dll](#visualc)
+    - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
 ## <a name="obsolete-types-in-system-assemblies"></a>系统程序集中的过时类型

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306516"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591655"
 ---
 # <a name="how-to-log-information-about-services"></a>如何：记录关于服务的信息
 默认情况下，所有 Windows 服务项目都具有与应用程序事件日志进行交互并向其中写入信息和异常的功能。 使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性可指示是否希望应用程序具有此功能。 默认情况下，用 Windows 服务项目模板创建的所有服务的记录都是打开的。 可以使用静态形式的 <xref:System.Diagnostics.EventLog> 类将服务信息写入日志，而无需创建 <xref:System.Diagnostics.EventLog> 组件的实例或手动注册源。  
@@ -32,14 +32,14 @@ ms.locfileid: "59306516"
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>为服务启用默认事件记录  
   
--   将组件的 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `true`。  
+- 将组件的 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `true`。  
   
     > [!NOTE]
     >  默认情况下，此属性设置为 `true`。 不需要显式设置此属性，除非正在生成更复杂的处理，如计算一个条件然后根据该条件的结果设置 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性。  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>为服务禁用默认事件记录  
   
--   将组件的 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `false`。  
+- 将组件的 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `false`。  
   
      [!code-csharp[VbRadconService#17](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#17)]
      [!code-vb[VbRadconService#17](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#17)]  

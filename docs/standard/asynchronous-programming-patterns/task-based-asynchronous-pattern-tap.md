@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623798"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>基于任务的异步模式 (TAP)
 基于任务的异步模式 (TAP) 是基于 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空间中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 类型，这些类型用于表示任意异步操作。 TAP 是用于新开发的建议的异步设计模式。  
@@ -39,9 +39,9 @@ TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程
 ## <a name="initiating-an-asynchronous-operation"></a>初始化异步操作  
  基于 TAP 的异步方法可以同步完成少量工作，如在返回结果任务之前，验证自变量和启动异步操作。 应将同步工作保持最小，以便异步方法可以快速返回。 快速返回的原因包括以下几种：  
   
--   可以从用户界面 (UI) 线程调用异步方法，因此，所有长期运行的同步工作可能会降低应用程序的响应能力。  
+- 可以从用户界面 (UI) 线程调用异步方法，因此，所有长期运行的同步工作可能会降低应用程序的响应能力。  
   
--   可以同时启动多个异步方法。 因此，在异步方法的同步部分中的任何长时间运行的工作都可以延迟其他异步操作的启动，从而减少并发的优点。  
+- 可以同时启动多个异步方法。 因此，在异步方法的同步部分中的任何长时间运行的工作都可以延迟其他异步操作的启动，从而减少并发的优点。  
   
  在某些情况下，完成操作所需的工作量要比异步启动操作所需的工作量少。 读取流时，按照在内存中已缓冲好的数据来满足该读取，这就是此类情形的一个示例。 在这样的情况下，操作可能会同步完成，同时返回已完成的任务。  
   

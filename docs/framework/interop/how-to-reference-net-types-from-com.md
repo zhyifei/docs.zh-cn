@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198395"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626307"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>如何：从 COM 引用 .NET 类型
 从客户端和服务器代码的角度看，COM 和 .NET Framework 之间的区别在很大程度上是不可见的。 Microsoft Visual Basic 客户端可在对象浏览器中查看 .NET 对象，这将公开对象方法和语法、属性和字段，正如任何其他 COM 对象那样。  
@@ -28,7 +28,7 @@ ms.locfileid: "59198395"
   
 ### <a name="to-import-a-library"></a>导入库  
   
--   在“#import”指令中指定“raw_interfaces_only”选项。 例如:  
+- 在“#import”指令中指定“raw_interfaces_only”选项。 例如:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,7 +36,7 @@ ms.locfileid: "59198395"
   
      或  
   
--   包括用于 Mscorlib.tlb 的 #import 指令。 例如:  
+- 包括用于 Mscorlib.tlb 的 #import 指令。 例如:  
   
     ```cpp  
     #import "mscorlib.tlb"  

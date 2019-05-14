@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219589"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591491"
 ---
 # <a name="using-the-codedom"></a>使用 CodeDom
 CodeDOM 提供表示多种常见源代码元素的类型。 可以设计一个程序，它使用 CodeDOM 元素生成源代码模型来组合对象图。 对于支持的编程语言，可使用 CodeDOM 代码生成器将此对象图呈现为源代码。 还可使用 CodeDOM 将源代码编译为二进制程序集。  
   
  CodeDOM 的常见用途包括：  
   
--   模板化代码生成：生成适用于 ASP.NET、XML Web 服务客户端代理、代码向导、设计器或其他代码发出机制的代码。  
+- 模板化代码生成：生成适用于 ASP.NET、XML Web 服务客户端代理、代码向导、设计器或其他代码发出机制的代码。  
   
--   动态编译：支持一种或多种语言的代码编译。  
+- 动态编译：支持一种或多种语言的代码编译。  
   
 ## <a name="building-a-codedom-graph"></a>生成 CodeDOM 图  
  <xref:System.CodeDom> 命名空间提供用于表示源代码逻辑结构的类，独立于语言语法。  

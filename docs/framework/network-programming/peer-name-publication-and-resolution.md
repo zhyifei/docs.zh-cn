@@ -2,12 +2,12 @@
 title: 对等名称发布和解析
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769484"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623203"
 ---
 # <a name="peer-name-publication-and-resolution"></a>对等名称发布和解析
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769484"
 
  若要发布新 PNRP ID，对等机需执行以下操作：  
   
--   将 PNRP 发布消息发送到缓存邻居（在缓存的最低级别中注册了 PNRP ID 的对等机）来播种缓存。  
+- 将 PNRP 发布消息发送到缓存邻居（在缓存的最低级别中注册了 PNRP ID 的对等机）来播种缓存。  
   
--   在云中选择不是其邻居的随机节点，并为其 P2P ID 发送 PNRP 名称解析请求。 生成的终结点确定进程使用发布对等机的 PNRP ID 对云中随机节点的缓存进行种子化。  
+- 在云中选择不是其邻居的随机节点，并为其 P2P ID 发送 PNRP 名称解析请求。 生成的终结点确定进程使用发布对等机的 PNRP ID 对云中随机节点的缓存进行种子化。  
   
 若 PNRP 版本 2 节点只解析其他 P2P ID，则不发布 PNRP ID。 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 注册表值 （REG_DWORD 类型）指定对等机仅使用 PNRP 进行名称解析，绝不进行名称发布。 也可通过组策略配置此注册表值。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59769484"
   
  若要在 PNRP 中执行名称解析，对等机需检查其缓存中的条目，查找与目标 PNRP ID 匹配的条目。 找到后，对等机向对等机发送 PNRP 请求消息，并等待响应。 如果未找到该 PNRP ID 的条目，对等机会向具有 PNRP ID（最接近目标 PNRP ID）的条目相对应的对等机发送 PNRP 请求消息。 接收 PNRP 请求消息的节点检查其缓存，并执行以下操作：  
   
--   找到该 PNRP ID 后，所请求的终结点对等机直接回复请求对等机。  
+- 找到该 PNRP ID 后，所请求的终结点对等机直接回复请求对等机。  
   
--   如果未找到该 PNRP ID 且缓存中的 PNRP ID 更接近目标 PNRP ID，则所请求的对等机向请求对等机发送响应，其中包含表示具有更接近目标 PNRP ID 的 PNRP ID 条目的对等机的 IPv6 地址。 在响应中使用 IP 地址，请求节点向 IPv6 地址发送另一个 PNRP 请求消息，以响应或检查其缓存。  
+- 如果未找到该 PNRP ID 且缓存中的 PNRP ID 更接近目标 PNRP ID，则所请求的对等机向请求对等机发送响应，其中包含表示具有更接近目标 PNRP ID 的 PNRP ID 条目的对等机的 IPv6 地址。 在响应中使用 IP 地址，请求节点向 IPv6 地址发送另一个 PNRP 请求消息，以响应或检查其缓存。  
   
--   如果未找到该 PNRP ID 且缓存中没有更接近目标 PNRP ID 的 PNRP ID，则所请求的对等机向请求对等机发送表明此情况的响应。 然后请求对等机选择下一个最接近的 PNRP ID。  
+- 如果未找到该 PNRP ID 且缓存中没有更接近目标 PNRP ID 的 PNRP ID，则所请求的对等机向请求对等机发送表明此情况的响应。 然后请求对等机选择下一个最接近的 PNRP ID。  
   
 请求对等机通过连续迭代继续此过程，最终查找已注册该 PNRP ID 的节点。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d6b092b499af2003e8a43987677b13741c362b1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834642"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662712"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中显示可用的串行端口
 本主题介绍在 Visual Basic 中如何使用 `My.Computer.Ports` 显示计算机的可用串行端口。  
@@ -31,11 +31,11 @@ ms.locfileid: "58834642"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System.Windows.Forms.dll 的项目引用。  
+- 对 System.Windows.Forms.dll 的项目引用。  
   
--   对 <xref:System.Windows.Forms> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+- 对 <xref:System.Windows.Forms> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
--   窗体具有名为 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控件。  
+- 窗体具有名为 `ListBox1` 的 <xref:System.Windows.Forms.ListBox> 控件。  
   
 ## <a name="robust-programming"></a>可靠编程  
  不必使用 <xref:System.Windows.Forms.ListBox> 控件显示可用串行端口名称。 相反，可以使用 <xref:System.Windows.Forms.ComboBox> 或其他控件。 如果应用程序不需要来自用户的响应，则可以使用 <xref:System.Windows.Forms.TextBox> 控件显示信息。  

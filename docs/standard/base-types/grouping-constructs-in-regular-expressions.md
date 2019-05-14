@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645894"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634342"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
   
--   匹配输入字符串中重复的子表达式。  
+- 匹配输入字符串中重复的子表达式。  
   
--   将限定符应用于拥有多个正则表达式语言元素的子表达式。 有关限定符的更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+- 将限定符应用于拥有多个正则表达式语言元素的子表达式。 有关限定符的更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
--   包括由 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法返回的字符串的子表达式。  
+- 包括由 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法返回的字符串的子表达式。  
   
--   从 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性中检索各个子表达式，并分别从匹配的文本作为一个整体处理它们。  
+- 从 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性中检索各个子表达式，并分别从匹配的文本作为一个整体处理它们。  
   
  下表列出了 .NET 正则表达式引擎支持的分组构造，并指明它们是捕获构造，还是非捕获构造。  
   
@@ -63,13 +63,13 @@ ms.locfileid: "54645894"
   
  可以四种方法访问捕获的组：  
   
--   通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。  
+- 通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。  
   
--   通过使用正则表达式中的命名的反向引用构造。 使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获组的名称，或使用 `\k<`*数字*`>`在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获组的初始数字。 捕获组具有与其原始编号相同的默认名称。 有关更多信息，请参见本主题后面的 [命名匹配的子表达式](#named_matched_subexpression) 。  
+- 通过使用正则表达式中的命名的反向引用构造。 使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获组的名称，或使用 `\k<`*数字*`>`在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获组的初始数字。 捕获组具有与其原始编号相同的默认名称。 有关更多信息，请参见本主题后面的 [命名匹配的子表达式](#named_matched_subexpression) 。  
   
--   通过使用 `$`*数字* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *数字* 是捕获的表达式的初始数字。  
+- 通过使用 `$`*数字* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *数字* 是捕获的表达式的初始数字。  
   
--   以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [Grouping Constructs and Regular Expression Objects](#Objects) 一节。  
+- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [Grouping Constructs and Regular Expression Objects](#Objects) 一节。  
   
  以下示例阐释表示文本中重复单词的正则表达式。 正则表达式模式的两个捕获组表示重复的单词的两个实例。 捕获第二个实例，以报告它在输入字符串的起始位置。  
   
@@ -112,17 +112,17 @@ ms.locfileid: "54645894"
   
  可用以下方式访问已命名的捕获组：  
   
--   通过使用正则表达式中的命名的反向引用构造。 使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获子表达式的名称。  
+- 通过使用正则表达式中的命名的反向引用构造。 使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获子表达式的名称。  
   
--   通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。 已命名的匹配子表达式在匹配子表达式后从左到右连续编号。  
+- 通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。 已命名的匹配子表达式在匹配子表达式后从左到右连续编号。  
   
--   通过使用 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *name* 是捕获子表达式的名称。  
+- 通过使用 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *name* 是捕获子表达式的名称。  
   
--   通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字”为捕获的子表达式的序号。  
+- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字”为捕获的子表达式的序号。  
   
--   以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 已命名的捕获组在集合中存储在已编号的捕获组后面。  
+- 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 已命名的捕获组在集合中存储在已编号的捕获组后面。  
   
--   以编程方式，通过将子表达式名称提供至 <xref:System.Text.RegularExpressions.GroupCollection> 对象的索引器（在 C# 中），或者提供至其 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性（在 Visual Basic 中）。  
+- 以编程方式，通过将子表达式名称提供至 <xref:System.Text.RegularExpressions.GroupCollection> 对象的索引器（在 C# 中），或者提供至其 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性（在 Visual Basic 中）。  
   
  简单的正则表达式模式会阐释如何编号（未命名），并且可以以编程方式或通过正则表达式语言语法引用已命名的组。 正则表达式 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 按编号和名称产生下列捕获组。 编号为 0 的第一个捕获组总是指整个模式。  
   
@@ -446,11 +446,11 @@ ms.locfileid: "54645894"
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>分组构造和正则表达式对象  
  由正则表达式捕获组匹配的子字符串由 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> 对象表示，其从 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> 对象检索，其由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 填充 <xref:System.Text.RegularExpressions.GroupCollection> 对象，如下所示：  
   
--   集合中的第一个 <xref:System.Text.RegularExpressions.Group> 对象（位于索引零的对象）表示整个匹配。  
+- 集合中的第一个 <xref:System.Text.RegularExpressions.Group> 对象（位于索引零的对象）表示整个匹配。  
   
--   下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 这些组的索引值范围从 1 到集合中未命名捕获组的数目。 （特定组索引等效于其带编号的反向引用。 有关向后引用的更多信息，请参见 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）  
+- 下一组 <xref:System.Text.RegularExpressions.Group> 对象表示未命名（编号）的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 这些组的索引值范围从 1 到集合中未命名捕获组的数目。 （特定组索引等效于其带编号的反向引用。 有关向后引用的更多信息，请参见 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。）  
   
--   最后的 <xref:System.Text.RegularExpressions.Group> 对象组表示命名的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 第一个名为捕获组的索引值是一个大于最后一个未命名的捕获组的索引。 如果正则表达式中没有未命名捕获组，则第一个命名的捕获组的索引值为 1。  
+- 最后的 <xref:System.Text.RegularExpressions.Group> 对象组表示命名的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 第一个名为捕获组的索引值是一个大于最后一个未命名的捕获组的索引。 如果正则表达式中没有未命名捕获组，则第一个命名的捕获组的索引值为 1。  
   
  如果将限定符应用于捕获组，则对应的 <xref:System.Text.RegularExpressions.Group> 对象的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 属性反映捕获组捕获的最后一个子字符串。 可以检索一整组子字符串，其是按组捕获的并具有来自 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的限定符，其由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   

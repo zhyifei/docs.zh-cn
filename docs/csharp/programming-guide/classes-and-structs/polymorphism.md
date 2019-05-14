@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322077"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583066"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多态性（C# 编程指南）
 多态性常被视为自封装和继承之后，面向对象的编程的第三个支柱。 Polymorphism（多态性）是一个希腊词，指“多种形态”，多态性具有两个截然不同的方面：  
   
--   在运行时，在方法参数和集合或数组等位置，派生类的对象可以作为基类的对象处理。 发生此情况时，该对象的声明类型不再与运行时类型相同。  
+- 在运行时，在方法参数和集合或数组等位置，派生类的对象可以作为基类的对象处理。 发生此情况时，该对象的声明类型不再与运行时类型相同。  
   
--   基类可以定义并实现[虚](../../../csharp/language-reference/keywords/virtual.md)方法，派生类可以[重写](../../../csharp/language-reference/keywords/override.md)这些方法，即派生类提供自己的定义和实现。 在运行时，客户端代码调用该方法，CLR 查找对象的运行时类型，并调用虚方法的重写方法。 因此，你可以在源代码中调用基类的方法，但执行该方法的派生类版本。  
+- 基类可以定义并实现[虚](../../../csharp/language-reference/keywords/virtual.md)方法，派生类可以[重写](../../../csharp/language-reference/keywords/override.md)这些方法，即派生类提供自己的定义和实现。 在运行时，客户端代码调用该方法，CLR 查找对象的运行时类型，并调用虚方法的重写方法。 因此，你可以在源代码中调用基类的方法，但执行该方法的派生类版本。  
   
  虚方法允许你以统一方式处理多组相关的对象。 例如，假定你有一个绘图应用程序，允许用户在绘图图面上创建各种形状。 你在编译时不知道用户将创建哪些特定类型的形状。 但应用程序必须跟踪创建的所有类型的形状，并且必须更新这些形状以响应用户鼠标操作。 你可以使用多态性通过两个基本步骤解决这一问题：  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59322077"
 ### <a name="virtual-members"></a>虚成员  
  当派生类从基类继承时，它会获得基类的所有方法、字段、属性和事件。 派生类的设计器可以选择是否  
   
--   重写基类中的虚拟成员。  
+- 重写基类中的虚拟成员。  
   
--   继承最接近的基类方法而不重写它  
+- 继承最接近的基类方法而不重写它  
   
--   定义隐藏基类实现的成员的新非虚实现  
+- 定义隐藏基类实现的成员的新非虚实现  
   
  仅当基类成员声明为 [virtual](../../../csharp/language-reference/keywords/virtual.md) 或 [abstract](../../../csharp/language-reference/keywords/abstract.md) 时，派生类才能重写基类成员。 派生成员必须使用 [override](../../../csharp/language-reference/keywords/override.md) 关键字显式指示该方法将参与虚调用。 以下代码提供了一个示例：  
   
@@ -89,11 +89,11 @@ ms.locfileid: "59322077"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [了解何时使用 Override 和 New 关键字](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [如何：重写 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [如何：重写 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>请参阅
 

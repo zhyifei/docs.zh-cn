@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644823"
 ---
 # <a name="managed-threading-basics"></a>托管线程处理基本知识
 
@@ -42,9 +42,6 @@ ms.locfileid: "55479563"
   
  [Windows 中的托管和非托管线程](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  介绍了托管和非托管线程的关系，列出了 Windows 线程 API 的相当托管版本，并讨论了 COM 单元和托管线程的交互。  
-  
- [Thread.Suspend、垃圾回收和安全点](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- 介绍了线程暂停和垃圾回收。  
   
  [线程本地存储：线程相关的静态字段和数据槽](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  介绍了线程相对存储机制。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: d860f1a3c6917238a529093672dc5f2abc5ae066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620185"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755898"
 ---
 # <a name="extern-c-reference"></a>extern（C# 参考）
 
@@ -43,46 +43,46 @@ extern 关键字用于 C# 中时会比用于 C++ 中时受到更多的限制。 
 
 1. 创建以下 C 文件并将其命名为 `cmdll.c`：
 
-```c
-// cmdll.c
-// Compile with: -LD
-int __declspec(dllexport) SampleMethod(int i)
-{
-  return i*10;
-}
-```
+    ```c
+    // cmdll.c
+    // Compile with: -LD
+    int __declspec(dllexport) SampleMethod(int i)
+    {
+      return i*10;
+    }
+    ```
 
 2. 从 Visual Studio 安装目录打开 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过在命令提示符处键入“cl -LD cmdll.c”来编译 `cmdll.c` 文件。
 
 3. 在相同的目录中，创建以下 C# 文件并将其命名为 `cm.cs`：
 
-```csharp
-// cm.cs
-using System;
-using System.Runtime.InteropServices;
-public class MainClass
-{
-    [DllImport("Cmdll.dll")]
-      public static extern int SampleMethod(int x);
-
-    static void Main()
+    ```csharp
+    // cm.cs
+    using System;
+    using System.Runtime.InteropServices;
+    public class MainClass
     {
-        Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        [DllImport("Cmdll.dll")]
+          public static extern int SampleMethod(int x);
+
+        static void Main()
+        {
+            Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        }
     }
-}
-```
+    ```
 
 4. 从 Visual Studio 安装目录打开一个 Visual Studio x64（或 x32）本机工具命令提示符窗口，并通过键入以下内容来编译 `cm.cs` 文件：
 
-> “csc cm.cs”（针对 x64 命令提示符）或“csc -platform:x86 cm.cs”（针对 x32 命令提示符）
+    > “csc cm.cs”（针对 x64 命令提示符）或“csc -platform:x86 cm.cs”（针对 x32 命令提示符）
 
-这将创建可执行文件 `cm.exe`。
+    这将创建可执行文件 `cm.exe`。
 
 5. 运行 `cm.exe`。 `SampleMethod` 方法将值 5 传递到 DLL 文件，这将返回该值与 10 相乘后的结果。  该程序生成以下输出：
 
-```
-SampleMethod() returns 50.
-```
+    ```
+    SampleMethod() returns 50.
+    ```
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

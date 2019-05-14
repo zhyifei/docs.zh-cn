@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204557"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607518"
 ---
 # <a name="shadow-copying-assemblies"></a>卷影复制程序集
 借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。 这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。  
@@ -30,21 +30,21 @@ ms.locfileid: "59204557"
   
  本文包含以下各节：  
   
--   [启用和使用卷影复制](#EnablingAndUsing)描述了卷影复制的基本用法和可用选项。  
+- [启用和使用卷影复制](#EnablingAndUsing)描述了卷影复制的基本用法和可用选项。  
   
--   [启动性能](#StartupPerformance)描述了为提高启动性能对 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中的卷影复制进行的更改，以及还原到早期版本的行为的方法。  
+- [启动性能](#StartupPerformance)描述了为提高启动性能对 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中的卷影复制进行的更改，以及还原到早期版本的行为的方法。  
   
--   [已过时的方法](#ObsoleteMethods)描述了对控制 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中卷影复制的属性和方法进行的更改。  
+- [已过时的方法](#ObsoleteMethods)描述了对控制 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中卷影复制的属性和方法进行的更改。  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>启用和使用卷影复制  
  若要配置卷影复制的应用程序域，可使用 <xref:System.AppDomainSetup> 类的属性，如下所示：  
   
--   通过将 <xref:System.AppDomainSetup.ShadowCopyFiles%2A> 属性设置为字符串值 `"true"` 来启用卷影复制。  
+- 通过将 <xref:System.AppDomainSetup.ShadowCopyFiles%2A> 属性设置为字符串值 `"true"` 来启用卷影复制。  
   
      默认情况下，此设置会导致在加载程序集之前，将应用程序路径中的所有程序集复制到下载缓存。 此缓存即是公共语言运行时为了存储从其他计算机中下载的文件而维护的缓存，并且公共语言运行时自动删除不再需要的文件。  
   
--   或者，可通过使用 <xref:System.AppDomainSetup.CachePath%2A> 属性和 <xref:System.AppDomainSetup.ApplicationName%2A> 属性设置卷影复制文件的自定义位置。  
+- 或者，可通过使用 <xref:System.AppDomainSetup.CachePath%2A> 属性和 <xref:System.AppDomainSetup.ApplicationName%2A> 属性设置卷影复制文件的自定义位置。  
   
      可通过将 <xref:System.AppDomainSetup.ApplicationName%2A> 属性和 <xref:System.AppDomainSetup.CachePath%2A> 属性串联为子目录，形成位置的基路径。 将程序集卷影复制到此路径的子目录，而不是复制到基路径本身。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59204557"
   
      为卷影复制文件设置自定义位置还存在以下几个原因。 如果应用程序生成了大量副本，则可能希望为卷影复制文件设置自定义位置。 由于下载缓存受到大小（而非生存期）的限制，所以公共语言运行时可能将尝试删除仍在使用的文件。 设置自定义位置的另一个原因是运行应用程序的用户对公共语言运行时用于下载缓存的目录位置不具备写入权限。  
   
--   或者，使用 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 属性限制卷影复制的程序集。  
+- 或者，使用 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 属性限制卷影复制的程序集。  
   
      启用应用程序域的卷影复制时，默认复制应用程序路径（即 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 属性指定的目录）中的所有程序集。 可以通过创建仅包含想要卷影复制的目录的字符串并将此字符串分配至 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 属性来限制复制到选定目录。 目录用分号分隔。 只有选定目录中的程序集才进行卷影复制。  
   

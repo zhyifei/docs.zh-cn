@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098216"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626355"
 ---
 # <a name="default-marshaling-for-arrays"></a>数组的默认封送处理
 在完全由托管代码组成的应用程序中，公共语言运行时将数组类型作为 In/Out 参数传递。 而互操作封送拆收器默认将数组作为 In 参数传递。  
@@ -146,7 +146,7 @@ void New3(ref String ar);
   
  编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，再重新编译该代码，即可向封送拆收器提供数组大小。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。 要指示数组中的元素数，请采用以下任一方式将 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 类型应用于托管方法定义的数组参数：  
   
--   标识含数组中的元素数的另一个参数。 按位置标识参数，从第一个参数开始，将第一个参数标识为数字 0。     
+- 标识含数组中的元素数的另一个参数。 按位置标识参数，从第一个参数开始，将第一个参数标识为数字 0。     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -160,7 +160,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   将数组大小定义为常数。 例如:  
+- 将数组大小定义为常数。 例如:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  

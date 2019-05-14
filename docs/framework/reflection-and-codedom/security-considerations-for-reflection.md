@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207508"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591503"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 通过反射能够获取有关类型和成员的信息，并能访问成员（即，调用方法和构造函数来获取和设置属性值，添加和移除事件处理程序，等等）。 使用反射可以获取有关类型的信息并且成员是不受限制的。 所有代码都可使用反射来执行以下任务：  
   
--   枚举类型和成员，并检查其元数据。  
+- 枚举类型和成员，并检查其元数据。  
   
--   枚举并检查程序集和模块。  
+- 枚举并检查程序集和模块。  
   
  与之相反，使用反射来访问成员会受到限制。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，只有受信任的代码才能使用反射来访问关键安全成员。 而且，只有受信任的代码才能使用反射访问无法由已编译代码直接访问的非公共成员。 最后，使用反射访问关键安全成员的代码必须具有关键安全成员要求的任何权限，就像编译的代码一样。  
   
  具有一定的权限，代码可以使用反射来执行以下类型的访问：  
   
--   访问不是安全关键的公共成员。  
+- 访问不是安全关键的公共成员。  
   
--   若这些成员不是安全关键，则访问可进入编译代码的非公共成员。 此类非公共成员的示例包括：  
+- 若这些成员不是安全关键，则访问可进入编译代码的非公共成员。 此类非公共成员的示例包括：  
   
-    -   调用代码的基础类的受保护成员。 （在反射中，这称为系列级访问权限。）  
+    - 调用代码的基础类的受保护成员。 （在反射中，这称为系列级访问权限。）  
   
-    -   调用代码的程序集中的 `internal` 成员（Visual Basic 中的 `Friend` 成员）。 （在反射中，这称为程序集级别的访问。）  
+    - 调用代码的程序集中的 `internal` 成员（Visual Basic 中的 `Friend` 成员）。 （在反射中，这称为程序集级别的访问。）  
   
-    -   包含调用代码的类的其他实例的私有成员。  
+    - 包含调用代码的类的其他实例的私有成员。  
   
  例如，在沙盒应用程序域中运行的代码被限制于此列表所述的访问权限，除非该应用程序域授予其他权限。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "59207508"
 ## <a name="accessing-security-critical-members"></a>访问安全关键成员  
  一个成员如果具有 <xref:System.Security.SecurityCriticalAttribute>，而它属于具有 <xref:System.Security.SecurityCriticalAttribute> 的类型，或是它在安全关键程序集中，则该成员为安全关键成员。 以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，访问安全关键的成员的规则如下：  
   
--   透明代码不能使用反射来访问安全关键成员，即使是完全受信任的代码。 引发一个 <xref:System.MethodAccessException>、<xref:System.FieldAccessException> 或 <xref:System.TypeAccessException>。  
+- 透明代码不能使用反射来访问安全关键成员，即使是完全受信任的代码。 引发一个 <xref:System.MethodAccessException>、<xref:System.FieldAccessException> 或 <xref:System.TypeAccessException>。  
   
--   使用部分信任运行的代码将被视为透明。  
+- 使用部分信任运行的代码将被视为透明。  
   
  无论是通过已编译代码直接访问还是使用反射访问安全关键成员，这些规则都不会变。  
   
@@ -77,18 +77,18 @@ ms.locfileid: "59207508"
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>访问通常不可访问的成员  
  根据公共语言运行时的可访问性规则，若要使用反射来调用无法访问的成员，你的代码必须获得以下两个权限之一：  
   
--   若要允许代码调用任何非公共成员：代码必须获得带 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 若要允许代码调用任何非公共成员：代码必须获得带 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
     > [!NOTE]
     >  默认情况下，安全策略拒绝源于 Internet 的代码的权限。 此权限永远不会授权予源自 Internet 的代码。  
   
--   要允许代码调用任何非公共成员，只要包含调用成员的程序集的授予集与包含调用代码的程序集的授予集相同或与其子集相同：你的代码必须授予带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 要允许代码调用任何非公共成员，只要包含调用成员的程序集的授予集与包含调用代码的程序集的授予集相同或与其子集相同：你的代码必须授予带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
  例如，假设你为应用程序域授予 Internet 权限以及带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，则使用两个程序集 A 和 B 运行 Internet 应用程序。  
   
--   程序集 A 可以使用反射来访问程序集 B 的私有成员，因为程序集 B 的授予集不包括一个 A 尚未被授予的任何权限。  
+- 程序集 A 可以使用反射来访问程序集 B 的私有成员，因为程序集 B 的授予集不包括一个 A 尚未被授予的任何权限。  
   
--   程序集 A 不能使用反射来访问 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集的私有成员（如 mscorlib.dll），因为 mscorlib.dll 是完全受信任的，因此有尚未被授予给程序集 A 的权限。代码访问安全性在运行时审核堆栈将引发 <xref:System.MemberAccessException>。  
+- 程序集 A 不能使用反射来访问 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集的私有成员（如 mscorlib.dll），因为 mscorlib.dll 是完全受信任的，因此有尚未被授予给程序集 A 的权限。代码访问安全性在运行时审核堆栈将引发 <xref:System.MemberAccessException>。  
   
 ## <a name="serialization"></a>序列化  
  对于序列化，带 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>，无论其访问级别是什么，都能够获取和设置序列化类型的成员。 此权限使代码可以发现并更改实例的私有状态。 （除被授予适当权限以外，在元数据中该类型必须[标记](../../../docs/standard/attributes/applying-attributes.md)为可序列化。）  
@@ -98,11 +98,11 @@ ms.locfileid: "59207508"
   
 ## <a name="version-information"></a>版本信息  
   
--   以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，透明代码不能使用反射访问关键安全成员。  
+- 以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，透明代码不能使用反射访问关键安全成员。  
   
--   <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记在 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中引入。 早期版本的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记在 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中引入。 早期版本的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
   
--   以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+- 以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
 ## <a name="see-also"></a>请参阅
 

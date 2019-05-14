@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178875"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623303"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe（资源文件生成器）
 资源文件生成器 (Resgen.exe) 将文本（.txt 或 .restext）文件和基于 XML 的资源格式 (.resx) 文件转换为公共语言运行时二进制 (.resources) 文件，后者可嵌入到运行时二进制可执行文件或附属程序集中。 （请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。）  
   
  Resgen.exe 是执行以下任务的通用资源转换实用工具：  
   
--   将 .txt 或 .restext 文件转换为 .resources 或 .resx 文件。 （.restext 文件的格式与 .txt 文件的格式相同。 但是，.restext 扩展名可帮助你更轻松地识别包含资源定义的文本文件。）  
+- 将 .txt 或 .restext 文件转换为 .resources 或 .resx 文件。 （.restext 文件的格式与 .txt 文件的格式相同。 但是，.restext 扩展名可帮助你更轻松地识别包含资源定义的文本文件。）  
   
--   将 .resources 文件转换为文本文件或 .resx 文件。  
+- 将 .resources 文件转换为文本文件或 .resx 文件。  
   
--   将 .resx 文件转换为文本文件或 .resources 文件。  
+- 将 .resx 文件转换为文本文件或 .resources 文件。  
   
--   将程序集中的字符串资源提取到 .resw 文件中，该文件适合在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用。  
+- 将程序集中的字符串资源提取到 .resw 文件中，该文件适合在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用。  
   
--   创建一个强类型类，该类提供对单个名为资源的文件和 <xref:System.Resources.ResourceManager> 实例的访问。  
+- 创建一个强类型类，该类提供对单个名为资源的文件和 <xref:System.Resources.ResourceManager> 实例的访问。  
   
  如果 Resgen.exe 处于任何原因失败，则返回值将为 –1。  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>执行特定的 Resgen.exe 任务  
  可通过不同的方式使用 Resgen.exe：将基于文本的或基于 XML 的资源文件编译为二进制文件，在资源文件格式之间进行转换以及生成包装 <xref:System.Resources.ResourceManager> 功能并提供对资源的访问的类。 本节提供有关每个任务的详细信息：  
   
--   [将资源编译为二进制文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [将资源编译为二进制文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [在资源文件类型之间转换](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [在资源文件类型之间转换](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [编译或转换多个文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [编译或转换多个文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [将资源导入 .resw 文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [将资源导入 .resw 文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [条件编译资源](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [条件编译资源](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [生成强类型资源类](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [生成强类型资源类](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>将资源编译为二进制文件  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>在资源文件类型之间转换  
  除了将基于文本的或基于 XML 的资源文件编译为二进制 .resources 文件之外，Resgen.exe 还可以将任意受支持的文件类型转换为其他任何受支持的文件类型。 这意味着它可以执行以下转换：  
   
--   将 .txt 和 .restext 文件转换为 .resx 文件。  
+- 将 .txt 和 .restext 文件转换为 .resx 文件。  
   
--   将 .resx 文件转换为 .txt 和 .restext 文件。  
+- 将 .resx 文件转换为 .txt 和 .restext 文件。  
   
--   将 .resources 文件转换为 .txt 和 .restext 文件。  
+- 将 .resources 文件转换为 .txt 和 .restext 文件。  
   
--   将 .resources 文件转换为 .resx 文件。  
+- 将 .resources 文件转换为 .resx 文件。  
   
  该语法与上一节中所示的语法相同。  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  强类型资源类具有下列成员：  
   
--   无参数构造函数，可用于实例化强类型资源类。  
+- 无参数构造函数，可用于实例化强类型资源类。  
   
--   `static` (C#) 或 `Shared` (Visual Basic) 和只读 `ResourceManager` 属性，该属性返回管理强类型资源的 <xref:System.Resources.ResourceManager> 实例。  
+- `static` (C#) 或 `Shared` (Visual Basic) 和只读 `ResourceManager` 属性，该属性返回管理强类型资源的 <xref:System.Resources.ResourceManager> 实例。  
   
--   静态 `Culture` 属性，它允许你设置用于资源检索的区域性。 默认情况下，其值为 `null`，这表示使用了当前 UI 区域性。  
+- 静态 `Culture` 属性，它允许你设置用于资源检索的区域性。 默认情况下，其值为 `null`，这表示使用了当前 UI 区域性。  
   
--   一个 `static` (C#) 或 `Shared` (Visual Basic) 以及 .resources 文件中的每个资源的只读属性。 属性的名称是该资源的名称。  
+- 一个 `static` (C#) 或 `Shared` (Visual Basic) 以及 .resources 文件中的每个资源的只读属性。 属性的名称是该资源的名称。  
   
  例如，下面的命令将名为 StringResources.txt 的资源文件编译为名为 StringResources.resources 的文件，并在可用于访问资源管理器的名为 StringResources.vb 的 Visual Basic 源代码文件中生成名为 `StringResources` 的类。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599993"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615192"
 ---
 # <a name="observer-design-pattern-best-practices"></a>观察程序设计模式最佳做法
 在 .NET Framework 中，将观察者设计模式作为一组接口实现。 <xref:System.IObservable%601?displayProperty=nameWithType> 接口表示数据提供程序，也负责提供允许观察者取消订阅通知的 <xref:System.IDisposable> 实现。 <xref:System.IObserver%601?displayProperty=nameWithType> 接口表示观察者。 本主题描述使用这些接口实现观察者设计模式时开发人员应遵循的最佳做法。  
@@ -31,11 +31,11 @@ ms.locfileid: "54599993"
   
  在处理异常和调用 <xref:System.IObserver%601.OnError%2A> 方法时，提供程序应遵循以下最佳做法并：  
   
--   如果提供程序有任何具体需求，则它必须处理自己的异常。  
+- 如果提供程序有任何具体需求，则它必须处理自己的异常。  
   
--   提供程序不应期望或要求观察者以任何特定方式处理异常。  
+- 提供程序不应期望或要求观察者以任何特定方式处理异常。  
   
--   提供程序应在处理削弱其提供更新的能力的异常时调用 <xref:System.IObserver%601.OnError%2A> 方法。 可将有关这种异常的信息传递给观察者。 在其他情况下，则无需通知观察器有异常。  
+- 提供程序应在处理削弱其提供更新的能力的异常时调用 <xref:System.IObserver%601.OnError%2A> 方法。 可将有关这种异常的信息传递给观察者。 在其他情况下，则无需通知观察器有异常。  
   
  只要提供程序调用了 <xref:System.IObserver%601.OnError%2A> 或 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 方法，就不应有进一步的通知，并且提供程序可以取消订阅其观察者。 然而，观察者也可以在任何时候取消订阅他们自己，包括在他们收到 <xref:System.IObserver%601.OnError%2A> 或<xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 通知前后。 观察者设计模式并未规定负责取消订阅的提供程序还是观察者；因此，可能这两者都试图取消订阅。 通常情况下，当观察者取消订阅时，会从订阅者集合中把他们删除。 在单线程应用程序中，<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现应确保对象引用有效，并在尝试删除对象前确保该对象是订阅者集合的成员。 在多线程应用程序中，应使用诸如 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 对象的线程安全集合对象。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "54599993"
   
  在回应从提供程序调用的 <xref:System.IObserver%601.OnError%2A> 方法时，观察者应遵循以下最佳做法：  
   
--   观察者不应从其接口实现引发异常，如 <xref:System.IObserver%601.OnNext%2A> 或 <xref:System.IObserver%601.OnError%2A>。 但如果观察者确实引发了异常，应预计到这些异常不会得到处理。  
+- 观察者不应从其接口实现引发异常，如 <xref:System.IObserver%601.OnNext%2A> 或 <xref:System.IObserver%601.OnError%2A>。 但如果观察者确实引发了异常，应预计到这些异常不会得到处理。  
   
--   若要保留调用堆栈，希望引发传递到 <xref:System.Exception> 方法的 <xref:System.IObserver%601.OnError%2A> 对象的观察者应在引发之前包装该异常。 为此，应使用标准异常对象。  
+- 若要保留调用堆栈，希望引发传递到 <xref:System.Exception> 方法的 <xref:System.IObserver%601.OnError%2A> 对象的观察者应在引发之前包装该异常。 为此，应使用标准异常对象。  
   
 ## <a name="additional-best-practices"></a>其他最佳做法  
  尝试在 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法中取消注册可能会导致空引用。 因此，我们建议你避免这种做法。  

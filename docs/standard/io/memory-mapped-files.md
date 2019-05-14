@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd1ced48847739318f22ec77b17a83a36fd36ee0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647772"
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
 内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，可以使用托管代码访问内存映射文件，就像本机 Windows 函数访问内存映射文件（如[管理内存映射文件](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))所述）一样。  
   
  内存映射文件分为两种类型：  
   
--   持久化内存映射文件  
+- 持久化内存映射文件  
   
      持久化文件是与磁盘上的源文件相关联的内存映射文件。 当最后一个进程处理完文件时，数据保存到磁盘上的源文件中。 此类内存映射文件适用于处理非常大的源文件。  
   
--   非持久化内存映射文件  
+- 非持久化内存映射文件  
   
      非持久化文件是不与磁盘上的文件相关联的内存映射文件。 当最后一个进程处理完文件时，数据会丢失，且文件被垃圾回收器回收。 此类文件适合创建共享内存，以进行进程内通信 (IPC)。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59328304"
 ### <a name="security"></a>安全性  
  可以在创建内存映射文件时应用访问权限，具体操作是运行以下需要将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 枚举用作参数的方法：  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  若要指定打开现有内存映射文件所需的访问权限，可以运行需要将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> 用作参数的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> 方法。  
   

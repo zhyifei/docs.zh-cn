@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: ca792106bdd341fa4be8f3554ce70cd7d3f22522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b4f74836b32fea0e5c24fd4500581f17e39cd4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816063"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623133"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>如何：在 Visual Basic 中使用 StreamWriter 向文件中写入文本
 此示例将通过 `My.Computer.FileSystem.OpenTextFileWriter` 方法打开 <xref:System.IO.StreamWriter> 对象，并会使用该对象和 <xref:System.IO.StreamWriter> 类的 <xref:System.IO.TextWriter.WriteLine%2A> 方法向文本文件写入字符串。  
@@ -22,11 +22,11 @@ ms.locfileid: "58816063"
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   文件存在且为只读 (<xref:System.IO.IOException>)。  
+- 文件存在且为只读 (<xref:System.IO.IOException>)。  
   
--   磁盘已满 (<xref:System.IO.IOException>)。  
+- 磁盘已满 (<xref:System.IO.IOException>)。  
   
--   路径名称过长 (<xref:System.IO.PathTooLongException>)。  
+- 路径名称过长 (<xref:System.IO.PathTooLongException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此示例在文件尚未存在时创建新文件。 如果某个应用程序需要创建文件，则该应用程序需要针对文件夹的 `Create` 访问权限。 如果文件已存在，则该应用程序只需要 `Write` 访问权限（这是较弱的特权）。 如有可能，在部署过程中创建文件，并且仅授予针对单个文件的 `Read` 访问权限（而不是针对 `Create` 文件夹的访问权限）会更加安全。  

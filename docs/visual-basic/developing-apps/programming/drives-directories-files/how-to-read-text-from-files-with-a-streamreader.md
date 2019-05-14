@@ -7,19 +7,19 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: d05590b3c36070c91b6d5e50defd71df133fb7d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5631b402743a7be19428d15f55fbaa78b5b90668
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824970"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623361"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>如何：使用 StreamReader 读取文件中的文本 (Visual Basic)
 `My.Computer.FileSystem` 对象提供打开 <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter> 的方法。 这些方法（`OpenTextFileWriter` 和 `OpenTextFileReader`）是高级方法，除非选择“全部”选项卡，否则它们不会出现在 IntelliSense 中。  
   
 ### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>使用文本读取器从文件读取一行  
   
--   使用 `OpenTextFileReader` 方法打开 <xref:System.IO.TextReader> 并指定文件。 此示例打开名为 `testfile.txt` 的文件、从中读取一行，然后在消息框中显示该行。  
+- 使用 `OpenTextFileReader` 方法打开 <xref:System.IO.TextReader> 并指定文件。 此示例打开名为 `testfile.txt` 的文件、从中读取一行，然后在消息框中显示该行。  
   
      [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   

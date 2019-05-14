@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690834"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650731"
 ---
 # <a name="task-cancellation"></a>任务取消
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 类通过使用 .NET Framework 中的取消标记来支持取消。 有关详细信息，请参阅[托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。 在任务类中，取消涉及用户委托间的协作，这表示可取消的操作和请求取消的代码。  成功取消涉及调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法的请求代码和及时终止操作的用户委托。 可以使用以下选项之一终止操作：  
   
--   简单地从委托中返回。 在许多情况下，这样已足够；但是，采用这种方式取消的任务实例会转换为 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 状态，而不是 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态。  
+- 简单地从委托中返回。 在许多情况下，这样已足够；但是，采用这种方式取消的任务实例会转换为 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 状态，而不是 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态。  
   
--   引发 <xref:System.OperationCanceledException> ，并将其传递到在其上请求了取消的标记。 完成此操作的首选方式是使用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法。 采用这种方式取消的任务会转换为 Canceled 状态，调用代码可使用该状态来验证任务是否响应了其取消请求。  
+- 引发 <xref:System.OperationCanceledException> ，并将其传递到在其上请求了取消的标记。 完成此操作的首选方式是使用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法。 采用这种方式取消的任务会转换为 Canceled 状态，调用代码可使用该状态来验证任务是否响应了其取消请求。  
   
  下面的示例演示引发异常的任务取消的基本模式。 请注意，标记将传递到用户委托和任务实例本身。  
   

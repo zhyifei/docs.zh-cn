@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300991"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648527"
 ---
 # <a name="registration-free-com-interop"></a>免注册 COM 互操作
 免注册 COM 互操作在不使用 Windows 注册表来存储程序集信息的情况下激活组件。 不是在部署过程中在计算机上注册组件，而是在设计时创建包含有关绑定和激活信息的 Win32 样式清单文件。 正是这些清单文件（而不是注册表项）指导对象的激活。  
   
  不在部署期间注册程序集而使用免注册激活具有两大优势：  
   
--   计算机上安装了多个 DLL 版本时，你可以控制要激活的版本。  
+- 计算机上安装了多个 DLL 版本时，你可以控制要激活的版本。  
   
--   最终用户可以使用 XCOPY 或 FTP 将应用程序复制到计算机上适当的目录。 然后即可从该目录运行该应用程序。  
+- 最终用户可以使用 XCOPY 或 FTP 将应用程序复制到计算机上适当的目录。 然后即可从该目录运行该应用程序。  
   
  本节介绍免注册 COM 互操作所需的两种清单类型：应用程序清单和组件清单。 这些清单是 XML 文件。 应用程序清单由应用程序开发人员创建，包含描述程序集和程序集依赖项的元数据。 组件清单由组件开发人员创建，包含 Windows 注册表中的其他信息。  
   

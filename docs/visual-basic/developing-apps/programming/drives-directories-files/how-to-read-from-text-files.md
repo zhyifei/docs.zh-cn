@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 813928fbcf67f269d99d418ab16e202bd19f25fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1d3fbe3ab8ff59d73dc5ec4f33e4dde2437bcbec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623332"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取文本文件
 通过 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 对象的 `My.Computer.FileSystem` 方法，可以读取文本文件。 如果文件的内容使用类似 ASCII 或 UTF-8 的编码，则可以指定文件编码。  
@@ -25,34 +25,34 @@ ms.locfileid: "58836878"
   
 ### <a name="to-read-from-a-text-file"></a>读取文本文件  
   
--   使用 `ReadAllText` 对象的 `My.Computer.FileSystem` 方法并提供路径，可以将文本文件的内容读入字符串中。 下面的示例将 test.txt 的内容读入字符串中，然后在消息框中显示内容。  
+- 使用 `ReadAllText` 对象的 `My.Computer.FileSystem` 方法并提供路径，可以将文本文件的内容读入字符串中。 下面的示例将 test.txt 的内容读入字符串中，然后在消息框中显示内容。  
   
      [!code-vb[VbFileIORead#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#2)]  
   
 ### <a name="to-read-from-a-text-file-that-is-encoded"></a>读取已编码的文本文件  
   
--   使用 `ReadAllText` 对象的 `My.Computer.FileSystem` 方法并提供路径和文件编码类型，可以将文本文件的内容读入字符串中。 下面的示例将 UTF32 文件 test.txt 的内容读入字符串中，然后在消息框中显示内容。  
+- 使用 `ReadAllText` 对象的 `My.Computer.FileSystem` 方法并提供路径和文件编码类型，可以将文本文件的内容读入字符串中。 下面的示例将 UTF32 文件 test.txt 的内容读入字符串中，然后在消息框中显示内容。  
   
      [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：它是零长度字符串；它仅包含空白；它包含无效字符；或者它是一个设备路径 (<xref:System.ArgumentException>)。  
+- 路径由于以下原因之一而无效：它是零长度字符串；它仅包含空白；它包含无效字符；或者它是一个设备路径 (<xref:System.ArgumentException>)。  
   
--   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   该文件不存在 (<xref:System.IO.FileNotFoundException>)。  
+- 该文件不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   文件正由另一个进程使用，或者出现 I/O 错误 (<xref:System.IO.IOException>)。  
+- 文件正由另一个进程使用，或者出现 I/O 错误 (<xref:System.IO.IOException>)。  
   
--   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+- 路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。  
+- 路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。  
   
--   内存不足，无法将字符串写入缓冲区 (<xref:System.OutOfMemoryException>)。  
+- 内存不足，无法将字符串写入缓冲区 (<xref:System.OutOfMemoryException>)。  
   
--   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
+- 该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
  不要根据文件的名称来判断文件的内容。 例如，文件 Form1.vb 可能不是 Visual Basic 源文件。  
   

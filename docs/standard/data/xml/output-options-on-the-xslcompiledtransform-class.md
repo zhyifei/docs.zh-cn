@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204987"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647842"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输出选项
 本主题讨论可用的 XSLT 输出选项。 可以在样式表中指定输出选项，或在 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上指定输出选项。  
@@ -55,7 +55,7 @@ ms.locfileid: "47204987"
   
 ## <a name="notes"></a>说明  
   
--   在写出空标记时，会在元素名的最后一个字符与反斜杠之间写入一个空格，例如 `<myElement />`。 这样，较旧的浏览器可以正确地显示生成的 HTML 页面。  
+- 在写出空标记时，会在元素名的最后一个字符与反斜杠之间写入一个空格，例如 `<myElement />`。 这样，较旧的浏览器可以正确地显示生成的 HTML 页面。  
   
 ## <a name="see-also"></a>请参阅
 

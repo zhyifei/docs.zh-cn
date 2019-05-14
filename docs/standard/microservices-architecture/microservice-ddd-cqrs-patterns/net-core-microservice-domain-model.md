@@ -4,14 +4,14 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb07f11e4c123ed04232e41d5d50d4ef59b76bbd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363015"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621227"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 实现微服务域模型 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 实现微服务域模型
 
 上一节解释了域模型设计的基本设计原则和模式。 现在开始探索使用 .NET Core（纯 C\# 代码）和 EF Core 实现域模型的可能方式。 请注意，域模型将仅由代码组成。 它只有 EF Core 模型要求，并不真正依赖于 EF。 你不应该硬依赖或引用 EF Core 或域模型中的任何其他 ORM。
 
@@ -60,7 +60,7 @@ public class Order : Entity, IAggregateRoot
 
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
-  
+
     public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
             string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
@@ -74,8 +74,8 @@ public class Order : Entity, IAggregateRoot
         // ...Additional code ...
     }
 
-    public void AddOrderItem(int productId, string productName, 
-                            decimal unitPrice, decimal discount, 
+    public void AddOrderItem(int productId, string productName,
+                            decimal unitPrice, decimal discount,
                             string pictureUrl, int units = 1)
     {
         //...
@@ -83,9 +83,9 @@ public class Order : Entity, IAggregateRoot
         // ...
 
         var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
-        
+
         _orderItems.Add(orderItem);
-  
+
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -117,7 +117,7 @@ public class Order : Entity, IAggregateRoot
 OrderItem myNewOrderItem = new OrderItem(orderId, productId, productName,
     pictureUrl, unitPrice, discount, units);
 
-//... (WRONG) Accessing the OrderItems colletion directly from the application layer // or command handlers
+//... (WRONG) Accessing the OrderItems collection directly from the application layer // or command handlers
 myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
@@ -177,6 +177,6 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 - **Udi Dahan.How to create fully encapsulated Domain Models** \（如何创建完全封装的域模型）
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
->[!div class="step-by-step"]
->[上一页](microservice-domain-model.md)
->[下一页](seedwork-domain-model-base-classes-interfaces.md)
+> [!div class="step-by-step"]
+> [上一页](microservice-domain-model.md)
+> [下一页](seedwork-domain-model-base-classes-interfaces.md)
