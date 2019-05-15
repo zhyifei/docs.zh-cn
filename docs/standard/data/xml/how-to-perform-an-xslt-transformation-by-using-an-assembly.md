@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590419"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="6b88d-102">如何：通过使用程序集执行 XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="6b88d-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
-<span data-ttu-id="6b88d-103">XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。</span><span class="sxs-lookup"><span data-stu-id="6b88d-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="6b88d-104">可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。</span><span class="sxs-lookup"><span data-stu-id="6b88d-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="614ee-102">如何：通过使用程序集执行 XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="614ee-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
+<span data-ttu-id="614ee-103">XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。</span><span class="sxs-lookup"><span data-stu-id="614ee-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="614ee-104">可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。</span><span class="sxs-lookup"><span data-stu-id="614ee-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
   
-### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="6b88d-105">将 XML 和 XSLT 文件复制到本地计算机</span><span class="sxs-lookup"><span data-stu-id="6b88d-105">To copy the XML and XSLT files to your local computer</span></span>  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="614ee-105">将 XML 和 XSLT 文件复制到本地计算机</span><span class="sxs-lookup"><span data-stu-id="614ee-105">To copy the XML and XSLT files to your local computer</span></span>  
   
--   <span data-ttu-id="6b88d-106">将 XSLT 文件复制到本地计算机并将其命名为 Transform.xsl。</span><span class="sxs-lookup"><span data-stu-id="6b88d-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
+- <span data-ttu-id="614ee-106">将 XSLT 文件复制到本地计算机并将其命名为 Transform.xsl。</span><span class="sxs-lookup"><span data-stu-id="614ee-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ ms.locfileid: "59345399"
     </xsl:stylesheet>  
     ```  
   
--   <span data-ttu-id="6b88d-107">将 XML 文件复制到本地计算机并将其命名为 `books.xml`。</span><span class="sxs-lookup"><span data-stu-id="6b88d-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
+- <span data-ttu-id="614ee-107">将 XML 文件复制到本地计算机并将其命名为 `books.xml`。</span><span class="sxs-lookup"><span data-stu-id="614ee-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,60 +130,60 @@ ms.locfileid: "59345399"
     </catalog>  
     ```  
   
-### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="6b88d-108">编译启用脚本的样式表。</span><span class="sxs-lookup"><span data-stu-id="6b88d-108">To compile the style sheet with the script enabled.</span></span>  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="614ee-108">编译启用脚本的样式表。</span><span class="sxs-lookup"><span data-stu-id="614ee-108">To compile the style sheet with the script enabled.</span></span>  
   
-1. <span data-ttu-id="6b88d-109">从命令行执行下面的命令可创建两个名为 `Transform.dll` 和 `Transform_Script1.dll` 的程序集（这是默认行为。</span><span class="sxs-lookup"><span data-stu-id="6b88d-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="6b88d-110">除非另行指定，否则类和程序集的名称默认为主样式表的名称）：</span><span class="sxs-lookup"><span data-stu-id="6b88d-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
+1. <span data-ttu-id="614ee-109">从命令行执行下面的命令可创建两个名为 `Transform.dll` 和 `Transform_Script1.dll` 的程序集（这是默认行为。</span><span class="sxs-lookup"><span data-stu-id="614ee-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="614ee-110">除非另行指定，否则类和程序集的名称默认为主样式表的名称）：</span><span class="sxs-lookup"><span data-stu-id="614ee-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
     ```  
   
- <span data-ttu-id="6b88d-111">下面的命令将类名称显式设置为 Transform：</span><span class="sxs-lookup"><span data-stu-id="6b88d-111">The following command explicitly sets the class name to Transform:</span></span>  
+ <span data-ttu-id="614ee-111">下面的命令将类名称显式设置为 Transform：</span><span class="sxs-lookup"><span data-stu-id="614ee-111">The following command explicitly sets the class name to Transform:</span></span>  
   
 ```  
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="6b88d-112">编译代码时以引用形式包含已编译的程序集。</span><span class="sxs-lookup"><span data-stu-id="6b88d-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="614ee-112">编译代码时以引用形式包含已编译的程序集。</span><span class="sxs-lookup"><span data-stu-id="614ee-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
   
-1. <span data-ttu-id="6b88d-113">通过在解决方案资源管理器中或从命令行添加引用，可以在 Visual Studio 中包括程序集。</span><span class="sxs-lookup"><span data-stu-id="6b88d-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
+1. <span data-ttu-id="614ee-113">通过在解决方案资源管理器中或从命令行添加引用，可以在 Visual Studio 中包括程序集。</span><span class="sxs-lookup"><span data-stu-id="614ee-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
   
-2. <span data-ttu-id="6b88d-114">对于 C# 的命令行，使用下面的命令：</span><span class="sxs-lookup"><span data-stu-id="6b88d-114">For the command line with C#, use the following:</span></span>  
+2. <span data-ttu-id="614ee-114">对于 C# 的命令行，使用下面的命令：</span><span class="sxs-lookup"><span data-stu-id="614ee-114">For the command line with C#, use the following:</span></span>  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3. <span data-ttu-id="6b88d-115">对于 Visual Basic 的命令行，使用下面的命令：</span><span class="sxs-lookup"><span data-stu-id="6b88d-115">For the command line with Visual Basic, use the following</span></span>  
+3. <span data-ttu-id="614ee-115">对于 Visual Basic 的命令行，使用下面的命令：</span><span class="sxs-lookup"><span data-stu-id="614ee-115">For the command line with Visual Basic, use the following</span></span>  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="6b88d-116">在代码中使用已编译的程序集。</span><span class="sxs-lookup"><span data-stu-id="6b88d-116">To use the compiled assembly in your code.</span></span>  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="614ee-116">在代码中使用已编译的程序集。</span><span class="sxs-lookup"><span data-stu-id="614ee-116">To use the compiled assembly in your code.</span></span>  
   
-1. <span data-ttu-id="6b88d-117">下面的示例演示如何通过使用已编译的样式表执行 XSLT 转换。</span><span class="sxs-lookup"><span data-stu-id="6b88d-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
+1. <span data-ttu-id="614ee-117">下面的示例演示如何通过使用已编译的样式表执行 XSLT 转换。</span><span class="sxs-lookup"><span data-stu-id="614ee-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- <span data-ttu-id="6b88d-118">若要动态链接到已编译的程序集，请在上面的示例中将</span><span class="sxs-lookup"><span data-stu-id="6b88d-118">To dynamically link to the compiled assembly, replace</span></span>  
+ <span data-ttu-id="614ee-118">若要动态链接到已编译的程序集，请在上面的示例中将</span><span class="sxs-lookup"><span data-stu-id="614ee-118">To dynamically link to the compiled assembly, replace</span></span>  
   
 ```  
 xslt.Load(typeof(Transform))  
 ```  
   
- <span data-ttu-id="6b88d-119">替换为</span><span class="sxs-lookup"><span data-stu-id="6b88d-119">with</span></span>  
+ <span data-ttu-id="614ee-119">替换为</span><span class="sxs-lookup"><span data-stu-id="614ee-119">with</span></span>  
   
 ```  
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- <span data-ttu-id="6b88d-120">。</span><span class="sxs-lookup"><span data-stu-id="6b88d-120">in the example above.</span></span> <span data-ttu-id="6b88d-121">有关 Assembly.Load 方法的更多信息，请参见 <xref:System.Reflection.Assembly.Load%2A></span><span class="sxs-lookup"><span data-stu-id="6b88d-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A></span></span>  
+ <span data-ttu-id="614ee-120">。</span><span class="sxs-lookup"><span data-stu-id="614ee-120">in the example above.</span></span> <span data-ttu-id="614ee-121">有关 Assembly.Load 方法的更多信息，请参见 <xref:System.Reflection.Assembly.Load%2A></span><span class="sxs-lookup"><span data-stu-id="614ee-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A></span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b88d-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="6b88d-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="614ee-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="614ee-122">See also</span></span>
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [<span data-ttu-id="6b88d-123">XSLT 编译器 (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="6b88d-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [<span data-ttu-id="6b88d-124">XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="6b88d-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [<span data-ttu-id="6b88d-125">在命令行上使用 csc.exe 生成</span><span class="sxs-lookup"><span data-stu-id="6b88d-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [<span data-ttu-id="614ee-123">XSLT 编译器 (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="614ee-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [<span data-ttu-id="614ee-124">XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="614ee-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [<span data-ttu-id="614ee-125">在命令行上使用 csc.exe 生成</span><span class="sxs-lookup"><span data-stu-id="614ee-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
