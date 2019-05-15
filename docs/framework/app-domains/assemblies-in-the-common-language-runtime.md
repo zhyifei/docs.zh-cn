@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744325"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607826"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>公共语言运行时中的程序集
 程序集是 .NET Framework 应用程序的构造块；它们形成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 程序集向公共语言运行时提供了解类型实现所需要的信息。 对于运行时，类型不存在于程序集上下文之外。  
   
  程序集执行以下功能：  
   
--   包含公共语言运行时执行的代码。 如果可迁移可执行 (PE) 文件没有相关联的程序集清单，则将不执行该文件中的 Microsoft 中间语言 (MSIL) 代码。 请注意，每个程序集只能有一个入口点（即 `DllMain`、`WinMain` 或 `Main`）。  
+- 包含公共语言运行时执行的代码。 如果可迁移可执行 (PE) 文件没有相关联的程序集清单，则将不执行该文件中的 Microsoft 中间语言 (MSIL) 代码。 请注意，每个程序集只能有一个入口点（即 `DllMain`、`WinMain` 或 `Main`）。  
   
--   程序集形成安全边界。 程序集就是在其中请求和授予权限的单元。 有关应用于程序集的安全边界的更多信息，请参见[程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)。  
+- 程序集形成安全边界。 程序集就是在其中请求和授予权限的单元。 有关应用于程序集的安全边界的更多信息，请参见[程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)。  
   
--   程序集形成类型边界。 每一类型的标识均包括该类型所驻留的程序集的名称。 在一个程序集的范围中加载的称为 `MyType` 的类型不同于在另一个程序集范围中加载的称为 `MyType` 的类型。  
+- 程序集形成类型边界。 每一类型的标识均包括该类型所驻留的程序集的名称。 在一个程序集的范围中加载的称为 `MyType` 的类型不同于在另一个程序集范围中加载的称为 `MyType` 的类型。  
   
--   程序集形成引用范围边界。 程序集的清单包含用于解析类型和满足资源请求的程序集元数据。 它指定在该程序集之外公开的类型和资源。 该清单还枚举它所依赖的其他程序集。  
+- 程序集形成引用范围边界。 程序集的清单包含用于解析类型和满足资源请求的程序集元数据。 它指定在该程序集之外公开的类型和资源。 该清单还枚举它所依赖的其他程序集。  
   
--   程序集形成版本边界。 程序集是公共语言运行时中最小的可版本化单元，同一程序集中的所有类型和资源均会被版本化为一个单元。 程序集的清单描述你为任何依赖项程序集所指定的版本依赖性。 有关版本控制的更多信息，请参见[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
+- 程序集形成版本边界。 程序集是公共语言运行时中最小的可版本化单元，同一程序集中的所有类型和资源均会被版本化为一个单元。 程序集的清单描述你为任何依赖项程序集所指定的版本依赖性。 有关版本控制的更多信息，请参见[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
   
--   程序集形成部署单元。 当一个应用程序启动时，只有该应用程序最初调用的程序集必须存在。 其他程序集（例如本地化资源和包含实用工具类的程序集）可以按需检索。 这就使应用程序在第一次下载时保持精简。 有关部署程序集的更多信息，请参见[部署应用程序](../../../docs/framework/deployment/index.md)。  
+- 程序集形成部署单元。 当一个应用程序启动时，只有该应用程序最初调用的程序集必须存在。 其他程序集（例如本地化资源和包含实用工具类的程序集）可以按需检索。 这就使应用程序在第一次下载时保持精简。 有关部署程序集的更多信息，请参见[部署应用程序](../../../docs/framework/deployment/index.md)。  
   
--   程序集是支持并行执行的单元。 有关运行多个程序集版本的更多信息，请参见[程序集和并行执行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
+- 程序集是支持并行执行的单元。 有关运行多个程序集版本的更多信息，请参见[程序集和并行执行](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)。  
   
  程序集可以为静态或动态。 静态程序集可以包括 .NET Framework 类型（接口和类），以及该程序集的资源（位图、JPEG 文件、资源文件等）。 静态程序集存储在磁盘上的可迁移可执行 (PE) 文件中。 你还可以使用 .NET Framework 来创建动态程序集，动态程序集直接从内存运行并且在执行前不存储到磁盘上。 你可以在执行动态程序集后将它们保存在磁盘上。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "32744325"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[程序集内容](../../../docs/framework/app-domains/assembly-contents.md)|描述组成程序集的各元素。|  
 |[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)|描述程序集清单中的数据，以及它如何存储在程序集中。|  

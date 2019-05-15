@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973337"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590029"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字符串名调用属性或方法 (Visual Basic)
 在大多数情况下，可以在设计时发现的属性和方法的一个对象，并编写代码来处理它们。 但是，在某些情况下您可能事先不知道有关对象的属性和方法，或者您可能只是想启用最终用户可以指定属性或在运行时执行方法的灵活性。  
@@ -31,7 +31,7 @@ ms.locfileid: "61973337"
   
  第一个参数，*对象*，采用你想要对其执行操作的对象的名称。 *过程名称*参数采用一个字符串，包含要调用的方法或属性过程的名称。 *CallType*参数采用一个常量，它表示要调用过程的类型： 一种方法 (`Microsoft.VisualBasic.CallType.Method`)，读取的属性 (`Microsoft.VisualBasic.CallType.Get`)，或设置一个属性 (`Microsoft.VisualBasic.CallType.Set`)。 *自变量*参数，这是可选的采用的类型数组`Object`，其中包含任何参数的过程。  
   
- 可以使用`CallByName`类在您当前的解决方案，但它是最常用于访问 COM 对象或对象从[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集。  
+ 可以使用`CallByName`与中您当前的解决方案，但它的类是最常用于从.NET Framework 程序集访问 COM 对象。  
   
  假设您添加对包含一个名为类的程序集的引用`MathClass`，其中包含一个名为的新函数`SquareRoot`，如下面的代码中所示：  
   
