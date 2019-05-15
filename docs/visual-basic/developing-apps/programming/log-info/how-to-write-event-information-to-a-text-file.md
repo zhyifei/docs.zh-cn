@@ -6,43 +6,43 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312705"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665751"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="3b0d8-102">如何：将事件信息写入文本文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b0d8-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
-<span data-ttu-id="3b0d8-103">可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="3b0d8-104">本示例演示如何使用 `My.Application.Log.WriteEntry` 方法将跟踪信息记录到日志文件中。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="d1a71-102">如何：将事件信息写入文本文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1a71-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
+<span data-ttu-id="d1a71-103">可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。</span><span class="sxs-lookup"><span data-stu-id="d1a71-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="d1a71-104">本示例演示如何使用 `My.Application.Log.WriteEntry` 方法将跟踪信息记录到日志文件中。</span><span class="sxs-lookup"><span data-stu-id="d1a71-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  
   
-### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="3b0d8-105">添加和配置文件日志侦听器</span><span class="sxs-lookup"><span data-stu-id="3b0d8-105">To add and configure the file log listener</span></span>  
+### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="d1a71-105">添加和配置文件日志侦听器</span><span class="sxs-lookup"><span data-stu-id="d1a71-105">To add and configure the file log listener</span></span>  
   
-1. <span data-ttu-id="3b0d8-106">在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
+1. <span data-ttu-id="d1a71-106">在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。</span><span class="sxs-lookup"><span data-stu-id="d1a71-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="3b0d8-107">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="3b0d8-107">\- or -</span></span>  
+     <span data-ttu-id="d1a71-107">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="d1a71-107">\- or -</span></span>  
   
-     <span data-ttu-id="3b0d8-108">如果其中没有 app.config 文件：</span><span class="sxs-lookup"><span data-stu-id="3b0d8-108">If there is no app.config file:</span></span>  
+     <span data-ttu-id="d1a71-108">如果其中没有 app.config 文件：</span><span class="sxs-lookup"><span data-stu-id="d1a71-108">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="3b0d8-109">在 **“项目”** 菜单上选择 **“添加新项”**。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-109">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1. <span data-ttu-id="d1a71-109">在 **“项目”** 菜单上选择 **“添加新项”**。</span><span class="sxs-lookup"><span data-stu-id="d1a71-109">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="3b0d8-110">在“添加新项”  对话框中，选择“应用程序配置文件” 。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2. <span data-ttu-id="d1a71-110">在“添加新项”  对话框中，选择“应用程序配置文件” 。</span><span class="sxs-lookup"><span data-stu-id="d1a71-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="3b0d8-111">单击 **“添加”**。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-111">Click **Add**.</span></span>  
+    3. <span data-ttu-id="d1a71-111">单击 **“添加”**。</span><span class="sxs-lookup"><span data-stu-id="d1a71-111">Click **Add**.</span></span>  
   
-2. <span data-ttu-id="3b0d8-112">在应用程序配置文件中找到 `<listeners>` 部分。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-112">Locate the `<listeners>` section in the application configuration file.</span></span>  
+2. <span data-ttu-id="d1a71-112">在应用程序配置文件中找到 `<listeners>` 部分。</span><span class="sxs-lookup"><span data-stu-id="d1a71-112">Locate the `<listeners>` section in the application configuration file.</span></span>  
   
-     <span data-ttu-id="3b0d8-113">\<侦听器> 部分位于 name 属性为“DefaultSource”的 \<源> 部分中，后者嵌套在 \<system.diagnostics> 部分中，该部分又嵌套在顶级 \<配置> 部分下。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>  
+     <span data-ttu-id="d1a71-113">\<侦听器> 部分位于 name 属性为“DefaultSource”的 \<源> 部分中，后者嵌套在 \<system.diagnostics> 部分中，该部分又嵌套在顶级 \<配置> 部分下。</span><span class="sxs-lookup"><span data-stu-id="d1a71-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>  
   
-3. <span data-ttu-id="3b0d8-114">将此元素添加到该 `<listeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="3b0d8-114">Add this element to that `<listeners>` section:</span></span>  
+3. <span data-ttu-id="d1a71-114">将此元素添加到该 `<listeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="d1a71-114">Add this element to that `<listeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4. <span data-ttu-id="3b0d8-115">找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者嵌套在顶级 `<configuration>` 部分之下。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>  
+4. <span data-ttu-id="d1a71-115">找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者嵌套在顶级 `<configuration>` 部分之下。</span><span class="sxs-lookup"><span data-stu-id="d1a71-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>  
   
-5. <span data-ttu-id="3b0d8-116">将此元素添加到该 `<sharedListeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="3b0d8-116">Add this element to that `<sharedListeners>` section:</span></span>  
+5. <span data-ttu-id="d1a71-116">将此元素添加到该 `<sharedListeners>` 部分：</span><span class="sxs-lookup"><span data-stu-id="d1a71-116">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener"   
@@ -54,21 +54,21 @@ ms.locfileid: "59312705"
         customlocation="c:\temp\" />  
     ```  
   
-     <span data-ttu-id="3b0d8-117">将 `customlocation` 属性的值更改为日志目录。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-117">Change the value of the `customlocation` attribute to the log directory.</span></span>  
+     <span data-ttu-id="d1a71-117">将 `customlocation` 属性的值更改为日志目录。</span><span class="sxs-lookup"><span data-stu-id="d1a71-117">Change the value of the `customlocation` attribute to the log directory.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="3b0d8-118">若要设置侦听器属性的值，请使用与该属性具有相同名称的特性，名称中的所有字母都为小写。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="3b0d8-119">例如，`location` 和 `customlocation` 属性设置 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>  
+    >  <span data-ttu-id="d1a71-118">若要设置侦听器属性的值，请使用与该属性具有相同名称的特性，名称中的所有字母都为小写。</span><span class="sxs-lookup"><span data-stu-id="d1a71-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="d1a71-119">例如，`location` 和 `customlocation` 属性设置 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 属性的值。</span><span class="sxs-lookup"><span data-stu-id="d1a71-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>  
   
-### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="3b0d8-120">将事件信息写入文件日志</span><span class="sxs-lookup"><span data-stu-id="3b0d8-120">To write event information to the file log</span></span>  
+### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="d1a71-120">将事件信息写入文件日志</span><span class="sxs-lookup"><span data-stu-id="d1a71-120">To write event information to the file log</span></span>  
   
--   <span data-ttu-id="3b0d8-121">可以使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法将信息写入文件日志。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="3b0d8-122">有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
+- <span data-ttu-id="d1a71-121">可以使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法将信息写入文件日志。</span><span class="sxs-lookup"><span data-stu-id="d1a71-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="d1a71-122">有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。</span><span class="sxs-lookup"><span data-stu-id="d1a71-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
   
-     <span data-ttu-id="3b0d8-123">为程序集配置文件日志侦听器后，它将接收该程序集写入 `My.Application.Log` 的所有消息。</span><span class="sxs-lookup"><span data-stu-id="3b0d8-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>  
+     <span data-ttu-id="d1a71-123">为程序集配置文件日志侦听器后，它将接收该程序集写入 `My.Application.Log` 的所有消息。</span><span class="sxs-lookup"><span data-stu-id="d1a71-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b0d8-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="3b0d8-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1a71-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="d1a71-124">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [<span data-ttu-id="3b0d8-125">使用应用程序日志</span><span class="sxs-lookup"><span data-stu-id="3b0d8-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="3b0d8-126">如何：日志异常</span><span class="sxs-lookup"><span data-stu-id="3b0d8-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [<span data-ttu-id="d1a71-125">使用应用程序日志</span><span class="sxs-lookup"><span data-stu-id="d1a71-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="d1a71-126">如何：日志异常</span><span class="sxs-lookup"><span data-stu-id="d1a71-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
