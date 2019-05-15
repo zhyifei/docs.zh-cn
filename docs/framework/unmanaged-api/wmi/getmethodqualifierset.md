@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9257ba57e0d087e3d6b9c7bb995b49a6b814c5f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 329dcf66c5178a16d0f278c258f6f80f5a1b3e8d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040737"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636754"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 函数
 
@@ -58,7 +58,7 @@ HRESULT GetMethodQualifierSet (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数是`null`。 |

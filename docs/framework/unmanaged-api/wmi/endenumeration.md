@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5c576cb808ee92452c193c3fbce4f1d2c2cad05
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000462"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636770"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 函数
 
@@ -50,7 +50,7 @@ HRESULT EndEnumeration (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |

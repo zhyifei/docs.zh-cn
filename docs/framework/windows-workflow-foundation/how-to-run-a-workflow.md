@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779153"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637522"
 ---
 # <a name="how-to-run-a-workflow"></a>如何：运行工作流
 本主题是 Windows Workflow Foundation 入门教程的延续，讨论如何创建工作流宿主并运行在以前定义的工作流[如何：创建工作流](how-to-create-a-workflow.md)主题。

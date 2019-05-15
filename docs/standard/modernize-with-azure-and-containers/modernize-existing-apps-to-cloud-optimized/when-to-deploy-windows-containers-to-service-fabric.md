@@ -1,15 +1,13 @@
 ---
 title: 何时将 Windows 容器部署到 Service Fabric
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |何时将 Windows 容器部署到 Service Fabric
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: cf9f206852a483dbc391c4541762b885a0ba9660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d29a358fb039eb3390910958b1b1080698d730e0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625643"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643372"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>何时将 Windows 容器部署到 Service Fabric
 

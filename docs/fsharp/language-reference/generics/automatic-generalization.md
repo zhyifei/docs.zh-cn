@@ -2,12 +2,12 @@
 title: 自动泛化
 description: 了解如何F#自动泛化的参数和类型的函数，以便它们适用于多个类型在可能的情况。
 ms.date: 05/16/2016
-ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fc61b5e0c227474a5e913b37f4c0dad9b235a6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937535"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641872"
 ---
 # <a name="automatic-generalization"></a>自动泛化
 

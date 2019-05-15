@@ -1,15 +1,13 @@
 ---
 title: 设计 Docker 应用程序
 description: 查找此处参考微服务体系结构的深入指南，因为这是一个主题，它不本指南中详述。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d49f7509c0a12edfe375486429147e8fd240b2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 535b6cefb7371014527032972ec27ebfe4b67ebc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799341"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644684"
 ---
 # <a name="design-docker-applications"></a>设计 Docker 应用程序
 

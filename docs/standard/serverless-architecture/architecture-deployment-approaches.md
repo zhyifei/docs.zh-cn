@@ -4,12 +4,12 @@ description: 不同的方式企业体系结构的指南是已部署到云，IaaS
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75fd35a906048a96dbd9f6205ead832dfd667455
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640229"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643383"
 ---
 # <a name="architecture-deployment-approaches"></a>体系结构部署方法
 
@@ -139,7 +139,7 @@ PaaS 的主要缺点通常是供应商绑架。 例如，某些 PaaS 提供程�
 |         |IaaS     |PaaS     |容器|无服务器|
 |---------|---------|---------|---------|----------|
 |缩放|VM       |实例 |应用      |函数  |
-|**Abstracts**|硬件|Platform|OS 主机|运行时   |
+|**Abstracts**|硬件|平台|OS 主机|运行时   |
 |**Unit** |VM       |项目  |图像    |代码      |
 |**生存期**|几个月|天到几个月|分钟到几天|毫秒到数分钟|
 |**责任**|应用程序、 依赖项、 运行时和操作系统|应用程序和依赖项|应用程序、 依赖项和运行时|函数

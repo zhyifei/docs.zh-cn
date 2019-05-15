@@ -2,12 +2,12 @@
 title: 异步工作流
 description: 了解有关支持在F#编程语言以异步方式执行计算执行而不会阻止执行其他工作。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7643a26469ee6a6cf15940f90611fd430beef42e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87d4c927be89bbb404a087091eed8c4cae167f0f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703538"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645517"
 ---
 # <a name="asynchronous-workflows"></a>异步工作流
 

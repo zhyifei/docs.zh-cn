@@ -1,15 +1,13 @@
 ---
 title: 更新运行的.NET 应用到云优化的应用程序的原因
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |更新运行的.NET 应用到云优化的应用程序的原因
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 896162116d2c6e92fa3038405c5f3bf40a956ad9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611565"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639062"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>更新运行的.NET 应用到云优化的应用程序的原因
 

@@ -2,12 +2,12 @@
 title: 构造函数
 description: 了解如何定义和使用中的构造函数F#创建和初始化类和结构的对象。
 ms.date: 05/16/2016
-ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47fb6e77ce369d7aa4fce3aa2c97ecf7df280c03
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903963"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645233"
 ---
 # <a name="constructors"></a>构造函数
 

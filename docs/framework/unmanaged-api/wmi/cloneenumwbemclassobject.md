@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac85ed86ea968fa945e07f95db8977a33c5d12a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7b384bb24cbf7ab7379949fd85a22121a1310e3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968163"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636869"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 函数
 制作枚举器的逻辑副本，并保留其在枚举中的当前位置。
@@ -68,7 +68,7 @@ HRESULT CloneEnumWbemClassObject (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |

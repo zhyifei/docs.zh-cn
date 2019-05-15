@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07396428dafbaa76e7771a4022bb493768f9f6c1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767450"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636807"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
 将枚举数重置到枚举的起点。  
@@ -53,7 +53,7 @@ HRESULT BeginEnumeration (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 中的标志的组合`lEnumFlags`无效，或一个无效的指定的参数。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 第二次调用`BeginEnumeration`而无需对的干预调用进行[ `EndEnumeration` ](endenumeration.md)。 |
@@ -68,21 +68,21 @@ HRESULT BeginEnumeration (
 
 **组 1**
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 包含构成仅密钥的属性。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 包括仅限对象引用的属性。 |
 
 **组 2**
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 限制为仅系统属性的枚举。 |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 包括本地和传播属性但不枚举中的系统属性。 |
 
 对于类：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 限制到类定义中被重写的属性的枚举。 |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 限制到当前的类定义中被重写的属性和新的类中定义的属性的枚举。 |
@@ -92,7 +92,7 @@ HRESULT BeginEnumeration (
 
 实例：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制到定义的或在类本身中修改属性的枚举。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制对从基类继承的属性的枚举。 |

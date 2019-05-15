@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 13ba804e76a64c6a0b32ba5a203258e76c209ff4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f90a128ef6b29acbd315beae7aaaf1d1b78a62b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644912"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638849"
 ---
 # <a name="serialization-in-net"></a>.NET 中的序列化
 序列化是将对象状态转换为可保持或传输的形式的过程。 序列化的补集是反序列化，后者将流转换为对象。 这两个过程一起保证数据易于存储和传输。  

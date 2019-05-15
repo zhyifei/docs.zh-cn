@@ -2,12 +2,12 @@
 title: Lambda 表达式：Fun 关键字
 description: 了解如何使用F#增添些乐趣关键字来定义 lambda 表达式，这是一个匿名函数。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c59d32bd4226384213453f1a9d362209e68a6fb5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941019"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645380"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda 表达式：Fun 关键字 (F#)
 

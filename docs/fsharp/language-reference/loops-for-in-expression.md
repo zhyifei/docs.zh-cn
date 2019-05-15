@@ -2,12 +2,12 @@
 title: 循环：for...in 表达式
 description: 请参阅如何F#数据类型...在表达式中循环构造用于循环访问的可枚举集合中的模式匹配。
 ms.date: 05/16/2016
-ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5346713b1747227f3fe79e308455d976e506f968
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024438"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641800"
 ---
 # <a name="loops-forin-expression"></a>循环：for...in 表达式
 

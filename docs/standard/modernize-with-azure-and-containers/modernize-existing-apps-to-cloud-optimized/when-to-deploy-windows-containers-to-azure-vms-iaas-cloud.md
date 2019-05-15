@@ -1,15 +1,13 @@
 ---
 title: 何时将 Windows 容器部署到 Azure VM（IaaS 云）
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |何时将 Windows 容器部署到 Azure Vm （IaaS 云）
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8bff4297f99b6549b80604860985568445bbdc0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9a2903662306b607977a7751018e24161ab80ab
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625661"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639000"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>何时将 Windows 容器部署到 Azure VM（IaaS 云）
 

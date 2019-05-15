@@ -2,12 +2,12 @@
 title: 异常：raise 函数
 description: 了解如何F#raise 函数用来指示已发生的错误或异常情况。
 ms.date: 05/16/2016
-ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772666"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641968"
 ---
 # <a name="exceptions-the-raise-function"></a>异常：raise 函数
 
