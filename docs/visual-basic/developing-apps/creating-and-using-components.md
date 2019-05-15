@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 47e7f94fff4c76b3af7f07b1e023b545eed24953
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f130c4de45f81dfb21c8c87c9e24d22cd4276ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659635"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586736"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
-组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
+组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 .NET Framework 组件是一个对象是可重复使用，可以与其他对象进行交互并提供对外部资源和设计时支持的控制。  
   
- 组件的一个重要特性在于它们是可设计的，这意味着可在 Visual Studio 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，对组件的基本设计时支持已内置于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中；组件开发人员不必执行任何附加工作便可利用基本设计时功能。  
+ 组件的一个重要特性在于它们是可设计的，这意味着可在 Visual Studio 集成开发环境中使用作为组件的类。 可以将组件添加到“工具箱”、拖放到窗体以及在设计图面上操作。 请注意，基本的组件的设计时支持内置到.NET Framework 中;组件开发人员无需执行任何额外操作才能利用基本设计时功能。  
   
  控件与组件类似，二者都是可设计的。 不过，控件提供用户界面，而组件不提供。 控件必须派生自基控件类之一：<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
   

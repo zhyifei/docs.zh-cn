@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 2064c21d3ec0cd29ed5c41a2f4ba2fd8870926b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618206"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586531"
 ---
 # <a name="-link-visual-basic"></a>-链接 (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -55,7 +55,7 @@ ms.locfileid: "64618206"
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)指定一个或多个程序集引用所在的目录。  
   
- 像[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)编译器选项`-link`编译器选项使用 Vbc.rsp 响应文件引用常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集。 使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)编译器选项，如果不希望编译器使用 Vbc.rsp 文件。  
+ 像[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)编译器选项`-link`编译器选项使用 Vbc.rsp 响应文件，经常使用的.NET Framework 程序集的引用。 使用[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)编译器选项，如果不希望编译器使用 Vbc.rsp 文件。  
   
  `-link` 的缩写形式是 `-l`。  
   

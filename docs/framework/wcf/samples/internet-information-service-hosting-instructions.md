@@ -2,12 +2,12 @@
 title: Internet 信息服务承载说明
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600255"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591876"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet 信息服务承载说明
 若要运行由 Internet 信息服务 (IIS) 承载的示例，必须确保 IIS 已正确安装且正在运行。  
@@ -163,7 +163,7 @@ ms.locfileid: "64600255"
 4. 应当会出现一个包含“Hello World”文本的网页。  
   
 > [!NOTE]
->  每次安装新版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 时，都必须将 aspnet_isapi 重新注册为 IIS 的 Web 服务扩展。 为此，发出 `aspnet_regiis –I –enable` 命令。  
+>  每次安装新版本的.NET Framework 中，您必须将 aspnet_isapi 重新注册 Web 服务扩展为 IIS。 为此，发出 `aspnet_regiis –I –enable` 命令。  
   
 ## <a name="sample-code"></a>代码示例  
   

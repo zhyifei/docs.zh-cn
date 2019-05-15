@@ -2,48 +2,48 @@
 title: ADO.NET 中的并行执行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664137"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583619"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的并行执行
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的并行执行是指在安装了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的多个版本的计算机上以独占方式使用编译的应用程序所针对的版本执行该应用程序的能力。 有关配置通过并行执行的详细信息，请参阅[-并行执行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
+.NET Framework 中的并行执行是在具有多个版本的安装，以独占方式使用为其编译应用程序的版本的.NET Framework 的计算机上执行应用程序的功能。 有关配置通过并行执行的详细信息，请参阅[-并行执行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
   
- 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的某个版本编译的应用程序可以在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的其他版本上运行。 不过，建议您为安装的每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本都编译一个相应版本的应用程序，并单独运行这些应用程序。 在任一方案中，您都应该知道各版本之间 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的更改，这些更改可能影响应用程序的向前或向后兼容性。  
+ 编译使用.NET Framework 的一个版本的应用程序可以运行不同版本的.NET Framework 上。 但是，我们建议你编译的.NET Framework 中，每个已安装版本的应用程序的版本，并单独运行这些。 在任一方案中，您都应该知道各版本之间 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的更改，这些更改可能影响应用程序的向前或向后兼容性。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>向前兼容性和向后兼容性  
- 向前兼容性表示应用程序可以使用较早版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 进行编译，但是仍可以在较高版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上成功运行。 为 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 1.1 版编写的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 代码与更高版本向前兼容。  
+ 向前兼容性表示应用程序可以使用.NET Framework 的早期版本进行编译，但将仍在更高版本的.NET framework 上成功运行。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 针对.NET Framework 1.1 版编写的代码是与更高版本向前兼容。  
   
- 向后兼容性表示应用程序为较高版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 编译，但可以继续在较早版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上运行而不丧失任何功能。 当然，这不包括新版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中引入的功能。  
+ 向后兼容性表示应用程序编译为.NET Framework 的较新版本，但仍会继续而不丧失任何功能的.NET framework 的早期版本上运行。 当然，这不会对.NET Framework 的新版本中引入的功能。  
   
 ## <a name="the-net-framework-data-provider-for-odbc"></a>ODBC .NET Framework 数据提供程序  
- 从 1.1 版开始，适用于 ODBC 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序 (<xref:System.Data.Odbc>) 作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分提供。 ODBC 数据提供程序可供[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.0 版 Web 开发人员从下载[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?linkid=4173)。 下载的命名空间[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]ODBC 数据提供程序是**Microsoft.Data.Odbc**。  
+ 从版本 1.1 中，用于 ODBC 的.NET Framework 数据提供程序 (<xref:System.Data.Odbc>) 是作为.NET Framework 的一部分包含在内。 ODBC 数据提供程序是用.NET Framework 1.0 版开发人员从 Web 下载[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?linkid=4173)。 适用于 ODBC 下载.NET Framework 数据提供程序的命名空间是**Microsoft.Data.Odbc**。  
   
- 如果必须开发的应用程序[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.0 版程序使用 ODBC 数据提供程序连接到您的数据源，并且您想要运行该应用程序[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.1 版或更高版本，则必须将 odbc 更新命名空间数据访问接口与**System.Data.Odbc**。 然后，您必须针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的较新版本重新编译该应用程序。  
+ 如果必须针对.NET Framework 版本使用 ODBC 数据提供程序连接到数据源，1.0 开发的应用程序，并且你想要在.NET Framework 1.1 版或更高版本上运行该应用程序，则必须更新 ODBC dat 的命名空间提供者**System.Data.Odbc**。 您然后必须重新编译它为.NET Framework 的较新版本。  
   
- 如果您有一个针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版（或更高版本）开发的应用程序，该应用程序使用 ODBC 数据提供程序连接到您的数据源，并且您想要在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版上运行该应用程序，则必须下载相应的 ODBC 数据提供程序并将其安装在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版的系统上。 然后必须更改到 ODBC 数据提供程序的命名空间**Microsoft.Data.Odbc**，并重新编译的应用程序[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.0 版。  
+ 如果必须为使用 ODBC 数据提供程序连接到数据源，.NET Framework 2.0 或更高版本开发的应用程序，并且你想要在.NET Framework 1.0 版上运行该应用程序，必须下载该 ODBC 数据提供程序并安装它在.NET Framework 1.0 版的系统。 然后必须更改到 ODBC 数据提供程序的命名空间**Microsoft.Data.Odbc**，并重新编译.NET Framework 1.0 版的应用程序。  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>Oracle .NET Framework 数据提供程序  
- 从 1.1 版开始，适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序 (<xref:System.Data.OracleClient>) 作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分提供。 数据提供程序可供[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.0 版 Web 开发人员从下载[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?linkid=4173)。  
+ 从版本 1.1，适用于 Oracle 的.NET Framework 数据提供程序开始 (<xref:System.Data.OracleClient>) 是作为.NET Framework 的一部分包含在内。 数据提供程序是用.NET Framework 1.0 版开发人员从 Web 下载[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?linkid=4173)。  
   
- 如果您有一个针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版（或更高版本）开发的应用程序，该应用程序使用数据提供程序连接到您的数据源，并且您想要在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版上运行该应用程序，则必须下载相应的数据提供程序并将其安装在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版的系统上。  
+ 如果必须为使用的数据提供程序连接到您的数据源，.NET Framework 2.0 或更高版本开发的应用程序，并且你想要在.NET Framework 1.0 版上运行该应用程序，必须下载数据提供程序并将其安装在.NET Framework 1.0 版的系统。  
   
 ## <a name="code-access-security"></a>代码访问安全性  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序（<xref:System.Data.SqlClient>、<xref:System.Data.OleDb>）必需具有 FullTrust 权限才能运行。 在权限级别低于 FullTrust 的区域中，从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序的任何尝试都会导致 <xref:System.Security.SecurityException>。  
+ 在.NET Framework 1.0 版的.NET Framework 数据提供程序 (<xref:System.Data.SqlClient>， <xref:System.Data.OleDb>) 所需运行具有 FullTrust 权限。 如果尝试在具有 FullTrust 权限会导致小于的区域中使用.NET Framework 数据提供程序从.NET Framework 1.0 版<xref:System.Security.SecurityException>。  
   
- 但从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版开始，所有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序均可以在部分信任的区域中使用。 此外，还向 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.1 版中的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序添加了一项新的安全功能。 通过该功能可以限制特定安全区域中可以使用的连接字符串。 您也可以对特定安全区域禁用空白密码。 有关更多信息，请参见 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)。  
+ 但是，从.NET Framework 2.0 版开始，所有.NET Framework 数据提供程序可在部分信任的区域。 此外，新的安全功能已添加到.NET Framework 1.1 版中的.NET Framework 数据提供程序。 通过该功能可以限制特定安全区域中可以使用的连接字符串。 您也可以对特定安全区域禁用空白密码。 有关更多信息，请参见 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)。  
   
- 因为每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 安装均有独立的 Security.config 文件，所以安全设置不存在兼容性问题。 不过，如果应用程序依赖于 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 1.1 版以及更高版本中包含的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的附加安全功能，则将无法将该应用程序发布到 1.0 版系统中。  
+ 由于安装.NET Framework 的每个具有独立的 Security.config 文件，没有使用的安全设置任何兼容性问题。 但是，如果应用程序所依赖的其他安全功能[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]包含在.NET Framework 1.1 及更高版本中，您将无法再将其分发到 1.0 版的系统。  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand 执行  
- 从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.1 版开始，更改了 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 在数据源中执行命令的方式。  
+ 从.NET Framework 1.1 版中，方法开始的<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>执行命令的数据源已更改。  
   
- 在中[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.0 版中，<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>的上下文中执行的所有命令**sp_executesql**存储过程。 因此，影响连接状态的命令（例如，SET NOCOUNT ON）只应用于当前命令的执行。 对于在连接打开时执行的任何后续命令，连接状态不会被修改。  
+ 在.NET Framework 1.0 版中，<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>的上下文中执行的所有命令**sp_executesql**存储过程。 因此，影响连接状态的命令（例如，SET NOCOUNT ON）只应用于当前命令的执行。 对于在连接打开时执行的任何后续命令，连接状态不会被修改。  
   
- 在中[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.1 版以及更高版本，版本<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>仅的上下文中执行的命令**sp_executesql**存储过程，当命令含有参数，从而提高性能。 因此，如果非参数化命令中包含影响连接状态的命令，会修改在连接打开时执行的所有后续命令的连接状态。  
+ 在.NET Framework 1.1 及更高版本，版本<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>仅的上下文中执行命令**sp_executesql**存储过程，当命令含有参数，从而提高性能。 因此，如果非参数化命令中包含影响连接状态的命令，会修改在连接打开时执行的所有后续命令的连接状态。  
   
  请考虑下面这个在 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 调用中执行的批命令。  
   
@@ -52,11 +52,11 @@ SET NOCOUNT ON;
 SELECT * FROM dbo.Customers;  
 ```  
   
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.1 版以及更高版本中，NOCOUNT 对连接打开时执行的任何后续命令都将保持为 ON。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中，NOCOUNT 只在执行当前命令时为 ON。  
+ 在.NET Framework 1.1 及更高版本中，NOCOUNT 将保持该连接打开时执行的任何后续命令为 ON。 在.NET Framework 1.0 版中，NOCOUNT 为只在当前命令执行。  
   
- 如果您的应用程序依赖于任一 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的行为，则这一更改会影响应用程序的向前和向后兼容性。  
+ 如果所依赖的行为，此更改会影响你的应用程序的向前和向后兼容<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>两个版本的.NET Framework。  
   
- 对于在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的早期版本和更高版本上运行的应用程序，可以编写代码以确保不管在其上运行应用程序的系统的版本如何，应用程序的行为始终相同。 如果要确保某个命令修改所有后续命令的连接状态，建议您使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 来执行该命令。 如果要确保某个命令不修改所有后续命令的连接，建议您在命令中包括用于重置连接状态的命令。 例如：  
+ 对于.NET Framework 的早期版本和更高版本运行的应用程序，可以编写代码以确保该行为是不考虑版本运行相同。 如果要确保某个命令修改所有后续命令的连接状态，建议您使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 来执行该命令。 如果要确保某个命令不修改所有后续命令的连接，建议您在命令中包括用于重置连接状态的命令。 例如：  
   
 ```sql
 SET NOCOUNT ON;  

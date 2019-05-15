@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 175296a904a6aed70147f513959fce74b3288abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ac04a94fb567afa184172c0685438e26834fe5b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630490"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589230"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>如何：修改标准控件中的键盘输入
 Windows 窗体提供使用和修改键盘输入的功能。 使用键是指处理方法或事件处理程序内的键，以便消息队列更低处的其他方法和事件不会接收到键值。 修改键是指修改键的值，以便消息队列更低处的方法和事件处理程序接收不同的键值。 本主题演示如何完成这些任务。  
@@ -64,8 +64,6 @@ Windows 窗体提供使用和修改键盘输入的功能。 使用键是指处�
  此示例需要：  
   
 - 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,12 +3,12 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592365"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586051"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
@@ -44,7 +44,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
  WS-FAM 也会引发几个事件，可以通过这些事件在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序中自定义它的功能。  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM 的工作原理  
- WS-FAM 在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 类中实现。 通常情况下，将 WS-FAM 添加到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 信赖方应用的 HTTP 管道。 未经身份验证的用户尝试访问受保护资源时，RP 将返回 HTTP 响应“401 拒绝授权”。 WS-FAM 截获此响应，而不是让客户端接收它，然后将用户重定向到指定的 STS。 STS 颁发安全令牌，WS-FAM 再次将其截获。 WS-FAM 使用该令牌为经过身份验证的用户创建 <xref:System.Security.Claims.ClaimsPrincipal> 实例，从而常规 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 授权机制得以运行。  
+ WS-FAM 在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 类中实现。 通常情况下，将 WS-FAM 添加到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 信赖方应用的 HTTP 管道。 未经身份验证的用户尝试访问受保护资源时，RP 将返回 HTTP 响应“401 拒绝授权”。 WS-FAM 截获此响应，而不是让客户端接收它，然后将用户重定向到指定的 STS。 STS 颁发安全令牌，WS-FAM 再次将其截获。 WS-FAM 使用该令牌创建的实例<xref:System.Security.Claims.ClaimsPrincipal>身份验证的用户，这使正则.NET Framework 授权机制得以运行。  
   
  因为 HTTP 无状态，所以需要一种方法来避免在每次用户尝试访问另一个受保护资源时重复上述过程。 这时 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 便可派上用场。 当 STS 向用户颁发安全令牌时，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 也会为该用户创建会话安全令牌并将其放置于 Cookie 中。 在后续请求中，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 将截获此 Cookie 并使用它来重新构造用户的 <xref:System.Security.Claims.ClaimsPrincipal>。  
   
