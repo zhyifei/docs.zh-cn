@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916859"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582631"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查询数据服务（WCF 数据服务）
 
-利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，可以使用熟悉的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 编程模式针对数据服务执行查询，包括使用语言集成查询 (LINQ)。 客户端库将在客户端上定义为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实例的查询转换为 HTTP GET 请求消息。 该库接收响应消息，并将其转换为客户端数据服务类的实例。 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些类。
+利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，在针对数据服务执行查询时可以使用熟悉的 .NET Framework 编程模式，包括使用语言集成查询 (LINQ)。 客户端库将在客户端上定义为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实例的查询转换为 HTTP GET 请求消息。 该库接收响应消息，并将其转换为客户端数据服务类的实例。 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些类。
 
 ## <a name="data-service-queries"></a>数据服务查询
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> 泛型类表示一个查询，该查询返回一个包含零个或零个以上实体类型实例的集合。 数据服务查询始终属于现有数据服务上下文。 此上下文含有撰写和执行查询所必需的服务 URI 和元数据信息。
 
-当你使用**添加服务引用**对话框，可以添加到数据服务[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-基于客户端应用程序的实体容器类创建一个继承<xref:System.Data.Services.Client.DataServiceContext>类。 此类包括返回类型化 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例的属性。 数据服务公开的每个实体集对应一个属性。 使用这些属性可以更容易地创建类型化 <xref:System.Data.Services.Client.DataServiceQuery%601> 的实例。
+当你使用**添加服务引用**对话框，可以将数据服务添加到的实体容器类是一个基于.NET Framework 的客户端应用程序，创建一个继承<xref:System.Data.Services.Client.DataServiceContext>类。 此类包括返回类型化 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例的属性。 数据服务公开的每个实体集对应一个属性。 使用这些属性可以更容易地创建类型化 <xref:System.Data.Services.Client.DataServiceQuery%601> 的实例。
 
 在以下情况下会执行查询：
 

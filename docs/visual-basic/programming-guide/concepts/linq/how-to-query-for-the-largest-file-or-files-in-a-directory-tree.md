@@ -2,12 +2,12 @@
 title: 如何：最大的文件或目录树 (LINQ) (Visual Basic 中) 中的查询
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 1a329c16e356686be8eb1530bf4a68b796965c14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91cfba02bade5811dbc5f45a5106731ff637efcf
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648822"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593280"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>如何：最大的文件或目录树 (LINQ) (Visual Basic 中) 中的查询
 此示例演示与文件大小（以字节为单位）相关的五个查询：  
@@ -118,7 +118,7 @@ End Module
  查询调用单独的方法来获取文件大小（以字节为单位），以便使用在以下情况下会引发的可能异常：自在 `GetFiles` 调用中创建了 <xref:System.IO.FileInfo> 对象以来的时间段内，在其他线程中删除了文件。 即使创建了 <xref:System.IO.FileInfo> 对象，该异常也可能出现，因为 <xref:System.IO.FileInfo> 对象会在首次访问其 <xref:System.IO.FileInfo.Length%2A> 属性时，尝试使用最新大小（以字节为单位）刷新该属性。 通过将此操作置于查询外部的 try-catch 块中，我们可遵循在查询中避免可能导致副作用的操作这一规则。 一般情况下，在使用异常时必须格外谨慎，以确保应用程序不会处于未知状态。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
+创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
   
 ## <a name="see-also"></a>请参阅
 
