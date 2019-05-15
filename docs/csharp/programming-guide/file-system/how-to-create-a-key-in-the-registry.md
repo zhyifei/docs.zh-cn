@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553759"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596149"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>如何：在注册表中创建注册表项 (Visual C#)
 本示例将值对“Name”和“Isabella”添加到当前用户注册表中的项“Names”之下。  
@@ -27,26 +27,26 @@ key.Close();
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   复制代码，并将其粘贴到控制台应用程序的 `Main` 方法中。  
+- 复制代码，并将其粘贴到控制台应用程序的 `Main` 方法中。  
   
--   将 `Names` 参数替换为直接存在于注册表 HKEY_CURRENT_USER 节点下的项的名称。  
+- 将 `Names` 参数替换为直接存在于注册表 HKEY_CURRENT_USER 节点下的项的名称。  
   
--   将 `Name` 参数替换为直接存在于“Names”节点下的值的名称。  
+- 将 `Name` 参数替换为直接存在于“Names”节点下的值的名称。  
   
 ## <a name="robust-programming"></a>可靠编程  
  检查注册表结构，查找适合项的位置。 例如，可能需要打开当前用户的 Software 项，并用公司的名称创建一项。 然后将注册表值添加到公司的项上。  
   
  以下情况可能会导致异常：  
   
--   项的名称为空。  
+- 项的名称为空。  
   
--   用户没有创建注册表项的权限。  
+- 用户没有创建注册表项的权限。  
   
--   项名称超过 255 个字符的限制。  
+- 项名称超过 255 个字符的限制。  
   
--   项已关闭。  
+- 项已关闭。  
   
--   注册表项为只读。  
+- 注册表项为只读。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  将数据写入用户文件夹 `Microsoft.Win32.Registry.CurrentUser` 比写入本地计算机 `Microsoft.Win32.Registry.LocalMachine` 更安全。  

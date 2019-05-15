@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295986"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592353"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
 资源文件在本地化的应用程序中具有核心作用。 通过资源文件，应用程序可以使用用户自己的语言和区域性显示字符串、图像及其他数据，并且在用户自己的语言或区域性资源不可用时，提供备用数据。 .NET Framework 使用中心辐射型模型来查找和检索已本地化的资源。 中心即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；没有任何已本地化的资源可用时，则使用默认区域性。 使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性来指定应用程序默认区域性的区域性。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个本地化区域性的资源，但不包含任何代码。 因为附属程序集不是主程序集的一部分，所以不必替换该应用程序的主程序集即可轻松更新或替换与特定区域性相对应的资源。  
@@ -41,16 +41,16 @@ ms.locfileid: "59295986"
 ## <a name="satellite-assembly-name-and-location"></a>附属程序集名称和位置  
  中心辐射型模型要求将资源放在特定位置，以便轻松查找和使用资源。 如果未按预期编译和命名资源，或未将其放在正确的位置，则公共语言运行时将无法定位它们，并改为使用默认区域性的资源。 .NET Framework 资源管理器由 <xref:System.Resources.ResourceManager> 对象表示，用于自动访问本地化的资源。 该资源管理器的相关要求如下：  
   
--   单个附属程序集必须包含特定区域性的所有资源。 换言之，应该将多个 .txt 或 .resx 文件编译成单个二进制 .resources 文件。  
+- 单个附属程序集必须包含特定区域性的所有资源。 换言之，应该将多个 .txt 或 .resx 文件编译成单个二进制 .resources 文件。  
   
--   存储区域性资源的每个本地化区域性的应用程序目录中必须有一个单独的子目录。 该子目录名称必须与区域性名称相同。 或者，也可以将附属程序集存储在全局程序集缓存中。 在这种情况下，程序集强名称的区域性信息组件必须指明其区域性。 （请参阅本主题后面的[在全局程序集缓存中安装附属程序集](#SN)部分。）  
+- 存储区域性资源的每个本地化区域性的应用程序目录中必须有一个单独的子目录。 该子目录名称必须与区域性名称相同。 或者，也可以将附属程序集存储在全局程序集缓存中。 在这种情况下，程序集强名称的区域性信息组件必须指明其区域性。 （请参阅本主题后面的[在全局程序集缓存中安装附属程序集](#SN)部分。）  
   
     > [!NOTE]
     >  如果应用程序中包含了子区域性的资源，则将每个子区域性放在应用程序目录下的单独子目录中。 不要将子区域性放在其主区域性目录下的子目录中。  
   
--   附属程序集的名称必须与应用程序相同，并且必须使用文件扩展名“.resources.dll”。 例如，如果应用程序名为 Example.exe，则每个附属程序集的名称应该为 Example.resources.dll。 请注意附属程序集名称不指示其资源文件的区域性。 但是，附属程序集会显示在不指定区域性的目录中。  
+- 附属程序集的名称必须与应用程序相同，并且必须使用文件扩展名“.resources.dll”。 例如，如果应用程序名为 Example.exe，则每个附属程序集的名称应该为 Example.resources.dll。 请注意附属程序集名称不指示其资源文件的区域性。 但是，附属程序集会显示在不指定区域性的目录中。  
   
--   附属程序集的区域性的相关信息必须包括在程序集的元数据中。 若要将区域性名称存储在附属程序集的元数据中，则在使用[程序集链接器](../../../docs/framework/tools/al-exe-assembly-linker.md)将资源嵌入附属程序集时指定 `/culture` 选项。  
+- 附属程序集的区域性的相关信息必须包括在程序集的元数据中。 若要将区域性名称存储在附属程序集的元数据中，则在使用[程序集链接器](../../../docs/framework/tools/al-exe-assembly-linker.md)将资源嵌入附属程序集时指定 `/culture` 选项。  
   
  下图显示未安装在[全局程序集缓存](../../../docs/framework/app-domains/gac.md)中的应用程序的示例目录结构和位置要求。 具有 .txt 和 .resources 扩展名的项不会随附在最终应用程序中。 这些是用于创建最终附属资源程序集的中间资源文件。 在此示例中，可以将 .txt 文件替换为 .resx 文件。 有关详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. 向应用程序添加对其他区域性的支持（en-US、fr-FR 和 ru-RU），如下所示：  
   
-    -   若要支持 en-US 或英语（美国）区域性，创建一个名为 Greeting.en-US.resx 或 Greeting.en-US.txt 的资源文件，并在其中存储一个名为 `HelloString` 且值为“Hi world!”的单个字符串  
+    - 若要支持 en-US 或英语（美国）区域性，创建一个名为 Greeting.en-US.resx 或 Greeting.en-US.txt 的资源文件，并在其中存储一个名为 `HelloString` 且值为“Hi world!”的单个字符串  
   
-    -   若要支持 fr-FR 或法语（法国）区域性，创建一个名为 Greeting.fr-FR.resx 或 Greeting.fr-FR.txt 的资源文件，并在其中存储一个名为 `HelloString` 且值为“Salut tout le monde!”的单字符串  
+    - 若要支持 fr-FR 或法语（法国）区域性，创建一个名为 Greeting.fr-FR.resx 或 Greeting.fr-FR.txt 的资源文件，并在其中存储一个名为 `HelloString` 且值为“Salut tout le monde!”的单字符串  
   
-    -   若要支持 ru-RU 或俄语（俄罗斯）区域性，创建一个名为 Greeting.ru-RU.resx 或 Greeting.ru-RU.txt 的资源文件，并在其中存储一个名为 `HelloString` 且值为“Всем привет!”的单字符串  
+    - 若要支持 ru-RU 或俄语（俄罗斯）区域性，创建一个名为 Greeting.ru-RU.resx 或 Greeting.ru-RU.txt 的资源文件，并在其中存储一个名为 `HelloString` 且值为“Всем привет!”的单字符串  
   
 4. 使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 将每个文本文件或 XML 资源文件编译为二进制 .resources 文件。 其输出是一组与 .resx 或 .txt 文件具有相同根文件名的文件，这些文件的扩展名为 .resources。 如果使用 Visual Studio 创建该示例，将自动处理编译过程。 如果不使用 Visual Studio，则运行以下命令将 .resx 文件编译为 .resources 文件：  
   
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. 向应用程序添加对其他区域性的支持（en-US、fr-FR 和 ru-RU 区域性），如下所示：  
   
-    -   若要支持“en-US”或英语（美国）区域性，则创建一个名为 Strings.en-US.resx 或 Strings.en-US.txt 的资源文件，并在其中存储一个名为 `Greeting` 且值为“Hello”的单个字符串。  
+    - 若要支持“en-US”或英语（美国）区域性，则创建一个名为 Strings.en-US.resx 或 Strings.en-US.txt 的资源文件，并在其中存储一个名为 `Greeting` 且值为“Hello”的单个字符串。  
   
-    -   若要支持“fr-FR”或法语（法国）区域性，创建一个名为 Strings.fr-FR.resx 或 Strings.fr-FR.txt 的资源文件，并在其中存储一个值为“Bon jour!”的 `Greeting` 单字符串  
+    - 若要支持“fr-FR”或法语（法国）区域性，创建一个名为 Strings.fr-FR.resx 或 Strings.fr-FR.txt 的资源文件，并在其中存储一个值为“Bon jour!”的 `Greeting` 单字符串  
   
-    -   若要支持“ru-RU”或俄语（俄罗斯）区域性，创建一个名为 Strings.ru-RU.resx 或 Strings.ru-RU.txt 的资源文件，并在其中存储一个值为“Привет”的 `Greeting` 单字符串  
+    - 若要支持“ru-RU”或俄语（俄罗斯）区域性，创建一个名为 Strings.ru-RU.resx 或 Strings.ru-RU.txt 的资源文件，并在其中存储一个值为“Привет”的 `Greeting` 单字符串  
   
 6. 使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 将每个文本文件或 XML 资源文件编译为二进制 .resources 文件。 其输出是一组与 .resx 或 .txt 文件具有相同根文件名的文件，这些文件的扩展名为 .resources。 如果使用 Visual Studio 创建该示例，将自动处理编译过程。 如果不使用 Visual Studio，则运行以下命令将 .resx 文件编译进 .resources 文件：  
   

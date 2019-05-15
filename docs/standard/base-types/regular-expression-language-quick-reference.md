@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410519"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664681"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
  正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简要介绍，请参阅 [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -170,9 +170,9 @@ ms.locfileid: "58410519"
   
  可通过两种方式指定内联选项：  
   
--   通过使用 [其他构造](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，可以用选项或选项组前的减号 (-) 关闭这些选项。 例如， `(?i-mn)` 启用不区分大小写的匹配 (`i`)，关闭多行模式 (`m`) 并关闭未命名的组捕获 (`n`)。 该选项自定义选项的点开始应用于此正则表达式，且持续有效直到模式结束或者到另一构造反转此选项的点。  
+- 通过使用 [其他构造](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，可以用选项或选项组前的减号 (-) 关闭这些选项。 例如， `(?i-mn)` 启用不区分大小写的匹配 (`i`)，关闭多行模式 (`m`) 并关闭未命名的组捕获 (`n`)。 该选项自定义选项的点开始应用于此正则表达式，且持续有效直到模式结束或者到另一构造反转此选项的点。  
   
--   通过使用 [分组构造](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子表达式*`)`（只定义指定组的选项）。  
+- 通过使用 [分组构造](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子表达式*`)`（只定义指定组的选项）。  
   
  .NET 正则表达式引擎支持以下内联选项。  
   

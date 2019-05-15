@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621003"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>数据并行和任务并行中的潜在缺陷
 在许多情况下，与普通的顺序循环相比，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 可以显著提升性能。 但是，对循环进行并行化的工作增加了复杂性，可能会导致在顺序代码中出现不常见或根本不会遇到的问题。 本主题列出了一些在编写并行循环时要避免的做法。  
@@ -31,11 +31,11 @@ ms.locfileid: "56971944"
   
  在嵌套的循环中，最有可能发生过度并行化的情况。 在大多数情况下，除非满足以下一个或多个条件，否则最好仅对外部循环进行并行化：  
   
--   已知内部循环非常长。  
+- 已知内部循环非常长。  
   
--   正在对每个订单执行开销极大的计算。 （示例中所示的操作开销不大。）  
+- 正在对每个订单执行开销极大的计算。 （示例中所示的操作开销不大。）  
   
--   已知目标系统具有足够的处理器来处理通过对 `cust.Orders` 上的查询进行并行化所产生的线程数。  
+- 已知目标系统具有足够的处理器来处理通过对 `cust.Orders` 上的查询进行并行化所产生的线程数。  
   
  在所有情况下，确定最佳查询形式的最好方法是进行测试和测量。  
   

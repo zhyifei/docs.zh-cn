@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296168"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593619"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>如何：禁用强名称跳过功能
 从 .NET Framework 3.5 版 Service Pack 1 (SP1) 开始，当程序集加载到完全信任的 <xref:System.AppDomain> 对象（如 `MyComputer` 区域的默认 <xref:System.AppDomain>）时，不会验证强名称签名。 这被称之为强名称跳过功能。 在完全信任的环境中，对于已签名的完全信任的程序集，无需考虑其签名，对 <xref:System.Security.Permissions.StrongNameIdentityPermission> 的要求总是成功。 唯一的限制是该程序集必须完全受信任，因为其区域是完全受信任的。 因为在这些条件下，强名称不是决定性因素，所以没有理由验证强名称。 跳过验证强名称签名可显著提高性能。  
@@ -28,9 +28,9 @@ ms.locfileid: "59296168"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>对所有应用程序禁用强名称跳过功能  
   
--   在 32 位计算机上的系统注册表中，在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 项下创建名为 `AllowStrongNameBypass`，值为 0 的 DWORD 项。  
+- 在 32 位计算机上的系统注册表中，在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 项下创建名为 `AllowStrongNameBypass`，值为 0 的 DWORD 项。  
   
--   在 64 位计算机上的系统注册表中，在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 和HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 项下创建名为 `AllowStrongNameBypass`，值为 0 的 DWORD 项。  
+- 在 64 位计算机上的系统注册表中，在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 和HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 项下创建名为 `AllowStrongNameBypass`，值为 0 的 DWORD 项。  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>对单个应用程序禁用强名称跳过功能  
   

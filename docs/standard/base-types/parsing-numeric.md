@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603607"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633323"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>分析 .NET 中的数字字符串
 所有数字类型都具有两个静态分析方法（`Parse` 和 `TryParse`），可以使用它们将数字的字符串表示形式转换为数字类型。 这两个方法使你可以分析使用[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)中所述的格式字符串生成的字符串。 默认情况下，`Parse` 和 `TryParse` 方法可以成功地将仅包含整数十进制数字的字符串转化为整数值。 它们可以将包含整数和小数十进制数字、组分隔符和十进制分隔符的字符串转换为浮点值。 `Parse` 方法在操作失败时引发异常，而 `TryParse` 方法返回 `false`。  
@@ -28,9 +28,9 @@ ms.locfileid: "54603607"
   
  格式提供程序由 <xref:System.IFormatProvider> 实现表示。 此接口包含一个成员，即 <xref:System.IFormatProvider.GetFormat%2A> 方法；它需要使用一个参数，即表示要设置格式的类型的 <xref:System.Type> 对象。 此方法返回提供格式设置信息的对象。 .NET 支持以下两个 <xref:System.IFormatProvider> 实现，用于分析数字字符串：  
   
--   <xref:System.Globalization.CultureInfo> 对象，它的 <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 方法返回 <xref:System.Globalization.NumberFormatInfo> 对象，提供区域性专用格式设置信息。  
+- <xref:System.Globalization.CultureInfo> 对象，它的 <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 方法返回 <xref:System.Globalization.NumberFormatInfo> 对象，提供区域性专用格式设置信息。  
   
--   <xref:System.Globalization.NumberFormatInfo> 对象，它的 <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 方法返回自己本身。  
+- <xref:System.Globalization.NumberFormatInfo> 对象，它的 <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 方法返回自己本身。  
   
  下面的示例尝试将数组中的每个字符串转换为 <xref:System.Double> 值。 它首先尝试使用反映“英语(美国)”区域性约定的格式提供程序来分析字符串。 如果此操作抛出 <xref:System.FormatException>，就会尝试使用反映“法语(法国)”区域性约定的格式提供程序分析字符串。  
   

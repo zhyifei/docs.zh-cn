@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676186"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590063"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>按索引检索已排序节点
 万维网联合会 (W3C) XML 文档对象模型 (DOM) 还描述了 NodeList，它能够处理已排序节点列表（与 XmlNamedNodeMap 处理的未排序集相对）。 NodeList 在 Microsoft .NET Framework 中称为 XmlNodeList。 返回 XmlNodeList 的方法和属性包括：  
   
--   XmlNode.ChildNodes  
+- XmlNode.ChildNodes  
   
--   XmlDocument.GetElementsByTagName  
+- XmlDocument.GetElementsByTagName  
   
--   XmlElement.GetElementsByTagName  
+- XmlElement.GetElementsByTagName  
   
--   XmlNode.SelectNodes  
+- XmlNode.SelectNodes  
   
  XmlNodeList 包含的 Count 属性可用于编写循环，以循环访问 XmlNodeList 中的节点，如下面的代码示例所示：  
   

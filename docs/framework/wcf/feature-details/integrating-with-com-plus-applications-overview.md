@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638641"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590548"
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
 Windows Communication Foundation (WCF) 提供了用于创建分布式应用程序的丰富环境。 如果你已在使用 COM + 中承载的基于组件的应用程序逻辑，可以使用 WCF 来扩展现有的逻辑，而不是无需将其重写。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) 提供了用于创建分布式应用程�
   
 - 将对象引用作为参数传递的接口 –“受限对象引用支持”一节中介绍了以下受限对象引用方法。  
   
-- 传递与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 互操作性转换不兼容的类型的接口。  
+- 传递与.NET Framework COM 互操作性转换不兼容的类型的接口。  
   
 - 由 COM+ 承载时启用应用程序池的应用程序的接口。  
   

@@ -2,12 +2,12 @@
 title: 如何：使用 Task.WhenAll 扩展异步演练 (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8e1f617040bd902ab53500fbfeeafff35677280a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297949"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583427"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何：使用 Task.WhenAll 扩展异步演练 (C#)
 提高[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中的异步解决方案的性能，方法是使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
@@ -25,9 +25,9 @@ ms.locfileid: "59297949"
   
 1. 将 `ProcessURLAsync` 方法添加到[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中开发的第一个应用程序。  
   
-    -   如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。  
+    - 如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。  
   
-    -   如果是通过完成演练开发的代码，请向包含 `GetURLContentsAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第一个示例。  
+    - 如果是通过完成演练开发的代码，请向包含 `GetURLContentsAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第一个示例。  
   
      `ProcessURLAsync` 方法整合了原始演练的 `SumPageSizesAsync` 中的 `foreach` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "59297949"
   
 1. 将 `ProcessURLAsync` 的以下版本添加到[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中开发的第二个应用程序。  
   
-    -   如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough_HttpClient 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。  
+    - 如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough_HttpClient 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。  
   
-    -   如果是通过完成演练开发的代码，请向使用 `HttpClient.GetByteArrayAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第二个示例。  
+    - 如果是通过完成演练开发的代码，请向使用 `HttpClient.GetByteArrayAsync` 方法的应用程序添加 `ProcessURLAsync`。 此应用程序的 MainWindow.xaml.cs 文件是“完成演练中的代码示例”部分中的第二个示例。  
   
      `ProcessURLAsync` 方法整合了原始演练的 `SumPageSizesAsync` 中的 `foreach` 循环体中的操作。 该方法以异步方式将指定网站的内容作为字节数组进行下载，然后显示并返回字节数组的长度。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "59297949"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>测试 Task.WhenAll 解决方案  
   
--   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中的异步解决方案中的输出。 但请注意，网站每次会以不同顺序出现。  
+- 对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中的异步解决方案中的输出。 但请注意，网站每次会以不同顺序出现。  
   
 ## <a name="example"></a>示例  
  以下代码演示使用 `GetURLContentsAsync` 方法从 Web 下载内容的项目的扩展。  

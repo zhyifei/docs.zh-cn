@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299470"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592440"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
@@ -31,14 +31,14 @@ ms.locfileid: "59299470"
   
  本演练阐释了以下任务：  
   
--   [为测试部分受信任的代码设置简单沙盒](#Setting_up)。  
+- [为测试部分受信任的代码设置简单沙盒](#Setting_up)。  
   
     > [!IMPORTANT]
     >  这是一种以部门信任形式试验代码的简单方法。 要运行实际来自不可信位置的代码，请参阅[如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)。  
   
--   [在部分受信任的应用程序域中运行代码](#Running_code)。  
+- [在部分受信任的应用程序域中运行代码](#Running_code)。  
   
--   [使用匿名托管动态方法以部分信任形式发出和执行代码](#Using_methods)。  
+- [使用匿名托管动态方法以部分信任形式发出和执行代码](#Using_methods)。  
   
  有关在部分信任方案中发出代码的详细信息，请参阅[反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "59299470"
 ## <a name="setting-up-partially-trusted-locations"></a>设置部分信任的位置  
  以下两个过程显示如何设置可以测试部分信任的代码的位置。  
   
--   过程一演示如何创建沙盒应用程序域，其中已授予代码 Internet 权限。  
+- 过程一演示如何创建沙盒应用程序域，其中已授予代码 Internet 权限。  
   
--   过程二演示如何将带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记的 <xref:System.Security.Permissions.ReflectionPermission> 添加到部分信任的应用程序域，以便访问信任级别相同或更低的程序集中的专用数据。  
+- 过程二演示如何将带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记的 <xref:System.Security.Permissions.ReflectionPermission> 添加到部分信任的应用程序域，以便访问信任级别相同或更低的程序集中的专用数据。  
   
 ### <a name="creating-sandboxed-application-domains"></a>创建沙盒应用程序域  
  要创建使用部分信任形式运行程序集的应用程序域，必须使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 方法重载来指定要授予程序集的权限集，以创建应用程序域。 指定授予集最简单的方法是从安全策略检索命名权限集。  
@@ -155,7 +155,7 @@ ms.locfileid: "59299470"
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>使用匿名托管动态方法  
   
--   使用不指定关联模块或类型的构造函数，创建匿名托管动态方法。  
+- 使用不指定关联模块或类型的构造函数，创建匿名托管动态方法。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
@@ -164,7 +164,7 @@ ms.locfileid: "59299470"
   
      发出动态方法无需任何特殊权限，但发出的代码需要它使用的类型和方法所需的权限。 例如，如果发出的代码调用访问某个文件的方法，则它需要 <xref:System.Security.Permissions.FileIOPermission>。 如果信任级别不包含该权限，那么在执行发出的代码时，将引发安全性异常。 此处显示的代码发出一个动态方法，该方法仅使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法。 因此，可以从部分信任的位置执行该代码。  
   
--   或者，使用 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> 构造函数并为 `restrictedSkipVisibility` 参数指定 `true`，从而创建一个匿名托管动态方法，该方法具有跳过 JIT 可见性检查的受限能力。  
+- 或者，使用 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> 构造函数并为 `restrictedSkipVisibility` 参数指定 `true`，从而创建一个匿名托管动态方法，该方法具有跳过 JIT 可见性检查的受限能力。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
@@ -191,15 +191,15 @@ ms.locfileid: "59299470"
   
  示例使用 Helper 方法创建限制为 `Internet` 权限的授予集，然后创建应用程序域，使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 方法重载来指定域中执行的全部代码均使用此授予集。 此示例在应用程序域中创建 `Worker` 类的一个实例，并执行 `AccessPrivateMethod` 方法两次。  
   
--   首次执行 `AccessPrivateMethod` 方法时，强制执行 JIT 可见性检查。 动态方法将在被调用时失败，这是由于 JIT 可见性检查阻止其访问私有方法。  
+- 首次执行 `AccessPrivateMethod` 方法时，强制执行 JIT 可见性检查。 动态方法将在被调用时失败，这是由于 JIT 可见性检查阻止其访问私有方法。  
   
--   第二次执行 `AccessPrivateMethod` 方法时，跳过 JIT 可见性检查。 动态方法将在被编译时失败，这是由于 `Internet` 授予集未授予充足的权限，不能跳过可见性检查。  
+- 第二次执行 `AccessPrivateMethod` 方法时，跳过 JIT 可见性检查。 动态方法将在被编译时失败，这是由于 `Internet` 授予集未授予充足的权限，不能跳过可见性检查。  
   
  此示例向授予集添加具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 的 <xref:System.Security.Permissions.ReflectionPermission>。 然后创建第二个域，指定授予在此域中执行的所有代码新授予集中的权限。 此示例在新应用程序域中创建 `Worker` 类的一个实例，并执行 `AccessPrivateMethod` 方法的两个重载。  
   
--   执行 `AccessPrivateMethod` 方法的第一个重载，跳过 JIT 可见性检查。 动态方法将成功编译和执行，这是由于发出代码的程序集与包含私有方法的程序集相同。 因此，其信任级别相同。 如果包含 `Worker` 类的应用程序拥有若干程序集，则对于任何一个程序集，相同的进程都将成功，因为它们具有相同的信任级别。  
+- 执行 `AccessPrivateMethod` 方法的第一个重载，跳过 JIT 可见性检查。 动态方法将成功编译和执行，这是由于发出代码的程序集与包含私有方法的程序集相同。 因此，其信任级别相同。 如果包含 `Worker` 类的应用程序拥有若干程序集，则对于任何一个程序集，相同的进程都将成功，因为它们具有相同的信任级别。  
   
--   执行 `AccessPrivateMethod` 方法的第二个重载，再次跳过 JIT 可见性检查。 这一次，动态方法在编译时失败，因为它尝试访问 <xref:System.String> 类的 `internal` `FirstChar` 属性。 包含 <xref:System.String> 类的程序集是完全信任的程序集。 因此，它比发出代码的程序集拥有更高的信任级别。  
+- 执行 `AccessPrivateMethod` 方法的第二个重载，再次跳过 JIT 可见性检查。 这一次，动态方法在编译时失败，因为它尝试访问 <xref:System.String> 类的 `internal` `FirstChar` 属性。 包含 <xref:System.String> 类的程序集是完全信任的程序集。 因此，它比发出代码的程序集拥有更高的信任级别。  
   
  此比较显示了 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 如何使部分受信任的代码为其它部分受信任的代码跳过可见性检查，而不影响受信任代码的安全性。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "59299470"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   如果在 Visual Studio 中生成此代码示例，则必须更改类名，以便在将命名空间传递给 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法时包括该命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
+- 如果在 Visual Studio 中生成此代码示例，则必须更改类名，以便在将命名空间传递给 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法时包括该命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
   
 ## <a name="see-also"></a>请参阅
 

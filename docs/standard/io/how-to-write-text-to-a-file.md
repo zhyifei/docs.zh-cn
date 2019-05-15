@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59b33c24c2821d0aef17f5feb67c1178810b939e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524190"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647783"
 ---
 # <a name="how-to-write-text-to-a-file"></a>如何：将文本写入文件
 本主题介绍将文本写入 .NET 应用文件的不同方法。 
 
 下面的类和方法通常用于将文本写入文件：  
   
--   <xref:System.IO.StreamWriter> 包含同步写入文件的方法（<xref:System.IO.StreamWriter.Write%2A> 或 <xref:System.IO.TextWriter.WriteLine%2A>）或者异步写入文件的方法（<xref:System.IO.StreamWriter.WriteAsync%2A> 和 <xref:System.IO.StreamWriter.WriteLineAsync%2A>）。  
+- <xref:System.IO.StreamWriter> 包含同步写入文件的方法（<xref:System.IO.StreamWriter.Write%2A> 或 <xref:System.IO.TextWriter.WriteLine%2A>）或者异步写入文件的方法（<xref:System.IO.StreamWriter.WriteAsync%2A> 和 <xref:System.IO.StreamWriter.WriteLineAsync%2A>）。  
   
--   <xref:System.IO.File> 提供了将文本写入文件的静态方法（例如，<xref:System.IO.File.WriteAllLines%2A> 和 <xref:System.IO.File.WriteAllText%2A>），或者向文件中追加文本的静态方法（例如，<xref:System.IO.File.AppendAllLines%2A>、<xref:System.IO.File.AppendAllText%2A> 和 <xref:System.IO.File.AppendText%2A>）。  
+- <xref:System.IO.File> 提供了将文本写入文件的静态方法（例如，<xref:System.IO.File.WriteAllLines%2A> 和 <xref:System.IO.File.WriteAllText%2A>），或者向文件中追加文本的静态方法（例如，<xref:System.IO.File.AppendAllLines%2A>、<xref:System.IO.File.AppendAllText%2A> 和 <xref:System.IO.File.AppendText%2A>）。  
   
 - <xref:System.IO.Path> 适用于包含文件或目录路径信息的字符串。 它包含 <xref:System.IO.Path.Combine%2A> 方法，在 .NET Core 2.1 及更高版本中包含 <xref:System.IO.Path.Join%2A> 和 <xref:System.IO.Path.TryJoin%2A> 方法，允许串联字符串以生成文件或目录路径。
 

@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615972"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634733"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 <a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -35,13 +35,13 @@ ms.locfileid: "54615972"
   
  本主题包含以下各节：  
   
--   [不使用回溯的线性比较](#linear_comparison_without_backtracking)  
+- [不使用回溯的线性比较](#linear_comparison_without_backtracking)  
   
--   [使用可选限定符或替换构造的回溯](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [使用可选限定符或替换构造的回溯](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [使用嵌套的可选限定符的回溯](#backtracking_with_nested_optional_quantifiers)  
+- [使用嵌套的可选限定符的回溯](#backtracking_with_nested_optional_quantifiers)  
   
--   [控制回溯](#controlling_backtracking)  
+- [控制回溯](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>不使用回溯的线性比较  
@@ -91,15 +91,15 @@ ms.locfileid: "54615972"
   
  为此，正则表达式引擎按如下所示使用回溯：  
   
--   它将 `.*` （它对应于出现零次、一次或多次任意字符）与整个输入字符串匹配。  
+- 它将 `.*` （它对应于出现零次、一次或多次任意字符）与整个输入字符串匹配。  
   
--   它尝试在正则表达式模式中匹配“e”。 但是，输入字符串没有剩余的可用字符来匹配。  
+- 它尝试在正则表达式模式中匹配“e”。 但是，输入字符串没有剩余的可用字符来匹配。  
   
--   它回溯到上一次成功的匹配“Essential services are provided by regular expressions”，并尝试将“e”与句尾的句号匹配。 匹配失败。  
+- 它回溯到上一次成功的匹配“Essential services are provided by regular expressions”，并尝试将“e”与句尾的句号匹配。 匹配失败。  
   
--   它继续回溯到上一个成功匹配，一次一个字符，直至临时匹配的子字符串为“Essential services are provided by regular expr”。 然后，它将模式中的“e”与“expressions”中的第二个“e”进行比较，并找到匹配。  
+- 它继续回溯到上一个成功匹配，一次一个字符，直至临时匹配的子字符串为“Essential services are provided by regular expr”。 然后，它将模式中的“e”与“expressions”中的第二个“e”进行比较，并找到匹配。  
   
--   它将模式中的“s”与匹配的“e”字符之后的“s”（“expressions”中的第一个“s”）进行比较。 匹配成功。  
+- 它将模式中的“s”与匹配的“e”字符之后的“s”（“expressions”中的第一个“s”）进行比较。 匹配成功。  
   
  当您使用回溯将正则表达式模式与输入字符串（长度为 55 个字符）匹配时，需要执行 67 次比较操作。 通常，如果正则表达式模式包括单个替换构造或单个可选限定符，则匹配模式所需要的比较操作数大于输入字符串中字符数的两倍。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615972"
   
  正如示例输出所示，正则表达式引擎查找输入字符串与模式不匹配所需的时间大约为标识匹配字符串所需时间的两倍。 这是因为，不成功的匹配始终表示最糟糕的情况。 正则表达式引擎必须使用正则表达式来遵循通过数据的所有可能路径，然后才能得出匹配不成功的结论，嵌套的括号会创建通过数据的许多其他路径。 正则表达式引擎通过执行以下操作来确定第二个字符串与模式不匹配：  
   
--   它检查到正位于字符串开头，然后将字符串中的前五个字符与模式 `a+`匹配。 然后确定字符串中没有其他成组的“a”字符。 最后，它测试是否位于字符串结尾。 由于还有一个附加字符保留在字符串中，所以匹配失败。 这一失败的匹配需要进行 9 次比较。 正则表达式引擎也从其“a”（我们将其称为匹配 1）、“aa”（匹配 2）、“aaa”（匹配 3）和“aaaa”（匹配 4）的匹配中保存状态信息。  
+- 它检查到正位于字符串开头，然后将字符串中的前五个字符与模式 `a+`匹配。 然后确定字符串中没有其他成组的“a”字符。 最后，它测试是否位于字符串结尾。 由于还有一个附加字符保留在字符串中，所以匹配失败。 这一失败的匹配需要进行 9 次比较。 正则表达式引擎也从其“a”（我们将其称为匹配 1）、“aa”（匹配 2）、“aaa”（匹配 3）和“aaaa”（匹配 4）的匹配中保存状态信息。  
   
--   它返回到以前保存的匹配 4。 它确定没有一个附加的“a”字符可分配给其他捕获的组。 最后，它测试是否位于字符串结尾。 由于还有一个附加字符保留在字符串中，所以匹配失败。 该失败的匹配需要进行 4 次比较。 到目前为止，总共执行了 13 次比较。  
+- 它返回到以前保存的匹配 4。 它确定没有一个附加的“a”字符可分配给其他捕获的组。 最后，它测试是否位于字符串结尾。 由于还有一个附加字符保留在字符串中，所以匹配失败。 该失败的匹配需要进行 4 次比较。 到目前为止，总共执行了 13 次比较。  
   
--   它返回到以前保存的匹配 3。 它确定有两个附加的“a”字符可分配给其他捕获的组。 但是，字符串末尾测试失败。 然后，它返回 match3 并尝试在两个附加的捕获组中匹配两个附加的“a”字符。 字符串末尾测试仍失败。 这些失败的匹配需要进行 12 次比较。 到目前为止，总共执行了 25 次比较。  
+- 它返回到以前保存的匹配 3。 它确定有两个附加的“a”字符可分配给其他捕获的组。 但是，字符串末尾测试失败。 然后，它返回 match3 并尝试在两个附加的捕获组中匹配两个附加的“a”字符。 字符串末尾测试仍失败。 这些失败的匹配需要进行 12 次比较。 到目前为止，总共执行了 25 次比较。  
   
  输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。  
   

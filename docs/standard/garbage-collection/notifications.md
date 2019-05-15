@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622710"
 ---
 # <a name="garbage-collection-notifications"></a>垃圾回收通知
 在有些情况下，公共语言运行时执行的完整垃圾回收（即第 2 代回收）可能会对性能产生负面影响。 特别是，处理大量请求的服务器可能会出现此问题；在这种情况下，长时间垃圾回收会导致请求超时。为了防止在关键时期发生完全回收，可以接收即将执行完全垃圾回收的通知，再采取措施将工作负载重定向到另一个服务器实例。 也可以自行诱导回收，前提是当前服务器实例不需要处理请求。  
@@ -28,33 +28,33 @@ ms.locfileid: "44084944"
   
  若要确定何时发出通知，请使用 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法。 通常，在 `while` 循环中使用这些方法，以持续获取表示通知状态的 <xref:System.GCNotificationStatus> 枚举。 如果值为 <xref:System.GCNotificationStatus.Succeeded>，可以执行下列操作：  
   
--   为了响应使用 <xref:System.GC.WaitForFullGCApproach%2A> 方法获得的通知，可以重定向工作负载，并能自行诱导回收。  
+- 为了响应使用 <xref:System.GC.WaitForFullGCApproach%2A> 方法获得的通知，可以重定向工作负载，并能自行诱导回收。  
   
--   为了响应使用 <xref:System.GC.WaitForFullGCComplete%2A> 方法获得的通知，可以让当前服务器实例再次用于处理请求。 也可以收集信息。 例如，可以使用 <xref:System.GC.CollectionCount%2A> 方法记录回收次数。  
+- 为了响应使用 <xref:System.GC.WaitForFullGCComplete%2A> 方法获得的通知，可以让当前服务器实例再次用于处理请求。 也可以收集信息。 例如，可以使用 <xref:System.GC.CollectionCount%2A> 方法记录回收次数。  
   
  <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法要配合使用。 使用一个方法，而不使用另一个方法，可能会生成不确定的结果。  
   
 ## <a name="full-garbage-collection"></a>完全垃圾回收  
  如果发生下列任一情况，运行时就会执行完全垃圾回收：  
   
--   足够多的内存已提升到第 2 代，导致执行下一个第 2 代回收。  
+- 足够多的内存已提升到第 2 代，导致执行下一个第 2 代回收。  
   
--   足够多的内存已提升到大型对象堆，导致执行下一个第 2 代回收。  
+- 足够多的内存已提升到大型对象堆，导致执行下一个第 2 代回收。  
   
--   由于其他因素，导致第 1 代回收升级为第 2 代回收。  
+- 由于其他因素，导致第 1 代回收升级为第 2 代回收。  
   
  在 <xref:System.GC.RegisterForFullGCNotification%2A> 方法中指定的阈值适用于前两种情况。 不过，在第一种情况下，不一定会在与指定的阈值相称的时间收到通知，原因有下面两个：  
   
--   运行时不检查每个小型对象分配（出于性能考虑）。  
+- 运行时不检查每个小型对象分配（出于性能考虑）。  
   
--   只有第 1 代回收将内存提升到第 2 代。  
+- 只有第 1 代回收将内存提升到第 2 代。  
   
  第三种情况也加剧了通知接收时间的不确定性。 可以在此期间重定向请求，或在可以更好适应时自行诱导回收，从而减轻不合时宜的完全垃圾回收造成的影响。尽管并不保证有效，但确实证明这是非常实用的方法。  
   
 ## <a name="notification-threshold-parameters"></a>通知阈值参数  
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法包含两个参数，用于指定第 2 代对象和大型对象堆的阈值。 如果达到这些值，就应发出垃圾回收通知。 下表介绍了这些参数。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|介于 1 和 99 之间的数字，指定根据在第 2 代中提升的对象，应何时发出通知。|  
 |`largeObjectHeapThreshold`|介于 1 和 99 之间的数字，指定根据大型对象堆中分配的对象，应何时发出通知。|  
@@ -65,12 +65,12 @@ ms.locfileid: "44084944"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  在下面的示例中，一组服务器处理传入的 Web 请求。 为了模拟处理请求的工作负载，将字节数组添加到 <xref:System.Collections.Generic.List%601> 集合中。 每个服务器都会注册获取垃圾回收通知，再对 `WaitForFullGCProc` 用户方法启动线程，以持续监视 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法返回的 <xref:System.GCNotificationStatus> 枚举。  
   
  在通知发出时，<xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法调用它们各自的事件处理用户方法：  
   
--   `OnFullGCApproachNotify`  
+- `OnFullGCApproachNotify`  
   
      此方法调用 `RedirectRequests` 用户方法，指示请求队列服务器暂停向服务器发送请求。 具体模拟方式是，将类级别变量 `bAllocate` 设置为 `false`，这样就不会再分配对象。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "44084944"
   
      最后，由于工作负载很轻，诱导垃圾回收。  
   
--   `OnFullGCCompleteNotify`  
+- `OnFullGCCompleteNotify`  
   
      此方法调用用户方法 `AcceptRequests` 以继续接受请求，因为服务器不再易受完全垃圾回收影响。 此操作的具体模拟方式是，将 `bAllocate` 变量设置为 `true`，以便能够继续将对象添加到 <xref:System.Collections.Generic.List%601> 集合。  
   

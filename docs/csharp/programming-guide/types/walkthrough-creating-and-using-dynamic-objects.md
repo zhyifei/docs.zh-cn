@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 658fc0ef797e941e33e1d03f0e492b4cf2ef0801
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608032"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建并使用动态对象（C# 和 Visual Basic）
 
@@ -28,9 +28,9 @@ ms.locfileid: "59339419"
   
  在本演练中，将要执行以下任务：  
   
--   创建一个自定义对象，该对象会将文本文件的内容作为对象的属性动态公开。  
+- 创建一个自定义对象，该对象会将文本文件的内容作为对象的属性动态公开。  
   
--   创建使用 `IronPython` 库的项目。  
+- 创建使用 `IronPython` 库的项目。  
   
 ## <a name="prerequisites"></a>系统必备  
 

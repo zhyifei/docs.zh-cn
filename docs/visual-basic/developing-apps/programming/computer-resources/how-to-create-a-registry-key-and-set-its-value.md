@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5c286c240c405fc2d01b267bb4395701ec091c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312602"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620686"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中创建注册表项并设置其值
 `My.Computer.Registry` 对象的 `CreateSubKey` 方法可用于创建注册表项。  
@@ -25,7 +25,7 @@ ms.locfileid: "59312602"
   
 #### <a name="to-create-a-registry-key"></a>创建注册表项  
   
--   使用 `CreateSubKey` 方法，指定放置注册表项的配置单元以及注册表项的名称。 参数 `Subkey` 不区分大小写。 此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。  
+- 使用 `CreateSubKey` 方法，指定放置注册表项的配置单元以及注册表项的名称。 参数 `Subkey` 不区分大小写。 此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
@@ -57,15 +57,15 @@ ms.locfileid: "59312602"
   
  以下情况可能会导致异常：  
   
--   密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   用户没有创建注册表项的权限 (<xref:System.Security.SecurityException>)。  
+- 用户没有创建注册表项的权限 (<xref:System.Security.SecurityException>)。  
   
--   项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。  
+- 项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。  
   
--   项已关闭 (<xref:System.IO.IOException>)。  
+- 项已关闭 (<xref:System.IO.IOException>)。  
   
--   注册表项为只读 (<xref:System.UnauthorizedAccessException>)。  
+- 注册表项为只读 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 同样，用户必须具有用于创建或写入设置的正确 ACL。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。  

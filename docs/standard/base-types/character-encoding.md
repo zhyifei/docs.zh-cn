@@ -14,19 +14,19 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346101"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634680"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 字符是可以许多不同的方式表示的抽象实体。 字符编码是用代表字符的某个值与受支持的字符集中的每个字符配对的系统。 例如，莫尔斯电码就是一种用点线模式与罗马字母表中的每个字符（适合通过电报线路进行传输）进行配对的字符编码。 计算机的字符编码将代表字符的数字值与受支持的字符集中的每个字符配对。 一种字符编码有两个不同组件：  
   
--   编码器，将一个字符序列转换为一个数字值（字节）序列。  
+- 编码器，将一个字符序列转换为一个数字值（字节）序列。  
   
--   解码器，将字节序列转换成字符序列。  
+- 解码器，将字节序列转换成字符序列。  
   
  字符编码描述编码器和解码器操作所依据的规则。 例如， <xref:System.Text.UTF8Encoding> 类描述编码为 8 位 Unicode 转换格式 (UTF-8) 和从其进行解码的规则，该格式使用一至四个字节来表示单个 Unicode 字符。 编码和解码还可以包括验证。 例如， <xref:System.Text.UnicodeEncoding> 类将检查所有代理项以确保它们构成有效的代理项对。 （代理项对由码位范围从 U + D800 到 U + DBFF 的字符后跟码位范围从 U + DC00 到 U + DFFF 的字符组成。）回退策略确定编码器处理无效字符的方式或解码器处理无效字节的方式。  
   
@@ -37,27 +37,27 @@ ms.locfileid: "59346101"
   
  本主题包括以下各节：  
   
--   [.NET 中的编码](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [.NET 中的编码](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [选择编码类](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [选择编码类](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [使用编码对象](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [使用编码对象](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [选择回退策略](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [选择回退策略](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>.NET 中的编码  
  .NET 中的所有字符编码类都继承自 <xref:System.Text.Encoding?displayProperty=nameWithType> 类，这是定义所有字符编码通用功能的抽象类。 若要访问在 .NET 中实现的单个编码对象，请执行以下操作：  
   
--   使用 <xref:System.Text.Encoding> 类的静态属性，这些属性返回表示 .NET 标准字符编码（ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32）的对象。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 属性返回 <xref:System.Text.UnicodeEncoding> 对象。 每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一节。）  
+- 使用 <xref:System.Text.Encoding> 类的静态属性，这些属性返回表示 .NET 标准字符编码（ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32）的对象。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 属性返回 <xref:System.Text.UnicodeEncoding> 对象。 每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一节。）  
   
--   调用编码的类构造函数。 以这种方式可以将 ASCII、utf-7、utf-8、utf-16 和 utf-32 编码对象实例化。 默认情况下，每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节，但你可指定应引发异常。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一节。）  
+- 调用编码的类构造函数。 以这种方式可以将 ASCII、utf-7、utf-8、utf-16 和 utf-32 编码对象实例化。 默认情况下，每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节，但你可指定应引发异常。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一节。）  
   
--   调用 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 构造函数并向其传递一个表示编码的整数。 标准编码对象使用替换回退，代码页编码和双字节字符集 (DBCS) 编码对象使用最佳回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 一节。）  
+- 调用 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 构造函数并向其传递一个表示编码的整数。 标准编码对象使用替换回退，代码页编码和双字节字符集 (DBCS) 编码对象使用最佳回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 一节。）  
   
--   调用 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，此方法返回 .NET 中的任何标准编码、代码页编码或 DBCS 编码。 可通过重载同时指定编码器和解码器的回退对象。  
+- 调用 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，此方法返回 .NET 中的任何标准编码、代码页编码或 DBCS 编码。 可通过重载同时指定编码器和解码器的回退对象。  
   
 > [!NOTE]
 >  Unicode Standard 将码位（数字）和名称指派给每个受支持脚本中的各字符。 例如，码位 U+0041 表示字符“A”，“LATIN CAPITAL LETTER A”表示名称。 Unicode 转换格式 (UTF) 编码定义将码位编码为一系列一个或多个字节的方式。 Unicode 编码方案简化全球通用的应用程序的开发，因为它允许以单个编码表示任何字符集中的字符。 应用程序开发人员不再需要跟踪用于为特定语言或写入系统生成字符的编码方案，且数据可以在全球系统间共享，而不被损坏。  
@@ -87,17 +87,17 @@ ms.locfileid: "59346101"
   
  如果打算使用 ASCII 编码 (<xref:System.Text.ASCIIEncoding>)，请选择 <xref:System.Text.UTF8Encoding> 。 这两个编码对于 ASCII 字符集而言是相同的，但 <xref:System.Text.UTF8Encoding> 具有以下优点：  
   
--   它可以表示每个 Unicode 字符，而 <xref:System.Text.ASCIIEncoding> 仅支持 U+0000 到 U+007F 之间的 Unicode 字符值。  
+- 它可以表示每个 Unicode 字符，而 <xref:System.Text.ASCIIEncoding> 仅支持 U+0000 到 U+007F 之间的 Unicode 字符值。  
   
--   它提供错误检测，具有更高的安全性。  
+- 它提供错误检测，具有更高的安全性。  
   
--   速度已达到最优，应快于任何其他编码。 即使对于全是 ASCII 的内容，使用 <xref:System.Text.UTF8Encoding> 执行操作的速度要快于 <xref:System.Text.ASCIIEncoding>。  
+- 速度已达到最优，应快于任何其他编码。 即使对于全是 ASCII 的内容，使用 <xref:System.Text.UTF8Encoding> 执行操作的速度要快于 <xref:System.Text.ASCIIEncoding>。  
   
  应考虑仅针对旧版应用程序使用 <xref:System.Text.ASCIIEncoding> 。 但是，即使对于旧版应用程序，由于以下原因， <xref:System.Text.UTF8Encoding> 可能是更好的选择（假定采用默认设置）：  
   
--   如果应用程序具有的内容不完全是 ASCII 并使用 <xref:System.Text.ASCIIEncoding>将其编码，则每个非 ASCII 字符将编码为一个问号 (?)。 如果应用程序随后对此数据进行解码，则信息丢失。  
+- 如果应用程序具有的内容不完全是 ASCII 并使用 <xref:System.Text.ASCIIEncoding>将其编码，则每个非 ASCII 字符将编码为一个问号 (?)。 如果应用程序随后对此数据进行解码，则信息丢失。  
   
--   如果应用程序具有的内容不完全是 ASCII 并使用 <xref:System.Text.UTF8Encoding>将其编码，则结果看起来将无法识别（如果解释为 ASCII）。 但是，如果应用程序随后使用 utf-8 解码器将此数据进行解码，则数据成功执行一次往返过程。  
+- 如果应用程序具有的内容不完全是 ASCII 并使用 <xref:System.Text.UTF8Encoding>将其编码，则结果看起来将无法识别（如果解释为 ASCII）。 但是，如果应用程序随后使用 utf-8 解码器将此数据进行解码，则数据成功执行一次往返过程。  
   
  在 web 应用程序中，发送到响应 web 请求的客户端中的字符应反映客户端上所使用的编码。 在大多数情况下，应将 <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> 属性返回的值，从而以用户期望的编码显示文本。  
   
@@ -130,11 +130,11 @@ ms.locfileid: "59346101"
 ## <a name="choosing-a-fallback-strategy"></a>选择回退策略  
  当某个方法尝试对字符进行编码或解码，但不存在映射时，它必须实现回退策略，以确定应如何处理失败的映射。 有三种类型的回退策略：  
   
--   Best-Fit Fallback  
+- Best-Fit Fallback  
   
--   Replacement Fallback  
+- Replacement Fallback  
   
--   Exception Fallback  
+- Exception Fallback  
   
 > [!IMPORTANT]
 >  当某一 Unicode 字符不能映射到特定代码页编码时，在编码操作中将发生最常见的问题。 当无效的字节序列无法转换为有效的 Unicode 字符，在解码操作中将发生最常见的问题。 出于这些原因，应该了解特定的编码对象使用哪种回退策略。 只要有可能，应指定实例化对象时编码对象使用的回退策略。  
@@ -195,9 +195,9 @@ ms.locfileid: "59346101"
   
  <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 对象提供以下有关导致异常的条件的信息：  
   
--   <xref:System.Text.EncoderFallbackException> 对象包括 <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> 方法，该方法指示不能对其进行编码的一个字符或多个字符是代表未知的代理项对（在这种情况下，该方法返回 `true`）还是未知的单个字符（在这种情况下，该方法将返回 `false`）。 代理项对中的字符可从 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> 和 <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> 属性获取。 未知的单个字符可从 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> 属性获取。 <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> 属性指示字符串中第一个无法进行编码的字符的位置。  
+- <xref:System.Text.EncoderFallbackException> 对象包括 <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> 方法，该方法指示不能对其进行编码的一个字符或多个字符是代表未知的代理项对（在这种情况下，该方法返回 `true`）还是未知的单个字符（在这种情况下，该方法将返回 `false`）。 代理项对中的字符可从 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> 和 <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> 属性获取。 未知的单个字符可从 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> 属性获取。 <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> 属性指示字符串中第一个无法进行编码的字符的位置。  
   
--   <xref:System.Text.DecoderFallbackException> 对象包括 <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> 属性，该属性返回一个无法解码的字节数组。 <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> 属性指示未知字节的起始位置。  
+- <xref:System.Text.DecoderFallbackException> 对象包括 <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> 属性，该属性返回一个无法解码的字节数组。 <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> 属性指示未知字节的起始位置。  
   
  尽管 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 对象提供足够的有关异常的诊断信息，但它们不提供对编码或解码缓冲区的访问权限。 因此，它们不允许在编码或解码方法内替换或更正无效数据。  
   
@@ -205,13 +205,13 @@ ms.locfileid: "59346101"
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  除了由代码页在内部实现的最佳映射，.NET 包括用于实现回退策略的以下类：  
   
--   使用 <xref:System.Text.EncoderReplacementFallback> 和 <xref:System.Text.EncoderReplacementFallbackBuffer> 来替换编码操作中的字符。  
+- 使用 <xref:System.Text.EncoderReplacementFallback> 和 <xref:System.Text.EncoderReplacementFallbackBuffer> 来替换编码操作中的字符。  
   
--   使用 <xref:System.Text.DecoderReplacementFallback> 和 <xref:System.Text.DecoderReplacementFallbackBuffer> 来替换解码操作中的字符。  
+- 使用 <xref:System.Text.DecoderReplacementFallback> 和 <xref:System.Text.DecoderReplacementFallbackBuffer> 来替换解码操作中的字符。  
   
--   当字符不能进行编码时，使用 <xref:System.Text.EncoderExceptionFallback> 和 <xref:System.Text.EncoderExceptionFallbackBuffer> 来引发 <xref:System.Text.EncoderFallbackException> 。  
+- 当字符不能进行编码时，使用 <xref:System.Text.EncoderExceptionFallback> 和 <xref:System.Text.EncoderExceptionFallbackBuffer> 来引发 <xref:System.Text.EncoderFallbackException> 。  
   
--   当字符不能进行解码时，使用 <xref:System.Text.DecoderExceptionFallback> 和 <xref:System.Text.DecoderExceptionFallbackBuffer> 引发 <xref:System.Text.DecoderFallbackException> 。  
+- 当字符不能进行解码时，使用 <xref:System.Text.DecoderExceptionFallback> 和 <xref:System.Text.DecoderExceptionFallbackBuffer> 引发 <xref:System.Text.DecoderFallbackException> 。  
   
  此外，通过执行以下步骤，可以实现使用最佳回退、替换回退或异常回退的自定义解决方案：  
   
@@ -226,24 +226,24 @@ ms.locfileid: "59346101"
   
  当为编码器或解码器创建自定义回退解决方案时，必须实现以下成员：  
   
--   <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 属性，返回最佳、替换或异常回退可能返回以替换单个字符的最大数量的字符数。 对于自定义异常回退，其值为 0。  
+- <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 属性，返回最佳、替换或异常回退可能返回以替换单个字符的最大数量的字符数。 对于自定义异常回退，其值为 0。  
   
--   <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法，该方法返回自定义的 <xref:System.Text.EncoderFallbackBuffer> 或 <xref:System.Text.DecoderFallbackBuffer> 实现。 当遇到不能成功进行编码的第一个字节时或当遇到不能成功进行解码的第一个字节时，则解码器调用该方法。  
+- <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法，该方法返回自定义的 <xref:System.Text.EncoderFallbackBuffer> 或 <xref:System.Text.DecoderFallbackBuffer> 实现。 当遇到不能成功进行编码的第一个字节时或当遇到不能成功进行解码的第一个字节时，则解码器调用该方法。  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>从 EncoderFallbackBuffer 或 DecoderFallbackBuffer 中派生  
  若要实现自定义的回退解决方案，还必须创建一个继承自 <xref:System.Text.EncoderFallbackBuffer> 的类用于编码操作，以及一个继承自 <xref:System.Text.DecoderFallbackBuffer> 的类用于解码操作。 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> 和 <xref:System.Text.EncoderFallback> 类的 <xref:System.Text.DecoderFallback> 方法返回这些类的实例。 当遇到不能对其进行编码第一个字符时，编码器调用 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法，当遇到不能对其进行解码的一个或多个字节时，解码器调用 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 方法。 <xref:System.Text.EncoderFallbackBuffer> 和 <xref:System.Text.DecoderFallbackBuffer> 类提供回退实现。 每个实例表示一个包含回退字符的缓冲区，该回退字符将替换不能进行编码的字符或不能进行解码的字节序列。  
   
  当为编码器或解码器创建自定义回退解决方案时，必须实现以下成员：  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法。 编码器调用<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 来为回退缓冲区提供其不能进行编码的字符的相关信息。 因为要进行编码的字符可能是代理项对，此方法被重载。 向重载传递了字符串中将进行编码的字符及其索引。 向第二个重载传递了字符串中高代理项和低代理项及其索引。 解码器调用 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法来为回退缓冲区提供有关无法解码的字节的信息。 向此方法传递了其无法解码的字节数组以及第一个字节的索引。 如果回退缓冲区可以提供一个或多个最佳或替换字符，则回退方法应返回 `true` ，否则应返回 `false`。 对于异常回退，回退方法应引发异常。  
+- <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法。 编码器调用<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 来为回退缓冲区提供其不能进行编码的字符的相关信息。 因为要进行编码的字符可能是代理项对，此方法被重载。 向重载传递了字符串中将进行编码的字符及其索引。 向第二个重载传递了字符串中高代理项和低代理项及其索引。 解码器调用 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 方法来为回退缓冲区提供有关无法解码的字节的信息。 向此方法传递了其无法解码的字节数组以及第一个字节的索引。 如果回退缓冲区可以提供一个或多个最佳或替换字符，则回退方法应返回 `true` ，否则应返回 `false`。 对于异常回退，回退方法应引发异常。  
   
--   <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 方法，编码器或解码器重复调用该方法以从回退缓冲区获取下一个字符。 返回所有回退字符后，该方法应返回 U+0000。  
+- <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 方法，编码器或解码器重复调用该方法以从回退缓冲区获取下一个字符。 返回所有回退字符后，该方法应返回 U+0000。  
   
--   <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 属性，返回回退缓冲区中的剩余字符数。  
+- <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 属性，返回回退缓冲区中的剩余字符数。  
   
--   <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 方法，将回退缓冲区中的当前位置移到前一个字符。  
+- <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 方法，将回退缓冲区中的当前位置移到前一个字符。  
   
--   <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 方法，将回退缓冲区重新初始化。  
+- <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 或 <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 方法，将回退缓冲区重新初始化。  
   
  如果回退实现是最佳回退或替换回退，则从 <xref:System.Text.EncoderFallbackBuffer> 和 <xref:System.Text.DecoderFallbackBuffer> 派生的类还保持两个私有实例字段：缓冲区中字符的精确数目；缓冲区中下一个要返回的字符的索引。  
   

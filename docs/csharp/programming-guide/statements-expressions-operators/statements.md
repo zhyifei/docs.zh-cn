@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971502"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608137"
 ---
 # <a name="statements-c-programming-guide"></a>语句（C# 编程指南）
 程序执行的操作采用语句表达。 常见操作包括声明变量、赋值、调用方法、循环访问集合，以及根据给定条件分支到一个或另一个代码块。 语句在程序中的执行顺序称为“控制流”或“执行流”。 根据程序对运行时所收到的输入的响应，在程序每次运行时控制流可能有所不同。  
@@ -83,11 +83,11 @@ ms.locfileid: "56971502"
   
 ## <a name="related-sections"></a>相关章节  
   
--   [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [表达式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [表达式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

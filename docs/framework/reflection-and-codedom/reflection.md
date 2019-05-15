@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101570"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591487"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反射
 <xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和[值类型](../../csharp/language-reference/keywords/value-types.md)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
@@ -37,23 +37,23 @@ ms.locfileid: "59101570"
   
  [程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)包含模块、模块包含类型，而类型包含成员。 反射提供封装程序集、模块和类型的对象。 可以使用反射动态地创建类型的实例，将类型绑定到现有对象，或从现有对象中获取类型。 然后，可以调用类型的方法或访问其字段和属性。 反射的典型用法如下所示：  
   
--   使用 <xref:System.Reflection.Assembly> 来定义和加载程序集，加载程序集清单中列出的模块，以及在此程序集中定位一个类型并创建一个它的实例。  
+- 使用 <xref:System.Reflection.Assembly> 来定义和加载程序集，加载程序集清单中列出的模块，以及在此程序集中定位一个类型并创建一个它的实例。  
   
--   使用 <xref:System.Reflection.Module> 发现信息，如包含模块的程序集和模块中的类。 还可以获取所有全局方法或模块上定义的其它特定的非全局方法。  
+- 使用 <xref:System.Reflection.Module> 发现信息，如包含模块的程序集和模块中的类。 还可以获取所有全局方法或模块上定义的其它特定的非全局方法。  
   
--   使用 <xref:System.Reflection.ConstructorInfo> 发现信息，如名称、参数、访问修饰符（如 `public` 或 `private`）和构造函数的实现详细信息（如 `abstract` 或 `virtual`）。 使用 <xref:System.Type> 的 <xref:System.Type.GetConstructors%2A> 或 <xref:System.Type.GetConstructor%2A> 方法来调用特定构造函数。  
+- 使用 <xref:System.Reflection.ConstructorInfo> 发现信息，如名称、参数、访问修饰符（如 `public` 或 `private`）和构造函数的实现详细信息（如 `abstract` 或 `virtual`）。 使用 <xref:System.Type> 的 <xref:System.Type.GetConstructors%2A> 或 <xref:System.Type.GetConstructor%2A> 方法来调用特定构造函数。  
   
--   使用 <xref:System.Reflection.MethodInfo> 发现信息，如名称、返回类型、参数、访问修饰符（如 `public` 或 `private`）和方法的实现详细信息（如 `abstract` 或 `virtual`）。 使用 <xref:System.Type> 的 <xref:System.Type.GetMethods%2A> 或 <xref:System.Type.GetMethod%2A> 方法来调用特定方法。  
+- 使用 <xref:System.Reflection.MethodInfo> 发现信息，如名称、返回类型、参数、访问修饰符（如 `public` 或 `private`）和方法的实现详细信息（如 `abstract` 或 `virtual`）。 使用 <xref:System.Type> 的 <xref:System.Type.GetMethods%2A> 或 <xref:System.Type.GetMethod%2A> 方法来调用特定方法。  
   
--   使用 <xref:System.Reflection.FieldInfo> 发现信息，如名称、访问修饰符（如 `public` 或 `private`）和一个字段的实现详细信息 （如 `static`）；并获取或设置字段值。  
+- 使用 <xref:System.Reflection.FieldInfo> 发现信息，如名称、访问修饰符（如 `public` 或 `private`）和一个字段的实现详细信息 （如 `static`）；并获取或设置字段值。  
   
--   使用 <xref:System.Reflection.EventInfo> 发现信息（如名称、事件处理程序的数据类型、自定义特性、声明类型以及事件的反射的类型），并添加或删除事件处理程序。  
+- 使用 <xref:System.Reflection.EventInfo> 发现信息（如名称、事件处理程序的数据类型、自定义特性、声明类型以及事件的反射的类型），并添加或删除事件处理程序。  
   
--   使用 <xref:System.Reflection.PropertyInfo> 发现信息（如名称、数据类型、声明类型，反射的类型和属性的只读或可写状态），并获取或设置属性值。  
+- 使用 <xref:System.Reflection.PropertyInfo> 发现信息（如名称、数据类型、声明类型，反射的类型和属性的只读或可写状态），并获取或设置属性值。  
   
--   使用 <xref:System.Reflection.ParameterInfo> 发现信息，如参数的名称、数据类型、参数是输入参数还是输出参数以及参数在方法签名中的位置。  
+- 使用 <xref:System.Reflection.ParameterInfo> 发现信息，如参数的名称、数据类型、参数是输入参数还是输出参数以及参数在方法签名中的位置。  
   
--   使用 <xref:System.Reflection.CustomAttributeData> 在于应用程序域的仅反射上下文中工作时发现有关自定义特性的信息。 <xref:System.Reflection.CustomAttributeData> 使你能够检查特性，而无需创建它们的实例。  
+- 使用 <xref:System.Reflection.CustomAttributeData> 在于应用程序域的仅反射上下文中工作时发现有关自定义特性的信息。 <xref:System.Reflection.CustomAttributeData> 使你能够检查特性，而无需创建它们的实例。  
   
  <xref:System.Reflection.Emit> 命名空间的类提供一种专用形式的反射，使你能够在运行时生成类型。  
   

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591433"
 ---
 # <a name="how-to-write-services-programmatically"></a>如何：以编程方式编写服务
 如果选择不使用 Windows 服务项目模板，则可以通过自行设置继承和其他基础结构元素来编写自己的服务。 当以编程方式创建服务时，必须执行以下几个步骤（否则，模板将为你处理）：  
   
--   必须将服务类设置为从 <xref:System.ServiceProcess.ServiceBase> 类继承。  
+- 必须将服务类设置为从 <xref:System.ServiceProcess.ServiceBase> 类继承。  
   
--   必须为服务项目创建 `Main` 方法，该方法定义要运行的服务并在其上调用 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。  
+- 必须为服务项目创建 `Main` 方法，该方法定义要运行的服务并在其上调用 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。  
   
--   必须替代 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 过程并填入你希望它们运行的任何代码。  
+- 必须替代 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 过程并填入你希望它们运行的任何代码。  
   
 ### <a name="to-write-a-service-programmatically"></a>以编程方式编写服务  
   
 1. 创建一个空项目并通过以下步骤创建对必要命名空间的引用：  
   
-    1.  在“解决方案资源管理器”中，右键单击“引用”节点，然后单击“添加引用”。  
+    1. 在“解决方案资源管理器”中，右键单击“引用”节点，然后单击“添加引用”。  
   
-    2.  在“.NET Framework”选项卡上，滚动到“System.dll”，然后单击“选择”。  
+    2. 在“.NET Framework”选项卡上，滚动到“System.dll”，然后单击“选择”。  
   
-    3.  滚动到“System.ServiceProcess.dll”，然后单击“选择”。  
+    3. 滚动到“System.ServiceProcess.dll”，然后单击“选择”。  
   
-    4.  单击 **“确定”**。  
+    4. 单击 **“确定”**。  
   
 2. 添加一个类并将其配置为从 <xref:System.ServiceProcess.ServiceBase> 继承：  
   

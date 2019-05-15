@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200385"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582968"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用属性（C# 编程指南）
 属性结合了字段和方法的多个方面。 对于对象的用户来说，属性似乎是一个字段，访问属性需要相同的语法。 对于类的实现者来说，属性是一两个代码块，表示 [get](../../../csharp/language-reference/keywords/get.md) 访问器和/或 [set](../../../csharp/language-reference/keywords/set.md) 访问器。 读取属性时，执行 `get` 访问器的代码块；向属性赋予新值时，执行 `set` 访问器的代码块。 将不带 `set` 访问器的属性视为只读。 将不带 `get` 访问器的属性视为只写。 将具有以上两个访问器的属性视为读写。  
@@ -85,11 +85,11 @@ ms.locfileid: "57200385"
   
  以下内容是前一示例中的要点：  
   
--   派生类中的属性 `Name` 隐藏基类中的属性 `Name`。 在这种情况下，`new` 修饰符用于派生类的属性声明中：  
+- 派生类中的属性 `Name` 隐藏基类中的属性 `Name`。 在这种情况下，`new` 修饰符用于派生类的属性声明中：  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   `(Employee)` 转换用于访问基类中的隐藏属性：  
+- `(Employee)` 转换用于访问基类中的隐藏属性：  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

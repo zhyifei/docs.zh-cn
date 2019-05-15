@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560331"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587390"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport（C# 编译器选项）
 指定应使调试信息置于文件中供以后分析。  
@@ -31,19 +31,19 @@ ms.locfileid: "54560331"
 ## <a name="remarks"></a>备注  
  -bugreport 选项指定以下信息应置于 `file` 中：  
   
--   编译中所有源代码文件副本。  
+- 编译中所有源代码文件副本。  
   
--   编译中使用的编译器选项列表。  
+- 编译中使用的编译器选项列表。  
   
--   有关编译器、运行时和操作系统的版本信息。  
+- 有关编译器、运行时和操作系统的版本信息。  
   
--   引用的程序集和模块（保存为十六进制数字），.NET Framework 和 SDK 随附的程序集除外。  
+- 引用的程序集和模块（保存为十六进制数字），.NET Framework 和 SDK 随附的程序集除外。  
   
--   编译器输出（如有）。  
+- 编译器输出（如有）。  
   
--   问题说明（系统会提示你提供此信息）。  
+- 问题说明（系统会提示你提供此信息）。  
   
--   有关你认为应如何修复问题的说明（系统会提示你提供此信息）。  
+- 有关你认为应如何修复问题的说明（系统会提示你提供此信息）。  
   
  如果此选项与 -errorreport: prompt 或 -errorreport:send 一起使用，文件中的信息将发送到 Microsoft Corporation。  
   

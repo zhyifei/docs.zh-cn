@@ -2,12 +2,12 @@
 title: 队列和可靠会话
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643532"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557158"
 ---
 # <a name="queues-and-reliable-sessions"></a>队列和可靠会话
 队列和可靠会话是实现可靠消息传递的 Windows Communication Foundation (WCF) 功能。 在本部分中包含的主题讨论 WCF 可靠消息传递功能。  
@@ -31,7 +31,7 @@ ms.locfileid: "64643532"
   
  可靠会话提供低延迟可靠消息传送。 可靠会话通过任何代理或中介为 SOAP 消息提供的功能相当于 TCP 通过 IP 网桥为数据包提供的功能。 有关可靠会话的详细信息，请参阅[可靠会话](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
-### <a name="queues"></a>队列  
+## <a name="queues"></a>队列  
  WCF 中的队列提供可靠传送消息以及分离的源和目标高延迟成本之间。 WCF 排队通信建立在消息队列 (也称为 MSMQ) 之上。  
   
  MSMQ 作为可选项随 Windows 提供，并作为 NT 服务运行。 它捕获代表源的传输队列中要传输的消息，并将消息传递到目标队列。 目标队列代表目标接受消息，待以后目标请求消息时传递。 MSMQ 队列管理器实现可靠的消息传输协议，以使消息不会在传输过程中丢失。 协议可以是本机的，也可以是基于 SOAP 的协议，例如 Soap 可靠消息传递协议 (SRMP)。  

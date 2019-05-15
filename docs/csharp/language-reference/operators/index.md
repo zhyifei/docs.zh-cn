@@ -1,6 +1,6 @@
 ---
 title: C# 运算符
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,34 +18,34 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689809"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452369"
 ---
 # <a name="c-operators"></a>C# 运算符
 
-C# 提供了许多运算符，这些运算符是指定要在表达式中执行哪些操作（数学、索引、函数调用等等）的符号。 可以[重载](../../programming-guide/statements-expressions-operators/overloadable-operators.md)许多应用于用户定义类型的运算符，从而更改其含义。
+C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术运算符](arithmetic-operators.md)使用内置数值类型的操作数执行算术运算，[布尔逻辑运算符](boolean-logical-operators.md)使用 [bool](../keywords/bool.md) 操作数执行逻辑运算。
 
-对整数类型执行的运算（如 `==`、`!=`、`<`、`>`、`&`、`|`）通常也可对枚举 (`enum`) 类型执行。
+用户定义类型可以重载某些运算符来定义该类型的操作数的相应行为。 有关详细信息，请参阅[运算符](../keywords/operator.md)关键字一文。
 
-以下章节按最高优先级到最低优先级的顺序列示 C# 运算符。 各章节内运算符的优先级相同。
+以下各部分按最高优先级到最低优先级的顺序列出 C# 运算符。 各章节内运算符的优先级相同。
 
 ## <a name="primary-operators"></a>主要运算符
 
 以下是具有最高优先级的运算符。
 
-[x.y](member-access-operator.md)：成员访问。
+[x.y](member-access-operators.md#member-access-operator-)：成员访问。
 
-[x?.y](null-conditional-operators.md)：null 条件成员访问。 如果左操作数计算结果为 `null`，则返回 `null`。
+[x?.y](member-access-operators.md#null-conditional-operators--and-)：null 条件成员访问。 如果左操作数计算结果为 `null`，则返回 `null`。
 
-[x?[y]](null-conditional-operators.md)：null 条件索引访问。 如果左操作数计算结果为 `null`，则返回 `null`。
+[x?[y]](member-access-operators.md#null-conditional-operators--and-)：null 条件数组元素或类型索引器访问。 如果左操作数计算结果为 `null`，则返回 `null`。
 
-[f(x)](invocation-operator.md)：函数调用。
+[f(x)](member-access-operators.md#invocation-operator-)：方法调用或委托调用。
 
-[a&#91;x&#93;](index-operator.md)：聚合对象索引。
+[a&#91;x&#93;](member-access-operators.md#indexer-operator-)：数组元素或类型索引器访问。
 
 [x++](arithmetic-operators.md#increment-operator-)：后缀递增。 先返回 x 值，然后用加 1（通常加整数 1）后的 x 值更新存储位置。
 
@@ -61,9 +61,13 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) - 生成类型 T 的默认值。
 
+[nameof](../keywords/nameof.md)：获取变量、类型或成员的简单（非限定）名称作为常数字符串。
+
 [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)：声明并返回委托实例。
 
 [sizeof](../keywords/sizeof.md)：返回类型操作数的大小（以字节为单位）。
+
+[stackalloc](../keywords/stackalloc.md)：在堆栈上分配内存块。
 
 [->](dereference-operator.md)：指针取消引用与成员访问相结合。
 
@@ -125,13 +129,13 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 这些运算符的优先级比下一章节高，比上一章节低。
 
-[x \< y](less-than-operator.md)：小于（如果 x 小于 y，则为 true）。
+[x \< y](comparison-operators.md#less-than-operator-)：小于（如果 x 小于 y，则为 true）。
 
-[x > y](greater-than-operator.md)：大于（如果 x 大于 y，则为 true）。
+[x > y](comparison-operators.md#greater-than-operator-)：大于（如果 x 大于 y，则为 true）。
 
-[x \<= y](less-than-equal-operator.md)：小于或等于。
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-)：小于或等于。
 
-[x >= y](greater-than-equal-operator.md)：大于或等于。
+[x >= y](comparison-operators.md#greater-than-or-equal-operator-)：大于或等于。
 
 [is](../keywords/is.md)：类型兼容性。 如果求值后的左操作数可以转换为右操作数中指定的类型（静态类型），则返回 true。
 
@@ -187,7 +191,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 [t ? x : y](conditional-operator.md) - 如果测试 `t` 计算结果为 true，则计算并返回 `x`；否则，计算并返回 `y`。
 
-## <a name="assignment-and-lambda-operators"></a>赋值和 Lambda 运算符
+## <a name="assignment-and-lambda-operators"></a>赋值和 lambda 运算符
 
 这些运算符的优先级比下一章节高，比上一章节低。
 

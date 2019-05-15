@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329513"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591515"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe（程序集绑定日志查看器）
 程序集绑定日志查看器显示程序集绑定的详细信息。 这些信息有助于你诊断 .NET Framework 无法在运行时找到程序集的原因。 这些失败通常由以下因素导致：部署到错误位置的程序集、不再有效的本机映像或者版本号或区域性不匹配。 如果公共语言运行时未能找到程序集，则通常会在你的应用程序中表现为 <xref:System.TypeLoadException>。  
@@ -51,17 +51,17 @@ fuslogvw
   
      该工具将显示以下有关所选绑定失败的详细信息：  
   
-    -   绑定失败的具体原因，例如“未找到文件”或“版本不匹配”。  
+    - 绑定失败的具体原因，例如“未找到文件”或“版本不匹配”。  
   
-    -   与启动绑定的应用程序有关的信息，包括其名称、应用程序的根目录 (AppBase) 以及专用搜索路径的说明（如果具有此类路径）。  
+    - 与启动绑定的应用程序有关的信息，包括其名称、应用程序的根目录 (AppBase) 以及专用搜索路径的说明（如果具有此类路径）。  
   
-    -   该工具要查找的程序集的标识。  
+    - 该工具要查找的程序集的标识。  
   
-    -   已经应用的任何应用程序、发行者或管理员版本策略的说明。  
+    - 已经应用的任何应用程序、发行者或管理员版本策略的说明。  
   
-    -   是否已在[全局程序集缓存](../../../docs/framework/app-domains/gac.md)中找到了该程序集。  
+    - 是否已在[全局程序集缓存](../../../docs/framework/app-domains/gac.md)中找到了该程序集。  
   
-    -   所有探测 URL 的列表。  
+    - 所有探测 URL 的列表。  
   
  以下示例日志条目显示了与失败的程序集绑定有关的详细信息。  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>从日志中删除所有条目  
   
--   单击“全部删除”按钮。  
+- 单击“全部删除”按钮。  
   
 ### <a name="to-refresh-the-user-interface"></a>刷新用户界面  
   
--   单击“刷新”按钮。 查看器在其运行时不会自动检测新的日志条目。 必须使用“刷新”按钮来显示它们。  
+- 单击“刷新”按钮。 查看器在其运行时不会自动检测新的日志条目。 必须使用“刷新”按钮来显示它们。  
   
 ### <a name="to-change-the-log-settings"></a>更改日志设置  
   
--   单击“设置”按钮以打开“日志设置”对话框。  
+- 单击“设置”按钮以打开“日志设置”对话框。  
   
 ### <a name="to-view-the-about-dialog"></a>查看“关于”对话框  
   
--   单击“关于”按钮。  
+- 单击“关于”按钮。  
   
 ## <a name="binding-logs-for-native-images"></a>本机映像的绑定日志  
  默认情况下，Fuslogvw.exe 将记录普通的程序集绑定请求。 此外，还可以记录使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)创建的本机映像的程序集绑定。  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>记录本机映像的程序集绑定  
   
--   在“日志类别”组中，选择“本机映像”选项按钮。  
+- 在“日志类别”组中，选择“本机映像”选项按钮。  
   
  下面的日志显示了一个由于在为应用程序创建本机映像时不存在的依赖项引起的失败。 如果运行时的依赖项不同于运行 Ngen.exe 时的依赖项，则不允许绑定至本机映像。  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>禁用日志记录  
   
--   选择“已禁用日志”选项按钮。  注意，默认情况下此选项处于选中状态。  
+- 选择“已禁用日志”选项按钮。  注意，默认情况下此选项处于选中状态。  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>记录程序集绑定异常  
   
--   选择“记录异常文本”选项按钮。 仅在异常文本中记录最低详细程度的合成日志信息。 若要查看完整信息，请使用其他设置之一。  
+- 选择“记录异常文本”选项按钮。 仅在异常文本中记录最低详细程度的合成日志信息。 若要查看完整信息，请使用其他设置之一。  
   
      请参见有关以非特定域方式加载的程序集的“重要事项”说明。  
   
 #### <a name="to-log-assembly-bind-failures"></a>记录程序集绑定失败  
   
--   选择“记录失败绑定到磁盘”选项按钮。  
+- 选择“记录失败绑定到磁盘”选项按钮。  
   
      请参见有关以非特定域方式加载的程序集的“重要事项”说明。  
   
 #### <a name="to-log-all-assembly-binds"></a>记录所有程序集绑定  
   
--   选择“记录所有绑定到磁盘”选项按钮。  
+- 选择“记录所有绑定到磁盘”选项按钮。  
   
      请参见有关以非特定域方式加载的程序集的“重要事项”说明。  
   

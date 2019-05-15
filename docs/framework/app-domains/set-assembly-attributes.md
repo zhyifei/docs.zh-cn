@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607549"
 ---
 # <a name="setting-assembly-attributes"></a>设置程序集特性
 程序集特性是提供程序集相关信息的值。 特性分为以下几组信息：  
   
--   程序集标识特性。  
+- 程序集标识特性。  
   
--   信息性特性。  
+- 信息性特性。  
   
--   程序集清单特性。  
+- 程序集清单特性。  
   
--   强名称特性。  
+- 强名称特性。  
   
 ## <a name="assembly-identity-attributes"></a>程序集标识特性。  
  三个特性与强名称（如果适用）组合起来可以确定程序集的标识：名称、版本和区域性。 这些特性构成程序集的完整名称，在代码中引用程序集时必需使用。 特性可用于设置程序集的版本和区域性。 编译器或 [程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 依据包含程序集清单的文件在创建该程序集时设置名称值。  

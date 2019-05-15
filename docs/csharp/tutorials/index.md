@@ -2,12 +2,12 @@
 title: C# 教程
 description: 查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706307"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755771"
 ---
 # <a name="c-tutorials"></a>C# 教程
 
@@ -50,6 +50,7 @@ ms.locfileid: "61706307"
 * [可为空引用类型](nullable-reference-types.md)：演示如何使用可为空引用类型来表示空引用的意图。
 * [将项目更新为使用可以为 null 的引用类型](upgrade-to-nullable-references.md)：展示了将现有项目升级为使用可以为 null 的引用类型的技术。
 * [使用模式匹配扩展数据功能](pattern-matching.md)：展示了如何使用模式匹配来扩展核心功能外的类型。
+* [使用索引和范围处理数据序列](ranges-indexes.md)：演示用于访问顺序数据容器的单个元素或范围的新的方便语法。
 
 ## <a name="general-tutorials"></a>常规教程
 

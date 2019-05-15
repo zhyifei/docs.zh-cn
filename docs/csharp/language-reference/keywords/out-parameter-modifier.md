@@ -5,12 +5,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 704b66e6cdec5caa47f85ed8e3acbd2a6a73b730
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125737"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598245"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 参数修饰符（C# 参考）
 `out` 关键字通过引用传递参数。 它让形参成为实参的别名，这必须是变量。 换而言之，对形参执行的任何操作都是对实参执行的。 它与 [ref](ref.md) 关键字相似，只不过 `ref` 要求在传递之前初始化变量。 它也类似于 [in](in-parameter-modifier.md) 关键字，只不过 `in` 不允许通过调用方法来修改参数值。 若要使用 `out` 参数，方法定义和调用方法均必须显式使用 `out` 关键字。 例如:  
@@ -44,9 +44,9 @@ class CS0663_Example
   
 不能将 `in`、`ref` 和 `out` 关键字用于以下几种方法：  
   
--   异步方法，通过使用 [async](../../../csharp/language-reference/keywords/async.md) 修饰符定义。  
+- 异步方法，通过使用 [async](../../../csharp/language-reference/keywords/async.md) 修饰符定义。  
   
--   迭代器方法，包括 [yield return](../../../csharp/language-reference/keywords/yield.md) 或 `yield break` 语句。  
+- 迭代器方法，包括 [yield return](../../../csharp/language-reference/keywords/yield.md) 或 `yield break` 语句。  
 
 ## <a name="declaring-out-parameters"></a>声明 `out` 参数   
 
