@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600945"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589820"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中，基于分类实施数据类型。 Visual Basic 数据类型可以根据特定类型的变量存储其自己的数据或指向的数据分类。 如果将存储其自己的数据很*值类型*; 如果它包含一个指针，它是的内存中的其他位置的数据*引用类型*。  
@@ -46,7 +46,7 @@ ms.locfileid: "64600945"
   
 - 委托  
   
- 类是*引用类型*。 出于此原因，如引用类型`Object`并`String`支持的[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类。 请注意，每个数组是引用类型，即使其成员是值类型。  
+ 类是*引用类型*。 出于此原因，如引用类型`Object`和`String`支持的.NET Framework 类。 请注意，每个数组是引用类型，即使其成员是值类型。  
   
  由于每个引用类型表示的基础的.NET Framework 类，因此必须使用[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)关键字时对其进行初始化。 下面的语句初始化数组。  
   

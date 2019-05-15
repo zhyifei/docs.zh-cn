@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753615"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591563"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的对象和类
 
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 使用对象，只需声明变量和过程一次，即可根据需要随时重用它们。 例如，如果要向应用程序添加拼写检查，可以定义所有变量和支持函数，以提供拼写检查功能。 如果将拼写检查创建为类，可以添加对已编译程序集的引用，从而在其他应用程序中重用此类。 更好的是，可以使用别人已经开发的拼写检查类，从而减少自己的工作量。
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 提供了许多可用的组件示例。 下面的示例使用 <xref:System> 命名空间中的 <xref:System.TimeZone> 类。 <xref:System.TimeZone> 提供的成员可检索当前计算机系统的时区信息。
+.NET Framework 提供了许多可供使用的组件的示例。 下面的示例使用 <xref:System> 命名空间中的 <xref:System.TimeZone> 类。 <xref:System.TimeZone> 提供的成员可检索当前计算机系统的时区信息。
 
 ```vb
 Public Sub examineTimeZone()

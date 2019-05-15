@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801707"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583740"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>如何：在 Windows 窗体中导航数据
 在 Windows 应用程序中，浏览数据源中的记录的最简单方法是将绑定<xref:System.Windows.Forms.BindingSource>到数据源，然后将控件绑定到组件<xref:System.Windows.Forms.BindingSource>。 您然后可以使用内置的导航方法上<xref:System.Windows.Forms.BindingSource>此类<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用这些方法将调整<xref:System.Windows.Forms.BindingSource.Position%2A>并<xref:System.Windows.Forms.BindingSource.Current%2A>的属性<xref:System.Windows.Forms.BindingSource>适当。 此外可以查找某个项，并将其设置为当前项，通过设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性。  
@@ -26,7 +26,7 @@ ms.locfileid: "61801707"
 1. 设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性的<xref:System.Windows.Forms.BindingSource>绑定到的记录的位置转到数据。 下面的示例演示如何使用<xref:System.Windows.Forms.BindingSource.MoveNext%2A>方法<xref:System.Windows.Forms.BindingSource>递增<xref:System.Windows.Forms.BindingSource.Position%2A>属性时`nextButton`单击。 <xref:System.Windows.Forms.BindingSource>与相关联`Customers`数据集的表`Northwind`。  
   
     > [!NOTE]
-    >  设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性的第一个或最后一个记录之外的值不会导致错误，作为[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]将不允许你将位置设置为列表的边界之外的值。 如果是十分重要的应用程序以了解是否已在第一个或最后一条记录，，包括逻辑来测试是否将超过数据元素计数。  
+    >  设置<xref:System.Windows.Forms.BindingSource.Position%2A>因为.NET Framework 将允许你将位置设置为的值超出了列表的界限，属性的第一个或最后一个记录之外的值不会导致出现错误。 如果是十分重要的应用程序以了解是否已在第一个或最后一条记录，，包括逻辑来测试是否将超过数据元素计数。  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  

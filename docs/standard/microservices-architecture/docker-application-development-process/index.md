@@ -1,15 +1,13 @@
 ---
 title: 基于 Docker 的应用程序的开发流程
 description: 获取开发基于 Docker 应用程序的选项的高级概述。 使用所选的 Visual Studio for Windows、Visual Studio for Mac 或 Visual Studio Code 获得多平台支持（Windows、Mac 和 Linux）。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: de4ec036be4611ee56823ced3e0cddca5c32b900
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977689"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640076"
 ---
 # <a name="development-process-for-docker-based-applications"></a>基于 Docker 的应用程序的开发流程
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034536"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583805"
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
-在早期版本的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的编译时检查的值未出现，串联的字符串包含连接字符串，以便在运行时，不正确的关键字生成<xref:System.ArgumentException>。 每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序支持的连接字符串关键字的语法不同，这使得手动构造有效连接字符串变得很困难。 为了解决这个问题，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 为每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序引入了新的连接字符串生成器。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序及其关联的连接字符串生成器类。  
+在早期版本的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的编译时检查的值未出现，串联的字符串包含连接字符串，以便在运行时，不正确的关键字生成<xref:System.ArgumentException>。 每个.NET Framework 数据提供程序支持不同的语法的连接字符串关键字，这使得很难手动构造有效的连接字符串。 若要解决此问题， [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 引入了新的连接字符串生成器，每个.NET Framework 数据提供程序。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了.NET Framework 数据提供程序和其关联的连接字符串生成器类。  
   
 |提供程序|ConnectionStringBuilder 类|  
 |--------------|-----------------------------------|  

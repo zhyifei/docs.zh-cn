@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80ac92d545d9be7a4a611038eaaadbbdbe2e8ecf
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967142"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590324"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>如何：旋转、反射和倾斜图像
 可以旋转、 反射和倾斜图像通过指定的原始图像的左上角、 右上方和左下角的目标点。 三个目标点确定将原始矩形图像映射到一个平行四边形的仿射转换。  
@@ -46,7 +46,7 @@ ms.locfileid: "61967142"
  [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 请务必替换`Stripes.bmp`替换为你的系统上有效的图像的路径。  
+ 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 请务必替换`Stripes.bmp`替换为你的系统上有效的图像的路径。  
   
 ## <a name="see-also"></a>请参阅
 
