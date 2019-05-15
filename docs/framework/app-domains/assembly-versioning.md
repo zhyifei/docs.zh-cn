@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305190"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593657"
 ---
 # <a name="assembly-versioning"></a>程序集版本控制
 使用公共语言运行时的程序集的所有版本控制都在程序集级别上进行。 一个程序集的特定版本和依赖程序集的版本在该程序集的清单中记录下来。 除非被配置文件（应用程序配置文件、发行者策略文件和计算机的管理员配置文件）中的显式版本策略重写，否则运行时的默认版本策略是，应用程序只与它们生成和测试时所用的程序集版本一起运行。  
@@ -42,9 +42,9 @@ ms.locfileid: "59305190"
 ## <a name="version-information"></a>版本信息  
  每一程序集都用两种截然不同的方法来表示版本信息：  
   
--   程序集的版本号，该版本号与程序集名称及区域性信息都是程序集标识的组成部分。 该号码将由运行时用来强制实施版本策略，它在运行时的类型解析进程中起着重要的作用。  
+- 程序集的版本号，该版本号与程序集名称及区域性信息都是程序集标识的组成部分。 该号码将由运行时用来强制实施版本策略，它在运行时的类型解析进程中起着重要的作用。  
   
--   信息性版本，这是一个字符串，表示仅为提醒的目的而包括的附加版本信息。  
+- 信息性版本，这是一个字符串，表示仅为提醒的目的而包括的附加版本信息。  
   
 ### <a name="assembly-version-number"></a>程序集版本号  
  每一程序集都有一个版本号作为其标识的一部分。 因此，如果两个程序集具有不同的版本号，运行时就会将它们视作完全不同的程序集。 此版本号实际表示为具有以下格式的四部分号码：  

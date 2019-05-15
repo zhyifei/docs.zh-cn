@@ -2,12 +2,12 @@
 title: 在加载或分析 XML1 时保留空白
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 3dbbbc8412cdef6ea62197171bb950d6c5344350
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68b52f1d69c57b4292f02fea932e392de4a3ffc8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704938"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596803"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>在加载或分析 XML 时保留空白
 本主题介绍了如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白符行为。  
@@ -21,13 +21,13 @@ ms.locfileid: "54704938"
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>用于填充 XML 树的方法的行为  
  <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中的以下方法用于填充 XML 树。 可以从文件、<xref:System.IO.TextReader>、<xref:System.Xml.XmlReader> 或字符串填充 XML 树：  
   
--   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
  如果方法不采用 <xref:System.Xml.Linq.LoadOptions> 作为参数，则该方法将不会保留无意义的空白。  
   

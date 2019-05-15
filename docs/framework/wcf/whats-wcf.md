@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e51b93d53e1ad65b2f19f81de8833e83bfb18c1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613038"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582763"
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 Windows Communication Foundation (WCF) 是一个框架，用于构建面向服务的应用程序。 使用 WCF，您可以发送数据作为异步消息从一个服务终结点到另一个。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：
@@ -52,7 +52,7 @@ WCF 包含以下功能集。 有关详细信息，请参阅[WCF 功能详细信�
 
 - **数据协定**
 
-     因为使用构建 WCF [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，它还包括代码友好提供你想要强制实施的约定的方法。 数据协定就是其中一种通用类型的协定。 实质上，当您使用 Visual C# 或 Visual Basic 对服务进行编码时，处理数据的最简单方法是使用属于数据实体的属性创建表示该数据实体的类。 WCF 包含用于在这一简便方式处理数据的综合系统。 在创建了表示数据的类之后，服务会自动生成使客户端能够符合所设计数据类型的元数据。 有关详细信息，请参阅[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+     因为 WCF 使用.NET Framework 生成的它还包括代码友好提供你想要强制实施的约定的方法。 数据协定就是其中一种通用类型的协定。 实质上，当您使用 Visual C# 或 Visual Basic 对服务进行编码时，处理数据的最简单方法是使用属于数据实体的属性创建表示该数据实体的类。 WCF 包含用于在这一简便方式处理数据的综合系统。 在创建了表示数据的类之后，服务会自动生成使客户端能够符合所设计数据类型的元数据。 有关详细信息，请参阅[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
 - **安全性**
 

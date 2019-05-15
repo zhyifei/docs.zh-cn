@@ -5,18 +5,18 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4902cd8ab97771f75e5421a9de7ed1150a7443a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640503"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586578"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows 窗体中的自动缩放
 
-借助自动缩放功能，在某台计算机上以某种显示分辨率或系统字体设计的窗体及其控件可以在其他计算机上以不同的显示分辨率或系统字体适当显示。 它确保窗体及其控件将以智能方式调整大小，以便与本机 Windows 以及用户和其他开发人员的计算机上的其他应用程序保持一致。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 支持自动缩放和视觉样式，这使 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序可以在与每个用户的计算机上的本机 Windows 应用程序比较时保持一致的外观和感觉。
+借助自动缩放功能，在某台计算机上以某种显示分辨率或系统字体设计的窗体及其控件可以在其他计算机上以不同的显示分辨率或系统字体适当显示。 它确保窗体及其控件将以智能方式调整大小，以便与本机 Windows 以及用户和其他开发人员的计算机上的其他应用程序保持一致。 自动缩放和视觉样式的.NET Framework 的支持使.NET Framework 应用程序保持一致的外观和感觉，与每个用户的计算机上的本机 Windows 应用程序相比。
 
-大多数情况下，自动缩放可在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 及更高版本中按预期方式工作。 但是，字体方案更改可能会产生问题。 有关如何解决此问题的示例，请参阅[如何：响应 Windows 窗体应用程序中的字体方案更改](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
+大多数情况下，自动缩放可充当应出现在.NET Framework 版本 2.0 及更高版本。 但是，字体方案更改可能会产生问题。 有关如何解决此问题的示例，请参阅[如何：响应 Windows 窗体应用程序中的字体方案更改](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)。
 
 ## <a name="need-for-automatic-scaling"></a>自动缩放的必要性
 
@@ -24,11 +24,11 @@ ms.locfileid: "61640503"
 
 如果应用程序是针对某种显示分辨率设计的，会发生类似情况。 最常见的显示分辨率为 96 点 / 英寸 (DPI) 等于 100%显示缩放，但更高分辨率显示支持 125%、 150%、 200%(哪个分别等于 120、 144 和 192 DPI) 和更高版本也越来越常见。 如果不进行调整，针对某个分辨率设计的应用程序（特别是基于图形的应用程序）在其他分辨率上运行时就会显示太大或太小。
 
-自动缩放寻求解决这些问题，方法是更具相对字体大小或显示分辨率自动调整窗体及其子控件的大小。 Windows 操作系统支持使用一种名为对话框单位的相对度量单位的自动缩放对话框。 对话框单位基于系统字体，并且它与像素的关系可由 Win32 SDK 函数 `GetDialogBaseUnits` 确定。 当用户更改 Windows 使用的主题时，所有对话框均自动进行相应调整。 此外，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]支持自动缩放，根据默认系统字体或显示分辨率。 或者，可在应用程序中禁用自动缩放。
+自动缩放寻求解决这些问题，方法是更具相对字体大小或显示分辨率自动调整窗体及其子控件的大小。 Windows 操作系统支持使用一种名为对话框单位的相对度量单位的自动缩放对话框。 对话框单位基于系统字体，并且它与像素的关系可由 Win32 SDK 函数 `GetDialogBaseUnits` 确定。 当用户更改 Windows 使用的主题时，所有对话框均自动进行相应调整。 此外，.NET Framework 支持自动缩放，根据默认系统字体或显示分辨率。 或者，可在应用程序中禁用自动缩放。
 
 ## <a name="original-support-for-automatic-scaling"></a>自动缩放的原始支持
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的版本 1.0 和 1.1 以依赖于 UI 使用的 Windows 默认字体（由 Win32 SDK 值 **DEFAULT_GUI_FONT** 表示）的直接方式支持自动缩放。 通常，此字体只在显示分辨率更改时才更改。 已使用以下机制来实现自动缩放：
+版本 1.0 和 1.1 版的.NET Framework 支持自动缩放直接的方式依赖 UI，由 Win32 SDK 值使用的 Windows 默认字体**DEFAULT_GUI_FONT**。 通常，此字体只在显示分辨率更改时才更改。 已使用以下机制来实现自动缩放：
 
 1. 在设计时，将 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 属性（现已弃用）设置为开发人员计算机上默认系统字体的高度和宽度。
 
@@ -46,18 +46,18 @@ ms.locfileid: "61640503"
 
 - 窗体及其子控件只可由计算机分辨率相同的多名开发人员进行同时设计。 同样，如果窗体依赖与父窗体关联的分辨率，也会被继承。
 
-- 与 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 版本引入的较新布局管理器（如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>）不兼容。
+- 它不是与.NET framework 版本 2.0 中，如引入的较新布局管理器兼容<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。
 
 - 它不支持直接基于与 [!INCLUDE[compact](../../../includes/compact-md.md)] 兼容所需的显示分辨率进行缩放。
 
-虽然 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 版本为了维护向后兼容保留了此机制，但它已被下述更强大的缩放机制取代。 因此，<xref:System.Windows.Forms.Form.AutoScale%2A><xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和某些 <xref:System.Windows.Forms.Control.Scale%2A> 重载被标记为“已过时”。
+尽管在.NET Framework 2.0 版，以保持向后兼容性保留了此机制，但它已由下文所述的更可靠的缩放机制取代。 因此，<xref:System.Windows.Forms.Form.AutoScale%2A><xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和某些 <xref:System.Windows.Forms.Control.Scale%2A> 重载被标记为“已过时”。
 
 > [!NOTE]
-> 将旧代码升级到 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 版时，可放心删除对这些成员的引用。
+> 将旧代码升级到.NET Framework 2.0 版时，可以安全地删除对这些成员的引用。
 
 ## <a name="current-support-for-automatic-scaling"></a>当前支持的自动缩放
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 版本通过引入以下对 Windows 窗体的自动缩放的更改，克服了上述限制：
+.NET Framework 2.0 版通过引入以下更改 Windows 窗体的自动缩放，克服了上述限制：
 
 - 基本的缩放支持已移至 <xref:System.Windows.Forms.ContainerControl> 类，以便窗体、本机复合控件和用户控件均接收一致的缩放支持。 已添加新成员 <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>、<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>、<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 和 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>。
 

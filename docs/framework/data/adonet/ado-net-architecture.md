@@ -2,18 +2,18 @@
 title: ADO.NET 体系结构
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: e85100733e20b69cf6b8c52c58d250be869971cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592644"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584573"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 体系结构
 以前，数据处理主要依赖于基于连接的双层模型。 随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。  
   
 ## <a name="adonet-components"></a>ADO.NET 组件  
- [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] 用于访问和操作数据的两个主要组件是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序和 <xref:System.Data.DataSet>。  
+ 两个主要组件[!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)]访问和操作数据的.NET Framework 数据提供程序和<xref:System.Data.DataSet>。  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序  
  .NET Framework 数据提供程序是专门为数据操作以及快速、只进、只读访问数据而设计的组件。 `Connection` 对象提供到数据源的连接。 使用 `Command` 对象可以访问用于返回数据、修改数据、运行存储过程以及发送或检索参数信息的数据库命令。 `DataReader` 可从数据源提供高性能的数据流。 最后，`DataAdapter` 在 `DataSet` 对象和数据源之间起到桥梁作用。 `DataAdapter` 使用 `Command` 对象在数据源中执行 SQL 命令以向 `DataSet` 中加载数据，并将对 `DataSet` 中数据的更改协调回数据源。 有关详细信息，请参阅[.NET Framework 数据提供程序](../../../../docs/framework/data/adonet/data-providers.md)并[检索和修改 ADO.NET 中的数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)。  
@@ -21,7 +21,7 @@ ms.locfileid: "64592644"
 ### <a name="the-dataset"></a>DataSet  
  ADO.NET `DataSet` 是专门为独立于任何数据源的数据访问而设计的。 因此，它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 `DataSet` 包含一个或多个 <xref:System.Data.DataTable> 对象的集合，这些对象由数据行和数据列以及有关 `DataTable` 对象中数据的主键、外键、约束和关系信息组成。 有关详细信息，请参阅[数据集、 数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)。  
   
- 下图阐释了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序和 `DataSet` 之间的关系。  
+ 下图说明了.NET Framework 数据提供程序之间的关系和`DataSet`。  
   
  ![ADO.Net 图](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 ADO.NET 体系结构  
@@ -52,9 +52,9 @@ ADO.NET 体系结构
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于在 Web 或 Intranet 上部署数据服务。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。 有关详细信息，请参阅 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
 ## <a name="xml-and-adonet"></a>XML 和 ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 利用 XML 的功能来提供对数据的断开连接的访问。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 是与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 类一起设计的，它们都是同一个体系结构的组件。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 利用 XML 的功能来提供对数据的断开连接的访问。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 已设计的手协作与.NET Framework; 中的 XML 类它们都是一个体系结构的组件。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 类集中于 `DataSet` 对象中。 无论 XML 源是文件还是 XML 流，都可以用其中的数据来填充 `DataSet`。 无论 `DataSet` 中数据的源是什么，都可以将 `DataSet` 作为符合万维网联合会 (W3C) 的 XML 进行编写，其架构作为 XML 架构定义语言 (XSD) 架构。 由于 `DataSet` 的本机序列化格式为 XML，因此它是用于在层间移动数据的绝佳媒介，这使 `DataSet` 成为了与 XML Web 服务之间远程处理数据和架构上下文的最佳选择。 有关详细信息，请参阅 [XML 文档和数据](../../../../docs/standard/data/xml/index.md)。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 与.NET Framework 中的 XML 类聚合中`DataSet`对象。 无论 XML 源是文件还是 XML 流，都可以用其中的数据来填充 `DataSet`。 无论 `DataSet` 中数据的源是什么，都可以将 `DataSet` 作为符合万维网联合会 (W3C) 的 XML 进行编写，其架构作为 XML 架构定义语言 (XSD) 架构。 由于 `DataSet` 的本机序列化格式为 XML，因此它是用于在层间移动数据的绝佳媒介，这使 `DataSet` 成为了与 XML Web 服务之间远程处理数据和架构上下文的最佳选择。 有关详细信息，请参阅 [XML 文档和数据](../../../../docs/standard/data/xml/index.md)。  
   
 ## <a name="see-also"></a>请参阅
 

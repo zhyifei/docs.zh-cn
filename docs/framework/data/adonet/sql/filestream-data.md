@@ -2,12 +2,12 @@
 title: FILESTREAM 数据
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032480"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582706"
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 
@@ -20,7 +20,7 @@ FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数
 
 ## <a name="sqlclient-support-for-filestream"></a>SqlClient 对 FILESTREAM 的支持
 
-[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] SQL Server 数据提供程序<xref:System.Data.SqlClient>，支持对 FILESTREAM 数据使用读取和写入<xref:System.Data.SqlTypes.SqlFileStream>类中定义<xref:System.Data.SqlTypes>命名空间。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流读取数据可将数据从流传输到一个数据结构，例如一个字节数组。 写入操作可将数据从该数据结构传输到一个流。
+SQL Server 的.NET Framework 数据提供程序<xref:System.Data.SqlClient>，支持对 FILESTREAM 数据使用读取和写入<xref:System.Data.SqlTypes.SqlFileStream>类中定义<xref:System.Data.SqlTypes>命名空间。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流读取数据可将数据从流传输到一个数据结构，例如一个字节数组。 写入操作可将数据从该数据结构传输到一个流。
 
 ### <a name="creating-the-sql-server-table"></a>创建 SQL Server 表
 

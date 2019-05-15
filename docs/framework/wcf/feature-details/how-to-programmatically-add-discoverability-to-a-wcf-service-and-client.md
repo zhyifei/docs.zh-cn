@@ -2,12 +2,12 @@
 title: 如何：以编程方式向 WCF 服务和客户端添加可发现性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761541"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586621"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可发现性
 本主题说明如何使 Windows Communication Foundation (WCF) 服务可发现。 它基于[自托管](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
@@ -16,7 +16,7 @@ ms.locfileid: "61761541"
   
 1. 在 Visual Studio 2012 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
   
-2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 可能会看到错误消息，指出"系统。 ServiceModel.Discovery.dll 或其某个依赖项需要更高版本的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]比项目中指定..."如果看到此消息，请右键单击解决方案资源管理器中的项目并选择**属性**。 在中**项目属性**窗口中，请确保**目标框架**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 可能会看到错误消息，指出"系统。 ServiceModel.Discovery.dll 或其某个依赖项需要更高版本的.NET framework 与指定的项目中..."如果看到此消息，请右键单击解决方案资源管理器中的项目并选择**属性**。 在中**项目属性**窗口中，请确保**目标框架**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
 3. 打开 Service.cs 文件并添加下面的 `using` 语句。  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587622"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586684"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>数据协定中的枚举类型
 枚举可以用数据协定模型来表示。 本主题演练几个介绍编程模型的示例。  
@@ -39,7 +39,7 @@ ms.locfileid: "64587622"
   
  例如，您可以在发送端使用 `CarConditionEnum` 并且在接收端使用 `CarConditionWithNumbers`。 尽管发送端的 `Used` 使用值“1”而接收端使用值“20”，但是两端的 XML 表示形式均为 `<condition>Used</condition>`。  
   
- 若要包含在数据协定中，必须应用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，可以始终将特殊值 0（零）应用到枚举中，它是任何枚举的默认值。 但是，即使对于此特殊值零，也只能使用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性标记才能进行序列化。  
+ 若要包含在数据协定中，必须应用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性。 在.NET Framework 中，始终可以为枚举，这也是任何枚举的默认值应用特殊值 0 （零）。 但是，即使对于此特殊值零，也只能使用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性标记才能进行序列化。  
   
  以下为此规则的两种例外情况：  
   

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971959"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591495"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个复合控件；它是由可移动条隔开的两个面板。 当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
   
 > [!IMPORTANT]
->  在中**工具箱**，<xref:System.Windows.Forms.SplitContainer>控件替代<xref:System.Windows.Forms.Splitter>以前版本的 Visual Studio 中的控件。 相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 <xref:System.Windows.Forms.SplitContainer> 控件。 <xref:System.Windows.Forms.Splitter>类仍包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]为了兼容现有应用程序，但我们强烈建议你使用<xref:System.Windows.Forms.SplitContainer>为新项目的控件。  
+>  在中**工具箱**，<xref:System.Windows.Forms.SplitContainer>控件替代<xref:System.Windows.Forms.Splitter>以前版本的 Visual Studio 中的控件。 相较于 <xref:System.Windows.Forms.Splitter> 控件，优先选择 <xref:System.Windows.Forms.SplitContainer> 控件。 <xref:System.Windows.Forms.Splitter> 类仍包含在 .NET Framework 中，以便与现有应用程序兼容，但我们强烈建议为新项目使用 <xref:System.Windows.Forms.SplitContainer> 控件。  
   
  使用<xref:System.Windows.Forms.SplitContainer>控件，您可以创建复杂的用户界面; 通常情况下，在一个面板中的选项确定另一个面板中显示哪些对象。 这种安排对于显示和浏览信息非常有效。 具有两个面板使聚合区域中的信息和栏或"splitter，"使用户方便地调整面板大小。  
   

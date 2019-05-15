@@ -2,12 +2,12 @@
 title: 异步程序中的控制流 (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326198"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599740"
 ---
 # <a name="control-flow-in-async-programs-c"></a>异步程序中的控制流 (C#)
 
@@ -17,9 +17,9 @@ ms.locfileid: "59326198"
 
 下面的示例使用异步方法以字符串的形式下载指定网站的内容，并显示该字符串的长度。 此示例包含以下两种方法。
 
--   `startButton_Click`，它调用 `AccessTheWebAsync` 并显示结果。
+- `startButton_Click`，它调用 `AccessTheWebAsync` 并显示结果。
 
--   `AccessTheWebAsync`，它以字符串的形式下载网站的内容，并返回该字符串的长度。 `AccessTheWebAsync` 使用异步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 来下载内容。
+- `AccessTheWebAsync`，它以字符串的形式下载网站的内容，并返回该字符串的长度。 `AccessTheWebAsync` 使用异步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 来下载内容。
 
 编号的显示行显示在整个程序的策略点处，以帮助你了解程序的运行方式和说明被标记的每个点处发生的情况。 显示行标记为“1”到“6”。 该标签表示程序到达这些代码行的顺序。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616671"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586189"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 应用程序中的缓存
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
@@ -19,7 +19,7 @@ ms.locfileid: "64616671"
  .NET Framework 提供了缓存功能，可提高 Windows 客户端和服务器应用程序（包括 ASP.NET）的性能和可伸缩性。  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和早期版本中，ASP.NET 在 <xref:System.Web.Caching> 命名空间中提供内存中缓存实现。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 以前的版本中，缓存仅在 <xref:System.Web> 命名空间可用，因此，需要 ASP.NET 类上的一个依赖项。 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空间包含为 Web 和非 Web 应用程序设计的 API。  
+>  在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和早期版本中，ASP.NET 在 <xref:System.Web.Caching> 命名空间中提供内存中缓存实现。 在以前版本的.NET Framework，缓存是仅适用于<xref:System.Web>命名空间，因此，需要 ASP.NET 类上的依赖项。 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空间包含为 Web 和非 Web 应用程序设计的 API。  
   
 ## <a name="caching-data"></a>缓存数据  
  可使用 <xref:System.Runtime.Caching> 命名空间中的类来缓存信息。 此命名空间中的缓存类提供下列功能：  

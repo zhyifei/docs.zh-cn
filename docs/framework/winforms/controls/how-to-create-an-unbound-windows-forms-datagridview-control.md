@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-ms.openlocfilehash: 193e5228df8587dfc384d8ed97ee5e4e6c005215
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c488d0221080454a82e4c80f89964df0ee62f068
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611997"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591650"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>如何：创建未绑定的 Windows 窗体 DataGridView 控件
 下面的代码示例演示如何以编程方式填充 <xref:System.Windows.Forms.DataGridView> 控件，而无需将其绑定到数据源。 当有少量要以表格格式显示的数据时，这会非常有用。  
@@ -30,8 +30,6 @@ ms.locfileid: "64611997"
   
 - 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
-
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.DataGridView>

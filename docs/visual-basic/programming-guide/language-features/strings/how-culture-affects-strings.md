@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610420"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591961"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>区域性对字符串的影响 (Visual Basic)
 此帮助页讨论了 Visual Basic 如何使用区域性信息来执行的字符串转换和比较。  
@@ -38,7 +38,7 @@ ms.locfileid: "64610420"
 ## <a name="using-a-specific-culture"></a>使用非特定区域性  
  假设您正在开发的应用程序将日期 （格式为字符串） 发送到 Web 服务。 在这种情况下，你的应用程序必须使用特定区域性的字符串转换。 为了说明原因，请考虑使用的日期的结果<xref:System.DateTime.ToString>方法：如果应用程序使用该方法来设置日期 2005 年 7 月 4 日，它将返回"2005 年 7 月 4 日上午 12:00:00"运行时与美国英语 (EN-US) 区域性，但它会返回"04.07.2005 00:00:00"德语 (DE-DE) 区域性与运行时。  
   
- 如果您需要执行特定区域性格式的字符串转换，则应使用`CultureInfo`类的内置于[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 您可以创建一个新`CultureInfo`针对特定区域性的区域性的将名称传递给对象<xref:System.Globalization.CultureInfo.%23ctor%2A>构造函数。 中列出了支持的区域性名称<xref:System.Globalization.CultureInfo>类帮助页。  
+ 如果您需要执行特定区域性格式的字符串转换，则应使用`CultureInfo`.NET Framework 中内置的类。 您可以创建一个新`CultureInfo`针对特定区域性的区域性的将名称传递给对象<xref:System.Globalization.CultureInfo.%23ctor%2A>构造函数。 中列出了支持的区域性名称<xref:System.Globalization.CultureInfo>类帮助页。  
   
  或者，可以获取的实例*固定区域性*从<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>属性。 固定区域性基于英语的区域性，但有一些差异。 例如，固定区域性指定而不是采用 12 小时制采用 24 小时制。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64610420"
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- 此外可以使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]合作伙伴`StrComp`函数，<xref:System.String.Compare%2A?displayProperty=nameWithType>方法。 这是基础字符串类的静态，重载方法。 下面的示例演示如何使用此方法：  
+ 此外可以使用的.NET Framework 合作伙伴`StrComp`函数，<xref:System.String.Compare%2A?displayProperty=nameWithType>方法。 这是基础字符串类的静态，重载方法。 下面的示例演示如何使用此方法：  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

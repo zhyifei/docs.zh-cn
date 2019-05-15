@@ -2,12 +2,12 @@
 title: XElement 类概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 90f7d2f288ff628a24bfbe084a5175e4b2ab5f94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cddb36ac6401c20478a1254fe3d63afe5bd13099
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631849"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595759"
 ---
 # <a name="xelement-class-overview-c"></a>XElement 类概述 (C#)
 <xref:System.Xml.Linq.XElement> 类是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的基础类之一。 它表示一个 XML 元素。 可以使用该类创建元素；更改元素内容；添加、更改或删除子元素；向元素中添加属性；或以文本格式序列化元素内容。 还可以与 <xref:System.Xml?displayProperty=nameWithType> 中的其他类（例如 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 和 <xref:System.Xml.Xsl.XslCompiledTransform>）进行互操作。  
@@ -18,13 +18,13 @@ ms.locfileid: "54631849"
 ### <a name="constructing-xml-trees"></a>构造 XML 树  
  可以使用各种方式构造 XML 树，包括以下方式：  
   
--   可以在代码中构造 XML 树。 有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)。  
+- 可以在代码中构造 XML 树。 有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
--   可以从包括 <xref:System.IO.TextReader>、文本文件或 Web 地址 (URL) 在内的各种源解析 XML。 有关详细信息，请参阅[解析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)。  
+- 可以从包括 <xref:System.IO.TextReader>、文本文件或 Web 地址 (URL) 在内的各种源解析 XML。 有关详细信息，请参阅[解析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)。  
   
--   可以使用 <xref:System.Xml.XmlReader> 来填充树。 有关更多信息，请参见<xref:System.Xml.Linq.XNode.ReadFrom%2A>。  
+- 可以使用 <xref:System.Xml.XmlReader> 来填充树。 有关更多信息，请参见<xref:System.Xml.Linq.XNode.ReadFrom%2A>。  
   
--   如果您有一个可以将内容写入 <xref:System.Xml.XmlWriter> 的模块，则可以使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 方法来创建编写器，将该编写器传递到该模块，然后使用写入 <xref:System.Xml.XmlWriter> 的内容来填充 XML 树。  
+- 如果您有一个可以将内容写入 <xref:System.Xml.XmlWriter> 的模块，则可以使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 方法来创建编写器，将该编写器传递到该模块，然后使用写入 <xref:System.Xml.XmlWriter> 的内容来填充 XML 树。  
   
  但是，创建 XML 树的最常见的方法如下：  
   

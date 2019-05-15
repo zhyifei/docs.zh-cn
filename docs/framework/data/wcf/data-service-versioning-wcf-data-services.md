@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 283d3a0a0350823be8c0680dd24e04999b040363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641129"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583605"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>数据服务版本管理（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ，可创建数据服务，以便客户端可以作为基于数据模型的资源使用 Uri 访问数据。 OData 还支持服务操作的定义。 这些数据服务在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 更改现有数据服务时，您必须考虑是否要定义您的数据服务的新版本以及如何将对现有客户端应用程序的影响降至最低。 本主题提供了有关何时以及如何创建一个新版本的数据服务的指导。 它还介绍了 WCF 数据服务如何处理客户端和数据服务支持 OData 协议的不同版本之间的交换。
@@ -60,7 +60,7 @@ ms.locfileid: "64641129"
 
  当应用程序使用 WCF 数据服务客户端库来访问数据服务时，库自动设置这些标头为正确的值，具体取决于 OData 和应用程序中使用的功能的版本。 默认情况下，WCF 数据服务使用支持请求的操作的最低协议版本。
 
- 下表详细介绍的版本[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]和[!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]，包括对特定版本的 OData 协议的 WCF 数据服务支持。
+ 下表详细介绍.NET framework 版本和[!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]，包括对特定版本的 OData 协议的 WCF 数据服务支持。
 
 |OData 协议版本|支持引入方式|
 |-----------------------------------------------------------------------------------|----------------------------|

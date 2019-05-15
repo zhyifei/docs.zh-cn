@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876858"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582730"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 类型不匹配
 
@@ -39,7 +39,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   - **时间跨度**。 此类型表示两个 `DateTime` 值之间的差异，并且不与 SQL Server 中的 `timestamp` 相对应。 在某些情况下，CLR <xref:System.TimeSpan?displayProperty=nameWithType> 还可以映射到 SQL Server `TIME` 类型。 SQL Server `TIME` 类型只能表示小于 24 小时的正值。 而 CLR <xref:System.TimeSpan> 具有的范围则大得多。
 
   > [!NOTE]
-  > [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 中特定于 SQL Server 的 <xref:System.Data.SqlTypes> 类型不包含在此比较范围内。
+  > SQL Server 特定于.NET Framework 中的类型<xref:System.Data.SqlTypes>不包含在此比较。
 
 - SQL Server 中的不匹配：
 
@@ -167,7 +167,7 @@ Where Col1 = Col2
 
   - 松散转换为`AND` / `OR`运算符可能导致错误，如果C#表达式依赖于计算基于第一个操作数的计算结果的第二个操作数。
 
-- `Round()` 函数在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 和 T-SQL 中具有不同的语义。
+- `Round()` 函数和 T-SQL 的.NET Framework 中具有不同的语义。
 
 - 字符串的起始索引在 CLR 中是 0，而在 SQL 中是 1。 因此，任何具有索引的函数都需要进行索引转换。
 
@@ -194,7 +194,7 @@ Where Col1 = Col2
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL 执行对称算法四舍五入，而 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 使用“四舍六入五取偶”。 有关更多信息，请参见知识库文章 196652。
+- SQL 执行对称算法舍入而.NET Framework 使用银行家的舍入。 有关更多信息，请参见知识库文章 196652。
 
 - 默认情况下，对于通用区域设置，字符串比较在 SQL 中不区分大小写。 在 Visual Basic 和 C# 中，它们区分大小写。 例如， `s == "Food"` (`s = "Food"`在 Visual Basic 中) 和`s == "Food"`会产生不同的结果，如果`s`是`food`。
 

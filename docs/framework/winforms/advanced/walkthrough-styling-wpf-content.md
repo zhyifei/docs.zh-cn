@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211267"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557886"
 ---
 # <a name="walkthrough-style-wpf-content"></a>演练：样式的 WPF 内容
 
@@ -58,15 +58,15 @@ ms.locfileid: "65211267"
 
 1. 在 Windows 窗体设计器中打开 `Form1`。
 
-2. 在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。
+1. 在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。
 
      `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。
 
-3. 中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。
+1. 中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。
 
      `UserControl1` 将在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中打开。
 
-4. 在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。
+1. 在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。
 
      此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../wpf/controls/styling-and-templating.md)。
 
@@ -118,7 +118,7 @@ ms.locfileid: "65211267"
    </UserControl.Resources>
    ```
 
-4. 通过插入“取消”按钮的 `<Button>` 标记中的以下 XAML，将上一步中定义的 `SimpleButton` 样式应用到“取消”按钮。
+1. 通过插入“取消”按钮的 `<Button>` 标记中的以下 XAML，将上一步中定义的 `SimpleButton` 样式应用到“取消”按钮。
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ ms.locfileid: "65211267"
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. 生成项目。
+1. 生成项目。
 
-6. 在 Windows 窗体设计器中打开 `Form1`。
+1. 在 Windows 窗体设计器中打开 `Form1`。
 
-7. 将新样式应用到按钮控件中。
+1. 将新样式应用到按钮控件中。
 
-8. 从**调试**菜单中，选择**开始调试**运行该应用程序。
+1. 从**调试**菜单中，选择**开始调试**运行该应用程序。
 
-9. 单击“确定”和“取消”按钮并查看差异。
+1. 单击“确定”和“取消”按钮并查看差异。
 
 ## <a name="see-also"></a>请参阅
 

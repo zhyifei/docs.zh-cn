@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607888"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
@@ -30,26 +30,26 @@ ms.locfileid: "55674732"
   
  很多程序集可在 32 位 CLR 和 64 位 CLR 上同样运行。 然而，因为包含下列一个或多个原因，对于不同的 CLR，有些程序可能会有不同表现：  
   
--   结构中包含大小随平台而改变的成员，例如任何指针类型。  
+- 结构中包含大小随平台而改变的成员，例如任何指针类型。  
   
--   指针算术包含固定大小。  
+- 指针算术包含固定大小。  
   
--   平台调用错误，或使用句柄的 `Int32` 而非 `IntPtr` 的 COM 声明不正确。  
+- 平台调用错误，或使用句柄的 `Int32` 而非 `IntPtr` 的 COM 声明不正确。  
   
--   将 `IntPtr` 转换到 `Int32` 的代码。  
+- 将 `IntPtr` 转换到 `Int32` 的代码。  
   
  有关如何移植 32 位应用程序以使其在 64 位 CLR 上运行的详细信息，请参阅[将 32 位托管代码迁移至 64 位](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10))。  
   
 ## <a name="general-64-bit-programming-information"></a>常规 64 位编程信息  
  有关 64 位编程的常规信息，请参阅以下文档：  
   
--   有关 64 位 Windows 计算机上的 64 位版 CLR 的详细信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
+- 有关 64 位 Windows 计算机上的 64 位版 CLR 的详细信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
   
--   在 [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 文档中，请参阅 [64 位 Windows 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
+- 在 [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 文档中，请参阅 [64 位 Windows 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
   
--   有关如何下载 64 位版 CLR 的信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心下载](https://go.microsoft.com/fwlink/?LinkId=50953)。  
+- 有关如何下载 64 位版 CLR 的信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心下载](https://go.microsoft.com/fwlink/?LinkId=50953)。  
   
--   有关 Visual Studio 对创建 64 位应用程序提供的支持的信息，请参阅 [Visual Studio IDE 64 位支持](/visualstudio/ide/visual-studio-ide-64-bit-support)。  
+- 有关 Visual Studio 对创建 64 位应用程序提供的支持的信息，请参阅 [Visual Studio IDE 64 位支持](/visualstudio/ide/visual-studio-ide-64-bit-support)。  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>创建 64 位应用程序的编译器支持  
  默认情况下，如果您使用 .NET Framework 在 32 位或 64 位计算机中生成一个应用程序，该应用程序将会在 64 位计算机中作为本机应用程序运行（即不是在 WOW64 下运行）。 有关如何使用 Visual Studio 编译器创建 64 位应用程序，并且应用程序会作为本机应用程序运行和/或在 WOW64 下运行的信息，请参阅下表中的文档。  

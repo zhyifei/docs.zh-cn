@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048738"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592117"
 ---
 # <a name="analytic-tracing-overview"></a>分析跟踪概述
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析跟踪是基于 Windows 事件跟踪 (ETW) 的高性能、低详细级别的跟踪功能。 ETW 在内核级别运行，极大地减少了跟踪操作的开销。 它有效缓冲用户模式和内核模式的事件，并允许动态启用日志记录，而无需重新启动服务。 发出并接收跟踪数据之后，即可在事件日志中获取这些数据。  
@@ -47,4 +47,4 @@ ms.locfileid: "62048738"
  有关如何启用消息流跟踪的详细信息，请参阅[配置消息流跟踪](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)。  
   
 ### <a name="keywords"></a>关键字  
- 关键字用于筛选跟踪消息以及定义已发出事件的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 组件。 有关详细信息，请参阅[动态启用分析跟踪](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。
+ 关键字用于筛选跟踪消息以及定义.NET Framework 的哪个组件发出了事件。 有关详细信息，请参阅[动态启用分析跟踪](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。

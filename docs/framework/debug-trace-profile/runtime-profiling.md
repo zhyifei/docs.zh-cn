@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874232"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582809"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>使用性能监视器 (Perfmon.exe) 跟踪性能  
- 性能监视器是用于分析 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序的最易于使用的工具。 性能监视器以图形方式表示随公共语言运行时和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]一起安装的.NET Framework 性能计数器中的数据。 这些计数器可用于监视从内存管理到实时 (JIT) 编译器性能的方方面面。 它们告诉你应用程序所使用的资源的情况，这是了解应用程序性能的间接方法。 使用这些计数器可了解应用程序在内部的工作方式。  
+ 性能监视器是最简单的工具，可用来分析.NET Framework 应用程序。 性能监视器以图形方式表示随公共语言运行时和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]一起安装的.NET Framework 性能计数器中的数据。 这些计数器可用于监视从内存管理到实时 (JIT) 编译器性能的方方面面。 它们告诉你应用程序所使用的资源的情况，这是了解应用程序性能的间接方法。 使用这些计数器可了解应用程序在内部的工作方式。  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>在 Windows Vista 和更高版本上运行 Perfmon.exe  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61874232"
 >  在安装有 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系统上，对于使用 **开发的应用程序，性能监视器可能不会显示某些类别的性能计数器数据，如“.NET CLR Data”****和“.NET CLR Networking”**[!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]。 如果属于这种情况，可以配置性能监视器以显示此数据，方法是将 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 元素添加到应用程序的配置文件。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以编程方式读取和创建性能计数器  
- 可以使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供的类以编程方式访问性能控制台中提供的相同性能信息。 另外，还可以使用这些类创建自定义性能计数器。 下表描述了 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]中提供的某些性能监视类。  
+ .NET Framework 提供了可用于以编程方式访问性能控制台中提供的相同性能信息的类。 另外，还可以使用这些类创建自定义性能计数器。 下表介绍了一些性能监视提供.NET Framework 中的类。  
   
 |类|描述|  
 |-----------|-----------------|  

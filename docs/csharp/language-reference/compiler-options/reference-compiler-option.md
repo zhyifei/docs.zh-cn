@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679430"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593085"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference（C# 编译器选项）
 -reference 选项使编译器将指定文件中的[公共](../../../csharp/language-reference/keywords/public.md)类型信息导入当前项目，从而使你可从指定的程序集文件中引用元数据。  
@@ -48,9 +48,9 @@ ms.locfileid: "54679430"
   
  如果引用的程序集（程序集 A）引用了另一个程序集（程序集 B），那么在下列情况下需要引用程序集 B：  
   
--   使用程序集 A 中的类型，该类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
+- 使用程序集 A 中的类型，该类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
   
--   调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
+- 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
  使用 [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) 指定一个或多个程序集引用所在的目录。 -Lib 主题还讨论了编译器在哪些目录中搜索程序集。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 3c701d1b65d31315ba931cca729e465ba7d766b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 680f488a98d6e7e31b3d077843514fd12f75481c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620875"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586440"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>如何：在 Visual Basic 中的对数组进行排序
 此示例中声明的数组`String`对象名为`zooAnimals`，填充它，而按字母顺序排序。  
@@ -32,7 +32,7 @@ End Sub
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
-- 对 Mscorlib.dll 的访问和<xref:System>命名空间。  
+- 访问<xref:System>命名空间。  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
