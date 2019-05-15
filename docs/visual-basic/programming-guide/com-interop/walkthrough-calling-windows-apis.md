@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022397"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592708"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>演练：调用 Windows Api (Visual Basic)
 Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您可以使用它们来执行任务时很难编写你自己的等效过程。 例如，Windows 提供了一个名为函数`FlashWindowEx`允许您进行应用程序的标题栏在浅色和深色阴影之间切换。  
   
  在代码中使用 Windows Api 的优点是它们可以节省开发时间，因为它们包含大量有用的功能，已编写并等待使用。 缺点是 Windows Api 可能很难处理和铁面无私时出现问题。  
   
- Windows Api 表示一类特殊的互操作性。 Windows Api 不使用托管的代码，没有内置类型库，并使用不同于与用于 Visual Studio 的数据类型。 鉴于这些区别，因为 Windows Api 不是 COM 对象，与 Windows Api 互操作性和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]使用平台执行的调用，简称 PInvoke。 平台调用是一项服务，它使托管代码能够调用非托管的 Dll 中实现的函数。 有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)。 可以通过使用 Visual Basic 中使用 PInvoke`Declare`语句或将应用`DllImport`属性为空的过程。  
+ Windows Api 表示一类特殊的互操作性。 Windows Api 不使用托管的代码，没有内置类型库，并使用不同于与用于 Visual Studio 的数据类型。 由于这些差异，因为 Windows Api 不是 COM 对象，与 Windows Api 互操作性，使用执行.NET Framework 平台调用，简称 PInvoke。 平台调用是一项服务，它使托管代码能够调用非托管的 Dll 中实现的函数。 有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)。 可以通过使用 Visual Basic 中使用 PInvoke`Declare`语句或将应用`DllImport`属性为空的过程。  
   
- Windows API 调用了 Visual Basic 编程在过去，一个重要部分，但很少需要使用 Visual Basic.NET。 只要有可能，应使用从托管的代码[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]来执行任务，而不是 Windows API 调用。 本演练提供了哪些使用那些情况的信息是必需的 Windows Api。  
+ Windows API 调用了 Visual Basic 编程在过去，一个重要部分，但很少需要使用 Visual Basic.NET。 只要有可能，应使用.NET Framework 中的托管的代码来执行任务，而不是 Windows API 调用。 本演练提供了哪些使用那些情况的信息是必需的 Windows Api。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

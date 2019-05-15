@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614663"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592602"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用视觉样式呈现控件
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 使用操作系统中受支持的视觉样式为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持。 本主题讨论 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中对使用操作系统当前视觉样式的呈现控件和其他 UI 元素提供的多种级别的支持。  
+.NET Framework 支持为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持它们的操作系统中使用视觉样式。 本主题讨论使用操作系统当前视觉样式呈现控件和其他 UI 元素的.NET Framework 中支持的多个级别。  
   
 ## <a name="rendering-classes-for-common-controls"></a>公共控件的呈现类  
  呈现控件是指绘制控件的用户界面。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间提供了用来呈现某些公共 Windows 窗体控件的 <xref:System.Windows.Forms.ControlPaint> 类。 但是，此类以经典 Windows 样式绘制的控件，当在启用了视觉样式的应用程序中绘制自定义控件时，难以维护 UI 体验的一致性。  
@@ -61,7 +61,7 @@ ms.locfileid: "64614663"
  有关使用详细信息<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>并<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，请参阅[如何：呈现的视觉样式元素](how-to-render-a-visual-style-element.md)。  
   
 ## <a name="enabling-visual-styles"></a>启用视觉样式  
- 若要为针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 编写的应用程序启用视觉样式，程序员必须将应用清单包含进来。该清单指定使用 ComCtl32.dll 版本 6 或更高版本绘制控件。 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.1 或更高版本生成的应用可以使用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 类的 <xref:System.Windows.Forms.Application> 方法。  
+ 若要启用针对.NET Framework 版本 1.0 编写的应用程序的可视样式，程序员必须包括指定将使用 ComCtl32.dll 版本 6 或更高版本绘制控件的应用程序清单。 使用.NET Framework 1.1 或更高版本生成的应用程序可以使用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法的<xref:System.Windows.Forms.Application>类。  
   
 ## <a name="checking-for-visual-styles-support"></a>检查视觉样式支持  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 类的 <xref:System.Windows.Forms.Application> 属性指示当前应用程序是否正在使用视觉样式绘制控件。 绘制自定义控件时，可以检查 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 的值来确定是否应使用视觉样式呈现控件。 下表列出了 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 返回 `true`必须存在的四个条件。  

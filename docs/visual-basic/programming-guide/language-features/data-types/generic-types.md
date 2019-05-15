@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 9c8ccf2404c4d8fd6e71f7aa41445c3d26ef5da7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601073"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593385"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型类型 (Visual Basic)
 *泛型类型* 是可适应对多种数据类型执行相同功能的单个编程元素。 定义泛型类或过程时，无需为可能需要对其执行该功能的每个数据类型定义单独版本。  
@@ -76,7 +76,7 @@ ms.locfileid: "64601073"
  有关更完整的示例，请参见[如何：定义一个类，可对不同数据类型提供相同功能](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的编程元素  
- 你可以定义并使用泛型类、结构、接口、过程和委托。 请注意， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 定义了几个代表常用泛型元素的泛型类、结构和接口。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间提供字典、列表、队列和堆栈。 在定义自己的泛型元素之前，请查看 <xref:System.Collections.Generic?displayProperty=nameWithType>中是否已提供了此元素。  
+ 你可以定义并使用泛型类、结构、接口、过程和委托。 请注意，.NET Framework 定义了多个泛型类、 结构和接口表示常用泛型元素。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间提供字典、列表、队列和堆栈。 在定义自己的泛型元素之前，请查看 <xref:System.Collections.Generic?displayProperty=nameWithType>中是否已提供了此元素。  
   
  过程不是类型，但可以定义并使用泛型过程。 请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   

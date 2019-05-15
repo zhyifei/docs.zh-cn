@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307712"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626296"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：将托管代码 DCOM 迁移到 WCF
 Windows Communication Foundation (WCF) 是针对分布式组件对象模型 (DCOM) 建议的安全选择，可用于处理分布式环境中服务器和客户端间的托管代码调用。 本文介绍在以下情景中，如何将代码从 DCOM 迁移到 WCF。  
   
--   远程服务将对象按值返回到客户端  
+- 远程服务将对象按值返回到客户端  
   
--   客户端将对象按值返回到远程服务  
+- 客户端将对象按值返回到远程服务  
   
--   远程服务将对象按引用返回到客户端  
+- 远程服务将对象按引用返回到客户端  
   
  出于安全原因，WCF 中不允许将对象按引用从客户端发送到服务。 在 WCF 中使用双工服务可实现需要在客户端和服务器间来回会话的方案。  有关双工服务的详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)  
   

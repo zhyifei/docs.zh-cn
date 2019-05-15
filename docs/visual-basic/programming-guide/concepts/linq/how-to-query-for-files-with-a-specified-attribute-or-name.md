@@ -2,12 +2,12 @@
 title: 如何：查询具有指定的特性或名称 (Visual Basic 中) 的文件
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 0c6875a0e4b8224010b20ca17ab6318387490aca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05dfe3e88274efe8d817defcac2f47efe053b12b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021357"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586488"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何：查询具有指定的特性或名称 (Visual Basic 中) 的文件
 此示例演示了如何在指定目录树中查找具有指定文件扩展名（如“.txt”）的所有文件。 它还演示了如何基于时间在树中返回最新或最旧的文件。  
@@ -61,7 +61,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建面向.NET Framework 版本 3.5 或更高版本包含对 System.Core.dll 的引用的项目和一个`Imports`System.Linq 命名空间的语句。  
+创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
   
 ## <a name="see-also"></a>请参阅
 

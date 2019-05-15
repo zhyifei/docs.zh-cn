@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: f0b0ad1b18a57ca9a2c069ab172966730b62e84e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8a75c6a03f130e0a141107c81c946fc6a33b9f6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592537"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>如何：暂停 Windows 服务 (Visual Basic)
 此示例使用 <xref:System.ServiceProcess.ServiceController> 组件暂停本地计算机上的 IIS 管理服务。  
@@ -29,18 +29,18 @@ ms.locfileid: "59136176"
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   对 System.serviceprocess.dll 的项目引用。  
+- 对 System.serviceprocess.dll 的项目引用。  
   
--   对 <xref:System.ServiceProcess> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+- 对 <xref:System.ServiceProcess> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="robust-programming"></a>可靠编程  
  默认情况下，<xref:System.ServiceProcess.ServiceController> 类的 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 属性是本地计算机。 要在其他计算机上引用 Windows 服务，请将 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 属性更改为该计算机的名称。  
   
  以下情况可能会导致异常：  
   
--   服务无法暂停。 (<xref:System.InvalidOperationException>)  
+- 服务无法暂停。 (<xref:System.InvalidOperationException>)  
   
--   访问 API 时出错。 (<xref:System.ComponentModel.Win32Exception>)  
+- 访问 API 时出错。 (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  通过使用 <xref:System.ServiceProcess.ServiceControllerPermissionAccess> 在 <xref:System.ServiceProcess.ServiceControllerPermission> 中设置权限，可以限制计算机上的服务控制。  

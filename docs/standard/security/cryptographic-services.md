@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795299"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592732"
 ---
 # <a name="cryptographic-services"></a>加密服务
 
@@ -112,7 +112,7 @@ ms.locfileid: "61795299"
 
 假定 Alice 和 Bob 是想要通过非安全通道进行通信的两个参与方，他们可能按如下所示使用密钥加密：Alice 和 Bob 同意使用某种特定的算法 (例如 AES) 与一个特定的密钥和 IV。 Alice 撰写一条消息，并创建其上发送消息的网络流 （也许是命名管道或网络电子邮件）。 接下来，她使用密钥和 IV 对文本进行加密，然后通过 intranet 向 Bob 发送加密的消息和 IV。 Bob 收到加密文本并使用 IV 和之前商定的密钥对其进行解密。 如果传输遭到截获，侦听者无法恢复原始消息，因为他不知道密钥。 在此方案中，只有密钥必须保持机密。 在实际方案中，Alice 和 Bob 都可以生成密钥并使用公钥（非对称）加密将密钥（对称）传递给另一方。 有关公钥加密的详细信息，请参阅下一节。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供以下实现密钥加密算法的类：
+.NET Framework 提供了以下实现密钥加密算法的类：
 
 - <xref:System.Security.Cryptography.AesManaged> （在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]引入）。
 
@@ -154,7 +154,7 @@ ms.locfileid: "61795299"
 
 - 公钥算法与密钥算法相比非常慢，且其设计目的不是用于加密大量数据。 公钥算法仅对传输极少量的数据很有用。 通常情况下，公钥加密用于加密密钥算法要使用的密钥和 IV。 在密钥和 IV 传输完成后，密钥加密将用于对会话的其余部分加密。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供以下实现公钥加密算法的类：
+.NET Framework 提供了以下实现公钥加密算法的类：
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 > [!NOTE]
 > 任何人都可以验证签名，因为发件人的公钥众所周知，并且通常包含在数字签名格式中。 此方法不会保留消息的秘密性；对于机密消息，它也必须加密。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供以下实现数字签名算法的类：
+.NET Framework 提供了以下实现数字签名算法的类：
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 之前的方法都无法防止他人读取 Alice 的消息，因为消息是以纯文本的形式传输的。 完整安全模式通常要求数字签名（消息签名）和加密。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供以下实现哈希算法的类：
+.NET Framework 提供了以下实现哈希算法的类：
 
 - <xref:System.Security.Cryptography.HMACSHA1>。
 
@@ -256,7 +256,7 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 ## <a name="random-number-generation"></a>随机数生成
 
-随机数生成是很多加密操作的必要组成部分。 例如，加密密钥需要尽可能的随机，以便使其很难再现。 加密随机数生成器必须生成在计算上预测的可能性不可大于 50% 的输出。 因此，预测下一个输出位的任何方法均不能比随机推测执行地更好。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的类使用随机数生成器来生成加密密钥。
+随机数生成是很多加密操作的必要组成部分。 例如，加密密钥需要尽可能的随机，以便使其很难再现。 加密随机数生成器必须生成在计算上预测的可能性不可大于 50% 的输出。 因此，预测下一个输出位的任何方法均不能比随机推测执行地更好。 .NET Framework 中的类使用随机数生成器来生成加密密钥。
 
 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> 类是随机数生成器算法的一个实现。
 

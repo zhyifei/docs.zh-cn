@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034549"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583823"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>配置参数和参数数据类型
 
@@ -33,7 +33,7 @@ ms.locfileid: "62034549"
 
 ## <a name="working-with-parameter-placeholders"></a>使用参数占位符
 
-参数占位符的语法取决于数据源。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序处理命名和指定参数和参数占位符的方式各不相同。 此语法是针对某个特定的数据源自定义的，如下表所述。
+参数占位符的语法取决于数据源。 .NET Framework 数据提供程序以不同方式处理命名和指定参数和参数占位符。 此语法是针对某个特定的数据源自定义的，如下表所述。
 
 |数据提供程序|参数命名语法|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ ms.locfileid: "62034549"
 
 ## <a name="specifying-parameter-data-types"></a>指定参数数据类型
 
-Parameter 的数据类型是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序特定的。 如果指定类型，则在向数据源传递 `Parameter` 的值之前，将该值转换为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序类型。 也可以通过通用的方式指定 `Parameter` 的类型，方法是将 `DbType` 对象的 `Parameter` 属性设置为特定的 <xref:System.Data.DbType>。
+参数的数据类型是特定于.NET Framework 数据提供程序。 指定类型的值转换`Parameter`到.NET Framework 数据提供程序类型，然后再将值传递到数据源。 也可以通过通用的方式指定 `Parameter` 的类型，方法是将 `DbType` 对象的 `Parameter` 属性设置为特定的 <xref:System.Data.DbType>。
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象的 `Parameter` 数据提供程序类型是从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象的 `Value` 的 `Parameter` 类型或从 `DbType` 对象的 `Parameter` 来推断的。 下表显示了根据作为 `Parameter` 值传递的对象或指定的 `Parameter` 推断出的 `DbType`类型。
+.NET Framework 数据提供程序类型的`Parameter`从.NET Framework 类型的对象进行推断`Value`的`Parameter`对象，或从`DbType`的`Parameter`对象。 下表显示了根据作为 `Parameter` 值传递的对象或指定的 `Parameter` 推断出的 `DbType`类型。
 
 |.NET Framework 类型|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ Parameter 的数据类型是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdns
 > [!NOTE]
 > 参数化语句在服务器上通过使用 `sp_executesql,` 执行，sp_executesql 允许重复使用查询计划。 `sp_executesql` 批处理命令中的本地光标或变量对于调用 `sp_executesql`的批处理命令是不可见的。 数据库上下文中的更改只持续到 `sp_executesql` 语句的结尾。 有关详细信息，请参阅[sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。
 
-对 <xref:System.Data.SqlClient.SqlCommand> 使用参数以执行 SQL Server 存储过程时，添加到 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合中的参数的名称必须与存储过程中参数标记的名称相匹配。 用于 SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序不支持使用问号 (?) 占位符向 SQL 语句或存储过程传递参数。 它将存储过程中的参数视为命名参数，并搜索匹配的参数标记。 例如，通过使用名为 `CustOrderHist` 的参数定义 `@CustomerID`存储过程。 您的代码在执行该存储过程时，它也必须使用名为 `@CustomerID`的参数。
+对 <xref:System.Data.SqlClient.SqlCommand> 使用参数以执行 SQL Server 存储过程时，添加到 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合中的参数的名称必须与存储过程中参数标记的名称相匹配。 SQL Server 的.NET Framework 数据提供程序不支持问号 （？） 占位符向 SQL 语句或存储的过程传递参数。 它将存储过程中的参数视为命名参数，并搜索匹配的参数标记。 例如，通过使用名为 `CustOrderHist` 的参数定义 `@CustomerID`存储过程。 您的代码在执行该存储过程时，它也必须使用名为 `@CustomerID`的参数。
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>对 OleDbCommand 或 OdbcCommand 使用参数
 
-对 <xref:System.Data.OleDb.OleDbCommand> 或 <xref:System.Data.Odbc.OdbcCommand>使用参数时，添加到 `Parameters` 集合中的参数的顺序必须与在存储过程中定义的参数的顺序相匹配。 OLE DB [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序和 ODBC [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序将存储过程中的参数视为占位符并且按顺序应用参数值。 此外，返回值参数必须为添加到 `Parameters` 集合中的第一批参数。
+对 <xref:System.Data.OleDb.OleDbCommand> 或 <xref:System.Data.Odbc.OdbcCommand>使用参数时，添加到 `Parameters` 集合中的参数的顺序必须与在存储过程中定义的参数的顺序相匹配。 OLE DB 的.NET Framework 数据提供程序和 ODBC 的.NET Framework 数据提供程序中的存储过程的参数视为占位符并应用顺序中的参数值。 此外，返回值参数必须为添加到 `Parameters` 集合中的第一批参数。
 
-OLE DB [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序和 ODBC [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序不支持在向 SQL 语句或存储过程传递参数时使用命名参数。 在此情况下，必须使用问号 (?) 占位符，如以下示例所示。
+OLE DB 的.NET Framework 数据提供程序和 ODBC 的.NET Framework 数据提供程序不支持命名的参数，将参数传递给 SQL 语句或存储的过程。 在此情况下，必须使用问号 (?) 占位符，如以下示例所示。
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

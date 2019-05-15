@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 906007902c6b66d88da0d3145625e56f2a7e2b55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592523"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 创建类
 以下过程说明如何创建和编译 CodeDOM 图，此图会生成包含以下各项的类：两个字段、三个属性、一个方法、一个构造函数和一个入口点。  
@@ -39,48 +39,48 @@ ms.locfileid: "59333166"
   
 ### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>创建将执行 CodeDOM 代码的应用程序  
   
--   创建要包含 CodeDOM 代码的控制台应用程序类。 定义要在该类中使用的全局字段，以便引用程序集 (<xref:System.CodeDom.CodeCompileUnit>) 和类 (<xref:System.CodeDom.CodeTypeDeclaration>)，指定生成的源文件的名称并声明 `Main` 方法。  
+- 创建要包含 CodeDOM 代码的控制台应用程序类。 定义要在该类中使用的全局字段，以便引用程序集 (<xref:System.CodeDom.CodeCompileUnit>) 和类 (<xref:System.CodeDom.CodeTypeDeclaration>)，指定生成的源文件的名称并声明 `Main` 方法。  
   
      [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
      [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
   
 ### <a name="to-initialize-the-codedom-graph"></a>初始化 CodeDOM 图  
   
--   在控制台应用程序类的构造函数中，初始化程序集和类，并向 CodeDOM 图添加适当的声明。  
+- 在控制台应用程序类的构造函数中，初始化程序集和类，并向 CodeDOM 图添加适当的声明。  
   
      [!code-csharp[CodeDOM Class Sample#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#2)]
      [!code-vb[CodeDOM Class Sample#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#2)]  
   
 ### <a name="to-add-members-to-the-codedom-graph"></a>向 CodeDOM 图添加成员  
   
--   通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeMemberField> 对象，向 CodeDOM 图添加字段。  
+- 通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeMemberField> 对象，向 CodeDOM 图添加字段。  
   
      [!code-csharp[CodeDOM Class Sample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)]
      [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
   
--   通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeMemberProperty> 对象，向 CodeDOM 图添加属性。  
+- 通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeMemberProperty> 对象，向 CodeDOM 图添加属性。  
   
      [!code-csharp[CodeDOM Class Sample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)]
      [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
   
--   通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeMemberMethod> 对象，向 CodeDOM 图添加方法。  
+- 通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeMemberMethod> 对象，向 CodeDOM 图添加方法。  
   
      [!code-csharp[CodeDOM Class Sample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)]
      [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
   
--   通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeConstructor> 对象，向 CodeDOM 图添加构造函数。  
+- 通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeConstructor> 对象，向 CodeDOM 图添加构造函数。  
   
      [!code-csharp[CodeDOM Class Sample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)]
      [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
   
--   通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeEntryPointMethod> 对象，向 CodeDOM 图添加入口点。  
+- 通过向类的 <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> 属性添加 <xref:System.CodeDom.CodeEntryPointMethod> 对象，向 CodeDOM 图添加入口点。  
   
      [!code-csharp[CodeDOM Class Sample#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)]
      [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
   
 ### <a name="to-generate-the-code-from-the-codedom-graph"></a>从 CodeDOM 图生成代码  
   
--   通过调用 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法，从 CodeDOM 图生成源代码。  
+- 通过调用 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法，从 CodeDOM 图生成源代码。  
   
      [!code-csharp[CodeDOM Class Sample#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)]
      [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
@@ -116,7 +116,7 @@ The object:
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   需要 `FullTrust` 权限集才可成功执行此代码示例。  
+- 需要 `FullTrust` 权限集才可成功执行此代码示例。  
   
 ## <a name="see-also"></a>请参阅
 

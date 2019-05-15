@@ -2,16 +2,16 @@
 title: 在 FileName 中指定的文件不是有效的 XML 文件
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-ms.openlocfilehash: 89499b07e767bd0b3a777db4e5155f64a4357f0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1615722d19e1a24ee4e72bc702dbce3fe30411a4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052308"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592888"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>在 FileName 中指定的文件不是有效的 XML 文件
 
-所提供的文件名称不是有效的 XML 文件。 若要指定允许的 XML 文档的结构和内容，可使用文档类型定义 (DTD)、Microsoft XML 数据缩减 (XDR) 架构或 XML 架构定义语言 (XSD) 架构。 XSD 架构是用于指定 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]中的 XML 语法的首选方式。
+所提供的文件名称不是有效的 XML 文件。 若要指定允许的 XML 文档的结构和内容，可使用文档类型定义 (DTD)、Microsoft XML 数据缩减 (XDR) 架构或 XML 架构定义语言 (XSD) 架构。 XSD 架构是在.NET Framework 中指定的 XML 语法的首选的方法。
 
 > [!NOTE]
 > 在某些较早版本的 Visual Studio 中，“XML 设计器”  是针对类型化数据集和 XML 架构的设计器。 “XML 设计器”  仍可用于创建和编辑 XML 架构文件。 但是，在 Visual Studio 2012 中，用于创建和编辑类型化数据集设计器是**数据集设计器**。 有关详细信息，请参阅[创建和编辑类型化数据集](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/314t4see(v=vs.120))。

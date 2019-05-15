@@ -2,12 +2,12 @@
 title: LINQ to XML 类概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: a50b58ad3e8f375d80701f454e74fef00e4d2203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f93e3a791bfd56095df12ebf070f72540a8b21dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597059"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML 类概述 (C#)
 本主题提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 命名空间中 <xref:System.Xml.Linq> 类的列表及每个类的简短说明。  
@@ -26,9 +26,9 @@ ms.locfileid: "54509657"
 ### <a name="xcontainer-class"></a>XContainer 类  
  <xref:System.Xml.Linq.XContainer> 是适用于可能具有子节点的所有节点的抽象基类。 下面的类派生自 <xref:System.Xml.Linq.XContainer> 类：  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>XDeclaration 类  
  <xref:System.Xml.Linq.XDeclaration> 表示一个 XML 声明。 XML 声明用于声明 XML 版本和文档的编码。 此外，XML 声明还指定 XML 文档是否为独立文档。 如果文档是独立文档，则在外部 DTD 或从内部子集引用的外部参数实体中不存在外部标记声明。  
@@ -55,15 +55,15 @@ ms.locfileid: "54509657"
 ### <a name="xnode-class"></a>XNode 类  
  <xref:System.Xml.Linq.XNode> 是一个抽象类，它表示 XML 树的节点。 下面的类派生自 <xref:System.Xml.Linq.XNode> 类：  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer 类  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> 提供用于比较节点的文档顺序的功能。  

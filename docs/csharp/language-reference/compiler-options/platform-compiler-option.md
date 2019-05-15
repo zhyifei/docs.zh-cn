@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5a00820b01ee0ac78715efa0140e2a5aef28bef8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341499"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592790"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform（C# 编译器选项）
 指定公共语言运行时 (CLR) 的哪个版本可以运行程序集。  
@@ -30,29 +30,29 @@ ms.locfileid: "59341499"
   
 ## <a name="remarks"></a>备注  
   
--   anycpu（默认值）将程序集编译成可在任意平台上运行。 您的应用程序将尽可能作为 64 位进程运行；当只有 32 位模式可用时，才会回退到 32 位。  
+- anycpu（默认值）将程序集编译成可在任意平台上运行。 您的应用程序将尽可能作为 64 位进程运行；当只有 32 位模式可用时，才会回退到 32 位。  
   
--   anycpu32bitpreferred 将程序集编译成可在任意平台上运行。 在同时支持 64 位和 32 位应用程序的系统上，您的应用程序将以32 位模式运行。 可以仅为针对 .NET Framework 4.5 的项目指定此选项。  
+- anycpu32bitpreferred 将程序集编译成可在任意平台上运行。 在同时支持 64 位和 32 位应用程序的系统上，您的应用程序将以32 位模式运行。 可以仅为针对 .NET Framework 4.5 的项目指定此选项。  
   
--   ARM 将程序集编译成可以在具有高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
+- ARM 将程序集编译成可以在具有高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
   
--   ARM64 编译程序集以在由 64 位 CLR 在具有支持 A64 指令集的高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
+- ARM64 编译程序集以在由 64 位 CLR 在具有支持 A64 指令集的高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
 
--   x64 将程序集编译成可由支持 AMD64 或 EM64T 指令集的计算机上的 64 位 CLR 运行。  
+- x64 将程序集编译成可由支持 AMD64 或 EM64T 指令集的计算机上的 64 位 CLR 运行。  
   
--   x86 将程序集编译成可由 32 位、x86 可兼容 CLR 运行。  
+- x86 将程序集编译成可由 32 位、x86 可兼容 CLR 运行。  
   
--   Itanium 将程序集编译成可由配有 Itanium 处理器的计算机上的 64 位 CLR 运行。  
+- Itanium 将程序集编译成可由配有 Itanium 处理器的计算机上的 64 位 CLR 运行。  
   
  在 64 位 Windows 操作系统上：  
   
--   用 -platform:x86 编译的程序集将在 WOW64 下运行的 32 位 CLR 上执行。  
+- 用 -platform:x86 编译的程序集将在 WOW64 下运行的 32 位 CLR 上执行。  
   
--   用 -platform:anycpu 编译的 DLL 将在加载它的进程所在的同一 CLR 上执行。  
+- 用 -platform:anycpu 编译的 DLL 将在加载它的进程所在的同一 CLR 上执行。  
   
--   用 -platform:anycpu 编译的可执行文件将在 64 位 CLR 上执行。  
+- 用 -platform:anycpu 编译的可执行文件将在 64 位 CLR 上执行。  
   
--   用 -platform:anycpu32bitpreferred 编译的可执行文件将在 32 位 CLR 上执行。  
+- 用 -platform:anycpu32bitpreferred 编译的可执行文件将在 32 位 CLR 上执行。  
   
  anycpu32bitpreferred 设置只对可执行 (.exe) 文件有效，并且需要 .NET Framework 4.5。  
   

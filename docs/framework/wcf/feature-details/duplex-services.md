@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858034"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592746"
 ---
 # <a name="duplex-services"></a>双工服务
 
@@ -87,10 +87,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 双工模型不自动检测服务或客户端何时关闭其通道。 因此，如果客户端意外终止，默认情况下将不会通知该服务；或者，如果客户端意外终止，将不会通知该服务。 客户端和服务可以实现自己的协议以相互通知对方（如果它们这么选择）。
+> 双工模型不自动检测服务或客户端何时关闭其通道。 因此如果客户端意外终止，默认情况下将不会通知服务，或如果服务意外终止，将不会通知客户端。 客户端和服务可以实现自己的协议以相互通知对方（如果它们这么选择）。 错误处理的详细信息，请参阅[WCF 错误处理](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [双工](../../../../docs/framework/wcf/samples/duplex.md)
-- [指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [如何：创建通道工厂并用它创建和管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [双工](../samples/duplex.md)
+- [指定客户端运行时行为](../specifying-client-run-time-behavior.md)
+- [如何：创建通道工厂并用它创建和管理通道](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

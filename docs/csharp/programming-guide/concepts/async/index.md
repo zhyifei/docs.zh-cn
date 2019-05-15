@@ -2,12 +2,12 @@
 title: C# 中的异步编程
 description: 对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668674"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064118"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>C\# 中基于任务的异步编程模型
 
@@ -22,7 +22,7 @@ ms.locfileid: "61668674"
 1. 在烤面包上加黄油和果酱。
 1. 倒一杯橙汁。
 
-如果你有烹饪的经验，你将以异步方式来执行这些指令。 你可能会加热平底锅以准备煎蛋，然后从煎培根开始。 然后将面包放进烤面包机，再煎鸡蛋。 在此过程的每个步骤中，你都可以首先开始一项任务，然后将注意力转移到准备要进行的其他任务上。
+如果你有使用 cookie 的经验，你将以异步方式来执行这些指令。 你可能会加热平底锅以准备煎蛋，然后从煎培根开始。 然后将面包放进烤面包机，再煎鸡蛋。 在此过程的每个步骤中，你都可以首先开始一项任务，然后将注意力转移到准备要进行的其他任务上。
 
 做早餐是非并行异步工作的一个好示例。 单人（或单线程）即可处理所有这些任务。 继续讲解早餐的类比，一个人可以以异步方式做早餐，即在第一个任务完成之前开始进行下一个任务。 不管是否有人在看着，做早餐的过程都在进行。 在开始加热平底锅准备煎蛋的同时就可以开始煎了培根。 在开始煎培根后，你可以将面包放进烤面包机。
 

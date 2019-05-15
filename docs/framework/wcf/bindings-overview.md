@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652106"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592227"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
 绑定是用来指定所需连接到 Windows Communication Foundation (WCF) 服务的终结点的通信详细信息的对象。 WCF 服务中的每个终结点需要具体指定的绑定。 本主题概述了通信详细信息的绑定所定义的一个绑定，在 WCF 中，包含哪些绑定和如何为终结点指定一个绑定元素的类型。  
@@ -36,9 +36,9 @@ ms.locfileid: "64652106"
   
 - <xref:System.ServiceModel.WSHttpBinding>：可互操作绑定，适用于连接到终结点符合 WS-* 协议。  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]连接到同一台计算机上其他 WCF 终结点。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>：使用.NET Framework 连接到同一台计算机上其他 WCF 终结点。  
   
-- <xref:System.ServiceModel.NetMsmqBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]来创建与其他 WCF 终结点的已排队的消息连接。  
+- <xref:System.ServiceModel.NetMsmqBinding>：使用.NET Framework，才能创建排队消息与其他 WCF 终结点的连接。  
 
 - <xref:System.ServiceModel.NetTcpBinding>：此绑定提供了更高的性能比 HTTP 绑定，特别适用于本地网络。
   

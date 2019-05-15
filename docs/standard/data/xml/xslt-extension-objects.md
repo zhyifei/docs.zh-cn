@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320413"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615290"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 扩展对象
 扩展对象用于扩展样式表的功能。 扩展对象通过 <xref:System.Xml.Xsl.XsltArgumentList> 类来维护。  
   
  与使用嵌入脚本相比，使用扩展对象具有以下优点：  
   
--   改善了类的包装和重用。  
+- 改善了类的包装和重用。  
   
--   使样式表可以更小而且更容易维护。  
+- 使样式表可以更小而且更容易维护。  
   
  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 对象。 此时，限定名和命名空间 URI 与扩展对象关联。  
   

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322402"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615238"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>样式表参数和扩展对象的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 类包含可扩展样式表语言转换 (XSLT) 参数和 XSLT 扩展对象。 传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
@@ -25,13 +25,13 @@ ms.locfileid: "59322402"
   
  与使用嵌入脚本相比，传递对象具有以下优点：  
   
--   改善了类的包装和重用。  
+- 改善了类的包装和重用。  
   
--   使样式表可以更小而且更容易维护。  
+- 使样式表可以更小而且更容易维护。  
   
--   支持对所属命名空间未在支持的 <xref:System> 命名空间集中定义的类调用方法。  
+- 支持对所属命名空间未在支持的 <xref:System> 命名空间集中定义的类调用方法。  
   
--   支持使用 <xref:System.Xml.XPath.XPathNodeIterator> 将结果树片段传递到样式表。  
+- 支持使用 <xref:System.Xml.XPath.XPathNodeIterator> 将结果树片段传递到样式表。  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 样式表参数  
  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 参数添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 此时，限定名和命名空间统一资源标识符 (URI) 与参数对象关联。  

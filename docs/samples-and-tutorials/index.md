@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950847"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469465"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -60,6 +60,10 @@ ms.locfileid: "61950847"
 **LINQ 示例**
 
 这一系列示例将演示许多语言集成查询 (LINQ) 功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/linq/csharp)。
+
+**托管 COM 服务器示例**
+
+[COM 服务器](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)示例演示了托管 COM 服务器的创建以及如何进行全局注册。
 
 **Microsoft Office PIA 示例**
 

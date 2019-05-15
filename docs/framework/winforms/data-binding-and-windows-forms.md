@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626857"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592304"
 ---
 # <a name="data-binding-and-windows-forms"></a>数据绑定和 Windows 窗体
 在 Windows 窗体中，你不仅可以绑定到传统的数据源，还可以绑定到几乎任何包含数据的结构。 可以绑定到你在运行时、从文件读取时或从其他控件的值派生时计算的一数组值。  
   
- 此外，你可将任何控件的任何属性绑定到数据源。 在传统数据绑定中，你通常将显示属性（例如 <xref:System.Windows.Forms.Control.Text%2A> 控件的 <xref:System.Windows.Forms.TextBox> 属性）绑定到数据源。 通过 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，你还可选择通过绑定来设置其他属性。 你可以使用绑定来执行以下任务：  
+ 此外，你可将任何控件的任何属性绑定到数据源。 在传统数据绑定中，你通常将显示属性（例如 <xref:System.Windows.Forms.Control.Text%2A> 控件的 <xref:System.Windows.Forms.TextBox> 属性）绑定到数据源。 使用.NET Framework 中，还必须设置其他属性通过绑定的选项。 你可以使用绑定来执行以下任务：  
   
 - 设置图像控件的图形。  
   

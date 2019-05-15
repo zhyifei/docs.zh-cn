@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644739"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ（语言集成查询）
 
@@ -103,15 +103,15 @@ var filteredItems = from item in myItems
 
 在以下情况下，此问题的答案是**可以**...
 
-*   现有的基本代码已使用查询语法
-*   由于复杂性的问题，需要在查询中限定变量的作用域
-*   你偏好使用查询语法，并且它不会使基本代码变得混乱
+* 现有的基本代码已使用查询语法
+* 由于复杂性的问题，需要在查询中限定变量的作用域
+* 你偏好使用查询语法，并且它不会使基本代码变得混乱
 
 在以下情况下，此问题的答案是**不可以**...
 
-*   现有的基本代码已使用 API 语法
-*   不需要在查询中限定变量的作用域
-*   你偏好使用 API 语法，并且它不会使基本代码变得混乱
+* 现有的基本代码已使用 API 语法
+* 不需要在查询中限定变量的作用域
+* 你偏好使用 API 语法，并且它不会使基本代码变得混乱
 
 ## <a name="essential-samples"></a>重要片段示例
 
@@ -119,7 +119,7 @@ var filteredItems = from item in myItems
 
 下面简单演示了 LINQ 的一些重要片段。 没有办法演示完整的代码，因为 LINQ 提供的功能比此处演示的要多得多。
 
-*   语句构成 - `Where`、`Select` 和 `Aggregate`：
+* 语句构成 - `Where`、`Select` 和 `Aggregate`：
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   平展列表的列表：
+* 平展列表的列表：
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   两个集之间的联合（使用自定义比较运算符）：
+* 两个集之间的联合（使用自定义比较运算符）：
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   两个集之间的交集：
+* 两个集之间的交集：
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   排序：
+* 排序：
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   最后，我们演示一个更高级的示例：确定相同类型的两个实例的属性值是否相等（该示例摘自[此 StackOverflow 文章](https://stackoverflow.com/a/844855)，不过已做修改）：
+* 最后，我们演示一个更高级的示例：确定相同类型的两个实例的属性值是否相等（该示例摘自[此 StackOverflow 文章](https://stackoverflow.com/a/844855)，不过已做修改）：
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 
 ## <a name="further-resources"></a>其他资源：
 
-*   [101 LINQ 示例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/)，适用于 C#/F#/VB 的演练环境和数据库查询引擎
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，帮助用户了解如何实现 LINQ 到对象的电子书
+* [101 LINQ 示例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/)，适用于 C#/F#/VB 的演练环境和数据库查询引擎
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，帮助用户了解如何实现 LINQ 到对象的电子书

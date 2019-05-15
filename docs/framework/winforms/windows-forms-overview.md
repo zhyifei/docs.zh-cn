@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211784"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583460"
 ---
 # <a name="windows-forms-overview"></a>Windows 窗体概述
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211784"
 
 ### <a name="build-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面
 
- Windows 窗体是用于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智能客户端技术，是一组简化读取和写入文件系统等常见应用程序任务的托管库。 当您使用 Visual Studio 之类的开发环境时，您可以通过网络与远程计算机创建 Windows 窗体智能客户端应用程序显示的信息、 请求来自用户的输入和通信。
+ Windows 窗体是用于.NET Framework 中，一组简化读取和写入文件系统等常见应用程序任务的托管库的智能客户端技术。 当您使用 Visual Studio 之类的开发环境时，您可以通过网络与远程计算机创建 Windows 窗体智能客户端应用程序显示的信息、 请求来自用户的输入和通信。
 
  在 Windows 窗体中，窗体是一种可视图面，可在其上对用户显示信息。 通常情况下，通过向窗体添加控件和开发对用户操作（如点击鼠标或按键）的响应来构建 Windows 窗体应用程序。 控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。
 
@@ -90,7 +90,7 @@ ms.locfileid: "65211784"
 
 ### <a name="other-controls-and-features"></a>其他控件和功能
 
-Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。 此外，Windows 窗体依赖于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的可靠的安全系统。 通过此系统，可以向客户发布更多安全应用程序。
+Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。 此外，Windows 窗体依赖于.NET Framework 的功能强大的安全系统。 通过此系统，可以向客户发布更多安全应用程序。
 
 #### <a name="implement-other-controls-and-features"></a>实现其他控件和功能
 

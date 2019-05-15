@@ -2,12 +2,12 @@
 title: 如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778061"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593492"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容
 
@@ -120,14 +120,6 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a>编译代码
-
-创建并编译面向下列选项之一的项目：
-
-- .NET Framework 版本 3.5，含对 System.Core.dll 的引用。
-- .NET Framework 版本 4.0或更高版本。
-- .NET Core 版本 1.0 或更高版本。
-  
 ## <a name="see-also"></a>请参阅
 
 - [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

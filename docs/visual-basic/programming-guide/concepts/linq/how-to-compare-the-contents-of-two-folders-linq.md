@@ -2,12 +2,12 @@
 title: 如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 63027e892fe8404001c6869be33af8cff1bc014a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643997"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593004"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
 此示例演示了比较两个文件列表的 3 种方法：  
@@ -114,8 +114,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
-  
+ 创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
+ 
 ## <a name="see-also"></a>请参阅
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498068"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622776"
 ---
 # <a name="latency-modes"></a>滞后时间模式
 若要回收对象，垃圾回收器必须停止应用程序中所有正在执行的线程。 在某些情况下（例如当应用程序检索数据或显示内容时），关键时刻可能发生完整的垃圾回收，从而妨碍性能。 可以通过将 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 属性设置为其中一个 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值来调节垃圾回收的干扰。  
   
  延迟指垃圾回收干扰应用程序的时间。 在低延迟期间，垃圾回收对正在回收的对象保守性更强、干扰性更弱。 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 枚举提供两种低延迟设置：  
   
--   <xref:System.Runtime.GCLatencyMode.LowLatency> 禁止第 2 代集合，仅执行第 0 代和第 1 代集合。 只能在短时间内使用。 在更长时间内，如果系统处于内存压力下，垃圾回收器将触发一次回收，这样会暂时暂停应用程序并中断对时间要求很急的操作。 此设置仅对工作站垃圾回收可用。  
+- <xref:System.Runtime.GCLatencyMode.LowLatency> 禁止第 2 代集合，仅执行第 0 代和第 1 代集合。 只能在短时间内使用。 在更长时间内，如果系统处于内存压力下，垃圾回收器将触发一次回收，这样会暂时暂停应用程序并中断对时间要求很急的操作。 此设置仅对工作站垃圾回收可用。  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 禁止前台第 2 代回收，仅执行第 0 代、第 1 代和后台第 2 代回收。 它可以长时间使用，并对工作站和服务器垃圾回收都可用。 如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。  
+- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 禁止前台第 2 代回收，仅执行第 0 代、第 1 代和后台第 2 代回收。 它可以长时间使用，并对工作站和服务器垃圾回收都可用。 如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。  
   
  在低延迟期间，除非发生以下情况，否则禁止第 2 代回收：  
   
--   系统收到操作系统的低内存通知。  
+- 系统收到操作系统的低内存通知。  
   
--   应用程序代码通过调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法并将 `generation` 参数指定为 2 来包含回收。  
+- 应用程序代码通过调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法并将 `generation` 参数指定为 2 来包含回收。  
   
  下表列出了使用 <xref:System.Runtime.GCLatencyMode> 值的应用程序方案。  
   
@@ -42,17 +42,17 @@ ms.locfileid: "54498068"
 ## <a name="guidelines-for-using-low-latency"></a>低延迟使用指南  
  使用 <xref:System.Runtime.GCLatencyMode.LowLatency> 模式时，请参考以下指南：  
   
--   尽可能地缩短低延迟时段。  
+- 尽可能地缩短低延迟时段。  
   
--   避免在低延迟时段分配大量内存。 由于垃圾回收回收的对象较少可能出现低内存通知。  
+- 避免在低延迟时段分配大量内存。 由于垃圾回收回收的对象较少可能出现低内存通知。  
   
--   在低延迟模式下，最大限度减少分配次数，尤其是大型对象堆和固定对象上的分配。  
+- 在低延迟模式下，最大限度减少分配次数，尤其是大型对象堆和固定对象上的分配。  
   
--   知道可以分配的线程。 由于 <xref:System.Runtime.GCSettings.LatencyMode%2A> 属性设置属于进程范围的设置，因此可以在可分配的任何线程上生成 <xref:System.OutOfMemoryException>。  
+- 知道可以分配的线程。 由于 <xref:System.Runtime.GCSettings.LatencyMode%2A> 属性设置属于进程范围的设置，因此可以在可分配的任何线程上生成 <xref:System.OutOfMemoryException>。  
   
--   将低延迟代码包装在受约束的执行区域中（有关详细信息，请参阅[受约束的执行区域](../../../docs/framework/performance/constrained-execution-regions.md)）。  
+- 将低延迟代码包装在受约束的执行区域中（有关详细信息，请参阅[受约束的执行区域](../../../docs/framework/performance/constrained-execution-regions.md)）。  
   
--   在低延迟期间，可以通过调用 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法强制进行第 2 代回收。  
+- 在低延迟期间，可以通过调用 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法强制进行第 2 代回收。  
   
 ## <a name="see-also"></a>请参阅
 

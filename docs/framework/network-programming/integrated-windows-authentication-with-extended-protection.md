@@ -2,12 +2,12 @@
 title: 带有扩展保护的集成 Windows 身份验证
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325717"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647411"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>带有扩展保护的集成 Windows 身份验证
 进行了可影响以下类处理集成式 Windows 身份验证的方式的改进：<xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 以及 <xref:System.Net> 和相关命名空间中的相关类。 添加了对扩展保护的支持以增强安全性。  
@@ -39,21 +39,21 @@ ms.locfileid: "59325717"
   
  服务绑定信息指示客户端想对特定服务终结点验证自己的身份。 它随以下属性从客户端传输到服务器：  
   
--   SPN 值必须可用于以明文形式执行客户端身份验证的服务器。  
+- SPN 值必须可用于以明文形式执行客户端身份验证的服务器。  
   
--   SPN 的值是公共的。  
+- SPN 的值是公共的。  
   
--   SPN 在传输过程中必须受到加密保护，以便中间人攻击不会插入、删除或修改它的值。  
+- SPN 在传输过程中必须受到加密保护，以便中间人攻击不会插入、删除或修改它的值。  
   
  CBT 是外部安全通道（如 TLS）的属性，用于通过验证了客户端的内部通道将其绑定到会话。 CBT 必须具有以下属性（也由 IETF RFC 5056 定义）：  
   
--   当存在外部通道时，CBT 的值必须是标识外部通道或服务器终结点的属性，由会话的客户端和服务器端独立获取。  
+- 当存在外部通道时，CBT 的值必须是标识外部通道或服务器终结点的属性，由会话的客户端和服务器端独立获取。  
   
--   客户端发送的 CBT 的值必须是攻击者不能影响的。  
+- 客户端发送的 CBT 的值必须是攻击者不能影响的。  
   
--   对 CBT 值的保密性不作任何保证。 但这不意味着，服务绑定值和通道绑定信息总是可由其他任何服务器进行检查（执行身份验证服务器除外），因为携带 CBT 的协议可能对其进行加密。  
+- 对 CBT 值的保密性不作任何保证。 但这不意味着，服务绑定值和通道绑定信息总是可由其他任何服务器进行检查（执行身份验证服务器除外），因为携带 CBT 的协议可能对其进行加密。  
   
--   CBT 在传输过程中必须受到加密完整性保护，以便攻击者不会插入、删除或修改它的值。  
+- CBT 在传输过程中必须受到加密完整性保护，以便攻击者不会插入、删除或修改它的值。  
   
  通道绑定是由客户端将 SPN 和 CBT 以防干扰方式传输给服务器而完成的。 服务器根据其策略验证通道绑定信息，并拒绝它认为自身不是预期目标的身份验证尝试。 这样，两个通道加密绑定在一起。  
   
@@ -72,37 +72,37 @@ ms.locfileid: "59325717"
   
  含有以下元素的 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>：  
   
--   <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> 属性，指示操作系统是否支持使用扩展保护的集成式 Windows 身份验证。  
+- <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> 属性，指示操作系统是否支持使用扩展保护的集成式 Windows 身份验证。  
   
--   <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 值，该值指示应何时强制实施扩展保护策略。  
+- <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 值，该值指示应何时强制实施扩展保护策略。  
   
--   <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 值，指示部署方案。 这会影响扩展保护的检查方式。  
+- <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 值，指示部署方案。 这会影响扩展保护的检查方式。  
   
--   可选的 <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection>，其中包含自定义 SPN 列表，该列表用于根据客户端提供的作为身份验证预期目标的 SPN 进行匹配。  
+- 可选的 <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection>，其中包含自定义 SPN 列表，该列表用于根据客户端提供的作为身份验证预期目标的 SPN 进行匹配。  
   
--   可选的 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>，其中包含用于验证的自定义通道绑定。 这不常见  
+- 可选的 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>，其中包含用于验证的自定义通道绑定。 这不常见  
   
  <xref:System.Security.Authentication.ExtendedProtection.Configuration> 命名空间为采用应用程序扩展保护的身份验证提供配置支持。  
   
  进行了大量的功能更改来支持现有 <xref:System.Net> 命名空间中的扩展保护。 包括以下更改：  
   
--   新的 <xref:System.Net.TransportContext> 类添加到表示传输上下文的 <xref:System.Net> 命名空间。  
+- 新的 <xref:System.Net.TransportContext> 类添加到表示传输上下文的 <xref:System.Net> 命名空间。  
   
--   在 <xref:System.Net.HttpWebRequest> 类中新增 <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 和 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 重载方法，允许检索 <xref:System.Net.TransportContext> 以支持客户端应用程序的扩展保护。  
+- 在 <xref:System.Net.HttpWebRequest> 类中新增 <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 和 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 重载方法，允许检索 <xref:System.Net.TransportContext> 以支持客户端应用程序的扩展保护。  
   
--   对 <xref:System.Net.HttpListener> 和 <xref:System.Net.HttpListenerRequest> 类进行添加补充以支持服务器应用程序。  
+- 对 <xref:System.Net.HttpListener> 和 <xref:System.Net.HttpListenerRequest> 类进行添加补充以支持服务器应用程序。  
   
  进行了功能更改，为现有 <xref:System.Net.Mail> 命名空间中的 SMTP 客户端应用程序提供扩展保护支持：  
   
--   <xref:System.Net.Mail.SmtpClient> 类中的 <xref:System.Net.Mail.SmtpClient.TargetName%2A> 属性，在为 SMTP 客户端应用程序使用扩展保护时表示用于身份验证的 SPN。  
+- <xref:System.Net.Mail.SmtpClient> 类中的 <xref:System.Net.Mail.SmtpClient.TargetName%2A> 属性，在为 SMTP 客户端应用程序使用扩展保护时表示用于身份验证的 SPN。  
   
  进行了大量的功能更改来支持现有 <xref:System.Net.Security> 命名空间中的扩展保护。 包括以下更改：  
   
--   在 <xref:System.Net.Security.NegotiateStream> 类中新增 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 重载方法，允许传递 CBT 来支持客户端应用程序的扩展保护。  
+- 在 <xref:System.Net.Security.NegotiateStream> 类中新增 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 重载方法，允许传递 CBT 来支持客户端应用程序的扩展保护。  
   
--   在 <xref:System.Net.Security.NegotiateStream> 类中新增 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 重载方法，允许传递 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 来支持服务器应用程序的扩展保护。  
+- 在 <xref:System.Net.Security.NegotiateStream> 类中新增 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 重载方法，允许传递 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 来支持服务器应用程序的扩展保护。  
   
--   在 <xref:System.Net.Security.SslStream> 类中新增 <xref:System.Net.Security.SslStream.TransportContext%2A> 属性来支持客户端和服务器应用程序的扩展保护。  
+- 在 <xref:System.Net.Security.SslStream> 类中新增 <xref:System.Net.Security.SslStream.TransportContext%2A> 属性来支持客户端和服务器应用程序的扩展保护。  
   
  添加了 <xref:System.Net.Configuration.SmtpNetworkElement> 属性以支持在 <xref:System.Net.Security> 命名空间中为 SMTP 客户端配置扩展保护。  
   

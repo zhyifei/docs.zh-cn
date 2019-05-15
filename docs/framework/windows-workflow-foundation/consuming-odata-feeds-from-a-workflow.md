@@ -2,16 +2,16 @@
 title: 工作流的 WF 中使用 OData 源
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946052"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592982"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>工作流中使用 OData 源
 
-WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一个组件，可以使用此组件创建一些服务，利用开放式数据协议 (OData) 来借助具象状态传输 (REST) 语义通过 Web 或 Intranet 公开和使用数据。 OData 将数据公开为可通过 URI 进行寻址的资源。 如果任一应用程序可发送 HTTP 请求并处理数据服务返回的 OData 源，则该应用程序可与基于 OData 的数据服务进行交互。 此外，WCF 数据服务包括多个客户端库，当从 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序使用 OData 源时，这些客户端库会提供更丰富的编程体验。 本主题概述如何在使用/未使用客户端库的情况下，在工作流中使用 OData 源。
+WCF 数据服务是可用于创建服务，利用开放式数据协议 (OData) 来公开和使用具象状态传输 (REST) 语义通过 Web 或 intranet 中使用数据的.NET framework 的组件。 OData 将数据公开为可通过 URI 进行寻址的资源。 如果任一应用程序可发送 HTTP 请求并处理数据服务返回的 OData 源，则该应用程序可与基于 OData 的数据服务进行交互。 此外，WCF 数据服务包括提供更丰富的编程体验，当你使用.NET Framework 应用程序从 OData 源的客户端库。 本主题概述如何在使用/未使用客户端库的情况下，在工作流中使用 OData 源。
 
 ## <a name="using-the-sample-northwind-odata-service"></a>使用示例 Northwind OData 服务
 
@@ -19,7 +19,7 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>使用 OData 源使用的客户端库
 
-WCF 数据服务包括一些客户端库，使您能够通过 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 和客户端应用程序更轻松地使用 OData 源。 这些库简化了 HTTP 消息的发送和接收。 它们还可将消息负载转换为代表实体数据的 CLR 对象。 客户端库具有两个核心类 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 通过使用这些类，可以查询数据服务，然后作为 CLR 对象使用返回的实体数据。 本节介绍了用于创建使用客户端库的活动的两种方法。
+WCF Data Services 包括客户端库，使您更轻松地使用 OData 源从.NET Framework 和客户端应用程序。 这些库简化了 HTTP 消息的发送和接收。 它们还可将消息负载转换为代表实体数据的 CLR 对象。 客户端库具有两个核心类 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 通过使用这些类，可以查询数据服务，然后作为 CLR 对象使用返回的实体数据。 本节介绍了用于创建使用客户端库的活动的两种方法。
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>添加对 WCF 数据服务的服务引用
 
@@ -34,7 +34,7 @@ WCF 数据服务包括一些客户端库，使您能够通过 [!INCLUDE[dnprdnsh
 
 ### <a name="using-asynchronous-methods"></a>使用异步方法
 
-若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法和 Windows Workflow Foundation (WF) 提供了<xref:System.Activities.AsyncCodeActivity>用于创作异步活动的类。 可写入<xref:System.Activities.AsyncCodeActivity> 派生的活动以利用具有异步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类，或者可将要异步执行的代码放入某个方法中并使用委托进行调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。
+若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法和 Windows Workflow Foundation (WF) 提供了<xref:System.Activities.AsyncCodeActivity>用于创作异步活动的类。 <xref:System.Activities.AsyncCodeActivity> 可以写入派生的活动以利用具有异步方法的.NET Framework 类或以异步方式执行的代码可以放入某个方法，并使用委托调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。
 
 > [!NOTE]
 > 有关详细信息，请参阅[异步操作 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md)并[创建异步活动](creating-asynchronous-activities-in-wf.md)。
@@ -72,7 +72,7 @@ Calling WCF Data Service...
 
 ### <a name="using-a-delegate"></a>使用委托
 
-除了调用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类的异步方法之外，基于 <xref:System.Activities.AsyncCodeActivity>的活动还可定义其某个方法中的异步逻辑。 此方法是通过使用活动的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 重写中的委托来指定的。 当此方法返回时，运行时将调用活动的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 重写。 当从工作流调用 OData 服务时，此方法可用于查询服务和提供任何其他处理。
+除了调用.NET Framework 类，异步方法之外<xref:System.Activities.AsyncCodeActivity>-基于的活动还可以在某一方法中定义的异步逻辑。 此方法是通过使用活动的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 重写中的委托来指定的。 当此方法返回时，运行时将调用活动的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 重写。 当从工作流调用 OData 服务时，此方法可用于查询服务和提供任何其他处理。
 
 下面的示例定义了一个 `ListCustomers` 活动。 此活动将查询示例 Northwind 数据服务并返回一个包含 Northwind 数据库中的所有客户的 `List<Customer>` 。 异步工作由 `GetCustomers` 方法执行。 此方法将查询所有客户的服务，然后将这些客户复制到 `List<Customer>`。 然后，此方法会检查结果是否已分页。 如果结果已分页，则此方法会查询下一页结果的服务，再将这些结果添加到列表，然后继续操作直到检索到所有客户数据。
 

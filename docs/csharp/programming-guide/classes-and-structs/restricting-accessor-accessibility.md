@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cde196c2bf0b40443c6b497a6a73863e5f89dd0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203699"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582993"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>限制访问器可访问性（C# 编程指南）
 属性或索引器的 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 部分称为访问器。 默认情况下，这些访问器具有与其所属属性或索引器相同的可见性或访问级别。 有关详细信息，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)。 不过，有时限制对其中某个访问器的访问是有益的。 通常是在保持 `get` 访问器可公开访问的情况下，限制 `set` 访问器的可访问性。 例如:  
@@ -27,13 +27,13 @@ ms.locfileid: "57203699"
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>对访问器的访问修饰符的限制  
  对属性或索引器使用访问修饰符受以下条件的制约：  
   
--   不能对接口或显式[接口](../../../csharp/language-reference/keywords/interface.md)成员实现使用访问器修饰符。  
+- 不能对接口或显式[接口](../../../csharp/language-reference/keywords/interface.md)成员实现使用访问器修饰符。  
   
--   仅当属性或索引器同时具有 `set` 和 `get` 访问器时，才能使用访问器修饰符。 这种情况下，只允许对其中一个访问器使用修饰符。  
+- 仅当属性或索引器同时具有 `set` 和 `get` 访问器时，才能使用访问器修饰符。 这种情况下，只允许对其中一个访问器使用修饰符。  
   
--   如果属性或索引器具有 [override](../../../csharp/language-reference/keywords/override.md) 修饰符，则访问器修饰符必须与重写的访问器的访问器（如有）匹配。  
+- 如果属性或索引器具有 [override](../../../csharp/language-reference/keywords/override.md) 修饰符，则访问器修饰符必须与重写的访问器的访问器（如有）匹配。  
   
--   访问器的可访问性级别必须比属性或索引器本身的可访问性级别具有更严格的限制。  
+- 访问器的可访问性级别必须比属性或索引器本身的可访问性级别具有更严格的限制。  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>重写访问器的访问修饰符  
  重写属性或索引器时，被重写的访问器对重写代码而言必须是可访问的。 此外，属性/索引器及其访问器的可访问性都必须与相应的被重写属性/索引器及其访问器匹配。 例如:  

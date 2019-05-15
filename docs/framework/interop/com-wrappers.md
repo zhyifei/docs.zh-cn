@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b633239be85a66c5bba54132c3732357967eb177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 47fa0065bad76640b1ad8f61734c5749ec51286b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182931"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613831"
 ---
 # <a name="com-wrappers"></a>COM 包装
 COM 在以下几个重要方面与 .NET Framework 对象模型存在差别：  
   
--   COM 对象的客户端必需管理这些对象的生存期；公共语言运行时管理其环境中对象的生存期。  
+- COM 对象的客户端必需管理这些对象的生存期；公共语言运行时管理其环境中对象的生存期。  
   
--   COM 对象的客户端通过对提供服务的接口发出请求并取回接口指针来发现服务是否可用。 .NET 对象的客户端可以使用反射来获取对象功能的说明。  
+- COM 对象的客户端通过对提供服务的接口发出请求并取回接口指针来发现服务是否可用。 .NET 对象的客户端可以使用反射来获取对象功能的说明。  
   
--   NET 对象驻留在由 .NET Framework 执行环境管理的内存中。 出于性能原因，执行环境可以在内存中来回移动对象，并更新所移动对象的所有引用。 非管理的客户端在获取指向对象的指针后，依赖于该对象以保留在相同位置。 这些客户端没有机制来处理位置不固定的对象。  
+- NET 对象驻留在由 .NET Framework 执行环境管理的内存中。 出于性能原因，执行环境可以在内存中来回移动对象，并更新所移动对象的所有引用。 非管理的客户端在获取指向对象的指针后，依赖于该对象以保留在相同位置。 这些客户端没有机制来处理位置不固定的对象。  
   
  为了克服这些差异，运行时提供了包装类，使托管和非管理的客户端认为它们在各自的环境中调用对象。 每当托管客户端对某个 COM 对象调用方法时，运行时就会创建一个[运行时可调用包装器](runtime-callable-wrapper.md) (RCW)。 除此之外，RCW 还会提取托管和非托管引用机制之间的差异。 该运行时还创建了一个 [COM 可调用包装器](com-callable-wrapper.md) (CCW) 来逆转此过程，使 COM 客户端能够对 .NET 对象无缝地调用方法。 如下图所示，调用代码的性质确定运行时创建的包装类。  
   

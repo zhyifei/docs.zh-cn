@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802084"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592676"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
+.NET Framework 使用权限来帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
   
  遇到安全限制时，你有两个选择：断言该权限（假设已将该权限授予你的应用程序），或者使用编写为用于部分信任中的功能版本。 以下各节探讨如何使用文件、数据库和在部分信任环境中运行的应用程序中的注册表访问。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61802084"
 >  默认情况下，生成 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具默认这些部署从在其上运行的计算机请求完全信任。 如果您决定要在部分信任环境中运行的更高的安全性优势，则必须更改此默认值在 Visual Studio 或其中一个[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 有关 Windows 窗体安全性以及如何确定您的应用程序的适当的信任级别的详细信息，请参阅[中的安全性 Windows 窗体概述](security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>文件访问  
- <xref:System.Security.Permissions.FileIOPermission> 类控制 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的文件和文件夹访问。 默认情况下，安全系统不会向本地 Intranet 和 Internet 区域等部分信任环境授予 <xref:System.Security.Permissions.FileIOPermission>。 但是，如果修改应用程序的设计或使用不同的方法访问文件，那么需要文件访问权限的应用程序仍可以在这些环境中正常工作。 默认情况下，将向本地 Intranet 区域授予以下权限：具有相同的站点访问权限和相同的目录访问权限、连回其源站点、从其安装目录进行读取。 默认情况下，仅向 Internet 区域授予连回其源站点的权限。  
+ <xref:System.Security.Permissions.FileIOPermission>类控制.NET Framework 中的文件和文件夹访问。 默认情况下，安全系统不会向本地 Intranet 和 Internet 区域等部分信任环境授予 <xref:System.Security.Permissions.FileIOPermission>。 但是，如果修改应用程序的设计或使用不同的方法访问文件，那么需要文件访问权限的应用程序仍可以在这些环境中正常工作。 默认情况下，将向本地 Intranet 区域授予以下权限：具有相同的站点访问权限和相同的目录访问权限、连回其源站点、从其安装目录进行读取。 默认情况下，仅向 Internet 区域授予连回其源站点的权限。  
   
 ### <a name="user-specified-files"></a>用户指定的文件  
  针对不具有文件访问权限的一种应对方法是：提示用户通过使用 <xref:System.Windows.Forms.OpenFileDialog> 或 <xref:System.Windows.Forms.SaveFileDialog> 类提供特定文件信息。 这种用户交互有助于在一定程度上确保应用程序无法恶意加载专用文件或覆盖重要文件。 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 和 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> 方法通过打开用户指定的文件的文件流提供读写文件访问权限。 这些方法还有助于通过隐藏文件路径保护用户文件。  
@@ -47,7 +47,7 @@ ms.locfileid: "61802084"
 > [!NOTE]
 >  实际调用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法前并不需要这一特定权限。  
   
- 显示文件对话框的权限不会授予应用程序对 <xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog> 和 <xref:System.Windows.Forms.SaveFileDialog> 类所有成员的完全访问权限。 有关调用每个方法所需的确切权限的信息，请参阅 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类库文档中该方法的参考主题。  
+ 显示文件对话框的权限不会授予应用程序对 <xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog> 和 <xref:System.Windows.Forms.SaveFileDialog> 类所有成员的完全访问权限。 调用每个方法所需的确切权限，请参阅.NET Framework 类库文档中的该方法的参考主题。  
   
  以下代码示例使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 方法将用户指定的文件打开为 <xref:System.Windows.Forms.RichTextBox> 控件。 该示例需要 <xref:System.Security.Permissions.FileDialogPermission> 和关联的 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 枚举值。 该示例演示如何处理 <xref:System.Security.SecurityException> 以确定是否应禁用保存功能。 此示例要求你的 <xref:System.Windows.Forms.Form> 具有名为 `ButtonOpen` 的 <xref:System.Windows.Forms.Button> 控件和名为 `RtfBoxMain` 的 <xref:System.Windows.Forms.RichTextBox> 控件。  
   

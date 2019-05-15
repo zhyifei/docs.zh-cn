@@ -2,12 +2,12 @@
 title: 在 WF 中创建异步活动
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b990631d6efdb4644274c8a4606af07495b1979c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945881"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592971"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中创建异步活动
 <xref:System.Activities.AsyncCodeActivity> 提供一个可供活动作者使用的基类，该基类允许派生的活动实现异步执行逻辑。 这对如下自定义活动非常有用：必须执行异步工作，而不会保持工作流计划程序线程并阻止可以并行运行的所有活动。 本主题概述了如何使用 <xref:System.Activities.AsyncCodeActivity> 创建自定义异步活动。  
@@ -31,7 +31,7 @@ ms.locfileid: "61945881"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>对类调用异步方法  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的许多类都提供了异步功能，可以使用基于 <xref:System.Activities.AsyncCodeActivity> 的活动来异步调用此功能。 在以下示例中，创建一个活动是以异步方式通过使用创建文件<xref:System.IO.FileStream>类。  
+ 很多.NET Framework 中的类提供了异步功能，并可以通过使用以异步方式调用此功能<xref:System.Activities.AsyncCodeActivity>基于活动。 在以下示例中，创建一个活动是以异步方式通过使用创建文件<xref:System.IO.FileStream>类。  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   

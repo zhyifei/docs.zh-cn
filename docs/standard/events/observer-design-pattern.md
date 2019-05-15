@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: a89739b92d64e8774080d82f9e39af24c269223e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615164"
 ---
 # <a name="observer-design-pattern"></a>观察者设计模式
 观察者设计模式使订阅者能够从提供程序注册并接收通知。 它适用于需要基于推送的通知的任何方案。 此模式定义提供程序（亦称为“使用者”或“可观察对象”），以及零个、一个或多个观察者。 观察者注册提供程序，并且每当预定义的条件、事件或状态发生更改时，该提供程序会通过调用其方法之一来自动通知所有观察者。 在此方法调用中，该提供程序还可向观察者提供当前状态信息。 在 .NET Framework 中，通过实现泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 接口来应用观察者设计模式。 泛型类型参数表示提供通知信息的类型。 泛型类型参数表示提供通知信息的类型。  
@@ -29,21 +29,21 @@ ms.locfileid: "56836560"
   
  实现此模式要求提供以下内容：  
   
--   提供程序或主题，即将通知发送给观察者的对象。 提供程序是实现 <xref:System.IObservable%601> 接口的类或结构。 提供程序必须实现单个方法 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>，该方法由希望从提供程序接收通知的观察者调用。  
+- 提供程序或主题，即将通知发送给观察者的对象。 提供程序是实现 <xref:System.IObservable%601> 接口的类或结构。 提供程序必须实现单个方法 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>，该方法由希望从提供程序接收通知的观察者调用。  
   
--   观察者，即从提供程序接收通知的对象。 观察者是实现 <xref:System.IObserver%601> 接口的类或结构。 观察者必须实现以下三个方法，这三个方法均由提供程序调用：  
+- 观察者，即从提供程序接收通知的对象。 观察者是实现 <xref:System.IObserver%601> 接口的类或结构。 观察者必须实现以下三个方法，这三个方法均由提供程序调用：  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>，它向观察者提供新信息或当前信息。  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>，它向观察者提供新信息或当前信息。  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>，它通知观察者已发生错误。  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>，它通知观察者已发生错误。  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>，它指示提供程序已完成发送通知。  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>，它指示提供程序已完成发送通知。  
   
--   允许提供程序跟踪观察者的一种机制。 通常情况下，提供程序使用容器对象（如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象）来保存对已订阅通知的 <xref:System.IObserver%601> 实现的引用。 将存储容器用于此目的使提供程序能够处理零到无限数量的观察者。 未定义观察者接收通知的顺序；提供程序可以随意使用任何方法来确定顺序。  
+- 允许提供程序跟踪观察者的一种机制。 通常情况下，提供程序使用容器对象（如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象）来保存对已订阅通知的 <xref:System.IObserver%601> 实现的引用。 将存储容器用于此目的使提供程序能够处理零到无限数量的观察者。 未定义观察者接收通知的顺序；提供程序可以随意使用任何方法来确定顺序。  
   
--   <xref:System.IDisposable> 实现，它使提供程序在能够通知完成时删除观察者。 观察者从 <xref:System.IObservable%601.Subscribe%2A> 方法接收对 <xref:System.IDisposable> 实现的引用，因此它们还可以调用 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法，以便在提供程序已完成发送通知之前取消订阅。  
+- <xref:System.IDisposable> 实现，它使提供程序在能够通知完成时删除观察者。 观察者从 <xref:System.IObservable%601.Subscribe%2A> 方法接收对 <xref:System.IDisposable> 实现的引用，因此它们还可以调用 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法，以便在提供程序已完成发送通知之前取消订阅。  
   
--   包含提供程序发送到其观察者的数据的对象。 此对象的类型对应 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口的泛型类型参数。 尽管此对象可与 <xref:System.IObservable%601> 实现相同，但通常情况下，它是一个单独的类型。  
+- 包含提供程序发送到其观察者的数据的对象。 此对象的类型对应 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口的泛型类型参数。 尽管此对象可与 <xref:System.IObservable%601> 实现相同，但通常情况下，它是一个单独的类型。  
   
 > [!NOTE]
 >  除实现观察者设计模式外，你还可能对浏览使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口构建的库感兴趣。 例如，[Reactive Extensions for .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) 包含一组支持异步编程的扩展方法和 LINQ 标准序列运算符。  
@@ -56,9 +56,9 @@ ms.locfileid: "56836560"
   
  `BaggageHandler` 类负责接收有关到达航班和行李认领传送带的信息。 在内部，它维护两个集合：  
   
--   `observers` - 将接收更新的信息的客户端集合。  
+- `observers` - 将接收更新的信息的客户端集合。  
   
--   `flights` - 航班及其指定行李传送带的集合。  
+- `flights` - 航班及其指定行李传送带的集合。  
   
  这两个集合都由在 `BaggageHandler` 类构造函数中实例化的泛型 <xref:System.Collections.Generic.List%601> 对象表示。 下面的示例演示了 `BaggageHandler` 类的源代码。  
   

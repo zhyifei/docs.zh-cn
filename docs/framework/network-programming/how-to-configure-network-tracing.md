@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613715"
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：配置网络跟踪
 应用程序或计算机配置文件可保存用于确定网络跟踪的格式和内容的设置。 在执行此过程之前，请确保启用跟踪。 有关如何启用跟踪的信息，请参阅[启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "59151549"
   
 ### <a name="to-configure-network-tracing"></a>配置网络跟踪  
   
--   将下面的代码行添加到相应的配置文件。 这些设置的值和选项已在下表中予以说明。  
+- 将下面的代码行添加到相应的配置文件。 这些设置的值和选项已在下表中予以说明。  
   
     ```xml  
     <configuration>  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698886"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625621"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自定义分区程序
 若要并行执行对数据源的操作，关键步骤之一是，将数据源分区成多个部分，以供多个线程同时访问。 PLINQ 和任务并行库 (TPL) 提供了默认分区程序，在用户编写并行查询或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环时透明运行。 对于更高级的方案，可以插入自己的分区程序。  
@@ -100,25 +100,25 @@ ms.locfileid: "54698886"
 ### <a name="contract-for-partitioners"></a>分区程序合同  
  实现自定义分区程序时，请遵循以下指南，它们有助于确保与 PLINQ 和 TPL 中的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 进行正确交互：  
   
--   如果调用 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 时 `partitionsCount` 参数值等于或小于零，抛出 <xref:System.ArgumentOutOfRangeException>。 虽然 PLINQ 和 TPL 绝不会传入等于 0 的 `partitionCount`，但仍建议防范这种可能性。  
+- 如果调用 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 时 `partitionsCount` 参数值等于或小于零，抛出 <xref:System.ArgumentOutOfRangeException>。 虽然 PLINQ 和 TPL 绝不会传入等于 0 的 `partitionCount`，但仍建议防范这种可能性。  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 和 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> 应始终返回分区的 `partitionsCount` 数。 如果分区程序用尽数据，且无法根据请求创建任意多个分区，方法应为剩余的每个分区返回空枚举器。 否则，PLINQ 和 TPL 都会抛出 <xref:System.InvalidOperationException>。  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 和 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> 应始终返回分区的 `partitionsCount` 数。 如果分区程序用尽数据，且无法根据请求创建任意多个分区，方法应为剩余的每个分区返回空枚举器。 否则，PLINQ 和 TPL 都会抛出 <xref:System.InvalidOperationException>。  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>、<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> 和 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> 不得返回 `null`（在 Visual Basic 中为 `Nothing`）。 如果返回，PLINQ/TPL 会抛出 <xref:System.InvalidOperationException>。  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>、<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> 和 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> 不得返回 `null`（在 Visual Basic 中为 `Nothing`）。 如果返回，PLINQ/TPL 会抛出 <xref:System.InvalidOperationException>。  
   
--   返回分区的方法应始终返回可完全且唯一枚举数据源的分区。 除非分区程序在设计上有特别要求，否则数据源或跳过的项不得有重复项。 如果未遵循此规则，输出顺序可能会出现混乱。  
+- 返回分区的方法应始终返回可完全且唯一枚举数据源的分区。 除非分区程序在设计上有特别要求，否则数据源或跳过的项不得有重复项。 如果未遵循此规则，输出顺序可能会出现混乱。  
   
--   为了让输出顺序不出现混乱，下面的布尔 Getter 必须始终准确返回以下值：  
+- 为了让输出顺序不出现混乱，下面的布尔 Getter 必须始终准确返回以下值：  
   
-    -   `KeysOrderedInEachPartition`：每个分区返回密钥索引递增的元素。  
+    - `KeysOrderedInEachPartition`：每个分区返回密钥索引递增的元素。  
   
-    -   `KeysOrderedAcrossPartitions`：对于返回的所有分区，分区 i 中的密钥索引大于分区 i-1 中的密钥索引。  
+    - `KeysOrderedAcrossPartitions`：对于返回的所有分区，分区 i 中的密钥索引大于分区 i-1 中的密钥索引。  
   
-    -   `KeysNormalized`：所有密钥索引从零开始不间断单调递增。  
+    - `KeysNormalized`：所有密钥索引从零开始不间断单调递增。  
   
--   所有索引都必须是唯一的。 不得有重复索引。 如果未遵循此规则，输出顺序可能会出现混乱。  
+- 所有索引都必须是唯一的。 不得有重复索引。 如果未遵循此规则，输出顺序可能会出现混乱。  
   
--   所有索引都必须为非负索引。 如果未遵循此规则，PLINQ/TPL 可能会抛出异常。  
+- 所有索引都必须为非负索引。 如果未遵循此规则，PLINQ/TPL 可能会抛出异常。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609455"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590078"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部 XSLT 样式表和文档
 转换过程中会有几个场合需要解析外部资源。  
@@ -20,11 +20,11 @@ ms.locfileid: "54609455"
   
  转换过程中会有几个场合需要解析外部资源：  
   
--   在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期间定位外部样式表时。  
+- 在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期间定位外部样式表时。  
   
--   在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期间解析样式表中的任何 `<xsl:include>` 或 `<xsl:import>` 元素时。  
+- 在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期间解析样式表中的任何 `<xsl:include>` 或 `<xsl:import>` 元素时。  
   
--   在 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 期间解析任何 `document()` 函数时。  
+- 在 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 期间解析任何 `document()` 函数时。  
   
 ## <a name="using-the-xmlresolver-class"></a>使用 XmlResolver 类  
  如果访问网络资源需要身份验证，则使用有 <xref:System.Xml.Xsl.XslTransform.Load%2A> 参数的 <xref:System.Xml.XmlResolver> 方法，以便传递包含必要的凭据属性集的 <xref:System.Xml.XmlResolver> 对象。  

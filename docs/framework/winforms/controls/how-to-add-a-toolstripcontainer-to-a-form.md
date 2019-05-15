@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 6b35baac09ac47a25cc55877b2c94628f1b57111
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d69bc6ed0cf23da8315ae95565300d151069d51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624076"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582571"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>如何：向窗体添加 ToolStripContainer
 可以通过编程方式向 Windows 窗体添加 <xref:System.Windows.Forms.ToolStripContainer> 并用控件填充该窗体。  
@@ -29,8 +29,6 @@ ms.locfileid: "64624076"
  此代码示例需要：  
   
 - 引用 System.Drawing、System.Text 和 System.Windows.Forms 程序集。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。
   
 ## <a name="see-also"></a>请参阅
 

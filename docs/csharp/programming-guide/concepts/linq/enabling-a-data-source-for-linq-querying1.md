@@ -2,23 +2,23 @@
 title: 启用数据源以进行 LINQ 查询 1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7922c5dbe4f6185777dba4f33662eb2e4aee61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515714"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597160"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
 可通过多种方式来扩展 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以便能够在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式中查询任何数据源。 数据源可以是数据结构、Web 服务、文件系统或数据库等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式使客户端可以轻松地查询能够进行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的数据源，因为查询的语法和模式没有更改。 可通过以下方式将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 扩展到这些数据源：  
   
--   在某个类型中实现 <xref:System.Collections.Generic.IEnumerable%601> 接口，使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 能够查询该类型。  
+- 在某个类型中实现 <xref:System.Collections.Generic.IEnumerable%601> 接口，使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 能够查询该类型。  
   
--   创建扩展某个类型的标准查询运算符方法（比如 <xref:System.Linq.Enumerable.Where%2A> 和 <xref:System.Linq.Enumerable.Select%2A>），使自定义 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询该类型。  
+- 创建扩展某个类型的标准查询运算符方法（比如 <xref:System.Linq.Enumerable.Where%2A> 和 <xref:System.Linq.Enumerable.Select%2A>），使自定义 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询该类型。  
   
--   为实现 <xref:System.Linq.IQueryable%601> 接口的数据源创建一个提供程序。 实现此接口的提供程序以表达式树的形式接收 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，提供程序能够以自定义方式（例如以远程方式）执行该查询。  
+- 为实现 <xref:System.Linq.IQueryable%601> 接口的数据源创建一个提供程序。 实现此接口的提供程序以表达式树的形式接收 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，提供程序能够以自定义方式（例如以远程方式）执行该查询。  
   
--   为数据源创建一个利用现有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技术的提供程序。 这种提供程序不仅能够进行查询，而且能够为用户定义的类型插入、更新和删除操作及映射。  
+- 为数据源创建一个利用现有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技术的提供程序。 这种提供程序不仅能够进行查询，而且能够为用户定义的类型插入、更新和删除操作及映射。  
   
  本主题将讨论这些选项。  
   

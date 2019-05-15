@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8319424c82327fd9743c573846663bdd76ed1b9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560030"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644625"
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
 多线程处理需在编程时倍加注意。 对于多数任务，通过将执行请求以线程池线程的方式排队，可以降低复杂性。 本主题将探讨更复杂的情形，比如协调多个线程的工作或处理造成阻止的线程。  
@@ -86,21 +86,21 @@ else {
 ## <a name="general-recommendations"></a>一般性建议  
  使用多线程时需考虑以下准则：  
   
--   请勿使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 终止其他线程。 对另一个线程调用 **Abort** 无异于引发该线程的异常，也不知道该线程已处理到哪个位置。  
+- 请勿使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 终止其他线程。 对另一个线程调用 **Abort** 无异于引发该线程的异常，也不知道该线程已处理到哪个位置。  
   
--   请勿使用 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> 同步多个线程的活动。 请使用 <xref:System.Threading.Mutex>、<xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.Monitor>。  
+- 请勿使用 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> 同步多个线程的活动。 请使用 <xref:System.Threading.Mutex>、<xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.Monitor>。  
   
--   不要从主程序中控制工作线程的执行（如使用事件）。 而应设计程序，使工作线程负责等待任务可用，然后执行任务，并在完成时通知程序的其他部分。 如果不阻止工作线程，请考虑使用线程池线程。 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> 非常适用于阻止工作线程。  
+- 不要从主程序中控制工作线程的执行（如使用事件）。 而应设计程序，使工作线程负责等待任务可用，然后执行任务，并在完成时通知程序的其他部分。 如果不阻止工作线程，请考虑使用线程池线程。 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> 非常适用于阻止工作线程。  
   
--   不要将类型用作锁定对象。 也就是说，避免一些代码，如 C# 中的 `lock(typeof(X))` 或 Visual Basic 中的 `SyncLock(GetType(X))`，或避免使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Type> 对象。 对于给定类型，每个应用域只有一个 <xref:System.Type?displayProperty=nameWithType> 实例。 如果锁定对象的类型是“公共的”，那么不属于自己的代码也能锁定该对象，从而导致死锁。 有关其他问题，请参阅[可靠性最佳做法](../../../docs/framework/performance/reliability-best-practices.md)。  
+- 不要将类型用作锁定对象。 也就是说，避免一些代码，如 C# 中的 `lock(typeof(X))` 或 Visual Basic 中的 `SyncLock(GetType(X))`，或避免使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Type> 对象。 对于给定类型，每个应用域只有一个 <xref:System.Type?displayProperty=nameWithType> 实例。 如果锁定对象的类型是“公共的”，那么不属于自己的代码也能锁定该对象，从而导致死锁。 有关其他问题，请参阅[可靠性最佳做法](../../../docs/framework/performance/reliability-best-practices.md)。  
   
--   锁定实例时要谨慎，例如，C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果应用程序中不属于该类型的其他代码锁定了该对象，则会发生死锁。  
+- 锁定实例时要谨慎，例如，C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果应用程序中不属于该类型的其他代码锁定了该对象，则会发生死锁。  
   
--   请务必确保已进入监视器的线程始终离开该监视器，即使线程在监视器中时发生异常也是如此。 C# 的 [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 语句和 Visual Basic 的 [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 语句可自动提供此行为，同时使用 **finally** 块来确保调用 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果无法确保调用 **Exit**，请考虑将设计更改为使用 **Mutex**。 Mutex 在当前拥有它的线程终止后会自动释放。  
+- 请务必确保已进入监视器的线程始终离开该监视器，即使线程在监视器中时发生异常也是如此。 C# 的 [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 语句和 Visual Basic 的 [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 语句可自动提供此行为，同时使用 **finally** 块来确保调用 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果无法确保调用 **Exit**，请考虑将设计更改为使用 **Mutex**。 Mutex 在当前拥有它的线程终止后会自动释放。  
   
--   请务必针对需要不同资源的任务使用多线程，避免向单个资源指定多个线程。 例如，任何涉及 I/O 的任务都会从其拥有自己的线程这一点得到好处，因为此线程在 I/O 操作期间将阻止，从而允许其他线程执行。 用户输入是另一种可从专用线程获益的资源。 在单处理器计算机上，涉及大量计算的任务可与用户输入和涉及 I/O 的任务并存，但多个计算量大的任务将相互竞争。  
+- 请务必针对需要不同资源的任务使用多线程，避免向单个资源指定多个线程。 例如，任何涉及 I/O 的任务都会从其拥有自己的线程这一点得到好处，因为此线程在 I/O 操作期间将阻止，从而允许其他线程执行。 用户输入是另一种可从专用线程获益的资源。 在单处理器计算机上，涉及大量计算的任务可与用户输入和涉及 I/O 的任务并存，但多个计算量大的任务将相互竞争。  
   
--   对于简单的状态更改，请考虑使用 <xref:System.Threading.Interlocked> 类的方法，而不是 `lock` 语句（Visual Basic 中的 `SyncLock`）。 虽然 `lock` 语句是实用的通用工具，但 <xref:System.Threading.Interlocked> 类提升了更新（必须是原子操作）的性能。 如果不存在争用，它会在内部执行一个锁定前缀。 查看代码时，请注意类似于以下示例所示的代码。 在第一个示例中，状态变量是递增的：  
+- 对于简单的状态更改，请考虑使用 <xref:System.Threading.Interlocked> 类的方法，而不是 `lock` 语句（Visual Basic 中的 `SyncLock`）。 虽然 `lock` 语句是实用的通用工具，但 <xref:System.Threading.Interlocked> 类提升了更新（必须是原子操作）的性能。 如果不存在争用，它会在内部执行一个锁定前缀。 查看代码时，请注意类似于以下示例所示的代码。 在第一个示例中，状态变量是递增的：  
   
     ```vb  
     SyncLock lockObject  
@@ -169,13 +169,13 @@ else {
 ## <a name="recommendations-for-class-libraries"></a>类库相关建议  
  为多线程处理设计类库时，请考虑以下准则：  
   
--   如果可能，请避免同步需求。 对于大量使用的代码更应如此。 例如，可以将一个算法调整为容忍争用情况，而不是完全消除争用情况。 不必要的同步会降低性能，并且可能导致出现死锁和争用情况。  
+- 如果可能，请避免同步需求。 对于大量使用的代码更应如此。 例如，可以将一个算法调整为容忍争用情况，而不是完全消除争用情况。 不必要的同步会降低性能，并且可能导致出现死锁和争用情况。  
   
--   默认情况下使静态数据（在 Visual Basic 中为 `Shared`）是线程安全的。  
+- 默认情况下使静态数据（在 Visual Basic 中为 `Shared`）是线程安全的。  
   
--   默认情况下不要使实例数据是线程安全的。 通过添加锁来创建线程安全代码会降低性能、加剧锁争用情况，并且可能导致出现死锁。 在常见应用程序模型中，一次只有一个线程执行用户代码，从而最大限度降低线程安全性的需求。 出于此原因，.NET Framework 类库默认情况下不是线程安全的。  
+- 默认情况下不要使实例数据是线程安全的。 通过添加锁来创建线程安全代码会降低性能、加剧锁争用情况，并且可能导致出现死锁。 在常见应用程序模型中，一次只有一个线程执行用户代码，从而最大限度降低线程安全性的需求。 出于此原因，.NET Framework 类库默认情况下不是线程安全的。  
   
--   避免提供可更改静态状态的静态方法。 在常见服务器方案中，静态状态可在各个请求之间共享，这意味着多个线程可同时执行该代码。 这可能导致线程出现 bug。 请考虑使用一种设计模式，将数据封装到在各请求之间不共享的实例中。 此外，如果同步静态数据，更改状态的静态方法间的调用可导致死锁或冗余同步，进而降低性能。  
+- 避免提供可更改静态状态的静态方法。 在常见服务器方案中，静态状态可在各个请求之间共享，这意味着多个线程可同时执行该代码。 这可能导致线程出现 bug。 请考虑使用一种设计模式，将数据封装到在各请求之间不共享的实例中。 此外，如果同步静态数据，更改状态的静态方法间的调用可导致死锁或冗余同步，进而降低性能。  
   
 ## <a name="see-also"></a>请参阅
 

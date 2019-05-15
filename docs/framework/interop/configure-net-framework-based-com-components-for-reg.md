@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336572"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625449"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
   
--   COM 应用程序必须具有 Win32 样式的应用程序清单，以标识托管的组件。  
+- COM 应用程序必须具有 Win32 样式的应用程序清单，以标识托管的组件。  
   
--   基于 .NET Framework 的组件必须具有组件清单，以提供运行时所需的激活信息。  
+- 基于 .NET Framework 的组件必须具有组件清单，以提供运行时所需的激活信息。  
   
  本主题将介绍如何应用程序清单与应用程序关联，如何将组件清单与组件关联，以及如何在程序集中嵌入组件清单。  
   

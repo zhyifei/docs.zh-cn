@@ -2,12 +2,12 @@
 title: 病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638428"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592850"
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 一个*有害消息*是一条消息，已超出向应用程序的交付尝试最大数目。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -52,7 +52,7 @@ ms.locfileid: "64638428"
   
  WCF 提供了两个标准排队的绑定：  
   
-- <xref:System.ServiceModel.NetMsmqBinding>。 一个[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]适合于执行基于队列的通信与其他 WCF 终结点的绑定。  
+- <xref:System.ServiceModel.NetMsmqBinding>。 适用于执行基于队列的通信与其他 WCF 终结点的.NET Framework 绑定。  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 这种绑定适用于与现有消息队列应用程序之间的通信。  
   

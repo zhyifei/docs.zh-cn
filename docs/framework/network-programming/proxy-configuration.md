@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623056"
 ---
 # <a name="proxy-configuration"></a>代理配置
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  
@@ -45,11 +45,11 @@ ms.locfileid: "59200540"
   
  多个选项控制静态代理的运行方式。 可以指定以下各项：  
   
--   代理的地址。  
+- 代理的地址。  
   
--   是否应对本地地址不使用代理。  
+- 是否应对本地地址不使用代理。  
   
--   是否应对一组地址不使用代理。  
+- 是否应对一组地址不使用代理。  
   
  下表显示了静态代理的配置选项。  
   

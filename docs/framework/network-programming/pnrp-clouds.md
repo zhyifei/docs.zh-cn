@@ -2,12 +2,12 @@
 title: PNRP 云
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110040"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623034"
 ---
 # <a name="pnrp-clouds"></a>PNRP 云
 PNRP“云”表示通过网络相互通信的一组节点。 术语“云”与“对等网格”和“对等图”同义。  
@@ -18,9 +18,9 @@ PNRP“云”表示通过网络相互通信的一组节点。 术语“云”与
   
  PNRP 使用三个云“范围”，其中范围指一组可互相找到的计算机：  
   
--   全局云对应于全局 IPv6 地址范围和全局地址，表示整个 IPv6 Internet 上的所有计算机。 全局云只有一个。  
+- 全局云对应于全局 IPv6 地址范围和全局地址，表示整个 IPv6 Internet 上的所有计算机。 全局云只有一个。  
   
--   链接-本地云对应于链接-本地 IPv6 地址范围和链接-本地地址。 链接-本地云针对特定链接，通常与本地附加的子网相同。 链接-本地云可以有多个。  
+- 链接-本地云对应于链接-本地 IPv6 地址范围和链接-本地地址。 链接-本地云针对特定链接，通常与本地附加的子网相同。 链接-本地云可以有多个。  
   
  第三种云是站点特定的云，对应于站点 IPv6 地址范围和站点-本地地址。 这类云已被弃用，尽管它仍受 PNRP 支持。  
   
