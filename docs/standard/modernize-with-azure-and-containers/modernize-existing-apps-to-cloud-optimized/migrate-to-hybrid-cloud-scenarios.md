@@ -1,15 +1,13 @@
 ---
 title: 迁移到混合云方案
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |将迁移到混合云方案
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 6cba29ad654b09b01f9b6969fa6688dd5f165fbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636594"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643720"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>迁移到混合云方案
 

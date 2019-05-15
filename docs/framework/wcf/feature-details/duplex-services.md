@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592746"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636287"
 ---
 # <a name="duplex-services"></a>双工服务
 
@@ -87,7 +87,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 双工模型不自动检测服务或客户端何时关闭其通道。 因此如果客户端意外终止，默认情况下将不会通知服务，或如果服务意外终止，将不会通知客户端。 客户端和服务可以实现自己的协议以相互通知对方（如果它们这么选择）。 错误处理的详细信息，请参阅[WCF 错误处理](../wcf-error-handling.md)
+> 服务或客户端关闭其通道时，双工模型不会自动检测。 因此如果客户端意外终止，默认情况下将不会通知服务，或如果服务意外终止，将不会通知客户端。 如果你使用已断开连接的服务<xref:System.ServiceModel.CommunicationException>引发异常。 客户端和服务可以实现自己的协议以相互通知对方（如果它们这么选择）。 错误处理的详细信息，请参阅[WCF 错误处理](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>请参阅
 

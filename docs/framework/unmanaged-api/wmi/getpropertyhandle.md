@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92d48caf7de873850135c7410a5e4b5861131212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723233"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636246"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函数
 
@@ -62,7 +62,7 @@ HRESULT GetPropertyHandle (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性名称。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |

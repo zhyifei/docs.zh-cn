@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5b456feeb1cb09e4957e470344146cf4358d8c7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000215"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636164"
 ---
 # <a name="next-function"></a>下一个函数
 检索到的调用开始枚举中的下一步属性[BeginEnumeration](beginenumeration.md)。
@@ -69,7 +69,7 @@ HRESULT Next (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数无效。 |
@@ -89,7 +89,7 @@ HRESULT Next (
 
 如果`plFlavor`不是`null`，则`LONG`值接收围绕原点的属性的信息，如下所示：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 该属性是标准系统属性。 |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类：属性继承自的父类。 <br> 实例：属性，继承自的父类，而未已修改的实例。  |

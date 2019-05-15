@@ -1,15 +1,13 @@
 ---
 title: 构建 ASP.NET Core 2.2 应用程序部署到 AKS/Kubernetes 群集与 Linux 容器
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452785"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644786"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>构建 ASP.NET Core 2.2 应用程序与 Linux 容器部署到 AKS/Kubernetes 业务流程协调程序
 

@@ -2,12 +2,12 @@
 title: 类型提供程序疑难解答
 description: 发现潜在的解决方案，最有可能使用时遇到的问题类型中的提供程序的F#。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968215"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645050"
 ---
 # <a name="troubleshooting-type-providers"></a>类型提供程序疑难解答
 

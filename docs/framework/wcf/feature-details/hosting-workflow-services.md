@@ -2,12 +2,12 @@
 title: 承载工作流服务
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07e4f7779c06e6c95b45d59bcdd0890fb5a9cf55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613328"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636145"
 ---
 # <a name="hosting-workflow-services"></a>承载工作流服务
 工作流服务在承载后才能对传入消息做出响应。 工作流服务使用的是 WCF 消息传递基础结构，因此承载的方式也类似。 类似于 WCF 服务，工作流服务可以托管在任何托管应用程序在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 下。 此外，可以在 Windows Server App Fabric 下承载工作流服务。 有关 Windows Server App Fabric 的详细信息请参阅[Windows Server App Fabric 文档](https://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=196494)，并[AppFabric 承载概念](https://go.microsoft.com/fwlink/?LinkId=196495)。 服务承载 WCF 的各种不同方法的详细信息，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。

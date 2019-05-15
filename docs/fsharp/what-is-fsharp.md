@@ -2,12 +2,12 @@
 title: F# 是什么
 description: 了解F#编程语言是以及F#就像编程。 了解丰富的数据类型、 函数和它们如何组合在一起。
 ms.date: 08/03/2018
-ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756333"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641573"
 ---
 # <a name="what-is-f"></a>F\# 是什么
 

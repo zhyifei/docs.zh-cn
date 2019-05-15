@@ -1,15 +1,13 @@
 ---
 title: 在生产环境中运行基于微服务的组合应用程序
 description: 了解在生产环境中运行基于容器的应用程序的关键组件
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921584"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644969"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行基于微服务的组合应用程序
 

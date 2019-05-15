@@ -1,15 +1,13 @@
 ---
 title: 将现有 .NET 应用部署为 Windows 容器
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |将现有.NET 应用部署为 Windows 容器
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 0bdab6d8aaaaa9bdddb9e9d55df8bb4850bc2b81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614480"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643744"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有 .NET 应用部署为 Windows 容器
 

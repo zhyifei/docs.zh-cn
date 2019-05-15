@@ -1,15 +1,13 @@
 ---
 title: SOA 应用程序
 description: 请记住容器也可以是 SOA 应用程序的有用的部署选项。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: ee71873ac15246f979fd2b08d92280ba797ff6ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795392"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644765"
 ---
 # <a name="service-oriented-applications"></a>面向服务的应用程序
 

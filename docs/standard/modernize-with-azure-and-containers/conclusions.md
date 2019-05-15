@@ -1,15 +1,13 @@
 ---
 title: 结论
 description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |结论
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 62a9a38ccbe696c34ef799b574c0f5a95bc8f726
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6f56e312c052f3ea87e62d36a1ae6846a4b8735
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628322"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643765"
 ---
 # <a name="conclusions"></a>结论
 

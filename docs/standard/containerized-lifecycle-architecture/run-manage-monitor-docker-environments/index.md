@@ -1,15 +1,13 @@
 ---
 title: 运行、管理和监视 Docker 生产环境
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921519"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644876"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>运行、管理和监视 Docker 生产环境
 

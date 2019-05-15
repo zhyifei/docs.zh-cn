@@ -1,15 +1,13 @@
 ---
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 实际的生产应用程序必须部署和使用业务流程协调程序处理的运行状况、 工作负荷和所有容器的生命周期管理。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 148eab941644667c803c5613b8815f50263fc0fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644758"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644704"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -37,7 +35,7 @@ Docker 命令行接口 (CLI) 满足需求的管理一台主机上的一个容器
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>适用于容器群集、业务流程和计划的软件平台
 
-| Platform | 注释 |
+| 平台 | 注释 |
 |:---:|:---|
 | **Kubernetes** <br/> ![Kubernetes 徽标](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。 <br/> <br/> Kubernetes 提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。 <br/> <br/> Kubernetes 在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。 |
 | **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes 服务徽标](./media/aks-logo.png) | [Azure Kubernetes 服务 (AKS)](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的托管 Kubernetes 容器业务流程服务，简化了 Kubernetes 群集的管理、部署和操作。 |
