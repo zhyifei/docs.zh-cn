@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 145e6b8891735c904aa98a36ccfd27958bdf788d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124808"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648608"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>将委托作为回调方法进行封送
 此示例演示如何将委托传递给需要函数指针的非托管函数。 委托是可以容纳方法引用的类，等效于类型安全函数指针或回调函数。
@@ -26,13 +26,13 @@ ms.locfileid: "59124808"
 
 回调示例使用以下非托管函数（与其原始函数声明一同显示）：
 
--   `TestCallBack` 从 PinvokeLib.dll 导出。
+- `TestCallBack` 从 PinvokeLib.dll 导出。
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` 从 PinvokeLib.dll 导出。
+- `TestCallBack2` 从 PinvokeLib.dll 导出。
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

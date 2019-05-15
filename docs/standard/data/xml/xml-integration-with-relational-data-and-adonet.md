@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589809"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>关系数据和 ADO.NET 的 XML 集成
 XmlDataDocument 类是 XmlDocument 的派生类，包含 XML 数据。 XmlDataDocument 的优势在于，在关系数据和分层数据之间架起了桥梁。 它是可绑定到 DataSet 的 XmlDocument，这两个类可以同步对其中所含数据的更改。 绑定到 DataSet 的 XmlDocument 允许 XML 与关系数据集成，不必将数据表示为 XML 格式或关系格式。 您可以用这两种格式表示数据，而不是限于一种数据表示形式。  
   
  让数据可以以两种视图呈现的好处是：  
   
--   XML 文档的结构化部分可以映射到一个数据集，并可以有效地存储、索引和搜索。  
+- XML 文档的结构化部分可以映射到一个数据集，并可以有效地存储、索引和搜索。  
   
--   转换、验证和导航可以通过以关系形式存储的 XML 数据上的游标模型有效地进行。 有时，与 XML 存储在 XmlDocument 模型中的情况相比，对关系结构执行操作更为高效。  
+- 转换、验证和导航可以通过以关系形式存储的 XML 数据上的游标模型有效地进行。 有时，与 XML 存储在 XmlDocument 模型中的情况相比，对关系结构执行操作更为高效。  
   
--   DataSet 可以存储一部分 XML。 也就是说，可以使用 XPath 或 XslTransform，只将相关元素和属性存储到 DataSet。 之后，可以对经过筛选的较小数据子集进行更改，这些更改也可以传播到 XmlDataDocument 中的大型数据。  
+- DataSet 可以存储一部分 XML。 也就是说，可以使用 XPath 或 XslTransform，只将相关元素和属性存储到 DataSet。 之后，可以对经过筛选的较小数据子集进行更改，这些更改也可以传播到 XmlDataDocument 中的大型数据。  
   
  也可以对从 SQL Server 加载到 DataSet 的数据进行转换。 另一种方法是，将 .NET Framework 类样式托管 WinForm 和 WebForm 控件绑定到通过 XML 输入流填充的 DataSet。  
   

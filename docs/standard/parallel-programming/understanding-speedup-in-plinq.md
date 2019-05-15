@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322987"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654972"
 ---
 # <a name="understanding-speedup-in-plinq"></a>了解 PLINQ 中的加速
 PLINQ 的主要用途是，在多核计算机上并行执行查询委托，以加速执行 LINQ to Objects 查询。 如果单独处理源集合中的每个元素，且各个代理之间不涉及共享状态，PLINQ 的性能最佳。 此类操作在 LINQ to Objects 和 PLINQ 中很常见，通常称为“适合并行”，因为它们可以轻松适应计划多个线程的工作。 不过，并非所有查询完全都由适合并行操作组成；在大多数情况下，查询涉及一些无法并行执行或减慢并行执行的运算符。 即使查询完全都由适合并行组成，PLINQ 仍必须对数据源进行分区，并计划线程工作，通常还需要在查询完成时合并结果。 所有这些操作都增加了并行执行的计算成本；增加并行执行而产生的这些成本称为“开销”。 为了实现 PLINQ 查询的最佳性能，目标是最大限度地增加适合并行执行的部分，并尽量减少需要开销的部分。 本文有助于确保编写的 PLINQ 查询尽可能高效，且仍能产生正确结果。  
@@ -74,15 +74,15 @@ PLINQ 的主要用途是，在多核计算机上并行执行查询委托，以�
   
  下面列出了 PLINQ 在顺序模式下默认执行的查询形状：  
   
--   在删除或重新排列了原始索引的排序或筛选运算符后面，包含 Select、已编制索引 Where、已编制索引 SelectMany 或 ElementAt 子句的查询。  
+- 在删除或重新排列了原始索引的排序或筛选运算符后面，包含 Select、已编制索引 Where、已编制索引 SelectMany 或 ElementAt 子句的查询。  
   
--   包含 Take、TakeWhile、Skip、SkipWhile 运算符且源序列中的索引不是原始顺序的查询。  
+- 包含 Take、TakeWhile、Skip、SkipWhile 运算符且源序列中的索引不是原始顺序的查询。  
   
--   包含 Zip 或 SequenceEquals 的查询，除非其中一个数据源具有按原始顺序排列的索引，并且另一个数据源是可索引的（即，数组或 IList(T)）。  
+- 包含 Zip 或 SequenceEquals 的查询，除非其中一个数据源具有按原始顺序排列的索引，并且另一个数据源是可索引的（即，数组或 IList(T)）。  
   
--   包含 Concat 的查询，除非应用于可索引的数据源。  
+- 包含 Concat 的查询，除非应用于可索引的数据源。  
   
--   包含 Reverse 的查询，除非应用于可索引的数据源。  
+- 包含 Reverse 的查询，除非应用于可索引的数据源。  
   
 ## <a name="see-also"></a>请参阅
 

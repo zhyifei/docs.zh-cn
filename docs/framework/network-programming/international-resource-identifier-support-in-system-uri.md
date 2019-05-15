@@ -2,12 +2,12 @@
 title: System.Uri 中的国际资源标识符支持
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769107"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647340"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri 中的国际资源标识符支持
 <xref:System.Uri?displayProperty=nameWithType> 类在国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持下已得到扩展。 NET Framework 3.5、3.0 SP1 和 2.0 SP1 提供了这些增强功能。  
@@ -15,11 +15,11 @@ ms.locfileid: "59769107"
 ## <a name="iri-and-idn-support"></a>IRI 和 IDN 支持  
  Web 地址通常使用由一组非常有限的字符组成的统一资源标识符 (URI) 来表示：  
   
--   英文字母表中的大小写 ASCII 字母。  
+- 英文字母表中的大小写 ASCII 字母。  
   
--   从 0 到 9 的数字。  
+- 从 0 到 9 的数字。  
   
--   少量的其他 ASCII 符号。  
+- 少量的其他 ASCII 符号。  
   
  Internet 工程任务组发布 (IETF) 的 RFC 2396 和 RFC 3986 中记录了 URL 的规格。  
   

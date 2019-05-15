@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 883eb60197b79e0ddebf5e48438c81e29f609549
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591701"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定义和执行动态方法
 以下过程介绍如何定义和执行简单的动态方法和绑定到类实例的动态方法。 有关动态方法的更多信息，请参阅 <xref:System.Reflection.Emit.DynamicMethod> 类和[反射发出动态方法应用场景](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
@@ -116,11 +116,11 @@ ms.locfileid: "59333296"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
+- 代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
   
--   不需要其他程序集引用。  
+- 不需要其他程序集引用。  
   
--   使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
+- 使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

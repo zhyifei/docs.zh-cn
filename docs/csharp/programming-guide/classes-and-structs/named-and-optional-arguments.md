@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 086b76fdc7a97f80fb0b93956b2ee3eef7036506
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583103"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -68,11 +68,11 @@ ms.locfileid: "58654024"
   
  每个可选形参都有一个默认值作为其定义的一部分。 如果没有为该形参发送实参，则使用默认值。 默认值必须是以下类型的表达式之一：  
   
--   常量表达式；  
+- 常量表达式；  
   
--   `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；  
+- `new ValType()` 形式的表达式，其中 `ValType` 是值类型，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；  
   
--   [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 形式的表达式，其中 `ValType` 是值类型。  
+- [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 形式的表达式，其中 `ValType` 是值类型。  
   
  可选参数定义于参数列表的末尾和必需参数之后。 如果调用方为一系列可选形参中的任意一个形参提供了实参，则它必须为前面的所有可选形参提供实参。 实参列表中不支持使用逗号分隔的间隔。 例如，在以下代码中，使用一个必选形参和两个可选形参定义实例方法 `ExampleMethod`。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "58654024"
 ## <a name="overload-resolution"></a>重载决策  
  使用命名实参和可选实参将在以下方面对重载决策产生影响：  
   
--   如果方法、索引器或构造函数的每个参数是可选的，或按名称或位置对应于调用语句中的单个自变量，且该自变量可转换为参数的类型，则方法、索引器或构造函数为执行的候选项。  
+- 如果方法、索引器或构造函数的每个参数是可选的，或按名称或位置对应于调用语句中的单个自变量，且该自变量可转换为参数的类型，则方法、索引器或构造函数为执行的候选项。  
   
--   如果找到多个候选项，则会将用于首选转换的重载决策规则应用于显式指定的自变量。 将忽略可选形参已省略的实参。  
+- 如果找到多个候选项，则会将用于首选转换的重载决策规则应用于显式指定的自变量。 将忽略可选形参已省略的实参。  
   
--   如果两个候选项不相上下，则会将没有可选形参的候选项作为首选项，对于这些可选形参，已在调用中为其省略了实参。 这是重载决策中的常规引用的结果，该引用用于参数较少的候选项。  
+- 如果两个候选项不相上下，则会将没有可选形参的候选项作为首选项，对于这些可选形参，已在调用中为其省略了实参。 这是重载决策中的常规引用的结果，该引用用于参数较少的候选项。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

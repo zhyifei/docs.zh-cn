@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ab6c5029518cbe5deb0f2c5a16c99992022d7a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203712"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595473"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>使用异常（C# 编程指南）
 在 C# 中，程序中的运行时错误通过使用一种称为“异常”的机制在程序中传播。 异常由遇到错误的代码引发，由能够更正错误的代码捕捉。 异常可由 .NET Framework 公共语言运行时 (CLR) 或由程序中的代码引发。 一旦引发了一个异常，此异常会在调用堆栈中传播，直到找到针对它的 `catch` 语句。 未捕获的异常由系统提供的通用异常处理程序处理，该处理程序会显示一个对话框。  
@@ -38,11 +38,11 @@ ms.locfileid: "57203712"
   
  如果引发异常之后没有在调用堆栈上找到兼容的 `catch` 块，则会出现以下三种情况之一：  
   
--   如果异常存在于终结器内，将中止终结器，并调用基类终结器（如果有）。  
+- 如果异常存在于终结器内，将中止终结器，并调用基类终结器（如果有）。  
   
--   如果调用堆栈包含静态构造函数或静态字段初始值设定项，将引发 <xref:System.TypeInitializationException>，同时将原始异常分配给新异常的 <xref:System.Exception.InnerException%2A> 属性。  
+- 如果调用堆栈包含静态构造函数或静态字段初始值设定项，将引发 <xref:System.TypeInitializationException>，同时将原始异常分配给新异常的 <xref:System.Exception.InnerException%2A> 属性。  
   
--   如果到达线程的开头，则终止线程。  
+- 如果到达线程的开头，则终止线程。  
   
 ## <a name="see-also"></a>请参阅
 

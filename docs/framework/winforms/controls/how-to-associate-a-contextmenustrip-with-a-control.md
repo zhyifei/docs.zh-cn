@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 70617f73293c62cdf29ca47ee060e023b66cb454
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e1b2a49196d6da66d478a3d44eab64298cebe969
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612802"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586605"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>如何：将 ContextMenuStrip 与控件相关联
 创建控件和快捷菜单后，使用以下过程在用户右键单击控件时显示给定的快捷菜单。 这些过程将 <xref:System.Windows.Forms.ContextMenuStrip> 与 Windows 窗体和 <xref:System.Windows.Forms.ToolStrip> 控件相关联。  
@@ -38,8 +38,6 @@ ms.locfileid: "64612802"
  此示例需要：  
   
 - 对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

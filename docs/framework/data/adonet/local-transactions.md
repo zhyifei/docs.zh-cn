@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878509"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584472"
 ---
 # <a name="local-transactions"></a>本地事务
 如果要将多项任务绑定在一起，使其作为单个工作单元来执行，可以使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的事务。 例如，假设应用程序执行两个任务。 首先使用订单信息更新表。 然后更新包含库存信息的表，将已订购的商品记入借方。 如果任何一项任务失败，则这两个更新将回滚。  
@@ -18,7 +18,7 @@ ms.locfileid: "61878509"
 ## <a name="determining-the-transaction-type"></a>确定事务类型  
  事务被视为本地事务时它是一个单阶段事务，并且由数据库直接处理。 事务被视为是分布式的事务协调由事务监视和使用防故障机制 （例如两阶段提交） 解决事务时。  
   
- 每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序使用自己的 `Transaction` 对象来执行本地事务。 如果要求事务在 SQL Server 数据库中执行，则选择 <xref:System.Data.SqlClient> 事务。 对于 Oracle 事务，使用 <xref:System.Data.OracleClient> 提供程序。 此外，还有<xref:System.Data.Common.DbTransaction>可用于写入需要事务的独立于提供程序的代码的类。  
+ 每个.NET Framework 数据提供程序都有其自己`Transaction`对象来执行本地事务。 如果要求事务在 SQL Server 数据库中执行，则选择 <xref:System.Data.SqlClient> 事务。 对于 Oracle 事务，使用 <xref:System.Data.OracleClient> 提供程序。 此外，还有<xref:System.Data.Common.DbTransaction>可用于写入需要事务的独立于提供程序的代码的类。  
   
 > [!NOTE]
 > 在服务器上执行它们时，事务是最有效。 如果使用的 SQL Server 数据库广泛使用显式事务，应考虑使用 Transact-SQL BEGIN TRANSACTION 语句以存储过程的形式编写这些事务。

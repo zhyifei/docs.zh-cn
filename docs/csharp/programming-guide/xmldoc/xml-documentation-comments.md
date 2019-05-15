@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: c40f8ee189733aa1ae58f8e46c3b7cce005ad9d7
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 85d75d6420404f278c4a8b16eb9bf30aff958f7c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593685"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文档注释（C# 编程指南）
 在 Visual C# 中，你可以通过以下方式为代码创建文档：将特殊注释字段中的 XML 元素包含在源代码中注释引用的代码块的前面，例如：  
@@ -38,18 +38,18 @@ public class MyClass {}
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
+- [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
   
--   [处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
+- [处理 XML 文件](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
   
--   [文档标记分隔符](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
+- [文档标记分隔符](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
   
--   [如何：使用 XML 文档功能](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+- [如何：使用 XML 文档功能](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
   
 ## <a name="related-sections"></a>相关章节  
  有关详细信息，请参见:  
   
--   [/doc（处理文档注释）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [/doc（处理文档注释）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

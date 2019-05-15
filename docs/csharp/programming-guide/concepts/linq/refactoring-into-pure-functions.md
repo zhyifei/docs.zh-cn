@@ -2,12 +2,12 @@
 title: 重构为纯函数 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497126"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596885"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重构为纯函数 (C#)
 
@@ -18,9 +18,9 @@ ms.locfileid: "54497126"
   
  如本节前面所述，纯函数具有两个有用的特性：  
   
--   它没有任何副作用。 函数不会更改函数以外的任何变量或任何类型的数据。  
+- 它没有任何副作用。 函数不会更改函数以外的任何变量或任何类型的数据。  
   
--   它具有一致性。 在提供同一组输入数据的情况下，它将始终返回相同的输出值。  
+- 它具有一致性。 在提供同一组输入数据的情况下，它将始终返回相同的输出值。  
   
  转换为函数编程的一种方式是重构现有代码以消除不必要的副作用和外部依赖项。 这样，您可以创建现有代码的纯函数版本。  
   

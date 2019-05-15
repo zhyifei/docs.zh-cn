@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221096"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591577"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -75,13 +75,13 @@ ms.locfileid: "59221096"
 ## <a name="remarks"></a>备注  
  Certmgr.exe 执行下列基本功能：  
   
--   将证书、CTL 和 CRL 显示到控制台。  
+- 将证书、CTL 和 CRL 显示到控制台。  
   
--   将证书、CTL 和 CRL 添加到证书存储中。  
+- 将证书、CTL 和 CRL 添加到证书存储中。  
   
--   从证书存储中删除证书、CTL 和 CRL。  
+- 从证书存储中删除证书、CTL 和 CRL。  
   
--   将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。  
+- 将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。  
   
  Certmgr.exe 适用于两类证书存储：StoreFile 和系统存储。 不必指定证书存储的类型；Certmgr.exe 能够识别存储类型并执行适当的操作。  
   

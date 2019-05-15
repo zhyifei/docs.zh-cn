@@ -2,12 +2,12 @@
 title: 演练：使用 async 和 await 访问 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c9616cc7bed3170803ee3c917fa651afc5ae6fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306724"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599685"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>演练：使用 async 和 await 访问 Web (C#)
 
@@ -46,19 +46,19 @@ ms.locfileid: "59306724"
 
 4. 突出显示“TextBox”控件，在“属性”窗口中，设置下列值：
 
-    -   将“名称”属性设置为 `resultsTextBox`。
+    - 将“名称”属性设置为 `resultsTextBox`。
 
-    -   将“高度”属性设置为 250。
+    - 将“高度”属性设置为 250。
 
-    -   将“宽度”属性设置为 500。
+    - 将“宽度”属性设置为 500。
 
-    -   在“文本”选项卡中，指定等宽字体，例如 Lucida Console 或 Global Monospace。
+    - 在“文本”选项卡中，指定等宽字体，例如 Lucida Console 或 Global Monospace。
 
 5. 突出显示“Button”控件，在“属性”窗口中，设置下列值：
 
-    -   将“名称”属性设置为 `startButton`。
+    - 将“名称”属性设置为 `startButton`。
 
-    -   将“内容”属性的值从“Button”更改为“Start”。
+    - 将“内容”属性的值从“Button”更改为“Start”。
 
 6. 确定文本框和按钮的位置，以便它们都在“MainWindow”窗口中显示。
 
@@ -108,13 +108,13 @@ ms.locfileid: "59306724"
 
 3. 该同步解决方案的代码包含以下四个方法：
 
-    -   `SumPageSizes`，从 `SetUpURLList` 获取网页 URL 列表并随后调用 `GetURLContents` 和 `DisplayResults` 以处理每个 URL。
+    - `SumPageSizes`，从 `SetUpURLList` 获取网页 URL 列表并随后调用 `GetURLContents` 和 `DisplayResults` 以处理每个 URL。
 
-    -   `SetUpURLList`，生成并返回 Web 地址列表。
+    - `SetUpURLList`，生成并返回 Web 地址列表。
 
-    -   `GetURLContents`，下载每个网站的内容并将内容作为字节数组返回。
+    - `GetURLContents`，下载每个网站的内容并将内容作为字节数组返回。
 
-    -   `DisplayResults`，显示每个 URL 的字节数组中的字节数。
+    - `DisplayResults`，显示每个 URL 的字节数组中的字节数。
 
     复制以下四个方法，然后将它们粘贴在 MainWindow.xaml.cs 中的 `startButton_Click` 事件处理程序下：
 
@@ -258,9 +258,9 @@ Control returned to startButton_Click.
 
 3. 因为在上一步中添加了 `await` 运算符，所以会发生编译器错误。 该运算符仅可在使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符标记的方法中使用。 当你重复转换步骤以使用对 `CopyToAsync` 的调用替换对 `CopyTo` 的调用时，请忽略该错误。
 
-    -   更改被调用到 <xref:System.IO.Stream.CopyToAsync%2A> 的方法的名称。
+    - 更改被调用到 <xref:System.IO.Stream.CopyToAsync%2A> 的方法的名称。
 
-    -   `CopyTo` 或 `CopyToAsync` 方法复制字节到其参数 `content`，并且不返回有意义的值。 在同步版本中，对 `CopyTo` 的调用是不返回值的简单语句。 异步版本 `CopyToAsync` 返回 <xref:System.Threading.Tasks.Task>。 任务函数类似“Task(void)”，并让该方法能够等待。 应用 `Await` 或 `await` 到对 `CopyToAsync` 的调用，如下列代码所示。
+    - `CopyTo` 或 `CopyToAsync` 方法复制字节到其参数 `content`，并且不返回有意义的值。 在同步版本中，对 `CopyTo` 的调用是不返回值的简单语句。 异步版本 `CopyToAsync` 返回 <xref:System.Threading.Tasks.Task>。 任务函数类似“Task(void)”，并让该方法能够等待。 应用 `Await` 或 `await` 到对 `CopyToAsync` 的调用，如下列代码所示。
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Control returned to startButton_Click.
 
      方法 `GetURLContents` 具有 return 语句，且该语句返回字节数组。 因此，异步版本的返回类型为 Task(T)，其中 T 为字节数组。 在方法签名中进行下列更改：
 
-    -   将返回类型更改为 `Task<byte[]>`。
+    - 将返回类型更改为 `Task<byte[]>`。
 
-    -   按照约定，异步方法的名称以“Async”结尾，因此，请重命名方法 `GetURLContentsAsync`。
+    - 按照约定，异步方法的名称以“Async”结尾，因此，请重命名方法 `GetURLContentsAsync`。
 
      下列代码显示这些更改。
 
@@ -305,9 +305,9 @@ Control returned to startButton_Click.
 
 1. 为 `SumPageSizes` 重复之前过程中的步骤。 首先，将对 `GetURLContents` 的调用更改为异步调用。
 
-    -   将调用的方法的名称从 `GetURLContents` 更改为 `GetURLContentsAsync`（如果尚未执行此操作）。
+    - 将调用的方法的名称从 `GetURLContents` 更改为 `GetURLContentsAsync`（如果尚未执行此操作）。
 
-    -   将 `await` 应用到 `GetURLContentsAsync` 返回的任务，以便获取字节数组值。
+    - 将 `await` 应用到 `GetURLContentsAsync` 返回的任务，以便获取字节数组值。
 
      下列代码显示这些更改。
 
@@ -326,11 +326,11 @@ Control returned to startButton_Click.
 
 2. 在方法签名中进行下列更改：
 
-    -   使用 `async` 修饰符标记方法。
+    - 使用 `async` 修饰符标记方法。
 
-    -   将“Async”添加到方法名称。
+    - 将“Async”添加到方法名称。
 
-    -   这一次没有任务返回变量 T，因为 `SumPageSizesAsync` 不返回 T 的值。（该方法没有 `return` 语句。）但是，该方法必须返回 `Task` 才能进行等待。 因此，将该方法的返回类型从 `void` 更改为 `Task`。
+    - 这一次没有任务返回变量 T，因为 `SumPageSizesAsync` 不返回 T 的值。（该方法没有 `return` 语句。）但是，该方法必须返回 `Task` 才能进行等待。 因此，将该方法的返回类型从 `void` 更改为 `Task`。
 
     下列代码显示这些更改。
 
@@ -391,9 +391,9 @@ Control returned to startButton_Click.
 
 2. 此时应显示类似于同步解决方案的输出的输出。 但是，请注意下列差异。
 
-    -   处理完成后，所有结果不会同时出现。 例如，两个程序都在 `startButton_Click` 中包含一行可以清除文本框的代码。 目的在于，在一组结果显示后，第二次选择“启动”按钮时，可以清除运行之间的文本框。 在同步版本中，下载完成且 UI 线程可以自由完成其他工作时，文本框在计数第二次显示之前即被清除。 在异步版本中，选择“启动”按钮后立即清除文本框。
+    - 处理完成后，所有结果不会同时出现。 例如，两个程序都在 `startButton_Click` 中包含一行可以清除文本框的代码。 目的在于，在一组结果显示后，第二次选择“启动”按钮时，可以清除运行之间的文本框。 在同步版本中，下载完成且 UI 线程可以自由完成其他工作时，文本框在计数第二次显示之前即被清除。 在异步版本中，选择“启动”按钮后立即清除文本框。
 
-    -   最重要的是，UI 线程在下载过程中未被阻止。 在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。 如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”按钮取消操作（右上角红色字段中的 x）。
+    - 最重要的是，UI 线程在下载过程中未被阻止。 在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。 如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”按钮取消操作（右上角红色字段中的 x）。
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>使用 .NET Framework 方法替换 GetURLContentsAsync
 

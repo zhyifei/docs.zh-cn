@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303415"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593566"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用强名称为程序集签名
 可通过许多方法为程序集签署强名称：  
   
--   在 Visual Studio 中，通过使用项目的 **“属性”** 对话框中的 **“签名”** 选项卡。 这是为程序集签署强名称的最简单且最方便的方法。  
+- 在 Visual Studio 中，通过使用项目的 **“属性”** 对话框中的 **“签名”** 选项卡。 这是为程序集签署强名称的最简单且最方便的方法。  
   
--   通过使用 [程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将 .NET Framework 代码模块（.netmodule 文件）与密钥文件链接。  
+- 通过使用 [程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将 .NET Framework 代码模块（.netmodule 文件）与密钥文件链接。  
   
--   通过使用程序集特性将强名称信息插入代码中。 你可以使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性，具体取决于要使用的密钥文件所在的位置。  
+- 通过使用程序集特性将强名称信息插入代码中。 你可以使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性，具体取决于要使用的密钥文件所在的位置。  
   
--   通过使用编译器选项。  
+- 通过使用编译器选项。  
   
  要使用强名称为程序集签名，必须具有加密密钥对。 有关创建密钥对的详细信息，请参阅[如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59303415"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>使用程序集链接器创建程序集并为程序集签署强名称  
   
--   在 [Visual Studio 开发人员命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
+- 在 [Visual Studio 开发人员命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -90,7 +90,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>使用编译器为程序集签署强名称  
   
--   使用 C# 和 Visual Basic 中的 `/keyfile` 或 `/delaysign` 编译器选项，或使用 C++ 中的 `/KEYFILE` 或 `/DELAYSIGN` 链接器选项编译源代码文件。 在选项名称后，添加冒号和密钥文件的名称。 使用命令行编译器时，你可以将密钥文件复制到包含源代码文件的目录中。  
+- 使用 C# 和 Visual Basic 中的 `/keyfile` 或 `/delaysign` 编译器选项，或使用 C++ 中的 `/KEYFILE` 或 `/DELAYSIGN` 链接器选项编译源代码文件。 在选项名称后，添加冒号和密钥文件的名称。 使用命令行编译器时，你可以将密钥文件复制到包含源代码文件的目录中。  
   
      有关延迟签名的信息，请参阅 [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)。  
   

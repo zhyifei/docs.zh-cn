@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298417"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589852"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>在 DOM 中验证 XML 文档
 默认情况下，在文档对象模型 (DOM) 中，<xref:System.Xml.XmlDocument> 类不针对 XML 架构定义语言 (XSD) 架构或文档类型定义 (DTD) 验证 XML；只验证 XML 的格式是否正确。  
@@ -56,9 +56,9 @@ ms.locfileid: "59298417"
   
  如果在 XML 数据加载到 DOM 时进行验证，请考虑下列事项。  
   
--   在上述示例中，每当遇到无效类型时就会调用 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>。 如果 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> 在验证 <xref:System.Xml.XmlReader> 时未设置，则在任何属性或元素类型与验证架构中指定的相应类型不匹配的情况下调用 <xref:System.Xml.Schema.XmlSchemaValidationException> 时会引发 <xref:System.Xml.XmlDocument.Load%2A>。  
+- 在上述示例中，每当遇到无效类型时就会调用 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>。 如果 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> 在验证 <xref:System.Xml.XmlReader> 时未设置，则在任何属性或元素类型与验证架构中指定的相应类型不匹配的情况下调用 <xref:System.Xml.Schema.XmlSchemaValidationException> 时会引发 <xref:System.Xml.XmlDocument.Load%2A>。  
   
--   如果 XML 文档加载到 <xref:System.Xml.XmlDocument> 对象，并且具有关联的架构来定义默认值，<xref:System.Xml.XmlDocument> 会像在 XML 文档中一样对待这些默认值。 这意味着，对于架构中的默认元素，<xref:System.Xml.XmlReader.IsEmptyElement%2A> 属性始终返回 `false`。 即使在 XML 文档中，也将编写为空元素。  
+- 如果 XML 文档加载到 <xref:System.Xml.XmlDocument> 对象，并且具有关联的架构来定义默认值，<xref:System.Xml.XmlDocument> 会像在 XML 文档中一样对待这些默认值。 这意味着，对于架构中的默认元素，<xref:System.Xml.XmlReader.IsEmptyElement%2A> 属性始终返回 `false`。 即使在 XML 文档中，也将编写为空元素。  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>在 DOM 中验证 XML 文档  
  <xref:System.Xml.XmlDocument.Validate%2A> 类的 <xref:System.Xml.XmlDocument> 方法针对 <xref:System.Xml.XmlDocument> 对象的 <xref:System.Xml.XmlDocument.Schemas%2A> 属性中的架构，验证加载到 DOM 的 XML 数据。 成功验证之后，将应用架构的默认值，文本值根据需要转换为原子值，类型信息与经过验证的信息项关联。 因此，类型化 XML 数据将替换以前非类型化的 XML 数据。  

@@ -2,12 +2,12 @@
 title: 查找默认段落样式 (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 052accf31007001c0fa0d46870ee6e4cd30f6bb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89c70fcbc9d5286e2c9381250b30d525ebb1eb36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674071"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596701"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>查找默认段落样式 (C#)
 在 WordprocessingML 文档中操作信息教程中的第一项任务是在文档中查找默认段落样式。  
@@ -86,7 +86,7 @@ The default style is: Normal
 ## <a name="next-steps"></a>后续步骤  
  下一个示例中将创建一个类似的查询，查找文档中的所有段落及其样式：  
   
--   [检索段落及其样式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [检索段落及其样式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>请参阅
 

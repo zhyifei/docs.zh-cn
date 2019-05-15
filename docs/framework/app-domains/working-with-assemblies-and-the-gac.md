@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e780ed7e841809f21130822babe55ad4935670
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744299"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592745"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用程序集和全局程序集缓存
 如果需要在几个应用程序间共享程序集，可将其安装到全局程序集缓存中。 安装了公共语言运行时的每台计算机均具有此计算机范围的代码缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。 程序集必须具有强名称才可安装到全局程序集缓存中。  
@@ -27,19 +27,19 @@ ms.locfileid: "32744299"
   
  建议将程序集安装到全局程序集缓存中的原因有以下几点：  
   
--   共享位置。  
+- 共享位置。  
   
      应该由应用程序使用的程序集可以置于全局程序集缓存。 例如，如果所有应用程序都应使用位于全局程序集缓存中的程序集，则可将版本策略语句添加到 Machine.config 文件中，此文件将引用重新定向到程序集。  
   
--   文件安全。  
+- 文件安全。  
   
      管理员通常使用访问控制列表 (ACL) 来保护 systemroot 目录，从而控制写入和执行访问。 由于全局程序集缓存安装在 systemroot 目录中，因此它将继承该目录的 ACL。 建议只允许具有“管理员”权限的用户从全局程序集缓存中删除文件。  
   
--   并行版本。  
+- 并行版本。  
   
      可在全局程序集缓存中维护名称相同但版本信息不同的程序集的多个副本。  
   
--   其他搜索位置。  
+- 其他搜索位置。  
   
      在探测或使用配置文件中的基本代码信息之前，公共语言运行时会先检查全局程序集缓存中符合程序集请求的程序集。  
   

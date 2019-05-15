@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333595"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591695"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc（C# 编译器选项）
 -doc 选项可让你在 XML 文件中放置文档注释。  
@@ -35,9 +35,9 @@ ms.locfileid: "59333595"
 ## <a name="remarks"></a>备注  
  在源代码文件中，可以处理以下内容之前的文档注释，并将其添加到 XML 文件中：  
   
--   作为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)或[接口](../../../csharp/language-reference/keywords/interface.md)的用户定义类型  
+- 作为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)或[接口](../../../csharp/language-reference/keywords/interface.md)的用户定义类型  
   
--   作为字段、[事件](../../../csharp/language-reference/keywords/event.md)、[属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)或方法的成员  
+- 作为字段、[事件](../../../csharp/language-reference/keywords/event.md)、[属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)或方法的成员  
   
  包含 Main 的源代码文件首先输出到 XML 中。  
   

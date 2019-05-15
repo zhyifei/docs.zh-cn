@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d7823611df5e02040fd8735e1fa6ea7841298836
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203008"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595056"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>匿名方法（C# 编程指南）
 在 2.0 之前的 C# 版本中，声明[委托](../../../csharp/language-reference/keywords/delegate.md)的唯一方式是使用[命名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)。 C# 2.0 引入匿名方法，在 C# 3.0 及更高版本中，Lambda 表达式取代匿名方法作为编写内联代码的首选方式。 但是，本主题中有关匿名方法的信息也适用于 Lambda 表达式。 在有一种情况下，匿名方法提供 Lambda 表达式中没有的功能。 使用匿名方法可省略参数列表。 这意味着匿名方法可转换为具有多种签名的委托。 Lambda 表达式无法实现这一点。 有关 Lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
@@ -49,9 +49,9 @@ ms.locfileid: "57203008"
 ## <a name="example"></a>示例  
  如下示例演示实例化委托的两种方式：  
   
--   将委托与匿名方法相关联。  
+- 将委托与匿名方法相关联。  
   
--   将委托与命名方法 (`DoWork`) 相关联。  
+- 将委托与命名方法 (`DoWork`) 相关联。  
   
  在每一种情况下，调用委托时均显示一条消息。  
   

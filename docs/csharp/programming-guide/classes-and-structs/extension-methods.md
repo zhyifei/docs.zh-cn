@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a686716c4e8ed24c9b28426542cdf6bc6aa991b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600229"
 ---
 # <a name="extension-methods-c-programming-guide"></a>扩展方法（C# 编程指南）
 扩展方法使你能够向现有类型“添加”方法，而无需创建新的派生类型、重新编译或以其他方式修改原始类型。 扩展方法是一种特殊的静态方法，但可以像扩展类型上的实例方法一样进行调用。 对于用 C#、F# 和 Visual Basic 编写的客户端代码，调用扩展方法与调用在类型中实际定义的方法没有明显区别。  
@@ -73,9 +73,9 @@ using System.Linq;
   
  如果确实为给定类型实现了扩展方法，请记住以下几点：  
   
--   如果扩展方法与该类型中定义的方法具有相同的签名，则扩展方法永远不会被调用。  
+- 如果扩展方法与该类型中定义的方法具有相同的签名，则扩展方法永远不会被调用。  
   
--   在命名空间级别将扩展方法置于范围中。 例如，如果你在一个名为 `Extensions` 的命名空间中具有多个包含扩展方法的静态类，则这些扩展方法将全部由 `using Extensions;` 指令置于范围中。  
+- 在命名空间级别将扩展方法置于范围中。 例如，如果你在一个名为 `Extensions` 的命名空间中具有多个包含扩展方法的静态类，则这些扩展方法将全部由 `using Extensions;` 指令置于范围中。  
   
  针对已实现的类库，不应为了避免程序集的版本号递增而使用扩展方法。 如果要向你拥有源代码的库中添加重要功能，应遵循适用于程序集版本控制的标准 .NET Framework 准则。 有关详细信息，请参阅[程序集版本控制](../../../../docs/framework/app-domains/assembly-versioning.md)。  
   

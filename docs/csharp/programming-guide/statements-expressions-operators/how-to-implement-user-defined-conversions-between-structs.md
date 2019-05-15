@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: bc792562b4849d402e03328e50dedac030520011
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f33d8791791543704c8a49a44167b94c0f0c86b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201139"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608175"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>如何：在结构间实现用户定义的转换（C# 编程指南）
 本示例定义 `RomanNumeral` 和 `BinaryNumeral` 两个结构，并演示二者之间的转换。  
@@ -20,13 +20,13 @@ ms.locfileid: "57201139"
   
 ## <a name="robust-programming"></a>可靠编程  
   
--   在上述示例中，语句：  
+- 在上述示例中，语句：  
   
      [!code-csharp[csProgGuideStatements#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#14)]  
   
      执行从 `RomanNumeral` 到 `BinaryNumeral` 的转换。 因为没有从 `RomanNumeral` 到 `BinaryNumeral` 的直接转换，所以使用强制转换将 `RomanNumeral` 转换为 `int`，并使用另一个强制转换将 `int` 转换为 `BinaryNumeral`。  
   
--   另外，语句  
+- 另外，语句  
   
      [!code-csharp[csProgGuideStatements#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#15)]  
   

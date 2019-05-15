@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 80ff658774c776545eb7d5158b4abd451f7fcf7d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: bfcad2669c5ae34605c142f9834c52b4b84c36ae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201113"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608095"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
 
@@ -28,13 +28,13 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  但有时可能需要将值复制到其他类型的变量或方法参数中。 例如，可能需要将一个整数变量传递给参数类型化为 `double` 的方法。 或者可能需要将类变量分配给接口类型的变量。 这些类型的操作称为类型转换。 在 C# 中，可以执行以下几种类型的转换：  
   
--   **隐式转换**：由于这种转换是类型安全且不会导致数据丢失，因此无需使用任何特殊语法。 示例包括从较小整数类型到较大整数类型的转换以及从派生类到基类的转换。  
+- **隐式转换**：由于这种转换是类型安全且不会导致数据丢失，因此无需使用任何特殊语法。 示例包括从较小整数类型到较大整数类型的转换以及从派生类到基类的转换。  
   
--   **显式转换（强制转换）**：必须使用强制转换运算符，才能执行显式转换。 在转换中可能丢失信息时或在出于其他原因转换可能不成功时，必须进行强制转换。  典型的示例包括从数值到精度较低或范围较小的类型的转换和从基类实例到派生类的转换。  
+- **显式转换（强制转换）**：必须使用强制转换运算符，才能执行显式转换。 在转换中可能丢失信息时或在出于其他原因转换可能不成功时，必须进行强制转换。  典型的示例包括从数值到精度较低或范围较小的类型的转换和从基类实例到派生类的转换。  
   
--   **用户定义的转换**：用户定义的转换是使用特殊方法执行，这些方法可定义为在没有基类和派生类关系的自定义类型之间启用显式转换和隐式转换。 有关详细信息，请参阅[转换运算符](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)。  
+- **用户定义的转换**：用户定义的转换是使用特殊方法执行，这些方法可定义为在没有基类和派生类关系的自定义类型之间启用显式转换和隐式转换。 有关详细信息，请参阅[转换运算符](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)。  
   
--   **使用帮助程序类进行转换**：若要在非兼容类型（如整数和 <xref:System.DateTime?displayProperty=nameWithType> 对象，或十六进制字符串和字节数组）之间转换，可使用 <xref:System.BitConverter?displayProperty=nameWithType> 类、<xref:System.Convert?displayProperty=nameWithType> 类和内置数值类型的 `Parse` 方法（如 <xref:System.Int32.Parse%2A?displayProperty=nameWithType>）。 有关详细信息，请参阅[如何：将字节数组转换为 int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[操作说明：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)和[操作说明：在十六进制字符串与数值类型之间转换](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
+- **使用帮助程序类进行转换**：若要在非兼容类型（如整数和 <xref:System.DateTime?displayProperty=nameWithType> 对象，或十六进制字符串和字节数组）之间转换，可使用 <xref:System.BitConverter?displayProperty=nameWithType> 类、<xref:System.Convert?displayProperty=nameWithType> 类和内置数值类型的 `Parse` 方法（如 <xref:System.Int32.Parse%2A?displayProperty=nameWithType>）。 有关详细信息，请参阅[如何：将字节数组转换为 int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[操作说明：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)和[操作说明：在十六进制字符串与数值类型之间转换](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
   
 ## <a name="implicit-conversions"></a>隐式转换
 

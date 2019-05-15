@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770485"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593597"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一机会异常通知
 通过 <xref:System.AppDomain> 类的 <xref:System.AppDomain.FirstChanceException> 事件，可在公共语言运行时开始搜索异常处理程序之前，收到已引发异常的通知。
@@ -100,7 +100,7 @@ ms.locfileid: "59770485"
 
 ## <a name="compiling-the-code"></a>编译代码
 
--   此示例是一个命令行应用程序。 若要在 Visual Studio 中编译并运行此代码，请将 C# 代码 `Console.ReadLine();`（在 Visual Basic 中为 `Console.ReadLine()`）添加到 `Main()` 的末尾，阻止命令窗口在你查看输出之前关闭。
+- 此示例是一个命令行应用程序。 若要在 Visual Studio 中编译并运行此代码，请将 C# 代码 `Console.ReadLine();`（在 Visual Basic 中为 `Console.ReadLine()`）添加到 `Main()` 的末尾，阻止命令窗口在你查看输出之前关闭。
 
 ## <a name="see-also"></a>请参阅
 

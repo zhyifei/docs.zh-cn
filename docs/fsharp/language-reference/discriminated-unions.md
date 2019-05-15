@@ -2,12 +2,12 @@
 title: 可区分联合
 description: 了解如何使用F#可区分联合。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766009"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557962"
 ---
 # <a name="discriminated-unions"></a>可区分联合
 
@@ -80,7 +80,7 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-通常情况下，用例标识符可以使用而无需对其进行联合的名称限定。 如果你想要始终用联合名称限定的名称，你可以申请[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)联合类型定义的属性。
+通常情况下，用例标识符可以使用而无需对其进行联合的名称限定。 如果你想要始终用联合名称限定的名称，你可以申请[RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])联合类型定义的属性。
 
 ### <a name="unwrapping-discriminated-unions"></a>解包的可区分的联合
 

@@ -2,15 +2,15 @@
 title: 在托管应用程序中承载
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1f4d91994ba44407ff5c93dbd34aa0bdef9332b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855824"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591730"
 ---
 # <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
-Windows Communication Foundation (WCF) 服务可以承载于任何[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，它也是最不可靠宿主选项，因为托管应用程序不提供的高级宿主和管理功能，如 Internet 信息服务 (IIS) 和 Windows 服务在 WCF 中，其他托管选项。  
+可以在任何.NET Framework 应用程序中承载 Windows Communication Foundation (WCF) 服务。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，它也是最不可靠宿主选项，因为托管应用程序不提供的高级宿主和管理功能，如 Internet 信息服务 (IIS) 和 Windows 服务在 WCF 中，其他托管选项。  
   
  若要创建自承载服务，请创建并打开 <xref:System.ServiceModel.ServiceHost>的实例以启动侦听消息的服务。 有关详细信息，请参阅[如何：承载于托管应用程序的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   

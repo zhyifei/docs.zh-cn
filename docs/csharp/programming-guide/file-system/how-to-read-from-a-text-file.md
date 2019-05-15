@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978015"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608539"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>如何：读取文本文件中的内容（C# 编程指南）
 此示例通过使用 <xref:System.IO.File?displayProperty=nameWithType> 类的 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A> 静态方法来确定文本文件的内容。  
@@ -36,7 +36,7 @@ ms.locfileid: "56978015"
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   不存在该文件，或者指定位置不存在该文件。 检查文件名的路径和拼写。  
+- 不存在该文件，或者指定位置不存在该文件。 检查文件名的路径和拼写。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  不要依赖文件名来确定文件的内容。 例如，文件 `myFile.cs` 可能不是 C# 源文件。  

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe84cabfaabdc14c7dec6cb69653d41b4c6f6416
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009158"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590169"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>使用托管 HTML 文档对象模型
-托管的 HTML 文档对象模型 (DOM) 提供包装器基于[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]HTML 类公开的 Internet 资源管理器。 这些类用于处理 HTML 页面中承载<xref:System.Windows.Forms.WebBrowser>控件，或要生成新的页从一开始。  
+托管的 HTML 文档对象模型 (DOM) 提供了基于.NET Framework 公开的 Internet Explorer 的 HTML 类的包装器。 这些类用于处理 HTML 页面中承载<xref:System.Windows.Forms.WebBrowser>控件，或要生成新的页从一开始。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：访问托管的 HTML 文档对象模型](how-to-access-the-managed-html-document-object-model.md)  

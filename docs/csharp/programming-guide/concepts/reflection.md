@@ -2,12 +2,12 @@
 title: 反射 (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 4dfd9391407fec4bd20ac4ae05162763e909d665
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4593aeef13f5d1d0c223b40e266556cb2bcfee5f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595549"
 ---
 # <a name="reflection-c"></a>反射 (C#)
 反射提供描述程序集、模块和类型的对象（<xref:System.Type> 类型）。 可以使用反射动态地创建类型的实例，将类型绑定到现有对象，或从现有对象中获取类型，然后调用其方法或访问其字段和属性。 如果代码中使用了特性，可以利用反射来访问它们。 有关更多信息，请参阅[特性](../../../../docs/standard/attributes/index.md)。  
@@ -43,26 +43,26 @@ System.Console.WriteLine(info);
 ## <a name="reflection-overview"></a>反射概述  
  反射在以下情况下很有用：  
   
--   需要访问程序元数据中的特性时。 有关详细信息，请参阅[检索存储在特性中的信息](../../../standard/attributes/retrieving-information-stored-in-attributes.md)。  
+- 需要访问程序元数据中的特性时。 有关详细信息，请参阅[检索存储在特性中的信息](../../../standard/attributes/retrieving-information-stored-in-attributes.md)。  
   
--   检查和实例化程序集中的类型。  
+- 检查和实例化程序集中的类型。  
   
--   在运行时构建新类型。 使用 <xref:System.Reflection.Emit> 中的类。  
+- 在运行时构建新类型。 使用 <xref:System.Reflection.Emit> 中的类。  
   
--   执行后期绑定，访问在运行时创建的类型上的方法。 请参阅主题 [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)（动态加载和使用类型）。  
+- 执行后期绑定，访问在运行时创建的类型上的方法。 请参阅主题 [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)（动态加载和使用类型）。  
   
 ## <a name="related-sections"></a>相关章节  
  更多相关信息：  
   
--   [反射](../../../framework/reflection-and-codedom/reflection.md)  
+- [反射](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [查看类型信息](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [查看类型信息](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [反射类型和泛型类型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [反射类型和泛型类型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [检索存储在特性中的信息](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [检索存储在特性中的信息](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>请参阅
 

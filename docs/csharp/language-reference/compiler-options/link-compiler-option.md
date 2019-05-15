@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 9dcb79a3310c4c814879501e2723560a84c9b48c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5c5f3337d1c1ff2d58d3876ed0d4ede11d22b6bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969344"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593073"
 ---
 # <a name="-link-c-compiler-options"></a>-link（C# 编译器选项）
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -47,9 +47,9 @@ ms.locfileid: "56969344"
   
  如果链接到本身引用了其他 COM 程序集（程序集 B）的 COM 程序集（程序集 A），则在满足以下任一条件时，还必须链接到程序集 B：  
   
--   程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
+- 程序集 A 中的类型继承自程序集 B 中的类型或实现程序集 B 中的接口。  
   
--   调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
+- 调用具有程序集 B 中的返回类型或参数类型的字段、属性、事件或方法。  
   
  与 [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 编译器选项一样，`-link` 编译器选项使用 Csc.rsp 响应文件，该文件引用常用的 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 程序集。 如果不希望编译器使用 Csc.rsp 文件，则使用 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 编译器选项。  
   

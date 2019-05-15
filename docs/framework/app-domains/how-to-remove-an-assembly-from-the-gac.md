@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff00e2f1d266243f0453f004564f2ed802d26c85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bfa0cd7041f61e9848804f74d59b85a60450ea92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338717"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593569"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>如何：从全局程序集缓存中删除程序集
 有两种方法可以从全局程序集缓存 (GAC) 中移除程序集：  
   
--   通过使用[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。 可以使用此选项卸载开发和测试期间已放置在 GAC 中的程序集。  
+- 通过使用[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。 可以使用此选项卸载开发和测试期间已放置在 GAC 中的程序集。  
   
--   通过使用 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。 应使用此选项在测试安装包期间卸载程序集，并将其用于生产系统。  
+- 通过使用 [Windows Installer](/windows/desktop/Msi/windows-installer-portal)。 应使用此选项在测试安装包期间卸载程序集，并将其用于生产系统。  
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>使用 Gacutil.exe 删除程序集  
   

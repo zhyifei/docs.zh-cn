@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673993"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664552"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概述
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是一个线程安全集合类，可提供以下功能：  
   
--   实现制造者-使用者模式。  
+- 实现制造者-使用者模式。  
   
--   通过多线程并发添加和获取项。  
+- 通过多线程并发添加和获取项。  
   
--   可选最大容量。  
+- 可选最大容量。  
   
--   集合为空或已满时通过插入和移除操作进行阻塞。  
+- 集合为空或已满时通过插入和移除操作进行阻塞。  
   
--   插入和移除“尝试”操作不发生阻塞，或在指定时间段内发生阻塞。  
+- 插入和移除“尝试”操作不发生阻塞，或在指定时间段内发生阻塞。  
   
--   封装实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 的任何集合类型  
+- 封装实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 的任何集合类型  
   
--   使用取消标记执行取消操作。  
+- 使用取消标记执行取消操作。  
   
--   支持使用 `foreach`（在 Visual Basic 中，使用 `For Each`）的两种枚举：  
+- 支持使用 `foreach`（在 Visual Basic 中，使用 `For Each`）的两种枚举：  
   
-    1.  只读枚举。  
+    1. 只读枚举。  
   
-    2.  在枚举项时将项移除的枚举。  
+    2. 在枚举项时将项移除的枚举。  
   
 ## <a name="bounding-and-blocking-support"></a>限制和阻塞支持  
  <xref:System.Collections.Concurrent.BlockingCollection%601> 支持限制和阻塞。 限制意味着可以设置集合的最大容量。 限制在某些情况中很重要，因为它使你能够控制内存中的集合的最大大小，并可阻止制造线程移动到离使用线程前方太远的位置。  

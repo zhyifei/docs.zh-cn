@@ -2,23 +2,23 @@
 title: 通用属性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: d5d56fff82fb552f42f72c18b8c3b907c5bc113c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374799"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603336"
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  
   
--   [全局特性](#Global)  
+- [全局特性](#Global)  
   
--   [Obsolete 特性](#Obsolete)  
+- [Obsolete 特性](#Obsolete)  
   
--   [Conditional 特性](#Conditional)  
+- [Conditional 特性](#Conditional)  
   
--   [调用方信息特性](#CallerInfo)  
+- [调用方信息特性](#CallerInfo)  
   
 ## <a name="Global"></a> 全局特性  
  大多数特性应用于特定语言元素，如类或方法；但是，一些特性是全局特性 - 它们应用于整个程序集或模块。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 属性可用于将版本信息嵌入程序集，如下所示：  
@@ -31,11 +31,11 @@ ms.locfileid: "57374799"
   
  程序集特性是提供程序集相关信息的值。 它们分为以下几类：  
   
--   程序集标识特性  
+- 程序集标识特性  
   
--   信息性特性  
+- 信息性特性  
   
--   程序集清单特性  
+- 程序集清单特性  
   
 ### <a name="assembly-identity-attributes"></a>程序集标识特性。  
  三个特性（与强名称（如果适用））组合起来可以确定程序集的标识：名称、版本和区域性。 这些特性构成程序集的全名，在代码中引用程序集时必需使用。 可使用特性设置程序集的版本和区域性。 但是，创建程序集时，根据包含程序集清单的文件，由编译器、[程序集信息对话框](/visualstudio/ide/reference/assembly-information-dialog-box)中的 Visual Studio IDE 或程序集链接器 (Al.exe) 设置名称值。 <xref:System.Reflection.AssemblyFlagsAttribute> 属性指定程序集的多个副本是否可以共存。  

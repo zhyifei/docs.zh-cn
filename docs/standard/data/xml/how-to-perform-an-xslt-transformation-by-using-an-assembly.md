@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590419"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>如何：通过使用程序集执行 XSLT 转换
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可以将该程序集直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>将 XML 和 XSLT 文件复制到本地计算机  
   
--   将 XSLT 文件复制到本地计算机并将其命名为 Transform.xsl。  
+- 将 XSLT 文件复制到本地计算机并将其命名为 Transform.xsl。  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 可�
     </xsl:stylesheet>  
     ```  
   
--   将 XML 文件复制到本地计算机并将其命名为 `books.xml`。  
+- 将 XML 文件复制到本地计算机并将其命名为 `books.xml`。  
   
     ```xml  
     <?xml version="1.0"?>  

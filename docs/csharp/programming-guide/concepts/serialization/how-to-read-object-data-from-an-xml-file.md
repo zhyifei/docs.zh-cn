@@ -2,12 +2,12 @@
 title: 如何：从 XML 文件读取对象数据 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2608c737744f5c0789c69147063f9ced0ffd6d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583478"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595230"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>如何：从 XML 文件读取对象数据 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。  
@@ -52,11 +52,11 @@ public void ReadXML()
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   进行序列化的类没有公共的无参数构造函数。  
+- 进行序列化的类没有公共的无参数构造函数。  
   
--   文件中的数据不表示要进行反序列化的类中的数据。  
+- 文件中的数据不表示要进行反序列化的类中的数据。  
   
--   该文件不存在 (<xref:System.IO.IOException>)。  
+- 该文件不存在 (<xref:System.IO.IOException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  始终验证输入，并且绝不会反序列化来自不受信任源的数据。 重新创建的对象会在具有对它进行反序列化的代码的权限的本地计算机上运行。 在应用程序中使用输入的数据之前，需验证所有的输入内容。  

@@ -2,12 +2,12 @@
 title: 如何：合并和比较字符串集合 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4515fd3f96bfe94e46c2a090d75468a7e5b18939
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855226"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593031"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何：合并和比较字符串集合 (LINQ) (Visual Basic)
 此示例演示如何合并包含文本行的文件，并对结果排序。 具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。  
@@ -163,7 +163,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
+创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
   
 ## <a name="see-also"></a>请参阅
 

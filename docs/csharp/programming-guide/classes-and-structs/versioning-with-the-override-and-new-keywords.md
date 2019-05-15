@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975852"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583125"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 关键字进行版本控制（C# 编程指南）
 C# 语言经过专门设计，以便不同库中的[基类](../../../csharp/language-reference/keywords/base.md)与派生类之间的版本控制可以不断向前发展，同时保持后向兼容。 这具有多方面的意义。例如，这意味着在基[类](../../../csharp/language-reference/keywords/class.md)中引入与派生类中的某个成员具有相同名称的新成员在 C# 中是完全支持的，不会导致意外行为。 它还意味着类必须显式声明某方法是要替代一个继承方法，还是本身就是一个隐藏具有类似名称的继承方法的新方法。  
   
  在 C# 中，派生类可以包含与基类方法同名的方法。  
   
--   基类方法必须定义为 [virtual](../../../csharp/language-reference/keywords/virtual.md)。  
+- 基类方法必须定义为 [virtual](../../../csharp/language-reference/keywords/virtual.md)。  
   
--   如果派生类中的方法前面没有 [new](../../../csharp/language-reference/keywords/new.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 关键字，则编译器将发出警告，该方法将如同存在 `new` 关键字一样执行操作。  
+- 如果派生类中的方法前面没有 [new](../../../csharp/language-reference/keywords/new.md) 或 [override](../../../csharp/language-reference/keywords/override.md) 关键字，则编译器将发出警告，该方法将如同存在 `new` 关键字一样执行操作。  
   
--   如果派生类中的方法前面带有 `new` 关键字，则该方法被定义为独立于基类中的方法。  
+- 如果派生类中的方法前面带有 `new` 关键字，则该方法被定义为独立于基类中的方法。  
   
--   如果派生类中的方法前面带有 `override` 关键字，则派生类的对象将调用该方法，而不是调用基类方法。  
+- 如果派生类中的方法前面带有 `override` 关键字，则派生类的对象将调用该方法，而不是调用基类方法。  
   
--   可以从派生类中使用 `base` 关键字调用基类方法。  
+- 可以从派生类中使用 `base` 关键字调用基类方法。  
   
--   `override`、`virtual` 和 `new` 关键字还可以用于属性、索引器和事件中。  
+- `override`、`virtual` 和 `new` 关键字还可以用于属性、索引器和事件中。  
   
  默认情况下，C# 方法为非虚方法。 如果某个方法被声明为虚方法，则继承该方法的任何类都可以实现它自己的版本。 若要使方法成为虚方法，需要在基类的方法声明中使用 `virtual` 修饰符。 然后，派生类可以使用 `override` 关键字替代基虚方法，或使用 `new` 关键字隐藏基类中的虚方法。 如果 `override` 关键字和 `new` 关键字均未指定，编译器将发出警告，并且派生类中的方法将隐藏基类中的方法。  
   

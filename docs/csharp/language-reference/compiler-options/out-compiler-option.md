@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331294"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593032"
 ---
 # <a name="-out-c-compiler-options"></a>-out（C# 编译器选项）
 -out 选项指定输出文件的名称。  
@@ -35,9 +35,9 @@ ms.locfileid: "59331294"
   
  如果不指定输出文件的名称：  
   
--   .exe 将采用包含 Main 方法的源代码文件中的名称。  
+- .exe 将采用包含 Main 方法的源代码文件中的名称。  
   
--   .dll 或者 .netmodule 将从第一个源代码文件中获取其名称。  
+- .dll 或者 .netmodule 将从第一个源代码文件中获取其名称。  
   
  用于编译一个输出文件的源代码文件不能同样用于编译另一输出文件。  
   

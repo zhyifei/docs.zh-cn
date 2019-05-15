@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 633d378b2336b3ee166375a923252e0477e75127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335805"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591658"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>如何：为服务指定安全上下文
 默认情况下，服务在与登录用户不同的安全性上下文中运行。 服务在名为 `LocalSystem` 的默认系统帐户的上下文中运行，这样使服务拥有与用户不同的针对系统资源的访问权限。 可以更改此行为以指定应在其下运行服务的其他用户帐户。  
   
  可以通过操作服务运行于其中的进程的 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 属性来设置安全性上下文。 此属性允许将服务设置为以下四种帐户类型之一：  
   
--   `User`，该帐户会导致系统在安装服务时提示输入有效的用户名和密码，并在网络上单个用户指定的帐户的上下文中运行；  
+- `User`，该帐户会导致系统在安装服务时提示输入有效的用户名和密码，并在网络上单个用户指定的帐户的上下文中运行；  
   
--   `LocalService`，该帐户在用作本地计算机上的非特权用户的帐户的上下文中运行，并向任意远程服务器提供匿名凭据；  
+- `LocalService`，该帐户在用作本地计算机上的非特权用户的帐户的上下文中运行，并向任意远程服务器提供匿名凭据；  
   
--   `LocalSystem`，该帐户在提供广泛本地权限的帐户的上下文中运行，并向任意远程服务器提供计算机凭据；  
+- `LocalSystem`，该帐户在提供广泛本地权限的帐户的上下文中运行，并向任意远程服务器提供计算机凭据；  
   
--   `NetworkService`，该帐户在用作本地计算机上的非特权用户的帐户的上下文中运行，并向任意远程服务器提供计算机凭据。  
+- `NetworkService`，该帐户在用作本地计算机上的非特权用户的帐户的上下文中运行，并向任意远程服务器提供计算机凭据。  
   
  有关详细信息，请参见 <xref:System.ServiceProcess.ServiceAccount> 枚举。  
   

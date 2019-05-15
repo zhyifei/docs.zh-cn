@@ -2,12 +2,12 @@
 title: LINQ to XML 与DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 44e5a4d00705d1cd7aff66e0a9be387d5c6c633a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ab775cc259fd3a337358bca2da6055d7b1ea6bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702426"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596964"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML 与DOM (C#)
 本节说明 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和当前主导 XML 编程 API（W3C 文档对象模型 (DOM)）之间的主要区别。  
@@ -80,11 +80,11 @@ XElement contacts =
 ## <a name="working-directly-with-xml-elements"></a>直接使用 XML 元素  
  在使用 XML 编程时，主要关注的通常是 XML 元素，也可能关注属性。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，可以直接使用 XML 元素和属性。 例如，可以执行以下操作：  
   
--   创建 XML 元素而根本不使用文档对象。 当必须使用 XML 树的片段时，这可简化编程。  
+- 创建 XML 元素而根本不使用文档对象。 当必须使用 XML 树的片段时，这可简化编程。  
   
--   直接从 XML 文件加载 `T:System.Xml.Linq.XElement` 对象。  
+- 直接从 XML 文件加载 `T:System.Xml.Linq.XElement` 对象。  
   
--   将 `T:System.Xml.Linq.XElement` 对象序列化为文件或流。  
+- 将 `T:System.Xml.Linq.XElement` 对象序列化为文件或流。  
   
  比较而言，W3C DOM 中的 XML 文档用作 XML 树的逻辑容器。 在 DOM 中，必须在 XML 文档的上下文中创建 XML 节点，包括元素和属性。 下面是在 DOM 中创建一个 name 元素的代码片段：  
   
