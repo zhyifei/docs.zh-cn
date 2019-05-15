@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67ae413ae8944757fc90bcde752b9a5fe53cc68f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 870a71de2aee2e9b725749157791c49836c6ea00
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948520"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636895"
 ---
-# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a><span data-ttu-id="a3adf-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法</span><span class="sxs-lookup"><span data-stu-id="a3adf-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>
+# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a><span data-ttu-id="9d423-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法</span><span class="sxs-lookup"><span data-stu-id="9d423-102">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>
 
-<span data-ttu-id="a3adf-103">为给定的 NGen 模块和内联给定方法中定义的所有方法返回一个枚举器。</span><span class="sxs-lookup"><span data-stu-id="a3adf-103">Returns an enumerator to all the methods that are defined in a given NGen module and inline a given method.</span></span>
+<span data-ttu-id="9d423-103">为给定的 NGen 模块和内联给定方法中定义的所有方法返回一个枚举器。</span><span class="sxs-lookup"><span data-stu-id="9d423-103">Returns an enumerator to all the methods that are defined in a given NGen module and inline a given method.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a3adf-104">语法</span><span class="sxs-lookup"><span data-stu-id="a3adf-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="9d423-104">语法</span><span class="sxs-lookup"><span data-stu-id="9d423-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumNgenModuleMethodsInliningThisMethod(
@@ -27,62 +27,62 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="a3adf-105">参数</span><span class="sxs-lookup"><span data-stu-id="a3adf-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="9d423-105">参数</span><span class="sxs-lookup"><span data-stu-id="9d423-105">Parameters</span></span>
 
 `inlinersModuleId`\
-<span data-ttu-id="a3adf-106">[in]NGen 模块的标识符。</span><span class="sxs-lookup"><span data-stu-id="a3adf-106">[in] The identifier of an NGen module.</span></span>
+<span data-ttu-id="9d423-106">[in]NGen 模块的标识符。</span><span class="sxs-lookup"><span data-stu-id="9d423-106">[in] The identifier of an NGen module.</span></span>
 
 `inlineeModuleId`\
-<span data-ttu-id="a3adf-107">[in]定义的模块标识符`inlineeMethodId`。</span><span class="sxs-lookup"><span data-stu-id="a3adf-107">[in] The identifier of a module that defines `inlineeMethodId`.</span></span> <span data-ttu-id="a3adf-108">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="a3adf-108">See the Remarks section for more information.</span></span>
+<span data-ttu-id="9d423-107">[in]定义的模块标识符`inlineeMethodId`。</span><span class="sxs-lookup"><span data-stu-id="9d423-107">[in] The identifier of a module that defines `inlineeMethodId`.</span></span> <span data-ttu-id="9d423-108">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="9d423-108">See the Remarks section for more information.</span></span>
 
 `inlineeMethodId`\
-<span data-ttu-id="a3adf-109">[in]内联方法的标识符。</span><span class="sxs-lookup"><span data-stu-id="a3adf-109">[in] The identifier of an inlined method.</span></span> <span data-ttu-id="a3adf-110">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="a3adf-110">See the Remarks section for more information.</span></span>
+<span data-ttu-id="9d423-109">[in]内联方法的标识符。</span><span class="sxs-lookup"><span data-stu-id="9d423-109">[in] The identifier of an inlined method.</span></span> <span data-ttu-id="9d423-110">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="9d423-110">See the Remarks section for more information.</span></span>
 
 `incompleteData`\
-<span data-ttu-id="a3adf-111">[out]一个标志，指示是否`ppEnum`包含给定的方法的内联的所有方法。</span><span class="sxs-lookup"><span data-stu-id="a3adf-111">[out] A flag that indicates whether `ppEnum` contains all methods inlining a given method.</span></span>  <span data-ttu-id="a3adf-112">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="a3adf-112">See the Remarks section for more information.</span></span>
+<span data-ttu-id="9d423-111">[out]一个标志，指示是否`ppEnum`包含给定的方法的内联的所有方法。</span><span class="sxs-lookup"><span data-stu-id="9d423-111">[out] A flag that indicates whether `ppEnum` contains all methods inlining a given method.</span></span>  <span data-ttu-id="9d423-112">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="9d423-112">See the Remarks section for more information.</span></span>
 
 `ppEnum`\
-<span data-ttu-id="a3adf-113">[out]一个指向枚举器的地址</span><span class="sxs-lookup"><span data-stu-id="a3adf-113">[out] A pointer to the address of an enumerator</span></span>
+<span data-ttu-id="9d423-113">[out]一个指向枚举器的地址</span><span class="sxs-lookup"><span data-stu-id="9d423-113">[out] A pointer to the address of an enumerator</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="a3adf-114">备注</span><span class="sxs-lookup"><span data-stu-id="a3adf-114">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9d423-114">备注</span><span class="sxs-lookup"><span data-stu-id="9d423-114">Remarks</span></span>
 
-<span data-ttu-id="a3adf-115">`inlineeModuleId` 和`inlineeMethodId`一起构成了可能会进行内联方法的完整标识符。</span><span class="sxs-lookup"><span data-stu-id="a3adf-115">`inlineeModuleId` and `inlineeMethodId` together form the full identifier for the method that might be inlined.</span></span> <span data-ttu-id="a3adf-116">例如，假定模块`A`定义的方法`Simple.Add`:</span><span class="sxs-lookup"><span data-stu-id="a3adf-116">For example, assume module `A` defines a method `Simple.Add`:</span></span>
+<span data-ttu-id="9d423-115">`inlineeModuleId` 和`inlineeMethodId`一起构成了可能会进行内联方法的完整标识符。</span><span class="sxs-lookup"><span data-stu-id="9d423-115">`inlineeModuleId` and `inlineeMethodId` together form the full identifier for the method that might be inlined.</span></span> <span data-ttu-id="9d423-116">例如，假定模块`A`定义的方法`Simple.Add`:</span><span class="sxs-lookup"><span data-stu-id="9d423-116">For example, assume module `A` defines a method `Simple.Add`:</span></span>
 
 ```csharp
 Simple.Add(int a, int b)
 { return a + b; }
 ```
 
-<span data-ttu-id="a3adf-117">和模块 B 定义`Fancy.AddTwice`:</span><span class="sxs-lookup"><span data-stu-id="a3adf-117">and module B defines `Fancy.AddTwice`:</span></span>
+<span data-ttu-id="9d423-117">和模块 B 定义`Fancy.AddTwice`:</span><span class="sxs-lookup"><span data-stu-id="9d423-117">and module B defines `Fancy.AddTwice`:</span></span>
 
 ```csharp
 Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }
 ```
 
-<span data-ttu-id="a3adf-118">允许并假设`Fancy.AddTwice`内嵌元素调用到`SimpleAdd`。</span><span class="sxs-lookup"><span data-stu-id="a3adf-118">Lets also assume that `Fancy.AddTwice` inlines the call to `SimpleAdd`.</span></span> <span data-ttu-id="a3adf-119">探查器可以使用此枚举器来查找模块 B 中哪些以内联方式定义的所有方法`Simple.Add`，并枚举结果会`AddTwice`。</span><span class="sxs-lookup"><span data-stu-id="a3adf-119">A profiler could use this enumerator to find all methods defined in module B which inline `Simple.Add`, and the result would enumerate `AddTwice`.</span></span>  <span data-ttu-id="a3adf-120">`inlineeModuleId` 是的模块标识符`A`，并`inlineeMethodId`是标识符`Simple.Add(int a, int b)`。</span><span class="sxs-lookup"><span data-stu-id="a3adf-120">`inlineeModuleId` is the identifier of module `A`, and `inlineeMethodId` is the identifier of `Simple.Add(int a, int b)`.</span></span>
+<span data-ttu-id="9d423-118">允许并假设`Fancy.AddTwice`内嵌元素调用到`SimpleAdd`。</span><span class="sxs-lookup"><span data-stu-id="9d423-118">Lets also assume that `Fancy.AddTwice` inlines the call to `SimpleAdd`.</span></span> <span data-ttu-id="9d423-119">探查器可以使用此枚举器来查找模块 B 中哪些以内联方式定义的所有方法`Simple.Add`，并枚举结果会`AddTwice`。</span><span class="sxs-lookup"><span data-stu-id="9d423-119">A profiler could use this enumerator to find all methods defined in module B which inline `Simple.Add`, and the result would enumerate `AddTwice`.</span></span>  <span data-ttu-id="9d423-120">`inlineeModuleId` 是的模块标识符`A`，并`inlineeMethodId`是标识符`Simple.Add(int a, int b)`。</span><span class="sxs-lookup"><span data-stu-id="9d423-120">`inlineeModuleId` is the identifier of module `A`, and `inlineeMethodId` is the identifier of `Simple.Add(int a, int b)`.</span></span>
 
-<span data-ttu-id="a3adf-121">如果`incompleteData`函数的后面是 true，将返回枚举器不包含内联的所有方法的给定的方法。</span><span class="sxs-lookup"><span data-stu-id="a3adf-121">If `incompleteData` is true after the function returns, the enumerator does not contain all methods inlining a given method.</span></span> <span data-ttu-id="a3adf-122">这可能会在一个或多直接或间接依赖关系的内联模块尚未尚未加载。</span><span class="sxs-lookup"><span data-stu-id="a3adf-122">This can happen when one or more direct or indirect dependencies of inliners module haven't been loaded yet.</span></span> <span data-ttu-id="a3adf-123">如果探查器需要准确的数据，它应稍后重试多个模块加载时，最好是在每个模块加载。</span><span class="sxs-lookup"><span data-stu-id="a3adf-123">If a profiler needs accurate data, it should retry later when more modules are loaded, preferably on each module load.</span></span>
+<span data-ttu-id="9d423-121">如果`incompleteData`函数的后面是 true，将返回枚举器不包含内联的所有方法的给定的方法。</span><span class="sxs-lookup"><span data-stu-id="9d423-121">If `incompleteData` is true after the function returns, the enumerator does not contain all methods inlining a given method.</span></span> <span data-ttu-id="9d423-122">这可能会在一个或多直接或间接依赖关系的内联模块尚未尚未加载。</span><span class="sxs-lookup"><span data-stu-id="9d423-122">This can happen when one or more direct or indirect dependencies of inliners module haven't been loaded yet.</span></span> <span data-ttu-id="9d423-123">如果探查器需要准确的数据，它应稍后重试多个模块加载时，最好是在每个模块加载。</span><span class="sxs-lookup"><span data-stu-id="9d423-123">If a profiler needs accurate data, it should retry later when more modules are loaded, preferably on each module load.</span></span>
 
-<span data-ttu-id="a3adf-124">`EnumNgenModuleMethodsInliningThisMethod`方法可用于解决限制为 ReJIT 内联。</span><span class="sxs-lookup"><span data-stu-id="a3adf-124">The `EnumNgenModuleMethodsInliningThisMethod` method can be used to work around limitations on inlining for ReJIT.</span></span> <span data-ttu-id="a3adf-125">ReJIT 允许探查器更改方法的实现，然后动态为其创建新的代码。</span><span class="sxs-lookup"><span data-stu-id="a3adf-125">ReJIT lets a profiler change the implementation of a method and then create new code for it on the fly.</span></span> <span data-ttu-id="a3adf-126">例如，我们可能会更改`Simple.Add`，如下所示：</span><span class="sxs-lookup"><span data-stu-id="a3adf-126">For example, we could change `Simple.Add` as follows:</span></span>
+<span data-ttu-id="9d423-124">`EnumNgenModuleMethodsInliningThisMethod`方法可用于解决限制为 ReJIT 内联。</span><span class="sxs-lookup"><span data-stu-id="9d423-124">The `EnumNgenModuleMethodsInliningThisMethod` method can be used to work around limitations on inlining for ReJIT.</span></span> <span data-ttu-id="9d423-125">ReJIT 允许探查器更改方法的实现，然后动态为其创建新的代码。</span><span class="sxs-lookup"><span data-stu-id="9d423-125">ReJIT lets a profiler change the implementation of a method and then create new code for it on the fly.</span></span> <span data-ttu-id="9d423-126">例如，我们可能会更改`Simple.Add`，如下所示：</span><span class="sxs-lookup"><span data-stu-id="9d423-126">For example, we could change `Simple.Add` as follows:</span></span>
 
 ```csharp
 Simple.Add(int a, int b)
 { return 42; }
 ```
 
-<span data-ttu-id="a3adf-127">但是由于`Fancy.AddTwice`具有已内联`Simple.Add`，它将继续像以前一样具有相同的行为。</span><span class="sxs-lookup"><span data-stu-id="a3adf-127">However because `Fancy.AddTwice` has already inlined `Simple.Add`, it continues to have the same behavior as before.</span></span> <span data-ttu-id="a3adf-128">若要解决这一限制，调用方必须搜索所有方法的所有模块中内联`Simple.Add`，并使用`ICorProfilerInfo5::RequestRejit`上的每个这些方法。</span><span class="sxs-lookup"><span data-stu-id="a3adf-128">To work around that limitation, the caller has to search for all methods in all modules that inline `Simple.Add` and use `ICorProfilerInfo5::RequestRejit` on each of those methods.</span></span> <span data-ttu-id="a3adf-129">重新编译方法时，它们将具有新行为的`Simple.Add`而不是这一旧行为。</span><span class="sxs-lookup"><span data-stu-id="a3adf-129">When the methods are re-compiled, they will have the new behavior of `Simple.Add` instead of the old behavior.</span></span>
+<span data-ttu-id="9d423-127">但是由于`Fancy.AddTwice`具有已内联`Simple.Add`，它将继续像以前一样具有相同的行为。</span><span class="sxs-lookup"><span data-stu-id="9d423-127">However because `Fancy.AddTwice` has already inlined `Simple.Add`, it continues to have the same behavior as before.</span></span> <span data-ttu-id="9d423-128">若要解决这一限制，调用方必须搜索所有方法的所有模块中内联`Simple.Add`，并使用`ICorProfilerInfo5::RequestRejit`上的每个这些方法。</span><span class="sxs-lookup"><span data-stu-id="9d423-128">To work around that limitation, the caller has to search for all methods in all modules that inline `Simple.Add` and use `ICorProfilerInfo5::RequestRejit` on each of those methods.</span></span> <span data-ttu-id="9d423-129">重新编译方法时，它们将具有新行为的`Simple.Add`而不是这一旧行为。</span><span class="sxs-lookup"><span data-stu-id="9d423-129">When the methods are re-compiled, they will have the new behavior of `Simple.Add` instead of the old behavior.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a3adf-130">要求</span><span class="sxs-lookup"><span data-stu-id="a3adf-130">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="9d423-130">要求</span><span class="sxs-lookup"><span data-stu-id="9d423-130">Requirements</span></span>
 
-<span data-ttu-id="a3adf-131">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a3adf-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="9d423-131">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9d423-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="a3adf-132">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a3adf-132">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="9d423-132">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9d423-132">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="a3adf-133">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a3adf-133">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="9d423-133">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d423-133">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="a3adf-134">**.NET Framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3adf-134">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>
+<span data-ttu-id="9d423-134">**.NET Framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d423-134">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a3adf-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3adf-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d423-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="9d423-135">See also</span></span>
 
-- [<span data-ttu-id="a3adf-136">ICorProfilerInfo6 接口</span><span class="sxs-lookup"><span data-stu-id="a3adf-136">ICorProfilerInfo6 Interface</span></span>](icorprofilerinfo6-interface.md)
+- [<span data-ttu-id="9d423-136">ICorProfilerInfo6 接口</span><span class="sxs-lookup"><span data-stu-id="9d423-136">ICorProfilerInfo6 Interface</span></span>](icorprofilerinfo6-interface.md)
