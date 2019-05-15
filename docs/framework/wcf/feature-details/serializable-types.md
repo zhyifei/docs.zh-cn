@@ -2,12 +2,12 @@
 title: 可序列化类型
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586137"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591673"
 ---
 # <a name="serializable-types"></a>可序列化类型
 默认情况下，<xref:System.Runtime.Serialization.DataContractSerializer> 序列化所有公共可见类型。 类型的所有公共读/写属性和字段均被序列化。  
@@ -36,7 +36,7 @@ ms.locfileid: "64586137"
 - 若要使公共成员、属性 (Property) 或字段“退出”序列化过程，请向该成员应用 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性 (Attribute)。  
   
 ## <a name="inheritance"></a>继承  
- 未标记类型（没有 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的类型）可以从具有此属性的类型继承；但是反过来则不允许：具有该属性的类型不能从未标记类型继承。 实行此规则主要是为了确保与使用旧版本 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 编写的代码向后兼容。  
+ 未标记类型（没有 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的类型）可以从具有此属性的类型继承；但是反过来则不允许：具有该属性的类型不能从未标记类型继承。 实施此规则主要是为了确保向后兼容早期版本的.NET Framework 中编写的代码。  
   
 ## <a name="see-also"></a>请参阅
 

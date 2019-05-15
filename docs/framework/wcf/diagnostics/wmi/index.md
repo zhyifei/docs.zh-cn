@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 进行诊断
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662467"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591236"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management Instrumentation (WMI) 提供程序的运行时服务的检测数据。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management In
  此配置项公开 WMI 接口。 现在，您可以通过此接口连接管理应用程序并访问应用程序的管理规范。  
   
 ## <a name="accessing-wmi-data"></a>访问 WMI 数据  
- 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序，WMI ApiC++应用程序，并[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 有关详细信息，请参阅[使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序，WMI ApiC++应用程序和.NET Framework。 有关详细信息，请参阅[使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法以编程方式访问 WMI 数据，您应注意此类方法可能会在建立连接时引发异常。 连接并不是在构建 <xref:System.Management.ManagementObject> 实例的过程中建立的，而是在涉及实际数据交换的第一次请求时建立的。 因此，您应该使用 `try..catch` 块来捕捉可能的异常。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 68dbad807e79f16bdc3cbdd3f55c62c3d6c854e9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd10e0a43ff37b921dc8e024d7a6a51fafbb0400
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621295"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591849"
 ---
 # <a name="how-to-print-a-windows-form"></a>如何：打印 Windows 窗体
 作为开发过程的一部分，您通常需要打印一份 Windows 窗体。 下面的代码示例演示如何通过使用打印一份当前窗体<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法。  
@@ -23,9 +23,6 @@ ms.locfileid: "64621295"
 ## <a name="example"></a>示例  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
- 这是包含一个完整的代码示例`Main`方法。  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  

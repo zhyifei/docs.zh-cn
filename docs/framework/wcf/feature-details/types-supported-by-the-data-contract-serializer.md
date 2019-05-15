@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 364d3924d9db2c85959c1e41011c6d659823774c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614830"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592201"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>数据协定序列化程序支持的类型
 Windows Communication Foundation (WCF) 使用<xref:System.Runtime.Serialization.DataContractSerializer>作为其默认序列化引擎将数据转换为 XML，并将 XML 转换回数据。 <xref:System.Runtime.Serialization.DataContractSerializer> 是专为序列化数据协定  类型而设计的。 但是，它支持许多其他可视为具有隐式数据协定的类型。 以下是可以序列化的类型的完整列表：  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 使用<xref:System.Runtime.Serialization.
     > [!NOTE]
     >  与其他基元类型不同， <xref:System.DateTimeOffset> 默认情况下不是已知类型。 有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md))。  
   
-- 使用 <xref:System.SerializableAttribute> 属性标记的类型。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基类库中包含的许多类型都属于此类别。 <xref:System.Runtime.Serialization.DataContractSerializer> 完全支持由 .NET Framework 远程处理、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>使用的此序列化编程模型，包括支持 <xref:System.Runtime.Serialization.ISerializable> 接口。  
+- 使用 <xref:System.SerializableAttribute> 属性标记的类型。 .NET Framework 基类库中包含的许多类型属于此类别。 <xref:System.Runtime.Serialization.DataContractSerializer> 完全支持由 .NET Framework 远程处理、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>使用的此序列化编程模型，包括支持 <xref:System.Runtime.Serialization.ISerializable> 接口。  
   
 - 表示原始 XML 的类型或表示 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 关系数据的类型。 支持 <xref:System.Xml.XmlElement> 和 <xref:System.Xml.XmlNode> 类型的数组作为一种直接表示 XML 的方式。 另外，支持实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型，包括相关的 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 类型。 支持 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 类型和 <xref:System.Data.DataSet> 类型（以及其类型化的派生类）都实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，因此可归入此类别。 有关详细信息，请参阅[XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
   

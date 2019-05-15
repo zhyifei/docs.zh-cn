@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: cf68834c5612ed51fb3e6c0ed18667cbc13482bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586220"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591658"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和反序列化
-Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行双向转换。 本主题说明序列化程序的工作原理。  
+Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer>之间.NET Framework 对象和 XML，在这两个方向上进行转换。 本主题说明序列化程序的工作原理。  
   
- 在对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象进行序列化时，序列化程序了解各种序列化编程模型，包括新的数据协定  模型。 有关支持类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 有关数据协定的介绍，请参阅 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 序列化时.NET Framework 对象，序列化程序了解各种序列化编程模型，包括新*数据协定*模型。 有关支持类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 有关数据协定的介绍，请参阅 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  当对 XML 进行反序列化时，序列化程序使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类。 它还支持<xref:System.Xml.XmlDictionaryReader>和<xref:System.Xml.XmlDictionaryWriter>类，以使其能够生成优化在某些情况下，例如当使用 WCF 二进制 XML 格式的 XML。  
   
- WCF 还包括一个伴随序列化程序， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 与 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 序列化程序类似，因为它也发出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型名称作为序列化数据的一部分。 当在序列化和反序列化结束阶段共享相同的类型时使用此序列化程序。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 都派生自公共基类 <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
+ WCF 还包括一个伴随序列化程序， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer>类似于<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>和<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>序列化程序因为它还提供.NET Framework 类型名称作为序列化数据的一部分。 当在序列化和反序列化结束阶段共享相同的类型时使用此序列化程序。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 都派生自公共基类 <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> 将包含带小于 20 的十六进制值的控制字符序列化为 XML 实体。 将此类数据发送到 WCF 服务时，这可能会导致非 WCF 客户端的问题。  
@@ -226,7 +226,7 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
  有一种方法可以用来禁用此包装元素名称检查；一些 `ReadObject` 方法的重载采用布尔参数 `verifyObjectName`，该参数默认设置为 `true` 。 当该参数设置为 `false`时，包装元素的名称和命名空间将被忽略。 这对于读取使用先前描述的分步引导的序列化机制写入的 XML 是有用的。  
   
 ## <a name="using-the-netdatacontractserializer"></a>使用 NetDataContractSerializer  
- `DataContractSerializer` 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 之间的主要差异在于 `DataContractSerializer` 使用数据协定名称，而 `NetDataContractSerializer` 在序列化的 XML 中输出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程序集和类型名称。 这意味着必须在序列化终结点和反序列化终结点之间共享完全相同的类型。 这也同时意味着不需要对 `NetDataContractSerializer` 使用已知类型机制，因为要反序列化的确切类型始终是已知的。  
+ 之间的主要区别`DataContractSerializer`并<xref:System.Runtime.Serialization.NetDataContractSerializer>在于`DataContractSerializer`使用数据协定名称，而`NetDataContractSerializer`输出序列化的 XML 中的完整.NET Framework 程序集和类型名称。 这意味着必须在序列化终结点和反序列化终结点之间共享完全相同的类型。 这也同时意味着不需要对 `NetDataContractSerializer` 使用已知类型机制，因为要反序列化的确切类型始终是已知的。  
   
  但是，会出现以下几个问题：  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
 - 版本管理。 在 XML 中使用完整的类型和程序集名称会严格限制对类型进行版本管理的方式。 以下内容不可更改：类型名称、命名空间、程序集名称和程序集版本。 通过将 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 属性或构造函数参数设置为 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> （而非 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 的默认值），可以允许程序集版本更改，但不允许泛型参数类型更改。  
   
-- 互操作性。 由于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型和程序集名称包含在 XML 中，因此 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外的平台不能访问生成的数据。  
+- 互操作性。 由于.NET Framework 类型和程序集名称包含在 XML 中，.NET Framework 以外的平台不能访问生成的数据。  
   
 - 性能。 写出类型和程序集名称会显著增加生成的 XML 的大小。  
   
- 此机制与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理（具体是指 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>）使用的二进制或 SOAP 序列化类似。  
+ 此机制是类似于二进制或 SOAP 序列化使用的.NET Framework 远程处理 (具体而言，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>和<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>)。  
   
  使用 `NetDataContractSerializer` 与使用 `DataContractSerializer`类似，但存在以下区别：  
   
@@ -258,7 +258,7 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  `NetDataContractSerializer` 和 `DataContractSerializer` 使用的 XML 格式通常是不兼容的。 也就是说，不支持尝试使用这些序列化程序的一种进行序列化而使用另一种序列化程序进行反序列化的情况。  
   
- 还请注意， `NetDataContractSerializer` 对于对象图中的每个节点不会输出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型和程序集名称。 仅在有歧义的地方才会输出上述信息。 也就是说，它是在根对象级别进行输出并且是针对任何多态情况。  
+ 另请注意，`NetDataContractSerializer`不会输出在对象图中的每个节点的完整.NET Framework 类型和程序集名称。 仅在有歧义的地方才会输出上述信息。 也就是说，它是在根对象级别进行输出并且是针对任何多态情况。  
   
 ## <a name="see-also"></a>请参阅
 

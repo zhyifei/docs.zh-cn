@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648132"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589015"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648132"
   
  <xref:System.Windows.Forms.DataGrid> 可提供数据集、相关表之间导航以及丰富格式设置和编辑功能的用户界面。  
   
- 显示和操作数据是单独的函数：该控件处理用户界面，而由 Windows 窗体数据绑定体系结构和处理数据更新[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]数据提供程序。 因此绑定到同一数据源的多个控件将保持同步。  
+ 显示和操作数据是单独的函数：该控件处理用户界面，而由 Windows 窗体数据绑定体系结构和.NET Framework 数据提供程序处理的数据更新。 因此绑定到同一数据源的多个控件将保持同步。  
   
 > [!NOTE]
 >  如果你熟悉 Visual Basic 6.0 中的 DataGrid 控件，就会发现 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件中的一些重要差异。  

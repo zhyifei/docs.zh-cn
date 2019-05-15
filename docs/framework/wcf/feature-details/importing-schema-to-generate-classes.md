@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: d7b5cb57e921fa802207d2ad606ba3535b78a77b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 986f8c2d1eec91ee9a68d2b6068f5b38dfdf14f1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587028"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591261"
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从使用 Windows Communication Foundation (WCF) 可用架构生成类，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>类。 本主题描述该过程和变体。  
@@ -21,9 +21,9 @@ ms.locfileid: "64587028"
 ## <a name="the-import-process"></a>导入过程
  架构导入过程以一个 <xref:System.Xml.Schema.XmlSchemaSet> 开始并生成一个 <xref:System.CodeDom.CodeCompileUnit>。  
   
- `XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的架构对象模型 (SOM) 的一部分，SOM 表示 XML 架构定义语言 (XSD) 架构文档集。 若要从 XSD 文档集创建一个 `XmlSchemaSet` 对象，则将每个文档反序列化到 <xref:System.Xml.Schema.XmlSchema> 对象中（使用 <xref:System.Xml.Serialization.XmlSerializer>），并将这些对象添加到新的 `XmlSchemaSet` 中。  
+ `XmlSchemaSet`是一部分的.NET Framework 的架构对象模型 (SOM) 表示一组 XML 架构定义语言 (XSD) 架构文档。 若要从 XSD 文档集创建一个 `XmlSchemaSet` 对象，则将每个文档反序列化到 <xref:System.Xml.Schema.XmlSchema> 对象中（使用 <xref:System.Xml.Serialization.XmlSerializer>），并将这些对象添加到新的 `XmlSchemaSet` 中。  
   
- `CodeCompileUnit` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的代码文档对象模型 (CodeDOM) 的一部分，CodeDOM 以抽象方式表示 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 代码。 若要从 `CodeCompileUnit` 生成实际代码，则使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 类的一个子类，例如 <xref:Microsoft.CSharp.CSharpCodeProvider> 或 <xref:Microsoft.VisualBasic.VBCodeProvider> 类。  
+ `CodeCompileUnit`是.NET Framework 的代码文档对象模型 (CodeDOM) 以抽象方式表示.NET Framework 代码的一部分。 若要从 `CodeCompileUnit` 生成实际代码，则使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 类的一个子类，例如 <xref:Microsoft.CSharp.CSharpCodeProvider> 或 <xref:Microsoft.VisualBasic.VBCodeProvider> 类。  
   
 ### <a name="to-import-a-schema"></a>导入架构  
   
@@ -60,7 +60,7 @@ ms.locfileid: "64587028"
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>控制命名空间（Namespaces 或 /namespace 开关）  
  这对应于 **/namespace**切换`Svcutil.exe`工具。  
   
- 通常情况下，将从架构生成类型生成到[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]命名空间，对应于特定每个 XSD 命名空间[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]命名空间中所述的映射根据[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). 通过将 <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> 属性设置为 <xref:System.Collections.Generic.Dictionary%602> 可以自定义此映射。 如果在字典中找到了给定的 XSD 命名空间，则也可从字典中获得匹配的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 命名空间。  
+ 通常情况下，从架构生成类型生成到.NET Framework 命名空间对应于特定.NET Framework 命名空间中所述的映射根据每个 XSD 命名空间[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). 通过将 <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> 属性设置为 <xref:System.Collections.Generic.Dictionary%602> 可以自定义此映射。 如果在字典中找到给定的 XSD 命名空间，则也会从字典执行匹配的.NET Framework 命名空间。  
   
  例如，考虑下面的架构。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64587028"
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>添加 SerializableAttribute（GenerateSerializable 或 /serializable 开关）  
  这对应于 **/ 可序列化**切换`Svcutil.exe`工具。  
   
- 有时，对于从架构生成的类型来说，能够与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 运行时序列化引擎（例如 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 类）一起使用十分重要。 这在使用这些类型进行 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理时很有用。 若要启用它，则除常规 <xref:System.SerializableAttribute> 属性除外，还必须将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于生成的类型。 如果 `GenerateSerializable` 导入选项设置为 `true`，则将自动生成该属性。  
+ 有时是重要的类型从架构生成可与.NET Framework 运行时序列化引擎 (例如，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType>和<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>类)。 使用.NET Framework 远程处理的类型时，这非常有用。 若要启用它，则除常规 <xref:System.SerializableAttribute> 属性除外，还必须将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于生成的类型。 如果 `GenerateSerializable` 导入选项设置为 `true`，则将自动生成该属性。  
   
  下面的示例演示在 `Vehicle` 导入选项设置为 `GenerateSerializable` 时生成的 `true` 类。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "64587028"
 > [!NOTE]
 >  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 没有方法来区分列表和一个关联，因此除非在架构中存在特定于 WCF 的特殊批注，则始终作为列表处理这种模式。 该批注指示给定模式表示一个关联。 有关详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
- 通常情况下，将列表作为派生自泛型列表的集合数据协定导入，或作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数组导入，具体取决于架构是否遵循集合的标准命名模式。 这在更多详细信息中所述[中的数据协定的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 通常将关联作为 <xref:System.Collections.Generic.Dictionary%602> 或派生自字典对象的集合数据协定导入。 例如，考虑下面的架构。  
+ 通常情况下，为派生自泛型列表的集合数据协定或可为.NET Framework 数组，具体取决于该架构遵循集合的标准命名模式，是导入的列表。 这在更多详细信息中所述[中的数据协定的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 通常将关联作为 <xref:System.Collections.Generic.Dictionary%602> 或派生自字典对象的集合数据协定导入。 例如，考虑下面的架构。  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
@@ -130,11 +130,11 @@ ms.locfileid: "64587028"
  `ReferencedCollectionTypes`属性对应于 **/collectionType**切换于 SvcUtil.exe 工具。 请注意，若要引用多个集合类型， **/collectionType**交换机必须多次指定。 如果类型不在 MsCorLib.dll 中，还必须使用引用其程序集 **/reference**切换。  
   
 #### <a name="import-options-referencing-existing-types"></a>导入选项：引用现有类型  
- 有时，架构中的类型对应于现有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型，因此不需要从头开始生成这些类型。 （本节仅适用于非集合类型。 有关集合类型，请参见上一节。）  
+ 有时，架构中的类型对应于现有的.NET Framework 类型，而无需从头开始生成这些类型。 （本节仅适用于非集合类型。 有关集合类型，请参见上一节。）  
   
  例如，您可能有一个标准公司范围内的“Person”数据协定类型，通常在表示人员时需要使用它。 每当某个服务利用该类型且其架构显示在该服务元数据中时，在导入此架构时您可能需要重用现有的 `Person` 类型，而不需要为每个服务生成新的类型。  
   
- 为此，将要重用的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型列表传递给 <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> 属性返回到 <xref:System.Runtime.Serialization.ImportOptions> 类上的集合。 如果任何这些类型的数据协定名称和命名空间与架构类型的名称和命名空间相匹配，则执行结构比较。 如果比较结果确定这些类型同时具有匹配的名称和匹配的构造，则重用现有的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型，而不生成新的类型。 如果仅名称匹配而构造不匹配，则引发异常。 请注意，引用类型（例如，添加新的可选数据成员）时不允许进行版本管理。 构造必须完全匹配。  
+ 若要执行此操作，将传递到集合重新使用的.NET Framework 类型的列表<xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A>属性返回在<xref:System.Runtime.Serialization.ImportOptions>类。 如果任何这些类型的数据协定名称和命名空间与架构类型的名称和命名空间相匹配，则执行结构比较。 如果确定类型具有匹配的名称和匹配的构造，而不是生成一个新中重复使用现有的.NET Framework 类型。 如果仅名称匹配而构造不匹配，则引发异常。 请注意，引用类型（例如，添加新的可选数据成员）时不允许进行版本管理。 构造必须完全匹配。  
   
  向引用的类型集合添加多个具有相同数据协定名称和命名空间的类型是合法的，前提是不导入具有该名称和命名空间的架构类型。 这样您就可以轻松地将程序集中的所有类型添加到集合中，而无需担心在架构中并未实际出现的类型重复项。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "64587028"
 #### <a name="import-options-advanced-options"></a>导入选项：高级选项  
  下面介绍高级导入选项：  
   
-- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 属性。 指定用于为生成的类生成代码的 <xref:System.CodeDom.Compiler.CodeDomProvider>。 导入机制尝试避免不受 <xref:System.CodeDom.Compiler.CodeDomProvider> 支持的功能。 如果未设置 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，则可以无限制地使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 功能全集。  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 属性。 指定用于为生成的类生成代码的 <xref:System.CodeDom.Compiler.CodeDomProvider>。 导入机制尝试避免不受 <xref:System.CodeDom.Compiler.CodeDomProvider> 支持的功能。 如果<xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>未设置，不受限制地使用完整的.NET Framework 功能集。  
   
 - <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   

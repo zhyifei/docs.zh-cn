@@ -2,12 +2,12 @@
 title: 互操作性和集成
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 5a50a8ebece72a0f2f8dc95fd87e73bef5db3195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919134"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591223"
 ---
 # <a name="interoperability-and-integration"></a>互操作性和集成
 本部分介绍互操作性和集成与 Windows Communication Foundation (WCF)。  
@@ -23,7 +23,7 @@ ms.locfileid: "61919134"
  讨论用于 COM 应用程序可以调用 WCF 服务的各种方法。  
   
  [将 .NET 远程处理应用程序迁移到 WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- 介绍如何配合使用 WCF[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]远程处理。  
+ 介绍如何使用.NET Framework 远程处理使用 WCF。  
   
  [与 Web Services Enhancements 3.0 的互操作性](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
  介绍如何实现与 Web Services Enhancements (WSE) 3.0 的 Web 服务与使用 WCF。  

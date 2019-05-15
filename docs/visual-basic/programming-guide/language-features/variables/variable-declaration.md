@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a4c9ae12f2ec30d471c6e73af17567547e4dc421
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598436"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583388"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的变量声明
 声明一个变量来指定其名称和特征。 变量声明语句是[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置和内容确定变量的特征。  
@@ -48,7 +48,7 @@ ms.locfileid: "64598436"
   
 - 对象类型或在应用程序中或在另一个应用程序中定义的类  
   
-- 一个[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类，如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
+- .NET Framework 类，如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
   
 - 接口类型，如<xref:System.IComparable>或 <xref:System.IDisposable>  
   

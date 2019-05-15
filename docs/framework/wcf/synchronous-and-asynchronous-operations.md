@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3f76d51ce5cc167e71e2f3f5e7944dae2e3265d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645208"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582743"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -110,7 +110,7 @@ public class AsyncExample
  有关基于事件的异步模式的更多信息，请参见[基于事件的异步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 异步模式  
- 服务操作也可以按异步方式实现，具体方法是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 异步编程模式，并标记 `<Begin>` 属性设置为 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法。 在这种情况下，在中同步操作的形式相同的元数据中公开异步操作：作为单个操作随请求消息和相关的响应消息。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
+ 服务操作可以实现以异步方式使用.NET Framework 异步编程模式和标记`<Begin>`方法替换<xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>属性设置为`true`。 在这种情况下，在中同步操作的形式相同的元数据中公开异步操作：作为单个操作随请求消息和相关的响应消息。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
   
  通常，考虑到系统的异步特性，您不应依赖于线程。  将数据传递到操作调度处理的各个阶段的最可靠方式是使用扩展。  
   

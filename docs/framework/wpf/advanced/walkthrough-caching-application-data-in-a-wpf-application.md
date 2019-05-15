@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630776"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591205"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
 
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供了使你能够使用缓存中的类[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序。 这些类都位于<xref:System.Runtime.Caching>命名空间。
+ .NET Framework 提供了使你能够使用.NET Framework 应用程序中缓存的类。 这些类都位于<xref:System.Runtime.Caching>命名空间。
 
 > [!NOTE]
->  <xref:System.Runtime.Caching>命名空间是中的新增功能[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 此命名空间使缓存可供所有[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以前的版本中，缓存仅在 <xref:System.Web> 命名空间可用，因此，需要 ASP.NET 类上的一个依赖项。
+>  <xref:System.Runtime.Caching>命名空间是中的新增功能[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 此命名空间使缓存可供所有.NET Framework 应用程序。 在以前版本的.NET Framework，缓存是仅适用于<xref:System.Web>命名空间，因此，需要 ASP.NET 类上的依赖项。
 
- 本演练演示如何使用缓存功能，现已推出[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]作为的一部分[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。 在本演练中，你将缓存的文本文件的内容。
+ 本演练演示如何使用作为的一部分是.NET Framework 中提供的缓存功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。 在本演练中，你将缓存的文本文件的内容。
 
  本演练演示以下任务：
 
@@ -67,7 +67,7 @@ ms.locfileid: "64630776"
 4. 在中**新的项目**对话框中，选择**WPF 应用程序**。
 
     > [!NOTE]
-    >  如果没有看到**WPF 应用程序**模板，请确保您的目标版本的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]支持 WPF。 在中**新的项目**对话框中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]从列表中。
+    >  如果没有看到**WPF 应用程序**模板，请确保支持 WPF 的.NET framework 版本为目标。 在中**新的项目**对话框中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]从列表中。
 
 5. 在中**名称**文字框中，输入你的项目的名称。 例如，可以输入**WPFCaching**。
 

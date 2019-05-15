@@ -2,12 +2,12 @@
 title: LINQ to XML 概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: 0de0180b9863bbc709dad6bec1f6ad4dd5876978
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4b40acaaf3787e67e4d6efb1efb1ecd4f117427
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610719"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586322"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML 概述 (Visual Basic)
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。  
@@ -20,7 +20,7 @@ ms.locfileid: "64610719"
  专业开发人员可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 来大幅提高他们的工作效率。 通过使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，他们可以编写出表达能力更强、更为紧凑、功能更强的代码。 他们可以同时对多个数据域使用查询表达式。  
   
 ## <a name="what-is-linq-to-xml"></a>什么是 LINQ to XML？  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一种启用了 LINQ 的内存 XML 编程接口，使用它，可以在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 编程语言中处理 XML。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 一个支持 LINQ 的、 内存中 XML 编程接口，使你能够从.NET Framework 中 XML 编程语言。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将 XML 文档置于内存中，这一点很像文档对象模型 (DOM)。 您可以查询和修改 XML 文档，修改之后，可以将其另存为文件，也可以将其序列化然后通过 Internet 发送。 但是，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与 DOM 不同：它提供了新的对象模型更轻且更易于使用，并在 Visual Basic 中采用的语言功能。  
   
