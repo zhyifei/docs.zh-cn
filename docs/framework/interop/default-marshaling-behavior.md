@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315759"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063321"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  例如，封送拆收器确定应使用类包装来包装已传递到托管代码的接口。 当接口第一次通过封送拆收器时，封送拆收器检查该接口是否来自已知的对象。 在两种情况中会发生此检查行为：  
   
--   一个接口正在由另一个传递到 COM 其他位置的托管对象实现。 封送拆收器可轻易识别由托管对象公开的接口，并能够将接口与提供实现的托管对象相匹配。 接着托管对象被传递给该方法且不需要包装。  
+- 一个接口正在由另一个传递到 COM 其他位置的托管对象实现。 封送拆收器可轻易识别由托管对象公开的接口，并能够将接口与提供实现的托管对象相匹配。 接着托管对象被传递给该方法且不需要包装。  
   
--   已包装的对象将实现该接口。 要确定是否就是这种情况，封送拆收器向该对象查询其 IUnknown 接口，并将返回的接口与其他已包装对象的接口进行比较。 如果该接口与另一包装的接口相同，则这些对象具有相同的标识，并且现有的包装会被传递给该方法。  
+- 已包装的对象将实现该接口。 要确定是否就是这种情况，封送拆收器向该对象查询其 IUnknown 接口，并将返回的接口与其他已包装对象的接口进行比较。 如果该接口与另一包装的接口相同，则这些对象具有相同的标识，并且现有的包装会被传递给该方法。  
   
  如果接口不是来自已知对象，则封送拆收器执行以下操作：  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>委托的默认封送处理  
  托管委托基于后述调用机制封送为 COM 接口或函数指针：  
   
--   对于平台调用，默认情况下，委托作为非托管函数指针进行封送。  
+- 对于平台调用，默认情况下，委托作为非托管函数指针进行封送。  
   
--   对于 COM 互操作，默认情况下，委托作为 _Delegate 类型的 COM 接口进行封送。 在 Mscorlib.tlb 类型库中定义 **_Delegate** 接口且该接口包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 方法，使你可以调用该委托引用的方法。  
+- 对于 COM 互操作，默认情况下，委托作为 _Delegate 类型的 COM 接口进行封送。 在 Mscorlib.tlb 类型库中定义 **_Delegate** 接口且该接口包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 方法，使你可以调用该委托引用的方法。  
   
  下表显示托管委托数据类型的封送处理选项。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性提供若干 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值来封送委托。  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  本部分提供有关以下格式化值类型的信息：  
   
--   [在平台调用中使用的值类型](#value-types-used-in-platform-invoke)  
+- [在平台调用中使用的值类型](#value-types-used-in-platform-invoke)  
   
--   [在 COM 互操作中使用的值类型](#value-types-used-in-com-interop)  
+- [在 COM 互操作中使用的值类型](#value-types-used-in-com-interop)  
   
  除了介绍格式化的类型，本主题识别具有异常封送处理行为的[系统值类型](#system-value-types)。  
   
  格式化的类型是复杂类型，其中包含显式控制其成员在内存中的布局的信息。 使用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性提供成员布局信息。 布局可以是以下 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值之一：  
   
--   LayoutKind.Automatic  
+- LayoutKind.Automatic  
   
      指示公共语言运行时可以自由重新排序类型的成员以提高效率。 但是，当值类型传递到非托管代码中时，成员的布局是可预测的。 尝试将这种结构进行自动封送处理会导致异常。  
   
--   LayoutKind.Sequential  
+- LayoutKind.Sequential  
   
      指示在非托管内存内布局该类型的成员，其顺序与其在托管类型定义中出现的顺序相同。  
   
--   LayoutKind.Explicit  
+- LayoutKind.Explicit  
   
      指示根据随每个字段提供的 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 对成员进行布局。  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  可以使用下面的平台调用定义传递结构：  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  GetSystemTime 的等效平台调用定义如下：  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649401"
 ---
 # <a name="how-to-create-windows-services"></a>如何：创建 Windows 服务
 创建服务时，可使用名为“Windows 服务”的 Visual Studio 项目模板。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
@@ -21,11 +21,11 @@ ms.locfileid: "59313263"
   
  要创建功能性服务，你至少必须：  
   
--   设置 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
+- 设置 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性。  
   
--   为你的服务应用程序创建必要的安装程序。  
+- 为你的服务应用程序创建必要的安装程序。  
   
--   替代并指定 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的代码，以自定义你的服务的行为方式。  
+- 替代并指定 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的代码，以自定义你的服务的行为方式。  
   
 ### <a name="to-create-a-windows-service-application"></a>要创建 Windows 服务应用程序  
   

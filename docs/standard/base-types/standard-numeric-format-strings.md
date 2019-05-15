@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979952"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664654"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
 标准数字格式字符串用于格式化通用数值类型。 标准数字格式字符串采用 `Axx` 的形式，其中：  
   
--   `A` 是称为“格式说明符”的单个字母字符。 任何包含一个以上字母字符（包括空白）的数字格式字符串都被解释为自定义数字格式字符串。 有关更多信息，请参见[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
+- `A` 是称为“格式说明符”的单个字母字符。 任何包含一个以上字母字符（包括空白）的数字格式字符串都被解释为自定义数字格式字符串。 有关更多信息，请参见[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
   
--   `xx` 是称为“精度说明符”的可选整数。 精度说明符的范围从 0 到 99，并且影响结果中的位数。 请注意，精度说明符控制数字的字符串表示形式中的数字个数。 它不舍入该数字。 若要执行舍入运算，请使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。  
+- `xx` 是称为“精度说明符”的可选整数。 精度说明符的范围从 0 到 99，并且影响结果中的位数。 请注意，精度说明符控制数字的字符串表示形式中的数字个数。 它不舍入该数字。 若要执行舍入运算，请使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。  
   
     当精度说明符控制结果字符串中的小数位数时，结果字符串会反映一个数字，该数字四舍五入到最接近无限精确结果的可表示结果。 如果有两个同样接近的可表示结果：
     - 在 .NET Framework 和.NET Core（.NET Core 2.0 及以下）上，运行时选择最低有效数字更高的结果（即使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>）。
@@ -73,13 +73,13 @@ ms.locfileid: "56979952"
 
 可采用以下两种方式之一使用标准数字格式字符串定义数值的格式：  
   
--   可以传递给拥有 `ToString` 参数的 `format` 方法的重载。 下面的示例将数值的格式设置为当前区域性（在此示例中，为 en-US 区域性）中的货币字符串。  
+- 可以传递给拥有 `ToString` 参数的 `format` 方法的重载。 下面的示例将数值的格式设置为当前区域性（在此示例中，为 en-US 区域性）中的货币字符串。  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   它可作为与 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式项中的 `formatString` 参数提供。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 下面的示例使用格式项在字符串中插入货币值。  
+- 它可作为与 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式项中的 `formatString` 参数提供。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 下面的示例使用格式项在字符串中插入货币值。  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ ms.locfileid: "56979952"
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   可以提供它作为内插字符串的内插表达式项中的 `formatString` 参数。 有关详细信息，请参阅 C# 参考中的[字符串内插](../../csharp/language-reference/tokens/interpolated.md)主题，或 Visual Basic 参考中的[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)主题。  
+- 可以提供它作为内插字符串的内插表达式项中的 `formatString` 参数。 有关详细信息，请参阅 C# 参考中的[字符串内插](../../csharp/language-reference/tokens/interpolated.md)主题，或 Visual Basic 参考中的[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)主题。  
   
  以下各节提供有关每个标准数字格式字符串的详细信息。  
   

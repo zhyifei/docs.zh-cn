@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648598"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
 数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。  
@@ -34,53 +34,53 @@ ms.locfileid: "59095095"
 ## <a name="example"></a>示例  
  本示例演示如何传递以下类型的数组：  
   
--   通过值传递的整数数组。  
+- 通过值传递的整数数组。  
   
--   通过引用传递的整数数组（可以调整大小）。  
+- 通过引用传递的整数数组（可以调整大小）。  
   
--   通过值传递的整数多维数组（矩阵）。  
+- 通过值传递的整数多维数组（矩阵）。  
   
--   通过值传递的字符串数组。  
+- 通过值传递的字符串数组。  
   
--   传递具有整数的结构数组。  
+- 传递具有整数的结构数组。  
   
--   传递具有字符串的结构数组。  
+- 传递具有字符串的结构数组。  
   
  除非数组由引用显式地进行封送处理，否则将以默认行为将数组封送为 In 参数。 通过显示应用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性，可以更改此行为。  
   
  数组示例使用以下非托管函数，这些函数与其原始函数声明一起显示：  
   
--   从 PinvokeLib.dll 导出的**TestArrayOfInts** 。  
+- 从 PinvokeLib.dll 导出的**TestArrayOfInts** 。  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   从 PinvokeLib.dll 导出的**TestRefArrayOfInts** 。  
+- 从 PinvokeLib.dll 导出的**TestRefArrayOfInts** 。  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   从 PinvokeLib.dll 导出的**TestMatrixOfInts** 。  
+- 从 PinvokeLib.dll 导出的**TestMatrixOfInts** 。  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   从 PinvokeLib.dll 导出的**TestArrayOfStrings** 。  
+- 从 PinvokeLib.dll 导出的**TestArrayOfStrings** 。  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   从 PinvokeLib.dll 导出的**TestArrayOfStructs** 。  
+- 从 PinvokeLib.dll 导出的**TestArrayOfStructs** 。  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   从 PinvokeLib.dll 导出的**TestArrayOfStructs2** 。  
+- 从 PinvokeLib.dll 导出的**TestArrayOfStructs2** 。  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

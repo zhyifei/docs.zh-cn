@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334284"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628915"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -34,19 +34,19 @@ ms.locfileid: "59334284"
   
  本演练涉及以下任务：  
   
--   创建组件  
+- 创建组件  
   
--   定义公共异步事件和委托  
+- 定义公共异步事件和委托  
   
--   定义专用委托  
+- 定义专用委托  
   
--   实现公共事件  
+- 实现公共事件  
   
--   实现完成方法  
+- 实现完成方法  
   
--   实现工作方法  
+- 实现工作方法  
   
--   实现启动和取消方法  
+- 实现启动和取消方法  
   
  要将本主题中的代码作为单个列表进行复制，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59334284"
   
 #### <a name="to-create-the-component"></a>创建组件的具体步骤  
   
--   创建继承自 <xref:System.ComponentModel.Component> 的类 `PrimeNumberCalculator`。  
+- 创建继承自 <xref:System.ComponentModel.Component> 的类 `PrimeNumberCalculator`。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定义公共异步事件和委托  
  组件使用事件与客户端进行通信。 _MethodName_**Completed** 事件预警客户端注意异步任务完成，_MethodName_**ProgressChanged** 事件向客户端告知异步任务的进度。  
@@ -87,7 +87,7 @@ ms.locfileid: "59334284"
   
 #### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
--   编译组件。  
+- 编译组件。  
   
      将看到下面两个编译器警告：  
   
@@ -148,7 +148,7 @@ ms.locfileid: "59334284"
   
 #### <a name="to-complete-an-asynchronous-operation"></a>若要完成异步操作，请执行以下操作：  
   
--   实现完成方法。 此方法需要使用六个参数，用于填充通过客户端的 `CalculatePrimeCompletedEventHandler` 返回到客户端的 `CalculatePrimeCompletedEventArgs`。 它还从内部集合中删除客户端的任务 ID 令牌，并通过调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 结束异步操作的生存期。 <xref:System.ComponentModel.AsyncOperation> 封送对适用于应用模型的线程或上下文执行的调用。  
+- 实现完成方法。 此方法需要使用六个参数，用于填充通过客户端的 `CalculatePrimeCompletedEventHandler` 返回到客户端的 `CalculatePrimeCompletedEventArgs`。 它还从内部集合中删除客户端的任务 ID 令牌，并通过调用 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 结束异步操作的生存期。 <xref:System.ComponentModel.AsyncOperation> 封送对适用于应用模型的线程或上下文执行的调用。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ ms.locfileid: "59334284"
   
 #### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
--   编译组件。  
+- 编译组件。  
   
      将看到下面的一个编译器警告：  
   
@@ -212,7 +212,7 @@ ms.locfileid: "59334284"
   
 #### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
--   编译组件。  
+- 编译组件。  
   
      剩下要编写的就是，异步操作的启动和取消方法，即 `CalculatePrimeAsync` 和 `CancelAsync`。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "59334284"
   
 #### <a name="to-test-your-component"></a>测试组件的具体步骤  
   
--   编译组件。  
+- 编译组件。  
   
  `PrimeNumberCalculator` 组件现已完成且可供使用。  
   

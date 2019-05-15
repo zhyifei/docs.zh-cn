@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551821"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664582"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合内的比较和排序
 <xref:System.Collections> 类在管理集合所涉及的几乎所有进程中执行比较，无论是搜索待删除的元素或返回键值对的值。  
@@ -30,9 +30,9 @@ ms.locfileid: "54551821"
 ## <a name="checking-for-equality"></a>检查等同性  
  诸如 `Contains`、 <xref:System.Collections.IList.IndexOf%2A>、 <xref:System.Collections.Generic.List%601.LastIndexOf%2A>和 `Remove` 的方法将相等比较器用于集合元素。 如果集合是泛型的，则按照以下原则比较项是否相等：  
   
--   如果类型 T 实现 <xref:System.IEquatable%601> 泛型接口，则相等比较器是该接口的 <xref:System.IEquatable%601.Equals%2A> 方法。  
+- 如果类型 T 实现 <xref:System.IEquatable%601> 泛型接口，则相等比较器是该接口的 <xref:System.IEquatable%601.Equals%2A> 方法。  
   
--   如果类型 T 未实现 <xref:System.IEquatable%601>，则使用 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。  
+- 如果类型 T 未实现 <xref:System.IEquatable%601>，则使用 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。  
   
  此外，字典集合的某些构造函数重载接受 <xref:System.Collections.Generic.IEqualityComparer%601> 实现，用于比较键是否相等。 有关示例，请参见 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 构造函数。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "54551821"
   
  默认比较器依赖至少一个正在被比较的对象来实现 **IComparable** 接口。 在用作列表集合的值或字典集合的键的所有类上实现 **IComparable** 不失为一个好办法。 对泛型集合而言，等同性比较是根据以下内容确定的：  
   
--   如果类型 T 实现 <xref:System.IComparable%601?displayProperty=nameWithType> 泛型接口，则默认比较器是该接口的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> 方法。  
+- 如果类型 T 实现 <xref:System.IComparable%601?displayProperty=nameWithType> 泛型接口，则默认比较器是该接口的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> 方法。  
   
--   如果类型 T 实现非泛型 <xref:System.IComparable?displayProperty=nameWithType> 接口，则默认比较器是该接口的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 方法。  
+- 如果类型 T 实现非泛型 <xref:System.IComparable?displayProperty=nameWithType> 接口，则默认比较器是该接口的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 方法。  
   
--   如果类型 T 未实现任何接口，则没有默认比较器，必须显式提供一个比较器或比较委托。  
+- 如果类型 T 未实现任何接口，则没有默认比较器，必须显式提供一个比较器或比较委托。  
   
  为了提供显式比较，某些方法接受 **IComparer** 实现作为参数。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现。  
   

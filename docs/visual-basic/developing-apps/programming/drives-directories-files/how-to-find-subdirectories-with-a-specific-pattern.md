@@ -5,12 +5,12 @@ helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: 705fa6e40d0e6d18826966e3f10cfd31d9e7a6ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fcb02fa26a3177b6f25f04174563b25cddb0ac44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823397"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629128"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>如何：在 Visual Basic 中查找具有特定模式的子目录
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> 方法返回一个只读字符串集合，这些字符串表示目录中子目录的路径名称。 可以使用 `wildCards` 参数来指定特定模式。 如果要在搜索中包含子目录的内容，请将 `searchType` 参数设置为 `SearchOption.SearchAllSubDirectories`。  
@@ -19,30 +19,30 @@ ms.locfileid: "58823397"
   
 ### <a name="to-find-subdirectories-with-a-specific-pattern"></a>查找具有特定模式的子目录  
   
--   使用 `GetDirectories` 方法，并提供要搜索的目录的名称和路径。 以下示例返回名称中包含单词“Logs”的目录结构中的所有目录，并将它们添加到 `ListBox1`。  
+- 使用 `GetDirectories` 方法，并提供要搜索的目录的名称和路径。 以下示例返回名称中包含单词“Logs”的目录结构中的所有目录，并将它们添加到 `ListBox1`。  
   
      [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
+- 路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
--   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   有一个或多个指定通配符是 `Nothing`、空字符串，或仅为空格 (<xref:System.ArgumentNullException>)。  
+- 有一个或多个指定通配符是 `Nothing`、空字符串，或仅为空格 (<xref:System.ArgumentNullException>)。  
   
--   `directory` 不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
+- `directory` 不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
   
--   `directory` 指向某个现有文件 (<xref:System.IO.IOException>)。  
+- `directory` 指向某个现有文件 (<xref:System.IO.IOException>)。  
   
--   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+- 路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
+- 路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
   
--   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
+- 该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
--   该用户缺少必要的权限 (<xref:System.UnauthorizedAccessException>)。  
+- 该用户缺少必要的权限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>请参阅
 

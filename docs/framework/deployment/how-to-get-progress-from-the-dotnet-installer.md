@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355631"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750436"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 
@@ -40,13 +40,13 @@ ms.locfileid: "57355631"
 
 - 退出代码。 以下命令中的退出代码用于调用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行程序，指示安装是成功还是失败：
 
-    - 0 - 安装已成功完成。
+  - 0 - 安装已成功完成。
 
-    - 3010 - 安装已成功完成；需要重启系统。
+  - 3010 - 安装已成功完成；需要重启系统。
 
-    - 1602 - 安装已取消。
+  - 1602 - 安装已取消。
 
-    - 所有其他代码 - 安装过程中出现错误；请检查 %temp% 中创建的日志文件，了解详细信息。
+  - 所有其他代码 - 安装过程中出现错误；请检查 %temp% 中创建的日志文件，了解详细信息。
 
 - 取消安装。 可随时通过使用 `Abort` 方法在 MMIO 节中设置 `m_downloadAbort` 和 `m_ installAbort` 标志来取消安装。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344372"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654414"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>演练：在 Windows 窗体应用程序中使用数据流
 本文档演示如何创建在 Windows 窗体应用程序中执行图像处理的数据流块网络。  
@@ -29,13 +29,13 @@ ms.locfileid: "59344372"
 ## <a name="sections"></a>部分  
  本演练包含以下各节：  
   
--   [创建 Windows 窗体应用程序](#winforms)  
+- [创建 Windows 窗体应用程序](#winforms)  
   
--   [创建数据流网络](#network)  
+- [创建数据流网络](#network)  
   
--   [将数据流网络连接到用户界面](#ui)  
+- [将数据流网络连接到用户界面](#ui)  
   
--   [完整示例](#complete)  
+- [完整示例](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>创建 Windows 窗体应用程序  

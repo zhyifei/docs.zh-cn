@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751818"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教程：创建 Windows 服务应用
 
@@ -32,13 +32,13 @@ ms.locfileid: "59518027"
 
    > [!NOTE]
    > 如果未看到“Windows 服务”模板，建议安装“.NET 桌面开发”工作负载：
-   >  
+   >
    > 在“新建项目”对话框中，选择左下方的“打开 Visual Studio 安装程序”。 选择“.NET 桌面开发”工作负载，然后选择“修改”。
 
 3. 对于“名称”，请输入 MyNewService，然后选择“确定”。
 
    将出现“设计”选项卡（“Service1.cs [Design]”或“Service1.vb [Design]”）。
-   
+
    项目模板包括从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 继承的名为 `Service1` 的组件类。 它包括许多基本服务代码，例如用于启动服务的代码。
 
 ## <a name="rename-the-service"></a>对服务进行重命名
@@ -53,11 +53,11 @@ ms.locfileid: "59518027"
 
     ![重命名提示](media/windows-service-rename.png "Windows 服务重命名提示")
 
-2. 在“设计”选项卡中，从快捷菜单中选择“属性”。 在“属性”窗口中，将“ServiceName”值更改为 MyNewService。
+3. 在“设计”选项卡中，从快捷菜单中选择“属性”。 在“属性”窗口中，将“ServiceName”值更改为 MyNewService。
 
     ![服务属性](media/windows-service-properties.png "Windows 服务属性")
 
-3. 从“文件”菜单中选择“全部保存”。
+4. 从“文件”菜单中选择“全部保存”。
 
 ## <a name="add-features-to-the-service"></a>向服务添加功能
 
@@ -97,7 +97,7 @@ ms.locfileid: "59518027"
 
 #### <a name="polling"></a>轮询
 
-由于服务应用程序设计为长时间运行，因此它通常会轮询或监视你在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的系统。 在服务操作开始后，`OnStart` 方法必须返回操作系统，以便不阻止系统。 
+由于服务应用程序设计为长时间运行，因此它通常会轮询或监视你在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的系统。 在服务操作开始后，`OnStart` 方法必须返回操作系统，以便不阻止系统。
 
 若要设置简单的轮询机制，请使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 组件。 计时器定期引发 <xref:System.Timers.Timer.Elapsed> 事件，此时你的服务可以进行监视。 可按如下方式使用 <xref:System.Timers.Timer> 组件：
 
@@ -173,7 +173,7 @@ ms.locfileid: "59518027"
 
 ### <a name="define-other-actions-for-the-service"></a>定义服务的其他操作
 
-可以重写 <xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 方法来定义对组件的其他处理。 
+可以重写 <xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 方法来定义对组件的其他处理。
 
 以下代码显示了如何替代 `MyNewService` 类中的 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法：
 
@@ -182,7 +182,7 @@ ms.locfileid: "59518027"
 
 ## <a name="set-service-status"></a>设置服务状态
 
-服务向[服务控制管理器](/windows/desktop/Services/service-control-manager)报告其状态，以便用户可以判断服务是否运行正常。 默认情况下，从 <xref:System.ServiceProcess.ServiceBase> 继承的服务会报告一组有限的状态设置，包括 SERVICE_STOPPED、SERVICE_PAUSED 和 SERVICE_RUNNING。 如果服务需要一段时间才能启动，则报告 SERVICE_START_PENDING 状态非常有用。 
+服务向[服务控制管理器](/windows/desktop/Services/service-control-manager)报告其状态，以便用户可以判断服务是否运行正常。 默认情况下，从 <xref:System.ServiceProcess.ServiceBase> 继承的服务会报告一组有限的状态设置，包括 SERVICE_STOPPED、SERVICE_PAUSED 和 SERVICE_RUNNING。 如果服务需要一段时间才能启动，则报告 SERVICE_START_PENDING 状态非常有用。
 
 可以通过添加调用 Windows [ SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函数的代码来实现 SERVICE_START_PENDING 和 SERVICE_STOP_PENDING 状态设置。
 
@@ -319,7 +319,7 @@ ms.locfileid: "59518027"
 
     ' Update the service state to Stopped.
     serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
-    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
 ## <a name="add-installers-to-the-service"></a>向服务添加安装程序
@@ -332,27 +332,27 @@ ms.locfileid: "59518027"
 
      默认情况下，Visual Studio 会向项目中添加一个名为 `ProjectInstaller` 的组件类，其中包含两个安装程序。 这些安装程序是为你的服务以及服务的相关过程准备的。
 
-4. 在“ProjectInstaller”的“设计”视图中，为 Visual C# 项目选择“serviceInstaller1”，或为 Visual Basic 项目选择“ServiceInstaller1”，然后选择快捷菜单中的“属性”。
+3. 在“ProjectInstaller”的“设计”视图中，为 Visual C# 项目选择“serviceInstaller1”，或为 Visual Basic 项目选择“ServiceInstaller1”，然后选择快捷菜单中的“属性”。
 
-5. 在“属性”窗口中，验证 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性是否已设置为“MyNewService”。
+4. 在“属性”窗口中，验证 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性是否已设置为“MyNewService”。
 
-6. 将文本添加到 <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 属性，例如“一个示例服务”。 
+5. 将文本添加到 <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 属性，例如“一个示例服务”。
 
      此文本显示在“服务”窗口的“说明”列中，并向用户说明了该服务。
 
     ![“服务”窗口中的服务说明。](media/windows-service-description.png "服务说明")
 
-7. 将文本添加到 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 属性。 例如，“MyNewService 显示名称”。 
+6. 将文本添加到 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 属性。 例如，“MyNewService 显示名称”。
 
      此文本显示在“服务”窗口的“显示名称”列中。 此名称可以不同于 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性，它是系统使用的名称（例如，用于启动服务的 `net start` 命令的名称）。
 
-8. 从下拉列表中将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。
+7. 从下拉列表中将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。
 
-9. 完成后，“属性”窗口应如下图所示：
+8. 完成后，“属性”窗口应如下图所示：
 
      ![Windows 服务的安装程序属性](media/windows-service-installer-properties.png "Windows 服务安装程序属性")
 
-9. 在“ProjectInstaller”的“设计”视图中，为 Visual C# 项目选择“serviceProcessInstaller1”，或为 Visual Basic 项目选择“serviceProcessInstaller1”，然后选择快捷菜单中的“属性”。 从下拉列表中将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 属性设置为 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。 
+9. 在“ProjectInstaller”的“设计”视图中，为 Visual C# 项目选择“serviceProcessInstaller1”，或为 Visual Basic 项目选择“serviceProcessInstaller1”，然后选择快捷菜单中的“属性”。 从下拉列表中将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 属性设置为 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。
 
      此设置将安装服务并使用本地系统帐户运行它。
 
@@ -364,7 +364,7 @@ ms.locfileid: "59518027"
 ## <a name="optional-set-startup-parameters"></a>（可选）设置启动参数
 
 > [!NOTE]
-> 在决定添加启动参数前，请考虑这是否是向你的服务传递信息的最好办法。 虽然它们易于使用和分析，而且用户可以轻松地替代它们，但是如果没有相关的文档说明，用户可能较难发现和使用它们。 通常情况下，如果服务需要不止几个启动参数，则应改用注册表或配置文件。 
+> 在决定添加启动参数前，请考虑这是否是向你的服务传递信息的最好办法。 虽然它们易于使用和分析，而且用户可以轻松地替代它们，但是如果没有相关的文档说明，用户可能较难发现和使用它们。 通常情况下，如果服务需要不止几个启动参数，则应改用注册表或配置文件。
 
 Windows 服务可以接受命令行参数或启动参数。 将代码添加到进程启动参数后，用户可以在服务属性窗口中使用自己的自定义启动参数启动服务。 但是，这些启动参数不会保留到下一次服务启动。 若要永久设置启动参数，请在注册表中设置它们。
 
@@ -480,13 +480,13 @@ Windows 服务可以接受命令行参数或启动参数。 将代码添加到�
     installutil MyNewService.exe
     ```
 
-    如果服务成功安装，该命令将报告成功。 
+    如果服务成功安装，该命令将报告成功。
 
     如果系统找不到 installutil.exe，请确保你的计算机上存在该安装程序。 此工具随 .NET Framework 安装在 %windir%\Microsoft.NET\Framework[64]\\&lt;framework version&gt; 文件夹下。 例如，64 位版本的默认路径是 %windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe。
 
-    如果“installutil.exe”进程失败，请查看安装日志以找出原因。 默认情况下，该日志与服务可执行文件位于同一文件夹中。 在以下情况下安装可能会失败： 
+    如果“installutil.exe”进程失败，请查看安装日志以找出原因。 默认情况下，该日志与服务可执行文件位于同一文件夹中。 在以下情况下安装可能会失败：
     - `ProjectInstaller` 类中不存在 <xref:System.ComponentModel.RunInstallerAttribute> 类。
-    -  该属性未设置为 `true`。 
+    - 该属性未设置为 `true`。
     - `ProjectInstaller` 类未定义为 `public`。
 
 有关详细信息，请参阅[如何：安装和卸载服务](how-to-install-and-uninstall-services.md)。
@@ -520,7 +520,7 @@ Windows 服务可以接受命令行参数或启动参数。 将代码添加到�
 
 ## <a name="clean-up-resources"></a>清理资源
 
-如果不再需要 Windows 服务应用，则可以将其删除。 
+如果不再需要 Windows 服务应用，则可以将其删除。
 
 1. 使用管理凭据打开 **“Visual Studio 开发人员命令提示”**。
 

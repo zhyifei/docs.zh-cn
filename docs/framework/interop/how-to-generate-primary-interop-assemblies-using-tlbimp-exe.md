@@ -8,29 +8,29 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295492"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910773"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 生成主互操作程序集
 有两种生成主互操作程序集的方法：  
   
--   使用由 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。  
+- 使用由 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。  
   
      生成主互操作程序集最简单的方法是使用 [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。 Tlbimp.exe 提供了以下安全措施：  
   
-    -   在为任何嵌套的类型库引用创建新的互操作程序集之前，检查其他已注册的主互操作程序集。  
+    - 在为任何嵌套的类型库引用创建新的互操作程序集之前，检查其他已注册的主互操作程序集。  
   
-    -   如果未指定容器或文件名称赋予主互操作程序集文件强名称，则将无法发出主互操作程序集。  
+    - 如果未指定容器或文件名称赋予主互操作程序集文件强名称，则将无法发出主互操作程序集。  
   
-    -   如果省略对依赖程序集的引用，则无法发出主互操作程序集。  
+    - 如果省略对依赖程序集的引用，则无法发出主互操作程序集。  
   
-    -   如果将引用添加到不是主互操作程序集的依赖程序集，则无法发出主互操作程序集。  
+    - 如果将引用添加到不是主互操作程序集的依赖程序集，则无法发出主互操作程序集。  
   
--   在源代码中使用符合公共语言规范 (CLS)（如 C#）的语言手动创建主互操作程序集。 当类型库不可用时，此方法非常有用。  
+- 在源代码中使用符合公共语言规范 (CLS)（如 C#）的语言手动创建主互操作程序集。 当类型库不可用时，此方法非常有用。  
   
  要使用强名称为程序集签名，必须具有加密密钥对。 有关详细信息，请参阅 [Creating A Key Pair](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)（创建密钥对）。  
   

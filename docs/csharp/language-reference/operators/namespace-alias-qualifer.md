@@ -9,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 2618131f27271e7c06cb6d425fc22b5bd9750c49
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 324f6711cdec478e5647b05d84c281f79e95f036
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333312"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452359"
 ---
 # <a name="-operator-c-reference"></a>:: 运算符（C# 参考）
 
@@ -49,5 +49,5 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
 - [命名空间关键字](../keywords/namespace-keywords.md)
-- [. 运算符](member-access-operator.md)
+- [. 运算符](member-access-operators.md#member-access-operator-)
 - [外部别名](../keywords/extern-alias.md)

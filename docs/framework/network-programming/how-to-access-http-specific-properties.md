@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 044a48aaffbd2d4ef490405a65236b17ecca1fbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176587"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645809"
 ---
 # <a name="how-to-access-http-specific-properties"></a>如何：访问 HTTP 特定的属性
 此示例演示如何关闭 HTTP 保持的连接行为并从 Web 服务器获取协议版本号。  
@@ -47,7 +47,7 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   引用 System.Net 命名空间。  
+- 引用 System.Net 命名空间。  
   
 ## <a name="see-also"></a>请参阅
 

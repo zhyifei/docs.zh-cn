@@ -11,12 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341863"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647375"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：为应用程序设置基于位置的缓存策略
 基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。 本主题演示如何以编程方式设置缓存策略。 有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "59341863"
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>设置获取来自缓存的请求资源的策略  
   
--   创建获取来自缓存的请求资源的策略（若可用），否则通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable> 向服务器发送请求。 可以由客户端和服务器之间的任何缓存实现请求，包括远程缓存。  
+- 创建获取来自缓存的请求资源的策略（若可用），否则通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable> 向服务器发送请求。 可以由客户端和服务器之间的任何缓存实现请求，包括远程缓存。  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -50,7 +50,7 @@ ms.locfileid: "59341863"
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>设置防止任何缓存提供资源的策略  
   
--   通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>，创建防止缓存提供请求的资源的策略。 此策略级别从本地缓存中删除资源（如果存在），并指示远程缓存也应删除资源。  
+- 通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>，创建防止缓存提供请求的资源的策略。 此策略级别从本地缓存中删除资源（如果存在），并指示远程缓存也应删除资源。  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -71,7 +71,7 @@ ms.locfileid: "59341863"
   
 ### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>设置仅当请求的资源在本地缓存中时返回请求的资源的策略  
   
--   通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>，创建仅当请求的资源在本地缓存中时返回请求的资源的策略。 如果请求的资源不在缓存中，将引发 <xref:System.Net.WebException> 异常。  
+- 通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>，创建仅当请求的资源在本地缓存中时返回请求的资源的策略。 如果请求的资源不在缓存中，将引发 <xref:System.Net.WebException> 异常。  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -92,7 +92,7 @@ ms.locfileid: "59341863"
   
 ### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>设置防止本地缓存提供资源的策略  
   
--   通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>，创建防止本地缓存提供请求的资源的策略。 如果请求的资源是中间缓存并已成功重新验证，中间缓存可提供请求的资源。  
+- 通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>，创建防止本地缓存提供请求的资源的策略。 如果请求的资源是中间缓存并已成功重新验证，中间缓存可提供请求的资源。  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -113,7 +113,7 @@ ms.locfileid: "59341863"
   
 ### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>设置防止任何缓存提供请求的资源的策略  
   
--   通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>，创建防止缓存提供请求的资源的策略。 服务器返回的资源可以存储在缓存中。  
+- 通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>，创建防止缓存提供请求的资源的策略。 服务器返回的资源可以存储在缓存中。  
   
     ```csharp  
     public static void SendToServer()  
@@ -134,7 +134,7 @@ ms.locfileid: "59341863"
   
 ### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>设置当服务器上的资源不比缓存副本新时，允许任何缓存提供请求的资源的策略  
   
--   通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>，创建当服务器上的资源不比缓存副本新时，允许任何缓存提供请求的资源的策略。  
+- 通过将缓存级别设置为 <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>，创建当服务器上的资源不比缓存副本新时，允许任何缓存提供请求的资源的策略。  
   
     ```csharp  
     public static void CheckServer()  

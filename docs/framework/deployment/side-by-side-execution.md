@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341070"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641041"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>在 .NET Framework 中并行执行
 并行执行是在同一台计算机上运行应用程序或组件的多个版本的能力。 在同一台计算机上，可以同时安装公共语言运行时的多个版本，还可以同时安装使用运行时的某个版本的应用程序和组件的多个版本。  
@@ -33,15 +33,15 @@ ms.locfileid: "59341070"
   
  为消除 DLL 冲突，并行执行和 .NET Framework 提供了下列功能：  
   
--   具有强名称的程序集。  
+- 具有强名称的程序集。  
   
      并行执行利用具有强名称的程序集将类型信息绑定到程序集的特定版本。 这可防止应用程序或组件绑定到程序集的无效版本。 具有强名称的程序集还允许同一计算机上存在一个文件的多个版本，并且还允许应用程序使用一个文件的多个版本。 有关详细信息，请参阅[具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)。  
   
--   版本识别代码存储。  
+- 版本识别代码存储。  
   
      .NET Framework 在全局程序集缓存中提供了版本识别代码存储。 全局程序集缓存是全计算机范围的代码缓存，存在于所有安装了 .NET Framework 的计算机上。 它根据版本、区域性和发行者信息存储程序集，并且支持组件和应用程序的多个版本。 有关详细信息，请参阅[全局程序集缓存](../../../docs/framework/app-domains/gac.md)。  
   
--   隔离。  
+- 隔离。  
   
      使用 .NET Framework 可以创建以隔离方式执行的应用程序和组件。 隔离是并行执行的基本组成部分。 隔离时需要了解正在使用的资源以及在应用程序或组件的多个版本间安全地共享的资源。 隔离还包括使用版本特定的方式存储文件。 有关隔离的详细信息，请参阅[并行执行的组件的创建指南](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "59341070"
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>确定要加载的运行时版本  
  公共语言运行时使用以下信息确定要为应用程序加载的运行时版本：  
   
--   可用的运行时版本。  
+- 可用的运行时版本。  
   
--   应用程序支持的运行时版本。  
+- 应用程序支持的运行时版本。  
   
 ### <a name="supported-runtime-versions"></a>支持的运行时版本  
  运行时使用应用程序配置文件和可移植可执行 (PE) 文件头确定应用程序支持的运行时版本。 如果不存在任何应用程序配置文件，则运行时将加载在应用程序的 PE 文件头中指定的运行时版本（若此版本可用）。  

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e932b3af0b952fa88d33df453917cb11c3ceed33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664558"
 ---
 # <a name="sorted-collection-types"></a>已排序的集合类型
 <xref:System.Collections.SortedList?displayProperty=nameWithType> 类、<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> 泛型类和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> 泛型类与 <xref:System.Collections.Hashtable> 类和 <xref:System.Collections.Generic.Dictionary%602> 泛型类的相似之处在于均实现 <xref:System.Collections.IDictionary> 接口，不同之处在于它们让元素一直按键的排序顺序排列，并且不具备哈希表的 O(1) 插入和检索特性。 这三个类具有若干共性：  
   
--   这三个类全都实现 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 接口。 两个泛型类还实现 <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> 泛型接口。  
+- 这三个类全都实现 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 接口。 两个泛型类还实现 <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> 泛型接口。  
   
--   每个元素都是用于枚举的键/值对。  
+- 每个元素都是用于枚举的键/值对。  
   
     > [!NOTE]
     >  枚举时，非泛型 <xref:System.Collections.SortedList> 类返回 <xref:System.Collections.DictionaryEntry> 对象，尽管两个泛型类型返回 <xref:System.Collections.Generic.KeyValuePair%602> 对象。  
   
--   元素按 <xref:System.Collections.IComparer?displayProperty=nameWithType> 实现代码（对于非泛型 <xref:System.Collections.SortedList>）或 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现代码（对于两个泛型类）进行排序。  
+- 元素按 <xref:System.Collections.IComparer?displayProperty=nameWithType> 实现代码（对于非泛型 <xref:System.Collections.SortedList>）或 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 实现代码（对于两个泛型类）进行排序。  
   
--   每个类提供了返回仅包含键或仅包含值的集合的属性。  
+- 每个类提供了返回仅包含键或仅包含值的集合的属性。  
   
  下表列出了两个已排序列表类与 <xref:System.Collections.Generic.SortedDictionary%602> 类之间的一些区别。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ca2dfcfbb5407be2727343a5b3a5b429af83ae20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877733"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634586"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正则表达式中的编译和重复使用
 通过了解正则表达式引擎编译表达式的方式以及正则表达式的缓存方式，可以优化大量使用正则表达式的应用程序的性能。 本主题介绍编译和缓存。  
@@ -40,9 +40,9 @@ ms.locfileid: "43877733"
   
  应用程序可通过以下两种方式之一来利用预编译的正则表达式：  
   
--   使用 <xref:System.Text.RegularExpressions.Regex> 对象的静态方法定义正则表达式。 如果要使用的正则表达式模式已在其他静态方法调用中定义，则正则表达式引擎将从缓存中检索该模式。 如果不是这样，则引擎将编译正则表达式并将其添加到缓存中。  
+- 使用 <xref:System.Text.RegularExpressions.Regex> 对象的静态方法定义正则表达式。 如果要使用的正则表达式模式已在其他静态方法调用中定义，则正则表达式引擎将从缓存中检索该模式。 如果不是这样，则引擎将编译正则表达式并将其添加到缓存中。  
   
--   重用现有 <xref:System.Text.RegularExpressions.Regex> 对象（只要需要使用正则表达式模式）。  
+- 重用现有 <xref:System.Text.RegularExpressions.Regex> 对象（只要需要使用正则表达式模式）。  
   
  鉴于对象实例化和正则表达式编译产生的开销，因此创建并迅速销毁大量 <xref:System.Text.RegularExpressions.Regex> 对象的进程成本非常高。 对于使用大量不同正则表达式的应用，可以调用静态方法 `Regex`，并尽量增加正则表达式缓存大小，从而优化性能。  
   

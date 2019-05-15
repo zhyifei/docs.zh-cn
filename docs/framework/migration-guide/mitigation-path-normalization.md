@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176535"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648440"
 ---
 # <a name="mitigation-path-normalization"></a>缓解：路径规范化
 自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，.NET Framework 中的路径规范化已更改。  
@@ -17,26 +17,26 @@ ms.locfileid: "59176535"
 ## <a name="what-is-path-normalization"></a>什么是路径规范化？  
  路径规范化涉及修改用于标识路径或文件的字符串，使其与目标操作系统上的有效路径一致。 路径规范化通常涉及以下操作：  
   
--   规范化处理组件和目录分隔符。  
+- 规范化处理组件和目录分隔符。  
   
--   将当前目录应用到相对路径。  
+- 将当前目录应用到相对路径。  
   
--   评估路径中的相对目录 (`.`) 或父目录 (`..`)。  
+- 评估路径中的相对目录 (`.`) 或父目录 (`..`)。  
   
--   删减指定字符。  
+- 删减指定字符。  
   
 ## <a name="the-changes"></a>更改  
  自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，路径规范化在以下几个方面进行了更改：  
   
--   运行时在规范化处理路径时以操作系统的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函数为准。  
+- 运行时在规范化处理路径时以操作系统的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函数为准。  
   
--   路径规范化再也不用删减目录部分的末尾内容（如目录名称末尾的空格）。  
+- 路径规范化再也不用删减目录部分的末尾内容（如目录名称末尾的空格）。  
   
--   支持完全信任形式的设备路径语法，包括 `\\.\` 和 `\\?\`（对于 mscorlib.dll 中的文件 I/O API）。  
+- 支持完全信任形式的设备路径语法，包括 `\\.\` 和 `\\?\`（对于 mscorlib.dll 中的文件 I/O API）。  
   
--   运行时不会验证设备语法路径。  
+- 运行时不会验证设备语法路径。  
   
--   支持使用设备语法来访问备用数据流。  
+- 支持使用设备语法来访问备用数据流。  
   
 ## <a name="impact"></a>影响  
  对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，这些更改默认启用。 这些更改应该会提升性能，同时允许方法访问之前无法访问的路径。  

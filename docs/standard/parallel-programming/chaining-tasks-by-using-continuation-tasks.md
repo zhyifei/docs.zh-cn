@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219901"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630117"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用延续任务来链接任务
 在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况较常见。 传统上，延续性是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
   
  尽管延续相对容易使用，但也十分强大和灵活。 例如，你可以：  
   
--   将数据从前面的任务传递到延续。  
+- 将数据从前面的任务传递到延续。  
   
--   指定将调用或不调用延续所依据的精确条件。  
+- 指定将调用或不调用延续所依据的精确条件。  
   
--   在延续启动之前取消延续，或在延续正在运行时以协作方式取消延续。  
+- 在延续启动之前取消延续，或在延续正在运行时以协作方式取消延续。  
   
--   提供有关应如何计划延续的提示。  
+- 提供有关应如何计划延续的提示。  
   
--   从同一前面的任务中调用多个延续。  
+- 从同一前面的任务中调用多个延续。  
   
--   在多个前面的任务中的全部或任意任务完成时调用一个延续。  
+- 在多个前面的任务中的全部或任意任务完成时调用一个延续。  
   
--   将延续依次相连，形成任意长度。  
+- 将延续依次相连，形成任意长度。  
   
--   使用延续来处理前面的任务所引发的异常。  
+- 使用延续来处理前面的任务所引发的异常。  
   
 ## <a name="about-continuations"></a>关于延续  
  延续创建时的状态为 <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> 。 在一个或多个前面的任务完成时，它将自动激活。 若在用户代码中对延续调用 <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> ，将引发 <xref:System.InvalidOperationException?displayProperty=nameWithType> 异常。  
@@ -85,11 +85,11 @@ ms.locfileid: "56219901"
 ## <a name="canceling-a-continuation"></a>取消延续  
  在以下情况下，延续的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性将设置为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> ：  
   
--   延续引发 <xref:System.OperationCanceledException> 以响应取消请求。 就像任何任务一样，如果异常包含已传递到延续的相同标记，则会将其视为确认协作取消。  
+- 延续引发 <xref:System.OperationCanceledException> 以响应取消请求。 就像任何任务一样，如果异常包含已传递到延续的相同标记，则会将其视为确认协作取消。  
   
--   将 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 属性为 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 的 `true`传递到延续。 在这种情况下，延续不会启动，并且将转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态。  
+- 将 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 属性为 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 的 `true`传递到延续。 在这种情况下，延续不会启动，并且将转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态。  
   
--   延续由于其 <xref:System.Threading.Tasks.TaskContinuationOptions> 参数设置的条件未得到满足而从不运行。 例如，如果前面的任务进入 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状态，则该任务被传递了 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 选项的延续将不会运行，而是将转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态。  
+- 延续由于其 <xref:System.Threading.Tasks.TaskContinuationOptions> 参数设置的条件未得到满足而从不运行。 例如，如果前面的任务进入 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状态，则该任务被传递了 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 选项的延续将不会运行，而是将转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态。  
   
  如果一项任务及其延续表示同一逻辑操作的两个部分，则可以将相同的取消标记传递到这两个任务，如下面的示例所示。 它包含的前面的任务可生成由可被 33 的整数组成的列表，并将该列表传递给延续。 而延续反过来显示该列表。 前面的任务和延续任务都将定期以随机间隔暂停。 此外， <xref:System.Threading.Timer?displayProperty=nameWithType> 对象用于在五秒的超时间隔后执行 `Elapsed` 方法。 此示例调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，从而将导致当前正在执行的任务调用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 方法。 是否在前面的任务或其延续正在执行时调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法取决于随机生成的暂停的持续时间。 如果已取消前面的任务，则延续将不会启动。 如果未取消前面的任务，则仍然可以使用标记来取消延续。  
   
@@ -133,12 +133,12 @@ ms.locfileid: "56219901"
 ## <a name="handling-exceptions-thrown-from-continuations"></a>处理从延续中引发的异常  
  前面的任务与延续之间的关系不是父/子关系。 由延续引发的异常不会传播到前面的任务。 因此，请按在任何其他任务中处理异常的方式来处理由延续引发的异常，如下所示：  
   
--   你可以使用 <xref:System.Threading.Tasks.Task.Wait%2A>、 <xref:System.Threading.Tasks.Task.WaitAll%2A>或 <xref:System.Threading.Tasks.Task.WaitAny%2A> 法或其对应的泛型方法来等待延续。 你可以在同一 `try` 语句中等待前面的任务及其延续，如下面的示例所示。  
+- 你可以使用 <xref:System.Threading.Tasks.Task.Wait%2A>、 <xref:System.Threading.Tasks.Task.WaitAll%2A>或 <xref:System.Threading.Tasks.Task.WaitAny%2A> 法或其对应的泛型方法来等待延续。 你可以在同一 `try` 语句中等待前面的任务及其延续，如下面的示例所示。  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   可以使用第二个延续来观察第一个延续的 <xref:System.Threading.Tasks.Task.Exception%2A> 属性。 在下面的示例中，某个任务尝试从不存在的文件中进行读取。 然后，延续将显示有关前面的任务中的异常的信息。  
+- 可以使用第二个延续来观察第一个延续的 <xref:System.Threading.Tasks.Task.Exception%2A> 属性。 在下面的示例中，某个任务尝试从不存在的文件中进行读取。 然后，延续将显示有关前面的任务中的异常的信息。  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
@@ -150,7 +150,7 @@ ms.locfileid: "56219901"
   
      有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
   
--   如果延续为附加子任务并且是通过使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的，则父级会将该延续的异常传播回调用线程，就像任何其他附加子级的情况一样。 有关详细信息，请参阅[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
+- 如果延续为附加子任务并且是通过使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的，则父级会将该延续的异常传播回调用线程，就像任何其他附加子级的情况一样。 有关详细信息，请参阅[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
 ## <a name="see-also"></a>请参阅
 

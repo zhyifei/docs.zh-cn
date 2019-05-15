@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664628"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 
@@ -52,17 +52,17 @@ ms.locfileid: "56970566"
   
  .NET 类型是生成 .NET 应用程序、组件和控件的基础。 .NET 实现包括的类型可执行下列功能：  
   
--   表示基础数据类型和异常。  
+- 表示基础数据类型和异常。  
   
--   封装数据结构。  
+- 封装数据结构。  
   
--   执行 I/O。  
+- 执行 I/O。  
   
--   访问关于加载类型的信息。  
+- 访问关于加载类型的信息。  
   
--   调用 .NET Framework 安全检查。  
+- 调用 .NET Framework 安全检查。  
   
--   提供数据访问、多客户端 GUI 和服务器控制的客户端 GUI。  
+- 提供数据访问、多客户端 GUI 和服务器控制的客户端 GUI。  
   
  .NET 提供了一组丰富的接口以及抽象类和具体（非抽象）类。 可以按原样使用这些具体的类，或者在多数情况下从这些类派生您自己的类。 若要使用接口的功能，既可以创建实现接口的类，也可以从某个实现接口的 .NET 类中派生类。  
   
@@ -106,8 +106,7 @@ ms.locfileid: "56970566"
 ||<xref:System.Object>|对象层次结构的根。|**对象**|**object**|**Object^**|**obj**|  
 ||<xref:System.String>|Unicode 字符的不变的定长串。|**字符串**|**string**|**String^**|**string**|  
   
- 除了基本数据类型外，<xref:System> 命名空间还包含 100 多个类，范围从处理异常的类到处理核心运行时概念的类，如应用程序域和垃圾回收器。 
-  <xref:System> 命名空间还包含许多二级命名空间。  
+ 除了基本数据类型外，<xref:System> 命名空间还包含 100 多个类，范围从处理异常的类到处理核心运行时概念的类，如应用程序域和垃圾回收器。 <xref:System> 命名空间还包含许多二级命名空间。  
   
  有关命名空间的详细信息，请使用 [.NET API 浏览器](https://docs.microsoft.com/dotnet/api)来浏览 .NET 类库。 API 参考文档提供了有关每个名称空间及其类型和每个成员的文档。  
   

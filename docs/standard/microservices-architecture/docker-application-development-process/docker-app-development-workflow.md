@@ -4,12 +4,12 @@ description: 了解用于开发基于 Docker 的应用程序的工作流的详�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751457"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 
@@ -181,7 +181,7 @@ Dockerfile 类似于批处理脚本。 类似于在必须从命令行设置计�
  5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
- 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
+ 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
  9  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.Extensions.HealthChecks …
 10  COPY src/BuildingBlocks/EventBus/IntegrationEventLogEF/ …
 11  COPY src/BuildingBlocks/EventBus/EventBus/EventBus.csproj …
@@ -206,6 +206,7 @@ Dockerfile 类似于批处理脚本。 类似于在必须从命令行设置计�
 
 以下为每一行的详细信息：
 
+<!-- markdownlint-disable MD029-->
 1. 使用“小型”仅运行时基础映像开始一个阶段，将其称为“基础”，以供参考。
 2. 在映像中创建 /app 目录。
 3. 公开端口 80。
@@ -226,6 +227,7 @@ Dockerfile 类似于批处理脚本。 类似于在必须从命令行设置计�
 26. 将当前目录更改为 /app
 27. 将 /app 目录从阶段“发布”复制到当前目录
 28. 定义启动容器时要运行的命令。
+<!-- markdownlint-enable MD029-->
 
 现在让我们探索一些用于提高整个流程性能（以 eShopOnContainer 为例，这意味着在 Linux 容器中构建完整的解决方案需要大约 22 分钟或更长时间）的优化。
 
@@ -233,7 +235,7 @@ Dockerfile 类似于批处理脚本。 类似于在必须从命令行设置计�
 
 因此，让我们重点关注“生成”阶段，第 5-6 行基本相同，但是第 7-17 行与 eShopOnContainer 中每个服务不同，因此它们必须每次都执行命令，但是如果将第 7-16 行更改为：
 
-```
+```Dockerfile
 COPY . .
 ```
 
@@ -245,7 +247,7 @@ COPY . .
 
 下一个重要的优化涉及在第 17 行中执行的 `restore` 命令，其对于 eShopOnContainers 的每项服务也是不同的。 如果把该行更改为：
 
-```console
+```Dockerfile
 RUN dotnet restore
 ```
 
@@ -253,13 +255,13 @@ RUN dotnet restore
 
 然而，`dotnet restore` 仅当文件夹中有单个项目或解决方案文件时才会运行，因此实现这一点有点复杂，解决此问题且无需涉及太多细节的方法是：
 
-1) 将以下命令行添加到 .dockerignore：
+1. 将以下命令行添加到 .dockerignore：
 
    - `*.sln`，以忽略主文件夹树中的所有解决方案文件
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`，以仅添加此解决方案文件。
 
-2) 将 `/ignoreprojectextensions:.dcproj` 参数添加到 `dotnet restore`，因此它也忽略 docker-compose 项目，且仅还原 eShopOnContainers-ServicesAndWebApps 解决方案的包。
+2. 将 `/ignoreprojectextensions:.dcproj` 参数添加到 `dotnet restore`，因此它也忽略 docker-compose 项目，且仅还原 eShopOnContainers-ServicesAndWebApps 解决方案的包。
 
 在最后的优化中，第 20 行是多余的，因为第 23 行也生成应用程序，并且实质上它在第 20 行之后运行，所以这又是一个耗时的命令。
 
@@ -542,7 +544,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 - 使用 Visual Studio 2017 进行 Steve Lasker .NET docker 开发 \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>在 DockerFile 中使用 PowerShell 命令来设置 Windows 容器 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>在 DockerFile 中使用 PowerShell 命令来设置 Windows 容器
 
 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/index)允许开发人员将现有 Windows 应用程序转换为 Docker 映像，并使用与 Docker 生态系统其余部分相同的工具进行部署。 若要使用 Windows 容器，请在 Dockerfile 中运行 PowerShell 命令，如以下示例所示：
 

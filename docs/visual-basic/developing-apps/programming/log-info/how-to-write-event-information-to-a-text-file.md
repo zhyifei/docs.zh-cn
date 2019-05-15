@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312705"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665751"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：将事件信息写入文本文件 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。 本示例演示如何使用 `My.Application.Log.WriteEntry` 方法将跟踪信息记录到日志文件中。  
@@ -24,11 +24,11 @@ ms.locfileid: "59312705"
   
      如果其中没有 app.config 文件：  
   
-    1.  在 **“项目”** 菜单上选择 **“添加新项”**。  
+    1. 在 **“项目”** 菜单上选择 **“添加新项”**。  
   
-    2.  在“添加新项”  对话框中，选择“应用程序配置文件” 。  
+    2. 在“添加新项”  对话框中，选择“应用程序配置文件” 。  
   
-    3.  单击 **“添加”**。  
+    3. 单击 **“添加”**。  
   
 2. 在应用程序配置文件中找到 `<listeners>` 部分。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59312705"
   
 ### <a name="to-write-event-information-to-the-file-log"></a>将事件信息写入文件日志  
   
--   可以使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法将信息写入文件日志。 有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。  
+- 可以使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法将信息写入文件日志。 有关详细信息，请参阅[如何：编写日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。  
   
      为程序集配置文件日志侦听器后，它将接收该程序集写入 `My.Application.Log` 的所有消息。  
   

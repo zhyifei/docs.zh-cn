@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634525"
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 
 你可以创建自定义数字格式字符串，这种字符串由一个或多个自定义数字说明符组成，用于定义设置数值数据格式的方式。 自定义数字格式字符串是任何不属于 [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字符串。  
-  
 
  所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支持自定义数字格式字符串，以供 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 [字符串内插](../../csharp/language-reference/tokens/interpolated.md)功能还支持自定义数字格式字符串。  
   
@@ -109,11 +108,11 @@ ms.locfileid: "58133332"
 ## <a name="the--custom-specifier"></a>“,”自定义说明符  
  “,”字符用作组分隔符和数字比例换算说明符。  
   
--   组分隔符：如果在两个设置数字的整数位格式的数字占位符（0 或 #）之间指定一个或多个逗号，则在输出的整数部分中的每个数字组之间插入一个组分隔符字符。  
+- 组分隔符：如果在两个设置数字的整数位格式的数字占位符（0 或 #）之间指定一个或多个逗号，则在输出的整数部分中的每个数字组之间插入一个组分隔符字符。  
   
      当前 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 对象的 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 和 <xref:System.Globalization.NumberFormatInfo> 属性将确定用作数字组分隔符的字符以及每个数字组的大小。 例如，如果使用字符串“#,#”和固定区域性对数字 1000 进行格式化，则输出为“1,000”。  
   
--   数字比例换算符：如果在紧邻显式或隐式小数点的左侧指定一个或多个逗号，则对于每个逗号，将要设置格式的数字除以 1000。 例如，如果使用字符串“0,,”对数字 100000000 进行格式化，则输出为“100”。  
+- 数字比例换算符：如果在紧邻显式或隐式小数点的左侧指定一个或多个逗号，则对于每个逗号，将要设置格式的数字除以 1000。 例如，如果使用字符串“0,,”对数字 100000000 进行格式化，则输出为“100”。  
   
  可以在同一格式字符串中使用组分隔符和数字比例换算说明符。 例如，如果使用字符串“#,0,,”和固定区域性对数字 1000000000 进行格式化，则输出为“1,000”。  
   

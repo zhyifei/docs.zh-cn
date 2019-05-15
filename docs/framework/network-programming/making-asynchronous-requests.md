@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66cacfbb031a531190a8cc5eafdb3e375609ee1e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647303"
 ---
 # <a name="making-asynchronous-requests"></a>发出异步请求
 <xref:System.Net> 类为异步访问 Internet 资源使用 .NET Framework 的标准异步编程模型。 <xref:System.Net.WebRequest> 类的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法启动和完成 Internet 资源的异步请求。  
@@ -32,15 +32,15 @@ ms.locfileid: "59208561"
   
  ClientGetAsync 类实现 Internet 资源的异步请求，并将所得的响应写入控制台。 它包含以下列表中描述的方法和属性。  
   
--   `allDone` 属性包含 <xref:System.Threading.ManualResetEvent> 类的实例，它指示请求完成。  
+- `allDone` 属性包含 <xref:System.Threading.ManualResetEvent> 类的实例，它指示请求完成。  
   
--   `Main()` 方法读取命令行并启动对指定 Internet 资源的请求。 它创建 WebRequest `wreq` 和 RequestState `rs`，调用 BeginGetResponse 开始处理请求，然后调用 `allDone.WaitOne()` 方法，以便应用程序不会在回调完成前退出。 在从 Internet 资源读取响应后，`Main()` 将该响应写入到控制台，应用程序结束。  
+- `Main()` 方法读取命令行并启动对指定 Internet 资源的请求。 它创建 WebRequest `wreq` 和 RequestState `rs`，调用 BeginGetResponse 开始处理请求，然后调用 `allDone.WaitOne()` 方法，以便应用程序不会在回调完成前退出。 在从 Internet 资源读取响应后，`Main()` 将该响应写入到控制台，应用程序结束。  
   
--   `showusage()` 方法在控制台上写入一个示例命令行。 命令行上未提供 URI 时，由 `Main()` 调用它。  
+- `showusage()` 方法在控制台上写入一个示例命令行。 命令行上未提供 URI 时，由 `Main()` 调用它。  
   
--   `RespCallBack()` 方法实现 Internet 请求的异步回调方法。 该方法创建包含来自 Internet 资源的响应的 WebResponse 实例，获取响应流，然后开始从该流异步读取数据。  
+- `RespCallBack()` 方法实现 Internet 请求的异步回调方法。 该方法创建包含来自 Internet 资源的响应的 WebResponse 实例，获取响应流，然后开始从该流异步读取数据。  
   
--   `ReadCallBack()` 方法实现用于读取响应流的异步调用方法。 它将从 Internet 资源接收到的数据传输到 RequestState 实例的  ResponseData 属性中，然后开始对响应流的另一次异步读取，直到不再返回数据。 已读取全部数据后，`ReadCallBack()` 关闭响应流并调用 `allDone.Set()` 方法，指示整个响应存在于 ResponseData 中。  
+- `ReadCallBack()` 方法实现用于读取响应流的异步调用方法。 它将从 Internet 资源接收到的数据传输到 RequestState 实例的  ResponseData 属性中，然后开始对响应流的另一次异步读取，直到不再返回数据。 已读取全部数据后，`ReadCallBack()` 关闭响应流并调用 `allDone.Set()` 方法，指示整个响应存在于 ResponseData 中。  
   
     > [!NOTE]
     >  所有网络流均已关闭，这一点非常重要。 如果未关闭每个请求和响应流，应用程序将耗尽与服务器的连接，无法处理其他请求。  

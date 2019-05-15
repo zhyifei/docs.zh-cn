@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 57934742e378df9bf77938e8c6b3b49cb25e6ecf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313367"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647760"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 .NET Framework 是独立于语言的。 这意味着，作为开发人员，您可以使用面向 .NET Framework 的多种语言（例如，C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 以及 Windows PowerShell）之一进行开发。 您可以访问针对 .NET Framework 开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果您是组件开发人员，无论组件采用哪种语言，均可由任何 .NET Framework 应用程序访问。  
@@ -34,41 +34,41 @@ ms.locfileid: "59313367"
   
  本文内容：  
   
--   [CLS 符合性规则](#Rules)  
+- [CLS 符合性规则](#Rules)  
   
-    -   [类型和类型成员签名](#Types)  
+    - [类型和类型成员签名](#Types)  
   
-    -   [命名约定](#naming)  
+    - [命名约定](#naming)  
   
-    -   [类型转换](#conversion)  
+    - [类型转换](#conversion)  
   
-    -   [数组](#arrays)  
+    - [数组](#arrays)  
   
-    -   [接口](#Interfaces)  
+    - [接口](#Interfaces)  
   
-    -   [枚举](#enums)  
+    - [枚举](#enums)  
   
-    -   [类型成员概述](#members)  
+    - [类型成员概述](#members)  
   
-    -   [成员可访问性](#MemberAccess)  
+    - [成员可访问性](#MemberAccess)  
   
-    -   [泛型类型和成员](#Generics)  
+    - [泛型类型和成员](#Generics)  
   
-    -   [构造函数](#ctors)  
+    - [构造函数](#ctors)  
   
-    -   [属性](#properties)  
+    - [属性](#properties)  
   
-    -   [事件](#events)  
+    - [事件](#events)  
   
-    -   [重载](#overloads)  
+    - [重载](#overloads)  
   
-    -   [异常](#exceptions)  
+    - [异常](#exceptions)  
   
-    -   [特性](#attributes)  
+    - [特性](#attributes)  
   
--   [CLSCompliantAttribute 特性](#CLSAttribute)  
+- [CLSCompliantAttribute 特性](#CLSAttribute)  
   
--   [跨语言互操作性](#CrossLang)  
+- [跨语言互操作性](#CrossLang)  
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS 遵从性规则  
@@ -94,11 +94,11 @@ ms.locfileid: "59313367"
   
  库的公共接口包括：  
   
--   公共类的定义。  
+- 公共类的定义。  
   
--   公共类中公共成员的定义，以及派生类可以访问的成员（即受保护的成员）的定义。  
+- 公共类中公共成员的定义，以及派生类可以访问的成员（即受保护的成员）的定义。  
   
--   公共类中公共方法的参数和返回类型，以及派生类可以访问的方法的参数和返回类型。  
+- 公共类中公共方法的参数和返回类型，以及派生类可以访问的方法的参数和返回类型。  
   
  下表中将列出 CLS 遵从性规则。 规则的文本摘自 [ECMA-335 标准：公共语言基础结构](https://www.ecma-international.org/publications/standards/Ecma-335.htm)（版权所有 2012，Ecma International）。 有关这些规则的详细信息，请参阅以下各节。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "59313367"
   
  成员签名中出现的所有类型（包括方法的返回类型或属性类型）必须符合 CLS。 此外，对于泛型类型：  
   
--   构成实例化泛型类型的所有类型必须符合 CLS。  
+- 构成实例化泛型类型的所有类型必须符合 CLS。  
   
--   所有用作针对泛型参数的约束的类型必须符合 CLS。  
+- 所有用作针对泛型参数的约束的类型必须符合 CLS。  
   
  .NET Framework [通用类型系统](../../docs/standard/base-types/common-type-system.md)包括大量直接受公共语言运行时支持且专以程序集元数据编码的内置类型。 在这些内部类型中，下表中所列的类型都符合 CLS。  
   
@@ -196,11 +196,11 @@ ms.locfileid: "59313367"
   
  .NET Framework 类库或任何其他类库可能包含不符合 CLS 的其他类型；例如：  
   
--   装箱的值类型。 下面的 C# 示例创建一个具有名为 `int*` 的 `Value` 类型的公共属性的类。 由于 `int*` 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。  
+- 装箱的值类型。 下面的 C# 示例创建一个具有名为 `int*` 的 `Value` 类型的公共属性的类。 由于 `int*` 是一个装箱的值类型，因此编译器将其标记为不符合 CLS。  
   
      [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
   
--   类型化的引用是一个特殊构造，它包含一个对对象的引用和一个对类型的引用。 类型化的引用由 <xref:System.TypedReference> 类显示在 .NET Framework 中。  
+- 类型化的引用是一个特殊构造，它包含一个对对象的引用和一个对类型的引用。 类型化的引用由 <xref:System.TypedReference> 类显示在 .NET Framework 中。  
   
  如果类型不符合 CLS，则需对其应用 <xref:System.CLSCompliantAttribute> 值为 `isCompliant` 的 `false` 特性。 有关更多信息，请参阅 [CLSCompliantAttribute 特性](#CLSAttribute)部分。  
   
@@ -228,9 +228,9 @@ ms.locfileid: "59313367"
   
  编程语言识别符（例如，命名空间、类型和成员的名称）必须遵照 [Unicode 标准 3.0、技术报告 15 和附件 7](https://www.unicode.org/reports/tr15/tr15-18.html)。 这表示：  
   
--   标识符的第一个字符可以是任何 Unicode 大写字母、小写字母、标题大小写字母、修饰符字母、其他字母或字母数字。 有关 Unicode 字符类别的信息，请参阅 <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> 枚举。  
+- 标识符的第一个字符可以是任何 Unicode 大写字母、小写字母、标题大小写字母、修饰符字母、其他字母或字母数字。 有关 Unicode 字符类别的信息，请参阅 <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> 枚举。  
   
--   后继字符可以作为第一个字符来自任何类别，还可以包含无间隔标记、间距组合标记、十进制数字、连接器标点符号以及格式设置代码。  
+- 后继字符可以作为第一个字符来自任何类别，还可以包含无间隔标记、间距组合标记、十进制数字、连接器标点符号以及格式设置代码。  
   
  在比较标识符之前，应筛选格式设置代码，并将标识符转换为 Unicode 范式 C，因为单个字符可由多个 UTF 16 编码的代码单位表示。 在 Unicode 范式 C 中生成相同代码单位的字符序列不符合 CLS。 下列示例定义了一个名为 `Å` 的属性（包含字符 ANGSTROM SIGN (U+212B)）和另一个名为 `Å` 的属性（包含字符 LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5)）。 C# 和 Visual Basic 编译器都将源代码标记为不符合 CLS。  
   
@@ -239,9 +239,9 @@ ms.locfileid: "59313367"
   
  特定范围内的成员名称（如程序集中的命名空间、命名空间中的类型或某类型中的成员）必须是唯一的，通过重载解析的名称除外。 此要求比常规类型系统的要求更加严格，后者允许一个范围内的多个成员在作为不同类型的成员（例如，一个是方法，一个是字段时）时，可以具有相同的名称。 具体而言，对于类型成员：  
   
--   字段和嵌套类型只能通过名称区分。  
+- 字段和嵌套类型只能通过名称区分。  
   
--   具有相同名称的方法、属性和事件必须具有除返回类型不同之外的其他不同之处。  
+- 具有相同名称的方法、属性和事件必须具有除返回类型不同之外的其他不同之处。  
   
  下面的示例说明了成员名称在其范围内必须是唯一的要求。 它定义了一个名为 `Converter` 的类，该类包括四个名为 `Conversion` 的成员。 其中三个是方法，一个是属性。 包含 <xref:System.Int64> 参数的方法具有唯一名称，但是，具有 <xref:System.Int32> 参数的两个方法不是，因为返回值不被视为成员签名的一部分。 由于属性不能具有与重载方法相同的名称，因此 `Conversion` 属性也违反了此要求。  
   
@@ -260,9 +260,9 @@ ms.locfileid: "59313367"
 ### <a name="type-conversion"></a>类型转换  
  公共语言规范定义了两个转换运算符：  
   
--   `op_Implicit` 用于扩大转换，不会丢失数据或精度。 例如，<xref:System.Decimal> 结构包含一个已重载的 `op_Implicit` 运算符，以将整数类型值和 <xref:System.Char> 值转换为 <xref:System.Decimal> 值。  
+- `op_Implicit` 用于扩大转换，不会丢失数据或精度。 例如，<xref:System.Decimal> 结构包含一个已重载的 `op_Implicit` 运算符，以将整数类型值和 <xref:System.Char> 值转换为 <xref:System.Decimal> 值。  
   
--   `op_Explicit` 用于收缩可能导致丢失量级（将一个值转换为一个范围更小的值）或精度的转换。 例如，<xref:System.Decimal> 结构包含一个已重载的 `op_Explicit` 运算符，以将 <xref:System.Double> 和 <xref:System.Single> 值转换为 <xref:System.Decimal>，并将 <xref:System.Decimal> 值转换为整数值：<xref:System.Double>、<xref:System.Single> 和 <xref:System.Char>。  
+- `op_Explicit` 用于收缩可能导致丢失量级（将一个值转换为一个范围更小的值）或精度的转换。 例如，<xref:System.Decimal> 结构包含一个已重载的 `op_Explicit` 运算符，以将 <xref:System.Double> 和 <xref:System.Single> 值转换为 <xref:System.Decimal>，并将 <xref:System.Decimal> 值转换为整数值：<xref:System.Double>、<xref:System.Single> 和 <xref:System.Char>。  
   
  但是，并非所有语言都支持运算符重载或定义自定义运算符。 如果选择实现这些转换运算符，您还应提供另一种执行转换的方法。 我们建议提供 `From`*Xxx* 和 `To`*Xxx* 方法。  
   
@@ -275,17 +275,17 @@ ms.locfileid: "59313367"
 ### <a name="arrays"></a>数组  
  符合 CLS 的数组符合以下规则：  
   
--   数组的所有维度必须具有零下限。 下面的示例创建一个不符合 CLS 的数组，其下限为 1。 请注意，无论是否存在 <xref:System.CLSCompliantAttribute> 特性，编译器都不检测由 `Numbers.GetTenPrimes` 方法返回的数组是否符合 CLS。  
+- 数组的所有维度必须具有零下限。 下面的示例创建一个不符合 CLS 的数组，其下限为 1。 请注意，无论是否存在 <xref:System.CLSCompliantAttribute> 特性，编译器都不检测由 `Numbers.GetTenPrimes` 方法返回的数组是否符合 CLS。  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
--   所有数组元素必须包括符合 CLS 的类型。 下面的示例定义返回不符合 CLS 的数组的两种方法。 第一个返回 <xref:System.UInt32> 值的数组。 第二个返回包括 <xref:System.Object> 和 <xref:System.Int32> 值的 <xref:System.UInt32> 数组。 虽然编译器因第一个数组是 <xref:System.UInt32> 类型而将其标识为不合规，但无法识别第二个包含不符合 CLS 元素的数组。  
+- 所有数组元素必须包括符合 CLS 的类型。 下面的示例定义返回不符合 CLS 的数组的两种方法。 第一个返回 <xref:System.UInt32> 值的数组。 第二个返回包括 <xref:System.Object> 和 <xref:System.Int32> 值的 <xref:System.UInt32> 数组。 虽然编译器因第一个数组是 <xref:System.UInt32> 类型而将其标识为不合规，但无法识别第二个包含不符合 CLS 元素的数组。  
   
      [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
      [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
--   具有数组参数的方法的重载决策基于它们是否为数组及它们的元素类型。 因此，以下对重载的 `GetSquares` 方法的定义符合 CLS。  
+- 具有数组参数的方法的重载决策基于它们是否为数组及它们的元素类型。 因此，以下对重载的 `GetSquares` 方法的定义符合 CLS。  
   
      [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
      [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
@@ -294,11 +294,11 @@ ms.locfileid: "59313367"
 ### <a name="interfaces"></a>接口  
  符合 CLS 的接口可以定义属性、事件和虚拟方法（没有实现的方法）。 符合 CLS 的接口不能有：  
   
--   静态方法或静态字段。 如果您在接口中定义静态成员，那么 C# 和 Visual Basic 编译器将生成编译器错误。  
+- 静态方法或静态字段。 如果您在接口中定义静态成员，那么 C# 和 Visual Basic 编译器将生成编译器错误。  
   
--   字段。 如果您在接口中定义字段，则 C# 和 Visual Basic 编译器将生成编译器错误。  
+- 字段。 如果您在接口中定义字段，则 C# 和 Visual Basic 编译器将生成编译器错误。  
   
--   不符合 CLS 的方法。 例如，下面的接口定义包括方法 `INumber.GetUnsigned`，该方法标记为不符合 CLS。 此示例生成编译器警告。  
+- 不符合 CLS 的方法。 例如，下面的接口定义包括方法 `INumber.GetUnsigned`，该方法标记为不符合 CLS。 此示例生成编译器警告。  
   
      [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
      [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
@@ -314,24 +314,24 @@ ms.locfileid: "59313367"
 ### <a name="enumerations"></a>枚举  
  符合 CLS 的枚举必须遵循下列规则：  
   
--   枚举的基础类型必须是符合 CLS 的内部整数（<xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32> 或 <xref:System.Int64>）。 例如，下面的代码尝试定义基础类型为 <xref:System.UInt32> 的枚举并生成编译器警告。  
+- 枚举的基础类型必须是符合 CLS 的内部整数（<xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32> 或 <xref:System.Int64>）。 例如，下面的代码尝试定义基础类型为 <xref:System.UInt32> 的枚举并生成编译器警告。  
   
      [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
      [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   枚举类型必须具有名为 `Value__` 且标有 <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> 特性的单个实例字段。 这使得您可以隐式引用字段值。  
+- 枚举类型必须具有名为 `Value__` 且标有 <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> 特性的单个实例字段。 这使得您可以隐式引用字段值。  
   
--   枚举包括文本静态字段，该字段的类型与枚举本身的类型匹配。 例如，如果您用 `State` 和 `State.On` 的值定义 `State.Off` 枚举，则 `State.On` 和 `State.Off` 都是文本静态字段，其类型为 `State`。  
+- 枚举包括文本静态字段，该字段的类型与枚举本身的类型匹配。 例如，如果您用 `State` 和 `State.On` 的值定义 `State.Off` 枚举，则 `State.On` 和 `State.Off` 都是文本静态字段，其类型为 `State`。  
   
--   有两种枚举：  
+- 有两种枚举：  
   
-    -   一种表示一组互斥的命名整数值的枚举。 这种类型的枚举由缺少 <xref:System.FlagsAttribute?displayProperty=nameWithType> 自定义特性表示。  
+    - 一种表示一组互斥的命名整数值的枚举。 这种类型的枚举由缺少 <xref:System.FlagsAttribute?displayProperty=nameWithType> 自定义特性表示。  
   
-    -   一种表示可结合用来生成未命名值的一组位标志的枚举。 这种类型的枚举由存在 <xref:System.FlagsAttribute?displayProperty=nameWithType> 自定义特性表示。  
+    - 一种表示可结合用来生成未命名值的一组位标志的枚举。 这种类型的枚举由存在 <xref:System.FlagsAttribute?displayProperty=nameWithType> 自定义特性表示。  
   
      有关详细信息，请参阅 <xref:System.Enum> 结构的文档。  
   
--   枚举的值不限于其指定值的范围。 换言之，枚举中的值的范围是其基础值的范围。 您可以使用 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 方法来确定指定的值是否为枚举成员。  
+- 枚举的值不限于其指定值的范围。 换言之，枚举中的值的范围是其基础值的范围。 您可以使用 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 方法来确定指定的值是否为枚举成员。  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>类型成员概述  
@@ -390,34 +390,34 @@ ms.locfileid: "59313367"
 ### <a name="constructors"></a>构造函数  
  符合 CLS 的类和结构中的构造函数必须遵循下列规则：  
   
--   派生类的构造函数必须先调用其基类的实例构造函数，然后才能访问继承的实例数据。 存在此要求是因为基类构造函数并不由它们的派生类继承。 此规则不适用于不支持直接继承的结构。  
+- 派生类的构造函数必须先调用其基类的实例构造函数，然后才能访问继承的实例数据。 存在此要求是因为基类构造函数并不由它们的派生类继承。 此规则不适用于不支持直接继承的结构。  
   
      通常，编译器独立地强制实施 CLS 遵从性的此规则，如下面的示例所示。 它创建派生自 `Doctor` 类的 `Person` 类，但 `Doctor` 类无法调用 `Person` 类构造函数来初始化继承的实例字段。  
   
      [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
      [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   只有在创建对象时才能调用对象构造函数。 此外，不能将一个对象初始化两次。 例如，这意味着 <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> 和反序列化方法（如 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>）不得调用构造函数。  
+- 只有在创建对象时才能调用对象构造函数。 此外，不能将一个对象初始化两次。 例如，这意味着 <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> 和反序列化方法（如 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>）不得调用构造函数。  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>属性  
  符合 CLS 的类型的属性必须遵循下列规则：  
   
--   属性必须具有 setter 和/或 getter。 在程序集中，这些作为特殊方法实现，这意味着它们将显示为单独的方法（getter 命名为 `get_`*propertyname*，setter 命名为 `set_`*propertyname*），且在程序集元数据中标记为 `SpecialName`。 C# 和 Visual Basic 编译器会自动执行此规则，而无需应用 <xref:System.CLSCompliantAttribute> 特性。  
+- 属性必须具有 setter 和/或 getter。 在程序集中，这些作为特殊方法实现，这意味着它们将显示为单独的方法（getter 命名为 `get_`*propertyname*，setter 命名为 `set_`*propertyname*），且在程序集元数据中标记为 `SpecialName`。 C# 和 Visual Basic 编译器会自动执行此规则，而无需应用 <xref:System.CLSCompliantAttribute> 特性。  
   
--   属性的类型是属性 getter 的返回类型和 setter 的最后一个自变量。 这些类型必须符合 CLS，并且不能通过引用将参数分配到属性中（即它们不能为托管指针）。  
+- 属性的类型是属性 getter 的返回类型和 setter 的最后一个自变量。 这些类型必须符合 CLS，并且不能通过引用将参数分配到属性中（即它们不能为托管指针）。  
   
--   如果属性包含 getter 和 setter 两者，则它们必须都是虚拟的、静态的或实例。 C# 和 Visual Basic 编译器通过它们的属性定义语法自动执行此规则。  
+- 如果属性包含 getter 和 setter 两者，则它们必须都是虚拟的、静态的或实例。 C# 和 Visual Basic 编译器通过它们的属性定义语法自动执行此规则。  
   
 <a name="events"></a>   
 ### <a name="events"></a>事件  
  事件由其名称和类型定义。 事件类型是用于指示事件的委托。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的类型为 <xref:System.ResolveEventHandler>。 除事件本身外，带有基于事件名称的名称的三种方法提供事件的实现并在程序集的元数据中标记为 `SpecialName`：  
   
--   用于添加事件处理程序的名为 `add_`*EventName* 的方法。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的事件订阅方法名为 `add_AssemblyResolve`。  
+- 用于添加事件处理程序的名为 `add_`*EventName* 的方法。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的事件订阅方法名为 `add_AssemblyResolve`。  
   
--   用于移除事件处理程序的名为 `remove_`*EventName* 的方法。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的移除方法名为 `remove_AssemblyResolve`。  
+- 用于移除事件处理程序的名为 `remove_`*EventName* 的方法。 例如，<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件的移除方法名为 `remove_AssemblyResolve`。  
   
--   用于指示事件已发生的名为 `raise_`*EventName* 的方法。  
+- 用于指示事件已发生的名为 `raise_`*EventName* 的方法。  
   
 > [!NOTE]
 >  大多数关于事件的公共语言规范的规则都通过语言编译器实施，且对组件开发人员是透明的。  
@@ -433,11 +433,11 @@ ms.locfileid: "59313367"
 ### <a name="overloads"></a>Overloads  
  公共语言规范对重载成员有下列要求：  
   
--   成员可以根据参数数量和任何参数的类型进行重载。 在重载间进行区分时，不考虑应用于方法或其参数的调用约定、返回类型、自定义修饰符，也不考虑是按照值还是引用传递参数。 有关示例，请参阅[命名约定](#naming)部分中名称在范围内必须是唯一的代码需求。  
+- 成员可以根据参数数量和任何参数的类型进行重载。 在重载间进行区分时，不考虑应用于方法或其参数的调用约定、返回类型、自定义修饰符，也不考虑是按照值还是引用传递参数。 有关示例，请参阅[命名约定](#naming)部分中名称在范围内必须是唯一的代码需求。  
   
--   只可重载属性和方法。 无法重载字段和事件。  
+- 只可重载属性和方法。 无法重载字段和事件。  
   
--   泛型方法可以基于其泛型参数的数目进行重载。  
+- 泛型方法可以基于其泛型参数的数目进行重载。  
   
 > [!NOTE]
 >  `op_Explicit` 和 `op_Implicit` 运算符是返回值不被视为重载决策的方法签名的一部分的规则的例外情况。 可以基于这两个运算符的参数和返回值对其进行重载。  
@@ -465,27 +465,27 @@ ms.locfileid: "59313367"
   
  构造函数或符合 CLS 的特性的属性只能公开以下类型：  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Type>  
+- <xref:System.Type>  
   
--   基础类型为 <xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32> 或 <xref:System.Int64> 的任意枚举类型。  
+- 基础类型为 <xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32> 或 <xref:System.Int64> 的任意枚举类型。  
   
  下面的示例定义了从 `DescriptionAttribute` 派生的 <xref:System.Attribute> 类。 类构造函数具有 `Descriptor` 类型的参数，因此，该类不符合 CLS。 请注意，C# 编译器发出警告，但编译成功，而 Visual Basic 编译器既不发出警告也不报告错误。  
   
@@ -500,9 +500,9 @@ ms.locfileid: "59313367"
   
  组件开发人员可以通过两种方法使用 <xref:System.CLSCompliantAttribute> 特性：  
   
--   定义由组件公开的公共接口的符合 CLS 的部件以及不符合 CLS 的部件。 如果特性用于将特定程序元素标记为符合 CLS，则使用该特性可保证能通过面向 .NET Framework 的所有语言和工具访问这些元素。  
+- 定义由组件公开的公共接口的符合 CLS 的部件以及不符合 CLS 的部件。 如果特性用于将特定程序元素标记为符合 CLS，则使用该特性可保证能通过面向 .NET Framework 的所有语言和工具访问这些元素。  
   
--   确保组件库的公共接口仅公开符合 CLS 的程序元素。 如果元素不符合 CLS，则编译器通常会发出一个警告。  
+- 确保组件库的公共接口仅公开符合 CLS 的程序元素。 如果元素不符合 CLS，则编译器通常会发出一个警告。  
   
 > [!WARNING]
 >  在某些情况下，语言编译器执行符合 CLS 的规则，而不管是否使用 <xref:System.CLSCompliantAttribute> 特性。 例如，在接口中定义静态成员会违反 CLS 规则。 就这一点而言，如果在接口中定义 `static`（在 C# 中）或 `Shared`（在 Visual Basic 中）成员，C# 和 Visual Basic 编译器都会显示错误消息，且无法编译应用。  

@@ -4,12 +4,12 @@ description: 了解通用类型系统 (CTS) 和公共语言规范 (CLS) 如何�
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675363"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664520"
 ---
 # <a name="common-type-system--common-language-specification"></a>常规类型系统和公共语言规范
 
@@ -21,10 +21,10 @@ ms.locfileid: "57675363"
 
 为透明地执行此操作，必须使用某种通用方式描所有受支持类型。 这正是通用类型系统 (CTS) 的职责。 其功能如下：
 
-*   建立用于跨语言执行的框架。
-*   提供面向对象的模型，支持在 .NET 实现上实现各种语言。
-*   定义处理类型时所有语言都必须遵守的一组规则。
-*   提供包含应用程序开发中使用的基本基元数据类型（如 `Boolean`、`Byte`、`Char` 等）的库。
+* 建立用于跨语言执行的框架。
+* 提供面向对象的模型，支持在 .NET 实现上实现各种语言。
+* 定义处理类型时所有语言都必须遵守的一组规则。
+* 提供包含应用程序开发中使用的基本基元数据类型（如 `Boolean`、`Byte`、`Char` 等）的库。
 
 CTS 将定义应支持的两种主要类型：引用和值类型。 其名称表明了其定义。
 
@@ -34,11 +34,11 @@ CTS 将定义应支持的两种主要类型：引用和值类型。 其名称表
 
 CTS 将定义多个类型类别，每个类别均有其特定的语义和用法：
 
-*   类
-*   结构
-*   枚举
-*   接口
-*   委托
+* 类
+* 结构
+* 枚举
+* 接口
+* 委托
 
 CTS 还将定义类型的所有其他属性，例如访问修饰符、有效的类型成员以及继承和重载的工作原理等。 遗憾的是，有关上述任意一点的深入介绍已超出此类介绍性文章的介绍范围，但可以参阅底部的[更多资源](#more-resources)部分，获取包含这些主题的详细内容的链接。
 
@@ -52,5 +52,5 @@ CLS 是 CTS 的子集。 这意味着，CTS 中的所有规则也适用于 CLS�
 
 ## <a name="more-resources"></a>更多资源
 
-*   [常规类型系统](./base-types/common-type-system.md)
-*   [公共语言规范](language-independence-and-language-independent-components.md)
+* [常规类型系统](./base-types/common-type-system.md)
+* [公共语言规范](language-independence-and-language-independent-components.md)

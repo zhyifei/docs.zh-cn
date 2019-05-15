@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617910"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644768"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 多个线程可以调用单个对象的属性和方法时，对这些调用进行同步处理是非常重要的。 否则，一个线程可能会中断另一个线程正在执行的任务，可能使该对象处于无效状态。 其成员不受这类中断影响的类叫做线程安全类。  
   
  公共语言基础结构提供了几种策略，可用于同步对实例和静态成员的访问：  
   
--   同步代码区域。 可以使用 <xref:System.Threading.Monitor> 类或此类的编译器支持，仅同步需要它的代码块，从而提升性能。  
+- 同步代码区域。 可以使用 <xref:System.Threading.Monitor> 类或此类的编译器支持，仅同步需要它的代码块，从而提升性能。  
   
--   手动同步。 可以使用 .NET Framework 类库提供的同步对象。 请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中介绍了 <xref:System.Threading.Monitor> 类。  
+- 手动同步。 可以使用 .NET Framework 类库提供的同步对象。 请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中介绍了 <xref:System.Threading.Monitor> 类。  
   
--   同步上下文。 可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 为 <xref:System.ContextBoundObject> 对象启用简单的自动同步。  
+- 同步上下文。 可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 为 <xref:System.ContextBoundObject> 对象启用简单的自动同步。  
   
--   <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的集合类。 这些类提供了内置的同步添加和删除操作。 有关详细信息，请参阅[线程安全集合](../../../docs/standard/collections/thread-safe/index.md)。  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的集合类。 这些类提供了内置的同步添加和删除操作。 有关详细信息，请参阅[线程安全集合](../../../docs/standard/collections/thread-safe/index.md)。  
   
  公共语言运行时提供一个线程模型，在该模型中，类分为多种类别，这些类别可以根据要求以各种不同的方式进行同步。 下表显示了为具有给定同步类别的字段和方法提供的同步支持。  
   

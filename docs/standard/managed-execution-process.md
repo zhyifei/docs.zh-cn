@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336143"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647721"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
@@ -58,9 +58,9 @@ ms.locfileid: "59336143"
 ## <a name="compiling-msil-to-native-code"></a>将 MSIL 编译为本机代码  
  运行 Microsoft 中间语言 (MSIL) 前，必须根据公共语言运行时将其编译为目标计算机基础结构的本机代码。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供两种方法来执行此转换：  
   
--   .NET Framework 实时 (JIT) 编译器。  
+- .NET Framework 实时 (JIT) 编译器。  
   
--   .NET Framework [Ngen.exe（本机映像生成器）](../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
+- .NET Framework [Ngen.exe（本机映像生成器）](../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
   
 ### <a name="compilation-by-the-jit-compiler"></a>由 JIT 编译器编译  
  在加载和执行程序集的内容时，JIT 编译在应用程序运行时按需将 MSIL 转换为本机代码。 由于公共语言运行时为每个受支持的 CPU 基础结构提供 JIT 编译器，开发人员可以构建一组 MSIL 程序集，这些程序集可以进行 JIT 编译并可在具有不同计算机基础结构的不同计算机上运行。 但是，如果你的托管代码调用特定于平台的本机 API 或特定于平台的类库，它将仅在该操作系统上运行。  
@@ -70,22 +70,22 @@ ms.locfileid: "59336143"
 ### <a name="install-time-code-generation-using-ngenexe"></a>使用 NGen.exe 的安装时代码生成  
  由于在调用该程序集中定义的各个方法时，JIT 编译器将程序集的 MSIL 转换为本机代码，因此它在运行时中对性能产生负面影响。 在大多数情况下，这种性能降低的程度是可以接受的。 更为重要的是，由 JIT 编译器生成的代码会绑定到触发编译的进程上。 它无法在多个进程之间进行共享。 若要允许生成的代码跨应用程序的多个调用或跨共享一组程序集的多个进程进行共享，则公共语言运行时支持预编译模式。 这种预编译模式使用 [Ngen.exe（本机映像生成器）](../../docs/framework/tools/ngen-exe-native-image-generator.md)将 MSIL 程序集转换为本机代码，非常类似 JIT 编译器执行的操作。 但是，Ngen.exe 的操作在三个方面不同于 JIT 编译器的操作：  
   
--   它在运行应用程序之前而非运行该应用程序时，将 MSIL 转换为本机代码。  
+- 它在运行应用程序之前而非运行该应用程序时，将 MSIL 转换为本机代码。  
   
--   它一次编译整个程序集，而不是一次编译一种方法。  
+- 它一次编译整个程序集，而不是一次编译一种方法。  
   
--   它将本机映像缓存中生成的代码作为磁盘上的文件保存。  
+- 它将本机映像缓存中生成的代码作为磁盘上的文件保存。  
   
 ### <a name="code-verification"></a>代码验证  
  作为其编译为本机代码的一部分，MSIL 代码必须通过验证过程，除非管理员已经设定允许代码忽略验证的安全策略。 验证过程检查 MSIL 和元数据，以找出代码是否为类型安全，这意味着它仅访问其有权访问的内存位置。 类型安全有助于将对象相互隔离，并帮助保护它们免受无意或恶意损坏。 它还保障可以可靠地对代码强制执行安全限制。  
   
  运行时基于以下语句对于可验证类型安全代码为 true 这一事实：  
   
--   对类型的引用严格符合所引用的类型。  
+- 对类型的引用严格符合所引用的类型。  
   
--   在对象上只调用正确定义的操作。  
+- 在对象上只调用正确定义的操作。  
   
--   标识与声称的要求一致。  
+- 标识与声称的要求一致。  
   
  在验证过程中，检查 MSIL 代码以试图确认代码可以访问内存位置，并仅通过正确定义的类型调用方法。 例如，代码不允许以允许内存位置溢出的方式访问对象的字段。 此外，验证检查代码以确定是否已正确生成 MSIL，因为错误的 MSIL 可能会导致违反类型安全规则。 验证过程传递一组定义完善的类型安全代码，并且仅传递类型安全的代码。 但是，由于验证过程的一些限制，并且按照设计，某些语言不生成可验证的类型安全代码，某些类型安全代码可能无法通过验证。 如果安全策略要求提供类型安全代码，而该代码不能通过验证，则在运行该代码时将引发异常。  
   

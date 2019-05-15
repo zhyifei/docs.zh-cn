@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634707"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 <a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
   
--   正字符组。 输入字符串中的字符必须匹配一组指定的字符中的某个字符。 有关详细信息，请参阅[正字符组](#PositiveGroup)。  
+- 正字符组。 输入字符串中的字符必须匹配一组指定的字符中的某个字符。 有关详细信息，请参阅[正字符组](#PositiveGroup)。  
   
--   负字符组。 输入字符串中的字符不得匹配一组指定的字符中的某个字符。 有关详细信息，请参阅[负字符组](#NegativeGroup)。  
+- 负字符组。 输入字符串中的字符不得匹配一组指定的字符中的某个字符。 有关详细信息，请参阅[负字符组](#NegativeGroup)。  
   
--   任意字符。 正则表达式中的 `.`（圆点或句点）字符是匹配除 `\n` 之外的任何字符的通配符字符。 有关详细信息，请参阅[任意字符](#AnyCharacter)。  
+- 任意字符。 正则表达式中的 `.`（圆点或句点）字符是匹配除 `\n` 之外的任何字符的通配符字符。 有关详细信息，请参阅[任意字符](#AnyCharacter)。  
   
--   通用 Unicode 类别或命名块。 输入字符串中的字符必须为特定 Unicode 类别的成员，或必须位于一系列连续的 Unicode 字符中才能成功匹配。 有关详细信息，请参阅 [Unicode 类别或 Unicode 块](#CategoryOrBlock)。  
+- 通用 Unicode 类别或命名块。 输入字符串中的字符必须为特定 Unicode 类别的成员，或必须位于一系列连续的 Unicode 字符中才能成功匹配。 有关详细信息，请参阅 [Unicode 类别或 Unicode 块](#CategoryOrBlock)。  
   
--   负通用 Unicode 类别或命名块。 输入字符串中的字符不得为特定 Unicode 类别的成员，也不得位于一系列连续的 Unicode 字符中以便成功匹配。 有关详细信息，请参阅[负 Unicode 类别或 Unicode 块](#NegativeCategoryOrBlock)。  
+- 负通用 Unicode 类别或命名块。 输入字符串中的字符不得为特定 Unicode 类别的成员，也不得位于一系列连续的 Unicode 字符中以便成功匹配。 有关详细信息，请参阅[负 Unicode 类别或 Unicode 块](#NegativeCategoryOrBlock)。  
   
--   单词字符。 输入字符串中的字符可以属于适合单词中字符的任何 Unicode 类别。 有关详细信息，请参阅[单词字符](#WordCharacter)。  
+- 单词字符。 输入字符串中的字符可以属于适合单词中字符的任何 Unicode 类别。 有关详细信息，请参阅[单词字符](#WordCharacter)。  
   
--   非单词字符。 输入字符串中的字符可以属于作为非单词字符的任何 Unicode 类别。 有关详细信息，请参阅[非单词字符](#NonWordCharacter)。  
+- 非单词字符。 输入字符串中的字符可以属于作为非单词字符的任何 Unicode 类别。 有关详细信息，请参阅[非单词字符](#NonWordCharacter)。  
   
--   空白字符。 输入字符串中的字符可以是任何 Unicode 分隔符字符以及众多控制字符中的任一字符。 有关详细信息，请参阅[空白字符](#WhitespaceCharacter)。  
+- 空白字符。 输入字符串中的字符可以是任何 Unicode 分隔符字符以及众多控制字符中的任一字符。 有关详细信息，请参阅[空白字符](#WhitespaceCharacter)。  
   
--   非空白字符。 输入字符串中的字符可以是作为非空白字符的任何字符。 有关详细信息，请参阅[非空白字符](#NonWhitespaceCharacter)。  
+- 非空白字符。 输入字符串中的字符可以是作为非空白字符的任何字符。 有关详细信息，请参阅[非空白字符](#NonWhitespaceCharacter)。  
   
--   十进制数字。 输入字符串中的字符可以是归类为 Unicode 十进制数字的众多字符中的任一字符。 有关详细信息，请参阅[十进制数字字符](#DigitCharacter)。  
+- 十进制数字。 输入字符串中的字符可以是归类为 Unicode 十进制数字的众多字符中的任一字符。 有关详细信息，请参阅[十进制数字字符](#DigitCharacter)。  
   
--   非十进制数字。 输入字符串中的字符可以是任何非 Unicode 十进制数字。 有关详细信息，请参阅[十进制数字字符](#NonDigitCharacter)。  
+- 非十进制数字。 输入字符串中的字符可以是任何非 Unicode 十进制数字。 有关详细信息，请参阅[十进制数字字符](#NonDigitCharacter)。  
   
  .NET 支持字符类减法表达式，通过该表达式可以定义一组字符作为从一个字符类中排除另一字符类的结果。 有关详细信息，请参阅[字符类减法](#CharacterClassSubtraction)。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622944"
 ## <a name="any-character-"></a>任意字符：.  
  句点字符 (.) 匹配除 `\n`（换行符 \u000A）之外的任何字符，有以下两个限制：  
   
--   如果通过 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项修改正则表达式模式，或者通过 `.` 选项修改包含 `s` 字符类的模式的部分，则 `.` 可匹配任何字符。 有关详细信息，请参阅 [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md)。  
+- 如果通过 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项修改正则表达式模式，或者通过 `.` 选项修改包含 `s` 字符类的模式的部分，则 `.` 可匹配任何字符。 有关详细信息，请参阅 [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
      下面的示例阐释了默认情况下以及使用 `.` 选项的情况下 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 字符类的不同的行为。 正则表达式 `^.+` 在字符串开头开始并匹配每个字符。 默认情况下，匹配在第一行的结尾结束；正则表达式模式匹配回车符、`\r` 或 \u000D，但不匹配 `\n`。 由于 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项将整个输入字符串解释为单行，因此它匹配输入字符串中的每个字符，包括 `\n`。  
   
@@ -170,13 +170,13 @@ ms.locfileid: "54622944"
 > [!NOTE]
 >  由于它匹配除 `\n` 之外的任何字符，因此 `.` 字符类也匹配 `\r`（回车符 \u000D）。  
   
--   正字符组或负字符组中的句点字符将被视为原义句点字符，而非字符类。 有关详细信息，请参阅本主题前面部分的[正字符组](#PositiveGroup)和[负字符组](#NegativeGroup)。 下面的示例通过定义包括句点字符 (`.`) 的正则表达式作为字符类和正字符组的成员来进行这方面的演示。 正则表达式 `\b.*[.?!;:](\s|\z)` 在字边界处开始，匹配任何字符直到遇到五个标点符号标记之一（包括句点），然后匹配空白字符或字符串的末尾。  
+- 正字符组或负字符组中的句点字符将被视为原义句点字符，而非字符类。 有关详细信息，请参阅本主题前面部分的[正字符组](#PositiveGroup)和[负字符组](#NegativeGroup)。 下面的示例通过定义包括句点字符 (`.`) 的正则表达式作为字符类和正字符组的成员来进行这方面的演示。 正则表达式 `\b.*[.?!;:](\s|\z)` 在字边界处开始，匹配任何字符直到遇到五个标点符号标记之一（包括句点），然后匹配空白字符或字符串的末尾。  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  由于它匹配任何字符，因此当正则表达式模式尝试多次匹配任何字符时，`.` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由于它匹配任何字符，因此当正则表达式模式尝试多次匹配任何字符时，`.` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  [返回页首](#Top)  
   
@@ -248,7 +248,7 @@ ms.locfileid: "54622944"
  如果指定了符合 ECMAScript 的行为，则 `\w` 等效于 `[a-zA-Z_0-9]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
   
 > [!NOTE]
->  由于它匹配任何单词字符，因此当正则表达式模式尝试多次匹配任何单词字符且后跟特定单词字符时，`\w` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由于它匹配任何单词字符，因此当正则表达式模式尝试多次匹配任何单词字符且后跟特定单词字符时，`\w` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下面的示例使用 `\w` 语言元素来匹配单词中的重复字符。 该示例定义可按如下方式解释的正则表达式模式 `(\w)\1`。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "54622944"
  如果指定了符合 ECMAScript 的行为，则 `\W` 等效于 `[^a-zA-Z_0-9]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
   
 > [!NOTE]
->  由于它匹配任何非单词字符，因此当正则表达式模式尝试多次匹配任何非单词字符且后跟特定非单词字符时，`\W` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由于它匹配任何非单词字符，因此当正则表达式模式尝试多次匹配任何非单词字符且后跟特定非单词字符时，`\W` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下面的示例阐释 `\W` 字符类。  它定义正则表达式模式 `\b(\w+)(\W){1,2}`，该模式匹配后跟一个或两个非单词字符（例如，空白或标点符号）的单词。 正则表达式模式可以解释为下表中所示内容。  
   

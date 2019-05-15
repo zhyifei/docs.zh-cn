@@ -9,21 +9,21 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647266"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
   
--   从数据库生成源代码和映射特性或映射文件。  
+- 从数据库生成源代码和映射特性或映射文件。  
   
--   从数据库生成供自定义使用的中间数据库标记语言 (.dbml) 文件。  
+- 从数据库生成供自定义使用的中间数据库标记语言 (.dbml) 文件。  
   
--   从 .dbml 文件生成代码和映射特性或映射文件。  
+- 从 .dbml 文件生成代码和映射特性或映射文件。  
   
  此工具会自动随 Visual Studio 一起安装。 默认情况下，此文件位于 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin 下。 如果没有安装 Visual Studio，也可以通过下载 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)获取 SQLMetal 文件。  
   
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>备注  
  SqlMetal 功能实际涉及两个步骤：  
   
--   将数据库的元数据提取到一个 .dbml 文件中。  
+- 将数据库的元数据提取到一个 .dbml 文件中。  
   
--   生成一个代码输出文件。  
+- 生成一个代码输出文件。  
   
      通过使用适当的命令行选项，可以生成 Visual Basic 或 C# 源代码，也可以生成 XML 映射文件。  
   
@@ -100,9 +100,9 @@ sqlmetal [options] [<input file>]
   
  如果存在下列一种或多种情况，[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 将引发异常：  
   
--   SqlMetal 尝试提取进行自我调用的存储过程。  
+- SqlMetal 尝试提取进行自我调用的存储过程。  
   
--   存储过程、函数或视图的嵌套级别超过 32。  
+- 存储过程、函数或视图的嵌套级别超过 32。  
   
      SqlMetal 将捕获此异常并将其报告为警告。  
   

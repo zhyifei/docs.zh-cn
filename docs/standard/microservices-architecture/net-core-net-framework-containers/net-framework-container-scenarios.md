@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 012eecbef669ada64392c43b92e8053873956210
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251009"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650708"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -35,11 +35,11 @@ ms.locfileid: "57251009"
 
 以下列表展示了在 .NET Core 2.x 中不可用的大多数技术：
 
--   ASP.NET Web 窗体。 该技术仅在 .NET Framework 上可用。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
+- ASP.NET Web 窗体。 该技术仅在 .NET Framework 上可用。 目前没有将 ASP.NET Web 窗体引入 .NET Core 的计划。
 
--   WCF 服务。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，但从 2017 年年中起，WCF 服务器实现仅在 .NET Framework 上可用。 未来版本的 .NET Core 可能会考虑此方案，甚至会考虑将某些 API 包含在 [Windows 兼容包](../../../core/porting/windows-compat-pack.md)中。
+- WCF 服务。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，但从 2017 年年中起，WCF 服务器实现仅在 .NET Framework 上可用。 未来版本的 .NET Core 可能会考虑此方案，甚至会考虑将某些 API 包含在 [Windows 兼容包](../../../core/porting/windows-compat-pack.md)中。
 
--   与工作流相关的服务。 Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF Data Services（以前称为 ADO.NET Data Services）仅在 .NET Framework 上可用。 尚未计划将其引入 .NET Core。
+- 与工作流相关的服务。 Windows Workflow Foundation (WF)、工作流服务（WCF + 单个服务中的 WF）和 WCF Data Services（以前称为 ADO.NET Data Services）仅在 .NET Framework 上可用。 尚未计划将其引入 .NET Core。
 
 除了官方 [.NET Core 路线图](https://github.com/aspnet/Home/wiki/Roadmap)中列出的技术之外，可能还会将其他功能移植到 .NET Core 中。 有关完整列表，请查看 CoreFX GitHub 站点上标记为 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的项目。 请注意，此列表不代表 Microsoft 承诺将这些组件引入 .NET Core，而只表示从社区搜集到的一些请求。 如果对以上所列的任何组件感兴趣，请参与 GitHub 上的讨论，发表你的看法。 如果认为丢失了某些内容，请[在 CoreFX 存储库中提出新的问题](https://github.com/dotnet/corefx/issues/new)。
 
@@ -53,16 +53,16 @@ ms.locfileid: "57251009"
 
 ### <a name="additional-resources"></a>其他资源
 
--   **.NET Core 指南**  
+- **.NET Core 指南**  
     [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
--   **从 .NET Framework 移植到 .NET Core**  
+- **从 .NET Framework 移植到 .NET Core**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
--   **Docker 上的 .NET Framework 指南**  
+- **Docker 上的 .NET Framework 指南**  
     [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
--   **.NET 组件概述**  
+- **.NET 组件概述**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 >[!div class="step-by-step"]

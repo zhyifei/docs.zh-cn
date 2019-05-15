@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718255"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644896"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储：线程相关的静态字段和数据槽
 托管线程本地存储 (TLS) 可用于存储对线程和应用域唯一的数据。 .NET Framework 提供了下面两种托管 TLS 使用方式：线程相对静态字段和数据槽。  
   
--   如果可以在编译时预测确切需求，请使用线程相对静态字段（Visual Basic 中的线程相对 `Shared` 字段）。 线程相对静态字段的性能最佳。 它们还支持编译时类型检查。  
+- 如果可以在编译时预测确切需求，请使用线程相对静态字段（Visual Basic 中的线程相对 `Shared` 字段）。 线程相对静态字段的性能最佳。 它们还支持编译时类型检查。  
   
--   如果只能在运行时发现实际需求，请使用数据槽。 数据槽使用起来比线程相对静态字段更慢、更加棘手。由于数据存储为类型 <xref:System.Object>，因此使用前必须将它强制转换为正确类型。  
+- 如果只能在运行时发现实际需求，请使用数据槽。 数据槽使用起来比线程相对静态字段更慢、更加棘手。由于数据存储为类型 <xref:System.Object>，因此使用前必须将它强制转换为正确类型。  
   
  在非托管 C++ 中，使用 `TlsAlloc` 动态分配槽，使用 `__declspec(thread)` 声明应在线程相对存储中分配变量。 线程相对静态字段和数据槽提供了此行为的托管版本。  
   
@@ -31,9 +31,9 @@ ms.locfileid: "54718255"
 ## <a name="uniqueness-of-data-in-managed-tls"></a>托管 TLS 中数据的唯一性  
  无论使用线程相对静态字段，还是使用数据槽，托管 TLS 中的数据都是对线程和应用域唯一的数据。  
   
--   在应用域内，一个线程无法修改另一个线程的数据，即使两个线程使用相同的字段或槽，也不例外。  
+- 在应用域内，一个线程无法修改另一个线程的数据，即使两个线程使用相同的字段或槽，也不例外。  
   
--   如果线程访问多个应用域中的相同字段或槽，每个应用域中都会保留单独的值。  
+- 如果线程访问多个应用域中的相同字段或槽，每个应用域中都会保留单独的值。  
   
  例如，如果线程设置线程相对静态字段值，并在进入另一个应用域后检索此字段的值，那么在第二个应用域中检索到的值与第一个应用域中的值不同。 对第二个应用域中的字段设置新值不会影响第一个应用域中的字段值。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54718255"
 ## <a name="data-slots"></a>数据槽  
  .NET Framework 提供了对线程和应用域都是唯一的动态数据槽。 数据槽分为下列两种类型：命名槽和未命名槽。 两种类型都是使用 <xref:System.LocalDataStoreSlot> 结构实现。  
   
--   若要创建命名数据槽，请使用 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 方法。 若要获取对现有命名槽的引用，请将它的名称传递给 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法。  
+- 若要创建命名数据槽，请使用 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 方法。 若要获取对现有命名槽的引用，请将它的名称传递给 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法。  
   
--   若要创建未命名数据槽，请使用 <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> 方法。  
+- 若要创建未命名数据槽，请使用 <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> 方法。  
   
  对于命名槽和未命名槽，请使用 <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> 方法设置和检索槽中的信息。 这些静态方法始终处理当前正在执行它们的线程的数据。  
   

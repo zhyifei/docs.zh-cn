@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647791"
 ---
 # <a name="types-of-isolation"></a>隔离的类型
 独立存储始终仅限创建它的用户访问。 为了实现这种隔离，公共语言运行时使用操作系统识别的相同用户标识，即与存储打开时的代码运行进程相关联的标识。 虽然此标识是已验证用户标识，但模拟可能会导致当前用户的标识发生动态变化。  
   
  独立存储访问的限制条件还包括，与应用的域和程序集相关联的标识或仅与程序集相关联的标识。 运行时通过以下方式获取这些标识：  
   
--   域标识表示证明应用的证据，对于 Web 应用，这可能就是完整 URL。 对于 shell 托管代码，域标识可能基于应用目录路径。 例如，如果通过路径 C:\Office\MyApp.exe 运行可执行文件，域标识为 C:\Office\MyApp.exe。  
+- 域标识表示证明应用的证据，对于 Web 应用，这可能就是完整 URL。 对于 shell 托管代码，域标识可能基于应用目录路径。 例如，如果通过路径 C:\Office\MyApp.exe 运行可执行文件，域标识为 C:\Office\MyApp.exe。  
   
--   程序集标识是证明程序集的证据。 这可能来自加密数字签名，可以是程序集的[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)、程序集的软件发行者或程序集的 URL 标识。 如果程序集同时包含强名称和软件发行者标识，使用的是软件发行者标识。 如果程序集来自 Internet 且未签名，使用的是 URL 标识。 若要详细了解程序集和强名称，请参阅[使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)。  
+- 程序集标识是证明程序集的证据。 这可能来自加密数字签名，可以是程序集的[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)、程序集的软件发行者或程序集的 URL 标识。 如果程序集同时包含强名称和软件发行者标识，使用的是软件发行者标识。 如果程序集来自 Internet 且未签名，使用的是 URL 标识。 若要详细了解程序集和强名称，请参阅[使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)。  
   
--   漫游存储与有漫游用户策略文件的用户一起移动。 文件被写入网络目录，并下载到用户登录的所有计算机中。 若要详细了解漫游用户策略文件，请参阅 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>。  
+- 漫游存储与有漫游用户策略文件的用户一起移动。 文件被写入网络目录，并下载到用户登录的所有计算机中。 若要详细了解漫游用户策略文件，请参阅 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>。  
   
  通过将用户、域和程序集标识这些概念相结合，独立存储可以通过下列方式隔离数据，每种方式都有自己的使用方案：  
   
--   [按用户和程序集隔离](#UserAssembly)  
+- [按用户和程序集隔离](#UserAssembly)  
   
--   [按用户、域和程序集隔离](#UserDomainAssembly)  
+- [按用户、域和程序集隔离](#UserDomainAssembly)  
   
  这两种隔离都可以与漫游用户策略文件结合使用。 有关详细信息，请参阅[独立存储和漫游](#Roaming)部分。  
   

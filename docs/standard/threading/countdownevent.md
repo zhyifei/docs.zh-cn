@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758910"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666309"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> 是在收到信号特定次数后取消阻止等待线程的同步基元。 <xref:System.Threading.CountdownEvent> 适用于以下情况：不得不先使用 <xref:System.Threading.ManualResetEvent> 或 <xref:System.Threading.ManualResetEventSlim> 并手动递减变量，然后再向事件发出信号。 例如，在分支/联接方案中，可以只创建信号计数为 5 的 <xref:System.Threading.CountdownEvent>，然后在线程池中启动五个工作项，并让每个工作项在完成时调用 <xref:System.Threading.CountdownEvent.Signal%2A>。 每次调用 <xref:System.Threading.CountdownEvent.Signal%2A> 都会让信号计数递减 1。 在主线程上，<xref:System.Threading.CountdownEvent.Wait%2A> 调用一直阻止到信号计数为零。  
@@ -25,13 +25,13 @@ ms.locfileid: "55758910"
   
  <xref:System.Threading.CountdownEvent> 还有以下功能：  
   
--   可以使用取消令牌取消等待操作。  
+- 可以使用取消令牌取消等待操作。  
   
--   创建实例后，可以递增信号计数。  
+- 创建实例后，可以递增信号计数。  
   
--   在 <xref:System.Threading.CountdownEvent.Reset%2A> 方法调用返回 <xref:System.Threading.CountdownEvent.Wait%2A> 后，可以重用实例。  
+- 在 <xref:System.Threading.CountdownEvent.Reset%2A> 方法调用返回 <xref:System.Threading.CountdownEvent.Wait%2A> 后，可以重用实例。  
   
--   实例公开 <xref:System.Threading.WaitHandle>，以与其他 .NET Framework 同步 API（如 <xref:System.Threading.WaitHandle.WaitAll%2A>）集成。  
+- 实例公开 <xref:System.Threading.WaitHandle>，以与其他 .NET Framework 同步 API（如 <xref:System.Threading.WaitHandle.WaitAll%2A>）集成。  
   
 ## <a name="basic-usage"></a>基本用法  
  下面的示例展示了如何将 <xref:System.Threading.CountdownEvent> 与 <xref:System.Threading.ThreadPool> 工作项结合使用。  

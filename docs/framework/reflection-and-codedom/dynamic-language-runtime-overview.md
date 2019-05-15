@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e873f23e0178efefe37f371c379caa3d15bde4cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220973"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649501"
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 
@@ -24,11 +24,11 @@ ms.locfileid: "56220973"
 
 对开发人员而言，大部分动态语言具有以下优势：
 
--   能使用快速反馈循环（REPL 或称读取-评估-打印循环）。 用户可以输入多个语句，并立即执行这些语句查看结果。
+- 能使用快速反馈循环（REPL 或称读取-评估-打印循环）。 用户可以输入多个语句，并立即执行这些语句查看结果。
 
--   同时支持自上而下的开发和传统的自下而上的开发。 例如，使用自上而下的方法时，可以调用尚未实现的函数，然后在需要时添加底层实现。
+- 同时支持自上而下的开发和传统的自下而上的开发。 例如，使用自上而下的方法时，可以调用尚未实现的函数，然后在需要时添加底层实现。
 
--   重构和代码修改变得更加简单，因为不必更改整个代码中的静态类型声明。
+- 重构和代码修改变得更加简单，因为不必更改整个代码中的静态类型声明。
 
 动态语言可以生成出色的脚本语言。 客户可以使用新命令和新功能轻松扩展使用动态语言创建的应用程序。 动态语言也经常用于创建网站和测试工具、维护服务器场、开发各种实用程序以及执行数据转换。
 
@@ -51,9 +51,9 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
 
 举例来说，使用 DLR 开发的语言包括以下语言：
 
--   IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 网站上作为开源软件提供。
+- IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 网站上作为开源软件提供。
 
--   IronRuby。 在 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) 网站上作为开源软件提供。
+- IronRuby。 在 [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) 网站上作为开源软件提供。
 
 ## <a name="primary-dlr-advantages"></a>DLR 的主要优点
  DLR 具有以下优点。
@@ -80,11 +80,11 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
 
  DLR 向 CLR 添加了一组服务，以便更好地支持动态语言。 这些服务包括：
 
--   表达式树。 DLR 使用表达式树来表示语言语义。 为此，DLR 扩展了 LINQ 表达式树，使其包含控制流、分配和其他语言建模节点。 有关详细信息，请参阅[表达式树 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) 或[表达式树 (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)。
+- 表达式树。 DLR 使用表达式树来表示语言语义。 为此，DLR 扩展了 LINQ 表达式树，使其包含控制流、分配和其他语言建模节点。 有关详细信息，请参阅[表达式树 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) 或[表达式树 (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)。
 
--   调用站点缓存。 动态调用站点是代码中对动态对象执行 `a + b` 或 `a.b()` 等操作的位置。 DLR 会缓存 `a` 和 `b`（通常为这些对象的类型）的特征，以及有关操作的信息。 如果之前已经执行过此类操作，则 DLR 会从缓存中检索所有的必要信息，以实现快速调度。
+- 调用站点缓存。 动态调用站点是代码中对动态对象执行 `a + b` 或 `a.b()` 等操作的位置。 DLR 会缓存 `a` 和 `b`（通常为这些对象的类型）的特征，以及有关操作的信息。 如果之前已经执行过此类操作，则 DLR 会从缓存中检索所有的必要信息，以实现快速调度。
 
--   动态对象互操作性。 DLR 提供一组表示动态对象和操作的类和接口，供语言实现者和动态库的作者使用。 这些类和接口包括<xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。
+- 动态对象互操作性。 DLR 提供一组表示动态对象和操作的类和接口，供语言实现者和动态库的作者使用。 这些类和接口包括<xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。
 
 DLR 在调用站点中使用联编程序不仅与 .NET Framework 进行通信，还与 Silverlight 和 COM 等其他基础结构和服务进行通信。 联编程序封装语言的语义，并指定如何使用表达式树在调用站点中执行操作。 这样使用 DLR 的动态和静态类型语言便可共享库，并访问 DLR 支持的所有技术。
 

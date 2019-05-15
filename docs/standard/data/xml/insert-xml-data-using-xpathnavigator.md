@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517248"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647916"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于在 XML 文档中插入同级节点、子节点和属性节点。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  
@@ -29,13 +29,13 @@ ms.locfileid: "54517248"
 ### <a name="inserting-sibling-nodes"></a>插入同级节点  
  <xref:System.Xml.XPath.XPathNavigator> 类提供下列方法来插入同辈节点。  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  这些方法在 <xref:System.Xml.XPath.XPathNavigator> 对象当前所处的节点之前和之后插入同辈节点。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "54517248"
 ### <a name="inserting-child-nodes"></a>插入子节点  
  <xref:System.Xml.XPath.XPathNavigator> 类提供下列方法来插入子节点。  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  这些方法在 <xref:System.Xml.XPath.XPathNavigator> 对象当前所处的节点的子节点列表的结尾和开头添加子节点。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54517248"
 ### <a name="inserting-attribute-nodes"></a>插入属性节点  
  <xref:System.Xml.XPath.XPathNavigator> 类提供下列方法来插入属性节点。  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  这些方法在 <xref:System.Xml.XPath.XPathNavigator> 对象当前所处的元素节点上插入属性节点。 <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> 方法使用命名空间前缀、本地名称、命名空间 URI 以及作为参数指定的值在 <xref:System.Xml.XPath.XPathNavigator> 对象当前所处的元素节点上创建属性节点。 <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> 方法返回用于插入属性节点的 <xref:System.Xml.XmlWriter> 对象。  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  以下是可能发生的命名空间冲突。  
   
--   如果在 <xref:System.Xml.XmlReader> 对象的上下文范围内存在命名空间，其中命名空间 URI 映射的前缀不在 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文中，新的命名空间声明将添加到新插入的节点。  
+- 如果在 <xref:System.Xml.XmlReader> 对象的上下文范围内存在命名空间，其中命名空间 URI 映射的前缀不在 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文中，新的命名空间声明将添加到新插入的节点。  
   
--   如果 <xref:System.Xml.XmlReader> 对象的上下文和 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文范围内存在相同的命名空间 URI，但是两个上下文中映射到该命名空间 URI 的前缀不同，新的命名空间声明将添加到新插入的节点，前缀和命名空间 URI 从 <xref:System.Xml.XmlReader> 对象获取。  
+- 如果 <xref:System.Xml.XmlReader> 对象的上下文和 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文范围内存在相同的命名空间 URI，但是两个上下文中映射到该命名空间 URI 的前缀不同，新的命名空间声明将添加到新插入的节点，前缀和命名空间 URI 从 <xref:System.Xml.XmlReader> 对象获取。  
   
--   如果 <xref:System.Xml.XmlReader> 对象的上下文和 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文范围内存在相同的命名空间前缀，但是两个上下文中映射到该命名空间前缀的命名空间 URI 不同，新的命名空间声明将添加到新插入的节点，该声明使用从 <xref:System.Xml.XmlReader> 对象获取的命名空间 URI 重新声明该前缀。  
+- 如果 <xref:System.Xml.XmlReader> 对象的上下文和 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文范围内存在相同的命名空间前缀，但是两个上下文中映射到该命名空间前缀的命名空间 URI 不同，新的命名空间声明将添加到新插入的节点，该声明使用从 <xref:System.Xml.XmlReader> 对象获取的命名空间 URI 重新声明该前缀。  
   
--   如果 <xref:System.Xml.XmlReader> 对象的上下文和 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文中的前缀以及命名空间 URI 相同，则不会向新插入的节点添加新的命名空间声明。  
+- 如果 <xref:System.Xml.XmlReader> 对象的上下文和 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文中的前缀以及命名空间 URI 相同，则不会向新插入的节点添加新的命名空间声明。  
   
 > [!NOTE]
 >  上面的说明同样适用于使用空 `string` 作为前缀的命名空间声明（例如默认的命名空间声明）。  
   
  以下是可能发生的 `xml:lang` 冲突。  
   
--   如果 `xml:lang` 对象的上下文范围内存在 <xref:System.Xml.XmlReader> 属性，但是 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文范围内没有，从 `xml:lang` 对象获取值的 <xref:System.Xml.XmlReader> 属性将添加到新插入的节点。  
+- 如果 `xml:lang` 对象的上下文范围内存在 <xref:System.Xml.XmlReader> 属性，但是 <xref:System.Xml.XPath.XPathNavigator> 对象的上下文范围内没有，从 `xml:lang` 对象获取值的 <xref:System.Xml.XmlReader> 属性将添加到新插入的节点。  
   
--   如果 `xml:lang` 对象的上下文和 <xref:System.Xml.XmlReader> 对象的上下文范围内均存在 <xref:System.Xml.XPath.XPathNavigator> 属性，但是每个属性的值不同，从 `xml:lang` 对象获取值的 <xref:System.Xml.XmlReader> 属性将添加到新插入的节点。  
+- 如果 `xml:lang` 对象的上下文和 <xref:System.Xml.XmlReader> 对象的上下文范围内均存在 <xref:System.Xml.XPath.XPathNavigator> 属性，但是每个属性的值不同，从 `xml:lang` 对象获取值的 <xref:System.Xml.XmlReader> 属性将添加到新插入的节点。  
   
--   如果 `xml:lang` 对象的上下文和 <xref:System.Xml.XmlReader> 对象的上下文范围内均存在 <xref:System.Xml.XPath.XPathNavigator> 属性，但是每个属性的值相同，则不会向新插入的节点添加新的 `xml:lang` 属性。  
+- 如果 `xml:lang` 对象的上下文和 <xref:System.Xml.XmlReader> 对象的上下文范围内均存在 <xref:System.Xml.XPath.XPathNavigator> 属性，但是每个属性的值相同，则不会向新插入的节点添加新的 `xml:lang` 属性。  
   
--   如果 `xml:lang` 对象的上下文范围内存在 <xref:System.Xml.XPath.XPathNavigator> 属性，但是 <xref:System.Xml.XmlReader> 对象的上下文范围内不存在，则不会向新插入的节点添加 `xml:lang` 属性。  
+- 如果 `xml:lang` 对象的上下文范围内存在 <xref:System.Xml.XPath.XPathNavigator> 属性，但是 <xref:System.Xml.XmlReader> 对象的上下文范围内不存在，则不会向新插入的节点添加 `xml:lang` 属性。  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>使用 XmlWriter 插入节点  
  “插入节点和值”一节中所述的用于插入同级节点、子节点和属性节点的方法均是重载方法。 <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> 类的 <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>、<xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>、<xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>、<xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> 和 <xref:System.Xml.XPath.XPathNavigator> 方法返回用于插入节点的 <xref:System.Xml.XmlWriter> 对象。  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  以下是在使用多个 <xref:System.Xml.XmlWriter> 对象时要考虑的重要事项。  
   
--   在调用每个 <xref:System.Xml.XmlWriter> 对象的 <xref:System.Xml.XmlWriter.Close%2A> 方法时，通过 <xref:System.Xml.XmlWriter> 对象编写的 XML 片断将添加到 XML 文档中。 直到此时，<xref:System.Xml.XmlWriter> 对象一直在编写断开的片断。 如果对 XML 文档执行某项操作，在调用 <xref:System.Xml.XmlWriter> 之前，任何通过 <xref:System.Xml.XmlWriter.Close%2A> 对象编写的片断不会受影响。  
+- 在调用每个 <xref:System.Xml.XmlWriter> 对象的 <xref:System.Xml.XmlWriter.Close%2A> 方法时，通过 <xref:System.Xml.XmlWriter> 对象编写的 XML 片断将添加到 XML 文档中。 直到此时，<xref:System.Xml.XmlWriter> 对象一直在编写断开的片断。 如果对 XML 文档执行某项操作，在调用 <xref:System.Xml.XmlWriter> 之前，任何通过 <xref:System.Xml.XmlWriter.Close%2A> 对象编写的片断不会受影响。  
   
--   如果特定 XML 子树上存在打开的 <xref:System.Xml.XmlWriter> 对象并且该子树已删除，<xref:System.Xml.XmlWriter> 对象仍可以添加到子树上。 只是子树成为已删除的片断。  
+- 如果特定 XML 子树上存在打开的 <xref:System.Xml.XmlWriter> 对象并且该子树已删除，<xref:System.Xml.XmlWriter> 对象仍可以添加到子树上。 只是子树成为已删除的片断。  
   
--   如果在 XML 文档的相同位置打开多个 <xref:System.Xml.XmlWriter> 对象，这些对象将按照 <xref:System.Xml.XmlWriter> 对象关闭的顺序添加到 XML 文档，而不是按照对象打开的顺序。  
+- 如果在 XML 文档的相同位置打开多个 <xref:System.Xml.XmlWriter> 对象，这些对象将按照 <xref:System.Xml.XmlWriter> 对象关闭的顺序添加到 XML 文档，而不是按照对象打开的顺序。  
   
  以下示例创建一个 <xref:System.Xml.XmlDocument> 对象，创建一个 <xref:System.Xml.XPath.XPathNavigator> 对象，然后使用 <xref:System.Xml.XmlWriter> 方法返回的 <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> 对象在 `books.xml` 文件中创建第一本图书的结构。 然后，示例将其保存为 `book.xml` 文件。  
   
