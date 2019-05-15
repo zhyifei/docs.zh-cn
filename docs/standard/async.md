@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: aa08389d896fa81dbed8a63bb22a97e151016392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628796"
 ---
 # <a name="async-overview"></a>异步概述
 
@@ -39,10 +39,10 @@ ms.locfileid: "37071419"
 
 [异步编程模式](asynchronous-programming-patterns/index.md)主题概述了 .NET 支持的三个异步编程模式：  
   
--   [异步编程模型 (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md)（旧版）  
+- [异步编程模型 (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md)（旧版）  
   
--   [基于事件的异步模式 (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)（旧版）  
+- [基于事件的异步模式 (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)（旧版）  
   
--   [基于任务的异步模式 (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)（建议用于新开发）  
+- [基于任务的异步模式 (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)（建议用于新开发）  
 
 若要详细了解推荐的基于任务的编程模型，请参阅[基于任务的异步编程](parallel-programming/task-based-asynchronous-programming.md)主题。

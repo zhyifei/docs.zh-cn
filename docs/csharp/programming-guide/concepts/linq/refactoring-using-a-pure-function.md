@@ -2,12 +2,12 @@
 title: 使用纯函数重构 (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 66aab1b92f1a017eae650b18bd13d52536e84a6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be0b0d0778fea459701153b1c629f9ce797db1aa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692293"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608913"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>使用纯函数重构 (C#)
 下面的示例使用一个纯函数对前面的示例[使用扩展方法重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) 进行重构。在本示例中，查找段落文本的代码将移至纯静态方法 `ParagraphText` 中。  
@@ -177,7 +177,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>后续步骤  
  下面的示例演示如何将 XML 投影到一个不同的形状：  
   
--   [对不同形状的 XML 进行投影 (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [对不同形状的 XML 进行投影 (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>请参阅
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 15bec7c9604b243c586b393d71007b02917d3a6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310767"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628948"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>如何：在 Visual Basic 中将具有特定模式的文件复制到目录中
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法返回表示文件的路径名的只读字符串集合。 可以使用 `wildCards` 参数来指定特定模式。  
@@ -43,19 +43,19 @@ ms.locfileid: "59310767"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
+- 路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
--   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   目录不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
+- 目录不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
   
--   指向某个现有文件的目录 (<xref:System.IO.IOException>)。  
+- 指向某个现有文件的目录 (<xref:System.IO.IOException>)。  
   
--   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+- 路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。  
+- 路径中的文件名或目录名包含冒号 (:)，或格式无效 (<xref:System.NotSupportedException>)。  
   
--   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。 该用户缺少必要的权限 (<xref:System.UnauthorizedAccessException>)。  
+- 该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。 该用户缺少必要的权限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9ae041ae278dc6f2423a679dab8982f4ccc35620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592499"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>如何：使用 CodeDOM 创建 XML 文档文件
 可使用 CodeDOM 创建生成 XML 文档的代码。 该进程包括创建包含 XML 文档注释的 CodeDOM 图、生成代码和通过创建 XML 文档输出的编译器选项编译生成的代码。  
@@ -77,7 +77,7 @@ ms.locfileid: "59297520"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   需要 `FullTrust` 权限集才可成功执行此代码示例。  
+- 需要 `FullTrust` 权限集才可成功执行此代码示例。  
   
 ## <a name="see-also"></a>请参阅
 

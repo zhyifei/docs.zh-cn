@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970709"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595644"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何：创建文件或文件夹（C# 编程指南）
 可通过编程方式在计算机上创建文件夹、子文件夹和子文件夹中的文件，并将数据写入文件。  
@@ -25,7 +25,7 @@ ms.locfileid: "56970709"
   
  通过在示例中作出以下更改，可根据具有特定名称的文件是否存在来指定不同的结果。 如果该文件不存在，代码就会创建一个文件。 如果该文件存在，代码就会将数据追加到该文件中。  
   
--   指定一个非随机文件名。  
+- 指定一个非随机文件名。  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ ms.locfileid: "56970709"
     string fileName = "MyNewFile.txt";  
     ```  
   
--   用以下代码中的 `using` 语句替换 `if`-`else` 语句。  
+- 用以下代码中的 `using` 语句替换 `if`-`else` 语句。  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ ms.locfileid: "56970709"
   
  以下情况可能会导致异常：  
   
--   文件夹名称格式不正确。 例如，它包含非法字符或它仅为空格（<xref:System.ArgumentException> 类）。 使用 <xref:System.IO.Path> 类创建有效的路径名。  
+- 文件夹名称格式不正确。 例如，它包含非法字符或它仅为空格（<xref:System.ArgumentException> 类）。 使用 <xref:System.IO.Path> 类创建有效的路径名。  
   
--   要创建的文件夹的父文件夹为只读（<xref:System.IO.IOException> 类）。  
+- 要创建的文件夹的父文件夹为只读（<xref:System.IO.IOException> 类）。  
   
--   文件夹名为 `null`<xref:System.ArgumentNullException> 类）。  
+- 文件夹名为 `null`<xref:System.ArgumentNullException> 类）。  
   
--   文件夹名过长（<xref:System.IO.PathTooLongException> 类）。  
+- 文件夹名过长（<xref:System.IO.PathTooLongException> 类）。  
   
--   文件夹仅为冒号“:”（<xref:System.IO.PathTooLongException> 类）。  
+- 文件夹仅为冒号“:”（<xref:System.IO.PathTooLongException> 类）。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  可能在部分信任场景中引发 <xref:System.Security.SecurityException> 类的实例。  

@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615182"
 ---
 # <a name="framework-libraries"></a>框架库
 
@@ -41,23 +41,23 @@ BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库�
 
 .NET 包含一组数据结构，这些结构是几乎所有 .NET 应用的工作主力。 它们主要是集合，不过也包括其他类型。
 
-*   <xref:System.Array>- 表示可通过索引访问的强类型对象的数组。 具有与构造相符的固定大小。
-*   <xref:System.Collections.Generic.List%601> - 表示可通过索引访问的对象的强类型列表。 可根据需要自动调整大小。
-*   <xref:System.Collections.Generic.Dictionary%602> -表示根据键编制索引的值的集合。 可以通过键访问值。 可根据需要自动调整大小。
-*   <xref:System.Uri> - 提供统一资源标识符 (URI) 的对象表示形式和对 URI 各部分的轻松访问。
-*   <xref:System.DateTime> - 表示时间上的一刻，通常以日期和当天的时间表示。
+* <xref:System.Array>- 表示可通过索引访问的强类型对象的数组。 具有与构造相符的固定大小。
+* <xref:System.Collections.Generic.List%601> - 表示可通过索引访问的对象的强类型列表。 可根据需要自动调整大小。
+* <xref:System.Collections.Generic.Dictionary%602> -表示根据键编制索引的值的集合。 可以通过键访问值。 可根据需要自动调整大小。
+* <xref:System.Uri> - 提供统一资源标识符 (URI) 的对象表示形式和对 URI 各部分的轻松访问。
+* <xref:System.DateTime> - 表示时间上的一刻，通常以日期和当天的时间表示。
 
 ## <a name="utility-apis"></a>实用工具 API
 
 .NET 包含一组可为许多重要任务提供功能的实用工具 API。
 
-*   <xref:System.Net.Http.HttpClient> - 用于发送 HTTP 请求以及从 URI 所标识资源接收 HTTP 响应的 API。
-*   <xref:System.Xml.Linq.XDocument> - 用于配合 LINQ 加载和查询 XML 文档的 API。
-*   <xref:System.IO.StreamReader> - 用于读取文件的 API。 
-*   <xref:System.IO.StreamWriter> - 用于写入文件的 API。
+* <xref:System.Net.Http.HttpClient> - 用于发送 HTTP 请求以及从 URI 所标识资源接收 HTTP 响应的 API。
+* <xref:System.Xml.Linq.XDocument> - 用于配合 LINQ 加载和查询 XML 文档的 API。
+* <xref:System.IO.StreamReader> - 用于读取文件的 API。 
+* <xref:System.IO.StreamWriter> - 用于写入文件的 API。
 
 ## <a name="app-model-apis"></a>应用模型 API
 
 某些公司提供了可与 .NET 配合使用的多个应用模型。
 
-*   [ASP.NET](https://www.asp.net) - 提供用于构建网站和服务的 Web 框架。 受 Windows、Linux 和 macOS 的支持（取决于 ASP.NET 版本）。
+* [ASP.NET](https://www.asp.net) - 提供用于构建网站和服务的 Web 框架。 受 Windows、Linux 和 macOS 的支持（取决于 ASP.NET 版本）。

@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622695"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>如何：获取独立存储的存储区
 独立存储区公开数据隔离舱中的虚拟文件系统。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 类提供许多与独立存储区交互的方法。 为了创建和检索存储区，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供了三种静态方法：  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> 返回按用户和程序集隔离的存储。  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> 返回按用户和程序集隔离的存储。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 返回按域和程序集隔离的存储。  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 返回按域和程序集隔离的存储。  
   
      这两种方法检索属于所调用代码的存储区。  
   
--   静态方法 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 返回通过传入一组范围参数指定的独立存储。  
+- 静态方法 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 返回通过传入一组范围参数指定的独立存储。  
   
  下面的示例返回按用户、程序集和域隔离的存储区。  
   

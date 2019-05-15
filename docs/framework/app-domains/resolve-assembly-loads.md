@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: accb06421b8a697b0ee89adab0a9dffa23cffb05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193104"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607674"
 ---
 # <a name="resolving-assembly-loads"></a>解决程序集加载
 .NET Framework 为对程序集加载需要更强控制的应用程序提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 通过处理此事件，应用程序可从常规探测路径外部将程序集加载到加载上下文、从几个程序集版本中选择要加载的版本、发出动态程序集并返回此程序集，等等。 本主题指导如何处理 <xref:System.AppDomain.AssemblyResolve> 事件。  
@@ -30,24 +30,24 @@ ms.locfileid: "59193104"
 ## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve 事件的工作原理  
  注册 <xref:System.AppDomain.AssemblyResolve> 事件的处理程序后，每当运行时无法按名称绑定到程序集时，此处理程序都将被调用。 例如，从用户代码中调用以下方法可能导致引发 <xref:System.AppDomain.AssemblyResolve> 事件：  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法重载或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载，其第一个参数是表示要加载的程序集的显示名称的字符串（即，<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 属性返回的字符串）。  
+- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法重载或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载，其第一个参数是表示要加载的程序集的显示名称的字符串（即，<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 属性返回的字符串）。  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法重载或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载，其第一个参数是标识要加载的程序集的 <xref:System.Reflection.AssemblyName> 对象。  
+- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法重载或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载，其第一个参数是标识要加载的程序集的 <xref:System.Reflection.AssemblyName> 对象。  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法重载。  
+- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法重载。  
   
--   <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 方法重载，实例化另一个应用程序域中的对象。  
+- <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 方法重载，实例化另一个应用程序域中的对象。  
   
 ### <a name="what-the-event-handler-does"></a>事件处理程序的功能  
  <xref:System.AppDomain.AssemblyResolve> 事件的处理程序接收要加载的程序集的显示名称（在 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 属性中）。 如果处理程序无法识别程序集名称，则返回 null（在 Visual Basic 中为 `Nothing`，在 Visual C++ 中为 `nullptr`）。  
   
  如果处理程序识别了程序集名称，它可以加载并返回满足此请求的程序集。 下面的列表介绍了一些示例方案。  
   
--   如果处理程序知道某一版本程序集的位置，它可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> 方法加载程序集，然后返回已加载的程序集（如果成功）。  
+- 如果处理程序知道某一版本程序集的位置，它可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> 方法加载程序集，然后返回已加载的程序集（如果成功）。  
   
--   如果处理程序有权访问以字节数组形式存储的程序集的数据库，则它可以通过使用可采用字节数组的一种 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载来加载字节数组。  
+- 如果处理程序有权访问以字节数组形式存储的程序集的数据库，则它可以通过使用可采用字节数组的一种 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载来加载字节数组。  
   
--   处理程序可以生成动态程序集并将其返回。  
+- 处理程序可以生成动态程序集并将其返回。  
   
 > [!NOTE]
 >  处理程序必须将程序集加载到加载源上下文或加载上下文，或加载不具有上下文的程序集。如果处理程序使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 方法将程序集加载到仅限反射的上下文，则引发 <xref:System.AppDomain.AssemblyResolve> 事件的加载尝试将失败。  
@@ -58,11 +58,11 @@ ms.locfileid: "59193104"
   
  大多数情况下，处理程序返回的程序集在加载上下文中显示，与处理程序将其加载到的上下文无关。 例如，如果处理程序使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法将程序集加载到加载源上下文，当处理程序返回此程序集时，它将在加载上下文中显示。 但在以下情况，处理程序返回程序集时将不会显示其上下文：  
   
--   处理程序加载了不具有上下文的程序集。  
+- 处理程序加载了不具有上下文的程序集。  
   
--   <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 属性不为 null。  
+- <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 属性不为 null。  
   
--   加载请求的程序集（即 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 属性返回的程序集）时未加载上下文。  
+- 加载请求的程序集（即 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 属性返回的程序集）时未加载上下文。  
   
  有关上下文的信息，请参阅 <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> 方法重载。  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890496"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633439"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：验证字符串是否为有效的电子邮件格式
 下面的示例使用正则表达式来验证一个字符串是否为有效的电子邮件格式。  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  假设你已创建了一个名为 RegexUtilities.dll 的类库，其中包括你的电子邮件验证正则表达式，你可通过以下方法之一来编译此示例：  
   
--   在 Visual Studio 中，创建一个控制台应用程序并为项目添加一个对 RegexUtilities.dll 的引用。  
+- 在 Visual Studio 中，创建一个控制台应用程序并为项目添加一个对 RegexUtilities.dll 的引用。  
   
--   从命令行，将源代码复制和粘贴到文本文件中并使用如下命令来对其进行编译（假定源代码文件的名称是 Example.cs 或 Example.vb：  
+- 从命令行，将源代码复制和粘贴到文本文件中并使用如下命令来对其进行编译（假定源代码文件的名称是 Example.cs 或 Example.vb：  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

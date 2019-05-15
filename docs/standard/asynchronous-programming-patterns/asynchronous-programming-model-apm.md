@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628940"
 ---
 # <a name="asynchronous-programming-model-apm"></a>异步编程模型 (APM)
 使用 <xref:System.IAsyncResult> 设计模式的异步操作是通过名为 `BeginOperationName` 和 `EndOperationName` 的两个方法来实现的，这两个方法分别开始和结束异步操作 OperationName。 例如， <xref:System.IO.FileStream> 类提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法来从文件异步读取字节。 这两个方法实现了 <xref:System.IO.FileStream.Read%2A> 方法的异步版本。  
@@ -55,15 +55,15 @@ ms.locfileid: "54654303"
   
  对于访问异步操作的结果，应用程序开发人员有若干种设计选择。 正确的选择取决于应用程序是否有可以在操作完成时执行的指令。 如果应用程序在接收到异步操作结果之前不能进行任何其他工作，则必须在获得这些结果之前先阻止该应用程序进行其他工作。 若要在异步操作完成之前阻止应用程序，可以使用下列方法之一：  
   
--   从应用程序的主线程调用 `EndOperationName`，阻止应用程序执行，直到操作完成之后再继续执行。 有关展示了此方法的示例，请参阅[通过结束异步操作阻止应用执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。  
+- 从应用程序的主线程调用 `EndOperationName`，阻止应用程序执行，直到操作完成之后再继续执行。 有关展示了此方法的示例，请参阅[通过结束异步操作阻止应用执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。  
   
--   使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 来阻止应用程序执行，直到一个或多个操作完成。 有关演示此方法的示例，请参阅 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
+- 使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 来阻止应用程序执行，直到一个或多个操作完成。 有关演示此方法的示例，请参阅 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
   
  在异步操作完成时不需要阻止的应用程序可使用下列方法之一：  
   
--   按以下方式轮询操作完成状态：定期检查 <xref:System.IAsyncResult.IsCompleted%2A> 属性，操作完成后调用 `EndOperationName`。 有关演示此方法的示例，请参阅 [轮询异步操作的状态](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
+- 按以下方式轮询操作完成状态：定期检查 <xref:System.IAsyncResult.IsCompleted%2A> 属性，操作完成后调用 `EndOperationName`。 有关演示此方法的示例，请参阅 [轮询异步操作的状态](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)。  
   
--   使用 <xref:System.AsyncCallback> 委托来指定要在操作完成时调用的方法。 有关演示此方法的示例，请参阅 [使用 AsyncCallback 委托结束异步操作](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
+- 使用 <xref:System.AsyncCallback> 委托来指定要在操作完成时调用的方法。 有关演示此方法的示例，请参阅 [使用 AsyncCallback 委托结束异步操作](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
   
 ## <a name="see-also"></a>请参阅
 

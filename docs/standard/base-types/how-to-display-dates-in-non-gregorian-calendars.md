@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634003"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：用非公历日历显示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型使用公历作为默认日历。 这意味着，调用日期和时间值的 `ToString` 方法会用公历日历显示该日期和时间的字符串表示形式，即使该日期和时间是使用其他日历创建的。 下面的示例对此进行了展示，虽然使用两种不同的方式创建采用波斯历的日期和时间值，但在调用 <xref:System.DateTime.ToString%2A> 方法时仍采用公历显示这些日期和时间值。 此示例对于用特定日历显示日期，反映了两种常用但不正确的方法。  
@@ -51,19 +51,19 @@ ms.locfileid: "59313302"
   
 3. 对于要显示的每个日期和时间元素，调用日历对象的 `Get`... 方法。 有以下方法可用：  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A>：采用适当日历显示年份。  
+    - <xref:System.Globalization.Calendar.GetYear%2A>：采用适当日历显示年份。  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A>：采用适当日历显示月份。  
+    - <xref:System.Globalization.Calendar.GetMonth%2A>：采用适当日历显示月份。  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>：采用适当日历显示月份中的多少号。  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A>：采用适当日历显示月份中的多少号。  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A>：采用适当日历显示一天中的小时段。  
+    - <xref:System.Globalization.Calendar.GetHour%2A>：采用适当日历显示一天中的小时段。  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A>：采用适当日历显示小时中的分钟数。  
+    - <xref:System.Globalization.Calendar.GetMinute%2A>：采用适当日历显示小时中的分钟数。  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A>：采用适当日历显示分钟中的秒数。  
+    - <xref:System.Globalization.Calendar.GetSecond%2A>：采用适当日历显示分钟中的秒数。  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>：采用适当日历显示分钟中的毫秒数。  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A>：采用适当日历显示分钟中的毫秒数。  
   
 ## <a name="example"></a>示例  
  该示例使用两个不同日历显示日期。 它在将回历定义为 ar-JO 区域性的默认日历之后显示日期，并使用波斯日历（fa-IR 区域性不支持将它作为可选日历）显示日期。  
@@ -75,13 +75,13 @@ ms.locfileid: "59313302"
   
  该示例定义了一个可重用的日历实用工具类 `CalendarUtility`，用于处理有关使用特定日历生成日期的字符串表示形式的许多详细信息。 `CalendarUtility` 类包含以下成员：  
   
--   参数化构造函数，其中一个参数是要用来表示日期的 <xref:System.Globalization.Calendar> 对象。 这会分配给类的私有字段。  
+- 参数化构造函数，其中一个参数是要用来表示日期的 <xref:System.Globalization.Calendar> 对象。 这会分配给类的私有字段。  
   
--   `CalendarExists`：返回布尔值的专用方法，用于指明以参数形式传递到方法的 <xref:System.Globalization.CultureInfo> 对象是否支持 `CalendarUtility` 对象表示的日历。 此方法包装对 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法的调用，并向其传递 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 数组。  
+- `CalendarExists`：返回布尔值的专用方法，用于指明以参数形式传递到方法的 <xref:System.Globalization.CultureInfo> 对象是否支持 `CalendarUtility` 对象表示的日历。 此方法包装对 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法的调用，并向其传递 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 数组。  
   
--   `HasSameName`：专用方法，分配给以参数形式传递到 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法的 <xref:System.Predicate%601> 委托。 数组的每个成员都会传递给该方法，直到该方法返回 `true`。 该方法确定可选日历的名称是否与 `CalendarUtility` 对象表示的日历相同。  
+- `HasSameName`：专用方法，分配给以参数形式传递到 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 方法的 <xref:System.Predicate%601> 委托。 数组的每个成员都会传递给该方法，直到该方法返回 `true`。 该方法确定可选日历的名称是否与 `CalendarUtility` 对象表示的日历相同。  
   
--   `DisplayDate`：重载的公共方法，向它传递下面两个参数：要以 `CalendarUtility` 对象表示的日历表示的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，以及要使用其格式设置规则的区域性。 它在返回日期的字符串表示形式时的行为取决于要使用其格式设置规则的区域性是否支持目标日历。  
+- `DisplayDate`：重载的公共方法，向它传递下面两个参数：要以 `CalendarUtility` 对象表示的日历表示的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，以及要使用其格式设置规则的区域性。 它在返回日期的字符串表示形式时的行为取决于要使用其格式设置规则的区域性是否支持目标日历。  
   
  无论在此示例中使用哪种日历创建 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，相应值通常都表示为公历日期。 这是因为 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型不暂留任何日历信息。 它们在内部表示自 0001 年 1 月 1 日午夜以来所经历的时钟周期数。 该数字的解释取决于日历。 对于大多数区域性，默认日历是公历。  
   

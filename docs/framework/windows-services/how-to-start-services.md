@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336832"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591457"
 ---
 # <a name="how-to-start-services"></a>如何：启动服务
 安装服务后，必须启动它。 开始调用服务类上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法通常定义服务将执行的有用工作。 服务启动后，在手动暂停或停止它前，该服务将保持活动状态。  
@@ -58,11 +58,11 @@ ms.locfileid: "59336832"
   
 1. 执行以下操作之一，打开“服务控制管理器”：  
   
-    -   在 Windows XP 和 2000 Professional 中，右键单击桌面上的“我的电脑”，然后单击“管理”。 在出现的对话框中，展开“服务和应用程序”节点。  
+    - 在 Windows XP 和 2000 Professional 中，右键单击桌面上的“我的电脑”，然后单击“管理”。 在出现的对话框中，展开“服务和应用程序”节点。  
   
          \- 或 -  
   
-    -   在 Windows Server 2003 和 Windows 2000 Server 中，单击“开始”，指向“程序”，单击“管理工具”，然后单击“服务”。  
+    - 在 Windows Server 2003 和 Windows 2000 Server 中，单击“开始”，指向“程序”，单击“管理工具”，然后单击“服务”。  
   
         > [!NOTE]
         >  在 Windows NT 4.0 版中，可以从“控制面板”打开此对话框。  

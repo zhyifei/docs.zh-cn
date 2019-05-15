@@ -7,56 +7,56 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 288c54fa854d753e9b8030463968137b32353b4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dcaf74a6ff99113903f066740ebf143dfad95f74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629152"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>如何：在 Visual Basic 中删除文件
 通过 `My.Computer.FileSystem` 对象的 `DeleteFile` 方法，可以删除文件。 它提供的选项包括：是否将已删除的文件发送到“回收站”、是否要求用户确认应删除该文件，以及当用户取消操作时要执行的操作。  
   
 ### <a name="to-delete-a-text-file"></a>删除文本文件  
   
--   使用 `DeleteFile` 方法删除文件。 以下代码演示如何删除名为 `test.txt` 的文件。  
+- 使用 `DeleteFile` 方法删除文件。 以下代码演示如何删除名为 `test.txt` 的文件。  
   
      [!code-vb[VbVbcnMyFileSystem#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#22)]  
   
 ### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>删除文本文件，并要求用户确认应删除该文件  
   
--   使用 `DeleteFile` 方法删除文件，同时将 `showUI` 设置为 `AllDialogs`。 以下代码演示如何删除名为 `test.txt` 的文件，并允许用户确认是否应删除该文件。  
+- 使用 `DeleteFile` 方法删除文件，同时将 `showUI` 设置为 `AllDialogs`。 以下代码演示如何删除名为 `test.txt` 的文件，并允许用户确认是否应删除该文件。  
   
      [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
 ### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>删除文本文件并将其发送到“回收站”  
   
--   使用 `DeleteFile` 方法删除文件，并为 `recycle` 参数指定 `SendToRecycleBin`。 以下代码演示如何删除名为 `test.txt` 的文件并将其发送到“回收站”。  
+- 使用 `DeleteFile` 方法删除文件，并为 `recycle` 参数指定 `SendToRecycleBin`。 以下代码演示如何删除名为 `test.txt` 的文件并将其发送到“回收站”。  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
+- 路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
--   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
+- 路径超过了系统定义的最大长度 (<xref:System.IO.PathTooLongException>)。  
   
--   路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
+- 路径中的文件名或文件夹名包含冒号 (:)，或其格式无效 (<xref:System.NotSupportedException>)。  
   
--   该文件正在使用中 (<xref:System.IO.IOException>)。  
+- 该文件正在使用中 (<xref:System.IO.IOException>)。  
   
--   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
+- 该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
--   该文件不存在 (<xref:System.IO.FileNotFoundException>)。  
+- 该文件不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   用户无权删除文件，或文件为只读 (<xref:System.UnauthorizedAccessException>)。  
+- 用户无权删除文件，或文件为只读 (<xref:System.UnauthorizedAccessException>)。  
   
--   存在部分信任的情况，在此情况下用户没有足够的权限 (<xref:System.Security.SecurityException>)。  
+- 存在部分信任的情况，在此情况下用户没有足够的权限 (<xref:System.Security.SecurityException>)。  
   
--   用户取消了该操作，并且 `onUserCancel` 设置为 `ThrowException` (<xref:System.OperationCanceledException>)。  
+- 用户取消了该操作，并且 `onUserCancel` 设置为 `ThrowException` (<xref:System.OperationCanceledException>)。  
   
 ## <a name="see-also"></a>请参阅
 

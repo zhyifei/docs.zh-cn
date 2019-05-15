@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: fdb61fee8a790000c53b6c9a0188999bc0cb09ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840315"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662761"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中删除注册表项
 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 和 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 方法可以用于删除注册表项。  
@@ -25,7 +25,7 @@ ms.locfileid: "58840315"
   
 #### <a name="to-delete-a-registry-key"></a>删除注册表项  
   
--   使用 `DeleteSubKey` 方法删除注册表项。 此示例将删除 CurrentUser 配置单元中的软件/TestApp 项。 可在代码中更改为相应的字符串，或使它依赖于用户提供的信息。  
+- 使用 `DeleteSubKey` 方法删除注册表项。 此示例将删除 CurrentUser 配置单元中的软件/TestApp 项。 可在代码中更改为相应的字符串，或使它依赖于用户提供的信息。  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
@@ -34,20 +34,19 @@ ms.locfileid: "58840315"
   
  以下情况可能会导致异常：  
   
--   密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
+- 密钥名称是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   用户没有删除注册表项的权限 (<xref:System.Security.SecurityException>)。  
+- 用户没有删除注册表项的权限 (<xref:System.Security.SecurityException>)。  
   
--   项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。  
+- 项名称超过 255 个字符的限制 (<xref:System.ArgumentException>)。  
   
--   注册表项为只读 (<xref:System.UnauthorizedAccessException>)。  
+- 注册表项为只读 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  如果未授予足够的运行时权限 (<xref:System.Security.Permissions.RegistryPermission>) 或用户没有用于创建或写入设置的适当访问权限（由 ACL 确定），则注册表调用将失败。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。  
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>
 - [安全性与注册表](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)

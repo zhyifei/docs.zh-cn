@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633644"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>正则表达式中的限定符
 限定符指定输入中必须存在字符、组或字符类的多少实例才能找到匹配项。  下表列出了 .NET 支持的限定符。  
@@ -228,11 +228,11 @@ ms.locfileid: "54678260"
 ## <a name="greedy-and-lazy-quantifiers"></a>贪婪与惰性限定符  
  一些限定符具有两个版本：  
   
--   贪婪版本。  
+- 贪婪版本。  
   
      贪婪限定符尝试尽可能多地匹配元素。  
   
--   非贪婪（或惰性）版本。  
+- 非贪婪（或惰性）版本。  
   
      非贪婪限定符尝试尽可能少地匹配元素。 只需添加 `?`，即可将贪婪量符转换为惰性量符。  
   

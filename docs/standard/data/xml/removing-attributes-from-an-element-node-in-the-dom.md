@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590039"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>移除 DOM 中元素节点的属性
 有多种方法可以移除属性。 一种方法是从属性集合中移除它们。 为此，请执行下列步骤：  
@@ -19,19 +19,19 @@ ms.locfileid: "59336130"
   
 2. 使用以下三种方法之一移除属性集合中的属性：  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.Remove%2A> 移除特定的属性。  
+    - 使用 <xref:System.Xml.XmlAttributeCollection.Remove%2A> 移除特定的属性。  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 移除集合中的所有属性并保留没有属性的元素。  
+    - 使用 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 移除集合中的所有属性并保留没有属性的元素。  
   
-    -   使用 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> 通过索引号从属性集合中移除属性。  
+    - 使用 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> 通过索引号从属性集合中移除属性。  
   
  下列方法移除元素节点中的属性。  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> 移除属性集合。  
+- 使用 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> 移除属性集合。  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAttribute%2A> 可按名称从集合中移除单个属性。  
+- 使用 <xref:System.Xml.XmlElement.RemoveAttribute%2A> 可按名称从集合中移除单个属性。  
   
--   使用 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> 按索引号从集合中移除单个属性。  
+- 使用 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> 按索引号从集合中移除单个属性。  
   
  另一个替换方法是获取元素，获取属性集合中的属性并直接移除属性节点。 若要获取属性集合中的属性，可使用名称 `XmlAttribute attr = attrs["attr_name"];`、索引 `XmlAttribute attr = attrs[0];` 或用命名空间 `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]` 完全限定该名称。  
   

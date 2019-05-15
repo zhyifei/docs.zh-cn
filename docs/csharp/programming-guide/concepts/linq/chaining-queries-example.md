@@ -2,12 +2,12 @@
 title: 链接查询示例 (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598556"
 ---
 # <a name="chaining-queries-example-c"></a>链接查询示例 (C#)
 此示例建立在前一示例的基础上，演示两个都使用延迟执行和迟缓计算的查询链接到一起时会发生什么情况。  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  本教程下一主题演示中间具体化：  
   
--   [中间具体化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [中间具体化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>请参阅
 

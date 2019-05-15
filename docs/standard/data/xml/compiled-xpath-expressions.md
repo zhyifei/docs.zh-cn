@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1716488f6e072b09469dfbe5cc8fb4965e5db44c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605231"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647951"
 ---
 # <a name="compiled-xpath-expressions"></a>已编译的 XPath 表达式
 <xref:System.Xml.XPath.XPathExpression> 对象表示从 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 类的静态 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法返回的已编译 XPath 查询。  
@@ -25,15 +25,15 @@ ms.locfileid: "54605231"
   
  编译后，根据从 XPath 查询返回的类型，<xref:System.Xml.XPath.XPathExpression> 对象也许可以作为下列 <xref:System.Xml.XPath.XPathNavigator> 类方法的输入。  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  下表介绍每种 W3C XPath 返回类型、其等效的 Microsoft .NET Framework 类型以及 <xref:System.Xml.XPath.XPathExpression> 对象基于其返回类型也许可以用于的方法。  
   
@@ -52,19 +52,19 @@ ms.locfileid: "54605231"
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 属性返回表示 W3C XPath 返回类型的下列 <xref:System.Xml.XPath.XPathResultType> 枚举值之一。  
   
--   <xref:System.Xml.XPath.XPathResultType.Any>  
+- <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+- <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType.Error>  
+- <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType.Navigator>  
+- <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+- <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType.Number>  
+- <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType.String>  
+- <xref:System.Xml.XPath.XPathResultType.String>  
   
  以下示例使用 <xref:System.Xml.XPath.XPathExpression> 对象从 `books.xml` 文件中返回一个数字和一个节点集。 每个 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 对象的 <xref:System.Xml.XPath.XPathExpression> 属性以及 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 和 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法的返回结果将写入控制台。  
   

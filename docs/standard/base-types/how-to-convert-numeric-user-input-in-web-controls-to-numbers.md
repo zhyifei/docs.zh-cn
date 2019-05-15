@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634166"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：将用户在 Web 控件中输入的数值转换成数字
 由于世界各地的人都可以查看网页，因此用户能够在 <xref:System.Web.UI.WebControls.TextBox> 控件中以几乎无限种格式输入数字数据。 所以，请务必确定网页用户的区域设置和区域性。 分析用户输入后，可以应用用户的区域设置和区域性定义的格式设置约定。  
@@ -35,9 +35,9 @@ ms.locfileid: "59296155"
   
 4. 调用要将用户输入转换为的数字类型的 `TryParse` 或 `Parse` 方法。 重载 `TryParse` 或 `Parse` 方法（带 `provider` 参数），并将它传递到下面两个对象之一：  
   
-    -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
+    - 第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
   
-    -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 属性返回的 <xref:System.Globalization.NumberFormatInfo> 对象。  
+    - 第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 属性返回的 <xref:System.Globalization.NumberFormatInfo> 对象。  
   
 5. 如果转换失败，请对 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组中的每个剩余元素重复执行第 2 步到第 4 步。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "59296155"
 ## <a name="compiling-the-code"></a>编译代码  
  若要编译代码，请将它复制到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 代码隐藏页面中，以便替换所有现有代码。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 网页应包含以下控件：  
   
--   未在代码中引用的 <xref:System.Web.UI.WebControls.Label> 控件。 将它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 属性设置为“Enter a Number:”。  
+- 未在代码中引用的 <xref:System.Web.UI.WebControls.Label> 控件。 将它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 属性设置为“Enter a Number:”。  
   
--   名为 `NumericString` 的 <xref:System.Web.UI.WebControls.TextBox> 控件。  
+- 名为 `NumericString` 的 <xref:System.Web.UI.WebControls.TextBox> 控件。  
   
--   名为 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控件。 将它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 属性设置为“OK”。  
+- 名为 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控件。 将它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 属性设置为“OK”。  
   
  将类名从 `NumericUserInput` 更改为 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 页面上 `Page` 指令的 `Inherits` 属性定义的类名。 将 `NumericInput` 对象引用名称更改为 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 页面上 `form` 标记的 `id` 属性定义的名称。  
   

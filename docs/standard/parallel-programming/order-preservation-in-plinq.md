@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b44ff3f460d2f33903f7f083cd1bb59c7bf83e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648689"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623962"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的顺序保留
 在 PLINQ 中，目标是在保持正确性的同时，最大限度地提升性能。 虽然查询应尽可能快地运行，但仍应生成正确结果。 在某些情况下，为了满足正确性要求，必须暂留源序列的顺序；不过，顺序暂留的计算成本可能非常高。 因此，默认情况下，PLINQ 不暂留源序列的顺序。 在这方面，PLINQ 类似于 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但与确实暂留顺序的 LINQ to Objects 不同。  
@@ -44,25 +44,25 @@ ms.locfileid: "54648689"
 ## <a name="query-operators-and-ordering"></a>查询运算符和顺序  
  下面的查询运算符将顺序暂留引入查询中的所有后续操作，或一直运行到 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 获得调用：  
   
--   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
  在某些情况下，下面的 PLINQ 查询运算符可能需要有序的源序列，才能生成正确结果：  
   
--   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
+- <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
+- <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
+- <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
  一些 PLINQ 查询运算符的行为因源序列是有序还是无序而异。 下表列出了这些运算符。  
   

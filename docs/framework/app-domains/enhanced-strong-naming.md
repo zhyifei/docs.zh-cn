@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7970ba4431161a1da8e0d509ee3d00c19b17c6e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319867"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607720"
 ---
 # <a name="enhanced-strong-naming"></a>改进的强命名
 强名称签名是 .NET Framework 中用于识别程序集的识别机制。 它是一个公钥数字签名，通常用于验证发信方（签名方）发送给收信方（验证方）的数据的完整性。 此签名是程序集的唯一标识，可确保对程序集的引用清楚明确。 在生成过程中对程序集进行签名，然后在加载程序集时对其进行验证。  
@@ -22,16 +22,16 @@ ms.locfileid: "59319867"
 ## <a name="limitations-of-conventional-strong-names"></a>传统的强名称的限制  
  在早于 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的版本中使用强命名技术有以下缺点：  
   
--   密钥会不断受到攻击，并且技术和硬件的改进让根据公钥推断私钥变得更加容易。 抵御攻击需要使用更大的密钥。 早于 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的 .NET Framework 版本可以使用任意大小的密钥进行签名（默认大小为 1024 位），但是使用新密钥对程序集签名会破坏引用程序集旧标识的所有二进制文件。 因此，如果想要保持兼容性，就很难升级签名密钥的大小。  
+- 密钥会不断受到攻击，并且技术和硬件的改进让根据公钥推断私钥变得更加容易。 抵御攻击需要使用更大的密钥。 早于 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的 .NET Framework 版本可以使用任意大小的密钥进行签名（默认大小为 1024 位），但是使用新密钥对程序集签名会破坏引用程序集旧标识的所有二进制文件。 因此，如果想要保持兼容性，就很难升级签名密钥的大小。  
   
--   强名称签名仅支持 SHA-1 算法。 人们最近发现 SHA-1 不足以保证哈希应用程序的安全。 因此需要使用更强的算法（SHA-256 或更高）。 SHA-1 可能不再与 FIPS 兼容，这样的话选择只使用与 FIPS 兼容的软件和算法的用户可能会遇到问题。  
+- 强名称签名仅支持 SHA-1 算法。 人们最近发现 SHA-1 不足以保证哈希应用程序的安全。 因此需要使用更强的算法（SHA-256 或更高）。 SHA-1 可能不再与 FIPS 兼容，这样的话选择只使用与 FIPS 兼容的软件和算法的用户可能会遇到问题。  
   
 ## <a name="advantages-of-enhanced-strong-names"></a>增强的强名称的优点  
  增强的强名称最主要的优势是与预先存在的强名称兼容，并且能够声明一个标识等效于另一个标识：  
   
--   具有现有已签名程序集的开发人员可以将其标识迁移到 SHA-2 算法，同时兼容引用旧标识的程序集。  
+- 具有现有已签名程序集的开发人员可以将其标识迁移到 SHA-2 算法，同时兼容引用旧标识的程序集。  
   
--   创建新的程序集并且不考虑已有的强名称签名的开发人员可以使用安全性更高的 SHA-2 算法，并按惯用的方式对程序集签名。  
+- 创建新的程序集并且不考虑已有的强名称签名的开发人员可以使用安全性更高的 SHA-2 算法，并按惯用的方式对程序集签名。  
   
 ## <a name="using-enhanced-strong-names"></a>使用改进的强名称  
  强名称密钥包含签名密钥和标识密钥。 使用签名密钥对程序集进行签名，使用标识密钥标识该程序集。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，这两个密钥相同。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，标识密钥与早期 .NET Framework 版本中的相同，但是签名密钥使用了更强的哈希算法进行了改进。 此外，使用标识密钥对签名密钥进行签名以创建副署。  

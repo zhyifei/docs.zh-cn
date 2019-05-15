@@ -18,21 +18,21 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142919"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634776"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的备用构造
 <a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种备用构造：  
   
--   [利用 &#124; 的模式匹配](#Either_Or)  
+- [利用 &#124; 的模式匹配](#Either_Or)  
   
--   [利用 (?(expression)yes&#124;no) 的条件匹配](#Conditional_Expr)  
+- [利用 (?(expression)yes&#124;no) 的条件匹配](#Conditional_Expr)  
   
--   [基于有效的捕获组的条件匹配](#Conditional_Group)  
+- [基于有效的捕获组的条件匹配](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>利用 &#124; 的模式匹配  
@@ -105,7 +105,7 @@ ms.locfileid: "53142919"
   
  `(?(` *name* `)` *是* `|` *no* `)`  
   
- 或  
+ or  
   
  `(?(` *数值* `)` *是* `|` *no* `)`  
   

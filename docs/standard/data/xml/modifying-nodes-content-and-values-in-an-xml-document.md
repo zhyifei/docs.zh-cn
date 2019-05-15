@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647889"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>修改 XML 文档中的节点、内容和值
 有多种方法可以修改文档中的节点和内容。 你可以：  
   
--   使用 <xref:System.Xml.XmlNode.Value%2A> 属性更改节点的值。  
+- 使用 <xref:System.Xml.XmlNode.Value%2A> 属性更改节点的值。  
   
--   通过用新节点替换节点来修改全部节点集。 此操作使用 <xref:System.Xml.XmlNode.InnerXml%2A> 属性完成。  
+- 通过用新节点替换节点来修改全部节点集。 此操作使用 <xref:System.Xml.XmlNode.InnerXml%2A> 属性完成。  
   
--   使用 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法用新节点替换现有节点。  
+- 使用 <xref:System.Xml.XmlNode.RemoveChild%2A> 方法用新节点替换现有节点。  
   
--   使用 <xref:System.Xml.XmlCharacterData>、<xref:System.Xml.XmlCharacterData.AppendData%2A> 或 <xref:System.Xml.XmlCharacterData.InsertData%2A> 方法向从 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 类继承的节点添加附加字符。  
+- 使用 <xref:System.Xml.XmlCharacterData>、<xref:System.Xml.XmlCharacterData.AppendData%2A> 或 <xref:System.Xml.XmlCharacterData.InsertData%2A> 方法向从 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 类继承的节点添加附加字符。  
   
--   通过在从 <xref:System.Xml.XmlCharacterData.DeleteData%2A> 继承的节点类型上使用 <xref:System.Xml.XmlCharacterData> 方法移除某个范围的字符，以修改内容。  
+- 通过在从 <xref:System.Xml.XmlCharacterData.DeleteData%2A> 继承的节点类型上使用 <xref:System.Xml.XmlCharacterData> 方法移除某个范围的字符，以修改内容。  
   
  更改节点值的一个简单方法是使用 `node.Value = "new value";`。 下表列出了此单个代码行作用于的节点类型，以及对于该节点类型将更改的确切数据。  
   

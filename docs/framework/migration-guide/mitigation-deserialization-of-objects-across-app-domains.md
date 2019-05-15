@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbde11672dc17f80a45defc0a55bcf841e83c324
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325067"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648478"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>缓解：跨应用程序域的对象反序列化
 有时，当一个应用程序使用具有不同应用程序基的两个或多个应用程序域时，如果尝试跨应用程序域在逻辑调用上下文中反序列化对象，则会引发异常。  
@@ -27,13 +27,13 @@ ms.locfileid: "59325067"
   
 5. 如果配置系统尚未初始化，则必须完成其初始化。 这意味着，运行时环境还必须为配置系统创建稳定的路径，它的作用如下：  
   
-    1.  查找非默认应用程序域的证据。  
+    1. 查找非默认应用程序域的证据。  
   
-    2.  尝试根据默认应用程序域计算非默认应用程序域的证据。  
+    2. 尝试根据默认应用程序域计算非默认应用程序域的证据。  
   
-    3.  为获取默认应用程序域证据而进行的调用，会触发从非默认应用程序域到默认应用程序域的跨应用程序域调用。  
+    3. 为获取默认应用程序域证据而进行的调用，会触发从非默认应用程序域到默认应用程序域的跨应用程序域调用。  
   
-    4.  作为 .NET Framework 中跨应用程序域协定的一部分，逻辑调用上下文的内容必须跨应用程序域边界进行封送。  
+    4. 作为 .NET Framework 中跨应用程序域协定的一部分，逻辑调用上下文的内容必须跨应用程序域边界进行封送。  
   
 6. 由于逻辑调用上下文中的类型不能在默认应用程序域中解析，因此将会引发异常。  
   

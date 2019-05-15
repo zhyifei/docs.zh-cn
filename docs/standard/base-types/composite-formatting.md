@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314004"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634558"
 ---
 # <a name="composite-formatting"></a>复合格式设置
 
@@ -126,11 +126,11 @@ ms.locfileid: "59314004"
   
 3. 如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 formatString 值，则向方法传递该值；如果不存在该值，则传递 `null`。 按如下方式确定 <xref:System.IFormatProvider> 自变量：  
   
-    -   对于数值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.NumberFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.NumberFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
+    - 对于数值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.NumberFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.NumberFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
   
-    -   对于日期和时间值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.DateTimeFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.DateTimeFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
+    - 对于日期和时间值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.DateTimeFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.DateTimeFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
   
-    -   对于其他类型的对象，如果调用带 <xref:System.IFormatProvider> 参数的复合格式设置方法，它的值会直接传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。 否则，`null` 传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  
+    - 对于其他类型的对象，如果调用带 <xref:System.IFormatProvider> 参数的复合格式设置方法，它的值会直接传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。 否则，`null` 传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  
   
 4. 调用类型的无参数的 `ToString` 方法（该方法将重写 <xref:System.Object.ToString?displayProperty=nameWithType> 或继承其基类的行为）。 在这种情况下，如果格式项中存在 formatString 组件指定的格式字符串，则将忽略该字符串。  
   

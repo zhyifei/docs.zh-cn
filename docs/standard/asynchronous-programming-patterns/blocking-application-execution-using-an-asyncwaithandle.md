@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d667135b815dc5d47ba5f7de8d237796a6fd6e10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c4dc2c14a8416b727d5b987b4dde109ba9506de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629151"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>使用 AsyncWaitHandle 阻止应用程序的执行
 如果应用无法在等待异步操作结果期间继续执行其他工作，必须阻止应用一直到操作完成。 请使用下列方法之一，在应用等待异步操作完成期间阻止应用的主线程：  
   
--   使用异步操作的 BeginOperationName 方法返回的 <xref:System.IAsyncResult> 的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 属性。 本主题介绍的就是这种方法。  
+- 使用异步操作的 BeginOperationName 方法返回的 <xref:System.IAsyncResult> 的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 属性。 本主题介绍的就是这种方法。  
   
--   调用异步操作的 EndOperationName 方法。 有关展示这种方法的示例，请参阅[通过结束异步操作阻止应用执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。  
+- 调用异步操作的 EndOperationName 方法。 有关展示这种方法的示例，请参阅[通过结束异步操作阻止应用执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。  
   
  在异步操作完成前使用一个或多个 <xref:System.Threading.WaitHandle> 对象阻止的应用，通常会调用 BeginOperationName 方法，执行任何不需要等待操作结果也可以执行的工作，并在一个或多个异步操作完成前一直处于阻止状态。 可以使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 调用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法之一，对单个操作阻止应用。 若要在等待一组异步操作完成期间阻止应用，请将关联的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 对象存储到数组中，并调用 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法之一。 若要在等待一组异步操作中任一操作完成期间阻止应用，请将关联的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 对象存储到数组中，并调用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法之一。  
   

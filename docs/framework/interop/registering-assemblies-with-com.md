@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169021"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648543"
 ---
 # <a name="registering-assemblies-with-com"></a>向 COM 注册程序集
 可运行名为[程序集注册工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 的命令行工具注册或取消注册与 COM 一起使用的程序集。 Regasm.exe 将关于类的信息添加到系统注册表，因此 COM 客户端可以透明地使用 .NET Framework 类。 <xref:System.Runtime.InteropServices.RegistrationServices> 类提供等效功能。  
@@ -30,11 +30,11 @@ ms.locfileid: "59169021"
   
  HKCR\CLSID\\{0000…0000} 项下，默认值设置为类的 ProgID，并添加了两个新的命名值：类和程序集。 运行时从注册表读取程序集值并传递给运行时程序集解析程序。 程序集解析程序尝试基于程序集信息（如名称和版本号）定位程序集。 为了让程序集解析程序找到程序集，程序集必须位于以下位置中：  
   
--   全局程序集缓存（必须为强名称程序集）。  
+- 全局程序集缓存（必须为强名称程序集）。  
   
--   应用程序目录中。 从应用程序路径加载的程序集只能从应用程序访问。  
+- 应用程序目录中。 从应用程序路径加载的程序集只能从应用程序访问。  
   
--   沿 /codebase 选项指定的文件路径到 Regasm.exe。  
+- 沿 /codebase 选项指定的文件路径到 Regasm.exe。  
   
  Regasm.exe 也会在 HKCR\CLSID\\{0000…0000} 项下创建 InProcServer32 项。 项的默认值设置为初始化公共语言运行时 (Mscoree.dll) 的 DLL 的名称。  
   

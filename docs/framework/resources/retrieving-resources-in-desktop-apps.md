@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109793"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650497"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
 使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中的资源，请参阅 Windows 开发人员中心中的 [在 Windows 应用商店应用中创建和检索资源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 一文。  
@@ -34,9 +34,9 @@ ms.locfileid: "59109793"
 ## <a name="retrieving-resources-from-assemblies"></a>从程序集中检索资源  
  <xref:System.Resources.ResourceManager> 类提供对运行时资源的访问权限。 使用 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> 方法检索字符串资源和 <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> 或使用 <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> 方法检索非字符串资源。 每个方法都有两种重载：  
   
--   单一参数是包含资源名称的字符串的重载。 该方法尝试为当前线程区域性检索资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
+- 单一参数是包含资源名称的字符串的重载。 该方法尝试为当前线程区域性检索资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
   
--   具有两个参数的重载：一个字符串包含资源名称，一个 <xref:System.Globalization.CultureInfo> 对象表示要对其检索资源的区域性。 如果找不到该区域性的资源集，资源管理器将使用回退规则检索相应的资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
+- 具有两个参数的重载：一个字符串包含资源名称，一个 <xref:System.Globalization.CultureInfo> 对象表示要对其检索资源的区域性。 如果找不到该区域性的资源集，资源管理器将使用回退规则检索相应的资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
   
  资源管理器使用资源回退进程控制应用检索区域性特定资源的方式。 有关详细信息，请参阅 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)中的“资源回退进程”一节。 有关实例化 <xref:System.Resources.ResourceManager> 对象的详细信息，请参阅 <xref:System.Resources.ResourceManager> 类主题中的“实例化 ResourceManager 对象”一节。  
   

@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320153"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633867"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：向 Web 用户显示本地化的日期和时间信息
 由于世界各地的人都可以查看网页，因此在与用户交互时，分析和设置日期和时间值的格式的操作不得依赖默认格式（通常是 Web 服务器本地区域性的格式）。 相反，处理用户输入的日期和时间字符串的 Web 窗体，应使用用户的首选区域性分析字符串。 同样，日期和时间数据应以符合用户区域性的格式向用户显示。 本主题演示如何执行此操作。  
@@ -35,9 +35,9 @@ ms.locfileid: "59320153"
   
 4. 调用 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 类型的 `TryParse` 或 `Parse` 方法，尝试执行转换。 重载 `TryParse` 或 `Parse` 方法（带 `provider` 参数），并将它传递到下面两个对象之一：  
   
-    -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
+    - 第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
   
-    -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  
+    - 第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  
   
 5. 如果转换失败，请对 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组中的每个剩余元素重复执行第 2 步到第 4 步。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "59320153"
   
 10. 调用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> 方法，将用户请求的日期和时间转换为 <xref:System.DateTime> 值。 重载方法（带 `provider` 参数），并将它传递到下面两个对象之一：  
   
-    -   第 8 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
+    - 第 8 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
   
-    -   第 8 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  
+    - 第 8 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  
   
 11. 如果第 10 步中的分析操作失败，请转到第 13 步。 否则，调用 <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> 方法，将用户时区偏移的字符串表示形式转换为整数。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "59320153"
 ## <a name="compiling-the-code"></a>编译代码  
  若要编译代码，请创建没有代码隐藏的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 网页。 然后，将示例复制到网页中，用它替换所有现有代码。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 网页应包含以下控件：  
   
--   未在代码中引用的 <xref:System.Web.UI.WebControls.Label> 控件。 将它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 属性设置为“Enter a Number:”。  
+- 未在代码中引用的 <xref:System.Web.UI.WebControls.Label> 控件。 将它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 属性设置为“Enter a Number:”。  
   
--   名为 `DateString` 的 <xref:System.Web.UI.WebControls.TextBox> 控件。  
+- 名为 `DateString` 的 <xref:System.Web.UI.WebControls.TextBox> 控件。  
   
--   名为 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控件。 将它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 属性设置为“OK”。  
+- 名为 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控件。 将它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 属性设置为“OK”。  
   
--   名为 `DateInfo` 的 <xref:System.Web.UI.WebControls.HiddenField> 控件。  
+- 名为 `DateInfo` 的 <xref:System.Web.UI.WebControls.HiddenField> 控件。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  为防止用户向 HTML 流注入脚本，不得在服务器响应中直接回显用户输入。 相反，应使用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 方法进行回显。  
