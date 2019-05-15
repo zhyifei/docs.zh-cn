@@ -2,19 +2,19 @@
 title: 异步返回类型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 327168e3ac77ab1ed7c9841d592781c704839660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368176"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599789"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 异步方法可以具有以下返回类型：
 
 - <xref:System.Threading.Tasks.Task%601>（对于返回值的异步方法）。 
  
--  <xref:System.Threading.Tasks.Task>（对于执行操作但不返回任何值的异步方法）。
+- <xref:System.Threading.Tasks.Task>（对于执行操作但不返回任何值的异步方法）。
 
 - `void`（对于事件处理程序）。 
 

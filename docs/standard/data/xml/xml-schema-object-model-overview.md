@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411689"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589790"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 架构对象模型概述
 Microsoft .NET Framework 中的架构对象模型 (SOM) 是一个丰富 API，可以通过编程创建、编辑和验证架构。 SOM 对 XML 架构文档的作用类似与文档对象模型 (DOM) 对 XML 文档的作用。 XML 架构文档是有效的 XML 文件，在加载到 SOM 之后，传达其他符合该架构的 XML 文档的结构和有效性的含义。  
@@ -19,17 +19,17 @@ Microsoft .NET Framework 中的架构对象模型 (SOM) 是一个丰富 API，�
   
  .NET Framework 中的 SOM API 可以通过下列方式创建、编辑和验证架构。  
   
--   从文件中加载有效架构或将有效架构保存到文件中。  
+- 从文件中加载有效架构或将有效架构保存到文件中。  
   
--   使用强类型类创建内存中架构。  
+- 使用强类型类创建内存中架构。  
   
--   与 <xref:System.Xml.Schema.XmlSchemaSet> 类进行交互，以缓存、编译和检索架构。  
+- 与 <xref:System.Xml.Schema.XmlSchemaSet> 类进行交互，以缓存、编译和检索架构。  
   
--   与 <xref:System.Xml.XmlReader.Create%2A> 类的 <xref:System.Xml.XmlReader> 方法进行交互，以针对架构验证 XML 实例文档。  
+- 与 <xref:System.Xml.XmlReader.Create%2A> 类的 <xref:System.Xml.XmlReader> 方法进行交互，以针对架构验证 XML 实例文档。  
   
--   生成用于创建和维护架构的编辑器。  
+- 生成用于创建和维护架构的编辑器。  
   
--   动态编辑架构，可以编译并保存该架构，供验证 XML 实例文档时使用。  
+- 动态编辑架构，可以编译并保存该架构，供验证 XML 实例文档时使用。  
   
 ## <a name="the-schema-object-model"></a>架构对象模型  
  SOM 由 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中与 XML 架构中的元素对应的丰富类集组成。 例如，`<xsd:schema>...</xsd:schema>` 元素映射到 <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> 类，所有可以包含在 `<xsd:schema/>` 元素中的信息都可以使用 <xref:System.Xml.Schema.XmlSchema> 类表示。 同样，`<xsd:element>...</xsd:element>` 和 `<xsd:attribute>...</xsd:attribute>` 元素分别映射到 <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> 和 <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> 类。 此映射继续为 XML 架构的所有元素在 <xref:System.Xml.Schema> 命名空间中创建 XML 架构对象模型，如下图中所示。  

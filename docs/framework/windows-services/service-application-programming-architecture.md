@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216385"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599279"
 ---
 # <a name="service-application-programming-architecture"></a>服务应用程序编程体系结构
 Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 类继承的类。 可以替代此类中的方法并为其定义功能，以确定服务的行为方式。  
   
  服务创建中涉及的主要类包括：  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — 可以在创建服务时替代 <xref:System.ServiceProcess.ServiceBase> 类中的方法，并定义代码以确定服务在此继承类中的工作方式。  
+- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — 可以在创建服务时替代 <xref:System.ServiceProcess.ServiceBase> 类中的方法，并定义代码以确定服务在此继承类中的工作方式。  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — 使用这些类来安装和卸载服务。  
+- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — 使用这些类来安装和卸载服务。  
   
  另外，可以使用名为 <xref:System.ServiceProcess.ServiceController> 的类来操纵服务本身。 该类不参与创建服务，但可用于启动和停止服务、将命令传递给它并返回一系列枚举。  
   
@@ -51,7 +51,7 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
   
  还有其他几个令人感兴趣的属性和方法。 这些方法包括：  
   
--   <xref:System.ServiceProcess.ServiceBase> 类的 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。 这是服务的主入口点。 使用 Windows 服务模板创建服务时，将在应用程序的 `Main` 方法中插入代码以运行该服务。 此代码如下所示：  
+- <xref:System.ServiceProcess.ServiceBase> 类的 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。 这是服务的主入口点。 使用 Windows 服务模板创建服务时，将在应用程序的 `Main` 方法中插入代码以运行该服务。 此代码如下所示：  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
@@ -59,7 +59,7 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
     > [!NOTE]
     >  这些示例使用 <xref:System.ServiceProcess.ServiceBase> 类型的数组，可将应用程序包含的每项服务添加到其中，然后所有服务均可一同运行。 但是，如果仅创建单个服务，则可以选择不使用该数组，然后只声明从 <xref:System.ServiceProcess.ServiceBase> 继承的新对象，然后运行它。 有关示例，请参见 [如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
   
--   <xref:System.ServiceProcess.ServiceBase> 类的一系列属性。 这些属性确定可对服务调用的方法。 例如，当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 属性设置为 `true` 时，可以调用服务上的 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法。 当 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 属性设置为 `true` 时，可以调用 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法。 在将其中一个属性设置为 `true` 时，应该替代并定义关联方法的处理进程。  
+- <xref:System.ServiceProcess.ServiceBase> 类的一系列属性。 这些属性确定可对服务调用的方法。 例如，当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 属性设置为 `true` 时，可以调用服务上的 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法。 当 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 属性设置为 `true` 时，可以调用 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法。 在将其中一个属性设置为 `true` 时，应该替代并定义关联方法的处理进程。  
   
     > [!NOTE]
     >  服务必须至少替代 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 才有用。  

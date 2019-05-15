@@ -2,12 +2,12 @@
 title: ADO.NET 中的数据跟踪
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608003"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583776"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的数据跟踪
 
@@ -31,7 +31,7 @@ ADO.NET 具有内置数据跟踪功能的.NET 数据提供程序支持的 SQL Se
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
 
-在中[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SQL Server 的数据提供程序，数据访问跟踪 ([数据访问跟踪](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) 已更新以使其能够更轻松地更轻松地将客户端事件与诊断信息，如连接失败，关联从服务器的连接环形缓冲区和应用程序中扩展的事件日志的性能信息。 有关读取扩展的事件日志的信息，请参阅[查看事件会话数据](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))。
+在 SQL Server.NET Framework Data Provider，数据访问跟踪 ([数据访问跟踪](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) 已更新以使其能够更轻松地更轻松地将客户端事件与诊断信息，如连接失败，关联从服务器的连接环形缓冲区和应用程序中扩展的事件日志的性能信息。 有关读取扩展的事件日志的信息，请参阅[查看事件会话数据](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))。
 
 对于连接操作，ADO.NET 将发送一个客户端连接 ID。 如果连接失败，可以访问连接环形缓冲区 ([在 SQL Server 2008 使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)) 并找到`ClientConnectionID`字段并获取的诊断信息连接失败。 如果出现错误，则将客户端连接 ID 记录在环形缓冲区中。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 为 16 字节的 GUID。 如果 `client_connection_id` 操作已添加到扩展事件会话中的事件，则还可以在扩展事件目标输出中找到查找客户端连接 ID。 如果需要进一步的客户端驱动程序诊断帮助，可以启用数据访问跟踪并重新运行连接命令，然后观察 `ClientConnectionID` 字段。
 

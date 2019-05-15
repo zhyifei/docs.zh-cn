@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202556"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608737"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何：声明、实例化和使用委托（C# 编程指南）
 在 C# 1.0 和更高版本中，可以如下面的示例所示声明委托。  
@@ -42,7 +42,7 @@ ms.locfileid: "57202556"
   
 ## <a name="robust-programming"></a>可靠编程  
   
--   声明委托。  
+- 声明委托。  
   
      以下语句声明新的委托类型。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "57202556"
   
      每个委托类型描述自变量的数量和类型，以及它可以封装的方法的返回值类型。 每当需要一组新的自变量类型或返回值类型，则必须声明一个新的委托类型。  
   
--   实例化委托。  
+- 实例化委托。  
   
      声明委托类型后，则必须创建委托对象并将其与特定的方法相关联。 在上例中，你通过将 `PrintTitle` 方法传递给 `ProcessPaperbackBooks` 方法执行此操作，如下面的示例所示：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "57202556"
   
      创建委托后，它与之关联的方法就永远不会更改；委托对象是不可变的。  
   
--   调用委托。  
+- 调用委托。  
   
      创建委托对象后，通常会将委托对象传递给将调用该委托的其他代码。 委托对象是通过使用委托对象的名称调用的，后跟用圆括号括起来的将传递给委托的自变量。 下面是一个委托调用示例：  
   

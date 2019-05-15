@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bad63bbc8e221f306e5807f51fbbb8eb4761d0fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00ec239fbe5d5963edd3a7656961556792c6324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593544"
 ---
 # <a name="multifile-assemblies"></a>多文件程序集
 
@@ -30,14 +30,14 @@ ms.locfileid: "54599174"
 
 创建多文件程序集的原因有以下几个：
 
--   合并用不同语言编写的模块。 这是创建多文件程序集最常见的原因。
+- 合并用不同语言编写的模块。 这是创建多文件程序集最常见的原因。
 
--   将不常用的类型放在只在需要时才下载的模块中，以优化应用程序的下载。
+- 将不常用的类型放在只在需要时才下载的模块中，以优化应用程序的下载。
 
     > [!NOTE]
     > 如果要创建将使用 `<object>` 标记和 Microsoft Internet Explorer 来下载的应用程序，创建多文件程序集就很重要。 在此方案中，创建与只包含程序集清单的代码模块分开的文件。 Internet Explorer 首先下载程序集清单，然后创建辅助线程以下载所需的任何其他模块或程序集。 由于正在下载包含程序集清单的文件，Internet Explorer 将不响应用户的输入。 包含程序集清单的文件越小，Internet Explorer 不作响应的时间就越短。
 
--   合并由多个开发人员编写的代码模块。 虽然每一位开发人员都可以将各个代码模块编译成程序集，但这样会强制一些类型公开（如果所有模块均放在多文件程序集中，则不会公开）。
+- 合并由多个开发人员编写的代码模块。 虽然每一位开发人员都可以将各个代码模块编译成程序集，但这样会强制一些类型公开（如果所有模块均放在多文件程序集中，则不会公开）。
 
 创建程序集后，可为包含程序集清单（并因此包含程序集）的文件签名，或者为文件（及程序集）指定强名称并将其放在全局程序集缓存中。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643606"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607769"
 ---
 # <a name="creating-assemblies"></a>创建程序集
 
@@ -24,23 +24,23 @@ ms.locfileid: "54643606"
 
 将代码模块和资源分组成程序集时有多个选项，具体取决于以下因素：
 
--   版本管理
+- 版本管理
 
      版本信息应相同的组模块。
 
--   部署
+- 部署
 
      支持你的部署模型的组代码模块和资源。
 
--   重用
+- 重用
 
      从逻辑上来说可以一起用于实现某个目的的组模块。 例如，不经常用于维护程序的类型和类构成的程序集可以放入同一程序集。 此外，要与多个应用程序共享的类型应归入一个程序集，并且此程序集必须使用强名称进行签名。
 
--   安全性
+- 安全性
 
      包含需要相同安全权限的的类型的组模块。
 
--   范围
+- 范围
 
      所包含类型的可见性限为同一个程序集的组模块。
 

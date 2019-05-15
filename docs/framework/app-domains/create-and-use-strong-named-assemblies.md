@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300692"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607684"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 
@@ -36,9 +36,9 @@ ms.locfileid: "59300692"
 
 1. 使用以下方法之一创建具有强名称的程序集 A：
 
-    -   使用支持创建强名称的开发环境，如 Visual Studio。
+    - 使用支持创建强名称的开发环境，如 Visual Studio。
 
-    -   使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建加密密钥对，并使用命令行编译器或[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将密钥对分配到程序集。 Windows 软件开发工具包 (SDK) 同时提供 Sn.exe 和 Al.exe。
+    - 使用[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 创建加密密钥对，并使用命令行编译器或[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将密钥对分配到程序集。 Windows 软件开发工具包 (SDK) 同时提供 Sn.exe 和 Al.exe。
 
 2. 开发环境或工具对包含具有开发人员私钥的程序集清单的文件的哈希进行签名。 此数字签名存储在包含程序集 A 的清单的可移植可执行 (PE) 文件中。
 
@@ -55,13 +55,13 @@ ms.locfileid: "59300692"
 
 跳过功能适用于使用强名称进行签名及具有以下特征的任何程序集：
 
--   完全受信任，无需 <xref:System.Security.Policy.StrongName> 证据（如具有 `MyComputer` 区域证据）。
+- 完全受信任，无需 <xref:System.Security.Policy.StrongName> 证据（如具有 `MyComputer` 区域证据）。
 
--   加载到完全受信任的 <xref:System.AppDomain>。
+- 加载到完全受信任的 <xref:System.AppDomain>。
 
--   加载自该 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性下的某个位置。
+- 加载自该 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A> 属性下的某个位置。
 
--   签名没有延迟。
+- 签名没有延迟。
 
 可为单个应用程序或计算机禁用此功能。 请参阅[如何：禁用强名称绕过功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。
 

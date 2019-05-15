@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306331"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616057"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>从 Visual Studio 使用 Mpgo.exe  
  可以从 Visual Studio 运行 Mpgo.exe（请参见文章[如何：指定生成事件 (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)），其具有下列限制：  
   
--   你不能使用具有尾部反斜杠标记的引用路径，因为在默认情况下，Visual Studio 宏也使用尾部反斜杠标记。 （例如，`–OutDir "C:\Output Folder\"` 无效。）若要解决此限制，你可以转义尾部斜杠。 （例如，请改用 `-OutDir "$(OutDir)\"`。）  
+- 你不能使用具有尾部反斜杠标记的引用路径，因为在默认情况下，Visual Studio 宏也使用尾部反斜杠标记。 （例如，`–OutDir "C:\Output Folder\"` 无效。）若要解决此限制，你可以转义尾部斜杠。 （例如，请改用 `-OutDir "$(OutDir)\"`。）  
   
--   默认情况下，Mpgo.exe 不在 Visual Studio 生成路径中。 你必须添加 Visual Studio 的路径，或在 Mpgo 命令行上指定完整路径。 你可在 Visual Studio 中的后期生成事件中使用 `–Scenario` 或 `–Import` 参数。 但是，一般的处理方式是从 Visual Studio 开发人员命令提示符处使用一次 `–Scenario`，然后在每次生成后使用 `–Import` 更新优化的程序集，例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
+- 默认情况下，Mpgo.exe 不在 Visual Studio 生成路径中。 你必须添加 Visual Studio 的路径，或在 Mpgo 命令行上指定完整路径。 你可在 Visual Studio 中的后期生成事件中使用 `–Scenario` 或 `–Import` 参数。 但是，一般的处理方式是从 Visual Studio 开发人员命令提示符处使用一次 `–Scenario`，然后在每次生成后使用 `–Import` 更新优化的程序集，例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>示例  

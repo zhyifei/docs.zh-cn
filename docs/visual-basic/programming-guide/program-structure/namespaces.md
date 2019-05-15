@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050451"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586297"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空间
 命名空间组织程序集中定义的对象。 程序集可以包含多个命名空间，命名空间又可以包含其他命名空间。 使用大组对象（比如类库）时，命名空间可以避免多义性和简化引用。  
   
- 例如， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 在 <xref:System.Windows.Forms.ListBox> 命名空间中定义 <xref:System.Windows.Forms?displayProperty=nameWithType> 类。 以下代码段演示如何使用此类的完全限定名称声明变量：  
+ 例如，.NET Framework 定义<xref:System.Windows.Forms.ListBox>类中<xref:System.Windows.Forms?displayProperty=nameWithType>命名空间。 以下代码段演示如何使用此类的完全限定名称声明变量：  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>避免名称冲突  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 命名空间解决有时被称为 *命名空间污染*的问题，即类库开发人员会受到另一个库中使用的相似名称的妨碍。 这些冲突及其现有组件有时被称为 *名称冲突*。  
+ .NET framework 命名空间解决有时被称为问题*命名空间污染*，即类库开发人员会妨碍使用的另一个库中的相似名称的。 这些冲突及其现有组件有时被称为 *名称冲突*。  
   
- 例如，如果创建一个名为 `ListBox`的新类，你可以在项目中不加限定地使用它。 但是，如果你想要使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Windows.Forms.ListBox>类在同一项目中，您必须使用完全限定的引用以使引用唯一。 如果引用不是唯一的 Visual Basic 会生成一个错误，指出名称不明确。 下面的代码示例演示如何声明这些对象：  
+ 例如，如果创建一个名为 `ListBox`的新类，你可以在项目中不加限定地使用它。 但是，如果你想要使用.NET Framework<xref:System.Windows.Forms.ListBox>类在同一项目中，您必须使用完全限定的引用以使引用唯一。 如果引用不是唯一的 Visual Basic 会生成一个错误，指出名称不明确。 下面的代码示例演示如何声明这些对象：  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

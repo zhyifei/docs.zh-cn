@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189925"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599469"
 ---
 # <a name="mitigation-wpf-layout"></a>缓解：WPF 布局
 WPF 控件的布局可能稍有变化。  
@@ -17,11 +17,11 @@ WPF 控件的布局可能稍有变化。
 ## <a name="impact"></a>影响  
  此更改的结果是：  
   
--   元素的宽度或高度最多可以扩大或收缩一个像素。  
+- 元素的宽度或高度最多可以扩大或收缩一个像素。  
   
--   对象的位置最多可以移动一个像素。  
+- 对象的位置最多可以移动一个像素。  
   
--   居中的元素最多可以垂直或水平地偏离中心一个像素。  
+- 居中的元素最多可以垂直或水平地偏离中心一个像素。  
   
  默认情况下，仅对面向 .NET Framework 4.6 的应用启用此新布局。  
   

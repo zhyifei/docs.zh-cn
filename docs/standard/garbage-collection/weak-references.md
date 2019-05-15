@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121098"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622656"
 ---
 # <a name="weak-references"></a>弱引用
 如果应用程序的代码可以访问一个正由该程序使用的对象，垃圾回收器就不能回收该对象， 那么，就认为应用程序对该对象具有强引用。  
@@ -33,11 +33,11 @@ ms.locfileid: "49121098"
 ## <a name="short-and-long-weak-references"></a>短弱引用和长弱引用  
  可以创建短弱引用或长弱引用：  
   
--   Short  
+- Short  
   
      垃圾回收功能回收对象后，短弱引用的目标会变为 `null`。 弱引用本身是托管对象，与其他任何托管对象一样需要经过垃圾回收。  短弱引用是 <xref:System.WeakReference> 的默认构造函数。  
   
--   Long  
+- Long  
   
      在对象的 <xref:System.Object.Finalize%2A> 方法已调用后，长弱引用获得保留。 这样，便可以重新创建该对象，但该对象仍保持不可预知的状态。 若要使用长引用，请在 <xref:System.WeakReference> 构造函数中指定 `true`。  
   

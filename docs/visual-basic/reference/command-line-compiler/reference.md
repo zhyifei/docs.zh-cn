@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663468"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583356"
 ---
 # <a name="-reference-visual-basic"></a>-参考 (Visual Basic)
 使编译器让指定程序集中的类型信息供当前正在编译的项目。  
@@ -46,7 +46,7 @@ ms.locfileid: "64663468"
   
  为使编译器可以识别的程序集 （而不是模块） 中的类型，必须强制其解析的类型。 如何执行此操作的一个示例是定义类型的实例。 其他方法都可以解析为编译器的程序集中的类型名称。 例如，如果您从程序集中的类型继承，类型名称然后将成为编译器已知。  
   
- Vbc.rsp 响应文件引用常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集，默认情况下使用。 使用`-noconfig`如果不希望编译器使用 Vbc.rsp。  
+ 默认情况下使用 Vbc.rsp 响应文件，通常使用.NET Framework 程序集的引用。 使用`-noconfig`如果不希望编译器使用 Vbc.rsp。  
   
  `-reference` 的缩写形式是 `/r`。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496252"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583112"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解何时使用 Override 和 New 关键字（C# 编程指南）
 在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。 可使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。 `override` 修饰符用于扩展基类方法，而 `new` 修饰符则用于隐藏该方法。 本主题中的示例阐释了这种差异。  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  在 `Main` 方法中，声明变量 `bc`、`dc` 和 `bcdc`。  
   
--   `bc` 为 `BaseClass` 类型，其值为 `BaseClass` 类型。  
+- `bc` 为 `BaseClass` 类型，其值为 `BaseClass` 类型。  
   
--   `dc` 为 `DerivedClass` 类型，其值为 `DerivedClass` 类型。  
+- `dc` 为 `DerivedClass` 类型，其值为 `DerivedClass` 类型。  
   
--   `bcdc` 为 `BaseClass` 类型，其值为 `DerivedClass` 类型。 需注意此变量。  
+- `bcdc` 为 `BaseClass` 类型，其值为 `DerivedClass` 类型。 需注意此变量。  
   
  由于 `bc` 和 `bcdc` 具有 `BaseClass` 类型，因此它们只能直接访问 `Method1`，除非使用强制转换。 变量 `dc` 可同时访问 `Method1` 和 `Method2`。 下面的代码演示了这些关系。  
   

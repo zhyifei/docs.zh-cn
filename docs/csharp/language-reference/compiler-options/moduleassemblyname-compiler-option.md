@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593059"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname（C# 编译器选项）
 指定一个程序集，.netmodule 可以访问其非公共类型。  
@@ -31,11 +31,11 @@ ms.locfileid: "57361260"
 ## <a name="remarks"></a>备注  
  生成 .netmodule 时，应使用 -moduleassemblyname 并满足以下条件：  
   
--   .netmodule 需要具有访问现有程序集中非公共类型的权限。  
+- .netmodule 需要具有访问现有程序集中非公共类型的权限。  
   
--   知道生成后的 .netmodule 所在程序集的名称。  
+- 知道生成后的 .netmodule 所在程序集的名称。  
   
--   现有程序集已经获得有元程序集访问权限，可访问生成后的 .netmodule 所在的程序集。  
+- 现有程序集已经获得有元程序集访问权限，可访问生成后的 .netmodule 所在的程序集。  
   
  有关生成 .netmodule 的详细信息，请参阅 [-target: module（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
   

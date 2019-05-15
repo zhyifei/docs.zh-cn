@@ -2,12 +2,12 @@
 title: 实体框架术语
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764330"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583526"
 ---
 # <a name="entity-framework-terminology"></a>实体框架术语
 本主题定义中经常引用的术语[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档。 如果有其他可用信息，则会提供指向相关主题的链接。  
@@ -18,7 +18,7 @@ ms.locfileid: "61764330"
 |Association Set — 关联集|包含同一类型关联实例的逻辑容器。<br /><br /> 有关详细信息，请参阅[AssociationSet 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#associationset-element-csdl)并[关联集](../../../../../docs/framework/data/adonet/association-set.md)。|  
 |Code First|从 实体框架4.1 开始，可使用 Code First 开发以编程方式创建模型。 对于 Code First 开发，有两种不同的方案。 在两种情况下，开发人员通过对 .NET Framework 类定义进行编码来定义模型，然后可选择使用数据注释或 fluent API 指定其他映射或配置。<br /><br /> 请注意，Code First 开发是一部分[实体框架 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，但基于 .NET Framework 4.5 构建。 实体框架 5.0 还可用作[实体框架](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)包。 有关详细信息，请参阅[实体框架发行和版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。|  
 |Command Tree — 命令目录树|所有的常用编程表示[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]组成一个或多个表达式的查询。<br /><br /> 有关详细信息，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)。|  
-|Complex Type — 复杂类型|一个 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 类，该类表示在概念模型中定义的复杂属性。 通过复杂类型，可以在实体中组织标量属性。 复杂对象是复杂类型的实例。 有关详细信息，请参阅[ComplexType 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)并[复杂类型](../../../../../docs/framework/data/adonet/complex-type.md)。|  
+|Complex Type — 复杂类型|一种 .NET Framework 类，表示概念模型中定义的复杂属性。 通过复杂类型，可以在实体中组织标量属性。 复杂对象是复杂类型的实例。 有关详细信息，请参阅[ComplexType 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)并[复杂类型](../../../../../docs/framework/data/adonet/complex-type.md)。|  
 |ComplexType|数据类型的规范，表示没有键属性的实体类型的非标量属性。<br /><br /> 有关详细信息，请参阅[ComplexType 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)并[复杂类型](../../../../../docs/framework/data/adonet/complex-type.md)。|  
 |Conceptual Model — 概念模型|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的应用程序域中实体类型、复杂类型、关联、实体容器、实体集和关联集的抽象规范。 概念模型在 .csdl 文件中采用 CSDL 定义。<br /><br /> 有关详细信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
 |.csdl 文件|一种 XML 文件，该文件包含以 CSDL 表示的概念模型。|  
@@ -36,7 +36,7 @@ ms.locfileid: "61764330"
 |Entity Framework|一套支持开发面向数据的软件应用程序的技术，这些技术使开发人员能够处理映射到数据源中的逻辑架构的概念模型。<br /><br /> 有关详细信息，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)。|  
 |实体集|一种逻辑容器，包含给定类型及其子类型的实体。 实体集映射到数据库中的表。<br /><br /> 有关详细信息，请参阅[EntitySet 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entityset-element-csdl)并[实体集](../../../../../docs/framework/data/adonet/entity-set.md)。|  
 |Entity SQL|一种与存储无关的 SQL 方言，它可直接处理概念实体架构，并支持概念模型概念（如继承和关系）。<br /><br /> 有关详细信息，请参阅[Entity SQL 语言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。|  
-|Entity Type — 实体类型|一个 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 类，该类表示在概念模型中定义的实体。 实体类型可以具有标量属性、复杂属性和导航属性。 对象是实体类型的实例。 有关详细信息，请参阅[使用对象](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。|  
+|Entity Type — 实体类型|.NET Framework 类，表示概念模型中定义的实体。 实体类型可以具有标量属性、复杂属性和导航属性。 对象是实体类型的实例。 有关详细信息，请参阅[使用对象](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。|  
 |EntityType|数据类型的规范，它包含一个键和一个命名属性集，表示概念模型或存储模型中的顶级项。<br /><br /> 有关详细信息，请参阅[EntityType 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)并[实体类型](../../../../../docs/framework/data/adonet/entity-type.md)。|  
 |Explicit Loading — 显式加载|当查询返回对象时，不会同时加载相关对象。 默认情况下，只有对导航属性使用 `Load` 方法显式请求时才会加载相关对象。|  
 |外键关联|实体之间的关联，通过外键属性进行管理。|  
@@ -57,7 +57,7 @@ ms.locfileid: "61764330"
 |对象层|实体框架所使用的实体类型和对象上下文定义。|  
 |Object Query — 对象查询|在对象上下文中对数据模型执行的查询，该查询以对象形式返回数据。<br /><br /> 有关详细信息，请参阅[对象查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。|  
 |Object-relational Mapping — 对象关系映射|一种技术，用于将关系数据库中的数据转换为可在面向对象的软件应用程序中使用的数据类型。<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]通过将存储模型中定义的关系数据映射到概念模型中定义的数据类型来提供对象关系映射服务。<br /><br /> 有关详细信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
-|Object Services — 对象服务|提供的服务[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]启用应用程序代码以对等实体[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]对象。|  
+|Object Services — 对象服务|提供的服务[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]启用应用程序代码，类似于.NET Framework 对象的实体进行操作。|  
 |持久性未知对象|一种不包含与数据存储有关的任何逻辑的对象。 也称为 POCO 实体。|  
 |POCO|纯旧式 CLR 对象。 一种不从另一个类继承也不实现接口的对象。|  
 |POCO 实体|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]中的一种实体，该实体不从 <xref:System.Data.Objects.DataClasses.EntityObject> 或 <xref:System.Data.Objects.DataClasses.ComplexObject> 继承，也不实现[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接口。 通常情况下，现有的 POCO 实体中使用的域对象[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序。 这些实体支持持久性未知。 有关详细信息，请参阅[使用 POCO 实体](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。|  

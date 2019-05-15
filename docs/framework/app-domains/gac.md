@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d19410bd83605e6c7325a61e64a32a828846b7df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2ae9470020449719ccb9760fef992898674ba696
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593629"
 ---
 # <a name="global-assembly-cache"></a>全局程序集缓存
 安装了公共语言运行时的每台计算机均具有计算机范围的代码缓存，称为全局程序集缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。  
@@ -29,9 +29,9 @@ ms.locfileid: "59222563"
   
  可以通过两种方法将程序集部署到全局程序集缓存：  
   
--   使用专用于全局程序集缓存的安装程序。 这是将程序集安装到全局程序集缓存中的首选项。  
+- 使用专用于全局程序集缓存的安装程序。 这是将程序集安装到全局程序集缓存中的首选项。  
   
--   使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的名为[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 的开发人员工具。  
+- 使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的名为[全局程序集缓存工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 的开发人员工具。  
   
     > [!NOTE]
     >  在部署方案中，使用 Windows Installer 将程序集安装到全局程序集缓存中。 仅在开发方案中使用全局程序集缓存工具，因为它不提供 Windows Installer 所能提供的程序集引用计数等功能。  

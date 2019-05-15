@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607910"
 ---
 # <a name="application-domains"></a>应用程序域
 
@@ -41,18 +41,18 @@ ms.locfileid: "55674576"
   
  应用程序域所提供的隔离具有以下优点：  
   
--   在一个应用程序中出现的错误不会影响其他应用程序。 因为类型安全的代码不会导致内存错误，所以使用应用程序域可以确保在一个域中运行的代码不会影响进程中的其他应用程序。  
+- 在一个应用程序中出现的错误不会影响其他应用程序。 因为类型安全的代码不会导致内存错误，所以使用应用程序域可以确保在一个域中运行的代码不会影响进程中的其他应用程序。  
   
--   能够在不停止整个进程的情况下停止单个应用程序。 使用应用程序域使您可以卸载在单个应用程序中运行的代码。  
+- 能够在不停止整个进程的情况下停止单个应用程序。 使用应用程序域使您可以卸载在单个应用程序中运行的代码。  
   
     > [!NOTE]
     >  不能卸载单个程序集或类型。 只能卸载整个域。  
   
--   在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 <xref:System.IO.FileNotFoundException> 的异常。 有关详细信息，请参阅 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 确定如何跨域访问对象的机制是由该对象决定的。 有关更多信息，请参见<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+- 在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 <xref:System.IO.FileNotFoundException> 的异常。 有关详细信息，请参阅 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 确定如何跨域访问对象的机制是由该对象决定的。 有关更多信息，请参见<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
--   代码行为的作用范围由它运行所在的应用程序决定。 换言之，应用程序域将提供应用程序版本策略等配置设置、它所访问的任意远程程序集的位置，以及加载到该域中的程序集的位置信息。  
+- 代码行为的作用范围由它运行所在的应用程序决定。 换言之，应用程序域将提供应用程序版本策略等配置设置、它所访问的任意远程程序集的位置，以及加载到该域中的程序集的位置信息。  
   
--   向代码授予的权限可以由代码运行所在的应用程序域来控制。  
+- 向代码授予的权限可以由代码运行所在的应用程序域来控制。  
   
 ## <a name="application-domains-and-assemblies"></a>应用程序域和程序集
 
@@ -60,9 +60,9 @@ ms.locfileid: "55674576"
   
  程序集的加载方式决定其实时 (JIT) 编译代码是否可以在进程中由多个应用程序域共享，以及该程序集是否可以从进程中卸载。  
   
--   如果程序集是以非特定于域的形式进行加载，则共享相同安全授权集的所有应用程序域都可以共享相同的 JIT 编译代码，从而减少应用程序所需的内存。 但是，程序集则永远不能从进程中卸载。  
+- 如果程序集是以非特定于域的形式进行加载，则共享相同安全授权集的所有应用程序域都可以共享相同的 JIT 编译代码，从而减少应用程序所需的内存。 但是，程序集则永远不能从进程中卸载。  
   
--   如果程序集不是以非特定于域的形式进行加载，则它必须在加载的每个应用程序域中都是 JIT 编译的。 但是，通过卸载程序集加载的所有应用程序域，可以从进程中卸载程序集。  
+- 如果程序集不是以非特定于域的形式进行加载，则它必须在加载的每个应用程序域中都是 JIT 编译的。 但是，通过卸载程序集加载的所有应用程序域，可以从进程中卸载程序集。  
   
  运行时宿主决定在将运行时加载到进程中时是否以非特定于域的形式加载程序集。 对于托管应用程序，将 <xref:System.LoaderOptimizationAttribute> 特性应用于进程的入口点方法，并从关联的 <xref:System.LoaderOptimization> 枚举指定一个值。 对于托管公共语言运行时的非托管应用程序，在调用 [CorBindToRuntimeEx 函数](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)方法时，指定适当的标志。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "55674576"
   
  当您决定是否以非特定于域的形式加载程序集时，必须在减少内存占用和降低其他性能因素之间加以权衡。  
   
--   对于非特定于域的程序集，对静态数据和方法的访问较慢的原因在于需要隔离程序集。 访问该程序集的每一应用程序域都必须具有静态数据的单独副本，以避免跨域边界引用静态字段中的对象。 因此，运行时包含附加的逻辑，用以将调用方引导到静态数据或静态方法的适当副本。 这一额外的逻辑将降低调用速度。  
+- 对于非特定于域的程序集，对静态数据和方法的访问较慢的原因在于需要隔离程序集。 访问该程序集的每一应用程序域都必须具有静态数据的单独副本，以避免跨域边界引用静态字段中的对象。 因此，运行时包含附加的逻辑，用以将调用方引导到静态数据或静态方法的适当副本。 这一额外的逻辑将降低调用速度。  
   
--   当以非特定于域的形式加载程序集时，必须找到并加载该程序集的所有依赖项，因为如果一个依赖项不能以非特定于域的形式加载，则会妨碍以非特定于域的形式加载程序集。  
+- 当以非特定于域的形式加载程序集时，必须找到并加载该程序集的所有依赖项，因为如果一个依赖项不能以非特定于域的形式加载，则会妨碍以非特定于域的形式加载程序集。  
   
 ## <a name="application-domains-and-threads"></a>应用程序域和线程
 
@@ -100,9 +100,9 @@ ms.locfileid: "55674576"
 
  区域性（由 <xref:System.Globalization.CultureInfo> 对象表示）与线程关联。 您可以通过使用 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性获取与当前正在执行的线程关联的区域性，并且您可以通过使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性获取或设置与当前正在执行的线程关联的区域性。 如果已使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性显式设置与线程关联的区域性，则当线程跨越应用程序域边界时，它将继续与该线程关联。 否则，在任何给定时间内与线程关联的区域性将由线程执行所在的应用程序域中的 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 属性的值确定：  
   
--   如果该属性的值不是 `null`，则由该属性返回的区域性与线程（并因此由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性返回）关联。  
+- 如果该属性的值不是 `null`，则由该属性返回的区域性与线程（并因此由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性返回）关联。  
   
--   如果该属性的值为 `null`，则当前系统区域性与线程关联。  
+- 如果该属性的值为 `null`，则当前系统区域性与线程关联。  
   
 ## <a name="programming-with-application-domains"></a>对应用程序域进行编程
 
@@ -110,7 +110,7 @@ ms.locfileid: "55674576"
   
  <xref:System.AppDomain> 是应用程序域的程序设计界面。 此类包括各种方法，这些方法可以创建和卸载域、创建域中各类型的实例以及注册各种通知（如应用程序域卸载）。 下表列出了常用的 <xref:System.AppDomain> 方法。  
   
-|AppDomain 方法|说明​​|  
+|AppDomain 方法|说明|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|创建新的应用程序域。 建议使用此方法指定 <xref:System.AppDomainSetup> 对象的重载形式。 这是设置新域的各个属性的首选方式，这些属性包括应用程序基（即该应用程序的根目录）、域的配置文件的位置、以及公共语言运行时用于将程序集加载到域中的搜索路径等。|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 和 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|执行应用程序域中的程序集。 这是一个实例方法，因此它可用来执行另一个应用程序域（你拥有对该域的引用）中的代码。|  
@@ -138,9 +138,9 @@ COMPLUS_LoaderOptimization = 1
   
  程序集的加载方式决定了其实时 (JIT) 编译的代码是否可由进程中的多个应用程序域共享。  
   
--   如果程序集以非特定于域的形式加载，则所有共享相同安全授权集的应用程序域都可以共享相同的 JIT 编译代码。 这将减少应用程序所需的内存。  
+- 如果程序集以非特定于域的形式加载，则所有共享相同安全授权集的应用程序域都可以共享相同的 JIT 编译代码。 这将减少应用程序所需的内存。  
   
--   如果程序集不是以非特定于域的形式加载，则必须在加载程序集的每个应用程序域中对其进行 JIT 编译，并且加载程序不得跨应用程序域共享国际资源。  
+- 如果程序集不是以非特定于域的形式加载，则必须在加载程序集的每个应用程序域中对其进行 JIT 编译，并且加载程序不得跨应用程序域共享国际资源。  
   
  在设置为 1 时，COMPLUS_LoaderOptimization 环境标志强制运行时主机以非特定于域的方式（称为 SingleDomain）加载所有程序集。 SingleDomain 不以非特定于域的形式加载任何程序集（Mscorlib 除外，它始终以非特定于域的形式加载）。 此设置称作单域，因为它通常用在宿主只运行进程中的单个应用程序时。  
   

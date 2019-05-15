@@ -2,12 +2,12 @@
 title: 如何：创建已签名的友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325197"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582983"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>如何：创建已签名的友元程序集 (C#)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -18,15 +18,15 @@ ms.locfileid: "59325197"
   
 2. 使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。 有关详细信息，请参阅 [Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md)。  
   
-    1.  生成此示例的强名称密钥，并将其存储在 FriendAssemblies.snk 文件中：  
+    1. 生成此示例的强名称密钥，并将其存储在 FriendAssemblies.snk 文件中：  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  从 FriendAssemblies.snk 文件中提取公钥，将其放入 FriendAssemblies.publickey 中：  
+    2. 从 FriendAssemblies.snk 文件中提取公钥，将其放入 FriendAssemblies.publickey 中：  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  显示存储在 FriendAssemblies.publickey 文件中的公钥：  
+    3. 显示存储在 FriendAssemblies.publickey 文件中的公钥：  
   
          `sn -tp FriendAssemblies.publickey`  
   

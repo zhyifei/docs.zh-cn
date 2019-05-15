@@ -10,27 +10,27 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3378cffc1dcee7bb12705704e66b7fdd287105fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511827"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592996"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked 和 Unchecked（C# 参考）
 C# 语句既可以在已检查的上下文中执行，也可以在未检查的上下文中执行。 在已检查的上下文中，算法溢出引发异常。 在未选中的上下文中忽略算术溢出并将结果截断，方法是：丢弃任何不适应目标类型的高序位。  
   
--   [checked](checked.md) 指定已检查的上下文。  
+- [checked](checked.md) 指定已检查的上下文。  
   
--   [unchecked](unchecked.md) 指定未检查的上下文。  
+- [unchecked](unchecked.md) 指定未检查的上下文。  
   
  下列操作受溢出检查的影响：  
   
--   表达式在整型上使用下列预定义运算符：  
+- 表达式在整型上使用下列预定义运算符：  
   
      `++`，`--`，一元 `-`，`+`，`-`，`*`，`/`  
   
--   整型类型之间或从 `float` 或 `double` 到整型类型的显式数字转换。  
+- 整型类型之间或从 `float` 或 `double` 到整型类型的显式数字转换。  
   
  如果既未指定 `checked`，也未指定 `unchecked`，则非常量表达式（在运行时计算的表达式）的默认上下文将由 [-checked](../compiler-options/checked-compiler-option.md) 编译器选项的值定义。 默认情况下，该选项的值未设置，且算术运算在未选中的上下文中执行。
  

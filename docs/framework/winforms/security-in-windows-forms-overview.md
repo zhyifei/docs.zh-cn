@@ -8,29 +8,29 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: dbbba191f201264f5044de8696518e76a1db42fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655584"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586651"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 
-在发布 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 之前，用户计算机上运行的所有代码都有相同的权利或权限来访问该计算机的用户所拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。
+之前的.NET framework 版本中，用户的计算机上运行的所有代码都具有相同的权利或权限来访问计算机的用户所都拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 引入了称为代码访问安全性的基础结构，它让你能够区分代码拥有的权限或权利与用户拥有的权利。 默认情况下，来自 Internet 和 Intranet 的代码仅能在所谓的部分信任模式下运行。 部分信任使应用程序受一系列限制的约束：此外，应用程序被限制访问本地硬盘，且无法运行非托管代码。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 控制允许代码基于代码标识访问的资源：它来自哪里、是否具有[强名称程序集](../app-domains/strong-named-assemblies.md)以及是否使用证书签名等等。
+.NET Framework 引入了称为代码访问安全性，让你能够区分权限或代码拥有的用户具有的权限的权限的基础结构。 默认情况下，来自 Internet 和 Intranet 的代码仅能在所谓的部分信任模式下运行。 部分信任使应用程序受一系列限制的约束：此外，应用程序被限制访问本地硬盘，且无法运行非托管代码。 .NET Framework 控制允许代码访问基于代码标识的资源： 它来自哪里、 是否具有[强名称程序集](../app-domains/strong-named-assemblies.md)、 是否进行签名的证书，依次类推。
 
 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技术用于部署 Windows 窗体应用程序，有助于让你更轻松地开发可在部分信任、完全信任或具有提升的权限的部分信任中运行的应用程序。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供了如“权限提升”和“受信任的应用程序部署”等功能，从而使你的应用程序能以可靠的方式从本地用户请求完全信任或提升的权限。
 
 ## <a name="understanding-security-in-the-net-framework"></a>了解 .NET Framework 中的安全性
 
-代码访问安全性根据代码源以及代码标识的其他方面，使代码可以获得不同等级的受信度。 若要深入了解公共语言运行时用于确定安全策略的证据，请参阅[证据](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))。 它有助于保护计算机系统不受恶意代码危害，并帮助防止受信任的代码有意或无意地折损安全性。 代码访问安全性还可让你更好地控制应用程序所能执行的操作，因为你可以指定你需要应用程序拥有的哪些权限。 代码访问安全性会影响面向公共语言运行时的所有托管代码，即使该代码不执行单个代码访问安全性权限检查。 有关 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中安全性的详细信息，请参阅[关键的安全性概念](../../standard/security/key-security-concepts.md)和[代码访问安全性基础知识](../misc/code-access-security-basics.md)。
+代码访问安全性根据代码源以及代码标识的其他方面，使代码可以获得不同等级的受信度。 若要深入了解公共语言运行时用于确定安全策略的证据，请参阅[证据](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))。 它有助于保护计算机系统不受恶意代码危害，并帮助防止受信任的代码有意或无意地折损安全性。 代码访问安全性还可让你更好地控制应用程序所能执行的操作，因为你可以指定你需要应用程序拥有的哪些权限。 代码访问安全性会影响面向公共语言运行时的所有托管代码，即使该代码不执行单个代码访问安全性权限检查。 有关.NET Framework 中的安全性的详细信息，请参阅[重要安全性概念](../../standard/security/key-security-concepts.md)并[代码访问安全性基础知识](../misc/code-access-security-basics.md)。
 
 如果用户直接运行 Web 服务器或文件共享的 Windows 窗体可执行文件，则授予应用程序的信任度取决于代码所在的位置和启动方式。 当应用程序运行时，它将自动进行计算，并从公共语言运行时接收一个命名的权限集。 默认情况下，来自本地计算机的代码会被授予完全信任权限集，来自本地网络中的代码被授予本地 Intranet 权限集，而来自 Internet 的代码被授予 Internet 权限集。
 
 > [!NOTE]
-> 在 1.0 版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Service Pack 1 和 Service Pack 2 中，Internet 区域代码组接收 Nothing 权限集。 在所有其他版本的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中，Internet 区域代码组接收 Internet 权限集。
+> 在.NET Framework 版本 1.0 Service Pack 1 和 Service Pack 2 中，Internet 区域代码组接收 Nothing 权限集。 在所有其他版本的.NET Framework，Internet 区域代码组接收 Internet 权限集。
 >
 > 每个这些权限集中授予的默认权限都列在[默认安全策略](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))主题中。 根据应用程序接收的权限，它会正确运行或者生成安全性异常。
 >
@@ -48,7 +48,7 @@ ms.locfileid: "64655584"
 
 如果你的应用程序需要比部分信任所允许的更多的权限，但你不想在完全信任环境中运行，你可以在部分信任环境中运行的同时仅断言那些你需要的额外权限。 例如，如果你想要在部分信任环境中运行，但必须授予应用程序对用户文件系统上的目录的只读访问权限，则你仅可针对该目录请求 <xref:System.Security.Permissions.FileIOPermission>。 正确使用此方法可以增强应用程序的功能，并将用户的安全风险降至最低。
 
-开发将在部分信任环境中运行的应用程序时，对应用程序必须运行什么权限以及应用程序可以选择使用什么权限进行跟踪。 当所有权限都已知时，你应在应用程序级别提出声明性的权限请求。 请求权限会通知 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 运行时应用程序所需要的权限以及具体所不需要的权限。 有关请求权限的详细信息，请参阅[请求权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))。
+开发将在部分信任环境中运行的应用程序时，对应用程序必须运行什么权限以及应用程序可以选择使用什么权限进行跟踪。 当所有权限都已知时，你应在应用程序级别提出声明性的权限请求。 请求权限会通知运行的时应用程序所需的权限以及哪些权限它具体所不需要的.NET Framework。 有关请求权限的详细信息，请参阅[请求权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))。
 
 当请求可选的权限时，如果应用程序执行一个操作，但未获得执行该操作所需的权限时会生成安全性异常，这时必须处理此安全性异常。 适当地处理 <xref:System.Security.SecurityException> 将确保你的应用程序可以继续运行。 你的应用程序可以使用异常来确定是否应对用户禁用一项功能。 例如，如果未授予所需的文件权限，应用程序可以禁用“保存”菜单选项。
 
