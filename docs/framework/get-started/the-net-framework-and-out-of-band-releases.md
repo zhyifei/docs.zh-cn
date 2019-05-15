@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330437"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063042"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和带外版本
 
@@ -52,8 +52,6 @@ ms.locfileid: "59330437"
  通常情况下，OOB 程序包具有一个或多个预发行版本和一个稳定的版本。 预发行附带的许可证通常不允许再发行，但可让你试用程序包并提供反馈。 任何对包的更新中都包含反馈。 最终发布版本作为稳定的包随 NuGet 分发并包含允许随应用程序重新分发 NuGet 程序包的许可证。 稳定程序包受 Microsoft 支持。 Microsoft 还提供 IntelliSense 支持以及其他文档类型（如所有程序包的博客文章和论坛答案）。 此外，只有一些程序包可使用源代码，并非所有程序包都可使用。 有关新增和更新后的包的公告，可订阅 [.NET Framework 博客](https://devblogs.microsoft.com/dotnet/)。
 
  若要查找预发行版包和稳定版包，请在 NuGet 包管理器中选择“包括预发行版”。
-
- 如果要接收稳定版包的通知，请订阅 [.NET Framework 源](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
 
 ## <a name="see-also"></a>请参阅
 

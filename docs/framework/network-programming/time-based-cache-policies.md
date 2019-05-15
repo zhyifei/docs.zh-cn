@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129306"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613836"
 ---
 # <a name="time-based-cache-policies"></a>基于时间的缓存策略
 基于时间的缓存策略使用检索资源的时间、随资源返回的标头和当前时间来定义缓存条目的新鲜度。 设置基于时间的缓存策略时，可使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 基于时间的策略，也可创建自定义的基于时间的策略。 当对使用超文本传输协议 (HTTP) 获得的资源使用默认的基于时间的策略时，由缓存响应中包含的标头以及 RFC 2616 第 13 和 14 节（可在 [Internet 工程任务组 (IETF)](https://www.ietf.org/) 网站上找到）中指定的行为来确定精确的缓存行为。 如需深入了解如何为 HTTP 资源设置默认基于时间的策略的代码示例，请参阅[如何：为应用程序设置默认基于时间的缓存策略](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 有关演示如何创建和使用缓存策略的代码示例，请参阅[在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
@@ -30,13 +30,13 @@ ms.locfileid: "59129306"
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>用于确定已缓存条目新鲜度的条件  
  要自定义基于时间的缓存策略，可指定使用以下一个或多个条件来确定已缓存条目的新鲜度：  
   
--   最长使用时间  
+- 最长使用时间  
   
--   最长过期时间  
+- 最长过期时间  
   
--   最低新鲜度  
+- 最低新鲜度  
   
--   缓存同步日期  
+- 缓存同步日期  
   
 > [!NOTE]
 >  使用默认的基于时间的缓存策略不应与设置应用程序的默认缓存策略混淆。 默认的基于时间的策略是可在请求级别或应用程序级别使用的特定策略。 应用程序的默认缓存策略是当未在请求中设置任何策略时生效的策略（基于位置或基于时间）。 有关为应用程序设置默认缓存策略的详细信息，请参阅 <xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
@@ -57,9 +57,9 @@ ms.locfileid: "59129306"
   
  以下主题介绍组合基于时间的缓存策略条件的影响：  
   
--   [缓存策略交互 — 最长使用时间和最长过期时间](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [缓存策略交互 — 最长使用时间和最长过期时间](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [缓存策略交互 — 最长使用时间和最低新鲜度](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [缓存策略交互 — 最长使用时间和最低新鲜度](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>请参阅
 

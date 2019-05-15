@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141253"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613982"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -22,19 +22,19 @@ ms.locfileid: "59141253"
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供了一种并行承载的新方法来确保以下内容：  
   
--   安装新版 .NET Framework 不会影响现有的应用程序。  
+- 安装新版 .NET Framework 不会影响现有的应用程序。  
   
--   应用程序在生成它们所用的 .NET Framework 版本上运行。 应用程序不使用新版 .NET Framework，除非明确指示其使用新版本。 但是，对应用程序来说，转为使用新版 .NET Framework 更加容易。  
+- 应用程序在生成它们所用的 .NET Framework 版本上运行。 应用程序不使用新版 .NET Framework，除非明确指示其使用新版本。 但是，对应用程序来说，转为使用新版 .NET Framework 更加容易。  
   
 ## <a name="effects-on-users-and-developers"></a>对用户和开发人员的影响  
   
--   最终用户和系统管理员。 现在这些用户可以更加放心，因为安装运行时的新版本（独立安装或与应用程序一起安装）时，不会对他们的计算机产生任何影响。 现有应用程序如以前一样继续运行。  
+- 最终用户和系统管理员。 现在这些用户可以更加放心，因为安装运行时的新版本（独立安装或与应用程序一起安装）时，不会对他们的计算机产生任何影响。 现有应用程序如以前一样继续运行。  
   
--   应用程序开发人员。 并行承载对应用程序开发人员几乎没有影响。 默认情况下，应用程序总是在生成它们所用的 .NET Framework 版本上运行；这一点没有变化。 但是，开发人员可替代此行为，并指示应用程序在新版 .NET Framework 上运行（请参阅[方案 2](#scenarios)）。  
+- 应用程序开发人员。 并行承载对应用程序开发人员几乎没有影响。 默认情况下，应用程序总是在生成它们所用的 .NET Framework 版本上运行；这一点没有变化。 但是，开发人员可替代此行为，并指示应用程序在新版 .NET Framework 上运行（请参阅[方案 2](#scenarios)）。  
   
--   库开发人员和使用者。 并行承载不能解决库开发人员面临的兼容性问题。 应用程序直接加载的库（通过直接引用或通过 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 调用）会继续使用其加载到的 <xref:System.AppDomain> 运行时。 应针对要支持的 .NET Framework 所有版本对库进行测试。 如果使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时编译应用程序，但包括一个使用较早运行时生成的库，则该库也将使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时。 但是，如果有一个使用较早运行时生成的应用程序和一个使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 生成的库，则必须强制应用程序也使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]（请参阅[方案 3](#scenarios)）。  
+- 库开发人员和使用者。 并行承载不能解决库开发人员面临的兼容性问题。 应用程序直接加载的库（通过直接引用或通过 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 调用）会继续使用其加载到的 <xref:System.AppDomain> 运行时。 应针对要支持的 .NET Framework 所有版本对库进行测试。 如果使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时编译应用程序，但包括一个使用较早运行时生成的库，则该库也将使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 运行时。 但是，如果有一个使用较早运行时生成的应用程序和一个使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 生成的库，则必须强制应用程序也使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]（请参阅[方案 3](#scenarios)）。  
   
--   托管 COM 组件开发人员。 过去，托管 COM 组件会自动使用计算机上安装的运行时最新版本运行。 现在，可在生成 COM 组件所用的运行时版本上执行这些组件。  
+- 托管 COM 组件开发人员。 过去，托管 COM 组件会自动使用计算机上安装的运行时最新版本运行。 现在，可在生成 COM 组件所用的运行时版本上执行这些组件。  
   
      如下表所示，使用 .NET Framework 版本 1.1 生成的组件可与版本 4 的组件并行运行，但不能与版本 2.0、3.0 或 3.5 的组件一起运行，因为并行承载不可用于这些版本。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "59141253"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>常见的并行承载方案  
   
--   **方案 1：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序。  
+- **方案 1：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序。  
   
      已安装的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和 COM 组件使用的所有其他 .NET Framework 版本。  
   
      要执行的操作：此方案中，不执行任何操作。 COM 组件将在其注册的 .NET Framework 版本上运行。  
   
--   **方案 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 生成的托管应用程序，并将其与 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起运行，但如果没有 2.0 版本，则希望让其在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上运行。  
+- **方案 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 生成的托管应用程序，并将其与 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起运行，但如果没有 2.0 版本，则希望让其在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上运行。  
   
      已安装的 .NET Framework 版本：早期版本的 .NET Framework 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59141253"
     </configuration>  
     ```  
   
--   **方案 3：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序，并将其与 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起运行。  
+- **方案 3：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序，并将其与 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起运行。  
   
      已安装的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]  
   

@@ -2,12 +2,12 @@
 title: 如何：在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855008"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593002"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何：在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值
 此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。 此处所示的示例原则可以应用于其他类型的结构化文本。  
@@ -143,7 +143,7 @@ End Class
  查询的工作原理是使用 <xref:System.String.Split%2A> 方法将每一行文本转换为数组。 每个数组元素表示一列。 最后，每一列中的文本都转换为其数字表示形式。 如果文件是制表符分隔文件，只需将 `Split` 方法中的参数更新为 `\t`。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
+创建一个 VB.NET 控制台应用程序项目，与`Imports`System.Linq 命名空间的语句。
   
 ## <a name="see-also"></a>请参阅
 

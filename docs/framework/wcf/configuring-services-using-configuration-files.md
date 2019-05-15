@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9f1ddf7691c9c00c3a4a7a20fc81d2f42f5830f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f1392a6ee2e8f5b3f85650ee91e20e7ec3436fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652101"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592222"
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 使用配置文件配置 Windows Communication Foundation (WCF) 服务使你能够灵活提供终结点，并设计时在部署时而非在服务行为数据。 本主题概述了当前可用的主要技术。  
   
- WCF 服务是可配置使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技术的配置。 大多数情况下，XML 元素添加到托管 WCF 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件中。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外，WCF 包含多个系统提供的元素，允许您快速选择服务的最基本功能。 从开始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 附带了一个新的默认配置模型，简化了 WCF 配置要求。 如果未提供针对特定服务的任何 WCF 配置，运行时自动使用一些标准终结点和默认绑定/行为配置你的服务。 在实践中，编写配置是一个较大编程 WCF 应用程序的一部分。  
+ WCF 服务是可配置使用.NET Framework 技术的配置。 大多数情况下，XML 元素添加到托管 WCF 服务的 Internet 信息服务 (IIS) 网站的 Web.config 文件中。 通过这些元素，可以逐台计算机更改详细信息，例如终结点地址（用于与服务进行通信的实际地址）。 此外，WCF 包含多个系统提供的元素，允许您快速选择服务的最基本功能。 从开始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 附带了一个新的默认配置模型，简化了 WCF 配置要求。 如果未提供针对特定服务的任何 WCF 配置，运行时自动使用一些标准终结点和默认绑定/行为配置你的服务。 在实践中，编写配置是一个较大编程 WCF 应用程序的一部分。  
   
  有关详细信息，请参阅[的服务配置绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 对于一组最常用元素，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64652101"
 >  在部署并行方案（其中部署了服务的两个不同版本）时，必须指定配置文件中引用的程序集的部分名称。 这是因为配置文件将在服务的所有版本间共享，并可在不同版本的 .NET Framework 下运行。  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration:Web.config 和 App.config  
- WCF 使用 System.Configuration 配置系统的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。  
+ WCF 使用.NET Framework 的 System.Configuration 配置系统。  
   
  配置服务时在 Visual Studio 中，使用 Web.config 文件或 App.config 文件来指定的设置。 配置文件名称的选择由为服务选择的宿主环境确定。 如果正在使用 IIS 来承载服务，则使用 Web.config 文件。 如果正在使用任何其他宿主环境，则使用 App.config 文件。  
   

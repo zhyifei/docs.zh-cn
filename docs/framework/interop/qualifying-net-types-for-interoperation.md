@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097972"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648564"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
   
--   类应显式实现接口。  
+- 类应显式实现接口。  
   
      尽管 COM 互操作提供了一种机制，用于自动生成包含类的所有成员及其基类成员的接口，但最好还是提供显式接口。 自动生成的接口称为类接口。 有关指南，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
      可以使用 Visual Basic、C# 和 C++ 将接口定义合并在代码中，而无需使用接口定义语言 (IDL) 或其等效语言。 有关语法的详细信息，请参见语言文档。  
   
--   托管的类型必须是公共的。  
+- 托管的类型必须是公共的。  
   
      只有程序集中的公共类型才会注册并导出到类型库中。 因此只有公共类型才对 COM 可见。  
   
      托管类型会向其他未向 COM 公开的托管代码公开功能。 例如，参数化的构造函数、静态方法和常数字段不会向 COM 客户端公开。 此外，运行时在类型中和类型外封送数据时，数据可能会被复制或转换。  
   
--   方法、属性、字段和事件必须是公共的。  
+- 方法、属性、字段和事件必须是公共的。  
   
      如果要对 COM 可见，公共类型的成员也必须是公共的。 通过应用 <xref:System.Runtime.InteropServices.ComVisibleAttribute>，可以限制程序集、公共类型或公共类型的公共成员的可见性。 默认情况下，所有公共类型和成员都是可见的。  
   
--   具备公共默认构造函数的类型才能从 COM 中激活。  
+- 具备公共默认构造函数的类型才能从 COM 中激活。  
   
      托管的公共类型对于 COM 是可见的。 但是如果没有公共默认构造函数（不带任何参数的构造函数），COM 客户端无法创建该类型。 如果该类型由其他方法激活，COM 客户端仍可使用该类型。  
   
--   类型不能是抽象的。  
+- 类型不能是抽象的。  
   
      COM 客户端和 .NET 客户端都不能创建抽象的类型。  
   

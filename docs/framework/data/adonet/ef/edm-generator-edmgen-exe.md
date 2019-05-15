@@ -2,12 +2,12 @@
 title: EDM 生成器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607666"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584588"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef
 
 - 生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。 有关详细信息，[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。
 
-EdmGen.exe 工具安装在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目录中。 多数情况下，它位于 C:\windows\Microsoft.NET\Framework\v4.0 中。 对于 64 位系统，它位于 C:\windows\Microsoft.NET\Framework64\v4.0 中。 此外可以访问 EdmGen.exe 工具从 Visual Studio 命令提示 (单击**启动**，依次指向**所有程序**，指向**Microsoft Visual Studio 2010**，依次指向**Visual Studio Tools**，然后单击**Visual Studio 2010 命令提示**)。
+EdmGen.exe 工具安装在.NET Framework 目录中。 多数情况下，它位于 C:\windows\Microsoft.NET\Framework\v4.0 中。 对于 64 位系统，它位于 C:\windows\Microsoft.NET\Framework64\v4.0 中。 此外可以访问 EdmGen.exe 工具从 Visual Studio 命令提示 (单击**启动**，依次指向**所有程序**，指向**Microsoft Visual Studio 2010**，依次指向**Visual Studio Tools**，然后单击**Visual Studio 2010 命令提示**)。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,7 @@ EdmGen /mode:choice [options]
 |选项|描述|
 |------------|-----------------|
 |`/p[roject]:`\<string>|指定要使用的项目名称。 该项目名称用作命名空间设置、模型和映射文件的名称、对象源文件的名称以及视图生成源文件的名称的默认值。 实体容器名称设置为\<项目 > 上下文。|
-|`/prov[ider]:`\<string>|生成存储模型 (.ssdl) 文件要使用的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 数据提供程序的名称。 默认提供程序是[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]SQL Server 的数据提供程序 (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|
+|`/prov[ider]:`\<string>|用于生成存储模型 (.ssdl) 文件的 .NET Framework 数据提供程序的名称。 默认提供程序是用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|
 |`/c[onnectionstring]:`\<连接字符串 >|指定用于连接数据源的字符串。|
 |`/incsdl:`\<file>|指定 .csdl 文件或 .csdl 文件所在的目录。 此自变量可多次指定，这样可以指定多个目录或 .csdl 文件。 当概念模型跨多个文件拆分时，对于生成类 (`/mode:EntityClassGeneration`) 或视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|
 |`/refcsdl:`\<file>|指定用于解析源 .csdl 文件中的任何引用的其他 .csdl 文件。 （源 .csdl 文件是 `/incsdl` 选项指定的文件）。 `/refcsdl` 文件包含源 .csdl 文件所依赖的类型。 此自变量可多次指定。|

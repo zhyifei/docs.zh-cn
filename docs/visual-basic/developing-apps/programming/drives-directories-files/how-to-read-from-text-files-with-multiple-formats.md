@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9fa484f0a74d900bd6f0365f2ce71fd32e1422db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623182"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>如何：在 Visual Basic 中读取具有多种格式的文本文件
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。 可以使用 `PeekChars` 方法处理具有多种格式的文件，以便在分析整个文件时确定每行的格式。  
@@ -58,15 +58,15 @@ ms.locfileid: "59334297"
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   无法使用指定的格式分析行 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 此异常消息指定导致发生异常的行，同时将 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 属性分配给该行中包含的文本。  
+- 无法使用指定的格式分析行 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 此异常消息指定导致发生异常的行，同时将 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 属性分配给该行中包含的文本。  
   
--   指定的文件不存在 (<xref:System.IO.FileNotFoundException>)。  
+- 指定的文件不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   在部分信任的情况下，用户没有足够的权限访问文件。 (<xref:System.Security.SecurityException>).  
+- 在部分信任的情况下，用户没有足够的权限访问文件。 (<xref:System.Security.SecurityException>).  
   
--   路径过长 (<xref:System.IO.PathTooLongException>)。  
+- 路径过长 (<xref:System.IO.PathTooLongException>)。  
   
--   用户没有足够的权限访问文件 (<xref:System.UnauthorizedAccessException>)。  
+- 用户没有足够的权限访问文件 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>请参阅
 

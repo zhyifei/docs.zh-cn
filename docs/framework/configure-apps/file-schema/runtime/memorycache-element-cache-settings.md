@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 9ed3c290c3d4836eb783348b559cab46a38b2063
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 872084dabc5d345d10a39f0933ff2ef30ca40355
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592679"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584482"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素 （缓存设置）
 定义一个用于配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存的元素。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 类定义可以用于配置缓存的 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 元素。 可以在单个应用程序中使用 <xref:System.Runtime.Caching.MemoryCache> 类的多个实例。 配置文件中的每个 `memoryCache` 元素可以包含一个命名 <xref:System.Runtime.Caching.MemoryCache> 实例的设置。  
@@ -55,7 +55,7 @@ ms.locfileid: "64592679"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|包含使你可以在内置到 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]中的应用程序中实现输出缓存的类型。|  
+|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|包含使您可以在内置到.NET Framework 的应用程序中实现输出缓存的类型。|  
   
 ## <a name="remarks"></a>备注  
  <xref:System.Runtime.Caching.MemoryCache> 类是抽象 <xref:System.Runtime.Caching.ObjectCache> 类的具体实现。 <xref:System.Runtime.Caching.MemoryCache> 类的实例可以随来自应用程序配置文件的配置信息一起提供。 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 配置节包含 `namedCaches` 配置集合。  

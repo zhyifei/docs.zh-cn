@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10e864ccfeb22113e5704a4063f903d7a91fedcd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912842"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591578"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>如何：设置 Windows 窗体 ProgressBar 控件显示的值
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供了几个不同的方式来显示内的给定的值<xref:System.Windows.Forms.ProgressBar>控件。 你选择哪种方法取决于手头的任务或要解决此问题。 下表显示可以选择的方法。  
+ .NET Framework 为您提供了多种不同的方式来显示内的给定的值<xref:System.Windows.Forms.ProgressBar>控件。 你选择哪种方法取决于手头的任务或要解决此问题。 下表显示可以选择的方法。  
   
 |方法|描述|  
 |--------------|-----------------|  

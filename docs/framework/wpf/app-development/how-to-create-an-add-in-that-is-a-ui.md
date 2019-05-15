@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625375"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592665"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>如何：创建作为 UI 的外接程序
 此示例演示如何为 Windows Presentation Foundation (WPF) 的 WPF 独立应用程序是托管的外接程序创建。  
@@ -81,7 +81,7 @@ ms.locfileid: "64625375"
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>实现主机应用程序  
- 主机端适配器和主机视图创建，主机应用程序可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]外接程序模型打开管道并获取外接程序的宿主视图。 这些步骤在以下代码中显示。  
+ 主机端适配器和主机视图创建，主机应用程序可以使用.NET Framework 外接程序模型打开管道并获取外接程序的宿主视图。 这些步骤在以下代码中显示。  
 
  主机应用程序使用典型的.NET Framework 外接程序模型代码激活外接程序，它将隐式返回到主机应用程序宿主视图。 主机应用程序随后显示主机视图 (即<xref:System.Windows.Controls.UserControl>) 从<xref:System.Windows.Controls.Grid>。  
   

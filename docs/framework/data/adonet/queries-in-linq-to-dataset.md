@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878769"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583864"
 ---
 # <a name="queries-in-linq-to-dataset"></a>在 LINQ to DataSet 中查询
 查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一种较为简单的一致模型，适用于各种数据源和格式的数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
@@ -31,7 +31,7 @@ ms.locfileid: "61878769"
 ### <a name="query-expression-syntax"></a>查询表达式语法  
  查询表达式是一种声明性查询语法。 此语法使开发人员能够以类似于 SQL 的格式用 C# 或 Visual Basic 编写查询。 通过使用查询表达式语法，你可以用最少的代码对数据源执行复杂的筛选、排序和分组操作。 有关详细信息，请参阅[LINQ 查询表达式](../../../csharp/linq/index.md#query-expression-overview)并[基本查询操作 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
   
- 查询表达式语法是 C# 3.0 和 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] 中的新功能。 不过，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 公共语言运行库 (CLR) 无法读取查询表达式语法本身。 因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。 这些方法称为“标准查询运算符”。 作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 有关标准查询运算符的详细信息，请参阅[标准查询运算符概述](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ 查询表达式语法是 C# 3.0 和 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] 中的新功能。 但是，.NET Framework 公共语言运行时 (CLR) 无法读取查询表达式语法本身。 因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。 这些方法称为“标准查询运算符”。 作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 有关标准查询运算符的详细信息，请参阅[标准查询运算符概述](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
  下面的示例使用 <xref:System.Linq.Enumerable.Select%2A> 返回 `Product` 表中的所有行并显示产品名称。  
   

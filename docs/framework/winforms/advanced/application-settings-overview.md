@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972414"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583554"
 ---
 # <a name="application-settings-overview"></a>应用程序设置概述
 本主题讨论如何代表你的应用程序和你的用户创建和存储设置数据。  
   
  Windows 窗体的应用程序设置功能使你可以在客户端计算机上轻松创建、存储和维护自定义应用程序和用户首选项。 利用 Windows 窗体应用程序设置，不仅可以存储应用程序数据（如数据库连接字符串），还可以存储特定于用户的数据（如用户应用程序首选项）。 使用 Visual Studio 或自定义托管代码，可以创建新设置、从磁盘读取设置和将设置写入磁盘、将设置绑定到窗体上的属性，以及在加载和保存设置数据前对设置数据进行验证。  
   
- 应用程序设置使开发人员可以使用极少量的自定义代码在他们的应用程序中保存状态，这些设置替代了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的早期版本中的动态属性。 应用程序设置在很多方面优于动态属性，动态属性是只读的、后期绑定的，且需要较多的自定义编程。 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]中保留了动态属性类，但它们只是 shell 类，用于对应用程序设置类进行简单包装。  
+ 应用程序设置使开发人员能够使用非常少的自定义代码，其应用程序中保存状态，并不取代以前版本的.NET Framework 中的动态属性。 应用程序设置在很多方面优于动态属性，动态属性是只读的、后期绑定的，且需要较多的自定义编程。 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]中保留了动态属性类，但它们只是 shell 类，用于对应用程序设置类进行简单包装。  
   
 ## <a name="what-are-application-settings"></a>什么是应用程序设置？  
  Windows 窗体应用程序经常会需要某些特殊数据，这些数据对运行应用程序至关重要，但你又不想在应用程序代码中直接包含它们。 如果你的应用程序使用 Web 服务或数据库服务器，则你可能想将这种信息存储在一个单独的文件中，以便将来更改它而无需重新编译该应用程序。 同样，应用程序还可能需要存储特定于当前用户的数据。 例如，大多数应用程序都有用户首选项功能，该功能用于自定义应用程序的外观和行为。  
@@ -34,7 +34,7 @@ ms.locfileid: "61972414"
  自定义控件还可通过实现 <xref:System.Configuration.IPersistComponentSettings> 接口保存它们自己的设置，该接口公开 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 方法。 Windows 窗体 <xref:System.Windows.Forms.ToolStrip> 控件实现此接口，以在应用程序会话之间保存工具栏和工具栏项的位置。 有关自定义控件和应用程序设置的详细信息，请参阅 [Application Settings for Custom Controls](application-settings-for-custom-controls.md)。  
   
 ## <a name="limitations-of-application-settings"></a>应用程序设置的限制  
- 应用程序设置无法用于托管 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的非托管应用程序。 这些设置在以下环境中将无效：Visual Studio 外接程序、用于 Microsoft Office 的 C++、托管在 Internet Explorer 中的控件或 Microsoft Outlook 外接程序和项目。  
+ 不能使用非托管应用程序中的应用程序设置承载.NET Framework。 这些设置在以下环境中将无效：Visual Studio 外接程序、用于 Microsoft Office 的 C++、托管在 Internet Explorer 中的控件或 Microsoft Outlook 外接程序和项目。  
   
  当前无法绑定到 Windows 窗体中的某些属性。 最需要引起注意的是 <xref:System.Windows.Forms.Form.ClientSize%2A> 属性，因为绑定到该属性会导致在运行时发生不可预测的行为。 通常可以通过以编程方式保存和加载这些设置来解决这些问题。  
   

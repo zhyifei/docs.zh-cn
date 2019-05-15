@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 01257847956f22c895b00c6055ec1cdd1e89eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627092"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592580"
 ---
 # <a name="data-contract-known-types"></a>数据协定已知类型
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类允许您预先指定应该在反序列化期间包括在考虑范围内的类型。 有关工作示例，请参阅 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 示例。  
@@ -27,7 +27,7 @@ ms.locfileid: "64627092"
   
 - 要传输的信息的声明类型是 <xref:System.Object>。 由于每个类型都继承自 <xref:System.Object>，而且无法预先知道实际发送了哪个类型，因此接收终结点无法预先确定已传输数据的数据协定。 这是一种特殊情况的第一项：每个数据协定派生默认值为生成的空白数据协定<xref:System.Object>。  
   
-- 某些类型（包括 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型）具有上述三种类别之一中的成员。 例如， <xref:System.Collections.Hashtable> 使用 <xref:System.Object> 在哈希表中存储实际对象。 在序列化这些类型时，接收方无法预先确定这些成员的数据协定。  
+- 某些类型，包括.NET Framework 类型，具有在其中一个上述三种类别中的成员。 例如， <xref:System.Collections.Hashtable> 使用 <xref:System.Object> 在哈希表中存储实际对象。 在序列化这些类型时，接收方无法预先确定这些成员的数据协定。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 类  
  当数据到达接收终结点时，WCF 运行时尝试将数据反序列化为公共语言运行时 (CLR) 类型的实例。 通过首先检查传入消息选择为反序列化而实例化的类型，以确定消息内容遵循的数据协定。 然后反序列化引擎尝试查找实现与消息内容兼容的数据协定的 CLR 类型。 反序列化引擎在此过程中允许的侯选类型集称为反序列化程序的“已知类型”集。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333354"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623581"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式
 如果你正在编写的类具有一些可能会带来明显延迟的操作，请考虑实施[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的操作，为该类提供异步功能。  
@@ -35,26 +35,26 @@ ms.locfileid: "59333354"
   
  以下列表介绍本主题中讨论的基于事件的异步模式的功能。  
   
--   实现基于事件的异步模式的时机  
+- 实现基于事件的异步模式的时机  
   
--   命名异步方法  
+- 命名异步方法  
   
--   选择性地支持取消  
+- 选择性地支持取消  
   
--   选择性地支持 IsBusy 属性  
+- 选择性地支持 IsBusy 属性  
   
--   选择性地为进度报告提供支持  
+- 选择性地为进度报告提供支持  
   
--   选择性地为返回增量结果提供支持  
+- 选择性地为返回增量结果提供支持  
   
--   处理方法中的 Out 和 Ref 参数  
+- 处理方法中的 Out 和 Ref 参数  
   
 ## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式的时机  
  请在以下情况下，考虑实现基于事件的异步模式：  
   
--   类的客户端不需要适用于异步操作的 <xref:System.Threading.WaitHandle> 和 <xref:System.IAsyncResult> 对象。也就是说，客户端需要生成轮询和 <xref:System.Threading.WaitHandle.WaitAll%2A> 或 <xref:System.Threading.WaitHandle.WaitAny%2A>。  
+- 类的客户端不需要适用于异步操作的 <xref:System.Threading.WaitHandle> 和 <xref:System.IAsyncResult> 对象。也就是说，客户端需要生成轮询和 <xref:System.Threading.WaitHandle.WaitAll%2A> 或 <xref:System.Threading.WaitHandle.WaitAny%2A>。  
   
--   你希望异步操作由客户端使用常见的事件/委托模型进行托管。  
+- 你希望异步操作由客户端使用常见的事件/委托模型进行托管。  
   
  对于异步实现，任何操作都是候选项，但应优先考虑预计会产生较长延迟的操作。 最适合的操作是客户端在其中调用方法，并在完成时收到通知，无需进一步的干预。 其次是连续运行、定期向客户端通知进度、增量结果和状态更改的操作。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "59333354"
   
  定义满足以下条件的 MethodNameAsync 方法：  
   
--   返回 `void`。  
+- 返回 `void`。  
   
--   采用与 *MethodName* 方法相同的参数。  
+- 采用与 *MethodName* 方法相同的参数。  
   
--   接受多个调用。  
+- 接受多个调用。  
   
  （可选）定义与 MethodNameAsync 完全相同的 MethodNameAsync 重载，但要额外添加对象赋值参数（即 `userState`）。 如果已准备好管理方法的多个并发调用（在这种情况下，`userState` 值将传递回所有事件处理程序以区分方法的调用），可使用此方法。 也可以选择将其简单地作为存储用户状态以供以后检索的位置。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "59333354"
     }  
     ```  
   
-    -   请确保 MethodNameCompletedEventArgs 类将它的成员公开为只读属性（而不是字段），因为字段会阻止数据绑定。  
+    - 请确保 MethodNameCompletedEventArgs 类将它的成员公开为只读属性（而不是字段），因为字段会阻止数据绑定。  
   
-    -   请勿为不产生结果的方法定义任何派生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 的类。 直接使用 <xref:System.ComponentModel.AsyncCompletedEventArgs> 本身的实例即可。  
+    - 请勿为不产生结果的方法定义任何派生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 的类。 直接使用 <xref:System.ComponentModel.AsyncCompletedEventArgs> 本身的实例即可。  
   
         > [!NOTE]
         >  在可行且适当的情况下，重用委托和 <xref:System.ComponentModel.AsyncCompletedEventArgs> 类型是完全可以接受的。 在这种情况下，命名会与方法名称不一致，因为给定委托和 <xref:System.ComponentModel.AsyncCompletedEventArgs> 不限于单个方法。  
@@ -118,9 +118,9 @@ ms.locfileid: "59333354"
 ## <a name="optionally-support-cancellation"></a>选择性地支持取消  
  如果你的类将支持取消异步操作，则应向客户端公开取消（如下所述）。 请注意，定义取消支持之前，需要确定两点：  
   
--   你的类（包括将来预计要添加的内容），是否只具有一个支持取消操作的异步操作？  
+- 你的类（包括将来预计要添加的内容），是否只具有一个支持取消操作的异步操作？  
   
--   支持取消的异步操作是否能支持多个挂起操作？ 也就是说，MethodNameAsync 方法是否需要使用 `userState` 参数？它是否允许在等待任何操作完成前执行多个调用？  
+- 支持取消的异步操作是否能支持多个挂起操作？ 也就是说，MethodNameAsync 方法是否需要使用 `userState` 参数？它是否允许在等待任何操作完成前执行多个调用？  
   
  使用下表中的两个问题的答案来确定取消方法的签名。  
   
@@ -156,13 +156,13 @@ ms.locfileid: "59333354"
 ## <a name="optionally-provide-support-for-progress-reporting"></a>选择性地为进度报告提供支持  
  通常期望异步操作在其操作期间报告进度。 基于事件的异步模式提供了执行此操作的准则。  
   
--   还可以选择性地定义由异步操作引发并在相应线程上调用的事件。 <xref:System.ComponentModel.ProgressChangedEventArgs> 对象随附整数值进度指示器，量程预计在 0 到 100 之间。  
+- 还可以选择性地定义由异步操作引发并在相应线程上调用的事件。 <xref:System.ComponentModel.ProgressChangedEventArgs> 对象随附整数值进度指示器，量程预计在 0 到 100 之间。  
   
--   按照以下规则命名此事件：  
+- 按照以下规则命名此事件：  
   
-    -   如果类具有多个异步操作（或预期将来版本中会包括多个异步操作），则命名为 `ProgressChanged`；  
+    - 如果类具有多个异步操作（或预期将来版本中会包括多个异步操作），则命名为 `ProgressChanged`；  
   
-    -   MethodNameProgressChanged：如果类包含单一异步操作。  
+    - MethodNameProgressChanged：如果类包含单一异步操作。  
   
      该命名方法与命名取消方法（如“选择性地支持取消”部分所述）相同。  
   
@@ -180,9 +180,9 @@ ms.locfileid: "59333354"
 ### <a name="single-operation-class"></a>单一操作类  
  如果你的类仅支持单一异步操作，并且能够返回增量结果，则可以：  
   
--   将 <xref:System.ComponentModel.ProgressChangedEventArgs> 类型扩展为包含增量结果数据，并定义包含此扩展数据的 MethodNameProgressChanged 事件。  
+- 将 <xref:System.ComponentModel.ProgressChangedEventArgs> 类型扩展为包含增量结果数据，并定义包含此扩展数据的 MethodNameProgressChanged 事件。  
   
--   若有要报告的增量结果，抛出此 MethodNameProgressChanged 事件。  
+- 若有要报告的增量结果，抛出此 MethodNameProgressChanged 事件。  
   
  此解决方案特别适用于单一异步操作类，因为发生的同一事件可以对“所有操作”返回增量结果，与 MethodNameProgressChanged 事件一样。  
   
@@ -194,9 +194,9 @@ ms.locfileid: "59333354"
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>使用不同类增量结果的多操作类  
  如果你的类支持多个异步方法，每个方法返回不同类型的数据，则应该：  
   
--   将增量结果报告与进度报告分开。  
+- 将增量结果报告与进度报告分开。  
   
--   单独定义针对每个异步方法有适当 <xref:System.EventArgs> 的 MethodNameProgressChanged 事件，以处理此方法的增量结果数据。  
+- 单独定义针对每个异步方法有适当 <xref:System.EventArgs> 的 MethodNameProgressChanged 事件，以处理此方法的增量结果数据。  
   
  按照[实现基于事件的异步模式的最佳做法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)所述，在适当线程上调用事件处理程序。  
   
@@ -205,9 +205,9 @@ ms.locfileid: "59333354"
   
  给定同步方法 *MethodName*：  
   
--   MethodName 的 `out` 参数不应为 MethodNameAsync 的一部分。 它们应是 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。  
+- MethodName 的 `out` 参数不应为 MethodNameAsync 的一部分。 它们应是 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。  
   
--   MethodName 的 `ref` 参数应显示为 MethodNameAsync 的一部分，并显示为 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。  
+- MethodName 的 `ref` 参数应显示为 MethodNameAsync 的一部分，并显示为 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。  
   
  例如，给定：  
   

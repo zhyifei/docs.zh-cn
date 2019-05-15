@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909268"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588832"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控件技术摘要（Windows 窗体）
 本主题概述了 `DataGridView` 控件及支持其使用的类的相关信息。  
@@ -29,7 +29,7 @@ ms.locfileid: "61909268"
  `BindingSource`  
   
 ## <a name="background"></a>背景  
- 用户界面 (UI) 设计器经常发现需要向用户显示表格数据。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供多种方式来在表或网格中显示数据。 `DataGridView`控件表示此技术的 Windows 窗体应用程序的最新演变。  
+ 用户界面 (UI) 设计器经常发现需要向用户显示表格数据。 .NET Framework 提供多种方式来在表或网格中显示数据。 `DataGridView`控件表示此技术的 Windows 窗体应用程序的最新演变。  
   
  `DataGridView`控件可以显示的数据存储区中的数据行。 支持许多类型的数据存储。 数据存储区可以容纳简单、 非类型化数据，例如一维数组，或它可以保存类型化的数据，如<xref:System.Data.DataSet>。 有关详细信息，请参阅[如何：将数据绑定到 Windows 窗体 DataGridView 控件](how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
   

@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651216"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586749"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>处理 XML 文件 (Visual Basic)
-编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 (有关如何标记代码的信息，请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)。)ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识对应[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]元数据/反射项目。  
+编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 (有关如何标记代码的信息，请参阅[XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)。)ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识相应的.NET Framework 元数据/反射项目。  
   
  XML 文件不是代码的你; 的分层表示形式它是具有每个元素生成的 ID 的平面列表。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64651216"
   
 - 第二部分`String`是开始的命名空间的根处的项的完全限定的名称。 用句点分隔的项、 其封闭类型和命名空间名称。 如果项本身的名称包含句点，它们替换为数字符号 （#）。 假定项，因此无法直接在其名称中包含数字符号。 例如，完全限定的名称`String`构造函数将是`System.String.#ctor`。  
   
-- 对于属性和方法，如果方法带有自变量，则后跟用括号括起来的自变量列表。 如果没有任何自变量，则不会出现括号。 确保自变量之间用逗号分隔。 每个自变量的编码直接遵循中的编码方式[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]签名。  
+- 对于属性和方法，如果方法带有自变量，则后跟用括号括起来的自变量列表。 如果没有任何自变量，则不会出现括号。 确保自变量之间用逗号分隔。 每个自变量的编码直接遵循它在.NET Framework 签名中的编码方式。  
   
 ## <a name="example"></a>示例  
  下面的代码演示如何的 ID 字符串类并生成其成员。  

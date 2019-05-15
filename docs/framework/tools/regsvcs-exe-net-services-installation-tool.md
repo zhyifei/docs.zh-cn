@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215035"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623413"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe（.NET 服务安装工具）
 .NET 服务安装工具执行下列操作：  
   
--   加载并注册程序集。  
+- 加载并注册程序集。  
   
--   生成、注册类型库并将其安装到指定的 COM+ 应用程序中。  
+- 生成、注册类型库并将其安装到指定的 COM+ 应用程序中。  
   
--   配置以编程方式添加到类的服务。  
+- 配置以编程方式添加到类的服务。  
   
  若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 43b9ca115f3eeae7a28d8ed8a0642ad6e5439bd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a14ee9e5916133be3979650055cf3e57899a4cca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603695"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591800"
 ---
 # <a name="schema-import-and-export"></a>架构导入和导出
-Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行转换（双向）。 除了序列化程序本身，WCF 还包括关联的架构导入和架构导出机制。 *架构*是的 XML 序列化程序生成或反序列化程序可以访问的形状的正式、 精确和计算机可读说明。 WCF 使用 World Wide Web 联合会 (W3C) XML 架构定义语言 (XSD) 作为其架构表示形式，可与许多第三方平台广泛互操作。  
+Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` （在两个方向）.NET Framework 对象和 XML 之间进行转换。 除了序列化程序本身，WCF 还包括关联的架构导入和架构导出机制。 *架构*是的 XML 序列化程序生成或反序列化程序可以访问的形状的正式、 精确和计算机可读说明。 WCF 使用 World Wide Web 联合会 (W3C) XML 架构定义语言 (XSD) 作为其架构表示形式，可与许多第三方平台广泛互操作。  
   
- 架构导入组件 <xref:System.Runtime.Serialization.XsdDataContractImporter> 使用 XSD 架构文档并生成 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类（通常为数据协定类），使序列化格式对应于给定架构。  
+ 架构导入组件<xref:System.Runtime.Serialization.XsdDataContractImporter>，采用 XSD 架构文档并生成的.NET Framework 类 （通常是数据协定类），以便序列化的格式对应于给定的架构。  
   
  例如，以下架构片段：  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  有关详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 如果架构不符合数据协定规则，请使用另一个序列化引擎。 例如，<xref:System.Xml.Serialization.XmlSerializer> 使用自己的独立架构导入机制。 另有一种特殊的导入模式，可在其中扩展所支持架构的范围。 有关详细信息，请参阅有关生成的一节<xref:System.Xml.Serialization.IXmlSerializable>中的类型[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
- `XsdDataContractExporter` 支持可以用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 序列化的任何 `DataContractSerializer` 类型。 有关详细信息，请参阅[类型支持的数据协定序列化程序](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 请注意，使用 `XsdDataContractExporter` 生成的架构通常是 `XsdDataContractImporter` 可以使用的有效数据（除非 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 用于对架构进行自定义）。  
+ `XsdDataContractExporter`支持任何可序列化的.NET Framework 类型`DataContractSerializer`。 有关详细信息，请参阅[类型支持的数据协定序列化程序](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 请注意，使用 `XsdDataContractExporter` 生成的架构通常是 `XsdDataContractImporter` 可以使用的有效数据（除非 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 用于对架构进行自定义）。  
   
  有关使用详细信息<xref:System.Runtime.Serialization.XsdDataContractImporter>，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   

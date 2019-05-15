@@ -8,15 +8,15 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: a2c45e45421f8b03f592bf6e1e53cad97a4ef9ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2cdcebd4e47996841ad58213d9c6252a6a3dd7b6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648277"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591839"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>如何：手动管理缓冲的图形
-对于更高级的双缓冲方案，可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]类以实现您自己的双缓冲逻辑。 负责分配和管理各个图形缓冲的类是<xref:System.Drawing.BufferedGraphicsContext>类。 每个应用程序具有自己的默认<xref:System.Drawing.BufferedGraphicsContext>管理所有默认双缓冲该应用程序。 可以通过调用检索到此实例的引用<xref:System.Drawing.BufferedGraphicsManager.Current%2A>。  
+对于更高级的双缓冲方案，可以使用.NET Framework 类来实现您自己的双缓冲逻辑。 负责分配和管理各个图形缓冲的类是<xref:System.Drawing.BufferedGraphicsContext>类。 每个应用程序具有自己的默认<xref:System.Drawing.BufferedGraphicsContext>管理所有默认双缓冲该应用程序。 可以通过调用检索到此实例的引用<xref:System.Drawing.BufferedGraphicsManager.Current%2A>。  
   
 ### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>若要获取对默认 BufferedGraphicsContext 的引用  
   

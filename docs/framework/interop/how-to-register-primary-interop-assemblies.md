@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a394aea0e5f8081f2be3b91422e29a251cef918e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314745"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626265"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>如何：注册主互操作程序集
 
@@ -28,9 +28,9 @@ ms.locfileid: "59314745"
 
  尽管没有必要注册主互操作程序集（除非你打算使用 Visual Studio），但注册可提供两大好处：
 
--   在原始类型库的注册表项下清楚地标记已注册的主互操作程序集。 注册是在你的计算机上定位主互操作程序集的最佳方式。
+- 在原始类型库的注册表项下清楚地标记已注册的主互操作程序集。 注册是在你的计算机上定位主互操作程序集的最佳方式。
 
--   如果在将来某个时间你使用 Visual Studio 引用具有未注册的主互操作程序集的类型，可以避免意外地生成和使用新的互操作程序集。
+- 如果在将来某个时间你使用 Visual Studio 引用具有未注册的主互操作程序集的类型，可以避免意外地生成和使用新的互操作程序集。
 
 使用[程序集注册工具 (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 注册主互操作程序集。
 

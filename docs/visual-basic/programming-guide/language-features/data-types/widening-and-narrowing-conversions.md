@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600895"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586315"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>扩大转换和收缩转换 (Visual Basic)
 类型转换的一个重要考虑因素是转换的结果是否在目标数据类型的范围内。  
@@ -93,7 +93,7 @@ ms.locfileid: "64600895"
   
 - <xref:System.OverflowException> -（仅限整型） 如果转换后的值的目标类型太大  
   
- 如果类或结构定义了[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)转换运算符到或从该类或结构，作为的`CType`可以引发任何它认为适当的任何异常。 此外，该`CType`可能会调用 Visual Basic 函数或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]又可能会引发多种异常的方法。  
+ 如果类或结构定义了[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)转换运算符到或从该类或结构，作为的`CType`可以引发任何它认为适当的任何异常。 此外的`CType`可能调用 Visual Basic 函数或.NET Framework 方法，进而可能会引发多种异常。  
   
 ## <a name="changes-during-reference-type-conversions"></a>引用类型转换过程中的更改  
  从转换*引用类型*只复制的指针的值。 值本身不复制也不以任何方式更改。 可以更改的唯一事情是变量的包含指针的数据类型。 在以下示例中，数据类型从派生类转换为它的基类，但这两个变量现在指向的对象保持不变。  

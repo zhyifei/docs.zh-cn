@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657061"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583494"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  问： System.Data.Linq 是否标记为供部分受信任的代码使用？  
   
- 答： 是，System.Data.Linq.dll 程序集属于那些使用 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 属性标记的 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 程序集。 如果没有此标记，则 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 中的程序集将仅供完全受信任的代码使用。  
+ 答： 是的 System.Data.Linq.dll 程序集是标记有这些.NET Framework 程序集之间<xref:System.Security.AllowPartiallyTrustedCallersAttribute>属性。 无需进行此标记，.NET Framework 中的程序集适用于使用只能由完全受信任的代码。  
   
  中的主要方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，允许部分受信任调用方是能够[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]程序集访问从 Web 应用程序，其中*信任*配置为 Medium。  
   

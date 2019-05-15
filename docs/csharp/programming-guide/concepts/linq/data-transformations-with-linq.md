@@ -10,23 +10,23 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5a0c4b0d672e3fd9cfe1528e16070cf1dcbabd69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326055"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597659"
 ---
 # <a name="data-transformations-with-linq-c"></a>使用 LINQ 进行数据转换 (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 不只是检索数据。 它也是用于转换数据的强大工具。 通过使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询，可以使用源序列作为输入，并通过多种方式对其进行修改，以创建新的输出序列。 通过排序和分组，你可以修改序列本身，而无需修改这些元素本身。 但也许 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询最强大的功能是创建新类型。 这可以在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。 例如，可以执行下列任务：  
   
--   将多个输入序列合并为具有新类型的单个输出序列。  
+- 将多个输入序列合并为具有新类型的单个输出序列。  
   
--   创建其元素由源序列中每个元素的一个或多个属性组成的输出序列。  
+- 创建其元素由源序列中每个元素的一个或多个属性组成的输出序列。  
   
--   创建其元素由对源数据执行的操作结果组成的输出序列。  
+- 创建其元素由对源数据执行的操作结果组成的输出序列。  
   
--   创建其他格式的输出序列。 例如，可以将数据从 SQL 行或文本文件转换为 XML。  
+- 创建其他格式的输出序列。 例如，可以将数据从 SQL 行或文本文件转换为 XML。  
   
  这只是几个例子。 当然，可以以各种方式在同一查询中组合这些转换。 此外，一个查询的输出序列可以用作新查询的输入序列。  
   

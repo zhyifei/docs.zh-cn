@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649761"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593243"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>算术运算符 (Visual Basic)
 算术运算符用于执行许多熟悉涉及计算的数字表示的文本、 变量、 其他表达式、 函数和属性调用和常量的值的算术运算。 此外属于算术运算符将移位运算符，它在操作数的单个位级别上执行操作并向左或向右移动其位模式。  
@@ -51,7 +51,7 @@ ms.locfileid: "64649761"
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>尝试的除数为零  
- 被零除具有不同的结果，具体取决于所涉及的数据类型。 整型部门中 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`)，则[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]引发<xref:System.DivideByZeroException>异常。 在除法运算`Decimal`或`Single`数据类型[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]还会引发<xref:System.DivideByZeroException>异常。  
+ 被零除具有不同的结果，具体取决于所涉及的数据类型。 整型部门中 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`)，.NET Framework 将引发<xref:System.DivideByZeroException>异常。 在除法运算`Decimal`或`Single`数据类型，.NET Framework 还会引发<xref:System.DivideByZeroException>异常。  
   
  浮点划分方式涉及`Double`数据类型，不会引发异常，并且结果是表示的类成员<xref:System.Double.NaN>， <xref:System.Double.PositiveInfinity>，或<xref:System.Double.NegativeInfinity>，取决于被除数。 下表汇总了各个结果的尝试除`Double`为零的值。  
   

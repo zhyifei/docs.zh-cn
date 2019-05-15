@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627032"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592553"
 ---
 # <a name="data-transfer-architectural-overview"></a>数据传输体系结构概述
 Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它可以接收消息，处理消息，根据用户代码调度消息以便进一步操作，或者从用户代码给定的数据构造消息并将消息发送到目标。 本主题旨在向高级开发人员说明用于处理消息和所包含数据的体系结构。 有关如何发送和接收数据的面向任务的更简单介绍，请参阅 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
   
  您可以通过使用 WCF<xref:System.ServiceModel.Channels.Message>类和通道堆栈直接。 但是，这样做很麻烦且很费时。 此外，<xref:System.ServiceModel.Channels.Message>对象未提供元数据支持，因此不能生成强类型化的 WCF 客户端，如果在这种方式中使用 WCF。  
   
- 因此，WCF 包含提供易于使用的编程模型，可用于构造和接收的服务框架`Message`对象。 服务框架通过服务协定概念将服务映射到 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型，并将消息调度给用户操作，而用户操作只不过是由 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 属性标记的 <xref:System.ServiceModel.OperationContractAttribute> 方法（有关更多详细信息，请参阅 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)）。 这些方法可能具有参数和返回值。 在服务端，服务框架将传入的 <xref:System.ServiceModel.Channels.Message> 实例转换为参数，并将返回值转换为传出的 <xref:System.ServiceModel.Channels.Message> 实例。 在客户端，执行相反的操作。 例如，考虑下面的 `FindAirfare` 操作。  
+ 因此，WCF 包含提供易于使用的编程模型，可用于构造和接收的服务框架`Message`对象。 服务框架将服务映射到服务协定概念通过.NET Framework 类型和将消息调度给用户操作，如是只需使用标记方法的.NET Framework<xref:System.ServiceModel.OperationContractAttribute>属性 (有关更多详细信息，请参阅[设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md))。 这些方法可能具有参数和返回值。 在服务端，服务框架将传入的 <xref:System.ServiceModel.Channels.Message> 实例转换为参数，并将返回值转换为传出的 <xref:System.ServiceModel.Channels.Message> 实例。 在客户端，执行相反的操作。 例如，考虑下面的 `FindAirfare` 操作。  
   
  [!code-csharp[c_DataArchitecture#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#1)]
  [!code-vb[c_DataArchitecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#1)]  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
  有关详细信息，请参阅[Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ## <a name="message-properties"></a>消息属性  
- 消息可以包含属性。 属性  是任何与字符串名称关联的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象。 通过 `Properties` 上的 `Message`属性可以访问这些属性。  
+ 消息可以包含属性。 一个*属性*是与字符串名称相关联的任何.NET Framework 对象。 通过 `Properties` 上的 `Message`属性可以访问这些属性。  
   
  与消息正文和消息头不同（通常分别映射到 SOAP 正文和 SOAP 标头），消息属性通常不与消息一起发送或接收。 消息属性主要作为一种通信机制，用于在通道堆栈中的各个通道之间以及通道堆栈和服务模块之间传递有关消息的数据。  
   
@@ -179,7 +179,7 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
  使用此方法时，XML 编写器可以选择何时调用 <xref:System.Xml.IStreamProvider.GetStream> 和写出经过流处理的数据。 例如，文本和二进制 XML 编写器将立即调用此方法并写出开始标记和结束标记之间的经过流处理的内容。 MTOM 编写器准备写入消息的相应部分时，它可以决定以后调用 <xref:System.Xml.IStreamProvider.GetStream> 。  
   
 ## <a name="representing-data-in-the-service-framework"></a>在服务框架中表示数据  
- 如本主题的"基本体系结构"部分中所述，服务框架是的除此之外，是负责消息数据的用户友好编程模型之间进行转换，而实际的 WCF 的一部分`Message`实例。 通常，消息交换在服务框架中表示为用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 属性标记的 <xref:System.ServiceModel.OperationContractAttribute> 方法。 此方法可以接受参数并可以返回一个返回值和/或 out 参数。 在服务端，输入参数表示传入消息，返回值和 out 参数表示传出消息。 在客户端，情况正好相反。 使用参数和返回值来说明消息的编程模型将在 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)中详细说明。 不过，本节将提供简要概述。  
+ 如本主题的"基本体系结构"部分中所述，服务框架是的除此之外，是负责消息数据的用户友好编程模型之间进行转换，而实际的 WCF 的一部分`Message`实例。 通常情况下，消息交换表示在服务框架为.NET Framework 方法标有<xref:System.ServiceModel.OperationContractAttribute>属性。 此方法可以接受参数并可以返回一个返回值和/或 out 参数。 在服务端，输入参数表示传入消息，返回值和 out 参数表示传出消息。 在客户端，情况正好相反。 使用参数和返回值来说明消息的编程模型将在 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)中详细说明。 不过，本节将提供简要概述。  
   
 ## <a name="programming-models"></a>编程模型  
  WCF 服务框架支持五个不同的编程模型来说明消息：  
@@ -218,7 +218,7 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
  操作 ="*"行，有效地关闭消息调度并确保所有消息都发送到`IForwardingService`协定转到`ForwardMessage`操作。 （通常情况下，调度程序会检查消息的"Action"标头来确定适用于哪些操作。 操作 ="\*"表示"Action 标头的所有可能值"。)操作的组合 ="\*"和使用 Message 作为参数被称为"通用协定"，因为它是可以接收所有可能的消息。 若要能够发送所有可能的消息，使用 Message 作为返回值并设置`ReplyAction`到"\*"。 这将阻止服务框架添加其自己的 Action 标头，使您能够使用返回的 `Message` 对象控制此标头。  
   
 ### <a name="3-message-contracts"></a>3.消息协定  
- WCF 提供了声明性编程模型来说明消息，调用*消息协定搭配*。 此模型将在 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)中详细说明。 实质上，整个消息由单个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型表示，该类型使用 <xref:System.ServiceModel.MessageBodyMemberAttribute> 和 <xref:System.ServiceModel.MessageHeaderAttribute> 这样的属性来说明消息协定类的哪些部分应当映射到消息的哪个部分。  
+ WCF 提供了声明性编程模型来说明消息，调用*消息协定搭配*。 此模型将在 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)中详细说明。 从根本上来说，整个消息由之类的特性的单个.NET Framework 类型<xref:System.ServiceModel.MessageBodyMemberAttribute>和<xref:System.ServiceModel.MessageHeaderAttribute>来描述消息协定类中的哪些部分应映射到消息的哪个部分。  
   
  消息协定对生成的 `Message` 实例提供广泛的控制（虽然明显没有直接使用 `Message` 类所提供的控制那样广泛）。 例如，消息正文通常由多段信息组成，每段消息由其各自的 XML 元素表示。 这些元素可以直接出现在正文中（空 模式），也可以包装  在包含 XML 元素中。 使用消息协定编程模型时可以进行空与包装决策并控制包装名称和命名空间的名称。  
   
@@ -264,7 +264,7 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
 |<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%28System.ServiceModel.Channels.Message%2CSystem.Object%5B%5D%29>|将传入的 `Message` 转换为返回值/out 参数|  
   
 ## <a name="serialization"></a>序列化  
- 每当使用消息协定或参数来说明消息内容时，必须使用序列化在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型和 XML Infoset 表示形式之间进行转换。 例如，在其他位置在 WCF 中，使用序列化，是<xref:System.ServiceModel.Channels.Message>具有一个通用<xref:System.ServiceModel.Channels.Message.GetBody%2A>可用于读取整个正文反序列化的消息转换为对象的方法。  
+ 每当使用消息协定或参数来说明消息内容时，必须使用序列化的.NET Framework 类型和 XML Infoset 表示形式之间进行转换。 例如，在其他位置在 WCF 中，使用序列化，是<xref:System.ServiceModel.Channels.Message>具有一个通用<xref:System.ServiceModel.Channels.Message.GetBody%2A>可用于读取整个正文反序列化的消息转换为对象的方法。  
   
  WCF 支持用于序列化和反序列化参数和消息部分的"现成"的两个序列化技术：<xref:System.Runtime.Serialization.DataContractSerializer>和`XmlSerializer`。 另外，您也可以编写自定义序列化程序。 但是，WCF 的其他部分 (如泛型`GetBody`方法或 SOAP 错误序列化) 可能会限制为仅使用<xref:System.Runtime.Serialization.XmlObjectSerializer>子类 (<xref:System.Runtime.Serialization.DataContractSerializer>并<xref:System.Runtime.Serialization.NetDataContractSerializer>，但不是<xref:System.Xml.Serialization.XmlSerializer>)，甚至已经硬编码为仅使用<xref:System.Runtime.Serialization.DataContractSerializer>。  
   

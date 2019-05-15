@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917951"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592798"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>对已声明元素的引用 (Visual Basic)
 当你的代码引用已声明的元素时，Visual Basic 编译器匹配中该名称的相应声明您引用的名称。 如果多个元素具有相同名称声明，则可以控制哪些元素是由引用*合格*其名称。  
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>对项目的引用  
  若要使用[公共](../../../../visual-basic/language-reference/modifiers/public.md)另一个项目中定义的元素，则必须首先设置*引用*对该项目的程序集或类型库。 若要设置的引用，请单击**添加引用**上**项目**菜单中或使用[/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)命令行编译器选项。  
   
- 例如，可以使用的 XML 对象模型[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 如果引用设置为<xref:System.Xml>命名空间中，您可以声明和使用的任何类，如<xref:System.Xml.XmlDocument>。 下面的示例使用<xref:System.Xml.XmlDocument>。  
+ 例如，可以使用.NET Framework 的 XML 对象模型。 如果引用设置为<xref:System.Xml>命名空间中，您可以声明和使用的任何类，如<xref:System.Xml.XmlDocument>。 下面的示例使用<xref:System.Xml.XmlDocument>。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613980"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -51,11 +51,11 @@ ms.locfileid: "59342332"
   
 4. 使用以下步骤[探测程序集](#step4) ：  
   
-    1.  如果配置和发布服务器策略均不影响原始引用且绑定请求是使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法创建的，运行时将检查是否存在位置提示。  
+    1. 如果配置和发布服务器策略均不影响原始引用且绑定请求是使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法创建的，运行时将检查是否存在位置提示。  
   
-    2.  如果配置文件中存在代码库，则运行时只检查此位置。 如果此探测失败，运行时确定绑定请求已失败且不执行其他探测。  
+    2. 如果配置文件中存在代码库，则运行时只检查此位置。 如果此探测失败，运行时确定绑定请求已失败且不执行其他探测。  
   
-    3.  使用 [探测章节](#step4)中所述的试探法探测程序集。 如果探测后找不到程序集，运行时将请求 Windows Installer 提供程序集。 这相当于按需安装功能。  
+    3. 使用 [探测章节](#step4)中所述的试探法探测程序集。 如果探测后找不到程序集，运行时将请求 Windows Installer 提供程序集。 这相当于按需安装功能。  
   
         > [!NOTE]
         >  不会检查未带强名称的程序集版本，运行时也不会检查全局程序集缓存中未带强名称的程序集。  
@@ -64,11 +64,11 @@ ms.locfileid: "59342332"
 ## <a name="step-1-examining-the-configuration-files"></a>步骤 1：检查配置文件  
  可根据 3 个 XML 文件在不同级别上配置程序集绑定行为：  
   
--   应用程序配置文件。  
+- 应用程序配置文件。  
   
--   发布服务器策略文件。  
+- 发布服务器策略文件。  
   
--   计算机配置文件。  
+- 计算机配置文件。  
   
  这些文件遵循相同的语法，并提供绑定重定向、代码位置和特定程序集的绑定模式等信息。 每个配置文件均可包含用于重定向绑定过程的 [\<assemblyBinding> 元素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。 [\<assemblyBinding> 元素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)的子元素包括 [\<dependentAssembly> 元素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)。 [\<dependentAssembly> 元素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)的子元素包括 [\<assemblyIdentity> 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)和 [\<codeBase> 元素](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)。  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>通过探测查找程序集  
  如果应用程序配置文件中没有 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时使用以下 4 个条件来探测程序集：  
   
--   应用程序基，即正在执行应用程序的根位置。  
+- 应用程序基，即正在执行应用程序的根位置。  
   
--   区域性，即被引用的程序集的区域性属性。  
+- 区域性，即被引用的程序集的区域性属性。  
   
--   名称，即被引用的程序集的名称。  
+- 名称，即被引用的程序集的名称。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath` ，然后探测应用程序配置文件中指定的路径。  
+- [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath` ，然后探测应用程序配置文件中指定的路径。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>探测应用程序基和区域性目录  
  运行时始终先探测应用程序基，它可能是计算机的 URL 或应用程序根目录。 如果应用程序基中不存在引用的程序集且未提供区域性信息，则运行时将搜索具有程序集名称的所有子目录。 探测的目录包括：  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>探测示例  
  给定以下信息：  
   
--   引用的程序集名称：myAssembly  
+- 引用的程序集名称：myAssembly  
   
--   应用程序根目录：`http://www.code.microsoft.com`  
+- 应用程序根目录：`http://www.code.microsoft.com`  
   
--   配置文件中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素指定：bin  
+- 配置文件中的 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素指定：bin  
   
--   区域性：de  
+- 区域性：de  
   
  运行时探测以下 URL：  
   

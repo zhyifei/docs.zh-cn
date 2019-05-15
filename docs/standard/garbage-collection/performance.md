@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310559"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622871"
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 <a name="top"></a> 本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。  
   
  本主题包含以下各节：  
   
--   [性能分析工具](#performance_analysis_tools)  
+- [性能分析工具](#performance_analysis_tools)  
   
--   [性能问题故障排除](#troubleshooting_performance_issues)  
+- [性能问题故障排除](#troubleshooting_performance_issues)  
   
--   [故障排除指南](#troubleshooting_guidelines)  
+- [故障排除指南](#troubleshooting_guidelines)  
   
--   [性能检查过程](#performance_check_procedures)  
+- [性能检查过程](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
 ## <a name="performance-analysis-tools"></a>性能分析工具  
@@ -46,11 +46,11 @@ ms.locfileid: "59310559"
 ### <a name="garbage-collection-etw-events"></a>垃圾回收 ETW 事件  
  Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供的分析和调试支持提供补充。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)将捕获有用信息，用于从统计的角度来分析托管堆。 例如，在将要发生垃圾回收时引发的 `GCStart_V1` 事件提供了以下信息：  
   
--   正在收集哪一代对象。  
+- 正在收集哪一代对象。  
   
--   是什么触发了垃圾回收。  
+- 是什么触发了垃圾回收。  
   
--   垃圾回收的类型（并发或非并发）。  
+- 垃圾回收的类型（并发或非并发）。  
   
  ETW 事件日志有效，且不会掩盖与垃圾回收相关的任何性能问题。 一个进程可以通过结合 ETW 事件来提供其自身的事件。 登录后，可以关联应用程序事件和垃圾回收事件，以确定如何以及何时出现堆问题。 例如，服务器应用程序可以在客户端请求开始和结束时提供事件。  
   
@@ -69,29 +69,29 @@ ms.locfileid: "59310559"
 ## <a name="troubleshooting-performance-issues"></a>故障排除性能问题  
  第一步是[确定问题是否确实为垃圾回收](#IsGC)。 如果确定是，则从以下列表进行选择，以解决该问题。  
   
--   [引发内存不足异常](#Issue_OOM)  
+- [引发内存不足异常](#Issue_OOM)  
   
--   [进程占用过多内存](#Issue_TooMuchMemory)  
+- [进程占用过多内存](#Issue_TooMuchMemory)  
   
--   [垃圾回收器回收对象的速度不够快](#Issue_NotFastEnough)  
+- [垃圾回收器回收对象的速度不够快](#Issue_NotFastEnough)  
   
--   [托管堆太零碎](#Issue_Fragmentation)  
+- [托管堆太零碎](#Issue_Fragmentation)  
   
--   [垃圾回收暂停时间太长](#Issue_LongPauses)  
+- [垃圾回收暂停时间太长](#Issue_LongPauses)  
   
--   [第 0 代太大](#Issue_Gen0)  
+- [第 0 代太大](#Issue_Gen0)  
   
--   [垃圾回收期间的 CPU 使用率太高](#Issue_HighCPU)  
+- [垃圾回收期间的 CPU 使用率太高](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>问题：抛出内存不足异常  
  对于引发的托管 <xref:System.OutOfMemoryException>，存在以下两种合理的情况：  
   
--   虚拟内存不足。  
+- 虚拟内存不足。  
   
      垃圾回收器按预先确定大小的分段来分配系统内存。 如果分配需要其他段，但在进程的虚拟内存空间中没有剩余的连续可用块了，则托管堆的分配将失败。  
   
--   没有足够的物理内存来分配。  
+- 没有足够的物理内存来分配。  
   
 |性能检查|  
 |------------------------|  
@@ -99,11 +99,11 @@ ms.locfileid: "59310559"
   
  如果确定异常不合法，请使用以下信息与 Microsoft 客户服务和支持联系：  
   
--   带有托管内存不足异常的堆栈。  
+- 带有托管内存不足异常的堆栈。  
   
--   完整内存转储。  
+- 完整内存转储。  
   
--   证明这不是合法内存不足异常的数据包括显示虚拟或物理内存不是问题的数据。  
+- 证明这不是合法内存不足异常的数据包括显示虚拟或物理内存不是问题的数据。  
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>问题：进程占用过多内存  
@@ -141,11 +141,11 @@ ms.locfileid: "59310559"
   
  如果虚拟内存的碎片阻止垃圾回收器添加段，原因可能是下列之一：  
   
--   频繁加载和卸载许多小的程序集。  
+- 频繁加载和卸载许多小的程序集。  
   
--   与非托管代码互操作时，保留了太多对 COM 对象的引用。  
+- 与非托管代码互操作时，保留了太多对 COM 对象的引用。  
   
--   大型暂时性对象的创建会导致大型对象堆频繁分配和释放堆段。  
+- 大型暂时性对象的创建会导致大型对象堆频繁分配和释放堆段。  
   
      当承载 CLR 时，应用程序可以请求垃圾回收器保留其片段。 这将减少段分配的频率。 通过使用 [STARTUP_FLAGS 枚举](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)中的 STARTUP_HOARD_GC_VM 标志来完成。  
   
@@ -201,24 +201,24 @@ ms.locfileid: "59310559"
 ### <a name="when-to-measure-the-managed-heap-size"></a>何时衡量托管堆的大小  
  除非使用探查器，否则必须建立一致的测量模式，以有效地诊断性能问题。 若要建立一个计划，请考虑以下几点：  
   
--   如果在第 2 代垃圾回收后测量，则整个托管的堆将不再存在垃圾（死对象）。  
+- 如果在第 2 代垃圾回收后测量，则整个托管的堆将不再存在垃圾（死对象）。  
   
--   如果在一个 0 代垃圾回收后立即进行测量，则尚不会收集第 1 代和 2 中的对象。  
+- 如果在一个 0 代垃圾回收后立即进行测量，则尚不会收集第 1 代和 2 中的对象。  
   
--   如果在垃圾回收之前立即进行测量，则你将在垃圾回收启动之前，测量尽可能多的分配。  
+- 如果在垃圾回收之前立即进行测量，则你将在垃圾回收启动之前，测量尽可能多的分配。  
   
--   在垃圾回收期间进行测量会出现问题，因为垃圾回收器的数据结构对于遍历是无效状态，可能不能提供完整的结果。 这是设计使然。  
+- 在垃圾回收期间进行测量会出现问题，因为垃圾回收器的数据结构对于遍历是无效状态，可能不能提供完整的结果。 这是设计使然。  
   
--   当与并发垃圾回收一起使用工作站垃圾回收时，回收的对象不会进行压缩，因此，堆的大小可能会相同或更大（碎片可以使它看起来更大）。  
+- 当与并发垃圾回收一起使用工作站垃圾回收时，回收的对象不会进行压缩，因此，堆的大小可能会相同或更大（碎片可以使它看起来更大）。  
   
--   第 2 代上的并发垃圾回收在物理内存加载过高时，将被延迟。  
+- 第 2 代上的并发垃圾回收在物理内存加载过高时，将被延迟。  
   
  以下过程介绍如何设置一个断点，以便测量托管堆。  
   
 <a name="GenBreak"></a>   
 ##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>若要在垃圾回收结束时设置一个断点  
   
--   在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令：  
+- 在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令：  
   
      **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
@@ -234,44 +234,44 @@ ms.locfileid: "59310559"
 ## <a name="performance-check-procedures"></a>性能检查过程  
  本部分将介绍下列过程，以避免造成性能问题的原因：  
   
--   [确定问题是否由垃圾回收引起。](#IsGC)  
+- [确定问题是否由垃圾回收引起。](#IsGC)  
   
--   [确定是否已托管内存不足异常。](#OOMIsManaged)  
+- [确定是否已托管内存不足异常。](#OOMIsManaged)  
   
--   [确定可保留的虚拟内存量。](#GetVM)  
+- [确定可保留的虚拟内存量。](#GetVM)  
   
--   [确定是否有足够的物理内存。](#Physical)  
+- [确定是否有足够的物理内存。](#Physical)  
   
--   [确定托管堆的内存提交量。](#ManagedHeapCommit)  
+- [确定托管堆的内存提交量。](#ManagedHeapCommit)  
   
--   [确定托管堆的内存保留量。](#ManagedHeapReserve)  
+- [确定托管堆的内存保留量。](#ManagedHeapReserve)  
   
--   [确定第 2 代中的大型对象。](#ExamineGen2)  
+- [确定第 2 代中的大型对象。](#ExamineGen2)  
   
--   [确定对对象的引用。](#ObjRef)  
+- [确定对对象的引用。](#ObjRef)  
   
--   [确定是否已运行终结器。](#Induce)  
+- [确定是否已运行终结器。](#Induce)  
   
--   [确定是否存在等待终结的对象。](#Finalize)  
+- [确定是否存在等待终结的对象。](#Finalize)  
   
--   [确定托管堆中的可用空间量。](#Fragmented)  
+- [确定托管堆中的可用空间量。](#Fragmented)  
   
--   [确定固定对象的数目。](#Pinned)  
+- [确定固定对象的数目。](#Pinned)  
   
--   [确定垃圾回收中的时长。](#TimeInGC)  
+- [确定垃圾回收中的时长。](#TimeInGC)  
   
--   [确定触发垃圾回收的原因。](#Triggered)  
+- [确定触发垃圾回收的原因。](#Triggered)  
   
--   [确定 CPU 的使用率过高是否由垃圾回收引起。](#HighCPU)  
+- [确定 CPU 的使用率过高是否由垃圾回收引起。](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>若要确定问题是否是垃圾回收引起  
   
--   请检查以下两个内存性能计数器：  
+- 请检查以下两个内存性能计数器：  
   
-    -   **GC 所占时间百分比**。 显示执行最后一个垃圾回收周期后，执行垃圾回收所用运行时间的百分比。 使用此计数器确定垃圾回收器是否花费太多时间来使托管堆空间可用。 如果垃圾回收所用的时间相对较短，这可能表示托管堆之外存在资源问题。 当涉及并发或后台垃圾回收时，此计数器可能不准确。  
+    - **GC 所占时间百分比**。 显示执行最后一个垃圾回收周期后，执行垃圾回收所用运行时间的百分比。 使用此计数器确定垃圾回收器是否花费太多时间来使托管堆空间可用。 如果垃圾回收所用的时间相对较短，这可能表示托管堆之外存在资源问题。 当涉及并发或后台垃圾回收时，此计数器可能不准确。  
   
-    -   **已提交的字节总数**。 显示垃圾回收器当前已提交的虚拟内存量。 使用此计数器确定垃圾回收器所占用的内存是否是应用程序所使用的内存的过多部分。  
+    - **已提交的字节总数**。 显示垃圾回收器当前已提交的虚拟内存量。 使用此计数器确定垃圾回收器所占用的内存是否是应用程序所使用的内存的过多部分。  
   
      大多数的内存性能计数器会在每次垃圾回收结束时进行更新。 因此，它们可能不会反映你希望了解的当前情况。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "59310559"
 <a name="GetVM"></a>   
 ##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>若要确定可保留的虚拟内存量  
   
--   在加载了 SOS 调试器扩展的 WinDbg 中键入以下命令，以获取最大的可用区域：  
+- 在加载了 SOS 调试器扩展的 WinDbg 中键入以下命令，以获取最大的可用区域：  
   
      **!address -summary**  
   
@@ -325,7 +325,7 @@ ms.locfileid: "59310559"
   
      或  
   
--   使用 **vmstat** 命令：  
+- 使用 **vmstat** 命令：  
   
      **!vmstat**  
   
@@ -353,7 +353,7 @@ ms.locfileid: "59310559"
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>若要确定托管堆的内存提交量  
   
--   使用 `# Total committed bytes` 内存性能计数器获取托管堆提交的字节数。 垃圾回收器根据需要在某个段上提交区块，但不会全部在同一时间进行。  
+- 使用 `# Total committed bytes` 内存性能计数器获取托管堆提交的字节数。 垃圾回收器根据需要在某个段上提交区块，但不会全部在同一时间进行。  
   
     > [!NOTE]
     >  请不要使用 `# Bytes in all Heaps` 性能计数器，因为它不表示托管堆的实际内存使用情况。 代的大小包括在此值中，且实际上是其阈值大小，即如果代以对象进行填充，将引发垃圾回收的大小。 因此，此值通常为零。  
@@ -361,14 +361,14 @@ ms.locfileid: "59310559"
 <a name="ManagedHeapReserve"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>若要确定托管堆的内存保留量  
   
--   使用 `# Total reserved bytes`内存性能计数器。  
+- 使用 `# Total reserved bytes`内存性能计数器。  
   
      垃圾回收器在段中保留内存，你可以使用 **eeheap** 命令确定段的开始位置。  
   
     > [!IMPORTANT]
     >  尽管可以确定垃圾回收器为每个段分配的内存量，但是段的大小是特定于实现的，并可能会在任何时间（包括在定期更新中）进行更改。 应用程序不应假设特定段的大小或依赖于此大小，也不应尝试配置段分配可用的内存量。  
   
--   在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
+- 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
   
      **!eeheap -gc**  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59310559"
 <a name="ExamineGen2"></a>   
 ##### <a name="to-determine-large-objects-in-generation-2"></a>若要确定第 2 代中的大型对象  
   
--   在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
+- 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
   
      **!dumpheap –stat**  
   
@@ -448,13 +448,13 @@ ms.locfileid: "59310559"
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>若要确定对对象的引用  
   
--   在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令，以列出对对象的引用：  
+- 在加载了 SOS 调试器扩展的 WinDbg 中，键入以下命令，以列出对对象的引用：  
   
      **!gcroot**  
   
      `-or-`  
   
--   若要确定对特定对象的引用，包括地址：  
+- 若要确定对特定对象的引用，包括地址：  
   
      **!gcroot 1c37b2ac**  
   
@@ -481,7 +481,7 @@ ms.locfileid: "59310559"
 <a name="Induce"></a>   
 ##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>若要确定是否已运行终结器  
   
--   则运行包含以下代码的测试程序：  
+- 则运行包含以下代码的测试程序：  
   
     ```  
     GC.Collect();  
@@ -518,7 +518,7 @@ ms.locfileid: "59310559"
 <a name="Fragmented"></a>   
 ##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>若要确定托管堆中的可用空间量  
   
--   在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
+- 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
   
      **!dumpheap -type Free -stat**  
   
@@ -532,7 +532,7 @@ ms.locfileid: "59310559"
     Total 230 objects  
     ```  
   
--   若要确定第 0 代中的可用空间，请键入以下命令以获取代的内存使用信息：  
+- 若要确定第 0 代中的可用空间，请键入以下命令以获取代的内存使用信息：  
   
      **!eeheap -gc**  
   
@@ -552,7 +552,7 @@ ms.locfileid: "59310559"
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   计算 0 代使用的空间：  
+- 计算 0 代使用的空间：  
   
      **?49e05d04-0x49521f8c**  
   
@@ -562,7 +562,7 @@ ms.locfileid: "59310559"
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   以下命令将转储 0 代范围内的可用空间：  
+- 以下命令将转储 0 代范围内的可用空间：  
   
      **!dumpheap -type Free -stat 0x49521f8c 49e05d04**  
   
@@ -594,7 +594,7 @@ ms.locfileid: "59310559"
 <a name="Pinned"></a>   
 ##### <a name="to-determine-the-number-of-pinned-objects"></a>若要确定固定对象的数目  
   
--   在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
+- 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令：  
   
      **!gchandles**  
   
@@ -609,7 +609,7 @@ ms.locfileid: "59310559"
 <a name="TimeInGC"></a>   
 ##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>若要确定垃圾回收中的时间  
   
--   检查 `% Time in GC` 内存性能计数器。  
+- 检查 `% Time in GC` 内存性能计数器。  
   
      通过使用采样间隔时间来计算值。 因为该计数器在每次垃圾回收结束时进行更新，所以如果在间隔期间没有产生任何回收，则当前的示例将具有与之前的示例相同的值。  
   
@@ -640,7 +640,7 @@ ms.locfileid: "59310559"
   
      第 2 个第 2代垃圾回收在第 3 个间隔期间开始并在第 5 个间隔处完成。 假设最坏情况下，最后一次垃圾回收是针对在第 2 个间隔开始时完成的 0 代回收，且第 2 代垃圾回收在第 5 个间隔结束时完成。 因此，第 0 代垃圾回收结束和第 2 代垃圾回收结束之间的时间是 4 秒。 因为 `% Time in GC` 计数器为 20%，所以第 2 代垃圾回收可能使用的最长时间为（4 秒 * 20%= 800 毫秒）。  
   
--   或者，可以通过使用[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)，确定垃圾回收的时长，并分析此信息以确定垃圾回收的持续时间。  
+- 或者，可以通过使用[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)，确定垃圾回收的时长，并分析此信息以确定垃圾回收的持续时间。  
   
      例如，以下数据显示了一个发生在非并发垃圾回收期间的事件序列。  
   
@@ -696,7 +696,7 @@ ms.locfileid: "59310559"
 <a name="Triggered"></a>   
 ##### <a name="to-determine-what-triggered-a-garbage-collection"></a>若要确定触发垃圾回收的原因  
   
--   在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令，以显示所有带调用堆栈的线程：  
+- 在加载了 SOS 调试器扩展的 WinDbg 或 Visual Studio 调试器中，键入以下命令，以显示所有带调用堆栈的线程：  
   
      **~\*kb**  
   
@@ -774,7 +774,7 @@ ms.locfileid: "59310559"
 <a name="HighCPU"></a>   
 ##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>若要确定 CPU 的使用率高是否是垃圾回收引起的  
   
--   将 `% Time in GC` 内存性能计数器的值与处理时间相关联。  
+- 将 `% Time in GC` 内存性能计数器的值与处理时间相关联。  
   
      如果 `% Time in GC` 值在与处理时间同时达到峰值，则垃圾回收将造成 CPU 使用率过高。 否则，配置应用程序，以查找发生使用率过高的位置。  
   

@@ -1,15 +1,13 @@
 ---
 title: 实现值对象
 description: 适用于容器化的 .NET 应用程序的 .NET 微服务体系结构 | 深入了解有关使用新实体框架功能实现值对象的详细信息和选项。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611375"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063053"
 ---
 # <a name="implement-value-objects"></a>实现值对象
 
@@ -324,7 +322,7 @@ public class Address
 - **复杂类型和/或值对象**。 EF Core GitHub 存储库中的讨论（“问题”选项卡）\
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** eShopOnContainers **  \中的基值对象类。
+- **ValueObject.cs.** eShopOnContainers 中的基值对象类。 \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **地址类。** eShopOnContainers 中的示例值对象类。 \

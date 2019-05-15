@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625776"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592778"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。  
@@ -44,7 +44,7 @@ ms.locfileid: "64625776"
 ## <a name="settings-persistence"></a>设置持久性  
  <xref:System.Configuration.ApplicationSettingsBase>类不本身持久保存或加载设置; 此作业由设置提供程序，派生的类<xref:System.Configuration.SettingsProvider>。 如果派生的类<xref:System.Configuration.ApplicationSettingsBase>未指定设置提供程序通过<xref:System.Configuration.SettingsProviderAttribute>，则默认的提供程序， <xref:System.Configuration.LocalFileSettingsProvider>，使用。  
   
- 最初随 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 一起发布的配置系统支持通过本地计算机的 machine.config 文件，或在与应用程序一起部署的 `app.`exe.config 文件内提供静态应用程序配置数据。 <xref:System.Configuration.LocalFileSettingsProvider>类按以下方式扩展此本机支持：  
+ 最初随.NET Framework 一起发布的配置系统支持提供静态的应用程序配置数据通过在本地计算机的 machine.config 文件中或在`app.`部署时使用的 exe.config 文件你的应用程序。 <xref:System.Configuration.LocalFileSettingsProvider>类按以下方式扩展此本机支持：  
   
 - 应用程序范围设置可存储在 machine.config 或 `app.`exe.config 文件中。 Machine.config 始终为只读，而出于安全考虑，`app`.exe.config 对大多数应用程序也限制为只读。  
   

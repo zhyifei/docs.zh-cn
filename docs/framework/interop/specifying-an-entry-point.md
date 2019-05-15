@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086060"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064107"
 ---
 # <a name="specifying-an-entry-point"></a>指定入口点
 入口点标识 DLL 中的函数位置。 在托管项目中，目标函数的原始名称或序号入口点跨越互操作边界标识该函数。 此外，可将入口点映射到其他名称，有效地重命名该函数。  
   
  以下列表列出了重命名 DLL 函数的可能原因：  
   
--   避免使用区分大小写的 API 函数名  
+- 避免使用区分大小写的 API 函数名  
   
--   符合现有的命名标准  
+- 符合现有的命名标准  
   
--   提供采用不同数据类型的函数（通过声明同一 DLL 函数的多个版本）  
+- 提供采用不同数据类型的函数（通过声明同一 DLL 函数的多个版本）  
   
--   简化对包含 ANSI 和 Unicode 版本的 API 的使用  
+- 简化对包含 ANSI 和 Unicode 版本的 API 的使用  
   
  本主题说明如何在托管代码中重命名 DLL 函数。  
   
@@ -34,10 +34,8 @@ ms.locfileid: "59086060"
  Visual Basic 在 Declare 语句中使用 Function 关键字设置 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 字段。 下面的示例演示了一个基本声明。  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -48,10 +46,8 @@ End Class
  如下例所示，通过在定义中包括 Alias 关键字，可以用 MsgBox 替换 MessageBox 入口点。 在这两个示例中，Auto 关键字使你无需指定入口点的字符集版本。 有关选择字符集的详细信息，请参阅[指定字符集](../../../docs/framework/interop/specifying-a-character-set.md)。  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MsgBox _
+Friend Class NativeMethods
+    Friend Declare Auto Function MsgBox _
         Lib "user32.dll" Alias "MessageBox" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
@@ -76,7 +72,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
     internal static extern int MessageBox(

@@ -2,18 +2,18 @@
 title: 实体框架概述
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034044"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583843"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是 ADO.NET 中的一套支持开发面向数据的软件应用程序的技术。 面向数据的应用程序的架构师和开发人员曾为实现两个迥然不同的目标费尽心机： 他们必须为要解决的业务问题的实体、关系和逻辑构建模型，还必须处理用于存储和检索数据的数据引擎。 数据可能跨多个各有不同协议的存储系统；甚至使用单个存储系统的应用程序也必须在存储系统的需求与编写高效且容易维护的应用程序代码之间取得平衡。
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使开发人员可以采用特定于域的对象和属性（如客户和客户地址）的形式使用数据，而不必自己考虑存储这些数据的基础数据库表和列。 借助[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，开发人员在处理数据时能够以更高的抽象级别工作，并且能够以相比传统应用程序更少的代码创建和维护面向数据的应用程序。 因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的组成部分[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序可以在其上的任何计算机上运行[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]从版本 3.5 SP1 开始安装。
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 使开发人员可以采用特定于域的对象和属性（如客户和客户地址）的形式使用数据，而不必自己考虑存储这些数据的基础数据库表和列。 借助[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，开发人员在处理数据时能够以更高的抽象级别工作，并且能够以相比传统应用程序更少的代码创建和维护面向数据的应用程序。 因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是.NET Framework 的组件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序可以在其安装.NET Framework 版本 3.5 SP1 的任何计算机上运行。
 
 ## <a name="give-life-to-models"></a>赋予模型生命
  构建应用程序或服务时常用的一种长期存在的设计方法是将应用程序或服务分为三部分：域模型、逻辑模型和物理模型。 域模型定义要建模的系统中的实体和关系。 关系数据库的逻辑模型通过外键约束将实体和关系规范化到表中。 物理模型通过指定分区和索引等存储详细信息实现特定数据引擎的功能。

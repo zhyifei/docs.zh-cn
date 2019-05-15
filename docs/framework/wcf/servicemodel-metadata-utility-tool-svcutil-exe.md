@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669677"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582695"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 
@@ -107,7 +107,7 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 |/serializer:Auto|自动选择序列化程序。 这将尝试使用数据协定序列化程序，并使用 XmlSerializer，如果该操作失败。<br /><br /> 缩写形式：`/ser`|
 |/serializer:DataContractSerializer|生成使用数据协定序列化程序进行序列化和反序列化的数据类型。<br /><br /> 缩写形式：`/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|生成使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化和反序列化的数据类型。<br /><br /> 缩写形式：`/ser:XmlSerializer`|
-|/targetClientVersion|指定应用程序针对 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的哪个版本。 有效值为 `Version30` 和 `Version35`。 默认值为 `Version30`。<br /><br /> 缩写形式：`/tcv`<br /><br /> `Version30`：使用`/tcv:Version30`如果为使用客户端生成代码[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。<br /><br /> `Version35`：使用`/tcv:Version35`如果为使用客户端生成代码[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 如果将 `/tcv:Version35` 与 `/async` 开关一起使用，则会同时生成基于事件的异步方法和基于回调/委托的异步方法。 此外，还能够支持启用 LINQ 的数据集和 <xref:System.DateTimeOffset>。|
+|/targetClientVersion|指定应用程序所面向的.NET Framework 版本。 有效值为 `Version30` 和 `Version35`。 默认值为 `Version30`。<br /><br /> 缩写形式：`/tcv`<br /><br /> `Version30`：使用`/tcv:Version30`如果为使用客户端生成代码[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。<br /><br /> `Version35`：使用`/tcv:Version35`如果为使用客户端生成代码[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 如果将 `/tcv:Version35` 与 `/async` 开关一起使用，则会同时生成基于事件的异步方法和基于回调/委托的异步方法。 此外，还能够支持启用 LINQ 的数据集和 <xref:System.DateTimeOffset>。|
 |/wrapped|控制是否对具有包装参数的 document-literal 样式的文档使用特殊大小写。 使用 **/ 包装**开关与[服务模型 Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具来指定正常大小写。|
 
 > [!NOTE]
