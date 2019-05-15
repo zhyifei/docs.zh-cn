@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622813"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592246"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622813"
   
  以下是泛型的一些局限：  
   
-- 泛型类型可从多数基类中派生，如 <xref:System.MarshalByRefObject> （约束可用于要求泛型类型形参派生自诸如 <xref:System.MarshalByRefObject>的基类）。 不过，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不支持上下文绑定泛型类型。 泛型类型可派生自 <xref:System.ContextBoundObject>，但尝试创建该类型实例会导致 <xref:System.TypeLoadException>。  
+- 泛型类型可从多数基类中派生，如 <xref:System.MarshalByRefObject> （约束可用于要求泛型类型形参派生自诸如 <xref:System.MarshalByRefObject>的基类）。 不过，.NET Framework 不支持上下文绑定泛型类型。 泛型类型可派生自 <xref:System.ContextBoundObject>，但尝试创建该类型实例会导致 <xref:System.TypeLoadException>。  
   
 - 枚举不能具有泛型类型形参。 枚举偶尔可为泛型（例如，因为它嵌套在被定义使用 Visual Basic、C# 或 C++ 的泛型类型中）。 有关详细信息，请参阅 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的“枚举”。  
   

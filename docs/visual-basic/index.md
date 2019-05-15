@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: b10c520c1940b150566ab5766ca5afd2e0f03e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13b887d6d01d3dc0f2018539a5893b261a3f5de3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797080"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590398"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 指南
 
@@ -37,7 +37,7 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
 介绍了 Visual Basic 语言和编译器的相关信息。  
 
 [使用 Visual Basic 开发应用程序](../visual-basic/developing-apps/index.md)\
-介绍了使用 Visual Basic 开发应用程序的各个方面，安全性、异常处理、调试和使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库。
+介绍了使用 Visual Basic 开发应用程序的各个方面，安全性、异常处理、调试和使用 .NET Framework 类库。
 
 [COM 互操作](../visual-basic/programming-guide/com-interop/index.md)\
 阐明了与使用 Visual Basic 创建和使用组件对象模型 (COM) 对象相关联的互操作性问题。  
@@ -54,4 +54,4 @@ Visual Basic 用于高效生成类型安全和面向对象的应用程序。 Vis
 提供帮助你了解 Visual Studio 基本知识的链接。  
   
 [.NET API 浏览器](../../api/index.md)\
-介绍由 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SKD 中包含的类、接口和值类型组成的库。
+介绍由 Microsoft .NET Framework SKD 中包含的类、接口和值类型组成的库。
