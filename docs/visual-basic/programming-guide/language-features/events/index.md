@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616705"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586703"
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 虽然你可能会作为一系列按顺序执行，在现实中的过程进行可视化的 Visual Studio 项目大多数程序都是事件驱动的这意味着执行流由外部发生*事件*。  
@@ -104,6 +104,6 @@ ms.locfileid: "64616705"
 |[如何：声明自定义事件以避免阻止](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|介绍了如何定义允许异步调用事件处理程序的自定义事件。|  
 |[如何：声明自定义事件以节省内存](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|介绍了如何定义仅在事件处理时占用内存的自定义事件。|  
 |[Visual Basic 中继承的事件处理程序疑难解答](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|列出了在继承的组件中使用事件处理程序时遇到的常见问题。|  
-|[事件](../../../../standard/events/index.md)|概述了 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的事件模型。|  
+|[事件](../../../../standard/events/index.md)|提供 .NET Framework 中事件模型的概述。|  
 |[在 Windows 窗体中创建事件处理程序](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|介绍了如何处理与 Windows 窗体对象关联的事件。|  
 |[委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|概述了 Visual Basic 中的委托。|

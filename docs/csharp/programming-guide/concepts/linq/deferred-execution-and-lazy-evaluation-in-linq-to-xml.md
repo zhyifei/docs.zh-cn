@@ -2,12 +2,12 @@
 title: LINQ to XML 中的延迟执行和迟缓计算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 83fdc73b583a2c8aba5383f4a5b3af11a1f6f9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 940885d6499bd2730c0bd4a5e15a490a9e85deab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709684"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597432"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML 中的延迟执行和迟缓计算 (C#)
 实现查询和轴操作通常是为了使用延迟执行。 本主题解释延迟执行的要求和优点，以及某些实现注意事项。  
@@ -22,16 +22,16 @@ ms.locfileid: "54709684"
 ## <a name="eager-vs-lazy-evaluation"></a>积极计算与迟缓计算  
  当您编写实现延迟执行的方法时，还必须确定是使用迟缓计算还是积极计算来实现该方法。  
   
--   在迟缓计算中，每次调用迭代器时都会处理源集合的一个元素。 这是实现迭代器的典型方式。  
+- 在迟缓计算中，每次调用迭代器时都会处理源集合的一个元素。 这是实现迭代器的典型方式。  
   
--   在积极计算中，第一次调用迭代器时就会对整个集合进行处理。 还可能需要源集合的临时副本。 例如，<xref:System.Linq.Enumerable.OrderBy%2A> 方法必须在返回第一个元素前对整个集合进行排序。  
+- 在积极计算中，第一次调用迭代器时就会对整个集合进行处理。 还可能需要源集合的临时副本。 例如，<xref:System.Linq.Enumerable.OrderBy%2A> 方法必须在返回第一个元素前对整个集合进行排序。  
   
  迟缓计算通常产生更好的性能，因为它将系统开销处理平均分配到整个集合的计算中，并将临时数据的使用降至最低。 当然，对于某些操作，除了具体化中间结果之外，再没有其他选择。  
   
 ## <a name="next-steps"></a>后续步骤  
  本教程的下一个主题将解释延迟执行：  
   
--   [延迟执行示例 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [延迟执行示例 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>请参阅
 

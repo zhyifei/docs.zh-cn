@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637528"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591274"
 ---
 # <a name="using-the-message-class"></a>使用 Message 类
 <xref:System.ServiceModel.Channels.Message>类是为 Windows Communication Foundation (WCF) 的基础。 客户端与服务之间的所有通信最终都会产生要进行发送和接收的 <xref:System.ServiceModel.Channels.Message> 实例。  
   
  您通常不会与 <xref:System.ServiceModel.Channels.Message> 类直接进行交互。 相反，WCF 服务模型构造，如数据协定、 消息协定和操作协定，用于描述传入和传出消息。 但是，在某些高级方案中，可以直接使用 <xref:System.ServiceModel.Channels.Message> 类进行编程。 例如，在以下情况下可能需要使用 <xref:System.ServiceModel.Channels.Message> 类：  
   
-- 需要一种替代方式来创建传出的消息内容（例如，从磁盘上的文件直接创建消息），而不是序列化 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象。  
+- 当您需要创建传出消息内容 （例如，直接从磁盘上的文件创建一条消息），而不序列化.NET Framework 对象的替代方法。  
   
-- 需要一种替代方式来使用传入的消息内容（例如，需要将 XSLT 转换应用于原始 XML 内容），而不是反序列化为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象。  
+- 当您需要使用传入消息内容 （例如，当你想要将 XSLT 转换应用于原始 XML 内容时） 而不反序列化为.NET Framework 对象的替代方法。  
   
 - 无论消息内容怎样都需要使用常规方式来处理消息（例如，在生成路由器、负载平衡器或发布-订阅系统时对消息进行路由或转发）。  
   

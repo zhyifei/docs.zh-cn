@@ -2,12 +2,12 @@
 title: 查找 Word 文档中的文本 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720780"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596631"
 ---
 # <a name="finding-text-in-word-documents-c"></a>查找 Word 文档中的文本 (C#)
 本主题扩展了以前的查询，以执行一些有用的任务：在文档中查找一个字符串的所有匹配项。  
@@ -325,7 +325,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>后续步骤  
  下一节提供有关 WordprocessingML 文档的更多信息：  
   
--   [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Office Open XML WordprocessingML 文档的详细信息 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>请参阅
 

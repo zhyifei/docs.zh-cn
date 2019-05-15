@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565639"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589969"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的脚本块
 <xref:System.Xml.Xsl.XslCompiledTransform> 类使用 `msxsl:script` 元素支持嵌入的脚本。 在加载样式表式，任何已定义的函数将通过代码文档对象模型 (CodeDOM) 编译为 Microsoft 中间语言 (MSIL) 并在运行时执行。 从嵌入的脚本块生成的程序集比为样式表生成的程序集独立。  
@@ -71,11 +71,11 @@ ms.locfileid: "54565639"
 #### <a name="assemblies"></a>程序集  
  默认情况下引用下列两个程序集：  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Microsoft.VisualBasic.dll（如果脚本语言为 VB）  
+- Microsoft.VisualBasic.dll（如果脚本语言为 VB）  
   
  可以使用 `msxsl:assembly` 元素导入其他程序集。 包括在编译样式表时的程序集。 `msxsl:assembly` 元素具有以下定义：  
   
@@ -94,21 +94,21 @@ ms.locfileid: "54565639"
 #### <a name="namespaces"></a>命名空间  
  默认情况下包括下列命名空间：  
   
--   系统  
+- 系统  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic（如果脚本语言为 VB）  
+- Microsoft.VisualBasic（如果脚本语言为 VB）  
   
  可以使用 `namespace` 属性添加对其他命名空间的支持。 属性值是命名空间的名称。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "54565639"
 #### <a name="calcxsl"></a>calc.xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>输出  
+### <a name="output"></a>Output  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

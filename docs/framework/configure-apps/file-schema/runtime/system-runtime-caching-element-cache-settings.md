@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da059e1be7c685eba7792045abf4ffa691525d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03a17e8f30c15e98a350ef558cc1cb6ddf65cade
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584505"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.caching > 元素 （缓存设置）
 通过配置文件中的 <xref:System.Runtime.Caching.ObjectCache> 条目为默认内存中的 `memoryCache` 实现提供配置。  
@@ -45,7 +45,7 @@ ms.locfileid: "61701471"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|指定公共语言运行时和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序所使用的每个配置文件中的根元素。|  
+|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|在公共语言运行时和.NET Framework 应用程序使用每个配置文件中指定的根元素。|  
   
 ## <a name="remarks"></a>备注  
  此命名空间中的类提供一种使用诸如 ASP.NET 中缓存功能的方法，但不会在 `System.Web` 程序集上产生依赖。 有关详细信息，请参阅 [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md)。  

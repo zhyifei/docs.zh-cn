@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615113"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590783"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  
@@ -25,7 +25,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 - [Windows 服务应用程序](../../../framework/windows-services/index.md)。 列出了这些主题介绍如何创建 Windows 服务。  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面  
- Windows 窗体是智能客户端组件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一组启用常见应用程序任务，例如读取和写入到文件系统的托管库。 使用 Visual Studio 之类的开发环境，你可以创建 Windows 窗体应用程序显示的信息、 请求来自用户的输入和通信与远程计算机通过网络。  
+ Windows 窗体是.NET Framework 中，一组托管库，如读取和写入到文件系统的常见应用程序任务的智能客户端组件。 使用 Visual Studio 之类的开发环境，你可以创建 Windows 窗体应用程序显示的信息、 请求来自用户的输入和通信与远程计算机通过网络。  
   
  Windows 窗体在窗体是向用户的信息显示在其一个可视化图面。 通常情况下，将放在窗体上的控件并开发对用户操作，如鼠标单击或按键响应需要构建 Windows 窗体应用程序。 控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。  
   
@@ -86,7 +86,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 |管理安全性 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：启用 ClickOnce 安全设置](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>其他控件和功能  
- Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。 此外，Windows 窗体依赖于可靠的安全系统的[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，使您能够发布到你的客户更安全的应用程序。  
+ Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。 此外，Windows 窗体依赖于.NET Framework 中，您可以发布到你的客户更安全的应用程序的功能强大的安全系统。  
   
  有关使用这些功能的分步信息，请参阅下列帮助主题：  
   

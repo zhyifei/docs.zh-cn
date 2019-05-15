@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469696"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591541"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>对象生存期：如何创建和销毁 (Visual Basic) 对象
 使用 `New` 关键字创建类的实例（即对象）。 通常，初始化任务必须在使用之前在新对象上执行。 常见的初始化任务包括打开文件、连接到数据库以及读取注册表项的值。 Visual Basic 控制的使用过程名为的新对象初始化*构造函数*（允许控制初始化的特殊方法）。  
@@ -140,7 +140,7 @@ End Sub
  派生类不应该重写基类的 <xref:System.IDisposable.Dispose%2A> 和 `Finalize` 方法。 从派生类的实例中调用这些方法时，这些方法的基类的实现将调用 `Dispose(disposing)` 方法的派生类的重写。  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>垃圾回收和 Finalize 析构函数  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]使用*引用跟踪垃圾回收*系统定期释放未使用的资源。 Visual Basic 6.0 和早期版本使用不同的系统调用*引用计数*来管理资源。 尽管两个系统自动执行同一功能，但还是有一些重要的区别。  
+ 使用.NET Framework*引用跟踪垃圾回收*系统定期释放未使用的资源。 Visual Basic 6.0 和早期版本使用不同的系统调用*引用计数*来管理资源。 尽管两个系统自动执行同一功能，但还是有一些重要的区别。  
   
  当系统确定不再需要这些对象时，CLR 将定期对其进行销毁。 系统资源短缺时对象释放得更快，而非短缺时释放频率更低。 对象失去范围到 CLR 释放它之间出现延迟，这意味着与 Visual Basic 6.0 及更低版本不同，你无法确定销毁对象的确切时间。 在这种情况下，对象被视为具有*非确定性生存期*。 在大多数情况下，非确定性生存期不会更改你编写应用程序的方式，只要你记住`Finalize` 析构函数可能不会在对象失去范围时立即执行。  
   

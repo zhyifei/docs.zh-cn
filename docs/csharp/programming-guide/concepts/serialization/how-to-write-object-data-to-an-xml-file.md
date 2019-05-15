@@ -2,12 +2,12 @@
 title: 如何：将对象数据写入 XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554278"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595524"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何：将对象数据写入 XML 文件 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类从某个类将对象写入 XML 文件。  
@@ -50,13 +50,13 @@ public class XMLWrite
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   进行序列化的类没有公共的无参数构造函数。  
+- 进行序列化的类没有公共的无参数构造函数。  
   
--   文件存在且为只读 (<xref:System.IO.IOException>)。  
+- 文件存在且为只读 (<xref:System.IO.IOException>)。  
   
--   路径过长 (<xref:System.IO.PathTooLongException>)。  
+- 路径过长 (<xref:System.IO.PathTooLongException>)。  
   
--   磁盘已满 (<xref:System.IO.IOException>)。  
+- 磁盘已满 (<xref:System.IO.IOException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此示例在文件尚未存在时创建新文件。 如果某个应用程序需要创建文件，则该应用程序需要针对文件夹的 `Create` 访问权限。 如果文件已存在，则该应用程序只需要 `Write` 访问权限（这是较弱的特权）。 如有可能，在部署过程中创建文件，并且仅授予针对单个文件的 `Read` 访问权限（而不是针对 `Create` 文件夹的访问权限）会更加安全。  

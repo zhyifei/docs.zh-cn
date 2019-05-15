@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e87fdd31a4dfb9b595f165225f7b86d5e88ea7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087529"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607758"
 ---
 # <a name="assembly-manifest"></a>程序集清单
 每一程序集，无论是静态的还是动态的，均包含描述该程序集中各元素彼此如何关联的数据集合。 程序集清单就包含这些程序集元数据。 程序集清单包含指定该程序集的版本要求和安全标识所需的所有元数据，以及定义该程序集的范围和解析对资源和类的引用所需的全部元数据。 程序集清单可以存储在具有 Microsoft 中间语言 (MSIL) 代码的 PE 文件（.exe 或 .dll）中，也可存储在只包含程序集清单信息的独立 PE 文件中。  
@@ -28,15 +28,15 @@ ms.locfileid: "59087529"
   
  每一程序集的清单均执行以下功能：  
   
--   枚举构成该程序集的文件。  
+- 枚举构成该程序集的文件。  
   
--   控制对该程序集的类型和资源的引用如何映射到包含其声明和实现的文件。  
+- 控制对该程序集的类型和资源的引用如何映射到包含其声明和实现的文件。  
   
--   枚举该程序集所依赖的其他程序集。  
+- 枚举该程序集所依赖的其他程序集。  
   
--   在程序集的使用者和程序集的实现详细信息的使用者之间提供一定程度的间接性。  
+- 在程序集的使用者和程序集的实现详细信息的使用者之间提供一定程度的间接性。  
   
--   呈现程序集自述。  
+- 呈现程序集自述。  
   
 ## <a name="assembly-manifest-contents"></a>程序集清单内容  
  下表显示了在程序集清单中包含的信息。 前四项（程序集名称、版本号、区域性和强名称信息）构成了程序集的标识。  

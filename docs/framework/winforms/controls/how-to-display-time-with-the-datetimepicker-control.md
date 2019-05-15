@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: f1c1a0abaeddadb44b40d56eb2f8a28e4b58f4f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84f10540e7735ac1043e63eecda84161c10deeef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651773"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591720"
 ---
 # <a name="how-to-display-time-with-the-datetimepicker-control"></a>如何：使用 DateTimePicker 控件显示时间
 如果希望应用程序能够使用户选择日期和时间，并以指定的格式显示该日期和时间，请使用 <xref:System.Windows.Forms.DateTimePicker> 控件。 以下的过程说明如何使用 <xref:System.Windows.Forms.DateTimePicker> 控件来显示时间。  
@@ -41,8 +41,6 @@ ms.locfileid: "64651773"
  此示例需要：  
   
 - 对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

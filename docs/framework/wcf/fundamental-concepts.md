@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637268"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591947"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  通道是绑定元素的具体实现。 绑定表示配置，而通道是与该配置相关联的实现。 因此，每个绑定元素都有一个相关联的通道。 通道堆叠在一起以形成绑定的具体实现：通道堆栈。  
   
  WCF client（WCF 客户端）  
- WCF 客户端是一个将服务操作作为方法公开的客户端应用程序构造（用您所选的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 编程语言编写，如 Visual Basic 或 Visual C#）。 任何应用程序都可以承载 WCF 客户端，包括承载服务的应用程序。 因此，可以创建一个包含其他服务的 WCF 客户端的服务。  
+ 服务操作作为方法公开的客户端应用程序构造 (如 Visual Basic 或 Visual 你选择的编程语言在.NET Framework 中C#)。 任何应用程序都可以承载 WCF 客户端，包括承载服务的应用程序。 因此，可以创建一个包含其他服务的 WCF 客户端的服务。  
   
  可以通过使用自动生成 WCF 客户端[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)并指向正在运行的服务发布的元数据。  
   

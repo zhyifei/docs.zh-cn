@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772016"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583419"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
 >  <xref:System.Data.OracleClient> 中的类型已过时。 当前版本的 .NET Framework 仍支持这些类型，但以后的版本会将这些类型删除。 Microsoft 建议您使用第三方 Oracle 提供程序。  
   
- 本节说明特定于适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序的功能和行为。  
+ 本部分介绍功能和特定于 Oracle.NET Framework 数据提供程序的行为。  
   
- 适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序允许使用 Oracle 客户端软提供的 Oracle 调用接口 (OCI) 来访问 Oracle 数据库。 数据提供程序的功能设计为类似于[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的 SQL Server、 OLE DB 和 ODBC 数据提供程序。  
+ 适用于 Oracle 的.NET Framework 数据提供程序提供了对使用 Oracle 调用接口 (OCI) 提供的 Oracle 客户端软件的 Oracle 数据库的访问。 数据提供程序的功能被设计为类似于 SQL Server、 OLE DB 和 ODBC 的.NET Framework 数据提供程序。  
   
- 若要使用适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序，应用程序必须引用 <xref:System.Data.OracleClient> 命名空间，如下所示：  
+ 若要使用用于 Oracle 的.NET Framework 数据提供程序，应用程序必须引用<xref:System.Data.OracleClient>命名空间，如下所示：  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>本节内容  
  [系统要求](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- 说明使用适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序时的需求，并说明使用时应注意的若干问题。  
+ 介绍了对于 Oracle，使用.NET Framework 数据提供程序的要求以及要使用它时应注意的问题数。  
   
  [Oracle BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  描述用于使用 Oracle BFILE 数据类型的 <xref:System.Data.OracleClient.OracleBFile> 类。  

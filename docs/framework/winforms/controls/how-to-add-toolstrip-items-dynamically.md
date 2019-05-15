@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: 9426c7cb3251dbbd95727b78c57be7a0b71556e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08d08a292995cc5e12fbab3e91a0962c3b895a02
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624012"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588872"
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a>如何：动态添加 ToolStrip 项
 打开菜单时，可以动态填充 <xref:System.Windows.Forms.ToolStrip> 控件的菜单项集合。  
@@ -33,8 +33,6 @@ ms.locfileid: "64624012"
  此示例需要：  
   
 - 对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

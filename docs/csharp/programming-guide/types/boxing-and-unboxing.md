@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5db3d759daec273a29dccfeff9879d0edcc9a269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595020"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>装箱和取消装箱（C# 编程指南）
 装箱是将[值类型](../../../csharp/language-reference/keywords/value-types.md)转换为 `object` 类型或由此值类型实现的任何接口类型的过程。 当 CLR 对值类型进行装箱时，会将该值包装到 System.Object 内部，再将后者存储在托管堆上。 取消装箱将从对象中提取值类型。 装箱是隐式的；取消装箱是显式的。 装箱和取消装箱的概念是类型系统 C# 统一视图的基础，其中任一类型的值都被视为一个对象。  
@@ -63,9 +63,9 @@ ms.locfileid: "58835162"
 ## <a name="unboxing"></a>取消装箱  
  取消装箱是从 `object` 类型到[值类型](../../../csharp/language-reference/keywords/value-types.md)或从接口类型到实现该接口的值类型的显式转换。 取消装箱操作包括：  
   
--   检查对象实例，以确保它是给定值类型的装箱值。  
+- 检查对象实例，以确保它是给定值类型的装箱值。  
   
--   将该值从实例复制到值类型变量中。  
+- 将该值从实例复制到值类型变量中。  
   
  下面的语句演示装箱和取消装箱两种操作：  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>相关章节  
  更多相关信息：  
   
--   [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [值类型](../../../csharp/language-reference/keywords/value-types.md)  
+- [值类型](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>请参阅
 

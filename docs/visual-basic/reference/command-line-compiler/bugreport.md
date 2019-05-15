@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624321"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590629"
 ---
 # <a name="-bugreport"></a>-bugreport
 创建提交 bug 报告时，可以使用一个文件。  
@@ -46,7 +46,7 @@ ms.locfileid: "64624321"
  因为所有源代码文件的副本包含在`file`，可能想要重现在尽可能短小的程序 （可疑的） 代码缺陷。  
   
 > [!IMPORTANT]
->  `-bugreport`选项将生成包含潜在敏感信息的文件。 这包括当前时间，编译器版本[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]版本、 OS 版本、 用户名称、 与其编译器已运行，所有源代码和二进制形式的任何引用的程序集的命令行参数。 可以通过命令行选项指定的服务器端汇集在 Web.config 文件中访问此选项[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]应用程序。 若要防止此情况，修改 Machine.config 文件不允许用户在服务器上进行编译。  
+>  `-bugreport`选项将生成包含潜在敏感信息的文件。 这包括当前时间、 编译器版本、.NET Framework 版本、 OS 版本、 用户名、 编译器运行所使用的所有源代码和二进制任何的形式引用的程序集的命令行参数。 在服务器端编译的 ASP.NET 应用程序的 Web.config 文件中指定的命令行选项，可以访问此选项。 若要防止此情况，修改 Machine.config 文件不允许用户在服务器上进行编译。  
   
  如果将此选项用于`-errorreport:prompt`， `-errorreport:queue`，或`-errorreport:send`，和你的应用程序时遇到内部编译器错误中的信息`file`发送到 Microsoft Corporation。 该信息将帮助确定错误的原因的 Microsoft 工程师以及可帮助提高下一版本的 Visual Basic。 默认情况下，任何信息不发送给 Microsoft。 但是，当编译应用程序使用`-errorreport:queue`，默认情况下启用，应用程序收集其错误报告。 然后，在计算机的管理员登录，错误报告系统将显示一个弹出窗口，使管理员能够将转发到任何错误报告的 Microsoft 自登录以来发生的。  
   

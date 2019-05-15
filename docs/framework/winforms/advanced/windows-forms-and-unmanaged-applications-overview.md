@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665848"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592497"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows 窗体和非托管应用程序概述
 Windows 窗体应用程序和控件可以与非托管应用程序进行互操作，但有一些需要注意的问题。 以下各节将介绍 Windows 窗体应用程序和控件支持和不支持的方案和配置。  
@@ -47,7 +47,7 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
  应用程序的消息循环是内部程序循环，它从线程的消息队列检索消息，然后转换这些消息，之后将它们发送给要处理的应用程序。 Windows 窗体的消息循环与更早的应用程序（例如，Visual Basic 6.0 应用程序和 MFC 应用程序）所提供的消息循环的体系结构不同。 发布到消息循环的窗口消息的处理方式可能与 Windows 窗体期望的不同。 因此，可能发生意外的行为。 某些击键组合可能不起作用，某些鼠标活动可能不工作，或者某些事件可能不会按期望引发。  
   
 ## <a name="resolving-interoperability-issues"></a>解决互操作性问题  
- 可以通过在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 消息循环（它是使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法创建的）上显示窗体来解决这些问题。  
+ 可以通过在创建使用.NET Framework 消息循环上显示窗体来解决这些问题<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>方法。  
   
  若要使 Windows 窗体在 COM 客户端应用程序中正确工作，必须在 Windows 窗体消息循环上运行该窗体。 若要执行此操作，请使用以下方法之一：  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595994"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：订阅和取消订阅事件（C# 编程指南）
 如果想编写引发事件时调用的自定义代码，则可以订阅由其他类发布的事件。 例如，可以订阅某个按钮的 `click` 事件，以使应用程序在用户单击该按钮时执行一些有用的操作。  
@@ -74,7 +74,7 @@ ms.locfileid: "59306594"
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>使用匿名方法订阅事件  
   
--   如果以后不必取消订阅某个事件，则可以使用加法赋值运算符 (`+=`) 将匿名方法附加到此事件。 在下面的示例中，假设名为 `publisher` 的对象拥有一个名为 `RaiseCustomEvent` 的事件，并且还定义了一个 `CustomEventArgs` 类以承载某些类型的专用事件信息。 请注意，订户类需要引用 `publisher` 才能订阅其事件。  
+- 如果以后不必取消订阅某个事件，则可以使用加法赋值运算符 (`+=`) 将匿名方法附加到此事件。 在下面的示例中，假设名为 `publisher` 的对象拥有一个名为 `RaiseCustomEvent` 的事件，并且还定义了一个 `CustomEventArgs` 类以承载某些类型的专用事件信息。 请注意，订户类需要引用 `publisher` 才能订阅其事件。  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ ms.locfileid: "59306594"
   
 #### <a name="to-unsubscribe-from-an-event"></a>取消订阅事件  
   
--   使用减法赋值运算符 (`-=`) 取消订阅事件：  
+- 使用减法赋值运算符 (`-=`) 取消订阅事件：  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

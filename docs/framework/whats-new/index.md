@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914821"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063870"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -35,7 +35,7 @@ ms.locfileid: "61914821"
 本文不提供有关每项新增功能的完整信息，并有可能会发生更改。 有关 .NET Framework 的常规信息，请参阅[入门](../get-started/index.md)。 有关支持的平台，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)。 有关下载链接和安装说明，请参阅[安装指南](../install/guide-for-developers.md)。
 
 > [!NOTE]
-> .NET Framework 团队还发布 NuGet 带外功能以扩展平台支持并引入新功能，如不可变集合和启用了 SIMD 的矢量类型。 有关详细信息，请参阅[其他类库和 API](../additional-apis/index.md) 以及 [.NET Framework 和带外版本](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 请参阅 .NET Framework 的 [NuGet 包的完整列表](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或订阅[我们的源](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
+> .NET Framework 团队还发布 NuGet 带外功能以扩展平台支持并引入新功能，如不可变集合和启用了 SIMD 的矢量类型。 有关详细信息，请参阅[其他类库和 API](../additional-apis/index.md) 以及 [.NET Framework 和带外版本](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 请参阅用于 .NET Framework 的 [完整 NuGet 包列表](https://www.nuget.org/profiles/dotnetframework)。
 
 <a name="v48" />
 
@@ -115,6 +115,17 @@ ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:Syst
      healthBehavior = new ServiceHealthBehavior();
   }
    host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+  ```vb
+  Dim host As New ServiceHost(GetType(Service1),
+              New Uri("http://contoso:81/Service1"))
+  Dim healthBehavior As ServiceHealthBehavior = 
+     host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
+  If healthBehavior Is Nothing Then
+     healthBehavior = New ServiceHealthBehavior()
+  End If
+  host.Description.Behaviors.Add(healthBehavior) 
   ```
 
 - 通过使用配置文件。 例如:
@@ -551,6 +562,15 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
+```vb
+Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+   Public ReadOnly Property TargetObject As Object
+   Public ReadOnly Property TargetProperty As Object
+   Public ReadOnly Property ResourceDictionary As ResourceDictionary
+   Public ReadOnly Property ResourceKey As Object
+End Class
+```
+
 除非启用  <xref:System.Windows.Diagnostics.VisualDiagnostics> 并设置了 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  环境变量，否则不会引发该事件（且忽略它的 `add` 访问器）。
 
 #### <a name="clickonce"></a>ClickOnce
@@ -840,6 +860,13 @@ public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
+```
+
+```vb
+Public Interface ISessionStateModule : Inherits IHttpModule
+   Sub ReleaseSessionState(context As HttpContext)
+   Function ReleaseSessionStateAsync(context As HttpContext) As Task
+End Interface
 ```
 
  此外，<xref:System.Web.SessionState.SessionStateUtility> 类包括两种新方法：<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 和 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>，可用来支持异步操作。
@@ -1515,6 +1542,10 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
+        ```vb
+        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+        ```
+
          库必须检查使用者是否已声明该开关的值，并且相应地作用于它。
 
         ```csharp
@@ -1526,15 +1557,31 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
            // A false value implies the latest behavior.
         }
 
-           // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow)
-           {
-              // old code
-           }
-           else {
-              // new code
-           }
+        // The library can use the value of shouldThrow to throw exceptions or not.
+        if (shouldThrow)
+        {
+           // old code
         }
+        else 
+        {
+           // new code
+        }
+        ```
+
+        ```vb
+        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+           ' This is the case where the switch value was not set by the application.
+           ' The library can choose to get the value of shouldThrow by other means.
+           ' If no overrides nor default values are specified, the value should be 'false'.
+           ' A false value implies the latest behavior.
+        End If
+
+        ' The library can use the value of shouldThrow to throw exceptions or not.
+        If shouldThrow Then
+           ' old code
+        Else 
+           ' new code
+        End If
         ```
 
          使用一致的开关格式是有益的，因为它们是由库公开的正式协定。 以下是两种明显的格式。
@@ -1781,6 +1828,14 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
                                               IPromotableSinglePhaseNotification promotableNotification,
                                               ISinglePhaseNotification enlistmentNotification,
                                               EnlistmentOptions enlistmentOptions)
+    ```
+
+    ```vb
+    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+                                            promotableNotification As IPromotableSinglePhaseNotification,
+                                            enlistmentNotification As ISinglePhaseNotification,
+                                            enlistmentOptions As EnlistmentOptions) As Enlistment
     ```
 
      该方法可能会由登记使用，该登记先前通过 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 创建以响应 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 方法。 它要求 `System.Transactions` 将事务提升为 MSDTC 事务，并将可提升的登记“转换”为持久登记。 此方法成功完成后，`System.Transactions` 将不再引用 <xref:System.Transactions.IPromotableSinglePhaseNotification> 接口，将来的所有通知都将到达所提供的 <xref:System.Transactions.ISinglePhaseNotification> 接口。 相关登记必须作为持久登记，以支持事务日志记录和恢复。 请参阅 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> 了解详细信息。 此外，登记必须支持 <xref:System.Transactions.ISinglePhaseNotification>。  此方法*只能*在处理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 调用时调用。 如果不是这种情况，则会引发 <xref:System.Transactions.TransactionException> 异常。

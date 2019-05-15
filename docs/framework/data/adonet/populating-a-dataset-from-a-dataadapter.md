@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: 0d9f349bf4e7e2a2a698dc988e5c366291169200
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c49e810b830ecb7327f400d9ef183f4db9c7d736
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211457"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584565"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充数据集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet>是提供一致关系编程模型独立于数据源的数据的驻留内存表示形式。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
@@ -22,7 +22,7 @@ ms.locfileid: "65211457"
 > [!NOTE]
 >  使用 `DataAdapter` 检索表的全部内容会花费些时间，尤其是在表中有很多行时。 这是因为访问数据库，定位和处理数据，然后将数据传输到客户端是需要很长时间的。 将表中全部内容提取到客户端还会在服务器上锁定所有行。 若要提高性能，您可以使用 `WHERE` 子句使返回客户端的行数大为减少。 还可以通过只显式列出 `SELECT` 语句要求的列减少返回到客户端的数据量。 另一种好的变通方法是以批次检索行（例如一次检索几百行），并且在客户端完成当前批次后只检索下一批次。  
   
- `Fill` 方法使用 `DataReader` 对象来隐式地返回用于在 `DataSet`中创建表的列名称和类型，以及用于填充 `DataSet`中的表行的数据。 表和列仅在不存在时才创建；否则， `Fill` 将使用现有的 `DataSet` 架构。 列类型，作为创建[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中的表[ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非数据源中存在主键且 `DataAdapter`**来控制。**`MissingSchemaAction` 设置为 `MissingSchemaAction`**来控制。**`AddWithKey`来控制。 如果 `Fill` 发现某个表存在主键，对于主键列的值与从数据源返回的行的主键列的值匹配的行，将使用数据源中的数据重写 `DataSet` 中的数据。 如果未找到任何主键，则将数据追加到 `DataSet`中的表。 `Fill` 使用填充时可能存在的任何映射`DataSet`(请参阅[DataAdapter 数据表和 DataColumn 映射](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
+ `Fill` 方法使用 `DataReader` 对象来隐式地返回用于在 `DataSet`中创建表的列名称和类型，以及用于填充 `DataSet`中的表行的数据。 表和列仅在不存在时才创建；否则， `Fill` 将使用现有的 `DataSet` 架构。 列类型创建为.NET Framework 类型中的表根据[ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非数据源中存在主键且 `DataAdapter`**来控制。**`MissingSchemaAction` 设置为 `MissingSchemaAction`**来控制。**`AddWithKey`来控制。 如果 `Fill` 发现某个表存在主键，对于主键列的值与从数据源返回的行的主键列的值匹配的行，将使用数据源中的数据重写 `DataSet` 中的数据。 如果未找到任何主键，则将数据追加到 `DataSet`中的表。 `Fill` 使用填充时可能存在的任何映射`DataSet`(请参阅[DataAdapter 数据表和 DataColumn 映射](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
   
 > [!NOTE]
 >  如果 `SelectCommand` 返回 OUTER JOIN 的结果，则 `DataAdapter` 不会为生成的 `PrimaryKey` 设置 `DataTable`值。 您必须自己定义 `PrimaryKey` 以确保正确解析重复行。 有关详细信息，请参阅[定义主键](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
@@ -118,7 +118,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ```  
   
 ## <a name="sql-server-decimal-type"></a>SQL Server Decimal 类型  
- 默认情况下， `DataSet` 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据类型存储数据。 对于大多数应用程序，这些类型都提供了一种方便的数据源信息表示形式。 但是，当数据源中的数据类型是 SQL Server decimal 或 numeric 数据类型时，这种表示形式可能会导致问题。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` 数据类型最多允许 28 个有效位，而 SQL Server `decimal` 数据类型则允许 38 个有效位。 如果 `SqlDataAdapter` 在 `Fill` 操作过程中确定 SQL Server `decimal` 字段的精度大于 28 个字符，则不会将当前行添加到 `DataTable`。 此时将发生 `FillError` 事件，使您能够确定是否将发生精度损失并作出适当的响应。 有关详细信息`FillError`事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。 若要获取 SQL Server `decimal` 值，还可以使用 <xref:System.Data.SqlClient.SqlDataReader> 对象并调用 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 方法。  
+ 默认情况下，`DataSet`使用.NET Framework 数据类型存储数据。 对于大多数应用程序，这些类型都提供了一种方便的数据源信息表示形式。 但是，当数据源中的数据类型是 SQL Server decimal 或 numeric 数据类型时，这种表示形式可能会导致问题。 .NET Framework`decimal`数据类型的 28 个有效位，最多允许，而 SQL Server`decimal`数据类型则允许 38 个有效位。 如果 `SqlDataAdapter` 在 `Fill` 操作过程中确定 SQL Server `decimal` 字段的精度大于 28 个字符，则不会将当前行添加到 `DataTable`。 此时将发生 `FillError` 事件，使您能够确定是否将发生精度损失并作出适当的响应。 有关详细信息`FillError`事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。 若要获取 SQL Server `decimal` 值，还可以使用 <xref:System.Data.SqlClient.SqlDataReader> 对象并调用 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 方法。  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 增强了对 <xref:System.Data.SqlTypes> 中的 `DataSet`的支持。 有关详细信息，请参阅 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
   

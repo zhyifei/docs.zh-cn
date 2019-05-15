@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583995"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589873"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>按名称或索引检索未排序节点
 XmlNamedNodeMap 在万维网联合会 (W3C) 规范中被描述为 NamedNodeMap，它对于处理未排序的节点集并能够按节点名称或索引引用节点是必需的。 访问 XmlNamedNodeMap 的唯一方式是通过方法或属性返回 XmlNamedNodeMap。 有三个方法或属性返回 XmlNamedNodeMap：  
   
--   XmlElement.Attributes  
+- XmlElement.Attributes  
   
--   XmlDocumentType.Entities  
+- XmlDocumentType.Entities  
   
--   XmlDocumentType.Notations  
+- XmlDocumentType.Notations  
   
  例如，XmlDocumentType.Entities 属性获取在文档类型声明中声明的 XmlEntity 节点集合。 此集合作为 XmlNamedNodeMap 返回，可以使用 Count 属性循环访问此集合并显示实体信息。 有关循环访问 XmlNamedNodeMap 的示例，请参见 <xref:System.Xml.XmlDocumentType.Entities%2A>。  
   

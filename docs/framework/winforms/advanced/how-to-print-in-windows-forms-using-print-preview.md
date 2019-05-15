@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: c07e3cc2f5985c05271e21ea77a7c7056045a891
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d803c9bec180f45c80e362af49c8eaa12bb9d985
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621239"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592956"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>如何：使用打印预览在 Windows 窗体中进行打印
 除了打印服务之外，Windows 窗体编程中通常还提供打印预览。 要将打印预览服务添加到你的应用程序有一个简单的方法，就是将 <xref:System.Windows.Forms.PrintPreviewDialog> 控件与用于打印文件的 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件处理逻辑结合使用。  
@@ -61,8 +61,6 @@ ms.locfileid: "64621239"
  此示例需要：  
   
 - 对 System、System.Windows.Forms 和 System.Drawing 程序集的引用。  
-  
-- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

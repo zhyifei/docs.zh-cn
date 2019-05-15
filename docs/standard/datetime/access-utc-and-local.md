@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d36b5ff4912b09101694dd0e83291053260f0bf9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026596"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586431"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>如何：访问预定义 UTC 和本地时区对象
 
@@ -50,8 +50,6 @@ ms.locfileid: "62026596"
 ## <a name="compiling-the-code"></a>编译代码
 
 此示例需要：
-
-* 包含对 System.Core.dll 的引用添加到项目。
 
 * 是否<xref:System>命名空间导入与`using`语句 （C# 代码中需要）。
 

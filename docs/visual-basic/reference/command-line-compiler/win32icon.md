@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774824"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593083"
 ---
 # <a name="-win32icon"></a>-win32icon
 在输出文件中插入.ico 文件。 此.ico 文件表示的输出文件中**文件资源管理器**。  
@@ -31,7 +31,7 @@ ms.locfileid: "61774824"
 ## <a name="remarks"></a>备注  
  可以使用 Microsoft Windows 资源编译器 (RC) 创建的.ico 文件。 资源编译器在编译视觉对象时调用C++进行编程;从.rc 文件创建的.ico 文件。 `-win32icon`和`-win32resource`选项互斥。  
   
- 请参阅[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)为引用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]资源文件，或[-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]资源文件。 请参阅[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)导入.res 文件。  
+ 请参阅[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)来引用.NET Framework 资源文件，或[-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)要附加的.NET Framework 资源文件。 请参阅[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)导入.res 文件。  
   
 |若要设置-win32icon Visual Studio IDE 中|  
 |---|  

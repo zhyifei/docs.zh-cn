@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: 44bc619c489fdff36f0b595f7d8934689b859adb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b707899c845b6b08e008fe229497f682c930044a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789020"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588849"
 ---
 # <a name="-noconfig"></a>-noconfig
-指定，编译器不应该自动引用常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集或导入`System`和`Microsoft.VisualBasic`命名空间。  
+指定编译器应不会自动引用常用的.NET Framework 程序集或导入`System`和`Microsoft.VisualBasic`命名空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -23,7 +23,7 @@ ms.locfileid: "61789020"
 ```  
   
 ## <a name="remarks"></a>备注  
- `-noconfig`选项告知编译器不使用 Vbc.rsp 文件，位于 Vbc.exe 文件所在的同一目录中进行编译。 Vbc.rsp 文件引用常用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]程序集和导入`System`和`Microsoft.VisualBasic`命名空间。 编译器隐式引用 System.dll 程序集，除非`-nostdlib`指定选项。 `-nostdlib`选项告知编译器不能使用 vbc.rsp 进行编译或自动引用 System.dll 程序集。  
+ `-noconfig`选项告知编译器不使用 Vbc.rsp 文件，位于 Vbc.exe 文件所在的同一目录中进行编译。 Vbc.rsp 文件引用常用的.NET Framework 程序集并导入`System`和`Microsoft.VisualBasic`命名空间。 编译器隐式引用 System.dll 程序集，除非`-nostdlib`指定选项。 `-nostdlib`选项告知编译器不能使用 vbc.rsp 进行编译或自动引用 System.dll 程序集。  
   
 > [!NOTE]
 >  始终引用 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的程序集。  

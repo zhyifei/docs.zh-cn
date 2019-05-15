@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 797dbf7f6203b7f85846dc6596751c4298e96481
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d6ac07b653a27a7c4c5534f441b9d673592124c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593306"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592257"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>函数的返回类型\<过程名称 > 不符合 cls 的
 一个`Function`过程标记为`<CLSCompliant(True)>`但返回类型被标记为`<CLSCompliant(False)>`、 未标记，或不符合条件，因为它是不符合要求的类型。  
@@ -43,4 +43,4 @@ ms.locfileid: "64593306"
   
 - 如果`Function`过程必须是符合 cls 的但返回类型更改为最接近的符合 cls 的类型。 例如，如果不需要 2147483647 以上的数值范围，可以使用 `UInteger` 取代 `Integer` 。 如果确实需要更大范围，可以用 `UInteger` 代替 `Long`。  
   
-- 如果在与自动化或 COM 对象对接，请记住，某些类型具有与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中不同的数据宽度。 例如，`int` 在其他环境中通常为 16 位。 如果您要返回到此类组件的 16 位整数，其声明为`Short`而不是`Integer`中托管的 Visual Basic 代码。
+- 如果要与自动化或 COM 对象交互，请注意，某些类型在.NET Framework 中具有不同的数据宽度。 例如，`int` 在其他环境中通常为 16 位。 如果您要返回到此类组件的 16 位整数，其声明为`Short`而不是`Integer`中托管的 Visual Basic 代码。

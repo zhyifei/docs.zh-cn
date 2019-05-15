@@ -2,12 +2,12 @@
 title: 序列化联编程序的用法
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677decebcf444fed95311bd02acf8a96e0a4eca9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007586"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591774"
 ---
 # <a name="usage-of-serialization-binder"></a>序列化联编程序的用法
 此示例演示如何使用 <xref:System.Runtime.Serialization.SerializationBinder> 在序列化泛型类型时更改其版本。  
@@ -16,7 +16,7 @@ ms.locfileid: "62007586"
  <xref:System.Runtime.Serialization.SerializationBinder>， <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
   
 ## <a name="discussion"></a>讨论  
- 此示例演示两个面向不同 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本的实体如何使用二进制格式化程序和序列化联编程序进行通信。  
+ 此示例演示了两个实体，是面向不同版本的.NET Framework 可以通信中使用二进制格式化程序和序列化联编程序。  
   
  此示例的开发已使用 .NET 远程处理完成。 该示例包含一个面向 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 且使用泛型类型实现协定的服务器，以及两个不同的客户端（一个面向 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]，另一个面向 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]）。  
   

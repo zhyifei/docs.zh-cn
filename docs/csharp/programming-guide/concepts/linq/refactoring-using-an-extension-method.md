@@ -2,12 +2,12 @@
 title: 使用扩展方法重构 (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 904dd558819a498bd8a3876759edaaa185be3b7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f41c4b4357125b6c92b17d8c818a0cfcf9822e7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596186"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>使用扩展方法重构 (C#)
 本示例建立在前面示例（[检索段落的文本 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)）的基础之上，具体方法是使用作为扩展方法实现的一个纯函数来重构字符串的串联。  
@@ -244,7 +244,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>后续步骤  
  下一示例演示如何使用纯函数以其他方式重构此代码：  
   
--   [使用纯函数重构 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [使用纯函数重构 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>请参阅
 

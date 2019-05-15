@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 767f27b4e76cd14d4a189e79a720a5ff2a45ebcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc50256bd170ccd21b16831734208c531f3f8a4b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614728"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586719"
 ---
 # <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>如何：配置 ContextMenuStrip 选中边距和图像边距
 可以通过设置各种组合中的 <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> 和 <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> 属性来自定义 <xref:System.Windows.Forms.ContextMenuStrip>。  
@@ -31,8 +31,6 @@ ms.locfileid: "64614728"
  此示例需要：  
   
 - 对 System.Design、System.Drawing 和 System.Windows.Forms 程序集的引用。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

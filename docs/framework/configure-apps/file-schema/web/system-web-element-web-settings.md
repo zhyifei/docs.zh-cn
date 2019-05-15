@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ffd25dae3826df0f02f2afb707f7317b2d92d24
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698494"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584545"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web > 元素 （Web 设置）
 包含有关 ASP.NET 托管层管理进程范围的行为方式的信息。  
@@ -44,13 +44,13 @@ ms.locfileid: "61698494"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|指定公共语言运行时和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序所使用的每个配置文件中的根元素。|  
+|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|在公共语言运行时和.NET Framework 应用程序使用每个配置文件中指定的根元素。|  
   
 ## <a name="remarks"></a>备注  
- `system.web`元素及其子`applicationPool`元素添加到[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]在[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。 当你运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本中集成模式下，此元素组合可让你配置 ASP.NET 如何管理线程以及当 ASP.NET 承载于 IIS 应用程序池进行排队请求的方式。 如果您运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本在经典或 ISAPI 模式下，将忽略这些设置。  
+ `system.web`元素及其子`applicationPool`元素添加到.NET Framework 作为[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。 当你运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本中集成模式下，此元素组合可让你配置 ASP.NET 如何管理线程以及当 ASP.NET 承载于 IIS 应用程序池进行排队请求的方式。 如果您运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本在经典或 ISAPI 模式下，将忽略这些设置。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何配置 ASP.NET 进程范围行为的 aspnet.config 文件中，当 ASP.NET 承载于 IIS 应用程序池。 该示例假定 IIS 正在运行以集成模式和应用程序使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更高版本。 版本中，此行为不会发生[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]早于[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。 在示例中的值是默认值。  
+ 下面的示例演示如何配置 ASP.NET 进程范围行为的 aspnet.config 文件中，当 ASP.NET 承载于 IIS 应用程序池。 该示例假定 IIS 正在运行以集成模式和应用程序使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更高版本。 此行为不会发生在.NET Framework 的版本早于[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]。 在示例中的值是默认值。  
   
 ```xml  
 <configuration>  

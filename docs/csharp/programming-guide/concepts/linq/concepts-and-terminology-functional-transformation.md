@@ -2,12 +2,12 @@
 title: 概念和术语（函数转换）(C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597828"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>概念和术语（函数转换）(C#)
 本主题介绍纯函数转换的概念和术语。 与更加传统的命令性编程方式相比，用来转换数据的函数转换方法所生成的代码往往编程速度更快、含义更明确、更易于调试和维护。  
@@ -17,9 +17,9 @@ ms.locfileid: "54583358"
 ## <a name="what-is-pure-functional-transformation"></a>什么是纯函数转换？  
  在纯函数转换中，称为“纯函数”的一组函数定义如何将一组结构化数据从其原始格式转换为另一种格式。 “纯”表示这些函数是可组合的，这要求这些函数具有以下特点：  
   
--   独立，这样函数就可以自由排序和重新排列，而不会与程序的其他部分相互牵连和依赖。 纯转换不了解其环境，对环境也没有任何影响。 也就是说，用在转换中的函数没有负作用。  
+- 独立，这样函数就可以自由排序和重新排列，而不会与程序的其他部分相互牵连和依赖。 纯转换不了解其环境，对环境也没有任何影响。 也就是说，用在转换中的函数没有负作用。  
   
--   无状态，因而对相同输入执行相同的函数或特定的一组函数将始终产生相同的输出。 纯转换对于先前对它的使用没有记忆。  
+- 无状态，因而对相同输入执行相同的函数或特定的一组函数将始终产生相同的输出。 纯转换对于先前对它的使用没有记忆。  
   
 > [!IMPORTANT]
 >  在本教程的其余部分，术语“纯函数”用于概括表示编程方法，而不是具体的语言功能。  

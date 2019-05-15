@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: a719b3f1cbd972e79d057730ac1d89e5d91d97e5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e7cf058ef5e6b007a39213aa0ca5748a3b77458a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664314"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590643"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>参数的类型\<参数名 > 不符合 cls 的
 一个过程标记为`<CLSCompliant(True)>`但标记为的类型声明参数`<CLSCompliant(False)>`、 未标记，或不符合条件，因为它是不符合要求的类型。  
@@ -43,4 +43,4 @@ ms.locfileid: "64664314"
   
 - 如果该过程必须符合 CLS 規格，为最接近的符合 cls 的类型更改此参数的类型。 例如，如果不需要 2147483647 以上的数值范围，可以使用 `UInteger` 取代 `Integer` 。 如果确实需要更大范围，可以用 `UInteger` 代替 `Long`。  
   
-- 如果在与自动化或 COM 对象对接，请记住，某些类型具有与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中不同的数据宽度。 例如，`int` 在其他环境中通常为 16 位。 如果接受此类组件从一个 16 位整数，将其作为声明`Short`而不是`Integer`中托管的 Visual Basic 代码。
+- 如果要与自动化或 COM 对象交互，请注意，某些类型在.NET Framework 中具有不同的数据宽度。 例如，`int` 在其他环境中通常为 16 位。 如果接受此类组件从一个 16 位整数，将其作为声明`Short`而不是`Integer`中托管的 Visual Basic 代码。

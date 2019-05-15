@@ -2,21 +2,21 @@
 title: 如何：比较两个文件夹的内容 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543037"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597111"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>如何：比较两个文件夹的内容 (LINQ) (C#)
 此示例演示了比较两个文件列表的 3 种方法：  
   
--   通过查询布尔值指定两个文件列表是否相同。  
+- 通过查询布尔值指定两个文件列表是否相同。  
   
--   通过查询交集检索同时存在于两个文件夹中的文件。  
+- 通过查询交集检索同时存在于两个文件夹中的文件。  
   
--   通过查询差集检索仅存在于一个文件夹中的文件。  
+- 通过查询差集检索仅存在于一个文件夹中的文件。  
   
     > [!NOTE]
     >  此处的方法适用于比较任何类型的对象序列。  

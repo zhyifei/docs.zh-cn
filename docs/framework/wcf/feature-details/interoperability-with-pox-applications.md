@@ -2,19 +2,19 @@
 title: 与 POX 应用程序的互操作性
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046887"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591047"
 ---
 # <a name="interoperability-with-pox-applications"></a>与 POX 应用程序的互操作性
 
 "Plain Old XML"(POX) 应用程序通过交换原始 HTTP 消息包含只 XML 应用程序数据不包含 SOAP 信封内进行通信。 Windows Communication Foundation (WCF) 可以提供服务和使用 POX 消息的客户端。 在服务上，可以使用 WCF 实现客户端，如 Web 浏览器向公开终结点的服务，并发送和接收 POX 消息的脚本语言。 在客户端，WCF 编程模型可用于实现客户端与基于 POX 的服务进行通信。  
   
 > [!NOTE]
-> 本文档最初是针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 编写的。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 具有对处理 POX 应用程序的内置支持。 有关更多信息，请参阅[WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。
+> 本文档最初是面向.NET Framework 3.0。  .NET framework 3.5 具有对处理 POX 应用程序的内置支持。 有关更多信息，请参阅[WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。
   
 ## <a name="pox-programming-with-wcf"></a>使用 WCF 进行 POX 编程
 

@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5c0087412a53177a7c43df838266f6d896c1bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc0232e0187c795fe20e6a99d4a710ba6244e34e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220469"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599665"
 ---
 # <a name="mitigation-xml-schema-validation"></a>缓解：XML 架构验证
 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，如果使用复合键且有一个键为空，则 XSD 架构验证将检测是否违反唯一约束。  
@@ -23,9 +23,9 @@ ms.locfileid: "59220469"
 ## <a name="mitigation"></a>缓解  
  是否在复合键具有一个空键的情况下检测架构验证错误是一项可配置的功能：  
   
--   从面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用开始，默认情况下会启用架构验证错误的检测，但可以选择退出此行为，这样将不会检测架构验证错误。  
+- 从面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用开始，默认情况下会启用架构验证错误的检测，但可以选择退出此行为，这样将不会检测架构验证错误。  
   
--   在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 下运行但面向 [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] 及更早版本的应用中，默认情况下不会检测架构验证错误，但可以选择加入此行为，这样将检测架构验证错误。  
+- 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 下运行但面向 [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] 及更早版本的应用中，默认情况下不会检测架构验证错误，但可以选择加入此行为，这样将检测架构验证错误。  
   
  此行为可以通过使用 <xref:System.AppContext> 类定义 `System.Xml.IgnoreEmptyKeySequences` 开关的值来配置。 由于开关的默认值为 `false`（不忽略空键顺序），面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用可以通过使用下面的代码将开关的值设置为 `true` 以选择退出该行为。  
   

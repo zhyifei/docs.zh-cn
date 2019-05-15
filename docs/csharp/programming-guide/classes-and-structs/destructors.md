@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202881"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584389"
 ---
 # <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
 终结器（也称为析构函数）用于在垃圾回收器收集类实例时执行任何必要的最终清理操作。  
   
 ## <a name="remarks"></a>备注  
   
--   无法在结构中定义终结器。 它们仅用于类。  
+- 无法在结构中定义终结器。 它们仅用于类。  
   
--   一个类只能有一个终结器。  
+- 一个类只能有一个终结器。  
   
--   不能继承或重载终结器。  
+- 不能继承或重载终结器。  
   
--   不能手动调用终结器。 可以自动调用它们。  
+- 不能手动调用终结器。 可以自动调用它们。  
   
--   终结器不使用修饰符或参数。  
+- 终结器不使用修饰符或参数。  
   
  例如，以下是类 `Car` 的终结器声明。
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  有关清除资源的详细信息，请参阅下列主题：  
   
--   [清理未托管资源](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
+- [清理未托管资源](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
   
--   [实现 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
+- [实现 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using 语句](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using 语句](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>示例  
  以下示例创建了三个类，并且这三个类构成了一个继承链。 类 `First` 是基类，`Second` 派生自 `First`，`Third` 派生自 `Second`。 这三个类都具有终结器。 在 `Main` 中，已创建派生程度最高的类的一个实例。 程序运行时，请注意，将按顺序（从派生程度最高到派生程度最低）自动调用这三个类的终结器。  

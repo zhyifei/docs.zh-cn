@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906953"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591108"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>数据类型疑难解答 (Visual Basic)
 此页列出了你对内部数据类型执行操作时可能发生的一些常见问题。  
@@ -66,7 +66,7 @@ ms.locfileid: "61906953"
  请注意，不只需声明`decimalRemainder`作为`Decimal`。 你还必须强制执行到文字`Decimal`，或它们使用`Double`默认情况下和`decimalRemainder`接收相同的不准确值`doubleRemainder`。  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>布尔值类型不会准确地转换为数值类型  
- [Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不存储为数字，并存储的值并不等同于数字。 为了与早期版本兼容，Visual Basic 提供转换关键字 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`，`CInt`等) 之间进行转换`Boolean`与数值类型。 但是，其他语言有时执行这些转换方式不同，如同[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]方法。  
+ [Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不存储为数字，并存储的值并不等同于数字。 为了与早期版本兼容，Visual Basic 提供转换关键字 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`，`CInt`等) 之间进行转换`Boolean`与数值类型。 但是，其他语言有时执行这些转换方式不同，.NET Framework 方法一样。  
   
  绝不应编写依赖于等效的数值的代码`True`和`False`。 只要有可能，应限制的使用情况`Boolean`它们设计的逻辑值的变量。 如果必须混合`Boolean`和数字值，请确保您了解您选择的转换方法。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "61906953"
 ## <a name="string-conversion-fails-at-run-time"></a>在运行时将字符串转换失败  
  [字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)参与了很少的扩大转换。 `String` 扩大到自身并`Object`，并仅`Char`并`Char()`(`Char`数组) 扩大到`String`。 这是因为`String`变量和常量可以包含其他数据类型不能包含的值。  
   
- 当类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，编译器不允许所有隐式收缩转换。 这包括涉及`String`。 你的代码仍可以使用转换关键字如`CStr`并[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)，以指示[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]尝试转换。  
+ 当类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，编译器不允许所有隐式收缩转换。 这包括涉及`String`。 你的代码仍可以使用转换关键字如`CStr`并[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)，这指示.NET Framework，才能尝试进行转换。  
   
 > [!NOTE]
 >  收缩转换错误则会取消对从中的元素的转换`For Each…Next`循环控制变量的集合。 有关详细信息和示例，请参阅中的"收缩转换"部分[为每个...下一条语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  

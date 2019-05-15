@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654447"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588816"
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
- “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
+ “集合”指特定类型的项的列表。 在.NET Framework 中，此类列表可以表示使用数组或者各种其他类型 (泛型列表、 泛型<xref:System.ComponentModel.BindingList%601>， <xref:System.Collections.Specialized.StringCollection>，或<xref:System.Collections.ArrayList>)。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
   
- 存在一种特殊形式的集合，该集合表示某一项（“键”）与另一项（“值”）之间的关联。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，这些集合通过类型（如 <xref:System.Collections.Hashtable> ）和泛型字典来表示。 例如，一个关联集合可能将城市（“键”）映射到它的人口数量（“值”）。 无论这些集合的实际类型是什么，这些集合都称为“字典集合” 。  
+ 存在一种特殊形式的集合，该集合表示某一项（“键”）与另一项（“值”）之间的关联。 在.NET Framework 中，将显示这些类型如<xref:System.Collections.Hashtable>和泛型字典。 例如，一个关联集合可能将城市（“键”）映射到它的人口数量（“值”）。 无论这些集合的实际类型是什么，这些集合都称为“字典集合” 。  
   
  集合在数据协定模型中受到特殊对待。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: 8e346c5b69c507307d459f6246e26a6a96bb9e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c10852273eeb3caea01f448e4cbef571f20769bd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591300"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592043"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>如何：在窗体一级处理键盘输入
 Windows 窗体能够在消息到达控件之前处理窗体级别的键盘消息。 本主题演示如何完成此任务。  
@@ -40,8 +40,6 @@ Windows 窗体能够在消息到达控件之前处理窗体级别的键盘消息
   
 - 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
-
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体应用程序中的键盘输入](keyboard-input-in-a-windows-forms-application.md)

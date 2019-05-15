@@ -2,12 +2,12 @@
 title: 工作流服务概述-WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050332"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590083"
 ---
 # <a name="workflow-services-overview"></a>工作流服务概述
 
@@ -48,7 +48,7 @@ WCF 定义了两个基于 MSMQ 的绑定：<xref:System.ServiceModel.NetMsmqBind
 
 类似于 WCF 服务，必须承载工作流服务。 WCF 服务使用<xref:System.ServiceModel.ServiceHost>类承载服务，工作流服务使用<xref:System.ServiceModel.Activities.WorkflowServiceHost>承载服务。 类似于 WCF 服务，工作流服务可以托管在有许多种情况下，例如：
 
-- 在托管 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序中。
+- 在托管的.NET Framework 应用程序中。
 
 - 在 Internet Information Services (IIS) 中。
 
@@ -56,7 +56,7 @@ WCF 定义了两个基于 MSMQ 的绑定：<xref:System.ServiceModel.NetMsmqBind
 
 - 在托管 Windows 服务中。
 
-托管 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序或托管 Windows 服务中承载的工作流服务创建一个 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类的实例，并向该实例传递一个在 <xref:System.ServiceModel.Activities.WorkflowService> 属性中包含工作流定义的 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 实例。 包含消息传递活动的工作流定义公开为工作流服务。
+托管的.NET Framework 应用程序中承载的工作流服务或托管的 Windows 服务创建的实例<xref:System.ServiceModel.Activities.WorkflowServiceHost>类，并将其传递的实例<xref:System.ServiceModel.Activities.WorkflowService>，其中包含工作流定义内的<xref:System.ServiceModel.Activities.WorkflowService.Body%2A>属性。 包含消息传递活动的工作流定义公开为工作流服务。
 
 若要在 IIS 或 WAS 中承载工作流服务，请将包含工作流服务定义的 .xamlx 文件放置到虚拟目录中。 默认终结点 (使用<xref:System.ServiceModel.BasicHttpBinding>) 是自动创建的详细信息，请参阅[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)。 也可以在虚拟目录中放置 Web.config 文件以指定你自己的终结点。 如果您的工作流定义位于程序集中，则可以在虚拟目录中放置一个 .svc 文件，并在 App_Code 目录中放置该工作流程序集。 该 .svc 文件必须指定服务主机工厂以及实现该工作流服务的类。 下面的示例演示如何指定服务主机工厂以及实现该工作流服务的类。
 

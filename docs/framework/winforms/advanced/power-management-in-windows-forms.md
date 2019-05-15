@@ -8,17 +8,17 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36c152a9e388fe61b1c82a8783bf74bbe6c8f123
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757646"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592517"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows 窗体中的电源管理
 在 Windows 操作系统中，Windows 窗体应用程序可以充分利用电源管理功能。 你的应用程序可以监视计算机的电源状态和状态更改发生时执行操作。 例如，如果你的应用程序运行在便携式计算机上，您可能想要计算机的电池电量低于某个级别时禁用你的应用程序中的某些功能。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供了<xref:Microsoft.Win32.SystemEvents.PowerModeChanged>的电源状态，例如，当用户挂起或恢复操作系统，或 AC 电源状态或电池状态发生更改时变化时，会发生的事件。 <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>属性的<xref:System.Windows.Forms.SystemInformation>类可以用来查询有关当前状态，如下面的代码示例中所示。  
+ .NET Framework 提供了<xref:Microsoft.Win32.SystemEvents.PowerModeChanged>的电源状态，例如，当用户挂起或恢复操作系统，或 AC 电源状态或电池状态发生更改时变化时，会发生的事件。 <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>属性的<xref:System.Windows.Forms.SystemInformation>类可以用来查询有关当前状态，如下面的代码示例中所示。  
   
  [!code-csharp[PowerMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
  [!code-vb[PowerMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  

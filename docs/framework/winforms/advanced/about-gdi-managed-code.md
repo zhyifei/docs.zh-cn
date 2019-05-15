@@ -6,17 +6,17 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960948"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588615"
 ---
 # <a name="about-gdi-managed-code"></a>关于 GDI+ 托管代码
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 操作系统提供二维矢量图形、图像处理和版式的部分。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（早期的 Windows 版本包含的图形设备接口）的基础上进行了改进，添加了新功能和优化了现有功能。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 托管类接口（一组包装）属于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，一个用于构建、部署和运行 XML Web 服务和其他应用程序的环境。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]托管的类接口 （一组包装） 是.NET Framework，用于构建、 部署和运行 XML Web 服务和其他应用程序的环境的一部分。  
   
  本节为使用托管代码的程序员提供有关 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API 的信息。  
   

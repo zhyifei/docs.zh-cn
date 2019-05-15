@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 344f9856c1f3b1483bfda6f36a7e025ff2e5c78d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593423"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590371"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列填充模式
 在列填充模式中，<xref:System.Windows.Forms.DataGridView> 控件自动调整其列的大小，以便它们可填充可用显示区域的宽度。 该控件不显示水平滚动条，除非有必要使每列的宽度等于或大于其 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 属性值。  
@@ -59,8 +59,6 @@ ms.locfileid: "64593423"
  此示例需要：  
   
 - 对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
-  
-- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

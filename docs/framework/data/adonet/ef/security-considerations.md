@@ -2,15 +2,15 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641175"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583478"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
-本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 除此之外，您还应遵循有关创建安全的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
+本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 此外应遵循有关创建安全的.NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
   
 ## <a name="general-security-considerations"></a>一般安全注意事项  
  下列安全注意事项适用于所有使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的应用程序。  
@@ -63,7 +63,7 @@ ms.locfileid: "64641175"
  数据源管理员应仅向用户授予必要的权限。 尽管 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 不支持修改数据的 DML 语句（如 INSERT、UPDATE 或 DELETE），但用户仍可以访问到数据源的连接。 恶意用户可使用此连接通过数据源的本机语言执行 DML 语句。  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>以最低权限运行应用程序。  
- 如果允许托管应用程序以完全信任权限运行，则 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 不限制该应用程序对计算机的访问。 这会在应用程序中造成安全漏洞而威胁整个系统。 若要使用 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 中的代码访问安全机制和其他安全机制，应使用部分信任权限运行应用程序，且使用应用程序实现其功能所需的最小权限集。 下面的代码访问权限是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序所需的最小权限：  
+ 当允许使用完全信任权限运行托管应用程序时，.NET Framework 不限制到您的计算机的应用程序的访问。 这会在应用程序中造成安全漏洞而威胁整个系统。 若要在.NET Framework 中使用代码访问安全性和其他安全机制，应通过使用部分信任权限以及通过最小所需启用到函数应用程序的权限集运行应用程序。 下面的代码访问权限是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序所需的最小权限：  
   
 - <xref:System.Security.Permissions.FileIOPermission>：使用 <xref:System.Security.Permissions.FileIOPermissionAccess.Write> 打开指定的元数据文件，或者使用 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> 在目录中搜索元数据文件。  
   

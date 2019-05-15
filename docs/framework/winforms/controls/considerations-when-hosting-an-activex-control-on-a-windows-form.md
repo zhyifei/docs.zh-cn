@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 9b037dfbb3a82b8df4c91468eeb8b2dea24e2a37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b604502e0fea591460f30cae28b64ff1703da65
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625420"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589432"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>在 Windows 窗体上承载 ActiveX 控件时的注意事项
 尽管 Windows 窗体已经为承载 Windows 窗体控件而进行了优化，但仍可使用 ActiveX 控件。 规划使用 ActiveX 控件的应用程序时应谨记以下注意事项：  
@@ -26,7 +26,7 @@ ms.locfileid: "64625420"
     >  使用 ActiveX 控件时需要使用 COM 互操作包装器。 有关详细信息，请参阅 [Visual Basic 和 Visual C# 中的 COM 互操作性](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
     > [!NOTE]
-    >  如果 ActiveX 控件的成员的名称与在中定义的名称相匹配[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，则 ActiveX 控件导入程序将成员名称加上前缀**Ctl**在创建时<xref:System.Windows.Forms.AxHost>派生的类。 例如，如果 ActiveX 控件有一个名为 **Layout** 的成员，由于在 .[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中定义了 **Layout** 事件，因此该成员将在 AxHost 派生类中重命名为 **CtlLayout**。  
+    >  如果 ActiveX 控件的成员的名称与.NET Framework 中定义的名称，则 ActiveX 控件导入程序将成员名称加上前缀**Ctl**在创建时<xref:System.Windows.Forms.AxHost>派生的类。 例如，如果 ActiveX 控件有一个名为成员**布局**，将其重命名**CtlLayout** AxHost 派生类中因为**布局**中定义事件。NET Framework。  
   
 ## <a name="see-also"></a>请参阅
 

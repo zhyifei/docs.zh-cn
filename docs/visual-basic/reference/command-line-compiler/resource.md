@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: 46122eaa7ca54679c9a52b939f9100c9a0747e7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d7da572ecc8d7d20917eaa244eefbcd7abe61f0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639071"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589509"
 ---
 # <a name="-resource-visual-basic"></a>-资源 (Visual Basic)
 将托管资源嵌入程序集。  
@@ -37,7 +37,7 @@ ms.locfileid: "61639071"
 ## <a name="remarks"></a>备注  
  使用`-linkresource`若要将资源链接到程序集，而无需将资源文件放置在输出文件。  
   
- 如果`filename`是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]创建的资源文件，例如，通过[Resgen.exe （资源文件生成器）](../../../framework/tools/resgen-exe-resource-file-generator.md)或在开发环境中，则可以使用来访问中的成员<xref:System.Resources>命名空间 （请参阅<xref:System.Resources.ResourceManager>有关详细信息)。 若要在运行时访问所有其他资源，请使用以下方法之一： <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>， <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>，或<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
+ 如果`filename`是.NET Framework 创建的资源文件，例如，通过[Resgen.exe （资源文件生成器）](../../../framework/tools/resgen-exe-resource-file-generator.md)或在开发环境中，则可以使用来访问中的成员<xref:System.Resources>命名空间 （请参阅<xref:System.Resources.ResourceManager>有关详细信息)。 若要在运行时访问所有其他资源，请使用以下方法之一： <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>， <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>，或<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
   
  `-resource` 的缩写形式是 `-res`。  
   

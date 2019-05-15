@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469512"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589043"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows 窗体上使用的控件
 下面按字母顺序列出了可在 Windows 窗体上使用的控件和组件。 除本节介绍的 Windows 窗体控件外，还可向 Windows 窗体添加 ActiveX 控件和自定义控件。 如果在此处列出的控件中未找到所需控件，还可创建自己的控件。 有关详细信息，请参阅[设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)。 有关选择所需控件的详细信息，请参阅[按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)。  
   
 > [!NOTE]
->  Visual Basic 控件基于提供的类[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]。  
+>  Visual Basic 控件基于提供的.NET Framework 类。  
   
 ## <a name="in-this-section"></a>本节内容  
  [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)  
- 列出并描述了基于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 Windows 窗体控件。  
+ 列出并描述了基于.NET Framework 的 Windows 窗体控件。  
   
  [具有内置所有者描述支持的控件](controls-with-built-in-owner-drawing-support.md)  
  描述如何更改控件外观的各个方面，这些方面不可通过属性进行更改。  
@@ -168,7 +168,7 @@ ms.locfileid: "65469512"
  允许用户调整停靠控件的大小。  
   
  [Splitter 控件](splitter-control-windows-forms.md)  
- 允许用户调整停靠控件的大小（[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.x）。  
+ 允许用户调整停靠的控件的大小 (.NET Framework 版本 1.x)。  
   
  [StatusBar 控件](statusbar-control-windows-forms.md)  
  显示与具有焦点的控件相关的状态信息。 尽管 <xref:System.Windows.Forms.StatusStrip> 替换并扩展了早期版本的 <xref:System.Windows.Forms.StatusBar> 控件，但也可以选择保留 <xref:System.Windows.Forms.StatusBar> 以备向后兼容性和将来使用。  

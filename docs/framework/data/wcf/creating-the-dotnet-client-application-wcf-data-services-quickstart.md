@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750823"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583604"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）
 
@@ -84,7 +84,7 @@ ms.locfileid: "64750823"
 
 已成功创建访问的示例 Northwind odata 的客户端应用程序。 你已经完成 WCF Data Services 快速入门 ！
 
-有关从馈送的有关访问 OData 的详细信息[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序，请参阅[WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。
+从.NET Framework 应用程序馈送访问 OData 的详细信息，请参阅[WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。
 
 ## <a name="see-also"></a>请参阅
 

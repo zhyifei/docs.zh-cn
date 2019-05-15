@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176249"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623780"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的应用程序兼容性
 
@@ -42,11 +42,11 @@ ms.locfileid: "59176249"
 
 每个问题包含以下信息：
 
--   从以前版本发生的更改的介绍。
+- 从以前版本发生的更改的介绍。
 
--   更改对客户造成了哪些影响，以及是否有任何解决办法可以保持各版本的兼容性。
+- 更改对客户造成了哪些影响，以及是否有任何解决办法可以保持各版本的兼容性。
 
--   对于更改重要性的评估。 应用程序兼容性问题可分成以下几类：
+- 对于更改重要性的评估。 应用程序兼容性问题可分成以下几类：
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ ms.locfileid: "59176249"
     |边缘情况|在极少数特定的情况下影响应用的更改。|
     |透明|对应用开发者或用户没有造成显著影响的更改。|
 
--   版本指示了更改首次出现在框架中的时间。 某些更改会在特定版本中引入，并在以后的版本中进行还原；这也会在版本中指出。
+- 版本指示了更改首次出现在框架中的时间。 某些更改会在特定版本中引入，并在以后的版本中进行还原；这也会在版本中指出。
 
--   更改类型：
+- 更改类型：
 
     |   |   |
     |---|---|
     |重定目标|更改会影响重新编译以面向新版 .NET Framework 的应用。|
     |运行时|更改会影响面向以前版本的 .NET Framework 但在更高版本上运行的现有应用。|
 
--   受影响的 API（如果有）。
+- 受影响的 API（如果有）。
 
--   可用诊断的 ID
+- 可用诊断的 ID
 
 ## <a name="usage"></a>用法
 首先，从下面选择一种兼容性更改类型：

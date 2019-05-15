@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327641"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593338"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>演练：更改 My.Application.Log 写入信息的位置 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。 本演练将演示如何重写默认设置，以及如何使 `Log` 对象将信息写入其他日志侦听器。  
@@ -28,11 +28,11 @@ ms.locfileid: "59327641"
   
      如果其中没有 app.config 文件：  
   
-    1.  在 **“项目”** 菜单上选择 **“添加新项”**。  
+    1. 在 **“项目”** 菜单上选择 **“添加新项”**。  
   
-    2.  在“添加新项”  对话框中，选择“应用程序配置文件” 。  
+    2. 在“添加新项”  对话框中，选择“应用程序配置文件” 。  
   
-    3.  单击 **“添加”**。  
+    3. 单击 **“添加”**。  
   
 2. 找到 `<listeners>` 部分，该部分位于 `<source>` 属性为“DefaultSource”的 `name` 部分当中，后者又位于 `<sources>` 部分之下。 `<sources>` 部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
   
@@ -153,13 +153,13 @@ ms.locfileid: "59327641"
   
      可以使用的类型有：  
   
-    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入文件日志。  
+    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入文件日志。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入 `initializeData` 参数指定的计算机事件日志。  
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入 `initializeData` 参数指定的计算机事件日志。  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 侦听器，它们将信息写入 `initializeData` 参数指定的文件。  
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 侦听器，它们将信息写入 `initializeData` 参数指定的文件。  
   
-    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入命令行控制台。  
+    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 侦听器，它将信息写入命令行控制台。  
   
      有关其他类型的日志侦听器写入信息的位置的信息，请参阅该类型的文档。  
   

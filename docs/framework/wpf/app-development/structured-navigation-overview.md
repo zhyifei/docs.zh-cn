@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751006"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588649"
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 可以通过承载的内容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 一个<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>组成可以标识包的页面[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和导航到超链接的。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。  
@@ -70,7 +70,7 @@ ms.locfileid: "64751006"
   
  声明<xref:System.Windows.Navigation.PageFunction%601>类似于声明<xref:System.Windows.Controls.Page>添加了类型自变量。 从代码示语例中可以看出，在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记和代码隐藏中均指定了类型自变量，前者使用 `x:TypeArguments` 属性，后者使用标准的泛型类型参数语法。  
   
- 不必仅使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类作为类型自变量。 一个<xref:System.Windows.Navigation.PageFunction%601>无法调用以收集抽象化为自定义类型的特定于域的数据。 下面的代码演示如何使用自定义类型的类型参数作为<xref:System.Windows.Navigation.PageFunction%601>。  
+ 您无需使用仅.NET Framework 类作为类型参数。 一个<xref:System.Windows.Navigation.PageFunction%601>无法调用以收集抽象化为自定义类型的特定于域的数据。 下面的代码演示如何使用自定义类型的类型参数作为<xref:System.Windows.Navigation.PageFunction%601>。  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
-ms.openlocfilehash: 3e2c85486144a5009f08c7b6ecfd056c7cd86fcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0edcc27968c55908cda0e881ed66f83323316711
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612010"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591301"
 ---
 # <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>如何：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体
 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间支持多文档界面 (MDI) 应用程序，而 <xref:System.Windows.Forms.MenuStrip> 控件支持菜单合并。 MDI 窗体还可支持 <xref:System.Windows.Forms.ToolStrip> 控件。  
@@ -34,8 +34,6 @@ ms.locfileid: "64612010"
  此代码示例需要：  
   
 - 对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 

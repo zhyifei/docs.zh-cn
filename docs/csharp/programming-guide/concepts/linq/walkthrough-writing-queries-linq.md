@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309220"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595789"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>演练：用 C# 编写查询 (LINQ)
 此演练演示用于编写 LINQ 查询表达式的 C# 语言功能。  
@@ -41,17 +41,17 @@ ms.locfileid: "59309220"
 ## <a name="create-an-in-memory-data-source"></a>创建内存中的数据源  
  用于查询的数据源是 `Student` 对象的简单列表。 每个 `Student` 记录都有名字、姓氏和整数数组（表示该学生在课堂上的测试分数）。 将此代码复制到项目中。 请注意下列特性：  
   
--   `Student` 类包含自动实现的属性。  
+- `Student` 类包含自动实现的属性。  
   
--   列表中的每个学生都可使用对象初始值设定项进行初始化。  
+- 列表中的每个学生都可使用对象初始值设定项进行初始化。  
   
--   列表本身可使用集合初始值设定项进行初始化。  
+- 列表本身可使用集合初始值设定项进行初始化。  
   
  将在不显式调用任何构造函数和使用显式成员访问的情况下初始化并实例化整个数据结构。 有关这些新功能的详细信息，请参阅[自动实现的属性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)与[对象和集合初始值设定项](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
   
 #### <a name="to-add-the-data-source"></a>添加数据源  
   
--   向项目中的 `Program` 类添加 `Student` 类和经过初始化的学生列表。  
+- 向项目中的 `Program` 类添加 `Student` 类和经过初始化的学生列表。  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59309220"
   
 #### <a name="to-create-a-simple-query"></a>创建简单查询  
   
--   在应用程序的 `Main` 方法中，创建简单查询，执行该查询时，将生成所有在第一次测试中分数高于 90 的学生的列表。 注意，由于选定全部 `Student` 对象，所以查询的类型为 `IEnumerable<Student>`。 尽管该代码也可以通过使用 [var](../../../../csharp/language-reference/keywords/var.md) 关键字来使用隐式类型化，但可以使用显式类型化清楚地展示结果。 （有关 `var` 的详细信息，请参阅[隐式类型化局部变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。）  
+- 在应用程序的 `Main` 方法中，创建简单查询，执行该查询时，将生成所有在第一次测试中分数高于 90 的学生的列表。 注意，由于选定全部 `Student` 对象，所以查询的类型为 `IEnumerable<Student>`。 尽管该代码也可以通过使用 [var](../../../../csharp/language-reference/keywords/var.md) 关键字来使用隐式类型化，但可以使用显式类型化清楚地展示结果。 （有关 `var` 的详细信息，请参阅[隐式类型化局部变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。）  
   
      另请注意，查询的范围变量 `student` 用作指向源中每个 `Student` 引用，提供对每个对象的成员访问。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "59309220"
   
 1. 现在，编写 `foreach` 循环，用于执行查询。 注意以下有关代码的注意事项：  
   
-    -   通过 `foreach` 循环中的迭代变量，可访问返回的序列中的每个元素。  
+    - 通过 `foreach` 循环中的迭代变量，可访问返回的序列中的每个元素。  
   
-    -   此变量的类型是 `Student`，并且可与查询变量 `IEnumerable<Student>` 的类型兼容。  
+    - 此变量的类型是 `Student`，并且可与查询变量 `IEnumerable<Student>` 的类型兼容。  
   
 2. 添加此代码后，生成并运行应用程序，以在“控制台”窗口中查看结果。  
   

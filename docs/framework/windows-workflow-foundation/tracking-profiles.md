@@ -2,12 +2,12 @@
 title: 跟踪配置文件
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699666"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589931"
 ---
 # <a name="tracking-profiles"></a>跟踪配置文件
 
@@ -17,7 +17,7 @@ ms.locfileid: "61699666"
 
 跟踪配置文件用来指定为工作流实例发出的跟踪信息。  如果未指定配置文件，则发出所有跟踪事件。 如果指定了配置文件，将发出在配置文件中指定的跟踪事件。 根据您的监视需求，可以编写一个非常一般的配置文件，用来订阅对工作流进行的一小组高级状态更改。 相反，也可以创建一个非常详细的配置文件，其生成的事件足够丰富，可在以后重新构造详细的执行流。
 
-跟踪配置文件将其自身列为标准 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 配置文件中的 XML 元素或在代码中指定的 XML 元素。 下面的示例摘自配置文件中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]跟踪配置文件，跟踪参与者可利用它订阅 `Started` 和 `Completed` 工作流事件。
+跟踪配置文件自身列为标准的.NET Framework 配置文件中的 XML 元素，或在代码中指定。 下面的示例摘自配置文件中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]跟踪配置文件，跟踪参与者可利用它订阅 `Started` 和 `Completed` 工作流事件。
 
 ```xml
 <system.serviceModel>

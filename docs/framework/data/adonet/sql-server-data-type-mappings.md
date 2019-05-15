@@ -2,17 +2,17 @@
 title: SQL Server 数据类型映射
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664085"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583723"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 数据类型映射
 SQL Server 和 .NET Framework 基于不同的类型系统。 例如，.NET Framework <xref:System.Decimal> 结构的最大小数位数为 28，而 SQL Server 的 decimal 和 numeric 数据类型的最大小数位数为 38。 为了在读取和写入数据时维护数据的完整性，<xref:System.Data.SqlClient.SqlDataReader> 将公开用于返回 <xref:System.Data.SqlTypes> 的对象的 SQL Server 特定的类型化访问器方法以及用于返回 .NET Framework 类型的访问器方法。 SQL Server 类型和 .NET Framework 类型也可通过 <xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 类中的枚举表示，当您指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型时可以使用这些枚举。  
   
- 下表显示推断的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型、<xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 枚举以及 <xref:System.Data.SqlClient.SqlDataReader> 的访问器方法。  
+ 下表显示推断的.NET Framework 类型，<xref:System.Data.DbType>并<xref:System.Data.SqlDbType>枚举和访问器方法<xref:System.Data.SqlClient.SqlDataReader>。  
   
 |SQL Server 数据库引擎类型|.NET Framework 类型|SqlDbType 枚举|SqlDataReader SqlTypes 类型化访问器|DbType 枚举|SqlDataReader DbType 类型化访问器|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

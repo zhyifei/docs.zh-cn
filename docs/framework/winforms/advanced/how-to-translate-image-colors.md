@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb9ec30c06740214b8dc6b65d32eba4e2920c89b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954619"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592932"
 ---
 # <a name="how-to-translate-image-colors"></a>如何：转换图像颜色
 翻译添加到一个或多个四个颜色组件值。 下表给出表示翻译颜色矩阵项。  
@@ -46,7 +46,7 @@ ms.locfileid: "61954619"
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 替换为`ColorBars.bmp`与图像文件名称和在您的系统都有效的路径。  
+ 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 替换为`ColorBars.bmp`与图像文件名称和在您的系统都有效的路径。  
   
 ## <a name="see-also"></a>请参阅
 
