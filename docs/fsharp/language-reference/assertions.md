@@ -2,12 +2,12 @@
 title: 断言
 description: 了解如何使用 assert 表达式作为一种调试功能测试中的表达式F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: c2d97386e87e9b915da490a78fff9aedb9def616
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5fe24195c7548e9fbb927e4b95b752c7a963c6b3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703213"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642039"
 ---
 # <a name="assertions"></a>断言
 

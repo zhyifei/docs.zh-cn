@@ -2,12 +2,12 @@
 title: 抽象类
 description: 了解如何F#抽象类，这将部分或全部成员未实现和表示的一组不同的对象类型的常见功能。
 ms.date: 05/16/2016
-ms.openlocfilehash: fecd3b2d550c6b8f59fa614f5d00c5f730a4896a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772770"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645550"
 ---
 # <a name="abstract-classes"></a>抽象类
 
