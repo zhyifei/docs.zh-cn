@@ -1,0 +1,2382 @@
+- name: 欢迎使用
+  href: welcome.md
+- name: .NET 指南
+  href: standard/index.md
+  items:
+    - name: .NET 入门
+      href: standard/get-started.md
+    - name: .NET 教程
+      href: standard/tour.md
+    - name: .NET 体系结构组件
+      href: standard/components.md
+    - name: .NET Standard
+      href: standard/net-standard.md
+      items:
+        - name: .NET Standard 中的新增功能
+          href: standard/whats-new/whats-new-in-dotnet-standard.md
+    - name: 目标框架
+      href: standard/frameworks.md
+    - name: .NET 术语表
+      href: standard/glossary.md
+    - name: 体系结构指南
+      href: standard/guidance-architecture.md
+      items:
+        - name: 使用 ASP.NET Core 和 Microsoft Azure 构建新式 Web 应用程序
+          href: standard/modern-web-apps-azure-architecture/
+        - name: 使用 Azure 云和 Windows 容器更新现有 .NET 应用程序
+          href: standard/modernize-with-azure-and-containers/
+        - name: 使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期
+          href: standard/containerized-lifecycle-architecture/
+        - name: .NET 微服务：适用于容器化 .NET 应用程序的体系结构
+          href: standard/microservices-architecture/
+        - name: 无服务器应用：体系结构、模式和 Azure 实现
+          href: standard/serverless-architecture/
+    - name: 开放源代码库指南
+      href: standard/library-guidance/
+    - name: 为服务器应用选择 .NET Core 或 .NET Framework
+      href: standard/choosing-core-framework-server.md
+    - name: 什么是“托管代码”？
+      href: standard/managed-code.md
+      items:
+        - name: 自动内存管理
+          href: standard/automatic-memory-management.md
+    - name: 公共语言运行时 (CLR)
+      href: standard/clr.md
+    - name: 语言独立
+      href: standard/language-independence.md
+      items:
+        - name: 语言独立性和与语言无关的组件
+          href: standard/language-independence-and-language-independent-components.md
+    - name: 框架库
+      href: standard/framework-libraries.md
+      items:
+        - name: 类库概述
+          href: standard/class-library-overview.md
+        - name: 基类型
+          href: standard/base-types/
+    - name: .NET 类库
+      href: standard/class-libraries.md
+    - name: 分析器
+      href: standard/analyzers/index.md
+      items:
+        - name: API 分析器
+          href: standard/analyzers/api-analyzer.md
+        - name: 可移植性分析器
+          href: standard/analyzers/portability-analyzer.md
+        - name: 框架分析器
+          href: standard/analyzers/framework-analyzer.md
+    - name: 处理和引发异常
+      href: standard/exceptions/
+    - name: .NET 中的程序集
+      href: standard/assembly/index.md
+      items:
+        - name: .NET 程序集文件格式
+          href: standard/assembly/file-format.md
+        - name: 如何：在 .NET Core 中使用和调试程序集可卸载性
+          href: standard/assembly/unloadability-howto.md
+    - name: 垃圾回收
+      href: standard/garbage-collection/
+    - name: 泛型类型
+      href: standard/generics.md
+    - name: 委托和 lambda
+      href: standard/delegates-lambdas.md
+    - name: LINQ
+      href: standard/using-linq.md
+    - name: 常规类型系统和公共语言规范
+      href: standard/common-type-system.md
+    - name: 并行处理、并发和异步
+      href: standard/parallel-processing-and-concurrency.md
+      items:
+        - name: 异步编程
+          href: standard/async.md
+          items:
+            - name: 深层异步编程
+              href: standard/async-in-depth.md
+            - name: 异步编程模式
+              href: standard/asynchronous-programming-patterns/
+        - name: 并行编程
+          href: standard/parallel-programming/
+        - name: 线程
+          href: standard/threading/
+    - name: 内存和跨度相关类型
+      href: standard/memory-and-spans/index.md
+      items:
+        - name: 内存<T>和跨度<T>使用准则
+          href: standard/memory-and-spans/memory-t-usage-guidelines.md
+    - name: 本机互操作性
+      href: standard/native-interop/index.md
+      items:
+        - name: P/Invoke
+          href: standard/native-interop/pinvoke.md
+        - name: 类型封送
+          href: standard/native-interop/type-marshaling.md
+        - name: 自定义结构封送
+          href: standard/native-interop/customize-struct-marshaling.md
+        - name: 自定义参数封送
+          href: standard/native-interop/customize-parameter-marshaling.md
+        - name: 互操作指南
+          href: standard/native-interop/best-practices.md
+        - name: 字符集和封送
+          href: standard/native-interop/charset.md
+    - name: 集合和数据结构
+      href: standard/collections/
+    - name: .NET 中的数字
+      href: standard/numerics.md
+    - name: 日期、时间和时区
+      href: standard/datetime/
+    - name: 事件
+      href: standard/events/
+    - name: 托管执行过程
+      href: standard/managed-execution-process.md
+    - name: 元数据和自描述组件
+      href: standard/metadata-and-self-describing-components.md
+    - name: 生成控制台应用程序
+      href: standard/building-console-apps.md
+    - name: 应用程序要点
+      href: standard/application-essentials.md
+    - name: 文件和流 I/O
+      href: standard/io/index.md
+    - name: 全球化和本地化
+      href: standard/globalization-localization/
+    - name: 特性
+      href: standard/attributes/
+    - name: 框架设计准则
+      href: standard/design-guidelines/
+    - name: XML 文档和数据
+      href: standard/data/xml/
+    - name: 安全性
+      href: standard/security/
+    - name: 序列化
+      href: standard/serialization/
+    - name: 开发多平台应用程序
+      href: standard/cross-platform/
+- name: .NET Core 指南
+  href: core/index.md
+  items:
+    - name: 关于 .NET Core
+      href: core/about.md
+    - name: 入门
+      href: core/get-started.md
+      items:
+        - name: 'C# 和 Visual Studio Code 入门'
+          href: core/tutorials/with-visual-studio-code.md
+        - name: '使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用'
+          href: core/tutorials/with-visual-studio.md
+        - name: 使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用
+          href: core/tutorials/vb-with-visual-studio.md
+        - name: 使用插件创建 .NET Core 应用程序
+          href: core/tutorials/creating-app-with-plugin-support.md
+        - name: '使用 Visual Studio 2017 调试 C# 或Visual Basic .NET Core Hello World 应用程序'
+          href: core/tutorials/debugging-with-visual-studio.md
+        - name: 使用 Visual Studio 2017 发布 Hello World 应用程序
+          href: core/tutorials/publishing-with-visual-studio.md
+        - name: '在 Visual Studio 2017 中使用 C# 和 .NET Core 生成 .NET Standard 库'
+          href: core/tutorials/library-with-visual-studio.md
+        - name: 在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 生成 .NET Standard 库
+          href: core/tutorials/vb-library-with-visual-studio.md
+        - name: 在 Visual Studio 2017 中使用 .NET Core 测试 .NET Standard 库
+          href: core/tutorials/testing-library-with-visual-studio.md
+        - name: 在 Visual Studio 2017 中使用 .NET Standard 库
+          href: core/tutorials/consuming-library-with-visual-studio.md
+    - name: Windows 先决条件
+      href: core/windows-prerequisites.md
+    - name: macOS 先决条件
+      href: core/macos-prerequisites.md
+    - name: Linux 先决条件
+      href: core/linux-prerequisites.md
+    - name: .NET Core 的新增功能
+      href: core/whats-new/index.md
+      items:
+        - name: .NET Core 3.0 的新增功能
+          href: core/whats-new/dotnet-core-3-0.md
+        - name: .NET Core 2.2 的新增功能
+          href: core/whats-new/dotnet-core-2-2.md
+        - name: .NET Core 2.1 的新增功能
+          href: core/whats-new/dotnet-core-2-1.md
+        - name: .NET Core 2.0 的新增功能
+          href: core/whats-new/dotnet-core-2-0.md
+    - name: 教程
+      href: core/tutorials/index.md
+      items:
+        - name: 开始在 macOS 上使用 .NET Core
+          href: core/tutorials/using-on-macos.md
+        - name: 通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
+          href: core/tutorials/using-on-mac-vs.md
+        - name: 使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
+          href: core/tutorials/using-on-mac-vs-full-solution.md
+        - name: 使用 CLI 工具实现 .NET Core 入门
+          href: core/tutorials/using-with-xplat-cli.md
+        - name: 使用 .NET Core 命令行组织和测试项目
+          href: core/tutorials/testing-with-cli.md
+        - name: 使用跨平台工具开发库
+          href: core/tutorials/libraries.md
+        - name: 开发 ASP.NET Core 应用程序
+          href: core/tutorials/aspnet-core.md
+        - name: 从本机代码承载 .NET Core
+          href: core/tutorials/netcore-hosting.md
+        - name: 创建 dotnet new 自定义模板
+          href: core/tutorials/create-custom-template.md
+    - name: 包、元包和框架
+      href: core/packages.md
+    - name: CLI 变更概述
+      href: core/tools/cli-msbuild-architecture.md
+      items:
+        - name: 依赖项管理
+          href: core/tools/dependencies.md
+        - name: csproj 格式的新增内容
+          href: core/tools/csproj.md
+    - name: 迁移
+      items:
+        - name: .NET Core 2.0 - 2.1
+          href: core/migration/20-21.md
+        - name: 从 project.json 迁移
+          href: core/migration/index.md
+        - name: project.json 和 csproj 之间的映射
+          href: core/tools/project-json-to-csproj.md
+        - name: 从 DNX 迁移
+          href: core/migration/from-dnx.md
+    - name: 应用程序部署
+      href: core/deploying/index.md
+      items:
+        - name: 使用 CLI 工具部署应用
+          href: core/deploying/deploy-with-cli.md
+        - name: 使用 Visual Studio 部署应用
+          href: core/deploying/deploy-with-vs.md
+        - name: 使用跨平台工具创建 NuGet 包
+          href: core/deploying/creating-nuget-packages.md
+        - name: 自包含部署运行时前滚
+          href: core/deploying/runtime-patch-selection.md
+        - name: 运行时包存储区
+          href: core/deploying/runtime-store.md
+    - name: Docker
+      items:
+        - name: .NET 和 Docker 简介
+          href: core/docker/intro-net-docker.md
+        - name: 使 .NET Core 应用程序容器化
+          href: core/docker/build-container.md
+        - name: Visual Studio 中的容器工具
+          href: /visualstudio/containers/overview
+    - name: 单元测试
+      href: core/testing/index.md
+      items:
+        - name: 单元测试最佳做法
+          href: core/testing/unit-testing-best-practices.md
+        - name: '使用 xUnit 进行 C# 单元测试'
+          href: core/testing/unit-testing-with-dotnet-test.md
+        - name: '使用 NUnit 进行 C# 单元测试'
+          href: core/testing/unit-testing-with-nunit.md
+        - name: '使用 MSTest 进行 C# 单元测试'
+          href: core/testing/unit-testing-with-mstest.md
+        - name: '使用 xUnit 进行 F# 单元测试'
+          href: core/testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: '使用 NUnit 进行 F# 单元测试'
+          href: core/testing/unit-testing-fsharp-with-nunit.md
+        - name: '使用 MSTest 进行 F# 单元测试'
+          href: core/testing/unit-testing-fsharp-with-mstest.md
+        - name: 使用 xUnit 进行 VB 单元测试
+          href: core/testing/unit-testing-visual-basic-with-dotnet-test.md
+        - name: 使用 NUnit 进行 VB 单元测试
+          href: core/testing/unit-testing-visual-basic-with-nunit.md
+        - name: 使用 MSTest 进行 VB 单元测试
+          href: core/testing/unit-testing-visual-basic-with-mstest.md
+        - name: 运行选择性单元测试
+          href: core/testing/selective-unit-tests.md
+        - name: 对已发布的输出进行单元测试
+          href: core/testing/unit-testing-published-output.md
+        - name: 使用 Visual Studio 对 .NET Core 项目进行 Live Unit Testing
+          href: /visualstudio/test/live-unit-testing-start
+    - name: 版本管理
+      href: core/versions/index.md
+      items:
+        - name: .NET Core 版本选择
+          href: core/versions/selection.md
+        - name: 删除过时的运行时和 SDK
+          href: core/versions/remove-runtime-sdk-versions.md
+    - name: 运行时 IDentifier 目录
+      href: core/rid-catalog.md
+    - name: .NET Core SDK 概述
+      href: core/sdk.md
+    - name: .NET Core CLI 工具
+      href: core/tools/index.md
+      items:
+        - name: 遥测
+          href: core/tools/telemetry.md
+        - name: 全局工具
+          href: core/tools/global-tools.md
+          items:
+            - name: 创建全局工具
+              href: core/tools/global-tools-how-to-create.md
+        - name: 扩展性模型
+          href: core/tools/extensibility.md
+        - name: 持续集成
+          href: core/tools/using-ci-with-cli.md
+        - name: 自定义模板
+          href: core/tools/custom-templates.md
+        - name: 启用 tab 自动补全
+          href: core/tools/enable-tab-autocomplete.md
+        - name: dotnet
+          href: core/tools/dotnet.md
+        - name: dotnet 生成
+          href: core/tools/dotnet-build.md
+        - name: dotnet build-server
+          href: core/tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: core/tools/dotnet-clean.md
+        - name: dotnet help
+          href: core/tools/dotnet-help.md
+        - name: dotnet migrate
+          href: core/tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: core/tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: core/tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: core/tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: core/tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: core/tools/dotnet-nuget-push.md
+        - name: dotnet 包
+          href: core/tools/dotnet-pack.md
+        - name: dotnet 发布
+          href: core/tools/dotnet-publish.md
+        - name: dotnet restore
+          href: core/tools/dotnet-restore.md
+        - name: dotnet 运行
+          href: core/tools/dotnet-run.md
+        - name: dotnet sln
+          href: core/tools/dotnet-sln.md
+        - name: dotnet store
+          href: core/tools/dotnet-store.md
+        - name: dotnet test
+          href: core/tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: core/tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: core/tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: core/tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: core/tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: core/tools/dotnet-vstest.md
+        - name: dotnet-install 脚本
+          href: core/tools/dotnet-install-script.md
+        - name: 项目修改命令
+          items:
+            - name: 参考资料
+              items:
+                - name: dotnet add reference
+                  href: core/tools/dotnet-add-reference.md
+                - name: dotnet list reference
+                  href: core/tools/dotnet-list-reference.md
+                - name: dotnet remove reference
+                  href: core/tools/dotnet-remove-reference.md
+            - name: 包
+              items:
+                - name: dotnet add package
+                  href: core/tools/dotnet-add-package.md
+                - name: dotnet list package
+                  href: core/tools/dotnet-list-package.md
+                - name: dotnet remove package
+                  href: core/tools/dotnet-remove-package.md
+        - name: global.json
+          href: core/tools/global-json.md
+    - name: 其他 .NET Core 工具
+      href: core/additional-tools/index.md
+      items:
+        - name: WCF Web 服务引用提供程序
+          href: core/additional-tools/wcf-web-service-reference-guide.md
+        - name: dotnet-svcutil
+          href: core/additional-tools/dotnet-svcutil-guide.md
+        - name: dotnet-svcutil.xmlserializer
+          href: core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+        - name: XML 序列化程序生成器
+          href: core/additional-tools/xml-serializer-generator.md
+    - name: 从 .NET Framework 移植
+      href: core/porting/index.md
+      items:
+        - name: .NET Framework 技术不可用于 .NET Core
+          href: core/porting/net-framework-tech-unavailable.md
+        - name: 分析第三方依赖项
+          href: core/porting/third-party-deps.md
+        - name: 移植库
+          href: core/porting/libraries.md
+        - name: 为 .NET Core 组织项目
+          href: core/porting/project-structure.md
+        - name: 用于帮助移植到 .NET Core 的工具
+          href: core/porting/tools.md
+        - name: 使用 Windows 兼容性包
+          href: core/porting/windows-compat-pack.md
+        - name: 移植 Windows 窗体项目
+          href: core/porting/winforms.md
+        - name: 移植 WPF 项目
+          href: core/porting/wpf.md
+    - name: 从源生成 .NET Core
+      href: core/build/index.md
+      items:
+        - name: .NET Core 分发打包
+          href: core/build/distribution-packaging.md
+    - name: VS 2015/project.json docs
+      href: project-json.md
+- name: .NET Framework 指南
+  href: framework/index.md
+  items:
+    - name: 新增功能
+      href: framework/whats-new/
+    - name: 开始操作
+      href: framework/get-started/
+    - name: 安装指南
+      href: framework/install/
+    - name: 迁移指南
+      href: framework/migration-guide/
+    - name: 开发指南
+      href: framework/development-guide.md
+      items:
+        - name: 应用程序域和程序集
+          href: framework/app-domains/
+        - name: 桌面应用程序中的资源
+          href: framework/resources/
+        - name: 可访问性
+          href: framework/ui-automation/
+        - name: 数据和建模
+          href: framework/data/
+        - name: 客户端应用程序
+          href: framework/develop-client-apps.md
+          items:
+            - name: Windows Presentation Foundation
+              href: framework/wpf/
+            - name: Windows 窗体
+              href: framework/winforms/
+        - name: 使用 WCF 的面向服务的应用程序
+          href: framework/wcf/
+        - name: Windows Workflow Foundation
+          href: framework/windows-workflow-foundation/
+        - name: Windows 服务应用程序
+          href: framework/windows-services/
+        - name: 64 位应用程序
+          href: framework/64-bit-apps.md
+        - name: 使用 ASP.NET 的 Web 应用程序
+          href: framework/develop-web-apps-with-aspnet.md
+        - name: .NET Framework 中的网络编程
+          href: framework/network-programming/
+        - name: 配置应用
+          href: framework/configure-apps/
+        - name: 使用 .NET Native 编译引用
+          href: framework/net-native/
+        - name: Windows Identity Foundation
+          href: framework/security/
+        - name: 调试、跟踪和分析
+          href: framework/debug-trace-profile/
+        - name: 部署
+          href: framework/deployment/
+        - name: 性能
+          href: framework/performance/
+        - name: 动态编程
+          href: framework/reflection-and-codedom/
+        - name: Managed Extensibility Framework (MEF)
+          href: framework/mef/
+        - name: 与非托管代码交互操作
+          href: framework/interop/
+        - name: 非托管 API 参考
+          href: framework/unmanaged-api/
+        - name: XAML 服务
+          href: framework/xaml-services/
+    - name: 工具
+      href: framework/tools/
+    - name: 其他类库和 API
+      href: framework/additional-apis/
+- name: 'C# 指南'
+  href: csharp/index.md
+  items:
+    - name: 开始操作
+      href: csharp/getting-started/
+    - name: 教程
+      href: csharp/tutorials/index.md
+      items:
+        - name: 'C# 简介'
+          href: csharp/tutorials/intro-to-csharp/index.md
+          items:
+            - name: Hello world
+              href: csharp/tutorials/intro-to-csharp/hello-world.yml
+            - name: 'C# 中的数字'
+              href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
+            - name: 分支和循环
+              href: csharp/tutorials/intro-to-csharp/branches-and-loops.yml
+            - name: 列表集合
+              href: csharp/tutorials/intro-to-csharp/list-collection.yml
+            - name: 在本地环境中工作
+              href: csharp/tutorials/intro-to-csharp/local-environment.md
+              items:
+                - name: 'C# 中的数字'
+                  href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
+                - name: 分支和循环
+                  href: csharp/tutorials/intro-to-csharp/branches-and-loops-local.md
+                - name: 列表集合
+                  href: csharp/tutorials/intro-to-csharp/arrays-and-collections.md
+                - name: 类简介
+                  href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
+        - name: '探索 C# 6'
+          href: csharp/tutorials/exploration/csharp-6.yml
+        - name: '探索 C# 7.0'
+          href: csharp/tutorials/exploration/csharp-7.yml
+        - name: 探索字符串内插 - 交互式
+          href: csharp/tutorials/exploration/interpolated-strings.yml
+        - name: 探索字符串内插 - 在环境中
+          href: csharp/tutorials/exploration/interpolated-strings-local.md
+        - name: 字符串内插的高级方案
+          href: csharp/tutorials/string-interpolation.md
+        - name: 安全更新默认接口成员的接口
+          href: csharp/tutorials/default-interface-members-versions.md
+        - name: 探索索引和范围
+          href: csharp/tutorials/ranges-indexes.md
+        - name: 使用可为空引用类型
+          href: csharp/tutorials/nullable-reference-types.md
+        - name: 将应用升级为可为空引用类型
+          href: csharp/tutorials/upgrade-to-nullable-references.md
+        - name: 生成和使用异步流
+          href: csharp/tutorials/generate-consume-asynchronous-stream.md
+        - name: 使用模式匹配扩展数据功能
+          href: csharp/tutorials/pattern-matching.md
+        - name: 控制台应用程序
+          href: csharp/tutorials/console-teleprompter.md
+        - name: REST 客户端
+          href: csharp/tutorials/console-webapiclient.md
+        - name: 'C# 和 .NET 中的继承'
+          href: csharp/tutorials/inheritance.md
+        - name: 使用 LINQ
+          href: csharp/tutorials/working-with-linq.md
+        - name: 使用属性
+          href: csharp/tutorials/attributes.md
+    - name: 'C# 教程'
+      href: csharp/tour-of-csharp/
+    - name: 'C# 中的新增功能'
+      items:
+        - name: 'C# 8.0 - 预览版 5'
+          href: csharp/whats-new/csharp-8.md
+        - name: 'C# 7.3'
+          href: csharp/whats-new/csharp-7-3.md
+        - name: 'C# 7.2'
+          href: csharp/whats-new/csharp-7-2.md
+        - name: 'C# 7.1'
+          href: csharp/whats-new/csharp-7-1.md
+        - name: 'C# 7.0'
+          href: csharp/whats-new/csharp-7.md
+        - name: 'C# 6'
+          href: csharp/whats-new/csharp-6.md
+        - name: 'C# 版本历史记录'
+          href: csharp/whats-new/csharp-version-history.md
+        - name: 语言与框架的关系
+          href: csharp/whats-new/relationships-between-language-and-library.md
+        - name: 版本和更新注意事项
+          href: csharp/whats-new/version-update-considerations.md
+    - name: 'C# 概念'
+      items:
+        - name: 'C# 类型系统'
+          href: csharp/programming-guide/types/index.md
+        - name: 命名空间
+          href: csharp/programming-guide/namespaces/index.md
+        - name: 基本类型
+          href: csharp/basic-types.md
+        - name: 类
+          href: csharp/programming-guide/classes-and-structs/classes.md
+        - name: 可为空引用类型
+          href: csharp/nullable-references.md
+        - name: 结构
+          href: csharp/structs.md
+        - name: 元组
+          href: csharp/tuples.md
+        - name: 析构元组和其他类型
+          href: csharp/deconstruct.md
+        - name: 接口
+          href: csharp/programming-guide/interfaces/index.md
+        - name: 方法
+          href: csharp/methods.md
+        - name: Lambda 表达式
+          href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
+        - name: 属性
+          href: csharp/properties.md
+        - name: 索引器
+          href: csharp/indexers.md
+        - name: 弃元
+          href: csharp/discards.md
+        - name: 泛型
+          href: csharp/programming-guide/generics/index.md
+        - name: Iterators
+          href: csharp/iterators.md
+        - name: 委托和事件
+          href: csharp/delegates-events.md
+          items:
+            - name: 委托简介
+              href: csharp/delegates-overview.md
+            - name: System.Delegate 和 delegate 关键字
+              href: csharp/delegate-class.md
+            - name: 强类型委托
+              href: csharp/delegates-strongly-typed.md
+            - name: 委托的常见模式
+              href: csharp/delegates-patterns.md
+            - name: 事件介绍
+              href: csharp/events-overview.md
+            - name: 标准 .NET 事件模式
+              href: csharp/event-pattern.md
+            - name: 已更新的 .NET 事件模式
+              href: csharp/modern-events.md
+            - name: 区别委托和事件
+              href: csharp/distinguish-delegates-events.md
+        - name: 语言集成查询 (LINQ)
+          href: csharp/linq/
+        - name: 异步编程
+          href: csharp/async.md
+        - name: 模式匹配
+          href: csharp/pattern-matching.md
+        - name: 编写安全高效的代码
+          href: csharp/write-safe-efficient-code.md
+        - name: 表达式树
+          href: csharp/expression-trees.md
+          items:
+            - name: 表达式树说明
+              href: csharp/expression-trees-explained.md
+            - name: 支持表达式树的框架类型
+              href: csharp/expression-classes.md
+            - name: 执行表达式
+              href: csharp/expression-trees-execution.md
+            - name: 解释表达式
+              href: csharp/expression-trees-interpreting.md
+            - name: 生成表达式
+              href: csharp/expression-trees-building.md
+            - name: 翻译表达式
+              href: csharp/expression-trees-translating.md
+            - name: 总结
+              href: csharp/expression-trees-summary.md
+        - name: 本机互操作性
+          href: csharp/programming-guide/interop/index.md
+        - name: 记录代码
+          href: csharp/codedoc.md
+        - name: 版本管理
+          href: csharp/versioning.md
+    - name: '操作指南 C# 主题'
+      href: csharp/how-to/index.md
+      items:
+        - name: 使用 `String.Split` 分析字符串
+          href: csharp/how-to/parse-strings-using-split.md
+        - name: 连接字符串
+          href: csharp/how-to/concatenate-multiple-strings.md
+        - name: 将字符串转换为 DateTime
+          href: standard/base-types/parsing-datetime.md
+        - name: 搜索字符串
+          href: csharp/how-to/search-strings.md
+        - name: 修改字符串内容
+          href: csharp/how-to/modify-string-contents.md
+        - name: 比较字符串
+          href: csharp/how-to/compare-strings.md
+        - name: 使用模式匹配 is 和 as 运算符安全地进行强制转换
+          href: csharp/how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+    - name: .NET Compiler Platform SDK (Roslyn API)
+      href: csharp/roslyn-sdk/
+    - name: 'C# 编程指南'
+      href: csharp/programming-guide/
+    - name: 语言参考
+      href: csharp/language-reference/
+    - name: 演练
+      href: csharp/walkthroughs.md
+- name: 'F# 指南'
+  href: fsharp/index.md
+  items:
+    - name: 开始操作
+      href: fsharp/get-started/index.md
+      items:
+        - name: '安装 F#'
+          href: fsharp/get-started/install-fsharp.md
+        - name: 'Visual Studio 中的 F# 入门'
+          href: fsharp/get-started/get-started-visual-studio.md
+        - name: 'Visual Studio for Mac 中的 F# 入门'
+          href: fsharp/get-started/get-started-with-visual-studio-for-mac.md
+        - name: 'Visual Studio Code 和 Ionide 中的 F# 入门'
+          href: fsharp/get-started/get-started-vscode.md
+        - name: '.NET Core CLI 中的 F# 入门'
+          href: fsharp/get-started/get-started-command-line.md
+    - name: '什么是 F#'
+      href: fsharp/what-is-fsharp.md
+    - name: 'F# 教程'
+      href: fsharp/tour.md
+    - name: 教程
+      items:
+        - name: 功能编程的介绍
+          href: fsharp/introduction-to-functional-programming/index.md
+          items:
+            - name: 第一类函数
+              href: fsharp/introduction-to-functional-programming/first-class-functions.md
+        - name: 异步和并发编程
+          items:
+            - name: 异步编程
+              href: fsharp/tutorials/asynchronous-and-concurrent-programming/async.md
+        - name: 类型提供程序
+          href: fsharp/tutorials/type-providers/index.md
+          items:
+            - name: 创建类型提供程序
+              href: fsharp/tutorials/type-providers/creating-a-type-provider.md
+            - name: 类型提供程序安全性
+              href: fsharp/tutorials/type-providers/type-provider-security.md
+            - name: 类型提供程序疑难解答
+              href: fsharp/tutorials/type-providers/troubleshooting-type-providers.md
+        - name: 'F# 交互窗口'
+          href: fsharp/tutorials/fsharp-interactive/index.md
+    - name: 'F# 语言参考'
+      href: fsharp/language-reference/index.md
+      items:
+        - name: 关键字参考
+          href: fsharp/language-reference/keyword-reference.md
+        - name: 符号和运算符参考
+          href: fsharp/language-reference/symbol-and-operator-reference/index.md
+          items:
+            - name: 算术运算符
+              href: fsharp/language-reference/symbol-and-operator-reference/arithmetic-operators.md
+            - name: 布尔运算符
+              href: fsharp/language-reference/symbol-and-operator-reference/boolean-operators.md
+            - name: 位运算符
+              href: fsharp/language-reference/symbol-and-operator-reference/bitwise-operators.md
+            - name: 可以为 null 的运算符
+              href: fsharp/language-reference/symbol-and-operator-reference/nullable-operators.md
+        - name: 函数
+          href: fsharp/language-reference/functions/index.md
+          items:
+            - name: let 绑定
+              href: fsharp/language-reference/functions/let-bindings.md
+            - name: do 绑定
+              href: fsharp/language-reference/functions/do-bindings.md
+            - name: Lambda 表达式：fun 关键字
+              href: fsharp/language-reference/functions/lambda-expressions-the-fun-keyword.md
+            - name: 递归函数：rec 关键字
+              href: fsharp/language-reference/functions/recursive-functions-the-rec-keyword.md
+            - name: 入口点
+              href: fsharp/language-reference/functions/entry-point.md
+            - name: 外部函数
+              href: fsharp/language-reference/functions/external-functions.md
+            - name: 内联函数
+              href: fsharp/language-reference/functions/inline-functions.md
+        - name: 值
+          href: fsharp/language-reference/values/index.md
+          items:
+            - name: Null 值
+              href: fsharp/language-reference/values/null-values.md
+        - name: 文本
+          href: fsharp/language-reference/literals.md
+        - name: 'F# 类型'
+          href: fsharp/language-reference/fsharp-types.md
+        - name: 类型推断
+          href: fsharp/language-reference/type-inference.md
+        - name: 基本类型
+          href: fsharp/language-reference/basic-types.md
+        - name: unit 类型
+          href: fsharp/language-reference/unit-type.md
+        - name: 字符串
+          href: fsharp/language-reference/strings.md
+        - name: 元组
+          href: fsharp/language-reference/tuples.md
+        - name: 'F# 集合类型'
+          href: fsharp/language-reference/fsharp-collection-types.md
+        - name: 列表
+          href: fsharp/language-reference/lists.md
+        - name: 数组
+          href: fsharp/language-reference/arrays.md
+        - name: 序列
+          href: fsharp/language-reference/sequences.md
+        - name: 切片
+          href: fsharp/language-reference/slices.md
+        - name: 选项
+          href: fsharp/language-reference/options.md
+        - name: 值选项
+          href: fsharp/language-reference/value-options.md
+        - name: 结果
+          href: fsharp/language-reference/results.md
+        - name: 泛型
+          href: fsharp/language-reference/generics/index.md
+          items:
+            - name: 自动泛化
+              href: fsharp/language-reference/generics/automatic-generalization.md
+            - name: 约束
+              href: fsharp/language-reference/generics/constraints.md
+            - name: 静态解析的类型参数
+              href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
+        - name: 记录
+          href: fsharp/language-reference/records.md
+        - name: 可区分联合
+          href: fsharp/language-reference/discriminated-unions.md
+        - name: 枚举
+          href: fsharp/language-reference/enumerations.md
+        - name: 类型缩写
+          href: fsharp/language-reference/type-abbreviations.md
+        - name: 类
+          href: fsharp/language-reference/classes.md
+        - name: 结构
+          href: fsharp/language-reference/structures.md
+        - name: 继承
+          href: fsharp/language-reference/inheritance.md
+        - name: 接口
+          href: fsharp/language-reference/interfaces.md
+        - name: 抽象类
+          href: fsharp/language-reference/abstract-classes.md
+        - name: 成员
+          href: fsharp/language-reference/members/index.md
+          items:
+            - name: 类中的 let 绑定
+              href: fsharp/language-reference/members/let-bindings-in-classes.md
+            - name: 类中的 do 绑定
+              href: fsharp/language-reference/members/do-bindings-in-classes.md
+            - name: 属性
+              href: fsharp/language-reference/members/properties.md
+            - name: 索引属性
+              href: fsharp/language-reference/members/indexed-properties.md
+            - name: 方法
+              href: fsharp/language-reference/members/methods.md
+            - name: 构造函数
+              href: fsharp/language-reference/members/constructors.md
+            - name: 事件
+              href: fsharp/language-reference/members/events.md
+            - name: 显式字段：`val` 关键字
+              href: fsharp/language-reference/members/explicit-fields-the-val-keyword.md
+        - name: 类型扩展
+          href: fsharp/language-reference/type-extensions.md
+        - name: 形参和实参
+          href: fsharp/language-reference/parameters-and-arguments.md
+        - name: 运算符重载
+          href: fsharp/language-reference/operator-overloading.md
+        - name: 可变类型
+          href: fsharp/language-reference/flexible-types.md
+        - name: 委托
+          href: fsharp/language-reference/delegates.md
+        - name: 对象表达式
+          href: fsharp/language-reference/object-expressions.md
+        - name: 复制和更新记录表达式
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
+        - name: 强制转换和转换
+          href: fsharp/language-reference/casting-and-conversions.md
+        - name: 访问控制
+          href: fsharp/language-reference/access-control.md
+        - name: 条件表达式：if...then...else
+          href: fsharp/language-reference/conditional-expressions-if-then-else.md
+        - name: Match 表达式
+          href: fsharp/language-reference/match-expressions.md
+        - name: 模式匹配
+          href: fsharp/language-reference/pattern-matching.md
+        - name: 活动模式
+          href: fsharp/language-reference/active-patterns.md
+        - name: 循环：for...to 表达式
+          href: fsharp/language-reference/loops-for-to-expression.md
+        - name: 循环：for...in 表达式
+          href: fsharp/language-reference/loops-for-in-expression.md
+        - name: 循环：while...do 表达式
+          href: fsharp/language-reference/loops-while-do-expression.md
+        - name: 断言
+          href: fsharp/language-reference/assertions.md
+        - name: 异常处理
+          href: fsharp/language-reference/exception-handling/index.md
+          items:
+            - name: 异常类型
+              href: fsharp/language-reference/exception-handling/exception-types.md
+            - name: try...with 表达式
+              href: fsharp/language-reference/exception-handling/the-try-with-expression.md
+            - name: try...finally 表达式
+              href: fsharp/language-reference/exception-handling/the-try-finally-expression.md
+            - name: raise 函数
+              href: fsharp/language-reference/exception-handling/the-raise-function.md
+            - name: failwith 函数
+              href: fsharp/language-reference/exception-handling/the-failwith-function.md
+            - name: invalidArg 函数
+              href: fsharp/language-reference/exception-handling/the-invalidArg-function.md
+        - name: 特性
+          href: fsharp/language-reference/attributes.md
+        - name: 资源管理：use 关键字
+          href: fsharp/language-reference/resource-management-the-use-keyword.md
+        - name: 命名空间
+          href: fsharp/language-reference/namespaces.md
+        - name: 模块
+          href: fsharp/language-reference/modules.md
+        - name: 导入声明：open 关键字
+          href: fsharp/language-reference/import-declarations-the-open-keyword.md
+        - name: 签名文件
+          href: fsharp/language-reference/signature-files.md
+        - name: 度量单位
+          href: fsharp/language-reference/units-of-measure.md
+        - name: XML 文档
+          href: fsharp/language-reference/xml-documentation.md
+        - name: 延迟表达式
+          href: fsharp/language-reference/lazy-expressions.md
+        - name: 计算表达式
+          href: fsharp/language-reference/computation-expressions.md
+        - name: 异步工作流
+          href: fsharp/language-reference/asynchronous-workflows.md
+        - name: 查询表达式
+          href: fsharp/language-reference/query-expressions.md
+        - name: 代码引用
+          href: fsharp/language-reference/code-quotations.md
+        - name: 已修复关键字
+          href: fsharp/language-reference/fixed.md
+        - name: Byref
+          href: fsharp/language-reference/byrefs.md
+        - name: 引用单元格
+          href: fsharp/language-reference/reference-cells.md
+        - name: 编译器指令
+          href: fsharp/language-reference/compiler-directives.md
+        - name: 编译器选项
+          href: fsharp/language-reference/compiler-options.md
+        - name: 'F# Interactive 选项'
+          href: fsharp/language-reference/fsharp-interactive-options.md
+        - name: 源代码行标识符、文件标识符和路径标识符
+          href: fsharp/language-reference/source-line-file-path-identifiers.md
+        - name: 调用方信息
+          href: fsharp/language-reference/caller-information.md
+        - name: 详细语法
+          href: fsharp/language-reference/verbose-syntax.md
+    - name: 'F# 样式指南'
+      href: fsharp/style-guide/index.md
+      items:
+        - name: 'F# 代码格式设置准则'
+          href: fsharp/style-guide/formatting.md
+        - name: 'F# 编码约定'
+          href: fsharp/style-guide/conventions.md
+        - name: 'F# 组件设计准则'
+          href: fsharp/style-guide/component-design-guidelines.md
+    - name: '在 Azure 上使用 F#'
+      href: fsharp/using-fsharp-on-azure/index.md
+      items:
+        - name: '通过 F# 实现 Azure Blob 入门'
+          href: fsharp/using-fsharp-on-azure/blob-storage.md
+        - name: '通过 F# 实现 Azure 文件存储入门'
+          href: fsharp/using-fsharp-on-azure/file-storage.md
+        - name: '通过 F# 实现 Azure 队列存储入门'
+          href: fsharp/using-fsharp-on-azure/queue-storage.md
+        - name: '通过 F# 实现 Azure 表格存储入门'
+          href: fsharp/using-fsharp-on-azure/table-storage.md
+        - name: 'F# Azure 依赖项的包管理'
+          href: fsharp/using-fsharp-on-azure/package-management.md
+- name: Visual Basic 指南
+  href: visual-basic/index.md
+  items:
+    - name: Visual Basic 的新增功能
+      href: visual-basic/getting-started/whats-new.md
+    - name: 开始操作
+      href: visual-basic/getting-started/index.md
+      items:
+        - name: Visual Studio 中 Visual Basic 的重大更改
+          href: visual-basic/getting-started/breaking-changes-in-visual-studio.md
+        - name: 为 Visual Basic 程序员提供的附加资源
+          href: visual-basic/getting-started/additional-resources.md
+    - name: 开发应用程序
+      href: visual-basic/developing-apps/index.md
+      items:
+        - name: Visual Basic 编程
+          href: visual-basic/developing-apps/programming/index.md
+          items:
+            - name: 访问计算机资源
+              href: visual-basic/developing-apps/programming/computer-resources/index.md
+            - name: 记录来自应用程序的信息
+              href: visual-basic/developing-apps/programming/log-info/index.md
+            - name: 访问用户数据
+              href: visual-basic/developing-apps/programming/accessing-user-data.md
+            - name: 访问应用程序窗体
+              href: visual-basic/developing-apps/programming/accessing-application-forms.md
+            - name: 访问应用程序 Web 服务
+              href: visual-basic/developing-apps/programming/accessing-application-web-services.md
+              items:
+                - name: 如何：以异步方式调用 Web 服务
+                  href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
+            - name: Accessing Application Settings
+              href: visual-basic/developing-apps/programming/app-settings/index.md
+            - name: 处理驱动器、目录和文件
+              href: visual-basic/developing-apps/programming/drives-directories-files/processing.md
+        - name: 使用 My 开发
+          href: visual-basic/developing-apps/development-with-my/index.md
+          items:
+            - name: 使用 My.Application、My.Computer 和 My.User 执行任务
+              href: visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md
+            - name: My.Forms 和 My.WebServices 提供的默认对象实例
+              href: visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md
+            - name: 使用 My.Resources 和 My.Settings 快速开发应用程序
+              href: visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md
+            - name: Visual Basic 应用程序模型概述
+              href: visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md
+            - name: My 对项目类型的依赖方式
+              href: visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md
+        - name: 访问数据
+          href: visual-basic/developing-apps/accessing-data.md
+        - name: 创建和使用组件
+          href: visual-basic/developing-apps/creating-and-using-components.md
+        - name: Windows 窗体应用程序基础知识
+          href: visual-basic/developing-apps/windows-forms/index.md
+        - name: 利用 Visual Basic 自定义项目并扩展 My 对象
+          href: visual-basic/developing-apps/customizing-extending-my/index.md
+          items:
+            - name: 扩展 My 命名空间
+              href: visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md
+            - name: 打包和部署自定义 My 扩展
+              href: visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md
+            - name: 扩展 Visual Basic 应用程序模型
+              href: visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
+            - name: 自定义 My 中可用的对象
+              href: visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
+    - name: 编程概念
+      href: visual-basic/programming-guide/concepts/index.md
+      items:
+        - name: 使用 Async 和 Await 的异步编程
+          href: visual-basic/programming-guide/concepts/async/index.md
+        - name: 特性
+          href: visual-basic/programming-guide/concepts/attributes/index.md
+        - name: 调用方信息
+          href: visual-basic/programming-guide/concepts/caller-information.md
+        - name: 集合
+          href: visual-basic/programming-guide/concepts/collections.md
+        - name: 协变和逆变
+          href: visual-basic/programming-guide/concepts/covariance-contravariance/index.md
+        - name: 表达式树
+          href: visual-basic/programming-guide/concepts/expression-trees/index.md
+        - name: Iterators
+          href: visual-basic/programming-guide/concepts/iterators.md
+        - name: 语言集成查询 (LINQ)
+          href: visual-basic/programming-guide/concepts/linq/index.md
+        - name: 面向对象的编程
+          href: visual-basic/programming-guide/concepts/object-oriented-programming.md
+        - name: 映像
+          href: visual-basic/programming-guide/concepts/reflection.md
+        - name: 序列化
+          href: visual-basic/programming-guide/concepts/serialization/index.md
+    - name: 程序结构和代码约定
+      href: visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md
+      items:
+        - name: 程序结构
+          href: visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md
+        - name: 主要过程
+          href: visual-basic/programming-guide/program-structure/main-procedure.md
+        - name: 引用和 Imports 语句
+          href: visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md
+        - name: 命名空间
+          href: visual-basic/programming-guide/program-structure/namespaces.md
+        - name: 命名约定
+          href: visual-basic/programming-guide/program-structure/naming-conventions.md
+        - name: 编码约定
+          href: visual-basic/programming-guide/program-structure/coding-conventions.md
+        - name: 条件编译
+          href: visual-basic/programming-guide/program-structure/conditional-compilation.md
+        - name: 如何：在代码中拆分和合并语句
+          href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
+        - name: 如何：折叠和隐藏代码节
+          href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
+        - name: 如何：标记语句
+          href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
+        - name: 代码中的特殊字符
+          href: visual-basic/programming-guide/program-structure/special-characters-in-code.md
+        - name: 代码中的注释
+          href: visual-basic/programming-guide/program-structure/comments-in-code.md
+        - name: 代码中用作元素名称的关键字
+          href: visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md
+        - name: Me、My、MyBase 和 MyClass
+          href: visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md
+        - name: 限制
+          href: visual-basic/programming-guide/program-structure/limitations.md
+    - name: 语言功能
+      href: visual-basic/programming-guide/language-features/index.md
+      items:
+        - name: 数组
+          href: visual-basic/programming-guide/language-features/arrays/index.md
+        - name: 集合初始值设定项
+          href: visual-basic/programming-guide/language-features/collection-initializers/index.md
+        - name: 常量和枚举
+          href: visual-basic/programming-guide/language-features/constants-enums/index.md
+        - name: 控制流
+          href: visual-basic/programming-guide/language-features/control-flow/index.md
+        - name: 数据类型
+          href: visual-basic/programming-guide/language-features/data-types/index.md
+          items:
+            - name: 类型字符
+              href: visual-basic/programming-guide/language-features/data-types/type-characters.md
+            - name: 基本数据类型
+              href: visual-basic/programming-guide/language-features/data-types/elementary-data-types.md
+              items:
+                - name: 数值数据类型
+                  href: visual-basic/programming-guide/language-features/data-types/numeric-data-types.md
+                - name: 字符数据类型
+                  href: visual-basic/programming-guide/language-features/data-types/character-data-types.md
+                - name: 杂项数据类型
+                  href: visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md
+            - name: 复合数据类型
+              href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
+              items:
+                - name: 如何：在一个变量中保留多个值
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
+            - name: 泛型类型
+              href: visual-basic/programming-guide/language-features/data-types/generic-types.md
+              items:
+                - name: 如何：定义可对不同数据类型提供相同功能的类
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
+                - name: 如何：使用泛型类
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
+            - name: 泛型过程
+              href: visual-basic/programming-guide/language-features/data-types/generic-procedures.md
+            - name: 可以为 null 的值类型
+              href: visual-basic/programming-guide/language-features/data-types/nullable-value-types.md
+            - name: Value Types and Reference Types
+              href: visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md
+            - name: 类型转换
+              href: visual-basic/programming-guide/language-features/data-types/type-conversions.md
+              items:
+                - name: Widening and Narrowing Conversions
+                  href: visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md
+                - name: 隐式转换和显式转换
+                  href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
+                - name: 字符串和其他类型之间的转换
+                  href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
+                - name: 如何：将一个对象转换为其他类型
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
+                - name: 数组转换
+                  href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
+            - name: 结构
+              href: visual-basic/programming-guide/language-features/data-types/structures.md
+              items:
+                - name: 如何：声明结构
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md
+                - name: 结构变量
+                  href: visual-basic/programming-guide/language-features/data-types/structure-variables.md
+                - name: 结构和其他编程元素
+                  href: visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md
+                - name: 结构和类
+                  href: visual-basic/programming-guide/language-features/data-types/structures-and-classes.md
+            - name: 元组
+              href: visual-basic/programming-guide/language-features/data-types/tuples.md
+            - name: 有效使用数据类型
+              href: visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md
+            - name: 数据类型疑难解答
+              href: visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md
+        - name: 已声明的元素
+          href: visual-basic/programming-guide/language-features/declared-elements/index.md
+        - name: 委托
+          href: visual-basic/programming-guide/language-features/delegates/index.md
+        - name: 早期绑定和晚期绑定
+          href: visual-basic/programming-guide/language-features/early-late-binding/index.md
+        - name: 错误类型
+          href: visual-basic/programming-guide/language-features/error-types.md
+        - name: 事件
+          href: visual-basic/programming-guide/language-features/events/index.md
+        - name: 接口
+          href: visual-basic/programming-guide/language-features/interfaces/index.md
+          items:
+            - name: 演练：创建和实现接口
+              href: visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md
+        - name: LINQ
+          href: visual-basic/programming-guide/language-features/linq/index.md
+        - name: 对象和类
+          href: visual-basic/programming-guide/language-features/objects-and-classes/index.md
+        - name: 运算符和表达式
+          href: visual-basic/programming-guide/language-features/operators-and-expressions/index.md
+        - name: 过程
+          href: visual-basic/programming-guide/language-features/procedures/index.md
+        - name: 语句
+          href: visual-basic/programming-guide/language-features/statements.md
+        - name: 字符串
+          href: visual-basic/programming-guide/language-features/strings/index.md
+        - name: 变量
+          href: visual-basic/programming-guide/language-features/variables/index.md
+        - name: XML
+          href: visual-basic/programming-guide/language-features/xml/index.md
+    - name: COM 互操作
+      href: visual-basic/programming-guide/com-interop/index.md
+      items:
+        - name: COM 互操作介绍
+          href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
+        - name: 如何：引用 COM 对象
+          href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
+        - name: 如何：使用 ActiveX 控件
+          href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
+        - name: 演练：调用 Windows API
+          href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
+        - name: 如何：调用 Windows API
+          href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
+        - name: 如何：调用需要使用无符号类型的 Windows 函数
+          href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
+        - name: 演练：创建 COM 对象
+          href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
+        - name: 互操作性疑难解答
+          href: visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md
+        - name: .NET Framework 应用程序中的 COM 互操作性
+          href: visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md
+        - name: 演练：使用 COM 对象实现继承
+          href: visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md
+    - name: 语言参考
+      href: visual-basic/language-reference/index.md
+      items:
+        - name: 配置语言版本
+          href: visual-basic/language-reference/configure-language-version.md
+        - name: 版式和代码约定
+          href: visual-basic/language-reference/typographic-and-code-conventions.md
+        - name: Visual Basic 运行库成员
+          href: visual-basic/language-reference/runtime-library-members.md
+        - name: 关键字
+          href: visual-basic/language-reference/keywords/index.md
+          items:
+            - name: 数组摘要
+              href: visual-basic/language-reference/keywords/arrays-summary.md
+            - name: 集合对象摘要
+              href: visual-basic/language-reference/keywords/collection-object-summary.md
+            - name: 控制流摘要
+              href: visual-basic/language-reference/keywords/control-flow-summary.md
+            - name: 转换摘要
+              href: visual-basic/language-reference/keywords/conversion-summary.md
+            - name: Data Types Summary
+              href: visual-basic/language-reference/keywords/data-types-summary.md
+            - name: 日期和时间摘要
+              href: visual-basic/language-reference/keywords/dates-and-times-summary.md
+            - name: 声明和常量摘要
+              href: visual-basic/language-reference/keywords/declarations-and-constants-summary.md
+            - name: 目录和文件摘要
+              href: visual-basic/language-reference/keywords/directories-and-files-summary.md
+            - name: 错误摘要
+              href: visual-basic/language-reference/keywords/errors-summary.md
+            - name: 财务摘要
+              href: visual-basic/language-reference/keywords/financial-summary.md
+            - name: 信息和交互摘要
+              href: visual-basic/language-reference/keywords/information-and-interaction-summary.md
+            - name: 输入和输出摘要
+              href: visual-basic/language-reference/keywords/input-and-output-summary.md
+            - name: 数学摘要
+              href: visual-basic/language-reference/keywords/math-summary.md
+              items:
+                - name: 派生的数学函数
+                  href: visual-basic/language-reference/keywords/derived-math-functions.md
+            - name: My 引用
+              href: visual-basic/language-reference/keywords/my-reference.md
+            - name: 运算符摘要
+              href: visual-basic/language-reference/keywords/operators-summary.md
+            - name: 注册表摘要
+              href: visual-basic/language-reference/keywords/registry-summary.md
+            - name: 字符串操作摘要
+              href: visual-basic/language-reference/keywords/string-manipulation-summary.md
+        - name: 特性
+          href: visual-basic/language-reference/attributes.md
+        - name: 常量和枚举
+          href: visual-basic/language-reference/constants-and-enumerations.md
+        - name: 数据类型摘要
+          href: visual-basic/language-reference/data-types/index.md
+          items:
+            - name: 布尔数据类型
+              href: visual-basic/language-reference/data-types/boolean-data-type.md
+            - name: Byte 数据类型
+              href: visual-basic/language-reference/data-types/byte-data-type.md
+            - name: Char 数据类型
+              href: visual-basic/language-reference/data-types/char-data-type.md
+            - name: Date 数据类型
+              href: visual-basic/language-reference/data-types/date-data-type.md
+            - name: Decimal 数据类型
+              href: visual-basic/language-reference/data-types/decimal-data-type.md
+            - name: Double 数据类型
+              href: visual-basic/language-reference/data-types/double-data-type.md
+            - name: Integer 数据类型
+              href: visual-basic/language-reference/data-types/integer-data-type.md
+            - name: Long 数据类型
+              href: visual-basic/language-reference/data-types/long-data-type.md
+            - name: Object Data Type
+              href: visual-basic/language-reference/data-types/object-data-type.md
+            - name: SByte 数据类型
+              href: visual-basic/language-reference/data-types/sbyte-data-type.md
+            - name: Short 数据类型
+              href: visual-basic/language-reference/data-types/short-data-type.md
+            - name: Single 数据类型
+              href: visual-basic/language-reference/data-types/single-data-type.md
+            - name: String 数据类型
+              href: visual-basic/language-reference/data-types/string-data-type.md
+            - name: UInteger 数据类型
+              href: visual-basic/language-reference/data-types/uinteger-data-type.md
+            - name: ULong 数据类型
+              href: visual-basic/language-reference/data-types/ulong-data-type.md
+            - name: 用户定义的数据类型
+              href: visual-basic/language-reference/data-types/user-defined-data-type.md
+            - name: UShort 数据类型
+              href: visual-basic/language-reference/data-types/ushort-data-type.md
+        - name: 指令
+          href: visual-basic/language-reference/directives/index.md
+          items:
+            - name: '#Const 指令'
+              href: visual-basic/language-reference/directives/const-directive.md
+            - name: '#ExternalSource 指令'
+              href: visual-basic/language-reference/directives/externalsource-directive.md
+            - name: '#If...Then...#Else 指令'
+              href: visual-basic/language-reference/directives/if-then-else-directives.md
+            - name: '#Region 指令'
+              href: visual-basic/language-reference/directives/region-directive.md
+        - name: 函数
+          href: visual-basic/language-reference/functions/index.md
+          items:
+            - name: 转换函数
+              href: visual-basic/language-reference/functions/conversion-functions.md
+            - name: 数学函数
+              href: visual-basic/language-reference/functions/math-functions.md
+            - name: 字符串函数
+              href: visual-basic/language-reference/functions/string-functions.md
+            - name: Type Conversion Functions
+              href: visual-basic/language-reference/functions/type-conversion-functions.md
+              items:
+                - name: 返回 CStr 函数的值
+                  href: visual-basic/language-reference/functions/return-values-for-the-cstr-function.md
+            - name: CType Function
+              href: visual-basic/language-reference/functions/ctype-function.md
+        - name: 修饰符
+          href: visual-basic/language-reference/modifiers/index.md
+          items:
+            - name: Ansi
+              href: visual-basic/language-reference/modifiers/ansi.md
+            - name: Assembly
+              href: visual-basic/language-reference/modifiers/assembly.md
+            - name: Async
+              href: visual-basic/language-reference/modifiers/async.md
+            - name: 自动
+              href: visual-basic/language-reference/modifiers/auto.md
+            - name: RemoveHandler
+              href: visual-basic/language-reference/modifiers/byref.md
+            - name: ByVal
+              href: visual-basic/language-reference/modifiers/byval.md
+            - name: 默认
+              href: visual-basic/language-reference/modifiers/default.md
+            - name: Friend
+              href: visual-basic/language-reference/modifiers/friend.md
+            - name: In（泛型修饰符）
+              href: visual-basic/language-reference/modifiers/in-generic-modifier.md
+            - name: 迭代器
+              href: visual-basic/language-reference/modifiers/iterator.md
+            - name: 键
+              href: visual-basic/language-reference/modifiers/key.md
+            - name: 模块
+              href: visual-basic/language-reference/modifiers/module-keyword.md
+            - name: MustInherit
+              href: visual-basic/language-reference/modifiers/mustinherit.md
+            - name: New
+              href: visual-basic/language-reference/modifiers/mustoverride.md
+            - name: Narrowing
+              href: visual-basic/language-reference/modifiers/narrowing.md
+            - name: NotInheritable
+              href: visual-basic/language-reference/modifiers/notinheritable.md
+            - name: NotOverridable
+              href: visual-basic/language-reference/modifiers/notoverridable.md
+            - name: Optional
+              href: visual-basic/language-reference/modifiers/optional.md
+            - name: Out（泛型修饰符）
+              href: visual-basic/language-reference/modifiers/out-generic-modifier.md
+            - name: Overloads
+              href: visual-basic/language-reference/modifiers/overloads.md
+            - name: Overrides
+              href: visual-basic/language-reference/modifiers/overridable.md
+            - name: Overrides
+              href: visual-basic/language-reference/modifiers/overrides.md
+            - name: ParamArray
+              href: visual-basic/language-reference/modifiers/paramarray.md
+            - name: 部分
+              href: visual-basic/language-reference/modifiers/partial.md
+            - name: Private
+              href: visual-basic/language-reference/modifiers/private.md
+            - name: Private Protected
+              href: visual-basic/language-reference/modifiers/private-protected.md
+            - name: Protected
+              href: visual-basic/language-reference/modifiers/protected.md
+            - name: Protected Friend
+              href: visual-basic/language-reference/modifiers/protected-friend.md
+            - name: Public
+              href: visual-basic/language-reference/modifiers/public.md
+            - name: ReadOnly
+              href: visual-basic/language-reference/modifiers/readonly.md
+            - name: Shadows
+              href: visual-basic/language-reference/modifiers/shadows.md
+            - name: Shared
+              href: visual-basic/language-reference/modifiers/shared.md
+            - name: Static
+              href: visual-basic/language-reference/modifiers/static.md
+            - name: Unicode
+              href: visual-basic/language-reference/modifiers/unicode.md
+            - name: Widening
+              href: visual-basic/language-reference/modifiers/widening.md
+            - name: WithEvents
+              href: visual-basic/language-reference/modifiers/withevents.md
+            - name: WriteOnly
+              href: visual-basic/language-reference/modifiers/writeonly.md
+        - name: 模块
+          href: visual-basic/language-reference/modules.md
+        - name: Nothing
+          href: visual-basic/language-reference/nothing.md
+        - name: 对象
+          href: visual-basic/language-reference/objects/index.md
+          items:
+            - name: My.Application 对象
+              href: visual-basic/language-reference/objects/my-application-object.md
+              items:
+                - name: My.Application.Info 对象
+                  href: visual-basic/language-reference/objects/my-application-info-object.md
+                - name: My.Application.Log 对象
+                  href: visual-basic/language-reference/objects/my-application-log-object.md
+            - name: My.Computer 对象
+              href: visual-basic/language-reference/objects/my-computer-object.md
+              items:
+                - name: My.Computer.Audio 对象
+                  href: visual-basic/language-reference/objects/my-computer-audio-object.md
+                - name: My.Computer.Clipboard 对象
+                  href: visual-basic/language-reference/objects/my-computer-clipboard-object.md
+                - name: My.Computer.Clock 对象
+                  href: visual-basic/language-reference/objects/my-computer-clock-object.md
+                - name: My.Computer.FileSystem 对象
+                  href: visual-basic/language-reference/objects/my-computer-filesystem-object.md
+                  items:
+                    - name: My.Computer.FileSystem.SpecialDirectories 对象
+                      href: visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md
+                - name: My.Computer.Info 对象
+                  href: visual-basic/language-reference/objects/my-computer-info-object.md
+                - name: My.Computer.Keyboard 对象
+                  href: visual-basic/language-reference/objects/my-computer-keyboard-object.md
+                - name: My.Computer.Mouse 对象
+                  href: visual-basic/language-reference/objects/my-computer-mouse-object.md
+                - name: My.Computer.Network 对象
+                  href: visual-basic/language-reference/objects/my-computer-network-object.md
+                - name: My.Computer.Ports 对象
+                  href: visual-basic/language-reference/objects/my-computer-ports-object.md
+                - name: My.Computer.Registry 对象
+                  href: visual-basic/language-reference/objects/my-computer-registry-object.md
+            - name: My.Forms 对象
+              href: visual-basic/language-reference/objects/my-forms-object.md
+            - name: My.Log 对象
+              href: visual-basic/language-reference/objects/my-log-object.md
+            - name: My.Request 对象
+              href: visual-basic/language-reference/objects/my-request-object.md
+            - name: My.Response 对象
+              href: visual-basic/language-reference/objects/my-response-object.md
+            - name: My.Resources 对象
+              href: visual-basic/language-reference/objects/my-resources-object.md
+            - name: My.Settings 对象
+              href: visual-basic/language-reference/objects/my-settings-object.md
+            - name: My.User 对象
+              href: visual-basic/language-reference/objects/my-user-object.md
+            - name: My.WebServices 对象
+              href: visual-basic/language-reference/objects/my-webservices-object.md
+            - name: TextFieldParser Object
+              href: visual-basic/language-reference/objects/textfieldparser-object.md
+        - name: 运算符
+          href: visual-basic/language-reference/operators/index.md
+          items:
+            - name: 运算符优先级
+              href: visual-basic/language-reference/operators/operator-precedence.md
+            - name: 运算符结果的数据类型
+              href: visual-basic/language-reference/operators/data-types-of-operator-results.md
+            - name: 按功能列出的运算符
+              href: visual-basic/language-reference/operators/operators-listed-by-functionality.md
+              items:
+                - name: 算术运算符
+                  href: visual-basic/language-reference/operators/arithmetic-operators.md
+                - name: 赋值运算符
+                  href: visual-basic/language-reference/operators/assignment-operators.md
+                - name: 移位运算符
+                  href: visual-basic/language-reference/operators/bit-shift-operators.md
+                - name: 比较运算符
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: 串联运算符
+                  href: visual-basic/language-reference/operators/concatenation-operators.md
+                - name: 逻辑-位运算符
+                  href: visual-basic/language-reference/operators/logical-bitwise-operators.md
+                - name: 其他运算符
+                  href: visual-basic/language-reference/operators/miscellaneous-operators.md
+            - name: Visual Basic 运算符列表
+              items:
+                - name: '& 运算符'
+                  href: visual-basic/language-reference/operators/concatenation-operator.md
+                - name: '&= 运算符'
+                  href: visual-basic/language-reference/operators/and-assignment-operator.md
+                - name: '* 运算符'
+                  href: visual-basic/language-reference/operators/multiplication-operator.md
+                - name: '*= 运算符'
+                  href: visual-basic/language-reference/operators/multiplication-assignment-operator.md
+                - name: + 运算符
+                  href: visual-basic/language-reference/operators/addition-operator.md
+                - name: += 运算符
+                  href: visual-basic/language-reference/operators/addition-assignment-operator.md
+                - name: = 运算符
+                  href: visual-basic/language-reference/operators/assignment-operator.md
+                - name: '- 运算符'
+                  href: visual-basic/language-reference/operators/subtraction-operator.md
+                - name: '-= 运算符'
+                  href: visual-basic/language-reference/operators/subtraction-assignment-operator.md
+                - name: < 运算符
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: <= 运算符
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: '> 运算符'
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: '>= 运算符'
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: << 运算符
+                  href: visual-basic/language-reference/operators/left-shift-operator.md
+                - name: <<= 运算符
+                  href: visual-basic/language-reference/operators/left-shift-assignment-operator.md
+                - name: '>> 运算符'
+                  href: visual-basic/language-reference/operators/right-shift-operator.md
+                - name: '>>= 运算符'
+                  href: visual-basic/language-reference/operators/right-shift-assignment-operator.md
+                - name: / 运算符
+                  href: visual-basic/language-reference/operators/floating-point-division-operator.md
+                - name: /= 运算符
+                  href: visual-basic/language-reference/operators/floating-point-division-assignment-operator.md
+                - name: \ 运算符
+                  href: visual-basic/language-reference/operators/integer-division-operator.md
+                - name: \= 运算符
+                  href: visual-basic/language-reference/operators/integer-division-assignment-operator.md
+                - name: ^ 运算符
+                  href: visual-basic/language-reference/operators/exponentiation-operator.md
+                - name: ^= 运算符
+                  href: visual-basic/language-reference/operators/exponentiation-assignment-operator.md
+                - name: '?() 运算符'
+                  href: visual-basic/language-reference/operators/null-conditional-operators.md
+                - name: '?. 运算符'
+                  href: visual-basic/language-reference/operators/null-conditional-operators.md
+                - name: AddressOf 运算符
+                  href: visual-basic/language-reference/operators/addressof-operator.md
+                - name: And 运算符
+                  href: visual-basic/language-reference/operators/and-operator.md
+                - name: AndAlso 运算符
+                  href: visual-basic/language-reference/operators/andalso-operator.md
+                - name: Await 运算符
+                  href: visual-basic/language-reference/operators/await-operator.md
+                - name: DirectCast 运算符
+                  href: visual-basic/language-reference/operators/directcast-operator.md
+                - name: 函数表达式
+                  href: visual-basic/language-reference/operators/function-expression.md
+                - name: GetType Operator
+                  href: visual-basic/language-reference/operators/gettype-operator.md
+                - name: GetXmlNamespace 运算符
+                  href: visual-basic/language-reference/operators/getxmlnamespace-operator.md
+                - name: If 运算符
+                  href: visual-basic/language-reference/operators/if-operator.md
+                - name: Is 运算符
+                  href: visual-basic/language-reference/operators/is-operator.md
+                - name: IsFalse 运算符
+                  href: visual-basic/language-reference/operators/isfalse-operator.md
+                - name: IsNot 运算符
+                  href: visual-basic/language-reference/operators/isnot-operator.md
+                - name: IsTrue 运算符
+                  href: visual-basic/language-reference/operators/istrue-operator.md
+                - name: Like 运算符
+                  href: visual-basic/language-reference/operators/like-operator.md
+                - name: Mod 运算符
+                  href: visual-basic/language-reference/operators/mod-operator.md
+                - name: New 运算符
+                  href: visual-basic/language-reference/operators/new-operator.md
+                - name: Not 运算符
+                  href: visual-basic/language-reference/operators/not-operator.md
+                - name: Or 运算符
+                  href: visual-basic/language-reference/operators/or-operator.md
+                - name: OrElse 运算符
+                  href: visual-basic/language-reference/operators/orelse-operator.md
+                - name: Sub 表达式
+                  href: visual-basic/language-reference/operators/sub-expression.md
+                - name: TryCast 运算符
+                  href: visual-basic/language-reference/operators/trycast-operator.md
+                - name: TypeOf 运算符
+                  href: visual-basic/language-reference/operators/typeof-operator.md
+                - name: Xor 运算符
+                  href: visual-basic/language-reference/operators/xor-operator.md
+        - name: 属性
+          href: visual-basic/language-reference/properties.md
+        - name: 查询
+          href: visual-basic/language-reference/queries/index.md
+          items:
+            - name: Aggregate Clause
+              href: visual-basic/language-reference/queries/aggregate-clause.md
+            - name: Distinct 子句
+              href: visual-basic/language-reference/queries/distinct-clause.md
+            - name: Equals 子句
+              href: visual-basic/language-reference/queries/equals-clause.md
+            - name: From 子句
+              href: visual-basic/language-reference/queries/from-clause.md
+            - name: Group By 子句
+              href: visual-basic/language-reference/queries/group-by-clause.md
+            - name: Group Join 子句
+              href: visual-basic/language-reference/queries/group-join-clause.md
+            - name: Join 子句
+              href: visual-basic/language-reference/queries/join-clause.md
+            - name: Let 子句
+              href: visual-basic/language-reference/queries/let-clause.md
+            - name: Order By 子句
+              href: visual-basic/language-reference/queries/order-by-clause.md
+            - name: Select 子句
+              href: visual-basic/language-reference/queries/select-clause.md
+            - name: Skip 子句
+              href: visual-basic/language-reference/queries/skip-clause.md
+            - name: Skip While 子句
+              href: visual-basic/language-reference/queries/skip-while-clause.md
+            - name: Take 子句
+              href: visual-basic/language-reference/queries/take-clause.md
+            - name: Take While 子句
+              href: visual-basic/language-reference/queries/take-while-clause.md
+            - name: Where 子句
+              href: visual-basic/language-reference/queries/where-clause.md
+        - name: 语句
+          href: visual-basic/language-reference/statements/index.md
+          items:
+            - name: A-E 语句
+              href: visual-basic/language-reference/statements/a-e-statements.md
+              items:
+                - name: AddHandler 语句
+                  href: visual-basic/language-reference/statements/addhandler-statement.md
+                - name: Call 语句
+                  href: visual-basic/language-reference/statements/call-statement.md
+                - name: Class 语句
+                  href: visual-basic/language-reference/statements/class-statement.md
+                - name: Const 语句
+                  href: visual-basic/language-reference/statements/const-statement.md
+                - name: Continue 语句
+                  href: visual-basic/language-reference/statements/continue-statement.md
+                - name: Declare Statement
+                  href: visual-basic/language-reference/statements/declare-statement.md
+                - name: Delegate 语句
+                  href: visual-basic/language-reference/statements/delegate-statement.md
+                - name: Dim 语句
+                  href: visual-basic/language-reference/statements/dim-statement.md
+                - name: Do...Loop 语句
+                  href: visual-basic/language-reference/statements/do-loop-statement.md
+                - name: Else 语句
+                  href: visual-basic/language-reference/statements/else-statement.md
+                - name: End 语句
+                  href: visual-basic/language-reference/statements/end-statement.md
+                - name: End <keyword> 语句
+                  href: visual-basic/language-reference/statements/end-keyword-statement.md
+                - name: Enum 语句
+                  href: visual-basic/language-reference/statements/enum-statement.md
+                - name: Erase 语句
+                  href: visual-basic/language-reference/statements/erase-statement.md
+                - name: Error 语句
+                  href: visual-basic/language-reference/statements/error-statement.md
+                - name: Event 语句
+                  href: visual-basic/language-reference/statements/event-statement.md
+                - name: Exit 语句
+                  href: visual-basic/language-reference/statements/exit-statement.md
+            - name: F-P 语句
+              href: visual-basic/language-reference/statements/f-p-statements.md
+              items:
+                - name: For Each...Next 语句
+                  href: visual-basic/language-reference/statements/for-each-next-statement.md
+                - name: For...Next 语句
+                  href: visual-basic/language-reference/statements/for-next-statement.md
+                - name: Function 语句
+                  href: visual-basic/language-reference/statements/function-statement.md
+                - name: Get 语句
+                  href: visual-basic/language-reference/statements/get-statement.md
+                - name: GoTo 语句
+                  href: visual-basic/language-reference/statements/goto-statement.md
+                - name: If...Then...Else 语句
+                  href: visual-basic/language-reference/statements/if-then-else-statement.md
+                - name: Implements 语句
+                  href: visual-basic/language-reference/statements/implements-statement.md
+                - name: Imports 语句（.NET 命名空间和类型）
+                  href: visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md
+                - name: Imports 语句（XML 命名空间）
+                  href: visual-basic/language-reference/statements/imports-statement-xml-namespace.md
+                - name: Inherits Statement
+                  href: visual-basic/language-reference/statements/inherits-statement.md
+                - name: Interface 语句
+                  href: visual-basic/language-reference/statements/interface-statement.md
+                - name: Mid 语句
+                  href: visual-basic/language-reference/statements/mid-statement.md
+                - name: Module 语句
+                  href: visual-basic/language-reference/statements/module-statement.md
+                - name: Namespace 语句
+                  href: visual-basic/language-reference/statements/namespace-statement.md
+                - name: On Error 语句
+                  href: visual-basic/language-reference/statements/on-error-statement.md
+                - name: Operator Statement
+                  href: visual-basic/language-reference/statements/operator-statement.md
+                - name: Option <keyword> 语句
+                  href: visual-basic/language-reference/statements/option-keyword-statement.md
+                - name: Option Compare 语句
+                  href: visual-basic/language-reference/statements/option-compare-statement.md
+                - name: Option Explicit 语句
+                  href: visual-basic/language-reference/statements/option-explicit-statement.md
+                - name: Option Infer 语句
+                  href: visual-basic/language-reference/statements/option-infer-statement.md
+                - name: Option Strict Statement
+                  href: visual-basic/language-reference/statements/option-strict-statement.md
+                - name: Property Statement
+                  href: visual-basic/language-reference/statements/property-statement.md
+            - name: Q-Z 语句
+              href: visual-basic/language-reference/statements/q-z-statements.md
+              items:
+                - name: RaiseEvent 语句
+                  href: visual-basic/language-reference/statements/raiseevent-statement.md
+                - name: ReDim 语句
+                  href: visual-basic/language-reference/statements/redim-statement.md
+                - name: REM 语句
+                  href: visual-basic/language-reference/statements/rem-statement.md
+                - name: RemoveHandler 语句
+                  href: visual-basic/language-reference/statements/removehandler-statement.md
+                - name: Resume 语句
+                  href: visual-basic/language-reference/statements/resume-statement.md
+                - name: Return 语句
+                  href: visual-basic/language-reference/statements/return-statement.md
+                - name: Select...Case 语句
+                  href: visual-basic/language-reference/statements/select-case-statement.md
+                - name: Set 语句
+                  href: visual-basic/language-reference/statements/set-statement.md
+                - name: Stop 语句
+                  href: visual-basic/language-reference/statements/stop-statement.md
+                - name: Structure 语句
+                  href: visual-basic/language-reference/statements/structure-statement.md
+                - name: Sub 语句
+                  href: visual-basic/language-reference/statements/sub-statement.md
+                - name: SyncLock 语句
+                  href: visual-basic/language-reference/statements/synclock-statement.md
+                - name: Then 语句
+                  href: visual-basic/language-reference/statements/then-statement.md
+                - name: Throw 语句
+                  href: visual-basic/language-reference/statements/throw-statement.md
+                - name: Try...Catch...Finally 语句
+                  href: visual-basic/language-reference/statements/try-catch-finally-statement.md
+                - name: Using 语句
+                  href: visual-basic/language-reference/statements/using-statement.md
+                - name: While...End While 语句
+                  href: visual-basic/language-reference/statements/while-end-while-statement.md
+                - name: With...End With 语句
+                  href: visual-basic/language-reference/statements/with-end-with-statement.md
+                - name: Yield 语句
+                  href: visual-basic/language-reference/statements/yield-statement.md
+            - name: 子句
+              href: visual-basic/language-reference/statements/clauses.md
+              items:
+                - name: Alias 子句
+                  href: visual-basic/language-reference/statements/alias-clause.md
+                - name: As 子句
+                  href: visual-basic/language-reference/statements/as-clause.md
+                - name: Handles 子句
+                  href: visual-basic/language-reference/statements/handles-clause.md
+                - name: Implements 子句
+                  href: visual-basic/language-reference/statements/implements-clause.md
+                - name: In 子句
+                  href: visual-basic/language-reference/statements/in-clause.md
+                - name: Into 子句
+                  href: visual-basic/language-reference/statements/into-clause.md
+                - name: Of 子句
+                  href: visual-basic/language-reference/statements/of-clause.md
+            - name: 声明上下文和默认访问级别
+              href: visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md
+            - name: 特性列表
+              href: visual-basic/language-reference/statements/attribute-list.md
+            - name: 参数列表
+              href: visual-basic/language-reference/statements/parameter-list.md
+            - name: Type List
+              href: visual-basic/language-reference/statements/type-list.md
+        - name: XML 注释标记
+          href: visual-basic/language-reference/xmldoc/index.md
+          items:
+            - name: <c>
+              href: visual-basic/language-reference/xmldoc/c.md
+            - name: <code>
+              href: visual-basic/language-reference/xmldoc/code.md
+            - name: <example>
+              href: visual-basic/language-reference/xmldoc/example.md
+            - name: <exception>
+              href: visual-basic/language-reference/xmldoc/exception.md
+            - name: <include>
+              href: visual-basic/language-reference/xmldoc/include.md
+            - name: <list>
+              href: visual-basic/language-reference/xmldoc/list.md
+            - name: <para>
+              href: visual-basic/language-reference/xmldoc/para.md
+            - name: <param>
+              href: visual-basic/language-reference/xmldoc/param.md
+            - name: <paramref>
+              href: visual-basic/language-reference/xmldoc/paramref.md
+            - name: <permission>
+              href: visual-basic/language-reference/xmldoc/permission.md
+            - name: <remarks>
+              href: visual-basic/language-reference/xmldoc/remarks.md
+            - name: <returns>
+              href: visual-basic/language-reference/xmldoc/returns.md
+            - name: <see>
+              href: visual-basic/language-reference/xmldoc/see.md
+            - name: <seealso>
+              href: visual-basic/language-reference/xmldoc/seealso.md
+            - name: <summary>
+              href: visual-basic/language-reference/xmldoc/summary.md
+            - name: <typeparam>
+              href: visual-basic/language-reference/xmldoc/typeparam.md
+            - name: <value>
+              href: visual-basic/language-reference/xmldoc/value.md
+        - name: XML 轴属性
+          href: visual-basic/language-reference/xml-axis/index.md
+          items:
+            - name: XML Attribute Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md
+            - name: XML Child Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-child-axis-property.md
+            - name: XML Descendant Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md
+            - name: 扩展索引器属性
+              href: visual-basic/language-reference/xml-axis/extension-indexer-property.md
+            - name: XML 值属性
+              href: visual-basic/language-reference/xml-axis/xml-value-property.md
+        - name: XML 文本
+          href: visual-basic/language-reference/xml-literals/index.md
+          items:
+            - name: XML 元素文本
+              href: visual-basic/language-reference/xml-literals/xml-element-literal.md
+            - name: XML 文档文本
+              href: visual-basic/language-reference/xml-literals/xml-document-literal.md
+            - name: XML CDATA 文本
+              href: visual-basic/language-reference/xml-literals/xml-cdata-literal.md
+            - name: XML 注释文本
+              href: visual-basic/language-reference/xml-literals/xml-comment-literal.md
+            - name: XML 处理指令文本
+              href: visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md
+        - name: 错误消息
+          href: visual-basic/language-reference/error-messages/index.md
+          items:
+            - name: '“#ElseIf”前面必须是匹配的“#If”或“#ElseIf”'
+              href: visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
+            - name: '“#Region”和“#End Region”语句在方法体/多行 lambda 内无效'
+              href: visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
+            - name: GUID“<attribute>”的格式不正确，因此无法应用“<number>”
+              href: visual-basic/language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
+            - name: “<classname>”不符合 CLS，因为它所实现的接口“<interfacename>”不符合 CLS
+              href: visual-basic/language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
+            - name: “<elementname>”已过时（Visual Basic 警告）
+              href: visual-basic/language-reference/error-messages/elementname-is-obsolete-visual-basic-warning.md
+            - name: “<eventname>”是事件，不能直接调用
+              href: visual-basic/language-reference/error-messages/eventname-is-an-event-and-cannot-be-called-directly.md
+            - name: “<expression>”不能用作类型约束
+              href: visual-basic/language-reference/error-messages/expression-cannot-be-used-as-a-type-constraint.md
+            - name: 未声明“<functionname>”（智能设备-Visual Basic 编译器错误）
+              href: visual-basic/language-reference/error-messages/functionname-is-not-declared-smart-device-visual-basic-compiler-error.md
+            - name: “<interfacename>.<membername>”已经由基类“<baseclassname>”实现。 假定重新实现 <type>
+              href: visual-basic/language-reference/error-messages/interfacename-membername-is-already-implemented-by-the-base-class.md
+            - name: “<keyword>”只在实例方法中有效
+              href: visual-basic/language-reference/error-messages/keyword-is-valid-only-within-an-instance-method.md
+            - name: “<membername>”不能通过 <typename>“<containertype>”在项目外部公开类型“<containertypename>”
+              href: visual-basic/language-reference/error-messages/membername-cannot-expose-type-typename-outside-the-project.md
+            - name: “<membername>”在继承接口“<interfacename1>”和“<interfacename2>”之间不明确
+              href: visual-basic/language-reference/error-messages/membername-is-ambiguous-across-the-inherited-interfaces.md
+            - name: <message>此错误也可能是由于将程序集“<assemblyname>”的文件引用与项目引用混合使用所造成的
+              href: visual-basic/language-reference/error-messages/message-this-error-could-also-be-due-to-mixing-a-file-reference.md
+            - name: “<methodname>”具有多个带有相同签名的定义
+              href: visual-basic/language-reference/error-messages/methodname-has-multiple-definitions-with-identical-signatures.md
+            - name: “<name>”在命名空间“<namespacename>”中不明确
+              href: visual-basic/language-reference/error-messages/name-is-ambiguous-in-the-namespace-namespacename.md
+            - name: “<name1>”不明确，从命名空间或类型“<name2>”导入
+              href: visual-basic/language-reference/error-messages/name1-is-ambiguous-imported-from-the-namespaces-or-types-name2.md
+            - name: <proceduresignature1> 不符合 CLS，因为它重载仅在数组参数类型的数组或数组参数类型的秩方面与它不同的 <proceduresignature2>
+              href: visual-basic/language-reference/error-messages/proceduresignature1-not-cls-compliant-because-it-overloads-proceduresignature2.md
+            - name: <type1>“<typename>”必须为接口“<interfacename>”实现“<membername>”
+              href: visual-basic/language-reference/error-messages/type1-must-implement-membername-for-interface.md
+            - name: <type1>“<typename>”必须为接口“<interfacename>”实现“<methodname>”
+              href: visual-basic/language-reference/error-messages/type1-typename-must-implement-methodname-for-interface-interfacename.md
+            - name: “<typename>”将对基 <type> 的访问扩展到程序集的外部，因此无法从 <basetypename>“<type>”继承
+              href: visual-basic/language-reference/error-messages/typename-cannot-inherit-from-type-basetypename.md
+            - name: “<typename>”是委托类型
+              href: visual-basic/language-reference/error-messages/typename-is-a-delegate-type.md
+            - name: “<typename>”是一个类型，不能用作表达式
+              href: visual-basic/language-reference/error-messages/typename-is-a-type-and-cannot-be-used-as-an-expression.md
+            - name: 如果将 EscapeQuote 设置为 True，则双引号不是分隔字段的有效注释标记
+              href: visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md
+            - name: 无论是作为参数还是作为返回值，属性或方法调用都不能包括对私有对象的引用
+              href: visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md
+            - name: 创建了对嵌入的互操作程序集“<assembly1>”的引用，因为程序集“<assembly2>”间接引用了该程序集
+              href: visual-basic/language-reference/error-messages/a-reference-was-created-to-embedded-interop-assembly-assembly1.md
+            - name: 未指定启动窗体
+              href: visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md
+            - name: 通过实例访问共享成员；将不计算限定表达式
+              href: visual-basic/language-reference/error-messages/access-of-shared-member-through-an-instance-qualifying-expression.md
+            - name: “AddressOf”操作数必须是方法名（不带括号）
+              href: visual-basic/language-reference/error-messages/addressof-operand-must-be-the-name-of-a-method-without-parentheses.md
+            - name: 发生错误，因为无法获得单个实例启动所需的操作系统资源
+              href: visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md
+            - name: 只能从不带自变量的简单名或限定名中推断匿名类型成员名称
+              href: visual-basic/language-reference/error-messages/anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name.md
+            - name: 自变量不可选
+              href: visual-basic/language-reference/error-messages/argument-not-optional.md
+            - name: 数组界限不能出现在类型说明符中
+              href: visual-basic/language-reference/error-messages/array-bounds-cannot-appear-in-type-specifiers.md
+            - name: 声明为 For Each 循环控制变量的数组在声明时不能指定初始大小值
+              href: visual-basic/language-reference/error-messages/array-declared-as-for-loop-control-variable-cannot-be-declared.md
+            - name: 缺少数组下标表达式
+              href: visual-basic/language-reference/error-messages/array-subscript-expression-missing.md
+            - name: 声明为结构成员的数组不能用初始大小声明
+              href: visual-basic/language-reference/error-messages/arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size.md
+            - name: “Declare”语句中不支持“As Any”
+              href: visual-basic/language-reference/error-messages/as-any-is-not-supported-in-declare-statements.md
+            - name: 特性“<attributename>”不能应用多次
+              href: visual-basic/language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+            - name: 自动错误
+              href: visual-basic/language-reference/error-messages/automation-error.md
+            - name: 错误的校验和值、非十六进制数字或奇数个十六进制数字
+              href: visual-basic/language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md
+            - name: 错误的 DLL 调用约定
+              href: visual-basic/language-reference/error-messages/bad-dll-calling-convention.md
+            - name: 错误的文件模式
+              href: visual-basic/language-reference/error-messages/bad-file-mode.md
+            - name: 错误的文件名或文件号
+              href: visual-basic/language-reference/error-messages/bad-file-name-or-number.md
+            - name: 错误的记录长度
+              href: visual-basic/language-reference/error-messages/bad-record-length.md
+            - name: 由于不等待此调用，因此在调用完成之前，当前方法将继续运行
+              href: visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
+            - name: 无法将匿名类型转换为表达式树，因为它包含用于初始化另一个字段的字段
+              href: visual-basic/language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+            - name: 无法创建 ActiveX 组件
+              href: visual-basic/language-reference/error-messages/cannot-create-activex-component.md
+            - name: “<name>”是使用“System.MarshalByRefObject”作为基类的类“<name>”的值类型字段“<classname>”的成员，无法引用
+              href: visual-basic/language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+            - name: 没有类的显式实例，就无法从共享方法或共享成员初始值设定项中引用该类的实例成员
+              href: visual-basic/language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+            - name: 无法建立必要的临时文件。
+              href: visual-basic/language-reference/error-messages/can-t-create-necessary-temporary-file.md
+            - name: 无法打开“<filename>”进行写入
+              href: visual-basic/language-reference/error-messages/can-t-open-filename-for-writing.md
+            - name: 无法找到类“<classname>”
+              href: visual-basic/language-reference/error-messages/class-classname-cannot-be-found.md
+            - name: 类不支持自动化或不支持所需的接口
+              href: visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
+            - name: “Class”语句必须以匹配的“End Class”结束
+              href: visual-basic/language-reference/error-messages/class-statement-must-end-with-a-matching-end-class.md
+            - name: 剪贴板格式无效
+              href: visual-basic/language-reference/error-messages/clipboard-format-is-not-valid.md
+            - name: 常量表达式无法在类型“<typename>”中表示
+              href: visual-basic/language-reference/error-messages/constant-expression-not-representable-in-type-typename.md
+            - name: 常量必须是内部类型或者枚举类型，不能是类、结构、类型参数或数组类型
+              href: visual-basic/language-reference/error-messages/constants-must-be-of-an-intrinsic-or-enumerated-type.md
+            - name: 构造函数“<name>”不能调用自身
+              href: visual-basic/language-reference/error-messages/constructor-name-cannot-call-itself.md
+            - name: 将“ByRef”参数“<parametername>”的值复制回匹配的参数将导致从类型“<typename1>”到类型“<typename2>”的收缩转换
+              href: visual-basic/language-reference/error-messages/copying-the-value-of-byref-parameter-back-to-the-matching-argument-narrows.md
+            - name: “Custom”修饰符在未用显式委托类型声明的事件上无效
+              href: visual-basic/language-reference/error-messages/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types.md
+            - name: 无法根据这些实参推断类型形参的数据类型
+              href: visual-basic/language-reference/error-messages/data-type-s-of-the-type-parameter-s-cannot-be-inferred-from-these-arguments.md
+            - name: 需要声明
+              href: visual-basic/language-reference/error-messages/declaration-expected.md
+            - name: 默认属性“<propertyname1>”与“<propertyname2>”中的默认属性“<classname>”冲突，因此应声明为“Shadows”
+              href: visual-basic/language-reference/error-messages/default-property-propertyname1-conflicts-with-default-property-propertyname2.md
+            - name: 默认属性访问在接口“<defaultpropertyname>”的继承接口成员“<interfacename1>”和接口“<defaultpropertyname>”的“<interfacename2>”之间不明确
+              href: visual-basic/language-reference/error-messages/default-property-access-is-ambiguous.md
+            - name: 委托类“<classname>”没有 Invoke 方法，所以此类型的表达式不能作为方法调用的目标
+              href: visual-basic/language-reference/error-messages/delegate-class-classname-has-no-invoke-method.md
+            - name: 派生类无法引发基类事件
+              href: visual-basic/language-reference/error-messages/derived-classes-cannot-raise-base-class-events.md
+            - name: 设备 I/O 错误
+              href: visual-basic/language-reference/error-messages/device-i-o-error.md
+            - name: 必须首先用一个“PathName”自变量调用“Dir”函数
+              href: visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md
+            - name: 需要语句结束
+              href: visual-basic/language-reference/error-messages/end-of-statement-expected.md
+            - name: 创建程序集清单时出错：<error message>
+              href: visual-basic/language-reference/error-messages/error-creating-assembly-manifest-error-message.md
+            - name: 创建 Win32 资源时出错：<error message>
+              href: visual-basic/language-reference/error-messages/error-creating-win32-resources-error-message.md
+            - name: 加载 DLL 时出错
+              href: visual-basic/language-reference/error-messages/error-in-loading-dll.md
+            - name: 在保存临时的 Win32 资源文件“<filename>”时出错：<error message>
+              href: visual-basic/language-reference/error-messages/error-saving-temporary-win32-resource-file-filename-error-message.md
+            - name: 编译项目中的 XML 架构时发生错误
+              href: visual-basic/language-reference/error-messages/errors-occurred-while-compiling-the-xml-schemas-in-the-project.md
+            - name: 表达式或语句的计算已超时
+              href: visual-basic/language-reference/error-messages/evaluation-of-expression-or-statement-timed-out.md
+            - name: 事件“<eventname1>”无法实现接口“<eventname2>”上的事件“<interface>”，因为它们的委托类型“<delegate1>”和“<delegate2>”不匹配
+              href: visual-basic/language-reference/error-messages/event-eventname1-cannot-implement-event-eventname2-on-interface.md
+            - name: 事件不能用具有返回类型的委托类型声明
+              href: visual-basic/language-reference/error-messages/events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type.md
+            - name: 共享 WithEvents 变量的事件不能由非共享方法处理
+              href: visual-basic/language-reference/error-messages/events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods.md
+            - name: 表达式不产生值
+              href: visual-basic/language-reference/error-messages/expression-does-not-produce-a-value.md
+            - name: 表达式的类型为“<typename>”，这是受限类型，不能用于访问从“Object”或“ValueType”继承的成员
+              href: visual-basic/language-reference/error-messages/expression-has-the-type-typename-which-is-a-restricted-type.md
+            - name: 表达式是一个值，因此不能作为赋值目标
+              href: visual-basic/language-reference/error-messages/expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment.md
+            - name: 类型 <type> 的表达式不可查询
+              href: visual-basic/language-reference/error-messages/expression-of-type-type-is-not-queryable.md
+            - name: 表达式递归调用包含属性“<propertyname>”
+              href: visual-basic/language-reference/error-messages/expression-recursively-calls-the-containing-property-propertyname.md
+            - name: 表达式过于复杂
+              href: visual-basic/language-reference/error-messages/expression-too-complex.md
+            - name: “Extension”特性只能应用于“Module”、“Sub”或“Function”声明。
+              href: visual-basic/language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md
+            - name: 文件已打开
+              href: visual-basic/language-reference/error-messages/file-already-open.md
+            - name: 文件太大，无法读取到字节数组中
+              href: visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md
+            - name: 自动化操作期间找不到文件名或类名
+              href: visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md
+            - name: 找不到文件（Visual Basic 运行时错误）
+              href: visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md
+            - name: 二元“If”表达式中的第一个操作数必须是可以为 null 的类型或引用类型
+              href: visual-basic/language-reference/error-messages/first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type.md
+            - name: 该“Sub New”的第一个语句必须是对“MyBase.New”或“MyClass.New”的调用（没有不带参数的可访问构造函数）
+              href: visual-basic/language-reference/error-messages/first-statement-of-this-sub-new-must-be-a-call-to-mybase-new-or-myclass-new.md
+            - name: 此“Sub New”的第一条语句必须是对“MyBase.New”或“MyClass.New”的显式调用，因为“<constructorname>”的基类“<baseclassname>”中的“<derivedclassname>”被标记为已过时：“<errormessage>”
+              href: visual-basic/language-reference/error-messages/first-statement-of-sub-new-must-be-explicit-call-to-mybase-new-or-myclass-new.md
+            - name: 类型“<typename>”的“For Each”不明确，因为此类型实现了“System.Collections.Generic.IEnumerable(Of T)”的多个实例化
+              href: visual-basic/language-reference/error-messages/for-each-on-type-typename-is-ambiguous.md
+            - name: 友元程序集引用 <reference> 无效
+              href: visual-basic/language-reference/error-messages/friend-assembly-reference-reference-is-invalid.md
+            - name: 函数“<procedurename>”并非在所有代码路径上都返回值
+              href: visual-basic/language-reference/error-messages/function-procedurename-doesn-t-return-a-value-on-all-code-paths.md
+            - name: 已禁用函数求值，因为前一个函数求值超时
+              href: visual-basic/language-reference/error-messages/function-evaluation-is-disabled.md
+            - name: 用作可选参数类型的泛型参数必须受类约束
+              href: visual-basic/language-reference/error-messages/generic-parameters-used-as-optional-parameter-types-must-be-class-constrained.md
+            - name: 属性“<propertyname>”的“Get”访问器不可访问
+              href: visual-basic/language-reference/error-messages/get-accessor-of-property-propertyname-is-not-accessible.md
+            - name: Handles 子句需要在包含类型或它的基类型之一中定义的 WithEvents 变量
+              href: visual-basic/language-reference/error-messages/handles-clause-requires-a-withevents-variable-defined.md
+            - name: 应输入标识符
+              href: visual-basic/language-reference/error-messages/identifier-expected.md
+            - name: 标识符太长
+              href: visual-basic/language-reference/error-messages/identifier-is-too-long.md
+            - name: 应为初始值设定项
+              href: visual-basic/language-reference/error-messages/initializer-expected.md
+            - name: 输入超出文件尾
+              href: visual-basic/language-reference/error-messages/input-past-end-of-file.md
+            - name: 在 <location> 处发生的内部错误
+              href: visual-basic/language-reference/error-messages/internal-error-happened-at-location.md
+            - name: 将“ByRef”参数“<typename1>”的值复制回匹配参数时，发生从“<typename2>”到“<parametername>”的隐式转换。
+              href: visual-basic/language-reference/error-messages/implicit-conversion-from-typename1-to-typename2-in-copying.md
+            - name: “Is”要求具有引用类型的操作数，但此操作数的值类型为“<typename>”。
+              href: visual-basic/language-reference/error-messages/is-requires-operands-that-have-reference-types.md
+            - name: 类型“typename”的操作数“IsNot”只能与“Nothing”比较，因为“typename”是一个可以为 null 的类型
+              href: visual-basic/language-reference/error-messages/isnot-operand-of-type-can-only-be-compared-to-nothing.md
+            - name: 数字标签后面必须跟冒号
+              href: visual-basic/language-reference/error-messages/labels-that-are-numbers-must-be-followed-by-colons.md
+            - name: 将不会从此事件处理程序中移除 Lambda 表达式
+              href: visual-basic/language-reference/error-messages/lambda-expression-will-not-be-removed-from-this-event-handler.md
+            - name: Lambda 表达式在“Select Case”语句的第一个表达式中无效
+              href: visual-basic/language-reference/error-messages/lambda-expressions-are-not-valid-in-the-first-expression-of-select-case.md
+            - name: 后期绑定解决方案；可能会发生运行时错误
+              href: visual-basic/language-reference/error-messages/late-bound-resolution;-runtime-errors-could-occur.md
+            - name: 后期绑定重载决策不能应用于“<procedurename>”，因为访问实例是一个接口类型
+              href: visual-basic/language-reference/error-messages/latebound-overload-resolution-cannot-be-applied.md
+            - name: 前导“.”或“!”只能出现在“With”语句内
+              href: visual-basic/language-reference/error-messages/leading-period-or-exclamation-point-can-only-appear-inside-a-with-statement.md
+            - name: 行太长
+              href: visual-basic/language-reference/error-messages/line-is-too-long.md
+            - name: 不再支持“Line”语句（Visual Basic 编译器错误）
+              href: visual-basic/language-reference/error-messages/line-statements-are-no-longer-supported-visual-basic-compiler-error.md
+            - name: 方法没有与委托兼容的签名
+              href: visual-basic/language-reference/error-messages/method-does-not-have-a-signature-compatible-with-the-delegate.md
+            - name: “System.Nullable(Of T)”的方法不能用作“AddressOf”运算符的操作数
+              href: visual-basic/language-reference/error-messages/methods-of-system-nullable-of-t-cannot-be-used-as-operands-of-the-addressof.md
+            - name: “Module”语句只能出现在文件级或命名空间级
+              href: visual-basic/language-reference/error-messages/module-statements-can-occur-only-at-file-or-namespace-level.md
+            - name: 名称 <membername> 不符合 CLS
+              href: visual-basic/language-reference/error-messages/name-membername-is-not-cls-compliant.md
+            - name: 名称“<name>”未声明
+              href: visual-basic/language-reference/error-messages/name-name-is-not-declared.md
+            - name: 根命名空间 <namespacename> 中的名称 <fullnamespacename> 不符合 CLS
+              href: visual-basic/language-reference/error-messages/name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant.md
+            - name: Imports“<qualifiedelementname>”中指定的命名空间或类型不包含任何公共成员，或者找不到该命名空间或类型
+              href: visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-imports-qualifiedelementname.md
+            - name: 在项目级 Imports“<qualifiedelementname>”中指定的命名空间或类型不包含任何公共成员，或者找不到该命名空间或类型
+              href: visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname.md
+            - name: 需要属性数组索引
+              href: visual-basic/language-reference/error-messages/need-property-array-index.md
+            - name: 嵌套函数没有与委托“<delegatename>”兼容的签名。
+              href: visual-basic/language-reference/error-messages/nested-function-does-not-have-a-signature-that-is-compatible-with-delegate.md
+            - name: 在“<name>”中找不到任何具有合适签名的可访问“Main”方法
+              href: visual-basic/language-reference/error-messages/no-accessible-main-method-with-an-appropriate-signature-was-found-in-name.md
+            - name: 在符合 CLS 的接口中不允许出现不符合 CLS 的 <membername>
+              href: visual-basic/language-reference/error-messages/non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface.md
+            - name: 该上下文中不支持可以为 null 的类型推理
+              href: visual-basic/language-reference/error-messages/nullable-type-inference-is-not-supported-in-this-context.md
+            - name: 索引数超过索引数组的维数
+              href: visual-basic/language-reference/error-messages/number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array.md
+            - name: 对象或类不支持事件集
+              href: visual-basic/language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md
+            - name: 需要对象
+              href: visual-basic/language-reference/error-messages/object-required.md
+            - name: 未设置对象变量或 With 块变量
+              href: visual-basic/language-reference/error-messages/object-variable-or-with-block-variable-not-set.md
+            - name: 运算符声明必须是以下符号之一：+、-、*、-、-、^、&、Like、Mod、And、Or、Xor、Not、<<、>>、=、<>、<、<=、>、>=、CType、IsTrue、IsFalse
+              href: visual-basic/language-reference/error-messages/operator-declaration-must-be-one-of.md
+            - name: 需要“Optional”
+              href: visual-basic/language-reference/error-messages/optional-expected.md
+            - name: 可选参数必须指定默认值
+              href: visual-basic/language-reference/error-messages/optional-parameters-must-specify-a-default-value.md
+            - name: 序号无效
+              href: visual-basic/language-reference/error-messages/ordinal-is-not-valid.md
+            - name: 内存不足（Visual Basic 编译器错误）
+              href: visual-basic/language-reference/error-messages/out-of-memory-visual-basic-compiler-error.md
+            - name: 堆栈空间不足
+              href: visual-basic/language-reference/error-messages/out-of-stack-space.md
+            - name: 字符串空间不足
+              href: visual-basic/language-reference/error-messages/out-of-string-space.md
+            - name: 溢出（Visual Basic 错误）
+              href: visual-basic/language-reference/error-messages/overflow-visual-basic-error.md
+            - name: 溢出（Visual Basic 运行时错误）
+              href: visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md
+            - name: 找不到路径
+              href: visual-basic/language-reference/error-messages/path-not-found.md
+            - name: 路径/文件访问错误
+              href: visual-basic/language-reference/error-messages/path-file-access-error.md
+            - name: 权限被拒绝
+              href: visual-basic/language-reference/error-messages/permission-denied.md
+            - name: 过程调用或参数无效
+              href: visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md
+            - name: 属性“<propertyname>”并非在所有代码路径上都返回值
+              href: visual-basic/language-reference/error-messages/property-propertyname-doesn-t-return-a-value-on-all-code-paths.md
+            - name: 属性数组索引无效
+              href: visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md
+            - name: 未定义 Property Let 过程，并且 Property Get 过程未返回对象
+              href: visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md
+            - name: 找不到属性
+              href: visual-basic/language-reference/error-messages/property-not-found.md
+            - name: 未找到属性或方法
+              href: visual-basic/language-reference/error-messages/property-or-method-not-found.md
+            - name: 范围变量 <variable> 隐藏封闭块中的变量、以前定义的范围变量或在查询表达式中隐式声明的变量
+              href: visual-basic/language-reference/error-messages/range-variable-variable-hides-a-variable-in-an-enclosing-block.md
+            - name: 只能根据不带自变量的简单名称或限定名称推断范围变量名称
+              href: visual-basic/language-reference/error-messages/range-variable-name-can-be-inferred.md
+            - name: 需要引用包含类型“<assemblyidentity>”的程序集“<typename>”，但由于项目“<projectname1>”和“<projectname2>”之间存在二义性，未能找到合适的引用
+              href: visual-basic/language-reference/error-messages/reference-required-to-assembly-containing-type-but-suitable-reference-not-found.md
+            - name: 需要对程序集“<assemblyname>”（包含基类“<classname>”）的引用
+              href: visual-basic/language-reference/error-messages/reference-required-to-assembly-assemblyname-containing-the-base-class-classname.md
+            - name: 请求的操作不可用 (BC35000)
+              href: visual-basic/language-reference/error-messages/bc35000.md
+            - name: 无错误继续执行
+              href: visual-basic/language-reference/error-messages/resume-without-error.md
+            - name: 函数“<procedurename>”的返回类型不符合 CLS
+              href: visual-basic/language-reference/error-messages/return-type-of-function-procedurename-is-not-cls-compliant.md
+            - name: 属性“<propertyname>”的“Set”访问器不可访问
+              href: visual-basic/language-reference/error-messages/set-accessor-of-property-propertyname-is-not-accessible.md
+            - name: 无法删除某些子项
+              href: visual-basic/language-reference/error-messages/some-subkeys-cannot-be-deleted.md
+            - name: 语句不能在“If”语句行之外结束块
+              href: visual-basic/language-reference/error-messages/statement-cannot-end-a-block-outside-of-a-line-if-statement.md
+            - name: 语句在命名空间中无效
+              href: visual-basic/language-reference/error-messages/statement-is-not-valid-in-a-namespace.md
+            - name: 语句在方法/多行 lambda 内无效
+              href: visual-basic/language-reference/error-messages/statement-is-not-valid-inside-a-method-multiline-lambda.md
+            - name: 字符串常量必须以双引号结束
+              href: visual-basic/language-reference/error-messages/string-constants-must-end-with-a-double-quote.md
+            - name: 结构“<structurename>”至少必须包含一个实例成员变量或至少必须包含一个未标记为“Custom”的实例事件声明
+              href: visual-basic/language-reference/error-messages/structure-structurename-must-contain.md
+            - name: 在“<name>”中未找到“Sub Main”
+              href: visual-basic/language-reference/error-messages/sub-main-was-not-found-in-name.md
+            - name: 未定义 Sub 或 Function
+              href: visual-basic/language-reference/error-messages/sub-or-function-not-defined.md
+            - name: 下标超出范围
+              href: visual-basic/language-reference/error-messages/subscript-out-of-range.md
+            - name: TextFieldParser 无法完成读取操作，因为已经超出最大缓冲区大小
+              href: visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md
+            - name: 无法推断出变量“<variablename>”的类型，因为它绑定到封闭范围中的某个字段
+              href: visual-basic/language-reference/error-messages/the-type-for-variable-variablename-will-not-be-inferred.md
+            - name: 此数组是固定数组或被临时锁定
+              href: visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md
+            - name: 此关键字已与该集合的某个元素相关联
+              href: visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md
+            - name: 文件太多
+              href: visual-basic/language-reference/error-messages/too-many-files.md
+            - name: 类型“<typename>”没有构造函数
+              href: visual-basic/language-reference/error-messages/type-typename-has-no-constructors.md
+            - name: 类型 <typename> 不符合 CLS
+              href: visual-basic/language-reference/error-messages/type-typename-is-not-cls-compliant.md
+            - name: 未定义类型“<typename>”
+              href: visual-basic/language-reference/error-messages/type-typename-is-not-defined.md
+            - name: 未能从委托中推理类型参数
+              href: visual-basic/language-reference/error-messages/type-arguments-could-not-be-inferred-from-the-delegate.md
+            - name: 类型不匹配
+              href: visual-basic/language-reference/error-messages/type-mismatch.md
+            - name: 无法推断“<variablename>”的类型，因为循环边界和步骤变量未扩大到同一类型
+              href: visual-basic/language-reference/error-messages/type-of-variablename-cannot-be-inferred.md
+            - name: 成员“<membername>”的类型不符合 CLS
+              href: visual-basic/language-reference/error-messages/type-of-member-membername-is-not-cls-compliant.md
+            - name: 可选参数 <parametername> 的可选值的类型不符合 CLS
+              href: visual-basic/language-reference/error-messages/type-of-optional-value-for-optional-parameter-is-not-cls-compliant.md
+            - name: 参数“<parametername>”的类型不符合 CLS
+              href: visual-basic/language-reference/error-messages/type-of-parameter-parametername-is-not-cls-compliant.md
+            - name: 类型参数不能用作限定符
+              href: visual-basic/language-reference/error-messages/type-parameters-cannot-be-used-as-qualifiers.md
+            - name: 无法从密钥文件“<filename>”创建具有强名称的程序集：<error>
+              href: visual-basic/language-reference/error-messages/unable-to-create-strong-named-assembly-from-key-file-filename-error.md
+            - name: 无法嵌入资源文件“<filename>”：<error message>
+              href: visual-basic/language-reference/error-messages/unable-to-embed-resource-file-filename-error-message.md
+            - name: 无法发出程序集：<error message>
+              href: visual-basic/language-reference/error-messages/unable-to-emit-assembly-error-message.md
+            - name: 无法找到所需的文件“<filename>”
+              href: visual-basic/language-reference/error-messages/unable-to-find-required-file-filename.md
+            - name: 由于内部系统错误，无法获得串行端口名称
+              href: visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md
+            - name: 无法链接到资源文件“<filename>”：<error message>
+              href: visual-basic/language-reference/error-messages/unable-to-link-to-resource-file-filename-error-message.md
+            - name: 无法加载类“<classname>”的信息
+              href: visual-basic/language-reference/error-messages/unable-to-load-information-for-class-classname.md
+            - name: 无法将输出写入内存
+              href: visual-basic/language-reference/error-messages/unable-to-write-output-to-memory.md
+            - name: 临时路径不可用，因此无法写入临时文件
+              href: visual-basic/language-reference/error-messages/unable-to-write-temporary-file-because-temporary-path-is-not-available.md
+            - name: 无法写入输出文件“<filename>”：<error>
+              href: visual-basic/language-reference/error-messages/unable-to-write-to-output-file-filename-error.md
+            - name: 枚举的基础类型 <typename> 不符合 CLS
+              href: visual-basic/language-reference/error-messages/underlying-type-typename-of-enum-is-not-cls-compliant.md
+            - name: 在 lambda 表达式中使用迭代变量可能会产生意外的结果
+              href: visual-basic/language-reference/error-messages/using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results.md
+            - name: 类型“<typename1>”的值无法转换为“<typename2>”
+              href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2.md
+            - name: 类型“<typename1>”的值无法转换为“<typename2>”（多个文件引用）
+              href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2-multiple.md
+            - name: 类型“type1”的值无法转换为“type2”
+              href: visual-basic/language-reference/error-messages/value-of-type-type1-cannot-be-converted-to-type2.md
+            - name: 变量“<variablename>”在封闭块中隐藏变量
+              href: visual-basic/language-reference/error-messages/variable-variablename-hides-a-variable-in-an-enclosing-block.md
+            - name: 变量“<variablename>”在赋值前被使用
+              href: visual-basic/language-reference/error-messages/variable-variablename-is-used-before-it-has-been-assigned-a-value.md
+            - name: 变量使用了 Visual Basic 不支持的自动化类型
+              href: visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md
+            - name: XML 轴属性不支持后期绑定
+              href: visual-basic/language-reference/error-messages/xml-axis-properties-do-not-support-late-binding.md
+            - name: XML 注释异常必须具有“cref”特性
+              href: visual-basic/language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md
+            - name: 不支持 XML 实体引用
+              href: visual-basic/language-reference/error-messages/xml-entity-references-are-not-supported.md
+            - name: ASP.NET 中的嵌入式代码不支持 XML 文本和 XML 属性
+              href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
+            - name: XML 命名空间 URI“<uri>”可只绑定到“xmlns”
+              href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
+    - name: 参考
+      href: visual-basic/reference/index.md
+      items:
+        - name: 命令行编译器
+          href: visual-basic/reference/command-line-compiler/index.md
+          items:
+            - name: 从命令行生成
+              href: visual-basic/reference/command-line-compiler/building-from-the-command-line.md
+              items:
+                - name: 如何：调用命令行编译器
+                  href: visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
+                - name: 示例编译命令行
+                  href: visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md
+            - name: 按字母顺序列出的编译器选项
+              href: visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md
+              items:
+                - name: '@（指定响应文件）'
+                  href: visual-basic/reference/command-line-compiler/specify-response-file.md
+                - name: '-addmodule'
+                  href: visual-basic/reference/command-line-compiler/addmodule.md
+                - name: '-baseaddress'
+                  href: visual-basic/reference/command-line-compiler/baseaddress.md
+                - name: '-bugreport'
+                  href: visual-basic/reference/command-line-compiler/bugreport.md
+                - name: '-codepage'
+                  href: visual-basic/reference/command-line-compiler/codepage.md
+                - name: '-debug'
+                  href: visual-basic/reference/command-line-compiler/debug.md
+                - name: '-define'
+                  href: visual-basic/reference/command-line-compiler/define.md
+                - name: '-delaysign'
+                  href: visual-basic/reference/command-line-compiler/delaysign.md
+                - name: '-deterministic'
+                  href: visual-basic/reference/command-line-compiler/deterministic.md
+                - name: '-doc'
+                  href: visual-basic/reference/command-line-compiler/doc.md
+                - name: '-errorreport'
+                  href: visual-basic/reference/command-line-compiler/errorreport.md
+                - name: '-filealign'
+                  href: visual-basic/reference/command-line-compiler/filealign.md
+                - name: '-help、/?'
+                  href: visual-basic/reference/command-line-compiler/help.md
+                - name: '-highentropyva'
+                  href: visual-basic/reference/command-line-compiler/highentropyva.md
+                - name: '-imports'
+                  href: visual-basic/reference/command-line-compiler/imports.md
+                - name: '-keycontainer'
+                  href: visual-basic/reference/command-line-compiler/keycontainer.md
+                - name: '-keyfile'
+                  href: visual-basic/reference/command-line-compiler/keyfile.md
+                - name: '-langversion'
+                  href: visual-basic/reference/command-line-compiler/langversion.md
+                - name: '-libpath'
+                  href: visual-basic/reference/command-line-compiler/libpath.md
+                - name: '-link'
+                  href: visual-basic/reference/command-line-compiler/link.md
+                - name: '-linkresource'
+                  href: visual-basic/reference/command-line-compiler/linkresource.md
+                - name: '-main'
+                  href: visual-basic/reference/command-line-compiler/main.md
+                - name: '-moduleassemblyname'
+                  href: visual-basic/reference/command-line-compiler/moduleassemblyname.md
+                - name: '-netcf'
+                  href: visual-basic/reference/command-line-compiler/netcf.md
+                - name: '-noconfig'
+                  href: visual-basic/reference/command-line-compiler/noconfig.md
+                - name: '-nologo'
+                  href: visual-basic/reference/command-line-compiler/nologo.md
+                - name: '-nostdlib'
+                  href: visual-basic/reference/command-line-compiler/nostdlib.md
+                - name: '-nowarn'
+                  href: visual-basic/reference/command-line-compiler/nowarn.md
+                - name: '-nowin32manifest'
+                  href: visual-basic/reference/command-line-compiler/nowin32manifest.md
+                - name: '-optimize'
+                  href: visual-basic/reference/command-line-compiler/optimize.md
+                - name: '-optioncompare'
+                  href: visual-basic/reference/command-line-compiler/optioncompare.md
+                - name: '-optionexplicit'
+                  href: visual-basic/reference/command-line-compiler/optionexplicit.md
+                - name: '-optioninfer'
+                  href: visual-basic/reference/command-line-compiler/optioninfer.md
+                - name: '-optionstrict'
+                  href: visual-basic/reference/command-line-compiler/optionstrict.md
+                - name: '-out'
+                  href: visual-basic/reference/command-line-compiler/out.md
+                - name: '-platform'
+                  href: visual-basic/reference/command-line-compiler/platform.md
+                - name: '-quiet'
+                  href: visual-basic/reference/command-line-compiler/quiet.md
+                - name: '-recurse'
+                  href: visual-basic/reference/command-line-compiler/recurse.md
+                - name: '-reference'
+                  href: visual-basic/reference/command-line-compiler/reference.md
+                - name: '-refonly'
+                  href: visual-basic/reference/command-line-compiler/refonly-compiler-option.md
+                - name: '-refout'
+                  href: visual-basic/reference/command-line-compiler/refout-compiler-option.md
+                - name: '-removeintchecks'
+                  href: visual-basic/reference/command-line-compiler/removeintchecks.md
+                - name: '-resource'
+                  href: visual-basic/reference/command-line-compiler/resource.md
+                - name: '-rootnamespace'
+                  href: visual-basic/reference/command-line-compiler/rootnamespace.md
+                - name: '-sdkpath'
+                  href: visual-basic/reference/command-line-compiler/sdkpath.md
+                - name: '-target'
+                  href: visual-basic/reference/command-line-compiler/target.md
+                - name: '-subsystemversion'
+                  href: visual-basic/reference/command-line-compiler/subsystemversion.md
+                - name: '-utf8output'
+                  href: visual-basic/reference/command-line-compiler/utf8output.md
+                - name: '-vbruntime'
+                  href: visual-basic/reference/command-line-compiler/vbruntime.md
+                - name: '-verbose'
+                  href: visual-basic/reference/command-line-compiler/verbose.md
+                - name: '-warnaserror'
+                  href: visual-basic/reference/command-line-compiler/warnaserror.md
+                - name: '-win32icon'
+                  href: visual-basic/reference/command-line-compiler/win32icon.md
+                - name: '-win32manifest'
+                  href: visual-basic/reference/command-line-compiler/win32manifest.md
+                - name: '-win32resource'
+                  href: visual-basic/reference/command-line-compiler/win32resource.md
+            - name: 按类别列出的编译器选项
+              href: visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md
+        - name: .NET Framework 参考信息
+          href: visual-basic/reference/net-framework-reference-information.md
+        - name: 语言规范
+          href: visual-basic/reference/language-specification/
+    - name: 示例应用程序
+      href: visual-basic/sample-applications.md
+    - name: 演练
+      href: visual-basic/walkthroughs.md
+- name: ML.NET 指南
+  href: machine-learning/index.yml
+- name: .NET for Apache Spark 指南
+  href: spark/index.yml
+- name: 示例和教程
+  href: samples-and-tutorials/index.md
