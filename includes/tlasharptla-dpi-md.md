@@ -1,1 +1,9 @@
-<span data-ttu-id="e0baa-101">每英寸点数 (dpi)</span><span class="sxs-lookup"><span data-stu-id="e0baa-101">dots per inch (dpi)</span></span>
+---
+ms.openlocfilehash: e99361d1efbf8289cb8a8c17f12da64ba929dc4d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670144"
+---
+<span data-ttu-id="38982-101">每英寸点数 (dpi)</span><span class="sxs-lookup"><span data-stu-id="38982-101">dots per inch (dpi)</span></span>

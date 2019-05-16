@@ -1,1 +1,9 @@
-<span data-ttu-id="7986c-101">Microsoft Windows 权限管理 (RM)</span><span class="sxs-lookup"><span data-stu-id="7986c-101">Microsoft Windows Rights Management (RM)</span></span>
+---
+ms.openlocfilehash: 9544ed33c233c77db0fbd369214d20ed29aa9067
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669655"
+---
+<span data-ttu-id="fc9ae-101">Microsoft Windows 权限管理 (RM)</span><span class="sxs-lookup"><span data-stu-id="fc9ae-101">Microsoft Windows Rights Management (RM)</span></span>

@@ -5,96 +5,96 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 86cf9a622f244fd6ea13113310eb05f65da1463f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fdca85360e34d6854604103c9d0ac22c5b829cf5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645614"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634023"
 ---
-# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a><span data-ttu-id="c4276-102">如何：手动生成客户端数据服务类 （WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="c4276-102">How to: Manually Generate Client Data Service Classes (WCF Data Services)</span></span>
-<span data-ttu-id="c4276-103">WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成客户端数据服务类**添加服务引用**对话框以将对数据服务的引用添加到 Visual Studio 项目中。</span><span class="sxs-lookup"><span data-stu-id="c4276-103">WCF Data Services integrates with Visual Studio to enable you to automatically generate client data service classes when you use the **Add Service Reference** dialog box to add a reference to a data service in a Visual Studio project.</span></span> <span data-ttu-id="c4276-104">有关详细信息，请参阅[如何：添加数据服务引用](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="c4276-104">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span> <span data-ttu-id="c4276-105">此外，你也可以使用代码生成工具 `DataSvcUtil.exe` 手动生成相同的客户端数据服务类。</span><span class="sxs-lookup"><span data-stu-id="c4276-105">You can also manually generate the same client data service classes by using the code-generation tool, `DataSvcUtil.exe`.</span></span> <span data-ttu-id="c4276-106">此工具，包括与 WCF Data Services，则从数据服务定义生成.NET Framework 类。</span><span class="sxs-lookup"><span data-stu-id="c4276-106">This tool, which is included with WCF Data Services, generates .NET Framework classes from the data service definition.</span></span> <span data-ttu-id="c4276-107">还可以使用此工具根据概念模型 (.csdl) 文件和表示 Visual Studio 项目中的实体框架模型的 .edmx 文件生成数据服务类。</span><span class="sxs-lookup"><span data-stu-id="c4276-107">It can also be used to generate data service classes from the conceptual model (.csdl) file and from the .edmx file that represents an Entity Framework model in a Visual Studio project.</span></span>
+# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a><span data-ttu-id="52d7b-102">如何：手动生成客户端数据服务类 （WCF 数据服务）</span><span class="sxs-lookup"><span data-stu-id="52d7b-102">How to: Manually Generate Client Data Service Classes (WCF Data Services)</span></span>
+<span data-ttu-id="52d7b-103">WCF Data Services 集成，与 Visual Studio 使你能够使用时自动生成客户端数据服务类**添加服务引用**对话框以将对数据服务的引用添加到 Visual Studio 项目中。</span><span class="sxs-lookup"><span data-stu-id="52d7b-103">WCF Data Services integrates with Visual Studio to enable you to automatically generate client data service classes when you use the **Add Service Reference** dialog box to add a reference to a data service in a Visual Studio project.</span></span> <span data-ttu-id="52d7b-104">有关详细信息，请参阅[如何：添加数据服务引用](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="52d7b-104">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span> <span data-ttu-id="52d7b-105">此外，你也可以使用代码生成工具 `DataSvcUtil.exe` 手动生成相同的客户端数据服务类。</span><span class="sxs-lookup"><span data-stu-id="52d7b-105">You can also manually generate the same client data service classes by using the code-generation tool, `DataSvcUtil.exe`.</span></span> <span data-ttu-id="52d7b-106">此工具，包括与 WCF Data Services，则从数据服务定义生成.NET Framework 类。</span><span class="sxs-lookup"><span data-stu-id="52d7b-106">This tool, which is included with WCF Data Services, generates .NET Framework classes from the data service definition.</span></span> <span data-ttu-id="52d7b-107">还可以使用此工具根据概念模型 (.csdl) 文件和表示 Visual Studio 项目中的实体框架模型的 .edmx 文件生成数据服务类。</span><span class="sxs-lookup"><span data-stu-id="52d7b-107">It can also be used to generate data service classes from the conceptual model (.csdl) file and from the .edmx file that represents an Entity Framework model in a Visual Studio project.</span></span>
 
- <span data-ttu-id="c4276-108">本主题中的示例基于 Northwind 示例数据服务创建客户端数据服务类。</span><span class="sxs-lookup"><span data-stu-id="c4276-108">The example in this topic creates client data service classes based on the Northwind sample data service.</span></span> <span data-ttu-id="c4276-109">此服务创建完成后[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="c4276-109">This service is created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="c4276-110">本主题中的某些示例需要 Northwind 模型的概念模型文件。</span><span class="sxs-lookup"><span data-stu-id="c4276-110">Some examples in this topic require the conceptual model file for the Northwind model.</span></span> <span data-ttu-id="c4276-111">有关详细信息，请参阅[如何：使用 EdmGen.exe 生成模型和映射文件](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="c4276-111">For more information, see [How to: Use EdmGen.exe to Generate the Model and Mapping Files](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span></span> <span data-ttu-id="c4276-112">本主题中的某些示例需要 Northwind 模型的 .edmx 文件。</span><span class="sxs-lookup"><span data-stu-id="c4276-112">Some examples in this topic require the .edmx file for the Northwind model.</span></span> <span data-ttu-id="c4276-113">有关详细信息，请参阅[.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="c4276-113">For more information, see [.edmx File Overview](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).</span></span>
+ <span data-ttu-id="52d7b-108">本主题中的示例基于 Northwind 示例数据服务创建客户端数据服务类。</span><span class="sxs-lookup"><span data-stu-id="52d7b-108">The example in this topic creates client data service classes based on the Northwind sample data service.</span></span> <span data-ttu-id="52d7b-109">此服务创建完成后[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="52d7b-109">This service is created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="52d7b-110">本主题中的某些示例需要 Northwind 模型的概念模型文件。</span><span class="sxs-lookup"><span data-stu-id="52d7b-110">Some examples in this topic require the conceptual model file for the Northwind model.</span></span> <span data-ttu-id="52d7b-111">有关详细信息，请参阅[如何：使用 EdmGen.exe 生成模型和映射文件](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="52d7b-111">For more information, see [How to: Use EdmGen.exe to Generate the Model and Mapping Files](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span></span> <span data-ttu-id="52d7b-112">本主题中的某些示例需要 Northwind 模型的 .edmx 文件。</span><span class="sxs-lookup"><span data-stu-id="52d7b-112">Some examples in this topic require the .edmx file for the Northwind model.</span></span> <span data-ttu-id="52d7b-113">有关详细信息，请参阅[.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="52d7b-113">For more information, see [.edmx File Overview](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).</span></span>
 
-### <a name="to-generate-c-classes-that-support-data-binding"></a><span data-ttu-id="c4276-114">生成支持数据绑定的 C# 类</span><span class="sxs-lookup"><span data-stu-id="c4276-114">To generate C# classes that support data binding</span></span>
+### <a name="to-generate-c-classes-that-support-data-binding"></a><span data-ttu-id="52d7b-114">生成支持数据绑定的 C# 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-114">To generate C# classes that support data binding</span></span>
 
-- <span data-ttu-id="c4276-115">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-115">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-115">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-115">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="c4276-116">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="c4276-116">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="52d7b-116">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="52d7b-116">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a><span data-ttu-id="c4276-117">生成支持数据绑定的 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="c4276-117">To generate Visual Basic classes that support data binding</span></span>
+### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a><span data-ttu-id="52d7b-117">生成支持数据绑定的 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-117">To generate Visual Basic classes that support data binding</span></span>
 
-- <span data-ttu-id="c4276-118">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-118">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-118">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-118">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="c4276-119">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="c4276-119">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="52d7b-119">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="52d7b-119">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-c-classes-based-on-the-service-uri"></a><span data-ttu-id="c4276-120">基于服务 URI 生成 C# 类</span><span class="sxs-lookup"><span data-stu-id="c4276-120">To generate C# classes based on the service URI</span></span>
+### <a name="to-generate-c-classes-based-on-the-service-uri"></a><span data-ttu-id="52d7b-120">基于服务 URI 生成 C# 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-120">To generate C# classes based on the service URI</span></span>
 
-- <span data-ttu-id="c4276-121">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-121">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-121">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-121">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="c4276-122">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="c4276-122">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="52d7b-122">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="52d7b-122">You must replace the value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a><span data-ttu-id="c4276-123">基于服务 URI 生成 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="c4276-123">To generate Visual Basic classes based on the service URI</span></span>
+### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a><span data-ttu-id="52d7b-123">基于服务 URI 生成 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-123">To generate Visual Basic classes based on the service URI</span></span>
 
-- <span data-ttu-id="c4276-124">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-124">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-124">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-124">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="c4276-125">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="c4276-125">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
+    >  <span data-ttu-id="52d7b-125">必须用 Northwind 示例数据服务实例的 URI 替换向 `/uri:` 参数提供的值。</span><span class="sxs-lookup"><span data-stu-id="52d7b-125">You must replace value supplied to the `/uri:` parameter with the URI of your instance of the Northwind sample data service.</span></span>
 
-### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="c4276-126">基于概念模型文件 (CSDL) 生成 C# 类</span><span class="sxs-lookup"><span data-stu-id="c4276-126">To generate C# classes based on the conceptual model file (CSDL)</span></span>
+### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="52d7b-126">基于概念模型文件 (CSDL) 生成 C# 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-126">To generate C# classes based on the conceptual model file (CSDL)</span></span>
 
-- <span data-ttu-id="c4276-127">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-127">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-127">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-127">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
-### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="c4276-128">基于概念模型文件 (CSDL) 生成 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="c4276-128">To generate Visual Basic classes based on the conceptual model file (CSDL)</span></span>
+### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a><span data-ttu-id="52d7b-128">基于概念模型文件 (CSDL) 生成 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-128">To generate Visual Basic classes based on the conceptual model file (CSDL)</span></span>
 
-- <span data-ttu-id="c4276-129">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-129">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-129">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-129">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
-### <a name="to-generate-c-classes-based-on-the-edmx-file"></a><span data-ttu-id="c4276-130">基于 .edmx 文件生成 C# 类</span><span class="sxs-lookup"><span data-stu-id="c4276-130">To generate C# classes based on the .edmx file</span></span>
+### <a name="to-generate-c-classes-based-on-the-edmx-file"></a><span data-ttu-id="52d7b-130">基于 .edmx 文件生成 C# 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-130">To generate C# classes based on the .edmx file</span></span>
 
-- <span data-ttu-id="c4276-131">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-131">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-131">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-131">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
-### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a><span data-ttu-id="c4276-132">基于 .edmx 文件生成 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="c4276-132">To generate Visual Basic classes based on the .edmx file</span></span>
+### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a><span data-ttu-id="52d7b-132">基于 .edmx 文件生成 Visual Basic 类</span><span class="sxs-lookup"><span data-stu-id="52d7b-132">To generate Visual Basic classes based on the .edmx file</span></span>
 
-- <span data-ttu-id="c4276-133">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="c4276-133">At the command prompt, execute the following command without line breaks:</span></span>
+- <span data-ttu-id="52d7b-133">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="52d7b-133">At the command prompt, execute the following command without line breaks:</span></span>
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 
-## <a name="see-also"></a><span data-ttu-id="c4276-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="c4276-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52d7b-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="52d7b-134">See also</span></span>
 
-- [<span data-ttu-id="c4276-135">生成数据服务客户端库</span><span class="sxs-lookup"><span data-stu-id="c4276-135">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
-- [<span data-ttu-id="c4276-136">如何：添加数据服务引用</span><span class="sxs-lookup"><span data-stu-id="c4276-136">How to: Add a Data Service Reference</span></span>](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
-- [<span data-ttu-id="c4276-137">WCF 诗句服务客户端实用工具 (DataSvcUtil.exe)</span><span class="sxs-lookup"><span data-stu-id="c4276-137">WCF Data Service Client Utility (DataSvcUtil.exe)</span></span>](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)
+- [<span data-ttu-id="52d7b-135">生成数据服务客户端库</span><span class="sxs-lookup"><span data-stu-id="52d7b-135">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
+- [<span data-ttu-id="52d7b-136">如何：添加数据服务引用</span><span class="sxs-lookup"><span data-stu-id="52d7b-136">How to: Add a Data Service Reference</span></span>](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [<span data-ttu-id="52d7b-137">WCF 诗句服务客户端实用工具 (DataSvcUtil.exe)</span><span class="sxs-lookup"><span data-stu-id="52d7b-137">WCF Data Service Client Utility (DataSvcUtil.exe)</span></span>](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)

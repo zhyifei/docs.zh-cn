@@ -1,1 +1,9 @@
-<span data-ttu-id="f33a2-101">XPath</span><span class="sxs-lookup"><span data-stu-id="f33a2-101">XPath</span></span>
+---
+ms.openlocfilehash: 90d5c0755c1edf0408ec8ce0c7d21898bb427dfb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669885"
+---
+<span data-ttu-id="a59ae-101">XPath</span><span class="sxs-lookup"><span data-stu-id="a59ae-101">XPath</span></span>

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 23f26830cf4813fcf81c9ed178232c2522d1dedc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3f44d17b5e3b017cb12ed148d1e46ee69269d5c5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61805129"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670223"
 ---
-<span data-ttu-id="caced-101">软件开发工具包 (SDK)</span><span class="sxs-lookup"><span data-stu-id="caced-101">software development kit (SDK)</span></span>
+<span data-ttu-id="2950c-101">软件开发工具包 (SDK)</span><span class="sxs-lookup"><span data-stu-id="2950c-101">software development kit (SDK)</span></span>
