@@ -1,1 +1,0 @@
-<span data-ttu-id="7de1f-101">平台调用服务 (PInvoke)</span><span class="sxs-lookup"><span data-stu-id="7de1f-101">Platform Invocation Services (PInvoke)</span></span>
