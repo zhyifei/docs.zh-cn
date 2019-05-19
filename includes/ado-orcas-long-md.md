@@ -1,1 +1,9 @@
-<span data-ttu-id="104cc-101">ADO.NET 3.0</span><span class="sxs-lookup"><span data-stu-id="104cc-101">ADO.NET 3.0</span></span>
+---
+ms.openlocfilehash: e6250a7610ba22cf55025662b369177d5fa833e0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65877251"
+---
+<span data-ttu-id="79ab6-101">ADO.NET 3.0</span><span class="sxs-lookup"><span data-stu-id="79ab6-101">ADO.NET 3.0</span></span>
