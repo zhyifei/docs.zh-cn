@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c240a76ea54d57456ff13fee7a48981354f669de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582669"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881277"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>承载数据服务（WCF 数据服务）
 通过使用 WCF 数据服务，可以创建一项服务，数据公开为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 此数据服务定义为从 <xref:System.Data.Services.DataService%601> 继承的类。 此类提供处理请求消息、 执行对数据源的更新和生成响应消息，OData 所要求的所需的功能。 但是，数据服务不能将绑定到和网络套接字上侦听传入的 HTTP 请求。 对于这一必需的功能，数据服务依赖于宿主计算机。
@@ -28,9 +28,9 @@ ms.locfileid: "65582669"
 
 - 代表数据服务发送响应。
 
- 若要简化承载数据服务，WCF 数据服务设计将使用 Windows Communication Foundation (WCF) 进行集成。 数据服务提供一个默认 WCF 实现，可作为数据服务主机中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序。 因此，您可以通过以下方式之一承载数据服务：
+ 若要简化承载数据服务，WCF 数据服务设计将使用 Windows Communication Foundation (WCF) 进行集成。 数据服务提供了一个默认 WCF 实现，可作为 ASP.NET 应用程序中的数据服务主机。 因此，您可以通过以下方式之一承载数据服务：
 
-- 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序中。
+- 在 ASP.NET 应用程序。
 
 - 在支持自承载 WCF 服务的托管应用程序中。
 
@@ -55,12 +55,12 @@ ms.locfileid: "65582669"
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
  [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
- 由于数据服务的行为与 WCF 服务类似，因此数据服务与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 集成并遵循 WCF Web 编程模型。 有关详细信息，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)并[WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。
+ 由于数据服务的行为与 WCF 服务一样，数据服务与 ASP.NET 集成并遵循 WCF Web 编程模型。 有关详细信息，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)并[WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。
 
 ## <a name="self-hosted-wcf-services"></a>自承载 WCF 服务
  由于它集成了 WCF 实现，WCF 数据服务支持自托管 WCF 服务形式的数据服务。 一个服务是自承载于任何.NET Framework 应用程序，如控制台应用程序。 继承自 <xref:System.Data.Services.DataServiceHost> 的 <xref:System.ServiceModel.Web.WebServiceHost> 类用于实例化位于特定地址的数据服务。
 
- 自承载功能可用于开发和测试目的，因为通过此功能更易于部署服务和解决服务问题。 但是，这种类型的承载不会提供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 或 Internet Information Services (IIS) 所提供的高级宿主和管理功能。 有关详细信息，请参阅[托管应用程序中承载](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。
+ 自承载功能可用于开发和测试目的，因为通过此功能更易于部署服务和解决服务问题。 但是，此种类型的承载不提供的高级宿主和由 ASP.NET 或由 Internet 信息服务 (IIS) 提供的管理功能。 有关详细信息，请参阅[托管应用程序中承载](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。
 
 ## <a name="defining-a-custom-data-service-host"></a>定义自定义数据服务主机
  对于 WCF 宿主实现过于受限的情况，您还可以为数据服务定义自定义宿主。 实现 <xref:System.Data.Services.IDataServiceHost> 接口的任何类都可用作数据服务的网络宿主。 自定义宿主必须实现 <xref:System.Data.Services.IDataServiceHost> 接口，并且能够承担数据服务主机的以下基本责任：

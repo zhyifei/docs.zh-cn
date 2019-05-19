@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665830"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880635"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体 TabControl 添加和移除选项卡
 在将<xref:System.Windows.Forms.TabControl>控制窗体中，它包含两个选项卡默认情况下。 可以添加或删除使用设计器的选项卡。  
@@ -29,7 +29,7 @@ ms.locfileid: "64665830"
   
      或  
   
-     在中**属性**窗口中，单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.TabControl.TabPages%2A>以打开**TabPage 集合编辑器**。 单击**外**或**删除**按钮。  
+     在中**属性**窗口中，单击**省略号**按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.TabControl.TabPages%2A>属性若要打开**TabPage 集合编辑器**。 单击**外**或**删除**按钮。  
   
 ## <a name="see-also"></a>请参阅
 

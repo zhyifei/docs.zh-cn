@@ -2,15 +2,15 @@
 title: ADO.NET 数据集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607576"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877228"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 数据集
-<xref:System.Data.DataSet> 对象对于支持 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的断开连接的分布式数据方案起到至关重要的作用。 **数据集**是提供与数据源无关的一致关系编程模型的数据的驻留内存表示形式。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示完整的数据，包括相关的表、 约束和表之间的关系集。 如下图所示**数据集**对象模型。  
+<xref:System.Data.DataSet>对象是中心支持断开连接，分布式数据方案使用 ADO.NET。 **数据集**是提供与数据源无关的一致关系编程模型的数据的驻留内存表示形式。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示完整的数据，包括相关的表、 约束和表之间的关系集。 如下图所示**数据集**对象模型。  
   
  ![ADO.Net 图](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 对象模型  
@@ -20,7 +20,7 @@ DataSet 对象模型
  **数据集**还可以保存并重新加载其内容为 XML，并且其架构作为 XML 架构定义语言 (XSD) 架构。 有关详细信息，请参阅[在数据集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **数据集**包含零个或多个表由一系列<xref:System.Data.DataTable>对象。 <xref:System.Data.DataTableCollection>包含所有**DataTable**中的对象**数据集**。  
+ ADO.NET**数据集**包含零个或多个表由一系列<xref:System.Data.DataTable>对象。 <xref:System.Data.DataTableCollection>包含所有**DataTable**中的对象**数据集**。  
   
  一个**DataTable**中定义<xref:System.Data>命名空间和表示驻留在内存中的数据的单个表。 其中包含由 <xref:System.Data.DataColumnCollection> 表示的列集合以及由 <xref:System.Data.ConstraintCollection> 表示的约束集合，这两个集合共同定义表的架构。 一个**DataTable**还包含一系列行由<xref:System.Data.DataRowCollection>，其中包含表中的数据。 除了其当前状态之前，<xref:System.Data.DataRow> 还会保留其当前版本和初始版本，以标识对行中存储的值的更改。  
   

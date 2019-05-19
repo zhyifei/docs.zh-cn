@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c11937f1a0300c4a376657d423ef348a844f700
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637556"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880659"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGrid 控件的格式
 
@@ -79,7 +79,7 @@ ms.locfileid: "65637556"
 
 1. 选择<xref:System.Windows.Forms.DataGrid>窗体上的控件。
 
-2. 在中**属性**窗口中，选择<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮。
+2.  在中**属性**窗口中，选择<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性，单击**省略号**(![Visual Studio 的属性窗口中的省略号按钮 （...）。](./media/visual-studio-ellipsis-button.png))按钮。
 
 3. 在中**DataGridTableStyle 集合编辑器**对话框中，单击**添加**要添加到集合的表样式。
 
@@ -89,7 +89,7 @@ ms.locfileid: "65637556"
 
      映射名称用于指定应与表中的哪些表样式。
 
-5. 在中**DataGridTableStyle 集合编辑器**，选择<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性，然后单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")).
+5.  在中**DataGridTableStyle 集合编辑器**，选择<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性，然后单击省略号按钮 (![Visual Studio 的属性窗口中的省略号按钮 （...）。](./media/visual-studio-ellipsis-button.png))。
 
 6. 在中**DataGridColumnStyle 集合编辑器**对话框框中，将列样式添加到你创建的表样式。
 

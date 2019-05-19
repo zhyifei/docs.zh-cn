@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590783"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879152"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  
@@ -67,7 +67,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 |功能|查看|  
 |--------|---------|  
 |使用<xref:System.Windows.Forms.BindingSource>组件|[如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源|[如何：排序和筛选 ADO.NET 数据与 Windows 窗体 BindingSource 组件](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用 ADO.NET 数据源|[如何：排序和筛选 ADO.NET 数据与 Windows 窗体 BindingSource 组件](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用数据源窗口|[演练：Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  

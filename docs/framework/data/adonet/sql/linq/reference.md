@@ -2,12 +2,12 @@
 title: 参考
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877131"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881317"
 ---
 # <a name="reference"></a>参考
 本节提供针对 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 开发人员的参考信息。  
@@ -45,4 +45,4 @@ ms.locfileid: "61877131"
  提供了适用于门户[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]主题。  
   
  [LinqDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- 介绍 <xref:System.Web.UI.WebControls.LinqDataSource> 控件如何通过 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 数据源控件结构向 Web 开发人员公开 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)]。
+ 介绍如何<xref:System.Web.UI.WebControls.LinqDataSource>控件公开[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]Web 开发人员通过 ASP.NET 数据源控件体系结构。

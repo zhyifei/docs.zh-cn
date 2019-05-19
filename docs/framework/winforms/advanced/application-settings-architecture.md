@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592778"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876220"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。  
@@ -22,7 +22,7 @@ ms.locfileid: "65592778"
  在应用程序中托管自定义组件时，利用提供的接口可使这些自定义组件保留其自己的设置。 通过使用设置键，组件能够保持分隔组件多个实例的设置。  
   
 ## <a name="defining-settings"></a>定义设置  
- 应用程序设置体系结构用于 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 Windows 窗体中，它包含许多在这两种环境中共享的基类。 最重要的是<xref:System.Configuration.SettingsBase>，它提供对一个集合，通过设置访问并提供用于加载和保存设置的低级别方法。 每个环境都实现其自己的类派生自<xref:System.Configuration.SettingsBase>为该环境提供其他设置功能。 在基于 Windows 窗体的应用程序，必须派生自的类上定义所有应用程序设置<xref:System.Configuration.ApplicationSettingsBase>类，该类向基的类添加了以下功能：  
+ ASP.NET 和 Windows 窗体中使用应用程序设置体系结构，它包含数在这两个环境之间共享的基类。 最重要的是<xref:System.Configuration.SettingsBase>，它提供对一个集合，通过设置访问并提供用于加载和保存设置的低级别方法。 每个环境都实现其自己的类派生自<xref:System.Configuration.SettingsBase>为该环境提供其他设置功能。 在基于 Windows 窗体的应用程序，必须派生自的类上定义所有应用程序设置<xref:System.Configuration.ApplicationSettingsBase>类，该类向基的类添加了以下功能：  
   
 - 高层加载和保存操作  
   

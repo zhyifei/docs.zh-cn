@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583805"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879902"
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
-在早期版本的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的编译时检查的值未出现，串联的字符串包含连接字符串，以便在运行时，不正确的关键字生成<xref:System.ArgumentException>。 每个.NET Framework 数据提供程序支持不同的语法的连接字符串关键字，这使得很难手动构造有效的连接字符串。 若要解决此问题， [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 引入了新的连接字符串生成器，每个.NET Framework 数据提供程序。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了.NET Framework 数据提供程序和其关联的连接字符串生成器类。  
+在早期版本的 ADO.NET，编译时检查的具有串联的字符串值的连接字符串的没有出现，以便在运行时，不正确的关键字生成<xref:System.ArgumentException>。 每个.NET Framework 数据提供程序支持不同的语法的连接字符串关键字，这使得很难手动构造有效的连接字符串。 若要解决此问题，ADO.NET 2.0 引入了新的连接字符串生成器，每个.NET Framework 数据提供程序。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了.NET Framework 数据提供程序和其关联的连接字符串生成器类。  
   
 |提供程序|ConnectionStringBuilder 类|  
 |--------------|-----------------------------------|  

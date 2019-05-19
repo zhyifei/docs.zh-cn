@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912463"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878212"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>如何：诊断有问题的打印作业
 网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 丰富的打印作业属性中公开[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供了一种方法用于执行快速的打印作业远程诊断。  
@@ -59,7 +59,7 @@ ms.locfileid: "64912463"
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- 若要使用的标志检查打印作业状态<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>属性，检查每个相关标志以查看它是否设置。 检查是否在一组位标志中设置了一个位的标准方法是执行一个逻辑 AND 运算，其中将该组标志作为一个操作数，将标志本身作为另一操作数。 由于该标志本身仅设置一个位，因此逻辑 AND 的结果至多为设置了该相同位。 若要查明事实是否如此，只需将逻辑 AND 的结果与标志本身进行比较。 有关详细信息，请参阅<xref:System.Printing.PrintJobStatus>，则[& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/and-operator.md)，并<xref:System.FlagsAttribute>。  
+ 若要使用的标志检查打印作业状态<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>属性，检查每个相关标志以查看它是否设置。 检查是否在一组位标志中设置了一个位的标准方法是执行一个逻辑 AND 运算，其中将该组标志作为一个操作数，将标志本身作为另一操作数。 由于该标志本身仅设置一个位，因此逻辑 AND 的结果至多为设置了该相同位。 若要查明事实是否如此，只需将逻辑 AND 的结果与标志本身进行比较。 有关详细信息，请参阅<xref:System.Printing.PrintJobStatus>，则[& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)，并<xref:System.FlagsAttribute>。  
   
  对于已设置了其位的每个属性，代码会将此报告给控制台屏幕，有时还会建议如何响应。 （下面讨论了作业或队列暂停时所调用的 **HandlePausedJob** 方法。）  
   
@@ -87,6 +87,6 @@ ms.locfileid: "64912463"
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF 中的文档](documents-in-wpf.md)
 - [打印概述](printing-overview.md)

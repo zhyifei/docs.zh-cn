@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000826"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878637"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>如何：在 IIS 中承载 WCF 服务
 本主题概述了创建 Internet 信息服务 (IIS) 中的托管的 Windows Communication Foundation (WCF) 服务所需的基本步骤。 本主题假设您熟悉 IIS 且了解如何使用 IIS 管理工具创建和管理 IIS 应用程序。 有关 IIS 的详细信息请参阅[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服务，运行在 IIS 环境中的充分利用 IIS 功能，如进程回收、 空闲关闭、 进程运行状况监视和基于消息的激活。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 只可以将 IIS 宿主与 HTTP 传输协议一起使用。  
   
- 详细了解如何为 WCF 和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]进行交互，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 有关配置安全性的详细信息，请参阅[安全](../../../../docs/framework/wcf/feature-details/security.md)。  
+ 有关 WCF 和 ASP.NET 的交互方式的详细信息，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 有关配置安全性的详细信息，请参阅[安全](../../../../docs/framework/wcf/feature-details/security.md)。  
   
  此示例中的源副本，请参阅[IIS 承载使用内联代码](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "62000826"
   
 1. 确认 IIS 已经安装并在计算机上运行。 有关安装和配置 IIS 的详细信息请参阅[安装和配置 IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2. 为应用程序文件创建一个称为“IISHostedCalcService”的新文件夹，确保 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 有权访问该文件夹的内容，并使用 IIS 管理工具创建一个物理上位于此应用程序目录中的新 IIS 应用程序。 当为应用程序目录创建别名时，请使用“IISHostedCalc”。  
+2. 创建称为"IISHostedCalcService"应用程序文件的新文件夹、 确保 ASP.NET 有权访问的文件夹的内容和使用 IIS 管理工具来创建新的 IIS 应用程序以物理方式位于此应用程序目录中。 当为应用程序目录创建别名时，请使用“IISHostedCalc”。  
   
 3. 在应用程序目录中创建一个名为“service.svc”的新文件。 编辑此文件添加以下@ServiceHost元素。  
   

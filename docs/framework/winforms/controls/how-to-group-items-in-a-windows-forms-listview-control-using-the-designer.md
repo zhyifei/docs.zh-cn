@@ -6,17 +6,18 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 7c25c012798adcf90c652beb91a7550406e5f8ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aaf4b244a15ef982d0a58852a7f408796b2b4474
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013382"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882409"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器对 Windows 窗体 ListView 控件中的项进行分组
-分组功能<xref:System.Windows.Forms.ListView>控件使您能够以分组方式显示项的相关的集。 由包含组标题的水平组标头在屏幕上分隔这些组。 可以使用<xref:System.Windows.Forms.ListView>组以使大型列表对项目分组按字母顺序，按日期，或任何其他逻辑分组的导航。 下图显示了一些分组的项。  
+
+分组功能<xref:System.Windows.Forms.ListView>控件使您能够以分组方式显示项的相关的集。 由包含组标题的水平组标头在屏幕上分隔这些组。 可以使用<xref:System.Windows.Forms.ListView>组以使大型列表对项目分组按字母顺序，按日期，或任何其他逻辑分组的导航。 下图显示了一些分组的项：
   
- ![ListView 组](./media/listviewgroups.gif "ListViewGroups")  
+ ![数字分为奇数和偶数的组。](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
   
  下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.ListView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "62013382"
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>若要添加或删除在设计器中的组  
   
-1. 在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Groups%2A>属性。  
+1.  在中**属性**窗口中，单击**省略号**(![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 按钮旁边<xref:System.Windows.Forms.ListView.Groups%2A>属性.  
   
      **ListViewGroup 集合编辑器**出现。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "62013382"
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>若要将项分配给在设计器中的组  
   
-1. 在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性。  
+1.  在中**属性**窗口中，单击**省略号**(![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性.  
   
      **列表视图项集合编辑器**出现。  
   

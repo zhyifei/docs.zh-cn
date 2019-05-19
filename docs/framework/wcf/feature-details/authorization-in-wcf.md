@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 26aa445f3136fcb16e2eb9cdce6b245476297dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c605b310f19a05f994296d8f4268b91b408fb18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650567"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881193"
 ---
 # <a name="authorization-in-wcf"></a>WCF 中的授权
 授权是控制对资源（例如服务或文件）的访问和权限的过程。 在本部分中的主题说明如何在 Windows Communication Foundation (WCF) 在不同的方式执行此基本任务。  
@@ -23,10 +23,10 @@ ms.locfileid: "61650567"
  演示使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 限制对服务的访问的过程。  
   
  [如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- 演练对服务的配置，使其能够使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 的角色提供程序功能。  
+ 将指导完成服务以使其能够使用 ASP.NET 角色提供程序功能的配置。  
   
  [如何：将用于服务 ASP.NET 授权管理器角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 可以使用授权管理器来管理网站的授权。 WCF 同样可以利用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization Manager 组合来进行授权的客户端。  
+ ASP.NET 可以使用授权管理器来管理网站的授权。 WCF 同样可以利用 ASP.NET/Authorization Manager 组合来进行的客户端的授权。  
   
  [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  说明将标识模型基础结构用于基于声明的授权的基础知识。  

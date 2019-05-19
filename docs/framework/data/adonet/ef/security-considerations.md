@@ -2,12 +2,12 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583478"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879922"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 此外应遵循有关创建安全的.NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -141,22 +141,23 @@ ms.locfileid: "65583478"
  在 try-catch 块中访问 <xref:System.Data.Objects.ObjectContext> 的方法和属性。 捕获异常可防止未经处理的异常向应用程序的用户公开 <xref:System.Data.Objects.ObjectStateManager> 中的条目或模型信息（如，表名称）。  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>有关 ASP.NET 应用程序的安全注意事项  
- 在 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 应用程序中处理路径时应考虑下列注意事项。  
+
+当您使用 ASP.NET 应用程序中的路径时，应考虑以下。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>检验主机是否执行路径检查。  
- 如果使用 `|DataDirectory|`（括在竖线中）替代字符串，则 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 将检验是否支持解析的路径。 例如，`DataDirectory` 后面不允许出现“..”。 承载 `~` 的进程在解析 Web 应用程序根目录运算符 ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]) 时也会执行同样的检查。 IIS 执行此检查;但是，非 IIS 的主机可能不验证已解析的路径受支持。 您应了解在其上部署[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的主机的行为。  
+ 当`|DataDirectory|`（包含在管道符号） 使用替换字符串，ADO.NET 将验证是否支持解析的路径。 例如，`DataDirectory` 后面不允许出现“..”。 同样的检查解决 Web 应用程序根目录运算符 (`~`) 由承载 ASP.NET 的进程执行。 IIS 执行此检查;但是，非 IIS 的主机可能不验证已解析的路径受支持。 您应了解在其上部署[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的主机的行为。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>不要对解析的路径名称做任何假定。  
  尽管根目录运算符 (`~`) 和 `DataDirectory` 替代字符串解析到的值应在应用程序运行时保持不变，但 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 并不限制主机修改这些值。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>部署前检查路径长度。  
- 部署[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序之前，应确保根目录运算符 (~) 和 `DataDirectory` 替代字符串的值没有超出操作系统中路径长度的限制。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 数据提供程序不保证路径长度在有效范围内。  
+ 部署[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序之前，应确保根目录运算符 (~) 和 `DataDirectory` 替代字符串的值没有超出操作系统中路径长度的限制。 ADO.NET 数据提供程序不保证路径长度是在有效范围内。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>有关 ADO.NET 元数据的安全注意事项  
  生成和处理模型和映射文件时应考虑下列安全注意事项。  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>不要通过日志公开敏感信息。  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 元数据服务组件不记录任何私有信息。 如果由于访问限制而无法返回某些结果，则数据库管理系统和文件系统应返回零结果，而不是引发可能包含敏感信息的异常。  
+ADO.NET 元数据服务组件不记录任何私有信息。 如果由于访问限制而无法返回某些结果，则数据库管理系统和文件系统应返回零结果，而不是引发可能包含敏感信息的异常。  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>不要接受来自不可信源的 MetadataWorkspace 对象。  
  应用程序不应接受来自不可信源的 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 类的实例。 正确的做法是从这样的源显式构造并填充工作区。  

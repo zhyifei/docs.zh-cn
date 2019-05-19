@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: ecf0b758a9c45a0354a68b6cbfecdb1c49ab390f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca8b19e8019c170f1826660e951294b18a25e96d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640362"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880628"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>如何：通过使用设计器添加和删除 Windows 窗体 TreeView 控件中的节点
 因为 Windows 窗体<xref:System.Windows.Forms.TreeView>控件以分层方式，添加您必须特别注意到其父节点是节点时将显示节点。  
@@ -26,7 +26,7 @@ ms.locfileid: "61640362"
   
 1. 选择 <xref:System.Windows.Forms.TreeView> 控件。  
   
-2. 在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性。  
+2.  在中**属性**窗口中，单击**省略号**(![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 按钮旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性.  
   
      **树节点编辑器**出现。  
   

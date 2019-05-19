@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: ef95a7cebb527b01c15d124227664823fcbbaa23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4a44bd3f55cf6c21bb785ff70bca80e2c003cd18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582777"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878267"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是.NET Framework 版本 3.5，它提供用于管理关系数据作为对象的运行时基础结构的组件。  
@@ -45,7 +45,7 @@ ms.locfileid: "65582777"
  介绍[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]技术，可用于 Visual Basic 用户。  
   
  [LINQ 和 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- 链接到 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 门户。  
+ ADO.NET 门户的链接。  
   
  [LINQ to SQL 演练](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  列出可用于 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的演练。  
@@ -54,4 +54,4 @@ ms.locfileid: "65582777"
  介绍如何下载文档中使用的示例数据库。  
   
  [LinqDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- 介绍 <xref:System.Web.UI.WebControls.LinqDataSource> 控件如何通过 [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] 数据源控件结构向 Web 开发人员公开 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)]。
+ 介绍如何<xref:System.Web.UI.WebControls.LinqDataSource>控件公开[!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)]Web 开发人员通过 ASP.NET 数据源控件体系结构。

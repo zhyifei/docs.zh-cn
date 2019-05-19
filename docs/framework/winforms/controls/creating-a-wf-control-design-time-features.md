@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211207"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882323"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件
 
@@ -59,7 +59,7 @@ ms.locfileid: "65211207"
 
 完成后，自定义控件看起来类似于以下内容：
 
-![可能的 MarqueeControl 排列](./media/demomarqueecontrol.gif "器")
+![该应用，显示字幕说的文本和开始和停止按钮。](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 有关完整代码列表，请参阅[如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。
 
@@ -178,7 +178,7 @@ using MarqueeControlLibrary;
 
 2. 在"MarqueeControlLibrary 属性页"对话框中，选择**调试**页。
 
-3. 在中**启动操作**部分中，选择**启动外部程序**。 你将调试的单独实例的 Visual Studio 中，因此请单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以浏览 Visual Studio IDE。 可执行文件名称为 devenv.exe，并且如果已安装到默认位置，其路径为 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。
+3. 在中**启动操作**部分中，选择**启动外部程序**。 你将调试的单独实例的 Visual Studio 中，因此请单击省略号 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 按钮以浏览 Visual Studio IDE。 可执行文件名称为 devenv.exe，并且如果已安装到默认位置，其路径为 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。
 
 4. 单击确定以关闭对话框。
 

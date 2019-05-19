@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645519"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877357"
 ---
 # <a name="securing-wcf-data-services"></a>WCF 数据服务的安全
 本主题介绍特定于开发、 部署和运行 WCF 数据服务和应用程序支持开放数据协议 (OData) 服务的访问权限的安全注意事项。 此外应遵循有关创建安全的.NET Framework 应用程序的建议。  
@@ -55,7 +55,7 @@ context.Credentials = _
  如果数据服务需要的登录凭据不能通过使用 <xref:System.Net.NetworkCredential> 对象（如基于声明的标记或 Cookie）指定，则必须在 HTTP 请求中手动设置标头，通常是 `Authorization` 和 `Cookie` 标头。 有关这种身份验证方案的详细信息，请参阅博客文章[OData 和身份验证 – 第 3 部分 – 客户端挂钩](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/)。 有关如何在请求消息中设置 HTTP 标头的示例，请参阅[如何：设置客户端请求中的标头](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)。  
   
 ## <a name="impersonation"></a>Impersonation  
- 通常，数据服务使用承载数据服务的工作进程的凭据访问所需资源，如服务器上的文件或数据库。 使用模拟时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序可以用发出请求的用户的 Windows 标识（用户帐户）执行。 模拟通常用在依赖 IIS 进行用户身份验证的应用程序中，并使用该主体的凭据访问所需资源。 有关详细信息，请参阅[ASP.NET 模拟](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))。  
+ 通常，数据服务使用承载数据服务的工作进程的凭据访问所需资源，如服务器上的文件或数据库。 使用模拟时，ASP.NET 应用程序可以执行与发出请求的用户的 Windows 标识 （用户帐户）。 模拟通常用在依赖 IIS 进行用户身份验证的应用程序中，并使用该主体的凭据访问所需资源。 有关详细信息，请参阅[ASP.NET 模拟](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))。  
   
 ## <a name="configuring-data-service-authorization"></a>配置数据服务授权  
  授权是基于之前的成功身份验证为所识别的主体或进程授予应用程序资源的访问权限。 作为一种通行做法，只应当为数据服务的用户授予刚好足够的权限以执行客户端应用程序所需的操作。  

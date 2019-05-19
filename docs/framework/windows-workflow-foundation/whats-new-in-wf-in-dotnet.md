@@ -2,12 +2,12 @@
 title: .NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671413"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876577"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 
@@ -118,7 +118,7 @@ ms.locfileid: "61671413"
 
 以下屏幕快照显示了变量和自变量设计器的上下文菜单。
 
-![变量和自变量设计器上下文菜单](./media/designercontextmenu.png "DesignerContextMenu")
+![变量和自变量设计器上下文菜单](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> 自动环绕序列
 
@@ -126,11 +126,11 @@ ms.locfileid: "61671413"
 
 以下屏幕快照显示了 `WriteLine` 的 `Body` 中的 `NoPersistScope` 活动。
 
-![自动&#45;括起来的放置位置](./media/autosurround1.png "AutoSurround1")
+![NoPersistScope 活动的正文中的 WriteLine 活动。](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 以下屏幕快照显示了在第一个 `Sequence` 下面丢弃第二个时在 `Body` 中自动创建的 `WriteLine` 活动。
 
-![自动创建的序列活动](./media/autosurround2.png "AutoSurround2")
+![NoPersistScope 的正文中自动创建的序列。](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> 平移模式
 
@@ -138,7 +138,7 @@ ms.locfileid: "61671413"
 
 下面的屏幕快照显示了位于工作流设计器右下角的平移按钮。
 
-![在工作流设计器中的平移按钮](./media/panbutton.png "PanButton")
+![在工作流设计器中突出显示平移按钮。](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 也可以使用鼠标中键或空格键来平移工作流设计器。
 
@@ -154,7 +154,7 @@ ms.locfileid: "61671413"
 
 以下屏幕截图中的已完成工作流[入门教程](getting-started-tutorial.md)显示大纲视图中的，顺序工作流。
 
-![大纲视图中工作流设计器](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![使用 Visual Studio 中的顺序工作流的大纲视图的屏幕截图。](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> C# 表达式
 
@@ -174,17 +174,17 @@ ms.locfileid: "61671413"
 
 下面的屏幕快照显示了从工具箱中拖动活动时变为可见的附属点。
 
-![显示自动连接点的流程图起始节点](./media/autoconnect1.png "Autoconnect1")
+![流程图起始节点显示自动连接点](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 也可以将活动拖动到流程图节点和状态之间的连接上，以在两个其他节点之间自动插入该节点。 以下屏幕快照显示了突出显示的连接线，可在此连接线处从工具箱拖动并放置活动。
 
-![自动&#45;放置活动的句柄插入](./media/autoinsert.png "自动插入")
+![放置活动的自动插入处理](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> 设计器批注
 
 为促进开发较大型的工作流，设计器现在支持添加批注以帮助跟踪设计过程。 可以向活动、状态、流程图节点、变量和自变量添加批注。 以下屏幕快照显示了用于将批注添加到设计器的上下文菜单。
 
-![注释上下文菜单](./media/annotationdialog.png "annotationdialog")
+![显示用于将批注添加的菜单的屏幕截图。](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>调试状态
 
@@ -232,7 +232,7 @@ ms.locfileid: "61671413"
 
 以下屏幕截图显示完成的状态机工作流从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)。
 
-![完整的状态机工作流](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![显示已完成的状态机工作流的图例。](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 有关创建状态机工作流的详细信息，请参阅[状态机工作流](state-machine-workflows.md)。
 

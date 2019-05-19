@@ -2,17 +2,17 @@
 title: 如何：将 ASP.NET 角色提供程序与服务一起使用
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 8f3fadc60645ef81d2683c63fda0ddd5bf24c982
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f989252c7dd9b2ccdce8331e7cdd987042230ded
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047238"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880235"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>如何：将 ASP.NET 角色提供程序与服务一起使用
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序（与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序一起提供）是一种可供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 开发人员创建网站的功能，这些网站允许用户通过网站创建帐户并向用户分配用于授权的角色。 借助此功能，任何用户都可以通过网站建立帐户，并登录以获取该网站及其服务的独占访问权。 这与要求用户在 Windows 域中具有帐户的 Windows 安全完全不同。 所有提供凭据（用户名/密码组合）的用户都可以使用该站点及其服务。  
+ASP.NET 角色提供程序 （在与 ASP.NET 成员资格提供程序一起使用） 是一项功能，使 ASP.NET 开发人员能够创建允许用户与站点中创建帐户并分配角色进行授权的 Web 站点。 借助此功能，任何用户都可以通过网站建立帐户，并登录以获取该网站及其服务的独占访问权。 这与要求用户在 Windows 域中具有帐户的 Windows 安全完全不同。 所有提供凭据（用户名/密码组合）的用户都可以使用该站点及其服务。  
   
- 示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 有关详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成员资格提供程序功能，请参阅[如何：使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
+ 示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 有关 ASP.NET 成员资格提供程序功能的详细信息，请参阅[如何：使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
   
  角色提供程序功能使用 SQL Server 数据库存储用户信息。 Windows Communication Foundation (WCF) 开发人员可以利用这些功能实现安全性。 当集成到 WCF 应用程序，用户必须提供用户名/密码组合到 WCF 客户端应用程序。 若要启用 WCF 以使用的数据库，必须创建的实例<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>类中，设置其<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>属性设置为<xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，并将该实例添加到行为集合<xref:System.ServiceModel.ServiceHost>的承载服务。  
   

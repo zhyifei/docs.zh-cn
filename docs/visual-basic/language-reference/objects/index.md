@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949664"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880719"
 ---
 # <a name="objects-visual-basic"></a>对象 (Visual Basic)
 本主题收录了记录 Visual Basic 运行时对象的其他主题的链接，并包含这些对象的成员过程、属性和事件表。  
@@ -37,9 +37,9 @@ ms.locfileid: "61949664"
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|提供了用于操控注册表的属性和方法。|  
 |[My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)|提供了用于访问当前项目中声明的每个 Windows 窗体实例的属性。|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|提供了用于将事件和异常信息写入 Web 应用的应用日志侦听器的属性和方法。|  
-|[My.Request 对象](../../../visual-basic/language-reference/objects/my-request-object.md)|获取所请求的页面的 <xref:System.Web.HttpRequest> 对象。 `My.Request` 对象包含当前 HTTP 请求的相关信息。<br /><br /> `My.Request` 对象仅适用于 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 应用。|  
+|[My.Request 对象](../../../visual-basic/language-reference/objects/my-request-object.md)|获取所请求的页面的 <xref:System.Web.HttpRequest> 对象。 `My.Request` 对象包含当前 HTTP 请求的相关信息。<br /><br /> `My.Request` 对象仅适用于 ASP.NET 应用程序。|  
 |[My.Resources 对象](../../../visual-basic/language-reference/objects/my-resources-object.md)|提供了用于访问应用资源的属性和类。|  
-|[My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)|获取与 <xref:System.Web.HttpResponse> 关联的 <xref:System.Web.UI.Page> 对象。 使用此对象，可以将 HTTP 响应数据发送到客户端，并包含此响应的相关信息。<br /><br /> `My.Response` 对象仅适用于 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 应用。|  
+|[My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)|获取与 <xref:System.Web.HttpResponse> 关联的 <xref:System.Web.UI.Page> 对象。 使用此对象，可以将 HTTP 响应数据发送到客户端，并包含此响应的相关信息。<br /><br /> `My.Response` 对象仅适用于 ASP.NET 应用程序。|  
 |[My.Settings 对象](../../../visual-basic/language-reference/objects/my-settings-object.md)|提供了用于访问应用设置的属性和方法。|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|提供了对当前用户信息的访问权限。|  
 |[My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)|提供了用于创建和访问当前项目引用的每个 Web 服务实例的属性。|  

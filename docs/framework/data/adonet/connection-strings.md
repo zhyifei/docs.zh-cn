@@ -2,12 +2,12 @@
 title: 在 ADO.NET 中的连接字符串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032747"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881163"
 ---
 # <a name="connection-strings-in-adonet"></a>在 ADO.NET 中的连接字符串
 
@@ -17,24 +17,32 @@ ms.locfileid: "62032747"
 
 连接字符串是以分号分隔的键/值参数对的列表：
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 关键字不区分大小写。 但是，值可能区分大小写，具体取决于数据源。 关键字和值可能包含[空白字符](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 在关键字中忽略和不带引号的前导和尾随空格的值。
 
 如果值包含分号[Unicode 控制字符](https://en.wikipedia.org/wiki/Unicode_control_characters)，或前导空格或尾随空格，则必须用单引号或双引号括起来。 例如：
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 它包含的值中可能不是封闭字符。 因此，仅在两个双引号，反之亦然，可以用一个值，包含单引号引起来：
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 引号本身，以及等号，不需要转义，因此以下连接字符串有效：
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 由于直到下一步分号或字符串的末尾读取每个值，后者的示例中的值是`a=b=c`，并最终分号是可选的。
 

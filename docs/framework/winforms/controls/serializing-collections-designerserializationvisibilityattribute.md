@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211601"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882358"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合
 
@@ -66,7 +66,7 @@ ms.locfileid: "65211601"
 
 8. 按**F5**以生成项目，然后运行控件**UserControl 测试容器**。
 
-9. 查找`Strings`中的属性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 测试容器**。 单击`Strings`属性，然后单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以打开**字符串集合编辑器**.
+9. 查找`Strings`中的属性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 测试容器**。 单击`Strings`属性，然后单击省略号 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 按钮以打开**字符串集合编辑器**。
 
 10. 输入中的多个字符串**字符串集合编辑器**。 通过按分隔**Enter**密钥在每个字符串的末尾。 单击**确定**完后输入字符串。
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211601"
 
 3. 位置`SerializationDemoControl`窗体上。
 
-4. 查找`Strings`中的属性**属性**窗口。 单击`Strings`属性，然后单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以打开**字符串集合编辑器**.
+4. 查找`Strings`中的属性**属性**窗口。 单击`Strings`属性，然后单击省略号 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 按钮以打开**字符串集合编辑器**。
 
 5. 键入在多个字符串**字符串集合编辑器**。 分隔通过按每个字符串的末尾处的 ENTER 键。 单击**确定**完后输入字符串。
 

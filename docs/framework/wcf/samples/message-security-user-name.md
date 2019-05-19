@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 89c3fc49ed70c1b56edc70199be2a0030ae55d07
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 48d2bddb11873524c8a74748c787e61eec5eb870
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664827"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876688"
 ---
 # <a name="message-security-user-name"></a>用户名消息安全
 本示例演示如何实现一个应用程序，该应用程序对客户端使用具有用户名身份验证的 WS-Security，并要求使用服务器的 X.509v3 证书对服务器进行身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，使用客户端提供的用户名和密码登录有效的 Windows 帐户。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 本示例由客户端控制台程序 (Client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (Service.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -173,7 +173,7 @@ Press <ENTER> to terminate client.
   
 - 授予对证书私钥的权限  
   
-     Setup.bat 批处理文件中的以下行可以让 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 辅助进程帐户访问 LocalMachine 存储区中存储的服务器证书。  
+     Setup.bat 批处理文件中的以下行进行 ASP.NET 工作进程帐户访问 LocalMachine 存储区中存储的服务器证书。  
   
     ```bat
     echo ************  

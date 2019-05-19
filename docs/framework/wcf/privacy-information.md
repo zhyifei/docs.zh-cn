@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651075"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882189"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
@@ -29,7 +29,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  WCF 消息传递层不会写入本地计算机的任何个人信息。 但是，如果服务开发人员创建了公开此类信息的服务（例如，通过在终结点名称中使用个人姓名，或者将个人信息包含在终结点的 Web 服务描述语言中，但不要求客户端使用 https 来访问 WSDL），则消息传递层可能会在网络级传播个人信息。 此外，如果开发人员在运行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对公开个人信息，该工具的输出的终结点的工具可能包含该信息，并且输出文件写入到本地硬盘。  
   
 ## <a name="hosting"></a>宿主  
- WCF 中的承载功能允许应用程序来启动按需或多个应用程序之间启用端口共享。 可以承载的 WCF 应用程序在 Internet 信息服务 (IIS)，类似于[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。  
+ WCF 中的承载功能允许应用程序来启动按需或多个应用程序之间启用端口共享。 可以在 Internet 信息服务 (IIS)，类似于 ASP.NET 承载的 WCF 应用程序。  
   
  承载功能不会在网路上公开任何特定信息，也不会在计算机上保留数据。  
   
@@ -47,7 +47,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
 |数据|存储|  
 |----------|-------------|  
 |表示凭据，例如用户名、X.509 证书、Kerberos 令牌和对凭据的引用。|标准 Windows 凭据管理机制，例如 Windows 证书存储区。|  
-|用户成员资格信息，例如用户名和密码。|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 成员资格提供程序。|  
+|用户成员资格信息，例如用户名和密码。|ASP.NET 成员资格提供程序。|  
 |用于向客户端证明服务身份的有关服务的标识信息。|服务的终结点地址。|  
 |调用方信息。|审核日志。|  
   

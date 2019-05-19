@@ -2,17 +2,17 @@
 title: 企业采购过程
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665939"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876169"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。
 
- 此示例包含一个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端应用程序，此应用程序允许以不同的参与者身份（如原始请求方或特定的供应商）与该过程进行交互。
+ 此示例包含一个允许为不同的参与者 （如原始请求方或特定供应商） 与流程交互的 ASP.NET 客户端应用程序。
 
 ## <a name="requirements"></a>要求
 
@@ -36,7 +36,7 @@ ms.locfileid: "64665939"
 
 - 跟踪。
 
-- 在不同的客户端（[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Web 应用程序和 WinForms 应用程序）中承载 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。
+- 承载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中不同的客户端 （ASP.NET Web 应用程序和 WinForms 应用程序）。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -82,7 +82,7 @@ ms.locfileid: "64665939"
 |-------------|-----------------|  
 |通用|过程中使用的实体对象（征求建议书、供应商和供应商建议书）。|  
 |WfDefinition|客户端应用程序用来创建和使用购买过程工作流实例的过程（作为 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 程序）和主机 (`PurchaseProcessHost`) 的定义。|  
-|WebClient|一个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端应用程序，它允许用户创建和参与购买过程的实例。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
+|WebClient|允许用户创建和参与购买过程的实例的 ASP.NET 客户端应用程序。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
 |WinFormsClient|一个 Windows 窗体客户端应用程序，它允许用户创建和参与购买过程的实例。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

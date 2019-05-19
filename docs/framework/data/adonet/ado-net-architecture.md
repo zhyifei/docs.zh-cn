@@ -2,12 +2,12 @@
 title: ADO.NET 体系结构
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584573"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877255"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 体系结构
 以前，数据处理主要依赖于基于连接的双层模型。 随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。  
@@ -52,9 +52,9 @@ ADO.NET 体系结构
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于在 Web 或 Intranet 上部署数据服务。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。 有关详细信息，请参阅 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
 ## <a name="xml-and-adonet"></a>XML 和 ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 利用 XML 的功能来提供对数据的断开连接的访问。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 已设计的手协作与.NET Framework; 中的 XML 类它们都是一个体系结构的组件。  
+ ADO.NET 利用 XML 的强大功能，以提供对数据断开连接的访问。 ADO.NET 是设计的手协作与.NET Framework; 中的 XML 类它们都是一个体系结构的组件。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 与.NET Framework 中的 XML 类聚合中`DataSet`对象。 无论 XML 源是文件还是 XML 流，都可以用其中的数据来填充 `DataSet`。 无论 `DataSet` 中数据的源是什么，都可以将 `DataSet` 作为符合万维网联合会 (W3C) 的 XML 进行编写，其架构作为 XML 架构定义语言 (XSD) 架构。 由于 `DataSet` 的本机序列化格式为 XML，因此它是用于在层间移动数据的绝佳媒介，这使 `DataSet` 成为了与 XML Web 服务之间远程处理数据和架构上下文的最佳选择。 有关详细信息，请参阅 [XML 文档和数据](../../../../docs/standard/data/xml/index.md)。  
+ 在 ADO.NET 和.NET Framework 中的 XML 类聚合`DataSet`对象。 无论 XML 源是文件还是 XML 流，都可以用其中的数据来填充 `DataSet`。 无论 `DataSet` 中数据的源是什么，都可以将 `DataSet` 作为符合万维网联合会 (W3C) 的 XML 进行编写，其架构作为 XML 架构定义语言 (XSD) 架构。 由于 `DataSet` 的本机序列化格式为 XML，因此它是用于在层间移动数据的绝佳媒介，这使 `DataSet` 成为了与 XML Web 服务之间远程处理数据和架构上下文的最佳选择。 有关详细信息，请参阅 [XML 文档和数据](../../../../docs/standard/data/xml/index.md)。  
   
 ## <a name="see-also"></a>请参阅
 

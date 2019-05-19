@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650004"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876094"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>如何：创建线性渐变
 GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，线性渐变中的颜色均匀地变化。 以便以非均匀方式将颜色更改，但是，可以自定义线性渐变。  
@@ -31,9 +31,9 @@ GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，
   
  下图显示线条、 椭圆和矩形。 请注意，图的颜色渐变本身可根据重复的水平坐标增加到 200 以上。  
   
- ![线性渐变](./media/cslineargradient1.png "cslineargradient1")  
+ ![使用颜色渐变填充直线、 椭圆和矩形。](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>若要使用水平线性渐变  
+## <a name="to-use-horizontal-linear-gradients"></a>若要使用水平线性渐变  
   
 - 将不透明红色和不透明蓝色分别作为第三个和第四个参数传递。  
   
@@ -56,9 +56,9 @@ GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，
   
  下图显示得到的椭圆和矩形。  
   
- ![线性渐变](./media/cslineargradient2.png "cslineargradient2")  
+ ![使用水平颜色渐变填充椭圆和矩形。](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>若要自定义线性渐变  
+## <a name="to-customize-linear-gradients"></a>若要自定义线性渐变  
   
 - 将不透明的黑色和不透明红色分别作为第三个和第四个参数传递。  
   
@@ -71,9 +71,9 @@ GDI + 提供了水平、 垂直，和对角线线性渐变。 默认情况下，
   
  下图显示了在行和椭圆。 请注意，在椭圆更改颜色逐渐沿任意移动行的是并行的行通过传递到 （0，0） 和 （200，100）。  
   
- ![线性渐变](./media/cslineargradient3.png "cslineargradient3")  
+ ![一个行和一个椭圆使用对角线的颜色渐变填充。](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>若要创建对角线线性渐变  
+## <a name="to-create-diagonal-linear-gradients"></a>若要创建对角线线性渐变  
   
 - 传入的不透明的蓝色和不透明绿色作为第三个和第四个参数，分别。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 311889d70a5dd9b30f4151c453d489edf77b92e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da2576696b514dca882636125cfb3e31a82d7f6e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591642"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878204"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>如何：远程调查打印机的状态
 在大中型公司，在任何给定时间里，都可能发生由于卡纸、纸张用完或某些其他有问题而导致多台打印机无法工作的情况。 打印机属性中公开的丰富[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供了一种方法用于执行快速调查打印机状态。  
@@ -51,7 +51,7 @@ ms.locfileid: "64591642"
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- 若要使用的标志检查打印机状态<xref:System.Printing.PrintQueue.QueueStatus%2A>属性，检查每个相关标志以查看它是否设置。 检查是否在一组位标志中设置了一个位的标准方法是执行一个逻辑 AND 运算，其中将该组标志作为一个操作数，将标志本身作为另一操作数。 由于该标志本身仅设置一个位，因此逻辑 AND 的结果至多为设置了该相同位。 若要查明事实是否如此，只需将逻辑 AND 的结果与标志本身进行比较。 有关详细信息，请参阅<xref:System.Printing.PrintQueueStatus>，则[& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/and-operator.md)，并<xref:System.FlagsAttribute>。  
+ 若要使用的标志检查打印机状态<xref:System.Printing.PrintQueue.QueueStatus%2A>属性，检查每个相关标志以查看它是否设置。 检查是否在一组位标志中设置了一个位的标准方法是执行一个逻辑 AND 运算，其中将该组标志作为一个操作数，将标志本身作为另一操作数。 由于该标志本身仅设置一个位，因此逻辑 AND 的结果至多为设置了该相同位。 若要查明事实是否如此，只需将逻辑 AND 的结果与标志本身进行比较。 有关详细信息，请参阅<xref:System.Printing.PrintQueueStatus>，则[& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)，并<xref:System.FlagsAttribute>。  
   
  对于已设置了其位的各个特性，代码会将一条通知添加到将向用户显示的最终报告中。 （下面会讨论代码结束时调用的 **ReportAvailabilityAtThisTime** 方法。）  
   
@@ -85,6 +85,6 @@ ms.locfileid: "64591642"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 运算符 (C#引用)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF 中的文档](documents-in-wpf.md)
 - [打印概述](printing-overview.md)

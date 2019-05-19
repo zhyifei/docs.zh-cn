@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875532"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877591"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 
@@ -88,7 +88,7 @@ ms.locfileid: "61875532"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在宿主环境中启用大型二进制数据流
 
-当在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序中创建数据服务时，使用 Windows Communication Foundation (WCF) 可提供 HTTP 协议实现。 默认情况下，WCF 将 HTTP 消息的大小限制为仅 65K 字节。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：
+ASP.NET Web 应用程序中创建数据服务时，Windows Communication Foundation (WCF) 用于提供 HTTP 协议实现。 默认情况下，WCF 将 HTTP 消息的大小限制为仅 65K 字节。 为了使大型二进制数据能够流入或流出数据服务，还必须将 Web 应用程序配置为启用大型二进制文件并使用流进行转换。 为此，请将以下内容添加到应用程序的 Web.config 文件的 `<configuration />` 元素中：
 
 > [!NOTE]
 > 必须使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>传输模式，以确保请求和响应消息中的二进制数据进行流式处理且不缓冲的 WCF。
@@ -125,7 +125,7 @@ ms.locfileid: "61875532"
 
 - 当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法时，您必须使用以方法参数的形式提供的 eTag 和 Content-Type 值。 不要在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供程序实现中设置 eTag 或 Content-Type 标头。
 
-- 默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。 因为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]开发服务器不支持此类编码，您不能使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。 有关详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]开发服务器，请参阅[对于 ASP.NET Web 项目的 Visual Studio 中的 Web 服务器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
+- 默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。 由于 ASP.NET Development Server 不支持此类编码，因此不能使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。 有关 ASP.NET 开发服务器的详细信息，请参阅[对于 ASP.NET Web 项目的 Visual Studio 中的 Web 服务器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
 
 <a name="versioning"></a>
 

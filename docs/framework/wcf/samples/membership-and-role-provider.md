@@ -2,15 +2,15 @@
 title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638394"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876747"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
-此“成员资格和角色提供程序”示例演示服务如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格和角色提供程序来对客户端进行身份验证和授权。  
+此成员资格和角色提供程序的示例演示如何服务可以使用 ASP.NET 成员资格和角色提供程序进行身份验证和授权的客户端。  
   
  在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
   
@@ -21,11 +21,11 @@ ms.locfileid: "64638394"
   
 - 客户端如何使用用户名和密码组合进行身份验证。  
   
-- 服务器如何根据 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序来验证客户端凭据。  
+- 服务器可以验证针对 ASP.NET 成员资格提供程序对客户端凭据。  
   
 - 如何使用服务器的 X.509 证书对该服务器进行身份验证。  
   
-- 服务器如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序将经过身份验证的客户端映射到角色。  
+- 服务器可以使用 ASP.NET 角色提供程序将经过身份验证的客户端映射到角色。  
   
 - 服务器如何使用 `PrincipalPermissionAttribute` 控制对服务公开的某些方法的访问。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "64638394"
 </system.web>  
 ```  
   
- 服务会公开一个单一终结点以便与使用 Web.config 配置文件定义的服务进行通信。 终结点由地址、绑定和协定组成。 绑定使用默认使用 Windows 身份验证的标准 `wsHttpBinding` 进行配置。 此示例将标准 `wsHttpBinding` 设置为使用用户名身份验证。 该行为指定将使用服务器证书进行服务身份验证。 服务器证书必须包含相同的值`SubjectName`作为`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)配置元素。 此外，该行为指定用户名-密码对的身份验证由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序执行，角色映射由 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序执行，方法是指定为这两个提供程序定义的名称。  
+ 服务会公开一个单一终结点以便与使用 Web.config 配置文件定义的服务进行通信。 终结点由地址、绑定和协定组成。 绑定使用默认使用 Windows 身份验证的标准 `wsHttpBinding` 进行配置。 此示例将标准 `wsHttpBinding` 设置为使用用户名身份验证。 该行为指定将使用服务器证书进行服务身份验证。 服务器证书必须包含相同的值`SubjectName`作为`findValue`属性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)配置元素。 此外，该行为指定身份验证的用户名和密码对由 ASP.NET 成员资格提供程序和角色映射由 ASP.NET 角色提供程序通过指定的两个提供程序定义的名称。  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ ms.locfileid: "64638394"
 2. 请确保你配置[ASP.NET 应用程序服务数据库](https://go.microsoft.com/fwlink/?LinkId=94997)。  
   
     > [!NOTE]
-    >  如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 配置 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序服务数据库时应使用该服务器，Web.config 连接字符串中也应使用该服务器。  
+    >  如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 配置 ASP.NET 应用程序服务数据库和 Web.config 连接字符串时，应使用此服务器。  
   
     > [!NOTE]
-    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作进程帐户应对本步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
+    >  在 ASP.NET 工作进程帐户必须具有在此步骤中创建的数据库上的权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
   
 3. 若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。  
   

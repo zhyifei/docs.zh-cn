@@ -9,18 +9,18 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e6e0597f40f32df17d435cb959b246b3b7872fa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002061"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881090"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>如何：在服务上模拟客户端
 模拟 Windows Communication Foundation (WCF) 服务上的客户端使服务能够代表客户端执行操作。 对于受访问控制列表 (ACL) 检查的操作（例如，访问计算机上的目录和文件，或访问 SQL Server 数据库），ACL 检查针对的是客户端用户帐户。 本主题演示一些基本步骤，通过这些步骤，Windows 域中的客户端可以设置客户端模拟级别。 有关此操作的可运行示例，请参阅 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关客户端模拟的详细信息，请参阅[委托和模拟](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 > [!NOTE]
->  当客户端和服务运行在同一计算机上，客户端运行在系统帐户（即 `Local System` 或 `Network Service`）下时，如果安全会话是使用状态安全上下文令牌建立的，则不能模拟客户端。 WinForms 或控制台应用程序通常运行在当前登录的帐户下，因此，默认情况下可以模拟该帐户。 但是，如果客户端为 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 页并且该页承载在 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 或 IIS 7.0 中，则默认情况下，客户端会在 `Network Service` 帐户下运行。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌。 但如果客户端是 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 页，并且使用了安全会话以及有状态的安全上下文令牌，则无法模拟该客户端。 有关在安全会话中使用有状态安全上下文令牌的详细信息，请参阅[如何：创建安全上下文令牌的安全会话](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  当客户端和服务运行在同一计算机上，客户端运行在系统帐户（即 `Local System` 或 `Network Service`）下时，如果安全会话是使用状态安全上下文令牌建立的，则不能模拟客户端。 WinForms 或控制台应用程序通常运行在当前登录的帐户下，因此，默认情况下可以模拟该帐户。 但是，当客户端是 ASP.NET 页，该页面托管在[!INCLUDE[iis601](../../../includes/iis601-md.md)]下运行 IIS 7.0 中，则客户端或`Network Service`默认情况下的帐户。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌。 但是，如果客户端是 ASP.NET 页，并且使用与有状态安全上下文令牌的安全会话，则不能模拟该客户端。 有关在安全会话中使用有状态安全上下文令牌的详细信息，请参阅[如何：创建安全上下文令牌的安全会话](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>根据缓存的 Windows 令牌在服务上启用客户端模拟  
   

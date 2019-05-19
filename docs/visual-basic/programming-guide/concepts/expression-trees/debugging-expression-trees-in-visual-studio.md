@@ -2,26 +2,43 @@
 title: Visual Studio (Visual Basic 中) 中调试表达式树
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: fb5905c3c1124dd64371216bddda0a17235abdce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc97d898c5956b5a569036e6e0fe1174714576d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787187"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879832"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio (Visual Basic 中) 中调试表达式树
+可以在调试应用程序时分析表达式树的结构和内容。 若要获取表达式树结构的快速概述，可以使用`DebugView`属性，它表示使用所述的特殊语法的表达式树[如下](#debugview-syntax)。 (请注意，`DebugView`仅在调试模式中可用。)  
 
-可以在调试应用程序时分析表达式树的结构和内容。 若要快速了解表达式树结构，可以使用 `DebugView` 属性，该属性仅在调试模式下可用。 有关调试的详细信息，请参阅[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)。
+![DebugView 中的 Visual Studio 调试器中的表达式树](media/debugging-expression-trees-in-visual-studio/debugview_vb.png)
 
-为了更好地表示表达式树的内容，`DebugView` 属性使用 Visual Studio 可视化工具。 有关详细信息，请参阅[创建自定义可视化工具](/visualstudio/debugger/create-custom-visualizers-of-data)。
+由于`DebugView`是一个字符串，可以使用[内置文本可视化工具](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)若要通过选择查看跨多个行**文本可视化工具**旁边的放大镜图标从`DebugView`标签。
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>打开表达式树的可视化工具
+ ![文本可视化工具应用于 DebugView 的结果](media/debugging-expression-trees-in-visual-studio/string_visualizer_vb.png)
 
-1. 单击“数据提示”、“监视”窗口、“自动”或“局部变量”窗口中表达式树的 `DebugView` 属性旁边显示的放大镜图标。
+或者，你可以安装并使用[自定义可视化工具](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)表达式树：
 
-    将会显示可视化工具列表。
+* [可读的表达式](https://github.com/agileobjects/ReadableExpressions)([MIT 许可证](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md)，位于[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers))，将呈现为表达式树C#代码：
 
-2. 单击要使用的可视化工具。
+  ![可读表达式可视化工具](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+
+* [表达式树可视化工具](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees)([MIT 许可证](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE))，并提供的表达式树、 其属性和相关的对象; 图形视图还可以呈现 Visual Basic 代码的表达式目录树：
+
+  ![ExpressionToString 可视化工具](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer_vb.png)
+
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>打开表达式树的可视化工具  
+  
+1. 单击放大镜图标旁边的表达式树中显示**数据提示**即**监视**窗口中，**自动**窗口中，或**局部变量**窗口。  
+  
+     显示可用的可视化工具的列表。: 
+
+      ![从 Visual Studio 打开可视化工具](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers_vb.png)
+
+2. 单击要使用的可视化工具。  
+
+## <a name="debugview-syntax"></a>`DebugView` 语法 
 
 每个表达式类型如以下各节所述显示在可视化工具中。
 

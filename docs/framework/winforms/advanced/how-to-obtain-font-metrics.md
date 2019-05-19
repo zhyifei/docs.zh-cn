@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648258"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881872"
 ---
 # <a name="how-to-obtain-font-metrics"></a>如何：获取字体规格
 <xref:System.Drawing.FontFamily>类提供了检索特定系列/样式组合的各种度量值的以下方法：  
@@ -28,22 +28,22 @@ ms.locfileid: "64648258"
   
  这些方法返回的数字都是采用字体设计单位，因此它们将独立的大小和单位的特定于<xref:System.Drawing.Font>对象。  
   
- 下图显示了各种指标。  
+ 下图显示了各种指标：
   
- ![字体文本](./media/fontstext7a.png "fontstext7A")  
+ ![图中的字体规格： 上升、 下降和行距。](./media/how-to-obtain-font-metrics/various-font-metrics.png)  
   
 ## <a name="example"></a>示例  
  以下示例显示 Arial 字体系列的正则样式的度量值。 该代码还创建<xref:System.Drawing.Font>具有大小为 16 像素和显示的度量值 （以像素为单位） 对该特定对象 （基于 Arial 系列）<xref:System.Drawing.Font>对象。  
   
- 下图显示了示例代码的输出。  
+ 下图显示了示例代码的输出：
   
- ![字体文本](./media/csfontstext8.png "csFontsText8")  
+ ![代码的输出示例，Arial 字体规格。](./media/how-to-obtain-font-metrics/example-output-code-arial-font.png)  
   
  请注意上图中的输出的前两行。 <xref:System.Drawing.Font>对象返回的大小为 16，和<xref:System.Drawing.FontFamily>对象返回 2,048 全身高度。 这两个数字 （16 和 2,048） 是字体设计单位和的单位 （在本例中为像素） 之间进行转换的关键<xref:System.Drawing.Font>对象。  
   
  例如，您可以将转换上移量从设计单位为像素，如下所示：  
   
- ![字体文本](./media/fontstext9.png "FontsText9")  
+ ![显示从设计单位转换为像素的公式](./media/how-to-obtain-font-metrics/convert-font-units-example.png)  
   
  下面的代码定位文本垂直通过设置<xref:System.Drawing.PointF.Y%2A>的数据成员<xref:System.Drawing.PointF>对象。 Y 坐标为增量进行递增`font.Height`的每一行新文本。 <xref:System.Drawing.Font.Height%2A>的属性<xref:System.Drawing.Font>对象返回的行间距 （以像素为单位） 对该特定<xref:System.Drawing.Font>对象。 在此示例中，返回的号<xref:System.Drawing.Font.Height%2A>为 19。 请注意，这是通过将行间距度量值转换为像素中获取的编号 （向上舍入为整数） 相同。  
   

@@ -2,12 +2,12 @@
 title: 招聘流程
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622487"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881901"
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
@@ -126,7 +126,7 @@ ms.locfileid: "64622487"
 |持久性计时器|`ResumeRequestService` 使用持久性计时器定义招聘启事的持续时间（一旦超时到期，将关闭招聘启事）。|ResumeRequestService|  
 |事务|<xref:System.Activities.Statements.TransactionScope> 用于确保数据在若干个活动的执行期间（接收新简历时）保持一致。|ResumeRequestService|  
 |事务|自定义持久性参与者 (`HiringRequestPersistenceParticipant`) 和自定义跟踪参与者 (`HistoryFileTrackingParticipant`) 使用相同的事务。|HiringRequestService|  
-|在 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 应用程序中使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。|从两个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序访问工作流。|InternalClient / CareersWebSite|  
+|使用[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ASP.NET 应用程序中。|从两个 ASP.NET 应用程序访问工作流。|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>数据存储  
  数据存储在名为 `ContosoHR` 的 SQL Server 数据库中（创建此数据库的脚本位于 `DbSetup` 文件夹中）。 工作流实例存储在名为 `InstanceStore` 的 SQL Server 数据库中（创建实例存储的脚本是 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 分布的一部分）。  

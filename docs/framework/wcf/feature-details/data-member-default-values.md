@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592588"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881266"
 ---
 # <a name="data-member-default-values"></a>数据成员默认值
 在.NET Framework 中，类型具有的概念*默认值*。 例如，对于任何引用类型，默认值为 `null`，而整型的默认值为零。 如果某个数据成员设置为其默认值，有时会希望序列化数据中不包含该数据成员。 由于成员具有默认值，这个实际值不需要进行序列化；这样处理可以提高性能。  
@@ -54,7 +54,7 @@ ms.locfileid: "65592588"
   
 - 要使用的实际默认值在架构中不存在。 由接收终结点负责对缺少元素进行适当解释。  
   
- 在架构导入<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>属性自动设置为`false`时提到的特定于 WCF 的批注以前检测到。 对于 `false` 属性设置为 `nillable` 的引用类型，该属性也设置为 `false`，以支持在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务时常遇到的特定互操作性方案。  
+ 在架构导入<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>属性自动设置为`false`时提到的特定于 WCF 的批注以前检测到。 它还设置为`false`对于具有引用类型`nillable`属性设置为`false`以支持使用 ASP.NET Web 服务时通常会发生的特定互操作性方案。  
   
 ## <a name="see-also"></a>请参阅
 

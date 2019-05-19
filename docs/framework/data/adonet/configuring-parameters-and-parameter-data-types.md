@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583823"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879958"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>配置参数和参数数据类型
 
@@ -96,7 +96,7 @@ ms.locfileid: "65583823"
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>对 SqlCommand 和存储的过程使用参数
 
-在数据驱动的应用程序中，存储过程具有许多优势。 通过利用存储过程，数据库操作可以包装在单个命令中，为获取最佳性能而进行优化并通过附加的安全性得到增强。 虽然可以通过传递存储的过程的名称后接参数自变量的 SQL 语句，通过调用存储的过程<xref:System.Data.Common.DbCommand.Parameters%2A>的集合[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.Common.DbCommand>对象使您更为明确地定义存储过程参数，还可以访问输出参数和返回值。
+在数据驱动的应用程序中，存储过程具有许多优势。 通过利用存储过程，数据库操作可以包装在单个命令中，为获取最佳性能而进行优化并通过附加的安全性得到增强。 虽然可以通过传递存储的过程的名称后接参数自变量的 SQL 语句，通过调用存储的过程<xref:System.Data.Common.DbCommand.Parameters%2A>ADO.NET 集合<xref:System.Data.Common.DbCommand>对象使您更为明确地定义存储的过程参数，还可以访问输出参数和返回值。
 
 > [!NOTE]
 > 参数化语句在服务器上通过使用 `sp_executesql,` 执行，sp_executesql 允许重复使用查询计划。 `sp_executesql` 批处理命令中的本地光标或变量对于调用 `sp_executesql`的批处理命令是不可见的。 数据库上下文中的更改只持续到 `sp_executesql` 语句的结尾。 有关详细信息，请参阅[sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)。

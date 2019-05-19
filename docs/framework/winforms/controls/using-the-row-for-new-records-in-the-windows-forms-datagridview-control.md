@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651540"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882432"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中使用新记录行
 当你使用<xref:System.Windows.Forms.DataGridView>用于编辑应用程序中的数据，通常要使用户能够将新的数据行添加到数据存储。 <xref:System.Windows.Forms.DataGridView>控件通过其中总是最后一行以显示新记录，提供行来支持此功能。 它是使用其行标题中的星号 （*） 符号进行标记。 以下各节讨论一些应考虑启用程序与用于新记录的行时的情况。  
@@ -47,7 +47,7 @@ ms.locfileid: "64651540"
 ## <a name="sorting"></a>排序  
  在未绑定模式下，将总是被新记录添加到末尾<xref:System.Windows.Forms.DataGridView>即使用户已排序的内容<xref:System.Windows.Forms.DataGridView>。 用户将需要再次应用排序，以便对行进行排序到正确的位置;此行为是类似于<xref:System.Windows.Forms.ListView>控件。  
   
- 在数据绑定和虚拟模式下，插入行为应用排序时将依赖于数据模型的实现。 有关[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，该行立即排列到正确的位置。  
+ 在数据绑定和虚拟模式下，插入行为应用排序时将依赖于数据模型的实现。 有关 ADO.NET 中，行在立即排序到正确的位置。  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>用于新记录的行上的其他说明  
  不能设置<xref:System.Windows.Forms.DataGridViewRow.Visible%2A>属性到此行`false`。 <xref:System.InvalidOperationException>如果尝试执行此操作会引发。  

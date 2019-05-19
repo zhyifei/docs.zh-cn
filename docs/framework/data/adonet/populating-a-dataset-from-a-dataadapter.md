@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: c49e810b830ecb7327f400d9ef183f4db9c7d736
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 88905f0ef735aef742c0279ac86b640d8a9b9b0e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584565"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877367"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充数据集
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet>是提供一致关系编程模型独立于数据源的数据的驻留内存表示形式。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
+ADO.NET<xref:System.Data.DataSet>是提供一致关系编程模型独立于数据源的数据的驻留内存表示形式。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
   
  `SelectCommand` 的 `DataAdapter` 属性是一个 `Command` 对象，用于从数据源中检索数据。 `InsertCommand`的 `UpdateCommand`、 `DeleteCommand` 和 `DataAdapter` 属性是 `Command` 对象，用于按照对 `DataSet`中数据的修改来管理对数据源中数据的更新。 中更详细地介绍这些属性[使用 Dataadapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  
   
@@ -120,7 +120,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>SQL Server Decimal 类型  
  默认情况下，`DataSet`使用.NET Framework 数据类型存储数据。 对于大多数应用程序，这些类型都提供了一种方便的数据源信息表示形式。 但是，当数据源中的数据类型是 SQL Server decimal 或 numeric 数据类型时，这种表示形式可能会导致问题。 .NET Framework`decimal`数据类型的 28 个有效位，最多允许，而 SQL Server`decimal`数据类型则允许 38 个有效位。 如果 `SqlDataAdapter` 在 `Fill` 操作过程中确定 SQL Server `decimal` 字段的精度大于 28 个字符，则不会将当前行添加到 `DataTable`。 此时将发生 `FillError` 事件，使您能够确定是否将发生精度损失并作出适当的响应。 有关详细信息`FillError`事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。 若要获取 SQL Server `decimal` 值，还可以使用 <xref:System.Data.SqlClient.SqlDataReader> 对象并调用 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 方法。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 增强了对 <xref:System.Data.SqlTypes> 中的 `DataSet`的支持。 有关详细信息，请参阅 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
+ ADO.NET 2.0 引入了增强的支持<xref:System.Data.SqlTypes>在`DataSet`。 有关详细信息，请参阅 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
   
 ## <a name="ole-db-chapters"></a>OLE DB 章节  
  分层行集或章节（OLE DB 类型 `DBTYPE_HCHAPTER`、ADO 类型 `adChapter`）可用于填充 `DataSet`的内容。 当 <xref:System.Data.OleDb.OleDbDataAdapter> 在 `Fill` 操作过程中遇到章节列时，将为章节列创建一个 `DataTable` ，并使用章节中的列和行填充该表。 为章节列创建的表使用父表名称和章节列名称来命名，其形式为“*ParentTableNameChapteredColumnName*”。 如果 `DataSet` 中已存在与章节列的名称相匹配的表，则将使用章节数据填充当前表。 如果现有表中不存在与章节中的列相匹配的列，则将添加新列。  

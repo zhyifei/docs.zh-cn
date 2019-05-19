@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949859"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881364"
 ---
 # <a name="securing-services"></a>保证服务的安全
 Windows Communication Foundation (WCF) 服务的安全性包括两个主要要求： 传输安全和授权。 (第三个要求中所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 WCF 的功能，很容易地实现两个主要要求。  
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 服务的安全性包括两个主要要�
  Internet 上的安全包含与 Intranet 上的安全相同的要求。 服务需要提供其凭据以证明其真实性，客户端需要向服务证明其标识。 在证明了客户端的标识之后，服务可以控制客户端拥有怎样的资源访问权限。 但是，由于 Internet 的特性不同，所提供的凭据与 Windows 域中使用的凭据会有所不同。 Kerberos 控制器可以使用凭据的票证处理域中用户的身份验证，而在 Internet 上，服务和客户端依赖于多种不同方法的任何一种来提供凭据。 但是，本主题的目的是提供常用的方法，可用于创建可在 Internet 访问的 WCF 服务。  
   
 ### <a name="using-iis-and-aspnet"></a>使用 IIS 和 ASP.NET  
- Internet 安全的要求和用于解决这些问题的机制并不是什么新鲜事物。 IIS 是 Microsoft 的 Web 服务器进行 Internet 和具有许多安全功能，解决这些问题;此外，[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]包括 WCF 服务可以使用的安全功能。 若要利用这些安全功能，托管在 IIS 上的 WCF 服务。  
+ Internet 安全的要求和用于解决这些问题的机制并不是什么新鲜事物。 IIS 是 Microsoft 的 Web 服务器进行 Internet 和具有许多安全功能，解决这些问题;此外，ASP.NET 包括 WCF 服务可以使用的安全功能。 若要利用这些安全功能，托管在 IIS 上的 WCF 服务。  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>使用 ASP.NET 成员资格和角色提供程序  
  ASP.NET 包括成员资格和角色提供程序。 提供程序是一个用于对调用方进行身份验证的用户名/密码对数据库，该数据库还允许您指定每个调用方的访问特权。 使用 WCF，可以轻松地使用预先存在的成员身份和角色提供程序通过配置。 有关演示此内容的示例应用程序，请参阅 [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) 示例。  

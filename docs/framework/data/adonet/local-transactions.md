@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584472"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882031"
 ---
 # <a name="local-transactions"></a>本地事务
-如果要将多项任务绑定在一起，使其作为单个工作单元来执行，可以使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的事务。 例如，假设应用程序执行两个任务。 首先使用订单信息更新表。 然后更新包含库存信息的表，将已订购的商品记入借方。 如果任何一项任务失败，则这两个更新将回滚。  
+当你想要将多个任务绑定在一起，以便它们作为单个工作单元执行时使用 ADO.NET 中的事务。 例如，假设应用程序执行两个任务。 首先使用订单信息更新表。 然后更新包含库存信息的表，将已订购的商品记入借方。 如果任何一项任务失败，则这两个更新将回滚。  
   
 ## <a name="determining-the-transaction-type"></a>确定事务类型  
  事务被视为本地事务时它是一个单阶段事务，并且由数据库直接处理。 事务被视为是分布式的事务协调由事务监视和使用防故障机制 （例如两阶段提交） 解决事务时。  
@@ -24,7 +24,7 @@ ms.locfileid: "65584472"
 > 在服务器上执行它们时，事务是最有效。 如果使用的 SQL Server 数据库广泛使用显式事务，应考虑使用 Transact-SQL BEGIN TRANSACTION 语句以存储过程的形式编写这些事务。
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>使用单个连接执行事务  
- 在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中，使用 `Connection` 对象控制事务。 可以使用 `BeginTransaction` 方法启动本地事务。 开始事务后，可以使用 `Transaction` 对象的 `Command` 属性在该事务中登记一个命令。 然后，可以根据事务组件的成功或失败，提交或回滚在数据源上进行的修改。  
+ 在 ADO.NET 中，控制的事务`Connection`对象。 可以使用 `BeginTransaction` 方法启动本地事务。 开始事务后，可以使用 `Transaction` 对象的 `Command` 属性在该事务中登记一个命令。 然后，可以根据事务组件的成功或失败，提交或回滚在数据源上进行的修改。  
   
 > [!NOTE]
 >  不应对本地事务使用 `EnlistDistributedTransaction` 方法。  
@@ -42,7 +42,7 @@ ms.locfileid: "65584472"
   
 4. 调用 <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 对象的 <xref:System.Data.SqlClient.SqlTransaction> 方法完成事务，或调用 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 方法结束事务。 如果在 <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 或 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 方法执行之前连接关闭或断开，事务将回滚。  
   
- 以下代码示例演示对 Microsoft SQL Server 使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的事务逻辑。  
+ 下面的代码示例演示如何使用 ADO.NET 和 Microsoft SQL Server 事务逻辑。  
   
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  

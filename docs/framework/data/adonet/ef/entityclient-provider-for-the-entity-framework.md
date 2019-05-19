@@ -2,18 +2,18 @@
 title: 用于实体框架的 EntityClient 提供程序
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583704"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878796"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>用于实体框架的 EntityClient 提供程序
 EntityClient 提供程序是一种数据提供程序，实体框架应用程序使用该提供程序访问在概念模型中描述的数据。 有关概念模型的信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。 EntityClient 使用其他 .NET Framework 数据提供程序访问数据源。 例如，EntityClient 在访问 SQL Server 数据库时使用 SQL Server .NET Framework 数据提供程序 (SqlClient)。 有关 SqlClient 提供程序的信息，请参阅[用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。 EntityClient 提供程序是在 <xref:System.Data.EntityClient> 命名空间中实现的。  
   
 ## <a name="managing-connections"></a>管理连接  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 通过提供到基础数据提供程序和关系数据库的 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]，建立在特定于存储的 <xref:System.Data.EntityClient.EntityConnection> 数据提供程序的基础之上。 若要构造<xref:System.Data.EntityClient.EntityConnection>对象，你必须引用一组包含所需模型和映射，以及特定于存储的数据提供程序名称和连接字符串的元数据引用。 之后<xref:System.Data.EntityClient.EntityConnection>是到位，实体可以访问通过从概念模型生成的类。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]通过提供特定于存储的 ADO.NET 数据提供程序的基础上构建<xref:System.Data.EntityClient.EntityConnection>与基础数据提供程序和关系数据库。 若要构造<xref:System.Data.EntityClient.EntityConnection>对象，你必须引用一组包含所需模型和映射，以及特定于存储的数据提供程序名称和连接字符串的元数据引用。 之后<xref:System.Data.EntityClient.EntityConnection>是到位，实体可以访问通过从概念模型生成的类。  
   
  可以在 app.config 文件中指定连接字符串。  
   

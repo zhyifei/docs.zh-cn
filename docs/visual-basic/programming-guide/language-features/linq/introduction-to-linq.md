@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a5fbc28a470415312540fff0acc969f939410b5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633498"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875532"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
 语言集成查询 (LINQ) 将查询功能添加到 Visual Basic，并提供了简单而强大的功能用于与所有种类的数据处理。 而不是将查询发送到数据库进行处理，或使用你要搜索的数据的每种类型的不同的查询语法，LINQ 引入了查询作为 Visual Basic 语言的一部分。 它使用统一语法，而不考虑数据的类型。  
@@ -43,7 +43,7 @@ ms.locfileid: "64633498"
 |LINQ to Objects|通过 LINQ to Objects 提供程序，可以查询内存中集合和数组。 如果对象支持 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 接口，则可以通过 LINQ to Objects 提供程序对其进行查询。<br /><br /> 可以通过导入启用 LINQ to Objects 提供程序<xref:System.Linq>命名空间，默认情况下，对于所有 Visual Basic 项目导入。<br /><br /> 有关 LINQ to Objects 提供程序的详细信息，请参阅[LINQ to Objects](../../concepts/linq/linq-to-objects.md)。|  
 |LINQ to SQL|通过 LINQ to SQL 提供程序，可以查询和修改 SQL Server 数据库中的数据。 这样就可以轻松将应用程序的对象模型映射到数据库中的表和对象。<br /><br /> Visual Basic，可以更轻松地使用 LINQ to SQL 通过包括对象关系设计器 （O/R 设计器）。 此设计器用于在应用程序中创建映射到数据库中的对象的对象模型。 O/R 设计器还提供了功能来映射存储的过程和函数到<xref:System.Data.Linq.DataContext>对象，该管理与数据库的通信和存储进行开放式并发检查的状态对象。<br /><br /> 有关 LINQ to SQL 提供程序的详细信息，请参阅[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。 有关对象关系设计器的详细信息，请参阅[LINQ to SQL 工具在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。|  
 |LINQ to XML|通过 LINQ to XML 提供程序，可以查询和修改 XML。 可以修改内存中 XML，也可以从文件加载 XML 以及将 XML 保存到文件。<br /><br /> 此外，LINQ to XML 提供程序，XML 文本和 XML 轴属性，您可以在 Visual Basic 代码中直接编写 XML。 有关详细信息，请参阅[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)。|  
-|LINQ to DataSet|LINQ to DataSet 提供程序使你可以在查询和更新数据[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据集。 可以将 LINQ 的强大功能添加到使用数据集的应用程序，以便简化和扩展查询、聚合和更新数据集中数据的功能。<br /><br /> 有关详细信息，请参阅 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)。|  
+|LINQ to DataSet|LINQ to DataSet 提供程序，可查询和更新中的 ADO.NET 数据集的数据。 可以将 LINQ 的强大功能添加到使用数据集的应用程序，以便简化和扩展查询、聚合和更新数据集中数据的功能。<br /><br /> 有关详细信息，请参阅 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)。|  
   
 ## <a name="structure-of-a-linq-query"></a>LINQ 查询的结构  
  LINQ 查询，通常称为*查询表达式*，由标识数据源和查询的迭代变量的查询子句的组合而成。 查询表达式还可以包含排序、筛选、分组和联接的说明或要对源数据应用的计算。 查询表达式语法类似于 SQL的语法；因此，你可能发现该语法大都非常熟悉。  

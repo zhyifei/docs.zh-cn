@@ -2,12 +2,12 @@
 title: 实体框架术语
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583526"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877487"
 ---
 # <a name="entity-framework-terminology"></a>实体框架术语
 本主题定义中经常引用的术语[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档。 如果有其他可用信息，则会提供指向相关主题的链接。  
@@ -30,7 +30,7 @@ ms.locfileid: "65583526"
 |.edmx 文件|一种 XML 文件，该文件包含概念模型（以 CSDL 表示）、存储模型（以 SSDL 表示）以及这两个模型之间的映射（以 MSL 表示）。 .edmx 文件由[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]工具创建。 有关详细信息，请参阅[.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。|  
 |end|参与关联的实体。<br /><br /> 有关详细信息，请参阅[最终元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl)并[关联端](../../../../../docs/framework/data/adonet/association-end.md)。|  
 |Entity — 实体|应用程序域中的概念，数据类型是根据实体定义的。<br /><br /> 有关详细信息，请参阅[EntityType 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)并[实体类型](../../../../../docs/framework/data/adonet/entity-type.md)。|  
-|EntityClient|一个与存储无关的 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 数据提供程序，该提供程序包含诸如 `EntityConnection`、`EntityCommand` 和 `EntityDataReader` 等类。 适用于[!INCLUDE[esql](../../../../../includes/esql-md.md)]连接到特定的存储器[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]数据提供程序，如`SqlClient`。<br /><br /> 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。|  
+|EntityClient|包含类，如独立于存储的 ADO.NET 数据提供程序`EntityConnection`， `EntityCommand`，和`EntityDataReader`。 适用于[!INCLUDE[esql](../../../../../includes/esql-md.md)]，并连接到存储特定 ADO.NET 数据提供程序，如`SqlClient`。<br /><br /> 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。|  
 |Entity Container — 实体容器|用于指定将在指定的命名空间中实现的实体集和关联集。<br /><br /> 有关详细信息，请参阅[EntityContainer 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl)并[实体容器](../../../../../docs/framework/data/adonet/entity-container.md)。|  
 |实体数据模型 (EDM)|以实体和关系来描述数据结构（不考虑其存储形式）的一组概念。<br /><br /> 有关详细信息，请参阅[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。|  
 |Entity Framework|一套支持开发面向数据的软件应用程序的技术，这些技术使开发人员能够处理映射到数据源中的逻辑架构的概念模型。<br /><br /> 有关详细信息，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)。|  

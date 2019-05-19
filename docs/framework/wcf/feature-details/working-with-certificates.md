@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625816"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881103"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
@@ -29,7 +29,7 @@ ms.locfileid: "64625816"
 ## <a name="certificate-stores"></a>证书存储区  
  证书存放在存储区中。 主要的存储区位置有两个，它们进一步分为子存储区。 如果您是计算机的管理员，就可以使用 MMC 管理单元工具查看这两个主要存储区。 非管理员只能查看当前用户存储区。  
   
-- **本地计算机存储区**。 该存储区包含计算机进程（例如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]）访问的证书。 此位置用于存储向客户端验证服务器身份的证书。  
+- **本地计算机存储区**。 这包含计算机进程，如 ASP.NET 访问的证书。 此位置用于存储向客户端验证服务器身份的证书。  
   
 - **当前用户存储区**。 交互式应用程序通常将证书放在此位置，供计算机的当前用户使用。 如果要创建客户端应用程序，通常会将向服务验证用户身份的证书放在此处。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64625816"
 - 如果服务或客户端是在某个用户帐户下运行的应用程序，则使用“当前用户”存储区。  
   
 ### <a name="accessing-stores"></a>访问存储区  
- 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
+ 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 创建由 Internet 信息服务 (IIS) 承载服务时，ASP.NET 帐户下运行 ASP.NET 进程。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>链信任和证书颁发机构  
  证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 然后，CA 的证书颁发原始 CA 的证书的 CA 的链接。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。  

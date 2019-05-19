@@ -2,15 +2,15 @@
 title: 迁移注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: f65c558b0cbc02bdff8e78189a38d06a7502434f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e3410c62ba2fb9b8cc3dd0c6aa80707e03793fd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583575"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880072"
 ---
 # <a name="migration-considerations-entity-framework"></a>迁移注意事项（实体框架）
-现有的应用程序可以从多方面受益于 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 实体框架。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关使用的优点的详细信息[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)并[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
+ADO.NET 实体框架提供的现有应用程序的多项优势。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关使用的优点的详细信息[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)并[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
   
  为了利用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的益处，您可以将现有应用程序迁移到[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 某些任务对于所有迁移的应用程序是通用的。 这些通用任务包括升级应用程序以使用.NET Framework 版本 3.5 Service Pack 1 (SP1) 开始定义模型和映射，以及配置实体框架。 在将应用程序迁移至[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]时，还需要考虑其他一些注意事项。 相关注意事项取决于要迁移的应用程序的类型及具体功能。 本主题提供的信息可帮助您为现有应用程序选择最佳的升级途径。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "65583575"
   
 - 对于大型或复杂的应用程序，不需要一次性地将整个应用程序迁移到实体框架。 但是，在数据源发生更改时，仍然需要更改应用程序中不使用实体框架的任何部分。  
   
-- 应用程序的其他部分可以共享实体框架所用的数据提供程序连接，因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 数据提供程序访问数据源。 例如，实体框架使用 SqlClient 提供程序访问 SQL Server 数据库。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
+- 使用实体框架的数据提供程序连接可以共享与你的应用程序的其他部分，因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用 ADO.NET 数据提供程序来访问数据源。 例如，实体框架使用 SqlClient 提供程序访问 SQL Server 数据库。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
   
 ## <a name="common-migration-tasks"></a>通用迁移任务  
  将现有应用程序迁移到[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的途径取决于应用程序的类型以及现有的数据访问策略。 但是，在将现有应用程序迁移到[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]时，总是要执行以下任务。  
@@ -56,7 +56,7 @@ ms.locfileid: "65583575"
  从.NET Framework 4，开始[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持"纯旧式"CLR 对象 (POCO) (也称为持久性未知对象。 大多数情况下，通过进行少量修改，现有对象可以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有关详细信息，请参阅[使用 POCO 实体](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。 此外可以将迁移到应用程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]和使用实体框架工具生成的数据类。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>有关使用 ADO.NET 提供程序的应用程序的注意事项  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序，例如 SqlClient，使你能够查询要返回表格数据的数据源。 此外可以将数据加载到[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]数据集。 下表介绍在升级使用现有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序的应用程序时的注意事项：  
+ ADO.NET 提供程序，例如 SqlClient，使你能够查询要返回表格数据的数据源。 此外可以将数据加载到 ADO.NET DataSet。 以下列表介绍了使用现有的 ADO.NET 提供程序的应用程序升级的事项：  
   
 - 使用数据读取器显示表格格式数据。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "65583575"
   如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不提供功能的应用程序所需的数据集，您仍可以充分利用 LINQ 查询的优点使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]。 有关详细信息，请参阅 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>有关将数据绑定到控件的应用程序的注意事项  
- .NET Framework 使您可以如包装在数据源的数据，数据集或[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]数据源控件，，然后将用户界面元素绑定到这些数据控件。 下表介绍将控件绑定到实体框架数据时的注意事项。  
+ .NET Framework 可以封装数据源，例如数据集或 ASP.NET 数据源控件中的数据，然后将用户界面元素绑定到这些数据控件。 下表介绍将控件绑定到实体框架数据时的注意事项。  
   
 - 将数据绑定到控件。  
 
@@ -79,9 +79,9 @@ ms.locfileid: "65583575"
   
   有关详细信息，请参阅[对象绑定到控件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100))。  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 数据源控件。  
+- ASP.NET 数据源控件。  
 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包括用于简化数据绑定中的数据源控件[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web 应用程序。 有关详细信息，请参阅[EntityDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100))。  
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包括设计用于简化 ASP.NET Web 应用程序中的数据绑定的数据源控件。 有关详细信息，请参阅[EntityDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100))。  
   
 ## <a name="other-considerations"></a>其他注意事项  
  以下是在将特定类型的应用程序迁移到实体框架时可能需要考虑的一些注意事项。  
@@ -100,7 +100,7 @@ ms.locfileid: "65583575"
   
 - 维护状态的应用程序。  
 
-  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 应用程序需要经常维护网页或用户会话的状态。 中的对象<xref:System.Data.Objects.ObjectContext>可以存储在客户端视图状态或在服务器上的会话状态中实例，和更高版本能检索和重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
+  ASP.NET Web 应用程序需要经常维护网页或用户会话的状态。 中的对象<xref:System.Data.Objects.ObjectContext>可以存储在客户端视图状态或在服务器上的会话状态中实例，和更高版本能检索和重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb2d75b7c18aa2e65c5e90749852383eea7985b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013252"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880682"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>如何：设置 Windows 窗体 TreeView 控件的图标
 Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点旁的图标。 图标位于即时左侧的节点文本。 若要显示这些图标，则必须将关联的树视图<xref:System.Windows.Forms.ImageList>控件。 有关图像列表的详细信息，请参阅[ImageList 组件](imagelist-component-windows-forms.md)和[如何：添加或删除图像与 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
@@ -45,7 +45,7 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点
   
 2. 将节点设置<xref:System.Windows.Forms.TreeNode.ImageIndex%2A>和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性。 <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>属性确定节点的正常和展开状态，显示的图像和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性确定显示节点的所选状态的图像。  
   
-     在代码中，或在树节点编辑器中，可以设置这些属性。 若要打开树节点编辑器中，单击省略号按钮 ( ![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性窗口上的属性。  
+     在代码中，或在树节点编辑器中，可以设置这些属性。 若要打开树节点编辑器中，单击省略号按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性窗口上的属性。  
   
     ```vb  
     ' (Assumes that ImageList1 contains at least two images and  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645765"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875890"
 ---
 # <a name="windows-forms-overview"></a>Windows 窗体概述
 
@@ -66,7 +66,7 @@ ms.locfileid: "65645765"
 |描述|帮助主题|
 |-----------------|----------------|
 |使用 <xref:System.Windows.Forms.BindingSource> 组件|[如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 数据源|[如何：排序和筛选 ADO.NET 数据与 Windows 窗体 BindingSource 组件](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用 ADO.NET 数据源|[如何：排序和筛选 ADO.NET 数据与 Windows 窗体 BindingSource 组件](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用“数据源”窗口|[在 Visual Studio 中将 Windows 窗体控件绑定到数据](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |使用应用程序设置|[如何：创建应用程序设置](./advanced/how-to-create-application-settings.md)|
 

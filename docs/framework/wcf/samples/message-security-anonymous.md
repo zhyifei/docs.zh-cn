@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 8a1267f020f512e366e59eb5d0c6383d97186412
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b9345de7961689e15e60c6bf2d1916c8c8d56ba3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664888"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876783"
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
 匿名消息安全的示例演示如何实现 Windows Communication Foundation (WCF) 应用程序使用消息级安全的无客户端身份验证，但需要使用服务器的 X.509 服务器身份验证证书。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。
@@ -174,7 +174,7 @@ Press <ENTER> to terminate client.
 
 - 授予对证书私钥的权限。
 
-     Setup.bat 批处理文件中的以下行可以让 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 辅助进程帐户访问 LocalMachine 存储区中存储的服务器证书。
+     Setup.bat 批处理文件中的以下行进行 ASP.NET 工作进程帐户访问 LocalMachine 存储区中存储的服务器证书。
 
     ```bat
     echo ************

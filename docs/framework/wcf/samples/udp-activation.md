@@ -2,12 +2,12 @@
 title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 158aa804a796f30e7450bda2fadc256ca3579579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 127516b79bcb15406bfade09bc1309e55aac3dcf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623737"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881007"
 ---
 # <a name="udp-activation"></a>UDP 激活
 此示例基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以使用 Windows 进程激活服务 (WAS) 支持进程激活。  
@@ -75,7 +75,7 @@ ms.locfileid: "64623737"
   
 #### <a name="to-set-up-this-sample"></a>设置此示例  
   
-1. 使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 安装 ASP.NET 4.0 使用以下命令。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

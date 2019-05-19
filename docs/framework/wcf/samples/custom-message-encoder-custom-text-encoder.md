@@ -2,12 +2,12 @@
 title: 自定义消息编码器：自定义文本编码器的 WCF
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: a1523c854bbae09b2ac5cb0565962b394ec9b70e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cbdb9e2a17eb006b589fe42fe6adf62ce37d340
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003075"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878399"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自定义消息编码器：自定义文本编码器
 
@@ -36,7 +36,7 @@ ms.locfileid: "62003075"
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。
+1. 安装 ASP.NET 4.0 使用以下命令。
 
     ```
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable

@@ -2,12 +2,12 @@
 title: 支持的部署方案的 WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639137"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881051"
 ---
 # <a name="supported-deployment-scenarios"></a>支持的部署方案
 
@@ -27,7 +27,7 @@ WCF 支持以下标准命名的权限集下运行的应用程序中的功能子�
 
 ## <a name="partial-trust-on-the-server"></a>在服务器上的部分信任
 
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序宿主服务的许多商业提供程序要求在其服务器上的应用程序以 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 中等信任权限集来运行。 WCF 服务可以在这些环境中运行，前提是它们使用<xref:System.ServiceModel.BasicHttpBinding>，则<xref:System.ServiceModel.WebHttpBinding>，或<xref:System.ServiceModel.WSHttpBinding>具有传输级安全性。
+承载服务的 ASP.NET Web 应用程序的许多商业提供程序托管在其服务器上运行的应用程序中运行[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]中等信任权限集。 WCF 服务可以在这些环境中运行，前提是它们使用<xref:System.ServiceModel.BasicHttpBinding>，则<xref:System.ServiceModel.WebHttpBinding>，或<xref:System.ServiceModel.WSHttpBinding>具有传输级安全性。
 
 在中等信任宿主环境中运行的 WCF 服务也可用作中间层服务通过将消息发送到客户端请求的响应中的其他服务器。 如果宿主环境已授予应用程序适当的 <xref:System.Net.WebPermission> 以向所需服务器发出出站请求，则支持服务器上的中间层方案。
 

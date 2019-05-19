@@ -2,12 +2,12 @@
 title: LINQ 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 79d6c52656e545c07260f3a97b089c238a74db3c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583523"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878333"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
 现在，许多业务开发人员必须使用两个 （或多个） 的编程语言： 对于业务逻辑和表示层 （如 Visual C# 或 Visual Basic），一种高级语言和用于与数据库交互的查询语言 (如[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 这要求开发人员精通多种语言才能奏效，同时也导致在开发环境中语言不匹配。 例如，使用数据访问 API 对数据库执行查询的应用程序会将查询指定为用引号括起的字符串。 编译器不能读取此查询字符串，因此不会检查是否有错误，如语法无效或引用的列或行是否实际存在。 不会检查查询参数的类型，也不支持 `IntelliSense`。  
@@ -27,7 +27,7 @@ ms.locfileid: "65583523"
  下面各节提供有关 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] 的更多信息。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- <xref:System.Data.DataSet> 是赖以生成 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的断开连接式编程模型的关键元素，使用非常广泛。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使开发人员能够通过使用许多其他数据源可用的同样的查询表述机制在 <xref:System.Data.DataSet> 中内置更丰富的查询功能。 有关详细信息，请参阅 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
+ <xref:System.Data.DataSet>是断开连接的编程模型，ADO.NET 上，构建，并广泛使用的关键元素。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使开发人员能够通过使用许多其他数据源可用的同样的查询表述机制在 <xref:System.Data.DataSet> 中内置更丰富的查询功能。 有关详细信息，请参阅 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 是适合不需要映射到概念模型的开发人员使用的有用工具。 通过使用 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]，您可以直接在现有数据库架构上直接使用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 编程模型。 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 使开发人员能够生成表示数据的.NET Framework 类。 这些生成的类直接映射到数据库表、视图、存储过程和用户定义的函数，而不映射到概念数据模型。  

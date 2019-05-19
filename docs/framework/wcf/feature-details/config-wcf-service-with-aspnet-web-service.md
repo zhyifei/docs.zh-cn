@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b43ae8345fe8c4286f00f4b6e4f6373746e8bbe
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857527"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882159"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>如何：配置 WCF 服务以与 ASP.NET Web 服务客户端进行互操作
-若要配置 Windows Communication Foundation (WCF) 服务终结点为可与互操作[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服务客户端，请使用<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>类型与服务终结点的绑定类型。  
+若要配置 Windows Communication Foundation (WCF) 服务终结点为可与 ASP.NET Web 服务客户端互操作，请使用<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>类型与服务终结点的绑定类型。  
   
- 你可以根据需要在该绑定上启用对 HTTPS 和传输级客户端身份验证的支持。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务客户端不支持 MTOM 消息编码，所以应该使 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 属性保留其默认值，即 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>。 ASP.Net Web 服务客户端不支持 WS-Security，所以应将 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 设置为 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  
+ 你可以根据需要在该绑定上启用对 HTTPS 和传输级客户端身份验证的支持。 ASP.NET Web 服务客户端不支持 MTOM 消息编码，因此<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>属性应保留为其默认值，即<xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>。 ASP.Net Web 服务客户端不支持 WS-Security，所以应将 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 设置为 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  
   
- 若要使 WCF 服务的元数据可供[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服务代理生成工具 (即[Web 服务描述语言工具 (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833)， [Web 服务发现工具 (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834)，并在 Visual Studio 中的添加 Web 引用功能)，应公开一个 HTTP/GET 元数据终结点。  
+ 若要使 WCF 服务的元数据可供 ASP.NET Web 服务代理生成工具 (即[Web 服务描述语言工具 (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833)， [Web 服务发现工具 (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834)，和 Visual Studio 中的添加 Web 引用功能），应公开一个 HTTP/GET 元数据终结点。  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>在代码中添加与 ASP.NET Web 服务客户端兼容的 WCF 终结点  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61857527"
 4. 为服务启用一个 HTTP/GET 元数据终结点。 有关详细信息，请参阅[如何：发布使用配置文件服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何将与兼容的 WCF 终结点添加[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服务客户端代码中的，或者在配置文件中。  
+ 下面的代码示例演示如何将添加与 ASP.NET Web 服务客户端代码中兼容的 WCF 终结点，或者在配置文件中。  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 

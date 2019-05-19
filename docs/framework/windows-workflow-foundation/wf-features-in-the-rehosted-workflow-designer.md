@@ -2,12 +2,12 @@
 title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669752"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876504"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，包括多个工作流设计器体验的增强功能。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。
@@ -37,25 +37,25 @@ ms.locfileid: "61669752"
 
  以下屏幕快照显示了变量和自变量设计器的上下文菜单。
 
- ![变量和自变量设计器上下文菜单](./media/designercontextmenu.png "DesignerContextMenu")
+ ![变量和自变量设计器上下文菜单](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>使用顺序进行自动环绕
  由于工作流或特定容器活动（如 <xref:System.Activities.Statements.NoPersistScope>）只能包含单个主体活动，因此添加第二个活动需要开发人员删除第一个活动，请添加一个 <xref:System.Activities.Statements.Sequence> 活动，然后将两个活动都添加到该顺序活动中。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，向设计器图面添加第二个活动时，将会自动创建 `Sequence` 活动以包装两个活动。 重新承载的编辑器支持此功能。
 
  以下屏幕快照显示了 `WriteLine` 的 `Body` 中的 `NoPersistScope` 活动。
 
- ![自动&#45;括起来的放置位置](./media/autosurround1.png "AutoSurround1")
+ ![NoPersistScope 活动的正文中的 WriteLine 活动。](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  以下屏幕快照显示了在第一个 `Sequence` 下面丢弃第二个时在 `Body` 中自动创建的 `WriteLine` 活动。
 
- ![自动创建的序列活动](./media/autosurround2.png "AutoSurround2")
+ ![NoPersistScope 的正文中自动创建的序列。](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>平移模式
  若要更轻松地在设计器中浏览大型工作流，可以启用平移模式；通过此模式，开发人员可以单击并拖动工作流的可见部分将其移动，而无需使用滚动条。 用于激活平移模式的按钮位于设计器的右下角。 重新承载的编辑器支持此功能。
 
  下面的屏幕快照显示了位于工作流设计器右下角的平移按钮。
 
- ![在工作流设计器中的平移按钮](./media/panbutton.png "PanButton")
+ ![在工作流设计器中突出显示平移按钮。](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  也可以使用鼠标中键或空格键来平移工作流设计器。
 
@@ -69,7 +69,7 @@ ms.locfileid: "61669752"
 
  以下屏幕截图中的已完成工作流[入门教程](getting-started-tutorial.md)显示大纲视图中的，顺序工作流。
 
- ![大纲视图中工作流设计器](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![使用 Visual Studio 中的顺序工作流的大纲视图的屏幕截图](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>shell 栏和标头项的更多可见性控制
  在重新承载的设计器中，某些标准 UI 控件可能对于给定的工作流没有意义，并可能已关闭。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，此自定义仅受设计器底部的 shell 栏支持。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可通过用合适的 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 值设置 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 来调整设计器顶部 shell 标头项的可见性。
@@ -79,18 +79,18 @@ ms.locfileid: "61669752"
 
  下面的屏幕快照显示了从工具箱中拖动活动时变为可见的附属点。
 
- ![显示自动连接点的流程图起始节点](./media/autoconnect1.png "Autoconnect1")
+ ![流程图起始节点显示自动连接点](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  也可以将活动拖动到流程图节点和状态之间的连接上，以在两个其他节点之间自动插入该节点。 以下屏幕快照显示了突出显示的连接线，可在此连接线处从工具箱拖动并放置活动。
 
- ![自动&#45;放置活动的句柄插入](./media/autoinsert.png "自动插入")
+ ![放置活动的自动插入处理](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  重新承载的设计器支持自动连接和自动插入。
 
 ### <a name="designer-annotations"></a>设计器批注
  为促进开发较大型的工作流，设计器现在支持添加批注以帮助跟踪设计过程。 可以向活动、状态、流程图节点、变量和自变量添加批注。 以下屏幕快照显示了用于将批注添加到设计器的上下文菜单。
 
- ![注释上下文菜单](./media/annotationdialog.png "annotationdialog")
+ ![显示添加表示法的菜单的屏幕截图。](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  重新承载的设计器支持设计器批注。
 
@@ -134,7 +134,7 @@ ms.locfileid: "61669752"
   
  以下屏幕截图显示完成的状态机工作流从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)。  
   
- ![完整的状态机工作流](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![显示已完成的状态机工作流的图例。](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  有关创建状态机工作流的详细信息，请参阅[状态机工作流](state-machine-workflows.md)。 重新承载的工作流编辑器状态机工作流。  
   

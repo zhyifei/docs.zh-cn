@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613203"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881285"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅：[配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 跟踪文件查看器的详细信息，请参阅：[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>何为基址？ 它如何关联到一个终结点地址？  
- 基址是 <xref:System.ServiceModel.ServiceHost> 类的根地址。 默认情况下，如果将一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 类添加到您的服务配置中，主机发布的所有终结点的 Web 服务描述语言 (WSDL) 都将从 HTTP 基址、提供给元数据行为的任何相对地址以及“?wsdl”中检索。 如果熟悉 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 和 IIS，您将会看到基址等效于虚拟目录。  
+ 基址是 <xref:System.ServiceModel.ServiceHost> 类的根地址。 默认情况下，如果将一个 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 类添加到您的服务配置中，主机发布的所有终结点的 Web 服务描述语言 (WSDL) 都将从 HTTP 基址、提供给元数据行为的任何相对地址以及“?wsdl”中检索。 如果您熟悉 ASP.NET 和 IIS，基址相当于虚拟目录。  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>使用 NetTcpBinding 共享服务终结点和 MEX 终结点之间的端口  
  如果将服务的基址指定为 net.tcp://MyServer:8080/MyService 并添加以下终结点：  

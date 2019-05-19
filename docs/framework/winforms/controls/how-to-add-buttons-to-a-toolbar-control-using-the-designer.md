@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 495200b2617a1c0c299998ad5fb5276398236cca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011094"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880906"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>如何：使用设计器向 ToolBar 控件添加按钮
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "62011094"
   
 1. 选择 <xref:System.Windows.Forms.ToolBar> 控件。  
   
-2. 在中**属性**窗口中，单击<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性来选择它，然后单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以打开**工具栏按钮集合编辑器**。  
+2.  在中**属性**窗口中，单击<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性来选择它，然后单击**省略号**(![Visual Studio 的属性窗口中的省略号按钮 （...）。](./media/visual-studio-ellipsis-button.png))按钮以打开**工具栏按钮集合编辑器**。  
   
 3. 使用**外**并**删除**按钮来添加和删除按钮从<xref:System.Windows.Forms.ToolBar>控件。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 9f72d6d560f82d7d80036f07ec865d78a4ab9955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d36c51a3346d7d2c2aa4b7b526d590770463826e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606403"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882441"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -95,7 +95,7 @@ ms.locfileid: "64606403"
   
 1. 选择<xref:System.Windows.Forms.TableLayoutPanel>控制**Windows 窗体设计器**。  
   
-2. 在中**属性**打开窗口<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，通过单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮下一步**列**条目。  
+2.  在中**属性**打开窗口<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，通过单击省略号 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 按钮旁边**列**条目。  
   
 3. 选择第一列和更改的值及其<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>属性设置为<xref:System.Windows.Forms.SizeType.AutoSize>。 单击**确定**以接受更改。 请注意，第一列的宽度缩小以适合<xref:System.Windows.Forms.Button>控件。 另请注意，列的宽度不是可调整大小。  
   

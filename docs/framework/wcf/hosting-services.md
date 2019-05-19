@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051151"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881190"
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 Windows Communication Foundation (WCF) 服务设计为支持托管代码的任何 Windows 进程中运行。  
@@ -29,7 +29,7 @@ ms.locfileid: "62051151"
  此宿主选项包括注册承载 WCF 服务作为托管 Windows 服务 （以前称为 NT 服务），以便该服务的进程生存期由服务控制管理器 (SCM) 控制的应用程序域 (AppDomain)Windows 服务。 与自承载选项一样，此类型的宿主环境要求作为应用程序的一部分编写某些宿主代码。 该服务实现为这两个 Windows 服务和 WCF 服务，因为它继承自<xref:System.ServiceProcess.ServiceBase>类，以及从 WCF 服务协定接口。 然后创建 <xref:System.ServiceModel.ServiceHost> ，在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法内打开它并在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法内关闭它。 还必须实现从 <xref:System.Configuration.Install.Installer> 继承的安装程序类，以允许 Installutil.exe 工具将程序安装为 Windows 服务。 有关详细信息，请参阅[如何：承载 WCF 服务中托管的 Windows 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 由托管 Windows 服务宿主选项启用的方案是在安全环境中没有消息激活 IIS 外部承载的长时间运行 WCF 服务。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
   
 #### <a name="internet-information-services-iis"></a>Internet 信息服务 (IIS)  
- IIS 宿主选项与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 集成在一起，并使用这些技术提供的功能，如进程回收、空闲关闭、进程状况监视和基于消息的激活。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 操作系统上，这是作为必须高度可用且高度可伸缩的 Web 服务应用程序宿主的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何配置 IIS 承载的 WCF 服务，请参阅[如何：承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
+ IIS 宿主选项与 ASP.NET 集成在一起，并使用这些技术提供，如进程回收、 空闲关闭、 进程运行状况监视和基于消息的激活的功能。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 操作系统上，这是作为必须高度可用且高度可伸缩的 Web 服务应用程序宿主的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 有关如何配置 IIS 承载的 WCF 服务，请参阅[如何：承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
   
  请注意，以 IIS 为宿主的服务只能使用 HTTP 传输。 它在 IIS 5.1 中的实现在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中引入了一些限制。 提供的 WCF 服务由 IIS 5.1，在基于消息的激活[!INCLUDE[wxp](../../../includes/wxp-md.md)]阻止使用端口 80 进行通信的同一计算机上的任何其他自承载的 WCF 服务。 WCF 服务可以在与其他应用程序由托管时，相同的 AppDomain/应用程序池/工作进程中运行[!INCLUDE[iis601](../../../includes/iis601-md.md)]上[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]。 但是，由于 WCF 并[!INCLUDE[iis601](../../../includes/iis601-md.md)]两者都使用内核模式 HTTP 堆栈 (HTTP.sys)，[!INCLUDE[iis601](../../../includes/iis601-md.md)]可以与同一台计算机，与 IIS 5.1 上运行的其他自承载 WCF 服务共享端口 80。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62051151"
 |-------------------------|----------------------|----------------------------------|  
 |托管应用程序（“自承载”）|在开发过程中使用的控制台应用程序。<br />丰富 WinForm 和[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]访问服务的客户端应用程序。|-灵活。<br />-易于部署。<br />-未服务的企业解决方案。|  
 |Windows 服务（以前称为 NT 服务）|IIS 外部承载的长时间运行 WCF 服务。|服务进程生存期由操作系统，不是消息激活控制。<br />-支持的所有版本的 Windows。<br />安全环境。|  
-|IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-运行 WCF 服务与并行[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]使用 HTTP 协议在 Internet 上的内容。|-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-仅限 HTTP。|  
+|IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-运行 WCF 服务的同时与 ASP.NET 内容使用 HTTP 协议在 Internet 上。|-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-仅限 HTTP。|  
 |Windows 进程激活服务 (WAS)|-运行而无需使用各种传输协议在 Internet 上安装 IIS 的 WCF 服务。|不需要 IIS。<br />-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-适用于 HTTP、 TCP、 命名的管道和 MSMQ。|  
-|IIS 7.0|-运行 WCF 服务使用[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]内容。<br />-使用各种传输协议在 Internet 上运行的 WCF 服务。|-已优势。<br />-与集成[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]和 IIS 内容。|  
+|IIS 7.0|-运行包含 ASP.NET 内容的 WCF 服务。<br />-使用各种传输协议在 Internet 上运行的 WCF 服务。|-已优势。<br />使用 ASP.NET 和 IIS 内容集成。|  
   
  宿主环境的选择取决于部署它的 Windows 版本、它要求发送消息的传输以及它要求的进程和应用程序域回收的类型。 下表汇总了与这些要求相关的数据。  
   

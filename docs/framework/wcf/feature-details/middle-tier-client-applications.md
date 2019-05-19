@@ -2,18 +2,18 @@
 title: 中间层客户端应用程序
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649441"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877472"
 ---
 # <a name="middle-tier-client-applications"></a>中间层客户端应用程序
 本主题讨论特定于使用 Windows Communication Foundation (WCF) 的中间层客户端应用程序的各种问题。  
   
 ## <a name="increasing-middle-tier-client-performance"></a>提高中间层客户端应用程序的性能  
- 与以前的通信技术，例如使用 Web 服务相比[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，WCF 客户端实例的创建可能会由于 WCF 的丰富功能集更复杂。 例如，打开 <xref:System.ServiceModel.ChannelFactory%601> 对象时，该对象会与服务建立一个安全会话，该过程将增加客户端实例的启动时间。 通常情况下，这些附加功能不会影响客户端应用程序极大地因为 WCF 客户端进行多次调用，然后关闭。  
+ 相比以前的通信技术，例如 Web 服务使用 ASP.NET、 WCF 客户端实例的创建可能会由于 WCF 的丰富功能集更复杂。 例如，打开 <xref:System.ServiceModel.ChannelFactory%601> 对象时，该对象会与服务建立一个安全会话，该过程将增加客户端实例的启动时间。 通常情况下，这些附加功能不会影响客户端应用程序极大地因为 WCF 客户端进行多次调用，然后关闭。  
   
  中间层客户端应用程序，但是，可以快速创建多个 WCF 客户端对象并，因此，实现提高的初始化需求。 调用服务时，有两种主要的方法可以提高中间层应用程序的性能：  
   

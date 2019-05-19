@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: e9b2c1077cf3323a7d5b69bee6dff7e6f9611818
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634118"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878075"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：创建数据服务使用 ADO.NET 实体框架数据源 （WCF 数据服务）
 
-WCF 数据服务公开实体数据作为数据服务。 如果数据源为关系数据库，则此实体数据是由 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供的。 本主题演示如何创建[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-基于 Visual Studio Web 应用程序，基于现有数据库和使用此数据模型来创建新的数据服务中的数据模型。
+WCF 数据服务公开实体数据作为数据服务。 此实体数据由 ADO.NET 提供[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]数据源是关系数据库。 本主题演示如何创建[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-基于 Visual Studio Web 应用程序，基于现有数据库和使用此数据模型来创建新的数据服务中的数据模型。
 
 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]还提供了可以生成一个命令行工具[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]模型之外的 Visual Studio 项目。 有关详细信息，请参阅[如何：使用 EdmGen.exe 生成模型和映射文件](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。
 
@@ -53,7 +53,7 @@ WCF 数据服务公开实体数据作为数据服务。 如果数据源为关系
 
 2. 在中**模型浏览器**，右键单击该模型，单击**属性**，然后记下实体容器的名称。
 
-3. 在中**解决方案资源管理器**，右键单击名称你[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]项目，然后依次**添加** > **新项**。
+3. 在中**解决方案资源管理器**，右键单击 ASP.NET 项目中的名称，然后单击**添加** > **新项**。
 
 4. 在中**添加新项**对话框中，选择**WCF 数据服务**中的模板**Web**类别。
 

@@ -2,12 +2,12 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: ae4a39d48d9c688d14fa8cf131e8010188c2fe10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80166eaed2598f21529e81c81985d78a23bf0c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944191"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882123"
 ---
 # <a name="ajax"></a>AJAX
 本节包含演示异步 JavaScript 和 XML 功能的示例。  
@@ -23,7 +23,7 @@ ms.locfileid: "61944191"
  演示如何使用 WCF 可创建一个基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务。  
   
  [使用 HTTP POST 的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
- 演示如何使用 WCF 创建[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]异步 JavaScript 和 XML (AJAX) 服务使用 HTTP POST。  
+ 演示如何使用 WCF 创建 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务使用 HTTP POST。  
   
  [无配置的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  演示如何使用 WCF 可创建一个基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务。  

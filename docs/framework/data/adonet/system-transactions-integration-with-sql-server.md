@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583479"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880583"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 与 SQL Server 的集成
-.NET Framework 2.0 版引入了一个事务框架，可以通过访问<xref:System.Transactions>命名空间。 此框架公开事务完全集成到.NET Framework 中的方式包括[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。  
+.NET Framework 2.0 版引入了一个事务框架，可以通过访问<xref:System.Transactions>命名空间。 此框架公开事务完全集成到.NET Framework，包括 ADO.NET 中的方式。  
   
- 除了对编程能力的增强之外， <xref:System.Transactions> 与 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 可一起使用，在处理事务时协调优化。 可提升事务是可以根据需要自动提升为完全分布式事务的轻型（本地）事务。  
+ 可编程性增强功能，除了<xref:System.Transactions>和 ADO.NET 如何协同工作，当您使用事务时协调优化。 可提升事务是可以根据需要自动提升为完全分布式事务的轻型（本地）事务。  
   
- 从开始[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0，<xref:System.Data.SqlClient>时适用于 SQL Server 支持可提升事务。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 可提升事务是自动的需要从开发人员无需干预。  
+ 从 ADO.NET 2.0 开始<xref:System.Data.SqlClient>时适用于 SQL Server 支持可提升事务。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 可提升事务是自动的需要从开发人员无需干预。  
   
  当.NET Framework 数据提供程序用于 SQL Server 时，可提升事务才可用 (`SqlClient`) 与 SQL Server。  
   

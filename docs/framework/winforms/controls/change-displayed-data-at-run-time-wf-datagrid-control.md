@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3217680a2bab43124b75529bead97ffcfbb06aea
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961650"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882141"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>如何：更改 Windows 窗体 DataGrid 控件中在运行时显示的数据
 > [!NOTE]
@@ -64,13 +64,13 @@ ms.locfileid: "61961650"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     在运行的时可以使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法将绑定<xref:System.Windows.Forms.DataGrid>到不同的数据源的控件。 例如，可能有多个[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]数据控件，每个连接到不同的数据库。  
+     在运行的时可以使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法将绑定<xref:System.Windows.Forms.DataGrid>到不同的数据源的控件。 例如，可能有多个 ADO.NET 数据控件，每个连接到不同的数据库。  
   
 ### <a name="to-change-the-datasource-programmatically"></a>若要以编程方式更改数据源  
   
 1. 设置<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法为数据源和您要将绑定到表的名称。  
   
-     下面的示例演示如何更改日期源使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]连接到 Pubs 数据库中作者表的数据控件 (adoPubsAuthors)。  
+     下面的示例演示如何更改日期源使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法连接到 Pubs 数据库中作者表的 ADO.NET 数据控件 (adoPubsAuthors)。  
   
     ```vb  
     Private Sub ResetSource()  

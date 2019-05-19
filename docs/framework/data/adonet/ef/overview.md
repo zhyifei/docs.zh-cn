@@ -2,12 +2,12 @@
 title: 实体框架概述
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634286"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880035"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 
@@ -49,7 +49,7 @@ ms.locfileid: "65634286"
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 与存储无关的 SQL 方言直接使用概念模型中的实体并支持[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中包含 EntityClient 数据提供程序。 此提供程序管理连接，将实体查询转换为特定于数据源的查询，并返回[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于将实体数据具体化为对象的数据读取器。 不需要对象具体化时，也可以 EntityClient 提供程序用作标准[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]数据提供程序使应用程序执行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询并使用返回的只读数据读取器。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中包含 EntityClient 数据提供程序。 此提供程序管理连接，将实体查询转换为特定于数据源的查询，并返回[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于将实体数据具体化为对象的数据读取器。 当不需要对象具体化时，通过使应用程序执行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询并使用返回的只读数据读取器，还可以像标准 ADO.NET 数据提供程序一样使用 EntityClient 提供程序。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
 
 下图阐释了用于访问数据的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]体系结构：
 
@@ -59,7 +59,7 @@ ms.locfileid: "65634286"
 
 ## <a name="data-providers"></a>数据提供程序
 
-`EntityClient` 提供程序通过根据概念实体和关系访问数据来扩展 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序模型。 它执行使用 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 的查询。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 提供使 `EntityClient` 能与数据库进行通信的基础查询语言。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
+`EntityClient`提供程序通过访问概念实体和关系方面的数据来扩展 ADO.NET 提供程序模型。 它执行使用 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 的查询。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 提供使 `EntityClient` 能与数据库进行通信的基础查询语言。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 包含一个支持规范命令目录树的最新 SqlClient 数据提供程序。 有关详细信息，请参阅[用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。
 

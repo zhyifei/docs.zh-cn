@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583419"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877952"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -63,7 +63,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="related-sections"></a>相关章节  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- 说明使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 时的安全编码做法。  
+ 描述使用 ADO.NET 时的安全编码做法。  
   
  [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  说明如何创建和使用 `DataSets`、类型化 `DataSets`、`DataTables` 和 `DataViews`。  
@@ -75,7 +75,7 @@ csc /r:System.Data.OracleClient.dll
  描述如何使用 SQL Server 特定的功能。  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- 说明允许在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中编写独立于提供程序的代码的泛型类。  
+ 描述用于在 ADO.NET 中编写与提供程序无关的代码的一般类。  
   
 ## <a name="see-also"></a>请参阅
 

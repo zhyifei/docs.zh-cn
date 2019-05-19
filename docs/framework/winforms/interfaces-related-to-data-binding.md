@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754074"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882346"
 ---
 # <a name="interfaces-related-to-data-binding"></a>与数据绑定相关的接口
 
-使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，可以创建许多不同的数据结构，以满足应用程序和正在处理的数据的绑定需要。 你可能希望创建自己的类，以便在 Windows 窗体中提供或使用数据。 这些对象可以提供各种级别的功能和复杂性，从基本的数据绑定，到提供设计时支持、错误检查、更改通知，甚至是支持对数据本身所做更改的结构化回退。
+与 ADO.NET，可以创建许多不同的数据结构，以满足你的应用程序以及你正在使用的数据的绑定需要。 你可能希望创建自己的类，以便在 Windows 窗体中提供或使用数据。 这些对象可以提供各种级别的功能和复杂性，从基本的数据绑定，到提供设计时支持、错误检查、更改通知，甚至是支持对数据本身所做更改的结构化回退。
 
 ## <a name="consumers-of-data-binding-interfaces"></a>数据绑定接口的使用者
 
@@ -82,7 +82,7 @@ ms.locfileid: "64754074"
 
 - <xref:System.Collections.IEnumerable> 接口
 
-  实现的类<xref:System.Collections.IEnumerable>接口通常由[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]。 此接口的 Windows 窗体支持才可通过<xref:System.Windows.Forms.BindingSource>组件。
+  实现的类<xref:System.Collections.IEnumerable>接口通常由 ASP.NET。 此接口的 Windows 窗体支持才可通过<xref:System.Windows.Forms.BindingSource>组件。
 
   > [!NOTE]
   > <xref:System.Windows.Forms.BindingSource>组件将复制所有<xref:System.Collections.IEnumerable>出于绑定目的一个单独的列表项。

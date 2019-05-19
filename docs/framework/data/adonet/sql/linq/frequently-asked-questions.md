@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583494"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878234"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -185,7 +185,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 请不要试图重用 <xref:System.Data.Linq.DataContext> 的实例。 每个 <xref:System.Data.Linq.DataContext> 都会保持对应一个特定编辑/查询会话的状态（包括标识缓存）。 若要获取基于数据库当前状态的新实例，请使用新的 <xref:System.Data.Linq.DataContext>。  
   
- 仍然可以使用基础 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 连接池。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 您仍可以使用基础 ADO.NET 连接池。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ## <a name="second-datacontext-is-not-updated"></a>第二个 DataContext 未更新  
  问： 我使用 <xref:System.Data.Linq.DataContext> 的一个实例存储数据库中的值。 但是，相同数据库上的另一个 <xref:System.Data.Linq.DataContext> 未反映更新的值。 第二个 <xref:System.Data.Linq.DataContext> 实例似乎返回缓存的值。  

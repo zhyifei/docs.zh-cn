@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: c8f6e51b5ab8242ba8253a04160c40e59fce0088
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6484e6bfce885c28b943ad9844bfa6fc17889c2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648199"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882236"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面
 Visual Studio 的优势之一是时间的能够在较短中创建具有专业外观的 Windows 窗体应用程序。 一种常见方案使用创建用户界面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>类似于 Windows 操作系统的 Windows 资源管理器功能的控件。 Windows 资源管理器中显示用户的计算机上的文件和文件夹的层次结构。  
@@ -54,7 +54,7 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
     2. 将 <xref:System.Windows.Forms.ListView.View%2A> 属性设置为 <xref:System.Windows.Forms.View.Details>。  
   
-    3. 通过单击省略号打开 ColumnHeader 集合编辑器 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>属性 **。** 添加三个列，并设置其<xref:System.Windows.Forms.ColumnHeader.Text%2A>属性设置为`Name`， `Type`，和`Last Modified`分别。 单击“确定”关闭对话框。  
+    3.  通过单击省略号打开 ColumnHeader 集合编辑器 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 中<xref:System.Windows.Forms.ListView.Columns%2A>属性 **。** 添加三个列，并设置其<xref:System.Windows.Forms.ColumnHeader.Text%2A>属性设置为`Name`， `Type`，和`Last Modified`分别。 单击“确定”关闭对话框。  
   
     4. 将 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 属性设置为 `imageList1.`  
   

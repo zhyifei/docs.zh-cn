@@ -2,12 +2,12 @@
 title: Internet 信息服务承载最佳实践
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972609"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878595"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet 信息服务承载最佳实践
 本主题概述了用于承载 Windows Communication Foundation (WCF) 服务的一些最佳做法。  
@@ -40,7 +40,7 @@ ms.locfileid: "61972609"
  可以使用 IIS Microsoft 管理控制台 (MMC) 管理单元配置 IIS 网站绑定。  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>在不同用户上下文中运行的应用程序池覆盖来自临时文件夹中其他帐户的程序集  
- 若要确保在不同用户上下文中运行的应用程序池无法覆盖来自临时 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 文件夹中其他帐户的程序集，请对不同的应用程序使用不同的标识和临时文件夹。 例如，如果具有两个虚拟应用程序 /Application1 和 / Application2，则可以创建两个应用程序池 A 和 B，它们具有不同的标识。 应用程序池 A 可以使用一个用户标识 (user1) 运行，而应用程序池 B 可以使用其他用户标识 (user2) 运行，并将 /Application1 配置为使用 A，将 /Application2 配置为使用 B。  
+ 若要确保在不同用户上下文中运行的应用程序池无法覆盖从 temporary ASP.NET files 文件夹中的其他帐户的程序集，请使用不同的标识和临时文件夹的不同应用程序。 例如，如果具有两个虚拟应用程序 /Application1 和 / Application2，则可以创建两个应用程序池 A 和 B，它们具有不同的标识。 应用程序池 A 可以使用一个用户标识 (user1) 运行，而应用程序池 B 可以使用其他用户标识 (user2) 运行，并将 /Application1 配置为使用 A，将 /Application2 配置为使用 B。  
   
  在 Web.config 文件中，你可以配置临时文件夹使用\< system.web/compilation/@tempFolder>。 有关/application1，它可以"c:\tempForUser1"并且对于应用程序 2 可以是"c:\tempForUser2"。 将相应的写入权限授予两个标识的这些文件夹。  
   

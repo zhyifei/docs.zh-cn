@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773511"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881948"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>如何：创建状态机工作流
 工作流可基于内置活动以及自定义活动来构造。 本主题将指导逐步创建如使用这两个内置的活动的工作流<xref:System.Activities.Statements.StateMachine>活动，并从以前的自定义活动[如何：创建活动](how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
@@ -179,7 +179,7 @@ ms.locfileid: "61773511"
   
      下面的示例阐释已完成的工作流。  
   
-     ![完整的状态机工作流](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![显示已完成的状态机工作流的图例。](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
 ### <a name="to-build-the-workflow"></a>生成工作流  
   

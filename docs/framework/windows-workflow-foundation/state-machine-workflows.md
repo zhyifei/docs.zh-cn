@@ -2,12 +2,12 @@
 title: 状态机工作流
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665331"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876134"
 ---
 # <a name="state-machine-workflows"></a>状态机工作流
 状态机是用于开发程序的已知范例。 <xref:System.Activities.Statements.StateMachine> 活动与 <xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> 以及其他活动一起可用于生成状态机工作流程序。 本主题概述如何创建状态机工作流。  
@@ -23,14 +23,14 @@ ms.locfileid: "64665331"
   
  为了创建状态机工作流，需要将状态将添加到 <xref:System.Activities.Statements.StateMachine> 活动中，并且使用转换控制各状态之间的流。 以下屏幕截图中，从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)，显示了三种状态和三个转换的状态机工作流。 **初始化目标**是初始状态，表示工作流中的第一个状态。 这指定的行，从而导致它从**启动**节点。 名为工作流中的最终状态**FinalState**，并表示在其中完成工作流的点。  
   
- ![完整的状态机工作流](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![显示已完成的状态机工作流的图例。](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  状态机工作流必须有且只有一个初始状态，并且至少有一个最终状态。 不属于最终状态的每个状态都必须具有至少一个转换。 下面的几节将介绍如何创建和配置状态和转换。  
   
 ## <a name="creating-and-configuring-states"></a>创建和配置状态  
  <xref:System.Activities.Statements.State> 表示状态机可具有的状态。 若要添加<xref:System.Activities.Statements.State>到工作流，拖动**状态**活动设计器从**状态机**一部分**工具箱**放到<xref:System.Activities.Statements.StateMachine>上的活动[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]图面。  
   
- ![WF4 状态机活动](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![工具箱的状态机部分的屏幕截图。](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  若要配置状态作为**初始状态**，右键单击状态，然后选择**设置为初始状态**。 此外，如果没有任何当前的初始状态，初始状态可以指定通过拖动中的一行**启动**的所需状态的工作流的顶部节点。 当<xref:System.Activities.Statements.StateMachine>活动拖放到工作流设计器，它具有名为初始状态预先配置**State1**。 一个状态机工作流必须有且只有一个初始状态。  
   

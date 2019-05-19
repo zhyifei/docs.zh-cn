@@ -2,15 +2,15 @@
 title: LINQ to DataSet 概述
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0dd220e609d4934527f121e4e5c85f3d83323d69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878587"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878110"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet 概述
-<xref:System.Data.DataSet> 是更为广泛使用的 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 组件之一。 它是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 所基于的断开连接式编程模型的关键元素，使用它可以显式缓存不同数据源中的数据。 在表示层上，<xref:System.Data.DataSet> 与 GUI 控件紧密集成，以进行数据绑定。 在中间层上，它提供保留数据关系形状的缓存并包括快速简单查询和层次结构导航服务。 用于减少对数据库的请求数的常用技术是使用 <xref:System.Data.DataSet> 以便在中间层进行缓存。 例如，考虑数据驱动的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序。 通常，应用程序的绝大部分数据不会经常更改，属于会话之间或用户之间的公共数据。 此数据可以保存在 Web 服务器的内存中，这会减少对数据库的请求数并加速用户的交互。 另一个有用特征的<xref:System.Data.DataSet>是它允许应用程序到应用程序空间从一个或多个数据源将数据子集。 然后，应用程序可以在内存中操作这些数据，同时保留其关系形状。  
+<xref:System.Data.DataSet>是 ADO.NET 的更广泛使用的组件之一。 它是 ADO.NET 所基于的断开连接的编程模型的关键元素，它可以显式缓存不同数据源中。 在表示层上，<xref:System.Data.DataSet> 与 GUI 控件紧密集成，以进行数据绑定。 在中间层上，它提供保留数据关系形状的缓存并包括快速简单查询和层次结构导航服务。 用于减少对数据库的请求数的常用技术是使用 <xref:System.Data.DataSet> 以便在中间层进行缓存。 例如，考虑数据驱动的 ASP.NET Web 应用程序。 通常，应用程序的绝大部分数据不会经常更改，属于会话之间或用户之间的公共数据。 此数据可以保存在 Web 服务器的内存中，这会减少对数据库的请求数并加速用户的交互。 另一个有用特征的<xref:System.Data.DataSet>是它允许应用程序到应用程序空间从一个或多个数据源将数据子集。 然后，应用程序可以在内存中操作这些数据，同时保留其关系形状。  
   
  <xref:System.Data.DataSet> 虽然具有突出的优点，但其查询功能也存在限制。 <xref:System.Data.DataTable.Select%2A> 方法可用于筛选和排序，<xref:System.Data.DataRow.GetChildRows%2A> 和 <xref:System.Data.DataRow.GetParentRow%2A> 方法可用于层次结构导航。 但对于更复杂的情况，开发人员必须编写自定义查询。 这会使应用程序性能低下并且难以维护。  
   

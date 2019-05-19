@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 9fead8a5d54fba7232831bba349f27b7eed4657b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d343f7be3e26575ee9a1e9ccae9f17314db10ac5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583789"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882107"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序
 .NET Framework 数据提供程序用于连接到数据库、 执行命令和检索结果。 这些结果将被直接处理，放置在 <xref:System.Data.DataSet> 中以便根据需要向用户公开、与多个源中的数据组合，或在层之间进行远程处理。 .NET framework 数据提供程序是轻量，创建一个最小层之间的数据源和代码，而无需牺牲功能提高性能。  
@@ -74,7 +74,7 @@ using System.Data.SqlClient;
 ## <a name="net-framework-data-provider-for-ole-db"></a>用于 OLE DB 的 .NET Framework 数据提供程序  
  用于 OLE DB (OleDb).NET Framework 数据提供程序使用本机 OLE DB 通过 COM 互操作来启用数据访问。 用于 OLE DB.NET Framework 数据提供程序支持本地事务和分布式事务两者。 对于分布式事务，OLE DB，默认情况下，.NET Framework 数据提供程序自动在事务中登记，并从 Windows Component Services 获取事务详细信息。 有关详细信息，请参阅[事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)。  
   
- 下表演示已使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]进行测试的提供程序。  
+ 下表显示了经过了 ADO.NET 提供程序。  
   
 |驱动程序|提供程序|  
 |------------|--------------|  
@@ -83,11 +83,11 @@ using System.Data.SqlClient;
 |Microsoft.Jet.OLEDB.4.0|用于 Microsoft Jet 的 OLE DB 访问接口|  
   
 > [!NOTE]
->  建议不要将 Access (Jet) 数据库用作多线程应用程序（如 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序）的数据源。 如果必须将 Jet 用作 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序的数据源，请注意连接到 Access 数据库的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序可能会遇到连接问题。  
+>  不建议使用 Access (Jet) 数据库作为数据源的多线程应用程序，如 ASP.NET 应用程序。 如果您必须为 ASP.NET 应用程序为 Jet 用作数据源，请意识到连接到 Access 数据库的 ASP.NET 应用程序可能会遇到连接问题。  
   
  用于 OLE DB.NET Framework 数据提供程序不支持 OLE DB 2.5 版接口。 OLE DB 访问接口的 OLE DB 2.5 接口需要支持将无法正常工作的.NET Framework 数据提供程序用于 OLE DB。 这包括适用于 Exchange 的 Microsoft OLE DB 访问接口和用于 Internet 发布的 Microsoft OLE DB 访问接口。  
   
- 用于 OLE DB.NET Framework 数据提供程序并不适用于 OLE DB provider for ODBC (MSDASQL)。 若要访问 ODBC 数据源使用[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，使用用于 ODBC 的.NET Framework 数据提供程序。  
+ 用于 OLE DB.NET Framework 数据提供程序并不适用于 OLE DB provider for ODBC (MSDASQL)。 若要访问使用 ADO.NET 的 ODBC 数据源，使用用于 ODBC 的.NET Framework 数据提供程序。  
   
  OLE DB 类的.NET framework 数据提供程序都位于<xref:System.Data.OleDb>命名空间。 下面的代码示例演示如何将 `System.Data.OleDb` 命名空间包括在您的应用程序中。  
   
@@ -102,7 +102,7 @@ using System.Data.OleDb;
 ## <a name="net-framework-data-provider-for-odbc"></a>用于 ODBC 的 .NET Framework 数据提供程序  
  .NET Framework 数据提供程序用于 ODBC (Odbc) 使用本机 ODBC 驱动程序管理器 (DM) 来启用数据访问。 ODBC 数据提供程序支持本地事务和分布式事务两者。 对于分布式事务，ODBC 提供程序在默认情况下会自动在事务中登记，并从 Windows Component Services 获取事务详细信息。 有关详细信息，请参阅[事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)。  
   
- 下表演示已使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]进行测试的 ODBC 驱动程序。  
+ 下表显示了使用 ADO.NET 进行测试的 ODBC 驱动程序。  
   
 |驱动程序|  
 |------------|  

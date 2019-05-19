@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b248e9b250ce18f05a2bf57b80af8fbcebb4f811
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642446"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880606"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器向 Windows 窗体 DataGrid 控件添加表和列
 
@@ -29,7 +29,7 @@ ms.locfileid: "61642446"
   
 1. 若要在表中显示数据，您必须首先绑定<xref:System.Windows.Forms.DataGrid>控件向数据集。 有关详细信息，请参阅[如何：将 Windows 窗体 DataGrid 控件绑定到数据源使用设计器](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)。  
   
-2. 选择<xref:System.Windows.Forms.DataGrid>控件的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性窗口中的属性，然后单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边要显示的属性**DataGridTableStyle 集合编辑器**。  
+2.  选择<xref:System.Windows.Forms.DataGrid>控件的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性窗口中的属性，然后单击省略号按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边显示的属性**DataGridTableStyle 集合编辑器**。  
   
 3. 在集合编辑器中单击**添加**插入表样式。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61642446"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>若要将列添加到设计器中的 DataGrid 控件  
   
-1. 在中**成员**的框**DataGridTableStyle 集合编辑器**，选择适当的表样式。 在中**属性**框中的集合编辑器中，选择<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，然后单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 以显示在属性旁边**DataGridColumnStyle 集合编辑器**。  
+1.  在中**成员**的框**DataGridTableStyle 集合编辑器**，选择适当的表样式。 在中**属性**框中的集合编辑器中，选择<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，然后单击省略号按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边要显示的属性**DataGridColumnStyle 集合编辑器**。  
   
 2. 在集合编辑器中单击**外**插入列样式，或单击向下箭头旁边**添加**指定列类型。  
   

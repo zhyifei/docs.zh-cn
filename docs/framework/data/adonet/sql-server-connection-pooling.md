@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664099"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877450"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 连接到数据库服务器通常由几个需要很长时间的步骤组成。 必须建立物理通道（例如套接字或命名管道），必须与服务器进行初次握手，必须分析连接字符串信息，必须由服务器对连接进行身份验证，必须运行检查以便在当前事务中登记，等等。  
   
- 实际上，大多数应用程序仅使用一个或几个不同的连接配置。 这意味着在执行应用程序期间，许多相同的连接将反复地打开和关闭。 若要打开的连接，成本降至最低[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]使用名为的优化方法*连接池*。  
+ 实际上，大多数应用程序仅使用一个或几个不同的连接配置。 这意味着在执行应用程序期间，许多相同的连接将反复地打开和关闭。 若要打开连接的成本降至最低，ADO.NET 使用名为优化技术*连接池*。  
   
  连接池使新连接必须打开的次数得以减少。 *池进程*保持物理连接的所有权。 通过为每个给定的连接配置保留一组活动连接来管理连接。 每当用户在连接上调用 `Open` 时，池进程就会查找池中可用的连接。 如果某个池连接可用，会将该连接返回给调用者，而不是打开新连接。 应用程序在该连接上调用 `Close` 时，池进程会将连接返回到活动连接池集中，而不是关闭连接。 连接返回到池中之后，即可在下一个 `Open` 调用中重复使用。  
   
- 只有配置相同的连接可以建立池连接。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 同时保留多个池，每种配置各一个。 在使用集成的安全性时，连接按照连接字符串以及 Windows 标识分到多个池中。 还根据连接是否已在事务中登记来建立池连接。 在使用 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> 时，<xref:System.Data.SqlClient.SqlCredential> 实例影响连接池。 <xref:System.Data.SqlClient.SqlCredential> 的不同实例将使用不同的连接池，即使用户 ID 和密码相，也是如此。  
+ 只有配置相同的连接可以建立池连接。 ADO.NET 保留在同一时间，一个用于每个配置多个池。 在使用集成的安全性时，连接按照连接字符串以及 Windows 标识分到多个池中。 还根据连接是否已在事务中登记来建立池连接。 在使用 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> 时，<xref:System.Data.SqlClient.SqlCredential> 实例影响连接池。 <xref:System.Data.SqlClient.SqlCredential> 的不同实例将使用不同的连接池，即使用户 ID 和密码相，也是如此。  
   
- 池连接可以显著提高应用程序的性能和可缩放性。 默认情况下，在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中启用连接池。 除非显式禁用，否则，在应用程序中打开和关闭连接时，池进程会对连接进行优化。 还可以提供几个连接字符串修饰符来控制连接池的行为。 有关更多信息，请参见本主题后面的“使用连接字符串关键字控制连接池”。  
+ 池连接可以显著提高应用程序的性能和可缩放性。 默认情况下，在 ADO.NET 中启用连接池。 除非显式禁用，否则，在应用程序中打开和关闭连接时，池进程会对连接进行优化。 还可以提供几个连接字符串修饰符来控制连接池的行为。 有关更多信息，请参见本主题后面的“使用连接字符串关键字控制连接池”。  
   
 > [!NOTE]
 >  启用连接池后，如果发生超时错误或其他登录错误，则将引发异常，并且在接下来的五秒内进行的后续连接尝试将失败，此段时间称为“阻塞期”。 如果应用程序尝试在阻塞期内进行连接，则将再次引发第一个异常。 阻塞期结束后的后续失败将导致新的阻塞期，该阻塞期的持续时间是上一个阻塞期的两倍，最长为一分钟。  
@@ -80,7 +80,7 @@ using (SqlConnection connection = new SqlConnection(
  如果存在一个与已消失的服务器的连接，即使连接池进程尚未检测到断开的连接，也可以从池中取出此连接并将连接标记为无效。 这种情况是因为检查连接是否仍有效的系统开销将造成与服务器的另一次往返，从而抵消了池进程的优势。 发生此情况时，初次尝试使用该连接将检测连接是否曾断开，并引发异常。  
   
 ## <a name="clearing-the-pool"></a>清除池  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 引入了两种新的方法来清除池：<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> 和 <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>。 `ClearAllPools` 清除指定提供程序的连接池，`ClearPool` 清除与特定连接关联的连接池。 如果在调用时连接正在使用，将对它们进行相应的标记。 连接关闭时，将被丢弃，而不是返回池中。  
+ ADO.NET 2.0 引入了两个新方法来清除池：<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A>和<xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>。 `ClearAllPools` 清除指定提供程序的连接池，`ClearPool` 清除与特定连接关联的连接池。 如果在调用时连接正在使用，将对它们进行相应的标记。 连接关闭时，将被丢弃，而不是返回池中。  
   
 ## <a name="transaction-support"></a>事务支持  
  连接是根据事务上下文来从池中取出并进行分配的。 除非在连接字符串中指定了 `Enlist=false`，否则连接池将确保连接在 <xref:System.Transactions.Transaction.Current%2A> 上下文中登记。 如果连接使用登记的 `System.Transactions` 事务关闭并返回到池中，连接将保留在池中，以便使用相同 `System.Transactions` 事务对该连接池的下一次请求将返回相同的连接（如果可用）。 如果发出这样的请求，而没有可用的池连接，则会从池的非事务性部分取出一个连接并登记。 如果在池的每个区域都没有可用的连接，则会创建一个新的连接并登记。  

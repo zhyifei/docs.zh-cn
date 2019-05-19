@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7babc0918f5e8a7b4561d99bcfcfc9d7bdf9fb69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011367"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878784"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGridView 控件的默认单元格样式和数据格式
 <xref:System.Windows.Forms.DataGridView>控件，可以指定默认单元格样式和单元格整个控件、 特定列、 行和列标题和交替行以创建分类帐效果的数据格式。 设置整个控件的默认样式中被重写默认情况下为列和交替行样式设置。 此外，在单独的行和单元的代码中设置的样式重写默认样式。  
@@ -30,7 +30,7 @@ ms.locfileid: "62011367"
   
 1. 选择<xref:System.Windows.Forms.DataGridView>控件在设计器中的。  
   
-2. 在中**属性**窗口中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>， <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>，或<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>属性。 **CellStyle 生成器**对话框随即出现。  
+2.  在中**属性**窗口中，单击省略号按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>， <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>，或<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>属性。 **CellStyle 生成器**对话框随即出现。  
   
 3. 通过设置属性，请使用定义的样式**预览版**窗格，以确认所做的选择。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62011367"
   
 2. 选择一列从**选定列**列表。  
   
-3. 在中**列属性**网格中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>属性。 **CellStyle 生成器**对话框随即出现。  
+3.  在中**列属性**网格中，单击省略号按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>属性。 **CellStyle 生成器**对话框随即出现。  
   
 4. 通过设置属性，请使用定义的样式**预览版**窗格，以确认所做的选择。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62011367"
   
 1. 使用上述过程之一来显示**CellStyle 生成器**对话框相关的默认单元格样式属性。  
   
-2. 在中**CellStyle 生成器**对话框框中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>属性。 **格式字符串**对话框随即出现。  
+2.  在中**CellStyle 生成器**对话框框中，单击省略号按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>属性。 **格式字符串**对话框随即出现。  
   
 3. 选择格式类型，然后修改的详细信息的类型 （例如要显示的小数位数），使用**示例**框以确认所做的选择。  
   

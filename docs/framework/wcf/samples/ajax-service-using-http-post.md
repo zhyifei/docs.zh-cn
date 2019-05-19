@@ -2,15 +2,15 @@
 title: 使用 HTTP POST 的 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 2bc1722056af4fc71f5f93d92ecd12accd99548f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fb98e38956719608517caa0e7eeaebd14df8d95
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002841"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882152"
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服务
-此示例演示如何使用 Windows Communication Foundation (WCF) 创建[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]异步 JavaScript 和 XML (AJAX) 服务使用 HTTP POST。 AJAX 服务是指可以从 Web 浏览器客户端使用基本 JavaScript 代码访问的服务。 此示例是基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例; 两个示例之间的唯一区别是使用 HTTP POST 而不是 HTTP GET。  
+此示例演示如何使用 Windows Communication Foundation (WCF) 创建 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务使用 HTTP POST。 AJAX 服务是指可以从 Web 浏览器客户端使用基本 JavaScript 代码访问的服务。 此示例是基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例; 两个示例之间的唯一区别是使用 HTTP POST 而不是 HTTP GET。  
   
  AJAX 支持 Windows Communication Foundation (WCF) 中进行了优化以用于通过 ASP.NET AJAX`ScriptManager`控件。 使用 ASP.NET AJAX 使用 WCF 的示例，请参阅[Ajax 示例](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
   

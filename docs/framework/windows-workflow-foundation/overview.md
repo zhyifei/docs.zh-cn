@@ -2,12 +2,12 @@
 title: Windows 工作流概述
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: bb714e5e5e4c1fe009ffa775efb456ebcc65c218
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592560"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876141"
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 工作流是一组的名为的基本单元*活动*作为描述实际过程的模型存储的。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  
@@ -23,7 +23,7 @@ ms.locfileid: "64592560"
   
  上述每个类对表示为负责活动执行的 <xref:System.Activities.ActivityInstance> 的核心活动运行时进行包装。 在一个应用程序域中可以并发运行多个 <xref:System.Activities.ActivityInstance> 对象。  
   
- 上述三个主机交互对象中的每一个都是从称为工作流程序的活动树中创建的。 使用这些类型或自定义主机，用于包装<xref:System.Activities.ActivityInstance>，可以在包括控制台应用程序，任何 Windows 进程内执行工作流基于窗体的应用程序、 Windows 服务， [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 站点和 Windows Communication Foundation （WCF) 服务。  
+ 上述三个主机交互对象中的每一个都是从称为工作流程序的活动树中创建的。 使用这些类型或自定义主机，用于包装<xref:System.Activities.ActivityInstance>，可以在包括控制台应用程序、 基于窗体的应用程序、 Windows 服务、 ASP.NET Web 站点和 Windows Communication Foundation (WCF) 的任何 Windows 进程内执行工作流服务。  
   
  ![在主机进程的工作流组件](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 托管进程中的工作流组件  

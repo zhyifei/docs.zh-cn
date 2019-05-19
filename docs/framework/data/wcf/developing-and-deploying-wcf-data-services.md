@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef38bacfd129033aab41f5f516b96b95fac7913f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765669"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879997"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
 
@@ -38,18 +38,18 @@ ms.locfileid: "61765669"
 
 ### <a name="choose-a-development-web-server"></a>选择开发 Web 服务器
 
-形式的 WCF 数据服务的开发时[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序或[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]网站上使用 Visual Studio 2015，您可以在其上运行数据服务在开发过程中的 Web 服务器的选择。 以下 Web 服务器将与 Visual Studio 以使其更易于测试和调试你的本地计算机上的数据服务集成。
+使用 Visual Studio 2015 为 ASP.NET 应用程序或 ASP.NET Web 站点开发 WCF 数据服务，可以在其上运行数据服务在开发过程中的 Web 服务器的选择。 以下 Web 服务器将与 Visual Studio 以使其更易于测试和调试你的本地计算机上的数据服务集成。
 
 1. **本地 IIS 服务器**
 
-     创建作为在 Internet Information Services (IIS) 上运行的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序或 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 网站的数据服务时，建议使用 IIS 在本地计算机上开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 若要在 IIS 上运行您的数据服务，你必须确保 IIS 和 Windows Communication Foundation (WCF) 是否安装且配置正确，并在文件系统和数据库中授予 IIS 帐户的访问权限。 有关详细信息，请参阅[如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
+     创建 ASP.NET 应用程序或 Internet Information Services (IIS) 上运行的 ASP.NET Web 站点的数据服务时，我们建议您开发和测试您的数据服务在本地计算机上使用 IIS。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 若要在 IIS 上运行您的数据服务，你必须确保 IIS 和 Windows Communication Foundation (WCF) 是否安装且配置正确，并在文件系统和数据库中授予 IIS 帐户的访问权限。 有关详细信息，请参阅[如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
     > [!NOTE]
     > 必须使用管理员权限才能启用开发环境，以配置本地 IIS 服务器来运行 Visual Studio。
 
 2. **Visual Studio 开发服务器**
 
-     Visual Studio 包括一个内置的 Web 服务器，Visual Studio 开发服务器，这是默认的 Web 服务器为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]项目。 该 Web 服务器设计为在开发过程中在本地计算机上运行 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 项目。 [WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)演示如何创建运行在 Visual Studio 开发服务器中的数据服务。
+     Visual Studio 包含一个内置的 Web 服务器，Visual Studio 开发服务器，这是 ASP.NET 项目的默认 Web 服务器。 此 Web 服务器用于在开发过程中在本地计算机上运行的 ASP.NET 项目。 [WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)演示如何创建运行在 Visual Studio 开发服务器中的数据服务。
 
      使用 Visual Studio 开发服务器开发数据服务时应注意以下限制：
 
@@ -82,9 +82,9 @@ ms.locfileid: "61765669"
 
 - 在调试数据服务时，你可能想要在常规操作期间从数据服务不获取有关错误的详细信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅文章[调试 WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=201868)。 你也可以在 WCF 中查看 HTTP 消息传送层中出现的异常跟踪。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。
 
-- 数据服务通常开发为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序项目，但你也可以创建自己的数据服务作为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的网站项目。 有关两种类型的项目之间的差异的信息，请参阅[Web 应用程序项目与 Visual Studio 中的 Web 站点项目](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))。
+- 数据服务通常开发为 ASP.NET 应用程序项目，但您还可以创建你的数据服务作为 ASP.NET Web 站点项目在 Visual Studio 中。 有关两种类型的项目之间的差异的信息，请参阅[Web 应用程序项目与 Visual Studio 中的 Web 站点项目](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))。
 
-- 当使用创建数据服务**添加新项**对话框中，在 Visual Studio 中，数据服务由承载[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]在 IIS 中。 虽然 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 IIS 是数据服务的默认宿主，但也支持其他宿主选项。 有关详细信息，请参阅[承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。
+- 当使用创建数据服务**添加新项**由 ASP.NET 在 IIS 中承载在 Visual Studio 中，数据服务的对话框。 虽然 ASP.NET 和 IIS 是数据服务的默认主机，支持其他托管选项。 有关详细信息，请参阅[承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。
 
 ## <a name="deploy-wcf-data-services"></a>部署 WCF 数据服务
 
@@ -92,7 +92,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 Visual St
 
 - **承载有 IIS 的 Web 服务器**
 
-    将数据服务作为 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 项目开发时，可以使用标准 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 部署过程将其部署到 IIS Web 服务器。  Visual Studio 提供了有关以下部署技术[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，具体类型取决于的[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]承载要部署的数据服务的项目。
+    当数据服务开发为 ASP.NET 项目中时，它可以部署到 IIS Web 服务器通过使用标准 ASP.NET 部署过程。  Visual Studio 为 ASP.NET 中，具体取决于承载要部署的数据服务的 ASP.NET 项目类型提供了以下部署技术。
 
   - **ASP.NET Web 应用程序的部署技术**
 
@@ -108,7 +108,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 Visual St
 
     - [演练：ASP.NET Web 应用程序使用 XCOPY 部署](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     有关的部署选项的详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序，请参阅[Visual Studio 和 ASP.NET 的 Web 部署概述](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))。
+     有关 ASP.NET 应用程序的部署选项的详细信息，请参阅[的 Visual Studio 和 ASP.NET Web 部署概述](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))。
 
     > [!TIP]
     > 在尝试将数据服务部署到 IIS 之前，请确保已测试了向运行 IIS 的 Web 服务器的部署。 有关详细信息，请参阅[如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
@@ -121,7 +121,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 Visual St
 
 部署数据服务时，应注意以下事项：
 
-- 当您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供程序访问 SQL Server 数据库的数据服务时，还可能需要通过数据服务部署传播数据结构和/或数据。 Visual Studio 可以自动创建脚本 （.sql 文件） 来执行此操作在目标数据库中，并且这些脚本可以包含的 Web 部署包中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序。 有关详细信息，请参阅[如何：部署具有 Web 应用程序项目的数据库](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 有关[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]网站上，你可以执行此操作使用**Database Publishing Wizard** Visual Studio 中。 有关详细信息，请参阅[发布 SQL 数据库](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
+- 当您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供程序访问 SQL Server 数据库的数据服务时，还可能需要通过数据服务部署传播数据结构和/或数据。 Visual Studio 可以自动创建脚本 （.sql 文件） 来执行此操作在目标数据库中，且这些脚本可以包含在 ASP.NET 应用程序的 Web 部署包。 有关详细信息，请参阅[如何：部署具有 Web 应用程序项目的数据库](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 为 ASP.NET 网站，你可以执行此操作通过使用**Database Publishing Wizard** Visual Studio 中。 有关详细信息，请参阅[发布 SQL 数据库](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
 - 因为 WCF 数据服务包括基本的 WCF 实现，可以使用 Windows Server AppFabric 监控数据服务部署到 Windows Server 上运行的 IIS。 有关使用 Windows Server AppFabric 监控数据服务的详细信息，请参阅博文[使用 Windows Server AppFabric 跟踪 WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=202005)。
 

@@ -2,12 +2,12 @@
 title: 会话、实例化和并发
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 52c9ed5d672ea05fec3333c9fece8b693143d6f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74b9971fa9267ef6156b27261c61d3e998d01883
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586113"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877322"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>会话、实例化和并发
  “会话”是在两个终结点之间发送的所有消息的一种相互关系。  “实例化”是指对用户定义的服务对象以及与其相关的 <xref:System.ServiceModel.InstanceContext> 对象的生存期的控制。  “并发”一词是指对 <xref:System.ServiceModel.InstanceContext> 中同时执行的线程数量的控制。  
@@ -27,13 +27,13 @@ ms.locfileid: "64586113"
   
 - 没有与 WCF 会话相关联的常规数据存储。  
   
- 如果你熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>类中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]它提供应用程序和功能，您可能注意到该类型的会话和 WCF 会话之间的以下差异：  
+ 如果您熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>它提供 ASP.NET 应用程序中的类和功能，您可能注意到该类型的会话和 WCF 会话之间的以下差异：  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话总是由服务器启动。  
+- ASP.NET 会话始终都是服务器启动的。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话原本是无序的。  
+- ASP.NET 会话是隐式无序的。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话提供了一种跨请求的常规数据存储机制。  
+- ASP.NET 会话在请求之间提供一种常规数据存储机制。  
   
  客户端应用程序和服务应用程序以不同方式与会话交互。 客户端应用程序启动会话，然后接收并处理在该会话内发送的消息。 服务应用程序可以将会话用作扩展点，以添加其他行为。 通过直接使用 <xref:System.ServiceModel.InstanceContext> 或实现一个自定义实例上下文提供程序，可以做到这一点。  
   

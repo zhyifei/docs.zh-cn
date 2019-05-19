@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d7fb1dfbdfb7cf9be33fc8c9711b4fbdc3efc2d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640306"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880555"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标
 Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域显示一个图标。 若要在状态区域中显示多个图标，必须有多个<xref:System.Windows.Forms.NotifyIcon>窗体上的组件。 若要设置控件显示的图标，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 此外可以编写代码<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件处理程序，以便当用户双击该图标出现该问题。 例如，您能够为用户配置后台进程的图标表示显示一个对话框。  
@@ -28,7 +28,7 @@ Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态�
   
 ### <a name="to-set-the-icon"></a>若要设置图标  
   
-1. 将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。  
+1.  将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。  
   
 2. 将 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。  
   

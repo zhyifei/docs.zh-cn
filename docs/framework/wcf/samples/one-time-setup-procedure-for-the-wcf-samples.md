@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 示例的一次性安装过程
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664825"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876711"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 托管在 Internet 信息服务 (IIS) 和从公共虚拟目录中运行的大多数 Windows Communication Foundation (WCF) 示例。 此一次性安装过程的磁盘; 上创建一个文件夹它还添加到名为的 IIS 虚拟目录**ServiceModelSamples**。
@@ -19,7 +19,7 @@ ms.locfileid: "64664825"
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 示例的一次性安装过程  
   
-1. 确保已安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 有关如何设置的详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，请参阅[Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
+1. 请确保设置 ASP.NET。 有关如何设置 ASP.NET 的详细信息，请参阅[Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
   
 2. 确保已安装 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。 搜索以下目录的 v4.0 （或更高版本）： **\Windows\Microsoft.NET\Framework**  
   

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038709"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880188"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>如何：使用 ASP.NET 成员资格提供程序
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序是一种功能，可供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 开发人员用于创建允许用户创建唯一用户名和密码组合的网站。 使用此工具，任何用户都可以在该网站上建立帐户，并登录网站以便独占访问该网站及其服务。 这与要求用户在 Windows 域中具有帐户的 Windows 安全完全不同。 所有提供凭据（用户名/密码组合）的用户都可以使用该网站及其服务。  
+ASP.NET 成员资格提供程序是一项功能，使 ASP.NET 开发人员能够创建允许用户创建唯一的用户名称和密码组合的 Web 站点。 使用此工具，任何用户都可以在该网站上建立帐户，并登录网站以便独占访问该网站及其服务。 这与要求用户在 Windows 域中具有帐户的 Windows 安全完全不同。 所有提供凭据（用户名/密码组合）的用户都可以使用该网站及其服务。  
   
- 示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 有关使用信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供程序功能，请参阅[如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
+ 示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 有关使用 ASP.NET 角色提供程序功能的信息，请参阅[如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
   
  成员资格功能要求使用 SQL Server 数据库来存储用户信息。 此功能还包括用于向忘记密码的用户提示问题的方法。  
   
- Windows Communication Foundation (WCF) 开发人员可以利用这些功能实现安全性。 当集成到 WCF 应用程序，用户必须提供用户名/密码组合到 WCF 客户端应用程序。 若要将数据传输到 WCF 服务，使用一个绑定，支持用户/密码凭据，如<xref:System.ServiceModel.WSHttpBinding>(在配置中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 并设置客户端凭据类型设置为`UserName`. 在服务上，WCF 安全基于用户名和密码，用户进行身份验证，并还会通过指定的角色将分配[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色。  
+ Windows Communication Foundation (WCF) 开发人员可以利用这些功能实现安全性。 当集成到 WCF 应用程序，用户必须提供用户名/密码组合到 WCF 客户端应用程序。 若要将数据传输到 WCF 服务，使用一个绑定，支持用户/密码凭据，如<xref:System.ServiceModel.WSHttpBinding>(在配置中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 并设置客户端凭据类型设置为`UserName`. 在服务上，WCF 安全基于用户名和密码，用户进行身份验证，并还会将 ASP.NET 角色指定的角色分配。  
   
 > [!NOTE]
 >  WCF 不提供方法以填充用户名/密码组合与数据库或其他用户信息。  
@@ -98,7 +98,7 @@ ms.locfileid: "62038709"
 6. 将 `userNamePasswordValidationMode` 属性设置为 `MembershipProvider`。  
   
     > [!IMPORTANT]
-    >  如果`userNamePasswordValidationMode`未设置值，WCF 使用 Windows 身份验证而不是[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成员资格提供程序。  
+    >  如果`userNamePasswordValidationMode`未设置值，WCF 使用 Windows 身份验证而不是 ASP.NET 成员资格提供程序。  
   
 7. 将 `membershipProviderName` 属性设置为提供程序的名称（在本主题的第一个过程中添加提供程序时指定）。 下面的示例演示至此为止的 `<serviceCredentials>` 片段。  
   

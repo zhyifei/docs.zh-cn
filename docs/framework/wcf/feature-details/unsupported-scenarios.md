@@ -2,12 +2,12 @@
 title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637765"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878739"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，Windows Communication Foundation (WCF) 不支持某些特定安全方案。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，并因此 WCF 不支持该平台上运行使用 Windows 身份验证的服务。 运行 Windows XP Home Edition 下的 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -36,7 +36,7 @@ ms.locfileid: "64637765"
 >  上述要求是特定的。 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建一个产生 Windows 标识的绑定元素，但并不建立一个 SCT。 因此，在 `Required` 上，可以将其与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 选项一起使用。  
   
 ### <a name="possible-aspnet-conflict"></a>可能发生 ASP.NET 冲突  
- WCF 和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]都可能启用或禁用模拟。 当[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]托管 WCF 应用程序，WCF 之间可能存在冲突和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]配置设置。 当发生冲突时，WCF 设置优先，除非<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>属性设置为<xref:System.ServiceModel.ImpersonationOption.NotAllowed>，在这种情况下[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]模拟设置优先。  
+ WCF 和 ASP.NET 可以同时启用或禁用模拟。 当 ASP.NET 托管 WCF 应用程序时，WCF 和 ASP.NET 配置设置之间可能存在冲突。 当发生冲突时，WCF 设置优先，除非<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>属性设置为<xref:System.ServiceModel.ImpersonationOption.NotAllowed>，在这种情况下 ASP.NET 模拟设置优先。  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>程序集加载操作可能在模拟下失败  
  如果所模拟的上下文没有加载程序集的访问权限，并且这是公共语言运行库 (CLR) 第一次试图加载该 AppDomain 的程序集，则 <xref:System.AppDomain> 会缓存失败。 随后进行的加载该程序集（或多个程序集）的尝试仍将失败，即使撤消了模拟，并且恢复之后的上下文具有加载该程序集的访问权限。 这是因为，用户上下文更改后，CLR 不会重新尝试加载。 必须重新启动应用程序域才能从失败中恢复。  
@@ -75,13 +75,13 @@ ms.locfileid: "64637765"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果要求使用 ASP.NET 模拟和 ASP.NET 兼容性，消息安全将失败  
  WCF 不支持以下设置组合，因为它们可能会阻止客户端身份验证的发生：  
   
-- 启用了 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟。 这通过 Web.config 文件中设置`impersonate`属性的 <`identity`> 元素`true`。  
+- 启用 ASP.NET 模拟。 这通过 Web.config 文件中设置`impersonate`属性的 <`identity`> 元素`true`。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 通过设置启用兼容性模式`aspNetCompatibilityEnabled`的属性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
+- 设置启用 ASP.NET 兼容性模式`aspNetCompatibilityEnabled`的属性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
 - 使用了消息模式安全。  
   
- 解决办法是禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式。 或者，如果[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]是必需的兼容性模式下，禁用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]模拟功能，并改为使用 WCF 提供的模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 解决办法是关闭 ASP.NET 兼容性模式。 或者，如果需要 ASP.NET 兼容模式下，禁用 ASP.NET 模拟功能，并改为使用 WCF 提供的模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 文本地址失败  
  当客户端和服务位于同一台计算机上，并且为服务使用了 IPv6 文本地址时，安全请求将失败。  

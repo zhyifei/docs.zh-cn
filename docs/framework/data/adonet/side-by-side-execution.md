@@ -2,20 +2,20 @@
 title: ADO.NET 中的并行执行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583619"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877097"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的并行执行
 .NET Framework 中的并行执行是在具有多个版本的安装，以独占方式使用为其编译应用程序的版本的.NET Framework 的计算机上执行应用程序的功能。 有关配置通过并行执行的详细信息，请参阅[-并行执行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
   
- 编译使用.NET Framework 的一个版本的应用程序可以运行不同版本的.NET Framework 上。 但是，我们建议你编译的.NET Framework 中，每个已安装版本的应用程序的版本，并单独运行这些。 在任一方案中，您都应该知道各版本之间 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的更改，这些更改可能影响应用程序的向前或向后兼容性。  
+ 编译使用.NET Framework 的一个版本的应用程序可以运行不同版本的.NET Framework 上。 但是，我们建议你编译的.NET Framework 中，每个已安装版本的应用程序的版本，并单独运行这些。 在任一方案中，您应了解 ADO.NET 中可能会影响的向前或向后兼容性的应用程序的各个版本之间的更改。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>向前兼容性和向后兼容性  
- 向前兼容性表示应用程序可以使用.NET Framework 的早期版本进行编译，但将仍在更高版本的.NET framework 上成功运行。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 针对.NET Framework 1.1 版编写的代码是与更高版本向前兼容。  
+ 向前兼容性表示应用程序可以使用.NET Framework 的早期版本进行编译，但将仍在更高版本的.NET framework 上成功运行。 针对.NET Framework 1.1 版编写的 ADO.NET 代码是与更高版本向前兼容。  
   
  向后兼容性表示应用程序编译为.NET Framework 的较新版本，但仍会继续而不丧失任何功能的.NET framework 的早期版本上运行。 当然，这不会对.NET Framework 的新版本中引入的功能。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65583619"
   
  但是，从.NET Framework 2.0 版开始，所有.NET Framework 数据提供程序可在部分信任的区域。 此外，新的安全功能已添加到.NET Framework 1.1 版中的.NET Framework 数据提供程序。 通过该功能可以限制特定安全区域中可以使用的连接字符串。 您也可以对特定安全区域禁用空白密码。 有关更多信息，请参见 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)。  
   
- 由于安装.NET Framework 的每个具有独立的 Security.config 文件，没有使用的安全设置任何兼容性问题。 但是，如果应用程序所依赖的其他安全功能[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]包含在.NET Framework 1.1 及更高版本中，您将无法再将其分发到 1.0 版的系统。  
+ 由于安装.NET Framework 的每个具有独立的 Security.config 文件，没有使用的安全设置任何兼容性问题。 但是，如果你的应用程序依赖于包含在.NET Framework 1.1 版和更高版本的 ADO.NET 的附加安全功能，您将不能以将其分配到 1.0 版系统。  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand 执行  
  从.NET Framework 1.1 版中，方法开始的<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>执行命令的数据源已更改。  

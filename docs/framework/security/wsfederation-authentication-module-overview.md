@@ -3,12 +3,12 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586051"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877192"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 6. RP 从安全令牌中提取客户端声明并做出授权决策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>将联合身份验证模块与 ASP.NET 搭配使用  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是一个可以将联合身份验证添加到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序的 HTTP 模块。 联合身份验证将身份验证逻辑交由 STS 处理，让你可以集中注意力编写业务逻辑。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是一个 HTTP 模块，可让你将联合身份验证添加到 ASP.NET 应用程序。 联合身份验证将身份验证逻辑交由 STS 处理，让你可以集中注意力编写业务逻辑。  
   
  可以配置 WS-FAM 来指定未经身份验证的请求应重定向到的 STS。 使用 WIF，可采用两种方式对用户进行身份验证：  
   
@@ -41,10 +41,10 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
  在被动重定向中，所有通信通过来自客户端（通常为浏览器）的响应/重定向执行。 可将 WS-FAM 添加到应用程序的 HTTP 管道，它将在管道中监视未经身份验证的用户请求并将用户重定向到指定的 STS。  
   
- WS-FAM 也会引发几个事件，可以通过这些事件在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序中自定义它的功能。  
+ WS-FAM 也会引发几个可自定义其功能在 ASP.NET 应用程序中的事件。  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM 的工作原理  
- WS-FAM 在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 类中实现。 通常情况下，将 WS-FAM 添加到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 信赖方应用的 HTTP 管道。 未经身份验证的用户尝试访问受保护资源时，RP 将返回 HTTP 响应“401 拒绝授权”。 WS-FAM 截获此响应，而不是让客户端接收它，然后将用户重定向到指定的 STS。 STS 颁发安全令牌，WS-FAM 再次将其截获。 WS-FAM 使用该令牌创建的实例<xref:System.Security.Claims.ClaimsPrincipal>身份验证的用户，这使正则.NET Framework 授权机制得以运行。  
+ WS-FAM 在 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 类中实现。 通常情况下，将 WS-FAM 添加到你的 ASP.NET 信赖方应用程序的 HTTP 管道。 未经身份验证的用户尝试访问受保护资源时，RP 将返回 HTTP 响应“401 拒绝授权”。 WS-FAM 截获此响应，而不是让客户端接收它，然后将用户重定向到指定的 STS。 STS 颁发安全令牌，WS-FAM 再次将其截获。 WS-FAM 使用该令牌创建的实例<xref:System.Security.Claims.ClaimsPrincipal>身份验证的用户，这使正则.NET Framework 授权机制得以运行。  
   
  因为 HTTP 无状态，所以需要一种方法来避免在每次用户尝试访问另一个受保护资源时重复上述过程。 这时 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 便可派上用场。 当 STS 向用户颁发安全令牌时，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 也会为该用户创建会话安全令牌并将其放置于 Cookie 中。 在后续请求中，<xref:System.IdentityModel.Services.SessionAuthenticationModule> 将截获此 Cookie 并使用它来重新构造用户的 <xref:System.Security.Claims.ClaimsPrincipal>。  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
  ![显示使用控件登录的 SAM 时序图](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>事件  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和它们的父类 <xref:System.IdentityModel.Services.HttpModuleBase> 在处理 HTTP 请求的各个阶段引发事件。 可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序的 `global.asax` 文件中处理这些事件。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和它们的父类 <xref:System.IdentityModel.Services.HttpModuleBase> 在处理 HTTP 请求的各个阶段引发事件。 你可以处理这些事件中的`global.asax`ASP.NET 应用程序文件。  
   
 - ASP.NET 基础结构调用模块的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法来初始化模块。  
   

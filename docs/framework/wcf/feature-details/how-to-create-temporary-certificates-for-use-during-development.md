@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773290"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877962"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用的临时证书
 
@@ -28,16 +28,16 @@ ms.locfileid: "61773290"
 以下命令创建一个自签名的证书的主题名称为"RootCA"当前用户个人存储区中。
 
 ```powershell
-PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
 ```
 
 我们需要将证书导出到 PFX 文件，以便可以导入到其中需要在后面的步骤。 时使用私钥导出的证书，需要密码以对其进行保护。 我们将密码存入`SecureString`，并使用[Export-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 将证书导出到 PFX 文件关联的私钥。 我们还将只需公共证书保存到 CRT 文件使用[导出证书](/powershell/module/pkiclient/export-certificate)cmdlet。
 
 ```powershell
-PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
-PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>创建一个由根证书颁发机构证书签名的新证书
@@ -45,15 +45,15 @@ PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 以下命令将创建由签名的证书`RootCA`使用者名称为"SignedByRootCA"使用颁发者的私钥。
 
 ```powershell
-PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
+$testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
 同样，我们将保存的签名的证书使用私钥到 PFX 文件，并只是到 CRT 文件的公共密钥。
 
 ```powershell
-PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
-PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
+[String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>在受信任的根证书颁发机构存储区中安装证书

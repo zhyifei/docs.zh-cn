@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645160"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881473"
 ---
 # <a name="using-sessions"></a>使用会话
-在 Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。 WCF 会话是中提供的会话对象不同[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序，支持不同的行为，并且以不同的方式进行控制。 本主题介绍在 WCF 中的会话启用的功能的应用程序以及如何使用它们。  
+在 Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。 WCF 会话不同于 ASP.NET 应用程序中可用的会话对象，支持不同的行为，并以不同的方式进行控制。 本主题介绍在 WCF 中的会话启用的功能的应用程序以及如何使用它们。  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation 应用程序中的会话  
  当某个服务协定指定它需要会话时，该协定会指定所有调用（即，支持调用的基础消息交换）必须是同一对话的一部分。 如果某个协定指定它允许使用会话但不要求使用会话，则客户端可以进行连接，并选择建立会话或不建立会话。 如果会话结束，然后在同一个通道上发送消息，将会引发异常。  
@@ -30,13 +30,13 @@ ms.locfileid: "64645160"
   
 - 没有与 WCF 会话相关联的常规数据存储。  
   
- 如果你熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>类中[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]它提供应用程序和功能，您可能注意到该类型的会话和 WCF 会话之间的以下差异：  
+ 如果您熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>它提供 ASP.NET 应用程序中的类和功能，您可能注意到该类型的会话和 WCF 会话之间的以下差异：  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话总是由服务器启动。  
+- ASP.NET 会话始终都是服务器启动的。  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话原本是无序的。  
+- ASP.NET 会话是隐式无序的。  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话提供了一种跨请求的常规数据存储机制。  
+- ASP.NET 会话在请求之间提供一种常规数据存储机制。  
   
  本主题描述：  
   

@@ -2,12 +2,12 @@
 title: ADO.NET 概述
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607357"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877209"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概述
 ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB 和 ODBC 公开的数据源的一致访问。 共享数据的使用方应用程序可以使用 ADO.NET 连接到这些数据源，并可以检索、处理和更新其中包含的数据。  
@@ -46,7 +46,7 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
   
 ## <a name="related-sections"></a>相关章节  
  [ADO.NET 新增功能](../../../../docs/framework/data/adonet/whats-new.md)  
- 介绍 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的新功能。  
+ 介绍 ADO.NET 中的新增功能。  
   
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  描述使用 ADO.NET 时的安全编码做法。  

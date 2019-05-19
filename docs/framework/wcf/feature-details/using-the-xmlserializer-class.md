@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3a0c8bd90c2a8f4ffc2e7a6d8831f306637915e6
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586238"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877381"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 Windows Communication Foundation (WCF) 可以使用两种不同的序列化技术将客户端和服务，名为序列化的进程之间进行传输的 XML 应用程序中的数据。  
@@ -35,14 +35,14 @@ Windows Communication Foundation (WCF) 可以使用两种不同的序列化技�
  <xref:System.Runtime.Serialization.DataContractSerializer>（与数据一起使用的协定类型) 是编写新的 WCF 服务的建议的方法。 有关详细信息，请参阅[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>使用 XmlSerializer 类的时机  
- WCF 还支持<xref:System.Xml.Serialization.XmlSerializer>类。 <xref:System.Xml.Serialization.XmlSerializer>类不是唯一的 WCF。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务同样使用该类作为序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 类支持的类型少于 <xref:System.Runtime.Serialization.DataContractSerializer> 类支持的类型，但它允许对生成的 XML 进行更多的控制，并且支持更多的 XML 架构定义语言 (XSD) 标准。 它也不要求针对可序列化类型的任何声明性属性。 有关详细信息，请参阅.NET Framework 文档中的 XML 序列化主题。 <xref:System.Xml.Serialization.XmlSerializer> 类并不支持数据协定类型。  
+ WCF 还支持<xref:System.Xml.Serialization.XmlSerializer>类。 <xref:System.Xml.Serialization.XmlSerializer>类不是唯一的 WCF。 它是 ASP.NET Web 服务使用相同的序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 类支持的类型少于 <xref:System.Runtime.Serialization.DataContractSerializer> 类支持的类型，但它允许对生成的 XML 进行更多的控制，并且支持更多的 XML 架构定义语言 (XSD) 标准。 它也不要求针对可序列化类型的任何声明性属性。 有关详细信息，请参阅.NET Framework 文档中的 XML 序列化主题。 <xref:System.Xml.Serialization.XmlSerializer> 类并不支持数据协定类型。  
   
  当使用 Svcutil.exe 或**添加服务引用**自动为您选择在 Visual Studio 中生成客户端代码，对于第三方服务，或访问第三方架构，相应的序列化程序的功能。 如果架构与 <xref:System.Runtime.Serialization.DataContractSerializer> 不兼容，则选择 <xref:System.Xml.Serialization.XmlSerializer>。  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>手动切换到 XmlSerializer  
  有时候，您也许必须手动切换到 <xref:System.Xml.Serialization.XmlSerializer>。 例如，在以下情况下可能需要这样做：  
   
-- 当迁移应用程序从[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]wcf Web 服务，你可能想要重用现有的、 <xref:System.Xml.Serialization.XmlSerializer>-兼容的类型，而不是创建新的数据协定类型。  
+- 当 ASP.NET Web 服务的应用程序迁移到 WCF 中，你可能想要重用现有的、 <xref:System.Xml.Serialization.XmlSerializer>-兼容的类型，而不是创建新的数据协定类型。  
   
 - 当对出现在消息中的 XML 的精确控制很重要，而 Web 服务描述语言 (WSDL) 文档不可用时，例如，在使用必须遵循某个已标准化且已发布的架构（与 DataContractSerializer 不兼容）的类型来创建服务时。  
   
