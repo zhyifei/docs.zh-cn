@@ -2,12 +2,12 @@
 title: dotnet help 命令
 description: dotnet help 命令可显示指定命令更详细的在线文档。
 ms.date: 12/04/2018
-ms.openlocfilehash: 44274b698ed83bd3cdb58787f433eeb5c555bc6d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8694494720cdb9a540754fdf79eeb99d5dbe61ef
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168945"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631982"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help 参考
 

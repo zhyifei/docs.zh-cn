@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的先决条件
 description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8eb2913b0fa1fe037a460633064d6f179b64a248
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313705"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634081"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -55,11 +55,11 @@ ms.locfileid: "59313705"
 * 通过 .zip 文件安装 .NET Core。 这可能包括 build/CI/CD 服务器。
 
 > [!NOTE]
-> **对于 Windows 8.1 及更低版本，或 Windows Server 2012 R2 及更低版本：**
+> 对于 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本：
 >
-> 确保 Windows 安装是最新版本，并且包括可通过 Windows 更新安装的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果没有安装此更新，便会在启动 .NET Core 应用时看到如下错误： `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> 确保 Windows 安装是最新版本，并且包括可通过 Windows 更新安装的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
-> **对于 Windows 7 或 Windows Server 2008 R2：**
+> 对于 Windows 7 或 Windows Server 2008 R2：
 >
 > 除 KB2999226 以外，请确保还安装了 [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
@@ -73,7 +73,7 @@ ms.locfileid: "59313705"
 
 在[发行说明](/visualstudio/releasenotes/vs2017-relnotes)中可以详细了解 Visual Studio 2017 中的更改。
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 若要使用 .NET Core 2.2 SDK 在 Visual Studio 2017 中开发 .NET Core 应用：
 
@@ -101,7 +101,7 @@ ms.locfileid: "59313705"
 * 将 .NET Core 1.x 和 2.x 项目重定目标到 .NET Core 2.2，再生成并运行。
 * 新建 .NET Core 2.2 项目。
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 若要在 Visual Studio 中开发 .NET Core 1.x 应用程序，请[下载并安装 Visual Studio 2017](/visualstudio/install/install-visual-studio)，并选择“其他工具集”部分中的“.NET Core 跨平台开发”工作负载。
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672225"
+---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
 | .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 |
@@ -16,7 +24,7 @@
 - 列表示 .NET Standard 版本。 每个标题单元格都是一个文档链接，其中介绍了相应版本的 .NET Standard 中新增了哪些 API。
 - 行表示不同的 .NET 实现。
 - 各单元格中的版本号指示要定向到此 .NET Standard 版本所需的最低实现版本。
-- 有关交互式表的信息，请参阅 [.NET Standard 版本](https://immo.landwerth.net/netstandard-versions/#)。
+- 有关交互式表的信息，请参阅 [.NET Standard 版本](https://dotnet.microsoft.com/platform/dotnet-standard#versions)。
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

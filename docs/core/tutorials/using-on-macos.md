@@ -4,12 +4,12 @@ description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e79f5dd90124d2a1902194af2edbde0f5df107c7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409492"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633980"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>开始在 macOS 上使用 .NET Core
 
