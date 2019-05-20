@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590046"
 ---
 # <a name="recoverable-xslt-errors"></a>可恢复的 XSLT 错误
 W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方面确定如何处理某种情况。 这些方面被认为是任意行为。 例如，在第 7.3 节“Creating Processing Instructions”中，XSLT 1.0 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，XSLT 1.0 建议指示在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。  
@@ -18,11 +18,11 @@ W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方
 ## <a name="discretionary-behaviors"></a>任意行为  
  下表列出 XSLT 1.0 建议允许的每项任意行为以及这些行为如何通过 <xref:System.Xml.Xsl.XslCompiledTransform> 类进行处理。  
   
--   恢复指示 <xref:System.Xml.Xsl.XslCompiledTransform> 类将从此错误中恢复。 <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 事件可以用于从 XSLT 处理器报告任意事件。  
+- 恢复指示 <xref:System.Xml.Xsl.XslCompiledTransform> 类将从此错误中恢复。 <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 事件可以用于从 XSLT 处理器报告任意事件。  
   
--   错误指示此条件将引发异常。  
+- 错误指示此条件将引发异常。  
   
--   有关各部分的参考信息，可以参阅 [W3C XSL 转换 (XSLT) 1.0 版建议](https://www.w3.org/TR/xslt)和 [W3C XSL 转换 (XSLT) 1.0 版规范勘误表](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)。  
+- 有关各部分的参考信息，可以参阅 [W3C XSL 转换 (XSLT) 1.0 版建议](https://www.w3.org/TR/xslt)和 [W3C XSL 转换 (XSLT) 1.0 版规范勘误表](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)。  
   
 |XSLT 条件|节|XslCompiledTransform 行为|  
 |--------------------|-------------|-----------------------------------|  
@@ -50,7 +50,7 @@ W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方
 |对不能以 XSLT 处理器用于输出的编码表示的字符禁用输出转义。|16.4|恢复*|  
 |向元素添加子级或添加属性后，向元素添加命名空间节点。|errata 25|错误*|  
 |`value` 的 `xsl:number` 属性为 NAN、无限大或小于 0.5。|errata 24|恢复|  
-|文档函数的第二个参数 node-set 为空，且 URI 引用是相对的。|errata 14|恢复|  
+|文档函数的第二个自变量 node-set 为空，且 URI 引用是相对的。|errata 14|恢复|  
   
  <sup>*</sup> 此行为与 <xref:System.Xml.Xsl.XslTransform> 类的行为不同。 有关详细信息，请参阅[在 XslTransform 类中实现任意行为](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
   

@@ -17,42 +17,42 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a45ef91eba38223270a04cff2f00c30decb019f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399699"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591371"
 ---
 # <a name="reflection-and-generic-types"></a>反射类型和泛型类型
 <a name="top"></a> 从反射的角度来说，泛型类型和普通类型之间的区别在于泛型类型具有与之关联的一组类型形参（若是泛型类型定义）或类型实参（若是构造类型）。 泛型方法和普通方法以相同方式互不相同。  
   
  有两个关键点可了解反射如何处理泛型类型和方法：  
   
--   泛型类型定义和泛型方法定义的类型参数由 <xref:System.Type> 类的实例表示。  
+- 泛型类型定义和泛型方法定义的类型参数由 <xref:System.Type> 类的实例表示。  
   
     > [!NOTE]
     >  <xref:System.Type> 对象表示泛型类型参数时， <xref:System.Type> 的很多属性和方法具有不同的行为。 这些差异记录在属性和方法主题中。 有关示例，请参阅 <xref:System.Type.IsAutoClass%2A> 和 <xref:System.Type.DeclaringType%2A>。 此外，某些成员仅在 <xref:System.Type> 对象表示泛型类型参数时有效。 有关示例，请参阅 <xref:System.Type.GetGenericTypeDefinition%2A>。  
   
--   如果 <xref:System.Type> 的实例表示泛型类型，则它包含表示类型形参（对于泛型类型定义）或类型实参（对于构造类型）的类型数组。 这同样适用于表示泛型方法的 <xref:System.Reflection.MethodInfo> 的类的实例。  
+- 如果 <xref:System.Type> 的实例表示泛型类型，则它包含表示类型形参（对于泛型类型定义）或类型实参（对于构造类型）的类型数组。 这同样适用于表示泛型方法的 <xref:System.Reflection.MethodInfo> 的类的实例。  
   
  反射提供 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的方法，它允许你访问类型形参的数组并确定 <xref:System.Type> 的实例是表示类型形参还是表示实际类型。  
   
- 若要深入了解此处讨论的方法的示例代码演示，请参阅[如何：使用反射检查和实例化泛型类型](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
+ 有关演示此处讨论的方法的示例代码，请参阅[如何：使用反射检查和实例化泛型类型](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)中提供的其他信息。  
   
  以下讨论假定熟悉泛型的术语，例如类型形参和实参之间的差异以及开放式或封闭式构造类型之间的差异。 有关详细信息，请参阅[泛型](../../../docs/standard/generics/index.md)。  
   
  本概述包含以下几节：  
   
--   [这是泛型类型还是泛型方法？](#is_this_a_generic_type_or_method)  
+- [这是泛型类型还是泛型方法？](#is_this_a_generic_type_or_method)  
   
--   [生成封闭式泛型类型](#generating_closed_generic_types)  
+- [生成封闭式泛型类型](#generating_closed_generic_types)  
   
--   [检查类型实参和类型形参](#examining_type_arguments)  
+- [检查类型实参和类型形参](#examining_type_arguments)  
   
--   [固定协定](#invariants)  
+- [固定协定](#invariants)  
   
--   [相关主题](#related_topics)  
+- [相关主题](#related_topics)  
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>这是泛型类型还是泛型方法？  
@@ -115,9 +115,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 ### <a name="source-of-a-generic-parameter"></a>泛型参数的源  
  泛型类型形参可能来自要检查的类型、封闭类型或者泛型方法。 可以按以下方式确定泛型类型形参的源：  
   
--   首先，使用 <xref:System.Type.DeclaringMethod%2A> 属性来确定类型形参是否来自泛型方法。 如果属性值不是 null 引用（在 Visual Basic 中为`Nothing` ），则源是泛型方法。  
+- 首先，使用 <xref:System.Type.DeclaringMethod%2A> 属性来确定类型形参是否来自泛型方法。 如果属性值不是 null 引用（在 Visual Basic 中为`Nothing` ），则源是泛型方法。  
   
--   如果源不是泛型方法，则使用 <xref:System.Type.DeclaringType%2A> 属性来确定泛型类型形参所属的泛型类型。  
+- 如果源不是泛型方法，则使用 <xref:System.Type.DeclaringType%2A> 属性来确定泛型类型形参所属的泛型类型。  
   
  如果类型形参属于泛型方法，则 <xref:System.Type.DeclaringType%2A> 属性返回声明泛型方法的类型，这是不相关的类型。  
   
@@ -147,9 +147,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[如何：使用反射检查和实例化泛型类型](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|演示如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的属性和方法来检查泛型类型。|  
 |[泛型](../../../docs/standard/generics/index.md)|描述泛型功能以及 .NET Framework 如何支持它。|  
-|[如何：使用 Reflection Emit 定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|演示如何在动态程序集中使用反射发出生成泛型类型。|  
+|[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|演示如何在动态程序集中使用反射发出生成泛型类型。|  
 |[查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|介绍 <xref:System.Type> 类并提供演示如何使用具有各种反射类的 <xref:System.Type> 来获取有关构造函数、方法、字段、属性和事件的信息的代码示例。|

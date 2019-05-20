@@ -8,31 +8,31 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e569742943e121faeae340512544956b674da083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202686"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595357"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
 异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../../csharp/language-reference/keywords/throw.md) 关键字引发。 然后，运行时搜索最兼容的异常处理程序。  
   
  当存在下列一种或多种情况时，程序员应引发异常：  
   
--   方法无法完成其定义的功能。  
+- 方法无法完成其定义的功能。  
   
      例如，如果一种方法的参数具有无效的值：  
   
      [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
--   根据对象的状态，对某个对象进行不适当的调用。  
+- 根据对象的状态，对某个对象进行不适当的调用。  
   
      一个示例可能是尝试写入只读文件。 在对象状态不允许操作的情况下，引发 <xref:System.InvalidOperationException> 的实例或基于此类的派生的对象。 这是引发 <xref:System.InvalidOperationException> 对象的方法示例：  
   
      [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
--   方法的参数引发了异常。  
+- 方法的参数引发了异常。  
   
      在这种情况下，应捕获原始异常，并创建 <xref:System.ArgumentException> 实例。 应将原始异常作为 <xref:System.Exception.InnerException%2A> 参数传递给 <xref:System.ArgumentException> 的构造函数：  
   
@@ -47,16 +47,16 @@ ms.locfileid: "57202686"
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>引发异常时应避免的情况  
  以下列表标识了引发异常时要避免的做法：  
   
--   异常不能用于在正常执行过程中更改程序的流程。 异常只能用于报告和处理错误条件。  
+- 异常不能用于在正常执行过程中更改程序的流程。 异常只能用于报告和处理错误条件。  
   
--   只能引发异常，而不能作为返回值或参数返回异常。  
+- 只能引发异常，而不能作为返回值或参数返回异常。  
   
--   请勿有意从自己的源代码中引发 <xref:System.Exception?displayProperty=nameWithType>、<xref:System.SystemException?displayProperty=nameWithType>、<xref:System.NullReferenceException?displayProperty=nameWithType> 或 <xref:System.IndexOutOfRangeException?displayProperty=nameWithType>。  
+- 请勿有意从自己的源代码中引发 <xref:System.Exception?displayProperty=nameWithType>、<xref:System.SystemException?displayProperty=nameWithType>、<xref:System.NullReferenceException?displayProperty=nameWithType> 或 <xref:System.IndexOutOfRangeException?displayProperty=nameWithType>。  
   
--   不要创建可在调试模式下引发，但不会在发布模式下引发的异常。 若要在开发阶段确定运行时错误，请改用调试断言。  
+- 不要创建可在调试模式下引发，但不会在发布模式下引发的异常。 若要在开发阶段确定运行时错误，请改用调试断言。  
   
 ## <a name="defining-exception-classes"></a>定义异常类  
- 程序可以引发 <xref:System> 命名空间中的预定义异常类（前面提到的情况除外），或通过从 <xref:System.Exception> 派生来创建其自己的异常类。 派生类应至少定义四个构造函数：一个默认构造函数、一个用于设置消息属性的构造函数，以及一个用于设置 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 属性的构造函数。 第四个构造函数用于序列化异常。 新的异常类应可序列化。 例如:  
+ 程序可以引发 <xref:System> 命名空间中的预定义异常类（前面提到的情况除外），或通过从 <xref:System.Exception> 派生来创建其自己的异常类。 派生类应该至少定义四个构造函数：一个无参数构造函数、一个用于设置消息属性，还有一个用于设置 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 属性。 第四个构造函数用于序列化异常。 新的异常类应可序列化。 例如:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

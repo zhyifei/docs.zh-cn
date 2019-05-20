@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504335"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063279"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>内存\<T> 和跨度\<T> 使用准则
 
@@ -86,7 +86,7 @@ class Program
 
 - `Main` 方法保留对 <xref:System.Buffers.IMemoryOwner%601> 实例的引用，因此 `Main` 方法是缓冲区的所有者。
 
-- `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法接受 xref:System.Memory%601> 作为公共 API。 因此，它们是缓冲区的使用者。 并且它们一次仅使用一个。
+- `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法接受 <xref:System.Memory%601> 作为公共 API。 因此，它们是缓冲区的使用者。 并且它们一次仅使用一个。
 
 尽管 `WriteInt32ToBuffer` 方法用于将值写入缓冲区，但 `DisplayBufferToConsole` 方法并不如此。 若要反映此情况，可以接受类型为 <xref:System.ReadOnlyMemory%601> 的参数。 有关 <xref:System.ReadOnlyMemory%601> 的其他信息，请参阅[规则 2：如果缓冲区应为只读，则使用 ReadOnlySpan\<T> 或 ReadOnlyMemory\<T>](#rule-2)。
 
@@ -110,13 +110,13 @@ class Program
 
 - 组件可以同时在运行其他组件的缓冲区上运行，在该过程中会损坏缓冲区中的数据。
 
-- 虽然 <xref:System.Span%601> 的堆栈分配特性优化了性能并使 <xref:System.Span%601> 成为在内存块上运行的首选类型，但它也使 <xref:System.Span%601> 必须遵循一些主要限制的约束。 请务必了解何时使用 <xref:System.Span%601> 以及何时使用 <xref:System.Memory%601>。
+- 虽然 <xref:System.Span%601> 的堆栈分配特性优化了性能并使 <xref:System.Span%601> 成为在内存块上运行的首选类型，但它也使 <xref:System.Span%601> 受一些主要限制的约束。 请务必了解何时使用 <xref:System.Span%601> 以及何时使用 <xref:System.Memory%601>。
 
 下面介绍成功使用 <xref:System.Memory%601> 及其相关类型的建议。 请注意，除非另有明确说明，否则适用于 <xref:System.Memory%601> 和 <xref:System.Span%601> 的指南也适用于 <xref:System.ReadOnlyMemory%601> 和 <xref:System.ReadOnlySpan%601>。
 
 **规则 1：对于同步 API，如有可能，请使用跨度\<T>（而不是内存\<T>）作为参数。**
 
-<xref:System.Span%601> 比 <xref:System.Memory%601> 更通用，可以表示更多种类的连续内存缓冲区。 <xref:System.Span%601> 还提供比 <xref:System.Memory%601>> 更好的性能。 最后，尽管无法进行跨度\<T> 到内存\<T> 的转换，但可以使用 <xref:System.Memory%601.Span?displayProperty=nameWithType> 属性将 <xref:System.Memory%601> 实例转换为 <xref:System.Span%601>。 因此，如果调用方恰好具有 <xref:System.Memory%601> 实例，则它们不管怎样都可以使用 <xref:System.Span%601> 参数调用你的方法。
+<xref:System.Span%601> 比 <xref:System.Memory%601> 更通用，可以表示更多种类的连续内存缓冲区。 <xref:System.Span%601> 还提供比 <xref:System.Memory%601> 更好的性能。 最后，尽管无法进行跨度\<T> 到内存\<T> 的转换，但可以使用 <xref:System.Memory%601.Span?displayProperty=nameWithType> 属性将 <xref:System.Memory%601> 实例转换为 <xref:System.Span%601>。 因此，如果调用方恰好具有 <xref:System.Memory%601> 实例，则它们不管怎样都可以使用 <xref:System.Span%601> 参数调用你的方法。
 
 使用类型为 <xref:System.Span%601>（而不是类型为 <xref:System.Memory%601>）的参数还可以帮助你编写正确的使用方法实现。 你将自动进行编译时检查，以确保不尝试访问方法租用之外的缓冲区（后续部分将对此进行详细介绍）。
 
@@ -246,7 +246,7 @@ class Person
 
 **规则 9：如果正在包装同步 P/Invoke 方法，则 API 应接受跨度\<T> 作为参数。**
 
-根据规则 1，<xref:System.Span%601> 通常是用于同步 API 的正确类型。 可以通过 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 关键字固定 <xref:System.Span%601>\<T> 实例，如下面的示例所示。
+根据规则 1，<xref:System.Span%601> 通常是用于同步 API 的正确类型。 可以通过 [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) 关键字固定 <xref:System.Span%601> 实例，如下面的示例所示。
 
 ```csharp
 using System.Runtime.InteropServices;

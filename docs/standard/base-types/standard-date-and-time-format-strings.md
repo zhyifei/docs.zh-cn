@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532184"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664643"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
   
--   定义由格式设置操作生成的字符串。  
+- 定义由格式设置操作生成的字符串。  
   
--   定义可通过分析操作转换为 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的日期和时间值的文本表示形式。  
+- 定义可通过分析操作转换为 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的日期和时间值的文本表示形式。  
 
 > [!TIP]
 >  你可以下载 [格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
@@ -63,17 +63,17 @@ ms.locfileid: "54532184"
   
  如果格式设置操作中的标准格式字符串映射到某个特定区域性的自定义格式字符串，则应用程序可定义该特定区域性，并通过以下方式之一使用其自定义格式字符串：  
   
--   可使用默认的（或当前的）区域性。 下面的示例使用当前区域性的短日期格式显示日期。 在此情况下，当前区域性为 en-US。  
+- 可使用默认的（或当前的）区域性。 下面的示例使用当前区域性的短日期格式显示日期。 在此情况下，当前区域性为 en-US。  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   可以传递一个表示区域性的 <xref:System.Globalization.CultureInfo> 对象，该区域性的格式设置将用于具有 <xref:System.IFormatProvider> 参数的方法。 下面的示例使用 pt-BR 区域性的短日期格式显示日期。  
+- 可以传递一个表示区域性的 <xref:System.Globalization.CultureInfo> 对象，该区域性的格式设置将用于具有 <xref:System.IFormatProvider> 参数的方法。 下面的示例使用 pt-BR 区域性的短日期格式显示日期。  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   可以传递一个 <xref:System.Globalization.DateTimeFormatInfo> 对象，该对象向具有 <xref:System.IFormatProvider> 参数的方法提供格式设置信息。 下面的示例使用 hr-HR 区域性的 <xref:System.Globalization.DateTimeFormatInfo> 对象中的短日期格式显示日期。  
+- 可以传递一个 <xref:System.Globalization.DateTimeFormatInfo> 对象，该对象向具有 <xref:System.IFormatProvider> 参数的方法提供格式设置信息。 下面的示例使用 hr-HR 区域性的 <xref:System.Globalization.DateTimeFormatInfo> 对象中的短日期格式显示日期。  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -85,7 +85,7 @@ ms.locfileid: "54532184"
   
 |标准格式字符串|由 DateTimeFormatInfo.InvariantInfo 属性定义|自定义格式字符串|  
 |----------------------------|----------------------------------------------------------|--------------------------|  
-|“O”或“o”|无|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
+|“O”或“o”|None|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
 |“R”或“r”|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|  
 |“s”|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|  
 |“u”|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|  
@@ -249,17 +249,17 @@ ms.locfileid: "54532184"
   
  "O" 或 "o" 标准格式说明符（和 "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" 自定义格式字符串）利用 ISO 8601 表示时区信息的三种方式，从而暂留 <xref:System.DateTime> 值的 <xref:System.DateTime.Kind%2A> 属性：  
   
--   <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日期和时间值的时区组件是相对于 UTC 的偏移量（例如，+01:00，-07:00）。 所有 <xref:System.DateTimeOffset> 值也以这种格式表示。  
+- <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日期和时间值的时区组件是相对于 UTC 的偏移量（例如，+01:00，-07:00）。 所有 <xref:System.DateTimeOffset> 值也以这种格式表示。  
   
--   <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 日期和时间值的时区组件使用“Z”（它代表零偏移量）以表示 UTC。  
+- <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 日期和时间值的时区组件使用“Z”（它代表零偏移量）以表示 UTC。  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和时间值没有时区信息。  
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和时间值没有时区信息。  
   
  由于“O”或“o”标准格式说明符遵循国际标准，使用说明符的格式设置或分析操作始终使用固定区域性和公历。  
   
  如果字符串采用了这些格式中的某个格式,则可以通过使用“O”或“o”格式说明符分析传递到 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的这些字符串。 对于 <xref:System.DateTime> 对象，你调用的分析重载还应当包含带有 `styles` 值的 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 参数。 请注意，如果你使用对应于“O”或“o”格式说明符的自定义格式字符串调用分析方法，则你不会获得与“O”或“o”相同的结果。 这是因为使用自定义格式字符串的分析方法不能分析缺少时区组件的日期和时间值的字符串表示形式，或使用“Z”指示 UTC。  
   
- 下面的示例使用“o”格式说明符在美国的太平洋时区中的系统上显示一系列的 <xref:System.DateTime> 值和 <xref:System.DateTimeOffset> 值。  
+ 下面的示例使用“o”格式说明符在美国太平洋时区中的系统上显示一系列 <xref:System.DateTime> 值和 <xref:System.DateTimeOffset> 值。  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  

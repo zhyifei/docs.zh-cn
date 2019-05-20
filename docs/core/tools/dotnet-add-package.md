@@ -1,17 +1,21 @@
 ---
 title: dotnet add package 命令
 description: “dotnet add package”命令可便于添加对项目的 NuGet 包引用。
-ms.date: 12/04/2018
-ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/24/2019
+ms.openlocfilehash: 07cb6cd8e7873def6f969a54c1f7b9a7325f9491
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169997"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632270"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
+**本文适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -78,11 +82,11 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  将包还原到指定的目录。
+  要在其中还原包的目录。
 
 * **`-s|--source <SOURCE>`**
 
-  使用还原操作期间的特定 NuGet 包源。
+  要在还原操作期间使用的 NuGet 包源。
 
 * **`-v|--version <VERSION>`**
 

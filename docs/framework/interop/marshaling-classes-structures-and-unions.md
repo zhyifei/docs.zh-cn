@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113719"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469731"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送类、结构和联合
 .NET Framework 中类和结构非常相似。 它们都可以具有字段、属性和事件。 并且都可以具有静态和非静态方法。 一个显著区别是结构是值类型，而类是引用类型。  
@@ -50,19 +50,19 @@ ms.locfileid: "59113719"
   
  “结构”示例使用以下非托管函数（与原始函数声明一同显示）：  
   
--   从 PinvokeLib.dll 导出的 TestStructInStruct。  
+- 从 PinvokeLib.dll 导出的 TestStructInStruct。  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   从 PinvokeLib.dll 导出的 TestStructInStruct3。  
+- 从 PinvokeLib.dll 导出的 TestStructInStruct3。  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   从 PinvokeLib.dll 导出的 TestArrayInStruct。  
+- 从 PinvokeLib.dll 导出的 TestArrayInStruct。  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  托管的 `MyPerson`、`MyPerson2`、`MyPerson3` 和 `MyArrayStruct` 结构具有以下特征：  
   
--   `MyPerson` 仅包含字符串成员。 [CharSet](specifying-a-character-set.md) 字段在传递到非托管函数时将字符串设置为 ANSI 格式。  
+- `MyPerson` 仅包含字符串成员。 [CharSet](specifying-a-character-set.md) 字段在传递到非托管函数时将字符串设置为 ANSI 格式。  
   
--   `MyPerson2` 将 IntPtr 包含到 `MyPerson` 结构中。 IntPtr 类型替换指向非托管结构的原始指针，因为 .NET Framework 应用程序不使用指针，除非代码被标记为“不安全”。  
+- `MyPerson2` 将 IntPtr 包含到 `MyPerson` 结构中。 IntPtr 类型替换指向非托管结构的原始指针，因为 .NET Framework 应用程序不使用指针，除非代码被标记为“不安全”。  
   
--   `MyPerson3` 将 `MyPerson` 作为嵌入结构包含在内。 嵌入其他结构的结构可通过将嵌入结构的元素直接放入主结构中来进行平展，还可以保留为嵌入结构，如本示例中操作所示。  
+- `MyPerson3` 将 `MyPerson` 作为嵌入结构包含在内。 嵌入其他结构的结构可通过将嵌入结构的元素直接放入主结构中来进行平展，还可以保留为嵌入结构，如本示例中操作所示。  
   
--   `MyArrayStruct` 包含整数数组。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值设置为 ByValArray，此值用于指示数组中的元素数。  
+- `MyArrayStruct` 包含整数数组。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值设置为 ByValArray，此值用于指示数组中的元素数。  
   
  对于此示例中的所有结构，应用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性以确保成员在内存中按出现的顺序进行排列。  
   
  `LibWrap` 类包含 `App` 类所调用的 `TestStructInStruct`、`TestStructInStruct3` 和 `TestArrayInStruct` 方法的托管原型。 每个原型均声明一个参数，如下所示：  
   
--   `TestStructInStruct` 将对 `MyPerson2` 类型的引用声明为其参数。  
+- `TestStructInStruct` 将对 `MyPerson2` 类型的引用声明为其参数。  
   
--   `TestStructInStruct3` 将 `MyPerson3` 类型声明为其参数并按值传递此参数。  
+- `TestStructInStruct3` 将 `MyPerson3` 类型声明为其参数并按值传递此参数。  
   
--   `TestArrayInStruct` 将对 `MyArrayStruct` 类型的引用声明为其参数。  
+- `TestArrayInStruct` 将对 `MyArrayStruct` 类型的引用声明为其参数。  
   
  作为方法自变量的结构按值传递，除非此参数包含 ref（Visual Basic 中为 ByRef）关键字。 例如，`TestStructInStruct` 方法将对 `MyPerson2` 类型对象的引用（地址的值）传递到非托管代码。 为了处理 `MyPerson2` 指向的结构，此示例创建了具有指定大小的缓冲区，并同时使用 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> 和 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 方法返回其地址。 然后，此示例将该托管结构的内容复制到非托管的缓冲区。 最后，此示例使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> 方法将非托管缓冲区的数据封送到托管对象，并使用 <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> 方法释放非托管的内存块。  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  FindFile 示例使用以下的非托管函数（与其原始函数声明一同显示）：  
   
--   从 Kernel32.dll 导出的 FindFirstFile。  
+- 从 Kernel32.dll 导出的 FindFirstFile。  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  “联合”示例使用以下非托管函数（与其原始函数声明一同显示）：  
   
--   从 PinvokeLib.dll 导出的 TestUnion。  
+- 从 PinvokeLib.dll 导出的 TestUnion。  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  SysTime 示例使用以下非托管函数（与其其原始函数声明一同显示）：  
   
--   从 Kernel32.dll 导出的 GetSystemTime。  
+- 从 Kernel32.dll 导出的 GetSystemTime。  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -266,17 +266,17 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` 类包含 ANSI 字符的字符串对象。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 字段指定 ANSI 格式。 `MyUnsafeStruct` 是一种包含 <xref:System.IntPtr> 类型（而非字符串）的结构。  
   
- `LibWrap` 类包含已重载 `TestOutArrayOfStructs` 原型方法。 如果方法将指针声明为参数，则应使用 `unsafe` 关键字标记类。 因为 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 无法使用不安全代码，所以已重载方法、不安全修饰符和 `MyUnsafeStruct` 结构不是必需的。  
+ `LibWrap` 类包含已重载 `TestOutArrayOfStructs` 原型方法。 如果方法将指针声明为参数，则应使用 `unsafe` 关键字标记类。 因为 Visual Basic 无法使用不安全的代码，所以重载的方法、不安全的修饰符和 `MyUnsafeStruct` 结构不是必需的。  
   
  `App` 类实现 `UsingMarshaling` 方法，此方法执行传递数组所需的全部任务。 使用 `out`（Visual Basic 中的 `ByRef`）关键字标记数组，以指示数据从被调用方传递至调用方。 实现使用以下 <xref:System.Runtime.InteropServices.Marshal> 类方法：  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A>，用于将数据从非托管缓冲区封送到托管对象。  
+- <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A>，用于将数据从非托管缓冲区封送到托管对象。  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A>用于释放为结构中的字符串保留的内存。  
+- <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A>用于释放为结构中的字符串保留的内存。  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>用于释放为数组保留的内存。  
+- <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>用于释放为数组保留的内存。  
   
- 正如上文所述，C# 允许不安全代码而 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 不允许。 在 C# 示例中，`UsingUnsafePointer` 是一种替代性方法实现，使用指针（而非 <xref:System.Runtime.InteropServices.Marshal> 类）传递会包含 `MyUnsafeStruct` 结构的数组。  
+ 正如上文所述，C# 允许使用不安全的代码，而 Visual Basic 不允许。 在 C# 示例中，`UsingUnsafePointer` 是一种替代性方法实现，使用指针（而非 <xref:System.Runtime.InteropServices.Marshal> 类）传递会包含 `MyUnsafeStruct` 结构的数组。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

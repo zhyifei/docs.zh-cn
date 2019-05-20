@@ -3,12 +3,12 @@ title: C# 类和对象 - C# 语言介绍
 description: 刚开始接触 C#？ 请阅读这篇概述类、对象和继承的文章
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921242"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750398"
 ---
 # <a name="classes-and-objects"></a>类和对象
 
@@ -33,42 +33,42 @@ ms.locfileid: "58921242"
 下面概述了类可以包含的成员类型。
 
 * 常量
-    - 与类相关联的常量值
+  - 与类相关联的常量值
 * 字段
-    - 类的常量
+  - 类的常量
 * 方法
-    - 类可以执行的计算和操作
+  - 类可以执行的计算和操作
 * 属性
-    - 与读取和写入类的已命名属性相关联的操作
+  - 与读取和写入类的已命名属性相关联的操作
 * 索引器
-    - 与将类实例编入索引（像处理数组一样）相关联的操作
+  - 与将类实例编入索引（像处理数组一样）相关联的操作
 * 事件
-    - 类可以生成的通知
+  - 类可以生成的通知
 * 运算符
-    - 类支持的转换和表达式运算符
+  - 类支持的转换和表达式运算符
 * 构造函数
-    - 初始化类实例或类本身所需的操作
+  - 初始化类实例或类本身所需的操作
 * 终结器
-    - 永久放弃类实例前要执行的操作
+  - 永久放弃类实例前要执行的操作
 * 类型
-    - 类声明的嵌套类型
+  - 类声明的嵌套类型
 
 ## <a name="accessibility"></a>可访问性
 
 每个类成员都有关联的可访问性，用于控制能够访问成员的程序文本区域。 可访问性有六种可能的形式。 总结如下。
 
 * `public`
-    - 访问不受限
+  - 访问不受限
 * `protected`
-    - 只能访问此类或派生自此类的类
+  - 只能访问此类或派生自此类的类
 * `internal`
-    - 访问限于当前程序集（.exe、.dll 等）
+  - 访问限于当前程序集（.exe、.dll 等）
 * `protected internal`
-    - 访问限于包含类、派生自包含类的类或同一程序集中的类
+  - 访问限于包含类、派生自包含类的类或同一程序集中的类
 * `private`
-    - 只能访问此类
+  - 只能访问此类
 * `private protected`
-    - 访问限于同一程序集中的包含类或派生自包含类的类
+  - 访问限于同一程序集中的包含类或派生自包含类的类
 
 ## <a name="type-parameters"></a>类型参数
 
@@ -230,7 +230,7 @@ C# 支持实例和静态构造函数。 *实例构造函数*是实现初始化�
 
 构造函数的声明方式与方法一样，都没有返回类型，且与所含类同名。 如果构造函数声明包含静态修饰符，则声明的是静态构造函数。 否则，声明的是实例构造函数。
 
-实例构造函数可以重载，并能包含可选参数。 例如，`MyList<T>` 类声明两个实例构造函数：一个没有参数，另一个需要使用 `int` 参数。 实例构造函数使用 `new` 运算符进行调用。 下面的语句使用包含和不包含可选自变量的 `MyList` 类构造函数来分配两个 `MyList<string>` 实例。
+实例构造函数可重载并且可具有可选参数。 例如，`MyList<T>` 类声明一个具有单个可选 `int` 参数的实例构造函数。 实例构造函数使用 `new` 运算符进行调用。 下面的语句使用包含和不包含可选自变量的 `MyList` 类构造函数来分配两个 `MyList<string>` 实例。
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 

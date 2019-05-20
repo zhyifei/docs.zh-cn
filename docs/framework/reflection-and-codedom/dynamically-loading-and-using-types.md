@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145114"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469668"
 ---
 # <a name="dynamically-loading-and-using-types"></a>动态加载和使用类型
-反射提供语言编译器（如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript）为实现隐式后期绑定所使用的基础结构。 声明与唯一指定的类型相对应，绑定是查找声明（即实现）的过程。 运行时（而非编译时）发生此进程就称为后期绑定。 使用 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 能够在代码中使用隐式后期绑定；Visual Basic 编译器会调用一种帮助程序方法，该方法使用反射来获取对象类型。 传递给帮助程序方法的参数会导致在运行时调用相应方法。 这些参数是在其上调用方法的实例（对象）、被调用方法的名称（字符串）和传递给被调用方法的参数（对象数组）。  
+反射提供语言编译器为实现隐式后期绑定而使用的基础结构。 声明与唯一指定的类型相对应，绑定是查找声明（即实现）的过程。 运行时（而非编译时）发生此进程就称为后期绑定。 Visual Basic 允许在代码中使用隐式后期绑定；Visual Basic 编译器会调用使用反射来获取对象类型的帮助程序方法。 传递给帮助程序方法的参数会导致在运行时调用相应方法。 这些参数是在其上调用方法的实例（对象）、被调用方法的名称（字符串）和传递给被调用方法的参数（对象数组）。  
   
  在以下示例中，Visual Basic 编译器以隐式方式使用反射对某个对象调用一种方法，该对象的类型在编译时未知。 HelloWorld 类具有 PrintHello 方法，该方法可以打印输出“Hello World”，且该文本与传递给 PrintHello 方法的一些文本相关联。 本示例中调用的 PrintHello 方法实际上是 <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>；如果在编译时（早期绑定）而不是在运行时（后期绑定）知道对象的类型 (helloObj)，则 Visual Basic 代码允许调用 PrintHello 方法。  
   

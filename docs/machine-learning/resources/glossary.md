@@ -1,21 +1,18 @@
 ---
-title: 机器学习术语表 - ML.NET
+title: 机器学习库
 description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: cc236aaa99fd8a7b05af666a5b96f657d8bd3ad4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410233"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557981"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
 以下列表是重要的机器学习术语编译，可在 ML.NET 中生成自定义模型时使用。
-
-> [!NOTE]
-> 本文档引用 ML.NET（目前为预览版）。 材料可能会有所变化。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
 ## <a name="accuracy"></a>准确性
 
@@ -29,6 +26,16 @@ ms.locfileid: "58410233"
 
 一个[分类](#classification)事例，其中[标签](#label)仅为两个类中的一个。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[二元分类](tasks.md#binary-classification)部分。
 
+## <a name="calibration"></a>校准
+
+校准是将原始分数映射到类成员身份的过程，用于二元和多类分类。 一些 ML.NET 训练程序的后缀为 `NonCalibrated`。 这些算法会生成一个原始分数，该分数之后必须映射到类概率。 
+
+## <a name="catalog"></a>Catalog 
+
+在 ML.NET 中，目录是扩展函数的集合，按常见用途进行分组。
+
+例如，每个机器学习任务（二元分类、回归、排名等）都有一个可用机器学习算法（训练程序）目录。 二元分类训练程序的目录是：<xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>。
+
 ## <a name="classification"></a>分类
 
 当使用这些数据来预测某一类别，[监管式机器学习](#supervised-machine-learning)任务被称为“分类”。 [二元分类](#binary-classification)指的是仅预测两个类别（例如，将图像划分为“猫”或“狗”图片）。 [多类分类](#multiclass-classification)指的是预测多个类别（例如，当将图像划分为特定品种狗的图片）。
@@ -36,6 +43,25 @@ ms.locfileid: "58410233"
 ## <a name="coefficient-of-determination"></a>决定系数
 
 [回归](#regression)中的一项评估指标，表明数据与模型的匹配程度。 范围从 0 到 1。 值 0 表示数据是随机的，否则就无法与模型相匹配。 值 1 表示模型与数据完全匹配。 这通常称为 <sup>2</sup>、R<sup>2</sup> 或 r 平方值。
+
+## <a name="data"></a>数据
+
+数据是所有机器学习应用程序的核心。 在 ML.NET 中，数据由 <xref:Microsoft.ML.IDataView> 对象表示。 数据视图对象：
+- 由列和行组成
+- 延迟计算，即它们仅在操作调用数据时加载数据
+- 包含定义了每个列的类型、格式和长度的架构
+
+## <a name="estimator"></a>估算器
+
+ML.NET 中实现 <xref:Microsoft.ML.IEstimator%601> 接口的类。
+
+估算器是一种转换（数据准备转换和机器学习模型训练转换）规范。 估算器可以链接在一起形成转换管道。 调用 <xref:Microsoft.ML.IEstimator`1.Fit*> 时，会学习估算器或估算器管道的参数。 <xref:Microsoft.ML.IEstimator`1.Fit*> 的结果为[转换器](#transformer)。
+
+## <a name="extension-method"></a>扩展方法
+
+一种 .NET 方法，它是类的一部分，但在类外部定义。 扩展方法的第一个参数是对扩展方法所属的类的静态 `this` 引用。
+
+扩展方法在 ML.NET 中广泛用于构造[估算器](#estimator)实例。
 
 ## <a name="feature"></a>功能
 
@@ -60,6 +86,12 @@ ms.locfileid: "58410233"
 ## <a name="log-loss"></a>对数损失
 
 在[分类](#classification)中，描述分类器准确性的评估指标。 对数损失越小，分类器越准确。
+
+## <a name="loss-function"></a>损失函数
+
+损失函数是指训练标签值与模型所做预测之间的差异。 通过最小化损失函数来估算模型参数。
+
+可以为不同的训练程序配置不同的损失函数。
 
 ## <a name="mean-absolute-error-mae"></a>平均绝对误差 (MAE)
 
@@ -93,6 +125,13 @@ ms.locfileid: "58410233"
 
 在[分类](#classification)中，类的撤回是正确预测为属于该类的项目的数量，除以实际属于该类的项目的总数。
 
+## <a name="regularization"></a>正则化
+
+ 正则化会对过于复杂的线性模型进行惩罚。 正则化有两种类型：
+
+- $L_1$ 正则化将无意义特征的权重归零。 进行这种正则化之后，所保存模型的大小可能会变小。
+- $L_2$ 正则化将无意义特征的权重范围最小化，这是一个更常规的过程，对离群值的敏感度也较低。
+
 ## <a name="regression"></a>回归测试
 
 [监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[回归](tasks.md#regression)部分。
@@ -117,9 +156,11 @@ ms.locfileid: "58410233"
 
 识别给定定型数据集[模型](#model)的过程。 对于线性模型，这意味着查找权重。 有关树信息，这涉及到标识拆分点。
 
-## <a name="transform"></a>Transform
+## <a name="transformer"></a>转换器
 
-转换数据的[管道](#pipeline)组件。 例如，从文本到数字向量。
+一个实现 <xref:Microsoft.ML.ITransformer> 接口的 ML.NET 类。
+
+转换器可将一个 <xref:Microsoft.ML.IDataView> 转换为另一个 IDataView。 转换器是通过训练[估算器](#estimator)或估算器管道创建的。 
 
 ## <a name="unsupervised-machine-learning"></a>非监管式机器学习
 

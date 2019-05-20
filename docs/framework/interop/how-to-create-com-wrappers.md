@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324119"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469662"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 
 可以通过使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 创建组件对象模型 (COM) 包装器。 这两种方法都会生成两种类型的 COM 包装器：
 
--   从类型库中生成一个[运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)以在托管代码中运行 COM 对象。
+- 从类型库中生成一个[运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)以在托管代码中运行 COM 对象。
 
--   生成具有所需注册表设置的一个 [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)以在本机应用程序中运行托管对象。
+- 生成具有所需注册表设置的一个 [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)以在本机应用程序中运行托管对象。
 
 在 Visual Studio 2005 中，可以将 COM 包装器作为引用添加到项目中。
 
@@ -38,14 +38,14 @@ ms.locfileid: "59324119"
 
      在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中。
 
-现在可以编写代码以访问 COM 对象。 可以从通过声明对象开始，如使用适用于 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 的 `Imports` 语句或适用于 [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)] 的 `Using` 语句。
+现在可以编写代码以访问 COM 对象。 可以从通过声明对象开始，例如使用适用于 Visual Basic 的 `Imports` 语句或适用于 C# 的 `Using` 语句。
 
 > [!NOTE]
 > 如果要编写 Microsoft Office 组件的程序，请首先从 Microsoft 下载中心安装 [Microsoft Office 主互操作程序集](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA)。 在步骤 4 中，为所需的 Office 产品选择可用的最新版本的对象库，如 Microsoft Word 11.0 对象库。  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具创建运行时可调用包装器  
   
--   运行 [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)工具。  
+- 运行 [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)工具。  
   
  此工具为在原始类型库中定义的类型创建包含运行时元数据的程序集。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965548"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452682"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空间（C# 编程指南）
 在 C# 编程中，命名空间在两个方面被大量使用。 首先，.NET Framework 类使用命名空间来组织它的众多类。 其次，在较大的编程项目中，声明自己的命名空间可以帮助控制类名称和方法名称的范围。  
@@ -39,7 +39,7 @@ ms.locfileid: "56965548"
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>使用命名空间控制范围  
- `namespace` 关键字用于声明范围。 在项目内创建范围有助于整理代码，并允许创建全局唯一类型。 在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。 [运算符](../../../csharp/language-reference/operators/member-access-operator.md) 用于区分调用的方法。  
+ `namespace` 关键字用于声明范围。 在项目内创建范围有助于整理代码，并允许创建全局唯一类型。 在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。 [成员访问 `.` 运算符](../../language-reference/operators/member-access-operators.md#member-access-operator-)用于区分调用的方法。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ ms.locfileid: "56965548"
   
  在前面的代码片段中：  
   
--   命名空间 `N1` 是全局命名空间的成员。 其完全限定名称为 `N1`。  
+- 命名空间 `N1` 是全局命名空间的成员。 其完全限定名称为 `N1`。  
   
--   命名空间 `N2` 是 `N1` 的成员。 其完全限定名称为 `N1.N2`。  
+- 命名空间 `N2` 是 `N1` 的成员。 其完全限定名称为 `N1.N2`。  
   
--   类 `C1` 是 `N1` 的成员。 其完全限定名称为 `N1.C1`。  
+- 类 `C1` 是 `N1` 的成员。 其完全限定名称为 `N1.C1`。  
   
--   类名 `C2` 在此代码中使用了两次。 但完全限定名称是唯一的。 `C2` 的第一个实例在 `C1` 中声明；因此，其完全限定名称是：`N1.C1.C2`。 `C2` 的第二个实例在命名空间 `N2` 中声明；因此，其完全限定名称是 `N1.N2.C2`。  
+- 类名 `C2` 在此代码中使用了两次。 但完全限定名称是唯一的。 `C2` 的第一个实例在 `C1` 中声明；因此，其完全限定名称是：`N1.C1.C2`。 `C2` 的第二个实例在命名空间 `N2` 中声明；因此，其完全限定名称是 `N1.N2.C2`。  
   
  使用前面的代码段，可向命名空间 `N1.N2` 添加新的类成员 `C3`，如下所示：  
   
@@ -93,6 +93,6 @@ ms.locfileid: "56965548"
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [命名空间](../../../csharp/programming-guide/namespaces/index.md)
 - [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)
+- [。运算符](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

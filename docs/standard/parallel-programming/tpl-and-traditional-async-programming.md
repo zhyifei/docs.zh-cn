@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702941"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653926"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和传统 .NET Framework 异步编程
 .NET Framework 提供了以下两种标准模式，用于执行 I/O 密集型和计算密集型异步操作：  
   
--   异步编程模型 (APM)，其中异步操作由一对 Begin/End 方法（如 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和<xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>）表示。  
+- 异步编程模型 (APM)，其中异步操作由一对 Begin/End 方法（如 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和<xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>）表示。  
   
--   基于事件的异步模式 (EAP)，其中异步操作由 OperationNameAsync 和 OperationNameCompleted 方法/事件对（如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>）表示。 （EAP 是在 .NET Framework 2.0 版本中引入的。）  
+- 基于事件的异步模式 (EAP)，其中异步操作由 OperationNameAsync 和 OperationNameCompleted 方法/事件对（如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>）表示。 （EAP 是在 .NET Framework 2.0 版本中引入的。）  
   
  任务并行库 (TPL) 可采用各种方法与任一异步模式协同使用。 可将 APM 和 EAP 操作作为任务向库使用者公开，也可以公开 APM 模式但用 Task 对象在内部实现它们。 在这两种情况下，可通过使用 Task 对象简化代码和利用以下有用的功能：  
   
--   在任务开始后随时以任务延续形式注册回调。  
+- 在任务开始后随时以任务延续形式注册回调。  
   
--   通过使用 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> 和 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 方法，或者 <xref:System.Threading.Tasks.Task.WaitAll%2A> 方法或 <xref:System.Threading.Tasks.Task.WaitAny%2A> 方法并列为响应 `Begin_` 方法而执行的多个操作。  
+- 通过使用 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> 和 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 方法，或者 <xref:System.Threading.Tasks.Task.WaitAll%2A> 方法或 <xref:System.Threading.Tasks.Task.WaitAny%2A> 方法并列为响应 `Begin_` 方法而执行的多个操作。  
   
--   封装同一 Task 对象中的异步 I/O 密集型和计算密集型操作。  
+- 封装同一 Task 对象中的异步 I/O 密集型和计算密集型操作。  
   
--   监视 Task 对象的状态。  
+- 监视 Task 对象的状态。  
   
--   使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 将操作状态封送处理至 Task 对象。  
+- 使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 将操作状态封送处理至 Task 对象。  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>在任务中包装 APM 操作  
  <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 类都提供了几个 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> 方法的重载，可以将 APM Begin/End 方法对封装在 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 实例中。 各种重载都可容纳任何具有零至三个输入参数的 Begin/End 方法对。  
@@ -50,13 +50,13 @@ ms.locfileid: "46702941"
   
  第一个参数是匹配 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 方法签名的 <xref:System.Func%606> 委托。 第二个参数使用 <xref:System.IAsyncResult> 并返回 `TResult` 的 <xref:System.Func%602> 委托。 由于 <xref:System.IO.FileStream.EndRead%2A> 返回一个整数，因此编译器会将 `TResult` 类型推断为 <xref:System.Int32> 并将任务类型推断为 <xref:System.Threading.Tasks.Task>。 最后第四个参数与 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 方法中的参数相同：  
   
--   存储文件数据的缓冲区。  
+- 存储文件数据的缓冲区。  
   
--   开始写入数据的缓冲区的偏移量。  
+- 开始写入数据的缓冲区的偏移量。  
   
--   要从文件中读取的最大数据量。  
+- 要从文件中读取的最大数据量。  
   
--   存储要传递至回调的用户定义状态数据的可选对象。  
+- 存储要传递至回调的用户定义状态数据的可选对象。  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>使用 ContinueWith 执行回调功能  
  如果需要访问文件中的数据，而不仅仅访问字节数，则 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法不能满足此操作。 请改用 <xref:System.Threading.Tasks.Task>，其 `Result` 属性包含文件数据。 可以通过向原始任务添加延续来实现这种操作。 延续执行通常由 <xref:System.AsyncCallback> 委托执行的任务。 先前任务完成且填充了数据缓冲区后调用此操作。 （<xref:System.IO.FileStream> 对象应在返回前关闭。）  

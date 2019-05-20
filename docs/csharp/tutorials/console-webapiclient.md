@@ -3,12 +3,12 @@ title: 使用 .NET Core 创建 REST 客户端
 description: 此教程将介绍 .NET Core 和 C# 语言的许多功能。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612055"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063882"
 ---
 # <a name="rest-client"></a>REST 客户端
 
@@ -36,11 +36,10 @@ ms.locfileid: "59612055"
 
 ## <a name="create-the-application"></a>创建应用程序
 
-第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。
+第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。 因为这是新项目，所有没有任何依赖项，第一次运行时将下载 .NET Core 框架、安装开发证书并运行 NuGet 包管理器来还原缺少的依赖项。
 
-在开始进行修改之前，我们先来逐步了解一下如何运行简单的 Hello World 应用程序。 创建应用程序后，在命令提示符处键入 `dotnet restore`（[请参阅备注](#dotnet-restore-note)）。 此命令将运行 NuGet 包还原进程。 NuGet 是 .NET 程序包管理器。 此命令会下载项目缺少的所有依赖项。 由于这是一个新项目，尚无任何依赖项，因此首次运行只会下载 .NET Core 框架。 执行该初始步骤后，只需运行 `dotnet restore`（[请参阅备注](#dotnet-restore-note)），即可添加新的依赖项包，或更新任意依赖项的版本。
-
-还原包后，运行 `dotnet build`。 这将运行生成引擎，并创建应用程序。 最后，执行 `dotnet run` 来运行应用程序。
+在开始修改之前，在命令提示符中键入 `dotnet run`（[参见注释](#dotnet-restore-note)）以运行应用程序。 如果环境缺少依赖项，则 `dotnet run` 会自动执行 `dotnet restore`。 如果需要重新生成应用程序，它还会执行 `dotnet build`。
+初始设置完成后，只需在对项目有意义的情况下运行 `dotnet restore` 或 `dotnet build`。
 
 ## <a name="adding-new-dependencies"></a>添加新的依赖项
 
@@ -62,7 +61,7 @@ ms.locfileid: "59612055"
 
 大多数代码编辑器都会完成这些库的不同版本。 通常需要使用所添加的任意包的最新版本。 不过，请务必确保所有包的版本均一致，且与 .NET Core 应用程序框架的版本一致。
 
-进行这些更改之后，应再次运行 `dotnet restore`（[请参阅备注](#dotnet-restore-note)），以便在系统上安装包。
+完成这些更改后，执行 `dotnet restore`（[参见注释](#dotnet-restore-note)），以便在系统上安装包。
 
 ## <a name="making-web-requests"></a>发出 Web 请求
 

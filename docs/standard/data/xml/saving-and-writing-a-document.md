@@ -8,29 +8,29 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a35e06837ac35a743a3f0424cb2a7ad5bbeb5400
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879511"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589959"
 ---
 # <a name="saving-and-writing-a-document"></a>保存和写出文档
 加载并保存 <xref:System.Xml.XmlDocument> 后，保存的文档在下列方面可能不同于原始文档：  
   
--   如果在调用 <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> 方法之间将 `true` 属性设置为 <xref:System.Xml.XmlDocument.Save%2A>，文档中的空白在输出中将保留；如果此属性为 `false`，<xref:System.Xml.XmlDocument> 将使输出自动缩进。  
+- 如果在调用 <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> 方法之间将 `true` 属性设置为 <xref:System.Xml.XmlDocument.Save%2A>，文档中的空白在输出中将保留；如果此属性为 `false`，<xref:System.Xml.XmlDocument> 将使输出自动缩进。  
   
--   各个属性之间的所有空白都缩减为一个空白字符。  
+- 各个属性之间的所有空白都缩减为一个空白字符。  
   
--   更改元素间的空白。 保留有效空白，但不保留无效空白。 不过，在文档保存后，它默认使用 <xref:System.Xml.XmlTextWriter> 缩进模式简洁打印输出，以提升文档的可读性。  
+- 更改元素间的空白。 保留有效空白，但不保留无效空白。 不过，在文档保存后，它默认使用 <xref:System.Xml.XmlTextWriter> 缩进模式简洁打印输出，以提升文档的可读性。  
   
--   属性值两边所用的引号字符在默认情况下更改为双引号。 可以使用 <xref:System.Xml.XmlTextReader.QuoteChar%2A> 的 <xref:System.Xml.XmlTextWriter> 属性将引号字符设置为双引号或单引号。  
+- 属性值两边所用的引号字符在默认情况下更改为双引号。 可以使用 <xref:System.Xml.XmlTextReader.QuoteChar%2A> 的 <xref:System.Xml.XmlTextWriter> 属性将引号字符设置为双引号或单引号。  
   
--   默认情况下，扩展像 `{` 这样的数字字符实体。  
+- 默认情况下，扩展像 `{` 这样的数字字符实体。  
   
--   不保留输入文档中的字节顺序标记。 除非显式创建指定不同编码的 XML 声明，否则 UCS-2 保存为 UTF-8。  
+- 不保留输入文档中的字节顺序标记。 除非显式创建指定不同编码的 XML 声明，否则 UCS-2 保存为 UTF-8。  
   
--   如果要将 <xref:System.Xml.XmlDocument> 写出到文件或流中，则写出的输出与文档内容相同。 也就是说，仅当文档中包含 <xref:System.Xml.XmlDeclaration> 时才写出 ，并且写出文档时所使用的编码与声明节点中给定的编码相同。  
+- 如果要将 <xref:System.Xml.XmlDocument> 写出到文件或流中，则写出的输出与文档内容相同。 也就是说，仅当文档中包含 <xref:System.Xml.XmlDeclaration> 时才写出 ，并且写出文档时所使用的编码与声明节点中给定的编码相同。  
   
 ## <a name="writing-an-xmldeclaration"></a>写出 XmlDeclaration  
  <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDeclaration> 和 <xref:System.Xml.XmlNode.OuterXml%2A> 的 <xref:System.Xml.XmlNode.InnerXml%2A> 和 <xref:System.Xml.XmlNode.WriteTo%2A> 成员与 <xref:System.Xml.XmlDocument> 和 <xref:System.Xml.XmlDocument.Save%2A> 的 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 方法共同创建 XML 声明。  
@@ -55,7 +55,7 @@ doc.Save(tw);
   
  对于 <xref:System.Xml.XmlDocument.Save%2A> 方法，XML 声明使用 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 类中的 <xref:System.Xml.XmlWriter> 方法写出。 因此，重写 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 方法将更改如何编写文档的开头。  
   
- 对于 <xref:System.Xml.XmlDeclaration>、<xref:System.Xml.XmlNode.OuterXml%2A> 和 <xref:System.Xml.XmlDeclaration.WriteTo%2A> 的 <xref:System.Xml.XmlNode.InnerXml%2A> 成员，如果 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性未设置，将不会写出任何编码。否则，在 XML 声明中写出的编码与 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性中的编码相同。  
+ 对于 <xref:System.Xml.XmlNode.OuterXml%2A>、<xref:System.Xml.XmlDeclaration.WriteTo%2A> 和 <xref:System.Xml.XmlNode.InnerXml%2A> 的 <xref:System.Xml.XmlDeclaration> 成员，如果未设置 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性，则不会写出任何编码。否则，在 XML 声明中写出的编码与 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性中的编码相同。  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>用 OuterXml 属性写出文档内容  
  <xref:System.Xml.XmlNode.OuterXml%2A> 属性是 Microsoft 对万维网联合会 (W3C) XML 文档对象模型 (DOM) 标准的扩展。 <xref:System.Xml.XmlNode.OuterXml%2A> 属性用于获取整个 XML 文档的标记，或者只获取单个节点及其子节点的标记。 <xref:System.Xml.XmlNode.OuterXml%2A> 返回表示给定节点及其所有子节点的标记。  

@@ -1,15 +1,13 @@
 ---
 title: 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解在 eShopOnContainers 中的订购微服务中实现 CQRS 的方式。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613195"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875914"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 
@@ -19,7 +17,7 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 
 因此，可以使用不同的“读取”数据模型而不是事务逻辑的“写入”域模型，尽管排序微服务使用的是相同的数据库。 因此，这是简化的 CQRS 方法。
 
-另一方面，用于触发事务和数据更新的命令在系统中会更改状态。 在处理复杂问题和不断变化的业务规则的过程中，使用命令时需小心谨慎。 这正是应用 DDD 技术的时候，可以获取更好的模型化系统。
+另一方面，用于触发事务和数据更新的命令在系统中会更改状态。 在处理复杂问题和不断变化的业务规则的过程中，使用命令时需小心谨慎。 这正是应用 DDD 技术来实现更好的模型化系统的时机。
 
 本指南中介绍的 DDD 模式并不是普遍适用的。 它们会在设计中引入约束。 这些约束具有一些优点，比如可随时间推移不断提升质量，特别是命令和用于修改系统状态的其他代码的质量。 但是这些约束在数据读取和查询方面的没有太多用处，反而会增加复杂性。
 
@@ -46,20 +44,11 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 - **Martin Fowler。CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young.CQS 与CQRS** \
-  <http://codebetter.com/gregyoung/2009/08/13/command-query-separation/>
-
 - **Greg Young.CQRS Documents** \（CQRS 文档）
-  [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
-
-- **Greg Young.CQRS, Task Based UIs and Event Sourcing** \（CQRS、基于任务的 UI 和事件源）
-  <http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **Udi Dahan.Clarified CQRS** \（明确的 CQRS）
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
-
-- **Event-Sourcing (ES)** \（事件源 (ES)）
-  <http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/>
 
 >[!div class="step-by-step"]
 >[上一页](apply-simplified-microservice-cqrs-ddd-patterns.md)

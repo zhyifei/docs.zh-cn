@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188115"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628884"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  使用此方法进行取消具有以下优点：
 
--   可以将相同的取消标记传递给任意数量的异步和同步操作。
+- 可以将相同的取消标记传递给任意数量的异步和同步操作。
 
--   相同的取消请求可能会扩展到任意数量的侦听器。
+- 相同的取消请求可能会扩展到任意数量的侦听器。
 
--   异步 API 的开发人员可完全控制是否可以请求取消以及取消何时生效。
+- 异步 API 的开发人员可完全控制是否可以请求取消以及取消何时生效。
 
--   使用 API 的代码可以选择性地确定将对其传播取消请求的异步调用。
+- 使用 API 的代码可以选择性地确定将对其传播取消请求的异步调用。
 
 ## <a name="monitoring-progress"></a>监视进度
  某些异步方法通过传入异步方法的进度接口来公开进度。  例如，设想某个函数以异步方式下载文本字符串，并在该过程中引发包括到目前为止下载完成百分比的进度更新。  此类方法可在 Windows Presentation Foundation (WPF) 应用程序中使用，如下所示：
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法可用于异步等待多个表示为要完成的任务的异步操作之一。  此方法适用于四个主要用例：
 
--   冗余：多次执行一个操作并选择最先完成的一次（例如，联系能够生成一个结果的多个股市行情 Web 服务并选择完成最快的一个）。
+- 冗余：多次执行一个操作并选择最先完成的一次（例如，联系将生成一个结果的多个股市行情 Web 服务并选择最快完成的一个）。
 
--   交错：启动多个操作并等待所有这些操作完成，但是在完成这些操作时对其进行处理。
+- 交错：启动多个操作并等待所有这些操作完成，但在这些操作完成时对其进行处理。
 
--   限制：允许其他操作完成时开始附加操作。  这是交错方案的扩展。
+- 限制：允许在其他操作完成时开始附加操作。  这是交错方案的扩展。
 
--   早期释放：例如，用任务 t1 表示的操作可以与任务 t2 组成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务，你可以等待 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务。 任务 t2 可以表示超时、取消或其他一些导致 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务先于 t1 完成的信号。
+- 早期释放：例如，用任务 t1 表示的操作可以与任务 t2 组成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务，并且可以等待 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务。 任务 t2 可以表示超时、取消或其他一些导致 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务先于 t1 完成的信号。
 
 #### <a name="redundancy"></a>冗余
  假设你想要决定是否购买股票。  你信任一些股票建议 Web 服务，但每个服务最终会在不同的时间段变得很慢，具体取决于每日负载。  <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法可用于在任何操作完成时接收通知：
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- 此外，即使第一个任务成功完成，后续任务也可能会失败。  此时，可以有多个选择来处理异常：可以等待所有启动的任务完成，这种情况可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法，或者决定所有异常是否重要且必须记录。  为此，可以使用延续任务以在任务异步完成时接收通知：
+ 此外，即使第一个任务成功完成，后续任务也可能会失败。  此时，有多个用于处理异常的选项：可以等待所有启动的任务完成，在这种情况下可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法；或者做出所有异常都重要且必须记录的决定。  为此，可以使用延续任务以在任务异步完成时接收通知：
 
 ```csharp
 foreach(Task recommendation in recommendations)

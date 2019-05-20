@@ -2,19 +2,19 @@
 title: 对数据分组 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583215"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753912"
 ---
 # <a name="grouping-data-c"></a>对数据分组 (C#)
 分组是指将数据分到不同的组，使每组中的元素拥有公共的属性。  
   
  下图演示了对字符序列进行分组的结果。 每个组的键是字符。  
   
- ![LINQ 分组操作](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![关系图显示 LINQ 分组操作。](./media/grouping-data/linq-group-operation.png)  
   
  下一节列出了对数据元素进行分组的标准查询运算符方法。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672389"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452399"
 ---
 # <a name="-operator-c-reference"></a>?:运算符（C# 参考）
 
@@ -43,10 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
-一种方便的助记设备，可用于通过询问以下问题记住此运算符的计算方式： 
-```
+可用于记住此运算符的计算方式的助记设备为询问以下问题：
+
+```text
 is this condition true ? yes : no
 ```
+
 其中运算符的 ? 部分 充当上一语句的问号，后面部分充当对此问题的逻辑回答。
 
 下面的示例演示条件运算符的用法：
@@ -93,6 +95,6 @@ ref 条件表达式与原始的条件运算符相似，仅计算两个表达式�
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
 - [if-else 语句](../keywords/if-else.md)
-- [?. 和 ?[] 运算符](null-conditional-operators.md)
+- [?. 和 ?[] 运算符](member-access-operators.md#null-conditional-operators--and-)
 - [??运算符](null-coalescing-operator.md)
 - [ref 关键字](../keywords/ref.md)

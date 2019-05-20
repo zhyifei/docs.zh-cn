@@ -4,12 +4,12 @@ description: 了解与 .NET 中的本机组件交互的最佳做法。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196653"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063071"
 ---
 # <a name="native-interoperability-best-practices"></a>本机互操作性最佳做法
 
@@ -44,7 +44,7 @@ ms.locfileid: "59196653"
 
 ❌ 请勿使用 `[Out] string` 参数。 如果该字符串为暂存的字符串，则通过包含 `[Out]` 属性的值传递的字符串参数可能使运行时变得不稳定。 请在 <xref:System.String.Intern%2A?displayProperty=nameWithType> 的文档中查看有关字符串暂存的详细信息。
 
-❌ 避免使用 `StringBuilder` 参数。 `StringBuilder` 封送始终创建本机缓冲区副本。 因此，该操作的效率可能非常低。 采取调用带有字符串的 Windows API 的典型方案：
+❌ 避免使用 `StringBuilder` 参数。 `StringBuilder` 封送*始终*创建本机缓冲区副本。 因此，该操作的效率可能非常低。 采取调用带有字符串的 Windows API 的典型方案：
 
 1. 创建所需容量的 SB（分配托管容量）**{1}**
 2. 调用
@@ -57,11 +57,11 @@ ms.locfileid: "59196653"
 
 `StringBuilder` 的另一个问题是它始终会将返回缓冲区备份复制到第一个 Null。 如果传递的返回字符串未终止或为双 Null 终止字符串，则 P/Invoke 很可能不正确。
 
-如果使用 `StringBuilder`，则最后一个问题是容量确实不会包括隐藏的 Null，该值始终计入互操作。 人们常常会犯这个错误，因为大多数 API 希望缓冲区的大小包括 Null。 这可能会导致产生浪费/不必要的分配。 此外，此问题会阻止运行时优化 `StringBuilder` 封送以最大限度地减少副本。
+如果使用 `StringBuilder`，则最后一个问题是容量确实不会包括隐藏的 Null，该值始终计入互操作。 人们常常会犯这个错误，因为大多数 API 希望缓冲区的大小包括 Null。 这可能会导致产生浪费/不必要的分配。 此外，此问题会阻止运行时通过优化 `StringBuilder` 封送来最大限度地减少副本。
 
 ✔️ 请考虑使用 `ArrayPool` 中的 `char[]`。
 
-有关字符串封送的详细信息，请参阅[字符串的默认封送](../../framework/interop/default-marshaling-for-strings.md)和[自定义字符串封送](customize-parameter-marshalling.md#customizing-string-parameters)。
+有关字符串封送的详细信息，请参阅[字符串的默认封送](../../framework/interop/default-marshaling-for-strings.md)和[自定义字符串封送](customize-parameter-marshaling.md#customizing-string-parameters)。
 
 > __Windows 特定__  
 > 对于 `[Out]` 字符串，CLR 将默认使用 `CoTaskMemFree` 来释放字符串，或对于标记为 `UnmanagedType.BSTR` 的字符串，使用 `SysStringFree`。  
@@ -73,7 +73,7 @@ ms.locfileid: "59196653"
 
 ## <a name="boolean-parameters-and-fields"></a>布尔参数和字段
 
-布尔值很容易混淆。 默认情况下，将 .NET `bool` 封送到 Windows `BOOL`，它在其中为包含 4 个字节的值。 但是，C 和 C++ 中的 `_Bool` 和 `bool` 类型是单字节。 这可能会导致难以跟踪 bug，因为一半的返回值将被丢弃，这样可能只会更改结果。 有关将 .NET `bool` 值封送到 C 或 C++ `bool` 类型的详细信息，请参阅有关[自定义布尔字段封送](customize-struct-marshalling.md#customizing-boolean-field-marshalling)的文档。
+布尔值很容易混淆。 默认情况下，将 .NET `bool` 封送到 Windows `BOOL`，它在其中为包含 4 个字节的值。 但是，C 和 C++ 中的 `_Bool` 和 `bool` 类型是单字节。 这可能会导致难以跟踪 bug，因为一半的返回值将被丢弃，这样可能只会更改结果。 有关将 .NET `bool` 值封送到 C 或 C++ `bool` 类型的详细信息，请参阅有关[自定义布尔字段封送](customize-struct-marshaling.md#customizing-boolean-field-marshaling)的文档。
 
 ## <a name="guids"></a>GUID
 
@@ -87,7 +87,7 @@ GUID 可在签名中直接使用。 许多 Windows API 使用 `GUID&` 类型别�
 
 ## <a name="blittable-types"></a>Blittable 类型
 
-Blittable 类型是托管代码和本机代码中具有相同位级别表示形式的类型。 因此，无需将这些类型转换为其他格式即可往返本机代码进行封送，由于这样可以提高性能，因此应首选这些类型。
+Blittable 类型是托管代码和本机代码中具有相同位级别表示形式的类型。 因此，无需将这些类型转换为其他格式即可往返本机代码进行封送，而且由于这样可以提高性能，应首选这些类型。
 
 **：**
 
@@ -126,7 +126,7 @@ public struct UnicodeCharStruct
 有关详细信息，请参见:
 
 - [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [类型封送](type-marshalling.md)
+- [类型封送](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>使托管对象保持活动状态
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-但是，固定的缓冲区有一些问题。 不会正确封送非 blittable 类型的固定缓冲区，因此就地数组需要扩大到多个单独字段。 此外，在早于 3.0 的 .NET Framework 和 .NET Core 中，如果包含固定缓冲区字段的结构嵌套在非 blittable 结构中，则不会将固定缓冲区字段正确封送到本机代码。
+但是，固定的缓冲区有一些问题。 非 blittable 类型的固定缓冲区不会正确封送，因此，就地数组需要扩大到多个单独字段。 此外，在早于 3.0 的 .NET Framework 和 .NET Core 中，如果包含固定缓冲区字段的结构嵌套在非 blittable 结构中，则不会将固定缓冲区字段正确封送到本机代码。

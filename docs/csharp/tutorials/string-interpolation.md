@@ -3,12 +3,12 @@ title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920709"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063247"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字符串内插
 
@@ -30,9 +30,7 @@ ms.locfileid: "58920709"
 {<interpolatedExpression>}
 ```
 
-在编译时间，内插字符串通常会转换为一个 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法调用。 这样即可使用[字符串复合格式设置](../../standard/base-types/composite-formatting.md)功能的所有功能，又可将其与内插字符串结合使用。
-
-如果所分析的行为等效于串联，那么编译器可以用 <xref:System.String.Format%2A?displayProperty=nameWithType> 替换 <xref:System.String.Concat%2A?displayProperty=nameWithType>。
+内插字符串支持[字符串复合格式设置](../../standard/base-types/composite-formatting.md)功能的所有功能。 这使得它们成为 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法的更具可读性的替代选项。
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>如何为内插表达式指定格式字符串
 

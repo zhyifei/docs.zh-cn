@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753058"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
@@ -70,7 +70,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 [!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-在某些时候，你可能想要解包从方法返回的元组的成员。可通过为元组中的每个值声明单独的变量来实现此目的。这种解包操作称为解构元组：
+在某些时候，你可能想要解包从方法返回的元组的成员。  可通过为元组中的每个值声明单独的变量来实现此目的。 这种解包操作称为析构元组：
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
@@ -194,7 +194,7 @@ C# 语言还有多个规则，可保护你免于误用 `ref` 局部变量和返�
 
 ## <a name="local-functions"></a>本地函数
 
-许多类的设计都包括仅从一个位置调用的方法。 这些额外的私有方法使每个方法保持小且集中。 本地函数使你能够在另一个方法的上下文内声明方法。 本地函数使得类的阅读者更容易看到本地方法是仅从声明它的上下文中调用的。
+许多类的设计都包括仅从一个位置调用的方法。 这些额外的私有方法使每个方法保持小且集中。 本地函数使你能够在另一个方法的上下文内声明方法。 本地函数使得类的阅读者更容易看到本地方法仅从声明它的上下文中调用。
 
 对于本地函数有两个常见的用例：公共迭代器方法和公共异步方法。 这两种类型的方法都生成报告错误的时间晚于程序员期望时间的代码。 在迭代器方法中，只有在调用枚举返回的序列的代码时才会观察到任何异常。 在异步方法中，只有当返回的 `Task` 处于等待状态时才会观察到任何异常。 以下示例演示如何使用本地函数将参数验证与迭代器实现分离：
 

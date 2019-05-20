@@ -1,24 +1,19 @@
 ---
-title: 使用聚类分析学习器对鸢尾花分类 - ML.NET
+title: 使用聚类分析模型分类鸢尾花
 description: 了解如何在聚类分析方案中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 04/08/2019
+ms.date: 05/02/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481335"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063559"
 ---
-# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教程：借助 ML.NET 使用聚类分析学习器对鸢尾花分类
-
-> [!NOTE]
-> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
-
-本教程和相关示例目前使用的是 ML.NET 1.0 RC（候选发布）（版本 `1.0.0-preview`）。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
+# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>教程：配合使用聚类分析模型和 ML.NET 来分类鸢尾花
 
 本教程演示如何使用 ML.NET 为[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)构建[聚类分析模型](../resources/tasks.md#clustering)。
 
@@ -46,7 +41,7 @@ ms.locfileid: "59481335"
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“IrisFlowerClustering”，然后选择“确定”按钮。
+1. 打开 Visual Studio。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“IrisFlowerClustering”，然后选择“确定”按钮。
 
 1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件：
 
@@ -54,7 +49,7 @@ ms.locfileid: "59481335"
 
 1. 安装“Microsoft.ML NuGet”包：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择该包，然后选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，选择列表中的“v1.0.0”包，再选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
 
 ## <a name="prepare-the-data"></a>准备数据
 

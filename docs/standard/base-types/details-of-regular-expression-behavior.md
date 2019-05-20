@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634423"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正则表达式行为的详细信息
 .NET Framework 正则表达式引擎是回溯正则表达式匹配程序，其中包含传统的非确定性有限自动机 (NFA) 引擎（如 Perl、Python、Emacs 和 Tcl 所使用的引擎）。 这使它有别于速度更快、但是限制更多的纯正则表达式确定性有限自动机 (DFA) 引擎（如 awk、egrep 或 lex 中的引擎）。 这也使它有别于标准化、但速度较慢的 POSIX NFA。 下面的部分介绍了正则表达式引擎的三种类型，并解释了为何要在 .NET Framework 中使用传统 NFA 引擎实现正则表达式。  
@@ -38,14 +38,14 @@ ms.locfileid: "33579335"
   
  .NET Framework 正则表达式引擎的其他功能包括下面这些：  
   
--   惰性限定符：`??`、`*?`、`+?`、`{`n`,`m`}?`。 这些构造会指示回溯引擎首先搜索最小数量的重复项。 相反，普通贪婪限定符会尝试首先匹配最大数量的重复项。 以下示例演示了两者之间的差异。 正则表达式匹配以数字结尾的句子，捕获组旨在提取该数字。 正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获数字的最后一位数。 相反，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。  
+- 惰性限定符：`??`、`*?`、`+?`、`{`n`,`m`}?`。 这些构造会指示回溯引擎首先搜索最小数量的重复项。 相反，普通贪婪限定符会尝试首先匹配最大数量的重复项。 以下示例演示了两者之间的差异。 正则表达式匹配以数字结尾的句子，捕获组旨在提取该数字。 正则表达式 `.+(\d+)\.` 包含贪婪限定符 `.+`，这使正则表达式引擎仅捕获数字的最后一位数。 相反，正则表达式 `.+?(\d+)\.` 包含惰性限定符 `.+?`，这使正则表达式引擎捕获整个数字。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
      下表定义了此正则表达式的贪婪和惰性版本。  
   
-    |模式|描述|  
+    |模式|说明|  
     |-------------|-----------------|  
     |`.+`（贪婪限定符）|匹配任何字符的至少一个匹配项。 这会导致正则表达式引擎匹配整个字符串，然后根据需要进行回溯以匹配模式的其余部分。|  
     |`.+?`（惰性限定符）|匹配任何字符的至少一个匹配项，但匹配尽可能少。|  
@@ -54,14 +54,14 @@ ms.locfileid: "33579335"
   
      若要详细了解惰性量符，请参阅[量符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
--   正向先行断言：`(?=`subexpression`)`。 此功能允许回溯引擎在匹配子表达式之后返回到文本中的相同位置。 它可用于通过验证从相同位置开始的多个模式来搜索整个文本。 它还允许引擎验证匹配项末尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。 下面的示例使用正预测先行提取句子中后面不是标点符号的单词。  
+- 正向先行断言：`(?=`subexpression`)`。 此功能允许回溯引擎在匹配子表达式之后返回到文本中的相同位置。 它可用于通过验证从相同位置开始的多个模式来搜索整个文本。 它还允许引擎验证匹配项末尾是否存在某个子字符串，而无需在匹配的文本中包含该子字符串。 下面的示例使用正预测先行提取句子中后面不是标点符号的单词。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]  
   
      正则表达式 `\b[A-Z]+\b(?=\P{P})` 的定义如下表所示。  
   
-    |模式|描述|  
+    |模式|说明|  
     |-------------|-----------------|  
     |`\b`|在单词边界处开始匹配。|  
     |`[A-Z]+`|匹配任何字母字符一次或多次。 由于 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项进行调用，因此比较不区分大小写。|  
@@ -70,14 +70,14 @@ ms.locfileid: "33579335"
   
      若要详细了解正向先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
--   负向先行断言：`(?!`subexpression`)`。 通过此功能可以仅当子表达式未能匹配时才匹配表达式。 这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。 例如，难以为不以“non”开头的单词编写表达式。 下面的示例使用负预测先行排除它们。  
+- 负向先行断言：`(?!`subexpression`)`。 通过此功能可以仅当子表达式未能匹配时才匹配表达式。 这对于修剪搜索特别有用，因为针对应消除的情况提供表达式通常比针对必须包括的情况提供表达式要更简单。 例如，难以为不以“non”开头的单词编写表达式。 下面的示例使用负预测先行排除它们。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
   
      正则表达式模式 `\b(?!non)\w+\b` 的定义如下表所示。  
   
-    |模式|描述|  
+    |模式|说明|  
     |-------------|-----------------|  
     |`\b`|在单词边界处开始匹配。|  
     |`(?!non)`|预测先行以确保当前字符串不以“non”开头。 如果以“non”开头，则匹配失败。|  
@@ -86,14 +86,14 @@ ms.locfileid: "33579335"
   
      若要详细了解负向先行断言，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
--   条件求值：`(?(`expression`)`yes`|`no`)` 和 `(?(`name`)`yes`|`no`)`，其中 expression 是要匹配的子表达式，name 是捕获组的名称，yes 是在 expression 匹配或 name 是有效的非空捕获组时要匹配的字符串，no 是在 expression 不匹配或 name 不是有效的非空捕获组时要匹配的子表达式。 此功能允许引擎使用多个备用模式进行搜索（具体取决于上一个子表达式匹配的结果或零宽度断言的结果）。 这样可实现功能更强大的反向引用形式，例如，它允许基于上一个子表达式是否匹配来匹配子表达式。 下面示例中的正则表达式匹配旨在供公共和内部使用的段落。 仅供内部使用的段落以 `<PRIVATE>` 标记开头。 正则表达式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 使用条件评估将旨在供公共使用和内部使用的段落内容分配给不同的捕获组。 这些段落随后可以按不同方式进行处理。  
+- 条件求值：`(?(`expression`)`yes`|`no`)` 和 `(?(`name`)`yes`|`no`)`，其中 expression 是要匹配的子表达式，name 是捕获组的名称，yes 是在 expression 匹配或 name 是有效的非空捕获组时要匹配的字符串，no 是在 expression 不匹配或 name 不是有效的非空捕获组时要匹配的子表达式。 此功能允许引擎使用多个备用模式进行搜索（具体取决于上一个子表达式匹配的结果或零宽度断言的结果）。 这样可实现功能更强大的反向引用形式，例如，它允许基于上一个子表达式是否匹配来匹配子表达式。 下面示例中的正则表达式匹配旨在供公共和内部使用的段落。 仅供内部使用的段落以 `<PRIVATE>` 标记开头。 正则表达式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 使用条件评估将旨在供公共使用和内部使用的段落内容分配给不同的捕获组。 这些段落随后可以按不同方式进行处理。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]  
   
      正则表达式模式的定义如下表所示。  
   
-    |模式|描述|  
+    |模式|说明|  
     |-------------|-----------------|  
     |`^`|从行的开头开始匹配。|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|匹配后跟一个空白字符的字符串 `<PRIVATE>` 的零个或一个匹配项。 将匹配项分配给 `Pvt` 捕获组。|  
@@ -103,9 +103,9 @@ ms.locfileid: "33579335"
   
      若要详细了解条件求值，请参阅[替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。  
   
--   平衡组定义：`(?<`name1`-`name2`>` subexpression`)`。 此功能允许正则表达式引擎跟踪嵌套构造（如圆括号或者左方括号和右方括号）。 有关示例，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+- 平衡组定义：`(?<`name1`-`name2`>` subexpression`)`。 此功能允许正则表达式引擎跟踪嵌套构造（如圆括号或者左方括号和右方括号）。 有关示例，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
--   非回溯子表达式（亦称为“贪婪子表达式”）：`(?>`subexpression`)`。 此功能允许回溯引擎保证子表达式仅匹配为该子表达式找到的第一个匹配项，就如同该表达式独立于其包含表达式运行一样。 如果不使用此构造，则来自较大表达式的回溯搜索可能会更改子表达式的行为。 例如，正则表达式 `(a+)\w` 匹配一个或多个“a”字符以及跟在“a”字符序列后面的单词字符，并将“a”字符序列分配给第一个捕获组，但是，如果输入字符串的最后一个字符也是“a”，则它按 `\w` 语言元素进行匹配，不包含在捕获组中。  
+- 非回溯子表达式（亦称为“贪婪子表达式”）：`(?>`subexpression`)`。 此功能允许回溯引擎保证子表达式仅匹配为该子表达式找到的第一个匹配项，就如同该表达式独立于其包含表达式运行一样。 如果不使用此构造，则来自较大表达式的回溯搜索可能会更改子表达式的行为。 例如，正则表达式 `(a+)\w` 匹配一个或多个“a”字符以及跟在“a”字符序列后面的单词字符，并将“a”字符序列分配给第一个捕获组，但是，如果输入字符串的最后一个字符也是“a”，则它按 `\w` 语言元素进行匹配，不包含在捕获组中。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]  
@@ -117,25 +117,25 @@ ms.locfileid: "33579335"
   
      若要详细了解非回溯子表达式，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
--   从右到左匹配：指定方式为向 <xref:System.Text.RegularExpressions.Regex> 类构造函数或静态实例匹配方法提供 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 选项。 当从右到左（而不是从左到右）进行搜索时，或是在从模式右侧部分（而不是左侧部分）开始匹配效率更高的情况下，此功能非常有用。 如下面的示例所示，使用从右到左匹配可以更改贪婪限定符的行为。 该示例对以数字结尾的句子执行两个搜索。 使用贪婪限定符 `+` 的从左到右搜索匹配句子中六个数字之一，而从右到左搜索匹配所有六个数字。 有关正则表达式模式的介绍，请参见此部分前面说明惰性限定符的示例。  
+- 从右到左匹配：指定方式为向 <xref:System.Text.RegularExpressions.Regex> 类构造函数或静态实例匹配方法提供 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 选项。 当从右到左（而不是从左到右）进行搜索时，或是在从模式右侧部分（而不是左侧部分）开始匹配效率更高的情况下，此功能非常有用。 如下面的示例所示，使用从右到左匹配可以更改贪婪限定符的行为。 该示例对以数字结尾的句子执行两个搜索。 使用贪婪限定符 `+` 的从左到右搜索匹配句子中六个数字之一，而从右到左搜索匹配所有六个数字。 有关正则表达式模式的介绍，请参见此部分前面说明惰性限定符的示例。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/rtl1.cs#6)]
      [!code-vb[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/rtl1.vb#6)]  
   
      有关从右到左匹配的更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
   
--   正负向后行断言：`(?<=`subexpression`)`（对于正向后行断言）和 `(?<!`subexpression`)`（对于负向后行断言）。 此功能非常类似于本主题前面讨论的预测先行。 由于正则表达式引擎允许完全的从右到左匹配，因此正则表达式允许无限制回顾。 当嵌套子表达式是外部表达式的超集时，正回顾和负回顾还可以用于避免嵌套限定符。 具有此类嵌套限定符的正则表达式通常性能不佳。 例如，下面的示例验证字符串是否以字母数字字符开头和结尾，以及字符串中的任何其他字符是否为更大子集之一。 它形成用于验证电子邮件地址的正则表达式的一部分内容；有关详细信息，请参阅[如何：验证字符串的电子邮件格式是否有效](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+- 正负向后行断言：`(?<=`subexpression`)`（对于正向后行断言）和 `(?<!`subexpression`)`（对于负向后行断言）。 此功能非常类似于本主题前面讨论的预测先行。 由于正则表达式引擎允许完全的从右到左匹配，因此正则表达式允许无限制回顾。 当嵌套子表达式是外部表达式的超集时，正回顾和负回顾还可以用于避免嵌套限定符。 具有此类嵌套限定符的正则表达式通常性能不佳。 例如，下面的示例验证字符串是否以字母数字字符开头和结尾，以及字符串中的任何其他字符是否为更大子集之一。 它形成用于验证电子邮件地址的正则表达式的一部分内容；有关详细信息，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
      正则表达式 `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` 的定义如下表所示。  
   
-    |模式|描述|  
+    |模式|说明|  
     |-------------|-----------------|  
     |`^`|从字符串开头开始匹配。|  
     |`[A-Z0-9]`|匹配任意数字或字母数字字符。 （比较不区分大小写。）|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|匹配零个或多个任意单词字符或下列任意字符：-、!、#、$、%、&、'、.、*、+、/、=、?、^、\`、{、}、&#124 或 ~。|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
     |`(?<=[A-Z0-9])`|回顾上一个字符（必须是数字或字母数字）。 （比较不区分大小写。）|  
     |`$`|在字符串的结尾结束匹配。|  
   
@@ -143,7 +143,7 @@ ms.locfileid: "33579335"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|提供有关正则表达式回溯如何进行分支以查找替代匹配的信息。|  
 |[编译和重用](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|提供有关编译和重复使用正则表达式以提高性能的信息。|  

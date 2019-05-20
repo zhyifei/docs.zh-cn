@@ -3,12 +3,12 @@ title: 结构 - C# 指南
 description: 了解结构类型及其创建方式
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506974"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608009"
 ---
 # <a name="structs"></a>结构
 结构是一个值类型。 创建结构时，分配给结构的变量保留结构的实际数据。 将结构分配给新变量时，会复制结构。 因此，新变量和原始变量包含相同数据的副本（共两个）。 对一个副本所做的更改不会影响另一个副本。
@@ -35,21 +35,21 @@ ms.locfileid: "54506974"
     
 结构与类具有许多相同的语法，但结构比类受到的限制更多：  
   
--   在结构声明中，除非将字段声明为 `const` 或 `static`，否则无法初始化。  
+- 在结构声明中，除非将字段声明为 `const` 或 `static`，否则无法初始化。  
   
--   结构不能声明默认构造函数（没有参数的构造函数）或终结器。  
+- 结构不能声明无参数构造函数（没有参数的构造函数）或终结器。  
   
--   结构在分配时进行复制。 将结构分配给新变量时，将复制所有数据，并且对新副本所做的任何修改不会更改原始副本的数据。 使用值类型的集合（如 Dictionary<string, myStruct>）时，请务必记住这一点。  
+- 结构在分配时进行复制。 将结构分配给新变量时，将复制所有数据，并且对新副本所做的任何修改不会更改原始副本的数据。 使用值类型的集合（如 Dictionary<string, myStruct>）时，请务必记住这一点。  
   
--   结构是值类型，而类是引用类型。  
+- 结构是值类型，而类是引用类型。  
   
--   与类不同，无需使用 `new` 运算符即可对结构进行实例化。  
+- 与类不同，无需使用 `new` 运算符即可对结构进行实例化。  
   
--   结构可以声明具有参数的构造函数。  
+- 结构可以声明具有参数的构造函数。  
   
--   一个结构无法继承自另一个结构或类，并且它不能为类的基类。 所有结构都直接继承自 <xref:System.ValueType>，后者继承自 <xref:System.Object>。  
+- 一个结构无法继承自另一个结构或类，并且它不能为类的基类。 所有结构都直接继承自 <xref:System.ValueType>，后者继承自 <xref:System.Object>。  
   
--   结构可以实现接口。
+- 结构可以实现接口。
 
 ## <a name="literal-values"></a>文本值  
 在 C# 中，文本值从编译器接收类型。 可以通过在数字末尾追加一个字母来指定数字文本应采用的类型。 例如，若要指定应按浮点数来处理值 4.56，则在该数字后追加一个“f”或“F”：`4.56f`。 如果没有追加字母，编译器将推断该文本的 `double` 类型。 若要详细了解可以使用字母后缀指定哪些类型，请参阅[值类型](./language-reference/keywords/value-types.md)中的各个类型参考页。  

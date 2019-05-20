@@ -1,21 +1,21 @@
 ---
-title: 在影片推荐方案中使用 ML.NET
-description: 了解如何在推荐方案中使用 ML.NET 向用户推荐影片。
+title: 教程：生成电影推荐系统
+description: 本教程演示如何在 .NET Core 控制台应用程序中使用 ML.NET 生成电影推荐系统。 这些步骤使用 C# 和 Visual Studio 2019。
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612272"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063379"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教程：使用 ML.NET 创建影片推荐系统
 
-此示例教程通过在 Visual Studio 2017 中使用 C# 的 .NET Core 控制台应用程序，演示如何使用 ML.NET 创建影片推荐系统。
+本教程演示如何在 .NET Core 控制台应用程序中使用 ML.NET 生成电影推荐系统。 这些步骤使用 C# 和 Visual Studio 2019。
 
 在本教程中，你将了解：
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ ms.locfileid: "59612272"
 > * 生成并训练模型
 > * 评估模型
 > * 部署和使用模型
-
-> [!NOTE]
-> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
-
-此教程和相关示例目前使用的是 ML.NET 版本 0.11。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) 存储库中找到本教程的源代码。
 
@@ -61,10 +56,7 @@ ms.locfileid: "59612272"
 
 3. 安装“Microsoft.ML”和“Microsoft.ML.Recommender”NuGet 包：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择该包，然后选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对“Microsoft.ML.Recommender”重复这些步骤。
-
-    > [!NOTE]
-    > 本教程使用“Microsoft.ML v0.11.0”和“Microsoft.ML.Recommender v0.11.0”。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择“1.0.0”包，再选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对 **Microsoft.ML.Recommender v0.12.0** 重复这些步骤。
 
 4. 在 Program.cs 文件的顶部添加以下 `using` 语句：
 
@@ -175,7 +167,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 ## <a name="build-and-train-your-model"></a>生成并训练模型
 
-ML.NET 中包含三个主要概念：[数据](../basic-concepts-model-training-in-mldotnet.md#data)、[转换器](../basic-concepts-model-training-in-mldotnet.md#transformer)和[估算器](../basic-concepts-model-training-in-mldotnet.md#estimator)。
+ML.NET 中包含三个主要概念：[数据](../resources/glossary.md#data)、[转换器](../resources/glossary.md#transformer)和[估算器](../resources/glossary.md#estimator)。
 
 机器学习训练算法需要特定格式的数据。 `Transformers` 用于将表格数据转换为兼容格式。
 

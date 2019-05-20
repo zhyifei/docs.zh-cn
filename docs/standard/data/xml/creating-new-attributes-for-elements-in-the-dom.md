@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647936"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>为 DOM 中的元素创建新属性
 新建属性不同于创建其他节点类型，因为属性不是节点，而是元素节点的属性，包含在与元素关联的 XmlAttributeCollection 中。 有多种方法可创建属性并将其附加到元素：  
   
--   获取元素节点，并使用 SetAttribute 将属性添加到相应元素的属性集合。  
+- 获取元素节点，并使用 SetAttribute 将属性添加到相应元素的属性集合。  
   
--   使用 CreateAttribute 方法创建 XmlAttribute 节点，获取元素节点，再使用 SetAttributeNode 将节点添加到相应元素的属性集合。  
+- 使用 CreateAttribute 方法创建 XmlAttribute 节点，获取元素节点，再使用 SetAttributeNode 将节点添加到相应元素的属性集合。  
   
  下面的示例展示了如何使用 SetAttribute 方法将属性添加到元素。  
   
@@ -122,7 +122,7 @@ doc.DocumentElement.SetAttributeNode(attr);
  如果创建一个声明为具有默认属性的元素，则 XML 文档对象模型 (DOM) 创建一个带默认值的新默认属性并将其附加到该元素。 此时还创建默认属性的子节点。  
   
 ## <a name="attribute-child-nodes"></a>属性子节点  
- 属性节点的值成为它的子节点。 有效子节点只有以下两种类型：XmlText 节点和 XmlEntityReference 节点。 这些之所以是子节点是因为，FirstChild 和 LastChild 等方法按子节点处理它们。 当试图移除属性或属性子节点时，属性这种具有子节点的特性很重要。 有关详细信息，请参阅[删除 DOM 中元素节点的属性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。  
+ 属性节点的值成为它的子节点。 有效子节点只有两种类型：**XmlText** 节点和 **XmlEntityReference** 节点。 这些之所以是子节点是因为，FirstChild 和 LastChild 等方法按子节点处理它们。 当试图移除属性或属性子节点时，属性这种具有子节点的特性很重要。 有关详细信息，请参阅[删除 DOM 中元素节点的属性](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)。  
   
 ## <a name="see-also"></a>请参阅
 

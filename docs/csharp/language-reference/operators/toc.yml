@@ -19,6 +19,9 @@
     - name: 成员访问运算符
       href: member-access-operators.md
       displayName: '., [], ?., ?[], (), indexer, null-conditional, invocation'
+    - name: 指针相关的运算符
+      href: pointer-related-operators.md
+      displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
     - name: () 运算符
       href: invocation-operator.md
     - name: '::运算符'
@@ -27,10 +30,6 @@
       href: addition-operator.md
     - name: '- 运算符'
       href: subtraction-operator.md
-    - name: '* 运算符'
-      href: multiplication-operator.md
-    - name: '& 运算符'
-      href: and-operator.md
     - name: = 运算符
       href: assignment-operator.md
     - name: '?:运算符'
@@ -39,12 +38,6 @@
       href: addition-assignment-operator.md
     - name: '-= 运算符'
       href: subtraction-assignment-operator.md
-    - name: '*= 运算符'
-      href: multiplication-assignment-operator.md
-    - name: '&= 运算符'
-      href: and-assignment-operator.md
-    - name: '-> 运算符'
-      href: dereference-operator.md
     - name: '?? 运算符'
       href: null-coalescing-operator.md
     - name: => 运算符

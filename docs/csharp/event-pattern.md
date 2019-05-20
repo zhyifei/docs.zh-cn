@@ -3,12 +3,12 @@ title: 标准 .NET 事件模式
 description: 介绍 .NET 事件模式，如何创建标准事件源以及订阅并处理代码中的标准事件。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201243"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062968"
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 
@@ -55,7 +55,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-看起来它像在声明一个公共字段，这似乎是一个面向对象的不良实践。 你希望通过属性或方法来保护数据访问。 尽管这看起来像一次不良实践，但通过编译器生成的代码却创建了包装器，使事件对象仅能以安全的方式进行访问。 类似字段的事件上唯一可用的操作是添加处理程序：
+看起来它像在声明一个公共字段，这似乎是一个面向对象的不良实践。 你希望通过属性或方法来保护数据访问。 虽然这可能看起来是糟糕的做法，但编译器生成的代码确实会创建包装器，以便事件对象只能通过安全的方式进行访问。 类似字段的事件上唯一可用的操作是添加处理程序：
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 

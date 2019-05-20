@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677159"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753951"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -154,9 +154,9 @@ ms.locfileid: "57677159"
 
    以字节显示当前大小，包括 LOH 的可用空间。 此计数器在垃圾回收结束时更新，不在每次分配时更新。
 
-查看性能计数器的常用方法是使用性能监视器 (perfmon.exe)。 使用“添加计数器”可为关注的进程添加感兴趣的计数器。 可将性能计数器数据保存在日志文件中，如图 4 所示。
+查看性能计数器的常用方法是使用性能监视器 (perfmon.exe)。 使用“添加计数器”可为关注的进程添加感兴趣的计数器。 可将性能计数器数据保存在日志文件中，如图 4 所示：
 
-![图 4：添加性能计数器。](media/loh/perfcounter.png)\
+![屏幕截图显示了如何添加性能计数器。](media/large-object-heap/add-performance-counter.png)
 图 4：第 2 代 GC 后的 LOH
 
 也可以编程方式查询性能计数器。 大部分人在例行测试过程中都采用此方式进行收集。 如果发现计数器显示的值不正常，则可以使用其他方法获得更多详细信息以帮助调查。
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 结果类似于以下类容：
 
-![图 5：使用 PerfView 检查 ETW 事件](media/loh/perfview.png) 图 5：使用 PerfView 显示的 ETW 事件
+![屏幕截图显示了 PerfView 中的 ETW 事件。](media/large-object-heap/event-tracing-windows-perfview.png)
+图 5：使用 PerfView 显示的 ETW 事件
 
 如下所示，所有 GC 都是第 2 代 GC，并且都由 AllocLarge 触发，这表示分配大型对象会触发此 GC。 我们知道这些分配是临时的，因为“LOH 未清理率 %”列显示为 1%。
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 收集 AllocationTick 事件，大约每 10 万次分配就会触发该事件。 换句话说，每次分配大型对象都会触发事件。 然后可查看某个 GC 堆分配视图，该视图显示分配大型对象的调用堆栈：
 
-![图 6：GC 堆分配视图](media/loh/perfview2.png)\
+![屏幕截图显示了垃圾回收器堆视图。](media/large-object-heap/garbage-collector-heap.png)
 图 6：GC 堆分配视图
 
 如图所示，这是从 `Main` 方法分配大型对象的简单测试。

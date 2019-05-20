@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452369"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876954"
 ---
 # <a name="c-operators"></a>C# 运算符
 
@@ -69,7 +69,7 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [stackalloc](../keywords/stackalloc.md)：在堆栈上分配内存块。
 
-[->](dereference-operator.md)：指针取消引用与成员访问相结合。
+[->](pointer-related-operators.md#pointer-member-access-operator--)：指针间接寻址与成员访问相结合。
 
 ## <a name="unary-operators"></a>一元运算符
 
@@ -91,9 +91,9 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [await](../keywords/await.md)：等待 `Task`。
 
-[&x](and-operator.md)：地址。
+[&x](pointer-related-operators.md#address-of-operator-)：变量的地址。
 
-[*x](multiplication-operator.md)：取消引用。
+[*x](pointer-related-operators.md#pointer-indirection-operator-)：指针间接寻址或取消引用。
 
 [true 运算符](../keywords/true-false-operators.md) - 返回 [bool](../keywords/bool.md) 值 `true` 以指明操作数一定为 true。
 

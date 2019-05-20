@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301121"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753811"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
 以下运算符对数值类型执行算术运算：
 
-- 一元 [`++`（增量）](#increment-operator-)、[`--`（减量）](#decrement-operator---)、[`+`（加）](#unary-plus-and-minus-operators) 和 [`-`（减）](#unary-plus-and-minus-operators)运算符。
-- 二元 [`*`（乘）](#multiplication-operator-)[`/`（除）](#division-operator-)[`%`（余数）](#remainder-operator-)[`+`（加）](#addition-operator-) 和 [`-`（减）](#subtraction-operator--) 运算符。
+- 一元 [`++`（增量）](#increment-operator-)、[`--`（减量）](#decrement-operator---)、[`+`（加）](#unary-plus-and-minus-operators)和 [`-`（减）](#unary-plus-and-minus-operators)运算符
+- 二元 [`*`（乘法）](#multiplication-operator-)、[`/`（除法）](#division-operator-)、[`%`（余数）](#remainder-operator-)、[`+`（加法）](#addition-operator-)和 [`-`（减法）](#subtraction-operator--)运算符
 
 这些运算符支持所有[整型](../keywords/integral-types-table.md)和[浮动](../keywords/floating-point-types-table.md)数值类型。
 
@@ -163,23 +163,6 @@ ms.locfileid: "59301121"
 
 还可以使用 `-` 运算符删除委托。 有关详细信息，请参阅[`-`运算符](subtraction-operator.md)一文。
 
-## <a name="operator-precedence-and-associativity"></a>运算符优先级和关联性
-
-以下列表对优先级由高到低的顺序对算术运算符进行排序：
-
-- 后缀增量 `x++` 和减量 `x--` 运算符。
-- 前缀增量 `++x` 和减量 `--x` 以及一元 `+` 和 `-` 运算符。
-- 乘法 `*`、`/` 和 `%` 运算符。
-- 加法 `+` 和 `-` 运算符。
-
-二元算数运算符是左结合运算符。 也就是说，具有相同优先级的运算符按从左至右的顺序计算。
-
-使用括号 `()` 更改由运算符优先级和关联性决定的计算顺序。
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
-
 ## <a name="compound-assignment"></a>复合赋值
 
 对于二元运算符 `op`，窗体的复合赋值表达式
@@ -200,7 +183,28 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `x` 的 `T` 类型。 在此类情况下，如果 `op` 是预定义的运算符并且运算的结果可显式转换为 `x` 的 `T` 类型，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 还可以使用 `+=` 和 `-=` 运算符订阅和取消订阅[事件](../keywords/event.md)。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+
+## <a name="operator-precedence-and-associativity"></a>运算符优先级和关联性
+
+以下列表对优先级由高到低的顺序对算术运算符进行排序：
+
+- 后缀增量 `x++` 和减量 `x--` 运算符
+- 前缀增量 `++x` 和减量 `--x` 以及一元 `+` 和 `-` 运算符
+- 乘法 `*`、`/` 和 `%` 运算符
+- 加法 `+` 和 `-` 运算符
+
+二元算数运算符是左结合运算符。 也就是说，具有相同优先级的运算符按从左至右的顺序计算。
+
+使用括号 `()` 更改由运算符优先级和关联性决定的计算顺序。
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算术溢出和被零除
 
@@ -256,6 +260,7 @@ x = x op y
 - [减法运算符](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [复合赋值](~/_csharplang/spec/expressions.md#compound-assignment)
 - [checked 和 unchecked 运算符](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>请参阅
 

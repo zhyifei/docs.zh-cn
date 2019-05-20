@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222687"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635555"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隐式类型本地变量（C# 编程指南）
 
@@ -45,7 +45,7 @@ ms.locfileid: "54222687"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-有关更多信息，请参见[如何：在查询表达式中使用隐式类型本地变量和数组](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
+有关详细信息，请参阅[如何：在查询表达式中使用隐式类型本地变量和数组](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 
 ## <a name="var-and-anonymous-types"></a>var 和匿名类型
 
@@ -68,6 +68,20 @@ ms.locfileid: "54222687"
 - 不能在相同语句中初始化多个隐式类型化变量。
 
 - 如果一种名为 `var` 的类型处于范围内，则 `var` 关键字会解析为该类型名称，不会被视为隐式类型化局部变量声明的一部分。
+
+带 `var` 关键字的隐式类型只能应用于本地方法范围内的变量。 隐式类型不可用于类字段，因为 C# 编译器在处理代码时会遇到逻辑悖论：编译器需要知道字段的类型，但它在分析赋值表达式前无法确定类型，而表达式在不知道类型的情况下无法进行计算。 考虑下列代码：
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` 是类型为 `var` 的类字段。 由于该字段没有要计算的表达式，编译器无法推断出 `bookTitles` 应该是哪种类型。 此外，向该字段添加表达式（就像对本地变量执行的操作一样）也是不够的：
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+当编译器在代码编译期间遇到字段时，它会在处理与其关联的任何表达式之前记录每个字段的类型。 编译器在尝试分析 `bookTitles` 时遇到相同的悖论：它需要知道字段的类型，但编译器通常会通过分析表达式来确定 `var` 的类型，这在事先不知道类型的情况下无法实现。
 
 你可能会发现，对于在其中难以确定查询变量的确切构造类型的查询表达式，`var` 也可能会十分有用。 这可能会针对分组和排序操作发生。
 

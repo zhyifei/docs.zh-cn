@@ -1,17 +1,21 @@
 ---
 title: dotnet clean 命令
 description: dotnet clean 命令可清除当前目录。
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/14/2019
+ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169854"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754122"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
+**本主题适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,7 +24,7 @@ ms.locfileid: "53169854"
 ## <a name="synopsis"></a>摘要
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,9 +34,9 @@ dotnet clean [-h|--help]
 
 ## <a name="arguments"></a>自变量
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-要清除的 MSBuild 项目。 如果未指定项目文件，MSBuild 会在当前工作目录中搜索以 *proj* 结尾的文件扩展名并使用该文件。
+要清理的 MSBuild 项目或解决方案。 如果未指定项目或解决方案文件，MSBuild 会在当前工作目录中搜索文件扩展名以 *proj* 或 *sln* 结尾的文件并使用该文件。
 
 ## <a name="options"></a>选项
 
@@ -48,9 +52,13 @@ dotnet clean [-h|--help]
 
   打印出有关命令的简短帮助。
 
+* **`--interactive`**
+
+  允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  包含已生成的输出的目录。 如果在生成项目时指定了框架，则使用输出目录开关指定 `-f|--framework <FRAMEWORK>` 开关。
+  包含要清理的生成项目的目录。 如果在生成项目时指定了框架，则使用输出目录开关指定 `-f|--framework <FRAMEWORK>` 开关。
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +66,7 @@ dotnet clean [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  设置命令的详细级别。 允许的级别为 q[uiet]、m[inimal]、n[ormal]、d[etailed] 和 diag[nostic]。
+  设置 MSBuild 详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值为 `normal`。
 
 ## <a name="examples"></a>示例
 

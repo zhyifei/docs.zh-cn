@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750711"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>转换中的结果树片断
 
@@ -113,7 +113,7 @@ ms.locfileid: "54683815"
 
 用此样式表转换任何 XML 的结果显示在下面的输出中。
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>
@@ -194,7 +194,6 @@ ms.locfileid: "54683815"
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.XPath.XPathNodeIterator>
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [XslTransform 类的 XSLT 转换](xslt-transformations-with-the-xsltransform-class.md)
 - [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)

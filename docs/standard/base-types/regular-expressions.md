@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33aaf09e284db5c818eb0ff3917533cce5e70ad7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577133"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620698"
 ---
 # <a name="net-regular-expressions"></a>.NET 正则表达式
 正则表达式提供了功能强大、灵活而又高效的方法来处理文本。 使用正则表达式的全面模式匹配表示法，可以快速分析大量文本，以找到特定的字符模式；验证文本以确保它匹配预定义模式（如电子邮件地址）；提取、编辑、替换或删除文本子字符串；将提取的字符串添加到集合以生成报告。 对于处理字符串或分析大文本块的许多应用程序而言，正则表达式是不可缺少的工具。  
@@ -35,19 +35,19 @@ ms.locfileid: "33577133"
 ## <a name="how-regular-expressions-work"></a>正则表达式的工作方式  
  使用正则表达式处理文本的中心构件是正则表达式引擎（由 .NET 中的 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 对象表示）。 使用正则表达式处理文本至少要求向该正则表达式引擎提供以下两方面的信息：  
   
--   要在文本中标识的正则表达式模式。  
+- 要在文本中标识的正则表达式模式。  
   
      在 .NET 中，正则表达式模式用特殊的语法或语言定义，该语法或语言与 Perl 5 正则表达式兼容，并添加了一些其他功能，例如从右到左匹配。 有关更多信息，请参见[正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)。  
   
--   要为正则表达式模式分析的文本。  
+- 要为正则表达式模式分析的文本。  
   
  <xref:System.Text.RegularExpressions.Regex> 类的方法使你可以执行以下操作：  
   
--   通过调用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法确定输入文本中是否具有正则表达式模式。 有关使用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法验证文本的示例，请参阅[如何：验证字符串是否采用有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+- 通过调用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法确定输入文本中是否具有正则表达式模式。 有关使用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法验证文本的示例，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
--   通过调用 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法检索匹配正则表达式模式的一个或所有文本匹配项。 第一个方法返回提供有关匹配文本的信息的 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 对象。 第二个方法返回 <xref:System.Text.RegularExpressions.MatchCollection> 对象，该对象对于在分析的文本中找到的每个匹配项包含一个 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 对象。  
+- 通过调用 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法检索匹配正则表达式模式的一个或所有文本匹配项。 第一个方法返回提供有关匹配文本的信息的 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 对象。 第二个方法返回 <xref:System.Text.RegularExpressions.MatchCollection> 对象，该对象对于在分析的文本中找到的每个匹配项包含一个 <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> 对象。  
   
--   通过调用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法替换匹配正则表达式模式的文本。 有关使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 方法更改日期格式和删除字符串中无效字符的示例，请参阅[如何：从字符串中剥离无效字符](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)和[如何：更改日期格式](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)。  
+- 通过调用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法替换匹配正则表达式模式的文本。 有关使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 方法更改日期格式和移除字符串中的无效字符的示例，请参阅[如何：从字符串中剥离无效字符](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)以及[示例：更改日期格式](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)。  
   
  有关正则表达式对象模型的概述，请参见[正则表达式对象模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "33577133"
  正则表达式模式 `(Mr\.? |Mrs\.? |Miss |Ms\.? )` 匹配任何"Mr"、"Mr."、"Mrs"、"Mrs."、"Miss"、"Ms 或"Ms."。 对 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法的调用会将匹配的字符串替换为 <xref:System.String.Empty?displayProperty=nameWithType>；换句话说，将其从原始字符串中移除。  
   
 ### <a name="example-2-identifying-duplicated-words"></a>示例 2：标识重复的单词  
- 意外地重复单词是编写器常犯的错误。 可以使用正则表达式标识重复的单词，如以下示例所示。  
+ 意外地重复单词是编写者常犯的错误。 可以使用正则表达式标识重复的单词，如以下示例所示。  
   
  [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
  [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
@@ -111,7 +111,7 @@ ms.locfileid: "33577133"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供有关可用来定义正则表达式的字符集、运算符和构造的信息。|  
 |[正则表达式对象模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)|提供演示如何使用正则表达式类的信息和代码示例。|  

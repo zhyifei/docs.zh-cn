@@ -1,15 +1,13 @@
 ---
 title: 在域模型层中设计验证
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解域模型验证的关键概念。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612701"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063023"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>在域模型层中设计验证
 
@@ -81,7 +79,7 @@ public void SetAddress(string line1, string line2,
 
 ### <a name="two-step-validation"></a>双重验证
 
-此外考虑双重验证。 在命令数据传输对象 (DTO) 上使用字段级别验证，在实体内使用域级别验证。 通过返回结果对象而非异常以使其更易于处理验证错误，可以执行此操作。
+此外考虑双重验证。 在命令数据传输对象 (DTO) 上使用字段级别验证，在实体内使用域级别验证。 通过返回结果对象而非异常来让处理验证错误变得更容易，以便执行此操作。
 
 例如通过将字段验证用于数据注释，你不用重复验证定义。 然而在 DTO（例如命令和 Viewmodel）的情况下，执行可以既位于服务器端又位于客户端端。
 

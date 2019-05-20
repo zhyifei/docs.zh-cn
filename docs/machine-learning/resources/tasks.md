@@ -1,15 +1,15 @@
 ---
-title: 机器学习任务 - ML.NET
+title: 机器学习任务
 description: 浏览 ML.NET 中支持的不同机器学习任务和关联的任务。
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613156"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063541"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的机器学习任务
 
@@ -28,22 +28,36 @@ ms.locfileid: "59613156"
 
 有关详细信息，请参阅 Wikipedia 上的[二元分类](https://en.wikipedia.org/wiki/Binary_classification)一文。
 
-### <a name="binary-classification-training-algorithms"></a>二元分类训练算法
+### <a name="binary-classification-trainers"></a>二元分类训练程序
 
 可以使用以下算法训练二元分类模型：
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>二元分类输入和输出
+
+为了通过二元分类获得最佳结果，应平衡训练数据（即正训练数据和负训练数据的数量相等）。 应在训练前处理缺失值。
+
+输入标签列数据必须为 <xref:System.Boolean>。
+输入特征列数据必须为 <xref:System.Single> 的固定大小向量。
+
+这些训练程序输出以下列：
+
+| 输出列名称 | 列名称 | 说明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 由模型计算得出的原始分数|
+| `PredictedLabel` | <xref:System.Boolean> | 预测的标签，基于分数符号。 负分数映射到 `false`，正分数映射到 `true`。|
 
 ## <a name="multiclass-classification"></a>多类分类
 
@@ -58,17 +72,29 @@ ms.locfileid: "59613156"
 >[!NOTE]
 >一个与所有升级任何[二元分类学习器](#binary-classification)，以便对多类数据集进行操作。 有关详细信息，请参阅 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)。
 
-### <a name="multiclass-classification-training-algorithms"></a>多类分类训练算法
+### <a name="multiclass-classification-trainers"></a>多类分类训练程序
 
 可以使用以下训练算法训练多类分类模型：
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>多类分类输入和输出
+
+输入标签列数据必须为 [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型。
+特征列必须为 <xref:System.Single> 的固定大小向量。
+
+该训练程序输出以下列：
+
+| 输出名称 | 类型 | 说明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> 的向量 | 所有类的分数。 值越高意味着落入相关类的概率越高。 如果第 i 个元素具有最大值，则预测的标签索引为 i。 请注意，i 是从零开始的索引。 |
+| `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型 | 预测标签的索引。 如果其值为 i，则实际标签为键值输入标签类型中的第 i 个类别。 |
 
 ## <a name="regression"></a>回归测试
 
@@ -78,19 +104,29 @@ ms.locfileid: "59613156"
 * 基于历史数据和当前市场趋势预测将来的股票价格。
 * 基于广告预算预测产品销售。
 
-### <a name="regression-training-algorithms"></a>回归训练算法
+### <a name="regression-trainers"></a>回归训练程序
 
 可以使用以下算法训练回归模型：
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>回归输入和输出
+
+输入标签列数据必须为 <xref:System.Single>。
+
+此任务的训练程序输出以下列：
+
+| 输出名称 | 类型 | 说明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 模型预测的原始分数 |
 
 ## <a name="clustering"></a>聚类分析
 
@@ -100,11 +136,22 @@ ms.locfileid: "59613156"
 * 确定客户群和人口统计信息来帮助生成目标广告活动。
 * 基于生产指标对清单进行分类。
 
-### <a name="clustering-training-algorithms"></a>聚类分析训练算法
+### <a name="clustering-trainer"></a>聚类分析训练程序
 
 可以使用以下算法训练聚类分析模型：
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>聚类分析输入和输出
+
+输入特征数据必须为 <xref:System.Single>。 无需标签。
+
+该训练程序输出以下列：
+
+| 输出名称 | 类型 | 说明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> 的向量 | 给定数据点到所有群集的质心的距离 |
+| `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型 | 模型预测的最接近的群集的索引。 |
 
 ## <a name="anomaly-detection"></a>异常情况检测
 
@@ -121,11 +168,21 @@ PCA 是机器学习中已建立的一种技术，由于它揭示了数据的内�
 
 根据定义，异常情况属于罕见事件，因此很难收集具有代表性的数据样本用于建模。 此类别中包含的算法是专门设计用来解决使用不平衡数据集建立和定型模型的核心挑战。
 
-### <a name="anomaly-detection-training-algorithms"></a>异常情况检测训练算法
+### <a name="anomaly-detection-trainer"></a>异常情况检测训练程序
 
 可以使用以下算法训练异常情况检测模型：
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>异常情况检测输入和输出
+
+输入特征必须为 <xref:System.Single> 的固定大小向量。
+
+该训练程序输出以下列：
+
+| 输出名称 | 类型 | 说明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 由异常情况检测模型计算得出的非负无界分数 |
 
 ## <a name="ranking"></a>排名
 
@@ -135,8 +192,20 @@ PCA 是机器学习中已建立的一种技术，由于它揭示了数据的内�
 
 可以使用以下算法训练排名模型：
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>排名输入和输出
+
+输入标签数据类型必须为 [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型或 <xref:System.Single>。 标签的值决定相关性，其中较高的值表示较高的相关性。 如果标签为 [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型，则键索引为相关性值，其中最小索引是最不相关的。 如果标签为 <xref:System.Single>，则较大的值表示较高的相关性。
+
+特征数据必须为 <xref:System.Single> 的固定大小向量，输入行组列必须为 [key](xref:Microsoft.ML.Data.KeyDataViewType) 类型。
+
+该训练程序输出以下列：
+
+| 输出名称 | 类型 | 说明|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | 由模型计算以确定预测的无界分数 |
 
 ## <a name="recommendation"></a>建议
 

@@ -4,12 +4,12 @@ description: 在本教程中，你将了解如何使用 Docker 容器化 .NET Co
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: fcbac0e0d17d2481d42e715a7f2790586e31d085
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: a96f96bd91976b0966fb7e8d0c8fb6fb7842cfe3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553831"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631866"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教程：使 .NET Core 应用程序容器化
 
@@ -412,3 +412,4 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 * [试学“ASP.NET Core 微服务”教程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 * [查看支持容器的 Azure 服务。](https://azure.microsoft.com/en-us/overview/containers/)
 * [了解 Dockerfile 命令。](https://docs.docker.com/engine/reference/builder/)
+* [了解用于 Visual Studio 的容器工具](/visualstudio/containers/overview)

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1ab5f2f4172caf799b9a63c1ae881a66f8805e20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130229"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659663"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
 
@@ -21,7 +21,7 @@ ms.locfileid: "53130229"
 
 图 2-4 显示了 Docker 中的映像和注册表与其他组件相关联的方式。 还显示了供应商推出的多种注册表产品/服务。
 
-![Docker 中的基本分类：注册表如同用于存储映像的书架，可被拉取以生成容器，以便运行服务或 Web 应用。 本地和公有云上均有专用 Docker 注册表。 Docker 中心是由 Docker 维护的公共注册表，除了 Docker 信任的注册表（企业级解决方案），Azure 还提供了 Azure 容器注册表。 AWS、Google 和其他产品也有容器注册表。](./media/image5.PNG)
+![Docker 中的基本分类：注册表如同用于存储映像的书架，可被拉取以生成容器，从而运行服务或 Web 应用。 本地和公有云上均有专用 Docker 注册表。 Docker 中心是由 Docker 维护的公共注册表，除了 Docker 信任的注册表（企业级解决方案），Azure 还提供了 Azure 容器注册表。 AWS、Google 和其他产品也有容器注册表。](./media/image5.PNG)
 
 **图 2-4**。 Docker 术语和概念的分类
 
@@ -29,9 +29,9 @@ ms.locfileid: "53130229"
 
 无论是托管在本地还是托管在云中，在下列情况下都建议使用私有映像注册表：
 
--   由于保密性，映像不能被公开分享。
+- 由于保密性，映像不能被公开分享。
 
--   希望映像和所选部署环境之间的网络延迟保持在最低水平。 例如，如果生产环境是 Azure 云，为实现最低的网络延迟，需要将映像存储在 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)中。 同样，如果生产环境是在本地，则需要在同一本地网络中使用本地的 Docker 信任的注册表。
+- 希望映像和所选部署环境之间的网络延迟保持在最低水平。 例如，如果生产环境是 Azure 云，为实现最低的网络延迟，需要将映像存储在 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)中。 同样，如果生产环境是在本地，则需要在同一本地网络中使用本地的 Docker 信任的注册表。
 
 >[!div class="step-by-step"]
 >[上一页](docker-terminology.md)

@@ -9,6 +9,12 @@
   items:
     - name: 入门
       href: tutorials/get-started.md
+    - name: 部署到 Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: 部署到 AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: 部署到 Databricks
+      href: tutorials/databricks-deployment.md
 - name: 参考
   items:
     - name: API 参考

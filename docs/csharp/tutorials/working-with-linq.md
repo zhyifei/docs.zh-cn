@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815578"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063187"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -51,7 +51,7 @@ using System.Linq;
 
 如果这三行（`using` 语句）未在该文件的顶部，程序将无法编译。
 
-现在已具备所需的所有引用，接下来可以考虑一副扑克牌是由什么构成的。 通常一副扑克牌包含四种花色，每种花色包含 13 个值。 通常情况下，你可能会立即考虑创建一个 `Card` 类，然后手动填充一组 `Card` 对象。 相对于通常的方式，使用 LINQ 创建一副扑克牌更加简捷。 可以创建两个序列来分别表示花色和级别，而非创建 `Card` 列。 创建两个非常简单的[迭代器方法](../iterators.md#enumeration-sources-with-iterator-methods)，用于将级别和花色生成为 <xref:System.Collections.Generic.IEnumerable%601> 字符串：
+现在已具备所需的所有引用，接下来可以考虑一副扑克牌是由什么构成的。 通常一副扑克牌包含四种花色，每种花色包含 13 个值。 通常情况下，你可能会立即考虑创建一个 `Card` 类，然后手动填充一组 `Card` 对象。 相对于通常的方式，使用 LINQ 创建一副扑克牌更加简捷。 可以创建两个序列来分别表示花色和点数，而非创建 `Card` 类。 创建两个非常简单的[迭代器方法](../iterators.md#enumeration-sources-with-iterator-methods)，用于将级别和花色生成为 <xref:System.Collections.Generic.IEnumerable%601> 字符串：
 
 ```csharp
 // Program.cs
@@ -340,9 +340,9 @@ public static void Main(string[] args)
 
 有关 LINQ 的更多信息，请访问：
 - [语言集成查询 (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [LINQ 简介](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [C# 中的 LINQ 入门](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ 简介](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [C# 中的 LINQ 入门](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)

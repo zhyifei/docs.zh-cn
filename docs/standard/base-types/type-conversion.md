@@ -26,37 +26,37 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664614"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的类型转换
 <a name="top"></a>每个值都有与之关联的类型，此类型定义分配给该值的空间大小、它可以具有的可能值的范围以及它可以提供的成员等属性。 许多值可以表示为多种类型。 例如，值 4 可以表示为整数或浮点值。 类型转换可以创建一个等同于旧类型值的新类型值，但却不必保留原始对象的恒等值（或精确值）。  
   
  .NET Framework 自动支持以下转换：  
   
--   从派生类转换为基类。 例如，这意味着可将任何类或结构的实例转换为 <xref:System.Object> 实例。  此转换不需要强制转换或转换运算符。  
+- 从派生类转换为基类。 例如，这意味着可将任何类或结构的实例转换为 <xref:System.Object> 实例。  此转换不需要强制转换或转换运算符。  
   
--   从基类转换回原始的派生类。 在 C# 中，此转换需要强制转换运算符。 在 Visual Basic 中，如果 `Option Strict` 处于开启状态，则它需要 `CType` 运算符。  
+- 从基类转换回原始的派生类。 在 C# 中，此转换需要强制转换运算符。 在 Visual Basic 中，如果 `Option Strict` 处于开启状态，则它需要 `CType` 运算符。  
   
--   从实现接口的类型转换为表示该接口的接口对象。 此转换不需要强制转换或转换运算符。  
+- 从实现接口的类型转换为表示该接口的接口对象。 此转换不需要强制转换或转换运算符。  
   
--   从接口对象转换回实现该接口的原始类型。  在 C# 中，此转换需要强制转换运算符。 在 Visual Basic 中，如果 `Option Strict` 处于开启状态，则它需要 `CType` 运算符。  
+- 从接口对象转换回实现该接口的原始类型。  在 C# 中，此转换需要强制转换运算符。 在 Visual Basic 中，如果 `Option Strict` 处于开启状态，则它需要 `CType` 运算符。  
   
  除这些自动转换外，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 还提供支持自定义类型转换的多种功能。 其中包括：  
   
--   `Implicit` 运算符，该运算符定义类型之间可用的扩大转换。 有关详细信息，请参阅[使用隐式运算符的隐式转换](#implicit_conversion_with_the_implicit_operator)部分。  
+- `Implicit` 运算符，该运算符定义类型之间可用的扩大转换。 有关详细信息，请参阅[使用隐式运算符的隐式转换](#implicit_conversion_with_the_implicit_operator)部分。  
   
--   `Explicit` 运算符，该运算符定义类型之间可用的收缩转换。 有关详细信息，请参阅[使用显式运算符的显式转换](#explicit_conversion_with_the_explicit_operator)部分。  
+- `Explicit` 运算符，该运算符定义类型之间可用的收缩转换。 有关详细信息，请参阅[使用显式运算符的显式转换](#explicit_conversion_with_the_explicit_operator)部分。  
   
--   <xref:System.IConvertible> 接口，该接口定义到 .NET Framework 每个基数据类型的转换。 有关更多信息，请参阅 [IConvertible 接口](#the_iconvertible_interface)部分。  
+- <xref:System.IConvertible> 接口，该接口定义到 .NET Framework 每个基数据类型的转换。 有关更多信息，请参阅 [IConvertible 接口](#the_iconvertible_interface)部分。  
   
--   <xref:System.Convert> 类，该类提供了一组方法来实现 <xref:System.IConvertible> 接口中的方法。 有关更多信息，请参阅 [Convert 类](#Convert)部分。  
+- <xref:System.Convert> 类，该类提供了一组方法来实现 <xref:System.IConvertible> 接口中的方法。 有关更多信息，请参阅 [Convert 类](#Convert)部分。  
   
--   <xref:System.ComponentModel.TypeConverter> 类，该类是一个基类，可以扩展该类以支持指定的类型到任何其他类型的转换。 有关更多信息，请参阅 [TypeConverter 类](#the_typeconverter_class)部分。  
+- <xref:System.ComponentModel.TypeConverter> 类，该类是一个基类，可以扩展该类以支持指定的类型到任何其他类型的转换。 有关更多信息，请参阅 [TypeConverter 类](#the_typeconverter_class)部分。  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>使用隐式运算符的隐式转换  
@@ -97,7 +97,7 @@ ms.locfileid: "54659756"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> 大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> 大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
   
- 为了处理这种收缩转换，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允许类型定义 `Explicit` 运算符。 然后，各种语言编译器可以使用自己的语法实现此运算符，也可以调用 <xref:System.Convert> 类的成员来执行此转换。 （有关 <xref:System.Convert> 类的详细信息，请参阅本主题后面部分的 [Convert 类](#Convert)。）下面的示例演示如何使用语言功能来处理这些可能超出范围的整数值到 <xref:System.Int32> 值的显式转换。  
+ 为了处理这种收缩转换，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允许类型定义 `Explicit` 运算符。 然后，各种语言编译器可以使用自己的语法实现此运算符，也可以调用 <xref:System.Convert> 类的成员来执行此转换。 （有关 <xref:System.Convert> 类的详细信息，请参阅本主题后面的 [Convert 类](#Convert)。）下面的示例演示如何使用语言功能来处理这些可能超出范围的整数值到 <xref:System.Int32> 值的显式转换。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -129,11 +129,11 @@ ms.locfileid: "54659756"
 ## <a name="the-iconvertible-interface"></a>IConvertible 接口  
  为了支持任意类型到公共语言运行时基类型的转换，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了 <xref:System.IConvertible> 接口。 需要使用实现类型以提供以下方法：  
   
--   一个返回实现类型的 <xref:System.TypeCode> 的方法。  
+- 一个返回实现类型的 <xref:System.TypeCode> 的方法。  
   
--   用于将实现类型转换为公共语言运行时的每一种基类型（<xref:System.Boolean>、<xref:System.Byte>、<xref:System.DateTime>、<xref:System.Decimal> 和 <xref:System.Double> 等）的各种方法。  
+- 用于将实现类型转换为公共语言运行时的每一种基类型（<xref:System.Boolean>、<xref:System.Byte>、<xref:System.DateTime>、<xref:System.Decimal> 和 <xref:System.Double> 等）的各种方法。  
   
--   一个用于将实现类型的实例转换为另一个指定类型的通用转换方法。 不支持的转换应引发 <xref:System.InvalidCastException>。  
+- 一个用于将实现类型的实例转换为另一个指定类型的通用转换方法。 不支持的转换应引发 <xref:System.InvalidCastException>。  
   
  公共语言运行时的每一种基类型（即 <xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.String>、<xref:System.UInt16>、<xref:System.UInt32> 和 <xref:System.UInt64>）以及 <xref:System.DBNull> 和 <xref:System.Enum> 类型都可以实现 <xref:System.IConvertible> 接口。 但是，这些是显式接口实现；因此只能通过 <xref:System.IConvertible> 接口变量来调用转换方法，如下面的示例所示。 此示例将一个 <xref:System.Int32> 值转换为其等效的 <xref:System.Char> 值。  
   

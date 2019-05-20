@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beb351ac365694ac909b793bf19adb9fbb8c0274
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e5240ee24a2f017e37b057c9fb74e551927b8bee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835969"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590173"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输入
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法接受三种输入类型的源文档：实现 <xref:System.Xml.XPath.IXPathNavigable> 接口的对象、读取源文档的 <xref:System.Xml.XmlReader> 对象或字符串 URI。  
@@ -24,14 +24,14 @@ ms.locfileid: "48835969"
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable 接口  
  <xref:System.Xml.XPath.IXPathNavigable> 接口在 <xref:System.Xml.XmlNode> 和 <xref:System.Xml.XPath.XPathDocument> 类中实现。 这两个类表示 XML 数据的内存中缓存。  
   
--   <xref:System.Xml.XmlNode> 类基于 W3C 文档对象模型 (DOM) 并具有编辑功能。  
+- <xref:System.Xml.XmlNode> 类基于 W3C 文档对象模型 (DOM) 并具有编辑功能。  
   
--   <xref:System.Xml.XPath.XPathDocument> 类是基于 XPath 数据模型的只读数据存储。 <xref:System.Xml.XPath.XPathDocument> 是 XSLT 处理建议使用的类。 与 <xref:System.Xml.XmlNode> 类相比，此类的性能更强。  
+- <xref:System.Xml.XPath.XPathDocument> 类是基于 XPath 数据模型的只读数据存储。 <xref:System.Xml.XPath.XPathDocument> 是 XSLT 处理建议使用的类。 与 <xref:System.Xml.XmlNode> 类相比，此类的性能更强。  
   
 > [!NOTE]
->  转换将应用于整个文档。 换句话说，如果你传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。 若要转换节点片段，必须创建一个仅包含节点片段的对象，并将该对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。 有关详细信息，请参阅[如何：转换节点片断](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)。  
+>  转换将应用于整个文档。 换句话说，如果你传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。 若要转换节点片段，必须创建一个仅包含节点片段的对象，并将该对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。 有关详细信息，请参阅[如何：转换节点片段](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)。  
   
- 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。 若要查找 books.xml 和 transform.xsl 文件，请参阅[如何：使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)这篇主题。  
+ 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。 books.xml 和 transform.xsl 文件可在以下主题中找到：[如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
   
  [!code-csharp[XslCompiledTransform.Transform2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#1)]
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
@@ -39,7 +39,7 @@ ms.locfileid: "48835969"
 ## <a name="xmlreader-object"></a>XmlReader 对象  
  <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法从 <xref:System.Xml.XmlReader> 的当前节点及其所有子节点加载。 这样，可以使用文档的一部分作为上下文文档使用。 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法返回后，<xref:System.Xml.XmlReader> 将位于上下文文档结尾之后的下一个节点上。 如果已到达文档结尾，<xref:System.Xml.XmlReader> 将位于文件结尾 (EOF)。  
   
- 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。 若要查找 books.xml 和 transform.xsl 文件，请参阅[如何：使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)这篇主题。  
+ 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。 books.xml 和 transform.xsl 文件可在以下主题中找到：[如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
   
  [!code-csharp[XslCompiledTransform.Transform2#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#2)]
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48835969"
 ## <a name="string-uri"></a>字符串 URI  
  还可以将源文档 URI 指定为 XSLT 输入。 <xref:System.Xml.XmlResolver> 用于解析 URI。 可以指定要使用的 <xref:System.Xml.XmlResolver>，方法是将其传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。 如果未指定 <xref:System.Xml.XmlResolver>，<xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法将使用没有凭据的默认 <xref:System.Xml.XmlUrlResolver>。  
   
- 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。 若要查找 books.xml 和 transform.xsl 文件，请参阅[如何：使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)这篇主题。  
+ 下面的示例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，借助 transform.xsl 样式表将 books.xml 文件转换为 books.html 文件。 books.xml 和 transform.xsl 文件可在以下主题中找到：[如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
   
  [!code-csharp[XslCompiledTransform.Transform2#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#3)]
  [!code-vb[XslCompiledTransform.Transform2#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#3)]  

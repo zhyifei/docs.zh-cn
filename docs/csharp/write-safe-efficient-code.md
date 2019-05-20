@@ -3,12 +3,12 @@ title: 编写安全有效的 C# 代码
 description: 通过 C# 语言最新增强功能，可以编写可验证的安全代码，这些代码的性能以前与不安全代码相关联。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753892"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -180,6 +180,8 @@ public struct Point3D
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 当你调用 `readonly struct` 的成员时，编译器会生成更有效的代码：`this` 引用始终是按引用成员方法传递的 `in` 参数，而不是接收器的副本。 将 `readonly struct` 用作 `in` 参数时，此优化可以减少复制操作。
+
+不应将可以为 null 的值类型作为 `in` 参数传递。 <xref:System.Nullable%601> 类型未声明为只读结构。 这意味着编译器必须为使用参数声明中的 `in` 修饰符传递到方法的任何可以为 null 的值类型参数生成防御性副本。
 
 你可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中看到使用 [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) 演示性能差异的示例程序。 它对按值和按引用传递可变结构与按值和按引用传递不可变结构进行了比较。 使用不可变结构并按引用传递是最快的。
 

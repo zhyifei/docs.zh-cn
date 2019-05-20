@@ -3,14 +3,14 @@ title: .NET API 分析器
 description: 了解 .NET API 分析器如何有助于检测弃用的 API 和平台兼容性问题。
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680264"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063346"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -23,7 +23,7 @@ API 分析器以 NuGet 包 [Microsoft.DotNet.Analyzers.Compatibility](https://ww
 
 ## <a name="prerequisites"></a>系统必备
 
-* Visual Studio 2017 或 Visual Studio for Mac（所有版本）。
+* Visual Studio 2017 及更高版本，或 Visual Studio for Mac（所有版本）。
 
 ## <a name="discovering-deprecated-apis"></a>发现弃用的 API
 
@@ -98,6 +98,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 * 使用抛出 <xref:System.PlatformNotSupportedException> 的 .NET Standard API (PC001)。
 * 使用 .NET Framework 4.6.1 不支持的 .NET Standard API (PC002)。
 * 使用 UWP 中不存在的本机 API (PC003)。
+* Delegate.BeginInvoke 和 EndInvoke APIs (PC004) 的用法。
 * 使用标记为弃用的 API (DEXXXX)。
 
 ## <a name="ci-machine"></a>CI 计算机

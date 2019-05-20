@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307647"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755956"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查询操作中的类型关系 (C#)
 若要有效编写查询，应了解完整的查询操作中的变量类型是如何全部彼此关联的。 如果了解这些关系，就能够更容易地理解文档中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 示例和代码示例。 另外，还能了解在使用 `var` 隐式对变量进行类型化时的后台操作。  
@@ -29,7 +29,7 @@ ms.locfileid: "59307647"
 ## <a name="queries-that-do-not-transform-the-source-data"></a>不转换源数据的查询  
  下图演示不对数据执行转换的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查询操作。 源包含一个字符串序列，查询输出也是一个字符串序列。  
   
- ![LINQ 查询中的数据类型关系](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![关系图显示 LINQ 查询中数据类型的关系。](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. 数据源的类型参数决定范围变量的类型。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59307647"
 ## <a name="queries-that-transform-the-source-data"></a>转换源数据的查询  
  下图演示对数据执行简单转换的 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 查询操作。 查询将一个 `Customer` 对象序列用作输入，并只选择结果中的 `Name` 属性。 因为 `Name` 是一个字符串，所以查询生成一个字符串序列作为输出。  
   
- ![转换数据类型的查询](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![关系图显示转换数据类型的查询。](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. 数据源的类型参数决定范围变量的类型。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59307647"
   
  下图演示稍微复杂的转换。 `select` 语句返回只捕获原始 `Customer` 对象的两个成员的匿名类型。  
   
- ![转换数据类型的查询](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![关系图显示转换数据类型的更复杂的查询。](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. 数据源的类型参数始终为查询中范围变量的类型。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59307647"
 ## <a name="letting-the-compiler-infer-type-information"></a>让编译器推断类型信息  
  虽然需要了解查询操作中的类型关系，但是也可以选择让编译器执行全部工作。 关键字 [var](../../../../csharp/language-reference/keywords/var.md) 可用于查询操作中的任何本地变量。 下图与前面讨论的第二个示例相似。 但是，编译器为查询操作中的各个变量提供强类型。  
   
- ![具有隐式类型的类型流](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![关系图显示具有隐式类型的类型流。](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  有关 `var` 的详细信息，请参阅[隐式类型本地变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   

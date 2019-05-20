@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677209"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469718"
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -24,23 +24,23 @@ ms.locfileid: "57677209"
   
  本概述包含以下几节：  
   
--   [平台调用和 COM 互操作模型](#platform_invoke_and_com_interop_models)  
+- [平台调用和 COM 互操作模型](#platform_invoke_and_com_interop_models)  
   
--   [封送和 COM 单元](#marshaling_and_com_apartments)  
+- [封送和 COM 单元](#marshaling_and_com_apartments)  
   
--   [封送远程调用](#marshaling_remote_calls)  
+- [封送远程调用](#marshaling_remote_calls)  
   
--   [相关主题](#related_topics)  
+- [相关主题](#related_topics)  
   
--   [引用](#reference)  
+- [引用](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>平台调用和 COM 互操作模型  
  公共语言运行时提供两种用于与非托管代码进行交互的机制：  
   
--   平台调用，它使托管代码能够调用从非托管库中导出的函数。  
+- 平台调用，它使托管代码能够调用从非托管库中导出的函数。  
   
--   COM 互操作，它使托管代码能够通过接口与组件对象模型 (COM) 对象交互。  
+- COM 互操作，它使托管代码能够通过接口与组件对象模型 (COM) 对象交互。  
   
  平台调用和 COM 互操作都使用互操作封送处理在调用方和被调用方之间准确地移动方法参数，并且如果需要，也可以将数据从被调用方移回调用方。 正如下图所示，除涉及 [回调函数](callback-functions.md) 以外，平台调用方法调用从托管代码流向非托管代码，而绝不会以相反方向流动。 虽然平台调用的调用只能从托管代码流向非托管代码，但是数据仍然可以作为输入参数或输出参数在两个方向流动。 COM 互操作方法调用可以在任一方向流动。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57677209"
  如果计划导出托管服务器，请注意，COM 客户端确定服务器的单元。 在 MTA 中初始化的 COM 客户端所调用的托管服务器必须确保线程安全。  
   
 ### <a name="managed-clients-and-com-servers"></a>托管客户端和 COM 服务器  
- 托管客户端单元的默认设置为 MTA；但是，.NET 客户端的应用程序类型可以更改默认设置。 例如，[!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 客户端单元设置为 STA。 可以使用 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 属性检查并更改托管客户端的单元设置。  
+ 托管客户端单元的默认设置为 MTA；但是，.NET 客户端的应用程序类型可以更改默认设置。 例如，Visual Basic 客户端单元设置为 STA。 可以使用 <xref:System.STAThreadAttribute?displayProperty=nameWithType>、<xref:System.MTAThreadAttribute?displayProperty=nameWithType>、<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 属性或 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 属性检查并更改托管客户端的单元设置。  
   
  组件的作者设置 COM 服务器的线程关联。 下表显示 .NET 客户端和 COM 服务器的单元设置的组合。 同时还显示得到的针对这些组合的封送需求。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677209"
   
  对于跨单元封送，可以执行下列操作：  
   
--   接受跨单元封送的系统开销，它只在存在许多跨边界调用时才值得注意。 若要使调用能够成功跨过单元边界，必须注册 COM 组件的类型库。  
+- 接受跨单元封送的系统开销，它只在存在许多跨边界调用时才值得注意。 若要使调用能够成功跨过单元边界，必须注册 COM 组件的类型库。  
   
--   通过将客户端线程设置为 STA 或 MTA 改变主线程。 如，如果 C# 客户端调用许多 STA COM 组件，则可以通过将主线程设置为 STA 来避免跨单元封送。  
+- 通过将客户端线程设置为 STA 或 MTA 改变主线程。 如，如果 C# 客户端调用许多 STA COM 组件，则可以通过将主线程设置为 STA 来避免跨单元封送。  
   
     > [!NOTE]
     >  将 C# 客户端的线程设置为 STA 后，对 MTA COM 组件的调用将需要跨单元封送。  
@@ -101,9 +101,9 @@ ms.locfileid: "57677209"
 ## <a name="marshaling-remote-calls"></a>封送远程调用  
  与跨单元封送一样，只要对象驻留在不同的进程中，托管代码和非托管代码之间的每个调用就都涉及 COM 封送处理。 例如:  
   
--   调用远程主机上的托管服务器的 COM 客户端使用分布式 COM (DCOM)。  
+- 调用远程主机上的托管服务器的 COM 客户端使用分布式 COM (DCOM)。  
   
--   调用远程主机上的 COM 服务器的托管客户端使用 DCOM。  
+- 调用远程主机上的 COM 服务器的托管客户端使用 DCOM。  
   
  下图显示互操作封送处理和 COM 封送处理如何跨进程和主机边界提供通信信道。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677209"
   
  在此图中：  
   
--   非托管客户端从一个托管对象获取一个对 COM 对象的引用，而该托管对象是从一台远程主机获取该引用的。 远程处理机制为 DCOM。  
+- 非托管客户端从一个托管对象获取一个对 COM 对象的引用，而该托管对象是从一台远程主机获取该引用的。 远程处理机制为 DCOM。  
   
--   托管客户端从一个 COM 对象获取一个对托管对象的引用，而该 COM 对象是从一台远程主机获取该引用的。 远程处理机制为 DCOM。  
+- 托管客户端从一个 COM 对象获取一个对托管对象的引用，而该 COM 对象是从一台远程主机获取该引用的。 远程处理机制为 DCOM。  
   
     > [!NOTE]
     >  必须注册该托管服务器的导出类型库。  

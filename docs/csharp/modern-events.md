@@ -3,12 +3,12 @@ title: 更新的 .NET Core 事件模式
 description: 了解 .NET Core 事件模式如何通过向后兼容性实现灵活性，以及如何通过异步订阅服务器实现安全事件处理。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751784"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
@@ -23,9 +23,23 @@ ms.locfileid: "50188477"
 
 如果还要进行一处更改，还可将 `SearchDirectoryArgs` 更改为结构：
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-这一额外更改就是在进入初始化所有字段的构造函数之前调用默认构造函数。 若没有此添加，C# 规则将报告先访问属性再分配属性。
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+其他更改为：在输入初始化所有字段的构造函数之前调用无参数构造函数。 若没有此添加，C# 规则将报告先访问属性再分配属性。
 
 不应将 `FileFoundArgs` 从类（引用类型）更改为结构（值类型）。 这是因为处理取消的协议要求通过引用传递事件参数。 如果进行了相同的更改，文件搜索类将永远不会观察到任何事件订阅者所做的任何更改。 结构的新副本将用于每个订阅者，并且该副本将与文件搜索对象所看到的不同。
 
@@ -37,7 +51,7 @@ ms.locfileid: "50188477"
 
 ## <a name="events-with-async-subscribers"></a>异步事件订阅者
 
-你还需了解最后一个模式：如何正确编写调用异步代码的事件订阅者。 该问题详见 [async 和 await](async.md) 一文。 异步方法可具有一个 void 返回类型，但强烈建议不要使用它。 事件订阅者代码调用异步方法时，只能创建 `async void` 方法。 事件处理程序签名需要该方法。
+还有最后一个模式需要了解：如何正确编写调用异步代码的事件订阅服务器。 该问题详见 [async 和 await](async.md) 一文。 异步方法可具有一个 void 返回类型，但强烈建议不要使用它。 事件订阅者代码调用异步方法时，只能创建 `async void` 方法。 事件处理程序签名需要该方法。
 
 你需要协调此对立指南。 不管怎样，必须创建安全的 `async void` 方法。 需要实现的模式的基础知识如下：
 
@@ -65,4 +79,4 @@ worker.StartWorking += async (sender, eventArgs) =>
 
 本系列的下一篇文章将有助于你区分在设计中使用 `delegates` 和 `events`。 它们是类似的概念，该文章将帮助你为程序做出最好的决定。
 
-[下一篇](distinguish-delegates-events.md)
+[下一页](distinguish-delegates-events.md)

@@ -1,0 +1,41 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: ML.NET 文档
+metadata:
+  document_id: na
+  title: ML.NET 文档 - 教程和 API 参考
+  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  ms.topic: landing-page
+  ms.date: 04/18/2019
+  ms.author: cgronlun
+  author: cjgronlund
+abstract:
+  description: 了解如何使用 ML.NET，这是一个跨平台的开源机器学习框架，用于生成自定义机器学习解决方案并将其集成到 .NET 应用程序。 教程、代码示例、API 参考和其他文档将演示如何使用该框架。
+sections:
+  - title: 开始操作
+    items:
+      - type: paragraph
+        text: 若要了解如何使用 ML.NET 生成机器学习应用程序，请阅读<a href="/dotnet/machine-learning/how-does-mldotnet-work">什么是 ML.NET？它如何工作？</a> 或者通过将 <b>Microsoft.ML</b> nuget 包添加到应用程序来开始操作。
+  - title: 分步教程
+    items:
+      - type: paragraph
+        text: 了解如何使用 ML.NET 创建常见的解决方案：
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">使用二元分类分析情绪</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">使用多类分类对 GitHub 问题进行分类</a></li>
+          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">使用回归预测纽约市出租车费用</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">使用聚类分析按特征对花分类</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">使用矩阵因子分解创建影片推荐系统</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">使用 TensorFlow 生成自定义图像分类器</a>
+  - title: 参考和资源
+    items:
+      - type: paragraph
+        text: ML.NET API 有两组包：发布组件和预览组件。 发布 API 包含用于数据处理的组件、用于二元分类、多类分类、回归、异常情况检测和排名的算法以及模型保存和加载等等！ 预览 API 包含 ONNX 和 TensorFlow 模型处理、推荐任务算法以及用于处理时序数据的组件。
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=ml-dotnet">ML.NET API</a>
+          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">ML.NET 预览 API</a>
+          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">ML.NET 示例：C# 和 F#</a>'

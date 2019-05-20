@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 2。
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427274"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754379"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -145,7 +145,7 @@ public static string RockPaperScissors(string first, string second)
     };
 ```
 
-消息指示获胜者。 弃元表示平局(石头剪刀布游戏)的三种组合或其他文本输入。
+消息指示获胜者。 弃元表示关系的三种组合或其他文本输入。
 
 ### <a name="positional-patterns"></a>位置模式
 
@@ -321,7 +321,7 @@ await foreach (var number in GenerateSequence())
 
 范围和索引为在数组中指定子范围（<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）提供了简洁语法。
 
-可以指定一个倒数索引。 使用 `^` 运算符指定倒数。 你熟悉表示元素“顺数第 2”的 `array[2]`。 现在，`array[^2]` 意味着元素“倒数第 2”。 索引 `^0` 意味着“结束”或最后一个元素后面的索引。
+通过在索引前面使用 `^` 字符，可以**从末尾**指定索引。 从末尾编制索引将从 `0..^0` 指定整个范围的规则开始。 若要枚举整个数组，请从*第一个元素*开始，一直到*最后一个元素之后*。 想想枚举器上 `MoveNext` 方法的行为：如果枚举到最后一个元素之后，它会返回 false。 索引 `^0` 表示“结尾”、`array[array.Length]` 或最后一个元素后面的索引。 你熟悉表示元素“顺数第 2”的 `array[2]`。 现在，`array[^2]` 意味着元素“倒数第 2”。 
 
 可以使用范围运算符指定范围：`..`。 例如，`0..^0` 指定数组的整个范围：从起始 0 开始，但不包括最后的 0。 两个操作数都可以使用“顺数”或“倒数”。 此外，可以省略其中一个操作数。 默认值为起始索引的 `0` 和结束索引的 `^0`。
 
@@ -340,7 +340,7 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
 每个元素的索引均强化了“顺数”和“倒数”的概念，且范围不包括结束范围。 整个数组的“start”是第一个元素。 整个数组的“end”在最后一个元素之后。
@@ -383,3 +383,5 @@ Range phrase = 1..4;
 ```csharp
 var text = words[phrase];
 ```
+
+可在有关[索引和范围](../tutorials/ranges-indexes.md)的教程中详细了解索引和范围。

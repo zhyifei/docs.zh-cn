@@ -1,17 +1,21 @@
 ---
 title: dotnet-add reference 命令
 description: dotnet add reference 命令可便于添加项目间引用。
-ms.date: 12/04/2018
-ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/24/2019
+ms.openlocfilehash: f33a379534dca88133babbb5ca78bca614e441c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169753"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755192"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
+**本文适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 

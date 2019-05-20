@@ -13,29 +13,29 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152807"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634720"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 <a name="top"></a> .NET 中的正则表达式引擎是一款功能强大且完备的工具，根据模式匹配（而不是比较和匹配文本）处理文本。 在大多数情况下，它可以快速、高效地执行模式匹配。 但在某些情况下，正则表达式引擎的速度似乎很慢。 在极端情况下，它甚至看似停止响应，因为它会用若干个小时甚至若干天处理相对小的输入。  
   
  本主题概述开发人员为了确保其正则表达式实现最佳性能可以采纳的一些最佳做法。 它包含下列部分：  
   
--   [考虑输入源](#InputSource)  
+- [考虑输入源](#InputSource)  
   
--   [适当处理对象实例化](#ObjectInstantiation)  
+- [适当处理对象实例化](#ObjectInstantiation)  
   
--   [控制回溯](#Backtracking)  
+- [控制回溯](#Backtracking)  
   
--   [使用超时值](#Timeouts)  
+- [使用超时值](#Timeouts)  
   
--   [只在必要时捕获](#Capture)  
+- [只在必要时捕获](#Capture)  
   
--   [相关主题](#RelatedTopics)  
+- [相关主题](#RelatedTopics)  
   
 <a name="InputSource"></a>   
 ## <a name="consider-the-input-source"></a>考虑输入源  
@@ -45,16 +45,16 @@ ms.locfileid: "53152807"
   
  若要匹配不受约束的输入，正则表达式必须能够高效处理以下三种文本：  
   
--   与正则表达式模式匹配的文本。  
+- 与正则表达式模式匹配的文本。  
   
--   与正则表达式模式不匹配的文本。  
+- 与正则表达式模式不匹配的文本。  
   
--   与正则表达式模式大致匹配的文本。  
+- 与正则表达式模式大致匹配的文本。  
   
  对于为了处理受约束的输入而编写的正则表达式，最后一种文本类型尤其存在问题。 如果该正则表达式还依赖大量[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)，则正则表达式引擎可能会花费大量时间（在有些情况下，需要许多个小时或许多天）来处理看似无害的文本。  
   
 > [!WARNING]
->  下面的示例使用容易过度回溯并可能拒绝有效电子邮件地址的正则表达式。 不应在电子邮件验证例程中使用。 如果要验证电子邮件地址的正则表达式，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
+>  下面的示例使用容易过度回溯并可能拒绝有效电子邮件地址的正则表达式。 不应在电子邮件验证例程中使用。 如需可验证电子邮件地址的正则表达式，请参阅[如何：确认字符串是有效的电子邮件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。  
   
  例如，考虑一种很常用但很有问题的用于验证电子邮件地址别名的正则表达式。 编写正则表达式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` 的目的是处理被视为有效的电子邮件地址，该地址包含一个字母数字字符，后跟零个或多个可为字母数字、句点或连字符的字符。 该正则表达式必须以字母数字字符结束。 但正如下面的示例所示，尽管此正则表达式可以轻松处理有效输入，但在处理接近有效的输入时性能非常低效。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "53152807"
   
  若要解决此问题，可执行下列操作：  
   
--   开发模式时，应考虑回溯对正则表达式引擎的性能的影响程度，特别是当正则表达式设计用于处理不受约束的输入时。 有关详细信息，请参阅[控制回溯](#Backtracking)部分。  
+- 开发模式时，应考虑回溯对正则表达式引擎的性能的影响程度，特别是当正则表达式设计用于处理不受约束的输入时。 有关详细信息，请参阅[控制回溯](#Backtracking)部分。  
   
--   使用无效输入、接近有效的输入以及有效输入对正则表达式进行完全测试。 若要为特定正则表达式随机生成输入，可以使用 [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/)，这是 Microsoft Research 提供的正则表达式探索工具。  
+- 使用无效输入、接近有效的输入以及有效输入对正则表达式进行完全测试。 若要为特定正则表达式随机生成输入，可以使用 [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/)，这是 Microsoft Research 提供的正则表达式探索工具。  
   
  [返回页首](#top)  
   
@@ -78,17 +78,17 @@ ms.locfileid: "53152807"
  .NET 正则表达式对象模型的核心是 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类，表示正则表达式引擎。 通常，影响正则表达式性能的单个最大因素是 <xref:System.Text.RegularExpressions.Regex> 引擎的使用方式。 定义正则表达式需要将正则表达式引擎与正则表达式模式紧密耦合。 无论该耦合过程是需要通过向其构造函数传递正则表达式模式来实例化 <xref:System.Text.RegularExpressions.Regex> 还是通过向其传递正则表达式模式和要分析的字符串来调用静态方法，都必然会消耗大量资源。  
   
 > [!NOTE]
->  若要详细了解使用已解释和已编译正则表达式造成的性能影响，请参阅 BCL 团队博客中的[优化正则表达式性能（第 II 部分）：控制回溯](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)。  
+>  若要详细了解使用已解释和已编译正则表达式造成的性能影响，请参阅 BCL 团队博客中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)（优化正则表达式性能，第 II 部分：控制回溯）。  
   
  可将正则表达式引擎与特定正则表达式模式耦合，然后使用该引擎以若干种方式匹配文本：  
   
--   可以调用静态模式匹配方法，如 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>。 这不需要实例化正则表达式对象。  
+- 可以调用静态模式匹配方法，如 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>。 这不需要实例化正则表达式对象。  
   
--   可以实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象并调用已解释的正则表达式的实例模式匹配方法。 这是将正则表达式引擎绑定到正则表达式模式的默认方法。 如果实例化 <xref:System.Text.RegularExpressions.Regex> 对象时未使用包括 `options` 标记的 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 自变量，则会生成此方法。  
+- 可以实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象并调用已解释的正则表达式的实例模式匹配方法。 这是将正则表达式引擎绑定到正则表达式模式的默认方法。 如果实例化 <xref:System.Text.RegularExpressions.Regex> 对象时未使用包括 `options` 标记的 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 自变量，则会生成此方法。  
   
--   可以实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象并调用已编译的正则表达式的实例模式匹配方法。 当使用包括 <xref:System.Text.RegularExpressions.Regex> 标记的 `options` 参数实例化 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 对象时，正则表达式对象表示已编译的模式。  
+- 可以实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象并调用已编译的正则表达式的实例模式匹配方法。 当使用包括 <xref:System.Text.RegularExpressions.Regex> 标记的 `options` 参数实例化 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 对象时，正则表达式对象表示已编译的模式。  
   
--   可以创建一个与特定正则表达式模式紧密耦合的特殊用途的 <xref:System.Text.RegularExpressions.Regex> 对象，编译该对象，并将其保存到独立程序集中。 为此，可调用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法。  
+- 可以创建一个与特定正则表达式模式紧密耦合的特殊用途的 <xref:System.Text.RegularExpressions.Regex> 对象，编译该对象，并将其保存到独立程序集中。 为此，可调用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法。  
   
  这种调用正则表达式匹配方法的特殊方式会对应用程序产生显著影响。 以下各节讨论何时使用静态方法调用、已解释的正则表达式和已编译的正则表达式，以改进应用程序的性能。  
   
@@ -154,9 +154,9 @@ ms.locfileid: "53152807"
   
  建议你在以下情况下将正则表达式编译为程序集：  
   
--   如果你是要创建可重用正则表达式库的组件开发人员。  
+- 如果你是要创建可重用正则表达式库的组件开发人员。  
   
--   如果你预期正则表达式的模式匹配方法要被调用的次数无法确定 -- 从任意位置，次数可能为一次两次到上千上万次。 与已编译或已解释的正则表达式不同，编译为单独程序集的正则表达式可提供与方法调用数量无关的一致性能。  
+- 如果你预期正则表达式的模式匹配方法要被调用的次数无法确定 -- 从任意位置，次数可能为一次两次到上千上万次。 与已编译或已解释的正则表达式不同，编译为单独程序集的正则表达式可提供与方法调用数量无关的一致性能。  
   
  如果使用已编译的正则表达式来优化性能，则不应使用反射来创建程序集，加载正则表达式引擎并执行其模式匹配方法。 这要求你避免动态生成正则表达式模式，并且要在创建程序集时指定模式匹配选项（如不区分大小写的模式匹配）。 它还要求将创建程序集的代码与使用正则表达式的代码分离。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "53152807"
  通常，正则表达式引擎使用线性进度在输入字符串中移动并将其编译为正则表达式模式。 但是，当在正则表达式模式中使用不确定限定符（如 `*`、`+` 和 `?`）时，正则表达式引擎可能会放弃一部分成功的分部匹配，并返回以前保存的状态，以便为整个模式搜索成功匹配。 此过程称为回溯。  
   
 > [!NOTE]
->  若要详细了解回溯，请参阅[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 若要详细了解回溯，请参阅 BCL 团队博客中的[优化正则表达式性能（第 II 部分）：控制回溯](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)。  
+>  若要详细了解回溯，请参阅[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 若要详细了解回溯，请参阅 BCL 团队博客中的 [Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)（优化正则表达式性能，第 II 部分：控制回溯）。  
   
  支持回溯可为正则表达式提供强大的功能和灵活性。 还可将控制正则表达式引擎操作的职责交给正则表达式开发人员来处理。 由于开发人员通常不了解此职责，因此其误用回溯或依赖过多回溯通常会显著降低正则表达式的性能。 在最糟糕的情况下，输入字符串中每增加一个字符，执行时间会加倍。 实际上，如果过多使用回溯，则在输入与正则表达式模式近似匹配时很容易创建无限循环的编程等效形式；正则表达式引擎可能需要几小时甚至几天来处理相对短的输入字符串。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "53152807"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- .NET 中的正则表达式语言包括以下可用于消除嵌套限定符的语言元素。 有关详细信息，请参阅 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ .NET 中的正则表达式语言包括以下可用于消除嵌套限定符的语言元素。 有关详细信息，请参阅 [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
 |语言元素|说明|  
 |----------------------|-----------------|  
@@ -237,11 +237,11 @@ ms.locfileid: "53152807"
   
  正则表达式超时间隔定义了在超时前正则表达式引擎用于查找单个匹配项的时间长度。默认超时间隔为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>，这意味着正则表达式不会超时。可以按如下所示重写此值并定义超时间隔：  
   
--   在实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象（通过调用 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 构造函数）时，提供一个超时值。  
+- 在实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象（通过调用 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 构造函数）时，提供一个超时值。  
   
--   调用静态模式匹配方法，如 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>，其中包含 `matchTimeout` 参数。  
+- 调用静态模式匹配方法，如 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>，其中包含 `matchTimeout` 参数。  
   
--   对于通过调用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法创建的已编译的正则表达式，可调用带有 <xref:System.TimeSpan> 类型的参数的构造函数。  
+- 对于通过调用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法创建的已编译的正则表达式，可调用带有 <xref:System.TimeSpan> 类型的参数的构造函数。  
   
  如果定义了超时间隔并且在此间隔结束时未找到匹配项，则正则表达式方法将引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常。 在异常处理程序中，可以选择使用一个更长的超时间隔来重试匹配、放弃匹配尝试并假定没有匹配项，或者放弃匹配尝试并记录异常信息以供未来分析。  
   
@@ -281,20 +281,20 @@ ms.locfileid: "53152807"
   
  可以通过以下方式之一来禁用捕获：  
   
--   使用 `(?:subexpression)` 语言元素。 此元素可防止在它应用的组中捕获匹配的子字符串。 它不在任何嵌套的组中禁用子字符串捕获。  
+- 使用 `(?:subexpression)` 语言元素。 此元素可防止在它应用的组中捕获匹配的子字符串。 它不在任何嵌套的组中禁用子字符串捕获。  
   
--   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 选项。 在正则表达式模式中禁用所有未命名或隐式捕获。 使用此选项时，只能捕获与使用 `(?<name>subexpression)` 语言元素定义的命名组匹配的子字符串。 可将 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 标记传递给 `options` 类构造函数的 <xref:System.Text.RegularExpressions.Regex> 参数或 `options` 静态匹配方法的 <xref:System.Text.RegularExpressions.Regex> 参数。  
+- 使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 选项。 在正则表达式模式中禁用所有未命名或隐式捕获。 使用此选项时，只能捕获与使用 `(?<name>subexpression)` 语言元素定义的命名组匹配的子字符串。 可将 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 标记传递给 `options` 类构造函数的 <xref:System.Text.RegularExpressions.Regex> 参数或 `options` 静态匹配方法的 <xref:System.Text.RegularExpressions.Regex> 参数。  
   
--   在 `n` 语言元素中使用 `(?imnsx)` 选项。 此选项将在元素出现的正则表达式模式中的点处禁用所有未命名或隐式捕获。 捕获将一直禁用到模式结束或 `(-n)` 选项启用未命名或隐式捕获。 有关详细信息，请参阅 [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
+- 在 `n` 语言元素中使用 `(?imnsx)` 选项。 此选项将在元素出现的正则表达式模式中的点处禁用所有未命名或隐式捕获。 捕获将一直禁用到模式结束或 `(-n)` 选项启用未命名或隐式捕获。 有关详细信息，请参阅 [其他构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
   
--   在 `n` 语言元素中使用 `(?imnsx:subexpression)` 选项。 此选项可在 `subexpression` 中禁用所有未命名或隐式捕获。 同时禁用任何未命名或隐式的嵌套捕获组进行的任何捕获。  
+- 在 `n` 语言元素中使用 `(?imnsx:subexpression)` 选项。 此选项可在 `subexpression` 中禁用所有未命名或隐式捕获。 同时禁用任何未命名或隐式的嵌套捕获组进行的任何捕获。  
   
  [返回页首](#top)  
   
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|Title|说明|  
 |-----------|-----------------|  
 |[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|在 .NET 中检查正则表达式引擎的实现。 该主题重点介绍正则表达式的灵活性，并说明开发人员确保正则表达式引擎高效、强健运行的职责。|  
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|说明何为回溯及其对正则表达式性能有何影响，并检查为回溯提供替代项的语言元素。|  

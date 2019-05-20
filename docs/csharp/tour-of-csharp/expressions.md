@@ -1,14 +1,14 @@
 ---
 title: C# 表达式 - C# 语言介绍
 description: 表达式、操作数和运算符是 C# 语言的构建基块
-ms.date: 11/06/2016
+ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480750"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753646"
 ---
 # <a name="expressions"></a>表达式
 
@@ -23,73 +23,11 @@ ms.locfileid: "59480750"
 
 可以使用括号控制优先级和结合性。 例如，`x + y * z` 先计算 `y` 乘 `z`，并将结果与 `x` 相加，而 `(x + y) * z` 则先计算 `x` 加 `y`，然后将结果与 `z` 相乘。
 
-大多数运算符都可以*重载*。 借助运算符重载，可以为一个或两个操作数为用户定义类或结构类型的运算指定用户定义运算符实现代码。
+大部分运算符可[*重载*](../language-reference/keywords/operator.md)。 借助运算符重载，可以为一个或两个操作数为用户定义类或结构类型的运算指定用户定义运算符实现代码。
 
-下面总结了 C# 运算符，按优先级从高到低的顺序列出了各类运算符。 同一类别的运算符的优先级也相同。 每个类别下均列出了相应类别的表达式，以及对每种表达式类型的说明。
+C# 提供多个运算符用于执行[算术](../language-reference/operators/arithmetic-operators.md)、[逻辑](../language-reference/operators/boolean-logical-operators.md)、[按位和移位](../language-reference/operators/bitwise-and-shift-operators.md)运算以及[相等](../language-reference/operators/equality-operators.md)和[排序](../language-reference/operators/comparison-operators.md)比较。
 
-* 基本
-  - `x.m`：成员访问
-  - `x(...)`：方法和委托调用
-  - `x[...]`：数组和索引器访问
-  - `x++`：后递增
-  - `x--`：后递减
-  - `new T(...)`：对象和委托创建
-  - `new T(...){...}`：使用初始值设定项创建对象
-  - `new {...}`：匿名对象初始值设定项
-  - `new T[...]`：数组创建
-  - `typeof(T)`：获取 `T` 的 <xref:System.Type> 对象
-  - `checked(x)`：在已检查的上下文中计算表达式
-  - `unchecked(x)`：在未检查的上下文中计算表达式
-  - `default(T)`：获取类型为 `T` 的默认值
-  - `delegate {...}`：匿名函数（匿名方法）
-* 一元
-  - `+x`：标识
-  - `-x`：求反
-  - `!x`：逻辑求反
-  - `~x`：按位求反
-  - `++x`：前递增
-  - `--x`：前递减
-  - `(T)x`：将 `x` 显式转换为类型 `T`
-  - `await x`：异步等待 `x` 完成
-* 乘法
-  - `x * y`：乘法
-  - `x / y`：除号
-  - `x % y`：余数
-* 加法
-  - `x + y`：相加、字符串串联、委托组合
-  - `x – y`：相减、委托移除
-* 移位
-  - `x << y`：左移
-  - `x >> y`：右移
-* 关系和类型测试
-  - `x < y`：小于
-  - `x > y`：大于
-  - `x <= y`：小于或等于
-  - `x >= y`：大于或等于
-  - `x is T`：如果 `x` 是 `T`，则返回 `true`；否则，返回 `false`
-  - `x as T`：返回类型为 `T` 的 `x`；如果 `x` 的类型不是 `T`，则返回 `null`
-* 相等
-  - `x == y`：等于
-  - `x != y`：不等于
-* 逻辑“与”
-  - `x & y`：整型按位 AND，布尔型逻辑 AND
-* 逻辑 XOR
-  - `x ^ y`：整型按位 XOR，布尔型逻辑 XOR
-* 逻辑“或”
-  - `x | y`：整型按位“或”，布尔型逻辑“或”
-* 条件“与”
-  - `x && y`：仅当 `x` 不是 `false` 时，才计算 `y`
-* 条件“或”
-  - `x || y`：仅当 `x` 不是 `true` 时，才计算 `y`
-* null 合并
-  - `x ?? y`：如果 `x` 为 null，计算结果为 `y`；否则，计算结果为 `x`
-* 条件运算
-  - `x ? y : z`：如果 `x` 为 `true`，则计算 `y`；如果 `x` 为 `false`，则计算 `z`
-* 赋值或匿名函数
-  - `x = y`：赋值
-  - `x op= y`：复合赋值；支持以下运算符：
-    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-  - `(T x) => y`：匿名函数（lambda 表达式）
+要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](../language-reference/operators/index.md)。
 
 > [!div class="step-by-step"]
 > [上一页](types-and-variables.md)

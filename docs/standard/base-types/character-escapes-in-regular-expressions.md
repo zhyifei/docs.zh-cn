@@ -18,19 +18,19 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152354"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634672"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
 正则表达式中的反斜杠 (\\) 指示以下值之一：  
   
--   后接字符为特殊字符，如下节表中所示。 例如，`\b` 是指示正则表达式匹配应从单词边界开始的定位点，`\t` 表示制表符，而 `\x020` 表示空间。  
+- 后接字符为特殊字符，如下节表中所示。 例如，`\b` 是指示正则表达式匹配应从单词边界开始的定位点，`\t` 表示制表符，而 `\x020` 表示空间。  
   
--   本应解释为未转义语言构造的字符应按字面意思进行解释。 例如，大括号 (`{`) 开始定义限定符，而反斜杠后接大括号 (`\{`) 表示正则表达式引擎应匹配大括号。 同样，单个反斜杠标记转义的语言构造的开始，而两个反斜杠 (`\\`) 表示正则表达式引擎应匹配反斜杠。  
+- 本应解释为未转义语言构造的字符应按字面意思进行解释。 例如，大括号 (`{`) 开始定义限定符，而反斜杠后接大括号 (`\{`) 表示正则表达式引擎应匹配大括号。 同样，单个反斜杠标记转义的语言构造的开始，而两个反斜杠 (`\\`) 表示正则表达式引擎应匹配反斜杠。  
   
 > [!NOTE]
 >  字符转义可在正则表达式模式中识别，但无法在替换模式中识别。  

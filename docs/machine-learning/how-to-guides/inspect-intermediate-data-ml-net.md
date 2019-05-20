@@ -1,79 +1,157 @@
 ---
-title: 在 ML.NET 管道处理期间检查中间数据值
+title: 在 ML.NET 处理期间检查中间数据值
 description: 了解如何在 ML.NET 机器学习管道处理期间检查实际的中间数据值
-ms.date: 03/05/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 362cb9351c3cb77b6aa67d59154854e882869ad9
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.date: 04/29/2019
+author: luisquintanilla
+ms.author: luquinta
+ms.custom: mvc, how-to
+ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843411"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063519"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>在 ML.NET 管道处理期间检查中间数据值
+# <a name="inspect-intermediate-data-values-during-processing"></a>在处理期间检查中间数据值
 
-> [!NOTE]
-> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+了解如何在 ML.NET 的加载、处理和训练步骤中检查值。
 
-此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
-
-在实验过程中，可能需要观察和验证给定时间点的数据处理结果。 由于 ML.NET 操作具有延迟性，生成的对象都是“预示”的数据，这并非易事。
-
-可使用 `GetColumn<T>` 扩展方法检查中间数据。 它以 `IEnumerable` 的形式返回数据列的内容。
-
-以下示例演示如何使用 `GetColumn<T>` 扩展方法：
-
-[示例文件](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt)：
-
-<!-- markdownlint-disable MD010 -->
+可以在 ML.NET 中以各种方式检查加载到 [`IDataView`](xref:Microsoft.ML.IDataView) 中的如下所示的数据。
+ 
+```csharp
+HousingData[] housingData = new HousingData[]
+{
+    new HousingData
+    {
+        Size = 600f,
+        HistoricalPrices = new float[] { 100000f ,125000f ,122000f },
+        CurrentPrice = 170000f
+    },
+    new HousingData
+    {
+        Size = 1000f,
+        HistoricalPrices = new float[] { 200000f, 250000f, 230000f },
+        CurrentPrice = 225000f
+    },
+    new HousingData
+    {
+        Size = 1000f,
+        HistoricalPrices = new float[] { 126000f, 130000f, 200000f },
+        CurrentPrice = 195000f
+    },
+    new HousingData
+    {
+        Size = 850f,
+        HistoricalPrices = new float[] { 150000f,175000f,210000f },
+        CurrentPrice = 205000f
+    },
+    new HousingData
+    {
+        Size = 900f,
+        HistoricalPrices = new float[] { 155000f, 190000f, 220000f },
+        CurrentPrice = 210000f
+    },
+    new HousingData
+    {
+        Size = 550f,
+        HistoricalPrices = new float[] { 99000f, 98000f, 130000f },
+        CurrentPrice = 180000f
+    }
+};
 ```
-Label   Workclass   education   marital-status
-0   Private 11th    Never-married
-0   Private HS-grad Married-civ-spouse
-1   Local-gov   Assoc-acdm  Married-civ-spouse
-1   Private Some-college    Married-civ-spouse
 
-```
-<!-- markdownlint-enable MD010 -->
+## <a name="convert-idataview-to-ienumerable"></a>将 IDataView 转换为 IEnumerable
 
-类定义如下：
+检查 [`IDataView`](xref:Microsoft.ML.IDataView) 的值的最快方法之一是将其转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要将 [`IDataView`](xref:Microsoft.ML.IDataView) 转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，请使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。 
+
+若要优化性能，请将 `reuseRowObject` 的值设置为 `true`。 如果这样做，将在评估当前行的数据时延迟填充相同的对象，而不是为数据集中的每一行创建一个新对象。
 
 ```csharp
-public class InspectedRow
+// Create an IEnumerable of HousingData objects from IDataView
+IEnumerable<HousingData> housingDataEnumerable =
+    mlContext.Data.CreateEnumerable<HousingData>(data, reuseRowObject: true);
+
+// Iterate over each row
+foreach (HousingData row in housingDataEnumerable)
 {
-    [LoadColumn(0)]
-    public bool IsOver50K { get; set; }
-    [LoadColumn(1)]
-    public string WorkClass { get; set; }
-    [LoadColumn(2)]
-    public string Education { get; set; }
-    [LoadColumn(3)]
-    public string MaritalStatus { get; set; }
+    // Do something (print out Size property) with current Housing Data object being evaluated
+    Console.WriteLine(row.Size);
 }
 ```
 
+如果只需要访问部分数据或特定索引，请使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 并将 `reuseRowObject` 参数值设置为 `false`，以便为数据集中每个请求的行创建一个新对象。 然后，将 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 转换为数组或列表。
+
+> [!WARNING]
+> 将 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 的结果转换为数组或列表会将所有请求的 [`IDataView`](xref:Microsoft.ML.IDataView) 行加载到内存中，这可能会影响性能。
+
+创建集合后，可以对数据执行操作。 下面的代码片段获取数据集中的前三行并计算当前的平均价格。
+
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
-// as a catalog of available operations and as the source of randomness.
-var mlContext = new MLContext();
-
-// Read the data into a data view.
-var data = mlContext.Data.ReadFromTextFile<InspectedRow>(dataPath, hasHeader: true);
-
-// Start creating our processing pipeline. For now, let's just concatenate all the text columns
-// together into one.
-var pipeline = mlContext.Transforms.Concatenate("AllFeatures", "WorkClass", "Education", "MaritalStatus");
-
-// Fit our data pipeline and transform data with it.
-var transformedData = pipeline.Fit(data).Transform(data);
-
-// Extract the 'AllFeatures' column.
-// This will give the entire dataset: make sure to only take several row
-// in case the dataset is huge. The is similar to the static API, except
-// you have to specify the column name and type.
-var featureColumns =
-    transformedData
-        .GetColumn<string[]>(mlContext, "AllFeatures")
-        .Take(20)
+// Create an Array of HousingData objects from IDataView
+HousingData[] housingDataArray =
+    mlContext.Data.CreateEnumerable<HousingData>(data, reuseRowObject: false)
+        .Take(3)
         .ToArray();
+
+// Calculate Average CurrentPrice of First Three Elements
+HousingData firstRow = housingDataArray[0];
+HousingData secondRow = housingDataArray[1];
+HousingData thirdRow = housingDataArray[2];
+float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + thirdRow.CurrentPrice) / 3;
+``` 
+
+## <a name="inspect-values-in-a-single-column"></a>检查单个列中的值
+
+在模型生成过程中的任何时候，都可以使用 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法访问 [`IDataView`](xref:Microsoft.ML.IDataView) 的单个列中的值。 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法将单个列中的所有值都返回为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。
+
+```csharp
+IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 ```
+
+## <a name="inspect-idataview-values-one-row-at-a-time"></a>一次检查一行 IDataView 值
+
+[`IDataView`](xref:Microsoft.ML.IDataView) 延迟求值。 若要循环访问 [`IDataView`](xref:Microsoft.ML.IDataView) 的各行，而不按本文档前面部分所示转换为 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，请通过使用 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) 方法并传入 [`IDataView`](xref:Microsoft.ML.IDataView) 的 [DataViewSchema](xref:Microsoft.ML.DataViewSchema) 作为参数来创建 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)。 然后，若要循环访问各行，请使用 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) 游标方法以及 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 委托从每个列中提取相应的值。
+
+> [!IMPORTANT]
+> 出于性能考虑，ML.NET 中的向量使用 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) 而不是本机集合类型（即 `Vector`,`float[]`）。 
+
+```csharp
+// Get DataViewSchema of IDataView
+DataViewSchema columns = data.Schema;
+
+// Create DataViewCursor
+using (DataViewRowCursor cursor = data.GetRowCursor(columns))
+{
+    // Define variables where extracted values will be stored to
+    float size = default;
+    VBuffer<float> historicalPrices = default;
+    float currentPrice = default;
+
+    // Define delegates for extracting values from columns
+    ValueGetter<float> sizeDelegate = cursor.GetGetter<float>(columns[0]);
+    ValueGetter<VBuffer<float>> historicalPriceDelegate = cursor.GetGetter<VBuffer<float>>(columns[1]);
+    ValueGetter<float> currentPriceDelegate = cursor.GetGetter<float>(columns[2]);
+    
+    // Iterate over each row
+    while (cursor.MoveNext())
+    {
+        //Get values from respective columns
+        sizeDelegate.Invoke(ref size);
+        historicalPriceDelegate.Invoke(ref historicalPrices);
+        currentPriceDelegate.Invoke(ref currentPrice);
+    }
+}
+```
+
+## <a name="preview-result-of-pre-processing-or-training-on-a-subset-of-the-data"></a>预览数据子集的预处理或训练结果
+
+> [!WARNING]
+> 请勿在生产代码中使用 `Preview`，因为它专用于调试，可能会降低性能。
+
+模型生成过程是实验性的和迭代的。 若要预览对数据子集预处理或训练机器学习模型后的数据，请使用可返回 [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) 的 [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) 方法。 其结果为一个具有 `ColumnView` 和 `RowView` 属性的对象，这两个属性都是 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 并包含特定列或行中的值。 使用 `maxRows` 参数指定要应用转换的行数。
+
+![数据调试器预览对象](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
+
+检查 [`IDataView`](xref:Microsoft.ML.IDataView) 的结果将与下面类似：
+
+![数据调试器预览行视图](./media/inspect-intermediate-data-ml-net/data-debugger-preview-02.png)

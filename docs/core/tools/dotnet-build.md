@@ -1,17 +1,21 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.date: 04/24/2019
+ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755221"
 ---
 # <a name="dotnet-build"></a>dotnet 生成
 
+**本文适用于：✓** .NET Core 1.x SDK 及更高版本
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,25 +23,12 @@ ms.locfileid: "59612688"
 
 ## <a name="synopsis"></a>摘要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
-
-dotnet build [-h|--help]
-```
-
----
 
 ## <a name="description"></a>说明
 
@@ -57,7 +48,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-若要生成库，则省略 `<OutputType>` 属性。 生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。
+若要生成库，请省略 `<OutputType>` 属性。 生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -71,11 +62,9 @@ dotnet build [-h|--help]
 
 `PROJECT | SOLUTION`
 
-要生成的项目或解决方案文件。 如果未指定项目或解决方案文件，MSBuild 会在当前工作目录中搜索以 proj 或 sln 结尾的文件扩展名并使用该文件。
+要生成的项目或解决方案文件。 如果未指定项目或解决方案文件，MSBuild 会在当前工作目录中搜索文件扩展名以 *proj* 或 *sln* 结尾的文件并使用该文件。
 
 ## <a name="options"></a>选项
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -87,11 +76,15 @@ dotnet build [-h|--help]
 
 * **`--force`**
 
-  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
+  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。 自 .NET Core 2.0 SDK 起可用。
 
 * **`-h|--help`**
 
   打印出有关命令的简短帮助。
+
+* **`--interactive`**
+
+  允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
 
 * **`--no-dependencies`**
 
@@ -101,9 +94,13 @@ dotnet build [-h|--help]
 
   将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
 
+* **`--no-logo`**
+
+  不显示启动版权标志或版权消息。 自 .NET Core 3.0 SDK 起可用。
+
 * **`--no-restore`**
 
-  在生成期间不执行隐式还原。
+  在生成期间不执行隐式还原。 自 .NET Core 2.0 SDK 起可用。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -115,51 +112,11 @@ dotnet build [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  设置 MSBuild 详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 默认值为 `minimal`。
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  在项目文件的版本字段中定义星号 (`*`) 版本后缀。 格式遵循 NuGet 的版本准则。
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  定义生成配置。 默认值为 `Debug`。
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  编译特定[框架](../../standard/frameworks.md)。 必须在[项目文件](csproj.md)中定义该框架。
-
-* **`-h|--help`**
-
-  打印出有关命令的简短帮助。
-
-* **`--no-dependencies`**
-
-  忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
-
-* **`--no-incremental`**
-
-  将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  放置生成二进制文件的目录。 指定此选项时还需要定义 `--framework`。
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  指定目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
-
-* **`-v|--verbosity <LEVEL>`**
-
-  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  在项目文件的版本字段中定义星号 (`*`) 版本后缀。 格式遵循 NuGet 的版本准则。
-
----
+  设置生成项目时使用的 `$(VersionSuffix)` 属性的值。 这仅在未设置 `$(Version)` 属性时有效。 然后，`$(Version)` 设置为 `$(VersionPrefix)` 与 `$(VersionSuffix)` 组合，并用短划线分隔。
 
 ## <a name="examples"></a>示例
 
@@ -175,10 +132,10 @@ dotnet build [-h|--help]
   dotnet build --configuration Release
   ```
 
-* 针对特定运行时（本例中为 Ubuntu 16.04）生成项目及其依赖项：
+* 针对特定运行时（本例中为 Ubuntu 18.04）生成项目及其依赖项：
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * 生成项目，并在还原操作过程中使用指定的 NuGet 包源（.NET Core 2.0 SDK 及更高版本）：
