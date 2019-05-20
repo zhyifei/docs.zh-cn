@@ -1,15 +1,13 @@
 ---
 title: 何时为 Docker 容器选择 .NET Core
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 何时为 Docker 容器选择 .NET Core
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: b2ede45afee93e8d87a22b2b489eb2a230e04e7d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844270"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644371"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>何时为 Docker 容器选择 .NET Core
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 883eb60197b79e0ddebf5e48438c81e29f609549
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591701"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586164"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定义和执行动态方法
 以下过程介绍如何定义和执行简单的动态方法和绑定到类实例的动态方法。 有关动态方法的更多信息，请参阅 <xref:System.Reflection.Emit.DynamicMethod> 类和[反射发出动态方法应用场景](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
@@ -113,14 +113,6 @@ ms.locfileid: "64591701"
  [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)]
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
-  
-- 代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
-  
-- 不需要其他程序集引用。  
-  
-- 使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

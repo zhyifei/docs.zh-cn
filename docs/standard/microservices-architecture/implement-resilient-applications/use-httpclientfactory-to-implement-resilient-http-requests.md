@@ -1,15 +1,13 @@
 ---
 title: 使用 HttpClientFactory 实现复原 HTTP 请求
 description: 了解如何使用自 .NET Core 2.1 起可用的 HttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a55181e787b5c94e13d3945a5d97a12fed61e927
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 68c841a6ba69a94eff420233124cf00fec506502
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465927"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639835"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: bb8f9ace8f259ece803aa6681ebab90355146380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68f0c12d173587e8efc0fe283617b5805c6f7eae
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661693"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877031"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe)，可调用该编译器。
@@ -103,5 +103,4 @@ csc -target:library -out:Something.xyz *.cs
 - [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)
 - [命令行参数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
 - [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

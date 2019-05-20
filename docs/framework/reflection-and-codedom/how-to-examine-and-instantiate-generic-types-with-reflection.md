@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41070b5d51f0b613d7a6bbbc72b24a8c1793964d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592392"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586109"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反射检查和实例化泛型类型
 获取泛型类型信息的方式与获取其他类型信息的方式相同：检查表示泛型类型的 <xref:System.Type> 对象。 主要的差异在于，泛型类型具有表示其泛型类型参数的 <xref:System.Type> 对象列表。 本部分的第一个过程是检查泛型类型。  
@@ -114,14 +114,6 @@ ms.locfileid: "64592392"
  [!code-cpp[HowToGeneric#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#1)]
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]
  [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
-  
-- 代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
-  
-- 不需要其他程序集引用。  
-  
-- 使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -4,16 +4,16 @@ description: 了解在 ML.NET 中受支持的特征工程组件。
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636551"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558018"
 ---
 # <a name="data-transformations"></a>数据转换
 
-数据转换用于为定型模型准备数据。 本指南中的数据转换返回实现 [IEstimator](xref:Microsoft.ML.IEstimator`1) 接口的类。 数据转换可以链接在一起。 每个数据转换都需要获取并生成特定类型和格式的数据，链接的参考文档中规定了具体类型和格式。
+数据转换用于为定型模型准备数据。 本指南中的数据转换返回实现 [IEstimator](xref:Microsoft.ML.IEstimator%601) 接口的类。 数据转换可以链接在一起。 每个数据转换都需要获取并生成特定类型和格式的数据，链接的参考文档中规定了具体类型和格式。
 
 一些数据转换需要通过定型数据来计算参数。 例如，<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 转换器计算 `Fit()` 操作期间定型数据的平均值和方差，并在 `Transform()` 操作中使用这些参数。 
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380bcb6d2a2846d09267eeb3a0d637469ce9fba5
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 62e2a25e48ead730112a37af451d64c6ccc2e141
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221084"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593437"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>演练：创建自定义数据流块类型
 尽管 TPL 数据流库提供了多种可启用各种功能的数据流块类型，但也可以创建自定义块类型。 本文档介绍了如何创建实现自定义行为的数据流块类型。  
@@ -52,17 +52,6 @@ ms.locfileid: "54221084"
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
-## <a name="compiling-the-code"></a>编译代码  
- 复制示例代码，并将它粘贴到 Visual Studio 项目中，或粘贴到 `SlidingWindowBlock.cs`（对于 Visual Basic，则为 `SlidingWindowBlock.vb`）文件中，再在 Visual Studio 开发人员命令提示窗口中运行以下命令。  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
-
 ## <a name="see-also"></a>请参阅
 
 - [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: a6d07b6c288ebbe24c9cf5c531ef333946855f82
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 963be5273389ebbdb3458d41b0658de0d94bb2cd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634800"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>建议的文档注释标记（C# 编程指南）
 C# 编译器处理代码中的文档注释，并在文件中将其设置为 XML 格式，该文件的名称通过 /doc 命令行选项指定。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。  
@@ -47,4 +47,4 @@ C# 编译器处理代码中的文档注释，并在文件中将其设置为 XML 
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文档注释](../../../csharp/programming-guide/xmldoc/index.md)

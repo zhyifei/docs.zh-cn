@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8f56fcad74287e260c2989534e6bd4931ad646a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633834"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590015"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>如何：往返行程日期和时间值
 在许多应用程序中，日期和时间值旨在明确标识单个时间点。 本主题介绍了如何保存和还原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值以及包含时区信息的日期和时间值，以便还原后的值与保存的值标识的时间相同。  
@@ -94,8 +94,6 @@ ms.locfileid: "64633834"
     - <xref:System.Runtime.Serialization?displayProperty=nameWithType>。  
   
     - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>。  
-  
-- 引用 System.Core.dll。  
   
 - 每个代码示例（`DateInTimeZone` 除外）都应被添加到类或 Visual Basic 模块中，且被包装到方法中，并通过 `Main` 进行调用。  
   

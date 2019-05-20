@@ -1,15 +1,13 @@
 ---
 title: 分布式数据管理的挑战和解决方案
 description: 了解微服务体系中的分布式数据管理面临的挑战和相应解决方案。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 3e683044ea6a31116f1e7da6d690fc32ad87bd76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613691"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644346"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 

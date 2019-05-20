@@ -1,15 +1,13 @@
 ---
 title: 关键结论
 description: 从适用于容器化的 .NET 应用程序的 .Net 微服务体系结构指南/电子书中获取关键信息，以便快速了解在使用微服务体系结构时涉及的高级问题，如优缺点、用于设计和开发的 DDD 模式，以及复原能力、安全性和业务流程协调程序的使用。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362114"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639691"
 ---
 # <a name="key-takeaways"></a>关键结论
 

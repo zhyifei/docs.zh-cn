@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 893dc726f7b4ee2d2afa69f63d13d1f11a4692db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 047207e495f542108d6f41247b25009d9c9bb909
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491627"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634788"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何：使用 XML 文档功能
 
@@ -136,4 +136,4 @@ XML 文档以 /// 开头。 创建新项目时，向导会放置一些以 /// �
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文档注释](../../../csharp/programming-guide/xmldoc/index.md)

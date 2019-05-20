@@ -1,15 +1,13 @@
 ---
 title: 设计微服务域模型
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解设计面向 DDD 的域模型时的关键概念。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613052"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644203"
 ---
 # <a name="design-a-microservice-domain-model"></a>设计微服务域模型
 

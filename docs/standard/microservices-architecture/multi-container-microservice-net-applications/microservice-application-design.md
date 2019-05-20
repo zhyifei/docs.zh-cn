@@ -1,15 +1,13 @@
 ---
 title: 设计面向微服务的应用程序
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解面向微服务的应用程序的优点和缺点，以便可以采取明智的决策。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 160eba2c7249793592caf13622b01c597d7feec7
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613858"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639519"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 

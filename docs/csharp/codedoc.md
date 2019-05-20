@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 956598d7c8193f70e094fcb578c041b8972b9b0c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063144"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633736"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -222,5 +222,5 @@ Sandcastle 等工具支持其他标记，如 [`<event>`](https://ewsoftware.gith
 
 ## <a name="see-also"></a>请参阅
 
-- [XML 文档注释（C# 编程指南）](programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文档注释（C# 编程指南）](programming-guide/xmldoc/index.md)
 - [建议的文档注释标记（C# 编程指南）](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

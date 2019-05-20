@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 7c4e2aac613397fbd44f4594f96ddebfb75d0c3f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 18afb2765db41abd305fb83907c08fad75a1d72b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243747"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635246"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用类型 dynamic（C# 编程指南）
 
@@ -74,7 +74,7 @@ ms.locfileid: "53243747"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|说明|
+|Title|说明|
 |-----------|-----------------|
 |[dynamic](../../language-reference/keywords/dynamic.md)|描述 `dynamic` 关键字的用法。|
 |[动态语言运行时概述](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供有关 DLR 的概述，DLR 是一种运行时环境，它将一组适用于动态语言的服务添加到公共语言运行时 (CLR)。|

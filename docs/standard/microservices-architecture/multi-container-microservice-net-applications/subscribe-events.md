@@ -1,15 +1,13 @@
 ---
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 962d12c054bed3b2623283e17f83b8466ab2811b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613273"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639707"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 

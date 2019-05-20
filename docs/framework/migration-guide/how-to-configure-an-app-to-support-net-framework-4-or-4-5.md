@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40c19dc21bb2262ca1f23573cb89f764e4cd2627
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221318"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636110"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>如何：将应用配置为支持 .NET Framework 4 或更高版本
 
@@ -73,7 +73,7 @@ ms.locfileid: "54221318"
 
 |App.config 文件设置|在安装了 3.5 版的计算机上|在安装了版本 3.5 和 4 或更高版本的计算机上|在安装了版本 4 或更高版本的计算机上|
 |-|-|-|-|
-|无|在 3.5 上运行|在 3.5 上运行|显示提示用户安装正确版本的错误消息*|
+|None|在 3.5 上运行|在 3.5 上运行|显示提示用户安装正确版本的错误消息*|
 |`<supportedRuntime version="v2.0.50727"/>`|在 3.5 上运行|在 3.5 上运行|显示提示用户安装正确版本的错误消息*|
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|在 3.5 上运行|在 3.5 上运行|在 4 或更高版本上运行|
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|在 3.5 上运行|在 4 或更高版本上运行|在 4 或更高版本上运行|

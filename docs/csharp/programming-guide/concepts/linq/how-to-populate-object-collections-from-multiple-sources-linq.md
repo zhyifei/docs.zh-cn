@@ -2,12 +2,12 @@
 title: 如何：从多个源填充对象集合 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571332"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584388"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>如何：从多个源填充对象集合 (LINQ) (C#)
 
@@ -138,14 +138,6 @@ foreach (var student in queryNamesScores2)
         student.First, student.Last, student.ExamScores.Average());
 }
 ```
-
-## <a name="compiling-the-code"></a>编译代码
-
-创建并编译面向下列选项之一的项目：
-
-- .NET Framework 版本 3.5，含对 System.Core.dll 的引用。
-- .NET Framework 版本 4.0或更高版本。
-- .NET Core 版本 1.0 或更高版本。
 
 ## <a name="see-also"></a>请参阅
 

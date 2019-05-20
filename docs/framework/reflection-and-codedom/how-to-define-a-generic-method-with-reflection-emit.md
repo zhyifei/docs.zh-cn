@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591727"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586145"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：用反射发出定义泛型方法
 第一个过程演示如何使用两个类型参数创建简单的泛型方法，以及如何将类约束、接口约束和特殊约束应用于类型参数。  
@@ -161,14 +161,6 @@ ms.locfileid: "64591727"
   
  [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
  [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
-  
-- 代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
-  
-- 不需要其他程序集引用。  
-  
-- 使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

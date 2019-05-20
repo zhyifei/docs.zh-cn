@@ -2,12 +2,12 @@
 title: 如何：使用命令行创建和使用程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599856"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586033"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>如何：使用命令行创建和使用程序集 (C#)
 程序集或动态链接库 (DLL) 会在运行时链接到程序。 为了演示如何生成和使用 DLL，请考虑以下方案：  
@@ -102,25 +102,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
  若要运行程序，请输入 EXE 文件的名称，后跟两个数字，如下所示：  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>编译代码  
- 若要生成文件 `MathLibrary.DLL`，请使用以下命令行编译两个文件 `Add` 和 `Mult`。  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) 编译器选项告知编译器输出 DLL 而不是 EXE 文件。 后跟文件名的 [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) 编译器选项用于指定 DLL 文件名。 否则，编译器使用第一个文件 (`Add.cs`) 作为 DLL 的名称。  
-  
- 若要生成可执行文件 `TestCode.exe`，请使用以下命令行：  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- **/out** 编译器选项告知编译器输出 EXE 文件并指定输出文件的名称 (`TestCode.exe`)。 此编译器选项是可选的。 [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 编译器选项指定此程序使用的 DLL 文件。 有关详细信息，请参阅 [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md)。  
-  
- 有关从命令行进行生成的详细信息，请参阅[在命令行上使用 csc.exe 生成](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,15 +1,13 @@
 ---
 title: 基于消息的异步通信
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于消息的异步通信是微服务体系结构中的一个重要概念，因为它是保持微服务彼此独立的同时使其最终同步的最佳方式。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 105daed3bca03571caea92fdbd1d6c6f56b24fef
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59614072"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641381"
 ---
 # <a name="asynchronous-message-based-communication"></a>基于消息的异步通信
 

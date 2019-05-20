@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591534"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586001"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反射将委托挂钩
 使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  
@@ -104,14 +104,6 @@ ms.locfileid: "64591534"
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
-  
-- 代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
-  
-- 从命令行编译时，不需要其他的程序集引用。 由于此示例是一个控制台应用程序，因此在 Visual Studio 中必须添加对 System.Windows.Forms.dll 的引用。  
-  
-- 使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

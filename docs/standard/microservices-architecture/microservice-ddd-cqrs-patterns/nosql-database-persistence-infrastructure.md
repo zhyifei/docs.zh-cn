@@ -1,15 +1,13 @@
 ---
 title: 将 NoSQL 数据库用作持久性基础结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 大致了解 NoSQL 数据库（特别是 Azure Cosmos DB）作为持久性实现选项的使用情况。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 851068b511106157a759a0600c404b4d1154e5ee
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 023904319651ec91000ff036850c773f66d1a267
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613625"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644455"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 

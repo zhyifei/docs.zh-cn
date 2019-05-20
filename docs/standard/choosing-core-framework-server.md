@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678795"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641160"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -108,6 +108,6 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 - [目标框架](frameworks.md)
 - [.NET Core 指南](../core/index.md)
 - [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)
-- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)
+- [.NET 和 Docker 简介](../core/docker/intro-net-docker.md)
 - [.NET 组件概述](components.md)
 - [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)

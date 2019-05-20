@@ -1,15 +1,13 @@
 ---
 title: 使用作为容器而运行的数据库服务器
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 仅出于开发目的使用作为容器运行的数据库服务器！ 了解原因。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611271"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639734"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作为容器而运行的数据库服务器
 

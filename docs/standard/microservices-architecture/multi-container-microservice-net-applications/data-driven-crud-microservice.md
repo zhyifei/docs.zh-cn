@@ -1,15 +1,13 @@
 ---
 title: 创建简单的数据驱动 CRUD 微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何在微服务应用程序的上下文中创建简单的 CRUD（数据驱动）微服务。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 21a06036609ec4c84b496d58423a111ee658f3aa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612259"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644428"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 

@@ -3,12 +3,12 @@ title: C# 程序结构 - C# 语言介绍
 description: 了解 C# 程序的基本构建基块
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131022"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634560"
 ---
 # <a name="program-structure"></a>程序结构
 

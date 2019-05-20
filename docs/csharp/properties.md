@@ -2,11 +2,12 @@
 title: 属性
 description: 了解 C# 属性，包括验证功能、计算值、迟缓计算及属性更改通知。
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878281"
 ---
 # <a name="properties"></a>属性
 
@@ -139,7 +140,7 @@ expression-bodied 成员使用 lambda 表达式语法来定义包含单个表达
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` 运算符称作 *null 条件运算符*。 它在计算运算符右侧之前会检查是否存在空引用。 最终结果为：如果 `PropertyChanged` 事件没有订阅者，则不执行用于引发该事件的代码。 在这种情况下，如果不执行此检查，则会引发 `NullReferenceException`。 有关详细信息，请参阅 [`events`](delegates-events.md)。 此示例还使用新的 `nameof` 运算符将属性名称符号转换为其文本表示形式。
+`?.` 运算符称作 *null 条件运算符*。 它在计算运算符右侧之前会检查是否存在空引用。 最终结果为：如果 `PropertyChanged` 事件没有订阅者，则不执行用于引发该事件的代码。 在这种情况下，如果不执行此检查，则会引发 `NullReferenceException`。 有关详细信息，请参阅 [`events`](events-overview.md)。 此示例还使用新的 `nameof` 运算符将属性名称符号转换为其文本表示形式。
 使用 `nameof` 可以减少输错属性名称这样的错误。
 
 再次说明，实现 <xref:System.ComponentModel.INotifyPropertyChanged> 是可以在访问器中编写代码以支持所需方案的情况的示例。

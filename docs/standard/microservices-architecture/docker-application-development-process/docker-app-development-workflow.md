@@ -1,15 +1,13 @@
 ---
 title: Docker 应用开发工作流
 description: 了解用于开发基于 Docker 的应用程序的工作流的详细信息。 分步深入了解有关优化 Dockerfile 的详细信息，最后了解使用 Visual Studio 时使用的简化工作流。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751457"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644493"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 

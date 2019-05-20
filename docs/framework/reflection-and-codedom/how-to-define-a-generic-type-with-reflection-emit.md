@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30036df99559c67a3b11a5c651053dc644267bbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592462"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586218"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反射发出定义泛型类型
 此主题说明如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。  
@@ -126,14 +126,6 @@ ms.locfileid: "64592462"
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]
  [!code-vb[EmitGenericType#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
-  
-- 代码包含编译所需的 C# `using` 语句（在 Visual Basic 中为 `Imports`）。  
-  
-- 不需要其他程序集引用。  
-  
-- 使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: 如何：使用表达式树生成动态查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: c3c65770af11518f6ac86e0fecd47b56f78cff59
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 33dbca31af3c088f4cd4af830c690cf9cdaea657
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597963"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586103"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>如何：使用表达式树生成动态查询 (C#)
 在 LINQ 中，表达式树用于表示针对数据源的结构化查询，这些数据源可实现 <xref:System.Linq.IQueryable%601>。 例如，LINQ 提供程序可实现 <xref:System.Linq.IQueryable%601> 接口，用于查询关系数据存储。 C# 编译器将针对此类数据源的查询编译为代码，该代码在运行时会生成一个表达式树。 然后，查询提供程序可以遍历表达式树数据结构，并将其转换为适合于数据源的查询语言。  
@@ -100,13 +100,7 @@ foreach (string company in results)
   
 ## <a name="compiling-the-code"></a>编译代码  
   
-- 创建新的**控制台应用程序**项目。  
-  
-- 添加对 System.Core.dll 的引用（如果尚未引用）。  
-  
 - 包括 System.Linq.Expressions 命名空间。  
-  
-- 从示例中复制代码，并将其粘贴到 `Main` 方法中。  
   
 ## <a name="see-also"></a>请参阅
 

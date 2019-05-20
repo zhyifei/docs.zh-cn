@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: bfa81bc926b4fe81455cecb88bc55f4dcd69268e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b08f9dbf8137e483bd38a4f396732191598532cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977833"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635225"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>指针的算术运算（C# 编程指南）
 本主题讨论如何使用算术运算符 `+` 和 `-` 操作指针。  
@@ -40,9 +40,8 @@ ms.locfileid: "56977833"
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
-- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [C# 运算符](../../../csharp/language-reference/operators/index.md)
-- [操作指针](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [操作指针](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [类型](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

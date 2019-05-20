@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314927"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590591"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>如何：显示日期和时间值中的毫秒
 默认日期和时间格式设置方法（如 <xref:System.DateTime.ToString?displayProperty=nameWithType>）包含时间值的小时、分钟和秒部分，但不包含毫秒部分。 本主题说明如何在格式化日期和时间字符串中包含日期和时间的毫秒部分。  
@@ -50,9 +50,6 @@ ms.locfileid: "59314927"
   
 > [!NOTE]
 >  可以显示秒的非常小的小数单位，如万分之几秒或十万分之几秒。 但是，这些值可能没有意义。 日期和时间值的精度取决于系统时钟的分辨率。 在 Windows NT 3.5 及更高版本和 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] 操作系统上，时钟精度大约为 10-15 毫秒。  
-  
-## <a name="compiling-the-code"></a>编译代码  
- 使用 csc.exe 或 vb.exe 通过命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

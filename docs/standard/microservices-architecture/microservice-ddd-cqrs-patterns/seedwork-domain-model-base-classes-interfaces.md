@@ -1,15 +1,13 @@
 ---
 title: Seedwork（适用于域模型的可重用基类和接口）
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 seedwork 概念作为开始实现面向 DDD 的域模型的起点。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: bea2dbbc926f351179d11eaacd0dbb89fe036b12
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611063"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639492"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork（适用于域模型的可重用基类和接口）
 

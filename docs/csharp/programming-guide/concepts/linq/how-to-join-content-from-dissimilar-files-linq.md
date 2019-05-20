@@ -2,12 +2,12 @@
 title: 如何：联接不同文件的内容 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328811"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585733"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何：联接不同文件的内容 (LINQ) (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>编译代码
-
-创建并编译面向下列选项之一的项目：
-
-- .NET Framework 版本 3.5，含对 System.Core.dll 的引用。
-- .NET Framework 版本 4.0或更高版本。
-- .NET Core 版本 1.0 或更高版本。
-  
 ## <a name="see-also"></a>请参阅
 
 - [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

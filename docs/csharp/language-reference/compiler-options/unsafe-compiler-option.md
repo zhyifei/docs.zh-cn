@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337326"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877993"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe（C# 编译器选项）
--unsafe 编译器选项允许使用[不安全](../../../csharp/language-reference/keywords/unsafe.md)关键字进行编译的代码。  
+
+-unsafe 编译器选项允许使用[不安全](../keywords/unsafe.md)关键字进行编译的代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -23,8 +24,9 @@ ms.locfileid: "59337326"
 -unsafe  
 ```  
   
-## <a name="remarks"></a>备注  
- 有关不安全代码的详细信息，请参阅[不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)。  
+## <a name="remarks"></a>备注
+
+有关不安全代码的详细信息，请参阅[不安全代码和指针](../../programming-guide/unsafe-code-pointers/index.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -46,8 +48,9 @@ ms.locfileid: "59337326"
 
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>。  
   
-## <a name="example"></a>示例  
- 针对不安全模式编译 `in.cs`：  
+## <a name="example"></a>示例
+
+针对不安全模式编译 `in.cs`：  
   
 ```console  
 csc -unsafe in.cs  
@@ -55,5 +58,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 编译器选项](index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

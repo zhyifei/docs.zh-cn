@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323806"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584259"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>如何：使用平台调用播放波形文件（C# 编程指南）
 下面的 C# 代码示例说明了如何使用平台调用服务在 Windows 操作系统中播放波形声音文件。  
@@ -29,8 +29,6 @@ ms.locfileid: "59323806"
   
 ## <a name="compiling-the-code"></a>编译代码  
   
-### <a name="to-compile-the-code"></a>编译代码  
-  
 1. 在 Visual Studio 中创建新的 C# Windows 应用程序项目，然后将其命名为“WinSound”。  
   
 2. 复制上面的代码，然后将其粘贴到 `Form1.cs` 文件的内容上。  
@@ -40,9 +38,6 @@ ms.locfileid: "59323806"
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4. 编译并运行该代码。  
-  
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 有关详细信息，请参阅 [ .NET 中的安全性](../../../standard/security/index.md)。  
   
 ## <a name="see-also"></a>请参阅
 

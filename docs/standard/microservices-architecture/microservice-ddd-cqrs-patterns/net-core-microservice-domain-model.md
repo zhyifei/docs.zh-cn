@@ -1,15 +1,13 @@
 ---
 title: 使用 .NET Core 实现微服务域模型
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 获取面向 DDD 的域模型的实现详细信息。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: eb07f11e4c123ed04232e41d5d50d4ef59b76bbd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621227"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639775"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 实现微服务域模型
 

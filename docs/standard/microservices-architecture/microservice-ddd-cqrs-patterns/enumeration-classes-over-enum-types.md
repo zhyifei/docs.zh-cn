@@ -1,15 +1,13 @@
 ---
 title: 使用枚举类（而不是枚举类型）
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何使用枚举类来解决枚举的某些局限性。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613559"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644468"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用枚举类（而不是枚举类型）
 

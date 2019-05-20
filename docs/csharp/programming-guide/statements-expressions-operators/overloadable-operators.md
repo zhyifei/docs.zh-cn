@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: 850b10958446193026506418c57d7f565c98b714
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 7b3e759252317631d3ca7ee483ae483f0d38571b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452768"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878956"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可重载运算符（C# 编程指南）
 
@@ -26,7 +26,7 @@ C# 通过使用 [operator](../../language-reference/keywords/operator.md) 关键
 |[&#91;&#93;](../../language-reference/operators/member-access-operators.md#indexer-operator-)|数组索引运算符无法进行重载，但是可以定义[索引器](../indexers/index.md)。|
 |[(T)x](../../language-reference/operators/invocation-operator.md)|强制转换运算符无法进行重载，但是可以定义新转换运算符（请参阅 [explicit](../../language-reference/keywords/explicit.md) 和 [implicit](../../language-reference/keywords/implicit.md)）。|
 |[+=](../../language-reference/operators/addition-assignment-operator.md), [-=](../../language-reference/operators/subtraction-assignment-operator.md), [\*=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [&#124;=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [^=](../../language-reference/operators/boolean-logical-operators.md#compound-assignment), [\<\<=](../../language-reference/operators/bitwise-and-shift-operators.md#compound-assignment), [>>=](../../language-reference/operators/bitwise-and-shift-operators.md#compound-assignment)|赋值运算符不能显式重载。 但在重载二元运算符时，也会隐式重载相应的赋值运算符（若有）。 例如，使用 `+`（可以进行重载）计算 `+=`。|
-|[=](../../language-reference/operators/assignment-operator.md)、[.](../../language-reference/operators/member-access-operators.md#member-access-operator-)、[?:](../../language-reference/operators/conditional-operator.md)、[??](../../language-reference/operators/null-coalescing-operator.md)、[->](../../language-reference/operators/dereference-operator.md)、[=>](../../language-reference/operators/lambda-operator.md)、[f(x)](../../language-reference/operators/member-access-operators.md#invocation-operator-)、[as](../../language-reference/keywords/as.md)、[checked](../../language-reference/keywords/checked.md)、[unchecked](../../language-reference/keywords/unchecked.md)、[default](../../programming-guide/statements-expressions-operators/default-value-expressions.md)、[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)、[is](../../language-reference/keywords/is.md)、[new](../../language-reference/keywords/new.md)、[sizeof](../../language-reference/keywords/sizeof.md)、[typeof](../../language-reference/keywords/typeof.md)|这些运算符无法进行重载。|
+|[=](../../language-reference/operators/assignment-operator.md)、[.](../../language-reference/operators/member-access-operators.md#member-access-operator-)、[?:](../../language-reference/operators/conditional-operator.md)、[??](../../language-reference/operators/null-coalescing-operator.md)、[->](../../language-reference/operators/pointer-related-operators.md#pointer-member-access-operator--)、[=>](../../language-reference/operators/lambda-operator.md)、[f(x)](../../language-reference/operators/member-access-operators.md#invocation-operator-)、[as](../../language-reference/keywords/as.md)、[checked](../../language-reference/keywords/checked.md)、[unchecked](../../language-reference/keywords/unchecked.md)、[default](../../programming-guide/statements-expressions-operators/default-value-expressions.md)、[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md)、[is](../../language-reference/keywords/is.md)、[new](../../language-reference/keywords/new.md)、[sizeof](../../language-reference/keywords/sizeof.md)、[typeof](../../language-reference/keywords/typeof.md)|这些运算符无法进行重载。|
 
 > [!NOTE]
 > 如果进行重载，则比较运算符必须成对进行重载；也就是说，如果 `==` 进行重载，则 `!=` 也必须进行重载。 反过来也成立，其中重载 `!=` 需要重载 `==`。 对于比较运算符 `<` 和 `>`，以及 `<=` 和 `>=`，也成立。

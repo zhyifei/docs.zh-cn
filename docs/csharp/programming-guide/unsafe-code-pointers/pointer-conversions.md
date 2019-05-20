@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 91be48aa2ca64b152af3dc3f33c713bf4adac0c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 872406fdf012ed3b8326789f6664cb3396d59a84
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968382"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635176"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>指针转换（C# 编程指南）
 下表显示预定义隐式指针转换。 隐式转换可能会在许多情况下出现（包括方法调用和赋值语句）。  
   
 ## <a name="implicit-pointer-conversions"></a>隐式指针转换  
   
-|From|到|  
+|From|功能|  
 |----------|--------|  
 |任何指针类型|void*|  
 |null|任何指针类型|  
@@ -26,7 +26,7 @@ ms.locfileid: "56968382"
   
 ## <a name="explicit-pointer-conversions"></a>显式指针转换  
   
-|From|到|  
+|From|功能|  
 |----------|--------|  
 |任何指针类型|其他任何指针类型|  
 |sbyte、byte、short、ushort、int、uint、long 或 ulong|任何指针类型|  
@@ -42,7 +42,6 @@ ms.locfileid: "56968382"
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [类型](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

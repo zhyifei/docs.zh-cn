@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634003"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588818"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：用非公历日历显示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型使用公历作为默认日历。 这意味着，调用日期和时间值的 `ToString` 方法会用公历日历显示该日期和时间的字符串表示形式，即使该日期和时间是使用其他日历创建的。 下面的示例对此进行了展示，虽然使用两种不同的方式创建采用波斯历的日期和时间值，但在调用 <xref:System.DateTime.ToString%2A> 方法时仍采用公历显示这些日期和时间值。 此示例对于用特定日历显示日期，反映了两种常用但不正确的方法。  
@@ -84,11 +84,6 @@ ms.locfileid: "64634003"
 - `DisplayDate`：重载的公共方法，向它传递下面两个参数：要以 `CalendarUtility` 对象表示的日历表示的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，以及要使用其格式设置规则的区域性。 它在返回日期的字符串表示形式时的行为取决于要使用其格式设置规则的区域性是否支持目标日历。  
   
  无论在此示例中使用哪种日历创建 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，相应值通常都表示为公历日期。 这是因为 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 类型不暂留任何日历信息。 它们在内部表示自 0001 年 1 月 1 日午夜以来所经历的时钟周期数。 该数字的解释取决于日历。 对于大多数区域性，默认日历是公历。  
-  
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要引用 System.Core.dll。  
-  
- 使用 csc.exe 或 vb.exe 通过命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
 ## <a name="see-also"></a>请参阅
 

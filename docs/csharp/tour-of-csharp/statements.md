@@ -3,12 +3,12 @@ title: C# 语句 - C# 语言介绍
 description: 使用语句创建 C# 程序操作
 ms.date: 11/06/2016
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 75f6c7bb29af7f9c809c5278c97d21683166a8e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154289"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634534"
 ---
 # <a name="statements"></a>语句
 

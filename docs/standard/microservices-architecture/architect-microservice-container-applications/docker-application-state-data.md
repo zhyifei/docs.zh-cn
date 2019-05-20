@@ -1,15 +1,13 @@
 ---
 title: Docker 应用程序中的状态和数据
 description: Docker 应用程序中的状态和数据管理。 微服务实例是可消耗的，但数据不是，本文介绍如何使用微服务处理这一问题。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 70c3cee8c5fd1e63f2ff869f49b1fb02ab8f59dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152651"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641370"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 

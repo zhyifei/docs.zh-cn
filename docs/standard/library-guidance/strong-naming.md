@@ -4,12 +4,12 @@ description: 强命名 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128994"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640797"
 ---
 # <a name="strong-naming"></a>强命名
 
