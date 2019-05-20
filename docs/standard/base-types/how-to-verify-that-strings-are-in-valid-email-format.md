@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633439"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589521"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：验证字符串是否为有效的电子邮件格式
 下面的示例使用正则表达式来验证一个字符串是否为有效的电子邮件格式。  
@@ -72,36 +72,12 @@ ms.locfileid: "64633439"
 ## <a name="compiling-the-code"></a>编译代码  
  `IsValidEmail` 方法和 `DomainMapper` 方法可以包括在正则表达式实用工具方法库中，或者作为私有静态或实例方法包括在应用程序类中。  
   
- 如需将它们包含在正则表达式库中，可将代码复制并粘贴到 Visual Studio 类库项目中，或复制并粘贴到一个文本文件中并从命令行使用如下命令来对其进行编译（假定源代码文件的名称是 RegexUtilities.cs 或 RegexUtilities.vb：  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  还可以使用 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法将此正则表达式包含到正则表达式库中。  
   
  如果在正则表达式库中对其进行使用，则可使用例如以下代码对其进行调用：  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- 假设你已创建了一个名为 RegexUtilities.dll 的类库，其中包括你的电子邮件验证正则表达式，你可通过以下方法之一来编译此示例：  
-  
-- 在 Visual Studio 中，创建一个控制台应用程序并为项目添加一个对 RegexUtilities.dll 的引用。  
-  
-- 从命令行，将源代码复制和粘贴到文本文件中并使用如下命令来对其进行编译（假定源代码文件的名称是 Example.cs 或 Example.vb：  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>请参阅
 
