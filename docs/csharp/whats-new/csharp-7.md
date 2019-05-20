@@ -70,7 +70,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 [!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-在某些时候，你可能想要解包从方法返回的元组的成员。  可通过为元组中的每个值声明单独的变量来实现此目的。 这种解包操作称为析构元组：
+在某些时候，你可能想要解包从方法返回的元组的成员。可通过为元组中的每个值声明单独的变量来实现此目的。这种解包操作称为解构元组：
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
