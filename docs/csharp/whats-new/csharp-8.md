@@ -2,48 +2,48 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 2。
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427274"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754379"
 ---
-# <a name="whats-new-in-c-80"></a><span data-ttu-id="be978-104">C# 8.0 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="be978-104">What's new in C# 8.0</span></span>
+# <a name="whats-new-in-c-80"></a><span data-ttu-id="228b0-104">C# 8.0 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="228b0-104">What's new in C# 8.0</span></span>
 
-<span data-ttu-id="be978-105">C# 语言有许多增强功能，可以通过预览版 2 进行试用。</span><span class="sxs-lookup"><span data-stu-id="be978-105">There are many enhancements to the C# language that you can try out already with preview 2.</span></span> <span data-ttu-id="be978-106">预览版 2 中的新增功能包括：</span><span class="sxs-lookup"><span data-stu-id="be978-106">The new features added in preview 2 are:</span></span>
+<span data-ttu-id="228b0-105">C# 语言有许多增强功能，可以通过预览版 2 进行试用。</span><span class="sxs-lookup"><span data-stu-id="228b0-105">There are many enhancements to the C# language that you can try out already with preview 2.</span></span> <span data-ttu-id="228b0-106">预览版 2 中的新增功能包括：</span><span class="sxs-lookup"><span data-stu-id="228b0-106">The new features added in preview 2 are:</span></span>
 
-- <span data-ttu-id="be978-107">[模式匹配增强功能](#more-patterns-in-more-places)：</span><span class="sxs-lookup"><span data-stu-id="be978-107">[Pattern matching enhancements](#more-patterns-in-more-places):</span></span>
-  * [<span data-ttu-id="be978-108">Switch 表达式</span><span class="sxs-lookup"><span data-stu-id="be978-108">Switch expressions</span></span>](#switch-expressions)
-  * [<span data-ttu-id="be978-109">属性模式</span><span class="sxs-lookup"><span data-stu-id="be978-109">Property patterns</span></span>](#property-patterns)
-  * [<span data-ttu-id="be978-110">元组模式</span><span class="sxs-lookup"><span data-stu-id="be978-110">Tuple patterns</span></span>](#tuple-patterns)
-  * [<span data-ttu-id="be978-111">位置模式</span><span class="sxs-lookup"><span data-stu-id="be978-111">Positional patterns</span></span>](#positional-patterns)
-- [<span data-ttu-id="be978-112">Using 声明</span><span class="sxs-lookup"><span data-stu-id="be978-112">Using declarations</span></span>](#using-declarations)
-- [<span data-ttu-id="be978-113">静态本地函数</span><span class="sxs-lookup"><span data-stu-id="be978-113">Static local functions</span></span>](#static-local-functions)
-- [<span data-ttu-id="be978-114">可处置的 ref 结构</span><span class="sxs-lookup"><span data-stu-id="be978-114">Disposable ref structs</span></span>](#disposable-ref-structs)
+- <span data-ttu-id="228b0-107">[模式匹配增强功能](#more-patterns-in-more-places)：</span><span class="sxs-lookup"><span data-stu-id="228b0-107">[Pattern matching enhancements](#more-patterns-in-more-places):</span></span>
+  * [<span data-ttu-id="228b0-108">Switch 表达式</span><span class="sxs-lookup"><span data-stu-id="228b0-108">Switch expressions</span></span>](#switch-expressions)
+  * [<span data-ttu-id="228b0-109">属性模式</span><span class="sxs-lookup"><span data-stu-id="228b0-109">Property patterns</span></span>](#property-patterns)
+  * [<span data-ttu-id="228b0-110">元组模式</span><span class="sxs-lookup"><span data-stu-id="228b0-110">Tuple patterns</span></span>](#tuple-patterns)
+  * [<span data-ttu-id="228b0-111">位置模式</span><span class="sxs-lookup"><span data-stu-id="228b0-111">Positional patterns</span></span>](#positional-patterns)
+- [<span data-ttu-id="228b0-112">Using 声明</span><span class="sxs-lookup"><span data-stu-id="228b0-112">Using declarations</span></span>](#using-declarations)
+- [<span data-ttu-id="228b0-113">静态本地函数</span><span class="sxs-lookup"><span data-stu-id="228b0-113">Static local functions</span></span>](#static-local-functions)
+- [<span data-ttu-id="228b0-114">可处置的 ref 结构</span><span class="sxs-lookup"><span data-stu-id="228b0-114">Disposable ref structs</span></span>](#disposable-ref-structs)
 
-<span data-ttu-id="be978-115">以下语言功能最先出现在 C# 8.0 预览版 1 中：</span><span class="sxs-lookup"><span data-stu-id="be978-115">The following language features first appeared in C# 8.0 preview 1:</span></span>
+<span data-ttu-id="228b0-115">以下语言功能最先出现在 C# 8.0 预览版 1 中：</span><span class="sxs-lookup"><span data-stu-id="228b0-115">The following language features first appeared in C# 8.0 preview 1:</span></span>
 
-- [<span data-ttu-id="be978-116">可为空引用类型</span><span class="sxs-lookup"><span data-stu-id="be978-116">Nullable reference types</span></span>](#nullable-reference-types)
-- [<span data-ttu-id="be978-117">异步流</span><span class="sxs-lookup"><span data-stu-id="be978-117">Asynchronous streams</span></span>](#asynchronous-streams)
-- [<span data-ttu-id="be978-118">索引和范围</span><span class="sxs-lookup"><span data-stu-id="be978-118">Indices and ranges</span></span>](#indices-and-ranges)
+- [<span data-ttu-id="228b0-116">可为空引用类型</span><span class="sxs-lookup"><span data-stu-id="228b0-116">Nullable reference types</span></span>](#nullable-reference-types)
+- [<span data-ttu-id="228b0-117">异步流</span><span class="sxs-lookup"><span data-stu-id="228b0-117">Asynchronous streams</span></span>](#asynchronous-streams)
+- [<span data-ttu-id="228b0-118">索引和范围</span><span class="sxs-lookup"><span data-stu-id="228b0-118">Indices and ranges</span></span>](#indices-and-ranges)
 
 > [!NOTE]
-> <span data-ttu-id="be978-119">本文针对 C# 8.0 预览版 2 进行了最后一次更新。</span><span class="sxs-lookup"><span data-stu-id="be978-119">This article was last updated for C# 8.0 preview 2.</span></span>
+> <span data-ttu-id="228b0-119">本文针对 C# 8.0 预览版 2 进行了最后一次更新。</span><span class="sxs-lookup"><span data-stu-id="228b0-119">This article was last updated for C# 8.0 preview 2.</span></span>
 
-<span data-ttu-id="be978-120">本文的剩余部分将简要介绍这些功能。</span><span class="sxs-lookup"><span data-stu-id="be978-120">The remainder of this article briefly describes these features.</span></span> <span data-ttu-id="be978-121">如果有详细讲解的文章，则将提供指向这些教程和概述的链接。</span><span class="sxs-lookup"><span data-stu-id="be978-121">Where in-depth articles are available, links to those tutorials and overviews are provided.</span></span>
+<span data-ttu-id="228b0-120">本文的剩余部分将简要介绍这些功能。</span><span class="sxs-lookup"><span data-stu-id="228b0-120">The remainder of this article briefly describes these features.</span></span> <span data-ttu-id="228b0-121">如果有详细讲解的文章，则将提供指向这些教程和概述的链接。</span><span class="sxs-lookup"><span data-stu-id="228b0-121">Where in-depth articles are available, links to those tutorials and overviews are provided.</span></span>
 
-## <a name="more-patterns-in-more-places"></a><span data-ttu-id="be978-122">在更多位置中使用更多模式</span><span class="sxs-lookup"><span data-stu-id="be978-122">More patterns in more places</span></span>
+## <a name="more-patterns-in-more-places"></a><span data-ttu-id="228b0-122">在更多位置中使用更多模式</span><span class="sxs-lookup"><span data-stu-id="228b0-122">More patterns in more places</span></span>
 
-<span data-ttu-id="be978-123">模式匹配提供了在相关但不同类型的数据中提供形状相关功能的工具。</span><span class="sxs-lookup"><span data-stu-id="be978-123">**Pattern matching** gives tools to provide shape-dependent functionality across related but different kinds of data.</span></span> <span data-ttu-id="be978-124">C# 7.0 通过使用 [`is`](../language-reference/keywords/is.md) 表达式和 [`switch`](../language-reference/keywords/switch.md) 语句引入了类型模式和常量模式的语法。</span><span class="sxs-lookup"><span data-stu-id="be978-124">C# 7.0 introduced syntax for type patterns and constant patterns by using the [`is`](../language-reference/keywords/is.md) expression and the [`switch`](../language-reference/keywords/switch.md) statement.</span></span> <span data-ttu-id="be978-125">这些功能代表了支持数据和功能分离的编程范例的初步尝试。</span><span class="sxs-lookup"><span data-stu-id="be978-125">These features represented the first tentative steps toward supporting programming paradigms where data and functionality live apart.</span></span> <span data-ttu-id="be978-126">随着行业转向更多微服务和其他基于云的体系结构，还需要其他语言工具。</span><span class="sxs-lookup"><span data-stu-id="be978-126">As the industry moves toward more microservices and other cloud-based architectures, other language tools are needed.</span></span>
+<span data-ttu-id="228b0-123">模式匹配提供了在相关但不同类型的数据中提供形状相关功能的工具。</span><span class="sxs-lookup"><span data-stu-id="228b0-123">**Pattern matching** gives tools to provide shape-dependent functionality across related but different kinds of data.</span></span> <span data-ttu-id="228b0-124">C# 7.0 通过使用 [`is`](../language-reference/keywords/is.md) 表达式和 [`switch`](../language-reference/keywords/switch.md) 语句引入了类型模式和常量模式的语法。</span><span class="sxs-lookup"><span data-stu-id="228b0-124">C# 7.0 introduced syntax for type patterns and constant patterns by using the [`is`](../language-reference/keywords/is.md) expression and the [`switch`](../language-reference/keywords/switch.md) statement.</span></span> <span data-ttu-id="228b0-125">这些功能代表了支持数据和功能分离的编程范例的初步尝试。</span><span class="sxs-lookup"><span data-stu-id="228b0-125">These features represented the first tentative steps toward supporting programming paradigms where data and functionality live apart.</span></span> <span data-ttu-id="228b0-126">随着行业转向更多微服务和其他基于云的体系结构，还需要其他语言工具。</span><span class="sxs-lookup"><span data-stu-id="228b0-126">As the industry moves toward more microservices and other cloud-based architectures, other language tools are needed.</span></span>
 
-<span data-ttu-id="be978-127">C# 8.0 扩展了此词汇表，这样就可以在代码中的更多位置使用更多模式表达式。</span><span class="sxs-lookup"><span data-stu-id="be978-127">C# 8.0 expands this vocabulary so you can use more pattern expressions in more places in your code.</span></span> <span data-ttu-id="be978-128">当数据和功能分离时，请考虑使用这些功能。</span><span class="sxs-lookup"><span data-stu-id="be978-128">Consider these features when your data and functionality are separate.</span></span> <span data-ttu-id="be978-129">当算法依赖于对象运行时类型以外的事实时，请考虑使用模式匹配。</span><span class="sxs-lookup"><span data-stu-id="be978-129">Consider pattern matching when your algorithms depend on a fact other than the runtime type of an object.</span></span> <span data-ttu-id="be978-130">这些技术提供了另一种表达设计的方式。</span><span class="sxs-lookup"><span data-stu-id="be978-130">These techniques provide another way to express designs.</span></span>
+<span data-ttu-id="228b0-127">C# 8.0 扩展了此词汇表，这样就可以在代码中的更多位置使用更多模式表达式。</span><span class="sxs-lookup"><span data-stu-id="228b0-127">C# 8.0 expands this vocabulary so you can use more pattern expressions in more places in your code.</span></span> <span data-ttu-id="228b0-128">当数据和功能分离时，请考虑使用这些功能。</span><span class="sxs-lookup"><span data-stu-id="228b0-128">Consider these features when your data and functionality are separate.</span></span> <span data-ttu-id="228b0-129">当算法依赖于对象运行时类型以外的事实时，请考虑使用模式匹配。</span><span class="sxs-lookup"><span data-stu-id="228b0-129">Consider pattern matching when your algorithms depend on a fact other than the runtime type of an object.</span></span> <span data-ttu-id="228b0-130">这些技术提供了另一种表达设计的方式。</span><span class="sxs-lookup"><span data-stu-id="228b0-130">These techniques provide another way to express designs.</span></span>
 
-<span data-ttu-id="be978-131">除了可以在新位置使用新模式之外，C# 8.0 还添加了“递归模式”。</span><span class="sxs-lookup"><span data-stu-id="be978-131">In addition to new patterns in new places, C# 8.0 adds **recursive patterns**.</span></span> <span data-ttu-id="be978-132">任何模式表达式的结果都是一个表达式。</span><span class="sxs-lookup"><span data-stu-id="be978-132">The result of any pattern expression is an expression.</span></span> <span data-ttu-id="be978-133">递归模式只是应用于另一个模式表达式输出的模式表达式。</span><span class="sxs-lookup"><span data-stu-id="be978-133">A recursive pattern is simply a pattern expression applied to the output of another pattern expression.</span></span>
+<span data-ttu-id="228b0-131">除了可以在新位置使用新模式之外，C# 8.0 还添加了“递归模式”。</span><span class="sxs-lookup"><span data-stu-id="228b0-131">In addition to new patterns in new places, C# 8.0 adds **recursive patterns**.</span></span> <span data-ttu-id="228b0-132">任何模式表达式的结果都是一个表达式。</span><span class="sxs-lookup"><span data-stu-id="228b0-132">The result of any pattern expression is an expression.</span></span> <span data-ttu-id="228b0-133">递归模式只是应用于另一个模式表达式输出的模式表达式。</span><span class="sxs-lookup"><span data-stu-id="228b0-133">A recursive pattern is simply a pattern expression applied to the output of another pattern expression.</span></span>
 
-### <a name="switch-expressions"></a><span data-ttu-id="be978-134">Switch 表达式</span><span class="sxs-lookup"><span data-stu-id="be978-134">switch expressions</span></span>
+### <a name="switch-expressions"></a><span data-ttu-id="228b0-134">Switch 表达式</span><span class="sxs-lookup"><span data-stu-id="228b0-134">switch expressions</span></span>
 
-<span data-ttu-id="be978-135">通常情况下，[`switch`](../language-reference/keywords/switch.md) 语句在其每个 `case` 块中生成一个值。</span><span class="sxs-lookup"><span data-stu-id="be978-135">Often, a [`switch`](../language-reference/keywords/switch.md) statement produces a value in each of its `case` blocks.</span></span> <span data-ttu-id="be978-136">借助 Switch 表达式，可以使用更简洁的表达式语法。</span><span class="sxs-lookup"><span data-stu-id="be978-136">**Switch expressions** enable you to use more concise expression syntax.</span></span> <span data-ttu-id="be978-137">只有些许重复的 `case` 和 `break` 关键字和大括号。</span><span class="sxs-lookup"><span data-stu-id="be978-137">There are fewer repetitive `case` and `break` keywords, and fewer curly braces.</span></span>  <span data-ttu-id="be978-138">以下面列出彩虹颜色的枚举为例：</span><span class="sxs-lookup"><span data-stu-id="be978-138">As an example, consider the following enum that lists the colors of the rainbow:</span></span>
+<span data-ttu-id="228b0-135">通常情况下，[`switch`](../language-reference/keywords/switch.md) 语句在其每个 `case` 块中生成一个值。</span><span class="sxs-lookup"><span data-stu-id="228b0-135">Often, a [`switch`](../language-reference/keywords/switch.md) statement produces a value in each of its `case` blocks.</span></span> <span data-ttu-id="228b0-136">借助 Switch 表达式，可以使用更简洁的表达式语法。</span><span class="sxs-lookup"><span data-stu-id="228b0-136">**Switch expressions** enable you to use more concise expression syntax.</span></span> <span data-ttu-id="228b0-137">只有些许重复的 `case` 和 `break` 关键字和大括号。</span><span class="sxs-lookup"><span data-stu-id="228b0-137">There are fewer repetitive `case` and `break` keywords, and fewer curly braces.</span></span>  <span data-ttu-id="228b0-138">以下面列出彩虹颜色的枚举为例：</span><span class="sxs-lookup"><span data-stu-id="228b0-138">As an example, consider the following enum that lists the colors of the rainbow:</span></span>
 
 ```csharp
 public enum Rainbow
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-<span data-ttu-id="be978-139">如果应用定义了通过 `R`、`G` 和 `B` 组件构造而成的 `RGBColor` 类型，可使用以下包含 switch 表达式的方法，将 `Rainbow` 转换为 RGB 值：</span><span class="sxs-lookup"><span data-stu-id="be978-139">If your application defined an `RGBColor` type that is constructed from the `R`, `G` and `B` components, you could convert a `Rainbow` value to its RGB values using the following method containing a switch expression:</span></span>
+<span data-ttu-id="228b0-139">如果应用定义了通过 `R`、`G` 和 `B` 组件构造而成的 `RGBColor` 类型，可使用以下包含 switch 表达式的方法，将 `Rainbow` 转换为 RGB 值：</span><span class="sxs-lookup"><span data-stu-id="228b0-139">If your application defined an `RGBColor` type that is constructed from the `R`, `G` and `B` components, you could convert a `Rainbow` value to its RGB values using the following method containing a switch expression:</span></span>
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -75,14 +75,14 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
     };
 ```
 
-<span data-ttu-id="be978-140">这里有几个语法改进：</span><span class="sxs-lookup"><span data-stu-id="be978-140">There are several syntax improvements here:</span></span>
+<span data-ttu-id="228b0-140">这里有几个语法改进：</span><span class="sxs-lookup"><span data-stu-id="228b0-140">There are several syntax improvements here:</span></span>
 
-- <span data-ttu-id="be978-141">变量位于 `switch` 关键字之前。</span><span class="sxs-lookup"><span data-stu-id="be978-141">The variable comes before the `switch` keyword.</span></span> <span data-ttu-id="be978-142">不同的顺序使得在视觉上可以很轻松地区分 switch 表达式和 switch 语句。</span><span class="sxs-lookup"><span data-stu-id="be978-142">The different order makes it visually easy to distinguish the switch expression from the switch statement.</span></span>
-- <span data-ttu-id="be978-143">将 `case` 和 `:` 元素替换为 `=>`。</span><span class="sxs-lookup"><span data-stu-id="be978-143">The `case` and `:` elements are replaced with `=>`.</span></span> <span data-ttu-id="be978-144">它更简洁，更直观。</span><span class="sxs-lookup"><span data-stu-id="be978-144">It's more concise and intuitive.</span></span>
-- <span data-ttu-id="be978-145">将 `default` 事例替换为 `_` 弃元。</span><span class="sxs-lookup"><span data-stu-id="be978-145">The `default` case is replaced with a `_` discard.</span></span>
-- <span data-ttu-id="be978-146">正文是表达式，不是语句。</span><span class="sxs-lookup"><span data-stu-id="be978-146">The bodies are expressions, not statements.</span></span>
+- <span data-ttu-id="228b0-141">变量位于 `switch` 关键字之前。</span><span class="sxs-lookup"><span data-stu-id="228b0-141">The variable comes before the `switch` keyword.</span></span> <span data-ttu-id="228b0-142">不同的顺序使得在视觉上可以很轻松地区分 switch 表达式和 switch 语句。</span><span class="sxs-lookup"><span data-stu-id="228b0-142">The different order makes it visually easy to distinguish the switch expression from the switch statement.</span></span>
+- <span data-ttu-id="228b0-143">将 `case` 和 `:` 元素替换为 `=>`。</span><span class="sxs-lookup"><span data-stu-id="228b0-143">The `case` and `:` elements are replaced with `=>`.</span></span> <span data-ttu-id="228b0-144">它更简洁，更直观。</span><span class="sxs-lookup"><span data-stu-id="228b0-144">It's more concise and intuitive.</span></span>
+- <span data-ttu-id="228b0-145">将 `default` 事例替换为 `_` 弃元。</span><span class="sxs-lookup"><span data-stu-id="228b0-145">The `default` case is replaced with a `_` discard.</span></span>
+- <span data-ttu-id="228b0-146">正文是表达式，不是语句。</span><span class="sxs-lookup"><span data-stu-id="228b0-146">The bodies are expressions, not statements.</span></span>
 
-<span data-ttu-id="be978-147">将其与使用经典 `switch` 语句的等效代码进行对比：</span><span class="sxs-lookup"><span data-stu-id="be978-147">Contrast that with the equivalent code using the classic `switch` statement:</span></span>
+<span data-ttu-id="228b0-147">将其与使用经典 `switch` 语句的等效代码进行对比：</span><span class="sxs-lookup"><span data-stu-id="228b0-147">Contrast that with the equivalent code using the classic `switch` statement:</span></span>
 
 ```csharp
 public static RGBColor FromRainbowClassic(Rainbow colorBand)
@@ -109,9 +109,9 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 }
 ```
 
-### <a name="property-patterns"></a><span data-ttu-id="be978-148">属性模式</span><span class="sxs-lookup"><span data-stu-id="be978-148">Property patterns</span></span>
+### <a name="property-patterns"></a><span data-ttu-id="228b0-148">属性模式</span><span class="sxs-lookup"><span data-stu-id="228b0-148">Property patterns</span></span>
 
-<span data-ttu-id="be978-149">借助属性模式，可以匹配所检查的对象的属性。</span><span class="sxs-lookup"><span data-stu-id="be978-149">The **property pattern** enables you to match on properties of the object examined.</span></span> <span data-ttu-id="be978-150">请看一个电子商务网站的示例，该网站必须根据买家地址计算销售税。</span><span class="sxs-lookup"><span data-stu-id="be978-150">Consider an eCommerce site that must compute sales tax based on the buyer's address.</span></span> <span data-ttu-id="be978-151">这种计算不是 `Address` 类的核心职责。</span><span class="sxs-lookup"><span data-stu-id="be978-151">That computation is not a core responsibility of an `Address` class.</span></span> <span data-ttu-id="be978-152">它会随时间变化，可能比地址格式的更改更频繁。</span><span class="sxs-lookup"><span data-stu-id="be978-152">It will change over time, likely more often than address format changes.</span></span> <span data-ttu-id="be978-153">销售税的金额取决于地址的 `State` 属性。</span><span class="sxs-lookup"><span data-stu-id="be978-153">The amount of sales tax depends on the `State` property of the address.</span></span> <span data-ttu-id="be978-154">下面的方法使用属性模式从地址和价格计算销售税：</span><span class="sxs-lookup"><span data-stu-id="be978-154">The following method uses the property pattern to compute the sales tax from the address and the price:</span></span>
+<span data-ttu-id="228b0-149">借助属性模式，可以匹配所检查的对象的属性。</span><span class="sxs-lookup"><span data-stu-id="228b0-149">The **property pattern** enables you to match on properties of the object examined.</span></span> <span data-ttu-id="228b0-150">请看一个电子商务网站的示例，该网站必须根据买家地址计算销售税。</span><span class="sxs-lookup"><span data-stu-id="228b0-150">Consider an eCommerce site that must compute sales tax based on the buyer's address.</span></span> <span data-ttu-id="228b0-151">这种计算不是 `Address` 类的核心职责。</span><span class="sxs-lookup"><span data-stu-id="228b0-151">That computation is not a core responsibility of an `Address` class.</span></span> <span data-ttu-id="228b0-152">它会随时间变化，可能比地址格式的更改更频繁。</span><span class="sxs-lookup"><span data-stu-id="228b0-152">It will change over time, likely more often than address format changes.</span></span> <span data-ttu-id="228b0-153">销售税的金额取决于地址的 `State` 属性。</span><span class="sxs-lookup"><span data-stu-id="228b0-153">The amount of sales tax depends on the `State` property of the address.</span></span> <span data-ttu-id="228b0-154">下面的方法使用属性模式从地址和价格计算销售税：</span><span class="sxs-lookup"><span data-stu-id="228b0-154">The following method uses the property pattern to compute the sales tax from the address and the price:</span></span>
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -125,11 +125,11 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
     };
 ```
 
-<span data-ttu-id="be978-155">模式匹配为表达此算法创建了简洁的语法。</span><span class="sxs-lookup"><span data-stu-id="be978-155">Pattern matching creates a concise syntax for expressing this algorithm.</span></span>
+<span data-ttu-id="228b0-155">模式匹配为表达此算法创建了简洁的语法。</span><span class="sxs-lookup"><span data-stu-id="228b0-155">Pattern matching creates a concise syntax for expressing this algorithm.</span></span>
 
-### <a name="tuple-patterns"></a><span data-ttu-id="be978-156">元组模式</span><span class="sxs-lookup"><span data-stu-id="be978-156">Tuple patterns</span></span>
+### <a name="tuple-patterns"></a><span data-ttu-id="228b0-156">元组模式</span><span class="sxs-lookup"><span data-stu-id="228b0-156">Tuple patterns</span></span>
 
-<span data-ttu-id="be978-157">一些算法依赖于多个输入。</span><span class="sxs-lookup"><span data-stu-id="be978-157">Some algorithms depend on multiple inputs.</span></span> <span data-ttu-id="be978-158">使用元组模式，可根据表示为[元组](../tuples.md)的多个值进行切换。</span><span class="sxs-lookup"><span data-stu-id="be978-158">**Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).</span></span>  <span data-ttu-id="be978-159">以下代码显示了游戏“rock, paper, scissors（石头剪刀布）”的切换表达式：：</span><span class="sxs-lookup"><span data-stu-id="be978-159">The following code shows a switch expression for the game *rock, paper, scissors*:</span></span>
+<span data-ttu-id="228b0-157">一些算法依赖于多个输入。</span><span class="sxs-lookup"><span data-stu-id="228b0-157">Some algorithms depend on multiple inputs.</span></span> <span data-ttu-id="228b0-158">使用元组模式，可根据表示为[元组](../tuples.md)的多个值进行切换。</span><span class="sxs-lookup"><span data-stu-id="228b0-158">**Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).</span></span>  <span data-ttu-id="228b0-159">以下代码显示了游戏“rock, paper, scissors（石头剪刀布）”的切换表达式：：</span><span class="sxs-lookup"><span data-stu-id="228b0-159">The following code shows a switch expression for the game *rock, paper, scissors*:</span></span>
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -145,11 +145,11 @@ public static string RockPaperScissors(string first, string second)
     };
 ```
 
-<span data-ttu-id="be978-160">消息指示获胜者。</span><span class="sxs-lookup"><span data-stu-id="be978-160">The messages indicate the winner.</span></span> <span data-ttu-id="be978-161">弃元表示关系的三种组合或其他文本输入。</span><span class="sxs-lookup"><span data-stu-id="be978-161">The discard case represents the three combinations for ties, or other text inputs.</span></span>
+<span data-ttu-id="228b0-160">消息指示获胜者。</span><span class="sxs-lookup"><span data-stu-id="228b0-160">The messages indicate the winner.</span></span> <span data-ttu-id="228b0-161">弃元表示关系的三种组合或其他文本输入。</span><span class="sxs-lookup"><span data-stu-id="228b0-161">The discard case represents the three combinations for ties, or other text inputs.</span></span>
 
-### <a name="positional-patterns"></a><span data-ttu-id="be978-162">位置模式</span><span class="sxs-lookup"><span data-stu-id="be978-162">Positional patterns</span></span>
+### <a name="positional-patterns"></a><span data-ttu-id="228b0-162">位置模式</span><span class="sxs-lookup"><span data-stu-id="228b0-162">Positional patterns</span></span>
 
-<span data-ttu-id="be978-163">某些类型包含 `Deconstruct` 方法，该方法将其属性解构为离散变量。</span><span class="sxs-lookup"><span data-stu-id="be978-163">Some types include a `Deconstruct` method that deconstructs its properties into discrete variables.</span></span> <span data-ttu-id="be978-164">如果可以访问 `Deconstruct` 方法，就可以使用位置模式检查对象的属性并将这些属性用于模式。</span><span class="sxs-lookup"><span data-stu-id="be978-164">When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.</span></span>  <span data-ttu-id="be978-165">考虑以下 `Point` 类，其中包含用于为 `X` 和 `Y` 创建离散变量的 `Deconstruct` 方法：</span><span class="sxs-lookup"><span data-stu-id="be978-165">Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:</span></span>
+<span data-ttu-id="228b0-163">某些类型包含 `Deconstruct` 方法，该方法将其属性解构为离散变量。</span><span class="sxs-lookup"><span data-stu-id="228b0-163">Some types include a `Deconstruct` method that deconstructs its properties into discrete variables.</span></span> <span data-ttu-id="228b0-164">如果可以访问 `Deconstruct` 方法，就可以使用位置模式检查对象的属性并将这些属性用于模式。</span><span class="sxs-lookup"><span data-stu-id="228b0-164">When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.</span></span>  <span data-ttu-id="228b0-165">考虑以下 `Point` 类，其中包含用于为 `X` 和 `Y` 创建离散变量的 `Deconstruct` 方法：</span><span class="sxs-lookup"><span data-stu-id="228b0-165">Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:</span></span>
 
 ```csharp
 public class Point
@@ -164,7 +164,7 @@ public class Point
 }
 ```
 
-<span data-ttu-id="be978-166">此外，请考虑以下表示象限的各种位置的枚举：</span><span class="sxs-lookup"><span data-stu-id="be978-166">Additionally, consider the following enum that represents various positions of a quadrant:</span></span>
+<span data-ttu-id="228b0-166">此外，请考虑以下表示象限的各种位置的枚举：</span><span class="sxs-lookup"><span data-stu-id="228b0-166">Additionally, consider the following enum that represents various positions of a quadrant:</span></span>
 
 ```csharp
 public enum Quadrant
@@ -179,7 +179,7 @@ public enum Quadrant
 }
 ```
 
-<span data-ttu-id="be978-167">下面的方法使用位置模式来提取 `x` 和 `y` 的值。</span><span class="sxs-lookup"><span data-stu-id="be978-167">The following method uses the **positional pattern** to extract the values of `x` and `y`.</span></span> <span data-ttu-id="be978-168">然后，它使用 `when` 子句来确定该点的 `Quadrant`：</span><span class="sxs-lookup"><span data-stu-id="be978-168">Then, it uses a `when` clause to determine the `Quadrant` of the point:</span></span>
+<span data-ttu-id="228b0-167">下面的方法使用位置模式来提取 `x` 和 `y` 的值。</span><span class="sxs-lookup"><span data-stu-id="228b0-167">The following method uses the **positional pattern** to extract the values of `x` and `y`.</span></span> <span data-ttu-id="228b0-168">然后，它使用 `when` 子句来确定该点的 `Quadrant`：</span><span class="sxs-lookup"><span data-stu-id="228b0-168">Then, it uses a `when` clause to determine the `Quadrant` of the point:</span></span>
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -194,13 +194,13 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-<span data-ttu-id="be978-169">当 `x` 或 `y` 为 0（但不是两者同时为 0）时，前一个开关中的弃元模式匹配。</span><span class="sxs-lookup"><span data-stu-id="be978-169">The discard pattern in the preceding switch matches when either `x` or `y` is 0, but not both.</span></span> <span data-ttu-id="be978-170">Switch 表达式必须要么生成值，要么引发异常。</span><span class="sxs-lookup"><span data-stu-id="be978-170">A switch expression must either produce a value or throw an exception.</span></span> <span data-ttu-id="be978-171">如果这些情况都不匹配，则 switch 表达式将引发异常。</span><span class="sxs-lookup"><span data-stu-id="be978-171">If none of the cases match, the switch expression throws an exception.</span></span> <span data-ttu-id="be978-172">如果没有在 switch 表达式中涵盖所有可能的情况，编译器将生成一个警告。</span><span class="sxs-lookup"><span data-stu-id="be978-172">The compiler generates a warning for you if you do not cover all possible cases in your switch expression.</span></span>
+<span data-ttu-id="228b0-169">当 `x` 或 `y` 为 0（但不是两者同时为 0）时，前一个开关中的弃元模式匹配。</span><span class="sxs-lookup"><span data-stu-id="228b0-169">The discard pattern in the preceding switch matches when either `x` or `y` is 0, but not both.</span></span> <span data-ttu-id="228b0-170">Switch 表达式必须要么生成值，要么引发异常。</span><span class="sxs-lookup"><span data-stu-id="228b0-170">A switch expression must either produce a value or throw an exception.</span></span> <span data-ttu-id="228b0-171">如果这些情况都不匹配，则 switch 表达式将引发异常。</span><span class="sxs-lookup"><span data-stu-id="228b0-171">If none of the cases match, the switch expression throws an exception.</span></span> <span data-ttu-id="228b0-172">如果没有在 switch 表达式中涵盖所有可能的情况，编译器将生成一个警告。</span><span class="sxs-lookup"><span data-stu-id="228b0-172">The compiler generates a warning for you if you do not cover all possible cases in your switch expression.</span></span>
 
-<span data-ttu-id="be978-173">可在此[模式匹配高级教程](../tutorials/pattern-matching.md)中探索模式匹配方法。</span><span class="sxs-lookup"><span data-stu-id="be978-173">You can explore pattern matching techniques in this [advanced tutorial on pattern matching](../tutorials/pattern-matching.md).</span></span>
+<span data-ttu-id="228b0-173">可在此[模式匹配高级教程](../tutorials/pattern-matching.md)中探索模式匹配方法。</span><span class="sxs-lookup"><span data-stu-id="228b0-173">You can explore pattern matching techniques in this [advanced tutorial on pattern matching](../tutorials/pattern-matching.md).</span></span>
 
-## <a name="using-declarations"></a><span data-ttu-id="be978-174">using 声明</span><span class="sxs-lookup"><span data-stu-id="be978-174">using declarations</span></span>
+## <a name="using-declarations"></a><span data-ttu-id="228b0-174">using 声明</span><span class="sxs-lookup"><span data-stu-id="228b0-174">using declarations</span></span>
 
-<span data-ttu-id="be978-175">using 声明是前面带 `using` 关键字的变量声明。</span><span class="sxs-lookup"><span data-stu-id="be978-175">A **using declaration** is a variable declaration preceded by the `using` keyword.</span></span> <span data-ttu-id="be978-176">它指示编译器声明的变量应在封闭范围的末尾进行处理。</span><span class="sxs-lookup"><span data-stu-id="be978-176">It tells the compiler that the variable being declared should be disposed at the end of the enclosing scope.</span></span> <span data-ttu-id="be978-177">以下面编写文本文件的代码为例：</span><span class="sxs-lookup"><span data-stu-id="be978-177">For example, consider the following code that writes a text file:</span></span>
+<span data-ttu-id="228b0-175">using 声明是前面带 `using` 关键字的变量声明。</span><span class="sxs-lookup"><span data-stu-id="228b0-175">A **using declaration** is a variable declaration preceded by the `using` keyword.</span></span> <span data-ttu-id="228b0-176">它指示编译器声明的变量应在封闭范围的末尾进行处理。</span><span class="sxs-lookup"><span data-stu-id="228b0-176">It tells the compiler that the variable being declared should be disposed at the end of the enclosing scope.</span></span> <span data-ttu-id="228b0-177">以下面编写文本文件的代码为例：</span><span class="sxs-lookup"><span data-stu-id="228b0-177">For example, consider the following code that writes a text file:</span></span>
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -218,7 +218,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-<span data-ttu-id="be978-178">在前面的示例中，当到达方法的右括号时，将对该文件进行处理。</span><span class="sxs-lookup"><span data-stu-id="be978-178">In the preceding example, the file is disposed when the closing brace for the method is reached.</span></span> <span data-ttu-id="be978-179">这是声明 `file` 的范围的末尾。</span><span class="sxs-lookup"><span data-stu-id="be978-179">That's the end of the scope in which `file` is declared.</span></span> <span data-ttu-id="be978-180">前面的代码相当于下面使用经典 [using 语句](../language-reference/keywords/using-statement.md)语句的代码：</span><span class="sxs-lookup"><span data-stu-id="be978-180">The preceding code is equivalent to the following code using the classic [using statements](../language-reference/keywords/using-statement.md) statement:</span></span>
+<span data-ttu-id="228b0-178">在前面的示例中，当到达方法的右括号时，将对该文件进行处理。</span><span class="sxs-lookup"><span data-stu-id="228b0-178">In the preceding example, the file is disposed when the closing brace for the method is reached.</span></span> <span data-ttu-id="228b0-179">这是声明 `file` 的范围的末尾。</span><span class="sxs-lookup"><span data-stu-id="228b0-179">That's the end of the scope in which `file` is declared.</span></span> <span data-ttu-id="228b0-180">前面的代码相当于下面使用经典 [using 语句](../language-reference/keywords/using-statement.md)语句的代码：</span><span class="sxs-lookup"><span data-stu-id="228b0-180">The preceding code is equivalent to the following code using the classic [using statements](../language-reference/keywords/using-statement.md) statement:</span></span>
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -237,15 +237,15 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-<span data-ttu-id="be978-181">在前面的示例中，当到达与 `using` 语句关联的右括号时，将对该文件进行处理。</span><span class="sxs-lookup"><span data-stu-id="be978-181">In the preceding example, the file is disposed when the closing brace associated with the `using` statement is reached.</span></span>
+<span data-ttu-id="228b0-181">在前面的示例中，当到达与 `using` 语句关联的右括号时，将对该文件进行处理。</span><span class="sxs-lookup"><span data-stu-id="228b0-181">In the preceding example, the file is disposed when the closing brace associated with the `using` statement is reached.</span></span>
 
-<span data-ttu-id="be978-182">在这两种情况下，编译器将生成对 `Dispose()` 的调用。</span><span class="sxs-lookup"><span data-stu-id="be978-182">In both cases, the compiler generates the call to `Dispose()`.</span></span> <span data-ttu-id="be978-183">如果 using 语句中的表达式不可处置，编译器将生成一个错误。</span><span class="sxs-lookup"><span data-stu-id="be978-183">The compiler generates an error if the expression in the using statement is not disposable.</span></span>
+<span data-ttu-id="228b0-182">在这两种情况下，编译器将生成对 `Dispose()` 的调用。</span><span class="sxs-lookup"><span data-stu-id="228b0-182">In both cases, the compiler generates the call to `Dispose()`.</span></span> <span data-ttu-id="228b0-183">如果 using 语句中的表达式不可处置，编译器将生成一个错误。</span><span class="sxs-lookup"><span data-stu-id="228b0-183">The compiler generates an error if the expression in the using statement is not disposable.</span></span>
 
-## <a name="static-local-functions"></a><span data-ttu-id="be978-184">静态本地函数</span><span class="sxs-lookup"><span data-stu-id="be978-184">Static local functions</span></span>
+## <a name="static-local-functions"></a><span data-ttu-id="228b0-184">静态本地函数</span><span class="sxs-lookup"><span data-stu-id="228b0-184">Static local functions</span></span>
 
-<span data-ttu-id="be978-185">现在可以向本地函数添加 `static` 修饰符，以确保本地函数不会从封闭范围捕获（引用）任何变量。</span><span class="sxs-lookup"><span data-stu-id="be978-185">You can now add the `static` modifier to local functions to ensure that local function doesn't capture (reference) any variables from the enclosing scope.</span></span> <span data-ttu-id="be978-186">这样做会生成 `CS8421`，“静态本地函数不能包含对 \<variable> 的引用”。</span><span class="sxs-lookup"><span data-stu-id="be978-186">Doing so generates `CS8421`, "A static local function can't contain a reference to \<variable>."</span></span> 
+<span data-ttu-id="228b0-185">现在可以向本地函数添加 `static` 修饰符，以确保本地函数不会从封闭范围捕获（引用）任何变量。</span><span class="sxs-lookup"><span data-stu-id="228b0-185">You can now add the `static` modifier to local functions to ensure that local function doesn't capture (reference) any variables from the enclosing scope.</span></span> <span data-ttu-id="228b0-186">这样做会生成 `CS8421`，“静态本地函数不能包含对 \<variable> 的引用”。</span><span class="sxs-lookup"><span data-stu-id="228b0-186">Doing so generates `CS8421`, "A static local function can't contain a reference to \<variable>."</span></span> 
 
-<span data-ttu-id="be978-187">考虑下列代码。</span><span class="sxs-lookup"><span data-stu-id="be978-187">Consider the following code.</span></span> <span data-ttu-id="be978-188">本地函数 `LocalFunction` 访问在封闭范围（方法 `M`）中声明的变量 `y`。</span><span class="sxs-lookup"><span data-stu-id="be978-188">The local function `LocalFunction` accesses the variable `y`, declared in the enclosing scope (the method `M`).</span></span> <span data-ttu-id="be978-189">因此，不能用 `static` 修饰符来声明 `LocalFunction`：</span><span class="sxs-lookup"><span data-stu-id="be978-189">Therefore, `LocalFunction` can't be declared with the `static` modifier:</span></span>
+<span data-ttu-id="228b0-187">考虑下列代码。</span><span class="sxs-lookup"><span data-stu-id="228b0-187">Consider the following code.</span></span> <span data-ttu-id="228b0-188">本地函数 `LocalFunction` 访问在封闭范围（方法 `M`）中声明的变量 `y`。</span><span class="sxs-lookup"><span data-stu-id="228b0-188">The local function `LocalFunction` accesses the variable `y`, declared in the enclosing scope (the method `M`).</span></span> <span data-ttu-id="228b0-189">因此，不能用 `static` 修饰符来声明 `LocalFunction`：</span><span class="sxs-lookup"><span data-stu-id="228b0-189">Therefore, `LocalFunction` can't be declared with the `static` modifier:</span></span>
 
 ```csharp
 int M()
@@ -258,7 +258,7 @@ int M()
 }
 ```
 
-<span data-ttu-id="be978-190">下面的代码包含一个静态本地函数。</span><span class="sxs-lookup"><span data-stu-id="be978-190">The following code contains a static local function.</span></span> <span data-ttu-id="be978-191">它可以是静态的，因为它不访问封闭范围中的任何变量：</span><span class="sxs-lookup"><span data-stu-id="be978-191">It can be static because it doesn't access any variables in the enclosing scope:</span></span>
+<span data-ttu-id="228b0-190">下面的代码包含一个静态本地函数。</span><span class="sxs-lookup"><span data-stu-id="228b0-190">The following code contains a static local function.</span></span> <span data-ttu-id="228b0-191">它可以是静态的，因为它不访问封闭范围中的任何变量：</span><span class="sxs-lookup"><span data-stu-id="228b0-191">It can be static because it doesn't access any variables in the enclosing scope:</span></span>
 
 ```csharp
 int M()
@@ -271,29 +271,29 @@ int M()
 }
 ```
 
-## <a name="disposable-ref-structs"></a><span data-ttu-id="be978-192">可处置的 ref 结构</span><span class="sxs-lookup"><span data-stu-id="be978-192">Disposable ref structs</span></span>
+## <a name="disposable-ref-structs"></a><span data-ttu-id="228b0-192">可处置的 ref 结构</span><span class="sxs-lookup"><span data-stu-id="228b0-192">Disposable ref structs</span></span>
 
-<span data-ttu-id="be978-193">用 `ref` 修饰符声明的 `struct` 可能无法实现任何接口，因此无法实现 <xref:System.IDisposable>。</span><span class="sxs-lookup"><span data-stu-id="be978-193">A `struct` declared with the `ref` modifier may not implement any interfaces and so cannot implement <xref:System.IDisposable>.</span></span> <span data-ttu-id="be978-194">因此，要能够处理 `ref struct`，它必须有一个可访问的 `void Dispose()` 方法。</span><span class="sxs-lookup"><span data-stu-id="be978-194">Therefore, to enable a `ref struct` to be disposed, it must have an accessible `void Dispose()` method.</span></span> <span data-ttu-id="be978-195">这同样适用于 `readonly ref struct` 声明。</span><span class="sxs-lookup"><span data-stu-id="be978-195">This also applies to `readonly ref struct` declarations.</span></span>
+<span data-ttu-id="228b0-193">用 `ref` 修饰符声明的 `struct` 可能无法实现任何接口，因此无法实现 <xref:System.IDisposable>。</span><span class="sxs-lookup"><span data-stu-id="228b0-193">A `struct` declared with the `ref` modifier may not implement any interfaces and so cannot implement <xref:System.IDisposable>.</span></span> <span data-ttu-id="228b0-194">因此，要能够处理 `ref struct`，它必须有一个可访问的 `void Dispose()` 方法。</span><span class="sxs-lookup"><span data-stu-id="228b0-194">Therefore, to enable a `ref struct` to be disposed, it must have an accessible `void Dispose()` method.</span></span> <span data-ttu-id="228b0-195">这同样适用于 `readonly ref struct` 声明。</span><span class="sxs-lookup"><span data-stu-id="228b0-195">This also applies to `readonly ref struct` declarations.</span></span>
 
-## <a name="nullable-reference-types"></a><span data-ttu-id="be978-196">可为空引用类型</span><span class="sxs-lookup"><span data-stu-id="be978-196">Nullable reference types</span></span>
+## <a name="nullable-reference-types"></a><span data-ttu-id="228b0-196">可为空引用类型</span><span class="sxs-lookup"><span data-stu-id="228b0-196">Nullable reference types</span></span>
 
-<span data-ttu-id="be978-197">在可为空注释上下文中，引用类型的任何变量都被视为不可为空引用类型。</span><span class="sxs-lookup"><span data-stu-id="be978-197">Inside a nullable annotation context, any variable of a reference type is considered to be a **nonnullable reference type**.</span></span> <span data-ttu-id="be978-198">若要指示一个变量可能为 null，必须在类型名称后面附加 `?`，以将该变量声明为可为空引用类型。</span><span class="sxs-lookup"><span data-stu-id="be978-198">If you want to indicate that a variable may be null, you must append the type name with the `?` to declare the variable as a **nullable reference type**.</span></span>
+<span data-ttu-id="228b0-197">在可为空注释上下文中，引用类型的任何变量都被视为不可为空引用类型。</span><span class="sxs-lookup"><span data-stu-id="228b0-197">Inside a nullable annotation context, any variable of a reference type is considered to be a **nonnullable reference type**.</span></span> <span data-ttu-id="228b0-198">若要指示一个变量可能为 null，必须在类型名称后面附加 `?`，以将该变量声明为可为空引用类型。</span><span class="sxs-lookup"><span data-stu-id="228b0-198">If you want to indicate that a variable may be null, you must append the type name with the `?` to declare the variable as a **nullable reference type**.</span></span>
 
-<span data-ttu-id="be978-199">对于不可为空引用类型，编译器使用流分析来确保在声明时将本地变量初始化为非 Null 值。</span><span class="sxs-lookup"><span data-stu-id="be978-199">For nonnullable reference types, the compiler uses flow analysis to ensure that local variables are initialized to a non-null value when declared.</span></span> <span data-ttu-id="be978-200">字段必须在构造过程中初始化。</span><span class="sxs-lookup"><span data-stu-id="be978-200">Fields must be initialized during construction.</span></span> <span data-ttu-id="be978-201">如果没有通过调用任何可用的构造函数或通过初始化表达式来设置变量，编译器将生成警告。</span><span class="sxs-lookup"><span data-stu-id="be978-201">The compiler generates a warning if the variable is not set by a call to any of the available constructors or by an initializer.</span></span> <span data-ttu-id="be978-202">此外，不能向不可为空引用类型分配一个可以为 Null 的值。</span><span class="sxs-lookup"><span data-stu-id="be978-202">Furthermore, nonnullable reference types can't be assigned a value that could be null.</span></span>
+<span data-ttu-id="228b0-199">对于不可为空引用类型，编译器使用流分析来确保在声明时将本地变量初始化为非 Null 值。</span><span class="sxs-lookup"><span data-stu-id="228b0-199">For nonnullable reference types, the compiler uses flow analysis to ensure that local variables are initialized to a non-null value when declared.</span></span> <span data-ttu-id="228b0-200">字段必须在构造过程中初始化。</span><span class="sxs-lookup"><span data-stu-id="228b0-200">Fields must be initialized during construction.</span></span> <span data-ttu-id="228b0-201">如果没有通过调用任何可用的构造函数或通过初始化表达式来设置变量，编译器将生成警告。</span><span class="sxs-lookup"><span data-stu-id="228b0-201">The compiler generates a warning if the variable is not set by a call to any of the available constructors or by an initializer.</span></span> <span data-ttu-id="228b0-202">此外，不能向不可为空引用类型分配一个可以为 Null 的值。</span><span class="sxs-lookup"><span data-stu-id="228b0-202">Furthermore, nonnullable reference types can't be assigned a value that could be null.</span></span>
 
-<span data-ttu-id="be978-203">不对可为空引用类型进行检查以确保它们没有被赋予 Null 值或初始化为 Null。</span><span class="sxs-lookup"><span data-stu-id="be978-203">Nullable reference types aren't checked to ensure they aren't assigned or initialized to null.</span></span> <span data-ttu-id="be978-204">不过，编译器使用流分析来确保可为空引用类型的任何变量在被访问或分配给不可为空引用类型之前，都会对其 Null 性进行检查。</span><span class="sxs-lookup"><span data-stu-id="be978-204">However, the compiler uses flow analysis to ensure that any variable of a nullable reference type is checked against null before it's accessed or assigned to a nonnullable reference type.</span></span>
+<span data-ttu-id="228b0-203">不对可为空引用类型进行检查以确保它们没有被赋予 Null 值或初始化为 Null。</span><span class="sxs-lookup"><span data-stu-id="228b0-203">Nullable reference types aren't checked to ensure they aren't assigned or initialized to null.</span></span> <span data-ttu-id="228b0-204">不过，编译器使用流分析来确保可为空引用类型的任何变量在被访问或分配给不可为空引用类型之前，都会对其 Null 性进行检查。</span><span class="sxs-lookup"><span data-stu-id="228b0-204">However, the compiler uses flow analysis to ensure that any variable of a nullable reference type is checked against null before it's accessed or assigned to a nonnullable reference type.</span></span>
 
-<span data-ttu-id="be978-205">可以在[可为空引用类型](../nullable-references.md)的概述中了解该功能的更多信息。</span><span class="sxs-lookup"><span data-stu-id="be978-205">You can learn more about the feature in the overview of [nullable reference types](../nullable-references.md).</span></span> <span data-ttu-id="be978-206">可以在此[可为空引用类型教程](../tutorials/nullable-reference-types.md)中的新应用程序中自行尝试。</span><span class="sxs-lookup"><span data-stu-id="be978-206">Try it yourself in a new application in this [nullable reference types tutorial](../tutorials/nullable-reference-types.md).</span></span> <span data-ttu-id="be978-207">在[迁移应用程序以使用可为空引用类型教程](../tutorials/upgrade-to-nullable-references.md)中了解迁移现有代码库以使用可为空引用类型的步骤。</span><span class="sxs-lookup"><span data-stu-id="be978-207">Learn about the steps to migrate an existing codebase to make use of nullable reference types in the [migrating an application to use nullable reference types tutorial](../tutorials/upgrade-to-nullable-references.md).</span></span>
+<span data-ttu-id="228b0-205">可以在[可为空引用类型](../nullable-references.md)的概述中了解该功能的更多信息。</span><span class="sxs-lookup"><span data-stu-id="228b0-205">You can learn more about the feature in the overview of [nullable reference types](../nullable-references.md).</span></span> <span data-ttu-id="228b0-206">可以在此[可为空引用类型教程](../tutorials/nullable-reference-types.md)中的新应用程序中自行尝试。</span><span class="sxs-lookup"><span data-stu-id="228b0-206">Try it yourself in a new application in this [nullable reference types tutorial](../tutorials/nullable-reference-types.md).</span></span> <span data-ttu-id="228b0-207">在[迁移应用程序以使用可为空引用类型教程](../tutorials/upgrade-to-nullable-references.md)中了解迁移现有代码库以使用可为空引用类型的步骤。</span><span class="sxs-lookup"><span data-stu-id="228b0-207">Learn about the steps to migrate an existing codebase to make use of nullable reference types in the [migrating an application to use nullable reference types tutorial](../tutorials/upgrade-to-nullable-references.md).</span></span>
 
-## <a name="asynchronous-streams"></a><span data-ttu-id="be978-208">异步流</span><span class="sxs-lookup"><span data-stu-id="be978-208">Asynchronous streams</span></span>
+## <a name="asynchronous-streams"></a><span data-ttu-id="228b0-208">异步流</span><span class="sxs-lookup"><span data-stu-id="228b0-208">Asynchronous streams</span></span>
 
-<span data-ttu-id="be978-209">从 C# 8.0 开始，可以创建并以异步方式使用流。</span><span class="sxs-lookup"><span data-stu-id="be978-209">Starting with C# 8.0, you can create and consume streams asynchronously.</span></span> <span data-ttu-id="be978-210">返回异步流的方法有三个属性：</span><span class="sxs-lookup"><span data-stu-id="be978-210">A method that returns an asynchronous stream has three properties:</span></span>
+<span data-ttu-id="228b0-209">从 C# 8.0 开始，可以创建并以异步方式使用流。</span><span class="sxs-lookup"><span data-stu-id="228b0-209">Starting with C# 8.0, you can create and consume streams asynchronously.</span></span> <span data-ttu-id="228b0-210">返回异步流的方法有三个属性：</span><span class="sxs-lookup"><span data-stu-id="228b0-210">A method that returns an asynchronous stream has three properties:</span></span>
 
-1. <span data-ttu-id="be978-211">它是用 `async` 修饰符声明的。</span><span class="sxs-lookup"><span data-stu-id="be978-211">It's declared with the `async` modifier.</span></span>
-1. <span data-ttu-id="be978-212">它将返回 <xref:System.Collections.Generic.IAsyncEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="be978-212">It returns an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span>
-1. <span data-ttu-id="be978-213">该方法包含用于在异步流中返回连续元素的 `yield return` 语句。</span><span class="sxs-lookup"><span data-stu-id="be978-213">The method contains `yield return` statements to return successive elements in the asynchronous stream.</span></span>
+1. <span data-ttu-id="228b0-211">它是用 `async` 修饰符声明的。</span><span class="sxs-lookup"><span data-stu-id="228b0-211">It's declared with the `async` modifier.</span></span>
+1. <span data-ttu-id="228b0-212">它将返回 <xref:System.Collections.Generic.IAsyncEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="228b0-212">It returns an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span>
+1. <span data-ttu-id="228b0-213">该方法包含用于在异步流中返回连续元素的 `yield return` 语句。</span><span class="sxs-lookup"><span data-stu-id="228b0-213">The method contains `yield return` statements to return successive elements in the asynchronous stream.</span></span>
 
-<span data-ttu-id="be978-214">使用异步流需要在枚举流元素时在 `foreach` 关键字前面添加 `await` 关键字。</span><span class="sxs-lookup"><span data-stu-id="be978-214">Consuming an asynchronous stream requires you to add the `await` keyword before the `foreach` keyword when you enumerate the elements of the stream.</span></span> <span data-ttu-id="be978-215">添加 `await` 关键字需要枚举异步流的方法，以使用 `async` 修饰符进行声明并返回 `async` 方法允许的类型。</span><span class="sxs-lookup"><span data-stu-id="be978-215">Adding the `await` keyword requires the method that enumerates the asynchronous stream to be declared with the `async` modifier and to return a type allowed for an `async` method.</span></span> <span data-ttu-id="be978-216">通常这意味着返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="be978-216">Typically that means returning a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="be978-217">也可以为 <xref:System.Threading.Tasks.ValueTask> 或 <xref:System.Threading.Tasks.ValueTask%601>。</span><span class="sxs-lookup"><span data-stu-id="be978-217">It can also be a <xref:System.Threading.Tasks.ValueTask> or <xref:System.Threading.Tasks.ValueTask%601>.</span></span> <span data-ttu-id="be978-218">方法既可以使用异步流，也可以生成异步流，这意味着它将返回 <xref:System.Collections.Generic.IAsyncEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="be978-218">A method can both consume and produce an asynchronous stream, which means it would return an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span> <span data-ttu-id="be978-219">下面的代码生成一个从 0 到 19 的序列，在生成每个数字之间等待 100 毫秒：</span><span class="sxs-lookup"><span data-stu-id="be978-219">The following code generates a sequence from 0 to 19, waiting 100 ms between generating each number:</span></span>
+<span data-ttu-id="228b0-214">使用异步流需要在枚举流元素时在 `foreach` 关键字前面添加 `await` 关键字。</span><span class="sxs-lookup"><span data-stu-id="228b0-214">Consuming an asynchronous stream requires you to add the `await` keyword before the `foreach` keyword when you enumerate the elements of the stream.</span></span> <span data-ttu-id="228b0-215">添加 `await` 关键字需要枚举异步流的方法，以使用 `async` 修饰符进行声明并返回 `async` 方法允许的类型。</span><span class="sxs-lookup"><span data-stu-id="228b0-215">Adding the `await` keyword requires the method that enumerates the asynchronous stream to be declared with the `async` modifier and to return a type allowed for an `async` method.</span></span> <span data-ttu-id="228b0-216">通常这意味着返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="228b0-216">Typically that means returning a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="228b0-217">也可以为 <xref:System.Threading.Tasks.ValueTask> 或 <xref:System.Threading.Tasks.ValueTask%601>。</span><span class="sxs-lookup"><span data-stu-id="228b0-217">It can also be a <xref:System.Threading.Tasks.ValueTask> or <xref:System.Threading.Tasks.ValueTask%601>.</span></span> <span data-ttu-id="228b0-218">方法既可以使用异步流，也可以生成异步流，这意味着它将返回 <xref:System.Collections.Generic.IAsyncEnumerable%601>。</span><span class="sxs-lookup"><span data-stu-id="228b0-218">A method can both consume and produce an asynchronous stream, which means it would return an <xref:System.Collections.Generic.IAsyncEnumerable%601>.</span></span> <span data-ttu-id="228b0-219">下面的代码生成一个从 0 到 19 的序列，在生成每个数字之间等待 100 毫秒：</span><span class="sxs-lookup"><span data-stu-id="228b0-219">The following code generates a sequence from 0 to 19, waiting 100 ms between generating each number:</span></span>
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -306,7 +306,7 @@ public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSeq
 }
 ```
 
-<span data-ttu-id="be978-220">可以使用 `await foreach` 语句来枚举序列：</span><span class="sxs-lookup"><span data-stu-id="be978-220">You would enumerate the sequence using the `await foreach` statement:</span></span>
+<span data-ttu-id="228b0-220">可以使用 `await foreach` 语句来枚举序列：</span><span class="sxs-lookup"><span data-stu-id="228b0-220">You would enumerate the sequence using the `await foreach` statement:</span></span>
 
 ```csharp
 await foreach (var number in GenerateSequence())
@@ -315,17 +315,17 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-<span data-ttu-id="be978-221">可以在[创建和使用异步流](../tutorials/generate-consume-asynchronous-stream.md)的教程中自行尝试异步流。</span><span class="sxs-lookup"><span data-stu-id="be978-221">You can try asynchronous streams yourself in our tutorial on [creating and consuming async streams](../tutorials/generate-consume-asynchronous-stream.md).</span></span>
+<span data-ttu-id="228b0-221">可以在[创建和使用异步流](../tutorials/generate-consume-asynchronous-stream.md)的教程中自行尝试异步流。</span><span class="sxs-lookup"><span data-stu-id="228b0-221">You can try asynchronous streams yourself in our tutorial on [creating and consuming async streams](../tutorials/generate-consume-asynchronous-stream.md).</span></span>
 
-## <a name="indices-and-ranges"></a><span data-ttu-id="be978-222">索引和范围</span><span class="sxs-lookup"><span data-stu-id="be978-222">Indices and ranges</span></span>
+## <a name="indices-and-ranges"></a><span data-ttu-id="228b0-222">索引和范围</span><span class="sxs-lookup"><span data-stu-id="228b0-222">Indices and ranges</span></span>
 
-<span data-ttu-id="be978-223">范围和索引为在数组中指定子范围（<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）提供了简洁语法。</span><span class="sxs-lookup"><span data-stu-id="be978-223">Ranges and indices provide a succinct syntax for specifying subranges in an array, <xref:System.Span%601>, or <xref:System.ReadOnlySpan%601>.</span></span>
+<span data-ttu-id="228b0-223">范围和索引为在数组中指定子范围（<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）提供了简洁语法。</span><span class="sxs-lookup"><span data-stu-id="228b0-223">Ranges and indices provide a succinct syntax for specifying subranges in an array, <xref:System.Span%601>, or <xref:System.ReadOnlySpan%601>.</span></span>
 
-<span data-ttu-id="be978-224">可以指定一个倒数索引。</span><span class="sxs-lookup"><span data-stu-id="be978-224">You can specify an index **from the end**.</span></span> <span data-ttu-id="be978-225">使用 `^` 运算符指定倒数。</span><span class="sxs-lookup"><span data-stu-id="be978-225">You specify **from the end** using the `^` operator.</span></span> <span data-ttu-id="be978-226">你熟悉表示元素“顺数第 2”的 `array[2]`。</span><span class="sxs-lookup"><span data-stu-id="be978-226">You are familiar with `array[2]` meaning the element "2 from the start".</span></span> <span data-ttu-id="be978-227">现在，`array[^2]` 意味着元素“倒数第 2”。</span><span class="sxs-lookup"><span data-stu-id="be978-227">Now, `array[^2]` means the element "2 from the end".</span></span> <span data-ttu-id="be978-228">索引 `^0` 意味着“结束”或最后一个元素后面的索引。</span><span class="sxs-lookup"><span data-stu-id="be978-228">The index `^0` means "the end", or the index that follows the last element.</span></span>
+<span data-ttu-id="228b0-224">通过在索引前面使用 `^` 字符，可以**从末尾**指定索引。</span><span class="sxs-lookup"><span data-stu-id="228b0-224">You can specify an index **from the end** using the `^` character before the index.</span></span> <span data-ttu-id="228b0-225">从末尾编制索引将从 `0..^0` 指定整个范围的规则开始。</span><span class="sxs-lookup"><span data-stu-id="228b0-225">Indexing from the end starts from the rule that `0..^0` specifies the entire range.</span></span> <span data-ttu-id="228b0-226">若要枚举整个数组，请从*第一个元素*开始，一直到*最后一个元素之后*。</span><span class="sxs-lookup"><span data-stu-id="228b0-226">To enumerate an entire array, you start *at the first element*, and continue until you are *past the last element*.</span></span> <span data-ttu-id="228b0-227">想想枚举器上 `MoveNext` 方法的行为：如果枚举到最后一个元素之后，它会返回 false。</span><span class="sxs-lookup"><span data-stu-id="228b0-227">Think of the behavior of the `MoveNext` method on an enumerator: it returns false when the enumeration passes the last element.</span></span> <span data-ttu-id="228b0-228">索引 `^0` 表示“结尾”、`array[array.Length]` 或最后一个元素后面的索引。</span><span class="sxs-lookup"><span data-stu-id="228b0-228">The index `^0` means "the end", `array[array.Length]`, or the index that follows the last element.</span></span> <span data-ttu-id="228b0-229">你熟悉表示元素“顺数第 2”的 `array[2]`。</span><span class="sxs-lookup"><span data-stu-id="228b0-229">You are familiar with `array[2]` meaning the element "2 from the start".</span></span> <span data-ttu-id="228b0-230">现在，`array[^2]` 意味着元素“倒数第 2”。</span><span class="sxs-lookup"><span data-stu-id="228b0-230">Now, `array[^2]` means the element "2 from the end".</span></span> 
 
-<span data-ttu-id="be978-229">可以使用范围运算符指定范围：`..`。</span><span class="sxs-lookup"><span data-stu-id="be978-229">You can specify a **range** with the **range operator**: `..`.</span></span> <span data-ttu-id="be978-230">例如，`0..^0` 指定数组的整个范围：从起始 0 开始，但不包括最后的 0。</span><span class="sxs-lookup"><span data-stu-id="be978-230">For example, `0..^0` specifies the entire range of the array: 0 from the start up to, but not including 0 from the end.</span></span> <span data-ttu-id="be978-231">两个操作数都可以使用“顺数”或“倒数”。</span><span class="sxs-lookup"><span data-stu-id="be978-231">Either operand may use "from the start" or "from the end".</span></span> <span data-ttu-id="be978-232">此外，可以省略其中一个操作数。</span><span class="sxs-lookup"><span data-stu-id="be978-232">Furthermore, either operand may be omitted.</span></span> <span data-ttu-id="be978-233">默认值为起始索引的 `0` 和结束索引的 `^0`。</span><span class="sxs-lookup"><span data-stu-id="be978-233">The defaults are `0` for the start index, and `^0` for the end index.</span></span>
+<span data-ttu-id="228b0-231">可以使用范围运算符指定范围：`..`。</span><span class="sxs-lookup"><span data-stu-id="228b0-231">You can specify a **range** with the **range operator**: `..`.</span></span> <span data-ttu-id="228b0-232">例如，`0..^0` 指定数组的整个范围：从起始 0 开始，但不包括最后的 0。</span><span class="sxs-lookup"><span data-stu-id="228b0-232">For example, `0..^0` specifies the entire range of the array: 0 from the start up to, but not including 0 from the end.</span></span> <span data-ttu-id="228b0-233">两个操作数都可以使用“顺数”或“倒数”。</span><span class="sxs-lookup"><span data-stu-id="228b0-233">Either operand may use "from the start" or "from the end".</span></span> <span data-ttu-id="228b0-234">此外，可以省略其中一个操作数。</span><span class="sxs-lookup"><span data-stu-id="228b0-234">Furthermore, either operand may be omitted.</span></span> <span data-ttu-id="228b0-235">默认值为起始索引的 `0` 和结束索引的 `^0`。</span><span class="sxs-lookup"><span data-stu-id="228b0-235">The defaults are `0` for the start index, and `^0` for the end index.</span></span>
 
-<span data-ttu-id="be978-234">请看以下几个示例。</span><span class="sxs-lookup"><span data-stu-id="be978-234">Let's look at a few examples.</span></span> <span data-ttu-id="be978-235">请考虑以下数组，用其顺数索引和倒数索引进行注释：</span><span class="sxs-lookup"><span data-stu-id="be978-235">Consider the following array, annotated with its index from the start and from the end:</span></span>
+<span data-ttu-id="228b0-236">请看以下几个示例。</span><span class="sxs-lookup"><span data-stu-id="228b0-236">Let's look at a few examples.</span></span> <span data-ttu-id="228b0-237">请考虑以下数组，用其顺数索引和倒数索引进行注释：</span><span class="sxs-lookup"><span data-stu-id="228b0-237">Consider the following array, annotated with its index from the start and from the end:</span></span>
 
 ```csharp
 var words = new string[]
@@ -340,31 +340,31 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
-<span data-ttu-id="be978-236">每个元素的索引均强化了“顺数”和“倒数”的概念，且范围不包括结束范围。</span><span class="sxs-lookup"><span data-stu-id="be978-236">The index of each element reinforces the concept of "from the start", and "from the end", and that ranges are exclusive of the end of the range.</span></span> <span data-ttu-id="be978-237">整个数组的“start”是第一个元素。</span><span class="sxs-lookup"><span data-stu-id="be978-237">The "start" of the entire array is the first element.</span></span> <span data-ttu-id="be978-238">整个数组的“end”在最后一个元素之后。</span><span class="sxs-lookup"><span data-stu-id="be978-238">The "end" of the entire array is *past* the last element.</span></span>
+<span data-ttu-id="228b0-238">每个元素的索引均强化了“顺数”和“倒数”的概念，且范围不包括结束范围。</span><span class="sxs-lookup"><span data-stu-id="228b0-238">The index of each element reinforces the concept of "from the start", and "from the end", and that ranges are exclusive of the end of the range.</span></span> <span data-ttu-id="228b0-239">整个数组的“start”是第一个元素。</span><span class="sxs-lookup"><span data-stu-id="228b0-239">The "start" of the entire array is the first element.</span></span> <span data-ttu-id="228b0-240">整个数组的“end”在最后一个元素之后。</span><span class="sxs-lookup"><span data-stu-id="228b0-240">The "end" of the entire array is *past* the last element.</span></span>
 
-<span data-ttu-id="be978-239">可以使用 `^1` 索引检索最后一个词：</span><span class="sxs-lookup"><span data-stu-id="be978-239">You can retrieve the last word with the `^1` index:</span></span>
+<span data-ttu-id="228b0-241">可以使用 `^1` 索引检索最后一个词：</span><span class="sxs-lookup"><span data-stu-id="228b0-241">You can retrieve the last word with the `^1` index:</span></span>
 
 ```csharp
 Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-<span data-ttu-id="be978-240">以下代码创建了一个包含单词“quick”、“brown”和“fox”的子范围。</span><span class="sxs-lookup"><span data-stu-id="be978-240">The following code creates a subrange with the words "quick", "brown", and "fox".</span></span> <span data-ttu-id="be978-241">它包括 `words[1]` 到 `words[3]`。</span><span class="sxs-lookup"><span data-stu-id="be978-241">It includes `words[1]` through `words[3]`.</span></span> <span data-ttu-id="be978-242">元素 `words[4]` 不在此范围内。</span><span class="sxs-lookup"><span data-stu-id="be978-242">The element `words[4]` is not in the range.</span></span>
+<span data-ttu-id="228b0-242">以下代码创建了一个包含单词“quick”、“brown”和“fox”的子范围。</span><span class="sxs-lookup"><span data-stu-id="228b0-242">The following code creates a subrange with the words "quick", "brown", and "fox".</span></span> <span data-ttu-id="228b0-243">它包括 `words[1]` 到 `words[3]`。</span><span class="sxs-lookup"><span data-stu-id="228b0-243">It includes `words[1]` through `words[3]`.</span></span> <span data-ttu-id="228b0-244">元素 `words[4]` 不在此范围内。</span><span class="sxs-lookup"><span data-stu-id="228b0-244">The element `words[4]` is not in the range.</span></span>
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-<span data-ttu-id="be978-243">以下代码使用“lazy”和“dog”创建一个子范围。</span><span class="sxs-lookup"><span data-stu-id="be978-243">The following code creates a subrange with "lazy" and "dog".</span></span> <span data-ttu-id="be978-244">它包括 `words[^2]` 和 `words[^1]`。</span><span class="sxs-lookup"><span data-stu-id="be978-244">It includes `words[^2]` and `words[^1]`.</span></span> <span data-ttu-id="be978-245">不包括结束索引 `words[^0]`：</span><span class="sxs-lookup"><span data-stu-id="be978-245">The end index `words[^0]` is not included:</span></span>
+<span data-ttu-id="228b0-245">以下代码使用“lazy”和“dog”创建一个子范围。</span><span class="sxs-lookup"><span data-stu-id="228b0-245">The following code creates a subrange with "lazy" and "dog".</span></span> <span data-ttu-id="228b0-246">它包括 `words[^2]` 和 `words[^1]`。</span><span class="sxs-lookup"><span data-stu-id="228b0-246">It includes `words[^2]` and `words[^1]`.</span></span> <span data-ttu-id="228b0-247">不包括结束索引 `words[^0]`：</span><span class="sxs-lookup"><span data-stu-id="228b0-247">The end index `words[^0]` is not included:</span></span>
 
 ```csharp
 var lazyDog = words[^2..^0];
 ```
 
-<span data-ttu-id="be978-246">下面的示例为开始和/或结束创建了开放范围：</span><span class="sxs-lookup"><span data-stu-id="be978-246">The following examples create ranges that are open ended for the start, end, or both:</span></span>
+<span data-ttu-id="228b0-248">下面的示例为开始和/或结束创建了开放范围：</span><span class="sxs-lookup"><span data-stu-id="228b0-248">The following examples create ranges that are open ended for the start, end, or both:</span></span>
 
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
@@ -372,14 +372,16 @@ var firstPhrase = words[..4]; // contains "The" through "fox"
 var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
 ```
 
-<span data-ttu-id="be978-247">此外可以将范围声明为变量：</span><span class="sxs-lookup"><span data-stu-id="be978-247">You can also declare ranges as variables:</span></span>
+<span data-ttu-id="228b0-249">此外可以将范围声明为变量：</span><span class="sxs-lookup"><span data-stu-id="228b0-249">You can also declare ranges as variables:</span></span>
 
 ```csharp
 Range phrase = 1..4;
 ```
 
-<span data-ttu-id="be978-248">然后可以在 `[` 和 `]` 字符中使用该范围：</span><span class="sxs-lookup"><span data-stu-id="be978-248">The range can then be used inside the `[` and `]` characters:</span></span>
+<span data-ttu-id="228b0-250">然后可以在 `[` 和 `]` 字符中使用该范围：</span><span class="sxs-lookup"><span data-stu-id="228b0-250">The range can then be used inside the `[` and `]` characters:</span></span>
 
 ```csharp
 var text = words[phrase];
 ```
+
+<span data-ttu-id="228b0-251">可在有关[索引和范围](../tutorials/ranges-indexes.md)的教程中详细了解索引和范围。</span><span class="sxs-lookup"><span data-stu-id="228b0-251">You can explore more about indices and ranges in the tutorial on [indices and ranges](../tutorials/ranges-indexes.md).</span></span>

@@ -1,74 +1,82 @@
 ---
 title: dotnet clean 命令
 description: dotnet clean 命令可清除当前目录。
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/14/2019
+ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169854"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754122"
 ---
-# <a name="dotnet-clean"></a><span data-ttu-id="666a6-103">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="666a6-103">dotnet clean</span></span>
+# <a name="dotnet-clean"></a><span data-ttu-id="000d6-103">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="000d6-103">dotnet clean</span></span>
 
+<span data-ttu-id="000d6-104">**本主题适用于：✓** .NET Core 1.x SDK 及更高版本</span><span class="sxs-lookup"><span data-stu-id="000d6-104">**This topic applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
-## <a name="name"></a><span data-ttu-id="666a6-104">name</span><span class="sxs-lookup"><span data-stu-id="666a6-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="000d6-105">name</span><span class="sxs-lookup"><span data-stu-id="000d6-105">Name</span></span>
 
-<span data-ttu-id="666a6-105">`dotnet clean` - 清除项目输出。</span><span class="sxs-lookup"><span data-stu-id="666a6-105">`dotnet clean` - Cleans the output of a project.</span></span>
+<span data-ttu-id="000d6-106">`dotnet clean` - 清除项目输出。</span><span class="sxs-lookup"><span data-stu-id="000d6-106">`dotnet clean` - Cleans the output of a project.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="666a6-106">摘要</span><span class="sxs-lookup"><span data-stu-id="666a6-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="000d6-107">摘要</span><span class="sxs-lookup"><span data-stu-id="000d6-107">Synopsis</span></span>
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="666a6-107">说明</span><span class="sxs-lookup"><span data-stu-id="666a6-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="000d6-108">说明</span><span class="sxs-lookup"><span data-stu-id="000d6-108">Description</span></span>
 
-<span data-ttu-id="666a6-108">`dotnet clean` 命令可清除上一个生成的输出。</span><span class="sxs-lookup"><span data-stu-id="666a6-108">The `dotnet clean` command cleans the output of the previous build.</span></span> <span data-ttu-id="666a6-109">它以 [MSBuild 目标](/visualstudio/msbuild/msbuild-targets) 的形式实现，以便在运行命令时对项目进行评估。</span><span class="sxs-lookup"><span data-stu-id="666a6-109">It's implemented as an [MSBuild target](/visualstudio/msbuild/msbuild-targets), so the project is evaluated when the command is run.</span></span> <span data-ttu-id="666a6-110">只会清除在生成过程中创建的输出。</span><span class="sxs-lookup"><span data-stu-id="666a6-110">Only the outputs created during the build are cleaned.</span></span> <span data-ttu-id="666a6-111">中间 (*obj*) 和最终输出 (*bin*) 文件夹都会被清除。</span><span class="sxs-lookup"><span data-stu-id="666a6-111">Both intermediate (*obj*) and final output (*bin*) folders are cleaned.</span></span>
+<span data-ttu-id="000d6-109">`dotnet clean` 命令可清除上一个生成的输出。</span><span class="sxs-lookup"><span data-stu-id="000d6-109">The `dotnet clean` command cleans the output of the previous build.</span></span> <span data-ttu-id="000d6-110">它以 [MSBuild 目标](/visualstudio/msbuild/msbuild-targets) 的形式实现，以便在运行命令时对项目进行评估。</span><span class="sxs-lookup"><span data-stu-id="000d6-110">It's implemented as an [MSBuild target](/visualstudio/msbuild/msbuild-targets), so the project is evaluated when the command is run.</span></span> <span data-ttu-id="000d6-111">只会清除在生成过程中创建的输出。</span><span class="sxs-lookup"><span data-stu-id="000d6-111">Only the outputs created during the build are cleaned.</span></span> <span data-ttu-id="000d6-112">中间 (*obj*) 和最终输出 (*bin*) 文件夹都会被清除。</span><span class="sxs-lookup"><span data-stu-id="000d6-112">Both intermediate (*obj*) and final output (*bin*) folders are cleaned.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="666a6-112">自变量</span><span class="sxs-lookup"><span data-stu-id="666a6-112">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="000d6-113">自变量</span><span class="sxs-lookup"><span data-stu-id="000d6-113">Arguments</span></span>
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-<span data-ttu-id="666a6-113">要清除的 MSBuild 项目。</span><span class="sxs-lookup"><span data-stu-id="666a6-113">The MSBuild project to clean.</span></span> <span data-ttu-id="666a6-114">如果未指定项目文件，MSBuild 会在当前工作目录中搜索以 *proj* 结尾的文件扩展名并使用该文件。</span><span class="sxs-lookup"><span data-stu-id="666a6-114">If a project file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in *proj* and uses that file.</span></span>
+<span data-ttu-id="000d6-114">要清理的 MSBuild 项目或解决方案。</span><span class="sxs-lookup"><span data-stu-id="000d6-114">The MSBuild project or solution to clean.</span></span> <span data-ttu-id="000d6-115">如果未指定项目或解决方案文件，MSBuild 会在当前工作目录中搜索文件扩展名以 *proj* 或 *sln* 结尾的文件并使用该文件。</span><span class="sxs-lookup"><span data-stu-id="000d6-115">If a project or solution file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in *proj* or *sln*, and uses that file.</span></span>
 
-## <a name="options"></a><span data-ttu-id="666a6-115">选项</span><span class="sxs-lookup"><span data-stu-id="666a6-115">Options</span></span>
+## <a name="options"></a><span data-ttu-id="000d6-116">选项</span><span class="sxs-lookup"><span data-stu-id="000d6-116">Options</span></span>
 
 * **`-c|--configuration {Debug|Release}`**
 
-  <span data-ttu-id="666a6-116">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="666a6-116">Defines the build configuration.</span></span> <span data-ttu-id="666a6-117">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="666a6-117">The default value is `Debug`.</span></span> <span data-ttu-id="666a6-118">只有在生成期间指定了此选项，才必须在清除时使用此选项。</span><span class="sxs-lookup"><span data-stu-id="666a6-118">This option is only required when cleaning if you specified it during build time.</span></span>
+  <span data-ttu-id="000d6-117">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="000d6-117">Defines the build configuration.</span></span> <span data-ttu-id="000d6-118">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="000d6-118">The default value is `Debug`.</span></span> <span data-ttu-id="000d6-119">只有在生成期间指定了此选项，才必须在清除时使用此选项。</span><span class="sxs-lookup"><span data-stu-id="000d6-119">This option is only required when cleaning if you specified it during build time.</span></span>
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="666a6-119">在生成时指定的[框架](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="666a6-119">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="666a6-120">必须在[项目文件](csproj.md)中定义该框架。</span><span class="sxs-lookup"><span data-stu-id="666a6-120">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="666a6-121">如果在生成时指定了框架，则必须在清除时指定框架。</span><span class="sxs-lookup"><span data-stu-id="666a6-121">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
+  <span data-ttu-id="000d6-120">在生成时指定的[框架](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="000d6-120">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="000d6-121">必须在[项目文件](csproj.md)中定义该框架。</span><span class="sxs-lookup"><span data-stu-id="000d6-121">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="000d6-122">如果在生成时指定了框架，则必须在清除时指定框架。</span><span class="sxs-lookup"><span data-stu-id="000d6-122">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
 
 * **`-h|--help`**
 
-  <span data-ttu-id="666a6-122">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="666a6-122">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="000d6-123">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="000d6-123">Prints out a short help for the command.</span></span>
+
+* **`--interactive`**
+
+  <span data-ttu-id="000d6-124">允许命令停止并等待用户输入或操作。</span><span class="sxs-lookup"><span data-stu-id="000d6-124">Allows the command to stop and wait for user input or action.</span></span> <span data-ttu-id="000d6-125">例如，完成身份验证。</span><span class="sxs-lookup"><span data-stu-id="000d6-125">For example, to complete authentication.</span></span> <span data-ttu-id="000d6-126">自 .NET Core 3.0 SDK 起可用。</span><span class="sxs-lookup"><span data-stu-id="000d6-126">Available since .NET Core 3.0 SDK.</span></span>
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  <span data-ttu-id="666a6-123">包含已生成的输出的目录。</span><span class="sxs-lookup"><span data-stu-id="666a6-123">Directory in which the build outputs are placed.</span></span> <span data-ttu-id="666a6-124">如果在生成项目时指定了框架，则使用输出目录开关指定 `-f|--framework <FRAMEWORK>` 开关。</span><span class="sxs-lookup"><span data-stu-id="666a6-124">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
+  <span data-ttu-id="000d6-127">包含要清理的生成项目的目录。</span><span class="sxs-lookup"><span data-stu-id="000d6-127">The directory that contains the build artifacts to clean.</span></span> <span data-ttu-id="000d6-128">如果在生成项目时指定了框架，则使用输出目录开关指定 `-f|--framework <FRAMEWORK>` 开关。</span><span class="sxs-lookup"><span data-stu-id="000d6-128">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  <span data-ttu-id="666a6-125">清除指定运行时的输出文件夹。</span><span class="sxs-lookup"><span data-stu-id="666a6-125">Cleans the output folder of the specified runtime.</span></span> <span data-ttu-id="666a6-126">在创建[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 时使用此选项。</span><span class="sxs-lookup"><span data-stu-id="666a6-126">This is used when a [self-contained deployment](../deploying/index.md#self-contained-deployments-scd) was created.</span></span> <span data-ttu-id="666a6-127">自 .NET Core 2.0 SDK 起可用的选项。</span><span class="sxs-lookup"><span data-stu-id="666a6-127">Option available since .NET Core 2.0 SDK.</span></span>
+  <span data-ttu-id="000d6-129">清除指定运行时的输出文件夹。</span><span class="sxs-lookup"><span data-stu-id="000d6-129">Cleans the output folder of the specified runtime.</span></span> <span data-ttu-id="000d6-130">在创建[独立部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 时使用此选项。</span><span class="sxs-lookup"><span data-stu-id="000d6-130">This is used when a [self-contained deployment](../deploying/index.md#self-contained-deployments-scd) was created.</span></span> <span data-ttu-id="000d6-131">自 .NET Core 2.0 SDK 起可用的选项。</span><span class="sxs-lookup"><span data-stu-id="000d6-131">Option available since .NET Core 2.0 SDK.</span></span>
 
 * **`-v|--verbosity <LEVEL>`**
 
-  <span data-ttu-id="666a6-128">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="666a6-128">Sets the verbosity level of the command.</span></span> <span data-ttu-id="666a6-129">允许的级别为 q[uiet]、m[inimal]、n[ormal]、d[etailed] 和 diag[nostic]。</span><span class="sxs-lookup"><span data-stu-id="666a6-129">Allowed levels are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</span></span>
+  <span data-ttu-id="000d6-132">设置 MSBuild 详细级别。</span><span class="sxs-lookup"><span data-stu-id="000d6-132">Sets the MSBuild verbosity level.</span></span> <span data-ttu-id="000d6-133">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="000d6-133">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="000d6-134">默认值为 `normal`。</span><span class="sxs-lookup"><span data-stu-id="000d6-134">The default is `normal`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="666a6-130">示例</span><span class="sxs-lookup"><span data-stu-id="666a6-130">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="000d6-135">示例</span><span class="sxs-lookup"><span data-stu-id="000d6-135">Examples</span></span>
 
-* <span data-ttu-id="666a6-131">清除项目的默认生成：</span><span class="sxs-lookup"><span data-stu-id="666a6-131">Clean a default build of the project:</span></span>
+* <span data-ttu-id="000d6-136">清除项目的默认生成：</span><span class="sxs-lookup"><span data-stu-id="000d6-136">Clean a default build of the project:</span></span>
 
   ```console
   dotnet clean
   ```
 
-* <span data-ttu-id="666a6-132">清除使用版本配置生成的项目：</span><span class="sxs-lookup"><span data-stu-id="666a6-132">Clean a project built using the Release configuration:</span></span>
+* <span data-ttu-id="000d6-137">清除使用版本配置生成的项目：</span><span class="sxs-lookup"><span data-stu-id="000d6-137">Clean a project built using the Release configuration:</span></span>
 
   ```console
   dotnet clean --configuration Release

@@ -9,15 +9,15 @@
   items:
     - name: 概述
       href: tutorials/index.md
-    - name: 情绪分析（二元分类）
+    - name: 分析情绪（二元分类）
       href: tutorials/sentiment-analysis.md
-    - name: 问题分类（多类分类）
+    - name: 对支持问题进行分类（多类分类）
       href: tutorials/github-issue-classification.md
-    - name: 价格预测（回归）
+    - name: 预测价格（回归）
       href: tutorials/taxi-fare.md
-    - name: 鸢尾花（群集）
+    - name: 对鸢尾花进行分类（K 平均值聚类分析）
       href: tutorials/iris-clustering.md
-    - name: 影片推荐（建议）
+    - name: 影片推荐系统（矩阵因子分解）
       href: tutorials/movie-recommmendation.md
     - name: 图像分类（传输学习）
       href: tutorials/image-classification.md
