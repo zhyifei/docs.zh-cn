@@ -4,12 +4,12 @@ description: 了解如何为机器学习模型选择 ML.NET 算法
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065630"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557787"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何选择 ML.NET 算法
 
@@ -81,8 +81,8 @@ ms.locfileid: "65065630"
 
 |算法|属性|训练程序|
 |---------|----------|--------|
-|一对多|此多类分类器为每个类训练一个二元分类器，这可将该类与所有其他类区分开来。 规模因要分类的类的数量而受到限制|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|成对耦合|此多类分类器在每对类上训练二元分类算法。 规模因类的数量而受到限制，因为必须训练每个两个类的组合。|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|一对多|此多类分类器为每个类训练一个二元分类器，这可将该类与所有其他类区分开来。 规模因要分类的类的数量而受到限制|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|成对耦合|此多类分类器在每对类上训练二元分类算法。 规模因类的数量而受到限制，因为必须训练每个两个类的组合。|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ ms.locfileid: "65065630"
 |属性|训练程序|
 |----------|--------|
 |使用此二元分类训练程序来确定其他训练程序的性能基线。 其他训练程序的指标应优于前期训练程序才能成为有效指标。 |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

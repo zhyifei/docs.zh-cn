@@ -4,12 +4,12 @@ description: 了解如何通过重用预定型 TensorFlow 模型，在 TensorFlo
 ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7fddc2d6c60a719090af36b7fe91919bfbd115c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063620"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593432"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>教程：使用 TensorFlow 生成 ML.NET 自定义图像分类器
 
@@ -67,9 +67,9 @@ ms.locfileid: "65063620"
 >[!Note]
 > 上面的图像属于维基共享资源，并按如下方式进行属性化：
 >
-> * “220px-Pepperoni_pizza.jpg”公有领域， https://commons.wikimedia.org/w/index.php?curid=79505
-> * “119px-Nalle_-_a_small_brown_teddy_bear.jpg”作者为 [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 独自拍摄，CC BY-SA 2.0， https://commons.wikimedia.org/w/index.php?curid=48166。
-> * “193px-Broodrooster.jpg”作者为 [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自有作品，CC BY-SA 3.0， https://commons.wikimedia.org/w/index.php?curid=27403
+> * “220px-Pepperoni_pizza.jpg”公有领域，https://commons.wikimedia.org/w/index.php?curid=79505
+> * “119px-Nalle_-_a_small_brown_teddy_bear.jpg”作者为 [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 独自拍摄，CC BY-SA 2.0，https://commons.wikimedia.org/w/index.php?curid=48166。
+> * “193px-Broodrooster.jpg”作者为 [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自有作品，CC BY-SA 3.0，https://commons.wikimedia.org/w/index.php?curid=27403
 
 迁移学习包括多种策略，如重新定型所有层策略和倒数第二层策略。 本教程将介绍并展示如何使用倒数第二层策略。 倒数第二层策略重用已预定型的模型来解决具体问题。 然后，此策略重新定型这个模型的最后一层来解决新问题。 重用预定型模型作为新模型的一部分将节省大量时间和资源。
 

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: ea5797cb8f2fd0654d9facb636bc857eeb8e5aad
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a4573575805ad45d251a900f304b8cb01654a39b
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063696"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558007"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什么是 ML.NET 以及它如何工作？
 
@@ -190,7 +190,7 @@ ML.NET 应用程序从 <xref:Microsoft.ML.MLContext> 对象开始。 此单一�
         .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
 ```
 
-在代码片段中，`Concatenate` 和 `Sdca` 均为目录中的方法。 它们各创建一个追加到管道的 [IEstimator](xref:Microsoft.ML.IEstimator`1) 对象。
+在代码片段中，`Concatenate` 和 `Sdca` 均为目录中的方法。 它们各创建一个追加到管道的 [IEstimator](xref:Microsoft.ML.IEstimator%601) 对象。
 
 此时，仅创建对象。 不进行任何执行操作。
 

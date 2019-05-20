@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: a15dfbfcd563cf9df9c25779a5854a9f556523d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065560"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557837"
 ---
 # <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>使用交叉验证训练和评估机器学习模型
 
@@ -91,7 +91,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 1. 每个模型的性能在测试数据集上使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法进行评估。 
 1. 为每个模型返回模型及其指标。
 
-`cvResults` 中存储的结果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1) 对象的集合。 此对象包括经过训练的模型以及可分别从 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult`1.Metrics) 属性访问的指标。 在此示例中，`Model` 属性为 [`ITransformer`](xref:Microsoft.ML.ITransformer) 类型，`Metrics` 属性为 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 类型。 
+`cvResults` 中存储的结果是 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 对象的集合。 此对象包括经过训练的模型以及可分别从 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 和 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 属性访问的指标。 在此示例中，`Model` 属性为 [`ITransformer`](xref:Microsoft.ML.ITransformer) 类型，`Metrics` 属性为 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 类型。 
 
 ## <a name="extract-metrics"></a>提取指标
 
