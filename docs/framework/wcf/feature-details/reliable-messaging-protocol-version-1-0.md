@@ -2,15 +2,15 @@
 title: 可靠消息传送协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db4761efb34e7436ae54819b8e5056c732bd2fab
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617569"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959946"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>可靠消息传送协议版本 1.0
-本主题介绍 Windows Communication Foundation (WCF) 实现的详细信息，为 Ws-reliable Messaging 2005 年 2 月 （版本 1.0） 协议需要使用 HTTP 传输进行互操作。 WCF 遵循 Ws-reliable Messaging 规范的约束和澄清，本主题中所述。 请注意，WS-ReliableMessaging 版本 1.0 协议是从 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 开始实现的。  
+本主题介绍 Windows Communication Foundation (WCF) 实现的详细信息，为 Ws-reliable Messaging 2005 年 2 月 （版本 1.0） 协议需要使用 HTTP 传输进行互操作。 WCF 遵循 Ws-reliable Messaging 规范的约束和澄清，本主题中所述。 请注意，从开始 WinFX 实现 WS-ReliableMessaging 版本 1.0 协议。  
   
  Ws-reliable Messaging February 2005 协议实现中情况下，WCF <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>。  
   

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011888"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959626"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>在托管 HTML 文档对象模型中访问未公开成员
-托管 HTML 文档对象模型 (DOM) 包含一个名为类<xref:System.Windows.Forms.HtmlElement>公开属性、 方法和事件的所有 HTML 元素都有共同点。 有时，但是，你将需要访问托管的接口不会直接公开的成员。 本主题介绍两种方法可访问未公开的成员，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]和网页中定义的 VBScript 函数。  
+托管 HTML 文档对象模型 (DOM) 包含一个名为类<xref:System.Windows.Forms.HtmlElement>公开属性、 方法和事件的所有 HTML 元素都有共同点。 有时，但是，你将需要访问托管的接口不会直接公开的成员。 本主题将分析用于访问未公开的成员，包括在 Web 页内定义的 JScript 和 VBScript 函数的两种方法。  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>通过托管接口访问未公开的成员  
  <xref:System.Windows.Forms.HtmlDocument> 和<xref:System.Windows.Forms.HtmlElement>提供四种方法来访问未公开成员。 下表显示类型和其相应的方法。  
@@ -67,7 +67,7 @@ ms.locfileid: "62011888"
  使用 COM 接口的最简单方法是添加到非托管 HTML DOM 库 (MSHTML.dll) 的引用从应用程序，虽然这是不受支持。 有关详细信息，请参阅[知识库文章 934368](https://support.microsoft.com/kb/934368)。  
   
 ## <a name="accessing-script-functions"></a>访问脚本函数  
- HTML 页可以定义一个或多个函数，通过使用一种脚本语言，如[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]或 VBScript。 这些函数的内部放置`SCRIPT`页在页中，并可对 DOM 按需或响应的事件中运行  
+ HTML 页可以定义一个或多个函数，通过使用 JScript 或 VBScript 等脚本语言。 这些函数的内部放置`SCRIPT`页在页中，并可对 DOM 按需或响应的事件中运行  
   
  可以调用任何脚本函数定义在 HTML 页使用<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法。 如果脚本方法返回一个 HTML 元素，您可以使用强制转换将转换到此返回结果<xref:System.Windows.Forms.HtmlElement>。 有关详细信息和代码示例，请参阅<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。  
   

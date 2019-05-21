@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df55b4fa107f3630cd259b755e0aaacdee4904ef
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753054"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960086"
 ---
 # <a name="elevation-of-privilege"></a>特权提升
 *特权提升*得出让攻击者授权权限超出最初授予的权限。 例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。  
@@ -21,7 +21,7 @@ ms.locfileid: "64753054"
  <xref:System.IdentityModel.Tokens.SamlAssertion> 类验证 SAML 令牌中包含的数字签名，默认 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 要求由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 类的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 时有效的 X.509 证书为 SAML 令牌签名。 `ChainTrust` 模式本身不足以确定是否信任 SAML 令牌的颁发者。 需要更为细化的信任模型的服务可以使用授权和强制策略检查由已颁发令牌身份验证生成的声明集的颁发者，或者使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 验证设置限制允许的签名证书集。 有关详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)并[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
   
 ## <a name="switching-identity-without-a-security-context"></a>在没有安全上下文的情况下切换标识  
- 以下内容仅适用于 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
+ 以下仅适用于 WinFX。  
   
  客户端和服务器，客户端的标识之间建立连接时不会更改，一种情况除外： 打开 WCF 客户端时，如果满足所有以下条件后：  
   

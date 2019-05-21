@@ -2,12 +2,12 @@
 title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878739"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959967"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，Windows Communication Foundation (WCF) 不支持某些特定安全方案。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，并因此 WCF 不支持该平台上运行使用 Windows 身份验证的服务。 运行 Windows XP Home Edition 下的 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -50,7 +50,7 @@ ms.locfileid: "65878739"
 ## <a name="cryptography"></a>密码  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>仅为对称密钥的使用支持 SHA-256  
- WCF 支持的各种加密和签名摘要创建算法，可以指定在系统提供的绑定中使用的算法套件。 为了提高安全性，WCF 支持安全哈希算法 (SHA) 2 算法，特别是 SHA-256，用于创建签名摘要哈希。 此版本仅在使用对称密钥（例如，Kerberos 密钥）并且没有使用 X.509 证书对消息进行签名的情况下才支持 SHA-256。 WCF 不支持 RSA 签名 （在 X.509 证书） 对 RSA-SHA256 中使用由于当前不支持 SHA-256 哈希[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
+ WCF 支持的各种加密和签名摘要创建算法，可以指定在系统提供的绑定中使用的算法套件。 为了提高安全性，WCF 支持安全哈希算法 (SHA) 2 算法，特别是 SHA-256，用于创建签名摘要哈希。 此版本仅在使用对称密钥（例如，Kerberos 密钥）并且没有使用 X.509 证书对消息进行签名的情况下才支持 SHA-256。 WCF 不支持 RSA 签名 （在 X.509 证书） 对 RSA-SHA256 在 WinFX 使用由于当前不支持 SHA-256 哈希。  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>不支持与 FIPS 兼容的 SHA-256 哈希  
  WCF 不支持 SHA-256 符合 FIPS 的哈希值，因此，使用 SHA-256 的算法套件使用符合 FIPS 的算法是所需的系统上不支持由 WCF。  

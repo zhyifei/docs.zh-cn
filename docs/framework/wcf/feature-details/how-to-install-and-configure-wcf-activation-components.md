@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 96607a1c744b928b340fe33c2b57a25a59f306dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635257"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960104"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>如何：安装和配置 WCF 激活组件
 本主题介绍在设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
@@ -28,7 +28,7 @@ ms.locfileid: "64635257"
   
 3. 上**任务**菜单上，单击**打开或关闭打开的 Windows 功能**。  
   
-4. 查找 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 节点，选中该节点然后将其展开。  
+4. 查找 WinFX 节点，选择，然后展开它。  
   
 5. 选择**WCF 非 Http 激活组件**框并保存设置。  
   

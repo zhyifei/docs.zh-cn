@@ -2,12 +2,12 @@
 title: 解释 wsatConfig.exe 返回的错误代码
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928812"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959857"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解释 wsatConfig.exe 返回的错误代码
 本主题列出了 WS-AtomicTransaction 配置实用工具 (wsatConfig.exe) 生成的所有错误代码，以及建议采取的操作。  
@@ -35,9 +35,9 @@ ms.locfileid: "61928812"
 |17|http.sys 配置失败。 无法取消 SSL 证书与以前的端口的绑定。|使用错误消息中返回的错误代码映射到相应的系统错误。 如有必要，使用 httpcfg.exe 或 netsh.exe 移除错误的端口预留。|  
 |18|http.sys 配置失败。 由于以前的 SSL 绑定已存在，因此无法将指定的证书绑定到端口。|另一个应用程序已获得特定端口的所有权。 更改为其他端口，或者卸载或重新配置当前应用程序。|  
 |19|重新启动 MSDTC 失败|如有必要，请手动重新启动 MSDTC。 如果问题仍然存在，请与 Microsoft 联系。|  
-|20|远程计算机上未安装 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]，或者安装不正确。|在计算机上安装 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。|  
+|20|WinFX 在远程计算机上未安装或未正确安装。|在计算机上安装 WinFX。|  
 |21|远程配置由于操作超时而失败。|用于在远程计算机上配置 WS-AT 的调用所花时间超过 90 秒。|  
-|22|远程计算机上未安装 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]，或者安装不正确。|在计算机上安装 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。|  
+|22|WinFX 在远程计算机上未安装或未正确安装。|在计算机上安装 WinFX。|  
 |23|远程配置由于远程计算机上出现异常而失败。|检查错误消息中的可操作项|  
 |26|传递到 WsatConfig.exe 的自变量无效。|检查命令行中的错误。|  
 |27|`-accounts` 命令行选项无效。|更正 -`accounts` 命令行选项以正确地指定用户帐户。|  
@@ -52,10 +52,10 @@ ms.locfileid: "61928812"
 |38|进程或用户没有足够的权限更改防火墙配置。|使用管理员用户帐户执行 WsatConfig.exe。|  
 |39|WsatConfig.exe 在更新防火墙配置时遇到了错误。|检查错误消息中的可操作项。|  
 |40|WsatConfig.exe 无法授予 MSDTC 对证书私钥文件的读取访问权限|使用管理员用户帐户执行 WsatConfig.exe。|  
-|41|找不到安装的 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]，或者找到的版本与工具能够配置的版本不匹配。|确保正确安装了 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]，并且仅使用该版 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 附带的 WsatConfig.exe 工具来配置 WS-AT。|  
+|41|无法找到任何安装 WinFX，或者找到的版本不匹配的工具是支持的配置。|确保已正确安装 WinFX 和仅使用 WsatConfig.exe 工具附带 WinFX 配置 WS-AT 该版本。|  
 |42|在命令行上多次指定了某个自变量。|在执行 WsatConfig.exe 时只指定每个自变量一次。|  
 |43|如果未启用 WS-AT，则 WsatConfig.exe 无法更新 WS-AT 设置。|指定 `-network:enable` 作为附加命令行自变量。|  
-|44|缺少必需的修补程序，在安装该修补程序之前将无法配置 WS-AT。|有关安装必需的修补程序的说明，请参见 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 发行说明。|  
+|44|缺少必需的修补程序，在安装该修补程序之前将无法配置 WS-AT。|WinFX 的发行说明安装所需修补程序的说明，请参阅。|  
 |45|`-virtualServer` 命令行选项无效。|通过指定要在其中进行配置的群集资源的网络名称，更正 `-virtualServer` 命令行选项。|  
 |46|尝试启动 ETW 跟踪会话时发生错误|使用返回的错误代码映射到相应的系统错误。|  
 |47|进程或用户没有足够的权限启用 ETW 跟踪会话。|使用管理员用户帐户执行 WsatConfig.exe。|  

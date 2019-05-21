@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875553"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960116"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用标识模型管理声明和授权
 授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 Windows Communication Foundation (WCF) 执行授权处理支持两种机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是名为基于声明的模型*标识模型*。 WCF 使用标识模型创建的声明从传入消息;可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  
@@ -93,7 +93,6 @@ ms.locfileid: "65875553"
  ![在层次结构中的声明集。](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  多个声明集可能具有相同的颁发声明集下, 图中所示：
- 
   
  ![多个具有相同的颁发声明集声明集。](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   

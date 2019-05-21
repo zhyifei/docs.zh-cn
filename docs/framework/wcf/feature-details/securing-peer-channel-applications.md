@@ -2,15 +2,15 @@
 title: 保护对等通道应用程序
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 8fbad019270851a32d932c33d6fd401cea2b3515
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603319"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959884"
 ---
 # <a name="securing-peer-channel-applications"></a>保护对等通道应用程序
-像 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 下的其他绑定一样，`NetPeerTcpBinding` 默认情况下启用了安全，并提供基于传输的安全或基于消息的安全（或二者皆提供）。 本主题讨论这两种类型的安全。 安全类型由绑定规范中的安全模式标记指定 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
+等下 WinFX，其他绑定`NetPeerTcpBinding`默认情况下启用了安全性并提供了同时基于传输和消息的安全 （或两者）。 本主题讨论这两种类型的安全。 安全类型由绑定规范中的安全模式标记指定 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
   
 ## <a name="transport-based-security"></a>基于传输的安全  
  对等通道支持两种类型的用于保护传输安全的身份验证凭据，这两种类型都要求设置关联 `ClientCredentialSettings.Peer` 上的 `ChannelFactory` 属性：  

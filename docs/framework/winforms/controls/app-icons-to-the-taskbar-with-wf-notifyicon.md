@@ -13,64 +13,65 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 2d7fb1dfbdfb7cf9be33fc8c9711b4fbdc3efc2d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 05b6f300afea4671c1a847b116b378514ecb8b56
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880555"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959501"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标
-Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域显示一个图标。 若要在状态区域中显示多个图标，必须有多个<xref:System.Windows.Forms.NotifyIcon>窗体上的组件。 若要设置控件显示的图标，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 此外可以编写代码<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件处理程序，以便当用户双击该图标出现该问题。 例如，您能够为用户配置后台进程的图标表示显示一个对话框。  
-  
+
+Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域显示一个图标。 若要在状态区域中显示多个图标，必须有多个<xref:System.Windows.Forms.NotifyIcon>窗体上的组件。 若要设置控件显示的图标，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 此外可以编写代码<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件处理程序，以便当用户双击该图标出现该问题。 例如，您能够为用户配置后台进程的图标表示显示一个对话框。
+
 > [!NOTE]
->  <xref:System.Windows.Forms.NotifyIcon>组件用于通知目的，警告用户操作或事件已发生或已在某种类型的状态更改。 应与应用程序的标准交互使用菜单、 工具栏和其他用户界面元素。  
-  
-### <a name="to-set-the-icon"></a>若要设置图标  
-  
-1.  将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。  
-  
-2. 将 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。  
-  
-3. 设置<xref:System.Windows.Forms.NotifyIcon.Text%2A>属性设置为一个合适的工具提示字符串。  
-  
-     在下面的代码示例中，将路径设置图标的位置是**我的文档**文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机将包含该文件夹。 选择此位置，用户还可以具有最少的系统访问级别来安全地运行应用程序。 下面的示例要求具有的窗体<xref:System.Windows.Forms.NotifyIcon>已添加的控件。 它还需要一个名为的图标文件`Icon.ico`。  
-  
-    ```vb  
-    ' You should replace the bold icon in the sample below  
-    ' with an icon of your own choosing.  
-    NotifyIcon1.Icon = New _   
-       System.Drawing.Icon(System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.Personal) _  
-       & "\Icon.ico")  
-    NotifyIcon1.Visible = True  
-    NotifyIcon1.Text = "Antivirus program"  
-    ```  
-  
-    ```csharp  
-    // You should replace the bold icon in the sample below  
-    // with an icon of your own choosing.  
-    // Note the escape character used (@) when specifying the path.  
-    notifyIcon1.Icon =   
-       new System.Drawing.Icon (System.Environment.GetFolderPath  
-       (System.Environment.SpecialFolder.Personal)  
-       + @"\Icon.ico");  
-    notifyIcon1.Visible = true;  
-    notifyIcon1.Text = "Antivirus program";  
-    ```  
-  
-    ```cpp  
-    // You should replace the bold icon in the sample below  
-    // with an icon of your own choosing.  
-    notifyIcon1->Icon = gcnew   
-       System::Drawing::Icon(String::Concat  
-       (System::Environment::GetFolderPath  
-       (System::Environment::SpecialFolder::Personal),  
-       "\\Icon.ico"));  
-    notifyIcon1->Visible = true;  
-    notifyIcon1->Text = "Antivirus program";  
-    ```  
-  
+> <xref:System.Windows.Forms.NotifyIcon>组件用于通知目的，警告用户操作或事件已发生或已在某种类型的状态更改。 应与应用程序的标准交互使用菜单、 工具栏和其他用户界面元素。
+
+### <a name="to-set-the-icon"></a>若要设置图标
+
+1. 将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/visual-studio-ellipsis-button.png)) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。
+
+2. 将 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。
+
+3. 设置<xref:System.Windows.Forms.NotifyIcon.Text%2A>属性设置为一个合适的工具提示字符串。
+
+     在下面的代码示例中，将路径设置图标的位置是**我的文档**文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机将包含该文件夹。 选择此位置，用户还可以具有最少的系统访问级别来安全地运行应用程序。 下面的示例要求具有的窗体<xref:System.Windows.Forms.NotifyIcon>已添加的控件。 它还需要一个名为的图标文件`Icon.ico`。
+
+    ```vb
+    ' You should replace the bold icon in the sample below
+    ' with an icon of your own choosing.
+    NotifyIcon1.Icon = New _
+       System.Drawing.Icon(System.Environment.GetFolderPath _
+       (System.Environment.SpecialFolder.Personal) _
+       & "\Icon.ico")
+    NotifyIcon1.Visible = True
+    NotifyIcon1.Text = "Antivirus program"
+    ```
+
+    ```csharp
+    // You should replace the bold icon in the sample below
+    // with an icon of your own choosing.
+    // Note the escape character used (@) when specifying the path.
+    notifyIcon1.Icon =
+       new System.Drawing.Icon (System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.Personal)
+       + @"\Icon.ico");
+    notifyIcon1.Visible = true;
+    notifyIcon1.Text = "Antivirus program";
+    ```
+
+    ```cpp
+    // You should replace the bold icon in the sample below
+    // with an icon of your own choosing.
+    notifyIcon1->Icon = gcnew
+       System::Drawing::Icon(String::Concat
+       (System::Environment::GetFolderPath
+       (System::Environment::SpecialFolder::Personal),
+       "\\Icon.ico"));
+    notifyIcon1->Visible = true;
+    notifyIcon1->Text = "Antivirus program";
+    ```
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.NotifyIcon>
