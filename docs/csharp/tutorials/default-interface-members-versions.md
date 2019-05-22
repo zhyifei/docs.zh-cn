@@ -3,16 +3,16 @@ title: 在 C# 中使用默认接口成员安全地更新接口
 description: 本高级教程探讨了如何安全地向现有接口定义添加新功能，而不破坏实现该接口的所有类和结构。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452909"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877907"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>教程：在 C# 8 中使用默认接口成员更新接口
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>教程：在 C# 8.0 中使用默认接口成员更新接口
 
-从 .NET Core 3.0 上的 C# 8 开始，可以在声明接口成员时定义实现。 最常见的方案是安全地将成员添加到已经由无数客户端发布并使用的接口。
+从 .NET Core 3.0 上的 C# 8.0 开始，可以在声明接口成员时定义实现。 最常见的方案是安全地将成员添加到已经由无数客户端发布并使用的接口。
 
 在本教程中，你将了解：
 
@@ -23,7 +23,7 @@ ms.locfileid: "65452909"
 
 ## <a name="prerequisites"></a>系统必备
 
-需要将计算机设置为运行 .NET Core，包括 C# 8.0 预览版编译器。 从 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新的 [.NET Core 3.0 预览版 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 开始，可以使用 C# 8 预览版编译器。 从 .NET Core 3.0 预览版 4 开始提供默认接口成员。
+需要将计算机设置为运行 .NET Core，包括 C# 8.0 预览版编译器。 从 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或最新的 [.NET Core 3.0 预览版 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 开始，可以使用 C# 8.0 预览版编译器。 从 .NET Core 3.0 预览版 4 开始提供默认接口成员。
 
 ## <a name="scenario-overview"></a>方案概述
 

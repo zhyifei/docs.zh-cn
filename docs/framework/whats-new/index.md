@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557927"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960012"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -1399,7 +1399,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015 的新增功能
 
-.NET 2015 引入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET 核心。 一些新功能两者都适用，其他功能特定于 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 [!INCLUDE[net_core](../../../includes/net-core-md.md)]。
+.NET 2015 引入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET Core。 一些新功能两者都适用，而另一些功能则特定于 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 .NET Core。
 
 - **ASP.NET Core**
 
@@ -1747,11 +1747,11 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 - **对代码页编码的支持**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] 主要支持 Unicode 编码，在默认情况下为代码页编码提供有限支持。 你可以为 .NET Framework 提供的代码页编码提供支持，但在使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法注册代码页编码的 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 中不受支持。 有关更多信息，请参见<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
+     .NET Core 主要支持 Unicode 编码，在代码页编码方面默认提供一定程度的支持。 可以使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法注册代码页编码，从而支持 .NET Framework 可用但 .NET Core 不支持的代码页编码。 有关更多信息，请参见<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
 
 - **.NET Native**
 
-     面向 [!INCLUDE[net_core](../../../includes/net-core-md.md)] 并以 C# 或 Visual Basic 编写的 Windows 10 的 Windows 应用可以利用将应用程序编译为本机代码而非 IL 的新技术。 它们所生成的应用程序具有启动和执行时间更快速的特点。 有关详细信息，请参阅[使用 .NET Native 编译应用](../net-native/index.md)。 有关探讨与 JIT 编译和 NGEN 的差别以及对你的代码的意义的 .NET Native 概述，请参阅 [.NET Native 和编译](../net-native/net-native-and-compilation.md)。
+     定位 .NET Core 且用 C# 或 Visual Basic 编写的 Windows 10 相关 Windows 应用程序可以利用将应用程序编译为本机代码（而非 IL）的新技术。 它们所生成的应用程序具有启动和执行时间更快速的特点。 有关详细信息，请参阅[使用 .NET Native 编译应用](../net-native/index.md)。 有关探讨与 JIT 编译和 NGEN 的差别以及对你的代码的意义的 .NET Native 概述，请参阅 [.NET Native 和编译](../net-native/net-native-and-compilation.md)。
 
      使用 Visual Studio 2015 或更高版本进行编译时，默认将应用程序编译为本机代码。 有关详细信息，请参阅 [.NET Native 入门](../net-native/getting-started-with-net-native.md)。
 

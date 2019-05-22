@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620785"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586345"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，.NET Framework 在协作取消异步操作或长时间运行的同步操作时使用通过一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
@@ -60,7 +60,7 @@ ms.locfileid: "64620785"
 |<xref:System.Threading.CancellationToken>|通常作为方法参数传递给一个或多个侦听器的轻量值类型。 侦听器通过轮询、回调或等待句柄监视标记的 `IsCancellationRequested` 属性的值。|  
 |<xref:System.OperationCanceledException>|此异常的构造函数的重载将 <xref:System.Threading.CancellationToken> 作为参数接受。 侦听器可能会选择性地引发此异常，议验证取消源并通知其他侦听器它已响应取消请求。|  
   
- 新的取消模型以多种类型集成到 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中。 最重要的类型包括 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>。 建议将此新取消模型用于所有新的库和应用代码。  
+ 新的取消模型以多种类型集成到 .NET Framework 中。 最重要的类型包括 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>。 建议将此新取消模型用于所有新的库和应用代码。  
   
 ## <a name="code-example"></a>代码示例  
  在以下示例中，请求对象创建 <xref:System.Threading.CancellationTokenSource> 对象，然后传递其 <xref:System.Threading.CancellationTokenSource.Token%2A> 属性到可取消操作中。 接收请求的操作通过轮询监视标记的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性的值。 值变为 `true` 后，侦听器可以适当方式终止操作。 在此示例中，方法只需退出，很多情况下都只需执行此操作。  

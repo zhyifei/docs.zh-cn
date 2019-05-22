@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787993"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003746"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供程序
 公共语言运行时 (CLR) 具有两个提供程序：运行时提供程序和断开提供程序。  
   
  运行时提供程序根据启用的关键字（事件的类别）引发事件。 例如，可以通过启用 `LoaderKeyword` 关键字收集加载程序事件。  
   
- Windows (ETW) 事件的事件跟踪记录在扩展名为 .etl 的文件中，之后可以根据需要在一个逗号分隔符值 (.csv) 文件中对该文件进行后期处理。 有关如何将 .etl 文件转换为 .csv 文件的信息，请参阅[控制 .NET Framework 日志记录](../../../docs/framework/performance/controlling-logging.md)。  
+ 事件跟踪 Windows (ETW) 事件会记录到具有以下.etl 扩展名，可以进行后期处理根据需要以逗号分隔值 (.csv) 文件中的文件。 有关如何将 .etl 文件转换为 .csv 文件的信息，请参阅[控制 .NET Framework 日志记录](../../../docs/framework/performance/controlling-logging.md)。  
   
 ## <a name="the-runtime-provider"></a>运行时提供程序  
  运行时提供程序是主 CLR ETW 提供程序。  

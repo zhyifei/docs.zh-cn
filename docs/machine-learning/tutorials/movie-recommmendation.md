@@ -1,19 +1,19 @@
 ---
-title: 教程：生成电影推荐系统
+title: 教程：生成影片推荐系统 - 矩阵因子分解
 description: 本教程演示如何在 .NET Core 控制台应用程序中使用 ML.NET 生成电影推荐系统。 这些步骤使用 C# 和 Visual Studio 2019。
 author: briacht
 ms.author: johalex
 ms.date: 05/06/2019
-ms.custom: mvc
+ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063379"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882268"
 ---
-# <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教程：使用 ML.NET 创建影片推荐系统
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
 本教程演示如何在 .NET Core 控制台应用程序中使用 ML.NET 生成电影推荐系统。 这些步骤使用 C# 和 Visual Studio 2019。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629041"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589656"
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
 <a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
@@ -282,4 +282,4 @@ ms.locfileid: "64629041"
 |[如何：在数据流块中指定任务计划程序](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|演示在应用程序中使用数据流时如何关联特定任务计划程序。|  
 |[演练：使用 BatchBlock 和 BatchedJoinBlock 提高效率](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|描述如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 类改进数据库插入操作的效率，以及如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 类获取程序从数据库中读取数据时产生的结果和发生的任何异常。|  
 |[演练：创建自定义数据流块类型](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|演示创建实现自定义行为的数据流块类型的两种方法。|  
-|[任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|介绍 TPL，一个可在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序里简化并行和并发编程的库。|
+|[任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|介绍 TPL，一个可在 .NET Framework 应用程序里简化并行和并发编程的库。|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ffdfcc1068dd546c8c07a481c9e21fb1faab80
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008962"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003732"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：创建绑定控件并设置显示数据的格式
 可以设置使用数据绑定控件中显示的数据格式与 Windows 窗体数据绑定**格式设置和高级绑定**对话框。  
@@ -27,7 +27,7 @@ ms.locfileid: "62008962"
   
 2. 在窗体中，选择控件，然后打开“属性”窗口。  
   
-3. 展开 **(DataBindings)** 属性，然后在 **（高级）** 框中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](./media/vbellipsesbutton.png "vbEllipsesButton")) 以显示**格式设置和高级绑定**对话框中，已为该控件的属性的完整列表。  
+3.  展开 **(DataBindings)** 属性，然后在 **（高级）** 框中，单击省略号按钮 (![Visual Studio 的属性窗口中的省略号按钮 （...）。](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png))若要显示**格式设置和高级绑定**对话框中，已为该控件的属性的完整列表。  
   
 4. 选择你想要将绑定，然后单击的属性**绑定**箭头。  
   

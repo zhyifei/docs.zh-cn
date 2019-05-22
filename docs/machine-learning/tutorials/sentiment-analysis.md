@@ -1,15 +1,15 @@
 ---
 title: 教程：分析网站评论 - 二元分类
-description: 本教程演示如何创建 .NET Core 控制台应用程序，该应用程序对网站评论情绪进行分类并采取适当的措施。 二元情绪分类器在 Visual Studio 2017 中使用 C#。
-ms.date: 04/18/2019
+description: 本教程演示如何创建 .NET Core 控制台应用程序，该应用程序对网站评论情绪进行分类并采取适当的措施。 二元情绪分类器在 Visual Studio 中使用 C#。
+ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1989a11a2f06ce4d713d6c3ecc70de0da606604e
-ms.sourcegitcommit: 438824ff21f77c4301c6ba8a89a106114aa27bc8
+ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65462233"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593416"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -29,7 +29,7 @@ ms.locfileid: "65462233"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 安装了“.NET Core 跨平台开发”工作负荷的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
+* 安装了“.NET Core 跨平台开发”工作负荷的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 * [UCI Sentiment Labeled Sentences 数据集](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)（zip 文件）
 
@@ -303,7 +303,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 1. 使用下面的代码紧随 `UseModelWithSingleItem()` 方法后创建 `UseModelWithBatchItems()` 方法：
 
     ```csharp
-    public static void UseModelWithBatchItems(MLContext mlContext)
+    public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
     {
 
     }

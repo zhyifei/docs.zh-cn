@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469465"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960295"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -63,7 +63,7 @@ ms.locfileid: "65469465"
 
 **托管 COM 服务器示例**
 
-[COM 服务器](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)示例演示了托管 COM 服务器的创建以及如何进行全局注册。
+[COM 服务器](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)示例展示了如何创建托管 COM 服务器，以及如何通过 RegFree COM 全局注册或使用它。
 
 **Microsoft Office PIA 示例**
 

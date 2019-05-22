@@ -1,17 +1,17 @@
 ---
-title: 对 GitHub 问题进行分类 - 多类分类
+title: 教程：对支持问题进行分类 - 多类分类
 description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题进行分类，将其分配到给定区域。
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: a4122d0cdfe6531275fabf94743882a82f2a13c1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: d47522bef632de1aac890d4de384c1b2c16b7a50
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063525"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877346"
 ---
-# <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教程：将多类分类与 ML .NET 配合使用，对支持问题分类
 
 本示例教程演示如何使用 ML.NET 创建 GitHub 问题分类器来训练模型，使其通过 Visual Studio 中使用 C# 的 .NET Core 控制台应用程序为 GitHub 问题分类和预测区域标签。
 

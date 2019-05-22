@@ -3,12 +3,12 @@ title: 使用索引和范围探索数据范围
 description: 本高级教程教你使用索引和范围来探索数据，以检查顺序数据集的切片。
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 64fae4581e265d4f70b8356d5c651b4fdaca3fe9
-ms.sourcegitcommit: dd3b897feb5c4ac39732bb165848e37a344b0765
+ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64431492"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557187"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
 
@@ -23,9 +23,13 @@ ms.locfileid: "64431492"
 
 ## <a name="language-support-for-indices-and-ranges"></a>对索引和范围的语言支持
 
-通过在索引前面使用 `^` 字符，可以**从末尾**指定索引。 从末尾编制索引将从 `0..^0` 指定整个范围的规则开始。 若要枚举整个数组，请从*第一个元素*开始，一直到*最后一个元素之后*。 想想枚举器上 `MoveNext` 方法的行为：如果枚举到最后一个元素之后，它会返回 false。 索引 `^0` 表示“结尾”、`array[array.Length]` 或最后一个元素后面的索引。 你熟悉表示元素“顺数第 2”的 `array[2]`。 现在，`array[^2]` 意味着元素“倒数第 2”。 
+此语言支持依赖于两个新类型和两个新运算符。
+- <xref:System.Index?displayProperty=nameWithType> 表示一个序列索引。
+- `^` 运算符，指定一个索引与序列末尾相关。
+- <xref:System.Range?displayProperty=nameWithType> 表示序列的子范围。
+- 范围运算符 (`..`)，用于指定范围的开始和末尾，就像操作数一样。
 
-可以使用范围运算符指定范围：`..`。 例如，`0..^0` 指定数组的整个范围：从起始 0 开始，但不包括最后的 0。 两个操作数都可以使用“顺数”或“倒数”。 此外，可以省略其中一个操作数。 默认值为起始索引的 `0` 和结束索引的 `^0`。
+让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence[sequence.Length - n]` 相同。
 
 ```csharp-interactive
 string[] words = new string[]
@@ -43,11 +47,11 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-每个元素的索引均强化了“顺数”和“倒数”的概念，且范围不包括结束范围。 整个数组的“start”是第一个元素。 整个数组的“end”在最后一个元素之后。
-
 可以使用 `^1` 索引检索最后一个词。 在初始化下面添加以下代码：
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+
+范围指定范围的开始和末尾。 范围是排除的，也就是说“末尾”不包含在范围内。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
 
 以下代码创建了一个包含单词“quick”、“brown”和“fox”的子范围。 它包括 `words[1]` 到 `words[3]`。 元素 `words[4]` 不在该范围内。 将以下代码添加到同一方法中。 将其复制并粘贴到交互式窗口的底部。
 
@@ -64,11 +68,6 @@ string[] words = new string[]
 还可以将范围或索引声明为变量。 然后可以在 `[` 和 `]` 字符中使用该变量：
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
-
-前面的示例展示了两个需要详细说明的设计决策：
-
-- 范围具有*独占性*，这意味着最后一个索引处的元素不在范围内。
-- 索引 `^0` 是集合的*结尾*，而不是集合中的*最后一个元素*。
 
 下面的示例展示了使用这些选项的多种原因。 请修改 `x`、`y` 和 `z` 以尝试不同的组合。 在进行实验时，请使用 `x` 小于 `y`且 `y` 小于 `z` 的有效组合值。 在新方法中添加以下代码。 尝试不同的组合：
 

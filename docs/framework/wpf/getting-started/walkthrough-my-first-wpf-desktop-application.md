@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d0abd18b2242ab21e8a915caac1ff9e3216acd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3440ddf6cdae6b24bcf1059ab2c76d8fb957263
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617271"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003856"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>演练：我的第一个 WPF 桌面应用程序
 
@@ -45,9 +45,9 @@ ms.locfileid: "64617271"
 
 ## <a name="prerequisites"></a>系统必备
 
-- Visual Studio 2017 或更高版本
+- （本文使用 Visual Studio 2019） 的 visual Studio 2017 或更高版本
 
-   有关安装 Visual Studio 的最新版本的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 本文使用 Visual Studio 2019。
+   有关安装 Visual Studio 的最新版本的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
 
 ## <a name="create-the-application-project"></a>创建应用程序项目
 
@@ -55,23 +55,21 @@ ms.locfileid: "64617271"
 
 1. 在 Visual Basic 或 Visual C# 名为创建新的 WPF 应用程序项目 **`ExpenseIt`**:
 
-   1. 打开 Visual Studio 并选择**文件** > **新建** > **项目**。
+   1. 打开 Visual Studio 并选择**创建一个新项目**下**开始**菜单。
 
       **创建一个新项目**对话框随即打开。
 
-      ![创建新项目对话框](./media/gettingstartedfigure0a.png)
-
    2. 在中**语言**下拉列表中，选择**C#** 或**Visual Basic**。
-
+      
    3. 选择**WPF 应用 (.NET Framework)** 模板，然后选择**下一步**。 
+     
+      ![创建新项目对话框](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
-   4. 选择**创建一个新项目**。
-
       **配置新项目**对话框随即打开。
 
-      ![配置新项目对话框](./media/gettingstartedfigure0c.png)
+   4. 输入项目名称**`ExpenseIt`** ，然后选择**创建**。
 
-   5. 输入项目名称**`ExpenseIt`** ，然后选择**创建**。
+      ![配置新项目对话框](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
       Visual Studio 创建项目并打开名为的默认应用程序窗口的设计器**MainWindow.xaml**。
 
@@ -224,7 +222,7 @@ ms.locfileid: "64617271"
 
     下图显示了与应用程序<xref:System.Windows.Navigation.NavigationWindow>按钮：
 
-    ![ExpenseIt 示例屏幕快照](./media/gettingstartedfigure1.png)
+    ![应用程序后生成并运行它。](./media/walkthrough-my-first-wpf-desktop-application/build-run-application.png)
 
 2. 关闭要返回到 Visual Studio 的应用程序。
 
@@ -290,9 +288,7 @@ ms.locfileid: "64617271"
 
     下图显示了你创建的控件：
 
-    ![ExpenseIt 示例屏幕快照](./media/gettingstartedfigure2.png)
-
-3. 关闭要返回到 Visual Studio 的应用程序。
+![ExpenseIt 示例屏幕截图显示名称的列表](./media/walkthrough-my-first-wpf-desktop-application/add-application-controls.png)
 
 ## <a name="add-an-image-and-a-title"></a>添加图像和标题
 
@@ -326,7 +322,7 @@ ms.locfileid: "64617271"
 
 下图显示了刚添加的结果：
 
-![ExpenseIt 示例屏幕快照](./media/gettingstartedfigure3.png)
+![ExpenseIt 示例屏幕截图显示了新的图像背景和页标题](./media/walkthrough-my-first-wpf-desktop-application/add-application-image-title.png)
 
 ## <a name="add-code-to-handle-events"></a>添加代码以处理事件
 
@@ -361,7 +357,7 @@ ms.locfileid: "64617271"
 
 下图显示了添加到的 UI 元素*ExpenseReportPage.xaml*。
 
-![ExpenseIt 示例屏幕快照](./media/gettingstartedfigure4.png)
+![ExpenseIt 示例屏幕截图显示刚刚为 ExpenseReportPage 创建 UI。](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 ## <a name="style-controls"></a>控件的样式
 
@@ -405,7 +401,7 @@ ms.locfileid: "64617271"
 
 6. 生成并运行应用程序。 窗口外观是与以前相同。
 
-    ![ExpenseIt 示例屏幕快照](./media/gettingstartedfigure4.png)
+    ![ExpenseIt 示例屏幕截图，其中相同的外观如下所示的最后一节。](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 7. 关闭要返回到 Visual Studio 的应用程序。
 
@@ -473,7 +469,7 @@ ms.locfileid: "64617271"
 
 下图显示的两个页面`ExpenseIt`控件、 布局、 样式、 数据绑定和数据模板应用与应用程序：
 
-![ExpenseIt 示例屏幕快照](./media/gettingstartedfigure5.png)
+![显示名称列表和费用报表应用程序的两个页面。](./media/walkthrough-my-first-wpf-desktop-application/application-data-templates.png)
 
 > [!NOTE]
 > 此示例演示了 WPF 的特定功能并不遵循所有最佳实践等安全、 本地化和可访问性。 WPF 和.NET 应用程序开发最佳做法的全面介绍，请参阅以下主题：

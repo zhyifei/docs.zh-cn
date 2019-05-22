@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008949"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003763"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows 窗体上创建简单绑定控件
 与*简单绑定*，可以在控件中显示单个数据元素，如从数据集表中列的值。 可以将控件属性简单绑定到数据值。  
@@ -28,7 +28,7 @@ ms.locfileid: "62008949"
   
      最常绑定的属性将显示下面 **(DataBindings)** 属性。 例如，在大多数控件而言**文本**最经常绑定属性。  
   
-4. 如果该属性要绑定不经常绑定的属性之一，请单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](./media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（高级）** 框，以显示**格式设置和高级绑定**为该控件的属性的完整列表对话框。  
+4.  如果该属性要绑定不经常绑定的属性之一，请单击**省略号**按钮 (![的 Visual Studio 属性窗口中的省略号按钮 （...）](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) 中 **(高级）** 框，以显示**格式设置和高级绑定**为该控件的属性的完整列表对话框。  
   
 5. 选择你想要绑定，并单击下的下拉箭头的属性**绑定**。  
   

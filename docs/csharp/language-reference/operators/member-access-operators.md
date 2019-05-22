@@ -24,14 +24,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 921d69e3deb7e5bb5115eb723727462839af9b6b
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452889"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881048"
 ---
-# <a name="member-access-operators"></a>成员访问运算符
+# <a name="member-access-operators-c-reference"></a>成员访问运算符（C# 参考）
 
 访问类型成员时，可能会使用以下运算符：
 
@@ -88,7 +88,7 @@ ms.locfileid: "65452889"
 
 ### <a name="other-usages-of-"></a>[] 的其他用法
 
-有关指针元素访问的信息，请参阅[如何：使用指针访问数组元素](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)。
+要了解指针元素访问，请参阅[与指针相关的运算符](pointer-related-operators.md)一文的[指针元素访问运算符 []](pointer-related-operators.md#pointer-element-access-operator-) 部分。
 
 方括号还用于指定[属性](../../programming-guide/concepts/attributes/index.md)：
 

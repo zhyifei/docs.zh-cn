@@ -1,18 +1,20 @@
 ---
 title: C# 8.0 中的新增功能 - C# 指南
-description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 2。
+description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 5。
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754379"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557152"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
-C# 语言有许多增强功能，可以通过预览版 2 进行试用。 预览版 2 中的新增功能包括：
+C# 语言有许多增强功能，可以进行试用。 
 
+- [Readonly 成员](#readonly-members)
+- [默认接口成员](#default-interface-members)
 - [模式匹配增强功能](#more-patterns-in-more-places)：
   * [Switch 表达式](#switch-expressions)
   * [属性模式](#property-patterns)
@@ -21,17 +23,67 @@ C# 语言有许多增强功能，可以通过预览版 2 进行试用。 预览�
 - [Using 声明](#using-declarations)
 - [静态本地函数](#static-local-functions)
 - [可处置的 ref 结构](#disposable-ref-structs)
-
-以下语言功能最先出现在 C# 8.0 预览版 1 中：
-
 - [可为空引用类型](#nullable-reference-types)
 - [异步流](#asynchronous-streams)
 - [索引和范围](#indices-and-ranges)
 
 > [!NOTE]
-> 本文针对 C# 8.0 预览版 2 进行了最后一次更新。
+> 本文针对 C# 8.0 预览版 5 进行了最后一次更新。
 
 本文的剩余部分将简要介绍这些功能。 如果有详细讲解的文章，则将提供指向这些教程和概述的链接。
+
+## <a name="readonly-members"></a>Readonly 成员
+
+可将 `readonly` 修饰符应用于结构的任何成员。 它指示该成员不会修改状态。 这比将 `readonly` 修饰符应用于 `struct` 声明更精细。  请考虑以下可变结构：
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+像大多数结构一样， `ToString()` 方法不会修改状态。 可以通过将 `readonly` 修饰符添加到 `ToString()` 的声明来对此进行指示：
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+上述更改会生成编译器警告，因为 `ToString` 访问 `Distance` 属性，该属性未标记为 `readonly`：
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+需要创建防御性副本时，编译器会发出警告。  `Distance` 属性不会更改状态，因此可以通过将 `readonly` 修饰符添加到声明来修复此警告：
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+请注意，`readonly` 修饰符对于只读属性是必需的。 编译器不会假设 `get` 访问器不修改状态；必须明确声明 `readonly`。 编译器会强制实施以下规则：`readonly` 成员不修改状态。 除非删除 `readonly` 修饰符，否则不会编译以下方法：
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+通过此功能，可以指定设计意图，使编译器可以强制执行该意图，并基于该意图进行优化。
+
+## <a name="default-interface-members"></a>默认接口成员
+
+现在可以将成员添加到接口，并为这些成员提供实现。 借助此语言功能，API 作者可以将方法添加到以后版本的接口中，而不会破坏与该接口当前实现的源或二进制文件兼容性。 现有的实现继承默认实现。 此功能使 C# 与面向 Android 或 Swift 的 API 进行互操作，此类 API 支持类似功能。 默认接口成员还支持类似于“特征”语言功能的方案。
+
+默认接口成员会影响很多方案和语言元素。 我们的第一个教程介绍如何[使用默认实现更新接口](../tutorials/default-interface-members-versions.md)。 其他教程和参考更新将适时公开发布。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置中使用更多模式
 
@@ -321,9 +373,15 @@ await foreach (var number in GenerateSequence())
 
 范围和索引为在数组中指定子范围（<xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）提供了简洁语法。
 
-通过在索引前面使用 `^` 字符，可以**从末尾**指定索引。 从末尾编制索引将从 `0..^0` 指定整个范围的规则开始。 若要枚举整个数组，请从*第一个元素*开始，一直到*最后一个元素之后*。 想想枚举器上 `MoveNext` 方法的行为：如果枚举到最后一个元素之后，它会返回 false。 索引 `^0` 表示“结尾”、`array[array.Length]` 或最后一个元素后面的索引。 你熟悉表示元素“顺数第 2”的 `array[2]`。 现在，`array[^2]` 意味着元素“倒数第 2”。 
+此语言支持依赖于两个新类型和两个新运算符。
+- <xref:System.Index?displayProperty=nameWithType> 表示一个序列索引。
+- `^` 运算符，指定一个索引与序列末尾相关。
+- <xref:System.Range?displayProperty=nameWithType> 表示序列的子范围。
+- 范围运算符 (`..`)，用于指定范围的开始和末尾，就像操作数一样。
 
-可以使用范围运算符指定范围：`..`。 例如，`0..^0` 指定数组的整个范围：从起始 0 开始，但不包括最后的 0。 两个操作数都可以使用“顺数”或“倒数”。 此外，可以省略其中一个操作数。 默认值为起始索引的 `0` 和结束索引的 `^0`。
+让我们从索引规则开始。 请考虑数组 `sequence`。 `0` 索引与 `sequence[0]` 相同。 `^0` 索引与 `sequence[sequence.Length]` 相同。 请注意，`sequence[^0]` 不会引发异常，就像 `sequence[sequence.Length]` 一样。 对于任何数字 `n`，索引 `^n` 与 `sequence.Length - n` 相同。
+
+范围指定范围的开始和末尾。 范围是排除的，也就是说“末尾”不包含在范围内。 范围 `[0..^0]` 表示整个范围，就像 `[0..sequence.Length]` 表示整个范围。 
 
 请看以下几个示例。 请考虑以下数组，用其顺数索引和倒数索引进行注释：
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-每个元素的索引均强化了“顺数”和“倒数”的概念，且范围不包括结束范围。 整个数组的“start”是第一个元素。 整个数组的“end”在最后一个元素之后。
 
 可以使用 `^1` 索引检索最后一个词：
 
