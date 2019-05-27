@@ -2,19 +2,19 @@
 title: 如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337365"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584375"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="ba6f6-102">如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="ba6f6-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
-<span data-ttu-id="ba6f6-103">此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。</span><span class="sxs-lookup"><span data-stu-id="ba6f6-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="50cea-102">如何：使用组将一个文件拆分成多个文件 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="50cea-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="50cea-103">此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。</span><span class="sxs-lookup"><span data-stu-id="50cea-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="ba6f6-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="ba6f6-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="50cea-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="50cea-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="ba6f6-105">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="ba6f6-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="50cea-105">将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：</span><span class="sxs-lookup"><span data-stu-id="50cea-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "59337365"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="ba6f6-106">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：请注意，这两个文件拥有一些共同的名称。</span><span class="sxs-lookup"><span data-stu-id="ba6f6-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="50cea-106">将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：请注意，这两个文件拥有一些共同的名称。</span><span class="sxs-lookup"><span data-stu-id="50cea-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "59337365"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="ba6f6-107">示例</span><span class="sxs-lookup"><span data-stu-id="ba6f6-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="50cea-107">示例</span><span class="sxs-lookup"><span data-stu-id="50cea-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -122,13 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="ba6f6-108">对于与数据文件位于同一文件夹中的每个组，程序将为这些组编写单独的文件。</span><span class="sxs-lookup"><span data-stu-id="ba6f6-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="50cea-108">对于与数据文件位于同一文件夹中的每个组，程序将为这些组编写单独的文件。</span><span class="sxs-lookup"><span data-stu-id="50cea-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ba6f6-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="ba6f6-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="50cea-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="50cea-109">Compiling the Code</span></span>
 
- <span data-ttu-id="ba6f6-110">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="ba6f6-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+<span data-ttu-id="50cea-110">使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="50cea-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="ba6f6-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="ba6f6-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50cea-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="50cea-111">See also</span></span>
 
-- [<span data-ttu-id="ba6f6-112">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="ba6f6-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="ba6f6-113">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="ba6f6-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="50cea-112">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="50cea-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="50cea-113">LINQ 和文件目录 (C#)</span><span class="sxs-lookup"><span data-stu-id="50cea-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

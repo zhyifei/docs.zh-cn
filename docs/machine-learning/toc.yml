@@ -14,7 +14,7 @@
     - name: 对支持问题进行分类（多类分类）
       href: tutorials/github-issue-classification.md
     - name: 预测价格（回归）
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: 对鸢尾花进行分类（K 平均值聚类分析）
       href: tutorials/iris-clustering.md
     - name: 影片推荐系统（矩阵因子分解）

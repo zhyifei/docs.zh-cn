@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-ms.openlocfilehash: a1f067462361bb123c9d61a1d099c900a6641d6b
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028196"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632812"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="7d8da-103">如何：使用 FTP 上传文件</span><span class="sxs-lookup"><span data-stu-id="7d8da-103">How to: Upload files with FTP</span></span>
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="32538-103">如何：使用 FTP 上传文件</span><span class="sxs-lookup"><span data-stu-id="32538-103">How to: Upload files with FTP</span></span>
 
-<span data-ttu-id="7d8da-104">此示例演示如何上传文件到 FTP 服务器。</span><span class="sxs-lookup"><span data-stu-id="7d8da-104">This sample shows how to upload a file to an FTP server.</span></span>
+<span data-ttu-id="32538-104">此示例演示如何上传文件到 FTP 服务器。</span><span class="sxs-lookup"><span data-stu-id="32538-104">This sample shows how to upload a file to an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7d8da-105">示例</span><span class="sxs-lookup"><span data-stu-id="7d8da-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="32538-105">示例</span><span class="sxs-lookup"><span data-stu-id="32538-105">Example</span></span>
 
 ```csharp
 using System;
