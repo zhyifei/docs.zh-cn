@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739457"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586268"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 语言演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -72,7 +72,7 @@ ms.locfileid: "55739457"
  演示如何使用 Visual Basic 函数确定文件信息、在文件中搜索字符串以及对文件进行写入操作。  
   
  [使用 .NET Framework 方法操作文件](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 演示如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法确定文件信息，在文件中搜索字符串，以及对文件进行写入操作。  
+ 演示如何使用 .NET Framework 方法确定文件信息，在文件中搜索字符串，以及对文件进行写入操作。  
   
  [在 Visual Basic 中保持对象](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  演示如何创建简单的对象并将其数据保存到文件中。  

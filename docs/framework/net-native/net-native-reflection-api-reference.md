@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d44df3d0869bb1822cf4f509ed3e8b6dc57c57b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 833d31c48220e2d2b5d07ee482325df090714329
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614896"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052419"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native 本机反射 API 参考
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 包括三个新的异常类型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)， [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)，和[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 请注意有关所有三种异常类型的以下内容：  
+.NET native 包括三个新的异常类型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)， [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)，和[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 请注意有关所有三种异常类型的以下内容：  
   
  这些类型仅供内部使用。  
- 这三种异常类型仅适用于 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链的使用。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链检测到缺少数据而无法使程序执行继续进行时，引发异常。  
+ 这些三种异常类型是使用.NET Native 工具链。 如果.NET Native 工具链检测到缺少数据而不允许程序执行继续，则会引发异常。  
   
  不在代码中处理这些异常。  
  这些异常指示缺少应用程序所需的元数据（ [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常）或缺少应用程序所需的实现代码（ [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常）。 可以通过修改运行时指令 (.rd.xml) 文件，使所需的元数据或实现代码在运行时可用，从而更正这些异常条件。 有关更多信息，请参见 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 有两个故障排除程序可用于为运行时指令文件提供合适的条目，指令文件将消除 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常：  
@@ -25,10 +25,10 @@ ms.locfileid: "64614896"
 - 方法的 [MissingMetadataException 故障排除程序](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
 > [!NOTE]
->  此引用记录了三种对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]唯一的异常类型。 .NET Framework 核心反射 API 的参考文档，请参阅<xref:System.Reflection>，<xref:System.Reflection.Context>和<xref:System.Reflection.Emit>命名空间。 要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。  
+>  此引用记录是唯一的.NET Native 的三种异常类型。 .NET Framework 核心反射 API 的参考文档，请参阅<xref:System.Reflection>，<xref:System.Reflection.Context>和<xref:System.Reflection.Emit>命名空间。 要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 命名空间  
- <xref:System.Reflection> 命名空间包含用于 .NET Framework 中的反射的核心类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括两个新的异常类型：  
+ <xref:System.Reflection> 命名空间包含用于 .NET Framework 中的反射的核心类型。 .NET native，它还包括两个新的异常类型：  
   
 |类|描述|  
 |-----------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "64614896"
  要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Reflection> 引用页面。  
   
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices 命名空间  
- <xref:System.Runtime.CompilerServices> 命名空间包括通过语言编译器为用户设计的类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括一个新的异常类型：  
+ <xref:System.Runtime.CompilerServices> 命名空间包括通过语言编译器为用户设计的类型。 .NET native，它还包括新的异常类型：  
   
 |类|描述|  
 |-----------|-----------------|  

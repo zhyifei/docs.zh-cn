@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ba528f8545f0781f15e4479cbef0b80feeab46d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 246584a34d6a3a8aaf4cac9845e8bb77d1654fa1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870664"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052439"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>缺少运行时间项目异常类 (.NET Native)
-**适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
+**适用于面向 Windows 10，仅限.NET 本机 Windows 应用程序的.NET**  
   
  当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。  
   
  **命名空间：** System.Reflection  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
+>  `MissingRuntimeArtifactException`类旨在仅供内部使用.NET Native 工具链。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
   
 ## <a name="syntax"></a>语法  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -32,8 +32,8 @@ ms.locfileid: "61870664"
   
 |构造函数|描述|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|通过使用一个系统提供的、描述该错误的消息，来初始化 `MissingRuntimeArtifactException` 类的一个实例。<br /><br /> 该构造函数仅由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链用于内部用途。|  
-|`public MissingRuntimeArtifactException(String message)`|用指定的错误消息初始化 `MissingRuntimeArtifactException` 类的新实例。<br /><br /> 该构造函数仅由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链用于内部用途。|  
+|`public MissingRuntimeArtifactException()`|通过使用一个系统提供的、描述该错误的消息，来初始化 `MissingRuntimeArtifactException` 类的一个实例。<br /><br /> 此构造函数是由.NET Native 工具链内部使用。|  
+|`public MissingRuntimeArtifactException(String message)`|用指定的错误消息初始化 `MissingRuntimeArtifactException` 类的新实例。<br /><br /> 此构造函数是由.NET Native 工具链内部使用。|  
   
 ## <a name="properties"></a>属性  
   

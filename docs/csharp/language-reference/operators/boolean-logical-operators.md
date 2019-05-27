@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427313"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880569"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -47,7 +47,7 @@ ms.locfileid: "59427313"
 - 二元 [`&`（逻辑与）](#logical-and-operator-)、[`|`（逻辑或）](#logical-or-operator-)和 [`^`（逻辑异或）](#logical-exclusive-or-operator-)运算符。 这些运算符始终计算两个操作数。
 - 二元 [`&&`（条件逻辑与）](#conditional-logical-and-operator-)和 [`||`（条件逻辑或）](#conditional-logical-or-operator-)运算符。 这些运算符仅在必要时才计算第二个操作数。
 
-对于[整型](../keywords/integral-types-table.md)类型操作数，`&`、`|` 和 `^` 运算符执行位逻辑运算。
+对于[整型](../keywords/integral-types-table.md)类型的操作数，`&`、`|` 和 `^` 运算符执行位逻辑运算。 有关详细信息，请参阅[位运算符和移位运算符](bitwise-and-shift-operators.md)。
 
 ## <a name="logical-negation-operator-"></a>逻辑非运算符 !
 
@@ -67,7 +67,7 @@ ms.locfileid: "59427313"
 
 [条件逻辑与运算符](#conditional-logical-and-operator-) `&&` 也计算操作数的逻辑与，但如果第一个操作数的计算结果为 `false`，它就不会计算第二个操作数。
 
-对于整型类型的操作数，`&` 运算符计算操作数的[位逻辑与](and-operator.md#integer-logical-bitwise-and-operator)。 一元 `&` 运算符是 [address-of 运算符](and-operator.md#unary-address-of-operator)。
+对于整型类型的操作数，`&` 运算符计算其操作数的[位逻辑 AND](bitwise-and-shift-operators.md#logical-and-operator-)。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
 
 ## <a name="logical-exclusive-or-operator-"></a>逻辑异或运算符 ^
 
@@ -75,7 +75,7 @@ ms.locfileid: "59427313"
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-对于整型类型的操作数，`^` 运算符计算操作数的[位逻辑异或](xor-operator.md)。
+对于整型类型的操作数，`^` 运算符计算其操作数的[位逻辑异或](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
 
 ## <a name="logical-or-operator-"></a>逻辑或运算符 |
 
@@ -89,7 +89,7 @@ ms.locfileid: "59427313"
 
 [条件逻辑或运算符](#conditional-logical-or-operator-) `||` 也计算操作数的逻辑或，但如果第一个操作数的计算结果为 `true`，它就不会计算第二个操作数。
 
-对于整型类型的操作数，`|` 运算符计算操作数的[位逻辑或](or-operator.md)。
+对于整型类型的操作数，`|` 运算符计算其操作数的[位逻辑 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>条件逻辑与运算符 &amp;&amp;
 
@@ -187,9 +187,11 @@ x = x op y
 - [逻辑非运算符](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [逻辑运算符](~/_csharplang/spec/expressions.md#logical-operators)
 - [条件逻辑运算符](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [复合赋值](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
+- [位运算符和移位运算符](bitwise-and-shift-operators.md)

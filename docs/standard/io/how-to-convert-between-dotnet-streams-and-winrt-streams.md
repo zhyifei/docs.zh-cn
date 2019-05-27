@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835130"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877942"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>如何：在 .NET Framework 和 Windows 运行时流之间进行转换（仅限 Windows）
 
@@ -51,7 +51,7 @@ Windows 运行时提供支持只读、只写或读写的流类型。 如果将 W
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> 将 .NET 中适用于 UWP 应用的托管流转换为 Windows 运行时中的输出流。
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) 将适用于 UWP 应用的 .NET 中的托管流转换为 Windows 运行时可用于读取或写入的随机访问流。
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> 将适用于 UWP 应用的 .NET 中的托管流转换为 Windows 运行时可用于读取或写入的随机访问流。
 
 在将 .NET Framework 流转换为 Windows 运行时流时，转换后的流的功能将取决于原始流。 例如，如果原始流支持读取和写入，并且你调用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> 来转换流，则返回的类型为 `IRandomAccessStream`。 `IRandomAccessStream` 可实现 `IInputStream` 和 `IOutputStream`，且支持读取和写入。
 
@@ -59,7 +59,7 @@ Windows 运行时提供支持只读、只写或读写的流类型。 如果将 W
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>示例:将 .NET Framework 转换为 Windows 运行时随机访问流
 
-可使用 [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) 方法，从 .NET Framework 流转换为 Windows 运行时随机访问流，如以下示例中所示：
+要从 .NET Framework 流转换为 Windows 运行时随机访问流，请使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> 方法，如以下示例所示：
 
 > [!IMPORTANT]
 > 确保所使用的 .NET Framework 流支持查找或将其复制到支持查找的流。 可使用 <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> 属性来确定这一点。
@@ -72,5 +72,5 @@ Windows 运行时提供支持只读、只写或读写的流类型。 如果将 W
 ## <a name="see-also"></a>请参阅
 
 - [快速入门：读取和写入文件 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
-- [适用于 Windows 应用商店应用的 .NET 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
+- [适用于 Microsoft Store 应用的 .NET 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
 - [适用于 Windows 应用商店应用的 .NET API](https://docs.microsoft.com/previous-versions/br230232(v=vs.120))  

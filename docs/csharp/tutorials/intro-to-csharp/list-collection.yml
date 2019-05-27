@@ -9,16 +9,16 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029484"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880563"
 items:
 - durationInMinutes: 1
   content: >
-    本教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C# 代码，并查看代码编译和运行结果。 具体包含一系列课程，介绍了如何创建、修改和浏览集合和数组。
+    本教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C# 代码，并查看代码编译和运行结果。 它包含一系列有关创建、修改和探索集合和数组的课程。
 - title: 创建列表
   durationInMinutes: 2
   content: >
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环读取整个列表需要用到在前面的教程中学到的概念。
+    你已创建了一个字符串列表，在该列表中添加了三个名称，并打印了所有大写的名称。 循环读取整个列表需要用到在前面的教程中学到的概念。
 
 
     用于显示名称的代码使用[字符串内插](../../language-reference/tokens/interpolated.md)功能。 如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 方法。
@@ -56,7 +56,7 @@ items:
     创建的集合使用 <xref:System.Collections.Generic.List%601> 类型。 此类型存储一系列元素。 元素类型是在尖括号内指定。
 
 
-    <xref:System.Collections.Generic.List%601> 类型的一个重要方面是，既可以扩大，也可以收缩，方便用户添加或删除元素。 在已编写的代码下方添加以下代码：
+    <xref:System.Collections.Generic.List%601> 类型的一个重要方面是，既可以扩大，也可以收缩，方便用户添加或删除元素。 在显示其内容后，通过修改内容，可以查看结果。 在已编写的代码下方添加以下代码（在输出内容的循环下方）：
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    又向列表的末尾添加了两个名称。 同时，也删除了一个名称。
+    又向列表的末尾添加了两个名称。 同时，也删除了一个名称。 此代码块的输出显示初始内容，然后输出一个空行和新内容。
 
 
     借助 <xref:System.Collections.Generic.List%601>，还可以按索引引用各项。 使用 `[` 和 `]` 令牌访问这些项。 在已编写的代码下方添加以下代码，再试运行看看：
@@ -112,7 +112,7 @@ items:
 - title: 搜索列表并进行排序
   durationInMinutes: 5
   content: >
-    我们的示例使用的列表较小，但大家的应用程序创建的列表通常可能会包含更多元素，有时可能会包含数以千计的元素。 若要在更大的集合中查找元素，需要在列表中搜索不同的项。 <xref:System.Collections.Generic.List%601.IndexOf%2A> 方法可搜索项，并返回此项的索引。 试试此方法，看看它的运行机制如何。  在当前已编写的代码下方添加以下代码：
+    我们的示例使用的列表较小，但大家的应用程序创建的列表通常可能会包含更多元素，有时可能会包含数以千计的元素。 若要在更大的集合中查找元素，需要在列表中搜索不同的项。 <xref:System.Collections.Generic.List%601.IndexOf%2A> 方法可搜索项，并返回此项的索引。 试试此方法，看看它是如何工作的。  在当前已编写的代码下方添加以下代码：
 
 
     ```csharp
@@ -152,7 +152,7 @@ items:
 - title: 其他类型的列表
   durationInMinutes: 5
   content: >
-    到目前为止，大家一直在列表中使用 `string` 类型。 接下来，将让 <xref:System.Collections.Generic.List%601> 使用其他类型。 那就生成一组数字吧。 删除当前编写的代码，再将它替换为以下代码：
+    到目前为止，大家一直在列表中使用 `string` 类型。 接下来，将让 <xref:System.Collections.Generic.List%601> 使用其他类型。 那就生成一组数字吧。 删除迄今为止编写的代码，并将其替换为以下代码：
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    这会创建一个整数列表，并将头两个整数设置为值 1。 这些是斐波那契数列（一系列数字）的头两个值。 斐波那契数列中的每个数字都是前两个数字之和。 添加以下代码：
+    这会创建一个整数列表，并将头两个整数设置为值 1。 斐波纳契数列，一串以两个 1 开头的数字。 斐波那契数列中的每个数字都是前两个数字之和。 添加以下代码：
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     你已完成列表交互式教程。 这是 C# 交互式教程的最终简介。 可以访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。 “继续学习”步骤将带你返回到这些教程以在计算机上生成项目。
 
 
-    可以参阅下面的主题，详细了解 [.NET 集合](../../../standard/collections/index.md)：
+    可以在以下文章中了解有关 [.NET 集合](../../../standard/collections/index.md)的详细信息：
 
     - [选择集合类型](../../../standard/collections/selecting-a-collection-class.md)
 

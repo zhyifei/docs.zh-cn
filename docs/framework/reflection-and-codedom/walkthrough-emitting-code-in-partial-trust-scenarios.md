@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592440"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585898"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
@@ -77,12 +77,12 @@ ms.locfileid: "64592440"
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     可通过 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 方法重载的最后一个参数来指定要授予完全信任的一组程序集，而不是应用程序域的授予集。 无需指定应用程序所使用的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集，因为它们位于全局程序集缓存中。 全局程序集缓存中的程序集始终是完全受信任的。 可使用此参数指定全局程序集缓存之外的强名称程序集。  
+     可通过 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 方法重载的最后一个参数来指定要授予完全信任的一组程序集，而不是应用程序域的授予集。 无需指定应用程序所使用的 .NET Framework 程序集，因为它们位于全局程序集缓存中。 全局程序集缓存中的程序集始终是完全受信任的。 可使用此参数指定全局程序集缓存之外的强名称程序集。  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>将 RestrictedMemberAccess 添加到沙盒域  
  主机应用程序可允许匿名托管动态方法访问程序集中的专用数据，该程序集具有与发出代码的程序集相同或更低的信任级别。 要启用此受限能力跳过实时 (JIT) 可见性检查，主机应用程序需使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> (RMA) 标记向授予集添加 <xref:System.Security.Permissions.ReflectionPermission> 对象。  
   
- 例如，主机可能授予 Internet 应用程序 Internet 权限和 RMA，以便 Internet 应用程序能发出访问自身程序集中专用数据的代码。 由于访问仅限于具有相同和较低信任级别的程序集，因此 Internet 应用程序无法访问完全信任的程序集（如 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集）的成员。  
+ 例如，主机可能授予 Internet 应用程序 Internet 权限和 RMA，以便 Internet 应用程序能发出访问自身程序集中专用数据的代码。 由于访问仅限于具有相同和较低信任级别的程序集，因此 Internet 应用程序无法访问完全信任的程序集（如 .NET Framework 程序集）的成员。  
   
 > [!NOTE]
 >  为防止特权提升，在构造匿名托管动态方法时，将包含发出程序集的堆栈信息。 调用方法时检查堆栈信息。 因此，从完全信任的代码调用的匿名托管动态方法仍被限制为发出程序集的信任等级。  
@@ -169,7 +169,7 @@ ms.locfileid: "64592440"
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     限制在于，匿名托管动态方法仅可访问具有与发出程序集相同或比其更低的信任级别的程序集中的专用数据。 例如，如果通过 Internet 信任来执行动态方法，则它可以访问同样以 Internet 信任执行的其他程序集中的专用数据，但无法访问 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集中的专用数据。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集安装在全局程序集缓存中，且始终是完全受信任的。  
+     限制在于，匿名托管动态方法仅可访问具有与发出程序集相同或比其更低的信任级别的程序集中的专用数据。 例如，如果通过 Internet 信任来执行动态方法，则它可以访问同样以 Internet 信任执行的其他程序集中的专用数据，但无法访问 .NET Framework 程序集中的专用数据。 .NET Framework 程序集安装在全局程序集缓存中，且始终是完全信任的。  
   
      仅当主机应用程序通过 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记授予 <xref:System.Security.Permissions.ReflectionPermission> 时，匿名托管动态方法才可使用此受限能力跳过 JIT 可见性检查。 调用方法时发出对此权限的请求。  
   

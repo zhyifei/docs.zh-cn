@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591503"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585977"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 通过反射能够获取有关类型和成员的信息，并能访问成员（即，调用方法和构造函数来获取和设置属性值，添加和移除事件处理程序，等等）。 使用反射可以获取有关类型的信息并且成员是不受限制的。 所有代码都可使用反射来执行以下任务：  
@@ -88,7 +88,7 @@ ms.locfileid: "64591503"
   
 - 程序集 A 可以使用反射来访问程序集 B 的私有成员，因为程序集 B 的授予集不包括一个 A 尚未被授予的任何权限。  
   
-- 程序集 A 不能使用反射来访问 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程序集的私有成员（如 mscorlib.dll），因为 mscorlib.dll 是完全受信任的，因此有尚未被授予给程序集 A 的权限。代码访问安全性在运行时审核堆栈将引发 <xref:System.MemberAccessException>。  
+- 程序集 A 不能使用反射来访问 .NET Framework 程序集的私有成员（如 mscorlib.dll），因为 mscorlib.dll 是完全受信任的，因此有尚未被授予给程序集 A 的权限。代码访问安全性在运行时审核堆栈将引发 <xref:System.MemberAccessException>。  
   
 ## <a name="serialization"></a>序列化  
  对于序列化，带 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.SecurityPermission>，无论其访问级别是什么，都能够获取和设置序列化类型的成员。 此权限使代码可以发现并更改实例的私有状态。 （除被授予适当权限以外，在元数据中该类型必须[标记](../../../docs/standard/attributes/applying-attributes.md)为可序列化。）  
@@ -100,7 +100,7 @@ ms.locfileid: "64591503"
   
 - 以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，透明代码不能使用反射访问关键安全成员。  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记在 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中引入。 早期版本的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记在 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中引入。 早期版本的 .NET Framework 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
   
 - 以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   

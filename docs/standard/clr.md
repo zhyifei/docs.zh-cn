@@ -1,7 +1,6 @@
 ---
-title: 公共语言运行时 (CLR)
-ms.custom: updateeachrelease
-ms.date: 04/16/2018
+title: 公共语言运行时 (CLR) 概述 - .NET Framework
+ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.custom: updateeachrelease
+ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904118"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645012"
 ---
 # <a name="common-language-runtime-clr-overview"></a>公共语言运行时 (CLR) 概述
 
@@ -64,7 +64,7 @@ ms.locfileid: "55904118"
 
 ## <a name="clr-versions"></a>CLR 版本
 
-.NET Framework 的版本号无需对应于它所包含的 CLR 的版本号。 下表演示了两个版本号关联的方式。
+.NET Framework 的版本号无需对应于它所包含的 CLR 的版本号。 下表演示了两个版本号关联的方式：
 
 |.NET Framework 版本|包括 CLR 版本|
 |----------------------------|--------------------------|
@@ -77,10 +77,11 @@ ms.locfileid: "55904118"
 |4.5（包括 4.5.1 和 4.5.2）|4|
 |4.6（包括 4.6.1 和 4.6.2）|4|
 |4.7（包括 4.7.1 和 4.7.2）|4|
+|4.8|4|
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明​​|
+|Title|说明|
 |-----------|-----------------|
 |[托管执行过程](managed-execution-process.md)|描述使用公共语言运行时所需要的步骤。|
 |[自动内存管理](automatic-memory-management.md)|描述垃圾回收器如何分配和释放内存。|

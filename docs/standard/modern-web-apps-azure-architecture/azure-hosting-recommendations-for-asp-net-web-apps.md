@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 关�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 136ad9992ea94b027f095f47df0388408029f24e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638920"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053267"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>关于 ASP.NET Core Web 应用的 Azure 托管建议
 
@@ -44,7 +44,7 @@ ms.locfileid: "65638920"
 
 - Visual Studio 集成。
 
-- 通过[用于容器的 Web 应用](https://azure.microsoft.com/en-us/services/app-service/containers/)支持 Linux 和 Windows 容器。
+- 通过[用于容器的 Web 应用](https://azure.microsoft.com/services/app-service/containers/)支持 Linux 和 Windows 容器。
 
 Azure 应用服务是适合大多数 Web 应用的最佳选择。 该平台集成部署与管理，站点可快速缩放以处理高流量负载，内置负载均衡和流量管理器提供高可用性。 可通过在线迁移工具将现有站点轻松移动到 Azure 应用服务、使用 Web 应用程序库中的开源应用或使用框架和你选择的工具创建新的站点。 通过 WebJobs 功能可将后台作业处理轻松添加到应用服务 Web 应用。
 
@@ -101,7 +101,7 @@ Azure 提供多种数据存储选择，以便应用程序可使用恰当的数�
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - 用于容器的 Web 应用\
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Azure Kubernetes 服务 (AKS) 简介\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

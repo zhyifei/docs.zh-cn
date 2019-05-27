@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591012"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052297"
 ---
 # <a name="events-overview-windows-forms"></a>事件概述（Windows 窗体）
 事件是可以通过代码响应或“处理”的操作。 事件可由用户操作（例如单击鼠标或按某个键）、程序代码或系统生成。
@@ -29,7 +29,7 @@ ms.locfileid: "65591012"
  有关如何引发和使用事件的信息，请参阅[事件](../../standard/events/index.md)。
 
 ## <a name="delegates-and-their-role"></a>委托及其角色
- 委托是通常用于在.NET Framework 内生成事件处理机制的类。 委托大体上相当于 [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 和其他面向对象语言中常用的函数指针。 但与函数指针不同的是，委托是面向对象的、类型安全的和保险的。 另外，函数指针只包含对特定函数的引用，而委托由对对象的引用以及对该对象内一个或多个方法的引用组成。
+ 委托是通常用于在.NET Framework 内生成事件处理机制的类。 委托大体上相当于在 Visual 中常用的函数指针C++和其他面向对象的语言。 但与函数指针不同的是，委托是面向对象的、类型安全的和保险的。 另外，函数指针只包含对特定函数的引用，而委托由对对象的引用以及对该对象内一个或多个方法的引用组成。
 
  此事件模型使用*委托*将事件绑定到用来处理它们的方法。 委托允许其他类通过指定处理程序方法来注册事件通知。 当发生事件时，委托会调用绑定的方法。 有关如何定义委托的详细信息，请参阅[事件](../../standard/events/index.md)。
 

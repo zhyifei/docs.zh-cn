@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663446"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959941"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
 <a name="introduction"></a>本文中的表格列出了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中由程序集组织的过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](obsolete-members.md)。
@@ -512,8 +512,8 @@ ms.locfileid: "64663446"
 
 |类型|消息|
 |----------|-------------|
-|<xref:System.Activities.Statements.Interop>|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 请改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 请改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|
+|<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 请改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|
+|<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|在 .NET Framework 4.5 中首次被废弃。<br /><br />Workflow Foundation 3.0 类型已弃用。 请改用 <xref:System.Activities>.\* 中的 Workflow 4.0 类型。|
 |<xref:System.Workflow.Runtime> 命名空间中的所有类型|在 .NET Framework 4.5 中首次被废弃。<br /><br /> System.Workflow.\* 类型已弃用。 请改用 <xref:System.Activities>.\* 中的新类型。|
 |<xref:System.Workflow.Runtime.Configuration> 命名空间中的所有类型|在 .NET Framework 4.5 中首次被废弃。<br /><br /> System.Workflow.\* 类型已弃用。 请改用 <xref:System.Activities>.\* 中的新类型。|
 |<xref:System.Workflow.Runtime.DebugEngine> 命名空间中的所有类型，<xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback> 除外|在 .NET Framework 4.5 中首次被废弃。<br /><br /> System.Workflow.\* 类型已弃用。 请改用 <xref:System.Activities>.\* 中的新类型。|

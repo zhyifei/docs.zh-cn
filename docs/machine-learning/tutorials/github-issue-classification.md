@@ -4,12 +4,12 @@ description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: d47522bef632de1aac890d4de384c1b2c16b7a50
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877346"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195578"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教程：将多类分类与 ML .NET 配合使用，对支持问题分类
 
@@ -242,7 +242,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 你已经创建和定型模型，现在需要使用不同的数据集对其进行评估以保证质量和进行验证。 在 `Evaluate` 方法中，将传入在 `BuildAndTrainModel` 中创建的模型以进行评估。 紧随 `BuildAndTrainModel` 后创建 `Evaluate` 方法，如以下代码所示：
 
 ```csharp
-public static void Evaluate()
+public static void Evaluate(DataViewSchema trainingDataViewSchema)
 {
 
 }

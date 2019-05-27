@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647721"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593448"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
@@ -56,7 +56,7 @@ ms.locfileid: "64647721"
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>将 MSIL 编译为本机代码  
- 运行 Microsoft 中间语言 (MSIL) 前，必须根据公共语言运行时将其编译为目标计算机基础结构的本机代码。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供两种方法来执行此转换：  
+ 运行 Microsoft 中间语言 (MSIL) 前，必须根据公共语言运行时将其编译为目标计算机基础结构的本机代码。 .NET Framework 提供两种方法来执行此转换：  
   
 - .NET Framework 实时 (JIT) 编译器。  
   

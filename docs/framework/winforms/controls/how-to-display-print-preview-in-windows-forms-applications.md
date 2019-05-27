@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: cfdc8d21b3ddad19fd38eef9cb1c506920da9de6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9efccc220bb27706448ae555db8958afb0ccd9fa
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053608"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows 窗体应用程序中显示打印预览
 可以使用<xref:System.Windows.Forms.PrintPreviewDialog>以使用户能够显示文档时，通常前要打印的控制。  
@@ -70,7 +70,7 @@ ms.locfileid: "64609888"
        }  
     ```  
   
-     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
+     (Visual C#、 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

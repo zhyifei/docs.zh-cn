@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 9e2942e11ed10dffcfad8f0329295827b7f0d4d8
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 5f51744878da526147dd742e98117e8e87c94e20
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452743"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052242"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）
 可以在 Windows 窗体中创建派生的节点<xref:System.Windows.Forms.TreeView>控件或中的派生的项<xref:System.Windows.Forms.ListView>控件。 通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。 此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。 此处的示例是有关<xref:System.Windows.Forms.TreeView>控件，但相同的方法可用来进行<xref:System.Windows.Forms.ListView>控件。  
@@ -100,7 +100,7 @@ ms.locfileid: "65452743"
        "\\TextFile.txt")));  
     ```  
   
-2. 如果传递的树节点和其类型为<xref:System.Windows.Forms.TreeNode>类，则将需要强制转换为派生类。 强制转换是从一种对象类型到另一种对象类型的显式转换。 强制转换的详细信息，请参阅[隐式转换和显式转换](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic 中)，[强制转换和类型转换](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md)(Visual C#)，或[强制转换运算符: （)](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).  
+2. 如果传递的树节点和其类型为<xref:System.Windows.Forms.TreeNode>类，则将需要强制转换为派生类。 强制转换是从一种对象类型到另一种对象类型的显式转换。 强制转换的详细信息，请参阅[隐式转换和显式转换](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic 中)，[强制转换和类型转换](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md)(Visual C#)，或[强制转换运算符: （)](/cpp/cpp/cast-operator-parens) (Visual C++)。  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

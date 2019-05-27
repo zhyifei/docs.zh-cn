@@ -2,12 +2,12 @@
 title: 将关系数据库迁移到 azure
 description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |将关系数据库迁移到 azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638882"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051926"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>将关系数据库迁移到 azure
 
@@ -81,7 +81,7 @@ Azure SQL 数据库提供以下优势：
 
 迁移选项之一是继续在原始关系数据库管理系统 (RDBMS)，包括 Oracle、 IBM DB2、 MySQL、 PostgreSQL 或 SQL Server 到 Azure VM 运行的类似服务器。 如果必须在所有需要最快迁移到最小的更改或不做更改与云的现有应用程序，直接迁移到云中的 IaaS 可能是合理的选项。 它可能不会充分利用云的所有权益的最佳方法，但它可能是最快的初始路径。
 
-目前，Microsoft Azure 支持最多[331 不同数据库服务器](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)部署为 IaaS Vm。 其中包括 SQL Server、 Oracle、 MySQL、 PostgreSQL 和 IBM DB2 等常用 RDBMS 和 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 等许多其他 NoSQL 数据库。
+目前，Microsoft Azure 支持最多[331 不同数据库服务器](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all)部署为 IaaS Vm。 其中包括 SQL Server、 Oracle、 MySQL、 PostgreSQL 和 IBM DB2 等常用 RDBMS 和 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 等许多其他 NoSQL 数据库。
 
 > [!NOTE]
 > 尽管移动到 Azure VM RDBMS 可能最快的方法 （因为它是 IaaS），将数据迁移到云，但这种方法需要投入大量的你的 IT 团队 （数据库管理员和 IT 专业人员）。 企业团队需要能够设置和管理高可用性、 灾难恢复和 SQL Server 修补的。 此上下文还需要具有完全管理权限的自定义的环境。

@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633867"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882492"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：向 Web 用户显示本地化的日期和时间信息
 由于世界各地的人都可以查看网页，因此在与用户交互时，分析和设置日期和时间值的格式的操作不得依赖默认格式（通常是 Web 服务器本地区域性的格式）。 相反，处理用户输入的日期和时间字符串的 Web 窗体，应使用用户的首选区域性分析字符串。 同样，日期和时间数据应以符合用户区域性的格式向用户显示。 本主题演示如何执行此操作。  
@@ -98,7 +98,7 @@ ms.locfileid: "64633867"
  代码可以调用 <xref:System.DateTime.Parse%2A> 或 <xref:System.DateTime.TryParse%2A> 方法，将用户的日期和时间字符串表示形式转换为 <xref:System.DateTime> 值。 一个分析操作可能需要重复调用分析方法。 因此，<xref:System.DateTime.TryParse%2A> 方法更好，因为如果分析操作失败，它可以返回 `false`。 相比之下，如果在 Web 应用中处理 <xref:System.DateTime.Parse%2A> 方法可能会重复抛出的异常，成本可能会非常高。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要编译代码，请创建没有代码隐藏的 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 网页。 然后，将示例复制到网页中，用它替换所有现有代码。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 网页应包含以下控件：  
+ 要编译代码，请创建没有代码隐藏的 ASP.NET 网页。 然后，将示例复制到网页中，用它替换所有现有代码。 ASP.NET 网页应包含以下控件：  
   
 - 未在代码中引用的 <xref:System.Web.UI.WebControls.Label> 控件。 将它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 属性设置为“Enter a Number:”。  
   

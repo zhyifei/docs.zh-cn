@@ -66,7 +66,7 @@ HRESULT DefineField (
  [in]字段的常量值。  
   
  `cchValue`  
- [in](Unicode) 字符中的大小`pValue`。  
+ [in] (Unicode) 字符中的大小`pValue`。  
   
  `pmd`  
  [out]`mdFieldDef`分配标记。  

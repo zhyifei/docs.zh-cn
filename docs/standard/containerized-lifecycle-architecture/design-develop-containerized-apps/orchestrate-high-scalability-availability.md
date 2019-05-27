@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 实际的生产应用程序必须部署和使用业务流程协调程序处理的运行状况、 工作负荷和所有容器的生命周期管理。
 ms.date: 02/15/2019
-ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644704"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195648"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -70,7 +70,7 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 ## <a name="get-started-with-azure-kubernetes-service-aks"></a>开始使用 Azure Kubernetes 服务 (AKS)
 
-若要开始使用 AKS，你部署 AKS 群集从 Azure 门户或通过使用 CLI。 有关部署 Azure 容器服务群集的详细信息，请参阅[部署 Azure Kubernetes 服务 (AKS) 群集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
+若要开始使用 AKS，你部署 AKS 群集从 Azure 门户或通过使用 CLI。 部署到 Azure 的 Kubernetes 群集的详细信息，请参阅[部署的 Azure Kubernetes 服务 (AKS) 群集](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)。
 
 作为 AKS 的一部分，默认安装的任何软件都不收费。 所有默认选项都通过开源软件实现。 AKS 可用于 Azure 中的多个虚拟机。 仅针对所选的计算实例以及使用的其他基础结构资源（如存储和网络）收取费用。 AKS 本身不会以增量方式收费。
 
@@ -137,7 +137,7 @@ Service Fabric 未指定服务构建方式，开发人员可使用任何技术�
 
 所示图 4-10，您可以创建和运行 Service Fabric 中的微服务，作为简单进程也作为 Docker 容器。 此外还可在同一 Service Fabric 群集中混合基于容器的微服务与基于进程的微服务。
 
-![比较 Azure service Fabric 群集：为每个节点在其中运行的每个微服务; 一个进程的进程的微服务微服务作为容器的每个节点在 Docker 运行使用多个容器，每个微服务的一个容器。](./media/azure-service-fabric-cluster-types.png)
+![比较 Azure Service Fabric 群集：微服务作为进程，其中每个节点为每个微服务运行一个进程；微服务作为容器，其中每个节点使用多个容器运行 Docker（每个微服务一个容器）。](./media/azure-service-fabric-cluster-types.png)
 
 **图 4-10**。 在 Azure Service Fabric 中将微服务部署为进程或容器
 

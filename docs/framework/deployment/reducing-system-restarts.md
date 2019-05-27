@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218441"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881600"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安装期间减少系统重新启动
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序使用[重启管理器](https://go.microsoft.com/fwlink/?LinkId=231425)来防止安装期间可能出现的系统重启。 如果应用安装程序安装了 .NET Framework，则此程序可通过使用重启管理器来利用此功能。 有关详细信息，请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
@@ -26,8 +26,7 @@ ms.locfileid: "59218441"
   
  如果已关闭了正在运行的应用，但重启管理器仍检测到需要系统重启，则不会显示此消息。  
   
- ![“关闭应用程序”对话框](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
-关闭正在运行的 .NET Framework 应用的提示  
+ ![“关闭应用程序”对话框，其中列出了当前正在运行的程序。](./media/reducing-system-restarts/close-application-dialog.png)  
   
 ## <a name="using-a-chained-installer"></a>使用链接的安装程序  
  如果想要向应用重新分发 .NET Framework，但希望使用自己的安装程序和 UI，则可将 .NET Framework 安装过程包含在（链接到）自己的安装过程中。 有关链接的安装的详细信息，请参阅[面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)。 为减少链接的安装中的系统重启次数，.NET Framework 安装程序为安装程序提供了需要关闭的应用列表。 安装程序必须通过用户界面（如消息框）向用户提供此信息，获得用户的响应并将响应传递回 .NET Framework 安装程序。 有关链接安装程序的示例，请参阅文章[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  

@@ -9,25 +9,25 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462768"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591513"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 
 使用 <xref:System.IO> 命名空间中的类与驱动器、文件和目录一起工作。
 
-<xref:System.IO> 命名空间包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 类，它们提供 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 对操作文件和目录的功能。 由于这些对象的方法是静态或共享成员，因此可直接使用，无需首先创建类的实例。 与这些类相关联的是 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 类，使用 `My` 功能的用户将对它们很熟悉。 若要使用这些类，必须通过在受影响的代码开头包含 `Imports` 语句，完全限定名称或导入相应的命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。
+<xref:System.IO> 命名空间包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 类，它们提供用于操作文件和目录的 .NET Framework 功能。 由于这些对象的方法是静态或共享成员，因此可直接使用，无需首先创建类的实例。 与这些类相关联的是 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 类，使用 `My` 功能的用户将对它们很熟悉。 若要使用这些类，必须通过在受影响的代码开头包含 `Imports` 语句，完全限定名称或导入相应的命名空间。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。
 
 > [!NOTE]
-> 此部分中的其他主题使用 `My.Computer.FileSystem` 对象，而不使用 `System.IO` 类与驱动器、文件和目录一起工作。 `My.Computer.FileSystem` 对象的主要目的是用在 Visual Basic 程序中。 `System.IO` 类旨在供任何支持 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的语言使用，其中包括 Visual Basic。
+> 此部分中的其他主题使用 `My.Computer.FileSystem` 对象，而不使用 `System.IO` 类与驱动器、文件和目录一起工作。 `My.Computer.FileSystem` 对象的主要目的是用在 Visual Basic 程序中。 `System.IO` 类旨在供任何支持 .NET Framework（包括 Visual Basic）的语言使用。
 
 ## <a name="definition-of-a-stream"></a>流的定义
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 使用流来支持从文件中读取和写入文件。 可以将流视为一维连续数据集，具有开始和结束，并且其中的游标指示流中的当前位置。
+.NET Framework 使用流来支持从文件中读取和写入文件。 可以将流视为一维连续数据集，具有开始和结束，并且其中的游标指示流中的当前位置。
 
 ![光标显示了 Filestream 中的当前位置。](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
@@ -45,7 +45,7 @@ ms.locfileid: "58462768"
 
 ## <a name="types-of-streams"></a>流的类型
 
-在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中，流由 <xref:System.IO.Stream> 类表示，这形成了所有其他流的抽象类。 不能直接创建 <xref:System.IO.Stream> 类的实例，但必须使用它执行的一个类。
+在 .NET Framework 中，流由 <xref:System.IO.Stream> 类表示，这形成了所有其他流的抽象类。 不能直接创建 <xref:System.IO.Stream> 类的实例，但必须使用它执行的一个类。
 
 存在许多类型的流，但就处理文件输入/输出 (I/O) 而言，最重要的类型是 <xref:System.IO.FileStream> 类（提供从文件读取和写入文件的方式）和 <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 类（提供在独立存储中创建文件和目录的方法）。 处理文件 I/O 时可使用的其他流包括：
 
@@ -84,7 +84,7 @@ ms.locfileid: "58462768"
 
 ## <a name="file-permissions"></a>文件权限
 
-可使用 <xref:System.Security.Permissions.FileIOPermission> 类控制对文件和目录的访问权限。 这对处理 Web 窗体的开发人员来说可能特别重要，这些窗体默认在名为 ASPNET 的特殊本地用户帐户上下文中运行，该帐户作为 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 安装的一部分创建。 此类应用程序请求对资源的访问权限时，ASPNET 用户帐户的权限有限，这可能会阻止用户执行从 Web 应用程序写入到文件等操作。 有关更多信息，请参见<xref:System.Security.Permissions.FileIOPermission>。
+可使用 <xref:System.Security.Permissions.FileIOPermission> 类控制对文件和目录的访问权限。 这对使用 Web 窗体的开发人员来说尤其重要，这些窗体默认在名为 ASPNET 的特殊本地用户帐户上下文中运行，该帐户作为 ASP.NET 和 .NET Framework 安装的一部分创建。 此类应用程序请求对资源的访问权限时，ASPNET 用户帐户的权限有限，这可能会阻止用户执行从 Web 应用程序写入到文件等操作。 有关更多信息，请参见<xref:System.Security.Permissions.FileIOPermission>。
 
 ## <a name="isolated-file-storage"></a>独立的文件存储
 

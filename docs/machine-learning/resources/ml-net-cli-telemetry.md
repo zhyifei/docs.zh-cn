@@ -4,12 +4,12 @@ description: 了解收集使用情况信息以供分析的 ML.NET CLI 遥测功�
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645027"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053577"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI 遥测收集
 
@@ -75,5 +75,5 @@ ML.NET CLI 的 Microsoft 分发由 [Microsoft 软件许可条款：Microsoft .NE
 ## <a name="see-also"></a>请参阅
 - [ML.NET CLI 参考](../reference/ml-net-cli-reference.md)
 - [Microsoft 软件许可条款：Microsoft .NET 库](https://aka.ms/dotnet-core-eula)
-- [Microsoft 隐私政策](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Microsoft 隐私声明](https://privacy.microsoft.com/en-us/privacystatement)
+- [Microsoft 隐私政策](https://www.microsoft.com/trustcenter/privacy/)
+- [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)

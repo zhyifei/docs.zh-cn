@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867092"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052369"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<类型实例化 > 元素 (.NET Native)
 将运行时反射策略应用到一个构造泛型类型。  
@@ -53,19 +53,19 @@ ms.locfileid: "61867092"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |type_name|类型名称。 如果该 `<TypeInstantiation>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 元素或另一个 `<TypeInstantiation>` 元素的子元素，type_name 可以指定类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。 该类型名称没有经过修饰。 例如，对于一个 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，`<TypeInstantiation>` 元素可能显示如下：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>自变量特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |type_argument|指定泛型类型参数。 如果存在多个自变量，它们之间用逗号分割。 每个自变量必须包含一个完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这个构造泛型类型的策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "61867092"
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- 在同 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链进行编译后，该示例在调用 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> 方法的行中引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。 你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：  
+ 使用.NET Native 工具链进行编译之后, 本示例将引发[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)调用的行上的异常<xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>方法。 你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

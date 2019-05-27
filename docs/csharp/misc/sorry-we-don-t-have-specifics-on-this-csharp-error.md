@@ -882,23 +882,23 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684050"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052760"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>很抱歉，我们没有关于此 C# 错误的具体信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，您可以咨询其他开发人员使用以下论坛之一：  
   
- [Visual C# 语言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ [Visual C# 语言](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
  提供了一个论坛问题有关及常规讨论的视觉对象C#语言语法和编译器。  
   
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
  提供有关如何在 Visual Studio 环境中的问题的论坛。  
   
- [Visual C# 常见问题解答](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ [Visual C# 常见问题解答](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
  提供了一个论坛问题有关和与视觉对象问题C#不在其他论坛中讨论的。  
   
  [堆栈溢出](https://stackoverflow.com/questions/tagged/c%23)  

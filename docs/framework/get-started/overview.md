@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093679"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878035"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 概述
 
@@ -45,7 +45,7 @@ Internet Explorer 是承载运行时（以 MIME 类型扩展的形式）的非�
 
 下面的插图显示公共语言运行时和类库与应用之间以及与整个系统之间的关系。 该插图还显示托管代码如何在更大的结构内运行。
 
-![更大体系结构中的托管代码](../../../docs/framework/get-started/media/circle.gif "圆形") .NET Framework 环境
+![显示托管代码如何在大型体系结构中运行的屏幕截图。](./media/overview/language-runtime-class-library-relationship.gif)
 
 以下各节更详细地描述 .NET Framework 的主要功能。
 

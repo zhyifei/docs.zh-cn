@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053711"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标
 可以使用 Windows 窗体<xref:System.Windows.Forms.ErrorProvider>组件，用户输入无效数据时显示错误图标。 您必须具有至少两个选项卡上，它们之间并由此调用验证代码以窗体控件。  
@@ -77,7 +77,7 @@ ms.locfileid: "61972180"
        }  
     ```  
   
-     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
+     (Visual C#、 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.textBox1.Validating += new  

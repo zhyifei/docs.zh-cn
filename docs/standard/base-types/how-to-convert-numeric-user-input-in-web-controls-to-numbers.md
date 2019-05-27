@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634166"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882474"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：将用户在 Web 控件中输入的数值转换成数字
 由于世界各地的人都可以查看网页，因此用户能够在 <xref:System.Web.UI.WebControls.TextBox> 控件中以几乎无限种格式输入数字数据。 所以，请务必确定网页用户的区域设置和区域性。 分析用户输入后，可以应用用户的区域设置和区域性定义的格式设置约定。  
@@ -58,7 +58,7 @@ ms.locfileid: "64634166"
  代码可以调用用户输入将转换为的数字类型的 `Parse` 或 `TryParse` 方法。 一个分析操作可能需要重复调用分析方法。 因此，`TryParse` 方法更好，因为如果分析操作失败，它可以返回 `false`。 相比之下，如果在 Web 应用中处理 `Parse` 方法可能会重复抛出的异常，成本可能会非常高。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 若要编译代码，请将它复制到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 代码隐藏页面中，以便替换所有现有代码。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 网页应包含以下控件：  
+ 要编译代码，请将其复制到 ASP.NET 代码隐藏页面中，以便替换所有现有代码。 ASP.NET 网页应包含以下控件：  
   
 - 未在代码中引用的 <xref:System.Web.UI.WebControls.Label> 控件。 将它的 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 属性设置为“Enter a Number:”。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "64634166"
   
 - 名为 `OKButton` 的 <xref:System.Web.UI.WebControls.Button> 控件。 将它的 <xref:System.Web.UI.WebControls.Button.Text%2A> 属性设置为“OK”。  
   
- 将类名从 `NumericUserInput` 更改为 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 页面上 `Page` 指令的 `Inherits` 属性定义的类名。 将 `NumericInput` 对象引用名称更改为 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 页面上 `form` 标记的 `id` 属性定义的名称。  
+ 将类名从 `NumericUserInput` 更改为 ASP.NET 页面上 `Page` 指令的 `Inherits` 属性定义的类名。 将 `NumericInput` 对象引用名称更改为 ASP.NET 页面上 `form` 标记的 `id` 属性定义的名称。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  为防止用户向 HTML 流注入脚本，不得在服务器响应中直接回显用户输入。 相反，应使用 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 方法进行回显。  

@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b466b27925b41823ce3f6537782f3bd6201d5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868507"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052629"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 入门
 
-无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。 若要创建一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用，请按照下列步骤操作：
+无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。 若要创建的.NET 本机应用，请执行以下步骤：
 
 1. [开发面向 Windows 10 的通用 Windows 平台 (UWP) 应用](#Step1)，测试应用的调试版本以确保其正常工作。
 
@@ -21,10 +21,10 @@ ms.locfileid: "61868507"
 
 3. [部署和测试应用的发布版本](#Step3)。
 
-4. [手动解决丢失的元数据](#Step4)，并重复 [步骤 3](#Step3) 直到所有问题都得到解决。
+4. [手动解决丢失的元数据](#Step4)，并重复[步骤 3](#Step3)，直到所有问题都得到解决为止。
 
 > [!NOTE]
-> 如果你正在将现有 Windows 应用商店应用迁移到 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，请确保要查看 [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。
+> 如果要将现有 Windows 应用商店应用程序迁移到.NET Native，请确保查看[Windows 应用商店应用迁移到.NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。
 
 <a name="Step1"></a>
 
@@ -36,12 +36,12 @@ ms.locfileid: "61868507"
 
 2. 请注意，使用 .NET Native 工具链和不使用它来编译 UWP 应用项目之间存在一些已知的兼容性问题。 有关更多信息，请参阅 [迁移指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 。
 
-现在可针对在本地系统上（或在模拟器中）运行的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 表面区域编写 C# 或 Visual Basic 代码。
+现在，您可以编写C#或 Visual Basic 代码针对.NET Native 运行在本地系统上 （或在模拟器中） 的图面区域。
 
 > [!IMPORTANT]
 > 开发你的应用时，在代码中用任何序列化或反射时都应提起注意。
 
-默认情况下，调试版本均为 JIT 编译以启用快速 F5 部署，而发布版本使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 预编译技术进行编译。 这意味着在使用 .NET Native 工具链来编译应用的调试版本之前，应生成和测试它们以确保其正常工作。
+默认情况下，调试版本中都是 JIT 编译，以启用快速 F5 部署，而发布版本编译使用.NET Native 的预编译技术。 这意味着在使用 .NET Native 工具链来编译应用的调试版本之前，应生成和测试它们以确保其正常工作。
 
 <a name="Step2"></a>
 
@@ -85,13 +85,13 @@ ms.locfileid: "61868507"
 
 如果您的应用程序不正常 (尤其是在情况下它将引发[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)或[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)在运行时异常)，按照下一步中的说明部分中，[步骤 4:手动解决丢失的元数据](#Step4)。 启用最可能的异常可能会帮助发现这些 bug。
 
-当你已检测和调试了应用的调试版本，并且确信已消除 [丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 和 [丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 异常后，你应该将你的应用作为一个已得到优化的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用来检测。 为此，请将活动项目配置从“调试”改为“发布”。
+您的应用程序时已经测试并调试调试版本，并且确信已消除[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)并[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)异常，应测试你的应用作为优化的.NET Native 应用。 为此，请将活动项目配置从“调试”改为“发布”。
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>步骤 4：手动解决丢失的元数据
 
-在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 上会碰到的你在桌面上不会碰到的最常见失败是 [丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)或 [丢失运行时项目异常](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常。 在某些情况下，元数据的丢失在不可预测的行为中或甚至在应用失败的情况下可以自行显露。 此部分讨论了你该如何通过将指令添加到运行时指令文件来调试和解决这些异常。 有关运行时指令的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 添加运行时指令后，应该再次[部署并测试应用](#Step3)并解决任何新的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常，直到不再遇到任何异常为止。
+您会遇到与.NET Native，在桌面上不会遇到的最常见失败是一个运行时[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)， [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)，或[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)异常。 在某些情况下，元数据的丢失在不可预测的行为中或甚至在应用失败的情况下可以自行显露。 此部分讨论了你该如何通过将指令添加到运行时指令文件来调试和解决这些异常。 有关运行时指令的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。 添加运行时指令后，应该再次[部署并测试应用](#Step3)并解决任何新的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 和 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 异常，直到不再遇到任何异常为止。
 
 > [!TIP]
 > 在更高级别上指定你的运行时指令，使你的应用能够适应代码变化。  我们推荐在命名空间和类型级别而不在成员级别添加运行时指令。 注意，你可能需要在弹性和编译时间较长的较大二进制代码之间做一个权衡。
@@ -113,7 +113,7 @@ ms.locfileid: "61868507"
   - 当有更好的选择时，代码是否调用了一个依赖反射的方法？
 
 > [!NOTE]
-> 若要深入了解如何处理因反射中的差异以及桌面应用和 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中的元数据可用性导致的问题，请参阅 [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。
+> 有关处理源于反射和桌面应用程序和.NET Native 中的元数据可用性之间的差异的问题的其他信息，请参阅[依赖于反射的 Api](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)。
 
 要了解处理在检测应用的过程中发生的异常和其他问题的特定实例，请参阅：
 

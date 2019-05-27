@@ -2,12 +2,12 @@
 title: dotnet list package 命令
 description: 使用“dotnet list package”命令，可以方便地列出项目或解决方案的包引用。
 ms.date: 04/09/2019
-ms.openlocfilehash: bc38b94201f85ed4b22e11722ef5cabcb6fbf040
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481569"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631773"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959490"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593371"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>从文件读取 (Visual Basic)
 本节说明如何执行与读取文件相关的任务。  
@@ -64,4 +64,4 @@ ms.locfileid: "37959490"
  演示如何将 `My` 功能用于文件和目录。  
   
  [演练：使用 .NET Framework 方法操作文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 演示如何将 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法用于文件和目录。
+ 演示如何将 .NET Framework 方法用于文件和目录。

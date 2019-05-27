@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477657"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877577"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 
-清单生成和编辑工具 (Mage.exe) 是一种命令行工具，可以支持创建和编辑应用程序和部署清单。 作为命令行工具，Mage.exe 可以从批处理脚本和基于 Windows 的其他应用程序（包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序）运行。
+清单生成和编辑工具 (Mage.exe) 是一种命令行工具，可以支持创建和编辑应用程序和部署清单。 可以从批脚本和其他基于 Windows 的应用程序（包括 ASP.NET 应用程序）运行命令行工具 Mage.exe。
 
 也可以使用一种图形应用程序 MageUI.exe 来代替 Mage.exe。 有关详细信息，请参阅 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。
 

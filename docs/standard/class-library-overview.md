@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664628"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593505"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 
@@ -70,7 +70,7 @@ ms.locfileid: "64664628"
 
  .NET 类型使用点语法命名方案，该方案隐含了层次结构的意思。 此技术将相关类型分为不同的命名空间组，以便可以更容易地搜索和引用它们。 全名的第一部分（最右边的点之前的内容）是命名空间名。 全名的最后一部分是类型名。 例如，`System.Collections.Generic.List<T>` 表示 `List<T>` 类型，属于 `System.Collections.Generic` 命名空间。 可使用 <xref:System.Collections.Generic> 中的类型使用泛型集合。  
   
- 此命名方案使扩展 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的库开发人员可以轻松创建分层类型组，并用一致的、带有提示性的方式对其进行命名。 它还允许用全名（即命名空间和类型名称）明确地标识类型，这样可以防止类型名称发生冲突。 库开发人员在创建其命名空间的名称时应使用以下约定：  
+ 此命名方案使扩展 .NET Framework 的库开发人员可以轻松创建分层类型组，并用一致的、带有提示性的方式对其进行命名。 它还允许用全名（即命名空间和类型名称）明确地标识类型，这样可以防止类型名称发生冲突。 库开发人员在创建其命名空间的名称时应使用以下约定：  
   
  CompanyName.TechnologyName  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628836"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882516"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式的最佳做法
 基于事件的异步模式提供了一种在类中使用熟悉的事件和委托语义公开异步行为的有效方法。 若要实现基于事件的异步模式，你需要遵循某些特定的行为要求。 以下部分描述了在你实现遵循基于事件的异步模式的类时应该考虑的要求和准则。  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - 捕获所有发生在异步操作中的异常并将 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 属性的值设置为该异常。  
   
 ### <a name="threading-and-contexts"></a>线程处理和上下文  
- 为了使类正确运行，应当使用给定应用程序模型（包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 和 Windows 窗体应用程序）的适当线程或上下文调用客户端事件处理程序，这一点很重要。 我们提供了两个重要的帮助器类，以确保你的异步类在任何应用程序模型中都能正确运行，这两个帮助器类是 <xref:System.ComponentModel.AsyncOperation> 和 <xref:System.ComponentModel.AsyncOperationManager>。  
+ 为了使类正确运行，应当使用给定应用程序模型（包括 ASP.NET 和 Windows 窗体应用程序）的适当线程或上下文调用客户端事件处理程序，这一点很重要。 我们提供了两个重要的帮助器类，以确保你的异步类在任何应用程序模型中都能正确运行，这两个帮助器类是 <xref:System.ComponentModel.AsyncOperation> 和 <xref:System.ComponentModel.AsyncOperationManager>。  
   
  <xref:System.ComponentModel.AsyncOperationManager> 提供了 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> 方法，该方法会返回一个 <xref:System.ComponentModel.AsyncOperation>。 <em>MethodName</em>Async 方法调用 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>，且类使用返回的 <xref:System.ComponentModel.AsyncOperation> 跟踪异步任务的生存期。  
   

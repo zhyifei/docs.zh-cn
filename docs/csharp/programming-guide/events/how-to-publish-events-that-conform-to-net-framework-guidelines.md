@@ -5,15 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608688"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584310"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何：发布符合 .NET Framework 准则的事件（C# 编程指南）
-下面的过程演示了如何将遵循标准 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式的事件添加到类和结构中。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库中的所有事件均基于 <xref:System.EventHandler> 委托，定义如下：  
+下面的过程演示了如何将遵循标准 .NET Framework 模式的事件添加到类和结构中。 .NET Framework 类库中的所有事件均基于 <xref:System.EventHandler> 委托，定义如下：  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
@@ -22,7 +22,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 > [!NOTE]
 >  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 引入了泛型版本的委托 <xref:System.EventHandler%601>。 下例演示了如何使用这两个版本。  
   
- 尽管定义的类中的事件可基于任何有效委托类型，甚至是返回值的委托，但一般还是建议使用 <xref:System.EventHandler> 使事件基于 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式，如下例中所示。  
+ 尽管定义的类中的事件可基于任何有效委托类型，甚至是返回值的委托，但一般还是建议使用 <xref:System.EventHandler> 使事件基于 .NET Framework 模式，如下例中所示。  
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>发布基于 EventHandler 模式的事件  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609572"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591505"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 类中任意行为的实现
 
@@ -19,7 +19,7 @@ ms.locfileid: "54609572"
 
 下面将介绍在[万维网联合会 (W3C) XSL 转换 (XSLT) 1.0 版建议](https://www.w3.org/TR/1999/REC-xslt-19991116)中列出的一些任意行为，在这些行为中，实现提供者选择几个可能的选项中的一个作为处理某种情况的方法。 例如，在第 7.3 节“Creating Processing Instructions”中，W3C 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，W3C 说明了在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。
 
-因此，对 W3C 允许的每一种任意行为，下表列出了为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类的 <xref:System.Xml.Xsl.XslTransform> 实现而实现的任意行为，并说明了此问题在 W3C XSLT 1.0 建议中的哪一节讨论。
+因此，对 W3C 允许的每一种任意行为，下表列出了为 <xref:System.Xml.Xsl.XslTransform> 类的 .NET Framework 实现而实现的任意行为，并说明了此问题在 W3C XSLT 1.0 建议中的哪一节讨论。
 
 |问题|行为|节|
 |-------------|--------------|-------------|

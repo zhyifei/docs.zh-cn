@@ -2,12 +2,12 @@
 title: 演练：使用 async 和 await 访问 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 2c9616cc7bed3170803ee3c917fa651afc5ae6fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1057bdf02d20b0f685e6bd319929188ffd07c726
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599685"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052181"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>演练：使用 async 和 await 访问 Web (C#)
 
@@ -695,6 +695,6 @@ namespace AsyncExampleWPF
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [基于任务的异步编程 (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
+- [基于任务的异步编程 (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)
 - [如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

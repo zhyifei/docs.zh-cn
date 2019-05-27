@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866967"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052506"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>丢失元数据异常类 (.NET Native)
 
-**适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**
+**适用于面向 Windows 10，仅限.NET 本机 Windows 应用程序的.NET**
 
 当反射用于检索不存在的元数据时会引起此异常。
 
 **命名空间：** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。
+> `MissingMetadataException`类旨在仅供内部使用.NET Native 工具链。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。
 
 ## <a name="syntax"></a>语法
 
@@ -34,8 +34,8 @@ ms.locfileid: "61866967"
 
 |构造函数|描述|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|通过使用一个系统提供的、描述该错误的消息，来初始化 `MissingMetadataException` 类的一个实例。<br /><br /> 该构造函数仅由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链用于内部用途。|
-|`public MissingMetadataException(String message)`|用指定的错误消息初始化 `MissingMetadataException` 类的新实例。<br /><br /> 该构造函数仅由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链用于内部用途。|
+|`public MissingMetadataException()`|通过使用一个系统提供的、描述该错误的消息，来初始化 `MissingMetadataException` 类的一个实例。<br /><br /> 此构造函数是由.NET Native 工具链内部使用。|
+|`public MissingMetadataException(String message)`|用指定的错误消息初始化 `MissingMetadataException` 类的新实例。<br /><br /> 此构造函数是由.NET Native 工具链内部使用。|
 
 ## <a name="properties"></a>属性
 

@@ -2,12 +2,12 @@
 title: 创建简单的数据驱动 CRUD 微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何在微服务应用程序的上下文中创建简单的 CRUD（数据驱动）微服务。
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644428"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053564"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -321,7 +321,7 @@ Swagger 的核心是 Swagger 规范，它是 JSON 或 YAML 文件中的 API 描�
 
 - [AutoRest](https://github.com/Azure/AutoRest)。 可自动生成用于调用 Swagger 的 .NET 客户端类。 可通过 CLI 使用此工具，它也与 Visual Studio 集成以便能够通过 GUI 轻松使用。
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/)。 可自动[使用 API 并将其集成](https://flow.microsoft.com/en-us/blog/integrating-custom-api/)到高级 Microsoft Flow 工作流，且无需具备编程技能。
+- [Microsoft Flow](https://flow.microsoft.com/)。 可自动[使用 API 并将其集成](https://flow.microsoft.com/blog/integrating-custom-api/)到高级 Microsoft Flow 工作流，且无需具备编程技能。
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/)。 可自动从通过 [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/) 生成的 [PowerApps 移动应用](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/)使用 API，且无需具备编程技能。
 

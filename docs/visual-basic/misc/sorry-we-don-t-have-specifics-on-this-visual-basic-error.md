@@ -3044,26 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594771"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053320"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>很抱歉，我们没有关于此 Visual Basic 错误的具体信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  
   
- [Visual Basic 语言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
+ [Visual Basic 语言](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
  有关及常规讨论的 Visual Basic 语言语法和编译器提供有关问题的论坛。  
   
- [Visual Basic 互操作和升级](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
+ [Visual Basic 互操作和升级](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
  提供了一个论坛问题有关和与升级到 Visual Basic 和使用互操作性功能问题。  
   
- [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
  提供有关如何在 Visual Studio 环境中的问题的论坛。  
   
- [Visual Basic 常规信息](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
+ [Visual Basic 常规信息](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
  提供有关的问题了一个论坛和使用 Visual Basic 中其他论坛未讨论的问题。  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  

@@ -3,12 +3,12 @@ title: 事件介绍
 description: 本概述中介绍 .NET Core 中的事件和事件的语言设计目标。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747090"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051944"
 ---
 # <a name="introduction-to-events"></a>事件介绍
 
@@ -65,7 +65,8 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += onProgress;
+
+fileLister.Progress += onProgress;
 ```
 
 处理程序方法通常为前缀“On”，后跟事件名称，如上所示。
@@ -73,7 +74,7 @@ lister.Progress += onProgress;
 使用 `-=` 运算符取消订阅：
 
 ```csharp
-lister.Progress -= onProgress;
+fileLister.Progress -= onProgress;
 ```
 
 请务必注意，我为表示事件处理程序的表达式声明了一个局部变量。 这将确保取消订阅删除该处理程序。
@@ -81,4 +82,4 @@ lister.Progress -= onProgress;
 
 下一篇文章将介绍有关典型事件模式及此示例的不同变体的详细信息。
 
-[下一篇](event-pattern.md)
+[下一页](event-pattern.md)

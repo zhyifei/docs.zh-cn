@@ -4,12 +4,12 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857358"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053409"
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 
@@ -57,7 +57,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 使用 <xref:System.ServiceModel.WSDualHttpBinding> 时，客户端连接使用与命名空间预留和 Windows 防火墙兼容的默认设置。 如果选择自定义双向连接的客户端基址，则还必须配置这些客户端上的 HTTP 设置以与新地址相匹配。
 
-HTTP 服务器 API 具有不可通过 HttpCfg 某些高级的配置设置。 这些设置保留在注册表中并应用于在使用 HTTP 服务器 API 的系统上运行的所有应用程序。 有关这些设置的信息，请参阅[用于 IIS 的 Http.sys 注册表设置](https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows)。 大多数用户无需更改这些设置。
+HTTP 服务器 API 具有不可通过 HttpCfg 某些高级的配置设置。 这些设置保留在注册表中并应用于在使用 HTTP 服务器 API 的系统上运行的所有应用程序。 有关这些设置的信息，请参阅[用于 IIS 的 Http.sys 注册表设置](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)。 大多数用户无需更改这些设置。
 
 ## <a name="see-also"></a>请参阅
 

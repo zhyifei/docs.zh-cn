@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866881"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052502"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>缺少互操作数据异常类 (.NET Native)
-**适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
+**适用于面向 Windows 10，仅限.NET 本机 Windows 应用程序的.NET**  
   
  当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。  
   
  **命名空间：** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  `MissingInteropDataException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
+>  `MissingInteropDataException`类旨在仅供内部使用.NET Native 工具链。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
   
 ## <a name="syntax"></a>语法  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "61866881"
   
 |构造函数|描述|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|通过使用系统提供的消息（该消息描述错误以及缺少数据的类型）的 ID 初始化 `MissingInteropDataException` 类的新实例。 该构造函数仅由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链用于内部用途。|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|通过使用系统提供的消息（该消息描述错误以及缺少数据的类型）的 ID 初始化 `MissingInteropDataException` 类的新实例。 此构造函数是由.NET Native 工具链内部使用。|  
   
 ## <a name="properties"></a>属性  
   

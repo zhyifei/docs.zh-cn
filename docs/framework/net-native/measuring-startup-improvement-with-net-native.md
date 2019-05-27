@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 014af254d299d357c22a898357a533d650715500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea993880d68ab13eab8dfb4cf5e1d172025c6186
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650528"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052578"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>使用 .NET Native 衡量启动改善
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 显著地缩短了应用的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  
+.NET native 可显著提高应用程序的启动时间。 这一改善在便携式、低功耗设备上和在使用复杂应用时尤其明显。 该主题将帮助你初步了解衡量这个启动提升所需的基本检测。  
   
  为方便性能调查，.NET Framework 和 Windows 使用一个名为 Windows 事件跟踪 (ETW) 的事件框架，它允许你的应用在事件发生时通知工具。 然后你可以使用一个名为 PerfView 的工具查看和分析 ETW 事件。 该主题解释了如何：  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  选中左窗格中列出的所有事件 (Ctrl-A) 并选择“Enter”键。 现在你能够查看每个事件的时间戳了。 这些时间戳是从跟踪开始算起的，所以你必须用进程的开始时间减去每个事件的时间，才能确定启动花费的时间。 如果你使用“Ctrl+单击”选中了两个时间戳，你会在页面底部看到在状态栏中显示的他们之间的区别。 这使得要在显示中查看任何两个事件之间的时间间隔变得简单（包括进程开始）。 你可以打开快捷菜单试图并在一些有用的选项中进行选择，比如导出到 CSV 文件或打开 Microsoft Excel 保存或处理这些数据。  
   
- 通过使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链在你的原始应用和构建的版本上重复这一步骤，你可以比较二者在性能上的差异。   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用通常启动的速度比非-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用要快。 如果你有兴趣更深入了解，PerfView 也可以识别你的应用代码中花费时间最多的部分。 有关详细信息，请观看 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)或读取 [Vance Morrison 的博客文章](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)。  
+ 通过用于原始应用，通过使用.NET Native 工具链生成的版本重复该过程，您可以比较性能的差别。   .NET native 应用通常比非.NET 本机应用程序更快地启动。 如果你有兴趣更深入了解，PerfView 也可以识别你的应用代码中花费时间最多的部分。 有关详细信息，请观看 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)或读取 [Vance Morrison 的博客文章](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)。  
   
 ## <a name="see-also"></a>请参阅
 

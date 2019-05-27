@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 941bfa624bfcc05457714b2f342054bbebfdf908
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644739"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557905"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ（语言集成查询）
 
@@ -97,7 +97,7 @@ var filteredItems = from item in myItems
 
 难道 API 语法不比查询语法更简洁吗？
 
-不是。 查询语法允许使用 **let** 子句，这样，便可以在表达式的作用域内引入和绑定变量，然后在表达式的后续片段中使用该变量。 只使用 API 语法重现相同的代码也是可行的，不过，这很可能会导致代码难以阅读。
+不是。 查询语法允许使用 let 子句，这样，便可以在表达式的作用域内引入和绑定变量，然后在表达式的后续片段中使用该变量。 只使用 API 语法重现相同的代码也是可行的，不过，这很可能会导致代码难以阅读。
 
 那么，问题来了，**只使用查询语法可以吗？**
 

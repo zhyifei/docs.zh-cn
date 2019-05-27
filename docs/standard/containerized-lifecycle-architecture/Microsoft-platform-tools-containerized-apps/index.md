@@ -2,12 +2,12 @@
 title: 有关适用于容器化应用的 Microsoft 平台和工具的简介
 description: 初步了解 Microsoft 的产品/服务以支持 Docker 应用程序生命周期。
 ms.date: 02/15/2019
-ms.openlocfilehash: 9e7e821370b98fbda9af0ea69c13eaeab2f35acf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644908"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195601"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 平台和工具容器化应用简介
 
@@ -27,8 +27,8 @@ ms.locfileid: "65644908"
 
 | Host | Microsoft 技术 | 第三方 - Azure 可插入 |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Docker 应用平台   | • Microsoft Visual Studio 和 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure 容器服务<br /> • Azure Service Fabric<br /> • Azure 容器注册表<br /> | •任何代码编辑器（如 Sublime）<br /> •任何语言（Node.js、Java、 Go 等）<br /> •任何业务流程协调程序和计划程序<br /> •任何 Docker 注册表<br /> |
-| Docker 应用的 DevOps     | • Azure DevOps 服务<br /> • Microsoft Team Foundation Server<br /> • Azure 容器服务<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion 等<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI 等<br /> •本地 Docker 数据中心、Docker Swarm、Mesos DC/OS、Kubernetes 等<br /> |
+| Docker 应用平台   | • Microsoft Visual Studio 和 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes 服务 (AKS)<br /> • Azure Service Fabric<br /> • Azure 容器注册表<br /> | •任何代码编辑器（如 Sublime）<br /> •任何语言（Node.js、Java、 Go 等）<br /> •任何业务流程协调程序和计划程序<br /> •任何 Docker 注册表<br /> |
+| Docker 应用的 DevOps     | • Azure DevOps 服务<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes 服务 (AKS)<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion 等<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI 等<br /> •本地 Docker 数据中心、Docker Swarm、Mesos DC/OS、Kubernetes 等<br /> |
 | 管理与监视  | • Azure 监视 | • Marathon、 Chronos 等<br />|
 
 如表 3-1 所定义，适用于容器化 Docker 应用的 Microsoft 平台和工具包含以下组件：
@@ -37,7 +37,7 @@ ms.locfileid: "65644908"
 
 - **Docker 应用的 DevOps**创建 Docker 应用程序的开发人员可以使用[Azure DevOps 服务](https://azure.microsoft.com/services/devops/)或任何其他第三方产品，如 Jenkins，来构建全面的自动化应用程序生命周期管理 (ALM)。
 
-  使用 Azure DevOps 服务，开发人员可以创建容器为重点 DevOps 快速、 迭代的过程涵盖源代码控制从任何位置 （Azure DevOps 服务-Git、 GitHub、 任何远程 Git 存储库或 Subversion） 持续集成 (CI)内部单元测试、 container 间/服务集成测试、 持续交付 (CD) 和版本管理 (RM)。 开发人员还能将其 Docker 应用程序版本自动化到 Azure 容器服务中，从开发到暂存和生产环境。
+  使用 Azure DevOps 服务，开发人员可以创建容器为重点 DevOps 快速、 迭代的过程涵盖源代码控制从任何位置 （Azure DevOps 服务-Git、 GitHub、 任何远程 Git 存储库或 Subversion） 持续集成 (CI)内部单元测试、 container 间/服务集成测试、 持续交付 (CD) 和版本管理 (RM)。 开发人员还可以自动执行其 Docker 应用程序发布到 Azure Kubernetes 服务 (AKS) 中，从开发到过渡和生产环境。
 
 - **管理和监视**IT 可以管理和监视生产应用程序和服务在几个方面，将集成这两个统一的体验中的透视。
 

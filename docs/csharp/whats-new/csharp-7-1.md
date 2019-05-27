@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 中的新增功能概述。
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480958"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881556"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -26,7 +26,7 @@ C# 7.1 增加了[语言版本选择](../language-reference/configure-language-ve
 * [泛型类型参数的模式匹配](#pattern-matching-on-generic-type-parameters)
   - 可以对类型为泛型类型参数的变量使用模式匹配表达式。
 
-最后，编译器有 `/refout` 和 `/refonly` 两个选项，可用于控制[引用程序集生成](#reference-assembly-generation)。
+最后，编译器有 `-refout` 和 `-refonly` 两个选项，可用于控制[引用程序集生成](#reference-assembly-generation)。
 
 若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择版本。
 
@@ -109,5 +109,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>引用程序集生成
 
-有两个新的编译器选项会生成“仅引用”程序集：[/refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [/refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有两个新编译器选项可生成仅引用程序集：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
 链接的文章详细介绍了这些选项和引用程序集。

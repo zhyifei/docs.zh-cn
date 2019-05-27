@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868512"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052697"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>示例:处理绑定数据时出现的异常
 > [!NOTE]
 >  该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
- 以下示例展示了如何解决由 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链汇编的应用试图绑定数据时引发的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。 以下是有关异常的信息：  
+ 下面的示例演示如何解决[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)使用.NET Native 工具链编译的应用试图绑定数据时引发的异常。 以下是有关异常的信息：  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   

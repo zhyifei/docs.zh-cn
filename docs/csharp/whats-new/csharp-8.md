@@ -197,7 +197,7 @@ public static string RockPaperScissors(string first, string second)
     };
 ```
 
-消息指示获胜者。 弃元表示关系的三种组合或其他文本输入。
+消息指示获胜者。 弃元表示平局(石头剪刀布游戏)的三种组合或其他文本输入。
 
 ### <a name="positional-patterns"></a>位置模式
 

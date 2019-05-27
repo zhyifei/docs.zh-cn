@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650317"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052381"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 如果你的应用会序列化和反序列化对象，你可能需要将条目添加到运行时指令 (.rd.xml) 文件以确保必要的元数据在运行时间存在。 有两类序列化序列化程序，并且每一类要求在你的运行时指令文件中进行不同处理：  
@@ -39,10 +39,10 @@ ms.locfileid: "64650317"
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 编译器将自动处理此代码。  
+ .NET Native 编译器将自动处理此代码。  
   
 ### <a name="typeof-used-outside-the-constructor"></a>构造函数外部使用的 TypeOf  
- 如果调用了这些序列化类的构造函数并在提供给构造函数的 <xref:System.Type> 参数的表达式外部使用了 C# [Typeof](~/docs/csharp/language-reference/keywords/typeof.md) 关键字（如以下代码所示），则 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 编译器无法解析该类型：  
+ 如果你调用了这些序列化类的构造函数，并使用C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md)关键字提供给构造函数的表达式外部<xref:System.Type>参数，如以下代码所示.NET Native 编译器不能解析的类型：  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64650317"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同样，如果你调用了一个构造函数（比如 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>）并提供了一串要进行序列化的额外 <xref:System.Type> 对象（如以下代码所示），则 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 编译器无法解析这些类型。  
+ 同样，如果您调用构造函数，如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>并提供了一系列其他<xref:System.Type>要序列化，如下面的代码中.NET Native 编译器无法解析这些类型的对象。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

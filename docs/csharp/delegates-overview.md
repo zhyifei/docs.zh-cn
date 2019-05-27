@@ -3,16 +3,14 @@ title: 委托简介
 description: 本概述主题介绍委托的基本概念，并讨论委托的语言设计目标。
 ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: d42d9d10aeaa153f12933fa3a59e58719f7741e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212182"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879036"
 ---
 # <a name="introduction-to-delegates"></a>委托简介
-
-[上一篇](delegates-events.md)
 
 在 .NET 中委托提供*后期绑定*机制。 后期绑定意味着调用方在你所创建的算法中至少提供一个方法来实现算法的一部分。
 
@@ -32,11 +30,11 @@ C# 语言的委托概念提供一流的语言支持和以此概念为中心的�
 
 团队想要拥有可用于任何后期绑定算法的公共语言构造。 这促使开发人员学习一个概念，并在许多不同的软件问题中使用这同一概念。
 
-其次，团队想要支持单播和多播方法调用。 多播委托是将多种方法连在一起的委托。 稍后你可以在[本系列文章](delegate-class.md)中查看示例。 
+其次，该团队希望支持单一和多播方法调用。 （多播委托是将多个方法调用链接在一起的委托。 你将[在本系列文章的后面部分](delegate-class.md)看到示例。） 
 
 团队想要委托在所有 C# 构造中支持开发人员所预期的相同的类型安全性。 
 
-最后，团队认识到事件模式是一个特定模式，委托或任何后期绑定算法在其中非常有用。 团队想要确保委托的代码可以为 .NET 事件模式提供基础。
+最后，团队认识到事件模式是一个特定模式，委托或任何后期绑定算法在这种模式下非常有用。 团队想要确保委托的代码可以为 .NET 事件模式提供基础。
 
 所有这些工作的结果是 C# 和 .NET 中的委托和事件支持。 本部分的剩余文章将介绍语言功能、库支持和使用委托时使用的通用语法结构。
 
@@ -46,4 +44,4 @@ C# 语言的委托概念提供一流的语言支持和以此概念为中心的�
 
 让我们开始吧。
 
-[下一篇](delegate-class.md)
+[下一页](delegate-class.md)

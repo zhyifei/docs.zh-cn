@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659483"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591410"
 ---
 # <a name="creating-new-strings-in-net"></a>新建 .NET 中的字符串
-借助 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以使用简单的分配来创建字符串，也可以重载类构造函数，以支持使用许多不同参数来创建字符串。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 还在 <xref:System.String?displayProperty=nameWithType> 类中提供了多个方法，可通过合并多个字符串、字符串数组或对象来新建字符串对象。  
+借助 .NET Framework，可以使用简单的分配来创建字符串，也可以重载类构造函数，以支持使用许多不同参数来创建字符串。 .NET Framework 还在 <xref:System.String?displayProperty=nameWithType> 类中提供了多个方法，可通过合并多个字符串、字符串数组或对象来新建字符串对象。  
   
 ## <a name="creating-strings-using-assignment"></a>通过赋值创建字符串  
  新建 <xref:System.String> 对象的最简单方法是，将字符串文本分配给 <xref:System.String> 对象。  

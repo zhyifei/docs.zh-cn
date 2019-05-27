@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976325"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585769"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：循环访问目录树（C# 编程指南）
 短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 对象的形式检索其他信息。  
   
 > [!NOTE]
->  在 Windows 中，术语“目录”和“文件夹”可以互换使用。 大多数文档和用户界面文本使用术语“文件夹”，但 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库使用术语“目录”。  
+>  在 Windows 中，术语“目录”和“文件夹”可以互换使用。 大多数文档和用户界面文本使用术语“文件夹”，但 .NET Framework 类库使用术语“目录”。  
   
  在最简单的情况下，如果你确信拥有指定根目录下的所有目录的访问权限，则可以使用 `System.IO.SearchOption.AllDirectories` 标志。 此标志返回与指定的模式匹配的所有嵌套的子目录。 下面的示例演示如何使用此标志。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675597"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052788"
 ---
 # <a name="additional-resources"></a>其他资源
 
@@ -39,7 +39,7 @@ ms.locfileid: "57675597"
 
 |术语|定义|
 |----------|----------------|
-|[Visual Basic 论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|讨论常规 Visual Basic 问题。|
+|[Visual Basic 论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|讨论常规 Visual Basic 问题。|
 
 ### <a name="videos-and-webcasts"></a>视频与网络广播
 

@@ -5,12 +5,12 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce3d39c42dc35ca3038fc38edd9327e9b96fb20f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239847"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633422"
 ---
 # <a name="new-operator-c-reference"></a>new 运算符（C# 参考）
 
@@ -27,7 +27,7 @@ var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-`new` 运算符还用于调用值类型的默认构造函数。 例如:
+`new` 运算符还用于为值类型调用无参数构造函数。 例如:
 
 ```csharp
 int i = new int();
@@ -41,7 +41,7 @@ int i = 0;
 
 有关默认值的完整列表，请参阅[默认值表](default-values-table.md)。
 
-请记住，为 [struct](struct.md) 声明默认构造函数是错误的，因为每个值类型均隐式含有公共默认构造函数。 可以对结构类型声明参数化构造函数，以设置其初始值，但仅在需要除默认值以外的值时才需要这样做。
+请记住，为[结构](struct.md)声明无参数构造函数是错误的，因为每个值类型都隐式具有公共无参数构造函数。 可以对结构类型声明参数化构造函数，以设置其初始值，但仅在需要除默认值以外的值时才需要这样做。
 
 值类型对象（如结构）和引用类型对象（如类）都会自动销毁，但值类型对象是在其包含的上下文被销毁时才会销毁，而引用类型对象是在对它们的最后一个引用被删除后的未指定时间由垃圾回收器销毁。 对于包含文件句柄或网络连接等资源的类型，最好使用确定性清理来确保尽快释放其包含的资源。 有关详细信息，请参阅 [Using 语句](using-statement.md)。
 

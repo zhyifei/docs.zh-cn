@@ -2,15 +2,15 @@
 title: <security> 的 <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: b6375a64ea157df01f903901e0414a2989287aee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 788d49239b8b9161a35705295705e6d42eff7837
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670451"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052156"
 ---
 # <a name="security-of-webhttpbinding"></a>\<安全 > 的\<webHttpBinding >
-指定与配置的终结点的安全要求[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
+指定与配置的终结点的安全要求[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)。  
   
  \<system.ServiceModel>  
 \<bindings>  
@@ -47,7 +47,7 @@ ms.locfileid: "61670451"
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |None|禁用安全性。|  
 |传输|使用 HTTPS 提供安全性。 此服务需要使用 SSL 证书进行配置。 消息使用 HTTPS 获得全面保护，而且客户端使用服务的 SSL 证书对服务进行身份验证。 客户端身份验证通过`ClientCredentialType`的属性[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)。|  

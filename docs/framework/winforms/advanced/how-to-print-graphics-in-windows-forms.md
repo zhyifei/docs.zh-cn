@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 347c7064c199e953b496c9505f08c9e12c1ae670
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756555"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052817"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>如何：在 Windows 窗体中打印图形
 通常情况下，想要在基于 Windows 的应用程序中打印图形。 <xref:System.Drawing.Graphics>类提供了对象绘制到设备，如屏幕或打印机的方法。  
@@ -52,7 +52,7 @@ ms.locfileid: "61756555"
        }  
     ```  
   
-     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
+     (VisualC#和 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

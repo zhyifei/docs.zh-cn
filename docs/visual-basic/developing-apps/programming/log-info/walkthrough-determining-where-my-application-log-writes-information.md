@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 5115973e3d8e558199f9569baeea9e272c0528b0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674103"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591211"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>演练：确定 My.Application.Log 写入信息的位置 (Visual Basic)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57674103"
 
     如果这些部分不存在，则计算机的配置文件可能会配置 `My.Application.Log` 日志侦听器。 以下步骤介绍如何确定计算机配置文件定义的内容：
 
-    1. 找到计算机的 machine.config 文件。 通常情况下，该文件位于 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目录，其中 `SystemRoot` 是操作系统目录， `frameworkVersion` 是 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]的版本。
+    1. 找到计算机的 machine.config 文件。 通常情况下，该文件位于 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目录，其中 `SystemRoot` 是操作系统目录，`frameworkVersion` 是 .NET Framework 的版本。
 
         machine.config 中的设置可以通过应用程序的配置文件重写。
 

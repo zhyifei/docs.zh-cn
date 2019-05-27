@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96122302610d143c34404eac105ca9794b1cb15a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937652"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053674"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>如何：创建标准的 Windows 窗体打印作业
 在 Windows 窗体中打印的基础是<xref:System.Drawing.Printing.PrintDocument>组件 — 具体而言，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。 通过编写代码来处理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件，可以指定打印内容以及如何打印它。  
@@ -55,7 +55,7 @@ ms.locfileid: "61937652"
        }  
     ```  
   
-     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
+     (VisualC#和 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

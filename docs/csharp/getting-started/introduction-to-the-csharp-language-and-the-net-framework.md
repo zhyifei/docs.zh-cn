@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: bd2efcd28a8349ef07873adb5eaa69784e61d482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409219"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585938"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
 
-C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上运行的各种安全可靠的应用程序。 C# 可用于创建 Windows 客户端应用程序、XML Web service、分布式组件、客户端服务器应用程序、数据库应用程序等。 Visual C# 提供高级代码编辑器、方便使用的用户界面设计器、集成调试器和其他许多工具，以便你可以更轻松地开发基于 C# 语言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的应用程序。  
+C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 .NET Framework 上运行的各种安全可靠的应用程序。 C# 可用于创建 Windows 客户端应用程序、XML Web service、分布式组件、客户端服务器应用程序、数据库应用程序等。 Visual C# 提供高级代码编辑器、方便使用的用户界面设计器、集成调试器和其他许多工具，以便你可以更轻松地开发基于 C# 语言和 .NET Framework 的应用程序。  
   
 > [!NOTE]
 > 阅读 Visual C# 文档的前提是，你已了解基本的编程概念。 如果是完完全全的初学者，不妨探索 Visual C# 速成版（可从 Web 获取）。 还可以利用介绍 C# 的书籍和 Web 资源来学习实用的编程技巧。  
@@ -52,7 +52,7 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 平台体系结构
 
- C# 程序在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上运行，这是 Windows 不可或缺的一部分，包括名为“公共语言运行时 (CLR)”的虚执行系统和一组统一的类库。 CLR 是由 Microsoft 执行的公共语言基础结构 (CLI) 的商业实现，CLI 是作为执行和开发环境（语言和库在其中无缝协作）创建依据的国际标准。  
+ C# 程序在 .NET Framework 上运行，这是 Windows 不可或缺的一部分，包括名为“公共语言运行时 (CLR)”的虚执行系统和一组统一的类库。 CLR 是由 Microsoft 执行的公共语言基础结构 (CLI) 的商业实现，CLI 是作为执行和开发环境（语言和库在其中无缝协作）创建依据的国际标准。  
   
  用 C# 编写的源代码被编译成符合 CLI 规范的中间语言 (IL)。 IL 代码和资源（如位图和字符串）存储在磁盘上名为“程序集”的可执行文件（扩展名通常为 .exe 或 .dll）中。 程序集包含一个介绍程序集的类型、版本、区域性和安全要求的清单。  
   
@@ -60,9 +60,9 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
   
  ![从 C# 源代码到计算机执行](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
- 语言互操作性是 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的一项重要功能。 由于 C# 编译器生成的 IL 代码符合公共类型规范 (CTS)，因此 C# 生成的 IL 代码可以与 .NET 版本 Visual Basic、Visual C++ 或其他任何符合 CTS 的超过 20 种语言生成的代码进行交互。 一个程序集可能包含多个用不同 .NET 语言编写的模块，且类型可以相互引用，就像是用同一种语言编写的一样。  
+ 语言互操作性是 .NET Framework 的一项重要功能。 由于 C# 编译器生成的 IL 代码符合公共类型规范 (CTS)，因此 C# 生成的 IL 代码可以与 .NET 版本 Visual Basic、Visual C++ 或其他任何符合 CTS 的超过 20 种语言生成的代码进行交互。 一个程序集可能包含多个用不同 .NET 语言编写的模块，且类型可以相互引用，就像是用同一种语言编写的一样。  
   
- 除了运行时服务之外，[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 还包括一个由 4000 多个已整理到命名空间中的类构成的扩展库，这些类提供各种实用功能，包括文件输入输出、字符串控制、XML 分析和 Windows 窗体控件。 典型的 C# 应用程序广泛使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库来处理常见的“管道”零碎工作。  
+ 除了运行时服务之外，.NET Framework 还包括一个由 4000 多个已整理到命名空间中的类构成的扩展库，这些类提供各种实用功能，包括文件输入输出、字符串控制、XML 分析和 Windows 窗体控件。 典型的 C# 应用程序广泛使用 .NET Framework 类库来处理常见的“管道”零碎工作。  
   
  有关 .NET Framework 的详细信息，请参阅 [Microsoft.NET Framework 概述](../../framework/get-started/overview.md)。  
   

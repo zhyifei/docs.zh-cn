@@ -1,15 +1,13 @@
 ---
 title: 使用 Azure Service Fabric
 description: 了解除了只用于安排容器之外，可以使用哪些 Azure Service Fabric 应用程序模型。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126960"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644532"
 ---
 # <a name="using-azure-service-fabric"></a>使用 Azure Service Fabric
 
@@ -27,7 +25,7 @@ Service Fabric 未指定服务构建方式，开发人员可使用任何技术�
 
 如图 4-27 所示，开发人员可在 Service Fabric 中创建和运行微服务，既可作为简单进程也可作为 Docker 容器运行。 此外还可在同一 Service Fabric 群集中混合基于容器的微服务与基于进程的微服务。
 
-![Azure service Fabric 群集的比较：微服务作为进程，其中每个节点为每个微服务运行一个进程；微服务作为容器，其中每个节点使用多个容器运行 Docker（每个微服务一个容器）。](./media/image30.png)
+![比较 Azure Service Fabric 群集：微服务作为进程，其中每个节点为每个微服务运行一个进程；微服务作为容器，其中每个节点使用多个容器运行 Docker（每个微服务一个容器）。](./media/image30.png)
 
 **图 4-27**。 在 Azure Service Fabric 中将微服务部署为进程或容器
 

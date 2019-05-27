@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026479"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053246"
 ---
 # <a name="working-with-calendars"></a>使用日历
 
@@ -141,7 +141,7 @@ ms.locfileid: "62026479"
 >  Reiwa 时代、 新纪元<xref:System.Globalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>，2019 年 5 月 1 日，将从开始。 此更改会影响使用这些日历的所有应用程序。 请参阅以下文章，了解详细信息：
 > - [处理在.NET 中的日语日历中的新时代](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)，记录添加到.NET 可支持的功能与多个纪元的日历和讨论多纪元的日历处理时要使用的最佳实践。
 > - [准备用于日语纪元更改应用程序](/windows/uwp/design/globalizing/japanese-era-change)，其中提供有关测试 Windows 上的应用程序，以确保其变更就绪的纪元的信息。
-> - [新的日语时代的摘要更新为.NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework)，其中列出了与新的日语日历时代，相关的各个 Windows 版本的.NET Framework 更新说明新的.NET Framework 功能，有关多纪元支持，并包括若要在测试应用程序中查找的内容。
+> - [新的日语时代的摘要更新为.NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)，其中列出了与新的日语日历时代，相关的各个 Windows 版本的.NET Framework 更新说明新的.NET Framework 功能，有关多纪元支持，并包括若要在测试应用程序中查找的内容。
 
 大多数日历中的某个时间段表示相当长的时间段。 例如，在公历日历中，当前纪元跨越多个两个很长时间以来。 有关<xref:System.Globalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>，两个日历支持的多个纪元，这不是这种情况。 某个时间段对应于皇帝的残暴的段。 支持多个纪元，尤其是在当前纪元的上限值未知时, 带来了特殊的挑战。 
 
@@ -245,7 +245,7 @@ ms.locfileid: "62026479"
    |键 | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
    |名称 | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
    |类型 | REG_SZ |
-   |“值” | 1 |
+   |值 | 1 |
 
 启用严格范围检查，与前面的示例将引发<xref:System.ArgumentOutOfRangeException>并显示以下输出：
 
@@ -320,7 +320,7 @@ Parameter name: year
    |键 | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
    |名称 | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
    |类型 | REG_SZ |
-   |“值” | 1 |
+   |值 | 1 |
 
 在格式设置操作禁用元年支持，与上面的示例显示以下输出：
 
@@ -358,7 +358,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |键 | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
    |名称 | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
    |类型 | REG_SZ |
-   |“值” | 1 | 
+   |值 | 1 | 
 
 ## <a name="see-also"></a>请参阅
 

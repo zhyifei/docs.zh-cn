@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628915"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882493"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
   
- 本演练展示了如何创建实现基于事件的异步模式的组件。 此组件是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空间中的帮助程序类进行实现，这可确保它在任何应用模型（包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、控制台应用和 Windows 窗体应用）下都能正常运行。 也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控件和自己的自定义设计器来设计此组件。  
+ 本演练展示了如何创建实现基于事件的异步模式的组件。 此组件是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空间中的帮助程序类进行实现，这可确保它在任何应用模型（包括 ASP.NET、控制台应用和 Windows 窗体应用）下都能正常运行。 也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控件和自己的自定义设计器来设计此组件。  
   
  本演练使用异步计算质数的应用。 应用有主用户界面 (UI) 线程，以及用于每次质数计算的线程。 尽管测试大数字是否为质数需要花费很长时间，但主 UI 线程不会被此延迟中断，并且窗体在计算期间仍为响应式。 不仅可以同时运行计算（数量不限），还能选择性地取消挂起的计算。  
   

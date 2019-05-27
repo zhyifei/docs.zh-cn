@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972310"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053725"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>如何：确定 Windows 窗体 StatusBar 控件中被单击的面板
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "61972310"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>若要确定已单击的面板  
   
-1. 在中<xref:System.Windows.Forms.StatusBar.PanelClick>事件处理程序，使用`Select Case`（在 Visual Basic) 或`switch case`(VisualC#或[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 语句，以确定通过检查事件参数中被单击的面板的索引已单击的面板。  
+1. 在中<xref:System.Windows.Forms.StatusBar.PanelClick>事件处理程序，使用`Select Case`（在 Visual Basic) 或`switch case`(VisualC#或视觉对象C++) 语句，以确定通过检查事件参数中被单击的面板的索引已单击的面板。  
   
      下面的代码示例的要求是否存在，在窗体上的<xref:System.Windows.Forms.StatusBar>控件， `StatusBar1`，并将两个<xref:System.Windows.Forms.StatusBarPanel>对象，`StatusBarPanel1`和`StatusBarPanel2`。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61972310"
        }  
     ```  
   
-     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
+     (Visual C#、 Visual C++)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

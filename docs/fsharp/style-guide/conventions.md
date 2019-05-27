@@ -1,15 +1,15 @@
 ---
-title: F#编码约定
+title: F# 编码约定
 description: 了解一般指导原则和习惯用语，编写时F#代码。
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902130"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052801"
 ---
-# <a name="f-coding-conventions"></a>F#编码约定
+# <a name="f-coding-conventions"></a>F# 编码约定
 
 以下约定表述从处理较大的体验F#代码库。 [良好的五个原则F#代码](index.md#five-principles-of-good-f-code)是每个建议的基础。 与相关[F#组件设计准则](component-design-guidelines.md)，但不适用于任何F#的代码，而不仅仅是组件，例如库。
 
@@ -611,7 +611,7 @@ F#具有对对象和面向对象的 (OO) 概念的完整支持。 尽管许多 O
 
 ## <a name="type-abbreviations"></a>类型缩写
 
-[类型缩写，用](../language-reference/type-abbreviations.md)是要将标签分配到另一个类型，例如函数签名或更复杂类型的简便方法。 例如，以下别名将标签分配给所需定义与计算[CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/)、 深度学习库：
+[类型缩写，用](../language-reference/type-abbreviations.md)是要将标签分配到另一个类型，例如函数签名或更复杂类型的简便方法。 例如，以下别名将标签分配给所需定义与计算[CNTK](https://docs.microsoft.com/cognitive-toolkit/)、 深度学习库：
 
 ```fsharp
 open CNTK

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211185"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052834"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>如何：创建 MDI 子窗体
 
@@ -34,7 +34,7 @@ MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](multip
 
 4. 在中**解决方案资源管理器**，右键单击项目，依次指向**添加**，然后选择**添加新项**。
 
-5. 在中**添加新项**对话框中，选择**Windows 窗体**（在 Visual Basic 或 Visual C# 中） 或**Windows 窗体应用程序 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 从**模板**窗格。 在中**名称**框中，将窗体**Form2**。 单击**打开**按钮将窗体添加到项目。
+5. 在中**添加新项**对话框中，选择**Windows 窗体**(在 Visual Basic 中或在视觉对象C#) 或**Windows 窗体应用程序 (.NET)** (视觉对象中C++) 从**模板**窗格。 在中**名称**框中，将窗体**Form2**。 单击**打开**按钮将窗体添加到项目。
 
     > [!NOTE]
     > 在此步骤中创建的 MDI 子窗体是标准的 Windows 窗体。 因此，它具有 <xref:System.Windows.Forms.Form.Opacity%2A> 属性，该属性允许你控制窗体的透明度。 但是，<xref:System.Windows.Forms.Form.Opacity%2A> 属性旨在用于顶级窗口。 不要将其与 MDI 子窗体同时使用，否则可能会引起绘制问题。

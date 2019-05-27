@@ -2,18 +2,18 @@
 title: 编程指南 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: d71fb2d0365199bf89b0cfbd05b614ebd7634219
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8141d915b4262bdb66b0b2d9acc4c549956cdbec
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493997"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585791"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>编程指南 (LINQ to XML) (C#)
 本节提供有关使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进行编程的概念性和指导性信息。  
   
 ## <a name="who-should-read-this-documentation"></a>本文档的目标读者  
- 本文档面向已经了解 C# 以及 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的一些基本知识的开发人员。  
+ 本文档面向已经了解 C# 以及 .NET Framework 的一些基本知识的开发人员。  
   
  本文档的目的在于降低各类开发人员对 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的使用难度。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 使 XML 编程变得更容易。 您无需成为一名专家级开发人员就可以使用它。  
   

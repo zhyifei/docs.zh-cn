@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033119"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051997"
 ---
 # <a name="type-element-net-native"></a>\<类型 > 元素 (.NET Native)
 将运行时策略应用到一个特定类型，例如一个类或结构。  
@@ -51,13 +51,13 @@ ms.locfileid: "62033119"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |type_name|类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素或另一个 `<Type>` 元素的子元素，type_name 可能包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62033119"
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- 因为 <xref:System.Collections.Generic.List%601> 类的元数据并不是自动包含在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链之中，该实例在运行时间内未能显示出请求的成员信息。 为提供所需的元数据，将以下 `<Type>` 元素添加到运行时指令文件。 注意，因为我们已经提供了父 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素，因此不必在 `<Type>` 元素中提供完全限定的类型名称。  
+ 因为元数据<xref:System.Collections.Generic.List%601>类不会自动包括.NET Native 工具链，该示例将失败，若要在运行时显示的请求的成员信息。 为提供所需的元数据，将以下 `<Type>` 元素添加到运行时指令文件。 注意，因为我们已经提供了父 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) 元素，因此不必在 `<Type>` 元素中提供完全限定的类型名称。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ ms.locfileid: "62033119"
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- 因为 <xref:System.String> 对象的元数据不可用，调用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 的方法在同 <xref:System.NullReferenceException> 工具链汇编时，在运行时间引发一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 异常。 要消除异常并提供必需的元数据，请将以下 `<Type>` 元素添加到运行时指令文件：  
+ 因为元数据<xref:System.String>对象不可用，调用<xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法会抛出<xref:System.NullReferenceException>异常在运行时使用.NET Native 工具链编译时间。 要消除异常并提供必需的元数据，请将以下 `<Type>` 元素添加到运行时指令文件：  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

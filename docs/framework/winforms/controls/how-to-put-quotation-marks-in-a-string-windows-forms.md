@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913219"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053457"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：在字符串 （Windows 窗体） 中放置引号
 有时可能需要将引号（“”）放入文本字符串中。 例如：  
@@ -26,7 +26,7 @@ ms.locfileid: "61913219"
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>在代码中的字符串内放置引号  
   
-1. 在 Visual Basic 中，将作为嵌入引号插入行中的两个引号。 视觉对象中C#并[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入转义序列\\"作为嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
+1. 在 Visual Basic 中，将作为嵌入引号插入行中的两个引号。 视觉对象中C#和 Visual C++，插入转义序列\\"作为嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
   
     ```vb  
     Private Sub InsertQuote()  

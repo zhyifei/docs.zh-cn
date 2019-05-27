@@ -4,28 +4,29 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework], synchronizing threads
+- threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644768"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638760"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
+
 多个线程可以调用单个对象的属性和方法时，对这些调用进行同步处理是非常重要的。 否则，一个线程可能会中断另一个线程正在执行的任务，可能使该对象处于无效状态。 其成员不受这类中断影响的类叫做线程安全类。  
   
- 公共语言基础结构提供了几种策略，可用于同步对实例和静态成员的访问：  
+.NET 提供了几种策略，用于同步对实例和静态成员的访问：  
   
 - 同步代码区域。 可以使用 <xref:System.Threading.Monitor> 类或此类的编译器支持，仅同步需要它的代码块，从而提升性能。  
   
-- 手动同步。 可以使用 .NET Framework 类库提供的同步对象。 请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中介绍了 <xref:System.Threading.Monitor> 类。  
+- 手动同步。 可以使用 .NET 类库提供的同步对象。 请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中介绍了 <xref:System.Threading.Monitor> 类。  
   
-- 同步上下文。 可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 为 <xref:System.ContextBoundObject> 对象启用简单的自动同步。  
+- 同步上下文。 对于 .NET Framework 和 Xamarin 应用程序，可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 为 <xref:System.ContextBoundObject> 对象启用简单的自动同步。  
   
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的集合类。 这些类提供了内置的同步添加和删除操作。 有关详细信息，请参阅[线程安全集合](../../../docs/standard/collections/thread-safe/index.md)。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "64644768"
  这是对象的默认情况。 任何线程都可以随时访问任何方法或字段。 一次只能有一个线程访问这些对象。  
   
 ## <a name="manual-synchronization"></a>手动同步  
- .NET Framework 类库提供大量用于同步线程的类。 请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
+ .NET 类库提供大量用于同步线程的类。 请参阅[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
   
 ## <a name="synchronized-code-regions"></a>同步代码区域  
  可以使用 <xref:System.Threading.Monitor> 类或编译器关键字，同步代码块、实例方法和静态方法。 不支持同步静态字段。  
@@ -52,7 +53,7 @@ ms.locfileid: "64644768"
 > [!NOTE]
 >  由于 `lock` 和 `SyncLock` 语句是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 实现，因此 <xref:System.Threading.Monitor> 的其他方法可以在同步区域内与它们结合使用。  
   
- 还可以用 **MethodImplAttribute** 和 **MethodImplOptions.Synchronized** 修饰方法，其效果和使用**监视器**或其中一个编译器关键字锁定整个方法主体相同。  
+ 还可以使用值为 <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType> 的 <xref:System.Runtime.CompilerServices.MethodImplAttribute> 修饰方法，其效果和使用 <xref:System.Threading.Monitor> 或其中一个编译器关键字锁定整个方法正文相同。  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 可用于中断对线程执行阻止操作（如等待访问同步代码区域）。 Thread.Interrupt 还用于中断对线程执行 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 等操作。  
   
@@ -65,7 +66,8 @@ ms.locfileid: "64644768"
  在这两种情况下，如果代码块中引发异常，则 **lock** 或 **SyncLock** 获取的锁将自动释放。 C# 和 Visual Basic 编译器在发出 **try**/**finally** 块时，在 try 的起始处使用 **Monitor.Enter**，在 **finally** 块中使用 **Monitor.Exit**。 如果 **lock** 或 **SyncLock** 块内部引发了异常，则会运行 **finally** 处理程序，从而允许执行任何清除工作。  
   
 ## <a name="synchronized-context"></a>同步上下文  
- 可以使用任何 **ContextBoundObject** 上的 **SynchronizationAttribute** 来同步所有实例方法和字段。 同一上下文域中的所有对象都共享同一个锁。 允许多个线程访问方法和字段，但在任一时刻只允许一个线程访问。  
+ 
+仅在 .NET Framework 和 Xamarin 应用程序中，可以使用任何 <xref:System.ContextBoundObject> 上的 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 来同步所有实例方法和字段。 同一上下文域中的所有对象都共享同一个锁。 允许多个线程访问方法和字段，但在任一时刻只允许一个线程访问。  
   
 ## <a name="see-also"></a>请参阅
 

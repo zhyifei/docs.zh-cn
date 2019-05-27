@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724039"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880332"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -75,28 +75,26 @@ int* myVariable;
 
 |运算符/语句|使用|
 |-------------------------|---------|
-|*|执行指针间接寻址。|
-|->|通过指针访问结构的成员。|
-|[]|为指针建立索引。|
+|`*`|执行指针间接寻址。|
+|`->`|通过指针访问结构的成员。|
+|`[]`|为指针建立索引。|
 |`&`|获取变量的地址。|
-|++ 和 --|递增和递减指针。|
-|+ 和 -|执行指针算法。|
-|==、!=、\<、>、\<= 和 >=|比较指针。|
-|`stackalloc`|在堆栈上分配内存。|
-|`fixed` 语句|临时固定变量以便找到其地址。|
+|`++` 和 `--`|递增和递减指针。|
+|`+` 和 `-`|执行指针算法。|
+|`==`、`!=`、`<``>`、`<=` 和 `>=`|比较指针。|
+|[`stackalloc` 运算符](../../language-reference/keywords/stackalloc.md)|在堆栈上分配内存。|
+|[`fixed` 语句](../../language-reference/keywords/fixed-statement.md)|临时固定变量以便找到其地址。|
+
+要详细了解与指针相关的运算符，请参阅[与指针相关的运算符](../../language-reference/operators/pointer-related-operators.md)。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[指针类型](~/_csharplang/spec/unsafe-code.md#pointer-types)部分。
 
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
 - [不安全代码和指针](index.md)
 - [指针转换](pointer-conversions.md)
-- [指针表达式](pointer-expressions.md)
 - [类型](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed 语句](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [装箱和取消装箱](../types/boxing-and-unboxing.md)

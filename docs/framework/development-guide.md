@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092951"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583538"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
@@ -67,7 +67,7 @@ ms.locfileid: "56092951"
  
 ## <a name="reference"></a>参考  
  [.NET Framework 类库](/dotnet/api/?view=netframework-4.7)  
- 提供 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间中包含的每一个类的语法、代码示例和使用信息。  
+ 提供 .NET Framework 命名空间中包含的每一个类的语法、代码示例和使用信息。  
   
 ## <a name="related-sections"></a>相关章节  
  [入门](../../docs/framework/get-started/index.md)  

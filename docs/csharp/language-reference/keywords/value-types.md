@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612720"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632930"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -34,7 +34,7 @@ ms.locfileid: "53612720"
 
 值类型变量不能默认为 `null`。 但相应的[可以为空的类型](../../../csharp/programming-guide/nullable-types/index.md)的变量可以为 `null`。
 
-每个值类型都具有一个初始化该类型的默认值的隐式默认构造函数。 有关值类型的默认值的信息，请参阅[默认值表](default-values-table.md)。
+每个值类型都有一个隐式无参数构造函数，用于初始化该类型的默认值。 有关值类型的默认值的信息，请参阅[默认值表](default-values-table.md)。
 
 ## <a name="simple-types"></a>简单类型
 
@@ -67,7 +67,7 @@ int myInt;
 在未初始化之前，无法使用。 可以使用以下语句将其初始化：
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 此语句等效于以下语句：
@@ -88,12 +88,12 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-使用 [new](new.md) 运算符将调用特定类型的默认构造函数，并向变量赋予默认值。 在前面的示例中，默认构造函数将值 `0` 赋予了 `myInt`。 有关通过调用默认构造函数所赋予的值的详细信息，请参阅[默认值表](default-values-table.md)。
+使用 [new](new.md) 运算符调用特定类型的无参数构造函数，并将默认值赋给变量。 在上述示例中，无参数构造函数将值 `0` 赋给 `myInt`。 有关通过调用默认构造函数所赋予的值的详细信息，请参阅[默认值表](default-values-table.md)。
 
-对于用户定义类型，请使用 [new](new.md) 调用默认构造函数。 例如，以下语句调用 `Point` 结构的默认构造函数：
+对于用户定义类型，使用 [new](new.md) 调用无参数构造函数。 例如，以下语句调用 `Point` 结构的无参数构造函数：
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+Point p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 进行此调用后，该结构被视为已明确赋值；即，它的所有成员都被初始化为其默认值。

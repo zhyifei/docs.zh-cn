@@ -2,12 +2,12 @@
 title: 开始使用F#在 Visual Studio Code
 description: 了解如何使用F#使用 Visual Studio Code 和 Ionide 插件套件。
 ms.date: 12/23/2018
-ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949536"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051872"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>开始使用F#在 Visual Studio Code
 
@@ -16,7 +16,7 @@ ms.locfileid: "61949536"
 若要开始，请确保已[F#和正确安装 Ionide 插件](install-fsharp.md#install-f-with-visual-studio-code)。
 
 > [!NOTE]
-> Ionide 将生成.NET FrameworkF#项目，不 dotnet core，可以跨平台兼容性问题。 如果在上运行**Linux**或**OSX**，若要开始更简单的方法是使用[命令行工具](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)。
+> Ionide 将生成.NET FrameworkF#项目，不 dotnet core，可以跨平台兼容性问题。 如果在上运行**Linux**或**OSX**，若要开始更简单的方法是使用[命令行工具](get-started-command-line.md)。
 
 ## <a name="creating-your-first-project-with-ionide"></a>使用 Ionide 创建第一个项目
 
