@@ -2,12 +2,12 @@
 title: .NET 微服务。 适用于容器化 .NET 应用程序的体系结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可是模块化且可独立部署的服务。 （适用于 Linux 和 Windows）的 Docker 容器可将服务及其依赖项绑定到单个单元，使该单元在一个独立的环境中运行，因而可简化部署和测试。
 ms.date: 01/07/2019
-ms.openlocfilehash: bbd72b02ae446bbd0df31889679023d3b5040db8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644413"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195977"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务：适用于容器化 .NET 应用程序的体系结构
 
@@ -31,7 +31,7 @@ ms.locfileid: "65644413"
 
 ## <a name="introduction"></a>介绍
 
-企业通过使用容器，日益实现成本节约、解决部署问题并改进 DevOps 和生产操作。 通过创建 Azure 容器服务、Azure Service Fabric 等产品，同时与 Docker、Mesosphere 和 Kubernetes 等行业领先者合作，Microsoft 发布了适用于 Windows 和 Linux 的容器创新。 这些产品提供容器解决方案，可帮助公司以云的速度和规模生成并部署应用程序，而无需考虑其选用的平台或工具。
+企业通过使用容器，日益实现成本节约、解决部署问题并改进 DevOps 和生产操作。 通过创建 Azure Kubernetes 服务、Azure Service Fabric 等产品，同时与 Docker、Mesosphere 和 Kubernetes 等行业领先者合作，Microsoft 一直在推出适用于 Windows 和 Linux 的容器创新。 这些产品提供容器解决方案，可帮助公司以云的速度和规模生成并部署应用程序，而无需考虑其选用的平台或工具。
 
 Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 生态系统领域最重要供应商的支持。 （Microsoft 是支持 Docker 的主要云供应商之一。）将来，Docker 可能会在云端或本地的任何数据中心普及。
 
@@ -47,7 +47,7 @@ Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 
 
 ## <a name="version"></a>Version
 
-本指南已进行了修订，涵盖 .NET Core 2.2 版本以及与 .NET Core 2.2 同期的同一“批”技术 （即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 2.2 的原因。 
+本指南已进行了修订，涵盖 .NET Core 2.2 版本以及与 .NET Core 2.2 同期的同一“批”技术  （即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 2.2 的原因  。 
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵盖的内容
 
@@ -55,7 +55,7 @@ Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 
 
 ### <a name="additional-resources"></a>其他资源
 
-- 《使用 Microsoft 平台和工具的容器化 Docker 应用程序生命周期》（可下载电子书）  
+- 《使用 Microsoft 平台和工具的容器化 Docker 应用程序生命周期》  （可下载电子书）  
     <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>本指南的目标读者
@@ -122,7 +122,7 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > **Scott Hunter**，Microsoft .NET 团队的合作伙伴总监项目经理
 >
-> Microsoft .NET 团队高级项目经理 Nish Anil
+> Microsoft .NET 团队高级项目经理 Nish Anil 
 >
 > **Dylan Reisenberger**，Polly 的架构师兼开发主管
 >
