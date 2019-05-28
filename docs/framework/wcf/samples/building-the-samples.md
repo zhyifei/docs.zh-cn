@@ -20,7 +20,7 @@ ms.locfileid: "61944061"
 
 1. 打开 Visual Studio 开发人员命令提示符并导航到安装示例的目录位置下语言特定的子目录。
 
-2. 类型`msbuild`在命令行。 生成客户端程序文件*client\bin*和服务程序文件构建到*service\bin*。 如果该服务由 Internet 信息服务 (IIS) 承载，服务程序文件也会复制到*servicemodelsamples*目录并将其*\bin*子目录。
+2. 类型`msbuild`在命令行。 生成客户端程序文件*client\bin*和服务程序文件构建到*service\bin*。 如果该服务由 Internet 信息服务 (IIS) 承载，服务程序文件也会复制到 *servicemodelsamples* 目录并将其 *\bin* 子目录。
 
 > [!NOTE]
 > 必须设置 Acl *%systemdrive%\inetpub\wwwroot*授予修改权限的帐户在其下运行。 否则，某些后期生成事件将失败。 或者，您可以将 ACL 保留原样，而以管理员身份运行 SDK 命令提示。
@@ -31,7 +31,7 @@ ms.locfileid: "61944061"
 
 1. 从**构建**菜单中，选择**重新生成解决方案**。
 
-   客户端程序文件在 client\bin 中生成，服务程序文件在 service\bin 中生成。 如果该服务在 IIS 中承载，服务程序文件也复制到*servicemodelsamples*目录并将其*\bin*子目录。
+   客户端程序文件在 client\bin 中生成，服务程序文件在 service\bin 中生成。 如果该服务在 IIS 中承载，服务程序文件也复制到 *servicemodelsamples* 目录并将其 *\bin* 子目录。
 
 > [!NOTE]
 > 您必须在 %systemdrive%\inetpub\wwwroot 上设置 ACL，以便为您运行的帐户授予修改权限。 否则，某些后期生成事件将失败。 或者，您可以将 ACL 保留原样，而以管理员身份运行 SDK 命令提示或 Visual Studio。 某些 Visual Studio 操作（例如，为 ASP.Net 工作进程附加调试器）也需要管理特权。
