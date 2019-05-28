@@ -9,3 +9,5 @@
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
     - name: 在 Visual Studio 中调试表达式树
       href: debugging-expression-trees-in-visual-studio.md
+    - name: DebugView 语法
+      href: debugview-syntax.md
