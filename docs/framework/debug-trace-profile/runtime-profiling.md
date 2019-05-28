@@ -30,17 +30,17 @@ ms.locfileid: "65582809"
   
 1. 在命令提示符处，键入 **perfmon**。 将出现“性能监视器”  控制台。  
   
-2. 在“监视工具”  文件夹中，单击“性能监视器” 。  
+2. 在“监视工具”  文件夹中，单击“性能监视器”  。  
   
 3. 在“性能监视器”工具栏上，如果有“添加”  图标（加号），请单击该图标。 如果没有，请在监视器窗口中单击右键，然后选择“添加计数器”  选项。  
   
-     这将打开“添加计数器”  对话框。 “可用计数器”  列表框中显示可用的性能对象。 .NET Framework 应用程序有许多预定义的对象，包括用于内存管理、互操作性、异常处理以及多线程处理的计数器，它们分别是“.NET CLR Memory”**.**、“.NET CLR Interop”、“.NET CLR Exceptions”和“.NET CLR LocksAndThreads”。 每个性能对象均包含多个单一性能计数器。 在性能监视器中的可用性能计数器列表，请参阅 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)一起安装的.NET Framework 性能计数器中的数据。  
+     这将打开“添加计数器”  对话框。 “可用计数器”  列表框中显示可用的性能对象。 .NET Framework 应用程序有许多预定义的对象，包括用于内存管理、互操作性、异常处理以及多线程处理的计数器，它们分别是“.NET CLR Memory” **.** 、“.NET CLR Interop”  、“.NET CLR Exceptions”  和“.NET CLR LocksAndThreads”  。 每个性能对象均包含多个单一性能计数器。 在性能监视器中的可用性能计数器列表，请参阅 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)一起安装的.NET Framework 性能计数器中的数据。  
   
 4. 选择性能对象的名称旁边的复选框，以查看它所支持的各个性能计数器的列表。  
   
 5. 单击要查看的性能计数器。  
   
-6. 在“选定对象的实例”列表框中，单击“\<所有实例>”，指定要在全局（也就是在整个系统范围内）监视公共语言运行时的性能计数器。  
+6. 在“选定对象的实例”列表框中，单击“\<所有实例>”，指定要在全局（也就是在整个系统范围内）监视公共语言运行时的性能计数器   。  
   
      或  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65582809"
  要分析位于某一区域或远程共享中的程序集，请确保该远程程序集在运行性能计数器的计算机上完全受信任。 如果该程序集不具有足够的信任，则性能计数器将不工作。 有关向不同区域授予信任的信息，请参阅 [Caspol.exe（代码访问安全策略工具）](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
 > [!NOTE]
->  在安装有 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系统上，对于使用 **开发的应用程序，性能监视器可能不会显示某些类别的性能计数器数据，如“.NET CLR Data”****和“.NET CLR Networking”**[!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]。 如果属于这种情况，可以配置性能监视器以显示此数据，方法是将 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 元素添加到应用程序的配置文件。  
+>  在安装有 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系统上，对于使用 **开发的应用程序，性能监视器可能不会显示某些类别的性能计数器数据，如“.NET CLR Data”** **和“.NET CLR Networking”** [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]。 如果属于这种情况，可以配置性能监视器以显示此数据，方法是将 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 元素添加到应用程序的配置文件。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以编程方式读取和创建性能计数器  
  .NET Framework 提供了可用于以编程方式访问性能控制台中提供的相同性能信息的类。 另外，还可以使用这些类创建自定义性能计数器。 下表介绍了一些性能监视提供.NET Framework 中的类。  
