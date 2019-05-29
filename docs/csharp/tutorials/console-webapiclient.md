@@ -98,7 +98,7 @@ static void Main(string[] args)
 
 现在，生成了一个不执行任何操作但具备异步功能的程序。 现在进行改进。
 
-首先需要一个能从 Web 检索数据的对象；可使用 <xref:System.Net.Http.HttpClient> 执行此操作。 此对象负责处理请求和响应。 在 Program.cs 文件内的 `Program` 类中初始化该类型的一个示例。
+首先需要一个能从 Web 检索数据的对象；可使用 <xref:System.Net.Http.HttpClient> 执行此操作。 此对象负责处理请求和响应。 在 Program.cs 文件内的 `Program` 类中初始化该类型的一个实例。
 
 ```csharp
 namespace WebAPIClient
