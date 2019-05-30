@@ -2,15 +2,15 @@
 title: SqlClient 对高可用性的支持，灾难恢复
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251170"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380013"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
-本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
+本主题讨论用于高可用性、 灾难恢复-AlwaysOn 可用性组的 SqlClient 支持 （在.NET Framework 4.5 中添加）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
   
  现在，您可以指定的可用性组侦听器 （高可用性、 灾难恢复） 可用性组 (AG) 或连接属性中的 SQL Server 2012 故障转移群集实例。 如果 SqlClient 应用程序连接到发生故障转移的 AlwaysOn 数据库，原始连接会中断，而且应用程序必须打开一个新连接以在故障转移之后继续工作。  
   
@@ -19,7 +19,7 @@ ms.locfileid: "66251170"
 > [!NOTE]
 >  增加连接超时值和实现连接重试逻辑会增加应用程序连接到可用性组的概率。 此外，由于故障转移，连接可能失败，所以您应当实现连接重试逻辑，重试失败的连接，直到它重新连接。  
   
- 以下连接属性已添加到 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的 SqlClient：  
+ 以下连接属性已添加到.NET Framework 4.5 中的 SqlClient:  
   
 - `ApplicationIntent`  
   
