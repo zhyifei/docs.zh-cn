@@ -8,27 +8,27 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 58f823ce0c128f30e361b4a631d41286533b5f0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64556054df2689ff758f52c7e98556997a3e9d3d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701497"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301175"
 ---
 # <a name="section-element"></a>\<部分 > 元素
 
 包含配置部分声明。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
 
 ## <a name="syntax"></a>语法
 
@@ -53,17 +53,17 @@ ms.locfileid: "61701497"
 |                     | 描述 |
 | ------------------- | ----------- |
 | **allowDefinition** | 指定部分可在哪个配置文件。 使用下列值之一：<br><br>**Everywhere**<br>允许使用任何配置文件中的部分。 这是默认设置。<br>**MachineOnly**<br>允许该节只能在计算机配置文件 (*Machine.config*)。<br>**MachineToApplication**<br>允许要在计算机配置文件或应用程序配置文件中使用的部分。 |
-| **allowLocation**   | 确定是否可以在使用部分**\<位置 >** 元素。 使用下列值之一：<br><br>**true**<br>允许该节中使用**\<位置 >** 元素。 这是默认设置。<br>**false**<br>不允许要在中使用的部分**\<位置 >** 元素。 |
+| **allowLocation**   | 确定是否可以在使用部分 **\<位置 >** 元素。 使用下列值之一：<br><br>**true**<br>允许该节中使用 **\<位置 >** 元素。 这是默认设置。<br>**false**<br>不允许要在中使用的部分 **\<位置 >** 元素。 |
 
 ## <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
-| [**\<sectionGroup>** Element](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
+| [ **\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [ **\<sectionGroup>** Element](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定义配置节的命名空间。 |
 
 > [!NOTE]
-> 一个**\<部分 >** 元素是子元素的 **\<configSections >** 或者 **\<sectionGroup >** 但不是两者。
+> 一个 **\<部分 >** 元素是子元素的 **\<configSections >** 或者 **\<sectionGroup >** 但不是两者。
 
 ## <a name="child-elements"></a>子元素
 

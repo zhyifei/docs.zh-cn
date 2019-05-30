@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674722"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300762"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 和 DictionarySectionHandler 的自定义元素
 
 定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
-&nbsp;&nbsp;**\<sectionName>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
+&nbsp;&nbsp; **\<sectionName>**
 
 ## <a name="attributes"></a>特性
 
@@ -30,15 +30,15 @@ None
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<添加 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler>  | 添加自定义应用程序设置。 |
-| [**\<删除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 删除以前定义的设置。 |
-| [**\<清除 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 清除部分中的所有以前定义的设置。 |
+| [ **\<添加 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler>  | 添加自定义应用程序设置。 |
+| [ **\<删除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 删除以前定义的设置。 |
+| [ **\<清除 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 清除部分中的所有以前定义的设置。 |
 
 ## <a name="remarks"></a>备注
 
@@ -55,7 +55,7 @@ None
 
 下面的示例演示如何声明使用的部分<xref:System.Configuration.DictionarySectionHandler>和<xref:System.Configuration.NameValueSectionHandler>类。
 
-第一个自定义元素是 **\<dictionarySample >**，其中包含设置读取<xref:System.Configuration.DictionarySectionHandler>类`System.dll`程序集。 第二个自定义元素是 **\<mySection >**，其中包含设置读取<xref:System.Configuration.NameValueSectionHandler>类`System.dll`程序集。
+第一个自定义元素是 **\<dictionarySample >** ，其中包含设置读取<xref:System.Configuration.DictionarySectionHandler>类`System.dll`程序集。 第二个自定义元素是 **\<mySection >** ，其中包含设置读取<xref:System.Configuration.NameValueSectionHandler>类`System.dll`程序集。
 
 ```xml
 <configuration>

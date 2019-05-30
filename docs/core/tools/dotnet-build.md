@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
 ms.date: 04/24/2019
-ms.openlocfilehash: 6564aacbe520797b47095929cfe72c6b180b99a7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df264fe830259832e5c75db9fd71230ba70a9f18
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632137"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959189"
 ---
 # <a name="dotnet-build"></a>dotnet 生成
 
@@ -144,7 +144,7 @@ dotnet build [-h|--help]
   dotnet build --source c:\packages\mypackages
   ```
 
-* 生成项目，并将 1.2.3.4 版本设置为生成参数：
+* 生成项目并设置版本 1.2.3.4 作为使用 `-p` [MSBuild 选项](#msbuild)的生成参数：
 
   ```console
   dotnet build -p:Version=1.2.3.4

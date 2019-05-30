@@ -2,12 +2,12 @@
 title: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
 description: 了解如何使用 Polly 和 HttpClientFactory 处理 HTTP 故障。
 ms.date: 01/07/2019
-ms.openlocfilehash: f9f7c60792527c6bdba9a63b31e3dcbec2963da9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644567"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053106"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>通过 HttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
 
@@ -15,7 +15,7 @@ ms.locfileid: "65644567"
 
 Polly 是一个 .NET 库，提供恢复能力和瞬态故障处理功能。 通过应用 Polly 策略（如重试、断路器、舱壁隔离、超时和回退）即可实现这些功能。 Polly 面向 .NET 4.x 和 .NET Standard 库 1.0（支持 .NET Core）。
 
-但是，将包含自定义代码的 Polly 库与 HttpClient 配合使用的过程非常复杂。 eShopOnContainers 的原始版本中包含基于 Polly 的 [ResilientHttpClient 构建基块](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但随着 [HttpClientFactory](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests) 的发布，可复原 Http 通信变得更易于实现，因此已弃用 eShopOnContainers 中的构建基块。 
+但是，将包含自定义代码的 Polly 库与 HttpClient 配合使用的过程非常复杂。 eShopOnContainers 的原始版本中包含基于 Polly 的 [ResilientHttpClient 构建基块](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。 但随着 [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) 的发布，可复原 HTTP 通信变得更易于实现，因此已弃用 eShopOnContainers 中的构建基块。 
 
 以下步骤说明如何通过集成到 HttpClientFactory 中的 Polly（已在上一部分中说明）使用 Http 重试。
 

@@ -3,12 +3,12 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427287"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195836"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可为空引用类型迁移现有代码
 
@@ -49,8 +49,11 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 下一步建议打开可为空注释上下文，看看生成了多少警告。 在解决方案中的两个 csproj 文件中（直接在 `LangVersion` 元素下面）添加以下元素：
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> `Nullable` 元素以前名为 `NullableContextOptions`。 通过 Visual Studio 2019 16.2-p1 发布重命名。 .NET Core SDK 3.0.100-preview5-011568 未进行此更改。 如果使用.NET Core CLI，将需要在推出下一个预览版之前使用 `NullableContextOptions`。
 
 执行测试生成，并注意警告列表。 在此小型应用程序中，编译器将生成五个警告，因此可能会启用可为空注释上下文，并开始为整个项目修复警告。
 
@@ -58,7 +61,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="warnings-help-discover-original-design-intent"></a>警告有助于发现原始设计意图
 
-有两个类生成多个警告。 从 `NewsStoryViewModel` 类开始。 从两个 csproj 文件中删除 `NullableContextOptions` 元素，以便将警告范围限制为正在处理的代码部分。 打开 NewsStoryViewModel.cs 文件并添加下列指令，以启用 `NewsStoryViewModel` 的可为空注释上下文，并按照类定义对其进行还原：
+有两个类生成多个警告。 从 `NewsStoryViewModel` 类开始。 从两个 csproj 文件中删除 `Nullable` 元素，以便将警告范围限制为正在处理的代码部分。 打开 NewsStoryViewModel.cs 文件并添加下列指令，以启用 `NewsStoryViewModel` 的可为空注释上下文，并按照类定义对其进行还原：
 
 ```csharp
 #nullable enable

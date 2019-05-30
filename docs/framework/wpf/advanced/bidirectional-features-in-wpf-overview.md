@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655489"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380180"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 与其他任何开发平台不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有支持的双向内容快速开发的许多功能，例如，混合从左到右和从右到左同一文档中的数据。 同时，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]创建需要双向功能，如阿拉伯语和希伯来语用户的用户的卓越的体验。  
@@ -178,7 +178,7 @@ ms.locfileid: "64655489"
   
  **Substitution**：  
   
- 此属性指定要执行的数字替换类型。 它采用以下之一<xref:System.Windows.Media.NumberSubstitutionMethod>枚举值。  
+ 此属性指定要执行的数字替换类型。 它采用以下之一<xref:System.Windows.Media.NumberSubstitutionMethod>枚举值：  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替换方法根据数字区域性确定<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>属性。 这是默认设置。  
   

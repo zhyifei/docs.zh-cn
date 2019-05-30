@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7c0c22d070ec12cb67252dee7dca02c5160b9e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034562"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380091"
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 
@@ -23,7 +23,7 @@ ms.locfileid: "62034562"
 ## <a name="assembly-unification-and-default-binding"></a>程序集统一和默认绑定
  到 .NET Framework 程序集的绑定有时会通过称为 *“程序集统一”* 的过程进行重定向。 .NET Framework 包括一个公共语言运行时版本和构成类型库的约二十个 .NET Framework 程序集。 运行时将这些 .NET Framework 程序集视为单个单元。 默认情况下，当启动应用时，由运行时运行的所有对代码中的类型的引用都将定向到具有与进程中加载的运行时相同的版本号的 .NET Framework 程序集。 此模型发生的重定向是运行时的默认行为。
 
- 例如，如果你的应用引用 System.XML 命名空间中的类型并使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]生成，则它包含对 System.XML 程序集（随附运行时版本 4.5）的静态引用。 如果想要重定向绑定引用，以指向 System.XML 程序集（随附 .NET Framework 4），你可以将重定向信息放在应用配置文件中。 统一的 .NET Framework 程序集的配置文件中的绑定重定向将取消该程序集的统一。
+ 例如，如果应用引用 System.XML 命名空间中的类型，并且已生成使用.NET Framework 4.5，它包含对 System.XML 程序集随运行时版本 4.5 的静态引用。 如果想要重定向绑定引用，以指向 System.XML 程序集（随附 .NET Framework 4），你可以将重定向信息放在应用配置文件中。 统一的 .NET Framework 程序集的配置文件中的绑定重定向将取消该程序集的统一。
 
  此外，如果有多个可用版本，可能需要手动重定向第三方程序集的程序集绑定。
 
@@ -55,7 +55,7 @@ ms.locfileid: "62034562"
 
 ### <a name="relying-on-automatic-binding-redirection"></a>依赖于自动绑定重定向
 
-当您创建桌面应用程序在 Visual Studio 中面向[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]或更高版本，该应用使用自动绑定重定向。 这意味着如果两个组件引用同一强名称程序集的不同版本，则运行时会自动添加绑定重定向到输出应用配置 (app.config) 文件中的程序集的较新版本。 此重定向将重写可能会发生的程序集统一。 不修改源 app.config 文件。 例如，假设你的应用直接引用带外 .NET Framework 组件，但使用面向同一组件的较旧版本的第三方库。 在编译该应用时，将修改输出应用配置文件以包含绑定重定向到较新版本的组件。 如果创建一个 Web 应用，你将收到有关绑定冲突的生成警告，这反过来将为你提供将必要的绑定重定向添加到源 Web 配置文件的选项。
+当面向.NET Framework 4.5.1 或更高版本，可以在 Visual Studio 中创建的桌面应用时，该应用将使用自动绑定重定向。 这意味着如果两个组件引用同一强名称程序集的不同版本，则运行时会自动添加绑定重定向到输出应用配置 (app.config) 文件中的程序集的较新版本。 此重定向将重写可能会发生的程序集统一。 不修改源 app.config 文件。 例如，假设你的应用直接引用带外 .NET Framework 组件，但使用面向同一组件的较旧版本的第三方库。 在编译该应用时，将修改输出应用配置文件以包含绑定重定向到较新版本的组件。 如果创建一个 Web 应用，你将收到有关绑定冲突的生成警告，这反过来将为你提供将必要的绑定重定向添加到源 Web 配置文件的选项。
 
 如果你手动添加绑定重定向到源 app.config 文件中，在编译时，Visual Studio 会尝试将基于你添加绑定重定向的程序集统一。 例如，假设你对某一程序集插入以下绑定重定向：
 

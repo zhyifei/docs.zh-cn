@@ -2,19 +2,19 @@
 title: .NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876577"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380137"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 
-中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，如新活动、 设计器功能和工作流开发模型。 重新承载的工作流设计器支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的许多（但不是全部）新工作流功能。 有关支持的新功能的详细信息，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](wf-features-in-the-rehosted-workflow-designer.md)。 有关迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](migration-guidance.md)。 本主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的新工作流功能。
+.NET Framework 4.5 中的 Windows Workflow Foundation (WF) 引入了许多新功能，如新活动、 设计器功能和工作流开发模型。 很多，而不是所有.NET Framework 4.5 中引入的功能在重新承载的工作流设计器中的新工作流的支持。 有关支持的新功能的详细信息，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](wf-features-in-the-rehosted-workflow-designer.md)。 有关迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](migration-guidance.md)。 本主题概述了.NET Framework 4.5 中引入的新工作流功能。
 
 > [!WARNING]
-> 中引入的新 Windows Workflow Foundation 功能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]对于面向以前版本的 framework 的项目不可用。 如果面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的项目重新面向以前版本的框架，则可能会发生多个问题。
+> .NET Framework 4.5 中引入的新 Windows Workflow Foundation 功能不可用于面向以前版本的 framework 的项目。 如果目标.NET Framework 4.5 重定向到以前的版本的 framework 的项目，可能会出现几个问题。
 >
 > - C# 表达式将替换为在设计器中的消息**值在 XAML 中设置**。
 > - 将发生许多生成错误，包括以下错误。
@@ -23,7 +23,7 @@ ms.locfileid: "65876577"
 
 ## <a name="BKMK_Versioning"></a> 工作流版本控制
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了几个基于新的 <xref:System.Activities.WorkflowIdentity> 类的工作流版本控制功能。 <xref:System.Activities.WorkflowIdentity> 为工作流应用程序提供了一种通过定义来映射持久化工作流实例的机制。
+.NET framework 4.5 引入了几个新的版本控制功能基于新<xref:System.Activities.WorkflowIdentity>类。 <xref:System.Activities.WorkflowIdentity> 为工作流应用程序提供了一种通过定义来映射持久化工作流实例的机制。
 
 - 使用 <xref:System.Activities.WorkflowApplication> 承载的开发人员可以使用 <xref:System.Activities.WorkflowIdentity> 来启用并行承载多个版本的工作流。 可以使用新的 <xref:System.Activities.WorkflowApplicationInstance> 类来加载持久化工作流实例，然后，主机可以使用 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> 在实例化 <xref:System.Activities.WorkflowApplication> 时提供工作流定义的正确版本。 有关详细信息，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)和[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
@@ -31,7 +31,7 @@ ms.locfileid: "65876577"
 
 - 引入了动态更新，其提供了一种更新持久化工作流实例定义的机制。 有关详细信息，请参阅[动态更新](dynamic-update.md)和[如何：更新正在运行的工作流实例的定义](how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
-- SqlWorkflowInstanceStoreSchemaUpgrade.sql 数据库脚本旨在用于升级使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 数据库脚本创建的持久性数据库。 此脚本会更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持久性数据库以支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的版本控制功能。 数据库中的持久化工作流实例将获得默认的版本控制值，然后就可以参与并行执行和动态更新。 有关详细信息，请参阅[升级.NET Framework 4 持久性数据库支持工作流版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
+- SqlWorkflowInstanceStoreSchemaUpgrade.sql 数据库脚本旨在用于升级使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 数据库脚本创建的持久性数据库。 此脚本可更新[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]持久性数据库以支持在.NET Framework 4.5 中引入的新版本控制功能。 数据库中的持久化工作流实例将获得默认的版本控制值，然后就可以参与并行执行和动态更新。 有关详细信息，请参阅[升级.NET Framework 4 持久性数据库支持工作流版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
 
 ## <a name="BKMK_NewActivities"></a> 活动
 
@@ -43,7 +43,7 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_NewFlowchartCapabilities"></a> 新流程图功能
 
-流程图将针对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 进行更新，并具有以下新功能：
+流程图更新.NET Framework 4.5，并且具有以下新功能：
 
 - `DisplayName` 或 <xref:System.Activities.Statements.FlowSwitch%601> 活动的 <xref:System.Activities.Statements.FlowDecision> 属性是可编辑的。 这样，活动设计器就可以显示有关该活动的用途的详细信息。
 
@@ -51,7 +51,7 @@ ms.locfileid: "65876577"
 
 ## <a name="support-for-partial-trust"></a>支持部分信任
 
-在 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 中的工作流需要完全信任的应用程序域。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流可以在部分信任环境中运行。 在部分信任环境中，可以使用第三方组件而无需为其授予主机资源的完全访问权限。 关于在部分信任中运行的工作流，请注意以下几点：
+在 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 中的工作流需要完全信任的应用程序域。 在.NET Framework 4.5 中，工作流可以在部分信任环境中运行。 在部分信任环境中，可以使用第三方组件而无需为其授予主机资源的完全访问权限。 关于在部分信任中运行的工作流，请注意以下几点：
 
 1. 在部分信任下，不支持使用 <xref:System.Activities.Statements.Interop> 活动中包含的旧组件（包括规则）。
 
@@ -114,7 +114,7 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_VariableDeleteContextMenu"></a> 删除变量和自变量设计器中的上下文菜单项
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用键盘来删除设计器中的变量和自变量。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，可以使用上下文菜单来删除变量和自变量。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用键盘来删除设计器中的变量和自变量。 从.NET Framework 4.5 开始，变量和自变量可以使用删除的上下文菜单。
 
 以下屏幕快照显示了变量和自变量设计器的上下文菜单。
 
@@ -122,7 +122,7 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_AutoSurround"></a> 自动环绕序列
 
-由于工作流或特定容器活动（如 <xref:System.Activities.Statements.NoPersistScope>）只能包含单个主体活动，因此添加第二个活动需要开发人员删除第一个活动，请添加一个 <xref:System.Activities.Statements.Sequence> 活动，然后将两个活动都添加到该顺序活动中。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，向设计器图面添加第二个活动时，将会自动创建 `Sequence` 活动以包装两个活动。
+由于工作流或特定容器活动（如 <xref:System.Activities.Statements.NoPersistScope>）只能包含单个主体活动，因此添加第二个活动需要开发人员删除第一个活动，请添加一个 <xref:System.Activities.Statements.Sequence> 活动，然后将两个活动都添加到该顺序活动中。 从.NET Framework 4.5 开始，向设计器图面，添加第二个活动时`Sequence`将自动创建活动以包装两个活动。
 
 以下屏幕快照显示了 `WriteLine` 的 `Body` 中的 `NoPersistScope` 活动。
 
@@ -158,7 +158,7 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_CSharpExpressions"></a> C# 表达式
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，工作流中的所有表达式只能用 Visual Basic 来编写。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Visual Basic 表达式仅用于使用 Visual Basic 创建的项目。 Visual C# 项目现在将 C# 用于表达式。 提供了功能完全的 C# 表达式编辑器，包括语法突出显示和 Intellisense 等功能。 在使用 Visual Basic 表达式的以前版本中创建的 C# 工作流项目仍可继续使用。
+在.NET Framework 4.5 之前的工作流中的所有表达式可以只都编写 Visual Basic 中。 在.NET Framework 4.5 中，Visual Basic 表达式仅用于使用 Visual Basic 创建的项目。 Visual C# 项目现在将 C# 用于表达式。 提供了功能完全的 C# 表达式编辑器，包括语法突出显示和 Intellisense 等功能。 在使用 Visual Basic 表达式的以前版本中创建的 C# 工作流项目仍可继续使用。
 
 将在设计时对 C# 表达式进行验证。 C# 表达式中的错误将标有红色波浪形下划线。
 
@@ -166,11 +166,11 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_Visibility"></a> Shell 栏和标头的可见性的更多控制项
 
-在重新承载的设计器中，某些标准 UI 控件可能对于给定的工作流没有意义，并可能已关闭。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，此自定义仅受设计器底部的 shell 栏支持。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可通过用合适的 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 值设置 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 来调整设计器顶部 shell 标头项的可见性。
+在重新承载的设计器中，某些标准 UI 控件可能对于给定的工作流没有意义，并可能已关闭。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，此自定义仅受设计器底部的 shell 栏支持。 在.NET Framework 4.5 中，可以通过设置调整设计器顶部 shell 标头项的可见性<xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>使用相应<xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>值。
 
 ### <a name="BKMK_AutoConnect"></a> 自动连接和流程图和状态机工作流中的自动插入
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，必须手动添加流程图工作流中节点之间的连接。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，流程图和状态机节点具有自动连接点，这些自动连接点会在将一个活动从工具箱拖到设计器图面上时变为可见。 将活动放置在这些点中的一个点上会自动添加该活动以及必要的连接。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，必须手动添加流程图工作流中节点之间的连接。 在.NET Framework 4.5 中，流程图和状态机节点具有自动连接点，当活动从工具箱拖到设计器图面时变得可见。 将活动放置在这些点中的一个点上会自动添加该活动以及必要的连接。
 
 下面的屏幕快照显示了从工具箱中拖动活动时变为可见的附属点。
 
@@ -196,7 +196,7 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_BuildTimeValidation"></a> 生成时验证
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不会将生成工作流项目期间的工作流验证错误计为生成错误。 这意味着即使存在工作流验证错误，工作流项目的生成也可能成功。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流验证错误会导致生成失败。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不会将生成工作流项目期间的工作流验证错误计为生成错误。 这意味着即使存在工作流验证错误，工作流项目的生成也可能成功。 在.NET Framework 4.5 中，工作流验证错误会导致生成失败。
 
 ### <a name="BKMK_DesignTimeValidation"></a> 设计时后台验证
 
@@ -204,15 +204,15 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_ViewState"></a> 位于单独的位置在 XAML 文件中的视图状态
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流的视图状态信息存储在 XAML 文件中的许多不同位置。 这对于想直接读取 XAML 或编写用于删除视图状态信息的代码的开发人员来说很不方便。 在[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，XAML 文件中的视图状态信息序列化为 XAML 文件中的单独元素。 开发人员可以轻松地查找和编辑活动，该活动的视图状态信息或完全删除的视图状态。
+在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流的视图状态信息存储在 XAML 文件中的许多不同位置。 这对于想直接读取 XAML 或编写用于删除视图状态信息的代码的开发人员来说很不方便。 在.NET Framework 4.5 中，XAML 文件中的视图状态信息序列化为 XAML 文件中的单独元素。 开发人员可以轻松地查找和编辑活动，该活动的视图状态信息或完全删除的视图状态。
 
 ### <a name="BKMK_ExpressionExtensibility"></a> 表达式扩展性
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，我们为开发人员提供了一种创建自己的表达式并可将表达式创作体验插入到工作流设计器中的方法。
+在.NET Framework 4.5 中，我们提供的开发人员能够创建他们自己的表达式和表达式创作体验，可以插入到工作流设计器的方法。
 
 ### <a name="BKMK_BackwardCompatRehostedDesigner"></a> 参加有关重新承载设计器中 Workflow 4.5 功能
 
-为保留向后兼容性，默认情况下，包括在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的一些新功能不会在重新承载的设计器中启用。 这是为了确保使用重新承载的设计器的现有应用程序不会由于更新至最新版本而中断。 若要启用重新承载的设计器中的新功能，可将 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 设置为“.NET Framework 4.5”，或设置 <xref:System.Activities.Presentation.DesignerConfigurationService> 的各成员以启用各个功能。
+若要保留向后兼容性，在重新承载设计器中默认情况下不启用.NET Framework 4.5 中包含的某些新功能。 这是为了确保使用重新承载的设计器的现有应用程序不会由于更新至最新版本而中断。 若要启用重新承载的设计器中的新功能，可将 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 设置为“.NET Framework 4.5”，或设置 <xref:System.Activities.Presentation.DesignerConfigurationService> 的各成员以启用各个功能。
 
 ## <a name="BKMK_NewWFModels"></a> 新工作流开发模型
 
@@ -220,7 +220,7 @@ ms.locfileid: "65876577"
 
 ### <a name="BKMK_StateMachine"></a> 状态机工作流
 
-状态机工作流引入提升以.NET Framework 4，版本 4.0.1 的一部分[Microsoft.NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 进行更新。 更新包括：
+状态机工作流引入提升以.NET Framework 4，版本 4.0.1 的一部分[Microsoft.NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已更新为.NET Framework 4.5。 更新包括：
 
 1. 能够对状态设置断点
 

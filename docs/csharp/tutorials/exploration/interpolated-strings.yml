@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 5490176d91a6ed900471e33af6adce1fa3e62d8f
-  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
+  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/04/2019
-  ms.locfileid: "58921369"
+  ms.lasthandoff: 05/24/2019
+  ms.locfileid: "66195947"
 items:
 - durationInMinutes: 2
   content: >
@@ -34,10 +34,10 @@ items:
     ```
 
 
-    运行该代码时，“输出”会在问候语中显示一个包含你的姓名的字符串。 <xref:System.Console.WriteLine%2A> 方法调用的字符串参数是一个内插字符串。 这是一种模板，可让你用包含嵌入代码的字符串构造单个字符串（称为结果字符串）。 内插字符串特别适用于将值插入字符串或连接多个字符串（将字符串联在一起）。
+    运行该代码时，“输出”会在问候语中显示一个包含你的姓名的字符串。 <xref:System.Console.WriteLine%2A> 方法调用的字符串参数是一个内插字符串表达式。 这是一种模板，可让你用包含嵌入代码的字符串构造单个字符串（称为结果字符串）。 内插字符串表达式特别适用于将值插入字符串或连接多个字符串（将字符串联在一起）。
 
 
-    以上示例包含了每个内插字符串必须具备的两个元素：
+    以上示例包含了每个内插字符串表达式必须具备的两个元素：
 
 
     - 字符串文本以 `$` 字符开头，后接左双引号字符。 `$` 符号和引号字符之间不能有空格。 （如果希望看到包含空格会发生什么情况，请在交互式窗口中的 `$` 字符后面插入一个空格，然后运行更新的代码。 C# 编译器报错“意外的字符 '$'”。）
@@ -54,57 +54,7 @@ items:
     > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
 - title: 包含不同的数据类型
   durationInMinutes: 5
-  content: >
-    上一步使用了字符串内插将一个字符串插入到了另一字符串中。 不过，内插字符串表达式的结果可以是任何数据类型。 下面让我们在内插字符串中添加多种数据类型的值。
-
-
-    在以下示例中，首先定义一个具有 `Name` [属性](../../properties.md)和 `ToString` [方法](../../methods.md)的[类](../../programming-guide/classes-and-structs/classes.md)数据类型 `Vegetable`，它可以[替代](../../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行为。 [`public` 访问修饰符](../../language-reference/keywords/public.md)使该方法可用于任何客户端代码以获取 `Vegetable` 实例的字符串表示形式。 在本示例中，`Vegetable.ToString` 方法返回在 `Vegetable` [构造函数](../../programming-guide/classes-and-structs/constructors.md)处初始化的 `Name` 属性的值：`Vegetable(string name) => Name = name;`。 然后，通过使用 [`new` 关键字](../../language-reference/keywords/new-operator.md)并为构造函数 `Vegetable` 提供一个名称来创建名为 `item` 的 `Vegetable` 类的实例。 最后，将该实例添加到同样包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [枚举](../../programming-guide/enumeration-types.md)值的内插字符串中。 在交互式窗口中运行以下代码：
-
-
-    ```csharp
-
-    public class Vegetable
-
-    {
-       public Vegetable(string name) => Name = name;
-
-       public string Name { get; }
-
-       public override string ToString() => Name;
-    }
-
-
-    public enum Unit { item, kilogram, gram, dozen };
-
-
-    var item = new Vegetable("eggplant");
-
-    var date = DateTime.Now;
-
-    var price = 1.99m;
-
-    var unit = Unit.item;
-
-    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
-
-    ```
-
-
-    注意，内插字符串中的内插表达式 `item` 会解析为结果字符串中的“eggplant”文本。 这是因为，当表达式结果的类型不是字符串时，会按照以下方式将其解析为字符串：
-
-
-    - 如果内插表达式的计算结果为 `null`，则会使用一个空字符串（"" 或 <xref:System.String.Empty?displayProperty=nameWithType>）。
-
-
-    - 如果内插表达式的计算结果不是 `null`，通常会调用结果类型的 `ToString` 方法。 可以通过更新 `Vegetable.ToString` 方法的实现来进行测试。 你甚至不用实现 `ToString` 方法，因为每个类型都有一些此方法的实现。 可通过注释掉示例中 `Vegetable.ToString` 方法的定义（在它前面添加注释符号 `//` 即可）来进行测试。 在输出中，字符串“eggplant”被替换为完全限定的类型名称（由 C# REPL 定义的名称空间以及类型名称），这是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的默认行为。 对于枚举值的 `ToString` 方法，其默认行为是返回该值的字符串表示形式。
-
-
-    在此示例的输出中，日期过于精确（eggplant 的价格不会以秒为单位变化），且价格值没有标明货币单位。 下一步将介绍如何通过控制表达式结果的字符串表示形式来解决这些问题。
-
-
-    > [!NOTE]
-
-    > 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。
+  content: "上一步使用了字符串内插将一个字符串插入到了另一字符串中。 不过，作为内插字符串表达式一部分的各个内插表达式可以是任何数据类型。 下面让我们在内插字符串中添加多种数据类型表达式的值。\n\n在以下示例中，我们首先定义了具有 `Name`、`Price` 和 `perPackage` 成员的 [tuple](../../tuples.md)。 在交互式窗口中运行以下代码：\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\n注意，内插字符串中的内插表达式 `item.Price` 会解析为结果字符串中的“1.99”文本。 这是因为，当表达式结果的类型不是字符串时，会按照以下方式将其解析为字符串：\n\n- 如果内插表达式的计算结果为 `null`，则会使用一个空字符串（\"\" 或 <xref:System.String.Empty?displayProperty=nameWithType>）。\n\n- 如果内插表达式的计算结果不是 `null`，通常会调用结果表达式的 `ToString` 方法。 \n\n在此示例的输出中，日期过于精确（eggplant 的价格不会以秒为单位变化），且价格值没有标明货币单位。 下一步将介绍如何通过控制表达式结果的字符串表示形式来解决这些问题。\n\n> [!NOTE]\n> 此联机编码体验处于预览模式。 如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。\n"
 - title: 控制内插表达式的格式
   durationInMinutes: 5
   content: >
@@ -113,7 +63,7 @@ items:
 
     ```csharp
 
-    Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
+    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price} per {item.perPackage} items");
 
     ```
 
@@ -136,7 +86,7 @@ items:
 - title: 控制内插表达式的字段宽度和对齐方式
   durationInMinutes: 6
   content: >
-    通常，当内插表达式的结果格式化为字符串时，结果字符串中会包含该字符串，但没有前导或尾随空格。 特别是对于使用一组数据的情况，控制字段宽度和对齐方式有助于增强输出的可读性。 若要查看，请运行以下代码：
+    通常，当内插字符串表达式的结果格式化为字符串时，结果字符串中会包含该字符串，但没有前导或尾随空格。 特别是对于使用一组数据的情况，控制字段宽度和对齐方式有助于增强输出的可读性。 若要查看，请运行以下代码：
 
 
     ```csharp

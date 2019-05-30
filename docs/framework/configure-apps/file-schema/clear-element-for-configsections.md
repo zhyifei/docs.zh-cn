@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: d824ae828dd025f3292990facaa5e423add9c282
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e79def513637937262d00b0edb1b0f7676fd120b
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705345"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300808"
 ---
 # <a name="clear-element-for-configsections"></a>\<清除 > 元素\<configSections >
 
 清除所有以前定义的节和节组。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>语法
 
@@ -40,7 +40,7 @@ ms.locfileid: "61705345"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
+| [ **\<configSections >** 元素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含配置节和命名空间声明。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -52,9 +52,9 @@ None
 
 ## <a name="example"></a>示例
 
-此示例定义了计算机配置文件和应用程序配置文件，演示如何使用**\<清除 >** 清除以前在中定义的部分应用程序配置文件中的元素计算机配置文件。
+此示例定义了计算机配置文件和应用程序配置文件，演示如何使用 **\<清除 >** 清除以前在中定义的部分应用程序配置文件中的元素计算机配置文件。
 
-下面的计算机配置文件代码声明了两个部分 **\<sampleSection >** 并 **\<anotherSampleSection >**，该应用程序前读取配置文件：
+下面的计算机配置文件代码声明了两个部分 **\<sampleSection >** 并 **\<anotherSampleSection >** ，该应用程序前读取配置文件：
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ None
 </configuration>
 ```
 
-下面的应用程序配置文件代码清除所有以前声明的部分。 应用程序不能使用或检索在任一计算机配置文件中声明的部分中的设置。 但是，它可以使用中的设置 **\<anotherSection >** 因为它自后**\<清除 >** 元素。
+下面的应用程序配置文件代码清除所有以前声明的部分。 应用程序不能使用或检索在任一计算机配置文件中声明的部分中的设置。 但是，它可以使用中的设置 **\<anotherSection >** 因为它自后 **\<清除 >** 元素。
 
 ```xml
 <!-- Application configuration file -->

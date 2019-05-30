@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876954"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300326"
 ---
 # <a name="c-operators"></a>C# 运算符
 
@@ -95,9 +95,9 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [*x](pointer-related-operators.md#pointer-indirection-operator-)：指针间接寻址或取消引用。
 
-[true 运算符](../keywords/true-false-operators.md) - 返回 [bool](../keywords/bool.md) 值 `true` 以指明操作数一定为 true。
+[true 运算符](true-false-operators.md) - 返回 [bool](../keywords/bool.md) 值 `true` 以指明操作数一定为 true。
 
-[false 运算符](../keywords/true-false-operators.md) - 返回 [bool](../keywords/bool.md) 值 `true` 以指明操作数一定为 false。
+[false 运算符](true-false-operators.md) - 返回 [bool](../keywords/bool.md) 值 `true` 以指明操作数一定为 false。
 
 ## <a name="multiplicative-operators"></a>乘法运算符
 
@@ -197,9 +197,9 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [x = y](assignment-operator.md)：赋值。
 
-[x += y](addition-assignment-operator.md)：递增。 `x` 值加 `y` 值，结果存储在 `x` 中，并返回新值。 如果 `x` 指定 `event`，则 `y` 必须是 C# 作为事件处理程序添加的相应函数。
+[x += y](arithmetic-operators.md#compound-assignment)：递增。 `x` 值加 `y` 值，结果存储在 `x` 中，并返回新值。 如果 `x` 指定 [event](../keywords/event.md)，则 `y` 必须是 C# 作为事件处理程序添加的相应方法。
 
-[x -= y](subtraction-assignment-operator.md)：递减。 `x` 值减 `y` 值，结果存储在 `x` 中，并返回新值。 如果 `x` 指定 `event`，则 `y` 必须是 C# 作为事件处理程序删除的相应函数。
+[x -= y](arithmetic-operators.md#compound-assignment)：递减。 `x` 值减 `y` 值，结果存储在 `x` 中，并返回新值。 如果 `x` 指定 [event](../keywords/event.md)，则 `y` 必须是 C# 作为事件处理程序删除的相应方法。
 
 [x *= y](arithmetic-operators.md#compound-assignment)：乘法赋值。 `x` 值乘以 `y` 值，结果存储在 `x` 中，并返回新值。
 

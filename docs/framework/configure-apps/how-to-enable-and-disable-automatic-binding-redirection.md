@@ -5,26 +5,26 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880099"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380102"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>如何：启用和禁用自动绑定重定向
 
-当你编译面向 Visual Studio 中的应用[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]和更高版本，绑定重定向可能会自动添加到应用程序配置文件以重写程序集统一。 如果你的应用或其组件引用同一程序集的多个版本，就会添加绑定重定向，即使你在应用的配置文件中手动指定绑定重定向。 自动绑定重定向功能会影响桌面应用和 web 应用面向[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]或更高版本中，虽然行为会略有不同的 web 应用。 如果您有现有的应用面向以前版本的.NET Framework 中，或者如果你想要手动编写的绑定重定向，则可以禁用此功能，可以启用自动绑定重定向。
+在编译 Visual Studio 面向.NET Framework 4.5.1 和更高版本中的应用程序时，绑定重定向可能会自动添加到应用程序配置文件以重写程序集统一。 如果你的应用或其组件引用同一程序集的多个版本，就会添加绑定重定向，即使你在应用的配置文件中手动指定绑定重定向。 自动绑定重定向功能会影响桌面应用程序和 web 应用面向.NET Framework 4.5.1 或更高版本中，虽然行为会略有不同的 web 应用。 如果您有现有的应用面向以前版本的.NET Framework 中，或者如果你想要手动编写的绑定重定向，则可以禁用此功能，可以启用自动绑定重定向。
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>禁用自动绑定重定向在桌面应用程序
 
-默认情况下，对于面向 Windows 桌面应用启用自动绑定重定向[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]及更高版本。 绑定重定向添加到输出配置 (**app.config**) 文件编译该应用程序时，重写，否则可能会发生的程序集统一。 在源**app.config**文件不被修改。 通过修改应用程序的项目文件或取消选中 Visual Studio 中的项目的属性中的复选框，可以禁用此功能。
+默认情况下，对于面向.NET Framework 4.5.1 和更高版本的 Windows 桌面应用程序启用自动绑定重定向。 绑定重定向添加到输出配置 (**app.config**) 文件编译该应用程序时，重写，否则可能会发生的程序集统一。 在源**app.config**文件不被修改。 通过修改应用程序的项目文件或取消选中 Visual Studio 中的项目的属性中的复选框，可以禁用此功能。
 
 ### <a name="disable-through-project-properties"></a>禁用项目属性
 
 如果你有 Visual Studio 2017 版本 15.7 或更高版本，可以轻松地禁用自动生成项目的属性页中的绑定重定向。
 
-1. 右键单击“解决方案资源管理器”中的项目，再选择“属性”。
+1. 右键单击“解决方案资源管理器”中的项目，再选择“属性”   。
 
 2. 上**应用程序**页上，取消选中**自动生成绑定重定向**选项。
 
@@ -35,7 +35,7 @@ ms.locfileid: "61880099"
 1. 打开该项目文件进行编辑使用以下方法之一：
 
    - 在 Visual Studio 中，选择在项目**解决方案资源管理器**，然后选择**在文件资源管理器中打开文件夹**从快捷菜单。 在文件资源管理器，找到项目 （.csproj 或.vbproj） 文件，并在记事本中打开它。
-   - 在 Visual Studio 中，在**解决方案资源管理器**，右键单击项目，然后选择**卸载项目**。 再次，右键单击已卸载的项目，然后选择**编辑 [项目名.csproj]**。
+   - 在 Visual Studio 中，在**解决方案资源管理器**，右键单击项目，然后选择**卸载项目**。 再次，右键单击已卸载的项目，然后选择**编辑 [项目名.csproj]** 。
 
 2. 在项目文件中，查找以下属性项：
 
@@ -56,7 +56,7 @@ ms.locfileid: "61880099"
 1. 打开该项目文件进行编辑使用以下方法之一：
 
    - 在 Visual Studio 中，选择在项目**解决方案资源管理器**，然后选择**在文件资源管理器中打开文件夹**从快捷菜单。 在文件资源管理器，找到项目 （.csproj 或.vbproj） 文件，并在记事本中打开它。
-   - 在 Visual Studio 中，在**解决方案资源管理器**，右键单击项目，然后选择**卸载项目**。 再次，右键单击已卸载的项目，然后选择**编辑 [项目名.csproj]**。
+   - 在 Visual Studio 中，在**解决方案资源管理器**，右键单击项目，然后选择**卸载项目**。 再次，右键单击已卸载的项目，然后选择**编辑 [项目名.csproj]** 。
 
 2. 将以下元素添加到第一个配置属性组 (在\<PropertyGroup > 标记):
 

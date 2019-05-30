@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 177e5ef8054f408dc8ec3475c56043394a636bc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34c358a3405262787ed495bf9d8d75462d97a71f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049448"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380335"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 接口
-提供代码探查器可以使用与公共语言运行时 (CLR)，从而控制事件监视及请求信息进行通信的方法。 . `ICorProfilerInfo4`接口是其他扩展`ICorProfilerInfo`接口。 它提供了新方法来支持新增的实时 (JIT) 重新编译[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
+提供代码探查器可以使用与公共语言运行时 (CLR)，从而控制事件监视及请求信息进行通信的方法。 . `ICorProfilerInfo4`接口是其他扩展`ICorProfilerInfo`接口。 它提供了新方法来支持在实时 (JIT) 重新编译，在.NET Framework 4.5 中添加。  
   
 ## <a name="methods"></a>方法  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62049448"
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

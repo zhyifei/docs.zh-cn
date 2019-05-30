@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557947"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053648"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>使用 CLI 自动生成二元分类器
 
@@ -142,12 +142,12 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
     ![CLI 生成的 VS 解决方案](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - 生成的**类库**（包含序列化 ML 模型和数据类）可以直接用于最终用户应用程序，甚至可以通过直接引用该类库（或根据需要移动代码）进行使用。
+    - 生成的**类库**（包含序列化 ML 模型（.zip 文件）和数据类（数据模型））可以直接用于最终用户应用程序，甚至可以通过直接引用该类库（或根据需要移动代码）进行使用。
     - 生成的**控制台应用**包含必须查看的执行代码，随后通常会重用“评分代码”（运行 ML 模型以进行预测的代码），方法是将该简单代码（仅几行）移至想要进行预测的最终用户应用程序。 
 
-1. 打开类库项目中的 **Observation.cs** 和 **Prediction.cs** 类文件。 可发现这些类是用于保存数据的“数据类”或 POCO 类。 它是“样板代码”，但如果数据集有数十甚至数百列，则生成它很有用。 
-    - 从数据集中读取数据时使用 `SampleObservation` 类。 
-    - `SamplePrediction` 类或当
+1. 打开类库项目中的 ModelInput.cs  和 ModelOutput.cs  类文件。 可发现这些类是用于保存数据的“数据类”或 POCO 类。 它是“样板代码”，但如果数据集有数十甚至数百列，则生成它很有用。 
+    - 从数据集中读取数据时使用 `ModelInput` 类。 
+    - `ModelOutput` 类用于获取预测结果（预测数据）。
 
 1. 打开 Program.cs 文件并浏览代码。 只需几行，就能够运行模型并进行示例预测。
 
@@ -160,13 +160,13 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 - 在第三行代码中，通过提供序列化模型 .zip 文件的路径，使用 `mlContext.Model.Load()` API 从模型 .zip 文件加载模型。
 
-- 在第四行代码中，使用 `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()` API 加载/创建 `PredictionEngine` 对象。 无论何时想要针对单个数据示例（在本例中，一段用于预测其情绪的文本）进行预测，都需要 `PredictionEngine` 对象。
+- 在第四行代码中，使用 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 加载/创建 `PredictionEngine` 对象。 无论何时想要针对单个数据示例（在本例中，一段用于预测其情绪的文本）进行预测，都需要 `PredictionEngine` 对象。
 
 - 第五行代码是通过调用函数 `CreateSingleDataSample()` 来创建要用于预测的*单一示例数据*的位置。 由于 CLI 工具不知道要使用哪种示例数据，它在该函数中将加载数据集的第一行。 但是，对于本例，还可以通过更新实现 `CreateSingleDataSample()` 函数的更简单代码来创建自己的“硬编码”数据，而不是该函数的当前实现：
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 可以使用类似的“ML 模型评分代码”在最终用户应用程序中运行模型并进行预测。 
 
-例如，可以直接将该代码移至任何 Windows 桌面应用程序（例如 **WPP** 和 **WinForms**），并以与在控制台应用中相同的方式运行模型。
+例如，可以直接将该代码移至任何 Windows 桌面应用程序（例如 WPF 和 WinForms），并以与在控制台应用中相同的方式运行模型。
 
 但是，应该优化实现这些代码行来运行 ML 模型的方式（即，缓存模型 .zip 文件并加载一次），并使用单一实例对象，而不是在每个请求上创建它们，特别是在应用程序需要具有可伸缩性（例如 Web 应用程序或分布式服务）的情况下，如以下部分所述。
 
@@ -242,7 +242,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目标是在学习 ML.NET 时为 .
 
 更重要的是，对于此特定方案（情绪分析模型），还可以将该生成的训练代码与以下教程中所述的代码进行比较：
 
-- 比较：[教程：在情绪分析二元分类方案中使用 ML.NET](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis)。
+- 比较：[教程：在情绪分析二元分类方案中使用 ML.NET](sentiment-analysis.md)。
 
 将教程中选择的算法和管道配置与 CLI 工具生成的代码进行比较很有趣。 根据迭代和搜索更好的模型所花费的时间，所选算法及其特定的超参数和管道配置可能会有所不同。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416a00eb6966a9c5f83427182d9a12c4bbb20810
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592650"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377889"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 元素
 指定未经处理的任务异常是否应终止正在运行的进程。  
@@ -63,9 +63,9 @@ ms.locfileid: "64592650"
   
  在中[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，也可由默认情况下，如果<xref:System.Threading.Tasks.Task>具有未观察到异常进行垃圾收集，终结器引发异常，并终止进程。 终止进程取决于垃圾回收和终止的时间。  
   
- 为了简化开发人员能够编写基于任务的异步代码[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]更改此默认行为为未观察到异常。 未观察到的异常仍会导致<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件被引发，但默认情况下，该过程不会终止。 相反，该异常被忽略后引发该事件，而不考虑是否将事件处理程序观察异常。  
+ 为了简化开发人员能够编写基于任务的异步代码，.NET Framework 4.5，请更改此默认行为为未观察到异常。 未观察到的异常仍会导致<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件被引发，但默认情况下，该过程不会终止。 相反，该异常被忽略后引发该事件，而不考虑是否将事件处理程序观察异常。  
   
- 在中[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]，可以使用[ \<ThrowUnobservedTaskExceptions > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)若要启用应用程序配置文件中[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]引发异常的行为。  
+ 在.NET Framework 4.5 中，你可以使用[ \<ThrowUnobservedTaskExceptions > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)若要启用应用程序配置文件中[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]引发异常的行为。  
   
  此外可以通过以下方式之一中指定的异常行为：  
   

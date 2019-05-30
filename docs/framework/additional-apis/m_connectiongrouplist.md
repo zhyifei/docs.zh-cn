@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: a764c74dc0927094675b0f5e0916a4ad29f04250
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85359492fbf06942a57c51142620cab015999b31
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705943"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300868"
 ---
 # <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList 字段
 
@@ -38,6 +38,6 @@ private Hashtable m_ConnectionGroupList
 
 **Namespace**：<xref:System.Net>
 
-**程序集：**（在 System.dll) 的系统
+**程序集：** （在 System.dll) 的系统
 
 **.NET framework 版本：** 自 2.0 之后可用。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583538"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052738"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
@@ -48,7 +48,7 @@ ms.locfileid: "65583538"
  介绍如何使用配置文件更改设置，而无需重新编译你的 .NET Framework 应用。  
   
  [使用 .NET Native 编译应用程序](../../docs/framework/net-native/index.md)  
- 介绍如何使用 [!INCLUDE[net_native](../../includes/net-native-md.md)] 预编译技术生成和部署 Windows 应用商店应用。 [!INCLUDE[net_native](../../includes/net-native-md.md)] 编译在托管代码 (C#) 中编写并使 .NET Framework 面向本机代码的应用。  
+ 介绍如何使用 .NET Native 预编译技术生成和部署 Windows 应用商店应用。 .NET Native 编译在托管代码 (C#) 中编写并使 .NET Framework 面向本机代码的应用。  
   
  [安全性](../../docs/standard/security/index.md)  
  提供有关 .NET Framework 中的类和服务的信息，这些类和服务可以帮助确保应用开发的安全。  

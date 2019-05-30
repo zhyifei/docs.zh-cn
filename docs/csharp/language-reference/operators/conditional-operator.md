@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452399"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003717"
 ---
 # <a name="-operator-c-reference"></a>?:运算符（C# 参考）
 
@@ -43,13 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
-可用于记住此运算符的计算方式的助记设备为询问以下问题：
-
-```text
-is this condition true ? yes : no
-```
-
-其中运算符的 ? 部分 充当上一语句的问号，后面部分充当对此问题的逻辑回答。
+> [!TIP]
+> 可以使用以下助记键设备记住条件运算符的计算方式：
+>
+> ```text
+> is this condition true ? yes : no
+> ```
 
 下面的示例演示条件运算符的用法：
 

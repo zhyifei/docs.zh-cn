@@ -24,21 +24,20 @@
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
     - name: () 运算符
       href: invocation-operator.md
-    - name: '::运算符'
+    - name: ':: 运算符'
       href: namespace-alias-qualifer.md
-    - name: + 运算符
+    - name: + += 运算符
       href: addition-operator.md
-    - name: '- 运算符'
+      displayName: 'string concatenation, delegate combination, event subscription'
+    - name: '- operator'
       href: subtraction-operator.md
     - name: = 运算符
       href: assignment-operator.md
-    - name: '?:运算符'
+    - name: '?: 运算符'
       href: conditional-operator.md
-    - name: += 运算符
-      href: addition-assignment-operator.md
     - name: '-= 运算符'
       href: subtraction-assignment-operator.md
-    - name: '?? 运算符'
+    - name: '?? operator'
       href: null-coalescing-operator.md
     - name: => 运算符
       href: lambda-operator.md

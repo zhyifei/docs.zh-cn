@@ -2,16 +2,16 @@
 title: SqlClient 流支持
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698442"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379997"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
 
-SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 支持在服务器 （文档、 图像和媒体文件） 上的非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量内存。
+SQL Server 和应用程序 （.NET Framework 4.5 中的新增功能） 之间的流支持支持服务器 （文档、 图像和媒体文件） 上的非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量内存。
 
 流式处理支持与 SQL Server 简化了编写应用程序的流数据，而无需完全将数据加载到内存，从而减少了内存溢出异常中。
 
@@ -101,9 +101,9 @@ GO
 
 - 通过提供用于检索大型文件的异步方法来避免阻止用户接口线程。
 
-- 从 SQL Server 传输较大文本文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 从.NET Framework 4.5 中的 SQL Server 传输大型文本文件。
 
-- 从 SQL Server 传输较大的 XML 文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 从.NET Framework 4.5 中的 SQL Server 传输较大的 XML 文件。
 
 - 从 SQL Server 中检索数据。
 
@@ -323,9 +323,9 @@ GO
 
 该示例说明如何执行以下功能：
 
-- 将大型 BLOB 传输到 SQL Server [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 将大型 BLOB 传输到.NET Framework 4.5 中的 SQL Server。
 
-- 将一个大型文本文件传输到 SQL Server [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+- 将一个大型文本文件传输到.NET Framework 4.5 中的 SQL Server。
 
 - 使用新异步功能来传输大型 BLOB。
 

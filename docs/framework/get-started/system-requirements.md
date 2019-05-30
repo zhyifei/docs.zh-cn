@@ -2,7 +2,7 @@
 title: .NET Framework 系统要求
 description: 了解安装 .NET Framework 4.5 及更高版本对硬件、操作系统和软件的要求。
 ms.custom: updateeachrelease
-ms.date: 10/01/2018
+ms.date: 04/18/2019
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 6d89f3f4d97fe4cbe3b660b74537f8c8368b492a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091833"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052773"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -26,6 +26,7 @@ ms.locfileid: "56091833"
 * .NET Framework 4.5 及其次要版本（4.5.1 和 4.5.2）。
 * .NET Framework 4.6 及其次要版本（4.6.1 和 4.6.2）。
 * .NET Framework 4.7 及其单点版本（4.7.1 和 4.7.2）。
+* .NET Framework 4.8
 
 有关早于 .NET Framework 4.5 的 .NET Framework 版本，请参阅 [.NET Framework 版本和依赖项](../migration-guide/versions-and-dependencies.md)。
 
@@ -35,7 +36,7 @@ ms.locfileid: "56091833"
 
 有关下载信息和链接，请参阅[安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。
 
-有关 .NET Framework 版本的支持生命周期的信息，请参阅 [Microsoft 支持生命周期](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)。
+有关 .NET Framework 版本的支持生命周期的信息，请参阅 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)。
 
 ## <a name="hardware-requirements"></a>硬件要求
 
@@ -55,24 +56,25 @@ ms.locfileid: "56091833"
 
 | 操作系统 | 支持的版本 | 随 OS 预安装 | 可单独安装 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows 10 2018 年 10 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
-| Windows 10 2018 年 4 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
-| Windows 10 Fall Creators Update | 32 位和 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2 |
-| Windows 10 创意者更新 | 32 位和 64 位 | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
-| Windows 10 周年更新 | 32 位和 64 位 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
+| Windows 10 2019 年 5 月更新 | 32 位和 64 位 | .NET Framework 4.8 | -- |
+| Windows 10 2018 年 10 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows 10 2018 年 4 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |.NET Framework 4.8|
+| Windows 10 Fall Creators Update | 32 位和 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 创意者更新 | 32 位和 64 位 | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 周年更新 | 32 位和 64 位 | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
 | Windows 10 November Update | 32 位和 64 位 | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32 位和 64 位 | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32 位、64 位和 ARM | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32 位、64 位和 ARM | [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
-| Windows 7 SP1|32 位和 64 位 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Vista SP2|32 位和 64 位 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32 位、64 位和 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32 位、64 位和 ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
+| Windows 7 SP1|32 位和 64 位 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Vista SP2|32 位和 64 位 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 | Windows XP |32 位和 64 位 | -- | .NET Framework 4 |
 
  **注意：**
 
 - 在 Windows 7 系统上，.NET Framework 要求安装 Windows 7 SP1。 如果运行的是 Windows 7 系统，但尚未安装 Service Pack 1，则需要先安装 SP1，然后才能安装 .NET Framework。
 
-- Windows Preinstallation Environment (Windows PE) 上支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 Windows PE 上并非支持所有功能。
+- Windows 预安装环境 (Windows PE) 上支持 .NET Framework 4.5。 Windows PE 上并非支持所有功能。
 
 - .NET Framework 4 还支持 IA64 平台。
 
@@ -84,19 +86,19 @@ ms.locfileid: "56091833"
 
 | 操作系统 | 支持的版本 | 随 OS 预安装 | 可单独安装 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows Server 2019 | 64 位 | .NET Framework 4.7.2 | -- |
-| Windows Server 版本 1809 | 64 位 | .NET Framework 4.7.2 | -- |
-| Windows Server 版本 1803 | 64 位 | .NET Framework 4.7.2 | -- |
-| Windows Server 版本 1709 | 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2 | 
-| Windows 2016 Server | 64 位 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2012 R2 | 64 位 | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2012（64 位版本） | 64 位| [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2008 R2 SP1|64 位 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2008 SP2|32 位和 64 位 | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| Windows Server 2019 | 64 位 | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows Server 版本 1809 | 64 位 | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows Server 版本 1803 | 64 位 | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows Server 版本 1709 | 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2|
+| Windows 2016 Server | 64 位 | .NET Framework 4.6.2 | .NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2012 R2 | 64 位 | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2012（64 位版本） | 64 位| .NET Framework 4.5 | .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2008 R2 SP1|64 位 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2008 SP2|32 位和 64 位 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
  **注意：**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 包括 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，因此，你不必单独安装它。 同样，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]包含 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]。
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 包括 .NET Framework 4.5，因此，你不必单独安装它。 同样，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 包括.NET Framework 4.5.1。
 
 - .NET Framework 对 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色的支持有限。 有关不受支持的 API 列表，请参阅[服务器核心 .NET 功能](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))。
 

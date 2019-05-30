@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000514"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380352"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 方法
 针对指定函数的 JIT 重新编译版本中包含的代码，获取 Microsoft 中间语言 (MSIL) 偏移量到本机偏移量的映射。  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] 包含代码的函数 ID。  
   
  `pReJitId`  
- [in] JIT 重新编译的函数的标识。 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的标识必须为零。  
+ [in] JIT 重新编译的函数的标识。 标识必须是.NET Framework 4.5 中的零。  
   
  `cMap`  
  [in] `map` 数组的最大大小。  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` 类似于[icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法，只不过它将允许探查器在将来指定 ID 的重新编译函数释放。  
   
 > [!NOTE]
->  [Icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)方法中未实现[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，因此已 JIT 重新编译的函数不能具有不同于 IL 到本机映射最初编译的函数。 同样，不能在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中使用 JIT 重新编译的非零 ID 调用 `GetILToNativeMapping2`。  
+>  [Icorprofilerfunctioncontrol:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)方法未实现在.NET Framework 4.5 中，因此已 JIT 重新编译的函数不能具有不同于 IL 到本机映射最初编译的函数。 在这种情况下，`GetILToNativeMapping2`不能调用.NET Framework 4.5 中 JIT 重新编译一个非零 id。  
   
  `GetILToNativeMapping2` 方法返回 `COR_DEBUG_IL_TO_NATIVE_MAP` 结构的数组。 若要表达特定范围的本机指令对应的代码 (例如，prolog) 的特殊区域，该数组中的条目可以有其`ilOffset`字段设置为值[CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)枚举。  
   
@@ -74,7 +74,7 @@ HRESULT GetILToNativeMapping(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

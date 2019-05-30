@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6c979483497ff640be7d1126d63ce95130f6c02b
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633746"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195563"
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
 
@@ -54,7 +54,9 @@ ms.locfileid: "58633746"
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-避免异常的另一方法是，对极为常见的错误案例返回 `null`，而不是引发异常。 极其常见的错误案例可被视为常规控制流。 通过在这些情况下返回 `null`，可最大程度地减小对应用性能的影响。
+避免异常的另一方法是，对极为常见的错误案例返回 NULL（或默认值），而不是引发异常。 极其常见的错误案例可被视为常规控制流。 通过在这些情况下返回 NULL（或默认值），可最大程度地减小对应用的性能产生的影响。
+
+对于值类型，是否使用 Nullable<T> 或默认值作为错误指示符是特定应用需要考虑的内容。 通过使用 `Nullable<Guid>`，`default` 变为 `null` 而非 `Guid.Empty`。 有时，添加 `Nullable<T>` 可更加明确值何时存在或不存在。 在其他时候，添加 `Nullable<T>` 可以创建额外的案例以查看不必要的内容，并且仅用于创建潜在的错误源。 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>引发异常而不是返回错误代码
 

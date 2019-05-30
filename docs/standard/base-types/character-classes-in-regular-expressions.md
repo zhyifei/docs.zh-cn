@@ -15,15 +15,16 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634707"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053006"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
-<a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
+
+一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
   
 - 正字符组。 输入字符串中的字符必须匹配一组指定的字符中的某个字符。 有关详细信息，请参阅[正字符组](#PositiveGroup)。  
   
@@ -58,9 +59,9 @@ ms.locfileid: "64634707"
   
  用于指定各个字符列表的语法如下所示：  
   
- [character_group]  
+ [character_group  ]  
   
- 其中，*character_group* 是单个字符的列表，这些字符可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
+ 其中，*character_group* 是单个字符的列表，这些字符可出现在输入字符串中以便成功匹配。 character  _group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
   
@@ -107,21 +108,19 @@ ms.locfileid: "64634707"
 |`\w*`|匹配零个或多个单词字符。|  
 |`\b`|与字边界匹配。|  
   
- [返回页首](#Top)  
-  
 <a name="NegativeGroup"></a>   
 ## <a name="negative-character-group-"></a>负字符组：[^]  
  负字符组指定一个字符列表，这些字符不得出现在输入字符串中以便进行匹配。 此字符列表可以单独指定和/或作为范围指定。  
   
  用于指定各个字符列表的语法如下所示：  
   
- [^character_group]  
+ [^character_group  ]  
   
- 其中，*character_group* 是单个字符的列表，这些字符不可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
+ 其中，*character_group* 是单个字符的列表，这些字符不可出现在输入字符串中以便成功匹配。 character  _group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
   
- [^firstCharacter-lastCharacter]  
+ [^firstCharacter  -lastCharacter  ]  
   
  其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。  
   
@@ -154,8 +153,6 @@ ms.locfileid: "64634707"
 |`\w+`|匹配一个或多个单词字符。|  
 |`\b`|在字边界结束。|  
   
- [返回页首](#Top)  
-  
 <a name="AnyCharacter"></a>   
 ## <a name="any-character-"></a>任意字符：.  
  句点字符 (.) 匹配除 `\n`（换行符 \u000A）之外的任何字符，有以下两个限制：  
@@ -178,8 +175,6 @@ ms.locfileid: "64634707"
 > [!NOTE]
 >  由于它匹配任何字符，因此当正则表达式模式尝试多次匹配任何字符时，`.` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
- [返回页首](#Top)  
-  
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode 类别或 Unicode 块：\p{}  
  Unicode 标准为每个常规类别分配一个字符。 例如，特定字符可以是大写字母（由 `Lu` 类别表示），十进制数字（`Nd` 类别）、数学符号（`Sm` 类别）或段落分隔符（`Zl` 类别）。 Unicode 标准中的特定字符集也占据连续码位的特定区域或块。 例如，可在 \u0000 和 \u007F 之间找到基本拉丁字符集，并可在 \u0600 和 \u06FF 之间找到阿拉伯语字符集。  
@@ -188,9 +183,9 @@ ms.locfileid: "64634707"
   
  `\p{` *name* `}`  
   
- 匹配属于 Unicode 常规类别或命名块的任何字符，其中，name 是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
+ 匹配属于 Unicode 常规类别或命名块的任何字符，其中，name  是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
   
- 下面的示例使用 `\p{`名称`}` 构造以匹配 Unicode 常规类别（在该示例中为 `Pd` 或“标点，短划线”类别）和命名块（`IsGreek` 和 `IsBasicLatin` 命名块）。  
+ 下面的示例使用 `\p{`名称`}` 构造以匹配 Unicode 常规类别（在该示例中为 `Pd` 或“标点，短划线”类别）和命名块（`IsGreek` 和 `IsBasicLatin` 命名块）  。  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
@@ -209,8 +204,6 @@ ms.locfileid: "64634707"
 |`(\s)?`|匹配零个或一个空白字符。|  
 |`(\p{IsBasicLatin}+(\s)?)+`|匹配一个或多个基本拉丁字符后跟零个或一个空白字符的模式一次或多次。|  
   
- [返回页首](#Top)  
-  
 <a name="NegativeCategoryOrBlock"></a>   
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>负 Unicode 类别或 Unicode 块：\P{}  
  Unicode 标准为每个常规类别分配一个字符。 例如，特定字符可以是大写字母（由 `Lu` 类别表示），十进制数字（`Nd` 类别）、数学符号（`Sm` 类别）或段落分隔符（`Zl` 类别）。 Unicode 标准中的特定字符集也占据连续码位的特定区域或块。 例如，可在 \u0000 和 \u007F 之间找到基本拉丁字符集，并可在 \u0600 和 \u06FF 之间找到阿拉伯语字符集。  
@@ -219,16 +212,14 @@ ms.locfileid: "64634707"
   
  `\P{` *name* `}`  
   
- 匹配不属于 Unicode 常规类别或命名块的任何字符，其中，name是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
+ 匹配不属于 Unicode 常规类别或命名块的任何字符，其中，name  是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
   
- 下面的示例使用 `\P{`name`}`构造来删除数字字符串中的任何货币符号（在该示例中为 `Sc` 或“符号，货币”类别）。  
+ 下面的示例使用 `\P{`name  `}`构造来删除数字字符串中的任何货币符号（在该示例中为 `Sc` 或“符号，货币”类别）。  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
  正则表达式模式 `(\P{Sc})+` 匹配不为货币符号的一个或多个字符；它有效地从结果字符串中抽出任何货币符号。  
-  
- [返回页首](#Top)  
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>单词字符：\w  
@@ -259,8 +250,6 @@ ms.locfileid: "64634707"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
-  
- [返回页首](#Top)  
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>非单词字符：\W  
@@ -301,11 +290,9 @@ ms.locfileid: "64634707"
   
  由于第二个捕获组的 <xref:System.Text.RegularExpressions.Group> 对象仅包含单个捕获的非单词字符，因此该示例将从 <xref:System.Text.RegularExpressions.CaptureCollection> 属性返回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 对象中检索所有捕获的非单词字符。  
   
- [返回页首](#Top)  
-  
 <a name="WhitespaceCharacter"></a>   
-## <a name="white-space-character-s"></a>空白字符：\s  
- `\s` 匹配任何空白字符。 它等效于下表中列出的转义序列和 Unicode 类别。  
+## <a name="whitespace-character-s"></a>空格字符：\s  
+ `\s` 匹配任意空格字符。 它等效于下表中列出的转义序列和 Unicode 类别。  
   
 |类别|说明|  
 |--------------|-----------------|  
@@ -332,10 +319,8 @@ ms.locfileid: "64634707"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [返回页首](#Top)  
-  
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-white-space-character-s"></a>非空白字符：\S  
+## <a name="non-whitespace-character-s"></a>非空格字符：\s  
  `\S` 匹配任何非空白字符。 它等效于 `[^\f\n\r\t\v\x85\p{Z}]` 正则表达式模式或与等效于 `\s` 的正则表达式模式（与空白字符匹配）相反。 有关详细信息，请参阅[空白字符：\s](#WhitespaceCharacter)。  
   
  如果指定了符合 ECMAScript 的行为，则 `\S` 等效于 `[^ \f\n\r\t\v]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
@@ -350,8 +335,6 @@ ms.locfileid: "64634707"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
-  
- [返回页首](#Top)  
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>十进制数字字符：\d  
@@ -375,8 +358,6 @@ ms.locfileid: "64634707"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [返回页首](#Top)  
-  
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>非数字字符：\D  
  `\D` 匹配任何非数字字符。 它等效于 `\P{Nd}` 正则表达式模式。  
@@ -395,8 +376,6 @@ ms.locfileid: "64634707"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
-  
- [返回页首](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>支持的 Unicode 常规类别  
@@ -447,11 +426,10 @@ ms.locfileid: "64634707"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [返回页首](#Top)  
-  
 <a name="SupportedNamedBlocks"></a>   
-## <a name="supported-named-blocks"></a>支持的命名块  
- .NET 提供下表中所列的命名块。 该组支持的命名块基于 Unicode 4.0 和 Perl 5.6。  
+## <a name="supported-named-blocks"></a>支持的命名块
+
+.NET 提供下表中所列的命名块。 该组支持的命名块基于 Unicode 4.0 和 Perl 5.6。 有关正则表达式使用命名块，请参阅 [Unicode 类别或 Unicode 块： \\p{}](#unicode-category-or-unicode-block-p) 部分。  
   
 |码位范围|块名称|  
 |----------------------|----------------|  
@@ -561,17 +539,15 @@ ms.locfileid: "64634707"
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
   
- [返回页首](#Top)  
-  
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>字符类减法: [base_group - [excluded_group]]  
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a>字符类减法：[base_group - [excluded_group]]  
  一个字符类定义一组字符。 字符类减法将产生一组字符，该组字符是从一个字符类中排除另一个字符类中的字符的结果。  
   
  字符类减法表达式具有以下形式：  
   
- `[` base_group `-[` excluded_group `]]`  
+ `[` base_group  `-[` excluded_group  `]]`  
   
- 方括号 (`[]`) 和连字符 (`-`) 是强制的。 base_group 是[正字符组](#PositiveGroup)或[负字符组](#NegativeGroup)。 *excluded_group* 部分是另一个正字符组或负字符组，或者是另一个字符类减法表达式（即，可以嵌套字符类减法表达式）。  
+ 方括号 (`[]`) 和连字符 (`-`) 是强制的。 base_group  是[正字符组](#PositiveGroup)或[负字符组](#NegativeGroup)。 *excluded_group* 部分是另一个正字符组或负字符组，或者是另一个字符类减法表达式（即，可以嵌套字符类减法表达式）。  
   
  例如，假设你有一个由从“a”至“z”范围内的字符组成的基本组。 若要定义由除字符“m”之外的基本组组成的字符集，请使用 `[a-z-[m]]`。 若要定义由除字符集“d”、“j”和“p”之外的基本组组成的字符集，请使用 `[a-z-[djp]]`。 若要定义由除从“m”至“p”字符范围之外的基本组组成的字符集，请使用 `[a-z-[m-p]]`。  
   

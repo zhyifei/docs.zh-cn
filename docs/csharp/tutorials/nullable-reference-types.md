@@ -3,12 +3,12 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296142"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195823"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
@@ -36,15 +36,18 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>创建应用程序并启用可为空引用类型
 
-在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，你需要启用 C# 8 beta 功能。 打开 `csproj` 文件，并向 `PropertyGroup` 元素添加 `LangVersion` 元素。 必须选择“可为空引用类型”功能，即使在 C# 8 项目中也是如此。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型。 虽然该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图。 可以通过将 `NullableContextOptions` 元素设置为 `enable` 来启用该功能：
+在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，你需要启用 C# 8 beta 功能。 打开 `csproj` 文件，并向 `PropertyGroup` 元素添加 `LangVersion` 元素。 必须选择“可为空引用类型”功能，即使在 C# 8 项目中也是如此。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型。 虽然该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图。 可以通过将 `Nullable` 元素设置为 `enable` 来启用该功能：
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> `Nullable` 元素以前名为 `NullableContextOptions`。 通过 Visual Studio 2019 16.2-p1 发布重命名。 .NET Core SDK 3.0.100-preview5-011568 未进行此更改。 如果使用.NET Core CLI，将需要在推出下一个预览版之前使用 `NullableContextOptions`。
+
 > [!NOTE]
-> 当 C# 8 发布时（不处于预览模式），新项目模板将添加 `NullableContextOptions` 元素。 在此之前，需要手动添加它。
+> 当 C# 8 发布时（不处于预览模式），新项目模板将添加 `Nullable` 元素。 在此之前，需要手动添加它。
 
 ### <a name="design-the-types-for-the-application"></a>设计应用程序的类型
 

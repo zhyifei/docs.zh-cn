@@ -2,20 +2,20 @@
 title: ADO.NET 新增功能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877435"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379987"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET 新增功能
 
-以下功能是在 ADO.NET 中的新增[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+以下功能是.NET Framework 4.5 中的 ADO.NET 中的新增功能。
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-以下功能是.NET Framework 数据提供程序中的 SQL Server 中的新增[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+以下功能是.NET Framework 4.5 中的 SQL Server 的.NET Framework 数据提供程序中的新增功能：
 
 - ConnectRetryCount 和 ConnectRetryInterval 连接字符串关键字 (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) 可以让你控制空闲连接复原功能。
 
@@ -51,7 +51,7 @@ ms.locfileid: "65877435"
 
 ## <a name="adonet-entity-framework"></a>ADO.NET 实体框架
 
-当与实体框架5.0 一起使用时，[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 添加启用新方案的 API。 有关 Entity Framework 5.0 中增加的改进和功能的详细信息，请参阅下列主题：[新增功能](https://go.microsoft.com/fwlink/?LinkID=251106)并[实体框架发行和版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。
+.NET Framework 4.5 将添加使用实体框架 5.0 时启用新方案的 Api。 有关 Entity Framework 5.0 中增加的改进和功能的详细信息，请参阅下列主题：[新增功能](https://go.microsoft.com/fwlink/?LinkID=251106)并[实体框架发行和版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636546"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377864"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函数
 
@@ -72,7 +72,7 @@ HRESULT QualifierSet_Put (
 
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 出现非法尝试指定**密钥**限定符不能为键的属性。 指定密钥 om c; 对象 a 定义并不能在每个实例的基础上更改。 |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 出现非法尝试指定**密钥**限定符不能为键的属性。 密钥对象的类定义中指定，不能在每个实例的基础上更改。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal`参数不是合法的限定符类型。 |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 不能调用`QualifierSet_Put`方法对限定符因为所属对象不允许重写。 |
@@ -88,7 +88,7 @@ HRESULT QualifierSet_Put (
 
 **标头：** WMINet_Utils.idl
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 

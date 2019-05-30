@@ -4,12 +4,12 @@ description: 本教程介绍了如何使用 C# 字符串内插功能将格式化
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 97773659ea7dd00c291aa6a96401cac531adfdc8
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921360"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195899"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字符串内插构造格式化字符串
 
@@ -34,7 +34,7 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-通过在控制台窗口键入 `dotnet run` 试运行此代码。 当运行该程序时，它会在问候语中显示一个包含你的姓名的字符串。 <xref:System.Console.WriteLine%2A> 方法调用中包含的字符串是一个内插字符串。 这是一种模板，可让你用包含嵌入代码的字符串构造单个字符串（称为结果字符串）。 内插字符串特别适用于将值插入字符串或连接字符串（将字符串联在一起）。
+通过在控制台窗口键入 `dotnet run` 试运行此代码。 当运行该程序时，它会在问候语中显示一个包含你的姓名的字符串。 <xref:System.Console.WriteLine%2A> 方法调用中包含的字符串是一个内插字符串表达式。 这是一种模板，可让你用包含嵌入代码的字符串构造单个字符串（称为结果字符串）。 内插字符串特别适用于将值插入字符串或连接字符串（将字符串联在一起）。
 
 该简单示例包含了每个内插字符串必须具有的两个元素：
 
@@ -97,7 +97,7 @@ public class Program
 
 在此示例的输出中，日期过于精确（eggplant 的价格不会以秒为单位变化），且价格值没有标明货币单位。 下一节将介绍如何通过控制表达式结果的字符串表示形式来解决这些问题。
 
-## <a name="control-the-formatting-of-interpolated-expressions"></a>控制内插表达式的格式
+## <a name="control-the-formatting-of-interpolation-expressions"></a>控制内插表达式的格式
 
 上一节将两个格式不正确的字符串插入到了结果字符串中。 一个是日期和时间值，只有日期是合适的。 第二个是没有标明货币单位的价格。 这两个问题都很容易解决。 通过字符串内插，可以指定用于控制特定类型格式的格式字符串。 将前面示例中的调用修改为 `Console.WriteLine`，从而包含日期和价格表达式的格式字符串，如以下行所示：
 
@@ -113,7 +113,7 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 除了控制格式之外，还可以控制结果字符串中包含的格式字符串的字段宽度和对齐方式。 下一节会介绍如何执行此操作。
 
-## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>控制内插表达式的字段宽度和对齐方式
+## <a name="control-the-field-width-and-alignment-of-interpolation-expressions"></a>控制内插表达式的字段宽度和对齐方式
 
 通常，当内插表达式的结果格式化为字符串时，结果字符串中会包含该字符串，但没有前导或尾随空格。 特别是对于使用一组数据的情况，控制字段宽度和对齐方式有助于增强输出的可读性。 为此，用下方代码替换文本编辑器中的所有代码，然后键入 `dotnet run` 来执行程序：
 

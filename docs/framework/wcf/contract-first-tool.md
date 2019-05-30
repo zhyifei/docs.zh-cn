@@ -2,15 +2,15 @@
 title: 协定优先工具
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 95aef67eb43176ab062b38979e714f232898f221
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652076"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380376"
 ---
 # <a name="contract-first-tool"></a>协定优先工具
-服务协定往往需要从现有的服务创建。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用协定优先工具从现有服务自动创建数据协定类。 要使用协定优先工具，必须本地下载 XML 架构定义 (XSD) 文件；该工具无法通过 HTTP 导入远程数据协定。
+服务协定往往需要从现有的服务创建。 在.NET Framework 4.5 中，数据协定类可以自动创建从现有的服务使用协定优先工具。 要使用协定优先工具，必须本地下载 XML 架构定义 (XSD) 文件；该工具无法通过 HTTP 导入远程数据协定。
 
  协定优先工具作为生成任务集成到 Visual Studio 2012。 由生成任务所生成的代码文件在每次生成项目时创建，以使项目可以轻松地采用基础服务协定中的更改。
 
@@ -56,7 +56,7 @@ ms.locfileid: "64652076"
 </xs:schema>
 ```
 
- 若要向项目添加上述服务协定，请右键单击该项目并选择**添加新...**. 从“模板”对话框的 WCF 窗格中选择架构定义，然后将新文件命名为 SampleContract.xsd。 复制上面的代码并粘贴到新文件的代码视图中。
+ 若要向项目添加上述服务协定，请右键单击该项目并选择**添加新...** . 从“模板”对话框的 WCF 窗格中选择架构定义，然后将新文件命名为 SampleContract.xsd。 复制上面的代码并粘贴到新文件的代码视图中。
 
 ## <a name="configuring-contract-first-options"></a>配置协定优先选项
  协定优先选项可以配置 WCF 项目中的属性菜单中。 若要启用协定优先开发，请选择**XSD 作为类型定义语言**项目属性窗口的 WCF 页中的复选框。

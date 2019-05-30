@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 0323c0f10538eda2ed3b365a54470bdecac061a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ac8b2260e5da1e91c167e3e9ef91039deb983b2
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586207"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380247"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost 中的并行版本控制
-<xref:System.ServiceModel.Activities.WorkflowServiceHost> 中引入的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 并行版本控制功能提供了在单个终结点上承载工作流服务的多个版本的能力。 所提供的并行功能允许配置工作流服务，以便使用新的工作流定义来创建工作流服务的新实例，而对于正在运行的实例则使用现有的定义来完成。 本主题概述了使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流服务并行执行。  
+<xref:System.ServiceModel.Activities.WorkflowServiceHost>在.NET Framework 4.5 中引入的并行版本控制提供承载多个版本的单个终结点上的工作流服务的功能。 所提供的并行功能允许配置工作流服务，以便使用新的工作流定义来创建工作流服务的新实例，而对于正在运行的实例则使用现有的定义来完成。 本主题概述了使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流服务并行执行。  
   
 > [!NOTE]
 >  若要下载示例并观看工作流服务的并行版本控制的视频演练，请参阅[与 web 承载的 Xamlx 工作流服务并行版本控制](https://go.microsoft.com/fwlink/?LinkId=393746)。  

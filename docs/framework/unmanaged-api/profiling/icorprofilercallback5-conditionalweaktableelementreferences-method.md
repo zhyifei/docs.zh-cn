@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd904ba03fd5c652b1e5e5c7f763dab2b80e517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636661"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380364"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 方法
 
@@ -82,7 +82,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>备注
 
-探查器[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]或更高版本实现[ICorProfilerCallback5](icorprofilercallback5-interface.md)接口并记录由指定的依赖项`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供所表示的活动对象之间的依赖关系的一组完整`ConditionalWeakTable`条目。 这些依赖关系和成员字段所指定的引用[icorprofilercallback:: Objectreferences](icorprofilercallback-objectreferences-method.md)方法启用托管的探查器生成的活动对象的完整对象图。
+.NET Framework 4.5 或更高版本实现的探查器[ICorProfilerCallback5](icorprofilercallback5-interface.md)接口并记录由指定的依赖项`ConditionalWeakTableElementReferences`方法。 `ICorProfilerCallback5` 提供所表示的活动对象之间的依赖关系的一组完整`ConditionalWeakTable`条目。 这些依赖关系和成员字段所指定的引用[icorprofilercallback:: Objectreferences](icorprofilercallback-objectreferences-method.md)方法启用托管的探查器生成的活动对象的完整对象图。
 
 ## <a name="requirements"></a>要求
 
@@ -90,7 +90,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 **标头：** CorProf.idl, CorProf.h
 
-**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

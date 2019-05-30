@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674150"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378038"
 ---
 # <a name="gcserver-element"></a>\<gcServer > 元素
 指定公共语言运行时是否运行服务器垃圾回收。  
@@ -42,7 +42,7 @@ ms.locfileid: "61674150"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|请勿运行服务器垃圾回收。 这是默认设置。|  
 |`true`|运行服务器垃圾回收。|  
@@ -65,7 +65,7 @@ ms.locfileid: "61674150"
  此元素只能在应用程序配置文件中使用；如果此元素在计算机配置文件中，请忽略。  
   
 > [!NOTE]
->  在 .NET Framework 4 和更低版本中，启用服务器垃圾回收之后，并发垃圾回收不可用。 自 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 起，服务器垃圾回收就是并发回收。 若要使用非并发服务器垃圾回收，设置`<gcServer>`元素`true`并[ \<gcConcurrent > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)到`false`。  
+>  在 .NET Framework 4 和更低版本中，启用服务器垃圾回收之后，并发垃圾回收不可用。 从 .NET Framework 4.5 开始，服务器垃圾回收将并发执行。 若要使用非并发服务器垃圾回收，设置`<gcServer>`元素`true`并[ \<gcConcurrent > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)到`false`。  
   
 ## <a name="example"></a>示例  
  下面的示例启用服务器垃圾回收。  

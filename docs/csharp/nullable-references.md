@@ -2,12 +2,12 @@
 title: 可为空引用类型
 description: 本文概述了在 C# 8 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725020"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195924"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -58,7 +58,7 @@ name!.Length;
 
 可为空上下文可以对编译器如何解释引用类型变量进行精细控制。 任何给定源代码行的“可为空注释上下文”为 `enabled` 或 `disabled`。 你可以将 C# 8 之前的编译器视为在 `disabled` 可为空上下文中编译所有代码：任何引用类型都可以为 null。 “可为空警告上下文”可以设置为`enabled`、`disabled` 或 `safeonly`。 可为空警告上下文指定编译器使用其流分析生成的警告。
 
-可以使用 `csproj` 文件中的 `NullableContextOptions` 元素为项目设置可为空注释上下文和可为空警告上下文。 此元素配置编译器如何解释类型的为 Null 性以及生成哪些警告。 有效设置如下：
+可以使用 `csproj` 文件中的 `Nullable` 元素为项目设置可为空注释上下文和可为空警告上下文。 此元素配置编译器如何解释类型的为 Null 性以及生成哪些警告。 有效设置如下：
 
 - `enable`：“启用”可为空注释上下文。 “启用”可为空警告上下文。
   - 引用类型的变量，例如 `string` 是“不可为空”。  启用所有为 Null 性警告。
@@ -70,6 +70,9 @@ name!.Length;
   - 引用类型的变量是“无视”。 启用所有为 Null 性警告。
 - `safeonlywarnings`：“禁用”可为空注释上下文。 可为空警告上下文为 safeonly。
   - 引用类型的变量是“无视”。 启用所有安全性为 Null 性警告。
+
+> [!IMPORTANT]
+> `Nullable` 元素以前名为 `NullableContextOptions`。 通过 Visual Studio 2019 16.2-p1 发布重命名。 .NET Core SDK 3.0.100-preview5-011568 未进行此更改。 如果使用.NET Core CLI，将需要在推出下一个预览版之前使用 `NullableContextOptions`。
 
 你还可以使用指令在项目的任何位置设置这些相同的上下文：
 

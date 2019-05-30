@@ -2,15 +2,15 @@
 title: 协定优先的工作流服务开发
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 2fcc0054a3e4c9dd2152344617c8506c9ce6b0d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 244a6973dde9aba860b08177a42a2ecd64f3479c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587616"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380194"
 ---
 # <a name="contract-first-workflow-service-development"></a>协定优先的工作流服务开发
-从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能更好的 web 服务和协定优先工作流开发的形式中的工作流之间的集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。 本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。 有关创建协定优先工作流服务的分步示例，请参阅[如何：创建使用现有服务协定的工作流服务](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+从.NET Framework 4.5 开始，Windows Workflow Foundation (WF) 功能更好的 web 服务和协定优先工作流开发的形式中的工作流之间的集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。 本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。 有关创建协定优先工作流服务的分步示例，请参阅[如何：创建使用现有服务协定的工作流服务](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 ## <a name="in-this-topic"></a>在本主题中  
   

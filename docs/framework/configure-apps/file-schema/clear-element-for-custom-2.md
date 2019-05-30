@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705358"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301238"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<清除 > NameValueSectionHandler 和 DictionarySectionHandler 的元素
 
 清除部分中的所有以前定义的设置。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ None
 
 |     | 描述 |
 | --- | ------------|
-| [**\<sectionName >** 元素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。 |
+| [ **\<sectionName >** 元素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -46,13 +46,13 @@ None
 
 ## <a name="remarks"></a>备注
 
-可以使用**\<清除 >** 元素从你在配置文件层次结构中较高级别定义的应用程序中删除所有设置。
+可以使用 **\<清除 >** 元素从你在配置文件层次结构中较高级别定义的应用程序中删除所有设置。
 
 ## <a name="example"></a>示例
 
-此示例定义了计算机配置文件和应用程序配置文件，演示如何使用**\<清除 >** 清除以前在中定义的部分应用程序配置文件中的元素计算机配置文件。
+此示例定义了计算机配置文件和应用程序配置文件，演示如何使用 **\<清除 >** 清除以前在中定义的部分应用程序配置文件中的元素计算机配置文件。
 
-下面的计算机配置文件代码声明部分 **\<mySection >**:
+下面的计算机配置文件代码声明部分 **\<mySection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ None
 </configuration>
 ```
 
-下面的应用程序配置文件代码删除所有设置从 **\<mySection >**。 应用程序无法检索的任何声明，因此在设置中 **\<mySection >** 部分中的计算机配置文件。
+下面的应用程序配置文件代码删除所有设置从 **\<mySection >** 。 应用程序无法检索的任何声明，因此在设置中 **\<mySection >** 部分中的计算机配置文件。
 
 ```xml
 <!-- Application configuration file -->

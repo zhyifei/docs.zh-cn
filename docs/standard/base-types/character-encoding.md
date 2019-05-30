@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634680"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960330"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 字符是可以许多不同的方式表示的抽象实体。 字符编码是用代表字符的某个值与受支持的字符集中的每个字符配对的系统。 例如，莫尔斯电码就是一种用点线模式与罗马字母表中的每个字符（适合通过电报线路进行传输）进行配对的字符编码。 计算机的字符编码将代表字符的数字值与受支持的字符集中的每个字符配对。 一种字符编码有两个不同组件：  
@@ -78,8 +78,8 @@ ms.locfileid: "64634680"
   
  这些编码使你能够使用 Unicode 字符以及旧版应用程序中最常用的编码。 此外，通过定义从 <xref:System.Text.Encoding> 派生的类并重写其成员，可创建自定义编码。  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>平台说明： [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- 默认情况下， [!INCLUDE[net_core](../../../includes/net-core-md.md)] 不提供除代码页 28591 以外的其他任何代码页编码和 Unicode 编码，例如 utf-8 和 utf-16。 不过，可以向应用中添加定目标到 .NET 的标准 Windows 应用中的代码页编码。 有关完整信息，请参阅 <xref:System.Text.CodePagesEncodingProvider> 主题。  
+### <a name="platform-notes-net-core"></a>平台说明：.NET Core  
+ 默认情况下，.NET Core 不提供除代码页 28591 以外的其他任何代码页编码和 Unicode 编码，例如 UTF-8 和 UTF-16。 不过，可以向应用中添加定目标到 .NET 的标准 Windows 应用中的代码页编码。 有关完整信息，请参阅 <xref:System.Text.CodePagesEncodingProvider> 主题。  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>选择编码类  

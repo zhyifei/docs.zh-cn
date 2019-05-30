@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644642"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052855"
 ---
 # <a name="enumeration-format-strings"></a>枚举格式字符串
 
@@ -48,7 +48,7 @@ ms.locfileid: "65644642"
 
 ## <a name="x-or-x"></a>X 或 x
 
-将枚举项显示为十六进制值。 值在显示时根据需要带有前导零，以确保值的长度最小为八位数字。 下面的示例演示 X 格式说明符。
+将枚举项显示为十六进制值。 根据需要以前导零表示此值，以确保在枚举类型的[基础数值类型](xref:System.Enum.GetUnderlyingType%2A)中，结果字符串的每个字节都有两个字符。 下面的示例演示 X 格式说明符。 在示例中，这两者的基础类型 <xref:System.ConsoleColor> 和 <xref:System.IO.FileAttributes> 为 <xref:System.Int32>，或 32 位（或 4 字节）整数，它将生成 8 个字符的结果字符串。
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

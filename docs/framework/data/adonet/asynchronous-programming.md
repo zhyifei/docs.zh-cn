@@ -2,20 +2,20 @@
 title: 异步编程
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2698ffabb1f4d7c25f8d889c549c27b668647d62
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584492"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380074"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
-本主题讨论的异步编程支持.NET Framework 数据提供程序中的 SQL Server (SqlClient) 包括增强功能以支持异步编程功能中引入的[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。
+本主题讨论对异步编程，.NET Framework 数据提供程序中适用于 SQL Server (SqlClient) 包括增强功能以支持在.NET Framework 4.5 中引入的异步编程功能的支持。
 
 ## <a name="legacy-asynchronous-programming"></a>旧版异步编程
 
-在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，使用 SqlClient 进行的异步编程是通过以下方法和 `Asynchronous Processing=true` 连接属性完成的：
+在.NET Framework 4.5 之前的以下方法中完成与 SqlClient 一起使用的异步编程和`Asynchronous Processing=true`连接属性：
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,16 +23,16 @@ ms.locfileid: "65584492"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 中仍保留了此功能。
+此功能将保留在.NET Framework 4.5 中的 SqlClient。
 
 > [!TIP]
-> 从开始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，这些旧方法不再需要`Asynchronous Processing=true`连接字符串中。
+> 从.NET Framework 4.5 开始，这些旧方法不再需要`Asynchronous Processing=true`连接字符串中。
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了异步编程功能
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>添加.NET Framework 4.5 中的异步编程功能
 
 该新的异步编程功能提供了一种用于使代码异步的简单技术。
 
-有关 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能的更多信息，请参见：
+有关.NET Framework 4.5 中引入了异步编程功能的详细信息，请参阅：
 
 - [C# 中的异步编程](../../../csharp/async.md)
 
@@ -53,7 +53,7 @@ ms.locfileid: "65584492"
 
 调用 `async` 方法不会分配任何附加线程。 结束时，它可以简单地使用现有 I/O 完成线程。
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中增加了用于支持异步编程以下方法：
+若要支持异步编程的.NET Framework 4.5 中添加以下方法：
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 

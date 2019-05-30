@@ -2,15 +2,15 @@
 title: C# 表达式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7e29c4cacf97c729a07fa8d234e7c12006418027
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882082"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378414"
 ---
 # <a name="c-expressions"></a>C# 表达式
-从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 中支持 C# 表达式。 新的 C# 工作流项目中创建 Visual Studio 2012 面向[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 表达式和 Visual Basic 工作流项目使用 Visual Basic 表达式。 现有使用 Visual Basic 表达式的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流项目可以不受项目语言限制而迁移到 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，并得到支持。 本主题概述了 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 表达式。
+从.NET Framework 4.5 开始C#Windows Workflow Foundation (WF) 中支持表达式。 新C#在 Visual Studio 2012 中创建面向.NET Framework 4.5 使用工作流项目C#表达式和 Visual Basic 工作流项目使用 Visual Basic 表达式。 现有使用 Visual Basic 表达式的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流项目可以不受项目语言限制而迁移到 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，并得到支持。 本主题概述了 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 表达式。
 
 ## <a name="using-c-expressions-in-workflows"></a>在工作流中使用 C# 表达式
 
@@ -29,7 +29,7 @@ ms.locfileid: "65882082"
 - [在 XAMLX 工作流服务中使用 C# 表达式](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> 在工作流设计器中使用 C# 表达式
- 从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 中支持 C# 表达式。 C# 工作流项目中创建 Visual Studio 2012 面向[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 表达式，而 Visual Basic 工作流项目使用 Visual Basic 表达式。 若要指定所需的 C# 表达式，它在框中键入标有**输入 C# 表达式**。 该标签显示在属性窗口中（当在设计器中选中活动时），或显示在工作流设计器的活动上。 下例中，在 `WriteLine` 范围内，一个 `Sequence` 中包含了两个 `NoPersistScope` 活动。
+ 从.NET Framework 4.5 开始C#Windows Workflow Foundation (WF) 中支持表达式。 C#在 Visual Studio 2012 中创建面向.NET Framework 4.5 使用工作流项目C#表达式，而 Visual Basic 工作流项目使用 Visual Basic 表达式。 若要指定所需的 C# 表达式，它在框中键入标有**输入 C# 表达式**。 该标签显示在属性窗口中（当在设计器中选中活动时），或显示在工作流设计器的活动上。 下例中，在 `WriteLine` 范围内，一个 `Sequence` 中包含了两个 `NoPersistScope` 活动。
 
  ![屏幕截图显示了自动创建的序列活动。](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
