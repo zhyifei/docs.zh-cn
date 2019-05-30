@@ -4,36 +4,36 @@ ms.date: 03/30/2017
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 349e0cf93a981a2c598d02f67978e524a6763728
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6db1bc7e87750a36415439707777fed99e358ea
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948572"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300534"
 ---
-# <a name="icordebugprocess8-interface"></a><span data-ttu-id="c1b1a-102">ICorDebugProcess8 接口</span><span class="sxs-lookup"><span data-stu-id="c1b1a-102">ICorDebugProcess8 Interface</span></span>
-<span data-ttu-id="c1b1a-103">[支持版本：[!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] 及更高版本]</span><span class="sxs-lookup"><span data-stu-id="c1b1a-103">[Supported in the [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] and later versions]</span></span>  
+# <a name="icordebugprocess8-interface"></a><span data-ttu-id="732bd-102">ICorDebugProcess8 接口</span><span class="sxs-lookup"><span data-stu-id="732bd-102">ICorDebugProcess8 Interface</span></span>
+<span data-ttu-id="732bd-103">[.NET Framework 4.6 和更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="732bd-103">[Supported in the .NET Framework 4.6 and later versions]</span></span>  
   
- <span data-ttu-id="c1b1a-104">合理扩展 ICorDebugProcess 接口来启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。</span><span class="sxs-lookup"><span data-stu-id="c1b1a-104">Logically extends the ICorDebugProcess interface to enable or disable certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>  
+ <span data-ttu-id="732bd-104">合理扩展 ICorDebugProcess 接口来启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。</span><span class="sxs-lookup"><span data-stu-id="732bd-104">Logically extends the ICorDebugProcess interface to enable or disable certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c1b1a-105">方法</span><span class="sxs-lookup"><span data-stu-id="c1b1a-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="732bd-105">方法</span><span class="sxs-lookup"><span data-stu-id="732bd-105">Methods</span></span>  
   
-|<span data-ttu-id="c1b1a-106">方法</span><span class="sxs-lookup"><span data-stu-id="c1b1a-106">Method</span></span>|<span data-ttu-id="c1b1a-107">描述</span><span class="sxs-lookup"><span data-stu-id="c1b1a-107">Description</span></span>|  
+|<span data-ttu-id="732bd-106">方法</span><span class="sxs-lookup"><span data-stu-id="732bd-106">Method</span></span>|<span data-ttu-id="732bd-107">描述</span><span class="sxs-lookup"><span data-stu-id="732bd-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c1b1a-108">EnableExceptionCallbacksOutsideOfMyCode 方法</span><span class="sxs-lookup"><span data-stu-id="c1b1a-108">EnableExceptionCallbacksOutsideOfMyCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|<span data-ttu-id="c1b1a-109">启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。</span><span class="sxs-lookup"><span data-stu-id="c1b1a-109">Enables or disables certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>|  
+|[<span data-ttu-id="732bd-108">EnableExceptionCallbacksOutsideOfMyCode 方法</span><span class="sxs-lookup"><span data-stu-id="732bd-108">EnableExceptionCallbacksOutsideOfMyCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|<span data-ttu-id="732bd-109">启用或禁用某些类型的[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)异常回调。</span><span class="sxs-lookup"><span data-stu-id="732bd-109">Enables or disables certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c1b1a-110">备注</span><span class="sxs-lookup"><span data-stu-id="c1b1a-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="732bd-110">备注</span><span class="sxs-lookup"><span data-stu-id="732bd-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1b1a-111">要求</span><span class="sxs-lookup"><span data-stu-id="c1b1a-111">Requirements</span></span>  
- <span data-ttu-id="c1b1a-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c1b1a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="732bd-111">要求</span><span class="sxs-lookup"><span data-stu-id="732bd-111">Requirements</span></span>  
+ <span data-ttu-id="732bd-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="732bd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1b1a-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c1b1a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="732bd-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="732bd-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c1b1a-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1b1a-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="732bd-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="732bd-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c1b1a-115">**.NET Framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1b1a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ <span data-ttu-id="732bd-115">**.NET Framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="732bd-115">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1b1a-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="c1b1a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="732bd-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="732bd-116">See also</span></span>
 
-- [<span data-ttu-id="c1b1a-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="c1b1a-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="c1b1a-118">调试</span><span class="sxs-lookup"><span data-stu-id="c1b1a-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="732bd-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="732bd-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="732bd-118">调试</span><span class="sxs-lookup"><span data-stu-id="732bd-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
