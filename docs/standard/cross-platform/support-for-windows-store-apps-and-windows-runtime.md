@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664342"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378298"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支持基于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的许多软件开发方案。 这些方案分为三类：
+.NET Framework 4.5 支持多种软件开发方案[!INCLUDE[wrt](../../../includes/wrt-md.md)]。 这些方案分为三类：
 
 - 开发[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]XAML 控件，如中所述的应用[路线图的 Windows 应用商店应用使用 C# 或 Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))，[如何 (XAML) tos](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))，和[.NET for Windows Store 应用概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664342"
 - 组件中的类型可以从 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型派生。 控件可派生中的基元控件类型<xref:Windows.UI.Xaml.Controls.Primitives>命名空间或者从多个完成控件如<xref:Windows.UI.Xaml.Controls.Button>。
 
     > [!IMPORTANT]
-    >  从 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，托管 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件中的所有公共类型必须是密封的。 另一个 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件中的类型无法从它们派生。 如果要在组件中提供多态行为，可以创建一个接口并在多态类型中实现它。
+    >  从开始[!INCLUDE[win8](../../../includes/win8-md.md)]和.NET Framework 4.5 中托管的所有公共类型[!INCLUDE[wrt](../../../includes/wrt-md.md)]必须密封组件。 另一个 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件中的类型无法从它们派生。 如果要在组件中提供多态行为，可以创建一个接口并在多态类型中实现它。
 
 - 组件中所有公共类型的参数和返回类型必须是 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 类型（包括组件定义的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型）。
 

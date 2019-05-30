@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 5c01136564d64d5b2f1f56d311a6b7eadf1742f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633084"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380302"
 ---
 # <a name="-platform-visual-basic"></a>平台 (Visual Basic)
 指定公共语言运行时 (CLR) 的哪个平台版本可以运行输出文件。  
@@ -31,7 +31,7 @@ ms.locfileid: "64633084"
 |`Itanium`|将程序集编译成可由配有 Itanium 处理器的计算机上的 64 位 CLR 运行。|  
 |`arm`|将程序集编译成可在配有高级 RISC 计算机 (ARM) 处理器的计算机上运行。|  
 |`anycpu`|将程序集编译成可在任意平台上运行。 应用程序将作为 32 位应用程序在 Windows 的 32 位版本上运行，作为 64 位应用程序在 Windows 的 64 位版本上运行。 此标志为默认值。|  
-|`anycpu32bitpreferred`|将程序集编译成可在任意平台上运行。 应用程序将作为 32 位 应用程序在 Windows 的 32 位版本和 64 位版本上运行。 此标志仅对可执行文件 (.EXE) 有效且需要 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]。|  
+|`anycpu32bitpreferred`|将程序集编译成可在任意平台上运行。 应用程序将作为 32 位 应用程序在 Windows 的 32 位版本和 64 位版本上运行。 此标志仅对可执行文件无效 (。EXE) 和需要.NET Framework 4.5。|  
   
 ## <a name="remarks"></a>备注  
  使用 `-platform` 选项来指定输出文件所面向的处理器类型。  
