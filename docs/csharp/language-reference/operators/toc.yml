@@ -1,5 +1,4 @@
 - name: 'C# 运算符'
-  href: index.md
   items:
     - name: 算术运算符
       href: arithmetic-operators.md
