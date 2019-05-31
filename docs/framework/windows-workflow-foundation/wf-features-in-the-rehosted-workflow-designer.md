@@ -2,12 +2,12 @@
 title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380149"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423963"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 Windows Workflow Foundation (WF)，.NET Framework 4.5 中引入了许多新功能，包括多个工作流设计器体验的增强功能。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。
@@ -106,7 +106,7 @@ Windows Workflow Foundation (WF)，.NET Framework 4.5 中引入了许多新功�
 >  重新承载的设计器不支持生成时验证。  
   
 ### <a name="design-time-background-validation"></a>设计时后台验证  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，会把工作流作为前台进程进行验证，这可能会在复杂或耗时的验证过程中将 UI 挂起。 工作流验证现在发生在后台线程上，因此不会阻止 UI。  
+ 在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，工作流已验证作为前台进程，可以在复杂或耗时的验证过程中可能会阻止 UI。 工作流验证现在发生在后台线程上，因此不会阻止 UI。  
   
  重新承载的设计器支持设计时后台验证。  
   

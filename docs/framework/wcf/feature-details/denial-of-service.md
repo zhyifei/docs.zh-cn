@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627015"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423884"
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -46,8 +46,8 @@ ms.locfileid: "64627015"
   
  为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 有关使用事件查看器查看和管理事件日志的详细信息，请参阅[事件查看器](https://go.microsoft.com/fwlink/?LinkId=186123)。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>无效的 IAuthorizationPolicy 实现可能会致使服务挂起  
- 如果在有错误的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 接口实现上调用 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法，则可能会致使服务挂起。  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>无效的 IAuthorizationPolicy 实现可能会导致服务停止响应  
+ 调用<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>方法的实施问题<xref:System.IdentityModel.Policy.IAuthorizationPolicy>接口可能会导致服务停止响应。  
   
  缓解：仅使用受信任的代码。 即，仅使用在编写后经过测试的代码或者来自受信任提供者的代码。 未经深思熟虑，请勿允许在代码中插入对 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 的不受信任的扩展。 这适用于服务实现中所使用的全部扩展。 在使用扩展点，WCF 不进行任何应用程序代码和插入的外部代码之间的区别。  
   

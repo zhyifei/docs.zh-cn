@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 5224c7b5ae1c8a83be07fdf5f2065794fb46dd55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04378d2c9a7e565343ff663997e2a3e61f04f9d2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625548"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423574"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 子句 (Visual Basic)
 对查询结果的元素进行分组。 也可用于将聚合函数应用于每个组。 分组运算基于一个或多个键。  
@@ -65,7 +65,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
  使用 `aggregateList` 子句的 `Into` 参数和 `Group` 关键字来标识用于引用该组的成员名称。 还可以将聚合函数包括在 `Into` 子句中，以计算分组元素的值。 有关标准聚合函数的列表，请参阅 [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例根据客户所在的位置（国家/地区）对客户列表进行分组，并提供了每个组中的客户计数。 按国家/地区名称对结果进行排序。 按城市名称对分组结果进行排序。  
+ 下面的代码示例根据其位置 （国家/地区） 的客户列表进行分组，并提供每个组中的客户的计数。 按国家/地区名称排序结果。 按城市名称对分组结果进行排序。  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   

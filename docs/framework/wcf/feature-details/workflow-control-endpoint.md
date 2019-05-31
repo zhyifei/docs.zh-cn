@@ -2,18 +2,18 @@
 title: 工作流控制终结点
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929709"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424020"
 ---
 # <a name="workflow-control-endpoint"></a>工作流控制终结点
 开发人员可以使用工作流控制终结点调用控制操作，从而远程控制使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流实例。 可以利用此功能以编程方式执行控制操作，如挂起、继续和终止。  
   
 > [!WARNING]
->  如果在事务中使用工作流控制终结点且受控工作流包含 <xref:System.Activities.Statements.Persist> 活动，则工作流实例会挂起，直到事务超时。  
+>  如果使用事务和受控工作流中的工作流控制终结点包含<xref:System.Activities.Statements.Persist>活动，工作流实例会阻塞，直到事务超时。  
   
 ## <a name="workflow-instance-management"></a>工作流实例管理  
  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]可定义名为 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 的新协定。 此协定将定义一系列控制操作，这些操作使您能够远程控制由 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流实例。 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 是提供 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 协定的实现的标准终结点。 <xref:System.ServiceModel.Activities.WorkflowControlClient> 是一个类，用于将控制操作发送到 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。  

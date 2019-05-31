@@ -2,18 +2,18 @@
 title: 使事务流入和流出工作流服务
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7c47810ae168d39d7ebcd96952a75d6a3ba4d263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a837e446ec65caa6d481d3a5f141f87fe509910
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592825"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421901"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>使事务流入和流出工作流服务
 工作流服务和客户端可以参与事务。  对于将成为环境事务一部分的服务操作，将 <xref:System.ServiceModel.Activities.Receive> 活动放到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动内。 由 <xref:System.ServiceModel.Activities.Send> 内的 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动所做的任何调用也将在环境事务中进行。 工作流客户端应用程序可以通过使用 <xref:System.Activities.Statements.TransactionScope> 活动来创建环境事务，并通过使用该环境事务来调用服务操作。 本主题将指导您创建参与事务的工作流服务和工作流客户端。  
   
 > [!WARNING]
->  如果某个工作流服务实例在事务中加载且该工作流包含 <xref:System.Activities.Statements.Persist> 活动，则该工作流实例会挂起，直到事务超时。  
+>  如果在事务中加载工作流服务实例和工作流包含<xref:System.Activities.Statements.Persist>活动，工作流实例会阻塞，直到事务超时。  
   
 > [!IMPORTANT]
 >  无论何时使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，都建议将所有接收都置于工作流内的 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。  
@@ -76,7 +76,7 @@ ms.locfileid: "64592825"
   
 ### <a name="implement-the-workflow-service"></a>实现工作流服务  
   
-1. 添加新的 WCF 工作流服务，名为`WorkflowService`到`Common`项目。 为此，右击`Common`项目，选择**添加**，**新项...**，选择**工作流**下**已安装的模板**，然后选择**WCF 工作流服务**。  
+1. 添加新的 WCF 工作流服务，名为`WorkflowService`到`Common`项目。 为此，右击`Common`项目，选择**添加**，**新项...** ，选择**工作流**下**已安装的模板**，然后选择**WCF 工作流服务**。  
   
      ![添加工作流服务](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "64592825"
   
 ### <a name="implement-the-workflow-client"></a>实现工作流客户端  
   
-1. 将一个名为 `WorkflowClient` 的新 WCF 工作流应用程序添加到 `Common` 项目。 为此，右击`Common`项目，选择**添加**，**新项...**，选择**工作流**下**已安装的模板**，然后选择**活动**。  
+1. 将一个名为 `WorkflowClient` 的新 WCF 工作流应用程序添加到 `Common` 项目。 为此，右击`Common`项目，选择**添加**，**新项...** ，选择**工作流**下**已安装的模板**，然后选择**活动**。  
   
      ![添加活动项目](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
