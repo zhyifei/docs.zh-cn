@@ -3,9 +3,8 @@
   items:
     - name: 创建自定义属性
       href: creating-custom-attributes.md
-      items:
-        - name: AttributeUsage
-          href: attributeusage.md
+    - name: AttributeUsage
+      href: attributeusage.md
     - name: 使用反射访问属性
       href: accessing-attributes-by-using-reflection.md
     - name: 如何：使用属性创建 C-C++ 联合

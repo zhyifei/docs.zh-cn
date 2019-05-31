@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592246"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423953"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -81,7 +81,7 @@ ms.locfileid: "65592246"
   
 - 一般术语 *泛型类型* 包括构造类型和泛型类型定义。  
   
-- 借助泛型类型参数的*协变*和*逆变*，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体” 。 有关详细信息，请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+- 借助泛型类型参数的*协变*和*逆变*，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体”  。 有关详细信息，请参阅[协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
 - *约束*是对泛型类型参数的限制。 例如，你可能会将一个类型形参限制为实现 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型接口的类型，以确保可对该类型的实例进行排序。 此外，你还可以将类型形参限制为具有特定基类、具有默认构造函数或作为引用类型或值类型的类型。 泛型类型的用户不能替换不满足约束条件的类型实参。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "65592246"
   
  公共语言运行时提供了新的操作码和前缀来支持 Microsoft 中间语言 (MSIL) 中的泛型类型，包括 <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>和 <xref:System.Reflection.Emit.OpCodes.Readonly>。  
   
- Visual C++、C# 和 Visual Basic 都对定义和使用泛型提供完全支持。 有关语言支持的详细信息，请参阅 [Visual Basic 中的泛型类型](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型简介](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)和 [Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)。  
+ Visual C++、C# 和 Visual Basic 都对定义和使用泛型提供完全支持。 有关语言支持的详细信息，请参阅 [Visual Basic 中的泛型类型](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型简介](~/docs/csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)。  
   
  [返回页首](#top)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "65592246"
 |[何时使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述用于确定何时使用泛型集合类型的一般规则。|  
 |[如何：使用反射发出定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|解释如何生成包括泛型类型和方法的动态程序集。|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|为 Visual Basic 用户描述泛型功能，包括有关使用和定义泛型类型的帮助主题。|  
-|[泛型介绍](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|为 C# 用户概述定义和使用泛型类型。|  
+|[泛型介绍](~/docs/csharp/programming-guide/generics/index.md)|为 C# 用户概述定义和使用泛型类型。|  
 |[Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)|为 C++ 用户描述泛型功能，包括泛型和模板之间的差异。|  
   
 <a name="reference"></a>   
