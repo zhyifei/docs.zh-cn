@@ -338,13 +338,13 @@
               href: core/tools/dotnet-nuget-locals.md
             - name: dotnet nuget push
               href: core/tools/dotnet-nuget-push.md
-        - name: dotnet 包
+        - name: dotnet pack
           href: core/tools/dotnet-pack.md
-        - name: dotnet 发布
+        - name: dotnet publish
           href: core/tools/dotnet-publish.md
         - name: dotnet restore
           href: core/tools/dotnet-restore.md
-        - name: dotnet 运行
+        - name: dotnet run
           href: core/tools/dotnet-run.md
         - name: dotnet sln
           href: core/tools/dotnet-sln.md
@@ -368,7 +368,7 @@
           href: core/tools/dotnet-install-script.md
         - name: 项目修改命令
           items:
-            - name: 参考资料
+            - name: reference
               items:
                 - name: dotnet add reference
                   href: core/tools/dotnet-add-reference.md
@@ -376,7 +376,7 @@
                   href: core/tools/dotnet-list-reference.md
                 - name: dotnet remove reference
                   href: core/tools/dotnet-remove-reference.md
-            - name: 包
+            - name: package
               items:
                 - name: dotnet add package
                   href: core/tools/dotnet-add-package.md
