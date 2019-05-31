@@ -2,16 +2,16 @@
 title: 基于 Docker 的应用程序的开发流程
 description: 获取开发基于 Docker 应用程序的选项的高级概述。 使用所选的 Visual Studio for Windows、Visual Studio for Mac 或 Visual Studio Code 获得多平台支持（Windows、Mac 和 Linux）。
 ms.date: 09/27/2018
-ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640076"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300651"
 ---
 # <a name="development-process-for-docker-based-applications"></a>基于 Docker 的应用程序的开发流程
 
-用你喜欢的方式开发容器化 .NET 应用程序：主要使用 IDE，可辅以 Visual Studio 和 Visual Studio tools for Docker，；主要使用 CLI/编辑器，可辅以 Docker CLI 和 Visual Studio Code。
+用你喜欢的方式开发容器化 .NET 应用程序：主要使用 IDE，可辅以 Visual Studio 和 Visual Studio tools for Docker，；主要使用 CLI/编辑器，可辅以 Docker CLI 和 Visual Studio Code。 
 
 ## <a name="development-environment-for-docker-apps"></a>Docker 应用的开发环境
 
@@ -25,7 +25,7 @@ ms.locfileid: "65640076"
 
 **Visual Studio Code 和 Docker CLI**。 如果更青睐支持任何开发语言的轻量级跨平台编辑器，可以使用 Microsoft Visual Studio Code (VS Code) 和 Docker CLI。 这是针对 Mac、Linux 和 Windows 的跨平台开发方法。 此外，Visual Studio Code 还支持 Docker 扩展（例如适用于 Dockerfile 的 IntelliSense）和在编辑器中运行 Docker 命令的快捷任务。
 
-安装 [Docker 社区版 (CE)](https://www.docker.com/community-edition) 工具，可以使用单个 Docker CLI 生成适用于 Windows 和 Linux 的应用。
+安装 [Docker Desktop 社区版 (CE)](https://hub.docker.com/search/?type=edition&offering=community)，可以使用单个 Docker CLI 生成适用于 Windows 和 Linux 的应用。
 
 ### <a name="additional-resources"></a>其他资源
 
@@ -35,8 +35,11 @@ ms.locfileid: "65640076"
 - **Visual Studio Code**. 官方网站。 \
   <https://code.visualstudio.com/download>
 
-- **适用于 Mac 和 Windows 的 Docker 社区版 (CE)** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **用于 Windows 的 Docker Desktop 社区版 (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **用于 Mac 的 Docker Desktop 社区版 (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>适用于 Docker 容器的 .NET 语言和框架
 
