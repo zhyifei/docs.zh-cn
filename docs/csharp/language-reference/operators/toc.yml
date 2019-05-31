@@ -29,15 +29,16 @@
     - name: + += 运算符
       href: addition-operator.md
       displayName: 'string concatenation, delegate combination, event subscription'
-    - name: '- operator'
+    - name: '- -= 运算符'
       href: subtraction-operator.md
+      displayName: 'delegate removal, event unsubscription'
     - name: = 运算符
       href: assignment-operator.md
     - name: '?: 运算符'
       href: conditional-operator.md
-    - name: '-= 运算符'
-      href: subtraction-assignment-operator.md
     - name: '?? operator'
       href: null-coalescing-operator.md
     - name: => 运算符
       href: lambda-operator.md
+    - name: true 和 false 运算符
+      href: true-false-operators.md
