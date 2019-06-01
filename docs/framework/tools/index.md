@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920297"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456097"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 您可以使用 .NET Framework 工具轻松创建、部署和管理面向 .NET Framework 的应用程序和组件。  
@@ -63,10 +63,10 @@ ms.locfileid: "61920297"
  采用包含中间语言 (IL) 代码的可移植可执行 (PE) 文件，并创建可作为 IL 汇编程序 (Ilasm.exe) 的输入的文本文件。  
   
  [Installutil.exe（安装程序工具）](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- 可用于通过执行指定程序集中的安装程序组件，安装和卸载服务器资源。 （与 <xref:System.Configuration.Install> 命名空间中的类一起工作。）可用于通过执行指定程序集中的安装程序组件，安装和卸载服务器资源。 （与 <xref:System.Configuration.Install> 命名空间中的类一起工作。）  
+ 可用于通过执行指定程序集中的安装程序组件，安装和卸载服务器资源。 （与 <xref:System.Configuration.Install> 命名空间中的类一起工作。） 
   
  [Lc.exe（许可证编译器）](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- 读取包含授权信息的文本文件，并生成一个可作为资源嵌入到公共语言运行时可执行文件中的 .licenses 文件。 读取包含授权信息的文本文件，并生成一个可作为资源嵌入到公共语言运行时可执行文件中的 .licenses 文件。  
+ 读取包含授权信息的文本文件，并生成一个可作为资源嵌入到公共语言运行时可执行文件中的 .licenses 文件。 
   
  [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  可用来创建、编辑应用程序和部署清单并为其签名。 作为命令行工具，Mage.exe 可以从批处理脚本和其他基于 Windows 的应用程序（包括 ASP.NET 应用程序）运行。  
