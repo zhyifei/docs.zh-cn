@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662251"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457536"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -135,7 +135,7 @@ ms.locfileid: "64662251"
   
 - **省略的 StackPanel.Children 属性元素：** <xref:System.Windows.Controls.StackPanel>派生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel> 定义<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>作为其 XAML 内容属性。  
   
-- **省略的 UIElementCollection 对象元素：**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>属性采用类型<xref:System.Windows.Controls.UIElementCollection>，它可以实现<xref:System.Collections.IList>。 可以省略集合的元素标记，如处理集合的 XAML 规则基于<xref:System.Collections.IList>。 (在这种情况下，<xref:System.Windows.Controls.UIElementCollection>实际无法实例化，因为它不公开默认构造函数，而这正是<xref:System.Windows.Controls.UIElementCollection>对象元素显示为注释掉)。  
+- **省略的 UIElementCollection 对象元素：** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>属性采用类型<xref:System.Windows.Controls.UIElementCollection>，它可以实现<xref:System.Collections.IList>。 可以省略集合的元素标记，如处理集合的 XAML 规则基于<xref:System.Collections.IList>。 (在这种情况下，<xref:System.Windows.Controls.UIElementCollection>实际无法实例化，因为它不公开默认构造函数，而这正是<xref:System.Windows.Controls.UIElementCollection>对象元素显示为注释掉)。  
   
 ```xaml  
 <StackPanel>  
@@ -307,7 +307,7 @@ ms.locfileid: "64662251"
 ## <a name="xaml-security"></a>XAML 安全性  
  XAML 是一种直接表示对象实例化和执行的标记语言。 因此，在 XAML 中创建的元素能够像等效的生成代码那样与系统资源（如网络访问、文件系统 IO）进行交互。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 安全框架[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 这意味着在 Internet 区域中运行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容具有缩减的执行权限。 “宽松型 XAML”（由 XAML 查看器在加载时解释的非编译 XAML 的页面）和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常在此 Internet 区域中运行，并且使用相同的权限集。  但是，加载到完全受信任的应用程序中的 XAML 与承载应用程序具有相同的系统资源访问权限。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持的.NET Framework 4 安全框架[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 这意味着在 Internet 区域中运行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容具有缩减的执行权限。 “宽松型 XAML”（由 XAML 查看器在加载时解释的非编译 XAML 的页面）和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常在此 Internet 区域中运行，并且使用相同的权限集。  但是，加载到完全受信任的应用程序中的 XAML 与承载应用程序具有相同的系统资源访问权限。 有关详细信息，请参阅 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>从代码加载 XAML  

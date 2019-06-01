@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1f97892ecf7d891113cc7524dd8c1423e144583f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582809"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457335"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -54,7 +54,7 @@ ms.locfileid: "65582809"
  要分析位于某一区域或远程共享中的程序集，请确保该远程程序集在运行性能计数器的计算机上完全受信任。 如果该程序集不具有足够的信任，则性能计数器将不工作。 有关向不同区域授予信任的信息，请参阅 [Caspol.exe（代码访问安全策略工具）](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
 > [!NOTE]
->  在安装有 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的系统上，对于使用 **开发的应用程序，性能监视器可能不会显示某些类别的性能计数器数据，如“.NET CLR Data”** **和“.NET CLR Networking”** [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]。 如果属于这种情况，可以配置性能监视器以显示此数据，方法是将 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 元素添加到应用程序的配置文件。  
+>  在系统上安装.NET Framework 4，性能监视器可能不显示的性能计数器数据某些类别，如 **.NET CLR Data**并 **.NET CLR Networking**，为使用开发的应用程序[!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]。 如果属于这种情况，可以配置性能监视器以显示此数据，方法是将 [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 元素添加到应用程序的配置文件。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>以编程方式读取和创建性能计数器  
  .NET Framework 提供了可用于以编程方式访问性能控制台中提供的相同性能信息的类。 另外，还可以使用这些类创建自定义性能计数器。 下表介绍了一些性能监视提供.NET Framework 中的类。  

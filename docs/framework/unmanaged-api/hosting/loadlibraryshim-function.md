@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765318"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457044"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函数
 加载指定的版本的.NET Framework 可再发行组件包中包含的 DLL。  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in]的以零结尾的字符串表示要从.NET Framework 库加载的 DLL 的名称。  
   
  `szVersion`  
- [in]的以零结尾的字符串表示要加载的 dll 版本。 如果`szVersion`是 null，选择用于加载是指定早于版本 4 的 DLL 的最新版本的版本。 如果所有版本等于或大于版本 4 则将都忽略，即`szVersion`为 null，并且如果不安装任何版本低于版本 4，则无法加载 DLL。 这是为了确保该安装[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]不会影响现有应用程序或组件。 请参阅文章[进程内并行和迁移快速启动](https://go.microsoft.com/fwlink/?LinkId=200329)CLR 团队博客中。  
+ [in]的以零结尾的字符串表示要加载的 dll 版本。 如果`szVersion`是 null，选择用于加载是指定早于版本 4 的 DLL 的最新版本的版本。 如果所有版本等于或大于版本 4 则将都忽略，即`szVersion`为 null，并且如果不安装任何版本低于版本 4，则无法加载 DLL。 这是为了确保安装的.NET Framework 4 不影响现有应用程序或组件。 请参阅文章[进程内并行和迁移快速启动](https://go.microsoft.com/fwlink/?LinkId=200329)CLR 团队博客中。  
   
  `pvReserved`  
  留待将来使用。  
@@ -72,7 +72,7 @@ HRESULT LoadLibraryShim (
   
  **标头：** MSCorEE.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

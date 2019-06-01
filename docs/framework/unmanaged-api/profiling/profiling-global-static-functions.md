@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758244"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457471"
 ---
 # <a name="profiling-global-static-functions"></a>分析全局静态函数
 本节描述分析 API 使用的非托管的 API 函数。  
@@ -35,13 +35,13 @@ ms.locfileid: "61758244"
  通知探查器函数的给定的标识符可能被重新映射到要在中使用的备用 ID [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)， [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)，和[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)该函数的回调。 此外使探查器以指示它是否想要为该函数接收回调  
   
  [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- 通知探查器，控制被传递给函数，并介绍有关堆栈帧和函数参数。 中已弃用[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 通知探查器，控制被传递给函数，并介绍有关堆栈帧和函数参数。 .NET Framework 4 中不推荐使用。  
   
  [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- 函数即将返回给调用方，并提供有关堆栈帧和函数返回值的信息，请通知探查器。 中已弃用[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 函数即将返回给调用方，并提供有关堆栈帧和函数返回值的信息，请通知探查器。 .NET Framework 4 中不推荐使用。  
   
  [FunctionTailcall2 函数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- 通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用并提供有关堆栈帧的信息。 中已弃用[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
+ 通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用并提供有关堆栈帧的信息。 .NET Framework 4 中不推荐使用。  
   
  [StackSnapshotCallback 函数](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
  提供有关每个托管的帧和非托管帧的每次运行在堆栈上的堆栈遍历，启动的过程信息，以及探查器[ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法。  

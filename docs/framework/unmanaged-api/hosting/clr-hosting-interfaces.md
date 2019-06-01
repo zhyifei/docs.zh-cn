@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789657"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456885"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 承载接口
 本部分中描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。 信息与.NET Framework 2.0 版和更高版本。 这些接口使宿主能够控制运行时比在版本 1.0 和 1.1 中，可能的更多方面，并提供 CLR 和主机的执行模型之间更紧密地集成。  
@@ -191,4 +191,4 @@ ms.locfileid: "61789657"
  包含描述.NET Framework 1.0 和 1.1 版中提供的托管接口的主题。  
   
  [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- 包含的主题描述中提供的托管接口[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
+ 包含描述.NET Framework 4 中提供的托管接口的主题。

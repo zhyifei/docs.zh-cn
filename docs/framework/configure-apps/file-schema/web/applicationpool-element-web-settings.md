@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 548f7de2753ef0c30aa787f4c879af87987bfbde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621508"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456288"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理的进程范围行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
@@ -59,7 +59,7 @@ ms.locfileid: "64621508"
 > [!IMPORTANT]
 >  如果在运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]上[!INCLUDE[win7](../../../../../includes/win7-md.md)]，可以配置每个应用程序池的单独的 aspnet.config 文件。 这样，你可以定制每个应用程序池的线程的性能。  
   
- 有关`maxConcurrentRequestsPerCPU`中的设置，默认值为"5000"[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]有效地将关闭请求限制，它受 ASP.NET 中，除非您真正使用每个 CPU 的 5000 或多个请求。 默认设置改为依赖于 CLR 线程池来自动管理每个 CPU 的并发。 请广泛使用的异步请求处理，或具有网络 I/O 上阻塞的很多长时间运行请求的应用程序将受益于中的增大的默认限制[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。 设置`maxConcurrentRequestsPerCPU`到用于处理 ASP.NET 请求零将关闭托管线程的使用。 应用程序中运行时的 IIS 应用程序池，请求将停留在 IIS I/O 线程和线程的 IIS 设置因此阻止并发。  
+ 有关`maxConcurrentRequestsPerCPU`设置，默认设置"5000".NET Framework 4 中有效地将关闭请求限制由 ASP.NET 控制的除非实际上具有每个 CPU 的 5000 或多个请求。 默认设置改为依赖于 CLR 线程池来自动管理每个 CPU 的并发。 请广泛使用的异步请求处理，或具有网络 I/O 上阻塞的很多长时间运行请求的应用程序将受益于.NET Framework 4 中的增大的默认限制。 设置`maxConcurrentRequestsPerCPU`到用于处理 ASP.NET 请求零将关闭托管线程的使用。 应用程序中运行时的 IIS 应用程序池，请求将停留在 IIS I/O 线程和线程的 IIS 设置因此阻止并发。  
   
  `requestQueueLimit`设置的工作方式相同`requestQueueLimit`的属性[processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100))元素，它在 ASP.NET 应用程序的 Web.config 文件中设置。 但是， `requestQueueLimit` aspnet.config 文件中的设置将重写`requestQueueLimit`Web.config 文件中的设置。 换而言之，如果将这两个属性都设置 （默认情况下为 true）， `requestQueueLimit` aspnet.config 文件中的设置优先。  
   

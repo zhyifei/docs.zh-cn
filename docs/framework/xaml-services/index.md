@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663238"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457394"
 ---
 # <a name="xaml-services"></a>XAML 服务
-本主题介绍的技术一名为.NET Framework XAML 服务的功能。 服务和 Api 所述的大多数都位于 System.Xaml，它是一个程序集随程序集[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET 核心程序集。 服务包括阅读器和编写器，架构类和架构支持，工厂类、 XAML 语言内部函数支持和其他 XAML 语言功能的特性化。  
+本主题介绍的技术一名为.NET Framework XAML 服务的功能。 服务和 Api 所述的大多数都位于 System.Xaml，它是随.NET 核心程序集的.NET Framework 4 集程序集的程序集。 服务包括阅读器和编写器，架构类和架构支持，工厂类、 XAML 语言内部函数支持和其他 XAML 语言功能的特性化。  
   
 ## <a name="about-this-documentation"></a>有关此文档  
  .NET Framework XAML 服务的概念文档假定你具有上述体验 XAML 语言以及如何它可能会应用到特定的框架，例如[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 Windows Workflow Foundation 或特定技术功能区域中，例如生成自定义项中的功能<xref:Microsoft.Build.Framework.XamlTypes>。 本文档不会尝试解释为标记语言，XAML 语法术语或其他介绍性材料的 XAML 基础知识。 相反，本文档重点介绍专门在 System.Xaml 程序集库中使用启用.NET Framework XAML 服务。 这些 Api 的大部分都是为 XAML 语言集成和扩展性方案。 这可能包括以下任一项：  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78b670d8b23b5ecf274432d3758d07dae34dcfcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607176"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456417"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 元素
 指定公共语言运行时是否允许托管的代码捕获访问冲突和其他损坏的状态异常。  
@@ -64,10 +64,10 @@ ms.locfileid: "64607176"
   
 - 将应用<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>属性包含异常的方法为`catch`块。  
   
- 此配置元素是仅适用于[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]及更高版本。  
+ 此配置元素是仅适用于.NET Framework 4 及更高版本。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何指定应用程序应恢复为之前的行为[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，并捕获所有损坏状态异常失败。  
+ 下面的示例演示如何指定应用程序应恢复为.NET Framework 4 之前, 的行为和捕获所有损坏状态异常失败。  
   
 ```xml  
 <configuration>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868896"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456569"
 ---
 # <a name="security-transparent-code-level-2"></a>安全透明的代码，级别 2
 
@@ -58,7 +58,7 @@ ms.locfileid: "61868896"
 
 ## <a name="usage-examples-and-behaviors"></a>用法示例和行为
 
-若要指定 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则（ 2 级透明度），请对程序集使用以下批注：
+若要指定.NET Framework 4 的规则 （2 级透明度），请对程序集使用以下批注：
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ ms.locfileid: "61868896"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-如果不对程序集进行批注，则默认使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则。 但是，建议的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>特性而不是依赖默认值。
+如果您不能批注程序集，默认情况下使用.NET Framework 4 规则。 但是，建议的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>特性而不是依赖默认值。
 
 ### <a name="assembly-wide-annotation"></a>程序集范围的批注
 

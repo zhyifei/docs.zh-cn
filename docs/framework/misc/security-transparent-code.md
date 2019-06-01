@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868740"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456499"
 ---
 # <a name="security-transparent-code"></a>安全透明的代码
 
@@ -59,14 +59,14 @@ ms.locfileid: "61868740"
 
 级别如下：
 
-- 2 级 (<xref:System.Security.SecurityRuleSet.Level2>) – [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 透明度规则。
+- 级别 2 (<xref:System.Security.SecurityRuleSet.Level2>) –.NET Framework 4 透明度规则。
 
 - 1 级 (<xref:System.Security.SecurityRuleSet.Level1>) –.NET Framework 2.0 透明度规则。
 
 这两个透明度级别之间的主要区别是 1 级不对程序集外部的调用强制实施透明度规则，并且预期仅用于实现兼容性。
 
 > [!IMPORTANT]
-> 你应仅出于兼容性目的指定 1 级透明度，也就是说，仅为使用 .NET Framework 3.5 或更早版本（这些版本使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性或不使用透明度模型）开发的代码指定 1 级。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 为 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开发的代码始终使用 2 级透明度。
+> 你应仅出于兼容性目的指定 1 级透明度，也就是说，仅为使用 .NET Framework 3.5 或更早版本（这些版本使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性或不使用透明度模型）开发的代码指定 1 级。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 对于针对.NET Framework 4 开发的代码，始终使用 2 级透明度。
 
 ### <a name="level-2-transparency"></a>2 级透明度
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868740"
 
 ## <a name="transparency-enforcement"></a>透明度强制
 
-在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中，程序集级别的透明度计算比 .NET Framework 2.0 中发生得更快。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。
+在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在.NET Framework 4 程序集级别的透明度计算比.NET Framework 2.0 中更快地发生。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。
 
 ## <a name="see-also"></a>请参阅
 

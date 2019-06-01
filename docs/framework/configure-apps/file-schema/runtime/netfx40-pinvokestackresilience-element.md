@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725bd715f6e70dff08929e58d588a3d8561d5011
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674059"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456386"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
 指定运行时是否以减慢托管和非托管代码之间的转换速度为代价，在运行时自动修复不正确的平台调用声明。  
@@ -38,7 +38,7 @@ ms.locfileid: "61674059"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`0`|运行时使用的更快的互操作封送处理体系结构中引入[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，这不会检测和修复不正确的平台调用声明。 这是默认设置。|  
 |`1`|运行时使用的转换速度的检测和修复不正确的平台调用声明。|  
@@ -56,7 +56,7 @@ ms.locfileid: "61674059"
 ## <a name="remarks"></a>备注  
  此元素可以交换更快地互操作封送处理运行时恢复能力对不正确的平台调用声明。  
   
- 从开始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，简化的互操作封送处理体系结构提供了从托管代码转换到非托管代码一显著的性能改进。 在早期版本的.NET Framework，封送处理层检测到不正确的平台调用在 32 位平台上的声明，并自动修复堆栈。 新的封送处理体系结构消除了此步骤。 因此，转换速度非常快，但不正确的平台调用声明可能会导致程序失败。  
+ 从.NET Framework 4 开始，简化的互操作封送处理体系结构提供了从托管代码转换到非托管代码一显著的性能改进。 在早期版本的.NET Framework，封送处理层检测到不正确的平台调用在 32 位平台上的声明，并自动修复堆栈。 新的封送处理体系结构消除了此步骤。 因此，转换速度非常快，但不正确的平台调用声明可能会导致程序失败。  
   
  为了更加轻松地在开发过程中检测不正确的声明，改进 Visual Studio 调试体验。 [PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)托管调试助手 (MDA) 通知你的应用程序运行带有附加调试程序时，您不正确的平台调用声明。  
   

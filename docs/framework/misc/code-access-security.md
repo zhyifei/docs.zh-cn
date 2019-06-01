@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592864"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456652"
 ---
 # <a name="code-access-security"></a>代码访问安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ ms.locfileid: "64592864"
 |Title|描述|  
 |-----------|-----------------|  
 |[代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)|描述代码访问安全性及其最常见的用途。|  
-|[安全透明代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|描述 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的安全性透明模型。|  
+|[安全透明代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|介绍.NET Framework 4 中的安全透明度模型。|  
 |[通过部分受信任的代码使用库](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|描述如何借助非托管代码启用库以及如何从非托管代码中使用库。|  
 |[安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)|概述 .NET Framework 安全性系统中使用的许多关键术语和概念。|  
 |[基于角色的安全性](../../../docs/standard/security/role-based-security.md)|描述如何合并基于角色的安全性。|  

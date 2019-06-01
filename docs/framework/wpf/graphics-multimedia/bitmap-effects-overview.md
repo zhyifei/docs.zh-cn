@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: df8ce418b761ce1fca7f94614f5708ecb1b3652e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf837bd9f0e0bb40cfb07d5eeaa1f0f80a86ca9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615493"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456684"
 ---
 # <a name="bitmap-effects-overview"></a>位图效果概述
 位图效果，设计人员和开发人员应用到视觉效果呈现 Windows Presentation Foundation (WPF) 内容。 例如，位图效果，您可以轻松地将应用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果到图像或按钮。  
   
 > [!IMPORTANT]
->  在中[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect>类已过时。 如果尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类，您将收到已过时异常。 非过时替代项为<xref:System.Windows.Media.Effects.BitmapEffect>类是<xref:System.Windows.Media.Effects.Effect>类。 在大多数情况下，<xref:System.Windows.Media.Effects.Effect>类是快得多。  
+>  在.NET Framework 4 或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect>类已过时。 如果尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类，您将收到已过时异常。 非过时替代项为<xref:System.Windows.Media.Effects.BitmapEffect>类是<xref:System.Windows.Media.Effects.Effect>类。 在大多数情况下，<xref:System.Windows.Media.Effects.Effect>类是快得多。  
 
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>WPF 位图效果  

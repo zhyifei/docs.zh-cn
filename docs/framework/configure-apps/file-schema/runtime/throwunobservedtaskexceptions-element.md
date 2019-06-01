@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377889"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456249"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 元素
 指定未经处理的任务异常是否应终止正在运行的进程。  
@@ -65,7 +65,7 @@ ms.locfileid: "66377889"
   
  为了简化开发人员能够编写基于任务的异步代码，.NET Framework 4.5，请更改此默认行为为未观察到异常。 未观察到的异常仍会导致<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件被引发，但默认情况下，该过程不会终止。 相反，该异常被忽略后引发该事件，而不考虑是否将事件处理程序观察异常。  
   
- 在.NET Framework 4.5 中，你可以使用[ \<ThrowUnobservedTaskExceptions > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)若要启用应用程序配置文件中[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]引发异常的行为。  
+ 在.NET Framework 4.5 中，你可以使用[ \<ThrowUnobservedTaskExceptions > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)中应用程序配置文件以启用.NET Framework 4 行为的引发异常。  
   
  此外可以通过以下方式之一中指定的异常行为：  
   

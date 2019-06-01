@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666055"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457225"
 ---
 # <a name="setting-up-a-profiling-environment"></a>设置分析环境
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666055"
  若要分析 CLR 应用程序，必须在运行该应用程序之前设置 COR_ENABLE_PROFILING 和 COR_PROFILER 环境变量。 还必须确保已注册探查器 DLL。  
   
 > [!NOTE]
->  从 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 开始，不一定要注册探查器。  
+>  从.NET Framework 4 开始，探查器不需要进行注册。  
   
 > [!NOTE]
->  若要使用.NET Framework 版本 2.0、 3.0 和 3.5 中的探查器[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]和更高版本，您必须设置 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 环境变量。  
+>  若要使用在.NET Framework 4 和更高版本的.NET Framework 版本 2.0、 3.0 和 3.5 探查器，必须设置 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 环境变量。  
   
 ## <a name="environment-variable-scope"></a>环境变量范围  
  设置 COR_ENABLE_PROFILING 和 COR_PROFILER 环境变量的方式将决定其影响范围。 可以通过下列方式之一设置这些变量：  

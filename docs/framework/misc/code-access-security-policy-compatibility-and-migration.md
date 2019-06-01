@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868909"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456650"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>代码访问安全策略兼容性和迁移
 
@@ -22,7 +22,7 @@ ms.locfileid: "61868909"
 
 可以通过以下任一方法来避免这些警告和错误：
 
-- [迁移](#migration)到[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]替换已过时的调用。
+- [迁移](#migration)到.NET Framework 4 的替代已过时的调用。
 
    \- 或 -
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868909"
 
 ### <a name="determining-an-assemblys-trust-level"></a>确定程序集的信任级别
 
-CAS 策略通常用于确定程序集或应用程序域的权限授予集或信任级别。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 公开以下无需解析安全策略的有用属性：
+CAS 策略通常用于确定程序集或应用程序域的权限授予集或信任级别。 .NET Framework 4 公开以下无需解析安全策略的有用属性：
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ CAS 策略通常用于确定程序集或应用程序域的权限授予集或信�
 
 ### <a name="application-domain-sandboxing"></a>应用程序域沙盒
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用于对应用程序域中的程序集进行沙盒处理。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]公开不需要使用的成员<xref:System.Security.Policy.PolicyLevel>实现此目的。 有关详细信息，请参阅[如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用于对应用程序域中的程序集进行沙盒处理。 .NET Framework 4 不需要使用的成员公开<xref:System.Security.Policy.PolicyLevel>实现此目的。 有关详细信息，请参阅[如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>确定部分受信任的代码的“安全”或“合理”权限集
 
-主机通常需要确定适用于沙盒处理托管代码的权限。 之前[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，CAS 策略提供某种方式来这样做的<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>方法。 作为替代，[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]提供了<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>方法，它将返回一个安全且标准的权限集为提供的证据。
+主机通常需要确定适用于沙盒处理托管代码的权限。 在.NET Framework 4 之前 CAS 策略提供某种方式来这样做的<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>方法。 作为替代，.NET Framework 4 提供了<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>方法，它将返回一个安全且标准的权限集为提供的证据。
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>非沙盒处理方案：对程序集加载重载
 
-使用程序集加载重载的原因可能是为了使用不可通过其他方式使用的参数，而不是对程序集进行沙盒处理。 从开始[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，不需要的程序集加载重载<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>对象作为参数，例如， <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>，启用此方案。
+使用程序集加载重载的原因可能是为了使用不可通过其他方式使用的参数，而不是对程序集进行沙盒处理。 从.NET Framework 4 开始，程序集加载不需要的重载<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>对象作为参数，例如， <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>，启用此方案。
 
 如果要对程序集进行沙盒处理，请使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 重载。
 
