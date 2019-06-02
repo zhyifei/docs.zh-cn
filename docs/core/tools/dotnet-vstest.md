@@ -1,14 +1,14 @@
 ---
 title: dotnet vstest 命令
 description: dotnet vstest 命令可生成项目及其所有依赖项。
-author: guardrex
+author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: dcf17a59fea1f58757f39721c5dd5947ed30df0f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 45fda3b34d2649bc6f20cf3f35c65277a9a53cec
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613455"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300035"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -133,11 +133,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Blame|/Blame`
 
-在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序。
+在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 它会在当前目录中创建一个输出文件 (Sequence.xml)，其中捕获了故障前的测试执行顺序  。
 
 `--InIsolation|/InIsolation`
 
-在隔离的进程中运行测试。 虽然这使得 vstest.console.exe 进程不太可能在测试出错时停止，但测试的运行速度会较慢。
+在隔离的进程中运行测试。 虽然这使得 vstest.console.exe 进程不太可能在测试出错时停止，但测试的运行速度会较慢  。
 
 `@<file>`
 

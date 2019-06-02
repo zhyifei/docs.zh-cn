@@ -1,15 +1,15 @@
 ---
 title: 通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
 description: 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: d99cabf15be63593b272474867359324a5892b04
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300874"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300050"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
 
@@ -17,8 +17,8 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
-> * 在 Visual Studio for Mac 中，从菜单中选择“帮助” > “报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)门户中跟踪自己的反馈。
-> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
+> * 在 Visual Studio for Mac 中，从菜单中选择“帮助”   > “报告问题”  ，或从欢迎屏幕中选择“报告问题”  ，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)门户中跟踪自己的反馈。
+> * 若要提出建议，从菜单中选择“帮助”   > “提供建议”  ，或从欢迎屏幕中选择“提供建议”  ，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -32,15 +32,15 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="creating-a-project"></a>创建项目
 
-1. 选择欢迎屏幕上的“新建项目”。
+1. 选择欢迎屏幕上的“新建项目”  。
 
    ![Visual Studio for Mac 欢迎屏幕上的新建项目按钮](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
-1. 在“新建项目”对话框中，选择“.NET Core”节点下的“应用”。 单击“下一步”，然后选择“控制台应用程序”模板。
+1. 在“新建项目”  对话框中，选择“.NET Core”  节点下的“应用”  。 单击“下一步”  ，然后选择“控制台应用程序”  模板。
 
    ![新项目模板列表](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
-1. 为“项目名称”键入“HelloWorld”。 选择“创建”。
+1. 为“项目名称”  键入“HelloWorld”。 选择“创建”  。
 
    ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
