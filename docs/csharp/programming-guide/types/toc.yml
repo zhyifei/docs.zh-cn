@@ -1,6 +1,7 @@
 - name: 类型
-  href: index.md
   items:
+    - name: 使用和定义类型
+      href: index.md
     - name: 强制转换和类型转换
       href: casting-and-type-conversions.md
     - name: 装箱和取消装箱
