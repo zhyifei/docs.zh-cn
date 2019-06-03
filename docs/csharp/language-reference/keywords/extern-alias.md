@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 8a33b466bbe75b84d6cd28ebd6f4fc57695aa420
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: d2ecd566731c3d2d472034ecb6412432af24c847
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452434"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422055"
 ---
 # <a name="extern-alias-c-reference"></a>外部别名（C# 参考）
 有时你可能不得不引用具有相同的完全限定类型名称的程序集的两个版本。 例如，可能需要在同一应用程序中使用某程序集的两个或多个版本。 通过使用外部程序集别名，可在别名命名的根级别命名空间内包装每个程序集的命名空间，使其能够在同一文件中使用。  
@@ -46,6 +46,5 @@ ms.locfileid: "65452434"
 - [C# 参考](../../../csharp/language-reference/index.md)
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)
 - [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [/reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

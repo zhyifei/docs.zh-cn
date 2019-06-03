@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: ba156eed25f28a0568e11c986de1e84db3cd9cf0
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 166f8a99a3556664f5f3701c94aa8593ac7ebe32
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504478"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422077"
 ---
 # <a name="for-c-reference"></a>for（C# 参考）
 
@@ -22,7 +22,7 @@ ms.locfileid: "58504478"
 
 ## <a name="structure-of-the-for-statement"></a>`for` 语句的结构
 
-`for` 语句定义初始化表达式、条件和迭代器部分：
+`for` 语句定义初始化表达式、条件和迭代器部分    ：
 
 ```csharp
 for (initializer; condition; iterator)
@@ -35,9 +35,9 @@ for (initializer; condition; iterator)
 
 [!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
 
-### <a name="the-initializer-section"></a>“初始化表达式”部分
+### <a name="the-initializer-section"></a>“初始化表达式”部分 
 
-“初始化表达式”部分的语句仅在进入循环前执行一次。 “初始化表达式”部分是下列内容之一：
+“初始化表达式”部分的语句仅在进入循环前执行一次  。 “初始化表达式”部分是下列内容之一  ：
 
 - 本地循环变量的声明和初始化，不能从循环外访问。
 
@@ -55,25 +55,25 @@ for (initializer; condition; iterator)
 
   - [await](await.md) 表达式
 
-上例中的“初始化表达式”部分声明和初始化本地循环变量 `i`：
+上例中的“初始化表达式”部分声明和初始化本地循环变量 `i`  ：
 
 ```csharp
 int i = 0
 ```
 
-### <a name="the-condition-section"></a>“条件”部分
+### <a name="the-condition-section"></a>“条件”部分 
 
-“条件”部分（如果存在）必须为布尔表达式。 在每次循环迭代前计算该表达式。 如果“条件”部分不存在或者布尔表达式的计算结果为 `true`，则执行下一个循环迭代；否则退出循环。
+“条件”部分（如果存在）必须为布尔表达式  。 在每次循环迭代前计算该表达式。 如果“条件”部分不存在或者布尔表达式的计算结果为 `true`，则执行下一个循环迭代；否则退出循环  。
 
-上例中的“条件”部分确定循环是否根据本地循环变量的值终止：
+上例中的“条件”部分确定循环是否根据本地循环变量的值终止  ：
 
 ```csharp
 i < 5
 ```
 
-### <a name="the-iterator-section"></a>“迭代器”部分
+### <a name="the-iterator-section"></a>“迭代器”部分 
 
-“迭代器”部分定义循环主体的每次迭代后将执行的操作。 “迭代器”部分包含用逗号分隔的零个或多个以下语句表达式：
+“迭代器”部分定义循环主体的每次迭代后将执行的操作  。 “迭代器”部分包含用逗号分隔的零个或多个以下语句表达式  ：
 
 - [赋值](../operators/assignment-operator.md)语句
 
@@ -87,7 +87,7 @@ i < 5
 
 - [await](await.md) 表达式
 
-上例中的“迭代器”部分增加本地循环变量：
+上例中的“迭代器”部分增加本地循环变量  ：
 
 ```csharp
 i++
@@ -95,7 +95,7 @@ i++
 
 ## <a name="examples"></a>示例
 
-下面的示例阐释了几种不太常见的 `for` 语句部分的使用情况：为“初始化表达式”部分中的外部循环变量赋值、同时在“初始化表达式”部分和“迭代器”部分中调用一种方法，以及更改迭代器部分中的两个变量的值。 选择“运行”以运行示例代码。 然后可以修改代码并再次运行它。
+下面的示例阐释了几种不太常见的 `for` 语句部分的使用情况：为“初始化表达式”部分中的外部循环变量赋值、同时在“初始化表达式”部分和“迭代器”部分中调用一种方法，以及更改迭代器部分中的两个变量的值     。 选择“运行”以运行示例代码  。 然后可以修改代码并再次运行它。
 
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
 
@@ -112,5 +112,4 @@ i++
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [迭代语句](iteration-statements.md)
 - [foreach, in](foreach-in.md)

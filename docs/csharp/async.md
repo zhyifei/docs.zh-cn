@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 0eb4cf5bc912f1fd77e6c42a0a60d1c723c66dae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cdfbab381360bfcbae6cf3849d0bf0e18fda24bc
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633969"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377848"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -106,9 +106,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果答案为“是”，则你的工作是 **CPU 绑定**。
 
-如果你的工作为 **I/O 绑定**，请使用 `async` 和 `await`（而不使用 `Task.Run`）。  不应使用任务并行库。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
+如果你的工作为 **I/O 绑定**，请使用 `async` 和 `await`  （而不使用 `Task.Run`）。  不应使用任务并行库  。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
 
-如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。  如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
+如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。   如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，应始终对代码的执行进行测量。  例如，你可能会遇到这样的情况：多线程处理时，上下文切换的开销高于 CPU 绑定工作的开销。  每种选择都有折衷，应根据自身情况选择正确的折衷方案。
 
@@ -155,7 +155,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     NetworkProgressBar.Visibility = Visibility.Visible;
 
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
-    // This is what allows the app to be responsive and not hang on the UI thread.
+    // This is what allows the app to be responsive and not block the UI thread.
     var html = await getDotNetFoundationHtmlTask;
     int count = Regex.Matches(html, @"\.NET").Count;
 
@@ -222,7 +222,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 这一点需牢记在心。  如果 `await` 未用在 `async` 方法的主体中，C# 编译器将生成一个警告，但此代码将会以类似普通方法的方式进行编译和运行。  请注意这会导致效率低下，因为由 C# 编译器为异步方法生成的状态机将不会完成任何任务。
 
-* 应将“Async”作为后缀添加到所编写的每个异步方法名称中。
+* 应将“Async”作为后缀添加到所编写的每个异步方法名称中。 
 
 这是 .NET 中的惯例，以便更轻松区分同步和异步方法。 请注意，未由代码显式调用的某些方法（如事件处理程序或 Web 控制器方法）并不一定适用。 由于它们未由代码显式调用，因此对其显式命名并不重要。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632930"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422119"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -38,7 +38,7 @@ ms.locfileid: "65632930"
 
 ## <a name="simple-types"></a>简单类型
 
-简单类型是 C# 提供的一组预定义的结构类型，其中包括以下类型：
+简单类型是 C# 提供的一组预定义的结构类型，其中包括以下类型： 
 
 - [整型类型](integral-types-table.md)：整数类型和 [字符型](char.md)类型
 - [浮点类型](floating-point-types-table.md)
@@ -108,6 +108,5 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
 - [类型](types.md)
-- [类型引用表](reference-tables-for-types.md)
 - [引用类型](reference-types.md)
 - [可以为 null 的类型](../../programming-guide/nullable-types/index.md)

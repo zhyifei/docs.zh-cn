@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: bb491ef93f0f2da89f0101d10e2cf3d158962850
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452682"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423306"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空间（C# 编程指南）
 在 C# 编程中，命名空间在两个方面被大量使用。 首先，.NET Framework 类使用命名空间来组织它的众多类。 其次，在较大的编程项目中，声明自己的命名空间可以帮助控制类名称和方法名称的范围。  
@@ -92,7 +92,6 @@ ms.locfileid: "65452682"
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [命名空间](../../../csharp/programming-guide/namespaces/index.md)
-- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)
 - [。运算符](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

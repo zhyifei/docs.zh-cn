@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 84e599340877ce52dc6242ea259c69672915c546
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169918"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422015"
 ---
 # <a name="as-c-reference"></a>as（C# 参考）
 可以使用 `as` 运算符在符合的引用类型或[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)之间执行某些类型的转换。 以下代码显示一个示例。  
@@ -53,4 +53,3 @@ expression is type ? (type)expression : (type)null
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 - [is](../../../csharp/language-reference/keywords/is.md)
 - [?:运算符](../../../csharp/language-reference/operators/conditional-operator.md)
-- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)

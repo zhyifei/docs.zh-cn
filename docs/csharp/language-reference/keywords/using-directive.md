@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029497"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421744"
 ---
 # <a name="using-directive-c-reference"></a>using 指令（C# 参考）
 
@@ -36,7 +36,7 @@ ms.locfileid: "54029497"
     using Project = PC.MyCompany.Project;
     ```
 
-`using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理 <xref:System.IDisposable> 对象（如文件和字体）。 有关详细信息，请参阅 [using 语句](using-statement.md)。
+`using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理 <xref:System.IDisposable> 对象（如文件和字体）  。 有关详细信息，请参阅 [using 语句](using-statement.md)。
 
 ## <a name="using-static-type"></a>Using 静态类型
 
@@ -102,6 +102,5 @@ using 别名指令的右侧不能有开放式泛型类型。 例如，不能为 
 - [C# 编程指南](../../programming-guide/index.md)
 - [使用命名空间](../../programming-guide/namespaces/using-namespaces.md)
 - [C# 关键字](index.md)
-- [命名空间关键字](namespace-keywords.md)
 - [命名空间](../../programming-guide/namespaces/index.md)
 - [using 语句](using-statement.md)

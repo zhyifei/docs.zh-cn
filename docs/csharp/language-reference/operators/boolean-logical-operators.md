@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3ac3479de0bd3c95256741a8b3075f2e5786b65c
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880569"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300098"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -178,7 +178,7 @@ x = x op y
 
 用户定义类型可以[重载](../keywords/operator.md) `!`、`&`、`|` 和 `^` 运算符。 重载二元运算符时，对应的复合赋值运算符也会隐式重载。 用户定义类型不能显式重载复合赋值运算符。
 
-用户定义类型无法重载条件逻辑运算符 `&&` 和 `||`。 不过，如果用户定义类型以某种方式重载 [true 和 false 运算符](../keywords/true-false-operators.md)以及 `&` 或 `|` 运算符，可以对相应类型的操作数执行 `&&` 或 `||` 运算。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。
+用户定义类型无法重载条件逻辑运算符 `&&` 和 `||`。 不过，如果用户定义类型以某种方式重载 [true 和 false 运算符](true-false-operators.md)以及 `&` 或 `|` 运算符，可以对相应类型的操作数执行 `&&` 或 `||` 运算。 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[用户定义条件逻辑运算符](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)部分。
 
 ## <a name="c-language-specification"></a>C# 语言规范
 

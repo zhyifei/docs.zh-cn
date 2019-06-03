@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 79cc59eb8de513f547a8fd87db8c95dd9af37375
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac1ec7da7da465f4290000ac9c7254e9492c3c81
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754516"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421814"
 ---
 # <a name="is-c-reference"></a>is（C# 参考）
 
@@ -39,7 +39,7 @@ ms.locfileid: "64754516"
 
 - *expr* 是派生自 *type* 的类型的一个实例。 换言之，*expr* 结果可以向上转换为 *type* 的一个实例。
 
-- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型是其声明中定义的变量类型。 变量的运行时类型是分配给该变量的实例类型。
+- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型  是其声明中定义的变量类型。 变量的运行时类型  是分配给该变量的实例类型。
 
 - *expr* 是实现 *type* 接口的类型的一个实例。
 
@@ -76,17 +76,17 @@ ms.locfileid: "64754516"
 
 其中 *expr* 是计算结果为某个类型的实例的表达式，*type* 是 *expr* 结果要转换到的类型的名称，*varname* 是 *expr* 结果要转换到的对象（如果 `is` 测试为 `true`）。 
 
-如果 expr 不为 `null` 且以下任意内容为 true，那么 `is` 表达式为 `true`：
+如果 expr  不为 `null` 且以下任意内容为 true，那么 `is` 表达式为 `true`：
 
 - *expr* 是与 *type* 具有相同类型的一个实例。
 
 - *expr* 是派生自 *type* 的类型的一个实例。 换言之，*expr* 结果可以向上转换为 *type* 的一个实例。
 
-- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型是其声明中定义的变量类型。 变量的运行时类型是分配给该变量的实例类型。
+- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型  是其声明中定义的变量类型。 变量的运行时类型  是分配给该变量的实例类型。
 
 - *expr* 是实现 *type* 接口的类型的一个实例。
 
-自 C# 7.1 起，expr 可能有泛型类型参数及其约束定义的编译时类型。 
+自 C# 7.1 起，expr  可能有泛型类型参数及其约束定义的编译时类型。 
 
 如果 *expr* 为 `true` 且 `is` 与 `if` 语句配合使用，则仅在 `if` 语句内分配 *varname*。 *varname* 的使用范围：从 `is` 表达式到封闭 `if` 语句的块的末尾。 在任何其他位置使用 *varname* 都会因使用尚未分配的变量而生成编译时错误。
 
@@ -144,7 +144,7 @@ ms.locfileid: "64754516"
  
 ### <a name="var" />var 模式</a>
 
-`var` 模式对于任何类型或值均为 catch-all。 expr 值始终分配给与 expr 的编译时类型相同的本地变量。 `is` 表达式的结果始终为 `true`。 语法为：
+`var` 模式对于任何类型或值均为 catch-all。 expr  值始终分配给与 expr  的编译时类型相同的本地变量。 `is` 表达式的结果始终为 `true`。 语法为：
 
 ```csharp 
    expr is var varname
@@ -164,4 +164,3 @@ ms.locfileid: "64754516"
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)
-- [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)

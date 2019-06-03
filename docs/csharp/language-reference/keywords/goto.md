@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: e4642d0e43a538217493298b58d572e435db5dae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 675893f02a0022b403d2afc018d24d6f826b8f75
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645322"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421829"
 ---
 # <a name="goto-c-reference"></a>goto（C# 参考）
 
@@ -45,4 +45,3 @@ ms.locfileid: "54645322"
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
 - [goto 语句 (C++)](/cpp/cpp/goto-statement-cpp)
-- [跳转语句](jump-statements.md)

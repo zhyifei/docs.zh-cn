@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 1ff8db25fd76be6eb77355322d497d61096400aa
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 25f6fb5e8780611a6ca7396873d0a33684b65a48
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219329"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301375"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何：将字符串转换为数字（C# 编程指南）
 
@@ -21,7 +21,7 @@ ms.locfileid: "56219329"
   
  如果有字符串，则调用 `TryParse` 方法（例如，[`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)）或 `Parse` 方法（例如，[`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)）会稍微更加高效且简单。  使用 <xref:System.Convert> 方法对于实现 <xref:System.IConvertible> 的常规对象更有用。  
   
- 可以对预期字符串会包含的数值类型（如 <xref:System.Int32?displayProperty=nameWithType> 类型）使用 `Parse` 或 `TryParse` 方法。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 方法在内部使用 <xref:System.Int32.Parse%2A>。  `Parse` 方法返回转换后的数字；`TryParse` 方法返回 <xref:System.Boolean> 值，该值指示转换是否成功，并以 [`out` 参数](../../../csharp/language-reference/keywords/out.md)形式返回转换后的数字。 如果字符串的格式无效，则 `Parse` 会引发异常，而 `TryParse` 会返回 [false](../../../csharp/language-reference/keywords/false.md)。 调用 `Parse` 方法时，应始终使用异常处理来捕获分析操作失败时的 <xref:System.FormatException>。  
+ 可以对预期字符串会包含的数值类型（如 <xref:System.Int32?displayProperty=nameWithType> 类型）使用 `Parse` 或 `TryParse` 方法。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 方法在内部使用 <xref:System.Int32.Parse%2A>。  `Parse` 方法返回转换后的数字；`TryParse` 方法返回 <xref:System.Boolean> 值，该值指示转换是否成功，并以 [`out` 参数](../../../csharp/language-reference/keywords/out.md)形式返回转换后的数字。 如果字符串的格式无效，则 `Parse` 会引发异常，而 `TryParse` 会返回 [false](../../../csharp/language-reference/keywords/false-literal.md)。 调用 `Parse` 方法时，应始终使用异常处理来捕获分析操作失败时的 <xref:System.FormatException>。  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>调用 Parse 和 TryParse 方法
 
