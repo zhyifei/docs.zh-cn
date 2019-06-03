@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379619"
 ---
 ### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF 现在采用不同方式序列化 Expressions.Literal\<T> DateTimes（中断自定义 XAML 分析器）
 
