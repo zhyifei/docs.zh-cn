@@ -2,11 +2,11 @@
   href: index.md
   items:
     - name: 类型
-      href: types.md
       items:
         - name: 值类型
-          href: value-types.md
           items:
+            - name: 值类型的功能
+              href: value-types.md
             - name: bool
               href: bool.md
             - name: byte
@@ -38,8 +38,9 @@
             - name: ushort
               href: ushort.md
         - name: 引用类型
-          href: reference-types.md
           items:
+            - name: 引用类型的功能
+              href: reference-types.md
             - name: class
               href: class.md
             - name: 委托
@@ -57,7 +58,6 @@
         - name: var
           href: var.md
         - name: 类型引用表
-          href: reference-tables-for-types.md
           items:
             - name: 内置类型表
               href: built-in-types-table.md
@@ -76,11 +76,11 @@
             - name: 设置数值结果表的格式
               href: formatting-numeric-results-table.md
     - name: 修饰符
-      href: modifiers.md
       items:
         - name: 访问修饰符
-          href: access-modifiers.md
           items:
+            - name: 快速参考
+              href: access-modifiers.md
             - name: 可访问性级别
               href: accessibility-levels.md
             - name: 可访问性域
@@ -128,17 +128,16 @@
         - name: 易失
           href: volatile.md
     - name: 语句关键字
-      href: statement-keywords.md
       items:
+        - name: 语句类别
+          href: statement-keywords.md
         - name: 选择语句
-          href: selection-statements.md
           items:
             - name: if-else
               href: if-else.md
             - name: switch
               href: switch.md
         - name: 迭代语句
-          href: iteration-statements.md
           items:
             - name: do
               href: do.md
@@ -149,7 +148,6 @@
             - name: while
               href: while.md
         - name: 跳转语句
-          href: jump-statements.md
           items:
             - name: break
               href: break.md
@@ -160,7 +158,6 @@
             - name: return
               href: return.md
         - name: 异常处理语句
-          href: exception-handling-statements.md
           items:
             - name: throw
               href: throw.md
@@ -171,8 +168,9 @@
             - name: try-catch-finally
               href: try-catch-finally.md
         - name: Checked 和 Unchecked
-          href: checked-and-unchecked.md
           items:
+            - name: 概述
+              href: checked-and-unchecked.md
             - name: checked
               href: checked.md
             - name: unchecked
@@ -182,8 +180,9 @@
         - name: lock 语句
           href: lock-statement.md
     - name: 方法参数
-      href: method-parameters.md
       items:
+        - name: 传递参数
+          href: method-parameters.md
         - name: params
           href: params.md
         - name: in（参数修饰符）
@@ -193,13 +192,13 @@
         - name: out（参数修饰符）
           href: out-parameter-modifier.md
     - name: 命名空间关键字
-      href: namespace-keywords.md
       items:
         - name: namespace
           href: namespace.md
         - name: using
-          href: using.md
           items:
+            - name: using 的上下文
+              href: using.md
             - name: using 指令
               href: using-directive.md
             - name: using static 指令
@@ -209,7 +208,6 @@
         - name: 外部别名
           href: extern-alias.md
     - name: 运算符关键字
-      href: operator-keywords.md
       items:
         - name: as
           href: as.md
@@ -218,8 +216,9 @@
         - name: is
           href: is.md
         - name: new
-          href: new.md
           items:
+            - name: new 运算符、修饰符和约束
+              href: new.md
             - name: New 运算符
               href: new-operator.md
             - name: new 修饰符
@@ -235,7 +234,6 @@
         - name: nameof
           href: nameof.md
     - name: 转换关键字
-      href: conversion-keywords.md
       items:
         - name: 显式
           href: explicit.md
@@ -244,14 +242,12 @@
         - name: operator
           href: operator.md
     - name: 访问关键字
-      href: access-keywords.md
       items:
         - name: base
           href: base.md
         - name: this
           href: this.md
     - name: 文字关键字
-      href: literal-keywords.md
       items:
         - name: 'null'
           href: null.md
@@ -262,8 +258,9 @@
         - name: default
           href: default.md
     - name: 上下文关键字
-      href: contextual-keywords.md
       items:
+        - name: 快速参考
+          href: contextual-keywords.md
         - name: 添加
           href: add.md
         - name: 获取
@@ -287,8 +284,9 @@
         - name: yield
           href: yield.md
     - name: 查询关键字
-      href: query-keywords.md
       items:
+        - name: 快速参考
+          href: query-keywords.md
         - name: from 子句
           href: from-clause.md
         - name: where 子句
