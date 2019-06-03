@@ -10,25 +10,27 @@ helpviewer_keywords:
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 792488e53ffb7f870e21fdd1ad3ef94bf0303b1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5719c6afc1c5efc6138f0a4931d1725a6f20909a
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720231"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424051"
 ---
-# <a name="how-to-implement-dynamic-partitions"></a><span data-ttu-id="7fe68-102">如何：实现动态分区</span><span class="sxs-lookup"><span data-stu-id="7fe68-102">How to: Implement Dynamic Partitions</span></span>
-<span data-ttu-id="7fe68-103">下面的示例展示了如何实现自定义 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>，以实现动态分区，并可以通过特定重载 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 和 PLINQ 进行使用。</span><span class="sxs-lookup"><span data-stu-id="7fe68-103">The following example shows how to implement a custom <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> that implements dynamic partitioning and can be used from certain overloads <xref:System.Threading.Tasks.Parallel.ForEach%2A> and from PLINQ.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="7fe68-104">示例</span><span class="sxs-lookup"><span data-stu-id="7fe68-104">Example</span></span>  
- <span data-ttu-id="7fe68-105">每当分区对枚举器调用 <xref:System.Collections.IEnumerator.MoveNext%2A>，枚举器都会为此分区提供一个列表元素。</span><span class="sxs-lookup"><span data-stu-id="7fe68-105">Each time a partition calls <xref:System.Collections.IEnumerator.MoveNext%2A> on the enumerator, the enumerator provides the partition with one list element.</span></span> <span data-ttu-id="7fe68-106">如果是 PLINQ 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A>，分区是 <xref:System.Threading.Tasks.Task> 实例。</span><span class="sxs-lookup"><span data-stu-id="7fe68-106">In the case of PLINQ and <xref:System.Threading.Tasks.Parallel.ForEach%2A>, the partition is a <xref:System.Threading.Tasks.Task> instance.</span></span> <span data-ttu-id="7fe68-107">由于请求在多个线程上并发，因此对当前索引的访问是同步的。</span><span class="sxs-lookup"><span data-stu-id="7fe68-107">Because requests are happening concurrently on multiple threads, access to the current index is synchronized.</span></span>  
-  
- [!code-csharp[TPL_Partitioners#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#04)]
- [!code-vb[TPL_Partitioners#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/dynamicpartitioner.vb#04)]  
-  
- <span data-ttu-id="7fe68-108">例如，每个区块包含一个元素的区块分区。</span><span class="sxs-lookup"><span data-stu-id="7fe68-108">This is an example of chunk partitioning, with each chunk consisting of one element.</span></span> <span data-ttu-id="7fe68-109">通过一次提供更多元素，可以减少对锁的争用，并（从理论上说）实现更快的性能。</span><span class="sxs-lookup"><span data-stu-id="7fe68-109">By providing more elements at a time, you could reduce the contention over the lock and theoretically achieve faster performance.</span></span> <span data-ttu-id="7fe68-110">不过，在某个时间点，较大的区块可能需要额外的负载均衡逻辑，才能确保所有线程在全部工作完成前一直处于忙碌状态。</span><span class="sxs-lookup"><span data-stu-id="7fe68-110">However, at some point, larger chunks might require additional load-balancing logic in order to keep all threads busy until all the work is done.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="7fe68-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="7fe68-111">See also</span></span>
+# <a name="how-to-implement-dynamic-partitions"></a><span data-ttu-id="87b8e-102">如何：实现动态分区</span><span class="sxs-lookup"><span data-stu-id="87b8e-102">How to: Implement Dynamic Partitions</span></span>
 
-- [<span data-ttu-id="7fe68-112">PLINQ 和 TPL 的自定义分区程序</span><span class="sxs-lookup"><span data-stu-id="7fe68-112">Custom Partitioners for PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-- [<span data-ttu-id="7fe68-113">如何：实现静态分区程序</span><span class="sxs-lookup"><span data-stu-id="7fe68-113">How to: Implement a Partitioner for Static Partitioning</span></span>](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+<span data-ttu-id="87b8e-103">下面的示例展示了如何实现自定义 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>，以实现动态分区，并可以通过特定重载 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 和 PLINQ 进行使用。</span><span class="sxs-lookup"><span data-stu-id="87b8e-103">The following example shows how to implement a custom <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> that implements dynamic partitioning and can be used from certain overloads <xref:System.Threading.Tasks.Parallel.ForEach%2A> and from PLINQ.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="87b8e-104">示例</span><span class="sxs-lookup"><span data-stu-id="87b8e-104">Example</span></span>
+
+<span data-ttu-id="87b8e-105">每当分区对枚举器调用 <xref:System.Collections.IEnumerator.MoveNext%2A>，枚举器都会为此分区提供一个列表元素。</span><span class="sxs-lookup"><span data-stu-id="87b8e-105">Each time a partition calls <xref:System.Collections.IEnumerator.MoveNext%2A> on the enumerator, the enumerator provides the partition with one list element.</span></span> <span data-ttu-id="87b8e-106">如果是 PLINQ 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A>，分区是 <xref:System.Threading.Tasks.Task> 实例。</span><span class="sxs-lookup"><span data-stu-id="87b8e-106">In the case of PLINQ and <xref:System.Threading.Tasks.Parallel.ForEach%2A>, the partition is a <xref:System.Threading.Tasks.Task> instance.</span></span> <span data-ttu-id="87b8e-107">由于请求在多个线程上并发，因此对当前索引的访问是同步的。</span><span class="sxs-lookup"><span data-stu-id="87b8e-107">Because requests are happening concurrently on multiple threads, access to the current index is synchronized.</span></span>  
+
+[!code-csharp[TPL_Partitioners#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner02.cs#OrderableListPartitioner)]
+[!code-vb[TPL_Partitioners#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/dynamicpartitioner.vb#04)]  
+
+<span data-ttu-id="87b8e-108">例如，每个区块包含一个元素的区块分区。</span><span class="sxs-lookup"><span data-stu-id="87b8e-108">This is an example of chunk partitioning, with each chunk consisting of one element.</span></span> <span data-ttu-id="87b8e-109">通过一次提供更多元素，可以减少对锁的争用，并（从理论上说）实现更快的性能。</span><span class="sxs-lookup"><span data-stu-id="87b8e-109">By providing more elements at a time, you could reduce the contention over the lock and theoretically achieve faster performance.</span></span> <span data-ttu-id="87b8e-110">不过，在某个时间点，较大的区块可能需要额外的负载均衡逻辑，才能确保所有线程在全部工作完成前一直处于忙碌状态。</span><span class="sxs-lookup"><span data-stu-id="87b8e-110">However, at some point, larger chunks might require additional load-balancing logic in order to keep all threads busy until all the work is done.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="87b8e-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="87b8e-111">See also</span></span>
+
+* [<span data-ttu-id="87b8e-112">PLINQ 和 TPL 的自定义分区程序</span><span class="sxs-lookup"><span data-stu-id="87b8e-112">Custom Partitioners for PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
+* [<span data-ttu-id="87b8e-113">如何：实现静态分区程序</span><span class="sxs-lookup"><span data-stu-id="87b8e-113">How to: Implement a Partitioner for Static Partitioning</span></span>](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
