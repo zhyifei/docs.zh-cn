@@ -24,9 +24,9 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
   
 2. 对于列表中每个表及其子代，在 Diffgram 的第一部分中写出所有行的当前版本。  
   
-3. 对于每个表中<xref:System.Data.DataSet>，写出的所有行的原始版本，如果有，请在**\<之前 >** 在 diffgram 的部分。  
+3. 对于每个表中<xref:System.Data.DataSet>，写出的所有行的原始版本，如果有，请在 **\<之前 >** 在 diffgram 的部分。  
   
-4. 对于有错误，行写入错误内容中**\<错误 >** 在 diffgram 的部分。  
+4. 对于有错误，行写入错误内容中 **\<错误 >** 在 diffgram 的部分。  
   
  将按照从 XML 文件的开头到结尾的顺序处理 Diffgram。  
   
@@ -34,12 +34,12 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
   
 1. 处理包含行当前版本的 Diffgram 的第一部分。  
   
-2. 处理第二个或**\<之前 >** 节，其中包含原始行版本的修改和删除的行。  
+2. 处理第二个或 **\<之前 >** 节，其中包含原始行版本的修改和删除的行。  
   
     > [!NOTE]
     >  如果某行标记为已删除，则删除操作还可删除该行的子代，具体取决于当前 `Cascade` 的 <xref:System.Data.DataSet> 属性。  
   
-3. 进程**\<错误 >** 部分。 为本部分中各项的指定行和列设置错误信息。  
+3. 进程 **\<错误 >** 部分。 为本部分中各项的指定行和列设置错误信息。  
   
 > [!NOTE]
 >  如果将 <xref:System.Data.XmlWriteMode> 设置为 Diffgram，则目标 <xref:System.Data.DataSet> 和原始 <xref:System.Data.DataSet> 的内容可能会不同。  
@@ -83,10 +83,10 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
   
 |批注|描述|  
 |----------------|-----------------|  
-|**id**|用于中的元素配对 **\<diffgr： 之前 >** 并 **\<diffgr:errors >** 块中的元素**\<*****DataInstance*** **>** 块。 使用值**diffgr: id**批注位于窗体 *[TableName] [RowIdentifier]*。 例如：`<Customers diffgr:id="Customers1">`。|  
-|**parentId**|标识中的哪个元素**\<** ***DataInstance*** **>** 块是当前元素的父元素。 使用值**diffgr: parentid**批注位于窗体 *[TableName] [RowIdentifier]*。 例如：`<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|中的行标识**\<** ***DataInstance*** **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **inserted**<br /> 标识**Added**行。<br /><br /> **修改**<br /> 标识**Modified**包含行**原始**中的行版本 **\<diffgr： 之前 >** 块。 请注意， **Deleted**行将包含**原始**中的行版本 **\<diffgr： 之前 >** 块，但将存在中没有带批注的元素**\<**  ***DataInstance*** **>** 块。|  
-|**hasErrors**|中的行标识**\<** ***DataInstance*** **>** 块**RowError**。 错误元素放置在 **\<diffgr:errors >** 块。|  
+|**id**|用于中的元素配对 **\<diffgr： 之前 >** 并 **\<diffgr:errors >** 块中的元素 **\<** ***DataInstance*** **>** 块。 使用值**diffgr: id**批注位于窗体 *[TableName] [RowIdentifier]* 。 例如：`<Customers diffgr:id="Customers1">`。|  
+|**parentId**|标识中的哪个元素 **\<** ***DataInstance*** **>** 块是当前元素的父元素。 使用值**diffgr: parentid**批注位于窗体 *[TableName] [RowIdentifier]* 。 例如：`<Orders diffgr:parentId="Customers1">`。|  
+|**hasChanges**|中的行标识 **\<** ***DataInstance*** **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **inserted**<br /> 标识**Added**行。<br /><br /> **修改**<br /> 标识**Modified**包含行**原始**中的行版本 **\<diffgr： 之前 >** 块。 请注意， **Deleted**行将包含**原始**中的行版本 **\<diffgr： 之前 >** 块，但将存在中没有带批注的元素 **\<**  ***DataInstance*** **>** 块。|  
+|**hasErrors**|中的行标识 **\<** ***DataInstance*** **>** 块**RowError**。 错误元素放置在 **\<diffgr:errors >** 块。|  
 |**错误**|包含的文本**RowError**中的特定元素的 **\<diffgr:errors >** 块。|  
   
  当以 DiffGram 格式读写 <xref:System.Data.DataSet> 的内容时，还包含附加的批注。 下表描述了命名空间中定义这些其他批注**urn： 架构-microsoft-com:xml-msdata**。  
@@ -94,10 +94,10 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 |批注|描述|  
 |----------------|-----------------|  
 |**RowOrder**|保留原始数据的行顺序并标识特定 <xref:System.Data.DataTable> 中行的索引。|  
-|**Hidden**|标识为具有列**ColumnMapping**属性设置为**MappingType.Hidden**。 属性将写格式**msdata： 隐藏** *[ColumnName]*="*值*"。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 请注意，只有当隐藏列包含数据时才以 DiffGram 属性的形式来编写隐藏列。 否则将忽略隐藏列。|  
+|**Hidden**|标识为具有列**ColumnMapping**属性设置为**MappingType.Hidden**。 属性将写格式**msdata： 隐藏** *[ColumnName]* ="*值*"。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 请注意，只有当隐藏列包含数据时才以 DiffGram 属性的形式来编写隐藏列。 否则将忽略隐藏列。|  
   
 ## <a name="sample-diffgram"></a>DiffGram 示例  
- 下面是 DiffGram 格式的示例。 该示例显示对表行的更新在提交更改之前的结果。 CustomerID 为“ALFKI”的行已被修改，但尚未更新。 因此，没有**当前**行**diffgr: id**为"Customers1"中**\<** ***DataInstance*** **>** 块中，和一个**原始**行**diffgr: id** "Customers1"的 **\<diffgr： 之前 >** 块。 Customerid 为"ANATR"的行包含**RowError**，因此它将批注`diffgr:hasErrors="true"`，并且没有一个相关的元素 **\<diffgr:errors >** 块。  
+ 下面是 DiffGram 格式的示例。 该示例显示对表行的更新在提交更改之前的结果。 CustomerID 为“ALFKI”的行已被修改，但尚未更新。 因此，没有**当前**行**diffgr: id**为"Customers1"中 **\<** ***DataInstance*** **>** 块中，和一个**原始**行**diffgr: id** "Customers1"的 **\<diffgr： 之前 >** 块。 Customerid 为"ANATR"的行包含**RowError**，因此它将批注`diffgr:hasErrors="true"`，并且没有一个相关的元素 **\<diffgr:errors >** 块。  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  
