@@ -4,12 +4,12 @@ description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751673"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377505"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
 
@@ -21,12 +21,12 @@ ms.locfileid: "64751673"
 
 `dotnet` 命令用于启动应用程序和 .NET Core CLI。 `dotnet` 命令本身不收集遥测数据。 `dotnet` 命令运行的 .NET Core CLI 命令收集遥测数据。
 
-使用 `dotnet` 命令本身且没有附加任何命令时，不会启用遥测：
+使用 `dotnet` 命令本身且没有附加任何命令时，不会启用  遥测：
 
 - `dotnet`
 - `dotnet [path-to-app]`
 
-使用 [.NET Core CLI 命令](index.md)时，就会启用遥测，如：
+使用 [.NET Core CLI 命令](index.md)时，就会启用  遥测，如：
 
 - `dotnet build`
 - `dotnet pack`
@@ -77,9 +77,9 @@ ms.locfileid: "64751673"
 - OSVersion
 - SDKVersion
 
-&#8224;Occurrences 列显示相应命令当天用于该行指标的总次数。
+&#8224;Occurrences  列显示相应命令当天用于该行指标的总次数。
 
-&#8225;通常情况下，Geography 列显示国家/地区名称。 在某些情况下，此列中会显示南极洲，要么是因为研究人员在南极洲使用 .NET Core，要么是因为位置数据不正确。
+&#8225;通常情况下，Geography  列显示国家/地区名称。 在某些情况下，此列中会显示南极洲，要么是因为研究人员在南极洲使用 .NET Core，要么是因为位置数据不正确。
 
 ### <a name="example"></a>示例
 
@@ -96,7 +96,7 @@ ms.locfileid: "64751673"
 - [2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
 - [2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
 
-其他数据集使用标准的 URL 格式进行发布。 请将 `<YEAR>` 替换为相应年份，并将 `<QUARTER>` 替换为相应季度（使用 `1`、`2`、`3` 或 `4`）。 文件采用制表符分隔值 (TSV) 格式。
+其他数据集使用标准的 URL 格式进行发布。 请将 `<YEAR>` 替换为相应年份，并将 `<QUARTER>` 替换为相应季度（使用 `1`、`2`、`3` 或 `4`）。 文件采用制表符分隔值 (TSV  ) 格式。
 
 `https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
 
