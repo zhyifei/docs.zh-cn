@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a440cef9de12c420e7b49b794ed0bcba39e756e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21b96d435bdb0265d31972edbd4038d0b8cd8d2b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665062"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490337"
 ---
-# <a name="getrequestedruntimeinfo-function"></a><span data-ttu-id="c2489-102">GetRequestedRuntimeInfo 函数</span><span class="sxs-lookup"><span data-stu-id="c2489-102">GetRequestedRuntimeInfo Function</span></span>
-<span data-ttu-id="c2489-103">获取有关公共语言运行时 (CLR) 应用程序请求的版本和目录信息。</span><span class="sxs-lookup"><span data-stu-id="c2489-103">Gets version and directory information about the common language runtime (CLR) requested by an application.</span></span>  
+# <a name="getrequestedruntimeinfo-function"></a><span data-ttu-id="9e064-102">GetRequestedRuntimeInfo 函数</span><span class="sxs-lookup"><span data-stu-id="9e064-102">GetRequestedRuntimeInfo Function</span></span>
+<span data-ttu-id="9e064-103">获取有关公共语言运行时 (CLR) 应用程序请求的版本和目录信息。</span><span class="sxs-lookup"><span data-stu-id="9e064-103">Gets version and directory information about the common language runtime (CLR) requested by an application.</span></span>  
   
- <span data-ttu-id="c2489-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="c2489-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="9e064-104">.NET Framework 4 中已弃用此函数。</span><span class="sxs-lookup"><span data-stu-id="9e064-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2489-105">语法</span><span class="sxs-lookup"><span data-stu-id="c2489-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e064-105">语法</span><span class="sxs-lookup"><span data-stu-id="9e064-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRequestedRuntimeInfo (  
@@ -47,84 +47,84 @@ HRESULT GetRequestedRuntimeInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c2489-106">参数</span><span class="sxs-lookup"><span data-stu-id="c2489-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e064-106">参数</span><span class="sxs-lookup"><span data-stu-id="9e064-106">Parameters</span></span>  
  `pExe`  
- <span data-ttu-id="c2489-107">[in]应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="c2489-107">[in] The name of the application.</span></span>  
+ <span data-ttu-id="9e064-107">[in]应用程序的名称。</span><span class="sxs-lookup"><span data-stu-id="9e064-107">[in] The name of the application.</span></span>  
   
  `pwszVersion`  
- <span data-ttu-id="c2489-108">[in]指定运行时的版本号的字符串。</span><span class="sxs-lookup"><span data-stu-id="c2489-108">[in] A string specifying the version number of the runtime.</span></span>  
+ <span data-ttu-id="9e064-108">[in]指定运行时的版本号的字符串。</span><span class="sxs-lookup"><span data-stu-id="9e064-108">[in] A string specifying the version number of the runtime.</span></span>  
   
  `pConfigurationFile`  
- <span data-ttu-id="c2489-109">[in]与之关联的配置文件的名称`pExe`。</span><span class="sxs-lookup"><span data-stu-id="c2489-109">[in] The name of the configuration file that is associated with `pExe`.</span></span>  
+ <span data-ttu-id="9e064-109">[in]与之关联的配置文件的名称`pExe`。</span><span class="sxs-lookup"><span data-stu-id="9e064-109">[in] The name of the configuration file that is associated with `pExe`.</span></span>  
   
  `startupFlags`  
- <span data-ttu-id="c2489-110">[in]一个或多个[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)枚举值。</span><span class="sxs-lookup"><span data-stu-id="c2489-110">[in] One or more of the [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeration values.</span></span>  
+ <span data-ttu-id="9e064-110">[in]一个或多个[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)枚举值。</span><span class="sxs-lookup"><span data-stu-id="9e064-110">[in] One or more of the [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeration values.</span></span>  
   
  `runtimeInfoFlags`  
- <span data-ttu-id="c2489-111">[in]一个或多个[RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)枚举值。</span><span class="sxs-lookup"><span data-stu-id="c2489-111">[in] One or more of the [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) enumeration values.</span></span>  
+ <span data-ttu-id="9e064-111">[in]一个或多个[RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)枚举值。</span><span class="sxs-lookup"><span data-stu-id="9e064-111">[in] One or more of the [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) enumeration values.</span></span>  
   
  `pDirectory`  
- <span data-ttu-id="c2489-112">[out]包含成功完成后运行时的目录路径的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="c2489-112">[out] A buffer that contains the directory path to the runtime upon successful completion.</span></span>  
+ <span data-ttu-id="9e064-112">[out]包含成功完成后运行时的目录路径的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="9e064-112">[out] A buffer that contains the directory path to the runtime upon successful completion.</span></span>  
   
  `dwDirectory`  
- <span data-ttu-id="c2489-113">[in]目录缓冲区的长度。</span><span class="sxs-lookup"><span data-stu-id="c2489-113">[in] The length of the directory buffer.</span></span>  
+ <span data-ttu-id="9e064-113">[in]目录缓冲区的长度。</span><span class="sxs-lookup"><span data-stu-id="9e064-113">[in] The length of the directory buffer.</span></span>  
   
  `dwDirectoryLength`  
- <span data-ttu-id="c2489-114">[out]指向的目录路径字符串长度的指针。</span><span class="sxs-lookup"><span data-stu-id="c2489-114">[out] A pointer to the length of the directory path string.</span></span>  
+ <span data-ttu-id="9e064-114">[out]指向的目录路径字符串长度的指针。</span><span class="sxs-lookup"><span data-stu-id="9e064-114">[out] A pointer to the length of the directory path string.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="c2489-115">[out]包含成功完成后运行时的版本号的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="c2489-115">[out] A buffer that contains the version number of the runtime upon successful completion.</span></span>  
+ <span data-ttu-id="9e064-115">[out]包含成功完成后运行时的版本号的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="9e064-115">[out] A buffer that contains the version number of the runtime upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="c2489-116">[in]版本字符串缓冲区的长度。</span><span class="sxs-lookup"><span data-stu-id="c2489-116">[in] The length of the version string buffer.</span></span>  
+ <span data-ttu-id="9e064-116">[in]版本字符串缓冲区的长度。</span><span class="sxs-lookup"><span data-stu-id="9e064-116">[in] The length of the version string buffer.</span></span>  
   
  `dwlength`  
- <span data-ttu-id="c2489-117">[out]指向版本字符串的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="c2489-117">[out] A pointer to the length of the version string.</span></span>  
+ <span data-ttu-id="9e064-117">[out]指向版本字符串的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="9e064-117">[out] A pointer to the length of the version string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c2489-118">返回值</span><span class="sxs-lookup"><span data-stu-id="c2489-118">Return Value</span></span>  
- <span data-ttu-id="c2489-119">此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了以下值。</span><span class="sxs-lookup"><span data-stu-id="c2489-119">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9e064-118">返回值</span><span class="sxs-lookup"><span data-stu-id="9e064-118">Return Value</span></span>  
+ <span data-ttu-id="9e064-119">此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了以下值。</span><span class="sxs-lookup"><span data-stu-id="9e064-119">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="c2489-120">返回代码</span><span class="sxs-lookup"><span data-stu-id="c2489-120">Return code</span></span>|<span data-ttu-id="c2489-121">描述</span><span class="sxs-lookup"><span data-stu-id="c2489-121">Description</span></span>|  
+|<span data-ttu-id="9e064-120">返回代码</span><span class="sxs-lookup"><span data-stu-id="9e064-120">Return code</span></span>|<span data-ttu-id="9e064-121">描述</span><span class="sxs-lookup"><span data-stu-id="9e064-121">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="c2489-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="c2489-122">S_OK</span></span>|<span data-ttu-id="c2489-123">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="c2489-123">The method completed successfully.</span></span>|  
-|<span data-ttu-id="c2489-124">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="c2489-124">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="c2489-125">目录缓冲区不足够空间来存储的目录路径。</span><span class="sxs-lookup"><span data-stu-id="c2489-125">The directory buffer is not large enough to store the directory path.</span></span><br /><br /> <span data-ttu-id="c2489-126">- 或 -</span><span class="sxs-lookup"><span data-stu-id="c2489-126">- or -</span></span><br /><br /> <span data-ttu-id="c2489-127">版本缓冲区不足够空间来存储的版本字符串。</span><span class="sxs-lookup"><span data-stu-id="c2489-127">The version buffer is not large enough to store the version string.</span></span>|  
+|<span data-ttu-id="9e064-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="9e064-122">S_OK</span></span>|<span data-ttu-id="9e064-123">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="9e064-123">The method completed successfully.</span></span>|  
+|<span data-ttu-id="9e064-124">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="9e064-124">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="9e064-125">目录缓冲区不足够空间来存储的目录路径。</span><span class="sxs-lookup"><span data-stu-id="9e064-125">The directory buffer is not large enough to store the directory path.</span></span><br /><br /> <span data-ttu-id="9e064-126">- 或 -</span><span class="sxs-lookup"><span data-stu-id="9e064-126">- or -</span></span><br /><br /> <span data-ttu-id="9e064-127">版本缓冲区不足够空间来存储的版本字符串。</span><span class="sxs-lookup"><span data-stu-id="9e064-127">The version buffer is not large enough to store the version string.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c2489-128">备注</span><span class="sxs-lookup"><span data-stu-id="c2489-128">Remarks</span></span>  
- <span data-ttu-id="c2489-129">`GetRequestedRuntimeInfo`方法返回运行时加载到进程，不一定是最新版本的计算机上安装的版本信息。</span><span class="sxs-lookup"><span data-stu-id="c2489-129">The `GetRequestedRuntimeInfo` method returns run-time information about the version loaded into the process, which is not necessarily the latest version installed on the computer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e064-128">备注</span><span class="sxs-lookup"><span data-stu-id="9e064-128">Remarks</span></span>  
+ <span data-ttu-id="9e064-129">`GetRequestedRuntimeInfo`方法返回运行时加载到进程，不一定是最新版本的计算机上安装的版本信息。</span><span class="sxs-lookup"><span data-stu-id="9e064-129">The `GetRequestedRuntimeInfo` method returns run-time information about the version loaded into the process, which is not necessarily the latest version installed on the computer.</span></span>  
   
- <span data-ttu-id="c2489-130">在.NET Framework 2.0 版中，可以获取有关最新安装的版本信息，通过使用`GetRequestedRuntimeInfo`方法，如下所示：</span><span class="sxs-lookup"><span data-stu-id="c2489-130">In the .NET Framework version 2.0, you can get information about the latest installed version by using the `GetRequestedRuntimeInfo` method as follows:</span></span>  
+ <span data-ttu-id="9e064-130">在.NET Framework 2.0 版中，可以获取有关最新安装的版本信息，通过使用`GetRequestedRuntimeInfo`方法，如下所示：</span><span class="sxs-lookup"><span data-stu-id="9e064-130">In the .NET Framework version 2.0, you can get information about the latest installed version by using the `GetRequestedRuntimeInfo` method as follows:</span></span>  
   
-- <span data-ttu-id="c2489-131">指定`pExe`， `pwszVersion`，和`pConfigurationFile`参数为 null。</span><span class="sxs-lookup"><span data-stu-id="c2489-131">Specify the `pExe`, `pwszVersion`, and `pConfigurationFile` parameters as null.</span></span>  
+- <span data-ttu-id="9e064-131">指定`pExe`， `pwszVersion`，和`pConfigurationFile`参数为 null。</span><span class="sxs-lookup"><span data-stu-id="9e064-131">Specify the `pExe`, `pwszVersion`, and `pConfigurationFile` parameters as null.</span></span>  
   
-- <span data-ttu-id="c2489-132">指定在 RUNTIME_INFO_UPGRADE_VERSION 标志`RUNTIME_INFO_FLAGS`枚举`runtimeInfoFlags`参数。</span><span class="sxs-lookup"><span data-stu-id="c2489-132">Specify the RUNTIME_INFO_UPGRADE_VERSION flag in the `RUNTIME_INFO_FLAGS` enumerations for the `runtimeInfoFlags` parameter.</span></span>  
+- <span data-ttu-id="9e064-132">指定在 RUNTIME_INFO_UPGRADE_VERSION 标志`RUNTIME_INFO_FLAGS`枚举`runtimeInfoFlags`参数。</span><span class="sxs-lookup"><span data-stu-id="9e064-132">Specify the RUNTIME_INFO_UPGRADE_VERSION flag in the `RUNTIME_INFO_FLAGS` enumerations for the `runtimeInfoFlags` parameter.</span></span>  
   
- <span data-ttu-id="c2489-133">`GetRequestedRuntimeInfo`方法不在以下情况下返回的最新的 CLR 版本：</span><span class="sxs-lookup"><span data-stu-id="c2489-133">The `GetRequestedRuntimeInfo` method does not return the latest CLR version in the following circumstances:</span></span>  
+ <span data-ttu-id="9e064-133">`GetRequestedRuntimeInfo`方法不在以下情况下返回的最新的 CLR 版本：</span><span class="sxs-lookup"><span data-stu-id="9e064-133">The `GetRequestedRuntimeInfo` method does not return the latest CLR version in the following circumstances:</span></span>  
   
-- <span data-ttu-id="c2489-134">指定正在加载特定的 CLR 版本应用程序配置文件存在。</span><span class="sxs-lookup"><span data-stu-id="c2489-134">An application configuration file that specifies loading a particular CLR version exists.</span></span> <span data-ttu-id="c2489-135">请注意，.NET Framework 将使用配置文件，即使您指定为 null`pConfigurationFile`参数。</span><span class="sxs-lookup"><span data-stu-id="c2489-135">Note that the .NET Framework will use the configuration file even if you specify null for the `pConfigurationFile` parameter.</span></span>  
+- <span data-ttu-id="9e064-134">指定正在加载特定的 CLR 版本应用程序配置文件存在。</span><span class="sxs-lookup"><span data-stu-id="9e064-134">An application configuration file that specifies loading a particular CLR version exists.</span></span> <span data-ttu-id="9e064-135">请注意，.NET Framework 将使用配置文件，即使您指定为 null`pConfigurationFile`参数。</span><span class="sxs-lookup"><span data-stu-id="9e064-135">Note that the .NET Framework will use the configuration file even if you specify null for the `pConfigurationFile` parameter.</span></span>  
   
-- <span data-ttu-id="c2489-136">[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)指定较早的 CLR 版本调用方法。</span><span class="sxs-lookup"><span data-stu-id="c2489-136">The [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) method was called specifying an earlier CLR version.</span></span>  
+- <span data-ttu-id="9e064-136">[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)指定较早的 CLR 版本调用方法。</span><span class="sxs-lookup"><span data-stu-id="9e064-136">The [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) method was called specifying an earlier CLR version.</span></span>  
   
-- <span data-ttu-id="c2489-137">为较早的 CLR 版本编译的应用程序当前正在运行。</span><span class="sxs-lookup"><span data-stu-id="c2489-137">An application that was compiled for an earlier CLR version is currently running.</span></span>  
+- <span data-ttu-id="9e064-137">为较早的 CLR 版本编译的应用程序当前正在运行。</span><span class="sxs-lookup"><span data-stu-id="9e064-137">An application that was compiled for an earlier CLR version is currently running.</span></span>  
   
- <span data-ttu-id="c2489-138">有关`runtimeInfoFlags`参数，可以指定的体系结构常量之一`RUNTIME_INFO_FLAGS`枚举一次：</span><span class="sxs-lookup"><span data-stu-id="c2489-138">For the `runtimeInfoFlags` parameter, you can specify only one of the architecture constants of the `RUNTIME_INFO_FLAGS` enumeration at a time:</span></span>  
+ <span data-ttu-id="9e064-138">有关`runtimeInfoFlags`参数，可以指定的体系结构常量之一`RUNTIME_INFO_FLAGS`枚举一次：</span><span class="sxs-lookup"><span data-stu-id="9e064-138">For the `runtimeInfoFlags` parameter, you can specify only one of the architecture constants of the `RUNTIME_INFO_FLAGS` enumeration at a time:</span></span>  
   
-- <span data-ttu-id="c2489-139">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="c2489-139">RUNTIME_INFO_REQUEST_IA64</span></span>  
+- <span data-ttu-id="9e064-139">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="9e064-139">RUNTIME_INFO_REQUEST_IA64</span></span>  
   
-- <span data-ttu-id="c2489-140">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="c2489-140">RUNTIME_INFO_REQUEST_AMD64</span></span>  
+- <span data-ttu-id="9e064-140">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="9e064-140">RUNTIME_INFO_REQUEST_AMD64</span></span>  
   
-- <span data-ttu-id="c2489-141">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="c2489-141">RUNTIME_INFO_REQUEST_X86</span></span>  
+- <span data-ttu-id="9e064-141">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="9e064-141">RUNTIME_INFO_REQUEST_X86</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2489-142">要求</span><span class="sxs-lookup"><span data-stu-id="c2489-142">Requirements</span></span>  
- <span data-ttu-id="c2489-143">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c2489-143">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e064-142">要求</span><span class="sxs-lookup"><span data-stu-id="9e064-142">Requirements</span></span>  
+ <span data-ttu-id="9e064-143">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9e064-143">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2489-144">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c2489-144">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9e064-144">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9e064-144">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c2489-145">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c2489-145">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="9e064-145">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9e064-145">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c2489-146">**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2489-146">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="9e064-146">**.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e064-146">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2489-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="c2489-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e064-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e064-147">See also</span></span>
 
-- [<span data-ttu-id="c2489-148">GetRequestedRuntimeVersion 函数</span><span class="sxs-lookup"><span data-stu-id="c2489-148">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [<span data-ttu-id="c2489-149">GetVersionFromProcess 函数</span><span class="sxs-lookup"><span data-stu-id="c2489-149">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
-- [<span data-ttu-id="c2489-150">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="c2489-150">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="9e064-148">GetRequestedRuntimeVersion 函数</span><span class="sxs-lookup"><span data-stu-id="9e064-148">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [<span data-ttu-id="9e064-149">GetVersionFromProcess 函数</span><span class="sxs-lookup"><span data-stu-id="9e064-149">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [<span data-ttu-id="9e064-150">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="9e064-150">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
