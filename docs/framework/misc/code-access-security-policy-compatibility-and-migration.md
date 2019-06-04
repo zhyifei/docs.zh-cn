@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456650"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487981"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>代码访问安全策略兼容性和迁移
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-代码访问安全性 (CAS) 的策略部分在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中已过时。 因此，您可能会遇到编译警告和运行时异常如果调用过时的策略类型和成员[显式](#explicit_use)或[隐式](#implicit_use)（通过其他类型和成员）。
+进行了代码访问安全性 (CAS) 策略部分.NET Framework 4 中已过时。 因此，您可能会遇到编译警告和运行时异常如果调用过时的策略类型和成员[显式](#explicit_use)或[隐式](#implicit_use)（通过其他类型和成员）。
 
 可以通过以下任一方法来避免这些警告和错误：
 

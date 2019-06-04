@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d4723fbf2311316184cb77c90754d7e037badcd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40cd5b6298012ef4dc21987a2a2dbe95c02a0ff2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628062"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490361"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 函数
 获取指定从最新的安装公共语言运行时 (CLR) 版本导出的函数的地址。  
   
- 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ .NET Framework 4 中已弃用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ HRESULT GetRealProcAddress (
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

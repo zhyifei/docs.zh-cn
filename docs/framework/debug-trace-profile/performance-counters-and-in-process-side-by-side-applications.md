@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457251"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490027"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>性能计数器和进程内并行应用程序
 使用性能监视器 (Perfmon.exe) 有可能在每个运行时基础上区分性能计数器。 本主题介绍启用此功能所需的注册表更改。  
@@ -27,7 +27,7 @@ ms.locfileid: "66457251"
   
 - 当监视两个名称相同的应用程序时。 例如，如果两个应用程序的名称都为 myapp.exe，二者在“实例”列中将分别显示为“myapp”和“myapp#1”。    在这种情况下很难将性能计数器与特定的应用程序相匹配。 无法确定为“myapp#1”收集的数据指的是第一个 myapp.exe，还是第二个 myapp.exe。   
   
-- 当应用程序使用多个公共语言运行时实例时。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 支持进程内并行承载方案；也就是说，单个进程或应用程序可以加载多个公共语言运行时实例。 如果一个名为 myapp.exe 的应用程序加载两个运行时实例，则默认情况下会在“实例”列中将这两个实例分别指定为“myapp”和“myapp#1”。    在这种情况下，无法确定“myapp”和“myapp#1”指的是两个名称相同的应用程序，还是具有两个运行时的同一应用程序。   如果名称相同的多个应用程序加载多个运行时，则这种歧义性会更大。  
+- 当应用程序使用多个公共语言运行时实例时。 .NET Framework 4 支持进程内通过并行承载方案;也就是说，单个进程或应用程序可以加载公共语言运行时的多个实例。 如果一个名为 myapp.exe 的应用程序加载两个运行时实例，则默认情况下会在“实例”列中将这两个实例分别指定为“myapp”和“myapp#1”。    在这种情况下，无法确定“myapp”和“myapp#1”指的是两个名称相同的应用程序，还是具有两个运行时的同一应用程序。   如果名称相同的多个应用程序加载多个运行时，则这种歧义性会更大。  
   
  可以设置注册表项来消除此歧义性。 对于使用.NET Framework 4 开发的应用程序，此注册表更改添加到应用程序名称后跟一个运行时实例标识符的进程标识符**实例**列。 现在，应用程序将在“实例”列中标识为 application_`p`processID\_`r`runtimeID，而不是 application 或 application#1。       如果应用程序开发使用以前版本的公共语言运行时，该实例表示为*应用程序\_* `p`*processID*前提。安装.NET Framework 4。  
   

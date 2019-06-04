@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704903"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487663"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 元素
 指定是否禁用允许运行时主机为应用程序域重写配置设置的默认行为。  
@@ -38,9 +38,9 @@ ms.locfileid: "61704903"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|Description|  
+|值|Description|  
 |-----------|-----------------|  
-|0|不要禁用重写合成设置的功能。 这是默认行为，从开始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
+|0|不要禁用重写合成设置的功能。 这是默认行为，从.NET Framework 4 开始。|  
 |1|禁用重写合成设置的功能。 这将恢复为.NET Framework 的早期版本的行为。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -54,7 +54,7 @@ ms.locfileid: "61704903"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从开始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，默认行为是允许<xref:System.AppDomainManager>对象重写配置设置，通过使用<xref:System.AppDomainSetup.ConfigurationFile%2A>属性或<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法<xref:System.AppDomainSetup>对象传递给您的实现<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>的子类中的方法， <xref:System.AppDomainManager>。 对于默认应用程序域，您更改的设置重写应用程序配置文件指定的设置。 对于其他应用程序域，这些重写的配置设置，已将传递给<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
+ 从.NET Framework 4 开始，默认行为是允许<xref:System.AppDomainManager>要重写配置设置，通过使用对象<xref:System.AppDomainSetup.ConfigurationFile%2A>属性或<xref:System.AppDomainSetup.SetConfigurationBytes%2A>方法的<xref:System.AppDomainSetup>对象传递给您的实现<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>的子类中的方法， <xref:System.AppDomainManager>。 对于默认应用程序域，您更改的设置重写应用程序配置文件指定的设置。 对于其他应用程序域，这些重写的配置设置，已将传递给<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>或<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>方法。  
   
  可以传递新的配置信息，也可以传递 null (`Nothing`在 Visual Basic 中) 以消除中传递的配置信息。  
   

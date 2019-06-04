@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e2a075f9202439cd62c81a06528b20c4971656
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701627"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489344"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > 元素
 确定运行时是否保留旧行为中的格式设置操作<xref:System.TimeSpan?displayProperty=nameWithType>值。  
@@ -42,7 +42,7 @@ ms.locfileid: "61701627"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|在运行时不会还原旧的格式设置行为。|  
 |`true`|在运行时将还原旧的格式设置行为。|  
@@ -58,7 +58,7 @@ ms.locfileid: "61701627"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从开始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，则<xref:System.TimeSpan?displayProperty=nameWithType>结构实现<xref:System.IFormattable>接口并支持格式设置操作与标准和自定义格式字符串。 如果分析方法遇到了不受支持的格式说明符或格式字符串，则会引发<xref:System.FormatException>。  
+ 从.NET Framework 4，开始<xref:System.TimeSpan?displayProperty=nameWithType>结构实现<xref:System.IFormattable>接口并支持格式设置操作与标准和自定义格式字符串。 如果分析方法遇到了不受支持的格式说明符或格式字符串，则会引发<xref:System.FormatException>。  
   
  在以前版本的.NET Framework<xref:System.TimeSpan>结构未实现<xref:System.IFormattable>，并且不支持格式字符串。 但是，许多开发人员错误地假定<xref:System.TimeSpan>并支持一组格式字符串并使用它们在[复合格式设置操作](../../../../../docs/standard/base-types/composite-formatting.md)等方法与<xref:System.String.Format%2A?displayProperty=nameWithType>。 通常，如果某个类型实现<xref:System.IFormattable>并支持格式字符串，调用格式设置方法与不受支持格式字符串通常引发<xref:System.FormatException>。 但是，由于<xref:System.TimeSpan>未实现<xref:System.IFormattable>，运行时忽略格式字符串，并改为调用<xref:System.TimeSpan.ToString?displayProperty=nameWithType>方法。 这意味着，尽管格式字符串，格式设置操作没有影响，但是它们的存在没有导致<xref:System.FormatException>。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "61701627"
 12:30:45  
 ```  
   
- 如果在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 或以后版本上运行此示例，则输出将与此处的输出明显不同：  
+ 这明显不同输出如果.NET Framework 4 或更高版本上运行示例：  
   
 ```  
 Invalid Format  
 ```  
   
- 但是，如果将下面的配置文件添加到示例的目录中，然后在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 或更高版本上运行此示例，则输出将与示例在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上运行时产生的输出相同。  
+ 但是，如果将下面的配置文件添加到该示例的目录，然后在.NET Framework 4 或更高版本上运行该示例的输出是运行时产生的示例相同[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]。  
   
 ```xml  
 <?xml version ="1.0"?>  

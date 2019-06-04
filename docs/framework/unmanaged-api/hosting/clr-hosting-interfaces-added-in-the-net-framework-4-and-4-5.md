@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aceb0179c6ee52699370480041af62262eff6bc2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456926"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490650"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中添加的 CLR 承载接口
-本部分介绍非托管接口的主机可用于将公共语言运行时 (CLR) 集成在[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]，.NET Framework 4.5 及更高版本在其应用程序。 这些接口提供的主机，若要配置和运行时加载到进程的方法。  
+本部分介绍非托管接口的主机可用于公共语言运行时 (CLR) 集成的.NET Framework 4，.NET Framework 4.5 和更高版本中在其应用程序。 这些接口提供的主机，若要配置和运行时加载到进程的方法。  
   
  从.NET Framework 4 开始，所有承载接口具有以下特征：  
   

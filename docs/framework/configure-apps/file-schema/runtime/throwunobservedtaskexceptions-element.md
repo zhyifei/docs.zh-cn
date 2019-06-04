@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456249"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489570"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 元素
 指定未经处理的任务异常是否应终止正在运行的进程。  
@@ -61,7 +61,7 @@ ms.locfileid: "66456249"
 ## <a name="remarks"></a>备注  
  如果与关联的异常<xref:System.Threading.Tasks.Task>未观察，没有任何<xref:System.Threading.Tasks.Task.Wait%2A>未附加操作，父级，和<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>属性未读取任务异常被视为未观察到。  
   
- 在中[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，也可由默认情况下，如果<xref:System.Threading.Tasks.Task>具有未观察到异常进行垃圾收集，终结器引发异常，并终止进程。 终止进程取决于垃圾回收和终止的时间。  
+ 在.NET Framework 4 中，默认情况下，如果<xref:System.Threading.Tasks.Task>具有未观察到异常进行垃圾收集，终结器引发异常，并终止进程。 终止进程取决于垃圾回收和终止的时间。  
   
  为了简化开发人员能够编写基于任务的异步代码，.NET Framework 4.5，请更改此默认行为为未观察到异常。 未观察到的异常仍会导致<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>事件被引发，但默认情况下，该过程不会终止。 相反，该异常被忽略后引发该事件，而不考虑是否将事件处理程序观察异常。  
   

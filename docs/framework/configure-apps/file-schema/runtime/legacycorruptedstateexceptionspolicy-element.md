@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456417"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489433"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 元素
 指定公共语言运行时是否允许托管的代码捕获访问冲突和其他损坏的状态异常。  
@@ -56,7 +56,7 @@ ms.locfileid: "66456417"
 ## <a name="remarks"></a>备注  
  在.NET Framework 版本 3.5 及更早版本中，公共语言运行时允许托管的代码来捕获损坏的进程状态已引发的异常。 访问冲突是异常的这种类型的示例。  
   
- 从开始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]的托管代码不能再捕获这些类型中的异常的`catch`块。 但是，您可以覆盖此更改并维护两种方式损坏的状态异常的处理：  
+ 从.NET Framework 4 开始，托管的代码不能再捕获这些类型中的异常的`catch`块。 但是，您可以覆盖此更改并维护两种方式损坏的状态异常的处理：  
   
 - 设置`<legacyCorruptedStateExceptionsPolicy>`元素的`enabled`属性为`true`。 此配置设置适用，并会影响所有方法。  
   

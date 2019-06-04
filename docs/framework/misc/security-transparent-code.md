@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456499"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487844"
 ---
 # <a name="security-transparent-code"></a>安全透明的代码
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456499"
 安全性涉及三个交互部分：沙盒处理、权限和强制。 沙盒处理是指创建隔离域的做法，在隔离域中某些代码被视为完全信任，而其他代码则被限制为沙盒授予集中的权限。 在沙盒授予集内运行的应用程序代码被视为透明的，也就是说，它不能执行任何影响安全性的操作。 沙盒的授予集由证据（<xref:System.Security.Policy.Evidence> 类）决定。 证据标识沙盒需要哪些特定权限，以及可以创建哪种沙盒。 强制是指允许透明代码仅在其授予集内执行。
 
 > [!IMPORTANT]
-> 安全策略是旧版 .NET Framework 中的关键元素。 从开始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，安全策略已过时。 安全策略的取消独立于安全透明度。 有关此更改的影响的信息，请参阅[代码访问安全策略兼容性和迁移](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。
+> 安全策略是旧版 .NET Framework 中的关键元素。 从.NET Framework 4 开始，安全策略已过时。 安全策略的取消独立于安全透明度。 有关此更改的影响的信息，请参阅[代码访问安全策略兼容性和迁移](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)。
 
 本主题更详细地介绍透明度模型。 它包含下列部分：
 
@@ -70,7 +70,7 @@ ms.locfileid: "66456499"
 
 ### <a name="level-2-transparency"></a>2 级透明度
 
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中引入了 2 级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
+.NET Framework 4 中引入了 2 级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
 
 - 透明代码（无论授予什么样的权限）可以调用其他透明代码或安全可靠关键代码。 如果代码是部分信任的代码，那么它只能执行域权限集允许的操作。 透明代码不能：
 

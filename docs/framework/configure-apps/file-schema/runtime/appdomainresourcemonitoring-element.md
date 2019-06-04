@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704994"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487727"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 元素
 指示运行时在过程的生命周期过程中收集所有应用程序域的统计数据。  
@@ -39,7 +39,7 @@ ms.locfileid: "61704994"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`true`|收集应用程序域资源监控的统计信息。|  
 |`false`|不收集有关应用程序域资源监控的统计信息。|  
@@ -59,7 +59,7 @@ ms.locfileid: "61704994"
   
  若要从托管代码启用监视，请使用<xref:System.AppDomain.MonitoringIsEnabled%2A>属性。  
   
- 此配置元素是仅适用于[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]及更高版本。  
+ 此配置元素是仅适用于.NET Framework 4 及更高版本。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何启用应用程序域资源监视。  

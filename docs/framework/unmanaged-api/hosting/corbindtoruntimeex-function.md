@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1e812445c931d45163fefdc4406b27a1fbd5d82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b45efb634ca9b88768d6e30884085f28ad17b7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634843"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490585"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 函数
 使非托管的宿主能够将公共语言运行时 (CLR) 加载到进程中。 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)并`CorBindToRuntimeEx`函数执行相同的操作，但`CorBindToRuntimeEx`函数允许您设置标志以指定 CLR 的行为。  
   
- 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ .NET Framework 4 中已弃用此函数。  
   
  此函数采用一组参数的允许主机以执行以下操作：  
   
@@ -137,7 +137,7 @@ HRESULT CorBindToRuntimeEx (
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: 符号和运算符参考
 description: 了解符号和运算符中使用F#编程语言。
 ms.date: 02/11/2019
-ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982731"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490816"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -26,7 +26,7 @@ ms.locfileid: "61982731"
 |`!=`|不适用。|<ul><li>F# 中不使用。 使用 `<>` 进行不等运算。<br /></li></ul>|
 |`"`|[文本](../literals.md)<br /><br />[字符串](../strings.md)|<ul><li>分隔文本字符串。<br /></li></ul>|
 |`"""`|[字符串](../strings.md)|分隔逐字文本字符串。 区别你可以在字符串中使用单引号来指示引号字符的 `@"..."`。|
-|`#`|[编译器指令](../compiler-directives.md)<br /><br />[可变类型](../flexible-types.md)|<ul><li>给预处理器指令或编译器指令加上前缀，如 `#light`。<br /></li><li>当用于类型时，指示“灵活类型”，即某一类型或该类型的任何一个派生类型。<br /></li></ul>|
+|`#`|[编译器指令](../compiler-directives.md)<br /><br />[可变类型](../flexible-types.md)|<ul><li>给预处理器指令或编译器指令加上前缀，如 `#light`。<br /></li><li>当用于类型时，指示“灵活类型”  ，即某一类型或该类型的任何一个派生类型。<br /></li></ul>|
 |`$`|无可用的详细信息。|<ul><li>在内部用于特定编译器生成的变量和函数名称。<br /></li></ul>|
 |`%`|[算术运算符](arithmetic-operators.md)<br /><br />[代码引用](../code-quotations.md)|<ul><li>计算整数余数。<br /></li><li>用于将表达式拼接到类型化的代码引号中。<br /></li></ul>|
 |`%%`|[代码引用](../code-quotations.md)|<ul><li>用于将表达式拼接到非类型化的代码引号中。<br /></li></ul>|
@@ -39,7 +39,7 @@ ms.locfileid: "61982731"
 |`( )`|[Unit 类型](../unit-type.md)|<ul><li>表示单位类型的单个值。<br /></li></ul>|
 |`(...)`|[元组](../tuples.md)<br /><br />[运算符重载](../operator-overloading.md)|<ul><li>指示表达式的计算顺序。<br /></li><li>分隔元组。<br /></li><li>在运算符定义中使用。<br /></li></ul>|
 |`(*...*)`||<ul><li>分隔跨多行的注释。<br /></li></ul>|
-|<code>(&#124;...&#124;)</code>|[活动模式](../active-patterns.md)|<ul><li>分隔活动模式。 也称为“香蕉夹”。<br /></li></ul>|
+|<code>(&#124;...&#124;)</code>|[活动模式](../active-patterns.md)|<ul><li>分隔活动模式。 也称为“香蕉夹”  。<br /></li></ul>|
 |`*`|[算术运算符](arithmetic-operators.md)<br /><br />[元组](../tuples.md)<br /><br />[度量单位](../units-of-measure.md)|<ul><li>当用作二元运算符时，使左右两侧相乘。<br /></li><li>在类型中，指示元组中的配对。<br /></li><li>用于度量单位类型。<br /></li></ul>|
 |`*?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，使左右两侧相乘。<br /></li></ul>|
 |`**`|[算术运算符](arithmetic-operators.md)|<ul><li>计算幂运算（`x ** y` 表示 `x` 的 `y` 次方）。<br /></li></ul>|
@@ -127,6 +127,7 @@ ms.locfileid: "61982731"
 |`let`|不相关|
 |`function`, `fun`, `match`, `try`|不相关|
 |`if`|不相关|
+|`not`|右|
 |`->`|右|
 |`:=`|右|
 |`,`|不相关|

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7308f37ee96b4efe83aeb198586f7364fdcf9ccc
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 37551d2b43e5343ca27da69c08d522c176b2caa7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457150"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489636"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 枚举
 指定接口，.NET Framework 的版本，或在其中引入了接口的 .NET Framework 的版本。  
@@ -235,7 +235,7 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework 版本 3.0 和 3.5 使用现有 .NET Framework 2.0 接口，并且并未引入任何新接口。  
   
-- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引入了多个接口版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 显示为 `ICorDebugThread` 接口的第三个和第四个版本。 .NET Framework 4 还引入了第一版`ICorDebugStackWalk`接口和第二个版本的`ICorDebugNativeFrame`接口 (`ICorDebugNativeFrame2`)。  
+- .NET Framework 4 引入了多个接口版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 显示为 `ICorDebugThread` 接口的第三个和第四个版本。 .NET Framework 4 还引入了第一版`ICorDebugStackWalk`接口和第二个版本的`ICorDebugNativeFrame`接口 (`ICorDebugNativeFrame2`)。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

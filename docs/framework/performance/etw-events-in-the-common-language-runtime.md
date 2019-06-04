@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 441cae712e7338b36e8983f41341b1721770a0bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723181"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489708"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>公共语言运行时中的 ETW 事件
 公共语言运行时 (CLR) 通过大量的调试和分析事件，提供有用的 Windows 事件跟踪 (ETW) 诊断信息。 CLR ETW 事件利用 Windows ETW 跟踪系统来扩充公共语言运行时所提供的现有分析和调试支持。  
   
  有关 ETW 的详细信息，请参阅 MSDN 上的[使用 ETW 改善调试和性能优化](https://go.microsoft.com/fwlink/?LinkID=161142)一文。 有关 Xperf 的详细信息，请参阅 NTDebugging 博客中的 [Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144)（Windows 性能工具包 - Xperf）。  
   
- 在事件主题中介绍的所有事件要求 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 或更新版本。 Windows Vista 操作系统是支持的最低客户端，而 Windows Server 2008 是支持的最低服务器。  
+ .NET Framework 4 或更高版本是必需的事件主题中所述的所有事件。 Windows Vista 操作系统是支持的最低客户端，而 Windows Server 2008 是支持的最低服务器。  
   
 ## <a name="in-this-section"></a>本节内容  
  [控制 .NET Framework 日志记录](../../../docs/framework/performance/controlling-logging.md)  

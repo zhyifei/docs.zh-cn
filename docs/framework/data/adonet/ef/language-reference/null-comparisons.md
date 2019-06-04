@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760423"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489898"
 ---
 # <a name="null-comparisons"></a>Null 比较
 数据源中的 `null` 值指示未知的值。 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中，可以检查 null 值以便仅对具有有效（非 null）数据的行执行特定的计算或比较。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
   
- 在 SQL Server 中，null 等于 null 比较默认返回 null 值。 在下面的示例中，`ShipDate` 为 null 的行会从结果集中排除，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 语句返回 0 行。  
+ 在 SQL Server 中，null 等于 null 比较默认返回 null 值。 在下面的示例中，行其中`ShipDate`是从结果集中排除的 null 和 TRANSACT-SQL 语句将返回 0 行。  
   
 ```  
 -- Find order details and orders with no ship date.  

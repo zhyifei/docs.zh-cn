@@ -2,12 +2,12 @@
 title: SqlClient 流支持
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c5325e60e8303ab46f1c32340a20473b31bcf52e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379997"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489786"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
 
@@ -78,7 +78,7 @@ SQL Server 和应用程序 （.NET Framework 4.5 中的新增功能） 之间的
 
 ## <a name="sample----streaming-from-sql-server"></a>从 SQL Server 流式处理示例-
 
-请使用以下 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 来创建示例数据库：
+使用以下 TRANSACT-SQL 创建示例数据库：
 
 ```sql
 CREATE DATABASE [Demo]
@@ -300,7 +300,7 @@ namespace StreamingFromServer {
 
 ## <a name="sample----streaming-to-sql-server"></a>示例--流式传输到 SQL Server
 
-请使用以下 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 来创建示例数据库：
+使用以下 TRANSACT-SQL 创建示例数据库：
 
 ```sql
 CREATE DATABASE [Demo2]

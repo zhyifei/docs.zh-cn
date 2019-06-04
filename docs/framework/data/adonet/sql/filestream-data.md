@@ -2,12 +2,12 @@
 title: FILESTREAM 数据
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582706"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490073"
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 
@@ -16,7 +16,7 @@ FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数
 > [!NOTE]
 > 您必须安装 .NET Framework 3.5 SP1（或更高版本）才能使用 SqlClient 处理 FILESTREAM 数据。
 
-在 varbinary(max) 列上指定 FILESTREAM 属性可使 SQL Server 将数据存储在本地 NTFS 文件系统中，而不是存储在数据库文件中。 虽然数据是单独存储的，但您可以使用所支持的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句来处理存储在数据库中的 varbinary(max) 数据。
+在 varbinary(max) 列上指定 FILESTREAM 属性可使 SQL Server 将数据存储在本地 NTFS 文件系统中，而不是存储在数据库文件中。 虽然数据是单独存储的，但您可以使用所支持的用于处理存储在数据库中的 varbinary(max) 数据的相同 Transact-SQL 语句。
 
 ## <a name="sqlclient-support-for-filestream"></a>SqlClient 对 FILESTREAM 的支持
 
@@ -24,7 +24,7 @@ SQL Server 的.NET Framework 数据提供程序<xref:System.Data.SqlClient>，�
 
 ### <a name="creating-the-sql-server-table"></a>创建 SQL Server 表
 
-下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句将创建一个名为 employees 的表并插入一行数据。 启用 FILESTREAM 存储之后，你可以将此表与下面的代码示例结合使用。 SQL Server 联机丛书中的资源的链接位于本主题末尾处。
+下列 Transact-SQL 语句将创建一个名为 employees 的表并插入一行数据。 启用 FILESTREAM 存储之后，你可以将此表与下面的代码示例结合使用。 SQL Server 联机丛书中的资源的链接位于本主题末尾处。
 
 ```sql
 CREATE TABLE employees

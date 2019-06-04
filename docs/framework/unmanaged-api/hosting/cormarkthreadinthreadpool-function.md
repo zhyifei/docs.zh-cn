@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a39b0f2546d84cf24a58d5367c87d0a862aead93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985759"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490524"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool 函数
-将标记为托管代码的执行当前正在执行的线程池线程。 从.NET Framework 2.0 版开始，此函数没有任何影响。 它不是必需的并可以从你的代码。 此函数已弃用在[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+将标记为托管代码的执行当前正在执行的线程池线程。 从.NET Framework 2.0 版开始，此函数没有任何影响。 它不是必需的并可以从你的代码。 .NET Framework 4 中已弃用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ void CorMarkThreadInThreadPool ();
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -4,12 +4,12 @@ ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b89d135d7412f10cb9de1e4bda1aaab14b29cbf0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990088"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490770"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey 示例
 
@@ -46,7 +46,7 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 若要下载项目，请访问[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://www.microsoft.com/download/details.aspx?id=21459)。
 
-1. 打开[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]并导航到*WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS*安装示例的目录位置下的文件夹。
+1. 打开文件资源管理器并导航到*WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS*安装示例的目录位置下的文件夹。
 
 2. 双击 .sln 文件图标，在 Visual Studio 中打开该文件。
 

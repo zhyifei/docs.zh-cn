@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698156"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489629"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
 获取对应于在进程中加载了公共语言运行时 (CLR) 模块的 ICorDebugProcess 接口。  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回调返回错误或未提供有效的句柄。|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 未实现此版本的运行时所需的数据目标接口。|  
 |CORDBG_E_NOT_CLR|所指示的模块不是 CLR 模块。 不能检测到的 CLR 模块，因为内存损坏、 不可用，该模块或 CLR 版本晚于填充程序版本时，也会返回此 HRESULT。|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|此运行时版本不支持此调试模型。 目前，通过以前的 CLR 版本不支持调试模型[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 `pwszVersion`输出参数仍将设置为正确的值后此错误。|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|此运行时版本不支持此调试模型。 目前，.NET Framework 4 之前的 CLR 版本不支持调试模型。 `pwszVersion`输出参数仍将设置为正确的值后此错误。|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 的版本高于此调试器声明，以便支持的版本。 `pwszVersion`输出参数仍将设置为正确的值后此错误。|  
 |E_NO_INTERFACE|`riidProcess`接口不可用。|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION`结构不具有可识别的值为`wStructVersion`。 此时唯一接受的值为 0。|  
@@ -94,7 +94,7 @@ HRESULT OpenVirtualProcess(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

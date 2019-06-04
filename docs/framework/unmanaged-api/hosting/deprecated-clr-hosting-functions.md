@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde711f2d626d88fd80009fa83f1198dd9d47810
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905965"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490492"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>弃用的 CLR 承载函数
 本部分介绍早期版本的承载 API 使用的非托管全局静态函数。  
   
- 除了基础结构函数 (`_Cor*`函数)，仅供.NET Framework，这些函数中已弃用[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 除了基础结构函数 (`_Cor*`函数)，仅供.NET Framework，.NET Framework 4 中已弃用这些函数。  
   
 ## <a name="activation-functions"></a>激活函数  
  [ClrCreateManagedInstance 函数](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  

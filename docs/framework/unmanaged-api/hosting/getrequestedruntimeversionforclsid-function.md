@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7a6b73006b6842032ae90c2c7a8433f5b58d175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ca125932ede48aa43bc51e3d5a7851fb7762547
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665058"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490316"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 函数
 获取相应的公共语言运行时 (CLR) 版本信息，为具有指定类`CLSID`。  
   
- 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ .NET Framework 4 中已弃用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,7 +75,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
  **标头：** MSCorEE.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704747"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489367"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 元素
 通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。  
@@ -40,7 +40,7 @@ ms.locfileid: "61704747"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |true|启用对指定的.NET Framework 程序集实现之间的可移植性的支持。 这是默认设置。|  
 |False|禁用对指定的.NET Framework 程序集实现之间的可移植性的支持。 这使应用程序具有对指定的程序集的多个实现的引用。|  
@@ -57,7 +57,7 @@ ms.locfileid: "61704747"
 |`assemblyBinding`|包含有关程序集版本重定向和程序集位置的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，支持自动提供的应用程序可以使用两种实现的.NET Framework 中，例如.NET Framework 实现或.NET Framework for Silverlight 实现。 程序集绑定器将特定的.NET Framework 程序集的两个实现视为等效。 在少数情况下，此应用程序可移植性功能会导致问题。 在这些情况下，`<supportPortability>`元素可用于禁用该功能。  
+ 从.NET Framework 4 开始，支持将自动提供给应用程序可以使用两种实现的.NET Framework 中，例如.NET Framework 实现或.NET Framework for Silverlight 实现。 程序集绑定器将特定的.NET Framework 程序集的两个实现视为等效。 在少数情况下，此应用程序可移植性功能会导致问题。 在这些情况下，`<supportPortability>`元素可用于禁用该功能。  
   
  其中一种方案是具有要引用的.NET Framework 实现和.NET Framework for Silverlight 实现的特定引用程序集的程序集。 例如，编写 Windows Presentation Foundation (WPF) 中的 XAML 设计器可能需要引用这两个 WPF 桌面实现，用于在设计器用户界面和 Silverlight 实现中包含的 WPF 子集。 默认情况下，单独引用会导致编译器错误，因为程序集绑定将这两个程序集视为等效。 此元素禁用默认行为，并允许编译成功。  
   

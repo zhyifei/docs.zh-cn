@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592732"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490959"
 ---
 # <a name="cryptographic-services"></a>加密服务
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592732"
 
 在 .NET Framework 中， <xref:System.Security.Cryptography?displayProperty=nameWithType> 命名空间中的类将为你管理很多有关加密的详细信息。 一些类是非托管的 Microsoft 加密 API (CryptoAPI) 的包装，而其他类则是纯托管实现。 无需是加密方面的专家，即可使用这些类。 在创建其中一个加密算法类的新实例时，为易于使用，将自动生成密钥，并且默认属性将尽可能地安全可靠。
 
-此概述提供了 .NET Framework 支持的加密方法和惯例的概要，包括 ClickOnce 清单、Suite B 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]中引入的下一代加密技术 (CNG) 支持。
+此概述提供的加密方法和支持的.NET Framework 中，包括 ClickOnce 清单、 Suite B 和.NET Framework 3.5 中引入的 Cryptography Next Generation (CNG) 支持的方式的摘要。
 
 本概述包含以下几节：
 
@@ -114,7 +114,7 @@ ms.locfileid: "65592732"
 
 .NET Framework 提供了以下实现密钥加密算法的类：
 
-- <xref:System.Security.Cryptography.AesManaged> （在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]引入）。
+- <xref:System.Security.Cryptography.AesManaged> （在.NET Framework 3.5 中引入）。
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>。
 

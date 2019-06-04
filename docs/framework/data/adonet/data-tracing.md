@@ -2,12 +2,12 @@
 title: ADO.NET 中的数据跟踪
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583776"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489519"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的数据跟踪
 
@@ -41,7 +41,7 @@ ADO.NET 具有内置数据跟踪功能的.NET 数据提供程序支持的 SQL Se
 
 ADO.NET 还会发送一个特定于线程的活动 ID。 如果会话开始使用 TRACK_CAUSALITY 选项处于启用状态，在扩展的事件会话中捕获的活动 ID。 有关活动连接的性能问题，可以从客户端的数据访问跟踪获取活动 ID（`ActivityID` 字段），然后查找扩展事件输出中的活动 ID。 扩展事件中的活动 ID 为追加了 4 字节序列号的 16 字节的 GUID（与客户端连接 ID 的 GUID 不同）。 序列号表示请求在线程中的顺序，并指示线程的批处理和 RPC 语句的相对顺序。 启用数据访问跟踪以及数据访问跟踪配置字中的第 18 位处于打开状态时，当前可以针对 SQL 批处理语句和 RPC 请求选择发送 `ActivityID`。
 
-以下是使用 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 启动扩展事件会话的一个示例，这些会话将存储在环形缓冲区中并将记录在执行 RPC 和批处理操作时从客户端发送的活动 ID。
+下面是使用 TRANSACT-SQL 来启动将存储在环形缓冲区中并记录从 RPC 和批处理操作上的客户端发送的活动 ID 的扩展的事件会话的示例。
 
 ```sql
 create event session MySession on server

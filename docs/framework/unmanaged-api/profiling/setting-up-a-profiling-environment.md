@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457225"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490718"
 ---
 # <a name="setting-up-a-profiling-environment"></a>设置分析环境
 > [!NOTE]
->  对 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 中的分析进行了重大更改。  
+>  有了.NET Framework 4 中的分析功能的重大更改。  
   
  托管进程（应用程序或服务）启动时，将加载公共语言运行时 (CLR)。 初始化 CLR 时，将评估以下两个环境变量以决定进程是否应连接到探查器：  
   

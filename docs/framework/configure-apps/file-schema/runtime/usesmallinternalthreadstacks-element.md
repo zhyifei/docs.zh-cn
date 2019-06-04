@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456111"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489326"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 元素
 请求公共语言运行时 (CLR)，减少内存使用通过指定显式堆栈大小，当它创建的某些线程，它在内部使用，而不是使用这些线程的默认堆栈大小。  
@@ -41,7 +41,7 @@ ms.locfileid: "66456111"
 |值|描述|  
 |-----------|-----------------|  
 |true|请求显式堆栈大小。|  
-|False|使用默认堆栈大小。 这是默认[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
+|False|使用默认堆栈大小。 这是.NET Framework 4 的默认值。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

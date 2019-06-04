@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596640"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487895"
 ---
 # <a name="securing-wrapper-code"></a>保护包装代码
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596640"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md)发生在实时 (JIT) 编译时和检查仅直接调用方。 这种安全检查不会检查调用方的调用方。 一旦此项检查成功，无论调用方调用的次数为多少，都无需任何其他安全性开销。 但是，这种方法没有对引诱攻击提供保护。 与**LinkDemand**，任何通过的测试，并且可以引用您的代码的代码可以通过允许恶意代码利用已授权的代码进行调用可能会破坏安全性。 因此，不使用**LinkDemand**除非可以彻底避免所有可能的漏洞。  
   
     > [!NOTE]
-    >  在中[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，已被取代，链接要求<xref:System.Security.SecurityCriticalAttribute>属性中<xref:System.Security.SecurityRuleSet.Level2>程序集。 <xref:System.Security.SecurityCriticalAttribute>等效于链接要求完全信任; 但是，它还会影响继承规则。 有关此更改的详细信息，请参阅[安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。  
+    >  在.NET Framework 4 中，链接要求已替换为<xref:System.Security.SecurityCriticalAttribute>属性中<xref:System.Security.SecurityRuleSet.Level2>程序集。 <xref:System.Security.SecurityCriticalAttribute>等效于链接要求完全信任; 但是，它还会影响继承规则。 有关此更改的详细信息，请参阅[安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)。  
   
  使用时所需的其他预防措施**LinkDemand**必须单独编程; 安全系统可以帮助执行。 任何错误都会打开安全漏洞。 利用你的代码的所有授权代码都必须负责执行以下操作实现其他安全性：  
   

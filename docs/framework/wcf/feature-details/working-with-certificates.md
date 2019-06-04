@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881103"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483035"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
   
- 简言之，数字证书是公钥基础结构 (PKI) 的一部分，而公钥基础结构是数字证书、证书颁发机构和其他注册机构的系统，它使用公钥加密对电子事务所涉及的每一方的有效性进行确认和身份验证。 证书颁发机构颁发证书，每个证书都具有一组包含数据的字段，例如“使用者”（向其颁发证书的实体）、有效日期（证书的有效日期）、证书颁发者（颁发证书的实体）和公钥。 在 WCF 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书的详细信息，请参阅 [X.509 公钥证书](https://go.microsoft.com/fwlink/?LinkId=209952)。 有关 WCF 中的声明和授权的详细信息，请参阅[使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 有关实现 PKI 的详细信息，请参阅 [Windows Server 2008 R2 - 证书服务](https://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 简言之，数字证书是公钥基础结构 (PKI) 的一部分，而公钥基础结构是数字证书、证书颁发机构和其他注册机构的系统，它使用公钥加密对电子事务所涉及的每一方的有效性进行确认和身份验证  。 证书颁发机构颁发证书，每个证书都具有一组包含数据的字段，例如“使用者”（向其颁发证书的实体）、有效日期（证书的有效日期）、证书颁发者（颁发证书的实体）和公钥  。 在 WCF 中，这些属性中的每一个都作为 <xref:System.IdentityModel.Claims.Claim> 进行处理，而每个声明又进一步分为两种类型：标识和权限。 有关 X.509 证书的详细信息，请参阅 [X.509 公钥证书](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)。 有关 WCF 中的声明和授权的详细信息，请参阅[使用标识模型管理声明和授权](managing-claims-and-authorization-with-the-identity-model.md)。 有关实现 PKI 的详细信息，请参阅[与 Windows Server 2012 R2 Active Directory 证书服务的企业 PKI](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/)。  
   
- 证书的主要功能是向其他各方验证证书所有者的身份。 证书包含所有者的公钥，所有者保留着私钥。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。  
+ 证书的主要功能是向其他各方验证证书所有者的身份。 证书包含所有者的公钥，所有者保留着私钥  。 公钥可用来对发送给证书所有者的消息进行加密。 只有所有者才能访问私钥，因此，只有所有者才能解密这些消息。  
   
  证书必须由证书颁发机构（通常是第三方证书颁发机构）颁发。 在 Windows 域中，包括一个证书颁发机构，可以用来向域中的计算机颁发证书。  
   
 ## <a name="viewing-certificates"></a>查看证书  
- 若要使用证书，通常需要查看证书并检查其属性。 使用 Microsoft 管理控制台 (MMC) 管理单元工具，很容易实现这一任务。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+ 若要使用证书，通常需要查看证书并检查其属性。 使用 Microsoft 管理控制台 (MMC) 管理单元工具，很容易实现这一任务。 有关详细信息，请参阅[如何：使用 MMC 管理单元查看证书](how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 ## <a name="certificate-stores"></a>证书存储区  
  证书存放在存储区中。 主要的存储区位置有两个，它们进一步分为子存储区。 如果您是计算机的管理员，就可以使用 MMC 管理单元工具查看这两个主要存储区。 非管理员只能查看当前用户存储区。  
@@ -47,17 +47,17 @@ ms.locfileid: "65881103"
 ### <a name="selecting-a-store"></a>选择存储区  
  证书存储位置的选择，取决于服务或客户端运行的方式和时间。 适用以下一般规则：  
   
-- 如果 WCF 服务承载于某个 Windows 服务中，则使用“本地计算机”存储区。 请注意，要将证书安装到本地计算机存储区，需要有管理员权限。  
+- 如果 WCF 服务承载于某个 Windows 服务中，则使用“本地计算机”存储区  。 请注意，要将证书安装到本地计算机存储区，需要有管理员权限。  
   
-- 如果服务或客户端是在某个用户帐户下运行的应用程序，则使用“当前用户”存储区。  
+- 如果服务或客户端是在某个用户帐户下运行的应用程序，则使用“当前用户”存储区  。  
   
 ### <a name="accessing-stores"></a>访问存储区  
- 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 创建由 Internet 信息服务 (IIS) 承载服务时，ASP.NET 帐户下运行 ASP.NET 进程。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
+ 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 创建由 Internet 信息服务 (IIS) 承载服务时，ASP.NET 帐户下运行 ASP.NET 进程。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何：创建开发期间使用临时证书](how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>链信任和证书颁发机构  
  证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 然后，CA 的证书颁发原始 CA 的证书的 CA 的链接。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。  
   
- 使用数字证书对实体进行身份验证时就依赖这一层次结构，它也称为信任链。 在 MMC 管理单元中，双击任何证书，再单击“证书路径”选项卡，可以查看任何证书链。有关导入的证书颁发机构的证书链的详细信息，请参阅[如何：指定用于验证签名的证书颁发机构证书链](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
+ 使用数字证书对实体进行身份验证时就依赖这一层次结构，它也称为信任链  。 在 MMC 管理单元中，双击任何证书，再单击“证书路径”选项卡，可以查看任何证书链  。有关导入的证书颁发机构的证书链的详细信息，请参阅[如何：指定用于验证签名的证书颁发机构证书链](specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
   
 > [!NOTE]
 >  通过将颁发机构的证书放入受信任的根颁发机构证书存储区中，可以向任何颁发机构指定受信任的根颁发机构。  
@@ -96,17 +96,17 @@ ms.locfileid: "65881103"
   
 3. 将根颁发机构证书导入到受信任的根证书颁发机构存储区中。  
   
-4. 有关分步说明，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
+4. 有关分步说明，请参阅[如何：创建开发期间使用临时证书](how-to-create-temporary-certificates-for-use-during-development.md)。  
   
 ## <a name="which-certificate-to-use"></a>要使用哪个证书？  
  关于证书的常见问题是要使用哪个证书以及使用它的原因。 答案取决于是对客户端编程还是对服务编程。 下面的信息提供了一个一般准则，但未对这些问题提供详尽解答。  
   
 ### <a name="service-certificates"></a>服务证书  
- 服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配。 例如，如果该服务的 URI 是`http://www.contoso.com/endpoint/`然后**使用者**字段也必须包含值`www.contoso.com`。  
+ 服务证书的主要任务是向客户端验证服务器的身份。 客户端对服务器进行身份验证时所进行的初始检查之一是将“使用者”字段的值与用来联系服务的统一资源标识符 (URI) 进行比较：二者的 DNS 必须匹配  。 例如，如果该服务的 URI 是`http://www.contoso.com/endpoint/`然后**使用者**字段也必须包含值`www.contoso.com`。  
   
- 请注意，该字段可以包含多个值，每个值都以一个起始值前缀来指示其值。 大多数情况下，初始化是"CN"表示公用名，例如， `CN = www.contoso.com`。 “使用者”字段还可能为空白，这种情况下，“使用者可选名称”字段可以包含“DNS 名称”值。  
+ 请注意，该字段可以包含多个值，每个值都以一个起始值前缀来指示其值。 大多数情况下，初始化是"CN"表示公用名，例如， `CN = www.contoso.com`。 “使用者”字段还可能为空白，这种情况下，“使用者可选名称”字段可以包含“DNS 名称”值    。  
   
- 另请注意，证书“预期目的”字段的值应包含一个适当的值，例如“服务器身份验证”或“客户端身份验证”。  
+ 另请注意，证书“预期目的”字段的值应包含一个适当的值，例如“服务器身份验证”或“客户端身份验证”  。  
   
 ### <a name="client-certificates"></a>客户端证书  
  客户端证书通常不是由第三方证书颁发机构颁发的。 相反，在当前用户位置的个人存储区中，通常包含由根证书颁发机构存放在此的证书，其预期目的为“客户端身份验证”。 如果需要相互身份验证，则客户端可以使用此类证书。  
@@ -114,12 +114,12 @@ ms.locfileid: "65881103"
 ## <a name="online-revocation-and-offline-revocation"></a>联机吊销和脱机吊销  
   
 ### <a name="certificate-validity"></a>证书有效性  
- 每个证书仅在给定时间段内有效，称为“有效期”。 有效期由 X.509 证书的“有效起始日期”和“有效结束日期”字段定义。 在身份验证过程中，将对证书进行检查以确定证书是否仍在有效期内。  
+ 每个证书仅在给定时间段内有效，称为“有效期”  。 有效期由 X.509 证书的“有效起始日期”和“有效结束日期”字段定义   。 在身份验证过程中，将对证书进行检查以确定证书是否仍在有效期内。  
   
 ### <a name="certificate-revocation-list"></a>证书吊销列表  
  在有效期内，证书颁发机构随时可以吊销证书。 吊销证书有多种原因，例如危及证书私钥的安全。  
   
- 如果证书吊销，则从被吊销证书继承的任何链都将无效，在身份验证过程中也不受信任。 为了查看吊销了哪些证书，每个证书颁发者都发布一个加盖了时间戳和日期戳的证书吊销列表 (CRL)。 可以使用联机吊销或脱机吊销来查看此列表，方法是将以下类的 `RevocationMode` 或 `DefaultRevocationMode` 属性设置为 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 枚举值之一：<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 和 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 类。 所有属性的默认值都是 `Online`。  
+ 如果证书吊销，则从被吊销证书继承的任何链都将无效，在身份验证过程中也不受信任。 为了查看吊销了哪些证书，每个证书颁发者都发布一个加盖了时间戳和日期戳的证书吊销列表 (CRL)  。 可以使用联机吊销或脱机吊销来查看此列表，方法是将以下类的 `RevocationMode` 或 `DefaultRevocationMode` 属性设置为 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 枚举值之一：<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 和 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 类。 所有属性的默认值都是 `Online`。  
   
  还可使用 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)（属于 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)）和 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)（属于 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)）的 `revocationMode` 属性在配置中设置模式。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "65881103"
 </serviceBehaviors>  
 ```  
   
- 将 X.509 证书映射到表示 Windows 用户帐户的令牌，这一过程视为权限提升，这是因为一旦执行了映射，就可使用 Windows 令牌获得对受保护资源的访问权限。 因此，域策略要求 X.509 证书在映射之前符合其策略。 SChannel 安全数据包强制执行此要求。  
+ 将 X.509 证书映射到表示 Windows 用户帐户的令牌，这一过程视为权限提升，这是因为一旦执行了映射，就可使用 Windows 令牌获得对受保护资源的访问权限。 因此，域策略要求 X.509 证书在映射之前符合其策略。 SChannel 安全数据包强制执行此要求  。  
   
  使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 或更高版本时，WCF 可以确保证书在映射到 Windows 帐户之前符合域策略。  
   

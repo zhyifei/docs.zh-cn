@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 5b15c504a01a0ab8e17b8ad8811d9ed183609322
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: HT
+ms.openlocfilehash: e40ca31ddc40cccbeb3b8dda1d148ddec5032d7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456273"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489554"
 ---
 # <a name="startup-element"></a>\<启动 > 元素
 
@@ -37,7 +37,7 @@ ms.locfileid: "66456273"
 
 |特性|描述|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|可选特性。<br /><br /> 指定是否启用[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]运行时激活策略或使用[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]激活策略。|
+|`useLegacyV2RuntimeActivationPolicy`|可选特性。<br /><br /> 指定是否启用[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]运行时激活策略或使用.NET Framework 4 激活策略。|
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 属性
 

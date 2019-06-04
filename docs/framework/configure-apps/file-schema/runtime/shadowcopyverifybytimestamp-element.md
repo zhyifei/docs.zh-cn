@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1815da141beb3dd1022fe1a74f872aa70b4ded43
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 4187d266d82783ebb72073c1da92faff95352884
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456341"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489375"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 元素
-指定卷影复制是否使用 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中引入的默认启动行为，或恢复到 .NET Framework 的早期版本的启动行为。  
+指定卷影复制是否使用.NET Framework 4 中引入的默认启动行为或恢复到早期版本的.NET Framework 的启动行为。  
   
  \<配置 > 元素  
 \<运行时 > 元素  

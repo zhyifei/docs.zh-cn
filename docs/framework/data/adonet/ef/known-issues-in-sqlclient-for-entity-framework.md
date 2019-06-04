@@ -2,12 +2,12 @@
 title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631733"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489531"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>以正确的 SQL Server 版本为目标  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]目标[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]查询中指定的 SQL Server 版本上基于`ProviderManifestToken`存储模型 (.ssdl) 文件中的架构元素的属性。 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果您使用的是 SQL Server 2005，但 `ProviderManifestToken` 特性设置为 2008，则可能无法在服务器上执行生成的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 查询。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果您使用的是 SQL Server 2005，但 `ProviderManifestToken` 属性设置为 2000，则生成的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 查询可能不是最佳的，您也可能收到指出该查询不受支持的异常消息。 有关详细信息，请参阅 CROSS 和 OUTER APPLY 运算符前面的部分，本主题。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]面向基于 SQL Server 版本中指定的 Transact SQL 查询`ProviderManifestToken`存储模型 (.ssdl) 文件中的架构元素的属性。 您实际连接到的 SQL Server 的版本可能不是这一版本。 例如，如果使用的 SQL Server 2005，但你`ProviderManifestToken`属性设置为 2008 年，在服务器上可能不执行生成的 TRANSACT-SQL 查询。 例如，在 SQL Server 的早期版本上，无法执行使用了 SQL Server 2008 所引入的新日期时间类型的查询。 如果使用 SQL Server 2005，但你`ProviderManifestToken`属性设置为 2000年、 可能不太优化生成的 TRANSACT-SQL 查询，也可能收到指出该查询不支持的异常。 有关详细信息，请参阅 CROSS 和 OUTER APPLY 运算符前面的部分，本主题。  
   
- 某些数据库行为取决于为数据库设置的兼容级别。 如果 `ProviderManifestToken` 属性设置为 2005 并且 SQL Server 版本为 2005，但数据库的兼容级别设置为“80”(SQL Server 2000)，则生成的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 将以 SQL Server 2005 为目标，但可能会因兼容级别设置而无法正常执行。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
+ 某些数据库行为取决于为数据库设置的兼容级别。 如果你`ProviderManifestToken`属性设置为 2005年和 SQL Server 版本为 2005，但数据库的兼容性级别设置为"80"(SQL Server 2000)，生成的 Transact SQL 将以之为目标 SQL Server 2005 中，但可能会执行预期的截止日期兼容级别设置。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
  投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器，包括 SLQ Server，这会导致 TempDB 表变得非常庞大。 这样会降低服务器性能。  

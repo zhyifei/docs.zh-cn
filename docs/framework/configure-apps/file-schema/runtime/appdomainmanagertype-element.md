@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705046"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487750"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 元素
 指定用作默认应用程序域的应用程序域管理器的类型。  
@@ -58,7 +58,7 @@ ms.locfileid: "61705046"
   
  类型和命名空间的格式是相同的格式用于<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性。  
   
- 此配置元素是仅适用于[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]及更高版本。  
+ 此配置元素是仅适用于.NET Framework 4 及更高版本。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何指定进程的默认应用程序域的应用程序域管理器是`MyMgr`中键入`AdMgrExample`程序集。  

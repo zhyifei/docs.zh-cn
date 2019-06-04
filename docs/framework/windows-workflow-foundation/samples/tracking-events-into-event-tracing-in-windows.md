@@ -2,12 +2,12 @@
 title: 在 Windows 事件跟踪中跟踪事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004804"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491044"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件跟踪中跟踪事件
 此示例演示如何启用 Windows Workflow Foundation (WF) 工作流服务跟踪和发出跟踪事件中事件跟踪 Windows (ETW)。 为了将工作流跟踪记录发到 ETW 中，该示例使用 ETW 跟踪参与者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。
@@ -47,7 +47,7 @@ ms.locfileid: "62004804"
 
      默认情况下，该服务正在侦听端口 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。
 
-4. 使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，打开 WCF 测试客户端。
+4. 使用文件资源管理器打开 WCF 测试客户端。
 
      WCF 测试客户端 (WcfTestClient.exe) 位于\<Visual Studio 2010 安装文件夹 > \Common7\IDE\ 文件夹。
 

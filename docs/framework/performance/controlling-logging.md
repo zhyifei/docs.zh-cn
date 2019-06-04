@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e14fa2d739a6fdabda7b64e7e765e51da19701a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6f6744451bf3436e58a3ff9efcdb16ceee08c9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616450"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489739"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 日志记录
 可以使用 Windows 事件跟踪 (ETW) 来记录公共语言运行时 (CLR) 事件。 可以使用以下工具来创建和查看跟踪：  
@@ -28,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- 如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 文件夹（%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET 版本>\）。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：  
+ 如果未列出 CLR 提供程序，则可以通过使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令行工具在 Windows Vista 和更高版本的操作系统上安装该提供程序。 以管理员身份打开命令提示符窗口。 将提示目录更改为.NET Framework 4 文件夹 (%windir%\microsoft.net\framework[64]\v4。\<.NET 版本 > \)。 此文件夹包含 CLR-ETW.man 文件。 在命令提示符处，键入以下命令来安装 CLR 提供程序：  
   
  `wevtutil im CLR-ETW.man`  
   
@@ -98,7 +98,7 @@ Provider                                 GUID
   
      `xperf clrevents.etl`  
   
-     此命令打开 Xperf ETL 文件查看器。 在此查看器中，CLR 事件将显示在“一般事件”视图中。 要显示按类型分类的事件的数据网格，请选择此视图中的时间区域，然后右键单击并选择“摘要”。  
+     此命令打开 Xperf ETL 文件查看器。 在此查看器中，CLR 事件将显示在“一般事件”视图中  。 要显示按类型分类的事件的数据网格，请选择此视图中的时间区域，然后右键单击并选择“摘要”  。  
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>将 .etl 文件转换为逗号分隔值文件  
   

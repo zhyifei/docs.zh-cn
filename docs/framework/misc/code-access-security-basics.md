@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868766"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488033"
 ---
 # <a name="code-access-security-basics"></a>代码访问安全性基础知识
 
@@ -32,7 +32,7 @@ ms.locfileid: "61868766"
 
 - **安全类库**:安全类库使用安全要求来确保库的调用方有权访问库公开的资源。 例如，安全类库可能具有一种方法，可用于创建一种文件，这种文件要求其调用方具有创建文件的权限。 .NET Framework 由安全类库组成。 你应了解访问你的代码所使用的任何库所需的权限。 有关详细信息，请参阅[使用安全类库](#secure_library)本主题后面的部分。
 
-- **透明代码**:从开始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，除了标识特定的权限，还必须确定你的代码是否应作为安全透明的方式运行。 安全透明代码不能调用标识为安全关键的类型或成员。 此规则适用于完全信任的应用程序以及部分受信任的应用程序。 有关详细信息，请参阅[安全透明代码](../../../docs/framework/misc/security-transparent-code.md)。
+- **透明代码**:从.NET Framework 4 中，除了标识特定权限，您还必须确定你的代码是否应作为安全透明的方式运行。 安全透明代码不能调用标识为安全关键的类型或成员。 此规则适用于完全信任的应用程序以及部分受信任的应用程序。 有关详细信息，请参阅[安全透明代码](../../../docs/framework/misc/security-transparent-code.md)。
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ ms.locfileid: "61868766"
 使用声明性安全语法[特性](../../../docs/standard/attributes/index.md)放置到的安全信息[元数据](../../../docs/standard/metadata-and-self-describing-components.md)的代码。 属性可以程序集、类或成员级别放置，以指示你要使用的请求、需求或重写的类型。 请求用于面向公共语言运行时的应用程序，以通知运行时安全系统有关应用程序需要或不想要的权限。 在库中使用要求和重写以帮助保护调用方的资源或重写默认安全行为。
 
 > [!NOTE]
-> 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，已对 .NET Framework 安全模型和术语作出重要更改。 有关这些更改的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。
+> 在.NET Framework 4 中，已经对.NET Framework 安全模型和术语作出重要更改。 有关这些更改的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。
 
 为了使用声明性安全调用，必须初始化权限对象的状态数据，使其表示所需权限的特定形式。 每个内置权限都具有一个属性，会向该属性传递 <xref:System.Security.Permissions.SecurityAction> 枚举来描述你要执行的安全操作的类型。 但是，权限还接受自己独占的自己的参数。
 

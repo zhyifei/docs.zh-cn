@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46ff6032f2cdbd4a5f294198fe3bf71862c67528
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985538"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490257"
 ---
 # <a name="hosting-interfaces"></a>承载接口
 本部分中描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。  
@@ -22,7 +22,7 @@ ms.locfileid: "61985538"
   
  .NET Framework 版本 3.0 和 3.5 使用.NET Framework 2.0 版托管接口，并且并未引入任何托管功能。  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]承载接口取代.NET Framework 2.0 接口。
+ .NET Framework 4 承载接口取代了.NET Framework 2.0 接口。
   
 ## <a name="in-this-section"></a>本节内容  
  [弃用的 CLR 承接接口和组件类](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "61985538"
  描述.NET Framework 2.0 版中引入的托管接口。  
   
  [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- 介绍在中引入的托管接口[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 描述.NET Framework 4 中引入的托管接口。  
   
 ## <a name="related-sections"></a>相关章节  
  [承载组件类](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

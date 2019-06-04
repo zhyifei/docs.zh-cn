@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a12f062b2fe3ad6e5ac90f0d268bbbeab44876
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a0861436ca727d63cdae58e3222826bf6414610
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674137"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489443"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 元素
 指定是否在运行时创建<xref:System.Security.Policy.Publisher>代码访问安全性 (CAS) 的证据。  
@@ -39,7 +39,7 @@ ms.locfileid: "61674137"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|不会创建<xref:System.Security.Policy.Publisher>证据。|  
 |`true`|创建<xref:System.Security.Policy.Publisher>证据。 这是默认设置。|  
@@ -57,7 +57,7 @@ ms.locfileid: "61674137"
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  在[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]和更高版本，此元素具有对程序集加载时间没有影响。 有关详细信息，请参阅中的"安全策略简化"一节[安全更改](../../../../../docs/framework/security/security-changes.md)。  
+>  在.NET Framework 4 及更高版本，此元素将具有对程序集加载时间没有影响。 有关详细信息，请参阅中的"安全策略简化"一节[安全更改](../../../../../docs/framework/security/security-changes.md)。  
   
  公共语言运行时 (CLR) 尝试在加载时，若要创建验证 Authenticode 签名<xref:System.Security.Policy.Publisher>程序集证据。 但是，默认情况下，大多数应用程序不需要<xref:System.Security.Policy.Publisher>证据。 标准 CAS 策略不依赖于<xref:System.Security.Policy.PublisherMembershipCondition>。 应避免与验证发布者签名，除非你的应用程序使用的自定义 CA 策略的计算机上执行，或要满足的需求关联的不必要的启动成本<xref:System.Security.Permissions.PublisherIdentityPermission>在部分信任环境中。 （标识权限的要求总是在完全信任环境中成功。）  
   

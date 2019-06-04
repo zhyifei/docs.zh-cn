@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456386"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489409"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
 指定运行时是否以减慢托管和非托管代码之间的转换速度为代价，在运行时自动修复不正确的平台调用声明。  
@@ -40,7 +40,7 @@ ms.locfileid: "66456386"
   
 |值|描述|  
 |-----------|-----------------|  
-|`0`|运行时使用的更快的互操作封送处理体系结构中引入[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，这不会检测和修复不正确的平台调用声明。 这是默认设置。|  
+|`0`|运行时使用的更快的互操作封送处理体系结构引入了在.NET Framework 4 中，不会检测和修复不正确的平台调用声明。 这是默认设置。|  
 |`1`|运行时使用的转换速度的检测和修复不正确的平台调用声明。|  
   
 ### <a name="child-elements"></a>子元素  

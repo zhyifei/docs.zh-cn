@@ -2,12 +2,12 @@
 title: 基本序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 860a33adcb2109ac26045b37631ede37fe1be362
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 803f45db008dc6d12566868ba4a8c61642687d89
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602481"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486386"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -20,15 +20,15 @@ ms.locfileid: "64602481"
   
 1. 使用命令提示定位到 Technologies\Serialization\Runtime Serialization\Basic 目录下语言特定的子目录之一。  
   
-2. 在命令行中键入 msbuild SerializationCS.sln、msbuild SerializationJSL.sln 或 msbuild SerializationVB.sln，具体取决于所选的编程语言。  
+2. 在命令行中键入 msbuild SerializationCS.sln、msbuild SerializationJSL.sln 或 msbuild SerializationVB.sln，具体取决于所选的编程语言    。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>使用 Visual Studio 生成示例  
   
-1. 打开[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，定位到该示例的特定语言的子目录。  
+1. 打开文件资源管理器并导航到示例的特定于语言的子目录之一。  
   
 2. 根据所选的编程语言，双击 SerializationCS.sln、SerializationJSL.sln 或 SerializationVB.sln 文件的图标，在 Visual Studio 中打开该文件。  
   
-3. 在“生成”菜单中选择“生成解决方案”。  
+3. 在“生成”菜单中选择“生成解决方案”   。  
   
  示例应用程序将在默认的 \bin 或 \bin\Debug 子目录中生成。  
   
@@ -36,19 +36,19 @@ ms.locfileid: "64602481"
   
 1. 定位到包含生成的可执行文件的目录。  
   
-2. 在命令行中键入 Serialization.exe 以及所需的参数值。  
+2. 在命令行中键入 Serialization.exe 以及所需的参数值  。  
   
     > [!NOTE]
     >  此示例生成控制台应用程序。 必须使用命令提示来启动该程序，才能查看相应的输出。  
   
 ## <a name="remarks"></a>备注  
- 示例应用程序接受指示您要执行何种测试的命令行参数。 若要使用 SOAP 格式化程序将 10 节点列表序列化成名为 Test.xml 的文件，请使用参数 sx Test.xml 10。  
+ 示例应用程序接受指示您要执行何种测试的命令行参数。 若要使用 SOAP 格式化程序将 10 节点列表序列化成名为 Test.xml 的文件，请使用参数 sx Test.xml 10   。  
   
  例如：  
   
  **Serialize.exe -sx Test.xml 10**  
   
- 若要从先前的示例中反序列化 Test.xml文件，请使用参数 dx Test.xml。  
+ 若要从先前的示例中反序列化 Test.xml文件，请使用参数 dx Test.xml   。  
   
  例如：  
   

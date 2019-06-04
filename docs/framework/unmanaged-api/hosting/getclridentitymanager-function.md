@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f71266d84cc98c2a5deb4aa8639e36808315a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e18172ecf2d4300ae42cc42ecdb1783744cac105
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628023"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490417"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 函数
 获取一个指针指向使公共语言运行时 (CLR) 来管理标识的接口。  
   
- 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ .NET Framework 4 中已弃用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ STDAPI GetCLRIdentityManager(
   
  **库：** MSCorWks.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
