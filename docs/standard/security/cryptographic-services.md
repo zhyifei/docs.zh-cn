@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490959"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690529"
 ---
 # <a name="cryptographic-services"></a>加密服务
 
@@ -266,7 +266,7 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 ## <a name="clickonce-manifests"></a>ClickOnce 清单
 
-在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]中，下列加密类使你可以获取并验证有关使用 [ClickOnce 技术](/visualstudio/deployment/clickonce-security-and-deployment)部署的应用程序的清单签名的信息：
+在.NET Framework 3.5 中，下列加密类使你可以获取并验证有关的应用程序使用部署清单签名的信息[ClickOnce 技术](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - 当使用清单签名的 <xref:System.Security.Cryptography.ManifestSignatureInformation> 方法重载时， <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> 类将获取此清单签名的相关信息。
 
@@ -290,7 +290,7 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 ## <a name="suite-b-support"></a>Suite B 支持
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 支持美国国家安全局 (NSA) 发布的加密算法的 Suite B 集。 有关 Suite B 的详细信息，请参阅 [NSA Suite B 加密一览表](https://www.nsa.gov/what-we-do/information-assurance/)。
+.NET Framework 3.5 支持发布通过国家安全局 (NSA) 的加密算法集 Suite B。 有关 Suite B 的详细信息，请参阅 [NSA Suite B 加密一览表](https://www.nsa.gov/what-we-do/information-assurance/)。
 
 包括以下算法：
 
@@ -314,7 +314,7 @@ RSA 允许加密和签名，但 DSA 仅可用于签名，而 Diffie-Hellman 仅�
 
 <xref:System.Security.Cryptography.CngKey> 类用于各种其他操作，包括打开、创建、删除和导出密钥。 在直接调用本机函数时，它还提供对要使用的基础密钥句柄的访问。
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 还包括各种支持的 CNG 类，如下所示：
+.NET Framework 3.5 还包括各种支持的 CNG 类，如下所示：
 
 - <xref:System.Security.Cryptography.CngProvider> 维护密钥存储提供程序。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456454"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689912"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定在执行字符串比较时，运行时应使用旧排序顺序。  
@@ -44,7 +44,7 @@ ms.locfileid: "66456454"
   
 |值|描述|  
 |-----------|-----------------|  
-|4096|表示备选排序顺序的区域设置 ID。 在此示例中，4096 表示 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 和更早版本的排序顺序。|  
+|4096|表示备选排序顺序的区域设置 ID。 在这种情况下，4096 表示.NET Framework 3.5 及更早版本的排序顺序。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -57,7 +57,7 @@ ms.locfileid: "66456454"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 因为由执行字符串比较、 排序和大小写的操作<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>.NET Framework 4 中的类符合 Unicode 5.1 标准，字符串比较方法的结果如<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同于.NET framework 的早期版本。 如果你的应用程序依赖于旧行为，则可以通过在你的应用程序配置文件中包括 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 元素来还原 `<CompatSortNLSVersion>` 及早期版本中使用的字串比较和排序规则。  
+ 因为由执行字符串比较、 排序和大小写的操作<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>.NET Framework 4 中的类符合 Unicode 5.1 标准，字符串比较方法的结果如<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同于.NET framework 的早期版本。 如果你的应用程序依赖于旧行为，则可以还原的字符串比较和排序规则通过包括在.NET Framework 3.5 及更早版本中使用`<CompatSortNLSVersion>`应用程序的配置文件中的元素。  
   
 > [!IMPORTANT]
 >  还原旧的字符串比较和排序规则还要求 sort00001000.dll 动态链接库在本地系统上可用。  
@@ -76,13 +76,13 @@ ms.locfileid: "66456454"
 sta follows a in the sort order.  
 ```  
   
- 这完全不同于你在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上运行此示例时显示的输出。  
+ 这是完全不同于.NET Framework 3.5 上运行此示例时，将显示的输出。  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- 但是，如果将下面的配置文件添加到该示例的目录，然后在.NET Framework 4 上运行该示例的输出是相同时上运行该示例产生[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]。  
+ 但是，如果将下面的配置文件添加到该示例的目录，然后在.NET Framework 4 上运行该示例输出是与.NET Framework 3.5 上运行时生成的示例相同。  
   
 ```xml  
 <?xml version ="1.0"?>  

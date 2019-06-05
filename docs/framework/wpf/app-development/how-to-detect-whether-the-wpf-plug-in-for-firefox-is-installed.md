@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: 5ae2f39883c8edd7be912bfeb8326c14ca38704a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f84a0a2af43931b3ada1f674390ec5d841b79a1c
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592617"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690431"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：检测是否安装了适用于 Firefox 的 WPF 插件
 
@@ -24,7 +24,7 @@ Windows Presentation Foundation (WPF) Firefox 的插件使[!INCLUDE[TLA#tla_xbap
 
 ## <a name="example"></a>示例
 
-当[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]是安装，客户端计算机配置与 WPF 插件为 Firefox。 以下示例脚本检查 firefox 的 WPF 插件，然后显示相应的状态消息。
+安装.NET Framework 3.5 时，客户端计算机配置与 WPF 插件 firefox。 以下示例脚本检查 firefox 的 WPF 插件，然后显示相应的状态消息。
 
 ```html
 <HTML>

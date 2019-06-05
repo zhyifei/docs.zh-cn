@@ -6,19 +6,19 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 03f7e17983e56cc2d2136b38b3402ce689f719ee
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e39c4ca5e4a6563a94fbf6f386283053a197f5ce
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491072"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690674"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>从 WPF 迁移到 System.Xaml 的类型
 .NET Framework 3.5 中并[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]，这两个[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 包含一个 XAML 语言实现。 为 WPF XAML 实现提供扩展性的很多公共类型都存在于 WindowsBase、PresentationCore 和 PresentationFramework 程序集中。 同样，为 Windows Workflow Foundation XAML 提供扩展性的公共类型存在于 System.Workflow.ComponentModel 程序集中。 在.NET Framework 4 中，一些与 XAML 相关的类型已迁移到 System.Xaml 程序集。 XAML 语言服务的常规.NET Framework 实现可实现许多 XAML 扩展性方案最初由特定框架的 XAML 实现，但现在是整个.NET Framework 4 XAML 语言支持的一部分。 本主题列出了迁移的类型并讨论了与迁移有关的问题。  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>程序集和命名空间  
- 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 为支持 XAML 而实现的类型通常位于 <xref:System.Windows.Markup> 命名空间中。 大多数这些类型都位于 WindowsBase 程序集中。  
+ .NET Framework 3.5 中并[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，WPF 实现以支持 XAML 的类型是通常在<xref:System.Windows.Markup>命名空间。 大多数这些类型都位于 WindowsBase 程序集中。  
   
  .NET Framework 4 中新增了一个<xref:System.Xaml>命名空间和 System.Xaml 程序集。 最初为 WPF XAML 实现的很多类型现在作为任何 XAML 实现的扩展性点或服务提供。 为了使其可用于更普通的方案，将类型从其最初所在的 WPF 程序集类型转发到 System.Xaml 程序集。 这可启用 XAML 扩展性方案而无需包含其他框架 （如 WPF 和 Windows Workflow Foundation） 的程序集。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66491072"
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 的 <xref:System.Windows.Markup.MarkupExtension> 类位于 WindowsBase 程序集中。 Windows Workflow Foundation 的 parallel 类<xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>、 现有 System.Workflow.ComponentModel 程序集中。 在.NET Framework 4 中，<xref:System.Windows.Markup.MarkupExtension>类被迁移到 System.Xaml 程序集。 在.NET Framework 4 中，<xref:System.Windows.Markup.MarkupExtension>适用于使用.NET Framework XAML 服务，而不仅仅是用于在特定框架上生成的任何 XAML 扩展性方案。 在可能的情况下，特定的框架或架构中的用户代码也应在 XAML 扩展的 <xref:System.Windows.Markup.MarkupExtension> 类上生成。  
+ .NET Framework 3.5 中并[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，则<xref:System.Windows.Markup.MarkupExtension>类 WPF 位于 WindowsBase 程序集中。 Windows Workflow Foundation 的 parallel 类<xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>、 现有 System.Workflow.ComponentModel 程序集中。 在.NET Framework 4 中，<xref:System.Windows.Markup.MarkupExtension>类被迁移到 System.Xaml 程序集。 在.NET Framework 4 中，<xref:System.Windows.Markup.MarkupExtension>适用于使用.NET Framework XAML 服务，而不仅仅是用于在特定框架上生成的任何 XAML 扩展性方案。 在可能的情况下，特定的框架或架构中的用户代码也应在 XAML 扩展的 <xref:System.Windows.Markup.MarkupExtension> 类上生成。  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension 支持服务类  
- WPF 的[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 提供了很多服务，这些服务可用于 <xref:System.Windows.Markup.MarkupExtension> implementers 和 <xref:System.ComponentModel.TypeConverter> 实现以支持 XAML 中的类型/属性用法。 这些服务如下所示：  
+ .NET framework 3.5 并[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]WPF 提供了可以使用的多个服务对<xref:System.Windows.Markup.MarkupExtension>实施者和<xref:System.ComponentModel.TypeConverter>实现以支持 XAML 中的类型/属性用法。 这些服务如下所示：  
   
 - <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66491072"
 - <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  来自 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 且与标记扩展有关的另一个服务是 <xref:System.Windows.Markup.IReceiveMarkupExtension> 接口。 <xref:System.Windows.Markup.IReceiveMarkupExtension> 未迁移并且被标记为`[Obsolete]`针对.NET Framework 4。 以前使用 <xref:System.Windows.Markup.IReceiveMarkupExtension> 的方案应改用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 特性化回调。 <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> 也标记为 `[Obsolete]`。  
+>  从与标记扩展的.NET Framework 3.5 的另一个服务是<xref:System.Windows.Markup.IReceiveMarkupExtension>接口。 <xref:System.Windows.Markup.IReceiveMarkupExtension> 未迁移并且被标记为`[Obsolete]`针对.NET Framework 4。 以前使用 <xref:System.Windows.Markup.IReceiveMarkupExtension> 的方案应改用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 特性化回调。 <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> 也标记为 `[Obsolete]`。  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>XAML 语言功能  
@@ -69,11 +69,11 @@ ms.locfileid: "66491072"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer 和支持类  
- <xref:System.Windows.Markup.ValueSerializer> 类支持到字符串的类型转换，尤其对于序列化可能需要输出中有多个模式或节点的 XAML 序列化情况。 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 的 <xref:System.Windows.Markup.ValueSerializer> 位于 WindowsBase 程序集中。 在.NET Framework 4 中，<xref:System.Windows.Markup.ValueSerializer>类位于 System.Xaml 和适用于任何 XAML 扩展性方案中，而不仅仅是用于在 WPF 上生成的。 <xref:System.Windows.Markup.IValueSerializerContext> （支持服务）和 <xref:System.Windows.Markup.DateTimeValueSerializer> （特定子类）也会被迁移到 System.Xaml。  
+ <xref:System.Windows.Markup.ValueSerializer> 类支持到字符串的类型转换，尤其对于序列化可能需要输出中有多个模式或节点的 XAML 序列化情况。 .NET Framework 3.5 中并[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，则<xref:System.Windows.Markup.ValueSerializer>WPF 是位于 WindowsBase 程序集中。 在.NET Framework 4 中，<xref:System.Windows.Markup.ValueSerializer>类位于 System.Xaml 和适用于任何 XAML 扩展性方案中，而不仅仅是用于在 WPF 上生成的。 <xref:System.Windows.Markup.IValueSerializerContext> （支持服务）和 <xref:System.Windows.Markup.DateTimeValueSerializer> （特定子类）也会被迁移到 System.Xaml。  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>与 XAML 相关的属性  
- WPF XAML 包含多个特性，这些特性可应用于 CLR 类型以指示有关它们的 XAML 行为的某些内容。 下面是在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]的 WPF 程序集中存在的特性列表。 这些特性迁移到 System.Xaml 中.NET Framework 4。  
+ WPF XAML 包含多个特性，这些特性可应用于 CLR 类型以指示有关它们的 XAML 行为的某些内容。 以下是.NET Framework 3.5 中的 WPF 程序集中存在的属性的列表和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]。 这些特性迁移到 System.Xaml 中.NET Framework 4。  
   
 - <xref:System.Windows.Markup.AmbientAttribute>  
   
@@ -107,9 +107,9 @@ ms.locfileid: "66491072"
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>其他类  
- <xref:System.Windows.Markup.IComponentConnector>接口存在于 WindowsBase 中[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在于 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.IComponentConnector> 主要适用于工具支持和 XAML 标记编译器。  
+ <xref:System.Windows.Markup.IComponentConnector>接口存在于 WindowsBase 中.NET Framework 3.5 和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在于 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.IComponentConnector> 主要适用于工具支持和 XAML 标记编译器。  
   
- <xref:System.Windows.Markup.INameScope>接口存在于 WindowsBase 中[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在于 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.INameScope> 定义用于 XAML 名称范围的基本操作。  
+ <xref:System.Windows.Markup.INameScope>接口存在于 WindowsBase 中.NET Framework 3.5 和[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]，但存在于 System.Xaml 中.NET Framework 4。 <xref:System.Windows.Markup.INameScope> 定义用于 XAML 名称范围的基本操作。  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>存在于 WPF 和 System.Xaml 中具有共享名称的与 XAML 相关的类  

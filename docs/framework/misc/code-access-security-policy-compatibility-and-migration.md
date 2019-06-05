@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487981"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690278"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>代码访问安全策略兼容性和迁移
 
@@ -26,7 +26,7 @@ ms.locfileid: "66487981"
 
    \- 或 -
 
-- 使用[< NetFx40_LegacySecurityPolicy > 配置元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)来选择启用旧版 CAS 策略行为。
+- 使用[ \<NetFx40_LegacySecurityPolicy > 配置元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)来选择启用旧版 CAS 策略行为。
 
 本主题包含以下各节：
 
@@ -142,7 +142,7 @@ CAS 策略通常用于确定程序集或应用程序域的权限授予集或信�
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>兼容性：使用 CAS 策略旧版选项
 
-[< NetFx40_LegacySecurityPolicy > 配置元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)，可以指定进程或库使用旧版 CAS 策略。 启用此元素时，策略和证据重载将与其在 Framework 以前版本中进行的操作相同。
+[ \<NetFx40_LegacySecurityPolicy > 配置元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)，可以指定进程或库使用旧版 CAS 策略。 启用此元素时，策略和证据重载将与其在 Framework 以前版本中进行的操作相同。
 
 > [!NOTE]
 > CAS 策略行为是在运行时版本的基础上指定的，因此修改一个运行时版本的 CAS 策略不会影响另一个版本的 CAS 策略。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 1c0ee38037e79fc93a4318fc5309f61c9060213c
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e018048df70470e349f06ac80e7a597cd742dac5
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457096"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690513"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支持 .NET 应用程序部署的 Firefox 加载项
 Windows Presentation Foundation (WPF) 适用于 Firefox 和.NET Framework Assistant firefox 插件启用[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和 ClickOnce 应用程序以使用 Mozilla Firefox 浏览器。  
@@ -20,9 +20,9 @@ Windows Presentation Foundation (WPF) 适用于 Firefox 和.NET Framework Assist
 ## <a name="wpf-plug-in-for-firefox"></a>Firefox WPF 插件  
  Firefox 的插件的 WPF 启用[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和宽松[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]要导航到并运行位于顶级或 Firefox 浏览器中 HTML IFRAME 中的文件。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可发布到 Web 服务器和在启动应用程序支持的浏览器。 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是一个仅 XAML 文件，可以导航到并显示在支持的浏览器，类似于 XML 文件。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]与已安装 Firefox 插件[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 Window 7 包括[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，但不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的插件。 不能安装[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Windows 7 上的 Firefox 的插件。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]对使用.NET Framework 3.5 已安装 Firefox 的插件。 Window 7 包括.NET Framework 3.5，但不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的插件。 不能安装[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Windows 7 上的 Firefox 的插件。  
   
- .NET Framework 4 不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的插件。 但是，如果两个[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]并安装.NET Framework 4，与已安装 Firefox 的插件的 WPF [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 因此.NET Framework 4 应用程序仍将运行因为 WPF 宿主将加载正确版本的 framework。 有关详细信息，请参阅[WPF 主机 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)。  
+ .NET Framework 4 不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的插件。 但是，如果安装了.NET Framework 3.5 和.NET Framework 4，使用.NET Framework 3.5 已安装 Firefox 的插件的 WPF。 因此.NET Framework 4 应用程序仍将运行因为 WPF 宿主将加载正确版本的 framework。 有关详细信息，请参阅[WPF 主机 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)。  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  .NET Framework Assistant firefox 允许独立 ClickOnce 应用程序从 Firefox 浏览器中运行。 .NET Framework Assistant Firefox 函数的相同安装之前和之后的 Firefox 浏览器。 Firefox 浏览器启动时和[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]是安装，Firefox 找到并安装了适用于 Firefox 的.NET Framework Assistant。 用户可以配置的.NET Framework Assistant firefox 来执行以下操作：  
