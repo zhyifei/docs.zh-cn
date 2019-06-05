@@ -22,9 +22,9 @@ ms.locfileid: "61674644"
 
 指定要包含的配置文件。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>语法
 
@@ -42,7 +42,7 @@ ms.locfileid: "61674644"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定配置级的程序集绑定策略。 |
+| [ **\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定配置级的程序集绑定策略。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -50,10 +50,10 @@ None
 
 ## <a name="remarks"></a>备注
 
- **\<LinkedConfiguration >** 元素可简化维护组件程序集。 如果一个或多个应用程序使用的程序集都驻留在已知位置中的配置文件，可以使用的应用程序使用的程序集的配置文件 **\<linkedConfiguration >** 若要包括程序集配置文件，而不是直接包含配置信息的元素。 组件程序集已维修，更新常见的配置文件提供所有应用程序使用的程序集的更新的配置的信息。
+**\<LinkedConfiguration >** 元素可简化维护组件程序集。 如果一个或多个应用程序使用的程序集都驻留在已知位置中的配置文件，可以使用的应用程序使用的程序集的配置文件 **\<linkedConfiguration >** 若要包括程序集配置文件，而不是直接包含配置信息的元素。 组件程序集已维修，更新常见的配置文件提供所有应用程序使用的程序集的更新的配置的信息。
 
 > [!NOTE]
->  **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
+> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
 
 链接的配置文件的使用遵循以下规则：
 
@@ -65,7 +65,7 @@ None
 
 - 所有链接的配置文件经过合并以形成一个文件的行为类似`#include`指令在 C /C++。
 
--  **\<LinkedConfiguration >** 元素允许仅在应用程序配置文件中; 在将被忽略*Machine.config*。
+- **\<LinkedConfiguration >** 元素允许仅在应用程序配置文件中; 在将被忽略*Machine.config*。
 
 - 检测到并终止循环引用。 也就是说，如果 **\<linkedConfiguration >** 一系列配置文件中的元素形成循环，循环将检测并停止。
 
@@ -83,5 +83,5 @@ None
 
 ## <a name="see-also"></a>请参阅
 
-- [**\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [ **\<assemblyBinding >** 元素](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
 - [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)

@@ -18,8 +18,8 @@ ms.locfileid: "61674826"
 
 指定配置级的程序集绑定策略。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<assemblyBinding>**
 
 ## <a name="syntax"></a>语法
 
@@ -39,20 +39,20 @@ ms.locfileid: "61674826"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |
 
 ## <a name="child-element"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的配置文件。 |
+| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的配置文件。 |
 
 ## <a name="remarks"></a>备注
 
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化管理的组件程序集已知位置，而不是复制的程序集配置设置。
 
 > [!NOTE]
->  **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
+> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
 
 ## <a name="example"></a>示例
 
