@@ -20,9 +20,9 @@ ms.locfileid: "61907163"
 
 可以使用单独的变量来存储每个数据项。 例如，如果应用程序分析学生成绩，则可以使用单独的变量表示每个学生的成绩，如 `englishGrade1`、`englishGrade2` 等等。此方法具有三个主要的限制：
 
-- 我们必须知道在设计时我们需要处理完全数目的成绩。
-- 快速处理大量的成绩变得难以处理。 反过来，这使得应用程序更有可能有严重的 bug。
-- 很难维护。 我们添加的每个新级别要求应用程序进行修改、 重新编译和重新部署。
+- 我们在设计时必须知道我们需要处理的成绩的总数。
+- 处理大量的成绩可导致速度变慢。 反过来，这会使应用程序更有可能出现严重的 bug。
+- 很难维护。 我们添加的每个新成绩都要求应用程序进行修改、重新编译和重新部署。
 
 通过使用一个数组，可以通过相同的名称，请参阅这些相关的值并使用一个数字，称为*索引*或*下标*用于标识各个元素根据其数组中的位置。 数组范围从 0 到数组中元素的总数减 1 所得的索引。 当您使用 Visual Basic 语法来定义数组的大小时，指定其最高的索引，不在数组中元素的总数。 您可以使用数组作为一个单元，并循环访问其元素的功能使您无需了解它包含在设计时完全多少个元素。
 
@@ -53,7 +53,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="array-elements-in-a-simple-array"></a>简单数组中的数组元素
 
-让我们创建一个名为数组`students`存储语法学校中每个年级的学生数量。 这些元素的索引范围为 0 到 6。 使用此数组是比声明七个变量更简单。
+我们创建一个名为 `students` 的数组来存储语法学校中每个年级的学生数量。 元素的索引范围为 0 到 6。 使用此数组比声明七个变量更简单。
 
 下图显示`students`数组。 对于数组的每个元素：
 
@@ -69,9 +69,9 @@ Dim sales()() As Double = New Double(11)() {}
 
 该示例执行三项操作：
 
-- 它声明了`students`具有七个元素的数组。 数`6`声明数组中表示数组中的最后一个索引; 它是一个小于数组中的元素数。
+- 声明了具有七个元素的数组 `students`。 数组声明中的数字 `6` 表示数组中的最后一个索引；它小于数组中的元素数。
 - 它将值分配给数组中的每个元素。 通过使用数组名称并在括号中包含单个元素的索引访问数组元素。
-- 它列出了数组的每个值。 该示例使用[ `For` ](../../../language-reference/statements/for-next-statement.md)语句来访问数组的每个元素按索引号。
+- 列出了数组的每个值。 该示例使用 [ `For` ](../../../language-reference/statements/for-next-statement.md) 语句来按索引号访问数组的每个元素。
 
 `students`前面的示例中的数组是一维数组，因为它使用一个索引。 使用多个索引或下标的数组称为*多维*。 有关详细信息，请参阅本文的其余部分和[在 Visual Basic 中的数组维数](../../language-features/arrays/array-dimensions.md)。
 
@@ -83,11 +83,11 @@ Dim sales()() As Double = New Double(11)() {}
 
   [!code-vb[creating1](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#1)]
 
-- 可以使用`New`子句提供数组大小，在创建时：
+- 创建数组时可以使用 `New` 子句提供数组大小：
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-如果具有现有数组，您可以通过使用来重新定义其大小[ `ReDim` ](../../../language-reference/statements/redim-statement.md)语句。 您可以指定`ReDim`语句保留数组中的值，也可以指定它创建一个空数组。 下面的示例演示了用 `ReDim` 语句来修改现有数组的大小的不同用法。
+如果有现有数组，则可以通过使用 [ `ReDim` ](../../../language-reference/statements/redim-statement.md) 语句来重新定义其大小。 可以指定 `ReDim` 语句保留数组中的值，也可以指定它创建空数组。 下面的示例演示了用 `ReDim` 语句来修改现有数组的大小的不同用法。
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -103,7 +103,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="populating-an-array-with-array-literals"></a>使用数组文本填充数组
 
-通过使用数组文本，可以创建它时填充具有一组初始的值的数组。 数组文本包含用逗号分隔的值列表，这些值被括在括号内 (`{}`)。
+通过使用数组文本，可以在创建它时填充具有一组初始值的数组。 数组文本包含用逗号分隔的值列表，这些值被括在括号内 (`{}`)。
 
 通过使用数组文本创建数组时，可以提供数组类型或使用类型推理功能来确定数组类型。 下面的示例显示了这两个选项。
 
@@ -114,15 +114,15 @@ Dim sales()() As Double = New Double(11)() {}
 > [!NOTE]
 > 仅对定义为本地变量的类型成员的数组，可以使用类型推理。 如果缺少显式类型定义，则数组使用数组文本在类级别定义的类型是`Object[]`。 有关详细信息，请参阅[局部类型推理](../variables/local-type-inference.md)。
 
-请注意，上面的示例定义`values`作为类型的数组`Double`即使所有数组文本都属于类型`Integer`。 您可以创建此数组，因为数组文本中的值可以扩大到`Double`值。
+请注意，上面的示例将 `values` 定义为 `Double` 类型的数组，即使所有数组文本都属于 `Integer` 类型也是如此。 可以创建此数组，因为数组文本中的值可以扩大到 `Double` 值。
 
 此外可以创建并使用填充多维数组*嵌套数组文本*。 嵌套的数组文本必须具有与生成的数组保持一致维度的数。 下面的示例使用嵌套的数组文本创建一个二维整数的数组。
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
-在使用嵌套的数组文本创建并填充数组，如果嵌套的数组文本中的元素数不匹配，就会出错。 如果显式声明数组变量具有不同数量的维度比数组文本，也会发生错误。
+在使用嵌套的数组文本创建并填充数组时，如果嵌套的数组文本中的元素数不匹配，就会出错。 如果显式声明数组变量时数组文本具有不同数量的维度，也会发生错误。
 
-正如您可以对一维数组，可以使用嵌套的数组文本创建多维数组时依赖类型推断。 推断出的类型是所有的嵌套级别的所有数组文本中的所有值的基准类型。 下面的示例创建类型的一个二维数组`Double[,]`属于类型的值从`Integer`和`Double`。
+与处理一维数组相同，使用嵌套的数组文本创建多维数组时，也可以依赖于类型推断。 推断出的类型是所有嵌套级别的所有数组文本中的所有值的基准类型。 下面的示例从 `Integer` 或 `Double` 类型的值中创建一个 `Double[,]` 类型的二维数组。
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
@@ -130,32 +130,32 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="iterating-through-an-array"></a>循环访问数组
 
-当循环访问数组时，访问数组中的每个元素，从最低到最高或从最高到低的顺序。 通常情况下，使用两种[为...下一条语句](../../../language-reference/statements/for-next-statement.md)或[为每个...下一条语句](../../../language-reference/statements/for-each-next-statement.md)循环访问数组的元素。 如果不知道数组的上限，您可以调用<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>方法以获取索引的最高的值。 尽管最小索引值是几乎始终为 0，可以调用<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>方法以获取索引的最小值。
+当循环访问数组时，将按从最低到最高或从最高到低的索引顺序访问数组中的每个元素。 通常情况下，使用 [For...Next 语句](../../../language-reference/statements/for-next-statement.md)或 [For Each...Next 语句](../../../language-reference/statements/for-each-next-statement.md)循环访问数组的元素。 如果不知道数组的最高值，则可以调用 <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> 方法来获取索引的最高值。 尽管最小索引值几乎始终为 0，但可以调用 <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> 方法来获取索引的最小值。
 
-下面的示例循环访问一维数组，通过使用[ `For...Next` ](../../../language-reference/statements/for-next-statement.md)语句。
+下面的示例通过使用[ `For...Next` ](../../../language-reference/statements/for-next-statement.md)语句循环访问一维数组。
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-下面的示例循环访问通过使用多维数组[ `For...Next` ](../../../language-reference/statements/for-next-statement.md)语句。 <xref:System.Array.GetUpperBound%2A> 方法具有用于指定维度的参数。 `GetUpperBound(0)` 返回的最高的第一个维的索引和`GetUpperBound(1)`返回第二个维度的最高的索引。
+下面的示例通过使用[ `For...Next` ](../../../language-reference/statements/for-next-statement.md)语句循环访问多维数组。 <xref:System.Array.GetUpperBound%2A> 方法具有用于指定维度的参数。 `GetUpperBound(0)` 返回第一个维度的最高索引，`GetUpperBound(1)` 返回第二个维度的最高索引。
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-下面的示例使用[为每个...下一条语句](../../../language-reference/statements/for-each-next-statement.md)循环访问一个一维数组和一个二维数组。
+下面的示例使用 [For Each...Next 语句](../../../language-reference/statements/for-each-next-statement.md)循环访问一个一维数组和一个二维数组。
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 
 ## <a name="array-size"></a>数组大小
 
-数组的大小是数组所有维度的长度的产物。 它表示数组中当前所包含的元素总数。  例如，下面的示例声明包含每个维度中的四个元素的二维数组。 如示例输出所示，该数组的大小为 16 (或 (3 + 1) * (3 + 1)。
+数组的大小是数组所有维度的长度的乘积。 它表示数组中当前所包含的元素总数。  例如，下面的示例声明每个维度中包含四个元素的二维数组。 如示例输出所示，该数组的大小为 16 (或 (3 + 1) * (3 + 1)。
 
 [!code-vb[array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]
 
 > [!NOTE]
 > 数组大小的这一讨论不适用于交错数组。 交错的数组并确定交错数组的大小的信息，请参阅[交错数组](#jagged-arrays)部分。
 
-可以通过使用 <xref:System.Array.Length%2A?displayProperty=nameWithType> 属性查找数组大小。 你可以通过使用查找多维数组中的每个维的长度<xref:System.Array.GetLength%2A?displayProperty=nameWithType>方法。
+可以通过使用 <xref:System.Array.Length%2A?displayProperty=nameWithType> 属性查找数组大小。 可以通过使用 <xref:System.Array.GetLength%2A?displayProperty=nameWithType> 方法查找多维数组的每个维度的长度。
 
-通过将分配给它一个新数组对象，或可以调整大小的数组变量[`ReDim`语句](../../../language-reference/statements/redim-statement.md)语句。 下面的示例使用`ReDim`语句更改为 51 元素数组的一个 100 元素的数组。
+要想调整数组变量的大象，可为其分配新的数组对象，或使用 [`ReDim`语句](../../../language-reference/statements/redim-statement.md) 语句。 下面的示例使用 `ReDim` 语句将具有 100 个元素的数组更改为具有 50 个元素的数组。
 
 [!code-vb[resize-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size2.vb)]
 
@@ -163,35 +163,35 @@ Dim sales()() As Double = New Double(11)() {}
 
 |||
 |---|---|
-|维度长度|每个维度的索引是基于 0 的这意味着其范围为 0 到其上限之间。 因此，给定维度的长度为一个大于该维度的声明的上限。|
-|长度限制|每一维数组的长度限制为的最大值`Integer`数据类型，即<xref:System.Int32.MaxValue?displayProperty=nameWithType>或 (2 ^31)-1。 但是，数组的总大小还受到系统上可用的内存限制。 如果尝试初始化数组超出可用内存量，则运行时会引发<xref:System.OutOfMemoryException>。|
-|大小和元素大小|数组的大小独立于其元素的数据类型。 大小始终表示元素 （不所占用的内存的字节数） 的总数。|
+|维度长度|每个维度的索引均从 0 开始，这意味着其范围为 0 到其上限之间。 因此，给定维度的长度大于该维度的声明的上限。|
+|长度限制|数组每个维度的长度限制为 `Integer` 数据类型的最大值，即 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 或 (2 ^31) - 1。 但是，数组的总大小还受到系统上可用内存的限制。 如果尝试初始化超出可用内存量的数组，则运行时会引发 <xref:System.OutOfMemoryException>。|
+|大小和元素大小|数组的大小独立于其元素的数据类型。 大小始终表示元素的总数，而不是所占用的内存的字节数。|
 |内存消耗|做出关于数组如何存储在内存中的假设是不可靠的。 由于不同数据宽度的平台上的存储会有所变化，因此同一数组在 64 位系统上可以占用比在 32 位系统上更多的内存。 具体取决于数组初始化时的系统配置，公共语言运行时 (CLR) 可以尽可能地将存储分配到靠近包元素的地方，或者将它们全部在自然硬件边界上对齐。 此外，数组需要存储开销的控制信息，而且每添加一个维度，这种开销随之增加。|
 
 ## <a name="the-array-type"></a>数组类型
 
 每个数组具有不同于它的元素的数据类型的数据类型。 没有一种数据类型能用于所有数组。 相反，数组的数据类型由数组的维度数量或 *“排名”* ，以及数组中元素的数据类型确定。 两个数组变量属于相同的数据，仅当它们具有相同的排名并且其元素具有相同的数据类型。 数组的维度的长度不会影响数组数据类型。
 
-每个数组都继承自 <xref:System.Array?displayProperty=nameWithType> 类，并且你可以声明一个类型为 `Array` 的变量，但不能创建一个类型为 `Array` 的数组。 例如，虽然下面的代码声明`arr`变量的类型为`Array`，并调用<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>方法可实例化的数组，该数组类型的事实证明，Object []。
+每个数组都继承自 <xref:System.Array?displayProperty=nameWithType> 类，并且可以声明类型为 `Array` 的变量，但不能创建类型为 `Array` 的数组。 例如，虽然下面的代码声明 `arr` 变量的类型为 `Array`，并调用<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 方法以实例化数组，但该数组的实际类型是 Object []。
 
 [!code-vb[array-class](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-class.vb)]
 
-此外，[ReDim 语句](../../../language-reference/statements/redim-statement.md)无法对声明为类型 `Array` 的变量执行运算。 出于这些原因，以及为类型安全，则最好声明为特定类型的每个数组。
+此外，[ReDim 语句](../../../language-reference/statements/redim-statement.md)无法对声明为类型 `Array` 的变量执行运算。 出于这些原因，以及为了保证类型安全，建议将每个数组声明为特定类型。
 
-你可以通过几种方式了解到数组及其元素的数据类型。
+可以通过几种方式确定数组及其元素的数据类型。
 
-- 您可以调用<xref:System.Object.GetType%2A>方法以获取对变量<xref:System.Type>表示变量的运行时类型的对象。 <xref:System.Type> 对象可在其属性和方法中保存大量信息。
-- 您可以将该变量传递到<xref:Microsoft.VisualBasic.Information.TypeName%2A>函数以获取`String`与运行时类型的名称。
+- 可以调用 <xref:System.Object.GetType%2A> 方法来获取表示变量的运行时类型的 <xref:System.Type> 对象。 <xref:System.Type> 对象可在其属性和方法中保存大量信息。
+- 可以将该变量传递到 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函数以获取具有该运行时类型的名称的 `String`。
 
-下面的示例调用两`GetType`方法和`TypeName`函数来确定数组的类型。 数组类型是`Byte(,)`。 请注意，<xref:System.Type.BaseType%2A?displayProperty=nameWithType>属性还指示字节数组的基类型是<xref:System.Array>类。
+下面的示例调用 `GetType` 方法和 `TypeName` 函数来确定数组的类型。 数组类型是 `Byte(,)`。 请注意，<xref:System.Type.BaseType%2A?displayProperty=nameWithType> 属性还指示字节数组的基类型是 <xref:System.Array> 类。
 
 [!code-vb[array-type](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-type.vb)]
 
-## <a name="arrays-as-return-values-and-parameters"></a>作为返回值和参数的数组
+## <a name="arrays-as-return-values-and-parameters"></a>数组作为返回值和参数
 
-若要通过 `Function` 过程返回数组，请将数组数据类型和维度数指定为 [Function 语句](../../../language-reference/statements/function-statement.md)的返回类型。 在函数内，声明一个具有相同数据类型和维度数的本地数组变量。 在 [Return 语句](../../../language-reference/statements/return-statement.md)中，添加不带括号的局部数组变量。
+若要通过 `Function` 过程返回数组，请将数组数据类型和维度数指定为 [Function 语句](../../../language-reference/statements/function-statement.md)的返回类型 。 在函数内，声明一个具有相同数据类型和维度数的局部数组变量。 在 [Return 语句](../../../language-reference/statements/return-statement.md)中，包含该局部数组变量（不带括号）。
 
-若要将作为参数的数组指定到 `Sub` 或 `Function` 步骤中，可将此参数定义为具有指定数据类型和维度数量的数组。 在过程调用中，将传递一个数组变量具有相同的数据类型和维度数。
+若要将数组指定为 `Sub` 或 `Function` 过程的参数，可将此参数定义为具有指定数据类型和维度数的数组。 在对该过程的调用中，传递一个具有相同数据类型和维度数的数组变量。
 
 在以下示例中，`GetNumbers`函数返回`Integer()`，类型的一维数组`Integer`。 `ShowNumbers` 过程接受 `Integer()` 参数。
 
