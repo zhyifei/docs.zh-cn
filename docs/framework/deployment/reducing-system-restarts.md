@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881600"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379916"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安装期间减少系统重新启动
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序使用[重启管理器](https://go.microsoft.com/fwlink/?LinkId=231425)来防止安装期间可能出现的系统重启。 如果应用安装程序安装了 .NET Framework，则此程序可通过使用重启管理器来利用此功能。 有关详细信息，请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
+.NET Framework 4.5 安装程序使用[重启管理器](https://go.microsoft.com/fwlink/?LinkId=231425) 来防止安装期间可能出现的系统重启。 如果应用安装程序安装了 .NET Framework，则此程序可通过使用重启管理器来利用此功能。 有关详细信息，请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
   
 ## <a name="reasons-for-a-restart"></a>重启的原因  
- 如果在安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 时 .NET Framework 4 应用正在运行，则此安装需要重启系统。 这是因为 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 将替代 .NET Framework 4 文件，而在安装期间需要使用这些文件。 在许多情况下，通过提前检测并关闭正在运行的 .NET Framework 4 应用即可避免重启。 但有时某些系统应用不应被关闭。 此时就无法避免重启。  
+ 如果在安装 .NET Framework 4.5 时 .NET Framework 4 应用正在运行，则此安装需要重启系统。 这是因为 .NET Framework 4.5 将替代 .NET Framework 4 文件，而在安装期间需要使用这些文件。 在许多情况下，通过提前检测并关闭正在运行的 .NET Framework 4 应用即可避免重启。 但有时某些系统应用不应被关闭。 此时就无法避免重启。  
   
 ## <a name="end-user-experience"></a>最终用户体验  
- 当安装程序检测到 .NET Framework 4 应用正在运行时，执行 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 完全安装的最终用户有机会避免系统重启。 系统将显示一条消息，其中列出所有正在运行的 .NET Framework 4 应用并提供在安装前关闭这些应用的选项。 如果用户确认选择，安装程序将关闭这些应用，避免系统重启。 如果用户未在特定时间段内对此消息做出响应，系统将在未关闭这些应用的情况下继续安装。  
+ 当安装程序检测到 .NET Framework 4 应用正在运行时，执行 .NET Framework 4.5 完全安装的最终用户有机会避免系统重启。 系统将显示一条消息，其中列出所有正在运行的 .NET Framework 4 应用并提供在安装前关闭这些应用的选项。 如果用户确认选择，安装程序将关闭这些应用，避免系统重启。 如果用户未在特定时间段内对此消息做出响应，系统将在未关闭这些应用的情况下继续安装。  
   
  如果已关闭了正在运行的应用，但重启管理器仍检测到需要系统重启，则不会显示此消息。  
   

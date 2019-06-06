@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607674"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456776"
 ---
 # <a name="resolving-assembly-loads"></a>解决程序集加载
 .NET Framework 为对程序集加载需要更强控制的应用程序提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 通过处理此事件，应用程序可从常规探测路径外部将程序集加载到加载上下文、从几个程序集版本中选择要加载的版本、发出动态程序集并返回此程序集，等等。 本主题指导如何处理 <xref:System.AppDomain.AssemblyResolve> 事件。  
@@ -72,7 +72,7 @@ ms.locfileid: "64607674"
  处理 <xref:System.AppDomain.AssemblyResolve> 事件的主要规则是不应试图返回无法识别的程序集。 编写处理程序时应了解哪些程序集可能会导致引发该事件。 处理程序集应对其他程序集返回 null。  
   
 > [!IMPORTANT]
->  从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，<xref:System.AppDomain.AssemblyResolve> 事件针对附属程序集引发。 此更改会影响为早期版本的 .NET Framework 编写的事件处理程序（如果此类事件处理程序尝试解决所有程序集加载请求）。 忽略无法识别的程序集的事件处理程序不受此更改的影响：这些程序会返回 NULL，并遵循正常的回退机制。  
+>  从 .NET Framework 4 开始，<xref:System.AppDomain.AssemblyResolve> 事件针对附属程序集引发。 此更改会影响为早期版本的 .NET Framework 编写的事件处理程序（如果此类事件处理程序尝试解决所有程序集加载请求）。 忽略无法识别的程序集的事件处理程序不受此更改的影响：这些程序会返回 NULL，并遵循正常的回退机制。  
   
  加载程序集时，事件处理程序禁止使用可导致递归引发 <xref:System.AppDomain.AssemblyResolve> 事件的任何 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载，因为可能导致堆栈溢出。 （请参阅本主题前面部分提供的列表。）即使为加载请求提供异常处理也会发生此情况，因为异常都是在所有事件处理程序返回后引发的。 因此，如果未找到 `MyAssembly`，下面的代码将导致堆栈溢出：  
   

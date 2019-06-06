@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622871"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456803"
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 <a name="top"></a> 本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。  
@@ -61,7 +61,7 @@ ms.locfileid: "64622871"
  探查器可以提供全面的信息。 但是，复杂的探查器可能会修改应用程序的行为。  
   
 ### <a name="application-domain-resource-monitoring"></a>应用程序域资源监控  
- 从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，应用程序域资源监视 (ARM) 使主机可以通过应用程序域监视 CPU 和内存使用情况。 有关详细信息，请参阅[应用程序域资源监控](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。  
+ 从 .NET Framework 4 开始，应用程序域资源监视 (ARM) 使主机可以通过应用程序域监视 CPU 和内存使用情况。 有关详细信息，请参阅[应用程序域资源监控](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)。  
   
  [返回页首](#top)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64622871"
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>问题：进程占用过多内存  
- 通常会假设 Windows 任务管理器“性能”选项卡上的内存使用量显示可以指示何时使用了太多内存。 然而，该显示与工作集相关；它不提供有关虚拟内存使用量的信息。  
+ 通常会假设 Windows 任务管理器“性能”  选项卡上的内存使用量显示可以指示何时使用了太多内存。 然而，该显示与工作集相关；它不提供有关虚拟内存使用量的信息。  
   
  如果确定问题是托管堆引发的，必须测量一段时间的托管堆，以确定模式。  
   
@@ -346,9 +346,9 @@ ms.locfileid: "64622871"
   
 1. 则启动 Windows 任务管理器。  
   
-2. 在“性能”选项卡上，查看已提交的值。 （在 Windows 7 中，查看“系统组”中的“提交 (KB)”。）  
+2. 在“性能”  选项卡上，查看已提交的值。 （在 Windows 7 中，查看“系统组”  中的“提交 (KB)”  。）  
   
-     如果“总数”接近“限值”，则物理内存将不足。  
+     如果“总数”  接近“限值”  ，则物理内存将不足。  
   
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>若要确定托管堆的内存提交量  

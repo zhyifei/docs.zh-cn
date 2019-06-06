@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615146"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457434"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
@@ -149,7 +149,7 @@ ms.locfileid: "64615146"
   
      因为第 2 代回收可以占用多个段，所以可以将已提升到第 2 代中的对象移动到时间较早的段中。 可以将第 1 代幸存者和第 2 代幸存者都移动到不同的段，因为它们已被提升到第 2 代。  
   
-     通常，由于复制大型对象会造成性能代偿，因此不会压缩大型对象堆。 但是，从 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]开始，你可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 属性按需压缩大对象堆。  
+     通常，由于复制大型对象会造成性能代偿，因此不会压缩大型对象堆。 但是，从 .NET Framework 4.5.1开始，你可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 属性按需压缩大型对象堆。  
   
  垃圾回收器使用以下信息来确定对象是否为活动对象：  
   
@@ -253,7 +253,7 @@ ms.locfileid: "64615146"
  在后台垃圾回收中，在进行第 2 代回收的过程中，将会根据需要收集暂时代（第 0 代和第 1 代）。 后台垃圾回收无法设置；它会自动运行并启用并发垃圾回收。 后台垃圾回收是对并发垃圾回收的替代。 与并发垃圾回收一样，后台垃圾回收是在一个专用线程上执行的并且只适用于第 2 代回收。  
   
 > [!NOTE]
->  后台垃圾回收只在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 及更高版本中可用。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中，仅支持工作站垃圾回收。 从 .NET Framework 4.5 开始，后台垃圾回收可用于工作站和服务器垃圾回收。  
+>  后台垃圾回收只在 .NET Framework 4 及更高版本中可用。 在 .NET Framework 4 中，仅支持工作站垃圾回收。 从 .NET Framework 4.5 开始，后台垃圾回收可用于工作站和服务器垃圾回收。  
   
  后台垃圾回收期间对暂时代的回收称为前台垃圾回收。 发生前台垃圾回收时，所有托管线程都将被挂起。  
   

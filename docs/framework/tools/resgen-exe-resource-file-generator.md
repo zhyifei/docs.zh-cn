@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623303"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378468"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe（资源文件生成器）
 资源文件生成器 (Resgen.exe) 将文本（.txt 或 .restext）文件和基于 XML 的资源格式 (.resx) 文件转换为公共语言运行时二进制 (.resources) 文件，后者可嵌入到运行时二进制可执行文件或附属程序集中。 （请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。）  
@@ -73,9 +73,9 @@ resgen filename.extension [outputDirectory]
   
 |参数或开关|说明|  
 |-------------------------|-----------------|  
-|`/define:` symbol1[, symbol2,...]|从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，支持基于文本（.txt 或 .restext）的资源文件中的条件编译。 如果 symbol 对应于 `#ifdef` 构造中的输入文本文件中包含的符号，则关联的字符串资源将包含在 .resources 文件中。 如果输入文本文件包含带符号（此符号未由 `#if !` 开关定义）的 `/define` 语句，则关联的字符串资源将包含在资源文件中。<br /><br /> 如果将 `/define` 与非文本文件一起使用，则它将被忽略。 符号是区分大小写的。<br /><br /> 有关此选项的更多信息，请参阅本主题后面的[条件编译资源](#Conditional)。|  
+|`/define:` symbol1[, symbol2,...]  |从 .NET Framework 4.5 开始，支持基于文本（.txt 或 .restext）的资源文件中的条件编译。 如果 symbol 对应于 `#ifdef` 构造中的输入文本文件中包含的符号，则关联的字符串资源将包含在 .resources 文件中  。 如果输入文本文件包含带符号（此符号未由 `#if !` 开关定义）的 `/define` 语句，则关联的字符串资源将包含在资源文件中。<br /><br /> 如果将 `/define` 与非文本文件一起使用，则它将被忽略。 符号是区分大小写的。<br /><br /> 有关此选项的更多信息，请参阅本主题后面的[条件编译资源](#Conditional)。|  
 |`useSourcePath`|指定输入文件的当前目录将用于解析相对文件路径。|  
-|`/compile`|使你能够在单个批量操作中指定要转换为多个 .resources 文件的多个 .resx 文件或文本文件。 如果不指定此选项，则只能指定一个输入文件自变量。 输出文件将命名为 filename.resources。<br /><br /> 此选项不能与 `/str:` 选项一起使用。<br /><br /> 有关此选项的更多信息，请参阅本主题后面的[编译或转换多个文件](#Multiple)。|  
+|`/compile`|使你能够在单个批量操作中指定要转换为多个 .resources 文件的多个 .resx 文件或文本文件。 如果不指定此选项，则只能指定一个输入文件自变量。 输出文件将命名为 filename.resources  。<br /><br /> 此选项不能与 `/str:` 选项一起使用。<br /><br /> 有关此选项的更多信息，请参阅本主题后面的[编译或转换多个文件](#Multiple)。|  
 |`/r:` `assembly`|从指定的程序集引用元数据。 当转换 .resx 文件并允许 Resgen.exe 序列化或反序列化对象资源时使用此选项。 这类似于 C# 和 Visual Basic 编译器的 `/reference:` 或 `/r:` 选项。|  
 |`filename.extension`|指定要转换的输入文件的名称。 如果你使用此表之前呈现的第一个更长的命令行语法，则 `extension` 必须为下列项之一：<br /><br /> .txt 或 .restext<br /> 要转换为 .resources 或 .resx 文件的文本文件。 文本文件只能包含字符串资源。 有关文件格式的信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)中的“文本文件中的资源”部分。<br /><br /> .resx<br /> 要转换为 .resources 或文本（.txt 或 .restext）文件的基于 XML 的资源文件。<br /><br /> .resources<br /> 要转换为 .resx 或文本（.txt 或 .restext）文件的二进制资源文件。<br /><br /> 如果你使用此表之前呈现的第二个更短的命令行语法，则 `extension` 必须是以下项：<br /><br /> .exe 或 .dll<br /> .NET Framework 程序集（可执行文件或库），其字符串资源将提取到用于开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的 .resw 文件中。|  
 |`outputFilename.extension`|指定要创建的资源文件的名称和类型。<br /><br /> 在从 .txt、.restext 或 .resx 文件转换到 .resources 文件时，此参数是可选的。 如果未指定 `outputFilename`，则 Resgen.exe 会为输入 `filename` 追加 .resources 扩展名，并将此文件写入包含 `filename,extension` 的目录中。<br /><br /> 从 .resources 文件转换时，`outputFilename.extension` 参数是强制的。 在将 .resources 文件转换为基于 XML 的资源文件时，指定带 .resx 扩展名的文件名。 将 .resources 文件转换为文本文件时，指定带 .txt 或 .restext 扩展名的文件名。 应仅在 .resources 文件仅包含字符串值时将 .resources 文件转换为 .txt 文件。|  
@@ -244,7 +244,7 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>条件编译资源  
- 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，Resgen.exe 支持在文本（.txt 和 .restext）文件中的字符串资源的条件编译。 这使你能够在多个生成配置中使用单个基于文本的资源文件。  
+ 从 .NET Framework 4.5 开始，Resgen.exe 支持在文本（.txt 和 .restext）文件中的字符串资源的条件编译。 这使你能够在多个生成配置中使用单个基于文本的资源文件。  
   
  在 .txt 或 .restext 文件中，可以使用 `#ifdef`…`#endif` 构造来包含二进制 .resources 文件中的资源（如果定义了符号），并可使用 `#if !`...`#endif` 构造来包含资源（如果未定义符号）。 在编译时，随后使用后跟符号的以逗号分隔的列表的 `/define:` 选项来定义符号。 该比较是区分大小写的；`/define` 定义的符号的大熊写必须与要编译的文本文件中的符号的大小写匹配。  
   
@@ -293,16 +293,16 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  如果 `inputFilename` 是 .resources 文件，`outputFilename` 也是 .resources 文件，则 Resgen.exe 会前者。 如果省略 `outputFilename`，则 Resgen.exe 会用相同的 .resources 文件覆盖 `inputFilename`。  
   
- language  
+ language   
  为强类型资源类生成源代码时要使用的语言。 C# 代码的可能值为 `cs`、`C#` 和 `csharp`；Visual Basic 代码的可能值为 `vb` 和 `visualbasic`；VBScript 代码的可能值为 `vbs` 和 `vbscript`；C++ 代码的可能值为 `c++`、`mc` 和 `cpp`。  
   
  *namespace*  
- 包含强类型资源类的命名空间。 .resources 文件和资源类应具有相同的命名空间。 有关在 `outputFilename` 中指定命名空间的信息，请参阅[将资源编译为二进制文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)。 如果省略 namespace，则资源类不包含在命名空间内。  
+ 包含强类型资源类的命名空间。 .resources 文件和资源类应具有相同的命名空间。 有关在 `outputFilename` 中指定命名空间的信息，请参阅[将资源编译为二进制文件](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)。 如果省略 namespace，则资源类不包含在命名空间内  。  
   
- classname  
- 强类型资源类的名称。 这应对应于 .resources 文件的根名称。 例如，如果 Resgen.exe 生成名为 MyCompany.Libraries.Strings.resources 的 .resources 文件，则强类型资源类的名称为 Strings。 如果省略 classname，则生成的类是从 `outputFilename` 的根名称派生的。 如果省略 `outputFilename`，则生成的类是从 `inputFilename` 的根名称派生的。  
+ classname   
+ 强类型资源类的名称。 这应对应于 .resources 文件的根名称。 例如，如果 Resgen.exe 生成名为 MyCompany.Libraries.Strings.resources 的 .resources 文件，则强类型资源类的名称为 Strings。 如果省略 classname，则生成的类是从 `outputFilename` 的根名称派生的  。 如果省略 `outputFilename`，则生成的类是从 `inputFilename` 的根名称派生的。  
   
- classname 不能包含无效字符（如嵌入的空格）。 如果 classname 包含嵌入的空格，或者从 inputFilename 中生成 classname（默认情况），并且 inputFilename 包含嵌入的空格，则 Resgen.exe 会将所有无效字符替换为下划线 (_)。  
+ classname 不能包含无效字符（如嵌入的空格）  。 如果 classname 包含嵌入的空格，或者从 inputFilename 中生成 classname（默认情况），并且 inputFilename 包含嵌入的空格，则 Resgen.exe 会将所有无效字符替换为下划线 (_)     。  
   
  *filename*  
  类文件的名称。  

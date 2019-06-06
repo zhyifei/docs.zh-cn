@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d45ed4f9bfb2c59bf2c01b373e919255c17e41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592873"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378673"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -26,7 +26,7 @@ ms.locfileid: "64592873"
   
  有关受支持操作系统的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关下载，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 若要确定计算机上安装的是哪个版本的 .NET Framework，请参阅[如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。  
   
- 在表中，带有标记 ✓ 的操作系统版本上安装的 .NET Framework 版本必须[在控制面板中启用](../../../docs/framework/install/dotnet-35-windows-10.md)（适用于 Windows）或通过服务器管理器启用（适用于 Windows Server），该标记显示在“包含在/可安装在 Windows 中”和“包含在/可安装在 Windows Server 中”列中。  
+ 在表中，带有标记 ✓ 的操作系统版本上安装的 .NET Framework 版本必须[在控制面板中启用](../../../docs/framework/install/dotnet-35-windows-10.md)（适用于 Windows）或通过服务器管理器启用（适用于 Windows Server），该标记显示在“包含在/可安装在 Windows 中”  和“包含在/可安装在 Windows Server 中”  列中。  
   
 |.NET Framework 版本|CLR 版本|包含于<br /> Visual Studio<br/>version|✓ 包括在内<br />+ 可在其上安装<br />Windows|✓ 包括在内<br />+ 可在其上安装<br />Windows Server|确定已安装的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
@@ -56,7 +56,7 @@ ms.locfileid: "64592873"
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>面向并运行 .NET Framework 版本 4.5 和更高版本的应用  
  .NET Framework 4.5 是替代计算机上的 .NET Framework 4 的就地更新，同样，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和 4.8 是对 .NET Framework 4.5 的就地更新，这意味着它们将使用相同的运行时版本，但程序集版本会更新并包含新类型和成员。 安装其中一个更新后，.NET Framework 4、.NET Framework 4.5、.NET Framework 4.6 或 .NET Framework 4.7 应用应继续运行，而无需重新编译。 但是，反过来则不行。 建议不要在较早版本的 .NET Framework 上运行面向更高版本的 .NET Framework 的应用。 例如，我们不建议在 .NET Framework 4.5 上运行面向 .NET Framework 4.6 的应用。 以下准则将适用：  
   
-- 在 Visual Studio 中，可以选择 .NET Framework 4.5 作为项目的目标框架（这将设置 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 属性），以将项目编译为 .NET Framework 4.5 程序集或可执行文件。 此程序集或可执行文件随后可用于安装了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的任何计算机。  
+- 在 Visual Studio 中，可以选择 .NET Framework 4.5 作为项目的目标框架（这将设置 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 属性），以将项目编译为 .NET Framework 4.5 程序集或可执行文件。 此程序集或可执行文件随后可用于安装了 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的任何计算机。  
   
 - 在 Visual Studio 中，可以选择 .NET Framework 4.5.1 作为项目​​的目标框架（这将设置 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> 属性），以将项目编译为 .NET Framework 4.5.1 程序集或可执行文件。 此程序集或可执行文件应仅在安装了 .NET Framework 4.5.1 或更高版本的 .NET Framework 的计算机上运行。 将阻止面向 .NET Framework 4.5.1 的可执行文件在仅安装了更低版本的 .NET Framework（​​例如 .NET Framework 4.5）的计算机上运行，并且系统会提示用户安装 .NET Framework 4.5.1。 此外，不应从面向更低版本的 .NET Framework（例如 .NET Framework 4.5）的应用中调用 .NET Framework 4.5.1 程序集。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "64592873"
   
 - 如果不熟悉 .NET Framework，请参阅[概述](../../../docs/framework/get-started/overview.md)以大致了解关键概念和功能。  
   
-- 有关 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本中的新功能和改进，请参阅 [.NET Framework 中的新增功能](../../../docs/framework/whats-new/index.md)。  
+- 有关 .NET Framework 4.5 及其单点版本中的新功能和改进，请参阅 [.NET Framework 中的新增功能](../../../docs/framework/whats-new/index.md)。  
   
-- 有关将应用从 .NET Framework 4 迁移到 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本的信息，请参阅[迁移指南](index.md)。  
+- 有关将应用从 .NET Framework 4 迁移到 .NET Framework 4.5 及其子版本的信息，请参阅[迁移指南](index.md)。  
   
 - 若要了解如何确定计算机上所安装的版本或更新，请参阅[如何：确定安装了哪些 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)和[如何：确定已安装的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。  
   

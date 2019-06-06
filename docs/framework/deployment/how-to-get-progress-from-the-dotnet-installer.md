@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750436"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379932"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可再发行运行时。 如果开发基于此 .NET framework 版本的应用程序，则可以将（链）[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序作为必备组件包括在应用的安装程序中。 若要提供自定义或统一的安装体验，可能需要以无提示方式启动 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序并跟踪其进度，同时显示应用的安装进度。 若要启用无提示跟踪，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序（可观察）通过使用内存映射 I/O (MMIO) 段来定义协议，以便与安装程序（观察程序或链接器）进行通信。 此协议定义链接器获取进度信息、详细结果，响应消息和取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装的方式。
+.NET Framework 4.5 是可再发行运行时。 如果开发基于此 .NET framework 版本的应用，则可以将 .NET Framework 4.5 安装程序作为必备组件包括（链接）在应用的安装程序中。 若要提供自定义或统一的安装体验，可能需要以无提示方式启动 .NET Framework 4.5 安装程序并跟踪其进度，同时显示应用的安装进度。 若要启用无提示跟踪，.NET Framework 4.5 安装程序（可观察）通过使用内存映射 I/O (MMIO) 段来定义协议，以便与安装程序（观察程序或链接器）进行通信。 此协议定义链接器获取进度信息、详细结果，响应消息和取消 .NET Framework 4.5 安装的方式。
 
-- **调用**。 若要调用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序并接收来自 MMIO 节的进度信息，安装程序必须执行以下操作：
+- **调用**。 若要调用 .NET Framework 4.5 安装程序并接收来自 MMIO 节的进度信息，安装程序必须执行以下操作：
 
-    1. 调用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行程序：
+    1. 调用 .NET Framework 4.5 可再发行程序：
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
         ```
 
-        其中“section name”是要用来标识应用的任意名称。 .NET Framework 安装程序以异步方式在 MMIO 节进行读写，因此可能会发现在此期间使用事件和消息很方便。 在示例中，.NET Framework 安装进程由分配 MMIO 节 (`TheSectionName`) 和定义事件 (`TheEventName`) 的构造函数创建：
+        其中“section name”  是要用来标识应用的任意名称。 .NET Framework 安装程序以异步方式在 MMIO 节进行读写，因此可能会发现在此期间使用事件和消息很方便。 在示例中，.NET Framework 安装进程由分配 MMIO 节 (`TheSectionName`) 和定义事件 (`TheEventName`) 的构造函数创建：
 
         ```
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
@@ -36,9 +36,9 @@ ms.locfileid: "64750436"
 
         请使用对于安装程序唯一的名称替换这些名称。
 
-    2. 从 MMIO 节读取。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，下载和安装操作是同时进行的：下载 .NET Framework 一部分的同时，可能正在安装另一部分。 因此，进度会以从 0 到 255 递增的两个数字（`m_downloadSoFar` 和 `m_installSoFar`）形式发送回（即写入）MMIO 节。 如果写入 255 且 .NET Framework 存在，则表示安装完成。
+    2. 从 MMIO 节读取。 在 .NET Framework 4.5 中，下载和安装操作是同时进行的：下载 .NET Framework 一部分的同时，可能正在安装另一部分。 因此，进度会以从 0 到 255 递增的两个数字（`m_downloadSoFar` 和 `m_installSoFar`）形式发送回（即写入）MMIO 节。 如果写入 255 且 .NET Framework 存在，则表示安装完成。
 
-- 退出代码。 以下命令中的退出代码用于调用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行程序，指示安装是成功还是失败：
+- 退出代码  。 以下命令中的退出代码用于调用 .NET Framework 4.5 可再发行程序，指示安装是成功还是失败：
 
   - 0 - 安装已成功完成。
 
@@ -48,11 +48,11 @@ ms.locfileid: "64750436"
 
   - 所有其他代码 - 安装过程中出现错误；请检查 %temp% 中创建的日志文件，了解详细信息。
 
-- 取消安装。 可随时通过使用 `Abort` 方法在 MMIO 节中设置 `m_downloadAbort` 和 `m_ installAbort` 标志来取消安装。
+- 取消安装  。 可随时通过使用 `Abort` 方法在 MMIO 节中设置 `m_downloadAbort` 和 `m_ installAbort` 标志来取消安装。
 
 ## <a name="chainer-sample"></a>链接器示例
 
-链接器示例以无提示方式启动并跟踪 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序，同时显示进度。 此示例类似于为 .NET Framework 4 提供的链接器示例。 但是，它还可以通过处理用于关闭 .NET framework 4 应用的消息框来避免系统重启。 有关此消息框的信息，请参阅[在 .NET Framework 4.5 安装期间减少系统重启](../../../docs/framework/deployment/reducing-system-restarts.md)。 可以将此示例与 .NET Framework 4 安装程序结合使用；在这种情况下，不会发送消息。
+链接器示例以无提示方式启动并跟踪 .NET Framework 4.5 安装程序，同时显示进度。 此示例类似于为 .NET Framework 4 提供的链接器示例。 但是，它还可以通过处理用于关闭 .NET framework 4 应用的消息框来避免系统重启。 有关此消息框的信息，请参阅[在 .NET Framework 4.5 安装期间减少系统重启](../../../docs/framework/deployment/reducing-system-restarts.md)。 可以将此示例与 .NET Framework 4 安装程序结合使用；在这种情况下，不会发送消息。
 
 > [!WARNING]
 > 必须以管理员身份运行此示例。
@@ -63,7 +63,7 @@ ms.locfileid: "64750436"
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- MMIOChainer.h 文件（请参阅[完整代码](https://go.microsoft.com/fwlink/?LinkId=231369)）包含数据结构定义和链接器类应派生自的基类。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 扩展 MMIO 数据结构，处理 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序需要的数据。 对 MMIO 结构的更改为后向兼容，因此 .NET Framework 4 链接器可在无需重新编译的情况下与 .NET Framework 4.5 安装程序结合使用。 但是，此方案不支持用于减少系统重启的功能。
+- MMIOChainer.h 文件（请参阅[完整代码](https://go.microsoft.com/fwlink/?LinkId=231369)）包含数据结构定义和链接器类应派生自的基类。 .NET Framework 4.5 扩展 MMIO 数据结构，处理 .NET Framework 4.5 安装程序需要的数据。 对 MMIO 结构的更改为后向兼容，因此 .NET Framework 4 链接器可在无需重新编译的情况下与 .NET Framework 4.5 安装程序结合使用。 但是，此方案不支持用于减少系统重启的功能。
 
     版本字段提供标识结构和消息格式的修订的方法。 .NET Framework 安装程序通过调用 `VirtualQuery` 函数来确定文件映射的大小，从而确定链接器接口的版本。 如果大小足以容纳版本字段，则 .NET framework 安装程序将使用该指定值。 如果文件映射因过小而无法包含版本字段（.NET framework 4 即是这种情况），则安装过程假定为版本 0 (4)。 如果链接器不支持 .NET framework 安装程序希望发送的消息版本，则 .NET framework 安装程序会假定一个忽略响应。
 
@@ -96,7 +96,7 @@ ms.locfileid: "64750436"
         };
     ```
 
-- 不应直接使用 `MmioDataStructure` 数据结构；而应改用 `MmioChainer` 类以实现链接器。 派生自 `MmioChainer` 类，链接 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行组件。
+- 不应直接使用 `MmioDataStructure` 数据结构；而应改用 `MmioChainer` 类以实现链接器。 派生自 `MmioChainer` 类，链接 .NET Framework 4.5 可再发行组件。
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ ms.locfileid: "64750436"
     }
     ```
 
-- 启动安装之前，链接器会先进行检查，查看是否已通过调用 `IsNetFx4Present` 安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]：
+- 启动安装之前，链接器会先进行检查，查看是否已通过调用 `IsNetFx4Present` 安装 .NET Framework 4.5：
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ ms.locfileid: "64750436"
     ```
 
     > [!IMPORTANT]
-    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行组件通常会写入多条进度消息和一条指示完成的消息（在链接器端）。 它还会以异步方式进行读取，查找 `Abort` 记录。 如果接收到 `Abort` 记录，则会取消安装，并在安装中止和安装操作回退后，使用 E ABORT 作为其数据编写已完成记录。
+    > .NET Framework 4.5 可再发行组件通常会写入多条进度消息和一条指示完成的消息（在链接器端）。 它还会以异步方式进行读取，查找 `Abort` 记录。 如果接收到 `Abort` 记录，则会取消安装，并在安装中止和安装操作回退后，使用 E ABORT 作为其数据编写已完成记录。
 
 典型的服务器会创建随机 MMIO 文件名、创建文件（如上一个代码示例 `Server::CreateSection` 中所示），并通过使用 `CreateProcess` 和借助 `-pipe someFileSectionName` 选项传递管道名称来启动可再发行组件。 服务器应使用特定于应用程序 UI 的代码来实现 `OnProgress`、`Send` 和 `Finished` 方法。
 

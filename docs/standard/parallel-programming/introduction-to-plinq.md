@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 670ed89754aa9b4d2052bb1186e0139618190cd6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676884"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457490"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 介绍
 
@@ -107,7 +107,7 @@ ms.locfileid: "57676884"
 
 ## <a name="cancellation"></a>取消
 
-PLINQ 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中与取消类型集成在一起。 （有关详细信息，请参阅[托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。）因此，与顺序 LINQ to Objects 查询不同，可以取消 PLINQ 查询。 若要创建可取消 PLINQ 查询，请在查询中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 运算符，并提供 <xref:System.Threading.CancellationToken> 实例作为参数。 如果令牌上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性设置为 true，PLINQ 就会注意到它，停止处理所有线程并抛出 <xref:System.OperationCanceledException>。
+PLINQ 在 .NET Framework 4 中与取消类型集成在一起。 （有关详细信息，请参阅[托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。）因此，与顺序 LINQ to Objects 查询不同，可以取消 PLINQ 查询。 若要创建可取消 PLINQ 查询，请在查询中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 运算符，并提供 <xref:System.Threading.CancellationToken> 实例作为参数。 如果令牌上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性设置为 true，PLINQ 就会注意到它，停止处理所有线程并抛出 <xref:System.OperationCanceledException>。
 
 在设置取消标记后，PLINQ 查询还可能会继续处理一些元素。
 

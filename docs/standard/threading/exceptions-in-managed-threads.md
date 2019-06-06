@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645007"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377467"
 ---
 # <a name="exceptions-in-managed-threads"></a>托管线程中的异常
 从 .NET Framework 2.0 版开始，公共语言运行时允许线程中的多数未经处理的异常正常继续。 在多数情况下，这意味着未经处理的异常会导致应用程序终止。  
@@ -39,7 +39,7 @@ ms.locfileid: "64645007"
 >  运行时有可能在任何托管代码有机会安装异常处理程序之前，引发一个未经处理的异常。 即使托管代码没有机会处理此类异常，仍允许异常正常继续。  
   
 ## <a name="exposing-threading-problems-during-development"></a>在开发过程中暴露线程处理问题  
- 如果允许线程不给出任何提示就失败（不终止应用程序），则可能无法检测出重大的编程问题。 对于长时间运行的服务和其他应用程序，此问题尤为严重。 当线程失败时，程序状态会逐渐损坏。 应用程序性能可能会降低，也可能挂起。  
+ 如果允许线程不给出任何提示就失败（不终止应用程序），则可能无法检测出重大的编程问题。 对于长时间运行的服务和其他应用程序，此问题尤为严重。 当线程失败时，程序状态会逐渐损坏。 应用程序性能可能会降低，应用程序也可能无响应。  
   
  如果允许线程中未经处理的异常正常继续，直到操作系统终止程序为止，将会在开发和测试过程中暴露此类问题。 程序终止的错误报告支持调试。  
   

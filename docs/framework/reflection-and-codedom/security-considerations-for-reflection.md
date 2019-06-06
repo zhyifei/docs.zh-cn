@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585977"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457293"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 通过反射能够获取有关类型和成员的信息，并能访问成员（即，调用方法和构造函数来获取和设置属性值，添加和移除事件处理程序，等等）。 使用反射可以获取有关类型的信息并且成员是不受限制的。 所有代码都可使用反射来执行以下任务：  
@@ -58,10 +58,10 @@ ms.locfileid: "65585977"
   
  从命令行运行的应用程序代码将以“完全信任”运行。 只要不被标记为透明，它就可以使用反射来访问安全关键成员。 当同一代码以部分信任运行时（例如，在沙箱应用程序域中），程序集的信任级别将决定其是否能够访问安全关键代码：如果程序集有强名称并安装在全局程序集缓存中，则是受信任的程序集，可以调用安全关键成员。 如果不是受信任的，即使未标记为透明，它也将变为透明，并且它不能访问安全关键成员。  
   
- 有关 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中安全模型的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
+ 有关 .NET Framework 4 中安全模型的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
   
 ## <a name="reflection-and-transparency"></a>反射和透明度  
- 以 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，公共语言运行时从若干方面确定一个类型或成员的透明度级别，包括程序集和应用程序域的信任级别。 反射提供了 <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A> 和 <xref:System.Type.IsSecurityTransparent%2A> 属性，以使你能够发现类型的透明度级别。 下表显示了这些属性的有效组合。  
+ 以 .NET Framework 4 开始，公共语言运行时从若干方面确定一个类型或成员的透明度级别，包括程序集和应用程序域的信任级别。 反射提供了 <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A> 和 <xref:System.Type.IsSecurityTransparent%2A> 属性，以使你能够发现类型的透明度级别。 下表显示了这些属性的有效组合。  
   
 |安全级别|IsSecurityCritical|IsSecurityCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

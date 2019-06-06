@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481257"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457426"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 
@@ -139,7 +139,7 @@ ngen /? | /help
 > [!CAUTION]
 > 不在未完全受信任的程序集上运行 Ngen.exe。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，Ngen.exe 按照完全信任的状态编译程序集，并且不再评估代码访问安全性 (CAS) 策略。
 
-从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，使用 Ngen.exe 生成的本机映像不再载入到按照部分信任的状态运行的应用程序中。 而是，调用了实时 (JIT) 编译器。
+从 .NET Framework 4 开始，使用 Ngen.exe 生成的本机映像不再载入到按照部分信任的状态运行的应用程序中。 而是，调用了实时 (JIT) 编译器。
 
 Ngen.exe 为 `assemblyname` 参数对 `install` 操作指定的程序集及其所有依赖项生成本机映像。 依赖项是根据程序集清单中的引用来确定的。 仅在应用程序使用反射（例如，通过调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法）来加载依赖项的情况下，你才需要单独安装依赖项。
 
@@ -401,7 +401,7 @@ Ngen.exe 在生成本机映像时记录这些信息。 当你执行程序集时�
 
 ### <a name="assembly-binding-log-viewer"></a>程序集绑定日志查看器
 
-若要确认应用程序正在使用本机映像，可使用 [Fuslogvw.exe（程序集绑定日志查看器）](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)。 在绑定日志查看器窗口上，选择“日志类别”框中的“本机映像”。 Fuslogvw.exe 提供了有关本机映像被拒绝的原因的信息。
+若要确认应用程序正在使用本机映像，可使用 [Fuslogvw.exe（程序集绑定日志查看器）](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)。 在绑定日志查看器窗口上，选择“日志类别”  框中的“本机映像”  。 Fuslogvw.exe 提供了有关本机映像被拒绝的原因的信息。
 
 <a name="MDA"></a>
 

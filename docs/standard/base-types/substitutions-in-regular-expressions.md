@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030148"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301507"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正则表达式中的替代
 <a name="Top"></a> 替换是只能在替换模式中识别的语言元素。 它们使用正则表达式模式定义全部或部分用于替换输入字符串中的匹配文本的文本。 替换模式可以包含一个或多个替换以及本文字符。 提供替换模式以将拥有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 参数的 `replacement` 方法重载至 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 该方法将匹配的模式替换为 `replacement` 参数定义的模式。  
@@ -29,14 +29,14 @@ ms.locfileid: "54030148"
   
 |替换|说明|  
 |------------------|-----------------|  
-|`$` *数值*|包括替换字符串中的由 *number*标识的捕获组所匹配的最后一个子字符串，其中 *number* 是一个十进制值。 有关详细信息，请参阅 [替换已编号的组](#Numbered)。|  
-|`${` *name* `}`|包括替换字符串中由 `(?<`*name*`> )` 指定的命名组所匹配的最后一个子字符串。 有关详细信息，请参阅 [替换命名组](#Named)。|  
-|`$$`|包括替换字符串中的单个“$”文本。 有关详细信息，请参阅 [替换“$”符号](#DollarSign)。|  
-|`$&`|包括替换字符串中整个匹配项的副本。 有关详细信息，请参阅 [替换整个匹配项](#EntireMatch)。|  
-|``$` ``|包括替换字符串中的匹配项前的输入字符串的所有文本。 有关详细信息，请参阅 [替换匹配项前的文本](#BeforeMatch)。|  
-|`$'`|包括替换字符串中的匹配项后的输入字符串的所有文本。 有关详细信息，请参阅 [替换匹配项后的文本](#AfterMatch)。|  
-|`$+`|包括在替换字符串中捕获的最后一个组。 有关详细信息，请参阅 [替换最后捕获的组](#LastGroup)。|  
-|`$_`|包括替换字符串中的整个输入字符串。 有关详细信息，请参阅 [替换整个输入字符串](#EntireString)。|  
+|$ number |包括替换字符串中的由 *number*标识的捕获组所匹配的最后一个子字符串，其中 *number* 是一个十进制值。 有关详细信息，请参阅 [替换已编号的组](#Numbered)。|  
+|${ name  }|包括替换字符串中由 `(?<`*name*`> )` 指定的命名组所匹配的最后一个子字符串。 有关详细信息，请参阅 [替换命名组](#Named)。|  
+|$$|包括替换字符串中的单个“$”文本。 有关详细信息，请参阅 [替换“$”符号](#DollarSign)。|  
+|$&|包括替换字符串中整个匹配项的副本。 有关详细信息，请参阅 [替换整个匹配项](#EntireMatch)。|  
+|$\`|包括替换字符串中的匹配项前的输入字符串的所有文本。 有关详细信息，请参阅 [替换匹配项前的文本](#BeforeMatch)。|  
+|$'|包括替换字符串中的匹配项后的输入字符串的所有文本。 有关详细信息，请参阅 [替换匹配项后的文本](#AfterMatch)。|  
+|$+|包括在替换字符串中捕获的最后一个组。 有关详细信息，请参阅 [替换最后捕获的组](#LastGroup)。|  
+|$_|包括替换字符串中的整个输入字符串。 有关详细信息，请参阅 [替换整个输入字符串](#EntireString)。|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>替换元素和替换模式  
  替换是替换模式中唯一可识别的特殊构造。 与任何字符匹配的其他正则表达式语言元素（包括字符转义和句点 (`.`)）均不受支持。 同样，替换语言元素只能在替换模式中识别，并且在正则表达式模式中永远无效。  
@@ -157,7 +157,7 @@ ms.locfileid: "54030148"
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddeeaa1bb2cc3dd4ee|  
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddeeaa1bb2cc3dd4ee |  
   
  [返回页首](#Top)  
   

@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237033"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422031"
 ---
 # <a name="default-values-table-c-reference"></a>默认值表（C# 参考）
 
@@ -57,7 +57,7 @@ int a = default(int);
 int a = default;
 ```
 
-还可使用默认构造函数或隐式默认构造函数来生成值类型的默认值，如以下示例所示。 有关构造函数的详细信息，请参阅[构造函数](../../programming-guide/classes-and-structs/constructors.md)一文。
+还可使用无参数构造函数或隐式无参数构造函数来生成值类型的默认值，如以下示例所示。 有关构造函数的详细信息，请参阅[构造函数](../../programming-guide/classes-and-structs/constructors.md)一文。
 
 ```csharp
 int a = new int();
@@ -70,7 +70,6 @@ int a = new int();
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [类型引用表](reference-tables-for-types.md)
 - [值类型](value-types.md)
 - [值类型表](value-types-table.md)
 - [内置类型表](built-in-types-table.md)

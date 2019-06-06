@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634733"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378168"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 <a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -120,7 +120,7 @@ ms.locfileid: "64634733"
   
 - 它返回到以前保存的匹配 3。 它确定有两个附加的“a”字符可分配给其他捕获的组。 但是，字符串末尾测试失败。 然后，它返回 match3 并尝试在两个附加的捕获组中匹配两个附加的“a”字符。 字符串末尾测试仍失败。 这些失败的匹配需要进行 12 次比较。 到目前为止，总共执行了 25 次比较。  
   
- 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。  
+ 输入字符串与正则表达式的比较将以此方式继续，直到正则表达式引擎已尝试所有可能的匹配组合然后得出无匹配的结论。 因为存在嵌套的限定符，所以此比较为 O(2<sup>n</sup>) 或指数操作，其中 n 是输入字符串中的字符数  。 这意味着在最糟糕的情况下，包含 30 个字符的输入字符串大约需要进行 1,073,741,824 次比较，包含 40 个字符的输入字符串大约需要进行 1,099,511,627,776 次比较。 如果使用上述长度甚至更长的字符串，则正则表达式方法在处理与正则表达式模式不匹配的输入时，会需要超长的时间来完成。  
   
  [返回页首](#top)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "64634733"
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>定义超时间隔  
- 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]开始，你可以设置超时值，该值表示正则表达式引擎在放弃尝试并引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常之前将搜索单个匹配项的最长间隔。 你可以通过向实例正则表达式的 <xref:System.TimeSpan> 构造函数提供 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值来指定超时间隔。 此外，每种静态模式匹配方法都具有带 <xref:System.TimeSpan> 参数的重载，该参数允许你指定超时值。 默认情况下，超时间隔设置为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 且正则表达式引擎不会超时。  
+ 从 .NET Framework 4.5 开始，可以设置超时值，该值表示正则表达式引擎在放弃尝试并引发 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 异常之前将搜索单个匹配项的最长间隔。 你可以通过向实例正则表达式的 <xref:System.TimeSpan> 构造函数提供 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值来指定超时间隔。 此外，每种静态模式匹配方法都具有带 <xref:System.TimeSpan> 参数的重载，该参数允许你指定超时值。 默认情况下，超时间隔设置为 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 且正则表达式引擎不会超时。  
   
 > [!IMPORTANT]
 >  如果正则表达式依赖回溯，建议你始终设置超时间隔。  
@@ -153,7 +153,7 @@ ms.locfileid: "64634733"
   
 <a name="Lookbehind"></a>   
 ### <a name="lookbehind-assertions"></a>回顾断言  
- .NET 包括两个语言元素（`(?<=`subexpression`)` 和 `(?<!`subexpression`)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
+ .NET 包括两个语言元素（`(?<=`subexpression  `)` 和 `(?<!`subexpression  `)`），它们与输入字符串中之前的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而而不是前移或回溯来确定当前字符之前紧挨着的一个或多个字符是否匹配。  
   
  `(?<=` *subexpression* `)` 是正回顾断言；也就是说，当前位置之前的一个或多个字符必须与 *subexpression*匹配。 `(?<!`*subexpression*`)` 是负回顾断言；也就是说，当前位置之前的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为前一个子表达式的子集时，正回顾断言和负回顾断言都最为有用。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "64634733"
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>预测先行断言  
- .NET 包括两个语言元素（`(?=`subexpression`)` 和 `(?!`subexpression`)`），它们与输入字符串中接下来的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之后紧挨着的一个或多个字符是否匹配。  
+ .NET 包括两个语言元素（`(?=`subexpression  `)` 和 `(?!`subexpression  `)`），它们与输入字符串中接下来的一个或多个字符匹配。 这两个语言元素都是零宽度断言；也就是说，它们通过 *subexpression*而不是前移或回溯来确定当前字符之后紧挨着的一个或多个字符是否匹配。  
   
  `(?=` *subexpression* `)` 是正预测先行断言；也就是说，当前位置之后的一个或多个字符必须与 *subexpression*匹配。 `(?!`*subexpression*`)` 是负预测先行断言；也就是说，当前位置之后的一个或多个字符不得与 *subexpression*匹配。 当 *subexpression* 为下一个子表达式的子集时，正预测先行断言和负预测先行断言都最为有用。  
   

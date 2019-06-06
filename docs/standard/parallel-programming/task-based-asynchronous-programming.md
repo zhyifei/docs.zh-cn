@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409921"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300635"
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 
-任务并行库 (TPL) 以“任务”的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”是指一个或多个独立的任务同时运行。 任务提供两个主要好处：
+任务并行库 (TPL) 以“任务”  的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”  是指一个或多个独立的任务同时运行。 任务提供两个主要好处：
 
 - 系统资源的使用效率更高，可伸缩性更好。
 
@@ -91,7 +91,7 @@ ms.locfileid: "58409921"
 
 ## <a name="task-id"></a>任务 ID
 
-每个任务都获得一个在应用程序域中唯一标识自己的整数 ID，可以使用 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> 属性访问该 ID。 该 ID 可有效用于在 Visual Studio 调试器的“并行堆栈”和“任务”窗口中查看任务信息。 该 ID 是惰式创建的，这意味着它不会在被请求之前创建；因此每次运行该程序时，任务可能具有不同的 ID。 有关如何在调试器中查看任务 ID 的详细信息，请参阅[使用任务窗口](/visualstudio/debugger/using-the-tasks-window)和[使用并行堆栈窗口](/visualstudio/debugger/using-the-parallel-stacks-window)。
+每个任务都获得一个在应用程序域中唯一标识自己的整数 ID，可以使用 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> 属性访问该 ID。 该 ID 可有效用于在 Visual Studio 调试器的“并行堆栈”  和“任务”  窗口中查看任务信息。 该 ID 是惰式创建的，这意味着它不会在被请求之前创建；因此每次运行该程序时，任务可能具有不同的 ID。 有关如何在调试器中查看任务 ID 的详细信息，请参阅[使用任务窗口](/visualstudio/debugger/using-the-tasks-window)和[使用并行堆栈窗口](/visualstudio/debugger/using-the-parallel-stacks-window)。
 
 ## <a name="task-creation-options"></a>任务创建选项
 
@@ -113,27 +113,27 @@ ms.locfileid: "58409921"
 
 ## <a name="tasks-threads-and-culture"></a>任务、线程和区域性
 
-每个线程都具有一个关联的区域性和 UI 区域性，分别由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 属性定义。 线程的区域性用在诸如格式、分析、排序和字符串比较操作中。 线程的 UI 区域性用于查找资源。 通常，除非使用 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性在应用程序域中为所有线程指定默认区域性，线程的默认区域性和 UI 区域性则由系统区域性定义。 如果你显式设置线程的区域性并启动新线程，则新线程不会继承正在调用的线程的区域性；相反，其区域性就是默认系统区域性。 基于任务的应用编程模型遵循这种做法，这些应用指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 之前的 .NET Framework 版本。
+每个线程都具有一个关联的区域性和 UI 区域性，分别由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 属性定义。 线程的区域性用在诸如格式、分析、排序和字符串比较操作中。 线程的 UI 区域性用于查找资源。 通常，除非使用 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性在应用程序域中为所有线程指定默认区域性，线程的默认区域性和 UI 区域性则由系统区域性定义。 如果你显式设置线程的区域性并启动新线程，则新线程不会继承正在调用的线程的区域性；相反，其区域性就是默认系统区域性。 基于任务的应用编程模型遵循这种做法，这些应用指定 .NET Framework 4.6 之前的 .NET Framework 版本。
 
 > [!IMPORTANT]
-> 请注意，作为任务上下文一部分的调用线程的区域性适用于面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用，而不是在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 下运行的应用。 可以在 Visual Studio 中创建项目时，定目标到特定版本的 .NET Framework，具体操作是从“新建项目”对话框顶部的下拉列表选择相应版本。在 Visual Studio 外部，可以使用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性定目标到特定版本。 对于指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 之前的 .NET Framework 版本的应用，或者对于不指定 .NET framework 特定版本的应用，任务的区域性将继续由它运行的线程的区域性确定。
+> 请注意，作为任务上下文一部分的调用线程的区域性适用于面向.NET Framework 4.6 的应用，而不是在 .NET Framework 4.6 下运行的应用   。 可以在 Visual Studio 中创建项目时，定目标到特定版本的 .NET Framework，具体操作是从“新建项目”  对话框顶部的下拉列表选择相应版本。在 Visual Studio 外部，可以使用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性定目标到特定版本。 对于指定 .NET Framework 4.6 之前的 .NET Framework 版本的应用，或者对于不指定 .NET Framework 特定版本的应用，任务的区域性将继续由它运行的线程的区域性确定。
 
-启动指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用程序，即使任务在线程池线程上以异步方式运行，调用线程的区域性仍然通过每个任务继承。
+启动指定 .NET Framework 4.6 的应用程序，即使任务在线程池线程上以异步方式运行，调用线程的区域性仍然通过每个任务继承。
 
-下面的示例提供了简单的演示。 它使用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 特性来指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]，并将应用程序的当前区域性更改为 French (France)，或者，如果 French (France) 已为当前区域性，则更改为 English (United States)。 然后，调用一个名为 `formatDelegate` 的委托，该委托返回在新区域性中格式化为货币值的数字。 注意无论该委托是同步还是异步作为任务，它都将返回预期的结果，因为调用线程的区域性是由异步任务继承的。
+下面的示例提供了简单的演示。 它使用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 特性来指定 .NET Framework 4.6，并将应用程序的当前区域性更改为 French (France)，或者，如果 French (France) 已为当前区域性，则更改为 English (United States)。 然后，调用一个名为 `formatDelegate` 的委托，该委托返回在新区域性中格式化为货币值的数字。 注意无论该委托是同步还是异步作为任务，它都将返回预期的结果，因为调用线程的区域性是由异步任务继承的。
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
-如果使用的是 Visual Studio，可以省略 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性，并在创建项目时在“新建项目”对话框中改选“.NET Framework 4.6”作为目标。
+如果使用的是 Visual Studio，可以省略 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性，并在创建项目时在“新建项目”  对话框中改选“.NET Framework 4.6”作为目标。
 
-对于反映指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 之前的 .NET Framework 版本的应用程序行为的输出，请从源代码中移除 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性。 输出将会反应默认系统区域性的格式设置约定，而不是调用线程的区域性。
+对于反映指定 .NET Framework 4.6 之前的 .NET Framework 版本的应用程序行为的输出，请从源代码中移除 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性。 输出将会反应默认系统区域性的格式设置约定，而不是调用线程的区域性。
 
 有关异步任务和区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 主题中的“区域性和基于异步任务的操作”部分。
 
 ## <a name="creating-task-continuations"></a>创建任务延续
 
-使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法，可以指定要在先行任务完成时启动的任务。 延续任务的委托已传递了对先行任务的引用，因此它可以检查先行任务的状态，并通过检索 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性的值将先行任务的输出用作延续任务的输入。
+使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法，可以指定要在先行任务  完成时启动的任务。 延续任务的委托已传递了对先行任务的引用，因此它可以检查先行任务的状态，并通过检索 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性的值将先行任务的输出用作延续任务的输入。
 
 在下面的示例中，`getData` 任务通过调用 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 方法来启动。 当 `processData` 完成时，`getData` 任务自动启动，当 `displayData` 完成时，`processData` 启动。 `getData` 产生一个整数数组，通过 `processData` 任务的 `getData` 属性，<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 任务可访问该数组。 `processData` 任务处理该数组并返回结果，结果的类型从传递到 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 方法的 Lambda 表达式的返回类型推断而来。 `displayData` 完成时，`processData` 任务自动执行，而 <xref:System.Tuple%603> 任务可通过 `processData` 任务的 `displayData` 属性访问由 `processData` lambda 表达式返回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 对象。 `displayData` 任务采用 `processData` 任务的结果，继而得出自己的结果，其类型以相似方式推断而来，且可由程序中的 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性使用。
 
@@ -151,7 +151,7 @@ ms.locfileid: "58409921"
 
 ## <a name="creating-detached-child-tasks"></a>创建分离的子任务
 
-如果在任务中运行的用户代码创建一个新任务，且未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项，则该新任务不采用任何特殊方式与父任务同步。 这种不同步的任务类型称为“分离的嵌套任务”或“分离的子任务”。 以下示例展示了创建一个分离子任务的任务。
+如果在任务中运行的用户代码创建一个新任务，且未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项，则该新任务不采用任何特殊方式与父任务同步。 这种不同步的任务类型称为“分离的嵌套任务”  或“分离的子任务”  。 以下示例展示了创建一个分离子任务的任务。
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]
@@ -160,7 +160,7 @@ ms.locfileid: "58409921"
 
 ## <a name="creating-child-tasks"></a>创建子任务
 
-如果任务中运行的用户代码在创建任务时指定了 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项，新任务就称为父任务的附加子任务。 因为父任务隐式地等待所有附加子任务完成，所以你可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项表示结构化的任务并行。 以下示例展示了创建十个附加子任务的父任务。 请注意，虽然此示例调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等待父任务完成，但不必显式等待附加子任务完成。
+如果任务中运行的用户代码在创建任务时指定了 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项，新任务就称为父任务的附加子任务  。 因为父任务隐式地等待所有附加子任务完成，所以你可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项表示结构化的任务并行。 以下示例展示了创建十个附加子任务的父任务。 请注意，虽然此示例调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等待父任务完成，但不必显式等待附加子任务完成。
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]

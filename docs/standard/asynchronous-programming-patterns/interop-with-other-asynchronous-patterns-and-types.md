@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2736c4758cbaaeda902b43aeea55611a21ea38ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623812"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457344"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>与其他异步模式和类型互操作
 .NET Framework 1.0 引进了 <xref:System.IAsyncResult> 模式，也称为 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)或 `Begin/End` 模式。  .NET Framework 2.0 增加了 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  从.NET Framework 4 开始， [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 取代了 APM 和 EAP，但能够轻松构建从早期模式中迁移的例程。  
@@ -37,7 +37,7 @@ ms.locfileid: "64623812"
   
 <a name="ApmToTap"></a>   
 ### <a name="from-apm-to-tap"></a>从 APM 到 TAP  
- 因为 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 模式的结构非常合理，而且能够轻松生成包装，将 APM 实现公开为 TAP 实现。 实际上，自 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]之后的 .NET Framework 就包含采用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法重载形式的帮助器例程来实现这种转换。  
+ 因为 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 模式的结构非常合理，而且能够轻松生成包装，将 APM 实现公开为 TAP 实现。 实际上，自 .NET Framework 4 之后的 .NET Framework 就包含采用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法重载形式的帮助器例程来实现这种转换。  
   
  请考虑 <xref:System.IO.Stream> 类及其 <xref:System.IO.Stream.BeginRead%2A> 和 <xref:System.IO.Stream.EndRead%2A> 方法，它们代表与同步 <xref:System.IO.Stream.Read%2A> 方法对应的 APM：  
   

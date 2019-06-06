@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 25f716084c489c834e9242800f4c7e341c41aa58
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 84976d37514db851fd19c882b2c4c9cb003fc4bf
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880664"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250807"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算术运算符（C# 参考）
 
@@ -51,13 +51,13 @@ ms.locfileid: "65880664"
 
 ### <a name="postfix-increment-operator"></a>后缀递增运算符
 
-`x++` 的结果是此操作前的 `x` 的值，如以下示例所示：
+`x++` 的结果是此操作前的 `x`  的值，如以下示例所示：
 
 [!code-csharp-interactive[postfix increment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>前缀增量运算符
 
-`++x` 的结果是此操作后的 `x` 的值，如以下示例所示：
+`++x` 的结果是此操作后的 `x`  的值，如以下示例所示：
 
 [!code-csharp-interactive[prefix increment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "65880664"
 
 ### <a name="postfix-decrement-operator"></a>后缀递减运算符
 
-`x--` 的结果是此操作前的 `x` 的值，如以下示例所示：
+`x--` 的结果是此操作前的 `x`  的值，如以下示例所示：
 
 [!code-csharp-interactive[postfix decrement](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>前缀减量运算符
 
-`--x` 的结果是此操作后的 `x` 的值，如以下示例所示：
+`--x` 的结果是此操作后的 `x`  的值，如以下示例所示：
 
 [!code-csharp-interactive[prefix decrement](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -153,7 +153,7 @@ ms.locfileid: "65880664"
 
 [!code-csharp-interactive[addition operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
 
-还可以将 `+` 运算符用于字符串串联和委托组合。 有关详细信息，请参阅[`+`运算符](addition-operator.md)一文。
+还可以将 `+` 运算符用于字符串串联和委托组合。 有关详细信息，请参阅 [`+` 和 `+=` 运算符](addition-operator.md)一文。
 
 ## <a name="subtraction-operator--"></a>减法运算符 -
 
@@ -183,7 +183,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
-由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `x` 的 `T` 类型。 在此类情况下，如果 `op` 是预定义的运算符并且运算的结果可显式转换为 `x` 的 `T` 类型，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
+由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op` 运算的结果可能不会隐式转换为 `x` 的 `T` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `x` 的类型 `T`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 

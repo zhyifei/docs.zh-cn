@@ -1,15 +1,15 @@
 ---
 title: 在销售异常情况检测方案中使用 ML.NET
 description: 了解如何在产品销售异常情况检测方案中使用 ML.NET，以了解如何针对异常峰值和更改点分析数据，从而采取适当的措施。
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641145"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423936"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>教程：将 ML.NET 用于产品销售异常情况检测 
 
@@ -38,13 +38,13 @@ ms.locfileid: "65641145"
 
 1. 创建名为“ProductSalesAnomalyDetection”的 **.NET Core 控制台应用程序**。
 
-2. 在项目中创建名为“Data”的目录，用于保存数据集文件。
+2. 在项目中创建名为“Data”的目录，用于保存数据集文件  。
 
-3. 安装“Microsoft.ML NuGet 包”：
+3. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，选择列表中的“v1.0.0”包，再选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对 **Microsoft.ML.TimeSeries v0.12.0** 重复这些步骤。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，选择列表中的“v1.0.0”包，再选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 **Microsoft.ML.TimeSeries v0.12.0** 重复这些步骤。
 
-4. 在 Program.cs 文件的顶部添加以下 `using` 语句：
+4. 在 Program.cs 文件的顶部添加以下 `using` 语句  ：
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddUsings "Add necessary usings")]
 
@@ -56,7 +56,7 @@ ms.locfileid: "65641145"
 
      确保将 \*.csv 文件保存到 *Data* 文件夹，或者在将其保存到其他位置后，将 \*.csv 文件移动到 *Data* 文件夹。
 
-2. 在解决方案资源管理器中，右键单击 \*.csv 文件并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+2. 在解决方案资源管理器中，右键单击 \*.csv 文件并选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 下表是来自 \*.csv 文件的数据预览：
 
@@ -74,9 +74,9 @@ ms.locfileid: "65641145"
 
 向项目添加一个新类：
 
-1. 在“解决方案资源管理器”中，右键单击该项目，然后选择“添加”>“新项”。
+1. 在“解决方案资源管理器”中，右键单击该项目，然后选择“添加”>“新项”   。
 
-2. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“ProductSalesData.cs”。 然后，选择“添加”按钮。
+2. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“ProductSalesData.cs”     。 然后，选择“添加”  按钮。
 
 此时，*ProductSalesData.cs* 文件在代码编辑器中打开。 将以下 `using` 语句添加到 *ProductSalesData.cs* 顶部：
 
@@ -90,7 +90,7 @@ using Microsoft.ML.Data;
 
 `ProductSalesData` 指定输入数据类。 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 属性指定应加载数据集中的哪些列（按列索引）。 
 
-将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+将以下附加的 `using` 语句添加到“Program.cs”  文件顶部：
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddUsings "Add necessary usings")]
 
@@ -173,7 +173,7 @@ static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-在 `DetectSpike()` 方法中添加以下代码作为下一代码行，使模型适应 `productSales` 数据，并返回经过训练的模型：
+通过在 `DetectSpike()` 方法中添加以下代码作为下一代码行来使模型适应 `productSales` 数据：
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-如之前一样，在 `DetectChangePoint()` 方法中添加以下代码作为下一行代码，使模型与 `productSales` 数据拟合，并返回经过训练的模型：
+如之前一样，通过在 `DetectChangePoint()` 方法中添加以下代码作为下一代码行来使模型适应 `productSales` 数据：
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 
