@@ -271,10 +271,10 @@ Dim arrZ(-1) As String
 
 在将每个数组的元素复制到新数组前，首先必须确保已初始化了该数组，确保它有足够的空间来容纳新数组。 可以通过两种方法执行此操作：
 
-- 使用[ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md)语句，以便动态地将新元素添加到它之前展开数组。 这是最简单的技术，但它可能会导致性能下降并占用过多内存时要复制大型数组。
-- 计算所需的新的大型数组的元素的总数，然后将每个源数组的元素添加到它。
+- 使用[ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md)语句，以便在向数组添加新元素之前将其动态扩大。 这是最简单的方法，但在复制大型数组时可能会导致性能下降并占用过多内存。
+- 计算新大型数组所需的元素总数，然后将每个源数组的元素添加到其中。
 
-以下示例使用第二种方法将具有 10 个元素的四个数组添加到单个数组。
+以下示例使用第二种方法将分别具有 10 个元素的四个数组添加到一个数组中。
 
 [!code-vb[joining-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join.vb)]
 
@@ -284,11 +284,11 @@ Dim arrZ(-1) As String
 
 ## <a name="collections-as-an-alternative-to-arrays"></a>作为数组的替代方法的集合
 
-数组最适用于创建和使用固定数量的强类型化对象。 集合提供更灵活的方式来使用对象组。 与数组不同，这需要明确地更改与数组的大小[`ReDim`语句](../../../language-reference/statements/redim-statement.md)，集合增加和减少动态随着需求的应用程序更改。
+数组最适用于创建和使用固定数量的强类型化对象。 集合提供更灵活的方式来使用对象组。 数组需要显式使用[`ReDim`语句](../../../language-reference/statements/redim-statement.md)来更改其大小，与此不同，集合可随着应用程序更改的需求进行动态扩大和缩小。
 
-当你使用`ReDim`来重新设置其维数的数组，Visual Basic 创建一个新数组，并释放上一个。 这需要执行时间。 因此，如果你正在使用频繁变化，或者您的项目数不能预测所需的最大项数，您通常将使用集合来获得更好的性能。
+当使用 `ReDim` 来重新设置数组的维度时，Visual Basic 会创建一个新数组，并释放前一个数组。 这需要执行时间。 因此，如果需要频繁进行更改，或者不能预测所需的最大项数，则通常应使用集合来获得更好的性能。
 
-对于某些集合，你可以为放入集合中的任何对象分配一个密钥，这样你便可以使用该密钥快速检索此对象。
+对于某些集合，你可以为放入集合中的任何对象分配一个关键字，这样你便可以使用该关键字快速检索此对象。
 
 如果你的集合中只包含一种数据类型的元素，你可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一个类。 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。
 
@@ -298,7 +298,7 @@ Dim arrZ(-1) As String
 
 |术语|定义|
 |----------|----------------|
-|[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|在数组中解释级别和维度。|
+|[Visual Basic 中的数组维度](../../language-features/arrays/array-dimensions.md)|解释数组中的秩和维度。|
 |[如何：初始化数组变量在 Visual Basic 中](../../language-features/arrays/how-to-initialize-an-array-variable.md)|说明如何用初始值填充数组。|
 |[如何：在 Visual Basic 中的对数组进行排序](../../language-features/arrays/how-to-sort-an-array.md)|显示如何按字母先后顺序对数组元素进行排序。|
 |[如何：将一个数组赋给另一个数组](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|说明将数组分配到另一个数组变量的规则和步骤。|
