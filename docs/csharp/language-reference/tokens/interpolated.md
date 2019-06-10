@@ -13,16 +13,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210431"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251003"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字符串内插（C# 参考）
 
-`$` 特殊字符将字符串文本标识为内插字符串。 内插字符串是可能包含内插表达式的字符串文本。 将内插字符串解析为结果字符串时，带有内插表达式的项会替换为表达式结果的字符串表示形式。 此功能在 C# 6 及该语言的更高版本中可用。
+`$` 特殊字符将字符串文本标识为内插字符串  。 内插字符串是可能包含内插表达式的字符串文本  。 将内插字符串解析为结果字符串时，带有内插表达式的项会替换为表达式结果的字符串表示形式。 此功能在 C# 6 及该语言的更高版本中可用。
 
 与使用[字符串复合格式设置](../../../standard/base-types/composite-formatting.md)功能创建格式化字符串相比，字符串内插提供的语法更具可读性，且更加方便。 下面的示例使用了这两种功能生成同样的输出结果：
 
@@ -35,14 +35,14 @@ ms.locfileid: "65210431"
 具备内插表达式的项的结构如下所示：
 
 ```
-{<interpolatedExpression>[,<alignment>][:<formatString>]}
+{<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 括号中的元素是可选的。 下表说明了每个元素：
 
 |元素|说明|
 |-------------|-----------------|
-|`interpolatedExpression`|生成需要设置格式的结果的表达式。 `null` 结果的字符串表示形式为 <xref:System.String.Empty?displayProperty=nameWithType>。|
+|`interpolationExpression`|生成需要设置格式的结果的表达式。 `null` 结果的字符串表示形式为 <xref:System.String.Empty?displayProperty=nameWithType>。|
 |`alignment`|常数表达式，它的值定义内插表达式结果的字符串表示形式中的最小字符数。 如果值为正，则字符串表示形式为右对齐；如果值为负，则为左对齐。 有关详细信息，请参阅[对齐组件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
 |`formatString`|受表达式结果类型支持的格式字符串。 有关更多信息，请参阅[格式字符串组件](../../../standard/base-types/composite-formatting.md#format-string-component)。|
 
@@ -54,7 +54,7 @@ ms.locfileid: "65210431"
 
 要在内插字符串生成的文本中包含大括号 "{" 或 "}"，请使用两个大括号，即 "{{" 或 "}}"。 有关详细信息，请参阅[转义大括号](../../../standard/base-types/composite-formatting.md#escaping-braces)。
 
-因为冒号 (":") 在内插表达式项中具有特殊含义，为了在内插表达式中使用[条件运算符](../operators/conditional-operator.md)，请将表达式放在括号内。
+因为冒号（“:”）在内插表达式项中具有特殊含义，为了在内插表达式中使用[条件运算符](../operators/conditional-operator.md)，请将表达式放在括号内。
 
 以下示例演示如何将大括号含入结果字符串中，以及如何在内插表达式中使用条件运算符：
 

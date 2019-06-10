@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796014"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423848"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 枚举
 介绍的一组操作主机可以为其应用策略的操作。  
@@ -55,7 +55,7 @@ typedef enum {
 ## <a name="remarks"></a>备注  
  公共语言运行时 (CLR) 可靠性基础结构可区分中止和资源的代码和非关键的代码区域中发生的关键区域中发生的分配失败。 这一区别旨在允许设置不同的策略，具体取决于代码中发生故障的主机。  
   
- 一个*的代码的关键区域*是任何区域，CLR 不能保证该中止任务或无法完成请求的资源将会影响当前的任务。 例如，如果任务持有的锁，并且收到一个 HRESULT，指示在使内存分配请求时失败，其不足，只是无法中止该任务以确保的稳定性<xref:System.AppDomain>，这是因为<xref:System.AppDomain>可能包含其他为同一个锁等待的任务。 若要放弃了当前任务可能会导致其他任务停止响应 （或挂起） 无限期。 在这种情况下，宿主需要能够卸载整个<xref:System.AppDomain>而不是风险潜在的不稳定性。  
+ 一个*的代码的关键区域*是任何区域，CLR 不能保证该中止任务或无法完成请求的资源将会影响当前的任务。 例如，如果任务持有的锁，并且收到一个 HRESULT，指示在使内存分配请求时失败，其不足，只是无法中止该任务以确保的稳定性<xref:System.AppDomain>，这是因为<xref:System.AppDomain>可能包含其他为同一个锁等待的任务。 若要放弃了当前任务可能会导致这些其他任务停止响应。 在这种情况下，宿主需要能够卸载整个<xref:System.AppDomain>而不是风险潜在的不稳定性。  
   
  一个*的代码的非关键区域*后，就是，CLR 可以保证以中止或失败，会影响仅在其出错的任务的区域。  
   
@@ -68,7 +68,7 @@ typedef enum {
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

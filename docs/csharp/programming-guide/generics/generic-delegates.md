@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 2806eadd2d3f8a4c3e8f001b02b28d35a60daaec
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ff19b3d71858552158a8ae5d0ab362a86dc98e65
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970145"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423504"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>泛型委托（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)可以定义它自己的类型参数。 引用泛型委托的代码可以指定类型参数以创建封闭式构造类型，就像实例化泛型类或调用泛型方法一样，如以下示例中所示：  
@@ -38,7 +38,7 @@ ms.locfileid: "56970145"
 
 - <xref:System.Collections.Generic>
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [泛型介绍](../../../csharp/programming-guide/generics/index.md)
 - [泛型方法](../../../csharp/programming-guide/generics/generic-methods.md)
 - [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)
 - [泛型接口](../../../csharp/programming-guide/generics/generic-interfaces.md)

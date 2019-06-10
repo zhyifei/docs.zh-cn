@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501933"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379893"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>缓解：基于指针的触控和触笔支持
 
@@ -38,7 +38,7 @@ ms.locfileid: "54501933"
 
   - 无法再通过触控/触笔事件启动拖/放行为。
 
-      这可能会在检测到鼠标输入前导致应用程序挂起。 相反，开发者应通过鼠标事件启动拖放行为。
+      这可能会导致应用程序无响应，直到检测到鼠标输入。 相反，开发者应通过鼠标事件启动拖放行为。
 
 ## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>选择启用基于 WM_POINTER 的触控/触笔支持
 

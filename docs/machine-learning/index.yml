@@ -27,7 +27,7 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">使用多类分类对 GitHub 问题进行分类</a></li>
           - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">使用回归预测纽约市出租车费用</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">使用聚类分析按特征对花分类</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">使用矩阵因子分解创建影片推荐系统</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">使用矩阵因子分解创建影片推荐系统</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">使用 TensorFlow 生成自定义图像分类器</a>
   - title: 参考和资源
     items:

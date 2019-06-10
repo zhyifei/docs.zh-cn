@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596273"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423483"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型类（C# 编程指南）
 泛型类封装不特定于特定数据类型的操作。 泛型类最常见用法是用于链接列表、哈希表、堆栈、队列和树等集合。 无论存储数据的类型如何，添加项和从集合删除项等操作的执行方式基本相同。  
@@ -36,7 +36,7 @@ ms.locfileid: "64596273"
   
      例如，如果要设计用于在基于泛型的集合中创建项的类，则可能必须实现一个接口，例如 <xref:System.IComparable%601>，其中 `T` 为类的类型。  
   
- 有关简单泛型类的示例，请参阅[泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)。  
+ 有关简单泛型类的示例，请参阅[泛型介绍](../../../csharp/programming-guide/generics/index.md)。  
   
  类型参数和约束的规则对于泛型类行为具有多种含义，尤其是在继承性和成员可访问性方面。 应当了解一些术语，然后再继续。 对于泛型类 `Node<T>,`客户端代码可通过指定类型参数来引用类，创建封闭式构造类型 (`Node<int>`)。 或者，可以不指定类型参数（例如指定泛型基类时），创建开放式构造类型 (`Node<T>`)。 泛型类可继承自具体的封闭式构造或开放式构造基类：  
   

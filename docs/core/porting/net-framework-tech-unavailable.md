@@ -3,13 +3,13 @@ title: .NET Framework 技术在 .NET Core 上不可用
 description: 了解在 .NET Core 上不可用的 .NET Framework 技术
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185800"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456082"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
 
@@ -42,6 +42,10 @@ ms.locfileid: "58185800"
 与 CAS 相似，借助安全透明度可以以声明性方式将沙盒代码与安全关键代码隔离，但是[不再支持将它作为安全边界](~/docs/framework/misc/security-transparent-code.md)。 Silverlight 大规模使用了此功能。 
 
 可使用操作系统提供的安全边界，例如虚拟化、容器或用于运行进程的用户帐户具有最少的一组特权。
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+.NET Core 不支持 System.EnterpiseServices (COM+)。
 
 >[!div class="step-by-step"]
 >[下一页](third-party-deps.md)

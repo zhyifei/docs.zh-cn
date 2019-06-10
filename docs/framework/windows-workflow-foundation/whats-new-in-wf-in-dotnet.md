@@ -2,12 +2,12 @@
 title: .NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380137"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423980"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 
@@ -200,7 +200,7 @@ ms.locfileid: "66380137"
 
 ### <a name="BKMK_DesignTimeValidation"></a> 设计时后台验证
 
-在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，会把工作流作为前台进程进行验证，这可能会在复杂或耗时的验证过程中将 UI 挂起。 工作流验证现在发生在后台线程上，因此不会阻止 UI。
+在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，工作流已验证作为前台进程，可以在复杂或耗时的验证过程中可能会阻止 UI。 工作流验证现在发生在后台线程上，因此不会阻止 UI。
 
 ### <a name="BKMK_ViewState"></a> 位于单独的位置在 XAML 文件中的视图状态
 

@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780440"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489908"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 确定特定字符 `String` 是否与指定模式相匹配。  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 运算符和 ESCAPE 子句不适用于 `System.DateTime` 或 `System.Guid` 值。  
   
- LIKE 支持 ASCII 模式匹配和 Unicode 模式匹配。 当所有参数都为 ASCII 字符时，将执行 ASCII 模式匹配。 如果一个或多个参数为 Unicode，则所有参数都会转换为 Unicode，并执行 Unicode 模式匹配。 在将 Unicode 与 LIKE 一起使用时，尾随空格有意义；但对非 Unicode，尾随空格则没有意义。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的模式字符串语法与 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 的模式字符串语法相同。  
+ LIKE 支持 ASCII 模式匹配和 Unicode 模式匹配。 当所有参数都为 ASCII 字符时，将执行 ASCII 模式匹配。 如果一个或多个参数为 Unicode，则所有参数都会转换为 Unicode，并执行 Unicode 模式匹配。 在将 Unicode 与 LIKE 一起使用时，尾随空格有意义；但对非 Unicode，尾随空格则没有意义。 模式字符串语法[!INCLUDE[esql](../../../../../../includes/esql-md.md)]的 Transact SQL 相同。  
   
  模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与在字符 `string` 中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 在与通配符一起使用时，LIKE 运算符比 = 和 != 字符串比较运算符更为灵活。  
   

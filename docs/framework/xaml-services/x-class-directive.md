@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7245b14ff2f765c1cfe96a2d49aec34eff7e8a17
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025413"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722563"
 ---
 # <a name="xclass-directive"></a>x:Class 指令
 配置 XAML 标记编译加入之间标记和代码隐藏的分部类。 代码的分部类定义在单独的代码文件中[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]语言中，而在 XAML 编译的代码生成通常创建标记分部类。  
@@ -52,7 +52,7 @@ ms.locfileid: "62025413"
  在某个特定级别的体系结构的含义`x:Class`未在.NET Framework XAML 服务中。 这是因为.NET Framework XAML 服务未指定的 XAML 的标记和备份代码已连接的编程模型。 其他用法`x:Class`指令可能实现的特定框架所使用的编程模型或应用程序模型来定义如何连接 XAML 标记和基于 CLR 的代码隐藏。 每个框架都可以具有其自己实现某些行为或必须包含在生成环境中的特定组件的生成操作。 在框架中，生成操作还可随用于代码隐藏的特定 CLR 语言。  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>WPF 编程模型中的 x： 类  
- 在 WPF 应用程序和 WPF 应用程序模型`x:Class`可以为任何 XAML 文件的根目录和正在编译的元素声明为属性 (其中 XAML 在 WPF 应用程序项目中使用包含`Page`生成操作)，或 <c4 1> <xref:System.Windows.Application> 编译的 WPF 应用程序的应用程序定义中的根。 声明`x:Class`页面根或应用程序根目录以外的元素上或在未编译的 WPF XAML 文件，会导致在编译时错误[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]和[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]WPF XAML 编译器。 有关的其他方面`x:Class`处理在 WPF 中，请参阅[的代码隐藏和 XAML 在 WPF 中的](../wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
+ 在 WPF 应用程序和 WPF 应用程序模型`x:Class`可以为任何 XAML 文件的根目录和正在编译的元素声明为属性 (其中 XAML 在 WPF 应用程序项目中使用包含`Page`生成操作)，或 <c4 1> <xref:System.Windows.Application> 编译的 WPF 应用程序的应用程序定义中的根。 声明`x:Class`页面根或应用程序根目录以外的元素上或在未编译的 WPF XAML 文件，会导致.NET Framework 3.0 和.NET Framework 3.5 WPF XAML 编译器在编译时错误。 有关的其他方面`x:Class`处理在 WPF 中，请参阅[的代码隐藏和 XAML 在 WPF 中的](../wpf/advanced/code-behind-and-xaml-in-wpf.md)。  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>x： 用于 Windows Workflow Foundation 类  
  对于 Windows Workflow Foundation，`x:Class`完全在 XAML，组成的自定义活动的类的名称或名称与代码隐藏的活动设计器的 XAML 页面分部类。  

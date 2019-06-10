@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29610a77eadf587162731b5bddbcc4bbe7fa0714
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4fa8dc3c043665ca2f56facf516cb03e5c6bb9d7
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610523"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421756"
 ---
 # <a name="using-static-directive-c-reference"></a>using 静态指令（C# 参考）
 
@@ -22,7 +22,7 @@ ms.locfileid: "53610523"
 using static <fully-qualified-type-name>;
 ```
 
-其中，fully-qualified-type-name 是无需指定类型名称即可访问其静态成员和嵌套类型的类型名称。 如果你不提供完全限定的类型名称（完整的命名空间名称以及类型名称），C# 便会生成编译器错误 [CS0246](../compiler-messages/cs0246.md)：“找不到类型名称或命名空间名称 ’type/namespace’ (是否缺少 using 指令或程序集引用?)”。
+其中，fully-qualified-type-name 是无需指定类型名称即可访问其静态成员和嵌套类型的类型名称  。 如果你不提供完全限定的类型名称（完整的命名空间名称以及类型名称），C# 便会生成编译器错误 [CS0246](../compiler-messages/cs0246.md)：“找不到类型名称或命名空间名称 ’type/namespace’ (是否缺少 using 指令或程序集引用?)”。
 
 `using static` 指令适用于任何具有静态成员（或嵌套类型）的类型，即使该类型还具有实例成员。 但是，只能通过类型实例来调用实例成员。
 
@@ -58,5 +58,4 @@ using static <fully-qualified-type-name>;
 - [C# 参考](../index.md)
 - [C# 关键字](index.md)
 - [使用命名空间](../../programming-guide/namespaces/using-namespaces.md)
-- [命名空间关键字](namespace-keywords.md)
 - [命名空间](../../programming-guide/namespaces/index.md)

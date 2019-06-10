@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ca7986513d1a6cbe160ca1a0af6699c323aac7e
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954097"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690642"
 ---
 # <a name="generics-in-xaml"></a>XAML 中的泛型
 .NET Framework XAML 服务实现在 System.Xaml 中为使用 CLR 的泛型类型提供支持。 此支持包括作为类型参数指定的泛型约束和通过调用适当强制该约束`Add`泛型集合用例的方法。 本主题介绍使用和引用 XAML 中的泛型类型的方面。  
@@ -38,9 +38,9 @@ ms.locfileid: "61954097"
   
  可能的解决方法，以支持泛型用法包括定义自定义标记扩展可以返回的泛型类型，或提供一个包装类派生自泛型类型，但将在其自己的类定义中的泛型约束的定义。  
   
- 在 WPF 和面向[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，可以使用 XAML 2009 功能一起使用`x:TypeArguments`，但仅限松散 XAML (未标记编译的 XAML)。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
+ 在 WPF 和面向.NET Framework 4 中，可以使用 XAML 2009 功能一起使用`x:TypeArguments`，但仅限松散 XAML (未标记编译的 XAML)。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   
- 有关 Windows Workflow Foundation 中的自定义工作流[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]不支持泛型的 XAML 用法。  
+ .NET Framework 3.5 的 Windows Workflow Foundation 中的自定义工作流不支持泛型的 XAML 用法。  
   
 ## <a name="see-also"></a>请参阅
 

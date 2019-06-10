@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796118"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490434"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 枚举
 介绍一系列主机可以为其设置的策略操作的故障。  
@@ -49,7 +49,7 @@ typedef enum {
 |`FAIL_FatalRuntime`|公共语言运行时 (CLR) 不再能够在进程中运行托管的代码。 自此以后，对任何托管函数的调用返回 HOST_E_CLRNOTAVAILABLE HRESULT 的值。|  
 |`FAIL_OrphanedLock`|一个线程无法释放锁后从返回<xref:System.AppDomain>对象。 主机不能设置此故障以使线程中止。|  
 |`FAIL_StackOverflow`|发生堆栈溢出。|  
-|`FAIL_AccessViolation`|尝试读取或写入受保护的内存。 中不受支持[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。|  
+|`FAIL_AccessViolation`|尝试读取或写入受保护的内存。 不支持在.NET Framework 4。|  
 |`FAIL_CodeContract`|代码协定出错。 请参阅[代码协定](../../../../docs/framework/debug-trace-profile/code-contracts.md)。|  
   
 ## <a name="remarks"></a>备注  
@@ -62,7 +62,7 @@ typedef enum {
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

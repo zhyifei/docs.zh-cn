@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053006"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250881"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 
@@ -51,16 +51,18 @@ ms.locfileid: "66053006"
  .NET 支持字符类减法表达式，通过该表达式可以定义一组字符作为从一个字符类中排除另一字符类的结果。 有关详细信息，请参阅[字符类减法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
->  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 开始，字符类别基于 [Unicode 标准 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 到 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 之间，字符类别基于 [Unicode 标准 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
+>  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 .NET Framework 4.6.2 开始，字符类别基于 [Unicode 标准 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 到 .NET Framework 4.6.1 之间，字符类别基于 [Unicode 标准 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>正字符组：[ ]  
  正字符组指定一个字符列表，其中的任何一个字符可出现在输入字符串中以便进行匹配。 此字符列表可以单独指定和/或作为范围指定。  
   
  用于指定各个字符列表的语法如下所示：  
-  
- [character_group  ]  
-  
+
+```  
+[*character_group*]  
+```
+
  其中，*character_group* 是单个字符的列表，这些字符可出现在输入字符串中以便成功匹配。 character  _group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
@@ -69,9 +71,12 @@ ms.locfileid: "66053006"
 [firstCharacter-lastCharacter]  
 ```  
   
- 其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。  
-  
- 下表列出了一些常见的包含正字符类的正则表达式模式。  
+ 其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符   。
+
+> [!NOTE]
+> 由于正字符组可以包含一组字符和一个字符范围，因此连字符 (`-`) 始终被解释为范围分隔符，除非它是该组的第一个或最后一个字符。
+
+下表列出了一些常见的包含正字符类的正则表达式模式。  
   
 |模式|说明|  
 |-------------|-----------------|  
@@ -112,17 +117,24 @@ ms.locfileid: "66053006"
 ## <a name="negative-character-group-"></a>负字符组：[^]  
  负字符组指定一个字符列表，这些字符不得出现在输入字符串中以便进行匹配。 此字符列表可以单独指定和/或作为范围指定。  
   
- 用于指定各个字符列表的语法如下所示：  
-  
- [^character_group  ]  
-  
+用于指定各个字符列表的语法如下所示：  
+
+```
+[*^character_group*]  
+```
+
  其中，*character_group* 是单个字符的列表，这些字符不可出现在输入字符串中以便成功匹配。 character  _group 可以包含一个或多个文本字符、[转义字符](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
-  
- [^firstCharacter  -lastCharacter  ]  
-  
- 其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。  
+
+```
+[^*firstCharacter*-*lastCharacter*]  
+```
+
+其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符   。
+
+> [!NOTE]
+> 由于负字符组可以包含一组字符和一个字符范围，因此连字符 (`-`) 始终被解释为范围分隔符，除非它是该组的第一个或最后一个字符。
   
  可以连接两个或更多字符范围。 例如，若要指定从“0”至“9”的十进制数范围、从“a”至“f”的小写字母范围，以及从“A”至“F”的大写字母范围，请使用 `[0-9a-fA-F]`。  
   

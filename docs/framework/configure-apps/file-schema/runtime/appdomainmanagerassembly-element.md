@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704916"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487770"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly > 元素
 指定为过程中的默认应用程序域提供应用程序域管理器的程序集。  
@@ -58,7 +58,7 @@ ms.locfileid: "61704916"
   
  有关程序集显示名称的格式，请参阅<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>属性。  
   
- 此配置元素是仅适用于[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]及更高版本。  
+ 此配置元素是仅适用于.NET Framework 4 及更高版本。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何指定进程的默认应用程序域的应用程序域管理器是`MyMgr`中键入`AdMgrExample`程序集。  

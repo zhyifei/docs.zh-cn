@@ -2,12 +2,12 @@
 title: 聚合规范函数
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607448"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489508"
 ---
 # <a name="aggregate-canonical-functions"></a>聚合规范函数
 
@@ -224,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 将在 WHERE 子句表达式可见的名称解析范围内计算基于组的聚合中的表达式。
 
-如[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，基于组的聚合也可以指定 ALL 或 DISTINCT 修饰符。 如果指定 DISTINCT 修饰符，则将从聚合输入集合中消除重复项，然后计算聚合。 如果指定 ALL 修饰符（或者未指定修饰符），则不执行重复项消除。
+如下所示 TRANSACT-SQL，基于组的聚合也可以指定 ALL 或 DISTINCT 修饰符。 如果指定 DISTINCT 修饰符，则将从聚合输入集合中消除重复项，然后计算聚合。 如果指定 ALL 修饰符（或者未指定修饰符），则不执行重复项消除。
 
 ## <a name="see-also"></a>请参阅
 

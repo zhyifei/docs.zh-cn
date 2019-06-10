@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607684"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377881"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 
@@ -71,7 +71,7 @@ ms.locfileid: "64607684"
 |-----------|-----------------|
 |[如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|描述如何创建加密密钥对以对程序集进行签名。|
 |[如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|介绍如何创建具有强名称的程序集。|
-|[改进的强命名](../../../docs/framework/app-domains/enhanced-strong-naming.md)|描述 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中强名称的改进。|
+|[改进的强命名](../../../docs/framework/app-domains/enhanced-strong-naming.md)|描述 .NET Framework 4.5 中强名称的改进。|
 |[如何：引用具有强名称的程序集](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|介绍如何在编译时或运行时引用具有强名称的程序集中的类型或资源。|
 |[如何：禁用强名称跳过功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|描述如何禁用跳过强名称签名验证的功能。 可为所有或特定应用程序禁用此功能。|
 |[创建程序集](../../../docs/framework/app-domains/create-assemblies.md)|提供单个文件和多文件程序集的概述。|

@@ -1,15 +1,15 @@
 ---
 title: 使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 description: 本主题演示了构建包含可重用的库和单元测试的 .NET Core 解决方案。
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327745"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300148"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
@@ -19,8 +19,8 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
-> * 在 Visual Studio for Mac 中，从菜单选择“帮助” > “报告问题”，或从欢迎屏幕中选择“报告问题”，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/41/index.html)门户中跟踪自己的反馈。
-> * 若要提出建议，从菜单中选择“帮助” > “提供建议”，或从欢迎屏幕中选择“提供建议”，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
+> * 在 Visual Studio for Mac 中，从菜单选择“帮助”   > “报告问题”  ，或从欢迎屏幕中选择“报告问题”  ，将打开一个窗口，以供填写 bug 报告。 可在[开发人员社区](https://developercommunity.visualstudio.com/spaces/41/index.html)门户中跟踪自己的反馈。
+> * 若要提出建议，从菜单中选择“帮助”   > “提供建议”  ，或从欢迎屏幕中选择“提供建议”  ，转到 [Visual Studio for Mac 开发人员社区网页](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -32,27 +32,27 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="building-a-library"></a>生成库
 
-1. 在欢迎屏幕上，选择“新建项目”。 在“.NET Core”节点下的“新建项目”对话框中，选择“.NET 标准库”模板。 这将创建一个 .NET Standard 库，该库面向 .NET Core 及支持 [.NET Standard](../../standard/net-standard.md) 版本 2.0 的任何其他 .NET 实现。 选择“下一步”。
+1. 在欢迎屏幕上，选择“新建项目”  。 在“.NET Core”  节点下的“新建项目”  对话框中，选择“.NET 标准库”  模板。 这将创建一个 .NET Standard 库，该库面向 .NET Core 及支持 [.NET Standard](../../standard/net-standard.md) 版本 2.0 的任何其他 .NET 实现。 选择“下一步”  。
 
    ![Visual Studio for Mac“新建项目”对话框](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. 将项目命名为“TextUtils”（“Text Utilities”的短名称），将解决方案命名为“WordCounter”。 使“在解决方案目录中创建项目目录”保持选中状态。 选择“创建”。
+1. 将项目命名为“TextUtils”（“Text Utilities”的短名称），将解决方案命名为“WordCounter”。 使“在解决方案目录中创建项目目录”  保持选中状态。 选择“创建”  。
 
    ![Visual Studio for Mac“新建项目”对话框选项](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
 
-1. 在“解决方案”边栏中，展开 `TextUtils` 节点以显示模板提供的类文件 *Class1.cs*。 右键单击该文件，从上下文菜单中选择“重命名”，然后将该文件重命名为 *WordCount.cs*。 打开文件并将内容替换为以下代码：
+1. 在“解决方案”  边栏中，展开 `TextUtils` 节点以显示模板提供的类文件 *Class1.cs*。 右键单击该文件，从上下文菜单中选择“重命名”  ，然后将该文件重命名为 *WordCount.cs*。 打开文件并将内容替换为以下代码：
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
-1. 通过使用以下三种不同的方法之一保存文件：使用键盘快捷方式 <kbd>&#8984;</kbd>+<kbd>s</kbd>，从菜单中选择“文件” > “保存”，或右键单击文件的选项卡，并从上下文菜单中选择“保存”。 下图显示 IDE 窗口：
+1. 通过使用以下三种不同的方法之一保存文件：使用键盘快捷方式 <kbd>&#8984;</kbd>+<kbd>s</kbd>，从菜单中选择“文件”   > “保存”  ，或右键单击文件的选项卡，并从上下文菜单中选择“保存”  。 下图显示 IDE 窗口：
 
    ![带有类库文件和方法的 Visual Studio for Mac IDE 窗口](./media/using-on-mac-vs-full-solution/visual-studio-mac-editor.png)
 
-1. 在 IDE 窗口底部边距处选择“错误”，打开“错误”面板。 选择“生成输出”按钮。
+1. 在 IDE 窗口底部边距处选择“错误”  ，打开“错误”  面板。 选择“生成输出”  按钮。
 
    ![显示“错误”按钮的 Visual Studio Mac IDE 底部边距处](./media/using-on-mac-vs-full-solution/visual-studio-mac-error-button.png)
 
-1. 从菜单中选择“生成” > “生成所有”。
+1. 从菜单中选择“生成”   > “生成所有”  。
 
    生成解决方案。 生成输出面板显示生成成功。
 
@@ -62,19 +62,19 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 单元测试在开发和发布期间提供自动化的软件测试。 本教程中使用的测试框架是 [xUnit（版本 2.2.0 或更高版本）](https://xunit.github.io/)，使用下列步骤将 xUnit 测试项目添加到解决方案时将自动安装此框架：
 
-1. 在“解决方案”边栏中，右键单击 `WordCounter` 解决方案并选择“添加” > “添加新项目”。
+1. 在“解决方案”  边栏中，右键单击 `WordCounter` 解决方案并选择“添加”   > “添加新项目”  。
 
-1. 在“新建项目”对话框中，从“.NET Core”节点中选择“测试”。 在“下一步”后，选择“xUnit 测试项目”。
+1. 在“新建项目”  对话框中，从“.NET Core”  节点中选择“测试”  。 在“下一步”  后，选择“xUnit 测试项目”  。
 
    ![创建 xUnit 测试项目的 Visual Studio Mac“新建项目”对话框](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-project.png)
 
-1. 将新项目命名为"TestLibrary"，然后选择“创建”。
+1. 将新项目命名为"TestLibrary"，然后选择“创建”  。
 
    ![提供项目名称的 Visual Studio Mac“新建项目”对话框](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-name.png)
 
-1. 若要使测试库使用 `WordCount` 类，请将引用添加到 `TextUtils` 项目中。 在“解决方案”边栏中，右键单击“TestLibrary”下的“依赖项”。 从上下文菜单中选择“编辑引用”。
+1. 若要使测试库使用 `WordCount` 类，请将引用添加到 `TextUtils` 项目中。 在“解决方案”  边栏中，右键单击“TestLibrary”  下的“依赖项”  。 从上下文菜单中选择“编辑引用”  。
 
-1. 在“编辑引用”对话框中，选择“项目”选项卡上的“TextUtils”项目。选择“确定”。
+1. 在“编辑引用”  对话框中，选择“项目”  选项卡上的“TextUtils”  项目。选择“确定”  。
 
    ![Visual Studio Mac“编辑引用”对话框](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
@@ -108,23 +108,23 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    请务必使新的测试失败一次，以确定其测试逻辑正确无误。 该方法使用“Jack”和“jack”（大写和小写）传递名称“Jack”（大写）和字符串。 如果 `GetWordCount` 方法运行正常，则返回搜索词的两个实例的计数。 为了有意进行失败测试，首先实现测试断言，即搜索词“Jack”的两个实例不是由 `GetWordCount` 方法返回的。 继续执行下一步骤，有意使测试失败。
 
-1. 打开屏幕右侧的“单元测试”面板。
+1. 打开屏幕右侧的“单元测试”  面板。
 
    ![Visual Studio for Mac“单元测试”面板](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-panel.png)
 
-1. 单击“停靠”图标使此面板保持打开状态。
+1. 单击“停靠”  图标使此面板保持打开状态。
 
    ![Visual Studio for Mac“单元测试”面板停靠图标](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-dock-icon.png)
 
-1. 单击“全部运行”按钮。
+1. 单击“全部运行”  按钮。
 
    测试失败，这是正确的结果。 测试方法断言不会从提供给 `GetWordCount` 的方法的字符串“Jack jack”中返回 `inputString`“Jack”的两个实例。 因为已在 `GetWordCount` 方法中对单词的大小写进行了分解，所以返回了两个实例。 2 *不等于* 2 的断言失败。 这是正确的结果，且测试的逻辑良好。
 
    ![Visual Studio for Mac 测试失败显示](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
 
-1. 通过将 `Assert.NotEqual` 更改为 `Assert.Equal` 来修改 `IgnoreCasing` 测试方法。 使用键盘快捷方式 <kbd>&#8984;</kbd>+<kbd>s</kbd> 保存该文件，从菜单选择“文件” > “保存”，或右键单击文件的选项卡，并从上下文菜单中选择“保存”。
+1. 通过将 `Assert.NotEqual` 更改为 `Assert.Equal` 来修改 `IgnoreCasing` 测试方法。 使用键盘快捷方式 <kbd>&#8984;</kbd>+<kbd>s</kbd> 保存该文件，从菜单选择“文件”   > “保存”  ，或右键单击文件的选项卡，并从上下文菜单中选择“保存”  。
 
-   `searchWord`Jack”应返回两个实例，并且 `inputString`“Jack jack”传递到 `GetWordCount`。 通过单击“单元测试”面板中的“运行测试”按钮或屏幕底部的“测试结果”面板中的“重新运行测试”按钮重新运行测试。 测试通过。 在字符串"Jack jack"（忽略大小写）中有“Jack”的两个实例，且测试断言为 `true`。
+   `searchWord`Jack”应返回两个实例，并且 `inputString`“Jack jack”传递到 `GetWordCount`。 通过单击“单元测试”  面板中的“运行测试”  按钮或屏幕底部的“测试结果”  面板中的“重新运行测试”  按钮重新运行测试。 测试通过。 在字符串"Jack jack"（忽略大小写）中有“Jack”的两个实例，且测试断言为 `true`。
 
    ![Visual Studio for Mac 测试通过显示](./media/using-on-mac-vs-full-solution/visual-studio-mac-unit-test-pass.png)
 
@@ -156,35 +156,35 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 ## <a name="adding-a-console-app"></a>添加控制台应用
 
-1. 在“解决方案”边栏中，右键单击 `WordCounter` 解决方案。 通过从“.NET Core” > “应用” 模板中选择模板来添加新的**控制台应用程序**项目。 选择“下一步”。 将项目命名为 **WordCounterApp**。 选择“创建”以在解决方案中创建项目。
+1. 在“解决方案”  边栏中，右键单击 `WordCounter` 解决方案。 通过从“.NET Core”   > “应用”  模板中选择模板来添加新的**控制台应用程序**项目。 选择“下一步”  。 将项目命名为 **WordCounterApp**。 选择“创建”  以在解决方案中创建项目。
 
-1. 在“解决方案”边栏中，右键单击新 **WordCounterApp** 项目的“依赖项”。 在“编辑引用”对话框中，选中“TextUtils”，然后选择“确定”。
+1. 在“解决方案”  边栏中，右键单击新 **WordCounterApp** 项目的“依赖项”  。 在“编辑引用”  对话框中，选中“TextUtils”  ，然后选择“确定”  。
 
 1. 打开 *Program.cs* 文件。 将代码替换为以下内容：
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. 如要在控制台窗口而不是在 IDE 中运行应用，右键单击 `WordCounterApp` 项目，选择“选项”，然后打开“配置”下的“默认”节点。 选中“在外部控制台上运行”框。 使“暂停控制台输出”选项保持选中状态。 此设置使应用在控制台窗口中生成，以便可以为 `Console.ReadLine` 语句键入输入。 如果使应用在 IDE 中持续运行，则仅能看到 `Console.WriteLine` 语句的输出。 `Console.ReadLine` 语句无法在 IDE 的“应用输出”面板中运行。
+1. 如要在控制台窗口而不是在 IDE 中运行应用，右键单击 `WordCounterApp` 项目，选择“选项”  ，然后打开“配置”  下的“默认”  节点。 选中“在外部控制台上运行”  框。 使“暂停控制台输出”  选项保持选中状态。 此设置使应用在控制台窗口中生成，以便可以为 `Console.ReadLine` 语句键入输入。 如果使应用在 IDE 中持续运行，则仅能看到 `Console.WriteLine` 语句的输出。 `Console.ReadLine` 语句无法在 IDE 的“应用程序输出”  面板中运行。
 
    ![Visual Studio for Mac 项目选项窗口](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 
-1. 由于 Visual Studio for Mac 的当前版本无法在解决方案运行时运行测试，因此，可以直接运行控制台应用。 右键单击 `WordCounterApp` 项目，并从上下文菜单中选择“运行项目”。 如果尝试使用播放按钮运行应用，测试运行程序和应用将无法运行。 有关此问题的运行状态的详细信息，请参阅 [xunit/xamarinstudio.xunit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60)。 运行应用时，在控制台窗口中的提示符处提供搜索词和输入字符串的值。 应用指示搜索词在字符串中出现的次数。
+1. 由于 Visual Studio for Mac 的当前版本无法在解决方案运行时运行测试，因此，可以直接运行控制台应用。 右键单击 `WordCounterApp` 项目，并从上下文菜单中选择“运行项目”  。 如果尝试使用播放按钮运行应用，测试运行程序和应用将无法运行。 有关此问题的运行状态的详细信息，请参阅 [xunit/xamarinstudio.xunit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60)。 运行应用时，在控制台窗口中的提示符处提供搜索词和输入字符串的值。 应用指示搜索词在字符串中出现的次数。
 
    ![Visual Studio for Mac 控制台窗口，显示正在运行的应用](./media/using-on-mac-vs-full-solution/visual-studio-mac-console-window.png)
 
-1. 要探索的最后一个功能是使用 Visual Studio for Mac 进行调试。 在 `Console.WriteLine` 语句上设置断点：在第 23 行的左边距处选择，可以看到代码行旁边出现红色的圆圈。 或者，在代码行上的任意位置进行选择，然后从菜单中选择“运行” > “切换断点”。
+1. 要探索的最后一个功能是使用 Visual Studio for Mac 进行调试。 在 `Console.WriteLine` 语句上设置断点：在第 23 行的左边距处选择，可以看到代码行旁边出现红色的圆圈。 或者，在代码行上的任意位置进行选择，然后从菜单中选择“运行”   > “切换断点”  。
 
    ![Visual Studio for Mac 断点设置](./media/using-on-mac-vs-full-solution/visual-studio-mac-breakpoint.png)
 
-1. 右键单击 `WordCounterApp` 项目。 从上下文菜单中选择“开始调试项目”。 应用运行时，输入搜索词“cat”和“The dog chased the cat, but the cat escaped.” 以供字符串进行搜索。 到达 `Console.WriteLine` 语句时，将在执行该语句前暂停执行程序。 在“本地”选项卡中，可以看到 `searchWord`、`inputString`、`wordCount` 和 `pluralChar` 值。
+1. 右键单击 `WordCounterApp` 项目。 从上下文菜单中选择“开始调试项目”  。 应用运行时，输入搜索词“cat”和“The dog chased the cat, but the cat escaped.” 以供字符串进行搜索。 到达 `Console.WriteLine` 语句时，将在执行该语句前暂停执行程序。 在“本地”  选项卡中，可以看到 `searchWord`、`inputString`、`wordCount` 和 `pluralChar` 值。
 
    ![Visual Studio for Mac 调试器程序执行停止](./media/using-on-mac-vs-full-solution/visual-studio-mac-debugger.png)
 
-1. 在“即时”面板中，键入“wordCount = 999;”，然后按 Enter 键。 该操作将无意义的值 999 分配到 `wordCount` 变量，显示可以在调试时替换变量值。
+1. 在“即时”  面板中，键入“wordCount = 999;”，然后按 Enter 键。 该操作将无意义的值 999 分配到 `wordCount` 变量，显示可以在调试时替换变量值。
 
    ![Visual Studio for Mac 在即时窗口中更改值](./media/using-on-mac-vs-full-solution/visual-studio-mac-immediate-window.png)
 
-1. 在工具栏中，单击“继续”。 查看控制台窗口中的输出。 它报告调试应用时所设置的不正确的值 999。
+1. 在工具栏中，单击“继续”  。 查看控制台窗口中的输出。 它报告调试应用时所设置的不正确的值 999。
 
    ![Visual Studio for Mac 工具栏中的继续按钮](./media/using-on-mac-vs-full-solution/visual-studio-mac-toolbar.png)
 

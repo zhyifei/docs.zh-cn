@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3fbaacb96be2714aaff49679836e5d2d4a3783da
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880539"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422469"
 ---
 # <a name="foreach-in-c-reference"></a>foreach，in（C# 参考）
 
@@ -54,6 +54,5 @@ ms.locfileid: "65880539"
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [迭代语句](iteration-statements.md)
 - [对数组使用 foreach](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [for 语句](for.md)

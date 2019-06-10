@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636634"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379940"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化错误：管理用户体验
 
@@ -39,7 +39,7 @@ CLR 激活 API 返回 HRESULT 代码以报告对主机的激活操作结果。 �
 
 ## <a name="ui-for-initialization-errors"></a>初始化错误的 UI
 
-如果 CLR 激活系统无法加载应用程序所需运行时的正确版本，它将向用户显示一条错误消息，通知他们，他们的计算机未正确配置，无法运行该应用程序，并为他们提供机会来修复该问题。 在此情况下通常会显示以下错误消息。 用户可以选择“是”以转到 Microsoft 网站，从中为应用程序下载正确的 .NET Framework 版本。
+如果 CLR 激活系统无法加载应用程序所需运行时的正确版本，它将向用户显示一条错误消息，通知他们，他们的计算机未正确配置，无法运行该应用程序，并为他们提供机会来修复该问题。 在此情况下通常会显示以下错误消息。 用户可以选择“是”  以转到 Microsoft 网站，从中为应用程序下载正确的 .NET Framework 版本。
 
 ![.NET Framework 初始化错误对话框](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "初始化错误的典型错误消息")
 
@@ -75,21 +75,21 @@ CLR 包括一组适用于各种方案的主机，如果在加载所需运行时�
 |--------------|-----------------|--------------------------|------------------------------------|
 |托管 EXE 主机|启动托管 EXE。|缺少 .NET Framework 版本时显示|No|
 |托管 COM 主机|将托管 COM 组件加载到进程。|缺少 .NET Framework 版本时显示|是，通过设置 SEM_FAILCRITICALERRORS 标志|
-|ClickOnce 主机|启动 ClickOnce 应用程序。|缺少 .NET Framework 版本时显示，从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始|No|
-|XBAP 主机|启动 WPF XBAP 应用程序。|缺少 .NET Framework 版本时显示，从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始|No|
+|ClickOnce 主机|启动 ClickOnce 应用程序。|缺少 .NET Framework 版本时显示，从 .NET Framework 4.5 开始|No|
+|XBAP 主机|启动 WPF XBAP 应用程序。|缺少 .NET Framework 版本时显示，从 .NET Framework 4.5 开始|No|
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 行为和 UI
 
-CLR 激活系统在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供与在其他版本 Windows 操作系统上一样的行为和 UI，除非加载 CLR 2.0 时遇到问题。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包括使用 CLR 4.5 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 但是，[!INCLUDE[win8](../../../includes/win8-md.md)] 不包括 .NET Framework 2.0、3.0 或 3.5，它们都使用 CLR 2.0。 结果，依赖于 CLR 2.0 的应用程序默认情况下在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上不运行。 相反，它们将显示下面的对话框，使用户能够安装 .NET Framework 3.5。 用户还可在“控制面板”中启用 .NET Framework 3.5。 这两个选项将在[在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)一文中进行讨论。
+CLR 激活系统在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供与在其他版本 Windows 操作系统上一样的行为和 UI，除非加载 CLR 2.0 时遇到问题。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包括使用 CLR 4.5 的 .NET Framework 4.5。 但是，[!INCLUDE[win8](../../../includes/win8-md.md)] 不包括 .NET Framework 2.0、3.0 或 3.5，它们都使用 CLR 2.0。 结果，依赖于 CLR 2.0 的应用程序默认情况下在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上不运行。 相反，它们将显示下面的对话框，使用户能够安装 .NET Framework 3.5。 用户还可在“控制面板”中启用 .NET Framework 3.5。 这两个选项将在[在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)一文中进行讨论。
 
 ![Windows 8 上用于 3.5 版本安装的对话框](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "提示按需安装 .NET Framework 3.5")
 
 > [!NOTE]
-> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 取代了用户计算机上的 .NET Framework 4 (CLR 4)。 因此，.NET Framework 4 应用程序将在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上顺畅运行，不会显示该对话框。
+> .NET Framework 4.5 取代了用户计算机上的 .NET Framework 4 (CLR 4)。 因此，.NET Framework 4 应用程序将在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上顺畅运行，不会显示该对话框。
 
 安装 .NET Framework 3.5 后，用户可以在其 [!INCLUDE[win8](../../../includes/win8-md.md)] 计算机上运行依赖于 .NET Framework 2.0、3.0 或 3.5 的应用程序。 他们还可以运行 .NET Framework 1.0 和 1.1 应用程序，前提是这些应用程序未显式配置为仅在 .NET Framework 1.0 或 1.1 版上运行。 请参阅[从 .NET Framework 1.1 迁移](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)。
 
-从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，CLR 激活日志记录获得了极大的改进，包括何时和为什么会显示初始化错误消息的日志条目。 有关详细信息，请参阅[如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。
+从 .NET Framework 4.5 开始，CLR 激活日志记录获得了极大的改进，包括何时和为什么会显示初始化错误消息的日志条目。 有关详细信息，请参阅[如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 2cf58e2edc5685032c2b9e590bc456e3a4e4d79b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633077"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422491"
 ---
 # <a name="while-c-reference"></a>while（C# 参考）
 
@@ -27,7 +27,7 @@ ms.locfileid: "65633077"
 
 ## <a name="example"></a>示例
 
-下面的示例演示 `while` 语句的用法。 选择“运行”以运行示例代码。 然后可以修改代码并再次运行它。
+下面的示例演示 `while` 语句的用法。 选择“运行”以运行示例代码  。 然后可以修改代码并再次运行它。
 
 [!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
 
@@ -40,5 +40,4 @@ ms.locfileid: "65633077"
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [迭代语句](iteration-statements.md)
 - [do 语句](do.md)

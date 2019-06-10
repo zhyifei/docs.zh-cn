@@ -2,19 +2,19 @@
 title: 聚合函数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 423c7e843f54e48d4f05f26f3f4071bff1795c69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631757"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489963"
 ---
 # <a name="aggregate-functions-entity-sql"></a>聚合函数 (Entity SQL)
 聚合是一种语言构造，它将集合浓缩为标量以作为组运算的一部分。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合分为两种形式：  
   
 - [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 可能在表达式中任何位置使用的集合函数。 这包括在作用于集合的投影和谓词中使用聚合函数。 集合函数是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定聚合的首选模式。  
   
-- 具有 GROUP BY 子句的表达式中的组聚合。 与在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中一样，组聚合接受 DISTINCT 和 ALL 作为聚合输入的修饰符。  
+- 具有 GROUP BY 子句的表达式中的组聚合。 如下所示 TRANSACT-SQL，组聚合接受 DISTINCT 和 ALL 作为聚合输入的修饰符。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 首先尝试将解释为集合函数的表达式，如果表达式为 SELECT 表达式的上下文中它将其解释为组聚合。  
   

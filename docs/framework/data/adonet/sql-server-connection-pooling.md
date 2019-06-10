@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877450"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490103"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 连接到数据库服务器通常由几个需要很长时间的步骤组成。 必须建立物理通道（例如套接字或命名管道），必须与服务器进行初次握手，必须分析连接字符串信息，必须由服务器对连接进行身份验证，必须运行检查以便在当前事务中登记，等等。  
@@ -99,7 +99,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>因为许多数据库产生的池碎片  
  许多 Internet 服务提供商在一台服务器上托管多个网站。 他们可能使用单个数据库确认窗体身份验证登录，然后为该用户或用户组打开与特定数据库的连接。 与身份验证数据库的连接将建立池连接，供每个用户使用。 但是，每个数据库的连接存在一个独立的池，这会增加与服务器的连接数。  
   
- 这也会对应用程序设计产生副作用。 但是，可以通过一个相对简单的方式避免此副作用，而又不会影响连接 SQL Server 时的安全性。 连接到服务器上的相同数据库而不是为每个用户或组连接到单独的数据库，然后执行 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 语句来切换到所需数据库。 以下代码段演示如何创建与 `master` 数据库的初始连接，然后切换到 `databaseName` 字符串变量中指定的所需数据库。  
+ 这也会对应用程序设计产生副作用。 但是，可以通过一个相对简单的方式避免此副作用，而又不会影响连接 SQL Server 时的安全性。 不是为每个用户或组连接独立的数据库，而是连接到服务器上的相同数据库，然后执行 Transact-SQL USE 语句来切换为所需的数据库。 以下代码段演示如何创建与 `master` 数据库的初始连接，然后切换到 `databaseName` 字符串变量中指定的所需数据库。  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

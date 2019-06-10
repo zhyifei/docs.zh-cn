@@ -9,58 +9,62 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 854b58a1f57008326874b5e5ee60cc9e6297960b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23917977add2343732957eaa8dad5d2176315acf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674034"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689871"
 ---
 # <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > 元素
-指定运行时是否使用固定的内存量来计算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的哈希代码。  
-  
- \<configuration>  
-\<运行时 >  
-<NetFx45_CultureAwareComparerGetHashCode_LongStrings>  
-  
-## <a name="syntax"></a>语法  
-  
+
+指定运行时是否使用固定的内存量来计算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的哈希代码。
+
+\<configuration>\
+\<runtime>\
+\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>
+
+## <a name="syntax"></a>语法
+
 ```xml
-<NetFx45_CultureAwareComparerGetHashCode_LongStrings enabled="0|1">  
-```  
-  
-## <a name="attributes-and-elements"></a>特性和元素  
- 下列各节描述了特性、子元素和父元素。  
-  
-### <a name="attributes"></a>特性  
-  
-|特性|描述|  
-|---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指定公共语言运行时是否在计算哈希代码时分配固定的内存量。|  
-  
-## <a name="enabled-attribute"></a>enabled 特性  
-  
-|“值”|Description|  
-|-----------|-----------------|  
-|0|公共语言运行时为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配可变的内存量来计算哈希代码。 这是默认设置。|  
-|1|公共语言运行时为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配固定的内存量来计算哈希代码。|  
-  
-### <a name="child-elements"></a>子元素  
- 无。  
-  
-### <a name="parent-elements"></a>父元素  
-  
-|元素|描述|  
-|-------------|-----------------|  
-|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|`runtime`|包含有关运行时初始化选项的信息。|  
-  
-## <a name="remarks"></a>备注  
- 默认情况下，公共语言运行时将为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配可变的内存量，当该方法尝试计算非常大的字符串（几百万个字符以上）的哈希代码时，会引发 <xref:System.ArgumentException> 。 通过将此元素添加到应用程序配置文件并将其 `enabled` 特性设置为“1”，你可以指定 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法使用可分配固定内存量以计算哈希代码的替代算法。  
-  
+<NetFx45_CultureAwareComparerGetHashCode_LongStrings enabled="0|1">
+```
+
+## <a name="attributes-and-elements"></a>特性和元素
+
+下列各节描述了特性、子元素和父元素。
+
+### <a name="attributes"></a>特性
+
+|特性|描述|
+|---------------|-----------------|
+|`enabled`|必需的特性。<br /><br /> 指定公共语言运行时是否在计算哈希代码时分配固定的内存量。|
+
+## <a name="enabled-attribute"></a>enabled 特性
+
+|值|Description|
+|-----------|-----------------|
+|0|公共语言运行时为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配可变的内存量来计算哈希代码。 这是默认设置。|
+|1|公共语言运行时为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配固定的内存量来计算哈希代码。|
+
+### <a name="child-elements"></a>子元素
+
+无。
+
+### <a name="parent-elements"></a>父元素
+
+|元素|描述|
+|-------------|-----------------|
+|`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|
+|`runtime`|包含有关运行时初始化选项的信息。|
+
+## <a name="remarks"></a>备注
+
+默认情况下，公共语言运行时将为 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法分配可变的内存量，当该方法尝试计算非常大的字符串（几百万个字符以上）的哈希代码时，会引发 <xref:System.ArgumentException> 。 通过将此元素添加到应用程序配置文件并将其 `enabled` 特性设置为“1”，你可以指定 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法使用可分配固定内存量以计算哈希代码的替代算法。
+
 > [!IMPORTANT]
->  `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` 元素不在 [!INCLUDE[win8](../../../../../includes/win8-md.md)] 和更高版本中使用。  
-  
+> `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` 元素不在 [!INCLUDE[win8](../../../../../includes/win8-md.md)] 和更高版本中使用。
+
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>

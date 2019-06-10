@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868896"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487828"
 ---
 # <a name="security-transparent-code-level-2"></a>安全透明的代码，级别 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "61868896"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中引入了 2 级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
+.NET Framework 4 中引入了 2 级透明度。 此模型的三条原则是透明代码、安全可靠关键代码和安全关键代码。
 
 - 透明代码（包括以完全信任权限运行的代码）只能调用其他透明代码或安全可靠关键代码。 它只能执行域的部分信任权限集（如果存在）允许的操作。 透明代码不能：
 
@@ -58,7 +58,7 @@ ms.locfileid: "61868896"
 
 ## <a name="usage-examples-and-behaviors"></a>用法示例和行为
 
-若要指定 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则（ 2 级透明度），请对程序集使用以下批注：
+若要指定.NET Framework 4 的规则 （2 级透明度），请对程序集使用以下批注：
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ ms.locfileid: "61868896"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-如果不对程序集进行批注，则默认使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则。 但是，建议的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>特性而不是依赖默认值。
+如果您不能批注程序集，默认情况下使用.NET Framework 4 规则。 但是，建议的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>特性而不是依赖默认值。
 
 ### <a name="assembly-wide-annotation"></a>程序集范围的批注
 

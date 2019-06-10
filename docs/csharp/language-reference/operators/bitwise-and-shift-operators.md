@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 65f7e2db176b408c9768ce73e297008c4b4c83d8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bf42a53a89676f457d3d2df8d193a83299c3e4cc
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880619"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758370"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位运算符和移位运算符（C# 参考）
 
@@ -54,7 +54,7 @@ ms.locfileid: "65880619"
 
 `~` 运算符通过反转每个位产生其操作数的按位求补：
 
-[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
+[!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
 也可以使用 `~` 符号来声明终结器。 有关详细信息，请参阅[终结器](../../programming-guide/classes-and-structs/destructors.md)。
 
@@ -64,11 +64,11 @@ ms.locfileid: "65880619"
 
 左移运算会放弃超出结果类型范围的高阶位，并将低阶空位位置设置为零，如以下示例所示：
 
-[!code-csharp-interactive[left shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
+[!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
 由于移位运算符仅针对 `int`、`uint`、`long` 和 `ulong` 类型定义，因此运算的结果始终包含至少 32 位。 如果第一个操作数是其他整数类型（`sbyte`、`byte`、`short`、`ushort` 或 `char`），则其值将转换为 `int` 类型，如以下示例所示：
 
-[!code-csharp-interactive[left shift with promotion](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
+[!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
 有关 `<<` 运算符的第二个操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
 
@@ -78,17 +78,17 @@ ms.locfileid: "65880619"
 
 右移位运算会放弃低阶位，如以下示例所示：
 
-[!code-csharp-interactive[right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
+[!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
 高顺序空位位置是根据第一个操作数类型设置的，如下所示：
 
-- 如果第一个操作数的类型是 [int](../keywords/int.md) 或 [long](../keywords/long.md)，右移运算符将执行算术移位：第一个操作数的最高有效位（符号位）的值将传播到高顺序空位位置。 也就是说，如果第一个操作数为非负，高顺序空位位置设置为零，如果为负，则将该位置设置为 1。
+- 如果第一个操作数的类型是 [int](../keywords/int.md) 或 [long](../keywords/long.md)，右移运算符将执行算术  移位：第一个操作数的最高有效位（符号位）的值将传播到高顺序空位位置。 也就是说，如果第一个操作数为非负，高顺序空位位置设置为零，如果为负，则将该位置设置为 1。
 
-  [!code-csharp-interactive[arithmetic right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
+  [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 如果第一个操作数的类型是 [uint](../keywords/uint.md) 或 [ulong](../keywords/ulong.md)，则右移运算符执行逻辑移位：高顺序空位位置始终设置为零。
+- 如果第一个操作数的类型是 [uint](../keywords/uint.md) 或 [ulong](../keywords/ulong.md)，则右移运算符执行逻辑  移位：高顺序空位位置始终设置为零。
 
-  [!code-csharp-interactive[logical right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
+  [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 有关 `>>` 运算符的第二个操作数如何定义移位计数的信息，请参阅[移位运算符的移位计数](#shift-count-of-the-shift-operators)部分。
 
@@ -96,7 +96,7 @@ ms.locfileid: "65880619"
 
 `&` 运算符计算其操作数的位逻辑 AND：
 
-[!code-csharp-interactive[bitwise AND](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
+[!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
 对于 `bool` 类型的操作数，`&` 运算符计算其操作数的[逻辑 AND](boolean-logical-operators.md#logical-and-operator-)。 一元 `&` 运算符是 [address-of 运算符](pointer-related-operators.md#address-of-operator-)。
 
@@ -104,7 +104,7 @@ ms.locfileid: "65880619"
 
 `^` 运算符计算其操作数的位逻辑异或，也称为位逻辑 XOR：
 
-[!code-csharp-interactive[bitwise XOR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
+[!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
 对于 `bool` 类型的操作数，`^` 运算符计算其操作数的[逻辑异或](boolean-logical-operators.md#logical-exclusive-or-operator-)。
 
@@ -112,7 +112,7 @@ ms.locfileid: "65880619"
 
 `|` 运算符计算其操作数的位逻辑 OR：
 
-[!code-csharp-interactive[bitwise OR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
+[!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
 对于 `bool` 类型的操作数，`|` 运算符计算其操作数的[逻辑 OR](boolean-logical-operators.md#logical-or-operator-)。
 
@@ -134,11 +134,11 @@ x = x op y
 
 以下示例演示了使用位运算符和移位运算符的复合赋值的用法：
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
 由于[数值提升](~/_csharplang/spec/expressions.md#numeric-promotions)，`op`，运算的结果可能无法隐式转换为 `x` 的 `T` 类型。 在这种情况下，如果 `op` 是预定义的运算符并且运算的结果可以显式转换为 `x` 的类型 `T`，则形式为 `x op= y` 的复合赋值表达式等效于 `x = (T)(x op y)`，但 `x` 仅计算一次。 以下示例演示了该行为：
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
 ## <a name="operator-precedence"></a>运算符优先级
 
@@ -152,7 +152,7 @@ x = x op y
 
 使用括号 `()` 可以更改运算符优先级决定的计算顺序：
 
-[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
 要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
 
@@ -162,13 +162,13 @@ x = x op y
 
 对于 `x << count` 和 `x >> count` 表达式，实际移位计数取决于 `x` 的类型，如下所示：
 
-- 如果 `x` 的类型为 [int](../keywords/int.md) 或 [unit](../keywords/uint.md)，则移位计数由第二个操作数的低阶五位定义。 也就是说，移位计数通过 `count & 0x1F`（或 `count & 0b_1_1111`）计算得出。
+- 如果 `x` 的类型为 [int](../keywords/int.md) 或 [unit](../keywords/uint.md)，则移位计数由第二个操作数的低阶五位定义  。 也就是说，移位计数通过 `count & 0x1F`（或 `count & 0b_1_1111`）计算得出。
 
-- 如果 `x` 的类型为 [long](../keywords/long.md) 或 [unlong](../keywords/ulong.md)，则移位计数由第二个操作数的低阶六位定义。 也就是说，移位计数通过 `count & 0x3F`（或 `count & 0b_11_1111`）计算得出。
+- 如果 `x` 的类型为 [long](../keywords/long.md) 或 [unlong](../keywords/ulong.md)，则移位计数由第二个操作数的低阶六位定义  。 也就是说，移位计数通过 `count & 0x3F`（或 `count & 0b_11_1111`）计算得出。
 
 以下示例演示了该行为：
 
-[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+[!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 ## <a name="enumeration-logical-operators"></a>枚举逻辑运算符
 

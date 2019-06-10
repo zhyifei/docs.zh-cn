@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648440"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251115"
 ---
 # <a name="mitigation-path-normalization"></a>缓解：路径规范化
-自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，.NET Framework 中的路径规范化已更改。  
+自面向 .NET Framework 4.6.2 的应用起，.NET Framework 中的路径规范化已更改。  
   
 ## <a name="what-is-path-normalization"></a>什么是路径规范化？  
  路径规范化涉及修改用于标识路径或文件的字符串，使其与目标操作系统上的有效路径一致。 路径规范化通常涉及以下操作：  
@@ -26,7 +26,7 @@ ms.locfileid: "64648440"
 - 删减指定字符。  
   
 ## <a name="the-changes"></a>更改  
- 自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，路径规范化在以下几个方面进行了更改：  
+ 自面向 .NET Framework 4.6.2 的应用起，路径规范化在以下几个方面进行了更改：  
   
 - 运行时在规范化处理路径时以操作系统的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函数为准。  
   
@@ -39,12 +39,13 @@ ms.locfileid: "64648440"
 - 支持使用设备语法来访问备用数据流。  
   
 ## <a name="impact"></a>影响  
- 对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，这些更改默认启用。 这些更改应该会提升性能，同时允许方法访问之前无法访问的路径。  
+
+对于面向 .NET Framework 4.6.2 或更高版本的应用，这些更改默认启用。 这些更改应该会提升性能，同时允许方法访问之前无法访问的路径。  
   
- 定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更低版本但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本控制下运行的应用程序不会受此更改影响。  
+定目标到 .NET Framework 4.6.1 及更低版本、但在 .NET Framework 4.6.2 或更高版本控制下运行的应用不受此更改影响。  
   
 ## <a name="mitigation"></a>缓解  
- 对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而选择禁用此更改并使用旧版路径规范化：  
+ 对于面向 .NET Framework 4.6.2 或更高版本的应用，可通过将以下内容添加到应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分，选择弃用此更改而使用旧版规范化：  
   
 ```xml  
 <runtime>  
@@ -52,7 +53,7 @@ ms.locfileid: "64648440"
 </runtime>  
 ```  
   
- 对于定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更低版本，但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本控制下运行的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而启用路径规范化更改：  
+对于面向 .NET Framework 4.6.1 或更低版本，但在 .NET Framework 4.6.2 或更高版本上运行的应用，可通过将以下行添加到应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分，启用对路径规范化的更改：  
   
 ```xml  
 <runtime>  

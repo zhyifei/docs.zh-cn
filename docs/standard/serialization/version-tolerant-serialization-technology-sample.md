@@ -2,12 +2,12 @@
 title: 版本容错序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028260"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66482998"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本容错序列化技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -18,17 +18,17 @@ ms.locfileid: "62028260"
   
 1. 打开命令提示窗口，然后定位到该示例的语言特定子目录（在 V1 Application 或 V2 Application 之下）之一。  
   
-2. 在命令行中键入“msbuild.exe \<ver> application.sln”（其中 \<ver> 为 v1 或 v2）。  
+2. 在命令行中键入“msbuild.exe \<ver> application.sln”（其中 \<ver> 为 v1 或 v2）。   
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>使用 Visual Studio 生成示例  
   
-1. 打开[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，定位到该示例的特定语言的子目录。  
+1. 打开文件资源管理器并导航到示例的特定于语言的子目录之一。  
   
 2. 定位到您在上一步中选择的目录的 V1 Application 子目录。  
   
 3. 双击 V1 Application.sln 的图标，以便在 Visual Studio 中打开该文件。  
   
-4. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。  
+4. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。  
   
 5. 定位到 V2 Application 子目录，重复前面两个步骤，以生成 V2 Application。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62028260"
   
 1. 在命令提示窗口中，定位到您在生成示例应用程序时选择的语言特定的子目录。  
   
-2. 在命令行中键入“runme.cmd”，以同时运行这两个应用程序。  
+2. 在命令行中键入“runme.cmd”，以同时运行这两个应用程序。   
   
  或者，定位到包含新的可执行文件的目录，然后按顺序运行这些文件。  
   

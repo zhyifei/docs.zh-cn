@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634206"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489298"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > 元素
 
@@ -22,7 +22,7 @@ ms.locfileid: "65634206"
 
 [\<configuration>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>语法
 
@@ -34,7 +34,7 @@ ms.locfileid: "65634206"
 
 |特性|描述|
 |---------------|-----------------|
-|**版本**|可选特性。<br /><br /> 一个字符串值，它指定此应用程序支持的公共语言运行时 (CLR) 版本。 有关的有效值`version`属性，请参阅["运行时版本"值](#version)部分。 **注意：** 通过.NET Framework 3.5"*运行时版本*"值的形式*主要*。*次要*。*生成*。 从 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 开始，仅主版本号和次版本号是必需的（即“v4.0”而不是“v4.0.30319”）。 建议使用较短字符串。|
+|**版本**|可选特性。<br /><br /> 一个字符串值，它指定此应用程序支持的公共语言运行时 (CLR) 版本。 有关的有效值`version`属性，请参阅["运行时版本"值](#version)部分。 **注意：** 通过.NET Framework 3.5"*运行时版本*"值的形式*主要*。*次要*。*生成*。 从.NET Framework 4 中，仅主版本号和次版本号是必需 (即"v4.0"而不是"v4.0.30319")。 建议使用较短字符串。|
 |**sku**|可选特性。<br /><br /> 一个字符串值，该值指定库存单位 (SKU)，库存单位则指定此应用程序支持的 .NET Framework 版本。<br /><br /> 从 .NET Framework 4.0 起，建议使用 `sku` 特性。  若存在该特性，则它指示应用面向的 .NET Framework 版本。<br /><br /> 有关有效的 sku 属性的值，请参阅["sku id"值](#sku)部分。|
 
 ## <a name="remarks"></a>备注
@@ -51,7 +51,7 @@ ms.locfileid: "65634206"
 如果 **\<supportedRuntime >** 具有元素`sku`属性配置文件中存在且已安装的.NET Framework 版本为较低则指定的受支持的版本，该应用程序无法运行，而是显示一条消息询问要安装受支持的版本。 否则为应用程序尝试任何已安装的版本上运行，但它可能出现意外行为是否不与该版本完全兼容。 (有关兼容性的.NET Framework 版本之间的差异，请参阅[.NET Framework 中的应用程序兼容性](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)。)因此，我们建议您在更容易错误诊断的应用程序配置文件中包含此元素。 （已创建新项目时由 Visual Studio 自动生成的配置文件包含它。）
   
 > [!NOTE]
-> 如果你的应用程序使用旧式激活路径，如[CorBindToRuntimeEx 函数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且希望这些路径来激活而不是早期版本的 CLR 版本 4 或如果你的应用程序使用生成[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]具有依赖关系，但在上使用.NET Framework 的早期版本构建的混合模式程序集，它不是只需指定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]在受支持运行时列表中。 此外，在[\<启动 > 元素](../startup/startup-element.md)在配置文件中，必须设置`useLegacyV2RuntimeActivationPolicy`归于`true`。 但是，将此特性设置为 `true` 意味着，用 .NET Framework 早期版本生成的所有组件都使用 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]（而不是生成它们时所用的运行时）运行。
+> 如果你的应用程序使用旧式激活路径，如[CorBindToRuntimeEx 函数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且希望这些路径来激活而不是早期版本的 CLR 版本 4 或如果你的应用程序使用.NET Framework 生成4，但具有一个依赖项上使用.NET Framework 的早期版本构建的混合模式程序集，它足以不受支持运行时在列表中指定.NET Framework 4。 此外，在[\<启动 > 元素](../startup/startup-element.md)在配置文件中，必须设置`useLegacyV2RuntimeActivationPolicy`归于`true`。 但是，此属性设置为`true`而不与同时生成的运行时使用.NET Framework 4 运行使用.NET Framework 的早期版本生成的所有组件的方式。
 
 我们建议你使用应用程序可在其上运行的所有 .NET Framework 版本来测试这些应用程序。
 

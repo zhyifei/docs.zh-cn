@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622726"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456848"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 <a name="top"></a> 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
@@ -57,7 +57,7 @@ ms.locfileid: "64622726"
   
  通常，协变类型参数可用作委托的返回类型，而逆变类型参数可用作参数类型。 对于接口，协变类型参数可用作接口的方法的返回类型，而逆变类型参数可用作接口的方法的参数类型。  
   
- 协变和逆变统称为“变体”。 未标记为协变或逆变的泛型类型参数称为“固定参数” 。 有关公共语言运行时中变体的事项的简短摘要：  
+ 协变和逆变统称为“变体”  。 未标记为协变或逆变的泛型类型参数称为“固定参数”  。 有关公共语言运行时中变体的事项的简短摘要：  
   
 - 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 类型参数仅限于泛型接口和泛型委托类型。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "64622726"
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>具有协变类型参数的泛型接口  
- 从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]开始，某些泛型接口具有协变类型参数；例如： <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.Generic.IEnumerator%601>、 <xref:System.Linq.IQueryable%601>和 <xref:System.Linq.IGrouping%602>。 由于这些接口的所有类型参数都是协变类型参数，因此这些类型参数只用于成员的返回类型。  
+ 从 .NET Framework 4 开始，某些泛型接口具有协变类型参数；例如：<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Linq.IQueryable%601> 和 <xref:System.Linq.IGrouping%602>。 由于这些接口的所有类型参数都是协变类型参数，因此这些类型参数只用于成员的返回类型。  
   
  下面的示例阐释了协变类型参数。 此示例定义了两个类型： `Base` 具有一个名为 `PrintBases` 的静态方法，该方法采用 `IEnumerable<Base>` （在 Visual Basic 中为`IEnumerable(Of Base)` ）并输出元素。 `Derived` 继承自 `Base`。 此示例创建一个空 `List<Derived>` （在 Visual Basic 中为`List(Of Derived)` ），并且说明可以将该类型传递给 `PrintBases` 且在不进行强制转换的情况下将该类型分配给类型 `IEnumerable<Base>` 的变量。 <xref:System.Collections.Generic.List%601> 实现 <xref:System.Collections.Generic.IEnumerable%601>，它具有一个协变类型参数。 协变类型参数是可使用 `IEnumerable<Derived>` 的实例而非 `IEnumerable<Base>`的原因。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "64622726"
   
 <a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>具有逆变泛型类型参数的泛型接口  
- 从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]开始，某些泛型接口具有逆变类型参数；例如： <xref:System.Collections.Generic.IComparer%601>、 <xref:System.IComparable%601>和 <xref:System.Collections.Generic.IEqualityComparer%601>。 由于这些接口只具有逆变类型参数，因此这些类型参数只用作接口成员中的参数类型。  
+ 从 .NET Framework 4 开始，某些泛型接口具有逆变类型参数；例如：<xref:System.Collections.Generic.IComparer%601>、<xref:System.IComparable%601> 和 <xref:System.Collections.Generic.IEqualityComparer%601>。 由于这些接口只具有逆变类型参数，因此这些类型参数只用作接口成员中的参数类型。  
   
  下面的示例阐释了逆变类型参数。 该示例定义具有`MustInherit` 属性的抽象（在 Visual Basic 中为 `Shape` ） `Area` 类。 该示例还定义一个实现 `ShapeAreaComparer` （在 Visual Basic 中为 `IComparer<Shape>` ）的`IComparer(Of Shape)` 类。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> 方法的实现基于 `Area` 属性的值，所以 `ShapeAreaComparer` 可用于按区域对 `Shape` 对象排序。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64622726"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>具有 Variant 类型参数的泛型委托  
- 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中， `Func` 泛型委托（如 <xref:System.Func%602>）具有协变返回类型和逆变参数类型。 `Action` 泛型委托（如 <xref:System.Action%602>）具有逆变参数类型。 这意味着，可以将委托指派给具有派生程度较高的参数类型和（对于 `Func` 泛型委托）派生程度较低的返回类型的变量。  
+ 在 .NET Framework 4 中，`Func` 泛型委托（如 <xref:System.Func%602>）具有协变返回类型和逆变参数类型。 `Action` 泛型委托（如 <xref:System.Action%602>）具有逆变参数类型。 这意味着，可以将委托指派给具有派生程度较高的参数类型和（对于 `Func` 泛型委托）派生程度较低的返回类型的变量。  
   
 > [!NOTE]
 >  `Func` 泛型委托的最后一个泛型类型参数指定委托签名中返回值的类型。 该参数是协变的（`out` 关键字），而其他泛型类型参数是逆变的（`in` 关键字）。  
@@ -146,12 +146,12 @@ ms.locfileid: "64622726"
   
 <a name="DefiningVariantTypeParameters"></a>   
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>定义 Variant 泛型接口和委托  
- 从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]开始，Visual Basic 和 C# 提供了一些关键字，利用这些关键字，可以将接口和委托的泛型类型参数标记为协变或逆变。  
+ 从 .NET Framework 4 开始，Visual Basic 和 C# 提供了一些关键字，利用这些关键字，可以将接口和委托的泛型类型参数标记为协变或逆变。  
   
 > [!NOTE]
->  从 .NET Framework 2.0 版开始，公共语言运行时支持泛型类型参数上的变化批注。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，定义包含这些批注的泛型类的唯一方法就是利用 [Ilasm.exe（IL 汇编程序）](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 编译该类或在动态程序集中发出该类，从而使用 Microsoft 中间语言 (MSIL)。  
+>  从 .NET Framework 2.0 版开始，公共语言运行时支持泛型类型参数上的变化批注。 在 .NET Framework 4 之前，定义包含这些批注的泛型类的唯一方法就是利用 [Ilasm.exe（IL 汇编程序）](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 编译该类或在动态程序集中发出该类，从而使用 Microsoft 中间语言 (MSIL)。  
   
- 协变类型参数用 `out` 关键字（在 Visual Basic 中为 `Out` 关键字，在 [MSIL 汇编程序](../../../docs/framework/tools/ilasm-exe-il-assembler.md)中为 `+`）标记。 可以将协变类型参数用作属于接口的方法的返回值，或用作委托的返回类型。 但不能将协变类型参数用作接口方法的泛型类型约束。  
+ 协变类型参数用 `out` 关键字（在 Visual Basic 中为`Out` 关键字，在 `+` MSIL 汇编程序 [中为](../../../docs/framework/tools/ilasm-exe-il-assembler.md)）标记。 可以将协变类型参数用作属于接口的方法的返回值，或用作委托的返回类型。 但不能将协变类型参数用作接口方法的泛型类型约束。  
   
 > [!NOTE]
 >  如果接口的方法具有泛型委托类型的参数，则接口类型的协变类型参数可用于指定委托类型的逆变类型参数。  
@@ -168,7 +168,7 @@ ms.locfileid: "64622726"
   
 <a name="VariantList"></a>   
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Variant 泛型接口和委托类型的列表  
- 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中，下面的接口和委托类型具有协变和/或逆变类型参数。  
+ 在 .NET Framework 4 中，下面的接口和委托类型具有协变和/或逆变类型参数。  
   
 |类型|协变类型参数|逆变类型参数|  
 |----------|-------------------------------|-----------------------------------|  

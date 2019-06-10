@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d064e2377e39f673d47ce497ebd6c96e9f3c1cd0
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251059"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378555"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -1200,7 +1200,7 @@ WCF 包含可以在客户端应用程序上设置以确保它们始终连接到�
 
 **在重新托管的 WF 设计器中支持 C# 表达式和 IntelliSense**
 
-从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，WF 在 Visual Studio 设计器和代码工作流中都支持 C# 表达式。 重新托管的工作流设计器是 WF 的一项重要功能，允许工作流设计器位于 Visual Studio 外部的应用程序中（如 WPF 中）。  Windows Workflow Foundation 提供在重新托管的工作流设计器中支持 C# 表达式和 IntelliSense 的功能。 有关详细信息，请参阅 [Windows Workflow Foundation 博客](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。
+自 .NET Framework 4.5 起，WF 支持在 Visual Studio 设计器和代码工作流中使用 C# 表达式。 重新托管的工作流设计器是 WF 的一项重要功能，允许工作流设计器位于 Visual Studio 外部的应用程序中（如 WPF 中）。  Windows Workflow Foundation 提供在重新托管的工作流设计器中支持 C# 表达式和 IntelliSense 的功能。 有关详细信息，请参阅 [Windows Workflow Foundation 博客](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 在低于 .NET Framework 4.6.2 的 .NET Framework 版本中，当客户通过 Visual Studio 重新生成工作流项目时，WF 设计器 IntelliSense 会中断。 虽然项目生成成功，但在设计器中找不到该工作流类型，并且来自 IntelliSense 的缺少工作流类型的警告会出现在**错误列表**窗口中。 .NET Framework 4.6.2 解决了这个问题，并让 IntelliSense 可供使用。
 
@@ -1399,7 +1399,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015 的新增功能
 
-.NET 2015 引入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET Core。 一些新功能两者都适用，而另一些功能则特定于 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 .NET Core。
+.NET 2015 引入了 .NET Framework 4.6 和 .NET Core。 一些新功能两者都适用，而另一些功能则是 .NET Framework 4.6 或 .NET Core 的专属功能。
 
 - **ASP.NET Core**
 
@@ -1417,7 +1417,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
     - **模型绑定支持 Task 返回方法**
 
-         在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，ASP.NET 增加了模型绑定功能，针对在 Web 窗体页面和用户控件中进行的基于 CRUD 的数据操作，该功能启用了一种以代码为中心的可扩展方法。 模型绑定系统现在支持 <xref:System.Threading.Tasks.Task>-returning 模型绑定方法。 此功能使得 Web 窗体开发人员在使用较新版本的 ORM（包括实体框架）时，能获得异步的可伸缩性优点以及数据绑定系统的易用性。
+         在 .NET Framework 4.5 中，ASP.NET 增加了模型绑定功能，启用了一种以代码为中心的可扩展方法，用于在 Web 窗体页面和用户控件中执行基于 CRUD 的数据操作。 模型绑定系统现在支持 <xref:System.Threading.Tasks.Task>-returning 模型绑定方法。 此功能使得 Web 窗体开发人员在使用较新版本的 ORM（包括实体框架）时，能获得异步的可伸缩性优点以及数据绑定系统的易用性。
 
          异步模型绑定由 `aspnet:EnableAsyncModelBinding` 配置设置控制。
 
@@ -1427,7 +1427,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
         </appSettings>
         ```
 
-         在面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用中，它默认为 `true`。 在面向早期版本的 .NET Framework 的 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 上运行的应用中，它默认为 `false`。 可以通过将配置设置设置为 `true` 来启用它。
+         在定位 .NET Framework 4.6 的应用程序中，默认值为 `true`。 在定位旧版 .NET Framework 但在 .NET Framework 4.6 上运行的应用程序中，默认值为 `false`。 可以通过将配置设置设置为 `true` 来启用它。
 
     - **HTTP/2 支持 (Windows 10)**
 
@@ -1452,7 +1452,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
     - **随机字符串哈希算法**
 
-         .NET Framework 4.5 引入了[随机字符串哈希算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。 但是，由于某些 ASP.NET 功能依赖于稳定的哈希代码，因此 ASP.NET 不支持该算法。 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，现在支持随机字符串哈希算法。 若要启用此功能，请使用 `aspnet:UseRandomizedStringHashAlgorithm` 配置设置。
+         .NET Framework 4.5 引入了[随机字符串哈希算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。 但是，由于某些 ASP.NET 功能依赖于稳定的哈希代码，因此 ASP.NET 不支持该算法。 在 .NET Framework 4.6 中，现在支持随机字符串哈希算法。 若要启用此功能，请使用 `aspnet:UseRandomizedStringHashAlgorithm` 配置设置。
 
         ```xml
         <appSettings>
@@ -1476,7 +1476,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 - **基类库更改**
 
-     将许多新 API 添加到 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以启用关键方案。 这些包括以下更改和添加：
+     为了启用关键方案，已向 .NET Framework 4.6 添加了许多新 API。 这些包括以下更改和添加：
 
     - **IReadOnlyCollection\<T> 实现**
 
@@ -1592,7 +1592,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
     - **更改为基于任务的异步模式 (TAP)**
 
-         对于面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象的应用，请继承调用线程的区域性和 UI 区域性。 面向早期 .NET Framework 版本或不面向特定版本的 .NET Framework 的应用的行为不受影响。 有关详细信息，请参阅 <xref:System.Globalization.CultureInfo> 类主题中的“区域性和基于任务的异步操作”一节。
+         对于面向 .NET Framework 4.6、<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象的应用，请继承调用线程的区域性和 UI 区域性。 面向早期 .NET Framework 版本或不面向特定版本的 .NET Framework 的应用的行为不受影响。 有关详细信息，请参阅 <xref:System.Globalization.CultureInfo> 类主题中的“区域性和基于任务的异步操作”一节。
 
          <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> 类允许你表示对于给定异步控制流（如 `async` 方法）来说是本地数据的环境数据。 它可用于跨线程保存数据。 你还可以定义一个回调方法，该回调方法在环境数据发生变化时就会发出通知，而不论环境数据发生变化的原因是 <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> 属性显式更改还是线程遇到上下文转换。
 
@@ -1624,7 +1624,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
     - **HDPI 改进**
 
-         在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，WPF 中的 HDPI 支持现在更好。 已对布局舍入进行了更改，以减少带边框的控件中的剪切实例。 默认情况下，仅当你的 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 设置为 .NET 4.6 时才启用此功能。  面向早期版本的 Framework 但在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 上运行的应用程序可以通过将下行添加到 app.config 文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分来选择加入该新行为。
+         在 .NET Framework 4.6 中，WPF 现提供更出色的 HDPI 支持。 已对布局舍入进行了更改，以减少带边框的控件中的剪切实例。 默认情况下，仅当你的 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 设置为 .NET 4.6 时才启用此功能。  对于定位旧版 Framework，但在 .NET Framework 4.6 上运行的应用程序，可以在 app.config 文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而选择启用新行为：
 
         ```xml
         <AppContextSwitchOverrides
@@ -1642,11 +1642,11 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
     - **触摸更好**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中已解决了客户关于触摸 [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) 会产生不可预知行为的报告。 Windows 应用商店应用程序和 WPF 应用程序的双击阈值现在与 Windows 8.1 及更高版本中的相同。
+         在 .NET Framework 4.6 中，客户在 [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) 中报告的触控服务导致不可预测行为发生的问题得到了解决。 Windows 应用商店应用程序和 WPF 应用程序的双击阈值现在与 Windows 8.1 及更高版本中的相同。
 
     - **透明子窗口支持**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中的 WPF 支持 Windows 8.1 及更高版本中的透明子窗口。 这使得你可以在顶层窗口中创建非矩形的透明子窗口。 你可以通过将 <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> 属性设置为 `true` 启用此功能。
+         .NET Framework 4.6 中的 WPF 支持在 Windows 8.1 及更高版本中使用透明子窗口。 这使得你可以在顶层窗口中创建非矩形的透明子窗口。 你可以通过将 <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> 属性设置为 `true` 启用此功能。
 
 - **Windows Communication Foundation (WCF)**
 
@@ -1719,7 +1719,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
          Windows 10 包括一个新的高可伸缩性网络算法，它能通过重用出站 TCP 连接的本地端口来更好地利用计算机资源。 .NET Framework 4.6 支持新算法，这使得 .NET 应用可以充分利用新的行为。 在以前版本的 Windows 中，有人工并发连接限制（通常为 16,384，即动态端口范围的默认大小），这可能导致负载下的端口耗尽，从而限制了服务的可伸缩性。
 
-         在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中，添加了两个新的 API 来启用端口重用，从而有效删除了并发连接方面的 64K 限制：
+         在 .NET Framework 4.6 中，添加了两个新 API，用于启用端口重用，有效撤消了并发连接方面的 64K 限制：
 
         - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 枚举值。
 
@@ -1735,7 +1735,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 - **在 Windows 窗体控件中调整大小。**
 
-     此功能已在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中展开，以包括绘制 <xref:System.Drawing.Design.UITypeEditor> 时所使用的 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> 属性所指定的 <xref:System.Windows.Forms.DomainUpDown>、<xref:System.Windows.Forms.NumericUpDown>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>、<xref:System.Windows.Forms.DataGridViewColumn> 和 <xref:System.Windows.Forms.ToolStripSplitButton> 类型和矩形。
+     此功能已在 .NET Framework 4.6 中展开，以包括绘制 <xref:System.Drawing.Design.UITypeEditor> 时所使用的 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> 属性所指定的 <xref:System.Windows.Forms.DomainUpDown><xref:System.Windows.Forms.NumericUpDown><xref:System.Windows.Forms.DataGridViewComboBoxColumn><xref:System.Windows.Forms.DataGridViewColumn> 和 <xref:System.Windows.Forms.ToolStripSplitButton> 类型和矩形。
 
      这是一项可以选择使用的功能。 若要启用它，在应用程序配置 (app.config) 文件中将 `EnableWindowsFormsHighDpiAutoResizing` 元素设置为 `true`：
 
@@ -1864,7 +1864,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 .NET Framework 4.5.1 基类中的新增功能和增强包括：
 
-- 程序集的自动绑定重定向。 自 Visual Studio 2013 起，在编译面向 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的应用时，如果应用或其组件引用同一程序集的多个版本，那么绑定重定向可能会被添加到应用配置文件中。 你也可以对面向 .NET framework 的早期版本的项目启用此功能。 有关详细信息，请参阅[如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
+- 程序集的自动绑定重定向。 自 Visual Studio 2013 起，编译定位 .NET Framework 4.5.1 的应用程序时，如果应用程序或其组件引用同一程序集的多个版本，那么绑定重定向可能会被添加到应用程序配置文件中。 你也可以对面向 .NET framework 的早期版本的项目启用此功能。 有关详细信息，请参阅[如何：启用和禁用自动绑定重定向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
 
 - 可以收集诊断信息，以帮助开发人员提高服务器和云应用程序的性能。 有关详细信息，请参阅 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 类中的 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 和 <xref:System.Diagnostics.Tracing.EventSource> 方法。
 
@@ -1912,7 +1912,7 @@ Windows 窗体的改进包括：
 
 - 支持 64 位平台上大于 2 GB 的数组。 此功能可在应用程序配置文件中启用。 请参阅 [\<gcAllowVeryLargeObjects> 元素](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)，它还列出了对对象大小和数组大小的其他限制。
 
-- 通过服务器的后台垃圾回收来改进性能。 当你使用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的服务器垃圾回收功能时，将自动启用后台垃圾回收。 请参阅[垃圾回收的基础](../../standard/garbage-collection/fundamentals.md)主题的“后台服务器垃圾回收”一节。
+- 通过服务器的后台垃圾回收来改进性能。 在 .NET Framework 4.5 中使用服务器垃圾回收功能时，后台垃圾回收功能会自动启用。 请参阅[垃圾回收的基础](../../standard/garbage-collection/fundamentals.md)主题的“后台服务器垃圾回收”一节。
 
 - 后台实时 (JIT) 编译，可在多核处理器上使用此功能改进应用程序性能。 请参阅 <xref:System.Runtime.ProfileOptimization>。
 
@@ -1940,7 +1940,7 @@ Windows 窗体的改进包括：
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Managed Extensibility Framework (MEF) 提供了以下新功能：
+在 .NET Framework 4.5 中，Managed Extensibility Framework (MEF) 新增了以下功能：
 
 - 对泛型类型的支持。
 
@@ -1954,13 +1954,13 @@ Windows 窗体的改进包括：
 
 ### <a name="asynchronous-file-operations"></a>异步文件操作
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，已将新的异步功能添加到 C# 和 Visual Basic 语言中。 这些功能将添加用于执行异步操作的基于任务的模型。 若要使用此新模型，请使用 I/O 类中的异步方法。 请参阅[异步文件 I/O](../../standard/io/asynchronous-file-i-o.md)。
+在 .NET Framework 4.5 中，已向 C# 和 Visual Basic 语言添加新的异步功能。 这些功能将添加用于执行异步操作的基于任务的模型。 若要使用此新模型，请使用 I/O 类中的异步方法。 请参阅[异步文件 I/O](../../standard/io/asynchronous-file-i-o.md)。
 
 <a name="tools" />
 
 ### <a name="tools"></a>工具
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，资源文件生成器 (Resgen.exe) 使你可以从嵌入 .NET Framework 程序集中的 .resources 文件中创建用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序的 .resw 文件。 有关详细信息，请参阅 [Resgen.exe（资源文件生成器）](../tools/resgen-exe-resource-file-generator.md)。
+在 .NET Framework 4.5 中，使用资源文件生成器 (Resgen.exe)，可以通过 .NET Framework 程序集中嵌入的 .resources 文件创建用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用的 .resw 文件。 有关详细信息，请参阅 [Resgen.exe（资源文件生成器）](../tools/resgen-exe-resource-file-generator.md)。
 
 利用按托管配置优化 (Mpgo.exe) 工具，你可以通过优化本机映像程序集来改进应用程序的启动时间、内存使用率（工作集大小）和吞吐量。 该命令行工具会针对本机映像应用程序程序集生成配置文件数据。 请参阅 [Mpgo.exe（按托管配置文件优化工具）](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md)。 自 Visual Studio 2013 起，可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用和桌面应用。
 
@@ -1968,7 +1968,7 @@ Windows 窗体的改进包括：
 
 ### <a name="parallel-computing"></a>并行计算
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供了针对并行计算的多项新功能和改进功能。 其中包括改进的性能、增强的控件、对异步编程的增强支持、新的数据流库以及对并行调试和性能分析的增强支持。 请参阅“使用 .NET 进行并行编程”博客中的 [.NET 4.5 中有关并行的新增功能](https://go.microsoft.com/fwlink/?LinkId=235061)条目。
+.NET Framework 4.5 新增了多项有关并行计算的功能和改进。 其中包括改进的性能、增强的控件、对异步编程的增强支持、新的数据流库以及对并行调试和性能分析的增强支持。 请参阅“使用 .NET 进行并行编程”博客中的 [.NET 4.5 中有关并行的新增功能](https://go.microsoft.com/fwlink/?LinkId=235061)条目。
 
 <a name="web" />
 
@@ -1982,11 +1982,11 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 ### <a name="networking-a-namenetworking-"></a>网络连接<a name="networking" />
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供了一个用于 HTTP 应用程序的新编程接口。 有关详细信息，请参阅新的 <xref:System.Net.Http?displayProperty=nameWithType> 和 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 命名空间。
+.NET Framework 4.5 新增了 HTTP 应用程序的编程接口。 有关详细信息，请参阅新的 <xref:System.Net.Http?displayProperty=nameWithType> 和 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 命名空间。
 
 还包含针对用于接受 WebSocket 连接并与之交互（通过使用现有 <xref:System.Net.HttpListener> 和相关类）的新编程接口的支持。 有关详细信息，请参阅新的 <xref:System.Net.WebSockets> 命名空间和 <xref:System.Net.HttpListener> 类。
 
-此外，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 包括以下网络改进：
+此外，.NET Framework 4.5 新增了以下网络改进：
 
 - 与 RFC 兼容的 URI 支持。 有关详细信息，请参阅 <xref:System.Uri> 和相关类。
 
@@ -2002,7 +2002,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Windows Presentation Foundation (WPF) 包含以下方面的更改和改进：
+在 .NET Framework 4.5 中，Windows Presentation Foundation (WPF) 在以下几个领域进行了更改和改进：
 
 - 利用新的 <xref:System.Windows.Controls.Ribbon.Ribbon> 控件，你可以实现承载快速访问工具栏、应用程序菜单和选项卡的功能区用户界面。
 
@@ -2026,7 +2026,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 ### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，已添加以下功能，以便更轻松地编写和维护 Windows Communication Foundation (WCF) 应用程序：
+为了更轻松地编写和维护 Windows Communication Foundation (WCF) 应用程序，.NET Framework 4.5 中新增了以下功能：
 
 - 简化生成的配置文件。
 
@@ -2068,9 +2068,9 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，已将几项新功能添加到 Windows Workflow Foundation (WF) 中，包括：
+在 .NET Framework 4.5 中，已向 Windows Workflow Foundation (WF) 添加多项新功能，包括：
 
-- 首次作为 .NET Framework 4.0.1（[.NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)）的一部分引入的状态机工作流。 此更新包括可使开发人员创建状态机工作流的多个新类和活动。 已针对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 更新这些类和活动以包含：
+- 首次作为 .NET Framework 4.0.1（[.NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)）的一部分引入的状态机工作流。 此更新包括可使开发人员创建状态机工作流的多个新类和活动。 这些类和活动已针对 .NET Framework 4.5 更新为包含：
 
     - 对状态设置断点的能力。
 
@@ -2122,7 +2122,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序为特定窗体因素而设计，并利用 Windows 操作系统的功能。 通过使用 C# 或 Visual Basic，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可用于生成面向 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](https://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序为特定窗体因素而设计，并利用 Windows 操作系统的功能。 可以使用一部分 .NET Framework 4.5 或 4.5.1 生成用 C# 或 Visual Basic 编写的 Windows 相关 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](https://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>可移植类库<a name="portable" />
 

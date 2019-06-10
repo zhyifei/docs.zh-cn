@@ -2,12 +2,12 @@
 title: 实现值对象
 description: 适用于容器化的 .NET 应用程序的 .NET 微服务体系结构 | 深入了解有关使用新实体框架功能实现值对象的详细信息和选项。
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644266"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423734"
 ---
 # <a name="implement-value-objects"></a>实现值对象
 
@@ -19,9 +19,9 @@ ms.locfileid: "65644266"
 
 ![Order 聚合中的 Address 值对象。](./media/image14.png)
 
-图 7-13。 Order 聚合中的 Address 值对象
+图 7-13  。 Order 聚合中的 Address 值对象
 
-如图 7-13 所示，实体通常由多个属性组成。 例如，`Order` 实体可以建模为具有标识的实体，在内部由一组特性组成，例如 OrderId、OrderDate、OrderItems 等。但地址这个作为由国家/地区、街道、城市等组成的复杂值，必须建模或处理为值对象。
+如图 7-13 所示，实体通常由多个属性组成。 例如，`Order` 实体可以建模为具有标识的实体，在内部由一组特性组成，例如 OrderId、OrderDate、OrderItems 等。但地址这个作为由国家/地区或区域、街道、城市等组成的复杂值，必须建模或处理为值对象。
 
 ## <a name="important-characteristics-of-value-objects"></a>值对象的重要特征
 
@@ -310,13 +310,13 @@ public class Address
 - **Martin Fowler。ValueObject 模式** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
+- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.** （域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Vaughn Vernon。实现域驱动设计。** （书；包括值对象的讨论）\
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- 阴影属性 \
+- 阴影属性 \ 
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **复杂类型和/或值对象**。 EF Core GitHub 存储库中的讨论（“问题”选项卡）\

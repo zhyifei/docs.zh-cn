@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 6e6ace55e7557e940970675c99ec4db87c124f1d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4c075cedb3cf479f53409f3b0acf4463fc3d7a03
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633890"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758209"
 ---
 # <a name="-operator-c-reference"></a>=> 运算符（C# 参考）
 
@@ -25,15 +25,15 @@ ms.locfileid: "65633890"
 
 以下示例使用带有方法语法的 [LINQ](../../programming-guide/concepts/linq/index.md) 功能来演示 lambda 表达式的用法：
 
-[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
 lambda 表达式的输入变量在编译时是强类型。 当编译器可以推断输入变量的类型时，如前面的示例所示，可以省略类型声明。 如果需要指定输入变量的类型，则必须对每个变量执行此操作，如以下示例所示：
 
-[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
 以下示例显示如何在没有输入变量的情况下定义 lambda 表达式：
 
-[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
 有关详细信息，请参阅 [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)。
 
@@ -45,7 +45,7 @@ lambda 表达式的输入变量在编译时是强类型。 当编译器可以推
 member => expression;
 ```
 
-其中“expression”是有效的表达式。 请注意，仅当成员的返回类型是 `void` 时，或者成员是构造函数、终结器或属性 `set` 访问器时，表达式才可能是语句表达式。
+其中“expression”  是有效的表达式。 请注意，仅当成员的返回类型是 `void` 时，或者成员是构造函数、终结器或属性 `set` 访问器时，表达式才可能是语句表达式   。
 
 以下示例演示了用于 `Person.ToString` 方法的表达式主体定义：
 

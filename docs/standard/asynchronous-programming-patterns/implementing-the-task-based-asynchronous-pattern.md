@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a218633ed607222fec3e46629a9bcd614c3d0610
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 670cdb369920663ffa62e224bdd5aa495fc7e622
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678208"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377699"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>实现基于任务的异步模式
 可使用以下三种方式实现基于任务的异步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 编译器、手动实现或编译器和手动方法相结合。 以下各节详细地讨论了每一种方法。 可以使用 TAP 模式实现计算密集型和 I/O 密集型异步操作。 [工作负载](#workloads)部分介绍了各种类型的操作。
@@ -26,7 +26,7 @@ ms.locfileid: "54678208"
 ## <a name="generating-tap-methods"></a>生成 TAP 方法
 
 ### <a name="using-the-compilers"></a>使用编译器
-自 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 起，任何归于 `async` 关键字（Visual Basic 中的 `Async`）的方法都被视为异步方法，并且 C# 和 Visual Basic 编译器会执行必要的转换，以使用 TAP 异步实现方法。 异步方法应返回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 对象。 对于后者，函数的主体应返回 `TResult`，并且编译器确保此结果是通过生成的任务对象获得。 同样，未在方法的主体中处理的任何异常都会被封送处理为输出任务并导致生成的任务结束以 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状态结束。 此异常发生在 <xref:System.OperationCanceledException>（或派生类型）未得到处理时，在这种情况下生成的任务以 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态结束。
+自 .NET Framework 4.5 起，任何归于 `async` 关键字（Visual Basic 中的 `Async`）的方法都被视为异步方法，并且 C# 和 Visual Basic 编译器会执行必要的转换，以使用 TAP 异步实现方法。 异步方法应返回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 对象。 对于后者，函数的主体应返回 `TResult`，并且编译器确保此结果是通过生成的任务对象获得。 同样，未在方法的主体中处理的任何异常都会被封送处理为输出任务并导致生成的任务结束以 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状态结束。 此异常发生在 <xref:System.OperationCanceledException>（或派生类型）未得到处理时，在这种情况下生成的任务以 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态结束。
 
 ### <a name="generating-tap-methods-manually"></a>手动生成 TAP 方法
 你可以手动实现 TAP 模式以更好地控制实现。 编译器依赖从 <xref:System.Threading.Tasks?displayProperty=nameWithType> 命名空间公开的公共外围应用和 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中支持的类型。 如要自己实现 TAP，你需要创建一个 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象、执行异步操作，并在操作完成时，调用 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>、<xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> 方法，或调用这些方法之一的`Try`版本。 手动实现 TAP 方法时，需在所表示的异步操作完成时完成生成的任务。 例如:
@@ -52,7 +52,7 @@ ms.locfileid: "54678208"
 
 - 在 .NET Framework 4 中，使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法，这种方法接受异步执行委托（通常是 <xref:System.Action%601> 或 <xref:System.Func%601>）。 如果你提供 <xref:System.Action%601> 委托，该方法会返回表示异步执行该委托的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象。 如果你提供 <xref:System.Func%601> 委托，该方法会返回 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 对象。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 方法的重载接受一个取消标记（<xref:System.Threading.CancellationToken>）、任务创建选项（<xref:System.Threading.Tasks.TaskCreationOptions>）和一个任务计划程序（<xref:System.Threading.Tasks.TaskScheduler>），它们都对计划和任务执行提供细粒度控制。 定目标到当前任务计划程序的工厂实例可用作 <xref:System.Threading.Tasks.Task> 类的静态属性 (<xref:System.Threading.Tasks.Task.Factory%2A>)；例如：`Task.Factory.StartNew(…)`。
 
-- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本（包括 .NET Core 和 .NET Standard）中，使用静态 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法作为 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 的快捷方式。 你可以使用 <xref:System.Threading.Tasks.Task.Run%2A> 来轻松启动针对线程池的计算密集型任务。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中，这是用于启动计算密集型任务的首选机制。 仅当需要更细化地控制任务时，才直接使用 `StartNew`。
+- 在 .NET Framework 4.5 及更高版本（包括 .NET Core 和 .NET Standard）中，使用静态 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法作为 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 的快捷方式。 你可以使用 <xref:System.Threading.Tasks.Task.Run%2A> 来轻松启动针对线程池的计算密集型任务。 在 .NET Framework 4.5 及更高版本中，这是用于启动计算密集型任务的首选机制。 仅当需要更细化地控制任务时，才直接使用 `StartNew`。
 
 - 想要分别生成并计划任务时，请使用`Task`类型或`Start`方法的构造函数。 公共方法必须仅返回已开始的任务。
 
@@ -83,12 +83,12 @@ ms.locfileid: "54678208"
 [!code-csharp[Conceptual.TAP_Patterns#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#4)]
 [!code-vb[Conceptual.TAP_Patterns#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#4)]
 
-从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，<xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法正是为此而提供的，并且你可以在另一个异步方法内使用它。例如，若要实现异步轮询循环：
+从 .NET Framework 4.5 开始，<xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法正是为此而提供的，并且你可以在另一个异步方法内使用它。例如，若要实现异步轮询循环：
 
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]
 
-<xref:System.Threading.Tasks.TaskCompletionSource%601> 类并没有对应的非泛型类。 然而 <xref:System.Threading.Tasks.Task%601> 派生自 <xref:System.Threading.Tasks.Task>，因此你可以为仅返回任务的 I/O 密集型方法使用泛型 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象。 为了做到这一点，你可以使用具有虚拟 `TResult`（<xref:System.Boolean> 是一个很好的默认选项，但是如果你担心 <xref:System.Threading.Tasks.Task> 用户将其向下转换成 <xref:System.Threading.Tasks.Task%601>，那么你可以转而使用私有 `TResult` 类型）。 例如，上一个示例中的 `Delay` 方法返回现有时间和所产生的偏移量（`Task<DateTimeOffset>`）。 如果结果值是不必要的，则可对该方法进行如下改写（注意对 <xref:System.Threading.Tasks.TaskCompletionSource%601.TrySetResult%2A> 的返回类型的更改和自变量的更改）：
+<xref:System.Threading.Tasks.TaskCompletionSource%601> 类并没有对应的非泛型类。 然而 <xref:System.Threading.Tasks.Task%601> 派生自 <xref:System.Threading.Tasks.Task>，因此你可以为仅返回任务的 I/O 密集型方法使用泛型 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象。 为了做到这一点，你可以使用具有虚拟 `TResult`（<xref:System.Boolean> 是一个很好的默认选项，但是如果你担心 <xref:System.Threading.Tasks.Task> 用户将其向下转换成 <xref:System.Threading.Tasks.Task%601>，那么你可以转而使用私有 `TResult` 类型）。 例如，上一个示例中的 `Delay` 方法返回现有时间和所产生的偏移量（`Task<DateTimeOffset>`）。 如果结果值是不必要的，则可对该方法进行如下改写（注意对 <xref:System.Threading.Tasks.TaskCompletionSource%601.TrySetResult%2A> 的返回类型的更改和实参的更改）：
 
 [!code-csharp[Conceptual.TAP_Patterns#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#6)]
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]

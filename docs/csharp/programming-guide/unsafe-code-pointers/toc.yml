@@ -1,13 +1,13 @@
-- name: 不安全代码和指针
-  href: index.md
-  items:
-    - name: 固定大小的缓冲区
-      href: fixed-size-buffers.md
-    - name: 指针类型
-      items:
-        - name: 概述
-          href: pointer-types.md
-        - name: 指针转换
-          href: pointer-conversions.md
-        - name: 操作说明：使用指针来复制字节数组
-          href: how-to-use-pointers-to-copy-an-array-of-bytes.md
+items:
+  - name: 概述和限制
+    href: index.md
+  - name: 固定大小的缓冲区
+    href: fixed-size-buffers.md
+  - name: 指针类型
+    items:
+      - name: 概述
+        href: pointer-types.md
+      - name: 指针转换
+        href: pointer-conversions.md
+      - name: 操作说明：使用指针来复制字节数组
+        href: how-to-use-pointers-to-copy-an-array-of-bytes.md

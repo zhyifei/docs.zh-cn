@@ -2,12 +2,12 @@
 title: 如何：查找子代元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: 0b9d89f0a9adb540e7efdccd1e4e7c2f8caf9696
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f5f552935d6169537ccfbadff2a21396828e47
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599226"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486768"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>如何：查找子代元素 (XPath-LINQ to XML) (C#)
 本主题演示如何获取具有特定名称的后代元素。  
@@ -17,7 +17,7 @@ ms.locfileid: "54599226"
 ## <a name="example"></a>示例  
  本示例查找名为 `Name` 的所有后代。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -48,7 +48,3 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 <Name>Jessica Arnold</Name>  
 ```  
-  
-## <a name="see-also"></a>请参阅
-
-- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

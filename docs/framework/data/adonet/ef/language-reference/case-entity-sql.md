@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607188"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489498"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 求出一组 `Boolean` 表达式的值以确定结果。  
@@ -41,7 +41,7 @@ END
  从 `result_expression` 和可选 `else_result_expression`的类型集中返回优先级最高的类型。  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] case 表达式类似于 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] case 表达式。 可以使用 case 表达式进行一系列条件测试，以确定哪个表达式将产生正确的结果。 这种格式的 case 表达式应用于由一个或多个 `Boolean` 表达式组成的一组表达式，以确定正确的结果表达式。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case 表达式类似于 TRANSACT-SQL case 表达式。 可以使用 case 表达式进行一系列条件测试，以确定哪个表达式将产生正确的结果。 这种格式的 case 表达式应用于由一个或多个 `Boolean` 表达式组成的一组表达式，以确定正确的结果表达式。  
   
  CASE 函数以指定的顺序为每个 WHEN 子句计算 `Boolean_expression` 的值，然后返回首个满足 `result_expression` = `Boolean_expression` 的 `true`。 而不对剩下的表达式求值。 如果没有任何 `Boolean_expression` 的计算结果为 `true`，则当指定了 ELSE 子句时，数据库引擎将返回 `else_result_expression` ；如果未指定 ELSE 子句，则返回空值。  
   

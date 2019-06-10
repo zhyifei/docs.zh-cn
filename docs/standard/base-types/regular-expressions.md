@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620698"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423784"
 ---
 # <a name="net-regular-expressions"></a>.NET 正则表达式
 正则表达式提供了功能强大、灵活而又高效的方法来处理文本。 使用正则表达式的全面模式匹配表示法，可以快速分析大量文本，以找到特定的字符模式；验证文本以确保它匹配预定义模式（如电子邮件地址）；提取、编辑、替换或删除文本子字符串；将提取的字符串添加到集合以生成报告。 对于处理字符串或分析大文本块的许多应用程序而言，正则表达式是不可缺少的工具。  
@@ -97,7 +97,7 @@ ms.locfileid: "64620698"
   
 |||  
 |-|-|  
-|`\$`|在输入字符串中查找美元符号 ($) 的一个匹配项。 正则表达式模式字符串包含一个反斜杠来指示按字面解释美元符号而非将其作为正则表达式定位点。 （单独的 $ 符号将指示正则表达式引擎应尝试在字符串的末尾开始匹配。）为了确保当前区域性设置的货币符号不被错误解释为正则表达式符号，该示例调用 <xref:System.Text.RegularExpressions.Regex.Escape%2A> 方法使该字符转义。|  
+|`\$`|在输入字符串中查找美元符号 (`$`) 的一个匹配项。 正则表达式模式字符串包含一个反斜杠来指示按字面解释美元符号而非将其作为正则表达式定位点。 （单独的 `$` 符号将指示正则表达式引擎应尝试在字符串的末尾开始匹配。）为了确保当前区域性设置的货币符号不被错误解释为正则表达式符号，该示例调用 <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> 方法使该字符转义。|  
 |`\s*`|查找空白字符的零个或多个匹配项。|  
 |`[-+]?`|查找正号或负号的零个或一个匹配项。|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|括起此表达式的外部括号将表达式定义为捕获组或子表达式。 如果找到匹配项，则有关匹配字符串的此部分的信息可以从第二个 <xref:System.Text.RegularExpressions.Group> 对象中检索（该对象位于 <xref:System.Text.RegularExpressions.GroupCollection> 属性所返回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 对象中）。 （集合中的第一个元素表示整个匹配。）|  

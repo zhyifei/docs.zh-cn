@@ -7,11 +7,11 @@ ms.date: 05/06/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
 ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882268"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66725413"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教程：使用矩阵因子分解和 ML.NET 生成影片推荐系统
 
@@ -48,30 +48,30 @@ ms.locfileid: "65882268"
 
 ### <a name="create-a-project"></a>创建项目
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“MovieRecommender”，然后选择“确定”按钮。
+1. 打开 Visual Studio 2017。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”文本框中，键入“MovieRecommender”，然后选择“确定”按钮   。
 
-2. 在项目中创建一个名为“数据”的目录来保存数据集文件：
+2. 在项目中创建一个名为“数据”的目录来保存数据集文件  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“Data”，然后按 Enter。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”    。 键入“Data”，然后按 Enter。
 
-3. 安装“Microsoft.ML”和“Microsoft.ML.Recommender”NuGet 包：
+3. 安装“Microsoft.ML”和“Microsoft.ML.Recommender”NuGet 包   ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择“1.0.0”包，再选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对 **Microsoft.ML.Recommender v0.12.0** 重复这些步骤。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择“1.0.0”包，再选择“安装”按钮     。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 **Microsoft.ML.Recommender v0.12.0** 重复这些步骤。
 
-4. 在 Program.cs 文件的顶部添加以下 `using` 语句：
+4. 在 Program.cs 文件的顶部添加以下 `using` 语句  ：
 
     [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>下载数据
 
-1. 下载两个数据集并将其保存到先前创建的“数据”文件夹中：
+1. 下载两个数据集并将其保存到先前创建的“数据”文件夹中  ：
 
-   * 右键单击 [recommended-ratings-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv)，然后选择“将链接(或目标)另存为...”
-   * 右键单击 [recommendation-ratings-test.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv)，然后选择“将链接(或目标)另存为...”
+   * 右键单击 [recommended-ratings-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv)，然后选择“将链接(或目标)另存为...” 
+   * 右键单击 [recommendation-ratings-test.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv)，然后选择“将链接(或目标)另存为...” 
 
-     确保将 .csv 文件保存到“数据”文件夹，或者将其保存到其他位置后，将 .csv 文件移动到“数据”文件夹\*\*。
+     确保将 .csv 文件保存到“数据”文件夹，或者将其保存到其他位置后，将 .csv 文件移动到“数据”文件夹\*  \*  。
 
-2. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+2. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
    ![如果在 VS 中较新则复制](./media/movie-recommendation/copytoout.gif)
 
@@ -115,27 +115,27 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 
 向项目添加一个新类：
 
-1. 在“解决方案资源管理器”中，右键单击该项目，然后选择“添加”>“新项”。
+1. 在“解决方案资源管理器”中，右键单击该项目，然后选择“添加”>“新项”   。
 
-2. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“MovieRatingData.cs”。 然后，选择“添加”按钮。
+2. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“MovieRatingData.cs”     。 然后，选择“添加”  按钮。
 
-“MovieRatingData.cs”文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 MovieRatingData.cs 的顶部：
+“MovieRatingData.cs”文件随即在代码编辑器中打开  。 将下面的 `using` 语句添加到 MovieRatingData.cs 的顶部  ：
 
 ```csharp
 using Microsoft.ML.Data;
 ```
 
-通过删除现有的类定义并在 MovieRatingData.cs 中添加以下代码，创建一个名为 `MovieRating` 的类：
+通过删除现有的类定义并在 MovieRatingData.cs 中添加以下代码，创建一个名为 `MovieRating` 的类  ：
 
 [!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
 `MovieRating` 指定输入数据类。 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 属性指定应加载数据集中的哪些列（按列索引）。 `userId` 和 `movieId` 列是你的 `Features`（你将向模型提供预测 `Label` 的输入），而评分列是你将预测的 `Label` 模型的输出）。
 
-创建另一个类 `MovieRatingPrediction`，通过在 MovieRatingData.cs 中的 `MovieRating` 类之后添加以下代码来表示预测结果：
+创建另一个类 `MovieRatingPrediction`，通过在 MovieRatingData.cs 中的 `MovieRating` 类之后添加以下代码来表示预测结果： 
 
 [!code-csharp[PredictionClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
-在 Program.cs 中，将 `Console.WriteLine("Hello World!")` 替换为 `Main()` 中的以下代码：
+在 Program.cs 中，将 `Console.WriteLine("Hello World!")` 替换为 `Main()` 中的以下代码  ：
 
 [!code-csharp[MLContext](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MLContext "Add MLContext")]
 

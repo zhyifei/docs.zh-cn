@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666055"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490718"
 ---
 # <a name="setting-up-a-profiling-environment"></a>设置分析环境
 > [!NOTE]
->  对 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 中的分析进行了重大更改。  
+>  有了.NET Framework 4 中的分析功能的重大更改。  
   
  托管进程（应用程序或服务）启动时，将加载公共语言运行时 (CLR)。 初始化 CLR 时，将评估以下两个环境变量以决定进程是否应连接到探查器：  
   
@@ -37,10 +37,10 @@ ms.locfileid: "64666055"
  若要分析 CLR 应用程序，必须在运行该应用程序之前设置 COR_ENABLE_PROFILING 和 COR_PROFILER 环境变量。 还必须确保已注册探查器 DLL。  
   
 > [!NOTE]
->  从 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 开始，不一定要注册探查器。  
+>  从.NET Framework 4 开始，探查器不需要进行注册。  
   
 > [!NOTE]
->  若要使用.NET Framework 版本 2.0、 3.0 和 3.5 中的探查器[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]和更高版本，您必须设置 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 环境变量。  
+>  若要使用在.NET Framework 4 和更高版本的.NET Framework 版本 2.0、 3.0 和 3.5 探查器，必须设置 COMPLUS_ProfAPI_ProfilerCompatibilitySetting 环境变量。  
   
 ## <a name="environment-variable-scope"></a>环境变量范围  
  设置 COR_ENABLE_PROFILING 和 COR_PROFILER 环境变量的方式将决定其影响范围。 可以通过下列方式之一设置这些变量：  

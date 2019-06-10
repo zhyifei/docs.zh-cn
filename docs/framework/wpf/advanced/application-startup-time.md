@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777125"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689339"
 ---
 # <a name="application-startup-time"></a>应用程序启动时间
 启动 WPF 应用程序所需的时间可能存在极大差异。 本主题介绍用于减少 Windows Presentation Foundation (WPF) 应用程序假设启动时间和实际启动时间的各种技巧。  
@@ -24,7 +24,7 @@ ms.locfileid: "61777125"
  当已将主要公共语言运行时 (CLR) 组件的大多数页面加载到内存中时，则发生热启动，这样可节省宝贵的磁盘访问时间。 这就是为什么再次运行托管的应用程序时，该程序的启动速度更快的原因。  
   
 ## <a name="implement-a-splash-screen"></a>实现初始屏幕  
- 为应对在启动应用程序后到显示第一个 UI 期间出现重大的、不可避免的延迟的情况，请使用“初始屏幕”优化假设的启动时间。 通过此方法，在用户启动应用程序后，几乎可以立即显示图像。 当应用程序准备好显示其第一个 UI 时，初始屏幕将淡化。 在中启动[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，可以使用<xref:System.Windows.SplashScreen>类，以实现初始屏幕。 有关详细信息，请参阅[将初始屏幕添加到 WPF 应用程序](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
+ 为应对在启动应用程序后到显示第一个 UI 期间出现重大的、不可避免的延迟的情况，请使用“初始屏幕”  优化假设的启动时间。 通过此方法，在用户启动应用程序后，几乎可以立即显示图像。 当应用程序准备好显示其第一个 UI 时，初始屏幕将淡化。 在中启动[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，可以使用<xref:System.Windows.SplashScreen>类，以实现初始屏幕。 有关详细信息，请参阅[将初始屏幕添加到 WPF 应用程序](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)。  
   
  还可以通过使用本机 Win32 图形来实现自己的初始屏幕。 显示之前实现<xref:System.Windows.Application.Run%2A>调用方法。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "61777125"
   
  请考虑在客户端计算机上安装 CA 证书，或尽可能避免使用验证码。 如果知道应用程序不需要发布服务器证据，则无需支付签名验证的费用。  
   
- 从 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 开始，存在一个允许绕过验证码验证的配置选项。 为执行此操作，将以下设置添加到 app.exe.config 文件：  
+ 从.NET Framework 3.5 起，没有一个允许绕过验证码验证的配置选项。 为执行此操作，将以下设置添加到 app.exe.config 文件：  
   
 ```xml  
 <configuration>  

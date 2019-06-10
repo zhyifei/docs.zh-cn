@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625895"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487947"
 ---
 # <a name="securing-method-access"></a>保护方法访问
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -60,7 +60,7 @@ public class Class1
  使用本节中所示的声明来防止部分受信任的代码使用特定的类、方法以及属性和事件。 将这些声明应用到类，即可对类的所有方法、属性和事件应用保护；但请注意，字段访问不受声明性安全影响。 也请注意，链接要求仅帮助不受直接调用方的攻击，可能仍会受到引诱攻击。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中引入了新的透明度模型。 [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)模型标识安全代码与<xref:System.Security.SecurityCriticalAttribute>属性。 安全关键代码需要调用方和继承者均完全受信任。 在早期 .NET Framework 版本中的代码访问安全性规则下运行的程序集可以调用级别 2 程序集。 在这种情况下，安全关键属性将被视为完全信任的链接要求。  
+>  .NET Framework 4 中引入了新的透明度模型。 [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)模型标识安全代码与<xref:System.Security.SecurityCriticalAttribute>属性。 安全关键代码需要调用方和继承者均完全受信任。 在早期 .NET Framework 版本中的代码访问安全性规则下运行的程序集可以调用级别 2 程序集。 在这种情况下，安全关键属性将被视为完全信任的链接要求。  
   
  在强名称的程序集中[LinkDemand](../../../docs/framework/misc/link-demands.md)应用于所有可以访问的方法、 属性和其中到完全受信任调用方限制其使用的事件。 若要禁用此功能，必须应用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 特性。 因此，仅未签名的程序集或具有此特性的程序集需要显式标记类以排除不受信任调用方；可以使用这些声明来标记其中并不打算用于不受信任的调用方的类型子集。  
   

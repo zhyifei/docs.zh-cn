@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063187"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486994"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -51,7 +51,7 @@ using System.Linq;
 
 如果这三行（`using` 语句）未在该文件的顶部，程序将无法编译。
 
-现在已具备所需的所有引用，接下来可以考虑一副扑克牌是由什么构成的。 通常一副扑克牌包含四种花色，每种花色包含 13 个值。 通常情况下，你可能会立即考虑创建一个 `Card` 类，然后手动填充一组 `Card` 对象。 相对于通常的方式，使用 LINQ 创建一副扑克牌更加简捷。 可以创建两个序列来分别表示花色和点数，而非创建 `Card` 类。 创建两个非常简单的[迭代器方法](../iterators.md#enumeration-sources-with-iterator-methods)，用于将级别和花色生成为 <xref:System.Collections.Generic.IEnumerable%601> 字符串：
+现在已具备所需的所有引用，接下来可以考虑一副扑克牌是由什么构成的。 通常一副扑克牌包含四种花色，每种花色包含 13 个值。 通常情况下，你可能会立即考虑创建一个 `Card` 类，然后手动填充一组 `Card` 对象。 相对于通常的方式，使用 LINQ 创建一副扑克牌更加简捷。 可以创建两个序列来分别表示花色和点数，而非创建 `Card` 类。 创建两个非常简单的[迭代器方法  ](../iterators.md#enumeration-sources-with-iterator-methods)，用于将级别和花色生成为 <xref:System.Collections.Generic.IEnumerable%601> 字符串：
 
 ```csharp
 // Program.cs
@@ -142,9 +142,9 @@ public static void Main(string[] args)
 
 但标准库中没有可供使用的洗牌方法，因此必须自行编写。 将要创建的洗牌方法体现了要对基于 LINQ 的程序执行的几种操作，因此我们将逐步介绍此过程的每个部分。
 
-需要编写几种特殊的方法，我们称之为<xref:System.Collections.Generic.IEnumerable%601>扩展方法[，来添加一些功能，以便于与 LINQ 查询返回的 ](../../csharp/programming-guide/classes-and-structs/extension-methods.md) 交互。 简而言之，扩展方法是具有特殊用途的静态方法，借助它无需修改你想要为其添加功能的已有原始类型，即可向其添加功能。
+需要编写几种特殊的方法，我们称之为<xref:System.Collections.Generic.IEnumerable%601>扩展方法[，来添加一些功能，以便于与 LINQ 查询返回的 ](../../csharp/programming-guide/classes-and-structs/extension-methods.md) 交互。 简而言之，扩展方法是具有特殊用途的静态方法，借助它无需修改你想要为其添加功能的已有原始类型，即可向其添加功能。 
 
-向程序添加新的静态类文件（名称为 `Extensions.cs`），以用于存放扩展方法，然后开始生成第一个扩展方法：
+向程序添加新的静态类文件（名称为 `Extensions.cs`），以用于存放扩展方法，然后开始生成第一个扩展方法： 
 
 ```csharp
 // Extensions.cs
@@ -172,7 +172,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 可以发现，在扩展方法的第一个自变量中添加了 `this` 修饰符。 也就是说，调用扩展方法，就像是第一个自变量类型的成员方法一样。 此方法声明还遵循标准惯用做法，其中输入和输出类型为 `IEnumerable<T>`。 遵循这种做法，可以将 LINQ 方法链在一起，从而执行更复杂的查询。
 
-正常情况下，将扑克牌分为两半后，需要将这两半合并在一起。 在代码中，这意味着一次性地枚举通过 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 获得的两个序列，`interleaving` 元素，并创建一个序列：即现在洗牌后的扑克牌。 必须了解 <xref:System.Collections.Generic.IEnumerable%601> 的工作原理，才能编写处理两个序列的 LINQ 方法。
+正常情况下，将扑克牌分为两半后，需要将这两半合并在一起。 在代码中，这意味着一次性地枚举通过 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 获得的两个序列，  `interleaving` 元素，并创建一个序列：即现在洗牌后的扑克牌。 必须了解 <xref:System.Collections.Generic.IEnumerable%601> 的工作原理，才能编写处理两个序列的 LINQ 方法。
 
 <xref:System.Collections.Generic.IEnumerable%601> 接口有一个方法 (<xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>)。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 返回的对象包含用于移动到下一个元素的方法，以及用于检索序列中当前元素的属性。 将使用这两个成员来枚举集合并返回元素。 由于此交错方法是迭代器方法，因此将使用上面的 `yield return` 语法，而不用生成并返回集合。
 
@@ -250,7 +250,7 @@ static void Main(string[] args)
 
 ## <a name="optimizations"></a>优化
 
-到目前为止，你已生成的示例执行的是向外洗牌，即每次洗牌时第一张和最后一张纸牌保持不变。 让我们来做一点改变，改为使用向内洗牌，改变全部 52 张纸牌的位置。 向内洗牌是指，交错一副纸牌时，将后一半中的第一张纸牌变成一副纸牌中的第一张纸牌。 也就是说，上半部分中的最后一张纸牌变成一副纸牌中的最后一张纸牌。 这是对单行代码的简单更改。 交换 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 的位置，来更新当前洗牌查询。 这会更改一副纸牌的上半部分和下半部分的顺序：
+到目前为止，你已生成的示例执行的是向外洗牌  ，即每次洗牌时第一张和最后一张纸牌保持不变。 让我们来做一点改变，改为使用向内洗牌  ，改变全部 52 张纸牌的位置。 向内洗牌是指，交错一副纸牌时，将后一半中的第一张纸牌变成一副纸牌中的第一张纸牌。 也就是说，上半部分中的最后一张纸牌变成一副纸牌中的最后一张纸牌。 这是对单行代码的简单更改。 交换 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 的位置，来更新当前洗牌查询。 这会更改一副纸牌的上半部分和下半部分的顺序：
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -258,7 +258,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 再次运行程序，你会发现需要进行 52 次迭代才能恢复一副纸牌的原始顺序。 随着程序的继续运行，你还会开始注意到一些非常严重的性能下降问题发生。
 
-导致这种情况出现的原因有很多。 可以解决导致性能下降的主要原因之一：[延迟计算](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)的使用效率低下。
+导致这种情况出现的原因有很多。 可以解决导致性能下降的主要原因之一：[延迟计算  ](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)的使用效率低下。
 
 简单来说，延迟计算是指直至需要语句的值时才会执行语句计算。 LINQ 查询属于延迟计算的语句。 仅当有元素请求时才生成序列。 通常情况下，这是 LINQ 的主要优势所在。 不过，在诸如此程序之类的用例中，这就会导致执行时间指数式增长。
 
@@ -318,13 +318,13 @@ public static void Main(string[] args)
 
 请注意，不是每次访问查询都会生成日志。 只有在创建原始查询时，才会生成日志。 程序的运行时间仍然很长，但现在知道原因了。 如果对在启用日志记录的情况下运行向内洗牌失去了耐心，请切换回向外洗牌。 但仍会看到惰性计算效果。 在一次运行中，共执行 2592 次查询，包括生成所有值和花色。
 
-可以提高此处的代码性能，以减少执行次数。 一个简单的修复方法是缓存构造扑克牌的原始 LINQ 查询的结果。 目前，每当 do-while 循环进行迭代时，需要反复执行查询，每次都要重新构造扑克牌并进行洗牌。 可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A> 来缓存扑克牌；将这两个方法追加到查询时，它们将执行你已告知它们要执行的同种操作，而现在它们会将结果存储在数组或列表中，具体取决于选择调用的方法。 将 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 追加到两个查询中，并再次运行程序：
+可以提高此处的代码性能，以减少执行次数。 一个简单的修复方法是缓存构造扑克牌的原始 LINQ 查询的结果。  目前，每当 do-while 循环进行迭代时，需要反复执行查询，每次都要重新构造扑克牌并进行洗牌。 可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A> 来缓存扑克牌；将这两个方法追加到查询时，它们将执行你已告知它们要执行的同种操作，而现在它们会将结果存储在数组或列表中，具体取决于选择调用的方法。 将 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 追加到两个查询中，并再次运行程序：
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 现在向外洗牌下降到 30 次查询。 再次运行向内洗牌程序，改善情况类似：现在它执行 162 次查询。
 
-请注意，此示例旨在突出显示延迟计算可能会导致性能下降的用例。 了解延迟计算会在何处影响代码性能至关重要，但了解并非所有查询应及早运行也同等重要。 未使用 <xref:System.Linq.Enumerable.ToArray%2A> 会导致性能损失，这是因为每次重新排列一副纸牌都要以先前的排列为依据。 使用惰性计算意味着一副纸牌的每个新配置都以原来的一副纸牌为依据，甚至在执行生成 `startingDeck` 的代码时，也不例外。 这会导致大量额外的工作。
+请注意，此示例旨在突出显示延迟计算可能会导致性能下降的用例。  了解延迟计算会在何处影响代码性能至关重要，但了解并非所有查询应及早运行也同等重要。 未使用 <xref:System.Linq.Enumerable.ToArray%2A> 会导致性能损失，这是因为每次重新排列一副纸牌都要以先前的排列为依据。 使用惰性计算意味着一副纸牌的每个新配置都以原来的一副纸牌为依据，甚至在执行生成 `startingDeck` 的代码时，也不例外。 这会导致大量额外的工作。
 
 在实践中，一些算法使用及早计算的效果较好，另一些算法使用延迟计算的效果较好。 对于日常使用，如果数据源为单独进程（如数据库引擎），通常更好的选择是使用延迟计算。 对于数据库，使用延迟计算，更复杂的查询可以只对数据库进程执行一次往返，然后返回至剩余的代码。 无论选择使用延迟计算还是及早计算，LINQ 均可以灵活处理，因此请衡量自己的进程，然后选择可为你提供最佳性能的计算种类。
 
@@ -340,9 +340,9 @@ public static void Main(string[] args)
 
 有关 LINQ 的更多信息，请访问：
 - [语言集成查询 (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [LINQ 简介](../programming-guide/concepts/linq/introduction-to-linq.md)
-  - [C# 中的 LINQ 入门](../programming-guide/concepts/linq/getting-started-with-linq.md)
-    - [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-    - [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-    - [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-    - [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ 简介](../programming-guide/concepts/linq/index.md)
+  - [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+  - [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+  - [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+  - [支持 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
+    

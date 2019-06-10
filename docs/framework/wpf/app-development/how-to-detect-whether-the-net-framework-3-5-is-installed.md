@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592630"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690435"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>如何：检测是否安装了 .NET Framework 3.5
-管理员可部署的系统上的 Windows Presentation Foundation (WPF) 应用程序之前[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，它们必须先确认[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]运行时已存在。 本主题提供了编写的脚本在 HTML/JavaScript，管理员可以用于确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]系统上存在。  
+管理员可部署面向.NET Framework 3.5 的系统上的 Windows Presentation Foundation (WPF) 应用程序之前，他们必须首先确认存在的.NET Framework 3.5 运行时。 本主题提供了 HTML/JavaScript 中编写的脚本管理员可用来确定是否在系统上存在.NET Framework 3.5。  
   
 > [!NOTE]
 >  有关详细安装信息，部署和检测.NET Framework，请参阅[安装面向开发人员的.NET Framework](../../install/guide-for-developers.md)。  
   
 ## <a name="example"></a>示例  
- 当[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]是安装，MSI 向".NET CLR"和版本号的 UserAgent 字符串。 下面的示例演示一个简单的 HTML 页面中嵌入的脚本。 脚本搜索用户代理字符串以确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]安装，并在搜索结果中显示的状态消息。  
+ 安装.NET Framework 3.5 时，MSI 将".NET CLR"和版本号添加到用户代理字符串。 下面的示例演示一个简单的 HTML 页面中嵌入的脚本。 该脚本将搜索用户代理字符串以确定是否在.NET Framework 3.5 已经安装，并且搜索结果中显示的状态消息。  
   
 > [!NOTE]
 >  此脚本旨在为 Internet 资源管理器。 其他浏览器可能不包括用户代理字符串中的.NET CLR 的信息。  

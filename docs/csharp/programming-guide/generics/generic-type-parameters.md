@@ -6,16 +6,16 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 10feb47ce3dfe9e356da381e0d62e6d220c9452a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 096fce3affb9461c57ae9c0ffd57367d1b4349df
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677417"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423417"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>泛型类型参数 -（C# 编程指南）
 
-在泛型类型或方法定义中，类型参数是在其创建泛型类型的一个实例时，客户端指定的特定类型的占位符。 泛型类（例如[泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)中列出的 `GenericList<T>`）无法按原样使用，因为它不是真正的类型；它更像是类型的蓝图。 若要使用 `GenericList<T>`，客户端代码必须通过指定尖括号内的类型参数来声明并实例化构造类型。 此特定类的类型参数可以是编译器可识别的任何类型。 可创建任意数量的构造类型实例，其中每个使用不同的类型参数，如下所示：  
+在泛型类型或方法定义中，类型参数是在其创建泛型类型的一个实例时，客户端指定的特定类型的占位符。 泛型类（例如[泛型介绍](../../../csharp/programming-guide/generics/index.md)中列出的 `GenericList<T>`）无法按原样使用，因为它不是真正的类型；它更像是类型的蓝图。 若要使用 `GenericList<T>`，客户端代码必须通过指定尖括号内的类型参数来声明并实例化构造类型。 此特定类的类型参数可以是编译器可识别的任何类型。 可创建任意数量的构造类型实例，其中每个使用不同的类型参数，如下所示：  
   
 [!code-csharp[csProgGuideGenerics#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#7)]  
   
@@ -23,19 +23,19 @@ ms.locfileid: "57677417"
   
 ## <a name="type-parameter-naming-guidelines"></a>类型参数命名指南  
   
-- 请使用描述性名称命名泛型类型参数，除非单个字母名称完全具有自我说明性且描述性名称不会增加任何作用。  
+- 请使用描述性名称命名泛型类型参数  ，除非单个字母名称完全具有自我说明性且描述性名称不会增加任何作用。  
   
    [!code-csharp[csProgGuideGenerics#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#8)]  
   
-- 对具有单个字母类型参数的类型，考虑使用 T 作为类型参数名称。  
+- 对具有单个字母类型参数的类型，考虑使用 T 作为类型参数名称  。  
   
    [!code-csharp[csProgGuideGenerics#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#9)]  
   
-- 在类型参数描述性名称前添加前缀 "T"。  
+- 在类型参数描述性名称前添加前缀 "T"  。  
   
    [!code-csharp[csProgGuideGenerics#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#10)]  
   
-- 请考虑在参数名称中指示出类型参数的约束。 例如，约束为 `ISession` 的参数可命名为 `TSession`。
+- 请考虑在参数名称中指示出类型参数的约束  。 例如，约束为 `ISession` 的参数可命名为 `TSession`。
 
 可以使用代码分析规则 [CA1715](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix) 确保恰当地命名类型参数。
   

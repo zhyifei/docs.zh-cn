@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 36bf627c7dfabdcf4bbc279bec8f3933f7aafb2a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631651"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489956"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 将一种数据类型的表达式转换为另一种数据类型的表达式。  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  返回与 `data_type`相同的值。  
   
 ## <a name="remarks"></a>备注  
- 强制转换表达式的语义与 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] CONVERT 表达式类似。 强制转换表达式用于将一种类型的值转换为另一种类型的值。  
+ 强制转换表达式具有语义相似的 Transact SQL 转换的表达式。 强制转换表达式用于将一种类型的值转换为另一种类型的值。  
   
 ```  
 CAST( e as T )  

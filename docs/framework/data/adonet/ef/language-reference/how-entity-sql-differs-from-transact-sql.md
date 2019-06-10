@@ -2,15 +2,15 @@
 title: Entity SQL 与 Transact-SQL 有何不同
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: d6c98741107cd9ea7b0f29e4d06aed7d0ce27888
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54d7a3fa8ce6e8a0aba6194bfc034eb4d47dbf60
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631798"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489927"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 与 Transact-SQL 有何不同
-本主题介绍之间的差异[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
+本主题介绍之间的差异[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和 Transact SQL。  
   
 ## <a name="inheritance-and-relationships-support"></a>继承和关系支持  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 直接使用概念实体架构并支持诸如继承和关系等概念模型功能。  
@@ -31,9 +31,9 @@ ms.locfileid: "64631798"
 - 联接对集合执行运算。  
   
 ## <a name="support-for-expressions"></a>对表达式的支持  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 具有子查询 （表） 和表达式 （行和列）。  
+ Transact SQL 具有子查询 （表） 和表达式 （行和列）。  
   
- 为了支持集合和嵌套的集合，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使所有内容均表达式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 比 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 更具有组合性，即每个表达式都可在任何地方使用。 查询表达式总是产生投影类型的集合，并且可以在允许使用集合表达式的任何地方使用。 璝惠[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]表达式中不支持[!INCLUDE[esql](../../../../../../includes/esql-md.md)]，请参阅[不支持的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)。  
+ 为了支持集合和嵌套的集合，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使所有内容均表达式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 比 TRANSACT-SQL 更具有组合性 — 每个表达式可以任意位置使用。 查询表达式总是产生投影类型的集合，并且可以在允许使用集合表达式的任何地方使用。 有关 TRANSACT-SQL 表达式中不支持的信息[!INCLUDE[esql](../../../../../../includes/esql-md.md)]，请参阅[不支持的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)。  
   
  下面是所有有效的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询。  
   
@@ -47,17 +47,17 @@ set(e1)
 ```  
   
 ## <a name="uniform-treatment-of-subqueries"></a>子查询统一处理  
- 虽然 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 将重点放在表上，但它对子查询执行上下文解释。 例如，`from` 子句中的子查询被视为多集（表）。 但是，`select` 子句中使用的同一子查询被视为标量子查询。 同样，在左侧和右侧的上使用的子查询`in`运算符被视为标量子查询，而右侧的数字应为多集子的查询。  
+ TRANSACT-SQL 提供其重点放在表，执行上下文解释子查询。 例如，`from` 子句中的子查询被视为多集（表）。 但是，`select` 子句中使用的同一子查询被视为标量子查询。 同样，在左侧和右侧的上使用的子查询`in`运算符被视为标量子查询，而右侧的数字应为多集子的查询。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 消除了这些差异。 表达式具有不依赖于使用它的上下文的统一解释。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将视为多集子查询所有子查询。 如果需要从子查询获取标量值，则 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 会提供对集合（在此情况下为子查询）进行运算的 `anyelement` 运算符，并从集合中提取单一实例值。  
   
 ### <a name="avoiding-implicit-coercions-for-subqueries"></a>避免对子查询执行隐式强制转换  
- 与统一处理子查询相关的一个副作用是将子查询隐式转换为标量值。 具体而言，在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中，行多集（具有单个字段）将被隐式转换为数据类型与该字段相同的标量值。  
+ 与统一处理子查询相关的一个副作用是将子查询隐式转换为标量值。 具体而言，在 TRANSACT-SQL，（具有单个字段） 的行多重集是隐式转换为标量值的数据类型与字段。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持这种隐式强制。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供 ANYELEMENT 运算符从集合中提取单一实例值，并提供 `select value` 子句以避免在查询表达式中创建行包装。  
   
 ## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>选择值：避免隐式行包装器  
- Select 子句中的[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]子查询隐式子句中创建行包装的项。 这意味着我们无法创建标量或对象的集合。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 允许隐式强制转换具有一个字段的行类型和相同的数据类型的单一实例值之间。  
+ Select 子句的 TRANSACT-SQL 子查询中隐式子句中创建行包装的项。 这意味着我们无法创建标量或对象的集合。 TRANSACT-SQL 允许具有一个字段的行类型与相同的数据类型的单一实例值之间的隐式强制转换。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了 `select value` 子句，以跳过隐式行构建。 在 `select value` 子句中只能指定一个项。 在使用这样的子句时，不会对 `select` 子句中的项构造行包装，并且可生成所需形状的集合，例如：`select value a`。  
   
@@ -66,11 +66,11 @@ set(e1)
  `select a, b, c`  
   
 ## <a name="left-correlation-and-aliasing"></a>左相关与别名化  
- 在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中，给定作用域（像 `select` 或 `from` 这样的单个子句）中的表达式不能引用在同一作用域中先前定义的表达式。 SQL 的一些分支（包括 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]）确实在 `from` 子句中支持这些方面的有限形式。  
+ 在 TRANSACT-SQL 中的给定作用域的表达式 (一个子句喜欢`select`或`from`) 不能引用在同一范围中前面定义的表达式。 某些语言 （包括 Transact SQL） 的 SQL 支持这些中的有限的形式`from`子句。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 在 `from` 子句中对左相关进行了一般化，并且对它们进行了统一处理。 `from` 子句中的表达式无需使用额外的语法，即可引用同一子句中先前的定义（位于左侧的定义）。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 还对涉及 `group by` 子句的查询施加了额外的限制。 此类查询的 `select` 子句和 `having` 子句中的表达式只能通过其别名引用 `group by` 关键字。 下面的构造在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中有效，但在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中无效。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 还对涉及 `group by` 子句的查询施加了额外的限制。 此类查询的 `select` 子句和 `having` 子句中的表达式只能通过其别名引用 `group by` 关键字。 下面的构造是在 TRANSACT-SQL，但不是在有效[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
 ```  
 select t.x + t.y from T as t group by t.x + t.y  
@@ -83,7 +83,7 @@ select k from T as t group by (t.x + t.y) as k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>引用表（集合）的列（属性）  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的所有列引用都必须用表别名限定。 以下构造 (假定`a`是表的有效列`T`) 中有效[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]但不能在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的所有列引用都必须用表别名限定。 以下构造 (假定`a`是表的有效列`T`) 是有效的在 TRANSACT-SQL 中但不能在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
   
 ```  
 select a from T  
@@ -102,7 +102,7 @@ select Tab.a from Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>通过对象导航  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]使用“.”表示法来引用表的（某行的）列。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 扩展了这一表示法（借用自编程语言）为通过对象的属性导航提供支持。  
+ 使用 transact SQL"。"表示法来引用列的 （某行的） 表。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 扩展了这一表示法（借用自编程语言）为通过对象的属性导航提供支持。  
   
  例如，如果 `p` 是 Person 类型的表达式，则下面是用于引用此人地址所在城市的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 语法。  
   
@@ -111,9 +111,9 @@ p.Address.City
 ```  
   
 ## <a name="no-support-for-"></a>不支持 *  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支持非限定 * 语法作为整个行，并限定的别名\*语法 (t.\*) 作为该表字段的快捷方式。 此外，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]允许一个特殊的计数 (\*) 聚合，其中包括 null 值。  
+ TRANSACT-SQL 支持非限定 * 语法作为整个行，并限定的别名\*语法 (t.\*) 作为该表字段的快捷方式。 -此外，允许一个特殊的计数 (\*) 聚合，其中包括 null 值。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持 * 构造。 形式为 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 和 `select * from T` 的 `select T1.* from T1, T2...` 查询在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中可以分别表示为 `select value t from T as t` 和 `select value t1 from T1 as t1, T2 as t2...`。 此外，这些构造还处理继承（值可替换性），同时将 `select *` 变体限制到所声明类型的顶级属性。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持 * 构造。 窗体的 transact SQL 查询`select * from T`并`select T1.* from T1, T2...`可以用来表示[!INCLUDE[esql](../../../../../../includes/esql-md.md)]作为`select value t from T as t`和`select value t1 from T1 as t1, T2 as t2...`分别。 此外，这些构造还处理继承（值可替换性），同时将 `select *` 变体限制到所声明类型的顶级属性。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持 `count(*)` 聚合。 请改用 `count(0)`。  
   
@@ -126,7 +126,7 @@ from T as t
 group by t.b + t.c as k1  
 ```  
   
- ...等效于下面的 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]：  
+ ...等效于以下 TRANSACT-SQL:  
   
 ```  
 select b + c, count(*), sum(a)   
@@ -150,7 +150,7 @@ select a, sum(t.b) from T as t group by t.a as a
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY 子句用法  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 只允许在最顶层的 SELECT . 从。 WHERE 块中指定 ORDER BY 子句。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，可以使用嵌套的 ORDER BY 表达式，并且可以将其放置在查询中的任何地方，但不会保留嵌套查询中的排序。  
+ TRANSACT-SQL 允许 ORDER BY 子句来指定仅在最顶层中选择... 从。 WHERE 块中指定 ORDER BY 子句。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，可以使用嵌套的 ORDER BY 表达式，并且可以将其放置在查询中的任何地方，但不会保留嵌套查询中的排序。  
   
 ```  
 -- The following query will order the results by the last name  
@@ -168,10 +168,10 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="identifiers"></a>标识符  
- 在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中，标识符比较基于当前数据库的排序规则。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符始终不区分大小写但区分重音（即，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 区分重音字符和非重音字符；例如，“a”不等于“ấ”）。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将看上去相同但来自不同代码页的字母视为不同的字符。 有关详细信息，请参阅[输入字符集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)。  
+ 在 TRANSACT-SQL，标识符比较基于当前数据库的排序规则。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，标识符始终不区分大小写但区分重音（即，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 区分重音字符和非重音字符；例如，“a”不等于“ấ”）。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将看上去相同但来自不同代码页的字母视为不同的字符。 有关详细信息，请参阅[输入字符集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)。  
   
 ## <a name="transact-sql-functionality-not-available-in-entity-sql"></a>Transact-SQL 功能在 Entity SQL 中不可用  
- 下面的 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 功能在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中不可用。  
+ 下面的 TRANSACT-SQL 功能不可用在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
   
  DML  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 当前未提供对 DML 语句（insert、update、delete）的支持。  
@@ -180,7 +180,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的当前版本未提供对 DDL 的支持。  
   
  命令式编程  
- 与 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不同，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 未提供对命令式编程的支持。 请改而使用编程语言。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供对命令式编程中，与 TRANSACT-SQL 不同不支持。 请改而使用编程语言。  
   
  分组函数  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 尚未提供对分组函数（例如，CUBE、ROLLUP 和 GROUPING_SET）的支持。  
@@ -189,13 +189,13 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 尚未提供对解析函数的支持。  
   
  内置函数、运算符  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 的内置函数和运算符中的一部分。 这些运算符和函数可能受到主要存储提供程序的支持。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使用在提供程序清单中声明的特定于存储的函数。 此外，[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]允许您声明内置和用户定义的现有存储函数，以供[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持一部分 Transact-SQL 内置函数和运算符。 这些运算符和函数可能受到主要存储提供程序的支持。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使用在提供程序清单中声明的特定于存储的函数。 此外，[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]允许您声明内置和用户定义的现有存储函数，以供[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用。  
   
  提示  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不提供查询提示机制。  
   
  查询结果批处理  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持查询结果批处理。 例如，以下是有效[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]（成批发送）：  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持查询结果批处理。 例如，下面是有效 Transact-SQL （成批发送）：  
   
 ```  
 select * from products;  

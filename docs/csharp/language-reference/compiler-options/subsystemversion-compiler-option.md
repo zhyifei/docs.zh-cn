@@ -2,12 +2,12 @@
 title: -subsystemversion（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: af753b25750c6ef98b4df12eec03c355501a278e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cf1fb74f5d13817448bec2bcdc37510ff82f024d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481153"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377910"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion（C# 编译器选项）
 
@@ -46,7 +46,7 @@ ms.locfileid: "59481153"
 
 ## <a name="default-values"></a>默认值
 
--subsystemversion 编译器选项的默认值取决于以下列表中的条件：
+-subsystemversion 编译器选项的默认值取决于以下列表中的条件  ：
 
 - 只要设置了以下列表中的任意编译器选项，则默认值为 6.02：
 
@@ -56,13 +56,13 @@ ms.locfileid: "59481153"
 
   - [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)
 
-- 如果使用 MSBuild，面向 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]，并且未设置先前在此列表中指定的任何编译器选项，则默认值为 6.00。
+- 如果使用 MSBuild，面向 .NET Framework 4.5，并且未设置先前在此列表中指定的任何编译器选项，则默认值为 6.00。
 
 - 如果前面的条件均不符合，则默认值为 4.00。
 
 ## <a name="setting-this-option"></a>设置此选项
 
-若要在 Visual Studio 中设置 -subsystemversion 编译器选项，必须打开 .csproj 文件，并在 MSBuild XML 中为 `SubsystemVersion` 属性指定一个值。 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。
+若要在 Visual Studio 中设置 -subsystemversion 编译器选项，必须打开 .csproj 文件，并在 MSBuild XML 中为 `SubsystemVersion` 属性指定一个值  。 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。
 
 ## <a name="see-also"></a>请参阅
 

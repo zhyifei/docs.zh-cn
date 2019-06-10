@@ -2,12 +2,12 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052763"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690568"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 
@@ -167,7 +167,7 @@ invoker.Invoke();
 
 6. 右键单击**调试**节点，然后选择**刷新。** 跟踪事件应显示在中心窗格中。
 
-WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪）会话。 ETW 跟踪参与者通过跟踪配置文件配置为订阅跟踪记录。 当启用跟踪时，向 ETW 发出错误跟踪记录。 与 ETW 跟踪参与者发出的跟踪事件相对应的 ETW 跟踪事件（范围介于 100 到 113 之间）将写入分析日志。 
+WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪）会话。 ETW 跟踪参与者通过跟踪配置文件配置为订阅跟踪记录。 当启用跟踪时，向 ETW 发出错误跟踪记录。 与 ETW 跟踪参与者发出的跟踪事件相对应的 ETW 跟踪事件（范围介于 100 到 113 之间）将写入分析日志。
 
 若要查看跟踪记录，请按照以下步骤操作。
 
@@ -199,7 +199,7 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
     </system.serviceModel>
     ```
 
-2. 将清单文件从 %windir%\Microsoft.NET\Framework\\< 最新版本的[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到临时位置，其重命名为Microsoft.Windows.ApplicationServer.Applications_Provider1.man
+2. 将清单文件从 %windir%\Microsoft.NET\Framework\\\<最新版本的[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 到临时位置，其重命名为Microsoft.Windows.ApplicationServer.Applications_Provider1.man
 
 3. 将清单文件中的 GUID 更改为新的 GUID。
 

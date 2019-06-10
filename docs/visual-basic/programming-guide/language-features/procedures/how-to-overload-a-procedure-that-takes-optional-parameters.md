@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863644"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424054"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>如何：重载带有可选参数 (Visual Basic 中) 的过程
 如果过程具有一个或多个[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数，不能定义任何其隐式重载匹配的重载的版本。 详细信息，请参阅"隐式重载可选参数的"中[中重载过程注意事项](./considerations-in-overloading-procedures.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "61863644"
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>若要重载采用多个可选参数的过程  
   
-1. 确定过程的逻辑可以接受提供的可选自变量的组合。 如果依赖于另一个可选参数，则可能会出现不可接受的组合。 例如，如果一个参数接受配偶的名称，而另一个接受配偶的年龄，是不可接受的参数提供年龄，但省略名称组合。  
+1. 确定过程的逻辑可以接受提供的可选自变量的组合。 如果依赖于另一个可选参数，则可能会出现不可接受的组合。 例如，如果一个参数接受一个人的名称，而另一个接受该人士的年龄，是不可接受的参数提供年龄，但省略名称组合。  
   
 2. 对于提供的可选自变量的每个可接受组合，编写`Sub`或`Function`定义相应的参数列表的声明语句。 不要使用`Optional`关键字。  
   

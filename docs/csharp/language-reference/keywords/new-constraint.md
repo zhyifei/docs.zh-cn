@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 32fcb13e1f217707d53300c532169b1a1759fa7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2aa68bec13322e332bfe3841bc99403f72301183
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633412"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421796"
 ---
 # <a name="new-constraint-c-reference"></a>new 约束（C# 参考）
 
@@ -40,5 +40,4 @@ ms.locfileid: "65633412"
 - [C# 参考](../../language-reference/index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [运算符关键字](operator-keywords.md)
 - [泛型](../../programming-guide/generics/index.md)

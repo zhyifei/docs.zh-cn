@@ -2,12 +2,12 @@
 title: 如何：查找前面紧邻的同级 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 00b74edd67df65522f9f95e7f48c66a9e17a937c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d1d49f262b13f769ab1d28de8b75d214d8abe64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708475"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486711"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何：查找前面紧邻的同级 (XPath-LINQ to XML) (C#)
 有时，您需要查找某一节点的前面紧邻同级。 由于与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 相比，XPath 中前面紧邻轴的位置谓词的语义同，因此这是一个更值得关注的比较。  
@@ -51,7 +51,3 @@ Console.WriteLine(el1);
 Results are identical  
 <Child3 />  
 ```  
-  
-## <a name="see-also"></a>请参阅
-
-- [针对 XPath 用户的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

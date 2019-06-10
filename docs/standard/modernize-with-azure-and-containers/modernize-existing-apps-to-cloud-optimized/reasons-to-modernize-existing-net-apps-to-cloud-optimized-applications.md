@@ -2,12 +2,12 @@
 title: 更新运行的.NET 应用到云优化的应用程序的原因
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |更新运行的.NET 应用到云优化的应用程序的原因
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639062"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758743"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>更新运行的.NET 应用到云优化的应用程序的原因
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639062"
 
 该键*灵活性*。 您不能提供与灵活性，除非在绝对最低值减少任何部署到生产问题和开发/测试环境问题。 容器 (具体而言，Docker，作为业界标准) 和托管的服务是专门为此目的设计的。
 
-若要实现灵活性，还需要自动基于发布到可缩放平台在云中的 CI/CD 管道的 DevOps 流程。 部署到 （如 Azure 应用服务、 Azure Service Fabric 或 Azure Kubernetes 服务） 的可扩展、 有弹性的云平台的 CI/CD 平台 （如 Azure DevOps 服务或 Jenkins） 是用于实现更灵活地在云中的关键技术。
+若要实现灵活性，还需要自动基于发布到可缩放平台在云中的 CI/CD 管道的 DevOps 流程。 部署到 （如 Azure 应用服务或 Azure Kubernetes 服务） 的可扩展、 有弹性的云平台的 CI/CD 平台 （如 Azure DevOps 服务或 Jenkins） 是用于实现更灵活地在云中的关键技术。
 
 以下列表介绍主要原则或云优化应用程序的实践。 请注意，您可以采用的所有或部分这些原则，渐进式或递增性方法中：
 

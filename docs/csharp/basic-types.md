@@ -3,12 +3,12 @@ title: 基本类型 - C# 指南
 description: 了解所有 C# 程序中的核心类型（数字、字符串和对象）
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508041"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422097"
 ---
 # <a name="types-variables-and-values"></a>类型、变量和值
 
@@ -47,13 +47,13 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能在声明 [int](language-reference/keywords/int.md) 后向其赋值 [true](language-reference/keywords/true.md) 布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的*类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。
+在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能在声明 [int](language-reference/keywords/int.md) 后向其赋值 [true](language-reference/keywords/true-literal.md) 布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的*类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。 
 
 有关详细信息，请参阅[强制转换和类型转换](programming-guide/types/casting-and-type-conversions.md)。
 
 ## <a name="built-in-types"></a>内置类型
 
-C# 提供了一组标准的内置数值类型来表示整数、浮点值、布尔表达式、文本字符、十进制值和其他数据类型。 另外，还有内置**字符串**和**对象**类型。 这些类型可供在任何 C# 程序中使用。 有关内置类型的详细信息，请参阅[类型参考表](language-reference/keywords/reference-tables-for-types.md)。  
+C# 提供了一组标准的内置数值类型来表示整数、浮点值、布尔表达式、文本字符、十进制值和其他数据类型。 另外，还有内置**字符串**和**对象**类型。 这些类型可供在任何 C# 程序中使用。 有关内置类型的详细信息，请参阅[内置类型参考表](language-reference/keywords/built-in-types-table.md)。  
   
 ## <a name="custom-types"></a>自定义类型
 
@@ -61,7 +61,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
   
 ## <a name="generic-types"></a>泛型类型
 
-可使用一个或多个类型参数声明、作为客户端代码在创建类型实例时将提供的实际类型（具体类型）的占位符的类型。 这种类型称为泛型类型。 例如，.NET Framework 类型 <xref:System.Collections.Generic.List%601> 具有一个类型参数，它按照惯例被命名为 *T*。创建类型实例时，指定列表将包含的对象类型，例如字符串：  
+可使用一个或多个类型参数声明、作为客户端代码在创建类型实例时将提供的实际类型（具体类型）的占位符的类型。   这种类型称为泛型类型。  例如，.NET Framework 类型 <xref:System.Collections.Generic.List%601> 具有一个类型参数，它按照惯例被命名为 *T*。创建类型实例时，指定列表将包含的对象类型，例如字符串：  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
@@ -71,9 +71,9 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 
 如前所述，你可以使用 [var](language-reference/keywords/var.md) 关键字隐式键入一个局部变量（但不是类成员）。 变量在编译时仍可接收类型，但类型由编译器提供。 有关详细信息，请参阅[隐式类型本地变量](programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
-在某些情况下，为不打算存储或传递外部方法边界的简单相关值集合创建命名类型是不方便的。 为此，你可以创建匿名类型。 有关详细信息，请参阅[匿名类型](programming-guide/classes-and-structs/anonymous-types.md)。
+在某些情况下，为不打算存储或传递外部方法边界的简单相关值集合创建命名类型是不方便的。 为此，你可以创建匿名类型。  有关详细信息，请参阅[匿名类型](programming-guide/classes-and-structs/anonymous-types.md)。
 
-经常需要从方法返回多个值。 可以创建在单个方法调用中返回多个值的元组类型。 有关详细信息，请参阅[元组](tuples.md)
+经常需要从方法返回多个值。 可以创建在单个方法调用中返回多个值的元组类型。  有关详细信息，请参阅[元组](tuples.md)
 
 ## <a name="the-common-type-system"></a>通用类型系统
 
@@ -81,7 +81,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
   
 - 它支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 <xref:System.Int32> (C# keyword: `int`) 等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object> (C# keyword: `object`)。 此统一类型层次结构称为[通用类型系统](../standard/common-type-system.md) (CTS)。 有关 C# 中的继承的详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。  
   
-- CTS 中的每种类型被定义为值类型或引用类型。 这包括 .NET Framework 类库中的所有自定义类型以及你自己的用户定义类型。 使用 [struct](language-reference/keywords/struct.md) 关键字定义的类型是值类型；所有内置数值类型都是 **structs**。 有关值类型的详细信息，请参阅[结构](structs.md)。 使用 [class](language-reference/keywords/class.md) 关键字定义的类型是引用类型。 有关引用类型的详细信息，请参阅[类](classes.md)。 引用类型和值类型具有不同的编译时规则和不同的运行时行为。
+- CTS 中的每种类型被定义为值类型或引用类型。   这包括 .NET Framework 类库中的所有自定义类型以及你自己的用户定义类型。 使用 [struct](language-reference/keywords/struct.md) 关键字定义的类型是值类型；所有内置数值类型都是 **structs**。 有关值类型的详细信息，请参阅[结构](structs.md)。 使用 [class](language-reference/keywords/class.md) 关键字定义的类型是引用类型。 有关引用类型的详细信息，请参阅[类](classes.md)。 引用类型和值类型具有不同的编译时规则和不同的运行时行为。
 
 ## <a name="see-also"></a>请参阅
 

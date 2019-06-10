@@ -3,12 +3,12 @@ title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063247"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251027"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字符串内插
 
@@ -27,17 +27,17 @@ ms.locfileid: "65063247"
 如示例所示，通过将表达式用大括号括起来，可将表达式包含到内插字符串中：
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 内插字符串支持[字符串复合格式设置](../../standard/base-types/composite-formatting.md)功能的所有功能。 这使得它们成为 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法的更具可读性的替代选项。
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>如何为内插表达式指定格式字符串
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>如何为内插表达式指定格式字符串
 
 可通过在内插表达式后接冒号（“:”）和格式字符串来指定受表达式结果类型支持的格式字符串：
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 以下示例演示如何为生成日期和时间或数值结果的表达式指定标准和自定义格式字符串：
@@ -46,27 +46,27 @@ ms.locfileid: "65063247"
 
 有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[格式字符串组件](../../standard/base-types/composite-formatting.md#format-string-component)章节。 该部分提供主题链接，这些主题介绍 .NET 基类型支持的标准和自定义格式字符串。
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>如何控制设置了格式的内插表达式的字段宽度和对齐方式
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>如何控制设置了格式的内插表达式的字段宽度和对齐方式
 
-通过在内插表达式后添加逗号 (",") 和常数表达式来指定设置了格式的表达式结果的最小字段宽度和对齐方式：
+通过在内插表达式后添加逗号（“,”）和常数表达式来指定设置了格式的表达式结果的最小字段宽度和对齐方式：
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
-如果对齐方式值为正，则设置了格式的表达式结果为右对齐，如果为负，则为左对齐。
+如果对齐方式值为正，则设置了格式的表达式结果为右对齐，如果为负，则为左对齐  。
 
 如果需要同时指定对齐方式和格式字符串，则先从对齐方式组件开始：
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 以下示例演示如何指定对齐方式并使用管道字符 ("|") 分隔文本字段：
 
 [!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-如示例输出所示，如果已设置格式的表达式结果长度超出指定字段宽度，则忽略对齐方式值。
+如示例输出所示，如果已设置格式的表达式结果长度超出指定字段宽度，则忽略对齐方式值  。
 
 有关详细信息，请参阅[复合格式设置](../../standard/base-types/composite-formatting.md)主题的[对齐方式组件](../../standard/base-types/composite-formatting.md#alignment-component)部分。
 
@@ -82,7 +82,7 @@ ms.locfileid: "65063247"
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>如何在内插表达式中使用三元条件运算符 `?:`
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>如何在内插表达式中使用三元条件运算符 `?:`
 
 因为冒号 (:) 在具有内插表达式的项中具有特殊含义，为了在表达式中使用[条件运算符](../language-reference/operators/conditional-operator.md)，请将表达式放在括号内，如下例所示：
 

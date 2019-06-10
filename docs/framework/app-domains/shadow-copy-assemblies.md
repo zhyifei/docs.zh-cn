@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607518"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456712"
 ---
 # <a name="shadow-copying-assemblies"></a>卷影复制程序集
 借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。 这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。  
@@ -67,9 +67,9 @@ ms.locfileid: "64607518"
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>启动性能  
- 如果启动使用卷影复制的应用程序域，在将应用程序目录中的程序集复制到卷影复制目录或验证程序集是否已经位于此位置时，会出现延迟。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，所有程序集均复制到临时目录。 已打开每个程序集以验证程序集名称，并验证了强名称。 已检查每个程序集以查看其更新到的版本是否比卷影复制目录中的副本新。 如果是，则将它复制到卷影复制目录。 最后，删除临时副本。  
+ 如果启动使用卷影复制的应用程序域，在将应用程序目录中的程序集复制到卷影复制目录或验证程序集是否已经位于此位置时，会出现延迟。 在 .NET Framework 4 之前，所有程序集均复制到临时目录。 已打开每个程序集以验证程序集名称，并验证了强名称。 已检查每个程序集以查看其更新到的版本是否比卷影复制目录中的副本新。 如果是，则将它复制到卷影复制目录。 最后，删除临时副本。  
   
- 自 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以来，默认启动行为就是直接将应用程序目录中每个程序集的文件日期和时间与卷影复制目录中副本的进行比较。 如果程序集已更新，则使用 .NET Framework 早期版本中的相同过程进行复制；否则，将加载卷影复制目录中的副本。  
+ 自 .NET Framework 4 以来，默认启动行为就是直接将应用程序目录中每个程序集的文件日期和时间与影子副本目录中副本的文件日期和时间进行比较。 如果程序集已更新，则使用 .NET Framework 早期版本中的相同过程进行复制；否则，将加载卷影复制目录中的副本。  
   
  对于其中程序集未频繁更改且通常程序集的较小子集发生更改的应用程序，产生的性能提升最大。 如果应用程序中的大部分程序集频繁发生更改，则新的默认行为可能导致性能退化。 可以通过向配置文件添加 [\<shadowCopyVerifyByTimestamp> 元素](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)来还原早期版本的 .NET Framework 的启动行为，其中 `enabled="false"`。  
   

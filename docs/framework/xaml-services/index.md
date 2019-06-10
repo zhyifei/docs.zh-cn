@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663238"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491107"
 ---
 # <a name="xaml-services"></a>XAML 服务
-本主题介绍的技术一名为.NET Framework XAML 服务的功能。 服务和 Api 所述的大多数都位于 System.Xaml，它是一个程序集随程序集[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET 核心程序集。 服务包括阅读器和编写器，架构类和架构支持，工厂类、 XAML 语言内部函数支持和其他 XAML 语言功能的特性化。  
+本主题介绍的技术一名为.NET Framework XAML 服务的功能。 服务和 Api 所述的大多数都位于 System.Xaml，它是随.NET 核心程序集的.NET Framework 4 集程序集的程序集。 服务包括阅读器和编写器，架构类和架构支持，工厂类、 XAML 语言内部函数支持和其他 XAML 语言功能的特性化。  
   
 ## <a name="about-this-documentation"></a>有关此文档  
  .NET Framework XAML 服务的概念文档假定你具有上述体验 XAML 语言以及如何它可能会应用到特定的框架，例如[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 Windows Workflow Foundation 或特定技术功能区域中，例如生成自定义项中的功能<xref:Microsoft.Build.Framework.XamlTypes>。 本文档不会尝试解释为标记语言，XAML 语法术语或其他介绍性材料的 XAML 基础知识。 相反，本文档重点介绍专门在 System.Xaml 程序集库中使用启用.NET Framework XAML 服务。 这些 Api 的大部分都是为 XAML 语言集成和扩展性方案。 这可能包括以下任一项：  
@@ -38,7 +38,7 @@ ms.locfileid: "64663238"
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 服务和 System.Xaml 中.NET 体系结构  
  在以前版本的 Microsoft.NET Framework，支持有关 XAML 语言功能所实现的 Microsoft.NET Framework 构建的框架 ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，Windows Workflow Foundation 和 Windows Communication Foundation (WCF))，并因此不同的行为和使用 API，具体取决于哪个特定的框架已使用。 这包括 XAML 分析器及其对象图创建机制、 XAML 语言内部函数、 序列化支持等。  
   
- 在[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，.NET Framework XAML 服务和 System.Xaml 程序集中定义了大部分所需的支持 XAML 语言功能。 这包括基类，这些类的 XAML 读取器和 XAML 编写器。 添加到未出现在任何特定于框架的 XAML 实现的.NET Framework XAML 服务的最重要功能是 XAML 类型系统表示形式。 类型系统表示形式提供一种面向对象的方法，而不依赖于框架的特定功能为中心的 XAML 功能显示 XAML。  
+ 在.NET Framework 4 中，.NET Framework XAML 服务和 System.Xaml 程序集中定义大部分所需的支持 XAML 语言功能。 这包括基类，这些类的 XAML 读取器和 XAML 编写器。 添加到未出现在任何特定于框架的 XAML 实现的.NET Framework XAML 服务的最重要功能是 XAML 类型系统表示形式。 类型系统表示形式提供一种面向对象的方法，而不依赖于框架的特定功能为中心的 XAML 功能显示 XAML。  
   
  XAML 类型系统不受限制的标记窗体或运行时细节的 XAML 的原点;也不受任何特定后备类型的系统限制。 XAML 类型系统包括类型、 成员、 XAML 架构上下文、 XML 级别概念和其他 XAML 语言概念或 XAML 内部函数的对象表示形式。 使用或扩展的 XAML 类型系统使用可以派生自的类，如 XAML 读取器和 XAML 编写器，并扩展到启用的一种框架、 一种技术或使用的应用程序的特定功能的 XAML 表示形式中的功能或发出 XAML。 XAML 架构上下文概念使从 XAML 对象编写器实现，一种技术的后备类型系统的通信通过上下文和 XAML 节点中的程序集信息的组合的实际对象关系图写入操作源。 有关 XAML 架构概念的详细信息。 请参阅[默认 XAML 架构上下文和 WPF XAML 架构上下文](default-xaml-schema-context-and-wpf-xaml-schema-context.md)。  
   

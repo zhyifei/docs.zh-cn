@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586985"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487820"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>通过部分受信任的代码使用库
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  本主题介绍强命名程序集的行为，并且仅适用于[级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)程序集。 [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)中的程序集[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]或更高版本不受强名称。 有关安全系统更改的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
+>  本主题介绍强命名程序集的行为，并且仅适用于[级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)程序集。 [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)在.NET Framework 4 或更高版本的程序集不受强名称。 有关安全系统更改的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
   
  不允许未从其主机或沙盒获取完全信任的应用程序调用共享的托管库，除非库编写器明确允许它们使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 特性。 因此，应用程序编写器必须注意某些库在部分受信任的上下文中将不可用。 默认情况下执行的所有代码在部分信任[沙盒](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)和并不处于完全信任程序集的列表为部分受信任。 如果不希望从部分受信任的上下文中执行或由部分受信任的代码调用自己的代码，则不必关心此部分的信息。 但是，如果所编写的代码必须与部分受信任的代码进行交互或从部分受信任的上下文环境进行操作，则应考虑以下因素：  
   

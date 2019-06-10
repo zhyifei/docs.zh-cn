@@ -3,12 +3,12 @@ title: 生成我的第一个声明感知 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 63f6e2141c06c903b2e03de4b5124013220d0b09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f242de43f1917dd6b01e15914359049ee754aa92
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650491"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690172"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>生成我的第一个声明感知 WCF 服务
 ## <a name="applies-to"></a>适用于  
@@ -26,7 +26,7 @@ ms.locfileid: "64650491"
   
 2. 代理会将 STS 颁发的令牌发送到 WCF 服务。  
   
-3. 声明感知 WCF 服务将配置为信任此 STS 及其颁发的令牌。 声明感知 WCF 服务使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincipal）来满足应用程序的需要，如对其实现授权。  
+3. 声明感知 WCF 服务将配置为信任此 STS 及其颁发的令牌。 声明感知 WCF 服务使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincipal）来满足应用程序的需要，如对其实现授权  。  
   
  从 .NET 4.5 开始，WIF 便已成为 .NET Framework 包的一部分。 通过使 WIF 类直接在框架中可用，可以在 .NET 中更深度地集成基于声明的标识，从而更轻松地使用声明。 如果使用 WIF 4.5，则无需安装任何带外组件即可开始开发声明感知 Web 应用程序。 WIF 类现在分布在各种程序集中，主要为 System.Security.Claims、System.IdentityModel 和 System.IdentityModel.Services。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64650491"
   
 - [Active Directory 联合身份验证服务 (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure 访问控制服务 (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure 访问控制服务 (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
   
  AD FS 2.0 是 Windows Server R2 的一部分并可用作本地方案的 STS。 Azure Active Directory 访问控制（也称为访问控制服务或 ACS）是作为 Microsoft Azure 的一部分提供的云服务。 出于测试或教学目的，您还可以使用其他 STS 以生成声明感知应用程序。 例如，可以使用属于本地开发 STS[标识和访问工具，用于 Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849)即联机免费提供。  
   

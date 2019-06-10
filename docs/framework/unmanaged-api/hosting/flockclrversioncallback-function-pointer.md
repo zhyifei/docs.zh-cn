@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8062ab151efc6175aa68cb0563cd2ad042ee9cd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef308b624525c3a139c892e6118a24d6adb6e14a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628010"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490460"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback 函数指针
 指向以公共语言运行时 (CLR) 调用以指示初始化已开始或完成的函数。  
   
- 中已弃用此函数指针[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ .NET Framework 4 中已弃用此函数指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
   
  **库：** MSCorWks.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

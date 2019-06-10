@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d4a205f643c844b2fe77d3aa5211b4bc1f322fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26fed0a10b9a25f25a580c7ac9a468cbedeb3671
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674243"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489468"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > 元素
 指定 PerfCounter.dll 是否使用 .NET Framework 版本 1.1 应用程序中的 CategoryOptions 注册表设置，以确定是否加载来自特定于类别的共享内存或全局内存的性能计数器数据。  
@@ -39,7 +39,7 @@ enabled="true|false"/>
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`false`|PerfCounter.dll 不使用 CategoryOptions 注册表设置这是默认值。|  
 |`true`|PerfCounter.dll 确实使用的 CategoryOptions 注册表设置。|  
@@ -55,11 +55,11 @@ enabled="true|false"/>
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 在之前的.NET framework 版本[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，PerfCounter.dll 加载的版本对应于进程中加载的运行时。 如果计算机有两个.NET Framework 1.1 版和[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]安装，.NET Framework 1.1 应用程序将加载 PerfCounter.dll 的.NET Framework 1.1 版本。 从开始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，加载最新安装的 PerfCounter.dll 版本。 这意味着.NET Framework 1.1 应用程序将加载[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]PerfCounter.dll 版本如果[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]的计算机上安装。  
+ 在.NET Framework 4 之前的.NET framework 版本中，已加载的 PerfCounter.dll 的版本对应于进程中加载的运行时。 如果计算机有两个.NET Framework 1.1 版和[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]安装，.NET Framework 1.1 应用程序将加载 PerfCounter.dll 的.NET Framework 1.1 版本。 从.NET Framework 4 开始，将加载 PerfCounter.dll 的最新安装的版本。 这意味着如果计算机上安装.NET Framework 4，.NET Framework 1.1 应用程序将加载 PerfCounter.dll 的.NET Framework 4 版本。  
   
- 从开始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，PerfCounter.dll 时使用性能计数器，检查每个提供程序，以确定是否应从特定于类别的共享的内存或全局共享的内存读取的 CategoryOptions 注册表项。 .NET Framework 1.1 PerfCounter.dll 不读取该注册表项，因为它没有感知的特定于类别的共享内存;它始终从全局共享内存读取。  
+ 使用性能计数器时，从.NET Framework 4 开始，PerfCounter.dll 检查每个提供程序，以确定是否应从特定于类别的共享的内存或全局共享的内存读取的 CategoryOptions 注册表项。 .NET Framework 1.1 PerfCounter.dll 不读取该注册表项，因为它没有感知的特定于类别的共享内存;它始终从全局共享内存读取。  
   
- 为了向后兼容， [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll 在.NET Framework 1.1 应用程序中运行时不检查 CategoryOptions 注册表项。 它只需使用全局共享的内存，就像.NET Framework 1.1 PerfCounter.dll 一样。 但是，您可以指示[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]PerfCounter.dll 若要检查的注册表设置，从而`<forcePerformanceCounterUniqueSharedMemoryReads>`元素。  
+ 为了向后兼容性，.NET Framework 4 PerfCounter.dll 不会检查 CategoryOptions 注册表项，在.NET Framework 1.1 应用程序中运行时。 它只需使用全局共享的内存，就像.NET Framework 1.1 PerfCounter.dll 一样。 但是，您可以指示.NET Framework 4 PerfCounter.dll 若要检查的注册表设置，从而`<forcePerformanceCounterUniqueSharedMemoryReads>`元素。  
   
 > [!NOTE]
 >  启用`<forcePerformanceCounterUniqueSharedMemoryReads>`元素不能保证将使用特定于类别的共享的内存。 启用到设置`true`仅会导致 PerfCounter.dll 要引用的 CategoryOptions 注册表设置。 CategoryOptions 的默认设置是使用特定于类别的共享的内存;但是，可以更改 CategoryOptions 若要指示应使用全局共享的内存。  

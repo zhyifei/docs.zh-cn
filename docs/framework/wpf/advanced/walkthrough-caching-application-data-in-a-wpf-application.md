@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591205"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457513"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
@@ -22,7 +22,7 @@ ms.locfileid: "65591205"
  .NET Framework 提供了使你能够使用.NET Framework 应用程序中缓存的类。 这些类都位于<xref:System.Runtime.Caching>命名空间。
 
 > [!NOTE]
->  <xref:System.Runtime.Caching>命名空间是中的新增功能[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 此命名空间使缓存可供所有.NET Framework 应用程序。 在以前版本的.NET Framework，缓存是仅适用于<xref:System.Web>命名空间，因此，需要 ASP.NET 类上的依赖项。
+>  <xref:System.Runtime.Caching>命名空间是.NET Framework 4 中的新增功能。 此命名空间使缓存可供所有.NET Framework 应用程序。 在以前版本的.NET Framework，缓存是仅适用于<xref:System.Web>命名空间，因此，需要 ASP.NET 类上的依赖项。
 
  本演练演示如何使用作为的一部分是.NET Framework 中提供的缓存功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。 在本演练中，你将缓存的文本文件的内容。
 
@@ -30,7 +30,7 @@ ms.locfileid: "65591205"
 
 - 创建 WPF 应用程序项目。
 
-- 添加对引用[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。
+- 添加对.NET Framework 4 的引用。
 
 - 正在初始化缓存。
 
@@ -60,25 +60,25 @@ ms.locfileid: "65591205"
 
 2. 在中**文件**菜单上，单击**新建**，然后单击**新项目**。
 
-     随即显示“新建项目”对话框。
+     随即显示“新建项目”对话框。 
 
-3. 下**已安装的模板**，选择你想要使用的编程语言 (**Visual Basic**或**Visual C#**)。
+3. 下**已安装的模板**，选择你想要使用的编程语言 (**Visual Basic**或**Visual C#** )。
 
 4. 在中**新的项目**对话框中，选择**WPF 应用程序**。
 
     > [!NOTE]
-    >  如果没有看到**WPF 应用程序**模板，请确保支持 WPF 的.NET framework 版本为目标。 在中**新的项目**对话框中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]从列表中。
+    >  如果没有看到**WPF 应用程序**模板，请确保支持 WPF 的.NET framework 版本为目标。 在中**新的项目**对话框中，从列表中选择.NET Framework 4。
 
 5. 在中**名称**文字框中，输入你的项目的名称。 例如，可以输入**WPFCaching**。
 
-6. 选择“为解决方案创建目录”复选框。
+6. 选择“为解决方案创建目录”复选框  。
 
-7. 单击 **“确定”**。
+7. 单击 **“确定”** 。
 
      WPF 设计器中打开**设计**查看，并显示 MainWindow.xaml 文件。 Visual Studio 将创建**我的项目**文件夹、 Application.xaml 文件和 MainWindow.xaml 文件。
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>面向.NET Framework 并添加对缓存程序集的引用
- 默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 应用程序中的命名空间，该应用程序必须面向[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)](不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，并且必须包括对命名空间的引用。
+ 默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>命名空间中的 WPF 应用程序，该应用程序必须面向.NET Framework 4 (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，并且必须包括对命名空间的引用。
 
  因此下, 一步将更改.NET Framework 目标，并添加对引用<xref:System.Runtime.Caching>命名空间。
 
@@ -91,17 +91,17 @@ ms.locfileid: "65591205"
 
      显示应用程序的属性窗口。
 
-2. 单击“编译”选项卡。
+2. 单击“编译”  选项卡。
 
-3. 在窗口的底部，单击**高级编译选项...**.
+3. 在窗口的底部，单击**高级编译选项...** .
 
      **高级编译器设置**显示对话框。
 
-4. 在中**目标框架 （所有配置）** 列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)
+4. 在中**目标框架 （所有配置）** 列表中，选择.NET Framework 4。 (不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)
 
-5. 单击 **“确定”**。
+5. 单击 **“确定”** 。
 
-     随即显示“目标框架更改”对话框。
+     随即显示“目标框架更改”对话框  。
 
 6. 在中**目标 Framework 更改**对话框中，单击**是**。
 
@@ -121,7 +121,7 @@ ms.locfileid: "65591205"
 
 2. 单击“应用程序”  选项卡。
 
-3. 在中**目标框架**列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择 **.NET Framework 4 Client Profile**。)
+3. 在中**目标框架**列表中，选择.NET Framework 4。 (不要选择 **.NET Framework 4 Client Profile**。)
 
 4. 通过执行以下步骤添加对缓存程序集的引用：
 

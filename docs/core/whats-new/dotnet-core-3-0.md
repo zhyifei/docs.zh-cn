@@ -338,7 +338,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 <xref:System.Text.Json.Serialization.JsonSerializer?displayProperty=nameWithType> 在 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 的基础上生成，可在处理 JSON 文档和片段时提供快速的低内存序列化选项。
 
-查看： https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md，获取可移植到本文的示例
+查看： https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md ，获取可移植到本文的示例
 
 下面是一个将对象序列化为 JSON 的示例：
 

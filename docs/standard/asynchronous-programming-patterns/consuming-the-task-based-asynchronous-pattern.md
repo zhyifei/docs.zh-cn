@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628884"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377742"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
 
 使用基于任务的异步模式 (TAP) 处理异步操作时，可以使用回叫实现等待，而不会阻塞。  对于任务，这可通过 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 等方法实现。 通过允许在正常控制流中等待异步操纵，基于语言的异步支持可隐藏回叫，并且编译器生成的代码可提供此相同 API 级别的支持。
 
 ## <a name="suspending-execution-with-await"></a>使用 Await 挂起执行
- 自 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 起，可以使用 C# 中的 [await](~/docs/csharp/language-reference/keywords/await.md) 关键字和 Visual Basic 中的 [Await 运算符](~/docs/visual-basic/language-reference/operators/await-operator.md)，异步等待 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 等待 <xref:System.Threading.Tasks.Task> 时，`await` 表达式的类型为 `void`。 等待 <xref:System.Threading.Tasks.Task%601> 时，`await` 表达式的类型为 `TResult`。 `await` 表达式必须出现在异步方法的正文内。 若要详细了解 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的 C# 和 Visual Basic 语言支持，请参阅 C# 和 Visual Basic 语言规范。
+ 自 .NET Framework 4.5 起，可以使用 C# 中的 [await](~/docs/csharp/language-reference/keywords/await.md) 关键字和 Visual Basic 中的 [Await 运算符](~/docs/visual-basic/language-reference/operators/await-operator.md)，异步等待 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 等待 <xref:System.Threading.Tasks.Task> 时，`await` 表达式的类型为 `void`。 等待 <xref:System.Threading.Tasks.Task%601> 时，`await` 表达式的类型为 `TResult`。 `await` 表达式必须出现在异步方法的正文内。 若要详细了解 .NET Framework 4.5 中的 C# 和 Visual Basic 语言支持，请参阅 C# 和 Visual Basic 语言规范。
 
  实际上，await 功能通过使用延续任务在任务上安装回叫。  此回叫在挂起点恢复异步方法。 恢复异步方法时，如果等待的操作已成功完成且为 <xref:System.Threading.Tasks.Task%601>，返回的是 `TResult`。  如果等待的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束，就会抛出 <xref:System.OperationCanceledException> 异常。  如果等待的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 以 <xref:System.Threading.Tasks.TaskStatus.Faulted> 状态结束，就会抛出导致它发生故障的异常。 一个 `Task` 可能由于多个异常而出错，但只会传播一个异常。 不过，<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 属性会返回包含所有错误的 <xref:System.AggregateException> 异常。
 
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.Dataflow> 命名空间通过 NuGet 可用于 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 若要安装包含 <xref:System.Threading.Tasks.Dataflow> 命名空间的程序集，请在 Visual Studio 中打开项目，选择“项目”菜单中的“管理 NuGet 包”，再在线搜索 Microsoft.Tpl.Dataflow 包。
+> <xref:System.Threading.Tasks.Dataflow> 命名空间通过 NuGet 可用于 .NET Framework 4.5  。 若要安装包含 <xref:System.Threading.Tasks.Dataflow> 命名空间的程序集，请在 Visual Studio 中打开项目，选择“项目”菜单中的“管理 NuGet 包”  ，再在线搜索 Microsoft.Tpl.Dataflow 包。
 
 ## <a name="see-also"></a>请参阅
 

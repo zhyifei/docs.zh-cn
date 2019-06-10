@@ -1,6 +1,6 @@
 ---
 title: 使用 DebugView 属性 (Visual Basic) 语法
-description: 介绍 DebugView 属性用于生成表达式树的字符串表示形式的特殊语法
+description: 描述 DebugView 属性使用的特殊语法以生成表达式数的字符串表示形式
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 1b2a1164f02208cc7578820d8f8ed3bc145fb5b8
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196527"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689535"
 ---
-# <a name="debugview-syntax"></a>`DebugView` 语法 
+# <a name="debugview-syntax"></a>`DebugView` 语法
 
-`DebugView`属性 （仅在调试时可用） 提供的表达式树的字符串呈现。 大部分语法是非常简单，若要了解;以下各节所述的特殊情况。
+`DebugView` 属性（仅在调试时可用）提供表达式树的字符串呈现。 大部分语法都相当容易理解；特殊情况将在以下部分中介绍。
 
-每个示例后跟一个注释块，其中包含`DebugView`。 
+每个示例后跟一个注释块，其中包含`DebugView`。
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -47,13 +47,13 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 对于某些数值类型，将后缀添加到值：
 
-| 类型 | 关键字 | Suffix |  
+| 类型 | 关键字 | Suffix |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F | 
+| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [小数](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>示例
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-如果类型<xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType>对象与块中的最后一个表达式的类型不同，在尖括号内显示的类型 (`<`和`>`)。 否则，将不显示 <xref:System.Linq.Expressions.BlockExpression> 对象的类型。
+如果 <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> 对象的类型与块中最后一个表达式的类型不同，则该类型将显示在尖括号（`<` 和 `>`）内。 否则，将不显示 <xref:System.Linq.Expressions.BlockExpression> 对象的类型。
 
 ### <a name="examples"></a>示例
 
@@ -87,7 +87,7 @@ Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
 '
 
 Dim block As BlockExpression = Expression.Block(
-    GetType(Object), 
+    GetType(Object),
     Expression.Constant("test")
 )
 '
@@ -154,7 +154,7 @@ Dim label1 As BlockExpression = Expression.Block(
 
 Dim target As LabelTarget = Expression.Label()
 Dim block As BlockExpression = Expression.Block(
-    Expression.Goto(target), 
+    Expression.Goto(target),
     Expression.Label(target)
 )
 '
@@ -168,7 +168,7 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="checked-operators"></a>Checked 运算符
 
-Checked 的运算符将显示与`#`在运算符前面的符号。 例如，checked 加号显示为 `#+`。
+Checked 运算符在运算符前面显示 `#` 符号。 例如，checked 加号显示为 `#+`。
 
 ### <a name="examples"></a>示例
 

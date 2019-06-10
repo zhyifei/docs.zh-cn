@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: f216c8aac37a28d5cd998ba2e406af4cfc4be686
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 40f70b6d89bf19ae0b20cb00d56e9f7dceb48f61
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882755"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377790"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教程：将回归与 ML.NET 配合使用以预测价格
 
@@ -32,21 +32,21 @@ ms.locfileid: "65882755"
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
-1. 创建名为“TaxiFarePrediction”的“.NET Core 控制台应用程序”。
+1. 创建名为“TaxiFarePrediction”的“.NET Core 控制台应用程序”  。
 
-1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件。
+1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件  。
 
-1. 安装“Microsoft.ML”NuGet 包：
+1. 安装“Microsoft.ML”NuGet 包  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对 Microsoft.ML.FastTree Nuget 包执行相同操作。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择包，再选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 Microsoft.ML.FastTree Nuget 包执行相同操作  。
 
 ## <a name="prepare-and-understand-the-data"></a>准备和了解数据
 
-1. 下载 [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) 和 [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) 数据集，并将它们保存到先前创建的“数据”文件夹。 我们使用这些数据集定型机器学习模型，然后评估模型的准确性。 这些数据集最初来自 [NYC TLC 出租车行程数据集](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。
+1. 下载 [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) 和 [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) 数据集，并将它们保存到先前创建的“数据”文件夹  。 我们使用这些数据集定型机器学习模型，然后评估模型的准确性。 这些数据集最初来自 [NYC TLC 出租车行程数据集](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。
 
-1. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+1. 在“解决方案资源管理器”中，右键单击每个 \*.csv 文件，然后选择“属性”   。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
-1. 打开“taxi-fare-train.csv”数据集并查看第一行中的列标题。 查看每个列。 了解数据并确定哪些列是“特征”以及哪些是“标签”。
+1. 打开“taxi-fare-train.csv”数据集并查看第一行中的列标题  。 查看每个列。 了解数据并确定哪些列是“特征”以及哪些是“标签”   。
 
 `label` 是要预测的列。 标识的 `Features` 是为模型提供的用来预测 `Label` 的输入。
 
@@ -64,26 +64,26 @@ ms.locfileid: "65882755"
 
 创建输入数据和预测类：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TaxiTrip.cs”。 然后，选择“添加”按钮。
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
+1. 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“TaxiTrip.cs”  。 然后，选择“添加”  按钮。
 1. 将以下 `using` 指令添加到新文件：
 
    [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
-删除现有类定义并向“TaxiTrip.cs”文件添加以下代码，其中有两个类 `TaxiTrip` 和 `TaxiTripFarePrediction`：
+删除现有类定义并向“TaxiTrip.cs”  文件添加以下代码，其中有两个类 `TaxiTrip` 和 `TaxiTripFarePrediction`：
 
 [!code-csharp[DefineTaxiTrip](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
 `TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用 <xref:Microsoft.ML.Data.LoadColumnAttribute> 属性在数据集中指定源列的索引。
 
-`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 属性。 对于回归任务，“分数”列包含预测的标签值。
+`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 属性。 对于回归任务，“分数”列包含预测的标签值  。
 
 > [!NOTE]
 > 使用 `float` 类型来表示输入和预测数据类中的浮点值。
 
 ### <a name="define-data-and-model-paths"></a>定义数据和模型路径
 
-将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+将以下附加的 `using` 语句添加到“Program.cs”  文件顶部：
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,11 +135,11 @@ ML.NET 使用 [IDataView 类](xref:Microsoft.ML.IDataView)灵活、有效地描�
 
 [!code-csharp[CopyColumnsEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-定型模型的算法需要数字特性，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字（`VendorIdEncoded`、`RateCodeEncoded` 和 `PaymentTypeEncoded`）。 为此，请使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 转换类（它将不同的数字键值分配到每列的不同值），并添加以下代码：
+定型模型的算法需要数字  特性，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字（`VendorIdEncoded`、`RateCodeEncoded` 和 `PaymentTypeEncoded`）。 为此，请使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 转换类（它将不同的数字键值分配到每列的不同值），并添加以下代码：
 
 [!code-csharp[OneHotEncodingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-数据准备最后一步使用 `mlContext.Transforms.Concatenate` 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
+数据准备最后一步使用 `mlContext.Transforms.Concatenate` 转换类将所有功能列合并到“功能”列  。 默认情况下，学习算法仅处理“特征”列的特征  。 添加以下代码：
 
 [!code-csharp[ColumnConcatenatingEstimator](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
@@ -158,6 +158,10 @@ ML.NET 使用 [IDataView 类](xref:Microsoft.ML.IDataView)灵活、有效地描�
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
 [Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法通过转换数据集并应用训练来训练模型。
+
+使用 `Train()` 方法中的以下代码行返回训练的模型：
+
+[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
 ## <a name="evaluate-the-model"></a>评估模型
 

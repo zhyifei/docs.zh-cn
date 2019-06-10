@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629013"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423865"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>基于事件的异步模式概述
 那些同时执行多项任务、但仍能响应用户交互的应用程序通常需要实施一种使用多线程的设计方案。 <xref:System.Threading> 命名空间提供了创建高性能多线程应用程序所必需的所有工具，但要想有效地使用这些工具，需要有丰富的使用多线程软件工程的经验。 对于相对简单的多线程应用程序，<xref:System.ComponentModel.BackgroundWorker> 组件提供了一个简单的解决方案。 对于更复杂的异步应用程序，请考虑实现一个符合基于事件的异步模式的类。  
@@ -32,20 +32,20 @@ ms.locfileid: "64629013"
   
 - 同时执行多个操作，每个操作完成时都会接到通知。  
   
-- 等待资源变得可用，但不会停止（“挂起”）你的应用程序。  
+- 等待资源变得可用，但不会停止（“阻止”）你的应用程序。  
   
 - 使用熟悉的事件和委托模型与挂起的异步操作通信。 若要详细了解如何使用事件处理程序和委托，请参阅[事件](../../../docs/standard/events/index.md)。  
   
  支持基于事件的异步模式的类将具有一个或多个命名为 _MethodName_**Async** 的方法。 这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。 该类还可能具有 _MethodName_**Completed** 事件，并且可能会具有 _MethodName_**AsyncCancel**（或只是 **CancelAsync**）方法。  
   
- <xref:System.Windows.Forms.PictureBox> 是一个支持基于事件的异步模式的典型组件。 你可以通过调用其 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法来同步下载图像，但是如果图像很大，或者网络连接很慢，应用程序将停止（“挂起”），直到下载操作完成并且对 <xref:System.Windows.Forms.PictureBox.Load%2A> 的调用返回后才会继续执行。  
+ <xref:System.Windows.Forms.PictureBox> 是一个支持基于事件的异步模式的典型组件。 你可以通过调用其 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法来同步下载图像，但是如果图像很大，或者网络连接很慢，应用程序将停止响应，直到下载操作完成并且对 <xref:System.Windows.Forms.PictureBox.Load%2A> 的调用返回后才会继续执行。  
   
  如果你想要应用程序在加载图像时保持运行，你可以调用 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法，处理 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件，这与你处理任何其他事件一样。 调用 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法时，你的应用程序将继续运行，而下载操作将在另一个线程上（“在后台”）继续。 图像加载操作完成时，将调用你的事件处理程序，并且你的事件处理程序可以检查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 参数以确定该下载是否已成功完成。  
   
  基于事件的异步模式要求异步操作可以取消，并且 <xref:System.Windows.Forms.PictureBox> 控件使用其 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 方法支持此要求。 调用 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 会提交一个停止挂起的下载的请求，任务取消时会引发 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
   
 > [!CAUTION]
->  下载有可能刚好在发出 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 请求时完成，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能没有反映取消请求。 这称为“争用条件”，也是多线程编程中的常见问题。 若要详细了解多线程编程中的问题，请参阅[托管线程最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
+>  下载有可能刚好在发出 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 请求时完成，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能没有反映取消请求。 这称为“争用条件”  ，也是多线程编程中的常见问题。 若要详细了解多线程编程中的问题，请参阅[托管线程最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>基于事件的异步模式的特征  
  基于事件的异步模式可以采用多种形式，具体取决于某个特定类支持的操作的复杂程度。 最简单的类可能包含一个 _MethodName_**Async** 方法和对应的 M_MethodName_**Completed** 事件。 更复杂的类可能包含多个 _MethodName_**Async** 方法（每个方法具有一个对应的 _MethodName_**Completed** 事件），以及这些方法的同步版本。 这些类有选择性地分别支持各种异步方法的取消、进度报告和增量结果。  

@@ -2,12 +2,12 @@
 title: .NET 微服务。 适用于容器化 .NET 应用程序的体系结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可是模块化且可独立部署的服务。 （适用于 Linux 和 Windows）的 Docker 容器可将服务及其依赖项绑定到单个单元，使该单元在一个独立的环境中运行，因而可简化部署和测试。
 ms.date: 01/07/2019
-ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: f1abeca8bb7eba615545a88862b20b2711b218fd
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195977"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690636"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务：适用于容器化 .NET 应用程序的体系结构
 
@@ -126,7 +126,7 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > **Dylan Reisenberger**，Polly 的架构师兼开发主管
 >
-> **Steve Smith**，ASPSmith Ltd. 的软件技师和培训师
+> **Steve "ardalis" Smith** - 软件设计师及培训师 - [Ardalis.com](https://ardalis.com)
 >
 > **Ian Cooper**，Brighter 的编码架构师
 >

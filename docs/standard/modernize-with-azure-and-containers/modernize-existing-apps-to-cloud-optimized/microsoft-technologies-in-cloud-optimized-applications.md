@@ -2,12 +2,12 @@
 title: 云优化的应用程序中的 Microsoft 技术
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |云优化的应用程序中的 Microsoft 技术
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639031"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758630"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>云优化的应用程序中的 Microsoft 技术
 
@@ -17,7 +17,7 @@ ms.locfileid: "65639031"
 
 - **运行时**:此层提供了用于运行应用程序的环境。 如果使用的容器，此层通常基于[Docker 引擎](https://docs.docker.com/engine/)，Linux 主机上或在 Windows 主机上运行。 ([Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/)从 Windows Server 2016 开始支持。 Windows 容器是在 Windows 运行的现有.NET Framework 应用程序的最佳选择。）
 
-- **托管云**:当您选择托管的云选项时，可以避免的花费和麻烦的管理和支持的基础的基础结构 Vm、 OS 修补程序，与网络配置。 如果您选择使用 IaaS 迁移，您是负责所有这些任务，以及关联的成本。 在托管的云选项中，你可以管理应用程序和服务开发的。 云服务提供商通常管理所有其他内容。 在 Azure 中托管的云服务的示例包括[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database)， [Azure Redis 缓存](https://azure.microsoft.com/services/cache/)， [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)， [Azure 存储](https://azure.microsoft.com/services/storage/)，[Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)， [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)， [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)，并托管计算服务，如[VM 规模设置](https://azure.microsoft.com/services/virtual-machine-scale-sets/)， [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)， [Azure 应用服务](https://azure.microsoft.com/services/app-service/)，并且[Azure Kubernetes 服务](https://azure.microsoft.com/services/container-service/)。
+- **托管云**:当您选择托管的云选项时，可以避免的花费和麻烦的管理和支持的基础的基础结构 Vm、 OS 修补程序，与网络配置。 如果您选择使用 IaaS 迁移，您是负责所有这些任务，以及关联的成本。 在托管的云选项中，你可以管理应用程序和服务开发的。 云服务提供商通常管理所有其他内容。 在 Azure 中托管的云服务的示例包括[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database)， [Azure Redis 缓存](https://azure.microsoft.com/services/cache/)， [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)， [Azure 存储](https://azure.microsoft.com/services/storage/)，[Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)， [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)， [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)，并托管计算服务，如[VM 规模设置](https://azure.microsoft.com/services/virtual-machine-scale-sets/)， [Azure 应用服务](https://azure.microsoft.com/services/app-service/)，和[Azure Kubernetes 服务](https://azure.microsoft.com/services/container-service/)。
 
 - **应用程序开发**:您可以生成在容器中运行的应用程序时，从许多语言选择。 本指南重点[.NET](https://www.microsoft.com/net)，但您可以通过使用其他语言，如 Node.js、 Python、 Spring/Java，开发基于容器的应用或转。
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639031"
 
 - **应用程序生命周期**:[Azure DevOps 服务](https://azure.microsoft.com/services/devops/)和 Jenkins，等其他工具是帮助你的生成的自动化服务器实现 CI/CD 管道，其中包括发布管理。
 
-本章节中和的相关的演练的下一步部分专门重点介绍有关运行时层 （Windows 容器） 的详细信息。 本指南介绍你可以部署 Windows Server 2016 （和更高版本） 上的 Windows 容器的 Vm 和 Azure 容器实例的方法。 它还介绍了更高级的 PaaS 平台，如 Azure 应用服务和业务流程协调程序类似于 Azure Service Fabric 和 Azure Kubernetes 服务。
+本章节中和的相关的演练的下一步部分专门重点介绍有关运行时层 （Windows 容器） 的详细信息。 本指南介绍你可以部署 Windows Server 2016 （和更高版本） 上的 Windows 容器的 Vm 和 Azure 容器实例的方法。 它还介绍了更高级的 PaaS 平台，如 Azure 应用服务和业务流程协调程序，如 Azure Kubernetes 服务。
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>单一式应用程序*可以*是云计算得到优化
 

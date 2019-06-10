@@ -2,12 +2,12 @@
 title: 通过 Polly 实现使用指数退避算法的 HTTP 调用重试
 description: 了解如何使用 Polly 和 HttpClientFactory 处理 HTTP 故障。
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053106"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301481"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>通过 HttpClientFactory 和 Polly 策略实现使用指数退避算法的 HTTP 调用重试
 
@@ -34,7 +34,7 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-将策略添加至将要使用的 `HttpClient` 对象需要使用 AddPolicyHandler() 方法。 在此示例中，将使用指数退避算法为 Http 重试添加 Polly 策略。
+将策略添加至将要使用的 `HttpClient` 对象需要使用 AddPolicyHandler()  方法。 在此示例中，将使用指数退避算法为 Http 重试添加 Polly 策略。
 
 若要获得更加模块化的方法，可在 `Startup.cs` 文件内的单独方法中定义 Http 重试策略，如以下代码所示：
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>其他资源
 
-- **重试模式**\
+- **重试模式**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly 和 HttpClientFactory**\
+- **Polly 和 HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly（.NET 复原能力和暂时性故障处理库）**\
+- **Polly（.NET 的恢复和暂时性故障处理库）**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker。抖动：随机性使操作变得更好**\
+- **Marc Brooker。抖动：随机性使操作变得更好**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

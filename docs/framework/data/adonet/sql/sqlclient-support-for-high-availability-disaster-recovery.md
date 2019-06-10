@@ -2,12 +2,12 @@
 title: SqlClient 对高可用性的支持，灾难恢复
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: aa4c716dc1b27d50620777613e698ca6dbab31d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380013"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487635"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
 本主题讨论用于高可用性、 灾难恢复-AlwaysOn 可用性组的 SqlClient 支持 （在.NET Framework 4.5 中添加）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
@@ -79,7 +79,7 @@ ms.locfileid: "66380013"
   
  `ApplicationIntent` 关键字不适用于旧的只读数据库。  
   
- 数据库可以允许或不允许针对的 AlwaysOn 数据库上的读工作负荷。 （使用 `ALLOW_CONNECTIONS` 和 `PRIMARY_ROLE``SECONDARY_ROLE` 语句的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 子句可做到这点。）  
+ 数据库可以允许或不允许针对的 AlwaysOn 数据库上的读工作负荷。 (这通过`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`和`SECONDARY_ROLE`TRANSACT-SQL 语句。)  
   
  `ApplicationIntent` 关键字用于启用只读路由。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66380013"
   
 3. 可用性组必须由数据库管理员配置以启用只读路由。  
   
- 使用只读路由的多个连接并非连接到相同的只读副本。 数据库同步的更改或服务器路由配置的更改可能导致客户端连接到不同的只读副本。 为确保所有只读请求连接到相同的只读副本，请不要将可用性组侦听器传递给 `Data Source` 连接字符串关键字。  请指定只读实例的名称。  
+ 使用只读路由的多个连接并非连接到相同的只读副本。 数据库同步的更改或服务器路由配置的更改可能导致客户端连接到不同的只读副本。 为确保所有只读请求连接到相同的只读副本，请不要将可用性组侦听器传递给 `Data Source` 连接字符串关键字。 请指定只读实例的名称。  
   
  只读路由可能需要比连接到主副本更长的时间，因为只读路由要先连接到主副本，然后查找最可能可用的可读辅助副本。 为此，您应增加您的登录超时值。  
   

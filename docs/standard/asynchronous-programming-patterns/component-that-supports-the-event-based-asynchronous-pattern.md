@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882493"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423874"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -176,7 +176,7 @@ ms.locfileid: "65882493"
  `CalculateWorker` 方法包装在委托中，通过调用 `BeginInvoke` 进行异步调用。  
   
 > [!NOTE]
->  进度事件报告是在 `BuildPrimeNumberList` 方法中实现。 在快速运行的计算机上，`ProgressChanged` 事件可能会快速连续抛出。 对其抛出这些事件的客户端线程必须能够处理这种情况。 消息可能会像洪水般涌入用户界面代码，导致代码无法不断更新，继而导致挂起行为发生。 有关处理此情况的示例用户界面，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+>  进度事件报告是在 `BuildPrimeNumberList` 方法中实现。 在快速运行的计算机上，`ProgressChanged` 事件可能会快速连续抛出。 对其抛出这些事件的客户端线程必须能够处理这种情况。 消息可能会像洪水般涌入用户界面代码，导致代码无法不断更新，继而导致无响应。 有关处理此情况的示例用户界面，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>若要异步执行质数计算，请执行以下操作：  
   

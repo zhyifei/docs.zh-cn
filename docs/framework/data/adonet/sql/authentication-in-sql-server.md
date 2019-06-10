@@ -2,12 +2,12 @@
 title: SQL Server 中的身份验证
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877457"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490096"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合模式。  
@@ -46,7 +46,7 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 - Internet 应用程序，如 ASP.NET。  
   
 > [!NOTE]
->  指定 Windows 身份验证不会禁用 SQL Server 登录。 使用 ALTER LOGIN DISABLE[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]语句禁用高特权的 SQL Server 登录名。  
+>  指定 Windows 身份验证不会禁用 SQL Server 登录。 使用 ALTER LOGIN DISABLE Transact-SQL 语句会禁用具有高特权的 SQL Server 登录。  
   
 ## <a name="login-types"></a>登录类型  
  SQL Server 支持三种类型的登录名：  

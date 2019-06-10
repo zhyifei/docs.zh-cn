@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959941"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457065"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
-<a name="introduction"></a>本文中的表格列出了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中由程序集组织的过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](obsolete-members.md)。
+<a name="introduction"></a>本文中的表列出了 .NET Framework 4.5 和 .NET Framework 4.6 中由程序集组织的已过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](obsolete-members.md)。
 
 - [系统程序集中的过时类型](#obsolete_types_in_system_assemblies)
 
@@ -588,7 +588,7 @@ ms.locfileid: "65959941"
 
 <a name="IEHost"></a>
 ### <a name="assembly-iehostdll-and-ieexecexe"></a>程序集：IEHost.dll 和 IEExec.exe
- IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有类型和成员已过时，且从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始已不支持它们。 这些程序集过去用于承载 Windows 窗体控件和在 Internet Explorer 中运行可执行文件。 建议的替代项包括 ClickOnce、XAML 浏览器应用程序 (XBAP) 和 Microsoft Silverlight。
+ IEHost.dll 和 IEExec.exe 程序集已从 .NET Framework 中删除。 其所有类型和成员已过时，且从 .NET Framework 4 开始已不支持它们。 这些程序集过去用于承载 Windows 窗体控件和在 Internet Explorer 中运行可执行文件。 建议的替代项包括 ClickOnce、XAML 浏览器应用程序 (XBAP) 和 Microsoft Silverlight。
 
  [返回页首](#introduction)
 
@@ -597,8 +597,8 @@ ms.locfileid: "65959941"
 
 |类型|消息|
 |----------|-------------|
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build 程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build  程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|此类已弃用。 请改用 Microsoft.Build  程序集中的 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>。|
 
  [返回页首](#introduction)
 

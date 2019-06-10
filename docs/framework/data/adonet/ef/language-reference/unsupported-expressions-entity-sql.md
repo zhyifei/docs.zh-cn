@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
-ms.openlocfilehash: a47ff46ca99a84500bc5dfecc19bb31652e9b4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af0e00f470584883b6a65b63f2650c1c359b404c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034068"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489868"
 ---
 # <a name="unsupported-expressions"></a>不支持的表达式
 
-本主题介绍 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中不支持的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 表达式。 有关详细信息，请参阅[如何实体 SQL 与 TRANSACT-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)。
+本主题介绍中不支持的 TRANSACT-SQL 表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。 有关详细信息，请参阅[如何实体 SQL 与 TRANSACT-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)。
 
 ## <a name="quantified-predicates"></a>限定的谓词
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 允许以下形式的构造：
+TRANSACT-SQL 允许以下形式的构造：
 
 ```sql
 sal > all (select salary from employees)
@@ -33,7 +33,7 @@ exists(select 0 from employees as e where sal > e.salary)
 
 ## <a name="-operator"></a>* 运算符
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支持在 SELECT 子句中使用 * 运算符来表示应提取出所有列。在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中不支持使用此运算符。
+Transact SQL 支持使用 * 运算符在 SELECT 子句中的，以指示所有列应都提取出。在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中不支持使用此运算符。
 
 ## <a name="see-also"></a>请参阅
 

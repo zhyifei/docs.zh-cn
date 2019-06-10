@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202595"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423536"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
@@ -24,8 +24,8 @@ ms.locfileid: "57202595"
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : unmanaged`|类型参数不能是引用类型，并且任何嵌套级别均不能包含任何引用类型成员。|
 |`where T : new()`|类型参数必须具有公共无参数构造函数。 与其他约束一起使用时，`new()` 约束必须最后指定。|
-|`where T :` \<基类名>|类型参数必须是指定的基类或派生自指定的基类。|
-|`where T :` \<接口名称>|类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|
+|`where T :` \<基类名> |类型参数必须是指定的基类或派生自指定的基类。|
+|`where T :` \<接口名称> |类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|
 |`where T : U`|为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。|
 
 某些约束是互斥的。 所有值类型必须具有可访问的无参数构造函数。 `struct` 约束包含 `new()` 约束，且 `new()` 约束不能与 `struct` 约束结合使用。 `unmanaged` 约束包含 `struct` 约束。 `unmanaged` 约束不能与 `struct` 或 `new()` 约束结合使用。
@@ -78,7 +78,7 @@ ms.locfileid: "57202595"
 
 ## <a name="unmanaged-constraint"></a>非托管约束
 
-从 C# 7.3 开始，可使用 `unmanaged` 约束来指定类型参数必须为“非托管类型”。 “非托管类型”不是引用类型，且任何嵌套级别都不包含引用类型字段。 通过 `unmanaged` 约束，用户能编写可重用例程，从而使用可作为内存块操作的类型，如以下示例所示：
+从 C# 7.3 开始，可使用 `unmanaged` 约束来指定类型参数必须为“非托管类型”  。 “非托管类型”不是引用类型，且任何嵌套级别都不包含引用类型字段  。 通过 `unmanaged` 约束，用户能编写可重用例程，从而使用可作为内存块操作的类型，如以下示例所示：
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
@@ -114,6 +114,6 @@ ms.locfileid: "57202595"
 
 - <xref:System.Collections.Generic>
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [泛型介绍](../../../csharp/programming-guide/generics/index.md)
 - [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)
 - [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)

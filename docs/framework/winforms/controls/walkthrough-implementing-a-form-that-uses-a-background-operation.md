@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 1988ebd8c5f46346babe212962b617d30d765385
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 60421d6ba634bd7b4107f1c9998fbbe158417c83
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211531"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423834"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现使用后台操作的窗体
 
-如果某项操作需要很长时间才能完成，并且您不希望用户界面 (UI) 停止响应或"挂起，可以使用<xref:System.ComponentModel.BackgroundWorker>类，以另一个线程上执行此操作。
+如果某项操作需要很长时间才能完成，并且停止响应或阻止不希望用户界面 (UI)，则可以使用<xref:System.ComponentModel.BackgroundWorker>类，以另一个线程上执行此操作。
 
 本演练演示了如何使用<xref:System.ComponentModel.BackgroundWorker>类来执行耗时的计算，"在后台，"尽管用户界面保持响应。  演练时，将有一个异步计算 Fibonacci 数列的应用程序。 即使计算大型 Fibonacci 数列需要花费大量时间，但主 UI 线程不会被这种延时中断，并且在计算期间窗体仍会响应。
 
@@ -44,7 +44,7 @@ ms.locfileid: "65211531"
 
 1. 在 Visual Studio 中，创建一个名为基于 Windows 的应用程序项目`BackgroundWorkerExample`(**文件** > **新建** > **项目** > **可视化C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。
 
-2. 在“解决方案资源管理器”中，右键单击“Form1”，然后从快捷菜单中选择“重命名”。 将文件名更改为 `FibonacciCalculator`。 询问是否希望重命名对代码元素“**”的所有引用时，单击“是”**`Form1`按钮。
+2. 在“解决方案资源管理器”  中，右键单击“Form1”  ，然后从快捷菜单中选择“重命名”  。 将文件名更改为 `FibonacciCalculator`。 询问是否希望重命名对代码元素“ **”的所有引用时，单击“是”** `Form1`按钮。
 
 3. 拖动<xref:System.Windows.Forms.NumericUpDown>控件从**工具箱**拖到窗体。 设置<xref:System.Windows.Forms.NumericUpDown.Minimum%2A>属性设置为`1`并<xref:System.Windows.Forms.NumericUpDown.Maximum%2A>属性设置为`91`。
 
@@ -103,7 +103,7 @@ ms.locfileid: "65211531"
 
 ### <a name="implement-progress-reporting"></a>实现进度报告
 
-1. 在“属性”窗口中，选择 `backgroundWorker1`。 设置<xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A>并<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>属性设置为`true`。
+1. 在“属性”  窗口中，选择 `backgroundWorker1`。 设置<xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A>并<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>属性设置为`true`。
 
 2. 在 `FibonacciCalculator` 窗体中声明两个变量。 这将用于跟踪进度。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607888"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377977"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
@@ -26,7 +26,7 @@ ms.locfileid: "64607888"
 > [!NOTE]
 >  由于 Itanium 处理器系列的 x86 仿真和 WOW64 子系统设计，仅限在一个处理器上执行应用程序。 这些因素会降低在基于 Itanium 的系统上运行的 32 位 .NET Framework 应用程序的性能和可伸缩性。 我们建议您使用 [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)]，它包括对基于 Itanium 系统的本机 64 位支持，以提升性能和可伸缩性。  
   
- 默认情况下，在 64 位 Windows 操作系统上运行 64 位托管应用程序时，您可以创建一个不超过 2 GB 的对象。 然而，在 [!INCLUDE[net_v45](../../includes/net-v45-md.md)] 中，您可以增加该限制。  有关详细信息，请参阅 [\<gcAllowVeryLargeObjects> 元素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)。  
+ 默认情况下，在 64 位 Windows 操作系统上运行 64 位托管应用程序时，您可以创建一个不超过 2 GB 的对象。 然而，在 .NET Framework 4.5 中，你可以增加该限制。  有关详细信息，请参阅 [\<gcAllowVeryLargeObjects> 元素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)。  
   
  很多程序集可在 32 位 CLR 和 64 位 CLR 上同样运行。 然而，因为包含下列一个或多个原因，对于不同的 CLR，有些程序可能会有不同表现：  
   

@@ -2,12 +2,12 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879922"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489832"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 此外应遵循有关创建安全的.NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -92,7 +92,7 @@ ms.locfileid: "65879922"
  查询概念模型时需要考虑下列安全注意事项。 这些注意事项适用于使用 EntityClient 的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询以及使用 LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)] 和查询生成器方法的对象查询。  
   
 #### <a name="prevent-sql-injection-attacks"></a>防范 SQL 注入式攻击。  
- 应用程序经常接受外部输入（来自用户或其他外部代理），并根据该输入执行操作。 任何直接或间接从用户或外部代理派生的输入都可能包含使用目标语言的语法来执行未授权操作的内容。 如果目标语言为结构化查询语言 (SQL)（如 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]），则此行为被称为 SQL 注入式攻击。 恶意用户可直接向查询中注入命令并删除数据库表、引起拒绝服务或者更改所执行操作的性质。  
+ 应用程序经常接受外部输入（来自用户或其他外部代理），并根据该输入执行操作。 任何直接或间接从用户或外部代理派生的输入都可能包含使用目标语言的语法来执行未授权操作的内容。 如果目标语言为结构化查询语言 (SQL)，如 TRANSACT-SQL，此操作称为 SQL 注入攻击。 恶意用户可直接向查询中注入命令并删除数据库表、引起拒绝服务或者更改所执行操作的性质。  
   
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)] 注入式攻击：  
   

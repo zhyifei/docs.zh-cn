@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064043"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422924"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 
@@ -26,7 +26,7 @@ ms.locfileid: "65064043"
   
  [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
-操作数可以是由任何长度的代码组成的有效表达式，且可包含任意数量的子表达式。 在包含多个运算符的表达式中，运算符的应用顺序由运算符优先级 、关联性 和括号确定。  
+操作数可以是由任何长度的代码组成的有效表达式，且可包含任意数量的子表达式。 在包含多个运算符的表达式中，运算符的应用顺序由运算符优先级  、关联性  和括号确定。  
 
 ## <a name="operator-precedence"></a>运算符优先级
   
@@ -80,11 +80,10 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>运算符重载
 
-可以为自定义类和结构定义特定运算符的行为。 此过程称为“运算符重载” 。 有关详细信息，请参阅[可重载运算符](overloadable-operators.md)和[运算符](../../language-reference/keywords/operator.md)关键字文章。
+可以为自定义类和结构定义特定运算符的行为。 此过程称为“运算符重载”  。 有关详细信息，请参阅[可重载运算符](overloadable-operators.md)和[运算符](../../language-reference/keywords/operator.md)关键字文章。
   
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../index.md)
 - [语句、表达式和运算符](index.md)
 - [C# 运算符](../../language-reference/operators/index.md)
-- [运算符关键字](../../language-reference/keywords/operator-keywords.md)

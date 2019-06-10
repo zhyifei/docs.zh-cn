@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05b2530bde2f4532e94610a683e7bbc2f59540aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184ae0aee6947aa686e80541ab3ba36e0f4e1647
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044039"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424003"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 方法
 创建继承自一个接口，方法的实现的定义，并将令牌返回到该方法实现定义。  
@@ -42,10 +42,10 @@ HRESULT DefineMethodImpl (
  [in]`mdTypedef`令牌的实现类。  
   
  `tkBody`  
- [in]`mdMethodDef`或`mdMethodRef`令牌的代码体。  
+ [in]`mdMethodDef`或`mdMemberRef`令牌的代码体。  
   
  `tkDecl`  
- [in]`mdMethodDef`或`mdMethodRef`正在实现的接口方法的令牌。  
+ [in]`mdMethodDef`或`mdMemberRef`正在实现的接口方法的令牌。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,7 +54,7 @@ HRESULT DefineMethodImpl (
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

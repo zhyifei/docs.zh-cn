@@ -2,12 +2,12 @@
 title: 在 SQL Server 中启用跨数据库访问
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: ef018566c5d3881d2f9b77dad932712d1fb11841
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583690"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490079"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>在 SQL Server 中启用跨数据库访问
 当某个数据库中的某一过程依赖另一个数据库中的对象时，会发生跨数据库所有权链接。 跨数据库所有权链与单个数据库中的所有权链接的工作方式相同，不同之处在于完整的所有权链要求将所有对象拥有者映射为同一登录帐户。 如果同一登录帐户拥有源数据库中的源对象和目标数据库中的目标对象，则 SQL Server 不会检查对目标对象的权限。  
@@ -20,7 +20,7 @@ ms.locfileid: "64583690"
 - 具有 CREATE DATABASE 权限的用户可创建新数据库以及附加现有数据库。 如果启用了跨数据库所有权链接，则这些用户可以从新创建的或他们创建的附加数据库中访问他们在其中没有权限的其他数据库中的对象。  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>启用跨数据库所有权链接  
- 只能在完全信任高级权限用户的环境中启用跨数据库所有权链接。 可以在设置过程中针对所有数据库来配置所有权链接，或者使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 命令 `sp_configure` 和 `ALTER DATABASE`，有选择地针对特定数据库配置所有权链接。  
+ 只能在完全信任高级权限用户的环境中启用跨数据库所有权链接。 可在设置所有数据库，或使用 Transact-SQL 命令 `sp_configure` 和 `ALTER DATABASE` 选择性地设置特定数据库期间，配置跨数据库所有权链接。  
   
  若要有选择地配置跨数据库所有权链接，请使用 `sp_configure` 将服务器的所有权链接关闭。 然后，使用包含 SET DB_CHAINING ON 的 ALTER DATABASE 命令仅为需要跨数据库所有权链接的数据库配置跨数据库所有权链接。  
   

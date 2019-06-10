@@ -9,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 5bd43bb60736bbcaf8034cc2b369c34f977319ac
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b456ed3ce9965ef389d8ce40167afa4ac33da18
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633910"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422520"
 ---
 # <a name="-operator-c-reference"></a>:: 运算符（C# 参考）
 
@@ -22,7 +22,7 @@ ms.locfileid: "65633910"
 
 [!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
 
-`::` 运算符也可以用于 using alias 指令：
+`::` 运算符也可以用于 using alias 指令  ：
 
 ```csharp
 // using Col=System.Collections.Generic;
@@ -48,6 +48,5 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
-- [命名空间关键字](../keywords/namespace-keywords.md)
 - [. 运算符](member-access-operators.md#member-access-operator-)
 - [外部别名](../keywords/extern-alias.md)

@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ddef35b1b707cc5c962402e880923dca7d4d9d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d2b82bc056acd2e620461081b5f8c9d45fc152c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789644"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490642"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 函数
-强制公共语言运行时 (CLR) 以释放它在运行时可调用包装 (RCW) 内所持有的所有接口指针。 释放所有 RCW 缓存效果。 中已弃用此全局函数[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 相反，对于特定的运行时使用的入口点。  
+强制公共语言运行时 (CLR) 以释放它在运行时可调用包装 (RCW) 内所持有的所有接口指针。 释放所有 RCW 缓存效果。 .NET Framework 4 中已弃用此全局函数。 相反，对于特定的运行时使用的入口点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ void CoEEShutDownCOM ();
 > [!CAUTION]
 >  此函数会影响加载到进程的所有运行时。  
   
- 从[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]，调用此函数在你想要影响的特定运行时的入口点。 若要获取的入口点，请调用[iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法并指定"CoEEShutDownCOM"。  
+ 从.NET Framework 4 开始，此函数在你想要影响的特定运行时调用的入口点。 若要获取的入口点，请调用[iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法并指定"CoEEShutDownCOM"。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -51,7 +51,7 @@ void CoEEShutDownCOM ();
   
  **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

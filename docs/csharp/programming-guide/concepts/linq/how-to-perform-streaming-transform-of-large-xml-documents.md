@@ -2,12 +2,12 @@
 title: 如何：执行大型 XML 文档的流式转换 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 8ddd7e25cf160526b741db5769a78682970c3724
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 033665d14938bc3970b83eddccc159f89e6451d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524671"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486640"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>如何：执行大型 XML 文档的流式转换 (C#)
 有时，你必须转换任意大的 XML 文件并在编写你的应用程序时可以预测应用程序的内存需求量。 如果您试图用大 XML 文件填充 XML 树，则内存占用量将与文件大小成正比，也就是说会占用过多内存。 因此，您应改用流处理技术。  
@@ -322,6 +322,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅
-
-- [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
