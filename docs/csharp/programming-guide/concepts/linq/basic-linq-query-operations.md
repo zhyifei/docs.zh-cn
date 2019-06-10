@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4200b3bfc14918b46c16b8f6a1007624c6c23f70
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968187"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486291"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查询操作 (C#)
 本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  
@@ -37,7 +37,7 @@ ms.locfileid: "56968187"
 >  如果你已熟悉查询语言（如 SQL 或 XQuery），则可以跳过本主题的大部分内容。 请参阅下一节中的“`from` 子句”部分，了解 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中的子句顺序。  
   
 ## <a name="obtaining-a-data-source"></a>获取数据源  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，第一步是指定数据源。 和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 (`cust`)。  
+ 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，第一步是指定数据源。 和大多数编程语言相同，在使用 C# 时也必须先声明变量，然后才能使用它。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，先使用 `from` 子句引入数据源 (`customers`) 和范围变量 (`cust`)  。  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
@@ -97,11 +97,10 @@ from order in Customer.Orders...
  有关详细信息，请参阅 [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)。  
   
 ## <a name="selecting-projections"></a>选择（投影）  
- `select` 子句生成查询结果并指定每个返回的元素的“形状”或类型。 例如，可以指定结果包含的是整个 `Customer` 对象、仅一个成员、成员的子集，还是某个基于计算或新对象创建的完全不同的结果类型。 当 `select` 子句生成除源元素副本以外的内容时，该操作称为投影。 使用投影转换数据是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的一种强大功能。 有关详细信息，请参阅[使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) 和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)进行数据转换。  
+ `select` 子句生成查询结果并指定每个返回的元素的“形状”或类型。 例如，可以指定结果包含的是整个 `Customer` 对象、仅一个成员、成员的子集，还是某个基于计算或新对象创建的完全不同的结果类型。 当 `select` 子句生成除源元素副本以外的内容时，该操作称为投影  。 使用投影转换数据是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式的一种强大功能。 有关详细信息，请参阅[使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) 和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)进行数据转换。  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [查询关键字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

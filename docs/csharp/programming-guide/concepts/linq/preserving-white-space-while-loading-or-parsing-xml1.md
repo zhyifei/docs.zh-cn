@@ -2,12 +2,12 @@
 title: 在加载或分析 XML1 时保留空白
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 68b52f1d69c57b4292f02fea932e392de4a3ffc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 802cd9089d0ab52e9c05546ddad04af8100e82a0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596803"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484094"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>在加载或分析 XML 时保留空白
 本主题介绍了如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白符行为。  
@@ -37,6 +37,3 @@ ms.locfileid: "64596803"
   
  您可以使用 <xref:System.Xml.XmlWriter> 创建一个 XML 树。 写入到 <xref:System.Xml.XmlWriter> 的节点会在树中进行填充。 但在使用此方法生成 XML 树时，不管节点是否为空白或是否为无意义的空白，都将保留所有节点。  
   
-## <a name="see-also"></a>请参阅
-
-- [分析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

@@ -2,12 +2,12 @@
 title: 订阅事件
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解发布和订阅集成事件的详细信息。
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639707"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722669"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -141,7 +141,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 ![在发布事件时处理原子性的一种方法是：使用一个事务将事件提交到事件日志表，然后使用另一个事务进行发布（在 eShopOnContainers 中使用）](./media/image23.png)
 
-图 6-22。 将事件发布到事件总线时的原子性
+图 6-22  。 将事件发布到事件总线时的原子性
 
 图 6-22 所示的方法缺少一个附加的辅助微服务，它负责检查和确认已发布的集成事件成功与否。 如果失败，该附加检查器辅助微服务可以从表中读取事件并重新发布它们，即重复步骤 2。
 
@@ -149,7 +149,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 ![处理原子性的另一种方法：发布到事件日志表，然后由另一个微服务（后台辅助角色）发布该事件。](./media/image24.png)
 
-图 6-23。 使用辅助微服务将事件发布到事件总线时的原子性
+图 6-23  。 使用辅助微服务将事件发布到事件总线时的原子性
 
 为简单起见，eShopOnContainers 示例使用第一种方法（没有附加进程或检查器微服务）和事件总线。 但是，eShopOnContainers 并未处理所有可能的故障情况。 在部署到云端的实际应用程序中，你必须接受最终会出现问题的事实，并且必须实施该检查并实现重新发送逻辑。 如果在通过事件总线发布事件（使用辅助角色）时，该表是单一的事件源，那么，将该表用作队列可能比第一种方法更有效。
 
@@ -281,7 +281,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ![显示用户购物车中的进程更改通知的浏览器视图。](./media/image25.png)
 
-图 6-24。 根据集成事件传达的信息显示购物车中商品的价格变化
+图 6-24  。 根据集成事件传达的信息显示购物车中商品的价格变化
 
 ## <a name="idempotency-in-update-message-events"></a>更新消息事件中的幂等性
 
@@ -322,7 +322,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
-- **Forked eShopOnContainers using NServiceBus (Particular Software)** \（使用 NServiceBus 的分支 eShopOnContainers（特定软件））
+- **Forked eShopOnContainers using NServiceBus (Particular Software)**  \（使用 NServiceBus 的分支 eShopOnContainers（特定软件））
     <https://go.particular.net/eShopOnContainers>
 
 - **Event Driven Messaging** \（事件驱动的消息传递）
@@ -361,13 +361,13 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **CAP 定理** \
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
-- **What is CAP Theorem?**（什么是 CAP 定理？） \
+- **What is CAP Theorem?** （什么是 CAP 定理？） \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **Data Consistency Primer** \（数据一致性入门指南）
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling。CAP 定理：为什么云和 Internet“一切都不同”** \
+- **Rick Saling。CAP 定理：为什么云和 Internet“一切都不同”**  \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer。CAP 十二年之后：“规则”更改的方式** \
@@ -378,12 +378,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 - **可靠性指南**（RabbitMQ 文档）\
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure 服务总线。中转消息传送：重复检测** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **可靠性指南**（RabbitMQ 文档）\
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [上一页](rabbitmq-event-bus-development-test-environment.md)

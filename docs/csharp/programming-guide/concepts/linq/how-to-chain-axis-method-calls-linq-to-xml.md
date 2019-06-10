@@ -2,12 +2,12 @@
 title: 如何：链接轴方法调用 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: ff3a7548e2ec54e8959f9f9b5ed52c0fc6acb1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39113c1b96ea7376d61c606aaa5f79715dbe3cab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652197"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485919"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何：链接轴方法调用 (LINQ to XML) (C#)
 一个在代码中常用的模式是调用轴方法，然后调用一个扩展方法轴。  
@@ -17,7 +17,7 @@ ms.locfileid: "54652197"
 ## <a name="example"></a>示例  
  本示例使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 在所有 `Name` 元素中查找所有 `Address` 元素中的所有 `PurchaseOrder` 元素。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XElement purchaseOrders = XElement.Load("PurchaseOrders.xml");  
@@ -88,9 +88,9 @@ foreach (XElement cp in configParameters)
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示针对命名空间中的 XML 的相同技术。 有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下面的示例演示针对命名空间中的 XML 的相同技术。 有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的多个采购订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)。  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  

@@ -2,12 +2,12 @@
 title: 微服务可寻址性和服务注册表
 description: 了解容器映像注册表在微服务体系结构中的角色。
 ms.date: 09/20/2018
-ms.openlocfilehash: 756be4d7102d2d8ef36ffbf172b70b08872c028c
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: d72ba399f3da730f0e57c44c5ec01c1cc9f5fc05
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196005"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690460"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服务可寻址性和服务注册表
 
@@ -15,13 +15,11 @@ ms.locfileid: "66196005"
 
 [服务注册表模式](https://microservices.io/patterns/service-registry.html)是发现服务的一个关键部分。 注册表是包含服务实例的网络位置的数据库。 服务注册表需保持高度可用且是最新状态。 客户端可缓存从服务注册表获得的网络位置。 但是，该信息最终也会过时，客户端便无法再发现服务实例。 因此，服务注册表包含了一个服务器群集，使用复制协议来维护一致性。
 
-在某些微服务部署环境中（称为集群，将在后面章节中介绍），服务发现是内置的。 例如，Azure Kubernetes 服务 (AKS) 环境可以处理服务实例注册和注销。 它还可在每个群集主机（充当服务器端发现路由器角色）上运行一个代理。 另一个示例是 Azure Service Fabric，它可通过其开箱即用的命名服务提供服务注册表。
-
-请注意，服务注册表和 API 网关模式之间存在一定的重叠，这也有助于解决此问题。 例如，[Service Fabric 反向代理](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)是 API 网关的实现类型，该网关基于 Service Fabric 命名服务并且有助于解析内部服务的地址解析。
+在某些微服务部署环境中（称为集群，将在后面章节中介绍），服务发现是内置的。 例如，具有 Kubernetes (AKS) 环境的 Azure 容器服务可以处理服务实例注册和注销。 它还可在每个群集主机（充当服务器端发现路由器角色）上运行一个代理。
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Chris Richardson.模式：Service Registry（服务注册表）** \
+- **Chris Richardson.模式：Service Registry（服务注册表）**  \
   <https://microservices.io/patterns/service-registry.html>
 
 - **Auth0.The Service Registry**（服务注册表） \

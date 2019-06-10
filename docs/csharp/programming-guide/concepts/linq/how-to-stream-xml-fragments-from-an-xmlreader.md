@@ -2,12 +2,12 @@
 title: 如何：从 XmlReader 流式处理 XML 片段 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 0c34b9aeb5cda61c13045487dee6ab15e55314e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6937a7160c83def3238c8d2fe3e2b83c996396fd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693984"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484910"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>如何：从 XmlReader 流式处理 XML 片段 (C#)
 如果必须处理很大的 XML 文件，将整个 XML 树加载到内存可能不可行。 本主题演示如何使用 <xref:System.Xml.XmlReader> 对片段进行流式处理。  
@@ -82,6 +82,3 @@ ccc
   
  在本示例中，源文档非常小。 但是即使有数百万个 `Child` 元素，本示例也仍具有很小的内存需求量。  
   
-## <a name="see-also"></a>请参阅
-
-- [分析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

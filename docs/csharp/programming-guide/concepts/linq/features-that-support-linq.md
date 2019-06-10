@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: d0b35bec3bbc30f411a705220c468fa8961b83cb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186021"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722534"
 ---
 # <a name="c-features-that-support-linq"></a>支持 LINQ 的 C# 功能
 
@@ -49,7 +49,7 @@ var query = from str in stringArray
 通过对象和集合初始值设定项，初始化对象时无需为对象显式调用构造函数。 初始值设定项通常用在将源数据投影到新数据类型的查询表达式中。 假定一个类名为 `Customer`，具有公共 `Name` 和 `Phone` 属性，可以按下列代码中所示使用对象初始值设定项：
 
 ```csharp
-Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
+var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
 继续我们的 `Customer` 类，假设有一个名为 `IncomingOrders` 的数据源，并且每个订单具有一个较大的 `OrderSize`，我们希望基于该订单创建新的 `Customer`。 可以在此数据源上执行 LINQ 查询，并使用对象初始化来填充集合：

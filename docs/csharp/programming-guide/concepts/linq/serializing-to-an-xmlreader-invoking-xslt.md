@@ -2,12 +2,12 @@
 title: 序列化为 XmlReader（调用 XSLT）(C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: 7faf86badad116d9e6ea920d9d745261c078c43c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596951"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487188"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>序列化为 XmlReader（调用 XSLT）(C#)
 在使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的 <xref:System.Xml?displayProperty=nameWithType> 互操作性功能时，可以使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 来创建 <xref:System.Xml.XmlReader>。 从该 <xref:System.Xml.XmlReader> 进行读取的模块从 XML 树读取节点，并对它们进行相应的处理。  
@@ -61,4 +61,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>请参阅
 
-- [序列化 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [序列化 XML 树 (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

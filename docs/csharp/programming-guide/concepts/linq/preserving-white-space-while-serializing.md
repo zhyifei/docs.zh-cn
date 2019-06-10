@@ -2,12 +2,12 @@
 title: 在序列化3时保留空格
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 2f1e59728dc353a86421c9071710aba23c8f7f6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d357d40c13a66a152b3c8bb5f61e3a3374c4055
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608729"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484072"
 ---
 # <a name="preserving-white-space-while-serializing"></a>在序列化时保留空白
 本主题描述在序列化 XML 树时如何控制空白。  
@@ -30,7 +30,3 @@ ms.locfileid: "64608729"
  如果方法不接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么该方法将格式化（缩进）序列化的 XML。 在这种情况下，将丢弃 XML 树中所有无意义的空白。  
   
  如果方法接受 <xref:System.Xml.Linq.SaveOptions> 作为参数，那么您可以指定不格式化（缩进）序列化的 XML。 在这种情况下，将保留 XML 树中的所有空白。  
-  
-## <a name="see-also"></a>请参阅
-
-- [序列化 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

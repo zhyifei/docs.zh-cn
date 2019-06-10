@@ -2,12 +2,12 @@
 title: XAttribute 类概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: dba8b29c98499bc056d546a282ff2ee1bb88bfbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0440e8271edcf54d00a56e2987235afd260f9156
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494010"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483193"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 类概述 (C#)
 属性是与元素关联的名称/值对。 <xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。  
@@ -81,4 +81,4 @@ Console.WriteLine(c);
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to XML 编程概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 编程概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

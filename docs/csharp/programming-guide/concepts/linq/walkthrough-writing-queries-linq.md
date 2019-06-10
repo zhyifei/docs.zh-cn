@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595789"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483220"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>演练：用 C# 编写查询 (LINQ)
 此演练演示用于编写 LINQ 查询表达式的 C# 语言功能。  
@@ -26,15 +26,15 @@ ms.locfileid: "64595789"
   
 1. 启动 Visual Studio。  
   
-2. 在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
+2. 在菜单栏上，依次选择“文件”  、“新建”  、“项目”  。  
   
      **“新建项目”** 对话框随即打开。  
   
-3. 依次展开“已安装”、“模板”、“Visual C#”，然后选择“控制台应用程序”。  
+3. 依次展开“已安装”  、“模板”  、“Visual C#”  ，然后选择“控制台应用程序”  。  
   
-4. 在“名称”文本框中，输入不同的名称或接受默认名称，然后选择“确定”按钮。  
+4. 在“名称”  文本框中，输入不同的名称或接受默认名称，然后选择“确定”  按钮。  
   
-     新项目将出现在“解决方案资源管理器”中。  
+     新项目将出现在“解决方案资源管理器”  中。  
   
 5. 注意，此项目包含对 System.Core.dll 的引用和用于 <xref:System.Linq?displayProperty=nameWithType> 命名空间的 `using` 指令。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "64595789"
   
     - 此变量的类型是 `Student`，并且可与查询变量 `IEnumerable<Student>` 的类型兼容。  
   
-2. 添加此代码后，生成并运行应用程序，以在“控制台”窗口中查看结果。  
+2. 添加此代码后，生成并运行应用程序，以在“控制台”  窗口中查看结果。  
   
  [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
@@ -127,7 +127,7 @@ ms.locfileid: "64595789"
   
      [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
-3. 在“控制台”窗口中运行应用程序并查看结果。  
+3. 在“控制台”  窗口中运行应用程序并查看结果。  
   
      有关详细信息，请参阅 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
   
@@ -178,12 +178,11 @@ ms.locfileid: "64595789"
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
   
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>请参阅
 
 - [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)

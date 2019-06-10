@@ -2,12 +2,12 @@
 title: 如何：查找具有特定子元素的元素 (C#)
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 6888de3bc255691fbbb05f2a1debae05492661c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71068774b93581fdd82a0fe57651bc7780ca1ef1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547275"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485570"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何：查找具有特定子元素的元素 (C#)
 本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。  
@@ -15,7 +15,7 @@ ms.locfileid: "54547275"
 ## <a name="example"></a>示例  
  示例查找 `Test` 元素，该元素包含具有值为“Examp2.EXE”的 `CommandLine` 子元素。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
   
 ```csharp  
 XElement root = XElement.Load("TestConfig.xml");  
@@ -35,9 +35,9 @@ foreach (XElement el in tests)
 ```  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+ 下面的示例演示如何对命名空间中的 XML 进行同样的查询。 有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)。  
   
 ```csharp  
 XElement root = XElement.Load("TestConfigInNamespace.xml");  
@@ -61,6 +61,5 @@ foreach (XElement el in tests)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 - [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [投影运算 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

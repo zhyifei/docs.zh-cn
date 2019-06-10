@@ -2,12 +2,12 @@
 title: 重构为纯函数 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596885"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483986"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重构为纯函数 (C#)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64596885"
   
  转换为函数编程的一种方式是重构现有代码以消除不必要的副作用和外部依赖项。 这样，您可以创建现有代码的纯函数版本。  
   
- 本主题讨论什么是纯函数，什么不是纯函数。 [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教程演示如何操作 WordprocessingML 文档并包括两个有关如何使用纯函数进行重构的示例。  
+ 本主题讨论什么是纯函数，什么不是纯函数。 [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 教程演示如何操作 WordprocessingML 文档并包括两个有关如何使用纯函数进行重构的示例。  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>消除副作用和外部依赖项  
  下面的示例对比两个非纯函数和一个纯函数。  

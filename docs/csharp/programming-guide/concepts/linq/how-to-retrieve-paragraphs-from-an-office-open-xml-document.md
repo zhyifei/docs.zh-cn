@@ -2,12 +2,12 @@
 title: 如何：从 Office Open XML 文档检索段落 (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 192f04e9862b9cb901494f0a09744d3f9f289399
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b0919b7c5c40444587a18c0087109af8172ebb1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688267"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486457"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何：从 Office Open XML 文档检索段落 (C#)
 本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。  
@@ -19,7 +19,7 @@ ms.locfileid: "54688267"
   
  此示例使用一个名为 `StringConcatenate` 的扩展方法，示例中也提供了该方法。  
   
- 有关对此示例的工作原理进行说明的详细教程，请参阅 [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
+ 有关对此示例的工作原理进行说明的详细教程，请参阅 [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -182,7 +182,3 @@ StyleName:Normal >This example produces the following output:<
 StyleName:Normal ><  
 StyleName:Code >Hello World<  
 ```  
-  
-## <a name="see-also"></a>请参阅
-
-- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: b4d3f3c0c6195fef22a33c47ad0b8c498f512f6a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b2aeceae8371f0728da2bcebbbe597ee135f256
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753484"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758262"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -34,7 +34,7 @@ ms.locfileid: "64753484"
 
 如果[内置值类型](../keywords/value-types-table.md)的值相等，则其操作数相等：
 
-[!code-csharp-interactive[value types equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#ValueTypesEquality)]
+[!code-csharp-interactive[value types equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
 > 对于 `==`、[`<`、`>`、`<=` 和 `>=`](comparison-operators.md) 运算符，如果任何操作数不是数字（<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>），则运算的结果为 `false`。 这意味着 `NaN` 值不大于、小于或等于任何其他 `double`（或 `float`）值，包括 `NaN`。 有关更多信息和示例，请参阅 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 参考文章。
@@ -49,7 +49,7 @@ ms.locfileid: "64753484"
 
 如果两个字符串均为 `null` 或者两个字符串实例具有相等长度且在每个字符位置有相同字符，则这两个[字符串](../keywords/string.md)操作数相等：
 
-[!code-csharp-interactive[string equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#StringEquality)]
+[!code-csharp-interactive[string equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
 
 这就是区分大小写的序号比较。 有关字符串比较的详细信息，请参阅[如何在 C# 中比较字符串](../../how-to/compare-strings.md)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "64753484"
 
 当两个非 `string` 引用类型引用同一对象时，其操作数相等：
 
-[!code-csharp-interactive[reference type equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#ReferenceTypesEquality)]
+[!code-csharp-interactive[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
 如示例所示，默认情况下，用户定义的引用类型支持 `==` 运算符。 但是，用户定义的引用类型可以重载 `==` 运算符。 如果引用类型重载 `==` 运算符，使用 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法来检查该类型的两个引用是否引用同一对象。
 
@@ -67,7 +67,7 @@ ms.locfileid: "64753484"
 
 下面的示例演示 `!=` 运算符的用法：
 
-[!code-csharp-interactive[non-equality examples](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#NonEquality)]
+[!code-csharp-interactive[non-equality examples](~/samples/csharp/language-reference/operators/EqualityOperators.cs#NonEquality)]
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 

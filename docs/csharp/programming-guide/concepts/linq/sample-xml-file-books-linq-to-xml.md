@@ -2,12 +2,12 @@
 title: 示例 XML 文件：图书 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
-ms.openlocfilehash: 9072c7e741525156719a5b6d65a8c3a6991c67ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2e3971119812862fc9c059ea947dc46cf7fe1ad
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692436"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483812"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>示例 XML 文件：图书 (LINQ to XML)
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 该文件包含有关图书的信息。  
@@ -38,7 +38,3 @@ ms.locfileid: "54692436"
    </Book>  
 </Catalog>  
 ```  
-  
-## <a name="see-also"></a>请参阅
-
-- [示例 XML 文档 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

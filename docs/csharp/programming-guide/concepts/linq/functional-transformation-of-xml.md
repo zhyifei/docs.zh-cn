@@ -2,12 +2,12 @@
 title: XML 的功能转换 (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1325644873db29b2c40901ded3eb254b3a31073
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596668"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485956"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML 的功能转换 (C#)
 本主题讨论用于修改 XML 文档的纯函数转换方法，并将该方法与过程方法进行比较。  
@@ -26,7 +26,7 @@ ms.locfileid: "64596668"
 ### <a name="xml-functional-transformational-technologies"></a>XML 函数转换技术  
  Microsoft 提供两种用于 XML 文档的功能转换技术：XSLT 和 LINQ to XML。 在 <xref:System.Xml.Xsl> 托管命名空间和 MSXML 的本机 COM 实现中都支持 XSLT。 尽管 XSLT 是操作 XML 文档的可靠技术，但它要求专门领域的专业知识，即 XSLT 语言和支持它的 API。  
   
- LINQ to XML 提供了必要的工具，使用这些工具可以在 C# 或 Visual Basic 代码中以富于表现力而又强有力的方式编写纯函数转换。 例如，LINQ to XML 文档中的很多示例都使用纯函数方法。 此外，在[教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教程中，我们在函数方法中使用 LINQ to XML 操作 Microsoft Word 文档中的信息。  
+ LINQ to XML 提供了必要的工具，使用这些工具可以在 C# 或 Visual Basic 代码中以富于表现力而又强有力的方式编写纯函数转换。 例如，LINQ to XML 文档中的很多示例都使用纯函数方法。 此外，在[教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 教程中，我们在函数方法中使用 LINQ to XML 操作 Microsoft Word 文档中的信息。  
   
  有关 LINQ to XML 与其他 Microsoft XML 技术的更全面比较，请参见 [LINQ to XML 和其他 XML 技术](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)。  
   
@@ -35,5 +35,5 @@ ms.locfileid: "64596668"
 ## <a name="see-also"></a>请参阅
 
 - [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [LINQ to XML 与其他 XML 技术](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

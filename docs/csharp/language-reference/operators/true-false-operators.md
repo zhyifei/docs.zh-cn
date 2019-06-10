@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 003ca79343de14aa3a3b1d95d84d0637c873652c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: b1acf9a16dd977ec49a7f1dc3bea4ee41792e9be
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66302058"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758138"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 和 false 运算符（C# 参考）
 
@@ -26,7 +26,7 @@ ms.locfileid: "66302058"
 
 下面的示例展示了定义 `true` 和 `false` 运算符的类型。 此外，它还重载了逻辑 AND 运算符 `&`，因此也可以对相应类型的操作数执行运算符 `&&` 运算。
 
-[!code-csharp-interactive[true and false operators example](~/samples/snippets/csharp/keywords/TrueFalseOperatorsExample.cs)]
+[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 请注意 `&&` 运算符的短路行为。 当 `GetFuelLaunchStatus` 方法返回 `LaunchStatus.Red` 时，不会计算 `&&` 运算符的第二个操作数。 这是因为 `LaunchStatus.Red` 一定为 false。 然后，逻辑 AND 运算符的结果不依赖第二个操作数的值。 示例输出如下所示：
 

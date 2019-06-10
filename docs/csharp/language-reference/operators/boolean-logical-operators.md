@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 3ac3479de0bd3c95256741a8b3075f2e5786b65c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d94552d9a1acfdd63b9694810e724c4347e615e7
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300098"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758279"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布尔逻辑运算符（C# 参考）
 
@@ -53,7 +53,7 @@ ms.locfileid: "66300098"
 
 `!` 运算符计算操作数的逻辑非。 也就是说，如果操作数的计算结果为 `false`，它生成 `true`；如果操作数的计算结果为 `true`，它生成 `false`：
 
-[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Negation)]
+[!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
 ## <a name="logical-and-operator-amp"></a>逻辑与运算符 &amp;
 
@@ -63,7 +63,7 @@ ms.locfileid: "66300098"
 
 在下面的示例中，`&` 运算符的第二个操作数是方法调用，无论第一个操作数的值如何，都会执行方法调用：
 
-[!code-csharp-interactive[logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#And)]
+[!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
 [条件逻辑与运算符](#conditional-logical-and-operator-) `&&` 也计算操作数的逻辑与，但如果第一个操作数的计算结果为 `false`，它就不会计算第二个操作数。
 
@@ -73,7 +73,7 @@ ms.locfileid: "66300098"
 
 `^` 运算符计算操作数的逻辑异或（亦称为“逻辑 XOR”）。 如果 `x` 计算结果为 `true` 且 `y` 计算结果为 `false`，或者 `x` 计算结果为 `false` 且 `y` 计算结果为 `true`，那么 `x ^ y` 的结果为 `true`。 否则，结果为 `false`。 也就是说，对于 `bool` 操作数，`^` 运算符的计算结果与[不等运算符](equality-operators.md#inequality-operator-) `!=` 相同。
 
-[!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
+[!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
 对于整型类型的操作数，`^` 运算符计算其操作数的[位逻辑异或](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
 
@@ -85,7 +85,7 @@ ms.locfileid: "66300098"
 
 在下面的示例中，`|` 运算符的第二个操作数是方法调用，无论第一个操作数的值如何，都会执行方法调用：
 
-[!code-csharp-interactive[logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Or)]
+[!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
 [条件逻辑或运算符](#conditional-logical-or-operator-) `||` 也计算操作数的逻辑或，但如果第一个操作数的计算结果为 `true`，它就不会计算第二个操作数。
 
@@ -97,7 +97,7 @@ ms.locfileid: "66300098"
 
 在下面的示例中，`&&` 运算符的第二个操作数是方法调用，如果第一个操作数的计算结果为 `false`，就不执行方法调用：
 
-[!code-csharp-interactive[conditional logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalAnd)]
+[!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
 [逻辑与运算符](#logical-and-operator-) `&` 也计算操作数的逻辑与，但始终计算两个操作数。
 
@@ -107,7 +107,7 @@ ms.locfileid: "66300098"
 
 在下面的示例中，`||` 运算符的第二个操作数是方法调用，如果第一个操作数的计算结果为 `true`，就不执行方法调用：
 
-[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalOr)]
+[!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 
 [逻辑或运算符](#logical-or-operator-) `|` 也计算操作数的逻辑或，但始终计算两个操作数。
 
@@ -131,7 +131,7 @@ ms.locfileid: "66300098"
 
 还可以将 `!` 和 `^` 运算符与 `bool?` 操作数结合使用，如下面的示例所示：
 
-[!code-csharp-interactive[lifted negation and xor](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#WithNullableBoolean)]
+[!code-csharp-interactive[lifted negation and xor](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
 条件逻辑运算符 `&&` 和 `||` 不支持 `bool?` 操作数。
 
@@ -153,7 +153,7 @@ x = x op y
 
 `&`、`|` 和 `^` 运算符支持复合赋值，如下面的示例所示：
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#CompoundAssignment)]
 
 条件逻辑运算符 `&&` 和 `||` 不支持复合赋值。
 
@@ -170,7 +170,7 @@ x = x op y
 
 使用括号 `()` 可以更改运算符优先级决定的计算顺序：
 
-[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
 要了解按优先级排序的完整 C# 运算符列表，请参阅 [C# 运算符](index.md)。
 

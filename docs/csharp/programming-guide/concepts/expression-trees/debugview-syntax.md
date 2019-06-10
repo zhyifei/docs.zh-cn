@@ -8,25 +8,25 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: de82a738430cdd37c4905a5ae7da5faeb46f00a4
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: bc3fc579ed8031d818241f41ac728ef7e5be0b99
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196363"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690111"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 语法
 
 `DebugView` 属性（仅在调试时可用）提供表达式树的字符串呈现。 大部分语法都相当容易理解；特殊情况将在以下部分中介绍。
 
-每个示例都后跟块注释，其中包含 `DebugView`。 
+每个示例都后跟块注释，其中包含 `DebugView`。
 
-## <a name="parameterexpression"></a>ParameterExpression 
+## <a name="parameterexpression"></a>ParameterExpression
 
 <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> 变量名称的开头显示有 `$` 符号。
-  
+
 如果参数没有名称，则会为其分配一个自动生成的名称，例如 `$var1` 或 `$var2`。
-  
+
 ### <a name="examples"></a>示例
 
 ```csharp
@@ -41,31 +41,31 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 */
 ```
 
-## <a name="constantexpression"></a>ConstantExpression  
+## <a name="constantexpression"></a>ConstantExpression
 
-对于表示整数值、字符串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 对象，将显示常数的值。  
-  
-对于使用标准后缀作为 C# 原义字符的数值类型，将后缀添加到值。 下表显示与各种数值类型关联的后缀。  
+对于表示整数值、字符串和 `null` 的 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 对象，将显示常数的值。
 
-| 类型 | 关键字 | 后缀 |  
-|--|--|--|  
-| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |  
-| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |  
-| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |  
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |  
-| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |  
-| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |  
-  
-### <a name="examples"></a>示例  
+对于使用标准后缀作为 C# 原义字符的数值类型，将后缀添加到值。 下表显示与各种数值类型关联的后缀。
+
+| 类型 | 关键字 | 后缀 |
+|--|--|--|
+| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |
+| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |
+| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |
+| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |
+| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |
+| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |
+
+### <a name="examples"></a>示例
 
 ```csharp
-int num = 10; 
+int num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10
 */
 
-double num = 10; 
+double num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10D
@@ -73,10 +73,10 @@ ConstantExpression expr = Expression.Constant(num);
 ```
 
 ## <a name="blockexpression"></a>BlockExpression
- 
-如果 <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> 对象的类型与块中最后一个表达式的类型不同，则该类型将显示在尖括号（`<` 和 `>`）内。 否则，将不显示 <xref:System.Linq.Expressions.BlockExpression> 对象的类型。  
-  
-### <a name="examples"></a>示例  
+
+如果 <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> 对象的类型与块中最后一个表达式的类型不同，则该类型将显示在尖括号（`<` 和 `>`）内。 否则，将不显示 <xref:System.Linq.Expressions.BlockExpression> 对象的类型。
+
+### <a name="examples"></a>示例
 
 ```csharp
 BlockExpression block = Expression.Block(Expression.Constant("test"));
@@ -97,9 +97,9 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 ## <a name="lambdaexpression"></a>LambdaExpression
 
 显示 <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> 对象及其委托类型。
-  
+
 如果 lambda 表达式没有名称，则会为其分配一个自动生成的名称，例如 `#Lambda1` 或 `#Lambda2`。
-  
+
 ### <a name="examples"></a>示例
 
 ```csharp
@@ -117,15 +117,15 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
     }
 */
 ```
-  
+
 ## <a name="labelexpression"></a>LabelExpression
 
 如果指定 <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> 对象的默认值，则在 <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> 对象之前显示此值。
-  
+
 `.Label` 令牌指示标签的开头。 `.LabelTarget` 令牌指示要跳转到的目标的目的地。
-  
+
 如果标签没有名称，则会为其分配一个自动生成的名称，例如 `#Label1` 或 `#Label2`。
-  
+
 ### <a name="examples"></a>示例
 
 ```csharp
@@ -156,12 +156,12 @@ BlockExpression block = Expression.Block(
     }
 */
 ```
-  
-## <a name="checked-operators"></a>Checked 运算符  
 
-Checked 运算符在运算符前面显示 `#` 符号。 例如，checked 加号显示为 `#+`。  
-  
-### <a name="examples"></a>示例  
+## <a name="checked-operators"></a>Checked 运算符
+
+Checked 运算符在运算符前面显示 `#` 符号。 例如，checked 加号显示为 `#+`。
+
+### <a name="examples"></a>示例
 
 ```csharp
 Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));

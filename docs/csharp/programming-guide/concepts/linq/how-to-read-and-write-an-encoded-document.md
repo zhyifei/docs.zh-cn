@@ -2,12 +2,12 @@
 title: 如何：读取和写入编码的文档 (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6340443fddbedb4e27e1d1f8ab3e7c006a039f25
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615450"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485151"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>如何：读取和写入编码的文档 (C#)
 若要创建编码的 XML 文档，请向 XML 树中添加一个 <xref:System.Xml.Linq.XDeclaration>，将编码设置为需要的代码页名称。  
@@ -79,4 +79,3 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [高级 LINQ to XML 编程 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
