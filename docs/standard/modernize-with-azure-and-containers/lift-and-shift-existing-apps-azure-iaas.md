@@ -2,12 +2,12 @@
 title: 提升并转移到 Azure IaaS （云基础结构的） 现有.NET 应用程序
 description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器。
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643706"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758859"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>提升并转移到 Azure IaaS （云基础结构的） 现有.NET 应用程序
 
@@ -39,7 +39,7 @@ ms.locfileid: "65643706"
 
 如果你的目标是只需移动到云的现有应用程序，首先要确定不需要修改大量，若要在 Azure 应用服务中运行的现有应用程序。 这些应用程序应该是第一个适合云计算得到优化。 
 
-然后，应用，仍不能移动到 Windows 容器和 PaaS 如应用服务或 Azure Service Fabric 等业务流程协调程序迁移到简单的普通 Vm (IaaS)。 
+然后，应用，仍不能移动到 Windows 容器和 PaaS 如应用服务或 Azure Kubernetes 服务，如业务流程协调程序迁移到简单的普通 Vm (IaaS)。 
 
 但请记住，正确配置、 保护和维护 Vm 需要更多时间和 IT 专业知识相比于在 Azure 中使用 PaaS 服务。 如果你正在考虑 Azure 虚拟机，请确保所需修补、 更新和管理虚拟机环境的日常维护工作将其考虑到帐户。 Azure 虚拟机是 IaaS。
 

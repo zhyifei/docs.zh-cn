@@ -2,12 +2,12 @@
 title: 将现有 .NET 应用部署为 Windows 容器
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |将现有.NET 应用部署为 Windows 容器
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643744"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758843"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有 .NET 应用部署为 Windows 容器
 
@@ -153,7 +153,6 @@ Azure 支持的容器在同一时间多置于 PaaS （平台即服务） 级别�
 
 - **Azure 应用服务**
 - **Azure Kubernetes 服务 （AKS 和 ACS）**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 然后，Azure 容器注册表是可以从所有以前的产品注册和部署你的自定义容器映像时使用的 Azure 中托管的高可缩放的容器注册表。

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: ea8ab81b192e0e8cb40988cb67cce08a7d9dab82
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 37433768c1bca3c013fb1e505d55bd7295f34933
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722575"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758026"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>从 WPF 迁移到 System.Xaml 的类型
-.NET Framework 3.5 中并[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]，这两个[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 包含一个 XAML 语言实现。 为 WPF XAML 实现提供扩展性的很多公共类型都存在于 WindowsBase、PresentationCore 和 PresentationFramework 程序集中。 同样，为 Windows Workflow Foundation XAML 提供扩展性的公共类型存在于 System.Workflow.ComponentModel 程序集中。 在.NET Framework 4 中，一些与 XAML 相关的类型已迁移到 System.Xaml 程序集。 XAML 语言服务的常规.NET Framework 实现可实现许多 XAML 扩展性方案最初由特定框架的 XAML 实现，但现在是整个.NET Framework 4 XAML 语言支持的一部分。 本主题列出了迁移的类型并讨论了与迁移有关的问题。  
+在.NET Framework 3.5 和.NET Framework 3.0，同时[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 包含一个 XAML 语言实现。 为 WPF XAML 实现提供扩展性的很多公共类型都存在于 WindowsBase、PresentationCore 和 PresentationFramework 程序集中。 同样，为 Windows Workflow Foundation XAML 提供扩展性的公共类型存在于 System.Workflow.ComponentModel 程序集中。 在.NET Framework 4 中，一些与 XAML 相关的类型已迁移到 System.Xaml 程序集。 XAML 语言服务的常规.NET Framework 实现可实现许多 XAML 扩展性方案最初由特定框架的 XAML 实现，但现在是整个.NET Framework 4 XAML 语言支持的一部分。 本主题列出了迁移的类型并讨论了与迁移有关的问题。  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>程序集和命名空间  

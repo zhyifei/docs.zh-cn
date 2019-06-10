@@ -2,12 +2,12 @@
 title: 何时将 Windows 容器部署到 Azure 容器服务 (即 Kubernetes)
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |何时将 Windows 容器部署到 Azure 容器服务 (即 Kubernetes)
 ms.date: 04/30/2018
-ms.openlocfilehash: 921767b52f2b0d80f2d31d972b65ac7551d2f7c5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643563"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758565"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>何时将 Windows 容器部署到 Azure 容器服务 (即 Kubernetes)
 
@@ -22,5 +22,5 @@ Azure 容器服务优化了专门针对 Azure 的受欢迎的开源工具和技�
 重要说明：改进和"多个 PaaS"适用于 Kubernetes 的 ACS （Azure 容器服务） 的版本是 AKS （Azure Kubernetes 服务），但是，Windows 容器目前尚不支持从第 2 季度 2018 起，但将很快支持。
 
 >[!div class="step-by-step"]
->[上一页](when-to-deploy-windows-containers-to-service-fabric.md)
+>[上一页](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
 >[下一页](choosing-azure-compute-options-for-container-based-applications.md)

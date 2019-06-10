@@ -2,12 +2,12 @@
 title: 通过监视和遥测对应用进行现代化
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |通过监视和遥测对应用进行现代化
 ms.date: 04/30/2018
-ms.openlocfilehash: 94196365e6ed93839b28ed3b375e75a9119ae12d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643682"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758617"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>通过监视和遥测对应用进行现代化
 
@@ -38,8 +38,6 @@ Application Insights 是面向 web 开发人员可以在多个平台上的可扩
 - DC/OS
 
 - Kubernetes
-
-- Service Fabric
 
 - Red Hat OpenShift
 
@@ -88,10 +86,6 @@ Application Insights 是面向 web 开发人员可以在多个平台上的可扩
 - **什么是 Operations Management Suite (OMS)？**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
-
-- **监视 Service Fabric 和 OMS 中的 Windows Server 容器**
-
-<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[上一页](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
