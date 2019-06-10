@@ -205,15 +205,15 @@ Dim sales()() As Double = New Double(11)() {}
 
 有时应用程序中的数据结构是二维而不是矩形。 例如，可能会使用数组来存储有关每一天的月份的高温度数据。 数组的第一个维度表示月份，但第二个维度表示的天数，并在一个月的天数不均匀。 一个*交错的数组*，这也称为*数组的数组*，专为此类方案。 交错的数组是一个数组，其元素也是数组。 交错数组和交错数组中的每个元素都可以具有一个或多个维度。
 
-以下示例使用月份数组，其中每个元素是天数数组。 该示例使用交错的数组，因为不同月份有不同的天数。  示例演示如何创建交错的数组，将值分配给它，并检索和显示它的值。
+以下示例使用月份数组，其中每个元素是天数数组。 该示例使用交错数组，因为不同月份有不同的天数。  示例演示如何创建交错数组，将值分配给它，并检索和显示它的值。
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-前面的示例通过将值分配给交错数组元素的元素按`For...Next`循环。 通过使用嵌套的数组文本，还可以将值分配到交错数组的元素。 但是，尝试使用嵌套数组文本 (例如， `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) 会生成编译器错误[BC30568](../../../,,/../misc/bc30568.md)。 若要更正此错误，请用括号括起来将内部数组文本。 圆括号会强制进行计算的数组文本表达式和生成的值用于外部数组文本，如以下示例所示。
+前面的示例通过使用 `For...Next` 循环将值分配给交错数组（以逐个元素为基础）。 通过使用嵌套的数组文本，还可以将值分配给交错数组的元素。 但是，尝试使用嵌套数组文本 (例如，`Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) 会生成编译器错误 [BC30568](../../../,,/../misc/bc30568.md)。 若要更正此错误，请将内部数组文本用括号括起来。 圆括号会强制计算数组文本表达式，生成的值会用于外部数组文本，如以下示例所示。
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
-交错的数组是一维数组，其元素包含的数组。 因此，<xref:System.Array.Length%2A?displayProperty=nameWithType>属性和`Array.GetLength(0)`方法返回的元素数中的一维数组，并`Array.GetLength(1)`引发<xref:System.IndexOutOfRangeException>因为交错的数组不是多维。 检索的每个子数组的值来确定每个子数组中的元素数<xref:System.Array.Length%2A?displayProperty=nameWithType>属性。 下面的示例说明了如何确定交错数组中的元素数。
+交错数组是一维数组，其元素包含数组。 因此，<xref:System.Array.Length%2A?displayProperty=nameWithType> 属性和 `Array.GetLength(0)` 方法会返回这个一维数组的元素数，并且 `Array.GetLength(1)` 会引发 <xref:System.IndexOutOfRangeException>，因为交错数组不是多维数组。 通过检索每个子数组的 <xref:System.Array.Length%2A?displayProperty=nameWithType> 属性可确定每个子数组中的元素数。 下面的示例说明了如何确定交错数组中的元素数。
 
 [!code-vb[jagged-array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)]
 
@@ -225,7 +225,7 @@ Visual Basic 区分未初始化的数组 (其值是一个数组`Nothing`) 和一
 Dim arr() As String
 ```
 
-声明为-1 维的长度为零的数组。 例如：
+零长度数组的声明维度为 -1。 例如：
 
 ```vb
 Dim arrZ(-1) As String
@@ -233,26 +233,26 @@ Dim arrZ(-1) As String
 
 在下列情况下，你可能需要创建一个零长度数组：
 
-- 不会有风险的情况下<xref:System.NullReferenceException>异常，你的代码必须访问的成员<xref:System.Array>类，如<xref:System.Array.Length%2A>或<xref:System.Array.Rank%2A>，或调用 Visual Basic 函数，例如<xref:Microsoft.VisualBasic.Information.UBound%2A>。
+- 在不引发 <xref:System.NullReferenceException> 异常的前提下，你的代码必须访问 <xref:System.Array> 类的成员，如 <xref:System.Array.Length%2A> 或 <xref:System.Array.Rank%2A>，或调用 Visual Basic 函数，例如 <xref:Microsoft.VisualBasic.Information.UBound%2A>。
 
-- 你想要保留您的代码，而不必检查简单`Nothing`作为一种特殊情况。
+- 你想要保持代码简洁，而不必检查特殊情况 `Nothing`。
 
 - 你的代码与应用程序编程接口 (API) 交互，该接口要求你将一个零长度数组传递到一个或多个过程，或将一个零长度数组返回到一个或多个过程。
 
 ## <a name="splitting-an-array"></a>拆分数组
 
-在某些情况下，可能需要拆分为多个数组的单个数组。 这涉及到确定的点或点的数组将被拆分，并为两个或多个单独的数组，然后快速数组。
+在某些情况下，可能需要将单个数组拆分为多个数组。 这涉及到确定数组的一个或多个分割点，然后将数组分割为两个或更多的数组。
 
 > [!NOTE]
-> 本部分不讨论如何将单个字符串拆分为基于某些分隔符的字符串数组。 有关将字符串拆分的信息，请参阅<xref:System.String.Split%2A?displayProperty=nameWithType>方法。
+> 本部分不讨论如何将单个字符串基于某些分隔符拆分为字符串数组。 有关拆分字符串的信息，请参阅 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法。
 
 用于拆分数组的最常见条件是：
 
-- 数组中的元素数。 例如，您可能想要为多个相等部分大约拆分数超过了指定的元素的数组。 为此，可以使用通过以下任一方法返回的值<xref:System.Array.Length%2A?displayProperty=nameWithType>或<xref:System.Array.GetLength%2A?displayProperty=nameWithType>方法。
+- 数组中的元素数。 例如，你可能想要将一个元素数超过指定值的数组拆分为多个大小大致相等的数组。 为此，可以使用以下任一方法的返回值：<xref:System.Array.Length%2A?displayProperty=nameWithType> 或 <xref:System.Array.GetLength%2A?displayProperty=nameWithType> 方法。
 
-- 用作分隔符，该值指示应在何处拆分数组的元素的值。 您可以通过调用来搜索特定值<xref:System.Array.FindIndex%2A?displayProperty=nameWithType>和<xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType>方法。
+- 元素的值，该值充当分隔符，用于指示数组的分割点。 可以通过调用 <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> 和 <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> 方法来搜索特定值。
 
-一旦确定了应在其中拆分数组的索引，然后可以通过调用创建个人数组<xref:System.Array.Copy%2A?displayProperty=nameWithType>方法。
+一旦确定了拆分数组的一个或多个索引位置，之后即可通过调用 <xref:System.Array.Copy%2A?displayProperty=nameWithType> 方法来创建各个数组。
 
 下面的示例将数组拆分成两个数组大小大致相等。 （如果数组元素的总数为奇数，第一个数组具有多个元素的第二个。）
 
@@ -262,14 +262,14 @@ Dim arrZ(-1) As String
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
-## <a name="joining-arrays"></a>加入数组
+## <a name="joining-arrays"></a>合并数组
 
-此外可以组合多个数组合并为一个更大数组。 若要执行此操作，还使用<xref:System.Array.Copy%2A?displayProperty=nameWithType>方法。
+还可以将多个数组合并为一个较大的数组。 若要执行此操作，仍可使用 <xref:System.Array.Copy%2A?displayProperty=nameWithType> 方法。
 
 > [!NOTE]
-> 本部分不讨论联接成单个字符串的字符串数组。 有关联接的字符串数组的信息，请参阅<xref:System.String.Join%2A?displayProperty=nameWithType>方法。
+> 本部分不讨论将单个字符串联接到单个字符串的相关信息。 有关联接字符串数组的信息，请参阅 <xref:System.String.Join%2A?displayProperty=nameWithType> 方法。
 
-然后再将每个数组的元素复制到新数组，您首先必须确保，这样就足够大以容纳新的数组初始化数组。 可以通过两种方法执行此操作：
+在将每个数组的元素复制到新数组前，首先必须确保已初始化了该数组，确保它有足够的空间来容纳新数组。 可以通过两种方法执行此操作：
 
 - 使用[ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md)语句，以便动态地将新元素添加到它之前展开数组。 这是最简单的技术，但它可能会导致性能下降并占用过多内存时要复制大型数组。
 - 计算所需的新的大型数组的元素的总数，然后将每个源数组的元素添加到它。
