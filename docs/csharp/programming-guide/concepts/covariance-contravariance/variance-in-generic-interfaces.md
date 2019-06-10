@@ -1,13 +1,13 @@
 ---
 title: 泛型接口中的变体 (C#)
-ms.date: 04/10/2019
+ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480776"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815959"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型接口中的变体 (C#)
 
@@ -31,9 +31,9 @@ ms.locfileid: "59480776"
 
 自 .NET Framework 4.5 起，以下接口是变体：
 
-- <xref:System.Collections.Generic.IReadOnlyList%601>（T 是逆变）
+- <xref:System.Collections.Generic.IReadOnlyList%601>（T 是协变）
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601>（T 是逆变）
+- <xref:System.Collections.Generic.IReadOnlyCollection%601>（T 是协变）
 
 协变允许方法具有的返回类型比接口的泛型类型参数定义的返回类型的派生程度更大。 若要演示协变功能，请考虑以下泛型接口：`IEnumerable<Object>` 和 `IEnumerable<String>`。 `IEnumerable<String>` 接口不继承 `IEnumerable<Object>` 接口。 但是，`String` 类型会继承 `Object` 类型，在某些情况下，建议为这些接口互相指派彼此的对象。 下面的代码示例对此进行了演示。
 
