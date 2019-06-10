@@ -16,7 +16,7 @@ ms.locfileid: "66758846"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的数组
 
-数组是一组值，术语上称之为*元素*，逻辑上彼此相关的。 例如，数组可能包含的语法学校; 中的每个年级的学生数量数组的每个元素是单个年级的学生数量。 同样，数组可能包含的一个类; 的学生的成绩数组的每个元素是一个单一的等级。
+数组是一组逻辑相关的值，术语上称之为“元素”。 例如，数组可能包含一个语法学校中每个年级的学生数量；数组的每个元素则是单个年级的学生数量。 同样，数组可能包含的一个班的学生的成绩；数组的每个元素则是一个成绩。
 
 可以使用单独的变量来存储每个数据项。 例如，如果应用程序分析学生成绩，则可以使用单独的变量表示每个学生的成绩，如 `englishGrade1`、`englishGrade2` 等等。此方法具有三个主要的限制：
 
@@ -24,7 +24,7 @@ ms.locfileid: "66758846"
 - 处理大量的成绩可导致速度变慢。 反过来，这会使应用程序更有可能出现严重的 bug。
 - 很难维护。 我们添加的每个新成绩都要求应用程序进行修改、重新编译和重新部署。
 
-通过使用一个数组，可以通过相同的名称，请参阅这些相关的值并使用一个数字，称为*索引*或*下标*用于标识各个元素根据其数组中的位置。 数组范围从 0 到数组中元素的总数减 1 所得的索引。 当您使用 Visual Basic 语法来定义数组的大小时，指定其最高的索引，不在数组中元素的总数。 您可以使用数组作为一个单元，并循环访问其元素的功能使您无需了解它包含在设计时完全多少个元素。
+通过使用数组，可以使用相同的名称代指这些相关值，并使用一个称为“索引”或“下标”的数字来基于各个元素在数组中的位置对其进行标识。 数组索引的范围是从 0 到数组中的总元素数 - 1。当使用 Visual Basic 语法来定义数组的大小时，指定的是其最高的索引值，而不是数组中元素的总数。可以使用数组作为一个单元，利用循环迭代其元素的功能，你将无需在设计时了解数组确切包含多少个元素。
 
 在进行说明之前，请看几个简单的示例：
 
@@ -73,7 +73,7 @@ Dim sales()() As Double = New Double(11)() {}
 - 它将值分配给数组中的每个元素。 通过使用数组名称并在括号中包含单个元素的索引访问数组元素。
 - 列出了数组的每个值。 该示例使用 [ `For` ](../../../language-reference/statements/for-next-statement.md) 语句来按索引号访问数组的每个元素。
 
-`students`前面的示例中的数组是一维数组，因为它使用一个索引。 使用多个索引或下标的数组称为*多维*。 有关详细信息，请参阅本文的其余部分和[在 Visual Basic 中的数组维数](../../language-features/arrays/array-dimensions.md)。
+前面的示例中的数组 `students` 是一维数组，因为它使用一个索引。 使用多个索引或下标的数组称为“多维”。有关详细信息，请参阅本文的其余部分和 [Visual Basic 中的数组维度](../../language-features/arrays/array-dimensions.md)。
 
 ## <a name="creating-an-array"></a>创建数组
 
@@ -109,7 +109,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-使用类型推理时，该数组的类型由*基准类型*中的文本值列表。 基准类型是数组中的所有其他类型可以扩大到的类型。 如果无法确定此唯一类型，基准类型是数组中所有其他类型可以缩小到的唯一类型。 如果无法确定为这两种唯一类型之一，则基准类型是 `Object`。 例如，如果提供给数组文本的值的列表包含 `Integer`、 `Long`和 `Double`类型的值，则生成的数组类型是 `Double`。 因为`Integer`并`Long`仅扩大到`Double`，`Double`是基准类型。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md)。
+使用类型推理时，数组的类型由文本值列表中的“基准类型”决定。 基准类型是数组中的所有其他类型可以扩大到的类型。如果无法确定此唯一类型，基准类型将是数组中所有其他类型可以缩小到的唯一类型。 如果这两种唯一类型都无法确定，则基准类型是 `Object`。 例如，如果提供给数组文本的值列表包含 `Integer`、`Long` 和 `Double` 类型的值，则生成的数组类型是 `Double`。因为 `Integer` 和 `Long` 仅能扩大到 `Double`，因此 `Double`是基准类型。 有关详细信息，请参阅[扩大和缩小转换](../../language-features/data-types/widening-and-narrowing-conversions.md)。
 
 > [!NOTE]
 > 仅对定义为本地变量的类型成员的数组，可以使用类型推理。 如果缺少显式类型定义，则数组使用数组文本在类级别定义的类型是`Object[]`。 有关详细信息，请参阅[局部类型推理](../variables/local-type-inference.md)。
@@ -126,7 +126,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-有关其他示例，请参阅[如何：初始化数组变量在 Visual Basic 中的](../../language-features/arrays/how-to-initialize-an-array-variable.md)。
+有关其他示例，请参阅[如何：在 Visual Basic 中初始化数组变量](../../language-features/arrays/how-to-initialize-an-array-variable.md)。
 
 ## <a name="iterating-through-an-array"></a>循环访问数组
 
@@ -203,7 +203,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="jagged-arrays"></a>交错数组
 
-有时应用程序中的数据结构是二维而不是矩形。 例如，可能会使用数组来存储有关每一天的月份的高温度数据。 数组的第一个维度表示月份，但第二个维度表示的天数，并在一个月的天数不均匀。 一个*交错的数组*，这也称为*数组的数组*，专为此类方案。 交错的数组是一个数组，其元素也是数组。 交错数组和交错数组中的每个元素都可以具有一个或多个维度。
+有时应用程序中的数据结构是二维而不是矩形。例如，可能会使用数组来存储当月每天高温的相关数据。该数组的第一个维度表示月份，而第二个维度表示天数，并且一个月内的天数是不一致的。“交错数组”（也称为“数组的数组”）就是专为此类方案而设计的。交错数组的元素也是数组。交错数组及其中的每个元素都可以具有一个或多个维度。
 
 以下示例使用月份数组，其中每个元素是天数数组。 该示例使用交错数组，因为不同月份有不同的天数。  示例演示如何创建交错数组，将值分配给它，并检索和显示它的值。
 
@@ -219,7 +219,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="zero-length-arrays"></a>零长度数组
 
-Visual Basic 区分未初始化的数组 (其值是一个数组`Nothing`) 和一个*零长度数组*或空数组 （不包含任何元素的数组。）未初始化的数组是不确定维度或向其分配任何值。 例如：
+Visual Basic 区分未初始化的数组（其值是`Nothing`）和“零长度数组”或空数组（不包含任何元素）。未初始化的数组不会被确定维度或被赋值。例如：
 
 ```vb
 Dim arr() As String
@@ -254,11 +254,11 @@ Dim arrZ(-1) As String
 
 一旦确定了拆分数组的一个或多个索引位置，之后即可通过调用 <xref:System.Array.Copy%2A?displayProperty=nameWithType> 方法来创建各个数组。
 
-下面的示例将数组拆分成两个数组大小大致相等。 （如果数组元素的总数为奇数，第一个数组具有多个元素的第二个。）
+下面的示例将数组拆分成两个大小大致相等的数组。（如果数组元素的总数为奇数，则第一个数组比第二个数组多一个元素。）
 
 [!code-vb[splitting-an-array-by-length](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)]
 
-下面的示例将一个字符串数组拆分成两个数组根据其值为"zzz"，可作为数组分隔符的元素存在。 新数组不包括包含分隔符的元素。
+下面的示例根据值为“zzz”的元素（充当数组分隔符）的存在情况将一个字符串数组拆分成两个数组。新数组不包括包含分隔符的元素。
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
