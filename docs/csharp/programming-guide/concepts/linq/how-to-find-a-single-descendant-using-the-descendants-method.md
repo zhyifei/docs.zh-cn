@@ -2,18 +2,18 @@
 title: 如何：使用 Descendants 方法查找单个后代 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: a13a4aef6a3d22d2b7c3adb8e37996de08978b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1979814a2a1485938b584d7774b76a020c885f0c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690522"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486837"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="fb284-102">如何：使用 Descendants 方法查找单个后代 (C#)</span><span class="sxs-lookup"><span data-stu-id="fb284-102">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>
-<span data-ttu-id="fb284-103">可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法快速编写代码来查找名称唯一的单个元素。</span><span class="sxs-lookup"><span data-stu-id="fb284-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="fb284-104">如果想要查找具有特定名称的特定后代，则此技术特别有用。</span><span class="sxs-lookup"><span data-stu-id="fb284-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="fb284-105">虽然可以编写代码以导航到需要的元素，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴编写代码通常更快更容易。</span><span class="sxs-lookup"><span data-stu-id="fb284-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="8d8be-102">如何：使用 Descendants 方法查找单个后代 (C#)</span><span class="sxs-lookup"><span data-stu-id="8d8be-102">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>
+<span data-ttu-id="8d8be-103">可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法快速编写代码来查找名称唯一的单个元素。</span><span class="sxs-lookup"><span data-stu-id="8d8be-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="8d8be-104">如果想要查找具有特定名称的特定后代，则此技术特别有用。</span><span class="sxs-lookup"><span data-stu-id="8d8be-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="8d8be-105">虽然可以编写代码以导航到需要的元素，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴编写代码通常更快更容易。</span><span class="sxs-lookup"><span data-stu-id="8d8be-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fb284-106">示例</span><span class="sxs-lookup"><span data-stu-id="fb284-106">Example</span></span>  
- <span data-ttu-id="fb284-107">本示例使用 <xref:System.Linq.Enumerable.First%2A> 标准查询运算符。</span><span class="sxs-lookup"><span data-stu-id="fb284-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="8d8be-106">示例</span><span class="sxs-lookup"><span data-stu-id="8d8be-106">Example</span></span>  
+ <span data-ttu-id="8d8be-107">本示例使用 <xref:System.Linq.Enumerable.First%2A> 标准查询运算符。</span><span class="sxs-lookup"><span data-stu-id="8d8be-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -36,14 +36,14 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="fb284-108">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="fb284-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="8d8be-108">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="8d8be-108">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="fb284-109">示例</span><span class="sxs-lookup"><span data-stu-id="fb284-109">Example</span></span>  
- <span data-ttu-id="fb284-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="fb284-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="fb284-111">有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="fb284-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="8d8be-109">示例</span><span class="sxs-lookup"><span data-stu-id="8d8be-109">Example</span></span>  
+ <span data-ttu-id="8d8be-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="8d8be-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="8d8be-111">有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="8d8be-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  
@@ -67,12 +67,8 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="fb284-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="fb284-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="8d8be-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="8d8be-112">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="fb284-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb284-113">See also</span></span>
-
-- [<span data-ttu-id="fb284-114">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="fb284-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

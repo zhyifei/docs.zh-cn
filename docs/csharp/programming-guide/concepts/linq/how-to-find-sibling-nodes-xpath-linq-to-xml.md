@@ -2,24 +2,24 @@
 title: 如何：查找同级节点 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646758"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485389"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="a4985-102">如何：查找同级节点 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a4985-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="a4985-103">您可能需要查找某一节点的具有特定名称的所有同级。</span><span class="sxs-lookup"><span data-stu-id="a4985-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="a4985-104">如果上下文节点也具有该特定名称，则生成的集合可能会包括上下文节点。</span><span class="sxs-lookup"><span data-stu-id="a4985-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="aa1ed-102">如何：查找同级节点 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="aa1ed-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="aa1ed-103">您可能需要查找某一节点的具有特定名称的所有同级。</span><span class="sxs-lookup"><span data-stu-id="aa1ed-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="aa1ed-104">如果上下文节点也具有该特定名称，则生成的集合可能会包括上下文节点。</span><span class="sxs-lookup"><span data-stu-id="aa1ed-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- <span data-ttu-id="a4985-105">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="a4985-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="aa1ed-105">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="aa1ed-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a><span data-ttu-id="a4985-106">示例</span><span class="sxs-lookup"><span data-stu-id="a4985-106">Example</span></span>  
- <span data-ttu-id="a4985-107">本示例首先查找一个 `Book` 元素，然后查找名为 `Book` 的所有同级元素。</span><span class="sxs-lookup"><span data-stu-id="a4985-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="a4985-108">生成的集合包括上下文节点。</span><span class="sxs-lookup"><span data-stu-id="a4985-108">The resulting collection includes the context node.</span></span>  
+## <a name="example"></a><span data-ttu-id="aa1ed-106">示例</span><span class="sxs-lookup"><span data-stu-id="aa1ed-106">Example</span></span>  
+ <span data-ttu-id="aa1ed-107">本示例首先查找一个 `Book` 元素，然后查找名为 `Book` 的所有同级元素。</span><span class="sxs-lookup"><span data-stu-id="aa1ed-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="aa1ed-108">生成的集合包括上下文节点。</span><span class="sxs-lookup"><span data-stu-id="aa1ed-108">The resulting collection includes the context node.</span></span>  
   
- <span data-ttu-id="a4985-109">本示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="a4985-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="aa1ed-109">此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="aa1ed-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -49,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="a4985-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="a4985-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="aa1ed-110">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="aa1ed-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -73,7 +73,3 @@ Results are identical
       of the world.</Description>  
 </Book>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="a4985-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="a4985-111">See also</span></span>
-
-- [<span data-ttu-id="a4985-112">针对 XPath 用户的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a4985-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
