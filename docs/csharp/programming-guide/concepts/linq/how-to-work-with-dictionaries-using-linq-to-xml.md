@@ -2,12 +2,12 @@
 title: 如何：通过 LINQ to XML 使用字典 (C#)
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: a1104d041c72b48a9aad38a489aefe3ec90a16dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582014"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484712"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>如何：通过 LINQ to XML 使用字典 (C#)
 通常需要将各种数据结构转换为 XML 和将 XML 转换回其他数据结构。 本主题通过 <xref:System.Collections.Generic.Dictionary%602> 和 XML 的相互转换演示这一常规方法的具体实现。  
@@ -66,6 +66,3 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>请参阅
-
-- [投影和转换 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
