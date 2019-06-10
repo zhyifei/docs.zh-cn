@@ -60,8 +60,6 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-        - name: 使用 Azure Service Fabric
-          href: architect-microservice-container-applications/using-azure-service-fabric.md
     - name: 基于 Docker 的应用程序的开发流程
       href: docker-application-development-process/index.md
       items:
