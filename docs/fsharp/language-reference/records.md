@@ -1,17 +1,17 @@
 ---
 title: 记录
 description: 了解如何F#记录表示已命名的值，可选择包含成员的简单聚合。
-ms.date: 05/16/2016
-ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/09/2019
+ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795416"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816189"
 ---
 # <a name="records"></a>记录
 
-记录表示已命名值的简单聚合，可选择包含成员。  从F#4.1，它们可以是结构或引用类型。  它们是默认情况下引用类型。
+记录表示已命名值的简单聚合，可选择包含成员。 它们可以是结构或引用类型。  它们是默认情况下引用类型。
 
 ## <a name="syntax"></a>语法
 

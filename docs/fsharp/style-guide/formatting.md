@@ -1,15 +1,15 @@
 ---
-title: F#代码格式设置准则
+title: F# 代码格式设置准则
 description: 了解有关格式设置准则F#代码。
 ms.date: 02/08/2019
-ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063588"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816180"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#代码格式设置准则
+# <a name="f-code-formatting-guidelines"></a>F# 代码格式设置准则
 
 本文提供有关如何设置代码的格式的指导原则，以便在F#代码是：
 
@@ -836,14 +836,14 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>设置文本的格式
 
-[F#文字](../language-reference/literals.md)使用`Literal`属性应置于各自的行的属性，然后使用驼峰式大小写命名：
+[F#文字](../language-reference/literals.md)使用`Literal`属性应置于各自的行的属性，然后使用 pascal 命名法命名：
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 避免在值所在的同一行上放置属性。

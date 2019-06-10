@@ -1,13 +1,13 @@
 ---
 title: 文本
 description: 了解有关在中的文本类型F#编程语言。
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490985"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816230"
 ---
 # <a name="literals"></a>文本
 
@@ -44,13 +44,16 @@ ms.locfileid: "66490985"
 |byte[]|ASCII 字符串|B|`"text"B`|
 |字符串或 byte]|逐字字符串|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>备注
+## <a name="named-literals"></a>指定的文字
 
-Unicode 字符串可包含可以通过使用指定的显式编码`\u`跟 16 位十六进制代码或可以通过使用指定的 UTF-32 编码`\U`跟表示 Unicode 的 32 位十六进制代码代理项对。
+可以使用标记值都应是常量[文字](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)属性。 此属性具有导致被编译为一个常量值的效果。
 
-在F#3.1 中，可以使用`+`符号合并字符串文本。 你还可以使用按位或 (`|||`) 运算符来组合枚举标志。 例如，下面的代码是合法中F#3.1:
+在模式匹配表达式中，小写字母开头的标识符始终被当作变量绑定，而不是文字，因此通常应使用首字母大写定义文字。
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,13 +67,11 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-不允许使用其他按位运算符。
+## <a name="remarks"></a>备注
 
-## <a name="named-literals"></a>指定的文字
+Unicode 字符串可包含可以通过使用指定的显式编码`\u`跟 16 位十六进制代码或可以通过使用指定的 UTF-32 编码`\U`跟表示 Unicode 的 32 位十六进制代码代理项对。
 
-可以使用标记值都应是常量[文字](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)属性。 此属性具有导致被编译为一个常量值的效果。
-
-在模式匹配表达式中，小写字母开头的标识符始终被当作变量绑定，而不是文字，因此通常应使用首字母大写定义文字。
+使用其他按位运算符以外的其他`|||`不允许使用。
 
 ## <a name="integers-in-other-bases"></a>在其他基数的整数
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>数值文字中的下划线
 
-从F#4.1，您可以使用下划线字符分隔数字 (`_`)。
+可以使用下划线字符分隔数字 (`_`)。
 
 ```fsharp
 let value = 0xDEAD_BEEF

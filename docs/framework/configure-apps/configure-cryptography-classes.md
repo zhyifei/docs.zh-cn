@@ -9,15 +9,15 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: ba11eed316e227ceae4cb5acecb2b081fa8868f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5c1178519601d7dcb7c5b3014f413b6436746fb
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705527"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816169"
 ---
 # <a name="configuring-cryptography-classes"></a>配置加密类
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]允许计算机管理员配置的默认加密算法和.NET Framework 和相应地编写的应用程序使用的算法实现。  例如，具有其自己的加密算法的实现的企业可以使该实现而不是实现中提供默认[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。 尽管使用加密的托管应用程序始终可以选择显式绑定到特定的实现，但建议他们使用的加密配置系统创建加密对象。  
+[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]允许计算机管理员配置的默认加密算法和.NET Framework 和相应地编写的应用程序使用的算法实现。  例如，具有其自己的加密算法的实现的企业可以对 Windows SDK 而不是实现默认提供该实现。 尽管使用加密的托管应用程序始终可以选择显式绑定到特定的实现，但建议他们使用的加密配置系统创建加密对象。  
   
 ## <a name="in-this-section"></a>本节内容  
  [将算法名称映射到加密类](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "61705527"
   
 ## <a name="related-sections"></a>相关章节  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- 提供的加密服务提供的概述[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。  
+ 提供加密服务提供的 Windows SDK 的概述。  
   
  [加密设置架构](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  描述将友好算法名映射到实现密码算法的类的元素。
