@@ -29,25 +29,25 @@ ms.locfileid: "61907163"
 在进行说明之前，请看几个简单的示例：
 
 ```vb
-' 声明一个一维的含有 5 个元素的数组。
+' Declare a single-dimension array of 5 numbers.
 Dim numbers(4) As Integer
 
-' 声明一个数组并且初始化它的 4 个元素。
+'Declare a single-dimension array and set its 4 values.
 Dim numbers = New Integer() {1, 2, 4, 8}
 
-' 把一个已有数组的大小改为 16 ，并且保持原有数据。
+' Change the size of an existing array to 16 elements and retain the current values.
 ReDim Preserve numbers(15)
 
-' 重定义一个已有数组的大小并且重置里面的值。
+' Redefine the size of an existing array and reset the values.
 ReDim numbers(15)
 
-' 声明一个 6 x 6 的多维矩阵。
+' Declare a 6 x 6 multidimensional array.
 Dim matrix(5, 5) As Double
 
-' 声明一个 4 x 3 的多维数组并且初始化它的元素。
+' Declare a 4 x 3 multidimensional array and set array element values.
 Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
 
-' 声明一个交错数组。
+' Declare a jagged array
 Dim sales()() As Double = New Double(11)() {}
 ```
 
