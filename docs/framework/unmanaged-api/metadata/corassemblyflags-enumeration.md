@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43bfec471fbcfc481e178f6610e0318e9538ee34
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906238"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025767"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 枚举
 包含一些值，用于描述应用于程序集编译的元数据。  
@@ -76,14 +76,14 @@ typedef enum CorAssemblyFlags {
 |`afRetargetable`|指示程序集可以对程序集从不同的发布服务器在运行时重定向。|  
 |`afContentType_Mask`|一个屏蔽，它描述的内容类型。|  
 |`afContentType_Default`|指示默认内容类型。|  
-|`afContentType_WindowsRuntime`|指示[!INCLUDE[wrt](../../../../includes/wrt-md.md)]内容类型。|  
+|`afContentType_WindowsRuntime`|指示 Windows 运行时的内容类型。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

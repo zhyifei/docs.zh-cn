@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ecde6ca8d3a95e356c5b1389ba95c4ad72b68d45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623903"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026069"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 语句 (Visual Basic)
 集合中每个元素重复一组语句。  
@@ -49,7 +49,7 @@ Next [ element ]
 |术语|定义|  
 |---|---|  
 |`element`|在所需`For Each`语句。 在中为可选`Next`语句。 变量。 用于循环访问集合的元素。|  
-|`datatype`|如果使用`element`不已声明。 数据类型的`element`。|  
+|`datatype`|可选如果[ `Option Infer` ](option-infer-statement.md)是启用 （默认值） 或`element`已声明; 如果所需`Option Infer`处于关闭状态和`element`不已声明。 `element`的数据类型。|  
 |`group`|必需。 具有集合类型或对象的类型的变量。 表示的集合对其`statements`要重复。|  
 |`statements`|可选。 一个或多个语句之间`For Each`并`Next`中每一项上运行的`group`。|  
 |`Continue For`|可选。 将控制转移到开头`For Each`循环。|  
@@ -113,8 +113,8 @@ Next [ element ]
  当`For Each`...`Next` 运行语句时，Visual Basic 将集合仅一次，在循环开始之前进行评估。 如果更改了语句块`element`或`group`，这些更改不会影响循环的迭代。  
   
  当集合中的所有元素已连续都分配给`element`，则`For Each`循环停止并将控制权传递到后面的语句`Next`语句。  
-  
- 如果`element`尚未被外部声明此循环中，必须将其声明中`For Each`语句。 您可以声明的类型`element`通过使用显式`As`语句，也可以依赖类型推断来分配类型。 在任一情况下，作用域的`element`是循环的正文。 但是，您無法宣告`element`外部和内部循环。  
+ 
+如果[Option Infer](option-infer-statement.md)是上 （其默认设置），Visual Basic 编译器可以推断出的数据类型`element`。 如果为 off 并`element`尚未被在循环外声明，必须将其声明中`For Each`语句。 若要声明的数据类型`element`显式地使用`As`子句。 除非外部定义的元素的数据类型，否则`For Each`...`Next`构造，其作用域是循环的正文。 请注意，您無法宣告`element`外部和内部循环。
   
  您可以选择指定`element`在`Next`语句。 这可提高应用程序的可读性，尤其是在具有嵌套`For Each`循环。 您必须指定相同的变量作为所显示的相应`For Each`语句。  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  如果你的代码依赖于遍历集合中特定的顺序， `For Each`...`Next`循环不是最佳选择，除非您知道的枚举器对象的特征，否则该集合公开。 遍历的顺序不由 Visual Basic 中，而是由确定<xref:System.Collections.IEnumerator.MoveNext%2A>枚举器对象的方法。 因此，您可能无法预测哪个元素集合中返回的第一个`element`，或者其中的下一个要返回给定元素之后。 您可能会获得更可靠的结果使用不同的循环结构类似于`For`...`Next`或`Do`...`Loop`.  
   
- 数据类型`element`这样的数据类型的元素必须是`group`可以转换为它。  
+在运行时必须能够转换中的元素`group`到`element`。 [`Option Strict`] 语句，控制是否允许扩大转换和收缩转换 (`Option Strict`处于关闭状态，其默认值)，或是否允许使用唯一的扩大转换 (`Option Strict`上)。 有关详细信息，请参阅[收缩转换](#narrowing-conversions)。
   
  数据类型的`group`必须是指集合或数组，它是可枚举的引用类型。 通常这意味着`group`实现的对象是指<xref:System.Collections.IEnumerable>界面`System.Collections`命名空间或<xref:System.Collections.Generic.IEnumerable%601>接口的`System.Collections.Generic`命名空间。 `System.Collections.IEnumerable` 定义<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，返回集合的枚举器对象。 枚举器对象实现`System.Collections.IEnumerator`界面`System.Collections`命名空间，并公开<xref:System.Collections.IEnumerator.Current%2A>属性和<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。 Visual Basic 使用这些来遍历集合。  
   

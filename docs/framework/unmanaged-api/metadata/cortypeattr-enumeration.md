@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f65c2f74ec5efda027d90b3ffda9a5da5c239122
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045183"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025725"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 枚举
 包含一些值，用于指示类型元数据。  
@@ -100,7 +100,7 @@ typedef enum CorTypeAttr {
 |`tdSpecialName`|指定特殊的类名。 其名称描述如何。|  
 |`tdImport`|指定导入该类型。|  
 |`tdSerializable`|指定的类型是可序列化。|  
-|`tdWindowsRuntime`|此类型指定为[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。|  
+|`tdWindowsRuntime`|指定此类型是 Windows 运行时类型。|  
 |`tdStringFormatMask`|获取有关如何编码和格式字符串的信息。|  
 |`tdAnsiClass`|指定此类型将解释为 ANSI LPTSTR。|  
 |`tdUnicodeClass`|指定此类型将解释为 Unicode LPTSTR。|  
@@ -118,7 +118,7 @@ typedef enum CorTypeAttr {
   
  **标头：** CorHdr.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

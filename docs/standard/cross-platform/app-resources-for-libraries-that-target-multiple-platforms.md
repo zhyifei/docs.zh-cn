@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055012"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025575"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>面向多个平台的库的应用程序资源
 可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)项目类型以确保可以从多个平台访问类库中的资源。 该项目类型可以在 Visual Studio 2012 中，面向.NET Framework 类库的可移植子集。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]确保可从桌面应用、Silverlight 应用、Windows Phone 应用和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用访问你的库。
@@ -47,9 +47,9 @@ ms.locfileid: "62055012"
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]和 Windows 应用商店应用
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目将资源存储在 .resx 文件中，这些文件随后将编译为 .resources 文件并在编译时嵌入到主程序集或附属程序集中。 另一方面，[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用需在 .resw 文件中存储资源，这些文件随后将被编译为单个包资源索引 (PRI) 文件。 但是，尽管文件格式不兼容，你的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]仍将在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中工作。
 
- 若要从 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用使用你的类库，请在 Windows 应用商店应用项目中添加对类库的引用。 Visual Studio 将以透明方式从你的程序集中将资源提取到 .resw 文件中，并将其用于生成 [!INCLUDE[wrt](../../../includes/wrt-md.md)]可从中提取资源的 PRI 文件。 在运行时，[!INCLUDE[wrt](../../../includes/wrt-md.md)]会在你的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]中执行代码，但它从 PRI 文件中检索你的可移植类库的资源。
+ 若要从 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用使用你的类库，请在 Windows 应用商店应用项目中添加对类库的引用。 Visual Studio 以透明方式将资源提取到.resw 文件程序集，并使用它来生成 Windows 运行时可以从其提取资源的 PRI 文件。 在运行时，Windows 运行时执行中的代码在[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]，但它从 PRI 文件中检索可移植类库的资源。
 
- 如果你的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目包含本地化资源，则根据需要对桌面应用中的库使用集散模型来部署这些资源。 若要在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用主资源文件和所有本地化的资源文件，可添加对主程序集的引用。 在编译时，Visual Studio 会将你的主资源文件以及所有本地化资源文件中的资源提取到单独的 .resw 文件中。 然后，它将 .resw 文件编译为 [!INCLUDE[wrt](../../../includes/wrt-md.md)]在运行时访问的单个 PRI 文件。
+ 如果你的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目包含本地化资源，则根据需要对桌面应用中的库使用集散模型来部署这些资源。 若要在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用主资源文件和所有本地化的资源文件，可添加对主程序集的引用。 在编译时，Visual Studio 会将你的主资源文件以及所有本地化资源文件中的资源提取到单独的 .resw 文件中。 然后将.resw 文件编译为单个 PRI 文件中的 Windows 运行时在运行时访问。
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>示例:未本地化 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]

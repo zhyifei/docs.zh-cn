@@ -2,12 +2,12 @@
 title: 部署承载于 Internet 信息服务中的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858309"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025731"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 
@@ -41,7 +41,7 @@ ms.locfileid: "61858309"
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>创建新的 IIS 应用程序或重新使用现有的 ASP.NET 应用程序
 
-IIS 承载的 WCF 服务必须驻留在 IIS 应用程序内。 可以以独占方式创建新的 IIS 应用程序承载 WCF 服务。 或者，可将 WCF 服务部署到现有应用程序已经承载[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]内容 （如.aspx 页和 ASP.NET Web 服务 [ASMX]）。 有关这些选项的详细信息，请参阅"托管 WCF 的并排方案使用 ASP.NET"和"在 ASP.NET 兼容模式下承载 WCF 服务"部分中[WCF 服务和 ASP.NET](wcf-services-and-aspnet.md)。
+IIS 承载的 WCF 服务必须驻留在 IIS 应用程序内。 可以以独占方式创建新的 IIS 应用程序承载 WCF 服务。 或者，可以将 WCF 服务部署到现有应用程序已经承载 ASP.NET 2.0 内容 （如.aspx 页和 ASP.NET Web 服务 [ASMX]）。 有关这些选项的详细信息，请参阅"托管 WCF 的并排方案使用 ASP.NET"和"在 ASP.NET 兼容模式下承载 WCF 服务"部分中[WCF 服务和 ASP.NET](wcf-services-and-aspnet.md)。
 
 请注意， [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和更高版本定期重新启动独立的面向对象编程应用程序。 默认值为 1740 分钟。 支持的最大值为 71,582 分钟。 可以禁用此重新启动。 有关此属性的详细信息，请参阅[PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
 
@@ -65,7 +65,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>将服务实现部署到 IIS 应用程序
 
-在 IIS 中承载的 WCF 服务使用相同的动态编译模型[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]。 就像使用 ASP.NET 中，可以按如下所示部署在不同地区的几种方法中的 IIS 承载的 WCF 服务的实现代码：
+在 IIS 中承载的 WCF 服务使用相同的动态编译模型作为 ASP.NET 2.0。 就像使用 ASP.NET 中，可以按如下所示部署在不同地区的几种方法中的 IIS 承载的 WCF 服务的实现代码：
 
 - 作为全局程序集缓存 (GAC) 或应用程序的 \bin 目录中的预编译 .dll 文件。 在部署类库的新版本后，才更新预编译的二进制文件。
 
@@ -73,7 +73,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 - 如未编译的代码直接放在.svc 文件。 实现代码也可以按内联方式位于的服务的.svc 文件之后, \@ServiceHost 指令。 对内联代码进行的任何更改导致在收到下一个请求时回收和重新编译应用程序。
 
-有关详细信息[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]编译模型中，请参阅[ASP.NET 编译概述](https://go.microsoft.com/fwlink/?LinkId=94773)。
+有关 ASP.NET 2.0 编译模式的详细信息，请参阅[ASP.NET 编译概述](https://go.microsoft.com/fwlink/?LinkId=94773)。
 
 ## <a name="configure-the-wcf-service"></a>配置 WCF 服务
 

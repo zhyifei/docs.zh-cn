@@ -2,17 +2,17 @@
 title: 与 ASP.NET Web 服务的互操作性
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875550"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026019"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>与 ASP.NET Web 服务的互操作性
 ASP.NET Web 服务和 Windows Communication Foundation (WCF) Web 服务之间的互操作性可以通过确保服务实现使用这两种技术符合 WS-基本配置文件 1.1 规范。 ASP.NET Web 服务符合 WS-Basic Profile 1.1 是可互操作与 WCF 客户端通过使用 WCF 系统提供的绑定， <xref:System.ServiceModel.BasicHttpBinding>。  
   
- 使用 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 选项，即将 <xref:System.Web.Services.WebService> 和 <xref:System.Web.Services.WebMethodAttribute> 属性添加到接口而不是添加到类，并编写实现该接口的类，如下面的示例代码所示。  
+ 使用 ASP.NET 2.0 选择添加<xref:System.Web.Services.WebService>和<xref:System.Web.Services.WebMethodAttribute>属性到接口而不是类，并编写实现该接口的类，如下面的示例代码中所示。  
   
 ```  
 [WebService]  

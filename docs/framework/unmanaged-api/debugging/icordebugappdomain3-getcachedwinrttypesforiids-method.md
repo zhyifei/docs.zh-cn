@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917371"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025903"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 方法
-获取一个枚举器的缓存[!INCLUDE[wrt](../../../../includes/wrt-md.md)]应用程序域中的类型基于其接口标识符。  
+获取在基于其接口标识符的应用程序域中已缓存的 Windows 运行时类型的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,22 +42,22 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in]所需类型的数目。  
   
  `iidsToResolve`  
- [in]指向包含对应的托管表示形式的接口标识符的数组的指针[!INCLUDE[wrt](../../../../includes/wrt-md.md)]要检索的类型。  
+ [in]指向包含对应于要检索的 Windows 运行时类型的托管表示形式的接口标识符的数组的指针。  
   
  `ppTypesEnum`  
- [out]指向将允许枚举的已缓存的"ICorDebugTypeEnum"接口对象地址的管理的表示形式[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型检索，根据中的接口标识符`iidsToResolve`。  
+ [out]检索到允许的缓存托管表示形式的 Windows 运行时类型的枚举的"ICorDebugTypeEnum"接口对象地址的指针，根据中的接口标识符`iidsToResolve`。  
   
 ## <a name="remarks"></a>备注  
  如果该方法无法检索特定的接口标识符的信息，"ICorDebugTypeEnum"集合中的相应项将具有类型`ELEMENT_TYPE_END`的数据检索问题导致的错误或`ELEMENT_TYPE_VOID`未知接口标识符。  
   
 ## <a name="requirements"></a>要求  
- **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **平台：** Windows 运行时  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

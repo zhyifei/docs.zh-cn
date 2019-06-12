@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651789"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025996"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 结构
-映射[!INCLUDE[wrt](../../../../includes/wrt-md.md)]GUID 传递给其相应的 ICorDebugType 对象。  
+将 Windows 运行时 GUID 映射到其相应的 ICorDebugType 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,17 +41,17 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |成员|描述|  
 |------------|-----------------|  
-|`iid`|已缓存的 GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。|  
+|`iid`|缓存的 Windows 运行时类型的 GUID。|  
 |`pType`|指向一个 ICorDebugType 对象，提供有关缓存类型的信息的指针。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]。  
+ **平台：** Windows 运行时。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
