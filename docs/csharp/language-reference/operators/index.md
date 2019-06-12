@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300326"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833272"
 ---
 # <a name="c-operators"></a>C# 运算符
 
@@ -67,7 +67,7 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [sizeof](../keywords/sizeof.md)：返回类型操作数的大小（以字节为单位）。
 
-[stackalloc](../keywords/stackalloc.md)：在堆栈上分配内存块。
+[stackalloc](stackalloc.md)：在堆栈上分配内存块。
 
 [->](pointer-related-operators.md#pointer-member-access-operator--)：指针间接寻址与成员访问相结合。
 

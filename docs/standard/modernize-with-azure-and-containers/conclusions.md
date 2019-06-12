@@ -2,12 +2,12 @@
 title: 结论
 description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |结论
 ms.date: 10/26/2017
-ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758877"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833939"
 ---
 # <a name="conclusions"></a>结论
 
@@ -15,7 +15,7 @@ ms.locfileid: "66758877"
 
 - Docker 容器正逐渐成为任何基于服务器的应用程序或服务的标准部署单位。
 
-- 对于生产环境，应托管可缩放基于 Windows 容器应用程序使用业务流程协调程序 （如 Kubernetes)。
+- 对于生产环境，应托管可缩放基于容器应用程序使用业务流程协调程序 （如 Kubernetes)。
 
 - Azure Vm 托管容器是在云中创建小型开发/测试环境的快速而简单方法。
 

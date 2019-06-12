@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623317"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834073"
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题概述中的功能的<xref:System.Windows.Application>类用于创建和管理应用程序。  
@@ -127,7 +127,7 @@ ms.locfileid: "64623317"
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>初始屏幕  
- 在中启动[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，可以指定要在启动窗口中，使用的图像或*初始屏幕*。 <xref:System.Windows.SplashScreen>类可以轻松加载你的应用程序时显示启动窗口。 <xref:System.Windows.SplashScreen>窗口中将创建和显示之前<xref:System.Windows.Application.Run%2A>调用。 有关详细信息，请参阅[应用程序启动时间](../advanced/application-startup-time.md)并[向 WPF 应用程序添加初始屏幕](how-to-add-a-splash-screen-to-a-wpf-application.md)。  
+ 从.NET Framework 3.5 SP1 开始，可以指定要在启动窗口中，使用的图像或*初始屏幕*。 <xref:System.Windows.SplashScreen>类可以轻松加载你的应用程序时显示启动窗口。 <xref:System.Windows.SplashScreen>窗口中将创建和显示之前<xref:System.Windows.Application.Run%2A>调用。 有关详细信息，请参阅[应用程序启动时间](../advanced/application-startup-time.md)并[向 WPF 应用程序添加初始屏幕](how-to-add-a-splash-screen-to-a-wpf-application.md)。  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>启动应用程序  

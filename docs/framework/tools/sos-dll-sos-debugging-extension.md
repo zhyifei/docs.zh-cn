@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631833"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690167"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
 
@@ -68,11 +68,11 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 |**HeapStat** [ **-inclUnrooted** &#124; **-iu**]|显示每个堆的生成大小及每个堆上各生成的可用空间总量。 如果指定 -**inclUnrooted** 选项，则报告将包括有关不再为根的垃圾回收堆中的托管对象的信息。|
 |**HistClear**|释放由 `Hist` 命令系列使用的任何资源。<br /><br /> 通常，你不必显式调用 `HistClear`，因为每个 `HistInit` 都会清理以前的资源。|
 |**HistInit**|从保存在调试对象中的压力日志初始化 SOS 结构。|
-|**HistObj** *<obj_address>*|检查所有压力日志的重定位记录，并显示可能已将地址作为自变量传入的垃圾回收重定位链。|
-|**HistObjFind**  *<obj_address>*|显示在指定地址处引用对象的所有日志项。|
+|**HistObj** *\<obj_address>*|检查所有压力日志的重定位记录，并显示可能已将地址作为自变量传入的垃圾回收重定位链。|
+|**HistObjFind**  *\<obj_address>*|显示在指定地址处引用对象的所有日志项。|
 |**HistRoot** *\<root>*|显示与指定根的提升和重定位相关的信息。<br /><br /> 根值可用于通过垃圾回收来跟踪对象的移动。|
 |**IP2MD** \<*Code address*>|显示已 JIT 编译的代码中指定地址处的 `MethodDesc` 结构。|
-|`ListNearObj` (`lno`) *<obj_address>*|显示指定地址之前和之后的对象。 该命令在垃圾回收堆和自变量地址之后的对象中寻找地址，而该垃圾回收堆看上去像托管对象（基于有效的方法表）的有效开头。|
+|`ListNearObj` (`lno`) *\<obj_address>*|显示指定地址之前和之后的对象。 该命令在垃圾回收堆和自变量地址之后的对象中寻找地址，而该垃圾回收堆看上去像托管对象（基于有效的方法表）的有效开头。|
 |**MinidumpMode** [**0**] [**1**]|防止在使用小型转储时运行不安全的命令。<br /><br /> 传递 **0** 禁用此功能，或传递 **1** 启用此功能。 默认情况下，**MinidumpMode** 值设置为 **0**。<br /><br /> 使用 **.dump /m** 命令或 **.dump** 命令创建的小型转储具有有限的 CLR 特定数据，允许只正确地运行一小部分 SOS 命令。 有些命令可能会因错误而失败，因为所需的内存区域未被映射或仅被部分映射。 此选项可防止你对小型转储运行不安全的命令。|
 |**Name2EE** \<*module name*> \<*type or method name*><br /><br /> 或<br /><br /> **Name2EE** \<*module name*> **!** \<*type or method name*>|显示指定模块中的指定类型或方法的 `MethodTable` 结构和 `EEClass` 结构。<br /><br /> 在进程中必须加载指定的模块。<br /><br /> 若要获取正确的类型名称，请通过使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)浏览模块。 也可以将 `*` 作为模块名参数传递以搜索所有已加载的托管模块。 *module name* 参数也可以是模块的调试器名称，如 `mscorlib` 或 `image00400000`。<br /><br /> 此命令支持 <`module`>`!`<`type`> 的 Windows 调试器语法。 类型必须是完全限定的。|
 |**ObjSize** [\<*Object address*>] &#124; [ **-aggregate**] [ **-stat**]|显示指定对象的大小。 如果未指定任何参数，则 **ObjSize** 命令将显示在托管线程上找到的所有对象的大小，显示进程中的所有垃圾回收器句柄，并对这些句柄指向的任何对象的大小进行合计。 除父对象之外，**ObjSize** 命令还包括所有子对象的大小。<br /><br /> **-aggregate** 选项能够与 **-stat** 参数一起使用，以获得仍为根类型的类型的详细视图。 通过使用 **!dumpheap -stat** 和 **!objsize -aggregate -stat**，可以确定不再为根的对象并诊断各种内存问题。|

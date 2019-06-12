@@ -2,12 +2,12 @@
 title: F# 代码格式设置准则
 description: 了解有关格式设置准则F#代码。
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816180"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833909"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 代码格式设置准则
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>前缀语法用于泛型 (`Foo<T>`) 优先于后缀语法 (`T Foo`)
 
-F#继承这两个后缀机器学习的样式命名泛型类型 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 .NET 样式，除了四种特定类型为首选项：
+F#继承这两个后缀机器学习的样式命名泛型类型 (例如， `int list`) 以及.NET 样式的前缀 (例如， `list<int>`)。 .NET 样式，除了五个特定类型为首选项：
 
 1. 有关F#列表中，使用后缀形式：`int list`而非`list<int>`。
 2. 有关F#选项，请使用后缀形式：`int option`而非`option<int>`。
-3. 有关F#数组，使用语法名称`int[]`而非`int array`或`array<int>`。
-4. 对于引用单元格，请使用`int ref`而非`ref<int>`或`Ref<int>`。
+3. 有关F#值选项，请使用后缀形式：`int voption`而非`voption<int>`。
+4. 有关F#数组，使用语法名称`int[]`而非`int array`或`array<int>`。
+5. 对于引用单元格，请使用`int ref`而非`ref<int>`或`Ref<int>`。
 
 对于所有其他类型，请使用前缀形式。
 

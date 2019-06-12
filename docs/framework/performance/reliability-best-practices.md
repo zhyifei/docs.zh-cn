@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949222"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833803"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 
@@ -265,7 +265,7 @@ HPA 仅影响可托管公共语言运行时且实现主机保护的非托管应�
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>如有可能，请避免使用非托管内存
 
-非托管内存可能会被泄露，正如操作系统句柄一样。  如有可能，请使用 [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) 或固定的托管对象（如 [fixed 语句](~/docs/csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>）在堆栈上尝试使用内存。  <xref:System.GC> 最终会清理这些内容。  但是，如果必须要分配非托管内存，请考虑使用派生自 <xref:System.Runtime.InteropServices.SafeHandle> 的类以包装内存分配。
+非托管内存可能会被泄露，正如操作系统句柄一样。 如有可能，请使用 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 或固定的托管对象（如 [fixed 语句](~/docs/csharp/language-reference/keywords/fixed-statement.md)或使用 byte[] 的 <xref:System.Runtime.InteropServices.GCHandle>）在堆栈上尝试使用内存。 <xref:System.GC> 最终会清理这些内容。 但是，如果必须要分配非托管内存，请考虑使用派生自 <xref:System.Runtime.InteropServices.SafeHandle> 的类以包装内存分配。
 
 请注意，至少存在一种 <xref:System.Runtime.InteropServices.SafeHandle> 不适用的情况。  对于分配或释放内存的 COM 方法调用，通常是一个 DLL 通过 `CoTaskMemAlloc` 分配内存，然后另一个 DLL 使用 `CoTaskMemFree` 释放内存。  在这些位置中使用 <xref:System.Runtime.InteropServices.SafeHandle> 可能不适合，因为它会尝试将非托管内存的生存期绑定到 <xref:System.Runtime.InteropServices.SafeHandle> 的生存期，而不是允许其他 DLL 控制内存的生存期。
 

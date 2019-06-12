@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591408"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833976"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "64591408"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>创建新的 XAML 浏览器应用程序 (XBAP)  
- 创建新的 XBAP 项目的最简单方法是使用 Microsoft Visual Studio。 创建新项目时，从模板列表中选择“WPF 浏览器应用程序”。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。  
+ 创建新的 XBAP 项目的最简单方法是使用 Microsoft Visual Studio。 创建新项目时，从模板列表中选择“WPF 浏览器应用程序”  。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。  
   
  运行 XBAP 项目时，它将在浏览器窗口而不是在单独的窗口中打开。 当调试从 Visual Studio XBAP 时，应用程序通过 Internet 区域权限运行，并因此将引发安全异常，如果超出这些权限。 有关详细信息，请参阅[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
@@ -102,23 +102,23 @@ ms.locfileid: "64591408"
   
 1. 在 Visual Studio 中，打开项目属性。  
   
-2. 在“安全性”选项卡上单击“高级”。  
+2. 在“安全性”  选项卡上单击“高级”  。  
   
      将显示“高级安全设置”对话框。  
   
-3. 请确保选中“授予应用程序对其源站点的访问权”复选框，然后单击“确定”。  
+3. 请确保选中“授予应用程序对其源站点的访问权”  复选框，然后单击“确定”  。  
   
-4. 在“调试”选项卡上，选择“使用 URL 启动浏览器”选项，然后指定包含 XBAP 的 HTML 页的 URL。  
+4. 在“调试”  选项卡上，选择“使用 URL 启动浏览器”  选项，然后指定包含 XBAP 的 HTML 页的 URL。  
   
-5. 在 Internet Explorer 中，单击“工具”按钮，然后选择“Internet 选项”。  
+5. 在 Internet Explorer 中，单击“工具”  按钮，然后选择“Internet 选项”  。  
   
      将显示“Internet 选项”对话框。  
   
-6. 单击“高级”选项卡。  
+6. 单击“高级”  选项卡。  
   
-7. 在“安全性”下面的“设置”列表中，选中“允许活动内容在我的计算机上的文件中运行”复选框。  
+7. 在“安全性”  下面的“设置”  列表中，选中“允许活动内容在我的计算机上的文件中运行”  复选框。  
   
-8. 单击 **“确定”**。  
+8. 单击 **“确定”** 。  
   
      重启 Internet Explorer 后更改才会生效。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "64591408"
   
 1. 在 Visual Studio 中，打开项目属性。  
   
-2. 在“安全性”选项卡上，选择“这是完全可信的应用程序”选项。  
+2. 在“安全性”  选项卡上，选择“这是完全可信的应用程序”  选项。  
   
  此设置将进行以下更改：  
   
@@ -180,9 +180,9 @@ ms.locfileid: "64591408"
   
 <a name="xbap_start_time_performance_considerations"></a>   
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP 启动时间性能注意事项  
- XBAP 性能的一个重要方面是其启动时间。 如果 XBAP 是要加载的第一个 WPF 应用程序，则冷启动时间可能为十秒或更长。 这是因为进度页面由 WPF 呈现，且 CLR 和 WPF 都必须冷启动才能显示应用程序。  
+ XBAP 性能的一个重要方面是其启动时间。 如果 XBAP 是要加载的第一个 WPF 应用程序，则冷启动  时间可能为十秒或更长。 这是因为进度页面由 WPF 呈现，且 CLR 和 WPF 都必须冷启动才能显示应用程序。  
   
- 在 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 中启动时，通过在部署周期早期显示未托管进度页可以缩短 XBAP 的冷启动时间。 启动应用程序后几乎会立即显示进度页，因为它由本机宿主代码显示，并以 HTML 格式呈现。  
+ 从.NET Framework 3.5 SP1 开始，通过在部署周期早期显示未托管的进度页来缓解 XBAP 的冷启动时间。 启动应用程序后几乎会立即显示进度页，因为它由本机宿主代码显示，并以 HTML 格式呈现。  
   
  此外，改进了的 ClickOnce 下载序列并发最多 10%改进开始时间。 ClickOnce 下载并验证之后清单、 启动应用程序下载和进度栏将开始更新。  
   

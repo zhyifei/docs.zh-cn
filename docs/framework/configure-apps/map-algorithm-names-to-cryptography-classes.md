@@ -7,15 +7,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 9e4154923b2bb0abfe48e7a530497c3d5bf28d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583733"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832684"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>将算法名称映射到加密类
-有四种方法，开发人员可以创建加密对象使用[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+有一名开发人员可以创建使用 Windows 软件开发工具包 (SDK) 的加密对象的四种方法：  
   
 - 使用创建对象**新**运算符。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64583733"
   
 - 创建一个对象，通过调用实现加密算法 （如一种对称块密码） 的类**创建**方法的抽象类上为该类型的算法 (如<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
   
- 例如，假设开发人员想要计算的一组字节的 SHA1 哈希。 <xref:System.Security.Cryptography>命名空间包含的 SHA1 算法、 一种纯托管的实现和一个包装 CryptoAPI 的两种实现。 开发人员可以选择要实例化特定 SHA1 实现 (如<xref:System.Security.Cryptography.SHA1Managed>) 通过调用**新**运算符。 但是，如果并不重要，只要类实现的 SHA1 哈希算法，公共语言运行时将加载哪些类，开发人员可以创建一个对象通过调用<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法。 此方法调用**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**，其必须返回的 SHA1 哈希算法的实现。  
+ 例如，假设开发人员想要计算的一组字节的 SHA1 哈希。 <xref:System.Security.Cryptography>命名空间包含的 SHA1 算法、 一种纯托管的实现和一个包装 CryptoAPI 的两种实现。 开发人员可以选择要实例化特定 SHA1 实现 (如<xref:System.Security.Cryptography.SHA1Managed>) 通过调用**新**运算符。 但是，如果并不重要，只要类实现的 SHA1 哈希算法，公共语言运行时将加载哪些类，开发人员可以创建一个对象通过调用<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>方法。 此方法调用**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** ，其必须返回的 SHA1 哈希算法的实现。  
   
  开发人员还可以调用**System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** 因为默认情况下，加密配置包括在.NET Framework 中提供的算法的短名称。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64583733"
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>在配置文件中的算法名称映射  
  默认情况下，运行时将返回<xref:System.Security.Cryptography.SHA1CryptoServiceProvider>所有四种方案的对象。 但是，计算机管理员可以更改的最后两个方案中的方法返回的对象的类型。 若要执行此操作，必须将友好算法名称映射到你想要使用计算机配置文件 (Machine.config) 中的类中。  
   
- 下面的示例演示如何配置运行时，以便**System.Security.Cryptography.SHA1.Create**， **System.Security.CryptoConfig.CreateFromName("SHA1")**，和**System.Security.Cryptography.HashAlgorithm.Create**返回`MySHA1HashClass`对象。  
+ 下面的示例演示如何配置运行时，以便**System.Security.Cryptography.SHA1.Create**， **System.Security.CryptoConfig.CreateFromName("SHA1")** ，和**System.Security.Cryptography.HashAlgorithm.Create**返回`MySHA1HashClass`对象。  
   
 ```xml  
 <configuration>  

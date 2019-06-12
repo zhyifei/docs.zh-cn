@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c56018c61e5566043fb2b9ba8bbee042093f12
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758145"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833765"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>使用性能监视器 (Perfmon.exe) 跟踪性能  
- 性能监视器是最简单的工具，可用来分析.NET Framework 应用程序。 性能监视器以图形方式表示随公共语言运行时和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]一起安装的.NET Framework 性能计数器中的数据。 这些计数器可用于监视从内存管理到实时 (JIT) 编译器性能的方方面面。 它们告诉你应用程序所使用的资源的情况，这是了解应用程序性能的间接方法。 使用这些计数器可了解应用程序在内部的工作方式。  
+ 性能监视器是最简单的工具，可用来分析.NET Framework 应用程序。 性能监视器以图形方式表示随公共语言运行时和 Windows 软件开发工具包 (SDK) 一起安装的.NET Framework 性能计数器中找到的数据。 这些计数器可用于监视从内存管理到实时 (JIT) 编译器性能的方方面面。 它们告诉你应用程序所使用的资源的情况，这是了解应用程序性能的间接方法。 使用这些计数器可了解应用程序在内部的工作方式。  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>在 Windows Vista 和更高版本上运行 Perfmon.exe  
   

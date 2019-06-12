@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76a5c32660c8a08ef34c40f8f4ee9430e5ead5c8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644278"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833974"
 ---
 # <a name="memory--and-span-related-types"></a>内存和跨度相关类型
 
 从 .NET Core 2.1 开始，.NET 包含多个相互关联的类型，它们表示任意内存的相邻强类型区域。 这些方法包括：
 
-- <xref:System.Span%601?displayProperty=nameWithType>，用于访问连续内存区域的类型。 <xref:System.Span%601> 实例可由一组 `T` 类型、一个 <xref:System.String>、一个使用 [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) 分配的缓冲区或一个指向非托管内存的指针提供支持。 由于它必须在堆栈上进行分配，因此存在诸多限制。 例如，类中的字段不能是 <xref:System.Span%601> 类型，跨度类型也不能在异步操作中使用。
+- <xref:System.Span%601?displayProperty=nameWithType>，用于访问连续内存区域的类型。 <xref:System.Span%601> 实例可由一组 `T` 类型、一个 <xref:System.String>、一个使用 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 分配的缓冲区或一个指向非托管内存的指针提供支持。 由于它必须在堆栈上进行分配，因此存在诸多限制。 例如，类中的字段不能是 <xref:System.Span%601> 类型，跨度类型也不能在异步操作中使用。
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>，<xref:System.Span%601> 结构的不可变版本。
 
