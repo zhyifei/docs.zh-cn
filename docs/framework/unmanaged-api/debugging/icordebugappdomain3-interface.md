@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c141ca9a8e1c74015883f45cb2eaa9183bb3d89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 256fd900fa73948b4ca42ac6b6f21f145effc461
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922273"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025891"
 ---
-# <a name="icordebugappdomain3-interface"></a><span data-ttu-id="7299e-102">ICorDebugAppDomain3 接口</span><span class="sxs-lookup"><span data-stu-id="7299e-102">ICorDebugAppDomain3 Interface</span></span>
-<span data-ttu-id="7299e-103">提供方法来检索有关托管表示形式的信息[!INCLUDE[wrt](../../../../includes/wrt-md.md)]应用程序域中当前加载的类型。</span><span class="sxs-lookup"><span data-stu-id="7299e-103">Provides methods to retrieve information about the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in an application domain.</span></span> <span data-ttu-id="7299e-104">此接口是 ICorDebugAppDomain 和 ICorDebugAppDomain2 接口的扩展。</span><span class="sxs-lookup"><span data-stu-id="7299e-104">This interface is an extension of the ICorDebugAppDomain and ICorDebugAppDomain2 interfaces.</span></span>  
+# <a name="icordebugappdomain3-interface"></a><span data-ttu-id="a33a4-102">ICorDebugAppDomain3 接口</span><span class="sxs-lookup"><span data-stu-id="a33a4-102">ICorDebugAppDomain3 Interface</span></span>
+<span data-ttu-id="a33a4-103">提供方法来检索有关当前加载的应用程序域中的 Windows 运行时类型的托管表示形式的信息。</span><span class="sxs-lookup"><span data-stu-id="a33a4-103">Provides methods to retrieve information about the managed representations of Windows Runtime types currently loaded in an application domain.</span></span> <span data-ttu-id="a33a4-104">此接口是 ICorDebugAppDomain 和 ICorDebugAppDomain2 接口的扩展。</span><span class="sxs-lookup"><span data-stu-id="a33a4-104">This interface is an extension of the ICorDebugAppDomain and ICorDebugAppDomain2 interfaces.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="7299e-105">方法</span><span class="sxs-lookup"><span data-stu-id="7299e-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a33a4-105">方法</span><span class="sxs-lookup"><span data-stu-id="a33a4-105">Methods</span></span>  
   
-|<span data-ttu-id="7299e-106">方法</span><span class="sxs-lookup"><span data-stu-id="7299e-106">Method</span></span>|<span data-ttu-id="7299e-107">描述</span><span class="sxs-lookup"><span data-stu-id="7299e-107">Description</span></span>|  
+|<span data-ttu-id="a33a4-106">方法</span><span class="sxs-lookup"><span data-stu-id="a33a4-106">Method</span></span>|<span data-ttu-id="a33a4-107">描述</span><span class="sxs-lookup"><span data-stu-id="a33a4-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="7299e-108">ICorDebugAppDomain3::GetCachedWinRTTypes</span><span class="sxs-lookup"><span data-stu-id="7299e-108">ICorDebugAppDomain3::GetCachedWinRTTypes</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|<span data-ttu-id="7299e-109">获取所有缓存的枚举器[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。</span><span class="sxs-lookup"><span data-stu-id="7299e-109">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>|  
-|[<span data-ttu-id="7299e-110">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs</span><span class="sxs-lookup"><span data-stu-id="7299e-110">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|<span data-ttu-id="7299e-111">获取一个枚举器的缓存[!INCLUDE[wrt](../../../../includes/wrt-md.md)]应用程序域中的类型基于其接口标识符。</span><span class="sxs-lookup"><span data-stu-id="7299e-111">Gets an enumerator for cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types in an application domain based on their interface identifiers.</span></span>|  
+|[<span data-ttu-id="a33a4-108">ICorDebugAppDomain3::GetCachedWinRTTypes</span><span class="sxs-lookup"><span data-stu-id="a33a4-108">ICorDebugAppDomain3::GetCachedWinRTTypes</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|<span data-ttu-id="a33a4-109">获取所有已缓存的 Windows 运行时类型的枚举数。</span><span class="sxs-lookup"><span data-stu-id="a33a4-109">Gets an enumerator for all cached Windows Runtime types.</span></span>|  
+|[<span data-ttu-id="a33a4-110">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs</span><span class="sxs-lookup"><span data-stu-id="a33a4-110">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|<span data-ttu-id="a33a4-111">获取在基于其接口标识符的应用程序域中已缓存的 Windows 运行时类型的枚举器。</span><span class="sxs-lookup"><span data-stu-id="a33a4-111">Gets an enumerator for cached Windows Runtime types in an application domain based on their interface identifiers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7299e-112">备注</span><span class="sxs-lookup"><span data-stu-id="7299e-112">Remarks</span></span>  
- <span data-ttu-id="7299e-113">此接口旨在由结合函数评估调用调试器使用`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`。</span><span class="sxs-lookup"><span data-stu-id="7299e-113">This interface is meant to be used by a debugger in conjunction with a function evaluation call to `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`.</span></span> <span data-ttu-id="7299e-114">当方法检索支持的接口标识符[!INCLUDE[wrt](../../../../includes/wrt-md.md)]服务器对象，调试器可能使用此接口中定义的方法将其映射到对应于这些接口的托管类型。</span><span class="sxs-lookup"><span data-stu-id="7299e-114">When the method retrieves the interface identifiers supported by a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] server object, the debugger may use the methods defined in this interface to map them to managed types that correspond to those interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a33a4-112">备注</span><span class="sxs-lookup"><span data-stu-id="a33a4-112">Remarks</span></span>  
+ <span data-ttu-id="a33a4-113">此接口旨在由结合函数评估调用调试器使用`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`。</span><span class="sxs-lookup"><span data-stu-id="a33a4-113">This interface is meant to be used by a debugger in conjunction with a function evaluation call to `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`.</span></span> <span data-ttu-id="a33a4-114">当此方法检索支持的 Windows 运行时服务器对象的接口标识符时，调试器可能使用此接口中定义的方法将其映射到对应于这些接口的托管类型。</span><span class="sxs-lookup"><span data-stu-id="a33a4-114">When the method retrieves the interface identifiers supported by a Windows Runtime server object, the debugger may use the methods defined in this interface to map them to managed types that correspond to those interfaces.</span></span>  
   
- <span data-ttu-id="7299e-115">若要检索此接口的实例，请运行`QueryInterface`ICorDebugAppDomain 或 ICorDebugAppDomain2 接口的实例上。</span><span class="sxs-lookup"><span data-stu-id="7299e-115">To retrieve an instance of this interface, run `QueryInterface` on an instance of the ICorDebugAppDomain or ICorDebugAppDomain2 interface.</span></span>  
+ <span data-ttu-id="a33a4-115">若要检索此接口的实例，请运行`QueryInterface`ICorDebugAppDomain 或 ICorDebugAppDomain2 接口的实例上。</span><span class="sxs-lookup"><span data-stu-id="a33a4-115">To retrieve an instance of this interface, run `QueryInterface` on an instance of the ICorDebugAppDomain or ICorDebugAppDomain2 interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7299e-116">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="7299e-116">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="a33a4-116">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="a33a4-116">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7299e-117">要求</span><span class="sxs-lookup"><span data-stu-id="7299e-117">Requirements</span></span>  
- <span data-ttu-id="7299e-118">**平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7299e-118">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a33a4-117">要求</span><span class="sxs-lookup"><span data-stu-id="a33a4-117">Requirements</span></span>  
+ <span data-ttu-id="a33a4-118">**平台：** Windows 运行时</span><span class="sxs-lookup"><span data-stu-id="a33a4-118">**Platforms:** Windows Runtime</span></span>  
   
- <span data-ttu-id="7299e-119">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7299e-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a33a4-119">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a33a4-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7299e-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7299e-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a33a4-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a33a4-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7299e-121">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7299e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="a33a4-121">**.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a33a4-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7299e-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="7299e-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a33a4-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="a33a4-122">See also</span></span>
 
-- [<span data-ttu-id="7299e-123">调试接口</span><span class="sxs-lookup"><span data-stu-id="7299e-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="a33a4-123">调试接口</span><span class="sxs-lookup"><span data-stu-id="a33a4-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
