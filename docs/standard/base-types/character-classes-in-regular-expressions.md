@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250881"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490873"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 
@@ -51,7 +51,7 @@ ms.locfileid: "66250881"
  .NET 支持字符类减法表达式，通过该表达式可以定义一组字符作为从一个字符类中排除另一字符类的结果。 有关详细信息，请参阅[字符类减法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
->  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 .NET Framework 4.6.2 开始，字符类别基于 [Unicode 标准 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 到 .NET Framework 4.6.1 之间，字符类别基于 [Unicode 标准 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
+>  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 .NET Framework 4.6.2 开始，字符类别基于 [Unicode 标准 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在.NET Framework 4 中通过.NET Framework 4.6.1，它们基于[Unicode 标准、 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>正字符组：[ ]  
