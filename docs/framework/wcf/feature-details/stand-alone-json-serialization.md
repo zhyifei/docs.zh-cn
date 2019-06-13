@@ -159,7 +159,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  XmlNode 数组的开头（在其他元素之前）不支持空命名空间中的属性。  
   
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>包括 XElement 和 DataSet 的 IXmlSerializable 类型  
- <xref:System.Runtime.Serialization.ISerializable> 类型可分为“内容类型”、“数据集类型”和“元素类型”。 有关这些类型的定义，请参阅[XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
+ <xref:System.Runtime.Serialization.ISerializable> 类型可分为“内容类型”、“数据集类型”和“元素类型”。 有关这些类型的定义，请参阅[数据协定中的 XML 和 ADO.NET 类型](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。  
   
  “内容”和“数据集”类型类似，它们都会被序列化为上一节中所讨论的 <xref:System.Array> 的 <xref:System.Xml.XmlNode> 对象。 它们的包装元素的名称和命名空间与数据协定的名称和相应类型的命名空间相对应。  
   
@@ -187,7 +187,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- 截断 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes)名称理解在反序列化。  
+ 截断 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes) 名称理解在反序列化。  
   
 #### <a name="type-hint-position-in-json-objects"></a>JSON 对象中的类型提示位置  
  请注意，类型提示必须出现在 JSON 表示形式的开头。 这是 JSON 处理中唯一一种重视键/值对顺序的情况。 例如，下面不是指定类型提示的有效方式。  
