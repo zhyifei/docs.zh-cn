@@ -202,7 +202,7 @@ items:
     为了修改返回的引用，需要将 `ref` 修饰符添加到局部变量声明中，并在调用 `Find` 之前，使变量在返回值为引用时成为引用。 修改浏览器中的测试代码以匹配以下内容：
 
 
-    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#SnippetTestByRef "test code for return object by reference")]
 
 
     现在，上例中的第二个 `WriteLine` 语句打印出值 `24`，指示矩阵中的存储已被修改。 局部变量已使用 `ref` 修饰符进行声明，它将返回 `ref`。 必须在声明时初始化 `ref` 变量，不能拆分声明和初始化。
