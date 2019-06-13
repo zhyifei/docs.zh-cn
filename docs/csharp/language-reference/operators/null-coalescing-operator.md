@@ -1,45 +1,66 @@
 ---
 title: ?? 运算符 - C# 参考
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633937"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816006"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="ae073-103">??</span><span class="sxs-lookup"><span data-stu-id="ae073-103">??</span></span> <span data-ttu-id="ae073-104">运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="ae073-104">operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="bb260-103">??</span><span class="sxs-lookup"><span data-stu-id="bb260-103">??</span></span> <span data-ttu-id="bb260-104">运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="bb260-104">operator (C# Reference)</span></span>
 
-<span data-ttu-id="ae073-105">`??` 运算符称作 null 合并运算符。</span><span class="sxs-lookup"><span data-stu-id="ae073-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="ae073-106">如果此运算符的左操作数不为 null，则此运算符将返回左操作数；否则返回右操作数。</span><span class="sxs-lookup"><span data-stu-id="ae073-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>
+<span data-ttu-id="bb260-105">Null 合并运算符`??`返回其左操作数的值，如果不是`null`; 否则为它右操作数的计算结果并返回其结果。</span><span class="sxs-lookup"><span data-stu-id="bb260-105">The null-coalescing operator `??` returns the value of its left-hand operand if it isn't `null`; otherwise, it evaluates the right-hand operand and returns its result.</span></span> <span data-ttu-id="bb260-106">`??`运算符不会评估其右操作数，如果左操作数的计算结果为非 null。</span><span class="sxs-lookup"><span data-stu-id="bb260-106">The `??` operator doesn't evaluate its right-hand operand if the left-hand operand evaluates to non-null.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="ae073-107">备注</span><span class="sxs-lookup"><span data-stu-id="ae073-107">Remarks</span></span>
+<span data-ttu-id="bb260-107">Null 合并运算符是右结合运算符，即在窗体的表达式</span><span class="sxs-lookup"><span data-stu-id="bb260-107">The null-coalescing operator is right-associative, that is, an expression of the form</span></span>
 
-<span data-ttu-id="ae073-108">可以为 null 的类型可以表示类型的域中的值，或者值可以是未定义的（在这种情况下，值为 null）。</span><span class="sxs-lookup"><span data-stu-id="ae073-108">A nullable type can represent a value from the type’s domain, or the value can be undefined (in which case the value is null).</span></span> <span data-ttu-id="ae073-109">如果左操作数具有一个值为 null 的可以为 null 的类型，则可使用 `??` 运算符的语法表现力来返回适当的值（右操作数）。</span><span class="sxs-lookup"><span data-stu-id="ae073-109">You can use the `??` operator’s syntactic expressiveness to return an appropriate value (the right hand operand) when the left operand has a nullable type whose value is null.</span></span> <span data-ttu-id="ae073-110">如果在尝试将可以为 null 值的类型分配给不可以为 null 值的类型时没有使用 `??` 运算符，则会生成编译时错误。</span><span class="sxs-lookup"><span data-stu-id="ae073-110">If you try to assign a nullable value type to a non-nullable value type without using the `??` operator, you will generate a compile-time error.</span></span> <span data-ttu-id="ae073-111">如果使用强制转换，且当前未定义可以为 null 值的类型，则会引发 `InvalidOperationException` 异常。</span><span class="sxs-lookup"><span data-stu-id="ae073-111">If you use a cast, and the nullable value type is currently undefined, an `InvalidOperationException` exception will be thrown.</span></span>
+```csharp
+a ?? b ?? c
+```
 
-<span data-ttu-id="ae073-112">有关详细信息，请参阅[可以为 null 的类型](../../programming-guide/nullable-types/index.md)。</span><span class="sxs-lookup"><span data-stu-id="ae073-112">For more information, see [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
+<span data-ttu-id="bb260-108">计算结果为</span><span class="sxs-lookup"><span data-stu-id="bb260-108">is evaluated as</span></span>
 
-<span data-ttu-id="ae073-113">?? 的结果</span><span class="sxs-lookup"><span data-stu-id="ae073-113">The result of a ??</span></span> <span data-ttu-id="ae073-114">不能将运算符视为常量，即使其两个参数都是常量。</span><span class="sxs-lookup"><span data-stu-id="ae073-114">operator is not considered to be a constant even if both its arguments are constants.</span></span>
+```csharp
+a ?? (b ?? c)
+```
 
-## <a name="example"></a><span data-ttu-id="ae073-115">示例</span><span class="sxs-lookup"><span data-stu-id="ae073-115">Example</span></span>
+<span data-ttu-id="bb260-109">`??`运算符可用于以下方案：</span><span class="sxs-lookup"><span data-stu-id="bb260-109">The `??` operator can be useful in the following scenarios:</span></span>
 
-[!code-csharp[csRefOperators#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#53)]
+- <span data-ttu-id="bb260-110">在表达式中使用[null 条件运算符？。 和？]](member-access-operators.md#null-conditional-operators--and-)，可以使用 null 合并运算符以提供用于计算表达式与 null 条件操作的结果是替代表达式`null`:</span><span class="sxs-lookup"><span data-stu-id="bb260-110">In expressions with the [null-conditional operators ?. and ?[]](member-access-operators.md#null-conditional-operators--and-), you can use the null-coalescing operator to provide an alternative expression to evaluate in case the result of the expression with null-conditional operations is `null`:</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="ae073-116">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="ae073-116">C# language specification</span></span>
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-<span data-ttu-id="ae073-117">有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [null 合并运算符](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)。</span><span class="sxs-lookup"><span data-stu-id="ae073-117">For more information, see [The null coalescing operator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="ae073-118">该语言规范是 C# 语法和用法的权威资料。</span><span class="sxs-lookup"><span data-stu-id="ae073-118">The language specification is the definitive source for C# syntax and usage.</span></span>
+- <span data-ttu-id="bb260-111">当您处理[可以为 null 的值类型](../../programming-guide/nullable-types/index.md)，需要提供基础值类型的值，请使用 null 合并运算符来指定要为 null 的类型值时提供的值`null`:</span><span class="sxs-lookup"><span data-stu-id="bb260-111">When you work with [nullable value types](../../programming-guide/nullable-types/index.md) and need to provide a value of an underlying value type, use the null-coalescing operator to specify the value to provide in case a nullable type value is `null`:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ae073-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="ae073-119">See also</span></span>
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
-- [<span data-ttu-id="ae073-120">C# 参考</span><span class="sxs-lookup"><span data-stu-id="ae073-120">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="ae073-121">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="ae073-121">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="ae073-122">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="ae073-122">C# operators</span></span>](index.md)
-- [<span data-ttu-id="ae073-123">可以为 null 的类型</span><span class="sxs-lookup"><span data-stu-id="ae073-123">Nullable Types</span></span>](../../programming-guide/nullable-types/index.md)
-- [<span data-ttu-id="ae073-124">“提升”的准确含义是什么？</span><span class="sxs-lookup"><span data-stu-id="ae073-124">What Exactly Does 'Lifted' mean?</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+  <span data-ttu-id="bb260-112">使用<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>方法如果值为 null 的类型值时要使用`null`应基础值类型的默认值。</span><span class="sxs-lookup"><span data-stu-id="bb260-112">Use the <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> method if the value to be used when a nullable type value is `null` should be the default value of the underlying value type.</span></span>
+
+- <span data-ttu-id="bb260-113">从C#7.0 中，可以使用[`throw`表达式](../keywords/throw.md#the-throw-expression)为要使参数检查代码更加简洁的 null 合并运算符的右侧操作数：</span><span class="sxs-lookup"><span data-stu-id="bb260-113">Starting with C# 7.0, you can use a [`throw` expression](../keywords/throw.md#the-throw-expression) as the right-hand operand of the null-coalescing operator to make the argument-checking code more concise:</span></span>
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  <span data-ttu-id="bb260-114">前面的示例还演示如何使用[expression-bodied 成员](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)定义属性。</span><span class="sxs-lookup"><span data-stu-id="bb260-114">The preceding example also demonstrates how to use [expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) to define a property.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="bb260-115">运算符可重载性</span><span class="sxs-lookup"><span data-stu-id="bb260-115">Operator overloadability</span></span>
+
+<span data-ttu-id="bb260-116">Null 合并运算符无法进行重载。</span><span class="sxs-lookup"><span data-stu-id="bb260-116">The null-coalescing operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="bb260-117">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="bb260-117">C# language specification</span></span>
+
+<span data-ttu-id="bb260-118">有关详细信息，请参阅[null 合并运算符](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)一部分[C#语言规范](~/_csharplang/spec/introduction.md)。</span><span class="sxs-lookup"><span data-stu-id="bb260-118">For more information, see [The null coalescing operator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="bb260-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="bb260-119">See also</span></span>
+
+- [<span data-ttu-id="bb260-120">C# 参考</span><span class="sxs-lookup"><span data-stu-id="bb260-120">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="bb260-121">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="bb260-121">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="bb260-122">C# 运算符</span><span class="sxs-lookup"><span data-stu-id="bb260-122">C# operators</span></span>](index.md)
+- <span data-ttu-id="bb260-123">[?. 和 ?[] 运算符](member-access-operators.md#null-conditional-operators--and-)</span><span class="sxs-lookup"><span data-stu-id="bb260-123">[?. and ?[] operators](member-access-operators.md#null-conditional-operators--and-)</span></span>
+- [<span data-ttu-id="bb260-124">?: 运算符</span><span class="sxs-lookup"><span data-stu-id="bb260-124">?: operator</span></span>](conditional-operator.md)

@@ -2,25 +2,25 @@
 title: 原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: ff5677e84d0a4401c9d3ce8c43e7743385cdd432
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d21397e6885b892f6ac1904e38bd85a78ae07ab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557849"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487598"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a><span data-ttu-id="02dca-102">原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="02dca-102">Atomized XName and XNamespace Objects (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="02dca-103"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 对象进行了原子化；即，如果这两个对象包含相同的限定名，则它们将引用同一个对象。</span><span class="sxs-lookup"><span data-stu-id="02dca-103"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object.</span></span> <span data-ttu-id="02dca-104">这将提高查询性能：当比较两个原子化名称是否相等时，基础中间语言只需确定这两个引用是否指向同一个对象。</span><span class="sxs-lookup"><span data-stu-id="02dca-104">This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object.</span></span> <span data-ttu-id="02dca-105">基础代码不必进行很耗费时间的字符串比较。</span><span class="sxs-lookup"><span data-stu-id="02dca-105">The underlying code does not have to do string comparisons, which would be time consuming.</span></span>  
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a><span data-ttu-id="29c4e-102">原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="29c4e-102">Atomized XName and XNamespace Objects (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="29c4e-103"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 对象进行了原子化  ；即，如果这两个对象包含相同的限定名，则它们将引用同一个对象。</span><span class="sxs-lookup"><span data-stu-id="29c4e-103"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object.</span></span> <span data-ttu-id="29c4e-104">这将提高查询性能：当比较两个原子化的名称相等时，基础中间语言只有以确定两个引用是否指向同一个对象。</span><span class="sxs-lookup"><span data-stu-id="29c4e-104">This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object.</span></span> <span data-ttu-id="29c4e-105">基础代码不必进行很耗费时间的字符串比较。</span><span class="sxs-lookup"><span data-stu-id="29c4e-105">The underlying code does not have to do string comparisons, which would be time consuming.</span></span>  
   
-## <a name="atomization-semantics"></a><span data-ttu-id="02dca-106">原子化语义</span><span class="sxs-lookup"><span data-stu-id="02dca-106">Atomization Semantics</span></span>  
- <span data-ttu-id="02dca-107">原子化是指如果两个 <xref:System.Xml.Linq.XName> 对象具有相同的本地名称并且位于同一个命名空间中，则它们共享相同的实例。</span><span class="sxs-lookup"><span data-stu-id="02dca-107">Atomization means that if two <xref:System.Xml.Linq.XName> objects have the same local name, and they are in the same namespace, they share the same instance.</span></span> <span data-ttu-id="02dca-108">同样，如果两个 <xref:System.Xml.Linq.XNamespace> 对象具有相同的命名空间 URI，则它们共享同一个实例。</span><span class="sxs-lookup"><span data-stu-id="02dca-108">In the same way, if two <xref:System.Xml.Linq.XNamespace> objects have the same namespace URI, they share the same instance.</span></span>  
+## <a name="atomization-semantics"></a><span data-ttu-id="29c4e-106">原子化语义</span><span class="sxs-lookup"><span data-stu-id="29c4e-106">Atomization Semantics</span></span>  
+ <span data-ttu-id="29c4e-107">原子化是指如果两个 <xref:System.Xml.Linq.XName> 对象具有相同的本地名称并且位于同一个命名空间中，则它们共享相同的实例。</span><span class="sxs-lookup"><span data-stu-id="29c4e-107">Atomization means that if two <xref:System.Xml.Linq.XName> objects have the same local name, and they are in the same namespace, they share the same instance.</span></span> <span data-ttu-id="29c4e-108">同样，如果两个 <xref:System.Xml.Linq.XNamespace> 对象具有相同的命名空间 URI，则它们共享同一个实例。</span><span class="sxs-lookup"><span data-stu-id="29c4e-108">In the same way, if two <xref:System.Xml.Linq.XNamespace> objects have the same namespace URI, they share the same instance.</span></span>  
   
- <span data-ttu-id="02dca-109">对于启用原子化对象的类，该类的构造函数必须是私有的，而不是公共的。</span><span class="sxs-lookup"><span data-stu-id="02dca-109">For a class to enable atomized objects, the constructor for the class must be private, not public.</span></span> <span data-ttu-id="02dca-110">这是因为如果构造函数是公共的，则您可以创建非原子化对象。</span><span class="sxs-lookup"><span data-stu-id="02dca-110">This is because if the constructor were public, you could create a non-atomized object.</span></span> <span data-ttu-id="02dca-111"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 类实现一个隐式转换运算符，以将字符串转换为 <xref:System.Xml.Linq.XName> 或 <xref:System.Xml.Linq.XNamespace>。</span><span class="sxs-lookup"><span data-stu-id="02dca-111">The <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> classes implement an implicit conversion operator to convert a string into an <xref:System.Xml.Linq.XName> or <xref:System.Xml.Linq.XNamespace>.</span></span> <span data-ttu-id="02dca-112">这是获取这些对象的实例的方式。</span><span class="sxs-lookup"><span data-stu-id="02dca-112">This is how you get an instance of these objects.</span></span> <span data-ttu-id="02dca-113">不能通过使用构造函数来获得实例，因为构造函数是不可访问的。</span><span class="sxs-lookup"><span data-stu-id="02dca-113">You cannot get an instance by using a constructor, because the constructor is inaccessible.</span></span>  
+ <span data-ttu-id="29c4e-109">对于启用原子化对象的类，该类的构造函数必须是私有的，而不是公共的。</span><span class="sxs-lookup"><span data-stu-id="29c4e-109">For a class to enable atomized objects, the constructor for the class must be private, not public.</span></span> <span data-ttu-id="29c4e-110">这是因为如果构造函数是公共的，则您可以创建非原子化对象。</span><span class="sxs-lookup"><span data-stu-id="29c4e-110">This is because if the constructor were public, you could create a non-atomized object.</span></span> <span data-ttu-id="29c4e-111"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 类实现一个隐式转换运算符，以将字符串转换为 <xref:System.Xml.Linq.XName> 或 <xref:System.Xml.Linq.XNamespace>。</span><span class="sxs-lookup"><span data-stu-id="29c4e-111">The <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> classes implement an implicit conversion operator to convert a string into an <xref:System.Xml.Linq.XName> or <xref:System.Xml.Linq.XNamespace>.</span></span> <span data-ttu-id="29c4e-112">这是获取这些对象的实例的方式。</span><span class="sxs-lookup"><span data-stu-id="29c4e-112">This is how you get an instance of these objects.</span></span> <span data-ttu-id="29c4e-113">不能通过使用构造函数来获得实例，因为构造函数是不可访问的。</span><span class="sxs-lookup"><span data-stu-id="29c4e-113">You cannot get an instance by using a constructor, because the constructor is inaccessible.</span></span>  
   
- <span data-ttu-id="02dca-114"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 还实现相等运算符和不相等运算符，以确定进行比较的两个对象是否引用相同的实例。</span><span class="sxs-lookup"><span data-stu-id="02dca-114"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> also implement the equality and inequality operators, to determine whether the two objects being compared are references to the same instance.</span></span>  
+ <span data-ttu-id="29c4e-114"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 还实现相等运算符和不相等运算符，以确定进行比较的两个对象是否引用相同的实例。</span><span class="sxs-lookup"><span data-stu-id="29c4e-114"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> also implement the equality and inequality operators, to determine whether the two objects being compared are references to the same instance.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="02dca-115">示例</span><span class="sxs-lookup"><span data-stu-id="02dca-115">Example</span></span>  
- <span data-ttu-id="02dca-116">下面的代码创建一些 <xref:System.Xml.Linq.XElement> 对象，并演示相同的名称共享同一个实例。</span><span class="sxs-lookup"><span data-stu-id="02dca-116">The following code creates some <xref:System.Xml.Linq.XElement> objects and demonstrates that identical names share the same instance.</span></span>  
+## <a name="example"></a><span data-ttu-id="29c4e-115">示例</span><span class="sxs-lookup"><span data-stu-id="29c4e-115">Example</span></span>  
+ <span data-ttu-id="29c4e-116">下面的代码创建一些 <xref:System.Xml.Linq.XElement> 对象，并演示相同的名称共享同一个实例。</span><span class="sxs-lookup"><span data-stu-id="29c4e-116">The following code creates some <xref:System.Xml.Linq.XElement> objects and demonstrates that identical names share the same instance.</span></span>  
   
 ```csharp  
 XElement r1 = new XElement("Root", "data1");  
@@ -39,16 +39,16 @@ else
     Console.WriteLine("Different");  
 ```  
   
- <span data-ttu-id="02dca-117">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="02dca-117">This example produces the following output:</span></span>  
+ <span data-ttu-id="29c4e-117">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="29c4e-117">This example produces the following output:</span></span>  
   
 ```  
 r1 and r2 have names that refer to the same instance.  
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  
   
- <span data-ttu-id="02dca-118">如前面所述，原子化对象的好处是：当使用某个采用 <xref:System.Xml.Linq.XName> 作为参数的轴方法时，该轴方法只需确定这两个名称引用同一个实例来选择所需的元素。</span><span class="sxs-lookup"><span data-stu-id="02dca-118">As mentioned earlier, the benefit of atomized objects is that when you use one of the axis methods that take an <xref:System.Xml.Linq.XName> as a parameter, the axis method only has to determine that two names reference the same instance to select the desired elements.</span></span>  
+ <span data-ttu-id="29c4e-118">如前面所述，原子化对象的好处是：当使用某个采用 <xref:System.Xml.Linq.XName> 作为参数的轴方法时，该轴方法只需确定这两个名称引用同一个实例来选择所需的元素。</span><span class="sxs-lookup"><span data-stu-id="29c4e-118">As mentioned earlier, the benefit of atomized objects is that when you use one of the axis methods that take an <xref:System.Xml.Linq.XName> as a parameter, the axis method only has to determine that two names reference the same instance to select the desired elements.</span></span>  
   
- <span data-ttu-id="02dca-119">下面的示例将 <xref:System.Xml.Linq.XName> 传递给 <xref:System.Xml.Linq.XContainer.Descendants%2A> 方法调用，该调用会由于使用原子化模式而获得更好的性能。</span><span class="sxs-lookup"><span data-stu-id="02dca-119">The following example passes an <xref:System.Xml.Linq.XName> to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method call, which then has better performance because of the atomization pattern.</span></span>  
+ <span data-ttu-id="29c4e-119">下面的示例将 <xref:System.Xml.Linq.XName> 传递给 <xref:System.Xml.Linq.XContainer.Descendants%2A> 方法调用，该调用会由于使用原子化模式而获得更好的性能。</span><span class="sxs-lookup"><span data-stu-id="29c4e-119">The following example passes an <xref:System.Xml.Linq.XName> to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method call, which then has better performance because of the atomization pattern.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -67,13 +67,9 @@ foreach (var z in query)
     Console.WriteLine(z);  
 ```  
   
- <span data-ttu-id="02dca-120">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="02dca-120">This example produces the following output:</span></span>  
+ <span data-ttu-id="29c4e-120">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="29c4e-120">This example produces the following output:</span></span>  
   
 ```xml  
 <C1>1</C1>  
 <C1>1</C1>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="02dca-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="02dca-121">See also</span></span>
-
-- [<span data-ttu-id="02dca-122">性能 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="02dca-122">Performance (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
