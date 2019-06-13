@@ -67,11 +67,11 @@ ms.locfileid: "65593432"
 >[!Note]
 > 上面的图像属于维基共享资源，并按如下方式进行属性化：
 >
-> * “220px-Pepperoni_pizza.jpg”公有领域，https://commons.wikimedia.org/w/index.php?curid=79505
-> * “119px-Nalle_-_a_small_brown_teddy_bear.jpg”作者为 [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 独自拍摄，CC BY-SA 2.0，https://commons.wikimedia.org/w/index.php?curid=48166。
-> * “193px-Broodrooster.jpg”作者为 [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自有作品，CC BY-SA 3.0，https://commons.wikimedia.org/w/index.php?curid=27403
+> * “220px-Pepperoni_pizza.jpg”公有领域，[https://commons.wikimedia.org/w/index.php?curid=79505](https://commons.wikimedia.org/w/index.php?curid=79505 )
+> * “119px-Nalle_-_a_small_brown_teddy_bear.jpg”作者为 [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 独自拍摄，CC BY-SA 2.0，[https://commons.wikimedia.org/w/index.php?curid=48166](https://commons.wikimedia.org/w/index.php?curid=48166 )。
+> * “193px-Broodrooster.jpg”作者为 [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自有作品，CC BY-SA 3.0，[https://commons.wikimedia.org/w/index.php?curid=27403](https://commons.wikimedia.org/w/index.php?curid=27403 )
 
-迁移学习包括多种策略，如重新定型所有层策略和倒数第二层策略。 本教程将介绍并展示如何使用倒数第二层策略。 倒数第二层策略重用已预定型的模型来解决具体问题。 然后，此策略重新定型这个模型的最后一层来解决新问题。 重用预定型模型作为新模型的一部分将节省大量时间和资源。
+迁移学习包括多种策略，如重新定型所有层策略  和倒数第二层策略  。 本教程将介绍并展示如何使用倒数第二层策略  。 倒数第二层策略  重用已预定型的模型来解决具体问题。 然后，此策略重新定型这个模型的最后一层来解决新问题。 重用预定型模型作为新模型的一部分将节省大量时间和资源。
 
 图像分类模型重用 [Inception 模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)，这是对 `ImageNet` 数据集定型的热门图像识别模型，其中 TensorFlow 模型尝试将所有图像分类为 1000 个类别，如“雨伞”、“针织衫”和“洗碗机”。
 
@@ -113,7 +113,7 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 定型图像和测试图像位于下载 zip 文件的资产文件夹中。 这些图像属于维基共享资源。
-> [维基共享资源](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208)，免费媒体存储库。 检索时间：2018 年 10 月 17 日 10:48 检索位置：  
+> [维基共享资源](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208)，免费媒体存储库。  检索时间：2018 年 10 月 17 日 10:48 检索位置：  
 > https://commons.wikimedia.org/wiki/Pizza  
 > https://commons.wikimedia.org/wiki/Toaster  
 > https://commons.wikimedia.org/wiki/Teddy_bear  
@@ -124,27 +124,27 @@ toaster2.png    appliance
 
 1. 创建名为“TransferLearningTF”的 **.NET Core 控制台应用程序**。
 
-2. 安装“Microsoft.ML NuGet 包”：
+2. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”。 单击“版本”下拉列表，选择列表中的“1.0.0”包，然后选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。 对 **Microsoft.ML.ImageAnalytics v1.0.0** 和 **Microsoft.ML.TensorFlow v0.12.0** 重复这些步骤。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为“包源”，选择“浏览”选项卡，再搜索“Microsoft.ML”  。 单击“版本”下拉列表，选择列表中的“1.0.0”包，然后选择“安装”按钮    。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。 对 **Microsoft.ML.ImageAnalytics v1.0.0** 和 **Microsoft.ML.TensorFlow v0.12.0** 重复这些步骤。
 
 ### <a name="prepare-your-data"></a>准备数据
 
 1. 下载并解压缩[项目资产目录 zip 文件](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)。
 
-2. 将“`assets`”目录复制到“TransferLearningTF”项目目录中。 此目录及其子目录包含本教程所需的数据和支持文件（Inception 模型除外，将在下一步中下载并添加此模型）。
+2. 将“`assets`”目录复制到“TransferLearningTF”  项目目录中。 此目录及其子目录包含本教程所需的数据和支持文件（Inception 模型除外，将在下一步中下载并添加此模型）。
 
 3. 下载并解压缩 [Inception 模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)。
 
-4. 将刚刚解压缩的“`inception5h`”目录的内容复制到 TransferLearningTF 项目的“`assets\inputs-train\inception`”目录中。 此目录包含本教程所需的模型和其他支持文件，如下图所示：
+4. 将刚刚解压缩的“`inception5h`”目录的内容复制到 TransferLearningTF  项目的“`assets\inputs-train\inception`”目录中。 此目录包含本教程所需的模型和其他支持文件，如下图所示：
 
    ![Inception 目录内容](./media/image-classification/inception-files.png)
 
-5. 在“解决方案资源管理器”中，右键单击资产目录和子目录中的每个文件，再选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+5. 在“解决方案资源管理器”中，右键单击资产目录和子目录中的每个文件，再选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 ### <a name="create-classes-and-define-paths"></a>创建类和定义路径
 
-将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+将以下附加的 `using` 语句添加到“Program.cs”  文件顶部：
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
 
@@ -168,15 +168,15 @@ toaster2.png    appliance
 
 为输入数据和预测结果创建一些类。 向项目添加一个新类：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
 
-1. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“ImageData.cs”。 然后，选择“添加”按钮。
+1. 在“添加新项”  对话框中，选择“类”  ，并将“名称”  字段更改为“ImageData.cs”  。 然后，选择“添加”  按钮。
 
-    此时，ImageData.cs 文件在代码编辑器中打开。 将下面的 `using` 语句添加到 ImageData.cs 顶部：
+    此时，ImageData.cs  文件在代码编辑器中打开。 将下面的 `using` 语句添加到 ImageData.cs  顶部：
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/ImageData.cs#AddUsings)]
 
-删除现有类定义，并将 `ImageData` 类的以下代码添加到 ImageData.cs 文件中：
+删除现有类定义，并将 `ImageData` 类的以下代码添加到 ImageData.cs  文件中：
 
 [!code-csharp[DeclareTypes](../../../samples/machine-learning/tutorials/TransferLearningTF/ImageData.cs#DeclareTypes)]
 
@@ -187,13 +187,13 @@ toaster2.png    appliance
 
 向项目添加 `ImagePrediction` 的新类：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
 
-1. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“ImagePrediction.cs”。 然后，选择“添加”按钮。
+1. 在“添加新项”  对话框中，选择“类”  ，并将“名称”  字段更改为“ImagePrediction.cs”  。 然后，选择“添加”  按钮。
 
-    此时，ImagePrediction.cs 文件在代码编辑器中打开。 删除 ImagePrediction.cs 顶部的 `System.Collections.Generic` 和 `System.Text` `using` 语句：
+    此时，ImagePrediction.cs  文件在代码编辑器中打开。 删除 ImagePrediction.cs  顶部的 `System.Collections.Generic` 和 `System.Text` `using` 语句：
 
-删除现有类定义，并将包含 `ImagePrediction` 类的以下代码添加到 ImagePrediction.cs 文件中：
+删除现有类定义，并将包含 `ImagePrediction` 类的以下代码添加到 ImagePrediction.cs  文件中：
 
 [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/ImagePrediction.cs#DeclareTypes)]
 
@@ -302,7 +302,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
 机器学习算法理解[特征化](../resources/glossary.md#feature)数据，因此在处理深度神经网络时，必须将图像调整为网络所需的格式。 该格式是[数值向量](../resources/glossary.md#numerical-feature-vector)。
 
-定型和评估后，预测“标签”列值。 由于使用的是预定型模型，因此使用 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 方法将字段映射到新模型。 此方法会将 `Label` 转换为数值键类型 (`LabelTokey`) 列，并将它添加为新数据集列：将此命名为 `estimator`，因为还会向它添加定型程序。 添加下一个代码行：
+定型和评估后，预测“标签”  列值。 由于使用的是预定型模型，因此使用 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 方法将字段映射到新模型。 此方法会将 `Label` 转换为数值键类型 (`LabelTokey`) 列，并将它添加为新数据集列：将此命名为 `estimator`，因为还会向它添加定型程序。 添加下一个代码行：
 
 [!code-csharp[MapValueToKey1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey1)]
 
