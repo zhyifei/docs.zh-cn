@@ -16,7 +16,7 @@ ms.locfileid: "66758846"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的数组
 
-数组是一组逻辑相关的值，术语上称之为“元素”。 例如，数组可能包含一个语法学校中每个年级的学生数量；数组的每个元素则是单个年级的学生数量。 同样，数组可能包含的一个班的学生的成绩；数组的每个元素则是一个成绩。
+数组是一组逻辑相关的值，术语上称之为“元素”。  例如，数组可能包含一个语法学校中每个年级的学生数量；数组的每个元素则是单个年级的学生数量。 同样，数组可能包含的一个班的学生的成绩；数组的每个元素则是一个成绩。
 
 可以使用单独的变量来存储每个数据项。 例如，如果应用程序分析学生成绩，则可以使用单独的变量表示每个学生的成绩，如 `englishGrade1`、`englishGrade2` 等等。此方法具有三个主要的限制：
 
@@ -24,7 +24,7 @@ ms.locfileid: "66758846"
 - 处理大量的成绩可导致速度变慢。 反过来，这会使应用程序更有可能出现严重的 bug。
 - 很难维护。 我们添加的每个新成绩都要求应用程序进行修改、重新编译和重新部署。
 
-通过使用数组，可以使用相同的名称代指这些相关值，并使用一个称为“索引”或“下标”的数字来基于各个元素在数组中的位置对其进行标识。 数组索引的范围是从 0 到数组中的总元素数 - 1。当使用 Visual Basic 语法来定义数组的大小时，指定的是其最高的索引值，而不是数组中元素的总数。可以使用数组作为一个单元，利用循环迭代其元素的功能，你将无需在设计时了解数组确切包含多少个元素。
+通过使用数组，可以使用相同的名称代指这些相关值，并使用一个称为“索引”或“下标”的数字来基于各个元素在数组中的位置对其进行标识。   数组索引的范围是从 0 到数组中的总元素数 - 1。 当使用 Visual Basic 语法来定义数组的大小时，指定的是其最高的索引值，而不是数组中元素的总数。 可以使用数组作为一个单元，利用循环迭代其元素的功能，你将无需在设计时了解数组确切包含多少个元素。
 
 在进行说明之前，请看几个简单的示例：
 
@@ -73,7 +73,7 @@ Dim sales()() As Double = New Double(11)() {}
 - 它将值分配给数组中的每个元素。 通过使用数组名称并在括号中包含单个元素的索引访问数组元素。
 - 列出了数组的每个值。 该示例使用 [ `For` ](../../../language-reference/statements/for-next-statement.md) 语句来按索引号访问数组的每个元素。
 
-前面的示例中的数组 `students` 是一维数组，因为它使用一个索引。 使用多个索引或下标的数组称为“多维”。有关详细信息，请参阅本文的其余部分和 [Visual Basic 中的数组维度](../../language-features/arrays/array-dimensions.md)。
+前面的示例中的数组 `students` 是一维数组，因为它使用一个索引。 使用多个索引或下标的数组称为“多维”  。 有关详细信息，请参阅本文的其余部分和 [Visual Basic 中的数组维度](../../language-features/arrays/array-dimensions.md)。
 
 ## <a name="creating-an-array"></a>创建数组
 
@@ -109,7 +109,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-使用类型推理时，数组的类型由文本值列表中的“基准类型”决定。 基准类型是数组中的所有其他类型可以扩大到的类型。如果无法确定此唯一类型，基准类型将是数组中所有其他类型可以缩小到的唯一类型。 如果这两种唯一类型都无法确定，则基准类型是 `Object`。 例如，如果提供给数组文本的值列表包含 `Integer`、`Long` 和 `Double` 类型的值，则生成的数组类型是 `Double`。因为 `Integer` 和 `Long` 仅能扩大到 `Double`，因此 `Double`是基准类型。 有关详细信息，请参阅[扩大和缩小转换](../../language-features/data-types/widening-and-narrowing-conversions.md)。
+使用类型推理时，数组的类型由文本值列表中的“基准类型”决定。  基准类型是数组中的所有其他类型可以扩大到的类型。 如果无法确定此唯一类型，基准类型将是数组中所有其他类型可以缩小到的唯一类型。 如果这两种唯一类型都无法确定，则基准类型是 `Object`。 例如，如果提供给数组文本的值列表包含 `Integer`、`Long` 和 `Double` 类型的值，则生成的数组类型是 `Double`。 因为 `Integer` 和 `Long` 仅能扩大到 `Double`，因此 `Double`是基准类型。 有关详细信息，请参阅[扩大和缩小转换](../../language-features/data-types/widening-and-narrowing-conversions.md)。
 
 > [!NOTE]
 > 仅对定义为本地变量的类型成员的数组，可以使用类型推理。 如果缺少显式类型定义，则数组使用数组文本在类级别定义的类型是`Object[]`。 有关详细信息，请参阅[局部类型推理](../variables/local-type-inference.md)。
@@ -166,11 +166,11 @@ Dim sales()() As Double = New Double(11)() {}
 |维度长度|每个维度的索引均从 0 开始，这意味着其范围为 0 到其上限之间。 因此，给定维度的长度大于该维度的声明的上限。|
 |长度限制|数组每个维度的长度限制为 `Integer` 数据类型的最大值，即 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 或 (2 ^31) - 1。 但是，数组的总大小还受到系统上可用内存的限制。 如果尝试初始化超出可用内存量的数组，则运行时会引发 <xref:System.OutOfMemoryException>。|
 |大小和元素大小|数组的大小独立于其元素的数据类型。 大小始终表示元素的总数，而不是所占用的内存的字节数。|
-|内存消耗|做出关于数组如何存储在内存中的假设是不可靠的。 由于不同数据宽度的平台上的存储会有所变化，因此同一数组在 64 位系统上可以占用比在 32 位系统上更多的内存。 具体取决于数组初始化时的系统配置，公共语言运行时 (CLR) 可以尽可能地将存储分配到靠近包元素的地方，或者将它们全部在自然硬件边界上对齐。 此外，数组需要存储开销的控制信息，而且每添加一个维度，这种开销随之增加。|
+|内存消耗|对于针对数组在内存中的存储情况进行假设，这种做法不可靠的。 由于不同数据宽度的平台上的存储会有所变化，因此同一数组在 64 位系统上可能比在 32 位系统上占用更多内存。 基于初始化数组时的系统配置，公共语言运行时 (CLR) 可能会分配存储空间以尽可能近地将元素打包在一起，或者将它们全部在自然硬件边界上对齐。 此外，数组需要用于其控制信息的存储开销，此开销会在每次增加维度时随之增加。|
 
 ## <a name="the-array-type"></a>数组类型
 
-每个数组具有不同于它的元素的数据类型的数据类型。 没有一种数据类型能用于所有数组。 相反，数组的数据类型由数组的维度数量或 *“排名”* ，以及数组中元素的数据类型确定。 两个数组变量属于相同的数据，仅当它们具有相同的排名并且其元素具有相同的数据类型。 数组的维度的长度不会影响数组数据类型。
+每个数组的数据类型均不同于其元素的数据类型。 没有一种数据类型能用于所有数组。 相反，数组的数据类型由数组的维度数量（或者说“秩”）以及数组中元素的数据类型所决定。  仅当两个数组具有相同的秩并且其元素具有相同的数据类型时，两个数组变量才具有相同的数据类型。 数组的维度的长度不会影响数组的数据类型。
 
 每个数组都继承自 <xref:System.Array?displayProperty=nameWithType> 类，并且可以声明类型为 `Array` 的变量，但不能创建类型为 `Array` 的数组。 例如，虽然下面的代码声明 `arr` 变量的类型为 `Array`，并调用<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 方法以实例化数组，但该数组的实际类型是 Object []。
 
@@ -203,7 +203,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="jagged-arrays"></a>交错数组
 
-有时应用程序中的数据结构是二维而不是矩形。例如，可能会使用数组来存储当月每天高温的相关数据。该数组的第一个维度表示月份，而第二个维度表示天数，并且一个月内的天数是不一致的。“交错数组”（也称为“数组的数组”）就是专为此类方案而设计的。交错数组的元素也是数组。交错数组及其中的每个元素都可以具有一个或多个维度。
+有时应用程序中的数据结构是二维而不是矩形。 例如，可能会使用数组来存储当月每天高温的相关数据。 该数组的第一个维度表示月份，而第二个维度表示天数，并且一个月内的天数是不一致的。 “交错数组”（也称为“数组的数组”）就是专为此类方案而设计的。   交错数组的元素也是数组。 交错数组及其中的每个元素都可以具有一个或多个维度。
 
 以下示例使用月份数组，其中每个元素是天数数组。 该示例使用交错数组，因为不同月份有不同的天数。  示例演示如何创建交错数组，将值分配给它，并检索和显示它的值。
 
@@ -219,7 +219,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="zero-length-arrays"></a>零长度数组
 
-Visual Basic 区分未初始化的数组（其值是`Nothing`）和“零长度数组”或空数组（不包含任何元素）。未初始化的数组不会被确定维度或被赋值。例如：
+Visual Basic 区分未初始化的数组（其值是`Nothing`）和“零长度数组”或空数组（不包含任何元素）。  未初始化的数组不会被确定维度或被赋值。 例如：
 
 ```vb
 Dim arr() As String
@@ -254,11 +254,11 @@ Dim arrZ(-1) As String
 
 一旦确定了拆分数组的一个或多个索引位置，之后即可通过调用 <xref:System.Array.Copy%2A?displayProperty=nameWithType> 方法来创建各个数组。
 
-下面的示例将数组拆分成两个大小大致相等的数组。（如果数组元素的总数为奇数，则第一个数组比第二个数组多一个元素。）
+下面的示例将数组拆分成两个大小大致相等的数组。 （如果数组元素的总数为奇数，则第一个数组比第二个数组多一个元素。）
 
 [!code-vb[splitting-an-array-by-length](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)]
 
-下面的示例根据值为“zzz”的元素（充当数组分隔符）的存在情况将一个字符串数组拆分成两个数组。新数组不包括包含分隔符的元素。
+下面的示例根据值为“zzz”的元素（充当数组分隔符）的存在情况将一个字符串数组拆分成两个数组。 新数组不包括包含分隔符的元素。
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
@@ -299,8 +299,8 @@ Dim arrZ(-1) As String
 |术语|定义|
 |----------|----------------|
 |[Visual Basic 中的数组维度](../../language-features/arrays/array-dimensions.md)|解释数组中的秩和维度。|
-|[如何：初始化数组变量在 Visual Basic 中](../../language-features/arrays/how-to-initialize-an-array-variable.md)|说明如何用初始值填充数组。|
-|[如何：在 Visual Basic 中的对数组进行排序](../../language-features/arrays/how-to-sort-an-array.md)|显示如何按字母先后顺序对数组元素进行排序。|
+|[如何：在 Visual Basic 中初始化数组变量](../../language-features/arrays/how-to-initialize-an-array-variable.md)|说明如何用初始值填充数组。|
+|[如何：在 Visual Basic 中对数组进行排序](../../language-features/arrays/how-to-sort-an-array.md)|演示如何按字母先后顺序对数组元素进行排序。|
 |[如何：将一个数组赋给另一个数组](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|说明将数组分配到另一个数组变量的规则和步骤。|
 |[数组疑难解答](../../language-features/arrays/troubleshooting-arrays.md)|讨论在使用数组时出现的一些常见问题。|
 

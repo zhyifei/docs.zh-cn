@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456712"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486521"
 ---
 # <a name="shadow-copying-assemblies"></a>卷影复制程序集
 借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。 这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。  
@@ -32,7 +32,7 @@ ms.locfileid: "66456712"
   
 - [启用和使用卷影复制](#EnablingAndUsing)描述了卷影复制的基本用法和可用选项。  
   
-- [启动性能](#StartupPerformance)描述了为提高启动性能对 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中的卷影复制进行的更改，以及还原到早期版本的行为的方法。  
+- [启动性能](#StartupPerformance)描述了卷影复制以提高启动性能，以及如何还原到早期版本的行为在.NET Framework 4 中所做的更改。  
   
 - [已过时的方法](#ObsoleteMethods)描述了对控制 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中卷影复制的属性和方法进行的更改。  
   

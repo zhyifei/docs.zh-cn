@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23a05279615a589bca7bb61507caf8dcc3630020
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5388c67b4cc7b493e6662f421ae13ae878c858ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648710"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490015"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>将类型库当作程序集导入
 COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程序集中生成类型元数据。 类型信息的这两种来源具有很大的区别。 本主题将说明从类型库中生成元数据的技术。 生成的程序集称为互操作程序集，其中包含的类型信息允许 .NET Framework 应用程序使用 COM 类型。  
   
  可通过两种方式将此类型信息提供给应用程序：  
   
-- 使用仅设计时互操作程序集：从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可以指示编译器将类型信息从互操作程序集嵌入到可执行文件中。 编译器只嵌入应用程序使用的类型信息。 无需将互操作程序集与应用程序一起部署。 这是推荐采用的方法。  
+- 使用仅设计时互操作程序集：从.NET Framework 4 开始，可以指示编译器将嵌入到可执行文件的互操作程序集的类型信息。 编译器只嵌入应用程序使用的类型信息。 无需将互操作程序集与应用程序一起部署。 这是推荐采用的方法。  
   
 - 部署互操作程序集：创建对互操作程序集的标准引用。 这种情况下，互操作程序集必须与应用程序一起部署。 如果使用此方法且不使用专有 COM 组件，请始终引用由打算并入托管代码中的 COM 组件的创建者发布的主互操作程序集 (PIA)。 有关生成和使用主互操作程序集的详细信息，请参阅[主互操作程序集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
   

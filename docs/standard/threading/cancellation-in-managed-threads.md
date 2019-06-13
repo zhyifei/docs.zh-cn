@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586345"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490785"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
-从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，.NET Framework 在协作取消异步操作或长时间运行的同步操作时使用通过一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
+从.NET Framework 4 开始，.NET Framework 使用协作取消异步操作或长时间运行的同步操作的统一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
   
  用于实现协作取消模型的常规模式是：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65586345"
   
 - 请求对象仅使用一种方法调用，向标记的所有副本发出取消请求。  
   
-- 侦听器可以将多个令牌联接到一个链接令牌，从而同时侦听多个令牌。  
+- 侦听器可以将多个令牌联接到一个链接令牌  ，从而同时侦听多个令牌。  
   
 - 用户代码可以注意并响应来自库代码的取消请求，而库代码可以注意并响应来自用户代码的取消请求。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "65586345"
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- 在面向 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 的新代码中，<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 和 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 都支持在其 `Wait` 方法中使用新的取消框架。 可以将 <xref:System.Threading.CancellationToken>传递给方法，在取消请求发出后，事件就会唤醒并抛出 <xref:System.OperationCanceledException>。  
+ 在面向.NET Framework 4 中，新代码<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>并<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>都支持新的取消框架中其`Wait`方法。 可以将 <xref:System.Threading.CancellationToken>传递给方法，在取消请求发出后，事件就会唤醒并抛出 <xref:System.OperationCanceledException>。  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
@@ -142,7 +142,7 @@ ms.locfileid: "65586345"
   
 - 如果库代码提供了可取消操作，它还应提供接受外部取消标记的公共方法，以便用户代码可以请求取消。  
   
-- 如果库代码调用用户代码，库代码应将 OperationCanceledException(externalToken) 解释为协作取消，不一定要解释为失败异常。  
+- 如果库代码调用用户代码，库代码应将 OperationCanceledException(externalToken) 解释为协作取消  ，不一定要解释为失败异常。  
   
 - 用户委托应尝试及时响应来自库代码的取消请求。  
   

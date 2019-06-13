@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585898"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690308"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
   
 > [!NOTE]
->  在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 之前，发出代码需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标记的<xref:System.Security.Permissions.ReflectionPermission>。 默认情况下，此权限包含在 `FullTrust` 和 `Intranet` 命名权限集中，而不在 `Internet` 权限集中。 因此，只有当库具有 <xref:System.Security.SecurityCriticalAttribute> 特性并对 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 执行了 <xref:System.Security.PermissionSet.Assert%2A> 方法时，才能在部分信任环境下使用该库。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 允许以部分信任形式发出代码而无需发出任何安全请求，因为生成代码本身不是一项特权操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使发出代码的库具有安全-透明性且无需断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，因此编写安全库无需彻底的安全检查。  
+>  .NET Framework 3.5，发出代码需要以前<xref:System.Security.Permissions.ReflectionPermission>与<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>标志。 默认情况下，此权限包含在 `FullTrust` 和 `Intranet` 命名权限集中，而不在 `Internet` 权限集中。 因此，只有当库具有 <xref:System.Security.SecurityCriticalAttribute> 特性并对 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 执行了 <xref:System.Security.PermissionSet.Assert%2A> 方法时，才能在部分信任环境下使用该库。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 .NET Framework 3.5 使发出代码需在部分信任方案中而无需发出任何安全请求，因为生成代码本身不是一项特权的操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使发出代码的库具有安全-透明性且无需断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，因此编写安全库无需彻底的安全检查。  
   
  本演练阐释了以下任务：  
   

@@ -2,15 +2,15 @@
 title: 原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: ff5677e84d0a4401c9d3ce8c43e7743385cdd432
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d21397e6885b892f6ac1904e38bd85a78ae07ab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557849"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487598"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)
-<xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 对象进行了原子化；即，如果这两个对象包含相同的限定名，则它们将引用同一个对象。 这将提高查询性能：当比较两个原子化名称是否相等时，基础中间语言只需确定这两个引用是否指向同一个对象。 基础代码不必进行很耗费时间的字符串比较。  
+<xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 对象进行了原子化  ；即，如果这两个对象包含相同的限定名，则它们将引用同一个对象。 这将提高查询性能：当比较两个原子化的名称相等时，基础中间语言只有以确定两个引用是否指向同一个对象。 基础代码不必进行很耗费时间的字符串比较。  
   
 ## <a name="atomization-semantics"></a>原子化语义  
  原子化是指如果两个 <xref:System.Xml.Linq.XName> 对象具有相同的本地名称并且位于同一个命名空间中，则它们共享相同的实例。 同样，如果两个 <xref:System.Xml.Linq.XNamespace> 对象具有相同的命名空间 URI，则它们共享同一个实例。  
@@ -73,7 +73,3 @@ foreach (var z in query)
 <C1>1</C1>  
 <C1>1</C1>  
 ```  
-  
-## <a name="see-also"></a>请参阅
-
-- [性能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

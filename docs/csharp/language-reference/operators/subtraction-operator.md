@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 9f43a863de69122e251204668af2ea989fcc993c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300087"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816081"
 ---
 # <a name="--and---operators-c-reference"></a>- 和 -= 运算符（C# 参考）
 
@@ -31,12 +31,22 @@ ms.locfileid: "66300087"
 对于[委托](../keywords/delegate.md)类型相同的操作数，`-` 运算符返回如下计算的委托实例：
 
 - 如果两个操作数都为非空，并且第二个操作数的调用列表是第一个操作数调用列表的正确连续子列表，则该操作的结果是通过从第一个操作数的调用列表中删除第二个操作数的条目而获得的新调用列表。 如果第二个操作数的列表与第一个操作数列表中的多个连续子列表匹配，则仅删除最右侧的匹配子列表。 如果删除行为导致出现空列表，则结果为 `null`。
-- 如果第二个操作数的调用列表不是第一个操作数调用列表的正确连续子列表，则该操作的结果是第一个操作数。
+
+  [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+
+- 如果第二个操作数的调用列表不是第一个操作数调用列表的正确连续子列表，则该操作的结果是第一个操作数。 例如，删除不属于多路广播委托的委托不执行任何操作并且会导致不变的多路广播委托。
+
+  [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+
+  前面的示例还演示了，在期间委托删除委托实例进行比较。 例如，从完全相同的评估版生成的委托[lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)是否不相等。 有关委托相等性的详细信息，请参阅[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)一部分[C#语言规范](../language-specification/index.md)。
+
 - 如果第一个操作数为 `null`，则操作结果为 `null`。 如果第二个操作数为 `null`，则操作的结果是第一个操作数。
 
-以下示例显示了 `-` 操作如何执行委托删除：
+  [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-[!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+若要组合的委托，使用[`+`运算符](addition-operator.md#delegate-combination)。
+
+有关委托类型的详细信息，请参阅[委托](../../programming-guide/delegates/index.md)。
 
 ## <a name="subtraction-assignment-operator--"></a>减法赋值运算符 -=
 
@@ -66,7 +76,7 @@ x = x - y
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[一元减运算符](~/_csharplang/spec/expressions.md#unary-minus-operator)和[减法运算符](~/_csharplang/spec/expressions.md#subtraction-operator)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[一元减运算符](~/_csharplang/spec/expressions.md#unary-minus-operator)和[减法运算符](~/_csharplang/spec/expressions.md#subtraction-operator)部分。
 
 ## <a name="see-also"></a>请参阅
 

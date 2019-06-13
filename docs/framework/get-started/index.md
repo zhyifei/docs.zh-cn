@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644034"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690188"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -53,9 +53,9 @@ ms.locfileid: "61644034"
 
 - 如果使用的应用依赖于特定版本的 .NET Framework，则该版本一旦删除，应用就会暂停。
 
-- 一些 .NET Framework 版本是早期版本的就地更新版。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是版本 2.0 的就地更新版，而 .NET Framework 4.8 是版本 4 到版本 4.7.2 的就地更新版。 有关详细信息，请参见 [.NET Framework 版本和依赖关系](../migration-guide/versions-and-dependencies.md)。
+- 一些 .NET Framework 版本是早期版本的就地更新版。 例如，.NET Framework 3.5 是版本 2.0 的就地更新版，而 .NET Framework 4.8 是版本 4 到版本 4.7.2 的就地更新版。 有关详细信息，请参见 [.NET Framework 版本和依赖关系](../migration-guide/versions-and-dependencies.md)。
 
-在 Windows 8 之前版本的 Windows 上，如果选择删除 .NET Framework，请始终通过“控制面板”的“程序及功能”进行卸载。 请勿手动删除某个版本的 .NET Framework。 在 Windows 8 和更高版本的操作系统上，.NET Framework 是一个操作系统组件，不能单独卸载。
+在 Windows 8 之前版本的 Windows 上，如果选择删除 .NET Framework，请始终通过“控制面板”的“程序及功能”进行卸载。  请勿手动删除某个版本的 .NET Framework。 在 Windows 8 和更高版本的操作系统上，.NET Framework 是一个操作系统组件，不能单独卸载。
 
 请注意，一台计算机上可同时存在多个 .NET Framework 版本。 这意味着，你不必卸载旧版本即可安装更新版本。
 

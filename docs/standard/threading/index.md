@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6447cd37e4718093acfb3a0e2db053c13a027d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f51920bceef6e83af4f6ef029eb49ae495a58b9b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62015133"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490853"
 ---
 # <a name="managed-threading"></a>托管线程处理
 无论是要为具有一个还是多个处理器的计算机进行开发，你都希望应用程序能够提供响应最为迅速的用户交互，即使应用程序当前正在执行其他操作，也不例外。 使用多线程执行是让应用程序一直迅速响应用户的最有效方式，同时也是在用户事件之间或在用户事件期间使用处理器的最有效方式。 虽然本部分介绍的是线程基本概念，但将会重点介绍托管线程概念和如何使用托管线程。  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的新并发集合类以及基于任务（而非线程）概念的新编程模型，多线程编程大大得到了简化。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
+>  自 .NET Framework 4 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的新并发集合类以及基于任务（而非线程）概念的新编程模型，多线程编程大大得到了简化。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)  

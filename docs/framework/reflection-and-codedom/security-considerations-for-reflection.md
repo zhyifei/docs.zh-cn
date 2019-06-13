@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457293"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816129"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 通过反射能够获取有关类型和成员的信息，并能访问成员（即，调用方法和构造函数来获取和设置属性值，添加和移除事件处理程序，等等）。 使用反射可以获取有关类型的信息并且成员是不受限制的。 所有代码都可使用反射来执行以下任务：  
@@ -26,7 +26,7 @@ ms.locfileid: "66457293"
   
 - 枚举并检查程序集和模块。  
   
- 与之相反，使用反射来访问成员会受到限制。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，只有受信任的代码才能使用反射来访问关键安全成员。 而且，只有受信任的代码才能使用反射访问无法由已编译代码直接访问的非公共成员。 最后，使用反射访问关键安全成员的代码必须具有关键安全成员要求的任何权限，就像编译的代码一样。  
+ 与之相反，使用反射来访问成员会受到限制。 从.NET Framework 4 开始，仅受信任的代码可以使用反射来访问安全关键成员。 而且，只有受信任的代码才能使用反射访问无法由已编译代码直接访问的非公共成员。 最后，使用反射访问关键安全成员的代码必须具有关键安全成员要求的任何权限，就像编译的代码一样。  
   
  具有一定的权限，代码可以使用反射来执行以下类型的访问：  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66457293"
   
  例如，在沙盒应用程序域中运行的代码被限制于此列表所述的访问权限，除非该应用程序域授予其他权限。  
   
- 从 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 开始，尝试访问通常无法访问的成员将生成目标对象授权集的需求以及带 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 以“完全信任”运行的代码（比如，从命令行启动的应用程序中的代码）始终可以满足这些权限。 （如本文后续部分所述，访问安全关键成员时会受到限制。）  
+ 从.NET Framework 2.0 Service Pack 1 开始，尝试访问通常无法访问的成员将生成加上的目标对象的授予集索要<xref:System.Security.Permissions.ReflectionPermission>与<xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>标志。 以“完全信任”运行的代码（比如，从命令行启动的应用程序中的代码）始终可以满足这些权限。 （如本文后续部分所述，访问安全关键成员时会受到限制。）  
   
  沙盒应用程序域可以向 <xref:System.Security.Permissions.ReflectionPermission> 授予 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志，如本文后续部分中的[访问通常不可访问的成员](#accessingNormallyInaccessible)中所述。  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>访问安全关键成员  
- 一个成员如果具有 <xref:System.Security.SecurityCriticalAttribute>，而它属于具有 <xref:System.Security.SecurityCriticalAttribute> 的类型，或是它在安全关键程序集中，则该成员为安全关键成员。 以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，访问安全关键的成员的规则如下：  
+ 一个成员如果具有 <xref:System.Security.SecurityCriticalAttribute>，而它属于具有 <xref:System.Security.SecurityCriticalAttribute> 的类型，或是它在安全关键程序集中，则该成员为安全关键成员。 从.NET Framework 4 开始，安全关键成员访问的规则如下所示：  
   
 - 透明代码不能使用反射来访问安全关键成员，即使是完全受信任的代码。 引发一个 <xref:System.MethodAccessException>、<xref:System.FieldAccessException> 或 <xref:System.TypeAccessException>。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66457293"
   
 ## <a name="version-information"></a>版本信息  
   
-- 以 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，透明代码不能使用反射访问关键安全成员。  
+- 从.NET Framework 4 开始，透明代码不能使用反射来访问安全关键成员。  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标记在 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 中引入。 早期版本的 .NET Framework 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>标志在.NET Framework 2.0 Service Pack 1 中引入。 早期版本的 .NET Framework 需要使用反射访问非公共成员的代码的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志。 这是绝对不会授予给部分受信任的代码的权限。  
   
 - 以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   

@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b25d35f9c356b6d55806611a3ce39d193b42586
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664577"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491035"
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 类似的数据在作为集合而存储和操作时通常可以得到更高效地处理。 可使用 <xref:System.Array?displayProperty=nameWithType> 类或 <xref:System.Collections>、<xref:System.Collections.Generic>、 <xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命令空间中的类来添加、移除和修改集合中的单个元素或一系列元素。  
   
  有两种主要的集合类型：泛型集合和非泛型集合。 泛型集合被添加在 .NET Framework 2.0 中，并提供编译时类型安全的集合。 因此，泛型集合通常能提供更好的性能。 构造泛型集合时，它们接受类型形参；并在向该集合添加项或从该集合删除项时无需在 <xref:System.Object> 类型间来回转换。  此外，[!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 应用程序支持大多数泛型集合。 非泛型集合将项存储为 <xref:System.Object>，需要强制转换，并且大多数不支持 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 应用程序开发。 但是，你可能会看到在较旧的代码中有非泛型集合。  
   
- 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，<xref:System.Collections.Concurrent> 命名空间中的集合可提供高效的线程安全操作，以便从多个线程访问集合项。 System.Collections.Immutable 命名空间（[NuGet 包](https://www.nuget.org/packages/System.Collections.Immutable)）中的不可变集合类本质上就是线程安全的，因为是在原始集合的副本上执行操作，且不能修改原始集合。  
+ 自 .NET Framework 4 起，<xref:System.Collections.Concurrent> 命名空间中的集合可提供高效的线程安全操作，以便从多个线程访问集合项。 System.Collections.Immutable 命名空间（[NuGet 包](https://www.nuget.org/packages/System.Collections.Immutable)）中的不可变集合类本质上就是线程安全的，因为是在原始集合的副本上执行操作，且不能修改原始集合。  
 
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>常用集合功能  
@@ -32,7 +32,7 @@ ms.locfileid: "64664577"
   
 - **可枚举集合**  
   
-     .NET Framework 集合实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，以启用要循环访问的集合。 可将枚举器看作集合中可指向任何元素的可移动指针。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 语句和  [For Each...Next 语句](../../visual-basic/language-reference/statements/for-each-next-statement.md)使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法公开的枚举器并隐藏操作枚举器的复杂性。 此外，任何实现 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的集合均被认为是可查询类型，并可使用 LINQ 对其进行查询。 LINQ 查询提供数据访问的一个通用模式。 它们通常比标准 `foreach` 循环更简洁、更具可读性，并提供筛选、排序和分组功能。 LINQ 查询还可提高性能。 有关详细信息，请参阅 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、[LINQ 查询 (C#) 简介](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)和[基本查询操作 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
+     .NET Framework 集合实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，以启用要循环访问的集合。 可将枚举器看作集合中可指向任何元素的可移动指针。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 语句和  [For Each...Next 语句](../../visual-basic/language-reference/statements/for-each-next-statement.md)使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法公开的枚举器并隐藏操作枚举器的复杂性。 此外，任何实现 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的集合均被认为是可查询类型，并可使用 LINQ 对其进行查询  。 LINQ 查询提供数据访问的一个通用模式。 它们通常比标准 `foreach` 循环更简洁、更具可读性，并提供筛选、排序和分组功能。 LINQ 查询还可提高性能。 有关详细信息，请参阅 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、[LINQ 查询 (C#) 简介](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)和[基本查询操作 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
   
 - **可将集合内容复制到数组**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "64664577"
   
 - **下限一致**  
   
-     集合的下限是其第一个元素的索引。 <xref:System.Collections> 命名空间中的所有索引集合的下限均为零，这表示它们从 0 开始建立索引。 <xref:System.Array> 默认下限为零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 创建 Array 类的实例时可定义其他下限。  
+     集合的下限是其第一个元素的索引。 <xref:System.Collections> 命名空间中的所有索引集合的下限均为零，这表示它们从 0 开始建立索引。 <xref:System.Array> 默认下限为零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 创建 Array 类的实例时可定义其他下限  。  
   
 - **同步以从多个线程进行访问**（仅 <xref:System.Collections> 类）。  
   

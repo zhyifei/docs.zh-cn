@@ -2,12 +2,12 @@
 title: 如何：联接两个集合 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: fb158427afd59caea5eecdad29fa0a68686f6381
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 893966f3b803b92efbc89a65870623f10195c85f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543651"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485376"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>如何：联接两个集合 (LINQ to XML) (C#)
 XML 文档中的元素或属性有时可以引用另一个其他元素或属性。 例如，[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 文档包含客户列表和订单列表。 每个 `Customer` 元素都包含一个 `CustomerID` 属性。 每个 `Order` 元素都包含一个 `CustomerID` 元素。 每个订单中的 `CustomerID` 元素都引用客户中的 `CustomerID` 属性。  
@@ -27,9 +27,9 @@ XML 文档中的元素或属性有时可以引用另一个其他元素或属性�
   
  此查询首先检索所有 `Customer` 元素，然后将它们联接到 `Order` 元素。 此查询仅选择 `CustomerID` 大于“K”的客户的订单。 然后投影一个新的 `Order` 元素，该元素包含每个订单内的客户信息。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
   
- 本示例使用下面的 XSD 架构：[示例 XSD 文件：客户和订单](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)。  
+ 此示例使用以下 XSD 架构：[示例 XSD 文件：客户和订单](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)。  
   
  请注意，这种方式的联接将不能很好地执行。 联接是通过线性搜索执行的。 没有任何哈希表或索引来帮助改善性能。  
   
@@ -123,7 +123,3 @@ Attempting to validate, custOrdDoc validated
   </Order>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>请参阅
-
-- [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ae3039df2c1260211f4c7ec3e813db1d0c6cd42b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003717"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815934"
 ---
 # <a name="-operator-c-reference"></a>?:运算符（C# 参考）
 
@@ -52,7 +52,7 @@ a ? b : (c ? d : e)
 
 下面的示例演示条件运算符的用法：
 
-[!code-csharp[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>ref 条件表达式
 
@@ -70,7 +70,7 @@ ref 条件表达式与原始的条件运算符相似，仅计算两个表达式�
 
 下面的示例演示 ref 条件表达式的用法：
 
-[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
 有关详细信息，请参阅[功能建议说明](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md)。
 
@@ -78,7 +78,7 @@ ref 条件表达式与原始的条件运算符相似，仅计算两个表达式�
 
 需要根据条件计算值时，在 [if-else](../keywords/if-else.md) 语句中使用条件运算符可以使代码更简洁。 下面的示例演示了将整数归类为负数或非负数的两种方法：
 
-[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -86,7 +86,7 @@ ref 条件表达式与原始的条件运算符相似，仅计算两个表达式�
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[条件运算符](~/_csharplang/spec/expressions.md#conditional-operator)部分。
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的[条件运算符](~/_csharplang/spec/expressions.md#conditional-operator)部分。
 
 ## <a name="see-also"></a>请参阅
 

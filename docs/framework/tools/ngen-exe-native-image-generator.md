@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457426"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489661"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。
 
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中对 Ngen.exe 进行的更改：
+.NET Framework 4 中对 Ngen.exe 的更改：
 
 - Ngen.exe 现在按照完全信任的状态编译程序集，并且不再评估代码访问安全性 (CAS) 策略。
 
@@ -77,7 +77,7 @@ ngen /? | /help
 |操作|说明|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|生成程序集及其依赖项的本机映像，并在本机映像缓存中安装这些映像。<br /><br /> 如果指定了 `/queue`，则操作将排队等待本机映像服务。 默认优先级是 3。 请参见[优先级级别](#PriorityTable)表。|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|从本机映像缓存中删除程序集及其依赖项的本机映像。<br /><br /> 若要卸载单个映像及其依赖项，可使用与安装此映像时相同的命令行自变量。 **注意：** 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，不再支持操作 `uninstall` *。|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|从本机映像缓存中删除程序集及其依赖项的本机映像。<br /><br /> 若要卸载单个映像及其依赖项，可使用与安装此映像时相同的命令行自变量。 **注意：** 从.NET Framework 4，操作开始`uninstall`* 不再受支持。|
 |`update` [`/queue`]|更新已无效的本机映像。<br /><br /> 如果指定了 `/queue`，则更新将排队等待本机映像服务。 更新的优先级总是设定为 3，因此它们在计算机空闲时运行。|
 |`display` [`assemblyName` &#124; `assemblyPath`]|显示程序集及其依赖项的本机映像的状态。<br /><br /> 如果未提供自变量，则显示本机映像缓存中的所有内容。|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> 或<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|
@@ -137,7 +137,7 @@ ngen /? | /help
 若要运行 Ngen.exe，你必须具有管理特权。
 
 > [!CAUTION]
-> 不在未完全受信任的程序集上运行 Ngen.exe。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，Ngen.exe 按照完全信任的状态编译程序集，并且不再评估代码访问安全性 (CAS) 策略。
+> 不在未完全受信任的程序集上运行 Ngen.exe。 从.NET Framework 4 开始，Ngen.exe 将程序集编译以完全信任，并且不再评估代码访问安全性 (CAS) 策略。
 
 从 .NET Framework 4 开始，使用 Ngen.exe 生成的本机映像不再载入到按照部分信任的状态运行的应用程序中。 而是，调用了实时 (JIT) 编译器。
 

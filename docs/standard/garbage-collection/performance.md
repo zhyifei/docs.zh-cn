@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456803"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489594"
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 <a name="top"></a> 本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。  
@@ -44,7 +44,7 @@ ms.locfileid: "66456803"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>垃圾回收 ETW 事件  
- Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供的分析和调试支持提供补充。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)将捕获有用信息，用于从统计的角度来分析托管堆。 例如，在将要发生垃圾回收时引发的 `GCStart_V1` 事件提供了以下信息：  
+ Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供的分析和调试支持提供补充。 从.NET Framework 4，开始[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)捕获分析统计的角度从托管的堆的有用信息。 例如，在将要发生垃圾回收时引发的 `GCStart_V1` 事件提供了以下信息：  
   
 - 正在收集哪一代对象。  
   

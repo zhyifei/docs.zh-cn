@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言的版本 7.0 中的新增功能。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753058"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815967"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
@@ -53,7 +53,7 @@ C# 7.0 向 C# 语言添加了许多新功能：
 
 ## <a name="tuples"></a>元组
 
-C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是，这种丰富的语法有时会需要额外的工作，但益处却很少。 你可能经常编写需要包含多个数据元素的简单结构的方法。 为了支持这些方案，已将元组添加到了 C#。 元组是包含多个字段以表示数据成员的轻量级数据结构。
+C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是，这种丰富的语法有时会需要额外的工作，但益处却很少。 你可能经常编写需要包含多个数据元素的简单结构的方法。 为了支持这些方案，已将元组  添加到了 C#。 元组是包含多个字段以表示数据成员的轻量级数据结构。
 这些字段没有经过验证，并且你无法定义自己的方法
 
 > [!NOTE]
@@ -70,7 +70,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 [!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-在某些时候，你可能想要解包从方法返回的元组的成员。  可通过为元组中的每个值声明单独的变量来实现此目的。 这种解包操作称为解构元组：
+在某些时候，你可能想要解包从方法返回的元组的成员。  可通过为元组中的每个值声明单独的变量来实现此目的。 这种解包操作称为解构元组  ：
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
@@ -86,7 +86,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 ## <a name="discards"></a>弃元
 
-通常，在进行元组解构或使用 `out` 参数调用方法时，必须定义一个其值无关紧要且你不打算使用的变量。 为处理此情况，C# 增添了对弃元的支持。 弃元是一个名为 `_`（下划线字符）的只写变量，可向单个变量赋予要放弃的所有值。 弃元类似于未赋值的变量；不可在代码中使用弃元（赋值语句除外）。
+通常，在进行元组解构或使用 `out` 参数调用方法时，必须定义一个其值无关紧要且你不打算使用的变量。 为处理此情况，C# 增添了对弃元的支持  。 弃元是一个名为 `_`（下划线字符）的只写变量，可向单个变量赋予要放弃的所有值。 弃元类似于未赋值的变量；不可在代码中使用弃元（赋值语句除外）。
 
 在以下方案中支持弃元：
 
@@ -103,7 +103,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 ## <a name="pattern-matching"></a>模式匹配
 
-模式匹配是一种可让你对除对象类型以外的属性实现方法分派的功能。 你可能已经熟悉基于对象类型的方法分派。 在面向对象的编程中，虚拟和重写方法提供语言语法来实现基于对象类型的方法分派。 基类和派生类提供不同的实现。
+模式匹配  是一种可让你对除对象类型以外的属性实现方法分派的功能。 你可能已经熟悉基于对象类型的方法分派。 在面向对象的编程中，虚拟和重写方法提供语言语法来实现基于对象类型的方法分派。 基类和派生类提供不同的实现。
 模式匹配表达式扩展了这一概念，以便你可以通过继承层次结构为不相关的类型和数据元素轻松实现类似的分派模式。
 
 模式匹配支持 `is` 表达式和 `switch` 表达式。 每个表达式都允许检查对象及其属性以确定该对象是否满足所寻求的模式。 使用 `when` 关键字来指定模式的其他规则。
@@ -165,7 +165,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 
 ## <a name="ref-locals-and-returns"></a>Ref 局部变量和返回结果
 
-此功能允许使用并返回对变量的引用的算法，这些变量在其他位置定义。 一个示例是使用大型矩阵并查找具有某些特征的单个位置。 下面的方法在矩阵中向该存储返回“引用”：
+此功能允许使用并返回对变量的引用的算法，这些变量在其他位置定义。 一个示例是使用大型矩阵并查找具有某些特征的单个位置。 下面的方法在矩阵中向该存储返回“引用”  ：
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
@@ -194,7 +194,7 @@ C# 语言还有多个规则，可保护你免于误用 `ref` 局部变量和返�
 
 ## <a name="local-functions"></a>本地函数
 
-许多类的设计都包括仅从一个位置调用的方法。 这些额外的私有方法使每个方法保持小且集中。 本地函数使你能够在另一个方法的上下文内声明方法。 本地函数使得类的阅读者更容易看到本地方法仅从声明它的上下文中调用。
+许多类的设计都包括仅从一个位置调用的方法。 这些额外的私有方法使每个方法保持小且集中。 本地函数使你能够在另一个方法的上下文内声明方法  。 本地函数使得类的阅读者更容易看到本地方法仅从声明它的上下文中调用。
 
 对于本地函数有两个常见的用例：公共迭代器方法和公共异步方法。 这两种类型的方法都生成报告错误的时间晚于程序员期望时间的代码。 在迭代器方法中，只有在调用枚举返回的序列的代码时才会观察到任何异常。 在异步方法中，只有当返回的 `Task` 处于等待状态时才会观察到任何异常。 以下示例演示如何使用本地函数将参数验证与迭代器实现分离：
 
@@ -205,11 +205,11 @@ C# 语言还有多个规则，可保护你免于误用 `ref` 局部变量和返�
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> 本地函数支持的某些设计也可以使用 lambda 表达式来完成。 感兴趣的人可以[阅读有关差异的详细信息](../local-functions-vs-lambdas.md)
+> 本地函数支持的某些设计也可以使用 lambda 表达式  来完成。 感兴趣的人可以[阅读有关差异的详细信息](../local-functions-vs-lambdas.md)
 
 ## <a name="more-expression-bodied-members"></a>更多的 expression-bodied 成员
 
-C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6.md#expression-bodied-function-members)。 C# 7.0 扩展了可作为表达式实现的允许的成员。 在 C# 7.0 中，你可以在属性和索引器上实现构造函数、终结器以及 `get` 和 `set` 访问器。 以下代码演示了每种情况的示例：
+C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6.md#expression-bodied-function-members)。 C# 7.0 扩展了可作为表达式实现的允许的成员。 在 C# 7.0 中，你可以在属性  和索引器  上实现构造函数  、终结器  以及 `get` 和 `set` 访问器。 以下代码演示了每种情况的示例：
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -222,7 +222,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 ## <a name="throw-expressions"></a>引发表达式
 
-在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 为了可以编写任何这些构造，C# 7.0 引入了引发表达式。
+在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 以便您可以编写任何这些构造C#7.0 引入了[ *throw 表达式*](../language-reference/keywords/throw.md#the-throw-expression)。
 
 这使得编写更多基于表达式的代码变得更容易。 不需要其他语句来进行错误检查。
 
@@ -241,7 +241,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 ## <a name="numeric-literal-syntax-improvements"></a>数字文本语法改进
 
-误读的数值常量可能使第一次阅读代码时更难理解。 位掩码或其他符号值容易产生误解。 C# 7.0 包括两项新功能，可用于以最可读的方式写入数字来用于预期用途：二进制文本和数字分隔符。
+误读的数值常量可能使第一次阅读代码时更难理解。 位掩码或其他符号值容易产生误解。 C# 7.0 包括两项新功能，可用于以最可读的方式写入数字来用于预期用途：二进制文本和数字分隔符   。
 
 在创建位掩码时，或每当数字的二进制表示形式使代码最具可读性时，以二进制形式写入该数字：
 

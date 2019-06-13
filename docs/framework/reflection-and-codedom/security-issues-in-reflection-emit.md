@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457306"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816147"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反射发出中的安全问题
 .NET Framework 提供了三种发出 Microsoft 中间语言 (MSIL) 的方式，每种方式都有其自身的安全问题：  
@@ -36,7 +36,7 @@ ms.locfileid: "66457306"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>动态程序集  
- 动态程序集是使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的重载创建的。 此方法的大多数重载在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中已弃用，原因是取消了计算机范围的安全策略。 （请参阅[安全更改](../../../docs/framework/security/security-changes.md)。）其余的重载可由任意代码执行，而无论其信任级别如何。 这些重载分为两组：一组重载指定在创建动态程序集时要对该程序集应用的特性的列表，另一组重载则不会进行相应的指定。 如果没有通过在创建程序集时应用 <xref:System.Security.SecurityRulesAttribute> 属性来指定程序集的透明度模型，则从发出程序集继承透明度模型。  
+ 动态程序集是使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的重载创建的。 在.NET Framework 4 中，原因是取消计算机范围的安全策略的情况下，此方法的大多数重载不推荐使用。 （请参阅[安全更改](../../../docs/framework/security/security-changes.md)。）其余的重载可由任意代码执行，而无论其信任级别如何。 这些重载分为两组：一组重载指定在创建动态程序集时要对该程序集应用的特性的列表，另一组重载则不会进行相应的指定。 如果没有通过在创建程序集时应用 <xref:System.Security.SecurityRulesAttribute> 属性来指定程序集的透明度模型，则从发出程序集继承透明度模型。  
   
 > [!NOTE]
 >  对于在创建动态程序集之后通过使用 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 方法对该程序集应用的特性，只有在将该程序集保存到磁盘并再次加载到内存中之后，这些特性才会起作用。  
@@ -141,14 +141,14 @@ ms.locfileid: "66457306"
 ## <a name="version-information"></a>版本信息  
  从 .NET Framework 4 开始，已取消计算机范围的安全策略，并且安全透明度已成为默认的强制机制。 请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
   
- 从 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 开始，在发出动态程序集和动态方法时不再需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 所有早期版本的 .NET Framework 都需要此标志。  
+ 从.NET Framework 2.0 Service Pack 1，<xref:System.Security.Permissions.ReflectionPermission>与<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>标志时无需再发出动态程序集和动态方法时。 所有早期版本的 .NET Framework 都需要此标志。  
   
 > [!NOTE]
->  默认情况下，带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission> 包含在 `FullTrust` 和 `LocalIntranet` 命名权限集中，而不是在 `Internet` 权限集中。 因此，在 .NET Framework 的早期版本中，仅当库执行 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 时才能与 Internet 权限一起使用。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 允许以部分信任形式发出代码而无需发出任何安全请求，因为生成代码本身不是一项特权操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使得发出代码的库是安全透明的，且不再需要断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，这简化了编写安全库任务。  
+>  默认情况下，带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission> 包含在 `FullTrust` 和 `LocalIntranet` 命名权限集中，而不是在 `Internet` 权限集中。 因此，在 .NET Framework 的早期版本中，仅当库执行 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 时才能与 Internet 权限一起使用。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 .NET Framework 2.0 SP1 允许代码发出在部分信任方案中而无需发出任何安全请求，因为生成代码本身不是一项特权的操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使得发出代码的库是安全透明的，且不再需要断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，这简化了编写安全库任务。  
   
- 此外，[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 引入 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志，用于从部分受信任的动态方法访问非公共类型和成员。 .NET Framework 的早期版本需要访问非公共类型和成员的动态方法的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志；绝不会将该权限授予部分受信任的代码。  
+ 此外，.NET Framework 2.0 SP1 还引入了<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>标志，用于从部分受信任的动态方法访问非公共类型和成员。 .NET Framework 的早期版本需要访问非公共类型和成员的动态方法的 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 标志；绝不会将该权限授予部分受信任的代码。  
   
- 最后，[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 引入了匿名托管的方法。  
+ 最后，.NET Framework 2.0 SP1 引入了匿名托管的方法。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>获取有关类型和成员的信息  
  从 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，获取有关非公共类型和成员信息不再需要任何权限。 使用反射可获取发出动态方法所需的信息。 例如，使用 <xref:System.Reflection.MethodInfo> 对象发出方法调用。 .NET Framework 的早期版本需要使用带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 有关详细信息，请参阅[反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  

@@ -2,12 +2,12 @@
 title: 容器化整体式应用程序
 description: 容器化整体式应用程序虽然无法从微服务体系结构中获得所有好处，但却具有可立即提供的重要部署优势。
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640818"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690541"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整体式应用程序
 
@@ -63,9 +63,9 @@ Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 
 
 **图 4-4**。 将单容器应用程序从 Visual Studio 发布到 Azure 应用服务
 
-如果没有 Docker，需要 Azure 应用服务中不支持的其他功能、框架或依赖项时，则必须等到 Azure 团队更新应用服务中的这些依赖项。 或者必须切换到 Azure Service Fabric、Azure 云服务甚至 VM 等其他服务，你可以在其中获得更进一步的控制权，且可以为应用程序安装所需的组件或框架。
+如果没有 Docker，需要 Azure 应用服务中不支持的其他功能、框架或依赖项时，则必须等到 Azure 团队更新应用服务中的这些依赖项。 另外，还必须切换到其他服务，如 Azure 云服务或 Vm，获得更进一步的控制，其中您可以为应用程序安装的所需的组件或框架。
 
-通过 Visual Studio 2017 中的容器支持，你能够在应用程序环境中包括任何想要的内容，如图 4-4 所示。 由于容器中正在运行此支持，因此如果向应用程序添加依赖项，则可以将依赖项包含在 Dockerfile 或 Docker 映像中。
+Visual Studio 2017 及更高版本的容器支持使您能够包括任何所需在应用程序环境中，在图 4-4 所示。 由于容器中正在运行此支持，因此如果向应用程序添加依赖项，则可以将依赖项包含在 Dockerfile 或 Docker 映像中。
 
 仍然如图 4-4 所示，发布流通过容器注册表发布映像。 这可以是 Azure 容器注册表（一个与 Azure 中的部署密切相关并由 Azure Active Directory 组和帐户保护的注册表），也可以是任何其他 Docker 注册表（如 Docker 中心或本地注册表）。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377742"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490832"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
 
@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>取消异步操作
- 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，支持取消操作的 TAP 方法提供至少一个接受取消令牌（<xref:System.Threading.CancellationToken> 对象）的重载。
+ 从.NET Framework 4 开始，支持取消操作的 TAP 方法提供至少一个接受取消标记的重载 (<xref:System.Threading.CancellationToken>对象)。
 
  可通过取消令牌源（<xref:System.Threading.CancellationTokenSource> 对象）创建取消令牌。  源的 <xref:System.Threading.CancellationTokenSource.Token%2A> 属性返回取消令牌，它在源的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法获得调用收到信号。  例如，若要下载一个网页，并且希望能够取消此操作，请创建 <xref:System.Threading.CancellationTokenSource> 对象，将它的令牌传递给 TAP 方法，再在准备好取消此操作时，调用源的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法：
 

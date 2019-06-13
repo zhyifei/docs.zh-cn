@@ -3,12 +3,12 @@ title: ML.NET CLI 工具中的 auto-train 命令
 description: ML.NET CLI 工具中 auto-train 命令的概述、示例和参考。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557941"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722611"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI 中的“auto-train”命令
 
@@ -228,7 +228,7 @@ CLI 使用 ML.NET AutoML 引擎（NuGet 包）智能搜索最佳质量模型，�
 
 `--max-exploration-time | -x`（字符串）
 
-默认情况下，最长探索时间为 10 秒。
+默认情况下，最大浏览时间为 30 分钟。
 
 此参数设置探索多个训练程序和配置的过程的最长持续时间（以秒为单位）。 如果提供的时间对于单次迭代来说太短（例如 2 秒），则可能会超出配置的时间。 在这种情况下，实际时间是在单次迭代中生成一个模型配置所需的时间。
 

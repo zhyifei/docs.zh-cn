@@ -24,8 +24,6 @@
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
         - name: 何时将 Windows 容器部署到 Windows 容器实例 (ACI)
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-        - name: 何时将 Windows 容器部署到 Service Fabric
-          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
         - name: 何时将 Windows 容器部署到 Azure 容器服务 (ACS-Kubernetes)
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
         - name: 为基于容器的应用程序选择 Azure 计算平台

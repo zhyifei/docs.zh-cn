@@ -1,5 +1,5 @@
 ---
-title: C# 运算符
+title: C# 运算符 - C# 参考
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833272"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025133"
 ---
-# <a name="c-operators"></a>C# 运算符
+# <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
 C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术运算符](arithmetic-operators.md)使用内置数值类型的操作数执行算术运算，[布尔逻辑运算符](boolean-logical-operators.md)使用 [bool](../keywords/bool.md) 操作数执行逻辑运算。
 
@@ -222,7 +222,5 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [C# 编程指南](../../programming-guide/index.md)
-- [C#](../../index.md)
+- [运算符](../../programming-guide/statements-expressions-operators/operators.md)
 - [可重载运算符](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [C# 关键字](../keywords/index.md)

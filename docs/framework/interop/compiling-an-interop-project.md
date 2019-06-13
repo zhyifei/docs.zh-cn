@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf0244060d3c5dfa39c220fc2d699a5f2f1fef9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4369ce9c9ce82ecdbf11d76f3b043778b8374d8b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636192"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489758"
 ---
 # <a name="compiling-an-interop-project"></a>编译互操作项目
 
@@ -24,7 +24,7 @@ ms.locfileid: "65636192"
 
  可以通过以下两种方式引用互操作程序集：
 
-- 嵌入互操作类型：从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 和 Visual Studio 2010 开始，可以指示编译器将类型信息从互操作程序集嵌入到可执行文件中。 这是推荐采用的方法。
+- 嵌入互操作类型：从.NET Framework 4 和 Visual Studio 2010 开始，可以指示编译器将嵌入类型信息从互操作程序集的可执行文件。 这是推荐采用的方法。
 
 - 部署互操作程序集：可通过这种方式创建对互操作程序集的标准引用。 这种情况下，互操作程序集必须与应用程序一起部署。
 
@@ -37,7 +37,7 @@ ms.locfileid: "65636192"
 > [!NOTE]
 > Visual C++ 应用程序无法嵌入类型信息，但它们可以与应用程序或加载项进行互操作。
 
- 若要编译部署时包括主互操作程序集的应用程序，请使用“/reference”编译器开关并指定互操作程序集的名称。
+ 若要编译部署时包括主互操作程序集的应用程序，请使用“/reference”  编译器开关并指定互操作程序集的名称。
 
 ## <a name="see-also"></a>请参阅
 

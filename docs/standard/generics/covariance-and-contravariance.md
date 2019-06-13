@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456848"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490743"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 <a name="top"></a> 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
@@ -59,7 +59,7 @@ ms.locfileid: "66456848"
   
  协变和逆变统称为“变体”  。 未标记为协变或逆变的泛型类型参数称为“固定参数”  。 有关公共语言运行时中变体的事项的简短摘要：  
   
-- 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 类型参数仅限于泛型接口和泛型委托类型。  
+- 在.NET Framework 4 中，variant 类型参数仅限于泛型接口和泛型委托类型。  
   
 - 泛型接口或泛型委托类型可以同时具有协变和逆变类型参数。  
   

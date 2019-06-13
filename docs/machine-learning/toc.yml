@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: 对鸢尾花进行分类（K 平均值聚类分析）
       href: tutorials/iris-clustering.md
-    - name: 影片推荐系统（矩阵因子分解）
-      href: tutorials/movie-recommmendation.md
+    - name: 推荐影片（矩阵因子分解）
+      href: tutorials/movie-recommendation.md
     - name: 图像分类（传输学习）
       href: tutorials/image-classification.md
     - name: 产品销售分析（异常情况检测）

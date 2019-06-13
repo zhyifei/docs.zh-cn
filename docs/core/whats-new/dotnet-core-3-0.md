@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: 8d6ff6bc55384281119600f2323212441c1815e9
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452483"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689250"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0（预览版 5）的新增功能
 
@@ -85,7 +85,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>依赖于 .NET 平台的内部函数
 
-已添加 API，允许访问某些性能导向的 CPU 指令，例如 SIMD 或位操作指令集。 这些指令有助于在某些情况下实现显著的性能改进，例如高效地并行处理数据。 
+已添加 API，允许访问某些性能导向的 CPU 指令，例如 SIMD 或位操作指令集   。 这些指令有助于在某些情况下实现显著的性能改进，例如高效地并行处理数据。 
 
 在适当的情况下，.NET 库已开始使用这些指令来改进性能。
 
@@ -162,7 +162,7 @@ TC 的主要优势是使（重新）实时编译方法能够牺牲代码质量�
 - 环境变量：`DOTNET_ROLL_FORWARD`
 - 命令行参数：`--roll-forward`
 
-必须指定以下值之一。 如果省略该设置，则默认值为“Minor”。
+必须指定以下值之一。 如果省略该设置，则默认值为“Minor”  。
 
 - **LatestPatch**\
 前滚到最高补丁版本。 这会禁用次要版本前滚。
@@ -177,7 +177,7 @@ TC 的主要优势是使（重新）实时编译方法能够牺牲代码质量�
 - **Disable**\
 不前滚。 仅绑定到指定的版本。 建议不要将此策略用于一般用途，因为它会禁用前滚到最新补丁的功能。 该值仅建议用于测试。
 
-除“Disable”设置外，所有设置都将使用可用的最高补丁版本。
+除“Disable”设置外，所有设置都将使用可用的最高补丁版本  。
 
 ## <a name="windows-desktop"></a>Windows 桌面
 
@@ -192,7 +192,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”模板。
+Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”  模板。
 
 有关如何移植现有 .NET Framework 应用程序的详细信息，请参阅[移植 WPF 项目](../porting/wpf.md)和[移植 Windows 窗体项目](../porting/winforms.md)。
 
@@ -364,7 +364,7 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 
 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 类型支持 HTTP/2 协议。 目前已禁用该支持，但可以在使用 <xref:System.Net.Http.HttpClient> 之前通过调用 `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` 来启用。 也可以在运行应用之前通过将 `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` 环境变量设置为 `true` 来启用 HTTP/2 支持。
 
-如果启用 HTTP/2，则将通过 TLS/ALPN 协商 HTTP 协议版本，并且仅在服务器选择使用 HTTP/2 时使用。
+如果启用了 HTTP/2，将通过 TLS/ALPN 协商的 HTTP 协议版本，并将仅使用 HTTP/2，如果服务器选择要使用它。
 
 ## <a name="tls-13--openssl-111-on-linux"></a>Linux 上的 TLS 1.3 和 OpenSSL 1.1.1
 
@@ -376,7 +376,7 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 .NET Core 3.0 在 Linux 系统上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2**（如果可用）。 当 **OpenSSL 1.1.1** 可用时，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 类型都将使用 **TLS 1.3**（假定客户端和服务器都支持 **TLS 1.3**）。
 
 >[!IMPORTANT]
->Windows 和 macOS 尚不支持 TLS 1.3。 当支持可用时，.NET Core 3.0 将在这些操作系统上支持 TLS 1.3。
+>Windows 和 macOS 尚不支持 TLS 1.3  。 当支持可用时，.NET Core 3.0 将在这些操作系统上支持 TLS 1.3  。
 
 下面的 C# 8.0 示例演示在 Ubuntu 18.10 上 .NET Core 3.0 如何连接到 <https://www.cloudflare.com>：
 

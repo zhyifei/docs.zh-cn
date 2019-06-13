@@ -2,15 +2,17 @@
 title: LINQ to XML 概述 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 2394151d855d75b418616d9fa1a6f69b08cdef86
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a9435027a7487af96227fdc7a0eae6f511d82b23
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585725"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484345"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 概述 (C#)
 
+LINQ to XML 提供使用 .NET 语言集成查询 (LINQ) Framework 的内存中 XML 编程接口。 LINQ to XML 使用.NET 功能，相当于更新的和经过重新设计文档对象模型 (DOM) XML 编程接口。 
+ 
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 经过了重新设计，是最新的 XML 编程方法。 它提供文档对象模型 (DOM) 的内存文档修改功能，支持 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式。 尽管这些查询表达式在语法上与 XPath 不同，但它们提供类似的功能。
@@ -114,9 +116,11 @@ new XElement("Contacts",
 );
 ```
 
-有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)。
+有关详细信息，请参阅[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)。
 
 ## <a name="see-also"></a>请参阅
 
+- [参考 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)
+- [LINQ to XML 与DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML 与其他 XML 技术](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>
-- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

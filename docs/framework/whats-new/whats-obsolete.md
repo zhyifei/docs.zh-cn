@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378373"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690472"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 
@@ -43,7 +43,7 @@ ms.locfileid: "66378373"
 
 - 查看有关此技术领域的文档，以确定如何响应弃用情况。
 
-可以选择不针对更高版本的 .NET Framework 重新编译现有代码。 相反，可以指定针对其运行现有已编译代码的 .NET Framework 版本。 例如，假设你有一个名为 app1.exe 并且针对 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 进行了编译的应用程序，但是希望针对 .NET Framework 4.5 运行该应用程序。 这需要执行以下步骤：
+可以选择不针对更高版本的 .NET Framework 重新编译现有代码。 相反，可以指定针对其运行现有已编译代码的 .NET Framework 版本。 例如，假设名为 app1.exe 的针对.NET Framework 3.5 中，已编译的应用程序，但你想要针对.NET Framework 4.5 运行的应用程序。 这需要执行以下步骤：
 
 1. 为主可执行文件创建一个配置文件并将它命名为 *appName*.exe.config，其中 *appName* 是应用程序可执行文件的名称。 对于我们示例中名为 app1.exe 的应用程序，会创建一个名为 app1.exe.config 的配置文件。
 

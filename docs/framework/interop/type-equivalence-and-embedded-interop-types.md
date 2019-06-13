@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219745"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489234"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>类型等效性和嵌入的互操作类型
 
-从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，公共语言运行时支持将 COM 类型的类型信息直接嵌入到托管程序集中，而不要求托管程序集从 Interop 程序集中获取 COM 类型的类型信息。 由于嵌入式类型信息仅包含托管程序集实际使用的类型和成员，因此两个托管程序集可能具有相同 COM 类型的不同视图。 每个托管程序集都有不同的 <xref:System.Type> 对象来表示其 COM 类型视图。 公共语言运行时支持接口、结构、枚举和委托等不同视图之间的类型等效性。
+从.NET Framework 4 开始，公共语言运行时支持嵌入类型信息的 COM 类型直接在托管程序集，而不是要求托管程序集从互操作程序集中获取 COM 类型的类型信息。 由于嵌入式类型信息仅包含托管程序集实际使用的类型和成员，因此两个托管程序集可能具有相同 COM 类型的不同视图。 每个托管程序集都有不同的 <xref:System.Type> 对象来表示其 COM 类型视图。 公共语言运行时支持接口、结构、枚举和委托等不同视图之间的类型等效性。
 
 类型等效性意味着从一个托管程序集传递到另一个托管程序集的 COM 对象可以转换为接收程序集中适当的托管类型。
 

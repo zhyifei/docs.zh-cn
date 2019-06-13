@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01c82f2867097b98b04727592cf72c29712075ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664535"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491012"
 ---
 # <a name="when-to-use-generic-collections"></a>何时使用泛型集合
 通常建议使用泛型集合，因为这样你可以获得类型安全的直接优点而无需从基集合类型派生和实现特定类型的成员。 当集合元素为值类型时，泛型集合类型也通常优于对应的非泛型集合类型（比从非泛型基集合类型派生的类型好），因为使用泛型时不必对元素进行装箱。  
   
- 对于面向 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 或更高版本的程序，你应在多个线程可能会同时向集合添加项或从集合中删除项时使用 <xref:System.Collections.Concurrent> 命名空间中的泛型集合。  
+ 对于面向.NET Framework 4 或更高版本的程序，应使用中的泛型集合类<xref:System.Collections.Concurrent>命名空间时可能会添加多个线程或同时从集合中删除项。  
   
  以下泛型类型对应于现有集合类型：  
   

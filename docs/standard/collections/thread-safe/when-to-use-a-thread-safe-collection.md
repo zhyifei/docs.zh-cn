@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543168"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490988"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>何时使用线程安全集合
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 新引入了五个专为支持多线程添加和删除操作而设计的集合类型。 为了实现线程安全性，这些新类型使用多种高效的锁定和免锁定同步机制。 同步会增加操作的开销。 开销数取决于所用的同步类型、执行的操作类型和其他因素，例如尝试并行访问该集合的线程数。  
+.NET Framework 4 引入了五个新的集合类型专门设计用于支持多线程添加和删除操作。 为了实现线程安全性，这些新类型使用多种高效的锁定和免锁定同步机制。 同步会增加操作的开销。 开销数取决于所用的同步类型、执行的操作类型和其他因素，例如尝试并行访问该集合的线程数。  
   
  在某些方案中，同步开销可忽略不计，使多线程类型的执行速度和缩放水平远远超过其受外部锁保护的非线程安全同等类型。 在其他方案中，开销可能会导致线程安全类型的执行速度和缩放水平与该类型外部锁定的非线程安全版本相同，甚至更差。  
   

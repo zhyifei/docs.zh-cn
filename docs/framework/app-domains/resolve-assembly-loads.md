@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456776"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486972"
 ---
 # <a name="resolving-assembly-loads"></a>解决程序集加载
 .NET Framework 为对程序集加载需要更强控制的应用程序提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 通过处理此事件，应用程序可从常规探测路径外部将程序集加载到加载上下文、从几个程序集版本中选择要加载的版本、发出动态程序集并返回此程序集，等等。 本主题指导如何处理 <xref:System.AppDomain.AssemblyResolve> 事件。  
@@ -52,7 +52,7 @@ ms.locfileid: "66456776"
 > [!NOTE]
 >  处理程序必须将程序集加载到加载源上下文或加载上下文，或加载不具有上下文的程序集。如果处理程序使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 方法将程序集加载到仅限反射的上下文，则引发 <xref:System.AppDomain.AssemblyResolve> 事件的加载尝试将失败。  
   
- 事件处理程序负责返回适当的程序集。 通过将 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 属性值传递到 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 构造函数，处理程序可以解析所请求程序集的显示名称。 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，处理程序可使用 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 属性确定当前请求是否是另一程序集的依赖项。 此信息有助于识别满足依赖关系的程序集。  
+ 事件处理程序负责返回适当的程序集。 通过将 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 属性值传递到 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 构造函数，处理程序可以解析所请求程序集的显示名称。 从.NET Framework 4 开始，可以使用该处理程序<xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>属性来确定当前请求是否为另一个程序集的依赖项。 此信息有助于识别满足依赖关系的程序集。  
   
  事件处理程序返回的程序集版本可能与请求的版本不同。  
   

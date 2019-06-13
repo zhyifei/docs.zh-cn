@@ -2,12 +2,12 @@
 title: 协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 description: 发现用于安排微服务和多容器应用程序以便实现高可伸缩性和可用性的选项，以及 Azure Dev Spaces 在开发 Kubernetes 应用程序生命周期时的可能性。
 ms.date: 09/20/2018
-ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196041"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815837"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -17,7 +17,7 @@ ms.locfileid: "66196041"
 
 ![群集中的组合 Docker 应用程序：为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器是 Docker 的一个实例。一个主机会处理许多容器](./media/image23.png)
 
-图 4-23。 容器群集
+图 4-23  。 容器群集
 
 它看上去类似于逻辑方法。 但是如何处理负载均衡、路由以及如何协调安排这些组合式应用程序呢？
 
@@ -27,9 +27,9 @@ ms.locfileid: "66196041"
 
 从体系结构和开发的角度来看，如果要生成由基于微服务的应用程序组成的大型企业应用程序，则务必了解清楚下面列出的支持高级方案的平台和产品：
 
-**群集和业务流程协调程序。** 如果需要跨多个 Docker 主机扩展应用程序例如生成基于微服务的大型应用程序时，能够通过抽象化基础平台的复杂性来将所有主机作为单个群集管理是至关重要的。 这就是容器群集和业务流程协调程序所提供的功能。 业务流程协调程序的示例包括 Azure Service Fabric 和 Kubernetes。 Kubernetes 通过 Azure Kubernetes 服务在 Azure 中提供。
+**群集和业务流程协调程序。** 如果需要跨多个 Docker 主机扩展应用程序例如生成基于微服务的大型应用程序时，能够通过抽象化基础平台的复杂性来将所有主机作为单个群集管理是至关重要的。 这就是容器群集和业务流程协调程序所提供的功能。 Kubernetes 业务流程协调程序，一个示例，现已推出 Azure 通过 Azure Kubernetes 服务。
 
-**计划程序。** 计划意味着管理员能够在群集中启动容器，如此这些容器也可提供 UI。 群集计划程序具有多个职责：高效使用群集资源、设置用户提供的约束、有效负载均衡节点或主机间的容器，以及在提供高可用性的同时强力解决错误。
+**计划程序。** 计划  意味着管理员能够在群集中启动容器，如此这些容器也可提供 UI。 群集计划程序具有多个职责：高效使用群集资源、设置用户提供的约束、有效负载均衡节点或主机间的容器，以及在提供高可用性的同时强力解决错误。
 
 群集和计划程序的概念密切相关，因此不同供应商提供的产品通常具有这两套功能。 下表显示了适用于群集和计划程序的最重要的平台和软件选项。 通常在公有云（如 Azure）中提供这些业务流程协调程序。
 
@@ -41,9 +41,9 @@ ms.locfileid: "66196041"
 
 > [*Kubernetes*](https://kubernetes.io/) 是一款开源产品，提供各种功能，从群集基础结构和容器计划到安排功能均涵盖在内。 它能实现跨主机群集自动部署、缩放以及执行各种应用程序容器操作。
 >
-> Kubernetes 提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。
+> Kubernetes  提供以容器为中心的基础结构，将应用程序容器分组为逻辑单元，以便管理和发现。
 >
-> Kubernetes 在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。
+> Kubernetes  在 Linux 中的运用已发展成熟，但在 Windows 中相对较弱。
 
 ### <a name="azure-kubernetes-service-aks"></a>Azure Kubernetes 服务 (AKS)
 
@@ -51,31 +51,9 @@ ms.locfileid: "66196041"
 
 > [Azure Kubernetes 服务 (AKS)](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的托管 Kubernetes 容器业务流程服务，简化了 Kubernetes 群集的管理、部署和操作。
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-![Azure Service Fabric 徽标](./media/image27.png)
-
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 是用于生成应用程序的 Microsoft 微服务平台。 它是服务的[业务流程协调程序](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)，可创建计算机群集。 Service Fabric 可将服务作为容器或纯进程进行部署。 它甚至可以在同一应用程序和群集中将进程中的服务与容器中的服务进行组合。
->
-> Service Fabric 群集可以在 Azure 中、本地或任意云中部署。 但是，Azure 中的部署使用托管方法进行了简化。
->
-> Service Fabric 提供其他可选的规定 [Service Fabric 编程模型](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework)（如[有状态服务](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)和 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)）。
->
-> Service Fabric 在 Windows 中的运用已经成熟（已在 Windows 中发展多年），但在 Linux 中相对较弱。
->
-> 自 2017 年以来，Service Fabric 同时支持 Linux 和 Windows 容器。
-
-### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric 网格
-
-![Azure Service Fabric 网格徽标](./media/image35.png)
-
-> [Azure Service Fabric 网格 ](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview)提供与 Service Fabric 相同的可靠性、任务关键性能和规模，但是可提供完全托管的无服务器平台。 无需管理群集、虚拟机、存储或网络配置。 只需专注于应用程序的开发。
->
-> Service Fabric 网格支持 Windows 和 Linux 容器，从而允许使用所选择的任何编程语言和框架进行开发。
-
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>在 Microsoft Azure 中使用基于容器的业务流程协调程序
 
-多家云供应商提供 Docker 容器支持以及 Docker 群集和业务流程支持，包括 Microsoft Azure、Amazon EC2 容器服务和 Google 容器引擎。 Microsoft Azure 通过 Azure Kubernetes 服务 (AKS) 以及 Azure Service Fabric 和 Azure Service Fabric 网格提供 Docker 群集和业务流程协调程序支持。
+多家云供应商提供 Docker 容器支持以及 Docker 群集和业务流程支持，包括 Microsoft Azure、Amazon EC2 容器服务和 Google 容器引擎。 Microsoft Azure 提供 Docker 群集和业务流程协调程序支持通过 Azure Kubernetes 服务 (AKS)。
 
 ## <a name="using-azure-kubernetes-service"></a>使用 Azure Kubernetes 服务
 
@@ -87,7 +65,7 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 ![Kubernetes 群集结构：有一个处理 DNS、计划程序、代理等的主节点，以及多个托管容器的工作节点。](media/image36.png)
 
-图 4-24。 Kubernetes 群集的简化结构和拓扑
+图 4-24  。 Kubernetes 群集的简化结构和拓扑
 
 在图 4-24 中可以看到 Kubernetes 群集的结构，其中主节点（虚拟机）控制群集的大部分协调，可以将容器部署到其余节点，这些节点从应用程序角度来看是作为单个池进行管理，允许扩展到数千甚至是数万个容器。
 
@@ -97,7 +75,7 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 ![Docker 于 2018 年 7 月宣布通过 Docker 桌面对 Kubernetes 群集进行开发计算机支持。](media/image37.png) 
 
-图 4-25。 在开发计算机和云中运行 Kubernetes
+图 4-25  。 在开发计算机和云中运行 Kubernetes
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes 服务 (AKS) 入门 
 
@@ -156,4 +134,4 @@ Azure Dev Spaces 提供了空间这一概念，允许你在相对隔离的环境
 
 >[!div class="step-by-step"]
 >[上一页](resilient-high-availability-microservices.md)
->[下一页](using-azure-service-fabric.md)
+>[下一页](../docker-application-development-process/index.md)

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195563"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690657"
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
 
@@ -56,7 +56,7 @@ ms.locfileid: "66195563"
 
 避免异常的另一方法是，对极为常见的错误案例返回 NULL（或默认值），而不是引发异常。 极其常见的错误案例可被视为常规控制流。 通过在这些情况下返回 NULL（或默认值），可最大程度地减小对应用的性能产生的影响。
 
-对于值类型，是否使用 Nullable<T> 或默认值作为错误指示符是特定应用需要考虑的内容。 通过使用 `Nullable<Guid>`，`default` 变为 `null` 而非 `Guid.Empty`。 有时，添加 `Nullable<T>` 可更加明确值何时存在或不存在。 在其他时候，添加 `Nullable<T>` 可以创建额外的案例以查看不必要的内容，并且仅用于创建潜在的错误源。 
+对于值类型，是否使用`Nullable<T>`也因为错误指示符是值得考虑的特定应用程序的默认值。 通过使用 `Nullable<Guid>`，`default` 变为 `null` 而非 `Guid.Empty`。 有时，添加 `Nullable<T>` 可更加明确值何时存在或不存在。 在其他时候，添加 `Nullable<T>` 可以创建额外的案例以查看不必要的内容，并且仅用于创建潜在的错误源。 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>引发异常而不是返回错误代码
 

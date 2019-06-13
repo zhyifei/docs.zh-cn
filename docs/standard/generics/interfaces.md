@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613800"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487040"
 ---
 # <a name="generic-interfaces"></a>泛型接口
 本主题概述跨泛型类型系列提供通用功能的泛型接口。  
@@ -24,7 +24,7 @@ ms.locfileid: "54613800"
  泛型接口提供与非泛型接口对应的类型安全接口，用于实现排序比较、相等比较以及泛型集合类型所共享的功能。  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，多个泛型接口的类型参数标记为协变或逆变，这为分配和使用实现这些接口的类型提供了更好的灵活性。 请参阅 [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+>  从.NET Framework 4 中，类型参数的多个泛型接口标记为协变或逆变，提供更灵活地分配和使用实现这些接口的类型。 请参阅 [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
 ### <a name="equality-and-ordering-comparisons"></a>相等比较和排序比较  
  在 <xref:System> 命名空间中，<xref:System.IComparable%601?displayProperty=nameWithType> 和 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型接口与它们对应的非泛型接口一样，各自定义了用于排序比较和相等比较的方法。 类型通过实现这些接口来提供执行这些比较的能力。  

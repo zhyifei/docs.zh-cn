@@ -4,12 +4,12 @@ description: 了解如何为机器学习模型选择 ML.NET 算法
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557787"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722630"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何选择 ML.NET 算法
 
@@ -21,7 +21,7 @@ ms.locfileid: "65557787"
 
 算法是执行后可生成**模型**的数学运算。 不同的算法生成具有不同特征的模型。 
 
-借助 ML.NET，同一算法可以应用于不同的任务。 例如，随机下降坐标上升可用于二元分类、多类分类和回归。 区别在于如何解释算法的输出来匹配任务。 
+借助 ML.NET，同一算法可以应用于不同的任务。 例如，随机双协调上移量可用于二元分类、 多类分类和回归。 区别在于如何解释算法的输出来匹配任务。 
 
 对于每个算法/任务组合，ML.NET 提供执行训练算法并进行解释的组件。 这些组件称为训练程序。 例如，<xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> 使用应用于**回归**任务的 **StochasticDualCoordinatedAscent** 算法。
 
@@ -42,7 +42,7 @@ ms.locfileid: "65557787"
 |算法|属性|训练程序|
 |---------|----------|--------|
 |平均感知器|最适合用于文本分类|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|随机下降坐标上升|默认性能良好，不需要调整|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|随机双协调的上升|默认性能良好，不需要调整|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|在有大量特征时使用。 生成逻辑回归训练统计数据，但缩放性能不如 AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |符号随机梯度下降|最快速、最准确的线性二元分类训练程序。 可随处理器数量很好地缩放|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

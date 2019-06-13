@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644896"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490919"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储：线程相关的静态字段和数据槽
 托管线程本地存储 (TLS) 可用于存储对线程和应用域唯一的数据。 .NET Framework 提供了下面两种托管 TLS 使用方式：线程相对静态字段和数据槽。  
@@ -26,7 +26,7 @@ ms.locfileid: "64644896"
   
  在非托管 C++ 中，使用 `TlsAlloc` 动态分配槽，使用 `__declspec(thread)` 声明应在线程相对存储中分配变量。 线程相对静态字段和数据槽提供了此行为的托管版本。  
   
- 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类，创建在首次使用对象时迟缓初始化的线程本地对象。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
+ 在.NET Framework 4 中，你可以使用<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>类，以创建第一次使用该对象时迟缓初始化的线程本地对象。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>托管 TLS 中数据的唯一性  
  无论使用线程相对静态字段，还是使用数据槽，托管 TLS 中的数据都是对线程和应用域唯一的数据。  

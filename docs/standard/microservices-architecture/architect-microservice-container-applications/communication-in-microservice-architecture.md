@@ -2,12 +2,12 @@
 title: 微服务体系结构中的通信
 description: 探索微服务之间的不同通信方式，了解同步和异步方法的含义。
 ms.date: 09/20/2018
-ms.openlocfilehash: 7f7a65ef53d401a8533f82168db5a412d5ac9756
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644352"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690552"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服务体系结构中的通信
 
@@ -39,7 +39,7 @@ ms.locfileid: "65644352"
 
 基于微服务的应用程序通常将使用这些通信样式的组合。 最常见的类型是在调用常规 Web API HTTP 服务时使用 HTTP/HTTPS 等同步协议进行单个接收方通信。 微服务通常也使用消息传送协议在微服务之间进行异步通信。
 
-必须知道这些轴以便清楚了解可能的通信机制，但在构建微服务时，它们就不是那么重要了。 集成微服务时，客户端线程执行的异步特性和所选协议的异步特性都不是重点。 重要的是能够异步集成微服务，同时保持微服务独立性，如下节所述。
+必须知道这些轴以便清楚了解可能的通信机制，但在构建微服务时，它们就不是那么重要了。 集成微服务时，客户端线程执行的异步特性和所选协议的异步特性都不是重点。 重要的是  能够异步集成微服务，同时保持微服务独立性，如下节所述。
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>异步微服务集成强化了微服务的自治性
 
@@ -67,9 +67,9 @@ ms.locfileid: "65644352"
 
 ## <a name="communication-styles"></a>通信样式
 
-根据想要使用的通信类型，有许多可以用于通信的协议和选项。 如果正在使用基于同步请求/响应的通信机制，则 HTTP 和 REST 等协议方法是最常见的，尤其是将服务发布到 Docker 主机或微服务集群之外的情况下。 如果在内部进行服务间的通信（在 Docker 主机或微服务集群中），则还建议使用二进制格式通信机制（例如使用 TCP 和二进制格式的 Service Fabric 远程处理或 WCF）。 或者，可以使用基于消息的异步通信机制，如 AMQP。
+根据想要使用的通信类型，有许多可以用于通信的协议和选项。 如果正在使用基于同步请求/响应的通信机制，则 HTTP 和 REST 等协议方法是最常见的，尤其是将服务发布到 Docker 主机或微服务集群之外的情况下。 如果您在内部 （在 Docker 主机或微服务集群） 的服务之间的通信，可能想要使用二进制格式通信机制 （例如 WCF 使用 TCP 和二进制格式)。 或者，可以使用基于消息的异步通信机制，如 AMQP。
 
-还有 JSON 或 XML 等多种消息格式，或者还有更高效的二进制格式。 如果选择的二进制格式不是标准格式，那么使用该格式公开发布服务可能并不适合。 可以使用非标准格式在微服务之间进行内部通信。 在 Docker 主机或微服务集群（Docker 业务流程协调程序或 Azure Service Fabric）中的微服务之间进行通信时，或与微服务通信的专用客户端应用程序进行通信时，可能需要执行此操作。
+还有 JSON 或 XML 等多种消息格式，或者还有更高效的二进制格式。 如果选择的二进制格式不是标准格式，那么使用该格式公开发布服务可能并不适合。 可以使用非标准格式在微服务之间进行内部通信。 在 Docker 主机或微服务集群 （例如，Docker 业务流程协调程序），或与微服务通信的专用客户端应用程序的微服务之间进行通信时，您可能需要执行此操作。
 
 ### <a name="requestresponse-communication-with-http-and-rest"></a>使用 HTTP 和 REST 进行请求/响应通信
 

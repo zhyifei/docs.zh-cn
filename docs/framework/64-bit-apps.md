@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377977"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815943"
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
   
 ## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>在 Windows 上运行 32 位与64 位应用程序  
- 在 64 位操作系统上，所有基于 .NET Framework 1.0 或 1.1 生成的应用程序都会被视为 32 位应用程序，并始终在 WOW64 和 32 位公共语言运行时 (CLR) 下执行。 基于 [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] 或更晚版本生成的 32 位应用程序在 64 位系统上也会的 WOW64 下运行。  
+ 在 64 位操作系统上，所有基于 .NET Framework 1.0 或 1.1 生成的应用程序都会被视为 32 位应用程序，并始终在 WOW64 和 32 位公共语言运行时 (CLR) 下执行。 基于.NET Framework 4 或更高版本的 32 位应用程序还 WOW64 下运行在 64 位系统上。  
   
  在 x86 计算机上，Visual Studio 会安装 32 位版本的 CLR，而在 64 位 Windows 计算机上会同时安装 32 位版本和适当的 64 位版本的 CLR。 （因为 Visual Studio 是一个 32 位应用程序，所以当安装到 64 位系统上时，它会在 WOW64 下运行。）  
   
 > [!NOTE]
->  由于 Itanium 处理器系列的 x86 仿真和 WOW64 子系统设计，仅限在一个处理器上执行应用程序。 这些因素会降低在基于 Itanium 的系统上运行的 32 位 .NET Framework 应用程序的性能和可伸缩性。 我们建议您使用 [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)]，它包括对基于 Itanium 系统的本机 64 位支持，以提升性能和可伸缩性。  
+>  由于 Itanium 处理器系列的 x86 仿真和 WOW64 子系统设计，仅限在一个处理器上执行应用程序。 这些因素会降低在基于 Itanium 的系统上运行的 32 位 .NET Framework 应用程序的性能和可伸缩性。 我们建议你使用.NET Framework 4 中，包括对基于 Itanium 的系统的本机 64 位支持，以提高的性能和可伸缩性。  
   
  默认情况下，在 64 位 Windows 操作系统上运行 64 位托管应用程序时，您可以创建一个不超过 2 GB 的对象。 然而，在 .NET Framework 4.5 中，你可以增加该限制。  有关详细信息，请参阅 [\<gcAllowVeryLargeObjects> 元素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66377977"
   
 - 有关 64 位 Windows 计算机上的 64 位版 CLR 的详细信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=37079)。  
   
-- 在 [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 文档中，请参阅 [64 位 Windows 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
+- 在 Windows SDK 文档中，请参阅[64 位 Windows 编程指南](https://go.microsoft.com/fwlink/p/?LinkId=253512)。  
   
 - 有关如何下载 64 位版 CLR 的信息，请参阅 MSDN 网站上的 [.NET Framework 开发人员中心下载](https://go.microsoft.com/fwlink/?LinkId=50953)。  
   

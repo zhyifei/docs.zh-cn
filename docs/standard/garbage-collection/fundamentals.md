@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 8d3ac6acf756a0ac468eb4483432467429ed91ca
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457434"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483283"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
@@ -186,7 +186,7 @@ ms.locfileid: "66457434"
   
      工作站垃圾回收既可以是并发的，也可以是非并发的。 并发垃圾回收使托管线程能够在垃圾回收期间继续操作。  
   
-     从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]开始，后台垃圾回收取代了并发垃圾回收。  
+     从.NET Framework 4 开始，后台垃圾回收取代了并发垃圾回收。  
   
 - 服务器垃圾回收，用于需要高吞吐量和可伸缩性的服务器应用程序。 服务器垃圾回收既可以是非并发也可以是背景。  
   
