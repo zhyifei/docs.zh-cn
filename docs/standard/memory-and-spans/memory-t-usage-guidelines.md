@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063279"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834047"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>内存\<T> 和跨度\<T> 使用准则
 
@@ -23,7 +23,7 @@ ms.locfileid: "65063279"
 
 由于可以在各个 API 之间传送缓冲区，以及由于缓冲区有时可以从多个线程进行访问，因此请务必考虑生存期管理。 下面介绍三个核心概念：
 
-- **所有权**。 缓冲区实例的所有者负责生存期管理，包括在不再使用缓冲区时将其销毁。 所有缓冲区都拥有一个所有者。 通常，所有者是创建缓冲区或从工厂接收缓冲区的组件。 所有权也可以转让；组件 A 可以将缓冲区的控制权转让给组件 B，此时组件 A 就无法再使用该缓冲区，组件 B 将负责在不再使用缓冲区时将其销毁。
+- **所有权**。 缓冲区实例的所有者负责生存期管理，包括在不再使用缓冲区时将其销毁。 所有缓冲区都拥有一个所有者。 通常，所有者是创建缓冲区或从工厂接收缓冲区的组件。 所有权也可以转让；  组件 A 可以将缓冲区的控制权转让给组件 B  ，此时  组件 A 就无法再使用该缓冲区，  组件 B 将负责在不再使用缓冲区时将其销毁。
 
 - **使用**。 允许缓冲区实例的使用者通过从中读取并可能写入其中来使用缓冲区实例。 缓冲区一次可以拥有一个使用者，除非提供了某些外部同步机制。 请注意，缓冲区的当前使用者不一定是缓冲区的所有者。
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-`DisplayBufferToConsole` 方法现在几乎适用于每一个能够想到的缓冲区类型：`T[]`，使用 [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) 分配的存储等。 甚至可以向其直接传递 <xref:System.String>！
+`DisplayBufferToConsole` 方法现在几乎适用于每一个能够想到的缓冲区类型：`T[]`，使用 [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) 分配的存储等。 甚至可以向其直接传递 <xref:System.String>！
 
 **规则 3：如果方法接受内存\<T> 并返回 `void`，则在方法返回之后不得使用内存\<T> 实例。**
 
