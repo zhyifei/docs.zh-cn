@@ -26,7 +26,7 @@ ms.locfileid: "66490919"
   
  在非托管 C++ 中，使用 `TlsAlloc` 动态分配槽，使用 `__declspec(thread)` 声明应在线程相对存储中分配变量。 线程相对静态字段和数据槽提供了此行为的托管版本。  
   
- 在.NET Framework 4 中，你可以使用<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>类，以创建第一次使用该对象时迟缓初始化的线程本地对象。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
+ 在 .NET Framework 4 中，可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类，创建在首次使用对象时迟缓初始化的线程本地对象。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>托管 TLS 中数据的唯一性  
  无论使用线程相对静态字段，还是使用数据槽，托管 TLS 中的数据都是对线程和应用域唯一的数据。  

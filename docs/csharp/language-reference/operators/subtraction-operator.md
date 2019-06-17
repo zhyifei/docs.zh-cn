@@ -34,17 +34,17 @@ ms.locfileid: "66816081"
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- 如果第二个操作数的调用列表不是第一个操作数调用列表的正确连续子列表，则该操作的结果是第一个操作数。 例如，删除不属于多路广播委托的委托不执行任何操作并且会导致不变的多路广播委托。
+- 如果第二个操作数的调用列表不是第一个操作数调用列表的正确连续子列表，则该操作的结果是第一个操作数。 例如，删除不属于多播委托的委托不会执行任何操作，从而导致不变的多播委托。
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  前面的示例还演示了，在期间委托删除委托实例进行比较。 例如，从完全相同的评估版生成的委托[lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)是否不相等。 有关委托相等性的详细信息，请参阅[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)一部分[C#语言规范](../language-specification/index.md)。
+  前面的示例还演示了在删除委托期间对委托实例进行比较。 例如，通过计算相同的 [Lambda 表达式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)生成的委托不相等。 有关委托相等性的详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[委托相等运算符](~/_csharplang/spec/expressions.md#delegate-equality-operators)部分。
 
 - 如果第一个操作数为 `null`，则操作结果为 `null`。 如果第二个操作数为 `null`，则操作的结果是第一个操作数。
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-若要组合的委托，使用[`+`运算符](addition-operator.md#delegate-combination)。
+若要合并委托，请使用 [`+` 运算符](addition-operator.md#delegate-combination)。
 
 有关委托类型的详细信息，请参阅[委托](../../programming-guide/delegates/index.md)。
 

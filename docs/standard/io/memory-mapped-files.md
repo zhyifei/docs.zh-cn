@@ -19,7 +19,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66487051"
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
-内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 从.NET Framework 4 开始，你可以使用托管的代码与本机 Windows 函数访问内存映射文件相同的方式访问内存映射文件，如中所述[像文件](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))。  
+内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 从 .NET Framework 4 开始，可以使用托管代码访问内存映射文件，就像本机 Windows 函数访问内存映射文件（如[管理内存映射文件](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))所述）一样。  
   
  内存映射文件分为两种类型：  
   

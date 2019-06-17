@@ -33,7 +33,7 @@ ms.locfileid: "66490005"
 >
 > .NET Framework 版本和 CLR 版本之间存在差异：
 > - .NET Framework 版本基于构成 .Net Framework 类库的一组程序集。 例如，.NET Framework 版本包括 4.5、4.6.1 和 4.7.2。
->- CLR 版本基于 .NET Framework 应用程序执行的运行时。 单个 CLR 版本通常可支持多个 .NET Framework 版本。 例如，为 CLR 版本 4.0.30319。*xxxxx*支持.NET Framework 版本 4 到 4.5.2，其中*xxxxx*是小于 42000，并且 CLR 版本 4.0.30319.42000 支持.NET Framework 版本从.NET Framework 4.6 开始。
+>- CLR 版本基于 .NET Framework 应用程序执行的运行时。 单个 CLR 版本通常可支持多个 .NET Framework 版本。 例如，CLR 版本 4.0.30319.*xxxxx* 支持 .NET Framework 版本 4 到 4.5.2（其中 *xxxxx* 小于 42000），而 CLR 版本 4.0.30319.42000 支持从 .NET Framework 4.6 开始的 .NET Framework 版本。
 >
 > 有关版本的详细信息，请参见 [.NET Framework 版本和依赖关系](versions-and-dependencies.md)。
 
@@ -90,7 +90,7 @@ ms.locfileid: "66490005"
 |.NET Framework 4.7|在 Windows 10 创意者更新上：460798<br />在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：460805|
 |.NET Framework 4.7.1|在 Windows 10 Fall Creators Update 和 Windows Server 版本 1709 上：461308<br/>在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：461310|
 |.NET Framework 4.7.2|在 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上：461808<br/>在除 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有 Windows 操作系统上：461814|
-|.NET Framework 4.8|在 Windows 10 2019 年 5 更新：528040<br/>对所有其他 Windows 操作系统 （包括其他 Windows 10 操作系统的系统）：528049|
+|.NET Framework 4.8|在 Windows 10 2019 年 5 月更新上：528040<br/>在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：528049|
 
 可以使用这些值，如下所示：
 
@@ -204,7 +204,7 @@ ms.locfileid: "66490005"
 
     返回的 `System.Version` 对象标识当前正在执行代码的运行时版本。 它不返回计算机上可能已安装的程序集版本或运行时的其他版本。
 
-    .NET Framework 版本 4、 4.5、 4.5.1 和 4.5.2，所返回的字符串表示形式<xref:System.Version>对象具有窗体 4.0.30319。*xxxxx*，其中*xxxxx*是小于 42000。 对于 .NET Framework 4.6 及更高版本，它的格式为 4.0.30319.42000。
+    对于 .NET Framework 版本 4、4.5、4.5.1 和 4.5.2，返回的 <xref:System.Version> 对象的字符串表示形式为 4.0.30319. *xxxxx*（其中 *xxxxx* 小于 42000）。 对于 .NET Framework 4.6 及更高版本，它的格式为 4.0.30319.42000。
 
 2. 获得 `Version` 对象后，按如下方式查询：
 

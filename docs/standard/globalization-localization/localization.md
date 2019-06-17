@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbe7a2c4e920021c925a13ae8873124bfdb6fd67
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 79ec24d16b43bd8e1312b3425e618adf163edd24
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441939"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834026"
 ---
 # <a name="localization"></a>本地化
 
@@ -31,7 +31,7 @@ ms.locfileid: "56441939"
 
 对于应用的每个本地化版本，请添加新的附属程序集，其中包含转换为目标区域性的相应语言的本地化用户界面块。 所有区域性的代码块应保持不变。 用户界面块的本地化版本和代码块组合生成了应用的本地化版本。
 
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供了 Windows 窗体资源编辑器 (Winres.exe)，以便于针对目标区域性快速本地化 Windows 窗体。 若要了解如何使用此工具，请参阅 [Winres.exe（Windows 窗体资源编辑器）](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。
+Windows 软件开发工具包 (SDK) 提供了 Windows 窗体资源编辑器 (Winres.exe)，以便于针对目标区域性快速本地化 Windows 窗体。 若要了解如何使用此工具，请参阅 [Winres.exe（Windows 窗体资源编辑器）](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。
 
 ## <a name="see-also"></a>请参阅
 

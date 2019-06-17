@@ -146,7 +146,7 @@ API 管理系统中提供的见解有助于理解 API 的使用方式与性能�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) 是一个轻型 API 网关，推荐用于更简单的方法。 Ocelot 是一个基于 .NET Core 的开放源代码 API 网关，专为在其系统中需要统一入口点的微服务体系结构打造。 它轻型、快速且可缩放，并在许多其他功能中提供路由和身份验证。
 
-若要选择的 Ocelot 的主要原因[eShopOnContainers 引用应用程序](https://github.com/dotnet-architecture/eShopOnContainers)是因为 Ocelot 是一个.NET Core 轻量 API 网关，可以将它们部署到要在其中部署的相同应用程序部署环境微服务/容器，例如 Docker 主机、 Kubernetes，等等。并且由于它基于 .NET Core，因此将允许你跨平台在 Linux 或 Windows 上进行部署。
+在 [eShopOnContainers 引用应用程序](https://github.com/dotnet-architecture/eShopOnContainers)中选用 Ocelot 的主要原因是因为 Ocelot 是一个 .NET Core 轻型 API 网关，你可以将其部署到要在其中部署微服务/容器的同一应用程序部署环境，如 Docker 主机、Kubernetes 等。并且由于它基于 .NET Core，因此将允许你跨平台在 Linux 或 Windows 上进行部署。
 
 前面的图表显示在容器中运行自定义 API 网关，正是你在容器和基于微服务的应用程序中运行 Ocelot 的方式。
 

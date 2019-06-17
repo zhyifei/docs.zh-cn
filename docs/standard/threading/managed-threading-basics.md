@@ -24,7 +24,7 @@ ms.locfileid: "66486338"
  本节中的剩余主题涵盖了高级主题，其中包括托管线程与 Windows 操作系统的交互。  
   
 > [!NOTE]
->  .NET Framework 4，任务并行库和 PLINQ 中提供在多线程程序中的任务和数据并行性 Api。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
+>  在 .NET Framework 4 中，任务并行库和 PLINQ 提供了多线程程序中的任务并行和数据并行 API。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本节内容
 

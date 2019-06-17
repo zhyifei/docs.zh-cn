@@ -4,12 +4,12 @@ description: 了解 .NET 如何将类型封送到本机表示形式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065960"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041784"
 ---
 # <a name="type-marshaling"></a>类型封送
 
@@ -79,6 +79,20 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 如果这些默认设置不执行所需的操作，则可以自定义参数的封送方式。 [参数封送](customize-parameter-marshaling.md)一文介绍自定义不同参数类型的封送方式的具体步骤。
+
+## <a name="default-marshaling-in-com-scenarios"></a>COM 方案中的默认封送
+
+在 .NET 中调用 COM 对象上的方法时，.NET 运行时会更改默认封送规则，以匹配常见的 COM 语义。 下表列出了 .NET 运行时在 COM 方案中使用的规则：
+
+| .NET 类型 | 本机类型（COM 方法调用） |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| 委托类型 | 在 .NET Framework 中为 `_Delegate*`。 .NET Core 中不允许使用。 |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| .NET 数组 | `SAFEARRAY`                   |
+| `string[]` | `BSTR` 的 `SAFEARRAY`        |
 
 ## <a name="marshaling-classes-and-structs"></a>封送类和结构
 

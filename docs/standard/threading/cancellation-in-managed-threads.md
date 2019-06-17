@@ -18,7 +18,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66490785"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
-从.NET Framework 4 开始，.NET Framework 使用协作取消异步操作或长时间运行的同步操作的统一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
+从 .NET Framework 4 开始，.NET Framework 在协作取消异步操作或长时间运行的同步操作时使用统一的模型。 此模型基于被称为取消标记的轻量对象。 调用一个或多个可取消操作的对象（例如通过创建新线程或任务）将标记传递给每个操作。 单个操作反过来可将标记的副本传递给其他操作。 稍后，创建标记的对象可使用此标记请求停止执行操作内容。 只有发出请求的对象，才能发出取消请求，而每个侦听器负责侦听是否有请求，并及时适当地响应请求。  
   
  用于实现协作取消模型的常规模式是：  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66490785"
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- 在面向.NET Framework 4 中，新代码<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>并<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>都支持新的取消框架中其`Wait`方法。 可以将 <xref:System.Threading.CancellationToken>传递给方法，在取消请求发出后，事件就会唤醒并抛出 <xref:System.OperationCanceledException>。  
+ 在面向 .NET Framework 4 的新代码中，<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 和 <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 都支持在其 `Wait` 方法中使用新的取消框架。 可以将 <xref:System.Threading.CancellationToken>传递给方法，在取消请求发出后，事件就会唤醒并抛出 <xref:System.OperationCanceledException>。  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

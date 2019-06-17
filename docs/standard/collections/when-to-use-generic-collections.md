@@ -18,7 +18,7 @@ ms.locfileid: "66491012"
 # <a name="when-to-use-generic-collections"></a>何时使用泛型集合
 通常建议使用泛型集合，因为这样你可以获得类型安全的直接优点而无需从基集合类型派生和实现特定类型的成员。 当集合元素为值类型时，泛型集合类型也通常优于对应的非泛型集合类型（比从非泛型基集合类型派生的类型好），因为使用泛型时不必对元素进行装箱。  
   
- 对于面向.NET Framework 4 或更高版本的程序，应使用中的泛型集合类<xref:System.Collections.Concurrent>命名空间时可能会添加多个线程或同时从集合中删除项。  
+ 对于面向 .NET Framework 4 或更高版本的程序，应在多个线程可能会同时向集合添加项或从集合中删除项时使用 <xref:System.Collections.Concurrent> 命名空间中的泛型集合类。  
   
  以下泛型类型对应于现有集合类型：  
   

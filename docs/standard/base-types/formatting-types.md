@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751110"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026029"
 ---
 # <a name="formatting-types-in-net"></a>设置 .NET 中类型的格式
 
@@ -123,7 +123,7 @@ ms.locfileid: "64751110"
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> 从 [!INCLUDE[win81](../../../includes/win81-md.md)] 开始，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 包括了具有单个方法 ([IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A)) 的 <xref:Windows.Foundation.IStringable> 接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关更多信息，请参见 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 参考页上的“ `IStringable` 和 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 接口”部分。
+> 从 [!INCLUDE[win81](../../../includes/win81-md.md)] 开始，Windows 运行时包括了具有单个方法 ([IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A)) 的 <xref:Windows.Foundation.IStringable> 接口，用于提供默认格式支持。 但是，我们建议托管类型不实现 `IStringable` 接口。 有关详细信息，请参阅 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 参考页上的“Windows 运行时和 `IStringable` 接口”部分。
 
 由于除接口以外的所有类型都派生自 <xref:System.Object>，因此会向自定义类或结构自动提供此功能。 但是，默认的 `ToString` 方法提供的功能限于：尽管它标识类型，但无法提供有关类型实例的任何信息。 若要提供可提供该对象相关信息的对象的字符串表示形式，必须重写 `ToString` 方法。
 

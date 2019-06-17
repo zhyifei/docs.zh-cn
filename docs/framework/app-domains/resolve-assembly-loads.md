@@ -52,7 +52,7 @@ ms.locfileid: "66486972"
 > [!NOTE]
 >  处理程序必须将程序集加载到加载源上下文或加载上下文，或加载不具有上下文的程序集。如果处理程序使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 方法将程序集加载到仅限反射的上下文，则引发 <xref:System.AppDomain.AssemblyResolve> 事件的加载尝试将失败。  
   
- 事件处理程序负责返回适当的程序集。 通过将 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 属性值传递到 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 构造函数，处理程序可以解析所请求程序集的显示名称。 从.NET Framework 4 开始，可以使用该处理程序<xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>属性来确定当前请求是否为另一个程序集的依赖项。 此信息有助于识别满足依赖关系的程序集。  
+ 事件处理程序负责返回适当的程序集。 通过将 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 属性值传递到 <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> 构造函数，处理程序可以解析所请求程序集的显示名称。 从 .NET Framework 4 开始，处理程序可使用 <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 属性确定当前请求是否是另一程序集的依赖项。 此信息有助于识别满足依赖关系的程序集。  
   
  事件处理程序返回的程序集版本可能与请求的版本不同。  
   

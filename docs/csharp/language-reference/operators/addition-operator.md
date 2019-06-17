@@ -1,5 +1,5 @@
 ---
-title: + 和 + = 运算符的C#引用
+title: + 和 += 运算符 - C# 参考
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67025314"
 ---
-# <a name="-and--operators-c-reference"></a>+ 和 + = 运算符 (C#引用)
+# <a name="-and--operators-c-reference"></a>+ 和 += 运算符（C# 参考）
 
 `+` 运算符受内置数字类型、[字符串](../keywords/string.md)类型和[委托](../keywords/delegate.md)类型的支持。
 
@@ -43,7 +43,7 @@ ms.locfileid: "67025314"
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
-若要执行委托移除，请使用[`-`运算符](subtraction-operator.md#delegate-removal)。
+若要执行委托删除，请使用 [`-` 运算符](subtraction-operator.md#delegate-removal)。
 
 有关委托类型的详细信息，请参阅[委托](../../programming-guide/delegates/index.md)。
 

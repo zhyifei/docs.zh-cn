@@ -16,11 +16,11 @@ ms.locfileid: "66816057"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>从 .NET Framework 1.1 迁移
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] 和更高版本的 Windows 操作系统不支持.NET Framework 1.1。 因此，面向.NET Framework 1.1 的应用程序将不运行而无需修改[!INCLUDE[win7](../../../includes/win7-md.md)]或更高版本的操作系统版本。 本主题讨论要运行的应用程序面向.NET Framework 1.1 下所需的步骤[!INCLUDE[win7](../../../includes/win7-md.md)]和更高版本的 Windows 操作系统。 有关.NET Framework 1.1 的详细信息和[!INCLUDE[win8](../../../includes/win8-md.md)]，请参阅[在 Windows 8 和更高版本上运行.NET Framework 1.1 应用程序](../../../docs/framework/install/run-net-framework-1-1-apps.md)。
+[!INCLUDE[win7](../../../includes/win7-md.md)] 及更高版本的 Windows 操作系统不支持 .NET Framework 1.1。 因此，面向 .NET Framework 1.1 的应用程序在未进行修改的情况下将不会在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更高版本的操作系统上运行。 本主题介绍了在 [!INCLUDE[win7](../../../includes/win7-md.md)] 及更高版本的 Windows 操作系统控制下运行面向 .NET Framework 1.1 的应用程序时需要执行的步骤。 有关 .NET Framework 1.1 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 的详细信息，请参阅[在 Windows 8 及更高版本上运行 .NET Framework 1.1 应用](../../../docs/framework/install/run-net-framework-1-1-apps.md)。
 
 ## <a name="retargeting-or-recompiling"></a>重定目标或重新编译
 
-有两种方法可以在编译时使用.NET Framework 1.1 上运行的应用程序[!INCLUDE[win7](../../../includes/win7-md.md)]或更高版本的 Windows 操作系统：
+可通过两种方式让使用 .NET Framework 1.1 编译的应用程序在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更高版本的 Windows 操作系统上运行：
 
 - 你可以重定向应用程序以在 .NET Framework 4 及更高版本中运行。 重定向要求将 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素添加到应用程序的配置文件中，以允许它在 .NET Framework 4 及更高版本中运行。 此配置文件采用以下形式：
 
@@ -36,15 +36,15 @@ ms.locfileid: "66816057"
 
 无论您是想重新编译应用程序还是重定应用程序的目标，都必须确定应用程序是否会受更高版本的 .NET Framework 中引入的任何更改的影响。 这些更改分为两类：
 
-- .NET Framework 1.1 和更高版本的.NET Framework 之间的重大更改。
+- .NET Framework 1.1 与更高版本的 .NET Framework 之间存在的重大更改。
 
-- 类型和类型成员已标记为已弃用或过时的.NET Framework 1.1 和更高版本的.NET Framework 之间。
+- .NET Framework 1.1 与更高版本的 .NET Framework 之间已标记为弃用或过时的类型和类型成员。
 
-无论你的应用程序重定目标还是重新编译它时，应查看的重大更改和过时的类型和每个版本的.NET Framework 在.NET Framework 1.1 之后发布的成员。
+无论重定应用程序的目标还是重新编译应用程序，都应查看 .NET Framework 1.1 之后发布的各个版本的 .NET Framework 的重大更改和已过时类型和成员。
 
 ## <a name="breaking-changes"></a>重大更改
 
-发生重大更改时，解决方法可能对重定目标的应用程序和重新编译的应用程序都可用，这取决于具体的更改。 在某些情况下，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素中添加子元素，从而还原旧行为。 例如，下面的配置文件将还原字符串排序和比较行为在.NET Framework 1.1 中使用，并可以在使用重定目标或重新编译应用程序。
+发生重大更改时，解决方法可能对重定目标的应用程序和重新编译的应用程序都可用，这取决于具体的更改。 在某些情况下，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素中添加子元素，从而还原旧行为。 例如，下面的配置文件将还原 .NET Framework 1.1 中使用的字符串排序和比较行为，可以将该文件与重定目标的应用程序或重新编译的应用程序一起使用。
 
 ```xml
 <configuration>
@@ -58,9 +58,9 @@ ms.locfileid: "66816057"
 
 若要评估重大更改对应用程序产生的影响，您必须查看以下更改列表：
 
-- [.NET Framework 2.0 中的重大更改](https://go.microsoft.com/fwlink/?LinkId=125263)文档可能会影响面向.NET Framework 1.1 应用程序的.NET Framework 2.0 SP1 中的更改。
+- [.NET Framework 2.0 中的重大更改](https://go.microsoft.com/fwlink/?LinkId=125263)记录了 .NET Framework 2.0 SP1 中会影响面向 .NET Framework 1.1 的应用程序的更改。
 
-- [.NET Framework 3.5 SP1 中的更改](https://go.microsoft.com/fwlink/?LinkID=186989).NET Framework 3.5 之间的更改和[!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)]。
+- [.NET Framework 3.5 SP1 中的更改](https://go.microsoft.com/fwlink/?LinkID=186989)记录了 .NET Framework 3.5 和 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 之间的更改。
 
 - [.NET Framework 4 迁移问题](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)记录了 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 和 .NET Framework 4 之间的更改。
 
@@ -68,4 +68,4 @@ ms.locfileid: "66816057"
 
 弃用的类型和成员对重定目标的应用程序和重新编译的应用程序产生的影响略有不同。 使用已过时的类型和成员将不会影响重定目标的应用程序，除非已从其程序集中物理删除这些过时的类型或成员。 重新编译使用过时的类型或成员的应用程序通常会产生编译器警告而不是编译器错误。 但某些情况下会产生编译器错误，且无法成功编译使用过时的类型或成员的代码。 在此情况下，你必须先重新编写调用过时的类型或成员的源代码，然后再重新编译应用程序。 若要详细了解已过时类型和成员，请参阅[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)。
 
-若要评估的.NET Framework 2.0 SP1 发布后已弃用的类型和成员的影响，请参阅[什么是类库中的过时](../../../docs/framework/whats-new/whats-obsolete.md)。 查看.NET Framework 2.0 SP1、.NET Framework 3.5 和.NET Framework 4 的过时类型和成员的列表。
+若要评估自发布 .NET Framework 2.0 SP1 后弃用的类型和成员的影响，请参阅[类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)。 请查看 .NET Framework 2.0 SP1、.NET Framework 3.5 和 .NET Framework 4 的过时类型和成员列表。

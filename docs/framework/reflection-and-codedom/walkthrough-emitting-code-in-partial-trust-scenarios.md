@@ -27,7 +27,7 @@ ms.locfileid: "66690308"
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
   
 > [!NOTE]
->  .NET Framework 3.5，发出代码需要以前<xref:System.Security.Permissions.ReflectionPermission>与<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>标志。 默认情况下，此权限包含在 `FullTrust` 和 `Intranet` 命名权限集中，而不在 `Internet` 权限集中。 因此，只有当库具有 <xref:System.Security.SecurityCriticalAttribute> 特性并对 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 执行了 <xref:System.Security.PermissionSet.Assert%2A> 方法时，才能在部分信任环境下使用该库。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 .NET Framework 3.5 使发出代码需在部分信任方案中而无需发出任何安全请求，因为生成代码本身不是一项特权的操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使发出代码的库具有安全-透明性且无需断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，因此编写安全库无需彻底的安全检查。  
+>  在 .NET Framework 3.5 之前，发出代码需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 默认情况下，此权限包含在 `FullTrust` 和 `Intranet` 命名权限集中，而不在 `Internet` 权限集中。 因此，只有当库具有 <xref:System.Security.SecurityCriticalAttribute> 特性并对 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 执行了 <xref:System.Security.PermissionSet.Assert%2A> 方法时，才能在部分信任环境下使用该库。 这种库需要进行仔细的安全检查，因为编码错误可能会导致安全漏洞。 .NET Framework 3.5 允许以部分信任形式发出代码而无需发出任何安全请求，因为生成代码本身不是一项特权操作。 也就是说，生成的代码不会具有比发出它的程序集更多的权限。 这使发出代码的库具有安全-透明性且无需断言 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>，因此编写安全库无需彻底的安全检查。  
   
  本演练阐释了以下任务：  
   

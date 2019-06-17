@@ -24,7 +24,7 @@ ms.locfileid: "66487040"
  泛型接口提供与非泛型接口对应的类型安全接口，用于实现排序比较、相等比较以及泛型集合类型所共享的功能。  
   
 > [!NOTE]
->  从.NET Framework 4 中，类型参数的多个泛型接口标记为协变或逆变，提供更灵活地分配和使用实现这些接口的类型。 请参阅 [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
+>  从 .NET Framework 4 开始，多个泛型接口的类型参数标记为协变或逆变，这为分配和使用实现这些接口的类型提供了更好的灵活性。 请参阅 [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)。  
   
 ### <a name="equality-and-ordering-comparisons"></a>相等比较和排序比较  
  在 <xref:System> 命名空间中，<xref:System.IComparable%601?displayProperty=nameWithType> 和 <xref:System.IEquatable%601?displayProperty=nameWithType> 泛型接口与它们对应的非泛型接口一样，各自定义了用于排序比较和相等比较的方法。 类型通过实现这些接口来提供执行这些比较的能力。  

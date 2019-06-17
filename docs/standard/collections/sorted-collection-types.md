@@ -46,7 +46,7 @@ ms.locfileid: "66491018"
 > [!NOTE]
 >  对于包含自己的键的值（例如，包含雇员 ID 编号的雇员记录），可以通过派生自 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类，创建具有列表和字典的某些特性的键控集合。  
   
- 从.NET Framework 4，开始<xref:System.Collections.Generic.SortedSet%601>类提供了插入、 删除和搜索操作后，按排序顺序为维护数据的自平衡树。 此类和 <xref:System.Collections.Generic.HashSet%601> 类实现 <xref:System.Collections.Generic.ISet%601> 接口。  
+ 从 .NET Framework 4 开始，<xref:System.Collections.Generic.SortedSet%601> 类提供在执行插入、删除和搜索操作之后让数据一直按排序顺序排列的自平衡树。 此类和 <xref:System.Collections.Generic.HashSet%601> 类实现 <xref:System.Collections.Generic.ISet%601> 接口。  
   
 ## <a name="see-also"></a>请参阅
 

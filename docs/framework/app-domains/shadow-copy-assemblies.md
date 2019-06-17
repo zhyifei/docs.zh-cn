@@ -32,7 +32,7 @@ ms.locfileid: "66486521"
   
 - [启用和使用卷影复制](#EnablingAndUsing)描述了卷影复制的基本用法和可用选项。  
   
-- [启动性能](#StartupPerformance)描述了卷影复制以提高启动性能，以及如何还原到早期版本的行为在.NET Framework 4 中所做的更改。  
+- [启动性能](#StartupPerformance)描述了为提高启动性能对 .NET Framework 4 中的卷影复制进行的更改，以及还原到早期版本的行为的方法。  
   
 - [已过时的方法](#ObsoleteMethods)描述了对控制 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中卷影复制的属性和方法进行的更改。  
   

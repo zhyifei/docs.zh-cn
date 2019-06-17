@@ -1,5 +1,5 @@
 ---
-title: 如何：控制 Namespace 前缀 (C#) (LINQ to XML)
+title: 如何：控制命名空间前缀 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: 37fb604a9b66f4da2b1722808b2c79f8fbf097bf
@@ -9,7 +9,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/04/2019
 ms.locfileid: "66485981"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>如何：控制 Namespace 前缀 (C#) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>如何：控制命名空间前缀 (C#) (LINQ to XML)
 本主题介绍在序列化 XML 树时如何控制命名空间前缀。  
   
  在很多情况下，不需要控制命名空间前缀。  

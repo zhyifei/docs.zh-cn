@@ -23,7 +23,7 @@ ms.locfileid: "66489997"
   
 - 对于 .NET Framework 4.6 及其点版本，托管程序集的 <xref:System.Reflection.AssemblyFileVersionAttribute> 和 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 特性具有格式为 `4.6.X.0` 的 <xref:System.Version> 值，对于 .NET Framework 4.7，则为格式 `4.7.X.0`。  
   
-- 自.NET Framework 4.6 起<xref:System.Environment.Version%2A?displayProperty=nameWithType>属性将返回修正后的版本字符串`4.0.30319.42000`。 在.NET Framework 4、 4.5、 4.5.1 和 4.5.2 中，它将返回版本字符串的格式`4.0.30319.xxxxx`其中`xxxxx`是小于 42000 (例如，"4.0.30319.18010")。 请注意，我们不建议应用程序代码对 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性产生任何新的依赖关系。
+- 从 .NET Framework 4.6 开始，<xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性将返回修正后的版本字符串 `4.0.30319.42000`。 在 .NET Framework 4、4.5、4.5.1 和 4.5.2 中，它返回格式为 `4.0.30319.xxxxx`（其中 `xxxxx` 小于 42000）的版本字符串，例如“4.0.30319.18010”。 请注意，我们不建议应用程序代码对 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性产生任何新的依赖关系。
   
 ### <a name="handling-the-product-versioning-changes"></a>处理产品版本控制更改  
  一般情况下，应用程序应依赖于用于检测诸如 .NET Framework 的运行时版本和安装目录等内容的推荐技术：  

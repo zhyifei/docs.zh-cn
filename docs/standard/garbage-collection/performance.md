@@ -44,7 +44,7 @@ ms.locfileid: "66489594"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>垃圾回收 ETW 事件  
- Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供的分析和调试支持提供补充。 从.NET Framework 4，开始[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)捕获分析统计的角度从托管的堆的有用信息。 例如，在将要发生垃圾回收时引发的 `GCStart_V1` 事件提供了以下信息：  
+ Windows 事件跟踪 (ETW) 是一个跟踪系统，对由 .NET Framework 提供的分析和调试支持提供补充。 从 .NET Framework 4 开始，[垃圾回收 ETW 事件](../../../docs/framework/performance/garbage-collection-etw-events.md)将捕获有用信息，用于从统计的角度来分析托管堆。 例如，在将要发生垃圾回收时引发的 `GCStart_V1` 事件提供了以下信息：  
   
 - 正在收集哪一代对象。  
   

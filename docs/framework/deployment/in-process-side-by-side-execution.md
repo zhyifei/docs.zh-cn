@@ -15,7 +15,7 @@ ms.lasthandoff: 06/10/2019
 ms.locfileid: "66816054"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
-从.NET Framework 4 开始，可以使用进程内的并行承载在单个进程中运行公共语言运行时 (CLR) 的多个版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
+从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
   
 ## <a name="background"></a>背景  
  .NET Framework 现在始终为托管代码应用程序提供并行承载，但在 .NET Framework 4 之前，它并不为托管 COM 组件提供此功能。 过去，加载到进程中的托管 COM 组件使用已加载的运行时版本运行或使用已安装的 .NET Framework 最新版本运行。 如果此版本不与 COM 组件兼容，则该组件会出现故障。  
@@ -56,7 +56,7 @@ ms.locfileid: "66816054"
   
      要执行的操作：此方案中，不执行任何操作。 COM 组件将在其注册的 .NET Framework 版本上运行。  
   
-- **方案 2**：托管应用程序使用.NET Framework 2.0 SP1，你想要使用运行生成[!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]，但希望在.NET Framework 4 上运行，如果 2.0 版不存在。  
+- **方案 2**：使用 .NET Framework 2.0 SP1 生成的托管应用程序，并将其与 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起运行，但如果没有 2.0 版本，则希望让其在 .NET Framework 4 上运行。  
   
      已安装的 .NET Framework 版本：早期版本的 .NET Framework 和 .NET Framework 4。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66816054"
 ## <a name="example"></a>示例  
  下例演示通过使用编译的组件要使用的 .NET Framework 版本运行托管 COM 组件的非托管 COM 主机。  
   
- 若要运行下面的示例，请编译并注册以下托管的 COM 组件使用.NET Framework 3.5。 若要注册该组件，请在“项目”菜单上，依次单击“属性”、“生成”选项卡，然后选中“注册 COM 互操作”复选框     。  
+ 若要运行以下示例，请使用 .NET Framework 3.5 编译和注册以下托管 COM 组件。 若要注册该组件，请在“项目”菜单上，依次单击“属性”、“生成”选项卡，然后选中“注册 COM 互操作”复选框     。  
   
 ```csharp
 using System;  

@@ -186,7 +186,7 @@ public class LoanApp
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>确保所有 COM 事件通知都是后期绑定的。
 
-默认情况下，COM 类型信息直接嵌入到托管程序集中，这会消除对主互操作程序集 (PIA) 的需要。 但是，嵌入的类型信息的限制之一是它不支持的 COM 事件通知传递由早期绑定 vtable 调用，但仅支持后期绑定`IDispatch::Invoke`调用。
+默认情况下，COM 类型信息直接嵌入到托管程序集中，这会消除对主互操作程序集 (PIA) 的需要。 但是，嵌入式类型信息的一个限制是它不支持通过早期绑定的 vtable 调用传递 COM 事件通知，而仅支持后期绑定的 `IDispatch::Invoke` 调用。
 
 如果应用程序需要对 COM 事件接口方法进行早期绑定调用，则可以将 Visual Studio 中的”嵌入互操作类型”  属性设置为 `true`，或在项目文件中包含以下元素：
 

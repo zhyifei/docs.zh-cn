@@ -40,7 +40,7 @@ ms.locfileid: "66490830"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>结合使用 CountdownEvent 和取消令牌  
- 下面的示例展示了如何使用取消令牌对 <xref:System.Threading.CountdownEvent> 取消等待操作。 基本模式遵循.NET Framework 4 中引入的统一取消模型。 有关详细信息，请参阅[托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。  
+ 下面的示例展示了如何使用取消令牌对 <xref:System.Threading.CountdownEvent> 取消等待操作。 基本模式遵循 .NET Framework 4 中引入的统一取消模型。 有关详细信息，请参阅[托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  

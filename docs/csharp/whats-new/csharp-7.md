@@ -222,7 +222,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 
 ## <a name="throw-expressions"></a>引发表达式
 
-在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 以便您可以编写任何这些构造C#7.0 引入了[ *throw 表达式*](../language-reference/keywords/throw.md#the-throw-expression)。
+在 C# 中，`throw` 始终是一个语句。 因为 `throw` 是一个语句而非表达式，所以在某些 C# 构造中无法使用它。 它们包括条件表达式、null 合并表达式和一些 lambda 表达式。 添加 expression-bodied 成员将添加更多位置，在这些位置中，`throw` 表达式会很有用。 为了可以编写这些构造，C# 7.0 引入了 [*throw 表达式*](../language-reference/keywords/throw.md#the-throw-expression)。
 
 这使得编写更多基于表达式的代码变得更容易。 不需要其他语句来进行错误检查。
 

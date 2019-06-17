@@ -21,7 +21,7 @@ ms.locfileid: "66722630"
 
 算法是执行后可生成**模型**的数学运算。 不同的算法生成具有不同特征的模型。 
 
-借助 ML.NET，同一算法可以应用于不同的任务。 例如，随机双协调上移量可用于二元分类、 多类分类和回归。 区别在于如何解释算法的输出来匹配任务。 
+借助 ML.NET，同一算法可以应用于不同的任务。 例如，随机双坐标上升可用于二元分类、多类分类和回归。 区别在于如何解释算法的输出来匹配任务。 
 
 对于每个算法/任务组合，ML.NET 提供执行训练算法并进行解释的组件。 这些组件称为训练程序。 例如，<xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> 使用应用于**回归**任务的 **StochasticDualCoordinatedAscent** 算法。
 
@@ -42,7 +42,7 @@ ms.locfileid: "66722630"
 |算法|属性|训练程序|
 |---------|----------|--------|
 |平均感知器|最适合用于文本分类|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|随机双协调的上升|默认性能良好，不需要调整|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|随机双坐标上升|默认性能良好，不需要调整|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|在有大量特征时使用。 生成逻辑回归训练统计数据，但缩放性能不如 AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |符号随机梯度下降|最快速、最准确的线性二元分类训练程序。 可随处理器数量很好地缩放|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

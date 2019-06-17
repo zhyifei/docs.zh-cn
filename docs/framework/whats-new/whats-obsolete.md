@@ -43,7 +43,7 @@ ms.locfileid: "66690472"
 
 - 查看有关此技术领域的文档，以确定如何响应弃用情况。
 
-可以选择不针对更高版本的 .NET Framework 重新编译现有代码。 相反，可以指定针对其运行现有已编译代码的 .NET Framework 版本。 例如，假设名为 app1.exe 的针对.NET Framework 3.5 中，已编译的应用程序，但你想要针对.NET Framework 4.5 运行的应用程序。 这需要执行以下步骤：
+可以选择不针对更高版本的 .NET Framework 重新编译现有代码。 相反，可以指定针对其运行现有已编译代码的 .NET Framework 版本。 例如，假设你有一个名为 app1.exe 并且针对 .NET Framework 3.5 进行了编译的应用程序，但是希望针对 .NET Framework 4.5 运行该应用程序。 这需要执行以下步骤：
 
 1. 为主可执行文件创建一个配置文件并将它命名为 *appName*.exe.config，其中 *appName* 是应用程序可执行文件的名称。 对于我们示例中名为 app1.exe 的应用程序，会创建一个名为 app1.exe.config 的配置文件。
 

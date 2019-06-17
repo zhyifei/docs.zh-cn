@@ -47,7 +47,7 @@ ms.locfileid: "66690690"
     installutil <yourproject>.exe
     ```
 
-     如果使用的是 Visual Studio 开发人员命令提示，InstallUtil.exe 应该在系统路径上  。 如果不在，可以将其添加到该路径，或使用完全限定的路径来调用它。 此工具随.NET Framework *%windir%\microsoft.net\framework[64]\\< framework_version\>* 。
+     如果使用的是 Visual Studio 开发人员命令提示，InstallUtil.exe 应该在系统路径上  。 如果不在，可以将其添加到该路径，或使用完全限定的路径来调用它。 此工具随 .NET Framework 安装在 *%WINDIR%\Microsoft.NET\Framework[64]\\<framework_version\>* 中。
 
      例如:
      - 对于 32 位版的 .NET Framework 4 或 4.5 以及更高版本，如果 Windows 安装目录是 C: \ Windows，则默认路径是 C:\Windows\ Microsoft.NET \ Framework \ v4.0.30319 \ InstallUtil.exe   。

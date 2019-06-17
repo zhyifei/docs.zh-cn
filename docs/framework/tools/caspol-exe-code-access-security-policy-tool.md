@@ -28,7 +28,7 @@ ms.locfileid: "66489678"
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
   
 > [!IMPORTANT]
->  从.NET Framework 4 开始，Caspol.exe 不再影响 CAS 策略除非[ \<legacyCasPolicy > 元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为`true`。 CasPol.exe 显示或修改的任何设置将只会影响选择使用 CAS 策略的应用程序。 有关详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
+>  从 .NET Framework 4 开始，Caspol.exe 不再影响 CAS 策略，除非将 [\<legacyCasPolicy> 元素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)设置为 `true`。 CasPol.exe 显示或修改的任何设置将只会影响选择使用 CAS 策略的应用程序。 有关详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
   
 > [!NOTE]
 >  64 位计算机同时包括 64 位和 32 位版本的安全策略。 若要确保你的策略更改同时应用于 32 位和 64 位应用程序，请同时运行 Caspol.exe 的 32 位和 64 位版本。  

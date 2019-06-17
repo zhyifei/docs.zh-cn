@@ -27,7 +27,7 @@ ms.locfileid: "66815837"
 
 从体系结构和开发的角度来看，如果要生成由基于微服务的应用程序组成的大型企业应用程序，则务必了解清楚下面列出的支持高级方案的平台和产品：
 
-**群集和业务流程协调程序。** 如果需要跨多个 Docker 主机扩展应用程序例如生成基于微服务的大型应用程序时，能够通过抽象化基础平台的复杂性来将所有主机作为单个群集管理是至关重要的。 这就是容器群集和业务流程协调程序所提供的功能。 Kubernetes 业务流程协调程序，一个示例，现已推出 Azure 通过 Azure Kubernetes 服务。
+**群集和业务流程协调程序。** 如果需要跨多个 Docker 主机扩展应用程序例如生成基于微服务的大型应用程序时，能够通过抽象化基础平台的复杂性来将所有主机作为单个群集管理是至关重要的。 这就是容器群集和业务流程协调程序所提供的功能。 Kubernetes 是业务流程协调程序的一个示例，通过 Azure Kubernetes 服务在 Azure 中提供。
 
 **计划程序。** 计划  意味着管理员能够在群集中启动容器，如此这些容器也可提供 UI。 群集计划程序具有多个职责：高效使用群集资源、设置用户提供的约束、有效负载均衡节点或主机间的容器，以及在提供高可用性的同时强力解决错误。
 
@@ -53,7 +53,7 @@ ms.locfileid: "66815837"
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>在 Microsoft Azure 中使用基于容器的业务流程协调程序
 
-多家云供应商提供 Docker 容器支持以及 Docker 群集和业务流程支持，包括 Microsoft Azure、Amazon EC2 容器服务和 Google 容器引擎。 Microsoft Azure 提供 Docker 群集和业务流程协调程序支持通过 Azure Kubernetes 服务 (AKS)。
+多家云供应商提供 Docker 容器支持以及 Docker 群集和业务流程支持，包括 Microsoft Azure、Amazon EC2 容器服务和 Google 容器引擎。 Microsoft Azure 通过 Azure Kubernetes 服务 (AKS) 提供 Docker 群集和业务流程协调程序支持。
 
 ## <a name="using-azure-kubernetes-service"></a>使用 Azure Kubernetes 服务
 

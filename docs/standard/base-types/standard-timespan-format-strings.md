@@ -64,7 +64,7 @@ ms.locfileid: "66491096"
 |*ss*|秒数，范围为“0”到“59”。|  
 |*fffffff*|秒的可选小数部分。  其值的范围为“0000001”（一刻度或一秒的一千万分之一）到“9999999”（一秒的一千万分之九百九十九万九千九百九或一秒少一刻度）。|  
   
- 与“g”和“G”格式说明符不同，“c”格式说明符不区分区域性。 它生成的字符串表示形式<xref:System.TimeSpan>的值不变，这就是普遍适用于所有以前版本的.NET Framework 4 之前的.NET Framework。 “c”是默认的 <xref:System.TimeSpan> 格式字符串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用“c”格式字符串设置时间间隔值的格式。  
+ 与“g”和“G”格式说明符不同，“c”格式说明符不区分区域性。 它生成 <xref:System.TimeSpan> 值的字符串表示形式，该值不变且对 .NET Framework 4 之前的所有 .NET Framework 先前版本均通用。 “c”是默认的 <xref:System.TimeSpan> 格式字符串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用“c”格式字符串设置时间间隔值的格式。  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> 也支持“t”和“T”标准格式字符串，其行为与“c”标准格式字符串相同。  

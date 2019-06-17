@@ -364,7 +364,7 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 
 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 类型支持 HTTP/2 协议。 目前已禁用该支持，但可以在使用 <xref:System.Net.Http.HttpClient> 之前通过调用 `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` 来启用。 也可以在运行应用之前通过将 `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` 环境变量设置为 `true` 来启用 HTTP/2 支持。
 
-如果启用了 HTTP/2，将通过 TLS/ALPN 协商的 HTTP 协议版本，并将仅使用 HTTP/2，如果服务器选择要使用它。
+如果启用 HTTP/2，则将通过 TLS/ALPN 协商 HTTP 协议版本，并且仅在服务器选择使用 HTTP/2 时使用。
 
 ## <a name="tls-13--openssl-111-on-linux"></a>Linux 上的 TLS 1.3 和 OpenSSL 1.1.1
 
