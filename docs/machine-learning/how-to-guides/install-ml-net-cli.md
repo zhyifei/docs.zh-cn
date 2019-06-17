@@ -3,12 +3,12 @@ title: 如何安装 ML.NET 命令行接口 (CLI) 工具
 description: ML.NET 命令行接口 (CLI) 工具的概述和安装。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557861"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832924"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安装 ML.NET 命令行接口 (CLI) 工具
 
@@ -34,7 +34,7 @@ ML.NET CLI 的安装方式与任何其他 dotnet 全局工具一样。 使用 `d
 以下示例显示如何在默认 NuGet 源位置安装 ML.NET CLI：
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 如果无法安装该工具（即，如果它在默认 NuGet 源中不可用），则会显示错误消息。 检查所需源是否正在被检查。
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 可以通过键入以下命令来确认安装是否成功：
 
 ```console
-> mlnet
+mlnet
 ```
 
 应该看到 mlnet 工具的可用命令帮助，例如“auto-train”命令。
@@ -59,13 +59,13 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 如果想安装工具的预发布版本或特定版本，可以采用以下格式指定[框架](../../standard/frameworks.md)：
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 还可以通过键入以下命令来检查包是否已正确安装：
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>卸载 CLI 包
@@ -73,7 +73,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 键入以下命令，从本地计算机卸载包：
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>更新 CLI 包
@@ -81,7 +81,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 键入以下命令，从本地计算机更新包：
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>设置 CLI 建议（Tab 自动补全）
@@ -101,7 +101,7 @@ Tab 自动补全工作原理的示例如以下动画所示：
 1. 通过运行以下命令安装 `dotnet-suggest` 全局工具：
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. 将适当的填充码脚本添加到 shell 配置文件中。 可能必须创建一个 shell 配置文件。 填充码脚本会将补全请求从 shell 转发到 `dotnet-suggest` 工具，其会委托到相应的基于 `System.CommandLine` 的应用。
@@ -111,7 +111,7 @@ Tab 自动补全工作原理的示例如以下动画所示：
     * 对于 PowerShell，将 [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) 的内容添加到 PowerShell 配置文件中。 可以通过在控制台中运行以下命令来查找 PowerShell 配置文件的预期路径：
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 （对于其他 shell，[查找](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22)或创建[问题](https://github.com/dotnet/System.CommandLine/issues)。）

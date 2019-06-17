@@ -4,12 +4,12 @@ description: 本教程演示如何创建 .NET Core 控制台应用程序，该�
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 674dc2d12cb8f65753730e187e13fc5e522ff6b3
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593416"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135691"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程：在 ML.NET 中使用二元分类分析网站评论的情绪
 
@@ -37,26 +37,26 @@ ms.locfileid: "65593416"
 
 1. 创建名为“SentimentAnalysis”的 **.NET Core 控制台应用程序**。
 
-2. 在项目中创建名为“Data”的目录，用于保存数据集文件。
+2. 在项目中创建名为“Data”的目录，用于保存数据集文件  。
 
-3. 安装“Microsoft.ML NuGet 包”：
+3. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮。 同意所选包的许可条款，继续执行安装。 对 **Microsoft.ML.FastTree** NuGet 包执行相同操作。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡  。搜索“Microsoft.ML”，选择所需的包，然后选择“安装”按钮   。 同意所选包的许可条款，继续执行安装。 对 **Microsoft.ML.FastTree** NuGet 包执行相同操作。
 
 ## <a name="prepare-your-data"></a>准备数据
 
 > [!NOTE]
-> 本教程的数据集摘自 KDD 2015 中由 Kotzias 等 提出的“From Group to Individual Labels using Deep Features”， 并托管在 UCI 机器学习存储库中（Dua, D. 和 Karra Taniskidou, E.(2017)）。 UCI 机器学习存储库 [http://archive.ics.uci.edu/ml]。 加利福尼亚州，加利福尼亚大学：欧文分校，信息与计算机科学学院。
+> 本教程的数据集摘自 KDD 2015 中由 Kotzias 等 提出的“From Group to Individual Labels using Deep Features”， 并托管在 UCI 机器学习存储库中（Dua, D. 和 Karra Taniskidou, E.(2017)）。 UCI 机器学习存储库 [http://archive.ics.uci.edu/ml ]。 加利福尼亚州，加利福尼亚大学：欧文分校，信息与计算机科学学院。
 
 1. 下载 [UCI Sentiment Labeled Sentences 数据集 zip 文件](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)并解压缩。
 
-2. 将 `yelp_labelled.txt` 文件复制到已创建的“数据”目录中。
+2. 将 `yelp_labelled.txt` 文件复制到已创建的“数据”  目录中。
 
-3. 在“解决方案资源管理器”中，右键单击 `yelp_labeled.txt` 文件并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+3. 在“解决方案资源管理器”中，右键单击 `yelp_labeled.txt` 文件并选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 ### <a name="create-classes-and-define-paths"></a>创建类和定义路径
 
-1. 将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+1. 将以下附加的 `using` 语句添加到“Program.cs”  文件顶部：
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
@@ -71,15 +71,15 @@ ms.locfileid: "65593416"
 
 4. 接下来，为输入数据和预测结果创建类。 向项目添加一个新类：
 
-    - 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
+    - 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
 
-    - 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“SentimentData.cs”。 然后，选择“添加”按钮。
+    - 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。 然后，选择“添加”  按钮。
 
-5. “SentimentData.cs”文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 SentimentData.cs 的顶部：
+5. “SentimentData.cs”  文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 SentimentData.cs  的顶部：
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
-6. 删除现有类定义并向“SentimentData.cs”文件添加以下代码，其中有两个类 `SentimentData` 和 `SentimentPrediction`：
+6. 删除现有类定义并向“SentimentData.cs”  文件添加以下代码，其中有两个类 `SentimentData` 和 `SentimentPrediction`：
 
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
@@ -276,13 +276,13 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.ML.IDataView)。 `ID
 
     [!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
-3. 添加以下代码，以便作为 `Predict()` 方法中的第一行进行创建：
+3. 添加以下代码，以便作为 `UseModelWithSingleItem()` 方法中的第一行进行创建：
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) 是一个简便 API，可用于传入单个数据实例，然后对其执行预测。
 
-4. 通过创建一个 `SentimentData` 实例，在 `Predict()` 方法中添加一个注释来测试定型模型的预测：
+4. 通过创建一个 `SentimentData` 实例，在 `UseModelWithSingleItem()` 方法中添加一个注释来测试定型模型的预测：
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
