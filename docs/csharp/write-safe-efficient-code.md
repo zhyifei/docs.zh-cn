@@ -3,12 +3,12 @@ title: 编写安全有效的 C# 代码
 description: 通过 C# 语言最新增强功能，可以编写可验证的安全代码，这些代码的性能以前与不安全代码相关联。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753892"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832946"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>编写安全有效的 C# 代码
 
@@ -20,13 +20,13 @@ ms.locfileid: "64753892"
 
 本文重点介绍以下资源管理技术：
 
-- 声明 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) 表示类型为“不可变”，并使编译器在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 参数时保存副本。
+- 声明 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) 表示类型为“不可变”，并使编译器在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 参数时保存副本  。
 - 当返回值 `struct` 大于 <xref:System.IntPtr.Size?displayProperty=nameWithType> 且存储生存期大于返回值的方法时，请使用 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 返回。
 - 当 `readonly struct` 的大小大于 <xref:System.IntPtr.Size?displayProperty=nameWithType> 时，出于性能原因，应将其作为 `in` 参数传递。
 - 切勿将 `struct` 作为 `in` 参数传递，除非它使用 `readonly` 修饰符声明，因为它可能会对性能产生负面影响并可能导致模糊行为。
 - 使用 [`ref struct`](language-reference/keywords/ref.md#ref-struct-types) 或 `readonly ref struct`（例如 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>）将内存用作字节序列。
 
-这些技术迫使你在“引用”和“值”方面平衡两个相互竞争的目标。 属于[引用类型](programming-guide/types/index.md#reference-types)的变量包含对内存中位置的引用。 属于[值类型](programming-guide/types/index.md#value-types)的变量直接包含它们的值。 这些差异突出了对管理内存资源非常重要的关键差异。 通常在将“值类型”传递给方法或从方法返回时将其复制。 此行为包括在调用值类型的成员时复制 `this` 的值。 副本的成本与类型的大小有关。 托管堆上分配了“引用类型”。 每个新对象都需要一个新的分配，并且随后必须回收。 这两种操作都需要花些时间。 将引用类型作为参数传递给方法或从方法返回时，将复制引用。
+这些技术迫使你在“引用”和“值”方面平衡两个相互竞争的目标   。 属于[引用类型](programming-guide/types/index.md#reference-types)的变量包含对内存中位置的引用。 属于[值类型](programming-guide/types/index.md#value-types)的变量直接包含它们的值。 这些差异突出了对管理内存资源非常重要的关键差异。 通常在将“值类型”传递给方法或从方法返回时将其复制  。 此行为包括在调用值类型的成员时复制 `this` 的值。 副本的成本与类型的大小有关。 托管堆上分配了“引用类型”  。 每个新对象都需要一个新的分配，并且随后必须回收。 这两种操作都需要花些时间。 将引用类型作为参数传递给方法或从方法返回时，将复制引用。
 
 本文使用以下三维点结构的示例概念来解释这些建议：
 
@@ -169,11 +169,11 @@ public struct Point3D
 
 ## <a name="never-use-mutable-structs-as-in-in-argument"></a>切勿在 `in` 参数中使用可变结构
 
-上述技术解释了如何通过返回引用和按引用传递值来避免创建副本。 当参数类型声明为 `readonly struct` 类型时，这些技术最有效。 否则，编译器必须在许多情况下创建“防御副本”以强制执行任何参数的只读状态。 请考虑下面这个计算三维点到原点距离的示例：
+上述技术解释了如何通过返回引用和按引用传递值来避免创建副本。 当参数类型声明为 `readonly struct` 类型时，这些技术最有效。 否则，编译器必须在许多情况下创建“防御副本”以强制执行任何参数的只读状态  。 请考虑下面这个计算三维点到原点距离的示例：
 
 [!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` 结构不是只读结构。 此方法的主体中有六个不同的属性访问调用。 在首次检查时，你可能认为这些访问是安全的。 毕竟，`get` 访问器不应该修改对象的状态。 但是没有强制执行的语言规则。 它只是通用约定。 任何类型都可以实现修改内部状态的 `get` 访问器。 如果没有语言保证，编译器必须在调用任何成员之前创建参数的临时副本。 在堆栈上创建临时存储，将参数的值复制到临时存储中，并将每个成员访问的值作为 `this` 参数复制到堆栈中。 在许多情况下，当参数类型不是 `readonly struct` 时，这些副本会降低性能，使得按值传递比按只读引用传递速度更快。
+`Point3D` 结构不是只读结构  。 此方法的主体中有六个不同的属性访问调用。 在首次检查时，你可能认为这些访问是安全的。 毕竟，`get` 访问器不应该修改对象的状态。 但是没有强制执行的语言规则。 它只是通用约定。 任何类型都可以实现修改内部状态的 `get` 访问器。 如果没有语言保证，编译器必须在调用任何成员之前创建参数的临时副本。 在堆栈上创建临时存储，将参数的值复制到临时存储中，并将每个成员访问的值作为 `this` 参数复制到堆栈中。 在许多情况下，当参数类型不是 `readonly struct` 时，这些副本会降低性能，使得按值传递比按只读引用传递速度更快。
 
 相反，如果距离计算使用不可变结构 `ReadonlyPoint3D`，则不需要临时对象：
 
@@ -189,7 +189,7 @@ public struct Point3D
 
 相关语言功能是可声明必须约束为单个堆栈帧的值类型。 此限制可使编译器进行多次优化。 此功能的主要动机是 <xref:System.Span%601> 和相关结构。 借助使用 <xref:System.Span%601> 类型的新的和更新后的 .NET API，可通过这些增强功能实现性能改进。
 
-在使用通过 [`stackalloc`](language-reference/keywords/stackalloc.md) 创建的内存或使用互操作 API 中的内存时，可能具有类似要求。 可针对这些需求定义自己的 `ref struct` 类型。
+在使用通过 [`stackalloc`](language-reference/operators/stackalloc.md) 创建的内存或使用互操作 API 中的内存时，可能具有类似要求。 可针对这些需求定义自己的 `ref struct` 类型。
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 类型
 

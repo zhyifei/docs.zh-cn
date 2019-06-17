@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: d86f3ea7b9ee2a7c511119d9b7c3e52f44bd5e6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634077"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833349"
 ---
 # <a name="sealed-c-reference"></a>sealed（C# 参考）
 
@@ -56,10 +56,6 @@ sealed class B : A {}
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="c-language-specification"></a>C# 语言规范
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
 ## <a name="remarks"></a>备注
 
 若要确定是否密封类、方法或属性，通常应考虑以下两点：
@@ -67,6 +63,10 @@ sealed class B : A {}
 - 派生类通过可以自定义类而可能获得的潜在好处。
 
 - 派生类可能采用使它们无法再正常工作或按预期工作的方式来修改类的可能性。
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>请参阅
 

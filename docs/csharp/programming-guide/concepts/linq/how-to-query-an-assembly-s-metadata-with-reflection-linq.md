@@ -2,60 +2,56 @@
 title: 如何：使用反射查询程序集的元数据 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7c209e2524ea6931e0d8f0084a32ea6921adc26e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485235"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025359"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>如何：使用反射查询程序集的元数据 (LINQ) (C#)
 
-.NET Framework 类库反射 API 可用于检查 .NET 程序集中的元数据，以及创建位于该程序集中的类型、类型成员、参数等等的集合。 因为这些集合支持泛型 `IEnumerable` 接口，所以可以使用 LINQ 查询它们。  
+.NET Framework 类库反射 API 可用于检查 .NET 程序集中的元数据，以及创建位于该程序集中的类型、类型成员、参数等等的集合。 因为这些集合支持泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，所以可以使用 LINQ 查询它们。  
   
 下面的示例演示了如何将 LINQ 与反射配合使用以检索有关与指定搜索条件匹配的方法的特定元数据。 在这种情况下，该查询将在返回数组等可枚举类型的程序集中查找所有方法的名称。  
   
 ## <a name="example"></a>示例  
   
 ```csharp  
+using System;
+using System.Linq;
 using System.Reflection;  
-using System.IO;  
-namespace LINQReflection  
+
+class ReflectionHowTO  
 {  
-    class ReflectionHowTO  
+    static void Main()  
     {  
-        static void Main(string[] args)  
+        Assembly assembly = Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089");  
+        var pubTypesQuery = from type in assembly.GetTypes()  
+                    where type.IsPublic  
+                        from method in type.GetMethods()  
+                        where method.ReturnType.IsArray == true 
+                            || ( method.ReturnType.GetInterface(  
+                                typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
+                            && method.ReturnType.FullName != "System.String" )  
+                        group method.ToString() by type.ToString();  
+
+        foreach (var groupOfMethods in pubTypesQuery)  
         {  
-            Assembly assembly = Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089");  
-            var pubTypesQuery = from type in assembly.GetTypes()  
-                        where type.IsPublic  
-                            from method in type.GetMethods()  
-                            where method.ReturnType.IsArray == true   
-                                || ( method.ReturnType.GetInterface(  
-                                    typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
-                                && method.ReturnType.FullName != "System.String" )  
-                            group method.ToString() by type.ToString();  
-  
-            foreach (var groupOfMethods in pubTypesQuery)  
+            Console.WriteLine("Type: {0}", groupOfMethods.Key);  
+            foreach (var method in groupOfMethods)  
             {  
-                Console.WriteLine("Type: {0}", groupOfMethods.Key);  
-                foreach (var method in groupOfMethods)  
-                {  
-                    Console.WriteLine("  {0}", method);  
-                }  
+                Console.WriteLine("  {0}", method);  
             }  
-  
-            Console.WriteLine("Press any key to exit");  
-            Console.ReadKey();  
         }  
-    }    
-}  
+
+        Console.WriteLine("Press any key to exit... ");  
+        Console.ReadKey();  
+    }  
+}
 ```  
-  
- 该示例使用 <xref:System.Reflection.Assembly.GetTypes%2A> 方法返回指定程序集中的类型的数组。 将应用 [where](../../../../csharp/language-reference/keywords/where-clause.md) 筛选器，以便仅返回公共类型。 对于每个公共类型，子查询使用从 <xref:System.Type.GetMethods%2A> 调用返回的 <xref:System.Reflection.MethodInfo> 数组生成。 筛选这些结果，以仅返回其返回类型为数组或实现 <xref:System.Collections.Generic.IEnumerable%601> 的其他类型的方法。 最后，通过使用类型名称作为键来对这些结果进行分组。  
-  
-## <a name="compiling-the-code"></a>编译代码  
- 使用 System.Linq 和 System.IO 命名空间的 `using` 指令创建 C# 控制台应用程序项目。  
+
+该示例使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 方法返回指定程序集中的类型的数组。 将应用 [where](../../../../csharp/language-reference/keywords/where-clause.md) 筛选器，以便仅返回公共类型。 对于每个公共类型，子查询使用从 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 调用返回的 <xref:System.Reflection.MethodInfo> 数组生成。 筛选这些结果，以仅返回其返回类型为数组或实现 <xref:System.Collections.Generic.IEnumerable%601> 的其他类型的方法。 最后，通过使用类型名称作为键来对这些结果进行分组。  
   
 ## <a name="see-also"></a>请参阅
 

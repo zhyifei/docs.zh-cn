@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 3e606b5b496274b48b7d1f3ff768bb2bec5216fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86a5e77b3395eaf8ae8e9efd41039ea3e1ec29d6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920466"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041627"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard 对象
 提供了用于操控剪贴板的方法。  
@@ -28,7 +28,7 @@ ms.locfileid: "61920466"
   
  **类：** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (提供对访问<xref:System.Windows.Forms.Clipboard>)  
   
- **程序集：** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
 ## <a name="see-also"></a>请参阅
 

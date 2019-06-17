@@ -2,12 +2,12 @@
 title: F# 集合类型
 description: 了解如何F#集合类型以及从.NET Framework 中的集合类型之间的区别。
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996809"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041722"
 ---
 # <a name="f-collection-types"></a>F# 集合类型
 
@@ -83,6 +83,7 @@ ms.locfileid: "61996809"
 |iteri|O(N)|O(N)|O(N)|-|-|将给定的函数应用于集合的每个元素。 传递给函数的整数指示元素的索引。|
 |iteri2|O(N)|O(N)|-|-|-|将给定的函数应用到的一对来自匹配两个数组中的索引处的元素。 传递给函数的整数指示元素的索引。 两个数组必须具有相同的长度。|
 |iter2|O(N)|O(N)|O(N)|-|-|将给定的函数应用到的一对来自匹配两个数组中的索引处的元素。 两个数组必须具有相同的长度。|
+|last|O(1)|O(N)|O(N)|-|-|在适用的集合中返回的最后一项。|
 |length|O(1)|O(N)|O(N)|-|-|返回集合中的元素数。|
 |map|O(N)|O(N)|O(1)|-|-|生成一个集合，其元素是将给定的函数应用于数组的每个元素的结果。|
 |map2|O(N)|O(N)|O(1)|-|-|生成一个集合，其元素是两个集合的对应元素成对应用给定的函数的结果。 两个输入的数组必须具有相同的长度。|

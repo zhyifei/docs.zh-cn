@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: df83fd527612af1a6a4b8131ffa2643ef0d1d7dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff3b908e2805f4d51463a82d90f2305efc9f1608
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784225"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041579"
 ---
 # <a name="mid-statement"></a>Mid 语句
 替换指定的数目的中的字符`String`变量与另一字符串中的字符。  
@@ -63,11 +63,11 @@ Mid( _
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>要求  
- **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空间：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **模块：** `Strings`  
   
- **程序集：** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: 字符串函数
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eb70151628e32f6ad0a87be8ff0cd071ae89235
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879109"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041604"
 ---
 # <a name="string-functions"></a>字符串函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String` 函数，这些函数针对输入 `String` 执行操作并返回 `String` 或数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。  
@@ -27,7 +27,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String
 |`NCHAR(expression)`|根据 Unicode 标准的定义，返回具有指定的整数代码的 Unicode `String`。<br /><br /> **参数**<br /><br /> `expression`：一个 `Int32`。<br /><br /> **返回值**<br /><br /> Unicode `String`。<br /><br /> **示例**<br /><br /> `SqlServer.NCHAR(65)`|  
 |`PATINDEX('%pattern%', expression)`|返回某一模式在指定的 `String` 表达式中首次出现的开始位置。<br /><br /> **参数**<br /><br /> `'%pattern%'`：ASCII 或 Unicode `String` 类型。 可以使用通配符；但是模式的前后必须使用字符 %（搜索最前面的或最后面的字符时除外）。<br /><br /> `expression`：用于搜索指定模式的 ASCII 或 Unicode `String`。<br /><br /> **返回值**<br /><br /> 一个 `Int32`。<br /><br /> **示例**<br /><br /> `SqlServer.PATINDEX('abc', 'ab')`|  
 |`QUOTENAME('char_string' [, 'quote_char'])`|返回带有分隔符的 Unicode `String`，分隔符的加入可使输入字符串成为有效的 SQL Server 2005 分隔标识符。<br /><br /> **参数**<br /><br /> `char_string`：Unicode `String`。<br /><br /> `quote_char`：用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([ ]) 或者英文双引号 (")。 如果未指定 `quote_char`，则使用方括号。<br /><br /> **返回值**<br /><br /> Unicode `String`。<br /><br /> **示例**<br /><br /> `SqlServer.QUOTENAME('abc[]def')`|  
-|`REPLACE(expression1, expression2, expression3)`|按指定次数重复字符表达式。<br /><br /> **参数**<br /><br /> `expression1`：要搜索的字符串表达式。 string_expression1 可以为 Unicode 或 ASCII String 类型。<br /><br /> `expression2`: 要查找的子字符串。 string_expression2 可以为 Unicode 或 ASCII String 类型。<br /><br /> `expression3`：替换字符串。 string_expression3 可以为 Unicode 或 ASCII String 类型。<br /><br /> **示例**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
+|`REPLACE(expression1, expression2, expression3)`|另一个字符表达式中替换的字符表达式。<br /><br /> **参数**<br /><br /> `expression1`：要搜索的字符串表达式。 `expression1` 可以是 Unicode 或 ASCII String 类型。<br /><br /> `expression2`: 要查找的子字符串。 `expression2` 可以是 Unicode 或 ASCII String 类型。<br /><br /> `expression3`：替换字符串。 `expression3` 可以是 Unicode 或 ASCII String 类型。<br /><br /> **示例**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
 |`REPLICATE(char_expression, int_expression)`|按指定次数重复字符表达式。<br /><br /> **参数**<br /><br /> `char_expression`：Unicode 或 ASCII `String` 类型。<br /><br /> `int_expression`：`Int64`（在 SQL Server 2000 中不支持）或 `Int32`。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.REPLICATE('aa',2)`|  
 |`REVERSE(expression)`|返回将输入字符串的字符顺序反转后的 Unicode 或 ASCII String。<br /><br /> **参数**<br /><br /> `expression`：Unicode 或 ASCII `String` 类型。<br /><br /> **返回值**<br /><br /> Unicode 或 ASCII `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|返回字符串中从右边开始的指定个数的字符。<br /><br /> **参数**<br /><br /> `char_expression`: Unicode 或 ASCII String 类型。 使用 CAST 函数可以显式转换 character_expression。<br /><br /> `count`：`Int64`（在 SQL Server 2000 中不返回）或 `Int32` 类型，指定将返回 character_expression 中的多少个字符。<br /><br /> **返回值**<br /><br /> ASCII `String` 类型。<br /><br /> **示例**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  

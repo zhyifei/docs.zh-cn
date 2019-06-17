@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880332"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833441"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 
@@ -21,7 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-在指针类型中的 `*` 之前指定的类型被称为“referent 类型”。 以下任一类型均可为 referent 类型：
+在指针类型中的 `*` 之前指定的类型被称为“referent 类型”  。 以下任一类型均可为 referent 类型：
 
 - 任何整型类型：[sbyte](../../language-reference/keywords/sbyte.md)、[byte](../../language-reference/keywords/byte.md)、[short](../../language-reference/keywords/short.md)、[ushort](../../language-reference/keywords/ushort.md)、[int](../../language-reference/keywords/int.md)、[uint](../../language-reference/keywords/uint.md)、[long](../../language-reference/keywords/long.md)、[ulong](../../language-reference/keywords/ulong.md)。
 - 任何浮点类型：[浮点](../../language-reference/keywords/float.md)、[双精度](../../language-reference/keywords/double.md)。
@@ -82,7 +82,7 @@ int* myVariable;
 |`++` 和 `--`|递增和递减指针。|
 |`+` 和 `-`|执行指针算法。|
 |`==`、`!=`、`<``>`、`<=` 和 `>=`|比较指针。|
-|[`stackalloc` 运算符](../../language-reference/keywords/stackalloc.md)|在堆栈上分配内存。|
+|[`stackalloc` 运算符](../../language-reference/operators/stackalloc.md)|在堆栈上分配内存。|
 |[`fixed` 语句](../../language-reference/keywords/fixed-statement.md)|临时固定变量以便找到其地址。|
 
 要详细了解与指针相关的运算符，请参阅[与指针相关的运算符](../../language-reference/operators/pointer-related-operators.md)。

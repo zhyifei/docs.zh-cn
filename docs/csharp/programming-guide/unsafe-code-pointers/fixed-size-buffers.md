@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700606"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833507"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小的缓冲区（C# 编程指南）
 
@@ -40,7 +40,7 @@ private fixed char name[30];
 另一常见的固定大小的数组是 [bool](../../language-reference/keywords/bool.md) 数组。 `bool` 数组中的元素大小始终为一个字节。 `bool` 数组不适用于创建位数组或缓冲区。
 
 > [!NOTE]
-> 除了通过使用 [stackalloc](../../language-reference/keywords/stackalloc.md) 创建的内存外，C# 编译器和公共语言运行时 (CLR) 不执行任何安全缓冲区溢出检查。 与所有不安全代码一样，请谨慎使用。
+> 除了通过使用 [stackalloc](../../language-reference/operators/stackalloc.md) 创建的内存外，C# 编译器和公共语言运行时 (CLR) 不执行任何安全缓冲区溢出检查。 与所有不安全代码一样，请谨慎使用。
 
 不安全的缓冲区与常规数组的区别体现在以下方面：
 

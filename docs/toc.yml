@@ -807,6 +807,10 @@
               href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
         - name: 记录
           href: fsharp/language-reference/records.md
+        - name: 匿名记录
+          href: fsharp/language-reference/anonymous-records.md
+        - name: 复制和更新记录表达式
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: 可区分联合
           href: fsharp/language-reference/discriminated-unions.md
         - name: 枚举
@@ -854,8 +858,6 @@
           href: fsharp/language-reference/delegates.md
         - name: 对象表达式
           href: fsharp/language-reference/object-expressions.md
-        - name: 复制和更新记录表达式
-          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: 强制转换和转换
           href: fsharp/language-reference/casting-and-conversions.md
         - name: 访问控制

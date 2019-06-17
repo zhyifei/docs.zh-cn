@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-ms.openlocfilehash: f299792204c5a8db0e82ca20596eb1a9a2dd6623
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77f2ae02a5a38db4b505b14d0771c4f46a7aa5a2
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054479"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041522"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories 对象
 提供了用于访问经常引用的目录的属性。  
@@ -25,7 +25,7 @@ ms.locfileid: "62054479"
   
  **类：** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (提供对访问<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
   
- **程序集：** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
 ## <a name="see-also"></a>请参阅
 
