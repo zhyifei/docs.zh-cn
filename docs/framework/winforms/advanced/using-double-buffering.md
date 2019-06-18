@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b22336221c7bdda3c9dd7adf23308a2b0bad450
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777151"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169909"
 ---
 # <a name="using-double-buffering"></a>使用双缓冲
 可以使用双缓冲的图形以包含复杂画图操作在应用程序中减少闪烁。 .NET Framework 包含的双缓冲的内置支持，也可以管理并手动呈现图形。  
@@ -31,11 +31,9 @@ ms.locfileid: "61777151"
  演示如何呈现双缓冲的图形。  
   
 ## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- 启用双缓冲的控制方法。  
+ <xref:System.Windows.Forms.Control.SetStyle%2A> 启用双缓冲的控制方法。  
   
- <xref:System.Drawing.BufferedGraphicsContext> ,  
- 提供用于创建图形缓冲区的方法。  
+ <xref:System.Drawing.BufferedGraphicsContext> 提供用于创建图形缓冲区的方法。  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
  提供对缓冲的图形上下文为应用程序域的访问。

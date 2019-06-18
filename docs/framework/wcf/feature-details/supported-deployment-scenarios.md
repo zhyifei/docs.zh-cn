@@ -2,16 +2,16 @@
 title: 支持的部署方案的 WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025635"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170041"
 ---
 # <a name="supported-deployment-scenarios"></a>支持的部署方案
 
-支持在部分受信任的应用程序中使用的 Windows Communication Foundation (WCF) 功能子集旨在满足使用 WCF 部分，而不是所有方案的要求。 在服务器上，WCF 满足 Internet 规模出于安全原因设置共享托管提供商在 ASP.NET 2.0 中等信任权限运行第三方应用程序的要求。 在客户端，WCF 部分信任支持旨在满足的要求的部署技术如[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 浏览器应用程序技术，允许无缝和安全来自不受信任的站点的桌面应用程序的部署。
+支持在部分受信任的应用程序中使用的 Windows Communication Foundation (WCF) 功能子集旨在满足使用 WCF 部分，而不是所有方案的要求。 在服务器上，WCF 满足 Internet 规模出于安全原因设置共享托管提供商在 ASP.NET 2.0 中等信任权限运行第三方应用程序的要求。 在客户端，WCF 部分信任支持旨在满足的要求的部署技术如[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或 WPF 的 XAML 浏览器应用程序技术，允许无缝和安全地部署来自不受信任的站点的桌面应用程序。
 
 ## <a name="minimum-permission-requirements"></a>最小权限要求
 
@@ -39,7 +39,7 @@ WCF 支持以下标准命名的权限集下运行的应用程序中的功能子�
 
 ## <a name="partial-trust-on-the-client"></a>在客户端上的部分信任
 
-在从不受信任的 Internet 网站上下载和运行代码时必须采用某些安全预防措施。 [ClickOnce Deployment](/visualstudio/deployment/clickonce-security-and-deployment) （ClickOnce 部署）和 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 浏览器应用程序 (XBAP) 技术都可以使用部分信任以对不受信任的代码授予受限权限（Internet 区域）。
+在从不受信任的 Internet 网站上下载和运行代码时必须采用某些安全预防措施。 这两[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)和 WPF 的 XAML 浏览器应用程序 (XBAP) 技术都可以使用部分信任以对授予受限的权限 （Internet 区域） 不受信任的代码。
 
 可以使用 WCF 与从部分受信任通过以下任一方法部署的应用程序中的远程服务器进行通信[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或 xbap 技术。 在 Internet 区域权限集中包含<xref:System.Net.WebPermission>发起主机的允许这些应用程序与使用任何支持的 WCF 绑定中所述与其源服务器进行通信[Partial Trust Feature Compatibility](partial-trust-feature-compatibility.md).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004466"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169954"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>如何：将数据添加到剪贴板
 <xref:System.Windows.Forms.Clipboard>类提供了可用于与 Windows 操作系统剪贴板功能进行交互的方法。 许多应用程序的数据用作临时存储库使用剪贴板。 例如，文字处理器剪切和粘贴操作期间使用剪贴板。 剪贴板功能也将数据传输到另一个应用程序中很有用。  
@@ -24,7 +24,7 @@ ms.locfileid: "62004466"
   
  若要将数据添加到一个或多个格式在剪贴板中，使用<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>方法。 可以将任何对象传递给此方法，但若要添加多个格式数据，您必须首先将数据添加到一个单独的对象设计成可使用多种格式。 通常情况下，您将添加到你的数据<xref:System.Windows.Forms.DataObject>，但你可以使用实现的任何类型<xref:System.Windows.Forms.IDataObject>接口。  
   
- 在[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]，可以直接向剪贴板添加数据，通过使用为简化基本剪贴板任务而设计的新方法。 当处理单一的通用格式，例如文本中的数据时，请使用这些方法。  
+ 在.NET Framework 2.0 中，可以直接向剪贴板添加数据，通过使用为简化基本剪贴板任务而设计的新方法。 当处理单一的通用格式，例如文本中的数据时，请使用这些方法。  
   
 > [!NOTE]
 >  所有基于 Windows 的应用程序共享剪贴板。 因此，可能会有所变动时切换到另一个应用程序。  
@@ -35,14 +35,14 @@ ms.locfileid: "62004466"
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>若要将数据添加到剪贴板中单个常见的格式  
   
-1. 使用<xref:System.Windows.Forms.Clipboard.SetAudio%2A>， <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>， <xref:System.Windows.Forms.Clipboard.SetImage%2A>，或<xref:System.Windows.Forms.Clipboard.SetText%2A>方法。 这些方法是仅适用于[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。  
+1. 使用<xref:System.Windows.Forms.Clipboard.SetAudio%2A>， <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>， <xref:System.Windows.Forms.Clipboard.SetImage%2A>，或<xref:System.Windows.Forms.Clipboard.SetText%2A>方法。 这些方法是仅在.NET Framework 2.0 中可用。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>若要将数据添加到剪贴板中的自定义格式  
   
-1. 使用<xref:System.Windows.Forms.Clipboard.SetData%2A>具有自定义格式名称的方法。 此方法是仅适用于[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。  
+1. 使用<xref:System.Windows.Forms.Clipboard.SetData%2A>具有自定义格式名称的方法。 此方法是仅在.NET Framework 2.0 中可用。  
   
      此外可以使用具有预定义的格式名称<xref:System.Windows.Forms.Clipboard.SetData%2A>方法。 有关详细信息，请参阅 <xref:System.Windows.Forms.DataFormats>。  
   

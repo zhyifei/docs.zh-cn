@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d926fb3f630d2a1af00242f94ddcb3c2dc284df
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881190"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170059"
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 Windows Communication Foundation (WCF) 服务设计为支持托管代码的任何 Windows 进程中运行。  
@@ -23,7 +23,7 @@ ms.locfileid: "65881190"
 #### <a name="self-hosting-in-a-managed-application"></a>托管应用程序中的自承载  
  可以在任何托管应用程序中承载 WCF 服务。 这是最灵活的选项，因为它需要部署最少的基础结构。 在托管应用程序代码内嵌入服务代码，然后创建并打开 <xref:System.ServiceModel.ServiceHost> 的实例以使服务变为可用。 有关详细信息，请参阅[如何：承载于托管应用程序的 WCF 服务](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
- 此选项可实现两个常见方案：在控制台应用程序和丰富的客户端应用程序，如基于 Windows Presentation Foundation (WPF) 或 Windows 窗体 (WinForms) 上运行的 WCF 服务。 承载在控制台应用程序的 WCF 服务应用程序的开发阶段是通常很有用。 这使服务变得容易调试，从中跟踪信息以查明应用程序内发生的情况变得更加方便，以及通过将其复制到新的位置进行来回移动变得更加轻松。 此宿主选项还使丰富客户端应用程序（如 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 和 WinForms 应用程序）与外部世界的通信变得很容易。 例如，使用的对等协作客户[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]为其用户界面，并还承载 WCF 服务，允许其他客户端连接到它并共享信息。  
+ 此选项可实现两个常见方案：在控制台应用程序和丰富的客户端应用程序，如基于 Windows Presentation Foundation (WPF) 或 Windows 窗体 (WinForms) 上运行的 WCF 服务。 承载在控制台应用程序的 WCF 服务应用程序的开发阶段是通常很有用。 这使服务变得容易调试，从中跟踪信息以查明应用程序内发生的情况变得更加方便，以及通过将其复制到新的位置进行来回移动变得更加轻松。 此宿主选项还便于丰富的客户端应用程序，如 WPF 和 WinForms 应用程序，与外界进行通信。 例如，为其用户界面中使用 WPF 和也承载 WCF 服务，允许其他客户端连接到它并共享信息的对等协作客户端。  
   
 #### <a name="managed-windows-services"></a>托管 Windows 服务  
  此宿主选项包括注册承载 WCF 服务作为托管 Windows 服务 （以前称为 NT 服务），以便该服务的进程生存期由服务控制管理器 (SCM) 控制的应用程序域 (AppDomain)Windows 服务。 与自承载选项一样，此类型的宿主环境要求作为应用程序的一部分编写某些宿主代码。 该服务实现为这两个 Windows 服务和 WCF 服务，因为它继承自<xref:System.ServiceProcess.ServiceBase>类，以及从 WCF 服务协定接口。 然后创建 <xref:System.ServiceModel.ServiceHost> ，在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法内打开它并在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法内关闭它。 还必须实现从 <xref:System.Configuration.Install.Installer> 继承的安装程序类，以允许 Installutil.exe 工具将程序安装为 Windows 服务。 有关详细信息，请参阅[如何：承载 WCF 服务中托管的 Windows 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 由托管 Windows 服务宿主选项启用的方案是在安全环境中没有消息激活 IIS 外部承载的长时间运行 WCF 服务。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
@@ -43,7 +43,7 @@ ms.locfileid: "65881190"
   
 |宿主环境|常见方案|主要优点和限制|  
 |-------------------------|----------------------|----------------------------------|  
-|托管应用程序（“自承载”）|在开发过程中使用的控制台应用程序。<br />丰富 WinForm 和[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]访问服务的客户端应用程序。|-灵活。<br />-易于部署。<br />-未服务的企业解决方案。|  
+|托管应用程序（“自承载”）|在开发过程中使用的控制台应用程序。<br />丰富 WinForm 和 WPF 客户端应用程序访问服务。|-灵活。<br />-易于部署。<br />-未服务的企业解决方案。|  
 |Windows 服务（以前称为 NT 服务）|IIS 外部承载的长时间运行 WCF 服务。|服务进程生存期由操作系统，不是消息激活控制。<br />-支持的所有版本的 Windows。<br />安全环境。|  
 |IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-运行 WCF 服务的同时与 ASP.NET 内容使用 HTTP 协议在 Internet 上。|-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-仅限 HTTP。|  
 |Windows 进程激活服务 (WAS)|-运行而无需使用各种传输协议在 Internet 上安装 IIS 的 WCF 服务。|不需要 IIS。<br />-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-适用于 HTTP、 TCP、 命名的管道和 MSMQ。|  

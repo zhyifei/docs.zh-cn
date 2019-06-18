@@ -2,18 +2,24 @@
 title: Web 设置架构
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Web.config configuration file [ASP.NET]'
-  - 'ASP.NET configuration system, Web settings schema'
-  - schema Web settings
-  - 'Web settings, schema [ASP.NET]'
-  - 'configuration files [ASP.NET]'
-  - 'configuration schema [.NET Framework], Web settings'
+- Web.config configuration file [ASP.NET]
+- ASP.NET configuration system, Web settings schema
+- schema Web settings
+- Web settings, schema [ASP.NET]
+- configuration files [ASP.NET]
+- configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
+ms.openlocfilehash: 0fbc28bb7b871cc245d0fe477ea8e15c147549bb
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170019"
 ---
 # <a name="web-settings-schema"></a>Web 设置架构
 Web 设置指定 CPU 和执行级别 ASP.NET 设置，后者应用于由 ASP.NET 承载层托管的进程范围行为。 这些设置与 ASP.NET 应用程序的 Web.config 文件中指定的应用程序域类型设置不同。  
   
- Web 设置包含在 Aspnet.config 文件中，该文件位于各版本 .NET Framework 的安装文件夹内。 例如，[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] 的 Aspnet.config 文件位于以下文件夹：  
+ Web 设置包含在 Aspnet.config 文件中，该文件位于各版本 .NET Framework 的安装文件夹内。 例如，.NET Framework 2.0 的 Aspnet.config 文件位于以下文件夹：  
   
  `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   

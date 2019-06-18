@@ -2,12 +2,12 @@
 title: 如何：创建自定义活动设计器
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945647"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170667"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>如何：创建自定义活动设计器
 
@@ -17,7 +17,7 @@ ms.locfileid: "61945647"
 
 <xref:System.Activities.Presentation.ActivityDesigner> 采用两个帮助器控件，即 <xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>，以便更易于开发自定义活动设计器。 这两个控件处理常用功能，例如，拖放子元素，删除、选择和添加这些子元素。 <xref:System.Activities.Presentation.WorkflowItemPresenter>允许单个子级 UI 元素内，提供"放置区"，它同时<xref:System.Activities.Presentation.WorkflowItemsPresenter>可以提供支持多个 UI 元素，包括附加功能，例如排序、 移动、 删除和添加的子元素。
 
-在实现自定义活动设计器的过程需要强调的其他关键部分是，考虑如何使用 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 数据绑定将可视化编辑操作绑定到为记住我们在设计器中编辑的内容而存储的实例。 这是通过模型项树实现的，它还负责启用更改通知和跟踪事件（例如状态的更改）。
+需要实现自定义活动设计器中突出显示的其他关键部分涉及在其中使用 WPF 数据绑定到实例存储在内存中我们正在编辑的设计器中绑定的可视编辑的方式。 这是通过模型项树实现的，它还负责启用更改通知和跟踪事件（例如状态的更改）。
 
 本主题概述了两个过程。
 
@@ -29,7 +29,7 @@ ms.locfileid: "61945647"
 
 1. 启动 Visual Studio 2010。
 
-2. 上**文件**菜单，依次指向**新建**，然后选择**项目...**.
+2. 上**文件**菜单，依次指向**新建**，然后选择**项目...** .
 
      **“新建项目”** 对话框随即打开。
 
@@ -43,7 +43,7 @@ ms.locfileid: "61945647"
 
 7. 在中**解决方案**框中，接受默认值。
 
-8. 单击 **“确定”**。
+8. 单击 **“确定”** 。
 
 9. 右击 MainWindows.xaml 文件中的，然后**解决方案资源管理器**，选择**删除**，并确认**确定**中**Microsoft Visual Studio**对话框。
 

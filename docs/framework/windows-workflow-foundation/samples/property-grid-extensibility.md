@@ -2,12 +2,12 @@
 title: 属性网格扩展性-WF 示例
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637689"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170351"
 ---
 # <a name="property-grid-extensibility"></a>属性网格扩展性
 
@@ -69,7 +69,7 @@ ms.locfileid: "65637689"
 
 1. 创建一个从 <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> 派生的类型。
 
-2. 在构造函数中，使用 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 数据模板设置 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 值。 可以在 XAML 中创建该值，但在此示例中，将在代码中创建它。
+2. 集<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>使用 WPF 数据模板构造函数中的值。 可以在 XAML 中创建该值，但在此示例中，将在代码中创建它。
 
 3. 数据模板具有在属性网格中呈现的项的 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的数据上下文。 在下面的代码中，稍后会将其绑定到 `Value` 属性。 此外，包含 <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> 以提供引发 FilePickerEditor.cs 中的对话框的按钮也很重要。
 

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583554"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169983"
 ---
 # <a name="application-settings-overview"></a>应用程序设置概述
 本主题讨论如何代表你的应用程序和你的用户创建和存储设置数据。  
   
  Windows 窗体的应用程序设置功能使你可以在客户端计算机上轻松创建、存储和维护自定义应用程序和用户首选项。 利用 Windows 窗体应用程序设置，不仅可以存储应用程序数据（如数据库连接字符串），还可以存储特定于用户的数据（如用户应用程序首选项）。 使用 Visual Studio 或自定义托管代码，可以创建新设置、从磁盘读取设置和将设置写入磁盘、将设置绑定到窗体上的属性，以及在加载和保存设置数据前对设置数据进行验证。  
   
- 应用程序设置使开发人员能够使用非常少的自定义代码，其应用程序中保存状态，并不取代以前版本的.NET Framework 中的动态属性。 应用程序设置在很多方面优于动态属性，动态属性是只读的、后期绑定的，且需要较多的自定义编程。 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]中保留了动态属性类，但它们只是 shell 类，用于对应用程序设置类进行简单包装。  
+ 应用程序设置使开发人员能够使用非常少的自定义代码，其应用程序中保存状态，并不取代以前版本的.NET Framework 中的动态属性。 应用程序设置在很多方面优于动态属性，动态属性是只读的、后期绑定的，且需要较多的自定义编程。 在.NET Framework 2.0 中，保留动态属性类，但它们是只是 shell 进行简单包装应用程序设置类的类。  
   
 ## <a name="what-are-application-settings"></a>什么是应用程序设置？  
  Windows 窗体应用程序经常会需要某些特殊数据，这些数据对运行应用程序至关重要，但你又不想在应用程序代码中直接包含它们。 如果你的应用程序使用 Web 服务或数据库服务器，则你可能想将这种信息存储在一个单独的文件中，以便将来更改它而无需重新编译该应用程序。 同样，应用程序还可能需要存储特定于当前用户的数据。 例如，大多数应用程序都有用户首选项功能，该功能用于自定义应用程序的外观和行为。  

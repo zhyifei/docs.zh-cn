@@ -2,12 +2,12 @@
 title: 使用自定义表达式编辑器
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 9d73134c3f17fad618d26f335d89fdab2d99dbdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650918"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169970"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自定义表达式编辑器
 可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。 在以下几种情况下，您可能需要使用自定义表达式编辑器：  
@@ -222,7 +222,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>在 WPF 项目中发布自定义表达式编辑器  
- 以下的代码显示如何在 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 应用程序中重新承载设计器以及如何创建和发布 `MyEditorService` 服务。 使用此代码之前, 从包含 avalon2 应用程序的项目将引用添加到 MyExpressionEditorService 库项目。   
+ 下面是演示如何重新承载的 WPF 应用程序中的设计器以及如何创建和发布的代码`MyEditorService`服务。 使用此代码之前, 从包含 avalon2 应用程序的项目将引用添加到 MyExpressionEditorService 库项目。  
   
 ```  
 using System.Windows;  

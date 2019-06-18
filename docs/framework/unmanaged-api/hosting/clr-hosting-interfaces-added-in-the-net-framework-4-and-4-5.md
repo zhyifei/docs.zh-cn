@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490650"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170436"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中添加的 CLR 承载接口
 本部分介绍非托管接口的主机可用于公共语言运行时 (CLR) 集成的.NET Framework 4，.NET Framework 4.5 和更高版本中在其应用程序。 这些接口提供的主机，若要配置和运行时加载到进程的方法。  
@@ -22,7 +22,7 @@ ms.locfileid: "66490650"
   
 - 它们使用生命期管理 (`AddRef`并`Release`)，封装 （隐式上下文） 和`QueryInterface`从 com。  
   
-- 存在不要使用 COM 类型，如`BSTR`， `SAFEARRAY`，或`VARIANT`。  
+- 如不使用 COM 类型`BSTR`， `SAFEARRAY`，或`VARIANT`。  
   
 - 不没有使用任何单元模型、 聚合或注册表激活[CoCreateInstance 函数](https://go.microsoft.com/fwlink/?LinkId=142894)。  
   

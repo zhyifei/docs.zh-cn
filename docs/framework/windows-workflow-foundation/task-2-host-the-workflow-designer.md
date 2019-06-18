@@ -2,17 +2,17 @@
 title: 任务 2：承载工作流设计器
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665287"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169988"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
 本主题介绍用于托管的实例的过程[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 应用程序中。  
   
- 过程配置**网格**控件，其中包含设计器中，以编程方式创建的实例<xref:System.Activities.Presentation.WorkflowDesigner>，其中包含默认值<xref:System.Activities.Statements.Sequence>活动，将注册要提供的设计器元数据所有内置活动和主机的设计器支持[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]在[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]应用程序。  
+ 过程配置**网格**控件，其中包含设计器中，以编程方式创建的实例<xref:System.Activities.Presentation.WorkflowDesigner>，其中包含默认值<xref:System.Activities.Statements.Sequence>活动，将注册要提供的设计器元数据所有内置活动和主机的设计器支持[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]在 WPF 应用程序。  
   
 ### <a name="to-host-the-workflow-designer"></a>承载工作流设计器  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64665287"
   
 3. 通过选择设置网格名称**网格**设计器中的面板 (单击内部框中**MainWindow**) 和设置**名称**顶部的属性**属性**窗口为"grid1"。  
   
-4. 在中**属性**窗口中，单击省略号 (**...**) 旁边`ColumnDefinitions`以打开**集合编辑器**对话框。  
+4. 在中**属性**窗口中，单击省略号 ( **...** ) 旁边`ColumnDefinitions`以打开**集合编辑器**对话框。  
   
 5. 在中**集合编辑器**对话框中，单击**添加**按钮三次以向布局中插入三个列。 第一列将包含**工具箱**，第二列将承载[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，第三列用于属性检查器。  
   
