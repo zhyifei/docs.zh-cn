@@ -2,12 +2,12 @@
 title: 源代码行标识符、文件标识符和路径标识符
 description: 了解如何使用内置F#标识符值使您能够访问源行号、 目录和文件名称在代码中的。
 ms.date: 05/16/2016
-ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663617"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152054"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>源代码行标识符、文件标识符和路径标识符
 
@@ -31,7 +31,7 @@ __SOURCE_FILE__
 |---------------------|-----------|
 |`__LINE__`|计算结果为当前行号，考虑`#line`指令。|
 |`__SOURCE_DIRECTORY__`|计算结果为当前源目录的完整路径考虑`#line`指令。|
-|`__SOURCE_FILE__`|计算结果为当前的源代码文件的名称，其路径中，考虑`#line`指令。|
+|`__SOURCE_FILE__`|计算结果为当前源文件名称，而其路径中，不考虑`#line`指令。|
 
 有关详细信息`#line`指令，请参阅[编译器指令](compiler-directives.md)。
 
@@ -46,7 +46,7 @@ __SOURCE_FILE__
 ```
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
-Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
+Source File: Program.fs
 ```
 
 ## <a name="see-also"></a>请参阅
