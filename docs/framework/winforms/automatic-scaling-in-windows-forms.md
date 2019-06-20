@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636977"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268081"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows 窗体中的自动缩放
 
@@ -48,7 +48,7 @@ ms.locfileid: "65636977"
 
 - 它不是与.NET framework 版本 2.0 中，如引入的较新布局管理器兼容<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。
 
-- 它不支持直接基于与 [!INCLUDE[compact](../../../includes/compact-md.md)] 兼容所需的显示分辨率进行缩放。
+- 它不支持直接基于.NET Compact Framework 的兼容所需的显示分辨率进行缩放。
 
 尽管在.NET Framework 2.0 版，以保持向后兼容性保留了此机制，但它已由下文所述的更可靠的缩放机制取代。 因此，<xref:System.Windows.Forms.Form.AutoScale%2A><xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和某些 <xref:System.Windows.Forms.Control.Scale%2A> 重载被标记为“已过时”。
 
@@ -63,7 +63,7 @@ ms.locfileid: "65636977"
 
 - <xref:System.Windows.Forms.Control> 类还具有使其可参与缩放并支持在同一个窗体上的混合缩放的几个新成员。 特别是 <xref:System.Windows.Forms.Control.Scale%2A>、<xref:System.Windows.Forms.Control.ScaleChildren%2A> 和 <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 成员支持缩放。
 
-- 已按照 <xref:System.Windows.Forms.AutoScaleMode> 枚举定义添加基于屏幕分辨率的缩放支持以补充系统字体支持。 此模式与 [!INCLUDE[compact](../../../includes/compact-md.md)] 支持的自动缩放兼容，从而更容易迁移应用程序。
+- 已按照 <xref:System.Windows.Forms.AutoScaleMode> 枚举定义添加基于屏幕分辨率的缩放支持以补充系统字体支持。 此模式适用于支持.NET Compact Framework 这样更易于应用程序迁移的自动缩放。
 
 - 已向自动缩放实现添加与布局管理器（如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>）的兼容性。
 

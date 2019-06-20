@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 03497136ec53d89ac944fdd90301a4c590be326a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622541"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268252"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 数据类型 (Visual Basic)
 可以仅由值保存`True`或`False`。 关键字`True`并`False`对应的两种状态`Boolean`变量。  
@@ -45,7 +45,7 @@ ms.locfileid: "64622541"
 ## <a name="example"></a>示例  
  在以下示例中，`runningVB`是`Boolean`变量，其中存储一个简单的是/否设置。  
   
-```  
+```vb  
 Dim runningVB As Boolean  
 ' Check to see if program is running on Visual Basic engine.  
 If scriptEngine = "VB" Then  

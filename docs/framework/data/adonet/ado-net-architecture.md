@@ -2,18 +2,18 @@
 title: ADO.NET 体系结构
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877255"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267968"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 体系结构
 以前，数据处理主要依赖于基于连接的双层模型。 随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。  
   
 ## <a name="adonet-components"></a>ADO.NET 组件  
- 两个主要组件[!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)]访问和操作数据的.NET Framework 数据提供程序和<xref:System.Data.DataSet>。  
+ ADO.NET 来访问和操作数据的两个主要组件包括.NET Framework 数据提供程序和<xref:System.Data.DataSet>。  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序  
  .NET Framework 数据提供程序是专门为数据操作以及快速、只进、只读访问数据而设计的组件。 `Connection` 对象提供到数据源的连接。 使用 `Command` 对象可以访问用于返回数据、修改数据、运行存储过程以及发送或检索参数信息的数据库命令。 `DataReader` 可从数据源提供高性能的数据流。 最后，`DataAdapter` 在 `DataSet` 对象和数据源之间起到桥梁作用。 `DataAdapter` 使用 `Command` 对象在数据源中执行 SQL 命令以向 `DataSet` 中加载数据，并将对 `DataSet` 中数据的更改协调回数据源。 有关详细信息，请参阅[.NET Framework 数据提供程序](../../../../docs/framework/data/adonet/data-providers.md)并[检索和修改 ADO.NET 中的数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)。  
