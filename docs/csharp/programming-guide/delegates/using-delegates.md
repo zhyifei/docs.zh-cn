@@ -23,7 +23,7 @@ ms.locfileid: "56979835"
   
  [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- 委托类型派生自 .NET Framework 中的 <xref:System.Delegate> 类。 委托类型是[封装的](../../../csharp/language-reference/keywords/sealed.md)，它们不能派生自 <xref:System.Delegate>，也不能从其派生出自定义类。 由于实例化的委托是一个对象，因此可以作为参数传递或分配给一个属性。 这允许方法接受委托作为参数并在稍后调用委托。 这被称为异步回调，是在长进程完成时通知调用方的常用方法。 当以这种方式使用委托时，使用委托的代码不需要知道要使用的实现方法。 功能类似于封装接口提供的功能。  
+ 委托类型派生自 .NET Framework 中的 <xref:System.Delegate> 类。 委托类型是[密封的](../../../csharp/language-reference/keywords/sealed.md)，它们不能派生自 <xref:System.Delegate>，也不能从其派生出自定义类。 由于实例化的委托是一个对象，因此可以作为参数传递或分配给一个属性。 这允许方法接受委托作为参数并在稍后调用委托。 这被称为异步回调，是在长进程完成时通知调用方的常用方法。 当以这种方式使用委托时，使用委托的代码不需要知道要使用的实现方法。 功能类似于封装接口提供的功能。  
   
  回调的另一个常见用途是定义自定义比较方法并将该委托传递到短方法。 它允许调用方的代码成为排序算法的一部分。 以下示例方法使用 `Del` 类型作为参数：  
   
