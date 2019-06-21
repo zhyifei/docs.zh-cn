@@ -2,12 +2,12 @@
 title: 疑难解答
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613766"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307185"
 ---
 # <a name="troubleshooting"></a>疑难解答
 下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。  
@@ -42,7 +42,7 @@ ms.locfileid: "64613766"
 ## <a name="expression-not-queryable"></a>不可查询的表达式  
  如果收到错误消息“表达式 [表达式] 不可查询；是否缺少程序集引用?” ，请确保满足以下要求：  
   
-- 应用程序面向的是 [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)]。  
+- 你的应用程序定目标到.NET Compact Framework 3.5。  
   
 - 您具有对 `System.Core.dll` 和 `System.Data.Linq.dll` 的引用。  
   

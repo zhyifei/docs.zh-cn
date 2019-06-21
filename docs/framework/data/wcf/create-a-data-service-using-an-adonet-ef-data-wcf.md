@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878075"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307142"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：创建数据服务使用 ADO.NET 实体框架数据源 （WCF 数据服务）
 
@@ -26,9 +26,9 @@ WCF 数据服务公开实体数据作为数据服务。 此实体数据由 ADO.N
 
 3. 输入模型名称，然后单击**添加**。
 
-     将显示“[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]向导”的第一页。
+     将显示“实体数据模型向导”的第一页。
 
-4. 在中**选择模型内容**对话框中，选择**从数据库生成**。 然后，单击 **“下一步”**。
+4. 在中**选择模型内容**对话框中，选择**从数据库生成**。 然后，单击 **“下一步”** 。
 
 5. 单击**新的连接**按钮。
 
@@ -36,7 +36,7 @@ WCF 数据服务公开实体数据作为数据服务。 此实体数据由 ADO.N
 
      **选择数据连接**对话框以数据库的连接设置更新。
 
-7. 絋粄**将实体连接设置保存为 App.Config 中：** 选中复选框。 然后，单击 **“下一步”**。
+7. 絋粄**将实体连接设置保存为 App.Config 中：** 选中复选框。 然后，单击 **“下一步”** 。
 
 8. 在中**选择数据库对象**对话框中，选择的所有数据库对象计划要在数据服务中公开。
 

@@ -2,12 +2,12 @@
 title: 符号和运算符参考
 description: 了解符号和运算符中使用F#编程语言。
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490816"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306186"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -47,7 +47,7 @@ ms.locfileid: "66490816"
 |`+?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，使左右两侧相加。<br /></li></ul>|
 |`,`|[元组](../tuples.md)|<ul><li>分隔元组的元素或类型参数。<br /></li></ul>|
 |`-`|[算术运算符](arithmetic-operators.md)|<ul><li>当用作二元运算符时，使左侧减去右侧。<br /></li><li>当用作二元运算符时，执行求反运算。<br /></li></ul>|
-|`-`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，使左侧减去右侧。<br /></li></ul>|
+|`-?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，使左侧减去右侧。<br /></li></ul>|
 |`->`|[函数](../functions/index.md)<br /><br />[match 表达式](../match-expressions.md)|<ul><li>在函数类型中，分隔自变量和返回值。<br /></li><li>生成表达式（序列表达式）；等效于 `yield` 关键字。<br /></li><li>在匹配表达式中使用<br /></li></ul>|
 |`.`|[成员](../members/index.md)<br /><br />[基元类型](../primitive-types.md)|<ul><li>访问成员并分隔完全限定名称中的各个名称。<br /></li><li>指定浮点数中的小数点。<br /></li></ul>|
 |`..`|[循环：`for...in` 表达式](../loops-for-in-expression.md)|<ul><li>指定范围。<br /></li></ul>|

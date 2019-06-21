@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: f35c1387d54fdc02cb421af477671a5a75939c57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36f0d50994593d1d575a836dfbd04e8c63a21204
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626396"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306280"
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]将数据作为源公开。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持的数据馈送的 Atom 和 JavaScript 对象表示法 (JSON) 格式。 当使用 Atom 馈送，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供序列化数据，如实体和关系，可以在 HTTP 消息的正文中包含 XML 格式的标准方法。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -42,7 +42,7 @@ ms.locfileid: "64626396"
  有关详细信息，请参阅[如何：使用实体框架提供程序自定义源](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)。  
   
 > [!NOTE]
->  由于实体设计器不支持数据模型扩展，因此必须手动修改包含数据模型的 XML 文件。 有关.edmx 文件由生成的详细信息[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具，请参阅[.edmx 文件概述 （实体框架）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。  
+>  由于实体设计器不支持数据模型扩展，因此必须手动修改包含数据模型的 XML 文件。 有关由 Entity Data Model 工具生成的.edmx 文件的详细信息，请参阅[.edmx 文件概述 （实体框架）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。  
   
 ### <a name="custom-feed-attributes"></a>自定义源特性  
  下表列出了一些 XML 特性，这些特性自定义可添加到用于定义数据模型的概念架构定义语言 (CSDL) 的源。 这些特性等效于用于反射提供程序的 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> 的属性。  

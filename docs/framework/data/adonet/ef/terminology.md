@@ -2,12 +2,12 @@
 title: 实体框架术语
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877487"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306336"
 ---
 # <a name="entity-framework-terminology"></a>实体框架术语
 本主题定义中经常引用的术语[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档。 如果有其他可用信息，则会提供指向相关主题的链接。  
@@ -27,7 +27,7 @@ ms.locfileid: "65877487"
 |并发|允许多个用户同时访问和更改共享数据的进程。 默认情况下，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]实现开放式并发模型。|  
 |方向|指某些关联的非对称性。 方向是通过架构中的 `FromRole` 或 `ToRole` 元素的 `NavigationProperty` 和 `ReferentialConstraint` 属性指定的。<br /><br /> 有关详细信息，请参阅[NavigationProperty 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl)并[导航属性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
 |Eager Loading — 预先加载|加载特定相关对象集以及在查询中显式请求的对象的过程。|  
-|.edmx 文件|一种 XML 文件，该文件包含概念模型（以 CSDL 表示）、存储模型（以 SSDL 表示）以及这两个模型之间的映射（以 MSL 表示）。 .edmx 文件由[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]工具创建。 有关详细信息，请参阅[.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。|  
+|.edmx 文件|一种 XML 文件，该文件包含概念模型（以 CSDL 表示）、存储模型（以 SSDL 表示）以及这两个模型之间的映射（以 MSL 表示）。 通过实体数据模型工具创建.edmx 文件。 有关详细信息，请参阅[.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。|  
 |end|参与关联的实体。<br /><br /> 有关详细信息，请参阅[最终元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl)并[关联端](../../../../../docs/framework/data/adonet/association-end.md)。|  
 |Entity — 实体|应用程序域中的概念，数据类型是根据实体定义的。<br /><br /> 有关详细信息，请参阅[EntityType 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)并[实体类型](../../../../../docs/framework/data/adonet/entity-type.md)。|  
 |EntityClient|包含类，如独立于存储的 ADO.NET 数据提供程序`EntityConnection`， `EntityCommand`，和`EntityDataReader`。 适用于[!INCLUDE[esql](../../../../../includes/esql-md.md)]，并连接到存储特定 ADO.NET 数据提供程序，如`SqlClient`。<br /><br /> 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。|  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645760"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306218"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用事务范围实现隐式事务
 <xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  
@@ -124,7 +124,9 @@ using(TransactionScope scope1 = new TransactionScope())
  下面的示例演示一个不包含任何环境事务的代码块，它使用 `scope1` 创建了一个新范围 (<xref:System.Transactions.TransactionScopeOption.Required>)。 范围 `scope1` 是根范围，因为它创建了一个新事务（事务 A），并使事务 A 成为环境事务。 `Scope1` 然后，创建三个对象，每个都有一个不同<xref:System.Transactions.TransactionScopeOption>值。 例如，`scope2` 是用 <xref:System.Transactions.TransactionScopeOption.Required> 创建的；由于存在环境事务，因此该范围联接 `scope1` 所创建的第一个事务。 请注意，`scope3` 是新事务的根范围，而 `scope4` 则没有环境事务。  
   
  虽然 <xref:System.Transactions.TransactionScopeOption> 的默认值和最常用的值是 <xref:System.Transactions.TransactionScopeOption.Required>，但其他各值都有其独有的用途。  
-  
+
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>在事务范围内的非事务性代码
+
  <xref:System.Transactions.TransactionScopeOption.Suppress> 你想要保留在代码部分执行的操作并不希望中止环境事务，如果操作失败时很有用。 例如，在要执行日志记录或审核操作时，或者在无论环境事务提交还是中止都要将事件发布给订户时。 使用此值，可以在事务范围中包含非事务代码段，如下面的示例所示。  
   
 ```csharp  

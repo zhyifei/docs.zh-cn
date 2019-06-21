@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210447"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307094"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -134,7 +134,7 @@ ms.locfileid: "65210447"
 |`Switch.UseLegacyAccessibilityFeatures`|控件可访问性功能可从.NET Framework 4.7.1 开始是启用还是禁用。 | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|.NET Framework 4.7.2 中可访问性功能是否已启用的控件 (`false`) 还是禁用 (`true`)。 如果`true`，`Switch.UseLegacyAccessibilityFeatures`还必须是`true`若要启用.NET Framework 4.7.1 的辅助功能。|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|在.NET Framework 4.8 引入可访问性功能是否已启用的控件 (`false`) 还是禁用 (`true`)。 如果`true`，`Switch.UseLegacyAccessibilityFeatures`并`Switch.UseLegacyAccessibilityFeatures.2`也必须`true`。|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|控件的工具提示是否 displaed 当用户悬停鼠标光标在 WPF 控件 (`true`)，或它们显示在键盘焦点和通过键盘快捷键 (`false`，默认行为)。 在.NET Framework 4.8 上运行但面向旧版.NET Framework 的应用程序，同时启用键盘焦点并快捷方式键支持要求`Switch.UseLegacyAccessibilityFeatures`， `Switch.UseLegacyAccessibilityFeatures.2`，并`Switch.UseLegacyAccessibilityFeatures.3`所有将设置为`false`。|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|控件的工具提示时是否显示用户悬停鼠标光标在 WPF 控件 (`true`)，或它们显示在键盘焦点和通过键盘快捷键 (`false`，默认行为)。 在.NET Framework 4.8 上运行但面向旧版.NET Framework 的应用程序，同时启用键盘焦点并快捷方式键支持要求`Switch.UseLegacyAccessibilityFeatures`， `Switch.UseLegacyAccessibilityFeatures.2`，并`Switch.UseLegacyAccessibilityFeatures.3`所有将设置为`false`。|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|控制是否在复合键中的空键顺序将忽略由 XSD 架构验证。 有关详细信息，请参阅[缓解：XML 架构验证](../../../migration-guide/mitigation-xml-schema-validation.md)。|.NET Framework 4.6|  
   
 > [!NOTE]

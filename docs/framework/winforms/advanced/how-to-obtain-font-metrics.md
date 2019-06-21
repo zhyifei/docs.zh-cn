@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7d7ad92199bb8a8f01290066f8ae023a14c2f9ce
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881872"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307428"
 ---
 # <a name="how-to-obtain-font-metrics"></a>如何：获取字体规格
 <xref:System.Drawing.FontFamily>类提供了检索特定系列/样式组合的各种度量值的以下方法：  
@@ -26,7 +26,7 @@ ms.locfileid: "65881872"
   
 - <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
- 这些方法返回的数字都是采用字体设计单位，因此它们将独立的大小和单位的特定于<xref:System.Drawing.Font>对象。  
+ 这些方法返回的值是采用字体设计单位，因此它们是独立的大小和单位的特定于<xref:System.Drawing.Font>对象。  
   
  下图显示了各种指标：
   
