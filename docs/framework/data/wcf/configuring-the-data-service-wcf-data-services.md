@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 47c320b6d458ff1220808cacfb334e380b1edbc4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d2469324317fe19d2876dceefe68d70a5fd2eae3
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622745"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306287"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>配置数据服务（WCF 数据服务）
 与[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以创建公开的数据服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 这些源中的数据可以来自各种数据源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用数据提供程序公开此数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 这些提供程序包括一个[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序、一个反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  
@@ -69,7 +69,7 @@ ms.locfileid: "64622745"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|不支持|不支持|  
   
- <sup>1</sup>在此示例中，`Address`表示的复杂类型属性`Customers`实体有一个名为`StreetAddress`。 罗斯文数据服务所使用的模型不会显式定义此复杂类型。 如果数据模型是使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序定义的，则可以使用[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具来定义这样的复杂类型。 有关详细信息，请参阅[如何：创建和修改复杂类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
+ <sup>1</sup>在此示例中，`Address`表示的复杂类型属性`Customers`实体有一个名为`StreetAddress`。 罗斯文数据服务所使用的模型不会显式定义此复杂类型。 当使用定义的数据模型[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序，您可以使用实体数据模型工具来定义这样的复杂类型。 有关详细信息，请参阅[如何：创建和修改复杂类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
   
  <sup>2</sup>返回二进制大型对象 (BLOB) 的属性定义为属于媒体链接入口，在此情况下，为某个实体的媒体资源时，才支持此 URI `Customers`。 有关详细信息，请参阅[流式处理提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   

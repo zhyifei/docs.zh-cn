@@ -77,7 +77,9 @@ ms.locfileid: "66483283"
 ## <a name="the-managed-heap"></a>托管堆  
  在垃圾回收器由 CLR 初始化之后，它会分配一段内存用于存储和管理对象。 此内存称为托管堆（与操作系统中的本机堆相对）。  
   
+
  每个托管进程都有一个托管堆。 进程中的所有线程都在同一堆上为对象分配内存。
+
   
  若要保留内存，垃圾回收器将调用 Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 函数，并且每次会为托管应用程序保留一个内存段。 垃圾回收器还会根据需要保留段，并通过调用 Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 函数将段释放回操作系统（在清除所有对象的段之后）。  
   

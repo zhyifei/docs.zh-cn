@@ -2,12 +2,12 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489832"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307301"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 此外应遵循有关创建安全的.NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -86,7 +86,7 @@ ms.locfileid: "66489832"
  提供程序固定名称可在 app.config 中修改。客户端应用程序必须保证使用强名称，通过标准提供程序工厂模型访问基础提供程序。  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>限制对模型和映射文件的访问权限。  
- 管理员必须将对模型和映射文件（.edmx、.csdl、.ssdl 和 .msl）的写访问权限仅分配给负责修改模型或映射的用户。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]仅在运行时需要对这些文件的读取访问权限。 管理员还应限制对对象层以及由[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]工具生成的预编译视图源代码文件的访问。  
+ 管理员必须将对模型和映射文件（.edmx、.csdl、.ssdl 和 .msl）的写访问权限仅分配给负责修改模型或映射的用户。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]仅在运行时需要对这些文件的读取访问权限。 管理员还应限制对对象层和预编译的视图源代码文件由 Entity Data Model 工具生成的访问。  
   
 ## <a name="security-considerations-for-queries"></a>有关查询的安全注意事项  
  查询概念模型时需要考虑下列安全注意事项。 这些注意事项适用于使用 EntityClient 的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询以及使用 LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)] 和查询生成器方法的对象查询。  

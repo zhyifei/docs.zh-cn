@@ -3,37 +3,37 @@ title: Docker 应用程序的外部循环 DevOps 工作流步骤
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
 ms.date: 02/15/2019
 ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644981"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在 Azure DevOps Services 中为容器中的 .NET Core 2.0 应用程序创建 CI/CD 管道并部署到 Kubernetes 群集
 
-图 5-12 中可以看到的端到端 DevOps 方案中介绍的代码管理、 代码编译、 生成 Docker 映像、 Docker 映像推送到 Docker 注册表，最后部署到 Azure 中的 Kubernetes 群集。
+在图 5-12 中，可以看到端到端 DevOps 场景，包括代码管理、代码编译、Docker 映像生成、Docker 映像推送到 Docker 注册表并最后部署到 Azure 中的 Kubernetes 群集。
 
-![工作流：在开发计算机中启动。 推送到存储库开始生成/CI 任务使用的自定义映像，获取推送到 Docker 注册表，然后任务使用的 CD/部署，最后，将推送到 AKS。](media/docker-workflow-ci-cd-aks.png)
+![工作流程：在开发计算机中启动。 通过推送到存储库，开始使用推送到 Docker 注册表的自定义映像生成/CI 任务，然后用于 CD/部署任务，最终将其推送到 AKS。](media/docker-workflow-ci-cd-aks.png)
 
-**图 5-12**。 CI/CD 方案创建 Docker 映像，部署到 Azure 中的 Kubernetes 群集
+**图 5-12**。 创建 Docker 映像并将其部署到 Azure 中的 Kubernetes 群集的 CI/CD 场景
 
-务必以突出显示的两个管道，生成/CI 和发布/CD，通过 Docker 注册表 （如 Docker 中心或 Azure 容器注册表） 中的连接。 Docker 注册表是相比传统的 CI/CD 过程不带 Docker 的主要区别之一。
+请务必注意通过 Docker 注册表（如Docker Hub 或 Azure 容器注册表）连接的生成/CI 和发布/CD 这两个管道。 与不带 Docker 的传统 CI/CD 进程相比，Docker 注册表是主要区别之一。
 
-如所示在图 5 月 13 日，第一阶段是生成/CI 管道。 在 Azure DevOps 服务可以创建生成/CI 管道，请将编译的代码创建 Docker 映像，并将它们推送到 Docker 注册表，如 Docker 中心或 Azure 容器注册表。
+如图 5-13 所示，第一阶段是生成/CI 管道。 在 Azure DevOps Services 中，可以创建生成/CI 管道，这些管道将编译代码、创建 Docker 映像，并将其推送到 Docker Hub 或 Azure 容器注册表等 Docker 注册表。
 
-![Azure DevOps，生成进程任务定义的浏览器视图。](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Azure DevOps 生成流程任务定义的浏览器视图。](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
-**图 5-13**。 生成/CI 管道中 Azure DevOps 生成 Docker 映像并将映像推送到 Docker 注册表
+**图 5-13**。 Azure DevOps 中的生成 Docker 映像并将映像推送到 Docker 注册表的生成/CI 管道
 
-第二个阶段是创建部署/发布管道。 在 Azure DevOps 服务，可以轻松地创建适用于 Azure DevOps 服务，使用 Kubernetes 任务面向的 Kubernetes 群集中图 5-14 所示的部署管道。
+第二个阶段是创建部署/发布管道。 在 Azure DevOps Services 中，可以使用 Azure DevOps Services 的 Kubernetes 任务轻松创建面向 Kubernetes 群集的部署管道（如图 5-14 所示）。
 
-![Azure DevOps 的浏览器视图将部署到 Kubernetes 任务定义。](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
+![Azure DevOps 部署到 Kubernetes 任务定义的浏览器视图。](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
-**图 5-14**。 Azure DevOps 服务部署到 Kubernetes 群集中的发布/CD 管道
+**图 5-14**。 Azure DevOps 服务中部署到 Kubernetes 群集的发布/CD 管道
 
-> [!演练] 部署到 Kubernetes eShopModernized:
+> [!Walkthrough] 将 eShopModernized 部署到 Kubernetes：
 >
-> 有关 Azure DevOps CI/CD 管道的详细演练部署到 Kubernetes 中，请参阅此文章: \
+> 如需了解部署到 Kubernetes 的 Azure DevOps CI/CD 管道的详细演练，请参阅以下帖子：\
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]

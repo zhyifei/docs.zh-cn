@@ -2,12 +2,12 @@
 title: 选择 Visual Basic 语言版本
 description: 配置编译器能够执行语法验证使用的特定编译器版本。
 ms.date: 05/24/2018
-ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797028"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268264"
 ---
 # <a name="select-the-visual-basic-language-version"></a>选择 Visual Basic 语言版本
 
@@ -33,7 +33,7 @@ Visual Basic 编译器将默认为已发布的语言的最新主版本。 你可
 
 值`latest`使用 Visual Basic 语言的最新次版本。 有效值为：
 
-|“值”|含义|
+|值|含义|
 |------------|-------------|
 |default|编译器接受它可支持的最新主版本中的所有有效语言语法。|
 |9|编译器接受仅包含在 Visual Basic 9.0 或更低的语法。|
@@ -44,13 +44,14 @@ Visual Basic 编译器将默认为已发布的语言的最新主版本。 你可
 |15|编译器接受仅包含在 Visual Basic 15.0 或更低的语法。|
 |15.3|编译器接受仅包含在 Visual Basic 15.3 或更低的语法。|
 |15.5|编译器接受仅包含在 Visual Basic 15.5 或更低的语法。|
+|15.8|编译器接受仅包含在 Visual Basic 15.8 或较低的语法。|
 |最新|编译器接受它可支持的所有有效语言语法。|
 
 特殊字符串 `default` 和 `latest` 分别解析为生成计算机上安装的最新主要和次要语言版本。
 
 ## <a name="configure-multiple-projects"></a>配置多个项目
 
-可以创建包含 `<LangVersion>` 元素的 Directory.build.props 文件来配置多个目录。 通常是在解决方案目录中完成这件事。 将以下内容添加到解决方案目录中的 Directory.build.props 文件：
+可以创建包含 `<LangVersion>` 元素的 Directory.build.props 文件来配置多个目录  。 通常是在解决方案目录中完成这件事。 将以下内容添加到解决方案目录中的 Directory.build.props 文件  ：
 
 ```xml
 <Project>

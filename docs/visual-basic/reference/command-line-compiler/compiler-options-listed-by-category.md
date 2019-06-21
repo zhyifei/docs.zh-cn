@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649748"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268161"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
 Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的开发环境 (IDE) 中的程序的替代方法。 下面是 Visual Basic 命令行编译器选项按功能分类排序的列表。  
@@ -39,7 +39,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器将.NET Compact Framework 为目标。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
 |[/refonly](refonly-compiler-option.md)|输出仅引用程序集。|
 |[/refout](refout-compiler-option.md)|指定引用程序集的输出路径。|

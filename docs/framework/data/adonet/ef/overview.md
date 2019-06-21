@@ -2,12 +2,12 @@
 title: 实体框架概述
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880035"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307349"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 
@@ -39,7 +39,7 @@ ms.locfileid: "65880035"
 ## <a name="map-objects-to-data"></a>对数据的 map 对象
  面向对象的编程对与数据存储系统的交互提出了一个难题。 虽然类的组织结构通常可以比较接近地反映关系数据库表的组织结构，但这种对应关系并不完美。 多个规范化表通常对应于单个类，而且类间关系的表示方式与表间关系的表示方式通常也不相同。 例如，若要表示某个销售订单的客户，`Order` 类可能会使用一个包含对 `Customer` 类实例的引用的属性，而数据库中的 `Order` 表行会包含一个外键列（或一组列），通过这些列包含对应于 `Customer` 表中的主键值的值。 `Customer` 类可能会使用一个名为 `Orders` 的属性（该属性包含 `Order` 类实例的集合），而数据库中的 `Customer` 表则不包含相应的列。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]让开发人员可以灵活地采用此方式表示关系，或更贴切地对在数据库中表示的关系进行建模。
 
- 现有解决方案只能通过将面向对象的类和属性映射到关系表和列来尝试弥合这种通常称为“阻抗不匹配”的差异。 而不会采用这种传统方法，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]映射到概念模型中实体和关系的关系表、 列和逻辑模型中的外键约束。 这在定义对象和优化逻辑模型方面都增加了灵活性。 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具基于概念模型生成可扩展数据类。 这些类是分部类，可以通过开发人员添加的其他成员进行扩展。 默认情况下，为特定概念模型生成的类派生自基类，这些基类提供服务以将实体具体化为对象以及跟踪和保存更改。 开发人员可以使用这些类像处理通过关联相关的对象一样处理实体和关系。 开发人员还可以自定义针对某一概念模型生成的类。 有关详细信息，请参阅[使用对象](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。
+ 现有解决方案只能通过将面向对象的类和属性映射到关系表和列来尝试弥合这种通常称为“阻抗不匹配”的差异。 而不会采用这种传统方法，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]映射到概念模型中实体和关系的关系表、 列和逻辑模型中的外键约束。 这在定义对象和优化逻辑模型方面都增加了灵活性。 Entity Data Model 工具生成基于概念模型的可扩展的数据类。 这些类是分部类，可以通过开发人员添加的其他成员进行扩展。 默认情况下，为特定概念模型生成的类派生自基类，这些基类提供服务以将实体具体化为对象以及跟踪和保存更改。 开发人员可以使用这些类像处理通过关联相关的对象一样处理实体和关系。 开发人员还可以自定义针对某一概念模型生成的类。 有关详细信息，请参阅[使用对象](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。
 
 ## <a name="access-and-change-entity-data"></a>访问和更改实体数据
 
@@ -47,7 +47,7 @@ ms.locfileid: "65880035"
 
 - [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 提供语言集成查询 (LINQ) 支持，用于查询在概念模型中定义的实体类型。 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 与存储无关的 SQL 方言直接使用概念模型中的实体并支持[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 与存储无关的 SQL 方言直接使用概念模型中的实体并支持实体数据模型概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中包含 EntityClient 数据提供程序。 此提供程序管理连接，将实体查询转换为特定于数据源的查询，并返回[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于将实体数据具体化为对象的数据读取器。 当不需要对象具体化时，通过使应用程序执行 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询并使用返回的只读数据读取器，还可以像标准 ADO.NET 数据提供程序一样使用 EntityClient 提供程序。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
 
@@ -55,7 +55,7 @@ ms.locfileid: "65880035"
 
 ![实体框架体系结构图](../../../../../docs/framework/data/adonet/ef/media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]工具可生成一个从 `System.Data.Objects.ObjectContext` 或 `System.Data.Entity.DbContext` 派生的类，该类表示概念模型中的实体容器。 此对象上下文提供跟踪更改以及管理标识、并发和关系的功能。 此类还公开将插入、更新和删除操作写入数据源的 `SaveChanges` 方法。 与查询类似，这些更改是由系统自动生成的命令或由开发人员指定的存储过程执行的。
+实体数据模型工具可以生成一个类派生自`System.Data.Objects.ObjectContext`或`System.Data.Entity.DbContext`该类表示概念模型中的实体容器。 此对象上下文提供跟踪更改以及管理标识、并发和关系的功能。 此类还公开将插入、更新和删除操作写入数据源的 `SaveChanges` 方法。 与查询类似，这些更改是由系统自动生成的命令或由开发人员指定的存储过程执行的。
 
 ## <a name="data-providers"></a>数据提供程序
 

@@ -1,12 +1,12 @@
 ---
 title: 什么是 Docker？
-description: 获取深入了解 Docker 中，一个简单的类比可能帮助你。
+description: 深入了解 Docker，这里的一个简单类比可能会对你有所帮助。
 ms.date: 02/15/2019
 ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644768"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
@@ -15,27 +15,27 @@ ms.locfileid: "65644768"
 
 ![Docker 容器可以在任意位置运行：在客户数据中心本地、在外部服务提供商或在 Azure 云中。](./media/image2.png)
 
-**图 1-2**。 Docker 在混合云的所有层上部署容器
+**图 1-2**。 Docker 在混合云的所有层部署容器
 
 Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windows 映像仅能在 Windows 主机上运行，Linux 映像可以在 Linux 主机和 Windows 主机上运行（到目前为止，使用 Hyper-V Linux VM），其中主机是指服务器或 VM。
 
-开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员运行部署了 Docker 映像（包括应用及其依赖项）的 Docker 主机。 开发人员在 Linux 或 Mac 上使用的是基于 Linux 的 Docker 主机，并且仅可以创建为 Linux 容器映像。 （在 Mac 上工作的开发人员可以编辑代码或从 macOS 上运行 Docker 命令行接口 (CLI)，但在撰写本文时，容器不直接在 macOS 上运行。）在 Windows 上进行开发的开发人员可以为 Linux 或 Windows 容器创建映像。
+开发人员可以在 Windows、Linux 或 macOS 上使用开发环境。 在开发计算机上，开发人员运行部署了 Docker 映像（包括应用及其依赖项）的 Docker 主机。 在 Linux 或 Mac 上进行开发的开发人员使用基于 Linux 的 Docker 主机，并且他们可以仅为 Linux 容器创建映像。 （在 Mac 上进行开发的开发人员可以从 macOS 中编辑代码或运行 Docker 命令行接口 (CLI)，但在撰写本文时，容器不在 macOS 上直接运行。）在 Windows 上进行开发的开发人员可以为 Linux 或 Windows 容器创建映像。
 
-为了在开发环境中托管容器，并提供其他开发人员工具，Docker 为 Windows 或 macOS 提供了 [Docker 社区版 (CE)](https://www.docker.com/community-edition)。 这些产品安装了托管容器所需的 VM（Docker 主机）。 Docker 还提供 [Docker 企业版 (EE)](https://www.docker.com/enterprise-edition)，该版本专为企业开发而设计，供生成、交付和在生产中运行大型业务关键型应用程序的 IT 团队使用。
+为了在开发环境中承载容器，并提供其他开发人员工具，Docker 为 Windows 或 macOS 提供了 [Docker 社区版 (CE)](https://www.docker.com/community-edition)。 这些产品安装了承载容器所需的 VM（Docker 主机）。 Docker 还提供 [Docker 企业版 (EE)](https://www.docker.com/enterprise-edition)，该版本专为企业开发而设计，供生成、交付和在生产中运行大型业务关键型应用程序的 IT 团队使用。
 
 若要运行 [Windows 容器](/virtualization/windowscontainers/about/)，有两种类型的运行时可供使用：
 
-- **Windows Server 容器**提供应用程序通过进程和命名空间隔离技术隔离。 Windows Server 容器与容器主机和主机上运行的所有容器共享内核。
+- “Windows Server 容器”通过进程和命名空间隔离技术提供应用程序隔离  。 Windows Server 容器与容器主机和主机上运行的所有容器共享内核。
 
-- **HYPER-V 容器**提供的 Windows Server 容器通过在高度优化的虚拟机中运行每个容器的隔离上扩展。 在此配置中，容器主机的内核不与 Hyper-V 容器共享，以提供更好的隔离。
+- “Hyper-V 容器”通过在高度优化的虚拟机中运行各容器来扩展 Windows Server 容器提供的隔离  。 在此配置中，容器主机的内核不与 Hyper-V 容器共享，以提供更好的隔离。
 
-这些容器的映像创建，并且同样的工作方式。 区别在于如何从映像创建容器-运行 HYPER-V 容器需要一个额外的参数。 有关详细信息，请参阅 [Hyper-V 容器](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container)。
+这些容器的映像的创建和工作方式均相同。 区别在于，在运行 Hyper-V 容器的映像中创建容器的方式需要使用其他参数。 有关详细信息，请参阅 [Hyper-V 容器](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container)。
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>比较 Docker 容器和虚拟机
 
-图 1-3 显示了 VM 和 Docker 容器之间的比较
+图 1-3 显示了 VM 和 Docker 容器之间的比较。
 
-![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。 但是，为 Docker 主机服务器仅有的基础结构和操作系统和除此之外，容器引擎，从而避免容器隔离，但共享基操作系统服务。](./media/image3.png)
+![对于 VM，在主机服务器中有三个基本层，从底部向上依次为：基础结构、主机操作系统和虚拟机监控程序，在所有这些层的顶部，每个 VM 都有其自己的 OS 和所有必需的库。 另一方面，对于 Docker，主机服务器仅有基础结构和 OS，在其顶部是容器引擎，它将容器隔离，但共享基础 OS 服务。](./media/image3.png)
 
 **图 1-3**。 比较传统虚拟机与 Docker 容器
 
@@ -43,17 +43,17 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windo
 
 在同一内核上运行的副作用是，你获得的隔离比 VM 要少。
 
-映像的主要目标是确保在不同的部署上的同一环境 （依赖项）。 这意味着可以在计算机上调试它，然后将其部署到另一台计算机，保证在相同环境。
+映像的主要目标是确保在不同部署的同一环境（依赖项）。 也就是说，可以在计算机上调试它，然后将其部署到保证具有相同环境的另一台计算机上。
 
 借助容器映像，可打包应用或服务并采用可靠且可重现的方式对其进行部署。 可以说 Docker 不只是一种技术，还是一种原理和过程。
 
-在使用 Docker 时，你不会听到开发人员说：“为什么它能在我的计算机上使用却不能用在生产中？” 它们可以仅说出，"它在 Docker 上运行"，因为打包的 Docker 应用程序可以执行任何受支持的 Docker 环境中，并且它在所有部署目标上运行它本来的方式 (如开发、 QA、 过渡和生产)。
+在使用 Docker 时，你不会听到开发人员说：“为什么它能在我的计算机上使用却不能用在生产中？” 他们只需说“它在 Docker 上运行”，因为打包的 Docker 应用程序可在任何支持的 Docker 环境上执行，而且它在所有部署目标（例如，开发、QA、暂存和生产）上都按预期运行。
 
 ## <a name="a-simple-analogy"></a>一个简单的类比
 
 也许一个简单的类比有助于掌握 Docker 的核心概念。
 
-让我们回到 20 世纪 50 年代。 未将任何字处理器，而且复印机无处不在使用 （嗯，有点）。
+让我们回到 20 世纪 50 年代。 那时，还没有处理器这个词，而复印机无处不在（某种程度上）。
 
 假设你负责按要求快速发出成批的信件、将这些信件邮寄给客户、使用纸张和信封以物理方式寄送到每个客户的地址（那时还没有电子邮件）。
 

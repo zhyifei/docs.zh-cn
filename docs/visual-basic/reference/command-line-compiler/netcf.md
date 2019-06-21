@@ -9,16 +9,16 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586542"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268279"
 ---
 # <a name="-netcf"></a>-netcf
 
-设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。
+设置编译器将.NET Compact Framework 为目标。
 
 ## <a name="syntax"></a>语法
 
@@ -28,7 +28,7 @@ ms.locfileid: "65586542"
 
 ## <a name="remarks"></a>备注
 
-`-netcf`选项将导致目标到 Visual Basic 编译器[!INCLUDE[Compact](~/includes/compact-md.md)]而不是完整的.NET Framework。 仅在完整的.NET Framework 中存在的语言功能已禁用。
+`-netcf`选项将使 Visual Basic 编译器以面向.NET Compact Framework 而不是完整的.NET Framework。 仅在完整的.NET Framework 中存在的语言功能已禁用。
 
 `-netcf`选项旨在用于[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)。 通过禁用的语言功能`-netcf`是相同的语言功能与所针对的文件中不存在`-sdkpath`。
 
@@ -85,7 +85,7 @@ ms.locfileid: "65586542"
 
 ## <a name="example"></a>示例
 
-下面的代码编译`Myfile.vb`与[!INCLUDE[Compact](~/includes/compact-md.md)]，使用版本的 mscorlib.dll 和 Microsoft.VisualBasic.dll 的默认安装目录中找到[!INCLUDE[Compact](~/includes/compact-md.md)]C 驱动器上。 通常情况下，将使用最新版本的[!INCLUDE[Compact](~/includes/compact-md.md)]。
+下面的代码编译`Myfile.vb`使用.NET Compact Framework 中，使用版本的 mscorlib.dll 和 Microsoft.VisualBasic.dll 的.NET Compact Framework 的 C 驱动器上的默认安装目录中找到。 通常情况下，将使用.NET Compact Framework 的最新版本。
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
