@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b1de22769c86f75684f41635287a73558d1d15a
-  ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+  ms.openlocfilehash: 7cec35e0749ea0b38162244171459f311d27cb25
+  ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/28/2019
-  ms.locfileid: "64750380"
+  ms.lasthandoff: 06/18/2019
+  ms.locfileid: "67170227"
 items:
 - durationInMinutes: 1
   content: >
@@ -202,7 +202,7 @@ items:
     为了修改返回的引用，需要将 `ref` 修饰符添加到局部变量声明中，并在调用 `Find` 之前，使变量在返回值为引用时成为引用。 修改浏览器中的测试代码以匹配以下内容：
 
 
-    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#SnippetTestByRef "引用的返回对象的测试代码")]
+    [!code-csharp[TestByRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByRef "test code for return object by reference")]
 
 
     现在，上例中的第二个 `WriteLine` 语句打印出值 `24`，指示矩阵中的存储已被修改。 局部变量已使用 `ref` 修饰符进行声明，它将返回 `ref`。 必须在声明时初始化 `ref` 变量，不能拆分声明和初始化。

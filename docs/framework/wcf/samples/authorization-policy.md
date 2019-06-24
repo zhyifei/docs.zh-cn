@@ -466,7 +466,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. 在服务计算机上创建目录。
 
-2. 从服务程序文件复制*\service\bin*到服务计算机上的目录。 另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。
+2. 从服务程序文件复制 *\service\bin*到服务计算机上的目录。 另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。
 
 3. 在客户端计算机上为这些客户端二进制文件创建一个目录。
 

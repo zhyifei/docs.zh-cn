@@ -53,7 +53,7 @@ ms.locfileid: "61704500"
  可以通过将它放在配置文件更改跟踪开关的级别。 如果该切换<xref:System.Diagnostics.BooleanSwitch>，您可以将其打开和关闭。 如果该切换<xref:System.Diagnostics.TraceSwitch>，可以将不同级别分配给该代码以指定类型的跟踪或调试消息的应用程序输出。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用**\<切换 >** 元素中设置`General`跟踪切换到<xref:System.Diagnostics.TraceLevel>级别，并启用`Data`布尔型跟踪开关。  
+ 下面的示例演示如何使用 **\<切换>** 元素中设置`General`跟踪切换到<xref:System.Diagnostics.TraceLevel>级别，并启用`Data`布尔型跟踪开关。  
   
 ```xml  
 <configuration>  

@@ -61,7 +61,7 @@ ms.locfileid: "61701341"
  计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用**\<侦听器 >** 元素添加侦听器`MyListener`并`MyEventListener`到**侦听器**集合。 `MyListener` 创建一个名为文件`MyListener.log`并将输出写入到该文件。 `MyEventListener` 事件日志中创建一个条目。  
+ 下面的示例演示如何使用 **\<侦听器>** 元素添加侦听器`MyListener`并`MyEventListener`到**侦听器**集合。 `MyListener` 创建一个名为文件`MyListener.log`并将输出写入到该文件。 `MyEventListener` 事件日志中创建一个条目。  
   
 ```xml  
 <configuration>  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378673"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170466"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -27,7 +27,9 @@ ms.locfileid: "66378673"
  有关受支持操作系统的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关下载，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 若要确定计算机上安装的是哪个版本的 .NET Framework，请参阅[如何：确定已安装的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。  
   
  在表中，带有标记 ✓ 的操作系统版本上安装的 .NET Framework 版本必须[在控制面板中启用](../../../docs/framework/install/dotnet-35-windows-10.md)（适用于 Windows）或通过服务器管理器启用（适用于 Windows Server），该标记显示在“包含在/可安装在 Windows 中”  和“包含在/可安装在 Windows Server 中”  列中。  
-  
+
+[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+ 
 |.NET Framework 版本|CLR 版本|包含于<br /> Visual Studio<br/>version|✓ 包括在内<br />+ 可在其上安装<br />Windows|✓ 包括在内<br />+ 可在其上安装<br />Windows Server|确定已安装的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
 |4.8<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-net-framework-48)<br/><br/>[辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-net-framework-48)<br /><br >[发行说明](https://github.com/Microsoft/dotnet/tree/master/releases/net48/README.md)|4| | ✓ 10 2019 年 5 月更新<br/><br/> + 10 2018 年 10 月更新（版本 1809） <br/> + 10 2018 年 4 月更新（版本 1803） <br/> + 10 Fall Creators Update（版本 1709） <br/> + 10 创意者更新（版本 1703） <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7 | + Windows Server 2019<br/> + Windows Server，版本 1809 <br/> + Windows Server 版本 1803 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 528040（Windows 10 2019 年 5 月更新） <br/> - 528049（所有其他 OS 版本） <br/><br/> （请参阅[说明](how-to-determine-which-versions-are-installed.md)）|

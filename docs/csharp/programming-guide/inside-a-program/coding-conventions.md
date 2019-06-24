@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 013d1d61e221e079fe68a6c6c7af5d6d5087b592
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a37109ab2712ea824baab95ca0b175cfa82aab3a
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608202"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267903"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
  编码约定可实现以下目的：  
@@ -99,7 +99,7 @@ ms.locfileid: "64608202"
   
      下面的示例在 `for` 语句中使用隐式类型化。  
   
-     [!code-csharp[csProgGuideCodingConventions#11](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#11)]  
+     [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
      下面的示例在 `foreach` 语句中使用隐式类型化。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "64608202"
   
 ### <a name="static-members"></a>静态成员  
   
-- 使用类名调用 [static](../../../csharp/language-reference/keywords/static.md) 成员：ClassName.StaticMember。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
+- 使用类名调用 [static](../../../csharp/language-reference/keywords/static.md) 成员：ClassName.StaticMember  。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   

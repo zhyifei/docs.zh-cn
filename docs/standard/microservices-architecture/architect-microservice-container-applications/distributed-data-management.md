@@ -92,13 +92,13 @@ ms.locfileid: "65644346"
 - **Data Consistency Primer** \（数据一致性入门指南）
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Martin Fowler。CQRS (Command and Query Responsibility Segregation)** \（CQRS [命令和查询责任分离]）
+- **Martin Fowler。CQRS (Command and Query Responsibility Segregation)**  \（CQRS [命令和查询责任分离]）
   <https://martinfowler.com/bliki/CQRS.html>
 
 - **Materialized View** \（具体化视图）
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles Row.ACID vs.BASE：数据库事务处理不断变化的 pH \**
+- **Charles Row.ACID vs.BASE：数据库事务处理不断变化的 pH** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Compensating Transaction** \（补偿事务）

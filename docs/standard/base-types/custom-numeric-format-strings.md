@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634525"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268214"
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 
@@ -46,7 +46,7 @@ ms.locfileid: "64634525"
 |"‰"|千分比占位符|将数字乘以 1000，并在结果字符串中插入本地化的千分比符号。<br /><br /> 更多信息：[“‰”自定义说明符](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |“E0”<br /><br /> “E+0”<br /><br /> “E-0”<br /><br /> “E0”<br /><br /> “E+0”<br /><br /> “E-0”|指数表示法|如果后跟至少一个 0（零），则使用指数表示法设置结果格式。 “E”或“e”指示指数符号在结果字符串中是大写还是小写。 跟在“E”或“e”字符后面的零的数目确定指数中的最小位数。 加号 (+) 指示符号字符总是置于指数前面。 减号 (-) 指示符号字符仅置于负指数前面。<br /><br /> 更多信息：[“E”和“e”自定义说明符](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |“\\”|转义符|使下一个字符被解释为文本而不是自定义格式说明符。<br /><br /> 更多信息：[“\\”转义字符](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
-|'string'<br /><br /> "*string*"|文本字符串分隔符|指示应复制到未更改的结果字符串的封闭字符。<br/><br/>更多信息：[字符文本](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
+|'string  '<br /><br /> "*string*"|文本字符串分隔符|指示应复制到未更改的结果字符串的封闭字符。<br/><br/>更多信息：[字符文本](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
 |;|部分分隔符|通过分隔格式字符串定义正数、负数和零各部分。<br /><br /> 更多信息：[“;”部分分隔符](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |其他|所有其他字符|字符将复制到未更改的结果字符串。<br/><br/>更多信息：[字符文本](#character-literals)。|68 ("# °") -> 68 °|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64634525"
  若要返回空缺数字或前导零替换为空格的结果字符串，请使用 [复合格式功能](../../../docs/standard/base-types/composite-formatting.md) 并指定字段宽度，如以下示例所示。  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [返回表首](#table)  

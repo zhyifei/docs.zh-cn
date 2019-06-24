@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634547"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268228"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 
@@ -41,7 +41,7 @@ ms.locfileid: "64634547"
 
 在分析操作中，自定义日期和时间格式字符串可用于 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> 方法。 这些方法需要一个完全符合使分析操作成功所需的特定模式的输入字符串。 下面的示例演示对 <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法的调用，以分析必须包括日、月和两位数年份的日期。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 下表描述自定义日期和时间格式说明符并显示由每个格式说明符生成的结果字符串。 默认情况下，结果字符串反映 zh-cn 区域性的格式设置约定。 如果特定格式说明符生成本地化结果字符串，则该示例还注明结果字符串适用的区域性。 有关使用自定义日期和时间格式字符串的详细信息，请参阅[备注](#notes)部分。
@@ -92,7 +92,7 @@ ms.locfileid: "64634547"
 |“zzz”|相对于 UTC 的小时和分钟偏移量。<br /><br /> 更多信息：[“zzz”自定义格式说明符](#zzzSpecifier)。|2009-06-15T13:45:30-07:00 -> -07:00|
 |":"|时间分隔符。<br /><br /> 更多信息：[“:”自定义格式说明符](#timeSeparator)。|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
 |"/"|日期分隔符。<br /><br /> 详细信息：[“/”自定义格式说明符](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|"string"<br /><br /> 'string'|文本字符串分隔符。<br /><br /> 更多信息：[字符文本](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr:1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr:1:45 P|
+|"string  "<br /><br /> 'string  '|文本字符串分隔符。<br /><br /> 更多信息：[字符文本](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr:1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr:1:45 P|
 |%|将下面的字符定义为自定义格式说明符。<br /><br /> 有关详细信息，请参阅[使用单个自定义格式说明符](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|
 |&#92;|转义字符。<br /><br /> 更多信息：[字符文本](#Literals)和[使用转义字符](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
 |任何其他字符|字符将复制到未更改的结果字符串。<br /><br /> 更多信息：[字符文本](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
@@ -509,7 +509,7 @@ ms.locfileid: "64634547"
 
 下面的示例在一个自定义格式字符串中包含“yy”自定义格式说明符。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [返回表首](#table)
@@ -638,7 +638,7 @@ ms.locfileid: "64634547"
 
 下面的示例在格式字符串中包含用于表示时区的文本字符“PST”（太平洋标准时间）和“PDT”（太平洋夏令时）。 请注意，该字符串将包含在结果字符串中，并且包含本地时区字符串的字符串也可成功完成分析。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 可通过两种方法来指示要将字符解释为文本字符而不是保留字符，以便这些字符可以包含在结果字符串中，或者在输入字符串中成功完成分析：
@@ -647,12 +647,12 @@ ms.locfileid: "64634547"
 
 下面的示例在格式字符串中包含用于表示时区的文本字符“pst”（太平洋标准时间）。 由于“s”和“t”都是自定义格式字符串，因此这两个字符必须经过转义才能解释为字符文本。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - 通过将整个文本字符串括在双引号或单引号中。 下面的示例与前一个示例类似，不过，pst 括在引号中，指示应将整个分隔字符串解释为字符文本。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>说明
@@ -684,7 +684,7 @@ ms.locfileid: "64634547"
 
 ### <a name="control-panel-settings"></a>控制面板设置
 
-对于包含许多自定义日期和时间格式说明符的格式设置操作，控制面板中的“区域和语言选项”设置会影响其产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.DateTimeFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。
+对于包含许多自定义日期和时间格式说明符的格式设置操作，控制面板中的“区域和语言选项”  设置会影响其产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.DateTimeFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。
 
 此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化一个新的 <xref:System.Globalization.CultureInfo> 对象以表示与当前的系统区域性相同的区域性，则通过控制面板中的 **“区域和语言选项”** 建立的任何自定义都将应用到新的 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。
 

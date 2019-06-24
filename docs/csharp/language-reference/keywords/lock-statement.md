@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6bf53cba73c4d7331b2a1c68bf7187c13281d844
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633449"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306659"
 ---
 # <a name="lock-statement-c-reference"></a>lock 语句（C# 参考）
 
@@ -54,7 +54,7 @@ finally
 当同步对共享资源的线程访问时，请锁定专用对象实例（例如，`private readonly object balanceLock = new object();`）或另一个不太可能被代码无关部分用作 lock 对象的实例。 避免对不同的共享资源使用相同的 lock 对象实例，因为这可能导致死锁或锁争用。 具体而言，避免将以下对象用作 lock 对象：
 
 - `this`（调用方可能将其用作 lock）。
-- <xref:System.Type> 实例（可以通过 [typeof](typeof.md) 运算符或反射获取）。
+- <xref:System.Type> 实例（可以通过 [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) 运算符或反射获取）。
 - 字符串实例，包括字符串文本，（这些可能是[暂存的](/dotnet/api/system.string.intern#remarks)）。
 
 ## <a name="example"></a>示例

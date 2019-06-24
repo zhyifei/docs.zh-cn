@@ -3,12 +3,12 @@ title: 如何：修改字符串内容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664004"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267759"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何：修改以 C\# 编写的字符串内容
 
@@ -24,7 +24,7 @@ ms.locfileid: "54664004"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
 
-上述代码演示了字符串的不可变属性。 在上述示例中可以看到，原始字符串 `source` 并未被修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法创建的是包含修改的新 `string`。
+上述代码演示了字符串的不可变  属性。 在上述示例中可以看到，原始字符串 `source` 并未被修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法创建的是包含修改的新 `string`。
 
 <xref:System.String.Replace%2A> 可替换字符串或单个字符。 在这两种情况下，搜索文本的每个匹配项均被替换。  下面的示例将所有的“ ”替换为“\_”：
 
@@ -46,7 +46,7 @@ ms.locfileid: "54664004"
 
 ## <a name="replace-matching-patterns"></a>替换匹配模式
 
-可使用[正则表达式](../../standard/base-types/regular-expressions.md)将匹配模式的文本替换为新文本，新文本可能由模式定义。 下面的示例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类从源字符串中查找模式并将其替换为正确的大写。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法使用将替换逻辑提供为其参数之一的函数。 在本示例中，该函数 `LocalReplaceMatchCase` 是在示例方法中声明的本地函数。 `LocalReplaceMatchCase` 使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType>类，以生成具有正确大写的替换字符串。
+可使用[正则表达式](../../standard/base-types/regular-expressions.md)将匹配模式的文本替换为新文本，新文本可能由模式定义。 下面的示例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类从源字符串中查找模式并将其替换为正确的大写。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法使用将替换逻辑提供为其参数之一的函数。 在本示例中，该函数 `LocalReplaceMatchCase` 是在示例方法中声明的本地函数  。 `LocalReplaceMatchCase` 使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType>类，以生成具有正确大写的替换字符串。
 
 正则表达式最适合用于搜索和替换遵循模式的文本，而不是已知的文本。 请参阅[如何：搜索字符串](search-strings.md)了解详细信息。 搜索模式“the\s”搜索“the”后接空格字符的单词。 该部分的模式可确保它不与源字符串中的“there”相匹配。 有关正则表达式语言元素的更多信息，请参阅[正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
@@ -64,10 +64,10 @@ ms.locfileid: "54664004"
 
 ## <a name="unsafe-modifications-to-string"></a>对字符串进行不安全修改
 
-使用不安全代码，可在创建字符串后“就地”进行修改。 不安全代码会绕过许多 .NET 旨在用于尽量减少代码中某些类型 bug 的功能。 需使用不安全代码来就地修改字符串，因为字符串类型已设计为不可变类型。 创建之后，它的值就不会更改。 不安全代码通过访问和修改 `string` 使用的内存来避开此属性，而不使用常规的 `string` 方法。
+使用不安全  代码，可在创建字符串后“就地”进行修改。 不安全代码会绕过许多 .NET 旨在用于尽量减少代码中某些类型 bug 的功能。 需使用不安全代码来就地修改字符串，因为字符串类型已设计为不可变  类型。 创建之后，它的值就不会更改。 不安全代码通过访问和修改 `string` 使用的内存来避开此属性，而不使用常规的 `string` 方法。
 下面提供了这些少数情况下的示例，因为某些时候，你可能希望使用不安全代码就地修改字符串。 示例演示如何使用 `fixed` 关键字。 `fixed` 关键字可防止垃圾回收器 (GC) 在代码使用不安全指针访问内存时移动内存中的字符串对象。 此外还演示对字符串进行不安全操作可能产生的一个副作用，此副作用是由于 C# 编译器在内部存储（暂存）字符串的方式而导致的。 通常，除非绝对必要，否则不应使用这种方法。 可在关于 [unsafe](../language-reference/keywords/unsafe.md) 和 [fixed](../language-reference/keywords/fixed-statement.md) 的文章中了解详细信息。 <xref:System.String.Intern%2A> 的 API 参考包括字符串集中的信息。
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 可通过查看 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
