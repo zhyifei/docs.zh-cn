@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f81dc1bdc8439b3823635e56bd436f5a060e0558
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8839cdd33f72dcbb1d660758042fa0150505afc6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904537"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "67348298"
 ---
-<span data-ttu-id="66f68-101">承载功能</span><span class="sxs-lookup"><span data-stu-id="66f68-101">hosting features</span></span>
+<span data-ttu-id="64d9d-101">承载功能</span><span class="sxs-lookup"><span data-stu-id="64d9d-101">hosting features</span></span>
