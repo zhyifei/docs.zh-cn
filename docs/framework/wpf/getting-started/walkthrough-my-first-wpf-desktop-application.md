@@ -53,7 +53,7 @@ ms.locfileid: "66003856"
 
 第一步是创建应用程序基础结构，其中包括应用程序定义，两个页面和一个图像。
 
-1. 在 Visual Basic 或 Visual C# 名为创建新的 WPF 应用程序项目 **`ExpenseIt`**:
+1. 在 Visual Basic 或 Visual C# 名为创建新的 WPF 应用程序项目 **`ExpenseIt`** :
 
    1. 打开 Visual Studio 并选择**创建一个新项目**下**开始**菜单。
 
@@ -67,7 +67,7 @@ ms.locfileid: "66003856"
     
       **配置新项目**对话框随即打开。
 
-   4. 输入项目名称**`ExpenseIt`** ，然后选择**创建**。
+   4. 输入项目名称 **`ExpenseIt`** ，然后选择**创建**。
 
       ![配置新项目对话框](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
@@ -131,7 +131,7 @@ ms.locfileid: "66003856"
 
 本部分将向应用程序添加两个页面和一个图像。
 
-1. 将新页面添加到项目中，并将其命名*`ExpenseItHome.xaml`*:
+1. 将新页面添加到项目中，并将其命名 *`ExpenseItHome.xaml`* :
 
    1. 在中**解决方案资源管理器**，右键单击 **`ExpenseIt`** 项目节点，然后选择**添加** > **页**。
 
@@ -198,7 +198,7 @@ ms.locfileid: "66003856"
 
     创建新的页面文件时，Visual Studio 将自动创建其*代码隐藏*文件。 这些代码隐藏文件处理响应用户输入的逻辑。
 
-    你的代码应如以下所示**`ExpenseItHome`**:
+    你的代码应如以下所示 **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
 
@@ -242,9 +242,9 @@ ms.locfileid: "66003856"
 > [!TIP]
 > 有关详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../controls/panels-overview.md)。 有关布局的详细信息，请参阅[布局](../advanced/layout.md)。
 
-在本部分中，您创建的单列的表具有三个行和 10 像素边距通过添加到的列和行定义<xref:System.Windows.Controls.Grid>中*`ExpenseItHome.xaml`*。
+在本部分中，您创建的单列的表具有三个行和 10 像素边距通过添加到的列和行定义<xref:System.Windows.Controls.Grid>中 *`ExpenseItHome.xaml`* 。
 
-1. 在中*`ExpenseItHome.xaml`*，将<xref:System.Windows.FrameworkElement.Margin%2A>属性上的<xref:System.Windows.Controls.Grid>"10,0,10,10"，对应于左侧、 顶部、 右侧和底部边距的元素：
+1. 在中 *`ExpenseItHome.xaml`* ，将<xref:System.Windows.FrameworkElement.Margin%2A>属性上的<xref:System.Windows.Controls.Grid>"10,0,10,10"，对应于左侧、 顶部、 右侧和底部边距的元素：
 
    ```xaml
    <Grid Margin="10,0,10,10">
@@ -277,7 +277,7 @@ ms.locfileid: "66003856"
 
 每个控件的某一行中放置<xref:System.Windows.Controls.Grid>通过设置<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>附加属性。 有关附加属性的详细信息，请参阅[附加属性概述](../advanced/attached-properties-overview.md)。
 
-1. 在中*`ExpenseItHome.xaml`*，添加以下 XAML 某处之间<xref:System.Windows.Controls.Grid>标记：
+1. 在中 *`ExpenseItHome.xaml`* ，添加以下 XAML 某处之间<xref:System.Windows.Controls.Grid>标记：
 
    [!code-xaml[ExpenseIt#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
@@ -294,7 +294,7 @@ ms.locfileid: "66003856"
 
 在本部分中，将更新主页 UI 的图像和页面标题。
 
-1. 在中*`ExpenseItHome.xaml`*，添加到另一个列<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>具有固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>为 230 像素：
+1. 在中 *`ExpenseItHome.xaml`* ，添加到另一个列<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>具有固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>为 230 像素：
 
     [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
 
@@ -326,7 +326,7 @@ ms.locfileid: "66003856"
 
 ## <a name="add-code-to-handle-events"></a>添加代码以处理事件
 
-1. 在中*`ExpenseItHome.xaml`*，添加<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序<xref:System.Windows.Controls.Button>元素。 有关详细信息，请参阅[如何：创建一个简单的事件处理程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
+1. 在中 *`ExpenseItHome.xaml`* ，添加<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序<xref:System.Windows.Controls.Button>元素。 有关详细信息，请参阅[如何：创建一个简单的事件处理程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -385,7 +385,7 @@ ms.locfileid: "66003856"
 
     请注意，这些样式是资源和子级的<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>属性元素。 在此位置中，这些样式将应用到应用程序中的所有元素。 在.NET 应用中使用的资源的示例，请参阅[使用应用程序资源](../advanced/how-to-use-application-resources.md)。
 
-3. 在中*`ExpenseItHome.xaml`*，将为之间的所有内容<xref:System.Windows.Controls.Grid>具有以下 XAML 元素：
+3. 在中 *`ExpenseItHome.xaml`* ，将为之间的所有内容<xref:System.Windows.Controls.Grid>具有以下 XAML 元素：
 
     [!code-xaml[ExpenseIt#19](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
@@ -409,7 +409,7 @@ ms.locfileid: "66003856"
 
 在本部分中，将创建绑定到各种控件的 XML 数据。
 
-1. 在中*`ExpenseItHome.xaml`*，打开之后<xref:System.Windows.Controls.Grid>元素中，添加以下 XAML 以创建<xref:System.Windows.Data.XmlDataProvider>包含数据的每个用户：
+1. 在中 *`ExpenseItHome.xaml`* ，打开之后<xref:System.Windows.Controls.Grid>元素中，添加以下 XAML 以创建<xref:System.Windows.Data.XmlDataProvider>包含数据的每个用户：
 
     [!code-xaml[ExpenseIt#23](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,16-40,49)]
 
