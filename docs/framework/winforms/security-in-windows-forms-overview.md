@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586651"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348473"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 
@@ -50,9 +50,9 @@ ms.locfileid: "65586651"
 
 开发将在部分信任环境中运行的应用程序时，对应用程序必须运行什么权限以及应用程序可以选择使用什么权限进行跟踪。 当所有权限都已知时，你应在应用程序级别提出声明性的权限请求。 请求权限会通知运行的时应用程序所需的权限以及哪些权限它具体所不需要的.NET Framework。 有关请求权限的详细信息，请参阅[请求权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))。
 
-当请求可选的权限时，如果应用程序执行一个操作，但未获得执行该操作所需的权限时会生成安全性异常，这时必须处理此安全性异常。 适当地处理 <xref:System.Security.SecurityException> 将确保你的应用程序可以继续运行。 你的应用程序可以使用异常来确定是否应对用户禁用一项功能。 例如，如果未授予所需的文件权限，应用程序可以禁用“保存”菜单选项。
+当请求可选的权限时，如果应用程序执行一个操作，但未获得执行该操作所需的权限时会生成安全性异常，这时必须处理此安全性异常。 适当地处理 <xref:System.Security.SecurityException> 将确保你的应用程序可以继续运行。 你的应用程序可以使用异常来确定是否应对用户禁用一项功能。 例如，如果未授予所需的文件权限，应用程序可以禁用“保存”  菜单选项。
 
-有时，很难知道你是否已断言所有适当的权限。 例如，看似无关紧要的方法调用可能在其执行期间的某个点上访问文件系统。 如果未给应用程序部署所有所需的权限，它可能在桌面上调试时测试结果为正常，但在部署时失败。 这两个[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和 Visual Studio 2005 包含计算应用程序所需的权限： MT.exe 分别命令行工具和 Visual Studio 的计算权限功能。
+有时，很难知道你是否已断言所有适当的权限。 例如，看似无关紧要的方法调用可能在其执行期间的某个点上访问文件系统。 如果未给应用程序部署所有所需的权限，它可能在桌面上调试时测试结果为正常，但在部署时失败。 .NET Framework 2.0 SDK 和 Visual Studio 2005 包含计算应用程序所需的权限： MT.exe 分别命令行工具和 Visual Studio 的计算权限功能。
 
 以下主题介绍其他 Windows 窗体安全功能。
 
@@ -72,12 +72,12 @@ ms.locfileid: "65586651"
 
 |提升的权限技术|描述|
 |------------------------------------|-----------------|
-|权限提升|应用程序第一次运行时将以“安全性”对话框来提示用户。 “权限提升”对话框告知用户应用程序的发布者，使用户能在知情的情况下决定是否向其授予其他信任|
+|权限提升|应用程序第一次运行时将以“安全性”对话框来提示用户。 “权限提升”  对话框告知用户应用程序的发布者，使用户能在知情的情况下决定是否向其授予其他信任|
 |受信任的应用程序部署|涉及到系统管理员在客户端计算机上执行发布者验证码证书的一次性安装。 从那一刻起，任何使用该证书签名的应用程序都视为受信任，可以在没有其他提示的情况下在本地计算机上以完全信任模式运行。|
 
 选择哪种技术将取决于你的部署环境。 有关详细信息，请参阅[选择 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。
 
-默认情况下[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 的应用程序或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 可以使用 Visual Studio 来执行此操作或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe 配置你的部署时。 有关如何使用 MageUI.exe 的详细信息，请参阅演练：部署 ClickOnce 应用程序从命令行。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[如何：设置 ClickOnce 应用程序的自定义权限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
+默认情况下，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 的应用程序配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 配置你的部署时，您可以将使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 执行此操作。 有关如何使用 MageUI.exe 的详细信息，请参阅演练：部署 ClickOnce 应用程序从命令行。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[如何：设置 ClickOnce 应用程序的自定义权限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
 
 若要深入了解 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 的安全方面和权限提升，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。 若要深入了解受信任的应用程序部署，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)。
 

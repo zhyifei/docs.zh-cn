@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592227"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348199"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
 绑定是用来指定所需连接到 Windows Communication Foundation (WCF) 服务的终结点的通信详细信息的对象。 WCF 服务中的每个终结点需要具体指定的绑定。 本主题概述了通信详细信息的绑定所定义的一个绑定，在 WCF 中，包含哪些绑定和如何为终结点指定一个绑定元素的类型。  
   
 ## <a name="what-a-binding-defines"></a>绑定所定义的内容  
- 绑定中的信息可能非常基本，也可能非常复杂。 最基本的绑定仅指定连接终结点所必需的传输协议（如 HTTP）。 一般来说，绑定包含的有关如何连接到终结点的信息属于以下类别中的一种。  
+ 绑定中的信息可能非常基本，也可能非常复杂。 最基本的绑定仅指定连接终结点所必需的传输协议（如 HTTP）。 一般来说，绑定包含有关如何连接到终结点的信息属于以下类别之一：  
   
- 协议  
+ **协议**  
  确定要使用的安全机制：可靠消息传递功能或事务上下文流设置。  
   
- 编码  
+ **编码**  
  确定消息编码（例如，文本或二进制）。  
   
- 传输  
+ **传输**  
  确定要使用的基础传输协议（例如，TCP 或 HTTP）。  
   
 ## <a name="the-elements-of-a-binding"></a>绑定的元素  

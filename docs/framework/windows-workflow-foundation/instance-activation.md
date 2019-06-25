@@ -2,12 +2,12 @@
 title: 实例激活
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584917"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348249"
 ---
 # <a name="instance-activation"></a>实例激活
 SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并检测持久性数据库中是否有可运行或可激活的工作流实例。 如果找到可运行的工作流实例，SQL 工作流实例存储将通知能够激活该实例的工作流主机。 如果实例存储找到可激活的工作流实例，它将通知用于激活工作流主机的泛型主机，而泛型主机将运行此工作流实例。 本主题的以下各节详细说明了实例激活过程。  
@@ -35,7 +35,7 @@ SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并�
 ## <a name="generic-hosts"></a>泛型主机  
  泛型主机是元数据属性的值与主机**WorkflowServiceType**对于泛型主机将设置为**WorkflowServiceType.Any**以指示它可以处理任何工作流类型。 泛型主机采用名为的 XName 参数**ActivationType**。  
   
- 目前，SQL 工作流实例存储支持 ActivationType 参数设置为值的泛型主机**WAS**。 如果未将 ActivationType 设置为 WAS，SQL 工作流实例存储将引发 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>。 Workflow Management Service 附带[!INCLUDE[dublin](../../../includes/dublin-md.md)]是设置为将激活类型的泛型主机**WAS**。  
+ 目前，SQL 工作流实例存储支持 ActivationType 参数设置为值的泛型主机**WAS**。 如果未将 ActivationType 设置为 WAS，SQL 工作流实例存储将引发 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>。 附带了 Windows Server AppFabric 的托管功能的工作流管理服务是设置为将激活类型的泛型主机**WAS**。  
   
  为了实现 WAS 激活，泛型主机需要一组激活参数来派生激活新主机所在的终结点地址。 用于 WAS 激活的激活参数包括：站点名称、应用程序路径（相对于站点）和服务路径（相对于应用程序）。 SQL 工作流实例存储在执行 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> 期间存储这些激活参数。  
   

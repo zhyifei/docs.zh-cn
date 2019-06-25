@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879152"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347988"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  
@@ -27,7 +27,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 ## <a name="building-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面  
  Windows 窗体是.NET Framework 中，一组托管库，如读取和写入到文件系统的常见应用程序任务的智能客户端组件。 使用 Visual Studio 之类的开发环境，你可以创建 Windows 窗体应用程序显示的信息、 请求来自用户的输入和通信与远程计算机通过网络。  
   
- Windows 窗体在窗体是向用户的信息显示在其一个可视化图面。 通常情况下，将放在窗体上的控件并开发对用户操作，如鼠标单击或按键响应需要构建 Windows 窗体应用程序。 控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。  
+ Windows 窗体在窗体是向用户的信息显示在其一个可视化图面。 通常情况下，将放在窗体上的控件并开发对用户操作，如鼠标单击或按键响应需要构建 Windows 窗体应用程序。 控件  是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。  
   
 ### <a name="events"></a>事件  
  当用户执行某项操作窗体或其中一个控件时，则会生成事件。 你的应用程序通过使用代码对这些事件做出反应，并在事件发生时对其进行处理。 有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)。  
@@ -54,7 +54,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 ## <a name="displaying-and-manipulating-data"></a>显示和操作数据  
  许多应用程序必须显示数据库、XML 文件、XML Web 服务或其他数据源中的数据。 Windows 窗体提供了一个灵活的控件称为<xref:System.Windows.Forms.DataGridView>呈现在传统的行和列的格式，此类表格数据，以便每段数据块均占据其自己的单元格的控件。 使用<xref:System.Windows.Forms.DataGridView>可以自定义各个单元格的外观、 任意行和列锁定在的位置，并显示复杂控件中单元格，此外还具有其他功能。  
   
- 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件，new 与 Visual Studio 2005 中的 Windows 窗体和[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]，表示与数据源的连接，公开将数据绑定到控件，导航到上一页和下一页记录、 编辑记录和保存方法更改回原始的源。 <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。  
+ 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件，在 Visual Studio 2005 和.NET Framework 2.0 中，Windows 窗体的新表示到数据源的连接和公开数据绑定到控件，导航到上一页和下一页记录，编辑记录，方法和将更改保存回原始的源。 <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。  
   
 ### <a name="data-bound-controls"></a>数据绑定控件  
  可以创建数据绑定控件轻松地使用数据源窗口，其中显示您项目中的数据源，例如数据库、 Web 服务和对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。  

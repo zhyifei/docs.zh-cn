@@ -2,12 +2,12 @@
 title: 自定义消息编码器：压缩编码器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878463"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348429"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自定义消息编码器：压缩编码器
 此示例演示如何实现自定义编码器使用 Windows Communication Foundation (WCF) 平台。  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  尽管对于大多数用户方案该操作已足够，但是，如果某个服务是由 Web 承载的，则支持文件配置是至关重要的。 若要支持由 Web 承载的方案，必须开发一个自定义配置处理程序，以便允许在文件中配置自定义绑定元素。  
   
- 可以在 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 提供的配置系统的顶部为绑定元素生成一个配置处理程序。 绑定元素的配置处理程序必须从 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 类派生。 `BindingElementType` 属性用来通知配置系统要为此节创建的绑定元素的类型。 `BindingElement` 的所有可设置方面应当作为属性在 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生类中公开。 <xref:System.Configuration.ConfigurationPropertyAttribute> 用来帮助将配置元素属性 (Attribute) 映射到属性 (Property) 并在缺少属性 (Attribute) 的情况下设置默认值。 在配置中的值加载并应用到属性之后，将调用 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> 方法，该方法将属性转换成绑定元素的具体实例。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> 方法用来将 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生类的属性转换为要针对新创建的绑定元素设置的值。  
+ 您可以构建配置系统的顶部的绑定元素的配置处理程序。 绑定元素的配置处理程序必须从 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 类派生。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType>通知配置系统要为此节创建的绑定元素的类型。 `BindingElement` 的所有可设置方面应当作为属性在 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生类中公开。 <xref:System.Configuration.ConfigurationPropertyAttribute>有助于将配置元素属性映射到属性和设置默认值，如果缺少属性。 在配置中的值加载并应用到属性之后，将调用 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType> 方法，该方法将属性转换成绑定元素的具体实例。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType>方法用于属性转换为<xref:System.ServiceModel.Configuration.BindingElementExtensionElement>派生类的新创建的绑定元素上设置的值。  
   
  下面的示例代码演示 `GZipMessageEncodingElement` 的实现。  
   

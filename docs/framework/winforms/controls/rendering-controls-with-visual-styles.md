@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592602"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348484"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用视觉样式呈现控件
 .NET Framework 支持为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持它们的操作系统中使用视觉样式。 本主题讨论使用操作系统当前视觉样式呈现控件和其他 UI 元素的.NET Framework 中支持的多个级别。  
@@ -23,7 +23,7 @@ ms.locfileid: "65592602"
 ## <a name="rendering-classes-for-common-controls"></a>公共控件的呈现类  
  呈现控件是指绘制控件的用户界面。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间提供了用来呈现某些公共 Windows 窗体控件的 <xref:System.Windows.Forms.ControlPaint> 类。 但是，此类以经典 Windows 样式绘制的控件，当在启用了视觉样式的应用程序中绘制自定义控件时，难以维护 UI 体验的一致性。  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 包括 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间中使用视觉样式呈现部件和公共控件状态的类。 每个这样的类都包括使用操作系统当前视觉样式绘制控件和特定状态控件部件的 `static` 方法。  
+ .NET Framework 2.0 还包括中的类<xref:System.Windows.Forms?displayProperty=nameWithType>呈现部件和状态的视觉样式的公共控件的命名空间。 每个这样的类都包括使用操作系统当前视觉样式绘制控件和特定状态控件部件的 `static` 方法。  
   
  其中一些类旨在绘制相关控件，而不考虑视觉样式是否可用。 如果启用了视觉样式，类成员将使用视觉样式绘制相关控件；如果禁用了视觉样式，类成员将以经典 Windows 样式绘制控件。 这些类包括：  
   

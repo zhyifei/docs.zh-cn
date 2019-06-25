@@ -43,7 +43,7 @@ ms.locfileid: "65644856"
 
 ## <a name="additional-resources"></a>其他资源
 
-- **Mark Russinovich。微服务：云推动的应用程序革命 \**
+- **Mark Russinovich。微服务：云推动的应用程序革命** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
 - **Martin Fowler。Microservices** \（微服务）

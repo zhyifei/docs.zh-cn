@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169902"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348205"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>如何：从剪贴板检索数据
 <xref:System.Windows.Forms.Clipboard>类提供了可用于与 Windows 操作系统剪贴板功能进行交互的方法。 许多应用程序的数据用作临时存储库使用剪贴板。 例如，文字处理器剪切和粘贴操作期间使用剪贴板。 剪贴板功能也很有用信息传输到另一个应用程序。  
@@ -22,7 +22,7 @@ ms.locfileid: "67169902"
   
  若要确定剪贴板中是否包含特定格式的数据，请使用之一`Contains`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。 若要从剪贴板检索数据，请使用之一`Get`*格式*方法或<xref:System.Windows.Forms.Clipboard.GetData%2A>方法。 这些方法是.NET Framework 2.0 中的新增功能。  
   
- 从通过使用版本剪贴板访问数据早于[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]，使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>方法调用的方法所返回的<xref:System.Windows.Forms.IDataObject>。 若要确定特定的格式是否可在返回的对象，例如，调用<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>方法。  
+ 若要使用的版本早于.NET Framework 2.0 从剪贴板访问数据，使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType>方法调用的方法所返回的<xref:System.Windows.Forms.IDataObject>。 若要确定特定的格式是否可在返回的对象，例如，调用<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>方法。  
   
 > [!NOTE]
 >  所有基于 Windows 的应用程序共享系统剪贴板。 因此，可能会有所变动时切换到另一个应用程序。  
@@ -49,7 +49,7 @@ ms.locfileid: "67169902"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>若要从多个格式在剪贴板中检索数据  
   
-1. 使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 您必须使用此方法从版本在剪贴板中检索数据早于[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]。  
+1. 使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 必须使用此方法以从早于.NET Framework 2.0 版本在剪贴板中检索数据。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d20e296b17f9117320cd67d8475ff3ae40a158c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93556d8345b09dcd196354e618f4d20f5db68998
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598774"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348515"
 ---
 # <a name="layout"></a>布局
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 布局系统。 了解布局计算发生的方式和时间对于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建用户界面非常重要。  
@@ -146,7 +146,7 @@ ms.locfileid: "64598774"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>下一步  
- 了解元素的测量和排列方式是了解布局的第一步。 有关可用的详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../controls/panels-overview.md)。 若要更好地了解可能影响布局的各种定位属性，请参阅[对齐、边距和填充概述](alignment-margins-and-padding-overview.md)。 有关自定义的示例<xref:System.Windows.Controls.Panel>元素，请参阅[自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)。 当准备好将其全部放在轻型应用程序，请参阅[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+ 了解元素的测量和排列方式是了解布局的第一步。 有关可用的详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../controls/panels-overview.md)。 若要更好地了解可能影响布局的各种定位属性，请参阅[对齐、边距和填充概述](alignment-margins-and-padding-overview.md)。 有关自定义的示例<xref:System.Windows.Controls.Panel>元素，请参阅[自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)。 当准备好将其全部放在轻型应用程序中，请参阅[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -19,7 +19,7 @@ ms.locfileid: "64754603"
 
 1. 从**文件**菜单中，选择**新建** > **项目**
 
-1. 在中**新的项目**对话框中，展开**已安装** > **Visual C#** > **Web**类别，然后选择**ASP.NET Web 应用程序 (.NET Framework)**。
+1. 在中**新的项目**对话框中，展开**已安装** > **Visual C#**  > **Web**类别，然后选择**ASP.NET Web 应用程序 (.NET Framework)** 。
 
 1. 将项目命名**SandwichServices**然后单击**确定**。
 
@@ -31,13 +31,13 @@ ms.locfileid: "64754603"
 
 1. 右键单击 SandwichServices 项目中的**解决方案资源管理器**，然后选择**添加** > **新项**。
 
-1. 在中**添加新项**对话框中，展开**已安装** > **Visual C#** > **Web**类别，然后选择**Web 窗体**模板。
+1. 在中**添加新项**对话框中，展开**已安装** > **Visual C#**  > **Web**类别，然后选择**Web 窗体**模板。
 
 1. 接受默认名称 (**WebForm1**)，然后选择**添加**。
 
    *WebForm1.aspx*中打开**源**视图。
 
-1. 添加以下标记内的**\<正文 >** 标记：
+1. 添加以下标记内的 **\<正文>** 标记：
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -49,7 +49,7 @@ ms.locfileid: "64754603"
 
 1. 右键单击 SandwichServices 项目中的**解决方案资源管理器**，然后选择**添加** > **新项**。
 
-1. 在中**添加新项**对话框中，展开**已安装** > **Visual C#** > **Web**类别，然后选择**WCF 服务 (ajax)** 模板。
+1. 在中**添加新项**对话框中，展开**已安装** > **Visual C#**  > **Web**类别，然后选择**WCF 服务 (ajax)** 模板。
 
    ![在 Visual Studio 中的 WCF 服务 (ajax) 项模板](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
@@ -104,7 +104,7 @@ ms.locfileid: "64754603"
 
 ## <a name="run-the-program"></a>运行程序
 
-请确保*WebForm1.aspx*具有焦点，，然后按**启动**按钮以启动 web 客户端。 按钮有一个绿色三角形和内容类似于**IIS Express (Microsoft Edge)**。 或者，可以按**F5**。 单击**3 三明治的价格**按钮以生成预期的输出为"3.75"。
+请确保*WebForm1.aspx*具有焦点，，然后按**启动**按钮以启动 web 客户端。 按钮有一个绿色三角形和内容类似于**IIS Express (Microsoft Edge)** 。 或者，可以按**F5**。 单击**3 三明治的价格**按钮以生成预期的输出为"3.75"。
 
 ## <a name="example-code"></a>示例代码
 

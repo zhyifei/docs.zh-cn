@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5545e89f744c3874840a773556e0670abc0a46a9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615392"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348071"
 ---
 # <a name="geometry-overview"></a>Geometry 概述
 本概述介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>类描述形状。 本主题还对照了之间的差异<xref:System.Windows.Media.Geometry>对象和<xref:System.Windows.Shapes.Shape>元素。  
@@ -105,7 +105,7 @@ ms.locfileid: "64615392"
   
 <a name="wcpsdk_graphics_geometry_pathgeometry"></a>   
 ## <a name="path-geometries"></a>路径几何  
- <xref:System.Windows.Media.PathGeometry>类，其轻型等效项，<xref:System.Windows.Media.StreamGeometry>类中，提供方法来描述多个复杂图形组成弧线、 曲线和直线。  
+ <xref:System.Windows.Media.PathGeometry>类，其轻型等效<xref:System.Windows.Media.StreamGeometry>类中，提供方法来描述多个复杂图形组成弧线、 曲线和直线。  
   
  核心<xref:System.Windows.Media.PathGeometry>是一系列<xref:System.Windows.Media.PathFigure>对象，如此命名是因为每个图形都描述中的一个离散形状<xref:System.Windows.Media.PathGeometry>。 每个<xref:System.Windows.Media.PathFigure>本身包含一个或多个<xref:System.Windows.Media.PathSegment>对象，其中每个描述该图的段。  
   

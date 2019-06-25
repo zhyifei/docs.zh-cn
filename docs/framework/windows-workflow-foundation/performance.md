@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 性能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592548"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348537"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 性能
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592548"
 ### <a name="wf-runtime"></a>WF 运行时
  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时的核心是一个异步计划程序，能够驱动工作流中活动的执行。 它为活动提供了可预测的高性能执行环境。 该环境有一个对执行、延续、完成、取消、异常的完善约定，和一个可预测的线程模型。
 
- 与 WF3 相比，WF4 运行时具有更有效的计划程序。 它利用相同的 I/O 线程池使用的 WCF，这是效率非常高的执行批处理的工作项。 内部工作项计划程序队列已针对最常用的使用模式进行了优化。 WF4 运行时还以一种十分轻型的方式来管理执行状态，这种方式只使用极少的同步和事件处理逻辑，而 WF3 则依靠重型的事件注册和调用来执行状态转换的复杂同步。
+ 与 WF3 相比，WF4 运行时具有更有效的计划程序。 它利用相同的 I/O 线程池使用的 WCF，这是效率非常高的执行批处理的工作项。 内部工作项计划程序队列已针对最常用的使用模式进行了优化。 WF4 运行时还管理中使用最小的同步和事件处理逻辑，而 WF3 则依靠重型的事件注册和调用来执行复杂的同步状态转换为一个非常简便的方法的执行状态。
 
 ### <a name="data-storage-and-flow"></a>数据存储和流动
  在 WF3 中，与活动相关的数据通过 <xref:System.Windows.DependencyProperty> 类型实现的依赖属性进行建模。 依赖属性模式引入了 Windows Presentation Foundation (WPF) 中。 总体上，这种模式十分灵活，能够支持轻松的数据绑定和其他 UI 功能。 但是，这种模式需要将属性定义为工作流定义中的静态字段。 当 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时设置或获取属性值时，它会涉及重型的查找逻辑。
@@ -43,7 +43,7 @@ ms.locfileid: "65592548"
 ### <a name="control-flow"></a>控制流
  和所有编程语言一样，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 通过引入了一组用于排序、循环、分支和其他模式的控制流活动，为工作流定义提供了控制流支持。 在 WF3 中，当需要重新执行相同的活动时，会通过基于 <xref:System.Workflow.ComponentModel.ActivityExecutionContext> 的重型序列化和反序列化逻辑创建一个新的 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>，并克隆该活动。 通常，迭代控制流的性能要比执行一个活动序列慢得多。
 
- WF4 以完全不同的方式处理这种情况。 它采用活动模板，创建一个新的 ActivityInstance 对象并将其添加到计划程序队列中。 整个过程只涉及显式的对象创建，并且十分轻型。
+ WF4 以完全不同的方式处理这种情况。 它采用活动模板，创建一个新的 ActivityInstance 对象并将其添加到计划程序队列中。 整个过程只涉及显式的对象创建，是非常轻量。
 
 ### <a name="asynchronous-programming"></a>异步编程
  使用异步编程时，应用程序对长时间运行的阻止操作（如 I/O）或分布式计算操作通常会表现出更佳的性能和可伸缩性。 WF4 通过基础活动类型 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供异步支持。 运行时本身就了解异步活动，因此可以在异步工作未处理时，自动将实例放入非持久性区域中。 自定义活动可以从这些类型派生，从而无需保留工作流计划程序线程和阻止能够并行运行的任何活动，即可执行异步工作。
