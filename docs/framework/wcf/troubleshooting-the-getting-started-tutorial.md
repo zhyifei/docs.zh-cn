@@ -22,13 +22,13 @@ ms.locfileid: "61791464"
 **找不到*App.config*生成的文件*Svcutil.exe*。**
 
  在 Visual Studio 中，**添加现有项**窗口将仅显示具有以下扩展名的文件默认情况下： 
-- .cs 
+- .cs  
 - *.resx* 
 - *.settings*
 - *.xsd* 
 - *.wsdl*
 
-若要显示所有文件类型，请选择**的所有文件 (\*。\*)** 右下角的下拉列表中**添加现有项**窗口。  
+若要显示所有文件类型，请选择 **的所有文件 (\*。\*)** 右下角的下拉列表中**添加现有项**窗口。  
   
 ## <a name="common-errors"></a>常见错误
 
@@ -71,7 +71,7 @@ ms.locfileid: "61791464"
    
 **Svcutil 不识别为内部或外部命令、 可操作程序或批处理文件。**
 
- *Svcutil.exe*必须位于系统路径。 最简单的解决方案是使用 Visual Studio 命令提示符。 从**启动**菜单中，选择**Visual Studio\<版本 >** 目录，然后选择**VS 开发人员命令提示\<版本 >**. 此命令提示符下设置为正确的位置的 Visual Studio 中附带的所有工具的系统路径。  
+ *Svcutil.exe*必须位于系统路径。 最简单的解决方案是使用 Visual Studio 命令提示符。 从**启动**菜单中，选择**Visual Studio\<版本 >** 目录，然后选择**VS 开发人员命令提示\<版本 >** . 此命令提示符下设置为正确的位置的 Visual Studio 中附带的所有工具的系统路径。  
   
 ### <a name="run-the-service-and-client-applications"></a>运行服务和客户端应用程序
 
@@ -88,7 +88,7 @@ ms.locfileid: "61791464"
     selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
     ```
 
-- 对于客户端配置文件中更新**\<安全 >** 元素下的**\<绑定 >** 元素，如下所示：  
+- 对于客户端配置文件中更新 **\<安全>** 元素下的 **\<绑定 >** 元素，如下所示：  
   
     ```xml
     <binding name="WSHttpBinding_ICalculator" security mode="None" />
