@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960036"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402469"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 端口共享
 Windows Communication Foundation (WCF) 提供高性能通信的新的基于 TCP 的网络协议 (net.tcp://)。 WCF 还引入了新的系统组件使得 net.tcp 端口可以在多个用户进程之间共享 Net.TCP 端口共享服务。  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) 提供高性能通信的新的基于 TCP 
   
  在 HTTP.SYS 模型中，许多不同的 HTTP 应用程序的通信中将多路复用到单个 TCP 端口。此模型已经成为 Windows 平台上的标准。 这为防火墙管理员提供了一个公共控制点，同时可以让应用程序开发人员尽可能降低生成可利用网络的新应用程序的部署成本。  
   
- 在多个 HTTP 应用程序之间共享端口的能力早已成为 Internet 信息服务 (IIS) 的一个功能。 但是，只有在引入 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 附带的 HTTP.SYS（核心模式 HTTP 协议侦听器）之后，此基础结构才完全得到广泛使用。 实际上，HTTP.SYS 允许任意用户进程共享专用于 HTTP 通信的 TCP 端口。 此功能可以让许多 HTTP 应用程序在同一台计算机上共存于不同的独立进程中，同时共享通过 TCP 端口 80 发送和接收通信所需要的网络基础结构。 Net.TCP Port Sharing Service 支持为 net.tcp 应用程序共享相同类型的端口。  
+ 在多个 HTTP 应用程序之间共享端口的能力早已成为 Internet 信息服务 (IIS) 的一个功能。 但是，它是仅通过引入 HTTP。使用此基础结构完全得到广泛的 IIS 6.0 SYS （内核模式 HTTP 协议侦听器）。 实际上，HTTP.SYS 允许任意用户进程共享专用于 HTTP 通信的 TCP 端口。 此功能可以让许多 HTTP 应用程序在同一台计算机上共存于不同的独立进程中，同时共享通过 TCP 端口 80 发送和接收通信所需要的网络基础结构。 Net.TCP Port Sharing Service 支持为 net.tcp 应用程序共享相同类型的端口。  
   
 ## <a name="port-sharing-architecture"></a>端口共享结构  
  WCF 中的端口共享结构有三个主要组件：  

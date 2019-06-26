@@ -2,12 +2,12 @@
 title: 部署承载于 Internet 信息服务中的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025731"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402299"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 
@@ -43,7 +43,7 @@ ms.locfileid: "67025731"
 
 IIS 承载的 WCF 服务必须驻留在 IIS 应用程序内。 可以以独占方式创建新的 IIS 应用程序承载 WCF 服务。 或者，可以将 WCF 服务部署到现有应用程序已经承载 ASP.NET 2.0 内容 （如.aspx 页和 ASP.NET Web 服务 [ASMX]）。 有关这些选项的详细信息，请参阅"托管 WCF 的并排方案使用 ASP.NET"和"在 ASP.NET 兼容模式下承载 WCF 服务"部分中[WCF 服务和 ASP.NET](wcf-services-and-aspnet.md)。
 
-请注意， [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和更高版本定期重新启动独立的面向对象编程应用程序。 默认值为 1740 分钟。 支持的最大值为 71,582 分钟。 可以禁用此重新启动。 有关此属性的详细信息，请参阅[PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
+请注意，IIS 6.0 和更高版本定期重新启动独立的面向对象的编程应用程序。 默认值为 1740 分钟。 支持的最大值为 71,582 分钟。 可以禁用此重新启动。 有关此属性的详细信息，请参阅[PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>为 WCF 服务创建 .svc 文件
 
@@ -103,7 +103,7 @@ IIS 承载的 WCF 服务应用程序 Web.config 文件中存储其配置。 IIS 
 
 ### <a name="available-transports"></a>可用传输
 
-在 IIS 5.1 中承载的 WCF 服务和[!INCLUDE[iis601](../../../../includes/iis601-md.md)]被限制为使用基于 HTTP 的通信。 在这些 IIS 平台上，将所承载的服务配置为使用非 HTTP 绑定会导致服务激活期间出错。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，支持的传输包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ 以及用于与现有 MSMQ 应用程序向后兼容的 msmq.formatname。
+WCF 服务承载于 IIS 5.1 和 IIS 6.0 被限制为使用基于 HTTP 的通信。 在这些 IIS 平台上，将所承载的服务配置为使用非 HTTP 绑定会导致服务激活期间出错。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，支持的传输包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ 以及用于与现有 MSMQ 应用程序向后兼容的 msmq.formatname。
 
 ### <a name="http-transport-security"></a>HTTP 传输安全
 

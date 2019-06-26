@@ -2,12 +2,12 @@
 title: Internet 信息服务承载最佳实践
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878595"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402440"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet 信息服务承载最佳实践
 本主题概述了用于承载 Windows Communication Foundation (WCF) 服务的一些最佳做法。  
@@ -16,7 +16,7 @@ ms.locfileid: "65878595"
  实现 WCF 服务作为 DLL 部署到 Web 应用程序的 \bin 目录允许你重复使用服务模型外的 Web 应用程序，例如，可能没有 Internet 信息服务 (IIS) 部署的测试环境中。  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>承载于 IIS 中的应用程序中的服务主机  
- 不要使用强制性自承载 API 创建用于侦听 IIS 承载环境本身不支持的网络传输的新服务主机（例如，承载 TCP 服务的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]，因为 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 本身不支持 TCP 通信）。 建议不要使用此方法。 强制创建的服务主机在 IIS 承载环境内是未知的。 很重要的一点是，在 IIS 确定承载应用程序池是否空闲时，它未说明强制创建的服务所进行的处理。 结果是具有这样强制创建的服务主机的应用程序具有主动处置 IIS 托管进程的 IIS 承载环境。  
+ 不要使用命令性自承载 Api 来创建新的服务主机用于侦听网络传输本身不支持的 IIS 承载环境 （例如，IIS 6.0 承载 TCP 服务，因为在 IIS 6.0 本机不支持 TCP 通信）。 建议不要使用此方法。 强制创建的服务主机在 IIS 承载环境内是未知的。 很重要的一点是，在 IIS 确定承载应用程序池是否空闲时，它未说明强制创建的服务所进行的处理。 结果是具有这样强制创建的服务主机的应用程序具有主动处置 IIS 托管进程的 IIS 承载环境。  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI 和承载于 IIS 中的终结点  
  承载于 IIS 中的服务的终结点应该使用相对统一资源标识符 (URI) 而不是绝对地址进行配置。 这保证终结点地址在属于承载应用程序的 URI 地址集范围内，并确保像预期的那样发生基于消息的激活。  

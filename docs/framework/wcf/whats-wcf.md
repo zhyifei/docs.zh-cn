@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 13108e86d76b0d806eddf71b2f7e50337ca0afba
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348307"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402432"
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 Windows Communication Foundation (WCF) 是一个框架，用于构建面向服务的应用程序。 使用 WCF，您可以发送数据作为异步消息从一个服务终结点到另一个。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：
@@ -92,7 +92,7 @@ Microsoft BizTalk Server R2 还利用 WCF 作为通信技术。 BizTalk 设计�
 
 Microsoft Silverlight 是一个用于创建可互操作的、丰富 Web 应用程序的平台，允许开发人员创建媒体密集的网站（如流视频）。 从版本 2 开始，Silverlight 加入了 WCF 作为通信技术连接到 WCF 终结点的 Silverlight 应用程序。
 
-Windows Server AppFabric 应用程序服务器的托管功能专门用于部署和管理应用程序使用 WCF 进行通信。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)]包括丰富的工具和配置选项，专为 WCF 启用应用程序。
+Windows Server AppFabric 应用程序服务器的托管功能专门用于部署和管理应用程序使用 WCF 进行通信。 托管的功能包括丰富的工具和配置选项，专为 WCF 启用应用程序。
 
 ## <a name="see-also"></a>请参阅
 

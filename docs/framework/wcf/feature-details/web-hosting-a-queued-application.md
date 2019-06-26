@@ -2,15 +2,15 @@
 title: 承载排队应用程序的 Web
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126017"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402277"
 ---
 # <a name="web-hosting-a-queued-application"></a>承载排队应用程序的 Web
-Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的工作进程的生存期。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，如 net.msmq 和 msmq.formatname，在宿主环境支持基于消息的激活并提供承载大量给定计算机上的应用程序的能力。  
+Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的工作进程的生存期。 WAS 进程模型通用化 HTTP 服务器的 IIS 6.0 进程模型通过删除对 HTTP 的依赖关系。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，如 net.msmq 和 msmq.formatname，在宿主环境支持基于消息的激活并提供承载大量给定计算机上的应用程序的能力。  
   
  WAS 中包含一项消息队列 (MSMQ) 激活服务，当有一条或多条消息放入某排队的应用程序所使用的某个队列时，该服务将激活该应用程序。 MSMQ 激活服务是默认情况下自动启动的 NT 服务。  
   

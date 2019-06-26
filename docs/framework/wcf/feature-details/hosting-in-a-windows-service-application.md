@@ -2,12 +2,12 @@
 title: 在 Windows 服务应用程序中承载
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc95634745aa0c0246cf139d19e0777fde7e1aba
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613307"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402168"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服务应用程序中承载
 Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。 Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。 可以配置为在计算机启动，使其合适的托管环境的"always on"应用程序时自动启动的 Windows 服务进程。 Windows 服务应用程序的详细信息，请参阅[Windows 服务应用程序](https://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -20,7 +20,7 @@ Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于
   
 - 承载应用程序的进程必须在启动后保持运行状态。 Windows 服务进程一旦启动将一直保持运行状态，直到服务器管理员使用服务控制管理器显式关闭该进程。 在 IIS 或 WAS 中承载的应用程序可能会动态地启动和停止，以便最佳地使用系统资源。 需要显式控制其托管进程的生存期的应用程序应使用 Windows 服务而非 IIS 或 WAS。  
   
-- 您的 WCF 服务必须在 Windows Server 2003 上运行，并使用非 HTTP 传输。 在 Windows Server 2003 上，[!INCLUDE[iis601](../../../../includes/iis601-md.md)] 宿主环境限制为仅可进行 HTTP 通信。 Windows 服务应用程序不受此限制的约束，可以使用任何传输 WCF 支持，包括 net.tcp、 net.pipe 和 net.msmq。  
+- 您的 WCF 服务必须在 Windows Server 2003 上运行，并使用非 HTTP 传输。 Windows Server 2003 上的 IIS 6.0 宿主环境被限制为仅使用 HTTP 通信。 Windows 服务应用程序不受此限制的约束，可以使用任何传输 WCF 支持，包括 net.tcp、 net.pipe 和 net.msmq。  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>在 Windows 服务应用程序内承载 WCF  
   

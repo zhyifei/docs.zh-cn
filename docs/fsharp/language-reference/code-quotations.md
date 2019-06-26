@@ -2,12 +2,12 @@
 title: 代码引用
 description: 了解如何F#的代码引号中，一种语言功能，可用于生成和使用F#以编程方式代码表达式。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30fd5b575fa59d78c3e70c1a94cd921a6a655ace
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490804"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402133"
 ---
 # <a name="code-quotations"></a>代码引用
 
@@ -39,7 +39,7 @@ ms.locfileid: "66490804"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-计算为F#引用，则必须使用[F#引号计算器](https://github.com/fsprojects/FSharp.Quotations.Evaluator)。 它提供了评估和执行支持F#表达式对象。
+若要评估F#引用，则必须使用[F#引号计算器](https://github.com/fsprojects/FSharp.Quotations.Evaluator)。 它提供了评估和执行支持F#表达式对象。
 
 ## <a name="expr-type"></a>Expr 类型
 

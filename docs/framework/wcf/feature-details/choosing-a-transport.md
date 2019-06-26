@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611e8df29b37efd880ee1d19515697d899e4fa7e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048286"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402147"
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
 本主题讨论 Windows Communication Foundation (WCF) 中包含的三个主要传输之间进行选择的条件：HTTP、 TCP 和命名的管道。 WCF 还包括消息队列 (也称为 MSMQ) 传输，但本文不讨论消息队列。  
@@ -53,7 +53,7 @@ ms.locfileid: "62048286"
 |特性|描述|适合的传输方式|  
 |---------------|-----------------|------------------------|  
 |诊断|使用诊断可自动检测传输的连接性问题。 所有传输方式均支持发回描述连接性的错误信息这一功能。 但是，WCF 不包括用于调查网络问题的诊断工具。|None|  
-|宿主|所有 WCF 终结点必须都承载在应用程序。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和早期版本仅支持承载使用 HTTP 传输的应用程序。 在[!INCLUDE[wv](../../../../includes/wv-md.md)]，增加对承载所有 WCF 传输，包括 TCP 和命名管道支持。 有关详细信息，请参阅[在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)并[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。|HTTP|  
+|宿主|所有 WCF 终结点必须都承载在应用程序。 IIS 6.0 和早期版本支持仅使用 HTTP 传输的托管应用程序。 在[!INCLUDE[wv](../../../../includes/wv-md.md)]，增加对承载所有 WCF 传输，包括 TCP 和命名管道支持。 有关详细信息，请参阅[在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)并[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。|HTTP|  
 |检查|检查是在传送期间从消息中提取并处理信息的功能。 HTTP 协议会从数据中分离出路由和控制信息，使得可以更方便地生成用于检查和分析消息的工具。 易于检查的传输方式还可能要求网络设备中有较低的处理能力。 使用的安全级别会影响是否可以检查消息。|HTTP|  
 |滞后时间|滞后时间是指完成消息交换所需的最少时间。 所有网络操作都具有或长或端的滞后时间，具体取决于选择的传输方式。 由于消息的强制相关性，利用固有消息交换模式为请求-答复的传输方式（如 HTTP）进行双工或单向通信会导致滞后时间增加。 这种情况下，请考虑使用固有消息交换模式为双工的传输方式，如 TCP。|TCP、命名<br /><br /> 管道|  
 |连接距离|传输的连接距离反映了传输在与其他系统连接时的能力。 命名管道传输的连接距离很小；它只能连接到在同一计算上运行的服务。 TCP 和 HTTP 传输方式都有很好的连接距离，并可以渗透某些 NAT 和防火墙配置。 有关详细信息，请参阅[使用 Nat 和防火墙](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)。|HTTP、TCP|  

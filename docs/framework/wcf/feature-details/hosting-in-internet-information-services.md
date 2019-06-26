@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f9acadcb594005d7c7eadffcddad3649a3aefc29
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025746"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402193"
 ---
 # <a name="hosting-in-internet-information-services"></a>在 Internet 信息服务中承载
 用于承载 Windows Communication Foundation (WCF) 服务的一个选项是 Internet 信息服务 (IIS) 应用程序内。 此承载模型是类似于使用 ASP.NET 和 ASP.NET Web 服务 (ASMX) Web 服务的模型。  
@@ -19,9 +19,9 @@ ms.locfileid: "67025746"
   
 - [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 上的 IIS 5.1。 此环境对于设计和开发 IIS 承载的应用程序非常有用，这些应用程序稍后将部署在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 等服务器操作系统上。  
   
-- [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 上的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 提供了一种高级进程模型，这种模型可提供更好的可伸缩性、可靠性和应用程序隔离。 此环境适合以独占方式使用 HTTP 通信的 WCF 服务的生产部署。  
+- 上的 IIS 6.0 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。 IIS 6.0 提供了一个高级的过程模型，提供改进的可伸缩性、 可靠性和应用程序隔离。 此环境适合以独占方式使用 HTTP 通信的 WCF 服务的生产部署。  
   
-- [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 IIS 7.0 提供了与 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 相同的高级进程模型，但它使用 Windows 进程激活服务 (WAS) 来允许通过 HTTP 之外的协议进行激活和网络通信。 此环境适合于通过任何支持的 WCF （包括 HTTP、 net.tcp、 net.pipe 和 net.msmq） 的网络协议进行通信的 WCF 服务的开发。 有关 WAS 的详细信息，请参阅[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 IIS 7.0 提供与 IIS 6.0 相同的高级的进程模型，但使用 Windows 进程激活服务 (WAS) 允许通过 HTTP 之外的协议进行激活和网络通信。 此环境适合于通过任何支持的 WCF （包括 HTTP、 net.tcp、 net.pipe 和 net.msmq） 的网络协议进行通信的 WCF 服务的开发。 有关 WAS 的详细信息，请参阅[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
 - [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)适用于[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows 进程激活服务 (WAS) 提供丰富的应用程序宿主环境为 NET4 WCF 和 WF 服务。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[AppFabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=196494)并[AppFabric 承载概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67025746"
   
 - 在 IIS 中承载的 WCF 服务使用相同的动态编译模型作为 ASP.NET 2.0 中，这简化了开发和部署托管服务。  
   
- 在决定在 IIS 中承载 WCF 服务时，务必要记住 IIS 5.1 和[!INCLUDE[iis601](../../../../includes/iis601-md.md)]限制为仅使用 HTTP 通信。 有关选择宿主环境的详细信息，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。  
+ 在决定在 IIS 中承载 WCF 服务时，务必要记住 IIS 5.1 和 IIS 6.0 仅限于仅使用 HTTP 通信。 有关选择宿主环境的详细信息，请参阅[托管服务](../../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>部署 IIS 承载的 WCF 服务  
  开发和部署 IIS 承载的 WCF 服务包含以下任务：  

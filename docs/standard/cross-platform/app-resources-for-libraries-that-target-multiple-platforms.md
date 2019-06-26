@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025575"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402120"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>面向多个平台的库的应用程序资源
 可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)项目类型以确保可以从多个平台访问类库中的资源。 该项目类型可以在 Visual Studio 2012 中，面向.NET Framework 类库的可移植子集。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]确保可从桌面应用、Silverlight 应用、Windows Phone 应用和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用访问你的库。
@@ -72,12 +72,12 @@ ms.locfileid: "67025575"
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- 以下代码阐释如何从控制台模式应用访问 `UILibrary` 类及其资源。 它需要将对 UILIbrary.dll 的引用添加到控制台应用项目。
+ 以下代码阐释如何从控制台模式应用访问 `UILibrary` 类及其资源。 它需要对 UILibrary.dll 要添加到控制台应用程序项目的引用。
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- 下列代码阐释了如何从 `UILibrary`应用访问 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 类及其资源。 它需要将对 UILIbrary.dll 的引用添加到 Windows 应用商店应用项目。
+ 下列代码阐释了如何从 `UILibrary`应用访问 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 类及其资源。 它需要对 UILibrary.dll 要添加到 Windows 应用商店应用项目的引用。
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -94,12 +94,12 @@ ms.locfileid: "67025575"
 |名称|Nom|
 |标题|基 de données des employés|
 
- 以下代码阐释如何从控制台模式应用访问 `UILibrary` 类及其资源。 它需要将对 UILIbrary.dll 的引用添加到控制台应用项目。
+ 以下代码阐释如何从控制台模式应用访问 `UILibrary` 类及其资源。 它需要对 UILibrary.dll 要添加到控制台应用程序项目的引用。
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- 下列代码阐释了如何从 `UILibrary`应用访问 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 类及其资源。 它需要将对 UILIbrary.dll 的引用添加到 Windows 应用商店应用项目。 它使用静态 `ApplicationLanguages.PrimaryLanguageOverride` 属性将应用的首选语言设置为法语。
+ 下列代码阐释了如何从 `UILibrary`应用访问 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 类及其资源。 它需要对 UILibrary.dll 要添加到 Windows 应用商店应用项目的引用。 它使用静态 `ApplicationLanguages.PrimaryLanguageOverride` 属性将应用的首选语言设置为法语。
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

@@ -2,12 +2,12 @@
 title: HTTP 传输安全
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: ab099302df93ce7d01c2730df88240265411bc8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587674"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402309"
 ---
 # <a name="http-transport-security"></a>HTTP 传输安全
 如果使用 HTTP 作为传输，则由安全套接字层 (SSL) 实现提供安全。 SSL 广泛用于 Internet 中，以便向客户端证明服务的身份，并且随后向通道提供保密性（加密）。 本主题说明 SSL 的工作原理以及它如何实现 Windows Communication Foundation (WCF) 中。  
@@ -43,9 +43,9 @@ ms.locfileid: "64587674"
  若要配置证书以用于[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta:在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 #### <a name="iis-60"></a>IIS 6.0  
- 若要设置[!INCLUDE[iis601](../../../../includes/iis601-md.md)]为安全宿主 （使用 SSL），请参阅[配置安全套接字层](https://go.microsoft.com/fwlink/?LinkId=88601)。  
+ 若要为安全宿主 （使用 SSL） 设置 IIS 6.0，请参阅[配置安全套接字层](https://go.microsoft.com/fwlink/?LinkId=88601)。  
   
- 若要配置证书以用于[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)。  
+ 若要配置使用的证书与 IIS 6.0，请参阅[Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)。  
   
 ### <a name="using-httpcfg-for-ssl"></a>将 HttpCfg 用于 SSL  
  如果要创建自承载的 WCF 应用程序，下载 HttpCfg.exe 工具，可在[Windows XP Service Pack 2 支持工具网站](https://go.microsoft.com/fwlink/?LinkId=29002)。  

@@ -2,12 +2,12 @@
 title: 工作流服务注册工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: da377e865258169bdca16cfb0db3f8612d4e0f0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 211af75c04dfe971228bc1710fbe1fc4d7aaee60
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613066"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402475"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>工作流服务注册工具 (WFServicesReg.exe)
 工作流服务注册工具 (WFServicesReg.exe) 是一个独立的工具，可用于添加、移除或修复 Windows Workflow Foundation (WF) 服务的配置元素。  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  该工具还在 IIS 元数据库中注册 .xoml 和 .rules 脚本映射和处理程序。  
   
- 在 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 计算机上（IIS 5.1 和 [!INCLUDE[iis601](../../../includes/iis601-md.md)]）注册一组 .xoml 和 .rules 脚本映射。  
+ 上[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]和[!INCLUDE[wxp](../../../includes/wxp-md.md)]（IIS 5.1 和 IIS 6.0） 的一组.xoml 和.rules 脚本映射的已注册的计算机。  
   
  在 64 位计算机上，如果启用 `Enable32BitAppOnWin64` 开关，则该工具注册 WOW 模式脚本映射；如果禁用 `Enable32BitAppOnWin64` 开关，则该工具注册本机 64 位模式脚本映射。  
   

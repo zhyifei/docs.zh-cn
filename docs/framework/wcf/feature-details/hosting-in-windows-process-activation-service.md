@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: baa931b64e64c9c2f73ac07424b2cfd1868e725b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613295"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402343"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows 进程激活服务中承载
-Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的工作进程的生存期。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，例如 Net.TCP，在宿主环境支持基于消息的激活并提供承载大量在给定计算机上的应用程序的能力。  
+Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的工作进程的生存期。 WAS 进程模型通用化 HTTP 服务器的 IIS 6.0 进程模型通过删除对 HTTP 的依赖关系。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，例如 Net.TCP，在宿主环境支持基于消息的激活并提供承载大量在给定计算机上的应用程序的能力。  
   
  在 WAS 宿主环境中运行生成的 WCF 服务的详细信息，请参阅[如何：承载在 WAS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
