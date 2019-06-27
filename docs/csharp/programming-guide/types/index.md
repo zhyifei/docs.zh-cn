@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423415"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398098"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 
@@ -120,13 +120,13 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-`System.IO.FileMode.Create` 常量的值为 2。 不过，名称对于阅读源代码的人来说更有意义，因此，最好使用枚举，而不是常量数字文本。 有关更多信息，请参见<xref:System.IO.FileMode?displayProperty=nameWithType>。
+`System.IO.FileMode.Create` 常量的值为 2。 不过，名称对于阅读源代码的人来说更有意义，因此，最好使用枚举，而不是常量数字文本。 有关详细信息，请参阅 <xref:System.IO.FileMode?displayProperty=nameWithType>。
 
 所有枚举从 <xref:System.Enum?displayProperty=nameWithType>（继承自 <xref:System.ValueType?displayProperty=nameWithType>）继承。 适用于结构的所有规则也适用于枚举。 有关枚举的详细信息，请参阅[枚举类型](../../../csharp/programming-guide/enumeration-types.md)。
 
 ### <a name="reference-types"></a>引用类型
 
-定义为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)、数组或[接口](../../../csharp/language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，当声明引用类型的变量时，该变量会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直至使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建对象，或者为该变量分配已经在其他位置使用 `new` 创建的对象，如下所示：
+定义为[类](../../../csharp/language-reference/keywords/class.md)、[委托](../../../csharp/language-reference/keywords/delegate.md)、数组或[接口](../../../csharp/language-reference/keywords/interface.md)的类型是*引用类型*。 在运行时，当声明引用类型的变量时，该变量会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直至使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符显式创建对象，或者为该变量分配已经在其他位置使用 `new` 创建的对象，如下所示：
 
 ```csharp
 MyClass mc = new MyClass();
