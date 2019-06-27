@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 2c53dc315496d40b77e0bf0880c713ce3d3b4241
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8008feb91a72353a74a647cf79bcecbf7023f962
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614568"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410560"
 ---
 # <a name="dialog-boxes-overview"></a>对话框概述
 独立应用程序通常会在主窗口中同时显示应用程序对其进行操作和公开的功能来处理通过该数据的主数据[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]等机制，菜单栏、 工具栏和状态栏。 重要的应用程序可能还会显示其他窗口来执行以下操作：  
@@ -97,91 +97,87 @@ ms.locfileid: "64614568"
  有关详细信息保存文件对话框中，请参阅<xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>。  
   
 <a name="Print_Dialog"></a>   
-### <a name="print-dialog-box"></a>打印对话框  
- 如下图中所示的打印对话框由打印功能用以选择和配置用户想要将数据打印到的打印机。  
+### <a name="print-dialog-box"></a>“打印”对话框
+
+如下图中所示的打印对话框由打印功能用以选择和配置用户想要将数据打印到的打印机。  
   
- ![显示打印对话框的屏幕截图。](./media/dialog-boxes-overview/print-data-dialog-box.png)  
+![显示打印对话框的屏幕截图。](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
- 作为实现通用打印对话框<xref:System.Windows.Controls.PrintDialog>类，并位于<xref:System.Windows.Controls>命名空间。 以下代码显示了如何创建、配置和显示打印对话框。  
+作为实现通用打印对话框<xref:System.Windows.Controls.PrintDialog>类，并位于<xref:System.Windows.Controls>命名空间。 以下代码显示了如何创建、配置和显示打印对话框。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#printdialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#printdialogboxcodebehind)]  
   
- 打印对话框的详细信息，请参阅<xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>。 有关中的打印功能的详细讨论[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，请参阅[打印概述](../advanced/printing-overview.md)。  
+ 打印对话框的详细信息，请参阅<xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>。 WPF 中的打印功能的详细讨论，请参阅[打印概述](../advanced/printing-overview.md)。  
   
 <a name="Custom_Dialog_Boxes"></a>   
-## <a name="custom-dialog-boxes"></a>自定义对话框  
- 尽管通用对话框很有用并应尽可能使用，但它们并不支持特定于域的对话框的要求。 在这些情况下，就需要创建自己的对话框。 如我们所见，对话框是具有特殊行为的窗口。 <xref:System.Windows.Window> 实现那些行为，因此，使用<xref:System.Windows.Window>创建自定义模式和无模式对话框。  
+## <a name="custom-dialog-boxes"></a>自定义对话框
+
+尽管通用对话框很有用并应尽可能使用，但它们并不支持特定于域的对话框的要求。 在这些情况下，就需要创建自己的对话框。 如我们所见，对话框是具有特殊行为的窗口。 <xref:System.Windows.Window> 实现那些行为，因此，使用<xref:System.Windows.Window>创建自定义模式和无模式对话框。  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
-### <a name="creating-a-modal-custom-dialog-box"></a>创建模式自定义对话框  
- 本主题演示如何使用<xref:System.Windows.Window>若要创建典型模式对话框实现，使用`Margins`对话框中的作为示例 (请参阅[对话框示例](https://go.microsoft.com/fwlink/?LinkID=159984))。 `Margins`对话框显示下图中。  
+### <a name="creating-a-modal-custom-dialog-box"></a>创建模式自定义对话框
+
+本主题演示如何使用<xref:System.Windows.Window>若要创建典型模式对话框实现，使用`Margins`对话框中的作为示例 (请参阅[对话框示例](https://go.microsoft.com/fwlink/?LinkID=159984))。 `Margins`对话框显示下图中。  
   
  ![字段以定义左边的距、 上边距、 右边距和下边距边距对话框。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
-#### <a name="configuring-a-modal-dialog-box"></a>配置模式对话框  
- 典型对话框的用户界面包括以下内容：  
+#### <a name="configuring-a-modal-dialog-box"></a>配置模式对话框
+
+典型对话框的用户界面包括以下内容：  
   
 - 收集所需数据要求的各种控件。  
   
-- 显示**确定**按钮用户单击以关闭对话框，返回到函数，并继续处理。  
+- **确定**按钮用户单击以关闭对话框，返回到函数，并继续处理。  
   
-- 显示**取消**按钮，用户单击关闭对话框并停止进一步处理功能。  
+- 一个**取消**按钮，用户单击关闭对话框并停止进一步处理功能。  
   
-- 显示**关闭**标题栏中的按钮。  
+- 一个**关闭**标题栏中的按钮。  
   
-- 显示一个图标。  
+- 图标。  
   
-- 显示**最小化**，**最大化**，并**还原**按钮。  
+- **最大程度减少**，**最大化**，和**还原**按钮。  
   
-- 显示**系统**菜单以最小化、 最大化、 还原和关闭该对话框。  
+- 一个**系统**菜单以最小化、 最大化、 还原和关闭该对话框。  
   
-- 在打开对话框的窗口上方和中心打开。  
+- 上方和中心打开的对话框的窗口的位置。  
   
-- 对话框应尽可能可以调整大小（以防对话框过小）并为用户提供合适的默认尺寸，需要分别设置默认和最小尺寸。  
+- 如果要阻止对话框的太小，并为用户提供有效的默认大小可能要调整大小功能。 这要求您设置默认值和最小尺寸。  
   
-- 按 ESC 键应该配置导致的键盘快捷方式**取消**按钮按下。 这通过设置来实现<xref:System.Windows.Controls.Button.IsCancel%2A>的属性**取消**按钮切换为`true`。  
+- ESC 键将导致的键盘快捷方式**取消**按钮按下。 执行此操作通过设置<xref:System.Windows.Controls.Button.IsCancel%2A>的属性**取消**按钮切换为`true`。  
   
-- 按 ENTER （或 RETURN） 键应该配置导致的键盘快捷方式**确定**按钮按下。 这通过设置来实现<xref:System.Windows.Controls.Button.IsDefault%2A>的属性**确定**按钮`true`。  
+- 导致的键盘快捷方式的 ENTER 键 （或 RETURN） 键**确定**按钮按下。 执行此操作通过设置<xref:System.Windows.Controls.Button.IsDefault%2A>的属性**确定**按钮`true`。  
   
- 以下代码演示了这种配置。  
+以下代码演示了这种配置。  
   
- [!code-xaml[DialogBoxSample#MarginsDialogBoxMainBitsMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#marginsdialogboxmainbitsmarkup1)]  
-[!code-xaml[DialogBoxSample#MarginsDialogBoxMainBitsMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#marginsdialogboxmainbitsmarkup2)]  
+[!code-xaml[MarginsDialogBox XAML file](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml?range=1-16,106-112)]  
+
+[!code-csharp[MarginsDialogBox C# code-behind](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-12,67-68)]
+[!code-vb[MarginsDialogBox VB code-behind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-11,61-62)]  
   
- [!code-csharp[DialogBoxSample#MarginsDialogBoxMainBitsCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxmainbitscodebehind1)]
- [!code-vb[DialogBoxSample#MarginsDialogBoxMainBitsCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxmainbitscodebehind1)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxMainBitsCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxmainbitscodebehind2)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxMainBitsCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxmainbitscodebehind2)]  
+对话框用户体验还扩展到打开对话框的窗口菜单栏。 当菜单项运行需要用户通过对话框交互才能继续运行的函数时，函数的菜单项标题上会有一个省略号，如此处所示。  
   
- 对话框用户体验还扩展到打开对话框的窗口菜单栏。 当菜单项运行需要用户通过对话框交互才能继续运行的函数时，函数的菜单项标题上会有一个省略号，如此处所示。  
+[!code-xaml[Menu bar of MainWindow.Xaml file](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L26-L27)]  
   
- [!code-xaml[DialogBoxSample#MainWindowMarginsDialogBoxMenuItemMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#mainwindowmarginsdialogboxmenuitemmarkup1)]  
-[!code-xaml[DialogBoxSample#MainWindowMarginsDialogBoxMenuItemMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#mainwindowmarginsdialogboxmenuitemmarkup2)]  
+当菜单项运行的函数显示无需用户交互的对话框（如“关于”对话框）时，则不需要省略号。  
   
- 当菜单项运行的函数显示无需用户交互的对话框（如“关于”对话框）时，则不需要省略号。  
+#### <a name="opening-a-modal-dialog-box"></a>打开模式对话框
+
+对话框通常显示为用户选择菜单项来执行特定于域的函数的结果，比如在字处理器中设置文档边距。 将窗口显示为对话框类似于显示普通窗口，只是它需要其他特定于对话框的配置。 以下代码中显示了实例化、配置和打开对话框的整个过程。  
   
-#### <a name="opening-a-modal-dialog-box"></a>打开模式对话框  
- 对话框通常显示为用户选择菜单项来执行特定于域的函数的结果，比如在字处理器中设置文档边距。 将窗口显示为对话框类似于显示普通窗口，只是它需要其他特定于对话框的配置。 以下代码中显示了实例化、配置和打开对话框的整个过程。  
-  
- [!code-csharp[DialogBoxSample#OpenMarginsDialogCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogcodebehind1)]
- [!code-vb[DialogBoxSample#OpenMarginsDialogCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogcodebehind1)]  
-[!code-csharp[DialogBoxSample#OpenMarginsDialogCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogcodebehind2)]
-[!code-vb[DialogBoxSample#OpenMarginsDialogCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogcodebehind2)]  
-[!code-csharp[DialogBoxSample#OpenMarginsDialogCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogcodebehind3)]
-[!code-vb[DialogBoxSample#OpenMarginsDialogCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogcodebehind3)]  
-[!code-csharp[DialogBoxSample#OpenMarginsDialogCODEBEHIND4](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogcodebehind4)]
-[!code-vb[DialogBoxSample#OpenMarginsDialogCODEBEHIND4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogcodebehind4)]  
-  
- 此处代码将默认信息（当前边距）传递给对话框。 它还设置<xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>具有对显示的对话框窗口的引用的属性。 一般情况下，应始终设置对话框中的所有者才能提供窗口状态相关的行为所共有的所有对话框 (请参阅[WPF Windows 概述](wpf-windows-overview.md)有关详细信息)。  
-  
+[!code-csharp[Opening a modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-11,78-88,193-195)]
+[!code-vb[Opening a modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58-67,130-132)]  
+
+在这里，代码将默认信息 （当前边距） 传递给对话框。 它还将设置<xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>具有对显示的对话框窗口的引用的属性。 一般情况下，应始终设置对话框中的所有者才能提供窗口状态相关的行为所共有的所有对话框 (请参阅[WPF Windows 概述](wpf-windows-overview.md)有关详细信息)。
+
 > [!NOTE]
->  必须提供所有者以支持[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]自动化对话框 (请参阅[UI 自动化概述](../../ui-automation/ui-automation-overview.md))。  
+> 必须提供所有者以支持用户界面 (UI) 自动化的对话框 (请参阅[UI 自动化概述](../../ui-automation/ui-automation-overview.md))。
+
+配置对话框的后，会有模式地显示通过调用<xref:System.Windows.Window.ShowDialog%2A>方法。  
   
- 配置对话框的后，会有模式地显示通过调用<xref:System.Windows.Window.ShowDialog%2A>方法。  
-  
-#### <a name="validating-user-provided-data"></a>验证用户提供的数据  
- 当打开对话框并且用户提供所需数据时，对话框出于以下原因负责确保提供的数据有效：  
+#### <a name="validating-user-provided-data"></a>验证用户提供的数据
+
+当打开对话框并且用户提供所需数据时，对话框出于以下原因负责确保提供的数据有效：  
   
 - 从安全角度，应该验证所有输入。  
   
@@ -190,144 +186,112 @@ ms.locfileid: "64614568"
 - 从用户体验角度，对话框可以帮助用户显示他们输入的哪些数据无效。  
   
 - 从性能角度，多层应用程序中的数据验证可以减少客户端和应用程序层之间的往返次数，尤其当应用程序由 Web 服务或基于服务器的数据库构成时。  
+
+若要验证在 WPF 中的绑定的控件，需要定义验证规则并将其与绑定相关联。 验证规则是派生的自定义类<xref:System.Windows.Controls.ValidationRule>。 下面的示例演示的验证规则， `MarginValidationRule`，哪些会检查绑定的值是否<xref:System.Double>和指定范围内。  
+
+[!code-csharp[Margin validation rules](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginValidationRule.cs)]
+[!code-vb[Margin validation rules](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginValidationRule.vb)]  
+
+在此代码中，验证规则的验证逻辑实现通过重写<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，用于验证数据并返回相应<xref:System.Windows.Controls.ValidationResult>。  
+
+要将验证规则与绑定控件进行关联，可以使用以下标记。  
   
- 若要验证中的绑定的控件[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您需要定义验证规则并将其与绑定相关联。 验证规则是派生的自定义类<xref:System.Windows.Controls.ValidationRule>。 下面的示例演示的验证规则， `MarginValidationRule`，哪些会检查绑定的值是否<xref:System.Double>和指定范围内。  
+[!code-xaml[Associating a validation rule with a control](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml?range=1-16,57-68,111-112)]
+
+验证规则相关联后，WPF 会自动将其应用时数据输入到绑定控件。 当控件包含无效的数据时，WPF 将显示在无效控件四周的红色边框下, 图中所示。  
   
- [!code-csharp[DialogBoxSample#MarginValidationRuleCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginValidationRule.cs#marginvalidationrulecode)]
- [!code-vb[DialogBoxSample#MarginValidationRuleCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginValidationRule.vb#marginvalidationrulecode)]  
+![无效左边的距值四周的红色边框边距对话框。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
+
+WPF 不无效控件限制用户，直到它们已输入有效的数据。 这对于对话框来说很好，无论数据是否有效用户都应该可以自由导航到对话框中的控件。 但是，这意味着用户可以输入无效数据并按**确定**按钮。 出于此原因，代码还需要验证所有控件在对话框中，当**确定**通过处理按下按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
- 在此代码中，验证规则的验证逻辑实现通过重写<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，用于验证数据并返回相应<xref:System.Windows.Controls.ValidationResult>。  
+[!code-csharp[Validating all controls in a dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,26-29,33-68)]
+[!code-vb[Validating all controls in a dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27-29,33-62)]  
+
+此代码枚举窗口上的所有依赖项对象，如果无效 (返回的<xref:System.Windows.Controls.Validation.GetHasError%2A>，则无效控件获得焦点时，`IsValid`方法将返回`false`，和窗口被视为无效。  
   
- 要将验证规则与绑定控件进行关联，可以使用以下标记。  
+一旦对话框有效，就可以安全关闭并返回。 作为返回过程的一部分，需要将结果返回到调用函数。  
   
- [!code-xaml[DialogBoxSample#MarginsValidationMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#marginsvalidationmarkup1)]  
-[!code-xaml[DialogBoxSample#MarginsValidationMARKUP2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#marginsvalidationmarkup2)]  
-[!code-xaml[DialogBoxSample#MarginsValidationMARKUP3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#marginsvalidationmarkup3)]  
+#### <a name="setting-the-modal-dialog-result"></a>设置模式对话框结果
+
+打开对话框框中使用<xref:System.Windows.Window.ShowDialog%2A>基本上就像调用方法： 打开对话框框中使用的代码<xref:System.Windows.Window.ShowDialog%2A>将等待，直至<xref:System.Windows.Window.ShowDialog%2A>返回。 当<xref:System.Windows.Window.ShowDialog%2A>，则返回的代码需要调用它来决定是否要继续还是停止处理，根据用户按下**确定**按钮或**取消**按钮。 若要帮助做出决定，对话框需要返回用户的选择作为<xref:System.Boolean>从返回的值<xref:System.Windows.Window.ShowDialog%2A>方法。  
+
+当**确定**单击按钮时，<xref:System.Windows.Window.ShowDialog%2A>应返回`true`。 这通过设置来实现<xref:System.Windows.Window.DialogResult%2A>属性对话框的框何时**确定**单击按钮。  
+
+[!code-csharp[Responding to the OK button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,25-27,32-33,67-68)]
+[!code-vb[Responding to the OK button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27,31-33,61-62)]  
+
+请注意，设置<xref:System.Windows.Window.DialogResult%2A>属性还会导致窗口自动关闭，这减少了需要显式调用<xref:System.Windows.Window.Close%2A>。  
   
- 一旦验证规则已关联，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]会自动将其应用时数据输入到绑定控件。 当控件包含无效数据，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]下图中所示，将显示在无效控件四周的红色边框。  
+当**取消**单击按钮时，<xref:System.Windows.Window.ShowDialog%2A>应返回`false`，这也要求设置<xref:System.Windows.Window.DialogResult%2A>属性。  
   
- ![无效左边的距值四周的红色边框边距对话框。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
+[!code-csharp[Responding to the Cancel button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,19-24,67-68)]
+[!code-vb[Responding to the Cancel button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,22-25,61-62)]  
+
+当按钮的<xref:System.Windows.Controls.Button.IsCancel%2A>属性设置为`true`和用户按**取消**按钮或 ESC 键<xref:System.Windows.Window.DialogResult%2A>会自动设置为`false`。 以下标记具有相同的效果与上面的代码，而无需处理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不会在用户输入有效数据之前限制其对无效控件的访问。 这对于对话框来说很好，无论数据是否有效用户都应该可以自由导航到对话框中的控件。 但是，这意味着用户可以输入无效数据并按**确定**按钮。 出于此原因，代码还需要验证所有控件在对话框中，当**确定**通过处理按下按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
-  
- [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
- [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind2)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind2)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind3)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind3)]  
-  
- 此代码枚举窗口上的所有依赖项对象，如果无效 (返回的<xref:System.Windows.Controls.Validation.GetHasError%2A>，则无效控件获得焦点时，`IsValid`方法将返回`false`，和窗口被视为无效。  
-  
- 一旦对话框有效，就可以安全关闭并返回。 作为返回过程的一部分，需要将结果返回到调用函数。  
-  
-#### <a name="setting-the-modal-dialog-result"></a>设置模式对话框结果  
- 打开对话框框中使用<xref:System.Windows.Window.ShowDialog%2A>基本上就像调用方法： 打开对话框框中使用的代码<xref:System.Windows.Window.ShowDialog%2A>将等待，直至<xref:System.Windows.Window.ShowDialog%2A>返回。 当<xref:System.Windows.Window.ShowDialog%2A>，则返回的代码需要调用它来决定是否要继续还是停止处理，根据用户按下**确定**按钮或**取消**按钮。 若要帮助做出决定，对话框需要返回用户的选择作为<xref:System.Boolean>从返回的值<xref:System.Windows.Window.ShowDialog%2A>方法。  
-  
- 当**确定**单击按钮时，<xref:System.Windows.Window.ShowDialog%2A>应返回`true`。 这通过设置来实现<xref:System.Windows.Window.DialogResult%2A>属性对话框的框何时**确定**单击按钮。  
-  
- [!code-csharp[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxokresultsetcodebehind1)]
- [!code-vb[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxokresultsetcodebehind1)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxokresultsetcodebehind2)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxokresultsetcodebehind2)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxokresultsetcodebehind3)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxokresultsetcodebehind3)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND4](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxokresultsetcodebehind4)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxOKResultSetCODEBEHIND4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxokresultsetcodebehind4)]  
-  
- 请注意，设置<xref:System.Windows.Window.DialogResult%2A>属性还会导致窗口自动关闭，这减少了需要显式调用<xref:System.Windows.Window.Close%2A>。  
-  
- 当**取消**单击按钮时，<xref:System.Windows.Window.ShowDialog%2A>应返回`false`，这也要求设置<xref:System.Windows.Window.DialogResult%2A>属性。  
-  
- [!code-csharp[DialogBoxSample#MarginsDialogBoxCancelResultSetCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxcancelresultsetcodebehind1)]
- [!code-vb[DialogBoxSample#MarginsDialogBoxCancelResultSetCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxcancelresultsetcodebehind1)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxCancelResultSetCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxcancelresultsetcodebehind2)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxCancelResultSetCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxcancelresultsetcodebehind2)]  
-[!code-csharp[DialogBoxSample#MarginsDialogBoxCancelResultSetCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxcancelresultsetcodebehind3)]
-[!code-vb[DialogBoxSample#MarginsDialogBoxCancelResultSetCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxcancelresultsetcodebehind3)]  
-  
- 当按钮的<xref:System.Windows.Controls.Button.IsCancel%2A>属性设置为`true`和用户按**取消**按钮或 ESC 键<xref:System.Windows.Window.DialogResult%2A>会自动设置为`false`。 以下标记具有相同的效果与上面的代码，而无需处理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
-  
- [!code-xaml[DialogBoxSample#MarginsDialogDefaultCancelMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#marginsdialogdefaultcancelmarkup)]  
-  
- 一个对话框将自动返回`false`当用户按下**关闭**按钮的标题栏中，也可以选择**关闭**中的菜单项**系统**菜单。  
-  
+[!code-xaml[Markup instead of handling the Click event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#L109-L109)]  
+
+一个对话框将自动返回`false`当用户按下**关闭**按钮的标题栏中，也可以选择**关闭**中的菜单项**系统**菜单。  
+
 #### <a name="processing-data-returned-from-a-modal-dialog-box"></a>处理从模式对话框返回的数据  
- 当<xref:System.Windows.Window.DialogResult%2A>设置对话框中，通过打开它的函数可以通过检查获取对话框结果<xref:System.Windows.Window.DialogResult%2A>属性时<xref:System.Windows.Window.ShowDialog%2A>返回。  
+
+当<xref:System.Windows.Window.DialogResult%2A>设置对话框中，通过打开它的函数可以通过检查获取对话框结果<xref:System.Windows.Window.DialogResult%2A>属性时<xref:System.Windows.Window.ShowDialog%2A>返回。  
   
- [!code-csharp[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogprocessreturncodebehind1)]
- [!code-vb[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogprocessreturncodebehind1)]  
-[!code-csharp[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogprocessreturncodebehind2)]
-[!code-vb[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogprocessreturncodebehind2)]  
-[!code-csharp[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogprocessreturncodebehind3)]
-[!code-vb[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogprocessreturncodebehind3)]  
-[!code-csharp[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND4](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogprocessreturncodebehind4)]
-[!code-vb[DialogBoxSample#OpenMarginsDialogProcessReturnCODEBEHIND4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogprocessreturncodebehind4)]  
-  
- 如果对话框结果为`true`，该函数将其用作提示来检索和处理由用户提供的数据。  
+[!code-csharp[Processing data returned from the modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,77-79,89-96,194-195)]
+[!code-vb[Processing data returned from the modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58,69-73,131-132)]
+
+如果对话框结果为`true`，该函数将其用作提示来检索和处理由用户提供的数据。  
   
 > [!NOTE]
->  之后<xref:System.Windows.Window.ShowDialog%2A>已返回，不能重新打开对话框。 相反，需要创建新实例。  
-  
- 如果对话框结果为`false`，该函数应适当结束处理。  
+> 之后<xref:System.Windows.Window.ShowDialog%2A>已返回，不能重新打开对话框。 相反，需要创建新实例。
+
+如果对话框结果为`false`，该函数应适当结束处理。  
   
 <a name="Creating_a_Modeless_Custom_Dialog_Box"></a>   
-### <a name="creating-a-modeless-custom-dialog-box"></a>创建无模式自定义对话框  
- 无模式对话框（如下图中所示的“查找”对话框）与模式对话框具有相同的基本外观。  
+### <a name="creating-a-modeless-custom-dialog-box"></a>创建自定义的无模式对话框
+
+无模式对话框（如下图中所示的“查找”对话框）与模式对话框具有相同的基本外观。  
+
+![显示查找对话框的屏幕截图。](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
+
+但行为稍有不同，如以下各节中所述。  
   
- ![显示查找对话框的屏幕截图。](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
+#### <a name="opening-a-modeless-dialog-box"></a>打开无模式对话框
+
+通过调用打开无模式对话框<xref:System.Windows.Window.Show%2A>方法。  
+
+[!code-xaml[XAML to define a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L21-L22)]  
+ 
+[!code-csharp[Opening a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,65-76,194-195)]
+[!code-vb[Openng a modeless dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,18-23,131,132)]  
+
+与不同<xref:System.Windows.Window.ShowDialog%2A>，<xref:System.Windows.Window.Show%2A>立即返回。 因此，调用窗口无法判断无模式对话框何时关闭，也就不知道何时检查对话框结果或从对话框获取数据进行进一步处理。 相反，对话框需要创建替代方法来将数据返回到调用窗口进行处理。  
   
- 但行为稍有不同，如以下各节中所述。  
+#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>处理从无模式对话框返回的数据  
+
+在此示例中，`FindDialogBox`可能会返回一个或多个查找到主窗口中，具体取决于要而无需任何特定频率搜索的文本的结果。 和模式对话框一样，无模式对话框也可以使用属性返回结果。 但拥有对话框的窗口需要了解何时检查那些属性。 实现此目的的一种方法是用对话框实现事件，只要找到文本就引发它。 `FindDialogBox` 实现`TextFoundEvent`出于此目的，这首先需要委托。  
+
+[!code-csharp[The TextFoundEventHandler delegate](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs)]
+[!code-vb[The TextFoundEventHandler delegate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb)]  
+
+使用`TextFoundEventHandler`委派，请`FindDialogBox`实现`TextFoundEvent`。
   
-#### <a name="opening-a-modeless-dialog-box"></a>打开无模式对话框  
- 通过调用打开无模式对话框<xref:System.Windows.Window.Show%2A>方法。  
+[!code-csharp[The TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-17,125-126)]
+[!code-vb[The TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-15,102-103)]
+
+因此，`Find`可以引发事件时找到搜索结果。  
   
- [!code-xaml[DialogBoxSample#OpenFindDialogMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#openfinddialogmarkup1)]  
-  
- [!code-csharp[DialogBoxSample#OpenFindDialogCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openfinddialogcodebehind1)]
- [!code-vb[DialogBoxSample#OpenFindDialogCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openfinddialogcodebehind1)]  
-[!code-csharp[DialogBoxSample#OpenFindDialogCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openfinddialogcodebehind2)]
-[!code-vb[DialogBoxSample#OpenFindDialogCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openfinddialogcodebehind2)]  
-[!code-csharp[DialogBoxSample#OpenFindDialogCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openfinddialogcodebehind3)]
-[!code-vb[DialogBoxSample#OpenFindDialogCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openfinddialogcodebehind3)]  
-  
- 与不同<xref:System.Windows.Window.ShowDialog%2A>，<xref:System.Windows.Window.Show%2A>立即返回。 因此，调用窗口无法判断无模式对话框何时关闭，也就不知道何时检查对话框结果或从对话框获取数据进行进一步处理。 相反，对话框需要创建替代方法来将数据返回到调用窗口进行处理。  
-  
-#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>处理无模式对话框返回的数据  
- 在此示例中，`FindDialogBox`可能会返回一个或多个查找到主窗口中，具体取决于要而无需任何特定频率搜索的文本的结果。 和模式对话框一样，无模式对话框也可以使用属性返回结果。 但拥有对话框的窗口需要了解何时检查那些属性。 实现此目的的一种方法是用对话框实现事件，只要找到文本就引发它。 `FindDialogBox` 实现`TextFoundEvent`出于此目的，这首先需要委托。  
-  
- [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
- [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  
-  
- 使用`TextFoundEventHandler`委派，请`FindDialogBox`实现`TextFoundEvent`。  
-  
- [!code-csharp[DialogBoxSample#TextFoundEventCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#textfoundeventcodebehind1)]
- [!code-vb[DialogBoxSample#TextFoundEventCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#textfoundeventcodebehind1)]  
-[!code-csharp[DialogBoxSample#TextFoundEventCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#textfoundeventcodebehind2)]
-[!code-vb[DialogBoxSample#TextFoundEventCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#textfoundeventcodebehind2)]  
-  
- 因此，`Find`可以引发事件时找到搜索结果。  
-  
- [!code-csharp[DialogBoxSample#TextFoundEventRaiseCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#textfoundeventraisecodebehind1)]
- [!code-vb[DialogBoxSample#TextFoundEventRaiseCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#textfoundeventraisecodebehind1)]  
-[!code-csharp[DialogBoxSample#TextFoundEventRaiseCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#textfoundeventraisecodebehind2)]
-[!code-vb[DialogBoxSample#TextFoundEventRaiseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#textfoundeventraisecodebehind2)]  
-[!code-csharp[DialogBoxSample#TextFoundEventRaiseCODEBEHIND3](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#textfoundeventraisecodebehind3)]
-[!code-vb[DialogBoxSample#TextFoundEventRaiseCODEBEHIND3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#textfoundeventraisecodebehind3)]  
-[!code-csharp[DialogBoxSample#TextFoundEventRaiseCODEBEHIND4](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#textfoundeventraisecodebehind4)]
-[!code-vb[DialogBoxSample#TextFoundEventRaiseCODEBEHIND4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#textfoundeventraisecodebehind4)]  
-[!code-csharp[DialogBoxSample#TextFoundEventRaiseCODEBEHIND5](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#textfoundeventraisecodebehind5)]
-[!code-vb[DialogBoxSample#TextFoundEventRaiseCODEBEHIND5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#textfoundeventraisecodebehind5)]  
-  
- 所有者窗口则需要注册和处理此事件。  
-  
- [!code-csharp[DialogBoxSample#OpenFindDialogResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openfinddialogresultcodebehind1)]
- [!code-vb[DialogBoxSample#OpenFindDialogResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openfinddialogresultcodebehind1)]  
-[!code-csharp[DialogBoxSample#OpenFindDialogResultCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openfinddialogresultcodebehind2)]
-[!code-vb[DialogBoxSample#OpenFindDialogResultCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openfinddialogresultcodebehind2)]  
-  
-#### <a name="closing-a-modeless-dialog-box"></a>关闭无模式对话框  
- 因为<xref:System.Windows.Window.DialogResult%2A>不需要为其设置，可以使用系统关闭无模式对话框提供机制，包括以下：  
+[!code-csharp[Raising the TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,50-52,91-94,124-127)]
+[!code-vb[Raising the TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,15,60-64,102-103)]  
+
+所有者窗口则需要注册和处理此事件。
+
+[!code-csharp[Registering and handling the event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,184-195)]
+[!code-vb[Registering and handling the event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,126-132)]  
+
+#### <a name="closing-a-modeless-dialog-box"></a>关闭无模式对话框
+
+因为<xref:System.Windows.Window.DialogResult%2A>不需要为其设置，可以使用系统关闭无模式对话框提供机制，包括以下：  
   
 - 单击**关闭**标题栏中的按钮。  
   
@@ -335,15 +299,12 @@ ms.locfileid: "64614568"
   
 - 选择**关闭**从**系统**菜单。  
   
- 或者，你的代码可以调用<xref:System.Windows.Window.Close%2A>时**关闭**单击按钮。  
-  
- [!code-csharp[DialogBoxSample#FindDialogCloseCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#finddialogclosecodebehind1)]
- [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind1)]  
-[!code-csharp[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#finddialogclosecodebehind2)]
-[!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
-  
+或者，你的代码可以调用<xref:System.Windows.Window.Close%2A>时**关闭**单击按钮。  
+
+[!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
+[!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
+
 ## <a name="see-also"></a>请参阅
 
 - [Popup 概述](../controls/popup-overview.md)
 - [对话框示例](https://go.microsoft.com/fwlink/?LinkID=159984)
-- [ColorPicker 自定义控件示例](https://go.microsoft.com/fwlink/?LinkID=159977)
