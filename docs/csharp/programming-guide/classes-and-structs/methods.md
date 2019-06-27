@@ -20,7 +20,7 @@ ms.locfileid: "57201154"
 >  本主题讨论命名的方法。 有关匿名函数的信息，请参阅[匿名函数](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
   
 ## <a name="method-signatures"></a>方法签名  
- 通过指定访问级别（如 [或](../../../csharp/language-reference/keywords/class.md) ）、可选修饰符（如 [或](../../../csharp/language-reference/keywords/struct.md) ）、返回值、方法的名称以及任何方法参数，在 `public` 类 `private`或 `abstract` 结构 `sealed`中声明方法。 这些部件一起构成方法的签名。  
+ 通过指定访问级别（如 `public` 或 `private` ）、可选修饰符（如 `abstract` 或 `sealed` ）、返回值、方法的名称以及任何方法参数，在[类](../../../csharp/language-reference/keywords/class.md) 或[结构](../../../csharp/language-reference/keywords/struct.md)中声明方法。 这些部件一起构成方法的签名。  
   
 > [!NOTE]
 >  出于方法重载的目的，方法的返回类型不是方法签名的一部分。 但是在确定委托和它所指向的方法之间的兼容性时，它是方法签名的一部分。  
