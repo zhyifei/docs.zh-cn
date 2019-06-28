@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b7284975d717bdecc4127e09fe04163e8fd0d243
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378555"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424755"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -563,7 +563,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 ```
 
 ```vb
-Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
    Public ReadOnly Property TargetObject As Object
    Public ReadOnly Property TargetProperty As Object
    Public ReadOnly Property ResourceDictionary As ResourceDictionary
@@ -1747,7 +1747,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
 - **对代码页编码的支持**
 
-     .NET Core 主要支持 Unicode 编码，在代码页编码方面默认提供一定程度的支持。 可以使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法注册代码页编码，从而支持 .NET Framework 可用但 .NET Core 不支持的代码页编码。 有关更多信息，请参见<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
+     .NET Core 主要支持 Unicode 编码，在代码页编码方面默认提供一定程度的支持。 可以使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法注册代码页编码，从而支持 .NET Framework 可用但 .NET Core 不支持的代码页编码。 有关详细信息，请参阅 <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
 
 - **.NET Native**
 
@@ -1832,7 +1832,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
     ```vb
     <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
-    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+    public Function PromoteAndEnlistDurable(resourceManagerIdentifier As Guid,
                                             promotableNotification As IPromotableSinglePhaseNotification,
                                             enlistmentNotification As ISinglePhaseNotification,
                                             enlistmentOptions As EnlistmentOptions) As Enlistment
