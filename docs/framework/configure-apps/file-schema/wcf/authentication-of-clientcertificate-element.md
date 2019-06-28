@@ -2,12 +2,12 @@
 title: <authentication> <clientCertificate>元素
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701328"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423243"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<身份验证 > 的\<clientCertificate > 元素
 指定服务所使用的客户端证书的身份验证行为。  
@@ -41,31 +41,31 @@ ms.locfileid: "61701328"
 |customCertificateValidatorType|可选的字符串。 一个用于验证自定义类型的类型和程序集。 当 `certificateValidationMode` 设置为 `Custom` 时，必须设置此属性。|  
 |certificateValidationMode|可选的枚举。 指定用来验证凭据的其中一种模式。 此特性的类型为 <xref:System.ServiceModel.Security.X509CertificateValidationMode>。 如果设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>，则还必须提供 `customCertificateValidator`。 默认值为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>。|  
 |includeWindowsGroups|可选的布尔值。 指定 Windows 组是否包含在安全上下文中。 将此属性设置为 `true` 会影响性能，因为这会导致完全组扩展。 如果不需要建立用户所属组的列表，请将此属性设置为 `false`。|  
-|mapClientCertificateToWindowsAcccount|布尔值。 指定是否可以使用证书将客户端映射到 Windows 标识。 为此，必须启用 Active Directory。|  
+|mapClientCertificateToWindowsAccount|布尔值。 指定是否可以使用证书将客户端映射到 Windows 标识。 为此，必须启用 Active Directory。|  
 |revocationMode|可选的枚举。 用于检查吊销证书列表 (RCL) 的一种模式。 默认值为 `Online`。 使用 HTTP 传输安全性时，将忽略此值。|  
 |trustedStoreLocation|可选的枚举。 两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 对执行验证**受信任的人员**将存储在指定的存储位置。 默认值为 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |String|指定类型名称和程序集以及用于查找类型的其他数据。|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |枚举|以下值之一：None、 PeerTrust、 ChainTrust、 PeerOrChainTrust、 自定义。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |枚举|以下值之一：NoCheck、 Online 和 Offline。 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |枚举|下列值之一：`LocalMachine` 或 `CurrentUser`。 默认值为 `CurrentUser`。 如果客户端应用程序在系统帐户下运行，则证书通常位于 `LocalMachine`。 如果客户端应用程序在用户帐户下运行，则证书通常位于 `CurrentUser`。|  
   

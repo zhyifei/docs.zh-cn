@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce001ed25d7704301d7f809887a445e3492e93fc
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866846"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422538"
 ---
 # <a name="library-element-net-native"></a>\<库 > 元素 (.NET Native)
 定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。  
@@ -34,9 +34,9 @@ ms.locfileid: "61866846"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|assembly_name|程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。 参阅“备注”部分，了解支持对来自程序集的元数据有条件包含的 assembly_name 的一种特殊形式。|  
+|assembly_name |程序集的简单名称，不要包含文件扩展名。 此特性对应 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。 例如，一个名为 Extensions.dll 的程序集的名称为“Extensions”。 参阅“备注”部分，了解支持对来自程序集的元数据有条件包含的 assembly_name  的一种特殊形式。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -58,7 +58,7 @@ ms.locfileid: "61866846"
   
  `<Library>` 元素充当容器，用来定义其元数据在运行时间需要存在的程序元素；此元素不表示策略。 在编译时间，编译器工具仅搜索由 `<Library>` 元素指定的库，以查找其子元素识别出的程序元素。 相比而言，编译器工具搜索 .NET Framework 核心库等所有库，以查找由 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 元素识别出的子元素。  
   
- `<Library>` 指令可以有条件地使用。 如果的名称`<Library>`元素开始和结束的星号 (\*)，则`<Library>`指令仅在星号之间指定的程序集引用的应用程序有影响。 例如，以下运行时指令仅在 Utillities.dll 程序库被应用引用时才适用。  
+ `<Library>` 指令可以有条件地使用。 如果的名称`<Library>`元素开始和结束的星号 (\*)，则`<Library>`指令仅在星号之间指定的程序集引用的应用程序有影响。 例如，以下运行时指令仅适用于 Utilities.dll 程序集引用的应用程序。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

@@ -2,12 +2,12 @@
 title: 创建长时间运行的工作流服务
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1ca0f2ed4c2ab900191165d100848811e5436c3c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063803"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425408"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>创建长时间运行的工作流服务
 本主题描述如何创建长时间运行的工作流服务。 长时间运行的工作流服务可能会运行很长一段时间。 在某一时刻，工作流可能会转入空闲状态，等待一些附加信息。 当这种情况发生时，工作流将保存到 SQL 数据库并从内存中删除。 当附加信息变得可用时，工作流实例将重新加载回内存，继续执行。  在此方案中，您将实现一个非常简化的订单系统。  客户端向工作流服务发送初始消息以启动订单。 此服务将订单 ID 返回给客户端。 此时，工作流服务要等待来自客户端的另一条消息，它转入空闲状态并保存到 SQL Server 数据库。  当客户端发送下一条消息订购项目时，工作流服务将重新加载回内存，完成处理此订单。 在代码示例中它将返回一个字符串，指示项目已添加到订单中。 代码示例并不是技术的现实应用，而是作为一个简单的示例来说明长时间运行的工作流服务。 本主题假定你知道如何创建 Visual Studio 2012 项目和解决方案。
@@ -91,7 +91,7 @@ ms.locfileid: "65063803"
 
          这将创建一个新的订单 ID，并将该值放在 orderId 变量中。
 
-    6. 选择**replytostartorder**活动。 在属性窗口中单击省略号按钮**相关初始值设定项**。 选择**添加初始值设定项**链接，输入`orderIdHandle`在初始值设定项文本框中，选择查询相关初始值设定项为相关类型，然后选择 p_orderId XPATH 查询下拉列表框的。 这些设置如下图所示。 单击 **“确定”**。  这将初始化客户端与此工作流服务实例之间的相关性。 当接收到包含此订单 ID 的消息时，将该消息路由至此工作流服务实例。
+    6. 选择**replytostartorder**活动。 在属性窗口中单击省略号按钮**相关初始值设定项**。 选择**添加初始值设定项**链接，输入`orderIdHandle`在初始值设定项文本框中，选择查询相关初始值设定项为相关类型，然后选择 p_orderId XPATH 查询下拉列表框的。 这些设置如下图所示。 单击 **“确定”** 。  这将初始化客户端与此工作流服务实例之间的相关性。 当接收到包含此订单 ID 的消息时，将该消息路由至此工作流服务实例。
 
          ![添加相关初始值设定项](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "添加相关初始值设定项。")
 

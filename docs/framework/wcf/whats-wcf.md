@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a7db79185d4445c68adda214d10be6d31f6ed9e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402432"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425111"
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 Windows Communication Foundation (WCF) 是一个框架，用于构建面向服务的应用程序。 使用 WCF，您可以发送数据作为异步消息从一个服务终结点到另一个。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：
@@ -72,7 +72,7 @@ WCF 包含以下功能集。 有关详细信息，请参阅[WCF 功能详细信�
 
 - **事务**
 
-     WCF 还支持使用三个事务模型之一的事务：Ws-atomicttransactions、 中的 Api<xref:System.Transactions>命名空间，以及 Microsoft 分布式事务处理协调器。 有关事务的详细信息在 WCF 中的支持，请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。
+     WCF 还支持使用三个事务模型之一的事务：Ws-atomictransactions 中的 Api<xref:System.Transactions>命名空间，以及 Microsoft 分布式事务处理协调器。 有关事务的详细信息在 WCF 中的支持，请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。
 
 - **AJAX 和 REST 支持**
 

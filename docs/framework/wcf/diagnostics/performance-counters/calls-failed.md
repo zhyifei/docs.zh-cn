@@ -2,18 +2,18 @@
 title: Calls Failed（失败的调用次数）
 ms.date: 03/30/2017
 ms.assetid: 52afeff8-333c-44a5-96ce-1f3c418523fc
-ms.openlocfilehash: e844f18b96a28c807a6f10195c9ab20780f23306
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8646adf08e2e6141c6117da7129f348c92105a7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797405"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422142"
 ---
 # <a name="calls-failed"></a>Calls Failed（失败的调用次数）
 计数器名称：Calls Failed（失败的调用次数）  
   
 ## <a name="description"></a>描述  
- 此操作中出现未处理异常的调用数量。 该操作中每出现一个未处理的异常，此计数器就会增加。  
+ 此操作中出现未处理异常的调用数量。 此计数器在每次在此操作中出现未处理异常时递增。  
   
 ## <a name="see-also"></a>请参阅
 

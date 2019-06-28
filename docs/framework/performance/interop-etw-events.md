@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616410"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422413"
 ---
 # <a name="interop-etw-events"></a>互操作 ETW 事件
 <a name="top"></a> 互操作事件捕获有关 Microsoft 中间语言 (MSIL) 存根生成和缓存的信息。  
@@ -43,7 +43,7 @@ ms.locfileid: "64616410"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|模块标识符。|  
 |StubMethodID|win:UInt64|存根方法标识符。|  
-|StubFlags|win:UInt64|存根标志：<br /><br /> 0x1 - 反向互操作。<br /><br /> 0x2 - COM 互操作。<br /><br /> 0x4 - 由 NGen.exe 生成的存根。<br /><br /> 0x8 - 委托。<br /><br /> 0x10 - 可变参数。<br /><br /> 0x20 - 非托管被调用方。|  
+|StubFlags|win:UInt64|存根标志：<br /><br /> 0x1 - 反向互操作。<br /><br /> 0x2 - COM 互操作。<br /><br /> 0x4 - 由 NGen.exe 生成的存根。<br /><br /> 0x8 - 委托。<br /><br /> 0x10-可变自变量。<br /><br /> 0x20 - 非托管被调用方。|  
 |ManagedInteropMethodToken|win:UInt32|托管互操作方法的标记。|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|托管互操作方法的命名空间。|  
 |ManagedInteropMethodName|win:UnicodeString|托管互操作方法的名称。|  

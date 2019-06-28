@@ -2,12 +2,12 @@
 title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664787"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425424"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何控制通过 Windows Communication Foundation (WCF) 服务的多个安全相关的功能：  
@@ -37,7 +37,7 @@ ms.locfileid: "64664787"
  此示例演示如何在跟踪和消息日志中控制已知个人身份信息 (PII) 日志记录，如用户名和密码。 默认情况下禁用已知 PII 的日志记录，但在特定情况下，PII 日志记录可能会对应用程序的调试大有帮助。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此外，此示例还使用跟踪和消息日志记录。 有关详细信息，请参阅[跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)示例。  
   
 ## <a name="encrypting-configuration-file-elements"></a>对配置文件元素进行加密  
- 出于安全目的，在以 Web 为宿主的共享环境中，可能需要对包含敏感信息的特定配置元素（如数据库连接字符串）进行加密。 可以使用 .NET Framework 文件夹（例如 %WINDIR%\Micrsoft.NET\Framework\v4.0.20728）中的 aspnet_regiis.exe 工具对配置元素进行加密。  
+ 出于安全目的，在以 Web 为宿主的共享环境中，可能需要对包含敏感信息的特定配置元素（如数据库连接字符串）进行加密。 使用.NET Framework 文件夹，如 %windir%\microsoft.net\framework\v4.0.20728 中的 aspnet_regiis.exe 工具配置元素进行加密。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>对示例的 Web.config 中的 appSettings 节中的值进行加密  
   

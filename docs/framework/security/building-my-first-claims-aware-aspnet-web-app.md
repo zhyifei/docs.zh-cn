@@ -3,12 +3,12 @@ title: 生成我的第一个声明感知 ASP.NET Web 应用程序
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: ae313cc16532cf6fc38d28161d4d5a2cf630bbc1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650474"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422393"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>生成我的第一个声明感知 ASP.NET Web 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -27,7 +27,7 @@ ms.locfileid: "64650474"
   
 3. 使用请求中的 STS 颁发的令牌将用户从 STS 重定向到声明感知应用程序。  
   
-4. 声明感知应用程序将配置为信任此 STS 及其颁发的令牌。 声明感知应用程序使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincpal）来满足应用程序的需要，如对其实现授权。  
+4. 声明感知应用程序将配置为信任此 STS 及其颁发的令牌。 声明感知应用程序使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincipal）来满足应用程序的需要，如对其实现授权  。  
   
  从 .NET 4.5 开始，WIF 便已成为 .NET Framework 包的一部分。 通过使 WIF 类直接在框架中可用，可以在 .NET 中更深度地集成基于声明的标识，从而更轻松地使用声明。 如果使用 WIF 4.5，则无需安装任何带外组件即可开始开发声明感知 Web 应用程序。 WIF 类现在分布在各种程序集中，主要为 System.Security.Claims、System.IdentityModel 和 System.IdentityModel.Services。  
   

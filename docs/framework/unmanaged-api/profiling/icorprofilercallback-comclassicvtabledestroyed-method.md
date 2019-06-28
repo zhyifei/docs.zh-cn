@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63dc9ee81c98a23f01948a142018369eca7210b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ace1ecaebe076be3576304ce0a3cc72e119c96d2
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598085"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421896"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 方法
 通知探查器 COM 互操作 vtable 被销毁。  
@@ -40,7 +40,7 @@ HRESULT COMClassicVTableDestroyed(
 ```  
   
 ## <a name="parameters"></a>参数  
- `wrappedClasId`  
+ `wrappedClassId`  
  [in]为其创建此 vtable 类的 ID。  
   
  `implementedIID`  
@@ -61,7 +61,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 

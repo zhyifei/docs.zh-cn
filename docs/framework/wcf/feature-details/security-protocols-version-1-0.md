@@ -2,12 +2,12 @@
 title: 安全协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 8114183109befcb77c3bf2b35fe246118da5afde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586877"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425100"
 ---
 # <a name="security-protocols-version-10"></a>安全协议版本 1.0
 Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。 本部分介绍 Windows Communication Foundation (WCF) 1.0 版细节 (在中实现<xref:System.ServiceModel.Channels.SecurityBindingElement>) 以下 Web 服务安全协议。  
@@ -129,7 +129,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
  WCF 支持针对 SAML v1.1 令牌的 WSS SAML Token profile 1.0 和 1.1 版。 可以实现其他版本的 SAML 令牌格式。  
   
 ### <a name="15-security-context-token"></a>1.5 安全上下文令牌  
- WCF 支持安全上下文令牌 (SCT) Ws-securecoversation 中引入。 SCT 用于表示在 SecureConversation 中建立的安全上下文以及下面所述的二进制协商协议 TLS 和 SSPI。  
+ WCF 支持安全上下文令牌 (SCT) 在 Ws-secureconversation 中引入的。 SCT 用于表示在 SecureConversation 中建立的安全上下文以及下面所述的二进制协商协议 TLS 和 SSPI。  
   
 ## <a name="2-common-message-security-parameters"></a>2.常用消息安全参数  
   

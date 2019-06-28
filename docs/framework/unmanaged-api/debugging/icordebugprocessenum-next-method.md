@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f32b554de191ff84e7c319e2a00e3cd0610a9f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782989"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422202"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next 方法
 从当前位置开始枚举中获取指定的数量的 ICorDebugProcess 实例。  
@@ -42,7 +42,7 @@ HRESULT Next (
  `celt`  
  [in]数`ICorDebugProcess`要检索的实例。  
   
- `processess`  
+ `processes`  
  [out]一个指针，其中每个指向数组`ICorDebugProcess`表示进程的对象。  
   
  `pceltFetched`  
@@ -55,4 +55,4 @@ HRESULT Next (
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication> 元素
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764083"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423127"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > 元素
 指定用于对等消息发送方的身份验证选项。  
@@ -38,32 +38,32 @@ ms.locfileid: "61764083"
   
 |特性|描述|  
 |---------------|-----------------|  
-|customCertificateValidatorType|一个用于验证自定义类型的类型和程序集。 当 `certificateValidationMode` 设置为 `Custom` 时，必须设置此属性。|  
-|certifcateValidationMode|指定用来验证凭据的三种模式之一。 如果设置为 `Custom`，则还必须提供 `customCertificateValidator`。|  
-|revocationMode|用于检查吊销证书列表 (CRL) 的一种模式。|  
-|trustedStoreLocation|两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 对执行验证**受信任的人员**将存储在指定的存储位置。|  
+|`customCertificateValidatorType`|一个用于验证自定义类型的类型和程序集。 当 `certificateValidationMode` 设置为 `Custom` 时，必须设置此属性。|  
+|`certificateValidationMode`|指定用来验证凭据的三种模式之一。 如果设置为 `Custom`，则还必须提供 `customCertificateValidator`。|  
+|`revocationMode`|用于检查吊销证书列表 (CRL) 的一种模式。|  
+|`trustedStoreLocation`|两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 对执行验证**受信任的人员**将存储在指定的存储位置。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |String|可选。 指定类型名称和程序集以及用于查找类型的其他数据。 至少需要命名空间和类型名称。 可选信息包括：程序集名称、版本号、区域性和公钥标记。|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |枚举|可选。 下列值之一：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust` 和 `Custom`。 默认值为 `ChainTrust`。 默认值为 `ChainTrust`。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |枚举|下列值之一：`NoCheck`、`Online` 和 `Offline`。 默认值为 `Online`。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |枚举|下列值之一：`LocalMachine` 或 `CurrentUser`。 默认值为 `CurrentUser`。 如果客户端应用程序在系统帐户下运行，则证书通常位于 `LocalMachine`。 如果客户端应用程序在用户帐户下运行，则证书通常位于 `CurrentUser`。 默认值为 `CurrentUser`。|  
   

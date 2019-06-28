@@ -2,12 +2,12 @@
 title: 路由简介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912493"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425369"
 ---
 # <a name="routing-introduction"></a>路由简介
 路由服务提供的泛型可插入 SOAP 中介能够根据消息内容路由消息。 使用路由服务，您可以创建复杂的路由逻辑，以便实现服务聚合、服务版本管理、优先级路由和多播路由等方案。 路由服务还提供了错误处理功能，使您可以设置备份终结点的列表。如果将消息发送到主目标终结点时失败，则会发送到这些备份终结点。  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>动态配置  
  当添加其他客户端终结点或需要修改用于路由消息的筛选器时，您必须采用某种方法在运行时动态更新配置，以免中断当前正在通过路由服务接收消息的终结点的服务。 修改配置文件或宿主应用程序的代码不一定能够始终满足需求，这是因为两种方法都需要回收应用程序，这可能导致丢失当前正在传输的任何消息，并可能在等待服务重新启动时发生停机。  
   
- 您只能修改**RoutingConfiguration**以编程方式。 虽然最初可以使用配置文件配置服务，您只能修改在运行时配置通过构造一个新**RoutingConfigution**并将其作为参数传递<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>方法公开的<xref:System.ServiceModel.Routing.RoutingExtension>服务扩展。 当前在传输过程中的任何消息将继续使用以前的配置，同时在调用后收到的消息路由**ApplyConfiguration**使用新配置。 下面的示例演示如何创建路由服务的实例并随后修改配置。  
+ 您只能修改**RoutingConfiguration**以编程方式。 虽然最初可以使用配置文件配置服务，您只能修改在运行时配置通过构造一个新**RoutingConfiguration**并将其作为参数传递<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>方法公开的<xref:System.ServiceModel.Routing.RoutingExtension>服务扩展。 当前在传输过程中的任何消息将继续使用以前的配置，同时在调用后收到的消息路由**ApplyConfiguration**使用新配置。 下面的示例演示如何创建路由服务的实例并随后修改配置。  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  

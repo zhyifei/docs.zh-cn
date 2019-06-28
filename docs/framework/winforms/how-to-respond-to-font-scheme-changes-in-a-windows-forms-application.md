@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801850"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425336"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>如何：在 Windows 窗体应用程序中响应字体方案更改
 在 Windows 操作系统，用户可以更改以使默认字体显示较大或较小的系统范围的字体设置。 更改这些字体设置有视觉障碍并需要更大的类型无法阅读他们的屏幕上文本的用户至关重要。 您可以调整 Windows 窗体应用程序以通过增加或减少大小在窗体和包含的所有文本的字体方案更改时对这些更改做出反应。 如果你想在窗体以动态适应中字体大小的更改，您可以将代码添加到你的窗体。  
@@ -62,7 +62,7 @@ ms.locfileid: "61801850"
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- 在此代码示例 constructer 包含对的调用`InitializeComponent`，这是定义当在 Visual Studio 中创建一个新的 Windows 窗体项目。 如果要生成命令行上的应用程序中删除这行代码。  
+ 此代码示例中的构造函数包含对的调用`InitializeComponent`，这是定义当在 Visual Studio 中创建一个新的 Windows 窗体项目。 如果要生成命令行上的应用程序中删除这行代码。  
   
 ## <a name="see-also"></a>请参阅
 

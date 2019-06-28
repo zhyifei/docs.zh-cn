@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 63d7fed125396e809eb2cba89663db73a56f7cec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc71d077e219481281be8f8bf22352bd19baebac
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753032"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425473"
 ---
 # <a name="service-transaction-behavior"></a>服务事务行为
 
@@ -163,7 +163,7 @@ public class CalculatorService : ICalculator
         return runningTotal;
     }
 
-    // Logging method ommitted for brevity
+    // Logging method omitted for brevity
 }
 ```
 
@@ -229,7 +229,7 @@ Creating new service instance...
 
     5. 单击**是**若要重新启动 MS DTC 服务，然后单击**确定**。
 
-    6. 单击“确定”关闭对话框。
+    6. 单击“确定”  关闭对话框。
 
 2. 在服务计算机和客户端计算机上，配置 Windows 防火墙以便在例外应用程序列表中包括 Microsoft 分布式事务处理协调器 (MSDTC)：
 
@@ -255,7 +255,7 @@ Creating new service instance...
 
     5. 单击**是**若要重新启动 MS DTC 服务，然后单击**确定**。
 
-    6. 单击“确定”关闭对话框。
+    6. 单击“确定”  关闭对话框。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：
