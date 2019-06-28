@@ -324,7 +324,7 @@
                       href: impersonating-the-client.md
             - name: WCF 服务的简化配置
               href: simplified-configuration-for-wcf-services.md
-            - name: 标准终结点的使用情况
+            - name: 标准终结点的用法
               href: usage-of-standard-endpoints.md
             - name: 扩展保护策略
               href: extended-protection-policy.md
