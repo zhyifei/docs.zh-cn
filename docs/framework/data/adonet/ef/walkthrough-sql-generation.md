@@ -2,12 +2,12 @@
 title: 演练：SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690341"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422765"
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
 
@@ -128,7 +128,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-在 IsParentAJoin 堆栈上推送下一个“false”，并处理联接条件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var （extenent1） 会解析为\<symbol_Extent1 > 符号表中查找之后。 由于该实例解析为一个简单符号，Var(Extent1) 进行处理后。类别 Id、 与 SqlBuilder \<symbol1 >。"返回"类别 id。 比较的另一侧也采用类似方式处理，将访问联接条件的结果追加到 SelectStatement1 的 FROM 子句，并从 IsParentAJoin 堆栈中弹出“false”值。
+在 IsParentAJoin 堆栈上推送下一个“false”，并处理联接条件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(Extent1) 被解析为\<symbol_Extent1 > 符号表中查找之后。 由于该实例解析为一个简单符号，Var(Extent1) 进行处理后。类别 Id、 与 SqlBuilder \<symbol1 >。"返回"类别 id。 比较的另一侧也采用类似方式处理，将访问联接条件的结果追加到 SelectStatement1 的 FROM 子句，并从 IsParentAJoin 堆栈中弹出“false”值。
 
 就这样完成了对 Join1 的全部处理，并从符号表中弹出一个范围。
 

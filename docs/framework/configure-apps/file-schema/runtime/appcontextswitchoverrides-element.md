@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 39060d503a006ab292818b58a6fa71f44dee68a0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307094"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423335"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -99,7 +99,7 @@ ms.locfileid: "67307094"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控件是否的值[CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)属性是[IntPtr](xref:System.IntPtr)表示一个窗口的内存位置处理，或者是否窗口句柄 (HWND)。 有关详细信息，请参阅[缓解：Cspparameters.parentwindowhandle 分配 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|控制是否使用托管加密类在 FIPS 模式，则会引发<xref:System.Security.Cryptography.CryptographicException>(`true`) 或依赖于系统库的实现 (`false`)。|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedCMS 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|控件是否<xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype>方法可正确处理由操作系统支持的所有已命名的曲线 (`false`) 或恢复到旧行为。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|控件是否<xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithType>方法可正确处理由操作系统支持的所有已命名的曲线 (`false`) 或恢复到旧行为。|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|确定是否某些 SignedXML 操作的默认值为 SHA1 或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|确定是否`TransportWithMessageCredential`安全模式允许带未签名的消息"to"标头。 这是选择的开关。 有关详细信息，请参阅[.NET Framework 4.6.1 中的运行时更改](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|控件是否<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>构造函数将引发<xref:System.ArgumentException>的元素之一是如果`null`。|.NET Framework 4.7.1| 
@@ -118,7 +118,7 @@ ms.locfileid: "67307094"
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |确定是否 Windows Presentation Foundation 应用旧算法 (`true`) 或使用新的算法 (`false`) 中分配到空间\*的列。 有关详细信息，请参阅[缓解：网格控件的空间分配到星型列](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)。 |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|控件是否选择器或选项卡控件始终引发所选内容之前更新其所选的值属性的值已更改事件。|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|确定是否可用于非装饰器基于所选内容呈现<xref:System.Windows.Controls.TextBox>并<xref:System.Windows.Controls.PasswordBox>控制来防止封闭的文本 (`false`)，或是否仅在装饰器层呈现文本 (`true`)。|.NET Framework 4.7.2|
-|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|控制是否错误地使用自定义 IList 索引器 (`false`) 或正确 (`true`) 由<xref:System.Windows.Data.Binding?displayProperty=nameWithtype>类。|.NET Framework 4.8|
+|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|控制是否错误地使用自定义 IList 索引器 (`false`) 或正确 (`true`) 由<xref:System.Windows.Data.Binding?displayProperty=nameWithType>类。|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|确定每个系统上是否发生 DPI 更改 (值为`false`) 或每个监视器基础 (值为`true`)。|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|控件是否改进中的控件的大小调整<xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType>WPF 中每个监视器感知模式下的运行时已禁用 (`true`) 或启用 (`false`)。|.NET Framework 4.8|
 |`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|确定是否需要特殊处理，开发人员<xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>存在控件文本时的操作。 `true` 若要处理<xref:System.Windows.Forms.DomainUpDown.UpButton>操作;`false`有关<xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>和<xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType>操作正确同步。|.NET Framework 4.7.2|

@@ -2,12 +2,12 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641169"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422721"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -83,9 +83,9 @@ ms.locfileid: "64641169"
  通过使用数据存储连接或提供程序清单标记，存储元数据加载程序 (StoreItemCollection) 可加载提供程序清单。  
   
 #### <a name="using-a-data-store-connection"></a>使用数据存储连接  
- 当数据存储连接可用时，调用 DbProvderServices.GetProviderManifestToken 以返回传递给 GetProviderManifest 方法的标记，GetProviderManifest 方法返回 DbProviderManifest。 此方法委托给提供程序的 GetDbProviderManifestToken 实现。  
+ 当数据存储连接可用时，调用<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>传递给将令牌返回<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>方法，它返回<xref:System.Data.Common.DbProviderManifest>。 此方法委托给提供程序实现`GetDbProviderManifestToken`。  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  

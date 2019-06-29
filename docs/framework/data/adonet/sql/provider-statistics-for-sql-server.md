@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645999"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422647"
 ---
 # <a name="provider-statistics-for-sql-server"></a>用于 SQL Server 的提供程序统计信息
 从 .NET Framework 2.0 版开始，适用于 SQL Server 的 .NET Framework 数据提供程序支持运行时统计信息。 必须在创建了有效的连接对象后将 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性设置为 `True`，以启用统计信息。 启用了统计信息之后，可以通过 <xref:System.Collections.IDictionary> 对象的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法检索 <xref:System.Data.SqlClient.SqlConnection> 引用，以将统计信息作为“实时快照”查看。 通过列表作为一组名称/值对字典条目进行枚举。 这些名称/值对不排序。 可以随时调用 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重置计数器。 如果尚未启用统计信息收集功能，则不会生成异常。 此外，如果调用 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 之前没有先调用 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，检索到的值是每个条目的初始值。 如果启用了统计信息，运行应用程序一段时间，然后禁用统计信息，检索到的值将反映在禁用统计信息之前收集的值。 所有统计信息值按照连接进行收集。  
@@ -31,7 +31,7 @@ ms.locfileid: "61645999"
 |`BytesSent`|返回在应用程序使用提供程序启动并启用了统计信息之后，在 TDS 数据包中发送到 SQL Server 的数据字节数。|  
 |`ConnectionTime`|连接在统计信息启用之后已打开的时间（单位为毫秒；如果在打开连接之前就启用了统计信息，则为总连接时间）。|  
 |`CursorOpens`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接打开游标的次数。<br /><br /> 注意，SELECT 语句返回的只读/只进结果不属于游标，所以不影响此计数器。|  
-|`ExecutionTime`|返回在启用统计信息之后提供程序用于处理的累计时间（以毫秒为单位），包括等待服务器答复所用的时间以及执行提供程序本身的代码所用的时间。<br /><br /> 包含计时代码的类如下：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 为了保持对性能要求很高的成员尽可能小，下列成员不计时：<br /><br /> SqlDataReader<br /><br /> this[] 运算符（所有重载）<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean <br /><br /> GetSqlByte <br /><br /> GetSqlDateTime <br /><br /> GetSqlDecimal <br /><br /> GetSqlDouble <br /><br /> GetSqlGuid <br /><br /> GetSqlInt16 <br /><br /> GetSqlInt32 <br /><br /> GetSqlInt64 <br /><br /> GetSqlMoney <br /><br /> GetSqlSingle <br /><br /> GetSqlString <br /><br /> GetString<br /><br /> IsDBNull|  
+|`ExecutionTime`|返回在启用统计信息之后提供程序用于处理的累计时间（以毫秒为单位），包括等待服务器答复所用的时间以及执行提供程序本身的代码所用的时间。<br /><br /> 包含计时代码的类如下：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 为了保持对性能要求很高的成员尽可能小，下列成员不计时：<br /><br /> SqlDataReader<br /><br /> this[] 运算符（所有重载）<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
 |`IduCount`|返回在应用程序使用提供程序启动并启用了统计信息之后，通过连接执行的 INSERT、DELETE 和 UPDATE 语句的总数。|  
 |`IduRows`|返回在应用程序使用提供程序启动并启用了统计信息之后，受到通过连接执行的 INSERT、DELETE 和 UPDATE 语句影响的行的总数。|  
 |`NetworkServerTime`|返回在应用程序使用提供程序启动并启用了统计信息之后，提供程序等待服务器答复所用的累计时间（以毫秒为单位）。|  
@@ -114,7 +114,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -192,7 +192,7 @@ namespace CS_Stats_Console_GetValue
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  
@@ -261,7 +261,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -330,7 +330,7 @@ namespace CS_Stats_Console_GetAll
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  

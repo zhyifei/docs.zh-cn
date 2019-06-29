@@ -2,12 +2,12 @@
 title: WCF 中的安全行为
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: dd59bc97c2f4e2516528a6cbdf40b4c44f4b41eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650240"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424680"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全行为
 在 Windows Communication Foundation (WCF) 行为修改运行时行为在服务级别或终结点级别。 (有关行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
@@ -114,7 +114,7 @@ ms.locfileid: "64650240"
  </endpointBehaviors>  
 ```  
   
-#### <a name="clientcertifictate-element"></a>\<clientCertifictate > 元素  
+#### <a name="clientcertificate-element"></a>\<clientCertificate > 元素  
  可以使用此元素设置用于对客户端进行身份验证的证书。 有关详细信息，请参阅[如何：指定客户端凭据值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 #### <a name="httpdigest"></a>\<httpDigest>  

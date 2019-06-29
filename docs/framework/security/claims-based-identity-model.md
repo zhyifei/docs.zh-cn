@@ -3,12 +3,12 @@ title: 基于声明的标识模型
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650462"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422409"
 ---
 # <a name="claims-based-identity-model"></a>基于声明的标识模型
 在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 一个声明可能是用户的名称，另一个可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  
@@ -58,7 +58,7 @@ ms.locfileid: "64650462"
  在生成依赖声明的应用程序时，您将生成依赖方 (RP) 应用程序。 RP 的同义词包括“声明感知应用程序”和“基于声明的应用程序”。 Web 应用程序和 Web 服务都可以成为 RP。 RP 应用程序使用 STS 颁发的令牌，并从令牌中提取声明以将其用于与标识相关的任务。 WIF 提供可帮助您生成 RP 应用程序的功能。  
   
 ### <a name="standards"></a>标准  
- 为了使所有这些功能能够进行互操作，上一个方案中使用了多个 WS-* 标准。 使用 WS-MetadataExchange 检索策略，并根据 WS-Policy 规范构造策略本身。 STS 公开了实现 WS-Trust 规范的终结点，此规范描述了如何请求和接收安全令牌。 现在，大多数 STS 都颁发使用安全断言标记语言 (SAML) 进行格式化的令牌。 SAML 是行业认可的 XML 词汇表，可用于以可互操作的方式表示声明。 或者，在多平台情况下，这将允许您在完全不同的平台上与 STS 进行通信并跨所有应用程序实现单一登录，不论平台如何。  
+ 为了使所有这些功能能够进行互操作，上一个方案中使用了多个 WS-* 标准。 使用 WS-MetadataExchange 检索策略，并根据 WS-Policy 规范构造策略本身。 STS 公开了实现 WS-Trust 规范的终结点，此规范描述了如何请求和接收安全令牌。 大多数 Sts 目前颁发格式使用安全断言标记语言 (SAML) 令牌。 SAML 是行业认可的 XML 词汇表，可用于以可互操作的方式表示声明。 或者，在多平台情况下，这将允许您在完全不同的平台上与 STS 进行通信并跨所有应用程序实现单一登录，不论平台如何。  
   
 ### <a name="browser-based-applications"></a>基于浏览器的应用程序  
  智能客户端不是可使用基于声明的标识模型的唯一对象。 基于浏览器的应用程序（也称为被动客户端）也可使用该模型。 以下方案描述了其工作原理。  
