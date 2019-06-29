@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775838"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422816"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows 窗体添加配置元素
 
@@ -43,7 +43,7 @@ ms.locfileid: "61775838"
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 指示是否在单个传递中缩放锚定的控件。 "true"，以禁用单个传递缩放;否则为 false。 请参阅中的"单传递缩放"一节[备注](#remarks)有关详细信息。 |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | 指示是否为高 dpi 应用程序。 将键设置为"PerMonitorV2"，以支持 Dpi 识别;否则，将其设置为"false"。 DPI 识别是一项选择加入的功能;若要充分利用 Windows 窗体的高 DPI 支持，应设置其值为"PerMonitorV2"。 请参阅[备注](#remarks)部分，了解详细信息。 |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.CheckedListBox>控件利用的缩放和布局在.NET Framework 4.7 中引入的改进。 "true"即可选择退出 caling 和布局方面的改进;否则为"false"。 |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.CheckedListBox>控件利用的缩放和布局在.NET Framework 4.7 中引入的改进。 "true"即可选择退出缩放和布局方面的改进;否则为"false"。 |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 指示是否<xref:System.Windows.Forms.DataGridView>控制在.NET Framework 4.7 中引入的缩放和布局改进。 "true"即可选择退出 DPI 识别;"false"否则为。 |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true"来选择不接收 DPI 缩放的更改，为与相关的消息"false"否则为。 请参阅[备注](#remarks)部分，了解详细信息。 |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | 指示是否自动调整 Windows 窗体应用程序大小由于 DPI 缩放的更改。 "true"以启用自动调整大小;否则为 false。 |

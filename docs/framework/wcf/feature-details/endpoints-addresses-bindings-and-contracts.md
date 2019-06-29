@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d224535bb266d0a3673359388c6c211103df7374
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665965"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424851"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、绑定和协定
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点向客户端访问 WCF 服务提供的功能。  
@@ -61,7 +61,7 @@ ms.locfileid: "64665965"
   
      有关定义协定的详细信息，请参阅[Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
-- 行为：终结点行为可用于自定义服务终结点的本地行为。 终结点行为通过参与构建 WCFruntime 的过程中实现此目的。 终结点行为的一个示例是 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 属性，可以利用该属性指定与 SOAP 或 Web 服务描述语言 (WSDL) 地址不同的侦听地址。 有关详细信息，请参阅[ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
+- 行为：终结点行为可用于自定义服务终结点的本地行为。 终结点行为通过参与构建 WCF 运行时的过程中实现此目的。 终结点行为的一个示例是 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 属性，可以利用该属性指定与 SOAP 或 Web 服务描述语言 (WSDL) 地址不同的侦听地址。 有关详细信息，请参阅[ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
   
 ## <a name="defining-endpoints"></a>定义终结点  
  可以通过使用代码以强制方式或通过配置以声明方式指定服务的终结点。 有关详细信息，请参阅[如何：在配置中创建的服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[如何：在代码中创建的服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
