@@ -1,13 +1,13 @@
 ---
 title: dotnet clean 命令
 description: dotnet clean 命令可清除当前目录。
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631825"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422021"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -24,7 +24,8 @@ ms.locfileid: "65631825"
 ## <a name="synopsis"></a>摘要
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -55,6 +56,10 @@ dotnet clean [-h|--help]
 * **`--interactive`**
 
   允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
+
+* **`--nologo`**
+
+  不显示启动版权标志或版权消息。 自 .NET Core 3.0 SDK 起可用。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

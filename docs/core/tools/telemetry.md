@@ -4,12 +4,12 @@ description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377505"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397759"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
 
@@ -102,7 +102,7 @@ ms.locfileid: "66377505"
 
 ## <a name="license"></a>许可证
 
-.NET Core 的 Microsoft 分发由 [Microsoft 软件许可条款：Mirosoft .NET 库](https://aka.ms/dotnet-core-eula)授权。 有关数据收集和处理的详细信息，请参阅标题为“数据”的部分。
+.NET Core 的 Microsoft 分发由 [Microsoft 软件许可条款：Microsoft .NET 库](https://aka.ms/dotnet-core-eula)许可。 有关数据收集和处理的详细信息，请参阅标题为“数据”的部分。
 
 [.NET NuGet 包](https://www.nuget.org/profiles/dotnetframework)使用相同许可证，但不启用遥测（见[范围](#scope)）。
 

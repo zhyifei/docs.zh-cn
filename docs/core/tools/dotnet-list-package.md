@@ -1,13 +1,13 @@
 ---
 title: dotnet list package 命令
 description: 使用“dotnet list package”命令，可以方便地列出项目或解决方案的包引用。
-ms.date: 04/09/2019
-ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 98cc456fff02364310cec98f0282700f7697f07e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631773"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421953"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -20,8 +20,8 @@ ms.locfileid: "65631773"
 ## <a name="synopsis"></a>摘要
 
 ```
-dotnet list [<PROJECT | SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
-   [--include-prerelease] [--include-transitive] [--outdated] [--source]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
+   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
@@ -39,7 +39,7 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-“已请求”列是指项目文件中指定的包版本，可以是一个范围。 “已解析”列列出了项目当前使用的版本，始终都是一个值。 紧靠名称旁边显示 `(A)` 的包表示从项目设置（`Sdk` 类型、`<TargetFramework>` 或 `<TargetFrameworks>` 属性等）推断出的[隐式包引用](csproj.md#implicit-package-references)。
+“已请求”  列是指项目文件中指定的包版本，可以是一个范围。 “已解析”  列列出了项目当前使用的版本，始终都是一个值。 紧靠名称旁边显示 `(A)` 的包表示从项目设置（`Sdk` 类型、`<TargetFramework>` 或 `<TargetFrameworks>` 属性等）推断出的[隐式包引用](csproj.md#implicit-package-references)。
 
 使用 `--outdated` 选项，可以确定项目中正在使用的包是否有更高版本。 默认情况下，`--outdated` 列出最新稳定包，除非已解析版本也是预发行版本。 若要在列出更高版本时包含预发行版本，还请指定 `--include-prerelease` 选项。 下面的示例展示了上一个示例中相同项目的 `dotnet list package --outdated --include-prerelease` 命令输出：
 
@@ -104,6 +104,10 @@ Project 'HelloPlugin' has the following package references
 * **`--include-transitive`**
 
   除了顶级包之外，还列出可传递包。 如果指定此选项，可以获取顶级包所依赖的包列表。
+
+* **`--interactive`**
+
+  允许命令停止并等待用户输入或操作。 例如，完成身份验证。 自 .NET Core 3.0 SDK 起可用。
 
 * **`--outdated`**
 

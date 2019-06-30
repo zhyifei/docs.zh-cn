@@ -3,12 +3,12 @@ title: 关于 .NET Core
 description: 了解 .NET Core。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003758"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421876"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -18,9 +18,9 @@ ms.locfileid: "66003758"
 - **跨体系结构保持一致：** 在多个体系结构（包括 x64、x86 和 ARM）上以相同的行为运行代码。
 - **命令行工具：** 包括可用于本地开发和持续集成方案中的易于使用的命令行工具。
 - **部署灵活：** 可以包含在应用或已安装的并行（用户或系统范围安装）中。 可搭配 [Docker 容器](docker/index.md)使用。
-- **兼容性：**.NET Core 通过 [.NET Standard](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
-- **开放源代码：**.NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
-- **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持。
+- **兼容性：** .NET Core 通过 [.NET Standard](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
+- **开放源代码：** .NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
+- **由 Microsoft 支持：** .NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持。
 
 ## <a name="languages"></a>语言
 
@@ -30,7 +30,7 @@ ms.locfileid: "66003758"
 
 .NET Core 公开了多种方案的 API，以下介绍了几种：
 
-- 基元类型，例如 [bool](../csharp/language-reference/keywords/bool.md) 和 [int](../csharp/language-reference/keywords/int.md)。
+- 基元类型，例如 [bool](../csharp/language-reference/keywords/bool.md) 和 [int](../csharp/language-reference/builtin-types/integral-numeric-types.md)。
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 实用程序类型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 和 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 数据类型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 和 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)。
