@@ -6,67 +6,67 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 457d74cda7587c81363c13f1e66ae095e2a145ff
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011835"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487344"
 ---
-# <a name="clickonce-deployment-for-windows-forms"></a><span data-ttu-id="09d22-102">Windows 窗体的 ClickOnce 部署</span><span class="sxs-lookup"><span data-stu-id="09d22-102">ClickOnce Deployment for Windows Forms</span></span>
-<span data-ttu-id="09d22-103">下面的主题描述了 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，这是一种用于将 Windows 窗体应用程序轻松部署到客户端计算机的技术。</span><span class="sxs-lookup"><span data-stu-id="09d22-103">The following topics describe [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], a technology used for easily deploying Windows Forms applications to client computers.</span></span>  
+# <a name="clickonce-deployment-for-windows-forms"></a><span data-ttu-id="6c2fc-102">Windows 窗体的 ClickOnce 部署</span><span class="sxs-lookup"><span data-stu-id="6c2fc-102">ClickOnce Deployment for Windows Forms</span></span>
+<span data-ttu-id="6c2fc-103">以下主题介绍 ClickOnce，用于轻松地部署到客户端计算机的 Windows 窗体应用程序使用一项技术。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-103">The following topics describe ClickOnce, a technology used for easily deploying Windows Forms applications to client computers.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="09d22-104">相关章节</span><span class="sxs-lookup"><span data-stu-id="09d22-104">Related Sections</span></span>  
- [<span data-ttu-id="09d22-105">选择 ClickOnce 部署策略</span><span class="sxs-lookup"><span data-stu-id="09d22-105">Choosing a ClickOnce Deployment Strategy</span></span>](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
- <span data-ttu-id="09d22-106">演示用于部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序的若干选项。</span><span class="sxs-lookup"><span data-stu-id="09d22-106">Presents several options for deploying [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="6c2fc-104">相关章节</span><span class="sxs-lookup"><span data-stu-id="6c2fc-104">Related Sections</span></span>  
+ [<span data-ttu-id="6c2fc-105">选择 ClickOnce 部署策略</span><span class="sxs-lookup"><span data-stu-id="6c2fc-105">Choosing a ClickOnce Deployment Strategy</span></span>](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
+ <span data-ttu-id="6c2fc-106">提供了几个选项用于部署 ClickOnce 应用程序。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-106">Presents several options for deploying ClickOnce applications.</span></span>  
   
- [<span data-ttu-id="09d22-107">选择 ClickOnce 更新策略</span><span class="sxs-lookup"><span data-stu-id="09d22-107">Choosing a ClickOnce Update Strategy</span></span>](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
- <span data-ttu-id="09d22-108">演示用于更新 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序的若干选项。</span><span class="sxs-lookup"><span data-stu-id="09d22-108">Presents several options for updating [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications.</span></span>  
+ [<span data-ttu-id="6c2fc-107">选择 ClickOnce 更新策略</span><span class="sxs-lookup"><span data-stu-id="6c2fc-107">Choosing a ClickOnce Update Strategy</span></span>](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
+ <span data-ttu-id="6c2fc-108">提供了用于更新 ClickOnce 应用程序的多个选项。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-108">Presents several options for updating ClickOnce applications.</span></span>  
   
- [<span data-ttu-id="09d22-109">保护 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="09d22-109">Securing ClickOnce Applications</span></span>](/visualstudio/deployment/securing-clickonce-applications)  
- <span data-ttu-id="09d22-110">解释 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的安全问题。</span><span class="sxs-lookup"><span data-stu-id="09d22-110">Explains the security implications of [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deployment.</span></span>  
+ [<span data-ttu-id="6c2fc-109">保护 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="6c2fc-109">Securing ClickOnce Applications</span></span>](/visualstudio/deployment/securing-clickonce-applications)  
+ <span data-ttu-id="6c2fc-110">介绍 ClickOnce 部署的安全隐患。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-110">Explains the security implications of ClickOnce deployment.</span></span>  
   
- [<span data-ttu-id="09d22-111">ClickOnce 部署疑难解答</span><span class="sxs-lookup"><span data-stu-id="09d22-111">Troubleshooting ClickOnce Deployments</span></span>](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
- <span data-ttu-id="09d22-112">描述在部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序时可能发生的各种问题，并记录 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 可能生成的顶级错误消息。</span><span class="sxs-lookup"><span data-stu-id="09d22-112">Describes various problems that can occur when deploying [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications, and documents the top-level error messages that [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] might generate.</span></span>  
+ [<span data-ttu-id="6c2fc-111">ClickOnce 部署疑难解答</span><span class="sxs-lookup"><span data-stu-id="6c2fc-111">Troubleshooting ClickOnce Deployments</span></span>](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
+ <span data-ttu-id="6c2fc-112">介绍各种部署 ClickOnce 应用程序时可能出现的问题和文档可能会生成 ClickOnce 的顶级错误消息。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-112">Describes various problems that can occur when deploying ClickOnce applications, and documents the top-level error messages that ClickOnce might generate.</span></span>  
   
- [<span data-ttu-id="09d22-113">ClickOnce 和应用程序设置</span><span class="sxs-lookup"><span data-stu-id="09d22-113">ClickOnce and Application Settings</span></span>](/visualstudio/deployment/clickonce-and-application-settings)  
- <span data-ttu-id="09d22-114">描述 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署如何使用应用程序设置，从而存储应用程序和用户设置以便未来检索。</span><span class="sxs-lookup"><span data-stu-id="09d22-114">Describes how [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deployment works with application settings, which stores application and user settings for future retrieval.</span></span>  
+ [<span data-ttu-id="6c2fc-113">ClickOnce 和应用程序设置</span><span class="sxs-lookup"><span data-stu-id="6c2fc-113">ClickOnce and Application Settings</span></span>](/visualstudio/deployment/clickonce-and-application-settings)  
+ <span data-ttu-id="6c2fc-114">介绍 ClickOnce 部署应用程序设置，用于存储应用程序和用户设置以便未来检索的工作方式。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-114">Describes how ClickOnce deployment works with application settings, which stores application and user settings for future retrieval.</span></span>  
   
- [<span data-ttu-id="09d22-115">受信任的应用程序部署概述</span><span class="sxs-lookup"><span data-stu-id="09d22-115">Trusted Application Deployment Overview</span></span>](/visualstudio/deployment/trusted-application-deployment-overview)  
- <span data-ttu-id="09d22-116">描述一项 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 功能，该功能允许受信任的应用程序在客户端计算机上以更高级别的权限运行。</span><span class="sxs-lookup"><span data-stu-id="09d22-116">Describes a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] feature that allows trusted applications to run with a higher level of permission on client computers.</span></span>  
+ [<span data-ttu-id="6c2fc-115">受信任的应用程序部署概述</span><span class="sxs-lookup"><span data-stu-id="6c2fc-115">Trusted Application Deployment Overview</span></span>](/visualstudio/deployment/trusted-application-deployment-overview)  
+ <span data-ttu-id="6c2fc-116">介绍了一种允许受信任的应用程序以使用更高级别的权限运行客户端计算机上的 ClickOnce 功能。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-116">Describes a ClickOnce feature that allows trusted applications to run with a higher level of permission on client computers.</span></span>  
   
- [<span data-ttu-id="09d22-117">ClickOnce 和 Authenticode</span><span class="sxs-lookup"><span data-stu-id="09d22-117">ClickOnce and Authenticode</span></span>](/visualstudio/deployment/clickonce-and-authenticode)  
- <span data-ttu-id="09d22-118">描述如何在受信任的应用程序部署中使用验证码技术。</span><span class="sxs-lookup"><span data-stu-id="09d22-118">Describes how Authenticode technology is used in trusted application deployment.</span></span>  
+ [<span data-ttu-id="6c2fc-117">ClickOnce 和 Authenticode</span><span class="sxs-lookup"><span data-stu-id="6c2fc-117">ClickOnce and Authenticode</span></span>](/visualstudio/deployment/clickonce-and-authenticode)  
+ <span data-ttu-id="6c2fc-118">描述如何在受信任的应用程序部署中使用验证码技术。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-118">Describes how Authenticode technology is used in trusted application deployment.</span></span>  
   
- [<span data-ttu-id="09d22-119">演练：手动部署 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="09d22-119">Walkthrough: Manually Deploying a ClickOnce Application</span></span>](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- <span data-ttu-id="09d22-120">演示如何使用命令行和 SDK 工具（而不使用 Visual Studio）来部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序。</span><span class="sxs-lookup"><span data-stu-id="09d22-120">Demonstrates using command-line and SDK tools to deploy a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application without using Visual Studio.</span></span>  
+ [<span data-ttu-id="6c2fc-119">演练：手动部署 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="6c2fc-119">Walkthrough: Manually Deploying a ClickOnce Application</span></span>](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ <span data-ttu-id="6c2fc-120">演示如何使用命令行和 SDK 工具，而无需使用 Visual Studio 部署 ClickOnce 应用程序。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-120">Demonstrates using command-line and SDK tools to deploy a ClickOnce application without using Visual Studio.</span></span>  
   
- [<span data-ttu-id="09d22-121">如何：为 ClickOnce 应用程序向客户端计算机添加受信任的发布者</span><span class="sxs-lookup"><span data-stu-id="09d22-121">How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications</span></span>](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
- <span data-ttu-id="09d22-122">演示如何一次性配置受信任的应用程序部署所需要的客户端计算机。</span><span class="sxs-lookup"><span data-stu-id="09d22-122">Demonstrates the one-time configuration of client computers required for trusted application deployment.</span></span>  
+ [<span data-ttu-id="6c2fc-121">如何：为 ClickOnce 应用程序向客户端计算机添加受信任的发布者</span><span class="sxs-lookup"><span data-stu-id="6c2fc-121">How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications</span></span>](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ <span data-ttu-id="6c2fc-122">演示如何一次性配置受信任的应用程序部署所需要的客户端计算机。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-122">Demonstrates the one-time configuration of client computers required for trusted application deployment.</span></span>  
   
- [<span data-ttu-id="09d22-123">如何：指定部署更新的替换位置</span><span class="sxs-lookup"><span data-stu-id="09d22-123">How to: Specify an Alternate Location for Deployment Updates</span></span>](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
- <span data-ttu-id="09d22-124">演示如何使用 SDK 工具来配置 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序，以检查另一个用于新版本应用程序的位置。</span><span class="sxs-lookup"><span data-stu-id="09d22-124">Demonstrates configuring a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application, using SDK tools, to check a different location for new versions of an application.</span></span>  
+ [<span data-ttu-id="6c2fc-123">如何：指定部署更新的替换位置</span><span class="sxs-lookup"><span data-stu-id="6c2fc-123">How to: Specify an Alternate Location for Deployment Updates</span></span>](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ <span data-ttu-id="6c2fc-124">演示如何配置 ClickOnce 应用程序，使用 SDK 工具来检查新版本的应用程序的不同位置。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-124">Demonstrates configuring a ClickOnce application, using SDK tools, to check a different location for new versions of an application.</span></span>  
   
- [<span data-ttu-id="09d22-125">演练：使用 ClickOnce 部署 API 按需下载程序集</span><span class="sxs-lookup"><span data-stu-id="09d22-125">Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API</span></span>](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
- <span data-ttu-id="09d22-126">演示如何在应用程序第一次尝试加载程序集时使用 API 调用来检索程序集。</span><span class="sxs-lookup"><span data-stu-id="09d22-126">Demonstrates using API calls to retrieve an assembly the first time your application attempts to load it.</span></span>  
+ [<span data-ttu-id="6c2fc-125">演练：使用 ClickOnce 部署 API 按需下载程序集</span><span class="sxs-lookup"><span data-stu-id="6c2fc-125">Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API</span></span>](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ <span data-ttu-id="6c2fc-126">演示如何在应用程序第一次尝试加载程序集时使用 API 调用来检索程序集。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-126">Demonstrates using API calls to retrieve an assembly the first time your application attempts to load it.</span></span>  
   
- [<span data-ttu-id="09d22-127">如何：在联机 ClickOnce 应用程序中检索查询字符串信息</span><span class="sxs-lookup"><span data-stu-id="09d22-127">How to: Retrieve Query String Information in an Online ClickOnce Application</span></span>](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
- <span data-ttu-id="09d22-128">演示如何从 URL 检索用于运行 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序的参数。</span><span class="sxs-lookup"><span data-stu-id="09d22-128">Demonstrates retrieving parameters from the URL used to run a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application.</span></span>  
+ [<span data-ttu-id="6c2fc-127">如何：在联机 ClickOnce 应用程序中检索查询字符串信息</span><span class="sxs-lookup"><span data-stu-id="6c2fc-127">How to: Retrieve Query String Information in an Online ClickOnce Application</span></span>](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
+ <span data-ttu-id="6c2fc-128">演示从用于运行 ClickOnce 应用程序的 URL 检索参数。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-128">Demonstrates retrieving parameters from the URL used to run a ClickOnce application.</span></span>  
   
- [<span data-ttu-id="09d22-129">ClickOnce 缓存概述</span><span class="sxs-lookup"><span data-stu-id="09d22-129">ClickOnce Cache Overview</span></span>](/visualstudio/deployment/clickonce-cache-overview)  
- <span data-ttu-id="09d22-130">描述用于在本地计算机上存储 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序的缓存。</span><span class="sxs-lookup"><span data-stu-id="09d22-130">Describes the cache used to store [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications on the local computer.</span></span>  
+ [<span data-ttu-id="6c2fc-129">ClickOnce 缓存概述</span><span class="sxs-lookup"><span data-stu-id="6c2fc-129">ClickOnce Cache Overview</span></span>](/visualstudio/deployment/clickonce-cache-overview)  
+ <span data-ttu-id="6c2fc-130">介绍使用存储在本地计算机上的 ClickOnce 应用程序的缓存。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-130">Describes the cache used to store ClickOnce applications on the local computer.</span></span>  
   
- [<span data-ttu-id="09d22-131">在 ClickOnce 应用程序中访问本地数据和远程数据</span><span class="sxs-lookup"><span data-stu-id="09d22-131">Accessing Local and Remote Data in ClickOnce Applications</span></span>](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
- <span data-ttu-id="09d22-132">介绍如何从 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序访问本地数据文件和远程数据源。</span><span class="sxs-lookup"><span data-stu-id="09d22-132">Describes how to access local data files and remote data sources from a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application.</span></span>  
+ [<span data-ttu-id="6c2fc-131">在 ClickOnce 应用程序中访问本地数据和远程数据</span><span class="sxs-lookup"><span data-stu-id="6c2fc-131">Accessing Local and Remote Data in ClickOnce Applications</span></span>](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
+ <span data-ttu-id="6c2fc-132">介绍如何从 ClickOnce 应用程序访问本地数据文件和远程数据源。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-132">Describes how to access local data files and remote data sources from a ClickOnce application.</span></span>  
   
- [<span data-ttu-id="09d22-133">如何：将数据文件添加到 ClickOnce 应用程序中</span><span class="sxs-lookup"><span data-stu-id="09d22-133">How to: Include a Data File in a ClickOnce Application</span></span>](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
- <span data-ttu-id="09d22-134">演示如何标记文件以使它在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 数据目录中可用。</span><span class="sxs-lookup"><span data-stu-id="09d22-134">Demonstrates how to mark a file so that it is available in the [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] data directory.</span></span>  
+ [<span data-ttu-id="6c2fc-133">如何：将数据文件添加到 ClickOnce 应用程序中</span><span class="sxs-lookup"><span data-stu-id="6c2fc-133">How to: Include a Data File in a ClickOnce Application</span></span>](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ <span data-ttu-id="6c2fc-134">演示如何将文件标记，以便它可在 ClickOnce 数据目录中。</span><span class="sxs-lookup"><span data-stu-id="6c2fc-134">Demonstrates how to mark a file so that it is available in the ClickOnce data directory.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09d22-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="09d22-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c2fc-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c2fc-135">See also</span></span>
 
-- [<span data-ttu-id="09d22-136">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="09d22-136">Application Settings Overview</span></span>](./advanced/application-settings-overview.md)
-- [<span data-ttu-id="09d22-137">发布 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="09d22-137">Publishing ClickOnce Applications</span></span>](/visualstudio/deployment/publishing-clickonce-applications)
-- [<span data-ttu-id="09d22-138">从命令行生成 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="09d22-138">Building ClickOnce Applications from the Command Line</span></span>](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
-- [<span data-ttu-id="09d22-139">调试使用 System.Deployment.Application 的 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="09d22-139">Debugging ClickOnce Applications That Use System.Deployment.Application</span></span>](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
-- [<span data-ttu-id="09d22-140">使用 ClickOnce 部署 COM 组件</span><span class="sxs-lookup"><span data-stu-id="09d22-140">Deploying COM Components with ClickOnce</span></span>](/visualstudio/deployment/deploying-com-components-with-clickonce)
-- [<span data-ttu-id="09d22-141">如何：使用发布向导发布 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="09d22-141">How to: Publish a ClickOnce Application using the Publish Wizard</span></span>](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+- [<span data-ttu-id="6c2fc-136">应用程序设置概述</span><span class="sxs-lookup"><span data-stu-id="6c2fc-136">Application Settings Overview</span></span>](./advanced/application-settings-overview.md)
+- [<span data-ttu-id="6c2fc-137">发布 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="6c2fc-137">Publishing ClickOnce Applications</span></span>](/visualstudio/deployment/publishing-clickonce-applications)
+- [<span data-ttu-id="6c2fc-138">从命令行生成 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="6c2fc-138">Building ClickOnce Applications from the Command Line</span></span>](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [<span data-ttu-id="6c2fc-139">调试使用 System.Deployment.Application 的 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="6c2fc-139">Debugging ClickOnce Applications That Use System.Deployment.Application</span></span>](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
+- [<span data-ttu-id="6c2fc-140">使用 ClickOnce 部署 COM 组件</span><span class="sxs-lookup"><span data-stu-id="6c2fc-140">Deploying COM Components with ClickOnce</span></span>](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [<span data-ttu-id="6c2fc-141">如何：使用发布向导发布 ClickOnce 应用程序</span><span class="sxs-lookup"><span data-stu-id="6c2fc-141">How to: Publish a ClickOnce Application using the Publish Wizard</span></span>](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
