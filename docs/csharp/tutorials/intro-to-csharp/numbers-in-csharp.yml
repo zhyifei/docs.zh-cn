@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="56ba5-101">处理 C# 中的整数和浮点数</span><span class="sxs-lookup"><span data-stu-id="56ba5-101">Manipulate integral and floating point numbers in C#</span></span>
+title: <span data-ttu-id="a08d8-101">处理 C# 中的整数和浮点数</span><span class="sxs-lookup"><span data-stu-id="a08d8-101">Manipulate integral and floating point numbers in C#</span></span>
 metadata:
   title: C# 中的数字 - C# 交互式教程简介
   description: 本教程介绍了数字类型，读者可以使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。
@@ -8,23 +8,23 @@ metadata:
   ms.date: 08/24/2018
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
-  nextTutorialTitle: <span data-ttu-id="56ba5-105">C# 中的分支和循环</span><span class="sxs-lookup"><span data-stu-id="56ba5-105">Branches and loops in C#</span></span>
+  nextTutorialTitle: <span data-ttu-id="a08d8-105">C# 中的分支和循环</span><span class="sxs-lookup"><span data-stu-id="a08d8-105">Branches and loops in C#</span></span>
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1475941e0b0169566307f016d68ef3c3cb0b907c
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 047914aad8d5d38c1bf5c00f71be50f54b7124f6
+  ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029731"
+  ms.lasthandoff: 06/28/2019
+  ms.locfileid: "67423397"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="56ba5-106">本教程通过交互方式介绍了 C# 中的数字类型，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。</span><span class="sxs-lookup"><span data-stu-id="56ba5-106">This tutorial teaches you about the numeric types in C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="56ba5-107">具体包含一系列课程，探索了 C# 中的数字和数学运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-107">It contains a series of lessons that explore numbers and math operations in C#.</span></span> <span data-ttu-id="56ba5-108">这些课程介绍了 C# 语言的基础知识。</span><span class="sxs-lookup"><span data-stu-id="56ba5-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="56ba5-109">探索整数数学运算</span><span class="sxs-lookup"><span data-stu-id="56ba5-109">Explore integer math</span></span>
+    <span data-ttu-id="a08d8-106">本教程通过交互方式介绍了 C# 中的数字类型，读者可以使用浏览器编写 C#，并查看代码编译和运行结果。</span><span class="sxs-lookup"><span data-stu-id="a08d8-106">This tutorial teaches you about the numeric types in C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="a08d8-107">具体包含一系列课程，探索了 C# 中的数字和数学运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-107">It contains a series of lessons that explore numbers and math operations in C#.</span></span> <span data-ttu-id="a08d8-108">这些课程介绍了 C# 语言的基础知识。</span><span class="sxs-lookup"><span data-stu-id="a08d8-108">These lessons teach you the fundamentals of the C# language.</span></span>
+- title: <span data-ttu-id="a08d8-109">探索整数数学运算</span><span class="sxs-lookup"><span data-stu-id="a08d8-109">Explore integer math</span></span>
   durationInMinutes: 4
   content: >
-    <span data-ttu-id="56ba5-110">在交互式窗口中，运行以下代码。</span><span class="sxs-lookup"><span data-stu-id="56ba5-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="56ba5-111">为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：</span><span class="sxs-lookup"><span data-stu-id="56ba5-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    <span data-ttu-id="a08d8-110">在交互式窗口中，运行以下代码。</span><span class="sxs-lookup"><span data-stu-id="a08d8-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="a08d8-111">为此，请在交互式窗口中键入以下代码块，再单击“运行”按钮：</span><span class="sxs-lookup"><span data-stu-id="a08d8-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
 
 
     ```csharp
@@ -40,25 +40,25 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-112">刚刚看到的是一种基本的整数数学运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-112">You've just seen one of the fundamental math operations with integers.</span></span> <span data-ttu-id="56ba5-113">`int` 类型表示整数（正整数或负整数）。</span><span class="sxs-lookup"><span data-stu-id="56ba5-113">The `int` type represents an **integer**, a positive or negative whole number.</span></span> <span data-ttu-id="56ba5-114">使用 `+` 符号执行加法运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-114">You use the `+` symbol for addition.</span></span> <span data-ttu-id="56ba5-115">其他常见的整数数学运算包括：</span><span class="sxs-lookup"><span data-stu-id="56ba5-115">Other common mathematical operations for integers include:</span></span>
+    <span data-ttu-id="a08d8-112">刚刚看到的是一种基本的整数数学运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-112">You've just seen one of the fundamental math operations with integers.</span></span> <span data-ttu-id="a08d8-113">`int` 类型表示整数（正整数或负整数）。</span><span class="sxs-lookup"><span data-stu-id="a08d8-113">The `int` type represents an **integer**, a positive or negative whole number.</span></span> <span data-ttu-id="a08d8-114">使用 `+` 符号执行加法运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-114">You use the `+` symbol for addition.</span></span> <span data-ttu-id="a08d8-115">其他常见的整数数学运算包括：</span><span class="sxs-lookup"><span data-stu-id="a08d8-115">Other common mathematical operations for integers include:</span></span>
 
 
-    - <span data-ttu-id="56ba5-116">`-`：减法运算</span><span class="sxs-lookup"><span data-stu-id="56ba5-116">`-` for subtraction</span></span>
+    - <span data-ttu-id="a08d8-116">`-`：减法运算</span><span class="sxs-lookup"><span data-stu-id="a08d8-116">`-` for subtraction</span></span>
 
-    - <span data-ttu-id="56ba5-117">`*`：乘法运算</span><span class="sxs-lookup"><span data-stu-id="56ba5-117">`*` for multiplication</span></span>
+    - <span data-ttu-id="a08d8-117">`*`：乘法运算</span><span class="sxs-lookup"><span data-stu-id="a08d8-117">`*` for multiplication</span></span>
 
-    - <span data-ttu-id="56ba5-118">`/`：除法运算</span><span class="sxs-lookup"><span data-stu-id="56ba5-118">`/` for division</span></span>
+    - <span data-ttu-id="a08d8-118">`/`：除法运算</span><span class="sxs-lookup"><span data-stu-id="a08d8-118">`/` for division</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="56ba5-119">在本交互式教程中，可以修改在交互式窗口中已编写的代码，自行进行探索。</span><span class="sxs-lookup"><span data-stu-id="56ba5-119">Throughout this interactive tutorial, you can explore on your own by modifying the code you've written in the interactive window.</span></span> <span data-ttu-id="56ba5-120">本教程提供了可分步试运行的示例。</span><span class="sxs-lookup"><span data-stu-id="56ba5-120">This tutorial provides examples that you can try at each step.</span></span>
+    > <span data-ttu-id="a08d8-119">在本交互式教程中，可以修改在交互式窗口中已编写的代码，自行进行探索。</span><span class="sxs-lookup"><span data-stu-id="a08d8-119">Throughout this interactive tutorial, you can explore on your own by modifying the code you've written in the interactive window.</span></span> <span data-ttu-id="a08d8-120">本教程提供了可分步试运行的示例。</span><span class="sxs-lookup"><span data-stu-id="a08d8-120">This tutorial provides examples that you can try at each step.</span></span>
 
 
-    <span data-ttu-id="56ba5-121">首先，探索这些不同类型的运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-121">Start by exploring those different operations.</span></span> <span data-ttu-id="56ba5-122">修改第三行代码，尝试执行所有这些运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-122">Modify the third line to try each of these operations.</span></span> <span data-ttu-id="56ba5-123">每次编辑后，单击“运行”按钮。</span><span class="sxs-lookup"><span data-stu-id="56ba5-123">After each edit, click the **Run** button.</span></span>
+    <span data-ttu-id="a08d8-121">首先，探索这些不同类型的运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-121">Start by exploring those different operations.</span></span> <span data-ttu-id="a08d8-122">修改第三行代码，尝试执行所有这些运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-122">Modify the third line to try each of these operations.</span></span> <span data-ttu-id="a08d8-123">每次编辑后，单击“运行”按钮。</span><span class="sxs-lookup"><span data-stu-id="a08d8-123">After each edit, click the **Run** button.</span></span>
 
 
-    <span data-ttu-id="56ba5-124">减法：</span><span class="sxs-lookup"><span data-stu-id="56ba5-124">Subtraction:</span></span>
+    <span data-ttu-id="a08d8-124">减法：</span><span class="sxs-lookup"><span data-stu-id="a08d8-124">Subtraction:</span></span>
 
 
     ```csharp
@@ -68,7 +68,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-125">乘法：</span><span class="sxs-lookup"><span data-stu-id="56ba5-125">Multiplication:</span></span>
+    <span data-ttu-id="a08d8-125">乘法：</span><span class="sxs-lookup"><span data-stu-id="a08d8-125">Multiplication:</span></span>
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-126">除法：</span><span class="sxs-lookup"><span data-stu-id="56ba5-126">Division:</span></span>
+    <span data-ttu-id="a08d8-126">除法：</span><span class="sxs-lookup"><span data-stu-id="a08d8-126">Division:</span></span>
 
 
     ```csharp
@@ -88,27 +88,27 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-127">如果愿意，也可以尝试在同一行中执行多个数学运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-127">You can also experiment by performing multiple mathematics operations in the same line, if you'd like.</span></span>
+    <span data-ttu-id="a08d8-127">如果愿意，也可以尝试在同一行中执行多个数学运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-127">You can also experiment by performing multiple mathematics operations in the same line, if you'd like.</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="56ba5-128">在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。</span><span class="sxs-lookup"><span data-stu-id="56ba5-128">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="56ba5-129">编译器会发现并报告这些错误。</span><span class="sxs-lookup"><span data-stu-id="56ba5-129">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="56ba5-130">如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。</span><span class="sxs-lookup"><span data-stu-id="56ba5-130">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > <span data-ttu-id="a08d8-128">在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。</span><span class="sxs-lookup"><span data-stu-id="a08d8-128">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="a08d8-129">编译器会发现并报告这些错误。</span><span class="sxs-lookup"><span data-stu-id="a08d8-129">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="a08d8-130">如果输出中有错误消息，请仔细比对示例代码和交互式窗口中的代码，看看要纠正哪些代码。</span><span class="sxs-lookup"><span data-stu-id="a08d8-130">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
 
-    > <span data-ttu-id="56ba5-131">这样做有助于了解 C# 代码结构。</span><span class="sxs-lookup"><span data-stu-id="56ba5-131">That exercise will help you learn the structure of C# code.</span></span>
+    > <span data-ttu-id="a08d8-131">这样做有助于了解 C# 代码结构。</span><span class="sxs-lookup"><span data-stu-id="a08d8-131">That exercise will help you learn the structure of C# code.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="56ba5-132">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="56ba5-132">This online coding experience is in preview mode.</span></span> <span data-ttu-id="56ba5-133">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="56ba5-133">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="56ba5-134">探索运算顺序</span><span class="sxs-lookup"><span data-stu-id="56ba5-134">Explore order of operations</span></span>
+    > <span data-ttu-id="a08d8-132">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="a08d8-132">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a08d8-133">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="a08d8-133">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="a08d8-134">探索运算顺序</span><span class="sxs-lookup"><span data-stu-id="a08d8-134">Explore order of operations</span></span>
   durationInMinutes: 7
   content: >
-    <span data-ttu-id="56ba5-135">C# 语言使用与数学运算规则一致的规则，定义不同数学运算的优先级。</span><span class="sxs-lookup"><span data-stu-id="56ba5-135">The C# language defines the precedence of different mathematics operations with rules consistent with the rules you learned in mathematics.</span></span>
+    <span data-ttu-id="a08d8-135">C# 语言使用与数学运算规则一致的规则，定义不同数学运算的优先级。</span><span class="sxs-lookup"><span data-stu-id="a08d8-135">The C# language defines the precedence of different mathematics operations with rules consistent with the rules you learned in mathematics.</span></span>
 
-    <span data-ttu-id="56ba5-136">乘法和除法的优先级高于加法和减法。</span><span class="sxs-lookup"><span data-stu-id="56ba5-136">Multiplication and division take precedence over addition and subtraction.</span></span>
+    <span data-ttu-id="a08d8-136">乘法和除法的优先级高于加法和减法。</span><span class="sxs-lookup"><span data-stu-id="a08d8-136">Multiplication and division take precedence over addition and subtraction.</span></span>
 
-    <span data-ttu-id="56ba5-137">在交互式窗口中，运行以下代码进行探索：</span><span class="sxs-lookup"><span data-stu-id="56ba5-137">Explore that by running the following code in the interactive window:</span></span>
+    <span data-ttu-id="a08d8-137">在交互式窗口中，运行以下代码进行探索：</span><span class="sxs-lookup"><span data-stu-id="a08d8-137">Explore that by running the following code in the interactive window:</span></span>
 
 
     ```csharp
@@ -126,10 +126,10 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-138">输出结果表明，乘法先于加法执行。</span><span class="sxs-lookup"><span data-stu-id="56ba5-138">The output demonstrates that the multiplication is performed before the addition.</span></span>
+    <span data-ttu-id="a08d8-138">输出结果表明，乘法先于加法执行。</span><span class="sxs-lookup"><span data-stu-id="a08d8-138">The output demonstrates that the multiplication is performed before the addition.</span></span>
 
 
-    <span data-ttu-id="56ba5-139">可以在要优先执行的一个或多个运算前后添加括号，从而强制改变运算顺序：</span><span class="sxs-lookup"><span data-stu-id="56ba5-139">You can force a different order of operation by adding parentheses around the operation or operations you want performed first:</span></span>
+    <span data-ttu-id="a08d8-139">可以在要优先执行的一个或多个运算前后添加括号，从而强制改变运算顺序：</span><span class="sxs-lookup"><span data-stu-id="a08d8-139">You can force a different order of operation by adding parentheses around the operation or operations you want performed first:</span></span>
 
 
     ```csharp
@@ -147,7 +147,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-140">通过组合多个不同的运算，进一步探索运算顺序。</span><span class="sxs-lookup"><span data-stu-id="56ba5-140">Explore more by combining many different operations.</span></span> <span data-ttu-id="56ba5-141">将上面的第四行代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="56ba5-141">Replace the fourth line above with something like this:</span></span>
+    <span data-ttu-id="a08d8-140">通过组合多个不同的运算，进一步探索运算顺序。</span><span class="sxs-lookup"><span data-stu-id="a08d8-140">Explore more by combining many different operations.</span></span> <span data-ttu-id="a08d8-141">将上面的第四行代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="a08d8-141">Replace the fourth line above with something like this:</span></span>
 
 
     ```csharp
@@ -157,10 +157,10 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-142">可能已注意到，整数有一个非常有趣的行为。</span><span class="sxs-lookup"><span data-stu-id="56ba5-142">You may have noticed an interesting behavior for integers.</span></span> <span data-ttu-id="56ba5-143">整数除法始终生成整数结果，即使预期结果有小数或分数部分也是如此。</span><span class="sxs-lookup"><span data-stu-id="56ba5-143">Integer division always produces an integer result, even when you'd expect the result to include a decimal or fractional portion.</span></span>
+    <span data-ttu-id="a08d8-142">可能已注意到，整数有一个非常有趣的行为。</span><span class="sxs-lookup"><span data-stu-id="a08d8-142">You may have noticed an interesting behavior for integers.</span></span> <span data-ttu-id="a08d8-143">整数除法始终生成整数结果，即使预期结果有小数或分数部分也是如此。</span><span class="sxs-lookup"><span data-stu-id="a08d8-143">Integer division always produces an integer result, even when you'd expect the result to include a decimal or fractional portion.</span></span>
 
 
-    <span data-ttu-id="56ba5-144">如果还没有注意到此行为，请试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="56ba5-144">If you haven't seen this behavior, try the following:</span></span>
+    <span data-ttu-id="a08d8-144">如果还没有注意到此行为，请试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="a08d8-144">If you haven't seen this behavior, try the following:</span></span>
 
 
     ```csharp
@@ -178,18 +178,18 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-145">再次单击“运行”，看看结果如何。</span><span class="sxs-lookup"><span data-stu-id="56ba5-145">Click **Run** again to see the results.</span></span>
+    <span data-ttu-id="a08d8-145">再次单击“运行”，看看结果如何。</span><span class="sxs-lookup"><span data-stu-id="a08d8-145">Click **Run** again to see the results.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="56ba5-146">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="56ba5-146">This online coding experience is in preview mode.</span></span> <span data-ttu-id="56ba5-147">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="56ba5-147">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="56ba5-148">探索整数运算精度和限值</span><span class="sxs-lookup"><span data-stu-id="56ba5-148">Explore integer precision and limits</span></span>
+    > <span data-ttu-id="a08d8-146">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="a08d8-146">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a08d8-147">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="a08d8-147">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="a08d8-148">探索整数运算精度和限值</span><span class="sxs-lookup"><span data-stu-id="a08d8-148">Explore integer precision and limits</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="56ba5-149">在上一个示例中，整数除法截断了结果。</span><span class="sxs-lookup"><span data-stu-id="56ba5-149">That last sample showed you that integer division truncates the result.</span></span>
+    <span data-ttu-id="a08d8-149">在上一个示例中，整数除法截断了结果。</span><span class="sxs-lookup"><span data-stu-id="a08d8-149">That last sample showed you that integer division truncates the result.</span></span>
 
-    <span data-ttu-id="56ba5-150">可以使用取模运算符（即 `%` 字符）计算余数：</span><span class="sxs-lookup"><span data-stu-id="56ba5-150">You can get the **remainder** by using the **modulo** operator, the `%` character:</span></span>
+    <span data-ttu-id="a08d8-150">可以使用取模运算符（即 `%` 字符）计算余数：</span><span class="sxs-lookup"><span data-stu-id="a08d8-150">You can get the **remainder** by using the **modulo** operator, the `%` character:</span></span>
 
 
     ```csharp
@@ -211,7 +211,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-151">C# 整数类型不同于数学上的整数的另一点是，`int` 类型有最小限值和最大限值。</span><span class="sxs-lookup"><span data-stu-id="56ba5-151">The C# integer type differs from mathematical integers in one other way: the `int` type has minimum and maximum limits.</span></span> <span data-ttu-id="56ba5-152">在交互式窗口中，运行以下代码，看看这些限值的运行机制如何：</span><span class="sxs-lookup"><span data-stu-id="56ba5-152">Run this code in the interactive window to see those limits:</span></span>
+    <span data-ttu-id="a08d8-151">C# 整数类型不同于数学上的整数的另一点是，`int` 类型有最小限值和最大限值。</span><span class="sxs-lookup"><span data-stu-id="a08d8-151">The C# integer type differs from mathematical integers in one other way: the `int` type has minimum and maximum limits.</span></span> <span data-ttu-id="a08d8-152">在交互式窗口中，运行以下代码，看看这些限值的运行机制如何：</span><span class="sxs-lookup"><span data-stu-id="a08d8-152">Run this code in the interactive window to see those limits:</span></span>
 
 
     ```csharp
@@ -225,7 +225,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-153">如果运算生成的值超过这些限值，则会出现下溢或溢出的情况。</span><span class="sxs-lookup"><span data-stu-id="56ba5-153">If a calculation produces a value that exceeds those limits, you have an **underflow** or **overflow** condition.</span></span> <span data-ttu-id="56ba5-154">答案似乎是从一个限值覆盖到另一个限值的范围。</span><span class="sxs-lookup"><span data-stu-id="56ba5-154">The answer appears to wrap from one limit to the other.</span></span> <span data-ttu-id="56ba5-155">例如，将以下两行代码添加到交互式窗口中：</span><span class="sxs-lookup"><span data-stu-id="56ba5-155">Add these two lines to the interactive window to see an example:</span></span>
+    <span data-ttu-id="a08d8-153">如果运算生成的值超过这些限值，则会出现下溢或溢出的情况。</span><span class="sxs-lookup"><span data-stu-id="a08d8-153">If a calculation produces a value that exceeds those limits, you have an **underflow** or **overflow** condition.</span></span> <span data-ttu-id="a08d8-154">答案似乎是从一个限值覆盖到另一个限值的范围。</span><span class="sxs-lookup"><span data-stu-id="a08d8-154">The answer appears to wrap from one limit to the other.</span></span> <span data-ttu-id="a08d8-155">例如，将以下两行代码添加到交互式窗口中：</span><span class="sxs-lookup"><span data-stu-id="a08d8-155">Add these two lines to the interactive window to see an example:</span></span>
 
 
     ```csharp
@@ -237,25 +237,25 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-156">可以看到，答案非常接近最小（负）整数。</span><span class="sxs-lookup"><span data-stu-id="56ba5-156">Notice that the answer is very close to the minimum (negative) integer.</span></span> <span data-ttu-id="56ba5-157">与 `min + 2` 相同。</span><span class="sxs-lookup"><span data-stu-id="56ba5-157">It's the same as `min + 2`.</span></span>
+    <span data-ttu-id="a08d8-156">可以看到，答案非常接近最小（负）整数。</span><span class="sxs-lookup"><span data-stu-id="a08d8-156">Notice that the answer is very close to the minimum (negative) integer.</span></span> <span data-ttu-id="a08d8-157">与 `min + 2` 相同。</span><span class="sxs-lookup"><span data-stu-id="a08d8-157">It's the same as `min + 2`.</span></span>
 
-    <span data-ttu-id="56ba5-158">加法运算会让整数溢出允许的值。</span><span class="sxs-lookup"><span data-stu-id="56ba5-158">The addition operation **overflowed** the allowed values for integers.</span></span>
+    <span data-ttu-id="a08d8-158">加法运算会让整数溢出允许的值。</span><span class="sxs-lookup"><span data-stu-id="a08d8-158">The addition operation **overflowed** the allowed values for integers.</span></span>
 
-    <span data-ttu-id="56ba5-159">答案是一个非常大的负数，因为溢出从最大整数值覆盖回最小整数值。</span><span class="sxs-lookup"><span data-stu-id="56ba5-159">The answer is a very large negative number because an overflow "wraps around" from the largest possible integer value to the smallest.</span></span>
+    <span data-ttu-id="a08d8-159">答案是一个非常大的负数，因为溢出从最大整数值覆盖回最小整数值。</span><span class="sxs-lookup"><span data-stu-id="a08d8-159">The answer is a very large negative number because an overflow "wraps around" from the largest possible integer value to the smallest.</span></span>
 
 
-    <span data-ttu-id="56ba5-160">如果 `int` 类型无法满足需求，还会用到限值和精度不同的其他数字类型。</span><span class="sxs-lookup"><span data-stu-id="56ba5-160">There are other numeric types with different limits and precision that you would use when the `int` type doesn't meet your needs.</span></span> <span data-ttu-id="56ba5-161">接下来，将探索这些类型。</span><span class="sxs-lookup"><span data-stu-id="56ba5-161">Let's explore those next.</span></span>
+    <span data-ttu-id="a08d8-160">如果 `int` 类型无法满足需求，还会用到限值和精度不同的其他数字类型。</span><span class="sxs-lookup"><span data-stu-id="a08d8-160">There are other numeric types with different limits and precision that you would use when the `int` type doesn't meet your needs.</span></span> <span data-ttu-id="a08d8-161">接下来，将探索这些类型。</span><span class="sxs-lookup"><span data-stu-id="a08d8-161">Let's explore those next.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="56ba5-162">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="56ba5-162">This online coding experience is in preview mode.</span></span> <span data-ttu-id="56ba5-163">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="56ba5-163">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="56ba5-164">使用双精度类型</span><span class="sxs-lookup"><span data-stu-id="56ba5-164">Work with the double type</span></span>
+    > <span data-ttu-id="a08d8-162">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="a08d8-162">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a08d8-163">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="a08d8-163">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="a08d8-164">使用双精度类型</span><span class="sxs-lookup"><span data-stu-id="a08d8-164">Work with the double type</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="56ba5-165">`double` 数字类型表示双精度浮点数。</span><span class="sxs-lookup"><span data-stu-id="56ba5-165">The `double` numeric type represents a double-precision floating point number.</span></span> <span data-ttu-id="56ba5-166">这些词可能是第一次听说。</span><span class="sxs-lookup"><span data-stu-id="56ba5-166">Those terms may be new to you.</span></span> <span data-ttu-id="56ba5-167">浮点数可用于表示数量级可能非常大或非常小的非整数。</span><span class="sxs-lookup"><span data-stu-id="56ba5-167">A **floating point** number is useful to represent non-integral numbers that may be very large or small in magnitude.</span></span> <span data-ttu-id="56ba5-168">双精度意味着存储这些数字时使用的精度高于单精度。</span><span class="sxs-lookup"><span data-stu-id="56ba5-168">**Double-precision** means that these numbers are stored using greater precision than **single-precision**.</span></span> <span data-ttu-id="56ba5-169">在新式计算机上，使用双精度数字比使用单精度数字更为常见。</span><span class="sxs-lookup"><span data-stu-id="56ba5-169">On modern computers, it is more common to use double precision than single precision numbers.</span></span>
+    <span data-ttu-id="a08d8-165">`double` 数字类型表示双精度浮点数。</span><span class="sxs-lookup"><span data-stu-id="a08d8-165">The `double` numeric type represents a double-precision floating point number.</span></span> <span data-ttu-id="a08d8-166">这些词可能是第一次听说。</span><span class="sxs-lookup"><span data-stu-id="a08d8-166">Those terms may be new to you.</span></span> <span data-ttu-id="a08d8-167">浮点数可用于表示数量级可能非常大或非常小的非整数。</span><span class="sxs-lookup"><span data-stu-id="a08d8-167">A **floating point** number is useful to represent non-integral numbers that may be very large or small in magnitude.</span></span> <span data-ttu-id="a08d8-168">双精度意味着存储这些数字时使用的精度高于单精度。</span><span class="sxs-lookup"><span data-stu-id="a08d8-168">**Double-precision** means that these numbers are stored using greater precision than **single-precision**.</span></span> <span data-ttu-id="a08d8-169">在新式计算机上，使用双精度数字比使用单精度数字更为常见。</span><span class="sxs-lookup"><span data-stu-id="a08d8-169">On modern computers, it is more common to use double precision than single precision numbers.</span></span>
 
-    <span data-ttu-id="56ba5-170">接下来，将探索双精度类型。</span><span class="sxs-lookup"><span data-stu-id="56ba5-170">Let's explore.</span></span> <span data-ttu-id="56ba5-171">在交互式窗口中，试运行以下代码，看看结果如何：</span><span class="sxs-lookup"><span data-stu-id="56ba5-171">Try the following code in the interactive window and see the result:</span></span>
+    <span data-ttu-id="a08d8-170">接下来，将探索双精度类型。</span><span class="sxs-lookup"><span data-stu-id="a08d8-170">Let's explore.</span></span> <span data-ttu-id="a08d8-171">在交互式窗口中，试运行以下代码，看看结果如何：</span><span class="sxs-lookup"><span data-stu-id="a08d8-171">Try the following code in the interactive window and see the result:</span></span>
 
 
     ```csharp
@@ -273,7 +273,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-172">可以看到，答案商包含小数部分。</span><span class="sxs-lookup"><span data-stu-id="56ba5-172">Notice that the answer includes the decimal portion of the quotient.</span></span> <span data-ttu-id="56ba5-173">试试对双精度类型使用更复杂一点的表达式：</span><span class="sxs-lookup"><span data-stu-id="56ba5-173">Try a slightly more complicated expression with doubles:</span></span>
+    <span data-ttu-id="a08d8-172">可以看到，答案商包含小数部分。</span><span class="sxs-lookup"><span data-stu-id="a08d8-172">Notice that the answer includes the decimal portion of the quotient.</span></span> <span data-ttu-id="a08d8-173">试试对双精度类型使用更复杂一点的表达式：</span><span class="sxs-lookup"><span data-stu-id="a08d8-173">Try a slightly more complicated expression with doubles:</span></span>
 
 
     ```csharp
@@ -291,7 +291,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-174">双精度值的范围远大于整数值。</span><span class="sxs-lookup"><span data-stu-id="56ba5-174">The range of a double value is much greater than integer values.</span></span> <span data-ttu-id="56ba5-175">在交互式窗口中，试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="56ba5-175">Try the following code in the interactive window:</span></span>
+    <span data-ttu-id="a08d8-174">双精度值的范围远大于整数值。</span><span class="sxs-lookup"><span data-stu-id="a08d8-174">The range of a double value is much greater than integer values.</span></span> <span data-ttu-id="a08d8-175">在交互式窗口中，试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="a08d8-175">Try the following code in the interactive window:</span></span>
 
 
     ```csharp
@@ -305,10 +305,10 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-176">打印出来的这些值用科学记数法表示。</span><span class="sxs-lookup"><span data-stu-id="56ba5-176">These values are printed out in scientific notation.</span></span> <span data-ttu-id="56ba5-177">`E` 左侧为有效数字。</span><span class="sxs-lookup"><span data-stu-id="56ba5-177">The number to the left of the `E` is the significand.</span></span> <span data-ttu-id="56ba5-178">右侧为是 10 的 n 次幂。</span><span class="sxs-lookup"><span data-stu-id="56ba5-178">The number to the right is the exponent, as a power of 10.</span></span>
+    <span data-ttu-id="a08d8-176">打印出来的这些值用科学记数法表示。</span><span class="sxs-lookup"><span data-stu-id="a08d8-176">These values are printed out in scientific notation.</span></span> <span data-ttu-id="a08d8-177">`E` 左侧为有效数字。</span><span class="sxs-lookup"><span data-stu-id="a08d8-177">The number to the left of the `E` is the significand.</span></span> <span data-ttu-id="a08d8-178">右侧为是 10 的 n 次幂。</span><span class="sxs-lookup"><span data-stu-id="a08d8-178">The number to the right is the exponent, as a power of 10.</span></span>
 
 
-    <span data-ttu-id="56ba5-179">与数学上的十进制数字一样，C# 中的双精度值可能会有四舍五入误差。</span><span class="sxs-lookup"><span data-stu-id="56ba5-179">Just like decimal numbers in math, doubles in C# can have rounding errors.</span></span> <span data-ttu-id="56ba5-180">试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="56ba5-180">Try this code:</span></span>
+    <span data-ttu-id="a08d8-179">与数学上的十进制数字一样，C# 中的双精度值可能会有四舍五入误差。</span><span class="sxs-lookup"><span data-stu-id="a08d8-179">Just like decimal numbers in math, doubles in C# can have rounding errors.</span></span> <span data-ttu-id="a08d8-180">试运行以下代码：</span><span class="sxs-lookup"><span data-stu-id="a08d8-180">Try this code:</span></span>
 
 
     ```csharp
@@ -320,22 +320,22 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-181">众所周知，`0.3` 循环小数与 `1/3` 并不完全相等。</span><span class="sxs-lookup"><span data-stu-id="56ba5-181">You know that `0.3` repeating is not exactly the same as `1/3`.</span></span>
+    <span data-ttu-id="a08d8-181">众所周知，`0.3` 循环小数与 `1/3` 并不完全相等。</span><span class="sxs-lookup"><span data-stu-id="a08d8-181">You know that `0.3` repeating is not exactly the same as `1/3`.</span></span>
 
 
-    <span data-ttu-id="56ba5-182">***挑战***</span><span class="sxs-lookup"><span data-stu-id="56ba5-182">***Challenge***</span></span>
+    <span data-ttu-id="a08d8-182">***挑战***</span><span class="sxs-lookup"><span data-stu-id="a08d8-182">***Challenge***</span></span>
 
 
-    <span data-ttu-id="56ba5-183">尝试使用 `double` 类型执行其他的大小数、乘法和除法运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-183">Try other calculations with large numbers, small numbers, multiplication and division using the `double` type.</span></span>  <span data-ttu-id="56ba5-184">尝试执行更复杂的运算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-184">Try more complicated calculations.</span></span>
+    <span data-ttu-id="a08d8-183">尝试使用 `double` 类型执行其他的大小数、乘法和除法运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-183">Try other calculations with large numbers, small numbers, multiplication and division using the `double` type.</span></span>  <span data-ttu-id="a08d8-184">尝试执行更复杂的运算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-184">Try more complicated calculations.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="56ba5-185">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="56ba5-185">This online coding experience is in preview mode.</span></span> <span data-ttu-id="56ba5-186">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="56ba5-186">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="56ba5-187">使用固定点类型</span><span class="sxs-lookup"><span data-stu-id="56ba5-187">Work with fixed point types</span></span>
+    > <span data-ttu-id="a08d8-185">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="a08d8-185">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a08d8-186">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="a08d8-186">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="a08d8-187">使用固定点类型</span><span class="sxs-lookup"><span data-stu-id="a08d8-187">Work with fixed point types</span></span>
   durationInMinutes: 8
   content: >
-    <span data-ttu-id="56ba5-188">大家已学习了 C# 中的基本数字类型，即整数和双精度。</span><span class="sxs-lookup"><span data-stu-id="56ba5-188">You've seen the basic numeric types in C#: integers and doubles.</span></span>  <span data-ttu-id="56ba5-189">下面将介绍另一种需要了解的类型，即 `decimal` 类型。</span><span class="sxs-lookup"><span data-stu-id="56ba5-189">There is one other type to learn: the `decimal` type.</span></span> <span data-ttu-id="56ba5-190">`decimal` 类型的范围较小，但精度高于 `double`。</span><span class="sxs-lookup"><span data-stu-id="56ba5-190">The `decimal` type has a smaller range but greater precision than `double`.</span></span> <span data-ttu-id="56ba5-191">“固定点”一词意味着，十进制小数点（或二进制小数点）不会移动。</span><span class="sxs-lookup"><span data-stu-id="56ba5-191">The term **fixed point** means that the decimal point (or binary point) doesn't move.</span></span> <span data-ttu-id="56ba5-192">让我们来实际操作一下：</span><span class="sxs-lookup"><span data-stu-id="56ba5-192">Let's take a look:</span></span>
+    <span data-ttu-id="a08d8-188">大家已学习了 C# 中的基本数字类型，即整数和双精度。</span><span class="sxs-lookup"><span data-stu-id="a08d8-188">You've seen the basic numeric types in C#: integers and doubles.</span></span>  <span data-ttu-id="a08d8-189">下面将介绍另一种需要了解的类型，即 `decimal` 类型。</span><span class="sxs-lookup"><span data-stu-id="a08d8-189">There is one other type to learn: the `decimal` type.</span></span> <span data-ttu-id="a08d8-190">`decimal` 类型的范围较小，但精度高于 `double`。</span><span class="sxs-lookup"><span data-stu-id="a08d8-190">The `decimal` type has a smaller range but greater precision than `double`.</span></span> <span data-ttu-id="a08d8-191">“固定点”一词意味着，十进制小数点（或二进制小数点）不会移动。</span><span class="sxs-lookup"><span data-stu-id="a08d8-191">The term **fixed point** means that the decimal point (or binary point) doesn't move.</span></span> <span data-ttu-id="a08d8-192">让我们来实际操作一下：</span><span class="sxs-lookup"><span data-stu-id="a08d8-192">Let's take a look:</span></span>
 
 
     ```csharp
@@ -349,7 +349,7 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-193">可以看到，范围小于 `double` 类型。</span><span class="sxs-lookup"><span data-stu-id="56ba5-193">Notice that the range is smaller than the `double` type.</span></span> <span data-ttu-id="56ba5-194">通过试运行以下代码，可以看到十进制类型的精度更高：</span><span class="sxs-lookup"><span data-stu-id="56ba5-194">You can see the greater precision with the decimal type by trying the following code:</span></span>
+    <span data-ttu-id="a08d8-193">可以看到，范围小于 `double` 类型。</span><span class="sxs-lookup"><span data-stu-id="a08d8-193">Notice that the range is smaller than the `double` type.</span></span> <span data-ttu-id="a08d8-194">通过试运行以下代码，可以看到十进制类型的精度更高：</span><span class="sxs-lookup"><span data-stu-id="a08d8-194">You can see the greater precision with the decimal type by trying the following code:</span></span>
 
 
     ```csharp
@@ -370,28 +370,28 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-195">数字中的 `M` 后缀指明了常数应如何使用 `decimal` 类型。</span><span class="sxs-lookup"><span data-stu-id="56ba5-195">The `M` suffix on the numbers is how you indicate that a constant should use the `decimal` type.</span></span>
+    <span data-ttu-id="a08d8-195">数字中的 `M` 后缀指明了常数应如何使用 `decimal` 类型。</span><span class="sxs-lookup"><span data-stu-id="a08d8-195">The `M` suffix on the numbers is how you indicate that a constant should use the `decimal` type.</span></span>
 
 
-    <span data-ttu-id="56ba5-196">可以看到，使用十进制类型执行数学运算时，十进制小数点右侧的数字更多。</span><span class="sxs-lookup"><span data-stu-id="56ba5-196">Notice that the math using the decimal type has more digits to the right of the decimal point.</span></span>
+    <span data-ttu-id="a08d8-196">可以看到，使用十进制类型执行数学运算时，十进制小数点右侧的数字更多。</span><span class="sxs-lookup"><span data-stu-id="a08d8-196">Notice that the math using the decimal type has more digits to the right of the decimal point.</span></span>
 
 
-    <span data-ttu-id="56ba5-197">***挑战***</span><span class="sxs-lookup"><span data-stu-id="56ba5-197">***Challenge***</span></span>
+    <span data-ttu-id="a08d8-197">***挑战***</span><span class="sxs-lookup"><span data-stu-id="a08d8-197">***Challenge***</span></span>
 
 
-    <span data-ttu-id="56ba5-198">至此，大家已了解不同的数字类型。请编写代码来计算圆面积（其中，半径为 2.50 厘米）。</span><span class="sxs-lookup"><span data-stu-id="56ba5-198">Now that you've seen the different numeric types, write code that calculates the area of a circle whose radius is 2.50 centimeters.</span></span> <span data-ttu-id="56ba5-199">请注意，圆面积是用半径的平方乘以 PI 进行计算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-199">Remember that the area of a circle is the radius squared multiplied by PI.</span></span> <span data-ttu-id="56ba5-200">小提示：.NET 包含 PI 常数 <xref:System.Math.PI?displayProperty=nameWithType>，可用于相应的值计算。</span><span class="sxs-lookup"><span data-stu-id="56ba5-200">One hint: .NET contains a constant for PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value.</span></span>
+    <span data-ttu-id="a08d8-198">至此，大家已了解不同的数字类型。请编写代码来计算圆面积（其中，半径为 2.50 厘米）。</span><span class="sxs-lookup"><span data-stu-id="a08d8-198">Now that you've seen the different numeric types, write code that calculates the area of a circle whose radius is 2.50 centimeters.</span></span> <span data-ttu-id="a08d8-199">请注意，圆面积是用半径的平方乘以 PI 进行计算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-199">Remember that the area of a circle is the radius squared multiplied by PI.</span></span> <span data-ttu-id="a08d8-200">小提示：.NET 包含 PI 常数 <xref:System.Math.PI?displayProperty=nameWithType>，可用于相应的值计算。</span><span class="sxs-lookup"><span data-stu-id="a08d8-200">One hint: .NET contains a constant for PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="56ba5-201">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="56ba5-201">This online coding experience is in preview mode.</span></span> <span data-ttu-id="56ba5-202">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="56ba5-202">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="a08d8-201">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="a08d8-201">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a08d8-202">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="a08d8-202">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 
 
-    <span data-ttu-id="56ba5-203">你应获得 19 和 20 之间的答案。</span><span class="sxs-lookup"><span data-stu-id="56ba5-203">You should get an answer between 19 and 20.</span></span>
-- title: <span data-ttu-id="56ba5-204">完成挑战</span><span class="sxs-lookup"><span data-stu-id="56ba5-204">Complete challenge</span></span>
+    <span data-ttu-id="a08d8-203">你应获得 19 和 20 之间的答案。</span><span class="sxs-lookup"><span data-stu-id="a08d8-203">You should get an answer between 19 and 20.</span></span>
+- title: <span data-ttu-id="a08d8-204">完成挑战</span><span class="sxs-lookup"><span data-stu-id="a08d8-204">Complete challenge</span></span>
   durationInMinutes: 1
   content: >
-    <span data-ttu-id="56ba5-205">最后是否生成如下代码？</span><span class="sxs-lookup"><span data-stu-id="56ba5-205">Did you come up with something like this?</span></span>
+    <span data-ttu-id="a08d8-205">最后是否生成如下代码？</span><span class="sxs-lookup"><span data-stu-id="a08d8-205">Did you come up with something like this?</span></span>
 
 
     ```csharp
@@ -405,25 +405,25 @@ items:
     ```
 
 
-    <span data-ttu-id="56ba5-206">如果需要，可以试用一些其他公式。</span><span class="sxs-lookup"><span data-stu-id="56ba5-206">Try some other formulas if you'd like.</span></span>
+    <span data-ttu-id="a08d8-206">如果需要，可以试用一些其他公式。</span><span class="sxs-lookup"><span data-stu-id="a08d8-206">Try some other formulas if you'd like.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="56ba5-207">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="56ba5-207">This online coding experience is in preview mode.</span></span> <span data-ttu-id="56ba5-208">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="56ba5-208">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="a08d8-207">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="a08d8-207">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a08d8-208">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="a08d8-208">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 - content: >-
-    <span data-ttu-id="56ba5-209">你已完成“C# 中的数字”交互式教程。</span><span class="sxs-lookup"><span data-stu-id="56ba5-209">You've completed the "Numbers in C#" interactive tutorial.</span></span> <span data-ttu-id="56ba5-210">可单击下方的“分支和循环”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。</span><span class="sxs-lookup"><span data-stu-id="56ba5-210">You can click the **Branches and Loops** link below to start the next interactive tutorial, or you can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="56ba5-211">“继续学习”步骤将带你回到教程中。</span><span class="sxs-lookup"><span data-stu-id="56ba5-211">The "Keep Learning" step brings you back to these tutorials.</span></span>
+    <span data-ttu-id="a08d8-209">你已完成“C# 中的数字”交互式教程。</span><span class="sxs-lookup"><span data-stu-id="a08d8-209">You've completed the "Numbers in C#" interactive tutorial.</span></span> <span data-ttu-id="a08d8-210">可单击下方的“分支和循环”链接开始下一个交互式教程，或者可访问 [.NET 站点](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)下载 .NET Core SDK，在计算机上创建项目，并继续编码。</span><span class="sxs-lookup"><span data-stu-id="a08d8-210">You can click the **Branches and Loops** link below to start the next interactive tutorial, or you can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="a08d8-211">“继续学习”步骤将带你回到教程中。</span><span class="sxs-lookup"><span data-stu-id="a08d8-211">The "Keep Learning" step brings you back to these tutorials.</span></span>
 
 
-    <span data-ttu-id="56ba5-212">可以参阅下面的主题，详细了解 C# 中的数字：</span><span class="sxs-lookup"><span data-stu-id="56ba5-212">You can learn more about numbers in C# in the following topics:</span></span>
+    <span data-ttu-id="a08d8-212">可以参阅下面的主题，详细了解 C# 中的数字：</span><span class="sxs-lookup"><span data-stu-id="a08d8-212">You can learn more about numbers in C# in the following topics:</span></span>
 
 
-    - [<span data-ttu-id="56ba5-213">整型表</span><span class="sxs-lookup"><span data-stu-id="56ba5-213">Integral Types Table</span></span>](../../language-reference/keywords/integral-types-table.md)
+    - [<span data-ttu-id="a08d8-213">整型类型</span><span class="sxs-lookup"><span data-stu-id="a08d8-213">Integral types</span></span>](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [<span data-ttu-id="56ba5-214">浮点型表</span><span class="sxs-lookup"><span data-stu-id="56ba5-214">Floating-Point Types Table</span></span>](../../language-reference/keywords/floating-point-types-table.md)
+    - [<span data-ttu-id="a08d8-214">浮点型表</span><span class="sxs-lookup"><span data-stu-id="a08d8-214">Floating-Point Types Table</span></span>](../../language-reference/keywords/floating-point-types-table.md)
 
-    - [<span data-ttu-id="56ba5-215">内置类型表</span><span class="sxs-lookup"><span data-stu-id="56ba5-215">Built-In Types Table</span></span>](../../language-reference/keywords/built-in-types-table.md)
+    - [<span data-ttu-id="a08d8-215">内置类型表</span><span class="sxs-lookup"><span data-stu-id="a08d8-215">Built-In Types Table</span></span>](../../language-reference/keywords/built-in-types-table.md)
 
-    - [<span data-ttu-id="56ba5-216">隐式数值转换表</span><span class="sxs-lookup"><span data-stu-id="56ba5-216">Implicit Numeric Conversions Table</span></span>](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+    - [<span data-ttu-id="a08d8-216">隐式数值转换表</span><span class="sxs-lookup"><span data-stu-id="a08d8-216">Implicit Numeric Conversions Table</span></span>](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 
-    - [<span data-ttu-id="56ba5-217">显式数值转换表</span><span class="sxs-lookup"><span data-stu-id="56ba5-217">Explicit Numeric Conversions Table</span></span>](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [<span data-ttu-id="a08d8-217">显式数值转换表</span><span class="sxs-lookup"><span data-stu-id="a08d8-217">Explicit Numeric Conversions Table</span></span>](../../language-reference/keywords/explicit-numeric-conversions-table.md)
