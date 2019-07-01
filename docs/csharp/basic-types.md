@@ -3,12 +3,12 @@ title: 基本类型 - C# 指南
 description: 了解所有 C# 程序中的核心类型（数字、字符串和对象）
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422097"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424461"
 ---
 # <a name="types-variables-and-values"></a>类型、变量和值
 
@@ -28,12 +28,12 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
   
 - 允许执行的运算种类。  
   
-编译器使用类型信息来确保在代码中执行的所有操作都是*类型安全*。 例如，如果声明 [int](language-reference/keywords/int.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](language-reference/keywords/bool.md) 类型的变量执行这些相同操作，则编译器将生成错误，如以下示例所示：  
+编译器使用类型信息来确保在代码中执行的所有操作都是*类型安全*。 例如，如果声明 [int](language-reference/builtin-types/integral-numeric-types.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](language-reference/keywords/bool.md) 类型的变量执行这些相同操作，则编译器将生成错误，如以下示例所示：  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C 和 C++ 开发人员请注意，在 C# 中，[bool](language-reference/keywords/bool.md) 不能转换为 [int](language-reference/keywords/int.md)。  
+> C 和 C++ 开发人员请注意，在 C# 中，[bool](language-reference/keywords/bool.md) 不能转换为 [int](language-reference/builtin-types/integral-numeric-types.md)。  
   
 编译器将类型信息作为元数据嵌入可执行文件中。 公共语言运行时 (CLR) 在运行时使用元数据，以在分配和回收内存时进一步保证类型安全性。  
 
@@ -43,11 +43,11 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-方法签名指定方法参数的类型和返回值。 以下签名显示了需要 [int](language-reference/keywords/int.md) 作为输入参数并返回字符串的方法：  
+方法签名指定方法参数的类型和返回值。 以下签名显示了需要 [int](language-reference/builtin-types/integral-numeric-types.md) 作为输入参数并返回字符串的方法：  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能在声明 [int](language-reference/keywords/int.md) 后向其赋值 [true](language-reference/keywords/true-literal.md) 布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的*类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。 
+在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能在声明 [int](language-reference/builtin-types/integral-numeric-types.md) 后向其赋值 [true](language-reference/keywords/true-literal.md) 布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的*类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。 
 
 有关详细信息，请参阅[强制转换和类型转换](programming-guide/types/casting-and-type-conversions.md)。
 

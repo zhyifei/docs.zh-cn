@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0139f2000c1bc2c5a13a3a542164201e73f0fb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514115"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424211"
 ---
 # <a name="float-c-reference"></a>float（C# 参考）
 
@@ -56,7 +56,7 @@ float x = 3.5F;
 
 ## <a name="example"></a>示例
 
-在下面的示例中，提供 `float` 结果的数学表达式中包含 [int](int.md)、[short](short.md) 和 `float`。 （请记住，`float` 是 <xref:System.Single?displayProperty=nameWithType> 类型的别名。）请注意，表达式中没有任何 [double](double.md)。
+在下面的示例中，提供 `float` 结果的数学表达式中包含 [int](../builtin-types/integral-numeric-types.md)、[short](../builtin-types/integral-numeric-types.md) 和 `float`。 （请记住，`float` 是 <xref:System.Single?displayProperty=nameWithType> 类型的别名。）请注意，表达式中没有任何 [double](double.md)。
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
@@ -71,7 +71,7 @@ float x = 3.5F;
 - [C# 编程指南](../../programming-guide/index.md)
 - [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
 - [C# 关键字](index.md)
-- [整型表](integral-types-table.md)
+- [整型类型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [内置类型表](built-in-types-table.md)
 - [隐式数值转换表](implicit-numeric-conversions-table.md)
 - [显式数值转换表](explicit-numeric-conversions-table.md)

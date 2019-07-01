@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615182"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425542"
 ---
 # <a name="framework-libraries"></a>框架库
 
@@ -28,11 +28,11 @@ BCL 提供最基本的类型和实用工具功能，是其他所有 .NET 类库�
 .NET 包含一组基元类型，所有程序都使用这些类型（使用程度或大或小）。 这些类型包含数据，例如数字、字符串、字节和任意对象。 C# 语言包括这些类型的关键字。 下面列出了这些类型的一组示例，以及匹配的 C# 关键字。
 
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) - CLR 类型系统中的最基本基类。 它位于类型层次结构的根级别。
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)) - 16 位带符号整数类型。 也存在无符号 <xref:System.UInt16>。
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)) - 32 位带符号整数类型。 也存在无符号 [UInt32](../csharp/language-reference/keywords/uint.md)。
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 16 位带符号整数类型。 也存在无符号 <xref:System.UInt16>。
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 32 位带符号整数类型。 也存在无符号 [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md)。
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) - 32 位浮点类型。
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)) -128 位十进制类型。
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)) - 表示内存字节的无符号 8 位整数。
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 表示内存字节的无符号 8 位整数。
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) - 表示 `true` 或 `false` 的布尔类型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) - 表示 Unicode 字符的 16 位数字类型。
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)) -表示一系列字符。 与 `char[]` 不同，但会针对 `string` 中的每个 `char` 启用索引。

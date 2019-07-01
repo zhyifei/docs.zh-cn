@@ -12,12 +12,12 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], parameterless constructor
 - types [C#], parameterless constructor return values
-ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: dfab5107d4a0ad14c3ffbfc6a5f3c4317b44d17c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422031"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424225"
 ---
 # <a name="default-values-table-c-reference"></a>默认值表（C# 参考）
 
@@ -26,20 +26,20 @@ ms.locfileid: "66422031"
 |值类型|默认值|
 |----------------|-------------------|
 |[bool](bool.md)|`false`|
-|[byte](byte.md)|0|
+|[byte](../builtin-types/integral-numeric-types.md)|0|
 |[char](char.md)|'\0'|
 |[decimal](decimal.md)|0M|
 |[double](double.md)|0.0D|
 |[enum](enum.md)|表达式 `(E)0` 生成的值，其中 `E` 是枚举标识符。|
 |[float](float.md)|0.0F|
-|[int](int.md)|0|
-|[long](long.md)|0L|
-|[sbyte](sbyte.md)|0|
-|[short](short.md)|0|
+|[int](../builtin-types/integral-numeric-types.md)|0|
+|[long](../builtin-types/integral-numeric-types.md)|0L|
+|[sbyte](../builtin-types/integral-numeric-types.md)|0|
+|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|通过如下设置生成的值：将所有值类型的字段设置为其默认值，将所有引用类型的字段设置为 `null`。|
-|[uint](uint.md)|0|
-|[ulong](ulong.md)|0|
-|[ushort](ushort.md)|0|
+|[uint](../builtin-types/integral-numeric-types.md)|0|
+|[ulong](../builtin-types/integral-numeric-types.md)|0|
+|[ushort](../builtin-types/integral-numeric-types.md)|0|
 
 ## <a name="remarks"></a>备注
 

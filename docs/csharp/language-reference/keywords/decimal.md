@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad01f9e4f5a8b1a153b1ef306e9d6168335eb3d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600695"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424310"
 ---
 # <a name="decimal-c-reference"></a>decimal（C# 参考）
 
@@ -81,7 +81,7 @@ Console.WriteLine((double)dec + dub);
 
 `Operator '+' cannot be applied to operands of type 'double' and 'decimal'`
 
-在此示例中，同一个表达式中混合使用了 `decimal` 和 [int](../../../csharp/language-reference/keywords/int.md)。 计算结果为 `decimal` 类型。
+在此示例中，同一个表达式中混合使用了 `decimal` 和 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)。 计算结果为 `decimal` 类型。
 
 [!code-csharp[csrefKeywordsTypes#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#6)]
 
@@ -101,7 +101,7 @@ Console.WriteLine((double)dec + dub);
 - [C# 参考](../../../csharp/language-reference/index.md)
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [整型类型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

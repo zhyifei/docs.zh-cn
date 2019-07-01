@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 719e4463806c9c7e8b5407f2494c3b548ffa43e8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200775"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398561"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一维数组（C# 编程指南）
 
@@ -19,7 +19,7 @@ ms.locfileid: "57200775"
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- 此数组包含从 `array[0]` 到 `array[4]` 的元素。 [new](../../../csharp/language-reference/keywords/new.md) 运算符用于创建数组并将数组元素初始化为其默认值。 在此示例中，所有数组元素都将被初始化为零。  
+ 此数组包含从 `array[0]` 到 `array[4]` 的元素。 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符用于创建数组并将数组元素初始化为其默认值。 在此示例中，所有数组元素都将被初始化为零。  
   
  可使用相同方式声明存储字符串元素的数组。 例如:  
   

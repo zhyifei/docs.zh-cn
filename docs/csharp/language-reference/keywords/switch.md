@@ -12,16 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481452"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424122"
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
 
-`switch` 是一个选择语句，它根据与匹配表达式匹配的模式，从候选列表中选择单个开关部分进行执行。
+`switch` 是一个选择语句，它根据与匹配表达式  匹配的模式，从候选列表中选择单个开关部分  进行执行。
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -46,14 +46,14 @@ ms.locfileid: "59481452"
 - [字符型](char.md)。
 - [字符串](string.md)。
 - [bool](bool.md)。
-- 整数值，例如 [int](int.md) 或 [long](long.md)。
+- 整数值，例如 [int](../builtin-types/integral-numeric-types.md) 或 [long](../builtin-types/integral-numeric-types.md)。
 - [枚举](enum.md)值。
 
 从 C# 7.0 开始，匹配表达式可以是任何非 null 表达式。
 
 ## <a name="the-switch-section"></a>开关部分
 
-`switch` 语句包含一个或多个开关部分。 每个 switch 部分包含一个或多个 case 标签（case 或 default 标签），后接一个或多个语句。 `switch` 语句最多可包含一个置于任何 switch 部分中的 default 标签。 以下示例显示了一个简单的 `switch` 语句，该语句包含三个 switch 部分，每个部分包含两个语句。 第二个 switch 部分包含 `case 2:` 和 `case 3:` 标签。
+`switch` 语句包含一个或多个开关部分。 每个 switch 部分包含一个或多个 case 标签  （case 或 default 标签），后接一个或多个语句。 `switch` 语句最多可包含一个置于任何 switch 部分中的 default 标签。 以下示例显示了一个简单的 `switch` 语句，该语句包含三个 switch 部分，每个部分包含两个语句。 第二个 switch 部分包含 `case 2:` 和 `case 3:` 标签。
 
 `switch` 语句中可以包含任意数量的开关部分，每个开关部分可以具有一个或多个 case 标签，如以下示例所示。 但是，任何两个 case 标签不可包含相同的表达式。
 
@@ -121,7 +121,7 @@ switch (caseSwitch)
 其中 *constant* 是要测试的值。 *constant* 可以是以下任何常数表达式：
 
 - [bool](bool.md) 文本，为 `true` 或 `false`。
-- 任何整数常量，例如 [int](int.md)、[long](long.md) 或[字节](byte.md)。
+- 任何整数常量，例如 [int](../builtin-types/integral-numeric-types.md)、[long](../builtin-types/integral-numeric-types.md) 或[字节](../builtin-types/integral-numeric-types.md)。
 - 已声明 `const` 变量的名称。
 - 一个枚举常量。
 - [字符型](char.md)文本。
@@ -149,7 +149,7 @@ switch (caseSwitch)
    case type varname
 ```
 
-其中 *type* 是 *expr* 结果要转换到的类型的名称，*varname* 是 *expr* 结果要转换到的对象（如果匹配成功）。 自 C# 7.1 起，expr 的编译时类型可能为泛型类型参数。
+其中 *type* 是 *expr* 结果要转换到的类型的名称，*varname* 是 *expr* 结果要转换到的对象（如果匹配成功）。 自 C# 7.1 起，expr  的编译时类型可能为泛型类型参数。
 
 如果以下任一条件成立，则 `case` 表达式为 `true`：
 
@@ -157,7 +157,7 @@ switch (caseSwitch)
 
 - *expr* 是派生自 *type* 的类型的一个实例。 换言之，*expr* 结果可以向上转换为 *type* 的一个实例。
 
-- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型是其类型声明中定义的变量类型。 变量的运行时类型是分配给该变量的实例类型。
+- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型  是其类型声明中定义的变量类型。 变量的运行时类型  是分配给该变量的实例类型。
 
 - *expr* 是实现 *type* 接口的类型的一个实例。
 

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 208e97419faee097db8e187081f2910b71ca2e35
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 965408a180245712ceda2c3c17bdf42755af1c2c
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882272"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402457"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教程：配合使用 K 平均值聚类分析和 ML.NET 来对鸢尾花分类
 
@@ -41,23 +41,23 @@ ms.locfileid: "65882272"
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
-1. 打开 Visual Studio。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“IrisFlowerClustering”，然后选择“确定”按钮。
+1. 打开 Visual Studio。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  和“.NET Core”  节点。 然后，选择“控制台应用程序(.NET Core)”  项目模板。 在“名称”文本框中，键入“IrisFlowerClustering”，然后选择“确定”按钮   。
 
-1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件：
+1. 在项目中创建一个名为“数据”的目录来保存数据集和模型文件  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“Data”，然后按 Enter。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”    。 键入“Data”，然后按 Enter。
 
-1. 安装“Microsoft.ML NuGet”包：
+1. 安装“Microsoft.ML NuGet”包  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，选择列表中的“v1.0.0”包，再选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”   。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.ML”，选择列表中的“v1.0.0”包，再选择“安装”按钮     。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
 ## <a name="prepare-the-data"></a>准备数据
 
-1. 下载 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](https://archive.ics.uci.edu/ml/datasets/Iris)页面。
+1. 下载 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 数据集并将其保存至在上一步中创建的“数据”文件夹  。 若要详细了解鸢尾花数据集，请参阅[鸢尾花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)维基百科页面，以及该数据集的源[鸢尾花数据集](https://archive.ics.uci.edu/ml/datasets/Iris)页面。
 
-1. 在“解决方案资源管理器”中，右键单击“iris.data”文件并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+1. 在“解决方案资源管理器”中，右键单击“iris.data”文件并选择“属性”    。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
-该 iris.data 文件包含五列，分别代表以下内容：
+该 iris.data 文件包含五列，分别代表以下内容  ：
 
 - 花萼长度（厘米）
 - 花萼宽度（厘米）
@@ -71,19 +71,19 @@ ms.locfileid: "65882272"
 
 创建输入数据和预测类：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“IrisData.cs”。 然后，选择“添加”按钮。
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“IrisData.cs”     。 然后，选择“添加”  按钮。
 1. 将以下 `using` 指令添加到新文件：
 
    [!code-csharp[Add necessary usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#Usings)]
 
-删除现有类定义并向“IrisData.cs”文件添加以下代码，其中定义了两个类 `IrisData` 和 `ClusterPrediction`：
+删除现有类定义并向“IrisData.cs”文件添加以下代码，其中定义了两个类 `IrisData` 和 `ClusterPrediction`  ：
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
 `IrisData` 是输入数据类，并且具有针对数据集每个特征的定义。 使用 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) 属性在数据集文件中指定源列的索引。
 
-`ClusterPrediction` 类表示应用到 `IrisData` 实例的聚类分析模型的输出。 使用 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性将 `PredictedClusterId` 和 `Distances` 字段分别绑定至 PredictedLabel 和 Score 列。 在聚类分析任务中，这些列具有以下含义：
+`ClusterPrediction` 类表示应用到 `IrisData` 实例的聚类分析模型的输出。 使用 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性将 `PredictedClusterId` 和 `Distances` 字段分别绑定至 PredictedLabel 和 Score 列   。 在聚类分析任务中，这些列具有以下含义：
 
 - **PredictedLabel** 列包含所预测的群集的 ID。
 - **Score** 列包含一个数组，该数组中的数与群集形心之间的距离为欧氏距离的平方。 该数组的长度等于群集数。
@@ -93,7 +93,7 @@ ms.locfileid: "65882272"
 
 ## <a name="define-data-and-model-paths"></a>定义数据和模型路径
 
-返回到 Program.cs 文件并添加两个字段，以保存数据集文件以及用于保存模型的文件的路径：
+返回到 Program.cs 文件并添加两个字段，以保存数据集文件以及用于保存模型的文件的路径  ：
 
 - `_dataPath` 包含具有用于定型模型的数据集的文件的路径。
 - `_modelPath` 包含用于存储定型模型的文件的路径。
@@ -102,13 +102,13 @@ ms.locfileid: "65882272"
 
 [!code-csharp[Initialize paths](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Paths)]
 
-要编译前面的代码，请将以下 `using` 指令添加到 Program.cs 文件顶部：
+要编译前面的代码，请将以下 `using` 指令添加到 Program.cs 文件顶部  ：
 
 [!code-csharp[Add usings for paths](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#UsingsForPaths)]
 
 ## <a name="create-ml-context"></a>创建 ML 上下文
 
-将以下附加 `using` 指令添加到 Program.cs 文件顶部：
+将以下附加 `using` 指令添加到 Program.cs 文件顶部  ：
 
 [!code-csharp[Add Microsoft.ML usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#MLUsings)]
 
@@ -130,7 +130,7 @@ ms.locfileid: "65882272"
 
 对于本教程，聚类分析任务的学习管道包含两个以下步骤：
 
-- 将加载的列连接到“Features”列，由聚类分析训练程序使用；
+- 将加载的列连接到“Features”列，由聚类分析训练程序使用  ；
 - 借助 <xref:Microsoft.ML.Trainers.KMeansTrainer> 训练程序使用 k - 平均值 + + 聚类分析算法来定型模型。
 
 将以下代码添加到 `Main` 方法中：
@@ -159,8 +159,8 @@ ms.locfileid: "65882272"
 
 将 `TestIrisData` 类创建到房屋测试数据实例：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TestIrisData.cs”。 然后，选择“添加”按钮。
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“TestIrisData.cs”     。 然后，选择“添加”  按钮。
 1. 将类修改为静态，如下面的示例所示：
 
    [!code-csharp[Make class static](~/samples/machine-learning/tutorials/IrisFlowerClustering/TestIrisData.cs#Static)]
@@ -169,7 +169,7 @@ ms.locfileid: "65882272"
 
 [!code-csharp[Test data](~/samples/machine-learning/tutorials/IrisFlowerClustering/TestIrisData.cs#TestData)]
 
-若要查找指定项所属的群集，请返回至 Program.cs 文件并将以下代码添加进 `Main` 方法：
+若要查找指定项所属的群集，请返回至 Program.cs 文件并将以下代码添加进 `Main` 方法  ：
 
 [!code-csharp[Predict and output results](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#PredictionExample)]
 

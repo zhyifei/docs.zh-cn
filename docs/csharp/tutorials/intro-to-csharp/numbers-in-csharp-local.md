@@ -3,12 +3,12 @@ title: C# 中的数字 - C# 教程简介
 description: 通过浏览数字类型、其属性和方法了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673855"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423422"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C\# 中的整数和浮点数
 
@@ -18,9 +18,9 @@ ms.locfileid: "57673855"
 
 ## <a name="explore-integer-math"></a>探索整数数学运算
 
-创建名为 numbers-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n NumbersInCSharp -o .`。
+创建名为 numbers-quickstart  的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n NumbersInCSharp -o .`。
 
-在常用编辑器中，打开 Program.cs，并将行 `Console.WriteLine("Hello World!");` 替换为以下代码：
+在常用编辑器中，打开 Program.cs  ，并将行 `Console.WriteLine("Hello World!");` 替换为以下代码：
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 通过在命令窗口中键入 `dotnet run` 运行此代码。
 
-刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数（正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：
+刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数  （正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：
 
 - `-`：减法运算
 - `*`：乘法运算
@@ -53,7 +53,7 @@ Console.WriteLine(c);
 如果愿意，也可以尝试在同一行中执行多个数学运算。 例如，请尝试 `c = a + b - 12 * 17;`。 允许混合使用变量和常数。
 
 > [!TIP]
-> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中包含错误消息，请仔细比对示例代码和你的窗口中的代码，看看哪些需要纠正。
+> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器  会发现并报告这些错误。 如果输出中包含错误消息，请仔细比对示例代码和你的窗口中的代码，看看哪些需要纠正。
 > 这样做有助于了解 C# 代码结构。
 
 你已完成第一步。 开始进入下一部分前，先将当前代码移到单独的方法中。 这样一来，可以更轻松地开始处理新示例。 将 `Main` 方法重命名为 `WorkingWithIntegers`，并编写调用 `WorkingWithIntegers` 的新 `Main` 方法。 完成后，代码应如下所示：
@@ -95,7 +95,7 @@ namespace NumbersInCSharp
 //WorkingWithIntegers();
 ```
 
-`//` 在 C# 中启动 注释。 注释是你想要保留在源代码中但不能作为代码执行的任何文本。 编译器不会从注释中生成任何可执行代码。
+`//` 在 C# 中启动  注释。 注释是你想要保留在源代码中但不能作为代码执行的任何文本。 编译器不会从注释中生成任何可执行代码。
 
 C# 语言使用与数学运算规则一致的规则，定义不同数学运算的优先级。
 乘法和除法的优先级高于加法和减法。
@@ -198,7 +198,7 @@ namespace NumbersInCSharp
 ## <a name="explore-integer-precision-and-limits"></a>探索整数运算精度和限值
 
 在上一个示例中，整数除法截断了结果。
-可以使用取模运算符（即 `%` 字符）计算余数。 在 `Main` 方法中试用以下代码：
+可以使用取模  运算符（即 `%` 字符）计算余数  。 在 `Main` 方法中试用以下代码：
 
 ```csharp
 int a = 7;
@@ -218,7 +218,7 @@ int min = int.MinValue;
 Console.WriteLine($"The range of integers is {min} to {max}");
 ```
 
-如果运算生成的值超过这些限值，则会出现下溢或溢出的情况。 答案似乎是从一个限值覆盖到另一个限值的范围。 例如，将以下两行添加到 `Main` 方法：
+如果运算生成的值超过这些限值，则会出现下溢  或溢出  的情况。 答案似乎是从一个限值覆盖到另一个限值的范围。 例如，将以下两行添加到 `Main` 方法：
 
 ```csharp
 int what = max + 3;
@@ -226,7 +226,7 @@ Console.WriteLine($"An example of overflow: {what}");
 ```
 
 可以看到，答案非常接近最小（负）整数。 与 `min + 2` 相同。
-加法运算会让整数溢出允许的值。
+加法运算会让整数溢出  允许的值。
 答案是一个非常大的负数，因为溢出从最大整数值覆盖回最小整数值。
 
 如果 `int` 类型无法满足需求，还会用到限值和精度不同的其他数字类型。 接下来，将探索这些类型。
@@ -235,7 +235,7 @@ Console.WriteLine($"An example of overflow: {what}");
 
 ## <a name="work-with-the-double-type"></a>使用双精度类型
 
-`double` 数字类型表示双精度浮点数。 这些词可能是第一次听说。 浮点数可用于表示数量级可能非常大或非常小的非整数。 双精度意味着存储这些数字时使用的精度高于单精度。 在新式计算机上，使用双精度数字比使用单精度数字更为常见。
+`double` 数字类型表示双精度浮点数。 这些词可能是第一次听说。 浮点  数可用于表示数量级可能非常大或非常小的非整数。 双精度  意味着存储这些数字时使用的精度高于单精度  。 在新式计算机上，使用双精度数字比使用单精度数字更为常见。
 接下来，将探索双精度类型。 添加以下代码并查看结果：
 
 ```csharp
@@ -283,7 +283,7 @@ Console.WriteLine(third);
 
 ## <a name="work-with-fixed-point-types"></a>使用固定点类型
 
-大家已学习了 C# 中的基本数字类型，即整数和双精度。  下面将介绍另一种需要了解的类型，即 `decimal` 类型。 `decimal` 类型的范围较小，但精度高于 `double`。 “固定点”一词意味着，十进制小数点（或二进制小数点）不会移动。 让我们来实际操作一下：
+大家已学习了 C# 中的基本数字类型，即整数和双精度。  下面将介绍另一种需要了解的类型，即 `decimal` 类型。 `decimal` 类型的范围较小，但精度高于 `double`。 “固定点”一词  意味着，十进制小数点（或二进制小数点）不会移动。 让我们来实际操作一下：
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -320,7 +320,7 @@ Console.WriteLine(c / d);
 
 可以参阅下面的主题，详细了解 C# 中的数字：
 
-- [整型表](../../language-reference/keywords/integral-types-table.md)
+- [整型类型](../../language-reference/builtin-types/integral-numeric-types.md)
 - [浮点型表](../../language-reference/keywords/floating-point-types-table.md)
 - [内置类型表](../../language-reference/keywords/built-in-types-table.md)
 - [隐式数值转换表](../../language-reference/keywords/implicit-numeric-conversions-table.md)

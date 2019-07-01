@@ -11,36 +11,36 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 66cacfbb031a531190a8cc5eafdb3e375609ee1e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647303"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422442"
 ---
 # <a name="making-asynchronous-requests"></a>发出异步请求
 <xref:System.Net> 类为异步访问 Internet 资源使用 .NET Framework 的标准异步编程模型。 <xref:System.Net.WebRequest> 类的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法启动和完成 Internet 资源的异步请求。  
   
 > [!NOTE]
->  在异步回调方法中使用同步调用会导致严重的性能损失。 用 WebRequest 提出的 Internet 请求及其后代必须使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> 读取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法返回的流。  
+>  在异步回调方法中使用同步调用会导致严重的性能损失。 用 WebRequest  提出的 Internet 请求及其后代必须使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> 读取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法返回的流。  
   
- 以下示例代码演示如何将异步调用与 WebRequest 类一起使用。 此示例是一个控制台程序从命令行获取 URI，请求位于 URI 处的资源，然后打印控制台的数据（数据是从 Internet 接收的）。  
+ 以下示例代码演示如何将异步调用与  WebRequest 类一起使用。 此示例是一个控制台程序从命令行获取 URI，请求位于 URI 处的资源，然后打印控制台的数据（数据是从 Internet 接收的）。  
   
- 程序定义了两个类以供自己使用：RequestState 和 ClientGetAsync，前者跨异步调用传递数据，后者实现对 Internet 资源的异步请求。  
+ 程序定义了两个类以供自己使用：RequestState 和 ClientGetAsync，前者跨异步调用传递数据，后者实现对 Internet 资源的异步请求   。  
   
- RequestState 类跨异步方法（这些方法为请求提供服务）调用，保留请求的状态。 它包含 WebRequest 和 <xref:System.IO.Stream> 实例（含对资源的当前请求和在响应中接收的数据流）、一个缓冲区（含当前从 Internet 资源接收的数据）和一个 <xref:System.Text.StringBuilder> 实例（含完整响应）。 使用 WebRequest.BeginGetResponse 注册了 <xref:System.AsyncCallback> 方法时，将 RequestState 作为状态参数传递。  
+  RequestState 类跨异步方法（这些方法为请求提供服务）调用，保留请求的状态。 它包含 WebRequest 和 <xref:System.IO.Stream> 实例（含对资源的当前请求和在响应中接收的数据流）、一个缓冲区（含当前从 Internet 资源接收的数据）和一个 <xref:System.Text.StringBuilder> 实例（含完整响应）。  使用 WebRequest.BeginGetResponse 注册了 <xref:System.AsyncCallback> 方法时，将 RequestState 作为状态参数传递。     
   
- ClientGetAsync 类实现 Internet 资源的异步请求，并将所得的响应写入控制台。 它包含以下列表中描述的方法和属性。  
+  ClientGetAsync 类实现 Internet 资源的异步请求，并将所得的响应写入控制台。 它包含以下列表中描述的方法和属性。  
   
 - `allDone` 属性包含 <xref:System.Threading.ManualResetEvent> 类的实例，它指示请求完成。  
   
-- `Main()` 方法读取命令行并启动对指定 Internet 资源的请求。 它创建 WebRequest `wreq` 和 RequestState `rs`，调用 BeginGetResponse 开始处理请求，然后调用 `allDone.WaitOne()` 方法，以便应用程序不会在回调完成前退出。 在从 Internet 资源读取响应后，`Main()` 将该响应写入到控制台，应用程序结束。  
+- `Main()` 方法读取命令行并启动对指定 Internet 资源的请求。 它创建 WebRequest `wreq` 和 RequestState `rs`，调用 BeginGetResponse 开始处理请求，然后调用 `allDone.WaitOne()` 方法，以便应用程序不会在回调完成前退出。    在从 Internet 资源读取响应后，`Main()` 将该响应写入到控制台，应用程序结束。  
   
 - `showusage()` 方法在控制台上写入一个示例命令行。 命令行上未提供 URI 时，由 `Main()` 调用它。  
   
-- `RespCallBack()` 方法实现 Internet 请求的异步回调方法。 该方法创建包含来自 Internet 资源的响应的 WebResponse 实例，获取响应流，然后开始从该流异步读取数据。  
+- `RespCallBack()` 方法实现 Internet 请求的异步回调方法。 该方法创建包含来自 Internet 资源的响应的  WebResponse 实例，获取响应流，然后开始从该流异步读取数据。  
   
-- `ReadCallBack()` 方法实现用于读取响应流的异步调用方法。 它将从 Internet 资源接收到的数据传输到 RequestState 实例的  ResponseData 属性中，然后开始对响应流的另一次异步读取，直到不再返回数据。 已读取全部数据后，`ReadCallBack()` 关闭响应流并调用 `allDone.Set()` 方法，指示整个响应存在于 ResponseData 中。  
+- `ReadCallBack()` 方法实现用于读取响应流的异步调用方法。 它将从 Internet 资源接收到的数据传输到  RequestState 实例的  ResponseData 属性中，然后开始对响应流的另一次异步读取，直到不再返回数据。 已读取全部数据后，`ReadCallBack()` 关闭响应流并调用 `allDone.Set()` 方法，指示整个响应存在于 ResponseData 中  。  
   
     > [!NOTE]
     >  所有网络流均已关闭，这一点非常重要。 如果未关闭每个请求和响应流，应用程序将耗尽与服务器的连接，无法处理其他请求。  
@@ -272,7 +272,7 @@ Class ClientGetAsync
        Dim resp As HttpWebResponse = _  
            CType(req.EndGetResponse(ar), HttpWebResponse)  
   
-       ' Start reading data from the respons stream.  
+       ' Start reading data from the response stream.  
        Dim ResponseStream As Stream = resp.GetResponseStream()  
   
        ' Store the reponse stream in RequestState to read  

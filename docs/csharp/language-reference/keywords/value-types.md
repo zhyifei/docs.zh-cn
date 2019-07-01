@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422119"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424036"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -40,11 +40,11 @@ ms.locfileid: "66422119"
 
 简单类型是 C# 提供的一组预定义的结构类型，其中包括以下类型： 
 
-- [整型类型](integral-types-table.md)：整数类型和 [字符型](char.md)类型
+- [整型类型](../builtin-types/integral-numeric-types.md)：整数类型和 [字符型](char.md)类型
 - [浮点类型](floating-point-types-table.md)
 - [bool](bool.md)
 
-简单类型通过关键字标识，但这些关键字只是 <xref:System> 命名空间中的预定义结构类型的别名。 例如， [int](int.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的别名。 有关别名的完整列表，请参阅[内置类型表](built-in-types-table.md)。
+简单类型通过关键字标识，但这些关键字只是 <xref:System> 命名空间中的预定义结构类型的别名。 例如， [int](../builtin-types/integral-numeric-types.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的别名。 有关别名的完整列表，请参阅[内置类型表](built-in-types-table.md)。
 
 简单类型不同于其他结构类型，简单类型允许某些附加操作：
 
@@ -82,15 +82,15 @@ myInt = 0;         // Assign an initial value, 0 in this example.
 int myInt = new int();
 ```
 
-- 或 -
+\- 或 -
 
 ```csharp
 int myInt = 0;
 ```
 
-使用 [new](new.md) 运算符调用特定类型的无参数构造函数，并将默认值赋给变量。 在上述示例中，无参数构造函数将值 `0` 赋给 `myInt`。 有关通过调用默认构造函数所赋予的值的详细信息，请参阅[默认值表](default-values-table.md)。
+使用 [new](../operators/new-operator.md) 运算符调用特定类型的无参数构造函数，并将默认值赋给变量。 在上述示例中，无参数构造函数将值 `0` 赋给 `myInt`。 有关通过调用默认构造函数所赋予的值的详细信息，请参阅[默认值表](default-values-table.md)。
 
-对于用户定义类型，使用 [new](new.md) 调用无参数构造函数。 例如，以下语句调用 `Point` 结构的无参数构造函数：
+对于用户定义类型，使用 [new](../operators/new-operator.md) 调用无参数构造函数。 例如，以下语句调用 `Point` 结构的无参数构造函数：
 
 ```csharp
 Point p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 
 进行此调用后，该结构被视为已明确赋值；即，它的所有成员都被初始化为其默认值。
 
-有关 `new` 运算符的详细信息，请参阅 [new](new.md)。
+有关 `new` 运算符的详细信息，请参阅 [new](../operators/new-operator.md)。
 
 有关设置数值类型的输出格式的信息，请参阅[设置数值结果表的格式](formatting-numeric-results-table.md)。
 

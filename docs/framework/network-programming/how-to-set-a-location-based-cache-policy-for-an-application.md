@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- expliciting defining cache behavior
+- explicitly defining cache behavior
 - location-based cache policies
 - local cache
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 1bbbb558134e5f11537de0efef594be2b964cdcb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647375"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422473"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：为应用程序设置基于位置的缓存策略
 基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。 本主题演示如何以编程方式设置缓存策略。 有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  

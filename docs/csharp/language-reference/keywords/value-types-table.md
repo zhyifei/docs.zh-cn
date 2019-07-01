@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 959d4840344ba041ae1b01fd6d202f2b53936afc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 98829f30c2c25c0710cf3fe044359d3c7538fe76
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422368"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424040"
 ---
 # <a name="value-types-table-c-reference"></a>值类型表（C# 参考）
 
@@ -21,20 +21,21 @@ ms.locfileid: "66422368"
 |值类型|类别|类型后缀|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|Boolean||
-|[byte](byte.md)|无符号、数字、[整型](integral-types-table.md)||
-|[char](char.md)|无符号、数字、[整型](integral-types-table.md)||
+|[byte](../builtin-types/integral-numeric-types.md)|无符号、数字、[整型](../builtin-types/integral-numeric-types.md)||
+|[char](char.md)|无符号、数字、[整型](../builtin-types/integral-numeric-types.md)
+)||
 |[decimal](decimal.md)|数字、[浮点](floating-point-types-table.md)|M 或 m|
 |[double](double.md)|数字、[浮点](floating-point-types-table.md)|D 或 d|
 |[enum](enum.md)|枚举||
 |[float](float.md)|数字、[浮点](floating-point-types-table.md)|F 或 f|
-|[int](int.md)|带符号、数字、[整型](integral-types-table.md)||
-|[long](long.md)|带符号、数字、[整型](integral-types-table.md)|L 或 l|
-|[sbyte](sbyte.md)|带符号、数字、[整型](integral-types-table.md)||
-|[short](short.md)|带符号、数字、[整型](integral-types-table.md)||
+|[int](../builtin-types/integral-numeric-types.md)|带符号、数字、[整型](../builtin-types/integral-numeric-types.md)||
+|[long](../builtin-types/integral-numeric-types.md)|带符号、数字、[整型](../builtin-types/integral-numeric-types.md)|L 或 l|
+|[sbyte](../builtin-types/integral-numeric-types.md)|带符号、数字、[整型](../builtin-types/integral-numeric-types.md)||
+|[short](../builtin-types/integral-numeric-types.md)|带符号、数字、[整型](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|用户定义的结构||
-|[uint](uint.md)|无符号、数字、[整型](integral-types-table.md)|U 或 u|
-|[ulong](ulong.md)|无符号、数字、[整型](integral-types-table.md)|UL、Ul、uL、ul、LU、Lu、lU 或 lu|
-|[ushort](ushort.md)|无符号、数字、[整型](integral-types-table.md)||
+|[uint](../builtin-types/integral-numeric-types.md)|无符号、数字、[整型](../builtin-types/integral-numeric-types.md)|U 或 u|
+|[ulong](../builtin-types/integral-numeric-types.md)|无符号、数字、[整型](../builtin-types/integral-numeric-types.md)|UL、Ul、uL、ul、LU、Lu、lU 或 lu|
+|[ushort](../builtin-types/integral-numeric-types.md)|无符号、数字、[整型](../builtin-types/integral-numeric-types.md)||
 
 ## <a name="remarks"></a>备注
 

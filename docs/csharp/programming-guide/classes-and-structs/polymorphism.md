@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583066"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398372"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多态性（C# 编程指南）
 多态性常被视为自封装和继承之后，面向对象的编程的第三个支柱。 Polymorphism（多态性）是一个希腊词，指“多种形态”，多态性具有两个截然不同的方面：  
   
 - 在运行时，在方法参数和集合或数组等位置，派生类的对象可以作为基类的对象处理。 发生此情况时，该对象的声明类型不再与运行时类型相同。  
   
-- 基类可以定义并实现[虚](../../../csharp/language-reference/keywords/virtual.md)方法，派生类可以[重写](../../../csharp/language-reference/keywords/override.md)这些方法，即派生类提供自己的定义和实现。 在运行时，客户端代码调用该方法，CLR 查找对象的运行时类型，并调用虚方法的重写方法。 因此，你可以在源代码中调用基类的方法，但执行该方法的派生类版本。  
+- 基类可以定义并实现[虚](../../../csharp/language-reference/keywords/virtual.md)方法，派生类可以[重写](../../../csharp/language-reference/keywords/override.md)这些方法，即派生类提供自己的定义和实现  。 在运行时，客户端代码调用该方法，CLR 查找对象的运行时类型，并调用虚方法的重写方法。 因此，你可以在源代码中调用基类的方法，但执行该方法的派生类版本。  
   
  虚方法允许你以统一方式处理多组相关的对象。 例如，假定你有一个绘图应用程序，允许用户在绘图图面上创建各种形状。 你在编译时不知道用户将创建哪些特定类型的形状。 但应用程序必须跟踪创建的所有类型的形状，并且必须更新这些形状以响应用户鼠标操作。 你可以使用多态性通过两个基本步骤解决这一问题：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64583066"
  虚方法和属性允许派生类扩展基类，而无需使用方法的基类实现。 有关详细信息，请参阅[使用 Override 和 New 关键字进行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)。 接口提供另一种方式来定义将实现留给派生类的方法或方法集。 有关详细信息，请参阅[接口](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>使用新成员隐藏基类成员  
- 如果希望派生成员具有与基类中的成员相同的名称，但又不希望派生成员参与虚调用，则可以使用 [new](../../../csharp/language-reference/keywords/new.md) 关键字。 `new` 关键字放置在要替换的类成员的返回类型之前。 以下代码提供了一个示例：  
+ 如果希望派生成员具有与基类中的成员相同的名称，但又不希望派生成员参与虚调用，则可以使用 [new](../../../csharp/language-reference/keywords/new-modifier.md) 关键字。 `new` 关键字放置在要替换的类成员的返回类型之前。 以下代码提供了一个示例：  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   

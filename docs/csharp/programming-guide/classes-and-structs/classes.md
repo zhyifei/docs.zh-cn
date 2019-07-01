@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596693"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398593"
 ---
 # <a name="classes-c-programming-guide"></a>类（C# 编程指南）
 
 ## <a name="reference-types"></a>引用类型  
-定义为[类](../../../csharp/language-reference/keywords/class.md)的一个类型是*引用类型*。 在运行时，如果声明引用类型的变量，此变量就会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建类实例，或直到为此变量分配可能已在其他位置创建的兼容类型的对象，如下面的示例所示：
+定义为[类](../../../csharp/language-reference/keywords/class.md)的一个类型是*引用类型*。 在运行时，如果声明引用类型的变量，此变量就会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符显式创建类实例，或直到为此变量分配可能已在其他位置创建的兼容类型的对象，如下面的示例所示：
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -47,7 +47,7 @@ MyClass mc2 = mc;
 
 虽然它们有时可以互换使用，但类和对象是不同的概念。 类定义对象类型，但不是对象本身。 对象是基于类的具体实体，有时称为类的实例。  
   
- 可通过使用 [new](../../language-reference/keywords/new.md) 关键字，后跟对象要基于的类的名称，来创建对象，如：  
+ 可通过使用 [new](../../language-reference/operators/new-operator.md) 关键字，后跟对象要基于的类的名称，来创建对象，如：  
 
  ```csharp
  Customer object1 = new Customer();
@@ -70,7 +70,7 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>类继承  
 
-类完全支持继承，这是面向对象的编程的基本特点。 创建类时，可以继承自其他任何未定义为 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的接口或类，而且其他类也可以继承自你的类并重写类虚方法。
+类完全支持继承  ，这是面向对象的编程的基本特点。 创建类时，可以继承自其他任何未定义为 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的接口或类，而且其他类也可以继承自你的类并重写类虚方法。
 
 继承是通过使用*派生*来完成的，这意味着类是通过使用其数据和行为所派生自的*基类*来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 34e3370b0f6d28160be3ad9d918c110fc93f51fe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1b2aae49fbea138646b5f325919246238b2401ae
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674076"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398356"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>传递引用类型参数（C# 编程指南）
 [引用类型](../../../csharp/language-reference/keywords/reference-types.md)的变量不直接包含其数据；它包含对其数据的引用。 如果按值传递引用类型参数，则可能更改属于所引用对象的数据，例如类成员的值。 但是，不能更改引用本身的值；例如，不能使用相同引用为新对象分配内存，并将其保留在方法外部。 为此，请使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 关键字传递参数。 为简单起见，下面的示例使用 `ref`。  
@@ -21,7 +21,7 @@ ms.locfileid: "57674076"
   
  [!code-csharp[csProgGuideParameters#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#7)]  
   
- 在前面的示例中，数组 `arr` 属于引用类型，传递给不含 `ref` 参数的方法。 在这种情况下，将向该方法传递一个指向 `arr` 的引用副本。 输出表明，此方法可以更改数组元素的内容，在本示例中将 `1` 更改为了 `888`。 但是，通过在 `Change` 方法内使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符来分配一份新的内存可使变量 `pArray` 引用新的数组。 因此，此后的任意更改都不会影响创建于 `Main` 内的原始数组 `arr`。 实际上，本示例创建了两个数组，一个在 `Main` 方法内，另一个在 `Change` 方法内。  
+ 在前面的示例中，数组 `arr` 属于引用类型，传递给不含 `ref` 参数的方法。 在这种情况下，将向该方法传递一个指向 `arr` 的引用副本。 输出表明，此方法可以更改数组元素的内容，在本示例中将 `1` 更改为了 `888`。 但是，通过在 `Change` 方法内使用 [new](../../../csharp/language-reference/operators/new-operator.md) 运算符来分配一份新的内存可使变量 `pArray` 引用新的数组。 因此，此后的任意更改都不会影响创建于 `Main` 内的原始数组 `arr`。 实际上，本示例创建了两个数组，一个在 `Main` 方法内，另一个在 `Change` 方法内。  
   
 ## <a name="passing-reference-types-by-reference"></a>按引用传递引用类型  
  除了 `ref` 关键字添加到方法标头和调用，以下示例与上述示例相同。 方法中所作的任何更改都会影响调用程序中的原始变量。  

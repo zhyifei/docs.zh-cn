@@ -3,12 +3,12 @@ title: 类和对象 - C# 简介教程
 description: 创建首个 C# 程序，并探索面向对象的概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204777"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397831"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>使用类和对象探索面向对象的编程
 
@@ -16,7 +16,7 @@ ms.locfileid: "55204777"
 
 ## <a name="create-your-application"></a>创建应用程序
 
-使用终端窗口，创建名为 classes 的目录。 可以在其中生成应用程序。 将此目录更改为当前目录，并在控制台窗口中键入 `dotnet new console`。 此命令可创建应用程序。 打开 Program.cs。 应如下所示：
+使用终端窗口，创建名为 classes  的目录。 可以在其中生成应用程序。 将此目录更改为当前目录，并在控制台窗口中键入 `dotnet new console`。 此命令可创建应用程序。 打开 Program.cs  。 应如下所示：
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-在本教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes 目录中，新建名为 BankAccount.cs 的文件。 
+在本教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes  目录中，新建名为 BankAccount.cs  的文件。 
 
 此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本教程中，银行帐户支持以下行为：
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-构造函数是在使用 [`new`](../../language-reference/keywords/new.md) 创建对象时进行调用。 将 program.cs 中的代码行 `Console.WriteLine("Hello World!");` 替换为以下代码行（将 `<name>` 替换为自己的名称）：
+构造函数是在使用 [`new`](../../language-reference/operators/new-operator.md) 创建对象时进行调用。 将 program.cs 中的代码行 `Console.WriteLine("Hello World!");` 替换为以下代码行（将 `<name>` 替换为自己的名称）：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -127,7 +127,7 @@ accountNumberSeed++;
 
 [!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
 
-<xref:System.Collections.Generic.List%601> 类要求导入不同的命名空间。 在 BankAccount.cs 的开头，添加以下代码：
+<xref:System.Collections.Generic.List%601> 类要求导入不同的命名空间。 在 BankAccount.cs  的开头，添加以下代码：
 
 ```csharp
 using System.Collections.Generic;
@@ -145,7 +145,7 @@ using System.Collections.Generic;
 
 [!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
 
-[`throw`](../../language-reference/keywords/throw.md) 语句将引发异常。 当前块执行结束，将控制权移交给在调用堆栈中发现的第一个匹配的 `catch` 块。 添加 `catch` 块可以稍后再测试一下此代码。
+[`throw`](../../language-reference/keywords/throw.md) 语句将引发异常  。 当前块执行结束，将控制权移交给在调用堆栈中发现的第一个匹配的 `catch` 块。 添加 `catch` 块可以稍后再测试一下此代码。
 
 构造函数应进行一处更改，更改为添加初始交易，而不是直接更新余额。 由于已编写 `MakeDeposit` 方法，因此通过构造函数调用它。 完成的构造函数应如下所示：
 
@@ -200,7 +200,7 @@ catch (InvalidOperationException e)
 
 上面的代码使用 <xref:System.Text.StringBuilder> 类，设置包含每个交易行的字符串的格式。 在前面的教程中，也遇到过字符串格式设置代码。 新增的一个字符为 `\t`。 这用于插入选项卡，从而设置输出格式。
 
-添加以下代码行，在 Program.cs 中对它进行测试：
+添加以下代码行，在 Program.cs  中对它进行测试：
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());

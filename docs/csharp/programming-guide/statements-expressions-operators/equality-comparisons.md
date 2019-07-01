@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 50b1cdb8b7e5087f1fd6669e7163e2c15e9b23bf
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545450"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423650"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等性比较（C# 编程指南）
 
-有时需要比较两个值是否相等。 在某些情况下，测试的是“值相等性”，也称为“等效性”，这意味着两个变量包含的值相等。 在其他情况下，必须确定两个变量是否引用内存中的同一基础对象。 此类型的相等性称为“引用相等性”或“标识”。 本主题介绍这两种相等性，并提供指向其他主题的链接，供用户了解详细信息。  
+有时需要比较两个值是否相等。 在某些情况下，测试的是“值相等性”  ，也称为“等效性”  ，这意味着两个变量包含的值相等。 在其他情况下，必须确定两个变量是否引用内存中的同一基础对象。 此类型的相等性称为“引用相等性”  或“标识”  。 本主题介绍这两种相等性，并提供指向其他主题的链接，供用户了解详细信息。  
   
 ## <a name="reference-equality"></a>引用相等性
 
@@ -28,7 +28,7 @@ ms.locfileid: "58545450"
 
 ## <a name="value-equality"></a>值相等性
 
- 值相等性指两个对象包含相同的一个或多个值。 对于基元值类型（例如 [int](../../../csharp/language-reference/keywords/int.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md)），针对值相等性的测试简单明了。 可以使用 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 运算符，如下面的示例所示。  
+ 值相等性指两个对象包含相同的一个或多个值。 对于基元值类型（例如 [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 或 [bool](../../../csharp/language-reference/keywords/bool.md)），针对值相等性的测试简单明了。 可以使用 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 运算符，如下面的示例所示。  
   
 ```csharp  
 int a = GetOriginalValue();  
