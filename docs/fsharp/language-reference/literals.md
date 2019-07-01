@@ -1,13 +1,13 @@
 ---
 title: 文本
 description: 了解有关在中的文本类型F#编程语言。
-ms.date: 06/08/2019
-ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.date: 06/28/2019
+ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816230"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487784"
 ---
 # <a name="literals"></a>文本
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>备注
 
-Unicode 字符串可包含可以通过使用指定的显式编码`\u`跟 16 位十六进制代码或可以通过使用指定的 UTF-32 编码`\U`跟表示 Unicode 的 32 位十六进制代码代理项对。
+Unicode 字符串可包含可以通过使用指定的显式编码`\u`跟 16 位十六进制代码 (0000-FFFF) 或可以通过使用指定的 UTF-32 编码`\U`跟表示 32 位十六进制代码任何 Unicode 码位 (00000000-00010FFFF)。
 
 使用其他按位运算符以外的其他`|||`不允许使用。
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423884"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486939"
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -67,7 +67,7 @@ ms.locfileid: "66423884"
  在极少数情况下，如果 X.509 证书包含多个备选主题名称，并且您使用备选主题名称进行授权，则授权可能会失败。  
   
 ## <a name="protect-configuration-files-with-acls"></a>使用 ACL 保护配置文件  
- 你可以在代码和配置文件中为 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所颁发的令牌指定必需的和可选的声明。 这会导致在发送到安全令牌服务的 `RequestSecurityToken` 消息中发出相应的元素。 攻击者可能会通过修改代码或配置来移除必需的或可选的声明，从而可能会让安全令牌服务颁发不允许访问目标服务的令牌。  
+ 为 CardSpace 颁发的令牌，可以在代码和配置文件中指定必选和可选声明。 这会导致在发送到安全令牌服务的 `RequestSecurityToken` 消息中发出相应的元素。 攻击者可能会通过修改代码或配置来移除必需的或可选的声明，从而可能会让安全令牌服务颁发不允许访问目标服务的令牌。  
   
  若要缓解此问题：需要修改配置文件的计算机访问。 使用文件访问控制列表 (ACL) 来保护配置文件。 WCF 要求代码是在应用程序目录或全局程序集缓存中，只允许从配置加载此类代码。 使用目录 ACL 可以保护目录。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624517"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487090"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>如何：在联合身份验证服务上配置凭据
 在 Windows Communication Foundation (WCF) 中，创建联合的服务包含以下主要步骤：  
@@ -28,7 +28,7 @@ ms.locfileid: "64624517"
   
 1. 使用 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 类的 <xref:System.ServiceModel.Description.ServiceCredentials> 属性返回对 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 实例的引用。 该属性可从 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 类的 <xref:System.ServiceModel.ServiceHostBase> 属性访问。  
   
-2. 如果要对自行颁发的令牌（比如 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 卡）进行身份验证，则将 `true` 属性设置为 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。 默认值为 `false`。  
+2. 设置<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>属性设置为`true`如果如 CardSpace 卡自行颁发的令牌进行身份验证。 默认值为 `false`。  
   
 3. 用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 类的实例填充由 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 属性返回的集合。 每个实例表示一个颁发者，服务将从该颁发者对令牌进行身份验证。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "64624517"
   
 1. 创建`<issuedTokenAuthentication>`的子元素 <`serviceCredentials`> 元素。  
   
-2. 如果要验证自行颁发的令牌（比如 `allowUntrustedRsaIssuers` 卡），则将 `<issuedTokenAuthentication>` 元素的 `true` 属性设置为 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。  
+2. 设置`allowUntrustedRsaIssuers`的属性`<issuedTokenAuthentication>`元素`true`如果身份验证的自行颁发的令牌，如 CardSpace 卡。  
   
 3. 创建一个 `<knownCertificates>` 元素，作为 `<issuedTokenAuthentication>` 元素的子元素。  
   

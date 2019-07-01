@@ -1,13 +1,13 @@
 ---
 title: 字符串
 description: 了解如何F#'string' 类型不可变的文本表示为一系列 Unicode 字符。
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642081"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487773"
 ---
 # <a name="strings"></a>字符串
 
@@ -29,7 +29,7 @@ ms.locfileid: "65642081"
 |反斜杠|`\\`|
 |引号|`\"`|
 |撇号|`\'`|
-|Unicode 字符|`\uXXXX` 或`\UXXXX`(其中`X`表示一个十六进制数字)|
+|Unicode 字符|`\uXXXX` (Utf-16) 或`\U00XXXXXX`(UTF-32) (其中`X`表示一个十六进制数字)|
 
 如果前面有 @ 符号，则该文本是原义字符串。 这意味着，将忽略任何转义序列，但两个引号字符解释为一个引号字符。
 

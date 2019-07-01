@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832690"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487179"
 ---
 # <a name="application-startup-time"></a>应用程序启动时间
 启动 WPF 应用程序所需的时间可能存在极大差异。 本主题介绍用于减少 Windows Presentation Foundation (WPF) 应用程序假设启动时间和实际启动时间的各种技巧。  
@@ -65,7 +65,7 @@ ms.locfileid: "66832690"
  同时具有 Ngen 和 JIT 模块可能会导致最差的效果。 这是因为必须加载 mscorjit.dll，且当 JIT 编译器处理代码时，当编译器读取程序集的元数据时，必须访问 Ngen 映像中的许多页面。  
   
 ### <a name="ngen-and-clickonce"></a>Ngen 和 ClickOnce  
- 计划用于部署应用程序的方法在加载期间也会造成影响。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 应用程序部署不支持 Ngen。 如果决定对应用程序使用 Ngen.exe，则需要使用其他部署机制，如 Windows Installer。  
+ 计划用于部署应用程序的方法在加载期间也会造成影响。 ClickOnce 应用程序部署不支持 Ngen。 如果决定对应用程序使用 Ngen.exe，则需要使用其他部署机制，如 Windows Installer。  
   
  有关详细信息，请参阅 [Ngen.exe（本机映像生成器）](../../tools/ngen-exe-native-image-generator.md)。  
   
@@ -112,9 +112,9 @@ ms.locfileid: "66832690"
  如果必须使用<xref:System.Xml.Serialization.XmlSerializer>类，您可以获得更好的性能预生成序列化程序集。  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>将 ClickOnce 配置为在启动后检查更新  
- 如果应用程序使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]，请通过将 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 配置为在应用程序启动后检查部署站点是否有更新，从而避免在启动时访问网络。  
+ 如果你的应用程序使用 ClickOnce，配置 ClickOnce 应用程序启动后检查部署站点有更新来避免在启动时的网络访问权限。  
   
- 如果使用 XAML 浏览器应用程序 (XBAP) 模型，请记住，即使 XBAP 已存在于 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 缓存中，[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 也会检查部署站点是否存在更新。 有关详细信息，请参阅 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)。  
+ 如果使用 XAML 浏览器应用程序 (XBAP) 模型，请注意 ClickOnce 检查部署站点有更新，即使 XBAP 已位于 ClickOnce 缓存。 有关详细信息，请参阅 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)。  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>将 PresentationFontCache 服务配置为自动启动  
  在重新启动后，要运行的第一个 WPF 应用程序是 PresentationFontCache 服务。 该服务会缓存系统字体、改进字体访问，并提高整体性能。 在启动服务时会产生开销，某些受控环境中也存在开销，请考虑将服务配置为在系统重启时自动启动。  

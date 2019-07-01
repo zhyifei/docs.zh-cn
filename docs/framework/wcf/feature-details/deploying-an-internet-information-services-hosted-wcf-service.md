@@ -2,12 +2,12 @@
 title: 部署承载于 Internet 信息服务中的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402299"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486917"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 
@@ -103,7 +103,7 @@ IIS 承载的 WCF 服务应用程序 Web.config 文件中存储其配置。 IIS 
 
 ### <a name="available-transports"></a>可用传输
 
-WCF 服务承载于 IIS 5.1 和 IIS 6.0 被限制为使用基于 HTTP 的通信。 在这些 IIS 平台上，将所承载的服务配置为使用非 HTTP 绑定会导致服务激活期间出错。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，支持的传输包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ 以及用于与现有 MSMQ 应用程序向后兼容的 msmq.formatname。
+WCF 服务承载于 IIS 5.1 和 IIS 6.0 被限制为使用基于 HTTP 的通信。 在这些 IIS 平台上，将所承载的服务配置为使用非 HTTP 绑定会导致服务激活期间出错。 对于 IIS 7.0，支持的传输包括 HTTP、 Net.TCP、 Net.Pipe、 Net.MSMQ 和 msmq.formatname 的向后与现有 MSMQ 应用程序兼容性。
 
 ### <a name="http-transport-security"></a>HTTP 传输安全
 

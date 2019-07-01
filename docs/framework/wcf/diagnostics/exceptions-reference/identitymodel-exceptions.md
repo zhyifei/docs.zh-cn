@@ -2,12 +2,12 @@
 title: IdentityModel 异常
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998512"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486670"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 异常
 本主题列出 IdentityModel 生成的所有异常。  
@@ -100,11 +100,11 @@ ms.locfileid: "61998512"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|缺少所读取的 SamlAssertion 的 MajorVersion 或其长度为 0。|  
 |SamlAttributeClaimRightShouldBePossessProperty|此 SamlAttribute 构造函数需要声明权利具有值 System.IdentityModel.Claims.Rights.PossessProperty。|  
 |AuthorizationPolicyEvaluated|已评估带有特定 ID 的策略。|  
-|SAMLUnableToLoadCondtions|\<Saml: conditions > 未能加载元素。|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<Saml: conditions > 未能加载元素。|  
 |AESKeyLengthNotSupported|不支持特定位密钥。 仅支持 128、192 和 256 位密钥。|  
 |UserNameCannotBeEmpty|用户名不能为空。|  
 |AlgorithmAndPublicKeyMisMatch|指定的算法和公钥不匹配。|  
-|SAMLUnableToLoadCondtion|\<Saml: conditions > 未能加载元素。|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<Saml: conditions > 未能加载元素。|  
 |SamlAssertionMissingSigningCredentials|尚未在 SamlAssertion 上设置 SigningCredentials。 必须签名 SamlAssertion，请在要处理的 SamlAssertion 上设置有效的 SigningCredentials。|  
 |SspiPayloadNotEncrypted|未使用 SSPI 安全上下文加密二进制数据。|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|所读取的 SamlAuthorizationDecisionStatement 不包含任何 SamlAction。|  

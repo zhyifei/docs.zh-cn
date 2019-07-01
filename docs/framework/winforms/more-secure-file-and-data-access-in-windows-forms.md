@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: c804a0a751969377c292613fdae8cc19b266ffa9
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8ad64ddcb25aa7037e30ad0618d16d654d9855d6
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834062"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487254"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
 .NET Framework 使用权限来帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
@@ -26,7 +26,7 @@ ms.locfileid: "66834062"
  遇到安全限制时，你有两个选择：断言该权限（假设已将该权限授予你的应用程序），或者使用编写为用于部分信任中的功能版本。 以下各节探讨如何使用文件、数据库和在部分信任环境中运行的应用程序中的注册表访问。  
   
 > [!NOTE]
->  默认情况下，生成 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具默认这些部署从在其上运行的计算机请求完全信任。 如果您决定要在部分信任环境中运行的更高的安全性权益，则必须更改此默认值在 Visual Studio 或 Windows 软件开发工具包 (SDK) 工具 （Mage.exe 或 MageUI.exe） 之一。 有关 Windows 窗体安全性以及如何确定您的应用程序的适当的信任级别的详细信息，请参阅[中的安全性 Windows 窗体概述](security-in-windows-forms-overview.md)。  
+>  默认情况下，生成 ClickOnce 部署的工具默认这些部署到从其运行的计算机请求完全信任。 如果您决定要在部分信任环境中运行的更高的安全性权益，则必须更改此默认值在 Visual Studio 或 Windows 软件开发工具包 (SDK) 工具 （Mage.exe 或 MageUI.exe） 之一。 有关 Windows 窗体安全性以及如何确定您的应用程序的适当的信任级别的详细信息，请参阅[中的安全性 Windows 窗体概述](security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>文件访问  
  <xref:System.Security.Permissions.FileIOPermission>类控制.NET Framework 中的文件和文件夹访问。 默认情况下，安全系统不会向本地 Intranet 和 Internet 区域等部分信任环境授予 <xref:System.Security.Permissions.FileIOPermission>。 但是，如果修改应用程序的设计或使用不同的方法访问文件，那么需要文件访问权限的应用程序仍可以在这些环境中正常工作。 默认情况下，将向本地 Intranet 区域授予以下权限：具有相同的站点访问权限和相同的目录访问权限、连回其源站点、从其安装目录进行读取。 默认情况下，仅向 Internet 区域授予连回其源站点的权限。  

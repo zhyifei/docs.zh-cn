@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626974"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486858"
 ---
 # <a name="distributed-application-security"></a>分布式应用程序安全
 Windows Communication Foundation (WCF) 安全分为三个主要功能区域： 传输安全、 访问控制和审核。 传输安全提供完整性、保密性和身份验证。 传输安全由传送安全、消息安全或 `TransportWithMessageCredential` 实现。  
@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF) 安全分为三个主要功能区域： �
 |Windows|允许在 Windows 凭据的已通过身份验证的上下文中执行 SOAP 消息交换。 使用 SSPI 协商机制选择 Kerberos 协议或 NTLM 作为身份验证服务。|  
 |用户名|允许服务可以要求使用用户名凭据对客户端进行身份验证。 请注意，WCF 不允许使用的用户名，例如生成签名或加密数据的任何加密操作。 在这种情况下，WCF 强制执行传输的安全性时使用用户名凭据。|  
 |证书|允许服务要求使用证书对客户端进行身份验证。|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|允许服务要求使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 对客户端进行身份验证。|  
+|CardSpace|允许服务要求客户端进行身份验证使用 CardSpace。|  
   
 ### <a name="programming-credentials"></a>凭据编程  
  对于每个客户端凭据类型，WCF 编程模型，可指定凭据值和凭据验证程序使用服务行为和通道行为。  

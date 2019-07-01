@@ -2,12 +2,12 @@
 title: NamedPipe 激活
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7d940d6be56160945ca0f8697361314af96bc0b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051840"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487543"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 激活
 
@@ -159,13 +159,13 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。
+1. 确保安装了 IIS 7.0。 为使 WAS 激活需要 IIS 7.0。
 
 2. 请确保具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
     此外，必须安装 WCF 非 HTTP 激活组件：
 
-    1. 从“开始”菜单中，选择“控制面板”。
+    1. 从“开始”菜单中，选择“控制面板”   。
 
     2. 选择**程序和功能**。
 

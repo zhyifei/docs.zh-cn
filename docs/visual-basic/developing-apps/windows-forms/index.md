@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347988"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487790"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是能够创建用户的计算机本地运行的 Windows 窗体应用程序。 可以使用 Visual Studio 来创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于类从<xref:System.Windows.Forms>命名空间。  
@@ -71,19 +71,19 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 |使用数据源窗口|[演练：Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  
- 一旦您编写的应用程序，以便他们可以安装并运行其自己的客户端计算机上必须将它发送到你的用户。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技术，您可以使用几次单击部署您的应用程序从 Visual Studio 中并向用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装该应用程序。  
+ 一旦您编写的应用程序，以便他们可以安装并运行其自己的客户端计算机上必须将它发送到你的用户。 使用 ClickOnce 技术，可以使用几次单击部署您的应用程序从 Visual Studio 中，并向用户提供指向 Web 上的应用程序的 URL。 ClickOnce 管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装该应用程序。  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 应用程序可以配置为仅在用户连接到网络时运行，或配置为联机和脱机时均可运行。 如果指定应用程序应支持脱机操作，[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]将链接添加到用户的应用程序**启动**菜单中，以便用户可以打开它而无需使用该 URL。  
+ ClickOnce 应用程序可以配置仅在用户连接到网络，或若要运行这两个联机和脱机。 当您指定应用程序支持脱机操作时，ClickOnce 将链接添加到在用户的应用程序**启动**菜单中，以便用户可以打开它而无需使用的 URL。  
   
- 更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 检测到那里可用更新且升级用户的安装;无需任何自定义编程需要更新旧程序集。  
+ 更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。 ClickOnce 将检测存在可用更新，然后升级用户的安装;无需任何自定义编程需要更新旧程序集。  
   
- 有关 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 的完整介绍，请参阅 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关使用这些功能的分步信息，请参阅下列帮助主题：  
+ 有关 ClickOnce 的完整介绍，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关使用这些功能的分步信息，请参阅下列帮助主题：  
   
 |功能|查看|  
 |--------|---------|  
-|使用部署应用程序 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|更新[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]部署|[如何：管理 ClickOnce 应用程序的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|管理安全性 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：启用 ClickOnce 安全设置](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|使用 ClickOnce 部署应用程序|[如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|更新 ClickOnce 部署|[如何：管理 ClickOnce 应用程序的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|管理使用 ClickOnce 安全性|[如何：启用 ClickOnce 安全设置](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>其他控件和功能  
  Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。 此外，Windows 窗体依赖于.NET Framework 中，您可以发布到你的客户更安全的应用程序的功能强大的安全系统。  

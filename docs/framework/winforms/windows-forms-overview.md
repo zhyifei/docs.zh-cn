@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875890"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487205"
 ---
 # <a name="windows-forms-overview"></a>Windows 窗体概述
 
@@ -18,13 +18,13 @@ ms.locfileid: "65875890"
 
 ## <a name="windows-forms-and-smart-client-apps"></a>Windows 窗体和智能客户端应用
 
- 可以使用 Windows 窗体开发智能客户端。 智能客户端是包含丰富图形的应用程序，可轻松进行部署和更新，无论是否连接到 Internet 均可正常工作，并能以相较于基于 Windows 的传统应用程序更为安全的方式访问本地计算机上的资源。
+ 可以使用 Windows 窗体开发智能客户端。 智能客户端  是包含丰富图形的应用程序，可轻松进行部署和更新，无论是否连接到 Internet 均可正常工作，并能以相较于基于 Windows 的传统应用程序更为安全的方式访问本地计算机上的资源。
 
 ### <a name="build-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面
 
  Windows 窗体是用于.NET Framework 中，一组简化读取和写入文件系统等常见应用程序任务的托管库的智能客户端技术。 当您使用 Visual Studio 之类的开发环境时，您可以通过网络与远程计算机创建 Windows 窗体智能客户端应用程序显示的信息、 请求来自用户的输入和通信。
 
- 在 Windows 窗体中，窗体是一种可视图面，可在其上对用户显示信息。 通常情况下，通过向窗体添加控件和开发对用户操作（如点击鼠标或按键）的响应来构建 Windows 窗体应用程序。 控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。
+ 在 Windows 窗体中，窗体  是一种可视图面，可在其上对用户显示信息。 通常情况下，通过向窗体添加控件和开发对用户操作（如点击鼠标或按键）的响应来构建 Windows 窗体应用程序。 控件  是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。
 
  当用户对你的窗体或一个窗体控件执行了某个操作，该操作将生成一个事件。 你的应用程序通过使用代码对这些事件做出反应，并在事件发生时对其进行处理。 有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "65875890"
 
  可以使用“数据源”窗口轻松创建数据绑定控件。 窗口显示数据源，如数据库、Web 服务和项目中的对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。
 
- 可在 Windows 窗体中管理的另一类数据绑定是“设置”。 大多数智能客户端应用程序均必须保留有关其运行时状态的某些信息（例如窗体的最后已知大小）并保留用户首选项数据（例如保存的文件的默认位置）。 “应用程序设置”功能通过提供一种在客户端计算机上存储两种类型的设置的简单方法来满足这些要求。 使用 Visual Studio 或代码编辑器定义这些设置后，设置是以 XML 形式保留和自动在运行时读回内存。
+ 可在 Windows 窗体中管理的另一类数据绑定是“设置”  。 大多数智能客户端应用程序均必须保留有关其运行时状态的某些信息（例如窗体的最后已知大小）并保留用户首选项数据（例如保存的文件的默认位置）。 “应用程序设置”功能通过提供一种在客户端计算机上存储两种类型的设置的简单方法来满足这些要求。 使用 Visual Studio 或代码编辑器定义这些设置后，设置是以 XML 形式保留和自动在运行时读回内存。
 
 #### <a name="display-and-manipulate-data"></a>显示和操作数据
 
@@ -72,21 +72,21 @@ ms.locfileid: "65875890"
 
 ### <a name="deploy-apps-to-client-computers"></a>将应用部署到客户端计算机
 
-编写了应用程序后，必须将应用程序发送给用户，以便他们可以在自己的客户端计算机上安装和运行此应用程序。 当你使用[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]技术，可以使用几个单击操作，部署将应用程序从 Visual Studio 中的并向用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 管理你的应用程序中的所有元素和依赖项，并确保应用程序正确安装到客户端计算机上。
+编写了应用程序后，必须将应用程序发送给用户，以便他们可以在自己的客户端计算机上安装和运行此应用程序。 当使用 ClickOnce 技术时，可以使用几个单击操作，部署将应用程序从 Visual Studio 中的，并为用户提供指向 Web 上的应用程序的 URL。 ClickOnce 管理所有元素和在应用程序中的依赖项，并确保客户端计算机上正确安装应用程序。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序可以配置为仅在用户连接到网络时运行，或配置为联机和脱机时均可运行。 如果指定应用程序支持脱机操作，则 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 会在用户的“开始”菜单中添加一个指向应用程序的链接。 然后用户便可以打开应用程序，而无需使用此 URL。
+ClickOnce 应用程序可以配置仅在用户连接到网络，或若要运行这两个联机和脱机。 当您指定应用程序支持脱机操作时，ClickOnce 将链接添加到在用户的应用程序**启动**菜单。 然后用户便可以打开应用程序，而无需使用此 URL。
 
-更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 将检测到有可用更新并将升级用户的安装；更新旧程序集无需进行自定义编程。
+更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。 ClickOnce 将检测存在可用的更新和升级用户的安装;无需任何自定义编程需要更新旧程序集。
 
 #### <a name="deploy-clickonce-apps"></a>部署 ClickOnce 应用程序
 
-有关 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 的完整介绍，请参阅 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关如何使用这些功能的步骤信息，请参阅以下“帮助”主题，
+有关 ClickOnce 的完整介绍，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关如何使用这些功能的步骤信息，请参阅以下“帮助”主题，
 
 |描述|帮助主题|
 |-----------------|----------------|
-|使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署应用程序|[如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|更新 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署|[如何：管理 ClickOnce 应用程序的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 管理安全性|[如何：启用 ClickOnce 安全设置](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|使用 ClickOnce 部署应用程序|[如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|正在更新 ClickOnce 部署|[如何：管理 ClickOnce 应用程序的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|使用 ClickOnce 管理安全性|[如何：启用 ClickOnce 安全设置](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>其他控件和功能
 

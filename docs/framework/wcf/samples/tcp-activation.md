@@ -2,12 +2,12 @@
 title: TCP 激活
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 065c4706d0a52414c4abed85044ce06ad3efe35c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3bfbe9d7e7a6efafc8bf1e281e1f7a99c9c5fbe
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007742"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487517"
 ---
 # <a name="tcp-activation"></a>TCP 激活
 
@@ -141,13 +141,13 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 确保已安装 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。 WAS 激活需要 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]。
+1. 确保安装了 IIS 7.0。 为使 WAS 激活需要 IIS 7.0。
 
 2. 确保您已执行了[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
     此外，必须安装 WCF 非 HTTP 激活组件：
 
-    1. 从“开始”菜单中，选择“控制面板”。
+    1. 从“开始”菜单中，选择“控制面板”   。
 
     2. 选择**程序和功能**。
 

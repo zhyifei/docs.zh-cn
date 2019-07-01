@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348473"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487264"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 
@@ -21,7 +21,7 @@ ms.locfileid: "67348473"
 
 .NET Framework 引入了称为代码访问安全性，让你能够区分权限或代码拥有的用户具有的权限的权限的基础结构。 默认情况下，来自 Internet 和 Intranet 的代码仅能在所谓的部分信任模式下运行。 部分信任使应用程序受一系列限制的约束：此外，应用程序被限制访问本地硬盘，且无法运行非托管代码。 .NET Framework 控制允许代码访问基于代码标识的资源： 它来自哪里、 是否具有[强名称程序集](../app-domains/strong-named-assemblies.md)、 是否进行签名的证书，依次类推。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技术用于部署 Windows 窗体应用程序，有助于让你更轻松地开发可在部分信任、完全信任或具有提升的权限的部分信任中运行的应用程序。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供了如“权限提升”和“受信任的应用程序部署”等功能，从而使你的应用程序能以可靠的方式从本地用户请求完全信任或提升的权限。
+ClickOnce 技术，用于部署 Windows 窗体应用程序，可帮助使其更轻松地开发应用程序在部分信任环境中，在完全信任，或在部分信任环境中运行使用提升的权限。 ClickOnce 提供了功能，如权限提升和受信任的应用程序部署，以便你的应用程序可以可靠的方式从本地用户请求完全信任或提升的权限。
 
 ## <a name="understanding-security-in-the-net-framework"></a>了解 .NET Framework 中的安全性
 
@@ -34,7 +34,7 @@ ms.locfileid: "67348473"
 >
 > 每个这些权限集中授予的默认权限都列在[默认安全策略](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))主题中。 根据应用程序接收的权限，它会正确运行或者生成安全性异常。
 >
-> 许多 Windows 窗体应用程序都将使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 进行部署。 用于生成 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具拥有不同于上述内容的安全性默认值。 有关详细信息，请参阅下列讨论。
+> 许多 Windows 窗体应用程序会使用 ClickOnce 进行部署。 用于生成 ClickOnce 部署的工具有比前面所讨论的不同的安全默认值。 有关详细信息，请参阅下列讨论。
 
 授予给应用程序的实际权限可能不同于默认值，原因是可以修改安全策略；这意味着你的应用程序可以在一台计算机上拥有权限，但不能在另一台上也拥有权限。
 
@@ -64,9 +64,9 @@ ms.locfileid: "67348473"
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>用适当的权限部署应用程序
 
-将 Windows 窗体应用程序部署到客户端电脑最常见的方式是使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，它是一种描述应用程序运行所需的所有组件的部署技术。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 使用称为清单的 XML 文件来描述组成应用程序的程序集和文件以及应用程序所需的权限。
+部署到客户端计算机的 Windows 窗体应用程序的最常见方式是使用 ClickOnce，一种部署技术描述所有应用程序运行所需的组件。 ClickOnce 使用称为清单的 XML 文件来描述程序集和文件组成您的应用程序，并还在应用程序所需权限。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 有两种在客户端计算机上请求提升的权限的技术。 两种技术都依赖于验证码证书的使用。 该证书有助于为你的用户提供一些保证，保证应用程序来自受信任的源。
+ClickOnce 具有请求的客户端计算机上的提升的权限的两种技术。 两种技术都依赖于验证码证书的使用。 该证书有助于为你的用户提供一些保证，保证应用程序来自受信任的源。
 
 下表对这些技术进行了介绍。
 
@@ -77,9 +77,9 @@ ms.locfileid: "67348473"
 
 选择哪种技术将取决于你的部署环境。 有关详细信息，请参阅[选择 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。
 
-默认情况下，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 的应用程序配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 配置你的部署时，您可以将使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 执行此操作。 有关如何使用 MageUI.exe 的详细信息，请参阅演练：部署 ClickOnce 应用程序从命令行。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[如何：设置 ClickOnce 应用程序的自定义权限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
+默认情况下，使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 部署的 ClickOnce 应用程序配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 配置你的部署时，您可以将使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 执行此操作。 有关如何使用 MageUI.exe 的详细信息，请参阅演练：部署 ClickOnce 应用程序从命令行。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[如何：设置 ClickOnce 应用程序的自定义权限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
 
-若要深入了解 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 的安全方面和权限提升，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。 若要深入了解受信任的应用程序部署，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)。
+有关 ClickOnce 和权限提升的安全方面的详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。 若要深入了解受信任的应用程序部署，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)。
 
 ### <a name="testing-the-application"></a>测试应用程序
 

@@ -2,12 +2,12 @@
 title: WCF Web HTTP 编程对象模型
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648406"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487695"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 编程对象模型
 WCF WEB HTTP 编程模型允许开发人员无需 SOAP 提供通过基本 HTTP 请求的 Windows Communication Foundation (WCF) Web 服务。 WCF WEB HTTP 编程模型是基于现有的 WCF 扩展性模型。 它定义以下各类：  
@@ -97,7 +97,7 @@ WCF WEB HTTP 编程模型允许开发人员无需 SOAP 提供通过基本 HTTP �
  WCF WEB HTTP 编程模型不使用基于 SOAP 的消息，因此不支持 WS-* 协议。 但是，您可以通过两个终结点公开同一协定：一个终结点使用 SOAP，另一个终结点不使用 SOAP。 请参阅[如何：向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)有关的示例。  
   
 ## <a name="security"></a>安全性  
- 因为 WCF WEB HTTP 编程模型不支持 WS-* 协议的 WCF WEB HTTP 编程模型上生成的 Web 服务安全的唯一方法是使用 SSL 公开服务。 有关设置 SSL 的详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]请参阅[如何在 IIS 中实现 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ 因为 WCF WEB HTTP 编程模型不支持 WS-* 协议的 WCF WEB HTTP 编程模型上生成的 Web 服务安全的唯一方法是使用 SSL 公开服务。 有关如何设置 IIS 7.0 与 SSL 的详细信息请参阅[如何在 IIS 中实现 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>请参阅
 

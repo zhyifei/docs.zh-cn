@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 834829d8eee95a8a62363a05b4af9430c435753b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 695b6c24700fe42664944d6f9c1e03010248d86a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586230"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487736"
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
 服务的*终结点标识*是从服务 Web Services 描述语言 (WSDL) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 这作为防范*仿冒网站*通过防止客户端被重定向到恶意服务承载的终结点。  
@@ -43,7 +43,7 @@ ms.locfileid: "64586230"
 |标识类型|描述|典型的方案|  
 |-------------------|-----------------|----------------------|  
 |域名系统 (DNS)|将此元素用于 X.509 证书或 Windows 帐户。 它将凭据中指定的 DNS 名称与此元素中指定的值进行比较。|DNS 检查让您可以通过 DNS 或使用者名称来使用证书。 如果使用同一个 DNS 或使用者名称来重新颁发证书，则标识检查仍然有效。 在重新颁发证书时，它会获取新的 RSA 密钥，但保留相同的 DNS 或使用者名称。 这意味着客户端不必更新其有关服务的标识信息。|  
-|证书。 `ClientCredentialType` 设置为 Certificate 时的默认值。|此元素指定要与客户端进行比较的 Base64 编码的 X.509 证书值。<br /><br /> 在使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 作为对服务进行身份验证的凭据时也使用此元素。|此元素将身份验证限制为单个基于其指纹值的证书。 这样将启用更为严格的身份验证，因为指纹值是唯一的。 这会带来一点：如果具有相同的使用者名称重新颁发证书时，它还具有一个新的指纹。 因此，客户端无法验证服务，除非新的指纹是已知的。 有关查找证书的指纹的详细信息，请参阅[如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
+|证书。 `ClientCredentialType` 设置为 Certificate 时的默认值。|此元素指定要与客户端进行比较的 Base64 编码的 X.509 证书值。<br /><br /> 使用 CardSpace 作为凭据进行身份验证服务时，还可以使用此元素。|此元素将身份验证限制为单个基于其指纹值的证书。 这样将启用更为严格的身份验证，因为指纹值是唯一的。 这会带来一点：如果具有相同的使用者名称重新颁发证书时，它还具有一个新的指纹。 因此，客户端无法验证服务，除非新的指纹是已知的。 有关查找证书的指纹的详细信息，请参阅[如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
 |证书引用|与前面描述的“证书”选项完全相同。 但是，此元素可让您指定证书名称并存储检索证书的位置。|与前面描述的“证书”方案相同。<br /><br /> 其优点是证书存储位置可以更改。|  
 |RSA|此元素指定要与客户端进行比较的 RSA 密钥值。 这与“证书”选项类似，但并不使用证书的指纹，而是使用证书的 RSA 密钥。|RSA 检查可让您明确地将身份验证限制为单个证书（基于其 RSA 证书）。 这样将启用更为严格的特定 RSA 密钥身份验证，不过与此对应的代价是，如果更改 RSA 密钥值，则该服务不可再用于现有客户端。|  
 |用户主体名称 (UPN)。 `ClientCredentialType` 设置为 Windows 时的默认值，并且服务进程不是在一个系统帐户下运行的。|此元素指定运行服务所依据的 UPN。 请参阅的 Kerberos 协议和标识部分[重写用于身份验证的服务标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|这将确保服务在特定的 Windows 用户帐户下运行。 用户帐户可以是当前已登录用户，也可以是在特定用户帐户下运行的服务。<br /><br /> 如果服务是在 Active Directory 环境内的域帐户下运行，则此设置将利用 Windows Kerberos 安全。|  

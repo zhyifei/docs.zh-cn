@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876220"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487354"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。  
@@ -109,16 +109,16 @@ ms.locfileid: "65876220"
  如果您实现您自己设置的类，则可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>来标记二进制或自定义序列化使用的设置<xref:System.Configuration.SettingsSerializeAs>枚举。 在代码中创建您自己设置的类的详细信息，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。  
   
 ### <a name="settings-file-locations"></a>设置文件位置  
- `app`.exe.config 和 *user*.config 文件的位置因应用程序的安装方式而异。 对于基于 Windows 窗体的应用程序复制到本地计算机上`app`。 exe.config 将驻留在与应用程序的主可执行文件的基目录相同的目录中和*用户*.config 驻留在指定的位置<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>属性。 对于通过 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 安装的应用程序，这两个文件都驻留在 %InstallRoot%\Documents and Settings\\*username*\Local Settings 下的 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 数据目录中。  
+ `app`.exe.config 和 *user*.config 文件的位置因应用程序的安装方式而异。 对于基于 Windows 窗体的应用程序复制到本地计算机上`app`。 exe.config 将驻留在与应用程序的主可执行文件的基目录相同的目录中和*用户*.config 驻留在指定的位置<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>属性。 通过 ClickOnce 安装应用程序，这两个文件将驻留在 %InstallRoot%\Documents ClickOnce 数据目录和设置\\*用户名*\Local 设置。  
   
- 如果用户启用了漫游配置文件，则这些文件的存储位置稍有不同，漫游配置文件可使用户在域内使用其他计算机时定义不同的 Windows 和应用程序设置。 在这种情况下，[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 应用程序和非 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 应用程序的 `app`.exe.config 和 *user*.config 文件均存储在 %InstallRoot%\Documents and Settings\\*username*\Application Data 下。  
+ 如果用户启用了漫游配置文件，则这些文件的存储位置稍有不同，漫游配置文件可使用户在域内使用其他计算机时定义不同的 Windows 和应用程序设置。 在这种情况下，ClickOnce 应用程序和非 ClickOnce 应用程序都将具有其`app`。 exe.config 并*用户*.config 文件均存储在 %InstallRoot%\Documents and Settings\\ *用户名*\Application Data。  
   
- 若要深入了解应用程序设置功能如何与新部署技术协同使用，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。 有关 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 数据目录的详细信息，请参阅[在 ClickOnce 应用程序中访问本地数据和远程数据](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)。  
+ 若要深入了解应用程序设置功能如何与新部署技术协同使用，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。 有关 ClickOnce 数据目录的详细信息，请参阅[访问本地数据和 ClickOnce 应用程序中的远程数据](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)。  
   
 ## <a name="application-settings-and-security"></a>应用程序设置和安全  
  应用程序设置设计为在部分信任的受限环境中运行，该环境是通过 Internet 或 Intranet 托管的 Windows 窗体应用程序的默认环境。 通过默认设置提供程序使用应用程序设置时，不需要超出部分信任之外的特殊权限。  
   
- 在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 应用程序中使用应用程序设置时，`user`.config 文件存储在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 数据目录中。 应用程序的 `user`.config文件大小不能超过由 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 设置的数据目录配额。 有关详细信息，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。  
+ 如果在 ClickOnce 应用程序中，使用应用程序设置`user`.config 文件存储在 ClickOnce 数据目录中。 在应用程序的大小`user`.config 文件不能超过设置 clickonce 的数据目录配额。 有关详细信息，请参阅 [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)。  
   
 ## <a name="custom-settings-providers"></a>自定义设置提供程序  
  在应用程序设置体系结构中，存在只是松散耦合之间的应用程序设置包装类，派生自<xref:System.Configuration.ApplicationSettingsBase>，并且关联的设置提供程序或提供程序，派生自<xref:System.Configuration.SettingsProvider>。 这种关联定义仅可由<xref:System.Configuration.SettingsProviderAttribute>应用于包装器类或其各个属性。 如果指定的提供程序不是显式设置，默认的提供程序， <xref:System.Configuration.LocalFileSettingsProvider>，使用。 因此，此体系结构支持创建和使用自定义设置提供程序。  

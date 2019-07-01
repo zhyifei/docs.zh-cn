@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624160"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487278"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>如何：访问托管 HTML 文档对象模型
 可以从两种类型的应用程序访问托管 HTML 文档对象模型 (DOM)：  
@@ -43,7 +43,7 @@ ms.locfileid: "64624160"
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
   
-1. 你的应用程序或 <xref:System.Windows.Forms.UserControl> 将需要完全信任，才能访问托管 HTML DOM。 如果使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 部署 Windows 窗体应用程序，则可使用“权限提升”或“受信任的应用程序部署”来请求完全信任；有关详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。  
+1. 你的应用程序或 <xref:System.Windows.Forms.UserControl> 将需要完全信任，才能访问托管 HTML DOM。 如果要部署 Windows 窗体应用程序使用 ClickOnce，可以请求完全信任使用权限提升或受信任的应用程序部署;请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)有关详细信息。  
   
 ## <a name="see-also"></a>请参阅
 

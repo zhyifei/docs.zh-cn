@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402399"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487703"
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 Windows Communication Foundation (WCF) 服务设计为支持托管代码的任何 Windows 进程中运行。  
@@ -34,7 +34,7 @@ ms.locfileid: "67402399"
  请注意，以 IIS 为宿主的服务只能使用 HTTP 传输。 它在 IIS 5.1 中的实现在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中引入了一些限制。 提供的 WCF 服务由 IIS 5.1，在基于消息的激活[!INCLUDE[wxp](../../../includes/wxp-md.md)]阻止使用端口 80 进行通信的同一计算机上的任何其他自承载的 WCF 服务。 可以在与其他应用程序由 IIS 6.0 上托管时，相同的 AppDomain/应用程序池/工作进程中运行 WCF 服务[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]。 但是，由于 WCF 和 IIS 6.0 使用内核模式 HTTP 堆栈 (HTTP.sys)，IIS 6.0 可以与同一台计算机，与 IIS 5.1 上运行的其他自承载 WCF 服务共享端口 80。  
   
 #### <a name="windows-process-activation-service-was"></a>Windows 进程激活服务 (WAS)  
- Windows 进程激活服务 (WAS) 是在 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 上也可用的 [!INCLUDE[wv](../../../includes/wv-md.md)]的新进程激活机制。 它保留了熟悉的 IIS 6.0 进程模型 （应用程序池和基于消息的进程激活） 和承载功能 （如快速失败保护、 运行状况监视和回收），但是它从激活中删除对 HTTP 的依赖关系体系结构。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 使用 WAS 通过 HTTP 完成基于消息的激活。 WCF 的其他组件也插入了 WAS 通过其他 WCF 支持的协议，例如 TCP、 MSMQ 和命名的管道提供基于消息的激活。 这样，使用通信协议的应用程序就可以使用 IIS 功能（如进程回收、快速失败保护）和仅对基于 HTTP 的应用程序可用的通用配置系统。  
+ Windows 进程激活服务 (WAS) 是在 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 上也可用的 [!INCLUDE[wv](../../../includes/wv-md.md)]的新进程激活机制。 它保留了熟悉的 IIS 6.0 进程模型 （应用程序池和基于消息的进程激活） 和承载功能 （如快速失败保护、 运行状况监视和回收），但是它从激活中删除对 HTTP 的依赖关系体系结构。 IIS 7.0 使用 WAS 通过 HTTP 完成基于消息的激活。 WCF 的其他组件也插入了 WAS 通过其他 WCF 支持的协议，例如 TCP、 MSMQ 和命名的管道提供基于消息的激活。 这样，使用通信协议的应用程序就可以使用 IIS 功能（如进程回收、快速失败保护）和仅对基于 HTTP 的应用程序可用的通用配置系统。  
   
  此承载选项要求正确配置 WAS，但不需要编写任何承载代码作为应用程序的一部分。 详细了解如何配置 WAS 托管，请参阅[如何：承载在 WAS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   

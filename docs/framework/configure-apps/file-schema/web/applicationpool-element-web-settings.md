@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832724"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486720"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 元素 （Web 设置）
-指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理的进程范围行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
+指定 ASP.NET 用于 ASP.NET 应用程序在 IIS 7.0 或更高版本中集成模式下运行时管理的进程范围行为的配置设置。  
   
 > [!IMPORTANT]
->  此元素和功能它支持唯一工作，如果 ASP.NET 应用程序承载于[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
+>  此元素和功能它支持唯一工作，如果 ASP.NET 应用程序托管在 IIS 7.0 或更高版本上。  
   
  \<configuration>  
 \<system.web > 元素 （Web 设置）  
@@ -52,12 +52,12 @@ ms.locfileid: "66832724"
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|包含有关 ASP.NET 如何与主机应用程序进行交互的信息。|  
   
 ## <a name="remarks"></a>备注  
- 当你运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本在集成模式下，此元素组合可让你配置 ASP.NET 如何管理线程和队列请求，当应用程序承载于 IIS 应用程序池。 如果运行 IIS 6 也运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]在经典模式下或在 ISAPI 模式下，将忽略这些设置。  
+ 当在集成模式下运行 IIS 7.0 或更高版本时，此元素组合可让你可以配置 ASP.NET 如何管理线程和队列请求，当应用程序承载于 IIS 应用程序池。 如果运行 IIS 6 或在经典模式下或 ISAPI 模式下运行 IIS 7.0，则忽略这些设置。  
   
  `applicationPool`设置适用于特定版本的.NET Framework 运行的所有应用程序池。 设置包含在 aspnet.config 文件中。 没有此文件的版本 2.0 和.NET Framework 4.0 版本。 （版本 3.0 和.NET Framework 3.5 的 aspnet.config 文件与共享版本 2.0。）  
   
 > [!IMPORTANT]
->  如果在运行[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]上[!INCLUDE[win7](../../../../../includes/win7-md.md)]，可以配置每个应用程序池的单独的 aspnet.config 文件。 这样，你可以定制每个应用程序池的线程的性能。  
+>  如果在上运行 IIS 7.0 [!INCLUDE[win7](../../../../../includes/win7-md.md)]，可以配置每个应用程序池的单独的 aspnet.config 文件。 这样，你可以定制每个应用程序池的线程的性能。  
   
  有关`maxConcurrentRequestsPerCPU`设置，默认设置"5000".NET Framework 4 中有效地将关闭请求限制由 ASP.NET 控制的除非实际上具有每个 CPU 的 5000 或多个请求。 默认设置改为依赖于 CLR 线程池来自动管理每个 CPU 的并发。 请广泛使用的异步请求处理，或具有网络 I/O 上阻塞的很多长时间运行请求的应用程序将受益于.NET Framework 4 中的增大的默认限制。 设置`maxConcurrentRequestsPerCPU`到用于处理 ASP.NET 请求零将关闭托管线程的使用。 应用程序中运行时的 IIS 应用程序池，请求将停留在 IIS I/O 线程和线程的 IIS 设置因此阻止并发。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "66832724"
 ## <a name="example"></a>示例  
  下面的示例演示如何在以下情况下的 aspnet.config 文件中配置 ASP.NET 进程范围行为：  
   
-- 应用程序托管在[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]应用程序池。  
+- 应用程序托管在 IIS 7.0 应用程序池。  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 在集成模式下运行。  
+- IIS 7.0 集成模式下运行。  
   
 - 应用程序使用.NET Framework 3.5 SP1 或更高版本。  
   

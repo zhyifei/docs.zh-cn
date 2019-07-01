@@ -2,12 +2,12 @@
 title: ASP.NET 兼容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002659"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487659"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 此示例演示如何启用 ASP.NET 兼容性模式在 Windows Communication Foundation (WCF)。 在 ASP.NET 兼容性模式完全参与 ASP.NET 应用程序管道，并可以使运行的服务使用的 ASP.NET 功能，如文件 /URL 授权、 会话状态和<xref:System.Web.HttpContext>类。 <xref:System.Web.HttpContext>类可以访问 cookie、 会话和其他 ASP.NET 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  
@@ -19,13 +19,13 @@ ms.locfileid: "62002659"
   
 此示例需要 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 应用程序池才能运行。 若要创建新的应用程序池或修改默认应用程序池，请按照以下步骤操作。  
 
-1. 打开“控制面板” 。  打开**管理工具**下的小程序**系统和安全**标题。 打开**Internet 信息服务 (IIS) 管理器**小程序。  
+1. 打开“控制面板”  。  打开**管理工具**下的小程序**系统和安全**标题。 打开**Internet 信息服务 (IIS) 管理器**小程序。  
 
 2. 展开在 treeview**连接**窗格。 选择**应用程序池**节点。  
 
-3. 若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（这可能会导致与现有站点的不兼容性问题），右键单击**DefaultAppPool**列表项并选择**基本设置...**. 设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。  
+3. 若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（这可能会导致与现有站点的不兼容性问题），右键单击**DefaultAppPool**列表项并选择**基本设置...** . 设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。  
 
-4. 若要创建新的应用程序池使用的[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（若要保持其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...**. 命名新的应用程序池，并将设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...**. 设置**应用程序池**到新的应用程序池。  
+4. 若要创建新的应用程序池使用的[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（若要保持其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...** . 命名新的应用程序池，并将设置 **.Net Framework 版本**下拉到 **.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...** . 设置**应用程序池**到新的应用程序池。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -123,7 +123,7 @@ Press <ENTER> to terminate client.
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3. 生成解决方案后，运行 Setup.bat 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中设置 ServiceModelSamples 应用程序。 现在，ServiceModelSamples 目录应显示为 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 应用程序。  
+3. 解决方案生成后，运行 Setup.bat 以设置 ServiceModelSamples 应用程序在 IIS 7.0 中。 现在，ServiceModelSamples 目录应显示为 IIS 7.0 应用程序。  
   
 4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   

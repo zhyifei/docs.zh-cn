@@ -2,12 +2,12 @@
 title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 925148c4bd084f843f125ab9e851a5404bbe4b89
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664821"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487560"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
@@ -215,11 +215,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保安装了 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因为 WAS 激活需要它。  
+1. 确保安装 IIS 7.0，因为它是 WAS 激活需要。  
   
 2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，必须安装 WCF 非 HTTP 激活组件：  
   
-    1. 从“开始”菜单中，选择“控制面板”。  
+    1. 从“开始”菜单中，选择“控制面板”   。  
   
     2. 选择**程序和功能**。  
   
@@ -249,7 +249,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      为方便起见，在位于示例目录中名为 AddMsmqSiteBinding.cmd 的批处理文件中实现以下步骤。  
   
-    1. 若要支持 net.msmq 激活，必须首先将默认网站绑定到 net.msmq 协议。 可以通过使用随 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理工具集安装的 appcmd.exe 来执行此操作。 在具有提升权限的（管理员）命令提示符处，运行下列命令。  
+    1. 若要支持 net.msmq 激活，必须首先将默认网站绑定到 net.msmq 协议。 可以通过使用随 IIS 7.0 管理工具集安装的 appcmd.exe 来执行此操作。 在具有提升权限的（管理员）命令提示符处，运行下列命令。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -332,7 +332,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1. 运行 Inetmgr.exe。  
   
-    2. 下**应用程序池**，右键单击**应用程序池**(通常**DefaultAppPool**)，然后选择**设置应用程序池默认设置...**.  
+    2. 下**应用程序池**，右键单击**应用程序池**(通常**DefaultAppPool**)，然后选择**设置应用程序池默认设置...** .  
   
     3. 更改标识属性以使用特定用户帐户。  
   

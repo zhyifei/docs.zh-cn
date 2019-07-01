@@ -2,12 +2,12 @@
 title: 配置 Windows 进程激活服务以用于 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 9fead93fcb8982f4f69af5d4bb401aa731bf887f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ab62bda5e579bcd80a7403d9af3a7e7f9836647
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654565"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487007"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>配置 Windows 进程激活服务以用于 Windows Communication Foundation
 本主题介绍设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤的[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
@@ -23,7 +23,7 @@ ms.locfileid: "64654565"
 ## <a name="configuring-a-site-with-non-http-bindings"></a>使用非 HTTP 绑定配置站点  
  若要将非 HTTP 绑定与 WAS 一起使用，必须将站点绑定添加到 WAS 配置。 WAS 的配置存储是 applicationHost.config 文件，该文件位于 %windir%\system32\inetsrv\config 目录中。 此配置存储由 WAS 和 IIS 7.0 共享。  
   
- applicationHost.config 是一个 XML 文本文件，可以使用任何标准文本编辑器（如记事本）打开。 不过，[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 命令行配置工具 (appcmd.exe) 是添加非 HTTP 站点绑定的首选方法。  
+ applicationHost.config 是一个 XML 文本文件，可以使用任何标准文本编辑器（如记事本）打开。 但是，IIS 7.0 命令行配置工具 (appcmd.exe) 是添加非 HTTP 网站绑定的首选的方法。  
   
  下面的命令使用 appcmd.exe 将 net.tcp 站点绑定添加到默认网站（将此命令作为单独的一行输入）。  
   

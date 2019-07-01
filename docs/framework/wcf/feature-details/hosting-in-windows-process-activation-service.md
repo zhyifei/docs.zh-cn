@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402343"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486639"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows 进程激活服务中承载
 Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communication Foundation (WCF) 服务的应用程序的工作进程的生存期。 WAS 进程模型通用化 HTTP 服务器的 IIS 6.0 进程模型通过删除对 HTTP 的依赖关系。 这使 WCF 服务能够使用 HTTP 和非 HTTP 协议，例如 Net.TCP，在宿主环境支持基于消息的激活并提供承载大量在给定计算机上的应用程序的能力。  
@@ -25,10 +25,7 @@ Windows 进程激活服务 (WAS) 管理激活和包含该主机 Windows Communic
 - 集中的应用程序配置和管理。  
   
 - 允许应用程序利用 IIS 进程模型，而无需完全 IIS 安装的部署需求量。  
-  
- 有关 WAS 功能的详细信息，请参阅[IIS 7.0 Beta:IIS 7.0 Web 管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
-  
- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)适用于[!INCLUDE[iisver](../../../../includes/iisver-md.md)]和 Windows 进程激活服务 (WAS) 提供丰富的应用程序宿主环境为 NET4 WCF 和 WF 服务。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[AppFabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=196494)并[AppFabric 承载概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
+[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)适用于 IIS 7.0 和 Windows 进程激活服务 (WAS) 提供丰富的应用程序托管为 NET4 WCF 和 WF 服务的环境。 这些优点包括进程生命周期管理、进程回收、共享承载、快速失败保护、进程孤立、按需激活和运行状况监视。 有关详细信息，请参阅[AppFabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=196494)并[AppFabric 承载概念](https://go.microsoft.com/fwlink/?LinkId=196495)。  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS 寻址模型的元素  
  应用程序具有统一资源标识符 (URI) 地址，这些地址是一些代码单元，其生存期和执行环境由服务器管理。 一个 WAS 服务器实例可以承载多个不同的应用程序。 服务器将应用程序分组称为组织*站点*。 在网站中，应用程序是以分层的方式排列的，这种方式反映了充当其外部地址的 URI 的结构。  

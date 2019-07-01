@@ -2,12 +2,12 @@
 title: HTTP 传输安全
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402309"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487019"
 ---
 # <a name="http-transport-security"></a>HTTP 传输安全
 如果使用 HTTP 作为传输，则由安全套接字层 (SSL) 实现提供安全。 SSL 广泛用于 Internet 中，以便向客户端证明服务的身份，并且随后向通道提供保密性（加密）。 本主题说明 SSL 的工作原理以及它如何实现 Windows Communication Foundation (WCF) 中。  
@@ -38,9 +38,9 @@ ms.locfileid: "67402309"
 ### <a name="using-iis-for-transport-security"></a>使用 IIS 实现传输安全  
   
 #### <a name="iis-70"></a>IIS 7.0  
- 若要设置[!INCLUDE[iisver](../../../../includes/iisver-md.md)]为安全宿主 （使用 SSL），请参阅[IIS 7.0 Beta:配置安全套接字层在 IIS 7.0 中的](https://go.microsoft.com/fwlink/?LinkId=88600)。  
+ 若要为安全宿主 （使用 SSL） 设置 IIS 7.0，请参阅[IIS 7.0 中配置安全套接字层](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10))。  
   
- 若要配置证书以用于[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta:在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkID=88595)。  
+若要配置使用的证书与 IIS 7.0，请参阅[IIS 7.0 中配置服务器证书](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。  
   
 #### <a name="iis-60"></a>IIS 6.0  
  若要为安全宿主 （使用 SSL） 设置 IIS 6.0，请参阅[配置安全套接字层](https://go.microsoft.com/fwlink/?LinkId=88601)。  

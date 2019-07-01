@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779296"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487139"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>如何：配置本地颁发者
 本主题说明如何配置客户端以便为已颁发令牌使用本地颁发者。  
@@ -23,7 +23,7 @@ ms.locfileid: "61779296"
  Windows Communication Foundation (WCF) 在联合绑定的颁发者地址的情况下使用本地颁发者`http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`或`null`。 在这样的情况下，必须使用本地颁发者的地址和要使用的绑定来配置 <xref:System.ServiceModel.Description.ClientCredentials>，这样才能与该颁发者通信。  
   
 > [!NOTE]
->  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>的属性`ClientCredentials`类设置为`true`、 未指定本地颁发者地址，并通过指定的颁发者地址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他联合的绑定是`http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`， `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`，或者`null`，然后 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]使用颁发者。  
+>  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>的属性`ClientCredentials`类设置为`true`、 未指定本地颁发者地址，并通过指定的颁发者地址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他联合的绑定是`http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`， `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`，或为`null`，则使用 Windows CardSpace 颁发者。  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>在代码中配置本地颁发者  
   

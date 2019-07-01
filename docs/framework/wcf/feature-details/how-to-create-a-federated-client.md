@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047810"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487108"
 ---
 # <a name="how-to-create-a-federated-client"></a>如何：创建联合客户端
 在 Windows Communication Foundation (WCF) 创建的客户端*联合服务*由三个主要步骤组成：  
@@ -39,7 +39,7 @@ ms.locfileid: "62047810"
   
 4. 检查任何其他[ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)元素内的带有注释掉 <`alternativeIssuedTokenParameters`> 元素。 当使用 Svcutil.exe 工具生成联合服务的配置时，如果联合服务或任何中间安全令牌服务没有指定颁发者地址，而是指定公开了多个终结点的安全令牌服务的元数据地址，则生成的配置文件将引用第一个终结点。 其他终结点将在配置文件中作为注释掉的 <`alternativeIssuedTokenParameters`> 元素。  
   
-     确定其中是否有这些 <`issuedTokenParameters`> 优于配置中已存在的一个。 例如，客户端可能倾向于使用 Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌而非用户名/密码对来对安全令牌服务进行身份验证。  
+     确定其中是否有这些 <`issuedTokenParameters`> 优于配置中已存在的一个。 例如，对客户端可能更倾向于使用 Windows CardSpace 令牌而不是用户名/密码对安全令牌服务进行身份验证。  
   
     > [!NOTE]
     >  对于在与服务进行通信之前必须遍历多个安全令牌服务的情况，中间安全令牌服务有可能会将客户端引导到不正确的安全令牌服务。 因此，确保中的安全令牌服务的终结点[ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)是预期的安全令牌服务和不未知的安全令牌服务。  
