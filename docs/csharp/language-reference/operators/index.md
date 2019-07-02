@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025133"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401470"
 ---
 # <a name="c-operators-c-reference"></a>C# 运算符（C# 参考）
 
@@ -51,9 +51,9 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [x--](arithmetic-operators.md#decrement-operator---)：后缀递减。 先返回 x 值，然后用减 1（通常减整数 1）后的 x 值更新存储位置。
 
-[new](../keywords/new-operator.md)：类型实例化。
+[new](new-operator.md)：类型实例化。
 
-[typeof](../keywords/typeof.md) - 返回表示操作数的 <xref:System.Type> 对象。
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) - 返回表示操作数的 <xref:System.Type> 对象。
 
 [checked](../keywords/checked.md)：对整数运算启用溢出检查。
 
@@ -87,7 +87,7 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [--x](arithmetic-operators.md#decrement-operator---)：前缀递减。 先用减 1（通常减整数 1）后的 x 值更新存储位置，然后返回 x 值。
 
-[(T)x](invocation-operator.md)：类型显式转换。
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-)：类型显式转换。
 
 [await](../keywords/await.md)：等待 `Task`。
 
@@ -137,9 +137,9 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-)：大于或等于。
 
-[is](../keywords/is.md)：类型兼容性。 如果求值后的左操作数可以转换为右操作数中指定的类型（静态类型），则返回 true。
+[is](type-testing-and-conversion-operators.md#is-operator)：类型兼容性。 如果求值后的左操作数可以转换为右操作数中指定的类型，则返回 `true`。
 
-[as](../keywords/as.md)：类型转换。 返回左操作数并转换为右操作数中指定的类型（静态类型），但 `as` 返回 `null`，其中 `(T)x` 会引发异常。
+[as](type-testing-and-conversion-operators.md#as-operator)：类型转换。 返回左操作数并转换为右操作数中指定的类型，但 `as` 返回 `null`，其中 `(T)x` 会引发异常。
 
 ## <a name="equality-operators"></a>相等运算符
 
@@ -171,13 +171,13 @@ C# 提供了许多由内置类型支持的预定义运算符。 例如，[算术
 
 此运算符的优先级比下一章节高，比上一章节低。
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-)：逻辑 AND。 如果第一个操作数计算结果为 false，则 C# 不对第二个操作数求值。
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-)：逻辑 AND。 如果 `x` 的计算结果为 `false`，则不计算 `y`。
 
 ## <a name="conditional-or-operator"></a>条件 OR 运算符
 
 此运算符的优先级比下一章节高，比上一章节低。
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)：逻辑 OR。 如果第一个操作数计算结果为 true，则 C# 不对第二个操作数求值。
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)：逻辑 OR。 如果 `x` 的计算结果为 `true`，则不计算 `y`。
 
 ## <a name="null-coalescing-operator"></a>Null 合并运算符
 
