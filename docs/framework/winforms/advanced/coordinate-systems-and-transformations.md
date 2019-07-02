@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d267253a1a75117f986790d1e0002a3607944577
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755761"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506052"
 ---
 # <a name="coordinate-systems-and-transformations"></a>坐标系和坐标转换
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了世界转换和页转换，以便可以转换 （旋转、 缩放、 转换，等等） 所绘制的项。 两种转换还可以在各种坐标系统中工作。  
+GDI + 提供了世界转换和页转换，以便可以转换 （旋转、 缩放、 转换，等等） 所绘制的项。 两种转换还可以在各种坐标系统中工作。  
   
 ## <a name="in-this-section"></a>本节内容  
  [坐标系统类型](types-of-coordinate-systems.md)  

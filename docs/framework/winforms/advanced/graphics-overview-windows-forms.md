@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938185"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505387"
 ---
 # <a name="graphics-overview-windows-forms"></a>图形概述（Windows 窗体）
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是一个图形设备接口，使程序员编写独立于设备的应用程序。 所提供的服务[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]通过托管类的一组公开。  
+GDI + 是图形设备接口，使程序员编写独立于设备的应用程序。 通过托管类的一组公开的 GDI + 服务。  
   
 ## <a name="in-this-section"></a>本节内容  
  [图形概述](overview-of-graphics.md)  
- 提供的一般简介[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ 提供了简要介绍的 GDI +。  
   
  [图形服务的三大分类](three-categories-of-graphics-services.md)  
- 描述组成使用编程的三个类别[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ 描述组成使用 GDI + 编程的三个类别。  
   
  [图形界面的结构](structure-of-the-graphics-interface.md)  
- 描述的托管的类接口的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ 描述 GDI + 的托管的类的接口。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Drawing>  
- 提供对 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 基本图形功能的访问权限。  
+ 提供了对 GDI + 基本图形功能的访问。  
   
  <xref:System.Drawing.Drawing2D>  
  提供高级二维和矢量图形功能。  
   
  <xref:System.Drawing.Imaging>  
- 提供高级 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 图像处理功能。  
+ 提供高级 GDI + 图像处理功能。  
   
  <xref:System.Drawing.Text>  
- 提供高级 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 板式功能。  
+ 提供高级的 GDI + 排版功能。  
   
  <xref:System.Drawing.Printing>  
  提供与打印相关的服务。  
   
  <xref:System.Windows.Forms.TextRenderer>  
- 提供了[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]文本绘制，并且正在测量功能。
+ 提供了 GDI 文本绘制，并且正在测量功能。

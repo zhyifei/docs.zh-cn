@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34abfc86e980a24ebb835cfd88d2522f8372c68d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631636"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506022"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>如何：绘制具有线帽的线条
-可以在一个名为线帽的多个形状绘制的开始或结束的行。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持多种线帽，如 round、 正方形、 菱形和箭头。  
+可以在一个名为线帽的多个形状绘制的开始或结束的行。 GDI + 支持多种线帽，如 round、 正方形、 菱形和箭头。  
   
 ## <a name="example"></a>示例  
  您可以指定行 （起始端），行 （末端） 的末尾或虚线 (dash cap) 的短划线开头的线帽。  
