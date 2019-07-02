@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063722"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505795"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>如何：使用颜色矩阵对单色进行转换
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>用于存储和操作图像的类。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>对象存储为 32 位数字，每个像素的颜色：各 8 位红色、 绿色、 蓝色和 alpha。 每四个组件是一个介于 0 到 255 之间，其中 0 表示没有亮度，255 表示最大亮度。 Alpha 分量指定颜色的透明度：0 表示完全透明，255 表示完全不透明。  
+GDI + 提供了<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>用于存储和操作图像的类。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>对象存储为 32 位数字，每个像素的颜色：各 8 位红色、 绿色、 蓝色和 alpha。 每四个组件是一个介于 0 到 255 之间，其中 0 表示没有亮度，255 表示最大亮度。 Alpha 分量指定颜色的透明度：0 表示完全透明，255 表示完全不透明。  
   
  颜色向量是窗体 （红色、 绿色、 蓝色、 alpha） 4 元组。 例如，颜色向量 （0，255，0，255） 表示没有红色或蓝色，但绿色达到最大亮度不透明颜色。  
   
- 表示颜色的另一个惯例使用数字 1 的最大亮度。 使用这种约定，将由向量 （0、 1、 0、 1） 表示上一段中所述的颜色。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 执行颜色转换时，请使用 1 的约定作为最大亮度。  
+ 表示颜色的另一个惯例使用数字 1 的最大亮度。 使用这种约定，将由向量 （0、 1、 0、 1） 表示上一段中所述的颜色。 GDI + 1 的约定为最大亮度时使用它执行颜色转换。  
   
  乘以 4 × 4 矩阵的颜色矢量，您可以应用到颜色矢量线性转换 （旋转、 缩放和类似）。 但是，不能使用的 4 × 4 矩阵来执行转换 （非线性）。 如果将虚拟的第五个坐标 （例如，数字 1） 添加到每个颜色矢量，可以使用 5 × 5 矩阵来应用线性转换和翻译的任意组合。 包含跟平移的线性转换的转换称为仿射转换。  
   

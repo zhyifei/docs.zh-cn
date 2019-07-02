@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004351"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506033"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>如何：绘制自定义虚线
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了多个短划线样式中列出的<xref:System.Drawing.Drawing2D.DashStyle>枚举。 如果这些标准的短划线样式无法满足您的需要，可以创建自定义的短划线图案。  
+GDI + 提供了多个短划线样式中列出的<xref:System.Drawing.Drawing2D.DashStyle>枚举。 如果这些标准的短划线样式无法满足您的需要，可以创建自定义的短划线图案。  
   
 ## <a name="example"></a>示例  
  若要绘制自定义虚线，放置在数组中的短划线和空格的长度，并将数组分配的值为<xref:System.Drawing.Pen.DashPattern%2A>属性的<xref:System.Drawing.Pen>对象。 下面的示例绘制自定义虚线基于数组上`{5, 2, 15, 4}`。 如果您要乘以钢笔的宽度为 5 数组的元素，则获取`{25, 10, 75, 20}`。 显示的短划线的长度介于 25 和 75，之间交替，空格交替出现在 10 和 20 之间的长度。  

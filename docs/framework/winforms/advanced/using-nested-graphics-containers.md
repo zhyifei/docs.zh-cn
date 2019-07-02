@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766265"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505055"
 ---
 # <a name="using-nested-graphics-containers"></a>使用嵌套的 Graphics 容器
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了可用于临时替换或增加中状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建一个容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法的<xref:System.Drawing.Graphics>对象。 您可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须通过调用配对<xref:System.Drawing.Graphics.EndContainer%2A>。  
+GDI + 提供了可用于临时替换或增加中状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建一个容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法的<xref:System.Drawing.Graphics>对象。 您可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须通过调用配对<xref:System.Drawing.Graphics.EndContainer%2A>。  
   
 ## <a name="transformations-in-nested-containers"></a>在嵌套的容器中的转换  
  下面的示例创建<xref:System.Drawing.Graphics>对象，并在其中的容器<xref:System.Drawing.Graphics>对象。 世界转换<xref:System.Drawing.Graphics>对象是沿 x 方向平移 100 单位和 y 方向的 80 单位。 容器的世界转换是旋转 30 度。 这段代码将调用`DrawRectangle(pen, -60, -30, 120, 60)`两次。 首次调用<xref:System.Drawing.Graphics.DrawRectangle%2A>位于容器; 也就是说，调用是对的调用之间<xref:System.Drawing.Graphics.BeginContainer%2A>和<xref:System.Drawing.Graphics.EndContainer%2A>。 第二次调用<xref:System.Drawing.Graphics.DrawRectangle%2A>是在调用后<xref:System.Drawing.Graphics.EndContainer%2A>。  

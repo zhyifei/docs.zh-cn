@@ -9,17 +9,17 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: bff5e3585804e027f2d0e78e5ea525f933a351a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 360ec30563ee5001d784dc7c4ccdb50563867c29
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593174"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505760"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>如何：使用颜色重新映射表
 重新映射是转换颜色重新映射表根据图像中的颜色的过程。 颜色重新映射表是一个数组<xref:System.Drawing.Imaging.ColorMap>对象。 每个<xref:System.Drawing.Imaging.ColorMap>数组中的对象具有<xref:System.Drawing.Imaging.ColorMap.OldColor%2A>属性和一个<xref:System.Drawing.Imaging.ColorMap.NewColor%2A>属性。  
   
- 当[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘制一个图像，图像的每个像素与旧颜色数组进行比较。 如果像素的颜色与旧的颜色相匹配，其颜色更改为相应的新颜色。 仅对呈现更改的颜色，图像本身的颜色值 (存储在<xref:System.Drawing.Image>或<xref:System.Drawing.Bitmap>对象) 将不会更改。  
+ 当 GDI + 绘制一个图像时，会将每个像素的图像的与旧颜色数组进行比较。 如果像素的颜色与旧的颜色相匹配，其颜色更改为相应的新颜色。 仅对呈现更改的颜色，图像本身的颜色值 (存储在<xref:System.Drawing.Image>或<xref:System.Drawing.Bitmap>对象) 将不会更改。  
   
  若要绘制重新映射的图像，初始化数组的<xref:System.Drawing.Imaging.ColorMap>对象。 传递到该数组<xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A>方法<xref:System.Drawing.Imaging.ImageAttributes>对象，并将传递<xref:System.Drawing.Imaging.ImageAttributes>对象传递给<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>对象。  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779392"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506236"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的画笔和实心形状
-闭合的形状，如矩形或椭圆，由边框和内部组成。 使用笔绘制出轮廓，并使用画笔填充其内部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了填充的绘制闭合形状内部的画笔的多个类： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有这些类继承自<xref:System.Drawing.Brush>类。 下图显示了以实线画笔填充矩形和椭圆用阴影画笔填充。  
+闭合的形状，如矩形或椭圆，由边框和内部组成。 使用笔绘制出轮廓，并使用画笔填充其内部。 GDI + 提供了几个画笔类填充绘制闭合形状的内部： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有这些类继承自<xref:System.Drawing.Brush>类。 下图显示了以实线画笔填充矩形和椭圆用阴影画笔填充。  
   
  ![填充形状](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61779392"
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了超过 50 个阴影样式;以下插图所示的三个样式都<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
+ GDI + 提供了超过 50 个阴影样式;以下插图所示的三个样式都<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
   
  ![填充形状](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -59,7 +59,7 @@ ms.locfileid: "61779392"
  ![填充形状](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>渐变画笔  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了两种类型的渐变画笔： 线性和路径。 线性渐变画笔用于填充形状更改逐渐水平、 垂直移过图形或沿对角线方向的颜色。 下面的代码示例演示如何用会从蓝色变为绿色，当您从椭圆的左边缘移动到右边缘的水平渐变画笔填充椭圆。  
+ GDI + 提供了两种类型的渐变画笔： 线性和路径。 线性渐变画笔用于填充形状更改逐渐水平、 垂直移过图形或沿对角线方向的颜色。 下面的代码示例演示如何用会从蓝色变为绿色，当您从椭圆的左边缘移动到右边缘的水平渐变画笔填充椭圆。  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

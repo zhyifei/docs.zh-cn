@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003933"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505696"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>图像、位图和图元文件
 `Image` 类是一个抽象基类，提供用于处理光栅图像（位图）和矢量图像（图元文件）的方法。 `Bitmap` 类和 <xref:System.Drawing.Imaging.Metafile> 类从 `Image` 类继承。 `Bitmap` 类通过提供用于加载、保存和操作光栅图像的附加方法，在 `Image` 类的功能上进行扩展。 <xref:System.Drawing.Imaging.Metafile> 类通过提供用于记录和检查矢量图像的附加方法，在 `Image` 类的功能上进行扩展。  
@@ -22,7 +22,7 @@ ms.locfileid: "62003933"
  解说不同的图像格式。  
   
  [GDI+ 中的图元文件](metafiles-in-gdi.md)  
- 介绍 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 对图元文件的支持。  
+ 讨论对图元文件支持 GDI +。  
   
  [在 GDI+ 中绘制、定位和克隆图像](drawing-positioning-and-cloning-images-in-gdi.md)  
  讨论如何使用托管代码绘制矢量和光栅图像。  

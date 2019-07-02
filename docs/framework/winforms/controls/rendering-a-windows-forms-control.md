@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614665"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506175"
 ---
 # <a name="rendering-a-windows-forms-control"></a>呈现 Windows 窗体控件
-呈现是指创建用户的屏幕上的可视表示形式的过程。 Windows 窗体使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（是的新 Windows 图形库） 以进行呈现。 提供访问权限的托管的类[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]位于<xref:System.Drawing?displayProperty=nameWithType>命名空间及其子命名空间。  
+呈现是指创建用户的屏幕上的可视表示形式的过程。 Windows 窗体使用呈现 GDI （是的新 Windows 图形库）。 提供对 GDI 的访问的托管的类位于<xref:System.Drawing?displayProperty=nameWithType>命名空间及其子命名空间。  
   
  控件呈现中包括以下元素：  
   
 - 提供由基类的绘图功能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。  
   
-- 基本元素[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]图形库。  
+- GDI 图形库基本元素。  
   
 - 几何图形的绘图区域。  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> 为托管的类封装绘制功能的讨论中所述[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]本主题中更高版本。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>的一个实例<xref:System.Drawing.Rectangle>结构，并定义可以在其中绘制控件的可用区域。 控件开发人员可以计算<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>使用<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>控件，如本主题后面的几何图形的讨论中所述的属性。  
+ <xref:System.Drawing.Graphics> 是托管的类封装绘制功能，如本主题后面的 GDI 讨论中所述。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>的一个实例<xref:System.Drawing.Rectangle>结构，并定义可以在其中绘制控件的可用区域。 控件开发人员可以计算<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>使用<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>控件，如本主题后面的几何图形的讨论中所述的属性。  
   
  控件必须提供呈现逻辑通过重写<xref:System.Windows.Forms.Control.OnPaint%2A>方法，它继承自<xref:System.Windows.Forms.Control>。 <xref:System.Windows.Forms.Control.OnPaint%2A> 获取的访问权限的图形对象并通过在中绘制一个矩形<xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A>并<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>的属性<xref:System.Windows.Forms.PaintEventArgs>实例传递给它。  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  虽然<xref:System.Windows.Forms.Control.OnPaintBackground%2A>具有类似于事件的命名法并采用相同参数作为`OnPaint`方法，<xref:System.Windows.Forms.Control.OnPaintBackground%2A>并不是真正的事件方法。 没有任何`PaintBackground`事件和<xref:System.Windows.Forms.Control.OnPaintBackground%2A>不会调用事件委托。 重写时<xref:System.Windows.Forms.Control.OnPaintBackground%2A>方法，派生的类不需要调用<xref:System.Windows.Forms.Control.OnPaintBackground%2A>其基类的方法。  
   
 ## <a name="gdi-basics"></a>GDI + 基础知识  
- <xref:System.Drawing.Graphics>类提供绘制各种形状，如圆圈、 三角形、 弧线和椭圆的方法，以及用于显示文本的方法。 <xref:System.Drawing?displayProperty=nameWithType>命名空间和及其子命名空间包含类封装图形元素，如 （圆圈、 矩形、 弧线和其他人） 的形状、 颜色、 字体、 画笔和等等。 有关详细信息[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]，请参阅[使用托管图形类](../advanced/using-managed-graphics-classes.md)。 基础知识[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中也描述了[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ <xref:System.Drawing.Graphics>类提供绘制各种形状，如圆圈、 三角形、 弧线和椭圆的方法，以及用于显示文本的方法。 <xref:System.Drawing?displayProperty=nameWithType>命名空间和及其子命名空间包含类封装图形元素，如 （圆圈、 矩形、 弧线和其他人） 的形状、 颜色、 字体、 画笔和等等。 有关 GDI 的详细信息，请参阅[使用托管图形类](../advanced/using-managed-graphics-classes.md)。 中也描述了 GDI 的 essentials[如何：创建显示进度的 Windows 窗体控件](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 ## <a name="geometry-of-the-drawing-region"></a>几何图形的绘图区域  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A>控件的属性指定可用于在用户的屏幕上，控件的矩形区域时<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>属性的<xref:System.Windows.Forms.PaintEventArgs>指定实际绘制的区域。 (请记住，完成绘制<xref:System.Windows.Forms.Control.Paint>采用的事件方法<xref:System.Windows.Forms.PaintEventArgs>实例作为其参数)。 控件可能需要绘制只有其可用区域中，部分因为是控件的显示更改这种情况时一小部分。 在这些情况下，控件开发人员必须计算实际的矩形中绘制，并将其传递给<xref:System.Windows.Forms.Control.Invalidate%2A>。 重载的版本<xref:System.Windows.Forms.Control.Invalidate%2A>采用<xref:System.Drawing.Rectangle>或<xref:System.Drawing.Region>作为参数使用该参数生成<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>属性<xref:System.Windows.Forms.PaintEventArgs>。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624196"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505517"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：创建专用的字体集合
 <xref:System.Drawing.Text.PrivateFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 可以使用<xref:System.Drawing.Text.PrivateFontCollection>对象来维护一组专门为应用程序的字体。 专用字体集合可以包含已安装的系统字体，以及在计算机尚未安装的字体。 若要将字体文件添加到专用字体集合，调用<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法的<xref:System.Drawing.Text.PrivateFontCollection>对象。  
@@ -41,9 +41,9 @@ ms.locfileid: "64624196"
   
  ![在各种字体显示文本的屏幕截图。](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- Arial.tff （其中已添加到下面的代码示例中的专用字体集合） 是 Arial 常规字形的字体文件。 但请注意，该程序的输出显示了几种可用样式不是常规的 Arial 字体系列。 这是因为[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模拟中的正则样式的粗体、 斜体和粗体斜体样式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以还字形生成下划线和从常规的样式。  
+ Arial.tff （其中已添加到下面的代码示例中的专用字体集合） 是 Arial 常规字形的字体文件。 但请注意，该程序的输出显示了几种可用样式不是常规的 Arial 字体系列。 这是因为 GDI + 来模拟中的正则样式的粗体、 斜体和粗体斜体样式。 GDI + 可以还字形生成下划线和从常规的样式。  
   
- 同样，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模拟从粗体样式或斜体样式的粗体斜体样式。 程序输出显示即使 TimesBd.tff (Times New Roman，粗体显示) 是唯一的粗体斜体样式是可用于时间系列集合中的次文件。  
+ 同样，GDI + 可以模拟从粗体样式或斜体样式的粗体斜体样式。 程序输出显示即使 TimesBd.tff (Times New Roman，粗体显示) 是唯一的粗体斜体样式是可用于时间系列集合中的次文件。  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

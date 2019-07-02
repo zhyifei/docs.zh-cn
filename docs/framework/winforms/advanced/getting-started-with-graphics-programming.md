@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747682"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503944"
 ---
 # <a name="getting-started-with-graphics-programming"></a>图形编程入门
-本部分演示如何开始使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Windows 窗体应用程序中。 以下主题说明如何完成一些[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]任务，例如绘制并填充形状和文本。  
+本部分介绍如何开始使用 GDI + 中 Windows 窗体应用程序。 以下主题说明如何完成几个 GDI + 任务，例如绘制而填满形状和文本。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：创建用于绘制图形对象](how-to-create-graphics-objects-for-drawing.md)  
