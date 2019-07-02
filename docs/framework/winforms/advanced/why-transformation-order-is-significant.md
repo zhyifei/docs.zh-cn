@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747454"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504903"
 ---
 # <a name="why-transformation-order-is-significant"></a>为什么转换顺序非常重要
 单个<xref:System.Drawing.Drawing2D.Matrix>对象可以存储的单个转换的序列。 后一种称为复合转换。 复合转换矩阵被获取的单个转换的矩阵相乘。  
   
 ## <a name="composite-transform-examples"></a>复合转换示例  
- 在复合转换中，各个转换的顺序非常重要。 例如，如果首先旋转，然后扩展，然后转换，您获得不同的结果不是如果首先将旋转，则缩放。 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，复合转换是从左到右。 如果 S、 R 和 T 分别为缩放、 旋转和转换矩阵，然后产品 （按此顺序） SRT 是扩展的第一的复合转换的矩阵，旋转，然后将转换。 生成的产品的矩阵 SRT 为不同于生成的乘积 TRS 矩阵。  
+ 在复合转换中，各个转换的顺序非常重要。 例如，如果首先旋转，然后扩展，然后转换，您获得不同的结果不是如果首先将旋转，则缩放。 在 GDI + 中，复合转换生成从左到右。 如果 S、 R 和 T 分别为缩放、 旋转和转换矩阵，然后产品 （按此顺序） SRT 是扩展的第一的复合转换的矩阵，旋转，然后将转换。 生成的产品的矩阵 SRT 为不同于生成的乘积 TRS 矩阵。  
   
  顺序很重要的原因之一是，这样针对的坐标系的原点的像旋转和缩放的变换。 缩放以原点为中心的对象生成不同的结果已离开源的对象与缩放。 同样，旋转以原点为中心的对象生成不同的结果比旋转对象已移动背离原点。  
   

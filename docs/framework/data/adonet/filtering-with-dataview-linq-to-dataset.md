@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1af8863dd22b5ebb3a2c87009b9c51d5ec25bb89
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645689"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504842"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>使用 DataView 进行筛选 (LINQ to DataSet)
 使用特定条件筛选数据，然后通过 UI 控件在客户端中表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式来筛选数据并返回满足指定筛选条件的数据行子集。 除了基于字符串的筛选功能以外<xref:System.Data.DataView>还提供了使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]筛选条件的表达式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 表达式允许执行比基于字符串的筛选更复杂而功能强大的筛选操作。  
   
  使用 <xref:System.Data.DataView> 筛选数据有两种方式：  
   
-- 通过使用 Where 子句的 <xref:System.Data.DataView> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。  
+- 创建<xref:System.Data.DataView>从 LINQ to DataSet 查询使用 Where 子句。  
   
 - 使用 <xref:System.Data.DataView> 现有的基于字符串的筛选功能。  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>通过具有筛选信息的查询创建 DataView  
- 可以通过 <xref:System.Data.DataView> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 对象。 如果该查询包含一个 `Where` 子句，则会使用查询中的筛选信息创建 <xref:System.Data.DataView>。 `Where` 子句中的表达式用于确定哪些数据行将包括在 <xref:System.Data.DataView> 中并作为筛选器的基础。  
+ 一个<xref:System.Data.DataView>到数据集查询，可以从 LINQ 创建对象。 如果该查询包含一个 `Where` 子句，则会使用查询中的筛选信息创建 <xref:System.Data.DataView>。 `Where` 子句中的表达式用于确定哪些数据行将包括在 <xref:System.Data.DataView> 中并作为筛选器的基础。  
   
  基于表达式的筛选器具有比基于字符串的简单筛选器更强大、更复杂的筛选功能。 基于字符串的筛选器和基于表达式的筛选器是互相排斥的。 如果在通过查询创建 <xref:System.Data.DataView.RowFilter%2A> 后设置基于字符串的 <xref:System.Data.DataView>，则会清除从查询推断的基于表达式的筛选器。  
   
@@ -59,14 +59,14 @@ ms.locfileid: "64645689"
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>使用 RowFilter 属性  
- <xref:System.Data.DataView> 现有的基于字符串的筛选功能仍可在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 上下文中执行。 有关基于字符串的详细信息<xref:System.Data.DataView.RowFilter%2A>筛选，请参阅[排序和筛选数据](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
+ 现有基于字符串的筛选功能<xref:System.Data.DataView>仍可在 LINQ to DataSet 上下文。 有关基于字符串的详细信息<xref:System.Data.DataView.RowFilter%2A>筛选，请参阅[排序和筛选数据](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)。  
   
  下面的示例从 Contact 表创建 <xref:System.Data.DataView>，然后设置 <xref:System.Data.DataView.RowFilter%2A> 属性以返回联系人的姓氏为“Zhu”的行：  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- 从 <xref:System.Data.DataView> 或 <xref:System.Data.DataTable> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 后，可以使用 <xref:System.Data.DataView.RowFilter%2A> 属性基于行的列值指定行的子集。 基于字符串的筛选器和基于表达式的筛选器是互相排斥的。 设置 <xref:System.Data.DataView.RowFilter%2A> 属性将清除从 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询推断的筛选表达式，并且该筛选表达式无法重置。  
+ 之后<xref:System.Data.DataView>已创建从<xref:System.Data.DataTable>也可以使用 LINQ to DataSet 查询，<xref:System.Data.DataView.RowFilter%2A>属性来指定行的子集基于其列的值。 基于字符串的筛选器和基于表达式的筛选器是互相排斥的。 设置<xref:System.Data.DataView.RowFilter%2A>属性将清除从 LINQ to DataSet 查询推断的筛选表达式和筛选器表达式无法重置。  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fef3361ca29ed3e118a54b3e81dd82e48b831bef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942969"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505651"
 ---
 # <a name="lines-curves-and-shapes"></a>直线、曲线和图形
-矢量图形部分[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]用于绘制线条、 绘制曲线和绘制并填充形状。  
+使用 GDI + 的向量图形部分绘制线条、 绘制曲线，还可以绘制和填充形状。  
   
 ## <a name="in-this-section"></a>本节内容  
  [矢量图形概述](vector-graphics-overview.md)  

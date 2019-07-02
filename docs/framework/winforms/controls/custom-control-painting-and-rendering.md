@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011479"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506094"
 ---
 # <a name="custom-control-painting-and-rendering"></a>自定义控件的绘制和呈现
 自定义绘制的控件是可轻松在.NET Framework 的许多复杂任务之一。 在创作时自定义控件，有许多种有关控件的图形外观。 如果创作继承的控件`Control`，必须提供代码，使您的控件来呈现其图形表示形式。 如果通过继承创建用户控件`UserControl`，继承或从一个 Windows 窗体控件，可以忽略在标准的图形表示形式，并提供你自己的图形代码。 如果你想要提供的构成控件的自定义呈现`UserControl`创作，你的选项变得更为有限，但仍允许范围广泛的控件和应用程序的图形化可能性。  
@@ -47,7 +47,7 @@ ms.locfileid: "62011479"
   
 ## <a name="related-sections"></a>相关章节  
  [如何：创建用于绘制图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- 引入了[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]从 Visual Studio 角度来看，并提供链接的详细信息的图形功能。  
+ 从 Visual Studio 的角度介绍 GDI + 图形功能，并提供详细信息链接。  
   
  [各种自定义控件](varieties-of-custom-controls.md)  
  描述可以创作自定义控件的类型。

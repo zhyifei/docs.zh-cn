@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: daf4ef0032ef8bfcce02ec925cc957abdecb3643
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910702"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505989"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：在 Visual Basic 中编写查询
 本演练演示如何使用 Visual Basic 语言功能编写[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询表达式。 本演练演示如何在列表中的学生对象创建查询、 运行查询，以及如何对其进行修改。 查询将合并多个功能，包括对象初始值设定项、 局部类型推理和匿名类型。  
   
- 完成此演练后，您将随时可以转到示例和文档的特定[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]感兴趣的提供程序。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]， [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
+ 完成此演练后，您将随时可以转到示例和文档的特定[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]感兴趣的提供程序。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，LINQ to DataSet，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
   
 ## <a name="create-a-project"></a>创建项目  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64910702"
   
 1. 启动 Visual Studio。  
   
-2. 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。  
+2. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。  
   
 3. 在中**已安装的模板**列表中，单击**Visual Basic**。  
   

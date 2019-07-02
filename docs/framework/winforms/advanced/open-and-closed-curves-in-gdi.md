@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641446"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505450"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+ 中的开放曲线和闭合曲线
 下图显示了两条曲线： 一个打开和关闭。  
@@ -23,7 +23,7 @@ ms.locfileid: "61641446"
  ![开放曲线和闭合曲线](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>曲线的管理的界面  
- 已关闭的曲线具有内部，因此可以使用画笔填充。 <xref:System.Drawing.Graphics>类中[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供了用于填充绘制闭合的形状和曲线的以下方法： <xref:System.Drawing.Graphics.FillRectangle%2A>， <xref:System.Drawing.Graphics.FillEllipse%2A>， <xref:System.Drawing.Graphics.FillPie%2A>， <xref:System.Drawing.Graphics.FillPolygon%2A>， <xref:System.Drawing.Graphics.FillClosedCurve%2A>， <xref:System.Drawing.Graphics.FillPath%2A>，和<xref:System.Drawing.Graphics.FillRegion%2A>。 无论您调用下列方法之一，您必须通过一个特定的画笔类型 (<xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，或<xref:System.Drawing.Drawing2D.PathGradientBrush>) 作为参数。  
+ 已关闭的曲线具有内部，因此可以使用画笔填充。 <xref:System.Drawing.Graphics> GDI + 中的类提供了用于填充绘制闭合的形状和曲线的以下方法： <xref:System.Drawing.Graphics.FillRectangle%2A>， <xref:System.Drawing.Graphics.FillEllipse%2A>， <xref:System.Drawing.Graphics.FillPie%2A>， <xref:System.Drawing.Graphics.FillPolygon%2A>， <xref:System.Drawing.Graphics.FillClosedCurve%2A>， <xref:System.Drawing.Graphics.FillPath%2A>，和<xref:System.Drawing.Graphics.FillRegion%2A>。 无论您调用下列方法之一，您必须通过一个特定的画笔类型 (<xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，或<xref:System.Drawing.Drawing2D.PathGradientBrush>) 作为参数。  
   
  <xref:System.Drawing.Graphics.FillPie%2A>方法是一起提供<xref:System.Drawing.Graphics.DrawArc%2A>方法。 就像<xref:System.Drawing.Graphics.DrawArc%2A>方法绘制的椭圆的边框的一部分<xref:System.Drawing.Graphics.FillPie%2A>方法填充的椭圆的内部的一部分。 下面的示例绘制一段弧线，并填充椭圆的内部的相应部分：  
   

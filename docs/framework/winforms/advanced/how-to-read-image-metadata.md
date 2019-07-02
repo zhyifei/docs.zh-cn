@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169816"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505772"
 ---
 # <a name="how-to-read-image-metadata"></a>如何：读取图像元数据
-某些图像文件包含元数据可以读取来确定映像的功能。 例如，数字照片中可能包含您可以读取以确定品牌和型号的照相机用于捕获映像的元数据。 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，可以读取现有的元数据，并还可以将新的元数据写入图像文件。  
+某些图像文件包含元数据可以读取来确定映像的功能。 例如，数字照片中可能包含您可以读取以确定品牌和型号的照相机用于捕获映像的元数据。 使用 GDI + 中，您可以读取现有的元数据，并且还可以将新的元数据写入图像文件。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 存储元数据中的个别<xref:System.Drawing.Imaging.PropertyItem>对象。 可以读取<xref:System.Drawing.Image.PropertyItems%2A>属性的<xref:System.Drawing.Image>要从文件检索的元数据对象。 <xref:System.Drawing.Image.PropertyItems%2A>属性返回的数组<xref:System.Drawing.Imaging.PropertyItem>对象。  
+ GDI + 存储元数据中的个别<xref:System.Drawing.Imaging.PropertyItem>对象。 可以读取<xref:System.Drawing.Image.PropertyItems%2A>属性的<xref:System.Drawing.Image>要从文件检索的元数据对象。 <xref:System.Drawing.Image.PropertyItems%2A>属性返回的数组<xref:System.Drawing.Imaging.PropertyItem>对象。  
   
  一个<xref:System.Drawing.Imaging.PropertyItem>对象具有以下四个属性： `Id`， `Value`， `Len`，和`Type`。  
   

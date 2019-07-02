@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664163"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504629"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>单表查询 (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 查询适用于实现的数据源<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。 <xref:System.Data.DataTable> 类不实现任何一个接口，所以如果要使用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 作为<xref:System.Data.DataTable> 查询的 `From` 子句中的源，则必须调用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 方法。  
@@ -20,7 +20,7 @@ ms.locfileid: "61664163"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- 本地变量查询使用查询表达式进行初始化，该表达式通过应用标准查询运算符中的一个或多个查询运算符，或者在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 的情况下应用特定于 <xref:System.Data.DataSet> 类的一个或多个运算符对一个或多个信息源进行运算。 前面示例中的查询表达式使用两个标准查询运算符：`Where` 和 `Select`。  
+ 本地变量查询使用操作对一个或多个信息源通过应用一个或多个查询运算符，从标准查询运算符的查询表达式，或在 LINQ to DataSet，特定于运算符的情况下初始化<xref:System.Data.DataSet>类。 前面示例中的查询表达式使用两个标准查询运算符：`Where` 和 `Select`。  
   
  `Where` 子句基于条件筛选序列，在本例中，`OnlineOrderFlag` 设置为 `true`。 `Select` 运算符分配并返回一个可枚举对象，该对象可捕获传递给运算符的参数。 在上面的示例中，创建了一个具有三个属性的匿名类型：`SalesOrderID`、`OrderDate` 和 `SalesOrderNumber`。 这三个属性的值设置为 `SalesOrderID` 表中的 `OrderDate`、`SalesOrderNumber` 和 `SalesOrderHeader` 列值。  
   

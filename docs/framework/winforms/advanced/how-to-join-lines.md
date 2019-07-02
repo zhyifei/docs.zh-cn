@@ -14,15 +14,15 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 362ce0c701d6e5f640fecd143a60cf471045629c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723276"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505864"
 ---
 # <a name="how-to-join-lines"></a>如何：联接线
-线条联接是由两个线条的端点相交或重叠的常见区域。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了三个行联接样式： 斜接、 凹凸效果，和舍入。 线段联接样式是的一个属性<xref:System.Drawing.Pen>类。 当指定为线段联接样式<xref:System.Drawing.Pen>对象，联接样式，将应用于任何中所有连接的直线<xref:System.Drawing.Drawing2D.GraphicsPath>使用该笔绘制的对象。  
+线条联接是由两个线条的端点相交或重叠的常见区域。 GDI + 提供了三个行联接样式： 斜接、 凹凸效果，和舍入。 线段联接样式是的一个属性<xref:System.Drawing.Pen>类。 当指定为线段联接样式<xref:System.Drawing.Pen>对象，联接样式，将应用于任何中所有连接的直线<xref:System.Drawing.Drawing2D.GraphicsPath>使用该笔绘制的对象。  
   
  下图显示斜切的线条联接示例的结果。  
   

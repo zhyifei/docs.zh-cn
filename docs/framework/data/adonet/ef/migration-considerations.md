@@ -2,12 +2,12 @@
 title: 迁移注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 0fafa786805a14d9adc3523a5eb876e7e5b0e9c5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f0b8e4918844da08ab48525836878b6a21230891
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489880"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504512"
 ---
 # <a name="migration-considerations-entity-framework"></a>迁移注意事项（实体框架）
 ADO.NET 实体框架提供的现有应用程序的多项优势。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关使用的优点的详细信息[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)并[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -66,7 +66,7 @@ ADO.NET 实体框架提供的现有应用程序的多项优势。 其中最重�
 
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供了很多相同功能提供的数据集，其中包括内存中持久性、 更改跟踪、 数据绑定以及将对象序列化为 XML 数据。 有关详细信息，请参阅[使用对象](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)。  
   
-  如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不提供功能的应用程序所需的数据集，您仍可以充分利用 LINQ 查询的优点使用[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]。 有关详细信息，请参阅 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
+  如果[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不提供功能的应用程序所需的数据集，您仍可以充分利用 LINQ 查询的优点通过使用 LINQ to DataSet。 有关详细信息，请参阅 [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>有关将数据绑定到控件的应用程序的注意事项  
  .NET Framework 可以封装数据源，例如数据集或 ASP.NET 数据源控件中的数据，然后将用户界面元素绑定到这些数据控件。 下表介绍将控件绑定到实体框架数据时的注意事项。  

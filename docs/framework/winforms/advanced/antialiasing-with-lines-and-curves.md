@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961074"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506147"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>用直线和曲线抗锯齿
-当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]若要绘制一条线，提供的起始点和终点的行，但不是需要在行中提供有关单个像素的任何信息。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 显示驱动程序软件，以确定哪些像素将打开特定显示设备上显示行结合工作。  
+时使用 GDI + 来绘制线条，提供的起始点和终点的行，但不是需要在行中提供有关单个像素的任何信息。 GDI + 显示驱动程序软件，以确定哪些像素将打开特定显示设备上显示行结合工作。  
   
 ## <a name="aliasing"></a>别名  
  请考虑从点 （4，2） 转到 （16，10） 的点的垂直红线。 假定在左上角的坐标系统的原点和度量值的单位是像素。 另外，假设 x 轴向下指到右边，y 轴点。 下图显示彩色背景上绘制的红色线条的放大的视图。  

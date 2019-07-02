@@ -2,12 +2,12 @@
 title: ADO.NET 数据集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877228"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504267"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 数据集
 <xref:System.Data.DataSet>对象是中心支持断开连接，分布式数据方案使用 ADO.NET。 **数据集**是提供与数据源无关的一致关系编程模型的数据的驻留内存表示形式。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示完整的数据，包括相关的表、 约束和表之间的关系集。 如下图所示**数据集**对象模型。  
@@ -41,7 +41,7 @@ DataSet 对象模型
  **数据集**， **DataTable**，并**DataColumn**都具有**ExtendedProperties**属性。 **ExtendedProperties**是**PropertyCollection**其中放置自定义的信息，如用于生成结果集的 SELECT 语句或在数据生成的时间。 **ExtendedProperties**集合的架构信息一起持久化**数据集**。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]为数据集中存储的已断开连接的数据提供语言集成查询功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并使用 Visual Studio IDE 时提供编译时语法检查、 静态类型化和 IntelliSense 支持。  
+ LINQ to DataSet 提供断开连接的数据存储在数据集中的语言集成查询功能。 LINQ 到数据集使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并使用 Visual Studio IDE 时提供编译时语法检查、 静态类型化和 IntelliSense 支持。  
   
  有关详细信息，请参阅 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   

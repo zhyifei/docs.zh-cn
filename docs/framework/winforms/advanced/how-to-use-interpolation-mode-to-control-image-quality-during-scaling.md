@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 609851737f142cfcbfeace3b1c020f3ac27bfd7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab0ff93b3ee26467c0de448efd31b698167f95c2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636853"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505709"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>如何：在缩放期间使用内插模式控制图像质量
-内插模式<xref:System.Drawing.Graphics>对象的影响方式[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]缩放 （拉伸和收缩） 映像。 <xref:System.Drawing.Drawing2D.InterpolationMode>枚举定义多个内插模式，其中一些以下列表所示：  
+内插模式的<xref:System.Drawing.Graphics>对象影响的方式 GDI + 缩放 （拉伸和收缩） 映像。 <xref:System.Drawing.Drawing2D.InterpolationMode>枚举定义多个内插模式，其中一些以下列表所示：  
   
 - <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   

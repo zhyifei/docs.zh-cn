@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655666"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506225"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows 窗体应用程序的双向支持
 Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和希伯来语等双向 （右到左） 语言。 这包括标准窗体、对话框、MDI 窗体以及可在这些窗体中使用的所有控件 — 即，<xref:System.Windows.Forms.Control> 命名空间中的所有对象。  
@@ -82,7 +82,7 @@ Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和
  Windows 窗体支持 Unicode，因此在创建双向应用程序时可包括任何字符集。 但是，并非所有 Windows 窗体控件在所有平台上均支持 Unicode。 有关详细信息，请参阅[编码和 Windows 窗体全球化](encoding-and-windows-forms-globalization.md)。  
   
 ## <a name="gdi"></a>GDI+  
- 可使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 按从右到左的阅读顺序绘制文本。 用于绘制文本的 <xref:System.Drawing.Graphics.DrawString%2A> 方法支持 `StringFormat` 参数，可将此参数设置为 <xref:System.Drawing.StringFormatFlags> 枚举的 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 成员以反转文本的起点。  
+ 您可以使用 GDI + 来用从右到左的阅读顺序绘制文本。 用于绘制文本的 <xref:System.Drawing.Graphics.DrawString%2A> 方法支持 `StringFormat` 参数，可将此参数设置为 <xref:System.Drawing.StringFormatFlags> 枚举的 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 成员以反转文本的起点。  
   
 ## <a name="common-dialog-boxes"></a>通用对话框  
  “打开文件”对话框等系统工具由 Windows 控制。 它们都从操作系统继承语言元素。 如果使用的 Windows 版本具有正确的语言设置，则这些对话框将以双向语言正常工作。  
@@ -95,9 +95,9 @@ Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和
  目前，唯一的解决方法是将 <xref:System.Windows.Forms.ScrollableControl> 嵌套到其他 <xref:System.Windows.Forms.ScrollableControl> 内。 例如，如果需要在此情况下运行 <xref:System.Windows.Forms.TableLayoutPanel>，可以将它置于 <xref:System.Windows.Forms.Panel> 控件中并将 <xref:System.Windows.Forms.Panel> 上的 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> 设置为 <xref:System.Windows.Forms.RightToLeft.Yes>。  
   
 ## <a name="mirroring"></a>镜像  
- 镜像是指反转 UI 元素布局，使其从右到左排列。 例如，在镜像的 Windows 窗体中，“最小化”、“最大化”和“关闭”按钮均显示在标题栏的最左侧，而不是最右侧。  
+ 镜像  是指反转 UI 元素布局，使其从右到左排列。 例如，在镜像的 Windows 窗体中，“最小化”、“最大化”和“关闭”按钮均显示在标题栏的最左侧，而不是最右侧。  
   
- 将窗体或控件的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性设置为 `true` 可反转窗体上元素的阅读顺序，但此设置不会将布局反转为从右到左显示 — 也就是说，它不会导致镜像。 例如，设置此属性不会将窗体标题栏中的“最小化”、“最大化”和“关闭”按钮移动到窗体左侧。 同样，某些控件（如 <xref:System.Windows.Forms.TreeView> 控件）需要镜像来更改显示方式，以便适合于阿拉伯语或希伯来语。 可通过设置 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 属性镜像这些控件。  
+ 将窗体或控件的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性设置为 `true` 可反转窗体上元素的阅读顺序，但此设置不会将布局反转为从右到左显示 — 也就是说，它不会导致镜像。 例如，设置此属性不会将窗体标题栏中的“最小化”  、“最大化”  和“关闭”  按钮移动到窗体左侧。 同样，某些控件（如 <xref:System.Windows.Forms.TreeView> 控件）需要镜像来更改显示方式，以便适合于阿拉伯语或希伯来语。 可通过设置 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 属性镜像这些控件。  
   
  可创建以下控件的镜像版本：  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06d2351ffa7d7f009d7b049f4689df7038b4d202
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641382"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505349"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的笔、直线和矩形
-若要绘制的线条[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]你需要创建<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供的实际执行绘制操作的方法和<xref:System.Drawing.Pen>对象将存储属性，例如线条颜色、 宽度和样式。  
+若要使用 GDI + 需要创建绘制直线<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供的实际执行绘制操作的方法和<xref:System.Drawing.Pen>对象将存储属性，例如线条颜色、 宽度和样式。  
   
 ## <a name="drawing-a-line"></a>绘制一条线  
  若要绘制一条线，请调用<xref:System.Drawing.Graphics.DrawLine%2A>方法的<xref:System.Drawing.Graphics>对象。 <xref:System.Drawing.Pen>对象作为一个自变量传递<xref:System.Drawing.Graphics.DrawLine%2A>方法。 下面的示例将行从点 （4，2） 绘制到点 （12，6）：  
@@ -55,7 +55,7 @@ ms.locfileid: "61641382"
  ![Lines](./media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
 ## <a name="drawing-a-rectangle"></a>绘制一个矩形  
- 绘制矩形[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]类似于绘制线条。 若要绘制一个矩形，需要<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供<xref:System.Drawing.Graphics.DrawRectangle%2A>方法，和<xref:System.Drawing.Pen>对象将存储属性，例如线条宽度和颜色。 <xref:System.Drawing.Pen>对象作为一个自变量传递<xref:System.Drawing.Graphics.DrawRectangle%2A>方法。 下面的示例绘制一个具有在其左上角的矩形 （100，50），宽度为 80，和高度为 40:  
+ 绘制矩形使用 GDI + 是类似于绘制线条。 若要绘制一个矩形，需要<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供<xref:System.Drawing.Graphics.DrawRectangle%2A>方法，和<xref:System.Drawing.Pen>对象将存储属性，例如线条宽度和颜色。 <xref:System.Drawing.Pen>对象作为一个自变量传递<xref:System.Drawing.Graphics.DrawRectangle%2A>方法。 下面的示例绘制一个具有在其左上角的矩形 （100，50），宽度为 80，和高度为 40:  
   
  [!code-csharp[LinesCurvesAndShapes#45](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 198d7f616d843a3c90b8d32cf33096ee253d2935
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832739"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504104"
 ---
 # <a name="generating-strongly-typed-datasets"></a>生成强类型化数据集
 给定符合 XML 架构定义语言 (XSD) 标准的 XML 架构，您可以生成强类型化<xref:System.Data.DataSet>使用 XSD.exe 工具提供使用 Windows 软件开发工具包 (SDK)。  
@@ -23,7 +23,7 @@ ms.locfileid: "66832739"
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 在此语法中，`/d`指令指示该工具以生成**数据集**，和`/l:`指示该工具 （例如，C# 或 Visual Basic.NET） 使用的语言。 可选`/eld`指令指定了可用于[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]对生成的查询**数据集。** 当同时指定 `/d` 选项时可使用此选项。 有关详细信息，请参阅[查询类型化数据集](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 可选`/n:`指令指示该工具还生成的命名空间**数据集**调用**XSDSchema.Namespace**。 命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。 所生成的代码可以编译成库或模块。  
+ 在此语法中，`/d`指令指示该工具以生成**数据集**，和`/l:`指示该工具 （例如，C# 或 Visual Basic.NET） 使用的语言。 可选`/eld`指令指定您可以对生成的查询使用 LINQ to DataSet**数据集。** 当同时指定 `/d` 选项时可使用此选项。 有关详细信息，请参阅[查询类型化数据集](../../../../../docs/framework/data/adonet/querying-typed-datasets.md)。 可选`/n:`指令指示该工具还生成的命名空间**数据集**调用**XSDSchema.Namespace**。 命令的输出为 XSDSchemaFileName.cs，该输出可以在 ADO.NET 应用程序中编译和使用。 所生成的代码可以编译成库或模块。  
   
  以下代码显示使用 C# 编译器 (csc.exe) 将生成的代码编译成库的语法。  
   

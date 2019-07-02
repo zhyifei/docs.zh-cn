@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583864"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504704"
 ---
 # <a name="queries-in-linq-to-dataset"></a>在 LINQ to DataSet 中查询
 查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一种较为简单的一致模型，适用于各种数据源和格式的数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
   
  一个 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询操作包含三个操作：获取数据源、创建查询和执行查询。  
   
- 实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口的数据源可以通过 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 进行查询。 对 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 调用 <xref:System.Data.DataTable> 将返回实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口的对象，作为 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询的数据源。  
+ 实现 <xref:System.Collections.Generic.IEnumerable%601> 泛型接口的数据源可以通过 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 进行查询。 调用<xref:System.Data.DataTableExtensions.AsEnumerable%2A>上<xref:System.Data.DataTable>返回的对象实现泛型<xref:System.Collections.Generic.IEnumerable%601>接口，它可用作数据源的 LINQ to DataSet 查询。  
   
  在查询中，您可以确切指定要从数据源检索哪些信息。 查询也可以指定返回信息之前信息的排序、分组和表现方式。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 中，查询存储在变量中。 如果查询旨在返回一系列值，则查询变量本身也必须为可枚举类型。 此查询变量不执行任何操作，也不返回任何数据；它只存储查询信息。 创建查询后必须执行该查询以检索任何数据。  
   
@@ -26,12 +26,12 @@ ms.locfileid: "65583864"
  与返回一系列值的延迟查询相反，返回单一实例值的查询将立即执行。 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A> 和 <xref:System.Linq.Enumerable.First%2A> 是单一实例查询的一些示例。 因为需要查询结果来计算单一实例结果，因此这些查询将会立即执行。 例如，若要计算查询结果的平均值，则必须执行查询，以便求平均值函数具有要使用的输入数据。 您也可以对查询使用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法以强制立即执行不生成单一实例值的查询。 当想要缓存查询结果时，这些强制立即执行的技术可能会很有用。
   
 ## <a name="queries"></a>查询  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询可以在两个不同的语法进行表述： 查询表达式语法和基于方法的查询语法。  
+ 可以使用 LINQ to DataSet 查询两种不同的语法进行表述： 查询表达式语法和基于方法的查询语法。  
   
 ### <a name="query-expression-syntax"></a>查询表达式语法  
  查询表达式是一种声明性查询语法。 此语法使开发人员能够以类似于 SQL 的格式用 C# 或 Visual Basic 编写查询。 通过使用查询表达式语法，你可以用最少的代码对数据源执行复杂的筛选、排序和分组操作。 有关详细信息，请参阅[LINQ 查询表达式](../../../csharp/linq/index.md#query-expression-overview)并[基本查询操作 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
   
- 查询表达式语法是 C# 3.0 和 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] 中的新功能。 但是，.NET Framework 公共语言运行时 (CLR) 无法读取查询表达式语法本身。 因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。 这些方法称为“标准查询运算符”。 作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 有关标准查询运算符的详细信息，请参阅[标准查询运算符概述](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ 查询表达式语法是 C# 3.0 和 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] 中的新功能。 但是，.NET Framework 公共语言运行时 (CLR) 无法读取查询表达式语法本身。 因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。 这些方法称为“标准查询运算符”  。 作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 有关标准查询运算符的详细信息，请参阅[标准查询运算符概述](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
  下面的示例使用 <xref:System.Linq.Enumerable.Select%2A> 返回 `Product` 表中的所有行并显示产品名称。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65583864"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>基于方法的查询语法  
- 表述 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询的另一种方法是使用基于方法的查询。 基于方法的查询语法是对 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 运算符方法的一系列直接方法调用，将 Lambda 表达式作为参数进行传递。 有关详细信息，请参阅 [Lambda 表达式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
+ 表述 LINQ to DataSet 查询的其他方法是使用基于方法的查询。 基于方法的查询语法是对 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 运算符方法的一系列直接方法调用，将 Lambda 表达式作为参数进行传递。 有关详细信息，请参阅 [Lambda 表达式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
  此示例使用 <xref:System.Linq.Enumerable.Select%2A> 返回 `Product` 中的所有行并显示产品名称。  
   

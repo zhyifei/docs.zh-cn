@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663893"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505292"
 ---
 # <a name="types-of-bitmaps"></a>位图类型
 位图的像素为单位的矩形数组中指定的每个像素的颜色的位数组。 专用于单个像素的比特数确定可以分配给该像素的颜色数。 例如，如果每个像素都由 4 位，则给定的像素可以指定 16 种不同颜色之一 (2 ^4 = 16)。 下表显示了几个示例的给定数目的位可以分配给代表的像素的颜色数。  
@@ -53,7 +53,7 @@ ms.locfileid: "61663893"
  ![位图示例](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>图形文件格式  
- 有许多标准格式的磁盘文件中保存位图。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持的图形文件格式在以下各段中所述。  
+ 有许多标准格式的磁盘文件中保存位图。 GDI + 支持的图形文件格式在以下各段中所述。  
   
 ### <a name="bmp"></a>BMP  
  BMP 是用于存储与设备无关且独立于应用程序的映像的 Windows 的标准格式。 文件头中指定每个像素 （1、 4、 8、 15、 24、 32 或 64） 对于给定的 BMP 文件的比特数。 使用每像素 24 位 BMP 文件很常见。 BMP 文件通常不压缩，因此，不是很适合用于传输在 Internet 上。  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 9a2913de6534612455c14858f6baffea8ef78976
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 1b2c7434543bb2574c59eaec126a621121dd7cef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347481"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504794"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>泛型字段和 SetField 方法 (LINQ to DataSet)
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供扩展方法<xref:System.Data.DataRow>用于访问列值的类：<xref:System.Data.DataRowExtensions.Field%2A>方法和<xref:System.Data.DataRowExtensions.SetField%2A>方法。 这些方法使开发人员能够更轻松地访问列值，特别是 Null 值。 <xref:System.Data.DataSet>使用<xref:System.DBNull.Value?displayProperty=nameWithType>来表示 null 值，而[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]使用<xref:System.Nullable>和<xref:System.Nullable%601>类型。 使用 <xref:System.Data.DataRow> 中预先存在的列访问器需要将返回对象强制转换成相应的类型。 如果 <xref:System.Data.DataRow> 中的特定字段可以为 null，则必须显示检查 Null 值，因为返回 <xref:System.DBNull.Value?displayProperty=nameWithType> 并隐式地将其强制转换为另一种类型会引发 <xref:System.InvalidCastException>。 在下面的示例中，如果不使用 <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> 方法检查 Null 值，则在索引器返回 <xref:System.DBNull.Value?displayProperty=nameWithType> 并试图将其强制转换为 <xref:System.String> 的情况下会引发异常。  
+LINQ to DataSet 提供的扩展方法<xref:System.Data.DataRow>用于访问列值的类：<xref:System.Data.DataRowExtensions.Field%2A>方法和<xref:System.Data.DataRowExtensions.SetField%2A>方法。 这些方法使开发人员能够更轻松地访问列值，特别是 Null 值。 <xref:System.Data.DataSet>使用<xref:System.DBNull.Value?displayProperty=nameWithType>来表示 null 值，而[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]使用<xref:System.Nullable>和<xref:System.Nullable%601>类型。 使用 <xref:System.Data.DataRow> 中预先存在的列访问器需要将返回对象强制转换成相应的类型。 如果 <xref:System.Data.DataRow> 中的特定字段可以为 null，则必须显示检查 Null 值，因为返回 <xref:System.DBNull.Value?displayProperty=nameWithType> 并隐式地将其强制转换为另一种类型会引发 <xref:System.InvalidCastException>。 在下面的示例中，如果不使用 <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> 方法检查 Null 值，则在索引器返回 <xref:System.DBNull.Value?displayProperty=nameWithType> 并试图将其强制转换为 <xref:System.String> 的情况下会引发异常。  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  

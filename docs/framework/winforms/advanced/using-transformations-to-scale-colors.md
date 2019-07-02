@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81c0ddf5b937d604559a9eb1a8b598885546c97f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791130"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504961"
 ---
 # <a name="using-transformations-to-scale-colors"></a>使用转换来调整颜色
 缩放转换将乘以一个或多个数字的四个颜色组件。 下表给出表示缩放颜色矩阵项。  
@@ -35,7 +35,7 @@ ms.locfileid: "61791130"
   
  ![比较原始和缩放颜色的屏幕截图。](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
- 下表列出了四个条形的颜色矢量之前和之后的蓝色缩放。 请注意，第四个颜色栏中的蓝色组件发送给 0.6 了从 0.8。 这是因为[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]保留仅结果的小数部分。 例如，(2)(0.8) = 1.6，1.6 的小数部分为 0.6。 保留仅的小数部分，可确保结果始终是中间隔 [0，1]。  
+ 下表列出了四个条形的颜色矢量之前和之后的蓝色缩放。 请注意，第四个颜色栏中的蓝色组件发送给 0.6 了从 0.8。 这是因为 GDI + 保留仅结果的小数部分。 例如，(2)(0.8) = 1.6，1.6 的小数部分为 0.6。 保留仅的小数部分，可确保结果始终是中间隔 [0，1]。  
   
 |原始|缩放|  
 |--------------|------------|  

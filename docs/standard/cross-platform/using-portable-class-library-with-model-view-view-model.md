@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a8c2b6ca9701f5eec4a8f43eaae531a0cfc18c1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b53be90764c6537fb27cb1b5ed781a68e69effa0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377720"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504672"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>将可移植类库与模型-视图-视图模型配合使用
 可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)实现模型-视图-视图模型 (MVVM) 模式并跨多个平台共享程序集。
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM 是将用户界面与基础业务逻辑相隔离的应用程序模式。 您可以实现中的模型和视图模型类[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目在 Visual Studio 2012 中，然后创建针对不同平台自定义的视图。 通过此方法，只需编写数据模型和业务逻辑一次，即可将该代码用于 .NET Framework、Silverlight、Windows Phone 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用，如下图所示。
+ MVVM 是将用户界面与基础业务逻辑相隔离的应用程序模式。 您可以在 Visual Studio 2012 中，可移植类库项目中实现模型和视图模型类，然后创建针对不同平台自定义的视图。 通过此方法，只需编写数据模型和业务逻辑一次，即可将该代码用于 .NET Framework、Silverlight、Windows Phone 和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用，如下图所示。
 
  ![显示跨平台可移植类库与 MVVM 共享程序集。](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- 本主题不提供有关 MVVM 模式的一般信息。 它仅提供有关如何使用信息[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]来实现 MVVM。 有关 MVVM 的详细信息，请参阅[MVVM 快速入门使用 Prism Library 5.0 的 WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
+ 本主题不提供有关 MVVM 模式的一般信息。 它仅提供有关如何使用可移植类库实现 MVVM 的信息。 有关 MVVM 的详细信息，请参阅[MVVM 快速入门使用 Prism Library 5.0 的 WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))。
 
 ## <a name="classes-that-support-mvvm"></a>支持 MVVM 类
- 如果面向.NET Framework 4.5 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，Silverlight 或 Windows Phone 7.5 的你[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目中，下列类是可用于实现 MVVM 模式：
+ 在面向.NET Framework 4.5 时[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，Silverlight 或 Windows Phone 7.5 可移植类库项目，下列类是可用于实现 MVVM 模式：
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 类
 
@@ -55,17 +55,17 @@ ms.locfileid: "66377720"
 - 中的所有类<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>命名空间
 
 ## <a name="implementing-mvvm"></a>实现 MVVM
- 若要实现 MVVM，您通常创建模型和视图模型中的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目，因为[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目不能引用不可移植的项目。 模型和视图模型可以是同一个项目中或单独的项目中。 如果使用单独的项目，添加从视图模型项目到模型项目的引用。
+ 若要实现 MVVM，您通常创建模型和视图模型在可移植类库项目中，因为可移植类库项目不能引用不可移植的项目。 模型和视图模型可以是同一个项目中或单独的项目中。 如果使用单独的项目，添加从视图模型项目到模型项目的引用。
 
  编译模型并查看模型项目后，您引用的包含视图的应用中的这些程序集。 如果该视图仅与视图模型进行交互，只需引用包含视图模型的程序集。
 
 ### <a name="model"></a>模型
- 下面的示例演示可驻留在简化的模型类[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目。
+ 下面的示例演示可以驻留在可移植类库项目中的简化的模型类。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
 
- 下面的示例演示填充、 检索和更新中的数据的简单方法[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目。 在实际应用中，将从 Windows Communication Foundation (WCF) 服务等源检索数据。
+ 下面的示例介绍了简单的方法以填充、 检索和更新可移植类库项目中的数据。 在实际应用中，将从 Windows Communication Foundation (WCF) 服务等源检索数据。
 
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]

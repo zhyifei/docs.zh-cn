@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766163"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505031"
 ---
 # <a name="using-managed-graphics-classes"></a>使用托管图形类
-以下主题介绍如何使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]托管的类 framework 中的 API。  
+以下主题介绍如何在托管的类 framework 中使用 GDI + API。  
   
 ## <a name="in-this-section"></a>本节内容  
  [图形编程入门](getting-started-with-graphics-programming.md)  
- 介绍如何完成基本任务与[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ 介绍如何实现使用 GDI + 基本任务。  
   
  [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)  
  演示如何构造笔并使用它来绘制各种直线和形状。  

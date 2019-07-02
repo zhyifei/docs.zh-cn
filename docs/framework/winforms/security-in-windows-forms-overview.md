@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487264"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506166"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 
@@ -77,7 +77,7 @@ ClickOnce 具有请求的客户端计算机上的提升的权限的两种技术�
 
 选择哪种技术将取决于你的部署环境。 有关详细信息，请参阅[选择 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。
 
-默认情况下，使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 部署的 ClickOnce 应用程序配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 配置你的部署时，您可以将使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 执行此操作。 有关如何使用 MageUI.exe 的详细信息，请参阅演练：部署 ClickOnce 应用程序从命令行。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[如何：设置 ClickOnce 应用程序的自定义权限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
+默认情况下，使用 Visual Studio 或.NET Framework SDK 工具 （Mage.exe 和 MageUI.exe） 部署的 ClickOnce 应用程序配置为具有完全信任的客户端计算机上运行。 如果你正在使用部分信任或仅使用某些其他权限部署应用程序，则必须更改此默认设置。 配置你的部署时，您可以将使用 Visual Studio 或.NET Framework SDK 工具 MageUI.exe 执行此操作。 有关如何使用 MageUI.exe 的详细信息，请参阅[演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)。  另请参阅[如何：设置 ClickOnce 应用程序的自定义权限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[如何：设置 ClickOnce 应用程序的自定义权限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
 
 有关 ClickOnce 和权限提升的安全方面的详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。 若要深入了解受信任的应用程序部署，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)。
 

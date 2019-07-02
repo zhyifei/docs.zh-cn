@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd39b40864703b6bb24c2cc6590787562f3f4f98
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583541"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504147"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>创建 DataView 对象 (LINQ to DataSet)
-在 <xref:System.Data.DataView> 上下文中创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 有两种方式。 您可以通过针对 <xref:System.Data.DataView> 的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询创建 <xref:System.Data.DataTable>，也可以从类型化或非类型化 <xref:System.Data.DataTable> 创建该对象。 在这两种情况下，您将创建<xref:System.Data.DataView>通过使用其中一个<xref:System.Data.DataTableExtensions.AsDataView%2A>; 的扩展方法<xref:System.Data.DataView>不是在可直接构造[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]上下文。  
+有两种方法来创建<xref:System.Data.DataView>LINQ 到数据集上下文中。 您可以创建<xref:System.Data.DataView>LINQ to DataSet 查询通过从<xref:System.Data.DataTable>，也可以从类型化或非类型化创建<xref:System.Data.DataTable>。 在这两种情况下，您将创建<xref:System.Data.DataView>通过使用其中一个<xref:System.Data.DataTableExtensions.AsDataView%2A>; 的扩展方法<xref:System.Data.DataView>不是 LINQ 到数据集上下文中可直接构造。  
   
  创建 <xref:System.Data.DataView> 之后，您可以将其绑定到 Windows 窗体应用程序或 ASP.NET 应用程序中的 UI 控件上，或者更改筛选和排序设置。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64583541"
  有关筛选和排序的详细信息<xref:System.Data.DataView>，请参阅[使用 DataView 进行筛选](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)并[使用 DataView 进行排序](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)。  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>通过 LINQ to DataSet 查询创建 DataView  
- 可以通过 <xref:System.Data.DataView> 查询结果创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 对象，查询结果是 <xref:System.Data.DataRow> 对象的投影。 新创建的 <xref:System.Data.DataView> 会从创建它的查询继承筛选和排序信息。  
+ 一个<xref:System.Data.DataView>可以为数据集查询，结果所在的投影的结果中的 LINQ 创建对象<xref:System.Data.DataRow>对象。 新创建的 <xref:System.Data.DataView> 会从创建它的查询继承筛选和排序信息。  
   
 > [!NOTE]
 >  在大多数情况下，用于筛选和排序的表达式不应有副作用且必须是确定的。 另外，表达式不应包含依赖于固定执行次数的任何逻辑，因为排序和筛选操作可能会执行任意次。  
@@ -45,18 +45,18 @@ ms.locfileid: "64583541"
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- 请注意，当<xref:System.Data.DataView>创建从[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询<xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>方法必须是在查询中调用的最后一个方法。 这一点在以下示例中，这会创建<xref:System.Data.DataView>按照欠款总额排序的联机订单的：  
+ 请注意，当<xref:System.Data.DataView>从 LINQ to DataSet 查询创建<xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>方法必须是在查询中调用的最后一个方法。 这一点在以下示例中，这会创建<xref:System.Data.DataView>按照欠款总额排序的联机订单的：  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- 此外可以使用基于字符串的<xref:System.Data.DataView.RowFilter%2A>并<xref:System.Data.DataView.Sort%2A>来筛选和排序属性<xref:System.Data.DataView>创建从查询后。 请注意，这将清除继承自查询的排序和筛选信息。 下面的示例通过按以“S”开头的姓氏进行筛选的 <xref:System.Data.DataView> 查询创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 将基于字符串的 <xref:System.Data.DataView.Sort%2A> 属性设置为先按姓氏升序排序，然后按名字降序排序：  
+ 此外可以使用基于字符串的<xref:System.Data.DataView.RowFilter%2A>并<xref:System.Data.DataView.Sort%2A>来筛选和排序属性<xref:System.Data.DataView>创建从查询后。 请注意，这将清除继承自查询的排序和筛选信息。 下面的示例创建<xref:System.Data.DataView>从 LINQ to 通过开头的最后一个名称来筛选的数据集查询的。 将基于字符串的 <xref:System.Data.DataView.Sort%2A> 属性设置为先按姓氏升序排序，然后按名字降序排序：  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>从数据表创建 DataView  
- 除了从创建[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询中，<xref:System.Data.DataView>对象可以从创建<xref:System.Data.DataTable>使用<xref:System.Data.DataTableExtensions.AsDataView%2A>方法。  
+ 除了从 LINQ to DataSet 查询创建<xref:System.Data.DataView>可以从创建对象<xref:System.Data.DataTable>通过使用<xref:System.Data.DataTableExtensions.AsDataView%2A>方法。  
   
  下面的示例从 SalesOrderDetail 表创建 <xref:System.Data.DataView> 并将其设置为 <xref:System.Windows.Forms.BindingSource> 对象的数据源。 此对象充当 <xref:System.Windows.Forms.DataGridView> 控件的代理。  
   

@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET（门户网站页）
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
-ms.translationtype: HT
+ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487801"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505999"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET（门户网站页）
 LINQ to ADO.NET，可以使用查询在 ADO.NET 中任何可枚举对象[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]编程模型。  
@@ -15,12 +15,12 @@ LINQ to ADO.NET，可以使用查询在 ADO.NET 中任何可枚举对象[!INCLUD
 > [!NOTE]
 >  LINQ to ADO.NET 文档位于.NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
   
- 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供了更丰富且经过优化的查询<xref:System.Data.DataSet>，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]使您能够直接查询 SQL Server 数据库架构和[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]允许您查询实体数据模型。  
+ 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：LINQ to DataSet， [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，和[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 LINQ to DataSet 提供更丰富且经过优化的查询<xref:System.Data.DataSet>，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]使您能够直接查询 SQL Server 数据库架构和[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]允许您查询实体数据模型。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> 是 ADO.NET 中使用最广泛的某个组件，也是断开编程模型（构建 ADO.NET 的基础）连接的重要元素。 <xref:System.Data.DataSet> 虽然具有突出的优点，但其查询功能也存在限制。  
   
- [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 让你可通过使用为其他多种数据源提供的相同查询功能，在 <xref:System.Data.DataSet> 中加入更丰富的查询功能。  
+ LINQ to DataSet，可以生成更丰富的查询功能<xref:System.Data.DataSet>使用相同的查询功能，可用于许多其他数据源。  
   
  有关详细信息，请参阅 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)。  
   

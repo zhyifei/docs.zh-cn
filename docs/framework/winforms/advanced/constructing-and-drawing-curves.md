@@ -6,15 +6,15 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing curves
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
-ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c1b0cc6c6f878569fcf0c392f1b6f9683ec8afc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935442"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506099"
 ---
 # <a name="constructing-and-drawing-curves"></a>构造并绘制曲线
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持多种类型的曲线： 省略号、 弧线、 基数样条和贝塞尔自由绘制曲线。 一个椭圆定义其边界的矩形;一段弧线，是椭圆的由起始角度和扫描角度定义的一部分。 由一系列点和张力参数定义的基数样条 — 曲线平滑地通过在数组中，每个点和张力参数影响曲线弯曲的方式。 由两个终结点和两个控制点曲线不会经历的控制点定义的贝塞尔样条，但影响方向和条曲线到另一个终结点从未能弯曲程度的控点。  
+GDI + 支持多种类型的曲线： 省略号、 弧线、 基数样条和贝塞尔自由绘制曲线。 一个椭圆定义其边界的矩形;一段弧线，是椭圆的由起始角度和扫描角度定义的一部分。 由一系列点和张力参数定义的基数样条 — 曲线平滑地通过在数组中，每个点和张力参数影响曲线弯曲的方式。 由两个终结点和两个控制点曲线不会经历的控制点定义的贝塞尔样条，但影响方向和条曲线到另一个终结点从未能弯曲程度的控点。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：绘制基数样条](how-to-draw-cardinal-splines.md)  

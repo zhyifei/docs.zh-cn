@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da637152737510847830e885fdcd065ab92f16b3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967110"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505756"
 ---
 # <a name="how-to-render-images-with-gdi"></a>如何：使用 GDI+ 呈现图像
-可在应用程序中使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 呈现以文件形式存在的图像。 为此，可创建新的对象的<xref:System.Drawing.Image>类 (如<xref:System.Drawing.Bitmap>)，则创建<xref:System.Drawing.Graphics>对象，是指你想要使用，请在绘图图面，并调用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>对象。 将在图形类所表示的绘图表面上绘制图像。 可在设计时使用图像编辑器创建和编辑图像文件，而在运行时使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 呈现图像。 有关详细信息，请参阅[图标的图像编辑器](/cpp/windows/image-editor-for-icons)。  
+您可以使用 GDI + 呈现图像作为您的应用程序中的文件存在。 为此，可创建新的对象的<xref:System.Drawing.Image>类 (如<xref:System.Drawing.Bitmap>)，则创建<xref:System.Drawing.Graphics>对象，是指你想要使用，请在绘图图面，并调用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>对象。 将在图形类所表示的绘图表面上绘制图像。 可以使用图像编辑器创建和编辑在设计时，图像文件，并在运行时使用 GDI + 呈现它们。 有关详细信息，请参阅[图标的图像编辑器](/cpp/windows/image-editor-for-icons)。  
   
 ### <a name="to-render-an-image-with-gdi"></a>使用 GDI+ 呈现图像  
   

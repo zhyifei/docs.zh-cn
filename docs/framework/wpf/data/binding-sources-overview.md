@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: a8129b2c8674fb5ecc4d513f57236fde66fdff14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe5cb97b4802c2b638a4b218a27da05468dc50fb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659920"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505560"
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。  
@@ -24,7 +24,7 @@ ms.locfileid: "64659920"
 |--------------------|-----------------|  
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象|可以绑定到任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象的公有属性、子属性以及索引器。 绑定引擎使用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 反射来获取属性值。 或者，对象实现<xref:System.ComponentModel.ICustomTypeDescriptor>或注册了<xref:System.ComponentModel.TypeDescriptionProvider>也适用于绑定引擎。<br /><br /> 有关如何实现可用作绑定源的类的详细信息，请参阅本主题后面的[为绑定源实现类](#classes)。|  
 |动态对象|可以将绑定到可用的属性和实现的对象的索引器<xref:System.Dynamic.IDynamicMetaObjectProvider>接口。 如果可以访问代码中的成员，则可以绑定到该成员。 例如，如果动态对象使用户可以通过 `someObjet.AProperty` 访问代码中的成员，则可以通过将绑定路径设置为 `AProperty` 来绑定到该成员。|  
-|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 对象|可以将绑定到[!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)]对象，如<xref:System.Data.DataTable>。 [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView>实现<xref:System.ComponentModel.IBindingList>接口，它提供了绑定引擎侦听的更改通知。|  
+|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 对象|可以将其绑定到 ADO.NET 对象，如<xref:System.Data.DataTable>。 ADO.NET<xref:System.Data.DataView>实现<xref:System.ComponentModel.IBindingList>接口，它提供了绑定引擎侦听的更改通知。|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 对象|你可以将绑定到并运行`XPath`查询上的<xref:System.Xml.XmlNode>， <xref:System.Xml.XmlDocument>，或<xref:System.Xml.XmlElement>。 方便地访问[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]标记中的绑定源的数据是使用<xref:System.Windows.Data.XmlDataProvider>对象。 有关详细信息，请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 此外可以绑定到<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>，或绑定到这些类型的对象上运行通过使用 LINQ to XML 查询的结果。 使用 LINQ to XML 访问 XML 数据的标记中的绑定源的简便方法是使用<xref:System.Windows.Data.ObjectDataProvider>对象。 有关详细信息，请参阅[绑定到 XDocument、XElement 或 LINQ for XML 查询结果](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|  
 |<xref:System.Windows.DependencyObject> 对象|可以绑定到的任何依赖关系属性<xref:System.Windows.DependencyObject>。 有关示例，请参阅[绑定两个控件的属性](how-to-bind-the-properties-of-two-controls.md)。|  
   
