@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET（门户网站页）
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 21d6ddb4b793d2502b315888d79fb826741fed2e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: MT
+ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307487"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487801"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET（门户网站页）
-[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] 使你可以使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 编程模型查询 ADO.NET 中的任何可枚举对象。  
+LINQ to ADO.NET，可以使用查询在 ADO.NET 中任何可枚举对象[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]编程模型。  
   
 > [!NOTE]
->  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] 文档位于 .NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
+>  LINQ to ADO.NET 文档位于.NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
   
  有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供了更丰富且经过优化的查询<xref:System.Data.DataSet>，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]使您能够直接查询 SQL Server 数据库架构和[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]允许您查询实体数据模型。  
   
