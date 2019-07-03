@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306622"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424199"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
 
@@ -23,14 +23,14 @@ ms.locfileid: "67306622"
 
 |From|到|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`、`ushort`、`uint`、`ulong` 或 `char`|  
-|[byte](byte.md)|`sbyte` 或 `char`|  
-|[short](short.md)|`sbyte`、`byte`、`ushort`、`uint`、`ulong` 或 `char`|  
-|[ushort](ushort.md)|`sbyte`、`byte`、`short` 或 `char`|  
-|[int](int.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` 或 `char`|  
-|[uint](uint.md)|`sbyte`、`byte`、`short`、`ushort`、`int` 或 `char`|  
-|[long](long.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong` 或 `char`|  
-|[ulong](ulong.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long` 或 `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`、`ushort`、`uint`、`ulong` 或 `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` 或 `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint`、`ulong` 或 `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short` 或 `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong` 或 `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int` 或 `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong` 或 `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long` 或 `char`|  
 |[char](char.md)|`sbyte`、`byte` 或 `short`|  
 |[float](float.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char` 或 `decimal`|  
 |[double](double.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `decimal`|  
@@ -69,7 +69,7 @@ ms.locfileid: "67306622"
 - [C# 参考](../index.md)
 - [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
 - [() 运算符](../operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [整型类型表](integral-types-table.md)
+- [整型类型](../builtin-types/integral-numeric-types.md)
 - [浮点型表](floating-point-types-table.md)
 - [内置类型表](built-in-types-table.md)
 - [隐式数值转换表](implicit-numeric-conversions-table.md)
