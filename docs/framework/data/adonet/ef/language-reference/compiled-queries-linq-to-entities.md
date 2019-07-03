@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785341"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539908"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>编译的查询 (LINQ to Entities)
 如果应用程序需要在实体框架中多次执行结构类似的查询，通常可以通过仅编译查询一次并在每次执行时使用不同参数的方法来提高性能。 例如，某应用程序要检索特定城市的所有客户，而该城市是运行时由用户在窗体中指定的。 LINQ to Entities 支持将已编译的查询用于此目的。  
@@ -19,7 +19,7 @@ ms.locfileid: "61785341"
   
  <xref:System.Data.Objects.CompiledQuery> 类提供查询的编译和缓存以供重复使用。 从概念上讲，此类包含 <xref:System.Data.Objects.CompiledQuery> 的 `Compile` 方法以及若干重载。 调用 `Compile` 方法可以创建新的委托来表示已编译的查询。 给定 `Compile` 及其参数值，<xref:System.Data.Objects.ObjectContext> 方法将返回生成某个结果的委托（例如 <xref:System.Linq.IQueryable%601> 实例）。 只在第一次执行的过程中查询才编译一次。 编译时为查询设置的合并选项在以后无法更改。 对查询进行编译后，您可以仅提供基元类型的参数，但不能替换将更改生成的 SQL 的查询部分。 有关详细信息，请参阅[实体框架合并选项和已编译的查询](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查询表达式的<xref:System.Data.Objects.CompiledQuery>的`Compile`由一个泛型方法编译表示`Func`委托，如<xref:System.Func%605>。 查询表达式最多可以包装一个 `ObjectContext` 参数、一个返回参数和 16 个查询参数。 如果需要的查询参数不止 16 个，则可以创建一个结构并用其属性表示查询参数。 然后，该结构上的这些属性在经过设置之后就可以用于查询表达式中。  
+ LINQ to Entities 查询表达式的<xref:System.Data.Objects.CompiledQuery>的`Compile`方法编译为由一个泛型`Func`委托，如<xref:System.Func%605>。 查询表达式最多可以包装一个 `ObjectContext` 参数、一个返回参数和 16 个查询参数。 如果需要的查询参数不止 16 个，则可以创建一个结构并用其属性表示查询参数。 然后，该结构上的这些属性在经过设置之后就可以用于查询表达式中。  
   
 ## <a name="example"></a>示例  
  下面的示例将编译并调用一个查询，该查询接受 <xref:System.Decimal> 输入参数，并返回一个应付款总额大于或等于 200.00 美元的订单序列：  

@@ -2,12 +2,12 @@
 title: 实体框架术语
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306336"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539880"
 ---
 # <a name="entity-framework-terminology"></a>实体框架术语
 本主题定义中经常引用的术语[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档。 如果有其他可用信息，则会提供指向相关主题的链接。  
@@ -44,7 +44,7 @@ ms.locfileid: "67306336"
 |独立关联|实体之间的关联，由独立对象表示和跟踪。|  
 |密钥|实体类型的属性 (Attribute)，用于指定使用哪个属性 (Property) 或属性 (Property) 集标识实体类型的唯一实例。 在对象层中由 <xref:System.Data.EntityKey> 类表示。<br /><br /> 有关详细信息，请参阅[Key 元素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl)并[实体键](../../../../../docs/framework/data/adonet/entity-key.md)。|  
 |延迟加载|当查询返回对象时，不会同时加载相关对象。 但在访问导航属性时，会自动加载相关对象。|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|用于定义一组允许以直接在 Visual C# 和 Visual Basic 中的声明性方式表示遍历、 筛选和投影操作的查询运算符的查询语法。<br /><br /> 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
+|LINQ to Entities|用于定义一组允许以直接在 Visual C# 和 Visual Basic 中的声明性方式表示遍历、 筛选和投影操作的查询运算符的查询语法。<br /><br /> 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
 |映射|概念模型与存储模型中的项之间的对应规范。<br /><br /> 有关详细信息，请参阅[MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
 |.msl 文件|一种 XML 文件，该文件以 MSL 表示，包含概念模型与存储模型之间的映射。|  
 |映射规范语言 (MSL)|一种基于 XML 的语言，可用于将概念模型中定义的项映射到存储模型中的项。<br /><br /> 有关详细信息，请参阅[MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  

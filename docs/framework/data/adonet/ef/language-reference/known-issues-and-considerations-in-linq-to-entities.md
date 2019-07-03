@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 303e46e79786ce7f062db4a1a3ffb6c321169af8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631280"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539825"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知问题和注意事项
-本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的已知问题的信息。  
+本部分提供有关使用 LINQ to Entities 查询的已知问题的信息。  
   
 - [不能缓存的 LINQ 查询](#LINQQueriesThatAreNotCached)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64631280"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>不支持无符号整数  
- 由于 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 不支持无符号整数，因此不支持在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 查询中指定无符号整数类型。 如果指定无符号的整数，<xref:System.ArgumentException>异常过程中会引发在查询表达式转换，如下面的示例中所示。 此示例查询其 ID 为 48000 的订单。  
+ 因为不支持在 LINQ to Entities 查询中指定无符号的整数类型[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]不支持无符号的整数。 如果指定无符号的整数，<xref:System.ArgumentException>异常过程中会引发在查询表达式转换，如下面的示例中所示。 此示例查询其 ID 为 48000 的订单。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

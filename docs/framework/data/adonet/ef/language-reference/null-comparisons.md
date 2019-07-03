@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489898"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539734"
 ---
 # <a name="null-comparisons"></a>Null 比较
-数据源中的 `null` 值指示未知的值。 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中，可以检查 null 值以便仅对具有有效（非 null）数据的行执行特定的计算或比较。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
+数据源中的 `null` 值指示未知的值。 在 LINQ to Entities 查询中，您可以检查 null 值，以便只有具有有效的或非 null 数据的行上将某些计算或比较执行。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
   
  在 SQL Server 中，null 等于 null 比较默认返回 null 值。 在下面的示例中，行其中`ShipDate`是从结果集中排除的 null 和 TRANSACT-SQL 语句将返回 0 行。  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>将 Null 集合传递到聚合函数  
- 在中[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]，通过支持的集合时`IQueryable`为聚合函数，在数据库上执行聚合运算。 可能是内存执行中的查询和在数据库中执行的查询的结果的差异。 使用内存中查询，如果没有匹配项，查询将返回零。 在数据库中，同一查询返回 `null`。 如果`null`值传递到 LINQ 聚合函数，将引发异常。 若要接受可能`null`值强制转换的类型和接收查询结果为 null 的类型的类型的属性。  
+ 在 LINQ to Entities，通过支持的集合时`IQueryable`为聚合函数，在数据库上执行聚合运算。 可能是内存执行中的查询和在数据库中执行的查询的结果的差异。 使用内存中查询，如果没有匹配项，查询将返回零。 在数据库中，同一查询返回 `null`。 如果`null`值传递到 LINQ 聚合函数，将引发异常。 若要接受可能`null`值强制转换的类型和接收查询结果为 null 的类型的类型的属性。  
   
 ## <a name="see-also"></a>请参阅
 

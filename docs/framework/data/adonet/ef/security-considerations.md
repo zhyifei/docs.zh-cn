@@ -2,12 +2,12 @@
 title: 安全注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307301"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539837"
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 此外应遵循有关创建安全的.NET Framework 应用程序的建议。 有关详细信息，请参阅[安全性概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -100,9 +100,9 @@ ms.locfileid: "67307301"
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询可在任何接受文本的位置接受参数。 应使用参数化查询，而不是将来自外部代理的文本直接注入查询。 此外应考虑使用[查询生成器方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))安全地构造 Entity SQL。  
   
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 注入式攻击：  
+- LINQ 到实体注入式攻击：  
   
-     尽管在 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]中可以撰写查询，但是要通过对象模型 API 执行。 与 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询不同，[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 查询不使用字符串操作或串联来撰写，所以不易受到传统的 SQL 注入式攻击的影响。  
+     虽然可以在 LINQ to Entities 查询撰写，但通过对象模型 API 执行。 与不同[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询，LINQ to Entities 查询不使用字符串操作或串联来撰写，所以不易受到传统的 SQL 注入攻击。  
   
 #### <a name="prevent-very-large-result-sets"></a>避免结果集过大。  
  如果客户端执行的操作所消耗的资源与结果集的大小成正比，则过大的结果集会导致客户端系统关闭。 在下列情况下可能发生意外的过大结果集：  
@@ -113,7 +113,7 @@ ms.locfileid: "67307301"
   
 - 嵌套的 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询。  
   
- 如果接受用户输入，则必须确保输入内容不会导致结果集过大以致超出系统的处理能力。 此外可以使用<xref:System.Linq.Queryable.Take%2A>中的方法[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]或[限制](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)中的运算符[!INCLUDE[esql](../../../../../includes/esql-md.md)]来限制结果集的大小。  
+ 如果接受用户输入，则必须确保输入内容不会导致结果集过大以致超出系统的处理能力。 此外可以使用<xref:System.Linq.Queryable.Take%2A>LINQ to Entities 中的方法或[限制](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)中的运算符[!INCLUDE[esql](../../../../../includes/esql-md.md)]来限制结果集的大小。  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>避免在将方法公开给可能不受信任的调用方时返回 IQueryable 结果。  
  避免公开给可能不受信任的调用方的方法返回 <xref:System.Linq.IQueryable%601> 类型的原因如下：  

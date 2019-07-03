@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630723"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539775"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员使用 Visual Basic 或 Visual C# 根据实体框架概念模型编写查询。 针对实体框架的查询由针对对象上下文执行的命令目录树查询表示。 LINQ to Entities 将语言集成查询 (LINQ) 查询转换为命令目录树查询，针对实体框架执行这些查询，并返回可同时由实体框架和 LINQ 使用的对象。 以下是创建和执行 LINQ to Entities 查询的过程：  
@@ -47,7 +47,7 @@ LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员�
   
  有关如何将 CLR 方法调用映射到数据源中的规范函数的信息，请参阅[CLR 方法至规范函数映射](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)。  
   
- 有关如何调用规范、 数据库和自定义函数中的信息[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]查询，请参阅[LINQ to Entities 查询中调用函数](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)。  
+ 有关如何对调用规范、 数据库和自定义中的函数从 LINQ to Entities 查询的信息，请参阅[LINQ to Entities 查询中调用函数](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)。  
   
 ## <a name="query-execution"></a>查询执行  
  在用户创建 LINQ 查询之后，该查询将转换为与实体框架兼容的表示形式（采用命令树形式），然后针对数据源执行此查询。 在查询执行时间，将在客户端或服务器上计算所有查询表达式（或查询的组成部分）的值。 这包括在结果具体化或实体投影中使用的表达式。 有关详细信息，请参阅[查询执行](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)。 有关如何通过一次编译查询，然后执行它若干次使用不同的参数来提高性能的信息，请参阅[编译的查询 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。  

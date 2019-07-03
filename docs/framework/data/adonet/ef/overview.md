@@ -2,12 +2,12 @@
 title: 实体框架概述
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307349"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539467"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 
@@ -45,7 +45,7 @@ ms.locfileid: "67307349"
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不仅仅是另一种对象关系映射解决方案，从本质上讲，它的作用是使应用程序能够访问和更改概念模型中以实体和关系形式表示的数据。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用模型和映射文件中的信息将对概念模型中表示的实体类型的对象查询转换为特定于数据源的查询。 查询结果具体化为对象的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供以下方式来查询概念模型并返回对象：
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 提供语言集成查询 (LINQ) 支持，用于查询在概念模型中定义的实体类型。 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
+- LINQ to Entities。 提供语言集成查询 (LINQ) 支持，用于查询在概念模型中定义的实体类型。 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 与存储无关的 SQL 方言直接使用概念模型中的实体并支持实体数据模型概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
 

@@ -2,18 +2,18 @@
 title: 支持和不支持的 LINQ 方法 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 338069b5139999a046d1b1b10a8eac4acb1d9e06
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797678"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539438"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支持和不支持的 LINQ 方法 (LINQ to Entities)
-本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持和不支持的语言集成查询 (LINQ) 标准查询运算符的信息。 许多 LINQ 标准查询运算符都有可接受整数自变量的重载版本。 该整数参数对应于正在操作的序列中从零开始的索引，<xref:System.Collections.Generic.IEqualityComparer%601> 或 <xref:System.Collections.Generic.IComparer%601>。 除非专门指定，否则这些 LINQ 标准查询运算符的重载版本并不受支持，尝试使用它们将引发异常。  
+本部分提供有关支持或不受支持的 linq to Entities 查询的语言集成查询 (LINQ) 标准查询运算符的信息。 许多 LINQ 标准查询运算符都有可接受整数自变量的重载版本。 该整数参数对应于正在操作的序列中从零开始的索引，<xref:System.Collections.Generic.IEqualityComparer%601> 或 <xref:System.Collections.Generic.IComparer%601>。 除非专门指定，否则这些 LINQ 标准查询运算符的重载版本并不受支持，尝试使用它们将引发异常。  
   
 ## <a name="projection-and-restriction-methods"></a>投影和限制方法  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持大多数 LINQ 投影和限制方法，除了那些接受位置自变量的方法。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的投影和限制方法。  
+ Linq to Entities 查询，除了那些接受位置自变量支持大多数 LINQ 投影和限制方法。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的投影和限制方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -27,7 +27,7 @@ ms.locfileid: "61797678"
 |<xref:System.Linq.Queryable.Where%2A>|不支持|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>联接方法  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 支持大多数 LINQ 联接方法，但不支持接受 `IEqualityComparer` 的联接方法，原因是比较器不能转换为数据源。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的联接方法。  
+ Linq to Entities，除了那些接受支持的 LINQ 联接方法`IEqualityComparer`因为比较器不能转换为数据源。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的联接方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "61797678"
 |<xref:System.Linq.Queryable.Join%2A>|不支持|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>设置方法  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持大多数 LINQ 集方法，但使用 <xref:System.Collections.Generic.EqualityComparer%601> 的那些方法除外。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的集方法。  
+ Linq to Entities 查询，但不使用支持大多数 LINQ 集方法的<xref:System.Collections.Generic.EqualityComparer%601>。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的集方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "61797678"
 |<xref:System.Linq.Queryable.Union%2A>|不支持|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>排序方法  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 支持大多数 LINQ 排序方法，但不支持接受 <xref:System.Collections.Generic.IComparer%601> 的排序方法，原因是比较器不能转换为数据源。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的排序方法。  
+ 大多数 LINQ 排序方法支持 linq to Entities，除了那些接受<xref:System.Collections.Generic.IComparer%601>，因为比较器不能转换为数据源。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的排序方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "61797678"
 |<xref:System.Linq.Queryable.Reverse%2A>|不支持|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>分组方法  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 支持多数 LINQ 分组方法，但由于比较器不能转换为数据源，因此不支持接受 <xref:System.Collections.Generic.IEqualityComparer%601> 的那些方法。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的分组方法。  
+ Linq to Entities，除了那些接受支持大多数 LINQ 分组方法<xref:System.Collections.Generic.IEqualityComparer%601>，因为比较器不能转换为数据源。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的分组方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "61797678"
 |<xref:System.Linq.Queryable.GroupBy%2A>|不支持|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>聚合方法  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 中支持大多数接受基元数据类型的聚合方法。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的聚合方法。  
+ LINQ to Entities 中支持大多数接受基元数据类型的聚合方法。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的聚合方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -153,7 +153,7 @@ ms.locfileid: "61797678"
 |<xref:System.Linq.Queryable.OfType%2A>|对 <xref:System.Data.Metadata.Edm.EntityType> 支持|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>分页方法  
- 有些 LINQ 分页方法在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中不受支持。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的分页方法。  
+ 有些 LINQ 分页方法不支持在 LINQ to Entities 查询。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的分页方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
