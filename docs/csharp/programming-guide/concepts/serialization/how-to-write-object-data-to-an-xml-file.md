@@ -2,12 +2,12 @@
 title: 如何：将对象数据写入 XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77d3a45f6213bc390e0b3da0d30cfbc55235b1d1
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595524"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170240"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何：将对象数据写入 XML 文件 (C#)
 本示例使用 <xref:System.Xml.Serialization.XmlSerializer> 类从某个类将对象写入 XML 文件。  
@@ -45,7 +45,7 @@ public class XMLWrite
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 类必须有一个公共的无参数构造函数。  
+ 所序列化的类必须有一个公共的无参数构造函数。  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  

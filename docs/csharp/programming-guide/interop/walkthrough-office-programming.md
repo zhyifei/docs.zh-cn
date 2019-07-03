@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608279"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169855"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>演练：Office 编程（C# 和 Visual Basic）
 Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程的功能。 有用的 C# 功能包括命名参数和可选参数以及类型为 `dynamic` 的返回值。 在 COM 编程中，可以省略 `ref` 关键字并获得索引属性的访问权限。 Visual Basic 中的功能包括自动实现的属性、Lambda 表达式语句和集合初始值设定项。
@@ -35,31 +35,31 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 1. 启动 Visual Studio。  
   
-2. 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。  
+2. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。  
   
-3. 在“安装的模板”窗格中，展开“Visual Basic”或“Visual C#”，再展开“Office”，然后单击 Office 产品的版本年份。  
+3. 在“安装的模板”  窗格中，展开“Visual Basic”  或“Visual C#”  ，再展开“Office”  ，然后单击 Office 产品的版本年份。  
   
-4. 在“模板”窗格中，单击“Excel\<版本>外接程序”。  
+4. 在“模板”  窗格中，单击“Excel\<版本>外接程序”  。  
   
-5. 查看“模板”窗格的顶部，确保“.NET Framework 4”或更高版本出现在“目标框架”框中。  
+5. 查看“模板”  窗格的顶部，确保“.NET Framework 4”  或更高版本出现在“目标框架”  框中。  
   
-6. 如果需要，在“名称”框中键入项目的名称。  
+6. 如果需要，在“名称”  框中键入项目的名称。  
   
-7. 单击 **“确定”**。  
+7. 单击 **“确定”** 。  
   
-8. 新项目将出现在“解决方案资源管理器”中。  
+8. 新项目将出现在“解决方案资源管理器”  中。  
   
 ### <a name="to-add-references"></a>添加引用  
   
-1. 在“解决方案资源管理器”中，右键单击你的项目名称，然后单击“添加引用”。 此时会显示“添加引用”对话框。  
+1. 在“解决方案资源管理器”  中，右键单击你的项目名称，然后单击“添加引用”  。 此时会显示“添加引用”  对话框。  
   
-2. 在“程序集”选项卡上，在“组件名称”列表中选择“Microsoft.Office.Interop.Excel”版本 `<version>.0.0.0`（有关 Office 产品版本号的键，请参阅 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)），然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Word”，`version <version>.0.0.0`。 如果看不到程序集，可能需要确保它们已安装并显示（请参阅[操作说明：安装 Office 主互操作程序集](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)）。  
+2. 在“程序集”  选项卡上，在“组件名称”  列表中选择“Microsoft.Office.Interop.Excel”  版本 `<version>.0.0.0`（有关 Office 产品版本号的键，请参阅 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)），然后按住 Ctrl 键并选择“Microsoft.Office.Interop.Word”  ，`version <version>.0.0.0`。 如果看不到程序集，可能需要确保它们已安装并显示（请参阅[操作说明：安装 Office 主互操作程序集](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)）。  
   
-3. 单击 **“确定”**。  
+3. 单击 **“确定”** 。  
   
 ### <a name="to-add-necessary-imports-statements-or-using-directives"></a>添加必要的 Imports 语句或 using 指令  
   
-1. 在“解决方案资源管理器”中，右键单击“ThisAddIn.vb”或“ThisAddIn.cs”文件，然后单击“查看代码”。  
+1. 在“解决方案资源管理器”  中，右键单击“ThisAddIn.vb”  或“ThisAddIn.cs”  文件，然后单击“查看代码”  。  
   
 2. 将以下 `Imports` 语句 (Visual Basic) 或 `using` 指令 (C#) 添加到代码文件的顶部（如果不存在）。  
   
@@ -69,15 +69,15 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>创建银行帐户列表  
   
-1. 在“解决方案资源管理器”中，右键单击你的项目名称，单击“添加”，然后单击“类”。 如果使用的是 Visual Basic，则将类命名为 Account.vb；如果使用的是 C#，则将类命名为 Account.cs。 单击 **添加**。  
+1. 在“解决方案资源管理器”  中，右键单击你的项目名称，单击“添加”  ，然后单击“类”  。 如果使用的是 Visual Basic，则将类命名为 Account.vb；如果使用的是 C#，则将类命名为 Account.cs。 单击 **添加**。  
   
-2. 将 `Account` 类的定义替换为以下代码。 类定义使用自动实现的属性。 有关详细信息，请参阅[自动实现的属性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
+2. 将 `Account` 类的定义替换为以下代码。 类定义使用自动实现的属性  。 有关详细信息，请参阅[自动实现的属性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
   
      [!code-csharp[csOfficeWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/account.cs#2)]
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]  
   
-3. 若要创建包含两个帐户的 `bankAccounts` 列表，请将以下代码添加到 ThisAddIn.vb 或 ThisAddIn.cs 中的 `ThisAddIn_Startup` 方法。 列表声明使用集合初始值设定项。 有关详细信息，请参阅[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。  
+3. 若要创建包含两个帐户的 `bankAccounts` 列表，请将以下代码添加到 ThisAddIn.vb  或 ThisAddIn.cs  中的 `ThisAddIn_Startup` 方法。 列表声明使用集合初始值设定项  。 有关详细信息，请参阅[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。  
   
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
@@ -93,11 +93,11 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
      此方法使用 C# 的两项新功能。 Visual Basic 中已存在这两项功能。  
   
-    - 方法 [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) 有一个*可选参数*，用于指定特定的模板。 如果希望使用形参的默认值，你可以借助可选形参（[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中新增）忽略该形参的实参。 由于上一个示例中未发送任何参数，`Add` 将使用默认模板并创建新的工作簿。 C# 早期版本中的等效语句要求提供一个占位符参数：`excelApp.Workbooks.Add(Type.Missing)`。  
+    - 方法 [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) 有一个*可选参数*，用于指定特定的模板。 如果希望使用形参的默认值，你可以借助可选形参（C# 4 中新增）忽略该形参的实参。 由于上一个示例中未发送任何参数，`Add` 将使用默认模板并创建新的工作簿。 C# 早期版本中的等效语句要求提供一个占位符参数：`excelApp.Workbooks.Add(Type.Missing)`。  
   
          有关详细信息，请参阅[命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。  
   
-    - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 对象的 `Range` 和 `Offset` 属性使用“索引属性”功能。 此功能允许你通过以下典型 C# 语法从 COM 类型使用这些属性。 索引属性还允许你使用 `Value` 对象的 `Range` 属性，因此不必使用 `Value2` 属性。 `Value` 属性已编入索引，但索引是可选的。 在以下示例中，可选自变量和索引属性配合使用。  
+    - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 对象的 `Range` 和 `Offset` 属性使用“索引属性”  功能。 此功能允许你通过以下典型 C# 语法从 COM 类型使用这些属性。 索引属性还允许你使用 `Value` 对象的 `Range` 属性，因此不必使用 `Value2` 属性。 `Value` 属性已编入索引，但索引是可选的。 在以下示例中，可选自变量和索引属性配合使用。  
   
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   
@@ -115,7 +115,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
-     这些新增内容介绍了 C# 中的另一功能：处理从 COM 主机返回的 `Object` 值（如 Office），就像它们具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 类型一样。 当“嵌入互操作类型”设置为其默认值 `True` 时，或者由 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 编译器选项引用程序集时，自动发生这种情况。 键入 `dynamic` 允许后期绑定（Visual Basic 已提供该功能）并可避免 Visual C# 2008 和早期版本的语言中要求的显式强制转换。  
+     这些新增内容介绍了 C# 中的另一功能：处理从 COM 主机返回的 `Object` 值（如 Office），就像它们具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 类型一样。 当“嵌入互操作类型”  设置为其默认值 `True` 时，或者由 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 编译器选项引用程序集时，自动发生这种情况。 键入 `dynamic` 允许后期绑定（Visual Basic 已提供该功能）并可避免 Visual C# 2008 和早期版本的语言中要求的显式强制转换。  
   
      例如，`excelApp.Columns[1]` 返回`Object`，并且 `AutoFit` 是 Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) 方法。 如果没有 `dynamic`，你必须将 `excelApp.Columns[1]` 返回的对象强制转换为 `Range` 的实例，然后才能调用 `AutoFit` 方法。  
   
@@ -149,21 +149,21 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 ### <a name="to-clean-up-the-completed-project"></a>清理已完成的项目  
   
-1. 在 Visual Studio 中，单击“生成”菜单上的“清理解决方案”。 否则，每次在计算机上打开 Excel 时都会运行外接应用程序。  
+1. 在 Visual Studio 中，单击“生成”  菜单上的“清理解决方案”  。 否则，每次在计算机上打开 Excel 时都会运行外接应用程序。  
   
 ### <a name="to-find-the-pia-reference"></a>查找 PIA 引用  
   
-1. 再次运行应用程序，但不单击“清理解决方案”。  
+1. 再次运行应用程序，但不单击“清理解决方案”  。  
   
-2. 选择“开始”。 找到“Microsoft Visual Studio\<版本>”，然后打开开发人员命令提示。  
+2. 选择“开始”  。 找到“Microsoft Visual Studio\<版本>”  ，然后打开开发人员命令提示。  
   
 3. 在“Visual Studio 的开发人员命令提示”窗口中键入 `ildasm`，然后按 Enter。 此时将出现 IL DASM 窗口。  
   
-4. 在 IL DASM 窗口的“文件”菜单上，选择“文件” > “打开”。 双击“Visual Studio \<版本>”，然后双击“项目”。 打开项目的文件夹，在 bin/Debug 文件夹中查找*项目名称*.dll。 双击 *项目名称*.dll。 新窗口将显示项目的属性以及对其他模块和程序集的引用。 注意，命名空间 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 包含在程序集中。 在 Visual Studio 中，编译器默认将所需的类型从引用的 PIA 导入程序集。  
+4. 在 IL DASM 窗口的“文件”  菜单上，选择“文件”   > “打开”  。 双击“Visual Studio \<版本>”  ，然后双击“项目”  。 打开项目的文件夹，在 bin/Debug 文件夹中查找*项目名称*.dll。 双击 *项目名称*.dll。 新窗口将显示项目的属性以及对其他模块和程序集的引用。 注意，命名空间 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 包含在程序集中。 在 Visual Studio 中，编译器默认将所需的类型从引用的 PIA 导入程序集。  
   
      有关详细信息，请参阅[如何：查看程序集内容](../../../framework/app-domains/how-to-view-assembly-contents.md)。  
   
-5. 双击“清单”图标。 此时将出现包含程序集列表的窗口，这些程序集包含项目所引用的项。 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在列表中。 由于项目需要的类型已导入程序集中，因此不需要引用 PIA。 这使得部署变得更加容易。 用户的计算机上不必存在 PIA，因为应用程序不需要部署特定版本的 PIA，应用程序可设计为与多个版本的 Office 配合使用，前提是所有版本中都存在必要的 API。  
+5. 双击“清单”  图标。 此时将出现包含程序集列表的窗口，这些程序集包含项目所引用的项。 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在列表中。 由于项目需要的类型已导入程序集中，因此不需要引用 PIA。 这使得部署变得更加容易。 用户的计算机上不必存在 PIA，因为应用程序不需要部署特定版本的 PIA，应用程序可设计为与多个版本的 Office 配合使用，前提是所有版本中都存在必要的 API。  
   
      由于不再需要部署 PIA，你可以提前创建可与多个版本的 Office（包括之前的版本）配合使用的应用程序。 但是，仅当你的代码不使用你当前所使用 Office 版本中不可用的任何 API 时，此情况才适用。 特殊 API 在早期版本中是否可用并不始终明确，因此不建议使用早期版本的 Office。  
   
@@ -174,9 +174,9 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 ### <a name="to-restore-the-pia-dependency"></a>还原 PIA 依赖项  
   
-1. 在“解决方案资源管理器”中，单击“显示所有文件”按钮。 展开“引用”文件夹并选择“Microsoft.Office.Interop.Excel”。 按 F4 以显示“属性”窗口。  
+1. 在“解决方案资源管理器”  中，单击“显示所有文件”  按钮。 展开“引用”  文件夹并选择“Microsoft.Office.Interop.Excel”  。 按 F4 以显示“属性”  窗口。  
   
-2. 在“属性”窗口中，将“嵌入互操作类型”属性从“True”更改为“False”。  
+2. 在“属性”  窗口中，将“嵌入互操作类型”  属性从“True”  更改为“False”  。  
   
 3. 对 `Microsoft.Office.Interop.Word` 重复此程序中的步骤 1 和 2。  
   
@@ -186,9 +186,9 @@ Visual Studio 在 C# 和 Visual Basic 中提供了改进 Microsoft Office 编程
   
 6. 重复上一个程序的步骤 1-3 以打开程序集窗口。 注意，`Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 不再位于嵌入程序集列表中。  
   
-7. 双击“清单”图标并滚动引用程序集的列表。 `Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 均位于列表中。 由于应用程序引用 Excel 和 Word PIA 并且“嵌入互操作类型”属性设置为“False”，因此最终用户的计算机上必须存在两个程序集。  
+7. 双击“清单”  图标并滚动引用程序集的列表。 `Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 均位于列表中。 由于应用程序引用 Excel 和 Word PIA 并且“嵌入互操作类型”  属性设置为“False”  ，因此最终用户的计算机上必须存在两个程序集。  
   
-8. 在 Visual Studio 中，单击“生成”菜单上的“清理解决方案”以清理完成的项目。  
+8. 在 Visual Studio 中，单击“生成”  菜单上的“清理解决方案”  以清理完成的项目。  
   
 ## <a name="see-also"></a>请参阅
 

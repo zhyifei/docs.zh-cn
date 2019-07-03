@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 3b2aeceae8371f0728da2bcebbbe597ee135f256
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: f60d62d1823a8bd06b0417638719a81e95d7438b
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758262"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267696"
 ---
 # <a name="equality-operators-c-reference"></a>相等运算符（C# 参考）
 
@@ -57,7 +57,7 @@ ms.locfileid: "66758262"
 
 当两个非 `string` 引用类型引用同一对象时，其操作数相等：
 
-[!code-csharp-interactive[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
 如示例所示，默认情况下，用户定义的引用类型支持 `==` 运算符。 但是，用户定义的引用类型可以重载 `==` 运算符。 如果引用类型重载 `==` 运算符，使用 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法来检查该类型的两个引用是否引用同一对象。
 
@@ -80,7 +80,6 @@ ms.locfileid: "66758262"
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

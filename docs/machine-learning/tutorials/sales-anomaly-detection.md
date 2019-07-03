@@ -1,19 +1,19 @@
 ---
-title: 在销售异常情况检测方案中使用 ML.NET
-description: 了解如何在产品销售异常情况检测方案中使用 ML.NET，以了解如何针对异常峰值和更改点分析数据，从而采取适当的措施。
-ms.date: 05/29/2019
+title: 教程：检测产品销售中的异常
+description: 了解如何构建针对产品销售数据的异常检测应用程序。 本教程将使用 Visual Studio 2019 和 C# 创建 .NET Core 控制台应用程序。
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758795"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306230"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>教程：将 ML.NET 用于产品销售异常情况检测 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教程：使用 ML.NET 检测产品销售中的异常
 
-本示例教程演示如何使用 ML.NET 检测产品销售数据中的异常情况，以便在 Visual Studio 2019 中使用 C# 通过 .NET Core 控制台应用程序采取适当的措施。 
+了解如何构建针对产品销售数据的异常检测应用程序。 本教程将使用 Visual Studio 和 C# 创建 .NET Core 控制台应用程序。
 
 在本教程中，你将了解：
 > [!div class="checklist"]

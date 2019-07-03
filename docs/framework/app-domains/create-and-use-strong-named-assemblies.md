@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377881"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832873"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>创建和使用具有强名称的程序集
 
@@ -51,7 +51,7 @@ ms.locfileid: "66377881"
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>跳过受信任程序集的签名验证
 
-从 [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)]开始，当程序集加载到完全信任的应用程序域（如 `MyComputer` 区域的默认应用程序域）时，不会验证强名称签名。 这被称之为强名称跳过功能。 在完全信任的环境中，对于已签名的完全信任的程序集，对 <xref:System.Security.Permissions.StrongNameIdentityPermission> 的需求总是成功，而不考虑其签名。 这种情况下，强名称跳过功能可避免完全信任程序集不必要的强名称签名验证开销，允许更快地加载程序集。
+从 .NET Framework 3.5 Service Pack 1 开始，当程序集加载到完全信任的应用程序域（如 `MyComputer` 区域的默认应用程序域）时，不会验证强名称签名。 这被称之为强名称跳过功能。 在完全信任的环境中，对于已签名的完全信任的程序集，对 <xref:System.Security.Permissions.StrongNameIdentityPermission> 的需求总是成功，而不考虑其签名。 这种情况下，强名称跳过功能可避免完全信任程序集不必要的强名称签名验证开销，允许更快地加载程序集。
 
 跳过功能适用于使用强名称进行签名及具有以下特征的任何程序集：
 

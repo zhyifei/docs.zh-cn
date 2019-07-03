@@ -1,6 +1,6 @@
 ---
 title: Windows 系统中的文件路径格式
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835819"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170733"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
@@ -76,6 +76,11 @@ Windows 操作系统有一个指向所有资源（包括文件）的统一对象
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+除了通过驱动器号识别驱动器以外，还可以使用卷 GUID 来识别卷。 它采用以下形式：
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > 从 NET Core 1.1 和 .NET Framework 4.6.2 开始，运行在 Windows 上的 .NET 实现支持 DOS 设备路径语法。
 
@@ -85,8 +90,8 @@ DOS 设备路径由以下部分组成：
 
    > [!NOTE]
    > .NET Core 的所有版本以及从 4.6.2 开始的 .NET Framework 版本都支持 `\\?\`。
-   
-- 指向“真正”设备对象（这里是 C:）的符号链接。
+
+- “实际”设备对象的符号链接（如果是驱动器名称则为 C:，如果是卷 GUID 则为卷{b75e2c83-0000-0000-0000-602f00000000}）。
 
    设备路径说明符后的第一个 DOS 设备路径段标识了卷或驱动器。 （例如，`\\?\C:\` 和 `\\.\BootPartition\`。）
 
@@ -176,7 +181,7 @@ DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段
    此规则意味着可以创建以空格结尾的目录名称，方法是在空格后添加结尾分隔符。  
 
    > [!IMPORTANT]
-   > 请勿创建以空格结尾的目录名或文件名。 如果以空格结尾，则可能难以或者无法访问目录，并且应用程序在尝试处理这样的目录或文件时通常会操作失败。
+   > 请勿创建以空格结尾的目录名或文件名  。 如果以空格结尾，则可能难以或者无法访问目录，并且应用程序在尝试处理这样的目录或文件时通常会操作失败。
 
 ## <a name="skipping-normalization"></a>跳过规范化
 

@@ -1,21 +1,19 @@
 ---
-title: 教程：使用 TensorFlow 生成 ML.NET 自定义图像分类器
-description: 了解如何通过重用预定型 TensorFlow 模型，在 TensorFlow 迁移学习方案中生成 ML.NET 自定义图像分类器来分类图像。
-ms.date: 05/06/2019
+title: 教程：重新定型 TensorFlow 图像分类器 - 迁移学习
+description: 了解如何使用迁移学习和 ML.NET 重新定型图像分类器 TensorFlow 模型。 已定型原始模型，可以对单个图像进行分类。 重新定型后，新模型将图像组织成较大类别。
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593432"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401743"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>教程：使用 TensorFlow 生成 ML.NET 自定义图像分类器
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>教程：使用迁移学习和 ML.NET 重新定型 TensorFlow 图像分类器
 
-本示例教程展示了如何使用已定型的图像分类器 `TensorFlow` 模型来生成新的自定义模型，以将图像分类为若干类别。
-
-如果可以重用已预定型的模型来解决类似问题，并重新定型此模型的所有层或部分层来解决问题，那该有多好！ 重用部分已定型的模型来生成新模型的技术称为[迁移学习](https://en.wikipedia.org/wiki/Transfer_learning)。
+了解如何使用迁移学习和 ML.NET 重新定型图像分类器 TensorFlow 模型。 已定型原始模型，可以对单个图像进行分类。 重新定型后，新模型将图像组织成较大类别。 
 
 从头开始定型[图像分类](https://en.wikipedia.org/wiki/Outline_of_object_recognition)模型需要设置数百万个参数、大量已标记的定型数据和海量计算资源（数百个 GPU 小时）。 虽然不如从头开始定型自定义模型有效，但借助迁移学习，可以通过处理数千张图像（与数百万张已标记的图像相比）来简化此过程，并非常快速地生成自定义模型（在没有 GPU 的计算机上一小时内完成）。
 
@@ -24,6 +22,10 @@ ms.locfileid: "65593432"
 > * 了解问题
 > * 重用和优化预定型模型
 > * 分类图像
+
+## <a name="what-is-transfer-learning"></a>什么是迁移学习？
+
+如果可以重用已预定型的模型来解决类似问题，并重新定型此模型的所有层或部分层来解决问题，那该有多好！ 重用部分已定型的模型来生成新模型的技术称为[迁移学习](https://en.wikipedia.org/wiki/Transfer_learning)。
 
 ## <a name="image-classification-sample-overview"></a>图像分类示例概述
 

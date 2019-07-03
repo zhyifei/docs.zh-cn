@@ -1,5 +1,5 @@
 ---
-title: '- 和 -= 运算符 - C# 参考'
+title: '- \- 和 -= 运算符 - C# 参考'
 ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816081"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024909"
 ---
 # <a name="--and---operators-c-reference"></a>- 和 -= 运算符（C# 参考）
 
@@ -81,10 +81,8 @@ x = x - y
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
 - [委托](../../programming-guide/delegates/index.md)
 - [事件](../../programming-guide/events/index.md)
-- [Checked 和 unchecked](../keywords/checked-and-unchecked.md)
 - [算术运算符](arithmetic-operators.md)
 - [+ 和 += 运算符](addition-operator.md)

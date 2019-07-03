@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378574"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025964"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe（IL 反汇编程序）
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |/linenum |包含对原始源行的引用。|
 |/nobar |禁止显示反汇编进度指示器弹出窗口。|
 |/noca |禁止显示自定义特性的输出。|
-|/project |以托管代码的方式显示元数据，而不是以本机 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的方式显示。 如果 `PEfilename` 不是 Windows 元数据 (.winmd) 文件，此选项将不起任何作用  。 请参阅 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
+|/project |以托管代码的方式显示元数据，而不是以本机 Windows 运行时的方式显示。 如果 `PEfilename` 不是 Windows 元数据 (.winmd) 文件，此选项将不起任何作用  。 请参阅 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
 |/pubonly |仅反汇编公共类型和公共成员。 等效于 /visibility:PUB  。|
 |/quoteallnames |在单引号中包含所有名称。|
 |/raweh |以原始格式显示异常处理子句。|
@@ -100,7 +100,7 @@ Ildasm.exe 生成的文本文件可以用作 IL 汇编程序 (Ilasm.exe) 的输�
 > [!NOTE]
 > 目前，无法对包含嵌入的本机代码的 PE 文件（例如，由 Visual C++ 生成的 PE 文件）使用此技术。  
 
-你可以使用 IL 反汇编程序中的默认 GUI 在分层树视图中查看任何现有 PE 文件的元数据和反汇编代码。 若要使用此 GUI，请在命令行中键入 ildasm，无需提供 PEfilename 参数或任何选项   。 可从“文件”菜单导航到要加载到 Ildasm.exe 中的 PE 文件   。 若要保存为选定 PE 显示的元数据和反汇编代码，请从“文件”菜单中选择“转储”命令   。 若要仅保存分层树视图，请从“文件”菜单中选择“转储树视图”命令   。 有关将文件加载到 Ildasm.exe 中和解释输出的详细指南，请参见 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 附带的 Samples 文件夹中的 Ildasm.exe 教程   。
+你可以使用 IL 反汇编程序中的默认 GUI 在分层树视图中查看任何现有 PE 文件的元数据和反汇编代码。 若要使用此 GUI，请在命令行中键入 ildasm，无需提供 PEfilename 参数或任何选项   。 可从“文件”菜单导航到要加载到 Ildasm.exe 中的 PE 文件   。 若要保存为选定 PE 显示的元数据和反汇编代码，请从“文件”菜单中选择“转储”命令   。 若要仅保存分层树视图，请从“文件”菜单中选择“转储树视图”命令   。 有关将文件加载到 Ildasm.exe 中和解释输出的详细指南，请参阅 Windows 软件开发工具包 (SDK) 附带的 Samples 文件夹中的 Ildasm.exe 教程   。
 
 如果为 Ildasm.exe 提供一个包含嵌入资源的 PEfilename 参数，则此工具生成多个输出文件：一个包含 IL 代码的文本文件，以及与每个嵌入的托管资源对应的 .resources 文件（使用该资源在元数据中的名称生成）   。 如果 PEfilename 中嵌入了非托管资源，则通过 /output 选项使用 IL 输出指定的文件名生成 .res 文件   。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816148"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832778"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -40,8 +40,8 @@ al sources options
 | 源 | 说明 |
 | ------ | ----------- |
 |`file`[,`target`]|将 `file`（模块）的内容复制到 `target` 指定的文件名。 复制后，Al.exe 将 `target` 编译为程序集  。|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|将 `file` 指定的资源嵌入到包含程序集清单的映像中；Al.exe 将 `file` 的内容复制到可移植的可执行 (PE) 映像中  。<br /><br /> `name` 参数是资源的内部标识符。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 中的成员来访问它  。 有关更多信息，请参见<xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在运行时访问此资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|将资源文件链接到程序集。 `file` 指定的资源成为程序集的组成部分；不复制该文件。 `file` 参数可以是任何文件格式。 例如，可以指定本机 DLL 作为 `file` 参数。 这将使本机 DLL 成为此程序集的组成部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。 也可以通过使用 **/linkresource** 编译器选项实现该目的。 有关详细信息，请参阅 [/linkresource (C# 编译器选项)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 参数是资源的内部标识符。 `target` 参数指定 Al.exe 将 `file` 复制到其中的路径和文件名。   复制后，Al.exe 将 `target` 编译为程序集  。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由资源文件生成器 (Resgen.exe) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它  。 有关更多信息，请参见<xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 类中的 <xref:System.Reflection.Assembly>* 方法在运行时访问资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|将 `file` 指定的资源嵌入到包含程序集清单的映像中；Al.exe 将 `file` 的内容复制到可移植的可执行 (PE) 映像中  。<br /><br /> `name` 参数是资源的内部标识符。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 中的成员来访问它  。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在运行时访问此资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|将资源文件链接到程序集。 `file` 指定的资源成为程序集的组成部分；不复制该文件。 `file` 参数可以是任何文件格式。 例如，可以指定本机 DLL 作为 `file` 参数。 这将使本机 DLL 成为此程序集的组成部分，从而可将它安装到全局程序集缓存中，并且可从该程序集中的托管代码访问它。 也可以通过使用 **/linkresource** 编译器选项实现该目的。 有关详细信息，请参阅 [/linkresource (C# 编译器选项)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md)。<br /><br /> `name` 参数是资源的内部标识符。 `target` 参数指定 Al.exe 将 `file` 复制到其中的路径和文件名。   复制后，Al.exe 将 `target` 编译为程序集  。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由资源文件生成器 (Resgen.exe) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它  。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 类中的 <xref:System.Reflection.Assembly>* 方法在运行时访问资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集  。|
 
 可以指定以下 `options`；必须指定 **/out**。
 
@@ -108,7 +108,7 @@ al sources options
 |al1015|无法找到消息文件“alinkui.dll”<br /><br /> Al.exe 需要 Alinkui.dll   。 确保此文件位于你的路径。 如有必要，请从产品 CD 将其复制。|
 |al1016|未指定有效输入文件<br /><br /> Al.exe 要求不具有程序集信息的一个或多个输入文件  。|
 |al1017|未指定目标文件名<br /><br /> 缺少指定目标文件名必需的 **/out** 选项。|
-|al1018|无法加载所需的文件“file”<br /><br /> 无法加载某些 DLL 文件。 重新安装 Visual Studio 或 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]。|
+|al1018|无法加载所需的文件“file”<br /><br /> 无法加载某些 DLL 文件。 重新安装 Visual Studio 或 Windows 软件开发工具包 (SDK)。|
 |al1019|创建程序集时元数据失败 — 原因<br /><br /> 由于特定原因，程序集生成中断。 例如，如果未找到用 **/win32res** 选项指定的文件，将发生此错误。|
 |al1020|忽略包含的程序集“file”<br /><br /> 指定了包含程序集的输入文件。 Al.exe 输入文件无法包含程序集  。|
 |al1021|“setting”: 重写以前的设置<br /><br /> 模块具有特定设置的值，该值可能是通过自定义属性分配，并通过使用 Al.exe 命令行选项传递的值进行重写  。|

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 086b76fdc7a97f80fb0b93956b2ee3eef7036506
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16426a6149714fce4ddb188471a72d8f63f45b96
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583103"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170442"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
+C# 4 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
   
  使用命名参数和可选参数时，将按实参出现在实参列表（而不是形参列表）中的顺序计算这些实参。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "64583103"
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- 以 C# 7.2 开头，则它们就有效并用在正确位置。 在以下示例中，形参 `orderNum` 位于正确的位置，但未显式命名。
+- 以 C# 7.2 开头，则它们就有效并用在正确位置  。 在以下示例中，形参 `orderNum` 位于正确的位置，但未显式命名。
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   

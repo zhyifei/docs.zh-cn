@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 44ae8acd1278d8a6163ac1c5bc6e0a0e030c02fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd49834c45f6e07a99be5a1f4293e938eed2cc77
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676960"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267720"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>对象和集合初始值设定项（C# 编程指南）
 
@@ -19,7 +19,7 @@ ms.locfileid: "54676960"
 
 ## <a name="object-initializers"></a>对象初始值设定项
 
-使用对象初始值设定项，你可以在创建对象时向对象的任何可访问字段或属性分配值，而无需调用后跟赋值语句行的构造函数。 利用对象初始值设定项语法，你可为构造函数指定参数或忽略参数（以及括号语法）。  以下示例演示如何使用具有命名类型 `Cat` 的对象初始值设定项以及如何调用默认构造函数。 请注意，自动实现的属性在 `Cat` 类中的用法。 有关详细信息，请参阅[自动实现的属性](auto-implemented-properties.md)。  
+使用对象初始值设定项，你可以在创建对象时向对象的任何可访问字段或属性分配值，而无需调用后跟赋值语句行的构造函数。 利用对象初始值设定项语法，你可为构造函数指定参数或忽略参数（以及括号语法）。  以下示例演示如何使用具有命名类型 `Cat` 的对象初始值设定项以及如何调用无参数构造函数。 请注意，自动实现的属性在 `Cat` 类中的用法。 有关详细信息，请参阅[自动实现的属性](auto-implemented-properties.md)。  
   
 [!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
 [!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
@@ -42,7 +42,7 @@ var thing = new IndexersExample {
     [1] = '1',
     [2] = '4',
     [3] = '9',
-    Baz = Math.PI,
+    Size = Math.PI,
     ['C',4] = "Middle C"
 }
 ```
@@ -54,7 +54,6 @@ public string name;
 public double Size { set { ... }; }
 public char this[int i] { set { ... }; }
 public string this[char c, int i] {  set { ... }; }
-}
 ```
 
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名类型的对象初始值设定项
@@ -114,15 +113,15 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 下例结合了对象和集合初始值设定项的概念。
 
-[!code-csharp-interactive[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
+[!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
 
 下面的示例展示了实现 <xref:System.Collections.IEnumerable> 且包含具有多个参数的 `Add` 方法的一个对象，它使用在列表中每项具有多个元素的集合初始值设定项，这些元素对应于 `Add` 方法的签名。
 
-[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
+[!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
 
 `Add` 方法可使用 `params` 关键字来获取可变数量的自变量，如下例中所示。 此示例还演示了索引器的自定义实现，以使用索引初始化集合。
 
-[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
+[!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
 ## <a name="see-also"></a>请参阅
 

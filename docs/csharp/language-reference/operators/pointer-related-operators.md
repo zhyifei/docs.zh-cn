@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758099"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025106"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指针相关运算符（C# 参考）
 
@@ -40,7 +40,7 @@ ms.locfileid: "66758099"
 有关指针类型的信息，请参阅[指针类型](../../programming-guide/unsafe-code-pointers/pointer-types.md)。
 
 > [!NOTE]
-> 任何带指针的运算都需要使用[不安全的](../keywords/unsafe.md)上下文。 必须使用 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 编译器选项编译包含不安全块的代码。
+> 任何带指针的运算都需要使用 [unsafe](../keywords/unsafe.md) 上下文。 必须使用 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 编译器选项编译包含不安全块的代码。
 
 ## <a name="address-of-operator-amp"></a>Address-of 运算符 &amp;
 
@@ -96,7 +96,7 @@ x->y
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-该示例使用 [`stackalloc` 运算符](../keywords/stackalloc.md)在堆栈上分配内存块。
+该示例使用 [`stackalloc` 运算符](stackalloc.md)在堆栈上分配内存块。
 
 > [!NOTE]
 > 指针元素访问运算符不检查越界错误。
@@ -188,10 +188,9 @@ x->y
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
 - [指针类型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe` 关键字](../keywords/unsafe.md)
-- [`fixed` 关键字](../keywords/fixed-statement.md)
-- [`stackalloc` 运算符](../keywords/stackalloc.md)
-- [`sizeof` 运算符](../keywords/sizeof.md)
+- [unsafe 关键字](../keywords/unsafe.md)
+- [fixed 关键字](../keywords/fixed-statement.md)
+- [stackalloc 运算符](stackalloc.md)
+- [sizeof 运算符](../keywords/sizeof.md)

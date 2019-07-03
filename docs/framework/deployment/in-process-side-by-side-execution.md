@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816054"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170516"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -56,7 +56,7 @@ ms.locfileid: "66816054"
   
      要执行的操作：此方案中，不执行任何操作。 COM 组件将在其注册的 .NET Framework 版本上运行。  
   
-- **方案 2**：使用 .NET Framework 2.0 SP1 生成的托管应用程序，并将其与 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起运行，但如果没有 2.0 版本，则希望让其在 .NET Framework 4 上运行。  
+- **方案 2**：使用 .NET Framework 2.0 SP1 生成的托管应用程序，并将其与 .NET Framework 2.0 一起运行，但如果没有 2.0 版本，则希望让其在 .NET Framework 4 上运行。  
   
      已安装的 .NET Framework 版本：早期版本的 .NET Framework 和 .NET Framework 4。  
   

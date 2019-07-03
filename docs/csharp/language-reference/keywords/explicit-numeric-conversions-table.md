@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236305"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306622"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
 
@@ -67,9 +67,8 @@ ms.locfileid: "53236305"
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [C# 编程指南](../../programming-guide/index.md)
 - [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
-- [() 运算符](../operators/invocation-operator.md)
+- [() 运算符](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [整型类型表](integral-types-table.md)
 - [浮点型表](floating-point-types-table.md)
 - [内置类型表](built-in-types-table.md)

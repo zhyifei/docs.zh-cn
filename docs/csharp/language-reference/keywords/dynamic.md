@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: d2aef5b2ed291aab917573408abf26b9fbedfbd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8748f1869e8e2d5246910fac0100a6c70790579
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540320"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306640"
 ---
 # <a name="dynamic-c-reference"></a>dynamic（C# 参考）
 
@@ -21,7 +21,7 @@ ms.locfileid: "54540320"
 
 在大多数情况下，`dynamic` 类型与 `object` 类型的行为类似。 但是，如果操作包含 `dynamic` 类型的表达式，那么不会通过编译器对该操作进行解析或类型检查。 编译器将有关该操作信息打包在一起，之后这些信息会用于在运行时评估操作。 在此过程中，`dynamic` 类型的变量会编译为 `object` 类型的变量。 因此，`dynamic` 类型只在编译时存在，在运行时则不存在。
 
-下面的示例将 `dynamic` 类型的变量与 `object` 类型的变量进行对比。 若要在编译时验证每个变量的类型，请将鼠标指针放在 `WriteLine` 语句中的 `dyn` 或 `obj` 上。 IntelliSense 对 `dyn` 显示“dynamic”，对 `obj` 显示“object”。
+下面的示例将 `dynamic` 类型的变量与 `object` 类型的变量进行对比。 若要在编译时验证每个变量的类型，请将鼠标指针放在 `WriteLine` 语句中的 `dyn` 或 `obj` 上。 IntelliSense 对 `dyn` 显示“dynamic”  ，对 `obj` 显示“object”  。
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
@@ -68,10 +68,10 @@ obj = obj + 3;
 
 - <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [is](../../../csharp/language-reference/keywords/is.md)
-- [as](../../../csharp/language-reference/keywords/as.md)
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)
-- [如何：使用模式匹配以及 as 和 is 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
-- [演练：创建和使用动态对象](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [使用类型 dynamic](../../programming-guide/types/using-type-dynamic.md)
+- [object](object.md)
+- [is](../operators/type-testing-and-conversion-operators.md#is-operator)
+- [as](../operators/type-testing-and-conversion-operators.md#as-operator)
+- [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)
+- [如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [演练：创建和使用动态对象](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

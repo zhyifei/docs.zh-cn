@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611388"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135657"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>打包和部署 .NET 应用中的资源
 
@@ -55,7 +55,7 @@ ms.locfileid: "59611388"
 
 ## <a name="resource-naming-conventions"></a>资源命名约定
 
-在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 有关区域性名称的完整列表，请参阅全球开发人员中心的[国际支持 (NLS) API 参考](https://go.microsoft.com/fwlink/?LinkId=200048)。
+在打包应用程序的资源时，必须使用公共语言运行时所要求的资源命名约定对其进行命名。 运行时可按其区域性名称标识资源。 每个区域性均被赋予唯一名称，通常是与语言相关的两个小写字母的区域性名称和必要情况下，与国家或地区相关的两个大写子母的区域性名称的组合。 子区域性名称跟在区域性名称后，以短划线 (-) 隔开。 例如：ja-JP 表示日本日语，en-US 表示美国英语，de-DE 表示德国德语，de-AT 表示奥地利德语。 请参阅 [Windows 支持的语言/区域名称列表](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的“语言标记”  列。 列名遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定义的标准。
 
 > [!NOTE]
 > 有关创建资源文件的信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。
@@ -188,19 +188,19 @@ Greeting=Добрый день
 
 从命令行运行[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 可将这两个文件编译为 .resources 文件。 对于法语资源，命令为：
 
-resgen.exe resources.fr.txt
+resgen.exe resources.fr.txt 
 
 对于俄语资源，命令为：
 
-resgen.exe resources.ru.txt
+resgen.exe resources.ru.txt 
 
 对于法语资源，从命令行运行[程序集连接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)，将 .resources 文件嵌入动态链接库，如下所示：
 
-al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll
+al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll 
 
 而对于俄语资源，则为如下所示：
 
-al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll
+al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll 
 
 应用程序源代码位于名为 Example1.cs 或 Example1.vb 的文件中。 它包括 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性，以指示默认应用程序资源位于 fr 子目录中。 它可实例化 Resource Manager，检索 `Greeting` 资源的值，并将其显示到控制台。
 

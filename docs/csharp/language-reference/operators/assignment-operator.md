@@ -1,18 +1,18 @@
 ---
 title: = 运算符 - C# 参考
 ms.custom: seodec18
-ms.date: 11/26/2018
+ms.date: 06/21/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758362"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306570"
 ---
 # <a name="-operator-c-reference"></a>= 运算符（C# 参考）
 
@@ -30,19 +30,37 @@ a = b = c
 a = (b = c)
 ```
 
-以下示例演示赋值运算符将值分配给局部变量、属性和索引器元素的用法：
+以下示例演示使用局部变量、属性和索引器元素作为其左操作数的赋值运算符的用法：
 
-[!code-csharp-interactive[assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>ref 赋值运算符
 
 从 C# 7.3 开始，可以使用 ref 赋值运算符 `= ref` 重新分配 [ref local](../keywords/ref.md#ref-locals) 或 [ref readonly local](../keywords/ref.md#ref-readonly-locals) 变量。 下面的示例演示 ref 赋值运算符的用法：
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
-对于 ref 赋值运算符，左操作数和右操作数的类型必须相同。
+对于 ref 赋值运算符，其两个操作数的类型必须相同。
 
-有关详细信息，请参阅[功能建议说明](../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)。
+有关详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)。
+
+## <a name="compound-assignment"></a>复合赋值
+
+对于二元运算符 `op`，窗体的复合赋值表达式
+
+```csharp
+x op= y
+```
+
+等效于
+
+```csharp
+x = x op y
+```
+
+不同的是 `x` 只计算一次。
+
+[算术](arithmetic-operators.md#compound-assignment)、[布尔逻辑](boolean-logical-operators.md#compound-assignment)以及[逻辑位和移位](bitwise-and-shift-operators.md#compound-assignment)运算符支持复合赋值。
 
 ## <a name="operator-overloadability"></a>运算符可重载性
 
@@ -50,11 +68,10 @@ a = (b = c)
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[简单赋值](~/_csharplang/spec/expressions.md#simple-assignment)部分。
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[分配运算符](~/_csharplang/spec/expressions.md#assignment-operators)部分。
 
 ## <a name="see-also"></a>请参阅
 
 - [C# 参考](../index.md)
-- [C# 编程指南](../../programming-guide/index.md)
 - [C# 运算符](index.md)
 - [ref 关键字](../keywords/ref.md)

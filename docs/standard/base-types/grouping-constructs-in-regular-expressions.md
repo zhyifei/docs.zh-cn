@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634342"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135683"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
@@ -118,7 +118,7 @@ ms.locfileid: "64634342"
   
 - 通过使用 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *name* 是捕获子表达式的名称。  
   
-- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字”为捕获的子表达式的序号。  
+- 通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字  替换序列，其中“数字”  为捕获的子表达式的序号。  
   
 - 以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 已命名的捕获组在集合中存储在已编号的捕获组后面。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "64634342"
   
  *name1* 位置是当前的组（可选）， *name2* 是一个以前定义的组，而 *子表达式* 是任何有效的正则表达式模式。 平衡组定义删除 *name2* 的定义并在 *name1* 中保存 *name2* 和 *name1*之间的间隔。 如果未定义 *name2* 组，则匹配将回溯。 由于删除 *name2* 的最后一个定义会显示 *name2*以前的定义，因此该构造允许将 *name2* 组的捕获堆栈用作计数器，用于跟踪嵌套构造（如括号或者左括号和右括号）。  
   
- 平衡组定义将 *name2* 作为堆栈使用。 将每个嵌套构造的开头字符放在组中，并放在其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 当匹配结束字符时，从组中删除其相应的开始字符，并且 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合减少 1。 所有嵌套构造的开始和结束字符匹配完后， *name1* 为空。  
+ 平衡组定义将 *name2* 作为堆栈使用。 将每个嵌套构造的开头字符放在组中，并放在其 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合中。 当匹配结束字符时，从组中删除其相应的开始字符，并且 <xref:System.Text.RegularExpressions.Group.Captures%2A> 集合减少 1。 所有嵌套构造的开始和结束字符匹配完后，name2  为空。  
   
 > [!NOTE]
 >  通过修改下面示例中的正则表达式来使用合适的嵌套构造的开始和结束字符后，你可以用它来处理多数嵌套构造，如数学表达式或包括多个嵌套方法调用的程序代码行。  

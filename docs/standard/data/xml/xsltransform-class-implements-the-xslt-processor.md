@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7c36ff35622ae5c9cddf4ffd1ebd0a60feb348a8
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586447"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170891"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 类实现 XSLT 处理器
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。
+> <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。
 
 <xref:System.Xml.Xsl.XslTransform> 类是实现 XSL 转换 (XSLT) 1.0 版建议的 XSLT 处理器。 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法定位并读取样式表，<xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法转换给定的源文档。 任何实现了 <xref:System.Xml.XPath.IXPathNavigable> 接口的存储区都可以用作 <xref:System.Xml.Xsl.XslTransform> 的源文档。 .NET Framework 当前在 <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument> 和 <xref:System.Xml.XPath.XPathDocument> 上实现了 <xref:System.Xml.XPath.IXPathNavigable> 接口，所以它们都可以用作转换的输入源文档。
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 083fc6ff3dd15252fb6cf2beb27b5be0a6e489f5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423447"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170254"
 ---
 # <a name="generic-methods-c-programming-guide"></a>泛型方法（C# 编程指南）
 泛型方法是通过类型参数声明的方法，如下所示：  
@@ -31,7 +31,7 @@ ms.locfileid: "66423447"
   
  [!code-csharp[csProgGuideGenerics#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#25)]  
   
- 如果定义一个具有与包含类相同的类型参数的泛型方法，则编译器会生成警告 CS0693，因为在该方法范围内，向内 `T` 提供的参数会隐藏向外 `T` 提供的参数。 如果需要使用类型参数（而不是类实例化时提供的参数）调用泛型类方法所具备的灵活性，请考虑为此方法的类型参数提供另一标识符，如下方示例中 `GenericList2<T>` 所示。  
+ 如果定义一个具有与包含类相同的类型参数的泛型方法，则编译器会生成警告 [CS0693](../../misc/cs0693.md)，因为在该方法范围内，向内 `T` 提供的参数会隐藏向外 `T` 提供的参数。 如果需要使用类型参数（而不是类实例化时提供的参数）调用泛型类方法所具备的灵活性，请考虑为此方法的类型参数提供另一标识符，如下方示例中 `GenericList2<T>` 所示。  
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   

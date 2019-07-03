@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f6453b8ef2ef2a1b5e86ae461a626808cff7455
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: df5601fb0dbf088bd28da91f7279a330f2bb3494
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025509"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170695"
 ---
 # <a name="isolated-storage"></a>独立存储
-<a name="top"></a>对于 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 应用，独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 同时，标准化也提供了其他好处。 管理员可以使用旨在操作独立存储的工具来配置文件存储空间、设置安全策略及删除未使用的数据。 通过独立存储，代码不再需要使用唯一的路径来指定文件系统中的安全位置，同时可以保护数据免遭只具有独立存储访问权限的其他应用程序的损坏。 不再需要指示应用程序的存储区域位置的硬编码信息。
+<a name="top"></a> 对于桌面应用，独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 同时，标准化也提供了其他好处。 管理员可以使用旨在操作独立存储的工具来配置文件存储空间、设置安全策略及删除未使用的数据。 通过独立存储，代码不再需要使用唯一的路径来指定文件系统中的安全位置，同时可以保护数据免遭只具有独立存储访问权限的其他应用程序的损坏。 不再需要指示应用程序的存储区域位置的硬编码信息。
 
 > [!IMPORTANT]
 > 独立存储不适用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 请改用 Windows 运行时 API 包含的 `Windows.Storage` 命名空间中的应用程序数据类来存储本地数据和文件。 有关详细信息，请参阅 Windows 开发人员中心的 [应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 。

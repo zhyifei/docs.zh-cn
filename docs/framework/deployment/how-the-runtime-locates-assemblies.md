@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613980"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833716"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -24,7 +24,7 @@ ms.locfileid: "64613980"
  在尝试查找程序集和解析程序集引用时，公共语言运行时会执行多个步骤。 以下各节将分别阐述每个步骤。 描述运行时如何查找程序集时，通常使用术语“探测”；它指一套用于根据名称和区域性查找程序集的试探法。  
   
 > [!NOTE]
->  可使用 [中附带的](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)程序集绑定日志查看器 (Fuslogvw.exe) [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]查看日志文件中的绑定信息。  
+>  可使用 Windows 软件开发工具包 (SDK) 中附带的[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看日志文件中的绑定信息。  
   
 ## <a name="initiating-the-bind"></a>启动绑定  
  在运行时尝试解析其他程序集的引用时，开始查找和绑定到程序集的进程。 此引用可为静态，也可为动态。 编译器在生成时记录程序集清单的元数据中的静态引用。 由于调用各种方法（如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>），所以将及时构造动态引用。  
@@ -78,7 +78,7 @@ ms.locfileid: "64613980"
 ### <a name="application-configuration-file"></a>应用程序配置文件  
  首先，公共语言运行时检查应用程序配置文件是否存在重写调用程序集清单中存储的版本信息的相关信息。 可借助应用程序部署应用程序配置文件，但执行应用程序时不需要此文件。 通常几乎可瞬时完成此文件的检索，但如果应用程序基位于完成计算机上（例如，在基于 Internet Explorer Web 的方案中），必须下载配置文件。  
   
- 对于客户端可执行文件，应用程序配置文件和应用程序的可执行文件驻留在同一目录中，并且它与扩展名为 .config 的可执行文件具有相同的基名称。 例如，C:\Program Files\Myapp\Myapp.exe 的配置文件是 C:\Program Files\Myapp\Myapp.exe.config。在基于浏览器的方案中，HTML 文件必须使用 \<link> 元素显式指向该配置文件。  
+ 对于客户端可执行文件，应用程序配置文件和应用程序的可执行文件驻留在同一目录中，并且它与扩展名为 .config 的可执行文件具有相同的基名称。 例如，C:\Program Files\Myapp\Myapp.exe 的配置文件是 C:\Program Files\Myapp\Myapp.exe.config。在基于浏览器的方案中，HTML 文件必须使用 \<link> 元素显式指向该配置文件  。  
   
  以下代码提供了一个有关应用程序配置文件的简单示例。 此示例将 <xref:System.Diagnostics.TextWriterTraceListener> 添加到 <xref:System.Diagnostics.Debug.Listeners%2A> 集合，以便可以将调试信息记录到文件中。  
   
@@ -130,9 +130,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  共享组件已更新且使用此组件的所有应用程序都应选取共享组件的新版本时，使用发行者策略文件。 发布服务器策略文件中的设置会重写应用程序配置文件中的设置，除非应用程序配置文件强制实施了安全模式。  
   
 #### <a name="safe-mode"></a>安全模式  
- 发布服务器策略文件通常作为服务包或程序更新的一部分显式安装。 如果升级后的共享组件有任何问题，可使用安全模式忽略发布服务器策略文件中的重写。 安全模式由仅位于应用程序配置文件中的 \<publisherPolicy apply="yes|no"/> 元素确定。 它指定是否应从绑定进程删除发布服务器策略配置信息。  
+ 发布服务器策略文件通常作为服务包或程序更新的一部分显式安装。 如果升级后的共享组件有任何问题，可使用安全模式忽略发布服务器策略文件中的重写。 安全模式由仅位于应用程序配置文件中的 \<publisherPolicy apply="yes|no"/> 元素确定   。 它指定是否应从绑定进程删除发布服务器策略配置信息。  
   
- 可针对整个应用程序或所选程序集设置安全模式。 即，可关闭构成应用程序的所有程序集的策略，也可仅打开部分程序集的策略。 若要将发布服务器策略有选择地应用于构成应用程序的程序集，请设置 \<publisherPolicy apply\=no/> 并使用 \<dependentAssembly> 元素指定要影响的程序集。 若要将发布服务器策略应用于构成应用程序的所有程序集，请设置 \<publisherPolicy apply\=no/>，且不包含从属程序集元素。 有关配置的详细信息，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。  
+ 可针对整个应用程序或所选程序集设置安全模式。 即，可关闭构成应用程序的所有程序集的策略，也可仅打开部分程序集的策略。 若要将发布服务器策略有选择地应用于构成应用程序的程序集，请设置 \<publisherPolicy apply\=no/> 并使用 \<dependentAssembly> 元素指定要影响的程序集   。 若要将发布服务器策略应用于构成应用程序的所有程序集，请设置 \<publisherPolicy apply\=no/>，且不包含从属程序集元素  。 有关配置的详细信息，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。  
   
 ### <a name="machine-configuration-file"></a>计算机配置文件  
  最后，运行时检查计算机配置文件。 此文件名为 Machine.config，驻留在本地计算机上安装有运行时的根目录的配置子目录中。 管理员可使用此文件来指定此计算机本地的程序集绑定限制。 计算机配置文件中的设置优先于所有其他配置设置 ；但是，这并不意味着所有配置设置都应置于此文件中。 管理员策略文件确定的版本为最终版本，且不能重写。 Machine.config 文件中指定的重写可影响所有应用程序。 有关配置文件的详细信息，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。  

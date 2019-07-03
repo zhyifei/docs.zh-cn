@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e9b8c41602ed180b491ca55816fadf28d6cecd3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 70b22dbc3facdf0e36dea64074fc8284b9b18a67
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586498"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170907"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>不同存储区的 XSLT 转换
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
  .NET Framework 中的 ADO.NET 和 XML 类提供统一的编程模型来访问数据。 这些数据既表示为 XML 数据（由标记分隔的文本）也表示为关系数据（由行和列组成的表）。 .NET Framework 中的 XML 将任何数据流中的 XML 数据读入 XML 文档对象模型 (DOM) 节点树，在节点树中可通过编程方式访问数据；而 ADO.NET 提供访问和处理 <xref:System.Data.DataSet> 对象中的关系数据的方法。  
   

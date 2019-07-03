@@ -1,17 +1,17 @@
 ---
 title: 字符串 - C# 编程指南
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398116"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503998"
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -62,13 +62,16 @@ ms.locfileid: "67398116"
 |\n|换行|0x000A|  
 |\r|回车|0x000D|  
 |\t|水平制表符|0x0009|  
-|\U|代理项对的 Unicode 转义序列。|\Unnnnnnnn|  
-|\u|Unicode 转义序列|\u0041 = "A"|  
+|\U|Unicode 转义序列 (UTF-32)|`\U00nnnnnn`（例如 `\U0001F47D` = "&#x1F47D;"）|  
+|\u|Unicode 转义序列 (UTF-16)|`\unnnn`（例如 `\u0041` = "A"）|  
 |\v|垂直制表符|0x000B|  
-|\x|除长度可变外，Unicode 转义序列与“\u”类似。|\x0041 或 \x41 = "A"|  
+|\x|除长度可变外，Unicode 转义序列与“\u”类似。|`\x0041` 或 `\x41` = "A"|  
+  
+> [!WARNING]
+>  使用 `\x` 转义序列且指定的位数小于 4 个十六进制数字时，如果紧跟在转义序列后面的字符是有效的十六进制数字（即 0-9、A-F 和 a-f），则这些字符将被解释为转义序列的一部分。 例如，`\xA1` 会生成“&#161;”，即码位 U+00A1。 但是，如果下一个字符是“A”或“a”，则转义序列将转而被解释为 `\xA1A` 并生成“&#x0A1A;”（即码位 U+0A1A）。 在此类情况下，如果指定全部 4 个十六进制数字（例如 `\x00A1`），则可能导致解释出错。  
   
 > [!NOTE]
->  在编译时，逐字字符串被转换为普通字符串，并具有所有相同的转义序列。 因此，如果在调试器监视窗口中查看逐字字符串，将看到由编译器添加的转义字符，而不是来自你的源代码的逐字字符串版本。 例如，原义字符串 @"C:\files.txt" 在监视窗口中显示为“C:\\\files.txt”。  
+>  在编译时，逐字字符串被转换为普通字符串，并具有所有相同的转义序列。 因此，如果在调试器监视窗口中查看逐字字符串，将看到由编译器添加的转义字符，而不是来自你的源代码的逐字字符串版本。 例如，原义字符串 `@"C:\files.txt"` 在监视窗口中显示为“C:\\\files.txt”。  
   
 ## <a name="format-strings"></a>格式字符串  
  格式字符串是在运行时以动态方式确定其内容的字符串。 格式字符串是通过将内插表达式  或占位符嵌入字符串大括号内创建的。 大括号 (`{...}`) 中的所有内容都将解析为一个值，并在运行时以格式化字符串的形式输出。 有两种方法创建格式字符串：字符串内插和复合格式。

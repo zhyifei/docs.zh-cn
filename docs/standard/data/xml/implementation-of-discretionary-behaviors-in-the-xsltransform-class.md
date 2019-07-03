@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591505"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170844"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 类中任意行为的实现
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
+> <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
 
 下面将介绍在[万维网联合会 (W3C) XSL 转换 (XSLT) 1.0 版建议](https://www.w3.org/TR/1999/REC-xslt-19991116)中列出的一些任意行为，在这些行为中，实现提供者选择几个可能的选项中的一个作为处理某种情况的方法。 例如，在第 7.3 节“Creating Processing Instructions”中，W3C 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，W3C 说明了在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。
 

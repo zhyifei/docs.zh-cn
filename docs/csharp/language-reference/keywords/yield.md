@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632975"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267788"
 ---
 # <a name="yield-c-reference"></a>yield（C# 参考）
 
@@ -30,7 +30,7 @@ yield break;
 
 使用 `yield return` 语句可一次返回一个元素。
 
-通过 [foreach](foreach-in.md) 语句或 LINQ 查询来使用迭代器方法。 `foreach` 循环的每次迭代都会调用迭代器方法。 迭代器方法运行到 `yield return` 语句时，会返回一个 `expression`，并保留当前在代码中的位置。 下次调用迭代器函数时，将从该位置重新开始执行。
+可通过使用 [foreach](foreach-in.md) 语句或 LINQ 查询来使用从迭代器方法返回的序列。 `foreach` 循环的每次迭代都会调用迭代器方法。 迭代器方法运行到 `yield return` 语句时，会返回一个 `expression`，并保留当前在代码中的位置。 下次调用迭代器函数时，将从该位置重新开始执行。
 
 可以使用 `yield break` 语句来终止迭代。
 

@@ -1,16 +1,16 @@
 ---
 title: 将模型部署到 Azure Functions
 description: 使用 Azure Functions 通过 Internet 提供 ML.NET 情绪分析机器学习模型进行预测
-ms.date: 05/03/2019
+ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 9e62d8826227aed07451387cc733d27094327f99
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645099"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025978"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>将模型部署到 Azure Functions
 
@@ -22,42 +22,51 @@ ms.locfileid: "65645099"
 ## <a name="prerequisites"></a>系统必备
 
 - 安装了“.NET Core 跨平台开发”工作负载和“Azure 开发”的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- Microsoft.NET.Sdk.Functions NuGet 包版本 1.0.28+。
 - [Azure Functions 工具](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - Powershell
 - 预先定型的模型。 使用 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成自己的模型，或下载此[预先训练的情绪分析机器学习模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
 ## <a name="create-azure-functions-project"></a>创建 Azure Functions 项目
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”节点和“云”节点。 然后，选择“Azure Functions”项目模板。 在“名称”文本框中，键入“SentimentAnalysisFunctionsApp”，再选择“确定”按钮。
-1. 在“新项目”对话框中，打开项目选项上方的下拉列表，并选择“Azure Functions v2 (.NET Core)”。 然后，依次选择“Http 触发器”项目和“确定”按钮。
-1. 在项目中创建“MLModels”目录，用于保存模型：
+1. 打开 Visual Studio 2017。 从菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新项目”  对话框中，依次选择“Visual C#”  节点和“云”  节点。 然后，选择“Azure Functions”  项目模板。 在“名称”  文本框中，键入“SentimentAnalysisFunctionsApp”，再选择“确定”  按钮。
+1. 在“新项目”  对话框中，打开项目选项上方的下拉列表，并选择“Azure Functions v2 (.NET Core)”  。 然后，依次选择“Http 触发器”  项目和“确定”  按钮。
+1. 在项目中创建“MLModels”  目录，用于保存模型：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新文件夹”。 键入“MLModels”，再按 Enter。
+    在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新文件夹”  。 键入“MLModels”，再按 Enter。
 
-1. 安装“Microsoft.ML NuGet 包”：
+1. 安装“Microsoft.ML NuGet 包”  ：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”，在列表中选择该包，然后选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 将“nuget.org”选择为“包源”，选择“浏览”选项卡并搜索“Microsoft.ML”  ，在列表中选择该包，然后选择“安装”  按钮。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
+
+1. 安装 Microsoft.Azure.Functions.Extensions NuGet 包  ：
+
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Azure.Functions.Extensions”，在列表中选择该包，再选择“安装”按钮   。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
 1. 安装 **Microsoft.Extensions.ML NuGet 包**：
 
-    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Extensions.ML”，在列表中选择包，再选择“安装”按钮。 选择“预览更改”对话框上的“确定”按钮，如果你同意所列包的许可条款，则选择“接受许可”对话框上的“我接受”按钮。
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“浏览”选项卡并搜索“Microsoft.Extensions.ML”，在列表中选择包，再选择“安装”按钮   。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
+
+1. 将 Microsoft.NET.Sdk.Functions NuGet 包  更新为版本 1.0.28：
+
+    在“解决方案资源管理器”中，右键单击项目，然后选择“管理 NuGet 包”  。 选择“nuget.org”作为包源，然后选择“安装”选项卡并搜索“Microsoft.NET.Sdk.Functions”，在列表中选择该包，再从“版本”下拉列表中选择 1.0.28 或更高版本，并选择“更新”按钮   。 选择“预览更改”  对话框上的“确定”  按钮，如果你同意所列包的许可条款，则选择“接受许可”  对话框上的“我接受”  按钮。
 
 ## <a name="add-pre-trained-model-to-project"></a>将预先训练的模型添加到项目
 
-1. 将预生成的模型复制到 MLModels 文件夹。
-1. 在“解决方案资源管理器”中，右键单击预生成的模型文件，并选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
+1. 将预生成的模型复制到 MLModels  文件夹。
+1. 在“解决方案资源管理器”中，右键单击预生成的模型文件，并选择“属性”  。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”    。
 
 ## <a name="create-azure-function-to-analyze-sentiment"></a>创建 Azure 函数用于分析情绪
 
 创建情绪预测类。 向项目添加一个新类：
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
 
-1. 在“添加新项”对话框中，选择“Azure 函数”，并将“名称”字段更改为“AnalyzeSentiment.cs”。 然后，选择“添加”按钮。
+1. 在“添加新项”  对话框中，选择“Azure 函数”  ，并将“名称”  字段更改为“AnalyzeSentiment.cs”  。 然后，选择“添加”  按钮。
 
-1. 在“新 Azure 函数”对话框中，选择“Http 触发器”。 然后，选择“确定”按钮。
+1. 在“新 Azure 函数”  对话框中，选择“Http 触发器”  。 然后，选择“确定”  按钮。
 
-    此时，AnalyzeSentiment.cs 文件在代码编辑器中打开。 将以下 `using` 语句添加到 *AnalyzeSentiment.cs* 的顶部：
+    此时，AnalyzeSentiment.cs  文件在代码编辑器中打开。 将以下 `using` 语句添加到 *AnalyzeSentiment.cs* 的顶部：
 
     ```csharp
     using System;
@@ -86,17 +95,17 @@ ms.locfileid: "65645099"
 
 需要为输入数据和预测创建一些类。 向项目添加一个新类：
 
-1. 在项目中创建“DataModels”目录，用于保存数据模型：在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”。 键入“DataModels”，再按 Enter。
-2. 在“解决方案资源管理器”中，右键单击“DataModels”目录，再依次选择“添加”>“新项”。
-3. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“SentimentData.cs”。 然后，选择“添加”按钮。 
+1. 在项目中创建“DataModels”  目录，用于保存数据模型：在“解决方案资源管理器”中，右键单击项目，并依次选择“添加”>“新文件夹”  。 键入“DataModels”，再按 Enter。
+2. 在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。
+3. 在“添加新项”  对话框中，选择“类”  并将“名称”  字段更改为“SentimentData.cs”  。 然后，选择“添加”  按钮。 
 
-    “SentimentData.cs”文件随即在代码编辑器中打开。 将以下 using 语句添加到 SentimentData.cs 顶部：
+    “SentimentData.cs”  文件随即在代码编辑器中打开。 将以下 using 语句添加到 SentimentData.cs  顶部：
 
     ```csharp
     using Microsoft.ML.Data;
     ```
 
-    删除现有类定义，并将以下代码添加到 SentimentData.cs 文件：
+    删除现有类定义，并将以下代码添加到 SentimentData.cs  文件：
     
     ```csharp
     public class SentimentData
@@ -110,14 +119,14 @@ ms.locfileid: "65645099"
     }
     ```
 
-4. 在“解决方案资源管理器”中，右键单击“DataModels”目录，再依次选择“添加”>“新项”。
-5. 在“添加新项”对话框中，选择“类”，并将“名称”字段更改为“SentimentPrediction.cs”。 然后，选择“添加”按钮。 此时，SentimentPrediction.cs 文件在代码编辑器中打开。 将以下 using 语句添加到 SentimentPrediction.cs 顶部：
+4. 在“解决方案资源管理器”中，右键单击“DataModels”  目录，再依次选择“添加”>“新项”  。
+5. 在“添加新项”  对话框中，选择“类”  ，并将“名称”  字段更改为“SentimentPrediction.cs”  。 然后，选择“添加”  按钮。 此时，SentimentPrediction.cs  文件在代码编辑器中打开。 将以下 using 语句添加到 SentimentPrediction.cs  顶部：
 
     ```csharp
     using Microsoft.ML.Data;
     ```
 
-    删除现有类定义，并将以下代码添加到 SentimentPrediction.cs 文件：
+    删除现有类定义，并将以下代码添加到 SentimentPrediction.cs  文件：
 
     ```csharp
     public class SentimentPrediction : SentimentData
@@ -140,8 +149,8 @@ ms.locfileid: "65645099"
 
 若要详细了解[依赖关系注入](https://en.wikipedia.org/wiki/Dependency_injection)，请单击下面的链接。
 
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“Startup.cs”。 然后，选择“添加”按钮。 
+1. 在“解决方案资源管理器”  中，右键单击项目，然后选择“添加”   > “新项”  。
+1. 在“添加新项”对话框中，选择“类”并将“名称”字段更改为“Startup.cs”     。 然后，选择“添加”  按钮。 
 
     此时，*Startup.cs* 文件在代码编辑器中打开。 将以下 using 语句添加到 *Startup.cs* 的顶部：
 
@@ -175,28 +184,6 @@ ms.locfileid: "65645099"
 > [!WARNING]
 > [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是线程安全型。 为了提高性能和线程安全性，请使用 `PredictionEnginePool` 服务，该服务可创建 `PredictionEngine` 对象的 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 供应用程序使用。 
 
-## <a name="register-startup-as-an-azure-functions-extension"></a>将 Startup 注册为 Azure Functions 扩展
-
-若要在应用程序中使用 `Startup`，需要将其注册为 Azure Functions 扩展。 在项目中创建名为 *extensions.json* 的新文件（如果尚不存在）。
-
-1. 在“解决方案资源管理器”中，右键单击项目，然后选择“添加” > “新项”。
-1. 在“新建项目”对话框中，依次选择“Visual C#”节点和“Web”节点。 然后选择“Json 文件”选项。 在“名称”文本框中，键入“extensions.json”，然后选择“确定”按钮。
-
-    此时，*extensions.json* 文件在代码编辑器中打开。 将以下内容添加到 *extensions.json*：
-    
-    ```json
-    {
-      "extensions": [
-        {
-          "name": "Startup",
-          "typename": "SentimentAnalysisFunctionsApp.Startup, SentimentAnalysisFunctionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ]
-    }
-    ```
-
-1. 在解决方案资源管理器中，右键单击 *extensions.json* 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
-
 ## <a name="load-the-model-into-the-function"></a>将模型加载到函数中
 
 在 *AnalyzeSentiment* 类中插入以下代码：
@@ -215,7 +202,7 @@ public AnalyzeSentiment(PredictionEnginePool<SentimentData, SentimentPrediction>
 
 ## <a name="use-the-model-to-make-predictions"></a>使用模型进行预测
 
-将 AnalyzeSentiment 类中 Run 方法的现有实现替换为以下代码：
+将 AnalyzeSentiment  类中 Run  方法的现有实现替换为以下代码：
 
 ```csharp
 [FunctionName("AnalyzeSentiment")]

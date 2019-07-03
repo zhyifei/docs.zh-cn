@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b765cc42f7e060ad11d0e8dcd9991a841cda8b3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ee35ce1016d9e0a825254fad4b08d4b94da16943
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586474"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170958"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform 类的 XSLT 转换
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
+> <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
 
 XSLT 的目标是将源 XML 文档的内容转换为格式或结构不同的另一个文档（例如，将 XML 转换为在网站上使用的 HTML，或将其转换为只包含应用程序所需字段的文档）。 此转换过程由万维网联合会 (W3C) [XSLT 版本 1.0 建议](https://www.w3.org/TR/1999/REC-xslt-19991116)规定。 在 .NET Framework 中，在 <xref:System.Xml.Xsl> 命名空间中找到的 <xref:System.Xml.Xsl.XslTransform> 类是实现此规范功能的 XSLT 处理器。 有几个 W3C XSLT 1.0 建议尚未实现的功能，[XslTransform 输出](outputs-from-an-xsltransform.md)中列出了这些功能。 下图显示 .NET Framework 的转换体系结构。
 

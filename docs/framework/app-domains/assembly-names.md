@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195821"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832887"
 ---
 # <a name="assembly-names"></a>程序集名称
 程序集的名称存储在元数据中，它对程序集的范围及应用程序对程序集的使用有重要影响。 强名称程序集有一个完全限定的名称，由程序集的名称、区域性、公钥及版本号组成。 该名称通常称为显示名称，对于加载的程序集，可通过使用 <xref:System.Reflection.Assembly.FullName%2A> 属性来获取它。  
@@ -24,7 +24,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，向程序集标识添加了处理器体系结构，从而允许使用特定于处理器的程序集版本。 可以创建某程序集的多个版本，其标识的差异仅在于处理器体系结构不同，例如特定于 32 位和 64 位处理器的版本。 处理器体系结构对于强名称不是必需的。 有关更多信息，请参见<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>。  
+>  在 .NET Framework 2.0 版中，向程序集标识添加了处理器体系结构，从而允许使用特定于处理器的程序集版本。 可以创建某程序集的多个版本，其标识的差异仅在于处理器体系结构不同，例如特定于 32 位和 64 位处理器的版本。 处理器体系结构对于强名称不是必需的。 有关详细信息，请参阅 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>。  
   
  在此例中，完全限定名表明 `myTypes` 程序集的强名称具有公钥标记、区域性值为美国英语、版本号为 1.0.1234.0。 它的处理器体系结构为“msil”，表示程序集将以实时 (JIT) 方式编译为 32 位代码或 64 位代码（具体取决于操作系统和处理器）。  
   
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  绑定到程序集时，运行时不区分程序集名称的大小写，但会保留程序集名称中使用的大小写。 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中的几个工具会区分程序集名称的大小写。 为获得最佳效果，管理程序集名称时请按区分大小写的方式来处理。  
+>  绑定到程序集时，运行时不区分程序集名称的大小写，但会保留程序集名称中使用的大小写。 Windows 软件开发工具包 (SDK) 中的几个工具将程序集名称处理为区分大小写。 为获得最佳效果，管理程序集名称时请按区分大小写的方式来处理。  
   
 ## <a name="naming-application-components"></a>命名应用程序组件  
  运行时在确定程序集的标识时不考虑文件名。 程序集标识（由程序集名称、版本、区域性和强名称组成）对运行时必须清楚明了。  

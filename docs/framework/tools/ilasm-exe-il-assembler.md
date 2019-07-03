@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378583"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833890"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe（IL 汇编程序）
 
@@ -104,7 +104,7 @@ IL 汇编程序可以展现以运行时为目标的编程语言的所有现有�
 > [!NOTE]
 > Ildasm.exe 只对磁盘上的文件进行操作  。 它不对安装在全局程序集缓存中的文件进行操作。
 
-有关 IL 语法的更多信息，请参见 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]中的 asmparse.grammar 文件。
+有关 IL 语法的更多信息，请参阅 Windows 软件开发工具包 (SDK) 中的 asmparse.grammar 文件。
 
 ## <a name="version-information"></a>版本信息
 
@@ -137,7 +137,7 @@ IL 汇编程序可以展现以运行时为目标的编程语言的所有现有�
         Test(object A_1) cil managed
 ```
 
-有关 IL 语法的更多信息，请参见 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]中的 asmparse.grammar 文件。
+有关 IL 语法的更多信息，请参阅 Windows 软件开发工具包 (SDK) 中的 asmparse.grammar 文件。
 
 ## <a name="examples"></a>示例
 

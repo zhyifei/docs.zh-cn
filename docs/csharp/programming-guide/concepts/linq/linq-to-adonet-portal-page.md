@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET（门户网站页）
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 250b80d0c0b6d929fafbe20fc0555827e0f493f3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b21d19aaa0b470bd59acb59c84b0777d099e6274
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881075"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307173"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET（门户网站页）
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] 使你可以使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 编程模型查询 ADO.NET 中的任何可枚举对象。  
@@ -15,7 +15,7 @@ ms.locfileid: "65881075"
 > [!NOTE]
 >  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] 文档位于 .NET Framework SDK 的 ADO.NET 部分：[LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
   
- 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供针对 <xref:System.Data.DataSet> 的形式多样的优化查询，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 使你可直接查询 SQL Server 数据库架构，而 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] 允许你查询 [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)]。  
+ 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供针对 <xref:System.Data.DataSet> 的形式多样的优化查询，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 使你可直接查询 SQL Server 数据库架构，而 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] 允许你查询实体数据模型。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> 是 ADO.NET 中使用最广泛的某个组件，也是断开编程模型（构建 ADO.NET 的基础）连接的重要元素。 <xref:System.Data.DataSet> 虽然具有突出的优点，但其查询功能也存在限制。  
@@ -32,7 +32,7 @@ ms.locfileid: "65881075"
  有关详细信息，请参阅 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- 通过 [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)]，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 有关详细信息，请参阅 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
+ 通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]。 有关详细信息，请参阅 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
 ## <a name="see-also"></a>请参阅
 

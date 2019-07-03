@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186073"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025093"
 ---
 # <a name="methods"></a>方法
 
@@ -62,11 +62,11 @@ ms.locfileid: "58186073"
 
 ## <a name="method-invocation"></a>方法调用
 
-方法可以是实例的或静态的。 调用实例方法需要将对象实例化，并对该对象调用方法；实例方法可对该实例及其数据进行操作。 通过引用该方法所属类型的名称来调用静态方法；静态方法不对实例数据进行操作。 尝试通过对象实例调用静态方法会引发编译器错误。
+方法可以是实例  的或静态的  。 调用实例方法需要将对象实例化，并对该对象调用方法；实例方法可对该实例及其数据进行操作。 通过引用该方法所属类型的名称来调用静态方法；静态方法不对实例数据进行操作。 尝试通过对象实例调用静态方法会引发编译器错误。
 
 调用方法就像访问字段。 在对象名称（如果调用实例方法）或类型名称（如果调用 `static` 方法）后添加一个句点、方法名称和括号。 自变量列在括号里，并且用逗号分隔。
 
-该方法定义指定任何所需参数的名称和类型。 调用方调用该方法时，它为每个参数提供了称为自变量的具体值。 自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。 在下面示例中，`Square` 方法包含名为 i 的类型为 `int` 的单个参数。 第一种方法调用将向 `Square` 方法传递名为 num 的 `int` 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。
+该方法定义指定任何所需参数的名称和类型。 调用方调用该方法时，它为每个参数提供了称为自变量的具体值。 自变量必须与参数类型兼容，但调用代码中使用的自变量名（如果有）不需要与方法中定义的自变量名相同。 在下面示例中，`Square` 方法包含名为 i  的类型为 `int` 的单个参数。 第一种方法调用将向 `Square` 方法传递名为 num  的 `int` 类型的变量；第二个方法调用将传递数值常量；第三个方法调用将传递表达式。
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -74,7 +74,7 @@ ms.locfileid: "58186073"
 
 [!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-调用方法时，也可以使用命名的自变量，而不是位置自变量。 使用命名的自变量时，指定参数名，然后后跟冒号（":"）和自变量。 只要包含了所有必需的自变量，方法的自变量可以任何顺序出现。 下面的示例使用命名的自变量来调用 `TestMotorcycle.Drive` 方法。 在此示例中，命名的自变量以相反于方法参数列表中的顺序进行传递。
+调用方法时，也可以使用命名的自变量  ，而不是位置自变量。 使用命名的自变量时，指定参数名，然后后跟冒号（":"）和自变量。 只要包含了所有必需的自变量，方法的自变量可以任何顺序出现。 下面的示例使用命名的自变量来调用 `TestMotorcycle.Drive` 方法。 在此示例中，命名的自变量以相反于方法参数列表中的顺序进行传递。
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
@@ -98,7 +98,7 @@ ms.locfileid: "58186073"
 
 ## <a name="passing-parameters"></a>传递参数
 
-C# 中的所有类型不是值类型就是引用类型。 有关内置值类型的列表，请参阅[类型和变量](./tour-of-csharp/types-and-variables.md)。 默认情况下，值类型和引用类型均按值传递给方法。
+C# 中的所有类型不是值类型  就是引用类型  。 有关内置值类型的列表，请参阅[类型和变量](./tour-of-csharp/types-and-variables.md)。 默认情况下，值类型和引用类型均按值传递给方法。
 
 <a name="byval"></a>
 
@@ -144,9 +144,9 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 - 向该方法传递相应类型的单独自变量的逗号分隔列表。
 - 不向参数数组提供参数。
 
-下面的示例定义名为 `DoStringOperation` 的方法，该方法执行由其第一个参数 - `StringOperation` 枚举成员指定的字符串操作。 要接受该字符串操作的字符串由参数数组定义。 `Main` 方法演示了调用方法的全部三种方式。 请注意，使用 `params` 关键字标记的方法必须随时准备好应对没有为参数数组提供任何自变量的情况，以便其值为 `null`。
+以下示例定义了一个名为 `GetVowels` 的方法，该方法返回参数数组中的所有元音。 `Main` 方法演示了调用方法的全部三种方式。 调用方不需要为包含 `params` 修饰符的形参提供任何实参。 在这种情况下，参数为 `null`。
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 参数的默认值必须由以下几种表达式中的一种来赋予：
 
 - 常量，例如文本字符串或数字。
-- `new ValType` 形式的表达式，其中 `ValType` 是值类型。 请注意，这会调用该值类型的隐式默认构造函数，该函数不是类型的实际成员。
+- `new ValType` 形式的表达式，其中 `ValType` 是值类型。 请注意，这会调用该值类型的隐式无参数构造函数，该函数不是类型的实际成员。
 - `default(ValType)` 形式的表达式，其中 `ValType` 是值类型。
 
 如果某个方法同时包含必需的和可选的参数，则在参数列表末尾定义可选参数，即在定义完所有必需参数之后定义。
@@ -174,7 +174,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-使用可选参数会影响重载决策，或影响 C# 编译器决定方法应调用哪个特定重载时所使用的方式，如下所示：
+使用可选参数会影响重载决策  ，或影响 C# 编译器决定方法应调用哪个特定重载时所使用的方式，如下所示：
 
 - 如果方法、索引器或构造函数的每个参数是可选的，或按名称或位置对应于调用语句中的单个自变量，且该自变量可转换为参数的类型，则方法、索引器或构造函数为执行的候选项。
 - 如果找到多个候选项，则会将用于首选转换的重载决策规则应用于显式指定的自变量。 将忽略可选形参已省略的实参。
@@ -200,7 +200,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 
 在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内自变量的原始值，则此步骤可能很有必要。
 
-有时，需要方法返回多个值。 从 C# 7.0 开始，可以使用元组类型和元组文本轻松实现此目的。 元组类型定义元组元素的数据类型。 元组文本提供返回的元组的实际值。 在下面的示例中，`(string, string, string, int)` 定义 `GetPersonalInfo` 方法返回的元组类型。 表达式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是元组文本；方法返回 `PersonInfo` 对象的第一个、中间和最后一个名称及其使用期限。
+有时，需要方法返回多个值。 从 C# 7.0 开始，可以使用元组类型  和元组文本  轻松实现此目的。 元组类型定义元组元素的数据类型。 元组文本提供返回的元组的实际值。 在下面的示例中，`(string, string, string, int)` 定义 `GetPersonalInfo` 方法返回的元组类型。 表达式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是元组文本；方法返回 `PersonInfo` 对象的第一个、中间和最后一个名称及其使用期限。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)

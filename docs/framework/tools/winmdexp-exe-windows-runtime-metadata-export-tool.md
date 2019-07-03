@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378497"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026007"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
-[!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据的文件。 尽管 .NET Framework 程序集和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件。 将 .NET Framework 模块转换为 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件的过程称为*导出*。 在 .NET Framework 4.5 和 .NET Framework 4.5.1 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
+Windows 运行时元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 Windows 运行时元数据的文件。 尽管 .NET Framework 程序集和 Windows 运行时元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 Windows 运行时组件。 将 .NET Framework 模块转换为 Windows 运行时组件的过程称为“导出”  。 在 .NET Framework 4.5 和 .NET Framework 4.5.1 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
   
- 使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件  模板（在 C# 中，位于“Windows 应用商店”  下；在 Visual Basic 中，位于 Visual Studio 2013 或 Visual Studio 2012 中）时，编译器目标是 .winmdobj 文件，后续生成步骤将调用 Winmdexp.exe 以将 .winmdobj 文件导出到 .winmd 文件。 这是生成 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件的推荐方法。 当你对生成过程需要的控制超过 Visual Studio 所能提供的控制时，请直接使用 Winmdexp.exe。  
+ 使用 Windows 运行时组件  模板（在 C# 中，位于“Microsoft Store”  下；在 Visual Basic 中，位于 Visual Studio 2013 或 Visual Studio 2012 中）时，编译器目标是 .winmdobj 文件，后续生成步骤将调用 Winmdexp.exe 以将 .winmdobj 文件导出到 .winmd 文件。 这是生成 Windows 运行时组件的推荐方法。 当你对生成过程需要的控制超过 Visual Studio 所能提供的控制时，请直接使用 Winmdexp.exe。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
@@ -46,9 +46,9 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|指定包含选项的响应 (.rsp) 文件（并且还可以选择指定 `winmdmodule`）。 `responsefile` 中的每行应包含一个参数或选项。|  
   
 ## <a name="remarks"></a>备注  
- Winmdexp.exe 未被设计将任意 .NET Framework 程序集转换为 .winmd 文件。 它需要使用 `/target:winmdobj` 选项编译的模块，并且其他限制也适用。 这些限制中最重要的是，程序集的 API 图面中公开的所有类型都必须是 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型。 有关详细信息，请参阅 Windows 开发人员中心的文章[在 C# 和 Visual Basic 中创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)的“在 Windows 运行时组件中声明类型”一节。  
+ Winmdexp.exe 未被设计将任意 .NET Framework 程序集转换为 .winmd 文件。 它需要使用 `/target:winmdobj` 选项编译的模块，并且其他限制也适用。 这些限制中最重要的是，程序集的 API 图面中公开的所有类型都必须是 Windows 运行时类型。 有关详细信息，请参阅 Windows 开发人员中心的文章[在 C# 和 Visual Basic 中创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)的“在 Windows 运行时组件中声明类型”一节。  
   
- 当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件时，.NET Framework 将提供支持，使得利用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132)接口构造的类型。  
+ 当你使用 C# 或 Visual Basic 编写 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用或 Windows 运行时组件时，.NET Framework 将提供支持，使得利用 Windows 运行时进行编程更加自然。 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)一文中对此进行了讨论。 在该过程中，某些常用的 Windows 运行时类型将映射到 .NET Framework 类型。 Winmdexp.exe 将反转此过程并生成使用对应的 Windows 运行时类型的 API 图面。 例如，从 <xref:System.Collections.Generic.IList%601> 接口构造的类型将映射到从 Windows 运行时 [IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) 接口构造的类型。  
   
 ## <a name="see-also"></a>请参阅
 

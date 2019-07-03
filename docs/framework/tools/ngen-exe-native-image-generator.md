@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489661"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832827"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 
@@ -80,7 +80,7 @@ ngen /? | /help
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|从本机映像缓存中删除程序集及其依赖项的本机映像。<br /><br /> 若要卸载单个映像及其依赖项，可使用与安装此映像时相同的命令行自变量。 **注意：** 从 .NET Framework 4 开始，不再支持操作 `uninstall` *。|
 |`update` [`/queue`]|更新已无效的本机映像。<br /><br /> 如果指定了 `/queue`，则更新将排队等待本机映像服务。 更新的优先级总是设定为 3，因此它们在计算机空闲时运行。|
 |`display` [`assemblyName` &#124; `assemblyPath`]|显示程序集及其依赖项的本机映像的状态。<br /><br /> 如果未提供自变量，则显示本机映像缓存中的所有内容。|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> 或<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -或-<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|暂停本机映像服务，允许暂停的服务继续，或查询服务状态。|
 
 <a name="ArgumentTable"></a>
@@ -233,7 +233,7 @@ Ngen.exe 生成的本机映像可以在应用程序域之间共享。 这意味�
 硬绑定可影响启动时间，因为硬绑定至主应用程序程序集的所有映像必须同时加载。
 
 > [!NOTE]
-> 在 [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] 之前，你应该将共享且强命名的组件置于全局程序集缓存中，因为加载程序对未处于全局程序集缓存中的强命名程序集执行额外验证，实际抵消了使用本机映像在启动时间方面获得的任何改善。 在 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 中引入的优化移除了多余的有效性。
+> 在 .NET Framework 3.5 Service Pack 1 之前，你应该将共享且强命名的组件置于全局程序集缓存中，因为加载程序对未处于全局程序集缓存中的强命名程序集执行额外验证，实际抵消了使用本机映像在启动时间方面获得的任何改善。 在 .NET Framework 3.5 SP1 中引入的优化移除了多余的有效性。
 
 <a name="UsageSummary"></a>
 

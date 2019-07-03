@@ -1,77 +1,40 @@
 ---
 title: is - C# 参考
 ms.custom: seodec18
-ms.date: 04/09/2019
+ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: ac1ec7da7da465f4290000ac9c7254e9492c3c81
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421814"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306594"
 ---
 # <a name="is-c-reference"></a>is（C# 参考）
 
-检查对象是否与给定类型兼容，或（从 C# 7.0 开始）针对某个模式测试表达式。
-
-## <a name="testing-for-type-compatibility"></a>类型兼容性测试
-
-`is` 关键字在运行时评估类型兼容性。 它确定对象实例或表达式结果是否可转换为指定类型。 语法如下：
-
-```csharp
-   expr is type
-```
-
-其中 *expr* 是计算结果为某个类型的实例的表达式，而 *type* 是 *expr* 结果要转换到的类型的名称。 如果 *expr* 非空，并且通过计算表达式得出的对象可转换为 *type*，则 `is` 语句为 `true`；否则返回 `false`。
-
-例如，以下代码确定 `obj` 是否可转换为 `Person` 类型的实例：
-
-[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
-
-如果满足以下条件，则 `is` 语句为 true：
-
-- *expr* 是与 *type* 具有相同类型的一个实例。
-
-- *expr* 是派生自 *type* 的类型的一个实例。 换言之，*expr* 结果可以向上转换为 *type* 的一个实例。
-
-- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型  是其声明中定义的变量类型。 变量的运行时类型  是分配给该变量的实例类型。
-
-- *expr* 是实现 *type* 接口的类型的一个实例。
-
-下例表明，对于所有这些转换，`is` 表达式的计算结果都为 `true`。
-
-[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
-
-如果已知表达式始终为 `true` 或 `false`，则 `is` 关键字会生成编译时警告。 它只考虑引用转换、装箱转换和取消装箱转换；不考虑用户定义的转换或由类型的[隐式](implicit.md)和[显式](explicit.md)运算符定义的转换。 下面的示例生成警告，因为转换结果在编译时就已知。 用于从 `int` 转换到 `long` 和 `double` 的 `is` 表达式返回 false，因为这些转换由[隐式](implicit.md)运算符处理。
-
-[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
-
-`expr` 不得为匿名方法或 Lambda 表达式。 它可以是其他任何返回值的表达式。 下例使用 `is` 来计算方法调用的返回值。   
-[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
-
-从 C# 7.0 开始，可以使用[类型模式](#type)的模式匹配来编写代码，代码使用 `is` 语句更为简洁。
+`is` 运算符检查表达式的结果是否与给定类型兼容，或（从 C# 7.0 开始）针对某个模式测试表达式。 有关类型测试 `is` 运算符的信息，请参阅文章[类型测试和转换运算符](../operators/type-testing-and-conversion-operators.md)的 [is 运算符](../operators/type-testing-and-conversion-operators.md#is-operator)部分。
 
 ## <a name="pattern-matching-with-is"></a>利用 `is` 的模式匹配
 
-从 C# 7.0 开始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 语句支持模式匹配。 `is` 关键字支持以下模式：
+从 C# 7.0 开始，`is` 和 [switch](switch.md) 语句支持模式匹配。 `is` 关键字支持以下模式：
 
-- [类型模式](#type)，用于测试表达式是否可转换为指定类型，如果可以，则将其转换为该类型的一个变量。
+- [类型模式](#type-pattern)，用于测试表达式是否可转换为指定类型，如果可以，则将其转换为该类型的一个变量。
 
-- [常量模式](#constant)，用于测试表达式计算结果是否为指定的常数值。
+- [常量模式](#constant-pattern)，用于测试表达式计算结果是否为指定的常数值。
 
-- [var 模式](#var)，始终成功的匹配，可将表达式的值绑定到新局部变量。 
+- [var 模式](#var-pattern)，始终成功的匹配，可将表达式的值绑定到新局部变量。
 
-### <a name="a-nametype-type-pattern"></a><a name="type" />类型模式
+### <a name="type-pattern"></a>类型模式
 
 使用类型模式执行模式匹配时，`is` 会测试表达式是否可转换为指定类型，如果可以，则将其转换为该类型的一个变量。 它是 `is` 语句的直接扩展，可执行简单的类型计算和转换。 `is` 类型模式的一般形式为：
 
 ```csharp
-   expr is type varname 
+   expr is type varname
 ```
 
 其中 *expr* 是计算结果为某个类型的实例的表达式，*type* 是 *expr* 结果要转换到的类型的名称，*varname* 是 *expr* 结果要转换到的对象（如果 `is` 测试为 `true`）。 
@@ -86,7 +49,7 @@ ms.locfileid: "66421814"
 
 - *expr* 是实现 *type* 接口的类型的一个实例。
 
-自 C# 7.1 起，expr  可能有泛型类型参数及其约束定义的编译时类型。 
+自 C# 7.1 起，expr  可能有泛型类型参数及其约束定义的编译时类型。
 
 如果 *expr* 为 `true` 且 `is` 与 `if` 语句配合使用，则仅在 `if` 语句内分配 *varname*。 *varname* 的使用范围：从 `is` 表达式到封闭 `if` 语句的块的末尾。 在任何其他位置使用 *varname* 都会因使用尚未分配的变量而生成编译时错误。
 
@@ -98,7 +61,7 @@ ms.locfileid: "66421814"
 
 [!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-确定值类型的类型时，`is` 类型模式也会生成更紧凑的代码。 下例在显示相应属性的值之前使用 `is` 类型模式来确定对象是 `Person` 还是 `Dog` 实例。 
+确定值类型的类型时，`is` 类型模式也会生成更紧凑的代码。 下例在显示相应属性的值之前使用 `is` 类型模式来确定对象是 `Person` 还是 `Dog` 实例。
 
 [!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
@@ -106,7 +69,7 @@ ms.locfileid: "66421814"
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />常量模式
+### <a name="constant-pattern"></a>常量模式
 
 使用常量模式执行模式匹配时，`is` 会测试表达式结果是否等于指定常量。 在 C# 6 和更低版本中，[switch](switch.md) 语句支持常量模式。 自 C# 7.0 起，`is` 语句也支持它。 语法为：
 
@@ -114,7 +77,7 @@ ms.locfileid: "66421814"
    expr is constant
 ```
 
-其中 *expr* 是要计算的表达式，*constant* 是要测试的值。 *constant* 可以是以下任何常数表达式： 
+其中 *expr* 是要计算的表达式，*constant* 是要测试的值。 *constant* 可以是以下任何常数表达式：
 
 - 一个文本值。
 
@@ -134,19 +97,19 @@ ms.locfileid: "66421814"
 
 可以使用常量模式执行 `null` 检查。 `is` 语句支持 `null` 关键字。 语法为：
 
-```csharp 
+```csharp
    expr is null
 ```
 
 下面的示例显示 `null` 检查的比较：
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
- 
-### <a name="var" />var 模式</a>
+
+### <a name="var-pattern"></a>var 模式
 
 `var` 模式对于任何类型或值均为 catch-all。 expr  值始终分配给与 expr  的编译时类型相同的本地变量。 `is` 表达式的结果始终为 `true`。 语法为：
 
-```csharp 
+```csharp
    expr is var varname
 ```
 
@@ -156,11 +119,13 @@ ms.locfileid: "66421814"
 
 ## <a name="c-language-specification"></a>C# 语言规范
   
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的 [is 运算符](~/_csharplang/spec/expressions.md#the-is-operator)部分以及下面的 C# 语言建议：
+
+- [模式匹配](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
+- [使用泛型的模式匹配](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)
-- [as](../../../csharp/language-reference/keywords/as.md)
+- [C# 参考](../index.md)
+- [C# 关键字](index.md)
+- [类型测试和转换运算符](../operators/type-testing-and-conversion-operators.md)

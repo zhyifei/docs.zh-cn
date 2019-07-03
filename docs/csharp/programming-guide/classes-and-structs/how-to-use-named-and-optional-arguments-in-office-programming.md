@@ -7,15 +7,15 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 3ecea9d55ef61d2158da0dabeca22a58460b3bea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a8b09061157c45b865613c31ae1425e5820687f4
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313965"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170402"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何：在 Office 编程中使用命名参数和可选参数（C# 编程指南）
-在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中引入的命名参数和可选参数增强了 C# 编程中的便利性、灵活性和可读性。 另外，这些功能显著方便了对 COM 接口（如 Microsoft Office 自动化 API）的访问。  
+在 C# 4 中引入的命名参数和可选参数增强了 C# 编程中的便利性、灵活性和可读性。 另外，这些功能显著方便了对 COM 接口（如 Microsoft Office 自动化 API）的访问。  
   
  在下面的示例中，方法 [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) 具有十六个参数，用于表示表的各种特性，例如列数和行数、格式设置、边框、字体以及颜色。 由于大多数时候都不需要为所有十六个参数指定特定值，因此所有这些参数都是可选的。 但是，如果没有命名实参和可选实参，则必须为每个形参提供值或占位符值。 有了命名实参和可选实参，则只需为项目所需的形参指定值。  
   
@@ -27,31 +27,31 @@ ms.locfileid: "59313965"
   
 1. 启动 Visual Studio。  
   
-2. 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。  
+2. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。  
   
-3. 在“模板类别”窗格中，展开“Visual C#”，然后单击“Windows”。  
+3. 在“模板类别”  窗格中，展开“Visual C#”  ，然后单击“Windows”  。  
   
-4. 查看“模板”窗格的顶部，确保“.NET Framework 4”出现在“目标框架”框中。  
+4. 查看“模板”  窗格的顶部，确保“.NET Framework 4”  出现在“目标框架”  框中。  
   
-5. 在“模板”窗格中，单击“控制台应用程序”。  
+5. 在“模板”  窗格中，单击“控制台应用程序”  。  
   
-6. 在“名称”字段中键入项目的名称。  
+6. 在“名称”  字段中键入项目的名称。  
   
-7. 单击 **“确定”**。  
+7. 单击 **“确定”** 。  
   
-     新项目将出现在“解决方案资源管理器”中。  
+     新项目将出现在“解决方案资源管理器”  中。  
   
 ### <a name="to-add-a-reference"></a>添加引用  
   
-1. 在“解决方案资源管理器”中，右键单击你的项目名称，然后单击“添加引用”。 此时会显示“添加引用”对话框。  
+1. 在“解决方案资源管理器”  中，右键单击你的项目名称，然后单击“添加引用”  。 此时会显示“添加引用”  对话框。  
   
-2. 在“.NET”页上的“组件名称”列表中，选择“Microsoft.Office.Interop.Word”。  
+2. 在“.NET”页上的“组件名称”列表中，选择“Microsoft.Office.Interop.Word”    。  
   
-3. 单击 **“确定”**。  
+3. 单击 **“确定”** 。  
   
 ### <a name="to-add-necessary-using-directives"></a>添加必要的 using 指令  
   
-1. 在“解决方案资源管理器”中，右键单击“Program.cs”文件，然后单击“查看代码”。  
+1. 在“解决方案资源管理器”  中，右键单击“Program.cs”  文件，然后单击“查看代码”  。  
   
 2. 将以下 `using` 指令添加到代码文件的顶部。  
   

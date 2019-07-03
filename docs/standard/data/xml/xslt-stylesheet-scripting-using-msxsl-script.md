@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 617f1da8f9b5b26ddfb2910ac0c06a6898d8ab6e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835247"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170924"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 编写 XSLT 样式表脚本
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
  <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。 加载样式表时，任何已定义的函数都会通过包装在类定义中来编译为 Microsoft 中间语言 (MSIL)，因此不会有任何性能损失。  
   
@@ -216,7 +216,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

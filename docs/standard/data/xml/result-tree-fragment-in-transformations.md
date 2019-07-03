@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750711"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170779"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>转换中的结果树片断
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
+> <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
 
  结果树片段只是一个特殊类型的节点集。 您可以对它们执行可对节点集执行的任何函数。 你也可以用 `node-set()` 函数将结果树片段转换成一个节点集，然后就可以在任何可使用节点集的位置使用了。
 
