@@ -6,43 +6,65 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 110d83caad0c588fa899a4129897784e9c74aab8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881917"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307109"
 ---
-# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="4779b-102">静态构造函数（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="4779b-102">Static Constructors (C# Programming Guide)</span></span>
-<span data-ttu-id="4779b-103">静态构造函数用于初始化任何[静态](../../../csharp/language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。</span><span class="sxs-lookup"><span data-stu-id="4779b-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="4779b-104">将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="4779b-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
+# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="1fba3-102">静态构造函数（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="1fba3-102">Static Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="1fba3-103">静态构造函数用于初始化任何[静态](../../../csharp/language-reference/keywords/static.md)数据，或执行仅需执行一次的特定操作。</span><span class="sxs-lookup"><span data-stu-id="1fba3-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="1fba3-104">将在创建第一个实例或引用任何静态成员之前自动调用静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="1fba3-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
+ 
+## <a name="remarks"></a><span data-ttu-id="1fba3-105">备注</span><span class="sxs-lookup"><span data-stu-id="1fba3-105">Remarks</span></span>
+<span data-ttu-id="1fba3-106">静态构造函数具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="1fba3-106">Static constructors have the following properties:</span></span>  
   
- <span data-ttu-id="4779b-105">静态构造函数具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="4779b-105">Static constructors have the following properties:</span></span>  
-  
-- <span data-ttu-id="4779b-106">静态构造函数不使用访问修饰符或不具有参数。</span><span class="sxs-lookup"><span data-stu-id="4779b-106">A static constructor does not take access modifiers or have parameters.</span></span>  
-  
-- <span data-ttu-id="4779b-107">在创建第一个实例或引用任何静态成员之前，将自动调用静态构造函数以初始化[类](../../../csharp/language-reference/keywords/class.md)。</span><span class="sxs-lookup"><span data-stu-id="4779b-107">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span> <span data-ttu-id="4779b-108">请注意，分配给事件或委托的静态方法被调用（而不是分配）时，将调用类型的静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="4779b-108">Note that a type's static constructor is called when a static method assigned to an event or a delegate is invoked and not when it is assigned.</span></span>
-  
-- <span data-ttu-id="4779b-109">不能直接调用静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="4779b-109">A static constructor cannot be called directly.</span></span>  
-  
-- <span data-ttu-id="4779b-110">用户无法控制在程序中执行静态构造函数的时间。</span><span class="sxs-lookup"><span data-stu-id="4779b-110">The user has no control on when the static constructor is executed in the program.</span></span>  
-  
-- <span data-ttu-id="4779b-111">静态构造函数的一种典型用法是在类使用日志文件且将构造函数用于将条目写入到此文件中时使用。</span><span class="sxs-lookup"><span data-stu-id="4779b-111">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
-  
-- <span data-ttu-id="4779b-112">静态构造函数对于创建非托管代码的包装类也非常有用，这种情况下构造函数可调用 `LoadLibrary` 方法。</span><span class="sxs-lookup"><span data-stu-id="4779b-112">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
-  
-- <span data-ttu-id="4779b-113">如果静态构造函数引发异常，运行时将不会再次调用该函数，并且类型在程序运行所在的应用程序域的生存期内将保持未初始化。</span><span class="sxs-lookup"><span data-stu-id="4779b-113">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="4779b-114">示例</span><span class="sxs-lookup"><span data-stu-id="4779b-114">Example</span></span>  
- <span data-ttu-id="4779b-115">在此示例中，类 `Bus` 具有静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="4779b-115">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="4779b-116">创建 `Bus` 的第一个实例 (`bus1`) 时，将调用该静态构造函数，以便初始化类。</span><span class="sxs-lookup"><span data-stu-id="4779b-116">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="4779b-117">示例输出验证即使创建了两个 `Bus` 的实例，静态构造函数也仅运行一次，并且在实例构造函数运行前运行。</span><span class="sxs-lookup"><span data-stu-id="4779b-117">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
-  
- [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]  
-  
-## <a name="see-also"></a><span data-ttu-id="4779b-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="4779b-118">See also</span></span>
+- <span data-ttu-id="1fba3-107">静态构造函数不使用访问修饰符或不具有参数。</span><span class="sxs-lookup"><span data-stu-id="1fba3-107">A static constructor does not take access modifiers or have parameters.</span></span>  
 
-- [<span data-ttu-id="4779b-119">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="4779b-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="4779b-120">类和结构</span><span class="sxs-lookup"><span data-stu-id="4779b-120">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [<span data-ttu-id="4779b-121">构造函数</span><span class="sxs-lookup"><span data-stu-id="4779b-121">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [<span data-ttu-id="4779b-122">静态类和静态类成员</span><span class="sxs-lookup"><span data-stu-id="4779b-122">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [<span data-ttu-id="4779b-123">终结器</span><span class="sxs-lookup"><span data-stu-id="4779b-123">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- <span data-ttu-id="1fba3-108">类或结构只能有一个静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="1fba3-108">A class or struct can only have one static constructor.</span></span>
+
+- <span data-ttu-id="1fba3-109">静态构造函数不能继承或重载。</span><span class="sxs-lookup"><span data-stu-id="1fba3-109">Static constructors cannot be inherited or overloaded.</span></span>
+
+- <span data-ttu-id="1fba3-110">静态构造函数不能直接调用，并且仅应由公共语言运行时 (CLR) 调用。</span><span class="sxs-lookup"><span data-stu-id="1fba3-110">A static constructor cannot be called directly and is only meant to be called by the common language runtime (CLR).</span></span> <span data-ttu-id="1fba3-111">可以自动调用它们。</span><span class="sxs-lookup"><span data-stu-id="1fba3-111">It is invoked automatically.</span></span>
+
+- <span data-ttu-id="1fba3-112">用户无法控制在程序中执行静态构造函数的时间。</span><span class="sxs-lookup"><span data-stu-id="1fba3-112">The user has no control on when the static constructor is executed in the program.</span></span>
+  
+- <span data-ttu-id="1fba3-113">在创建第一个实例或引用任何静态成员之前，将自动调用静态构造函数以初始化[类](../../../csharp/language-reference/keywords/class.md)。</span><span class="sxs-lookup"><span data-stu-id="1fba3-113">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span> <span data-ttu-id="1fba3-114">静态构造函数应在实例构造函数之前运行。</span><span class="sxs-lookup"><span data-stu-id="1fba3-114">A static constructor will run before an instance constructor.</span></span> <span data-ttu-id="1fba3-115">请注意，分配给事件或委托的静态方法被调用（而不是分配）时，将调用类型的静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="1fba3-115">Note that a type's static constructor is called when a static method assigned to an event or a delegate is invoked and not when it is assigned.</span></span> <span data-ttu-id="1fba3-116">如果静态构造函数类中存在静态字段变量初始值设定项，它们将在执行静态构造函数之前立即以在类声明中显示的文本顺序执行。</span><span class="sxs-lookup"><span data-stu-id="1fba3-116">If static field variable initializers are present in the class of the static constructor, they will be executed in the textual order in which they appear in the class declaration immediately prior to the execution of the static constructor.</span></span>
+
+- <span data-ttu-id="1fba3-117">如果未提供静态构造函数来初始化静态字段，会将所有静态字段初始化为其默认值，如[默认值表](../../../csharp/language-reference/keywords/default-values-table.md)中所列。</span><span class="sxs-lookup"><span data-stu-id="1fba3-117">If you don't provide a static constructor to initialize static fields, all static fields are initialized to their default value as listed in the [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> 
+  
+- <span data-ttu-id="1fba3-118">如果静态构造函数引发异常，运行时将不会再次调用该函数，并且类型在程序运行所在的应用程序域的生存期内将保持未初始化。</span><span class="sxs-lookup"><span data-stu-id="1fba3-118">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span> <span data-ttu-id="1fba3-119">大多数情况下，当静态构造函数无法实例化一个类型时，或者当静态构造函数中发生未经处理的异常时，将引发 <xref:System.TypeInitializationException> 异常。</span><span class="sxs-lookup"><span data-stu-id="1fba3-119">Most commonly, a <xref:System.TypeInitializationException> exception is thrown when a static constructor is unable to instantiate a type or for an unhandled exception occurring within a static constructor.</span></span> <span data-ttu-id="1fba3-120">对于未在源代码中显式定义的隐式静态构造函数，故障排除可能需要检查中间语言 (IL) 代码。</span><span class="sxs-lookup"><span data-stu-id="1fba3-120">For implicit static constructors that are not explicitly defined in source code, troubleshooting may require inspection of the intermediate language (IL) code.</span></span>
+
+- <span data-ttu-id="1fba3-121">静态构造函数的存在将防止添加 <xref:System.Reflection.TypeAttributes.BeforeFieldInit> 类型属性。</span><span class="sxs-lookup"><span data-stu-id="1fba3-121">The presence of a static constructor prevents the addition of the <xref:System.Reflection.TypeAttributes.BeforeFieldInit> type attribute.</span></span> <span data-ttu-id="1fba3-122">这将限制运行时优化。</span><span class="sxs-lookup"><span data-stu-id="1fba3-122">This limits runtime optimization.</span></span>
+
+- <span data-ttu-id="1fba3-123">声明为 `static readonly` 的字段可能仅被分配为其声明的一部分或在静态构造函数中。</span><span class="sxs-lookup"><span data-stu-id="1fba3-123">A field declared as `static readonly` may only be assigned as part of its declaration or in a static constructor.</span></span> <span data-ttu-id="1fba3-124">如果不需要显式静态构造函数，请在声明时初始化静态字段，而不是通过静态构造函数实现更好的运行时优化。</span><span class="sxs-lookup"><span data-stu-id="1fba3-124">When an explicit static constructor is not required, initialize static fields at declaration, rather than through a static constructor for better runtime optimization.</span></span>
+
+> [!Note]
+> <span data-ttu-id="1fba3-125">尽管不可直接访问，但应记录显式静态构造函数的存在，以帮助故障排除初始化异常。</span><span class="sxs-lookup"><span data-stu-id="1fba3-125">Though not directly accessible, the presence of an explicit static constructor should be documented to assist with troubleshooting initialization exceptions.</span></span>
+
+### <a name="usage"></a><span data-ttu-id="1fba3-126">用法</span><span class="sxs-lookup"><span data-stu-id="1fba3-126">Usage</span></span>
+
+- <span data-ttu-id="1fba3-127">静态构造函数的一种典型用法是在类使用日志文件且将构造函数用于将条目写入到此文件中时使用。</span><span class="sxs-lookup"><span data-stu-id="1fba3-127">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
+- <span data-ttu-id="1fba3-128">静态构造函数对于创建非托管代码的包装类也非常有用，这种情况下构造函数可调用 `LoadLibrary` 方法。</span><span class="sxs-lookup"><span data-stu-id="1fba3-128">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
+
+- <span data-ttu-id="1fba3-129">也可以在静态构造函数中方便地对无法在编译时通过约束（类型参数约束）检查的类型参数强制执行运行时检查。</span><span class="sxs-lookup"><span data-stu-id="1fba3-129">Static constructors are also a convenient place to enforce run-time checks on the type parameter that cannot be checked at compile-time via constraints (Type parameter constraints).</span></span>
+
+## <a name="example"></a><span data-ttu-id="1fba3-130">示例</span><span class="sxs-lookup"><span data-stu-id="1fba3-130">Example</span></span>
+ <span data-ttu-id="1fba3-131">在此示例中，类 `Bus` 具有静态构造函数。</span><span class="sxs-lookup"><span data-stu-id="1fba3-131">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="1fba3-132">创建 `Bus` 的第一个实例 (`bus1`) 时，将调用该静态构造函数，以便初始化类。</span><span class="sxs-lookup"><span data-stu-id="1fba3-132">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="1fba3-133">示例输出验证即使创建了两个 `Bus` 的实例，静态构造函数也仅运行一次，并且在实例构造函数运行前运行。</span><span class="sxs-lookup"><span data-stu-id="1fba3-133">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
+  
+ [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
+ 
+## <a name="c-language-specification"></a><span data-ttu-id="1fba3-134">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="1fba3-134">C# language specification</span></span>
+<span data-ttu-id="1fba3-135">有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)中的[静态构造函数](~/_csharplang/spec/classes.md#static-constructors)部分。</span><span class="sxs-lookup"><span data-stu-id="1fba3-135">For more information, see the [Static constructors](~/_csharplang/spec/classes.md#static-constructors) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+  
+## <a name="see-also"></a><span data-ttu-id="1fba3-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="1fba3-136">See also</span></span>
+
+- [<span data-ttu-id="1fba3-137">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="1fba3-137">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="1fba3-138">类和结构</span><span class="sxs-lookup"><span data-stu-id="1fba3-138">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [<span data-ttu-id="1fba3-139">构造函数</span><span class="sxs-lookup"><span data-stu-id="1fba3-139">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [<span data-ttu-id="1fba3-140">静态类和静态类成员</span><span class="sxs-lookup"><span data-stu-id="1fba3-140">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [<span data-ttu-id="1fba3-141">终结器</span><span class="sxs-lookup"><span data-stu-id="1fba3-141">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [<span data-ttu-id="1fba3-142">构造函数设计准则</span><span class="sxs-lookup"><span data-stu-id="1fba3-142">Constructor Design Guidelines</span></span>](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
+- [<span data-ttu-id="1fba3-143">安全警告 - CA2121：静态构造函数应为私有</span><span class="sxs-lookup"><span data-stu-id="1fba3-143">Security Warning - CA2121: Static constructors should be private</span></span>](https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

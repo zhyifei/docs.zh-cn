@@ -302,8 +302,9 @@
     - name: .NET Core SDK 概述
       href: core/sdk.md
     - name: .NET Core CLI 工具
-      href: core/tools/index.md
       items:
+        - name: .NET Core CLI 概述
+          href: core/tools/index.md
         - name: 遥测
           href: core/tools/telemetry.md
         - name: 全局工具
@@ -311,6 +312,8 @@
           items:
             - name: 创建全局工具
               href: core/tools/global-tools-how-to-create.md
+        - name: 提升的访问权限
+          href: core/tools/elevated-access.md
         - name: 扩展性模型
           href: core/tools/extensibility.md
         - name: 持续集成
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: '探索 C# 6'
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: '探索 C# 7.0'
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: 探索字符串内插 - 交互式
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: 探索字符串内插 - 在环境中
