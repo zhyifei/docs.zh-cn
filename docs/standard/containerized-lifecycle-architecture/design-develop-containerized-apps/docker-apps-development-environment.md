@@ -39,7 +39,7 @@ ms.locfileid: "65641420"
 
 - .NET Core 和 ASP.NET Core
 - Node.js
-- 前往
+- Go
 - Java
 - Ruby
 - Python
