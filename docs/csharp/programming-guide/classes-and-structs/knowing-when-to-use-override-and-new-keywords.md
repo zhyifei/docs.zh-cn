@@ -7,17 +7,18 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583112"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398433"
 ---
-# <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a><span data-ttu-id="a3a5c-102">了解何时使用 Override 和 New 关键字（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="a3a5c-102">Knowing When to Use Override and New Keywords (C# Programming Guide)</span></span>
-<span data-ttu-id="a3a5c-103">在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-103">In C#, a method in a derived class can have the same name as a method in the base class.</span></span> <span data-ttu-id="a3a5c-104">可使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-104">You can specify how the methods interact by using the [new](../../../csharp/language-reference/keywords/new.md) and [override](../../../csharp/language-reference/keywords/override.md) keywords.</span></span> <span data-ttu-id="a3a5c-105">`override` 修饰符用于扩展基类方法，而 `new` 修饰符则用于隐藏该方法。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-105">The `override` modifier *extends* the base class method, and the `new` modifier *hides* it.</span></span> <span data-ttu-id="a3a5c-106">本主题中的示例阐释了这种差异。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-106">The difference is illustrated in the examples in this topic.</span></span>  
+# <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a><span data-ttu-id="e9872-102">了解何时使用 Override 和 New 关键字（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="e9872-102">Knowing When to Use Override and New Keywords (C# Programming Guide)</span></span>
+
+<span data-ttu-id="e9872-103">在 C# 中，派生类中的方法可具有与基类中的方法相同的名称。</span><span class="sxs-lookup"><span data-stu-id="e9872-103">In C#, a method in a derived class can have the same name as a method in the base class.</span></span> <span data-ttu-id="e9872-104">可使用 [new](../../../csharp/language-reference/keywords/new-modifier.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 关键字指定方法的交互方式。</span><span class="sxs-lookup"><span data-stu-id="e9872-104">You can specify how the methods interact by using the [new](../../../csharp/language-reference/keywords/new-modifier.md) and [override](../../../csharp/language-reference/keywords/override.md) keywords.</span></span> <span data-ttu-id="e9872-105">`override` 修饰符用于扩展基类 `virtual` 方法，而 `new` 修饰符用于隐藏可访问的基类方法   。</span><span class="sxs-lookup"><span data-stu-id="e9872-105">The `override` modifier *extends* the base class `virtual` method, and the `new` modifier *hides* an accessible base class method.</span></span> <span data-ttu-id="e9872-106">本主题中的示例阐释了这种差异。</span><span class="sxs-lookup"><span data-stu-id="e9872-106">The difference is illustrated in the examples in this topic.</span></span>  
   
- <span data-ttu-id="a3a5c-107">在控制台应用程序中，声明以下两个类：`BaseClass` 和 `DerivedClass`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-107">In a console application, declare the following two classes, `BaseClass` and `DerivedClass`.</span></span> <span data-ttu-id="a3a5c-108">`DerivedClass` 继承自 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-108">`DerivedClass` inherits from `BaseClass`.</span></span>  
+ <span data-ttu-id="e9872-107">在控制台应用程序中，声明以下两个类：`BaseClass` 和 `DerivedClass`。</span><span class="sxs-lookup"><span data-stu-id="e9872-107">In a console application, declare the following two classes, `BaseClass` and `DerivedClass`.</span></span> <span data-ttu-id="e9872-108">`DerivedClass` 继承自 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="e9872-108">`DerivedClass` inherits from `BaseClass`.</span></span>  
   
 ```csharp  
 class BaseClass  
@@ -37,15 +38,15 @@ class DerivedClass : BaseClass
 }  
 ```  
   
- <span data-ttu-id="a3a5c-109">在 `Main` 方法中，声明变量 `bc`、`dc` 和 `bcdc`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-109">In the `Main` method, declare variables `bc`, `dc`, and `bcdc`.</span></span>  
+ <span data-ttu-id="e9872-109">在 `Main` 方法中，声明变量 `bc`、`dc` 和 `bcdc`。</span><span class="sxs-lookup"><span data-stu-id="e9872-109">In the `Main` method, declare variables `bc`, `dc`, and `bcdc`.</span></span>  
   
-- <span data-ttu-id="a3a5c-110">`bc` 为 `BaseClass` 类型，其值为 `BaseClass` 类型。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-110">`bc` is of type `BaseClass`, and its value is of type `BaseClass`.</span></span>  
+- <span data-ttu-id="e9872-110">`bc` 为 `BaseClass` 类型，其值为 `BaseClass` 类型。</span><span class="sxs-lookup"><span data-stu-id="e9872-110">`bc` is of type `BaseClass`, and its value is of type `BaseClass`.</span></span>  
   
-- <span data-ttu-id="a3a5c-111">`dc` 为 `DerivedClass` 类型，其值为 `DerivedClass` 类型。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-111">`dc` is of type `DerivedClass`, and its value is of type `DerivedClass`.</span></span>  
+- <span data-ttu-id="e9872-111">`dc` 为 `DerivedClass` 类型，其值为 `DerivedClass` 类型。</span><span class="sxs-lookup"><span data-stu-id="e9872-111">`dc` is of type `DerivedClass`, and its value is of type `DerivedClass`.</span></span>  
   
-- <span data-ttu-id="a3a5c-112">`bcdc` 为 `BaseClass` 类型，其值为 `DerivedClass` 类型。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-112">`bcdc` is of type `BaseClass`, and its value is of type `DerivedClass`.</span></span> <span data-ttu-id="a3a5c-113">需注意此变量。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-113">This is the variable to pay attention to.</span></span>  
+- <span data-ttu-id="e9872-112">`bcdc` 为 `BaseClass` 类型，其值为 `DerivedClass` 类型。</span><span class="sxs-lookup"><span data-stu-id="e9872-112">`bcdc` is of type `BaseClass`, and its value is of type `DerivedClass`.</span></span> <span data-ttu-id="e9872-113">需注意此变量。</span><span class="sxs-lookup"><span data-stu-id="e9872-113">This is the variable to pay attention to.</span></span>  
   
- <span data-ttu-id="a3a5c-114">由于 `bc` 和 `bcdc` 具有 `BaseClass` 类型，因此它们只能直接访问 `Method1`，除非使用强制转换。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-114">Because `bc` and `bcdc` have type `BaseClass`, they can only directly access `Method1`, unless you use casting.</span></span> <span data-ttu-id="a3a5c-115">变量 `dc` 可同时访问 `Method1` 和 `Method2`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-115">Variable `dc` can access both `Method1` and `Method2`.</span></span> <span data-ttu-id="a3a5c-116">下面的代码演示了这些关系。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-116">These relationships are shown in the following code.</span></span>  
+ <span data-ttu-id="e9872-114">由于 `bc` 和 `bcdc` 具有 `BaseClass` 类型，因此它们只能直接访问 `Method1`，除非使用强制转换。</span><span class="sxs-lookup"><span data-stu-id="e9872-114">Because `bc` and `bcdc` have type `BaseClass`, they can only directly access `Method1`, unless you use casting.</span></span> <span data-ttu-id="e9872-115">变量 `dc` 可同时访问 `Method1` 和 `Method2`。</span><span class="sxs-lookup"><span data-stu-id="e9872-115">Variable `dc` can access both `Method1` and `Method2`.</span></span> <span data-ttu-id="e9872-116">下面的代码演示了这些关系。</span><span class="sxs-lookup"><span data-stu-id="e9872-116">These relationships are shown in the following code.</span></span>  
   
 ```csharp  
 class Program  
@@ -69,7 +70,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="a3a5c-117">接着，将以下 `Method2` 方法添加到 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-117">Next, add the following `Method2` method to `BaseClass`.</span></span> <span data-ttu-id="a3a5c-118">此方法的签名与 `DerivedClass` 中 `Method2` 方法的签名匹配。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-118">The signature of this method matches the signature of the `Method2` method in `DerivedClass`.</span></span>  
+ <span data-ttu-id="e9872-117">接着，将以下 `Method2` 方法添加到 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="e9872-117">Next, add the following `Method2` method to `BaseClass`.</span></span> <span data-ttu-id="e9872-118">此方法的签名与 `DerivedClass` 中 `Method2` 方法的签名匹配。</span><span class="sxs-lookup"><span data-stu-id="e9872-118">The signature of this method matches the signature of the `Method2` method in `DerivedClass`.</span></span>  
   
 ```csharp  
 public void Method2()  
@@ -78,7 +79,7 @@ public void Method2()
 }  
 ```  
   
- <span data-ttu-id="a3a5c-119">由于 `BaseClass` 现在具有 `Method2` 方法，因此可以为 `BaseClass` 变量 `bc` 和 `bcdc` 添加第二个调用语句，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-119">Because `BaseClass` now has a `Method2` method, a second calling statement can be added for `BaseClass` variables `bc` and `bcdc`, as shown in the following code.</span></span>  
+ <span data-ttu-id="e9872-119">由于 `BaseClass` 现在具有 `Method2` 方法，因此可以为 `BaseClass` 变量 `bc` 和 `bcdc` 添加第二个调用语句，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="e9872-119">Because `BaseClass` now has a `Method2` method, a second calling statement can be added for `BaseClass` variables `bc` and `bcdc`, as shown in the following code.</span></span>  
   
 ```csharp  
 bc.Method1();  
@@ -89,9 +90,9 @@ bcdc.Method1();
 bcdc.Method2();  
 ```  
   
- <span data-ttu-id="a3a5c-120">当生成项目时，你将看到在 `BaseClass` 中添加 `Method2` 方法将引发警告。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-120">When you build the project, you see that the addition of the `Method2` method in `BaseClass` causes a warning.</span></span> <span data-ttu-id="a3a5c-121">警告显示 `DerivedClass` 中的 `Method2` 方法隐藏了 `BaseClass` 中的 `Method2` 方法。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-121">The warning says that the `Method2` method in `DerivedClass` hides the `Method2` method in `BaseClass`.</span></span> <span data-ttu-id="a3a5c-122">如果希望获得该结果，则建议使用 `Method2` 定义中的 `new` 关键字。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-122">You are advised to use the `new` keyword in the `Method2` definition if you intend to cause that result.</span></span> <span data-ttu-id="a3a5c-123">或者，可重命名 `Method2` 方法之一来消除警告，但这始终不实用。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-123">Alternatively, you could rename one of the `Method2` methods to resolve the warning, but that is not always practical.</span></span>  
+ <span data-ttu-id="e9872-120">当生成项目时，你将看到在 `BaseClass` 中添加 `Method2` 方法将引发警告。</span><span class="sxs-lookup"><span data-stu-id="e9872-120">When you build the project, you see that the addition of the `Method2` method in `BaseClass` causes a warning.</span></span> <span data-ttu-id="e9872-121">警告显示 `DerivedClass` 中的 `Method2` 方法隐藏了 `BaseClass` 中的 `Method2` 方法。</span><span class="sxs-lookup"><span data-stu-id="e9872-121">The warning says that the `Method2` method in `DerivedClass` hides the `Method2` method in `BaseClass`.</span></span> <span data-ttu-id="e9872-122">如果希望获得该结果，则建议使用 `Method2` 定义中的 `new` 关键字。</span><span class="sxs-lookup"><span data-stu-id="e9872-122">You are advised to use the `new` keyword in the `Method2` definition if you intend to cause that result.</span></span> <span data-ttu-id="e9872-123">或者，可重命名 `Method2` 方法之一来消除警告，但这始终不实用。</span><span class="sxs-lookup"><span data-stu-id="e9872-123">Alternatively, you could rename one of the `Method2` methods to resolve the warning, but that is not always practical.</span></span>  
   
- <span data-ttu-id="a3a5c-124">添加 `new` 之前，请运行程序，查看其他调用语句生成的输出。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-124">Before adding `new`, run the program to see the output produced by the additional calling statements.</span></span> <span data-ttu-id="a3a5c-125">显示以下结果。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-125">The following results are displayed.</span></span>  
+ <span data-ttu-id="e9872-124">添加 `new` 之前，请运行程序，查看其他调用语句生成的输出。</span><span class="sxs-lookup"><span data-stu-id="e9872-124">Before adding `new`, run the program to see the output produced by the additional calling statements.</span></span> <span data-ttu-id="e9872-125">显示以下结果。</span><span class="sxs-lookup"><span data-stu-id="e9872-125">The following results are displayed.</span></span>  
   
 ```csharp  
 // Output:  
@@ -103,9 +104,9 @@ bcdc.Method2();
 // Base - Method2  
 ```  
   
- <span data-ttu-id="a3a5c-126">`new` 关键字可以保留生成该输出的关系，但它会禁止显示警告。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-126">The `new` keyword preserves the relationships that produce that output, but it suppresses the warning.</span></span> <span data-ttu-id="a3a5c-127">具有 `BaseClass` 类型的变量继续访问 `BaseClass` 的成员，而具有 `DerivedClass` 类型的变量首先继续访问 `DerivedClass` 中的成员，然后再考虑从 `BaseClass` 继承的成员。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-127">The variables that have type `BaseClass` continue to access the members of `BaseClass`, and the variable that has type `DerivedClass` continues to access members in `DerivedClass` first, and then to consider members inherited from `BaseClass`.</span></span>  
+ <span data-ttu-id="e9872-126">`new` 关键字可以保留生成该输出的关系，但它会禁止显示警告。</span><span class="sxs-lookup"><span data-stu-id="e9872-126">The `new` keyword preserves the relationships that produce that output, but it suppresses the warning.</span></span> <span data-ttu-id="e9872-127">具有 `BaseClass` 类型的变量继续访问 `BaseClass` 的成员，而具有 `DerivedClass` 类型的变量首先继续访问 `DerivedClass` 中的成员，然后再考虑从 `BaseClass` 继承的成员。</span><span class="sxs-lookup"><span data-stu-id="e9872-127">The variables that have type `BaseClass` continue to access the members of `BaseClass`, and the variable that has type `DerivedClass` continues to access members in `DerivedClass` first, and then to consider members inherited from `BaseClass`.</span></span>  
   
- <span data-ttu-id="a3a5c-128">若要禁止显示警告，请将 `new` 修饰符添加到 `DerivedClass` 中的 `Method2` 定义，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-128">To suppress the warning, add the `new` modifier to the definition of `Method2` in `DerivedClass`, as shown in the following code.</span></span> <span data-ttu-id="a3a5c-129">可在 `public` 前后添加修饰符。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-129">The modifier can be added before or after `public`.</span></span>  
+ <span data-ttu-id="e9872-128">若要禁止显示警告，请将 `new` 修饰符添加到 `DerivedClass` 中的 `Method2` 定义，如下面的代码所示。</span><span class="sxs-lookup"><span data-stu-id="e9872-128">To suppress the warning, add the `new` modifier to the definition of `Method2` in `DerivedClass`, as shown in the following code.</span></span> <span data-ttu-id="e9872-129">可在 `public` 前后添加修饰符。</span><span class="sxs-lookup"><span data-stu-id="e9872-129">The modifier can be added before or after `public`.</span></span>  
   
 ```csharp  
 public new void Method2()  
@@ -114,9 +115,9 @@ public new void Method2()
 }  
 ```  
   
- <span data-ttu-id="a3a5c-130">再次运行该程序，确认输出未发生更改。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-130">Run the program again to verify that the output has not changed.</span></span> <span data-ttu-id="a3a5c-131">此外，确认不再显示警告。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-131">Also verify that the warning no longer appears.</span></span> <span data-ttu-id="a3a5c-132">通过使用 `new`，断言你知道它修饰的成员将隐藏从基类继承的成员。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-132">By using `new`, you are asserting that you are aware that the member that it modifies hides a member that is inherited from the base class.</span></span> <span data-ttu-id="a3a5c-133">有关通过继承隐藏名称的详细信息，请参阅 [new 修饰符](../../../csharp/language-reference/keywords/new-modifier.md)。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-133">For more information about name hiding through inheritance, see [new Modifier](../../../csharp/language-reference/keywords/new-modifier.md).</span></span>  
+ <span data-ttu-id="e9872-130">再次运行该程序，确认输出未发生更改。</span><span class="sxs-lookup"><span data-stu-id="e9872-130">Run the program again to verify that the output has not changed.</span></span> <span data-ttu-id="e9872-131">此外，确认不再显示警告。</span><span class="sxs-lookup"><span data-stu-id="e9872-131">Also verify that the warning no longer appears.</span></span> <span data-ttu-id="e9872-132">通过使用 `new`，断言你知道它修饰的成员将隐藏从基类继承的成员。</span><span class="sxs-lookup"><span data-stu-id="e9872-132">By using `new`, you are asserting that you are aware that the member that it modifies hides a member that is inherited from the base class.</span></span> <span data-ttu-id="e9872-133">有关通过继承隐藏名称的详细信息，请参阅 [new 修饰符](../../../csharp/language-reference/keywords/new-modifier.md)。</span><span class="sxs-lookup"><span data-stu-id="e9872-133">For more information about name hiding through inheritance, see [new Modifier](../../../csharp/language-reference/keywords/new-modifier.md).</span></span>  
   
- <span data-ttu-id="a3a5c-134">若要将此行为与使用 `override` 的效果进行对比，请将以下方法添加到 `DerivedClass`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-134">To contrast this behavior to the effects of using `override`, add the following method to `DerivedClass`.</span></span> <span data-ttu-id="a3a5c-135">可在 `public` 前后添加 `override` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-135">The `override` modifier can be added before or after `public`.</span></span>  
+ <span data-ttu-id="e9872-134">若要将此行为与使用 `override` 的效果进行对比，请将以下方法添加到 `DerivedClass`。</span><span class="sxs-lookup"><span data-stu-id="e9872-134">To contrast this behavior to the effects of using `override`, add the following method to `DerivedClass`.</span></span> <span data-ttu-id="e9872-135">可在 `public` 前后添加 `override` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="e9872-135">The `override` modifier can be added before or after `public`.</span></span>  
   
 ```csharp  
 public override void Method1()  
@@ -125,7 +126,7 @@ public override void Method1()
 }  
 ```  
   
- <span data-ttu-id="a3a5c-136">将 `virtual` 修饰符添加到 `BaseClass` 中的 `Method1` 定义。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-136">Add the `virtual` modifier to the definition of `Method1` in `BaseClass`.</span></span> <span data-ttu-id="a3a5c-137">可在 `public` 前后添加 `virtual` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-137">The `virtual` modifier can be added before or after `public`.</span></span>  
+ <span data-ttu-id="e9872-136">将 `virtual` 修饰符添加到 `BaseClass` 中的 `Method1` 定义。</span><span class="sxs-lookup"><span data-stu-id="e9872-136">Add the `virtual` modifier to the definition of `Method1` in `BaseClass`.</span></span> <span data-ttu-id="e9872-137">可在 `public` 前后添加 `virtual` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="e9872-137">The `virtual` modifier can be added before or after `public`.</span></span>  
   
 ```csharp  
 public virtual void Method1()  
@@ -134,7 +135,7 @@ public virtual void Method1()
 }  
 ```  
   
- <span data-ttu-id="a3a5c-138">再次运行该项目。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-138">Run the project again.</span></span> <span data-ttu-id="a3a5c-139">尤其注意以下输出的最后两行。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-139">Notice especially the last two lines of the following output.</span></span>  
+ <span data-ttu-id="e9872-138">再次运行该项目。</span><span class="sxs-lookup"><span data-stu-id="e9872-138">Run the project again.</span></span> <span data-ttu-id="e9872-139">尤其注意以下输出的最后两行。</span><span class="sxs-lookup"><span data-stu-id="e9872-139">Notice especially the last two lines of the following output.</span></span>  
   
 ```csharp  
 // Output:  
@@ -146,9 +147,9 @@ public virtual void Method1()
 // Base - Method2  
 ```  
   
- <span data-ttu-id="a3a5c-140">使用 `override` 修饰符可使 `bcdc` 访问 `DerivedClass` 中定义的 `Method1` 方法。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-140">The use of the `override` modifier enables `bcdc` to access the `Method1` method that is defined in `DerivedClass`.</span></span> <span data-ttu-id="a3a5c-141">通常，这是继承层次结构中所需的行为。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-141">Typically, that is the desired behavior in inheritance hierarchies.</span></span> <span data-ttu-id="a3a5c-142">让具有从派生类创建的值的对象使用派生类中定义的方法。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-142">You want objects that have values that are created from the derived class to use the methods that are defined in the derived class.</span></span> <span data-ttu-id="a3a5c-143">可使用 `override` 扩展基类方法实现该行为。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-143">You achieve that behavior by using `override` to extend the base class method.</span></span>  
+ <span data-ttu-id="e9872-140">使用 `override` 修饰符可使 `bcdc` 访问 `DerivedClass` 中定义的 `Method1` 方法。</span><span class="sxs-lookup"><span data-stu-id="e9872-140">The use of the `override` modifier enables `bcdc` to access the `Method1` method that is defined in `DerivedClass`.</span></span> <span data-ttu-id="e9872-141">通常，这是继承层次结构中所需的行为。</span><span class="sxs-lookup"><span data-stu-id="e9872-141">Typically, that is the desired behavior in inheritance hierarchies.</span></span> <span data-ttu-id="e9872-142">让具有从派生类创建的值的对象使用派生类中定义的方法。</span><span class="sxs-lookup"><span data-stu-id="e9872-142">You want objects that have values that are created from the derived class to use the methods that are defined in the derived class.</span></span> <span data-ttu-id="e9872-143">可使用 `override` 扩展基类方法实现该行为。</span><span class="sxs-lookup"><span data-stu-id="e9872-143">You achieve that behavior by using `override` to extend the base class method.</span></span>  
   
- <span data-ttu-id="a3a5c-144">下面的代码包括完整的示例。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-144">The following code contains the full example.</span></span>  
+ <span data-ttu-id="e9872-144">下面的代码包括完整的示例。</span><span class="sxs-lookup"><span data-stu-id="e9872-144">The following code contains the full example.</span></span>  
   
 ```csharp  
 using System;  
@@ -218,7 +219,7 @@ namespace OverrideAndNew
 }  
 ```  
   
- <span data-ttu-id="a3a5c-145">下列阐释了不同上下文中的类似行为。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-145">The following example illustrates similar behavior in a different context.</span></span> <span data-ttu-id="a3a5c-146">该示例定义了三个类：一个名为 `Car` 的基类和两个由其派生的 `ConvertibleCar` 和 `Minivan`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-146">The example defines three classes: a base class named `Car` and two classes that are derived from it, `ConvertibleCar` and `Minivan`.</span></span> <span data-ttu-id="a3a5c-147">基类中包含 `DescribeCar` 方法。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-147">The base class contains a `DescribeCar` method.</span></span> <span data-ttu-id="a3a5c-148">该方法给出了对一辆车的基本描述，然后调用 `ShowDetails` 提供其他信息。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-148">The method displays a basic description of a car, and then calls `ShowDetails` to provide additional information.</span></span> <span data-ttu-id="a3a5c-149">这三个类中的每一个类都定义了 `ShowDetails` 方法。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-149">Each of the three classes defines a `ShowDetails` method.</span></span> <span data-ttu-id="a3a5c-150">`new` 修饰符用于定义 `ConvertibleCar` 类中的 `ShowDetails`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-150">The `new` modifier is used to define `ShowDetails` in the `ConvertibleCar` class.</span></span> <span data-ttu-id="a3a5c-151">`override` 修饰符用于定义 `Minivan` 类中的 `ShowDetails`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-151">The `override` modifier is used to define `ShowDetails` in the `Minivan` class.</span></span>  
+ <span data-ttu-id="e9872-145">下列阐释了不同上下文中的类似行为。</span><span class="sxs-lookup"><span data-stu-id="e9872-145">The following example illustrates similar behavior in a different context.</span></span> <span data-ttu-id="e9872-146">该示例定义了三个类：一个名为 `Car` 的基类和两个由其派生的 `ConvertibleCar` 和 `Minivan`。</span><span class="sxs-lookup"><span data-stu-id="e9872-146">The example defines three classes: a base class named `Car` and two classes that are derived from it, `ConvertibleCar` and `Minivan`.</span></span> <span data-ttu-id="e9872-147">基类中包含 `DescribeCar` 方法。</span><span class="sxs-lookup"><span data-stu-id="e9872-147">The base class contains a `DescribeCar` method.</span></span> <span data-ttu-id="e9872-148">该方法给出了对一辆车的基本描述，然后调用 `ShowDetails` 提供其他信息。</span><span class="sxs-lookup"><span data-stu-id="e9872-148">The method displays a basic description of a car, and then calls `ShowDetails` to provide additional information.</span></span> <span data-ttu-id="e9872-149">这三个类中的每一个类都定义了 `ShowDetails` 方法。</span><span class="sxs-lookup"><span data-stu-id="e9872-149">Each of the three classes defines a `ShowDetails` method.</span></span> <span data-ttu-id="e9872-150">`new` 修饰符用于定义 `ConvertibleCar` 类中的 `ShowDetails`。</span><span class="sxs-lookup"><span data-stu-id="e9872-150">The `new` modifier is used to define `ShowDetails` in the `ConvertibleCar` class.</span></span> <span data-ttu-id="e9872-151">`override` 修饰符用于定义 `Minivan` 类中的 `ShowDetails`。</span><span class="sxs-lookup"><span data-stu-id="e9872-151">The `override` modifier is used to define `ShowDetails` in the `Minivan` class.</span></span>  
   
 ```csharp  
 // Define the base class, Car. The class defines two methods,  
@@ -262,7 +263,7 @@ class Minivan : Car
 }  
 ```  
   
- <span data-ttu-id="a3a5c-152">该示例测试被调用的 `ShowDetails` 版本。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-152">The example tests which version of `ShowDetails` is called.</span></span> <span data-ttu-id="a3a5c-153">下面的方法 `TestCars1` 为每个类声明了一个实例，并在每个实例上调用 `DescribeCar`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-153">The following method, `TestCars1`, declares an instance of each class, and then calls `DescribeCar` on each instance.</span></span>  
+ <span data-ttu-id="e9872-152">该示例测试被调用的 `ShowDetails` 版本。</span><span class="sxs-lookup"><span data-stu-id="e9872-152">The example tests which version of `ShowDetails` is called.</span></span> <span data-ttu-id="e9872-153">下面的方法 `TestCars1` 为每个类声明了一个实例，并在每个实例上调用 `DescribeCar`。</span><span class="sxs-lookup"><span data-stu-id="e9872-153">The following method, `TestCars1`, declares an instance of each class, and then calls `DescribeCar` on each instance.</span></span>  
   
 ```csharp  
 public static void TestCars1()  
@@ -288,7 +289,7 @@ public static void TestCars1()
 }  
 ```  
   
- <span data-ttu-id="a3a5c-154">`TestCars1` 将生成以下输出。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-154">`TestCars1` produces the following output.</span></span> <span data-ttu-id="a3a5c-155">请特别注意 `car2` 的结果，该结果可能不是你需要的内容。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-155">Notice especially the results for `car2`, which probably are not what you expected.</span></span> <span data-ttu-id="a3a5c-156">对象的类型是 `ConvertibleCar`，但 `DescribeCar` 不会访问 `ConvertibleCar` 类中定义的 `ShowDetails` 版本，因为方法已声明包含 `new` 修饰符声明，而不是 `override` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-156">The type of the object is `ConvertibleCar`, but `DescribeCar` does not access the version of `ShowDetails` that is defined in the `ConvertibleCar` class because that method is declared with the `new` modifier, not the `override` modifier.</span></span> <span data-ttu-id="a3a5c-157">因此，`ConvertibleCar` 对象与 `Car` 对象显示的说明相同。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-157">As a result, a `ConvertibleCar` object displays the same description as a `Car` object.</span></span> <span data-ttu-id="a3a5c-158">比较 `car3` 的结果，这是一个 `Minivan` 对象。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-158">Contrast the results for `car3`, which is a `Minivan` object.</span></span> <span data-ttu-id="a3a5c-159">在这种情况下，`Minivan` 类中声明的 `ShowDetails` 方法会替代 `Car` 类中声明的 `ShowDetails` 方法，显示的说明描述小型货车。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-159">In this case, the `ShowDetails` method that is declared in the `Minivan` class overrides the `ShowDetails` method that is declared in the `Car` class, and the description that is displayed describes a minivan.</span></span>  
+ <span data-ttu-id="e9872-154">`TestCars1` 将生成以下输出。</span><span class="sxs-lookup"><span data-stu-id="e9872-154">`TestCars1` produces the following output.</span></span> <span data-ttu-id="e9872-155">请特别注意 `car2` 的结果，该结果可能不是你需要的内容。</span><span class="sxs-lookup"><span data-stu-id="e9872-155">Notice especially the results for `car2`, which probably are not what you expected.</span></span> <span data-ttu-id="e9872-156">对象的类型是 `ConvertibleCar`，但 `DescribeCar` 不会访问 `ConvertibleCar` 类中定义的 `ShowDetails` 版本，因为方法已声明包含 `new` 修饰符声明，而不是 `override` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="e9872-156">The type of the object is `ConvertibleCar`, but `DescribeCar` does not access the version of `ShowDetails` that is defined in the `ConvertibleCar` class because that method is declared with the `new` modifier, not the `override` modifier.</span></span> <span data-ttu-id="e9872-157">因此，`ConvertibleCar` 对象与 `Car` 对象显示的说明相同。</span><span class="sxs-lookup"><span data-stu-id="e9872-157">As a result, a `ConvertibleCar` object displays the same description as a `Car` object.</span></span> <span data-ttu-id="e9872-158">比较 `car3` 的结果，这是一个 `Minivan` 对象。</span><span class="sxs-lookup"><span data-stu-id="e9872-158">Contrast the results for `car3`, which is a `Minivan` object.</span></span> <span data-ttu-id="e9872-159">在这种情况下，`Minivan` 类中声明的 `ShowDetails` 方法会替代 `Car` 类中声明的 `ShowDetails` 方法，显示的说明描述小型货车。</span><span class="sxs-lookup"><span data-stu-id="e9872-159">In this case, the `ShowDetails` method that is declared in the `Minivan` class overrides the `ShowDetails` method that is declared in the `Car` class, and the description that is displayed describes a minivan.</span></span>  
   
 ```csharp  
 // TestCars1  
@@ -304,7 +305,7 @@ public static void TestCars1()
 // ----------  
 ```  
   
- <span data-ttu-id="a3a5c-160">`TestCars2` 创建具有 `Car` 类型的对象列表。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-160">`TestCars2` creates a list of objects that have type `Car`.</span></span> <span data-ttu-id="a3a5c-161">对象的值由 `Car` 类、`ConvertibleCar` 类和 `Minivan` 类实例化所得。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-161">The values of the objects are instantiated from the `Car`, `ConvertibleCar`, and `Minivan` classes.</span></span> <span data-ttu-id="a3a5c-162">对列表中的每个元素调用 `DescribeCar`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-162">`DescribeCar` is called on each element of the list.</span></span> <span data-ttu-id="a3a5c-163">以下代码显示 `TestCars2` 的定义。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-163">The following code shows the definition of `TestCars2`.</span></span>  
+ <span data-ttu-id="e9872-160">`TestCars2` 创建具有 `Car` 类型的对象列表。</span><span class="sxs-lookup"><span data-stu-id="e9872-160">`TestCars2` creates a list of objects that have type `Car`.</span></span> <span data-ttu-id="e9872-161">对象的值由 `Car` 类、`ConvertibleCar` 类和 `Minivan` 类实例化所得。</span><span class="sxs-lookup"><span data-stu-id="e9872-161">The values of the objects are instantiated from the `Car`, `ConvertibleCar`, and `Minivan` classes.</span></span> <span data-ttu-id="e9872-162">对列表中的每个元素调用 `DescribeCar`。</span><span class="sxs-lookup"><span data-stu-id="e9872-162">`DescribeCar` is called on each element of the list.</span></span> <span data-ttu-id="e9872-163">以下代码显示 `TestCars2` 的定义。</span><span class="sxs-lookup"><span data-stu-id="e9872-163">The following code shows the definition of `TestCars2`.</span></span>  
   
 ```csharp  
 public static void TestCars2()  
@@ -323,7 +324,7 @@ public static void TestCars2()
 }  
 ```  
   
- <span data-ttu-id="a3a5c-164">显示以下输出。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-164">The following output is displayed.</span></span> <span data-ttu-id="a3a5c-165">请注意，它与 `TestCars1` 显示的输出相同。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-165">Notice that it is the same as the output that is displayed by `TestCars1`.</span></span> <span data-ttu-id="a3a5c-166">不调用 `ConvertibleCar` 类的 `ShowDetails` 方法，不管该对象的类型是 `ConvertibleCar`（在 `TestCars1` 中）还是 `Car`（在 `TestCars2` 中）。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-166">The `ShowDetails` method of the `ConvertibleCar` class is not called, regardless of whether the type of the object is `ConvertibleCar`, as in `TestCars1`, or `Car`, as in `TestCars2`.</span></span> <span data-ttu-id="a3a5c-167">相反，在这两种情况下，`car3` 从 `Minivan` 调用 `ShowDetails` 方法，不管它拥有类型 `Minivan` 还是类型 `Car`。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-167">Conversely, `car3` calls the `ShowDetails` method from the `Minivan` class in both cases, whether it has type `Minivan` or type `Car`.</span></span>  
+ <span data-ttu-id="e9872-164">显示以下输出。</span><span class="sxs-lookup"><span data-stu-id="e9872-164">The following output is displayed.</span></span> <span data-ttu-id="e9872-165">请注意，它与 `TestCars1` 显示的输出相同。</span><span class="sxs-lookup"><span data-stu-id="e9872-165">Notice that it is the same as the output that is displayed by `TestCars1`.</span></span> <span data-ttu-id="e9872-166">不调用 `ConvertibleCar` 类的 `ShowDetails` 方法，不管该对象的类型是 `ConvertibleCar`（在 `TestCars1` 中）还是 `Car`（在 `TestCars2` 中）。</span><span class="sxs-lookup"><span data-stu-id="e9872-166">The `ShowDetails` method of the `ConvertibleCar` class is not called, regardless of whether the type of the object is `ConvertibleCar`, as in `TestCars1`, or `Car`, as in `TestCars2`.</span></span> <span data-ttu-id="e9872-167">相反，在这两种情况下，`car3` 从 `Minivan` 调用 `ShowDetails` 方法，不管它拥有类型 `Minivan` 还是类型 `Car`。</span><span class="sxs-lookup"><span data-stu-id="e9872-167">Conversely, `car3` calls the `ShowDetails` method from the `Minivan` class in both cases, whether it has type `Minivan` or type `Car`.</span></span>  
   
 ```csharp  
 // TestCars2  
@@ -339,7 +340,7 @@ public static void TestCars2()
 // ----------  
 ```  
   
- <span data-ttu-id="a3a5c-168">方法 `TestCars3` 和方法 `TestCars4` 完成示例。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-168">Methods `TestCars3` and `TestCars4` complete the example.</span></span> <span data-ttu-id="a3a5c-169">这些方法直接调用 `ShowDetails`，先从声明具有类型 `ConvertibleCar` 和 `Minivan` (`TestCars3`) 的对象开始，然后再转到声明具有类型 `Car` (`TestCars4`) 的对象。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-169">These methods call `ShowDetails` directly, first from objects declared to have type `ConvertibleCar` and `Minivan` (`TestCars3`), then from objects declared to have type `Car` (`TestCars4`).</span></span> <span data-ttu-id="a3a5c-170">以下代码定义了这两种方法。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-170">The following code defines these two methods.</span></span>  
+ <span data-ttu-id="e9872-168">方法 `TestCars3` 和方法 `TestCars4` 完成示例。</span><span class="sxs-lookup"><span data-stu-id="e9872-168">Methods `TestCars3` and `TestCars4` complete the example.</span></span> <span data-ttu-id="e9872-169">这些方法直接调用 `ShowDetails`，先从声明具有类型 `ConvertibleCar` 和 `Minivan` (`TestCars3`) 的对象开始，然后再转到声明具有类型 `Car` (`TestCars4`) 的对象。</span><span class="sxs-lookup"><span data-stu-id="e9872-169">These methods call `ShowDetails` directly, first from objects declared to have type `ConvertibleCar` and `Minivan` (`TestCars3`), then from objects declared to have type `Car` (`TestCars4`).</span></span> <span data-ttu-id="e9872-170">以下代码定义了这两种方法。</span><span class="sxs-lookup"><span data-stu-id="e9872-170">The following code defines these two methods.</span></span>  
   
 ```csharp  
 public static void TestCars3()  
@@ -363,7 +364,7 @@ public static void TestCars4()
 }  
 ```  
   
- <span data-ttu-id="a3a5c-171">这两种方法将产生以下输出，输出对应本主题第一个示例的结果。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-171">The methods produce the following output, which corresponds to the results from the first example in this topic.</span></span>  
+ <span data-ttu-id="e9872-171">这两种方法将产生以下输出，输出对应本主题第一个示例的结果。</span><span class="sxs-lookup"><span data-stu-id="e9872-171">The methods produce the following output, which corresponds to the results from the first example in this topic.</span></span>  
   
 ```csharp  
 // TestCars3  
@@ -377,7 +378,7 @@ public static void TestCars4()
 // Carries seven people.  
 ```  
   
- <span data-ttu-id="a3a5c-172">以下代码显示了完整项目及其输出。</span><span class="sxs-lookup"><span data-stu-id="a3a5c-172">The following code shows the complete project and its output.</span></span>  
+ <span data-ttu-id="e9872-172">以下代码显示了完整项目及其输出。</span><span class="sxs-lookup"><span data-stu-id="e9872-172">The following code shows the complete project and its output.</span></span>  
   
 ```csharp  
 using System;  
@@ -542,10 +543,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a3a5c-173">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3a5c-173">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9872-173">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9872-173">See also</span></span>
 
-- [<span data-ttu-id="a3a5c-174">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a3a5c-174">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="a3a5c-175">类和结构</span><span class="sxs-lookup"><span data-stu-id="a3a5c-175">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [<span data-ttu-id="a3a5c-176">使用 Override 和 New 关键字进行版本控制</span><span class="sxs-lookup"><span data-stu-id="a3a5c-176">Versioning with the Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [<span data-ttu-id="a3a5c-177">base</span><span class="sxs-lookup"><span data-stu-id="a3a5c-177">base</span></span>](../../../csharp/language-reference/keywords/base.md)
-- [<span data-ttu-id="a3a5c-178">abstract</span><span class="sxs-lookup"><span data-stu-id="a3a5c-178">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)
+- [<span data-ttu-id="e9872-174">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="e9872-174">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="e9872-175">类和结构</span><span class="sxs-lookup"><span data-stu-id="e9872-175">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [<span data-ttu-id="e9872-176">使用 Override 和 New 关键字进行版本控制</span><span class="sxs-lookup"><span data-stu-id="e9872-176">Versioning with the Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
+- [<span data-ttu-id="e9872-177">base</span><span class="sxs-lookup"><span data-stu-id="e9872-177">base</span></span>](../../../csharp/language-reference/keywords/base.md)
+- [<span data-ttu-id="e9872-178">abstract</span><span class="sxs-lookup"><span data-stu-id="e9872-178">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)
